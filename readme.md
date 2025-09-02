@@ -79,7 +79,6 @@ TFPT claims that a handful of constants are not inputs but forced solutions of a
 
 $$
 c_3 = \frac{1}{8\pi}
-
 $$
 
 via 11D Chern–Simons reduction with integer intersection on $Y_7$. The same scale appears in ABJ-type terms. See Sections 3.2.1 and Appendix E.
