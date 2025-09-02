@@ -1,0 +1,3 @@
+[console_scripts]
+e8-orbit = e8_orbit_engine.cli:app
+
