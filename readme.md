@@ -87,7 +87,6 @@ via 11D Chern–Simons reduction with integer intersection on $Y_7$. The same sc
 
 $$
 \varphi_0 = \frac{1}{6\pi} + \frac{3}{256\pi^4}
-
 $$
 
 from Gauss–Bonnet on the orientable double cover of the Möbius fiber, with a canonical $6\pi$ boundary coefficient and a universal topological add-on. See Sections 3.2.2 and Appendix D.
@@ -100,7 +99,6 @@ From these three, a cubic fixed point for the electromagnetic coupling follows:
 
 $$
 \alpha^3 - 2c_3^3\alpha^2 - 8b_1c_3^6\ln\frac{1}{\varphi_0} = 0, \quad b_1 = \frac{41}{10}
-
 $$
 
 which reproduces $\alpha^{-1} \approx 137.03650146$ within a few parts per million, with **no fitting** . See Sections 7.2 to 7.6.
