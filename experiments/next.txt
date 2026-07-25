@@ -18,6 +18,24 @@
 # Surfaces: Ledger HECKE.GEOM.HALFINT.01; \veri in tfpt_1 / tfpt_3 / tfpt_research_contracts; Changelog (XV);
 #     Wolfram extension 598 → 603; website papers.ts + VerificationDag E8 + ScriptIndex via gen; AUDIT OK.
 #
+# 2026-07-25 (III) — Teil 48 (delegiert): lambda_scale_uniqueness_probe.py — **SCALE-TORSOR**: der Erklärungsanspruch von Stufe-4-Route 1 („der Compiler fixiert die Λ-Skala") ist GEKILLT — der Review-Kill-Test hat in 0.2s entschieden — 17/17, Sandbox
+# Design: NULLSTELLEN-VERBOT (AST-geprüft, kein zetazero); mechanische Kandidaten-Erzeugungsregel
+# G1: t = π·2^k·m (k ∈ {−2..2}, m ∈ {1, |μ4|, g_car, N_fam}) → 17 distinkte Λ-Kandidaten; T12-Poisson
+# und T14-Torsor LIVE nachgerechnet (nicht zitiert). AUSWAHLPRINZIP-ANALYSE: (i) Poisson selektiert
+# t = π NUR unter der Wurzelnorm-2-Konvention (T14-Torsor: root-norm 1 ⇒ t = 2π ⇒ Λ = √2 — die
+# Konvention ist FREI, nicht verifiziert); (ii) Unimodularitäts-Gate: verifiziert, aber SKALENBLIND
+# (selektiert das Gitter, nicht die Skala); (iii) KMS/BW: universell/deflationiert (T14), Abbildung
+# β ↦ t_gauss selbst frei ({β, β/2}). RESIDUAL-TORSOR: {Λ = 1, Λ = √2} ↔ {t = π, 2π} ↔ Wurzelnorm-
+# Konvention. ⇒ VERDIKT SCALE-TORSOR: keine compiler-native eindeutige Skala VOR Betrachtung von
+# Nullstellen; „schon eine Familie gleich plausibler Skalen ist der Kill" (Review-Kriterium) — gefeuert.
+# STUFE-4-KONSEQUENZ: Route 1 existiert nur noch als EXTERNE Konstruktion (Prolate/CM, R1-zertifiziert,
+# T46/47); Λ ist Chart-Parameter. Verbleibende echte Wege: Route 2 (ξ-Transport des Cusp-Kanals,
+# tiefes Theorieprojekt) und Route 3 (Blindvorhersage, gated auf einen Operator ohne Zeta-Input,
+# der nicht existiert). Die Prime-Front-Serie ruht damit VOLLSTÄNDIG kartiert: alle drei Stufe-4-
+# Routen sind entweder als Erklärung gekillt oder ehrlich als Langzeit-Theorieprojekte typisiert.
+# Serie (XII)–(LIX): 48 Proben, 956/956 Checks Sandbox + v535/v536/v537 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-25 (II) — Teil 47 (delegiert): stage4_prolate_uv_dirac_probe.py — **UV-NO-SIGNAL**: der punktweise UV/Dirac-Prototyp reproduziert die CM-Aussage mit Sandbox-Mitteln NICHT; die Preregistrierung hat ein Beinahe-Falsch-Positiv abgefangen — 17/17, 23s, Sandbox
 # Track A (Ramis-validiertes A_τ, numerisch sauber): CM-Dirac-Map 2√|μ| gegen γ₄..γ₁₀ out-of-sample
 # mean rel 0.338 (Training 0.41; Nullkontrollen: kinetic 0.84 schlechter, GUE 0.42 vergleichbar ⇒

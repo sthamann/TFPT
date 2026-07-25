@@ -37,7 +37,8 @@ export type PrimeFrontVerdict =
   | "OUTSIDE-KOHNEN-SCOPE"
   | "CENTRAL-VALUES-WIRED"
   | "IMPL-OPEN"
-  | "UV-NO-SIGNAL";
+  | "UV-NO-SIGNAL"
+  | "SCALE-TORSOR";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -61,6 +62,16 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-25",
+    part: 48,
+    title: "The scale-uniqueness kill test: route 1's explanatory claim is dead",
+    verdict: "SCALE-TORSOR",
+    summary:
+      "A zero-free kill test (no Riemann zeros loaded, enforced by the probe itself) enumerated all compiler-native scale candidates by a mechanical generation rule and checked every verified selection principle: Poisson self-duality selects a scale only under a free root-norm convention (the {pi, 2pi} torsor remains), the unimodularity gate is scale-blind, and KMS/BW was already deflated. A residual two-element family means the compiler does not fix the prolate scale before looking at zeros — the explanatory claim of stage-4 route 1 is killed, and the construction survives only as external mathematics. All three stage-4 routes are now either killed-as-explanation or honestly typed as long-term theory projects; the series rests fully mapped.",
+    badge: "sandbox",
+    script: "lambda_scale_uniqueness_probe.py",
+  },
   {
     date: "2026-07-25",
     part: 47,
