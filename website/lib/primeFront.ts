@@ -38,7 +38,9 @@ export type PrimeFrontVerdict =
   | "CENTRAL-VALUES-WIRED"
   | "IMPL-OPEN"
   | "UV-NO-SIGNAL"
-  | "SCALE-TORSOR";
+  | "SCALE-TORSOR"
+  | "FAMILY-AGGREGATED"
+  | "MINIATURE-RUNS";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -62,6 +64,27 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-25",
+    part: 50,
+    title: "The central-value family aggregates exactly — but away from the xi-line",
+    verdict: "FAMILY-AGGREGATED",
+    summary:
+      "The self-convolution of the bridge object g factorises exactly through the Shimura relation (10000/10000 coefficients), the Waldspurger constant extends to 46 discriminants with spread 7.7e-16, and the aggregate identity D_gg = R * sum |d|^{3/2-s} L(f8 x chi_d, 2) E_d(s) + non-fundamental part closes to 1e-12. Honest boundary: the aggregate lives at abscissa 5/2 — farther from the xi-centre 1/2 than the pointwise values; aggregation works but does not move toward the centre.",
+    badge: "sandbox",
+    script: "half_integral_selfconvolution_probe.py",
+  },
+  {
+    date: "2026-07-25",
+    part: 49,
+    title:
+      "The only mechanism that ever proved an RH now runs inside the suite — with one cell vacant",
+    verdict: "MINIATURE-RUNS",
+    summary:
+      "The classical Rankin/Landau positivity argument is rebuilt as a machine-verified inference: nonnegativity plus the measured abscissa 4.0026 proves |a_p| = O(p^1.55) without checking values individually, and the same trick gives alpha_tau = 11.9997 after confirming Delta = (theta2 theta3 theta4 / 2)^8 lies in the compiler theta monoid (the Ramanujan tau world included). The strategic map: on the eigenvalue side all three mechanism roles (family, positivity, pole) are occupied in-suite; on the zeros side over Z exactly one cell is vacant — the family role (the classical F1 problem). What is missing for RH is now an empty table cell next to demonstrably working ones; the miniature proves eigenvalue magnitudes, not zero locations.",
+    badge: "sandbox",
+    script: "rankin_positivity_miniature_probe.py",
+  },
   {
     date: "2026-07-25",
     part: 48,

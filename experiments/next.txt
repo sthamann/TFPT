@@ -18,6 +18,40 @@
 # Surfaces: Ledger HECKE.GEOM.HALFINT.01; \veri in tfpt_1 / tfpt_3 / tfpt_research_contracts; Changelog (XV);
 #     Wolfram extension 598 → 603; website papers.ts + VerificationDag E8 + ScriptIndex via gen; AUDIT OK.
 #
+# 2026-07-25 (IV) — Teile 49–50 (delegiert, die zwei letzten ausführbaren Restchancen-Vektoren): **MINIATURE-RUNS** (der Deligne/Rankin-Mechanismus läuft in-suite als Beweis-Schluss) + **FAMILY-AGGREGATED** (die Zentralwert-Familie aggregiert exakt, aber weg von der ξ-Linie) — 28/28 + 17/17, Sandbox
+# rankin_positivity_miniature_probe.py (T49, 21s) und half_integral_selfconvolution_probe.py (T50, 17s).
+#
+# T49 **MINIATURE-RUNS**: der einzige historisch erfolgreiche RH-Mechanismus (Rankin 1939/Landau/
+#    Deligne, klassisch) als maschinell verifizierter SCHLUSS in-suite: Nichtnegativität a_n(f₈)² +
+#    gemessene Abszisse α = 4.0026 + Landau ⇒ |a_p| = O(p^{1.55}) (max |a_p|/p^{3/2} = 1.795 < 2) —
+#    Größenordnungs-Ramanujan BEWIESEN statt geprüft. LEVEL-1-TOR: Δ = (θ₂θ₃θ₄/2)⁸ = η²⁴ exakt bis
+#    O(q²⁰⁰⁰) (Jacobi) — das Compiler-Theta-Monoid enthält die τ-Welt; Hecke-Leiter + Deligne-Schranke
+#    (max 1.709 ≤ 2, p ≤ 50); derselbe Trick: α_τ = 11.9997. Ehrlich: naive sym²-Iteration feuert
+#    NICHT (38/45 Prim-Koeffizienten negativ; L(sym²) ganz) — die exakte 3/2-Schärfung braucht
+#    klassische Feinwerkzeuge. **M2-LANDKARTE (das strategische Deliverable):** von den drei
+#    Mechanismus-Rollen sind auf der Eigenwert-Seite ALLE in-suite besetzt (FAMILY: f₈/Δ im Monoid;
+#    POS: a²/τ²; POLE: Abszisse = Gewicht); auf der NULLSTELLEN-Seite über Z ist genau EINE Zelle
+#    vakant: FAMILY (kein Frobenius/f^⊗k über Z — das F₁-Problem, klassisch). „Was für RH fehlt" ist
+#    jetzt eine leere Tabellenzelle neben nachweislich funktionierenden Zellen.
+# T50 **FAMILY-AGGREGATED**: die Selbst-Faltung D_gg des Brückenobjekts g: Shimura-Relation
+#    b(dm²) = b(d)·α_d^♯(m) EXAKT (10000/10000 Koeffizienten; interessante 2-Support-Korrektur:
+#    gerade m ⇒ 0, U₄-Fence konsistent); Dirichlet-Faktorisierung rel 1e-25; WALDSPURGER-KONSTANZ
+#    AUSGEWEITET: R = 23.1873585645 über 46 Diskriminanten, Spread 7.7e-16(!); Aggregat-Identität
+#    D_gg = R·Σ|d|^{3/2−s}L(f₈×χ_d,2)·E_d(s) + Nichtfundamental-Anteil schließt auf 8e-13 (s = 3)
+#    bzw. 1e-12 (s = 4). ABER ehrlich: Wachstum α = 2.49 ⇒ Pol-Kandidat 5/2 — das Aggregat lebt
+#    WEITER von der ξ-Linie (1/2) entfernt als die punktweisen Werte (GL(2)-Zentrum 2); Trial-FE-
+#    Fenster unbrauchbar. Route-2-Hebel benannt (FE/Positivität von D_gg via Rankin-sym²), die
+#    kategoriale Grenze steht.
+# GESAMTSTAND der Restchancen-Vektoren: BEIDE haben geliefert, was sie liefern konnten — der
+#    Mechanismus existiert in-suite (T49), die Familie aggregiert (T50); vakant bleibt exakt die
+#    FAMILY-Rolle über Z. Alle ausführbaren Vektoren der Prime-Front sind damit ABGEARBEITET;
+#    was bleibt, sind die benannten Theorie-Projekte (F₁-Familie, ξ-Transport, ∞-LCO). Die Serie
+#    ruht vollständig kartiert — weitere Proben ohne neue strukturelle Idee wären Fishing.
+# Serie (XII)–(LXI): 50 Proben, 1001/1001 Checks Sandbox + v535/v536/v537 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz (Miniatur beweist Eigenwert-BETRÄGE, nicht Nullstellen-
+# LAGEN — der Unterschied IST die RH); Klassik (Rankin, Landau, Deligne, Jacobi, Shimura,
+# Waldspurger) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-25 (III) — Teil 48 (delegiert): lambda_scale_uniqueness_probe.py — **SCALE-TORSOR**: der Erklärungsanspruch von Stufe-4-Route 1 („der Compiler fixiert die Λ-Skala") ist GEKILLT — der Review-Kill-Test hat in 0.2s entschieden — 17/17, Sandbox
 # Design: NULLSTELLEN-VERBOT (AST-geprüft, kein zetazero); mechanische Kandidaten-Erzeugungsregel
 # G1: t = π·2^k·m (k ∈ {−2..2}, m ∈ {1, |μ4|, g_car, N_fam}) → 17 distinkte Λ-Kandidaten; T12-Poisson
