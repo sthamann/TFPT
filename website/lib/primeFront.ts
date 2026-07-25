@@ -35,7 +35,8 @@ export type PrimeFrontVerdict =
   | "TYPED"
   | "DENSITIES-CLOSED"
   | "OUTSIDE-KOHNEN-SCOPE"
-  | "CENTRAL-VALUES-WIRED";
+  | "CENTRAL-VALUES-WIRED"
+  | "IMPL-OPEN";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -59,6 +60,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-25",
+    part: 46,
+    title:
+      "Stage-4 prototype: the self-duality operator class passes R1, the IR shortcut does not",
+    verdict: "IMPL-OPEN",
+    summary:
+      "The prolate spheroidal operator — the canonical object of Fourier self-duality (Slepian, classical; Connes-Moscovici 2022 as external anchor) — is implemented and validated against literature eigenvalues to 4.5e-4, giving the stage-4 map its first R1-certified unbounded self-adjoint prototype. The naive IR assignment |mu_n| ~ gamma_n^2 + 1/4 fails preregistered criteria (~90% off, null controls confirm no signal there): the published statement concerns the UV counting / Dirac square root, not interior IR eigenvalues. Path not dead — the next probe targets the UV/Dirac construction; no TFPT result and no RH progress is claimed either way.",
+    badge: "sandbox",
+    script: "stage4_prolate_prototype_probe.py",
+  },
   {
     date: "2026-07-24",
     part: 0,
