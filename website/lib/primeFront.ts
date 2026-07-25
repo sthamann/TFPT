@@ -36,7 +36,8 @@ export type PrimeFrontVerdict =
   | "DENSITIES-CLOSED"
   | "OUTSIDE-KOHNEN-SCOPE"
   | "CENTRAL-VALUES-WIRED"
-  | "IMPL-OPEN";
+  | "IMPL-OPEN"
+  | "UV-NO-SIGNAL";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -60,6 +61,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-25",
+    part: 47,
+    title:
+      "UV/Dirac prototype: no pointwise signal — and preregistration caught a near-false-positive",
+    verdict: "UV-NO-SIGNAL",
+    summary:
+      "The numerically clean track shows no pointwise Dirac-to-zeros match out of sample (mean rel 0.34, null controls comparable), while the exterior-coupling track looked spectacular (2.5% train, 4% out-of-sample) but failed the preregistered convergence kill — a near-false-positive correctly killed by the probe's own discipline. Connes-Moscovici 2022 remains an external asymptotic counting anchor, not a few-percent prototype; the stage-4 self-duality class stays R1-certified with the remaining levers being genuine theory projects, not quick probes. The prime-front series (parts 11-47) rests here at its natural saturation point: three promoted modules, a three-channel functor map, and an honestly mapped stage-4 frontier.",
+    badge: "sandbox",
+    script: "stage4_prolate_uv_dirac_probe.py",
+  },
   {
     date: "2026-07-25",
     part: 46,

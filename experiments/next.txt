@@ -18,6 +18,47 @@
 # Surfaces: Ledger HECKE.GEOM.HALFINT.01; \veri in tfpt_1 / tfpt_3 / tfpt_research_contracts; Changelog (XV);
 #     Wolfram extension 598 → 603; website papers.ts + VerificationDag E8 + ScriptIndex via gen; AUDIT OK.
 #
+# 2026-07-25 (II) — Teil 47 (delegiert): stage4_prolate_uv_dirac_probe.py — **UV-NO-SIGNAL**: der punktweise UV/Dirac-Prototyp reproduziert die CM-Aussage mit Sandbox-Mitteln NICHT; die Preregistrierung hat ein Beinahe-Falsch-Positiv abgefangen — 17/17, 23s, Sandbox
+# Track A (Ramis-validiertes A_τ, numerisch sauber): CM-Dirac-Map 2√|μ| gegen γ₄..γ₁₀ out-of-sample
+# mean rel 0.338 (Training 0.41; Nullkontrollen: kinetic 0.84 schlechter, GUE 0.42 vergleichbar ⇒
+# kein Signal); LEE-Varianten S1/S2 schlechter; UV-Counting bei E = 20..50 unteraufgelöst (rel
+# 1.9 → 1.0). Track B (Exterior-Kopplung U(θ), θ* = 0.568π): Training 0.025 / OOS 0.040 — SIEHT
+# spektakulär aus, ABER K1-B feuert: Mesh-rel 0.91, X_max-rel 6.0 auf den untersten 5 — NICHT
+# konvergent, nicht vertrauenswürdig (das designierte Kill-Kriterium hat ein Beinahe-Falsch-Positiv
+# getötet; exakt der Zweck der Preregistrierung).
+# STUFE-4-STAND nach T46+T47: die Selbstdualitäts-Klasse ist R1-zertifiziert (unbeschränkt
+# selbstadjungiert, Literatur-validiert), aber weder IR- noch punktweise UV-Numerik erreicht die
+# Nullstellen mit Sandbox-Mitteln; Connes–Moscovici 2022 bleibt EXTERNER asymptotischer
+# Counting-Anker (kein few-%-Claim). Benannte verbleibende Hebel (alle jenseits schneller Proben):
+# (a) compiler-native Herleitung der Λ-Skala/Operatorwahl (echtes Theorieprojekt), (b) CM strikt
+# asymptotisch belassen, (c) volle ∞-LCO-Theorie (even+odd) jenseits FEM-Truncation.
+# EHRLICHE LINIEN-BILANZ: die Prime-Front-Serie (T11–T47) ist an ihrem natürlichen Sättigungspunkt —
+# drei Promotionen (v535/v536/v537), dreikanalige Funktor-Kartierung geschlossen, Stufe-4 als
+# R1-Klasse + präzise benannte offene Theorie-Projekte. Weitere Sandbox-Proben auf dieser Linie
+# ohne neue strukturelle Idee wären Fishing; die Linie ruht dokumentiert.
+# Serie (XII)–(LVIII): 47 Proben, 939/939 Checks Sandbox + v535/v536/v537 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Slepian, Ramis, Connes–Moscovici, Weyl-Grenzkreis)
+# als klassisch/extern benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (I) — Teil 46 (delegiert): stage4_prolate_prototype_probe.py — Stufe-4-Prototyp der Selbstdualitäts-Klasse: **IMPL-OPEN** (Operator validiert, publizierte CM-Aussage ist UV/Dirac, nicht IR) — 16/16, 2.2s, Sandbox
+# Erster unbeschränkter Operator-Prototyp der T40-Landkarte: Prolate-Sphäroid-Operator (Slepian,
+# klassisch; Connes–Moscovici 2022 als EXTERNER Anker — kein TFPT-Resultat, kein RH-Fortschritt,
+# Fence im Docstring). R1 ✓: Interior-W_Λ positiv, Konvergenz < 1e-13; FEM-Version symmetrisch;
+# RAMIS-ANKER getroffen: μ₁ = −13.3088 (lit −13.3027, rel 4.5e-4), μ₂ = −39.4133 (rel 7.6e-4) —
+# die Implementierung ist validiert. F0-IR-Zuordnung |μ_n| ~ γ_n² + 1/4 SCHEITERT preregistriert
+# (mean rel 0.95 → 0.90 → 0.81 über Λ = 1, √2, 2 — fällt, aber ≫ few-%); Nullkontrollen: kinetic-only
+# 0.995 (schlechter ✓), GUE-gleiche-Dichte 0.881 (≈ gleich schlecht ⇒ die IR-Zuordnung trägt kein
+# Signal). R3 underpowered (KS 0.50, n klein); R4 offen. DIAGNOSE: die publizierte CM-Identifikation
+# betrifft die UV-ZÄHLUNG / die DIRAC-QUADRATWURZEL der selbstadjungierten Erweiterung, nicht die
+# IR-Eigenwerte des Innen-Problems — Implementierungs-Lücke, kein Tod der Klasse.
+# STUFE-4-STAND: die Selbstdualitäts-Klasse hat jetzt einen R1-validierten Prototyp; TFPT-Anschluss
+# bleibt [O] (Compiler-Selbstdualität als Auswahlprinzip — T12/T14-Anker, nicht behauptet).
+# NÄCHSTER HEBEL (T47 gestartet): der UV-/Dirac-Prototyp (Darboux-Quadratwurzel der selbstadjungierten
+# Erweiterung, UV-Spektrum direkt gegen γ_n) — ODER compiler-native Herleitung der Λ-Skala.
+# Serie (XII)–(LVII): 46 Proben, 922/922 Checks Sandbox + v535/v536/v537 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Slepian, Ramis, Connes–Moscovici 2022) als
+# klassisch/extern benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-24 (XX) — Teil 45 (delegiert): baruch_mao_metaplectic_probe.py — **CENTRAL-VALUES-WIRED-BM**: die Zentralwert-Familie IST als b(d)² des Compiler-Objekts g realisiert; R(d) EXAKT konstant (Spread 2.7e-13 über 10 Diskriminanten) — 13/13, 19s, Sandbox
 # Der Finaltest der Zentralwert-Linie, mit der T43/T44-Lektion (L-Wert-Qualität zuerst): B1 AFE-basierte
 # Twist-L-Werte (T12-Lambda-Technik; AFE↔Direktsumme rel 1e-8..1e-11 bei s = 3.5; ε_d = χ_d(8);
