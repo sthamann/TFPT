@@ -130,14 +130,16 @@ export function TwoDoorsConvergence() {
       </motion.div>
 
       <div className="mt-2 flex flex-wrap items-start gap-2 rounded-xl border border-dashed border-sky-400/35 bg-slate-900/50 p-3">
-        <StatusBadge badge="running" />
+        <StatusBadge badge="sandbox" />
         <p className="min-w-0 flex-1 text-xs leading-relaxed text-slate-400">
-          T104 · SCHUR.PROFILE.BOUND — the inductive chain: induction margin →
-          σ bound → handover (
+          T104 · SCHUR.PROFILE.BOUND — CHAIN-PARTIAL (two independent arms,
+          21/21 + 47/47): the naive margin is dead, but exact spectral-split
+          chains close 16/16 with finite data; the hard core moved to a
+          bare_k lower bound + the soft dressing scalar L. T105 (
           <span className="font-mono text-slate-300">
-            schur_profile_bound_probe.py
+            bare_wing_bound_probe.py
           </span>
-          , running).
+          ) running.
         </p>
       </div>
 

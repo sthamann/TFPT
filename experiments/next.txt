@@ -1,3 +1,41 @@
+# 2026-07-26 (XVIII) — Teil 104 (delegiert, die induktive Kette — Vertrag SCHUR.PROFILE.BOUND, Opus 5, ZWEI unabhängige Arme): schur_profile_bound_probe.py + schur_profile_chain_probe.py — **CHAIN-PARTIAL** (beide Arme unabhängig, konvergente Befunde) — die naive Margen-Route M ≥ m·Id ist TOT (0/16 Zonen; m = 2.4e-6…1.5e-3 verschwindet im Kontinuum wie M^{−1.7}, Fit), aber exakte Spektral-Split-Ketten schließen 16/16 mit endlichen Daten; der MECHANISMUS ist MEIDUNG: B₋ entkoppelt von den weichen Bulk-Moden (weichste Mode 0.00% der Kopplungs-Masse für n ≥ 3); der harte Kern WANDERT zu bare_k-Untergrenze + weichem Dressing-Skalar L + endlichen Induktionsdaten + einseitiger Kantenabschätzung — 21/21 + 47/47, 17.4s + 75.1s, Sandbox
+# ZWEI Arme, ehrlich: eine Datei-Kollision zweier paralleler Worker wurde aufgelöst, indem
+#    beide Fassungen erhalten blieben — Arm B (schur_profile_bound_probe.py, 21 Checks,
+#    17.4s) und Arm A (schur_profile_chain_probe.py, 47 Checks, 75.1s, „chain variant;
+#    independent twin") sind unabhängige Implementierungen DESSELBEN Vertrags; alle
+#    Kernbefunde konvergieren — de facto eine unabhängige Replikation.
+# P1 Naive Marge tot: M ≥ m·Id hält 0/16 Zonen; Kopplungs-Masse/Marge = 10³…10⁶ — die
+#    genuine Form ist auf dem Induktionsfenster fast singulär; keine Marge rettet das.
+# P2 Mechanismus = MEIDUNG: die Kopplung B₋ entkoppelt von den weichen Moden des Bulks —
+#    die weichste Mode trägt 0.00% der Kopplungs-Masse für n ≥ 3; die Masse sitzt in
+#    mittleren/hohen Frequenzbändern (tiefstes Band nur 2–12%). Nicht eine Marge rettet
+#    die Positivität, sondern strukturelle Vermeidung.
+# P3 Exakte Spektral-Split-Ketten schließen 16/16: Arm A via exakte Block-Inversen-
+#    Identität W = m₀A⁻¹m₀ᵀ + RΣ⁻¹Rᵀ mit Matrix-Kappen in PSD-Ordnung (S4: 16/16;
+#    exaktes ρ 16/16 mit Headroom H = 1.15…1.44; Reichweite γ_max = 0.50…0.90;
+#    Headroom-Trend flach −0.018 ± 0.003); Arm B via Schwellen-Split (Stage iv: 16/16;
+#    O(1)-Schwelle w = 2.47…5.90 auflösungsstabil — braucht aber r_min = 64…1024 weiche
+#    Moden ∝ M ⇒ die Kontinuums-Aussage ist eine Spektraldichte-Bedingung).
+# P4 Dressing fast Rang-1 (effektiver Rang 1.07…2.7; Fast-Null-Richtung zu 99.7–100% in
+#    EINER Prolate-Mode), ABER die Prolate-Flügelbasis verliert gegen die Rohbasis in
+#    BEIDEN Armen — die T96/T103-Empfehlung ist damit getestet und verworfen.
+# P5 Zwei-Skalar-Reduktion (Arm B): Hypothese auf (w, L) reduziert; L = λ_max des weichen
+#    Dressings = 3.01…3.49 gegen Budget bare − μ/2 = 1.6…3.9 ⇒ die Zwei-Skalar-Form
+#    schließt nur 5/16 (hält auf n = 17, 19, 23, 25, 29).
+# HARTER KERN WANDERT: nicht mehr σ_k als Ganzes, sondern (1) Untergrenze an
+#    bare_k = λ_min(Q_full|E₋) (gemessen 4.4–26.8× μ_k/2 in Arm-A-Währung bzw. 2.06…4.60
+#    absolut in Arm B — Konventions-Unterschied), (2) der weiche Dressing-Skalar L,
+#    (3) endliche Induktionsdaten (Tiefmoden-Massen, E₊-Block), (4) einseitige
+#    Kantenabschätzung statt Fit — die Kette selbst ist dann Klassik (Schur-Komplement,
+#    exakte Block-Inverse, Parseval/Bessel, Weyl) ohne Fit. → T105 (läuft):
+#    BARE.AVOIDANCE.CORE (bare_wing_bound_probe.py) — zertifizierte bare-Untergrenze via
+#    k_eff-Zerlegung + das Avoidance-Gesetz (Struktur-Grund der Meidung → zertifizierbare
+#    L-Schranke).
+# Serie (XII)–(CXV): 104 Proben (T104 als Doppel-Lauf, zwei Arme), 2567/2567 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; alle Gesetze als Fits deklariert; Klassik
+# (Schur-Komplement, exakte Block-Inverse, Parseval/Bessel, Weyl, Slepian/Prolate)
+# zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-26 (XVII) — Teil 103 (delegiert, Werkzeugbau — Tür C, Opus 5): instrument_probe.py — **INSTRUMENT-IMPROVED** — das Werkzeug-Problem HALB GELÖST (Vertrag INSTRUMENT): neuer Renn-Slope **−0.0748 ± 0.0116** gegen −0.1622 (2.2× flacher, Fit); r_k fällt nur noch 9.33 → 2.70 und verlässt das Spektrum NIE; die Schließungs-Karte springt von 7/64 auf **44/64** mit EINEM festen k-uniformen Instrument (Λ₀ = 3, r = 2); der Rest liegt NICHT mehr am Bulk, sondern am Flügel-Schlupf S = 1 − ρ — 29/29, 31s, Sandbox
 # Anker: T101-Rennkurve exakt reproduziert (Slope −0.1622 ± 0.0562); T100-Schwellen
 #    reproduziert — beide Werkzeug-Hebel messen gegen dieselben Referenzen.

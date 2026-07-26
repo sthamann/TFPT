@@ -80,7 +80,8 @@ export type PrimeFrontVerdict =
   | "REMAINDER-CLOSES-ZONES"
   | "CROWDING-TRENDS"
   | "MECHANISM-IDENTIFIED"
-  | "INSTRUMENT-IMPROVED";
+  | "INSTRUMENT-IMPROVED"
+  | "CHAIN-PARTIAL";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -104,6 +105,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-26",
+    part: 104,
+    title:
+      "Chain partial — two independent arms; the margin route is dead, exact spectral splits close 16/16",
+    verdict: "CHAIN-PARTIAL",
+    summary:
+      "T104 (CHAIN-PARTIAL, 21/21 + 47/47) — contract SCHUR.PROFILE.BOUND, run TWICE: a file collision between two parallel workers was resolved by keeping both versions, so the same contract has two independent implementations (arm B: schur_profile_bound_probe.py; arm A: schur_profile_chain_probe.py, “chain variant; independent twin”) — an unplanned independent replication, and all core findings converge. The naive margin route (M ≥ m·Id) is dead: 0/16 zones; the margin m = 2.4e-6…1.5e-3 vanishes in the continuum like M^(−1.7) (fit); coupling mass over margin is 10³…10⁶. The MECHANISM is avoidance: the coupling B₋ decouples from the bulk's soft modes (the softest mode carries 0.00% of the coupling mass for n ≥ 3; the mass sits in mid/high frequency bands, lowest band only 2–12%) — structural avoidance saves positivity, not a margin. Exact spectral-split chains close 16/16: arm A via the exact block-inverse identity W = m₀A⁻¹m₀ᵀ + RΣ⁻¹Rᵀ with matrix caps in PSD order (headroom H = 1.15…1.44, reach γ_max = 0.50…0.90, headroom trend flat −0.018 ± 0.003); arm B via a threshold split (O(1) threshold w = 2.47…5.90, resolution-stable — but needing r_min = 64…1024 soft modes ∝ M, so the continuum statement is a spectral-density condition). The dressing is nearly rank-1 (effective rank 1.07…2.7; near-null direction 99.7–100% in ONE prolate mode), BUT the prolate wing basis loses to the raw basis in both arms — the T96/T103 recommendation is tested and rejected; the two-scalar form (w, L) closes only 5/16. The hard core MOVES: a lower bound on bare_k = λ_min(Q_full|E₋), the soft dressing scalar L, finite induction data, and a one-sided edge estimate instead of a fit — the chain itself is then classical (Schur complement, exact block inverse, Parseval/Bessel, Weyl) without fits. T105 (BARE.AVOIDANCE.CORE) is running. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "schur_profile_bound_probe.py + schur_profile_chain_probe.py",
+  },
   {
     date: "2026-07-26",
     part: 103,

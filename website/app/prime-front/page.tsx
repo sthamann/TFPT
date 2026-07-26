@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–103 · 2499 sandbox checks
+            Research diary · Teile 11–104 · 2567 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1476,13 +1476,18 @@ export default function PrimeFrontPage() {
           .
         </p>
         <p className="rounded-xl border border-slate-700/40 bg-slate-900/40 px-4 py-3 text-sm text-slate-400">
-          In progress — T104 (SCHUR.PROFILE.BOUND,{" "}
+          Result — T104 (SCHUR.PROFILE.BOUND, two independent arms:{" "}
           <span className="font-mono text-slate-300">
             schur_profile_bound_probe.py
+          </span>{" "}
+          +{" "}
+          <span className="font-mono text-slate-300">
+            schur_profile_chain_probe.py
           </span>
-          ) is running the inductive chain: induction margin → σ bound →
-          handover. Localizing the hardness is typing, not attacking it.
-          Sandbox; not RH evidence.
+          ) is CHAIN-PARTIAL: the naive margin route is dead, exact
+          spectral-split chains close 16/16 with finite data, and the hard
+          core moves to a bare_k lower bound plus the soft dressing scalar L.
+          T105 (BARE.AVOIDANCE.CORE) is running. Sandbox; not RH evidence.
         </p>
       </DiarySection>
 
@@ -1576,7 +1581,7 @@ function ProgramStatusCallout() {
         Strongest current sentence
       </p>
       <p className="mt-3 font-serif text-lg leading-relaxed text-violet-50 sm:text-xl">
-        After 103 probes and seven promoted modules, what remains TFPT-specific
+        After 104 probes and seven promoted modules, what remains TFPT-specific
         is exactly one object: I5 — with an induction skeleton whose identities
         are proved, zones 2–4 closed, and asymptotics localized to one named
         arithmetic bound (A), whose mechanism T102 identifies (Schur dressing
@@ -1584,9 +1589,11 @@ function ProgramStatusCallout() {
       </p>
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
         Zone-5 tip = equality problem; crowding sits in the proof family, not
-        the mathematics — and T103&apos;s improved instrument closes 44/64
-        (probe-level). Milestone: 2499/2499 checks. Not almost-RH. This is not
-        RH evidence.
+        the mathematics — T103&apos;s improved instrument closes 44/64
+        (probe-level), and T104 (CHAIN-PARTIAL, two independent arms) closes
+        the exact spectral-split chain 16/16 with finite data, moving the hard
+        core to a bare_k lower bound plus one soft dressing scalar L.
+        Milestone: 2567/2567 checks. Not almost-RH. This is not RH evidence.
       </p>
     </aside>
   );
