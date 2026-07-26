@@ -81,7 +81,8 @@ export type PrimeFrontVerdict =
   | "CROWDING-TRENDS"
   | "MECHANISM-IDENTIFIED"
   | "INSTRUMENT-IMPROVED"
-  | "CHAIN-PARTIAL";
+  | "CHAIN-PARTIAL"
+  | "ONE-OF-TWO";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -105,6 +106,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-26",
+    part: 105,
+    title:
+      "One of two — the bare bound is certified in closed form; the avoidance law becomes a theorem",
+    verdict: "ONE-OF-TWO",
+    summary:
+      "T105 (ONE-OF-TWO, 28/28) — contract BARE.AVOIDANCE.CORE: the chain's first certified closed-form ingredient. The T104 arm discrepancy dissolves — bare depends only on (u_k, δ) (the window centre α cancels; ≤ 0.74% drift under 8× refinement); arm A (4.39–26.77) is the corners of the (zone × γ) surface, arm B (2.06–4.60) its γ = 1 column; one currency, exact split bare = μ_k/2 + b0. bare is CERTIFIED: the exact E₋ structure Q_full|E₋ = (μ_k/2)Id + Arch + Pole (all foreign atoms vanish identically by support separation, slack ≥ 0.042), and three classical steps (Bessel; Legendre/level-set optimized at k(π/δ); Cauchy–Schwarz at the pole pair) collapse to the closed lower bound b0 ≥ (δ/π)∫₀^{π/δ} k(t)dt − δ·K_max − 4(cosh(u/2)−1)sinh(δ/2) — the band mean of the archimedean kernel over the band conjugate to the wing, ~log(1/2δ)−1. Positive 16/16 (1.27–3.54) at 81.1–92.7% of the measured value (median 92%), sharper the flatter the wing; no eigenvalue or induction data needed. The AVOIDANCE LAW is upgraded to a theorem: Q_full ⪰ 0 forces ‖Bᵀv_i‖² ≤ w_i·Λ₋ (semi-inner-product argument; coupling proportional to the mode's eigenvalue; verified at every mode of every zone, worst ratio 0.377) — it explains the measured 0.00% avoidance exactly. Plus an exact parity superselection: JQJ = Q (5.7e-15), JB = −BR (3.4e-15) — two channels that never mix; the softest mode is J-even 16/16. Euclidean angles are NOT small (cos up to 1.0) — the avoidance lives in the form metric: ρ_s is a Q-Friedrichs angle, resolution-stable (M-sweep: the margin falls 4×, ρ moves ≤ 8.5%). Synthesis: with certified bare the chain closes 15–16/16 in the handoff window (certifying costs zero zones; reach 0.44–0.80), and the whole remaining hardness is ONE Loewner statement: Q_full(α) ⪰ (μ_k/2)P₋ ⟺ ρ ≤ 1 − (μ_k/2)/bare_k — a Friedrichs-angle / spectral-density condition, not a margin condition. The free cap L ≤ Λ₋ = 5.63–7.52 diverges like log(1/D): the certificate must come from the spectral density near the soft end — L stays a measurement. T106 (FRIEDRICHS.ANGLE) is running. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "bare_wing_bound_probe.py",
+  },
   {
     date: "2026-07-26",
     part: 104,

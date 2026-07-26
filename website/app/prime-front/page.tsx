@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–104 · 2567 sandbox checks
+            Research diary · Teile 11–105 · 2595 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1581,7 +1581,7 @@ function ProgramStatusCallout() {
         Strongest current sentence
       </p>
       <p className="mt-3 font-serif text-lg leading-relaxed text-violet-50 sm:text-xl">
-        After 104 probes and seven promoted modules, what remains TFPT-specific
+        After 105 probes and seven promoted modules, what remains TFPT-specific
         is exactly one object: I5 — with an induction skeleton whose identities
         are proved, zones 2–4 closed, and asymptotics localized to one named
         arithmetic bound (A), whose mechanism T102 identifies (Schur dressing
@@ -1592,8 +1592,11 @@ function ProgramStatusCallout() {
         the mathematics — T103&apos;s improved instrument closes 44/64
         (probe-level), and T104 (CHAIN-PARTIAL, two independent arms) closes
         the exact spectral-split chain 16/16 with finite data, moving the hard
-        core to a bare_k lower bound plus one soft dressing scalar L.
-        Milestone: 2567/2567 checks. Not almost-RH. This is not RH evidence.
+        core to a bare_k lower bound plus one soft dressing scalar L. T105
+        (ONE-OF-TWO) certifies the bare bound in closed form and upgrades the
+        avoidance law to a theorem — the whole remaining hardness is one
+        Friedrichs-angle statement. Milestone: 2595/2595 checks. Not
+        almost-RH. This is not RH evidence.
       </p>
     </aside>
   );

@@ -132,12 +132,13 @@ export function TwoDoorsConvergence() {
       <div className="mt-2 flex flex-wrap items-start gap-2 rounded-xl border border-dashed border-sky-400/35 bg-slate-900/50 p-3">
         <StatusBadge badge="sandbox" />
         <p className="min-w-0 flex-1 text-xs leading-relaxed text-slate-400">
-          T104 · SCHUR.PROFILE.BOUND — CHAIN-PARTIAL (two independent arms,
-          21/21 + 47/47): the naive margin is dead, but exact spectral-split
-          chains close 16/16 with finite data; the hard core moved to a
-          bare_k lower bound + the soft dressing scalar L. T105 (
+          T104 · SCHUR.PROFILE.BOUND — CHAIN-PARTIAL: the hard core moved to
+          a bare_k lower bound + the soft dressing scalar L. T105 ·
+          BARE.AVOIDANCE.CORE — ONE-OF-TWO (28/28): bare is certified in
+          closed form and the avoidance law is a theorem; L stays a
+          measurement — the rest is one Friedrichs-angle statement. T106 (
           <span className="font-mono text-slate-300">
-            bare_wing_bound_probe.py
+            friedrichs_angle_probe.py
           </span>
           ) running.
         </p>

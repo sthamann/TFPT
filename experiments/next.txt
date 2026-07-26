@@ -1,3 +1,36 @@
+# 2026-07-26 (XIX) — Teil 105 (delegiert, der harte Kern — Vertrag BARE.AVOIDANCE.CORE, Opus 5): bare_wing_bound_probe.py — **ONE-OF-TWO** — bare ist ZERTIFIZIERT (erste geschlossene Zutat der Kette: drei klassische Schritte kollabieren zur Untergrenze b0 ≥ (δ/π)∫₀^{π/δ}k(t)dt − δ·K_max − 4(cosh(u/2)−1)sinh(δ/2), positiv 16/16 bei 81.1–92.7% des Messwerts), das AVOIDANCE-GESETZ ist ein THEOREM (Q_full ⪰ 0 ⇒ ‖Bᵀv_i‖² ≤ w_i·Λ₋) + exakte Paritäts-Superselektion; L bleibt Messung — die gesamte Rest-Härte ist EINE Friedrichs-Winkel-Aussage — 28/28, 26.8s, Sandbox
+# C1 Arm-Abgleich: die T104-Diskrepanz löst sich auf — bare hängt nur von (u_k, δ) ab
+#    (das Fenster-Zentrum α kürzt sich; ≤ 0.74% Drift unter 8× Verfeinerung); Arm A
+#    (4.39–26.77) = Ecken der (Zone × γ)-Fläche, Arm B (2.06–4.60) = deren γ=1-Spalte.
+#    Eine Währung: (u_k, δ) absolut; exakter Split bare = μ_k/2 + b0.
+# C2 bare ZERTIFIZIERT: exakte E₋-Struktur Q_full|E₋ = (μ_k/2)Id + Arch + Pol; alle
+#    fremden Atome verschwinden identisch (Träger-Separation, Slack ≥ 0.042); drei
+#    klassische Schritte (Bessel; Legendre/Level-Set optimiert bei k(π/δ);
+#    Cauchy-Schwarz am Pol-Paar) kollabieren zur geschlossenen Untergrenze
+#    b0 ≥ (δ/π)∫₀^{π/δ}k(t)dt − δ·K_max − 4(cosh(u/2)−1)sinh(δ/2) — das Band-Mittel
+#    des archimedischen Kerns über dem zum Flügel konjugierten Band, ~log(1/2δ)−1.
+#    Positiv 16/16 (1.27–3.54), bei 81.1–92.7% des Messwerts (Median 92%), wird
+#    schärfer je flacher der Flügel. Keine Eigenwert-/Induktionsdaten nötig.
+# C3 AVOIDANCE-GESETZ ist Theorem: Q_full ⪰ 0 ⇒ ‖Bᵀv_i‖² ≤ w_i·Λ₋ (Semi-Skalarprodukt-
+#    Argument; Kopplung ∝ Eigenwert der Mode; verifiziert an jeder Mode jeder Zone,
+#    schlechtestes Verhältnis 0.377) — erklärt die gemessene 0.00%-Meidung exakt. Dazu
+#    EXAKTE Paritäts-Superselektion: JQJ = Q (5.7e-15), JB = −BR (3.4e-15) — zwei
+#    Kanäle mischen nicht; weichste Mode J-gerade 16/16. Euklidische Winkel NICHT
+#    klein (cos bis 1.0) — die Meidung lebt in der Form-Metrik: ρ_s = Q-Friedrichs-
+#    Winkel, auflösungsstabil (M-Sweep: Marge fällt 4×, ρ bewegt sich ≤ 8.5%).
+# C4 Synthese: mit zertifiziertem bare schließt die Kette im Übergabe-Fenster auf
+#    15–16/16 (zertifizieren kostet null Zonen); Reichweite 0.44–0.80. Der Rest ist
+#    EINE Loewner-Aussage: Q_full(α) ⪰ (μ_k/2)P₋^{(k)} ⟺ ρ ≤ 1 − (μ_k/2)/bare_k —
+#    eine Friedrichs-Winkel-/Spektraldichte-Bedingung, keine Margen-Bedingung. Freie
+#    Kappe L ≤ Λ₋ = 5.63–7.52 divergiert wie log(1/D) — das Zertifikat muss aus der
+#    Spektraldichte nahe dem weichen Ende kommen. → T106 (läuft): FRIEDRICHS.ANGLE
+#    (friedrichs_angle_probe.py) — Landau-Widom-Dichte, Invarianten-Verstärkung
+#    (Selbst-Fortpflanzung der Induktion), Paritäts-Kanäle.
+# Serie (XII)–(CXVI): 105 Proben, 2595/2595 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Bessel, Legendre/Level-Set,
+# Cauchy-Schwarz, Friedrichs-Winkel, Loewner-Ordnung) zitiert; Sandbox ohne
+# Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-26 (XVIII) — Teil 104 (delegiert, die induktive Kette — Vertrag SCHUR.PROFILE.BOUND, Opus 5, ZWEI unabhängige Arme): schur_profile_bound_probe.py + schur_profile_chain_probe.py — **CHAIN-PARTIAL** (beide Arme unabhängig, konvergente Befunde) — die naive Margen-Route M ≥ m·Id ist TOT (0/16 Zonen; m = 2.4e-6…1.5e-3 verschwindet im Kontinuum wie M^{−1.7}, Fit), aber exakte Spektral-Split-Ketten schließen 16/16 mit endlichen Daten; der MECHANISMUS ist MEIDUNG: B₋ entkoppelt von den weichen Bulk-Moden (weichste Mode 0.00% der Kopplungs-Masse für n ≥ 3); der harte Kern WANDERT zu bare_k-Untergrenze + weichem Dressing-Skalar L + endlichen Induktionsdaten + einseitiger Kantenabschätzung — 21/21 + 47/47, 17.4s + 75.1s, Sandbox
 # ZWEI Arme, ehrlich: eine Datei-Kollision zweier paralleler Worker wurde aufgelöst, indem
 #    beide Fassungen erhalten blieben — Arm B (schur_profile_bound_probe.py, 21 Checks,
