@@ -27,12 +27,12 @@ export function HonestyBanner() {
         v540 consolidates the amplitude/linear route with the open boundary{" "}
         <em>inside</em> the claim; load-bearing v541 promotes the
         matching-lemma/transport-ledger package. Sandbox T86 closes the
-        matching lemma on all atom classes; T87–T89 complete the I5 geography
-        (sector boundary at log&nbsp;2, crossing mapped, eight tight curves)
-        without attacking I5. What remains TFPT-specific is exactly one object: I5 in one-family
-        form — by the closed ledger equivalent to Weil positivity ⟺ RH, an
-        equivalence typing only, not “almost RH.” No claim of progress toward
-        the Riemann Hypothesis is made.
+        matching lemma on all atom classes; T87–T91 complete the I5 geography
+        (one-atom band, explicit Gaussian core, named target inequality (T)) —
+        without attacking I5. What remains TFPT-specific is exactly one object:
+        I5 in one-family form — by the closed ledger equivalent to Weil
+        positivity ⟺ RH, an equivalence typing only, not “almost RH.” No claim
+        of progress toward the Riemann Hypothesis is made.
       </p>
     </aside>
   );

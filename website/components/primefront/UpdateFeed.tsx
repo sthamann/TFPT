@@ -44,6 +44,8 @@ const VERDICT_COLOR: Partial<Record<PrimeFrontVerdict, string>> = {
   "DICTIONARY-EXACT-CORE": "text-sky-300",
   "TIGHT-SET-PARAMETRIZED": "text-violet-200",
   "CROSSING-MAPPED": "text-amber-100",
+  "CORE-DISSECTED": "text-violet-200",
+  "BAND-PARTIAL": "text-emerald-200",
 };
 
 export function UpdateFeed() {

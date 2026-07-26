@@ -7,19 +7,26 @@ import { HonestyBanner } from "@/components/primefront/HonestyBanner";
 import { DiarySection } from "@/components/primefront/DiarySection";
 import { CompilerSchematic } from "@/components/primefront/CompilerSchematic";
 import { ShellCensus } from "@/components/primefront/ShellCensus";
+import { AperyBridge } from "@/components/primefront/AperyBridge";
 import { KillChainTimeline } from "@/components/primefront/KillChainTimeline";
 import { PrimeDetector } from "@/components/primefront/PrimeDetector";
 import { NeighborStepping } from "@/components/primefront/NeighborStepping";
 import { TwoMelodies } from "@/components/primefront/TwoMelodies";
 import { CenterAtlas } from "@/components/primefront/CenterAtlas";
+import { SpectrumLadder } from "@/components/primefront/SpectrumLadder";
 import { WeilArcMap } from "@/components/primefront/WeilArcMap";
+import { ModuleLadder } from "@/components/primefront/ModuleLadder";
+import { ConeCoverage } from "@/components/primefront/ConeCoverage";
+import { DoorsPanel } from "@/components/primefront/DoorsPanel";
+import { HeatFamilyBalance } from "@/components/primefront/HeatFamilyBalance";
+import { CrossingMap } from "@/components/primefront/CrossingMap";
 import { UpdateFeed } from "@/components/primefront/UpdateFeed";
 import { StatusBadge } from "@/components/primefront/StatusBadge";
 
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with positive linear carrier whose open boundary is the FE-covariant gap functional λ* on n ≡ 6 mod 8 (v540), and the matching-lemma/transport-ledger package with two named limits (v541). Not RH evidence.",
+    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with positive linear carrier whose open boundary is the FE-covariant gap functional λ* on n ≡ 6 mod 8 (v540), the matching-lemma/transport-ledger package with two named limits (v541), and the I5 geography through the one-atom band and named target inequality (T) (T87–T91). Not RH evidence.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -39,7 +46,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "The Prime Front — TFPT research diary",
     description:
-      "Primes, the E8 census, and load-bearing results v535–v541. Program status: matching lemma closed; I5 geography complete (log 2 / t* ≈ 2π / 8 curves); what remains TFPT-specific is exactly one object — I5. No claim of progress toward the Riemann Hypothesis.",
+      "Primes, the E8 census, and load-bearing results v535–v541. Program status: matching lemma closed; I5 core = Gaussian modes in the one-atom band with named target (T); what remains TFPT-specific is exactly one object — I5. No claim of progress toward the Riemann Hypothesis.",
     url: `${SITE_URL}/prime-front`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -48,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified: v535–v541. I5 geography complete (2020 sandbox checks). Residual: I5 — not almost-RH.",
+      "Research diary of the prime / zeta line. Machine-verified: v535–v541. I5 geography complete through the one-atom band and target (T) (2056 sandbox checks). Residual: I5 — not almost-RH.",
   },
 };
 
@@ -79,7 +86,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–89 · 2020 sandbox checks
+            Research diary · Teile 11–91 · 2056 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -249,6 +256,7 @@ export default function PrimeFrontPage() {
         eyebrow="04 · Surprise bridges · Teil 12"
         title="The census “knows” the Apéry numbers"
         badge="sandbox"
+        visual={<AperyBridge />}
       >
         <p>
           The cuspidal piece of the signed count is the weight-4 form{" "}
@@ -428,6 +436,7 @@ export default function PrimeFrontPage() {
         eyebrow="10 · Stage-4 map · Teil 40"
         title="Two-point spectrum; infinitely many still missing"
         badge="sandbox"
+        visual={<SpectrumLadder />}
       >
         <p>
           The operator algebra on the census forms is commutative with a{" "}
@@ -573,7 +582,12 @@ export default function PrimeFrontPage() {
         eyebrow="12 · Where the program stands"
         title="Prime and Riemann Front: From Finite Hecke Structure to an Infinite Stabilized Trace Space"
         badge="sandbox"
-        visual={<ProgramStatusCallout />}
+        visual={
+          <div className="space-y-3">
+            <ProgramStatusCallout />
+            <ModuleLadder />
+          </div>
+        }
       >
         <p>
           <strong className="font-medium text-slate-200">
@@ -656,7 +670,7 @@ export default function PrimeFrontPage() {
         </p>
 
         <p className="rounded-xl border border-violet-400/35 bg-violet-500/10 px-4 py-3 text-sm leading-relaxed text-violet-50 sm:text-base">
-          After 86 probes and seven promoted modules (v535–v541), the matching
+          After 90 probes and seven promoted modules (v535–v541), the matching
           lemma is closed on ALL atom classes (window-certificate format,
           modulo proven classics only). What remains TFPT-specific is exactly
           ONE object: I5 in one-family form —{" "}
@@ -680,16 +694,13 @@ export default function PrimeFrontPage() {
           <span className="font-mono text-emerald-200">
             [machine-verified · v541]
           </span>
-          . I5 geography complete: sector boundary at log&nbsp;2
-          (Connes–Consani window vs compiler certificates), crossing region at
-          t*&nbsp;≈&nbsp;2π, tight set = 8 parametrized curves{" "}
-          <span className="font-mono text-amber-200">[sandbox · T87–T88]</span>;
-          crossing mapped: thin band log&nbsp;2&nbsp;&lt;&nbsp;a&nbsp;≲&nbsp;1.0,
-          residual subspace 1–4 dims{" "}
-          <span className="font-mono text-amber-200">[sandbox · T89]</span>.
-          Milestone: 2020/2020 sandbox checks. Fence: geography locates where
-          any attack must work — it does not perform one; I5 remains ⟺ RH.
-          This is not RH evidence.
+          . I5 core = explicit Gaussian-mode family in the one-atom band
+          (log&nbsp;2,&nbsp;0.925]; named target: inequality (T), a
+          classical-shaped zone extension; I5 remains ⟺ RH{" "}
+          <span className="font-mono text-amber-200">[sandbox · T87–T91]</span>.
+          Milestone: 2056/2056 sandbox checks. Fence: geography locates where
+          any attack must work — it does not perform one. This is not RH
+          evidence.
         </p>
 
         <p>
@@ -709,8 +720,9 @@ export default function PrimeFrontPage() {
             ; Matching Lemma closed on all atom classes{" "}
             <span className="font-mono text-amber-200">[sandbox · T86]</span>;
             I5 geography complete{" "}
-            <span className="font-mono text-amber-200">[sandbox · T87–T89]</span>
-            ; I5 in one-family form — the single remaining TFPT-specific object.
+            <span className="font-mono text-amber-200">[sandbox · T87–T91]</span>
+            ; named target inequality (T) typed; I5 in one-family form — the
+            single remaining TFPT-specific object.
           </li>
         </ul>
 
@@ -737,7 +749,12 @@ export default function PrimeFrontPage() {
         eyebrow="13 · The amplitude route · Teile 67–72 · v540"
         title="From the Dirac square root to a positive linear carrier — and the measured wall"
         badge="machine-verified"
-        visual={<AmplitudeRouteCallout />}
+        visual={
+          <div className="space-y-3">
+            <AmplitudeRouteCallout />
+            <ConeCoverage />
+          </div>
+        }
       >
         <p>
           <strong className="font-medium text-slate-200">
@@ -806,7 +823,12 @@ export default function PrimeFrontPage() {
         eyebrow="14 · The doors get furnished · Teile 73–81"
         title="Two no-go theorems, a λ* calculus, a window proof — and one named inequality"
         badge="sandbox"
-        visual={<DoorsFurnishedCallout />}
+        visual={
+          <div className="space-y-3">
+            <DoorsFurnishedCallout />
+            <DoorsPanel />
+          </div>
+        }
       >
         <p>
           <strong className="font-medium text-slate-200">
@@ -932,7 +954,12 @@ export default function PrimeFrontPage() {
         eyebrow="15 · Three new perspectives · Teile 82–84"
         title="The arch term was internal, the wall is transversal, and the last class is the compiler's home"
         badge="sandbox"
-        visual={<ThreePerspectivesCallout />}
+        visual={
+          <div className="space-y-3">
+            <ThreePerspectivesCallout />
+            <HeatFamilyBalance />
+          </div>
+        }
       >
         <p>
           <strong className="font-medium text-slate-200">
@@ -1002,10 +1029,15 @@ export default function PrimeFrontPage() {
       {/* 16 — I5 geography */}
       <DiarySection
         id="i5-geography"
-        eyebrow="16 · I5 geography · Teile 87–89"
+        eyebrow="16 · I5 geography · Teile 87–91"
         title="The I5 geography: two decades-old programs frame the same gap"
         badge="sandbox"
-        visual={<I5GeographyCallout />}
+        visual={
+          <div className="space-y-3">
+            <I5GeographyCallout />
+            <CrossingMap />
+          </div>
+        }
       >
         <p>
           <strong className="font-medium text-slate-200">
@@ -1084,9 +1116,63 @@ export default function PrimeFrontPage() {
           Connes–Consani–Moscovici, Suzuki.
         </p>
 
+        <p>
+          <strong className="font-medium text-slate-200">
+            The residual, dissected: explicit Gaussian modes — and three
+            directions under no control.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T90]</span>{" "}
+          CORE-DISSECTED (17/17): the 1–4 residual vectors are n-stable across
+          the discretisation ladder (angles ≤ 2.1°) and explicit — closed
+          Gauss×cos / Gauss×sin fits with 99+% capture, the I5 core as a small
+          family of concrete even/odd Gaussian-modulated modes. The coverage
+          matrix (certificate extension / Connes–Consani pole vanishing / Sonin
+          projection, against ten vectors along the a-ladder) leaves{" "}
+          <em>three of ten</em> vectors controlled by no structure at all. That
+          decides the core question: the residual is <em>not</em> merely pole
+          coupling — pole projection clears only the a&nbsp;=&nbsp;0.75 window;
+          from a&nbsp;≈&nbsp;0.85 genuine pole-free atom↔arch content remains,
+          and at a&nbsp;=&nbsp;1.2 an odd atom-coupled mode appears that the
+          even analyses could not see. Requirement line: an I5 idea must deliver
+          positivity for an explicit family of Gaussian-modulated modes in the
+          thin band — and it is not reducible to pole cleanup. Classical cited:
+          Bombieri, Connes–Consani vanishing, Slepian.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            The core, dissected: explicit Gaussian modes; and the band&apos;s
+            law: the first prime rescues positivity where the archimedean
+            margin ends — with a named, provable-shaped target inequality
+            extending the classical zone.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T91]</span>{" "}
+          BAND-PARTIAL (19/19, 3/4 closed): the band is the one-atom zone
+          log&nbsp;2&nbsp;&lt;&nbsp;a&nbsp;≤&nbsp;0.9253 with inner edge
+          a<sub>neg</sub>&nbsp;=&nbsp;0.7410. Beyond a<sub>neg</sub> the
+          prime-free margin changes sign and the prime atom becomes
+          load-bearing — the first prime rescues positivity where the
+          archimedean margin is exhausted (exactly the T89 balance point,
+          0.03%). Atom turn-on law exact (k&nbsp;=&nbsp;2m+1, Beta integrals);
+          uncertainty constants decided: a·t<sub>rms</sub>&nbsp;→&nbsp;π
+          (Wirtinger) and a·t<sub>cent</sub>&nbsp;→&nbsp;2Si(π)&nbsp;−&nbsp;4/π
+          =&nbsp;2.4306. Band and tight curves are two orbit regions of the same
+          functional with shared exact scale{" "}
+          <span className="font-mono text-slate-200">{"∫k_ζ = 2θ_RS"}</span>.
+          Named target (T), for a in the band and ‖f‖&nbsp;=&nbsp;1:{" "}
+          <span className="font-mono text-slate-200">
+            {"(P_pole + A_arch)(f) ≥ √2·log2·h_f(log2)"}
+          </span>{" "}
+          — provable-shaped as a zone extension beyond Bombieri&apos;s
+          log&nbsp;2 (a self-standing classical target!); RH&nbsp;⇒&nbsp;(T),
+          (T)&nbsp;⇏&nbsp;RH. Honest open: the super-exponential λ<sub>pf</sub>{" "}
+          rate remains empirical. Classical: Wirtinger/Rayleigh, Beta integrals,
+          Lambert-W, Si integral, Bombieri, θ<sub>RS</sub>.
+        </p>
+
         <p className="rounded-xl border border-slate-700/40 bg-slate-900/40 px-4 py-3 text-sm text-slate-400">
           I5 remains ⟺ RH; the geography locates where any attack must work, it
-          does not perform one. Milestone: 2020/2020 sandbox checks. This is
+          does not perform one. Milestone: 2056/2056 sandbox checks. This is
           not RH evidence.
         </p>
       </DiarySection>
@@ -1109,7 +1195,7 @@ export default function PrimeFrontPage() {
             level="Near"
             badge="sandbox"
             title="I5 geography complete — one object remains"
-            body="After 89 probes (2020/2020 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete (log 2 / t* ≈ 2π / 8 curves) with crossing mapped (thin band log 2 < a ≲ 1.0, residual subspace 1–4 dims). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH. Geography locates; it does not attack. Not RH evidence."
+            body="After 91 probes (2056/2056 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete — core = explicit Gaussian-mode family in the one-atom band (log 2, 0.925]; named target inequality (T), a classical-shaped zone extension beyond Bombieri. What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH. Geography locates; it does not attack. Not RH evidence."
           />
           <MeaningLevel
             level="Big if"
@@ -1155,7 +1241,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 text-sm text-slate-500 sm:px-6 lg:px-8">
           Numbers and verdicts are taken from{" "}
           <code className="font-mono text-slate-400">experiments/next.txt</code>{" "}
-          (2026-07-23…25 diary) and the promoted modules{" "}
+          (2026-07-23…26 diary) and the promoted modules{" "}
           <code className="font-mono text-slate-400">
             verification/v535_*.py
           </code>{" "}
@@ -1181,14 +1267,15 @@ function ProgramStatusCallout() {
         Strongest current sentence
       </p>
       <p className="mt-3 font-serif text-lg leading-relaxed text-violet-50 sm:text-xl">
-        After 89 probes and seven promoted modules, what remains TFPT-specific
-        is exactly one object: I5 — now geographically framed.
+        After 91 probes and seven promoted modules, what remains TFPT-specific
+        is exactly one object: I5 — with a named classical-shaped target (T) on
+        the one-atom band.
       </p>
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
-        Crossing mapped: thin band log&nbsp;2&nbsp;&lt;&nbsp;a&nbsp;≲&nbsp;1.0,
-        residual subspace 1–4 dims{" "}
-        <span className="font-mono text-amber-200">[sandbox · T89]</span>.
-        Milestone: 2020/2020 checks. Geography locates; it does not attack. Not
+        I5 core = explicit Gaussian-mode family in (log&nbsp;2,&nbsp;0.925];
+        named target (T){" "}
+        <span className="font-mono text-amber-200">[sandbox · T90–T91]</span>.
+        Milestone: 2056/2056 checks. Geography locates; it does not attack. Not
         almost-RH. This is not RH evidence.
       </p>
     </aside>
@@ -1264,12 +1351,12 @@ function I5GeographyCallout() {
         Geography — not an attack
       </p>
       <p className="mt-3 font-serif text-lg leading-relaxed text-violet-50 sm:text-xl">
-        No sharp wall at log&nbsp;2 — thin band
-        log&nbsp;2&nbsp;&lt;&nbsp;a&nbsp;≲&nbsp;1.0; residual subspace 1–4 dims.
+        One-atom band (log&nbsp;2,&nbsp;0.925]; first prime rescues positivity;
+        named target inequality (T).
       </p>
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
         I5 remains ⟺ RH; the geography locates where any attack must work, it
-        does not perform one. 2020/2020 sandbox checks. This is not RH
+        does not perform one. 2056/2056 sandbox checks. This is not RH
         evidence.
       </p>
     </aside>

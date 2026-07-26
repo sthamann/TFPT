@@ -127,17 +127,17 @@ const BEATS = [
     tone: "resolved" as const,
   },
   {
-    id: "T87–89",
+    id: "T87–91",
     title: "I5 geography",
     detail:
-      "Dictionary exact; crossing mapped (thin band, 1–4-dim residual); 2020 checks.",
+      "Core = Gaussian modes in one-atom band; named target (T); 2056 checks.",
     tone: "step" as const,
   },
   {
     id: "open",
     title: "One object remains: I5",
     detail:
-      "Geography locates the gap; I5 ⟺ RH still — no attack performed.",
+      "I5 ⟺ RH; (T) is a classical-shaped zone extension — no RH claim.",
     tone: "open" as const,
   },
 ] as const;
@@ -169,7 +169,7 @@ export function WeilArcMap() {
   return (
     <div className="rounded-2xl border border-slate-700/50 bg-slate-950/60 p-4 sm:p-6">
       <p className="mb-1 font-mono text-[10px] uppercase tracking-widest text-sky-300/90">
-        July 25–26 arc · Teile 51–89
+        July 25–26 arc · Teile 51–91
       </p>
       <p className="mb-4 text-xs leading-relaxed text-slate-500">
         <span className="text-amber-200/90">Two isolated</span>
@@ -184,7 +184,7 @@ export function WeilArcMap() {
         {" "}
         <span className="font-mono text-[9px] text-amber-300/80">[sandbox]</span>
         {" → "}
-        <span className="text-sky-200/90">I5 geography (T87–T89)</span>
+        <span className="text-sky-200/90">I5 geography (T87–T91)</span>
         {" → "}
         <span className="text-violet-200/90">one object remains: I5</span>
         . Geography ≠ attack. Not almost-RH.

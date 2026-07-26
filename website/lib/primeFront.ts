@@ -66,7 +66,9 @@ export type PrimeFrontVerdict =
   | "LEMMA-FULLY-CLOSED"
   | "DICTIONARY-EXACT-CORE"
   | "TIGHT-SET-PARAMETRIZED"
-  | "CROSSING-MAPPED";
+  | "CROSSING-MAPPED"
+  | "CORE-DISSECTED"
+  | "BAND-PARTIAL";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -90,6 +92,28 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-26",
+    part: 91,
+    title:
+      "The band's law — the first prime rescues positivity; named target inequality (T)",
+    verdict: "BAND-PARTIAL",
+    summary:
+      "T91 (BAND-PARTIAL, 19/19, 3/4 closed): the band is the one-atom zone log 2 < a ≤ 0.9253 with inner edge a_neg = 0.7410 — and the geography's cleanest finding: beyond a_neg the prime-free margin changes sign and THE PRIME ATOM BECOMES LOAD-BEARING — the first prime rescues positivity where the archimedean margin is exhausted (the T89 balance point is exactly this sign change, 0.03%). Atom turn-on law exact (k = 2m+1, Beta integrals); uncertainty constants decided: a·t_rms → π (Wirtinger) and a·t_cent → 2Si(π) − 4/π = 2.4306 (new closed constant); band and tight curves are two orbit regions of the same functional with shared exact scale ∫k_ζ = 2θ_RS (Riemann–Siegel). Named target inequality (T): (P_pole + A_arch)(f) ≥ √2·log2·h_f(log2) on the band — provable-shaped as a ZONE EXTENSION beyond Bombieri's log 2 (a self-standing classical target!); RH ⇒ (T), (T) ⇏ RH. Honest open: the super-exponential λ_pf rate remains empirical. Classical: Wirtinger/Rayleigh, Beta integrals, Lambert-W, Si integral, Bombieri, θ_RS. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "thin_band_analytic_probe.py",
+  },
+  {
+    date: "2026-07-26",
+    part: 90,
+    title:
+      "The residual dissected — explicit Gaussian modes, and 3 of 10 vectors under no control",
+    verdict: "CORE-DISSECTED",
+    summary:
+      "T90 (CORE-DISSECTED, 17/17): the I5 core is now explicit — the 1–4 residual vectors are n-stable (≤ 2.1°) and have closed shape (Gauss×cos / Gauss×sin modes, 99+% capture); coverage matrix: 3/10 vectors controlled by no known structure (neither certificate extension nor CC pole-vanishing nor Sonin projection); the core question decided: the core is NOT only pole coupling — from a ≈ 0.85 genuine pole-free atom↔arch content remains, plus an odd atom-coupled mode at a = 1.2. Final requirement line: an I5 idea must deliver positivity for an explicit family of Gaussian-modulated modes in the thin band — and it is not reducible to pole cleanup. Classical cited: Bombieri, Connes–Consani vanishing, Slepian. Sandbox; no spectral identification; I5 remains ⟺ RH; not RH evidence.",
+    badge: "sandbox",
+    script: "residual_dissection_probe.py",
+  },
   {
     date: "2026-07-26",
     part: 89,

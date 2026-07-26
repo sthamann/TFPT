@@ -37,10 +37,10 @@ export function DiarySection({
           {title}
         </h2>
         <div className="mt-6 grid gap-8 lg:grid-cols-2 lg:items-start">
-          <div className="space-y-4 text-base leading-relaxed text-slate-300">
+          <div className="min-w-0 space-y-4 break-words text-base leading-relaxed text-slate-300">
             {children}
           </div>
-          {visual && <div className="lg:sticky lg:top-24">{visual}</div>}
+          {visual && <div className="min-w-0 lg:sticky lg:top-24">{visual}</div>}
         </div>
       </div>
     </section>
