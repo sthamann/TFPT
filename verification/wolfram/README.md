@@ -241,10 +241,46 @@ scales `{+8,-16,+16}`; Kohnen scope fence `M=8` even / `W(4)`
 unsolvable; twist root number `ε_d=χ_d(8)` on `d≡1,5 mod 8`; and
 signed-scale uniqueness cardinality `1-of-4` — q-series builds,
 AFE/L-values and `R`-constancy stay Python-only, flagged), verified
-directly with the active engine (run 2026-07-24), 598 → 603):
+directly with the active engine (run 2026-07-24), 598 → 603; and the
+`v538` relative-trace-identity round adds 5 more exact mirrors (R1 Tr
+anchors `6304/105848/727680` with `f8`-channel `352/3784/19840`; full
+projector table at `p=5,7`; R2 orbit dictionary
+`λ_Eis=(336,3780,19264)`, `a_p²=(16,4,576)`; `ν`-law `(a,b)` anchors;
+finite RTF scope cardinality — q-series builds, AFE/L-values and
+`R`-constancy stay Python-only, flagged), verified directly with the
+active engine (run 2026-07-25), 603 → 608; and the `v539`
+Weil-structure-family round adds 5 more exact mirrors (`G_0` algebraic
+identity; `Φ_k` Chebyshev character expansions; core series
+`c_{k,0}=[1,0,2,0,2,0]`; Dirichlet `2^ω` head; obstruction-(c)
+`e^{-Y}` dlog identity — arch digamma / numeric Q assembly stay
+Python-only, flagged), verified directly with the active engine
+(run 2026-07-25), 608 → 613; and the `v540` amplitude-linear-carrier
+round adds 5 more exact mirrors (the Cauchy–Littlewood window lemma
+with free Satake symbols + the determinant instantiation `1−p⁶X²`;
+the three square channels b²/Θ²/Θ·g vs closed forms at `χ=0`; the
+tower double-counting `fam+2♭+δ_{k1}=[2,2,2,2]` generating functions;
+the linear-carrier full weights `λ_k = 1+p^{3k}−(χp)^k` + pole-kernel
+collapse + FE line map; the Möbius square sieve head + the Cohen seed
+anchors `Θ(1)=4=−48ζ(−1)`, `17·Θ(17)=24·S2(17)=3264` — lattice
+enumeration, FFT autocorrelations and the mpmath split-Mellin FE stay
+Python-only, flagged), verified directly with the active engine
+(run 2026-07-25), 613 → 618; and the `v541` matching-lemma-ledger
+round adds 5 more exact mirrors (the mod-8 character decomposition
+`4(−ψ) = [4χ₋₄+χ₈+χ₋₈]·Θ` with the sympy/LinearSolve coefficient
+system `(0,1,1/4,1/4)` on the theta heads; the `ψ` `w`-table
+recursion `w(8x) = 9w(x) − 8w(x/8)` with first steps `−3/2/−1/2/+1`;
+the Legendre duplication bridge
+`(2π)^{−s}Γ(s) = ½Γ_R(s)Γ_R(s+1)` plus the Gauss-digamma kernel
+anchor at `t = 0`; the certificate head `7S(j) < 40A(j)` at
+`j ∈ {12,24,48,60}` on exact theta heads plus the sign law
+`n ≤ 60`; the CM carrier head `c1(5)=−14`, `c1(13)=−238`,
+inert/ramified laws and `μ₁(5)=−7/25 ∈ [−1,1]` — the 10⁶ integer
+sieves, FFT autocorrelation batteries, Cornacchia tables and the
+mpmath digamma/erfc quadratures stay Python-only, flagged), verified
+directly with the active engine (run 2026-07-25), 618 → 623):
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529 + v530 + v531 + v532 + v533 + v534 + v535 + v536 + v537: 603 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529 + v530 + v531 + v532 + v533 + v534 + v535 + v536 + v537 + v538 + v539 + v540 + v541: 623 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 

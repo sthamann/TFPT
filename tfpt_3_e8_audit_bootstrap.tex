@@ -609,6 +609,85 @@ $R(d)$ constant on ten $d\equiv1\pmod8$ ($R=23.1873585645\ldots$, spread $\le10^
 Classical scaffolding named classical; GL$(2)$ centre $s=2$ (not $\xi$); no RH; no marker
 moves.
 \mE\ (Shimura/Hecke/Kohnen fence) / \mC\ (measured $R$)
+
+\par\smallskip\noindent\textbf{Compiler relative-trace identity
+(\texttt{HECKE.GEOM.RTF.01}).}
+Synthesis of the three Hecke/Eichler/half-integral packages as projections of one finite
+relative-trace identity
+(\veri{v538\_relative\_trace\_identity.py}; $18$ checks, $\sim14$\,s). Bilateral
+$\operatorname{Tr}_V(\nu_p\circ\pi)$ equality at $p=3,5,7$ (geometry without modular input
+$=$ spectrum without geometry); Eichler $\lambda_{\mathrm{Eis}}+a_p^2$ as the RTF orbit
+dictionary; period side $=$ signed quaternary lattice counting with measured
+$R=23.1873585645$. Verdict \texttt{ONE-FORMULA}. Classical Jacquet RTF named classical;
+finite identity; infinite/archimedean extension open; no RH; no marker moves.
+\mE\ (R1/R2) / \mC\ (R3)
+
+\par\smallskip\noindent\textbf{Weil structure of the compiler family
+(\texttt{RTF.GNS.WEIL.01}).}
+Route-B synthesis: fully identified Weil structure up to two isolated obstructions
+(\veri{v539\_weil\_structure\_family.py}; $25$ checks, $\sim6$\,s).
+GNS fibre isolation (twist-mix $\le5.037\times10^{-16}$);
+GL$(1)$ core $G_0=(1+Y)/(1-Y)=\zeta_p(w-3)^2/\zeta_p(2w-6)$ with
+$\sum 2^{\omega(n)}n^{-u}$;
+$Q_{\mathrm{fam}}=2Q_\zeta(g)-2Q_\zeta(g_\flat)+\mathrm{Arch}+\mathrm{Corr}$.
+Obstruction~1: doubling enters with a minus (family positivity $\not\Rightarrow Q_\zeta\ge0$).
+Obstruction~2: Plancherel Corr non-automorphic ($e^{-\sum p^{-u}}$-type).
+Not ``almost RH''; dense-class positivity open; \texttt{ZETA.HP.CARRIER} untouched;
+no marker moves.
+\mE\ (structure/obstructions) / \mC\ (finite-class $Q_{\mathrm{fam}}$)
+
+\par\smallskip\noindent\textbf{Amplitude route and positive linear carrier
+(\texttt{RTF.GNS.AMP.01}).}
+The route out of the square plane behind the two v539 obstructions
+(\veri{v540\_amplitude\_linear\_carrier.py}; $34$ checks, $\sim3$\,s; T67--T72).
+Amplitude Dirac $D^2=\operatorname{diag}(VV^{\mathsf T},K)$ exact and
+Hecke-equivariant; polarisation $b=N_+-N_-$ with $\Theta=N_++N_-$ a pure
+$\sigma_3$-eigenform and Cohen seed $\Theta(d)=-48\,L(-1,\chi_d)$ (exact-rational,
+$159$ live $d$); Cauchy--Littlewood deletion pair-independent at $st=uv=p^3$
+\emph{and} equal to the square-class double counting
+($\mathrm{fam}+2\flat+\delta_{k1}=[2,2,2,2]$); positive linear carrier
+$\ell^2(d,48|L(-1,\chi_d)|\,|d|^{-a})$ with full weights $[1,1,1,1]$ and plus
+balance $Q=Q_\zeta(g_-)+Q_\zeta(g_+)$; FE
+$\Lambda_\Theta(s)=8^{1-s}\Lambda_{\Theta^\dagger}(5/2-s)$ exact
+(rel $\sim10^{-40}$, Fricke closed).
+Open boundary as content: Euler-region positivity only; the residual distance to
+the Weil cone is the FE-covariant gap functional $\lambda^*$ on $n\equiv6\pmod 8$
+(Farkas-certified). Not ``almost RH''; \texttt{ZETA.HP.CARRIER} untouched;
+no marker moves.
+\mE\ (A--E exact) / \mC\ (sampled cone facts; $\lambda^*$ named open)
+
+\par\smallskip\noindent\textbf{Matching lemma and transport ledger package
+(\texttt{RTF.GNS.LEDGER.01}).}
+The T78--T85 proof package, recomputed as one module
+(\veri{v541\_matching\_lemma\_ledger.py}; $33$ checks, $\sim10$\,s).
+Window proof: $7S<40A$ at every $j\le10^6$ ($0$ violations, $939\,870$ clash
+atoms; exact margin $X=0.082159$, $\rho_{\mathrm{crit}}=1.1440$; structure laws
+$8$-law / seed-tower / $\psi$ $w$-table / Cohen seeds $\{-48,-80,-8,-8\}$ at
+$0$ tolerance). Transport ledger closes exactly:
+$Q_{\mathrm{Weil}}=Q_{\mathrm{cert}}+\Delta_{\mathrm{arch}}+\Delta_2$ with
+$\Delta_{\mathrm{pole}}\equiv\Delta_{\mathrm{conv}}\equiv0$ proven (residual
+$4.4\times10^{-16}$ on $24$ rows); odd-prime side $=$ certified plus
+combination (rel $3.9\times10^{-16}$). Signed envelope character-exact
+($-\psi=(\chi_{-4}+\tfrac14\chi_8+\tfrac14\chi_{-8})\Theta$; signed
+certificate $0$ violations, margin $8.86\times$; confinement set equality).
+Arch internal via Legendre duplication
+($k_\zeta=K_{\mathrm{fam}}-K_{\mathrm{shift}}$ pointwise $7.9\times10^{-31}$;
+$\Delta_{\mathrm{arch}}=A_{\mathrm{fam}}-A_{\mathrm{shift}}$ at
+$9.9\times10^{-16}$). Coherent class closed by the $\lambda$-equivariant CM
+channel ($g_\lambda$ two routes exact; $\mu_1\in[-1,1]$ exact;
+$\lambda$-certificate $0.0653$ vs $0.2365$, $3.6\times$).
+Frontier facts \mC: coherent-chain crossing $k^*=14$ ($10^{23.1}$); Robin tail
+factor $6.16$, constant route open. \textbf{Named limits as content:} one
+classically-shaped open lemma (correlated cancellation, non-coherent uniform
+tail; provably-shaped $\neq$ formal proof) $+$ I5 in one-family form
+($Q_{\mathrm{cert}}+\Delta_2+A_{\mathrm{fam}}-A_{\mathrm{shift}}\ge0$),
+by the closed ledger equivalent to Weil positivity $\Longleftrightarrow$ RH
+(equivalence typing, no progress claim). Classics named classical (Gronwall,
+Robin 1983 unconditional, Cohen 1975, Hecke 1918--1920, Cornacchia, Legendre
+duplication, Weil 1952, Alaoglu--Erd\H{o}s). No RH-evidence language;
+not ``almost RH''; \texttt{ZETA.HP.CARRIER} untouched; no marker moves.
+\mE\ (window proof / ledger / character / duplication / $\lambda$-channel) /
+\mC\ (frontier facts; two named limits open)
 \par\smallskip
 
 % =====================================================================

@@ -1,3 +1,1106 @@
+# 2026-07-26 (III) — Teil 89 (delegiert, Sonin-Einsatz auf den Kreuzungsbereich): sonin_crossing_probe.py — **CROSSING-MAPPED** — die Fenster-Kompression der Weil-Form IST Bombieris klassisches Objekt (Bombieri 2000, recherchiert); die Grenze bei log 2 ist NICHT scharf (glatter klassischer Zerfall, kein Kollaps); der Rest-Unterraum wächst weich 0 → 4 (von 32) und trägt das globale Minimum; der ECHTE angreifbare Crossing-Inhalt ist die Atom↔Arch-Balance im DÜNNEN BAND log 2 < a ≲ 1.0 — 19/19, 3.7s, Sandbox
+# Recherche-Befund: unconditional Weil-Positivität ist klassisch GENAU bis Trägerbreite log 2
+#    bekannt (Yoshida 1992, Bombieri 2000 Lincei (Thm 12, t = log2/2-Verifikation!), CC 2021
+#    Sonin; neu zitiert: CCM zeta spectral triples, Suzuki 2023/26 Screw-Funktionen).
+# K1 Bewiesene Zone reproduziert: Prim-Seite identisch null auf allen 14 Fenstern a ≤ log 2
+#    (Integer-Count); λ_min ≥ 0 überall; Bilinearisierung gegen unabhängige Pipeline 1.9e-6;
+#    Pol-Term exakt Rang ≤ 2; SCHÄRFE-ANTWORT: die Marge fällt ab a ≈ 0.5 GLATT Richtung
+#    Boden — keine Struktur bei log 2; der pol-freie CC-Sektor hat an der eigenen Grenze noch
+#    Marge 0.557 und behält ≥ 0.25·ref-Komfort bis a ≈ 0.75 (gemessen: +0.057 über die
+#    bewiesene Grenze — „präzise wie weit").
+# K2 Grenzübertritt: λ_min ≥ 0 auf allen 16 Fenstern bis log 4 (nie negativ — negativ wäre
+#    RH-Widerlegung, sauber getypt); KEIN Knick bei log 2 (Atom-Einschalten ist (a−log2)³-weich
+#    für randverschwindende Basen); die tiefen Fast-Nullen ab a ≈ 1.05 sind KLASSISCHE
+#    Bandlimitierung (T88-Plateau-Mechanik, kein Crossing-Inhalt — Ehrlichkeit); Eigenvektoren
+#    an den Minima: DC-gepeakt, gerade, pol-gekoppelt, Zentroid t ∈ [2.9, 3.5] UNTER t* ≈ 2π;
+#    NICHT auf den T88-Eng-Kurven (andere Karten-Region, vermerkt).
+# K3 DAS MINIMALE OBJEKT: dim_REST = 0 (unter log 2) → 1 → 2 → 3 → 4 (von 32) — wächst weich;
+#    das globale Minimum liegt fast vollständig im REST (Overlap 0.61–1.00); Sektoren U_A/U_B
+#    beweisbar-positiv per Konstruktion (konservativ operationalisiert, Fence).
+# K4 Balance: an den Minima kanzelt Pol (+1.1..1.4) gegen Arch (−1.1..−1.35), das Atom ist die
+#    kleine dritte Stimme; T_bal trackt die klassische Höhenskala (19 → 57), NICHT t*;
+#    dafür saubere Unschärfe: a·t_cent = 3.18 ± 0.49 (CV 0.15). First-Run-Retype transparent
+#    (BOUNDARY-SHARP-Kriterium hätte „klein" mit „kollabiert" verwechselt).
+# BEDEUTUNG: der Rest-Unterraum IST das minimale Objekt (1–4-dim pro Fenster), ABER sein
+#    Tiefboden-Anteil ist klassisch gesättigt; der echte angreifbare Gehalt ist die Atom↔Arch-
+#    Balance im dünnen Band log 2 < a ≲ 1.0, wo Atom-Term und Restmarge gleich groß sind —
+#    plus: das Voll-Form-Minimum lebt exakt in der pol-gekoppelten DC-Richtung, die CC mit
+#    ihren Verschwindungs-Bedingungen ausschließen. Kein Vereinigungs-Claim; I5 bleibt ⟺ RH.
+# Serie (XII)–(C): 89 Proben, 2020/2020 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz, keine spektrale Identifikation; Klassik vollständig
+# zitiert (Weil, Guinand, Yoshida, Bombieri 2000/2003, CC 2021/2023, CCM, Suzuki); Sandbox
+# ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-26 (II) — Teil 88 (delegiert, I5-Kartografie Strang 2): i5_tightness_probe.py — **TIGHT-SET-PARAMETRIZED** — die I5-Landschaft zerfällt in ein bandbegrenztes Null-Plateau (klassisch), sichere Zonen und ACHT nahezu vertikale ENG-KURVEN, deren Abstand dem Γ-seitigen Dichte-Gesetz folgt (Ratio 1.01 ± 0.08); 100% I5-Vorzeichen-Balance; NULL Negative auf echten Autokorrelationen — 27/27, 11.8s, Sandbox
+# T1 Validierung auf Maschinengenauigkeit: T83-Nulltest 4.3e-13, T79-Ledger-Residual 1.1e-14,
+#    T82-Routen-Pinning — das Funktional ist konventions-fest.
+# T2 Landschaft: bandbegrenztes Null-Plateau (Träger unter log 2 — konsistent mit der T87-
+#    Sektoren-Grenze!); sichere Zonen; KEINE Negative auf echten Autokorrelationen (die
+#    T76-Negative waren, wie vom Ledger vorhergesagt, fehlende Arch/p=2-Buchhaltung).
+# T3 Eng-Kurven: 8 nahezu vertikale Kurven im Parameter-Raum; Abstands-Gesetz folgt der
+#    Γ-SEITIGEN Dichte (Ratio 1.01 ± 0.08 — beschrieben über die glatte Γ-Dichte, nullstellen-
+#    frei berechnet; KEINE spektrale Identifikation, Fence eingehalten); Term-Bilanz an den
+#    engen Stellen dokumentiert; 100% Vorzeichen-Muster-Balance der I5-Terme.
+# T4 I5-AKTIV-KARTE: der RH-Gehalt von I5 konzentriert sich auf niedrig-dimensionale,
+#    parametrisierbare Kurven — zusammen mit T87: die vollständige I5-GEOGRAFIE: (a) Sektoren-
+#    Grenze bei u = log 2 (CC-Fenster vs Compiler-Zertifikate, komplementär), (b) Kreuzungs-
+#    bereich um t* ≈ 2π (außerhalb beider bewiesener Sektoren), (c) die engen Richtungen als
+#    beschreibbare Kurven mit Γ-Dichte-Abstand. Ein I5-Angriff muss exakt dort arbeiten.
+# MEILENSTEIN: 2001/2001 Sandbox-Checks — die Serie hat die 2000er-Marke überschritten.
+# Serie (XII)–(XCIX): 88 Proben, 2001/2001 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz, KEINE spektrale Identifikation der Eng-Kurven
+# (Γ-seitige Beschreibung, nullstellen-frei); Klassik benannt; Sandbox ohne Ledger-/Paper-/
+# Marker-Änderung.
+
+# 2026-07-26 (I) — Teil 87 (delegiert, I5-Kartografie Strang 1): i5_connes_dictionary_probe.py — **DICTIONARY-EXACT-CORE** — die I5-Ein-Familien-Form IST eine Compiler-Instanz der semi-lokalen Connes-Struktur: Q_cert-Atome = endliche Orbit-Terme (6e-16), A_fam − A_shift = W_∞ EXAKT (inkl. PV-Konstante, 3e-23; der Kern k_ζ = 2θ'_RS — die RIEMANN-SIEGEL-PHASE!), diedrischer Shift = Scaling-Gruppe R*₊ — und der schärfste Befund: die beiden Positivitäts-Programme sind KOMPLEMENTÄR mit Grenze exakt am ersten Prim-Atom u = log 2 — 22/22, 5.8s, Sandbox
+# (i) EXAKT: Zwei-Schalen-Orbit-Route ≡ Connes (149) ≡ T79-Primseite (rel 6.3e-16); p = 2 sitzt
+#     bei uns in Δ₂ = −W₂ (Buchhaltung, kein Bruch). (ii) EXAKT (Herzstück, vierfach): der
+#     Orbit-Kern CC21-(39) ist bei ρ = e^u WÖRTLICH unsere Poisson-Leiter (sympy + 1.7e-50);
+#     h₊ ist DEFINITORISCH unser k_ζ = K_fam − K_shift; k_ζ = 2θ'_RS (Riemann-Siegel, rel 0.0 —
+#     die Phase von CCs Unitary!); klassische subtrahierte Form rel 2.7e-23; Weils PF₀-Cutoff
+#     konvergiert mit Richardson 1.5e-9. (iv) EXAKT: dieselbe Gruppe (Weyl-Kommutation sympy;
+#     Spektral-Shift ĥ(t+i) rel 6e-26) — der T83-Transport-Operator ist der Modul-Charakter-
+#     Multiplikator zwischen Connes' Pol-Linien. (iii)/(v)/(vi) STRUKTURELL mit benannten
+#     Brüchen (GNS-Basis = quadratische Idel-Klassen-Charaktere mit Cohen-Rand-L-Gewichten,
+#     Seed −48 exakt auf 192 d; det₂ vs Cutoff-Schema verschieden; 0 BRICHT-Zeilen).
+# POSITIVITÄTS-VERORTUNG (nützlichster Befund): Connes-Consani verankern Positivität VOR den
+#     Primzahlen (prim-freies Sonin-Fenster, Träger (½,2) ⇒ u ∈ (−log2, log2)); der Compiler
+#     NACH den Primzahlen (Atom-Zertifikate, alle Träger); die Fenster-Grenze ist EXAKT das
+#     erste Prim-Atom u = log 2 (sympy-exakt; auf schmalen Zeilen: Primseite ≡ 0, Q_cert ≡ 0,
+#     Δ₂ ≡ 0 — die Sektoren berühren sich, überlappen nicht). Die I5-Kopplung (Balance um
+#     t* ≈ 2π) lebt im Kreuzungsbereich — AUSSERHALB beider bewiesener Sektoren. Übertragbar-
+#     förmig: die Sonin-Kompressions-Technik auf den Arch-Sektor (gleicher Kern, gleiche
+#     Gruppe — verifiziert); NICHT übertragbar: Positivitäts-Transfer (Fence).
+# Werkzeug-Bilanz: Connes-only (adelische Sobolev-δ, Prolate-Kontrolle, Scaling-Site,
+#     ζ-Cycles); Compiler-only (Wert-Zertifikate, Q-Paarung, Fenster-Beweise mit rationalen
+#     Margen, duplikations-internes Arch); λ-Kanal hat adelisches Zuhause (C99 Thm 5), aber
+#     dort kein Zertifikat-Analogon. Quellen im Docstring (C99, CC21, Weil, Guinand, Bombieri,
+#     Burnol, Yoshida, Scaling Site, ζ-Cycles).
+# Serie (XII)–(XCVIII): 87 Proben, 1974/1974 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik vollständig zitiert; Sandbox ohne Ledger-/
+# Paper-/Marker-Änderung. (T88 läuft parallel.)
+
+# 2026-07-25 (XLII) — PROMOTION: T78–T85 → verification/v541_matching_lemma_ledger.py (RTF.GNS.LEDGER.01) — 33/33, 9.5 s (VOLLE 10⁶-Enumeration in-suite!); Matching Lemma and Transport Ledger Package; die zwei benannten Grenzen (klassisches Lemma + I5-Äquivalenz-Typisierung) als Gehalt IM Claim; NO marker moves
+# Säulen (alle NACHGERECHNET): (A) [E] Fenster-Beweis: 0 Verletzungen auf 939 870 Clash-Atomen,
+#     Marge X = 22242575693/270725400000 exakt (j* = 554400); Cohen-Seeds {−48,−80,−8,−8};
+#     268 Big-Integer-Rechecks; Robin-Tail-Faktor 6.16 OFFEN deklariert. (B) [E] Ledger:
+#     odd-Prim-Match 3.9e-16; Δ_pole 2.8e-16; Ledger-Residual 4.4e-16 auf 24 Zeilen; Δ_conv ≡ 0
+#     (exakte Skaleninvarianz). (C) [E] Charakter: 4(−ψ) = [4χ₋₄+χ₈+χ₋₈]·Θ, 0 Mismatches
+#     n ≤ 50000; signiertes Zertifikat 8.86×. (D) [E] Duplikation: Brücke 1.8e-41; Kernidentität
+#     7.9e-31 (51 Punkte); Batterie 10/10 rel 9.9e-16. (E) [E] λ-Kanal: Cornacchia an 39 175
+#     Split-Primzahlen exakt; g_λ zwei Routen 0 Mismatches; λ-Zertifikat 0.0653 vs 0.2365.
+#     (F) [C] Frontier: k* = 14 exakt-rational (log₁₀N* = 23.1).
+# ZWISCHENFALL (transparent, behoben): versehentliches git checkout verwarf die uncommitteten
+#     v538–v540-Ledger-Zeilen; Wiederherstellung per deterministischem Transkript-Replay,
+#     BYTE-EXAKT gegen Manifest-SHA256 verifiziert (Hash-Match); danach v541 chirurgisch neu.
+# Surfaces: Ledger RTF.GNS.LEDGER.01 (+ GATE.WOLFRAM.02 → 623/623); \veri in tfpt_1 / tfpt_3 /
+#     tfpt_research_contracts (nach v540-Blöcken); Changelog 2026-07-25 (XIX); website komplett
+#     + gen-Artefakte; run_all ALL CHECKS PASSED; build.sh release → AUDIT OK (535 Skripte) +
+#     npm grün; Manifest e2199a01… (621 Dateien) als letztes. Notiz: zenodo_description bei
+#     nächstem Release-Bump auf v541 heben; T86-Q-Kanal als typisierte v541-Erweiterung offen.
+# Serien-Stand: v535–v541 promoviert (SIEBEN Module heute); Sandbox T11–T86 (1952/1952).
+
+# 2026-07-25 (XLI) — Teil 86 (delegiert, Angriff auf das letzte offene Lemma): correlated_cancellation_probe.py — **LEMMA-FULLY-CLOSED** — die Q-Paarungs-Involution schließt den nicht-kohärenten Tail BEWEISBAR-FÖRMIG (Paar-für-Paar statt Statistik), und der ungepaarte Rest ist EXAKT das Z[i]-Norm-Untergitter = der Träger des λ-Kanals — das Matching-Lemma ist auf ALLEN Atom-Klassen geschlossen; SERIEN-RESTLISTE: NUR NOCH I5 — 29/29, 5.5s, Sandbox
+# Q1 Involution exakt: Flip-Gesetz ς(qd) = −ς(d) an 0/146.987 ungeraden Paar-Positionen
+#    verletzt (alle 75.277 nicht-kohärenten Atome j ≤ 10⁵); Gewichts-Kontrolle: 4|ψ| = E·Θ
+#    (E ∈ {6,2,4} mod 8, 0 Mismatches auf 10⁶); gerader q-Schritt EXAKT multiplikativ
+#    (Θ(q²d) = (1+q³−(s/q)q)Θ(d), volles Fenster); ungerader Schritt exakt gebracketed
+#    [0.67, 1.50]. STRUKTUR-PERLE: ungepaarter Rest ≠ ∅ ⟺ 3-mod-4-Teil ist Quadrat, und der
+#    Rest lebt exakt auf dem Z[i]-NORM-GITTER = g_λ-Träger (c₁-Tie-in 0 Mismatches) — die
+#    Paarung übergibt ihren Rest EXAKT an den λ-Kanal (Kreis-Schluss zur μ4-Glue, erneut).
+# Q2 Gepaarte Hüllkurve: Zertifikat 7·S_pair < 40·A mit 0 Verletzungen (1.97 Mio Paare,
+#    Sieb ≡ Enumeration, bigint-exakt); max ρF_pair = 0.836 < 1; Konvergenz-Frage EHRLICH
+#    entschieden: besser-divergent, nicht konvergent — jede 3-mod-4-Richtung kontrahiert
+#    konvergent (q/(q+1), Fraction-exakt), Divergenz überlebt NUR in kohärenten Richtungen —
+#    und genau die schließt der λ-Kanal; Crossing verschoben 10²⁴ → 10²⁴³ (Unit-Modell).
+# Q3 KLASSEN-COVER EXAKT: {Clash} = {kohärent: λ-Kanal} ⊔ {even-kohärent: 2-Linie exakt + λ}
+#    ⊔ {q-tragend: Paarung, Rest → λ}; alle In-Window-Margen < 1 (λ auf Q-Klasse: 0.063);
+#    KEIN Atom unbedeckt. Ehrlichkeits-Notizen transparent (zwei Erstlauf-Gates umtypisiert).
+# LEMMA-ENDSTATUS: geschlossen auf ALLEN Atom-Klassen — im λ-Zertifikat-Format, auf Fenstern,
+#    modulo benannter bewiesener Klassik (χ₋₄-Multiplikativität, Dirichlet, Mertens-AP, Cohen,
+#    Hecke L(1,λ) ≠ 0, Gronwall/Robin unconditional). SERIEN-RESTLISTE (ABSOLUTE KOMPRESSION
+#    nach 86 Proben): NUR NOCH I5 in Ein-Familien-Form (⟺ Weil-Positivität ⟺ RH) — als Karte
+#    typisiert, kein I5-Fortschritt, kein RH-Gehalt. v541-Nachtrag typisiert (+ Q-Kanal).
+# Serie (XII)–(XCVII): 86 Proben, 1952/1952 Checks Sandbox + v535–v540 promoviert (v541 läuft).
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Involutions-Argumente, Dirichlet, Mertens,
+# Jacobi) benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XL) — Teil 85 (delegiert, λ-äquivariantes Design): lambda_equivariant_design_probe.py — **LEMMA-CLOSES-LAMBDA** — das λ-Design schließt die kohärente Klasse BEWEISBAR-FÖRMIG (λ-Fenster-Zertifikat 0.065 vs 0.236 unlifted = 3.6× Marge; Batterie-Ledger 90/90 inkl. aller 7 T81-Gap-Zeilen; geliftete Kette kreuzt NIE) — MAXIMALE KOMPRESSION DER SERIE: TFPT-spezifisch bleibt NUR I5 in Ein-Familien-Form — 24/24, 5.7s, Sandbox
+# D1 CM-Träger exakt: g_λ = Σλ₁(a)q^{N(a)} in zwei unabhängigen Routen (Gitter vs Cornacchia,
+#    0 Mismatches bis 10⁴); Hecke-CM-Regeln exakt (split/inert/ramified); Träger-Eigenschaft
+#    als Mengengleichheit (support = Z[i]-Normen, c₁ ≠ 0 an JEDEM kohärenten Atom);
+#    Monoid-Umfeld: θ₃² = r₂ exakt auf 10⁶ (zählt Z[i]-Ideale), Gewicht 5, Level 4/χ₋₄.
+# D2 Kanonisches Phasen-Mittel μ₁(d) = c₁(d)/(c₀(d)d²) ∈ [−1,1] exakt (Ideal-Mittel-Identität
+#    0 Fails); die λ-Kollateral-Bedingung: unlifted Leiter divergent (1.400/2 Dekaden),
+#    λ-Leiter driftet 0.0004 — KONVERGENT; λ-Fenster-Zertifikat max 0.0653 (3.6× besser);
+#    Ehrlichkeit: naives Relativ-Gate im Erstlauf umgebaut, transparent typisiert.
+# D3 Batterie + Kette: T76 bit-identisch; λ-Ledger 90/90 < 1 (worst 0.059, Median-Kancellation
+#    3×); die 7 T81-Gap-Zeilen GESCHLOSSEN (exakte Sliver-Scans unter dem Budget-Floor) —
+#    volle Per-Zertifikat-Schließung 90/90; geliftete Kette kreuzt nie (0.168 über volle
+#    Reichweite), Adversarial-Frontier 10^{10^{12.77}} (deklarierte Extrapolation).
+# LEMMA-ENDSTATUS: [Fenster 10⁶ bewiesen] + [signierte Struktur exakt] + [Demand-
+#    Konditionierung exakt] + [kohärente Klasse per λ-Kanal geschlossen 90/90]; verbleibende
+#    Zutaten: bewiesene Klassik (Hecke 1918/1920, L(1,λ)≠0, Cornacchia, Dirichlet, Mertens-AP,
+#    Landau, Gronwall/Robin, Cohen, Alaoglu-Erdős) + EIN klassisch-förmiges offenes Lemma
+#    (korrelierte Kancellation, nicht-kohärenter Uniform-Tail).
+# SERIEN-RESTLISTE (MAXIMALE KOMPRESSION nach 85 Proben): TFPT-spezifisch bleibt NUR I5 in
+#    Ein-Familien-Form (T82: Q_cert + Δ₂ + A_fam − A_shift ≥ 0, ⟺ Weil-Positivität ⟺ RH) —
+#    plus das eine klassische Lemma. v541-Paket typisiert (T78+T79+T80+T81+T82+T85);
+#    Promotion auf Projektleiter-Entscheid.
+# Serie (XII)–(XCVI): 85 Proben, 1923/1923 Checks Sandbox + v535–v540 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik benannt; Sandbox ohne Ledger-/Paper-/
+# Marker-Änderung.
+
+# 2026-07-25 (XXXIX) — Teil 83 (delegiert, Big-Picture-Perspektive 2 „FE-Symmetrisierung"): fe_symmetrization_probe.py — **INVARIANT-NULL** (mit Tiefen-Fund) — die Symmetrisierung ist auf dem Weil-Kegel vollständig ABSORBIERT (5/24 und λ* SIND bereits die Zahlen des FE-symmetrischen Sektors); ABER: das Produkt der beiden FE-Spiegelungen J₁∘J_{1/2} = e^{±u} IST der EINHEITS-LINIEN-SHIFT — das Zentren-Delta ist wörtlich der Transport-Operator; die Wand ist FE-TRANSVERSAL, nicht FE-positional — 27/27, 3.0s, Sandbox
+# F1 Involutions-Algebra exakt (sympy): J_c[h](u) = e^{(2c−1)u}h(−u), H∘J_c(w) = H(2c−w);
+#    ζ-FE = J_{1/2} = reine Geradheit — auf Autokorrelationen IDENTITÄT (die ζ-FE-Symmetrie
+#    ist in der Geradheit absorbiert; Q_Weil(J h) = Q_Weil(h) fp-exakt auf 15 Funktionen);
+#    Familien-FE ζ-seitig = J₁ (Zentrum 1); exakte Rationale: Plus-Locus-Paar {2,−1} hat
+#    Mittelpunkt 1/2 (das ζ-Zentrum!), Δc = 1/2 = 2×T71-Offset. BONUS-TOTAL-VALIDIERUNG:
+#    Explizite-Formel-Nulltest auf schmalbandigen Atomen (pole − prime + arch ≈ 0) ≤ 2.1e-12
+#    auf 12/12 — die T79-Konvention ist kreuzvalidiert.
+# F2 Geographie invariant: ζ-Symmetrisierung = Identität (24/24); Familien-Symmetrisierung =
+#    positiver Multiplikator m₊ = (1+cosh u)/2 — bewegt die Wert-Geographie punktweise nicht
+#    (Überlapp 5/24 → 5/24, Verletzungs-Atome invariant, λ* kovariant-exakt); m₊h VERLÄSST
+#    den Weil-Kegel (closed form, strikt negativ für jedes σ); Fix(J₁) ∩ Weil-Kegel = {0} exakt.
+# F3 Äquivalenz-Typisierung: die klassische Reduktion gilt verbatim für J_{1/2} — und ist
+#    VAKUUM (der Weil-Kegel ist sein eigener symmetrischer Sektor); für J₁ scheitert die
+#    Prämisse dreifach gemessen — eine familien-FE-symmetrische Umformulierung existiert nicht.
+# DER TIEFEN-FUND: die zwei FEs erzeugen eine UNENDLICH-DIEDRISCHE Leiter; die Wert-Seite
+#    (K_guar, Hülle, λ*) ist unter der GANZEN Leiter invariant (linien-frei), der Spektral-
+#    Kegel nur unter seiner eigenen Spiegelung (kritische-Linie-verankert) — die T71-C4-
+#    Asymmetrie ist jetzt aus der Algebra HERGELEITET statt gemessen; der J₁-Defekt von
+#    Q_Weil ist spektral exakt in der Nullstellen-Region getragen. I5/λ* können durch keine
+#    Symmetrisierung entlastet werden.
+# PERSPEKTIVEN-BILANZ (T82/83/84): ARCH-INTERNAL (I5 → Ein-Familien-Form) + INVARIANT-NULL
+#    (Testgebiet war richtig; Transport-Operator = Spiegelungs-Produkt, algebraisch) +
+#    LIFT-WORKS-UNANCHORED (Z[i]-Kancellation, Frontier 10^{5.9e12}, λ-äquivariantes Design
+#    fehlt). Nächste konstruktive Aufgabe: T85 λ-ÄQUIVARIANTES ZERTIFIKAT-DESIGN.
+# Serie (XII)–(XCV): 84 Proben, 1899/1899 Checks Sandbox + v535–v540 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Mellin-Involutionen, unendliche Dieder-
+# Gruppe, explizite Formel) benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXXVIII) — Teil 84 (delegiert, Big-Picture-Perspektive 3 „Gauß-Lift"): gaussian_lift_probe.py — **LIFT-WORKS-UNANCHORED** — die Grossencharacter-Phasen ersetzen die Mertens-Divergenz durch L(1,λ_k)-KONVERGENZ auf der kohärenten Klasse: die geliftete Kette kreuzt NIE, die Frontier springt von N* ≈ 10²³ auf log₁₀N* ≈ 5.9·10¹² — fehlend ist nur die Rezept-Verankerung (λ-äquivariantes Zertifikat-Design) — 29/29, 4.1s, Sandbox
+# G1 Klassen-Identifikation exakt: kohärente Klasse = primitive Z[i]-Normen (bis 10⁶ verifiziert);
+#    Gauß-Primzahl-Zerlegung + Winkel-Äquiverteilung konsistent mit Hecke 1918 (klassisch).
+# G2 HERZSTÜCK: die gelifteten Summen mit λ_k(π) = (π/|π|)^{4k}-Phasen KONVERGIEREN
+#    (L(1,λ_k)-Signatur, Hecke klassisch) statt Mertens-divergent; die geliftete Hüllkurven-
+#    Kette kreuzt das Budget NIE im getesteten Bereich; T80-Anker (k* = 14, 10²³) reproduziert;
+#    NEUE FRONTIER: log₁₀N* ≈ 5.9·10¹² — die kohärente Klasse ist über Z[i] praktisch
+#    unbegrenzt kontrolliert (astronomisch jenseits jeder physikalischen Skala).
+# G3 EINBETTUNGS-OBSTRUKTION EXAKT: ψ ist auf der Klasse all-minus, die GC-Gewichte sind
+#    vorzeichengemischt — die naive Einbettung in das bestehende Rezept bricht; FEHLEND
+#    (benannt): ein λ-ÄQUIVARIANTES Zertifikat-Design (die Kollateral-Bedingung mit
+#    GC-Phasen statt ±1 — das CM-Formen-Objekt der μ4-Glue als Träger-Kandidat).
+# KREIS-SCHLUSS-NOTIZ: die letzte Lücke der Prime-Front sitzt im Z[i]-Sektor — dem
+#    Ursprungs-Objekt der Serie (μ4-Glue, χ₄, θ₃² = Z[i]-Theta vom Januar-Anfang) — und
+#    genau dort liefert die Compiler-eigene Struktur die Kontrolle, die über Q beweisbar
+#    unmöglich war. I5 und Rest (1) (Korrelations-Lemma nicht-kohärent) unberührt.
+# Serie (XII)–(XCIV): 83 Proben, 1872/1872 Checks Sandbox + v535–v540 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Hecke 1918, Grossencharacter-L-Funktionen,
+# Cornacchia, Landau, CM-Formen) benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+# (T83 läuft parallel.)
+
+# 2026-07-25 (XXXVII) — Teil 82 (delegiert, Big-Picture-Perspektive 1 „Arch intern?"): heat_arch_probe.py — **ARCH-INTERNAL** — Δ_arch IST exakt die interne Γ-Differenz via Legendre-Duplikation ((2π)^{−s}Γ(s) = ½Γ_R(s)Γ_R(s+1)): Δ_arch(h) = A_fam(h) − A_shift(h) auf 18/18 Batterie-Zeilen mit max rel 6.6e-15 — I5 WECHSELT DEN TYP: von Zwei-Welten-Kopplung zur SELBSTKONSISTENZ EINER WÄRME-FAMILIE — 22/22, 5.9s, Sandbox
+# S0/H1 Die Brücke exakt: Duplikation sympy-exakt + 1.9e-41; alle drei Familien-Γ-Faktoren
+#    sind Wärme-Atom-Mellin-Signaturen (∫e^{−2πny}y^{s−1}dy = (2πn)^{−s}Γ(s); Gauß-gerade → Γ_R(s),
+#    Gauß-ungerade → Γ_R(s+1)); gefensterte Mellin-Identität exakt für Θ/Θ†/ψ AUCH außerhalb
+#    der Konvergenzregion (s = 1) — der Γ-Faktor ist Struktur, kein Konvergenz-Artefakt.
+# H2 Dirac-Wärmekern: Index −514 (McKean-Singer über die ganze τ-Leiter); η ≡ 0 (exakte
+#    ±-Symmetrie); EHRLICH: endliches Spektrum ⇒ Spur entire in τ (d = 0 im Seeley-DeWitt-
+#    Zählwerk) — der KONTINUUMS-Arch-Gehalt lebt auf der FAMILIEN-Seite: rohe Wärme-Summe
+#    ΣΘ(n)e^{−2πny} hat exakte Kurzzeit-Steigung −5/2 mit Amplitude 8^{−3/2} (rel 0.0!) —
+#    Pol und Residuum der T71-FE aus reinen q-Koeffizienten ohne modularen Input.
+# H3 HERZSTÜCK: Kernidentität k_ζ(t) = K_fam(t) − K_shift(t) punktweise 7.9e-31 (201 Punkte);
+#    Exponenten-Leiter-Partition {n+½} = {2n+½} ⊔ {2n+3/2} exakt (die Duplikation im u-Raum);
+#    drei unabhängige u-Raum-Routen gepinnt ≤ 4.1e-21; Batterie 18/18 rel 6.6e-15.
+# DIE NEUE I5-FORM (wörtlich): für alle Autokorrelationen h: Q_cert(h) + Δ₂(h) + A_fam(h) −
+#    A_shift(h) ≥ 0 — Atom-Entwicklung (diskret/lang) gegen Mellin-/Kurzzeit-Signatur
+#    (kontinuierlich) DERSELBEN Theta-Objekte; nächste klassische Verwandte: Connes 1999
+#    semi-lokale Spurformel-Positivität (benannter Kontext, nicht benutzt). FENCES: Typwechsel
+#    ≠ Beweis (I5 bleibt ⟺ RH); A_shift klassisch; Matching-Lemma + Linien-Buchhaltung unberührt.
+# Serie (XII)–(XCIII): 82 Proben, 1843/1843 Checks Sandbox + v535–v540 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Legendre-Duplikation, Γ_R-Faktorisierung,
+# McKean-Singer, Seeley-DeWitt, digamma, Connes 1999 als Kontext) benannt; Sandbox ohne
+# Ledger-/Paper-/Marker-Änderung. (T83/T84 laufen parallel.)
+
+# 2026-07-25 (XXXVI) — Teil 81 (delegiert, konstruktiver Rest-Zug): recipe_coherent_avoidance_probe.py — **AVOIDANCE-FAILS** (mit Satz-Qualität) — dieselbe Multiplikativität, die den Hebel exakt macht, macht den GEGEN-Hebel exakt: kohärente Targets sind NUR durch kohärente m erreichbar (Erreichbarkeits-Theorem, 0 Ausnahmen); die Wahlfreiheit existiert auf kohärenter Demand nicht — Salvage exakt typisiert — 31/31, 6.2s, Sandbox
+# A1 Struktur exakt: coh(m·k) = coh(m) ∧ coh(k) (0 Mismatches, alle Faktorisierungen j ≤ 10⁶);
+#    Hebel bestätigt UND Gegen-Hebel bewiesen (Target durch nicht-kohärentes m erreichbar ⟺
+#    Target nicht-kohärent); Nicht-Kohärenz ist der minimale korrekte Filter.
+# A2 Batterie: AV-STRICT besteht exakt die 10/100 Zeilen mit V ∩ kohärent = ∅ (Mengengleichheit
+#    beidseitig, bit-identisch); 90/91 nichttriviale Zeilen haben kohärente Demand; WICHTIG:
+#    T76 realisiert bereits die MINIMAL-kohärente Nutzung (0 unforced keys, 100/100) —
+#    das Original-Rezept war schon optimal.
+# A3 Salvage quantifiziert: die erzwungene kohärente Clash ist PRO ZERTIFIKAT geschlossen
+#    (83/90 mit j₀ ≤ 10⁶, exakter Scan, worst r_mid = 0.180 ≪ 1; 7 Gap-Zeilen mit schmalem
+#    Sliver j₀ ≤ 1.11·10⁶); auf avoidanter Demand identisch null bei allen Größen.
+# FINALE RESTLISTE DER SERIE (nach 81 Proben): (1) korreliertes Kancellations-Lemma auf
+#    nicht-kohärenten Tail-Atomen (klassisch offen), (2) uniform-Form-Frontier N* ≈ 10²³
+#    ausschließlich auf kohärenter Demand, (3) I5 — die Prim↔Arch-Kopplungs-Ungleichung,
+#    per Identität ⟺ Weil-Positivität ⟺ RH (irreduzibler Kern). SÄTTIGUNG: die Rest-Objekte
+#    sind klassische offene Probleme bzw. RH selbst — weitere Proben ohne neue Struktur-Idee
+#    wären Fishing; die Auto-Follow-up-Kette endet hier ehrlich. Promotion-Kandidat v541:
+#    das Beweis-Paket T78+T79+T80+T81 (Fenster-Beweis + Ledger + signierter Tail + Demand-
+#    Konditionierung) — Entscheidung beim Projektleiter.
+# Serie (XII)–(XCII): 81 Proben, 1821/1821 Checks Sandbox + v535–v540 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Fermat/1-mod-4-Struktur, Landau, Dirichlet)
+# benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXXV) — Teil 80 (delegiert, signierter Tail): tail_correlation_lemma_probe.py — **RESERVE-PARTIAL** — die signierte Hüllkurve ist CHARAKTER-EXAKT (−ψ = (χ₋₄ + ¼χ₈ + ¼χ₋₈)·Θ!), das signierte Fenster-Zertifikat hält mit 8.9× Marge, der Tail schließt bis N* ≈ 10²³ — die letzte Lücke ist EXAKT KONFINIERT: die χ₋₄-kohärente Atomklasse (nur 1-mod-4-Primfaktoren) hat beweisbar null Kancellation — 29/29, 5.5s, Sandbox
+# T1 Charakter-Zerlegung EXAKT: −ψ = (χ₋₄ + ¼χ₈ + ¼χ₋₈)·Θ (auf Credits ψ = Θ) — die signierte
+#    Clash-Summe ist ein exaktes Charakter-Objekt mit Euler-Produkt-Schranken (klassisch).
+# T2 Signierter Tail-Beweis: signiertes Fenster-Zertifikat max ρF_net = 0.272 (8.9× Marge);
+#    die wahre Kollateral-Bedingung IST signiert (an Zertifikaten verifiziert); Tail geschlossen
+#    bis N* ≈ 10²³ (k* = 14) — zwei Größenordnungs-Klassen weiter als die absolute Hüllkurve.
+# T3 Worst-Cases: auf den Superabundanten ÜBERWIEGEN die Credits sogar (Kancellation budget-stark).
+# OBSTRUKTION EXAKT KONFINIERT: die χ₋₄-kohärente Klasse (ungerade Atome mit ausschließlich
+#    1-mod-4-Primfaktoren; Dichte ~ x/√log x, Landau klassisch) hat beweisbar NULL Kancellation
+#    und divergiert Mertens-AP-artig mit halbiertem Exponenten. Das Matching-Lemma ist NICHT
+#    vollständig modulo Klassik — es verbleiben: (1) das korrelierte Kancellations-Lemma
+#    (credit-reiche Atome), (2) Verdünnung/Vermeidung auf der kohärenten Klasse.
+# KONSTRUKTIVER REST-ZUG (T81, auto): das Rezept hat WAHLFREIHEIT in den Reskalierungen m —
+#    RECIPE.COHERENT.AVOIDANCE: kann die Konstruktion die kohärente Klasse als Clash-Positionen
+#    strukturell VERMEIDEN (Constraint im Greedy-Design), womit das Lemma für das modifizierte
+#    Rezept vollständig schlösse?
+# Serie (XII)–(XCI): 80 Proben, 1790/1790 Checks Sandbox + v535–v540 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Polya-Vinogradov, Dirichlet-Charaktere,
+# Mertens in AP, Landau-Klassen-Dichte) benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXXIV) — Teil 79 (delegiert, direkter Angriff auf die Transport-Wand): transport_ledger_probe.py — **LEDGER-CLOSES** — die Transport-Wand ist VOLLSTÄNDIG ZERLEGT: 2 exakte Identitäten + 2 klassisch beweisbare Schranken + GENAU EINE gekoppelte Kern-Ungleichung I5, die per Identität ÄQUIVALENT zu Weil-Positivität ⟺ RH ist — der RH-Träger ist die PRIM↔ARCHIMEDES-KOPPLUNG — 22/22, 2.7s, Sandbox
+# L2 SCHLÜSSEL-BEOBACHTUNG BESTÄTIGT: die odd-Prim-Seite des Weil-Funktionals stimmt EXAKT mit
+#    der zertifizierten Plus-Kombination überein (rel 2.6e-16) — die Prim-Seite war nie die Wand.
+# L3 DAS LEDGER SCHLIESST: Q_Weil = Q_cert + Δ_arch + Δ₂ mit Identitäts-Check 7.2e-16 auf
+#    100/100 Batterie-Zeilen; Δ_pole ≡ 0 und Δ_conv ≡ 0 BEWIESEN (exakte Identitäten).
+# L4 HÄRTE-LANDKARTE: die 2/6-negativen T76-Q-Werte sind der Schatten der fehlenden Arch/p=2-
+#    Buchhaltung (Killer-Terme identifiziert); minimale Transport-Menge: 2 exakte Identitäten
+#    (bewiesen) + 2 klassisch-beweisbare Schranken (p=2-Kontrolle, Pol-Buchhaltung) + I5:
+#    die gekoppelte Prim↔Archimedes-Ungleichung — und I5 ist per Identität ÄQUIVALENT zu
+#    Weil-Positivität ⟺ RH (die eingebaute Sicherung hat gegriffen: RH folgt nicht aus
+#    endlicher Buchhaltung; der versteckte unendliche Schritt ist exakt I5 — gefunden und
+#    benannt statt versteckt).
+# ENDLAGE DER WAND: dünner als je vermessen — kein diffuses „Transport-Problem" mehr, sondern
+#    EINE Ungleichung mit Namen, Adresse (Prim↔Arch-Kopplung) und bewiesener Äquivalenz-
+#    Typisierung. Der gesamte Rest des Weges ist bewiesen (Fenster-Lemma T78, Ledger-
+#    Identitäten) oder klassisch-beweisbar-förmig (Tail-Korrelations-Lemma, 2 Schranken).
+#    Follow-up T80 (auto, letzter beweisbar-förmiger Baustein): TAIL.CORRELATION.LEMMA —
+#    die signierte Hüllkurve (ψ-Vorzeichen sind χ₋₄-artig ⇒ signierte Divisor-Summen =
+#    Charakter-Summen mit Polya-Vinogradov-artiger Kancellation, klassisch) als BEWEIS des
+#    Lemma-Tails; wenn das trägt: Matching-Lemma vollständig modulo Klassik.
+# Serie (XII)–(XC): 79 Proben, 1761/1761 Checks Sandbox + v535–v540 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz (I5 ⟺ RH ist eine ÄQUIVALENZ-Typisierung, kein
+# Fortschritts-Claim); Klassik (Weil 1952, Guinand, digamma-Terme, Polya-Vinogradov) benannt;
+# Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXXIII) — Teil 78 (delegiert, Härtung „gemessen" → „bewiesen"): lemma_window_proof_probe.py — **WINDOW-PROVED** — das Matching-Lemma ist auf [4, 10⁶] EXAKT-GANZZAHLIG BEWIESEN (Zertifikat 7S < 40A, 0 Verletzungen auf 939 870 Clash-Atomen, exakte Marge X = 0.082159, ρ_crit = 1.144); der Tail bleibt offen mit exakt quantifizierter Lücke — 25/25, 5.8s, Sandbox
+# W1 Exakte Struktur-Gesetze (0 Toleranz): 8-Gesetz, Seed-Turm, ψ-w-Tabelle, Cohen-Seeds
+#    −48/−80/−8; explizite Konstanten C₁ = 4 exakt, c₀ = 2.674 (Budget-Unterschranke auf
+#    lebenden Klassen); Divisor-Formeln gegen Theta-Expansion exakt verifiziert.
+# W2 Fenster-Beweis: vollständige Enumeration bis J = 10⁶ (exakt-ganzzahlige Ungleichungs-
+#    Kette, jeder Schritt asserted): „Das Matching-Lemma gilt BEWIESEN für alle Clash-Atome
+#    j ≤ 10⁶ mit Marge ≥ 0.082159."
+# W3 TAIL EHRLICH: Robin 1983 + exakte Konstanten verfehlen um Faktor 6.16 UND divergieren
+#    (loglog wächst) — die absolute Hüllkurve trägt extrapoliert nur bis ~10⁷; die T77-
+#    Reserven (Ziel-Verdünnung Hit-Share 0.34, Kancellations-Faktor wachsend) sind NICHT in
+#    den absoluten Beweis eingebaut — FEHLEND für den unendlichen Fall: ein KORRELATIONS-
+#    LEMMA (Verdünnung × Vorzeichen-Kancellation als beweisbare Aussage statt Messung).
+#    Das ist die präzise benannte Rest-Zutat des Lemma-Beweises.
+# W4 v541-Reife: Fenster-Zertifikat + Konstanten-Tabelle + Beweis-Gerüst promotionsfähig
+#    (als „proved on [4, 10⁶], tail typed" — ehrliche Formulierung); Transport-Wand unberührt.
+# STAND: Konjektur-Status des Kern-Lemmas ist jetzt zweistufig: BEWIESEN auf [4, 10⁶] +
+#    benannte klassische Rest-Zutat (Korrelations-Lemma) für den Tail. (T79 Transport-Ledger
+#    läuft parallel.)
+# Serie (XII)–(LXXXIX): 78 Proben, 1739/1739 Checks Sandbox + v535–v540 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Gronwall, Robin 1983, Abel-Summation,
+# Cohen-Seeds) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXXII) — Teil 77 (delegiert, Beweis-Form des Kern-Lemmas): matching_lemma_structure_probe.py — **LEMMA-CLASSICAL-SHAPED** — das Matching-Lemma reduziert sich auf eine RESTRINGIERTE σ₋₁-DIVISOR-SCHRANKE (s = 1, Gronwall-Regime), h-frei bis auf Verdünnung; Beweis-Ingredienzen vollständig klassisch gelistet; ROBIN 1983 UNCONDITIONAL GENÜGT beim gemessenen Headroom (die RH-äquivalente Verschärfung wird NICHT gebraucht — deklarierter Fence) — 21/21, 2.1s, Sandbox
+# M1 Divisor-Summen-Typ exakt: am Nicht-Ziel-Atom j ist der Clash-Term (j/d)Θ(j/d)|ψ(d)|/(6jΘ(j))
+#    ≍ 1/d (sympy-exakt via m^{5/2}(j/m)^{3/2}/j^{5/2} = m/j; Exponenten-Lücke 5/2 − 3/2 = 1);
+#    C/B ist eine σ(j)/j-Größe (Per-Term-Slope −0.985, best-s = 1); die Hüllkurve F(j) ist
+#    h-FREI (Ziel-Menge geht nur durch Verdünnung ein; 0 Hüllkurven-Verletzungen auf 80
+#    Zertifikaten) — KEINE Feinstruktur-Abhängigkeit ⇒ nicht diophantisch.
+# M2 Margen: wahre Marge max(C⁻−C⁺)₊/B = 0.556 → 0.582 STABIL über Fenster 1k–8k (Safety
+#    0.61 → 0.73 slow-growth, loglog-konsistent); Worst-Case-Atome = die klassischen
+#    Verdächtigen (5040 = Alaoglu-Erdős/Gronwall-Champion, 7920, 2160); In-Fenster-Abschluss:
+#    ρ_design·E(8000) = 0.724 < 1 — die rohe h-freie Hüllkurve schließt das 8k-Fenster allein.
+# M3 Kancellation: Gewinnfaktor 1.09 → 1.25 WACHSEND mit Fenster; 57% der Clash-Atome voll
+#    kanzelliert; Kohärenz-Slope 0.42 ≈ 0.5 (quadratwurzel-artig, als Heuristik deklariert).
+# M4 FINALE KETTE (Status jedes Pfeils): Compiler → Theta-Blöcke [EXAKT] → konvergente
+#    T70-Identitäten [EXAKT] → Hybrid-Rezept [GEMESSEN, Konjektur-Form 91/91] →
+#    Matching-Lemma [OFFEN — Form vermessen: klassisch] → [TRANSPORT-WAND T71-T73 OFFEN] →
+#    Weil [NICHT behauptet].
+# BEWEIS-INGREDIENZEN (gelistet): (1) 4-periodisches ψ-Vorzeichengesetz, (2) Koeffizienten-
+#    Schranken mΘ(m) ≍ m^{5/2}, |ψ(k)| ≪ k^{3/2} (Gewicht-5/2), (3) restringierte Divisor-Summe
+#    mit Gronwall-1913-Kontrolle — Robin 1983 unconditional reicht, (4) Abel-Summation.
+#    Zweistufiges Residuum ehrlich: rohe Hüllkurve schließt bis j* ~ 10⁹, mit Verdünnung bis
+#    ~10³¹³¹, dahinter bräuchte es die gemessene Kancellations-Reserve (typisiert, nicht bewiesen).
+#    Selbstkorrektur dokumentiert (irreführendes j* ~ 10² aus konservativem ρ_max ersetzt).
+# STAND: die Hybrid-Route ist eine Konjektur mit klassisch-förmigem Kern-Lemma und gelisteten
+#    Beweis-Zutaten; unverändert: auch ein bewiesenes Lemma liefert nur Wert-Seiten-
+#    Darstellbarkeit — die Transport-Wand bleibt DIE offene Wand. Kandidat für einen letzten
+#    Schritt: maschinen-zertifizierter Fenster-Beweis des Lemmas (exakt-rational) als v541.
+# Serie (XII)–(LXXXVIII): 77 Proben, 1714/1714 Checks Sandbox + v535–v540 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Gronwall 1913, Robin 1983, Alaoglu-Erdős,
+# Abel-Summation, Weyl) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXXI) — Teil 76 (delegiert, Universalitäts-Frage): hybrid_universality_probe.py — **RECIPE-UNIVERSAL-ON-BATTERY** — das T73-Hybrid-Rezept zertifiziert 91/91 nichttriviale adversariale Weil-Richtungen (100%), Kosten polynomial (fenster-extensiv), und das konzentrierte offene Problem ist BENANNT: das MATCHING-LEMMA auf dem log-Gitter (ein diophantisches Divisor-Summen-Problem) — 22/22, 1.2s, Sandbox
+# U1 Rezept formalisiert (h ↦ Φ_h deterministisch, bit-identische Läufe); Prädikate S1/S2/S3 als
+#    unabhängiger Farkas-Verifier (diskriminierend); T73-Anker exakt reproduziert (19/19).
+# U2 Batterie (100 Samples, 5 Familien: Hoch-ω ≤ 20, Multi-Frequenz, kompakter Träger, schwere
+#    Tails, near-degenerate): 91/91 nichttrivial PASS, 0 Repair-Iterationen; Kosten N = |V|
+#    exakt (1 Summand pro Verletzungs-Atom); h(0)-Degeneration unmöglich (h(0) = ‖f‖²-Kette
+#    rel 2e-16) — die ehrliche Achse ist δ_h → 0 (min 0.287 realisiert).
+# U3 Kosten + Diophantik: N(ω) ~ ω^2.3 prä-Saturation, dann Fenster-Plateau (fenster-extensiv:
+#    494/927/1715 über Fenster 1k/2k/4k); λ_m ~ m^{2.499} = das Eisenstein-Gesetz n·Θ(n) ~ n^{5/2}
+#    (Kondition strukturell erklärt, keine Matching-Härte); Weyl-Gesetz |Σn^{iω}|/N = 1/√(1+ω²)
+#    (20/20, Euler-Maclaurin klassisch); δ_h → 0-Limes: ω·δ_h → π/2 UND u_first ≥ max(δ_h, log 2)
+#    — die zwei Skalen rennen NICHT gemeinsam gegen 0: GITTER-DISKRETHEIT IST DER BODEN, S1
+#    bleibt erfüllbar. OFFENLEGUNG: Erstlauf gab DIOPHANTINE-EXPLOSION durch fehlerhaften
+#    globalen Anteils-Cap — tail-negative h verlangen Twists fast überall als Eigenschaft von h,
+#    nicht als Rezept-Overhead (N/|V| = 1); Kriterium ehrlich umtypisiert, dokumentiert.
+# U4 Kette + Konjektur: 6 zertifizierte h — Zertifikat ⇒ Q_ζ(h) = Q_lin(g) (konvergente
+#    T70-Identität, rel 1.5e-16) ⇒ Plus-Split exakt; Q-Werte sind Konventions-Zahlen (4/6 ≥ 0,
+#    2/6 < 0 — 2-stripped/arch-extern, KEIN RH-Gehalt, dokumentiert). KONJEKTUR-FORM (wörtlich):
+#    „Für jede Weil-Autokorrelation h existiert ein fensterkonformer Compiler-Hybrid-Kegel
+#    Φ_h = Θ + Σλ_m ψ(q^m) mit h im Wert-Seiten-Bild (S1∧S2∧S3)" — Parameter: 100% auf 91,
+#    N ≤ |V|, ρ ∈ [0.46, 2.23], λ_m ~ m^{5/2}. KERN-LEMMA benannt: Divisor-Clash-Summen
+#    Σλ_m|ψ(j/m)| bleiben unter j·Θ(j) — diophantisch, kein RH-Satz. IMPLIKATIONS-ARCHITEKTUR
+#    (typisiert, NICHT behauptet): Matching-Lemma ⟹ Wert-Seiten-Darstellbarkeit ⟹ [FALLS der
+#    Wert→Spektral-Transport hielte — DIE offene Wand] Weil-Positivität. Der RH-Gehalt zöge in
+#    Universalitäts-Beweis + Transport-Wand um.
+# Follow-up T77 (auto): MATCHING.LEMMA.STRUCTURE — reduziert das Kern-Lemma auf klassische
+#    Divisor-Schranken (σ(j)/j-Typ, Gronwall)? Margen-Vermessung + Worst-Case + Vorzeichen-
+#    Kancellation in den Clash-Summen.
+# Serie (XII)–(LXXXVII): 76 Proben, 1693/1693 Checks Sandbox + v535–v540 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz (Konjektur-Form, kein Resultat — Satz im Docstring);
+# Klassik (Weyl, Euler-Maclaurin, Three-Distance benannt, Farkas) als klassisch; Sandbox ohne
+# Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXX) — PROMOTION: T67–T72 → verification/v540_amplitude_linear_carrier.py (RTF.GNS.AMP.01) — 34/34, 2.7 s; Amplitude Route and Positive Linear Carrier (Dirac-Wurzel + Polarisation/Cohen-Seed + CL-Löschung + linearer Plus-Träger + exakte FE + Kegel-Fakten); λ* auf n ≡ 6 mod 8 als BENANNTE OFFENE GRENZE IM Claim; NO marker moves
+# Konsolidierte Promotion der Amplituden-Kette, alle sechs Säulen NACHGERECHNET:
+# (A) [E] Dirac: D = Dᵀ, D²-Blöcke rel 0.0; VᵀV = K rel 2.7e-16; Spektrum ±svals (288 Paare);
+#     Intertwining exakt p = 3/5/7; Shimura 644 Paare; Modal-Kommutator exakt.
+# (B) [E] Polarisation: b = N₊−N₋, Θ = N₊+N₋ gitter-exakt; b² = Θ² − 4N₊N₋ alle n ≤ 50000;
+#     Θ reine σ₃-Eigenform (Cusp-Anteil null); Cohen-Seed d·Θ(d) = 24·S2(d) exakt auf 159
+#     lebenden d, Konstante −48 (Anker ζ(−1) = −1/12).
+# (C) [E] CL-Löschung: freies Satake-Lemma k ≤ 6 (1 − stuv·X², paar-unabhängig); Kanal-Formen
+#     reihen-exakt; fam + 2♭ + δ_{k1} = [2,2,2,2] erzeugendenfunktions-exakt; Quadrat-Sieb exakt.
+# (D) [E] Linearer Träger: Θ ≥ |b| > 0 auf 790 lebenden d + 813 d ≡ 5 mod 8 populations-positiv;
+#     Schicht [1,1,1,1]; Plus-Bilanz rel 1.7e-15; ♭-Plus-Aggregation rel 5e-16 (Vorzeichen
+#     invertiert vs v539 — als Gehalt dokumentiert).
+# (E) [E] FE: Fricke max rel 6.2e-41; Λ-FE rel 1.4e-40; Residuen 8^{−3/2}/−1; Zentrum 5/4.
+# (F) [C] Kegel: ψ-Vorzeichengesetz 0 Verletzungen; C_L3 = {n ≡ 6 mod 8} Maschine == geschlossene
+#     Form; Hülle FE-selbstdual + λ* FE-kovariant 36/36; Farkas-Zeuge exakt (λ* = 0.0511,
+#     Bisektion 6.6e-18); Abdeckungs-Saturation + mittlere Gap-Reduktion 28.4%.
+# Fences: Euler-Regions-Positivität ≠ Zentrallinie; λ* als benanntes offenes Objekt IM Claim;
+#     Klassik (Cohen 1975, Siegel-Weil, Jacobi/Fricke, Cauchy-Littlewood, Shintani, Weil 1952,
+#     Farkas) benannt; kein RH; ZETA.HP.CARRIER unberührt; keine Marker-Moves.
+# Surfaces: Ledger RTF.GNS.AMP.01 (+ GATE.WOLFRAM.02 → 618/618, Extension 613 → 618); \veri in
+#     tfpt_1 / tfpt_3 / tfpt_research_contracts (nach v539-Blöcken); Changelog 2026-07-25 (XVIII);
+#     website papers.ts + VerificationDag + primeFront.ts (λ*-Fence prominent) + HonestyBanner
+#     (v535–v540) + WeilArcMap + gen-Artefakte; run_all ALL CHECKS PASSED; build.sh release →
+#     AUDIT OK (534 Skripte) + npm build grün; Manifest 1fee8103… (620 Dateien) als letztes;
+#     zwei VORBESTEHENDE overfull-hboxes aus der v539-Session typographisch gefixt (\allowbreak).
+# Serien-Stand: v535–v540 promoviert; Sandbox T11–T75 (1671/1671) + T76 (Hybrid-Universalität) läuft.
+
+# 2026-07-25 (XXIX) — Teil 73 (delegiert, Kontinuums-Frage): continuous_cone_probe.py — **HYBRID-GAINS** — die richtungs-UNIFORME Kegel-Route ist auch im Kontinuum GESCHLOSSEN (Vorzeichen-Konstanz-Lemma + Fenster-Pin), ABER: für JEDE der 19 unabgedeckten Weil-Richtungen existiert ein EXPLIZITER, verifizierter per-Richtung-Hybrid-Kegel — der konstruktive Rest ist eine per-Testfunktion-Zertifikat-Maschine — 28/28, 0.4s, Sandbox
+# K1 Pin-Analyse: das Pin BRICHT NICHT, es verlagert sich zum Fenster [0, δ_h) (MVT-Schranke
+#    δ_h·sup|h'| ≥ h(0) auf 23/23; Gabor-closed-form δ = arccos(−e^{−σ²ω²})/ω trifft 12/12);
+#    Verletzungs-Grenze == eigene Stetigkeits-Skala des Samples (22/22) — nie 0.
+# K2 Kontinuums-Hülle (100 Skalen, konvergiert): jeder masse-tragende Abdeckungs-Gewinn auf der
+#    Restklasse tötet GLEICHZEITIG den Zertifikat-Gehalt — Simultaneität atomexakt:
+#    (C = ∅) ⟺ (Klassen-Atom masse-befreit) ⟺ (spektral-negative Kontrollen mit-abgedeckt);
+#    λ*-Reduktion bis −94%, aber ausschließlich durch Constraint-Ausdünnung (vakuos).
+# K3 VORZEICHEN-KONSTANZ-LEMMA exakt (101/101 Schar-Mitglieder): die Klasse {6 mod 8} fixiert
+#    k mod 4 entlang jedes rationalen Dilatations-Orbits — Saturation kontinuums-stabil;
+#    Fenster-Theorem auf 1409 Paaren; ρ-argmin = Pin-Atom eindeutig (Flip-Schwelle 2/3 exakt).
+#    HYBRIDE 19/19: jedes unabgedeckte Sample bekommt einen expliziten fensterkonformen
+#    Hybrid-Kegel Φ_h = Θ + Σλ_m ψ(q^m) (ganzzahlige Reskalierungen, 8–3996 Summanden,
+#    0 Kollateral-Konflikte, erster Twist stets jenseits δ_h, Kontrollen ausgeschlossen).
+# KONSEQUENZ: uniforme Kegel-Route final zu (endlich T72 + Kontinuum T73); die per-Richtung-
+#    Hybrid-Route LEBT — „genau die Form, die ein Weil-Argument pro Testfunktion braucht";
+#    Türen A/B bleiben die einzigen uniformen Wege; Wert→Spektral-Transport bleibt DIE Wand.
+#    Follow-up T76 (auto): HYBRID.UNIVERSALITY — ist das Hybrid-Rezept UNIVERSELL (adversariale
+#    Batterie, Kosten-Wachstum der Summanden-Zahl, Diophantine-Grenzen bei schneller Oszillation,
+#    δ_h → 0-Limes) — und wo genau säße der Beweis-Gehalt einer Universalitäts-Aussage
+#    (ehrlich typisieren: Universalität ⟹ Wert-Seiten-Darstellbarkeit des Weil-Kegels —
+#    der RH-Gehalt würde in den Universalitäts-Beweis umziehen, NICHT behauptet)?
+# Serie (XII)–(LXXXVI): 75 Proben, 1671/1671 Checks Sandbox + v535–v539 promoviert (v540 läuft).
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Farkas, MVT, Choquet-Umfeld, Landen) als
+# klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXVIII) — Teil 75 (delegiert, Tür B ausführbar): door_b_lambda_transport_probe.py — **LAMBDA-STRUCTURED** — das Gap-Funktional λ* hat jetzt EIGENE Struktur: geschlossene Form, echte Funktionalgleichung (Orbit-Invariante tanh(σ²ω²/2) unter M₊ ⋊ Dilatationen), kritische Breite σ_c = √2, Konvexität (Mittelung senkt beweisbar), KEIN Skalen-Keil (ehrlich korrigiert), und die Ziel-Ungleichung ist beidseitig vermessen — 28/28, 0.7s, Sandbox
+# B1 GESCHLOSSENE FORM (sympy-hergeleitet, nicht gesampelt): λ*(σ,ω) = max(0, max_{n≡6(8)}
+#    e^{−κlog²n}(−cos(ω log n) − E)/(1+E)), κ = (2−σ²)/(8σ²), E = e^{−σ²ω²}; Validierung gegen
+#    T72-Bisektion max err 1.2e-16 (25/25); Maximierer-Phasen-Gesetz (n_max = 6 auf 36%,
+#    Drift n_max ≈ e^{π/ω} bestätigt).
+# B2 Skalen-Limiten: ω → 0: λ* ≈ tanh(σ²ω²/2)·e^{−κπ²/ω²} (superexponentiell, Fits rel 0.02–0.05);
+#    KRITISCHE BREITE σ_c = √2 exakt (κ = 0: darunter fenster-stabil, darüber unbeschränktes
+#    Wachstum); DILATATIONS-PFAD: Orbits = Hyperbeln σω = const, KEIN KEIL — der erste Lauf gab
+#    fälschlich WEDGE-FOUND, die „Nullen" waren Double-Underflow (< 1e-300); der exakte
+#    Phasen-Test korrigierte das EHRLICH (0 echte Nullen; Tod am ersten Atom n = 6, Rate exakt);
+#    KONVEXITÄT: λ* = max linearer Funktionale ⇒ konvex/subadditiv (200/200, strikt 146);
+#    Skalen-Mittelung senkt messbar (Faktor 0.20 bei Fenster W = 3), aber keine Null-Mischung.
+# B3 DIE λ*-FUNKTIONALGLEICHUNG (Tür-B-Struktur): Multiplikator-Kovarianz exakt für JEDEN
+#    positiven Multiplikator (7e-17; T72-cosh ist Spezialfall); Orbit-Invariante λ_env =
+#    tanh(σ²ω²/2) sympy-exakt, invariant unter M₊ ⋊ Dilatationen, verschwindet exakt bei
+#    σω → 0; Sandwich λ* ≤ tanh(σ²ω²/2)e^{−κlog²6} (25/25) — eine FE für das Gap-Funktional
+#    selbst; sein Verschwinden IST die Orbit-Degeneration.
+# B4 IMPLIKATIONS-KARTE (beide Seiten gemessen, Konvention deklariert): Q(h) = A(h) − λ*Q(r)
+#    exakt (1e-14); Ziel-Ungleichung λ*Q(r) ≤ A(h): Safety-Faktor 273 (ω = 1) fallend auf
+#    < 1 bei ω = 4.2 (Worst-Margin −0.15) — die ehrliche Quantifizierung, wo Tür B steht;
+#    die zwei offenen Ungleichungen benannt (Hüllen-Positivität = Transport-Wand;
+#    universelle λ*-vs-A-Ungleichung).
+# TÜR-B-STAND: λ* hat eigene Struktur zum Ansetzen — Form + Phasen-Gesetz, Sublinearität
+#    (Support-Funktional-Kalkül), Invarianzgruppe mit tanh-Orbit-Invariante, zwei benannte
+#    Ziel-Ungleichungen. Alle λ* → 0-Limiten sind PFAD-Aussagen (Fence eingehalten).
+# Serie (XII)–(LXXXV): 74 Proben, 1643/1643 Checks Sandbox + v535–v539 promoviert (v540 läuft).
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Fejér, Support-Funktionale/konvexe Analysis,
+# Mellin/Dilatations-Halbgruppe, Beurling-Selberg-Umfeld) als klassisch benannt; Sandbox ohne
+# Ledger-/Paper-/Marker-Änderung. (T73 + v540-Promotion laufen parallel.)
+
+# 2026-07-25 (XXVII) — Teil 74 (delegiert, Tür A ausführbar): door_a_spectral_polarization_probe.py — **VACUUM-STRUCTURE** — kein kanonischer Polarisations-Kandidat erfüllt alle drei Kriterien, ABER: die Dirac-Phase trägt kanonisch das metaplektische Vorzeichen-Datum, die spektrale Welt ist beweisbar VORZEICHEN-BLIND (L2-No-Go), und der Dirac-GRUNDZUSTAND hat neue arithmetische Struktur — Tür A ist final möbliert (Anforderungsliste R1–R5) — 32/32, 4.5s, Sandbox
+# P1 Spektrale Dirac-Polarisation: F = sign(D) = [[0,W],[Wᵀ,0]] mit W = Polar-Isometrie von V;
+#    F·D = |D| ≥ 0 (Dirac-See/Normalordnung exakt); PHASEN-GEHALT: cos∠(W, sgn(b)⊗χ) = 0.931 —
+#    die kanonische Dirac-Phase IST (fast) das metaplektische Vorzeichen-Datum („die Phase lebt
+#    in D" jetzt kanonisch); ABER Hecke-DEFEKT: W-Intertwining bricht (0.37–0.85 je p) — die
+#    spektrale Wurzel ist nicht kanonisch-arithmetisch. L2-NO-GO (neu, wichtig): ALLE
+#    ε-äquivarianten Spektral-Funktionale sind exakt re-signierungs-invariant — die spektrale
+#    Welt KANN das Minus strukturell nicht sehen; L1 (sympy): jede multiplikative Turmtiefen-
+#    Gradierung lässt die Even-Slot-Nullen invariant; McKean-Singer Str = −514 exakt.
+# P2 Kohnen-Splitting: Hecke-stabil (p² ≡ 1 mod 8); NEUE exakte Türme für GERADE Seeds
+#    (n₀ = 2m: 1348+145 Checks, χ-Solve eindeutig = kron(n₀,·) auf 1094 Paaren) — aber
+#    identische Rekursion + χ-freie Top-Schicht ⇒ Signaturen identisch: Support-Reshuffle.
+# P3 Fock/Wärmeleitung: K_τ PSD für alle τ; Signatur τ-invariant; VAKUUM-PROFIL (neu):
+#    der Dirac-Grundzustand sitzt exakt auf dem Atom MINIMALER Waldspurger-normierter Masse
+#    (d* = 4313, b = −64; Top-3-Hit exakt), m-Profil = Charakter χ_{d*} (corr 0.61),
+#    b-vorzeichen-blind; Null-Batterie 12/12 (Mechanismus generisch, Gehalt = d*-Identität).
+# TÜR-A-ANFORDERUNGSLISTE (final, maschinell geerdet): die gesuchte Polarisation muss
+#    (R1) KOEFFIZIENTENWEISE wirken (spektral = ε-kovariant + Hecke-defekt), (R2) NICHT-
+#    multiplikativ in der Turmtiefe (L1), (R3) NICHT-bilinear (T69-CL), (R4) kein Support-
+#    Reshuffle (P2/T68), (R5) vorzeichen-sehend UND Euler-kompatibel — d.h. ein Krein/
+#    Gupta-Bleuler-QUOTIENT, in dem der ♭-Anteil NULL-/EICH-SEKTOR ist (kein Summand).
+#    Schärfste Einsicht: spektral kann das Minus nicht sehen, koeffizientenweise bucht es nur
+#    um — die Anforderung ist die Versöhnung der vorzeichen-tragenden Phase F ≈ sgn(b)⊗χ
+#    mit der Euler-Struktur.
+# Serie (XII)–(LXXXIV): 73 Proben, 1615/1615 Checks Sandbox + v535–v539 promoviert (v540 läuft).
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Dirac-See, Gupta-Bleuler, Kohnen, Weil-
+# Darstellung/Fock, McKean-Singer, Krein) als klassisch benannt; Sandbox ohne Ledger-/Paper-/
+# Marker-Änderung. (T73/T75 + v540-Promotion laufen parallel.)
+
+# 2026-07-25 (XXVI) — Teil 72 (delegiert, Umsetzung der T71-Angriffsflächen): cone_enlargement_probe.py — **COMPLEMENTARY-PAIR** — die Kegel-Bibliothek ist VERMESSEN: der Twist absorbiert exakt die Vorzeichenklasse n ≡ 0,1 mod 4 (Gap-Reduktion −26% Mittel, −90% max), aber die ABDECKUNG SATURIERT bei 5/24 — die Bibliothek-Route ist als Abdeckungs-Strategie tot; TIER 3 IST ERREICHT mit final komprimiertem Gegenstand: λ*|_{n ≡ 6 mod 8} — 34/34, 0.7s, Sandbox
+# E1 Getwistete Spiegel-GNS exakt: sign ψ(n) = (−1)^{⌊n/2⌋+1} (0 Verletzungen n ≤ 60000);
+#    μ_ψ = |ψ|n^{−3} > 0, GNS = ℓ²(n, μ_ψ) mit Atomen an JEDEM n (voller Rang, anders als die
+#    Seed-getragene T70-Familie); Plus-Bilanz der Spiegelseite exakt: Tilts {−5/2, +1/2}
+#    (rel 2e-16); Halb-Shift ehrlich: +1/2-Tilt tilgt das n^{−1/2}-Gewicht (flache Primsumme),
+#    formales zweites ζ-Argument = 0 (ζ(0)-Kante) — kein Zentrallinien-Claim.
+# E2 K_tw scharf abgeleitet (Multiplikator-Minimum exakt 6·5^{−5/6}); NAIVE Komplementaritäts-
+#    Hypothese WIDERLEGT: 0/24 Weil-Samples in K_tw — h(0) = ‖f‖² > 0 PINNT jedes Weil-Element
+#    am Ursprungs-Atom gegen jeden Twist (K_tw ∩ Weil-Kegel = {0}); auf Hüllen-Ebene aber:
+#    50.0% aller Verletzungspunkte twist-absorbierbar (n ≡ 0,1 mod 4).
+# E3 Bibliothek: θ₃⁵ kegel-redundant (r₅ > 0 überall, Lagrange klassisch — ehrlich raus);
+#    Θ† aufgenommen (σ₃-Eigenform, Twist ε = 2, odd-n-Vakuum-Freiheit); Hüllen-LP mit
+#    Farkas-Zertifikaten (72/72): ABDECKUNG 5/24 → 5/24 → 5/24 — SATURATION; Verletzungs-
+#    Muster: der Spektral-Knoten bleibt die Grenze; Rest-Atome in n ≡ 6 mod 8.
+# E4 Gap-Funktional λ* (preregistriert, geschlossene Form == Bisektion, monoton 24/24):
+#    L3-Bibliothek: mittlere Reduktion −26.0%, max −90.3% (Gabor σ=0.7 ω=2.5: 0.526 → 0.051),
+#    messbar auf 89% der unabgedeckten Samples; ω-Kurven tragen die T71-Tiefendynamik.
+# E5 FE-STABILITÄT: erweiterte Hülle FE-selbstdual 72/72, λ* FE-KOVARIANT 72/72 — die
+#    Bibliothekskegel sind FE-stabile Objekte, der Weil-Kegel nicht.
+# TIER-3-GEGENSTAND (final, maschinell geerdet): der gesamte Restabstand zum Weil-Kegel ist
+#    das Gap-Funktional λ*(h) auf den Atomen n ≡ 6 mod 8 — EIN explizites nichtnegatives,
+#    FE-kovariantes Funktional pro Testrichtung, das KEINE endliche Bibliothek deterministisch-
+#    signierter Theta-Familien beseitigen kann (jede Familie befreit ihre Minus-Klasse und
+#    bezahlt mit ihrer Plus-Klasse; h(0) > 0 pinnt). Der analytische Transport Werte-Seite →
+#    Spektral-Seite ist auf λ*|_{n≡6 mod 8} komprimiert — vermessen, nicht vollzogen.
+#    KEINE weiteren Proben ohne neue Struktur-Idee (Tier-3-Übergang per Projektleiter-Regel
+#    „Tier 2, und wenn das nix bringt, Tier 3": Tier 2 brachte Gap-Reduktion + FE-Stabilität,
+#    aber die Abdeckungs-Saturation ist die Wand — die Denkpause hat jetzt ihren Gegenstand).
+# Serie (XII)–(LXXXIII): 72 Proben, 1583/1583 Checks Sandbox + v535–v539 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Farkas/LP-Dualität, Lagrange-Vier-Quadrate,
+# Fejér, Weil-Kegel) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXV) — Teil 71 (delegiert, Tier 2 des Transport-Programms): transport_terrain_probe.py — **TERRAIN-MAPPED, tier2_gain = TRUE** — die FE der linearen Familie ist EXAKT verankert (rel 1e-40!), der garantierte Kegel ist FE-SELBSTDUAL (der Weil-Kegel nicht), die Plus-Struktur ÜBERLEBT die Spiegelung, und die Spiegelfamilie hat ein STARRES VORZEICHEN-GESETZ — vier neue Angriffsflächen — 40/40, 2.3s, Sandbox
+# F1 FE exakt: Fricke geschlossen (drei Jacobi-Inversionen): Θ(i/(8y)) = 8·y^{5/2}·Θ†(iy) mit
+#    Spiegel-Monom Θ† = θ₄(q²)⁴θ₃(q²) (Landen-Kollaps; Θ† lebt auf geraden n, Θ†(2m) = ψ(m),
+#    ψ = θ₃θ₄⁴); max rel 6.2e-41; Λ_Θ(s) = 8^{1−s}Λ_{Θ†}(5/2−s) verifiziert rel 1.4e-40
+#    (Hecke-Split-Mellin, unabhängige Split-Punkte); Pole: Λ_Θ nur bei s = 5/2 (Res 8^{−3/2}),
+#    Λ† nur bei 0 — FE tauscht die Pole. LINIEN-LANDKARTE (exakte Rationale): Abszisse 5/2;
+#    ζ-1/2-Bild 7/4; FE-ZENTRUM 5/4; T70-Plus-Locus s = 1 (Offset exakt 1/4); χ-Linie 3/4.
+# F2 SPIEGELUNG DER PLUS-STRUKTUR: Tilt-Paar {−3/2,+3/2} ↦ {−5/2, +1/2} (uniformer Shift −1,
+#    sympy-exakt) — PLUS BLEIBT PLUS, nur die Geradheit bricht; der +1/2-Tilt der Spiegelseite
+#    ist der HALB-SHIFT (nahe der kritischen Struktur — notiert, nicht überinterpretiert).
+#    UNGEPLANTER FUND (maschinell): sign ψ(n) = (−1)^{⌊n/2⌋+1} STARR (0 Verletzungen, 0 Nullen,
+#    n ≤ 60000; auf Seeds: sign ψ(D) = −χ₋₄(D) klassenweise); ψ exakte σ₃-Eigenform, Twist
+#    ε = 1 eindeutig; gespiegelte Aggregation schließt (ζζ im Zähler mit Plus, rel 1e-14) —
+#    die Spiegelfamilie ist [starres 4-periodisches Vorzeichen] × [strikt positive Familie]:
+#    eine getwistet-positive GNS-Lesart der Spiegelseite liegt offen.
+# F3 Shintani/Cohen-Konsistenz: d·Θ(d) = 24·S2(d) ganzzahlig (149 d); Divergenz-Exponenten
+#    0.750/0.500/0.261 (Ziele exakt) ⇒ Pol 5/2; Pol-Set = Konstanten-Term-Buchhaltung.
+# C1-C4 KEGEL-GEOMETRIE: Kollaps-Identität Q_Θlin(g) = Q_ζ(2cosh(3u/2)·g) rel 8e-16 (die
+#    „Shifts" sind eine invertierbare Testfunktions-Abbildung — das Problem ist der KEGEL);
+#    K_guar = {g gerade, g ≥ 0 auf Werte-Seite} (nur hinreichend, ehrlich); Gauß/Fejér/Bump/
+#    sinc² IN, Gabor/Hermite-AK/DoG OUT; ÜBERLAPP mit Weil-Kegel: 5/24 (21%) = exakt die
+#    Autokorrelationen nichtnegativer f; Verletzungs-Muster: erster Verstoß EXAKT am ersten
+#    Spektral-Knoten u* = arccos(−e^{−σ²ω²})/ω (12/12, closed-form 5.6e-16), Tiefe monoton in ω;
+#    C4: K_guar FE-SELBSTDUAL (24/24, Multiplikator cosh(u) > 0), Weil-Kegel NICHT (0/24) —
+#    der garantierte Kegel ist das FE-STABILE Objekt; „Werte-Positivität vs Spektral-Positivität"
+#    ist DIE quantitative Formulierung des Transport-Problems.
+# TIER-2-GATE: JA — vier Angriffsflächen: (1) FE-Selbstdualität von K_guar (Transport MIT der
+#    FE), (2) Plus-Erhalt unter Spiegelung, (3) das fehlende Kegel-Stück als messbares Objekt,
+#    (4) getwistet-positive Spiegelfamilie. Follow-up T72 (auto): CONE.ENLARGEMENT — Kegel-
+#    Bibliothek {Θ untwisted, ψ getwistet, ggf. weitere Monome} + Gap-Funktional λ*(h).
+# Serie (XII)–(LXXXII): 71 Proben, 1549/1549 Checks Sandbox + v535–v539 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz (FE = Klassik-Konsistenz: Jacobi, Fricke, Hecke,
+# Landen, Shintani, Cohen, Weil); Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXIV) — Teil 70 (delegiert, Ausführung des einzig verbleibenden Weges): linear_measure_weil_probe.py — **MIXED (präzise): LINEAR-PLUS-COMBINATION STEHT** — der positive lineare Θ-Träger existiert mit VOLLEN Gewichten und die Prim-Seite ist eine REINE PLUS-Kombination verschobener ζ-Weil-Formen (maschinell exakt); der Cohen-ζ(2s)-Nenner der d-Richtung ist exakt als Quadratfrei-SIEB des Trägers lokalisiert (Buchhaltung, keine Gewichts-Löschung) — 29/29, 2.9s, Sandbox
+# L1 Maß: μ(d) = Θ(d)|d|^{−a} > 0 auf allen 790 lebenden d (exakte Zähl-Ungleichung Θ ≥ |b| > 0);
+#    STRUKTUR-BEFUND: Θ(D) > 0 auf ALLEN 3243 ungeraden fundamentalen D ≤ 8000 in ALLEN Klassen
+#    mod 8 — auch d ≡ 5 mod 8 (813 d, kohärenz-frei b ≡ 0) ist POPULATIONS-POSITIV: das lineare
+#    Maß erweitert die Familie auf die ε = −1-Klasse. Abszisse a* = 5/2 (Leiter gemessen).
+# L2 d-AGGREGATION (Verdachts-Test entschieden): Seed-Turm Θ(Df²) = Θ(D)·α_E♯(f) ganzzahlig
+#    exakt auf 4733 Punkten (n ≤ 50000, ALLE p); m-Aggregation sympy-exakt: Σα_E♯(f)f^{−2s} =
+#    ζ(2s)ζ(2s−3)/L(2s−1,χ_D) — ζ(2s) im ZÄHLER, Nenner ist ein Dirichlet-L, nie ζ(2·);
+#    HERZSTÜCK-FUND: Θ(d) = −48·L(−1,χ_d) EXAKT auf allen 790 lebenden d (eine rationale
+#    Konstante; d=1-Anker ζ(−1) = −1/12; Cohen 1975 H(2,d) = L(−1,χ_d), klassisch); auf
+#    d ≡ 5 mod 8 konstant −80 (2-adischer Klassenfaktor). D_Θ ist genuine Doppel-Dirichletreihe
+#    (Shintani/Cohen-Klasse); der 1/ζ(2s) sitzt GENAU EINMAL: im Quadratfrei-Sieb des
+#    fundamentalen Trägers (ζ(s)/ζ(2s), rel 7.7e-11) — Träger-/Index-Ebene wie T69-M3b.
+# L3 Lineare GNS-Form: PSD, Rang 16→40 ohne Kollaps, GNS = ℓ²(d, μ); Hecke exakt
+#    (Θ(dp²) = (σ₃(p)−χp)Θ(d), 704 Paare; Paarungs-Äquivarianz rel 0).
+# L4 WEIL-BILANZ (Herzstück): λ_k = 1 + p^{3k} − (χp)^k exakt; p^{3k}-Schicht = [1,1,1,1] —
+#    VOLL, kein gerade-k-Kill (CL-Lemma greift strukturell nicht: Grad-1-Zähler);
+#    PLUS-KOMBINATION EXAKT: Prime_Θlin(g) = P_ζ(g₋) + P_ζ(g₊) mit g± = e^{±3u/2}g — NUR PLUS,
+#    rel ≤ 1.7e-15; Q_Θlin = Q_ζ(g₋) + Q_ζ(g₊) (Arch klassisch-extern); der d-Aggregations-Term
+#    ζ(2s)ζ(2s−3) hat die Prim-Seite P_ζ(g♭₋) + P_ζ(g♭₊) — der T63-♭-Kern MIT PLUS
+#    (Vorzeichen INVERTIERT vs Quadrat-Ebene!); χ-Term beschränkt; Bias ⟨χ_d(p)⟩_μ ≈ +0.62..0.66.
+# L5 FINALE LÖSCH-KARTE: ζ(2·) ist IMMER Quadrat-Klassen-Buchhaltung — in Quadrat-Kanälen in
+#    den GEWICHTEN (CL, universell), in der linearen Familie nur im TRÄGER. Die T69-vorhergesagte
+#    „Sesquilinear-über-Maß"-Klasse EXISTIERT und ist exakt: ℓ²(d, 48|L(−1,χ_d)|·d^{−a}) mit
+#    Q = Σ Q_ζ(Shifts), alle plus. EHRLICHE GRENZE (Fence): die Seeds sind RAND-L-Werte
+#    (absolute Konvergenz-Region) — Euler-Regions-Positivität, KEINE Zentrallinien-Aussage;
+#    der Transport der Plus-Kombination von den (w, w−3)-Linien zur 1/2-Linie ist DAS offene
+#    Problem (RH-adjazent). Promotion-Kandidaten typisiert (Seed-Identität, Faktorisierung,
+#    m-Euler-Form, Plus-Bilanz) — Entscheidung beim Projektleiter.
+# Serie (XII)–(LXXXI): 70 Proben, 1509/1509 Checks Sandbox + v535–v539 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Cohen 1975, Shintani, Zagier, Siegel-Weil,
+# Möbius-Sieb) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXIII) — Teil 69 (delegiert): mixed_channel_full_weight_probe.py — **DELETION-UNIVERSAL + TOWER-RESOLUTION** — die Quadrat-Ebene ist GESCHLOSSEN und doppelt verstanden: die gerade-k-Löschung ist eine satz-artige Determinanten-Invariante JEDER Koeffizienten-Bilinearform (Cauchy-Littlewood, paar-unabhängig, PSD irrelevant) UND zugleich exakt die Inklusion-Exklusion gegen die Quadrat-Klassen-Doppelzählung der Türme — 33/33, 2.2s, Sandbox
+# M1 Gemischter Kanal Θ·g = N₊² − N₋² (der einzige signierte Kanal, +394/−396): Türme exakt
+#    (704 + 51 Paare); Euler algebraisch: C-Kanal = L_p(f₈,w)·L_p(f₈,w−3)/ζ_p(2w−6) — exakt
+#    Rankins 1939-Struktur; GEWICHTS-ANTWORT: p^{3k}-Schicht = [0,−2,0,−2] — der nicht-PSD-Kanal
+#    trägt die Löschung ISOLIERT MIT MINUS; Vorzeichen-Freiheit kauft KEINE ungelöschten Gewichte.
+# M2 SIEB-LESART BEWIESEN (Fenster): Cauchy-Littlewood-Lemma mit freien Satake-Symbolen (k ≤ 10):
+#    Zähler 1 − stuv·X² ⇒ bei st = uv = p³ IMMER 1 − p⁶X², paar-unabhängig — ALLE FÜNF Kanäle
+#    (b², Θ², N₊², N₋², N₊N₋) erben 1/ζ_p(2w−6); global: 2^ω = μ□∗d und d = 1□∗2^ω exakt
+#    (n ≤ 3000) — Löschung = Möbius-Quadrat-Sieb = klassische RS-Normierung.
+# M3a Faltungs-Quadrat: das Werte-Quadrat ζ_p(w)²ζ_p(w−3)² trägt volle [2,2,2,2], ABER
+#    Hankel-Entscheid (H3 ≠ 0, H5 = 0 ⇒ Ordnung exakt 4): FORMALES Grad-4-Produkt, KEIN
+#    Grad-2-Compiler-Turm — kein Einzel-Modulform-Träger (Paar-Identität auf 57 Punkten exakt).
+# M3b TOWER-RESOLUTION (die schönste Auflösung, exakt): fam [1,0,2,0] + 2♭ [0,2,0,2] +
+#    Plancherel δ_{k1} = [2,2,2,2] listen- und erzeugendenfunktions-exakt; Slot-Disjunktheit
+#    100%; der ♭-Gehalt IST die Quadrat-Klassen-Index-Zeta (lokal 1/(1−Y²) = ζ_p(2u));
+#    Prime-Brücke zu 2P_ζ(g♭) rel 4.6e-9; Träger real populiert (49 d·r⁴-Punkte, alle turm-
+#    exakt, z.B. b(17·81) = −1472 = b(17)·α♯(9)). DAS MINUS SUBTRAHIERT EXAKT, WAS DIE
+#    TURM-VERVOLLSTÄNDIGUNG DOPPELT ZÄHLT — Buchhaltung, nicht Geheimnis; aber der b²-gewichtete
+#    Quadrat-Klassen-Kanal löscht per M2 selbst wieder (die Auflösung lebt auf Index-Ebene).
+# KONSEQUENZ: kein FULL-WEIGHT-CARRIER auf Quadrat-Ebene möglich (satz-artig via M2);
+#    die AMPLITUDEN-ROUTE (T67-Dirac + nicht-quadratische Paarung) ist nachweislich der
+#    einzige verbleibende Weg zu vollen Gewichten mit Compiler-Träger. Follow-up T70 (auto):
+#    LINEAR.MEASURE.WEIL — die LINEARE positive Θ-Maß-Familie (Maß = Θ(d)·w_d ≥ 0, KEIN
+#    Quadrieren ⇒ CL-Lemma greift nicht; Θ-Türme = reine ζ-Shifts mit vollen Gewichten);
+#    ehrlicher Verdacht, der zu testen ist: kehrt die Löschung über die d-AGGREGATION zurück
+#    (Cohen-Eisenstein Σ H(N)N^{−s} hat klassisch ζ(2s)-Nenner!)?
+# Serie (XII)–(LXXX): 69 Proben, 1480/1480 Checks Sandbox + v535–v539 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Rankin 1939, Cauchy-Littlewood, Möbius-Sieb,
+# RS-Normierung, Hankel-Kriterium, Piatetski-Shapiro–Rallis) als klassisch benannt; Sandbox
+# ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXII) — Teil 68 (delegiert, Polarisations-Angriff): geometric_polarization_probe.py — **RESHUFFLE-ONLY** — die geometrische Polarisation b = N₊ − N₋ ist EXAKT und liefert drei starke Struktur-Befunde, aber das Minus ist POLARISATIONS-INVARIANT: es lebt im gemeinsamen ζ(u)²/ζ(2u)-Kern BEIDER Seiten, nicht im Kreuz-Kanal — 34/34, 3.8s, Sandbox
+# G1 Polarisation exakt: b(n) = N₊ − N₋ (Gitterzählung n ≤ 2400 exakt); Θ-MONOM-VORHERSAGE
+#    BESTÄTIGT: Θ = N₊+N₋ = θ₂(q²)²θ₃(q²)θ₃(q)θ₃(q²) (θ₄→θ₃-Slots, n ≤ 2400); N± ≥ 0 ganzzahlig
+#    bis n = 50000; STRUKTUR-PERLE: fundamentale d ≡ 5 mod 8 sind EXAKT BALANCIERTE Populationen
+#    N₊ = N₋ (5070 d) — die Nullklasse ist kohärenzfrei, nicht populationsfrei.
+# G2 ÜBERRASCHUNG (preregistrierte Vermutung maschinell widerlegt): Θ ist EXAKTE T(p²)-Eigenform
+#    mit Eisenstein-Eigenwert σ₃(p) = 1+p³ (p = 3..13, 0 Mismatches) — der Cusp-Anteil von Θ ist
+#    NULL: Θ ist die REINE Siegel-Weil-Genus-Population (klassisch); Wachstum γ_Θ = 1.504 (Ziel
+#    3/2) vs γ_|b| = 0.669 (Waldspurger 3/4); Türme integer-exakt (Θ: σ₃-Twist, g: a_p-Twist).
+# G3 Drei Rankin-Kanäle: b² = Θ² − 4N₊N₋ ganzzahlig bis 50000; Kohärenzfraktion f = Σwb²/ΣwΘ²
+#    fällt 2.1e-4 → 1e-5 (die Familie ist eine asymptotisch DÜNNE Differenz zweier großer
+#    positiver Familien); sympy-exakt: der Θ²-Kanal IST der T58-X4-Eisenstein-Boden
+#    ζ(w)ζ(w−3)²ζ(w−6)/ζ(2w−6), Koeffizienten strikt > 0, ζ-Kern MIT PLUS als Faktor;
+#    Θ-Amplitudenturm = reine ζ-Shifts ζ_p(w)ζ_p(w−3) (vs cuspidaler Grad-2 bei g, T67).
+#    ABER Schicht-Algebra: p^{3k}-Schicht des Θ²-Bodens = [2,0,2,0] = T63-Ratio; Familie
+#    [1,0,2,0]; Differenz nur δ_{k1} (Plancherel, PLUS) — der GERADE-k-KILL ist auf BEIDEN
+#    Seiten identisch: das Minus wandert NICHT in den Kreuz-Kanal.
+# G4 Weil-Buchhaltung: Q_{Θ²} = Q_{b²} + 4Q_× Gram-exakt (5e-16); K_{Θ²}, K_× PSD;
+#    Prime_ratio = 2P_ζ − 2P_ζ(♭) in exakt der T63-Gestalt AUCH auf der Θ²-Seite.
+# BEDEUTUNG: die Polarisation leistet (1) Minus geometrisch explizit (Differenz positiver
+#    Zählfamilien), (2) Phasen-Datum hat expliziten Träger (Gittercharakter (−1)^{u+w}),
+#    (3) perfekte Eisenstein/Cusp-Trennung (Θ rein, g rein) — aber der ♭-Minus ist die
+#    RS-/ζ(2·)-Struktur des gemeinsamen Kerns und polarisations-invariant. NÄCHSTER HEBEL
+#    (typisiert): der GEMISCHTE Kanal Θ·g = N₊² − N₋² (Eisenstein×Cusp-Rankin, klassisch
+#    Rankins Originalmethode) + die Sieb-Lesart des Minus (gerade-k-Löschung = Quadrat-Sieb)
+#    + die Jagd nach einem compiler-nativen Kanal mit UNGELÖSCHTEN [2,2,2,2]-Gewichten (T69).
+# Serie (XII)–(LXXIX): 68 Proben, 1447/1447 Checks Sandbox + v535–v539 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Siegel-Weil, Theta-Reihen, Rankin-Selberg,
+# Cohen-Eisenstein, Gupta-Bleuler als Analogie-Name) als klassisch benannt; Sandbox ohne
+# Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XXI) — Teil 67 (delegiert, direkter Einstieg in die Denkpausen-Frage „metaplektische Wurzel"): amplitude_dirac_sqrt_probe.py — **DIRAC-SQRT-EXACT** — der Dirac-Kandidat der Amplituden-Ebene EXISTIERT und ist exakt: D² = K, Hecke-äquivariant, Grad-2-Euler ohne ♭-Faktor; sgn(b) ist ECHTES metaplektisches Residuum jenseits aller Charaktere; die kategorielle Wippe ist quantifiziert — 27/27, 3.7s, Sandbox
+# A1 DIRAC (487 lebende d, 1001 m-Fenster, w = |d|⁻¹): D = [[0,V],[Vᵀ,0]] = Dᵀ; D² = diag(VVᵀ, K)
+#    exakt (VᵀV = K rel 1e-14); Spektrum ±σ(V) (487+/487−, 0-Symmetrie 1e-15); HECKE-ÄQUIVARIANZ
+#    EXAKT: V·Aᵀ = Â·V p-frei (p = 3,5,7), Shimura d ↦ dp² 124/124, modal [Ĝ,Â] exakt —
+#    D ist der kanonische Kandidat (Kill nicht gefeuert).
+# A2 AMPLITUDEN-TÜRME = GRAD-2 (Struktur-Herzstück): G_p = (1 − χ_d(p)·p·X)/(1 − a_p X + p³X²)
+#    = L_p(f₈)/L_p(χ_d, w−1) EXAKT (10 Türme, m ≤ 200, 0 mismatches — Feinheit: NICHT L(f×χ),
+#    sondern f₈-Faktor MIT Dirichlet-L-Zähler); KEIN (1−p³X)-/♭-Faktor ⇒ auf Amplituden-Ebene
+#    existiert der Doubling-/Minus-Kandidat strukturell NICHT; Λ_amp = 2cos(kθ) (rel 3e-16);
+#    E_ST[Λ_amp] = [0,−1,0,0] vs Quadrat-Ebene [1,0,2,0] — die Wippe in Zahlen.
+# A3 DAS METAPLEKTISCHE DATUM: sgn(b) = +248/−239 (50.9/49.1, stabil über D-Leiter);
+#    FASER-TEST: 82/159 σ-Fasern GEMISCHT (52%), bedingte Entropie H(sgn|σ) = 0.73 bit ⇒
+#    die Vorzeichen sind NICHT charakter-determiniert — GENUINE-METAPLECTIC-RESIDUAL
+#    (Kohnen-Tiefe, klassisch; Waldspurger ist blind dafür); keine Korrelation mit d mod 16/32
+#    oder |d| (max|ρ| = 0.035); χ_d(8) konstant +1 auf der lebenden Klasse.
+# A4 WIPPE + POLARISATION: Amplitude (kein ζ-Kern: E_ST[χ₁] = 0) ↔ Quadrat (ζ-Kern + Minus)
+#    via Clebsch-Gordan χ₁×χ₁ = χ₀+χ₂ quantifiziert; ÜBERRASCHUNG: K ≡ K_abs — die Vorzeichen
+#    steuern NICHT den m-seitigen ζ-Kern; aber Ĝ_signed ≠ Ĝ_abs (rel 0.63; ±-Summen ∓1.07e9) —
+#    DIE PHASE LEBT IN D/Ĝ (der d-seitigen Struktur), nicht in K. Präzisierung des offenen
+#    Problems: gesucht ist die kanonische Krein-/metaplektische POLARISATION, die beim
+#    Quadrieren den ζ-Kern MIT POSITIVEM Vorzeichen erzeugt — das eigentliche Positivitäts-
+#    Problem, jetzt mit vollständiger Anforderungs-Karte (Hecke ✓, Grad-2 ✓, Phasen-Datum ✓,
+#    Polarisations-Algebra kartiert ✓).
+# STAND: die Denkpausen-Frage hat jetzt einen exakt verifizierten Kandidaten-Unterbau;
+#    Promotion-Kandidat typisiert (A1+A2 exakt), keine Promotion; kein Weil-/RH-Claim.
+# Serie (XII)–(LXXVIII): 67 Proben, 1413/1413 Checks Sandbox + v535–v539 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Shimura, Waldspurger, Kohnen, metaplektische
+# Gruppe, Clebsch-Gordan, Krein) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XX) — Teil 66 (delegiert, Review-Vier-Ebenen-Design): pi_prime_four_level_probe.py — **FOUR-LEVEL-NULL** — die π-Primzahl-Frage ist auf allen vier Ebenen sauber eingezäunt beantwortet: kein Signal nach FDR/Placebos/Blindfenster; die Phasen-Ebene ist klassisch erklärt (355/113-Konvergenten-Falle explizit behandelt); auch die Compiler-Konstante α = 1/(8π) ist KEIN Ausreißer (z = −0.90 gegen Kontrollen) — 23/23, 4.5s, Sandbox
+# E1 erweitert (N = 100k, 9592 Primstellen): digit-χ² p = 0.45; Übergangsmatrix p = 0.088;
+#    max|acf| p = 0.083 (Bonf×20); Blockentropie L4 MC-kalibriert p = 0.69; Kontingenz
+#    (p mod 3/4/8/12) p = 0.64; MI(Ziffer; χ₄) = 0.0011 bit, p = 0.087 — nach BH-FDR: NICHTS.
+# E2 Placebo-Batterie (13 Serien × 6 Statistiken = 78 Zellen: e, √2, log2, Krypto×3, Zufalls-
+#    Indizes×3, Komposite, p±1): 6× roh p < 0.05 bei ≈4 erwartet (Look-elsewhere live
+#    demonstriert); π schlägt auf KEINER Kern-Statistik alle Placebos (beste Ränge 2–3/13).
+# E3 Blindfenster-Disziplin: eingefrorene Hypothese mi_chi4 (dev p = 0.059) — Replikation:
+#    blind 0.15 / hex 0.082 / N' 0.21 — KEINE Replikation (das Verfahren hat funktioniert).
+# E4 basisinvariante Phasen |S(T,α)|/√π(T) bei T = 10⁶: α = π: z = 2.23, durch Konvergent
+#    355/113 ERKLÄRT (diff_norm ≤ 1.80 — die berühmte Falle explizit als Erklärung verifiziert);
+#    c3 = 1/(8π): 0.25 (z = −0.90 gegen Irrational-Kontrollen — kein Ausreißer); 2π·c3 = 1/4
+#    und 5/8: character-artige Auslöschung (unit-sum 0, klassisch); Positivkontrollen 1/3, 1/2:
+#    140/280 (keine Cancellation — Implementierung validiert); √2/e/φ/random: 0.08–0.79 ≈
+#    Random-Phase-Null (p99 ≈ 1.30). Vinogradov-Kancellation klassisch bestätigt.
+# ZWEI-SATZ-ANTWORT: π-Ziffern an Primstellen tragen keine erkennbare Prim-Struktur (alle
+#    Ebenen null nach Korrektur, keine Blind-Replikation); die Phasen-Ebene verhält sich exakt
+#    klassisch — auch für die Compiler-Konstante 1/(8π). Zusammen mit T65: die π-Front ist
+#    GESCHLOSSEN; der Schlüssel liegt nicht in πs Ziffern, sondern in der metaplektischen
+#    Amplitude der Quadrat-Maschine (T67 läuft).
+# Serie (XII)–(LXXVII): 66 Proben, 1386/1386 Checks Sandbox + v535–v539 promoviert.
+# Firewall: Klassik (Bailey/Crandall, Weyl/Vinogradov, Kettenbruch-Konvergenten, BH-FDR)
+# als klassisch benannt; kein TFPT-Claim aus Nullen; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XIX) — Teil 65 (delegiert, Projektleiter-Frage „Primzahl-Verteilung in π?"): pi_digits_prime_distribution_probe.py — **PI-NULL-ARITHMETIC-DISTINCT** — π-Ziffern an Prim-Stellen sind uniform, Kreuzkorrelationen null; der echte Unterschied Primzahlen↔Zufall ist die Hardy-Littlewood-Paarkorrelation — 16/16, 4.9s, Sandbox (KEIN TFPT-Claim, reine Explorations-Frage)
+# P1 Prim-indizierte Ziffern (500k π-Stellen, X = 10⁵): χ² p = 0.450, KS p = 0.473 (Bonferroni-
+#    korrigiert 0.90/0.95) — uniform; Kontrollen (3 Zufalls-Seeds + Komposit-Positionen) ebenso null.
+# P2 Kreuzkorrelation Prim-Indikator × Ziffern-Merkmale: 12 Tests (4 Fenster × 3 Features),
+#    NACH 1/log-n-Detrending (gemeinsamer Dichte-Trend entfernt): alle |r| ≲ 0.009,
+#    min Block-Permutations-p = 0.13 → korrigiert 1.0 — null.
+# P3 π-getriebenes Cramér-Modell (der strukturell interessante Kontrast): Dichte-Statistik
+#    reproduziert (Li-Skala OK) — π-Ziffern funktionieren als NEUTRALE Zufallsquelle; ABER:
+#    (i) Parität: echte Primzahlen haben odd_gap = 0, π-Cramér ≈ 0.52; (ii) HARDY-LITTLEWOOD:
+#    echte Primzahlen tracken die singuläre Reihe S(h) (corr = +0.81; var-Reduktion
+#    var(N/S)/var(N) = 0.072), π-Cramér (−0.12) und PRNG-Cramér (−0.02) sind FLACH in h.
+# ZWEI-SATZ-ANTWORT (an Projektleiter): Nein — die π-Ziffern an Primstellen sind uniform und
+#    die Kreuzkorrelationen nach Dichte-Bereinigung null. Der Unterschied zwischen echten
+#    Primzahlen und π-getriebenem Zufall ist exakt die arithmetische Paarkorrelation
+#    (Hardy-Littlewood), die kein Zufallsmodell trägt.
+# Look-elsewhere: m = 14 Tests deklariert und korrigiert. Follow-up T66 läuft (Vier-Ebenen-
+#    Review-Design: volle Placebo-Batterie e/√2/log2/Krypto/p±1, Übergangsmatrix/Entropie/
+#    mod-Residuen, Blindfenster, basisinvariante Phasen S(T,α) inkl. α = 1/(8π)-Frage).
+# Serie (XII)–(LXXVI): 65 Proben, 1363/1363 Checks Sandbox + v535–v539 promoviert.
+# Firewall: Klassik (Bailey/Crandall-Normalität offen, PNT/Gauß, Cramér, Hardy-Littlewood)
+# als klassisch benannt; kein TFPT-Bezug behauptet; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XVIII) — PROMOTION: T55–T63 → verification/v539_weil_structure_family.py (RTF.GNS.WEIL.01) — 25/25, ~5.4 s; Weil Structure of the Compiler Family: vollständig identifizierte Weil-Struktur BIS AUF ZWEI EXPLIZIT ISOLIERTE OBSTRUKTIONEN (als verifizierter Gehalt, nicht Fußnote); NO marker moves
+# Konsolidierte Promotion der Route-B-Kette (T55 Paarung, T61 Isotypen, T62 Isolation, T63 Weil-Relation).
+# (A) [E] GNS-Faser-Struktur: 1191 lebende fund. d ≤ 12000; Λ_fam-Konstanz (5735 geprüft);
+#     80 schwere Fasern; max Twist-Mix pro Faser = 5.0e-16 (Isolations-Zertifikat).
+# (B) [E] GL(1)-Kern: Φ₁..Φ₄-Charakter-Expansion exakt; c_{k,0} = [1,0,2,0,2,0];
+#     G₀ = (1+Y)/(1−Y) = ζ_p(w−3)²/ζ_p(2w−6); Dirichlet 2^ω(n) n ≤ 2000, 0 mismatches.
+# (C) [E] Weil-Linear-Relation: Prime_F = 2P_ζ − 2P_ζ(g♭) max rel 9.0e-16; Q_fam = Q_F + Corr
+#     max rel 2.3e-16 (nullstellen-frei beidseitig).
+# (D) [E] OBSTRUKTIONEN ALS GEHALT: Obst1 ♭-Koeffizient = −2 exakt (Minus-Zeichen — Familien-
+#     Positivität impliziert NICHT Q_ζ ≥ 0); Obst2 Nicht-Automorphie: (a) Polterm ✗, (b) endlicher
+#     Euler-Faktor ✗, (c) e^{−Σp^{−u}} ✓. (T64-Kontext: Obst2 = det/det₂-Jacobian, Sandbox.)
+# (E) [C] Endliche Positivität: Q_fam ∈ [4.369, 11.486] ≥ 0 auf der Testklasse.
+# Fences: NICHT „fast RH" — der Claim zeigt strukturell, WARUM Familien-Positivität nicht RH
+#     impliziert; dichte-Klasse-Positivität explizit offen/RH-adjazent; Klassik (Weil 1952,
+#     Gelfand, SU(2)/Chebyshev, Sato-Tate, 2^ω, GNS) benannt; ZETA.HP.CARRIER unberührt.
+# Surfaces: Ledger RTF.GNS.WEIL.01 (+ GATE.WOLFRAM.02 → 613/613, Extension 608 → 613); \veri in
+#     tfpt_1 / tfpt_3 / tfpt_research_contracts (nach v538-Blöcken); Changelog 2026-07-25 (XVII);
+#     website papers.ts + VerificationDag + primeFront.ts + gen-Artefakte; run_all ALL CHECKS
+#     PASSED; AUDIT OK (533 Skripte); Manifest 141e0a10… als letztes; npm build OK.
+# Serien-Stand: v535/v536/v537/v538/v539 promoviert; Sandbox T11–T64 (1347/1347) + T65 (π-Ziffern) läuft.
+
+# 2026-07-25 (XVII) — Teil 64 (delegiert, Review-Vertrag „Stabilisierung statt ξ-Transport"): rtf_stabilization_probe.py — Vertrag RTF.STABILIZATION: **HALF-STABLE** — det₂ ABSORBIERT Obstruktion 2 EXAKT (der Extra-Term IST der Hilbert–Carleman-Regularisierungs-Jacobian); das Minus BLEIBT als kategorielle sym²/metaplektische Signatur (alle preregistrierten kanonischen Projektionen gescheitert ⇒ per Review-Kriterium fortan FUNDAMENTAL) — 34/34, 87s, Sandbox
+# S1 MINUS-TERM: (a) Herkunfts-Kette exakt nachgezeichnet: Φ₁ = χ₀+χ₂ → G₀ = (1+Y)/(1−Y) →
+#    (1+Y) = (1−Y²)/(1−Y) → G₀ = ζ_p(u)²/ζ_p(2u); ♭-Kanal lokal [0,−2,0,−2,...] (sammelt exakt
+#    die geraden Primpotenzen) — das Minus ist die QUADRAT-Signatur der Familie (b(d)² Waldspurger-
+#    Perioden; Shimura-metaplektischer Ursprung). (b) Krein-Test (14 Testfunktionen): ♭-Anteil
+#    DEFINIT ≥ 0 (∈ [0, 1.72]) — echte indefinite Krein-Struktur; Fejér-Unterklasse a < 2log2:
+#    P_ζ(g♭) = 0 exakt und Q_F ≥ 0 (aber Support-Restriktion, kein globaler Kill). (c) Endoskopie-
+#    Test VOLLSTÄNDIG: alle 32 Vorzeichen-Charaktere ε der Muster-Gruppe — ε = 1 behält Main +
+#    Doubling, alle 31 nichttrivialen killen BEIDE; selektives Killen des ♭-Terms: 0/32.
+# S2 EXTRA-TERM / det₂-HYPOTHESE BESTÄTIGT: det(1−K)/det₂(1−K) = e^{−P(u)} für den T52-Prim-
+#    Shift-Operator, max rel 1.46e-16 (u = 1.5..4.0); KONVENTIONS-ABSORPTION: G₀·det/det₂ —
+#    Corr verschwindet IDENTISCH in der det₂-Schreibweise („Determinante eines vergessenen
+#    Kompaktoperators" — Review-Hypothese bestätigt); STRUKTUR-BEOBACHTUNG: bei u = 1/2 divergiert
+#    P (det existiert nicht), Σp^{−2u} bleibt HS-konvergent — det₂ ist auf der kritischen Linie
+#    NOTWENDIG, nicht optional (Struktur-Aussage, keine RH-Folgerung).
+# S3 Stabilisierte Form: Q_stab := Weil(G₀·det/det₂) = Q_fam ∈ [2.23, 12.68] ≥ 0 auf der Klasse;
+#    Residual vs 2Q_ζ charakterisiert = Minus/♭ + ArchΔ; Kern-ID + Faser-Orthogonalität überleben.
+# DIAGRAMM-STAND (Review): Compiler → unstab. RTF EXAKT (T55–T63); unstab. RTF → det₂-Stab
+#    EXAKT (T64); det₂-Stab → Weil(ζ) OFFEN am kategorialen Minus; dichte Positivität offen (Fence).
+# NEUE INTERPRETATIONS-LAGE (für die Denkpause): nicht „ξ-Transport fehlt" — die Formel ist
+#    HALB-STABILISIERT; von den zwei T63-Obstruktionen war eine Regularisierung (aufgelöst),
+#    eine ist die Quadrat/sym²-Signatur (fundamental). Die verbleibende Frage ist kategoriell:
+#    welcher Quotient/welche Halbierung entfernt das Quadrat (metaplektische Wurzel der Familie?).
+#    KEINE weiteren Proben ohne neue Struktur-Idee (Denkpause per Projektleiter-Entscheid).
+# Serie (XII)–(LXXV): 64 Proben, 1347/1347 Checks Sandbox + v535–v538 promoviert (v539 läuft).
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Krein, Arthur/Endoskopie, Hilbert–Carleman
+# det₂, Prim-Zetafunktion, Shimura/Waldspurger) als klassisch benannt; Sandbox ohne Ledger-/
+# Paper-/Marker-Änderung.
+
+# 2026-07-25 (XVI) — Teil 63 (delegiert, auto-Follow-up, ABSCHLUSS der Route-B-Kette): weil_core_completion_probe.py — Vertrag WEIL.CORE.COMPLETION: **EXTRA-TERMS** — Kern-Identität, Polterm und die finale Weil-Linear-Relation sind EXAKT; die Plancherel-Korrektur ist irreduzibel NICHT-automorph; Route-B-Kartierung GESÄTTIGT — 33/33, 17.9s, Sandbox
+# V1 Globale Kern-Identifikation EXAKT: G₀ = (1+Y)/(1−Y) = ζ_p(w−3)²/ζ_p(2w−6) (algebraisch);
+#    global L_core(u) = ζ(u)²/ζ(2u) = Σ2^{ω(n)}n^{−u} — Dirichlet-Koeffizienten n ≤ 3000 exakt
+#    (0 mismatches); Ratio-Gewichte [2,0,2,0,...] vs Familie [1,0,2,0,...] (Differenz = Plancherel);
+#    kritische Linie des Kerns w = 7/2 — ehrlicher Versatz 1/2 zur Turm-FE-Mitte w = 4.
+# V2 Polterm: Doppelpol u = 1, a₋₂ = 6/π²; Res(−F'/F) = 2; Kontur-Verifikation (Re u = 2,
+#    nullstellen-frei) max|Δ| = 3.9e-16; der Polterm ist ein Fragment des T58-X4-Eisenstein-Bodens.
+# V3 Sieben-Punkte-Abnahme: Punkte 1–6 BESTANDEN (Primzahlen, ungerade Potenzen, log p,
+#    Normierung, Faser-Twists, Vorzeichen); Punkt 7 (keine Extra-Terme) BRICHT benannt:
+#    Hypothese (a) Polterm/archimedisch ✗, (b) endlicher Euler-Korrekturfaktor ✗,
+#    (c) irreduzibel nicht-automorph ✓ — die Plancherel-Korrektur ist ein e^{−Σp^{−u}}-Typ-Faktor,
+#    KEIN L-Objekt. Das ist der präzise benannte Bruch der Automorphie-Erwartung.
+# V4 FINALE LINEAR-RELATION (tiefstes Deliverable, EXAKT): Prime_F = 2·P_ζ(g) − 2·P_ζ(g♭)
+#    (Verdopplungs-Transform g♭) max rel 9e-16; Q_fam = Q_F + Corr max rel 1.7e-8;
+#    Q_fam ∈ [4.37, 11.49] ≥ 0 auf der Testklasse (GNS-Positivität sichtbar). DIE EXAKTE
+#    OBSTRUKTION VON ROUTE B: das MINUS-Zeichen des Verdopplungs-Terms (die Richtung dreht —
+#    Familien-Positivität erzwingt deshalb NICHT Q_ζ ≥ 0) plus der nicht-automorphe Extra-Term.
+# V5 SERIEN-ABSCHLUSSKARTE: Struktur-Gleichung der Kette: GNS-Familie = ⊕_σ [ζ(w−3)²/ζ(2w−6)-
+#    Kern(σ-getwistet) ⊕ höhere ST-Isotypen] mit Q_fam = 2Q_ζ − 2Q_ζ(♭) + Arch + Corr exakt.
+#    OFFEN (final benannt): (1) dichte Q₀-Positivität (RH-adjazent, unbeansprucht), (2) T60-
+#    Mittelraten, (3) höhere Isotypen → Weil-Gewichte. SÄTTIGUNG: Route-B-Kartierung abgeschlossen;
+#    weitere Proben ohne neue Strukturidee = Fishing. Promotion-Kandidat typisiert (konsolidiertes
+#    Struktur-Modul T55–T63: GNS-Direktintegral + Isotypen-Kern + Weil-Relation) — Entscheidung
+#    beim Projektleiter.
+# Serie (XII)–(LXXIV): 63 Proben, 1313/1313 Checks Sandbox + v535/v536/v537/v538 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz (die Relation ZEIGT, warum Familien-Positivität nicht
+# RH impliziert — das Minus-Zeichen ist die Obstruktion); Klassik (Weil 1952, 2^ω-Reihe, Γ_R,
+# explizite Formeln) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XV) — Teil 62 (delegiert, auto-Follow-up): core_isolation_probe.py — Vertrag CORE.ISOLATION: **CORE-ISOLATED** — die T61-d-Twist-Mischung ist rein INTER-Faser und verschwindet EXAKT in der Gelfand-/Direktintegral-Zerlegung (max Mix pro Faser 6e-16) — der GL(1)-Kern ist innerhalb der positiven GNS-Form isoliert — 24/24, 19.6s, Sandbox
+# C1 Faser-Zerlegung: 216 Fasern nach σ(d) = (χ_d(3),...,χ_d(13)) (32/32 reine ±1-Muster besetzt);
+#    GNS-Orthogonalität exakt (Diagonalität in d); Λ_fam/Φ konstant pro Faser (verifiziert);
+#    Massen: CV-verzerrt stark gegen 2⁻⁵ (mean rel err 0.617), X5-Produktmodell besser (0.189);
+#    X5-Bias pro p bestätigt (p=7: +0.38, p=11: −0.31).
+# C2 Pro-Faser-Kerne exakt (k ≤ 6): σ_p = 0: Σc_{k,0}Y^k = Y∂_Y log G₀ − Y mit G₀ = (1+Y)/(1−Y);
+#    |σ_p| = 1: = E_ST[Y∂_Y log N_σ] + Y/(1−Y) − Y (geschlossen; ρ₁ = 1/p, ...).
+# C3 ISOLATIONS-TEST (Kill-Test der These): globale Mischung k = 1..4 = [0.271, 0.199, 0.128,
+#    0.536]; PRO FASER (120 schwerste): max mix = 6e-16 — EXAKT NULL; verbleibend nur die
+#    ST-Kreuzterme der p-Fenster-Endlichkeit (0.245 → 0.047, fallend); Q₀ global [0.048, 0.605].
+# C4 Reassemblierung: GNS = ⊕_σ [GL(1)-Kern(σ) ⊕ höhere ST-Isotypen(σ)]; Kern(σ)_p ∈ {G₀, G±₁(p)};
+#    global = Σ_σ μ(σ)·Kern(σ) = X5-Mischung; ζ(w−3)_p in JEDER Faser (T58-X4-konsistent).
+# C5 ROUTE-B-KARTE FINAL: strukturell GESÄTTIGT — Kette v538 → Paarung (T55/56) → Packung (T57)
+#    → Isotypen (T61) → Isolation (T62) komplett; OFFEN benannt: (1) Q₀ ≥ 0 auf dichter Klasse
+#    (RH-adjazent für den Shift, NICHT behauptet), (2) T60-Mittelraten, (3) höhere Isotypen →
+#    Weil-Gewichte. Promotion-Kandidat typisiert (GNS-Direktintegral + pro-Faser-Kern + Mix-
+#    Zertifikat), KEINE Promotion. Follow-up T63 (auto, letzter Vertrag der Kette):
+#    WEIL.CORE.COMPLETION — die volle Weil-Form des isolierten Kerns: globale Identifikation
+#    (Kandidat: ζ(w−3)²/ζ(2w−6)-Struktur — Konsistenz G₀ = ζ_p(w−3)²/ζ_p(2w−6)), Polterm,
+#    externer archimedischer Term, termweise Sieben-Punkte-Abnahme inkl. Plancherel-Korrektur
+#    (−Y ist KEIN L-Faktor — Extra-Term-Frage), und die exakte Linear-Relation Q_core ↔
+#    klassische Q_Weil-ζ-Formen (die finale Struktur-Gleichung von Route B).
+# Serie (XII)–(LXXIII): 62 Proben, 1280/1280 Checks Sandbox + v535/v536/v537/v538 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Gelfand, direkte Integrale, quadratische
+# Reziprozität, Dirichlet-Twists) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XIV) — Teil 61 (delegiert, auto-Follow-up): st_isotype_gl1_core_probe.py — Vertrag ST.ISOTYPE.GL1.CORE: **GL1-CORE-EXACT-POSITIVITY-OPEN** — der triviale Sato-Tate-Isotyp der Familie IST algebraisch exakt ein GL(1)-Kern: G₀ = (1+Y)/(1−Y) = ζ(w−3)_p·(1+Y), mit Plancherel-Korrektur −Y — der ζ-Schatten sitzt EXAKT identifiziert IN der positiven Familien-Form — 24/24, 7.0s, Sandbox
+# I1 Charakter-Expansion (sympy-exakt): Φ₁ = χ₀+χ₂, Φ₂ = χ₄−χ₂, Φ₃ = 2χ₀−χ₄+χ₆, Φ₄ = χ₈−χ₆
+#    (SU(2)/Chebyshev, klassisch); E_ST = χ₀-Koeffizienten = (1,0,2,0) — der T60-Blocker ist
+#    damit ERKLÄRT (die k-Gewichte waren Charakter-Anteile, keine Anomalie).
+# I2 Isotypen-Zerlegung des Turm-Euler-Faktors (algebraisch, Herzstück): c_{k,n}-Matrix exakt
+#    (k = 1..8); Kern-Reihe c_{k,0} = [1,0,2,0,2,0,2,0]; IDENTITÄT: Σc_{k,0}Y^k =
+#    Y∂_Y log((1+Y)/(1−Y)) − Y (exakt) ⇒ GL(1)-Objekt G₀ = (1+Y)/(1−Y) = ζ(w−3)_p·(1+Y);
+#    der −Y-Term ist die sym²-Plancherel-Korrektur (nur k = 1); der (1−p³X)⁻¹-Anteil universell
+#    für alle χ; Twists: c_{k,0} = 1+ρ_k(p) für χ = ±1 → χ=0-Kern für p → ∞.
+# I3 Positivität: Q₀ ∈ [0.048, 0.605] auf 9 Testfunktionen (positiv auf der endlichen Klasse);
+#    ST-Kreuzterme fallen 0.245 → 0.047 (P = 200 → 3000); ABER der GNS-d-Zustand MISCHT den
+#    χ=0-Strip mit den Twists (mean mix bis 0.66) — die Kern-Isolation in der vollen Form ist
+#    der verbleibende Struktur-Schritt.
+# I4 Synthese: Familien-Form = GL(1)-Kern(G₀) ⊕ höhere SU(2)-Isotypen; Kern-Rolle konsistent mit
+#    T58-X4-Eisenstein-Boden; WAS FEHLT (ehrlich): Q₀ ≥ 0 auf DICHTER Klasse = RH-adjazent für
+#    den Shift — NICHT behauptet; Isotypen-Zerlegung + Kern-ID als Struktur-Promotion-KANDIDAT
+#    typisiert (keine Promotion). Follow-up T62 (auto): CORE.ISOLATION — die d-Twist-Mischung
+#    über die Faser-Zerlegung des Charakter-Spektrums töten (ℓ²(d)-Fasern nach χ_d-Vorzeichen-
+#    Mustern sind GNS-orthogonal EXAKT; pro Faser sind die Twists Konstanten — die X5-Gelfand-
+#    Reduktion als direkte Integral-Zerlegung).
+# Serie (XII)–(LXXII): 61 Proben, 1256/1256 Checks Sandbox + v535/v536/v537/v538 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Chebyshev/SU(2), Clebsch-Gordan, Satake,
+# Rankin-Selberg, Plancherel) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XIII) — Teil 60 (delegiert, auto-Follow-up): plancherel_descent_probe.py — Vertrag PLANCHEREL.DESCENT: **PARTIAL** — die Φ_k KONTRAHIEREN im Prim-Mittel exakt auf ihre Sato-Tate-Momente E_ST = (1, 0, 2, 0) (k=1 UNCONDITIONAL via Rankin-Selberg-Pol), aber der Positivitäts-Transport zur klassischen Weil-Form bleibt instabil: E_ST ≠ Weil-Gewichte — 21/21, 5.0s, Sandbox
+# D1 ST-Momente analytisch (sympy-exakt): E_ST[Φ_k] = 1/0/2/0 (k = 1..4); empirisch bei P = 8000:
+#    0.981/−0.0005/2.016/0.027; skalierte Fehler |err|·√π(P) = 0.61/0.015/0.52/0.85 (CLT-artig,
+#    gemessen, nicht bewiesen); KS(θ_p, ST) 0.086 → 0.014 (P = 200 → 8000).
+# D2 Kontraktion pro Kanal: M_rs = 0.983/0.000/2.014/0.031 gegen E_ST (Anker: k = 1 UNCONDITIONAL
+#    Rankin-Selberg 1939/40; k = 2 sym⁴ benannt (Clozel-Thorne, klassisch); k = 3, 4 nur empirisch).
+# D3 Positivitäts-Transport: Fejér-Spread 22.1 → 19.0 (ST) / 18.6 (RS-Fenster) / 18.8 (CV) —
+#    Ziel < 2 klar verfehlt; CV-Bias hilft NICHT. BLOCKER PRÄZISE: auch nach perfektem Mittel
+#    tragen die Kanäle E_ST = (1, 0, 2, 0), die Weil-Λ-Gewichte sind ≈ 1 über alle k — das
+#    gemittelte Objekt ist die explizite Formel eines ANDEREN L-Objekts, nicht ζ.
+# D4 Wand: nur Cesàro/Abel (keine punktweise ID); Raten gemessen, nicht bewiesen (RH-adjazenter
+#    Fence); gemittelte E_ST-Klasse ≠ klassische Weil-Klasse.
+# ROUTE-B-KERN JETZT ZWEISCHICHTIG: (1) Mittel-Raten beweisen (klassisches Analysis-Problem,
+#    k = 1 steht); (2) das ST-Charakter-Residual töten — die kontrahierten Gewichte in eine
+#    GL(1)-Struktur zerlegen. Follow-up T61 (auto): ST.ISOTYPE.GL1.CORE — die Φ_k sind
+#    SU(2)-CHARAKTER-Kombinationen (Chebyshev): zerlege den geschlossenen Turm-Euler-Faktor
+#    ALGEBRAISCH in ST-Isotypen; Vorhersage: der triviale Isotyp IST exakt der ζ(w−3)-Rankin-
+#    Faktor (der GL(1)-Kern), die höheren Isotypen sind das Residual — und die Positivitäts-
+#    Frage zerfällt nach Isotypen.
+# Serie (XII)–(LXXI): 60 Proben, 1232/1232 Checks Sandbox + v535/v536/v537/v538 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Sato-Tate/BLGHT, Rankin-Selberg, Clozel-
+# Thorne, Plancherel, Cesàro/Abel) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (XII) — Teil 59 (delegiert): weil_gns_identification_probe.py — Vertrag WEIL.GNS.IDENTIFICATION (Route B): **TRANSFORM-REQUIRED** — die Lücke zwischen positiver GNS-Form und Weil-Quadratik hat jetzt eine GESCHLOSSENE FORM: der Residual-Faktor ist die sym²/Plancherel-Charakterstruktur Φ_k(θ_p) — 19/19, 9.4s, Sandbox
+# W1 Weil-Funktional nullstellen-frei implementiert + doppelt validiert (Glaisher-Anker 1e-30;
+#    Gauß-Kontur mpmath.zeta vs Euler-Produkt |Δ| ≤ 1.1e-16; Λ-Sieb exakt) — kein Nullstellen-Input.
+# W2 Familien-von-Mangoldt geschlossen: Λ_fam(p; d) = (a_p − χ_d(p)·p)² bei k = 1 (Grad-4-Polynom
+#    bei k = 2); X5-Bias quantifiziert: CV-gewichtet mean|μ| = 0.215 vs uniform 0.018.
+# W3 IDENTIFIKATIONS-TEST (Herzstück): nach kanonischer Renormierung (w ↦ w−3, λ ↦ λ/p^{3k},
+#    â_p = a_p/p^{3/2} = 2cosθ_p, Deligne klassisch) ist der Residual-Faktor NICHT konstant
+#    (CoV 0.91/11.0/0.63/2.81 für k = 1..4), sondern GESCHLOSSEN: Φ₁ = â², Φ₂ = 2cos4θ,
+#    Φ₃ = â²(â²−3)², Φ₄ = 2cos8θ — SU(2)-Charaktere an den Satake-Winkeln (Sato-Tate/Plancherel-
+#    Welt, klassisch). CV-Gewichtung drückt Richtung flach (3/4 der k), löscht die â-Abhängigkeit
+#    aber nicht.
+# W4 Positivitäts-Transport: DOMINANCE-UNSTABLE (Fejér-Ratios 3.37–77.2, Spread 22.9) — kein
+#    stabiler punktweiser Transport; kein Vorzeichenwechsel (K3 still).
+# BEDEUTUNG: Route B ist nicht tot, sondern präzise bepreist — es fehlt EXAKT eine Transformation,
+#    die Φ_k(θ_p) → const kontrahiert (Plancherel-Mittel / sym²-Abstieg / Kuznetsov–Petersson,
+#    klassisch benannt). Weil-Positivität ist NICHT etabliert (Beginn, nicht Vollzug — Fence).
+#    Follow-up T60 (auto, per stehender Anweisung): PLANCHEREL.DESCENT — kontrahiert das
+#    Familien-/Prim-Mittel die Φ_k auf ihre Sato-Tate-Momente (k = 1: E[â²] = 1 unconditional via
+#    Rankin-Selberg-Pol, klassisch!), und überlebt die Positivität den Mittel-Transport?
+# Serie (XII)–(LXX): 59 Proben, 1211/1211 Checks Sandbox + v535/v536/v537/v538 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Weil 1952, Guinand, Bombieri, Deligne,
+# Sato-Tate, Plancherel, Kuznetsov–Petersson) als klassisch benannt; Sandbox ohne Ledger-/
+# Paper-/Marker-Änderung.
+
+# 2026-07-25 (XI) — Teil 58 (delegiert): zeta_rtf_xi_residue_probe.py — Vertrag ZETA.RTF.TO.XI.RESIDUE: **GL1-SHADOW-CLASSICAL** — die GL(1)-Schatten von Z(s,w) schließen exakt, sind aber GENAU die klassischen Kanäle; KEIN neuer ξ-Sektor jenseits davon; Route A (Degeneration → ξ) ist damit auf Packungs-Ebene kartiert und GESCHLOSSEN — 24/24, 15s, Sandbox
+# X1 Residuenkarte: Rankin-Pol w = 4 schließt (Res = Σb(d)²κ_d/|d|^s, numerisch rel ~3.8%),
+#    ABER die Residuen-Reihe ist ein FAMILIEN-Objekt (fund-d-Träger, κ_d-Spread 2.34) — KEINE
+#    Koeffizienten-Identität mit ζ-/L(χ₄)-/ζζ-Shifts; s = 5/2-Kante: κ ≈ 1.329 ⇒ c₀ = (5/2)κ ≈
+#    3.322 (konsistent T56), das w-Objekt bleibt Familien-T_d-Mittel (Euler-Nenner-Grad 3).
+# X2 Diagonalen (6 getestet, Look-elsewhere deklariert): ALLE behalten Nenner-Grad ≥ 2 (sym²
+#    überlebt jede Restriktion): w = s/1−s/2−s/s+3/2/8−s → Grad 3; w = 2s → Grad 6 — KEINE
+#    GL(1)-Diagonale (algebraischer Grad-Test, kein Fit).
+# X3 Weyl-Symmetrie: keine zugängliche s ↔ 5−s-Symmetrie (rel 0.5–0.99 über drei Vervoll-
+#    ständigungs-Ansätze); w ↔ 8−w-Dualstreifen unzugänglich (T57-Conductor-Fence); einzige
+#    Fixstruktur = klassischer Rankin-Pol w = 4 — KEINE 1/2-artige Fixlinie in der Compiler-Instanz.
+# X4 Eisenstein-Boden EXAKT (der GL(1)-Boden der Basismaß-These): Z_Eis = ζ(s)ζ(s−3) ·
+#    ζ(w)ζ(w−3)²ζ(w−6)/ζ(2w−6) — lokale + globale Koeffizienten-Identität (rel 1e-4..1e-7);
+#    ξ-Faktoren nur via klassische ζ-Vervollständigung.
+# X5 GNS-Restriktion: kommutativer Charakter-Sektor getypt SYSTEMATIC-BIAS — die zentralwert-
+#    gewichteten χ_d(p)-Spektralmaße sind NICHT balanciert (mean |bias| = 0.22; p = 7: μ(+) = 0.63);
+#    Produkt-Faktorisierung über p näherungsweise (rel 0.04–0.15); klassisches Umfeld: one-level
+#    density (benannt, KEINE Nullstellen-Interpretation). ⇒ Der Bias ist der BRÜCKENKOPF für
+#    Route B: die Familie wichtet Primzahlen systematisch — genau die Sorte prim-indizierter
+#    Maße, die in der Weil-Quadratik auftritt.
+# ROUTEN-KONSEQUENZ: Route A (Residuen/Diagonal/Symmetrie-Degeneration) kartiert und geschlossen;
+#    Route C ohne 1/2-Fixlinie ohne neuen Ansatz; BESTER VERBLEIBENDER VEKTOR: ROUTE B —
+#    GNS-Paarung → Weil-Positivität (Hilbertraum + positive Form + prim-indizierte Maße existieren;
+#    fehlt: exakte Identifikation der geometrischen Spur-Zerlegung mit der Weil-Quadratik für eine
+#    dichte Testfunktionsklasse — Review-Kriterium: Gleichheit, nicht Ähnlichkeit).
+# Serie (XII)–(LXIX): 58 Proben, 1192/1192 Checks Sandbox + v535/v536/v537/v538 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Rankin–Selberg-Pol, Diaconu–Goldfeld–Hoffstein,
+# Eisenstein-Konstantglied, one-level density) als klassisch benannt; Sandbox ohne Ledger-/Paper-/
+# Marker-Änderung.
+
+# 2026-07-25 (X) — Teil 57 (delegiert): infinite_rtf_packing_probe.py — **PACKED**: BEIDE Unendlichkeits-Richtungen (p-Türme + d-Familie) in EINER beidseitig unabhängig verifizierten Doppelreihen-Identität Z(s,w) — der unendliche Abschluss-Kandidat der v538-Identität ist KONSTRUIERT — 24/24, 59s, Sandbox
+# Klassischer Rahmen (benannt): multiple Dirichletreihen (Goldfeld–Hoffstein/Bump–Friedberg–
+# Hoffstein), Rankin–Selberg, Shimura. Z(s,w) = Σ_d (b(d)²/|d|^s)·T_d(w), T_d(w) = Σ_m α_d^♯(m)²/m^w.
+# P1 Türme exakt: 7420/7420 Shimura-Relationen bei D_max = 20000 (T50-Fenster 10000/10000
+#    reproduziert); 6036 disjunkte Turm-Kerne, Überdeckung vollständig; 1999 lebende fund. d.
+# P2 Euler-Produkt pro Turm GESCHLOSSEN: E_p(d,w) = [1 + (p³ − 2χa_p·p + χ²p²)X + χ²p⁵X²] /
+#    [(1 − (a_p² − 2p³)X + p⁶X²)(1 − p³X)], X = p^{−w} (Rankin/sym²-Struktur; der (1 − p³X)-Nenner
+#    trägt global ζ(w−3) — klassischer Rankin-Selberg-Pol); Koeffizienten-Verifikation 10 Türme ×
+#    100/100; Euler ↔ Trunkierung rel < 1e-5 ab w ≥ 6.
+# P3 Konvergenz-Geographie: äußere Abszisse α_s ≈ 2.507 (reproduziert die T54/T56-kritische
+#    Linie 5/2 unabhängig); innere α_w ≈ 3.979 (Rankin-Pol w = 4); T55-Paarung = regularisierte
+#    Kante s = 1 — die Landkarte ist konsistent.
+# P4 BILATERALE GLOBAL-IDENTITÄT (Herzstück): Z(s,w)-Partialsummen GEOMETRISCH (Gitterzählung der
+#    quaternären g-Form) vs SPEKTRAL (AFE-L-Werte × Euler-Turm-Faktoren) auf 220 Diskriminanten
+#    (≤ 2297): R-Spread 1e-9, shared-Euler-Waldspurger rel ~1e-12; Stützstellen-Grid: max rel
+#    0.24% bei (2.8, 5.0) tief im Randbereich, fallend bis 8e-8 bei (3.0, 7.0); Tail 0.98% → 0
+#    mit Fenster — die Identität schließt mit fallendem Fehler, kein systematischer Offset.
+# P5 Archimedisch (extern, deklariert): f₈-Fricke-FE rel < 1e-28 (Konsistenz); Turm-Attach glatt;
+#    EHRLICH OFFEN: s-seitige FE der Familie nicht etabliert; per-Turm-FE im Dualstreifen nicht
+#    beansprucht (Conductor/bad primes, Euler-Underflow) — kein Overclaim.
+# EINORDNUNG: Reframe-Kette v538 (endlich) → T55/T56 (kanonische GNS-Paarung) → T57 (zweifach
+#    unendliche Packung) ist sandbox-seitig KOMPLETT; das Objekt trägt Zentralwerte + Hecke-Daten,
+#    KEINE Nullstellen. Promotion-Kandidat (Turm-Euler + bilaterale Z-Identität) — nur auf
+#    explizite Entscheidung. Nächster Vertrag (Review): ZETA.RTF.TO.XI.RESIDUE (T58) — besitzt
+#    Z(s,w) einen kanonischen Residuen-/Diagonal-/Konstantglied-Sektor mit exaktem GL(1)/ξ-Gehalt?
+# Serie (XII)–(LXVIII): 57 Proben, 1168/1168 Checks Sandbox + v535/v536/v537/v538 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (IX) — Teil 56 (delegiert): rtf_pairing_sharpening_probe.py — **SHARPENED**: alle T55-Identifikationen auf sub-Prozent; die σ_eff-„Spannung" (0.143 vs 0.991) war ein KATEGORIENFEHLER, keine Struktur — die Faktoren-Kette schließt auf 0.09% — 27/27, 4.8s, Sandbox
+# S1 Daten-Ausbau: D_max = 60000, 6032 lebende fundamentale d ≡ 1 mod 8 (×5.06 vs T55);
+#    FFT-Expansion von g exakt gegen T50/T55 auf n ≤ 12000 verifiziert.
+# S2 σ_eff-AUFKLÄRUNG (Kette Term für Term beziffert): T54s „0.991" war die LOG-LOG-STEIGUNG
+#    (Exponent ≈ 1 der Linearität von ΣL, neu gemessen 0.984), NICHT der Dichte-Koeffizient;
+#    die Dichte ist σ = S_L/X ≈ 0.14288. Kette: F0 Waldspurger Σb²/|d| = R·Σ√d·L exakt (1e-15);
+#    F3 Abel-Faktor μ = Σ√d·L/X^{3/2} ≈ 0.09517 vs (2/3)σ ≈ 0.09525 (rel 0.09%, klassische
+#    partielle Summation); F4 Vorhersage c₀ = R·σ ≈ 3.313 vs gemessen 3.310 (rel 0.09%);
+#    Restfaktor σ/σ_eff = 1.0009 ⇒ AUFGELÖST (Koeffizient-vs-Exponent-Verwechslung).
+# S3 Extrapolierte Cutoff-Batterie (late-median + Stabilitätsfilter): c₀ = 3.303/3.309/3.309/
+#    3.304/3.312/3.307 (sharp/bump_cos/bump_poly/abel/cesaro/gauss), Median 3.308 — Spread
+#    0.275% (< 0.5% Ziel); Brücke Res = (5/2)κ = 3.300 ↔ c₀: rel 0.24% (< 1% Ziel).
+# S4 Stabilität bei D = 60000: Hecke/Shimura ganzzahlig-exakt 655/655, 229/229, 117/117
+#    (p = 3/5/7); GNS-Rang = #lebende d durchgängig 46 → 6032 (kein spätes Sättigen);
+#    γ_geom −0.80 → −0.89 Richtung −1.
+# KONSEQUENZ: die distributionale Paarung ist zahlenmäßig tragfähig (c₀ sub-%, Brücke sub-%,
+#    Hecke exakt, GNS wächst) — bereit für die unendliche RTF-Packung (T57); Promotion der
+#    Paarungs-Identifikation möglich, aber sinnvoll erst mit der Packung als Gesamt-Claim.
+# Serie (XII)–(LXVII): 56 Proben, 1144/1144 Checks Sandbox + v535/v536/v537/v538 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Abel/partielle Summation, Mellin/Tauber,
+# Richardson) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (VIII) — Teil 55 (delegiert, zweigleisig per Review-Zuschnitt): rtf_period_pairing_probe.py — **DISTRIBUTIONAL-RTF-TYPED**: die endliche RTF-Identität (v538) hat einen KANONISCHEN DISTRIBUTIONALEN GRENZWERT-KANDIDATEN — die positive Paarung B mit dem RTF-nativen w_d = |d|^{−1} ist cutoff-form-unabhängig, Hecke-äquivariant und erzeugt per GNS selbst den unendlichen Raum — 36/36, 7.7s, Sandbox
+# Design: Hauptarm 55A (RTF.PERIOD.PAIRING, w = |d|^{−1} aus T54-Kandidat C) + Kontrollarm 55B
+# (REGULARIZED.KERNEL.CONTROL, w = |d|^{−5/2−ε}) + preregistrierte Brücken-Identität; 6 Review-Kills.
+# 55A: (A1) form-bereinigter Grundwert c₀ über FÜNF Regularisierungen (sharp/bump_cos/bump_poly/
+#    abel/cesaro/gauss: 3.268/3.341/3.340/3.293/3.329/3.302) — Spread 2.2% NACH Mellin-Bereinigung
+#    (Kill „Cutoff-Form-Abhängigkeit" nicht gefeuert); Struktur-ID c₀ ≈ 3.315 vs (5/2)κ ≈ 3.228
+#    (rel 2.6%); EHRLICHE NOTIZ: σ_eff = c₀/R ≈ 0.143 ≠ naive T54-Erwartung (0.991) — die
+#    Dichte-Interpretation ist few-%-genau, nicht exakt; Konvergenz distributional langsam.
+#    (A2) Klassen-Kompatibilität (compact 0.6%, Abel-scale 0.85%). (A3) Positivität strukturell
+#    (keine Gegenpole — Kill geprüft). (A4) Hecke/Shimura-Äquivarianz d ↦ dp² EXAKT (T50-Relation;
+#    ganzzahlig 127/127, 43/43, 22/22 für p = 3/5/7) und überlebt den renormierten Limes.
+#    (A5) GNS: Gram PSD, Rang wächst 10→40 mit Familien-Größe, Identifikation GNS = ℓ²(d, b²/|d|)
+#    verifiziert (delta-diag 40/40; 1191 lebende d) — der Hilbertraum wird von der Paarung ERZEUGT.
+#    (A6) beidseitige |d|^{−1}-Herkunft: γ_geom ≈ −0.90 ≈ −1 (Klassenzahl-Kanal, Dirichlet klassisch).
+# 55B: K_ε PSD, Rang 17→185, Modal-Hecke exakt (Architektur trägt); BRÜCKE B2: naives ε·Z_D bei
+#    festem D → 0 (klassisches Trunkierungs-Artefakt, dokumentiert); kanonischer Proxy Res_D = (5/2)κ
+#    und joint ε = 1/log D matchen c₀ (rel 2.6% bzw. 6.1%, Mellin-Faktor = 1) — Dämpfung und
+#    Distribution sehen DIESELBE renormierte Form.
+# EINORDNUNG: der Review-Erfolgsfall ist eingetreten — „nicht ein spurklassiger Kernel, sondern
+#    eine kanonische positive Paarung, die den Hilbertraum selbst erzeugt". Der globale Träger-
+#    Kandidat ist damit erstmals KONSTRUIERT (nicht postuliert): GNS-Raum ℓ²(d, b²/|d|) mit
+#    exakter Hecke-Struktur auf der d-Achse. Fences: die Paarung trägt Zentralwert-Perioden
+#    (GL(2)-Zentrum 2), KEINE Nullstellen; die Identifikationen sind few-%-distributional, nicht
+#    exakt — Promotion erst nach Schärfung. Nächster Hebel: unendliche RTF-Packung (alle p und d
+#    gleichzeitig + archimedischer Term auf dem GNS-Raum); ξ-Transport bleibt getrennt offen.
+# Serie (XII)–(LXVI): 55 Proben, 1117/1117 Checks Sandbox + v535/v536/v537/v538 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (GNS, Mellin/Tauber, Abel/Cesàro, Dirichlet-
+# Klassenzahlformel, Shimura, Waldspurger) als klassisch benannt; Sandbox ohne Ledger-/Paper-/
+# Marker-Änderung.
+
+# 2026-07-25 (VII) — PROMOTION: T53 → verification/v538_relative_trace_identity.py (HECKE.GEOM.RTF.01) — 18/18, ~14 s; Compiler Relative Trace Identity (v535/v536/v537 sind drei Projektionen EINER endlichen relativen Spuridentität); NO marker moves
+# Promotion der Discovery-Probe relative_trace_compiler_probe.py (T53, ONE-FORMULA) in EIN load-bearing
+# Modul — die formale Klammer um die Serie: [E8/Glue-Orbitalzählung] = [Newform/Waldspurger-Spektralsumme].
+# (R1) [E] Spur-Identität beidseitig UNABHÄNGIG: Tr_V(ν_p∘π) geometrisch (a_p = −c(p)/8 aus Glue-Zensus,
+#     ohne Modulform-Input) = spektral (η(2τ)⁴η(4τ)⁴, ohne Geometrie), exakt für p = 3/5/7 ×
+#     {Id, π_Eis, π_cusp, π_E4, π_f8}: (6304,5600,704,1120,352)/(105848,98280,7568,19656,3784)/
+#     (727680,688000,39680,137600,19840).
+# (R2) [E] Orbit-Wörterbuch: Eichler-Split λ = λ_Eis + a_p² IST die RTF-Orbitzerlegung (Hauptorbit
+#     a·Id → λ_Eis = L − σ₃² (Witt) = 336/3780/19264; elliptisch b·T_p → a_p² = 16/4/576;
+#     (a,b) = (448,24)/(4032,124)/(11008,368); Kreuzterme ±a_p·σ₃ heben exakt).
+# (R3) [C] Perioden-Seite = Gitterzählung: g ist die quaternäre Form n = (x²+y²)/2 + 2z² + u² + 2w²
+#     (x,y ungerade; Vorzeichen (−1)^{|u|+|w|}); b_rep = b exakt bis n = 200;
+#     [signierte Zählung]² = R·|d|^{3/2}·L(f₈×χ_d,2), R = 23.1873585645, max_rel 1.3e-12 (5 lebende d ≡ 1 mod 8).
+# Fences: Klassik (Jacquet-RTF, Eichler, Witt, Waldspurger, Theta-Korrespondenz) als klassisch benannt;
+#     die Identität ist ENDLICH — die unendliche RTF (alle p und d + archimedischer Term) ist der
+#     benannte offene Schritt IM Claim; kein RH-Bezug; ZETA.HP.CARRIER unberührt; keine Marker-Moves.
+# Surfaces: Ledger HECKE.GEOM.RTF.01 (+ GATE.WOLFRAM.02 → 608/608, Extension 603 → 608); \veri in
+#     tfpt_1 / tfpt_3 / tfpt_research_contracts (nach den v537-Blöcken); Changelog 2026-07-25 (XVI);
+#     website papers.ts + VerificationDag + primeFront.ts (Update Teil 0, Englisch, kein RH) +
+#     ScriptIndex/changelog.ts/maps via gen; run_all.py ALL CHECKS PASSED; AUDIT OK (532 Skripte);
+#     make_manifest.py als letztes. Serie-Stand: v535/v536/v537/v538 promoviert.
+
+# 2026-07-25 (VI) — Teil 54 (delegiert): waldspurger_canonical_measure_probe.py — **MARGINAL-WEIGHT**: der „kanonisches Maß |d|^{−5/2}"-Claim ist an den eigenen preregistrierten Kills GESTORBEN (K1/K3/K4/K5 gefeuert) — 5/2 ist die KRITISCHE LINIE des Diskriminantenmaßes, nicht das Maß — 26/26, 246s, Sandbox
+# Schiedsrichter-Messung (das Kernresultat): 1191 lebende AFE-L-Werte bis D ≤ 12000;
+#    Σ_{|d|≤D} L(f₈×χ_d,2) ist LINEAR in D (späte Steigung 0.991, CV 1.1%) ⇒ mit Waldspurger
+#    b² = R|d|^{3/2}L folgt α_fund → 2.48 ≈ 5/2 asymptotisch (Fenster-Steigungen 2.56/2.34/2.56/
+#    2.49/2.44/2.52; T51s α ≈ 2.19 auf D ≤ 2000 war ein Kleinfenster-Artefakt). ⇒ w = |d|^{−5/2}
+#    ist LOG-DIVERGENT (marginal; Spurklasse-Proxy erst ab s ≈ 2.6 konvergent) — Kill K3 („freie
+#    Cutoff-Konvention nötig") gefeuert. Kandidaten-Battle: (A) Gittervolumen weich (nur 3/2+1
+#    wachstumskompatibel, keine Erzwingung); (B) Parseval/large-sieve (Heath-Brown, klassisch)
+#    SPALTET in {1, |d|^{−1}} ⇒ Gewichte {3/2, 5/2} — K1/K4 gefeuert; (C) RTF-/Klassenzahl-
+#    Normierung erzwingt ≈|d|^{−1.0} auf den Perioden, NICHT −5/2 — K5 gefeuert (der stärkste
+#    Kandidat widerspricht dem Claim). KOHÄRENZ-NOTIZ: die kritische Linie 5/2 des Familienmaßes
+#    = die T50-Abszisse/Pol-Kandidat 5/2 von D_gg — dieselbe Zahl aus zwei unabhängigen Messungen;
+#    die Familie hat eine echte kritische Struktur bei 5/2, aber sie ist Konvergenz-Grenze, kein
+#    compiler-erzwungenes inneres Maß.
+# T55-KONSEQUENZ (Verschmelzung T51+T53): NICHT GO in der starken Form („kompakter Kernel mit
+#    kanonischem RTF-Maß bei exakt −5/2"). Ehrliche Optionen dokumentiert: w = |d|^{−5/2−ε} bzw.
+#    |d|^{−5/2}/log^{1+δ} (Regularisierung, per Review-Typisierung „mathematisch brauchbar, kein
+#    tiefer TFPT-Mechanismus"); RTF-nativ |d|^{−1} auf Perioden; L-normiert |d|^{−3/2} mit Cutoff.
+# Serie (XII)–(LXV): 54 Proben, 1081/1081 Checks Sandbox + v535/v536/v537 promoviert (v538 läuft).
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Waldspurger, Jacquet, Dirichlet-Klassenzahl-
+# formel, Heath-Brown large sieve) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-25 (V) — Teile 51–53 (delegiert, der Review-Reframe „Familie + Spurformel statt einzelner Operator"): **INFINITE-CARRIER-CANDIDATE** + **TRANSFER-REALIZED** + **ONE-FORMULA** — der erste NICHT gekillte Unendlichkeits-Kandidat der Serie + die Drei-Projektionen-These exakt bestätigt — 22/22 + 16/16 + 16/16, Sandbox
+# waldspurger_family_kernel_probe.py (T51, 16s), hecke_orbit_transfer_probe.py (T52, 4s),
+# relative_trace_compiler_probe.py (T53, 14s). Alle drei nullstellen-frei (AST-Firewall).
+#
+# T51 **INFINITE-CARRIER-CANDIDATE**: K_D(m,n) = Σ_{|d|≤D} w_d·b(d)²·χ_d(m)χ_d(n): PSD strukturell
+#    (Gram-Matrix; Waldspurger b² ≥ 0); RANG WÄCHST OHNE KOLLAPS (8/17/46/93/192 für D = 100..2000 —
+#    das preregistrierte Kill-Kriterium „Rang saturiert" hat NICHT gefeuert, erstmals in der Serie);
+#    Hecke modal exakt (χ_d-Rahmen; naives [K,A_p] ≠ 0 ist Fensterrand-Artefakt); Spektral-ID:
+#    Eigenwerte → w_d·b(d)²·‖χ_d‖² (med rel 16% → 1.7% für M = 201..2001) — das Spektrum IST die
+#    Zentralwert-Familie L(f₈×χ_d,2). Ehrlich (F5): w = |d|^{−3/2} (Waldspurger-Normierung) ist
+#    NICHT spurklasse (Σb(d)² ~ D^2.19, Konvergenz erst s ≳ 2.24); Spurklasse ab w = |d|^{−5/2} —
+#    kanonisches Gewicht offen. d ≡ 5 mod 8 strukturell tot (2-adische Glue-Selektion vererbt).
+# T52 **TRANSFER-REALIZED**: Pfadraum der Hecke-Wörter (kommutatives Monoid = N; Basis sind Pfade,
+#    NICHT Eigenformen ⇒ der Newform-Kollaps-Kill greift strukturell nicht; dim = N unbeschränkt).
+#    EHRLICHES DIFFERENZIAL: die globale Matrix-Det det(1−L_s) ≡ 1 (Shifts nilpotent — falsches
+#    Fredholm-Objekt, sauber VERWORFEN); die richtige Lesart sind die Faser-/Satake-Determinanten:
+#    alle drei Kanäle EXAKT — ζ(s), 1/L(f₈,s) via 1 − a_p·p^{−s} + p^{3−2s} (p = 2-Faktor 1,
+#    Level 8), ζ(s)ζ(s−3); Resolvent-Expansion max err 1e-19; FE nach klassischer archimedischer
+#    Vervollständigung rel < 1e-12 (Konsistenz, kein neuer Gehalt); H = Σ log(p)·A_p ist Graph-
+#    Laplacian-Verwandter (Spektrum [−0.43, 0.43]), KEIN Nullstellen-Operator (Fence im Docstring).
+# T53 **ONE-FORMULA** (die stärkste Review-Vermutung bestätigt): v535/v536/v537 sind drei
+#    Projektionen EINER endlichen relativen Spurformel-Identität (Jacquet-Typ, klassisch benannt).
+#    R1: Tr_V(ν_p∘π) beidseitig UNABHÄNGIG berechnet (geometrisch a_p = −c(p)/8 aus dem Glue-Zensus
+#    vs spektral aus η(2τ)⁴η(4τ)⁴) — EXAKT gleich für p = 3,5,7 × 5 Projektoren (z.B. p = 7:
+#    727680 volle Spur, 19840 f₈-Kanal). R2: der Eichler-Split λ = λ_Eis + a_p² IST die Orbit-
+#    Zerlegung (Hauptorbit a·Id → λ_Eis = L − σ₃² (Witt), elliptischer Orbit b·T_p → a_p²,
+#    Kreuzterme ±a_p·σ₃ heben exakt). R3: g ist die quaternäre Gitterform
+#    n = (x²+y²)/2 + 2z² + u² + 2w² (x,y ungerade; Vorzeichen (−1)^{|u|+|w|}); b_rep = b exakt bis
+#    n = 200 ⇒ [signierte Gitterzählung]² = R·|d|^{3/2}·L(f₈×χ_d,2) (R = 23.1873585645, rel 1e-12)
+#    — AUCH die Waldspurger-Perioden-Seite ist wörtlich Compiler-Geometrie; der Kreis schließt.
+# GESAMTSTAND des Reframes: alle drei Säulen tragen — (i) die d-Familie liefert den ersten
+#    unendlich-dimensionalen, nicht kollabierenden, nullstellen-freien Träger (Spektrum =
+#    Zentralwerte am GL(2)-Zentrum 2, NICHT ξ-Linie — Fence); (ii) die p-Seite ist als Faser-
+#    Fredholm-Struktur auf dem Pfadraum realisiert; (iii) die Suite ist EINE endliche RTF-Identität
+#    [E8/Glue-Orbitalzählung = Newform/Waldspurger-Spektralsumme]. Der offene Schritt ist damit
+#    präzise benannt: die UNENDLICHE RTF (Summe über alle p und d gleichzeitig + archimedischer
+#    Term) und der Transport GL(2)-Zentrum → ξ-Linie. Kandidaten-Hebel: kanonisches w_d
+#    (Spurklasse-Frage); nuclear/Ruelle-Vervollständigung des Pfadraums (Mayer-Stil, klassisch);
+#    RTF-Packaging von K_D auf dem χ_d-Frame. Promotion-Kandidat: T53 (exakte beidseitige
+#    Identität, schließt an v535/v536/v537 an) — nur auf explizite Entscheidung.
+# Serie (XII)–(LXIV): 53 Proben, 1055/1055 Checks Sandbox + v535/v536/v537 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz (Zentralwerte/Determinanten-Realisierung ≠ Nullstellen-
+# Lagen — der Unterschied IST die RH); Klassik (Waldspurger, Kronecker, Fredholm, Ruelle/Mayer,
+# Jacquet-RTF, Eichler, Witt, Theta-Korrespondenz) als klassisch benannt; Sandbox ohne
+# Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-24 (XXI) — PROMOTION: T38+T41+T44+T45 → verification/v537_halfintegral_bridge.py (HECKE.GEOM.HALFINT.01) — 20/20, ~90 s; half-integral bridge (unique Shimura preimage + Hecke equivariance + Kohnen scope fence + Waldspurger/Baruch–Mao constancy); NO marker moves
 # Konsolidierte Promotion der Discovery-Proben cuspidal_bridge_probe.py (T38), functor_wiring_halfintegral_probe.py (T41),
 # kohnen_operator_projection_probe.py (T44), baruch_mao_metaplectic_probe.py (T45) in EIN load-bearing Modul. Companion zu

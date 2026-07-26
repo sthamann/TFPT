@@ -2416,6 +2416,134 @@ $\xi$-line); no RH; \texttt{ZETA.HP.CARRIER} untouched; no marker moves.
 Machine-checked: \veri{v537\_halfintegral\_bridge.py}.
 \mE\ (Shimura/Hecke/Kohnen fence) / \mC\ (measured $R$)
 
+\par\smallskip\noindent\textbf{Compiler relative-trace identity
+(\texttt{HECKE.GEOM.RTF.01}).}
+Promotion of discovery T53 ($18$ checks, $\sim14$\,s):
+\texttt{HECKE.GEOM.01}/\texttt{HECKE.GEOM.EICHLER.01}/\texttt{HECKE.GEOM.HALFINT.01}
+are three projections of one finite relative-trace identity
+$[\text{$E_8$/glue orbital counting}]=[\text{Newform/Waldspurger spectral sum}]$.
+\emph{(R1)} $\operatorname{Tr}_V(\nu_p\circ\pi)$ bilateral independent at
+$p\in\{3,5,7\}$ across five projectors (anchors e.g.\ $p{=}7$: $727680$ full /
+$19840$ on $f_8$).
+\emph{(R2)} Eichler $\lambda_{\mathrm{geom}}=\lambda_{\mathrm{Eis}}+a_p^2$ is the RTF
+orbit split ($\lambda_{\mathrm{Eis}}=336/3780/19264$, $a_p^2=16/4/576$).
+\emph{(R3)} Period side $=$ quaternary lattice counting with
+$R=23.1873585645$ (rel~$\sim10^{-12}$). Verdict \texttt{ONE-FORMULA}.
+Classical Jacquet-type RTF / Eichler / Witt / Waldspurger named classical; NEW $=$
+compiler-native bilateral independence. Fences: identity \emph{finite}; infinite RTF
+named open; no RH; not \texttt{ZETA.HP.CARRIER}-relevant; no marker moves.
+Machine-checked: \veri{v538\_relative\_trace\_identity.py}.
+\mE\ (R1/R2) / \mC\ (R3)
+
+\par\smallskip\noindent\textbf{Weil structure of the compiler family
+(\texttt{RTF.GNS.WEIL.01}).}
+Promotion of discovery T55/T61/T62/T63 ($25$ checks, $\sim6$\,s): the compiler family
+possesses a fully identified Weil structure up to two \emph{explicitly isolated}
+obstructions (obstructions are load-bearing verified content, not residual footnotes).
+\emph{(A)} GNS $=$ direct integral over the Gelfand spectrum of the character subalgebra
+(fibre-orthogonal; twist-mix per fibre $\le5.037\times10^{-16}$).
+\emph{(B)} Trivial Sato--Tate isotype $=$ GL$(1)$ core
+$G_0=(1+Y)/(1-Y)=\zeta_p(w-3)^2/\zeta_p(2w-6)=\sum 2^{\omega(n)}n^{-u}$ globally.
+\emph{(C)} Exact linear relation
+$Q_{\mathrm{fam}}=2Q_\zeta(g)-2Q_\zeta(g_\flat)+\mathrm{Arch}+\mathrm{Corr}$.
+\textbf{Obstruction 1:} minus sign on the doubling term
+(family positivity does \emph{not} imply $Q_\zeta\ge0$).
+\textbf{Obstruction 2:} Corr is non-automorphic
+(no polar/arch absorption; no finite Euler factor; $e^{-\sum p^{-u}}$-type).
+Finite-class $Q_{\mathrm{fam}}\ge0$ measured \mC; dense-class positivity open /
+RH-adjacent --- \emph{not} claimed. Classical Weil/Gelfand/SU$(2)$/Sato--Tate/$2^\omega$/GNS
+named classical. Fences: not ``almost RH''; \texttt{ZETA.HP.CARRIER} untouched;
+no marker moves.
+Machine-checked: \veri{v539\_weil\_structure\_family.py}.
+\mE\ (A/B/C/obstructions) / \mC\ (finite-class positivity)
+
+\par\smallskip\noindent\textbf{Amplitude route and positive linear carrier
+(\texttt{RTF.GNS.AMP.01}).}
+Promotion of discovery T67--T72 ($34$ checks, $\sim3$\,s): the route out of the
+square plane behind the two \texttt{RTF.GNS.WEIL.01} obstructions.
+\emph{(A)} Amplitude Dirac
+$D=\bigl(\begin{smallmatrix}0&V\\V^{\mathsf T}&0\end{smallmatrix}\bigr)$ with
+$D^2=\operatorname{diag}(VV^{\mathsf T},K)$, $V^{\mathsf T}V=K$
+(rel $2.7\times10^{-16}$), exists exactly and is Hecke-equivariant ($p=3,5,7$
+intertwining exact; Shimura $b(dp^2)=b(d)(a_p-\chi_d(p)p)$ on $644$ pairs).
+\emph{(B)} Geometric polarisation $b=N_+-N_-$ exact;
+$\Theta=N_++N_-$ is a \emph{pure} Siegel--Weil Eisenstein $\sigma_3$-eigenform
+($p\le13$, cusp component zero) with Cohen seed
+$\Theta(d)=-48\,L(-1,\chi_d)$ exact-rational on $159$ live $d$ (Cohen 1975).
+\emph{(C)} Every coefficient bilinear form inherits the even-$k$ deletion
+(Cauchy--Littlewood window lemma, five channels; numerator $1-p^6X^2$
+pair-independent); the deletion is exactly the square-class double counting
+($\mathrm{fam}+2\flat+\delta_{k1}=[2,2,2,2]$; M\"obius square sieve exact).
+\emph{(D)} Positive linear carrier $\ell^2(d,\mu)$,
+$\mu=48\,|L(-1,\chi_d)|\,|d|^{-a}$: full weights
+$\lambda_k=1+p^{3k}-(\chi p)^k$ (layer $[1,1,1,1]$) and plus balance
+$Q=Q_\zeta(g_-)+Q_\zeta(g_+)$ (rel $2\times10^{-15}$); the $\flat$/doubling
+kernel enters \emph{with plus} (sign inverted vs the square plane).
+\emph{(E)} Completed FE
+$\Lambda_\Theta(s)=8^{1-s}\Lambda_{\Theta^\dagger}(5/2-s)$ exact
+(rel $\sim10^{-40}$; Fricke closed); the guaranteed cone is FE-self-dual.
+\textbf{Open boundary as content:} Euler-region positivity only (edge
+$L$-values, not the central line); the residual distance to the Weil cone is
+the FE-covariant gap functional $\lambda^*$ on $n\equiv6\pmod 8$ (one exact
+Farkas witness; no finite signed theta library removes it). Classical
+Cohen 1975 / Siegel--Weil / Jacobi--Fricke / Cauchy--Littlewood / Shintani /
+Weil 1952 / Farkas named classical. Fences: not ``almost RH'';
+\texttt{ZETA.HP.CARRIER} untouched; no marker moves.
+Machine-checked: \veri{v540\_amplitude\_linear\_carrier.py}.
+\mE\ (A--E exact) / \mC\ (sampled cone facts; $\lambda^*$ named open)
+
+\par\smallskip\noindent\textbf{Matching lemma and transport ledger package
+(\texttt{RTF.GNS.LEDGER.01}).}
+Promotion of the discovery proof package T78/T79/T80/T81/T82/T85 ($33$ checks,
+$\sim10$\,s; every core check recomputed, not cited).
+\emph{(A)} The matching lemma is \emph{proved exact-integer on $[4,10^6]$}:
+$7S(j)<40A(j)$ at every atom ($0$ violations over $939\,870$ clash atoms;
+proven no-overflow; big-integer rechecks); exact margin
+$X=22242575693/270725400000=0.082159$ at $j^*=554400$;
+$\rho_{\mathrm{crit}}=1.1440>21/20$; maximal-greedy identity $\Rightarrow$
+uniform in $(M,\lambda)$; structure laws ($8$-law, seed-tower, $w$-table,
+Cohen seeds $\{-48,-80,-8,-8\}$, bracket $\Theta\le2|\psi|\le3\Theta$) at $0$
+tolerance.
+\emph{(B)} The transport ledger closes exactly:
+$Q_{\mathrm{Weil}}=Q_{\mathrm{cert}}+\Delta_{\mathrm{arch}}+\Delta_2$ with
+$\Delta_{\mathrm{pole}}\equiv\Delta_{\mathrm{conv}}\equiv0$ \emph{proven}
+(kernel collapse sympy-exact; residual $4.4\times10^{-16}$ on $24$ rows); the
+odd-prime side of the Weil functional equals the certified plus combination
+$P_\zeta(g_-)+P_\zeta(g_+)$ exactly (rel $3.9\times10^{-16}$).
+\emph{(C)} The signed envelope is character-exact:
+$-\psi=(\chi_{-4}+\tfrac14\chi_8+\tfrac14\chi_{-8})\cdot\Theta$ (all odd
+$n\le50000$, both builds); signed certificate $0$ violations (margin
+$8.86\times$); confinement set equality zero-credit $\Leftrightarrow$
+coherent on $10^6$.
+\emph{(D)} The archimedean term is \emph{internal}: Legendre duplication
+$(2\pi)^{-s}\Gamma(s)=\tfrac12\Gamma_{\mathbb R}(s)\Gamma_{\mathbb R}(s{+}1)$;
+kernel identity $k_\zeta=K_{\mathrm{fam}}-K_{\mathrm{shift}}$ pointwise
+($7.9\times10^{-31}$);
+$\Delta_{\mathrm{arch}}=A_{\mathrm{fam}}-A_{\mathrm{shift}}$ at
+$9.9\times10^{-16}$.
+\emph{(E)} The coherent class ($=$ $\Z[i]$-norms, set equality) is closed by
+the $\lambda$-equivariant channel: CM carrier $g_\lambda$ exact in two
+independent routes; $\mu_1=c_1/(c_0d^2)\in[-1,1]$ exact; $\lambda$-window
+certificate $0.0653$ vs $0.2365$ unlifted ($3.6\times$), exact Fraction
+rechecks.
+\emph{(F)} Frontier facts \mC: coherent-chain crossing $k^*=14$
+($\log_{10}N^*=23.1$, exact Fractions); Robin tail factor $6.16$ --- the
+constant route stays open.
+\textbf{Named limits as load-bearing content:} (i) \emph{one}
+classically-shaped open lemma (correlated cancellation on credit-rich
+non-coherent tail atoms, uniform form; provably-shaped $\neq$ formal proof);
+(ii) I5 in one-family form
+($Q_{\mathrm{cert}}+\Delta_2+A_{\mathrm{fam}}-A_{\mathrm{shift}}\ge0$) as the
+single remaining TFPT-specific object --- by the closed ledger
+\emph{equivalent} to Weil positivity $\Longleftrightarrow$ RH (equivalence
+typing, no progress claim). Classical Gronwall / Robin 1983 unconditional /
+Cohen 1975 / Hecke 1918--1920 / Cornacchia / Dirichlet / Mertens-AP / Landau /
+Legendre duplication / Weil 1952 / Alaoglu--Erd\H{o}s named classical.
+Fences: no RH-evidence language; not ``almost RH'';
+\texttt{ZETA.HP.CARRIER} untouched; no marker moves.
+Machine-checked: \veri{v541\_matching\_lemma\_ledger.py}.
+\mE\ (A--E exact) / \mC\ (frontier facts; two named limits open)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

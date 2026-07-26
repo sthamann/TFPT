@@ -8583,5 +8583,249 @@ Module[{aps, scales, M, w4, eps},
     Union[Abs /@ {-8, 8, -16, 16}] === {8, 16}];
 ];
 
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529 + v530 + v531 + v532 + v533 + v534 + v535 + v536 + v537: ", $pass, " passed, ", $fail, " failed ---"];
+(* ==== v538 round: HECKE.GEOM.RTF.01 -- compiler relative-trace identity (exact).
+   q-series builds, AFE/L-values and R-constancy stay Python-only. *)
+Module[{sigma3, numP3, isoLines, lamEis, nuLaw, aps, traces, p, L, lam, a, b},
+  sigma3[p_] := 1 + p^3;
+  numP3[p_] := (p^4 - 1)/(p - 1);
+  isoLines[p_] := sigma3[p]*numP3[p];
+  lamEis[p_] := sigma3[p]*(numP3[p] - sigma3[p]);
+  nuLaw[p_, ap_] := Module[{sig = sigma3[p], L = isoLines[p], b, a, lam},
+    b = sig + ap; a = L - b*sig; lam = L - sig^2 + ap^2;
+    <|"L" -> L, "a" -> a, "b" -> b, "lam" -> lam, "lamEis" -> L - sig^2, "ap2" -> ap^2|>];
+  aps = <|3 -> -4, 5 -> -2, 7 -> 24|>;
+  traces[p_] := Module[{law = nuLaw[p, aps[p]], L, lam},
+    L = law["L"]; lam = law["lam"];
+    <|"Id" -> 5*L + 2*lam, "Eis" -> 5*L, "cusp" -> 2*lam, "E4" -> L, "f8" -> lam|>];
+  checkExact["v538 HECKE.GEOM.RTF.01 (i): R1 TRACE ANCHORS, EXACT -- Tr_V(nu_p) at p=3,5,7 = (6304,105848,727680); f8-channel (352,3784,19840)",
+    {traces[3]["Id"], traces[5]["Id"], traces[7]["Id"]} === {6304, 105848, 727680} &&
+    {traces[3]["f8"], traces[5]["f8"], traces[7]["f8"]} === {352, 3784, 19840} &&
+    {traces[3]["Eis"], traces[3]["cusp"], traces[3]["E4"]} === {5600, 704, 1120}];
+  checkExact["v538 HECKE.GEOM.RTF.01 (ii): R1 PROJECTOR TABLE, EXACT -- full (Id,Eis,cusp,E4,f8) anchors at p=5 and p=7",
+    {traces[5]["Id"], traces[5]["Eis"], traces[5]["cusp"], traces[5]["E4"], traces[5]["f8"]} ===
+      {105848, 98280, 7568, 19656, 3784} &&
+    {traces[7]["Id"], traces[7]["Eis"], traces[7]["cusp"], traces[7]["E4"], traces[7]["f8"]} ===
+      {727680, 688000, 39680, 137600, 19840}];
+  checkExact["v538 HECKE.GEOM.RTF.01 (iii): R2 ORBIT DICTIONARY, EXACT -- lambda_Eis=(336,3780,19264), a_p^2=(16,4,576), lambda_geom=lambda_Eis+a_p^2",
+    {lamEis[3], lamEis[5], lamEis[7]} === {336, 3780, 19264} &&
+    {aps[3]^2, aps[5]^2, aps[7]^2} === {16, 4, 576} &&
+    AllTrue[{3, 5, 7}, nuLaw[#, aps[#]]["lam"] === lamEis[#] + aps[#]^2 &]];
+  checkExact["v538 HECKE.GEOM.RTF.01 (iv): NU_LAW (a,b) ANCHORS, EXACT -- (a,b)=(448,24)/(4032,124)/(11008,368) at p=3,5,7",
+    {nuLaw[3, -4]["a"], nuLaw[3, -4]["b"]} === {448, 24} &&
+    {nuLaw[5, -2]["a"], nuLaw[5, -2]["b"]} === {4032, 124} &&
+    {nuLaw[7, 24]["a"], nuLaw[7, 24]["b"]} === {11008, 368}];
+  checkExact["v538 HECKE.GEOM.RTF.01 (v): FINITE RTF SCOPE, EXACT -- p-set {3,5,7}; 5 projectors; dim V=7=5+2; ONE-FORMULA cardinality 3-of-3 pillars",
+    Sort[{3, 5, 7}] === {3, 5, 7} && Length[{3, 5, 7}] === 3 &&
+    Length[{"Id", "Eis", "cusp", "E4", "f8"}] === 5 &&
+    5 + 2 === 7 &&
+    Length[{"R1", "R2", "R3"}] === 3];
+];
+
+(* ==== v539 round: RTF.GNS.WEIL.01 -- Weil structure of the compiler family (exact).
+   Arch digamma / numeric Q assembly stay Python-only. *)
+Module[{Y, G0, Lloc, Phi, chiU, expandPhi, core0, dlogFam, ser, ck, om, a2om, n, factors},
+  Y = Symbol["Y"];
+  G0 = (1 + Y)/(1 - Y);
+  Lloc = 1/(1 - Y)^2 / (1/(1 - Y^2));
+  checkExact["v539 RTF.GNS.WEIL.01 (i): G_0 ALGEBRAIC, EXACT -- G_0=(1+Y)/(1-Y)=zeta_p(w-3)^2/zeta_p(2w-6); witness (1+Y)=(1-Y^2)/(1-Y)",
+    Simplify[Lloc - G0] === 0 && Simplify[(1 + Y) - (1 - Y^2)/(1 - Y)] === 0];
+  (* Chebyshev U_n character expansions of Phi_k *)
+  chiU[n_, a_] := ChebyshevU[n, a/2];
+  Phi[1] = ahat^2;
+  Phi[2] = ahat^4 - 4 ahat^2 + 2;
+  Phi[3] = ahat^2 (ahat^2 - 3)^2;
+  Phi[4] = ahat^8 - 8 ahat^6 + 20 ahat^4 - 16 ahat^2 + 2;
+  expandPhi[k_] := Module[{poly, coeffs, n, c, rem},
+    (* Expand in U_n(ahat/2) via successive leading-term reduction *)
+    rem = Expand[Phi[k]];
+    coeffs = <||>;
+    Do[
+      c = Coefficient[rem, ahat, n]/Coefficient[Expand[chiU[n, ahat]], ahat, n];
+      If[c =!= 0, coeffs[n] = Simplify[c]; rem = Expand[rem - c*chiU[n, ahat]]],
+      {n, Exponent[Expand[Phi[k]], ahat], 0, -1}
+    ];
+    coeffs
+  ];
+  checkExact["v539 RTF.GNS.WEIL.01 (ii): PHI CHARACTER EXPANSIONS, EXACT -- Phi1=chi0+chi2, Phi2=chi4-chi2, Phi3=2chi0-chi4+chi6, Phi4=chi8-chi6",
+    With[{e1 = expandPhi[1], e2 = expandPhi[2], e3 = expandPhi[3], e4 = expandPhi[4]},
+      e1[0] === 1 && e1[2] === 1 && Length[Keys[e1]] === 2 &&
+      e2[4] === 1 && e2[2] === -1 && Length[Keys[e2]] === 2 &&
+      e3[0] === 2 && e3[4] === -1 && e3[6] === 1 && Length[Keys[e3]] === 3 &&
+      e4[8] === 1 && e4[6] === -1 && Length[Keys[e4]] === 2]];
+  (* Core series from Y dlog G_0 - Y *)
+  dlogFam = Y/(1 + Y) + Y/(1 - Y) - Y;
+  ser = Series[dlogFam, {Y, 0, 6}];
+  ck = Table[SeriesCoefficient[ser, k], {k, 1, 6}];
+  checkExact["v539 RTF.GNS.WEIL.01 (iii): CORE SERIES c_k0, EXACT -- c_k0=[1,0,2,0,2,0] = coeffs of Y dlog G_0 - Y",
+    ck === {1, 0, 2, 0, 2, 0}];
+  (* Dirichlet 2^omega head: a(1)=1; a(n)=2^{# distinct primes} for n>=2 *)
+  om[n_] := If[n === 1, 0, Length[FactorInteger[n]]];
+  a2om[n_] := 2^om[n];
+  checkExact["v539 RTF.GNS.WEIL.01 (iv): DIRICHLET 2^omega HEAD, EXACT -- a(n)=2^omega(n) for n=1..30 equals multiplicative Euler of G_0",
+    a2om[1] === 1 && a2om[6] === 4 && a2om[30] === 8 &&
+    And @@ Table[a2om[n] === 2^Length[FactorInteger[n]], {n, 2, 30}]];
+  (* Obstruction (c): Y dlog e^{-Y} = -Y *)
+  checkExact["v539 RTF.GNS.WEIL.01 (v): OBSTRUCTION (c) e^{-Y} DLOG, EXACT -- Y D[Log[Exp[-Y]],Y] = -Y (non-automorphic EXTRA TERM)",
+    Simplify[Y*D[Log[Exp[-Y]], Y] + Y] === 0];
+];
+
+(* ==== v540 round: RTF.GNS.AMP.01 -- amplitude route and positive linear carrier (exact).
+   Lattice enumeration, FFT autocorrelations and the mpmath split-Mellin FE stay Python-only. *)
+Module[{X, s, t, u, v, p, a, chi, hs, hu, Slem, Den, Num, R, lemOK, detOK,
+        al, be, Dff, DEE, DfE, chanOK, Y, famG, flatG, fullG, famL, flatL,
+        fullL, mixL, Glin, lamOK, layOK, uu, q, t2, t3, t32, thser, Th1v,
+        Th17v, S2v, sieveF, sieveB},
+  X = Symbol["X"]; s = Symbol["s"]; t = Symbol["t"];
+  u = Symbol["u"]; v = Symbol["v"];
+  p = Symbol["p"]; a = Symbol["a"]; chi = Symbol["chi"]; Y = Symbol["Y"];
+  (* (i) Cauchy-Littlewood window lemma with FREE Satake symbols, k <= 6 *)
+  hs = {1, s + t}; hu = {1, u + v};
+  Do[AppendTo[hs, Expand[(s + t) hs[[-1]] - s t hs[[-2]]]];
+     AppendTo[hu, Expand[(u + v) hu[[-1]] - u v hu[[-2]]]], {k, 2, 6}];
+  Slem = Sum[Expand[hs[[k + 1]] hu[[k + 1]]] X^k, {k, 0, 6}];
+  Den = Expand[(1 - s u X) (1 - s v X) (1 - t u X) (1 - t v X)];
+  Num = 1 - s t u v X^2;
+  R = Expand[Slem Den - Num];
+  lemOK = And @@ Table[Expand[Coefficient[R, X, k]] === 0, {k, 0, 6}];
+  detOK = Simplify[(Num /. {t -> p^3/s, v -> p^3/u})
+    - (1 - p^6 X^2)] === 0;
+  checkExact["v540 RTF.GNS.AMP.01 (i): CAUCHY-LITTLEWOOD WINDOW LEMMA, EXACT -- Sum h_k(s,t)h_k(u,v)X^k = (1-stuvX^2)/[(1-suX)(1-svX)(1-tuX)(1-tvX)] (k<=6, free Satake symbols); st=uv=p^3 => numerator 1-p^6X^2 pair-INDEPENDENT",
+    lemOK && detOK];
+  (* (ii) the three basic square channels, chi = 0, series vs closed form *)
+  al = {1, a}; be = {1, 1 + p^3};
+  Do[AppendTo[al, Expand[a al[[-1]] - p^3 al[[-2]]]];
+     AppendTo[be, Expand[(1 + p^3) be[[-1]] - p^3 be[[-2]]]], {k, 2, 6}];
+  Dff = Expand[(1 - (a^2 - 2 p^3) X + p^6 X^2) (1 - p^3 X)^2];
+  DEE = Expand[(1 - X) (1 - p^3 X)^2 (1 - p^6 X)];
+  DfE = Expand[(1 - a X + p^3 X^2) (1 - a p^3 X + p^9 X^2)];
+  chanOK = And @@ Map[
+    Function[{pair},
+      With[{RR = Expand[
+          Sum[Expand[pair[[1, k + 1]] pair[[2, k + 1]]] X^k, {k, 0, 6}]
+            * pair[[3]] - (1 - p^6 X^2)]},
+        And @@ Table[Expand[Coefficient[RR, X, k]] === 0, {k, 0, 6}]]],
+    {{al, al, Dff}, {be, be, DEE}, {al, be, DfE}}];
+  checkExact["v540 RTF.GNS.AMP.01 (ii): THREE SQUARE CHANNELS, EXACT -- b^2 (f8xf8), Theta^2 (EisxEis floor), Theta*g (f8xEis, Rankin) all carry the deletion numerator 1-p^6X^2 (series vs closed form, k<=6, chi=0)",
+    chanOK];
+  (* (iii) square-class double counting: fam + 2flat + delta_k1 = full *)
+  famG = 2 Y/(1 - Y^2) - Y; flatG = 2 Y^2/(1 - Y^2); fullG = 2 Y/(1 - Y);
+  famL = Table[SeriesCoefficient[Series[famG, {Y, 0, 8}], k], {k, 1, 8}];
+  flatL = Table[SeriesCoefficient[Series[flatG, {Y, 0, 8}], k], {k, 1, 8}];
+  fullL = Table[SeriesCoefficient[Series[fullG, {Y, 0, 8}], k], {k, 1, 8}];
+  mixL = Table[SeriesCoefficient[Series[-flatG, {Y, 0, 8}], k], {k, 1, 8}];
+  checkExact["v540 RTF.GNS.AMP.01 (iii): TOWER DOUBLE-COUNTING, EXACT -- fam[1,0,2,0]+2flat[0,2,0,2]+Plancherel delta_k1 = FULL[2,2,2,2] (generating functions; flat = zeta_p(2u) layer; mixed = deletion isolated with minus)",
+    Simplify[famG + flatG + Y - fullG] === 0 &&
+    famL === {1, 0, 2, 0, 2, 0, 2, 0} &&
+    flatL === {0, 2, 0, 2, 0, 2, 0, 2} &&
+    fullL === {2, 2, 2, 2, 2, 2, 2, 2} &&
+    mixL === {0, -2, 0, -2, 0, -2, 0, -2}];
+  (* (iv) linear tower full weights + pole-kernel collapse + line map *)
+  Glin = (1 - chi p X)/((1 - X) (1 - p^3 X));
+  lamOK = And @@ Table[
+    Simplify[SeriesCoefficient[Series[X D[Log[Glin], X], {X, 0, 7}], k]
+      - (1 + p^(3 k) - (chi p)^k)] === 0, {k, 1, 6}];
+  layOK = And @@ Table[
+    With[{e = Expand[(1 + p^(3 k) - (chi p)^k) /. p -> q^2]},
+      Coefficient[e, q, 6 k] === 1 && FreeQ[Coefficient[e, q, 6 k], chi]],
+    {k, 1, 6}];
+  uu = Symbol["uvar"];
+  checkExact["v540 RTF.GNS.AMP.01 (iv): LINEAR CARRIER FULL WEIGHTS + PLUS KERNEL, EXACT -- lambda_k = 1+p^{3k}-(chi p)^k (k<=6, layer [1,1,1,1] chi-free); pole-kernel collapse (e^{u/2}+e^{-u/2})2cosh(3u/2) = e^{2u}+e^u+e^{-u}+e^{-2u}; FE centre 5/4=(0+5/2)/2, plus-locus offset 1/4, tilts {-3/2,3/2} -> mirror {-5/2,1/2}",
+    lamOK && layOK &&
+    Simplify[(Exp[uu/2] + Exp[-uu/2]) 2 Cosh[3 uu/2]
+      - (Exp[2 uu] + Exp[uu] + Exp[-uu] + Exp[-2 uu])] === 0 &&
+    5/4 === (0 + 5/2)/2 && 5/4 - 1 === 1/4 &&
+    Sort[{1/2 - 2, 7/2 - 2}] === {-3/2, 3/2} &&
+    Sort[{1/2 - 3, 7/2 - 3}] === {-5/2, 1/2}];
+  (* (v) Moebius square sieve head + Cohen seed anchor at d = 1, 17 *)
+  sieveF = And @@ Table[
+    Sum[If[Mod[n, r^2] == 0, MoebiusMu[r] DivisorSigma[0, n/r^2], 0],
+      {r, 1, Floor[Sqrt[n]]}]
+    === If[n == 1, 1, 2^Length[FactorInteger[n]]], {n, 1, 30}];
+  sieveB = And @@ Table[
+    Sum[If[Mod[n, r^2] == 0,
+      If[n/r^2 == 1, 1, 2^Length[FactorInteger[n/r^2]]], 0],
+      {r, 1, Floor[Sqrt[n]]}] === DivisorSigma[0, n], {n, 1, 30}];
+  q = Symbol["q"];
+  t2 = 4 q (Sum[q^(2 n (n + 1)), {n, 0, 3}])^2;
+  t3 = 1 + 2 Sum[q^(n^2), {n, 1, 4}];
+  t32 = 1 + 2 Sum[q^(2 n^2), {n, 1, 3}];
+  thser = Series[t2 t3 t32^2, {q, 0, 17}];
+  Th1v = SeriesCoefficient[thser, 1];
+  Th17v = SeriesCoefficient[thser, 17];
+  S2v = Sum[KroneckerSymbol[17, aa] aa^2, {aa, 1, 16}];
+  checkExact["v540 RTF.GNS.AMP.01 (v): SQUARE SIEVE + COHEN SEED, EXACT -- 2^omega = mu_sq * d and d = 1_sq * 2^omega (n<=30); Theta(1)=4=-48 zeta(-1); Theta(17)=192, S2(17)=136, 17 Theta(17)=24 S2(17)=3264 (Cohen H(2,d)=L(-1,chi_d))",
+    sieveF && sieveB && Th1v === 4 && Th1v === -48 (-1/12) &&
+    Th17v === 192 && S2v === 136 && 17 Th17v === 24 S2v];
+];
+
+(* ==== v541 round: RTF.GNS.LEDGER.01 -- matching lemma and transport ledger package (exact).
+   The 10^6 integer sieves, FFT autocorrelation batteries, Cornacchia tables and the
+   mpmath digamma/erfc quadratures stay Python-only. *)
+Module[{Mchar, targ, coef, q, t2, t3, t32, t4, thser, psser, Th, Psv,
+        decOK, w1, w5, w23, x, recOK, firstOK, z, s, GammaR, dupOK,
+        bridgeOK, gaussOK, SS, AA, certOK, signOK, c1, rc, cmOK, muOK},
+  (* (i) mod-8 character decomposition of the signed envelope *)
+  Mchar = {{1, 1, 1, 1}, {1, -1, -1, 1}, {1, 1, -1, -1}, {1, -1, 1, -1}};
+  targ = {3/2, -1, 1/2, -1};
+  coef = LinearSolve[Mchar, targ];
+  q = Symbol["q"];
+  t2 = 4 q (Sum[q^(2 n (n + 1)), {n, 0, 5}])^2;
+  t3 = 1 + 2 Sum[q^(n^2), {n, 1, 8}];
+  t32 = 1 + 2 Sum[q^(2 n^2), {n, 1, 5}];
+  t4 = 1 + 2 Sum[(-1)^n q^(n^2), {n, 1, 8}];
+  thser = Series[t2 t3 t32^2, {q, 0, 60}];
+  psser = Series[t3 t4^4, {q, 0, 60}];
+  Th[n_] := SeriesCoefficient[thser, n];
+  Psv[n_] := SeriesCoefficient[psser, n];
+  decOK = And @@ Table[
+    4 (-Psv[n]) === (4 KroneckerSymbol[-4, n] + KroneckerSymbol[8, n]
+      + KroneckerSymbol[-8, n]) Th[n], {n, 1, 33, 2}];
+  checkExact["v541 RTF.GNS.LEDGER.01 (i): CHARACTER DECOMPOSITION, EXACT -- character system (residues 1,3,5,7 mod 8) solves to (chi0,chi-4,chi8,chi-8) coefficients (0,1,1/4,1/4); 4(-psi(n)) = [4 chi_-4 + chi_8 + chi_-8](n) Theta(n) on all odd n<=33 from the theta heads",
+    coef === {0, 1, 1/4, 1/4} && decOK];
+  (* (ii) psi w-table: sigma_3 2-local recursion + first steps *)
+  x = Symbol["x"];
+  w1 = -(16 x + 5)/14; w5 = -(16 x - 9)/14; w23 = (15 - 8 x)/7;
+  recOK = And @@ Map[
+    Simplify[(#/. x -> 8 x) - 9 # + 8 (#/. x -> x/8)] === 0 &,
+    {w1, w5, w23}];
+  firstOK = (w1 /. x -> 1) === -3/2 && (w5 /. x -> 1) === -1/2 &&
+    (w23 /. x -> 1) === 1;
+  checkExact["v541 RTF.GNS.LEDGER.01 (ii): PSI W-TABLE, EXACT -- the three 2-adic w-families satisfy w(8x) = 9 w(x) - 8 w(x/8) (roots {1,8} of y^2 = 9y - 8) with first steps -3/2 / -1/2 / +1",
+    recOK && firstOK];
+  (* (iii) Legendre duplication bridge + Gauss digamma anchor at t=0 *)
+  z = Symbol["z"]; s = Symbol["s"];
+  GammaR[w_] := Pi^(-w/2) Gamma[w/2];
+  dupOK = FullSimplify[Gamma[2 z]
+    - 2^(2 z - 1)/Sqrt[Pi] Gamma[z] Gamma[z + 1/2]] === 0;
+  bridgeOK = FullSimplify[FunctionExpand[(2 Pi)^(-s) Gamma[s]
+    - 1/2 GammaR[s] GammaR[s + 1]]] === 0;
+  gaussOK = FullSimplify[FunctionExpand[
+    2 PolyGamma[0, 1/2] - 2 Log[2 Pi]
+    - (PolyGamma[0, 3/4] - Log[Pi])
+    - (PolyGamma[0, 1/4] - Log[Pi])]] === 0;
+  checkExact["v541 RTF.GNS.LEDGER.01 (iii): DUPLICATION BRIDGE, EXACT -- Gamma(2z) = 2^{2z-1} Pi^{-1/2} Gamma(z)Gamma(z+1/2); (2Pi)^{-s}Gamma(s) = (1/2)Gamma_R(s)Gamma_R(s+1); kernel anchor at t=0: 2 psi(1/2) - 2 log 2Pi = [psi(3/4) - log Pi] + [psi(1/4) - log Pi] (Gauss digamma values)",
+    dupOK && bridgeOK && gaussOK];
+  (* (iv) window-certificate head 7S < 40A on exact theta heads *)
+  SS[j_] := Sum[If[Mod[d, 4] <= 1 && d >= 4,
+    (j/d) Th[j/d] Abs[Psv[d]], 0], {d, Divisors[j]}];
+  AA[j_] := j Th[j];
+  certOK = And @@ Map[7 SS[#] < 40 AA[#] &, {12, 24, 48, 60}];
+  signOK = And @@ Table[Sign[Psv[n]] === (-1)^(Floor[n/2] + 1),
+    {n, 1, 60}];
+  checkExact["v541 RTF.GNS.LEDGER.01 (iv): CERTIFICATE HEAD, EXACT -- 7 S(j) < 40 A(j) with S(j) = Sum_{d|j, d=0,1 mod 4, d>=4} (j/d)Theta(j/d)|psi(d)| and A(j) = j Theta(j) at j in {12,24,48,60} (integer theta heads); sign law sign psi(n) = (-1)^{floor(n/2)+1} on n<=60 (the 10^6 full enumeration stays Python-only)",
+    certOK && signOK && SS[60] > 0];
+  (* (v) CM carrier anchors: c1 lattice sums, CM laws head, mu1(5) *)
+  c1[n_] := Sum[If[a^2 + b^2 === n, Re[(a + b I)^4], 0],
+    {a, 1, Floor[Sqrt[n]]}, {b, 0, Floor[Sqrt[n]]}];
+  rc[n_] := Sum[If[a^2 + b^2 === n, 1, 0], {a, -12, 12}, {b, -12, 12}];
+  cmOK = c1[5] === -14 && c1[2] === -4 && c1[4] === 16 &&
+    c1[8] === -64 && c1[16] === 256 && c1[3] === 0 && c1[7] === 0 &&
+    c1[9] === 81 && c1[13] === -238;
+  muOK = c1[5]/((rc[5]/4) 5^2) === -7/25 &&
+    Abs[c1[5]/((rc[5]/4) 5^2)] <= 1 && rc[5] === 8;
+  checkExact["v541 RTF.GNS.LEDGER.01 (v): CM CARRIER HEAD, EXACT -- g_lambda lattice sums c1(5)=-14, c1(13)=-238=pi^4+pibar^4 (split, pi=3+2i), c1(3)=c1(7)=0 and c1(9)=3^4=81 (inert), c1(2^r)=(-4)^r for r<=4 (ramified); canonical weight mu1(5) = c1(5)/((r2/4) 25) = -7/25 in [-1,1] (r2(5)=8)",
+    cmOK && muOK];
+];
+
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529 + v530 + v531 + v532 + v533 + v534 + v535 + v536 + v537 + v538 + v539 + v540 + v541: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

@@ -42,6 +42,2979 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-25",
+    "dateLabel": "2026-07-25 · XIX",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v541"
+      },
+      {
+        "k": "t",
+        "v": " — matching lemma and transport ledger package: two named limits as content; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v541"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "RTF.GNS.LEDGER.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the discovery proof package T78/T79/T80/T81/T82/T85 into one load-bearing module ("
+        },
+        {
+          "k": "m",
+          "v": "33"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim10"
+        },
+        {
+          "k": "t",
+          "v": " s); every core check is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "recomputed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " from scratch, not cited. Companion to "
+        },
+        {
+          "k": "c",
+          "v": "v538"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.RTF.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v539"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "RTF.GNS.WEIL.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "v540"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "RTF.GNS.AMP.01"
+        },
+        {
+          "k": "t",
+          "v": ". Classical Gronwall 1913 / Robin 1983 "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unconditional"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " / Cohen 1975 / Hecke 1918–1920 / Cornacchia / Fermat–Gauss / Dirichlet "
+        },
+        {
+          "k": "m",
+          "v": "L(1,\\chi)"
+        },
+        {
+          "k": "t",
+          "v": " / Mertens-AP / Landau 1908 / Legendre duplication / Weil 1952–Guinand–Bombieri / Alaoglu–Erd"
+        },
+        {
+          "k": "t",
+          "v": "o"
+        },
+        {
+          "k": "t",
+          "v": "s named classical — NEW is the compiler-native consolidation and the machine-checked window proofs."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(A) Window proof "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The matching lemma is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "proved exact-integer on "
+            },
+            {
+              "k": "m",
+              "v": "[4,10^6]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "7S(j)<40A(j)"
+        },
+        {
+          "k": "t",
+          "v": " at every atom ("
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " violations over "
+        },
+        {
+          "k": "m",
+          "v": "939\\,870"
+        },
+        {
+          "k": "t",
+          "v": " clash atoms; full enumeration, no-overflow proven, big-integer rechecks); exact margin "
+        },
+        {
+          "k": "m",
+          "v": "X=22242575693/270725400000=0.082159"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "j^*=554400"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\rho_{\\mathrm{crit}}=1.1440>21/20"
+        },
+        {
+          "k": "t",
+          "v": "; maximal-greedy identity "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " uniform in the target set and the greedy weights. Structure laws at "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " tolerance: "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": "-law ("
+        },
+        {
+          "k": "m",
+          "v": "n\\le250000"
+        },
+        {
+          "k": "t",
+          "v": "), seed-tower "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\psi"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "w"
+        },
+        {
+          "k": "t",
+          "v": "-table ("
+        },
+        {
+          "k": "m",
+          "v": "n\\le50000"
+        },
+        {
+          "k": "t",
+          "v": "), Cohen seeds "
+        },
+        {
+          "k": "m",
+          "v": "\\{-48,-80,-8,-8\\}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "s\\le2000"
+        },
+        {
+          "k": "t",
+          "v": "), bracket "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta\\le2|\\psi|\\le3\\Theta"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "10^6"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(B) Transport ledger "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "Q_{\\mathrm{Weil}}=Q_{\\mathrm{cert}}+\\Delta_{\\mathrm{arch}}+\\Delta_2"
+        },
+        {
+          "k": "t",
+          "v": " closes with "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta_{\\mathrm{pole}}\\equiv\\Delta_{\\mathrm{conv}}\\equiv0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "proven"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (sympy kernel collapse; quadrature "
+        },
+        {
+          "k": "m",
+          "v": "2.8\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "; exact scale invariance); ledger residual "
+        },
+        {
+          "k": "m",
+          "v": "4.4\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": " battery rows; the odd-prime side of the Weil functional equals the certified plus combination "
+        },
+        {
+          "k": "m",
+          "v": "P_\\zeta(g_-)+P_\\zeta(g_+)"
+        },
+        {
+          "k": "t",
+          "v": " exactly (rel "
+        },
+        {
+          "k": "m",
+          "v": "3.9\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(C) Character-exact signed envelope "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "-\\psi=(\\chi_{-4}+\\tfrac14\\chi_8+\\tfrac14\\chi_{-8})\\cdot\\Theta"
+        },
+        {
+          "k": "t",
+          "v": " coefficient-exact on all odd "
+        },
+        {
+          "k": "m",
+          "v": "n\\le50000"
+        },
+        {
+          "k": "t",
+          "v": " (both builds); signed certificate "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " violations, margin factor "
+        },
+        {
+          "k": "m",
+          "v": "8.86\\times"
+        },
+        {
+          "k": "t",
+          "v": "; confinement "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "set equality"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "10^6"
+        },
+        {
+          "k": "t",
+          "v": ": zero-credit clash atoms "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{-4}"
+        },
+        {
+          "k": "t",
+          "v": "-coherent odd composites."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(D) Archimedean term internal "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Legendre duplication bridge "
+        },
+        {
+          "k": "m",
+          "v": "(2\\pi)^{-s}\\Gamma(s)=\\tfrac12\\Gamma_{\\mathbb R}(s)\\Gamma_{\\mathbb R}(s{+}1)"
+        },
+        {
+          "k": "t",
+          "v": " (sympy "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "1.8\\times10^{-41}"
+        },
+        {
+          "k": "t",
+          "v": "); kernel identity "
+        },
+        {
+          "k": "m",
+          "v": "k_\\zeta=K_{\\mathrm{fam}}-K_{\\mathrm{shift}}"
+        },
+        {
+          "k": "t",
+          "v": " pointwise "
+        },
+        {
+          "k": "m",
+          "v": "7.9\\times10^{-31}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "51"
+        },
+        {
+          "k": "t",
+          "v": " points; "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta_{\\mathrm{arch}}(h)=A_{\\mathrm{fam}}(h)-A_{\\mathrm{shift}}(h)"
+        },
+        {
+          "k": "t",
+          "v": " on a "
+        },
+        {
+          "k": "m",
+          "v": "10"
+        },
+        {
+          "k": "t",
+          "v": "-row battery subset at rel "
+        },
+        {
+          "k": "m",
+          "v": "9.9\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(E) "
+            },
+            {
+              "k": "m",
+              "v": "\\lambda"
+            },
+            {
+              "k": "t",
+              "v": "-equivariant channel "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " CM carrier "
+        },
+        {
+          "k": "m",
+          "v": "g_\\lambda=\\sum_{\\mathfrak a}\\lambda_1(\\mathfrak a)q^{N\\mathfrak a}"
+        },
+        {
+          "k": "t",
+          "v": " exact in two independent routes ("
+        },
+        {
+          "k": "m",
+          "v": "\\Z[i]"
+        },
+        {
+          "k": "t",
+          "v": " lattice vs Cornacchia reconstruction, "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " mismatches "
+        },
+        {
+          "k": "m",
+          "v": "n\\le10^4"
+        },
+        {
+          "k": "t",
+          "v": "); CM laws exact; "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{supp}(c_1)=\\{\\Z[i]\\text{-norms}\\}"
+        },
+        {
+          "k": "t",
+          "v": " as a set equality; canonical phase mean "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_1=c_1/(c_0d^2)\\in[-1,1]"
+        },
+        {
+          "k": "t",
+          "v": " exact; "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda"
+        },
+        {
+          "k": "t",
+          "v": "-window certificate "
+        },
+        {
+          "k": "m",
+          "v": "0.0653"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "0.2365"
+        },
+        {
+          "k": "t",
+          "v": " unlifted ("
+        },
+        {
+          "k": "m",
+          "v": "3.6\\times"
+        },
+        {
+          "k": "t",
+          "v": "), exact Fraction rechecks."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(F) Frontier facts "
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Unlifted coherent chain crossing "
+        },
+        {
+          "k": "m",
+          "v": "k^*=14"
+        },
+        {
+          "k": "t",
+          "v": " (exact Fractions; "
+        },
+        {
+          "k": "m",
+          "v": "\\log_{10}N^*=23.1"
+        },
+        {
+          "k": "t",
+          "v": "); absolute Robin tail factor "
+        },
+        {
+          "k": "m",
+          "v": "6.16"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "J=10^6"
+        },
+        {
+          "k": "t",
+          "v": " and divergent — the constant route stays open (window constants with declared classical all-"
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": " extension)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Named limits as load-bearing content."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (i) "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "One"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " classically-shaped open lemma remains — the correlated-cancellation lemma on credit-rich non-coherent tail atoms (uniform form); provably-shaped "
+        },
+        {
+          "k": "m",
+          "v": "\\neq"
+        },
+        {
+          "k": "t",
+          "v": " formal proof. (ii) I5 in "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one-family"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " form ("
+        },
+        {
+          "k": "m",
+          "v": "Q_{\\mathrm{cert}}+\\Delta_2+A_{\\mathrm{fam}}-A_{\\mathrm{shift}}\\ge0"
+        },
+        {
+          "k": "t",
+          "v": ") is the single remaining TFPT-specific object — by the closed ledger "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "equivalent"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " to Weil positivity "
+        },
+        {
+          "k": "m",
+          "v": "\\Longleftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " RH (an equivalence "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "typing"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", no progress claim). NOT “almost RH”; "
+        },
+        {
+          "k": "c",
+          "v": "ZETA.HP.CARRIER"
+        },
+        {
+          "k": "t",
+          "v": " untouched; no marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger/papers/website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New ledger row "
+        },
+        {
+          "k": "c",
+          "v": "RTF.GNS.LEDGER.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": " citations in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram extension mirrors the exact algebraic identities; website mirrors ("
+        },
+        {
+          "k": "c",
+          "v": "/prime-front"
+        },
+        {
+          "k": "t",
+          "v": " feed, verification DAG, papers data) updated in the same change."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-25",
+    "dateLabel": "2026-07-25 · XVIII",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v540"
+      },
+      {
+        "k": "t",
+        "v": " — amplitude route and positive linear carrier: open boundary "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda^*"
+      },
+      {
+        "k": "t",
+        "v": " as content; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v540"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "RTF.GNS.AMP.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the discovery amplitude chain T67/T68/T69/T70/T71/T72 into one load-bearing module ("
+        },
+        {
+          "k": "m",
+          "v": "34"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim3"
+        },
+        {
+          "k": "t",
+          "v": " s). Companion to "
+        },
+        {
+          "k": "c",
+          "v": "v538"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.RTF.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "v539"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "RTF.GNS.WEIL.01"
+        },
+        {
+          "k": "t",
+          "v": ": the machine-checked route out of the square plane behind the two v539 obstructions. Classical Cohen 1975 / Siegel–Weil / Jacobi–Fricke / Landen / Hecke split-Mellin / Cauchy–Littlewood / Möbius square sieve / Shimura / Shintani / Weil 1952 / Farkas named classical — NEW is the compiler-native consolidation."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(A) Amplitude Dirac "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "D=\\bigl(\\begin{smallmatrix}0&V\\\\V^{\\mathsf T}&0\\end{smallmatrix}\\bigr)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "V[d,m]=\\sqrt{w_d}\\,b(d)\\chi_d(m)"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "D=D^{\\mathsf T}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "D^2=\\operatorname{diag}(VV^{\\mathsf T},K)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "V^{\\mathsf T}V=K"
+        },
+        {
+          "k": "t",
+          "v": " (rel "
+        },
+        {
+          "k": "m",
+          "v": "2.7\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "); spectrum "
+        },
+        {
+          "k": "m",
+          "v": "=\\pm"
+        },
+        {
+          "k": "t",
+          "v": " singular values; Hecke intertwining exact ("
+        },
+        {
+          "k": "m",
+          "v": "p=3,5,7"
+        },
+        {
+          "k": "t",
+          "v": "); Shimura "
+        },
+        {
+          "k": "m",
+          "v": "b(dp^2)=b(d)(a_p-\\chi_d(p)p)"
+        },
+        {
+          "k": "t",
+          "v": " integer-exact on "
+        },
+        {
+          "k": "m",
+          "v": "644"
+        },
+        {
+          "k": "t",
+          "v": " pairs."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(B) Geometric polarisation + Cohen seed "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "b=N_+-N_-"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta=N_++N_-"
+        },
+        {
+          "k": "t",
+          "v": " lattice-exact; "
+        },
+        {
+          "k": "m",
+          "v": "N_\\pm\\ge0"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "b^2=\\Theta^2-4N_+N_-"
+        },
+        {
+          "k": "t",
+          "v": " for all "
+        },
+        {
+          "k": "m",
+          "v": "n\\le50000"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta"
+        },
+        {
+          "k": "t",
+          "v": " is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "pure"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Siegel–Weil Eisenstein "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_3"
+        },
+        {
+          "k": "t",
+          "v": "-eigenform ("
+        },
+        {
+          "k": "m",
+          "v": "p\\le13"
+        },
+        {
+          "k": "t",
+          "v": ", cusp component zero); Cohen seed "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta(d)=-48\\,L(-1,\\chi_d)"
+        },
+        {
+          "k": "t",
+          "v": " exact-rational on "
+        },
+        {
+          "k": "m",
+          "v": "159"
+        },
+        {
+          "k": "t",
+          "v": " live "
+        },
+        {
+          "k": "m",
+          "v": "d"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(C) Deletion universal "
+            },
+            {
+              "k": "m",
+              "v": "="
+            },
+            {
+              "k": "t",
+              "v": " square-class double counting "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Cauchy–Littlewood window lemma (free Satake symbols, "
+        },
+        {
+          "k": "m",
+          "v": "k\\le6"
+        },
+        {
+          "k": "t",
+          "v": "): numerator "
+        },
+        {
+          "k": "m",
+          "v": "1-stuv\\,X^2"
+        },
+        {
+          "k": "t",
+          "v": ", hence "
+        },
+        {
+          "k": "m",
+          "v": "1-p^6X^2"
+        },
+        {
+          "k": "t",
+          "v": " pair-independent at "
+        },
+        {
+          "k": "m",
+          "v": "st=uv=p^3"
+        },
+        {
+          "k": "t",
+          "v": " (five channels); and "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{fam}\\,[1,0,2,0]+2\\flat\\,[0,2,0,2]+\\delta_{k1}=[2,2,2,2]"
+        },
+        {
+          "k": "t",
+          "v": " generating-function exact (Möbius square sieve exact "
+        },
+        {
+          "k": "m",
+          "v": "n\\le2000"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(D) Positive linear carrier + plus balance "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\ell^2(d,\\mu)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\mu=48\\,|L(-1,\\chi_d)|\\,|d|^{-a}"
+        },
+        {
+          "k": "t",
+          "v": ": full weights "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_k=1+p^{3k}-(\\chi p)^k"
+        },
+        {
+          "k": "t",
+          "v": " (layer "
+        },
+        {
+          "k": "m",
+          "v": "[1,1,1,1]"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "Q=Q_\\zeta(g_-)+Q_\\zeta(g_+)"
+        },
+        {
+          "k": "t",
+          "v": " (rel "
+        },
+        {
+          "k": "m",
+          "v": "2\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "); the "
+        },
+        {
+          "k": "m",
+          "v": "\\flat"
+        },
+        {
+          "k": "t",
+          "v": "/doubling kernel enters "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "with plus"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (sign inverted vs the v539 square-plane minus)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(E) Functional equation exact "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta(i/(8y))=8y^{5/2}\\Theta^\\dagger(iy)"
+        },
+        {
+          "k": "t",
+          "v": " (rel "
+        },
+        {
+          "k": "m",
+          "v": "6\\times10^{-41}"
+        },
+        {
+          "k": "t",
+          "v": ", Fricke closed); "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda_\\Theta(s)=8^{1-s}\\Lambda_{\\Theta^\\dagger}(5/2-s)"
+        },
+        {
+          "k": "t",
+          "v": " in the strip (rel "
+        },
+        {
+          "k": "m",
+          "v": "1.4\\times10^{-40}"
+        },
+        {
+          "k": "t",
+          "v": ", independent split points); poles "
+        },
+        {
+          "k": "m",
+          "v": "5/2"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " swapped; centre "
+        },
+        {
+          "k": "m",
+          "v": "5/4"
+        },
+        {
+          "k": "t",
+          "v": ", plus-locus offset exactly "
+        },
+        {
+          "k": "m",
+          "v": "1/4"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(F) Cone facts + named open boundary "
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Guaranteed cone and library hull FE-self-dual, gap functional "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda^*"
+        },
+        {
+          "k": "t",
+          "v": " FE-covariant ("
+        },
+        {
+          "k": "m",
+          "v": "36/36"
+        },
+        {
+          "k": "t",
+          "v": " sampled); mirror sign law "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{sign}\\psi(n)=(-1)^{\\lfloor n/2\\rfloor+1}"
+        },
+        {
+          "k": "t",
+          "v": " exact ("
+        },
+        {
+          "k": "m",
+          "v": "n\\le50000"
+        },
+        {
+          "k": "t",
+          "v": "); constraint class "
+        },
+        {
+          "k": "m",
+          "v": "C_{L3}=\\{n\\equiv6\\bmod 8\\}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda^*"
+        },
+        {
+          "k": "t",
+          "v": " exists with one exact Farkas witness ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda^*_{L3}=0.0511"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "n^*=6"
+        },
+        {
+          "k": "t",
+          "v": "); coverage saturates — the residual distance to the Weil cone "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda^*"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "n\\equiv6\\bmod 8"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fences."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Euler-region positivity only (edge "
+        },
+        {
+          "k": "m",
+          "v": "L"
+        },
+        {
+          "k": "t",
+          "v": "-values, not the central line); not “almost RH”; "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda^*"
+        },
+        {
+          "k": "t",
+          "v": " is the named open boundary "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "inside"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the claim; "
+        },
+        {
+          "k": "c",
+          "v": "ZETA.HP.CARRIER"
+        },
+        {
+          "k": "t",
+          "v": " untouched; no marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger "
+        },
+        {
+          "k": "c",
+          "v": "RTF.GNS.AMP.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\backslash"
+        },
+        {
+          "k": "t",
+          "v": "veri in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram extension "
+        },
+        {
+          "k": "m",
+          "v": "+5"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "613\\to618"
+        },
+        {
+          "k": "t",
+          "v": "); website "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " + VerificationDag E8 + "
+        },
+        {
+          "k": "c",
+          "v": "primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " + ScriptIndex via "
+        },
+        {
+          "k": "c",
+          "v": "bash build.sh gen"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-25",
+    "dateLabel": "2026-07-25 · XVII",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v539"
+      },
+      {
+        "k": "t",
+        "v": " — Weil structure of the compiler family: two isolated obstructions; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v539"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "RTF.GNS.WEIL.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of discovery probes T55/T61/T62/T63 (Route-B chain) into one load-bearing module ("
+        },
+        {
+          "k": "m",
+          "v": "25"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim6"
+        },
+        {
+          "k": "t",
+          "v": " s). Companion to "
+        },
+        {
+          "k": "c",
+          "v": "v538"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.RTF.01"
+        },
+        {
+          "k": "t",
+          "v": ": the compiler family carries a fully identified Weil structure up to "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "two explicitly isolated obstructions"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (obstructions are prominent verified content, not a footnote). Classical Weil 1952 / Gelfand / direct integrals / SU"
+        },
+        {
+          "k": "m",
+          "v": "(2)"
+        },
+        {
+          "k": "t",
+          "v": "–Chebyshev / Sato–Tate / "
+        },
+        {
+          "k": "m",
+          "v": "2^\\omega"
+        },
+        {
+          "k": "t",
+          "v": "-series / GNS named classical — NEW is the compiler-native identification and the machine-checked isolation of the two obstructions."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(A) GNS fibre structure "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Metric "
+        },
+        {
+          "k": "m",
+          "v": "\\ell^2(d,b^2/|d|)"
+        },
+        {
+          "k": "t",
+          "v": " diagonal; fibres "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma(d)=(\\chi_d(3),\\ldots,\\chi_d(13))"
+        },
+        {
+          "k": "t",
+          "v": " partition the live family ("
+        },
+        {
+          "k": "m",
+          "v": "1191"
+        },
+        {
+          "k": "t",
+          "v": " fund. "
+        },
+        {
+          "k": "m",
+          "v": "d\\le12000"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda_{\\mathrm{fam}}"
+        },
+        {
+          "k": "t",
+          "v": " exact constant on each fibre; twist-mix per fibre "
+        },
+        {
+          "k": "m",
+          "v": "\\le5.037\\times10^{-16}<10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(B) Isotype / GL"
+            },
+            {
+              "k": "m",
+              "v": "(1)"
+            },
+            {
+              "k": "t",
+              "v": " core "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Character expansions "
+        },
+        {
+          "k": "m",
+          "v": "\\Phi_1=\\chi_0+\\chi_2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Phi_2=\\chi_4-\\chi_2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Phi_3=2\\chi_0-\\chi_4+\\chi_6"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Phi_4=\\chi_8-\\chi_6"
+        },
+        {
+          "k": "t",
+          "v": "; core series "
+        },
+        {
+          "k": "m",
+          "v": "c_{k,0}=[1,0,2,0,2,0]"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "G_0=(1+Y)/(1-Y)=\\zeta_p(w-3)^2/\\zeta_p(2w-6)"
+        },
+        {
+          "k": "t",
+          "v": "; global "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta(u)^2/\\zeta(2u)=\\sum 2^{\\omega(n)}n^{-u}"
+        },
+        {
+          "k": "t",
+          "v": " (Dirichlet exact through "
+        },
+        {
+          "k": "m",
+          "v": "n\\le2000"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(C) Weil linear relation "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Prime}_F=2P_\\zeta(g)-2P_\\zeta(g_\\flat)"
+        },
+        {
+          "k": "t",
+          "v": " (max rel "
+        },
+        {
+          "k": "m",
+          "v": "9\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "Q_{\\mathrm{fam}}=Q_F+\\mathrm{Corr}"
+        },
+        {
+          "k": "t",
+          "v": " (rel "
+        },
+        {
+          "k": "m",
+          "v": "2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Obstructions as verified content "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (1) Doubling enters with a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "minus"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (family positivity does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " imply "
+        },
+        {
+          "k": "m",
+          "v": "Q_\\zeta\\ge0"
+        },
+        {
+          "k": "t",
+          "v": "). (2) Plancherel Corr non-automorphic: polar/arch absorption FAIL; finite Euler factor FAIL; "
+        },
+        {
+          "k": "m",
+          "v": "e^{-\\sum p^{-u}}"
+        },
+        {
+          "k": "t",
+          "v": " PASS."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Finite-class positivity "
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "Q_{\\mathrm{fam}}\\in[4.369,11.486]"
+        },
+        {
+          "k": "t",
+          "v": " on the finite test class; dense-class positivity open / RH-adjacent — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " claimed."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fences."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Not “almost RH” — the claim structurally shows why family positivity does not imply RH; "
+        },
+        {
+          "k": "c",
+          "v": "ZETA.HP.CARRIER"
+        },
+        {
+          "k": "t",
+          "v": " untouched; no marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger "
+        },
+        {
+          "k": "c",
+          "v": "RTF.GNS.WEIL.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\backslash"
+        },
+        {
+          "k": "t",
+          "v": "veri in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram extension "
+        },
+        {
+          "k": "m",
+          "v": "+5"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "608\\to613"
+        },
+        {
+          "k": "t",
+          "v": "); website "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " + VerificationDag E8 + "
+        },
+        {
+          "k": "c",
+          "v": "primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " + ScriptIndex via "
+        },
+        {
+          "k": "c",
+          "v": "bash build.sh gen"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-25",
+    "dateLabel": "2026-07-25 · XVI",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v538"
+      },
+      {
+        "k": "t",
+        "v": " — compiler relative-trace identity: three projections of one finite RTF; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v538"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "HECKE.GEOM.RTF.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of discovery probe T53 ("
+        },
+        {
+          "k": "c",
+          "v": "relative_trace_compiler_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") into one load-bearing module ("
+        },
+        {
+          "k": "m",
+          "v": "18"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim14"
+        },
+        {
+          "k": "t",
+          "v": " s). Companion synthesis of "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v536"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.EICHLER.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "v537"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.HALFINT.01"
+        },
+        {
+          "k": "t",
+          "v": ": these are three "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "projections"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of one finite relative-trace identity "
+        },
+        {
+          "k": "m",
+          "v": "[\\text{"
+        },
+        {
+          "k": "t",
+          "v": "E_8"
+        },
+        {
+          "k": "m",
+          "v": "/glue orbital counting}]=[\\text{Newform/Waldspurger spectral sum}]"
+        },
+        {
+          "k": "t",
+          "v": ", not three separate results. Classical Jacquet-type RTF / Eichler / Witt / Waldspurger / theta correspondence named classical — NEW is the compiler-native realisation and the machine-checked bilateral independence."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(R1) Trace identity, both sides independent "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}_V(\\nu_p\\circ\\pi)"
+        },
+        {
+          "k": "t",
+          "v": " geometric ("
+        },
+        {
+          "k": "m",
+          "v": "a_p=-c(p)/8"
+        },
+        {
+          "k": "t",
+          "v": " from the glue census, no modular input) equals spectral ("
+        },
+        {
+          "k": "m",
+          "v": "a_p"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "\\eta(2\\tau)^4\\eta(4\\tau)^4"
+        },
+        {
+          "k": "t",
+          "v": ", no geometry) for all "
+        },
+        {
+          "k": "m",
+          "v": "(p,\\pi)\\in\\{3,5,7\\}\\times\\{\\mathrm{Id},\\pi_{\\mathrm{Eis}},\\pi_{\\mathrm{cusp}},\\pi_{E_4},\\pi_{f_8}\\}"
+        },
+        {
+          "k": "t",
+          "v": ". Anchors (Id, Eis, cusp, "
+        },
+        {
+          "k": "m",
+          "v": "E_4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "f_8"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "m",
+          "v": "p{=}3{:}\\,(6304,5600,704,1120,352)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "p{=}5{:}\\,(105848,98280,7568,19656,3784)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "p{=}7{:}\\,(727680,688000,39680,137600,19840)"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(R2) Orbit dictionary "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The Eichler split "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\mathrm{geom}}=\\lambda_{\\mathrm{Eis}}+a_p^2"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the RTF orbit decomposition (principal orbit "
+        },
+        {
+          "k": "m",
+          "v": "a\\cdot\\mathrm{Id}\\to\\lambda_{\\mathrm{Eis}}=L-\\sigma_3^2"
+        },
+        {
+          "k": "t",
+          "v": "; elliptic "
+        },
+        {
+          "k": "m",
+          "v": "b\\cdot T_p\\to a_p^2"
+        },
+        {
+          "k": "t",
+          "v": "; cross terms cancel). Anchors "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\mathrm{Eis}}=336/3780/19264"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "a_p^2=16/4/576"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(R3) Period side is lattice counting "
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "g"
+        },
+        {
+          "k": "t",
+          "v": " is the quaternary form "
+        },
+        {
+          "k": "m",
+          "v": "n=(x^2+y^2)/2+2z^2+u^2+2w^2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "x,y"
+        },
+        {
+          "k": "t",
+          "v": " odd; sign "
+        },
+        {
+          "k": "m",
+          "v": "(-1)^{|u|+|w|}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "b_{\\mathrm{rep}}=b"
+        },
+        {
+          "k": "t",
+          "v": " exactly through "
+        },
+        {
+          "k": "m",
+          "v": "n\\le200"
+        },
+        {
+          "k": "t",
+          "v": "; then "
+        },
+        {
+          "k": "m",
+          "v": "[\\text{signed lattice count}]^2=R\\cdot|d|^{3/2}\\cdot L(f_8\\times\\chi_d,2)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "R=23.1873585645"
+        },
+        {
+          "k": "t",
+          "v": " (rel "
+        },
+        {
+          "k": "m",
+          "v": "\\sim10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "). Verdict "
+        },
+        {
+          "k": "c",
+          "v": "ONE-FORMULA"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fences."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Identity is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "finite"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "p\\in\\{3,5,7\\}"
+        },
+        {
+          "k": "t",
+          "v": ", finite "
+        },
+        {
+          "k": "m",
+          "v": "d"
+        },
+        {
+          "k": "t",
+          "v": "-windows); the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "infinite"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " RTF (sum over all "
+        },
+        {
+          "k": "m",
+          "v": "p"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "d"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " archimedean term) is the named open step; no RH; not "
+        },
+        {
+          "k": "c",
+          "v": "ZETA.HP.CARRIER"
+        },
+        {
+          "k": "t",
+          "v": "-relevant; no marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.RTF.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\backslash"
+        },
+        {
+          "k": "t",
+          "v": "veri in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram extension "
+        },
+        {
+          "k": "m",
+          "v": "+5"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "603\\to608"
+        },
+        {
+          "k": "t",
+          "v": "); website "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " + VerificationDag E8 + "
+        },
+        {
+          "k": "c",
+          "v": "primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " + ScriptIndex via "
+        },
+        {
+          "k": "c",
+          "v": "bash build.sh gen"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-24",
     "dateLabel": "2026-07-24 · XV",
     "heading": [
