@@ -68,7 +68,19 @@ export type PrimeFrontVerdict =
   | "TIGHT-SET-PARAMETRIZED"
   | "CROSSING-MAPPED"
   | "CORE-DISSECTED"
-  | "BAND-PARTIAL";
+  | "BAND-PARTIAL"
+  | "T-SKELETON"
+  | "MIXED"
+  | "BLIND-100"
+  | "T-CONTINUUM-NUMERIC"
+  | "RELAY-CONFIRMED"
+  | "ALIGNMENT-ONLY"
+  | "LAW-CONFIRMED-MECHANISM-OPEN"
+  | "DECAY-LAW-FOUND"
+  | "REMAINDER-CLOSES-ZONES"
+  | "CROWDING-TRENDS"
+  | "MECHANISM-IDENTIFIED"
+  | "INSTRUMENT-IMPROVED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -94,12 +106,144 @@ export type PrimeFrontUpdate = {
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
   {
     date: "2026-07-26",
+    part: 103,
+    title:
+      "Instrument improved — the race slope halves; closure jumps to 44/64",
+    verdict: "INSTRUMENT-IMPROVED",
+    summary:
+      "T103 (INSTRUMENT-IMPROVED, 29/29) — door C, tool-building: the T101 race curve is exactly reproduced (slope −0.1622 ± 0.0562), then re-run with a θ-weighted band sum (certified weights, chain ρ ≤ b_band ≤ b_tail ≤ b_t99 at 64/64 samples) and full m(Λ) exploitation — Λ_ok stays bounded across all 16 zones (0.771…3.640 instead of 2.3…376; demand reduction 3.0–103×; honest price: explicit modes grow 2 → 232). New race slope −0.0748 ± 0.0116 (2.2× flatter, fit); r_k falls only 9.33 → 2.70 and never leaves the spectrum; the closure map jumps 7/64 → 44/64 with one fixed k-uniform instrument (Λ₀ = 3, r = 2). Measured verdict: the remaining loss is NOT in the bulk (θ-weighting and finite rank exhausted; the bulk is not low-rank — effective rank up to 0.579·dim E₋) but in the wing slack S = 1 − ρ (pencil nearly saturated; S falls 0.2091 → 0.0392) — next lever: a wing-adapted prolate/Slepian basis or a Fredholm shape of the equality argument. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "instrument_probe.py",
+  },
+  {
+    date: "2026-07-26",
+    part: 102,
+    title:
+      "Mechanism identified — the onset is manufactured by Schur dressing; C/g was a proxy",
+    verdict: "MECHANISM-IDENTIFIED",
+    summary:
+      "T102 (MECHANISM-IDENTIFIED, 42/42) — door A, attack on the handoff law's lower bound: the mechanism is exact — the k-th atom acts on E₋/E₀/E₊ as diag(−1/2, 0, +1/2), so μ_k enters exactly once, linearly; a two-sided sandwich over the Schur profile σ_k(δ) brackets the handoff (2w_k between the crossings in 16/16 zones; the onset is anchored at δ_c = 2w_k, R² 0.968 — the T96 essential-singularity reading is compatible but not singled out). The binding constraint FLIPS: no concentration condition binds — the bare E₋ form is strongly positive (4–14× μ_k/2) and the classical ceilings (Cauchy–Schwarz, Landau–Pollak/prolate) are saturated near 97%; the onset is manufactured entirely by the Schur dressing against E₀⊕E₊ (35.7%…97.3% of the bare eigenvalue), i.e. by the coupling to the induction hypothesis. The decomposition test is triply negative: g_k is causally impossible, statistically dispensable, arithmetically only a ceiling (the extrapolation violates it from k = 69; checked over 18 120 prime-power atoms to n = 200 000) — the T101 law C/g was a proxy. The hard core localizes to one scalar per zone: a lower bound on σ_k(δ_ref) just above atom entry — probe-level typing of where the hardness sits, not progress on it. T103's wing slack S = 1 − ρ and T102's Schur dressing are the same object from two sides; T104 (SCHUR.PROFILE.BOUND) is running. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "arithmetic_bound_probe.py",
+  },
+  {
+    date: "2026-07-26",
+    part: 101,
+    title:
+      "Crowding trends — but the race is lost by the instrument, not the math",
+    verdict: "CROWDING-TRENDS",
+    summary:
+      "T101 (CROWDING-TRENDS with location, 31/31) — the fork: 16 zones resolved (n = 2..29). HEADLINE: the collapsed law w_k = 0.0838·(atom gap)/μ_k (fit) — “the handoff window is the atom spacing divided by the atom strength” (scatter 8.85× → 2.66×, residual trend null). The PRIMITIVES are FLAT across 16 zones (w/g flat; relative D_k margin flat; D_k ≤ μ_k/2 holds 64/64 and never fails); ONLY the closing instrument loses (r ~ exp(−0.16k), fit/extrapolation). Core sentence: “The crowding sits in the proof family, not in the mathematics it is trying to prove — the most hopeful version of the verdict.” An asymptotics theorem would need (A) the arithmetic lower bound of the collapsed law [THE localized hardness], (B) uniform relative margin, (C) a better bulk instrument, (D) a finite check. All laws marked as fits; k > 16 as extrapolation. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "k_asymptotics_probe.py",
+  },
+  {
+    date: "2026-07-26",
+    part: 100,
+    title:
+      "The 100th probe — remainder closes zones 2–4; zone-5 tip is an equality",
+    verdict: "REMAINDER-CLOSES-ZONES",
+    summary:
+      "T100 (REMAINDER-CLOSES-ZONES, 27/27) — the 100th probe: closure 11/24 → 24/24 (6/6 in every zone); the drift was a lattice artefact; one lever gained 1.7–69× (“the Bessel step threw the induction data away twice”); zones 2–4 fully closed; zone-5 tip typed as an equality problem (Fredholm shape, simple degeneration). Classical: Bessel/Parseval, Slepian, Schur test, Fredholm alternative. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "bulk_remainder_probe.py",
+  },
+  {
+    date: "2026-07-26",
+    part: 99,
+    title:
+      "Decay law found — parity selection rule; recursion terminates arithmetically",
+    verdict: "DECAY-LAW-FOUND",
+    summary:
+      "T99 (DECAY-LAW-FOUND, 23/23): exact parity selection rule (J₋Q₋₀J₀ = −Q₋₀) — the fragile near-null mode is excluded from the binding channel by symmetry; recursive inequality with only 1.01–1.20× loss; termination is arithmetic (240/240 in ≤ 4 steps to the classical zone). Sandbox; not RH evidence. Classical: Schur, parity/reflection identities.",
+    badge: "sandbox",
+    script: "dk_recursion_probe.py",
+  },
+  {
+    date: "2026-07-26",
+    part: 98,
+    title:
+      "Law confirmed, mechanism open — circular lemma replaced by exact scalar identity",
+    verdict: "LAW-CONFIRMED-MECHANISM-OPEN",
+    summary:
+      "T98 (LAW-CONFIRMED-MECHANISM-OPEN with REPLACED TARGET, 44/44) — the third self-correction of the weekend, the most valuable: the conjectured one-vector lemma was circular (Douglas range inclusion — “the law is forced by positivity itself and carries no independent information”); three T97 premises honestly refuted; REPLACEMENT: the exact scalar inequality D_k(α) ≤ μ_k/2 (identity, no constant, no vector) — holds in all four zones, lattice-stable, saturates exactly at the zone tips where the next atom takes over. PLUS both certificate upgrades: E₋ from 43% to 93% mean (the WHOLE zone in 3 of 4 — via the probability-measure identity: “the archimedean term on the wings is a MEAN of k against a probability measure; Slepian forces narrow wings to high frequencies where k is positive”); E₊ certified for the first time. Skeleton stand: 8 pieces PROVED, 2 certificates, 3 refuted, 3 open (the D_k bound, E₊ cross-blocks, certificate completion). Classical: Douglas 1966, Schur, Slepian–Pollak–Landau, Rellich, Rayleigh–Ritz, Richardson. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "cross_lemma_probe.py",
+  },
+  {
+    date: "2026-07-26",
+    part: 97,
+    title:
+      "Alignment-only with certified half-step — induction takes proof shape",
+    verdict: "ALIGNMENT-ONLY",
+    summary:
+      "T97 (ALIGNMENT-ONLY with certified half-step, 105/105): the relay induction step gets proof shape — alignment is sharp (sign alignment ⟺ coupling window nonempty, without exception); the t=0 killer loss on the anti-bump space is PROVED (k_eff = (1−cos(tu))k(t), gain ×2–4.8); structure pearl: the E₀ block is literally the same form on the smaller window — “the induction hypothesis appears inside its own decomposition as self-similarity” (7e-14). Sandbox; not RH evidence. Classical: Schur complement, Paley–Wiener, Prolate.",
+    badge: "sandbox",
+    script: "relay_induction_probe.py",
+  },
+  {
+    date: "2026-07-26",
+    part: 96,
+    title:
+      "Edge artifact + relay confirmed — each prime arrives before it is needed",
+    verdict: "RELAY-CONFIRMED",
+    summary:
+      "T96 (EDGE-ARTIFACT + RELAY-CONFIRMED, 21/21): (i) the T95 “edge” at α* was a map artefact — λ_min stays positive on all of [0.38, 0.86] (value exactly reproduced, interpretation corrected; “the margin never crosses zero — it collapses exponentially, λ ~ exp(−49α)”). (ii) THE RELAY IS REAL: without the log3-atom λ_min crashes to −0.445, the loser is exactly the anti-double-bump at distance log 3 (alignment −0.99), rescue identity to 5e-15 — and the handover windows are all positive: “every prime atom arrives strictly BEFORE it is needed (+0.025/+0.009/+0.011/+0.007 for the first four atoms).” (iii) Strategy shift: not an edge problem but a margin problem; numerics as witness exhausted past α ≈ 0.55; the counterfactual is the proof target (O(0.1)-sizes instead of 1e-6). Second self-correction of the weekend, same anchor discipline. Classical: Paley–Wiener, Prolate, Galerkin/Richardson. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "relay_test_probe.py",
+  },
+  {
+    date: "2026-07-26",
+    part: 95,
+    title:
+      "Continuum attempt — C1 fully proved; atom-extremal directions are safe",
+    verdict: "T-CONTINUUM-NUMERIC",
+    summary:
+      "T95 (T-CONTINUUM-NUMERIC, 28/28): the continuum proof attempt — the C1 chain is FULLY PROVED (unconditional: |h_f(log2)| ≤ 1/2 via disjoint support intervals in the band; ‖S‖ = 1/2 exact with characterised eigenspace; the atom-extremal directions satisfy the target inequality WITH margin — “the directions that maximize the atom cost are provably safe”); the continuum margin curve stays positive everywhere; the extremizer is NOT the two-bump structure — the binding mechanism is atom rescue (confirmed in corrected coordinates); lower bound open, missing instrument structurally named. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "continuum_extension_probe.py",
+  },
+  {
+    date: "2026-07-26",
+    part: 94,
+    title:
+      "Blind demo — 753/753 primes predicted with zero errors, no division",
+    verdict: "BLIND-100",
+    summary:
+      "T94 (BLIND-100, 16/16): the compiler predicted all 753 primes of a never-seen window [1,000,001–1,010,000] with zero errors — from pure lattice counting (odd n prime ⟺ r₄(n) = 8(n+1), Jacobi 1834 on the rank-|μ₄| theta tower), with an AST-enforced prediction path containing no divisibility tests (no isprime, no sieve, no %, //, / operators); predictions committed by MD5 before any truth was computed. Honesty: a simple sieve is ~820× faster — this is structure completeness, not algorithmic progress; spectral prediction (zeros → primes) remains bound to I5/RH. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "prime_blind_demo_probe.py",
+  },
+  {
+    date: "2026-07-26",
+    part: 93,
+    title:
+      "Reconciliation — the self-check found the checker's bug; a_neg recalibrated",
+    verdict: "MIXED",
+    summary:
+      "T93 (MIXED, 41/41): T92 reported two calibration discrepancies against the band map; an independent third implementation found the T89/T91 map SURVIVES — 6.98 was only a stale prose value (the probes always computed 6.2898); the second discrepancy was pure factor-2 convention plus a 1% interpolation artefact (a_neg precision-improved: 0.7410 → 0.7486); the only real bug was in the checker T92 itself (constants imported untranslated — it accidentally certified a harder four-atom region). Survival list: one-atom zone, atom rescue, a* = 0.9253, uncertainty constants, REST vectors — all stand. Sentence: “The self-check found the checker's bug — and precision-improved one constant by 1%. The anchor discipline works in both directions.” Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "band_reconciliation_probe.py",
+  },
+  {
+    date: "2026-07-26",
+    part: 92,
+    title:
+      "Zone-extension skeleton — finite blocks are the wrong instrument",
+    verdict: "T-SKELETON",
+    summary:
+      "T92 (T-SKELETON, 36/36): machine-assisted proof attempt of the zone extension — certified is Q ≥ 6.7e-12 > 0 on the 8-dim window subspace over the whole scanned region (error certificate, 1057-point covering); the full extension does NOT stand: λ_min collapses geometrically (factor ~11 per mode), the complement would need ~5000 modes — “the finite-block route is structurally the wrong instrument.” Pearl: k(0) = −γ − 3log2 − π/2 − log π exact. (Calibration flags against T89/T91 were later resolved by T93 as the checker's bug.) Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "zone_extension_proof_probe.py",
+  },
+  {
+    date: "2026-07-26",
     part: 91,
     title:
       "The band's law — the first prime rescues positivity; named target inequality (T)",
     verdict: "BAND-PARTIAL",
     summary:
-      "T91 (BAND-PARTIAL, 19/19, 3/4 closed): the band is the one-atom zone log 2 < a ≤ 0.9253 with inner edge a_neg = 0.7410 — and the geography's cleanest finding: beyond a_neg the prime-free margin changes sign and THE PRIME ATOM BECOMES LOAD-BEARING — the first prime rescues positivity where the archimedean margin is exhausted (the T89 balance point is exactly this sign change, 0.03%). Atom turn-on law exact (k = 2m+1, Beta integrals); uncertainty constants decided: a·t_rms → π (Wirtinger) and a·t_cent → 2Si(π) − 4/π = 2.4306 (new closed constant); band and tight curves are two orbit regions of the same functional with shared exact scale ∫k_ζ = 2θ_RS (Riemann–Siegel). Named target inequality (T): (P_pole + A_arch)(f) ≥ √2·log2·h_f(log2) on the band — provable-shaped as a ZONE EXTENSION beyond Bombieri's log 2 (a self-standing classical target!); RH ⇒ (T), (T) ⇏ RH. Honest open: the super-exponential λ_pf rate remains empirical. Classical: Wirtinger/Rayleigh, Beta integrals, Lambert-W, Si integral, Bombieri, θ_RS. Sandbox; not RH evidence.",
+      "T91 (BAND-PARTIAL, 19/19, 3/4 closed): the band is the one-atom zone log 2 < a ≤ 0.9253 with inner edge a_neg = 0.7486 (recalibrated by T93; was 0.7410) — and the geography's cleanest finding: beyond a_neg the prime-free margin changes sign and THE PRIME ATOM BECOMES LOAD-BEARING — the first prime rescues positivity where the archimedean margin is exhausted (the T89 balance point is exactly this sign change). Atom turn-on law exact (k = 2m+1, Beta integrals); uncertainty constants decided: a·t_rms → π (Wirtinger) and a·t_cent → 2Si(π) − 4/π = 2.4306 (new closed constant); band and tight curves are two orbit regions of the same functional with shared exact scale ∫k_ζ = 2θ_RS (Riemann–Siegel). Named target inequality (T): (P_pole + A_arch)(f) ≥ √2·log2·h_f(log2) on the band — provable-shaped as a ZONE EXTENSION beyond Bombieri's log 2 (a self-standing classical target!); RH ⇒ (T), (T) ⇏ RH. Honest open: the super-exponential λ_pf rate remains empirical. Classical: Wirtinger/Rayleigh, Beta integrals, Lambert-W, Si integral, Bombieri, θ_RS. Sandbox; not RH evidence.",
     badge: "sandbox",
     script: "thin_band_analytic_probe.py",
   },
@@ -887,6 +1031,9 @@ export const PRIME_FRONT_SECTIONS = [
   { id: "doors-furnished", label: "Doors furnished" },
   { id: "three-perspectives", label: "Three perspectives" },
   { id: "i5-geography", label: "I5 geography" },
+  { id: "mechanism", label: "The mechanism" },
+  { id: "instrument-race", label: "The race" },
+  { id: "two-doors", label: "Two doors" },
   { id: "meaning", label: "What it would mean" },
   { id: "updates", label: "Live updates" },
 ] as const;

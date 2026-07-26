@@ -12,7 +12,7 @@ const VERDICT_COLOR: Partial<Record<PrimeFrontVerdict, string>> = {
   "TERRAIN-MAPPED": "text-slate-200",
   TYPED: "text-slate-300",
   PARTIAL: "text-amber-200",
-  MIXED: "text-amber-200",
+  MIXED: "text-sky-300",
   BENCHMARK: "text-slate-300",
   DEFLATED: "text-rose-300",
   DEAD: "text-rose-300",
@@ -46,6 +46,15 @@ const VERDICT_COLOR: Partial<Record<PrimeFrontVerdict, string>> = {
   "CROSSING-MAPPED": "text-amber-100",
   "CORE-DISSECTED": "text-violet-200",
   "BAND-PARTIAL": "text-emerald-200",
+  "T-SKELETON": "text-amber-200",
+  "BLIND-100": "text-emerald-300",
+  "T-CONTINUUM-NUMERIC": "text-sky-300",
+  "RELAY-CONFIRMED": "text-emerald-200",
+  "ALIGNMENT-ONLY": "text-sky-300",
+  "LAW-CONFIRMED-MECHANISM-OPEN": "text-violet-200",
+  "DECAY-LAW-FOUND": "text-sky-300",
+  "REMAINDER-CLOSES-ZONES": "text-emerald-200",
+  "CROWDING-TRENDS": "text-amber-100",
 };
 
 export function UpdateFeed() {

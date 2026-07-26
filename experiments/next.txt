@@ -1,3 +1,300 @@
+# 2026-07-26 (XVII) — Teil 103 (delegiert, Werkzeugbau — Tür C, Opus 5): instrument_probe.py — **INSTRUMENT-IMPROVED** — das Werkzeug-Problem HALB GELÖST (Vertrag INSTRUMENT): neuer Renn-Slope **−0.0748 ± 0.0116** gegen −0.1622 (2.2× flacher, Fit); r_k fällt nur noch 9.33 → 2.70 und verlässt das Spektrum NIE; die Schließungs-Karte springt von 7/64 auf **44/64** mit EINEM festen k-uniformen Instrument (Λ₀ = 3, r = 2); der Rest liegt NICHT mehr am Bulk, sondern am Flügel-Schlupf S = 1 − ρ — 29/29, 31s, Sandbox
+# Anker: T101-Rennkurve exakt reproduziert (Slope −0.1622 ± 0.0562); T100-Schwellen
+#    reproduziert — beide Werkzeug-Hebel messen gegen dieselben Referenzen.
+# I1 θ-gewichtete Band-Summe: zertifizierte Gewichte w_j ≥ 1/λ_j, Kette ρ ≤ b_band ≤ b_tail
+#    ≤ b_t99 an 64/64 Proben; die Band-Massen-Dichte fällt mit θ = 0.34…1.51 (Median 0.74,
+#    Fit), der m(Λ)-Schwanz mit p ≈ 1.19 (Fit).
+# I2 volle m(Λ)-Ausreizung: Λ_ok bleibt über alle 16 Zonen und 4 Flügel-Fraktionen
+#    BESCHRÄNKT (0.771…3.640 statt 2.3…376) — Bedarfsreduktion 3.0×…103.4×; ehrlicher
+#    Preis: explizite Moden wachsen 2 → 232.
+# I3 das Rennen neu gefahren: neuer Slope −0.0748 ± 0.0116 gegen −0.1622 (2.2× flacher,
+#    Fit); r_k fällt nur 9.33 → 2.70 und verlässt das Spektrum nie; Schließung 7/64 → 44/64
+#    mit festem k-uniformem Instrument (Λ₀ = 3, r = 2) — kein Zonen-Tuning.
+# I4 Urteil: der Rest liegt NICHT mehr am Bulk (θ-Gewichtung und endlicher Rang gemessen
+#    erschöpft; der Bulk ist nicht niedrigrangig — effektiver Rang bis 0.579·dim E₋),
+#    sondern am FLÜGEL-SCHLUPF S = 1 − ρ (Pencil A_sh − W fast gesättigt; S fällt
+#    0.2091 → 0.0392). Empfehlung: Flügel-adaptierte Prolate/Slepian-Basis oder
+#    Fredholm-Gestalt des Gleichheits-Arguments.
+# Serie (XII)–(CXIV): 103 Proben, 2499/2499 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; alle Gesetze als Fits deklariert; Klassik
+# (Prolate/Slepian, Schur, Fredholm) zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-26 (XVI) — Teil 102 (delegiert, Angriff auf die Untergrenze — Tür A, Opus 5): arithmetic_bound_probe.py — **MECHANISM-IDENTIFIED** — der Mechanismus des Übergabe-Gesetzes ist EXAKT (Vertrag ARITHMETIC.BOUND): μ_k tritt genau EINMAL linear auf, zweiseitiges Sandwich über das Schur-Profil σ_k(δ); die bindende Constraint KIPPT — der Onset wird vollständig vom SCHUR-DRESSING gegen E₀⊕E₊ fabriziert (35.7%…97.3% des bare-Eigenwerts), d.h. von der Kopplung an die Induktionshypothese; das T101-Gesetz C/g war ein PROXY (Zerlegungstest dreifach negativ); der harte Kern LOKALISIERT auf EINEN Skalar pro Zone — 42/42, 38.7s, Sandbox
+# A1 Mechanismus exakt: das k-te Atom ist auf E₋/E₀/E₊ genau diag(−1/2, 0, +1/2) ⇒
+#    Q_{k−1} = Q_full − (μ_k/2)P₋ + (μ_k/2)P₊ — μ_k tritt genau einmal linear auf;
+#    zweiseitiges Sandwich über das Schur-Profil σ_k(δ): μ_k/2 ≤ σ_k ⇒ Übergabe hält;
+#    2w_k liegt in 16/16 Zonen zwischen den Kreuzungen.
+# Onset-Korrektur zu T96: der Onset ist an δ_c = 2w_k VERANKERT (Kreuzung zweier endlicher
+#    Größen, R² 0.968); exp-Singularität vs Potenz nicht trennbar — T96s essentiell-
+#    singuläre Lesart kompatibel, aber nicht ausgezeichnet; die c-Streuung (CV 103%)
+#    kollabiert in der skalenfreien Variable auf c′ = 1.52.
+# DIE BINDENDE CONSTRAINT KIPPT: keine Konzentrations-Bedingung bindet — die nackte
+#    E₋-Form ist stark positiv (bare 2.65…3.52 = 4–14× μ_k/2); Pol-Flip und Bandmasse
+#    sättigen ihre klassischen Decken (96.9–97.1% Cauchy-Schwarz bzw. Landau-Pollak/
+#    Prolate); der Onset wird vollständig vom Schur-Dressing gegen E₀⊕E₊ fabriziert
+#    (nimmt 35.7%…97.3% des bare-Eigenwerts) — der Verlierer liegt NICHT in E₋
+#    (Mittel-Masse 0.0092, E₀-dominiert).
+# A2 Kandidaten-Schranke w_k ≥ A_k·μ_k^{1/q_k} hält 16/16 (Verhältnis 0.749…0.940), reine
+#    μ-Potenz (q = −1.84 ± 0.37, w ~ μ^{−0.563}, Fits); kein log, KEIN g_k in F.
+# Zerlegungstest NEGATIV (dreifach): g_k kausal unmöglich (Q_{k−1} blind gegen n_{k+1});
+#    statistisch entbehrlich (kausales Gesetz C·u: CV 23.3% vs 27.6%); arithmetisch nur
+#    Decke (C_k ≤ g_kμ_k exakt; 16-Zonen-Extrapolation verletzt die Decke ab k = 69;
+#    geprüft über 18 120 Primpotenz-Atome bis n = 200 000). Das T101-Gesetz C/g war ein
+#    Proxy.
+# HARTER KERN LOKALISIERT auf einen Skalar pro Zone: Untergrenze an A_k bzw. σ_k(δ_ref) —
+#    das E₋-Schur-Profil der genuinen Weil-Form knapp über ihrem Atom-Eintritt =
+#    quantitative RH-Positivität am Atom-Eintritt. Beweisbar-förmig daneben:
+#    Resolventen-Kantenregularität σ_k(δ) ≥ σ_k(δ_ref)·(δ/δ_ref)^{q_k}.
+# KONVERGENZ beider Türen: T103s Flügel-Schlupf S = 1 − ρ und T102s Schur-Dressing sind
+#    DASSELBE Objekt von zwei Seiten. → T104 (läuft): SCHUR.PROFILE.BOUND
+#    (schur_profile_bound_probe.py) — die induktive Kette σ_k ≥ Marge/Kopplungs-Masse.
+# Serie (XII)–(CXIII): 102 Proben, 2470/2470 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; alle Gesetze als Fits deklariert; Klassik
+# (Schur-Komplement, Cauchy-Schwarz, Landau-Pollak/Prolate) zitiert; Sandbox ohne
+# Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-26 (XV) — Teil 101 (delegiert, DIE SCHICKSALS-WEICHE, Opus 5): k_asymptotics_probe.py — **CROWDING-TRENDS — ABER: das Crowding sitzt in der BEWEIS-FAMILIE, nicht in der Mathematik** — 16 Zonen aufgelöst (n = 2..29, weit über die T96-Erschöpfung); HEADLINE-ENTDECKUNG: das kollabierte Ein-Parameter-Gesetz **w_k = 0.0838·(Atom-Abstand)/μ_k** (Streuung 8.85× → 2.66×, Rest-Trend ≡ 0); die PRIMITIVEN Größen sind FLACH (w/g Slope +0.002 ± 0.178 über 16 Zonen; relative D_k-Marge flach; D_k ≤ μ_k/2 hält 64/64 und versagt NIE) — nur das SCHLIESSUNGS-INSTRUMENT verliert das Rennen (r_k ~ exp(−0.162k)) — 31/31, 39.5s, Sandbox
+# K1: Übergabefenster positiv in allen 16 Zonen bei jeder Auflösung (T96-Anker reproduziert);
+#    das kollabierte Gesetz: Fenster = Abstand/Stärke — schwache Primpotenz-Atome (4, 8, 16,
+#    25, 27) lassen weite Fenster, starke Prim-Atome enge; w/g bleibt in [0.031, 0.221],
+#    weil Fenster (n^{−0.61}) und Abstand (n^{−0.615}, exakt) IM GLEICHTAKT schrumpfen.
+# K2: Selbst-Verstärkung real, gesetzmäßig, BESCHRÄNKT (Präfaktor 1–10, wächst mit Σμ_old,
+#    R² = 0.50) — kein wachsendes Reservoir; Defekt-Split exakt 1.9e-16 an 64 Samples.
+# K3: das Rennen verliert das INSTRUMENT (Demand R_G wächst 0.49 → 2.16, Slack schrumpft),
+#    nicht das Ziel (die wahre Ungleichung versagt nie, ihre relative Marge trendet nicht).
+# K4 exakt: Paritäts-Regel + Selbstähnlichkeit maschinell exakt bis Zone 29; Terminierung
+#    960/960 (längste Kette 13 Schritte); Atom-STÄRKEN fallen nicht (μ ~ n^{−0.087}), nur
+#    die ABSTÄNDE (n^{−0.615}) — reine Arithmetik.
+# DER ASYMPTOTIK-SATZ BRÄUCHTE (gemessen, nichts etabliert): (A) die kollabierte Untergrenze
+#    w_k ≥ c·g_k/μ_k mit festem c > 0 (DIE Härte: eine scharfe, nicht-perturbative,
+#    ARITHMETISCHE Untergrenze an einer Weil-Positivitäts-Kante; Taylor unmöglich wegen
+#    exp(−c/δ')-Onset); (B) uniforme relative Marge D_k ≤ (μ_k/2)(1 − c(t)); (C) Ersatz für
+#    den Bulk-Rest (unter den Slack drücken oder θ-Gesetz substituieren); (D) endlicher Check
+#    der unteren Zonen. FALLS Crowding je gewinnt: die RH-Härte sitzt vollständig in (A).
+# RENN-URTEIL: die Mathematik trendet SELBSTTRAGEND (flache Primitive über 16 Zonen — die
+#    hoffnungsvollste Version von CROWDING-TRENDS); verloren hat nur die aktuelle Zwei-Faktor-
+#    Kette — bessere Instrumente ((C)) sind der Weg, und die Härte ist auf (A) lokalisiert.
+# Serie (XII)–(CXII): 101 Proben, 2428/2428 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; alle Gesetze als Fits, alle k > 16 als Extrapolation
+# deklariert; Klassik zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-26 (XIV) — Teil 100 (delegiert, Bulk-Rest, Opus 5 — DIE HUNDERTSTE PROBE): bulk_remainder_probe.py — **REMAINDER-CLOSES-ZONES** — Schließung von 11/24 auf 24/24 Samples (6/6 in JEDER Zone); der 10.8%-Drift war ein GITTER-ARTEFAKT (λ_top ~ log(1/d), exakt wie k(t) ~ log t verlangt — die Kette bei festem Λ ist driftfrei); EIN Hebel gewinnt 1.7×–68.9× (die Bessel-Stufe warf die Induktions-Daten doppelt weg — m(Λ)/Λ statt R_G/Λ, keine neuen Objekte); Zonen 2–4 VOLLSTÄNDIG geschlossen mit gitterstabilen Kontinuums-Daten; Zone-5-Spitze als GLEICHHEITS-Problem getypt (Fredholm-Alternative-Gestalt, einfache Degeneration — nicht offensichtlich hart) — 27/27, 39s, Sandbox
+# B1 Zertifikats-Kette (vier explizite Stufen: ν-Maß+Parseval+Slepian-Water-Filling; exakte
+#    Pol-Form −(cosh(u/2)−1)(2sinh(δ/2)+δ); Alt-Atom-Bound beißt nur im oberen Drittel von
+#    Zone 5; Schur-Test ‖Q₀₋‖ 1.0–2.9× knapp): hält 16/16, nicht-vakuum 13/16; der Verlust
+#    konzentriert sich in λ_A (7–70×), NICHT in der Defekt-Norm.
+# B2 Hebel-Bilanz (zertifiziert vs gemessen sauber getrennt): m(Λ)-Familie vollständig
+#    (b_tail → ρ exakt); Banding macht die Kosten zu ZWEI Kontinuums-Zahlen (Λ₀ = 2, B = 4–16)
+#    und schließt 24/24; Parität kostet NICHTS (ρ_blind = max Kanäle auf 1e-12), halbiert die
+#    Daten; die 1/Λ-Resolvente ist bereits scharf (Gewinn 0.57–0.99 — θ gibt nichts mehr);
+#    ehrlich: der Defekt-Tail fällt nur m ~ Λ^{−p}, p = 0.5–1.17 — Bulk-Kopplung ist real.
+# B3 Neue Karte: Induktions-Datum ist eine SCHWELLE (Λ_ok = 0.47–2.80, Drift 0.5–9.7%), kein
+#    Moden-Count (Drift bis 22%); neuer Vorbehalt: ρ bindet an 2/24 Samples im UNGERADEN Kanal
+#    (max über Kanäle nötig); Zonenspitzen: unterster Eigenwert SIMPEL (Gap 0.004–0.324, stabile
+#    Null-Richtung) — Zone 5 schließt bis δ = 0.92·δ_max, der Limes-Punkt braucht ein
+#    Gleichheits-Argument (kein strikt-positiver Rest kann ihn erreichen).
+# EHRLICHE RESTLISTE (R1–R5): sharper λ_A-Bound bei großem δ (beweisbar-förmig); ‖Q₀₋‖ als
+#    geschlossene Corner-Integral-Form (beweisbar-förmig); der langsame Tail vs 1e-3-Slack
+#    (quantitativ, durch Band-Form gitter-unabhängig); Zone-5-Gleichheit (Fredholm-Gestalt);
+#    E₊ + volle 3×3-Assemblierung (unberührt).
+# Serie (XII)–(CXI): 100 Proben, 2397/2397 Checks Sandbox + v535–v541 promoviert. (T101 läuft.)
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Bessel/Parseval, Slepian, Schur-Test,
+# Fredholm-Alternative) zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-26 (XIII) — Teil 99 (delegiert, D_k-Rekursion, Opus 5): dk_recursion_probe.py — **DECAY-LAW-FOUND** — die A-priori-Struktur ist eine EXAKTE SPIEGELUNGS-PARITÄTS-AUSWAHLREGEL (J₋Q₋₀J₀ = −Q₋₀ auf 2e-15): D_k = max(D_even, D_odd), und der bindende gerade Kanal koppelt NUR ans ungerade Spektrum des kleineren Fensters — der fragile Fast-Null-Modus ist IDENTISCH ABWESEND vom bindenden Kanal (das T98-Boden-Problem strukturell aufgelöst); die rekursive Ungleichung ρ ≤ R_G·J_sup gilt überall (Verlust nur 1.01–1.20×, beide Faktoren gitterstabil, braucht nur 1–16 Moden des kleinen Fensters); TERMINIERUNG rein arithmetisch (240/240 in ≤ 4 Schritten zur klassischen Zone); das EINE benannte Hindernis: der uniforme Bulk-Rest R_G/λ_top ≈ 0.04–0.19 gegen den an den Zonenspitzen kollabierenden Slack — 23/23, 10.8s, Sandbox
+# D1: Paritäts-Gap λ₁^odd/λ₁^even = 3.0–111.5; Kopplungs-Vermeidung des Rest-Tails
+#    (Gewinn 43–71262× in den Tail-Zonen); Abfall-Gesetz θ = 1.15–2.18 (R² 0.89–1.00) in
+#    Zonen 4–5, nur 0.22–0.90 in Zone 3; Fortsetzungs-Defekt exakt reproduziert
+#    (Dreiwege-Kancellation 1.4–2.0×; Zone 2 ohne Alt-Atome/Kancellation).
+# D2: Schließungs-Karte: 11/24 Samples (6/6 in Zone 2, je 2/6 in 3–4, 1/6 in 5) — schließt
+#    exakt dort, wo ρ ≤ 1 − R_G/λ_top (optimal in seiner Familie); Terminierungs-Beispiel
+#    Zone 5: 0.8888 → 0.7206 → 0.6657 → 0.4329 → 0.2602 (klassisch).
+# D3: Zonenspitzen KEINE universelle Gleichheit — extrapolierte Spitzen-Margen +2.7e-2 (n=2),
+#    +1.4e-2 (n=3), +1.7e-2 (n=4) = 2.2–5.5% von μ_k/2; NUR Zone 5 saturiert exakt
+#    (−1.1e-5 Richardson) — die Spitzen brauchen Prozent-Level-Schranken, nicht 0.1%.
+# ARCHITEKTUR-STAND: FÜNF maschinell geprüfte Identitäten (Atom-Split + Ziel-Identität,
+#    E₀-Selbstähnlichkeit, Paritäts-Auswahlregel, Fortsetzungs-Defekt, Cauchy-Schwarz-Kette)
+#    + arithmetische Terminierung; fehlend ist SLACK, nicht Struktur: der Bulk-Rest R_G/λ_top
+#    (gemessen, nicht zertifiziert; λ_top driftet noch 10.8%) muss unter die Spitzen-Margen —
+#    Faktor ~3–10 in Zonen 2–4 nötig. → T100 (auto): BULK.REMAINDER — R_G zertifizieren und
+#    schärfen (Paritäts-verfeinerte ν-Maß-/Prolate-Maschinerie, feinere Bulk-Splits).
+# Serie (XII)–(CX): 99 Proben, 2370/2370 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Spiegelungs-Symmetrie/Parität, Schur,
+# Cauchy-Schwarz, Sobolev-Abfall) zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-26 (XII) — Teil 98 (delegiert, Kreuz-Block-Lemma, Opus 5): cross_lemma_probe.py — **LAW-CONFIRMED-MECHANISM-OPEN mit ERSETZTEM ZIEL** — das √λ₀-Gesetz ist Douglas-Range-Inclusion und damit ZIRKULÄR (Tautologie der zu beweisenden Positivität); DREI T97-Prämissen widerlegt; Ersatz: die EXAKTE skalare Ungleichung **D_k(α) ≤ μ_k/2** (Identität + Messung, keine Konstante, kein Fast-Null-Vektor) — gilt in allen vier Zonen, gitterstabil, saturiert exakt an den Zonenspitzen; PLUS beide Zertifikats-Upgrades geliefert (E₋: 43% → 93% Mittel; E₊ erstmals zertifiziert 25–55%) — 44/44, 48s, Sandbox
+# X1: Gesetz reproduziert (g₀/√λ₀ ∈ [0.06, 1.34] über 5 Dekaden), ABER: Beschränktheit, kein
+#    Potenzgesetz (In-Zonen-Slopes 0.76–2.08); Struktur exakt: Q₋₀v₀ = Fortsetzungs-Defekt =
+#    √2 × ungerader Teil von w|I_L (drei Identitäten 1e-13); Rand-Proxies WIDERLEGT (Streuung
+#    eine Größenordnung); GEWINNER: Douglas 1966 Range-Inclusion — g₀² ≤ ⟨x̂, Ax̂⟩λ₀ an allen
+#    24 Samples, Saturation 1.6× an Zonenspitzen; DREIWEGE-Kancellation macht den Defekt klein
+#    (arch↔Alt-Atome↔Pol-Rettung, bis 241×; Zone 2 ohne Alt-Atome = größtes Verhältnis:
+#    „die bereits installierten Primzahlen machen den Fortsetzungs-Defekt klein").
+#    DIE POINTE: die Identifikation LÖST das Lemma AUF (g₀, λ₀ gehören zum selben PSD-Operator
+#    — das Gesetz ist erzwungen, trägt keine Information über die Positivität hinaus).
+# X2: DREI T97-PRÄMISSEN WIDERLEGT: (1) Ein-Vektor-Lesart (v₀ trägt nur 0.1–60% der Schur-Spur);
+#    (2) λ₀ ist in Zonen 3–5 ein Diskretisierungs-Boden (Richardson → ≤ 0; nur Zone 2 echt);
+#    (3) verstärkte Hypothese Q|E₋⊕E₀ ⪰ 0 scheitert (J = −0.719). ERSATZ-IDENTITÄT:
+#    λ_min(S₁₁) = J + μ_k/2 exakt (3e-15) ⇒ die E₋/E₀-Hälfte des Induktionsschritts IST
+#    D_k(α) := −λ_min(Q|E₋ − Q₋₀(Q|E₀)⁻¹Q₀₋) ≤ μ_k/2 — Margen +0.0091..+0.1487 (Richardson),
+#    kollabierend auf +4.8e-4 (n=5) an der Spitze.
+# X3 UPGRADES (via WAHRSCHEINLICHKEITSMASS-Identität: A_arch|E_∓ = ∫k dν, ν Wahrsch.-Maß —
+#    Slepian zwingt schmale Flügel zu hohen Frequenzen, wo k > 0; T97s Spurschranke hatte den
+#    positiven Schwanz weggeworfen): E₋ 31–55% → 73–100% (3 von 4 Zonen VOLLSTÄNDIG);
+#    E₊ erstmals zertifiziert (25–55%, ν-Bound schlägt Spur um +0.48..+2.99).
+# SKELETT-STAND (16 Zeilen im Report): 8 BEWIESEN, 2 ZERTIFIKAT, 3 WIDERLEGT (Ehrlichkeit),
+#    OFFEN: (i) A-priori-Schranke D_k ≤ μ_k/2 (die eine verbleibende Spektralgröße; kein
+#    Spielraum an den Spitzen), (ii) E₊-Kreuzblöcke (Verlierer trägt dort nur 0–2% Masse),
+#    (iii) Zertifikats-Zonen → 100%. → T99 (auto): D_k-Struktur/Rekursion (E₀-Selbstähnlichkeit
+#    ⇒ D_k hängt am gelösten kleineren Fenster — rekursive Ungleichung?).
+# Serie (XII)–(CIX): 98 Proben, 2347/2347 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Douglas 1966, Schur, Slepian-Pollak-Landau,
+# Rellich, Rayleigh-Ritz, Richardson) zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-26 (XI) — Teil 97 (delegiert, Staffel-Induktion, Opus 5): relay_induction_probe.py — **ALIGNMENT-ONLY mit zertifiziertem E₋-Halb-Schritt** — der Induktions-Schritt hat jetzt BEWEIS-GESTALT mit GENAU EINEM fehlenden Lemma über EINEN Vektor: ‖Q₋₀v₀‖² ≤ C·λ₀ (der Fast-Null-Modus der Vorgänger-Zone; gemessenes Gesetz g₀ = O(√λ₀) sagt C existiert und ist O(1)) — 105/105, 36.5s, Sandbox
+# (A) ALIGNMENT WAHR, SCHARF, MIT c-GESETZ: zwei elementare Lemmas verifiziert (Vorzeichen-
+#    Alignment ⟺ Kopplungs-Fenster nichtleer; scharfe Konstante c_k = untere Kopplungs-Kante);
+#    Alignment ohne Ausnahme an allen 16 α, allen negativen Eigenrichtungen, allen Zufalls-
+#    Mischungen; der SLACK s = 1 − c_k/μ_k ist O(0.1) nach jeder Übergabe (0.24/0.21/0.28/0.061)
+#    und kollabiert exp(−44..66·α) — exakt gesättigt, wo das nächste Atom übernimmt.
+# (B) DER t=0-KILLER-VERLUST IST BEWIESEN: drei Struktur-Identitäten exakt (alte Atome
+#    verschwinden identisch auf E₋; Pol-Rettung flippt mit Faktor 1 − cosh(u/2); |f̂|² =
+#    2(1−cos(tu))|ĝ|²) ⇒ k_eff = (1−cos(tu))·k(t) mit inf −1.11..−2.59 statt k(0) = −5.37
+#    (Gewinn ×2.1..×4.8); expliziter quadratur-freier Zertifikats-Bound deckt 31–55% jeder
+#    Zone. ABER: E₋ allein ist das falsche Ziel (die reduzierte Form ist meist positiv).
+# (C) DIE OBSTRUKTION SITZT IN DEN KREUZ-BLÖCKEN: S_k ist DIAGONAL in E₋⊕E₀⊕E₊; alle drei
+#    atom-verschobenen Diagonal-Bedingungen halten überall; STRUKTUR-PERLE: E₀ ist WÖRTLICH
+#    dieselbe Form bei α' = log n_k − α < α_k (exakt 7e-14) — DIE INDUKTIONS-HYPOTHESE AM
+#    KLEINEREN FENSTER (Selbstähnlichkeit!); Norm-basierte Kreuz-Schranken sind tot (Vergleichs-
+#    matrix negativ) — das Ersatz-Objekt ist ein Schur-Term dominiert vom Fast-Null-Modus v₀,
+#    mit sauberem Gesetz g₀/√λ₀ ∈ [0.13, 1.30] über 4.5 Dekaden.
+# BEWEIS-SKELETT-STAND: 2 von 3 Diagonal-Bedingungen erledigt (E₋ Zertifikat; E₀ Selbst-
+#    ähnlichkeit = Induktions-Hypothese); fehlend: DAS EINE Kreuz-Block-Lemma (verlustfrei
+#    konstruiert — was die exponentiell fallende Marge verlangt). Kleinere Follow-ups benannt:
+#    Prolate-Konzentrations-Bound für E₋ (31–55% → mehr), E₊-Upgrade (T95-C1 messbar → bewiesen).
+#    → T98 (auto): CROSS.LEMMA — das v₀-Lemma angreifen.
+# Serie (XII)–(CVIII): 97 Proben, 2303/2303 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Schur-Komplement, Paley-Wiener, Prolate)
+# zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-26 (X) — Teil 96 (delegiert, Staffel-Test, Opus 5): relay_test_probe.py — **EDGE-ARTIFACT + RELAY-CONFIRMED** — die T95-„Kante" bei α* war ein Karten-Artefakt (der Wert +7.8e-6 exakt reproduziert, aber er liegt auf einer glatten, streng positiven Kurve OHNE jedes Merkmal — λ_min > 0 auf ganz [0.38, 0.86], Zerfallsgesetz λ_∞ ~ exp(−49.2α)); die STAFFEL ist REAL: ohne das log3-Atom stürzt λ_min auf −0.445, der Verlierer ist exakt die Anti-Doppelbeule im Abstand log 3 (Ausrichtung −0.99), Rettungs-Identität 5e-15; ÜBERGABEFENSTER alle positiv: jedes Atom kommt strikt BEVOR es gebraucht wird (+0.025/+0.009/+0.011/+0.007 für k = 1..4) — 21/21, 91s, Sandbox
+# R1: RH-Fence nie berührt (Minimum +2.1e-6 über den ganzen Block); Implementierungs-Anker
+#    sitzt (T95-Wert unabhängig reproduziert, Richardson p = 1.81); die Marge kreuzt Null
+#    nicht — sie KOLLABIERT exponentiell (ab α ≈ 0.49 unter der Auflösungsgrenze der
+#    M ≤ 2400-Leiter; Paley-Wiener-/Prolate-Konzentrationsverhalten, nullstellen-frei benannt).
+# R2 STAFFEL-MOMENT (lebt vollständig im Kontrafaktischen): volle Form featurelos über den
+#    log3-Eintritt (Atom in λ_min unsichtbar!); OHNE Atom: −0.445, h(log 3) → −0.408,
+#    r → −0.99 (perfekte Anti-Doppelbeule); kontrafaktischer Onset super-polynomiell
+#    (q ≈ 13.4 → 1.6, verträglich mit exp(−c/δ') — WESENTLICHE Singularität, nicht kubisch).
+# R3 STAFFEL-KARTE + Induktions-Typisierung: Zone 1 konvergiert (transversale Kreuzung),
+#    Zonen 2–4 obere Schätzer; Term-Bilanz überall: Pol trägt, Arch nimmt fast alles,
+#    Atome winzig am EIGENEN Minimierer — der Kontrafakt ist das aussagekräftige Instrument.
+#    NEU BEWIESEN-FÖRMIG BENANNT: (i) keine (1−η)-Version des fehlenden Instruments reicht
+#    (zwei Exponentiale rennen gegeneinander — multiplikativer Verlust frisst die Marge vor
+#    Zone 4); (ii) das exp(−c/δ')-Onset verbietet Taylor-Argumente fürs Übergabefenster.
+# STRATEGIE-VERSCHIEBUNG (drei Konsequenzen): (1) kein Kanten-Problem, ein MARGEN-Problem;
+#    (2) Numerik als Zeuge ab α ≈ 0.55 erschöpft (O(M^{-1.8}) — jede weitere Zone braucht
+#    Prolate-adaptierte Basen, nicht mehr Zellen); (3) DER KONTRAFAKT IST DIE BEWEIS-ZIELGRÖSSE:
+#    „Atom k hebt den Verlierer von Zone k−1" als Operator-Ungleichung arbeitet auf
+#    O(0.1–0.6)-Größen statt 1e-6. → T97 (auto): RELAY.INDUCTION — der Induktions-Schritt
+#    als Ausrichtungs-Aussage (negativer Teilraum der atom-freien Form ⟷ Atom-Eigenvektor).
+# Serie (XII)–(CVII): 96 Proben, 2198/2198 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Paley-Wiener, Prolate, Galerkin/Richardson)
+# zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-26 (IX) — Teil 95 (delegiert, Kontinuums-Beweisversuch, Opus 5): continuum_extension_probe.py — **T-CONTINUUM-NUMERIC** — die C1-Kette ist VOLL BEWIESEN (|h_f(log2)| ≤ 1/2 via disjunkter Intervalle; ‖S‖ = 1/2 exakt mit Eigenraum; Zwei-Bump-Signatur; (T'') auf dem Atom-Extremal-Eigenraum MIT MARGE +3.49 → +0.128); die Kontinuums-Margen-Kurve bleibt überall > 0; und der Schluss-Befund: die BAND-OBERKANTE α* = 0.46265 verhält sich wie die KONTINUUMS-POSITIVITÄTS-KANTE der atom-geretteten Form (Band-Top-Marge extrapoliert +7.8e-6, zwei unabhängige Leitern auf 3 Stellen einig) — 28/28, 14.8s, Sandbox
+# C1 (unconditional bewiesen): die Träger-Kette schließt rigoros — I, J disjunkt auf dem ganzen
+#    Band (Marge 0.2305) ⇒ |h_f(log2)| ≤ 1/2, Sättigung exakt durch Zwei-Bump f = g + g(·−log2);
+#    der fenster-trunkierte symmetrisierte Shift hat ‖S‖ = 1/2 (1.1e-16) mit Eigenwert +1/2 der
+#    Multiplizität dim L²(I) (Shift-Ketten verboten da 2log2 > 2α*); Fourier-Kamm
+#    |f̂|² = 2(1+cos(t·log2))|ĝ|² verifiziert — die ATOM-EXTREMAL-Richtungen sind SICHER
+#    (nicht das, wogegen ein Beweis kämpfen muss).
+# C2: wohlgestelltes Objekt = Kopplungs-Fenster {μ: λ_min(P+A−μS) ≥ 0}; enthält μ_phys = 0.98026
+#    über das GANZE Band (verengt auf [0.970, 0.981] bei α*); λ_min(Q) +1.3e-3 → +2.1e-5;
+#    α_free = 0.371654 (Kontinuum, konsistent T93); EXTREMIERER-ANTWORT: NICHT Zwei-Bump
+#    (Anteil 0.046) — der bindende Mechanismus ist die ATOM-RETTUNG (oberhalb α_free hat der
+#    prim-freie Minimierer h(log2) < 0 bis −0.328 ⇒ der Atom-Term addiert Positivität exakt in
+#    der Verlierer-Richtung) — T91s Atom-Rettung in korrigierten Koordinaten BESTÄTIGT.
+# C3: obere Seite zertifiziert (exakte Formen auf stückweise-konstanten Funktionen, Schur 4e-15);
+#    untere Schranke OFFEN; Projektions-Defekt-Route QUANTITATIV WIDERLEGT (bräuchte T ≳ 3.2e4,
+#    M ≳ 6.9e5 Zellen); das fehlende Instrument ist STRUKTURELL benannt: eine Operator-
+#    Ungleichung, die den Dirichlet-Anteil auf dem Komplement hält ohne den (1−η)-Faktor.
+# STAFFEL-BEFUND: α* (wo das log3-Atom eintreten würde) ist exakt die Kante der Ein-Atom-
+#    Rettung — das Staffel-Bild (jedes Atom rettet seine Zone, übergibt an das nächste) ist
+#    jetzt quantitativ; Follow-up T96 (auto): RELAY.TEST — öffnet die Marge jenseits α* wieder,
+#    wenn das log3-Atom eintritt?
+# Serie (XII)–(CVI): 95 Proben, 2177/2177 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Yoshida, Bombieri, CC, Euler-Lagrange/
+# Nyström, Galerkin) zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-26 (VIII) — Teil 93 (delegiert, Datenintegritäts-Abgleich, Opus 5): band_reconciliation_probe.py — **MIXED** — die T89/T91-Karte ÜBERLEBT fast vollständig: D1 war NIE eine Proben-Diskrepanz (6.98 war ein veralteter Prosa-Wert in next.txt — beide Proben rechneten 6.2898 korrekt); D2 ist reine FAKTOR-2-KONVENTION (a_T89/T91 = 2·α_T92) plus 1%-Gitter-Interpolations-Artefakt; der EINZIGE echte Bug lag in T92 (Band-Konstanten unübersetzt importiert ⇒ vier-Atom-Region statt Ein-Atom-Band gescannt) — 41/41, 4.4s, Sandbox
+# Referenz (dritte unabhängige Implementierung): t₀ = 6.28983598883690… (zweiroutig 1.3e-41);
+#    α_free-Leiter monoton 0.3833 → 0.3763 (N = 8..24), Limes-Indikation 0.3723; die 0.741-
+#    AUFKLÄRUNG: T91s eigenes Gitter (Schritt 0.04) + lineare Interpolation in der Referenz-Form
+#    reproduziert 0.7410 AUF VIER DEZIMALEN — exakte Bisektion bei T91s eigenem n = 44 gibt
+#    0.748598; der Bug-Nachbau (log4-Atom bei log2) ist strukturell UNFÄHIG, 0.741 zu erzeugen
+#    (prim-freie Form enthält kein Atom — bitweise identisch). T91s Arch-Block ist ALGEBRAISCH
+#    identisch zur Referenz (sympy-Identität, 2.7e-14) — kein Formel-Fehler in T89/T91.
+# ÜBERLEBENS-LISTE: unverändert t* = 6.2898, alle T89/T91-Blöcke, die Ein-Atom-Zone (in ihren
+#    Koordinaten), der Atom-Rettungs-Mechanismus, a* = 0.9253, die Unschärfe-Konstanten
+#    (dimensionslos), die T90-REST-Vektoren. REKALIBRIERT: a_neg = 0.7410 → 0.7486 (n = 44;
+#    Basis-Limes ≈ 0.745); T89s a_eq verschiebt MIT (die a_eq ≈ a_neg-Übereinstimmung ist echt).
+#    FÄLLT: T92s Band-Scoping (es zertifizierte eine HÄRTERE vier-Atom-Region — das Zertifikat
+#    selbst ist gesund, nur re-skaliert) + T92s Glosse „0.376 ≈ klassische Kante" (9% darüber).
+# KORRIGIERTE BAND-KARTE (α = f-Halbbreite): klassische Kante 0.34657 · prim-freie Kreuzung
+#    0.3723(Limes)–0.3763(N=24) · Band-Top α* = 0.46265 · zweites Atom log3/2 = 0.54931.
+# Meta-Lehre: der Abgleich fand zusätzlich zwei Fehler in seinem EIGENEN Code via Anker
+#    (in-place-numpy-Korruption der Stirling-Reihe; Vorzeichen in der Konstanten-Identität) —
+#    die Anker-Disziplin funktioniert in beide Richtungen.
+# Serie (XII)–(CV): 94 Proben, 2149/2149 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-26 (VII) — Teil 94 (delegiert, der ehrliche „Primzahlen vorhersagen"-Demonstrator): prime_blind_demo_probe.py — **BLIND-100** — das exakte geometrische Kriterium (ungerades n prim ⟺ r₄(n) = 8(n+1), Jacobi 1834 auf dem Z⁴ = Rang-|μ4|-Theta-Turm) sagt ALLE 753 Primzahlen des nie gesehenen Fensters [1 000 001, 1 010 000] exakt voraus — aus reiner Gitterzählung, AST-erzwungen OHNE Teilbarkeits-Tests im Vorhersage-Pfad (kein isprime, kein Sieb, keine %, //, /-Operatoren) — 16/16, 1.3s, Sandbox
+# P1 Kriterium dreiroutig verifiziert (sympy-Jacobi symbolisch; Gitter ≡ 8σ₁ auf allen ungeraden
+#    n ≤ 20000; Kriterium ⟺ isprime 0 Mismatches); Zähne: nur Offset c = +1 klassifiziert
+#    perfekt; Rang-2-Zähler allein beweisbar unzureichend (r₂(3) = r₂(21) = 0 — Divisor-
+#    CHARAKTER vs Divisor-MASSE).
+# P2/P3 Blind-Protokoll strikt: 753 Primzahlen deklariert (Count + MD5 VOR jeder Wahrheit),
+#    Auswertung danach: exakt 753 im Fenster (log-Heuristik ~724) — 0 falsch-positiv,
+#    0 falsch-negativ, 100.00% auf allen 10⁴ Zahlen; 5.1e9 exakte int64-Multiply-Adds in 0.83s.
+# KOSTEN-EHRLICHKEIT: das Sieb gewinnt ~820× (1 ms vs 0.83 s) — Struktur-Demonstration,
+#    KEIN Algorithmus-Fortschritt; Klassik (Jacobi 1834, σ-Identitäten) als klassisch benannt,
+#    NEU ist nur die compiler-native Pipeline (θ₃ = θ_Z aus dem v535/v536-Zensus-Stack,
+#    Eisenstein-σ-Kanal neben c(p) = −8a_p) + das Blind-Protokoll.
+# DIE SAUBERE AUSSAGE: „Der Compiler sagt die Primzahlen eines nie gesehenen Fensters exakt
+#    voraus — aus reiner Geometrie, ohne Teilbarkeits-Test im Vorhersage-Pfad. Das ist
+#    Struktur-Vollständigkeit; die SPEKTRALE Vorhersage (Nullstellen → Primzahlen) bleibt an
+#    I5/RH gebunden (Fence, nicht behauptet)."
+# Serie (XII)–(CIV): 93 Proben, 2108/2108 Checks Sandbox + v535–v541 promoviert. (T93 läuft.)
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik benannt; Sandbox ohne Ledger-/Paper-/
+# Marker-Änderung.
+
+# 2026-07-26 (VI) — Teil 92 (delegiert, BEWEIS-VERSUCH für die Zonen-Erweiterung, Opus-5-Lauf nach zwei gescheiterten Anläufen): zone_extension_proof_probe.py — **T-SKELETON** — die Gitter-Zonen-Erweiterung STEHT NICHT; zertifiziert ist ein reales, kleines Resultat (Q ≥ 6.7e-12 > 0 auf dem 8-dim Sinus-Fenster-Unterraum über das GANZE Band, mit Fehler-Zertifikat, 1057-Punkte-Covering); zwei unabhängige Wände benannt; UND ZWEI KALIBRATIONS-KORREKTUREN, die T89/T91-Werte in Frage stellen — 36/36, 92s, Sandbox
+# S1 exakt: k_min = k(0) = −5.37218… (= −γ − 3log2 − π/2 − log π auf 1e-25!); t₀ = 6.28983599
+#    (Breite < 1e-20, EINZIGER Vorzeichenwechsel auf (0, 400]) — KORREKTUR: der Serien-Wert
+#    6.98 war falsch (k(6.98) = +0.104 bereits positiv).
+# S2/S3: Paritäts-Blöcke exakt; Pol- und Atom-Einträge exakt (zweiroutig 3.5e-14); Eintrags-
+#    Fehler ≤ 1.8e-13; größte uniform zertifizierbare Dimension N_cert = 8; Margen-Tabelle
+#    m(a) ∈ [1.5e-11, 1.7e-9] nach Inflation, alle > 0 (Inflations-Faktoren 10–1150×).
+# S4 DIE ZWEI WÄNDE: (1) λ_min kollabiert GEOMETRISCH (Faktor 11.4 pro Mode; log₁₀λ ≈
+#    −1.67 − 1.057N) — double precision endet bei N ≈ 10, N = 24 bräuchte 1e-27-Einträge;
+#    (2) das Hoch-Moden-Komplement bräuchte N* ≳ 5069 Moden + Kreuzterm-Schranke. URTEIL:
+#    „die Endlich-Block-Route ist strukturell das falsche Instrument, nicht unter-ressourciert."
+# KALIBRATIONS-DISKREPANZ (WICHTIG, Datenintegrität): die prim-freie Form verliert Positivität
+#    bei a_free = 0.3763 ≈ log2/2 = 0.3466 (die KLASSISCHE Träger-Kante: h-Träger 2a = log 2!)
+#    — NICHT bei a_neg = 0.7410 wie T91 angab. VERDACHT: Konventions-Faktor 2 (f-Halbbreite vs
+#    h-Träger) UND/ODER der in T92 selbst gefundene+gefixte Bug (n = 4-Atom bei log 2 statt
+#    log 4 platziert; Paritäts-Maske) könnte in der T89/T91-Maschinerie stecken — die
+#    T89/T91-Band-Karte (a_neg, a*, „Atom-Rettung") ist bis zur Klärung UNTER VORBEHALT;
+#    Website-Aussagen betroffen. → T93 (auto): RECONCILIATION — Konvention vs Bug entscheiden,
+#    Band-Karte neu kalibrieren oder bestätigen.
+# Klassischer Anker sauber reproduziert: volle Form positiv mit 3-Größenordnungen-Kollaps
+#    Richtung log2/2 (Yoshida/Bombieri-Kante) und bleibt positiv darüber hinaus (wie RH
+#    vorhersagt — der klassische BEWEIS endet dort, nicht die Positivität).
+# Serie (XII)–(CIII): 92 Proben, 2092/2092 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Weil, Yoshida, Bombieri, CC, digamma-
+# closed-form) zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-26 (V) — Teil 91 (delegiert, Band analytisch): thin_band_analytic_probe.py — **BAND-PARTIAL** (3/4 geschlossen) — das Band ist die EIN-ATOM-ZONE log 2 < a ≤ a* = 0.9253 mit innerer Kante a_neg = 0.7410, an der die prim-freie Pol+Arch-Marge EXAKT erschöpft ist und DAS PRIM-ATOM TRAGEND WIRD (Vorzeichenwechsel = der T89-Balance-Punkt, 0.03%); Unschärfe-Konstanten entschieden: a·t_rms → π (Wirtinger, 0.3%), a·t_cent → 2Si(π) − 4/π = 2.4306 (neue geschlossene Konstante, 1.0%) — 19/19, 24.9s, Sandbox
 # B1 Atom-Einschalt-Gesetz EXAKT: k = 2m+1 für Rand-Ordnung m (Beta-Gesetz sympy-exakt; Sinus-
 #    Basis kubisch mit geschlossener Grundform); basis-unabhängiges Supremum springt auf exakt

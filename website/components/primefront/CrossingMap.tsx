@@ -27,9 +27,9 @@ const REST_STEPS = [
 
 const MARKERS = [
   {
-    a: 0.741,
-    label: "0.7410",
-    note: "sign change — the prime atom becomes load-bearing (T91)",
+    a: 0.7486,
+    label: "0.7486",
+    note: "sign change — prime atom becomes load-bearing (T91; a_neg recalibrated by T93)",
   },
   { a: 0.85, label: "0.85", note: "pole-free atom↔arch content remains (T90)" },
   { a: 1.2, label: "1.2", note: "odd atom-coupled mode (T90)" },
@@ -44,7 +44,7 @@ export function CrossingMap() {
     <div className="rounded-2xl border border-slate-700/50 bg-slate-950/60 p-4 sm:p-5">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <p className="font-mono text-[10px] uppercase tracking-widest text-violet-300/90">
-          Crossing map · support width a · Teile 87–91
+          Crossing map · support width a · Teile 87–93
         </p>
         <span className="font-mono text-[10px] text-slate-500">
           λ_min ≥ 0 on all 16 windows
@@ -206,11 +206,12 @@ export function CrossingMap() {
         turn-on is (a − log 2)³-soft. T90 dissects the residual: the 1–4 vectors
         are n-stable (≤ 2.1°) and explicit (Gauss×cos / Gauss×sin, 99+%
         capture), and 3 of 10 tracked vectors sit under no control at all. T91
-        adds the inner edge: at a = 0.7410 the pole+arch margin is exhausted and
-        the prime atom at u = log 2 turns load-bearing — the same point the T89
-        balance found, to 0.03%. Step positions above are schematic; the
-        dimensions and the marked widths are measured. Geography locates where
-        an attack must work — it does not perform one. Not RH evidence.
+        adds the inner edge: at a<sub>neg</sub> = 0.7486 (recalibrated by T93;
+        was 0.7410) the pole+arch margin is exhausted and the prime atom at
+        u = log 2 turns load-bearing — the same point the T89 balance found.
+        Step positions above are schematic; the dimensions and the marked
+        widths are measured. Geography locates where an attack must work — it
+        does not perform one. Not RH evidence.
       </p>
     </div>
   );

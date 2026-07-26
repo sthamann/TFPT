@@ -20,13 +20,17 @@ import { ConeCoverage } from "@/components/primefront/ConeCoverage";
 import { DoorsPanel } from "@/components/primefront/DoorsPanel";
 import { HeatFamilyBalance } from "@/components/primefront/HeatFamilyBalance";
 import { CrossingMap } from "@/components/primefront/CrossingMap";
+import { HandoverCrossing } from "@/components/primefront/HandoverCrossing";
+import { InstrumentRace } from "@/components/primefront/InstrumentRace";
+import { ClosureMapGrid } from "@/components/primefront/ClosureMapGrid";
+import { TwoDoorsConvergence } from "@/components/primefront/TwoDoorsConvergence";
 import { UpdateFeed } from "@/components/primefront/UpdateFeed";
 import { StatusBadge } from "@/components/primefront/StatusBadge";
 
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with positive linear carrier whose open boundary is the FE-covariant gap functional λ* on n ≡ 6 mod 8 (v540), the matching-lemma/transport-ledger package with two named limits (v541), and the I5 geography through the one-atom band and named target inequality (T) (T87–T91). Not RH evidence.",
+    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with positive linear carrier whose open boundary is the FE-covariant gap functional λ* on n ≡ 6 mod 8 (v540), the matching-lemma/transport-ledger package with two named limits (v541), the I5 geography through T94, and a blind lattice prime demo (753/753). Not RH evidence.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -46,7 +50,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "The Prime Front — TFPT research diary",
     description:
-      "Primes, the E8 census, and load-bearing results v535–v541. Program status: matching lemma closed; I5 core = Gaussian modes in the one-atom band with named target (T); what remains TFPT-specific is exactly one object — I5. No claim of progress toward the Riemann Hypothesis.",
+      "Primes, the E8 census, and load-bearing results v535–v541. Program status: I5 geography through T93 (a_neg = 0.7486); blind lattice demo 753/753; residual object I5. No claim of progress toward the Riemann Hypothesis.",
     url: `${SITE_URL}/prime-front`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -55,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified: v535–v541. I5 geography complete through the one-atom band and target (T) (2056 sandbox checks). Residual: I5 — not almost-RH.",
+      "Research diary of the prime / zeta line. Machine-verified: v535–v541. Induction closeout T99–T101: zones 2–4 closed; asymptotics = one named arithmetic bound (2428 sandbox checks). Residual: I5 — not almost-RH.",
   },
 };
 
@@ -86,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–91 · 2056 sandbox checks
+            Research diary · Teile 11–103 · 2499 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -97,6 +101,8 @@ export default function PrimeFrontPage() {
             compiler&apos;s bookkeeping kept speaking number theory, what
             survived preregistered kills, and what is still honestly open.
           </p>
+
+          <BlindPrimeCallout />
 
           <nav
             aria-label="On this page"
@@ -695,12 +701,19 @@ export default function PrimeFrontPage() {
             [machine-verified · v541]
           </span>
           . I5 core = explicit Gaussian-mode family in the one-atom band
-          (log&nbsp;2,&nbsp;0.925]; named target: inequality (T), a
-          classical-shaped zone extension; I5 remains ⟺ RH{" "}
-          <span className="font-mono text-amber-200">[sandbox · T87–T91]</span>.
-          Milestone: 2056/2056 sandbox checks. Fence: geography locates where
-          any attack must work — it does not perform one. This is not RH
-          evidence.
+          (log&nbsp;2,&nbsp;0.925]; a<sub>neg</sub>&nbsp;=&nbsp;0.7486
+          (recalibrated by T93); named target (T); finite-block zone extension
+          certified only on an 8-dim window — structurally the wrong instrument
+          for the full claim{" "}
+          <span className="font-mono text-amber-200">[sandbox · T87–T93]</span>.
+          Blind demo: 753/753 primes, zero errors, no division{" "}
+          <span className="font-mono text-amber-200">[sandbox · T94]</span>.
+          Induction skeleton: identities proved, zones 2–4 closed, zone-5 tip =
+          equality problem, asymptotics = one named arithmetic bound (A){" "}
+          <span className="font-mono text-amber-200">[sandbox · T99–T101]</span>.
+          Milestone: 2428/2428 sandbox checks. Fence: fits/extrapolations marked;
+          geography locates; it does not attack; I5 remains ⟺ RH. This is not
+          RH evidence.
         </p>
 
         <p>
@@ -720,9 +733,13 @@ export default function PrimeFrontPage() {
             ; Matching Lemma closed on all atom classes{" "}
             <span className="font-mono text-amber-200">[sandbox · T86]</span>;
             I5 geography complete{" "}
-            <span className="font-mono text-amber-200">[sandbox · T87–T91]</span>
-            ; named target inequality (T) typed; I5 in one-family form — the
-            single remaining TFPT-specific object.
+            <span className="font-mono text-amber-200">[sandbox · T87–T93]</span>
+            ; a<sub>neg</sub> recalibrated to 0.7486; blind lattice demo{" "}
+            <span className="font-mono text-amber-200">[sandbox · T94]</span>;
+            induction skeleton: zones 2–4 closed; asymptotics = arithmetic bound
+            (A){" "}
+            <span className="font-mono text-amber-200">[sandbox · T99–T101]</span>
+            ; I5 in one-family form — the single remaining TFPT-specific object.
           </li>
         </ul>
 
@@ -1029,7 +1046,7 @@ export default function PrimeFrontPage() {
       {/* 16 — I5 geography */}
       <DiarySection
         id="i5-geography"
-        eyebrow="16 · I5 geography · Teile 87–91"
+        eyebrow="16 · I5 geography · Teile 87–101"
         title="The I5 geography: two decades-old programs frame the same gap"
         badge="sandbox"
         visual={
@@ -1149,11 +1166,14 @@ export default function PrimeFrontPage() {
           <span className="font-mono text-amber-200">[sandbox · T91]</span>{" "}
           BAND-PARTIAL (19/19, 3/4 closed): the band is the one-atom zone
           log&nbsp;2&nbsp;&lt;&nbsp;a&nbsp;≤&nbsp;0.9253 with inner edge
-          a<sub>neg</sub>&nbsp;=&nbsp;0.7410. Beyond a<sub>neg</sub> the
-          prime-free margin changes sign and the prime atom becomes
-          load-bearing — the first prime rescues positivity where the
-          archimedean margin is exhausted (exactly the T89 balance point,
-          0.03%). Atom turn-on law exact (k&nbsp;=&nbsp;2m+1, Beta integrals);
+          a<sub>neg</sub>&nbsp;=&nbsp;0.7486{" "}
+          <span className="font-mono text-sky-300">
+            (recalibrated by T93; was 0.7410)
+          </span>
+          . Beyond a<sub>neg</sub> the prime-free margin changes sign and the
+          prime atom becomes load-bearing — the first prime rescues positivity
+          where the archimedean margin is exhausted (exactly the T89 balance
+          point). Atom turn-on law exact (k&nbsp;=&nbsp;2m+1, Beta integrals);
           uncertainty constants decided: a·t<sub>rms</sub>&nbsp;→&nbsp;π
           (Wirtinger) and a·t<sub>cent</sub>&nbsp;→&nbsp;2Si(π)&nbsp;−&nbsp;4/π
           =&nbsp;2.4306. Band and tight curves are two orbit regions of the same
@@ -1170,17 +1190,306 @@ export default function PrimeFrontPage() {
           Lambert-W, Si integral, Bombieri, θ<sub>RS</sub>.
         </p>
 
+        <p>
+          <strong className="font-medium text-slate-200">
+            Zone-extension attempt — and the self-check that found the
+            checker&apos;s bug.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T92]</span>{" "}
+          T-SKELETON (36/36): certified is Q&nbsp;≥&nbsp;6.7e-12&nbsp;&gt;&nbsp;0
+          on the 8-dim window subspace over the whole scanned region (error
+          certificate, 1057-point covering). The full extension does{" "}
+          <em>not</em> stand — λ<sub>min</sub> collapses geometrically (factor
+          ~11 per mode); the complement would need ~5000 modes: the finite-block
+          route is structurally the wrong instrument. Pearl:{" "}
+          <span className="font-mono text-slate-200">
+            {"k(0) = −γ − 3log2 − π/2 − log π"}
+          </span>{" "}
+          exact.{" "}
+          <span className="font-mono text-amber-200">[sandbox · T93]</span>{" "}
+          MIXED (41/41): T92&apos;s calibration flags against the band map were
+          resolved by a third independent implementation — the T89/T91 map
+          survives; the only real bug was in the checker (constants imported
+          untranslated, accidentally certifying a harder four-atom region); one
+          constant precision-improved by ~1% (a<sub>neg</sub>).{" "}
+          <em>
+            The self-check found the checker&apos;s bug — and
+            precision-improved one constant by 1%. The anchor discipline works
+            in both directions.
+          </em>
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            The relay, measured: each prime rescues the direction the previous
+            zone exhausts — and arrives before it is needed. The proof target
+            shifts from fragile minima to robust counterfactuals.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T95]</span>{" "}
+          T-CONTINUUM-NUMERIC (28/28): C1 fully proved — |h<sub>f</sub>
+          (log&nbsp;2)|&nbsp;≤&nbsp;1/2 via disjoint support intervals;
+          ‖S‖&nbsp;=&nbsp;1/2 exact with characterised eigenspace; atom-extremal
+          directions satisfy the target with margin (“the directions that
+          maximize the atom cost are provably safe”); continuum margin curve
+          positive everywhere; extremizer is not the two-bump — binding
+          mechanism is atom rescue. Lower bound open; missing instrument named.{" "}
+          <span className="font-mono text-amber-200">[sandbox · T96]</span>{" "}
+          EDGE-ARTIFACT + RELAY-CONFIRMED (21/21): the T95 “edge” at α* was a
+          map artefact — value exactly reproduced, edge reading withdrawn
+          (λ<sub>min</sub>&nbsp;&gt;&nbsp;0 on all [0.38,&nbsp;0.86]; margin
+          collapses exponentially, λ&nbsp;∼&nbsp;exp(−49α)).{" "}
+          <em>
+            Second self-correction of the weekend, same anchor discipline.
+          </em>{" "}
+          Without the log&nbsp;3-atom, λ<sub>min</sub> crashes to −0.445; the
+          loser is the anti-double-bump at distance log&nbsp;3 (alignment
+          −0.99); rescue identity to 5e-15. Handover windows all positive:
+          +0.025/+0.009/+0.011/+0.007 for the first four atoms. Strategy shift:
+          margin problem, not edge problem; numerics exhausted past
+          α&nbsp;≈&nbsp;0.55; the counterfactual is the proof target
+          (O(0.1)-sizes). Classical: Paley–Wiener, Prolate, Galerkin/Richardson.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            The induction takes shape: self-similarity puts the hypothesis
+            inside the decomposition; the target is now one scalar inequality
+            per zone — and the third self-correction of the weekend replaced a
+            circular lemma by an exact identity.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T97]</span>{" "}
+          ALIGNMENT-ONLY with certified half-step (105/105): alignment is sharp
+          (sign alignment ⟺ coupling window nonempty, without exception); the
+          t=0 killer loss on the anti-bump space is proved (
+          <span className="font-mono text-slate-200">
+            {"k_eff = (1−cos(tu))k(t)"}
+          </span>
+          , gain ×2–4.8); structure pearl: the E₀ block is literally the same
+          form on the smaller window — “the induction hypothesis appears inside
+          its own decomposition as self-similarity” (7e-14).{" "}
+          <span className="font-mono text-amber-200">[sandbox · T98]</span>{" "}
+          LAW-CONFIRMED-MECHANISM-OPEN (44/44): the conjectured one-vector lemma
+          was circular (Douglas range inclusion — the law is forced by
+          positivity itself); three T97 premises honestly refuted; replacement
+          target:{" "}
+          <span className="font-mono text-slate-200">
+            {"D_k(α) ≤ μ_k/2"}
+          </span>{" "}
+          — exact scalar inequality, no constant, no vector; holds in all four
+          zones, saturates at zone tips. Certificate upgrades: E₋ 43%→93% mean
+          (whole zone in 3 of 4) via the probability-measure identity on the
+          archimedean wings; E₊ certified for the first time. Skeleton: 8
+          pieces proved, 2 certificates, 3 refuted, 3 open. Classical: Douglas
+          1966, Schur, Slepian–Pollak–Landau.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            Induction closeout (T99–T101).
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T99]</span>{" "}
+          DECAY-LAW-FOUND (23/23): exact parity selection rule (
+          <span className="font-mono text-slate-200">
+            {"J₋Q₋₀J₀ = −Q₋₀"}
+          </span>
+          ) — the fragile near-null mode is excluded from the binding channel by
+          symmetry; recursive inequality with only 1.01–1.20× loss; termination
+          is arithmetic (240/240 in ≤&nbsp;4 steps to the classical zone).{" "}
+          <span className="font-mono text-amber-200">[sandbox · T100]</span>{" "}
+          REMAINDER-CLOSES-ZONES (27/27) — the 100th probe: closure 11/24 →
+          24/24 (6/6 in every zone); the drift was a lattice artefact; one lever
+          gained 1.7–69× (“the Bessel step threw the induction data away
+          twice”); zones 2–4 fully closed; zone-5 tip typed as an equality
+          problem (Fredholm shape, simple degeneration). Classical:
+          Bessel/Parseval, Slepian, Schur test, Fredholm alternative.{" "}
+          <span className="font-mono text-amber-200">[sandbox · T101]</span>{" "}
+          CROWDING-TRENDS (31/31) — the fork across 16 zones (n&nbsp;=&nbsp;2..29):
+          collapsed law{" "}
+          <span className="font-mono text-slate-200">
+            {"w_k = 0.0838·(atom gap)/μ_k"}
+          </span>{" "}
+          (fit) — “the handoff window is the atom spacing divided by the atom
+          strength”; primitives flat; D<sub>k</sub>&nbsp;≤&nbsp;μ<sub>k</sub>/2
+          holds 64/64 and never fails; only the closing instrument loses (
+          <span className="font-mono text-slate-200">{"r ~ exp(−0.16k)"}</span>,
+          fit/extrapolation). Core: “The crowding sits in the proof family, not
+          in the mathematics it is trying to prove — the most hopeful version of
+          the verdict.” Asymptotics would need (A) the arithmetic lower bound of
+          the collapsed law [the localized hardness], (B) uniform relative
+          margin, (C) a better bulk instrument, (D) a finite check.
+        </p>
+
         <p className="rounded-xl border border-slate-700/40 bg-slate-900/40 px-4 py-3 text-sm text-slate-400">
-          I5 remains ⟺ RH; the geography locates where any attack must work, it
-          does not perform one. Milestone: 2056/2056 sandbox checks. This is
-          not RH evidence.
+          The relay induction, audited across 16 zones: the mathematics trends
+          self-sustaining — flat primitives, a collapsed one-parameter law for
+          the handoff, and a target inequality that never fails; what loses the
+          race is the current instrument, and the hardness is localized in one
+          arithmetic lower bound. Status: identities proved, zones 2–4 closed,
+          zone-5 tip = equality problem, asymptotics = one named arithmetic
+          bound (A). I5 remains ⟺ RH; the geography locates where any attack
+          must work, it does not perform one. Milestone: 2428/2428 sandbox
+          checks. All laws marked as fits/extrapolations. This is not RH
+          evidence.
         </p>
       </DiarySection>
 
-      {/* 17 — Meaning */}
+      {/* 17 — The mechanism (T102) */}
+      <DiarySection
+        id="mechanism"
+        eyebrow="17 · The mechanism · Teil 102"
+        title="The onset is manufactured — an anchored crossing, not a singularity"
+        badge="sandbox"
+        visual={<HandoverCrossing />}
+      >
+        <p>
+          <strong className="font-medium text-slate-200">
+            The mechanism is exact.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T102]</span>{" "}
+          MECHANISM-IDENTIFIED (42/42): the k-th atom acts on the three
+          induction blocks E₋/E₀/E₊ as exactly{" "}
+          <span className="font-mono text-slate-200">
+            diag(−1/2, 0, +1/2)
+          </span>
+          , so the atom strength μ_k enters the handoff exactly once,
+          linearly. A two-sided sandwich over the Schur profile σ_k(δ)
+          brackets the handover: 2w_k lands between the two crossings in
+          16/16 zones (ratio 0.749…0.940), and the onset is{" "}
+          <em>anchored</em> at δ_c = 2w_k (R² 0.968). Honest correction to
+          T96: the essential-singularity reading is compatible but no longer
+          singled out — the onset is a crossing of two finite quantities.
+        </p>
+        <p>
+          <strong className="font-medium text-slate-200">
+            The binding constraint flips.
+          </strong>{" "}
+          No concentration condition binds: the bare E₋ form is strongly
+          positive (2.65…3.52 — that is 4–14× the atom line μ_k/2), and the
+          classical ceilings (Cauchy–Schwarz, Landau–Pollak/prolate) are
+          saturated near 97%. The onset is manufactured entirely by the{" "}
+          <em>Schur dressing against E₀⊕E₊</em> — the coupling to the
+          induction hypothesis — which takes 35.7%…97.3% of the bare
+          eigenvalue. The window law is a pure μ-power:{" "}
+          <span className="font-mono text-slate-200">
+            w ~ μ^(−0.563 ± 0.098)
+          </span>
+          , q = −1.84 ± 0.37 (fits); no log, no g_k.
+        </p>
+        <p>
+          <strong className="font-medium text-slate-200">
+            C/g was a proxy — refuted three ways.
+          </strong>{" "}
+          The T101 decomposition with the atom gap g_k is triply negative:
+          causally impossible (Q_(k−1) is blind to the next atom&apos;s
+          position), statistically dispensable (a causal law fits better),
+          and arithmetically only a ceiling (C_k ≤ g_k·μ_k exactly; the
+          16-zone extrapolation violates the ceiling from k = 69 — checked
+          over 18 120 prime-power atoms to n = 200 000). The hard core
+          localizes to one scalar per zone: a lower bound on σ_k just above
+          atom entry. That is a probe-level typing of where the hardness
+          sits, not progress on it. Sandbox; not RH evidence. Classical:
+          Schur complement, Cauchy–Schwarz, Landau–Pollak/prolate.
+        </p>
+      </DiarySection>
+
+      {/* 18 — The instrument rebuilt (T101 → T103) */}
+      <DiarySection
+        id="instrument-race"
+        eyebrow="18 · The instrument rebuilt · Teile 101 → 103"
+        title="The race, rerun: the slope halves and the map jumps to 44/64"
+        badge="sandbox"
+        visual={
+          <div className="space-y-3">
+            <InstrumentRace />
+            <ClosureMapGrid />
+          </div>
+        }
+      >
+        <p>
+          <strong className="font-medium text-slate-200">
+            T101 lost the race by the instrument, not the math.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T101]</span>{" "}
+          Across 16 zones the primitives are flat and the target inequality
+          never fails — but the closing instrument&apos;s race quantity r_k
+          decays as r ~ exp(−0.1622k) (fit, ± 0.0562): only zone 2 closes
+          throughout, 7/64 cells on the zone × wing-fraction map.
+        </p>
+        <p>
+          <strong className="font-medium text-slate-200">
+            T103 rebuilds the tool.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T103]</span>{" "}
+          INSTRUMENT-IMPROVED (29/29), pure tool-building at door C: the T101
+          race curve is first reproduced exactly, then re-run with a
+          θ-weighted band sum (certified weights, chain ρ ≤ b_band ≤ b_tail ≤
+          b_t99 at 64/64 samples) and full m(Λ) exploitation. The demand
+          Λ_ok stays bounded across all 16 zones —{" "}
+          <span className="font-mono text-slate-200">0.771…3.640</span>{" "}
+          instead of 2.3…376, a reduction of 3.0×…103.4× — at the honest
+          price of explicit modes growing 2 → 232. The new race slope is{" "}
+          <span className="font-mono text-slate-200">−0.0748 ± 0.0116</span>{" "}
+          (fit, 2.2× flatter): r_k falls only 9.33 → 2.70 and{" "}
+          <em>never leaves the spectrum</em>. The closure map jumps 7/64 →
+          44/64 with one fixed, k-uniform instrument (Λ₀ = 3, r = 2 — no
+          zone tuning).
+        </p>
+        <p>
+          <strong className="font-medium text-slate-200">
+            Measured verdict: the loss is in the wing, not the bulk.
+          </strong>{" "}
+          θ-weighting and finite rank are exhausted — the bulk is not
+          low-rank (effective rank up to 0.579·dim E₋). What remains is the
+          wing slack S = 1 − ρ: the pencil is nearly saturated and S falls
+          0.2091 → 0.0392. Named next levers: a wing-adapted
+          prolate/Slepian basis, or a Fredholm shape of the equality
+          argument. All laws are fits; the tool-problem is half solved, the
+          mathematics unchanged. Sandbox; not RH evidence.
+        </p>
+      </DiarySection>
+
+      {/* 19 — Two doors converge (T102 + T103 → T104) */}
+      <DiarySection
+        id="two-doors"
+        eyebrow="19 · Convergence · Teile 102–104"
+        title="Two doors, one object: the wing near-null direction"
+        badge="sandbox"
+        visual={<TwoDoorsConvergence />}
+      >
+        <p>
+          Two independent attacks — door A on the handoff law&apos;s lower
+          bound (T102) and door C on the closing instrument (T103) — end
+          their day pointing at the <em>same</em> object. T102 finds the
+          onset manufactured by the Schur dressing against E₀⊕E₊; T103 finds
+          the remaining instrument loss in the wing slack S = 1 − ρ. The
+          dressing and the slack are one object seen from two sides: the
+          wing near-null direction.
+        </p>
+        <p>
+          The hard core is thereby localized to one scalar per zone — a
+          lower bound on the Schur profile σ_k(δ_ref) just above atom entry,
+          i.e. quantitative Weil positivity at the atom edge. Provable-shaped
+          next to it: resolvent edge-regularity{" "}
+          <span className="font-mono text-slate-200">
+            σ_k(δ) ≥ σ_k(δ_ref)·(δ/δ_ref)^q_k
+          </span>
+          .
+        </p>
+        <p className="rounded-xl border border-slate-700/40 bg-slate-900/40 px-4 py-3 text-sm text-slate-400">
+          In progress — T104 (SCHUR.PROFILE.BOUND,{" "}
+          <span className="font-mono text-slate-300">
+            schur_profile_bound_probe.py
+          </span>
+          ) is running the inductive chain: induction margin → σ bound →
+          handover. Localizing the hardness is typing, not attacking it.
+          Sandbox; not RH evidence.
+        </p>
+      </DiarySection>
+
+      {/* 20 — Meaning */}
       <DiarySection
         id="meaning"
-        eyebrow="17 · What would it mean"
+        eyebrow="20 · What would it mean"
         title="Four calibrated levels — with caveats"
         badge="sandbox"
       >
@@ -1195,7 +1504,7 @@ export default function PrimeFrontPage() {
             level="Near"
             badge="sandbox"
             title="I5 geography complete — one object remains"
-            body="After 91 probes (2056/2056 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete — core = explicit Gaussian-mode family in the one-atom band (log 2, 0.925]; named target inequality (T), a classical-shaped zone extension beyond Bombieri. What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH. Geography locates; it does not attack. Not RH evidence."
+            body="After 101 probes (2428/2428 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete; induction skeleton closed through T101 — identities proved, zones 2–4 closed, zone-5 tip = equality problem, asymptotics = one named arithmetic bound (A). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH. Geography locates; it does not attack. Not RH evidence."
           />
           <MeaningLevel
             level="Big if"
@@ -1212,7 +1521,7 @@ export default function PrimeFrontPage() {
         </ol>
       </DiarySection>
 
-      {/* 18 — Live updates */}
+      {/* 21 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -1221,7 +1530,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              18 · Live updates
+              21 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -1267,16 +1576,17 @@ function ProgramStatusCallout() {
         Strongest current sentence
       </p>
       <p className="mt-3 font-serif text-lg leading-relaxed text-violet-50 sm:text-xl">
-        After 91 probes and seven promoted modules, what remains TFPT-specific
-        is exactly one object: I5 — with a named classical-shaped target (T) on
-        the one-atom band.
+        After 103 probes and seven promoted modules, what remains TFPT-specific
+        is exactly one object: I5 — with an induction skeleton whose identities
+        are proved, zones 2–4 closed, and asymptotics localized to one named
+        arithmetic bound (A), whose mechanism T102 identifies (Schur dressing
+        against E₀⊕E₊ — one scalar per zone).
       </p>
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
-        I5 core = explicit Gaussian-mode family in (log&nbsp;2,&nbsp;0.925];
-        named target (T){" "}
-        <span className="font-mono text-amber-200">[sandbox · T90–T91]</span>.
-        Milestone: 2056/2056 checks. Geography locates; it does not attack. Not
-        almost-RH. This is not RH evidence.
+        Zone-5 tip = equality problem; crowding sits in the proof family, not
+        the mathematics — and T103&apos;s improved instrument closes 44/64
+        (probe-level). Milestone: 2499/2499 checks. Not almost-RH. This is not
+        RH evidence.
       </p>
     </aside>
   );
@@ -1344,6 +1654,28 @@ function ThreePerspectivesCallout() {
   );
 }
 
+function BlindPrimeCallout() {
+  return (
+    <aside className="mt-8 rounded-2xl border border-emerald-400/40 bg-emerald-500/10 p-5 sm:p-6">
+      <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-emerald-300/90">
+        Blind demo · T94 · sandbox
+      </p>
+      <p className="mt-3 font-serif text-xl leading-relaxed text-emerald-50 sm:text-2xl">
+        753/753 primes predicted — zero errors, no division.
+      </p>
+      <p className="mt-3 text-sm leading-relaxed text-slate-300">
+        All primes in the never-seen window [1,000,001–1,010,000], from pure
+        lattice counting (Jacobi 1834: odd n prime ⟺ r₄(n)&nbsp;=&nbsp;8(n+1)),
+        with an AST-enforced prediction path containing no divisibility tests.
+        Predictions committed by MD5 before any truth was computed. Honesty: a
+        sieve is ~820× faster — structure completeness, not algorithmic
+        progress. Spectral prediction (zeros&nbsp;→&nbsp;primes) remains bound
+        to I5/RH.
+      </p>
+    </aside>
+  );
+}
+
 function I5GeographyCallout() {
   return (
     <aside className="rounded-2xl border border-violet-400/35 bg-violet-500/10 p-5 sm:p-6">
@@ -1351,12 +1683,12 @@ function I5GeographyCallout() {
         Geography — not an attack
       </p>
       <p className="mt-3 font-serif text-lg leading-relaxed text-violet-50 sm:text-xl">
-        One-atom band (log&nbsp;2,&nbsp;0.925]; first prime rescues positivity;
-        named target inequality (T).
+        Identities proved; zones 2–4 closed; zone-5 tip = equality; asymptotics
+        = one named arithmetic bound (A).
       </p>
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
         I5 remains ⟺ RH; the geography locates where any attack must work, it
-        does not perform one. 2056/2056 sandbox checks. This is not RH
+        does not perform one. 2428/2428 sandbox checks. This is not RH
         evidence.
       </p>
     </aside>

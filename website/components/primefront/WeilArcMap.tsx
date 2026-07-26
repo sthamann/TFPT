@@ -127,17 +127,42 @@ const BEATS = [
     tone: "resolved" as const,
   },
   {
-    id: "T87–91",
+    id: "T87–93",
     title: "I5 geography",
     detail:
-      "Core = Gaussian modes in one-atom band; named target (T); 2056 checks.",
+      "Band map survives self-check; a_neg → 0.7486; finite blocks wrong instrument.",
     tone: "step" as const,
+  },
+  {
+    id: "T94",
+    title: "Blind prime demo",
+    detail: "753/753 primes, zero errors, no division — structure, not speed.",
+    tone: "resolved" as const,
+  },
+  {
+    id: "T95–96",
+    title: "Relay confirmed",
+    detail: "C1 proved; α* edge withdrawn; handover windows positive.",
+    tone: "step" as const,
+  },
+  {
+    id: "T97–98",
+    title: "Induction skeleton",
+    detail:
+      "8 pieces proved; target = D_k ≤ μ_k/2; circular lemma replaced.",
+    tone: "step" as const,
+  },
+  {
+    id: "T99–101",
+    title: "Induction closeout",
+    detail:
+      "Zones 2–4 closed; zone-5 tip = equality; asymptotics = bound (A); 2428 checks.",
+    tone: "resolved" as const,
   },
   {
     id: "open",
     title: "One object remains: I5",
-    detail:
-      "I5 ⟺ RH; (T) is a classical-shaped zone extension — no RH claim.",
+    detail: "I5 ⟺ RH; hardness localized in arithmetic bound (A) — no RH claim.",
     tone: "open" as const,
   },
 ] as const;
@@ -169,7 +194,7 @@ export function WeilArcMap() {
   return (
     <div className="rounded-2xl border border-slate-700/50 bg-slate-950/60 p-4 sm:p-6">
       <p className="mb-1 font-mono text-[10px] uppercase tracking-widest text-sky-300/90">
-        July 25–26 arc · Teile 51–91
+        July 25–26 arc · Teile 51–101
       </p>
       <p className="mb-4 text-xs leading-relaxed text-slate-500">
         <span className="text-amber-200/90">Two isolated</span>
@@ -180,11 +205,11 @@ export function WeilArcMap() {
         {" → "}
         <span className="text-emerald-200/90">v540 / λ* / v541</span>
         {" → "}
-        <span className="text-sky-200/90">lemma closed (T85–T86)</span>
+        <span className="text-sky-200/90">I5 geography + relay</span>
         {" "}
         <span className="font-mono text-[9px] text-amber-300/80">[sandbox]</span>
         {" → "}
-        <span className="text-sky-200/90">I5 geography (T87–T91)</span>
+        <span className="text-sky-200/90">induction closeout (T99–T101)</span>
         {" → "}
         <span className="text-violet-200/90">one object remains: I5</span>
         . Geography ≠ attack. Not almost-RH.
