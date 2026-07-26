@@ -30,6 +30,14 @@ const OBJECTS: AtlasObject[] = [
     channel: "abelian",
   },
   {
+    id: "rs-ab",
+    name: "RS abelian product",
+    centre: 1,
+    weight: "normed",
+    note: "After weight normalisation: shifts {+1,+1,−1,−1} — no ξ-line factor.",
+    channel: "abelian",
+  },
+  {
     id: "epstein",
     name: "E₈ Epstein / total census",
     centre: 2,
@@ -53,15 +61,44 @@ const OBJECTS: AtlasObject[] = [
     note: "Where a_p lives. Needs its own cuspidal bridge — still open.",
     channel: "cuspidal",
   },
-  {
-    id: "rs-ab",
-    name: "RS abelian product",
-    centre: 1,
-    weight: "normed",
-    note: "After weight normalisation: shifts {+1,+1,−1,−1} — no ξ-line factor.",
-    channel: "abelian",
-  },
 ];
+
+const TICKS: { centre: number; label: string }[] = [
+  { centre: 0.5, label: "½" },
+  { centre: 1, label: "1" },
+  { centre: 2, label: "2" },
+];
+
+/** Map a functional-equation centre in [0, 2] onto the padded track. */
+const AXIS_INSET_LEFT = 10;
+const AXIS_INSET_RIGHT = 10;
+const AXIS_MAX_CENTRE = 2;
+const trackPosition = (centre: number) =>
+  AXIS_INSET_LEFT +
+  (centre / AXIS_MAX_CENTRE) * (100 - AXIS_INSET_LEFT - AXIS_INSET_RIGHT);
+
+/** Labels right of the dot would overflow past this point, so they flip left. */
+const LABEL_FLIP_THRESHOLD = 55;
+
+const CHANNEL_STYLE = {
+  abelian: {
+    dot: "border-violet-300/70 bg-violet-400",
+    text: "text-violet-200",
+    ring: "ring-violet-300/60",
+  },
+  cuspidal: {
+    dot: "border-rose-300/70 bg-rose-400",
+    text: "text-rose-200",
+    ring: "ring-rose-300/60",
+  },
+  other: {
+    dot: "border-slate-400/70 bg-slate-400",
+    text: "text-slate-300",
+    ring: "ring-slate-300/60",
+  },
+} as const;
+
+const formatCentre = (centre: number) => (centre === 0.5 ? "½" : String(centre));
 
 export function CenterAtlas() {
   const [active, setActive] = useState(OBJECTS[0].id);
@@ -69,60 +106,120 @@ export function CenterAtlas() {
 
   return (
     <div className="rounded-2xl border border-slate-700/50 bg-slate-950/60 p-4 sm:p-5">
-      <p className="mb-4 font-mono text-[10px] uppercase tracking-widest text-violet-300/90">
-        Centre atlas · click an object
-      </p>
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+        <p className="font-mono text-[10px] uppercase tracking-widest text-violet-300/90">
+          Centre atlas · click an object
+        </p>
+        <ul className="flex gap-3 font-mono text-[10px] text-slate-400">
+          <li className="flex items-center gap-1.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-violet-400" aria-hidden />
+            abelian
+          </li>
+          <li className="flex items-center gap-1.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-rose-400" aria-hidden />
+            cuspidal
+          </li>
+        </ul>
+      </div>
 
-      <div className="relative mx-auto max-w-xl px-2 pb-8 pt-6">
-        {/* axis */}
-        <div className="relative h-2 rounded-full bg-slate-800">
-          <div className="absolute inset-y-0 left-0 w-1/4 rounded-full bg-gradient-to-r from-violet-500/50 to-transparent" />
-          <span className="absolute -top-5 left-0 font-mono text-[10px] text-violet-300">
-            centre ½ (ξ)
+      {/* axis */}
+      <div className="relative h-5">
+        {TICKS.map((tick) => (
+          <span
+            key={tick.centre}
+            style={{ left: `${trackPosition(tick.centre)}%` }}
+            className={cn(
+              "absolute top-0 -translate-x-1/2 font-mono text-[10px]",
+              tick.centre === 0.5 ? "text-violet-300" : "text-slate-500",
+            )}
+          >
+            {tick.label}
           </span>
-          <span className="absolute -top-5 left-1/2 -translate-x-1/2 font-mono text-[10px] text-slate-500">
-            1
-          </span>
-          <span className="absolute -top-5 right-0 font-mono text-[10px] text-slate-400">
-            centre 2
-          </span>
-        </div>
+        ))}
+      </div>
+      <div className="relative h-1.5 rounded-full bg-slate-800">
+        <span
+          style={{
+            left: `${trackPosition(0)}%`,
+            width: `${trackPosition(0.5) - trackPosition(0)}%`,
+          }}
+          className="absolute inset-y-0 rounded-full bg-gradient-to-r from-transparent to-violet-500/70"
+          aria-hidden
+        />
+      </div>
+      <div className="mt-1.5 flex justify-between gap-3 font-mono text-[9px] uppercase tracking-widest text-slate-600">
+        <span className="text-violet-400/80">ξ-line · Re s = ½</span>
+        <span>weight 4</span>
+      </div>
 
-        <div className="relative mt-6 h-28">
-          {OBJECTS.map((o) => {
-            const left = `${(o.centre / 2) * 100}%`;
-            const y =
-              o.channel === "abelian" ? "10%" : o.channel === "cuspidal" ? "55%" : "32%";
-            const color =
-              o.channel === "abelian"
-                ? "border-violet-400/50 bg-violet-500/20 text-violet-100"
-                : o.channel === "cuspidal"
-                  ? "border-rose-400/40 bg-rose-500/15 text-rose-100"
-                  : "border-slate-500/40 bg-slate-700/40 text-slate-200";
-            return (
-              <button
-                key={o.id}
-                type="button"
-                onClick={() => setActive(o.id)}
-                style={{ left, top: y }}
+      {/* one lane per object — nothing can overlap */}
+      <div className="relative mt-3">
+        {TICKS.map((tick) => (
+          <span
+            key={tick.centre}
+            style={{ left: `${trackPosition(tick.centre)}%` }}
+            className={cn(
+              "absolute inset-y-0 w-px",
+              tick.centre === 0.5 ? "bg-violet-500/25" : "bg-slate-700/40",
+            )}
+            aria-hidden
+          />
+        ))}
+
+        {OBJECTS.map((o) => {
+          const position = trackPosition(o.centre);
+          const flipLabel = position > LABEL_FLIP_THRESHOLD;
+          const style = CHANNEL_STYLE[o.channel];
+          const isActive = active === o.id;
+          return (
+            <button
+              key={o.id}
+              type="button"
+              aria-pressed={isActive}
+              onClick={() => setActive(o.id)}
+              className={cn(
+                "relative block h-8 w-full rounded-md text-left transition hover:bg-white/[0.04]",
+                isActive && "bg-white/[0.06]",
+              )}
+            >
+              <span
+                style={{ left: `${position}%` }}
                 className={cn(
-                  "absolute -translate-x-1/2 whitespace-nowrap rounded-full border px-2.5 py-1 font-mono text-[10px] transition",
-                  color,
-                  active === o.id && "ring-2 ring-white/50 scale-105",
+                  "absolute top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border transition",
+                  style.dot,
+                  isActive && `ring-2 ${style.ring}`,
+                )}
+                aria-hidden
+              />
+              <span
+                style={
+                  flipLabel
+                    ? {
+                        right: `calc(${100 - position}% + 12px)`,
+                        maxWidth: `calc(${position}% - 12px)`,
+                      }
+                    : {
+                        left: `calc(${position}% + 12px)`,
+                        maxWidth: `calc(${100 - position}% - 12px)`,
+                      }
+                }
+                className={cn(
+                  "absolute top-1/2 -translate-y-1/2 overflow-hidden text-ellipsis whitespace-nowrap font-mono text-[10px] transition",
+                  isActive ? style.text : "text-slate-400",
                 )}
               >
                 {o.name}
-              </button>
-            );
-          })}
-        </div>
+              </span>
+            </button>
+          );
+        })}
       </div>
 
-      <div className="rounded-xl border border-slate-700/40 bg-slate-900/50 p-3">
+      <div className="mt-3 rounded-xl border border-slate-700/40 bg-slate-900/50 p-3">
         <div className="flex flex-wrap items-baseline gap-2">
           <h3 className="font-serif text-lg text-slate-100">{selected.name}</h3>
           <span className="font-mono text-[10px] text-slate-500">
-            weight {selected.weight} · centre {selected.centre}
+            weight {selected.weight} · centre {formatCentre(selected.centre)}
           </span>
         </div>
         <p className="mt-1 text-sm leading-relaxed text-slate-400">
