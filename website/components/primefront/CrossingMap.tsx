@@ -4,7 +4,8 @@ import { motion } from "motion/react";
 
 const LOG2 = Math.log(2);
 const LOG4 = Math.log(4);
-const BAND_END = 1.0;
+/** Outer edge of the one-atom zone (T91, Lambert-W form): a* = 0.9253 < log 3. */
+const BAND_END = 0.9253;
 
 const VIEW_W = 320;
 const AXIS_Y = 96;
@@ -25,8 +26,12 @@ const REST_STEPS = [
 ];
 
 const MARKERS = [
-  { a: 0.75, label: "0.75", note: "pole projection clears · CC comfort ends" },
-  { a: 0.85, label: "0.85", note: "pole-free atom↔arch content remains" },
+  {
+    a: 0.741,
+    label: "0.7410",
+    note: "sign change — the prime atom becomes load-bearing (T91)",
+  },
+  { a: 0.85, label: "0.85", note: "pole-free atom↔arch content remains (T90)" },
   { a: 1.2, label: "1.2", note: "odd atom-coupled mode (T90)" },
 ];
 
@@ -39,7 +44,7 @@ export function CrossingMap() {
     <div className="rounded-2xl border border-slate-700/50 bg-slate-950/60 p-4 sm:p-5">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <p className="font-mono text-[10px] uppercase tracking-widest text-violet-300/90">
-          Crossing map · support width a · Teile 87–90
+          Crossing map · support width a · Teile 87–91
         </p>
         <span className="font-mono text-[10px] text-slate-500">
           λ_min ≥ 0 on all 16 windows
@@ -47,7 +52,7 @@ export function CrossingMap() {
       </div>
 
       <svg
-        viewBox={`0 0 ${VIEW_W} 132`}
+        viewBox={`0 0 ${VIEW_W} 140`}
         className="w-full"
         role="img"
         aria-label="Map of the I5 crossing region over support width a: proven zone up to log 2, thin attackable band up to 1.0, classical band-limitation beyond, with the residual subspace dimension growing from 0 to 4."
@@ -124,7 +129,7 @@ export function CrossingMap() {
         {/* axis ticks */}
         {([
           { a: LOG2, label: "log 2", anchor: "middle" },
-          { a: BAND_END, label: "1.0", anchor: "middle" },
+          { a: BAND_END, label: "a* 0.9253", anchor: "middle" },
           { a: LOG4, label: "log 4", anchor: "end" },
         ] as const).map((t) => (
           <g key={t.label}>
@@ -150,12 +155,12 @@ export function CrossingMap() {
         ))}
 
         {/* measured markers */}
-        {MARKERS.map((m) => (
+        {MARKERS.map((m, i) => (
           <g key={m.label}>
             <circle cx={xOf(m.a)} cy={AXIS_Y - BAND_H / 2} r={3} fill="#f8fafc" />
             <text
               x={xOf(m.a)}
-              y={AXIS_Y + 26}
+              y={AXIS_Y + (i % 2 === 0 ? 25 : 34)}
               textAnchor="middle"
               fontSize="8"
               className="fill-slate-500 font-mono"
@@ -174,11 +179,13 @@ export function CrossingMap() {
         </li>
         <li>
           <span className="text-amber-200">amber</span> — the thin band
-          log 2 &lt; a ≲ 1.0: the real attackable content, atom↔arch balance
+          log 2 &lt; a ≤ a* = 0.9253: the real attackable content, atom↔arch
+          balance; a* &lt; log 3, so the whole band is a one-atom zone (T91)
         </li>
         <li>
-          <span className="text-slate-300">slate</span> — beyond 1.0: deep
-          near-zeros are classical band-limitation, no crossing content
+          <span className="text-slate-300">slate</span> — beyond a*: further
+          prime atoms enter and the deep near-zeros are classical
+          band-limitation, no crossing content
         </li>
       </ul>
 
@@ -198,10 +205,12 @@ export function CrossingMap() {
         The boundary is not sharp — the margin falls smoothly and the atom
         turn-on is (a − log 2)³-soft. T90 dissects the residual: the 1–4 vectors
         are n-stable (≤ 2.1°) and explicit (Gauss×cos / Gauss×sin, 99+%
-        capture), and 3 of 10 tracked vectors sit under no control at all. Step
-        positions above are schematic; the dimensions and the marked widths are
-        measured. Geography locates where an attack must work — it does not
-        perform one. Not RH evidence.
+        capture), and 3 of 10 tracked vectors sit under no control at all. T91
+        adds the inner edge: at a = 0.7410 the pole+arch margin is exhausted and
+        the prime atom at u = log 2 turns load-bearing — the same point the T89
+        balance found, to 0.03%. Step positions above are schematic; the
+        dimensions and the marked widths are measured. Geography locates where
+        an attack must work — it does not perform one. Not RH evidence.
       </p>
     </div>
   );

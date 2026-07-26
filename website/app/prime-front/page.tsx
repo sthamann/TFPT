@@ -670,7 +670,7 @@ export default function PrimeFrontPage() {
         </p>
 
         <p className="rounded-xl border border-violet-400/35 bg-violet-500/10 px-4 py-3 text-sm leading-relaxed text-violet-50 sm:text-base">
-          After 90 probes and seven promoted modules (v535–v541), the matching
+          After 91 probes and seven promoted modules (v535–v541), the matching
           lemma is closed on ALL atom classes (window-certificate format,
           modulo proven classics only). What remains TFPT-specific is exactly
           ONE object: I5 in one-family form —{" "}

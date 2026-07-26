@@ -1,3 +1,46 @@
+# 2026-07-26 (V) — Teil 91 (delegiert, Band analytisch): thin_band_analytic_probe.py — **BAND-PARTIAL** (3/4 geschlossen) — das Band ist die EIN-ATOM-ZONE log 2 < a ≤ a* = 0.9253 mit innerer Kante a_neg = 0.7410, an der die prim-freie Pol+Arch-Marge EXAKT erschöpft ist und DAS PRIM-ATOM TRAGEND WIRD (Vorzeichenwechsel = der T89-Balance-Punkt, 0.03%); Unschärfe-Konstanten entschieden: a·t_rms → π (Wirtinger, 0.3%), a·t_cent → 2Si(π) − 4/π = 2.4306 (neue geschlossene Konstante, 1.0%) — 19/19, 24.9s, Sandbox
+# B1 Atom-Einschalt-Gesetz EXAKT: k = 2m+1 für Rand-Ordnung m (Beta-Gesetz sympy-exakt; Sinus-
+#    Basis kubisch mit geschlossener Grundform); basis-unabhängiges Supremum springt auf exakt
+#    1/2 (Spike-Erreichbarkeit). ÜBERRASCHUNG (first-run, transparent retypt): λ_pa wechselt
+#    bei a_neg = 0.7410 das VORZEICHEN — jenseits ist das Atom u = log 2 TRAGEND (+0.22..+0.41
+#    Rettungsterm, rein ungerader Sektor): die Primzahl RETTET die Form, wo die Arch-Marge
+#    erschöpft ist. a_neg ≡ a_eq (T89) auf 0.03% — der Balance-Punkt IST der Vorzeichenwechsel.
+#    Äußere Kante a* = 0.9253 < log 3 (Lambert-W-Form) ⇒ das Band ist vollständig Ein-Atom-Zone.
+#    λ_pf-Zerfall super-exponentiell (Rate 6 → 34, log-Gauß R² 0.9995) — Konstanten EMPIRICAL
+#    (das offene 4. Element, ehrlich).
+# B2 Konstanten-Entscheid: 3.18 war KEIN Plateau (Drift +2.12 = messbare Pol-Kopplungs-
+#    Beimischung, exakte Algebra); am Band-Eintritt exaktes Grundmoden-Paar: a·t_rms → π
+#    (Wirtinger-Schranke auf allen Zeilen, Sättigung 1.020) und a·t_cent → 2Si(π) − 4/π
+#    (zweiroutig 1e-25); Prolate-Kandidat durch Drift-Vorzeichen widerlegt.
+# B3 Karten-Verbindung: Band und T88-Eng-Kurven sind ZWEI ORBIT-REGIONEN desselben Funktionals
+#    (Trennfaktor 24.9 in σω — keine Dilatation verbindet); gemeinsame Skala EXAKT:
+#    ∫₀^T k_ζ = 2θ_RS(T) (1e-25) — T88-Abstände = θ'-Dichte, T_bal = θ_RS-Integral.
+# B4 ZIEL-UNGLEICHUNG (T): für a ∈ (log 2, a*], ‖f‖ = 1: (P_pole + A_arch)(f) ≥ √2·log2·h_f(log2).
+#    Typisierung: RH ⇒ (T); (T) ⇏ RH — BEWEISBAR-FÖRMIG als ZONEN-ERWEITERUNG über Bombieris
+#    log 2 hinaus (das wäre ein eigenständiges KLASSISCHES Resultat!); jenseits a_neg ist (T)
+#    eine echte Kanzellierungs-Aussage (Atom-Rettung vs Atom-Kosten). Band-Margen ≥ +4.9e-07
+#    (Messung, Fence).
+# Serie (XII)–(CII): 91 Proben, 2056/2056 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Wirtinger/Rayleigh, Beta-Integrale,
+# Lambert-W, Si-Integral, Bombieri, θ_RS) zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-26 (IV) — Teil 90 (delegiert, Sektion des minimalen Objekts): residual_dissection_probe.py — **CORE-DISSECTED** — die 1–4 REST-Vektoren sind n-STABIL (≤ 2.1°) und EXPLIZIT (Gauß×cos-/Gauß×sin-Formen, 99+% Capture); die Abdeckungs-Matrix zeigt 3/10 Vektoren OHNE JEDE Kontrolle; die Pol-Projektion räumt die Enge NUR bei a = 0.75 — ab a ≈ 0.85 bleibt ECHTER pol-freier Atom↔Arch-Gehalt, plus ein ungerader atom-gekoppelter Mode bei a = 1.2 — 17/17, 1.8s, Sandbox
+# R1 Die expliziten Funktionen: REST-Basis n-stabil über die Diskretisierungs-Leiter (Winkel
+#    ≤ 2.1°); geschlossene Fits Gauß×cos/Gauß×sin mit 99+% Capture — „der I5-Kern zum
+#    Anfassen": eine kleine Familie konkreter, gerader/ungerader Gauß-modulierter Moden.
+# R2 Term-Anatomie pro Vektor: Pol/Arch/Atom-Bilanz mit Sensitivitäten dokumentiert.
+# R3 ABDECKUNGS-MATRIX (Kern-Ergebnis): [Zertifikat-Erweiterung / CC-Pol-Vanishing / Sonin-
+#    Projektion] × [10 Vektoren über die a-Leiter]: 3/10 Vektoren von KEINER Struktur
+#    kontrolliert; die Kern-Frage („ist der REST nur Pol-Kopplung?") ist ENTSCHIEDEN: NEIN —
+#    Pol-Projektion räumt nur das a = 0.75-Fenster; ab a ≈ 0.85 bleibt pol-freier
+#    Atom↔Arch-Gehalt (der echte I5-Kern), bei a = 1.2 zusätzlich ein UNGERADER
+#    atom-gekoppelter Mode (neu — die geraden Analysen sahen ihn nicht).
+# R4 Finale Anforderungs-Zeile: eine I5-Idee muss Positivität für die explizite Gauß-Moden-
+#    Familie im Band liefern — pol-frei reduzierbar ist sie nicht.
+# Serie (XII)–(CI): 90 Proben, 2037/2037 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz, keine spektrale Identifikation; Klassik (Bombieri,
+# CC-Vanishing, Slepian) zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung. (T91 läuft.)
+
 # 2026-07-26 (III) — Teil 89 (delegiert, Sonin-Einsatz auf den Kreuzungsbereich): sonin_crossing_probe.py — **CROSSING-MAPPED** — die Fenster-Kompression der Weil-Form IST Bombieris klassisches Objekt (Bombieri 2000, recherchiert); die Grenze bei log 2 ist NICHT scharf (glatter klassischer Zerfall, kein Kollaps); der Rest-Unterraum wächst weich 0 → 4 (von 32) und trägt das globale Minimum; der ECHTE angreifbare Crossing-Inhalt ist die Atom↔Arch-Balance im DÜNNEN BAND log 2 < a ≲ 1.0 — 19/19, 3.7s, Sandbox
 # Recherche-Befund: unconditional Weil-Positivität ist klassisch GENAU bis Trägerbreite log 2
 #    bekannt (Yoshida 1992, Bombieri 2000 Lincei (Thm 12, t = log2/2-Verifikation!), CC 2021
