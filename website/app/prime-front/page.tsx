@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–107 · 2657 sandbox checks
+            Research diary · Teile 11–108 · 2701 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1601,8 +1601,12 @@ function ProgramStatusCallout() {
         the dimensions. T107 (SCALAR-TRACTABLE) reduces that statement to
         exactly one scalar ratio r = κ/ε ≤ 1 with two orders of magnitude of
         measured room (r = 0.005…0.18); the symbol route is structurally
-        dead, and exactly one object remains to certify. Milestone:
-        2657/2657 checks. Not almost-RH. This is not RH evidence.
+        dead, and exactly one object remains to certify. T108
+        (EPSILON-IDENTITY) makes ε&apos;s positivity an exact identity — the
+        square of the last Cholesky pivot (Szegő), coinciding with the
+        induction positivity itself — and reduces (R) to two scalars; what
+        remains is literally one boundary value of an explicit vector.
+        Milestone: 2701/2701 checks. Not almost-RH. This is not RH evidence.
       </p>
     </aside>
   );

@@ -141,9 +141,13 @@ export function TwoDoorsConvergence() {
           odd channel — one Loewner statement on half the dimensions. T107 ·
           ODD.CHANNEL.CLOSURE — SCALAR-TRACTABLE (30/30): (R) ⟺ one scalar
           ratio r = κ/ε ≤ 1, measured r = 0.005…0.18 — two orders of magnitude
-          of room; the symbol route is structurally dead. T108 (
+          of room; the symbol route is structurally dead. T108 ·
+          RATIO.CERTIFICATE — EPSILON-IDENTITY (44/44): ε&apos;s positivity is
+          an exact identity (Szegő pivot / Q-energy) coinciding with the
+          induction positivity itself; (R) is down to two scalars — what
+          remains is literally one boundary value of an explicit vector. T109 (
           <span className="font-mono text-slate-300">
-            ratio_certificate_probe.py
+            boundary_decay_probe.py
           </span>
           ) running.
         </p>

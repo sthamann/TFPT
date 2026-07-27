@@ -1,3 +1,41 @@
+# 2026-07-27 (II) — Teil 108 (delegiert, das Verhältnis-Zertifikat — Vertrag RATIO.CERTIFICATE): ratio_certificate_probe.py — **EPSILON-IDENTITY** — die Positivität von ε ist jetzt eine EXAKTE Identität (Quadrat des letzten Cholesky-Pivots = Szegő/Levinson-Prädiktionsfehler; ε ist eine Q|odd-Energie) und fällt mit der Induktions-Positivität im ungeraden Kanal ZUSAMMEN; (R) reduziert von einer M/2-dimensionalen Loewner-Aussage auf ZWEI Skalare (ω < 1 + eine Aussage am Vektor x); ERSTMALS NICHT-VAKUUM: Margen-Kette C1 schließt 16/16 bedingt; exakt offen ist buchstäblich EIN RANDWERT eines expliziten Vektors — 44/44, 9.8s, Sandbox
+# F1 Alles hängt am Vektor x := T_odd⁻¹t̃ (Pol-Antwort). Drei EXAKTE Identitäten
+#    (10⁻¹¹…10⁻¹³ verifiziert): ε = xᵀQ|odd x/τ — ε IST eine Q|odd-Energie;
+#    1/ε = 1 + t̃ᵀQ|odd⁻¹t̃; die Überlappung von ε und κ ist exakt EIN Rang-1-Term
+#    hhᵀ/ε, (R) ⟺ verallgemeinerter Rayleigh-Quotient r̂ = (μ/2)λ_max(Γ + hhᵀ/ε) ≤ 1.
+#    T107s Cauchy-Schwarz-Kette entpuppt sich als exakt die Weyl-Schranke
+#    (Slack 1.0000). WEICHRAND-BILD KORRIGIERT: τ liegt zu 99.66% auf Moden λ ≥ 1;
+#    ‖h‖² ist klein durch Vorzeichen-Auslöschung (Σ|k| = 401 vs Σk = 1). r̂ ist
+#    flach über M (6.1× stabiler als ε); r, r̂ < 1 an allen 92 (Zone,M)-Punkten
+#    bis M = 3000 (engste Stelle 0.9648).
+# F2 ω = 0.2366…0.7531 gemessen 16/16; die T105-Struktur überlebt die
+#    Paritätsspaltung wörtlich (VᵀS|odd V = −½I auf 4.9e-14); ω_cert blockiert
+#    allein vom Kompressions-Schur-Abstand (0.18…0.52). Drei ‖h‖²-Zertifikats-
+#    Kandidaten sterben quantifiziert (Auslöschung 401, Bessel 10⁷, Pol-CS 10⁶).
+# F3 Der ε-Weg (i) trägt: x ist praktisch der Grundmode von Q|odd (Rayleigh
+#    0.9248…0.9993); die vollständig explizite Form ε ≥ λ_ind‖t̃‖²/(t̃ᵀT_odd t̃)
+#    kostet nur 1.51…9.81. Weg (iii) liefert die Klassik-Struktur: t̃ ist exakt
+#    Zwei-Term-Geometrie, τ eine 2×2-Christoffel-Darboux-Form, ε EXAKT das
+#    Quadrat des letzten Cholesky-Pivots (Szegő/Levinson-Prädiktionsfehler) —
+#    die Positivität von ε fällt mit der Induktions-Positivität im ungeraden
+#    Kanal zusammen.
+# F4 Kette (R) ⟸ [ω < 1] ∧ [λ_min(Q|odd) ≥ (μ/2)τθ/(1−ω)]: C1 schließt 16/16
+#    (Marge 5.5–178; an allen 48 Leiterpunkten ≥ 1: 2.7–343), C2 15/16, C3 0/16.
+#    ERSTMALS NICHT-VAKUUM: die benötigte Induktions-Marge liegt explizit bei
+#    9.3e-8…3.7e-3 = 10²–10⁶ UNTER μ/2.
+# REDUKTION: (R) von der M/2-dimensionalen Loewner-Aussage auf ZWEI Skalare
+#    reduziert: ω < 1 und die Aussage am Vektor x. Exakt offen: eine zertifizierte
+#    Obergrenze der Vermeidungs-Norm ‖VᵀT_odd⁻¹t̃‖² — auf 8 Zonen buchstäblich der
+#    EINZELNE RANDWERT x₀ (unterdrückt: |x₀|/max|x| = 2.9e-3…5.7e-3, lineares
+#    Randprofil r^1.01 als Fit) — eine Randabfall-Aussage über einen expliziten
+#    Vektor, die Objektklasse der T105-Träger-Separation. → T109 (läuft):
+#    BOUNDARY.DECAY (boundary_decay_probe.py) — Combes-Thomas/Green-Abklingen,
+#    Szegő-Rekursions-Schranke, ω-Knacken via PSD-Matrix-Kappen.
+# Serie (XII)–(CXIX): 108 Proben, 2701/2701 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Woodbury/Rang-1, Rayleigh-
+# Quotient, Weyl-Schranke, Christoffel-Darboux, Cholesky/Szegő–Levinson,
+# Cauchy-Schwarz, Bessel) zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-27 (I) — Teil 107 (delegiert, der ungerade Kanal — Vertrag ODD.CHANNEL.CLOSURE): odd_channel_closure_probe.py — **SCALAR-TRACTABLE** — die letzte Matrix-Aussage IST jetzt exakt EIN skalares Verhältnis: Sherman-Morrison reduziert (R) EXAKT auf s* ≤ 1, aber s* ist SATURIERT (0.99885…0.99999) — die Woodbury-Zerlegung rettet: s* = τ + κ, (R) ⟺ r := κ/ε ≤ 1 mit ε = 1 − τ, gemessen r = 0.0053…0.1814 — ZWEI GRÖSSENORDNUNGEN Luft statt fünf Nachkommastellen; die Symbol-Route (Grenander–Szegő) ist STRUKTURELL TOT; es fehlt GENAU EIN Objekt: das Zertifikat für r — 30/30, 15.7s, Sandbox
 # E1 Sherman-Morrison-Reduktion steht EXAKT: (R) ⟺ s* ≤ 1 (Identität 3.4e-11; Äquivalenz
 #    gegen Rayleigh-Ritz 16/16 bestätigt; Vorbedingung G ≻ 0 via Cholesky 16/16). ABER

@@ -84,7 +84,8 @@ export type PrimeFrontVerdict =
   | "CHAIN-PARTIAL"
   | "ONE-OF-TWO"
   | "DENSITY-MAPPED"
-  | "SCALAR-TRACTABLE";
+  | "SCALAR-TRACTABLE"
+  | "EPSILON-IDENTITY";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -108,6 +109,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-27",
+    part: 108,
+    title:
+      "Epsilon identity — ε's positivity is an exact identity; (R) drops to two scalars, literally one boundary value",
+    verdict: "EPSILON-IDENTITY",
+    summary:
+      "T108 (EPSILON-IDENTITY, 44/44) — contract RATIO.CERTIFICATE: epsilon's positivity is now an EXACT identity that coincides with the induction positivity itself. (F1) Everything hangs on the vector x := T_odd⁻¹t̃ (the pole response). Three EXACT identities (verified to 10⁻¹¹…10⁻¹³): ε = xᵀQ|odd x/τ — ε IS a Q|odd energy; 1/ε = 1 + t̃ᵀQ|odd⁻¹t̃; and the overlap of ε and κ is exactly ONE rank-1 term hhᵀ/ε, so (R) ⟺ a generalized Rayleigh quotient r̂ = (μ/2)λ_max(Γ + hhᵀ/ε) ≤ 1. T107's Cauchy–Schwarz chain turns out to be exactly the Weyl bound (slack 1.0000). The soft-edge picture is CORRECTED: τ sits to 99.66% on modes λ ≥ 1, and ‖h‖² is small through sign cancellation (Σ|k| = 401 vs Σk = 1). r̂ is flat over M (6.1× more stable than ε); r, r̂ < 1 at all 92 (zone, M) points up to M = 3000 (tightest 0.9648). (F2) ω = 0.2366…0.7531 measured 16/16; the T105 structure survives the parity split literally (VᵀS|odd V = −½I at 4.9e-14); ω_cert is blocked solely by the compression Schur distance (0.18…0.52). Three ‖h‖² certificate candidates die quantified (cancellation 401, Bessel 10⁷, pole-CS 10⁶). (F3) The ε route (i) carries: x is practically the ground mode of Q|odd (Rayleigh 0.9248…0.9993); the fully explicit form ε ≥ λ_ind‖t̃‖²/(t̃ᵀT_odd t̃) costs only 1.51…9.81. Route (iii) delivers the classical structure: t̃ is exactly a two-term geometry, τ a 2×2 Christoffel–Darboux form, and ε is EXACTLY the square of the last Cholesky pivot (the Szegő/Levinson prediction error) — ε's positivity coincides with the induction positivity in the odd channel. (F4) The chain (R) ⟸ [ω < 1] ∧ [λ_min(Q|odd) ≥ (μ/2)τθ/(1−ω)]: C1 closes 16/16 (margin 5.5–178; ≥ 1 at all 48 ladder points: 2.7–343), C2 15/16, C3 0/16 — and for the FIRST TIME the chain is NON-VACUOUS: the required induction margin is explicit at 9.3e-8…3.7e-3, a factor 10²–10⁶ BELOW μ/2. REDUCTION: (R) drops from an M/2-dimensional Loewner statement to TWO scalars — ω < 1 and the statement at the vector x. Exactly open: a certified upper bound on the avoidance norm ‖VᵀT_odd⁻¹t̃‖² — on 8 zones literally the SINGLE BOUNDARY VALUE x₀ (suppressed: |x₀|/max|x| = 2.9e-3…5.7e-3, linear edge profile r^1.01 as a fit) — a boundary-decay statement about an explicit vector, the object class of T105's support separation. T109 (BOUNDARY.DECAY, boundary_decay_probe.py) is running. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "ratio_certificate_probe.py",
+  },
   {
     date: "2026-07-27",
     part: 107,
