@@ -181,11 +181,18 @@ export function TwoDoorsConvergence() {
           margin-free, eleven of them beyond the old wall up to n = 1331 and
           all seven zones where the old chain tore; the wall was an O(1)
           numerator divided by an artifact floor; chains now stop only at
-          compute cost (the h ≤ 1500 cap), never at a step; the remaining
+          compute           cost (the h ≤ 1500 cap), never at a step; the remaining
           core is ε relative to κ plus Schur-complement transport between
-          grids. T115 (
+          grids. T115 · SCHUR.TRANSPORT — TRANSPORT-BLOCKED (26/26): the
+          transport bracket certifies only mild refinement (clean split at
+          ρ* ≈ 1.8; on nested ladders λ_min(S) itself falls like ρ^−1.7 — no
+          bound can fix that), but the two-scale compression breaks the cap:
+          a certified margin-free step at n = 155,921 (117× deeper), chains
+          of 10 steps, the stopper always cost and never a step; the
+          remaining list is three points, only one an inequality (the
+          classical Szegő–Levinson prediction-error bound). T116 (
           <span className="font-mono text-slate-300">
-            schur_transport_probe.py
+            boundary_formulation_probe.py
           </span>
           ) running.
         </p>

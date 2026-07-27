@@ -91,7 +91,8 @@ export type PrimeFrontVerdict =
   | "CROSSING-CONFIRMED"
   | "SCALING-PARTIAL"
   | "SUBSTANCE-CONFIRMED"
-  | "WALL-DISSOLVES";
+  | "WALL-DISSOLVES"
+  | "TRANSPORT-BLOCKED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -115,6 +116,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-27",
+    part: 115,
+    title:
+      "Transport blocked, cap broken — compression certifies a margin-free step at n = 155,921 and chains of 10 steps; the remaining list is three points, only one an inequality",
+    verdict: "TRANSPORT-BLOCKED",
+    summary:
+      "T115 (TRANSPORT-BLOCKED with a large compression gain, 26/26) — contract SCHUR.TRANSPORT: the two last bricks of the margin-free programme — transport the exact Schur complement between the ladder's non-nested grids, and break the computational cap by multi-resolution compression. (M1) The transport: Haynsworth's partial minimisation (yᵀSy = min_z [y;z]ᵀQ′[y;z]) makes λ_min(S) inverse-free and margin-free — a two-sided transport bracket on 11 real regrid pairs (ρ = 1.023–3.425). The error bracket is an IDENTITY (bookkeeping); the evidence sits in η and in the lower end. Operator control: the exact cell-overlap projection beats three deliberately wrong transfer maps 9/9 (by up to a factor 270). THE LOWER END IS POSITIVE ON 7/11 — a clean split: every pair with ρ ≤ 2.061 certifies, every pair with ρ ≥ 2.291 does not; synthetic threshold ρ* = 1.83, median real ratio 2.001 (39% of the ladder's 7686 refinement pairs covered). The reason is PRINCIPLED, not a bound problem: on nested ladders, where the transport error is exactly zero, λ_min(S) itself falls like ρ^(−1.73…−1.65) — the drop is real, so no bound can undo it; transport certifies only for mild refinement. Non-nestability is sharper than T114 thought: the criterion is integrality (not dyadicity), and 0/14807 ratios are integer (closest miss 3.4e-5). η measured 2.7e-2…8.1e-2; the a-priori Céa/Strang surrogate is 10³–10⁶× too coarse. (M2) The compression: the two-scale form (interior merged into blocks, boundary kept fine, the merge anchored at the centre) keeps X_mixed = Q_old,mixed EXACTLY (rel 0.0) — the compressed step is still margin-free; Albert certifies 66/66 (zone, q) combinations up to q = 64; the compression error is certified ONE-SIDED and second order in the projection defect (Rayleigh–Ritz plus stationarity of the fine minimiser, Céa/Strang, 66/66); savings down to m/h = 0.043. (M3) The deep run: THE CAP BREAKS — the margin-free step certifies at n = 155,921 (117× T114's 1331), on a fine lattice of h = 93,470 cells (62× the hard cap h ≤ 1500) compressed to m = 1490; re-coarsening is free (Rayleigh–Ritz, rel ≤ 2.1e-12); the LONGEST CHAIN IS 10 STEPS (T114: 4), 33 certified steps over 4 chains; the stopper is the cost cap on 3/4 chains and a failing step on 0 — every certificate sits 10⁵–10¹¹× above the Cholesky backward-error floor. Honest: λ_min(S_mixed) ≈ 5.1 is 52× the uniform-grid size (the coarser space measures a larger λ_min), flat over depth. (M4) The remaining list — the shortest ever: three points, only ONE of which is an inequality. (1) [P1] is ONE scalar inequality: ε = 1 − t̃ᵀT⁻¹t̃ ≥ c(D) > 0 — the classical Szegő–Levinson prediction-error bound for one symbol (Haynsworth double-Albert: T ≻ 0 ∧ ε ≥ 0 ⟺ Q ⪰ 0); measured ε ~ ρ^−1.71, falling faster than λ_min(S) ~ ρ^−1.69. (2) An a-priori η bound = regularity of z* (would make transport certified rather than measured for ρ ≤ 1.8). (3) A BOUNDARY FORMULATION (suggested by the exact-zero lemma): never represent the old interior at all — that would remove the cap AND the regrid. Contiguous reach (what an induction needs): n ≤ 125 → n ≤ 5437 (factor 43.5) — the n·log n barrier is DIVIDED, not broken. Deleted from T114's list: the margin, the (R) demand, floor/ε transport, the compression risk. T116 (BOUNDARY.FORMULATION, boundary_formulation_probe.py) is running: the induction as a pure boundary process (Riccati-type Schur recursion, pole via Woodbury, kernel-tail truncation), a deep boundary run, and the ε(D) law with the classical comparison. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "schur_transport_probe.py",
+  },
   {
     date: "2026-07-27",
     part: 114,

@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–114 · 2850 sandbox checks
+            Research diary · Teile 11–115 · 2876 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1637,8 +1637,16 @@ function ProgramStatusCallout() {
         an O(1) numerator divided by an artifact floor; chains now stop
         only at compute cost, never at a step, and the remaining core is
         two objects (ε relative to κ via the exact Szegő identity, and
-        transporting an O(0.1) Schur complement between grids); T115
-        (schur_transport_probe.py) is running. Milestone: 2850/2850
+        transporting an O(0.1) Schur complement between grids). T115
+        (TRANSPORT-BLOCKED) then splits that core: transport certifies
+        only mild refinement (the Schur floor itself falls like ρ^−1.7 on
+        nested ladders — no bound can fix that), but the two-scale
+        compression breaks the cap — a certified margin-free step at
+        n = 155,921 (117× deeper), chains of 10 steps, the stopper always
+        cost and never a step — leaving the shortest list ever: three
+        points, only one of which is an inequality (the classical
+        Szegő–Levinson prediction-error bound for one symbol); T116
+        (boundary_formulation_probe.py) is running. Milestone: 2876/2876
         checks. Not almost-RH. This is not RH evidence.
       </p>
     </aside>

@@ -1,3 +1,59 @@
+# 2026-07-27 (IX) — Teil 115 (delegiert, der Schur-Transport — Vertrag SCHUR.TRANSPORT): schur_transport_probe.py — **TRANSPORT-BLOCKED** (mit großem Kompressions-Gewinn) — DER TRANSPORT ZERTIFIZIERT NUR MILDE VERFEINERUNG, ABER DIE KOMPRESSION BRICHT DEN DECKEL: die inversen-/margenfreie Transport-Klammer (Haynsworth) erreicht das untere Ende positiv auf 7/11 realen Regrid-Paaren mit sauberem Split bei ρ* ≈ 1.8 — und der Grund ist PRINZIPIELL: auf geschachtelten Leitern (Transportfehler exakt 0) fällt λ_min(S) selbst wie ρ^−1.7, keine Schranke kann das beheben; ABER die Zwei-Skalen-Kompression zertifiziert den margenfreien Schritt bei n = 155 921 (117× T114s 1331; feines Gitter h = 93 470 = 62× Deckel, komprimiert m = 1490), längste Kette 10 Schritte (T114: 4), Stopper immer Kosten, NIE ein Schritt; die Restliste ist die kürzeste je — drei Punkte, nur EINER eine Ungleichung (die klassische Szegő-Levinson-Prädiktionsfehler-Ungleichung für ein Symbol) — 26/26, 58.9s, Sandbox
+# M1 Transport: Haynsworths partielle Minimierung (yᵀSy = min_z [y;z]ᵀQ'[y;z])
+#    macht λ_min(S) inversen- und margenfrei — Zwei-Seiten-Klammer auf 11
+#    realen Regrid-Paaren (ρ = 1.023–3.425). Die Fehler-Klammer ist eine
+#    IDENTITÄT (Buchhaltung); die Evidenz sitzt in η und im unteren Ende.
+#    Operator-Kontrolle: die exakte Zell-Überlappungs-Projektion schlägt drei
+#    absichtlich falsche Transfermaps auf 9/9 (bis Faktor 270). UNTERES ENDE
+#    POSITIV AUF 7/11 — sauberer Split: jedes Paar mit ρ ≤ 2.061 ja, jedes
+#    mit ρ ≥ 2.291 nein; synthetische Schwelle ρ* = 1.83, Median der realen
+#    Verhältnisse 2.001 (39% der 7686 Leiter-Paare gedeckt). PRINZIPIELLER
+#    Grund: auf geschachtelten Leitern (Transportfehler exakt 0) fällt
+#    λ_min(S) real wie ρ^(−1.73…−1.65) — kein Schranken-Problem, der Abfall
+#    ist echt. Nicht-Schachtelbarkeit schärfer als T114 dachte: das Kriterium
+#    ist GANZZAHLIGKEIT (nicht Dyadik), 0/14807 Verhältnisse ganzzahlig
+#    (nächstes 3.4e-5 daneben). η gemessen 2.7e-2…8.1e-2; das
+#    a-priori-Surrogat (Céa/Strang-Norm-Route) ist 10³–10⁶× zu grob.
+# M2 Kompression: Zwei-Skalen-Form (Innen zu Blöcken verschmolzen, Rand fein,
+#    Merge am Zentrum verankert): X_mixed = Q_old,mixed EXAKT (rel 0.0) — der
+#    Schritt bleibt auch komprimiert margenfrei; Albert zertifiziert 66/66
+#    (Zone, q)-Kombinationen bis q = 64; der Kompressionsfehler ist
+#    zertifiziert EINSEITIG und zweiter Ordnung im Projektionsdefekt
+#    (Rayleigh-Ritz + Stationarität des feinen Minimierers, Céa/Strang,
+#    66/66); Ersparnis bis m/h = 0.043.
+# M3 Tiefer Lauf: DER DECKEL BRICHT — der margenfreie Schritt zertifiziert
+#    bei n = 155 921 (117× T114s 1331), feines Gitter h = 93 470 Zellen (62×
+#    der harte Deckel h ≤ 1500), komprimiert auf m = 1490; Re-Coarsening
+#    gratis (Rayleigh-Ritz, rel ≤ 2.1e-12); LÄNGSTE KETTE 10 SCHRITTE
+#    (T114: 4), 33 Schritte über 4 Ketten; Stopper 3/4 Kostendeckel, 0 an
+#    einem Schritt; alle Zertifikate 10⁵–10¹¹× über dem
+#    Cholesky-Rückwärtsfehler-Boden. Ehrlich: λ_min(S_mixed) ≈ 5.1 ist 52×
+#    die uniforme Größe (der gröbere Raum misst ein größeres λ_min), über
+#    die Tiefe flach.
+# M4 Restliste (die kürzeste je, 3 Punkte, nur EINER eine Ungleichung):
+#    (1) [P1] = EINE skalare Ungleichung: ε = 1 − t̃ᵀT⁻¹t̃ ≥ c(D) > 0 — die
+#    klassische Szegő-Levinson-Prädiktionsfehler-Ungleichung
+#    (Haynsworth-Doppel-Albert: T ≻ 0 ∧ ε ≥ 0 ⟺ Q ⪰ 0); gemessen
+#    ε ~ ρ^−1.71, fällt schneller als λ_min(S) ~ ρ^−1.69. (2) die
+#    a-priori-η-Schranke = Regularität von z* (macht den Transport für
+#    ρ ≤ 1.8 zertifiziert statt gemessen). (3) RAND-FORMULIERUNG (vom
+#    Exakt-Null-Lemma nahegelegt): das alte Innere gar nicht repräsentieren —
+#    würde Deckel UND Regrid beseitigen. Zusammenhängende Reichweite:
+#    n ≤ 125 → n ≤ 5437 (Faktor 43.5) — die n·log n-Barriere ist GETEILT,
+#    nicht gebrochen. Von T114s Liste GESTRICHEN: Marge, (R)-Nachfrage,
+#    Boden/ε-Transport, Kompressions-Risiko. → T116 (läuft):
+#    BOUNDARY.FORMULATION (boundary_formulation_probe.py) — die Induktion
+#    als reiner Rand-Prozess (Riccati-artige Schur-Rekursion, Pol via
+#    Woodbury, Kern-Schwanz-Trunkierung), tiefer Rand-Lauf, ε(D)-Gesetz +
+#    Klassik-Abgleich.
+# Serie (XII)–(CXXVI): 115 Proben, 2876/2876 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Albert 1969, Douglas 1966,
+# Haynsworth 1968/Schur-Komplement, Céa 1964/Strangs erstes Lemma,
+# Bramble-Hilbert 1970, Brandt 1977/Yserentant 1986, Rayleigh-Ritz,
+# Loewner-Ordnung, Weyl 1912, Cholesky/Wilkinson 1968/Higham 2002,
+# Szegő/Levinson 1947, Grenander–Szegő, Weil 1952, Bertrand-Chebyshev 1852)
+# zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-27 (VIII) — Teil 114 (delegiert, der margenfreie Schritt — Vertrag MARGIN.FREE.STEP): margin_free_step_probe.py — **WALL-DISSOLVES** — DIE MARGEN-WAND LÖST SICH AUF: das exakte Schur-Komplement (Albert 1969, Pseudo-Inverse) zertifiziert jeden Leiter-Schritt margenfrei — 27/27, davon 11 jenseits der alten Wand (bis n = 1331, tiefster h = 1495) und alle 7 Riss-Zonen der T109-Kette (inkl. n = 449); das exakte 4×4-Schur-Komplement ist O(0.1) OHNE Auslöschung (λ_min(S) = 42–67% der Blockskala), dieselbe Größe via Norm-Schranke ist um Faktor 2.4e5–9.6e7 negativ — die Wand war ein O(1)-Zähler geteilt durch einen Artefakt-Boden; Ketten enden nur am Fenster-Kosten-Deckel h ≤ 1500, NIE an einem Schritt; [P5] NEU: die (R)-Nachfrage ist gitter-gebunden, im Kontinuum falsch — streichen statt transportieren; der neue Kern: [P1] ε > 0 relativ zu κ + [P2] Schur-Transport zwischen Gittern — 22/22, 14.2s, Sandbox
 # L1 Margenfreier Schritt: der Unterblock des neuen Fensters ist bit-exakt
 #    Q_old (Atom-Eintritt exakte Nullmatrix) — Margenfreiheit IST diese

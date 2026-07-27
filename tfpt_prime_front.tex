@@ -61,8 +61,9 @@ one localized residual, and the complete kill list}
 of the prime / zeta line --- how a discrete compiler's bookkeeping kept producing classical
 number-theoretic objects, which of those links became load-bearing modules, and how the remaining
 question was compressed, over a hundred exploratory probes, down to one strict-positivity margin
-input --- and then, once that margin was measured to be an artifact of the requirement, down to a
-two-object core. It is a
+input --- then, once that margin was measured to be an artifact of the requirement, down to a
+two-object core --- and finally down to a three-point list of which only one point is an
+inequality. It is a
 \textbf{research documentation}, not a results paper. Its purpose is that a reader (or a reviewer)
 can see the whole route, including everything that died on the way.}
 
@@ -80,7 +81,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$114$ preregistered probes with $2850$ machine checks, which localized the residual object. That
+$115$ preregistered probes with $2876$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -118,14 +119,21 @@ measures the \emph{discretisation}, not the spectrum. Under refinement at a fixe
 leading eigenvalues carry the same cell-width power (the continuum window form has no gap), the
 positive floor survives only as a cancellation of relative size $10^{-7}$--$10^{-4}$, and the T109
 requirement chain turns out to divide by an artifact margin; the hardness balance is restated as
-four parts, led by a margin-free step certificate. The last part builds that certificate and the
+four parts, led by a margin-free step certificate. The next part builds that certificate and the
 wall dissolves: the exact Schur complement (Albert 1969, with the Moore--Penrose inverse)
 certifies every ladder step margin-free --- eleven of them beyond the old wall, to $n=1331$, and
 all seven zones where the requirement chain tore --- the wall was an $O(1)$ numerator divided by
 an artifact floor, chains now stop only at the compute cap and never at a step, and the (R)
 demand itself proves grid-bound and is deleted rather than transported, leaving a two-object
 core: $\varepsilon$ relative to $\kappa$ via the exact Szeg\H{o} identity, and transport of an
-$O(0.1)$ Schur complement between grids. \textbf{No claim of progress on the Riemann Hypothesis is
+$O(0.1)$ Schur complement between grids. The last part splits that core: the transport across a
+real regrid certifies only mild refinement (a clean split at ratio $\rho^*\approx1.8$, and for a
+principled reason --- on nested ladders, where the transport error is exactly zero, the Schur
+floor itself falls like $\rho^{-1.7}$, so no bound can undo the drop), while a two-scale
+compression breaks the compute cap: a certified margin-free step at $n=155\,921$ ($117\times$
+deeper), chains of ten steps, the stopper always cost and never a step --- leaving the shortest
+list the program has produced: three points, of which only one is an inequality (the classical
+Szeg\H{o}--Levinson prediction-error bound for one symbol). \textbf{No claim of progress on the Riemann Hypothesis is
 made anywhere in this document}, and none of the sandbox findings moves any ledger marker. The
 document is deliberately symmetric about failure: a dedicated section lists the readings and
 routes that were refuted --- an essential-singularity reading, a $C/g$ proxy law, a density chain, an
@@ -169,7 +177,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots110$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots115$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -748,9 +756,9 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T114)}\label{sec:certification}
+\section{The certification arc (T102--T115)}\label{sec:certification}
 % =====================================================================
-The last thirteen parts stopped improving measurements and started converting them into certificates ---
+The last fourteen parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
 
 \subsection{The mechanism: a crossing, not a singularity (T102)}
@@ -871,11 +879,11 @@ the wing near-null direction.
 \node[tgt] (o) at (0,-3.4) {\textbf{One object:} the wing near-null direction\\[2pt]
   \footnotesize dressing almost rank one (effective rank $1.07$--$2.7$; $99.7$--$100\%$ of the
   near-null direction in \emph{one} prolate mode)};
-\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112 $\to$ T113 $\to$ T114\\[2pt]
+\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112 $\to$ T113 $\to$ T114 $\to$ T115\\[2pt]
   \footnotesize certify \emph{bare}, prove the avoidance law, split the parity channels,
   reduce to one scalar ratio, then to two scalars, certify both --- then propagate the margin,
   measure where the propagation fails, rescale the frame, settle the currency question,
-  and dissolve the wall};
+  dissolve the wall --- then split the transport and break the compute cap};
 \draw[ar] (a) -- (o);
 \draw[ar] (c) -- (o);
 \draw[ar] (o) -- (n);
@@ -1445,11 +1453,86 @@ exact Szeg\H{o}/Levinson identity of T108, now the single positivity object of t
 --- an $O(0.1)$-sized object with no cancellation, sharpened from the earlier abstract
 $D$-power demand.
 \end{enumerate}
+\emph{Disposition after T115 (next subsection):} [P2] \textbf{splits} --- the transport across a
+real regrid certifies only mild refinement ($\rho\lesssim1.8$), for a principled reason (the
+Schur floor itself falls under refinement), while a two-scale compression breaks the compute cap;
+[P1] \textbf{sharpens} to one scalar inequality, the classical Szeg\H{o}--Levinson
+prediction-error bound. The core is restated as the three-point list at the end of the next
+subsection --- only one point of which is an inequality.
 \end{keybox}
 
-\noindent T115 (\texttt{schur\_transport\_probe.py}, contract \texttt{SCHUR.TRANSPORT} --- a
-transport certificate plus multi-resolution compression, and a deep run beyond $n=1331$) was
-running at the time of writing and is \emph{not} reported here.
+\noindent T115 (\texttt{schur\_transport\_probe.py}, contract \texttt{SCHUR.TRANSPORT}) then ran
+the two last bricks --- and split them.
+
+\subsection{Transport blocked, cap broken: the two-scale compression (T115)}
+T115 (\texttt{schur\_transport\_probe.py}, contract \texttt{SCHUR.TRANSPORT}, $26/26$,
+\textsc{transport-blocked} --- with a large compression gain) took the two-object core apart:
+transport of the exact Schur complement across the ladder's non-nested grids, and a
+multi-resolution compression of the already-certified interior.
+
+\emph{The transport splits at $\rho^*\approx1.8$ --- for a principled reason.} Haynsworth's
+partial minimisation $y^{\mathsf T}Sy=\min_z\,[y;z]^{\mathsf T}Q'[y;z]$ makes $\lambda_{\min}(S)$
+available without any inverse and without a margin; the two-sided transport bracket built from it
+is an \emph{identity} (bookkeeping), with the evidence sitting in the consistency defect $\eta$
+and in the lower end. On the eleven real regrid pairs of the ladder ($\rho=1.023$--$3.425$) the
+lower end is positive on $7/11$, with a clean split: every pair with $\rho\le2.061$ certifies and
+none with $\rho\ge2.291$ does; a synthetic scan puts the threshold at $\rho^*=1.83$, against a
+median real refinement ratio of $2.001$ --- $39\%$ of the ladder's $7686$ refinement pairs are
+covered. The blocker is \emph{not} the transport machinery: the exact cell-overlap projection
+beats three deliberately wrong transfer maps on $9/9$ (by factors up to $270$), and on
+\emph{nested} ladders --- where the transport error is exactly zero --- $\lambda_{\min}(S)$
+itself falls like $\rho^{-1.73}$ to $\rho^{-1.65}$. The drop is real, so no bound can undo it.
+Two sharpenings came free: non-nestability is a matter of \emph{integrality}, not dyadicity
+($0/14\,807$ gap ratios are integer, the closest miss $3.4\times10^{-5}$), and the measured
+defect $\eta=2.7\times10^{-2}$--$8.1\times10^{-2}$ is $10^{3}$--$10^{6}$ times smaller than its
+a-priori C\'ea/Strang norm surrogate --- which is exactly where the margin division would have
+re-entered.
+
+\emph{The compression breaks the cap.} The two-scale window (interior merged into blocks, the
+boundary strip kept fine, the merge anchored at the centre) preserves
+$X_{\mathrm{mixed}}=Q_{\mathrm{old,mixed}}$ \emph{exactly} (rel $0.0$) --- the compressed step is
+still margin-free --- and Albert certifies $66/66$ (zone,\,$q$) combinations up to $q=64$, with
+the compression error certified \emph{one-sided and second order} in the projection defect
+(Rayleigh--Ritz plus stationarity of the fine minimiser; C\'ea/Strang; $66/66$) and savings down
+to $m/h=0.043$. The deep run then breaks the T114 cap: the margin-free step certifies at
+$n=155\,921$ ($117\times$ T114's $1331$), on a fine lattice of $h=93\,470$ cells ($62\times$ the
+hard cap $h\le1500$) compressed to $m=1490$; re-coarsening inside a chain is free (Rayleigh--Ritz,
+rel $\le2.1\times10^{-12}$); the longest chain is now \emph{ten} steps (T114: four), with $33$
+certified steps over four chains; the stopper is the cost cap on $3/4$ runs and a failing step on
+$0$; and every certified quantity sits $10^{5}$--$10^{11}$ times above the declared Cholesky
+backward-error floor. Stated honestly: $\lambda_{\min}(S_{\mathrm{mixed}})\approx5.1$ is $52\times$
+the uniform value because the coarser Galerkin space sees fewer soft directions --- a weaker
+statement about the continuum, declared as such, and flat across the whole deep band. The
+contiguous reach an induction needs moves from $n\le125$ to $n\le5437$ (factor $43.5$): the
+$n\log n$ cost barrier is \emph{divided}, not broken.
+
+\begin{keybox}[The remaining list --- three points, one inequality]
+The shortest list the program has produced. From T114's balance, the margin (dissolved), the (R)
+demand (grid-bound, deleted), the floor/$\varepsilon$ transport (the object to transport is
+$\lambda_{\min}(S)$, the slowest-falling of the three) and the compression risk (it does not
+break the step) are all \emph{struck}. What is left:
+\begin{enumerate}[leftmargin=1.6em]
+\item[\textbf{(1)}] \textbf{[P1] as one scalar inequality} --- given
+$T=Q+\tilde t\tilde t^{\mathsf T}\succ0$, positivity of $Q|_{\mathrm{odd}}$ is \emph{equivalent}
+to $\varepsilon=1-\tilde t^{\mathsf T}T^{-1}\tilde t\ge c(D)>0$: the classical
+Szeg\H{o}--Levinson prediction-error bound for one explicit symbol (the Haynsworth double-Albert
+device: $T\succ0\wedge\varepsilon\ge0\iff Q\succeq0$). This is the target-sentence candidate.
+Measured: $\varepsilon\sim\rho^{-1.71}$, falling slightly faster than
+$\lambda_{\min}(S)\sim\rho^{-1.69}$ (fits).
+\item[\textbf{(2)}] \textbf{An a-priori bound on the transport defect $\eta$} --- a regularity
+statement about the minimiser $z^*$; it would turn the measured transport into a certificate for
+$\rho\le1.8$.
+\item[\textbf{(3)}] \textbf{A boundary formulation} (suggested by the exact-zero lemma) ---
+never represent the old interior at all; it would remove the compute cap \emph{and} the regrid
+at once.
+\end{enumerate}
+Only (1) is an inequality; (2) is a regularity statement, (3) is a reformulation.
+\end{keybox}
+
+\noindent T116 (\texttt{boundary\_formulation\_probe.py}, contract \texttt{BOUNDARY.FORMULATION}
+--- the induction as a pure boundary process: a Riccati-type Schur recursion, the pole via
+Woodbury, kernel-tail truncation; a deep boundary run; the $\varepsilon(D)$ law against the
+classical benchmarks) was running at the time of writing and is \emph{not} reported here.
 
 % =====================================================================
 \section{The kill list}\label{sec:kills}
@@ -1548,10 +1631,13 @@ $15/15$ with retention $1.0000$; and the base-case Cholesky certificate at $n=2$
 $\lambda_{\min}\ge6.93\times10^{-2}$ at three resolutions), and their T111 deep-ladder extension
 ($117$ handover certificates at retention $1.000000$, largest single loss $5.96\times10^{-8}$; atom
 entry the exact zero matrix on $117/117$; and the arithmetic ladder-wall statement at frozen cell
-width, gap $>2D$ needed against the twin-prime gap $0.003831$ at $521\to523$), and the T114
+width, gap $>2D$ needed against the twin-prime gap $0.003831$ at $521\to523$), the T114
 margin-free step certificates (Albert/pseudo-inverse Schur, $27/27$ ladder steps to $n=1331$
 including all seven torn zones, with the exact $4\times4$ Schur complement at $42$--$67\%$ of the
-block scale --- no margin division anywhere).\\[3pt]
+block scale --- no margin division anywhere), and the T115 compression certificates (the exact
+identity $X_{\mathrm{mixed}}=Q_{\mathrm{old,mixed}}$; Albert on $66/66$ (zone,\,$q$) combinations;
+the one-sided second-order compression error; the deep margin-free step at $n=155\,921$ and the
+ten-step chains --- certificates for a coarser Galerkin space, declared as such).\\[3pt]
 \textbf{Measured} (holds on the resolved windows; no uniform constant): $\rho_-$; the ratio
 $r=0.0053$--$0.1814$ and $\hat r<1$ at all $92$ resolution points; $\omega=0.2366$--$0.7531$; the
 strict odd-channel margin $\lambda_{\min}(Q|_{\mathrm{odd}})=1.4\times10^{-5}$--$5.1\times10^{-2}$; the
@@ -1560,14 +1646,19 @@ $199$ zones with the crossing \emph{measured} between $n=461$ and $n=463$ ($n^*\
 bound; the T110 extrapolation $n\approx170$ was a fit artefact); the reserve trend
 $f_{\mathrm{crit}}\sim n^{-0.39}$ (fit); the requirement wall $n=727$; the closure map $44/64$; the
 handover margins; the two race slopes; the T114 ratio closure $r=2\times10^{-4}$--$0.103$ on
-$27/27$ steps and the $D$-powers of $\varepsilon$ and $\kappa$ (fits); every scaling
+$27/27$ steps and the $D$-powers of $\varepsilon$ and $\kappa$ (fits); the T115 transport split
+(the bracket's lower end positive on $7/11$ regrid pairs, threshold $\rho^*=1.83$ against a
+median ratio $2.001$) and the fall laws $\lambda_{\min}(S)\sim\rho^{-1.69}$,
+$\varepsilon\sim\rho^{-1.71}$ (fits); every scaling
 exponent quoted in this document.\\[3pt]
 \textbf{Hypothesis input / classical} (used, named, not proved here): Kneser, Witt/Eichler, Shimura,
 Waldspurger/Baruch--Mao, Cohen, Weil--Guinand, Bombieri, Yoshida, Connes--Consani, Douglas,
 Slepian--Landau--Pollak, Gronwall/Robin (unconditional form only), Grenander--Szeg\H{o},
 Sherman--Morrison/Woodbury, Christoffel--Darboux, Szeg\H{o}--Levinson, the Weyl bound,
 Combes--Thomas/Jaffard, Prager--Synge, first-order Kato perturbation, Albert (the pseudo-inverse
-Schur criterion), Wilkinson/Higham backward error.
+Schur criterion), Haynsworth (the partial-minimisation form of the Schur complement),
+C\'ea/Strang's first lemma, Bramble--Hilbert, Brandt/Yserentant two-scale spaces,
+Wilkinson/Higham backward error.
 \end{keybox}
 
 \subsection{The asymptotic mountain}
@@ -1596,16 +1687,23 @@ the T109 requirement chain divides by an artifact margin. T114
 margin-free step certificate exists (Albert $1969$, the exact Schur complement), runs eleven
 steps past the old wall to $n=1331$, certifies all seven torn zones, and shows the wall was an
 $O(1)$ numerator divided by an artifact floor --- chains now stop only at the $h\le1500$ window
-cost, never at a step, and the (R) demand itself is grid-bound and deleted ([P5]). Since T114 the
-mountain is the two-object core of Section~\ref{sec:certification}: $\varepsilon>0$ with
-controlled size relative to $\kappa$ (the exact Szeg\H{o} identity), and transport of the exact
-$O(0.1)$ Schur complement between non-nested grids. T115 (\texttt{schur\_transport\_probe.py})
-was running at the time of writing.
+cost, never at a step, and the (R) demand itself is grid-bound and deleted ([P5]). T115
+(\texttt{schur\_transport\_probe.py}) then split the two-object core: the transport of the exact
+Schur complement across a real regrid certifies only mild refinement ($\rho\lesssim1.8$) --- and
+for a principled reason, since on nested ladders, where the transport error is exactly zero,
+$\lambda_{\min}(S)$ itself falls like $\rho^{-1.7}$ --- while the two-scale compression breaks
+the compute cap: a certified margin-free step at $n=155\,921$ ($117\times$ deeper), ten-step
+chains, the stopper always cost and never a step, with the contiguous reach moving from
+$n\le125$ to $n\le5437$ (the $n\log n$ barrier divided, not broken). Since T115 the mountain is
+the three-point list of Section~\ref{sec:certification} --- an a-priori bound on the transport
+defect, a boundary formulation, and exactly \emph{one} inequality: the classical
+Szeg\H{o}--Levinson prediction-error bound $\varepsilon\ge c(D)>0$ for one explicit symbol. T116
+(\texttt{boundary\_formulation\_probe.py}) was running at the time of writing.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
 established on the resolved zones $n=2\ldots29$ (T111's deep ladder extends the measurements to
-$n=521$, T114's margin-free ladder to $n=1331$ --- finitely many zones either way). Not one constant in the chain is certified uniformly in
+$n=521$, T114's margin-free ladder to $n=1331$, T115's compressed run to $n=155\,921$ --- finitely many zones either way). Not one constant in the chain is certified uniformly in
 $k$. The T101 requirement list (A)--(D) is unchanged: the hardness would sit in (A), a sharp,
 non-perturbative arithmetic lower bound at a Weil-positivity edge.
 \item \textbf{Finite resolution is a wall, and a measured one.} Numerics as a witness is exhausted
@@ -1651,19 +1749,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T114}\label{app:index}
+\section{Probe index, diary parts T11--T115}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $104$ parts T11--T114 that the current diary file records
-($105$ runs --- T104 was a double run with two independent arms --- and $2658$ green checks); the ten
+load-bearing artefact. The index covers the $105$ parts T11--T115 that the current diary file records
+($106$ runs --- T104 was a double run with two independent arms --- and $2684$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T114: \textbf{$114$ probes, $2850/2850$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T115
-(\texttt{schur\_transport\_probe.py}, contract \texttt{SCHUR.TRANSPORT}) was still running when
-this document was written and is deliberately absent.
+diary at T115: \textbf{$115$ probes, $2876/2876$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T116
+(\texttt{boundary\_formulation\_probe.py}, contract \texttt{BOUNDARY.FORMULATION}) was still running
+when this document was written and is deliberately absent.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -1783,6 +1881,7 @@ T111 & \texttt{\scriptsize deep\_\allowbreak zone\_\allowbreak stress} & the cro
 T112 & \texttt{\scriptsize adaptive\_\allowbreak scaling} & gap-coupled frame: ladder wall and $\omega$ depth-dependence fall structurally; margin wall frame-invariant ($-0.974$); trade to [P1]/[P2], prime-gap inputs disclosed & SCALING-PARTIAL & 20/20\\
 T113 & \texttt{\scriptsize limit\_\allowbreak operator} & the wall is currency-invariant ($-1.168$ in all five currencies) but measures the discretisation: no continuum gap, floor a $10^{-7}$--$10^{-4}$ cancellation, need109 an artifact margin; new balance [P1]--[P4] & SUBSTANCE-CONFIRMED & 27/27\\
 T114 & \texttt{\scriptsize margin\_\allowbreak free\_\allowbreak step} & the margin-free step: Albert/pseudo-inverse Schur certifies $27/27$ steps ($11$ past the old wall, to $n=1331$) and all $7$ torn zones; the wall was an $O(1)$ numerator over an artifact floor; (R) grid-bound, deleted ([P5]); new two-object core & WALL-DISSOLVES & 22/22\\
+T115 & \texttt{\scriptsize schur\_\allowbreak transport} & transport certifies only mild refinement (split at $\rho^*\!\approx\!1.8$; on nested ladders $\lambda_{\min}(S)$ itself falls like $\rho^{-1.7}$), but the two-scale compression breaks the cap: margin-free step at $n=155\,921$, ten-step chains, stopper always cost; remaining list three points, one inequality (Szeg\H{o}--Levinson) & TRANSPORT-BLOCKED & 26/26\\
 \end{xltabular}
 }
 
