@@ -43,6 +43,428 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-27",
+    "dateLabel": "2026-07-27 · III",
+    "heading": [
+      {
+        "k": "t",
+        "v": "prime front: T110 margin propagation closes the measured-zone circle — MARGIN-PROPAGATES; paper + diary + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Diary Teil 110 (sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery/margin_propagation_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " (contract "
+        },
+        {
+          "k": "c",
+          "v": "MARGIN.PROPAGATION"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "28/28"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "7.6"
+        },
+        {
+          "k": "t",
+          "v": " s, verdict "
+        },
+        {
+          "k": "t",
+          "v": "margin-propagates"
+        },
+        {
+          "k": "t",
+          "v": " with a precision statement): the induction circle closes end to end on the measured zones — the base case "
+        },
+        {
+          "k": "m",
+          "v": "n=2"
+        },
+        {
+          "k": "t",
+          "v": " is certified by an explicit Cholesky at three resolutions ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}\\ge6.93\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": ", factor "
+        },
+        {
+          "k": "m",
+          "v": "88"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "180"
+        },
+        {
+          "k": "t",
+          "v": " over need), the graded Loewner minorant holds all "
+        },
+        {
+          "k": "m",
+          "v": "15"
+        },
+        {
+          "k": "t",
+          "v": " handovers with retention "
+        },
+        {
+          "k": "m",
+          "v": "1.0000"
+        },
+        {
+          "k": "t",
+          "v": " (the strictly scalar variant closes "
+        },
+        {
+          "k": "m",
+          "v": "0/15"
+        },
+        {
+          "k": "t",
+          "v": "), and the atom entry costs nothing — it "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "raises"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "15/15"
+        },
+        {
+          "k": "t",
+          "v": " (first-order Kato term with helping sign; at "
+        },
+        {
+          "k": "m",
+          "v": "n=29"
+        },
+        {
+          "k": "t",
+          "v": " the atom-free window is not even positive, "
+        },
+        {
+          "k": "m",
+          "v": "-9.2\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "). Margin map: "
+        },
+        {
+          "k": "m",
+          "v": "m_k\\ge\\mathrm{need109}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "16/16"
+        },
+        {
+          "k": "t",
+          "v": " zones (ratio "
+        },
+        {
+          "k": "m",
+          "v": "2.09"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "179.6"
+        },
+        {
+          "k": "t",
+          "v": "); the growth step splits exactly (embedding error "
+        },
+        {
+          "k": "m",
+          "v": "\\le2.6\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\max|\\mu N|=0.0"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "15/15"
+        },
+        {
+          "k": "t",
+          "v": "); scalar routes killed (bordered Weyl "
+        },
+        {
+          "k": "m",
+          "v": "0/15"
+        },
+        {
+          "k": "t",
+          "v": "; Schur/Friedrichs cap vacuous "
+        },
+        {
+          "k": "m",
+          "v": "15/15"
+        },
+        {
+          "k": "t",
+          "v": "). Three sharp gaps remain: no reserve ("
+        },
+        {
+          "k": "m",
+          "v": "f_{\\mathrm{crit}}=1.00"
+        },
+        {
+          "k": "t",
+          "v": " at the first handover; retention "
+        },
+        {
+          "k": "m",
+          "v": "1-2\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": "), no scalar step law (structurally excluded by the boundary layer), no "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": "-uniformity (trend "
+        },
+        {
+          "k": "m",
+          "v": "m_k\\sim n^{-1.93}"
+        },
+        {
+          "k": "t",
+          "v": " against "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{need109}\\sim n^{-0.98}"
+        },
+        {
+          "k": "t",
+          "v": ", extrapolated crossing "
+        },
+        {
+          "k": "m",
+          "v": "n\\approx170"
+        },
+        {
+          "k": "t",
+          "v": "). Follow-up probe T111 ("
+        },
+        {
+          "k": "c",
+          "v": "deep_zone_stress_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "DEEP.ZONE.STRESS"
+        },
+        {
+          "k": "t",
+          "v": ", the deep ladder to "
+        },
+        {
+          "k": "m",
+          "v": "n\\sim200"
+        },
+        {
+          "k": "t",
+          "v": ") is running. Series counter: "
+        },
+        {
+          "k": "m",
+          "v": "110"
+        },
+        {
+          "k": "t",
+          "v": " probes, "
+        },
+        {
+          "k": "m",
+          "v": "2758/2758"
+        },
+        {
+          "k": "t",
+          "v": " sandbox checks. Sandbox only: no ledger row, no marker move, not RH evidence."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper "
+            },
+            {
+              "k": "c",
+              "v": "tfpt_prime_front"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Certification-arc section extended to T102–T110 (new subsection “The margin propagates: the circle closes on the measured zones” with the three gaps as a key box); reduction-cascade caption and two-doors figure chain extended to T110; kill list extended by the T110 scalar-step-law kill; three-way status split and asymptotic-mountain section sharpened (the three gaps as the precise formulation; the "
+        },
+        {
+          "k": "m",
+          "v": "n\\approx170"
+        },
+        {
+          "k": "t",
+          "v": " warning; T111 running); abstract and probe-index appendix updated (T110 row; T111 recorded as running and deliberately absent); symbol-table row for "
+        },
+        {
+          "k": "m",
+          "v": "m_k"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{need109}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "/prime-front"
+        },
+        {
+          "k": "t",
+          "v": ": T110 feed entry ("
+        },
+        {
+          "k": "c",
+          "v": "lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": ", new verdict enum "
+        },
+        {
+          "k": "t",
+          "v": "margin-propagates"
+        },
+        {
+          "k": "t",
+          "v": "), status line in the two-doors convergence panel (T110 + T111 running), hero counter Teile 11–110 / "
+        },
+        {
+          "k": "m",
+          "v": "2758"
+        },
+        {
+          "k": "t",
+          "v": " sandbox checks, program-status callout sentence for T110."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-27",
     "dateLabel": "2026-07-27 · II",
     "heading": [
       {

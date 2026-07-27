@@ -1,3 +1,46 @@
+# 2026-07-27 (IV) — Teil 110 (delegiert, die Margen-Fortpflanzung — Vertrag MARGIN.PROPAGATION): margin_propagation_probe.py — **MARGIN-PROPAGATES** (mit Präzisierung) — der Induktionskreis schließt sich auf den Mess-Zonen END-ZU-END: Basis-Fall n=2 per Cholesky ZERTIFIZIERT, die gradierte Loewner-Minorante hält alle 15 Übergaben mit Retention 1.0000, und der ATOM-EINTRITT KOSTET NICHTS — er HEBT λ_min auf 15/15 (das T106-Killerargument hat für den skalaren Boden kein Analogon); drei scharfe Lücken bleiben: keine Reserve, kein skalares Schrittgesetz, keine k-Uniformität (extrapolierte Kreuzung n ≈ 170) — 28/28, 7.6s, Sandbox
+# H1 Margen-Karte (gemeinsames Gitter, 16 Zonen, δ₀ = 0.00284): λ_min(Q|odd)
+#    fällt monoton 6.95e-2 (n=2) → 1.66e-5 (n=29); need109 = 3.09e-7…3.87e-4;
+#    m_k ≥ need109 auf 16/16 (Verhältnis 2.09–179.6). Dilution beim
+#    Fenster-Wachstum schwach: Faktor 1.02–2.05 pro Atom-Lücke = 0.993–0.997
+#    pro Zelle (ein 1 − O(1/M)-Verlust; Fits ehrlich schlecht, Potenz gewinnt
+#    7/16). DER ATOM-EINTRITT KOSTET NICHTS: er HEBT λ_min auf 15/15 (der
+#    Kato-Term hat helfendes Vorzeichen); bei n=29 ist das atomfreie Fenster
+#    nicht einmal positiv (−9.2e-3) — das Atom macht das Fenster mit-positiv.
+# H2 Gesetz: der Schritt spaltet exakt (Einbettungsfehler ≤ 2.6e-14);
+#    max|μN| = 0.0 auf 15/15 — das neue Atom liegt außerhalb der alten
+#    Lag-Reichweite (Lücke 0.0606 vs δ₀ = 0.00284), die Restriktion aufs alte
+#    Fenster ist die exakte Nullmatrix; alles entscheidet die Berandung.
+#    Skalare Routen scheitern deutlich (bordered Weyl 0/15; Schur/Friedrichs-
+#    Kappe vakuum 15/15). Was zertifiziert durchgeht: die GRADIERTE
+#    LOEWNER-MINORANTE (Gültigkeit = exakt die Induktionsvoraussetzung, dann
+#    Bisektion über Cholesky/Sylvester): nsoft = 1 hält 15/15 mit Retention
+#    1.0000; strikt skalar (nsoft = dim): 0/15.
+# H3 Basis-Fall + Trend: n=2 per Cholesky ZERTIFIZIERT auf drei Auflösungen
+#    (λ_min ≥ 6.93e-2, Faktor 88–180 über need). ABER der Trend ist
+#    ungünstig: m_k ~ n^−1.93, need109 ~ n^−0.98, Verhältnis ~ n^−0.96 (Fit,
+#    rms 0.735) → extrapolierte Kreuzung bei n ≈ 170. Die Fortpflanzung wird
+#    mit k SCHWERER, nicht leichter.
+# H4 Kreis-Test: die strikt skalare Induktion bricht bei k=3 (der Schur-
+#    Faktor kompoundiert zu 2.7e-36); die GRADIERTE Kette läuft ab dem
+#    zertifizierten Basiswert KOMPLETT durch: 16/16 Zonen über need109, jeder
+#    Schritt eine Cholesky, mit dem propagierten Boden als Eingang.
+# DIE DREI LÜCKEN (scharf): (1) keine Reserve — f_crit an der ersten Übergabe
+#    = 1.00; die Kette lebt von Retention 1 − 2e-7, ein Faktor-2-Verlust
+#    bräche sie in zwei Schritten — gebraucht wird ein Schrittgesetz OHNE
+#    Verlust; (2) das skalare Schrittgesetz ist strukturell ausgeschlossen
+#    (Randschicht: die neuen Zellen hängen am Rand, wo die Polquelle sitzt);
+#    (3) k-Uniformität fehlt (jedes Zertifikat ist eine endliche Cholesky;
+#    flach-in-k ist Messung, kein Satz; die n^−0.96-Warnung). → T111 (läuft):
+#    DEEP.ZONE.STRESS (deep_zone_stress_probe.py) — die tiefe Leiter bis
+#    n ~ 200, testet die n≈170-Kreuzung direkt, vermisst das
+#    Uniformitäts-Objekt tief.
+# Serie (XII)–(CXXI): 110 Proben, 2758/2758 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Cholesky/Sylvester-Inertia,
+# Loewner-Ordnung, Weyl-Schranke, Schur-Komplement/Friedrichs, Kato-Störung
+# erster Ordnung, Rayleigh-Ritz) zitiert; Sandbox ohne Ledger-/Paper-/Marker-
+# Änderung.
+
 # 2026-07-27 (III) — Teil 109 (delegiert, die Rand-Zertifikate — Vertrag BOUNDARY.DECAY): boundary_decay_probe.py — **BOUNDARY-CERTIFIED** — beide verbleibenden Skalare ZERTIFIZIERT: ω UNKONDITIONAL über eine graduierte Matrix-Kappe (Cholesky-verifiziert), der Randwert über ein Residuen-Zertifikat, das die Auslöschung MITTRÄGT statt sie wegzuschätzen; der Mechanismus ist KEIN Abklingen, sondern AUSLÖSCHUNG; die gesamte Kette für (R) schließt 16/16 konditional auf genau EINEN Input — die strikte Positivitäts-Marge des ungeraden Kanals, 10²–10⁶ UNTER μ/2 — 29/29, 47.2s, Sandbox
 # G1 Mechanismus: KEIN Abklingen, sondern AUSLÖSCHUNG. Träger-Separation
 #    geometrisch ausgeschlossen (t̃ hat sein Maximum bei r = 0 — die Quelle sitzt

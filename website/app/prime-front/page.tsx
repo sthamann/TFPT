@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–109 · 2730 sandbox checks
+            Research diary · Teile 11–110 · 2758 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1610,7 +1610,12 @@ function ProgramStatusCallout() {
         graded matrix cap, the boundary value via a residual certificate that
         carries the cancellation — so the whole chain for (R) now closes 16/16
         conditional on exactly one strict-margin input that is 10²–10⁶ weaker
-        than the conclusion. Milestone: 2730/2730 checks. Not almost-RH. This
+        than the conclusion. T110 (MARGIN-PROPAGATES) closes the induction
+        circle end-to-end on the measured zones — certified base case, 15
+        certified handover steps, atom entry structurally free — with three
+        sharp gaps remaining (no reserve, no scalar step law, no k-uniformity;
+        extrapolated crossing warning at n ≈ 170, now under direct test by
+        T111). Milestone: 2758/2758 checks. Not almost-RH. This
         is not RH evidence.
       </p>
     </aside>

@@ -150,9 +150,14 @@ export function TwoDoorsConvergence() {
           ω unconditionally via a graded matrix cap, the boundary value via a
           residual certificate that carries the cancellation; the chain closes
           16/16 on exactly one strict-margin input, 10²–10⁶ weaker than the
-          conclusion. T110 (
+          conclusion. T110 · MARGIN.PROPAGATION — MARGIN-PROPAGATES (28/28):
+          the induction circle closes end-to-end on the measured zones —
+          certified base case, 15 certified handover steps (graded Loewner
+          minorant, retention 1.0000), atom entry structurally free; three
+          sharp gaps remain (no reserve, no scalar step law, no k-uniformity —
+          extrapolated crossing warning at n ≈ 170). T111 (
           <span className="font-mono text-slate-300">
-            margin_propagation_probe.py
+            deep_zone_stress_probe.py
           </span>
           ) running.
         </p>

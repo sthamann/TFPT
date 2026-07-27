@@ -86,7 +86,8 @@ export type PrimeFrontVerdict =
   | "DENSITY-MAPPED"
   | "SCALAR-TRACTABLE"
   | "EPSILON-IDENTITY"
-  | "BOUNDARY-CERTIFIED";
+  | "BOUNDARY-CERTIFIED"
+  | "MARGIN-PROPAGATES";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -110,6 +111,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-27",
+    part: 110,
+    title:
+      "Margin propagates — the induction circle closes end-to-end on the measured zones; three sharp gaps remain",
+    verdict: "MARGIN-PROPAGATES",
+    summary:
+      "T110 (MARGIN-PROPAGATES with a precision statement, 28/28) — contract MARGIN.PROPAGATION: does the one strict-margin input that T109 left — λ_min(Q|odd) above an explicit need109 — propagate itself through the induction? On the measured zones the circle closes END-TO-END: certified base case, 15 certified handover steps, atom entry structurally free. (H1) The margin map on a common grid (16 zones, δ₀ = 0.00284): λ_min(Q|odd) falls monotonically 6.95e-2 (n = 2) → 1.66e-5 (n = 29) against need109 = 3.09e-7…3.87e-4 — m_k ≥ need109 on 16/16 (ratio 2.09–179.6); dilution during pure window growth is weak (factor 1.02–2.05 per atom gap = 0.993–0.997 per cell, a 1 − O(1/M) loss; the fits are honestly poor, power law wins 7/16). THE ATOM ENTRY COSTS NOTHING: it RAISES λ_min on 15/15 (the Kato first-order term has helping sign); at n = 29 the atom-free window is not even positive (−9.2e-3) — the atom makes the window co-positive. The T106 killer argument has no analogue for the scalar floor. (H2) The step law: the growth step splits exactly (embedding error ≤ 2.6e-14); max|μN| = 0.0 on 15/15 — the new atom lies outside the old lag reach (gap 0.0606 vs δ₀ = 0.00284), the restriction to the old window is the exact zero matrix; everything is decided by the bordering. Scalar routes fail decisively (bordered Weyl 0/15; the Schur/Friedrichs cap is vacuous 15/15). What passes certified is the GRADED LOEWNER MINORANT (its validity is exactly the induction hypothesis, then bisection through Cholesky/Sylvester): nsoft = 1 holds 15/15 with retention 1.0000; strictly scalar (nsoft = dim) 0/15. (H3) Base case CERTIFIED: n = 2 by explicit Cholesky at three resolutions (λ_min ≥ 6.93e-2, factor 88–180 over need). BUT the trend is unfavourable: m_k ~ n^−1.93 against need109 ~ n^−0.98, ratio ~ n^−0.96 (fit, rms 0.735) — extrapolated crossing at n ≈ 170: propagation gets HARDER with k. (H4) The circle test: strictly scalar induction breaks at k = 3 (the Schur factor compounds to 2.7e-36); the GRADED chain runs through COMPLETELY from the certified base value — 16/16 zones above need109, each step one Cholesky, with the propagated floor as input. THE THREE GAPS, sharp: (1) no reserve — f_crit at the first handover is 1.00 and the chain lives on retention 1 − 2e-7; a factor-2 loss would break it within two steps — what is needed is a step law WITHOUT loss; (2) a scalar step law is structurally excluded (boundary layer: the new cells attach at the edge where the pole source sits); (3) k-uniformity is missing (every certificate is one finite Cholesky; flat-in-k is a measurement, not a theorem — the n^−0.96 warning). T111 (DEEP.ZONE.STRESS, deep_zone_stress_probe.py) is running: the deep ladder to n ~ 200, testing the n ≈ 170 crossing directly. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "margin_propagation_probe.py",
+  },
   {
     date: "2026-07-27",
     part: 109,

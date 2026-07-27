@@ -62,6 +62,38 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-27 (III) (prime front: T110 margin propagation closes the measured-zone circle --- MARGIN-PROPAGATES; paper + diary + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Diary Teil 110 (sandbox).} \texttt{experiments/tfpt-discovery/margin\_propagation\_probe.py}
+(contract \texttt{MARGIN.PROPAGATION}, $28/28$ checks, $7.6$\,s, verdict \textsc{margin-propagates}
+with a precision statement): the induction circle closes end to end on the measured zones --- the
+base case $n=2$ is certified by an explicit Cholesky at three resolutions
+($\lambda_{\min}\ge6.93\times10^{-2}$, factor $88$--$180$ over need), the graded Loewner minorant
+holds all $15$ handovers with retention $1.0000$ (the strictly scalar variant closes $0/15$), and the
+atom entry costs nothing --- it \emph{raises} $\lambda_{\min}$ on $15/15$ (first-order Kato term with
+helping sign; at $n=29$ the atom-free window is not even positive, $-9.2\times10^{-3}$). Margin map:
+$m_k\ge\mathrm{need109}$ on $16/16$ zones (ratio $2.09$--$179.6$); the growth step splits exactly
+(embedding error $\le2.6\times10^{-14}$; $\max|\mu N|=0.0$ on $15/15$); scalar routes killed
+(bordered Weyl $0/15$; Schur/Friedrichs cap vacuous $15/15$). Three sharp gaps remain: no reserve
+($f_{\mathrm{crit}}=1.00$ at the first handover; retention $1-2\times10^{-7}$), no scalar step law
+(structurally excluded by the boundary layer), no $k$-uniformity (trend $m_k\sim n^{-1.93}$ against
+$\mathrm{need109}\sim n^{-0.98}$, extrapolated crossing $n\approx170$). Follow-up probe T111
+(\texttt{deep\_zone\_stress\_probe.py}, contract \texttt{DEEP.ZONE.STRESS}, the deep ladder to
+$n\sim200$) is running. Series counter: $110$ probes, $2758/2758$ sandbox checks. Sandbox only: no
+ledger row, no marker move, not RH evidence.
+\item \textbf{Paper \texttt{tfpt\_prime\_front}.} Certification-arc section extended to T102--T110
+(new subsection ``The margin propagates: the circle closes on the measured zones'' with the three
+gaps as a key box); reduction-cascade caption and two-doors figure chain extended to T110; kill list
+extended by the T110 scalar-step-law kill; three-way status split and asymptotic-mountain section
+sharpened (the three gaps as the precise formulation; the $n\approx170$ warning; T111 running);
+abstract and probe-index appendix updated (T110 row; T111 recorded as running and deliberately
+absent); symbol-table row for $m_k$/$\mathrm{need109}$.
+\item \textbf{Website.} \texttt{/prime-front}: T110 feed entry (\texttt{lib/primeFront.ts}, new
+verdict enum \textsc{margin-propagates}), status line in the two-doors convergence panel (T110 +
+T111 running), hero counter Teile 11--110 / $2758$ sandbox checks, program-status callout sentence
+for T110.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-27 (II) (prime front: T109 boundary certificates close (R) conditionally --- BOUNDARY-CERTIFIED; paper certification arc T102--T109 + diary + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{Diary Teil 109 (sandbox).} \texttt{experiments/tfpt-discovery/boundary\_decay\_probe.py}
