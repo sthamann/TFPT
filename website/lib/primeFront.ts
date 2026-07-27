@@ -93,7 +93,8 @@ export type PrimeFrontVerdict =
   | "SUBSTANCE-CONFIRMED"
   | "WALL-DISSOLVES"
   | "TRANSPORT-BLOCKED"
-  | "RICCATI-PARTIAL";
+  | "RICCATI-PARTIAL"
+  | "THEOREM-SHAPED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -117,6 +118,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-27",
+    part: 117,
+    title:
+      "Theorem-shaped — the one inequality is now an identity plus a certified lower-bound chain that loses no power of D; the jumps have closed forms, and T116's factor-120 drops were a sweep artifact",
+    verdict: "THEOREM-SHAPED",
+    summary:
+      "T117 (THEOREM-SHAPED, 23/23) — contract EPSILON.THEOREM: make the one remaining inequality proof-shaped. (O1) The Galerkin identity, exact — four identities on 6 windows: t̃ is the cell functional of the D-INDEPENDENT function 2sinh(x/2) (independent quadrature, rel 5.2e-16); the family is EXACTLY NESTED (T_c = PᵀT_fP, t̃_c = Pᵀt̃_f, rel 2e-14) — so ε is a Galerkin best-approximation error of ONE bilinear form and its monotonicity under refinement is a THEOREM, not a fit; ε = min_v [1 − 2t̃ᵀv + vᵀTv] with the two-level Pythagoras ε_c − ε_f = ‖u_f − Pu_c‖²_T (rel 6.2e-11); and the dual-norm residual form gives ε > 0 ⟺ t̃ ∉ T(V_c) — positivity is a NON-MEMBERSHIP statement. (O2) The lower bound, honestly (the direction trap handled in the open: Céa/Aubin–Nitsche/Bramble–Hilbert give UPPER bounds; the missing lower-bound ingredient has a classical name — the saturation assumption, Bank–Smith 1993 / Dörfler–Nochetto 2002): the psd-minorant route is DEAD — criticality forces relative sharpness 8.3e-4 in the u-direction, which is circular; the TWO-LEVEL CHAIN survives: ε ≥ ε_c − ε_f = yᵀSy ≥ λ_min(S)‖y‖² ≥ λ_min(S)·D_f³·max|slope|²/2 (S the T-Schur complement onto the oscillation space; the last step Payne–Weinberger 1960 in its lower form) — CERTIFIED on 19/19 pairs, bound/ε ∈ [0.111, 0.185], at rate θ' = 1.74 against θ = 1.76: NO POWER OF D LOST (λ_min(S) GROWS under refinement, +0.20 per halving of D — the chain costs a constant, spread 1.195). The one-cell version costs 0.93 powers — the classical price of replacing a sum by its largest term. (O3) The jumps, exactly — and a correction to T116: adding one cell per end is a Levinson bordering, ε(h+1) = ε(h) − r₀²/s₀ (rel 3.7e-12); a prime-power entry is a corner update of rank EXACTLY k₀+1 whose Woodbury closed form reproduces all 23 measured entries (rel 2.1e-11). The factor-120 'jumps' were a SWEEP ARTIFACT: all 23 entries move ε UP (factors 1.0003–1.0506, share −0.3% of the log-drop); the falls are the accumulated smooth bordering product between sweep points. The jump side-condition on the ansatz is REMOVED; what remains is a smooth α^(−6.07±0.03) decay (fit, short lever). (O4) The theorem candidate is written out (H1 T ≻ 0 certified; H2 λ_min(S) ≥ κ certified per window; H3 a non-vanishing discrete slope on one cell; conclusion the four-line chain; line-by-line attribution exact/Cholesky/classical/fit). The honest missing list: three named analytic lemmas about ONE symbol, each with a classical address — (1) corner asymptotics of T⁻¹ (Kac–Murdock–Szegő 1953 / Widom 1974), (2) a lower bound for λ_min(S) at ONE level (a symbol question at the Nyquist frequency π/D), (3) the saturation constant (measured [0.675, 0.744], classical, costs no rate); two of the three are CONSTANTS, not rates. None of this touches T116's [SUPPORT] comb obstruction (a separate state-compression question). T118 (SYMBOL.LEMMAS, symbol_lemmas_probe.py) is running: the three lemmas against their classical addresses (the S-symbol at Nyquist, KMS/Widom corners, Bank–Smith saturation). Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "epsilon_theorem_probe.py",
+  },
   {
     date: "2026-07-27",
     part: 116,

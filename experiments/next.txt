@@ -1,3 +1,56 @@
+# 2026-07-27 (XI) — Teil 117 (delegiert, der Epsilon-Satz — Vertrag EPSILON.THEOREM): epsilon_theorem_probe.py — **THEOREM-SHAPED** — DIE EINE UNGLEICHUNG IST JETZT IDENTITÄT PLUS ZERTIFIZIERTE UNTERGRENZEN-KETTE OHNE RATENVERLUST: ε ist exakt die Energie, die der PWC-Raum aus der festen Funktion 2sinh(x/2) nicht herausholt — die Familie ist EXAKT GESCHACHTELT (T_c = PᵀT_fP), ε ist das Galerkin-Minimum, ε > 0 ⟺ Nicht-Zugehörigkeit t̃ ∉ T(V_c) (vier Identitäten, rel ≤ 6.2e-11); die Zwei-Level-Kette ε ≥ yᵀSy ≥ λ_min(S)‖y‖² ≥ λ_min(S)·max(Δu)²/2 zertifiziert auf 19/19 Paaren eine POSITIVE Untergrenze (Schranke/ε ∈ [0.111, 0.185]) mit Rate θ' = 1.74 gegen θ = 1.76 — KEINE D-Potenz verloren (λ_min(S) WÄCHST unter Verfeinerung); die Sprünge haben geschlossene Formen (Levinson-Bordering 3.7e-12, Woodbury-Ecken-Update mit Rang exakt k₀+1, 23/23) und KORRIGIEREN T116: alle 23 Primpotenz-Eintritte heben ε (1.0003–1.0506), die Faktor-120-„Sprünge“ waren das akkumulierte glatte Bordering-Produkt zwischen den Sweep-Punkten — die Sprung-Nebenbedingung ENTFÄLLT; Satz-Kandidat formuliert, Fehlliste = drei benannte analytische Lemmata über EIN Symbol, zwei davon Konstanten — 23/23, 2.3s, Sandbox
+# O1 Galerkin-Identität EXAKT (vier Identitäten auf 6 Fenstern): t̃ ist das
+#    Zellmittel der D-unabhängigen Funktion 2sinh(x/2) (unabhängige Quadratur,
+#    rel 5.2e-16); die Form ist EXAKT GESCHACHTELT: T_c = PᵀT_fP, t̃_c = Pᵀt̃_f
+#    (rel 2e-14) — die Monotonie unter Verfeinerung ist damit SATZ, nicht Fit;
+#    ε = min_v [1 − 2t̃ᵀv + vᵀTv] und Zwei-Level-Pythagoras ε_c − ε_f =
+#    ‖u_f − Pu_c‖²_T (rel 6.2e-11); Dual-Residual-Form ε_c − ε_f =
+#    ‖t̃_f − T_fPu_c‖²_{T_f⁻¹} ⇒ ε > 0 ⟺ t̃ ∉ T(V_c) — die Positivität ist
+#    eine Nicht-Zugehörigkeits-Aussage.
+# O2 UNTERGRENZE, ehrlich (die Richtungs-Falle sauber behandelt: Céa /
+#    Aubin–Nitsche / Bramble–Hilbert liefern OBERschranken; das fehlende Glied
+#    heißt klassisch Saturations-Annahme, Bank–Smith 1993 / Dörfler–Nochetto
+#    2002): die psd-Minoranten-Route ist TOT — Kritikalität erzwingt relative
+#    Schärfe 8.3e-4 in Richtung u, also zirkulär; die ZWEI-LEVEL-KETTE trägt:
+#    ε_c ≥ ε_c − ε_f = yᵀSy ≥ λ_min(S)‖y‖² ≥ λ_min(S)·D_f³·max g²/2
+#    (S = T-Schur auf dem Oszillations-Raum; letzter Schritt Payne–Weinberger
+#    1960 in unterer Form) — zertifiziert auf 19/19 Paaren, Schranke/ε ∈
+#    [0.111, 0.185], Rate θ' = 1.74 gegen θ = 1.76: KEINE D-Potenz verloren
+#    (λ_min(S) wächst unter Verfeinerung, +0.20 pro Halbierung; die Kette
+#    kostet eine KONSTANTE, Spread 1.195). Ein-Zell-Version kostet 0.93
+#    Potenzen (klassischer Preis: Summe durch größten Term ersetzt).
+# O3 SPRÜNGE EXAKT + KORREKTUR AN T116: Zellen-Anbau = Levinson-Bordering
+#    ε(h+1) = ε(h) − r₀²/s₀ (rel 3.7e-12); Primpotenz-Eintritt = Ecken-Update
+#    auf den zwei äußersten Anti-Diagonalen mit Rang EXAKT k₀+1, Woodbury-
+#    Form reproduziert 23/23 (rel 2.1e-11). Die Faktor-120-„Sprünge“ waren
+#    ein SWEEP-ARTEFAKT: alle 23 Eintritte bewegen ε NACH OBEN (Faktoren
+#    1.0003–1.0506, Anteil −0.3% am Log-Abfall); der Abfall ist das
+#    akkumulierte glatte Bordering-Produkt zwischen den Sweep-Punkten.
+#    Die Sprung-Nebenbedingung an den Ansatz ENTFÄLLT; übrig bleibt ein
+#    glatter α^(−6.07±0.03)-Abfall (Fit, kurzer Hebel, Deckel h ≤ 1400).
+# O4 SATZ-KANDIDAT formuliert (H1 T ≻ 0 zertifiziert; H2 λ_min(S) ≥ κ
+#    zertifiziert pro Fenster; H3 nicht-verschwindende diskrete Steigung auf
+#    EINER Zelle; Konklusion = die Vier-Zeilen-Kette; Attribution Zeile für
+#    Zeile exakt/Cholesky/Klassik/Fit). FEHLLISTE: drei benannte analytische
+#    Lemmata über EIN Symbol, jedes mit klassischer Adresse — (1) Ecken-
+#    Asymptotik von T⁻¹ (Kac–Murdock–Szegő 1953 / Widom 1974), (2) λ_min(S)-
+#    Untergrenze auf EINEM Level (Symbol-Frage an der Nyquist-Frequenz π/D),
+#    (3) Saturations-Konstante (gemessen [0.675, 0.744], Klassik, kostet
+#    keine Rate); zwei der drei sind KONSTANTEN, keine Raten. Berührt NICHT
+#    die T116-[SUPPORT]-Kamm-Obstruktion (separates Thema Zustands-
+#    Kompression). → T118 (läuft): SYMBOL.LEMMAS (symbol_lemmas_probe.py) —
+#    die drei Lemmata gegen ihre klassischen Adressen (S-Symbol am Nyquist,
+#    KMS/Widom-Ecken, Bank–Smith-Saturation).
+# Serie (XII)–(CXXVIII): 117 Proben, 2932/2932 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Céa 1964, Aubin 1967 /
+# Nitsche 1968, Bramble–Hilbert 1970 — nur in der OBEREN Richtung zitiert,
+# Payne–Weinberger 1960, Bank–Smith 1993 / Dörfler–Nochetto 2002, Levinson
+# 1947 / Durbin / Szegő, Sherman–Morrison 1950 / Woodbury, Haynsworth 1968,
+# Albert 1969, Kac–Murdock–Szegő 1953, Widom 1974, Szegő–Kolmogorov,
+# Grenander–Szegő, Rayleigh–Ritz, Cholesky / Wilkinson 1968 / Higham 2002,
+# Weil 1952, Bertrand-Chebyshev 1852) zitiert; Sandbox ohne Ledger-/Paper-/
+# Marker-Änderung.
+
 # 2026-07-27 (X) — Teil 116 (delegiert, die Rand-Formulierung — Vertrag BOUNDARY.FORMULATION): boundary_formulation_probe.py — **RICCATI-PARTIAL** — DIE INDUKTION IST EIN RAND-PROZESS: DER POL FÄHRT EXAKT IM ZUSTAND MIT UND DIE KOSTEN SIND FLACH, ABER DER PRIMZAHL-KAMM VERWEIGERT DIE KOMPRESSION: das Innere integriert sich per partieller Minimierung (Haynsworth) in einen Zustand (Sig, r, sig) aus 12×12+12+1 Zahlen, der den globalen Rang-1-Pol EXAKT trägt (geränderte Elimination, keine Trunkierung) und sich per Riccati-Rekursion fensterunabhängig fortschreibt — eine ungebrochene Kette von 169 236 Prepends lief auf h = 1 354 088 Zellen (903× der alte Deckel) bei flachen 76 µs/Schritt (ehrlich deklariert: Kostengeometrie-Demo, KEIN Weil-Zertifikat); ABER der Zustand lässt sich nicht beschränken: der Arch-Schwanz fällt sauber exp(−1.73ω), das volle Symbol fällt GAR NICHT — 100% der Off-Band-Masse sitzt in den Streifen der zwei Primzahl-Kämme (jede einlaufende Zelle koppelt via Hankel an die Innenzelle bei α − log n_j, für jede Primpotenz √n < n_j < n), Trunkierungs-Budget 1.3e2…1.1e6 × ε, wachsend wie n^2.17; DAFÜR bekommt die eine Ungleichung Lehrbuch-Gestalt: ε ist der Fehler eines PWC-Galerkin-Verfahrens für die D-unabhängige Funktion 2sinh(x/2), Aubin–Nitsche trifft den gemessenen Exponenten (θ = 1.79 ⟹ s ≈ 0.90) — 33/33, 17.7s, Sandbox
 # N1 Rand-Rekursion: der Zustand (Sig, r, sig) ist die partielle Minimierung
 #    der polfreien Form übers Innere (Haynsworth 1968); die Identität

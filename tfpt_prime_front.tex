@@ -83,7 +83,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$116$ preregistered probes with $2909$ machine checks, which localized the residual object. That
+$117$ preregistered probes with $2932$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -135,7 +135,7 @@ floor itself falls like $\rho^{-1.7}$, so no bound can undo the drop), while a t
 compression breaks the compute cap: a certified margin-free step at $n=155\,921$ ($117\times$
 deeper), chains of ten steps, the stopper always cost and never a step --- leaving the shortest
 list the program has produced: three points, of which only one is an inequality (the classical
-Szeg\H{o}--Levinson prediction-error bound for one symbol). The last part executes the
+Szeg\H{o}--Levinson prediction-error bound for one symbol). The next part executes the
 reformulation point of that list, and the induction step turns out to \emph{be} a boundary
 process: partial minimisation over the interior (Haynsworth) compresses the window into a state
 $(\Sigma,r,\sigma)$ of $12\times12+12+1$ numbers that carries the global rank-one pole
@@ -150,7 +150,13 @@ In exchange, the one remaining inequality acquires a textbook shape: $\varepsilo
 of a piecewise-constant Galerkin method for the $D$-independent function $2\sinh(x/2)$,
 Aubin--Nitsche duality predicts the measured exponent
 ($\theta=1.79\Rightarrow s\approx0.90$), and the target inequality is
-$\varepsilon(\alpha,D)\ge c_0D^{\theta}\alpha^{\varphi}$ across the prime-power jumps.
+$\varepsilon(\alpha,D)\ge c_0D^{\theta}\alpha^{\varphi}$ across the prime-power jumps. The last
+part then makes that inequality \emph{theorem-shaped}: the Galerkin reading becomes four exact
+identities, the lower-bound direction acquires a certified two-level chain that loses no power
+of $D$ ($\theta'=1.74$ against $\theta=1.76$), the jumps acquire exact closed forms --- with the
+correction that prime-power entries \emph{raise} $\varepsilon$, so the factor-$120$ falls were a
+sweep artefact of the earlier run --- and what remains is three named analytic lemmas about one
+symbol, two of them constants rather than rates.
 \textbf{No claim of progress on the Riemann Hypothesis is
 made anywhere in this document}, and none of the sandbox findings moves any ledger marker. The
 document is deliberately symmetric about failure: a dedicated section lists the readings and
@@ -195,7 +201,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots116$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots117$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -774,9 +780,9 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T116)}\label{sec:certification}
+\section{The certification arc (T102--T117)}\label{sec:certification}
 % =====================================================================
-The last fifteen parts stopped improving measurements and started converting them into certificates ---
+The last sixteen parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
 
 \subsection{The mechanism: a crossing, not a singularity (T102)}
@@ -897,12 +903,12 @@ the wing near-null direction.
 \node[tgt] (o) at (0,-3.4) {\textbf{One object:} the wing near-null direction\\[2pt]
   \footnotesize dressing almost rank one (effective rank $1.07$--$2.7$; $99.7$--$100\%$ of the
   near-null direction in \emph{one} prolate mode)};
-\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112 $\to$ T113 $\to$ T114 $\to$ T115 $\to$ T116\\[2pt]
+\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112 $\to$ T113 $\to$ T114 $\to$ T115 $\to$ T116 $\to$ T117\\[2pt]
   \footnotesize certify \emph{bare}, prove the avoidance law, split the parity channels,
   reduce to one scalar ratio, then to two scalars, certify both --- then propagate the margin,
   measure where the propagation fails, rescale the frame, settle the currency question,
-  dissolve the wall --- then split the transport, break the compute cap, and run the
-  induction as a pure boundary process};
+  dissolve the wall --- then split the transport, break the compute cap, run the
+  induction as a pure boundary process, and make the one inequality theorem-shaped};
 \draw[ar] (a) -- (o);
 \draw[ar] (c) -- (o);
 \draw[ar] (o) -- (n);
@@ -1600,7 +1606,11 @@ geometry of the boundary formulation.
 $\varepsilon\approx8.34\,D^{1.790}\alpha^{-6.04}$ (jackknife errors $\le0.041$, rms $\le0.097$;
 $\varphi$ from a fixed-$D$ sweep, $\pm0.08$; all fits). $\varepsilon$ is \emph{not} smooth in
 $\alpha$: it jumps by factors up to $120$ at prime-power entries, so any smooth ansatz is wrong
-from the start. The continuum form is \emph{exactly critical} ---
+from the start. (T117 subsequently resolved the same sweep cell by cell and \emph{corrected}
+this reading: the entries themselves move $\varepsilon$ \emph{up}, and the factor-$120$ falls
+are the accumulated smooth bordering decay between sweep points --- see the T117 subsection.
+The criticality and $D$-law statements of this paragraph are unaffected.) The continuum form is
+\emph{exactly critical} ---
 $\tilde t^{\mathsf T}T^{-1}\tilde t$ reaches $0.999975745$, and Szeg\H{o}--Kolmogorov says the
 pole is representable in the limit --- with every measurement $\ge1.1\times10^{5}$ above the
 declared Cholesky floor. The classical hit: in the Galerkin reading, $\tilde t$ represents the
@@ -1626,11 +1636,116 @@ Aubin--Nitsche duality, $s\approx0.90$).
 formulation must either carry the reflection stripes ($\Theta(\log^2 n)$ ceiling) or find a
 representation in which the comb is diagonal.
 \end{enumerate}
+\emph{Disposition after T117 (next subsection):} (1) is \textbf{theorem-shaped} --- the Galerkin
+reading becomes four exact identities, the lower-bound direction acquires a certified two-level
+chain that loses no power of $D$, and the jumps acquire exact closed forms with the
+\emph{opposite} sign: entries \emph{raise} $\varepsilon$, the factor-$120$ falls were a sweep
+artefact, and the jump side-condition is \emph{removed} from the ansatz. What is left of (1) is
+three named analytic lemmas about one symbol, two of them constants. (2) is untouched.
 \end{keybox}
 
-\noindent T117 (\texttt{epsilon\_theorem\_probe.py}, contract \texttt{EPSILON.THEOREM} --- the
-exact Galerkin identity, an Aubin--Nitsche \emph{lower}-bound chain with explicit constants,
-exact jump formulas via Sherman--Morrison, a theorem candidate for the target inequality) was
+\noindent T117 (\texttt{epsilon\_theorem\_probe.py}, contract \texttt{EPSILON.THEOREM}) then took
+the inequality apart --- keeping the one honest asymmetry visible everywhere: the classical
+Galerkin machinery produces \emph{upper} bounds for approximation errors, and the target needs a
+\emph{lower} bound.
+
+\subsection{The one inequality becomes theorem-shaped (T117)}
+T117 (\texttt{epsilon\_theorem\_probe.py}, contract \texttt{EPSILON.THEOREM}, $23/23$,
+\textsc{theorem-shaped}) converted the T116 reading into identities and a certified chain. The
+direction problem is stated once and kept visible: C\'ea $1964$, Aubin $1967$/Nitsche $1968$ and
+Bramble--Hilbert $1970$ all bound a Galerkin error from \emph{above} by an interpolation error;
+the missing lower-bound ingredient carries a classical name --- the \emph{saturation assumption}
+(Bank--Smith $1993$; D\"orfler--Nochetto $2002$) --- and is known to be an assumption, not a
+theorem. Every classical anchor below is therefore cited with the direction it actually gives.
+
+\emph{The Galerkin identity, exact.} Four identities, verified on six windows to $10^{-10}$
+relative or better, none of them asymptotic: (i) $\tilde t$ is the cell functional of the
+$D$-\emph{independent} function $f(x)=2\sinh(x/2)$ (independent quadrature, rel
+$5.2\times10^{-16}$); (ii) the family is \emph{exactly nested} --- with $P$ the block-averaging
+prolongation, $T_c=P^{\mathsf T}T_fP$ and $\tilde t_c=P^{\mathsf T}\tilde t_f$ (rel
+$2\times10^{-14}$) --- so $\varepsilon$ is a Galerkin best-approximation error of \emph{one}
+bilinear form on a nested family, and its monotonicity under refinement is a \emph{theorem}, not
+a fit; (iii) $\varepsilon=\min_v\,[\,1-2\tilde t^{\mathsf T}v+v^{\mathsf T}Tv\,]$ with the
+two-level Pythagoras $\varepsilon_c-\varepsilon_f=\|u_f-Pu_c\|^2_{T_f}$ (rel
+$6.2\times10^{-11}$); (iv) the dual-norm residual form
+$\varepsilon_c-\varepsilon_f=\|\tilde t_f-T_fPu_c\|^2_{T_f^{-1}}$, whence
+$\varepsilon>0\iff\tilde t\notin T(V_c)$: positivity is a \emph{non-membership} statement ---
+which is exactly why the quantitative version is hard, since a non-membership statement carries
+no rate by itself.
+
+\emph{The lower bound, honestly.} The crude psd-minorant route
+($\varepsilon\ge1-\tilde t^{\mathsf T}G^{-1}\tilde t$ for $0<G\le T$) is measured dead:
+criticality forces any useful minorant to be sharp to relative $8.3\times10^{-4}$ in the one
+direction $u=T^{-1}\tilde t$ --- which is the same as knowing $u$. What survives is the
+\emph{two-level chain}
+\[
+\varepsilon_c\;\ge\;\varepsilon_c-\varepsilon_f\;=\;y^{\mathsf T}Sy\;\ge\;
+\lambda_{\min}(S)\,\|y\|^2\;\ge\;\lambda_{\min}(S)\,D_f^3\,\max_j g_j^2/2\;>\;0,
+\]
+with $y$ the oscillation of the fine dual solution, $S$ the $T$-Schur complement onto the
+oscillation space (Haynsworth $1968$), and the last step the one-cell Payne--Weinberger $1960$
+cell-variance inequality used in its \emph{lower} form --- the only place where a classical
+approximation statement points the right way. Every link is an identity or a completed Cholesky:
+certified on all $19$ nested pairs, bound$/\varepsilon\in[0.111,0.185]$, everything at least
+$6.7\times10^{5}$ above the declared backward-error floor. The rate:
+$\theta'(\mathrm{sum})=1.74$ against $\theta=1.76$ (jackknifed fits) --- a loss of $0.04$ powers
+of $D$, i.e.\ \emph{none}, because $\lambda_{\min}(S)$ \emph{grows} under refinement ($+0.20$ per
+halving of $D$; log-versus-small-power undecidable on an $8\times$ lever, and nothing in the
+chain rests on deciding it): the chain costs a constant, not a power (bound$/\varepsilon$ spread
+$1.195$ over the whole lever). The one-cell version costs a further $0.93$ powers --- the
+classical price of replacing a sum over cells by its largest term.
+
+\emph{The jumps, exactly --- and a correction to T116.} Growing the window by one cell per end
+at fixed $D$ is a pure prepend in frame A, so the bordered inverse gives the \emph{exact} drop
+$\varepsilon(h{+}1)=\varepsilon(h)-r_0^2/s_0$ (Levinson $1947$; rel $3.7\times10^{-12}$ over
+consecutive steps). A prime-power entry at fixed window is a \emph{corner} update supported on
+the two outermost Hankel anti-diagonals, of rank exactly $k_0+1$ ($k_0$ the corner distance),
+and Woodbury/Sherman--Morrison reproduces its effect on $\varepsilon$ in closed form on all $23$
+measured entries (rel $2.1\times10^{-11}$). The direction \emph{corrects} T116: all $23$ entries
+move $\varepsilon$ \emph{up} (factors $1.0003$--$1.0506$; for $k_0=0$ the update is
+$+\beta e_0e_0^{\mathsf T}$ with $\beta>0$, so an entry can never by itself lower $\varepsilon$
+at that corner distance). The T116 factor-$120$ falls were a \emph{sweep artefact}: resolved
+cell by cell over $400$ steps, the largest single-cell drop is a factor $0.9555$, the entry
+share of the total log-drop is $-0.3\%$ \emph{with the opposite sign}, and the falls are the
+accumulated smooth Levinson product between sweep points spaced $150$--$300$ cells apart. The
+jump side-condition disappears from the ansatz; what a bound must survive is a smooth
+$\alpha^{-6.07\pm0.03}$ decay (fit; the $\alpha$ lever is short and bound by the compute cap
+$h\le1400$, declared as such).
+
+\begin{keybox}[The theorem candidate --- and the three-lemma missing list]
+\emph{Candidate.} Let $V_c\subset V_f$ be the reflection-odd piecewise-constant spaces on
+$(-\alpha,\alpha)$ with $M$ and $2M$ cells, $T$ the pole-free odd Weil form, $\tilde t$ the pole
+functional of $f(x)=2\sinh(x/2)$. Assume (H1) $T_f\succ0$ [certified per window]; (H2)
+$\lambda_{\min}(S)\ge\kappa>0$ on the oscillation space [certified per window; measured to grow
+under refinement]; (H3) one coarse cell carries a non-vanishing discrete slope of the dual
+solution [measured]. Then the four-line chain above gives
+$\varepsilon_c\ge\kappa\,D_f^3G^2/2>0$; at fixed $D$ the $\alpha$-decrease per added cell pair
+is exactly $r_0^2/s_0$; and prime-power entries only raise $\varepsilon$ --- so the certified
+bound carries the full measured rate. Line-by-line attribution: the identities are exact
+algebra, (H1)/(H2) are completed Choleskys, the cell step is classical, the exponents are
+jackknifed fits.\\[3pt]
+\emph{What is still missing --- three named analytic lemmas about one symbol, each with a
+classical address:}
+\begin{enumerate}[leftmargin=1.6em]
+\item[\textbf{(1)}] a uniform lower bound on \emph{one} local slope of the dual solution
+$u_f=T_f^{-1}\tilde t_f$ (H3 as analysis): the corner asymptotics of $T^{-1}$ for a symbol with
+a log singularity --- the Kac--Murdock--Szeg\H{o} $1953$ / Widom $1974$ circle of results;
+\item[\textbf{(2)}] a lower bound for $\lambda_{\min}(S)$ at \emph{one} level (H2 as analysis):
+$S$ is the form seen by oscillations, i.e.\ the symbol at the Nyquist frequency $\pi/D$, where
+the archimedean weight is largest --- the measured monotonicity then carries it;
+\item[\textbf{(3)}] the saturation constant: dropping $\varepsilon_f$ costs the factor
+$1-\varepsilon_f/\varepsilon_c$, measured in $[0.675,0.744]$ --- literally the Bank--Smith~/
+D\"orfler--Nochetto saturation assumption, bounded away from $0$ by a constant, so it costs no
+rate.
+\end{enumerate}
+Two of the three are \emph{constants}, not rates. None of this touches the T116
+\textbf{[SUPPORT]} comb obstruction --- that is a separate question about \emph{state
+compression}, not about $\varepsilon$.
+\end{keybox}
+
+\noindent T118 (\texttt{symbol\_lemmas\_probe.py}, contract \texttt{SYMBOL.LEMMAS} --- the three
+lemmas against their classical addresses: the $S$-symbol at the Nyquist frequency, the
+Kac--Murdock--Szeg\H{o}/Widom corner asymptotics, the Bank--Smith saturation constant) was
 running at the time of writing and is \emph{not} reported here.
 
 % =====================================================================
@@ -1741,8 +1856,13 @@ boundary-recursion identities (the partial-minimisation identity
 $t^{\mathsf T}T^{-1}t=r^{\mathsf T}\Sigma^{-1}r+\sigma$ on six zones; the Haynsworth
 double-Albert equivalence $6/6$ with sharp negative controls; the exact Riccati chaining,
 bit-exact on real windows; and the exact carriage of the global rank-one pole in the bordered
-state --- the deep march itself certifies the band model's cost geometry, declared as
-such).\\[3pt]
+state --- the deep march itself certifies the band model's cost geometry, declared as such),
+and the T117 epsilon-theorem package (the four Galerkin identities --- the cell functional of
+$2\sinh(x/2)$, the exact nesting $T_c=P^{\mathsf T}T_fP$, the two-level Pythagoras, the
+dual-norm residual form, all to $10^{-10}$ or better; the two-level lower-bound chain, every
+link an identity or a completed Cholesky, positive on all $19$ nested pairs; and the exact jump
+formulas --- the Levinson bordering drop $r_0^2/s_0$ and the rank-$(k_0{+}1)$ Woodbury corner
+update, both to $10^{-10}$).\\[3pt]
 \textbf{Measured} (holds on the resolved windows; no uniform constant): $\rho_-$; the ratio
 $r=0.0053$--$0.1814$ and $\hat r<1$ at all $92$ resolution points; $\omega=0.2366$--$0.7531$; the
 strict odd-channel margin $\lambda_{\min}(Q|_{\mathrm{odd}})=1.4\times10^{-5}$--$5.1\times10^{-2}$; the
@@ -1757,8 +1877,12 @@ median ratio $2.001$) and the fall laws $\lambda_{\min}(S)\sim\rho^{-1.69}$,
 $\varepsilon\sim\rho^{-1.71}$ (fits); the T116 law
 $\varepsilon\approx8.34\,D^{1.790}\alpha^{-6.04}$ (jackknife $\le0.041$), the factor-$120$
 jumps at prime-power entries, the comb truncation budget growing like $n^{2.17}$, and the
-criticality $\tilde t^{\mathsf T}T^{-1}\tilde t\to0.999975745$ (fits/measurements); every scaling
-exponent quoted in this document.\\[3pt]
+criticality $\tilde t^{\mathsf T}T^{-1}\tilde t\to0.999975745$ (fits/measurements); the T117
+rates $\theta'(\mathrm{sum})=1.74$ against $\theta=1.76$ (loss $0.04$ powers of $D$) with
+bound$/\varepsilon\in[0.111,0.185]$, the growth of $\lambda_{\min}(S)$ under refinement, the
+entry direction (all $23$ prime-power entries \emph{raise} $\varepsilon$ --- correcting the
+T116 factor-$120$ reading, a sweep artefact), and the saturation ratio in $[0.675,0.744]$;
+every scaling exponent quoted in this document.\\[3pt]
 \textbf{Hypothesis input / classical} (used, named, not proved here): Kneser, Witt/Eichler, Shimura,
 Waldspurger/Baruch--Mao, Cohen, Weil--Guinand, Bombieri, Yoshida, Connes--Consani, Douglas,
 Slepian--Landau--Pollak, Gronwall/Robin (unconditional form only), Grenander--Szeg\H{o},
@@ -1766,7 +1890,9 @@ Sherman--Morrison/Woodbury, Christoffel--Darboux, Szeg\H{o}--Levinson, the Weyl 
 Combes--Thomas/Jaffard, Prager--Synge, first-order Kato perturbation, Albert (the pseudo-inverse
 Schur criterion), Haynsworth (the partial-minimisation form of the Schur complement),
 C\'ea/Strang's first lemma, Bramble--Hilbert, Brandt/Yserentant two-scale spaces,
-Szeg\H{o}--Kolmogorov, Aubin--Nitsche duality, Wilkinson/Higham backward error.
+Szeg\H{o}--Kolmogorov, Aubin--Nitsche duality, Payne--Weinberger, Levinson/Durbin,
+Kac--Murdock--Szeg\H{o}/Widom, the Bank--Smith/D\"orfler--Nochetto saturation assumption,
+Wilkinson/Higham backward error.
 \end{keybox}
 
 \subsection{The asymptotic mountain}
@@ -1809,12 +1935,17 @@ $12\times12+12+1$ state and one unbroken Riccati march ran $169\,236$ prepends t
 million cells ($903\times$ the old cap) at flat cost, declared as a cost-geometry demonstration
 and not a Weil certificate --- but the state cannot be bounded, because the prime comb itself
 refuses compression (every incoming cell reflects off every prime power in the window; the
-truncation budget grows like $n^{2.17}$). Since T116 the mountain is one two-variable
-inequality with a named classical proof technique ---
-$\varepsilon(\alpha,D)\ge c_0D^{\theta}\alpha^{\varphi}$, a piecewise-constant Galerkin error
-under Aubin--Nitsche duality, to be proved across the prime-power jumps --- plus the comb as
-the honest support obstruction. T117 (\texttt{epsilon\_theorem\_probe.py}) was running at the
-time of writing.
+truncation budget grows like $n^{2.17}$). T117 (\texttt{epsilon\_theorem\_probe.py}) then made
+that inequality theorem-shaped: the Galerkin reading is four exact identities, the lower-bound
+direction is a certified two-level chain that loses no power of $D$ ($\theta'=1.74$ against
+$\theta=1.76$), the jumps have exact closed forms --- and, correcting T116, the prime-power
+entries \emph{raise} $\varepsilon$, so the factor-$120$ falls were a sweep artefact and the
+jump side-condition disappears. Since T117 the mountain is three named analytic lemmas about
+one symbol, each with a classical address --- the Kac--Murdock--Szeg\H{o}/Widom corner
+asymptotics of $T^{-1}$, a one-level lower bound for $\lambda_{\min}(S)$ at the Nyquist
+frequency, and the Bank--Smith saturation constant, two of the three constants rather than
+rates --- plus the comb as the honest support obstruction. T118
+(\texttt{symbol\_lemmas\_probe.py}) was running at the time of writing.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -1866,18 +1997,18 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T116}\label{app:index}
+\section{Probe index, diary parts T11--T117}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $106$ parts T11--T116 that the current diary file records
-($107$ runs --- T104 was a double run with two independent arms --- and $2717$ green checks); the ten
+load-bearing artefact. The index covers the $107$ parts T11--T117 that the current diary file records
+($108$ runs --- T104 was a double run with two independent arms --- and $2740$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T116: \textbf{$116$ probes, $2909/2909$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T117
-(\texttt{epsilon\_theorem\_probe.py}, contract \texttt{EPSILON.THEOREM}) was still running
+diary at T117: \textbf{$117$ probes, $2932/2932$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T118
+(\texttt{symbol\_lemmas\_probe.py}, contract \texttt{SYMBOL.LEMMAS}) was still running
 when this document was written and is deliberately absent.
 
 {\footnotesize
@@ -2000,6 +2131,7 @@ T113 & \texttt{\scriptsize limit\_\allowbreak operator} & the wall is currency-i
 T114 & \texttt{\scriptsize margin\_\allowbreak free\_\allowbreak step} & the margin-free step: Albert/pseudo-inverse Schur certifies $27/27$ steps ($11$ past the old wall, to $n=1331$) and all $7$ torn zones; the wall was an $O(1)$ numerator over an artifact floor; (R) grid-bound, deleted ([P5]); new two-object core & WALL-DISSOLVES & 22/22\\
 T115 & \texttt{\scriptsize schur\_\allowbreak transport} & transport certifies only mild refinement (split at $\rho^*\!\approx\!1.8$; on nested ladders $\lambda_{\min}(S)$ itself falls like $\rho^{-1.7}$), but the two-scale compression breaks the cap: margin-free step at $n=155\,921$, ten-step chains, stopper always cost; remaining list three points, one inequality (Szeg\H{o}--Levinson) & TRANSPORT-BLOCKED & 26/26\\
 T116 & \texttt{\scriptsize boundary\_\allowbreak formulation} & the induction as a boundary process: the $(\Sigma,r,\sigma)$ state carries the global pole exactly and marches $169\,236$ prepends to $1.35\times10^{6}$ cells at flat cost (cost-geometry demo, not a Weil certificate); the prime comb refuses compression (budget $\sim n^{2.17}$); $\varepsilon\approx8.34\,D^{1.790}\alpha^{-6.04}$ with factor-$120$ jumps --- a Galerkin error under Aubin--Nitsche duality & RICCATI-PARTIAL & 33/33\\
+T117 & \texttt{\scriptsize epsilon\_\allowbreak theorem} & the one inequality theorem-shaped: four exact Galerkin identities ($\varepsilon>0\iff\tilde t\notin T(V_c)$); a certified two-level lower bound on $19/19$ pairs at $\theta'=1.74$ against $\theta=1.76$ (no power of $D$ lost); exact jump formulas (Levinson bordering, rank-$(k_0{+}1)$ Woodbury) --- entries \emph{raise} $\varepsilon$, the factor-$120$ falls were a sweep artefact; three named analytic lemmas remain, two of them constants & THEOREM-SHAPED & 23/23\\
 \end{xltabular}
 }
 

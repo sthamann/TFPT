@@ -199,9 +199,16 @@ export function TwoDoorsConvergence() {
           itself (every incoming cell reflects off every prime power in the
           window — no sparse faithful state), and the one remaining
           inequality now has textbook shape (ε is a Galerkin error;
-          Aubin–Nitsche duality hits the measured exponent θ = 1.79). T117 (
+          Aubin–Nitsche duality hits the measured exponent θ = 1.79). T117 ·
+          EPSILON.THEOREM — THEOREM-SHAPED (23/23): the one inequality is
+          now an identity plus a certified lower-bound chain that loses no
+          power of D (θ&apos; = 1.74 against θ = 1.76); the jumps have closed
+          forms and T116&apos;s factor-120 drops were a sweep artifact
+          (prime-power entries raise ε); what remains are three named
+          analytic lemmas about one symbol — two of them constants, not
+          rates. T118 (
           <span className="font-mono text-slate-300">
-            epsilon_theorem_probe.py
+            symbol_lemmas_probe.py
           </span>
           ) running.
         </p>
