@@ -79,7 +79,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$112$ preregistered probes with $2801$ machine checks, which localized the residual object. That
+$113$ preregistered probes with $2828$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -103,7 +103,7 @@ single warning splits into three separate walls (a measured margin wall, an arit
 set by the twin-prime pair $521\to523$, and a vacuous-requirement wall at $n=727$), while the
 handover mechanism itself never fails: all $117$ steps certify at retention $1.000000$, and the
 chain tears at the ratio, not at a step. The operating variable turns out to be the window depth,
-not the zone index. The last part acts on that reinterpretation and rebuilds the construction in a
+not the zone index. The next part acts on that reinterpretation and rebuilds the construction in a
 gap-coupled scaled frame ($D$ tied to the local prime gap): two of the three walls fall
 \emph{structurally} --- the ladder death becomes a payable cell cost (the killer pair $461\to463$
 now certifies spectrally with the reserve opening by a factor ${\sim}1000$) and the requirement
@@ -111,7 +111,13 @@ wall loses its depth dependence --- while the margin wall proves \emph{frame-inv
 $-0.974$: it is the substance of the requirement, not geometry. The hardness is thereby traded ---
 three arithmetic walls against two analytic demands, the positivity of one limit operator and a
 convergence rate below the step reserve --- with the prime-gap dependence disclosed rather than
-hidden. \textbf{No claim of progress on the Riemann Hypothesis is
+hidden. The last part settles the currency question, with a fundamental reinterpretation: the wall
+carries the same exponent in \emph{every} admissible currency --- it is substance --- but it
+measures the \emph{discretisation}, not the spectrum. Under refinement at a fixed window both
+leading eigenvalues carry the same cell-width power (the continuum window form has no gap), the
+positive floor survives only as a cancellation of relative size $10^{-7}$--$10^{-4}$, and the T109
+requirement chain turns out to divide by an artifact margin; the hardness balance is restated as
+four parts, led by a margin-free step certificate now under test. \textbf{No claim of progress on the Riemann Hypothesis is
 made anywhere in this document}, and none of the sandbox findings moves any ledger marker. The
 document is deliberately symmetric about failure: a dedicated section lists the readings and
 routes that were refuted --- an essential-singularity reading, a $C/g$ proxy law, a density chain, an
@@ -734,9 +740,9 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T112)}\label{sec:certification}
+\section{The certification arc (T102--T113)}\label{sec:certification}
 % =====================================================================
-The last ten parts stopped improving measurements and started converting them into certificates ---
+The last twelve parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
 
 \subsection{The mechanism: a crossing, not a singularity (T102)}
@@ -857,10 +863,10 @@ the wing near-null direction.
 \node[tgt] (o) at (0,-3.4) {\textbf{One object:} the wing near-null direction\\[2pt]
   \footnotesize dressing almost rank one (effective rank $1.07$--$2.7$; $99.7$--$100\%$ of the
   near-null direction in \emph{one} prolate mode)};
-\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112\\[2pt]
+\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112 $\to$ T113\\[2pt]
   \footnotesize certify \emph{bare}, prove the avoidance law, split the parity channels,
   reduce to one scalar ratio, then to two scalars, certify both --- then propagate the margin,
-  measure where the propagation fails, and rescale the frame};
+  measure where the propagation fails, rescale the frame, and settle the currency question};
 \draw[ar] (a) -- (o);
 \draw[ar] (c) -- (o);
 \draw[ar] (o) -- (n);
@@ -1294,11 +1300,74 @@ bounded gaps), $\theta\to0$ on subsequences, so any gap-coupled construction mus
 $\theta\to0$, at the price of the $1/\theta$ cost explosion.
 \end{keybox}
 
-\noindent T113 (\texttt{limit\_operator\_probe.py}, contract \texttt{LIMIT.OPERATOR} --- the currency
-question: is the margin fall in the scaled frame a normalisation artefact, $\lambda_2/\lambda_1$
-constant against $m\sim n^{-0.95}$? --- plus the limit operator made explicit, the atom perturbation
-as a gap functional, and regrid against reserve) was running at the time of writing and is \emph{not}
-reported here.
+\noindent T113 subsequently answered the currency question (next subsection): the wall is
+currency-invariant --- and what it measures is the discretisation, not the spectrum.
+
+\subsection{The currency question: the wall is substance, and it measures the discretisation (T113)}
+T113 (\texttt{limit\_operator\_probe.py}, contract \texttt{LIMIT.OPERATOR}, $27/27$,
+\textsc{substance-confirmed}) answered the question T112 left open --- is the margin fall in the
+scaled frame a normalisation artefact? --- and the answer reinterprets the program's hardest number.
+
+\emph{The currency table.} The floor/requirement ratio carries the \emph{same} exponent,
+$n^{-1.168\pm0.259}$, in all five currencies tested (raw, per $\lambda_{\max}$, per trace density,
+per $D$, per $D^2$) --- and the invariance is structural, not accidental: the piecewise-constant
+basis is $L^2$-orthonormal (Gram matrix exactly $I$, so there is no free $D$-power to spend), and
+the zone matrices are restrictions of \emph{one} quadratic form to subspaces of the same $L^2$
+space (cross-grid form identity at relative $1.2\times10^{-14}$). The floor's homogeneity degree in
+the cell width is exactly $1.0$; the requirement's is $1.0$ under every legitimate rescaling. No
+flat currency exists. The wall is currency-invariant: substance, not bookkeeping.
+
+\emph{Two surprises about what that substance is.} First, the limit object is \emph{not} ``arch $+$
+pole with the atoms as a perturbation'': the atom-free window form is deeply negative
+($\lambda_{\min}=-3.08$ to $-19.36$, growing like $n^{+0.60}$), the atom block is equally large
+(norm $3.21$--$19.44$), and the positive floor survives only as a \emph{cancellation} of relative
+size $1.3\times10^{-7}$--$9.7\times10^{-5}$ --- on the floor vector, $-11.64$ against $+11.64$. The
+Weyl bound is saturated: norm perturbation theory is five orders of magnitude too coarse for this
+object. Second, there is \emph{no plateau under refinement}: at a fixed window, on nested grids
+over $8$ levels (a factor $128$ in resolution), $\lambda_1\sim D^{1.83}$ and $\lambda_2\sim
+D^{1.76}$ --- the \emph{same} power, with $\lambda_2/\lambda_1$ flat. \textbf{The continuum window
+form has no gap; $m_k$ measures the gap of the discretisation.} This resolves the T112 tension
+exactly: $\lambda_2/\lambda_1$ constant while the floor falls is what it looks like when both
+eigenvalues carry the same $D$-power.
+
+\emph{The atom part is almost invisible at the floor.} The entering (deepest) atom contributes
+almost nothing to the coupling ($8.3\times10^{-11}$--$1.3\times10^{-6}$) --- which is why handover
+steps certify at retention $1.000000$ while the margin tears. The floor is almost pure geometry:
+$\log m=\mathrm{const}+1.87\log D-2.07\log\alpha$, with an arithmetic residual of a factor $1.13$
+and no $\Lambda(n)$ dependence. The $\theta\to0$ stress test separates cost from substance: the
+operator norm does \emph{not} diverge ($\theta^{-0.005}$); an extra atom at the window edge shifts
+the floor by only $0.2$--$0.4\%$, while the same atom in the interior shifts it $10^7$ times more
+--- the $1/\theta$ explosion of T112 is purely a \emph{cost} statement ($h\sim\nu n/\theta$ cells),
+not an operator instability.
+
+\emph{Regrid, re-read.} The raw regrid rate $(D'/D)^{3.85}$ is mostly the floor's own $D$-power ---
+a normalisation jump, not an instability; the reserve certifies $f_{\mathrm{crit}}=9.5\times10^{-2}$
+(better than the T112 estimate), and after subtracting the $D$-power the reserve buys $15$ steps
+(against $0$ on the raw jump).
+
+\begin{keybox}[The new hardness balance --- replacing {[P1]}/{[P2]}]
+The T112 trade is restated by measurement; this balance supersedes the earlier two-demand form.
+\begin{enumerate}[leftmargin=1.6em]
+\item[\textbf{[P1]}] \textbf{Semidefiniteness of the balanced form without a gap} --- the continuum
+window form is semidefinite at best; strict limit-floor formulations demand what refinement
+demonstrably refuses.
+\item[\textbf{[P2]}] \textbf{Certify the $D$-power itself} --- a Grenander--Szeg\H{o}-type
+consistency statement for $\lambda_{\min}$ of the scaled form; the power, not an abstract rate, is
+the object.
+\item[\textbf{[P3]}] \textbf{New, and now leading: the requirement homogeneity} ---
+$\mathrm{need109}$ carries $D^{0.63}$ against the floor's $D^{2.38}$: the T109 chain divides by an
+\emph{artifact} margin. The repair the measurements point at is a \emph{margin-free step
+certificate} --- a Schur/Loewner formulation certified from semidefiniteness alone, never dividing
+by a margin.
+\item[\textbf{[P4]}] \textbf{$\theta\to0$ is a cost-uniformity demand only} --- the frame needs
+$h\sim\nu n/\theta$ cells, but the operator itself is $\theta$-stable.
+\end{enumerate}
+\end{keybox}
+
+\noindent T114 (\texttt{margin\_free\_step\_probe.py}, contract \texttt{MARGIN.FREE.STEP} ---
+rebuild the chain without the margin division: Albert/pseudo-inverse Schur complements, ratio
+closure; does the margin wall disappear as a requirement artefact?) was running at the time of
+writing and is \emph{not} reported here.
 
 % =====================================================================
 \section{The kill list}\label{sec:kills}
@@ -1428,12 +1497,18 @@ measurement is the reinterpretation: the operating variable is the window depth,
 and a proof along this route must beat the exponent gap $-0.974=-0.681-0.293$ and couple the depth
 $\delta_0$ to the local prime gap. T112 (\texttt{adaptive\_scaling\_probe.py}) then performed that
 coupling: the ladder wall and the depth dependence of the requirement wall fall \emph{structurally}
-in the gap-coupled frame, but the margin wall is frame-invariant at exponent $-0.974$ --- since T112
-the mountain is two analytic demands, the positivity of one limit operator and a convergence rate
-below the step reserve, with the prime-gap dependence disclosed (Bertrand--Chebyshev suffices
-upward; Zhang/Maynard force $\theta$-uniformity downward). T113
-(\texttt{limit\_operator\_probe.py}, the limit operator made explicit) was running at the time of
-writing.
+in the gap-coupled frame, but the margin wall is frame-invariant at exponent $-0.974$, with the
+prime-gap dependence disclosed (Bertrand--Chebyshev suffices upward; Zhang/Maynard force
+$\theta$-uniformity downward). T113 (\texttt{limit\_operator\_probe.py}) then settled what that
+invariant number \emph{is}: the wall carries the same exponent in every admissible currency --- it
+is substance --- but it measures the \emph{discretisation}, not the spectrum: at a fixed window
+both leading eigenvalues carry the same cell-width power under refinement (the continuum window
+form has no gap), the positive floor is a cancellation of relative size $10^{-7}$--$10^{-4}$, and
+the T109 requirement chain divides by an artifact margin. Since T113 the mountain is the four-part
+balance of Section~\ref{sec:certification}: [P1] semidefiniteness of the balanced form without a
+gap, [P2] the certified cell-width power, [P3] --- leading --- the margin-free step certificate,
+and [P4] $\theta\to0$ cost uniformity. T114 (\texttt{margin\_free\_step\_probe.py}, the chain
+rebuilt without the margin division) was running at the time of writing.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -1484,18 +1559,18 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T112}\label{app:index}
+\section{Probe index, diary parts T11--T113}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $102$ parts T11--T112 that the current diary file records
-($103$ runs --- T104 was a double run with two independent arms --- and $2609$ green checks); the ten
+load-bearing artefact. The index covers the $103$ parts T11--T113 that the current diary file records
+($104$ runs --- T104 was a double run with two independent arms --- and $2636$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T112: \textbf{$112$ probes, $2801/2801$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T113
-(\texttt{limit\_operator\_probe.py}, contract \texttt{LIMIT.OPERATOR}) was still running when
+diary at T113: \textbf{$113$ probes, $2828/2828$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T114
+(\texttt{margin\_free\_step\_probe.py}, contract \texttt{MARGIN.FREE.STEP}) was still running when
 this document was written and is deliberately absent.
 
 {\footnotesize
@@ -1614,6 +1689,7 @@ T109 & \texttt{\scriptsize boundary\_\allowbreak decay} & cancellation, not deca
 T110 & \texttt{\scriptsize margin\_\allowbreak propagation} & the induction circle closes on the measured zones (certified base case $+$ graded Loewner minorant; atom entry free); three gaps named & MARGIN-PROPAGATES & 28/28\\
 T111 & \texttt{\scriptsize deep\_\allowbreak zone\_\allowbreak stress} & the crossing measured, not extrapolated ($n^*\!\approx\!462$, upper bound); three walls (margin / twin-prime ladder / requirement); mechanism never fails, $117/117$ & CROSSING-CONFIRMED & 23/23\\
 T112 & \texttt{\scriptsize adaptive\_\allowbreak scaling} & gap-coupled frame: ladder wall and $\omega$ depth-dependence fall structurally; margin wall frame-invariant ($-0.974$); trade to [P1]/[P2], prime-gap inputs disclosed & SCALING-PARTIAL & 20/20\\
+T113 & \texttt{\scriptsize limit\_\allowbreak operator} & the wall is currency-invariant ($-1.168$ in all five currencies) but measures the discretisation: no continuum gap, floor a $10^{-7}$--$10^{-4}$ cancellation, need109 an artifact margin; new balance [P1]--[P4] & SUBSTANCE-CONFIRMED & 27/27\\
 \end{xltabular}
 }
 

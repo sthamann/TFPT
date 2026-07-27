@@ -1,3 +1,53 @@
+# 2026-07-27 (VII) — Teil 113 (delegiert, der Grenz-Operator — Vertrag LIMIT.OPERATOR): limit_operator_probe.py — **SUBSTANCE-CONFIRMED** (mit fundamentaler Umdeutung) — DIE MARGEN-WAND IST WÄHRUNGSINVARIANT, ABER SIE MISST DIE DISKRETISIERUNG, NICHT DAS SPEKTRUM: das Verhältnis Boden/Anforderung trägt in ALLEN fünf Währungen denselben Exponenten −1.168 ± 0.259 (strukturell unentfernbar; Kreuzgitter-Identität 1.2e-14) — Substanz, kein Normierungs-Artefakt; ABER die Fenster-Form hat im Kontinuum KEINE LÜCKE (λ₁ ~ D^1.83, λ₂ ~ D^1.76 unter Verfeinerung, kein Plateau — m_k misst die Lücke der DISKRETISIERUNG), der positive Boden ist eine AUSLÖSCHUNG relativer Größe 1.3e-7…9.7e-5, und die T109-Kette teilt durch eine Artefakt-Marge (need109 D^0.63 vs Boden D^2.38) — die Reparatur ist ein margenfreies Schritt-Zertifikat — 27/27, 10.3s, Sandbox
+# K1 Währungs-Tabelle: das Verhältnis Boden/Anforderung hat in ALLEN fünf
+#    Währungen (roh, /λ_max, /Spur-Dichte, /D, /D²) denselben Exponenten
+#    −1.168 ± 0.259 — strukturell unentfernbar: die PWC-Basis ist
+#    L2-orthonormal (Gram = I, keine freie D-Potenz), die Zonen-Matrizen sind
+#    Restriktionen EINER Form auf Unterräume desselben L2-Raums
+#    (Kreuzgitter-Identität 1.2e-14). Boden-Homogenität exakt 1.0,
+#    need109-Homogenität 1.0 unter legitimer Umskalierung. Die Wand ist
+#    währungsinvariant — Substanz.
+# K2 ABER die Substanz ist anders als erwartet (zwei Überraschungen):
+#    (1) Das Grenz-Objekt ist NICHT „Arch+Pol mit Atomen als Störung" — die
+#    atomfreie Form ist tief negativ (λ_min = −3.08…−19.36, ~n^+0.60), der
+#    Atom-Block gleich groß (Norm 3.21…19.44), der positive Boden überlebt
+#    nur als AUSLÖSCHUNG relativer Größe 1.3e-7…9.7e-5 (auf dem Bodenvektor:
+#    −11.64 gegen +11.64); Weyl gesättigt — Norm-Störungstheorie 5
+#    Größenordnungen zu grob. (2) KEIN PLATEAU bei Verfeinerung (fixes
+#    Fenster, geschachtelte Gitter, 8 Level, 128-fach): λ₁ ~ D^1.83,
+#    λ₂ ~ D^1.76 — DIESELBE Potenz, λ₂/λ₁ flach. DIE FENSTER-FORM HAT IM
+#    KONTINUUM KEINE LÜCKE; m_k misst die Lücke der DISKRETISIERUNG. Damit
+#    löst sich die T112-Spannung exakt auf (λ₂/λ₁ konstant, Boden fällt:
+#    beide tragen dieselbe D-Potenz).
+# K3 Atom-Teil: das eingehende (tiefste) Atom trägt fast nichts der Kopplung
+#    (8.3e-11…1.3e-6) — deshalb zertifizieren Schritte mit Retention
+#    1.000000, während die Marge reißt. Der Boden ist fast reine Geometrie
+#    (log m = const + 1.87·log D − 2.07·log α, arithmetischer Rest Faktor
+#    1.13, keine Λ(n)-Abhängigkeit). θ→0-Stress: Operatornorm divergiert
+#    NICHT (θ^−0.005); Zusatzatom am Fensterrand verschiebt den Boden nur
+#    0.2–0.4%, dasselbe Atom im Inneren 10⁷-fach — die 1/θ-Explosion ist
+#    reine KOSTEN-Aussage (h ~ νn/θ).
+# K4 Regrid: die rohe Rate (D′/D)^3.85 ist überwiegend die eigene D-Potenz
+#    des Bodens (Normierungssprung, keine Instabilität); Reserve zertifiziert
+#    f_crit = 9.5e-2 (besser als T112-Schätzung); nach Abzug der D-Potenz
+#    kauft die Reserve 15 Schritte (roher Sprung: 0). DIE NEUE HÄRTE-BILANZ:
+#    [P1] Semidefinitheit der BALANCIERTEN Form ohne Lücke (strikte
+#    Grenzboden-Formulierungen fordern, was die Verfeinerung verweigert);
+#    [P2] die D-Potenz selbst zertifizieren (Grenander-Szegő-artig); [P3] NEU
+#    UND FÜHREND: need109 trägt D^0.63 vs Boden D^2.38 — die T109-Kette
+#    teilt durch eine Artefakt-Marge; Reparatur = margenfreies
+#    Schritt-Zertifikat (Schur/Loewner aus Semidefinitheit allein); [P4] θ→0
+#    nur Kosten-Uniformität. → T114 (läuft): MARGIN.FREE.STEP
+#    (margin_free_step_probe.py) — die Kette ohne Margen-Division neu bauen
+#    (Albert/Pseudo-Inverse-Schur, Verhältnis-Schließung), Test ob die
+#    Margen-Wand als Anforderungs-Artefakt verschwindet.
+# Serie (XII)–(CXXIV): 113 Proben, 2828/2828 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Cholesky/Sylvester-Inertia,
+# Loewner-Ordnung, Weyl-Schranke/Cauchy-Interlacing, Rayleigh-Ritz,
+# Schur-Komplement, Grenander–Szegő, Bertrand-Chebyshev 1852,
+# Zhang 2014/Maynard 2015, von-Mangoldt-Arithmetik) zitiert; Sandbox
+# ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-27 (VI) — Teil 112 (delegiert, der skalierte Rahmen — Vertrag ADAPTIVE.SCALING): adaptive_scaling_probe.py — **SCALING-PARTIAL** — ZWEI DER DREI WÄNDE FALLEN STRUKTURELL: im lücken-gekoppelten Rahmen D_k = g_k/(2ν) ist die Leiter-Wand per Konstruktion weg (exakt ν Zellen pro Ende, Zwillinge eingeschlossen; 461→463 spektral zertifiziert, Retention 1.000000; Reserve öffnet 1000×) und die ω-Wand keine Tiefen-Wand mehr; die MARGEN-WAND bleibt RAHMEN-INVARIANT (Exponent −0.974; erste Sub-1-Zone n = 449 vs eingefroren 461–463) — sie ist die Substanz der T109-Anforderung, nicht Geometrie; der Tausch: drei arithmetische Wände gegen [P1] Positivität EINES Grenz-Operators + [P2] Konvergenzrate < Schrittreserve, Lücken-Abhängigkeit offengelegt — 20/20, 29.8s, Sandbox
 # J1 Zwei Kopplungen gebaut: Frame A D_k = g_k/(2ν) (lücken-gekoppelt),
 #    Frame B D_k = log n/(2νn) (Mittelfeld/PNT). FRAME B HAT KEINE LEITER

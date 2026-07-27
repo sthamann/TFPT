@@ -168,9 +168,16 @@ export function TwoDoorsConvergence() {
           opening ~1000×), but the margin wall is frame-invariant at
           exponent −0.974 — the substance of the requirement, not geometry;
           the hardness is now one limit operator plus one convergence rate,
-          with the prime-gap dependence disclosed. T113 (
+          with the prime-gap dependence disclosed. T113 · LIMIT.OPERATOR —
+          SUBSTANCE-CONFIRMED (27/27): the margin wall is real in every
+          currency (exponent −1.168 in all five) — but it measures the
+          discretization, not the spectrum: the continuum window form has no
+          gap (λ₁ and λ₂ carry the same D-power under refinement), the
+          positive floor is a cancellation of relative size ~1e-7, and the
+          T109 requirement chain divides by an artifact margin; the repair is
+          a margin-free step certificate. T114 (
           <span className="font-mono text-slate-300">
-            limit_operator_probe.py
+            margin_free_step_probe.py
           </span>
           ) running.
         </p>

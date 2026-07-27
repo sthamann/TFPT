@@ -89,7 +89,8 @@ export type PrimeFrontVerdict =
   | "BOUNDARY-CERTIFIED"
   | "MARGIN-PROPAGATES"
   | "CROSSING-CONFIRMED"
-  | "SCALING-PARTIAL";
+  | "SCALING-PARTIAL"
+  | "SUBSTANCE-CONFIRMED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -113,6 +114,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-27",
+    part: 113,
+    title:
+      "Substance confirmed — the margin wall is real in every currency, but it measures the discretization, not the spectrum",
+    verdict: "SUBSTANCE-CONFIRMED",
+    summary:
+      "T113 (SUBSTANCE-CONFIRMED with a fundamental reinterpretation, 27/27) — contract LIMIT.OPERATOR: is the margin fall in the scaled frame a normalisation artefact, and what is the limit operator? (K1) The currency table: the floor/requirement ratio carries THE SAME exponent −1.168 ± 0.259 in ALL five currencies (raw, /λ_max, /trace density, /D, /D²) — structurally irremovable: the PWC basis is L2-orthonormal (Gram = I, no free D-power to spend), and the zone matrices are restrictions of ONE form to subspaces of the same L2 space (cross-grid form identity 1.2e-14). Floor homogeneity is exactly 1.0, need109 homogeneity 1.0 under legitimate rescaling. The wall is currency-invariant — substance, not an artefact of bookkeeping. (K2) BUT the substance is different from what was expected — two surprises. First, the limit object is NOT 'arch + pole with atoms as a perturbation': the atom-free form is deeply negative (λ_min = −3.08…−19.36, growing ~n^+0.60), the atom block is equally large (norm 3.21…19.44), and the positive floor survives only as a CANCELLATION of relative size 1.3e-7…9.7e-5 (on the floor vector: −11.64 against +11.64); the Weyl bound is saturated — norm perturbation theory is five orders of magnitude too coarse. Second, NO PLATEAU under refinement (fixed window, nested grids, 8 levels, a factor 128): λ₁ ~ D^1.83 and λ₂ ~ D^1.76 — the SAME power, λ₂/λ₁ flat. THE CONTINUUM WINDOW FORM HAS NO GAP; m_k measures the gap of the DISCRETIZATION. This resolves the T112 tension exactly (λ₂/λ₁ constant while the floor falls: both eigenvalues carry the same D-power). (K3) The atom part: the entering (deepest) atom contributes almost nothing to the coupling (8.3e-11…1.3e-6) — which is why handover steps certify at retention 1.000000 while the margin tears. The floor is almost pure geometry (log m = const + 1.87·log D − 2.07·log α; arithmetic residual a factor 1.13, no Λ(n) dependence). θ→0 stress: the operator norm does NOT diverge (θ^−0.005); an extra atom at the window edge shifts the floor only 0.2–0.4%, the same atom in the interior 10⁷ times more — the 1/θ explosion is purely a COST statement (h ~ νn/θ). (K4) Regrid: the raw rate (D′/D)^3.85 is mostly the floor's own D-power (a normalisation jump, not an instability); the reserve certifies f_crit = 9.5e-2 (better than the T112 estimate); after subtracting the D-power the reserve buys 15 steps (raw jump: 0). THE NEW HARDNESS BALANCE: [P1] semidefiniteness of the BALANCED form without a gap (strict limit-floor formulations demand what refinement refuses); [P2] certify the D-power itself (Grenander–Szegő type); [P3] NEW AND LEADING: need109 carries D^0.63 against the floor's D^2.38 — the T109 requirement chain divides by an artifact margin; the repair is a margin-free step certificate (Schur/Loewner from semidefiniteness alone); [P4] θ→0 is only a cost-uniformity demand. T114 (MARGIN.FREE.STEP, margin_free_step_probe.py) is running: rebuild the chain without the margin division (Albert/pseudo-inverse Schur, ratio closure) — does the margin wall disappear as a requirement artefact? Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "limit_operator_probe.py",
+  },
   {
     date: "2026-07-27",
     part: 112,

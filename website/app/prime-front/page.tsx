@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–112 · 2801 sandbox checks
+            Research diary · Teile 11–113 · 2828 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1624,8 +1624,15 @@ function ProgramStatusCallout() {
         the gap-coupled scaled frame: two of the three walls fall
         structurally, but the margin wall is frame-invariant at exponent
         −0.974 — the hardness is now one limit operator plus one convergence
-        rate, with the prime-gap dependence disclosed, and T113
-        (limit_operator_probe.py) is running. Milestone: 2801/2801 checks.
+        rate, with the prime-gap dependence disclosed. T113
+        (SUBSTANCE-CONFIRMED) settles the currency question with a
+        fundamental reinterpretation: the margin wall is real in every
+        currency, but it measures the discretization, not the spectrum — the
+        continuum window form has no gap, the positive floor is a
+        cancellation (~1e-7 relative), and the T109 requirement chain
+        divides by an artifact margin; the repair — a margin-free step
+        certificate — is now under test in T114
+        (margin_free_step_probe.py). Milestone: 2828/2828 checks.
         Not almost-RH. This is not RH evidence.
       </p>
     </aside>
