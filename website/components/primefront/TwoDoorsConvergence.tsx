@@ -138,9 +138,12 @@ export function TwoDoorsConvergence() {
           closed form and the avoidance law is a theorem. T106 ·
           FRIEDRICHS.ANGLE — DENSITY-MAPPED (32/32): the parity split closes
           the even channel 16/16 and localizes all remaining hardness in the
-          odd channel — one Loewner statement on half the dimensions. T107 (
+          odd channel — one Loewner statement on half the dimensions. T107 ·
+          ODD.CHANNEL.CLOSURE — SCALAR-TRACTABLE (30/30): (R) ⟺ one scalar
+          ratio r = κ/ε ≤ 1, measured r = 0.005…0.18 — two orders of magnitude
+          of room; the symbol route is structurally dead. T108 (
           <span className="font-mono text-slate-300">
-            odd_channel_closure_probe.py
+            ratio_certificate_probe.py
           </span>
           ) running.
         </p>

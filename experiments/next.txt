@@ -1,3 +1,40 @@
+# 2026-07-27 (I) — Teil 107 (delegiert, der ungerade Kanal — Vertrag ODD.CHANNEL.CLOSURE): odd_channel_closure_probe.py — **SCALAR-TRACTABLE** — die letzte Matrix-Aussage IST jetzt exakt EIN skalares Verhältnis: Sherman-Morrison reduziert (R) EXAKT auf s* ≤ 1, aber s* ist SATURIERT (0.99885…0.99999) — die Woodbury-Zerlegung rettet: s* = τ + κ, (R) ⟺ r := κ/ε ≤ 1 mit ε = 1 − τ, gemessen r = 0.0053…0.1814 — ZWEI GRÖSSENORDNUNGEN Luft statt fünf Nachkommastellen; die Symbol-Route (Grenander–Szegő) ist STRUKTURELL TOT; es fehlt GENAU EIN Objekt: das Zertifikat für r — 30/30, 15.7s, Sandbox
+# E1 Sherman-Morrison-Reduktion steht EXAKT: (R) ⟺ s* ≤ 1 (Identität 3.4e-11; Äquivalenz
+#    gegen Rayleigh-Ritz 16/16 bestätigt; Vorbedingung G ≻ 0 via Cholesky 16/16). ABER
+#    s* ist SATURIERT: 0.99885…0.99999 (nur n=2: 0.2569) — jede uniforme s*-Kette ist
+#    chancenlos. Die Woodbury-Zerlegung rettet: s* = τ + κ, (R) ⟺ r := κ/ε ≤ 1 mit
+#    ε = 1 − τ; gemessen r = 0.0053…0.1814 — zwei Größenordnungen Luft statt fünf
+#    Nachkommastellen. s* auflösungsstabil (Spread ≤ 2.60% über M = 600/900/1200).
+# E2 T_odd-Untergrenze via Symbol ZERTIFIZIERT aber NEGATIV (λ_cert = −2.54…−0.81) — und
+#    das ist strukturell: gemessenes λ_min(T_odd) = 4.7e-5…6.4e-2 gegen Symbol-Infimum
+#    −22…−6 (5 Größenordnungen + Vorzeichenwechsel). Der weiche Rand von T_odd ist ein
+#    reiner Finite-Section-Effekt, den kein Symbol sieht — Grenander–Szegő kann
+#    prinzipiell nicht liefern. (Nebenbefund: Vervollständigungsfreiheit ist echter
+#    Freiheitsgrad; Kontinuum vs Dirichlet gewinnt 6/16 vs 10/16.)
+# E3 t in geschlossener Form exakt (‖t‖² = 0.0154…1.84). Grobe zertifizierte Ketten (CS
+#    gegen λ_min): 0/16 — Kategorienfehler, kein Präzisionsproblem (scheitern selbst mit
+#    gemessenem λ_min). t folgt dem Maß (Verhältnis 1.21 zwischen Fourier-Masse und
+#    Kreis-Maß auf den tiefen Niveaus) — keine Symbol-Avoidance ausnutzbar; die echte
+#    Avoidance lebt zwischen t und dem Nachfrage-Raum in der T_odd⁻¹-Metrik. Die
+#    Cauchy-Schwarz-Schranke auf κ ist praktisch verlustfrei (Faktor 1.00079). Tiefer
+#    Sweep M bis 3000: Budget-Faktor q = 1.73…2.54 (Drift als Fit ausgewiesen);
+#    ε ~ M^(−1.99…−1.69).
+# E4 Synthese: zertifiziert geschlossen 0/16, gemessen 16/16 (q = 1.31…4.16 bei M=1200 —
+#    ersetzt T106s 0.747…1.156, Faktor 1.7–2.5 Gewinn). Bonus β₀ = 1.31 ändert nichts an
+#    der uniformen Kette (Obstruktion ist der weiche Rand); r_CS ≤ 1 hält 16/16 mit wie
+#    ohne. ES FEHLT GENAU EIN OBJEKT: eine zertifizierte positive Untergrenze für
+#    ε = 1 − t̃ᵀT_odd⁻¹t̃ (wie weit der Pol-Vektor davon entfernt ist, den ungeraden
+#    Kanal auszuschöpfen) — bzw. da ε und κ beide mit M fallen: das Zertifikat für das
+#    VERHÄLTNIS r. Der benannte Weg: über ω (Flügel-Aussage vom T105-Typ) plus
+#    Vermeidungs-Norm ‖h‖², nicht über Szegő. → T108 (läuft): RATIO.CERTIFICATE
+#    (ratio_certificate_probe.py) — r als EIN Objekt zertifizieren (gemeinsame
+#    Soft-Rand-Struktur von ε und κ, Christoffel-Darboux-Identität als
+#    ε-Positivitäts-Kandidat, ω/h-Zertifikate).
+# Serie (XII)–(CXVIII): 107 Proben, 2657/2657 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Sherman–Morrison/Woodbury,
+# Grenander–Szegő, Rayleigh-Ritz, Cholesky, Cauchy-Schwarz, Christoffel-Darboux)
+# zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-26 (XX) — Teil 106 (delegiert, die Winkel-Frage — Vertrag FRIEDRICHS.ANGLE): friedrichs_angle_probe.py — **DENSITY-MAPPED** — zwei Routen ehrlich getötet (Dichte-Kette, akkumulierte Invariante), und der DURCHBRUCH ist die Paritäts-Spaltung: der Weil-Pol spaltet EXAKT als abᵀ+baᵀ = ssᵀ − ttᵀ (10⁻¹⁸) in einen positiven Rang-1-Lift im J-geraden und einen negativen Rang-1-Druck im J-ungeraden Kanal — der gerade Kanal schließt 16/16, die GESAMTE Rest-Härte lokalisiert im ungeraden Kanal: EINE Loewner-Aussage (R) auf ⌈p/2⌉ Dimensionen mit POSITIVEM Toeplitz-Teil — 32/32, 11.2s, Sandbox
 # D1 Dichte-Gesetz: Landau-Widom ist der FALSCHE klassische Anker (rms 0.50–1.55); richtig
 #    ist Grenander–Szegő auf dem Planck-grobkörnigen Symbol (Mittelung über die

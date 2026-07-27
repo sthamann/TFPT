@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–106 · 2627 sandbox checks
+            Research diary · Teile 11–107 · 2657 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1598,8 +1598,11 @@ function ProgramStatusCallout() {
         Friedrichs-angle statement. T106 (DENSITY-MAPPED) splits that
         statement by parity: the even channel closes 16/16 and all remaining
         hardness localizes in the odd channel — one Loewner statement on half
-        the dimensions. Milestone: 2627/2627 checks. Not almost-RH. This is
-        not RH evidence.
+        the dimensions. T107 (SCALAR-TRACTABLE) reduces that statement to
+        exactly one scalar ratio r = κ/ε ≤ 1 with two orders of magnitude of
+        measured room (r = 0.005…0.18); the symbol route is structurally
+        dead, and exactly one object remains to certify. Milestone:
+        2657/2657 checks. Not almost-RH. This is not RH evidence.
       </p>
     </aside>
   );

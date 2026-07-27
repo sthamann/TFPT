@@ -83,7 +83,8 @@ export type PrimeFrontVerdict =
   | "INSTRUMENT-IMPROVED"
   | "CHAIN-PARTIAL"
   | "ONE-OF-TWO"
-  | "DENSITY-MAPPED";
+  | "DENSITY-MAPPED"
+  | "SCALAR-TRACTABLE";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -107,6 +108,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-27",
+    part: 107,
+    title:
+      "Scalar tractable — the last matrix statement is exactly one scalar ratio, with two orders of magnitude of room",
+    verdict: "SCALAR-TRACTABLE",
+    summary:
+      "T107 (SCALAR-TRACTABLE, 30/30) — contract ODD.CHANNEL.CLOSURE: the last matrix statement is now exactly ONE scalar ratio. (E1) The Sherman–Morrison reduction stands EXACTLY: (R) ⟺ s* ≤ 1 (identity 3.4e-11; equivalence confirmed against Rayleigh–Ritz 16/16; precondition G ≻ 0 via Cholesky 16/16). BUT s* is SATURATED: 0.99885…0.99999 (only n = 2: 0.2569) — any uniform s* chain is hopeless. The Woodbury split rescues it: s* = τ + κ, and (R) ⟺ r := κ/ε ≤ 1 with ε = 1 − τ; measured r = 0.0053…0.1814 — TWO ORDERS OF MAGNITUDE of room instead of five decimal places. s* is resolution-stable (spread ≤ 2.60% over M = 600/900/1200). (E2) The symbol route is structurally dead: the T_odd lower bound via the symbol is certified but NEGATIVE (λ_cert = −2.54…−0.81) — measured λ_min(T_odd) = 4.7e-5…6.4e-2 against a symbol infimum of −22…−6 (five orders of magnitude plus a sign flip). The soft edge of T_odd is a pure finite-section effect that no symbol sees — Grenander–Szegő cannot deliver in principle. (Side finding: the completion freedom is a real degree of freedom; continuum vs Dirichlet wins 6/16 vs 10/16.) (E3) t is exact in closed form (‖t‖² = 0.0154…1.84). Coarse certified chains (Cauchy–Schwarz against λ_min) close 0/16 — a category error, not a precision problem (they fail even with the measured λ_min). t follows the measure (ratio 1.21 between Fourier mass and circle measure on the deep levels) — no symbol-level avoidance is exploitable; the real avoidance lives between t and the demand space in the T_odd⁻¹ metric. The Cauchy–Schwarz bound on κ is practically lossless (factor 1.00079). Deep sweep to M = 3000: budget factor q = 1.73…2.54 (drift declared as a fit); ε ~ M^(−1.99…−1.69). (E4) Certified closure 0/16, measured 16/16 (q = 1.31…4.16 at M = 1200 — replacing T106's 0.747…1.156, a factor 1.7–2.5 gain). The bonus β₀ = 1.31 changes nothing about the uniform chain (the obstruction is the soft edge); r_CS ≤ 1 holds 16/16 with and without it. EXACTLY ONE OBJECT is missing: a certified positive lower bound for ε = 1 − t̃ᵀT_odd⁻¹t̃ (how far the pole vector is from exhausting the odd channel) — or, since ε and κ both fall with M, a certificate for the RATIO r itself. The named path runs through ω (a T105-type wing statement) plus the avoidance norm ‖h‖², not through Szegő. T108 (RATIO.CERTIFICATE) is running. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "odd_channel_closure_probe.py",
+  },
   {
     date: "2026-07-26",
     part: 106,
