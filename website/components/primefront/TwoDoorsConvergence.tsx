@@ -145,9 +145,14 @@ export function TwoDoorsConvergence() {
           RATIO.CERTIFICATE — EPSILON-IDENTITY (44/44): ε&apos;s positivity is
           an exact identity (Szegő pivot / Q-energy) coinciding with the
           induction positivity itself; (R) is down to two scalars — what
-          remains is literally one boundary value of an explicit vector. T109 (
+          remains is literally one boundary value of an explicit vector. T109 ·
+          BOUNDARY.DECAY — BOUNDARY-CERTIFIED (29/29): both scalars certified —
+          ω unconditionally via a graded matrix cap, the boundary value via a
+          residual certificate that carries the cancellation; the chain closes
+          16/16 on exactly one strict-margin input, 10²–10⁶ weaker than the
+          conclusion. T110 (
           <span className="font-mono text-slate-300">
-            boundary_decay_probe.py
+            margin_propagation_probe.py
           </span>
           ) running.
         </p>

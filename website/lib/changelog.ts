@@ -43,6 +43,483 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-27",
+    "dateLabel": "2026-07-27 · II",
+    "heading": [
+      {
+        "k": "t",
+        "v": "prime front: T109 boundary certificates close (R) conditionally — BOUNDARY-CERTIFIED; paper certification arc T102–T109 + diary + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Diary Teil 109 (sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery/boundary_decay_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " (contract "
+        },
+        {
+          "k": "c",
+          "v": "BOUNDARY.DECAY"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "29/29"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "47.2"
+        },
+        {
+          "k": "t",
+          "v": " s, verdict "
+        },
+        {
+          "k": "t",
+          "v": "boundary-certified"
+        },
+        {
+          "k": "t",
+          "v": "): both remaining scalars of (R) are certified — "
+        },
+        {
+          "k": "m",
+          "v": "\\omega"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unconditionally"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " via a graded matrix cap in PSD order (one level per soft direction, Cholesky-verified, "
+        },
+        {
+          "k": "m",
+          "v": "\\omega_{\\mathrm{cert}}=0.2561"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.7569"
+        },
+        {
+          "k": "t",
+          "v": " against measured "
+        },
+        {
+          "k": "m",
+          "v": "0.2366"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.7531"
+        },
+        {
+          "k": "t",
+          "v": ", factor "
+        },
+        {
+          "k": "m",
+          "v": "1.004"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.124"
+        },
+        {
+          "k": "t",
+          "v": ", no hypothesis input; the T108 compression Schur distance shrinks "
+        },
+        {
+          "k": "m",
+          "v": "0.18"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.52\\to0.0024"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.039"
+        },
+        {
+          "k": "t",
+          "v": "), the boundary value via a residual / goal-oriented certificate (Prager–Synge) that "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "carries"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the cancellation (sharpness "
+        },
+        {
+          "k": "m",
+          "v": "1.0000"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.4937"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "16/16"
+        },
+        {
+          "k": "t",
+          "v": " in budget). Mechanism finding: no decay — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "cancellation"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "44"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.6\\times10^{4}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "15/16"
+        },
+        {
+          "k": "t",
+          "v": " zones); the Combes–Thomas route is refuted with the exact Green row ("
+        },
+        {
+          "k": "m",
+          "v": "1/16"
+        },
+        {
+          "k": "t",
+          "v": "). The full chain closes "
+        },
+        {
+          "k": "m",
+          "v": "16/16"
+        },
+        {
+          "k": "t",
+          "v": " (margin "
+        },
+        {
+          "k": "m",
+          "v": "1.3"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "10.4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "M"
+        },
+        {
+          "k": "t",
+          "v": "-stable to "
+        },
+        {
+          "k": "m",
+          "v": "3000"
+        },
+        {
+          "k": "t",
+          "v": ") conditional on exactly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " input: the strict positivity margin "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(Q|_{\\mathrm{odd}})\\ge1.7\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "7.5\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ", i.e. "
+        },
+        {
+          "k": "m",
+          "v": "10^{2}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "10^{6}"
+        },
+        {
+          "k": "t",
+          "v": " below "
+        },
+        {
+          "k": "m",
+          "v": "\\mu/2"
+        },
+        {
+          "k": "t",
+          "v": ". Follow-up probe T110 ("
+        },
+        {
+          "k": "c",
+          "v": "margin_propagation_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "MARGIN.PROPAGATION"
+        },
+        {
+          "k": "t",
+          "v": ") is running. Series counter: "
+        },
+        {
+          "k": "m",
+          "v": "109"
+        },
+        {
+          "k": "t",
+          "v": " probes, "
+        },
+        {
+          "k": "m",
+          "v": "2730/2730"
+        },
+        {
+          "k": "t",
+          "v": " sandbox checks. Sandbox only: no ledger row, no marker move, not RH evidence."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper "
+            },
+            {
+              "k": "c",
+              "v": "tfpt_prime_front"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Certification-arc section extended to T102–T109 (new subsection “Boundary certificates: cancellation, not decay”); the reduction cascade figure now ends at the one strict-positivity margin input; two-doors figure chain extended to T109; kill list K8 extended by the T109 Combes–Thomas kill; three-way status split (certified / measured / classical) updated; abstract and probe-index appendix updated (T109 row; T110 recorded as running and deliberately absent); symbol table rows for "
+        },
+        {
+          "k": "m",
+          "v": "x"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "x_0"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\omega"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "\\omega_{\\mathrm{cert}}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "/prime-front"
+        },
+        {
+          "k": "t",
+          "v": ": T109 feed entry ("
+        },
+        {
+          "k": "c",
+          "v": "lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": ", new verdict enum "
+        },
+        {
+          "k": "t",
+          "v": "boundary-certified"
+        },
+        {
+          "k": "t",
+          "v": "), status line in the two-doors convergence panel, hero counter Teile 11–109 / "
+        },
+        {
+          "k": "m",
+          "v": "2730"
+        },
+        {
+          "k": "t",
+          "v": " sandbox checks, program-status callout sentence for T109."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-27",
     "dateLabel": "2026-07-27 · I",
     "heading": [
       {

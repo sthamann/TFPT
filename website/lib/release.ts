@@ -27,7 +27,7 @@ export interface ReleaseAsset {
 
 const COMMON = {
   version: "TFPT 5.4",
-  releaseDate: "2026-07-25",
+  releaseDate: "2026-07-27",
 };
 
 export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
@@ -124,9 +124,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 1740797,
+    bytes: 1749913,
     sha256:
-      "ca5a221a4f780a9bbe455c4004a264edd85633dc895faecebb9059d0fb8995e7",
+      "f87038c248856d6458c9179ac4d770dc6cc88a5124d09555f4431ae937162bf4",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },

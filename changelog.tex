@@ -62,6 +62,35 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-27 (II) (prime front: T109 boundary certificates close (R) conditionally --- BOUNDARY-CERTIFIED; paper certification arc T102--T109 + diary + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Diary Teil 109 (sandbox).} \texttt{experiments/tfpt-discovery/boundary\_decay\_probe.py}
+(contract \texttt{BOUNDARY.DECAY}, $29/29$ checks, $47.2$\,s, verdict \textsc{boundary-certified}):
+both remaining scalars of (R) are certified --- $\omega$ \emph{unconditionally} via a graded matrix
+cap in PSD order (one level per soft direction, Cholesky-verified,
+$\omega_{\mathrm{cert}}=0.2561$--$0.7569$ against measured $0.2366$--$0.7531$, factor
+$1.004$--$1.124$, no hypothesis input; the T108 compression Schur distance shrinks
+$0.18$--$0.52\to0.0024$--$0.039$), the boundary value via a residual / goal-oriented certificate
+(Prager--Synge) that \emph{carries} the cancellation (sharpness $1.0000$--$2.4937$, $16/16$ in
+budget). Mechanism finding: no decay --- \emph{cancellation} ($44$--$4.6\times10^{4}$ on $15/16$
+zones); the Combes--Thomas route is refuted with the exact Green row ($1/16$). The full chain closes
+$16/16$ (margin $1.3$--$10.4$, $M$-stable to $3000$) conditional on exactly \emph{one} input: the
+strict positivity margin $\lambda_{\min}(Q|_{\mathrm{odd}})\ge1.7\times10^{-6}$--$7.5\times10^{-3}$,
+i.e.\ $10^{2}$--$10^{6}$ below $\mu/2$. Follow-up probe T110
+(\texttt{margin\_propagation\_probe.py}, contract \texttt{MARGIN.PROPAGATION}) is running. Series
+counter: $109$ probes, $2730/2730$ sandbox checks. Sandbox only: no ledger row, no marker move, not
+RH evidence.
+\item \textbf{Paper \texttt{tfpt\_prime\_front}.} Certification-arc section extended to T102--T109
+(new subsection ``Boundary certificates: cancellation, not decay''); the reduction cascade figure now
+ends at the one strict-positivity margin input; two-doors figure chain extended to T109; kill list K8
+extended by the T109 Combes--Thomas kill; three-way status split (certified / measured / classical)
+updated; abstract and probe-index appendix updated (T109 row; T110 recorded as running and
+deliberately absent); symbol table rows for $x$/$h$/$x_0$ and $\omega$/$\omega_{\mathrm{cert}}$.
+\item \textbf{Website.} \texttt{/prime-front}: T109 feed entry (\texttt{lib/primeFront.ts}, new
+verdict enum \textsc{boundary-certified}), status line in the two-doors convergence panel, hero
+counter Teile 11--109 / $2730$ sandbox checks, program-status callout sentence for T109.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-27 (I) (new companion \texttt{tfpt\_prime\_front} --- the prime / zeta line documented end to end as RESEARCH DOCUMENTATION; NO new claims, NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New companion paper \texttt{tfpt\_prime\_front} (P).} $22$ pages, $9$ sections plus two

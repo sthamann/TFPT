@@ -50,7 +50,7 @@
 \title{\vspace{-1.2cm}\textbf{TFPT --- The Prime Front}\\[2mm]
 \large Research documentation of the prime / zeta line: seven verified modules,
 one localized residual, and the complete kill list}
-\author{\TFPTauthors}\date{\TFPTdatestamp}
+\author{Stefan Hamann}\date{\TFPTdatestamp}
 
 \def\TFPTdoctitle{The Prime Front}
 \begin{document}
@@ -60,7 +60,8 @@ one localized residual, and the complete kill list}
 \noindent\emph{You are reading the \textbf{Prime Front} companion (P): the complete internal record
 of the prime / zeta line --- how a discrete compiler's bookkeeping kept producing classical
 number-theoretic objects, which of those links became load-bearing modules, and how the remaining
-question was compressed, over a hundred exploratory probes, down to one scalar ratio. It is a
+question was compressed, over a hundred exploratory probes, down to one strict-positivity margin
+input. It is a
 \textbf{research documentation}, not a results paper. Its purpose is that a reader (or a reviewer)
 can see the whole route, including everything that died on the way.}
 
@@ -78,7 +79,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$108$ preregistered probes with $2701$ machine checks, which localized the residual object. That
+$109$ preregistered probes with $2730$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -86,14 +87,17 @@ maps I5 geographically (Connes--Consani dictionary, tightness curves, the Sonin 
 band), turns the positivity question into a per-zone handover induction, and then certifies its
 ingredients one by one until the entire remaining hardness sits in a single Loewner statement on the
 $J$-odd half of a window, reducible by Sherman--Morrison/Woodbury to one scalar ratio
-$r=\kappa/\varepsilon\le1$ (measured $0.0053$--$0.1814$ on $16$ zones) and then, once $\varepsilon$ is
-identified as an exact energy, to two scalars whose open part is a boundary-decay statement about one
-explicit vector. \textbf{No claim of progress on the Riemann Hypothesis is
+$r=\kappa/\varepsilon\le1$ (measured $0.0053$--$0.1814$ on $16$ zones), then, once $\varepsilon$ is
+identified as an exact energy, to two scalars --- and finally, with both scalars certified (the wing
+scalar unconditionally by a graded matrix cap, the boundary value by a residual certificate that
+carries a cancellation), to a chain that closes $16/16$ conditional on exactly one strict-positivity
+margin input, itself two to six orders of magnitude weaker than the conclusion it buys. \textbf{No claim of progress on the Riemann Hypothesis is
 made anywhere in this document}, and none of the sandbox findings moves any ledger marker. The
 document is deliberately symmetric about failure: a dedicated section lists the readings and
 routes that were refuted --- an essential-singularity reading, a $C/g$ proxy law, a density chain, an
 accumulated invariant with self-propagation, the Landau--Widom anchor, the symbol route for the odd
-channel, three certificate candidates for the avoidance norm, and the naive margin route --- because in
+channel, three certificate candidates for the avoidance norm plus the Combes--Thomas certificate at
+the boundary, and the naive margin route --- because in
 a program of this shape the kill list is the more reliable output.
 \end{abstract}
 
@@ -304,8 +308,9 @@ exactly (\vref{v541}), which leaves the single coupled inequality I5; I5 is by i
 Weil positivity, an equivalence \emph{typing} and not a reduction (Section~\ref{sec:i5}); the positivity
 question is then reorganised as a per-zone handover induction (Section~\ref{sec:handover}); the
 induction is certified ingredient by ingredient until only one Loewner statement (R) on the $J$-odd half
-of a window remains; and (R) reduces first to one scalar ratio and then to two scalars, whose open part
-is a boundary-decay statement about one explicit vector (Section~\ref{sec:certification}). The full
+of a window remains; and (R) reduces first to one scalar ratio, then to two scalars, and finally ---
+with both scalars certified --- to one strict-positivity margin input
+(Section~\ref{sec:certification}). The full
 cascade, with the type of every arrow marked, is Figure~\ref{fig:cascade}; the reason it is a route and
 not a proof sketch is stated there and in Section~\ref{sec:status}.
 
@@ -702,9 +707,9 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T108)}\label{sec:certification}
+\section{The certification arc (T102--T109)}\label{sec:certification}
 % =====================================================================
-The last seven parts stopped improving measurements and started converting them into certificates ---
+The last eight parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
 
 \subsection{The mechanism: a crossing, not a singularity (T102)}
@@ -825,9 +830,9 @@ the wing near-null direction.
 \node[tgt] (o) at (0,-3.4) {\textbf{One object:} the wing near-null direction\\[2pt]
   \footnotesize dressing almost rank one (effective rank $1.07$--$2.7$; $99.7$--$100\%$ of the
   near-null direction in \emph{one} prolate mode)};
-\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108\\[2pt]
+\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109\\[2pt]
   \footnotesize certify \emph{bare}, prove the avoidance law, split the parity channels,
-  reduce to one scalar ratio, then to two scalars};
+  reduce to one scalar ratio, then to two scalars --- then certify both};
 \draw[ar] (a) -- (o);
 \draw[ar] (c) -- (o);
 \draw[ar] (o) -- (n);
@@ -996,9 +1001,52 @@ $|x_0|/\max|x|=2.9\times10^{-3}$--$5.7\times10^{-3}$, with a linear edge profile
 fit) --- a boundary-decay statement about an explicit vector, the same object class as the T105 carrier
 separation. $\hat r$ is flat in $M$ ($6.1\times$ more stable than $\varepsilon$) and $r,\hat r<1$ at all
 $92$ (zone, $M$) points up to $M=3000$, tightest at $0.9648$: measured, on resolved zones, as always.
-T109 (\texttt{boundary\_decay\_probe.py}, contract \texttt{BOUNDARY.DECAY} --- Combes--Thomas/Green
-decay, a Szeg\H{o} recursion bound, $\omega$ via PSD matrix caps) was running at the time of writing and
-is \emph{not} reported here.
+That boundary value, and the still-uncertified $\omega$, are exactly what the next part attacked.
+
+\subsection{Boundary certificates: cancellation, not decay (T109)}
+T109 (\texttt{boundary\_decay\_probe.py}, $29/29$, \textsc{boundary-certified}) closed the arc: both
+remaining scalars are now certified, and the whole chain for (R) closes $16/16$ conditional on exactly
+one explicit input. Three findings and one honest remainder.
+
+First, the mechanism. The edge value $x_0$ is not small because anything \emph{decays} --- it is small
+because a sum \emph{cancels}. Carrier separation is excluded geometrically: $\tilde t$ has its maximum
+at $r=0$; the source sits on the boundary itself. The Combes--Thomas hypothesis is satisfied
+($T_{\mathrm{odd}}$ is of Jaffard class, with local rate $\rho(s)=D(\tfrac12+2/(e^{2s}-1))$, matched at
+a factor $0.85$--$1.00$, quoted as a fit) --- but its conclusion is empty: the Green sum for $x_0$
+cancels by a factor $44$--$4.6\times10^{4}$ on $15/16$ zones (the known outlier $n=2$ does not cancel),
+and the edge profile is a nearly linear zero, $r^{0.77\ldots1.28}$ as a fit. A boundary condition, not
+a decay length --- and no absolute-value bound can survive a cancellation.
+
+Second, the $x_0$ certificate that works. Four candidates were run certified-against-measured:
+Combes--Thomas, evaluated with the \emph{exact} Green row so that no constant could rescue it, is
+\emph{refuted} ($1/16$; an upper bound on its whole class); a $T$-metric Cauchy--Schwarz at the edge
+entry closes $1/16$; the exact Szeg\H{o}/Levinson two-point evaluation exhibits the cancellation but
+bounds nothing. The fourth is the new object: a residual / goal-oriented certificate (Prager--Synge;
+second order in the two residuals) which \emph{carries} the cancellation by construction instead of
+bounding it away. Sharpness $1.0000$--$2.4937$ against the measured norm, $16/16$ within budget.
+
+Third, $\omega$ is cracked --- unconditionally. The certificate is a graded matrix cap in PSD order:
+one trial level per soft direction, validity by a single Cholesky factorisation (Sylvester inertia)
+plus Loewner antitonicity of the inverse, $n_{\mathrm{top}}=17$--$512$. It gives
+$\omega_{\mathrm{cert}}=0.2561$--$0.7569$ against the measured $0.2366$--$0.7531$ --- a factor
+$1.004$--$1.124$ --- with \emph{no} hypothesis input. The compression Schur distance that blocked T108
+shrinks from $0.18$--$0.52$ to $0.0024$--$0.039$, and the ungraded cap (one level for the whole soft
+block, which is what T108's global route amounted to) is vacuous everywhere: the grading is the whole
+difference. The trial data are numerically generated; their \emph{validity} is trial-independent
+(identity $+$ Cholesky $+$ Loewner), only their sharpness is not.
+
+The synthesis feeds both certificates from one object
+($\Gamma_{\mathrm{cert}}=S_{\mathrm{cert}}^{-1}$): the chain closes $16/16$ with margin $1.3$--$10.4$
+and is $M$-stable ($44/48$ ladder points to $M=3000$; the certification price $1.5$--$28.6$ does not
+grow). What remains open is exactly \textbf{one input}: the \emph{strict} positivity margin of the odd
+channel, $\lambda_{\min}(Q|_{\mathrm{odd}})\ge1.7\times10^{-6}$--$7.5\times10^{-3}$ against a measured
+$1.4\times10^{-5}$--$5.1\times10^{-2}$ --- two to six orders of magnitude \emph{below} $\mu/2$, i.e.\
+strictly weaker than the conclusion it buys; the induction hypothesis as it stands supplies only the
+non-strict $Q|_{\mathrm{odd}}\succeq0$. Declared caveats: floating point is not audited, and
+$\lambda_{\min}$ is read through Rayleigh--Ritz. T110
+(\texttt{margin\_propagation\_probe.py}, contract \texttt{MARGIN.PROPAGATION} --- does the scalar
+margin propagate itself through the induction: dilution against surplus, base case $n=2$) was running
+at the time of writing and is \emph{not} reported here.
 
 \begin{figure}[ht]\centering
 \begin{tikzpicture}[font=\small,
@@ -1021,10 +1069,15 @@ is \emph{not} reported here.
   $\lceil p/2\rceil$ dimensions \footnotesize(T106)};
 \node[st] (ratio) at (0,-9.3) {$\iff s^*\le1$ (saturated) $\iff$ \ \textbf{$r=\kappa/\varepsilon\le1$}
   \ \footnotesize(T107; measured $0.0053$--$0.1814$)};
-\node[op] (eps) at (0,-10.85) {$\iff$ two scalars: $\omega<1$ \ and one statement at
-  $x=T_{\mathrm{odd}}^{-1}\tilde t$ \ \footnotesize(T108; $\varepsilon$ identity; open object $=$ one
-  boundary value $x_0$)};
-\foreach \a/\b in {rh/hand,hand/schur,schur/bare,bare/par,par/loew,loew/ratio,ratio/eps}
+\node[st] (eps) at (0,-10.85) {$\iff$ two scalars: $\omega<1$ \ and one statement at
+  $x=T_{\mathrm{odd}}^{-1}\tilde t$ \ \footnotesize(T108; $\varepsilon$ identity; boundary value $x_0$)};
+\node[st] (bnd) at (0,-12.4) {\textbf{both scalars certified}: $\omega_{\mathrm{cert}}<1$
+  unconditional (graded matrix cap) $+$ residual certificate carrying the boundary cancellation
+  \ \footnotesize(T109; closes $16/16$, margin $1.3$--$10.4$)};
+\node[op] (marg) at (0,-14.05) {open \textbf{input}: one strict-positivity margin
+  $\lambda_{\min}(Q|_{\mathrm{odd}})\ge1.7\times10^{-6}$--$7.5\times10^{-3}$
+  \ \footnotesize(T109; $10^{2}$--$10^{6}$ below $\mu/2$ --- the cascade ends here)};
+\foreach \a/\b in {rh/hand,hand/schur,schur/bare,bare/par,par/loew,loew/ratio,ratio/eps,eps/bnd,bnd/marg}
   \draw[ar] (\a) -- (\b);
 \node[lbl] at (5.6,-0.78) {equivalence \emph{typing}};
 \node[lbl] at (5.6,-2.33) {architecture of a};
@@ -1032,6 +1085,8 @@ is \emph{not} reported here.
 \node[lbl] at (5.6,-2.93) {on finite windows};
 \node[lbl] at (5.6,-8.53) {exact reduction};
 \node[lbl] at (5.6,-10.08) {exact reduction};
+\node[lbl] at (5.6,-11.63) {two certificates};
+\node[lbl] at (5.6,-13.23) {one input left};
 \node[draw=tfred!60!black,dashed,fill=tfred!4,rounded corners=2pt,inner sep=3.5pt,
       align=left,text width=46mm,font=\scriptsize,anchor=west] at (5.55,-5.4)
   {\textbf{The asymptotic wall.} Every step below the top line is established on
@@ -1040,8 +1095,9 @@ is \emph{not} reported here.
 \end{tikzpicture}
 \caption{The reduction cascade, with its arrow types made explicit. The top line is an
 \emph{equivalence typing} produced by an exact identity (Section~\ref{sec:i5}); the arrows below are the
-architecture of a would-be sufficient route, verified on finitely many windows only. The dashed box is
-the reason this figure is not a proof sketch.}\label{fig:cascade}
+architecture of a would-be sufficient route, verified on finitely many windows only. Since T109 the
+cascade ends at one strict-positivity margin input. The dashed box is the reason this figure is not a
+proof sketch.}\label{fig:cascade}
 \end{figure}
 
 % =====================================================================
@@ -1099,6 +1155,11 @@ which is the useful form: the cancellation route ($\sum|k|=401$ against $\sum k=
 (off by $10^7$) and the pole Cauchy--Schwarz route (off by $10^6$). $\omega_{\mathrm{cert}}$ is blocked
 by the compression Schur distance alone ($0.18$--$0.52$). What replaced them is not a fourth bound of
 the same kind but a different object class: a boundary-decay statement about one explicit vector.
+T109 then killed the natural fourth candidate as well: \textbf{the Combes--Thomas resolvent bound at
+the boundary}, evaluated with the \emph{exact} Green row so that no constant can rescue it, closes
+$1/16$ --- the mechanism at the edge is cancellation ($44$--$4.6\times10^{4}$ on $15/16$ zones), which
+no absolute-value bound survives. What works instead is the residual certificate that carries the
+cancellation (Section~\ref{sec:certification}).
 \item \textbf{Two earlier structural kills}, recorded here because they still bound the design space:
 the cross-block $\sqrt{\lambda_0}$ law is Douglas range inclusion and therefore circular (T98), and the
 cone-library route saturates at $5/24$ coverage and is dead as a covering strategy (T72, promoted into
@@ -1116,17 +1177,22 @@ of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in 
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
 $\Qfull\succeq0\Rightarrow\|B^{\mathsf T}v_i\|^2\le w_i\Lambda_-$, the growth inequality, the
-accumulation bounds, the Sherman--Morrison/Woodbury reduction of (R) to $r\le1$, and the three T108
+accumulation bounds, the Sherman--Morrison/Woodbury reduction of (R) to $r\le1$, the three T108
 identities ($\varepsilon$ as a $Q|_{\mathrm{odd}}$ energy, the rank-one overlap $hh^{\mathsf T}/
-\varepsilon$, and $\varepsilon$ as the square of the last Cholesky pivot).\\[3pt]
+\varepsilon$, and $\varepsilon$ as the square of the last Cholesky pivot), and the two T109
+certificates (the graded matrix cap $\omega_{\mathrm{cert}}=0.2561$--$0.7569$, no hypothesis input,
+and the residual certificate for the boundary value, sharpness $1.0000$--$2.4937$, $16/16$ in
+budget).\\[3pt]
 \textbf{Measured} (holds on the resolved windows; no uniform constant): $\rho_-$; the ratio
 $r=0.0053$--$0.1814$ and $\hat r<1$ at all $92$ resolution points; $\omega=0.2366$--$0.7531$; the
+strict odd-channel margin $\lambda_{\min}(Q|_{\mathrm{odd}})=1.4\times10^{-5}$--$5.1\times10^{-2}$; the
 closure map $44/64$; the handover margins; the two race slopes; every scaling
 exponent quoted in this document.\\[3pt]
 \textbf{Hypothesis input / classical} (used, named, not proved here): Kneser, Witt/Eichler, Shimura,
 Waldspurger/Baruch--Mao, Cohen, Weil--Guinand, Bombieri, Yoshida, Connes--Consani, Douglas,
 Slepian--Landau--Pollak, Gronwall/Robin (unconditional form only), Grenander--Szeg\H{o},
-Sherman--Morrison/Woodbury, Christoffel--Darboux, Szeg\H{o}--Levinson, the Weyl bound.
+Sherman--Morrison/Woodbury, Christoffel--Darboux, Szeg\H{o}--Levinson, the Weyl bound,
+Combes--Thomas/Jaffard, Prager--Synge.
 \end{keybox}
 
 \subsection{The asymptotic mountain}
@@ -1181,19 +1247,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T108}\label{app:index}
+\section{Probe index, diary parts T11--T109}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $98$ parts T11--T108 that the current diary file records
-($99$ runs --- T104 was a double run with two independent arms --- and $2509$ green checks); the ten
+load-bearing artefact. The index covers the $99$ parts T11--T109 that the current diary file records
+($100$ runs --- T104 was a double run with two independent arms --- and $2538$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T108: \textbf{$108$ probes, $2701/2701$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T109
-(\texttt{boundary\_decay\_probe.py}, contract \texttt{BOUNDARY.DECAY}) was still running when this
-document was written and is deliberately absent.
+diary at T109: \textbf{$109$ probes, $2730/2730$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T110
+(\texttt{margin\_propagation\_probe.py}, contract \texttt{MARGIN.PROPAGATION}) was still running when
+this document was written and is deliberately absent.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -1307,6 +1373,7 @@ T105 & \texttt{\scriptsize bare\_\allowbreak wing\_\allowbreak bound} & bare bou
 T106 & \texttt{\scriptsize friedrichs\_\allowbreak angle} & parity split of the Weil pole; hardness in the odd channel & DENSITY-MAPPED & 32/32\\
 T107 & \texttt{\scriptsize odd\_\allowbreak channel\_\allowbreak closure} & Sherman--Morrison/Woodbury reduction to $r=\kappa/\varepsilon$ & SCALAR-TRACTABLE & 30/30\\
 T108 & \texttt{\scriptsize ratio\_\allowbreak certificate} & $\varepsilon$ is an exact $Q|_{\mathrm{odd}}$ energy; (R) on two scalars; first non-vacuous margin chain & EPSILON-IDENTITY & 44/44\\
+T109 & \texttt{\scriptsize boundary\_\allowbreak decay} & cancellation, not decay; both scalars certified (graded cap $+$ residual certificate); one strict-margin input left & BOUNDARY-CERTIFIED & 29/29\\
 \end{xltabular}
 }
 
@@ -1335,6 +1402,10 @@ $\rho_\pm$ & the Friedrichs-angle cosines of the even / odd channel (T106)\\
 $s^*$, $\tau$, $\kappa$, $\varepsilon$ & Sherman--Morrison scalar, its Woodbury split
 $s^*=\tau+\kappa$, and $\varepsilon=1-\tau$ (T107)\\
 $r$ & the residual ratio $\kappa/\varepsilon$; (R) $\iff r\le1$; measured $0.0053$--$0.1814$ (T107)\\
+$x$, $h$, $x_0$ & the pole response $x=T_{\mathrm{odd}}^{-1}\tilde t$, its demand compression
+$h=V^{\mathsf T}x$, and the single edge entry that carries $\|h\|$ on $8$ zones (T108)\\
+$\omega$, $\omega_{\mathrm{cert}}$ & the wing scalar $(\mu/2)\lambda_{\max}(\Gamma)$ with
+$\Gamma=V^{\mathsf T}T_{\mathrm{odd}}^{-1}V$, and its graded-matrix-cap certificate (T108/T109)\\
 \bottomrule
 \end{tabularx}
 }

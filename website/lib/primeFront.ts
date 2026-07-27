@@ -85,7 +85,8 @@ export type PrimeFrontVerdict =
   | "ONE-OF-TWO"
   | "DENSITY-MAPPED"
   | "SCALAR-TRACTABLE"
-  | "EPSILON-IDENTITY";
+  | "EPSILON-IDENTITY"
+  | "BOUNDARY-CERTIFIED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -109,6 +110,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-27",
+    part: 109,
+    title:
+      "Boundary certified — both remaining scalars certified; the chain for (R) closes 16/16 on exactly one strict-margin input",
+    verdict: "BOUNDARY-CERTIFIED",
+    summary:
+      "T109 (BOUNDARY-CERTIFIED, 29/29) — contract BOUNDARY.DECAY: both remaining scalars of (R) are now CERTIFIED — ω unconditionally via a graded matrix cap, the boundary value via a residual certificate that carries the cancellation — and the whole chain closes 16/16 conditional on exactly one strict-margin input that is 10²–10⁶ weaker than the conclusion. (G1) The mechanism is NOT decay but CANCELLATION: support separation is geometrically excluded (t̃ has its maximum at r = 0 — the source sits ON the boundary); the Combes–Thomas hypothesis is satisfied (Jaffard class, local rate ρ(s) = D(1/2 + 2/(e^{2s}−1)), factor 0.85–1.00 as a fit) but its conclusion is empty: the Green sum for x₀ cancels by 44…4.6e4 on 15/16 zones (n = 2, the known outlier, does not cancel), with a nearly linear boundary zero r^0.77…1.28 (fit) — a boundary condition, not a decay length. (G2) Four x₀ certificate candidates: (i) Combes–Thomas REFUTED — tested with the exact Green row, so no constant can rescue it (1/16); (ii) T-metric Cauchy–Schwarz at the edge 1/16; (iii) Szegő/Levinson exact (the two-point evaluation exhibits the cancellation) but yields no inequality; (iv) the residual / goal-oriented certificate (Prager–Synge, second order in the residuals) carries the cancellation instead of bounding it away — sharpness 1.0000–2.4937, 16/16 within budget. (G3) ω CRACKED, UNCONDITIONALLY: a graded matrix cap in PSD order (one level per soft direction, Cholesky-verified, ntop = 17–512) gives ω_cert = 0.2561–0.7569 against measured 0.2366–0.7531 (factor 1.004–1.124), WITHOUT any hypothesis input; the compression Schur distance (the T108 blockade) shrinks from 0.18–0.52 to 0.0024–0.039; the ungraded variant is vacuous everywhere — the grading is the whole difference. (G4) Both scalars come from ONE object (Γ_cert = S_cert⁻¹); the chain closes 16/16 with margin 1.3–10.4 and is M-stable (44/48 ladder points up to M = 3000; the certification price 1.5–28.6 does not grow). WHAT REMAINS is exactly ONE input: the STRICT positivity margin of the odd channel, λ_min(Q|odd) ≥ 1.7e-6…7.5e-3 (measured 1.4e-5…5.1e-2) — 10²–10⁶ BELOW μ/2, strictly weaker than the conclusion; the induction so far delivers only the non-strict ⪰ 0. Caveats: trial data numerically generated (validity is trial-independent via identity + Cholesky + Loewner), floating point not audited, λ_min via Rayleigh–Ritz. T110 (MARGIN.PROPAGATION, margin_propagation_probe.py) is running. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "boundary_decay_probe.py",
+  },
   {
     date: "2026-07-27",
     part: 108,
