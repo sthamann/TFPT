@@ -1,0 +1,1184 @@
+% ---------------------------------------------------------------------
+%  TFPT --- The Prime Front (research documentation)
+%  The complete prime / zeta line of the TFPT project, A to Z: the seven
+%  load-bearing modules (v535-v541), the sandbox localization program,
+%  the handover induction, the certification arc, the kill list, and the
+%  honest residual.  This is a RESEARCH DOCUMENTATION, not a results
+%  paper: it separates what is machine-verified and ledger-carried from
+%  what is exploratory sandbox work, and it claims NO progress on the
+%  Riemann Hypothesis.
+% ---------------------------------------------------------------------
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs,array,tabularx}
+\usepackage{xltabular}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{microtype}
+\usepackage[hidelinks,colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\emergencystretch=3em
+
+\input{tex-artefacts/tfpt_style}
+\usetikzlibrary{decorations.pathreplacing}
+\newcommand{\cthree}{c_3}
+\newcommand{\gcar}{g_{\mathrm{car}}}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\Qcert}{Q_{\mathrm{cert}}}
+\newcommand{\Afam}{A_{\mathrm{fam}}}
+\newcommand{\Ashift}{A_{\mathrm{shift}}}
+\newcommand{\Darch}{\Delta_{\mathrm{arch}}}
+\newcommand{\Qweil}{Q_{\mathrm{Weil}}}
+\newcommand{\Qfull}{Q_{\mathrm{full}}}
+\setlist{itemsep=2pt,topsep=3pt}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% sandbox / verified provenance tags used throughout the body
+\newcommand{\sbx}{{\small\textcolor{tfgray}{\textsf{[sandbox]}}}}
+\newcommand{\ver}{{\small\textcolor{tfgreen!60!black}{\textsf{[ledger]}}}}
+\newcommand{\schem}{\textit{Schematic.}\ }
+
+\title{\vspace{-1.2cm}\textbf{TFPT --- The Prime Front}\\[2mm]
+\large Research documentation of the prime / zeta line: seven verified modules,
+one localized residual, and the complete kill list}
+\author{\TFPTauthors}\date{\TFPTdatestamp}
+
+\def\TFPTdoctitle{The Prime Front}
+\begin{document}
+\maketitle
+
+\input{tex-artefacts/tfpt_docset}
+\noindent\emph{You are reading the \textbf{Prime Front} companion (P): the complete internal record
+of the prime / zeta line --- how a discrete compiler's bookkeeping kept producing classical
+number-theoretic objects, which of those links became load-bearing modules, and how the remaining
+question was compressed, over a hundred exploratory probes, down to one scalar ratio. It is a
+\textbf{research documentation}, not a results paper. Its purpose is that a reader (or a reviewer)
+can see the whole route, including everything that died on the way.}
+
+\begin{abstract}
+\noindent A two-axiom discrete compiler ($\cthree=1/(8\pi)$, $\gcar=5$, $D_5\oplus A_3+\mu_4\Rightarrow
+E_8$) has no business meeting the prime numbers. It does anyway: the $\mu_4$ glue completion carries a
+quartic character, the signed glue census is a theta series, and the shell counts of that census turn
+out to be \emph{Hecke} data. This companion documents that line end to end. Seven modules are
+load-bearing and ledger-carried (\vref{v535}--\vref{v541}): Hecke from geometry on the $E_8$ census,
+the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
+first three are projections, the Weil structure of the resulting family with two explicitly isolated
+obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
+ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
+$108$ preregistered probes with $2701$ machine checks, which localized the residual object. That
+localization is the actual content of this document. The transport ledger closes exactly, leaving one
+coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
+progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
+maps I5 geographically (Connes--Consani dictionary, tightness curves, the Sonin crossing, the one-atom
+band), turns the positivity question into a per-zone handover induction, and then certifies its
+ingredients one by one until the entire remaining hardness sits in a single Loewner statement on the
+$J$-odd half of a window, reducible by Sherman--Morrison/Woodbury to one scalar ratio
+$r=\kappa/\varepsilon\le1$ (measured $0.0053$--$0.1814$ on $16$ zones) and then, once $\varepsilon$ is
+identified as an exact energy, to two scalars whose open part is a boundary-decay statement about one
+explicit vector. \textbf{No claim of progress on the Riemann Hypothesis is
+made anywhere in this document}, and none of the sandbox findings moves any ledger marker. The
+document is deliberately symmetric about failure: a dedicated section lists the readings and
+routes that were refuted --- an essential-singularity reading, a $C/g$ proxy law, a density chain, an
+accumulated invariant with self-propagation, the Landau--Widom anchor, the symbol route for the odd
+channel, three certificate candidates for the avoidance norm, and the naive margin route --- because in
+a program of this shape the kill list is the more reliable output.
+\end{abstract}
+
+\TFPTbadges
+
+% =====================================================================
+\section{How to read this document}
+% =====================================================================
+\begin{gapboxnb}[Honesty statement --- read this before anything else]
+\begin{enumerate}[leftmargin=1.4em,label=\textbf{\arabic*.}]
+\item \textbf{No RH claim.} Nothing in this document claims progress towards, or evidence for, the
+Riemann Hypothesis. Where an equivalence to RH appears (Section~\ref{sec:i5}) it is an
+\emph{equivalence typing}: a statement about which object carries the difficulty, produced by an exact
+identity, and deliberately \emph{not} a statement that the difficulty has been reduced.
+\item \textbf{Two layers, never mixed.} Claims marked \ver\ are load-bearing: they have a row in
+\texttt{verification/status\_ledger.csv}, a module in \texttt{verification/}, and a script citation
+here (the blue \texttt{[\,verification/\dots\,]} tag). Everything marked \sbx\ is exploratory work in \texttt{experiments/tfpt-discovery/}; it carries
+no ledger row, no marker, and no authority. Section~\ref{sec:verified} is the only section that is
+entirely \ver.
+\item \textbf{Status markers are quoted, never upgraded.} The markers \mE\ \mC\ \mO\ \mX\ shown in
+Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v541}. This
+document introduces no new markers and moves none.
+\item \textbf{Fits are declared as fits.} Every scaling law, slope, exponent and extrapolation quoted
+from the sandbox is a fit to finitely many measured windows and is labelled as such at the point of
+use. Sixteen resolved zones are sixteen zones, not all zones.
+\item \textbf{Classical results are named as classical.} Kneser neighbours, Eichler/Witt, Shimura,
+Waldspurger, Cohen, Weil/Guinand, Bombieri, Yoshida, Connes--Consani, Gronwall/Robin, Douglas,
+Slepian--Landau--Pollak, Sherman--Morrison/Woodbury, Grenander--Szeg\H{o} and the rest are classical
+and are used as such; the compiler-native part is the wiring, not the theorems.
+\item \textbf{Numbers are literal.} Every numeric value in this document is transcribed from the
+research diary \texttt{experiments/next.txt} or from a ledger row. Figures that could not be drawn
+from literal data are marked \emph{schematic} in their caption, and the caption states exactly which
+quantities in the figure are literal.
+\end{enumerate}
+\end{gapboxnb}
+
+\noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
+$n=11\ldots108$). The probe file, the contract name, the verdict and the check count of every part are
+listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
+the primes at all; Section~\ref{sec:verified} is the verified layer; Sections~\ref{sec:i5},
+\ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
+Section~\ref{sec:kills} is the kill list; Section~\ref{sec:status} is the honest status.
+
+% =====================================================================
+\section{Motivation: why a compiler meets the primes}\label{sec:motivation}
+% =====================================================================
+TFPT is a discrete compiler with two inputs: the seam constant $\cthree=\tfrac1{8\pi}$ (P1) and the
+carrier rank $\gcar=5$ (P2). They force the lattice completion $D_5\oplus A_3+\mu_4\Rightarrow E_8$,
+and the readouts of the Standard-Model skeleton are taken off that completion. None of this is about
+number theory. The prime line begins with an accident of the \emph{glue}.
+
+The completion is not $D_5\oplus A_3$ but $D_5\oplus A_3$ \emph{plus} a glue group $\mu_4$ --- a cyclic
+group of order four. A cyclic group of order four carries a quartic character, and the quartic
+character on $\Z$ is $\chi_{-4}$, the non-trivial character mod $4$. Once the census of glue vectors is
+counted \emph{with that sign}, three things happen at once, and all three are elementary consequences
+rather than choices:
+
+\begin{enumerate}[leftmargin=1.5em]
+\item The signed glue count is a \textbf{theta series}. Signed counting of a quadratic form is a theta
+series by definition; here the compiler's own count $\theta_3^2$ is exactly the Gaussian-integer theta,
+$r_2(n)$, so the census counts $\Z[i]$-ideals (T85).
+\item The character makes the count a \textbf{Dirichlet object}. $\chi_{-4}$ is the character of
+$\Q(i)$; the associated $L$-function is the first Dirichlet $L$-function, and the split law
+``$p=a^2+b^2$'' becomes a compiler-visible fibre property of each prime (T21, channel B: $\chi_4$ fibre
+$\iff p=a^2+b^2$, verified $81/0/87/0$ on $p<1000$; $\chi_3$ fibre $\iff p=a^2+3b^2$, $80/0/86/0$).
+\item The shell counts of the census carry \textbf{Hecke eigenvalues}. That is the surprise, and it is
+the content of the first load-bearing module.
+\end{enumerate}
+
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[
+  font=\small,
+  node distance=6mm,
+  box/.style={draw=tfblue!70!black,fill=tfblue!5,rounded corners=2pt,inner sep=4pt,align=center,minimum height=8mm},
+  gbox/.style={draw=tfgreen!65!black,fill=tfgreen!6,rounded corners=2pt,inner sep=4pt,align=center,minimum height=8mm},
+  ar/.style={-{Latex[length=2mm]},draw=tfgray!80,thick}]
+\node[box] (ax) {two axioms\\[-1pt]\footnotesize $\cthree=\tfrac1{8\pi}$, $\gcar=5$};
+\node[box,right=8mm of ax] (e8) {$D_5\oplus A_3+\mu_4$\\[-1pt]$\Rightarrow E_8$};
+\node[box,right=8mm of e8] (glue) {glue group $\mu_4$\\[-1pt]\footnotesize quartic character $\chi_4$};
+\node[box,right=8mm of glue] (zi) {$\Z[i]$ \,/\, $\theta_3^2=r_2$\\[-1pt]\footnotesize signed census};
+\node[gbox,below=9mm of glue] (hecke) {Hecke data on the census\\[-1pt]\footnotesize $\nu_p=a\,\mathrm{Id}+b\,T_p$, \ $a_p=-c(p)/8$};
+\node[box,below=9mm of zi] (lfun) {Dirichlet $L(s,\chi_{-4})$\\[-1pt]\footnotesize split law $p=a^2+b^2$};
+\node[gbox,below=9mm of e8] (weight4) {weight-4 newform $f_8$\\[-1pt]\footnotesize $\eta(2\tau)^4\eta(4\tau)^4$};
+\draw[ar] (ax) -- (e8);
+\draw[ar] (e8) -- (glue);
+\draw[ar] (glue) -- (zi);
+\draw[ar] (glue) -- (hecke);
+\draw[ar] (zi) -- (lfun);
+\draw[ar] (hecke) -- (weight4);
+\draw[ar] (hecke) -- (lfun);
+\end{tikzpicture}
+\caption{The chain by which the compiler acquires arithmetic. Nothing here is chosen for number
+theory: the glue group is forced by the completion, the quartic character is the character of a cyclic
+group of order four, and the signed count of a quadratic form is a theta series. The green nodes are
+where the line becomes load-bearing (Section~\ref{sec:verified}).}\label{fig:chain}
+\end{figure}
+
+\noindent The honest first question of the series was therefore not ``does this prove anything about
+primes'' but ``which of these links are \emph{mechanism} and which are pretty coincidences''. Parts
+T11--T13 established the signed glue theta, its $L$-series and the glue-character atlas
+($19/19$, $16/16$, $11/11$); T14--T19 tested six candidate contracts in parallel and produced two
+self-corrections against the project's own earlier readings (T14 \textsc{deflated}: the measured
+$2\pi$ is the universal Bisognano--Wichmann/Unruh conversion, not ``the self-dual width''). The
+cross-finding of that batch is worth stating because it survived the entire series: the structure is
+exact at the census/lattice level (weight $4$), and the gap is always the \emph{same} gap --- the
+canonical transport to the $\mathrm{GL}(1)$ / $\xi(s)$ world (multiplicity one, weight $1/2$, the
+archimedean place, the derivation of the Hecke action). One meta-contract, \texttt{ZETA.CENSUS.TO.GL1}
+\mO.
+
+Parts T20--T25 then killed, in four stages, the slogan ``the archimedean term comes from the seam'':
+the raw seam density of states is flat/slightly decreasing (loglog slope $\approx-0.40$) while the
+classical digamma kernel grows logarithmically (measured $0.15917$ against $1/(2\pi)=0.159155$, rms
+$3\times10^{-6}$ for $t\ge20$) --- \textsc{killed-as-naive} (T20, $25/25$); the non-DOS successor
+located the missing logarithm in the interval cut but failed the one-constant dictionary at $2/\pi$
+(T22, \textsc{partial}); and both dictionary closures plus the scattering-phase observable died
+(T23--T25, $23/23+25/25+29/29$). This matters for the rest of the document: the archimedean place was
+never going to come for free, and when it finally arrived (T82) it arrived from \emph{inside} the same
+family, not from the seam.
+
+% =====================================================================
+\section{The verified layer: seven modules}\label{sec:verified}
+% =====================================================================
+\noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
+cites the module, and quotes the ledger's own status markers. Nothing here depends on
+Sections~\ref{sec:i5}--\ref{sec:certification}.
+
+\begin{keybox}[The seven modules and their ledger markers]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}l l Y l@{}}
+\toprule
+\textbf{Module} & \textbf{Claim id} & \textbf{Content} & \textbf{Markers}\\
+\midrule
+\vref{v535} & \texttt{HECKE.GEOM.01} & Hecke from geometry on the $E_8$ census channels & \mE\ + \mC\ + \mO\\
+\vref{v536} & \texttt{HECKE.GEOM.EICHLER.01} & Eichler trace layer at the $E_8$ lattice & \mE\ + \mC\ + \mO\\
+\vref{v537} & \texttt{HECKE.GEOM.HALFINT.01} & half-integral bridge & \mE\ + \mC\\
+\vref{v538} & \texttt{HECKE.GEOM.RTF.01} & compiler relative trace identity & \mE\ + \mC\\
+\vref{v539} & \texttt{RTF.GNS.WEIL.01} & Weil structure of the compiler family & \mE\ + \mC\\
+\vref{v540} & \texttt{RTF.GNS.AMP.01} & amplitude route and positive linear carrier & \mE\ + \mC\\
+\vref{v541} & \texttt{RTF.GNS.LEDGER.01} & matching lemma and transport ledger package & \mE\ + \mC\\
+\bottomrule
+\end{tabularx}
+\markerkey
+\noindent Every row carries \texttt{NO marker moves} in the ledger. The \mO\ on \vref{v535} and
+\vref{v536} is the same open gate throughout: \emph{weight-4 $\to$ $\mathrm{GL}(1)$ transport}.
+\end{keybox}
+
+\subsection{Hecke from geometry (\texorpdfstring{\vref{v535}}{v535})}
+The Hecke structure of the $\mu_4$-glue census is lattice-native: it comes out of Kneser
+$p$-neighbour geometry, not out of modular input \veri{v535\_hecke\_from\_geometry.py}
+($25$ checks, ${\sim}11$\,s; consolidated promotion of T27/T31/T32).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Kneser carries Hecke} \mE: $\#\mathrm{iso\_pts}=p^7+p^4-p^3$ and
+$\#\mathrm{iso\_lines}=\sigma_3(p)\cdot\#\PP^3(\mathbb F_p)$ identically and by full enumeration at
+$p=2,3,5,7$ ($135/1120/19656/137600$ lines). The Eisenstein eigenvalue $\sigma_3(p)=1+p^3$ is an exact
+factor of a lattice-native correspondence count.
+\item \textbf{The marked neighbour sum is an affine Hecke element} \mE:
+$\nu_p=a\,\mathrm{Id}+b\,T_p$ exactly (overdetermined, residual $0$), with $b=\sigma_3+a_p$; the cusp
+rule $a_p=b-\sigma_3$ recovers $a_3=-4$ and $a_5=-2$.
+\item \textbf{Census redundancy is $2$-adic oldform structure} \mE: $\dim V=7=5+2$,
+$\pi_{\mathrm{cusp}}=(28-T_3)/32$, only $2$-adic levels occur.
+\item Fences carried \emph{inside} the claim: the $p=5$ geometric $S[1]$ block is a T31-validated
+\emph{freeze} \mC; the weight-4 $\to\mathrm{GL}(1)$ transport is \mO.
+\end{itemize}
+
+\subsection{The Eichler trace layer (\texorpdfstring{\vref{v536}}{v536})}
+The smooth (Eisenstein) background and the coherent (cusp) interference separate exactly
+\veri{v536\_eichler\_trace\_layer.py} ($23$ checks, ${\sim}30$\,s; promotion of T33/T36/T37/T42).
+The Witt layer gives $\lambda_{\mathrm{Eis}}=\sigma_3(\#\PP^3-\sigma_3)=L-\sigma_3^2$ identically
+(anchors $336$, $3780$, $19264$ at $p=3,5,7$) \mE, and the Eichler identity
+$\lambda_{\mathrm{geom}}=\lambda_{\mathrm{Eis}}+a_p^2$ holds two-sidedly ($352/3784/19840$). The signed
+cusp reading is $a_p=-c(p)/8\Rightarrow(-4,-2,+24)$, and the assembler $R(p)=a_p^2$ is exact for
+$p\le31$. The $p=5$ type-(ii) block is again a validated freeze \mC; the transport gate stays \mO.
+
+\subsection{The half-integral bridge (\texorpdfstring{\vref{v537}}{v537})}
+In the $70$-element compiler weight-$5/2$ theta monoid there is \emph{exactly one} object $g$ with
+$\mathrm{Sh}_{t=2}(g)=-8f_8$ coefficientwise \mE, it is an exact $T(p^2)$-eigenform with the
+weight-4 eigenvalues $(-4,-2,24,-44,22)$ \mE, and $U_4(g)=0$ places it outside the Kohnen plus space
+--- a scope fence, not a defect \mE\ \veri{v537\_halfintegral\_bridge.py} ($20$ checks, ${\sim}90$\,s;
+promotion of T38/T41/T44/T45). The Waldspurger/Baruch--Mao constant
+$R=23.1873585645\ldots$ is constant on ten discriminants $d\equiv1\bmod 8$ (spread $\le10^{-12}$),
+typed \mC\ because it is an AFE-numeric measurement.
+
+\subsection{One finite relative trace identity (\texorpdfstring{\vref{v538}}{v538})}
+The strongest structural statement of the verified layer: \vref{v535}, \vref{v536} and \vref{v537} are
+three \emph{projections} of one finite relative-trace identity of Jacquet type
+\veri{v538\_relative\_trace\_identity.py} ($18$ checks, ${\sim}14$\,s; promotion of T53).
+$\mathrm{Tr}_V(\nu_p\circ\pi)$ is computed twice, independently --- geometrically from the glue census
+with no modular input, and spectrally from $\eta(2\tau)^4\eta(4\tau)^4$ with no geometry --- and the
+two agree exactly for all $(p,\pi)\in\{3,5,7\}\times\{\mathrm{Id},\pi_{\mathrm{Eis}},
+\pi_{\mathrm{cusp}},\pi_{E_4},\pi_{f_8}\}$ (anchors, e.g.\ $p=7$: full trace $727680$, $f_8$ channel
+$19840$) \mE. The Eichler split \emph{is} the orbit decomposition: principal orbit
+$a\,\mathrm{Id}\to\lambda_{\mathrm{Eis}}$, elliptic orbit $b\,T_p\to a_p^2$, cross terms cancel exactly.
+And the period side is literally compiler geometry: $g$ is the quaternary lattice form
+$n=(x^2+y^2)/2+2z^2+u^2+2w^2$ with sign $(-1)^{|u|+|w|}$, giving
+$[\text{signed lattice count}]^2=R\,|d|^{3/2}L(f_8\times\chi_d,2)$ at relative $10^{-12}$ \mC.
+The identity is \emph{finite}; the infinite RTF is explicitly open.
+
+\subsection{The Weil structure of the family (\texorpdfstring{\vref{v539}}{v539})}
+The family carries a fully identified Weil structure \emph{up to two explicitly isolated obstructions},
+and the obstructions are promoted content, not a footnote
+\veri{v539\_weil\_structure\_family.py} ($25$ checks, ${\sim}6$\,s; promotion of T55/T61/T62/T63).
+The canonical GNS pairing is a direct integral over the Gelfand spectrum with fibre mixing
+$\le5.04\times10^{-16}$; the trivial Sato--Tate isotype is algebraically a $\mathrm{GL}(1)$ core,
+$G_0=(1+Y)/(1-Y)$; the prime side is an exact linear relation to shifted $\zeta$-Weil forms at
+relative $\le9\times10^{-16}$. The two obstructions are (i) a sign/doubling residue (metaplectic, $\mathrm{sym}^2$)
+that survives every preregistered canonical projection, and (ii) a Plancherel correction which is
+irreducibly non-automorphic. Finite-class positivity of $Q_{\mathrm{fam}}$ is measured \mC\
+($[4.369,\,11.486]$); dense-class positivity is open. The ledger row says it in one line:
+\emph{not almost-RH}.
+
+\subsection{The amplitude route and the positive linear carrier (\texorpdfstring{\vref{v540}}{v540})}
+The route out of the square plane \veri{v540\_amplitude\_linear\_carrier.py} ($34$ checks, ${\sim}3$\,s;
+promotion of T67--T72). An amplitude Dirac operator
+$D=\left(\begin{smallmatrix}0&V\\V^{\mathsf T}&0\end{smallmatrix}\right)$ with
+$V[d,m]=\sqrt{w_d}\,b(d)\chi_d(m)$ exists and is Hecke-equivariant \mE; the geometric polarisation
+$b=N_+-N_-$, $\Theta=N_++N_-$ is lattice-exact with $N_\pm\ge0$ for all $n\le50\,000$ \mE; the Cohen
+seed $\Theta(d)=-48L(-1,\chi_d)$ is exact-rational on $159$ live $d$ \mE; the prime side is a
+\emph{pure plus} combination $Q=Q_\zeta(g_-)+Q_\zeta(g_+)$ at relative $2\times10^{-15}$ \mE; the
+functional equation of the linear family holds at relative $1.4\times10^{-40}$ \mE. The open boundary
+is \emph{inside} the claim: the gap functional $\lambda^*$ on $n\equiv6\bmod 8$, with an exact Farkas
+witness ($0.0511$), is a named limit, and positivity is asserted only in the Euler region.
+
+\subsection{The matching lemma and the transport ledger (\texorpdfstring{\vref{v541}}{v541})}
+The largest module of the line \veri{v541\_matching\_lemma\_ledger.py} ($33$ checks, ${\sim}10$\,s;
+promotion of T78--T82 and T85; every core check recomputed, not cited).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Window proof} \mE: the matching lemma is proved exact-integer on $[4,10^6]$ ---
+$7S(j)<40A(j)$ at every atom, $0$ violations over $939\,870$ clash atoms, no-overflow proven in exact
+integers, $268$ big-integer rechecks; exact margin $X=22242575693/270725400000=0.082159$ at
+$j^*=554400$; $\rho_{\mathrm{crit}}=1.143989>21/20$. A maximal-greedy identity makes the certificate
+uniform in the target set and the greedy weights.
+\item \textbf{Transport ledger} \mE: $\Qweil=\Qcert+\Darch+\Delta_2$ closes with residual
+$4.4\times10^{-16}$ on a $24$-row battery, and $\Delta_{\mathrm{pole}}\equiv\Delta_{\mathrm{conv}}\equiv0$
+are \emph{proven}, not measured (kernel collapse in \texttt{sympy}, exact scale invariance).
+\item \textbf{Character-exact envelope} \mE: $-\psi=(\chi_{-4}+\tfrac14\chi_8+\tfrac14\chi_{-8})\Theta$
+coefficient-exact for all odd $n\le50\,000$; confinement holds as a \emph{set equality} on $10^6$.
+\item \textbf{Archimedean term internal} \mE: the Legendre duplication bridge
+$(2\pi)^{-s}\Gamma(s)=\tfrac12\Gamma_\R(s)\Gamma_\R(s{+}1)$ and the kernel identity
+$k_\zeta=K_{\mathrm{fam}}-K_{\mathrm{shift}}$ at $7.9\times10^{-31}$ pointwise.
+\item \textbf{Frontier facts} \mC: unlifted coherent chain crossing at $k^*=14$
+($\log_{10}N^*=23.1$); Robin tail factor $6.16$ at $J=10^6$ and divergent --- the constant route stays
+open.
+\item \textbf{Named limits as content.} Two limits are part of the claim rather than hidden by it:
+one classically-shaped open lemma (correlated cancellation on credit-rich non-coherent tail atoms), and
+the I5 equivalence typing discussed next. The row states explicitly: \emph{NOT ``almost RH''};
+\texttt{ZETA.HP.CARRIER} untouched.
+\end{itemize}
+
+% =====================================================================
+\section{The localization program (sandbox)}\label{sec:i5}
+% =====================================================================
+\begin{gapboxnb}[Provenance]
+Everything from here to Section~\ref{sec:status} is \sbx: exploratory probes in
+\texttt{experiments/tfpt-discovery/}, no ledger row, no marker, no authority. The findings are
+reported because the \emph{shape} of the residual is the useful output, not because any of them is
+established.
+\end{gapboxnb}
+
+\subsection{I5: the ledger closes and one inequality is left (T79)}
+The transport wall --- the thing that had blocked the line since T20 --- was fully decomposed in T79
+(\texttt{transport\_ledger\_probe.py}, $22/22$). The key observation is that the odd-prime side of the
+Weil functional agrees \emph{exactly} with the certified plus combination (relative $2.6\times10^{-16}$):
+the prime side was never the wall. What remains after the ledger closes is a minimal transport set of
+two exact identities (proved), two classically-provable bounds, and exactly one coupled inequality:
+
+\begin{keyeq}$\displaystyle
+\textbf{(I5)}\qquad \Qcert(h)+\Delta_2(h)+\Afam(h)-\Ashift(h)\ \ge\ 0
+\quad\text{for all autocorrelations }h.$\end{keyeq}
+
+\noindent I5 is the prime\,$\leftrightarrow$\,archimedean coupling. By the closed ledger it is, as an
+identity, equivalent to Weil positivity and hence to RH. The diary is explicit about what that means:
+\emph{the built-in safeguard fired}. RH does not follow from finite bookkeeping; the hidden infinite
+step is exactly I5 --- and the value of T79 is that the step was \emph{found and named} rather than
+concealed. This is an equivalence typing, not progress.
+
+T82 then changed I5's \emph{type} (\texttt{heat\_arch\_probe.py}, $22/22$, \textsc{arch-internal}):
+$\Darch$ is exactly the internal $\Gamma$ difference $\Afam-\Ashift$ via Legendre duplication, verified
+on $18/18$ battery rows at max relative $6.6\times10^{-15}$. I5 stopped being a coupling between two
+worlds and became a \emph{self-consistency statement about one heat family}. Again: a type change is
+not a proof.
+
+\subsection{The Connes dictionary (T87) and where positivity is anchored}
+T87 (\texttt{i5\_connes\_dictionary\_probe.py}, $22/22$, \textsc{dictionary-exact-core}) identified the
+I5 one-family form as a compiler instance of the semi-local Connes structure. Four exact matches:
+the two-shell orbit route equals Connes' expression at relative $6.3\times10^{-16}$; the orbit kernel of
+Connes--Consani (2021) is literally the compiler's Poisson ladder at $\rho=e^u$ (\texttt{sympy} plus
+$1.7\times10^{-50}$); $h_+$ is by definition the compiler kernel $k_\zeta=K_{\mathrm{fam}}-K_{\mathrm{shift}}$;
+and $k_\zeta=2\theta'_{\mathrm{RS}}$ --- the derivative of the \emph{Riemann--Siegel phase}, at relative
+$0.0$. The dihedral shift is the scaling group $\R^*_+$.
+
+The most useful part of T87 is not a match but a \emph{boundary}. The two positivity programs are
+complementary: Connes--Consani anchor positivity \emph{before} the primes (the prime-free Sonin window,
+support $(\tfrac12,2)$, i.e.\ $u\in(-\log2,\log2)$), the compiler anchors it \emph{after} the primes
+(atom certificates, all supports). The window boundary is exactly the first prime atom $u=\log2$
+(\texttt{sympy}-exact; on narrow rows the prime side, $\Qcert$ and $\Delta_2$ all vanish identically).
+The sectors \emph{touch} and do not overlap; the I5 coupling lives in the crossing region between them,
+outside both proved sectors.
+
+\subsection{The tightness map (T88) and the crossing (T89--T91)}
+T88 (\texttt{i5\_tightness\_probe.py}, $27/27$) mapped where I5 is actually tight: a band-limited zero
+plateau (classical), safe zones, and \emph{eight} near-vertical tight curves whose spacing follows the
+$\Gamma$-side density law (ratio $1.01\pm0.08$, computed zero-free --- no spectral identification is
+claimed or made). There are no negatives on genuine autocorrelations; the earlier T76 negatives were
+the shadow of missing archimedean/$p=2$ bookkeeping, exactly as the ledger predicted.
+
+T89 (\texttt{sonin\_crossing\_probe.py}, $19/19$) established that the window compression of the Weil
+form \emph{is} Bombieri's classical object, and answered the sharpness question honestly: the boundary
+at $\log2$ is \emph{not} sharp. The margin falls smoothly from $a\approx0.5$ towards the floor with no
+structure at $\log2$; the prime-free sector still has margin $0.557$ at its own boundary and keeps
+$\ge0.25$ of the reference comfort to $a\approx0.75$ ($+0.057$ beyond the proved boundary). The
+residual subspace grows softly $0\to1\to2\to3\to4$ (out of $32$) and carries the global minimum.
+T90 (\texttt{residual\_dissection\_probe.py}, $17/17$) made those residual vectors explicit --- $n$-stable
+to $\le2.1^\circ$, closed Gaussian$\times\cos$/Gaussian$\times\sin$ fits with $99{+}\%$ capture --- and
+decided the core question: the residual is \emph{not} just pole coupling ($3/10$ vectors are controlled
+by no structure at all; beyond $a\approx0.85$ genuinely pole-free atom\,$\leftrightarrow$\,arch content
+remains).
+
+T91 (\texttt{thin\_band\_analytic\_probe.py}, $19/19$) identified the band as the \emph{one-atom zone}
+and found the mechanism that dominates the rest of the document: beyond an inner edge the prime atom
+$u=\log2$ becomes \emph{load-bearing} --- the prime \emph{rescues} the form where the archimedean margin
+is exhausted (rescue term $+0.22\ldots+0.41$, purely odd sector). Two uncertainty constants were
+decided in closed form: $a\cdot t_{\mathrm{rms}}\to\pi$ (Wirtinger, $0.3\%$) and
+$a\cdot t_{\mathrm{cent}}\to2\,\mathrm{Si}(\pi)-4/\pi=2.4306$ (two independent routes, $10^{-25}$).
+
+\begin{gapboxnb}[Data integrity: the T92/T93 correction --- reported because it happened]
+T92 (\texttt{zone\_extension\_proof\_probe.py}, $36/36$) failed to prove the lattice zone extension and
+said so (\textsc{t-skeleton}): what it certified is small and real ($Q\ge6.7\times10^{-12}>0$ on an
+$8$-dimensional sine-window subspace across the whole band, with an error certificate and a
+$1057$-point covering), and it named two independent walls --- $\lambda_{\min}$ collapses geometrically
+(factor $11.4$ per mode), and the high-mode complement would need $N^*\gtrsim5069$ modes. Verdict:
+\emph{the finite-block route is structurally the wrong instrument, not under-resourced}. In the same
+run T92 raised a calibration discrepancy against T89/T91, and the entire band map was put under
+reservation. T93 (\texttt{band\_reconciliation\_probe.py}, $41/41$) resolved it with a third
+independent implementation: one diary prose value ($6.98$) had been stale, one discrepancy was a
+factor-2 convention plus a $1\%$ grid interpolation artefact, and exactly one real bug sat in T92
+itself. Net effect: the T89/T91 map survives, with $a_{\mathrm{neg}}$ recalibrated $0.7410\to0.7486$
+and T92's own band scoping withdrawn. The corrected band map:
+classical edge $0.34657$ $\cdot$ prime-free crossing $0.3723$--$0.3763$ $\cdot$ band top
+$\alpha^*=0.46265$ $\cdot$ second atom $\log3/2=0.54931$.
+\end{gapboxnb}
+
+\subsection{The blind prime demonstration (T94)}
+A separate, deliberately modest exercise. T94 (\texttt{prime\_blind\_demo\_probe.py}, $16/16$,
+\textsc{blind-100}) used the exact geometric criterion ``odd $n$ is prime $\iff r_4(n)=8(n+1)$''
+(Jacobi 1834, on the $\Z^4=\text{rank-}|\mu_4|$ theta tower) to predict all $753$ primes of the
+never-seen window $[1\,000\,001,\,1\,010\,000]$ --- count and MD5 declared \emph{before} any ground
+truth, then evaluated: exactly $753$, zero false positives, zero false negatives, $100.00\%$ on all
+$10^4$ integers, with an AST-enforced prediction path containing no divisibility test (no
+\texttt{isprime}, no sieve, no \texttt{\%}, \texttt{//} or \texttt{/}). The cost honesty is part of the
+result: a sieve wins by ${\sim}820\times$ ($1$\,ms against $0.83$\,s). This is structure completeness,
+not an algorithmic advance --- and the \emph{spectral} prediction (zeros $\to$ primes) remains bound to
+I5/RH and is not claimed.
+
+% =====================================================================
+\section{The handover induction (T95--T101)}\label{sec:handover}
+% =====================================================================
+The band work left a picture: each prime atom rescues its own zone and hands over to the next. T95--T101
+turned that picture into an induction, and then measured whether the induction can run.
+
+\subsection{The relay is real (T95, T96)}
+T95 (\texttt{continuum\_extension\_probe.py}, $28/28$) proved the C1 chain unconditionally
+($|h_f(\log2)|\le1/2$ by disjoint supports with margin $0.2305$; the windowed symmetrised shift has
+$\|S\|=1/2$ exactly, $1.1\times10^{-16}$) and found that the binding mechanism is \emph{not} the
+two-bump extremal (share $0.046$) but the atom rescue: above $\alpha_{\mathrm{free}}=0.371654$ the
+prime-free minimiser has $h(\log2)<0$ down to $-0.328$, so the atom adds positivity exactly in the
+losing direction.
+
+T96 (\texttt{relay\_test\_probe.py}, $21/21$) is the model of a self-correcting run. The apparent
+``edge'' of T95 at $\alpha^*$ was a map artefact: the value $+7.8\times10^{-6}$ reproduced exactly, but
+it sits on a smooth, strictly positive curve with no feature at all ($\lambda_{\min}>0$ on the whole of
+$[0.38,0.86]$, decay law $\lambda_\infty\sim\exp(-49.2\alpha)$). The \emph{relay}, however, is real ---
+and it lives entirely in the counterfactual: remove the $\log3$ atom and $\lambda_{\min}$ crashes to
+$-0.445$, with the loser being exactly the anti-double-bump at distance $\log3$ (alignment $-0.99$) and
+a rescue identity at $5\times10^{-15}$. All four handover windows are positive: each atom arrives
+strictly \emph{before} it is needed ($+0.025/+0.009/+0.011/+0.007$ for $k=1..4$). Three consequences
+were recorded: it is a margin problem, not an edge problem; numerics as a witness is exhausted beyond
+$\alpha\approx0.55$; and the counterfactual is the proof target, because it works on $O(0.1)$-sized
+quantities instead of $10^{-6}$.
+
+\subsection{The induction step and its one missing lemma (T97, T98)}
+T97 (\texttt{relay\_induction\_probe.py}, $105/105$) gave the induction step proof shape. Alignment is
+true and sharp with a constant law; the $t=0$ killer loss is proved by three structure identities
+(old atoms vanish identically on $E_-$; the pole rescue flips with factor $1-\cosh(u/2)$;
+$|\hat f|^2=2(1-\cos(tu))|\hat g|^2$), giving $k_{\mathrm{eff}}=(1-\cos(tu))k(t)$ with infimum
+$-1.11\ldots-2.59$ instead of $k(0)=-5.37$. The structural pearl: $E_0$ is \emph{literally} the same
+form at a smaller window ($7\times10^{-14}$) --- the induction hypothesis, by self-similarity. What
+remained was a single cross-block lemma about a single vector.
+
+T98 (\texttt{cross\_lemma\_probe.py}, $44/44$) attacked it and produced the most instructive negative
+result of the series: the measured $\sqrt{\lambda_0}$ law is Douglas (1966) range inclusion, i.e.\ a
+\emph{tautology} of the positivity one is trying to prove --- the identification \emph{dissolves} the
+lemma rather than proving it. Three T97 premises were refuted in the same run. The replacement target
+is an exact scalar inequality with no constants and no near-null vector:
+
+\begin{keyeq}$\displaystyle
+D_k(\alpha)\ :=\ -\lambda_{\min}\!\left(Q|_{E_-}-Q_{-0}(Q|_{E_0})^{-1}Q_{0-}\right)\ \le\ \tfrac{\mu_k}{2}.$\end{keyeq}
+
+\noindent T99 (\texttt{dk\_recursion\_probe.py}, $23/23$) then found the a-priori structure: an exact
+mirror-parity selection rule ($J_-Q_{-0}J_0=-Q_{-0}$ at $2\times10^{-15}$) giving
+$D_k=\max(D_{\mathrm{even}},D_{\mathrm{odd}})$, with the binding even channel coupling only to the
+\emph{odd} spectrum of the smaller window --- so the fragile near-null mode is identically absent from
+the binding channel. T100 (\texttt{bulk\_remainder\_probe.py}, $27/27$) closed the bulk remainder from
+$11/24$ to $24/24$ samples and showed the $10.8\%$ drift was a grid artefact.
+
+\subsection{The race (T101)}
+T101 (\texttt{k\_asymptotics\_probe.py}, $31/31$, \textsc{crowding-trends}) resolved $16$ zones
+($n=2\ldots29$) and separated two questions that had been fused. The \emph{mathematics} trends
+self-supportingly: the primitive quantities are flat over $16$ zones ($w/g$ slope $+0.002\pm0.178$;
+the relative $D_k$ margin does not trend; $D_k\le\mu_k/2$ holds $64/64$ and never fails). Atom
+\emph{strengths} do not fall ($\mu\sim n^{-0.087}$), only the \emph{spacings} do ($n^{-0.615}$, exact) ---
+pure arithmetic. What loses the race is the \emph{closure instrument}: the demand ratio $r_k$ decays
+like $\exp(-0.1622k)$ (fit, $\pm0.0562$). The collapsed one-parameter law
+$w_k=0.0838\cdot(\text{atom spacing})/\mu_k$ reduced the scatter from $8.85\times$ to $2.66\times$ with
+zero residual trend.
+
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[font=\small,x=0.52cm,y=2.6cm]
+% axes
+\draw[->,tfgray!80,thick] (0,-0.25) -- (17.4,-0.25) node[right,black]{zone $k$};
+\draw[->,tfgray!80,thick] (0,-0.25) -- (0,1.15) node[above,black]{$\log_{10} r_k$};
+\foreach \k in {1,4,8,12,16} \draw[tfgray!60] (\k,-0.27) -- (\k,-0.23) node[below=2pt,black,font=\scriptsize]{\k};
+\foreach \y in {0,0.5,1.0} \draw[tfgray!60] (-0.25,\y) -- (0.25,\y) node[left=6pt,black,font=\scriptsize]{$\y$};
+% spectrum floor (schematic)
+\fill[tfred!7] (0,-0.25) rectangle (17.4,0.0);
+\draw[tfred!60!black,dashed] (0,0.0) -- (17.4,0.0)
+   node[right=-1mm,above,font=\scriptsize,tfred!60!black,align=left,xshift=-30mm,yshift=0.5mm]{spectrum floor (schematic)};
+% T101 instrument: slope -0.1622 per zone in ln  ->  -0.07044 in log10
+\draw[tfred!75!black,very thick] (1,0.970) -- (16,-0.087);
+\node[tfred!75!black,font=\scriptsize,align=left,anchor=west] at (9.4,0.52)
+  {T101 instrument\\[-1pt]slope $-0.1622\pm0.0562$};
+% T103 instrument: 9.33 -> 2.70
+\draw[tfgreen!60!black,very thick] (1,0.970) -- (16,0.431);
+\node[tfgreen!45!black,font=\scriptsize,align=left,anchor=west] at (10.2,0.92)
+  {T103 instrument\\[-1pt]slope $-0.0748\pm0.0116$};
+\filldraw[tfgreen!60!black] (1,0.970) circle (1.4pt) node[above left=-1pt,font=\scriptsize,black]{$9.33$};
+\filldraw[tfgreen!60!black] (16,0.431) circle (1.4pt) node[right=1pt,font=\scriptsize,black]{$2.70$};
+\filldraw[tfred!75!black] (16,-0.087) circle (1.4pt);
+\end{tikzpicture}
+\caption{\schem The instrument race over the $16$ resolved zones. \emph{Literal:} the two decay slopes
+($-0.1622\pm0.0562$ measured in T101; $-0.0748\pm0.0116$ measured in T103, a factor $2.2$ flatter), and
+the T103 endpoints $r_1=9.33\to r_{16}=2.70$ with the statement that the improved instrument never
+leaves the spectrum. \emph{Schematic:} the straight-line interpolation in $\log_{10}$, the common
+anchor of the two lines, and the position of the ``spectrum floor''. Both slopes are declared fits in
+the diary. What loses the race is the instrument, not the inequality: the true inequality
+$D_k\le\mu_k/2$ holds $64/64$ and its relative margin does not trend.}\label{fig:race}
+\end{figure}
+
+\noindent T101 also stated what an asymptotic theorem would need, and that list has not changed since:
+(A) the collapsed lower bound $w_k\ge c\,g_k/\mu_k$ with a fixed $c>0$ --- a sharp, non-perturbative,
+\emph{arithmetic} lower bound at a Weil-positivity edge, with Taylor arguments forbidden by the
+$\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for the bulk remainder;
+(D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
+
+% =====================================================================
+\section{The certification arc (T102--T108)}\label{sec:certification}
+% =====================================================================
+The last seven parts stopped improving measurements and started converting them into certificates ---
+and, where that failed, into explicit refutations.
+
+\subsection{The mechanism: a crossing, not a singularity (T102)}
+T102 (\texttt{arithmetic\_bound\_probe.py}, $42/42$, \textsc{mechanism-identified}) computed the
+mechanism exactly. The $k$-th atom acts on $E_-/E_0/E_+$ as $\mathrm{diag}(-\tfrac12,0,+\tfrac12)$, so
+$Q_{k-1}=\Qfull-\tfrac{\mu_k}{2}P_-+\tfrac{\mu_k}{2}P_+$: the atom strength $\mu_k$ enters exactly once,
+linearly. That gives a two-sided sandwich through the Schur profile $\sigma_k(\delta)$, with
+$\mu_k/2\le\sigma_k$ implying that the handover holds, and $2w_k$ lying between the crossings in
+$16/16$ zones.
+
+Two corrections came out of the same run. First, the onset is \emph{anchored} at $\delta_c=2w_k$ --- a
+crossing of two finite quantities ($R^2=0.968$) --- and exponential-singular versus power behaviour is
+not separable; T96's essential-singularity reading is compatible but no longer distinguished. Second,
+and more consequentially, the binding constraint \emph{flips}: no concentration condition binds. The
+bare $E_-$ form is strongly positive ($2.65\ldots3.52$, i.e.\ $4$--$14\times$ $\mu_k/2$), the pole flip
+and band mass saturate their classical ceilings ($96.9$--$97.1\%$ of Cauchy--Schwarz and
+Landau--Pollak/prolate respectively), and the onset is manufactured \emph{entirely} by the Schur
+dressing against $E_0\oplus E_+$, which eats $35.7\%$--$97.3\%$ of the bare eigenvalue. The loser does
+not live in $E_-$.
+
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[font=\small,x=1.0cm,y=1.0cm]
+\draw[->,tfgray!80,thick] (0,0) -- (10.2,0) node[right,black]{$\delta$};
+\draw[->,tfgray!80,thick] (0,0) -- (0,4.1) node[above,black]{};
+% flat mu_k/2 line
+\draw[tfblue!70!black,very thick] (0,1.55) -- (10,1.55);
+\node[tfblue!70!black,anchor=west,font=\scriptsize] at (8.1,1.85) {$\mu_k/2$ (flat)};
+% upper and lower schur profile brackets
+\draw[tfgreen!55!black,very thick] plot[smooth,tension=0.7] coordinates {(0.4,3.75) (2.2,3.1) (4.0,2.3) (5.9,1.55) (7.6,1.02) (9.4,0.72)};
+\draw[tfgreen!55!black,very thick,dash pattern=on 3pt off 2pt] plot[smooth,tension=0.7] coordinates {(0.4,3.15) (2.0,2.5) (3.4,1.85) (4.3,1.55) (6.0,1.02) (8.4,0.66)};
+\node[tfgreen!45!black,anchor=west,font=\scriptsize,align=left] at (5.6,3.25)
+  {Schur profile $\sigma_k(\delta)$\\[-1pt](two-sided bracket)};
+% crossings
+\filldraw[tfgreen!45!black] (4.3,1.55) circle (1.6pt);
+\filldraw[tfgreen!45!black] (5.9,1.55) circle (1.6pt);
+\draw[tfgray!70,dashed] (4.3,0) -- (4.3,1.55);
+\draw[tfgray!70,dashed] (5.9,0) -- (5.9,1.55);
+\draw[decorate,decoration={brace,amplitude=4pt,mirror},tfgold!70!black,thick]
+  (4.3,-0.12) -- (5.9,-0.12) node[midway,below=4pt,font=\scriptsize,black]{$2w_k$ (handover window)};
+\node[anchor=south,font=\scriptsize,tfgray] at (2.1,0.15) {handover holds: $\sigma_k\ge\mu_k/2$};
+\node[anchor=south,font=\scriptsize,tfgray] at (8.3,0.15) {atom $k{+}1$ takes over};
+\node[anchor=west,font=\scriptsize,tfred!70!black,align=left] at (0.25,3.55)
+  {onset anchored at $\delta_c=2w_k$\\[-1pt]($R^2=0.968$) --- a crossing,\\[-1pt]not a singularity};
+\end{tikzpicture}
+\caption{\schem The crossing mechanism of T102. \emph{Literal:} $\mu_k$ enters exactly once and
+linearly, so the condition is a two-sided sandwich through the Schur profile $\sigma_k(\delta)$ against
+the flat level $\mu_k/2$; the window width $2w_k$ lies between the crossings in $16/16$ zones; the onset
+is anchored at $\delta_c=2w_k$ with $R^2=0.968$; the candidate bound $w_k\ge A_k\mu_k^{1/q_k}$ holds
+$16/16$ with ratio $0.749$--$0.940$. \emph{Schematic:} the curve shapes and all absolute
+scales.}\label{fig:crossing}
+\end{figure}
+
+\noindent The same run performed the most useful kill of the arc: a triple decomposition test showed
+that the T101 law in $C/g$ was a \emph{proxy}. $g_k$ is causally impossible (the form $Q_{k-1}$ is blind
+to the next atom), statistically dispensable (a causal law $C\cdot u$ has $\mathrm{CV}$ $23.3\%$ against
+$27.6\%$), and arithmetically only a ceiling ($C_k\le g_k\mu_k$ exactly; the $16$-zone extrapolation
+violates the ceiling from $k=69$; checked over $18\,120$ prime-power atoms to $n=200\,000$).
+
+\subsection{The instrument, rebuilt (T103), and the two doors}
+T103 (\texttt{instrument\_probe.py}, $29/29$, \textsc{instrument-improved}) rebuilt the closure
+instrument with certified weights $w_j\ge1/\lambda_j$ and a $\theta$-weighted band sum, reproducing both
+anchors exactly. With \emph{one} fixed, $k$-uniform instrument ($\Lambda_0=3$, $r=2$, no per-zone
+tuning) the closure map jumps from $7/64$ to $44/64$ and the race slope halves
+(Figure~\ref{fig:race}). The honest price is explicit: the number of explicit modes grows $2\to232$.
+And the verdict relocated the remainder: it is no longer the bulk (the bulk is measurably not
+low-rank --- effective rank up to $0.579\dim E_-$) but the \emph{wing slack} $S=1-\rho$, which falls
+$0.2091\to0.0392$.
+
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[font=\scriptsize,x=1cm,y=1cm]
+\def\cw{0.30}
+% left grid: 7/64
+\begin{scope}[shift={(0,0)}]
+  \foreach \c in {1,...,16}{\foreach \r in {1,...,4}{
+     \draw[tfgray!35] ({(\c-1)*\cw},{(\r-1)*\cw}) rectangle ++(\cw,\cw);}}
+  \foreach \c/\rmax in {1/4,2/2,3/1}{\foreach \r in {1,...,\rmax}{
+     \fill[tfgreen!45!black,opacity=0.75] ({(\c-1)*\cw+0.02},{(\r-1)*\cw+0.02}) rectangle ++({\cw-0.04},{\cw-0.04});}}
+  \node[anchor=north west,align=left,font=\scriptsize] at (0,-0.12)
+    {\textbf{T101 instrument: 7/64}\\[-1pt]closes only in the first zones};
+  \node[rotate=90,anchor=south,font=\scriptsize,tfgray] at (-0.28,0.6) {wing fraction};
+\end{scope}
+% right grid: 44/64
+\begin{scope}[shift={(6.1,0)}]
+  \foreach \c in {1,...,16}{\foreach \r in {1,...,4}{
+     \draw[tfgray!35] ({(\c-1)*\cw},{(\r-1)*\cw}) rectangle ++(\cw,\cw);}}
+  \foreach \c/\rmax in {1/4,2/4,3/4,4/4,5/4,6/4,7/4,8/4,9/4,10/3,11/3,12/2}{\foreach \r in {1,...,\rmax}{
+     \fill[tfgreen!45!black,opacity=0.75] ({(\c-1)*\cw+0.02},{(\r-1)*\cw+0.02}) rectangle ++({\cw-0.04},{\cw-0.04});}}
+  \node[anchor=north west,align=left,font=\scriptsize] at (0,-0.12)
+    {\textbf{T103 instrument: 44/64}\\[-1pt]one fixed $k$-uniform instrument ($\Lambda_0=3$, $r=2$)};
+\end{scope}
+\node[anchor=south,font=\scriptsize,tfgray] at (2.4,1.28) {$16$ zones $\times$ $4$ wing fractions};
+\node[anchor=south,font=\scriptsize,tfgray] at (8.5,1.28) {$16$ zones $\times$ $4$ wing fractions};
+\end{tikzpicture}
+\caption{\schem The closure map. \emph{Literal:} the grid is $16$ zones $\times$ $4$ wing fractions
+$=64$ cells; the old instrument closes $7$ of them, the rebuilt one closes $44$ with a single fixed
+$k$-uniform setting ($\Lambda_0=3$, $r=2$) and no per-zone tuning. \emph{Schematic:} \emph{which} cells
+are shaded --- the diary records the totals, not the pattern; the shading is drawn as a monotone wedge
+purely to visualise the counts.}\label{fig:closuremap}
+\end{figure}
+
+\noindent The convergence recorded at the end of T102 is the pivot of the whole arc: T103's wing slack
+$S=1-\rho$ and T102's Schur dressing are \emph{the same object seen from two sides}. Both doors lead to
+the wing near-null direction.
+
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[font=\small,
+  box/.style={draw=tfblue!70!black,fill=tfblue!5,rounded corners=2pt,inner sep=5pt,align=center,text width=54mm},
+  tgt/.style={draw=tfgold!70!black,fill=tfgold!8,rounded corners=2pt,inner sep=5pt,align=center,text width=62mm},
+  nxt/.style={draw=tfgreen!65!black,fill=tfgreen!6,rounded corners=2pt,inner sep=5pt,align=center,text width=62mm},
+  ar/.style={-{Latex[length=2mm]},draw=tfgray!80,thick}]
+\node[box] (a) at (-3.6,0) {\textbf{Door A} --- T102 (arithmetic bound)\\[1pt]
+  \footnotesize the onset is manufactured by the Schur dressing against $E_0\oplus E_+$;
+  it eats $35.7\%$--$97.3\%$ of the bare eigenvalue};
+\node[box] (c) at (3.6,0) {\textbf{Door C} --- T103 (instrument)\\[1pt]
+  \footnotesize the remainder is not the bulk but the wing slack $S=1-\rho$,
+  falling $0.2091\to0.0392$};
+\node[tgt] (o) at (0,-2.2) {\textbf{One object:} the wing near-null direction\\[1pt]
+  \footnotesize dressing almost rank one (effective rank $1.07$--$2.7$; $99.7$--$100\%$ of the
+  near-null direction in \emph{one} prolate mode)};
+\node[nxt] (n) at (0,-4.2) {T104 $\to$ T105 $\to$ T106 $\to$ T107\\[1pt]
+  \footnotesize certify \emph{bare}, prove the avoidance law, split the parity channels,
+  reduce to one scalar ratio};
+\draw[ar] (a) -- (o);
+\draw[ar] (c) -- (o);
+\draw[ar] (o) -- (n);
+\end{tikzpicture}
+\caption{Two doors, one object. Both entries are literal diary findings; the convergence statement
+(``the same object from two sides'') is quoted from the T102 closing note.}\label{fig:doors}
+\end{figure}
+
+\subsection{Inductive chains, and the death of the margin route (T104)}
+T104 ran as \emph{two independent arms} after a file collision between two parallel workers was resolved
+by keeping both implementations of the same contract --- \texttt{schur\_profile\_bound\_probe.py}
+($21/21$) and \texttt{schur\_profile\_chain\_probe.py} ($47/47$). All core findings converged, which
+makes it a de-facto independent replication.
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The naive margin route is dead}: $M\ge m\cdot\mathrm{Id}$ holds in $0/16$ zones; the
+coupling mass to margin ratio is $10^3$--$10^6$; $m$ vanishes in the continuum like $M^{-1.7}$ (fit).
+\item \textbf{The mechanism is avoidance}: the coupling $B_-$ decouples from the soft bulk modes ---
+the softest mode carries $0.00\%$ of the coupling mass for $n\ge3$, and the mass sits in mid/high
+bands (lowest band only $2$--$12\%$). Positivity is not saved by a margin but by structural avoidance.
+\item \textbf{Exact spectral-split chains close $16/16$} with finite data: arm A via the exact
+block-inverse identity with matrix caps in PSD order (headroom $1.15$--$1.44$, reach
+$\gamma_{\max}=0.50$--$0.90$); arm B via a threshold split with an $O(1)$, resolution-stable threshold
+$w=2.47$--$5.90$ --- but requiring $r_{\min}=64\ldots1024$ soft modes $\propto M$, which makes the
+continuum statement a spectral-density condition.
+\item A recommendation from T96/T103 was tested and \emph{rejected}: the prolate wing basis loses
+against the raw basis in both arms.
+\end{itemize}
+
+\noindent Consequence: the hard core migrated from $\sigma_k$ as a whole to four named ingredients ---
+a lower bound on $\mathrm{bare}_k=\lambda_{\min}(\Qfull|_{E_-})$, the soft dressing scalar $L$, finite
+induction data, and a one-sided edge estimate instead of a fit. The chain around them is classical
+(Schur complement, exact block inverse, Parseval/Bessel, Weyl) and fit-free.
+
+\subsection{The certified bare bound and the avoidance theorem (T105)}
+T105 (\texttt{bare\_wing\_bound\_probe.py}, $28/28$, \textsc{one-of-two}) delivered one of the two
+missing ingredients in closed form. First it resolved the T104 arm discrepancy: \emph{bare} depends only
+on $(u_k,\delta)$ --- the window centre cancels ($\le0.74\%$ drift under $8\times$ refinement) --- with
+the exact split $\mathrm{bare}=\mu_k/2+b_0$. Then three classical steps (Bessel; a Legendre/level-set
+optimisation at $k(\pi/\delta)$; Cauchy--Schwarz at the pole pair) collapse to a closed lower bound:
+
+\begin{keyeq}$\displaystyle
+b_0\ \ge\ \frac{\delta}{\pi}\int_0^{\pi/\delta}\!\!k(t)\,dt\;-\;\delta\,K_{\max}\;-\;4\left(\cosh\tfrac u2-1\right)\sinh\tfrac\delta2 .$\end{keyeq}
+
+\noindent This is the band average of the archimedean kernel over the band conjugate to the wing, of
+size ${\sim}\log(1/2\delta)-1$. It is positive in $16/16$ zones ($1.27$--$3.54$) at $81.1$--$92.7\%$ of
+the measured value (median $92\%$), it sharpens as the wing flattens, and it needs no eigenvalue or
+induction data.
+
+Second, the \emph{avoidance law} became a theorem rather than an observation:
+$\Qfull\succeq0\Rightarrow\|B^{\mathsf T}v_i\|^2\le w_i\Lambda_-$ (a semi-inner-product argument;
+coupling proportional to the mode eigenvalue), verified on every mode of every zone with worst ratio
+$0.377$. That explains the measured $0.00\%$ avoidance exactly. Alongside it, an exact parity
+superselection: $JQJ=Q$ ($5.7\times10^{-15}$) and $JB=-BR$ ($3.4\times10^{-15}$) --- the two channels do
+not mix, and the softest mode is $J$-even in $16/16$ zones. Notably the \emph{Euclidean} angles are not
+small (cosine up to $1.0$): the avoidance lives in the form metric, as a Friedrichs angle.
+
+What T105 left is one Loewner statement:
+$\Qfull(\alpha)\succeq(\mu_k/2)P_-^{(k)}\iff\rho\le1-(\mu_k/2)/\mathrm{bare}_k$ --- a Friedrichs-angle /
+spectral-density condition, explicitly \emph{not} a margin condition. The free cap
+$L\le\Lambda_-=5.63$--$7.52$ diverges like $\log(1/D)$, so the certificate has to come from the spectral
+density near the soft end.
+
+\subsection{Parity superselection: the pole splits (T106)}
+T106 (\texttt{friedrichs\_angle\_probe.py}, $32/32$, \textsc{density-mapped}) killed two routes and
+found the structural result of the arc. The kills are in Section~\ref{sec:kills}. The finding:
+
+\begin{keyeq}$\displaystyle
+ab^{\mathsf T}+ba^{\mathsf T}\;=\;ss^{\mathsf T}-tt^{\mathsf T}\qquad(10^{-18};\ Ja=b)$\end{keyeq}
+
+\noindent The rank-2 Weil pole splits \emph{exactly} into a positive rank-one lift in the $J$-even
+channel and a negative rank-one pressure in the $J$-odd channel. The Toeplitz part has exactly one
+negative eigendirection; it is $J$-even, and $ss^{\mathsf T}$ removes it precisely there. The odd
+channel never needed the pole at all.
+
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[font=\small,
+  src/.style={draw=tfgold!70!black,fill=tfgold!8,rounded corners=2pt,inner sep=5pt,align=center,text width=52mm},
+  ev/.style={draw=tfgreen!65!black,fill=tfgreen!6,rounded corners=2pt,inner sep=5pt,align=center,text width=62mm},
+  od/.style={draw=tfred!70!black,fill=tfred!5,rounded corners=2pt,inner sep=5pt,align=center,text width=62mm},
+  ar/.style={-{Latex[length=2mm]},draw=tfgray!80,thick}]
+\node[src] (p) at (0,0) {rank-2 Weil pole\\[1pt]
+  $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$ \ \footnotesize($10^{-18}$)};
+\node[ev] (e) at (-4.3,-2.3) {\textbf{$J$-even channel}\\[1pt]
+  \footnotesize $+ss^{\mathsf T}$: rank-one \emph{lift}. Carries the single negative Toeplitz
+  direction --- removed exactly there. Soft edge lives here ($3.7$--$100\times$ softer);
+  $\rho_+=0.076$--$0.464$. Angle chain closes $16/16$ ($0.107$--$0.583\times$ budget).};
+\node[od] (o) at (4.3,-2.3) {\textbf{$J$-odd channel}\\[1pt]
+  \footnotesize $-tt^{\mathsf T}$: rank-one \emph{pressure}. Never needed the pole; Toeplitz part
+  \emph{positive}. $\rho_-=0.557$--$0.826$ --- the dangerous channel despite the better density.
+  Angle chain closes $9/16$.};
+\node[draw=tfgray!60,fill=tfgray!4,rounded corners=2pt,inner sep=5pt,align=center,text width=86mm]
+  (r) at (0,-4.85) {\textbf{The remaining object (R)}\\[1pt]
+  $\Qfull(\alpha_k)|_{J=-1}\ \succeq\ (\mu_k/2)\,P_-|_{J=-1}$ \quad on $\lceil p/2\rceil$ dimensions};
+\draw[ar] (p) -- (e);
+\draw[ar] (p) -- (o);
+\draw[ar] (o) -- (r);
+\end{tikzpicture}
+\caption{Parity superselection (T106). All numbers are literal; the layout is illustrative. The
+practical consequence: it is not the density that decides the angle but the \emph{avoidance} --- the
+dangerous channel is the one with the better density. T105's certified bare bound sits $16/16$ exactly
+in the hard channel, and $\rho_-$ is resolution-stable ($\le17.6\%$).}\label{fig:parity}
+\end{figure}
+
+\noindent The channel-wise angle chain closes $16/16$ in the even channel and $9/16$ in the odd
+channel, against only $3/16$ unsplit; all $16$ handovers close at operating depth in both channels under
+the exact Schur criterion, with certified $b_0$ at $89$--$93\%$. Certified after T106: bare, the parity
+split, the pole splitting, the channel inertia, the avoidance law, the growth inequality, the
+accumulation bounds. Measured: $\rho_-$.
+
+\subsection{One scalar ratio (T107)}
+T107 (\texttt{odd\_channel\_closure\_probe.py}, $30/30$, \textsc{scalar-tractable}) reduced the matrix
+statement (R) to a scalar one. Sherman--Morrison gives exactly
+$\text{(R)}\iff s^*\le1$ (identity at $3.4\times10^{-11}$; equivalence confirmed $16/16$ against
+Rayleigh--Ritz; precondition $G\succ0$ via Cholesky $16/16$) --- but $s^*$ is \emph{saturated}
+($0.99885\ldots0.99999$, with only $n=2$ at $0.2569$), so no uniform $s^*$ chain can work. The Woodbury
+decomposition rescues it: $s^*=\tau+\kappa$ and
+
+\begin{keyeq}$\displaystyle
+\text{(R)}\iff r:=\frac{\kappa}{\varepsilon}\le1,\qquad \varepsilon:=1-\tau,
+\qquad\text{measured } r=0.0053\ldots0.1814 .$\end{keyeq}
+
+\noindent Two orders of magnitude of headroom instead of five decimal places, and $s^*$ is
+resolution-stable (spread $\le2.60\%$ over $M=600/900/1200$). The synthesis is stated with the usual
+asymmetry: certified-closed $0/16$, measured $16/16$ (with $q=1.31$--$4.16$ at $M=1200$, replacing
+T106's $0.747$--$1.156$ --- a factor $1.7$--$2.5$ gain). Exactly one object is missing: a certified
+positive lower bound for $\varepsilon=1-\tilde t^{\mathsf T}T_{\mathrm{odd}}^{-1}\tilde t$ --- how far
+the pole vector is from exhausting the odd channel --- or, since $\varepsilon$ and $\kappa$ both fall
+with $M$ ($\varepsilon\sim M^{-1.99\ldots-1.69}$, fit), a certificate for the \emph{ratio} $r$ itself.
+The named route is via a wing statement of the T105 type plus an avoidance norm, explicitly not via
+Szeg\H{o}.
+
+\subsection{The \texorpdfstring{$\varepsilon$}{epsilon} identity, and two scalars (T108)}
+T108 (\texttt{ratio\_certificate\_probe.py}, $44/44$, \textsc{epsilon-identity}) turned the missing
+positivity of $\varepsilon$ from a bound to be won into an \emph{identity}. Everything hangs on the pole
+response $x:=T_{\mathrm{odd}}^{-1}\tilde t$, and three exact identities (verified at
+$10^{-11}$--$10^{-13}$) pin it down:
+$\varepsilon=x^{\mathsf T}Q|_{\mathrm{odd}}x/\tau$ --- so $\varepsilon$ \emph{is} a
+$Q|_{\mathrm{odd}}$-energy, not an accident of subtraction ---
+$1/\varepsilon=1+\tilde t^{\mathsf T}Q|_{\mathrm{odd}}^{-1}\tilde t$, and the overlap of $\varepsilon$
+and $\kappa$ is exactly one rank-one term $hh^{\mathsf T}/\varepsilon$, so that
+$\text{(R)}\iff\hat r=(\mu/2)\lambda_{\max}(\Gamma+hh^{\mathsf T}/\varepsilon)\le1$. The third route
+supplies the classical reading: $\tilde t$ is exactly two-term geometry, $\tau$ a $2\times2$
+Christoffel--Darboux form, and $\varepsilon$ exactly the square of the last Cholesky pivot --- the
+Szeg\H{o}/Levinson prediction error. \emph{The positivity of $\varepsilon$ coincides with the induction
+positivity in the odd channel}; it is not a second, independent thing to certify.
+
+Two consequences, and one correction of the previous picture. The consequence: (R) reduces from an
+$M/2$-dimensional Loewner statement to \textbf{two scalars} --- $\omega<1$ (measured
+$0.2366$--$0.7531$, $16/16$; the T105 structure survives the parity split verbatim,
+$V^{\mathsf T}S|_{\mathrm{odd}}V=-\tfrac12 I$ at $4.9\times10^{-14}$) and one statement at the vector
+$x$. The chain $\text{(R)}\Leftarrow[\omega<1]\wedge[\lambda_{\min}(Q|_{\mathrm{odd}})\ge
+(\mu/2)\tau\theta/(1-\omega)]$ has $C1$ closing $16/16$ (margin $5.5$--$178$; $\ge1$ at all $48$ ladder
+points, $2.7$--$343$), $C2$ $15/16$, $C3$ $0/16$ --- the first time a margin chain in this arc is
+\emph{not vacuous}: the induction margin it needs is explicitly $9.3\times10^{-8}$--$3.7\times10^{-3}$,
+i.e.\ two to six orders of magnitude \emph{below} $\mu/2$. The correction: the soft-edge picture of T107
+was wrong in its mechanism --- $\tau$ sits to $99.66\%$ on modes $\lambda\ge1$, and $\|h\|^2$ is small by
+sign cancellation ($\sum|k|=401$ versus $\sum k=1$), not by softness. T107's Cauchy--Schwarz chain turns
+out to be exactly the Weyl bound (slack $1.0000$).
+
+What is exactly open after T108 is one boundary value. The remaining object is a certified upper bound
+for the avoidance norm $\|V^{\mathsf T}T_{\mathrm{odd}}^{-1}\tilde t\|^2$, and on $8$ zones that is
+literally the single edge entry $x_0$ of an explicit vector (suppressed at
+$|x_0|/\max|x|=2.9\times10^{-3}$--$5.7\times10^{-3}$, with a linear edge profile $r^{1.01}$ quoted as a
+fit) --- a boundary-decay statement about an explicit vector, the same object class as the T105 carrier
+separation. $\hat r$ is flat in $M$ ($6.1\times$ more stable than $\varepsilon$) and $r,\hat r<1$ at all
+$92$ (zone, $M$) points up to $M=3000$, tightest at $0.9648$: measured, on resolved zones, as always.
+T109 (\texttt{boundary\_decay\_probe.py}, contract \texttt{BOUNDARY.DECAY} --- Combes--Thomas/Green
+decay, a Szeg\H{o} recursion bound, $\omega$ via PSD matrix caps) was running at the time of writing and
+is \emph{not} reported here.
+
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[font=\small,
+  eq/.style={draw=tfgold!70!black,fill=tfgold!8,rounded corners=2pt,inner sep=4.5pt,align=center,text width=104mm},
+  st/.style={draw=tfblue!70!black,fill=tfblue!5,rounded corners=2pt,inner sep=4.5pt,align=center,text width=104mm},
+  op/.style={draw=tfred!70!black,fill=tfred!5,rounded corners=2pt,inner sep=4.5pt,align=center,text width=104mm},
+  ar/.style={-{Latex[length=2.2mm]},draw=tfgray!85,thick},
+  lbl/.style={font=\scriptsize,tfgray,align=left,anchor=west}]
+\node[eq] (rh) at (0,0) {\textbf{RH} $\iff$ Weil positivity $\iff$ \textbf{I5}
+  \ \footnotesize(one-family form; T79/T82, ledger \vref{v541})};
+\node[st] (hand) at (0,-1.55) {per-zone \textbf{handover induction}: \ $D_k(\alpha)\le\mu_k/2$
+  \ \footnotesize(T98; holds $64/64$ on the $16$ resolved zones)};
+\node[st] (schur) at (0,-3.1) {\textbf{Schur profile} sandwich: \ $\sigma_k(\delta)\ge\mu_k/2$
+  \ \footnotesize(T102; $\mu_k$ linear, onset anchored at $\delta_c=2w_k$)};
+\node[st] (bare) at (0,-4.65) {$\mathrm{bare}_k$ \textbf{certified} $+$ soft dressing $L$
+  \ \footnotesize(T105; $b_0$ closed form, positive $16/16$ at $81.1$--$92.7\%$)};
+\node[st] (par) at (0,-6.2) {\textbf{parity split}: even channel closes $16/16$; hardness $\to$ odd
+  channel \footnotesize(T106)};
+\node[st] (loew) at (0,-7.75) {\textbf{(R)}: $\Qfull|_{J=-1}\succeq(\mu_k/2)P_-|_{J=-1}$ on
+  $\lceil p/2\rceil$ dimensions \footnotesize(T106)};
+\node[st] (ratio) at (0,-9.3) {$\iff s^*\le1$ (saturated) $\iff$ \ \textbf{$r=\kappa/\varepsilon\le1$}
+  \ \footnotesize(T107; measured $0.0053$--$0.1814$)};
+\node[op] (eps) at (0,-10.85) {$\iff$ two scalars: $\omega<1$ \ and one statement at
+  $x=T_{\mathrm{odd}}^{-1}\tilde t$ \ \footnotesize(T108; $\varepsilon$ identity; open object $=$ one
+  boundary value $x_0$)};
+\foreach \a/\b in {rh/hand,hand/schur,schur/bare,bare/par,par/loew,loew/ratio,ratio/eps}
+  \draw[ar] (\a) -- (\b);
+\node[lbl] at (5.6,-0.78) {equivalence \emph{typing}};
+\node[lbl] at (5.6,-2.33) {architecture of a};
+\node[lbl] at (5.6,-2.63) {\emph{sufficient} route,};
+\node[lbl] at (5.6,-2.93) {on finite windows};
+\node[lbl] at (5.6,-8.53) {exact reduction};
+\node[lbl] at (5.6,-10.08) {exact reduction};
+\node[draw=tfred!60!black,dashed,fill=tfred!4,rounded corners=2pt,inner sep=3.5pt,
+      align=left,text width=46mm,font=\scriptsize,anchor=west] at (5.55,-5.4)
+  {\textbf{The asymptotic wall.} Every step below the top line is established on
+  \emph{16 resolved zones} at finite resolution. Sixteen zones are not all zones; no
+  uniform-in-$k$ constant is certified anywhere in this cascade.};
+\end{tikzpicture}
+\caption{The reduction cascade, with its arrow types made explicit. The top line is an
+\emph{equivalence typing} produced by an exact identity (Section~\ref{sec:i5}); the arrows below are the
+architecture of a would-be sufficient route, verified on finitely many windows only. The dashed box is
+the reason this figure is not a proof sketch.}\label{fig:cascade}
+\end{figure}
+
+% =====================================================================
+\section{The kill list}\label{sec:kills}
+% =====================================================================
+\noindent A program that only reports what survived is not reporting. These are the readings and routes
+that were refuted \emph{by the program's own probes}, each with the measurement that killed it. They are
+listed as a section rather than as footnotes because they are the more transferable output: each one
+tells a later attempt where not to go.
+
+\begin{enumerate}[leftmargin=1.6em,label=\textbf{K\arabic*.}]
+\item \textbf{The essential-singularity reading of the onset} (T96, refuted T102). T96 read the
+counterfactual onset as super-polynomial, compatible with $\exp(-c/\delta')$, i.e.\ an essential
+singularity. T102 showed the onset is \emph{anchored} at the crossing $\delta_c=2w_k$ of two finite
+quantities ($R^2=0.968$), that exponential versus power behaviour is not separable at this resolution,
+and that the scatter of $c$ ($\mathrm{CV}$ $103\%$) collapses to $c'=1.52$ in the scale-free variable.
+The essential-singularity reading is \emph{compatible but not distinguished} --- and it is no longer
+used.
+\item \textbf{The $C/g$ law as a causal law} (T101, refuted T102). Triple negative: $g_k$ is causally
+impossible ($Q_{k-1}$ is blind to atom $k+1$), statistically dispensable (causal law $C\cdot u$:
+$\mathrm{CV}$ $23.3\%$ versus $27.6\%$), and arithmetically only a ceiling ($C_k\le g_k\mu_k$ exactly;
+the $16$-zone extrapolation violates its own ceiling from $k=69$; checked on $18\,120$ prime-power
+atoms to $n=200\,000$). \emph{It was a proxy.}
+\item \textbf{The naive margin route} (T104). $M\ge m\cdot\mathrm{Id}$ holds in $0/16$ zones; the
+coupling-mass to margin ratio is $10^3$--$10^6$; $m\sim M^{-1.7}$ vanishes in the continuum (fit). The
+genuine form is nearly singular on the induction window and no margin rescues it. (The prolate wing
+basis recommended by T96/T103 was tested in both arms and also rejected.)
+\item \textbf{The density chain} (T106). It would need a hard gap $w_0\ge0.55$--$2.44$; measured
+$5.3\times10^{-6}$--$1.1\times10^{-3}$ --- short by a factor $5\times10^2$ to $3.6\times10^5$. Dead for
+good.
+\item \textbf{The Landau--Widom anchor} (T106). The wrong classical anchor for this problem
+(rms $0.50$--$1.55$). The right one is Grenander--Szeg\H{o} on the Planck-coarsened symbol --- averaging
+over the mode-spacing cell $\pi/M$ --- which hits $0.92$--$2.43$ and is better on $67/72$ pairs. This
+also explains why a negative symbol (dip $-21.3\ldots-3.4$) still gives $Q\succeq0$: the atoms oscillate
+exactly at the window's Planck scale.
+\item \textbf{The accumulated invariant with self-propagation} (T106). A no-go \emph{with a measured
+mechanism}. The wing demand gives $\beta_{\mathrm{wing}}=2.21$--$14.43>1$ on $16/16$, but inherited
+demands give $\beta_{\mathrm{int}}\sim10^{-2}$ on $15/15$: an accumulated invariant with absolute
+anchoring is false. The reason is transport --- in a larger window an old wing pair becomes an interior
+pair and draws $99.7$--$99.95\%$ of its demand from the $64$ softest modes (coupling $751$--$2653\times$
+stronger). No self-propagation either ($\beta_{\mathrm{on}}<1$ on $15/15$, loss $13$--$320\times$,
+$\theta_k=0.9866$--$0.9998$). \emph{The wing margin is an edge property of the window, not a property of
+the pair.} What survives is the window-wise family $\sigma_k(\delta_0)\ge1.31(\mu_k/2)$, uniform in $M$
+with drift $\le2.01\times$.
+\item \textbf{The symbol route for the odd channel} (T107). Structurally dead, not merely weak: the
+symbol lower bound for $T_{\mathrm{odd}}$ is certified but \emph{negative}
+($\lambda_{\mathrm{cert}}=-2.54\ldots-0.81$) against a measured
+$\lambda_{\min}(T_{\mathrm{odd}})=4.7\times10^{-5}\ldots6.4\times10^{-2}$ and a symbol infimum of
+$-22\ldots-6$: five orders of magnitude and a sign change. The soft edge of $T_{\mathrm{odd}}$ is a pure
+finite-section effect that no symbol can see. Coarse certified chains (Cauchy--Schwarz against
+$\lambda_{\min}$) close $0/16$ --- and fail even with the \emph{measured} $\lambda_{\min}$, so it is a
+category error, not a precision problem.
+\item \textbf{Three certificate candidates for the avoidance norm} (T108). Killed \emph{quantitatively},
+which is the useful form: the cancellation route ($\sum|k|=401$ against $\sum k=1$), the Bessel route
+(off by $10^7$) and the pole Cauchy--Schwarz route (off by $10^6$). $\omega_{\mathrm{cert}}$ is blocked
+by the compression Schur distance alone ($0.18$--$0.52$). What replaced them is not a fourth bound of
+the same kind but a different object class: a boundary-decay statement about one explicit vector.
+\item \textbf{Two earlier structural kills}, recorded here because they still bound the design space:
+the cross-block $\sqrt{\lambda_0}$ law is Douglas range inclusion and therefore circular (T98), and the
+cone-library route saturates at $5/24$ coverage and is dead as a covering strategy (T72, promoted into
+\vref{v540} as a named limit). Likewise the seam route to the archimedean place (T20--T25) and the
+Kohnen-plus route to the central values (T44, promoted into \vref{v537} as a scope fence).
+\end{enumerate}
+
+% =====================================================================
+\section{Honest status and outlook}\label{sec:status}
+% =====================================================================
+\subsection{What is certified, what is measured, what is hypothesis input}
+\begin{keybox}[The three-way split, stated once]
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the seven ledger modules
+of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
+superselection $JQJ=Q$, $JB=-BR$, the pole splitting
+$ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
+$\Qfull\succeq0\Rightarrow\|B^{\mathsf T}v_i\|^2\le w_i\Lambda_-$, the growth inequality, the
+accumulation bounds, the Sherman--Morrison/Woodbury reduction of (R) to $r\le1$, and the three T108
+identities ($\varepsilon$ as a $Q|_{\mathrm{odd}}$ energy, the rank-one overlap $hh^{\mathsf T}/
+\varepsilon$, and $\varepsilon$ as the square of the last Cholesky pivot).\\[3pt]
+\textbf{Measured} (holds on the resolved windows; no uniform constant): $\rho_-$; the ratio
+$r=0.0053$--$0.1814$ and $\hat r<1$ at all $92$ resolution points; $\omega=0.2366$--$0.7531$; the
+closure map $44/64$; the handover margins; the two race slopes; every scaling
+exponent quoted in this document.\\[3pt]
+\textbf{Hypothesis input / classical} (used, named, not proved here): Kneser, Witt/Eichler, Shimura,
+Waldspurger/Baruch--Mao, Cohen, Weil--Guinand, Bombieri, Yoshida, Connes--Consani, Douglas,
+Slepian--Landau--Pollak, Gronwall/Robin (unconditional form only), Grenander--Szeg\H{o},
+Sherman--Morrison/Woodbury, Christoffel--Darboux, Szeg\H{o}--Levinson, the Weyl bound.
+\end{keybox}
+
+\subsection{The asymptotic mountain}
+Three separate reasons why the cascade of Figure~\ref{fig:cascade} is not a route to a theorem as it
+stands, and why the document does not present it as one:
+
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
+established on the resolved zones $n=2\ldots29$. Not one constant in the chain is certified uniformly in
+$k$. The T101 requirement list (A)--(D) is unchanged: the hardness would sit in (A), a sharp,
+non-perturbative arithmetic lower bound at a Weil-positivity edge.
+\item \textbf{Finite resolution is a wall, and a measured one.} Numerics as a witness is exhausted
+beyond $\alpha\approx0.55$ ($O(M^{-1.8})$, T96); the finite-block route was judged the structurally
+wrong instrument, not an under-resourced one (T92); $\lambda_{\min}$ collapses geometrically by a factor
+$11.4$ per mode, so double precision ends at $N\approx10$ while $N=24$ would need $10^{-27}$ entries.
+\item \textbf{The induction base is not free either.} The recursion terminates arithmetically
+($240/240$ in $\le4$ steps to the classical zone, T99; $960/960$ with longest chain $13$ steps, T101),
+but the zone peaks need percent-level bounds, not $0.1\%$ (T99: extrapolated peak margins
+$+2.7\times10^{-2}$, $+1.4\times10^{-2}$, $+1.7\times10^{-2}$, i.e.\ $2.2$--$5.5\%$ of $\mu_k/2$, with
+zone $5$ saturating exactly).
+\end{enumerate}
+
+\subsection{Extraction candidates: the community-checkable path}
+The useful question at this point is not ``how close is the program to RH'' --- it is not close, and no
+such claim is made --- but ``which pieces of it are unconditional theorems that someone else can
+check''. Two candidates are named in the diary and are repeated here as the honest outlook:
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Zone extension beyond $\log2$.} Unconditional Weil positivity is classically known exactly
+up to support width $\log2$ (Yoshida 1992; Bombieri 2000). T91's target inequality --- for
+$a\in(\log2,\,a^*]$ and $\|f\|=1$, \ $(P_{\mathrm{pole}}+A_{\mathrm{arch}})(f)\ge\sqrt2\log2\cdot h_f(\log2)$
+--- is typed as \emph{provable-shaped} and would, if proved, be a standalone classical result: a zone
+extension past Bombieri's boundary. Its typing is explicit and unflattering: RH $\Rightarrow$ (T), but
+(T) $\not\Rightarrow$ RH. T92 showed the finite-block route to it is the wrong instrument; that
+narrows, rather than closes, the target.
+\item \textbf{The matching lemma.} Already proved exact-integer on $[4,10^6]$ with an explicit margin
+inside \vref{v541}, and reduced by T77 to a restricted $\sigma_{-1}$ divisor bound in the Gronwall
+regime --- with the honest note that Robin's \emph{unconditional} 1983 bound suffices at the measured
+headroom, so the RH-equivalent sharpening is not needed. Closing the tail (the correlated-cancellation
+lemma on credit-rich non-coherent atoms) would be a self-contained classical statement.
+\end{itemize}
+
+\begin{gapboxnb}[Final fence]
+The prime line of TFPT has produced seven machine-checked modules about lattice-native Hecke structure,
+a finite relative-trace identity, and an exactly closing transport ledger. It has \emph{not} produced
+evidence for the Riemann Hypothesis, and the one place where RH appears --- I5 --- appears as an
+equivalence typing that names the residual difficulty rather than reducing it. The corresponding open
+gates in the ledger (\texttt{ZETA.CENSUS.TO.GL1}, \texttt{ZETA.HP.CARRIER}) are untouched by everything
+in Sections~\ref{sec:i5}--\ref{sec:certification}, and no marker moves anywhere on account of this
+document.
+\end{gapboxnb}
+
+% =====================================================================
+\appendix
+\section{Probe index, diary parts T11--T108}\label{app:index}
+% =====================================================================
+\noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
+omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
+Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
+consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
+load-bearing artefact. The index covers the $98$ parts T11--T108 that the current diary file records
+($99$ runs --- T104 was a double run with two independent arms --- and $2509$ green checks); the ten
+earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
+diary at T108: \textbf{$108$ probes, $2701/2701$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T109
+(\texttt{boundary\_decay\_probe.py}, contract \texttt{BOUNDARY.DECAY}) was still running when this
+document was written and is deliberately absent.
+
+{\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\begin{xltabular}{\linewidth}{@{}p{0.95cm} >{\raggedright\arraybackslash}p{3.1cm} Y >{\raggedright\scriptsize\arraybackslash}p{3.35cm} p{1.15cm}@{}}
+\toprule
+\textbf{Part} & \textbf{Probe} & \textbf{Contract / finding} & \textbf{Verdict} & \textbf{Checks}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Part} & \textbf{Probe} & \textbf{Contract / finding} & \textbf{Verdict} & \textbf{Checks}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+T11 & \texttt{\scriptsize e8\_\allowbreak glue\_\allowbreak chi4\_\allowbreak signed\_\allowbreak theta} & the $\chi_4$-signed glue theta welds parts 6 and 7 & NO PROMOTION & 19/19\\
+T12 & \texttt{\scriptsize e8\_\allowbreak glue\_\allowbreak lseries\_\allowbreak selfdual} & L-series of the signed glue count; Ap\'ery/$\zeta(3)$ bridge; Poisson self-dual width $2\pi$ & NO PROMOTION & 16/16\\
+T13 & \texttt{\scriptsize e8\_\allowbreak glue\_\allowbreak character\_\allowbreak atlas} & glue-character atlas of $E_8$ & NO PROMOTION & 11/11\\
+T14 & \texttt{\scriptsize seam\_\allowbreak selfdual\_\allowbreak width} & SEAM.SELFDUAL.WIDTH; unimodularity gate & DEFLATED & 13/13\\
+T15 & \texttt{\scriptsize zeta\_\allowbreak arith\_\allowbreak completion} & ZETA.ARITH.COMPLETION; shell Hamiltonian & PARTIAL & 12/12\\
+T16 & \texttt{\scriptsize zeta\_\allowbreak local\_\allowbreak euler} & ZETA.LOCAL.EULER; one weight-4 Hecke polynomial & PARTIAL & 16/16\\
+T17 & \texttt{\scriptsize zeta\_\allowbreak funceq\_\allowbreak duality} & ZETA.FUNCEQ.DUALITY; Poisson involution & PARTIAL & 9/9\\
+T18 & \texttt{\scriptsize zeta\_\allowbreak weil\_\allowbreak recovery\_\allowbreak trace} & ZETA.TRACE.COMPLETENESS; Guinand--Weil balance & BENCHMARK-STANDING & 17/17\\
+T19 & \texttt{\scriptsize prime\_\allowbreak thinning\_\allowbreak seam\_\allowbreak truncation} & PRIMON.SEAM.TRUNCATION; thinning vs.\ the finite tower & MIXED & 19/19\\
+T20 & \texttt{\scriptsize seam\_\allowbreak archimedean\_\allowbreak kernel} & archimedean kernel from the seam density of states & KILLED-AS-NAIVE & 25/25\\
+T21 & \texttt{\scriptsize prime\_\allowbreak prediction\_\allowbreak mechanics} & four prediction channels quantified & MAPPED & 19/19\\
+T22 & \texttt{\scriptsize seam\_\allowbreak halfcut\_\allowbreak dilation\_\allowbreak arch} & non-DOS successor of the T20 kill & PARTIAL (K1,\,K2 pass; K3 fails) & 25/25\\
+T23 & \texttt{\scriptsize seam\_\allowbreak boost\_\allowbreak arch\_\allowbreak dictionary} & arch dictionary via the seam boost & DEAD & 23/23\\
+T24 & \texttt{\scriptsize seam\_\allowbreak truncated\_\allowbreak trace\_\allowbreak rvm} & truncated trace / Riemann--von Mangoldt route & DEAD & 25/25\\
+T25 & \texttt{\scriptsize seam\_\allowbreak tate\_\allowbreak phase} & scattering phase as the last observable & DEAD (arch route closed) & 29/29\\
+T26 & \texttt{\scriptsize shell\_\allowbreak multiplicity\_\allowbreak one\_\allowbreak quotient} & shell quotient towards multiplicity one & PARTIAL & 18/18\\
+T27 & \texttt{\scriptsize e8\_\allowbreak pneighbor\_\allowbreak hecke} & Kneser $p$-neighbours carry the Eisenstein half & PARTIAL $\to$ \vref{v535} & 27/27\\
+T28 & \texttt{\scriptsize e8\_\allowbreak kneser\_\allowbreak transport\_\allowbreak holonomy} & cusp coefficient from mod-3 lattice geometry & TRANSPORT-VISIBLE & 22/22\\
+T29 & \texttt{\scriptsize primon\_\allowbreak transport\_\allowbreak category} & primon monoid relations & RELATIONS-VERIFIED & 16/16\\
+T30 & \texttt{\scriptsize e8\_\allowbreak transport\_\allowbreak cusp\_\allowbreak uniformity} & uniformity of the T28 reading at $p=5,7$ & BROKEN (reading); transport holds & 32/32\\
+T31 & \texttt{\scriptsize e8\_\allowbreak neighbor\_\allowbreak operator\_\allowbreak decomposition} & cusp extraction is a rule $\nu_p=a\,\mathrm{Id}+b\,T_p$ & REPAIRED-BY-DICTIONARY $\to$ \vref{v535} & 49/49\\
+T32 & \texttt{\scriptsize census\_\allowbreak newform\_\allowbreak recovery} & census redundancy is 2-adic oldform structure & REDUNDANCY-IS-OLDFORM $\to$ \vref{v535} & 24/24\\
+T33 & \texttt{\scriptsize e8\_\allowbreak nu\_\allowbreak rule\_\allowbreak many\_\allowbreak primes} & hardening of the $\nu$-rule to $p\le100$; Eichler finding & HARDENED $\to$ \vref{v536} & 26/26\\
+T34 & \texttt{\scriptsize compiler\_\allowbreak functor\_\allowbreak theta} & project ZETA.COMPILER.FUNCTOR founded & FOUNDED-WITH-ANCHOR & 13/13\\
+T35 & \texttt{\scriptsize rankin\_\allowbreak selberg\_\allowbreak functor} & Rankin--Selberg translates the abelian shadow & RS-TRANSLATES-EISENSTEIN & 13/13\\
+T36 & \texttt{\scriptsize e8\_\allowbreak lambda\_\allowbreak charsum\_\allowbreak evaluator} & cusp remainder isolated geometrically & TWO-SIDED $\to$ \vref{v536} & 29/29\\
+T37 & \texttt{\scriptsize e8\_\allowbreak salie\_\allowbreak signed\_\allowbreak cusp} & signed cusp channel, scalable & SCALABLE-AND-SIGNED & 37/37\\
+T38 & \texttt{\scriptsize cuspidal\_\allowbreak bridge} & Shimura preimage of $f_8$ inside the compiler monoid & BRIDGE-FOUND $\to$ \vref{v537} & 13/13\\
+T39 & \texttt{\scriptsize zeta\_\allowbreak center\_\allowbreak atlas} & the abelian drop & ABELIAN-DROP-CLOSED & 13/13\\
+T40 & \texttt{\scriptsize weil\_\allowbreak recovery\_\allowbreak compiler\_\allowbreak sector} & Weil-recovery sector terrain & TERRAIN-MAPPED & 24/24\\
+T41 & \texttt{\scriptsize functor\_\allowbreak wiring\_\allowbreak halfintegral} & the half-integral bridge is Hecke-equivariant & FUNCTOR-WIRED $\to$ \vref{v537} & 13/13\\
+T42 & \texttt{\scriptsize e8\_\allowbreak local\_\allowbreak densities} & local densities closed & CLOSED $\to$ \vref{v536} & 25/25\\
+T43 & \texttt{\scriptsize kohnen\_\allowbreak plus\_\allowbreak waldspurger} & Kohnen plus space & PARTIAL & 12/12\\
+T44 & \texttt{\scriptsize kohnen\_\allowbreak operator\_\allowbreak projection} & central-value route via Kohnen plus & OUTSIDE-KOHNEN-SCOPE $\to$ \vref{v537} & 17/17\\
+T45 & \texttt{\scriptsize baruch\_\allowbreak mao\_\allowbreak metaplectic} & central-value family as $b(d)^2$; $R$ constant & CENTRAL-VALUES-WIRED $\to$ \vref{v537} & 13/13\\
+T46 & \texttt{\scriptsize stage4\_\allowbreak prolate\_\allowbreak prototype} & stage-4 prolate prototype & IMPL-OPEN & 16/16\\
+T47 & \texttt{\scriptsize stage4\_\allowbreak prolate\_\allowbreak uv\_\allowbreak dirac} & pointwise UV/Dirac prototype & UV-NO-SIGNAL & 17/17\\
+T48 & \texttt{\scriptsize lambda\_\allowbreak scale\_\allowbreak uniqueness} & does the compiler fix the $\Lambda$ scale? & SCALE-TORSOR (claim killed) & 17/17\\
+T49 & \texttt{\scriptsize rankin\_\allowbreak positivity\_\allowbreak miniature} & the Deligne/Rankin mechanism runs in-suite & MINIATURE-RUNS & 28/28\\
+T50 & \texttt{\scriptsize half\_\allowbreak integral\_\allowbreak selfconvolution} & the central-value family aggregates exactly & FAMILY-AGGREGATED & 17/17\\
+T51 & \texttt{\scriptsize waldspurger\_\allowbreak family\_\allowbreak kernel} & first non-collapsing infinite carrier candidate & INFINITE-CARRIER-CANDIDATE & 22/22\\
+T52 & \texttt{\scriptsize hecke\_\allowbreak orbit\_\allowbreak transfer} & path space of Hecke words; fibre determinants & TRANSFER-REALIZED & 16/16\\
+T53 & \texttt{\scriptsize relative\_\allowbreak trace\_\allowbreak compiler} & \vref{v535}/\vref{v536}/\vref{v537} are three projections of one RTF identity & ONE-FORMULA $\to$ \vref{v538} & 16/16\\
+T54 & \texttt{\scriptsize waldspurger\_\allowbreak canonical\_\allowbreak measure} & the ``canonical discriminant measure'' claim & MARGINAL-WEIGHT (killed) & 26/26\\
+T55 & \texttt{\scriptsize rtf\_\allowbreak period\_\allowbreak pairing} & canonical distributional limit of the finite RTF & DISTRIBUTIONAL-RTF-TYPED $\to$ \vref{v539} & 36/36\\
+T56 & \texttt{\scriptsize rtf\_\allowbreak pairing\_\allowbreak sharpening} & all T55 identifications to sub-percent & SHARPENED & 27/27\\
+T57 & \texttt{\scriptsize infinite\_\allowbreak rtf\_\allowbreak packing} & both infinity directions in one double series $Z(s,w)$ & PACKED & 24/24\\
+T58 & \texttt{\scriptsize zeta\_\allowbreak rtf\_\allowbreak xi\_\allowbreak residue} & GL(1) shadows of $Z(s,w)$ & GL1-SHADOW-CLASSICAL (route A closed) & 24/24\\
+T59 & \texttt{\scriptsize weil\_\allowbreak gns\_\allowbreak identification} & residual factor in closed form & TRANSFORM-REQUIRED & 19/19\\
+T60 & \texttt{\scriptsize plancherel\_\allowbreak descent} & Sato--Tate moment contraction & PARTIAL & 21/21\\
+T61 & \texttt{\scriptsize st\_\allowbreak isotype\_\allowbreak gl1\_\allowbreak core} & the trivial Sato--Tate isotype is a GL(1) core & GL1-CORE-EXACT $\to$ \vref{v539} & 24/24\\
+T62 & \texttt{\scriptsize core\_\allowbreak isolation} & $d$-twist mixing vanishes fibrewise & CORE-ISOLATED $\to$ \vref{v539} & 24/24\\
+T63 & \texttt{\scriptsize weil\_\allowbreak core\_\allowbreak completion} & Plancherel correction irreducibly non-automorphic & EXTRA-TERMS $\to$ \vref{v539} & 33/33\\
+T64 & \texttt{\scriptsize rtf\_\allowbreak stabilization} & $\det_2$ absorbs obstruction 2; the minus stays & HALF-STABLE & 34/34\\
+T65 & \texttt{\scriptsize pi\_\allowbreak digits\_\allowbreak prime\_\allowbreak distribution} & prime distribution in the digits of $\pi$ & PI-NULL & 16/16\\
+T66 & \texttt{\scriptsize pi\_\allowbreak prime\_\allowbreak four\_\allowbreak level} & the $\pi$/prime question on four levels & FOUR-LEVEL-NULL & 23/23\\
+T67 & \texttt{\scriptsize amplitude\_\allowbreak dirac\_\allowbreak sqrt} & Dirac square root of the amplitude plane & DIRAC-SQRT-EXACT $\to$ \vref{v540} & 27/27\\
+T68 & \texttt{\scriptsize geometric\_\allowbreak polarization} & geometric polarisation $b=N_+-N_-$ & RESHUFFLE-ONLY $\to$ \vref{v540} & 34/34\\
+T69 & \texttt{\scriptsize mixed\_\allowbreak channel\_\allowbreak full\_\allowbreak weight} & even-$k$ deletion is a determinant invariant & DELETION-UNIVERSAL $\to$ \vref{v540} & 33/33\\
+T70 & \texttt{\scriptsize linear\_\allowbreak measure\_\allowbreak weil} & positive linear $\Theta$ carrier; pure plus combination & LINEAR-PLUS-COMBINATION $\to$ \vref{v540} & 29/29\\
+T71 & \texttt{\scriptsize transport\_\allowbreak terrain} & FE of the linear family exactly anchored & TERRAIN-MAPPED $\to$ \vref{v540} & 40/40\\
+T72 & \texttt{\scriptsize cone\_\allowbreak enlargement} & the cone library saturates at 5/24 & COMPLEMENTARY-PAIR $\to$ \vref{v540} & 34/34\\
+T73 & \texttt{\scriptsize continuous\_\allowbreak cone} & per-direction hybrid cones in the continuum & HYBRID-GAINS & 28/28\\
+T74 & \texttt{\scriptsize door\_\allowbreak a\_\allowbreak spectral\_\allowbreak polarization} & the spectral side is provably sign-blind & VACUUM-STRUCTURE & 32/32\\
+T75 & \texttt{\scriptsize door\_\allowbreak b\_\allowbreak lambda\_\allowbreak transport} & the gap functional $\lambda^*$ has its own structure & LAMBDA-STRUCTURED & 28/28\\
+T76 & \texttt{\scriptsize hybrid\_\allowbreak universality} & the recipe certifies 91/91 adversarial Weil directions & RECIPE-UNIVERSAL-ON-BATTERY & 22/22\\
+T77 & \texttt{\scriptsize matching\_\allowbreak lemma\_\allowbreak structure} & the matching lemma reduces to a restricted divisor bound & LEMMA-CLASSICAL-SHAPED & 21/21\\
+T78 & \texttt{\scriptsize lemma\_\allowbreak window\_\allowbreak proof} & matching lemma exact-integer on $[4,10^6]$ & WINDOW-PROVED $\to$ \vref{v541} & 25/25\\
+T79 & \texttt{\scriptsize transport\_\allowbreak ledger} & the transport ledger closes; I5 named and typed & LEDGER-CLOSES $\to$ \vref{v541} & 22/22\\
+T80 & \texttt{\scriptsize tail\_\allowbreak correlation\_\allowbreak lemma} & character-exact signed envelope; tail to $N^*\!\approx\!10^{23}$ & RESERVE-PARTIAL $\to$ \vref{v541} & 29/29\\
+T81 & \texttt{\scriptsize recipe\_\allowbreak coherent\_\allowbreak avoidance} & reachability theorem: coherent targets need coherent $m$ & AVOIDANCE-FAILS $\to$ \vref{v541} & 31/31\\
+T82 & \texttt{\scriptsize heat\_\allowbreak arch} & $\Darch$ is the internal $\Gamma$ difference & ARCH-INTERNAL $\to$ \vref{v541} & 22/22\\
+T83 & \texttt{\scriptsize fe\_\allowbreak symmetrization} & symmetrisation absorbed; the wall is FE-transversal & INVARIANT-NULL & 27/27\\
+T84 & \texttt{\scriptsize gaussian\_\allowbreak lift} & Gr\"ossencharacter phases give $L(1,\lambda_k)$ convergence & LIFT-WORKS-UNANCHORED & 29/29\\
+T85 & \texttt{\scriptsize lambda\_\allowbreak equivariant\_\allowbreak design} & the $\lambda$ design closes the coherent class & LEMMA-CLOSES-LAMBDA $\to$ \vref{v541} & 24/24\\
+T86 & \texttt{\scriptsize correlated\_\allowbreak cancellation} & the $Q$-pairing involution closes the non-coherent tail & LEMMA-FULLY-CLOSED & 29/29\\
+T87 & \texttt{\scriptsize i5\_\allowbreak connes\_\allowbreak dictionary} & I5 one-family form vs.\ the semi-local Connes structure & DICTIONARY-EXACT-CORE & 22/22\\
+T88 & \texttt{\scriptsize i5\_\allowbreak tightness} & eight near-vertical tight curves; $\Gamma$-side spacing & TIGHT-SET-PARAMETRIZED & 27/27\\
+T89 & \texttt{\scriptsize sonin\_\allowbreak crossing} & window compression is Bombieri's classical object & CROSSING-MAPPED & 19/19\\
+T90 & \texttt{\scriptsize residual\_\allowbreak dissection} & the residual vectors are explicit Gaussian modes & CORE-DISSECTED & 17/17\\
+T91 & \texttt{\scriptsize thin\_\allowbreak band\_\allowbreak analytic} & the band is the one-atom zone; atom rescue & BAND-PARTIAL (3/4 closed) & 19/19\\
+T92 & \texttt{\scriptsize zone\_\allowbreak extension\_\allowbreak proof} & the finite-block route is the wrong instrument & T-SKELETON & 36/36\\
+T93 & \texttt{\scriptsize band\_\allowbreak reconciliation} & data-integrity reconciliation of the T89/T91 map & MIXED (map recalibrated) & 41/41\\
+T94 & \texttt{\scriptsize prime\_\allowbreak blind\_\allowbreak demo} & 753/753 primes of an unseen window from lattice counting & BLIND-100 & 16/16\\
+T95 & \texttt{\scriptsize continuum\_\allowbreak extension} & C1 chain proved; band top behaves as a positivity edge & T-CONTINUUM-NUMERIC & 28/28\\
+T96 & \texttt{\scriptsize relay\_\allowbreak test} & the T95 edge was a map artefact; the relay is real & EDGE-ARTIFACT $+$ RELAY-CONFIRMED & 21/21\\
+T97 & \texttt{\scriptsize relay\_\allowbreak induction} & the induction step has proof shape; one cross-block lemma & ALIGNMENT-ONLY & 105/105\\
+T98 & \texttt{\scriptsize cross\_\allowbreak lemma} & the $\sqrt{\lambda_0}$ law is Douglas range inclusion (circular) & LAW-CONFIRMED-MECHANISM-OPEN & 44/44\\
+T99 & \texttt{\scriptsize dk\_\allowbreak recursion} & exact mirror-parity selection rule; recursive inequality & DECAY-LAW-FOUND & 23/23\\
+T100 & \texttt{\scriptsize bulk\_\allowbreak remainder} & closure 11/24 $\to$ 24/24 samples; the drift was a grid artefact & REMAINDER-CLOSES-ZONES & 27/27\\
+T101 & \texttt{\scriptsize k\_\allowbreak asymptotics} & 16 zones resolved; primitives flat, instrument loses the race & CROWDING-TRENDS & 31/31\\
+T102 & \texttt{\scriptsize arithmetic\_\allowbreak bound} & the onset is manufactured by the Schur dressing; $C/g$ was a proxy & MECHANISM-IDENTIFIED & 42/42\\
+T103 & \texttt{\scriptsize instrument} & slope halves; closure map $7/64\to44/64$ & INSTRUMENT-IMPROVED & 29/29\\
+T104 & \texttt{\scriptsize schur\_\allowbreak profile\_\allowbreak bound} & arm B: naive margin route dead, threshold split closes 16/16 & CHAIN-PARTIAL & 21/21\\
+T104 & \texttt{\scriptsize schur\_\allowbreak profile\_\allowbreak chain} & arm A: independent twin of the same contract & CHAIN-PARTIAL & 47/47\\
+T105 & \texttt{\scriptsize bare\_\allowbreak wing\_\allowbreak bound} & bare bound certified in closed form; avoidance is a theorem & ONE-OF-TWO & 28/28\\
+T106 & \texttt{\scriptsize friedrichs\_\allowbreak angle} & parity split of the Weil pole; hardness in the odd channel & DENSITY-MAPPED & 32/32\\
+T107 & \texttt{\scriptsize odd\_\allowbreak channel\_\allowbreak closure} & Sherman--Morrison/Woodbury reduction to $r=\kappa/\varepsilon$ & SCALAR-TRACTABLE & 30/30\\
+T108 & \texttt{\scriptsize ratio\_\allowbreak certificate} & $\varepsilon$ is an exact $Q|_{\mathrm{odd}}$ energy; (R) on two scalars; first non-vacuous margin chain & EPSILON-IDENTITY & 44/44\\
+\end{xltabular}
+}
+
+\section{Symbols used in Sections~\ref{sec:i5}--\ref{sec:certification}}\label{app:symbols}
+\noindent All of these are sandbox objects; they are listed so the figures and formulas above can be
+read without the diary.
+
+{\small\noindent
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.0cm} Y@{}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning}\\
+\midrule
+$\Qweil$, $\Qcert$, $\Delta_2$, $\Darch$ & the four terms of the transport ledger;
+$\Qweil=\Qcert+\Darch+\Delta_2$ closes at $4.4\times10^{-16}$ (\vref{v541})\\
+$\Afam$, $\Ashift$ & the two archimedean halves of the heat family; $\Darch=\Afam-\Ashift$ (T82)\\
+I5 & the one remaining coupled inequality, $\Qcert+\Delta_2+\Afam-\Ashift\ge0$ (T79)\\
+$\mu_k$, $w_k$, $g_k$ & atom strength, handover window width, atom spacing at zone $k$\\
+$D_k(\alpha)$ & the Schur-complement defect of the induction step; target $D_k\le\mu_k/2$ (T98)\\
+$\sigma_k(\delta)$ & the $E_-$ Schur profile of the genuine Weil form just above atom entry (T102)\\
+$E_-,E_0,E_+$ & the three atom eigenspaces; the $k$-th atom acts as $\mathrm{diag}(-\tfrac12,0,+\tfrac12)$\\
+$\mathrm{bare}_k$, $b_0$ & $\lambda_{\min}(\Qfull|_{E_-})$ and its certified excess over $\mu_k/2$ (T105)\\
+$L$, $\Lambda_-$ & the soft dressing scalar and its free cap ($5.63$--$7.52$, divergent) (T105)\\
+$J$ & the mirror-parity involution; $JQJ=Q$, $JB=-BR$ (T105)\\
+$\rho_\pm$ & the Friedrichs-angle cosines of the even / odd channel (T106)\\
+(R) & $\Qfull(\alpha_k)|_{J=-1}\succeq(\mu_k/2)P_-|_{J=-1}$, the remaining Loewner statement (T106)\\
+$s^*$, $\tau$, $\kappa$, $\varepsilon$ & Sherman--Morrison scalar, its Woodbury split
+$s^*=\tau+\kappa$, and $\varepsilon=1-\tau$ (T107)\\
+$r$ & the residual ratio $\kappa/\varepsilon$; (R) $\iff r\le1$; measured $0.0053$--$0.1814$ (T107)\\
+\bottomrule
+\end{tabularx}
+}
+
+\end{document}

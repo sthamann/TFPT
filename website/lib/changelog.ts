@@ -42,6 +42,328 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-27",
+    "dateLabel": "2026-07-27 · I",
+    "heading": [
+      {
+        "k": "t",
+        "v": "new companion "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " — the prime / zeta line documented end to end as RESEARCH DOCUMENTATION; NO new claims, NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New companion paper "
+            },
+            {
+              "k": "c",
+              "v": "tfpt_prime_front"
+            },
+            {
+              "k": "t",
+              "v": " (P)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "20"
+        },
+        {
+          "k": "t",
+          "v": " pages, "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " sections plus two appendices, "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " TikZ figures. It documents the complete prime / zeta line of the project from the first "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4\\Rightarrow\\chi_4"
+        },
+        {
+          "k": "t",
+          "v": " observation to the current residual — explicitly a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "documentation of a research route"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not a results paper. Registered in "
+        },
+        {
+          "k": "c",
+          "v": "tex-artefacts/tfpt_docset.tex"
+        },
+        {
+          "k": "t",
+          "v": " as the fifth companion."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Verified layer restated, not extended."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Sections 3.1–3.7 restate the seven load-bearing modules "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v541"
+        },
+        {
+          "k": "t",
+          "v": " with their ledger status markers quoted verbatim (Hecke from geometry, Eichler trace layer, half-integral bridge, relative-trace identity, Weil structure family, amplitude linear carrier, matching-lemma / transport ledger). The "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": " citations in this paper are the only citations it makes; no ledger row is added, moved or upgraded."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sandbox layer marked as sandbox throughout."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The localization program (I5, the Connes–Consani dictionary, the tightness map, the Sonin crossing, the blind prime demo), the handover induction and the certification arc are carried as clearly tagged "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "sandbox"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " content with a per-section provenance marker; every quantitative statement carries its probe label (T"
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": ") and is reproduced verbatim from the research diary. All measured quantities are declared as measured, all window results as window results, all hypothesis inputs as hypothesis inputs."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Kill list as a first-class section."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Section 7 records the refuted readings and dead routes of the program (essential-singularity reading, the "
+        },
+        {
+          "k": "m",
+          "v": "C/g"
+        },
+        {
+          "k": "t",
+          "v": " proxy law, the naive margin route, the density chain, the Landau–Widom anchor, the accumulated invariant with self-propagation, the symbol route for the odd channel, three certificate candidates for the avoidance norm), each with the probe that killed it."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Explicit RH fence."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The paper states in the abstract, in the honesty statement, in the reduction figure and in the status section that "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no progress on the Riemann Hypothesis is claimed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; the I5 "
+        },
+        {
+          "k": "m",
+          "v": "\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " Weil positivity "
+        },
+        {
+          "k": "m",
+          "v": "\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " RH relation is carried, as in the ledger, as an equivalence "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "typing"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " only. "
+        },
+        {
+          "k": "c",
+          "v": "ZETA.HP.CARRIER"
+        },
+        {
+          "k": "t",
+          "v": " untouched."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Appendices."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Probe index T11–T108 ("
+        },
+        {
+          "k": "m",
+          "v": "98"
+        },
+        {
+          "k": "t",
+          "v": " parts, "
+        },
+        {
+          "k": "m",
+          "v": "99"
+        },
+        {
+          "k": "t",
+          "v": " runs, "
+        },
+        {
+          "k": "m",
+          "v": "2509"
+        },
+        {
+          "k": "t",
+          "v": " green checks; the diary's own series counter at T108 reads "
+        },
+        {
+          "k": "m",
+          "v": "108"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "2701"
+        },
+        {
+          "k": "t",
+          "v": " checks including the ten parts that predate the current diary file) with contract, verdict and check count per probe, plus a symbol table for the sandbox objects used in the figures. T109 ("
+        },
+        {
+          "k": "c",
+          "v": "boundary_decay_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") was running when the document was written and is deliberately absent."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-25",
     "dateLabel": "2026-07-25 · XIX",
     "heading": [
