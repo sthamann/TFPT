@@ -82,7 +82,8 @@ export type PrimeFrontVerdict =
   | "MECHANISM-IDENTIFIED"
   | "INSTRUMENT-IMPROVED"
   | "CHAIN-PARTIAL"
-  | "ONE-OF-TWO";
+  | "ONE-OF-TWO"
+  | "DENSITY-MAPPED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -106,6 +107,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-26",
+    part: 106,
+    title:
+      "Density mapped — the parity split localizes all remaining hardness in the odd channel",
+    verdict: "DENSITY-MAPPED",
+    summary:
+      "T106 (DENSITY-MAPPED, 32/32) — contract FRIEDRICHS.ANGLE: two routes honestly killed, and a parity breakthrough that halves the remaining object. (D1) The density chain is dead for good: Landau–Widom is the WRONG classical anchor (rms 0.50–1.55); the right one is Grenander–Szegő on the Planck-coarsened symbol (averaging over the mode-spacing cell π/M; hits 0.92–2.43, better on 67/72 pairs). It explains why a negative symbol (dip −21.3…−3.4) still gives Q ⪰ 0: the atoms oscillate exactly at the window's Planck scale. Inertia: the Toeplitz part has exactly ONE negative eigendirection and the rank-2 Weil pole lifts it. A density certificate would need a hard gap w₀ ≥ 0.55–2.44; measured 5.3e-6…1.1e-3 — a factor 5·10²–3.6·10⁵ short. (D2) Invariant amplification is a NO-GO with a measured mechanism: the wing demand gives β_wing = 2.21–14.43 > 1 on 16/16, BUT inherited demands give β_int ~ 10⁻² on 15/15 — the accumulated invariant with absolute anchoring is FALSE. The reason is transport: in the larger window an old wing pair becomes an interior pair and draws 99.7–99.95% of its demand from the 64 softest modes (coupling 751–2653× stronger). No self-propagation (β_on < 1 on 15/15, loss 13–320×, θ_k = 0.9866–0.9998): the wing margin is an EDGE property of the window, not a property of the pair. What survives: the window-wise family σ_k(δ₀) ≥ 1.31·(μ_k/2), uniform over M (drift ≤ 2.01×). (D3) The breakthrough: the Weil pole splits EXACTLY as abᵀ+baᵀ = ssᵀ − ttᵀ (10⁻¹⁸; J a = b) — a positive rank-1 lift in the J-even channel and a negative rank-1 pressure in the J-odd channel. The one negative Toeplitz direction is J-even and is removed by ssᵀ exactly there; the odd channel never needed the pole. The soft edge belongs to the even channel 16/16 (3.7–100× softer). The DANGEROUS channel is the odd one (ρ₋ = 0.557–0.826 vs ρ₊ = 0.076–0.464) — the one with the better density: not the density but the avoidance decides the angle. T105's bare bound sits 16/16 exactly in the hard channel; ρ₋ is resolution-stable (≤ 17.6%). (D4) Channel-wise angle chain: even 16/16 (0.107–0.583× budget), odd 9/16 (0.747–1.156), unsplit only 3/16; all 16 handoffs close at operating depth in both channels under the exact Schur criterion; certified b0 = 89–93%. The remaining object is ONE Loewner statement on half the dimensions: (R) Q_full(α_k)|_{J=−1} ⪰ (μ_k/2)·P₋|_{J=−1} on ⌈p/2⌉ dimensions — Toeplitz part POSITIVE, soft edge 3.7–100× higher, bare certified. Certified: bare, parity split, pole splitting, channel inertia, avoidance, growth inequality, accumulation bounds. Measured: ρ₋. Refuted: accumulated invariant + propagation, density chain, Landau–Widom anchor. T107 (ODD.CHANNEL.CLOSURE) is running. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "friedrichs_angle_probe.py",
+  },
   {
     date: "2026-07-26",
     part: 105,

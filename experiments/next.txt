@@ -1,3 +1,45 @@
+# 2026-07-26 (XX) — Teil 106 (delegiert, die Winkel-Frage — Vertrag FRIEDRICHS.ANGLE): friedrichs_angle_probe.py — **DENSITY-MAPPED** — zwei Routen ehrlich getötet (Dichte-Kette, akkumulierte Invariante), und der DURCHBRUCH ist die Paritäts-Spaltung: der Weil-Pol spaltet EXAKT als abᵀ+baᵀ = ssᵀ − ttᵀ (10⁻¹⁸) in einen positiven Rang-1-Lift im J-geraden und einen negativen Rang-1-Druck im J-ungeraden Kanal — der gerade Kanal schließt 16/16, die GESAMTE Rest-Härte lokalisiert im ungeraden Kanal: EINE Loewner-Aussage (R) auf ⌈p/2⌉ Dimensionen mit POSITIVEM Toeplitz-Teil — 32/32, 11.2s, Sandbox
+# D1 Dichte-Gesetz: Landau-Widom ist der FALSCHE klassische Anker (rms 0.50–1.55); richtig
+#    ist Grenander–Szegő auf dem Planck-grobkörnigen Symbol (Mittelung über die
+#    Modenabstands-Zelle π/M; trifft 0.92–2.43, besser auf 67/72 Paaren). Erklärt, warum
+#    ein negatives Symbol (Dip −21.3…−3.4) trotzdem Q ⪰ 0 gibt: die Atome oszillieren
+#    exakt auf der Planck-Skala des Fensters. Inertia: der Toeplitz-Teil hat genau EINE
+#    negative Eigenrichtung, der Rang-2-Weil-Pol hebt sie auf. Die DICHTE-KETTE ist
+#    endgültig tot: bräuchte harte Lücke w₀ ≥ 0.55–2.44, gemessen 5.3e-6…1.1e-3
+#    (Faktor 5·10²–3.6·10⁵ zu kurz).
+# D2 Invarianten-Verstärkung: NO-GO mit gemessenem Mechanismus. Flügel-Forderung
+#    β_wing = 2.21–14.43 > 1 auf 16/16, ABER ererbte Forderungen β_int ~ 10⁻² auf 15/15 ⇒
+#    akkumulierte Invariante mit absoluter Verankerung ist FALSCH. Grund ist der Transport:
+#    im größeren Fenster wird ein altes Flügel-Paar zum Innen-Paar und nimmt 99.7–99.95%
+#    seines Bedarfs aus den 64 weichsten Moden (Kopplung 751–2653× stärker). Keine
+#    Selbst-Fortpflanzung (β_on < 1 auf 15/15, Verlust 13–320×, θ_k = 0.9866–0.9998).
+#    Die Flügel-Marge ist eine KANTEN-Eigenschaft des Fensters, keine Eigenschaft des
+#    Paares. Was hält: fensterweise Familie σ_k(δ₀) ≥ 1.31·(μ_k/2) uniform über M
+#    (Drift ≤ 2.01×).
+# D3 Paritäts-Kanäle (der Durchbruch): der Weil-Pol spaltet EXAKT als abᵀ+baᵀ = ssᵀ − ttᵀ
+#    (10⁻¹⁸; J a = b) — positiver Rang-1-Lift im J-geraden, negativer Rang-1-Druck im
+#    J-ungeraden Kanal. Die eine negative Toeplitz-Richtung ist J-gerade und wird von ssᵀ
+#    genau dort beseitigt; der ungerade Kanal brauchte den Pol nie. Weicher Rand gehört
+#    16/16 dem geraden Kanal (3.7–100× weicher). Der GEFÄHRLICHE Kanal ist der ungerade
+#    (ρ₋ = 0.557–0.826 vs ρ₊ = 0.076–0.464) — der mit der besseren Dichte: nicht die
+#    Dichte entscheidet den Winkel, sondern die Avoidance. T105s bare-Schranke sitzt
+#    16/16 genau im harten Kanal. ρ₋ auflösungsstabil (≤ 17.6%).
+# D4 Synthese: Winkel-Kette kanalweise: gerade 16/16 (0.107–0.583× Budget), ungerade 9/16
+#    (0.747–1.156), ungesplittet nur 3/16. Alle 16 Übergaben schließen bei Betriebstiefe
+#    in beiden Kanälen im exakten Schur-Kriterium; zertifiziertes b0 = 89–93%. Das
+#    verbleibende Objekt: (R) Q_full(α_k)|_{J=−1} ⪰ (μ_k/2)·P₋^{(k)}|_{J=−1} —
+#    Loewner-Aussage auf ⌈p/2⌉ Dimensionen, Toeplitz-Teil POSITIV, weicher Rand
+#    3.7–100× höher, bare zertifiziert. Zertifiziert: bare, Paritäts-Split,
+#    Pol-Aufspaltung, Kanal-Inertia, Avoidance, Wachstums-Ungleichung,
+#    Akkumulations-Schranken. Gemessen bleibt: ρ₋. Widerlegt: akkumulierte Invariante +
+#    Fortpflanzung, Dichte-Kette, Landau-Widom-Anker. → T107 (läuft): ODD.CHANNEL.CLOSURE
+#    (odd_channel_closure_probe.py) — Sherman-Morrison-Reduktion von (R) auf eine skalare
+#    Ungleichung, Szegő-Untergrenze für T_odd, t-Kontrolle.
+# Serie (XII)–(CXVII): 106 Proben, 2627/2627 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Grenander–Szegő, Landau–Widom,
+# Toeplitz-Inertia/Sylvester, Szegő, Sherman–Morrison, Loewner-Ordnung, Friedrichs-Winkel)
+# zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-26 (XIX) — Teil 105 (delegiert, der harte Kern — Vertrag BARE.AVOIDANCE.CORE, Opus 5): bare_wing_bound_probe.py — **ONE-OF-TWO** — bare ist ZERTIFIZIERT (erste geschlossene Zutat der Kette: drei klassische Schritte kollabieren zur Untergrenze b0 ≥ (δ/π)∫₀^{π/δ}k(t)dt − δ·K_max − 4(cosh(u/2)−1)sinh(δ/2), positiv 16/16 bei 81.1–92.7% des Messwerts), das AVOIDANCE-GESETZ ist ein THEOREM (Q_full ⪰ 0 ⇒ ‖Bᵀv_i‖² ≤ w_i·Λ₋) + exakte Paritäts-Superselektion; L bleibt Messung — die gesamte Rest-Härte ist EINE Friedrichs-Winkel-Aussage — 28/28, 26.8s, Sandbox
 # C1 Arm-Abgleich: die T104-Diskrepanz löst sich auf — bare hängt nur von (u_k, δ) ab
 #    (das Fenster-Zentrum α kürzt sich; ≤ 0.74% Drift unter 8× Verfeinerung); Arm A

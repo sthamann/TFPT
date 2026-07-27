@@ -135,10 +135,12 @@ export function TwoDoorsConvergence() {
           T104 · SCHUR.PROFILE.BOUND — CHAIN-PARTIAL: the hard core moved to
           a bare_k lower bound + the soft dressing scalar L. T105 ·
           BARE.AVOIDANCE.CORE — ONE-OF-TWO (28/28): bare is certified in
-          closed form and the avoidance law is a theorem; L stays a
-          measurement — the rest is one Friedrichs-angle statement. T106 (
+          closed form and the avoidance law is a theorem. T106 ·
+          FRIEDRICHS.ANGLE — DENSITY-MAPPED (32/32): the parity split closes
+          the even channel 16/16 and localizes all remaining hardness in the
+          odd channel — one Loewner statement on half the dimensions. T107 (
           <span className="font-mono text-slate-300">
-            friedrichs_angle_probe.py
+            odd_channel_closure_probe.py
           </span>
           ) running.
         </p>

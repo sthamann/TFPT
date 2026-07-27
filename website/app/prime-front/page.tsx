@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–105 · 2595 sandbox checks
+            Research diary · Teile 11–106 · 2627 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1595,8 +1595,11 @@ function ProgramStatusCallout() {
         core to a bare_k lower bound plus one soft dressing scalar L. T105
         (ONE-OF-TWO) certifies the bare bound in closed form and upgrades the
         avoidance law to a theorem — the whole remaining hardness is one
-        Friedrichs-angle statement. Milestone: 2595/2595 checks. Not
-        almost-RH. This is not RH evidence.
+        Friedrichs-angle statement. T106 (DENSITY-MAPPED) splits that
+        statement by parity: the even channel closes 16/16 and all remaining
+        hardness localizes in the odd channel — one Loewner statement on half
+        the dimensions. Milestone: 2627/2627 checks. Not almost-RH. This is
+        not RH evidence.
       </p>
     </aside>
   );
