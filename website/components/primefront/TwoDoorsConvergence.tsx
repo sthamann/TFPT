@@ -190,9 +190,18 @@ export function TwoDoorsConvergence() {
           a certified margin-free step at n = 155,921 (117× deeper), chains
           of 10 steps, the stopper always cost and never a step; the
           remaining list is three points, only one an inequality (the
-          classical Szegő–Levinson prediction-error bound). T116 (
+          classical Szegő–Levinson prediction-error bound). T116 ·
+          BOUNDARY.FORMULATION — RICCATI-PARTIAL (33/33): the induction step
+          IS a boundary process — the global pole rides exactly in a
+          12×12+12+1 state (bordered elimination, no truncation) and the
+          Riccati march ran 169,236 prepends to 1.35 million cells (903× the
+          old cap) at flat cost; what refuses compression is the prime comb
+          itself (every incoming cell reflects off every prime power in the
+          window — no sparse faithful state), and the one remaining
+          inequality now has textbook shape (ε is a Galerkin error;
+          Aubin–Nitsche duality hits the measured exponent θ = 1.79). T117 (
           <span className="font-mono text-slate-300">
-            boundary_formulation_probe.py
+            epsilon_theorem_probe.py
           </span>
           ) running.
         </p>

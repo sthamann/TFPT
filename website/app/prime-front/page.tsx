@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–115 · 2876 sandbox checks
+            Research diary · Teile 11–116 · 2909 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1645,9 +1645,16 @@ function ProgramStatusCallout() {
         n = 155,921 (117× deeper), chains of 10 steps, the stopper always
         cost and never a step — leaving the shortest list ever: three
         points, only one of which is an inequality (the classical
-        Szegő–Levinson prediction-error bound for one symbol); T116
-        (boundary_formulation_probe.py) is running. Milestone: 2876/2876
-        checks. Not almost-RH. This is not RH evidence.
+        Szegő–Levinson prediction-error bound for one symbol). T116
+        (RICCATI-PARTIAL) then runs the boundary reformulation: the
+        induction step IS a boundary process — the global pole rides
+        exactly in a 12×12+12+1 state and the Riccati march runs 169,236
+        steps to 1.35 million cells at flat cost (a cost-geometry demo,
+        not a Weil certificate) — but the prime comb itself refuses
+        compression, and the one remaining inequality acquires textbook
+        shape (ε is a Galerkin error; Aubin–Nitsche hits the measured
+        exponent); T117 (epsilon_theorem_probe.py) is running. Milestone:
+        2909/2909 checks. Not almost-RH. This is not RH evidence.
       </p>
     </aside>
   );

@@ -1,3 +1,53 @@
+# 2026-07-27 (X) — Teil 116 (delegiert, die Rand-Formulierung — Vertrag BOUNDARY.FORMULATION): boundary_formulation_probe.py — **RICCATI-PARTIAL** — DIE INDUKTION IST EIN RAND-PROZESS: DER POL FÄHRT EXAKT IM ZUSTAND MIT UND DIE KOSTEN SIND FLACH, ABER DER PRIMZAHL-KAMM VERWEIGERT DIE KOMPRESSION: das Innere integriert sich per partieller Minimierung (Haynsworth) in einen Zustand (Sig, r, sig) aus 12×12+12+1 Zahlen, der den globalen Rang-1-Pol EXAKT trägt (geränderte Elimination, keine Trunkierung) und sich per Riccati-Rekursion fensterunabhängig fortschreibt — eine ungebrochene Kette von 169 236 Prepends lief auf h = 1 354 088 Zellen (903× der alte Deckel) bei flachen 76 µs/Schritt (ehrlich deklariert: Kostengeometrie-Demo, KEIN Weil-Zertifikat); ABER der Zustand lässt sich nicht beschränken: der Arch-Schwanz fällt sauber exp(−1.73ω), das volle Symbol fällt GAR NICHT — 100% der Off-Band-Masse sitzt in den Streifen der zwei Primzahl-Kämme (jede einlaufende Zelle koppelt via Hankel an die Innenzelle bei α − log n_j, für jede Primpotenz √n < n_j < n), Trunkierungs-Budget 1.3e2…1.1e6 × ε, wachsend wie n^2.17; DAFÜR bekommt die eine Ungleichung Lehrbuch-Gestalt: ε ist der Fehler eines PWC-Galerkin-Verfahrens für die D-unabhängige Funktion 2sinh(x/2), Aubin–Nitsche trifft den gemessenen Exponenten (θ = 1.79 ⟹ s ≈ 0.90) — 33/33, 17.7s, Sandbox
+# N1 Rand-Rekursion: der Zustand (Sig, r, sig) ist die partielle Minimierung
+#    der polfreien Form übers Innere (Haynsworth 1968); die Identität
+#    tᵀT⁻¹t = rᵀSig⁻¹r + sig hält auf 6 Zonen rel 6.7e-10; Haynsworth-
+#    Doppel-Albert 6/6 (Negativ-Kontrolle scharf); Riccati-Verkettung EXAKT
+#    (synthetisch 1.4e-16, echte Fenster bit-exakt). POL-BUCHHALTUNG GELÖST,
+#    GRATIS: der Pol ist global (38.6% Randwert auf halber Tiefe vs Arch
+#    0.2%), aber (r, sig) trägt ihn per geränderter Elimination EXAKT — keine
+#    Trunkierung. SCHWANZ-BUCHHALTUNG BRICHT, unerwartet: der Arch-Anteil
+#    fällt sauber exp(−1.73ω), aber das VOLLE Symbol fällt gar nicht (≥ 93%
+#    des Maximums jenseits jeder Breite) — 100% der Off-Band-Masse liegt in
+#    den Streifen der zwei PRIMZAHL-KÄMME, getragen vom Reflexions-Kamm (jede
+#    einlaufende Zelle koppelt via Hankel an die Innenzelle bei α − log n_j,
+#    für jede Primpotenz √n < n_j < n). Trunkierungs-Budget = 1.3e2…1.1e6 ×
+#    die Marge ε, wächst wie n^2.17 (μ_j ~ n^−1/4 vs ε ~ n^−1.8); 11/18 echte
+#    Trunkierungen brechen ganz; der kamm-bewusste Zustand = 83.6% des
+#    Fensters und trifft trotzdem nur rel 20; Decke der Idee: Θ(log²n) Gewinn.
+# N2 Tiefer Rand-Lauf: 169 236 Prepends, h = 1 354 088 Zellen = 903× der alte
+#    Deckel, Kosten FLACH (76 µs/Schritt, Verhältnis erstes/letztes Dezil
+#    1.00), Zustand 12×12+12+1 Zahlen. Ehrlich deklariert: Kostengeometrie-
+#    Demo, KEIN Weil-Zertifikat (bei D = 1.9e-6 enthält das Band kein Atom;
+#    Stopper ε < 0 bei h = 1.35e6 — das Band-Modell verliert die Positivität,
+#    nicht die Maschine); Atom-Reichweite bleibt n = 173.
+# N3 Die eine Ungleichung geschärft: ε ~ 8.34·D^1.790·α^(−6.04) (Jackknife-
+#    Fehler ≤ 0.041, rms ≤ 0.097; φ aus Festes-D-Sweep ± 0.08); ε ist in α
+#    NICHT glatt (Faktor-120-Sprünge an Primpotenz-Eintritten — ein glatter
+#    Ansatz ist falsch); die Kontinuumsform ist EXAKT KRITISCH (t̃ᵀT⁻¹t̃ bis
+#    0.999975745, Szegő–Kolmogorov: der Pol ist im Limes darstellbar); alle
+#    Messwerte ≥ 1.1e5 über dem Cholesky-Boden. KLASSIK-TREFFER: die
+#    Galerkin-Lesart — t̃ repräsentiert die D-unabhängige Funktion
+#    2sinh(x/2), ε ist der Fehler eines PWC-Galerkin-Verfahrens,
+#    Aubin–Nitsche sagt D^{2s}: gemessen θ = 1.79 ⟹ s ≈ 0.90
+#    (log-Singularität + Fensterränder). ZIEL-UNGLEICHUNG formuliert:
+#    ε(α,D) ≥ c₀·D^θ·α^φ über die Sprünge hinweg.
+# N4 Restliste: GEWONNEN (exakter Pol, exakte Riccati-Verkettung, flache
+#    Kosten); GEBROCHEN ([SUPPORT] — der Kamm: kein sparser treuer Zustand,
+#    die Streifen driften mit Fill-in); [P1] die eine Ungleichung, jetzt mit
+#    φ und Sprung-Nebenbedingung; [P2] Transport ENTWERTET (ein einziger
+#    Marsch braucht kein Regrid); Basis unkritisch. → T117 (läuft):
+#    EPSILON.THEOREM (epsilon_theorem_probe.py) — Galerkin-Identität exakt,
+#    Aubin–Nitsche-UNTERGRENZE-Kette mit Konstanten, exakte Sprung-Formeln
+#    (Sherman-Morrison), Satz-Kandidat.
+# Serie (XII)–(CXXVII): 116 Proben, 2909/2909 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Haynsworth 1968, Albert
+# 1969, Sherman-Morrison/Woodbury, Riccati-Rekursion, Szegő–Kolmogorov,
+# Szegő/Levinson 1947, Galerkin/Céa 1964, Aubin–Nitsche, Hankel/Toeplitz,
+# Grenander–Szegő, Cholesky/Wilkinson 1968/Higham 2002, Weil 1952,
+# Bertrand-Chebyshev 1852) zitiert; Sandbox ohne Ledger-/Paper-/
+# Marker-Änderung.
+
 # 2026-07-27 (IX) — Teil 115 (delegiert, der Schur-Transport — Vertrag SCHUR.TRANSPORT): schur_transport_probe.py — **TRANSPORT-BLOCKED** (mit großem Kompressions-Gewinn) — DER TRANSPORT ZERTIFIZIERT NUR MILDE VERFEINERUNG, ABER DIE KOMPRESSION BRICHT DEN DECKEL: die inversen-/margenfreie Transport-Klammer (Haynsworth) erreicht das untere Ende positiv auf 7/11 realen Regrid-Paaren mit sauberem Split bei ρ* ≈ 1.8 — und der Grund ist PRINZIPIELL: auf geschachtelten Leitern (Transportfehler exakt 0) fällt λ_min(S) selbst wie ρ^−1.7, keine Schranke kann das beheben; ABER die Zwei-Skalen-Kompression zertifiziert den margenfreien Schritt bei n = 155 921 (117× T114s 1331; feines Gitter h = 93 470 = 62× Deckel, komprimiert m = 1490), längste Kette 10 Schritte (T114: 4), Stopper immer Kosten, NIE ein Schritt; die Restliste ist die kürzeste je — drei Punkte, nur EINER eine Ungleichung (die klassische Szegő-Levinson-Prädiktionsfehler-Ungleichung für ein Symbol) — 26/26, 58.9s, Sandbox
 # M1 Transport: Haynsworths partielle Minimierung (yᵀSy = min_z [y;z]ᵀQ'[y;z])
 #    macht λ_min(S) inversen- und margenfrei — Zwei-Seiten-Klammer auf 11

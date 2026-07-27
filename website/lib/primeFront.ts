@@ -92,7 +92,8 @@ export type PrimeFrontVerdict =
   | "SCALING-PARTIAL"
   | "SUBSTANCE-CONFIRMED"
   | "WALL-DISSOLVES"
-  | "TRANSPORT-BLOCKED";
+  | "TRANSPORT-BLOCKED"
+  | "RICCATI-PARTIAL";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -116,6 +117,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-27",
+    part: 116,
+    title:
+      "Riccati partial — the induction step IS a boundary process: the pole rides exactly in a 12×12 state and the march runs 903× deeper at flat cost; what refuses compression is the prime comb itself",
+    verdict: "RICCATI-PARTIAL",
+    summary:
+      "T116 (RICCATI-PARTIAL, 33/33) — contract BOUNDARY.FORMULATION: never represent the old interior at all — run the induction as a pure boundary process. (N1) The boundary recursion stands: the state (Σ, r, σ) is the partial minimisation of the pole-free form over the interior (Haynsworth 1968); the identity tᵀT⁻¹t = rᵀΣ⁻¹r + σ holds on 6 zones at rel 6.7e-10; the Haynsworth double-Albert equivalence certifies 6/6 with sharp negative controls; and the Riccati chaining is exact (synthetic 1.4e-16, bit-exact on real windows). POLE BOOKKEEPING SOLVED, FOR FREE: the pole is genuinely global (38.6% boundary value at half depth vs 0.2% for the arch part), but (r, σ) carries it EXACTLY via bordered elimination — no truncation anywhere. TAIL BOOKKEEPING BREAKS, unexpectedly: the archimedean part decays cleanly (exp(−1.73ω)), but the FULL symbol does not decay at all (≥ 93% of its maximum beyond any width) — 100% of the off-band mass sits in the stripes of the two PRIME COMBS, carried by the reflection comb: every incoming cell couples via a Hankel term to the interior cell at α − log n_j, for every prime power √n < n_j < n. The truncation budget is 1.3e2…1.1e6 × the margin ε it must respect and grows like n^2.17 (μ_j ~ n^−1/4 vs ε ~ n^−1.8); 11/18 real truncations break outright; a comb-aware state keeps 83.6% of the window and still only reaches rel 20; the ceiling of the whole idea is a Θ(log²n) gain. (N2) The deep boundary run: 169,236 prepends to h = 1,354,088 cells = 903× the old cap, at FLAT cost (76 µs/step, first/last-decile ratio 1.00), with the entire state 12×12+12+1 numbers. Declared honestly: a cost-geometry demonstration, NOT a Weil certificate (at D = 1.9e-6 the band contains no atom; the stopper is ε < 0 at h = 1.35e6 — the band model loses positivity, not the machine); atom reach stays n = 173. (N3) The one inequality, sharpened: ε ~ 8.34·D^1.790·α^(−6.04) (jackknife errors ≤ 0.041, rms ≤ 0.097; φ from a fixed-D sweep ± 0.08); ε is NOT smooth in α (factor-120 jumps at prime-power entries — a smooth ansatz is wrong); the continuum form is EXACTLY CRITICAL (t̃ᵀT⁻¹t̃ up to 0.999975745; Szegő–Kolmogorov: the pole is representable in the limit); all measurements sit ≥ 1.1e5 above the Cholesky floor. THE CLASSICAL HIT: the Galerkin reading — t̃ represents the D-independent function 2sinh(x/2), ε is the error of a piecewise-constant Galerkin method, and Aubin–Nitsche duality predicts D^{2s}: measured θ = 1.79 ⟹ s ≈ 0.90 (log singularity + window edges). TARGET INEQUALITY formulated: ε(α,D) ≥ c₀·D^θ·α^φ across the jumps. (N4) The remaining list: WON — exact pole, exact Riccati chaining, flat costs; BROKEN — [SUPPORT]: the comb, no sparse faithful state, the stripes drift with fill-in; [P1] the one inequality, now with φ and a jump side-condition; [P2] transport DEVALUED (a single march needs no regrid); the basis is uncritical. T117 (EPSILON.THEOREM, epsilon_theorem_probe.py) is running: the exact Galerkin identity, an Aubin–Nitsche lower-bound chain with constants, exact jump formulas (Sherman–Morrison), a theorem candidate. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "boundary_formulation_probe.py",
+  },
   {
     date: "2026-07-27",
     part: 115,

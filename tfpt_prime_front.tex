@@ -62,8 +62,10 @@ of the prime / zeta line --- how a discrete compiler's bookkeeping kept producin
 number-theoretic objects, which of those links became load-bearing modules, and how the remaining
 question was compressed, over a hundred exploratory probes, down to one strict-positivity margin
 input --- then, once that margin was measured to be an artifact of the requirement, down to a
-two-object core --- and finally down to a three-point list of which only one point is an
-inequality. It is a
+two-object core --- then down to a three-point list of which only one point is an
+inequality --- and finally, once the boundary reformulation ran, down to that single inequality
+in a textbook shape (a Galerkin error with Aubin--Nitsche duality), with the prime comb named as
+the one structure that refuses compression. It is a
 \textbf{research documentation}, not a results paper. Its purpose is that a reader (or a reviewer)
 can see the whole route, including everything that died on the way.}
 
@@ -81,7 +83,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$115$ preregistered probes with $2876$ machine checks, which localized the residual object. That
+$116$ preregistered probes with $2909$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -126,14 +128,30 @@ all seven zones where the requirement chain tore --- the wall was an $O(1)$ nume
 an artifact floor, chains now stop only at the compute cap and never at a step, and the (R)
 demand itself proves grid-bound and is deleted rather than transported, leaving a two-object
 core: $\varepsilon$ relative to $\kappa$ via the exact Szeg\H{o} identity, and transport of an
-$O(0.1)$ Schur complement between grids. The last part splits that core: the transport across a
+$O(0.1)$ Schur complement between grids. The next part splits that core: the transport across a
 real regrid certifies only mild refinement (a clean split at ratio $\rho^*\approx1.8$, and for a
 principled reason --- on nested ladders, where the transport error is exactly zero, the Schur
 floor itself falls like $\rho^{-1.7}$, so no bound can undo the drop), while a two-scale
 compression breaks the compute cap: a certified margin-free step at $n=155\,921$ ($117\times$
 deeper), chains of ten steps, the stopper always cost and never a step --- leaving the shortest
 list the program has produced: three points, of which only one is an inequality (the classical
-Szeg\H{o}--Levinson prediction-error bound for one symbol). \textbf{No claim of progress on the Riemann Hypothesis is
+Szeg\H{o}--Levinson prediction-error bound for one symbol). The last part executes the
+reformulation point of that list, and the induction step turns out to \emph{be} a boundary
+process: partial minimisation over the interior (Haynsworth) compresses the window into a state
+$(\Sigma,r,\sigma)$ of $12\times12+12+1$ numbers that carries the global rank-one pole
+\emph{exactly} (bordered elimination, no truncation) and updates by a Riccati-type recursion
+whose cost is independent of the window --- one unbroken chain of $169\,236$ prepends ran to a
+window of $1.35$ million cells ($903\times$ the old cap) at a flat $76\,\mu$s per step, declared
+honestly as a cost-geometry demonstration and not a Weil certificate. What refuses compression
+is the \emph{prime comb} itself: the archimedean tail decays cleanly, but the reflection comb
+couples every incoming cell to an interior cell at $\alpha-\log n_j$ for every prime power in
+the window, so the full symbol never decays in the width and no sparse faithful state exists.
+In exchange, the one remaining inequality acquires a textbook shape: $\varepsilon$ is the error
+of a piecewise-constant Galerkin method for the $D$-independent function $2\sinh(x/2)$,
+Aubin--Nitsche duality predicts the measured exponent
+($\theta=1.79\Rightarrow s\approx0.90$), and the target inequality is
+$\varepsilon(\alpha,D)\ge c_0D^{\theta}\alpha^{\varphi}$ across the prime-power jumps.
+\textbf{No claim of progress on the Riemann Hypothesis is
 made anywhere in this document}, and none of the sandbox findings moves any ledger marker. The
 document is deliberately symmetric about failure: a dedicated section lists the readings and
 routes that were refuted --- an essential-singularity reading, a $C/g$ proxy law, a density chain, an
@@ -177,7 +195,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots115$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots116$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -756,9 +774,9 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T115)}\label{sec:certification}
+\section{The certification arc (T102--T116)}\label{sec:certification}
 % =====================================================================
-The last fourteen parts stopped improving measurements and started converting them into certificates ---
+The last fifteen parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
 
 \subsection{The mechanism: a crossing, not a singularity (T102)}
@@ -879,11 +897,12 @@ the wing near-null direction.
 \node[tgt] (o) at (0,-3.4) {\textbf{One object:} the wing near-null direction\\[2pt]
   \footnotesize dressing almost rank one (effective rank $1.07$--$2.7$; $99.7$--$100\%$ of the
   near-null direction in \emph{one} prolate mode)};
-\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112 $\to$ T113 $\to$ T114 $\to$ T115\\[2pt]
+\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112 $\to$ T113 $\to$ T114 $\to$ T115 $\to$ T116\\[2pt]
   \footnotesize certify \emph{bare}, prove the avoidance law, split the parity channels,
   reduce to one scalar ratio, then to two scalars, certify both --- then propagate the margin,
   measure where the propagation fails, rescale the frame, settle the currency question,
-  dissolve the wall --- then split the transport and break the compute cap};
+  dissolve the wall --- then split the transport, break the compute cap, and run the
+  induction as a pure boundary process};
 \draw[ar] (a) -- (o);
 \draw[ar] (c) -- (o);
 \draw[ar] (o) -- (n);
@@ -1526,13 +1545,93 @@ $\rho\le1.8$.
 never represent the old interior at all; it would remove the compute cap \emph{and} the regrid
 at once.
 \end{enumerate}
-Only (1) is an inequality; (2) is a regularity statement, (3) is a reformulation.
+Only (1) is an inequality; (2) is a regularity statement, (3) is a reformulation.\\[3pt]
+\emph{Disposition after T116 (next subsection):} (3) is \textbf{run and splits} --- the boundary
+recursion itself is exact (the pole rides in the state with no truncation, and the march cost is
+flat), but the state cannot be \emph{bounded}: the prime comb refuses compression. (2) is
+\textbf{devalued} --- a single boundary march needs no regrid, so the transport defect no longer
+sits on the critical path. (1) \textbf{sharpens} into a two-variable law with a named classical
+proof technique: $\varepsilon$ is a Galerkin error, Aubin--Nitsche duality predicts the measured
+$D$-exponent, and the jumps at prime-power entries become an explicit side-condition.
 \end{keybox}
 
-\noindent T116 (\texttt{boundary\_formulation\_probe.py}, contract \texttt{BOUNDARY.FORMULATION}
---- the induction as a pure boundary process: a Riccati-type Schur recursion, the pole via
-Woodbury, kernel-tail truncation; a deep boundary run; the $\varepsilon(D)$ law against the
-classical benchmarks) was running at the time of writing and is \emph{not} reported here.
+\noindent T116 (\texttt{boundary\_formulation\_probe.py}, contract \texttt{BOUNDARY.FORMULATION})
+then ran the reformulation --- and it held exactly where the contract feared it would break,
+and broke exactly where it seemed free.
+
+\subsection{The boundary recursion: exact pole, flat cost, and the prime comb (T116)}
+T116 (\texttt{boundary\_formulation\_probe.py}, contract \texttt{BOUNDARY.FORMULATION}, $33/33$,
+\textsc{riccati-partial}) executed point (3) of the list: never represent the old interior at
+all --- run the induction as a pure boundary process.
+
+\emph{The recursion stands, and the pole is free.} The state is the triple $(\Sigma,r,\sigma)$
+obtained by partially minimising the pole-free form over the interior (Haynsworth $1968$): the
+identity $t^{\mathsf T}T^{-1}t=r^{\mathsf T}\Sigma^{-1}r+\sigma$ holds on six zones at
+rel $6.7\times10^{-10}$, the Haynsworth double-Albert equivalence certifies $6/6$ with sharp
+negative controls, and the Riccati-type chaining of two eliminations is \emph{exact} (synthetic
+$1.4\times10^{-16}$; bit-exact on real windows). The first feared obstruction --- pole
+bookkeeping --- dissolves for free: the rank-one pole is genuinely \emph{global} (its boundary
+value at half depth is $38.6\%$, against $0.2\%$ for the archimedean part), but the pair
+$(r,\sigma)$ carries it \emph{exactly} through bordered elimination, with no truncation anywhere.
+
+\emph{The tail bookkeeping breaks --- on the prime comb.} The second feared obstruction was the
+archimedean kernel tail, and it is innocent: the arch part decays cleanly, $\exp(-1.73\,\omega)$.
+What does not decay is the \emph{full} symbol --- it stays at $\ge93\%$ of its maximum beyond
+every tested width, and $100\%$ of the off-band mass sits in the stripes of the two \emph{prime
+combs}, carried by the reflection comb: every incoming cell couples through a Hankel term to the
+interior cell at $\alpha-\log n_j$, for \emph{every} prime power $\sqrt n<n_j<n$. A truncation
+of the state would have to discard $1.3\times10^{2}$--$1.1\times10^{6}$ times the margin
+$\varepsilon$ it must respect, a budget that grows like $n^{2.17}$
+($\mu_j\sim n^{-1/4}$ against $\varepsilon\sim n^{-1.8}$; fits); $11/18$ real truncations break
+outright; a comb-aware state that keeps the stripes still spans $83.6\%$ of the window and
+reaches only rel $20$; and the ceiling of the whole idea is a $\Theta(\log^2 n)$ gain. There is
+no sparse faithful state --- the stripes drift with fill-in.
+
+\emph{The deep boundary run --- a cost-geometry demonstration, declared as such.} One unbroken
+chain of $169\,236$ prepends ran to a window of $h=1\,354\,088$ cells --- $903\times$ the old
+cap --- with the entire state $12\times12+12+1$ numbers and the cost \emph{flat}: $76\,\mu$s per
+step, first-to-last-decile ratio $1.00$. Stated honestly, this is \emph{not} a Weil certificate:
+at the fixed cell width $D=1.9\times10^{-6}$ the band contains no atom, the stopper is
+$\varepsilon<0$ at $h=1.35\times10^{6}$ --- the \emph{band model} loses positivity there, not
+the machine --- and the atom reach stays at $n=173$. What the march certifies is the cost
+geometry of the boundary formulation.
+
+\emph{The one inequality, sharpened into a law with a proof technique.} The measured law is
+$\varepsilon\approx8.34\,D^{1.790}\alpha^{-6.04}$ (jackknife errors $\le0.041$, rms $\le0.097$;
+$\varphi$ from a fixed-$D$ sweep, $\pm0.08$; all fits). $\varepsilon$ is \emph{not} smooth in
+$\alpha$: it jumps by factors up to $120$ at prime-power entries, so any smooth ansatz is wrong
+from the start. The continuum form is \emph{exactly critical} ---
+$\tilde t^{\mathsf T}T^{-1}\tilde t$ reaches $0.999975745$, and Szeg\H{o}--Kolmogorov says the
+pole is representable in the limit --- with every measurement $\ge1.1\times10^{5}$ above the
+declared Cholesky floor. The classical hit: in the Galerkin reading, $\tilde t$ represents the
+$D$-independent function $2\sinh(x/2)$, $\varepsilon$ is the error of a piecewise-constant
+Galerkin method for it, and Aubin--Nitsche duality predicts $\varepsilon\sim D^{2s}$: the
+measured $\theta=1.79$ gives $s\approx0.90$, exactly the regularity a log singularity plus
+window edges would produce. The target inequality is now formulated:
+$\varepsilon(\alpha,D)\ge c_0\,D^{\theta}\alpha^{\varphi}$, uniformly across the jumps.
+
+\begin{keybox}[The remaining list after T116 --- one inequality, one obstruction]
+Won: the exact pole (no truncation), the exact Riccati chaining, and flat cost per step.
+Broken: \textbf{[SUPPORT]} --- the prime comb; there is no sparse faithful state, and the
+stripes drift with fill-in. Devalued: \textbf{[P2]} --- a single boundary march needs no regrid,
+so the transport defect leaves the critical path. The basis is uncritical. What remains on the
+critical path:
+\begin{enumerate}[leftmargin=1.6em]
+\item[\textbf{(1)}] \textbf{[P1] as a two-variable law} ---
+$\varepsilon(\alpha,D)\ge c_0\,D^{\theta}\alpha^{\varphi}$ with $\theta=1.790$ and
+$\varphi=-6.04$ (fits), to be proved \emph{across} the factor-$120$ jumps at prime-power
+entries; the proof technique is named (piecewise-constant Galerkin error for $2\sinh(x/2)$,
+Aubin--Nitsche duality, $s\approx0.90$).
+\item[\textbf{(2)}] \textbf{The comb as the honest support obstruction} --- any bounded-state
+formulation must either carry the reflection stripes ($\Theta(\log^2 n)$ ceiling) or find a
+representation in which the comb is diagonal.
+\end{enumerate}
+\end{keybox}
+
+\noindent T117 (\texttt{epsilon\_theorem\_probe.py}, contract \texttt{EPSILON.THEOREM} --- the
+exact Galerkin identity, an Aubin--Nitsche \emph{lower}-bound chain with explicit constants,
+exact jump formulas via Sherman--Morrison, a theorem candidate for the target inequality) was
+running at the time of writing and is \emph{not} reported here.
 
 % =====================================================================
 \section{The kill list}\label{sec:kills}
@@ -1637,7 +1736,13 @@ including all seven torn zones, with the exact $4\times4$ Schur complement at $4
 block scale --- no margin division anywhere), and the T115 compression certificates (the exact
 identity $X_{\mathrm{mixed}}=Q_{\mathrm{old,mixed}}$; Albert on $66/66$ (zone,\,$q$) combinations;
 the one-sided second-order compression error; the deep margin-free step at $n=155\,921$ and the
-ten-step chains --- certificates for a coarser Galerkin space, declared as such).\\[3pt]
+ten-step chains --- certificates for a coarser Galerkin space, declared as such), and the T116
+boundary-recursion identities (the partial-minimisation identity
+$t^{\mathsf T}T^{-1}t=r^{\mathsf T}\Sigma^{-1}r+\sigma$ on six zones; the Haynsworth
+double-Albert equivalence $6/6$ with sharp negative controls; the exact Riccati chaining,
+bit-exact on real windows; and the exact carriage of the global rank-one pole in the bordered
+state --- the deep march itself certifies the band model's cost geometry, declared as
+such).\\[3pt]
 \textbf{Measured} (holds on the resolved windows; no uniform constant): $\rho_-$; the ratio
 $r=0.0053$--$0.1814$ and $\hat r<1$ at all $92$ resolution points; $\omega=0.2366$--$0.7531$; the
 strict odd-channel margin $\lambda_{\min}(Q|_{\mathrm{odd}})=1.4\times10^{-5}$--$5.1\times10^{-2}$; the
@@ -1649,7 +1754,10 @@ handover margins; the two race slopes; the T114 ratio closure $r=2\times10^{-4}$
 $27/27$ steps and the $D$-powers of $\varepsilon$ and $\kappa$ (fits); the T115 transport split
 (the bracket's lower end positive on $7/11$ regrid pairs, threshold $\rho^*=1.83$ against a
 median ratio $2.001$) and the fall laws $\lambda_{\min}(S)\sim\rho^{-1.69}$,
-$\varepsilon\sim\rho^{-1.71}$ (fits); every scaling
+$\varepsilon\sim\rho^{-1.71}$ (fits); the T116 law
+$\varepsilon\approx8.34\,D^{1.790}\alpha^{-6.04}$ (jackknife $\le0.041$), the factor-$120$
+jumps at prime-power entries, the comb truncation budget growing like $n^{2.17}$, and the
+criticality $\tilde t^{\mathsf T}T^{-1}\tilde t\to0.999975745$ (fits/measurements); every scaling
 exponent quoted in this document.\\[3pt]
 \textbf{Hypothesis input / classical} (used, named, not proved here): Kneser, Witt/Eichler, Shimura,
 Waldspurger/Baruch--Mao, Cohen, Weil--Guinand, Bombieri, Yoshida, Connes--Consani, Douglas,
@@ -1658,7 +1766,7 @@ Sherman--Morrison/Woodbury, Christoffel--Darboux, Szeg\H{o}--Levinson, the Weyl 
 Combes--Thomas/Jaffard, Prager--Synge, first-order Kato perturbation, Albert (the pseudo-inverse
 Schur criterion), Haynsworth (the partial-minimisation form of the Schur complement),
 C\'ea/Strang's first lemma, Bramble--Hilbert, Brandt/Yserentant two-scale spaces,
-Wilkinson/Higham backward error.
+Szeg\H{o}--Kolmogorov, Aubin--Nitsche duality, Wilkinson/Higham backward error.
 \end{keybox}
 
 \subsection{The asymptotic mountain}
@@ -1694,16 +1802,25 @@ for a principled reason, since on nested ladders, where the transport error is e
 $\lambda_{\min}(S)$ itself falls like $\rho^{-1.7}$ --- while the two-scale compression breaks
 the compute cap: a certified margin-free step at $n=155\,921$ ($117\times$ deeper), ten-step
 chains, the stopper always cost and never a step, with the contiguous reach moving from
-$n\le125$ to $n\le5437$ (the $n\log n$ barrier divided, not broken). Since T115 the mountain is
-the three-point list of Section~\ref{sec:certification} --- an a-priori bound on the transport
-defect, a boundary formulation, and exactly \emph{one} inequality: the classical
-Szeg\H{o}--Levinson prediction-error bound $\varepsilon\ge c(D)>0$ for one explicit symbol. T116
-(\texttt{boundary\_formulation\_probe.py}) was running at the time of writing.
+$n\le125$ to $n\le5437$ (the $n\log n$ barrier divided, not broken). T116
+(\texttt{boundary\_formulation\_probe.py}) then ran the boundary reformulation itself: the
+induction step \emph{is} a boundary process --- the global pole rides exactly in a
+$12\times12+12+1$ state and one unbroken Riccati march ran $169\,236$ prepends to $1.35$
+million cells ($903\times$ the old cap) at flat cost, declared as a cost-geometry demonstration
+and not a Weil certificate --- but the state cannot be bounded, because the prime comb itself
+refuses compression (every incoming cell reflects off every prime power in the window; the
+truncation budget grows like $n^{2.17}$). Since T116 the mountain is one two-variable
+inequality with a named classical proof technique ---
+$\varepsilon(\alpha,D)\ge c_0D^{\theta}\alpha^{\varphi}$, a piecewise-constant Galerkin error
+under Aubin--Nitsche duality, to be proved across the prime-power jumps --- plus the comb as
+the honest support obstruction. T117 (\texttt{epsilon\_theorem\_probe.py}) was running at the
+time of writing.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
 established on the resolved zones $n=2\ldots29$ (T111's deep ladder extends the measurements to
-$n=521$, T114's margin-free ladder to $n=1331$, T115's compressed run to $n=155\,921$ --- finitely many zones either way). Not one constant in the chain is certified uniformly in
+$n=521$, T114's margin-free ladder to $n=1331$, T115's compressed run to $n=155\,921$, T116's
+boundary march to $1.35\times10^{6}$ cells with atom reach $n=173$ --- finitely many zones either way). Not one constant in the chain is certified uniformly in
 $k$. The T101 requirement list (A)--(D) is unchanged: the hardness would sit in (A), a sharp,
 non-perturbative arithmetic lower bound at a Weil-positivity edge.
 \item \textbf{Finite resolution is a wall, and a measured one.} Numerics as a witness is exhausted
@@ -1749,18 +1866,18 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T115}\label{app:index}
+\section{Probe index, diary parts T11--T116}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $105$ parts T11--T115 that the current diary file records
-($106$ runs --- T104 was a double run with two independent arms --- and $2684$ green checks); the ten
+load-bearing artefact. The index covers the $106$ parts T11--T116 that the current diary file records
+($107$ runs --- T104 was a double run with two independent arms --- and $2717$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T115: \textbf{$115$ probes, $2876/2876$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T116
-(\texttt{boundary\_formulation\_probe.py}, contract \texttt{BOUNDARY.FORMULATION}) was still running
+diary at T116: \textbf{$116$ probes, $2909/2909$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T117
+(\texttt{epsilon\_theorem\_probe.py}, contract \texttt{EPSILON.THEOREM}) was still running
 when this document was written and is deliberately absent.
 
 {\footnotesize
@@ -1882,6 +1999,7 @@ T112 & \texttt{\scriptsize adaptive\_\allowbreak scaling} & gap-coupled frame: l
 T113 & \texttt{\scriptsize limit\_\allowbreak operator} & the wall is currency-invariant ($-1.168$ in all five currencies) but measures the discretisation: no continuum gap, floor a $10^{-7}$--$10^{-4}$ cancellation, need109 an artifact margin; new balance [P1]--[P4] & SUBSTANCE-CONFIRMED & 27/27\\
 T114 & \texttt{\scriptsize margin\_\allowbreak free\_\allowbreak step} & the margin-free step: Albert/pseudo-inverse Schur certifies $27/27$ steps ($11$ past the old wall, to $n=1331$) and all $7$ torn zones; the wall was an $O(1)$ numerator over an artifact floor; (R) grid-bound, deleted ([P5]); new two-object core & WALL-DISSOLVES & 22/22\\
 T115 & \texttt{\scriptsize schur\_\allowbreak transport} & transport certifies only mild refinement (split at $\rho^*\!\approx\!1.8$; on nested ladders $\lambda_{\min}(S)$ itself falls like $\rho^{-1.7}$), but the two-scale compression breaks the cap: margin-free step at $n=155\,921$, ten-step chains, stopper always cost; remaining list three points, one inequality (Szeg\H{o}--Levinson) & TRANSPORT-BLOCKED & 26/26\\
+T116 & \texttt{\scriptsize boundary\_\allowbreak formulation} & the induction as a boundary process: the $(\Sigma,r,\sigma)$ state carries the global pole exactly and marches $169\,236$ prepends to $1.35\times10^{6}$ cells at flat cost (cost-geometry demo, not a Weil certificate); the prime comb refuses compression (budget $\sim n^{2.17}$); $\varepsilon\approx8.34\,D^{1.790}\alpha^{-6.04}$ with factor-$120$ jumps --- a Galerkin error under Aubin--Nitsche duality & RICCATI-PARTIAL & 33/33\\
 \end{xltabular}
 }
 
@@ -1917,6 +2035,10 @@ $\Gamma=V^{\mathsf T}T_{\mathrm{odd}}^{-1}V$, and its graded-matrix-cap certific
 $m_k$, $\mathrm{need109}$ & the strict odd-channel margin $\lambda_{\min}(Q|_{\mathrm{odd}})$ at zone
 $k$, and the explicit demand $(\mu/2)H_{\mathrm{cert}}^2/((1-\omega_{\mathrm{cert}})\kappa)$ of the
 T109 chain; $m_k\ge\mathrm{need109}$ on $16/16$ measured zones (T110)\\
+$(\Sigma,r,\sigma)$; $\theta$, $\varphi$ & the boundary state of the Riccati recursion (partial
+minimisation of the pole-free form over the interior; carries the pole exactly), and the two
+exponents of the measured law $\varepsilon\approx8.34\,D^{\theta}\alpha^{\varphi}$,
+$\theta=1.790$, $\varphi=-6.04$ (T116)\\
 \bottomrule
 \end{tabularx}
 }
