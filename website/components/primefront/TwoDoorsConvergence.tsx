@@ -161,9 +161,16 @@ export function TwoDoorsConvergence() {
           artefact) and splits the wall into three — margin wall n ≈ 462,
           twin-prime ladder wall 521→523, requirement wall n = 727 — while
           the mechanism never fails (117/117 at retention 1.000000): depth,
-          not n, is the operating variable. T112 (
+          not n, is the operating variable. T112 · ADAPTIVE.SCALING —
+          SCALING-PARTIAL (20/20): in the gap-coupled frame D_k = g_k/(2ν)
+          two walls fall structurally (ladder death and the depth dependence
+          of the requirement wall; 461→463 certifies with the reserve
+          opening ~1000×), but the margin wall is frame-invariant at
+          exponent −0.974 — the substance of the requirement, not geometry;
+          the hardness is now one limit operator plus one convergence rate,
+          with the prime-gap dependence disclosed. T113 (
           <span className="font-mono text-slate-300">
-            adaptive_scaling_probe.py
+            limit_operator_probe.py
           </span>
           ) running.
         </p>

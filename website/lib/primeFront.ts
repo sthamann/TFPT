@@ -88,7 +88,8 @@ export type PrimeFrontVerdict =
   | "EPSILON-IDENTITY"
   | "BOUNDARY-CERTIFIED"
   | "MARGIN-PROPAGATES"
-  | "CROSSING-CONFIRMED";
+  | "CROSSING-CONFIRMED"
+  | "SCALING-PARTIAL";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -112,6 +113,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-27",
+    part: 112,
+    title:
+      "Scaling partial — gap-coupled scaling fells two of three walls structurally; the margin wall is frame-invariant at exponent −0.974",
+    verdict: "SCALING-PARTIAL",
+    summary:
+      "T112 (SCALING-PARTIAL, 20/20) — contract ADAPTIVE.SCALING: stop freezing the cell width D and couple it to the local prime gap — do the three T111 walls survive the n-adaptively scaled frame? (J1) Two couplings built: frame A gap-coupled, D_k = g_k/(2ν), and frame B mean-field, D_k = log n/(2νn). FRAME B HAS NO LADDER (only 38% of pairs nest; first failure already at n = 3) — the ladder lives exclusively in the gap coupling. T105 admissibility sets a resolution floor: ν ≥ 4 (at ν = 1, 3/10 zones are inadmissible). The flatness verdict: NOT flat — but the exponent is FRAME-INVARIANT: the components shift massively (m_k: n^−1.93 → n^−0.95; need109: n^−0.98 → n^+0.03, practically n-independent in the scaled frame!), yet the difference stays −0.974. (J2) The three walls, scaled: the LADDER WALL IS STRUCTURALLY GONE — the nested step has exactly ν cells per end BY CONSTRUCTION (twin pairs included), the atom entry is the exact zero matrix by construction instead of an arithmetic accident, and the T111 killer pair 461→463 now certifies spectrally (h = 1418, retention 1.000000) with the reserve OPENING: f_crit = 8.1e-4…4.2e-3 instead of 1.00 — roughly a factor 1000 (521→523 would need h = 1634 > the cap: arithmetically co-certified, spectrally declared honestly as not run). The ω WALL IS NO LONGER A DEPTH WALL: the depth coefficient is n^−0.079 ± 0.121, compatible with zero — ω is driven by resolution and the local gap, with a residual requirement-vacuum tail of 5 zones on the deepest ladder, not booked as gone. The MARGIN WALL STAYS, practically unmoved: the first sub-1 zone sits at n = 449 against the frozen frame's 461–463 (factor 1.07) — it is not geometry but the substance of the T109 requirement. (J3) The limit object: the arch (0.657) and pole (0.558) parts contract Cauchy-like with amplitude laws D^−0.26 / D^+0.37; the atom part does NOT contract (0.935 — it IS the prime-gap statistics in scaled coordinates); λ₂/λ₁ does not drift (n^−0.029 ± 0.052). Formulation: [a deterministic limit shape: arch + rank-1 pole] + [atoms as a controlled, non-convergent perturbation]. New and uncomfortable: the REGRID OBJECT — the zone frames are not nested, Rayleigh–Ritz transfers nothing between them; measured rate (D′/D)^+2.93; in the frozen frame this object does not exist. (J4) The trade: three arithmetic walls exchanged for two analytic demands — [P1] positivity of the limit operator (ONE operator instead of a matrix sequence) and [P2] a convergence rate below the step reserve. The prime-gap inputs are disclosed: Bertrand–Chebyshev 1852 (used, verified) and the trivial even-gap bound suffice upward; θ_k = g_k·n/log n = 0.18…4.12 is the only remaining arithmetic parameter, and downward θ is provably unboundedly small (Zhang 2014 / Maynard 2015: infinitely many bounded gaps force θ → 0 on subsequences) — any gap-coupled construction must be uniform in θ → 0, at the price of the 1/θ cost explosion. T113 (LIMIT.OPERATOR, limit_operator_probe.py) is running: the currency question (is the margin fall in the scaled frame a normalisation artefact? λ₂/λ₁ constant vs m ~ n^−0.95), the limit operator made explicit, the atom perturbation as a gap functional, regrid vs reserve. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "adaptive_scaling_probe.py",
+  },
   {
     date: "2026-07-27",
     part: 111,

@@ -1,3 +1,70 @@
+# 2026-07-27 (VI) — Teil 112 (delegiert, der skalierte Rahmen — Vertrag ADAPTIVE.SCALING): adaptive_scaling_probe.py — **SCALING-PARTIAL** — ZWEI DER DREI WÄNDE FALLEN STRUKTURELL: im lücken-gekoppelten Rahmen D_k = g_k/(2ν) ist die Leiter-Wand per Konstruktion weg (exakt ν Zellen pro Ende, Zwillinge eingeschlossen; 461→463 spektral zertifiziert, Retention 1.000000; Reserve öffnet 1000×) und die ω-Wand keine Tiefen-Wand mehr; die MARGEN-WAND bleibt RAHMEN-INVARIANT (Exponent −0.974; erste Sub-1-Zone n = 449 vs eingefroren 461–463) — sie ist die Substanz der T109-Anforderung, nicht Geometrie; der Tausch: drei arithmetische Wände gegen [P1] Positivität EINES Grenz-Operators + [P2] Konvergenzrate < Schrittreserve, Lücken-Abhängigkeit offengelegt — 20/20, 29.8s, Sandbox
+# J1 Zwei Kopplungen gebaut: Frame A D_k = g_k/(2ν) (lücken-gekoppelt),
+#    Frame B D_k = log n/(2νn) (Mittelfeld/PNT). FRAME B HAT KEINE LEITER
+#    (nur 38% der Paare nesten, erster Ausfall n = 3) — die Leiter lebt
+#    ausschließlich in der Lücken-Kopplung. T105-Zulässigkeit setzt die
+#    Auflösungsuntergrenze ν ≥ 4 (bei ν = 1 sind 3/10 Zonen unzulässig).
+#    Flachheits-Urteil: NICHT flach, der Exponent ist RAHMEN-INVARIANT —
+#    die Komponenten verschieben sich massiv (m_k: n^−1.93 → n^−0.95;
+#    need109: n^−0.98 → n^+0.03, im skalierten Rahmen praktisch
+#    n-unabhängig!), aber die Differenz bleibt −0.974.
+# J2 Drei Wände, skaliert: LEITER-WAND STRUKTURELL WEG — der geschachtelte
+#    Schritt hat exakt ν Zellen pro Ende PER KONSTRUKTION (Zwillinge
+#    eingeschlossen); der Atom-Eintritt ist die exakte Nullmatrix per
+#    Konstruktion statt arithmetischer Zufall; 461→463 spektral zertifiziert
+#    (h = 1418, Retention 1.000000); die Reserve ÖFFNET (f_crit =
+#    8.1e-4…4.2e-3 statt 1.00); 521→523 bräuchte h = 1634 > Deckel —
+#    arithmetisch mitzertifiziert, spektral ehrlich als nicht gelaufen
+#    deklariert. ω-WAND KEINE TIEFEN-WAND MEHR: Tiefen-Koeffizient
+#    n^−0.079 ± 0.121, mit Null verträglich; getrieben von Auflösung +
+#    lokaler Lücke; Rest-Vakuumschwanz von 5 Zonen auf der tiefsten Leiter —
+#    nicht als „weg" verbucht. MARGEN-WAND BLEIBT, praktisch unverschoben:
+#    erste Sub-1-Zone n = 449 vs eingefroren 461–463 (Faktor 1.07) — sie ist
+#    nicht Geometrie, sondern die Substanz der T109-Anforderung.
+# J3 Grenz-Objekt: Arch (0.657) und Pol (0.558) kontrahieren Cauchy-artig
+#    mit Amplitudengesetzen D^−0.26/D^+0.37; der Atom-Teil kontrahiert NICHT
+#    (0.935 — er IST die Primzahl-Lücken-Statistik in skalierten
+#    Koordinaten). λ₂/λ₁ driftet nicht (n^−0.029 ± 0.052). Formulierung:
+#    [deterministische Grenzform: Arch + Rang-1-Pol] + [Atome als
+#    gesteuerte, nicht konvergente Störung]. NEU UND UNBEQUEM: das
+#    REGRID-OBJEKT — die Zonen-Rahmen sind nicht geschachtelt, Rayleigh-Ritz
+#    überträgt nichts; gemessene Rate (D′/D)^+2.93; im eingefrorenen Rahmen
+#    existiert das Objekt nicht.
+# J4 Der Tausch: drei arithmetische Wände gegen zwei analytische
+#    Forderungen — [P1] Positivität des Grenz-Operators (EIN Operator statt
+#    Matrizenfolge), [P2] Konvergenzrate < Schrittreserve. Lücken-Sätze
+#    offengelegt: Bertrand-Chebyshev 1852 (verwendet, verifiziert), triviale
+#    Gerade-Lücken-Schranke (verwendet); θ_k = g_k·n/log n = 0.18…4.12 ist
+#    der einzige verbliebene arithmetische Parameter; nach unten ist θ
+#    beweisbar unbeschränkt klein (Zhang 2014/Maynard 2015: unendlich viele
+#    beschränkte Lücken ⇒ θ → 0 auf Teilfolgen) — jede lücken-gekoppelte
+#    Konstruktion muss uniform in θ → 0 sein, der Preis ist die
+#    Kostenexplosion 1/θ. → T113 (läuft): LIMIT.OPERATOR
+#    (limit_operator_probe.py) — die Währungs-Frage (ist der Margen-Fall im
+#    skalierten Rahmen ein Normierungs-Artefakt? λ₂/λ₁ konstant vs
+#    m ~ n^−0.95), der Grenz-Operator explizit, die Atom-Störung als
+#    Lücken-Funktional, Regrid vs Reserve.
+# NACHTRAG (Literatur-Recherche 27. Jul, Prior-Art-Abgleich für mögliche
+#    Extraktions-Papers — zwei Ehrlichkeits-Korrekturen): (1) Die
+#    Koeffizientengesetze L1–L4 des Matching-Lemmas (T77/T78) sind
+#    Spezialisierungen von Cohen 1975 (Math. Ann. 217;
+#    Hurwitz-Klassenzahl-Reihen H(r,n), Cohen–Eisenstein-Reihen Gewicht
+#    r+1/2) bzw. Pei–Wang 2003 — Korollare, keine Funde; die restringierte
+#    Divisor-Ungleichung selbst bleibt der eigenständige Teil. (2) Die
+#    T92-Formel k(0) = −γ − 3log2 − π/2 − log π steht der Sache nach bei
+#    Suzuki 2023 (JLMS 107; ψ(1/4) = −π/2 − 3log2 − C₀) — guter
+#    Konsistenz-Check, kein Fund. Verwandte aktive Programme: Suzuki
+#    arXiv:2606.09096 (Kontinuums-Lemmata zur Träger-Erweiterung), zwei
+#    nicht-referierte 2026-Zenodo-Programme mit weitergehenden Claims (bis
+#    log 3).
+# Serie (XII)–(CXXIII): 112 Proben, 2801/2801 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Cholesky/Sylvester-Inertia,
+# Loewner-Ordnung, Weyl-Schranke/Cauchy-Interlacing, Rayleigh-Ritz,
+# Schur-Komplement, Grenander–Szegő, Prager–Synge, Hestenes-Stiefel,
+# Cantoni-Butler, Bertrand-Chebyshev 1852, Baker-Harman-Pintz 2001,
+# Zhang 2014/Maynard 2015, Cramér 1936, von-Mangoldt-Arithmetik) zitiert;
+# Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-27 (V) — Teil 111 (delegiert, die tiefe Leiter — Vertrag DEEP.ZONE.STRESS): deep_zone_stress_probe.py — **CROSSING-CONFIRMED** — DIE KREUZUNG IST GEMESSEN, NICHT EXTRAPOLIERT: letzte Zone ≥ 1 bei n = 461, erste darunter n = 463 (T110s n≈170 war ein Fit-Artefakt, aber die Wand ist real; n* ≈ 462 ist eine OBERE Schranke); die eine Warnung spaltet in DREI GETRENNTE WÄNDE (Margen-Wand n ≈ 462, Leiter-Wand an Primzwillingen 521→523, Anforderungs-Wand n = 727), und der Mechanismus versagt NIE — alle 117 Übergaben zertifizieren mit Retention 1.000000, es reißt am Verhältnis; Umdeutung: die Betriebsvariable ist die TIEFE, nicht n — 23/23, 140s, Sandbox
 # I1 Tiefe Leiter: T110-Gitter bitgenau reproduziert, dann lückenlose Abtastung
 #    ALLER Primpotenzen bis 1000 + dünner Schwanz bis 3001 (199 Zonen,

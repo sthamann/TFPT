@@ -79,7 +79,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$111$ preregistered probes with $2781$ machine checks, which localized the residual object. That
+$112$ preregistered probes with $2801$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -96,14 +96,22 @@ penultimate part then closes the induction circle on the measured zones end to e
 base case, fifteen certified handover steps through a graded Loewner minorant, and the structural
 finding that the atom entry costs nothing --- while leaving three sharp, named gaps: no reserve, no
 scalar step law, and no uniformity in $k$, with an extrapolated crossing warning at $n\approx170$.
-The last part stops extrapolating and measures: on a deep ladder of $199$ prime-power zones with
+The next part stops extrapolating and measures: on a deep ladder of $199$ prime-power zones with
 $117$ certified handovers, the crossing is located between $n=461$ and $n=463$ --- the $n\approx170$
 figure was a fit artefact, but the wall is real, and $n^*\approx462$ is an upper bound --- and the
 single warning splits into three separate walls (a measured margin wall, an arithmetic ladder wall
 set by the twin-prime pair $521\to523$, and a vacuous-requirement wall at $n=727$), while the
 handover mechanism itself never fails: all $117$ steps certify at retention $1.000000$, and the
 chain tears at the ratio, not at a step. The operating variable turns out to be the window depth,
-not the zone index. \textbf{No claim of progress on the Riemann Hypothesis is
+not the zone index. The last part acts on that reinterpretation and rebuilds the construction in a
+gap-coupled scaled frame ($D$ tied to the local prime gap): two of the three walls fall
+\emph{structurally} --- the ladder death becomes a payable cell cost (the killer pair $461\to463$
+now certifies spectrally with the reserve opening by a factor ${\sim}1000$) and the requirement
+wall loses its depth dependence --- while the margin wall proves \emph{frame-invariant} at exponent
+$-0.974$: it is the substance of the requirement, not geometry. The hardness is thereby traded ---
+three arithmetic walls against two analytic demands, the positivity of one limit operator and a
+convergence rate below the step reserve --- with the prime-gap dependence disclosed rather than
+hidden. \textbf{No claim of progress on the Riemann Hypothesis is
 made anywhere in this document}, and none of the sandbox findings moves any ledger marker. The
 document is deliberately symmetric about failure: a dedicated section lists the readings and
 routes that were refuted --- an essential-singularity reading, a $C/g$ proxy law, a density chain, an
@@ -479,7 +487,11 @@ promotion of T78--T82 and T85; every core check recomputed, not cited).
 $7S(j)<40A(j)$ at every atom, $0$ violations over $939\,870$ clash atoms, no-overflow proven in exact
 integers, $268$ big-integer rechecks; exact margin $X=22242575693/270725400000=0.082159$ at
 $j^*=554400$; $\rho_{\mathrm{crit}}=1.143989>21/20$. A maximal-greedy identity makes the certificate
-uniform in the target set and the greedy weights.
+uniform in the target set and the greedy weights.\footnote{Prior-art note (literature pass,
+2026-07-27): the coefficient laws L1--L4 that T77/T78 use to shape the lemma are specialisations of
+Cohen 1975 (Math.\ Ann.\ 217: the Hurwitz class-number series $H(r,n)$ and the Cohen--Eisenstein
+series of weight $r+\frac12$) and of Pei--Wang 2003 --- corollaries of known theory, not discoveries.
+The restricted divisor inequality itself remains the independent part.}
 \item \textbf{Transport ledger} \mE: $\Qweil=\Qcert+\Darch+\Delta_2$ closes with residual
 $4.4\times10^{-16}$ on a $24$-row battery, and $\Delta_{\mathrm{pole}}\equiv\Delta_{\mathrm{conv}}\equiv0$
 are \emph{proven}, not measured (kernel collapse in \texttt{sympy}, exact scale invariance).
@@ -645,7 +657,10 @@ T97 (\texttt{relay\_induction\_probe.py}, $105/105$) gave the induction step pro
 true and sharp with a constant law; the $t=0$ killer loss is proved by three structure identities
 (old atoms vanish identically on $E_-$; the pole rescue flips with factor $1-\cosh(u/2)$;
 $|\hat f|^2=2(1-\cos(tu))|\hat g|^2$), giving $k_{\mathrm{eff}}=(1-\cos(tu))k(t)$ with infimum
-$-1.11\ldots-2.59$ instead of $k(0)=-5.37$. The structural pearl: $E_0$ is \emph{literally} the same
+$-1.11\ldots-2.59$ instead of $k(0)=-5.37$.\footnote{In closed form (a T92 side result)
+$k(0)=-\gamma-3\log2-\pi/2-\log\pi$. Prior-art note (literature pass, 2026-07-27): in substance
+this is the classical digamma value $\psi(1/4)=-\pi/2-3\log2-\gamma$, shifted by $-\log\pi$, as it
+appears in Suzuki 2023 (J.\ London Math.\ Soc.\ 107) --- a good consistency check, not a find.} The structural pearl: $E_0$ is \emph{literally} the same
 form at a smaller window ($7\times10^{-14}$) --- the induction hypothesis, by self-similarity. What
 remained was a single cross-block lemma about a single vector.
 
@@ -719,7 +734,7 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T111)}\label{sec:certification}
+\section{The certification arc (T102--T112)}\label{sec:certification}
 % =====================================================================
 The last ten parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
@@ -842,10 +857,10 @@ the wing near-null direction.
 \node[tgt] (o) at (0,-3.4) {\textbf{One object:} the wing near-null direction\\[2pt]
   \footnotesize dressing almost rank one (effective rank $1.07$--$2.7$; $99.7$--$100\%$ of the
   near-null direction in \emph{one} prolate mode)};
-\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111\\[2pt]
+\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112\\[2pt]
   \footnotesize certify \emph{bare}, prove the avoidance law, split the parity channels,
-  reduce to one scalar ratio, then to two scalars, certify both --- then propagate the margin
-  and measure where the propagation fails};
+  reduce to one scalar ratio, then to two scalars, certify both --- then propagate the margin,
+  measure where the propagation fails, and rescale the frame};
 \draw[ar] (a) -- (o);
 \draw[ar] (c) -- (o);
 \draw[ar] (o) -- (n);
@@ -1220,10 +1235,70 @@ $47$. A proof along this route must beat the exponent gap $-0.974=-0.681-0.293$ 
 depth $\delta_0$ to the local prime gap.
 \end{keybox}
 
-\noindent T112 (\texttt{adaptive\_scaling\_probe.py}, contract \texttt{ADAPTIVE.SCALING} --- the
-construction in an $n$-adaptively scaled frame with $D$ tied to the local prime gap, testing whether
-all three walls fall simultaneously, plus a fixed-point / limit-object search) was running at the
-time of writing and is \emph{not} reported here.
+\noindent T112 subsequently ran the construction in exactly that coupled frame (next subsection):
+walls (2) and (3) fall \emph{structurally}, wall (1) proves frame-invariant.
+
+\subsection{The scaled frame: two walls fall, the margin wall is frame-invariant (T112)}
+T112 (\texttt{adaptive\_scaling\_probe.py}, contract \texttt{ADAPTIVE.SCALING}, $20/20$,
+\textsc{scaling-partial}) stopped freezing the cell width and coupled it to the local scale. Two
+couplings were built: frame~A, gap-coupled, $D_k=g_k/(2\nu)$ with $g_k$ the local prime-power gap
+and $\nu$ the resolution constant of the frame; and frame~B, mean-field, $D_k=\log n/(2\nu n)$ ---
+the smooth PNT version of the same idea. The first finding is a structural asymmetry: \emph{frame~B
+has no ladder} (only $38\%$ of consecutive pairs nest; the first failure is already at $n=3$) ---
+the nested handover lives exclusively in the gap coupling, not in any smooth $1/n$ law. T105
+admissibility, re-measured in the scaled frame, sets a resolution floor $\nu\ge4$ (at $\nu=1$,
+$3/10$ test zones are inadmissible). The flatness verdict is honest and double-edged: the ratio is
+\emph{not} flat, but the exponent is \emph{frame-invariant} --- the components shift massively
+($m_k$: $n^{-1.93}\to n^{-0.95}$; $\mathrm{need109}$: $n^{-0.98}\to n^{+0.03}$, i.e.\ practically
+$n$-independent in the scaled frame), yet the difference stays $-0.974$.
+
+\emph{The three walls, scaled.} The \textbf{ladder wall is structurally gone}: with $D_k=g_k/(2\nu)$
+the nested step has exactly $\nu$ cells per end \emph{by construction} --- twin pairs included ---
+verified as an exact arithmetic lemma over all zones; the atom entry is the exact zero matrix by
+construction rather than by arithmetic accident; and the T111 killer pair $461\to463$ now certifies
+\emph{spectrally} ($h=1418$, retention $1.000000$), with the reserve \emph{opening}:
+$f_{\mathrm{crit}}=8.1\times10^{-4}$--$4.2\times10^{-3}$ instead of $1.00$ --- roughly a factor
+$1000$. (The pair $521\to523$ would need $h=1634$, above the dimension cap: arithmetically
+co-certified, spectrally declared honestly as not run.) The \textbf{$\omega$ wall is no longer a
+depth wall}: the depth coefficient is $n^{-0.079\pm0.121}$, compatible with zero ---
+$\omega_{\mathrm{cert}}$ is driven by the resolution and the local gap, not by the depth of the
+ladder; a residual requirement-vacuum tail of $5$ zones on the deepest ladder remains and is not
+booked as ``gone''. The \textbf{margin wall stays}, practically unmoved: the first sub-$1$ zone
+sits at $n=449$ against the frozen frame's $461$--$463$ (a factor $1.07$) --- it is not geometry
+but the substance of the T109 requirement itself.
+
+\emph{The limit object.} Overlaying the scaled windows, the archimedean part ($0.657$) and the pole
+part ($0.558$) contract Cauchy-like with amplitude laws $D^{-0.26}$ and $D^{+0.37}$; the atom part
+does \emph{not} contract ($0.935$) --- it is the prime-gap statistics itself, written in scaled
+coordinates. The spectral shape does not drift: $\lambda_2/\lambda_1\sim n^{-0.029\pm0.052}$. The
+resulting formulation is a split object: \emph{[a deterministic limit shape: arch $+$ rank-one
+pole] $+$ [the atoms as a controlled, non-convergent perturbation]}. New and uncomfortable is the
+\textbf{regrid object}: the zone frames are not nested, so Rayleigh--Ritz transfers nothing between
+them; the regrid cost is measured at rate $(D'/D)^{+2.93}$ --- an object that simply does not exist
+in the frozen frame, disclosed here because any limit argument has to pay it.
+
+\begin{keybox}[The trade --- and the disclosed prime-gap dependence]
+Three arithmetic walls are exchanged for two analytic demands:
+\begin{enumerate}[leftmargin=1.6em]
+\item[\textbf{[P1]}] \textbf{Positivity of the limit operator} --- \emph{one} operator instead of a
+sequence of matrices; the deterministic part (arch $+$ rank-one pole) contracts, the atom part is
+the perturbation to be controlled.
+\item[\textbf{[P2]}] \textbf{A convergence rate below the step reserve} --- the Cauchy rates and the
+regrid cost against the opening reserve $f_{\mathrm{crit}}$.
+\end{enumerate}
+The prime-gap inputs are disclosed rather than hidden. Upward, Bertrand--Chebyshev $1852$
+($g_k\le\log2$; used and verified in-run) and the trivial even-gap bound suffice. The only remaining
+arithmetic parameter is the normalised gap $\theta_k=g_k\,n/\log n=0.18$--$4.12$ --- and downward,
+$\theta$ is \emph{provably} unboundedly small: by Zhang $2014$ / Maynard $2015$ (infinitely many
+bounded gaps), $\theta\to0$ on subsequences, so any gap-coupled construction must be uniform in
+$\theta\to0$, at the price of the $1/\theta$ cost explosion.
+\end{keybox}
+
+\noindent T113 (\texttt{limit\_operator\_probe.py}, contract \texttt{LIMIT.OPERATOR} --- the currency
+question: is the margin fall in the scaled frame a normalisation artefact, $\lambda_2/\lambda_1$
+constant against $m\sim n^{-0.95}$? --- plus the limit operator made explicit, the atom perturbation
+as a gap functional, and regrid against reserve) was running at the time of writing and is \emph{not}
+reported here.
 
 % =====================================================================
 \section{The kill list}\label{sec:kills}
@@ -1351,8 +1426,14 @@ on the deep ladder --- all $117$ handovers certify at retention $1.000000$, and 
 opens with depth ($f_{\mathrm{crit}}\sim n^{-0.39}$, fit) --- so the actionable content of the
 measurement is the reinterpretation: the operating variable is the window depth, not the zone index,
 and a proof along this route must beat the exponent gap $-0.974=-0.681-0.293$ and couple the depth
-$\delta_0$ to the local prime gap. T112 (\texttt{adaptive\_scaling\_probe.py}, the $n$-adaptively
-scaled frame with $D$ tied to the local prime gap) was running at the time of writing.
+$\delta_0$ to the local prime gap. T112 (\texttt{adaptive\_scaling\_probe.py}) then performed that
+coupling: the ladder wall and the depth dependence of the requirement wall fall \emph{structurally}
+in the gap-coupled frame, but the margin wall is frame-invariant at exponent $-0.974$ --- since T112
+the mountain is two analytic demands, the positivity of one limit operator and a convergence rate
+below the step reserve, with the prime-gap dependence disclosed (Bertrand--Chebyshev suffices
+upward; Zhang/Maynard force $\theta$-uniformity downward). T113
+(\texttt{limit\_operator\_probe.py}, the limit operator made explicit) was running at the time of
+writing.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -1403,18 +1484,18 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T111}\label{app:index}
+\section{Probe index, diary parts T11--T112}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $101$ parts T11--T111 that the current diary file records
-($102$ runs --- T104 was a double run with two independent arms --- and $2589$ green checks); the ten
+load-bearing artefact. The index covers the $102$ parts T11--T112 that the current diary file records
+($103$ runs --- T104 was a double run with two independent arms --- and $2609$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T111: \textbf{$111$ probes, $2781/2781$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T112
-(\texttt{adaptive\_scaling\_probe.py}, contract \texttt{ADAPTIVE.SCALING}) was still running when
+diary at T112: \textbf{$112$ probes, $2801/2801$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T113
+(\texttt{limit\_operator\_probe.py}, contract \texttt{LIMIT.OPERATOR}) was still running when
 this document was written and is deliberately absent.
 
 {\footnotesize
@@ -1532,6 +1613,7 @@ T108 & \texttt{\scriptsize ratio\_\allowbreak certificate} & $\varepsilon$ is an
 T109 & \texttt{\scriptsize boundary\_\allowbreak decay} & cancellation, not decay; both scalars certified (graded cap $+$ residual certificate); one strict-margin input left & BOUNDARY-CERTIFIED & 29/29\\
 T110 & \texttt{\scriptsize margin\_\allowbreak propagation} & the induction circle closes on the measured zones (certified base case $+$ graded Loewner minorant; atom entry free); three gaps named & MARGIN-PROPAGATES & 28/28\\
 T111 & \texttt{\scriptsize deep\_\allowbreak zone\_\allowbreak stress} & the crossing measured, not extrapolated ($n^*\!\approx\!462$, upper bound); three walls (margin / twin-prime ladder / requirement); mechanism never fails, $117/117$ & CROSSING-CONFIRMED & 23/23\\
+T112 & \texttt{\scriptsize adaptive\_\allowbreak scaling} & gap-coupled frame: ladder wall and $\omega$ depth-dependence fall structurally; margin wall frame-invariant ($-0.974$); trade to [P1]/[P2], prime-gap inputs disclosed & SCALING-PARTIAL & 20/20\\
 \end{xltabular}
 }
 
