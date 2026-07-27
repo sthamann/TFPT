@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–113 · 2828 sandbox checks
+            Research diary · Teile 11–114 · 2850 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1630,10 +1630,16 @@ function ProgramStatusCallout() {
         currency, but it measures the discretization, not the spectrum — the
         continuum window form has no gap, the positive floor is a
         cancellation (~1e-7 relative), and the T109 requirement chain
-        divides by an artifact margin; the repair — a margin-free step
-        certificate — is now under test in T114
-        (margin_free_step_probe.py). Milestone: 2828/2828 checks.
-        Not almost-RH. This is not RH evidence.
+        divides by an artifact margin. T114 (WALL-DISSOLVES) then builds
+        the repair and the wall dissolves: the exact Schur complement
+        (Albert 1969) certifies every step margin-free — eleven beyond the
+        old wall, up to n = 1331, and all seven torn zones — the wall was
+        an O(1) numerator divided by an artifact floor; chains now stop
+        only at compute cost, never at a step, and the remaining core is
+        two objects (ε relative to κ via the exact Szegő identity, and
+        transporting an O(0.1) Schur complement between grids); T115
+        (schur_transport_probe.py) is running. Milestone: 2850/2850
+        checks. Not almost-RH. This is not RH evidence.
       </p>
     </aside>
   );

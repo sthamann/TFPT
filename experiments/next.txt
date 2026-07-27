@@ -1,3 +1,50 @@
+# 2026-07-27 (VIII) — Teil 114 (delegiert, der margenfreie Schritt — Vertrag MARGIN.FREE.STEP): margin_free_step_probe.py — **WALL-DISSOLVES** — DIE MARGEN-WAND LÖST SICH AUF: das exakte Schur-Komplement (Albert 1969, Pseudo-Inverse) zertifiziert jeden Leiter-Schritt margenfrei — 27/27, davon 11 jenseits der alten Wand (bis n = 1331, tiefster h = 1495) und alle 7 Riss-Zonen der T109-Kette (inkl. n = 449); das exakte 4×4-Schur-Komplement ist O(0.1) OHNE Auslöschung (λ_min(S) = 42–67% der Blockskala), dieselbe Größe via Norm-Schranke ist um Faktor 2.4e5–9.6e7 negativ — die Wand war ein O(1)-Zähler geteilt durch einen Artefakt-Boden; Ketten enden nur am Fenster-Kosten-Deckel h ≤ 1500, NIE an einem Schritt; [P5] NEU: die (R)-Nachfrage ist gitter-gebunden, im Kontinuum falsch — streichen statt transportieren; der neue Kern: [P1] ε > 0 relativ zu κ + [P2] Schur-Transport zwischen Gittern — 22/22, 14.2s, Sandbox
+# L1 Margenfreier Schritt: der Unterblock des neuen Fensters ist bit-exakt
+#    Q_old (Atom-Eintritt exakte Nullmatrix) — Margenfreiheit IST diese
+#    Eigenschaft. Route (i) Albert 1969 (verallgemeinertes Schur mit
+#    Pseudo-Inverser; Range-Bedingung = Douglas 1966): zertifiziert 27/27
+#    Leiter-Schritte, davon 11 jenseits der alten Wand (467, 479, 512, 529,
+#    547, 577, 661, 773, 887, 1129, 1331; tiefster h = 1495). Das exakte
+#    4×4-Schur-Komplement: λ_min(S) = 0.068–0.154 = 42–67% der Blockskala —
+#    KEINE Auslöschung. Route (ii) gradierte Minorante bei x_in = 0 stirbt
+#    strukturell 27/27 (die T110-Marge bezahlte nicht die Positivität,
+#    sondern eine aufgegebene Richtung). Route (iii) Cholesky unverschoben
+#    27/27. Negativkontrollen scharf (5/5), Frame-Invarianz ν = 8 (3/3).
+#    DIE WAND IN EINER ZEILE: dieselbe Größe via Norm-Schranke (Weyl:
+#    λ_min(A) − ‖C‖²/λ_min(X)) ist um Faktor 2.4e5–9.6e7 NEGATIV (O(1)-Zähler
+#    durch 1e-6-Boden geteilt) — jede Norm-Route musste scheitern, das exakte
+#    Schur-Komplement geht durch keine. Alle 7 Zonen, an denen die T109-Kette
+#    reißt (inkl. Wandzone n = 449 selbst, need109/m = 1.241), werden vom
+#    margenfreien Schritt zertifiziert.
+# L2 Verhältnis-Schließung: ε ~ D^1.77–2.01, κ ~ D^3.64–4.84 — die
+#    präregistrierte „gleiche Potenz" ist widerlegt IN DIE GÜNSTIGE RICHTUNG:
+#    κ fällt schneller, r = κ/ε ~ D^1.6–3.1 schrumpft unter Verfeinerung.
+#    Verhältnis-Schließung r = 2e-4…0.103 auf 27/27 (11/11 jenseits 463).
+# L3 Der Kreis [Basis PSD + margenfreier Schritt + Verhältnis-Schließung]
+#    schließt 27/27; 10 Mehrschritt-Ketten (21 zertifizierte Schritte,
+#    längste 4); jede Kette endet am Deckel h ≤ 1500 (Fenster-Kosten) —
+#    niemals an einem Schritt. Regrid: 0/464 Lücken-Verhältnisse dyadisch.
+# L4 [P5] NEU: die (R)-Nachfrage ist GITTER-GEBUNDEN — hält man (μ/2)P₋
+#    physikalisch fest und verfeinert, wächst ω monoton (5/5) und
+#    überschreitet 1 (4/5): (R) ist im Kontinuum falsch und zu STREICHEN
+#    statt zu transportieren; das exakte Schur-Komplement braucht kein
+#    Nachfrage-Surrogat. Auslöschungs-Robustheit: die 1e-7-Auslöschung hat
+#    5.3–8.8 Dezimalstellen Luft über dem Cholesky-Rückwärtsfehler
+#    (Wilkinson/Higham) und sitzt fast ganz im Rang-1-Pol — dessen
+#    Positivität ist die exakte T108-Szegő-Identität ε. DER NEUE KERN:
+#    [P1] „ε > 0 mit kontrollierter Größe relativ zu κ"; [P2 geschärft]
+#    Transport des exakten Schur-Komplements (O(0.1)-Größe ohne Auslöschung)
+#    zwischen nicht-geschachtelten Gittern. → T115 (läuft): SCHUR.TRANSPORT
+#    (schur_transport_probe.py) — Transport-Zertifikat +
+#    Multi-Resolution-Kompression, tiefer Lauf jenseits 1331.
+# Serie (XII)–(CXXV): 114 Proben, 2850/2850 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Albert 1969, Douglas 1966,
+# Schur-Komplement/Haynsworth 1968, Cholesky/Sylvester-Inertia,
+# Loewner-Ordnung, Weyl-Schranke, Rayleigh-Ritz, Sherman-Morrison/Woodbury,
+# Szegő/Levinson, Grenander–Szegő, Wilkinson 1968/Higham 2002,
+# Bertrand-Chebyshev 1852, Zhang 2014/Maynard 2015, von-Mangoldt-Arithmetik)
+# zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-27 (VII) — Teil 113 (delegiert, der Grenz-Operator — Vertrag LIMIT.OPERATOR): limit_operator_probe.py — **SUBSTANCE-CONFIRMED** (mit fundamentaler Umdeutung) — DIE MARGEN-WAND IST WÄHRUNGSINVARIANT, ABER SIE MISST DIE DISKRETISIERUNG, NICHT DAS SPEKTRUM: das Verhältnis Boden/Anforderung trägt in ALLEN fünf Währungen denselben Exponenten −1.168 ± 0.259 (strukturell unentfernbar; Kreuzgitter-Identität 1.2e-14) — Substanz, kein Normierungs-Artefakt; ABER die Fenster-Form hat im Kontinuum KEINE LÜCKE (λ₁ ~ D^1.83, λ₂ ~ D^1.76 unter Verfeinerung, kein Plateau — m_k misst die Lücke der DISKRETISIERUNG), der positive Boden ist eine AUSLÖSCHUNG relativer Größe 1.3e-7…9.7e-5, und die T109-Kette teilt durch eine Artefakt-Marge (need109 D^0.63 vs Boden D^2.38) — die Reparatur ist ein margenfreies Schritt-Zertifikat — 27/27, 10.3s, Sandbox
 # K1 Währungs-Tabelle: das Verhältnis Boden/Anforderung hat in ALLEN fünf
 #    Währungen (roh, /λ_max, /Spur-Dichte, /D, /D²) denselben Exponenten

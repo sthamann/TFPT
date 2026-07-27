@@ -175,9 +175,17 @@ export function TwoDoorsConvergence() {
           gap (λ₁ and λ₂ carry the same D-power under refinement), the
           positive floor is a cancellation of relative size ~1e-7, and the
           T109 requirement chain divides by an artifact margin; the repair is
-          a margin-free step certificate. T114 (
+          a margin-free step certificate. T114 · MARGIN.FREE.STEP —
+          WALL-DISSOLVES (22/22): the margin wall dissolves — the exact
+          Schur complement (Albert 1969) certifies every ladder step
+          margin-free, eleven of them beyond the old wall up to n = 1331 and
+          all seven zones where the old chain tore; the wall was an O(1)
+          numerator divided by an artifact floor; chains now stop only at
+          compute cost (the h ≤ 1500 cap), never at a step; the remaining
+          core is ε relative to κ plus Schur-complement transport between
+          grids. T115 (
           <span className="font-mono text-slate-300">
-            margin_free_step_probe.py
+            schur_transport_probe.py
           </span>
           ) running.
         </p>

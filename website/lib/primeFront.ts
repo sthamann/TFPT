@@ -90,7 +90,8 @@ export type PrimeFrontVerdict =
   | "MARGIN-PROPAGATES"
   | "CROSSING-CONFIRMED"
   | "SCALING-PARTIAL"
-  | "SUBSTANCE-CONFIRMED";
+  | "SUBSTANCE-CONFIRMED"
+  | "WALL-DISSOLVES";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -114,6 +115,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-27",
+    part: 114,
+    title:
+      "Wall dissolves — the margin-free chain runs to n = 1331 and stops only at compute cost; the wall was an artifact of the requirement",
+    verdict: "WALL-DISSOLVES",
+    summary:
+      "T114 (WALL-DISSOLVES, 22/22) — contract MARGIN.FREE.STEP: rebuild the chain without the margin division — does the margin wall disappear as a requirement artefact? It does. (L1) The margin-free step: the sub-block of the grown window is bit-exactly Q_old (the atom entry is the exact zero matrix) — margin-freeness IS that property. Route (i), Albert 1969 (the generalized Schur complement with the Moore–Penrose pseudo-inverse; the range condition is Douglas 1966), certifies 27/27 ladder steps, ELEVEN of them beyond the old wall (467, 479, 512, 529, 547, 577, 661, 773, 887, 1129, 1331; deepest h = 1495). The exact 4×4 Schur complement is an O(0.1) object with NO cancellation: λ_min(S) = 0.068–0.154, i.e. 42–67% of the block scale. Route (ii), the T110 graded minorant at x_in = 0, dies structurally 27/27 — the T110 margin was not paying for positivity but for an abandoned direction. Route (iii), unshifted Cholesky, passes 27/27. Negative controls are sharp (5/5); frame invariance holds at ν = 8 (3/3). THE WALL IN ONE LINE: the same quantity via the norm bound (Weyl: λ_min(A) − ‖C‖²/λ_min(X)) is NEGATIVE by a factor 2.4e5–9.6e7 — an O(1) numerator divided by a 1e-6 artifact floor — so every norm route had to fail, while the exact Schur complement passes through none of it. All seven zones where the T109 chain tore (including the wall zone n = 449 itself, need109/m = 1.241) are certified by the margin-free step. (L2) The ratio closure: ε ~ D^1.77–2.01 and κ ~ D^3.64–4.84 — the preregistered 'same power' is refuted IN THE FAVOURABLE DIRECTION: κ falls faster, so r = κ/ε ~ D^1.6–3.1 shrinks under refinement; the ratio closure r = 2e-4…0.103 holds on 27/27 steps (11/11 beyond 463). (L3) The circle [base PSD + margin-free step + ratio closure] closes 27/27; ten multi-step chains run (21 certified steps, longest 4); every chain ends at the cap h ≤ 1500 — a window COST — never at a step. Regrid honesty: 0/464 gap ratios are dyadic, so the non-nested transport object stays. (L4) NEW, [P5]: the (R) demand is GRID-BOUND — holding (μ/2)P₋ physically fixed and refining, ω grows monotonically (5/5) and crosses 1 (4/5): (R) is false in the continuum and is to be DELETED, not transported; the exact Schur complement needs no demand surrogate. Cancellation robustness: the 1e-7 cancellation has 5.3–8.8 decimal digits of headroom above the Cholesky backward-error floor and sits almost entirely in the rank-1 pole — whose positivity is exactly the T108 Szegő identity ε. THE NEW CORE is two objects: [P1] 'ε > 0 with controlled size relative to κ' (the exact Szegő identity), and [P2, sharpened] transporting the exact O(0.1) Schur complement between non-nested grids. T115 (SCHUR.TRANSPORT, schur_transport_probe.py) is running: a transport certificate plus multi-resolution compression, and a deep run beyond 1331. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "margin_free_step_probe.py",
+  },
   {
     date: "2026-07-27",
     part: 113,
