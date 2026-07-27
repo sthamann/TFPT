@@ -83,7 +83,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "m",
-          "v": "20"
+          "v": "22"
         },
         {
           "k": "t",
@@ -91,7 +91,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "m",
-          "v": "8"
+          "v": "9"
         },
         {
           "k": "t",
@@ -99,7 +99,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "m",
-          "v": "7"
+          "v": "8"
         },
         {
           "k": "t",
@@ -141,13 +141,108 @@ export const CHANGELOG: ChangelogEntry[] = [
           "c": [
             {
               "k": "t",
+              "v": "Framework interpretation stated once, up front."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Section 3, “The big picture”, collects the reading that motivated the line and labels it as interpretation: the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " shell count "
+        },
+        {
+          "k": "m",
+          "v": "N(2n)=240\\sigma_3(n)"
+        },
+        {
+          "k": "t",
+          "v": " is the Dirichlet series "
+        },
+        {
+          "k": "m",
+          "v": "240\\,\\zeta(s)\\zeta(s-3)"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " glue carries "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{-4}"
+        },
+        {
+          "k": "t",
+          "v": ", so the "
+        },
+        {
+          "k": "m",
+          "v": "4k{+}1"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "4k{+}3"
+        },
+        {
+          "k": "t",
+          "v": " split is a fibre property of the compiler and the signed channel is the only pole-free one; Hecke structure is emitted by lattice adjacency ("
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": ") rather than put in; "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " is unimodular, so Poisson summation gives the theta sum an exact functional equation whose fixed axis is the critical line — the same reflection that reappears as "
+        },
+        {
+          "k": "m",
+          "v": "J_1\\circ J_{1/2}=e^{\\pm u}"
+        },
+        {
+          "k": "t",
+          "v": " (the transport operator, T83) and as the parity split of the Weil pole (T106). Explicitly typed as a picture, not a reformulation, and not used as a premise anywhere."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
               "v": "Verified layer restated, not extended."
             }
           ]
         },
         {
           "k": "t",
-          "v": " Sections 3.1–3.7 restate the seven load-bearing modules "
+          "v": " Sections 4.1–4.7 restate the seven load-bearing modules "
         },
         {
           "k": "c",
@@ -222,7 +317,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": " Section 7 records the refuted readings and dead routes of the program (essential-singularity reading, the "
+          "v": " Section 8 records the refuted readings and dead routes of the program (essential-singularity reading, the "
         },
         {
           "k": "m",
@@ -245,7 +340,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": " The paper states in the abstract, in the honesty statement, in the reduction figure and in the status section that "
+          "v": " The paper states in the abstract, in the scope-and-status statement, in the reduction figure and in the status section that "
         },
         {
           "k": "i",

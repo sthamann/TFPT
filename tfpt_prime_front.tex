@@ -3,7 +3,7 @@
 %  The complete prime / zeta line of the TFPT project, A to Z: the seven
 %  load-bearing modules (v535-v541), the sandbox localization program,
 %  the handover induction, the certification arc, the kill list, and the
-%  honest residual.  This is a RESEARCH DOCUMENTATION, not a results
+%  remaining residual.  This is a RESEARCH DOCUMENTATION, not a results
 %  paper: it separates what is machine-verified and ledger-carried from
 %  what is exploratory sandbox work, and it claims NO progress on the
 %  Riemann Hypothesis.
@@ -68,7 +68,11 @@ can see the whole route, including everything that died on the way.}
 \noindent A two-axiom discrete compiler ($\cthree=1/(8\pi)$, $\gcar=5$, $D_5\oplus A_3+\mu_4\Rightarrow
 E_8$) has no business meeting the prime numbers. It does anyway: the $\mu_4$ glue completion carries a
 quartic character, the signed glue census is a theta series, and the shell counts of that census turn
-out to be \emph{Hecke} data. This companion documents that line end to end. Seven modules are
+out to be \emph{Hecke} data. It goes further than an analogy: the $E_8$ shell count is literally
+$240\,\zeta(s)\zeta(s-3)$ as a Dirichlet series, and the lattice's self-duality gives its theta sum an
+exact functional equation whose fixed axis is the critical line --- a framework picture, stated as such,
+which the document opens with and then keeps at arm's length. This companion documents the line end to
+end. Seven modules are
 load-bearing and ledger-carried (\vref{v535}--\vref{v541}): Hecke from geometry on the $E_8$ census,
 the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
@@ -98,7 +102,7 @@ a program of this shape the kill list is the more reliable output.
 % =====================================================================
 \section{How to read this document}
 % =====================================================================
-\begin{gapboxnb}[Honesty statement --- read this before anything else]
+\begin{gapboxnb}[Scope and status --- read this before anything else]
 \begin{enumerate}[leftmargin=1.4em,label=\textbf{\arabic*.}]
 \item \textbf{No RH claim.} Nothing in this document claims progress towards, or evidence for, the
 Riemann Hypothesis. Where an equivalence to RH appears (Section~\ref{sec:i5}) it is an
@@ -129,9 +133,11 @@ quantities in the figure are literal.
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
 $n=11\ldots108$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
-the primes at all; Section~\ref{sec:verified} is the verified layer; Sections~\ref{sec:i5},
+the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
+the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
+end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\ref{sec:i5},
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
-Section~\ref{sec:kills} is the kill list; Section~\ref{sec:status} is the honest status.
+Section~\ref{sec:kills} is the kill list; Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
 \section{Motivation: why a compiler meets the primes}\label{sec:motivation}
@@ -162,22 +168,22 @@ the content of the first load-bearing module.
 \begin{figure}[ht]\centering
 \begin{tikzpicture}[
   font=\small,
-  node distance=6mm,
-  box/.style={draw=tfblue!70!black,fill=tfblue!5,rounded corners=2pt,inner sep=4pt,align=center,minimum height=8mm},
-  gbox/.style={draw=tfgreen!65!black,fill=tfgreen!6,rounded corners=2pt,inner sep=4pt,align=center,minimum height=8mm},
+  box/.style={draw=tfblue!70!black,fill=tfblue!5,rounded corners=2pt,inner sep=4pt,align=center,
+              text width=31mm,minimum height=11mm},
+  gbox/.style={box,draw=tfgreen!65!black,fill=tfgreen!6},
   ar/.style={-{Latex[length=2mm]},draw=tfgray!80,thick}]
-\node[box] (ax) {two axioms\\[-1pt]\footnotesize $\cthree=\tfrac1{8\pi}$, $\gcar=5$};
-\node[box,right=8mm of ax] (e8) {$D_5\oplus A_3+\mu_4$\\[-1pt]$\Rightarrow E_8$};
-\node[box,right=8mm of e8] (glue) {glue group $\mu_4$\\[-1pt]\footnotesize quartic character $\chi_4$};
-\node[box,right=8mm of glue] (zi) {$\Z[i]$ \,/\, $\theta_3^2=r_2$\\[-1pt]\footnotesize signed census};
-\node[gbox,below=9mm of glue] (hecke) {Hecke data on the census\\[-1pt]\footnotesize $\nu_p=a\,\mathrm{Id}+b\,T_p$, \ $a_p=-c(p)/8$};
-\node[box,below=9mm of zi] (lfun) {Dirichlet $L(s,\chi_{-4})$\\[-1pt]\footnotesize split law $p=a^2+b^2$};
-\node[gbox,below=9mm of e8] (weight4) {weight-4 newform $f_8$\\[-1pt]\footnotesize $\eta(2\tau)^4\eta(4\tau)^4$};
-\draw[ar] (ax) -- (e8);
-\draw[ar] (e8) -- (glue);
-\draw[ar] (glue) -- (zi);
-\draw[ar] (glue) -- (hecke);
-\draw[ar] (zi) -- (lfun);
+\node[box]  (ax)      at (0,0)     {two axioms\\[-1pt]\footnotesize $\cthree=\tfrac1{8\pi}$, \ $\gcar=5$};
+\node[box]  (e8)      at (3.9,0)   {$D_5\oplus A_3+\mu_4$\\[-1pt]$\Rightarrow E_8$};
+\node[box]  (glue)    at (7.8,0)   {glue group $\mu_4$\\[-1pt]\footnotesize quartic character $\chi_4$};
+\node[box]  (zi)      at (11.7,0)  {$\Z[i]$, \ $\theta_3^2=r_2$\\[-1pt]\footnotesize signed census};
+\node[gbox] (weight4) at (3.9,-2.6){weight-4 newform $f_8$\\[-1pt]\footnotesize $\eta(2\tau)^4\eta(4\tau)^4$};
+\node[gbox] (hecke)   at (7.8,-2.6){Hecke data on the census\\[-1pt]\footnotesize $\nu_p=a\,\mathrm{Id}+b\,T_p$};
+\node[box]  (lfun)    at (11.7,-2.6){Dirichlet $L(s,\chi_{-4})$\\[-1pt]\footnotesize split law $p=a^2+b^2$};
+\draw[ar] (ax)    -- (e8);
+\draw[ar] (e8)    -- (glue);
+\draw[ar] (glue)  -- (zi);
+\draw[ar] (glue)  -- (hecke);
+\draw[ar] (zi)    -- (lfun);
 \draw[ar] (hecke) -- (weight4);
 \draw[ar] (hecke) -- (lfun);
 \end{tikzpicture}
@@ -187,7 +193,7 @@ group of order four, and the signed count of a quadratic form is a theta series.
 where the line becomes load-bearing (Section~\ref{sec:verified}).}\label{fig:chain}
 \end{figure}
 
-\noindent The honest first question of the series was therefore not ``does this prove anything about
+\noindent The first question of the series was therefore not ``does this prove anything about
 primes'' but ``which of these links are \emph{mechanism} and which are pretty coincidences''. Parts
 T11--T13 established the signed glue theta, its $L$-series and the glue-character atlas
 ($19/19$, $16/16$, $11/11$); T14--T19 tested six candidate contracts in parallel and produced two
@@ -208,6 +214,140 @@ located the missing logarithm in the interval cut but failed the one-constant di
 (T23--T25, $23/23+25/25+29/29$). This matters for the rest of the document: the archimedean place was
 never going to come for free, and when it finally arrived (T82) it arrived from \emph{inside} the same
 family, not from the seam.
+
+% =====================================================================
+\section{The big picture: a self-dual lattice and its own mirror}\label{sec:bigpicture}
+% =====================================================================
+\begin{gapboxnb}[What this section is]
+A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
+was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
+such), one of the seven modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
+the picture itself carries no status marker.
+\end{gapboxnb}
+
+\subsection{(i) The zeta function is literally in the geometry}
+Count the $E_8$ lattice points shell by shell. The even shells satisfy $N(2n)=240\,\sigma_3(n)$ ---
+direct lattice counting gives $240$, $2160$, $6720$, $17\,520$, $30\,240$, $60\,480$ for $n=1\ldots6$
+(T6, one of the parts that predate the indexed range of Appendix~\ref{app:index}) --- and $\sigma_3$ is
+multiplicative, so the counting function of the lattice is a Dirichlet series
+with an Euler product:
+
+\begin{keyeq}$\displaystyle
+\sum_{n\ge1}\frac{N(2n)}{n^{s}}\;=\;240\sum_{n\ge1}\frac{\sigma_3(n)}{n^{s}}\;=\;240\,\zeta(s)\,\zeta(s-3)
+\qquad(\text{at }s=5:\ 1.705672\ \text{vs}\ 1.705678).$\end{keyeq}
+
+\noindent The Riemann zeta function stands in $E_8$'s own counting function, with a simple pole at
+$s=4$ of residue $240\,\zeta(4)=8\pi^4/3$ (T12). This is classical lattice theory --- Eisenstein series
+of weight $4$ --- and it is stated here only to fix where the arithmetic enters: not through a modelling
+choice, but through the object the compiler already had. The contrast is instructive: the same
+multiplicativity \emph{fails} for the $D_5\oplus A_3$ sublattice alone ($52$, $576$, $1584$, $16\,128$
+with $576\cdot1584\neq16\,128\cdot52$, T6). Without the glue there is no Euler structure in the count.
+
+\subsection{(ii) The glue carries the character of the Gaussian integers}
+The completion is $D_5\oplus A_3+\mu_4$, and a cyclic group of order four carries a quartic character,
+which on $\Z$ is $\chi_{-4}$ --- the character of $\Q(i)$. Two consequences make the primes a
+\emph{fibre property} of the compiler rather than an application of it. First, the split
+$p\equiv1$ versus $p\equiv3\pmod4$ is visible to the census directly: the $\chi_4$ fibre holds exactly
+for $p=a^2+b^2$ ($81/0/87/0$ on $p<1000$, T21). Second, the character kills a pole. Of the three
+character channels of the $E_8$ counting function, the trivial one is $240\zeta(s)\zeta(s-3)$ with its
+pole at $s=4$, the spinor one is $64(1-2^{-s})\zeta\zeta$ and keeps it, while the $\mu_4$-signed channel
+$16\cdot2^{-s}\eta(s)\eta(s-3)-8L(f_8,s)$ is \emph{entire} ($L_c(4.001)=-6.976$, finite; T12). The
+signed channel is the only pole-free one --- exactly the $\zeta$ versus $L(\chi)$ pattern.
+
+\subsection{(iii) Hecke structure is an output of geometry, not an input}
+The step that made the line load-bearing is \vref{v535}: the Hecke action on the census is produced by
+\emph{pure lattice adjacency} --- Kneser $p$-neighbours --- with no modular input anywhere in the
+derivation. The marked neighbour sum is exactly an affine Hecke element, $\nu_p=a\,\mathrm{Id}+b\,T_p$,
+and the cusp eigenvalues come out of the glue census as $a_p=-c(p)/8$. Prime structure is what the
+geometry \emph{emits}; nothing about primes was put in. The first four modules of
+Section~\ref{sec:verified} make this precise and end in one finite relative-trace identity of which the
+first three are projections.
+
+\subsection{(iv) The core point: self-duality, and a mirror that keeps coming back}
+$E_8$ is unimodular --- self-dual --- and self-duality is exactly the hypothesis of Poisson summation.
+The lattice theta sum therefore satisfies an exact functional equation,
+$\sum_x e^{-t|x|^2}=(\pi/t)^4\sum_x e^{-(\pi^2/t)|x|^2}$ (verified to $25$ digits, T12), whose unique
+self-dual width is $t=\pi$. A functional equation is a \emph{reflection}, and the critical line is the
+fixed axis of that reflection. That is the geometric content of the picture: on the axis sits the
+symmetry, and beside it sits everything the lattice actually carries.
+
+Two findings, at opposite ends of the program, put the same mirror on the table twice.
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The reflection product is the transport operator} (T83,
+\texttt{fe\_symmetrization\_probe.py}, $27/27$, \textsc{invariant-null}). The involution algebra was
+computed exactly: $\zeta$'s functional equation is the reflection $J_{1/2}$ and is absorbed in evenness
+(on autocorrelations it acts as the identity), while the family's functional equation is $J_1$. Their
+\emph{product} $J_1\circ J_{1/2}=e^{\pm u}$ is the unit-line shift --- the difference of the two centres
+\emph{is} the transport operator, algebraically. The two reflections generate an infinite dihedral
+ladder; the value side is invariant under the whole ladder, the spectral cone only under its own
+reflection, which is what anchors it to the critical line; and $\mathrm{Fix}(J_1)\cap\{\text{Weil
+cone}\}=\{0\}$ exactly, so no symmetrisation can relieve I5. The verdict was a null with a structural
+finding: the wall is \emph{transversal} to the functional equation, not positional.
+\item \textbf{The same mirror sits in the last hard residue} (T106, Section~\ref{sec:certification}).
+The mirror parity $J$ with $JQJ=Q$ and $JB=-BR$ splits the Weil pole exactly into
+$ss^{\mathsf T}-tt^{\mathsf T}$: a positive rank-one lift in the $J$-even channel and a negative
+rank-one pressure in the $J$-odd one. The even channel closes; everything that is still hard lives in
+the odd half --- the anti-symmetric part of the same reflection.
+\end{itemize}
+
+\noindent Stated as a picture and nothing more: the recurring question of this line is whether the
+self-dual object is entirely at peace with its own mirror. That sentence is an interpretation of where
+the difficulty sits, in the same spirit as the classical reading of the critical line as a symmetry
+axis. It is \emph{not} a reformulation of the Riemann Hypothesis, it is not used as a premise anywhere
+below, and it produces no claim.
+
+\subsection{(v) What the program did with the picture}
+It converted it, step by step, into smaller and more explicit objects. The transport ledger closes
+exactly (\vref{v541}), which leaves the single coupled inequality I5; I5 is by identity equivalent to
+Weil positivity, an equivalence \emph{typing} and not a reduction (Section~\ref{sec:i5}); the positivity
+question is then reorganised as a per-zone handover induction (Section~\ref{sec:handover}); the
+induction is certified ingredient by ingredient until only one Loewner statement (R) on the $J$-odd half
+of a window remains; and (R) reduces first to one scalar ratio and then to two scalars, whose open part
+is a boundary-decay statement about one explicit vector (Section~\ref{sec:certification}). The full
+cascade, with the type of every arrow marked, is Figure~\ref{fig:cascade}; the reason it is a route and
+not a proof sketch is stated there and in Section~\ref{sec:status}.
+
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[font=\small,
+  ax/.style={draw=tfgold!75!black,dashed,very thick},
+  sb/.style={draw=tfblue!70!black,fill=tfblue!5,rounded corners=2pt,inner sep=5pt,align=center,
+             text width=52mm,minimum height=20mm},
+  fb/.style={draw=tfgreen!65!black,fill=tfgreen!6,rounded corners=2pt,inner sep=5pt,align=center,
+             text width=52mm,minimum height=22mm},
+  qb/.style={draw=tfgray!70,fill=tfgray!6,rounded corners=2pt,inner sep=5pt,align=center,
+             text width=118mm,minimum height=10mm},
+  ar/.style={-{Latex[length=2.2mm]},draw=tfgray!85,thick},
+  bi/.style={{Latex[length=2.2mm]}-{Latex[length=2.2mm]},draw=tfgold!75!black,thick}]
+\draw[ax] (0,1.45) -- (0,-5.45);
+\node[align=center,font=\footnotesize\itshape,text=tfgold!55!black,text width=42mm] at (0,2.15)
+  {the fixed axis of the self-duality};
+\node[sb] (l) at (-3.65,0.1) {\textbf{one side}\\[2pt]\footnotesize
+  $\sum_x e^{-t|x|^2}$ \ at width $t$};
+\node[sb] (r) at (3.65,0.1) {\textbf{the mirrored side}\\[2pt]\footnotesize
+  $(\pi/t)^4\sum_x e^{-(\pi^2/t)|x|^2}$};
+\draw[bi] (l) -- (r);
+\node[fill=white,inner sep=2pt,font=\footnotesize,text=tfgold!55!black] at (0,0.1) {$J$};
+\node[fb] (t83) at (-3.65,-2.85) {\textbf{T83} --- the mirror as algebra\\[2pt]\footnotesize
+  $J_1\circ J_{1/2}=e^{\pm u}$ is the unit-line shift: the reflection product \emph{is} the
+  transport operator};
+\node[fb] (t106) at (3.65,-2.85) {\textbf{T106} --- the mirror as obstruction\\[2pt]\footnotesize
+  the pole splits $ss^{\mathsf T}-tt^{\mathsf T}$; the even channel closes, the odd one does not};
+\node[qb] (q) at (0,-5.9) {\footnotesize\emph{Framework interpretation:} the recurring question is
+  whether the self-dual object is at peace with its own mirror. No claim.};
+\draw[ar] (l) -- (t83);
+\draw[ar] (r) -- (t106);
+\draw[ar] (t83) -- (q);
+\draw[ar] (t106) -- (q);
+\end{tikzpicture}
+\caption{\schem The self-duality picture. \emph{Literal:} the Poisson identity and its unique self-dual
+width $t=\pi$ ($25$ digits, T12); the algebraic identity $J_1\circ J_{1/2}=e^{\pm u}$ and
+$\mathrm{Fix}(J_1)\cap\{\text{Weil cone}\}=\{0\}$ (T83); the exact pole splitting
+$ss^{\mathsf T}-tt^{\mathsf T}$ at $10^{-18}$ (T106). \emph{Schematic:} the geometric arrangement, and
+the reading of the axis as ``order'' with the lattice's arithmetic content beside it. The bottom line is
+an interpretation and carries no status.}\label{fig:bigpicture}
+\end{figure}
 
 % =====================================================================
 \section{The verified layer: seven modules}\label{sec:verified}
@@ -373,6 +513,18 @@ on $18/18$ battery rows at max relative $6.6\times10^{-15}$. I5 stopped being a 
 worlds and became a \emph{self-consistency statement about one heat family}. Again: a type change is
 not a proof.
 
+T83 (\texttt{fe\_symmetrization\_probe.py}, $27/27$, \textsc{invariant-null}) then asked the obvious
+question of the self-duality picture (Section~\ref{sec:bigpicture}): can the functional equation itself
+do the work? It cannot, and the way it fails is informative. The $\zeta$ reflection $J_{1/2}$ acts as
+the identity on autocorrelations --- the symmetry is already absorbed in evenness, and
+$Q_{\mathrm{Weil}}(Jh)=Q_{\mathrm{Weil}}(h)$ holds floating-point-exactly on $15$ test functions --- and
+the family reflection $J_1$ moves nothing in the value geography ($5/24$ overlap invariant, $\lambda^*$
+covariant-exact) while pushing $m_+h$ out of the Weil cone in closed form, with
+$\mathrm{Fix}(J_1)\cap\{\text{Weil cone}\}=\{0\}$ exactly. The structural finding underneath the null is
+the one quoted in the big picture: the product of the two reflections is the unit-line shift, i.e.\ the
+transport operator, and the wall is transversal to the functional equation rather than positioned by it.
+Symmetrisation is therefore not a route; the same mirror returns, as an obstruction, in T106.
+
 \subsection{The Connes dictionary (T87) and where positivity is anchored}
 T87 (\texttt{i5\_connes\_dictionary\_probe.py}, $22/22$, \textsc{dictionary-exact-core}) identified the
 I5 one-family form as a compiler instance of the semi-local Connes structure. Four exact matches:
@@ -398,7 +550,7 @@ claimed or made). There are no negatives on genuine autocorrelations; the earlie
 the shadow of missing archimedean/$p=2$ bookkeeping, exactly as the ledger predicted.
 
 T89 (\texttt{sonin\_crossing\_probe.py}, $19/19$) established that the window compression of the Weil
-form \emph{is} Bombieri's classical object, and answered the sharpness question honestly: the boundary
+form \emph{is} Bombieri's classical object, and settled the sharpness question: the boundary
 at $\log2$ is \emph{not} sharp. The margin falls smoothly from $a\approx0.5$ towards the floor with no
 structure at $\log2$; the prime-free sector still has margin $0.557$ at its own boundary and keeps
 $\ge0.25$ of the reference comfort to $a\approx0.75$ ($+0.057$ beyond the proved boundary). The
@@ -416,22 +568,22 @@ is exhausted (rescue term $+0.22\ldots+0.41$, purely odd sector). Two uncertaint
 decided in closed form: $a\cdot t_{\mathrm{rms}}\to\pi$ (Wirtinger, $0.3\%$) and
 $a\cdot t_{\mathrm{cent}}\to2\,\mathrm{Si}(\pi)-4/\pi=2.4306$ (two independent routes, $10^{-25}$).
 
-\begin{gapboxnb}[Data integrity: the T92/T93 correction --- reported because it happened]
-T92 (\texttt{zone\_extension\_proof\_probe.py}, $36/36$) failed to prove the lattice zone extension and
-said so (\textsc{t-skeleton}): what it certified is small and real ($Q\ge6.7\times10^{-12}>0$ on an
-$8$-dimensional sine-window subspace across the whole band, with an error certificate and a
-$1057$-point covering), and it named two independent walls --- $\lambda_{\min}$ collapses geometrically
-(factor $11.4$ per mode), and the high-mode complement would need $N^*\gtrsim5069$ modes. Verdict:
-\emph{the finite-block route is structurally the wrong instrument, not under-resourced}. In the same
-run T92 raised a calibration discrepancy against T89/T91, and the entire band map was put under
-reservation. T93 (\texttt{band\_reconciliation\_probe.py}, $41/41$) resolved it with a third
-independent implementation: one diary prose value ($6.98$) had been stale, one discrepancy was a
-factor-2 convention plus a $1\%$ grid interpolation artefact, and exactly one real bug sat in T92
-itself. Net effect: the T89/T91 map survives, with $a_{\mathrm{neg}}$ recalibrated $0.7410\to0.7486$
-and T92's own band scoping withdrawn. The corrected band map:
-classical edge $0.34657$ $\cdot$ prime-free crossing $0.3723$--$0.3763$ $\cdot$ band top
-$\alpha^*=0.46265$ $\cdot$ second atom $\log3/2=0.54931$.
-\end{gapboxnb}
+The band that these three parts map out is narrow and its landmarks are explicit. Reading outwards from
+the classical side, the map is: classical edge $0.34657$, prime-free crossing $0.3723$--$0.3763$, band
+top $\alpha^*=0.46265$, second atom $\log3/2=0.54931$. Everything in Sections~\ref{sec:handover} and
+\ref{sec:certification} happens inside that interval, between the first and the second prime atom, and
+the four numbers are the coordinates used throughout. The map was re-derived by a third independent
+implementation (T93, \texttt{band\_reconciliation\_probe.py}, $41/41$) before it was used further.
+
+An attempt to convert the band into a proof was made and did not succeed. T92
+(\texttt{zone\_extension\_proof\_probe.py}, $36/36$, \textsc{t-skeleton}) certified something small and
+real --- $Q\ge6.7\times10^{-12}>0$ on an $8$-dimensional sine-window subspace across the whole band,
+with an error certificate and a $1057$-point covering --- but not the lattice zone extension it was
+aiming at, and it named two independent walls: $\lambda_{\min}$ collapses geometrically (factor $11.4$
+per mode), and the high-mode complement would need $N^*\gtrsim5069$ modes. The finding, and the reason
+it is quoted here rather than buried, is a statement about instruments: \emph{the finite-block route is
+structurally the wrong instrument for this target, not an under-resourced one}. That is what motivated
+the change of approach in Section~\ref{sec:handover}.
 
 \subsection{The blind prime demonstration (T94)}
 A separate, deliberately modest exercise. T94 (\texttt{prime\_blind\_demo\_probe.py}, $16/16$,
@@ -440,7 +592,7 @@ A separate, deliberately modest exercise. T94 (\texttt{prime\_blind\_demo\_probe
 never-seen window $[1\,000\,001,\,1\,010\,000]$ --- count and MD5 declared \emph{before} any ground
 truth, then evaluated: exactly $753$, zero false positives, zero false negatives, $100.00\%$ on all
 $10^4$ integers, with an AST-enforced prediction path containing no divisibility test (no
-\texttt{isprime}, no sieve, no \texttt{\%}, \texttt{//} or \texttt{/}). The cost honesty is part of the
+\texttt{isprime}, no sieve, no \texttt{\%}, \texttt{//} or \texttt{/}). The cost is part of the
 result: a sieve wins by ${\sim}820\times$ ($1$\,ms against $0.83$\,s). This is structure completeness,
 not an algorithmic advance --- and the \emph{spectral} prediction (zeros $\to$ primes) remains bound to
 I5/RH and is not claimed.
@@ -516,19 +668,23 @@ zero residual trend.
 \foreach \y in {0,0.5,1.0} \draw[tfgray!60] (-0.25,\y) -- (0.25,\y) node[left=6pt,black,font=\scriptsize]{$\y$};
 % spectrum floor (schematic)
 \fill[tfred!7] (0,-0.25) rectangle (17.4,0.0);
-\draw[tfred!60!black,dashed] (0,0.0) -- (17.4,0.0)
-   node[right=-1mm,above,font=\scriptsize,tfred!60!black,align=left,xshift=-30mm,yshift=0.5mm]{spectrum floor (schematic)};
+\draw[tfred!60!black,dashed] (0,0.0) -- (17.4,0.0);
 % T101 instrument: slope -0.1622 per zone in ln  ->  -0.07044 in log10
 \draw[tfred!75!black,very thick] (1,0.970) -- (16,-0.087);
-\node[tfred!75!black,font=\scriptsize,align=left,anchor=west] at (9.4,0.52)
-  {T101 instrument\\[-1pt]slope $-0.1622\pm0.0562$};
 % T103 instrument: 9.33 -> 2.70
 \draw[tfgreen!60!black,very thick] (1,0.970) -- (16,0.431);
-\node[tfgreen!45!black,font=\scriptsize,align=left,anchor=west] at (10.2,0.92)
-  {T103 instrument\\[-1pt]slope $-0.0748\pm0.0116$};
-\filldraw[tfgreen!60!black] (1,0.970) circle (1.4pt) node[above left=-1pt,font=\scriptsize,black]{$9.33$};
-\filldraw[tfgreen!60!black] (16,0.431) circle (1.4pt) node[right=1pt,font=\scriptsize,black]{$2.70$};
+\filldraw[tfgreen!60!black] (1,0.970) circle (1.4pt);
+\filldraw[tfgreen!60!black] (16,0.431) circle (1.4pt);
 \filldraw[tfred!75!black] (16,-0.087) circle (1.4pt);
+% labels last, on an opaque backing so no rule ever crosses a glyph
+\node[tfred!60!black,font=\scriptsize,anchor=west,inner sep=1.5pt]
+  at (0.4,-0.13) {spectrum floor (schematic)};
+\node[tfred!75!black,font=\scriptsize,align=left,anchor=west,fill=white,inner sep=2pt]
+  at (2.6,0.25) {T101 instrument\\[-1pt]slope $-0.1622\pm0.0562$};
+\node[tfgreen!45!black,font=\scriptsize,align=left,anchor=west,fill=white,inner sep=2pt]
+  at (9.2,0.90) {T103 instrument\\[-1pt]slope $-0.0748\pm0.0116$};
+\node[font=\scriptsize,anchor=south west,inner sep=1.5pt] at (1.15,0.99) {$9.33$};
+\node[font=\scriptsize,anchor=west,inner sep=2.5pt] at (16.1,0.431) {$2.70$};
 \end{tikzpicture}
 \caption{\schem The instrument race over the $16$ resolved zones. \emph{Literal:} the two decay slopes
 ($-0.1622\pm0.0562$ measured in T101; $-0.0748\pm0.0116$ measured in T103, a factor $2.2$ flatter), and
@@ -579,7 +735,7 @@ not live in $E_-$.
 % upper and lower schur profile brackets
 \draw[tfgreen!55!black,very thick] plot[smooth,tension=0.7] coordinates {(0.4,3.75) (2.2,3.1) (4.0,2.3) (5.9,1.55) (7.6,1.02) (9.4,0.72)};
 \draw[tfgreen!55!black,very thick,dash pattern=on 3pt off 2pt] plot[smooth,tension=0.7] coordinates {(0.4,3.15) (2.0,2.5) (3.4,1.85) (4.3,1.55) (6.0,1.02) (8.4,0.66)};
-\node[tfgreen!45!black,anchor=west,font=\scriptsize,align=left] at (5.6,3.25)
+\node[tfgreen!45!black,anchor=west,font=\scriptsize,align=left,fill=white,inner sep=2pt] at (5.9,3.72)
   {Schur profile $\sigma_k(\delta)$\\[-1pt](two-sided bracket)};
 % crossings
 \filldraw[tfgreen!45!black] (4.3,1.55) circle (1.6pt);
@@ -590,7 +746,7 @@ not live in $E_-$.
   (4.3,-0.12) -- (5.9,-0.12) node[midway,below=4pt,font=\scriptsize,black]{$2w_k$ (handover window)};
 \node[anchor=south,font=\scriptsize,tfgray] at (2.1,0.15) {handover holds: $\sigma_k\ge\mu_k/2$};
 \node[anchor=south,font=\scriptsize,tfgray] at (8.3,0.15) {atom $k{+}1$ takes over};
-\node[anchor=west,font=\scriptsize,tfred!70!black,align=left] at (0.25,3.55)
+\node[anchor=west,font=\scriptsize,tfred!70!black,align=left,fill=white,inner sep=2pt] at (6.15,2.45)
   {onset anchored at $\delta_c=2w_k$\\[-1pt]($R^2=0.968$) --- a crossing,\\[-1pt]not a singularity};
 \end{tikzpicture}
 \caption{\schem The crossing mechanism of T102. \emph{Literal:} $\mu_k$ enters exactly once and
@@ -612,7 +768,7 @@ T103 (\texttt{instrument\_probe.py}, $29/29$, \textsc{instrument-improved}) rebu
 instrument with certified weights $w_j\ge1/\lambda_j$ and a $\theta$-weighted band sum, reproducing both
 anchors exactly. With \emph{one} fixed, $k$-uniform instrument ($\Lambda_0=3$, $r=2$, no per-zone
 tuning) the closure map jumps from $7/64$ to $44/64$ and the race slope halves
-(Figure~\ref{fig:race}). The honest price is explicit: the number of explicit modes grows $2\to232$.
+(Figure~\ref{fig:race}). The price is explicit: the number of explicit modes grows $2\to232$.
 And the verdict relocated the remainder: it is no longer the bulk (the bulk is measurably not
 low-rank --- effective rank up to $0.579\dim E_-$) but the \emph{wing slack} $S=1-\rho$, which falls
 $0.2091\to0.0392$.
@@ -655,22 +811,23 @@ the wing near-null direction.
 
 \begin{figure}[ht]\centering
 \begin{tikzpicture}[font=\small,
-  box/.style={draw=tfblue!70!black,fill=tfblue!5,rounded corners=2pt,inner sep=5pt,align=center,text width=54mm},
-  tgt/.style={draw=tfgold!70!black,fill=tfgold!8,rounded corners=2pt,inner sep=5pt,align=center,text width=62mm},
-  nxt/.style={draw=tfgreen!65!black,fill=tfgreen!6,rounded corners=2pt,inner sep=5pt,align=center,text width=62mm},
-  ar/.style={-{Latex[length=2mm]},draw=tfgray!80,thick}]
-\node[box] (a) at (-3.6,0) {\textbf{Door A} --- T102 (arithmetic bound)\\[1pt]
+  box/.style={draw=tfblue!70!black,fill=tfblue!5,rounded corners=2pt,inner sep=5pt,align=center,
+              text width=64mm,minimum height=18mm},
+  tgt/.style={box,draw=tfgold!70!black,fill=tfgold!8,text width=86mm,minimum height=15mm},
+  nxt/.style={box,draw=tfgreen!65!black,fill=tfgreen!6,text width=86mm,minimum height=13mm},
+  ar/.style={-{Latex[length=2.2mm]},draw=tfgray!80,thick}]
+\node[box] (a) at (-3.9,0) {\textbf{Door A} --- T102 (arithmetic bound)\\[2pt]
   \footnotesize the onset is manufactured by the Schur dressing against $E_0\oplus E_+$;
   it eats $35.7\%$--$97.3\%$ of the bare eigenvalue};
-\node[box] (c) at (3.6,0) {\textbf{Door C} --- T103 (instrument)\\[1pt]
+\node[box] (c) at (3.9,0) {\textbf{Door C} --- T103 (instrument)\\[2pt]
   \footnotesize the remainder is not the bulk but the wing slack $S=1-\rho$,
   falling $0.2091\to0.0392$};
-\node[tgt] (o) at (0,-2.2) {\textbf{One object:} the wing near-null direction\\[1pt]
+\node[tgt] (o) at (0,-3.4) {\textbf{One object:} the wing near-null direction\\[2pt]
   \footnotesize dressing almost rank one (effective rank $1.07$--$2.7$; $99.7$--$100\%$ of the
   near-null direction in \emph{one} prolate mode)};
-\node[nxt] (n) at (0,-4.2) {T104 $\to$ T105 $\to$ T106 $\to$ T107\\[1pt]
+\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108\\[2pt]
   \footnotesize certify \emph{bare}, prove the avoidance law, split the parity channels,
-  reduce to one scalar ratio};
+  reduce to one scalar ratio, then to two scalars};
 \draw[ar] (a) -- (o);
 \draw[ar] (c) -- (o);
 \draw[ar] (o) -- (n);
@@ -741,7 +898,8 @@ found the structural result of the arc. The kills are in Section~\ref{sec:kills}
 \begin{keyeq}$\displaystyle
 ab^{\mathsf T}+ba^{\mathsf T}\;=\;ss^{\mathsf T}-tt^{\mathsf T}\qquad(10^{-18};\ Ja=b)$\end{keyeq}
 
-\noindent The rank-2 Weil pole splits \emph{exactly} into a positive rank-one lift in the $J$-even
+\noindent Here $J$ is the mirror parity of Section~\ref{sec:bigpicture}, arriving for the second time
+and now as the obstruction itself. The rank-2 Weil pole splits \emph{exactly} into a positive rank-one lift in the $J$-even
 channel and a negative rank-one pressure in the $J$-odd channel. The Toeplitz part has exactly one
 negative eigendirection; it is $J$-even, and $ss^{\mathsf T}$ removes it precisely there. The odd
 channel never needed the pole at all.
@@ -949,7 +1107,7 @@ Kohnen-plus route to the central values (T44, promoted into \vref{v537} as a sco
 \end{enumerate}
 
 % =====================================================================
-\section{Honest status and outlook}\label{sec:status}
+\section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
@@ -994,7 +1152,7 @@ zone $5$ saturating exactly).
 \subsection{Extraction candidates: the community-checkable path}
 The useful question at this point is not ``how close is the program to RH'' --- it is not close, and no
 such claim is made --- but ``which pieces of it are unconditional theorems that someone else can
-check''. Two candidates are named in the diary and are repeated here as the honest outlook:
+check''. Two candidates are named in the diary and are repeated here as the outlook:
 
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{Zone extension beyond $\log2$.} Unconditional Weil positivity is classically known exactly
@@ -1006,7 +1164,7 @@ extension past Bombieri's boundary. Its typing is explicit and unflattering: RH 
 narrows, rather than closes, the target.
 \item \textbf{The matching lemma.} Already proved exact-integer on $[4,10^6]$ with an explicit margin
 inside \vref{v541}, and reduced by T77 to a restricted $\sigma_{-1}$ divisor bound in the Gronwall
-regime --- with the honest note that Robin's \emph{unconditional} 1983 bound suffices at the measured
+regime --- with the note that Robin's \emph{unconditional} 1983 bound suffices at the measured
 headroom, so the RH-equivalent sharpening is not needed. Closing the tail (the correlated-cancellation
 lemma on credit-rich non-coherent atoms) would be a self-contained classical statement.
 \end{itemize}
@@ -1132,7 +1290,7 @@ T89 & \texttt{\scriptsize sonin\_\allowbreak crossing} & window compression is B
 T90 & \texttt{\scriptsize residual\_\allowbreak dissection} & the residual vectors are explicit Gaussian modes & CORE-DISSECTED & 17/17\\
 T91 & \texttt{\scriptsize thin\_\allowbreak band\_\allowbreak analytic} & the band is the one-atom zone; atom rescue & BAND-PARTIAL (3/4 closed) & 19/19\\
 T92 & \texttt{\scriptsize zone\_\allowbreak extension\_\allowbreak proof} & the finite-block route is the wrong instrument & T-SKELETON & 36/36\\
-T93 & \texttt{\scriptsize band\_\allowbreak reconciliation} & data-integrity reconciliation of the T89/T91 map & MIXED (map recalibrated) & 41/41\\
+T93 & \texttt{\scriptsize band\_\allowbreak reconciliation} & third independent implementation of the T89/T91 band map & MIXED (map recalibrated) & 41/41\\
 T94 & \texttt{\scriptsize prime\_\allowbreak blind\_\allowbreak demo} & 753/753 primes of an unseen window from lattice counting & BLIND-100 & 16/16\\
 T95 & \texttt{\scriptsize continuum\_\allowbreak extension} & C1 chain proved; band top behaves as a positivity edge & T-CONTINUUM-NUMERIC & 28/28\\
 T96 & \texttt{\scriptsize relay\_\allowbreak test} & the T95 edge was a map artefact; the relay is real & EDGE-ARTIFACT $+$ RELAY-CONFIRMED & 21/21\\

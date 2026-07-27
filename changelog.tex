@@ -64,12 +64,21 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 
 \subsection*{\interlinepenalty=150\relax 2026-07-27 (I) (new companion \texttt{tfpt\_prime\_front} --- the prime / zeta line documented end to end as RESEARCH DOCUMENTATION; NO new claims, NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
-\item \textbf{New companion paper \texttt{tfpt\_prime\_front} (P).} $20$ pages, $8$ sections plus two
-appendices, $7$ TikZ figures. It documents the complete prime / zeta line of the project from the first
+\item \textbf{New companion paper \texttt{tfpt\_prime\_front} (P).} $22$ pages, $9$ sections plus two
+appendices, $8$ TikZ figures. It documents the complete prime / zeta line of the project from the first
 $\mu_4\Rightarrow\chi_4$ observation to the current residual --- explicitly a \emph{documentation of a
 research route}, not a results paper. Registered in \texttt{tex-artefacts/tfpt\_docset.tex} as the fifth
 companion.
-\item \textbf{Verified layer restated, not extended.} Sections~3.1--3.7 restate the seven load-bearing
+\item \textbf{Framework interpretation stated once, up front.} Section~3, ``The big picture'', collects
+the reading that motivated the line and labels it as interpretation: the $E_8$ shell count
+$N(2n)=240\sigma_3(n)$ is the Dirichlet series $240\,\zeta(s)\zeta(s-3)$; the $\mu_4$ glue carries
+$\chi_{-4}$, so the $4k{+}1$ / $4k{+}3$ split is a fibre property of the compiler and the signed channel
+is the only pole-free one; Hecke structure is emitted by lattice adjacency (\vref{v535}) rather than put
+in; $E_8$ is unimodular, so Poisson summation gives the theta sum an exact functional equation whose
+fixed axis is the critical line --- the same reflection that reappears as $J_1\circ J_{1/2}=e^{\pm u}$
+(the transport operator, T83) and as the parity split of the Weil pole (T106). Explicitly typed as a
+picture, not a reformulation, and not used as a premise anywhere.
+\item \textbf{Verified layer restated, not extended.} Sections~4.1--4.7 restate the seven load-bearing
 modules \vref{v535}--\vref{v541} with their ledger status markers quoted verbatim (Hecke from geometry,
 Eichler trace layer, half-integral bridge, relative-trace identity, Weil structure family, amplitude
 linear carrier, matching-lemma / transport ledger). The \texttt{\textbackslash veri} citations in this
@@ -80,12 +89,12 @@ induction and the certification arc are carried as clearly tagged \emph{sandbox}
 per-section provenance marker; every quantitative statement carries its probe label (T$n$) and is
 reproduced verbatim from the research diary. All measured quantities are declared as measured, all
 window results as window results, all hypothesis inputs as hypothesis inputs.
-\item \textbf{Kill list as a first-class section.} Section~7 records the refuted readings and dead
+\item \textbf{Kill list as a first-class section.} Section~8 records the refuted readings and dead
 routes of the program (essential-singularity reading, the $C/g$ proxy law, the naive margin route, the
 density chain, the Landau--Widom anchor, the accumulated invariant with self-propagation, the symbol
 route for the odd channel, three certificate candidates for the avoidance norm), each with the probe
 that killed it.
-\item \textbf{Explicit RH fence.} The paper states in the abstract, in the honesty statement, in the
+\item \textbf{Explicit RH fence.} The paper states in the abstract, in the scope-and-status statement, in the
 reduction figure and in the status section that \emph{no progress on the Riemann Hypothesis is claimed};
 the I5 $\Leftrightarrow$ Weil positivity $\Leftrightarrow$ RH relation is carried, as in the ledger, as an
 equivalence \emph{typing} only. \texttt{ZETA.HP.CARRIER} untouched.
