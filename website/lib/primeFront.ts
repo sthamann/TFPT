@@ -87,7 +87,8 @@ export type PrimeFrontVerdict =
   | "SCALAR-TRACTABLE"
   | "EPSILON-IDENTITY"
   | "BOUNDARY-CERTIFIED"
-  | "MARGIN-PROPAGATES";
+  | "MARGIN-PROPAGATES"
+  | "CROSSING-CONFIRMED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -111,6 +112,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-27",
+    part: 111,
+    title:
+      "Crossing confirmed — the deep ladder measures the wall at n* ≈ 462 and splits it into three; the mechanism itself never fails",
+    verdict: "CROSSING-CONFIRMED",
+    summary:
+      "T111 (CROSSING-CONFIRMED, 23/23) — contract DEEP.ZONE.STRESS: stop extrapolating and MEASURE — does T110's induction circle survive deep zones? (I1) The deep ladder: the T110 grid is reproduced bit-exactly, then the ladder samples ALL prime-power zones to 1000 plus a thin tail to 3001 (199 zones; chain ladder n = 2…521 with 117 handovers). The ratio m_k/need109 falls 179.59 → 0.0174, and THE CROSSING IS MEASURED, NOT EXTRAPOLATED: the last zone ≥ 1 is n = 461, the first below is n = 463 (0.935) — T110's n ≈ 170 was a fit artefact, but the wall is real. The failure follows the PRIME BRANCH (prime powers 512/529/625/729 with small μ survive longer). Fit families compared honestly (best by AIC: broken scale, n* = 501; jackknife band of the pure power [298, 352]); the depth-preserving resolution study pushes the ratio DOWN under refinement — n* ≈ 462 is an UPPER bound. (I2) The uniformity object: nsoft* = 1…8 across the 117 handovers (no longer flat at 1), but retention stays 1.000000 at every step (largest single loss 5.96e-08), and the atom entry is constructively free 117/117 (exact zero matrix). New and harder: the LADDER WALL — the nested step needs a lag gap > 2D, and the twin-prime pair 521→523 (gap 0.003831 < 2D = 0.005617) kills the ladder arithmetically; at frozen cell width n = 521 is the deepest reachable zone — the bound is set by twin primes, not spectra. An arithmetic scan to 40000 finds 4052/4284 pairs endangered; a co-moving D ~ 1/n forces h ~ n·log n/4 (horizon n ≈ 690 at h ≤ 1500). (I3) Reserve and circle: the no-reserve finding softens — f_crit ~ n^−0.39 (fit), the reserve OPENS with depth (the bottleneck stays the first step 2→3); the circle runs from the certified base case (factor 179.6) and BREAKS FIRST AT k = 109, n = 463 — exactly where I1 measures the crossing. IT TEARS AT THE RATIO, NOT AT A STEP: all 117 handovers certify with retention 1.000000, even beyond the break. (I4) The balance: the driver is 1/κ (+0.86) against the margin (−0.68); THREE SEPARATE WALLS — the margin wall n ≈ 462 (measured, upper bound), the ladder wall 521→523 (twin primes, purely arithmetic), and the requirement wall n = 727 (ω_cert ≥ 1, need109 vacuous on 46 zones). The reinterpretation: the operating variable is DEPTH, not n — doubling the cheeks moves the wall from 463 to 47; a proof must beat the exponent gap −0.974 = −0.681 − 0.293 and couple δ₀ to the local prime gap. T112 (ADAPTIVE.SCALING, adaptive_scaling_probe.py) is running: the construction in the n-adaptively scaled frame (D ~ local gap) — do all three walls fall at once? Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "deep_zone_stress_probe.py",
+  },
   {
     date: "2026-07-27",
     part: 110,

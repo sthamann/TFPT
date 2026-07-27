@@ -43,6 +43,587 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-27",
+    "dateLabel": "2026-07-27 · IV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "prime front: T111 deep ladder maps three walls, crossing measured at "
+      },
+      {
+        "k": "m",
+        "v": "n\\approx462"
+      },
+      {
+        "k": "t",
+        "v": " — CROSSING-CONFIRMED; paper + diary + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Diary Teil 111 (sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery/deep_zone_stress_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " (contract "
+        },
+        {
+          "k": "c",
+          "v": "DEEP.ZONE.STRESS"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "23/23"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "140"
+        },
+        {
+          "k": "t",
+          "v": " s, verdict "
+        },
+        {
+          "k": "t",
+          "v": "crossing-confirmed"
+        },
+        {
+          "k": "t",
+          "v": "): the probe stops extrapolating and measures — the T110 grid is reproduced bit-exactly, then the ladder is extended to every prime-power zone "
+        },
+        {
+          "k": "m",
+          "v": "n\\le1000"
+        },
+        {
+          "k": "t",
+          "v": " plus a thin tail to "
+        },
+        {
+          "k": "m",
+          "v": "3001"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "199"
+        },
+        {
+          "k": "t",
+          "v": " zones; chain ladder "
+        },
+        {
+          "k": "m",
+          "v": "n=2\\ldots521"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "117"
+        },
+        {
+          "k": "t",
+          "v": " handovers). The ratio "
+        },
+        {
+          "k": "m",
+          "v": "m_k/\\mathrm{need109}"
+        },
+        {
+          "k": "t",
+          "v": " falls "
+        },
+        {
+          "k": "m",
+          "v": "179.59\\to0.0174"
+        },
+        {
+          "k": "t",
+          "v": "; the crossing is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measured"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": last zone "
+        },
+        {
+          "k": "m",
+          "v": "\\ge1"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "n=461"
+        },
+        {
+          "k": "t",
+          "v": ", first below at "
+        },
+        {
+          "k": "m",
+          "v": "n=463"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "0.935"
+        },
+        {
+          "k": "t",
+          "v": ") — T110's "
+        },
+        {
+          "k": "m",
+          "v": "n\\approx170"
+        },
+        {
+          "k": "t",
+          "v": " was a fit artefact, but the wall is real, and a depth-preserving resolution study makes "
+        },
+        {
+          "k": "m",
+          "v": "n^*\\approx462"
+        },
+        {
+          "k": "t",
+          "v": " an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "upper"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " bound. The failure follows the prime branch (prime powers "
+        },
+        {
+          "k": "m",
+          "v": "512/529/625/729"
+        },
+        {
+          "k": "t",
+          "v": " survive longer). New and harder: the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "ladder wall"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — the nested step needs a lag gap "
+        },
+        {
+          "k": "m",
+          "v": ">2D"
+        },
+        {
+          "k": "t",
+          "v": ", and the twin-prime pair "
+        },
+        {
+          "k": "m",
+          "v": "521\\to523"
+        },
+        {
+          "k": "t",
+          "v": " (gap "
+        },
+        {
+          "k": "m",
+          "v": "0.003831<2D=0.005617"
+        },
+        {
+          "k": "t",
+          "v": ") kills the ladder arithmetically (arithmetic scan to "
+        },
+        {
+          "k": "m",
+          "v": "40\\,000"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "4052/4284"
+        },
+        {
+          "k": "t",
+          "v": " pairs endangered; co-moving "
+        },
+        {
+          "k": "m",
+          "v": "D\\sim1/n"
+        },
+        {
+          "k": "t",
+          "v": " forces "
+        },
+        {
+          "k": "m",
+          "v": "h\\sim n\\log n/4"
+        },
+        {
+          "k": "t",
+          "v": "). The no-reserve finding softens ("
+        },
+        {
+          "k": "m",
+          "v": "f_{\\mathrm{crit}}\\sim n^{-0.39}"
+        },
+        {
+          "k": "t",
+          "v": ", the reserve opens with depth); the circle breaks first at "
+        },
+        {
+          "k": "m",
+          "v": "k=109"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "n=463"
+        },
+        {
+          "k": "t",
+          "v": " — it tears at the ratio, not at a step: all "
+        },
+        {
+          "k": "m",
+          "v": "117"
+        },
+        {
+          "k": "t",
+          "v": " handovers certify at retention "
+        },
+        {
+          "k": "m",
+          "v": "1.000000"
+        },
+        {
+          "k": "t",
+          "v": " (largest single loss "
+        },
+        {
+          "k": "m",
+          "v": "5.96\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": "), atom entry free "
+        },
+        {
+          "k": "m",
+          "v": "117/117"
+        },
+        {
+          "k": "t",
+          "v": ". Three separate walls: margin "
+        },
+        {
+          "k": "m",
+          "v": "n\\approx462"
+        },
+        {
+          "k": "t",
+          "v": " (measured), ladder "
+        },
+        {
+          "k": "m",
+          "v": "521\\to523"
+        },
+        {
+          "k": "t",
+          "v": " (twin primes), requirement "
+        },
+        {
+          "k": "m",
+          "v": "n=727"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\omega_{\\mathrm{cert}}\\ge1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{need109}"
+        },
+        {
+          "k": "t",
+          "v": " vacuous on "
+        },
+        {
+          "k": "m",
+          "v": "46"
+        },
+        {
+          "k": "t",
+          "v": " zones). Reinterpretation: the operating variable is the window "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "depth"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": " (cheek doubling moves the wall "
+        },
+        {
+          "k": "m",
+          "v": "463\\to47"
+        },
+        {
+          "k": "t",
+          "v": "); a proof must beat the exponent gap "
+        },
+        {
+          "k": "m",
+          "v": "-0.974=-0.681-0.293"
+        },
+        {
+          "k": "t",
+          "v": " and couple "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_0"
+        },
+        {
+          "k": "t",
+          "v": " to the local prime gap. Follow-up probe T112 ("
+        },
+        {
+          "k": "c",
+          "v": "adaptive_scaling_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "ADAPTIVE.SCALING"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": "-adaptively scaled frame) is running. Series counter: "
+        },
+        {
+          "k": "m",
+          "v": "111"
+        },
+        {
+          "k": "t",
+          "v": " probes, "
+        },
+        {
+          "k": "m",
+          "v": "2781/2781"
+        },
+        {
+          "k": "t",
+          "v": " sandbox checks. Sandbox only: no ledger row, no marker move, not RH evidence."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper "
+            },
+            {
+              "k": "c",
+              "v": "tfpt_prime_front"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Certification-arc section extended to T102–T111 (new subsection “The three walls (T111)”); the T110 three-gaps box and the "
+        },
+        {
+          "k": "m",
+          "v": "n\\approx170"
+        },
+        {
+          "k": "t",
+          "v": " mentions corrected to the measured "
+        },
+        {
+          "k": "m",
+          "v": "n^*\\approx462"
+        },
+        {
+          "k": "t",
+          "v": " (fit artefact noted); reduction-cascade caption, two-doors figure chain, three-way status split and asymptotic-mountain section updated (the three walls as the measured formulation; depth-not-"
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": " reinterpretation; T112 running); abstract and probe-index appendix updated (T111 row; series counter "
+        },
+        {
+          "k": "m",
+          "v": "111"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "2781"
+        },
+        {
+          "k": "t",
+          "v": "; T112 recorded as running and deliberately absent)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "/prime-front"
+        },
+        {
+          "k": "t",
+          "v": ": T111 feed entry ("
+        },
+        {
+          "k": "c",
+          "v": "lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": ", new verdict enum "
+        },
+        {
+          "k": "t",
+          "v": "crossing-confirmed"
+        },
+        {
+          "k": "t",
+          "v": "), status line in the two-doors convergence panel (T111 + T112 running), hero counter Teile 11–111 / "
+        },
+        {
+          "k": "m",
+          "v": "2781"
+        },
+        {
+          "k": "t",
+          "v": " sandbox checks, program-status callout sentence for T111."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-27",
     "dateLabel": "2026-07-27 · III",
     "heading": [
       {

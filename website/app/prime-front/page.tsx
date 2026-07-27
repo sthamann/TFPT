@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–110 · 2758 sandbox checks
+            Research diary · Teile 11–111 · 2781 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1613,10 +1613,16 @@ function ProgramStatusCallout() {
         than the conclusion. T110 (MARGIN-PROPAGATES) closes the induction
         circle end-to-end on the measured zones — certified base case, 15
         certified handover steps, atom entry structurally free — with three
-        sharp gaps remaining (no reserve, no scalar step law, no k-uniformity;
-        extrapolated crossing warning at n ≈ 170, now under direct test by
-        T111). Milestone: 2758/2758 checks. Not almost-RH. This
-        is not RH evidence.
+        sharp gaps remaining (no reserve, no scalar step law, no
+        k-uniformity). T111 (CROSSING-CONFIRMED) drives the ladder deep and
+        measures the wall instead of extrapolating it: the crossing sits at
+        n* ≈ 462 (an upper bound; n ≈ 170 was a fit artefact) and splits into
+        three separate walls — margin, twin-prime ladder death, vacuous
+        requirement — while the handover mechanism itself never fails
+        (117/117 at retention 1.000000); depth, not n, is the operating
+        variable, and T112 (adaptive_scaling_probe.py) is testing the
+        adaptively scaled frame. Milestone: 2781/2781 checks. Not almost-RH.
+        This is not RH evidence.
       </p>
     </aside>
   );

@@ -1,3 +1,47 @@
+# 2026-07-27 (V) — Teil 111 (delegiert, die tiefe Leiter — Vertrag DEEP.ZONE.STRESS): deep_zone_stress_probe.py — **CROSSING-CONFIRMED** — DIE KREUZUNG IST GEMESSEN, NICHT EXTRAPOLIERT: letzte Zone ≥ 1 bei n = 461, erste darunter n = 463 (T110s n≈170 war ein Fit-Artefakt, aber die Wand ist real; n* ≈ 462 ist eine OBERE Schranke); die eine Warnung spaltet in DREI GETRENNTE WÄNDE (Margen-Wand n ≈ 462, Leiter-Wand an Primzwillingen 521→523, Anforderungs-Wand n = 727), und der Mechanismus versagt NIE — alle 117 Übergaben zertifizieren mit Retention 1.000000, es reißt am Verhältnis; Umdeutung: die Betriebsvariable ist die TIEFE, nicht n — 23/23, 140s, Sandbox
+# I1 Tiefe Leiter: T110-Gitter bitgenau reproduziert, dann lückenlose Abtastung
+#    ALLER Primpotenzen bis 1000 + dünner Schwanz bis 3001 (199 Zonen,
+#    Kettenleiter n = 2…521 mit 117 Übergaben). Verhältnis m_k/need109 fällt
+#    179.59 → 0.0174. DIE KREUZUNG IST GEMESSEN: letzte Zone ≥ 1 ist n = 461,
+#    erste darunter n = 463 (0.935) — T110s n≈170 war ein Fit-Artefakt, die
+#    Wand aber real. Das Versagen folgt dem PRIMZWEIG (Primpotenzen
+#    512/529/625/729 mit kleinem μ überleben länger). Fit-Familien ehrlich
+#    verglichen (beste: gebrochene Skala, n* = 501; Jackknife-Band reine
+#    Potenz [298, 352]). Auflösungsstudie tiefenerhaltend: Verfeinerung drückt
+#    das Verhältnis NACH UNTEN — n* ≈ 462 ist eine OBERE Schranke.
+# I2 Uniformitäts-Objekt: nsoft* = 1…8 über 117 Übergaben (nicht mehr flach
+#    bei 1), aber Retention bleibt 1.000000 auf allen Schritten (max.
+#    Einzelverlust 5.96e-08); Atom-Eintritt konstruktiv gratis 117/117 (exakte
+#    Nullmatrix). NEU UND HÄRTER: die LEITER-WAND — der geschachtelte Schritt
+#    braucht Lücke > 2D; das Primzwillingspaar 521→523 (Lücke 0.003831 <
+#    2D = 0.005617) tötet die Leiter arithmetisch; bei eingefrorener
+#    Zellbreite ist n = 521 die tiefste erreichbare Zone — die Schranke setzen
+#    Primzwillinge. Arithmetischer Scan bis 40000: 4052/4284 Paare gefährdet;
+#    mitlaufendes D ~ 1/n erzwingt h ~ n·log n/4 (Horizont n ≈ 690 bei
+#    h ≤ 1500).
+# I3 Reserve + Kreis: der No-Reserve-Befund weicht auf (f_crit ~ n^−0.39, die
+#    Reserve ÖFFNET sich mit der Tiefe; Engpass bleibt der erste Schritt 2→3).
+#    Der Kreis läuft ab zertifiziertem Basisfall (Faktor 179.6) und BRICHT
+#    ZUERST BEI k = 109, n = 463 — exakt wo I1 die Kreuzung misst. ES REISST
+#    AM VERHÄLTNIS, NICHT AN EINEM SCHRITT: alle 117 Übergaben zertifizieren
+#    mit Retention 1.000000, auch jenseits des Bruchs.
+# I4 Bilanz: Treiber ist 1/κ (+0.86) gegen Marge (−0.68); DREI GETRENNTE
+#    WÄNDE: Margen-Wand n ≈ 462 (gemessen, obere Schranke), Leiter-Wand
+#    521→523 (Primzwillinge, rein arithmetisch), Anforderungs-Wand n = 727
+#    (ω_cert ≥ 1, need109 vakuum auf 46 Zonen). DIE UMDEUTUNG: die
+#    Betriebsvariable ist die TIEFE, nicht n — Wangen-Verdopplung verschiebt
+#    die Wand von 463 auf 47; ein Beweis muss die Exponenten-Lücke
+#    −0.974 = −0.681 − 0.293 schlagen und δ₀ an die Primzahl-Lücke koppeln.
+#    → T112 (läuft): ADAPTIVE.SCALING (adaptive_scaling_probe.py) — die
+#    Konstruktion im n-adaptiv skalierten Rahmen (D ~ lokale Lücke), Test ob
+#    alle drei Wände gleichzeitig fallen, Fixpunkt-/Grenz-Objekt-Suche.
+# Serie (XII)–(CXXII): 111 Proben, 2781/2781 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Cholesky/Sylvester-Inertia,
+# Loewner-Ordnung, Weyl-Schranke/Cauchy-Interlacing, Schur-Komplement/
+# Haynsworth, Kato-Störung erster Ordnung, Rayleigh-Ritz, Grenander–Szegő,
+# Prager–Synge, Mihailescu/Catalan, von-Mangoldt-Arithmetik) zitiert; Sandbox
+# ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-27 (IV) — Teil 110 (delegiert, die Margen-Fortpflanzung — Vertrag MARGIN.PROPAGATION): margin_propagation_probe.py — **MARGIN-PROPAGATES** (mit Präzisierung) — der Induktionskreis schließt sich auf den Mess-Zonen END-ZU-END: Basis-Fall n=2 per Cholesky ZERTIFIZIERT, die gradierte Loewner-Minorante hält alle 15 Übergaben mit Retention 1.0000, und der ATOM-EINTRITT KOSTET NICHTS — er HEBT λ_min auf 15/15 (das T106-Killerargument hat für den skalaren Boden kein Analogon); drei scharfe Lücken bleiben: keine Reserve, kein skalares Schrittgesetz, keine k-Uniformität (extrapolierte Kreuzung n ≈ 170) — 28/28, 7.6s, Sandbox
 # H1 Margen-Karte (gemeinsames Gitter, 16 Zonen, δ₀ = 0.00284): λ_min(Q|odd)
 #    fällt monoton 6.95e-2 (n=2) → 1.66e-5 (n=29); need109 = 3.09e-7…3.87e-4;

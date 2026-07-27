@@ -124,9 +124,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 1753072,
+    bytes: 1757258,
     sha256:
-      "a79460447e7f81f804c5ff7c2381fcc9c8ddc76bfe8d64ff4ad0c9b03ade7880",
+      "3be1e5faa3b6e7a4c4c951271f4d02156e5aa8c10e048fd7e884ca7aa486c595",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },

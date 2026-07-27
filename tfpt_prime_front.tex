@@ -79,7 +79,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$110$ preregistered probes with $2758$ machine checks, which localized the residual object. That
+$111$ preregistered probes with $2781$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -91,11 +91,19 @@ $r=\kappa/\varepsilon\le1$ (measured $0.0053$--$0.1814$ on $16$ zones), then, on
 identified as an exact energy, to two scalars --- and finally, with both scalars certified (the wing
 scalar unconditionally by a graded matrix cap, the boundary value by a residual certificate that
 carries a cancellation), to a chain that closes $16/16$ conditional on exactly one strict-positivity
-margin input, itself two to six orders of magnitude weaker than the conclusion it buys. The last part
-then closes the induction circle on the measured zones end to end --- a certified base case, fifteen
-certified handover steps through a graded Loewner minorant, and the structural finding that the atom
-entry costs nothing --- while leaving three sharp, named gaps: no reserve, no scalar step law, and no
-uniformity in $k$, with an extrapolated crossing warning at $n\approx170$. \textbf{No claim of progress on the Riemann Hypothesis is
+margin input, itself two to six orders of magnitude weaker than the conclusion it buys. The
+penultimate part then closes the induction circle on the measured zones end to end --- a certified
+base case, fifteen certified handover steps through a graded Loewner minorant, and the structural
+finding that the atom entry costs nothing --- while leaving three sharp, named gaps: no reserve, no
+scalar step law, and no uniformity in $k$, with an extrapolated crossing warning at $n\approx170$.
+The last part stops extrapolating and measures: on a deep ladder of $199$ prime-power zones with
+$117$ certified handovers, the crossing is located between $n=461$ and $n=463$ --- the $n\approx170$
+figure was a fit artefact, but the wall is real, and $n^*\approx462$ is an upper bound --- and the
+single warning splits into three separate walls (a measured margin wall, an arithmetic ladder wall
+set by the twin-prime pair $521\to523$, and a vacuous-requirement wall at $n=727$), while the
+handover mechanism itself never fails: all $117$ steps certify at retention $1.000000$, and the
+chain tears at the ratio, not at a step. The operating variable turns out to be the window depth,
+not the zone index. \textbf{No claim of progress on the Riemann Hypothesis is
 made anywhere in this document}, and none of the sandbox findings moves any ledger marker. The
 document is deliberately symmetric about failure: a dedicated section lists the readings and
 routes that were refuted --- an essential-singularity reading, a $C/g$ proxy law, a density chain, an
@@ -711,9 +719,9 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T110)}\label{sec:certification}
+\section{The certification arc (T102--T111)}\label{sec:certification}
 % =====================================================================
-The last nine parts stopped improving measurements and started converting them into certificates ---
+The last ten parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
 
 \subsection{The mechanism: a crossing, not a singularity (T102)}
@@ -834,9 +842,10 @@ the wing near-null direction.
 \node[tgt] (o) at (0,-3.4) {\textbf{One object:} the wing near-null direction\\[2pt]
   \footnotesize dressing almost rank one (effective rank $1.07$--$2.7$; $99.7$--$100\%$ of the
   near-null direction in \emph{one} prolate mode)};
-\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110\\[2pt]
+\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111\\[2pt]
   \footnotesize certify \emph{bare}, prove the avoidance law, split the parity channels,
-  reduce to one scalar ratio, then to two scalars, certify both --- then propagate the margin};
+  reduce to one scalar ratio, then to two scalars, certify both --- then propagate the margin
+  and measure where the propagation fails};
 \draw[ar] (a) -- (o);
 \draw[ar] (c) -- (o);
 \draw[ar] (o) -- (n);
@@ -1099,8 +1108,9 @@ the induction is exactly what the next part measured.
 \emph{equivalence typing} produced by an exact identity (Section~\ref{sec:i5}); the arrows below are the
 architecture of a would-be sufficient route, verified on finitely many windows only. Since T109 the
 cascade ends at one strict-positivity margin input; T110 shows that this input propagates itself along
-the measured ladder (certified base case, graded Loewner minorant), leaving the three gaps of the next
-subsection. The dashed box is the reason this figure is not a
+the measured ladder (certified base case, graded Loewner minorant), leaving three gaps --- which T111
+then drives deep and measures as three separate walls (the two subsections below). The dashed box is
+the reason this figure is not a
 proof sketch.}\label{fig:cascade}
 \end{figure}
 
@@ -1152,13 +1162,68 @@ exactly the direction that decides it.
 \item \textbf{No uniformity in $k$.} Every certificate above is one finite Cholesky; flat-in-$k$ is a
 measurement, not a theorem. And the measured trend warns rather than reassures: $m_k\sim n^{-1.93}$
 against $\mathrm{need109}\sim n^{-0.98}$, ratio $\sim n^{-0.96}$ (fit, rms $0.735$) --- extrapolated
-crossing at $n\approx170$. Propagation gets \emph{harder} with $k$, not easier.
+crossing at $n\approx170$. Propagation gets \emph{harder} with $k$, not easier. (T111 subsequently
+\emph{measured} that crossing: it sits at $n^*\approx462$, not $170$ --- the extrapolation was a fit
+artefact of the $16$-zone window, but the wall itself is real. See the next subsection.)
 \end{enumerate}
 \end{keybox}
 
-\noindent T111 (\texttt{deep\_zone\_stress\_probe.py}, contract \texttt{DEEP.ZONE.STRESS} --- the deep
-ladder to $n\sim200$, testing the $n\approx170$ crossing directly and measuring the uniformity object
-at depth) was running at the time of writing and is \emph{not} reported here.
+\subsection{The three walls (T111)}
+T111 (\texttt{deep\_zone\_stress\_probe.py}, contract \texttt{DEEP.ZONE.STRESS}, $23/23$,
+\textsc{crossing-confirmed}) stopped extrapolating and measured. On exactly the T110 cell grid ---
+the first $16$ zones reproduce T110 bit-exactly --- the ladder was extended to \emph{every}
+prime-power zone $n\le1000$ plus a thin tail to $3001$: $199$ zones in the margin map, with the
+chain ladder running $n=2\ldots521$ through $117$ handovers.
+
+\emph{The margin wall, measured.} The ratio $m_k/\mathrm{need109}$ falls $179.59\to0.0174$ across
+the deep ladder, and the crossing is now a measurement, not a fit: the last zone with ratio $\ge1$
+is $n=461$, the first below is $n=463$ (ratio $0.935$). The $n\approx170$ figure of T110 was a fit
+artefact of the $16$-zone window --- the wall sits much further out, but it is real. The failure
+follows the \emph{prime branch}: prime-power zones ($512$, $529$, $625$, $729$), whose atoms are
+weaker, survive longer than the primes around them. The fit families were again compared honestly
+(best by AIC: a broken-scale law with $n^*=501$; the jackknife band of the pure power law is
+$[298,352]$), and a depth-preserving resolution study shows that refinement pushes the ratio
+\emph{down}: $n^*\approx462$ is an \emph{upper} bound, not an estimate to be rounded up.
+
+\emph{The ladder wall, arithmetic.} The uniformity object is no longer flat: $n^*_{\mathrm{soft}}$
+runs $1\ldots8$ across the $117$ handovers. But retention stays $1.000000$ at every step (largest
+single loss $5.96\times10^{-8}$), and the atom entry stays constructively free on $117/117$ --- the
+restriction of the new atom to the old window is the exact zero matrix, deep into the ladder. The
+new and harder finding is the \emph{ladder wall}: the nested step needs a lag gap exceeding twice
+the window depth, and the twin-prime pair $521\to523$ (gap $0.003831<2D=0.005617$) kills the ladder
+\emph{arithmetically} --- at frozen cell width, $n=521$ is the deepest reachable zone, and the bound
+is set by twin primes, not by spectra. An arithmetic scan to $40\,000$ finds $4052/4284$
+consecutive prime-power pairs endangered; letting $D$ shrink like $1/n$ instead forces the cell
+count to grow like $n\log n/4$ (horizon $n\approx690$ at $h\le1500$).
+
+\emph{The circle tears at the ratio, not at a step.} The no-reserve finding of T110 softens:
+$f_{\mathrm{crit}}\sim n^{-0.39}$ (fit) --- the reserve \emph{opens} with depth, and the bottleneck
+stays at the first step $2\to3$. The circle test runs from the certified base case (factor $179.6$)
+and breaks first at $k=109$, $n=463$ --- exactly where the margin map measures the crossing. All
+$117$ handovers certify at retention $1.000000$, including beyond the break: what fails is the
+demand ratio, never the handover mechanism.
+
+\begin{keybox}[The three walls --- and the reinterpretation]
+The hardness balance names the driver: the growth of $1/\kappa$ (exponent $+0.86$) against the
+margin (exponent $-0.68$). Three separate walls, in order of appearance:
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{The margin wall}, $n^*\approx462$: measured, an upper bound (refinement pushes it
+down); the T109-chain demand ratio crosses $1$ between $n=461$ and $n=463$.
+\item \textbf{The ladder wall}, $521\to523$: purely arithmetic --- at frozen cell width the nested
+handover dies at the first twin-prime gap below $2D$, independently of any spectral quantity.
+\item \textbf{The requirement wall}, $n=727$: $\omega_{\mathrm{cert}}\ge1$ makes $\mathrm{need109}$
+vacuous on $46$ deep zones --- beyond it the T109 chain no longer states a demand at all.
+\end{enumerate}
+The reinterpretation that comes with the measurement: the operating variable is the window
+\emph{depth}, not the zone index $n$ --- doubling the cheeks moves the margin wall from $463$ to
+$47$. A proof along this route must beat the exponent gap $-0.974=-0.681-0.293$ and couple the
+depth $\delta_0$ to the local prime gap.
+\end{keybox}
+
+\noindent T112 (\texttt{adaptive\_scaling\_probe.py}, contract \texttt{ADAPTIVE.SCALING} --- the
+construction in an $n$-adaptively scaled frame with $D$ tied to the local prime gap, testing whether
+all three walls fall simultaneously, plus a fixed-point / limit-object search) was running at the
+time of writing and is \emph{not} reported here.
 
 % =====================================================================
 \section{The kill list}\label{sec:kills}
@@ -1250,17 +1315,22 @@ identities ($\varepsilon$ as a $Q|_{\mathrm{odd}}$ energy, the rank-one overlap 
 \varepsilon$, and $\varepsilon$ as the square of the last Cholesky pivot), the two T109
 certificates (the graded matrix cap $\omega_{\mathrm{cert}}=0.2561$--$0.7569$, no hypothesis input,
 and the residual certificate for the boundary value, sharpness $1.0000$--$2.4937$, $16/16$ in
-budget), and the three T110 pieces of the propagation circle (the exact splitting of the growth step,
+budget), the three T110 pieces of the propagation circle (the exact splitting of the growth step,
 embedding error $\le2.6\times10^{-14}$, with the new atom's restriction to the old window the exact
 zero matrix; the graded Loewner minorant step, valid exactly under the induction hypothesis, holding
 $15/15$ with retention $1.0000$; and the base-case Cholesky certificate at $n=2$,
-$\lambda_{\min}\ge6.93\times10^{-2}$ at three resolutions).\\[3pt]
+$\lambda_{\min}\ge6.93\times10^{-2}$ at three resolutions), and their T111 deep-ladder extension
+($117$ handover certificates at retention $1.000000$, largest single loss $5.96\times10^{-8}$; atom
+entry the exact zero matrix on $117/117$; and the arithmetic ladder-wall statement at frozen cell
+width, gap $>2D$ needed against the twin-prime gap $0.003831$ at $521\to523$).\\[3pt]
 \textbf{Measured} (holds on the resolved windows; no uniform constant): $\rho_-$; the ratio
 $r=0.0053$--$0.1814$ and $\hat r<1$ at all $92$ resolution points; $\omega=0.2366$--$0.7531$; the
 strict odd-channel margin $\lambda_{\min}(Q|_{\mathrm{odd}})=1.4\times10^{-5}$--$5.1\times10^{-2}$; the
-margin map $m_k\ge\mathrm{need109}$ on $16/16$ zones (ratio $2.09$--$179.6$) with its trend
-$m_k\sim n^{-1.93}$ against $\mathrm{need109}\sim n^{-0.98}$ and extrapolated crossing $n\approx170$
-(fit); the closure map $44/64$; the handover margins; the two race slopes; every scaling
+margin map $m_k\ge\mathrm{need109}$ on $16/16$ zones (ratio $2.09$--$179.6$), extended by T111 to
+$199$ zones with the crossing \emph{measured} between $n=461$ and $n=463$ ($n^*\approx462$, an upper
+bound; the T110 extrapolation $n\approx170$ was a fit artefact); the reserve trend
+$f_{\mathrm{crit}}\sim n^{-0.39}$ (fit); the requirement wall $n=727$; the closure map $44/64$; the
+handover margins; the two race slopes; every scaling
 exponent quoted in this document.\\[3pt]
 \textbf{Hypothesis input / classical} (used, named, not proved here): Kneser, Witt/Eichler, Shimura,
 Waldspurger/Baruch--Mao, Cohen, Weil--Guinand, Bombieri, Yoshida, Connes--Consani, Douglas,
@@ -1271,17 +1341,23 @@ Combes--Thomas/Jaffard, Prager--Synge, first-order Kato perturbation.
 
 \subsection{The asymptotic mountain}
 Three separate reasons why the cascade of Figure~\ref{fig:cascade} is not a route to a theorem as it
-stands, and why the document does not present it as one. Since T110 the mountain also has a
-\emph{precise} formulation --- the three gaps of Section~\ref{sec:certification}: no reserve (the
-propagation chain lives on a retention of $1-2\times10^{-7}$; a factor-$2$ loss would break it in two
-steps), no scalar step law (structurally excluded by the boundary layer), and no uniformity in $k$
-(every certificate is one finite Cholesky, and the measured ratio trend $\sim n^{-0.96}$ extrapolates
-to a crossing at $n\approx170$). T111 (\texttt{deep\_zone\_stress\_probe.py}, the deep ladder to
-$n\sim200$) was running at the time of writing to test that crossing directly.
+stands, and why the document does not present it as one. Since T110 the mountain has a
+\emph{precise} formulation --- the three gaps of Section~\ref{sec:certification}: no reserve, no
+scalar step law (structurally excluded by the boundary layer), and no uniformity in $k$. Since T111
+it also has a \emph{measured} one --- the three walls: the margin wall at $n^*\approx462$ (measured,
+an upper bound; the earlier $n\approx170$ was a fit artefact), the arithmetic ladder wall at the
+twin-prime pair $521\to523$, and the requirement wall at $n=727$. The mechanism itself never failed
+on the deep ladder --- all $117$ handovers certify at retention $1.000000$, and the reserve even
+opens with depth ($f_{\mathrm{crit}}\sim n^{-0.39}$, fit) --- so the actionable content of the
+measurement is the reinterpretation: the operating variable is the window depth, not the zone index,
+and a proof along this route must beat the exponent gap $-0.974=-0.681-0.293$ and couple the depth
+$\delta_0$ to the local prime gap. T112 (\texttt{adaptive\_scaling\_probe.py}, the $n$-adaptively
+scaled frame with $D$ tied to the local prime gap) was running at the time of writing.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
-established on the resolved zones $n=2\ldots29$. Not one constant in the chain is certified uniformly in
+established on the resolved zones $n=2\ldots29$ (T111's deep ladder extends the measurements to
+$n=521$ --- finitely many zones either way). Not one constant in the chain is certified uniformly in
 $k$. The T101 requirement list (A)--(D) is unchanged: the hardness would sit in (A), a sharp,
 non-perturbative arithmetic lower bound at a Weil-positivity edge.
 \item \textbf{Finite resolution is a wall, and a measured one.} Numerics as a witness is exhausted
@@ -1327,18 +1403,18 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T110}\label{app:index}
+\section{Probe index, diary parts T11--T111}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $100$ parts T11--T110 that the current diary file records
-($101$ runs --- T104 was a double run with two independent arms --- and $2566$ green checks); the ten
+load-bearing artefact. The index covers the $101$ parts T11--T111 that the current diary file records
+($102$ runs --- T104 was a double run with two independent arms --- and $2589$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T110: \textbf{$110$ probes, $2758/2758$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T111
-(\texttt{deep\_zone\_stress\_probe.py}, contract \texttt{DEEP.ZONE.STRESS}) was still running when
+diary at T111: \textbf{$111$ probes, $2781/2781$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T112
+(\texttt{adaptive\_scaling\_probe.py}, contract \texttt{ADAPTIVE.SCALING}) was still running when
 this document was written and is deliberately absent.
 
 {\footnotesize
@@ -1455,6 +1531,7 @@ T107 & \texttt{\scriptsize odd\_\allowbreak channel\_\allowbreak closure} & Sher
 T108 & \texttt{\scriptsize ratio\_\allowbreak certificate} & $\varepsilon$ is an exact $Q|_{\mathrm{odd}}$ energy; (R) on two scalars; first non-vacuous margin chain & EPSILON-IDENTITY & 44/44\\
 T109 & \texttt{\scriptsize boundary\_\allowbreak decay} & cancellation, not decay; both scalars certified (graded cap $+$ residual certificate); one strict-margin input left & BOUNDARY-CERTIFIED & 29/29\\
 T110 & \texttt{\scriptsize margin\_\allowbreak propagation} & the induction circle closes on the measured zones (certified base case $+$ graded Loewner minorant; atom entry free); three gaps named & MARGIN-PROPAGATES & 28/28\\
+T111 & \texttt{\scriptsize deep\_\allowbreak zone\_\allowbreak stress} & the crossing measured, not extrapolated ($n^*\!\approx\!462$, upper bound); three walls (margin / twin-prime ladder / requirement); mechanism never fails, $117/117$ & CROSSING-CONFIRMED & 23/23\\
 \end{xltabular}
 }
 

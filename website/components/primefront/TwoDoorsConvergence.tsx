@@ -154,10 +154,16 @@ export function TwoDoorsConvergence() {
           the induction circle closes end-to-end on the measured zones —
           certified base case, 15 certified handover steps (graded Loewner
           minorant, retention 1.0000), atom entry structurally free; three
-          sharp gaps remain (no reserve, no scalar step law, no k-uniformity —
-          extrapolated crossing warning at n ≈ 170). T111 (
+          sharp gaps remain (no reserve, no scalar step law, no k-uniformity).
+          T111 · DEEP.ZONE.STRESS — CROSSING-CONFIRMED (23/23): the deep
+          ladder (199 zones, 117 handovers to n = 521) measures the crossing
+          at n* ≈ 462 (upper bound; the n ≈ 170 extrapolation was a fit
+          artefact) and splits the wall into three — margin wall n ≈ 462,
+          twin-prime ladder wall 521→523, requirement wall n = 727 — while
+          the mechanism never fails (117/117 at retention 1.000000): depth,
+          not n, is the operating variable. T112 (
           <span className="font-mono text-slate-300">
-            deep_zone_stress_probe.py
+            adaptive_scaling_probe.py
           </span>
           ) running.
         </p>

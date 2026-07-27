@@ -62,6 +62,43 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-27 (IV) (prime front: T111 deep ladder maps three walls, crossing measured at $n\approx462$ --- CROSSING-CONFIRMED; paper + diary + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Diary Teil 111 (sandbox).} \texttt{experiments/tfpt-discovery/deep\_zone\_stress\_probe.py}
+(contract \texttt{DEEP.ZONE.STRESS}, $23/23$ checks, $140$\,s, verdict \textsc{crossing-confirmed}):
+the probe stops extrapolating and measures --- the T110 grid is reproduced bit-exactly, then the
+ladder is extended to every prime-power zone $n\le1000$ plus a thin tail to $3001$ ($199$ zones;
+chain ladder $n=2\ldots521$ with $117$ handovers). The ratio $m_k/\mathrm{need109}$ falls
+$179.59\to0.0174$; the crossing is \emph{measured}: last zone $\ge1$ at $n=461$, first below at
+$n=463$ ($0.935$) --- T110's $n\approx170$ was a fit artefact, but the wall is real, and a
+depth-preserving resolution study makes $n^*\approx462$ an \emph{upper} bound. The failure follows
+the prime branch (prime powers $512/529/625/729$ survive longer). New and harder: the \emph{ladder
+wall} --- the nested step needs a lag gap $>2D$, and the twin-prime pair $521\to523$ (gap
+$0.003831<2D=0.005617$) kills the ladder arithmetically (arithmetic scan to $40\,000$: $4052/4284$
+pairs endangered; co-moving $D\sim1/n$ forces $h\sim n\log n/4$). The no-reserve finding softens
+($f_{\mathrm{crit}}\sim n^{-0.39}$, the reserve opens with depth); the circle breaks first at
+$k=109$, $n=463$ --- it tears at the ratio, not at a step: all $117$ handovers certify at retention
+$1.000000$ (largest single loss $5.96\times10^{-8}$), atom entry free $117/117$. Three separate
+walls: margin $n\approx462$ (measured), ladder $521\to523$ (twin primes), requirement $n=727$
+($\omega_{\mathrm{cert}}\ge1$, $\mathrm{need109}$ vacuous on $46$ zones). Reinterpretation: the
+operating variable is the window \emph{depth}, not $n$ (cheek doubling moves the wall $463\to47$);
+a proof must beat the exponent gap $-0.974=-0.681-0.293$ and couple $\delta_0$ to the local prime
+gap. Follow-up probe T112 (\texttt{adaptive\_scaling\_probe.py}, contract \texttt{ADAPTIVE.SCALING},
+the $n$-adaptively scaled frame) is running. Series counter: $111$ probes, $2781/2781$ sandbox
+checks. Sandbox only: no ledger row, no marker move, not RH evidence.
+\item \textbf{Paper \texttt{tfpt\_prime\_front}.} Certification-arc section extended to T102--T111
+(new subsection ``The three walls (T111)''); the T110 three-gaps box and the $n\approx170$ mentions
+corrected to the measured $n^*\approx462$ (fit artefact noted); reduction-cascade caption, two-doors
+figure chain, three-way status split and asymptotic-mountain section updated (the three walls as
+the measured formulation; depth-not-$n$ reinterpretation; T112 running); abstract and probe-index
+appendix updated (T111 row; series counter $111$/$2781$; T112 recorded as running and deliberately
+absent).
+\item \textbf{Website.} \texttt{/prime-front}: T111 feed entry (\texttt{lib/primeFront.ts}, new
+verdict enum \textsc{crossing-confirmed}), status line in the two-doors convergence panel (T111 +
+T112 running), hero counter Teile 11--111 / $2781$ sandbox checks, program-status callout sentence
+for T111.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-27 (III) (prime front: T110 margin propagation closes the measured-zone circle --- MARGIN-PROPAGATES; paper + diary + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{Diary Teil 110 (sandbox).} \texttt{experiments/tfpt-discovery/margin\_propagation\_probe.py}
