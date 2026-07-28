@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3525/3525 sandbox checks —
+        (“the full proof”, T126+) is now open with 3571/3571 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -93,7 +93,14 @@ export function HonestyBanner() {
         (D^−0.229), the additive shape is dead at its own exact Weyl floor and
         the joint shape fails at the normalisation alone — the residue is one
         closed conductance profile, and the identity blocks of T140 and T141
-        are load-bearing as v545. What remains
+        are load-bearing as v545. T142 (PROFILE-RESISTS) then constructed
+        that profile instead of guessing it: the capacity decomposition
+        exhibits the optimal Hardy weight exactly (Ω = 1 by a projection
+        identity, against T141&apos;s guessed 20.7–2724), the certified chain
+        misses by a constant factor ~2.3 flat in D, and the rank ladder
+        closes the whole comparison path — no comparison argument can
+        deliver D-uniformity, so the next move is the sharp
+        capacity-Rayleigh route (T143, running). What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

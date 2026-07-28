@@ -259,8 +259,16 @@ export function TwoDoorsConvergence() {
           target), and the joint shape fails at the normalisation alone
           (Ω = 20.71–2723.99). The residue collapses to one closed conductance
           profile with Y ⪯ K⁺ and Ω ≈ 1; the identity blocks of both parts are
-          promoted as v545, and T142 (conductance_profile_probe.py) is running
-          at exactly that profile.
+          promoted as v545. T142 · CONDUCTANCE.PROFILE (PROFILE-RESISTS,
+          24/24) then constructed that profile instead of guessing it: the
+          capacity decomposition K⁻¹ = DᵀJ⁻¹D + xxᵀ/cap exhibits the optimal
+          Hardy weight exactly — Ω = 1 exactly by a projection identity,
+          against T141&apos;s guessed 20.7–2724 — the certified chain misses
+          by a constant factor 2.27–2.45 (flat in D), and the rank ladder
+          closes the whole comparison path: no comparison argument can
+          deliver D-uniformity, so the next move is the sharp
+          capacity-Rayleigh route, and T143 (sharp_capacity_probe.py) is
+          running at exactly that route.
         </p>
       </div>
 

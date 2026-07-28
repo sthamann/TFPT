@@ -89,7 +89,7 @@ obstructions, the amplitude route with a positive linear carrier, the matching-l
 ledger package, and --- out of the second phase --- the margin-chain identities, the lumped
 $M$-matrix pair, the long-lag support structure and the Hardy-core identities. Everything beyond
 those eleven is \emph{sandbox}: an exploratory program, run as
-$141$ preregistered probes with $3547$ machine checks, which localized the residual object. That
+$142$ preregistered probes with $3571$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -258,7 +258,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots140$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots142$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -266,7 +266,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T141: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T142: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -291,7 +291,11 @@ $D$-dependence located in the geometry (T140), and finally the Hardy ingredient 
 the certified constant is not zone-uniform while the object it bounds is, the additive shape is dead
 as a shape by its own exact Weyl floor and the joint shape fails at the normalisation alone, so the
 rest list collapses to one closed conductance profile (T141, promoted together with T140 as
-\vref{v545})); Section~\ref{sec:status}
+\vref{v545}), and at last that profile itself, \emph{constructed} rather than guessed: the
+capacity decomposition exhibits the optimal Hardy weight exactly --- $\Omega=1$ by a projection
+identity where T141 had guessed $20.7$--$2724$ --- the failure shrinks to a constant factor
+${\sim}2.3$ flat in $D$, and the rank ladder closes the whole comparison path, forcing the sharp
+capacity--Rayleigh route (T142)); Section~\ref{sec:status}
 is the status statement.
 
 % =====================================================================
@@ -3189,7 +3193,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T141)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T142)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -4349,8 +4353,77 @@ zones, so the surface matters: the finite-core reduction of T140 is what makes a
 span in $D$ affordable at all, and on a narrower surface the separation
 $D^{-0.366}$ against $D^{-0.229}$ would have been within its own error bars. The verdict
 \textsc{hardy-resists} is recorded with that span attached. Thirteen statements of T140/T141 were
-mature enough to promote (\vref{v545}); the sandbox stock stands at seventy-five items. T142
-(\texttt{conductance\_profile\_probe.py}) is running at R1b.
+mature enough to promote (\vref{v545}); the sandbox stock stands at seventy-five items.
+
+\subsection{The optimal weight is found exactly, and the comparison path closes (T142)}
+T142 (\texttt{conductance\_profile\_probe.py}, contract \texttt{CONDUCTANCE.PROFILE}, $24/24$,
+$155.4$\,s on $26$ windows with $h=210\ldots878$, zones $n=71\ldots317$ and
+$D=2.90\times10^{-3}\ldots1.08\times10^{-2}$, verdict \textsc{profile-resists}, bars declared in
+the docstring before any number) does not guess a fourth profile. It \emph{constructs} the
+optimum, from the classical address (Miclo 1999; Maz'ya's capacity criteria; Muckenhoupt 1972 and
+Opic--Kufner 1990 as addresses, not as authority) --- and the construction settles the search half
+of R1b outright. With $J=DKD^{\mathsf T}=L_\Delta$ the endpoint Laplacian, $x=K^{-1}\mathbf 1$ the
+equilibrium charge and $\mathrm{cap}=\mathbf 1^{\mathsf T}K^{-1}\mathbf 1$ the capacity,
+\[
+K^{-1} \;=\; D^{\mathsf T}J^{-1}D \;+\; \frac{xx^{\mathsf T}}{\mathrm{cap}}\,,
+\]
+\textbf{the capacity decomposition of the optimal Hardy weight} --- verified as an identity to
+$5.5\times10^{-12}$ on $26/26$ windows, never asserted. Its Dirichlet half is an
+\emph{orthogonal projection} under the congruence ($X=J^{-1/2}DK^{1/2}$ has
+$XX^{\mathsf T}=I$), so $\Omega(D^{\mathsf T}J^{-1}D)=1$ \textbf{exactly} (certified
+$1.0000001$, the excess being the declared Cholesky floor) --- precisely the object T141 was
+missing, in closed form, against the guessed profiles' $\Omega=20.7$--$2724$. The weight was
+never a free choice: it is the Green function of the endpoint Laplacian plus the equilibrium
+rank one, and the exact capacity Rayleigh form follows with no inequality taken anywhere,
+$\rho(W)=\sup_u u^{\mathsf T}Hu/[(Du)^{\mathsf T}J^{-1}(Du)+(x^{\mathsf T}u)^2/\mathrm{cap}]$.
+
+\emph{The failure is a constant, not a power.} The variational optimum over the strict
+conductance class (a heuristic search whose every reported number is re-certified by Cholesky;
+$11$ windows) reaches $\Lambda\cdot\Omega=1.3160$--$1.4235=1.32$--$1.42\times\rho(W)$ with a
+fitted $D$-exponent of $-0.029\pm0.014$ --- inside the uniformity bar, so the class fails by a
+\emph{bounded factor at every depth}, a different (and harder) situation than T141's $D^{-1.87}$
+blow-up. The stable shape is found: $c_k\sim1/J_{kk}$, the reciprocal endpoint mass (log-log
+correlation $0.988$--$0.995$), and the optimum wants essentially \emph{no} mass --- a pure
+Dirichlet form. The certified chain of the best closed member reads
+$\Lambda\cdot\Omega=2.2671$--$2.4536$ against a target of $0.999983$--$0.999999$ ($0/26$, median
+shortfall $2.3376$, flat in $D$ at $D^{0.006\pm0.004}$); the control run with T141's guessed
+profile on the same machinery gives $74.84$--$320.03$, so the capacity construction beats
+guessing by $31.9$--$137\times$. The single-direction class barrier is saturated
+($\beta=1.000000$, the argmax being the top mode itself) and is recorded as a dead route with
+its reason.
+
+\emph{The rank ladder closes the comparison path.} On the anchored ladder --- the diagonal
+minorant plus the $r$ dominant residual modes, a certified Loewner minorant at every rank with
+$\Omega\le1$ throughout --- the chain stalls at $1.408$ ($r=1$) $\ldots$ $1.391$ ($r=128$) and
+first crosses the hurdle $1$ only at $r^*/m=0.995$--$0.998$: the tautology $Y=K^{-1}$ itself
+(end-to-end anchor: at $r=m-1$ the chain collapses to $\rho(W)$ to $1.7\times10^{-11}$
+relative). The structural consequence deserves its own sentence: since $\rho(W)=1-\Theta(D^3)$
+and any comparison bound is $\ge\rho$ with equality only at $Y\propto K^{-1}$, a class bound
+would have to reproduce the optimal weight to relative accuracy $O(D^3)$ --- \textbf{no
+comparison argument can deliver $D$-uniformity}. The next move is forced, not chosen: the
+\emph{sharp} route, estimating the exact capacity Rayleigh form directly, with no Loewner step
+taken at all.
+
+\begin{keybox}[After T142: the comparison branch is closed, and the rest list is led by the sharp route]
+\emph{(R1c)} \textbf{the sharp capacity--Rayleigh route}, which \emph{replaces} the comparison
+rather than continuing it: estimate
+$\rho(W)=\sup_u u^{\mathsf T}Hu/[(Du)^{\mathsf T}J^{-1}(Du)+(x^{\mathsf T}u)^2/\mathrm{cap}]$
+directly (Miclo 1999, Maz'ya capacity --- a Hardy inequality for the Green form of the endpoint
+Laplacian, no profile choice left). What sends the next probe there is measured here: the best
+closed minorant is short by $2.27$--$2.45$, the whole conductance class by $1.32$--$1.42$, and
+no truncation below $r=m/2$ ever helps. \emph{(R1d)} a multi-direction dual certificate for the
+class (LP/SDP over the conductance cone), without which every negative statement about the class
+stays \emph{measured}. \emph{(R3$''$)} the corrected R3$'$: T141's line was backwards --- only
+$0.03\%$ of the first moment of $(-H)_+$ sits \emph{inside} index distance $8$ (support radius
+$204$--$873$), so R3$'$ survives as a \emph{long-range} inequality (the Loewner step
+$L_{N_-}\preceq T_{Q^-}$ is certified with the full weight on every window) whose constant
+$\max_kQ^-_k=3.20\times10^{2}$--$3.46\times10^{3}\sim D^{-1.73}$ is not $D$-uniform. \emph{(R4)}
+border pool rebuilt: $72$ blocks, $68$ certified, $4$ open and far-carried --- the required far
+shrink factor, $0.656$--$1.052$, is the one number a decay statement has to beat. Map V14; nine
+statements ripe (stock $75\to84$), $0$ promoted here. The verdict, stated precisely: a
+resistance of the comparison \emph{method} at a known optimum, not a failure to identify the
+weight. T143 (\texttt{sharp\_capacity\_probe.py}) is running at exactly R1c.
+\end{keybox}
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
@@ -4831,19 +4904,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T141}\label{app:index}
+\section{Probe index, diary parts T11--T142}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $131$ parts T11--T141 that the current diary file records
-($132$ runs --- T104 was a double run with two independent arms --- and $3355$ green checks); the ten
+load-bearing artefact. The index covers the $132$ parts T11--T142 that the current diary file records
+($133$ runs --- T104 was a double run with two independent arms --- and $3379$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v545} promoted; with T126--T141, the first sixteen parts of the second phase, the
-running totals are \textbf{$141$ probes and $3547/3547$ checks}. T142
-(\texttt{conductance\_profile\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v545} promoted; with T126--T142, the first seventeen parts of the second phase, the
+running totals are \textbf{$142$ probes and $3571/3571$ checks}. T143
+(\texttt{sharp\_capacity\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -4990,6 +5063,7 @@ T138 & \texttt{\scriptsize sign\_\allowbreak compensation} & the cancellation \t
 T139 & \texttt{\scriptsize green\_\allowbreak decay} & the decay lemma \textbf{refuted at its hypothesis, arithmetically}: the certified kernel envelope decays $d^{-0.15}$--$d^{-0.04}$ where Jaffard 1990 needs $p>1$ --- the archimedean lags sit \emph{on} the borderline ($\sim1/d$), the prime-power atoms lay $O(1)$ spikes across the window (no envelope sees the comb's thinness); constant chain constructive: Demko--Moss--Smith \emph{verified where applicable} ($75/75$ banded rungs), operator gate $0.97$--$1.83$ ($1/75$), algebra gate $3.4$--$1.6\times10^{3}$ ($0/75$); exponent \emph{not} inherited (kernel $d^{-1.5\ldots-1.1}$ vs inverse $d^{-0.52\ldots-0.37}$); the replacement is an \textbf{identity}: $b_e^{\mathsf T}Gb_{e'}=\sum_{\mathrm{box}}H$ exactly ($4\times10^{-15}$), $H<0$ on $0.71$--$0.87$ off-diagonal, $H>0$ on $100\%$ of the diagonal $\Rightarrow$ \textbf{T138's whole sign law derived} from one kernel plus box geometry (Gantmacher--Krein one-pair quantitatively dead); the never-truncating layer series \textbf{killed from below}: $3.388$--$6.171$ vs target $0.999182$--$0.999972$ ($0/15$, overshoot $681$--$46900\times$ $=$ the effective layer count), zero trace forbids dropping any layer, $\mathrm{Gram}\preceq\mathrm{Band}_b$ \emph{never} ($85/85$), Weyl floor $\max_b\mathrm{Rayleigh}(\mathrm{Band}_b)=1.0303$--$1.1116>$ target on $15/15$ --- no decay lemma can rescue it; clean-up: $m$-ladder to $m=48$ certifies $619/620$ border blocks (the one open: need $2.15$, tightness at index distance $15$), $\rho(W_S)=0.667$--$0.939$ inherits the structure verbatim, three-body cumulant negative on $0.93$--$1.00$ of $4200$ triples (certified \emph{benign}); promotion list $37\to47$; \textbf{the core shrinks to one signed inequality at stripe distance $b\le16$} & DENSE-RESISTS & 30/30\\
 T140 & \texttt{\scriptsize signed\_\allowbreak band} & the one signed inequality acquires an \textbf{exact finite core per zone}: the $H$-telescope lifted from entries to the \emph{form}, $\mathrm{Gram}=CHC^{\mathsf T}$ exactly ($3\times10^{-15}$, $C=\mathrm{diag}(\sqrt\Delta)M$ with the edge-interval incidence $M$), so $\mathrm{rank}(\mathrm{Gram})\le h-1$ ($44$--$202$ vs $128$--$1499$ edges) and $\rho(W)=\lambda_{\max}(K^{1/2}HK^{1/2})$ exactly ($6\times10^{-14}$), $K=M^{\mathsf T}\Delta M$ the covering kernel in closed geometric form $K_{rs}=W([r\wedge s,r\vee s])$ (nonnegative, monotone by inclusion; Green-like, \emph{not} one-pair); energy reordering $H=\mathrm{diag}(s)+L_N$ exact ($5\times10^{-16}$) --- the sign law as mass $+$ long-range Dirichlet form (weights positive on $0.71$--$0.87$); the certified chain \textbf{tears at the drop of the positive $H$ part} ($6.4$--$239\times$ alone; the Hardy step adds $6.4$--$9.0\times$, input $\max_kQ_k=18.5$--$339$; $0/16$ on all four routes); \textbf{the checkerboard split solves R2}: $\mathrm{Band}_b=D+A_{\mathrm{even}}+A_{\mathrm{odd}}$ entrywise exact $\Rightarrow$ three $D$-independent Weyl steps instead of $O(nb)$; blocks zone-uniform ($D^{0.13}$, $D^{0.02}$) vs $\lambda_{\max}(K)\sim D^{-2.99}$ --- \textbf{all $D$-dependence in the geometry}; band from below $>$ target on $16/16$ (rank inflation $1.2$--$10.1\times$ as mechanism), index-grid far part Loewner-\emph{positive} on $256/256$ (no truncation licence in either grid); Floquet not applicable (spread $0.15$--$0.69$), Bendixson certified at $1.07$--$1.08\times\rho(W)$; border pool $420$, $m$-ladder to $24$ certifies $402$, the $18$ open far-carried ($0.635$--$0.912$); core inherited one level down ($\rho(W_S)$ to $4\times10^{-15}$, $=0.541$--$0.925$); map V12 ($18$ rows), $17$ new promotion items (stock $47\to64$); \textbf{the rest is one zone-uniform discrete Hardy inequality} & FINITE-CORE & 31/31\\
 T141 & \texttt{\scriptsize discrete\_\allowbreak hardy} & the Hardy ingredient \textbf{resists, and the resistance gets an address}: four exact identities put R1$''$ in classical two-weight shape --- the $K^{+}$ Rayleigh form $\rho(W)=\sup\{u^{\mathsf T}Hu/u^{\mathsf T}K^{+}u\}$ ($3\times10^{-11}$), the signed crossing kernel $L_N=D^{\mathsf T}BD$, $B_{kl}=\sum_{r\le k\wedge l,\,k\vee l<s}N_{rs}$ ($7\times10^{-16}$), $Q=B_+\mathbf 1$ ($3\times10^{-15}$; T140's Cauchy--Schwarz step \emph{is} the Schur/Gershgorin diagonal step) and $DKD^{\mathsf T}=L_\Delta$ on the interior nodes ($2\times10^{-13}$; the Hardy denominator is the original Laplacian, its diagonal the \emph{endpoint edge mass}); \textbf{the uniformity separates}: the certified constant $A_M=2.20$--$31.23$ runs as $D^{-0.366\pm0.036}$ (spread $14.21\times$ over a $D$ range of $11.21\times$) --- \emph{not} zone-uniform at bar $0.25$ --- while the object it bounds, the exact Dirichlet share, is uniform in the strict sense ($D^{-0.229\pm0.007}$, band $0.235$): the growth sits in the diagonal profile, and the closed Muckenhoupt product ($D^{-2.687}$) and the Gershgorin variant ($D^{-0.993}$) overshoot the signed constant by $25$--$15903\times$ and $1.2$--$14.3\times$; \textbf{the additive shape is dead as a shape} --- its own exact two-term Weyl floor is already $1.694$--$3.855\times$ the target ($0/60$; additive Hardy $2.775$--$32.152\times$, the Hardy step costing only $1.62$--$16.86\times$ over the exact share, so the shortfall is the \emph{split}); \textbf{the joint shape fails at the normalisation alone} --- $\Lambda(H,Y_{\mathrm{tri}})=0.500$--$0.942$ is fine, $\Omega=20.71$--$2723.99$ (ideal $1$, $D^{-1.867}$) is not, with an entrywise off-tridiagonal defect of $K^{+}$ of only $0.027$--$0.285$: Gantmacher--Krein returns, the \emph{profile} is the whole remaining freedom; R3$'$ shaped as a first-moment statement (cancellation gain of the signed kernel $31.95$--$15561.41\times$ against the T140 drop cost); border pool $256$, ladder to $m=24$ certifies $245$, $11$ open and far-carried ($0.835$--$0.902$); map V13, $13$ statements ripe (stock $62\to75$); \textbf{the rest list collapses to R1b: one closed conductance profile with $Y\preceq K^{+}$ and $\Omega\approx1$} ($\to$ \vref{v545}) & HARDY-RESISTS & 22/22\\
+T142 & \texttt{\scriptsize conductance\_\allowbreak profile} & the optimal Hardy weight \textbf{found exactly, not guessed}: the capacity decomposition $K^{-1}=D^{\mathsf T}J^{-1}D+xx^{\mathsf T}/\mathrm{cap}$ ($J=DKD^{\mathsf T}=L_\Delta$ the endpoint Laplacian, $x=K^{-1}\mathbf 1$ the equilibrium charge, $\mathrm{cap}=\mathbf 1^{\mathsf T}K^{-1}\mathbf 1$) verified to $5.5\times10^{-12}$ on $26/26$ windows; the Dirichlet half is an \emph{orthogonal projection}, so $\Omega=1$ \textbf{exactly} (T141 guessed $20.7$--$2724$, $D^{-1.87}$) --- the weight is geometry (Miclo 1999, Maz'ya capacity), and the exact capacity Rayleigh form follows with no inequality taken; the variational class optimum is $\Lambda\Omega=1.3160$--$1.4235$ at $D^{-0.029\pm0.014}$ --- \textbf{the failure is a constant factor, not a power} --- with the stable shape $c_k\sim1/J_{kk}$ (correlation $0.988$--$0.995$) and essentially no mass; the certified chain reads $\Lambda\Omega=2.2671$--$2.4536$ vs target ${\sim}1$ ($0/26$, flat at $D^{0.006\pm0.004}$; gain over guessing $31.9$--$137\times$); \textbf{the rank ladder closes the comparison path}: the diagonal minorant $+$ $r$ dominant residual modes stalls at $1.39$--$1.41$ for all $r\le128$ and crosses $1$ only at $r^*/m=0.995$--$0.998$ (the tautology $Y=K^{-1}$; anchored to $\rho$ at $1.7\times10^{-11}$), and since $\rho(W)=1-\Theta(D^3)$ with equality only at $Y\propto K^{-1}$, \textbf{no comparison argument can deliver $D$-uniformity}; R3$'$ corrected --- only $0.03\%$ of the first moment of $(-H)_+$ inside distance $8$ (support radius $204$--$873$), the long-range Loewner step certified, its constant $\sim D^{-1.73}$ not uniform $\Rightarrow$ R3$''$; border pool $72$, $68$ certified, $4$ open (required far shrink $0.656$--$1.052$); map V14, $9$ statements ripe (stock $75\to84$); \textbf{rest list: R1c the sharp capacity--Rayleigh route, R1d the LP/SDP dual, R3$''$, R4} & PROFILE-RESISTS & 24/24\\
 \end{xltabular}
 }
 

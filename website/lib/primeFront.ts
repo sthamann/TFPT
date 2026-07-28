@@ -115,7 +115,8 @@ export type PrimeFrontVerdict =
   | "PAIR-EXACT"
   | "DENSE-RESISTS"
   | "FINITE-CORE"
-  | "HARDY-RESISTS";
+  | "HARDY-RESISTS"
+  | "PROFILE-RESISTS";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -139,6 +140,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-28",
+    part: 142,
+    title:
+      "The optimal Hardy weight is found exactly — it was never a free choice but geometry: the capacity decomposition gives Omega = 1 exactly where T141 had guessed 20.7–2724, the failure is now a constant factor ~2.3 rather than a power, and the rank ladder closes the entire comparison path — no comparison argument can deliver D-uniformity",
+    verdict: "PROFILE-RESISTS",
+    summary:
+      "T142 (PROFILE-RESISTS, 24/24, 155.4 s, bars declared in the docstring before any number) — contract CONDUCTANCE.PROFILE: construct the Hardy weight instead of guessing it, i.e. exactly R1b, and nothing else. (1) THE OPTIMAL WEIGHT, EXACT: the capacity decomposition K⁻¹ = DᵀJ⁻¹D + xxᵀ/cap — with J = DKDᵀ = L_Δ the endpoint Laplacian, x = K⁻¹1 the equilibrium charge and cap = 1ᵀK⁻¹1 the capacity — verified as an identity to 5.5e-12 on 26/26 windows; its Dirichlet half is an ORTHOGONAL PROJECTION under the congruence, so Ω(DᵀJ⁻¹D) = 1 EXACTLY (certified 1.0000001, the excess being the declared Cholesky floor). That is the object T141 was missing: Ω ≈ 1 in closed form against the guessed profiles' 20.7–2724 (D^−1.87). The weight was never a choice of profile — it is the Green function of the endpoint Laplacian plus the equilibrium rank one, at the classical address (Miclo 1999; Maz'ya capacity; Muckenhoupt 1972 / Opic–Kufner 1990 as addresses, not as authority) — and the exact capacity Rayleigh form follows: ρ(W) = sup_u uᵀHu / [(Du)ᵀJ⁻¹(Du) + (xᵀu)²/cap], a Hardy quotient with no inequality taken anywhere. (2) THE VARIATIONAL OPTIMUM over the strict conductance class (a heuristic search, every number re-certified by Cholesky; 11 windows): Λ·Ω = 1.3160–1.4235 = 1.32–1.42× ρ(W), with the fitted D-exponent −0.029 ± 0.014 inside the uniformity bar — THE FAILURE OF THE CLASS IS A CONSTANT FACTOR, NOT A POWER, a different (and harder) situation than T141's D^−1.87 blow-up. The stable shape is found: c_k ~ 1/J_kk, the reciprocal endpoint mass (spread 1.24–1.45, log-log correlation 0.988–0.995), and the optimum wants essentially NO mass — a pure Dirichlet form. The single-direction class barrier is SATURATED (β = 1.000000, the argmax being the top mode itself) — a dead route recorded with its reason. (3) THE CORE NUMBER, CERTIFIED: the closed family Y(σ, t) has Ω ≤ 1 certified (the T141 gap), and the chain gives Λ·Ω = 2.2671–2.4536 against the target 0.999983–0.999999 — 0/26, shortfall 2.2671–2.4536 (median 2.3376), flat in D (D^0.006 ± 0.004); the control with T141's guessed profile on the same machinery gives 74.84–320.03, so the capacity construction beats guessing by 31.9–137×. THE RANK LADDER is the sharpest negative and it CLOSES the comparison path: the diagonal minorant plus r dominant residual modes (a certified Loewner minorant at every rank, Ω ≤ 1 throughout) stalls at 1.408 (r = 1) … 1.391 (r = 128) and first crosses the hurdle 1 only at r*/m = 0.995–0.998 — the tautology Y = K⁻¹ itself; end-to-end anchor: at r = m−1 the chain collapses to ρ(W) to 1.7e-11 relative. STRUCTURAL CONSEQUENCE: since ρ(W) = 1 − Θ(D³) and any comparison bound is ≥ ρ with equality only at Y ∝ K⁻¹, a class bound would have to reproduce the optimal weight to relative accuracy O(D³) — NO COMPARISON ARGUMENT CAN DELIVER D-UNIFORMITY, so the next move is the SHARP route: estimate the exact capacity Rayleigh form directly, with no Loewner step taken at all. (4) The rest corrected and inherited: the T141 line on R3′ was backwards — only 0.03% of the first moment of (−H)₊ sits INSIDE index distance 8 (support radius 204–873), so the near-diagonal reading is dead; what survives is the certified long-range Loewner step L_{N−} ⪯ T_{Q⁻} whose constant max_k Q⁻_k = 3.20e+02–3.46e+03 runs as D^−1.730 ± 0.025 — not D-uniform — hence R3″. Border pool rebuilt: 72 blocks, 68 certified, 4 open (need 2.32–8.33, far-carried 0.834–0.895); the required far shrink factor is quantified at 0.656–1.052. Map V14, 9 new statements (stock 75 → 84), 0 promoted here. REST LIST (4 items): R1c the sharp capacity-Rayleigh route (replaces the comparison rather than continuing it — Miclo/Maz'ya, no profile choice left); R1d a multi-direction dual certificate (LP/SDP over the conductance cone); R3″ the long-range first moment with a D-uniform constant; R4 the 4 far-carried border blocks. The verdict, stated precisely: this is a resistance of the comparison METHOD at a known optimum, not a failure to identify the weight. T143 (SHARP.CAPACITY, sharp_capacity_probe.py) is running at exactly R1c. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "conductance_profile_probe.py",
+  },
   {
     date: "2026-07-28",
     part: 141,
