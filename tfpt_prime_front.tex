@@ -89,7 +89,7 @@ obstructions, the amplitude route with a positive linear carrier, the matching-l
 ledger package, and --- out of the second phase --- the margin-chain identities, the lumped
 $M$-matrix pair, the long-lag support structure and the Hardy-core identities. Everything beyond
 those eleven is \emph{sandbox}: an exploratory program, run as
-$143$ preregistered probes with $3595$ machine checks, which localized the residual object. That
+$144$ preregistered probes with $3626$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -258,7 +258,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots142$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots144$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -266,7 +266,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T143: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T144: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -300,7 +300,13 @@ exact capacity--Rayleigh form is an identity on all $26$ windows, Maz'ya's capac
 applied to the gap form lands inside its window $[1/4,1]$ with a zone-uniform loss factor
 ($D^{-0.048\pm0.010}$), and $D$-uniformity is reduced to \emph{one} named inequality --- a
 non-Markovian Maz'ya capacity bound whose interval structure points at Muckenhoupt's 1972
-two-weight calculus (T143)); Section~\ref{sec:status}
+two-weight calculus (T143), and at last that interval route itself, which \emph{carries}: the
+interval class is exhausted exactly ($11.4$ million intervals via a Cholesky prefix-sum
+identity), the closed two-weight sup lands inside the Maz'ya window flat in $D$, the family
+restriction falls entirely by a max-density-subgraph bound over all $2^m$ sets, the Markov
+perturbation route is certified dead, and the certified chain has exactly \emph{one} unproven
+input --- the absolute Maz'ya constant $c_0$, its sharpest shape a Muckenhoupt-type hypothesis
+(T144)); Section~\ref{sec:status}
 is the status statement.
 
 % =====================================================================
@@ -3198,7 +3204,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T143)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T144)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -4511,6 +4517,81 @@ verification, and the verification is a Muckenhoupt-type statement about \emph{i
 another profile. T144 (\texttt{capacity\_inequality\_probe.py}) is running at exactly S1/S2.
 \end{keybox}
 
+\subsection{The interval route carries: the chain has exactly one unproven input (T144)}
+T144 (\texttt{capacity\_inequality\_probe.py}, contract \texttt{CAPACITY.INEQUALITY}, $31/31$,
+$91.9$\,s on $34$ windows with core $m=142\ldots1393$, verdict \textsc{interval-carries}, bars
+declared in the docstring before any number) attacks exactly the first three items of T143's
+rest list --- S1, the interval route S2, and the closed capacity bound S3. The probe's single
+comparison licence is the \emph{Jacobi whitening} --- a denominator comparison, which T142's
+obstruction does not touch --- certified at $\kappa_{\mathrm{up}}=1.1195$--$1.3162$ per window
+(Gershgorin would have allowed $\le1.983$); it puts the criterion in coordinates where the
+measure is the counting measure. Two different interval-reduction statements then separate, and
+only one survives. The \emph{pointwise hull comparison is false}:
+$\sup_A\Phi(A)/\Phi(I(A))$ reaches $425$ and drifts like $D^{-1.137}$, with T143's scattered
+level sets as the offenders --- so S2 cannot be proved by transporting each set to its convex
+hull; it must be a \emph{testing condition}. The \emph{best-interval comparison holds}:
+$c_{\mathrm{glob}}=\Phi_{\sup}/\Phi_{\mathrm{int}}=1.0000$--$1.6876$, zone-uniform at
+$D^{-0.068\pm0.024}$ against the preregistered $0.25$ bar. The exhaustion behind these numbers
+is honest: $136$ blocks of size $g=14$ with \emph{all} $16383$ subsets each, $2.24$ million
+sets in total; and capacity \emph{monotonicity} holds on all of them (measured), although the
+form is not Dirichlet.
+
+\emph{The two-weight sup, exact rather than sampled.} The interval class is exhausted
+\emph{exactly} on every window --- $11\,390\,676$ intervals via a Cholesky nestedness,
+$\mathrm{cap}_E([a,b))$ a prefix sum of squared triangular-solve entries, verified to
+$10^{-11}$ against an independent solve. The core number of the part:
+$B_{\mathrm{res}}\hat\lambda=0.6694$--$0.7813$ inside the Maz'ya window $[1/4,1]$ on the whole
+surface, fitted $D^{0.013\pm0.005}$ --- zone-uniform and coordinate-robust (T143 measured
+$0.5438$--$0.6457$ in the unwhitened coordinates). The free half passes its falsification test,
+$\Phi_{\sup}\hat\lambda\le1$ on all $2.24$ million sets, as the theorem requires. The chain
+then closes modulo one constant,
+\[
+\lambda \;\ge\; \frac{1}{c_0\,\kappa_{\mathrm{up}}\,c_{\mathrm{glob}}\,B_{\mathrm{res}}}\,,
+\]
+certified per window at $0.1002$--$0.2653$ of the exact gap --- with the remaining
+$D$-dependence sitting in the Jacobi \emph{transfer} ($D^{-0.178}$), not in the capacity
+calculus. Dead with a reason: the naive Muckenhoupt \emph{transcription} through trial-function
+energies misses the interval supremum by $89$--$6995$ ($D^{-1.885}$ --- the equilibrium
+potential spreads over the whole window, and no local trial function sees it); closed rankings
+bound the value but do not point at the argmax. And the honest counter-side, computed exactly:
+$\Phi_{\mathrm{int}}\hat\lambda=0.0928$--$0.3578$ drifts like $D^{0.654\pm0.016}$ --- the
+intervals saturate S1 only from \emph{above}, no interval-only argument will produce the
+constant; what carries is the closed resistance sup above them, a two-weight statement about
+the Green function and not about a family of sets.
+
+\emph{The rest, typed.} (i) The Markov perturbation route is \emph{certified dead}:
+$\lambda_{\min}(E-P)=-0.340\ldots-0.274<0$ on every window, and the largest certified $t$ with
+$E-tP\succ0$ shrinks like $t^*\sim D^{3.96}$; only $3$--$12\%$ of the off-diagonal
+\emph{entries} are positive, but they carry $36.7$--$64.5\%$ of the \emph{mass} --- the
+positive couplings are load-bearing, so S1 must be proved without the Markov hypothesis.
+(ii) S3 returns \emph{stronger than asked}: the Cauchy--Schwarz floor
+$\mathrm{cap}_E(A)\ge|A|^2/(\mathbf 1^{\mathsf T}R_{AA}\mathbf 1)$ makes $\Phi_{\sup}$ a
+\emph{maximum density subgraph} value for the Green kernel $R=E^{-1}$ (Charikar 2000; Goldberg
+1984), so the sup over \emph{all} $2^m$ sets is bounded with a cited absolute constant:
+$\Psi_{\mathrm{all}}\hat\lambda=0.7399$--$0.8515$ at $D^{0.015\pm0.005}$ --- the flattest
+number of the probe, with no family restriction, no interval reduction and no Markov hypothesis
+anywhere; and the argmax density set lives on \emph{intervals} too, an independent confirmation
+of the reduction, with $B_{\mathrm{res}}$ only a factor $1.078$--$1.129$ below.
+(iii) R4: $22$ border blocks (a new count), $19$ certified, $3$ open; on $5$ blocks \emph{all}
+subsets were enumerated, so $c_{\mathrm{glob}}=1.0000$ \emph{exactly} there.
+
+\begin{keybox}[After T144: one unproven input --- the absolute Maz'ya constant]
+\emph{(S1$'$)} \textbf{the leading object, the sharpest available shape of S1}: it suffices to
+prove the capacitary strong-type inequality for forms whose Green function satisfies a
+\emph{mean-density bound} ($\Psi_{\mathrm{all}}\hat\lambda\le0.8515$ measured here) --- a
+hypothesis of \emph{Muckenhoupt} type rather than of Markov type. \emph{(S1)} unchanged in
+statement, reduced in scope: the family restriction is gone (the density bound covers all
+$2^m$ sets), the Markov hypothesis is unrestorable (the positive couplings are load-bearing),
+and the coordinates are fixed at a certified $O(1)$ cost. \emph{(S2$'$)} the best-interval
+comparison $c_{\mathrm{glob}}\le1.6876$ is measured, not proved; a proof would be a testing
+condition, and the exhaustive R4 blocks show it is not vacuous. \emph{(R4)} the $3$ open border
+blocks. \emph{(R5)} the whitening sandwich $\lambda/\hat\lambda=1.213$--$2.175$, the last
+$O(1)$ factor of the chain, removable by a two-sided estimate of $\kappa$. Map V16; nine
+statements ripe (stock $93$), $0$ promoted here. The honest state, in one sentence: the
+\emph{only} unproven input of the certified chain is the absolute constant $c_0$. T145
+(\texttt{mazya\_proof\_probe.py}) is running at exactly S1$'$.
+\end{keybox}
+
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
@@ -4990,19 +5071,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T143}\label{app:index}
+\section{Probe index, diary parts T11--T144}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $133$ parts T11--T143 that the current diary file records
-($134$ runs --- T104 was a double run with two independent arms --- and $3403$ green checks); the ten
+load-bearing artefact. The index covers the $134$ parts T11--T144 that the current diary file records
+($135$ runs --- T104 was a double run with two independent arms --- and $3434$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v545} promoted; with T126--T143, the first eighteen parts of the second phase, the
-running totals are \textbf{$143$ probes and $3595/3595$ checks}. T144
-(\texttt{capacity\_inequality\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v545} promoted; with T126--T144, the first nineteen parts of the second phase, the
+running totals are \textbf{$144$ probes and $3626/3626$ checks}. T145
+(\texttt{mazya\_proof\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -5151,6 +5232,7 @@ T140 & \texttt{\scriptsize signed\_\allowbreak band} & the one signed inequality
 T141 & \texttt{\scriptsize discrete\_\allowbreak hardy} & the Hardy ingredient \textbf{resists, and the resistance gets an address}: four exact identities put R1$''$ in classical two-weight shape --- the $K^{+}$ Rayleigh form $\rho(W)=\sup\{u^{\mathsf T}Hu/u^{\mathsf T}K^{+}u\}$ ($3\times10^{-11}$), the signed crossing kernel $L_N=D^{\mathsf T}BD$, $B_{kl}=\sum_{r\le k\wedge l,\,k\vee l<s}N_{rs}$ ($7\times10^{-16}$), $Q=B_+\mathbf 1$ ($3\times10^{-15}$; T140's Cauchy--Schwarz step \emph{is} the Schur/Gershgorin diagonal step) and $DKD^{\mathsf T}=L_\Delta$ on the interior nodes ($2\times10^{-13}$; the Hardy denominator is the original Laplacian, its diagonal the \emph{endpoint edge mass}); \textbf{the uniformity separates}: the certified constant $A_M=2.20$--$31.23$ runs as $D^{-0.366\pm0.036}$ (spread $14.21\times$ over a $D$ range of $11.21\times$) --- \emph{not} zone-uniform at bar $0.25$ --- while the object it bounds, the exact Dirichlet share, is uniform in the strict sense ($D^{-0.229\pm0.007}$, band $0.235$): the growth sits in the diagonal profile, and the closed Muckenhoupt product ($D^{-2.687}$) and the Gershgorin variant ($D^{-0.993}$) overshoot the signed constant by $25$--$15903\times$ and $1.2$--$14.3\times$; \textbf{the additive shape is dead as a shape} --- its own exact two-term Weyl floor is already $1.694$--$3.855\times$ the target ($0/60$; additive Hardy $2.775$--$32.152\times$, the Hardy step costing only $1.62$--$16.86\times$ over the exact share, so the shortfall is the \emph{split}); \textbf{the joint shape fails at the normalisation alone} --- $\Lambda(H,Y_{\mathrm{tri}})=0.500$--$0.942$ is fine, $\Omega=20.71$--$2723.99$ (ideal $1$, $D^{-1.867}$) is not, with an entrywise off-tridiagonal defect of $K^{+}$ of only $0.027$--$0.285$: Gantmacher--Krein returns, the \emph{profile} is the whole remaining freedom; R3$'$ shaped as a first-moment statement (cancellation gain of the signed kernel $31.95$--$15561.41\times$ against the T140 drop cost); border pool $256$, ladder to $m=24$ certifies $245$, $11$ open and far-carried ($0.835$--$0.902$); map V13, $13$ statements ripe (stock $62\to75$); \textbf{the rest list collapses to R1b: one closed conductance profile with $Y\preceq K^{+}$ and $\Omega\approx1$} ($\to$ \vref{v545}) & HARDY-RESISTS & 22/22\\
 T142 & \texttt{\scriptsize conductance\_\allowbreak profile} & the optimal Hardy weight \textbf{found exactly, not guessed}: the capacity decomposition $K^{-1}=D^{\mathsf T}J^{-1}D+xx^{\mathsf T}/\mathrm{cap}$ ($J=DKD^{\mathsf T}=L_\Delta$ the endpoint Laplacian, $x=K^{-1}\mathbf 1$ the equilibrium charge, $\mathrm{cap}=\mathbf 1^{\mathsf T}K^{-1}\mathbf 1$) verified to $5.5\times10^{-12}$ on $26/26$ windows; the Dirichlet half is an \emph{orthogonal projection}, so $\Omega=1$ \textbf{exactly} (T141 guessed $20.7$--$2724$, $D^{-1.87}$) --- the weight is geometry (Miclo 1999, Maz'ya capacity), and the exact capacity Rayleigh form follows with no inequality taken; the variational class optimum is $\Lambda\Omega=1.3160$--$1.4235$ at $D^{-0.029\pm0.014}$ --- \textbf{the failure is a constant factor, not a power} --- with the stable shape $c_k\sim1/J_{kk}$ (correlation $0.988$--$0.995$) and essentially no mass; the certified chain reads $\Lambda\Omega=2.2671$--$2.4536$ vs target ${\sim}1$ ($0/26$, flat at $D^{0.006\pm0.004}$; gain over guessing $31.9$--$137\times$); \textbf{the rank ladder closes the comparison path}: the diagonal minorant $+$ $r$ dominant residual modes stalls at $1.39$--$1.41$ for all $r\le128$ and crosses $1$ only at $r^*/m=0.995$--$0.998$ (the tautology $Y=K^{-1}$; anchored to $\rho$ at $1.7\times10^{-11}$), and since $\rho(W)=1-\Theta(D^3)$ with equality only at $Y\propto K^{-1}$, \textbf{no comparison argument can deliver $D$-uniformity}; R3$'$ corrected --- only $0.03\%$ of the first moment of $(-H)_+$ inside distance $8$ (support radius $204$--$873$), the long-range Loewner step certified, its constant $\sim D^{-1.73}$ not uniform $\Rightarrow$ R3$''$; border pool $72$, $68$ certified, $4$ open (required far shrink $0.656$--$1.052$); map V14, $9$ statements ripe (stock $75\to84$); \textbf{rest list: R1c the sharp capacity--Rayleigh route, R1d the LP/SDP dual, R3$''$, R4} & PROFILE-RESISTS & 24/24\\
 T143 & \texttt{\scriptsize sharp\_\allowbreak capacity} & the sharp route \textbf{carries}: the exact capacity--Rayleigh form $1-\rho(W)=\inf_v[d^{\mathsf T}(J^{-1}-B)d+(x^{\mathsf T}v)^2/\mathrm{cap}-\sum_ks_kv_k^2]/[d^{\mathsf T}J^{-1}d+(x^{\mathsf T}v)^2/\mathrm{cap}]$, $d=Dv$, is an \emph{identity} on $26/26$ windows (assembly $10^{-11}$/$5\times10^{-12}$, eigenvalue $3\times10^{-6}$ relative under the declared $1/\mathrm{gap}$ conditioning), with a structurally new bookkeeping --- the minimiser \emph{orthogonal} to the equilibrium charge (the capacity rank one carries nothing), the mass share \emph{negative} ($-0.0698$ to $-0.0029$), the gap a cancellation between Green share (exactly $1$) and crossing share ($1.0029$--$1.0698$), the naive split certified dead at $6.19$--$66.63\times\rho$; \textbf{Maz'ya's criterion lands inside its window}: $\Phi_{\sup}\lambda=0.5438$--$0.6457$ on $26/26$ (window $[1/4,1]$) for a \emph{non-Markovian} form ($72$--$84\%$ positive off-diagonals), the bound $\lambda\ge1/(4\Phi_{\sup})$ captures $0.387$--$0.460$ of the true gap with a \textbf{zone-uniform loss factor} $D^{-0.048\pm0.010}$ (bar $0.25$); the supremum lives on closed families ($0.9606$--$1.0000$ of the best, local search $\le1.041\times$; in node coordinates \emph{intervals} dominate by $8.3$--$129.5$ --- Muckenhoupt's one-dimensional structure) and is \emph{certified by enumerating all $255$--$16383$ subsets} on $6$ border blocks ($\Phi_{\sup}\lambda=0.6087$--$0.9016$, inside the window); Miclo's constructive chain loses $46$--$2561$ ($D^{-2.13}$) --- the conclusion holds, the classical proof mechanism does not; R1d dead as a direction sample (the LP dual saturates at the trivial floor, $\rho(W)$ to a factor $1.000000$; needs the full SDP constraint), border pool $36$, $32$ certified, $4$ open, the capacity argmax entirely the far tail; map V15, $10$ statements ripe (stock $84\to94$); \textbf{rest list: S1 one named capacity inequality $\mathrm{cap}_E(A)\ge|A|\lambda_0/c_0$ with absolute $c_0$, S2 the Muckenhoupt/interval route to it, S3 a closed capacity lower bound, R1d$'$, R4} & SHARP-CARRIES & 24/24\\
+T144 & \texttt{\scriptsize capacity\_\allowbreak inequality} & the interval route \textbf{carries, and the chain has exactly one unproven input}: with the \emph{Jacobi whitening} as the single comparison licence ($\kappa_{\mathrm{up}}=1.1195$--$1.3162$ certified per window; Gershgorin would allow $\le1.983$; a denominator comparison, untouched by T142's obstruction), two interval-reduction statements separate --- the \emph{pointwise hull comparison is false} (up to $425$, drifting $D^{-1.137}$, scattered level sets as offenders $\Rightarrow$ S2 must be a testing condition) while the \emph{best-interval comparison holds}, $c_{\mathrm{glob}}=1.0000$--$1.6876$ zone-uniform at $D^{-0.068\pm0.024}$, measured on $2.24$ million sets incl.\ \emph{all} $16383$ subsets of $136$ enumerated blocks (capacity monotonicity holds on all of them, though the form is not Dirichlet); \textbf{the two-weight sup is exact, not sampled}: $11\,390\,676$ intervals exhausted via a Cholesky prefix-sum identity (verified to $10^{-11}$), giving the core number $B_{\mathrm{res}}\hat\lambda=0.6694$--$0.7813$ inside the Maz'ya window $[1/4,1]$ on the whole surface, flat at $D^{0.013\pm0.005}$ and coordinate-robust (T143: $0.5438$--$0.6457$), with the free half $\Phi_{\sup}\hat\lambda\le1$ passing on all $2.24$M sets; \textbf{the chain} $\lambda\ge1/(c_0\kappa_{\mathrm{up}}c_{\mathrm{glob}}B_{\mathrm{res}})$ certifies $0.1002$--$0.2653$ of the exact gap per window, the residual $D$-dependence in the Jacobi transfer ($D^{-0.178}$), not the capacity calculus; dead: the naive Muckenhoupt trial-energy transcription ($89$--$6995$, $D^{-1.885}$); honest counter-side exact: $\Phi_{\mathrm{int}}\hat\lambda=0.0928$--$0.3578$ drifts $D^{0.654\pm0.016}$ --- intervals saturate S1 only from above; \textbf{the Markov perturbation route is certified dead} ($\lambda_{\min}(E-P)<0$ everywhere, $t^*\sim D^{3.96}$; $3$--$12\%$ positive off-diagonal entries carrying $36.7$--$64.5\%$ of the mass); \textbf{S3 stronger than asked}: the Cauchy--Schwarz floor makes $\Phi_{\sup}$ a max-density-subgraph value (Charikar 2000; Goldberg 1984), $\Psi_{\mathrm{all}}\hat\lambda=0.7399$--$0.8515$ at $D^{0.015\pm0.005}$ over \emph{all} $2^m$ sets --- the flattest number of the probe, argmax on intervals ($B_{\mathrm{res}}$ only $1.078$--$1.129$ below); R4: $22$ blocks, $19$ certified, $3$ open, $c_{\mathrm{glob}}=1.0000$ exact on $5$ enumerated; map V16, $9$ statements ripe (stock $93$); \textbf{rest list: S1$'$ --- S1 under a Green mean-density bound, a Muckenhoupt-type instead of a Markov-type hypothesis --- S2$'$ as testing condition, R4, R5; the only unproven input is the absolute constant $c_0$} & INTERVAL-CARRIES & 31/31\\
 \end{xltabular}
 }
 

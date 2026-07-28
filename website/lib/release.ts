@@ -27,7 +27,7 @@ export interface ReleaseAsset {
 
 const COMMON = {
   version: "TFPT 5.4",
-  releaseDate: "2026-07-28",
+  releaseDate: "2026-07-29",
 };
 
 export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {

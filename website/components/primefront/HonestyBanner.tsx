@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3595/3595 sandbox checks —
+        (“the full proof”, T126+) is now open with 3626/3626 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -109,7 +109,17 @@ export function HonestyBanner() {
         enumeration on the small border blocks), and D-uniformity is reduced
         to <em>one</em> named inequality — a non-Markovian Maz&apos;ya
         capacity bound cap_E(A) ≥ |A|·λ₀/c₀, pointing at Muckenhoupt&apos;s
-        1972 two-weight calculus (T144, running). What remains
+        1972 two-weight calculus. T144 (INTERVAL-CARRIES) then ran that
+        interval route, and it carries: the interval class is exhausted
+        exactly (11.4 million intervals via a Cholesky prefix-sum identity),
+        the closed two-weight sup lands inside the Maz&apos;ya window flat in
+        D (B_res·λ̂ = 0.6694–0.7813, D^0.013 ± 0.005), the family restriction
+        falls entirely — a max-density-subgraph bound covers all 2^m sets
+        (Ψ_all·λ̂ = 0.7399–0.8515, the flattest number of the probe) — the
+        Markov perturbation route is certified dead, and the certified chain
+        λ ≥ 1/(c₀·κ_up·c_glob·B_res) now has exactly <em>one</em> unproven
+        input: the absolute Maz&apos;ya constant c₀, whose sharpest shape
+        S1′ is a Muckenhoupt-type hypothesis (T145, running). What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

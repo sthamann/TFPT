@@ -117,7 +117,8 @@ export type PrimeFrontVerdict =
   | "FINITE-CORE"
   | "HARDY-RESISTS"
   | "PROFILE-RESISTS"
-  | "SHARP-CARRIES";
+  | "SHARP-CARRIES"
+  | "INTERVAL-CARRIES";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -141,6 +142,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-29",
+    part: 144,
+    title:
+      "The interval route carries — the certified chain now has exactly ONE unproven input, the absolute Maz'ya constant c₀: the interval class is exhausted exactly (11.4 million intervals via a Cholesky prefix-sum identity), the family restriction falls entirely (a max-density-subgraph bound covers all 2^m sets — the flattest number of the probe), and the Markov perturbation route is certified dead",
+    verdict: "INTERVAL-CARRIES",
+    summary:
+      "T144 (INTERVAL-CARRIES, 31/31, 91.9 s, bars declared in the docstring before any number) — contract CAPACITY.INEQUALITY: the one inequality S1 over the interval route S2, i.e. exactly the first three items of T143's rest list. (1) THE INTERVAL REDUCTION, with the probe's single comparison licence: the Jacobi whitening — a denominator comparison, which T142's obstruction does not touch — costs κ_up = 1.1195–1.3162 CERTIFIED per window (Gershgorin would have allowed ≤ 1.983) and puts the criterion in coordinates where the measure is the counting measure. Two different interval-reduction statements then separate, and only one survives: the POINTWISE hull comparison is FALSE — sup_A Φ(A)/Φ(I(A)) reaches 425, drifting like D^−1.137, with T143's scattered level sets as the offenders, so S2 cannot be proved by transporting each set to its hull and must be a TESTING condition — while the BEST-INTERVAL comparison holds: c_glob = Φ_sup/Φ_int = 1.0000–1.6876, ZONE-UNIFORM (D^−0.068 ± 0.024 against the 0.25 bar). The exhaustion is honest: 136 blocks of size g = 14 with ALL 16383 subsets each, 2.24 million sets in total; and capacity MONOTONICITY holds on all of them (measured), although the form is not Dirichlet. (2) THE TWO-WEIGHT SUP, exact rather than sampled: the interval class is exhausted EXACTLY on every window — 11,390,676 intervals via a Cholesky nestedness, cap([a,b)) as a prefix sum of squared triangular-solve entries, verified to 1e-11 against an independent solve. THE CORE NUMBER: B_res·λ̂ = 0.6694–0.7813 inside the Maz'ya window [1/4, 1] on the whole surface, fitted D^0.013 ± 0.005 — zone-uniform and coordinate-robust (T143 measured 0.5438–0.6457 in the unwhitened coordinates). The free half passes its falsification test: Φ_sup·λ̂ ≤ 1 on all 2.24M sets, as the theorem requires. THE CHAIN: λ ≥ 1/(c₀·κ_up·c_glob·B_res) certifies 0.1002–0.2653 of the exact gap per window — and the remaining D-dependence sits in the Jacobi TRANSFER (D^−0.178), not in the capacity calculus. Dead with a reason: the naive Muckenhoupt transcription through trial-function energies misses by 89–6995 (D^−1.885 — the equilibrium potential spreads over the whole window, no local trial function sees it); closed rankings bound the value but do not point at the argmax. THE HONEST COUNTER-SIDE, computed exactly: Φ_int·λ̂ = 0.0928–0.3578 drifts like D^0.654 ± 0.016 — intervals saturate S1 only from ABOVE, no interval-only argument will produce the constant; what carries is the closed resistance sup above them, a two-weight statement about the Green function and not about a family of sets. (3) THE REST, TYPED: (i) the Markov perturbation route is CERTIFIED DEAD — λ_min(E−P) = −0.340…−0.274 < 0 everywhere, the largest certified t with E − tP ≻ 0 shrinks like D^3.96; only 3–12% of the off-diagonal ENTRIES are positive but they carry 36.7–64.5% of the MASS — the positive couplings are load-bearing, so S1 must be proved without the Markov hypothesis. (ii) S3, stronger than asked: the Cauchy–Schwarz floor cap_E(A) ≥ |A|²/(1ᵀR_AA1) makes Φ_sup a MAXIMUM DENSITY SUBGRAPH value (Charikar 2000; Goldberg 1984), so the sup over ALL 2^m sets is bounded with a cited absolute constant: Ψ_all·λ̂ = 0.7399–0.8515, D^0.015 ± 0.005 — the flattest number of the probe, with no family restriction, no interval reduction and no Markov hypothesis anywhere; and the argmax density set lives on INTERVALS too (an independent confirmation of the reduction, with B_res only a factor 1.078–1.129 below). (iii) R4: 22 border blocks (a new count), 19 certified, 3 open; on 5 blocks ALL subsets were enumerated, so c_glob = 1.0000 EXACTLY there. Map V16, 9 new statements (stock 93), 0 promoted here. REST LIST — the core in one sentence: the ONLY unproven input of the chain is the absolute constant c₀. S1 unchanged in statement, reduced in scope (the family restriction is gone, the Markov hypothesis is unrestorable, the coordinates are fixed); S1′ the sharpest available shape — S1 for forms under a GREEN MEAN-DENSITY bound, a Muckenhoupt-type rather than a Markov-type hypothesis; S2′ c_glob by a testing condition; R4 the 3 open blocks; R5 the whitening sandwich λ/λ̂ = 1.213–2.175 by a two-sided κ. T145 (MAZYA.PROOF, mazya_proof_probe.py) is running at exactly S1′. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "capacity_inequality_probe.py",
+  },
   {
     date: "2026-07-28",
     part: 143,

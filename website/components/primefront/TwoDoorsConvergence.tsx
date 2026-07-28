@@ -283,8 +283,30 @@ export function TwoDoorsConvergence() {
           Miclo&apos;s constructive chain loses 46–2561× (the conclusion
           holds, the classical proof mechanism does not). D-uniformity is
           reduced to one named inequality — cap_E(A) ≥ |A|·λ₀/c₀ with an
-          absolute c₀ — and T144 (capacity_inequality_probe.py) is running
-          at exactly that inequality.
+          absolute c₀. T144 · CAPACITY.INEQUALITY (INTERVAL-CARRIES, 31/31)
+          then ran the interval route at exactly that inequality, and it
+          carries: the interval class is exhausted exactly on every window
+          (11,390,676 intervals via a Cholesky prefix-sum identity, verified
+          to 1e-11), the closed two-weight sup lands inside the Maz&apos;ya
+          window on the whole surface and flat in D (B_res·λ̂ =
+          0.6694–0.7813, D^0.013 ± 0.005, coordinate-robust against
+          T143&apos;s 0.5438–0.6457), the pointwise hull comparison is FALSE
+          (up to 425, D^−1.137) while the best-interval comparison is
+          zone-uniform (c_glob = 1.0000–1.6876, exact on the enumerated
+          blocks), the family restriction falls entirely — the
+          Cauchy–Schwarz floor makes Φ_sup a maximum-density-subgraph value
+          (Charikar 2000; Goldberg 1984), so all 2^m sets are covered with a
+          cited absolute constant (Ψ_all·λ̂ = 0.7399–0.8515, the flattest
+          number of the probe) — and the Markov perturbation route is
+          certified dead (λ_min(E−P) &lt; 0 everywhere; the positive
+          couplings carry 36.7–64.5% of the off-diagonal mass). The
+          certified chain λ ≥ 1/(c₀·κ_up·c_glob·B_res) delivers
+          0.1002–0.2653 of the exact gap per window with exactly ONE
+          unproven input — the absolute Maz&apos;ya constant c₀, whose
+          sharpest shape S1′ is a capacitary strong-type inequality under a
+          Green mean-density bound, a Muckenhoupt-type rather than a
+          Markov-type hypothesis — and T145 (mazya_proof_probe.py) is
+          running at exactly S1′.
         </p>
       </div>
 
