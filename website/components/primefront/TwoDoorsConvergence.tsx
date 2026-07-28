@@ -155,13 +155,16 @@ export function TwoDoorsConvergence() {
           . Series complete at 125 parts / 3139 sandbox checks; the mandate
           T ≤ 125 is fulfilled. Phase 2 — the full proof — is now open: T126 ·
           UNIFORMITY.SEAMS (SEAMS-CERTIFIED, 31/31) finishes the seam
-          architecture, and T127 · TWO.INEQUALITIES (BOTH-SHAPED, 28/28)
-          dissects the two genuinely new inequalities it left: both are
-          proof-shaped and both changed — U5-as-stated is refuted and replaced
-          by a band plus an enumeration of 8 exceptional seams, U3 collapses
-          to a coarse floor via a harmonic-mean identity. Three inequalities
-          of the same craft as the proven links plus one enumeration remain;
-          T128 (teml_probe.py) is running.
+          architecture, T127 · TWO.INEQUALITIES (BOTH-SHAPED, 28/28) dissects
+          the two genuinely new inequalities it left — U5-as-stated is refuted
+          and replaced by a band plus an enumeration, U3 collapses to a coarse
+          floor — and T128 · TEML (THREE-OF-FOUR, 27/27) works the resulting
+          four-point list cheapest first: three of the four points stand at
+          their preregistered bars (the exception list derived and closed, the
+          retention bound exact bookkeeping, the boundary-layer exclusion now
+          a proof with an 11.6× floor margin), while the kappa bar was missed
+          honestly — by 3.6%, systematically in the ratio. Five named open
+          points remain; T129 (kappa_deep_seams_probe.py) is running.
         </p>
       </div>
 

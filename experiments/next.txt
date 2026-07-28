@@ -1,3 +1,95 @@
+# 2026-07-28 (X) — Teil 128 (delegiert, Phase „Der volle Beweis", Vertrag TEML): teml_probe.py — **THREE-OF-FOUR** — DIE VIER-PUNKTE-LISTE DER KARTE V2, NACH KOSTEN ABGEARBEITET, UND DREI DER VIER PUNKTE STEHEN AN IHREN PRÄREGISTRIERTEN LATTEN: **(L)** ist HERGELEITET und GESCHLOSSEN — die Out-of-Band-Klasse (ρ > 1.49531) hat bis n = 300000 exakt 8 Nähte, alle mit Nachbaratom-Abstand 1 und identischer Randgeometrie (gc_c = 2, gc_f = 4); n = 7 und 16 CERTIFIED-1STEP, n = 31 CERTIFIED-LADDER über 2 Stufen, 127/256/8191/65536/131071 BUDGET-OPEN mit h_f = 2476…6.2e6 (Deckel-Überschreitung 1.7×–4119×; je fehlt EXAKT eine Cholesky, nichts Konzeptionelles); **(T)** ist jetzt SCHRANKE statt Prädiktor — exakte Identität τ_dn = ‖y‖² − m_prot + m_fill − V_bord (9.0e-13 gegen die unabhängige Voll-Projektion, 126 Transporte), τ_dn ≥ 1 − m_prot − V_bord mit expliziten Majoranten gültig 126/126 — ABER die Protrusions-Konzentration κ = m_prot·gc_f/(t_l+t_r) = 0.086–2.071 VERFEHLT die präregistrierte Latte κ ≤ 2 auf 1/120 um 3.6%, SYSTEMATISCH in ρ (Gruppen-Maxima 1.889/1.965/2.071 bei ρ = 1.001/1.250/1.495); die Latte wird NICHT verschoben; **(E)** trägt über die Q-SKALARPRODUKT-Route (die ℓ2-Route zertifiziert 0/12): 9/9 In-Band-Nähte mit positivem Boden ≥ 0.0850, 11/12 gesamt, der eine Riss (n = 31, ohnehin auf der (L)-Liste) ist η-LIMITIERT und per 2-Stufen-Leiter repariert; **(M)** ist VERDIENT — der Randschicht-Ausschluss ist BEWEIS (geschlossene Form, Trennung ≥ 84×), μ_min(S, A_z) = 1 − γ² exakt (5.9e-15), konstruierter Boden 0.188 gegen geforderte 1.62e-02 (11.6× Marge) auf 31/31 Sprossen; Karte V3: 21 Punkte — 10 DONE, 3 zertifiziert-auf-realen-Objekten, 3 konditional-klassisch, **5 genuin offen: M9 κ-Latte, M17 Pencil-Masse, M18 Kamm, M19 „for all", M21 RH-Adresse** — 27/27, 2.8s, Sandbox
+# B1 (L) DIE GESCHLOSSENE LISTE, HERGELEITET STATT ZITIERT. Die Out-of-Band-Klasse ist
+#    aus dem U5-Band ABGELEITET (ρ > 1.49531, T127s Zahl QUOTIERT und nie re-bisektioniert):
+#    bis n = 300000 exakt 8 Nähte, alle mit Nachbaratom-Abstand 1 und identischer
+#    Randgeometrie (gc_c = 2, gc_f = 4). Tabelle, pro Naht ein Status und kein Rest:
+#    n = 7 (ρ 1.671, CERTIFIED-1STEP, Retention 0.179), 16 (1.943, CERTIFIED-1STEP, 0.156),
+#    31 (1.910, CERTIFIED-LADDER über 2 Stufen, 0.091); 127, 256, 8191, 65536, 131071
+#    BUDGET-OPEN mit h_f = 2476, 5694, 295253, 2907297, 6177926 gegen den harten Deckel
+#    1500 (Überschreitung 1.7×–4119×) — pro Naht fehlt EXAKT eine Cholesky der Größe
+#    h_f − gc_f, nichts Konzeptionelles; Verhältnisse alle binnen 0.026 von 2, weil jede
+#    ein Paar (2^k − 1, 2^k) oder (2^k, 2^k + 1) ist. Jede offene Naht ist ohne
+#    Faktorisierung arithmetisch/geometrisch charakterisiert (Verhältnis, beide
+#    Rand-Zellzahlen, beide Fenster-Rundungen, flacher Transportfaktor) — verfügbar in
+#    jeder Tiefe. Mihailescu 2004 (Catalan) als ADRESSE der Klasse zitiert, nicht benutzt;
+#    über einem endlichen Bereich wird eine Liste ENUMERIERT, nicht vermutet.
+# B2 (T) IST JETZT SCHRANKE, UND DIE LATTE WIRD EHRLICH VERFEHLT. Die exakte Identität
+#    τ_dn = ‖y‖² − m_prot + m_fill − V_bord hält auf 9.0e-13 gegen die unabhängige
+#    Voll-Projektion (126 Transporte); daraus τ_dn ≥ 1 − m_prot − V_bord mit expliziten
+#    Majoranten (Außenzellen-Majorante für m_prot, Oszillations-Majorante
+#    ρ(⌈ρ⌉+1)/2·Σ(Δy)² für V_bord), gültig 126/126; die exakte Schranke ist positiv
+#    126/126, die voll-explizite 125/126; Slack Median 0.275, und der lose Teil ist die
+#    Oszillations-Majorante (Überschuss Median ≈ 7× — eine schärfere zellweise Version
+#    kauft das meiste zurück; der Rest ist eine BERNSTEIN/MARKOV-förmige Aussage über
+#    EINEN gc_f×gc_f-Eigenvektor). ABER: κ = m_prot·gc_f/(t_l+t_r) = 0.086–2.071
+#    verfehlt die präregistrierte Latte κ ≤ 2 auf 1/120 um 3.6% — und SYSTEMATISCH in ρ,
+#    nicht zufällig: Gruppen-Maxima 1.889/1.965/2.071 bei ρ = 1.001/1.250/1.495, der
+#    Argmax sitzt am Band-Rand. Die Latte wird NICHT verschoben (eine nach den Zahlen
+#    verschobene Latte machte alles andere wertlos); die nächste Präregistrierung heißt
+#    κ ≤ 2 + C(ρ−1) — die Form, die das U5-Band schon hat. Nebenbefund mit Seite:
+#    κ rechts (Protrusion an der Innenkante) 1.61–2.07, links (am Fensterrand) 0.09–0.25
+#    — (T) ist eine EIGENVEKTOR-Aussage, keine Rundungs-Aussage, entgegen dem, was die
+#    +0.997-Korrelation nahelegt.
+# B3 DIE GEMEINSAME (E)+(T)-KETTE: DIE ℓ2-ROUTE STIRBT, DIE ENERGIE-ROUTE TRÄGT. Die
+#    ℓ2-Route zu η_proj zertifiziert 0/12 reale Nähte (Überschuss Median 55×, und schon
+#    der frisst die GANZE Marge — relativ zu λ_c liegt die ℓ2-Schranke bei Median 1.9);
+#    die Q-SKALARPRODUKT-Route trägt: √λ_f ≥ √(λ_c·τ* − |η_cons|) − √e_d mit
+#    e_d = dᵀQ_f d und e_d/λ_c = 0.041–0.154 — eine exakte Cauchy-Schwarz-Kette im
+#    Q-Skalarprodukt. **9/9 In-Band-Nähte mit positivem Boden (≥ 0.0850), 11/12 gesamt**;
+#    der eine Riss (n = 31, ohnehin auf der (L)-Liste) ist η-LIMITIERT
+#    (|η_cons|/λ_c = 0.392 > τ* = 0.363 — kein schärferes (T) hätte geholfen, und
+#    ρ-Schrumpfen auch nicht: bei ρ = 1.0014 ist |η_cons|/λ_c immer noch Median 0.089
+#    über 43 Zonen), per 2-Stufen-Leiter repariert, in der JEDE Sprosse die Kette selbst
+#    schließt — der Fallback ist Teil der Aussage, kein Patch.
+# B4 (M) VERDIENT: DER AUSSCHLUSS IST BEWEIS, DER BODEN IST KONSTRUIERT. (a) Der
+#    Randschicht-Ausschluss für den Pol-Anteil ist jetzt BEWEIS aus der geschlossenen
+#    Form (Z^Tb)_j = −(16/√(2D))·sinh²(D/4)·cosh(x̄ᶜ_j/2): Nachbar-Komponenten-Verhältnis
+#    in [e^{−D/2}, 1], Außen-k-Zellen-Anteil ≤ k·D(1+cosh α)/sinh α — Pol-Randmasse Θ(D)
+#    gegen Schicht Θ(1), Trennung ≥ 84× auf allen 32 (α, D)-Paaren, elementare
+#    Ungleichungen statt endlicher Stichprobe. (b) Der Boden ist VERDIENT:
+#    μ_min(S, A_z) = 1 − γ² exakt (5.9e-15, die strengere-CS-Konstante der
+#    Zwei-Gitter-Spaltung, Eijkhout–Vassilevski 1991), U ⪯ (1+ε_env)A_z mit
+#    ε_env ≤ 0.038 Cholesky-zertifiziert — **konstruierter Boden 0.188 gegen geforderte
+#    1.62e-02, 11.6× Marge**, eine echte Unterschranke auf allen 31 Sprossen, wo T127
+#    nur gemessen hatte. (c) Das Kamm-Residuum bleibt GEMESSEN, aber messbar KEINE
+#    Schicht: halbe Masse braucht 12–39% des Halbfensters gegen 1 Zelle für eine echte
+#    Randschicht; es verschwindet mit D^{+1.54±0.09} (FIT mit Jackknife).
+# B5 KARTE V3: 21 PUNKTE, UND DIE FORM HAT SICH GEÄNDERT. 10 DONE (T127s Karte hatte den
+#    (M)-Boden, die (T)-Identität und die (L)-Liste noch offen — alle drei jetzt zu),
+#    3 zertifiziert-auf-realen-Objekten (wollen nur noch das Wort „uniformly"),
+#    3 konditional-klassisch (Bernstein/Markov für die Rand-Oszillation, Bramble–Hilbert
+#    für Konsistenz-Defekt und Q-unsichtbares Residuum, das Kontinuum), **5 genuin offen,
+#    und sie sind nicht mehr von derselben Art wie zuvor: M9 die κ-Latte (um 3.6%
+#    verfehlt), M17 die Pencil-Masse und M18 der Kamm (je EIN gemessener Skalar pro
+#    Sprosse), M19 das Wort „for all", M21 die RH-Adresse selbst**.
+# DIE EHRLICHE DISTANZ (drei Sätze, fürs Tagebuch, zitierfähig): Nach diesem Block ist
+#    keine Stufe der endlichen Fenster-Kette mehr bloß plausibel — jede benutzte
+#    Ungleichung ist ein abgeschlossenes Zertifikat, eine maschinengenau geprüfte
+#    Identität oder eine explizit ausgewertete Ungleichung, gültig auf jeder Naht, jedem
+#    Transport und jeder Sprosse, die der harte Deckel h ≤ 1500 zulässt. Die Distanz ist
+#    trotzdem nicht klein, und zwar auf eine Art, die keine größere Rechnung schrumpfen
+#    kann: 5 der 21 Kartenpunkte sind offen, weil eine endliche Liste von Objekten das
+#    Wort „for all zones" nicht produzieren kann — und einer davon, die
+#    Protrusions-Konzentration κ, wurde soeben SYSTEMATISCH außerhalb seiner eigenen
+#    präregistrierten Latte gemessen (3.6%, wachsend in ρ), was genau die Art Beinahe-
+#    Treffer ist, die eine Schranke von einem Fit unterscheidet. Und selbst mit allen
+#    vier TEML-Punkten geschlossen stünde eine Positivitäts-Aussage über ein ENDLICHES
+#    Fenster beim tatsächlich erreichten α: die ehrliche Distanz zu RH ist nicht „ein
+#    Uniformitäts-Lemma", sondern „ein Uniformitäts-Lemma, drei klassische
+#    Abschätzungen, ein Kontinuums-Limes und ein Theorem, das niemand hat".
+#    → Folge-Probe Teil 129 (KAPPA.DEEP.SEAMS, kappa_deep_seams_probe.py) LÄUFT: das
+#    κ-Gesetz κ ≤ 2 + C(ρ−1) auf breiter Front, die zwei bezahlbaren tiefen Nähte
+#    (127, 256) via T115-Kompression, die M18-Schranke, Karte V4 +
+#    Promotions-Einschätzung.
+# Serie (XII)–(CXXXIX): 128 Proben, 3225/3225 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Weil 1952 / Bombieri 2000 / Connes 1999
+# — zitiert, NIE benutzt —, Cauchy–Schwarz/Jensen, Bramble–Hilbert 1970, Haynsworth 1968,
+# Albert 1969 / Douglas 1966, Eijkhout–Vassilevski 1991, Bernstein/Markov, Wilkinson 1968 /
+# Higham 2002, Parseval, Mihailescu 2004 / Catalan — als Adresse zitiert, nicht benutzt —,
+# Bertrand–Chebyshev 1852 + triviale gerade Schranke (die EINZIGEN Lücken-Fakten; keine
+# Cramér/Firoozbakht/Zwillings-Annahme)) gerichtet zitiert; Sandbox ohne Ledger-/Marker-
+# Änderung.
+
 # 2026-07-28 (IX) — Teil 127 (delegiert, Phase „Der volle Beweis", Vertrag TWO.INEQUALITIES): two_inequalities_probe.py — **BOTH-SHAPED** — BEIDE VERBLEIBENDEN UNGLEICHUNGEN SIND BEWEIS-FÖRMIG, UND KEINE IST DIE, DIE T126 BENANNTE: U5 ist ALS ZERTIFIKAT REFUTIERT (bei festem Verhältnis 2.0256 sterben 10/22 reale Zonen, während der wahre Ziel-Eigenwert auf allen 22 positiv bleibt — es stirbt das Zertifikat, nicht die Positivität) und wird durch **U5-BAND** ersetzt: zonen-uniform für jedes ρ ≤ 1.49531, mindestens eine Zone stirbt ab ρ ≥ 1.49766 (bisektioniert auf 2.3e-3, bindend n = 19) — das Band deckt 99.26% der realen Nähte, der Rest sind 8 ENUMERIERTE Paare mit Nachbaratom-Abstand ≤ 2 (Mersenne, Fermat-artig, ein Zwilling); die Trennvariable ist gefunden und sie ist GEOMETRISCH, nicht arithmetisch: die Rechts-Protrusion sl_r — was vom feinen Rand-Block über die innere Kante des groben hinausragt — trennt 22/22 (corr +0.997 mit tau_dn), während Lücke/α/Atomgewicht/Alias-Phase alle scheitern (bestes 0.727); und das ρ-Band ist nur ein PROXY für diese Randgeometrie: der Nah-Identitäts-Zensus (43 tiefe Zonen, ρ = 1.00140) fällt EINMAL aus (n = 479, |η|/λ = 1.472, 0.14% neben der Identität), repariert per 3-Stufen-Leiter (Retention 0.5027) exakt wie T126 bei n = 31 — der Fallback ist Teil der Aussage; U3 entschärft sich über die harmonische-Mittel-IDENTITÄT cb/δ = 1/Σw_i/μ_i: ŝ-Masse auf {μ ≥ 1/2} ist ≥ 0.9665 über 42 Sprossen, also genügt ein GROBER Boden μ_min ≥ 1.62e-02 für cb/δ ≥ 1/4 (T126 musste 0.192–0.307 scharf messen) — und „ŝ meidet die schlechte Richtung" ist WIDERLEGT: die Flachheit ist generisch, genau EIN Richtungstyp fällt durch (RANDSCHICHT am Fensterrand, Konzentration 3.1× gegen 0.03× für ŝ); Karte V2: 16 Punkte, 10 getragen, 2 konditional-klassisch, die 2 genuin neuen UMFORMULIERT in **(T)** Rand-Retentions-Schranke, **(E)** |η|-Oberschranke (gemeinsam mit (T)), **(M)** Pencil-Massen-Schranke + grober μ_min-Boden, **(L)** 8 enumerierte Out-of-Band-Nähte — drei Ungleichungen GLEICHER Machart wie die bewiesenen Glieder plus eine Enumeration; das Restrisiko steckt im Wort UNIFORM — 28/28, 16.6s, Sandbox
 # A1 DIE TRENNVARIABLE IST GEOMETRIE, NICHT ARITHMETIK. Der Fixed-Ratio-Sweep von T126
 #    reproduziert exakt: bei festem Verhältnis 2.0256 überleben 12/22 Zonen, dieselbe Liste
