@@ -153,8 +153,11 @@ export function TwoDoorsConvergence() {
             sections 20–22
           </a>
           . Series complete at 125 parts / 3139 sandbox checks; the mandate
-          T ≤ 125 is fulfilled, and the next step is a decision about extraction
-          rather than another probe.
+          T ≤ 125 is fulfilled. Phase 2 — the full proof — is now open: T126 ·
+          UNIFORMITY.SEAMS (SEAMS-CERTIFIED, 31/31) finishes the seam
+          architecture, and exactly two genuinely new inequalities remain (a
+          direction lemma and a zone-uniform seam floor), under attack in T127
+          (running).
         </p>
       </div>
 

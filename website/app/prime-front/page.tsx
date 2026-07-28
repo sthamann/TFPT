@@ -32,7 +32,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with the open boundary λ* (v540), the matching-lemma/transport-ledger package (v541), and the induction sprint T102–T125 — a reduction cascade from one matrix inequality down to one sign and one accounting convention, assembled end to end in the finale, with certified margin-free steps to zone 155,921. Series complete: 125 parts, 3139 sandbox checks. Not RH evidence.",
+    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with the open boundary λ* (v540), the matching-lemma/transport-ledger package (v541), and the induction sprint T102–T125 — a reduction cascade from one matrix inequality down to one sign and one accounting convention, assembled end to end in the finale, with certified margin-free steps to zone 155,921. Series complete at 125 parts; phase 2 (the full proof, T126+) is open — the seam architecture is finished and two genuinely new inequalities remain. 126 parts, 3170 sandbox checks. Not RH evidence.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified: v535–v541. Sandbox T102–T125: one matrix inequality compressed to one sign plus one accounting convention and assembled end to end; certified steps to zone 155,921; 3139 sandbox checks. Residual: I5 — not almost-RH.",
+      "Research diary of the prime / zeta line. Machine-verified: v535–v541. Sandbox T102–T125: one matrix inequality compressed to one sign plus one accounting convention and assembled end to end; phase 2 (T126+) open, two inequalities remain; 3170 sandbox checks. Residual: I5 — not almost-RH.",
   },
 };
 
@@ -94,7 +94,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–125 · 3139 sandbox checks
+            Research diary · Teile 11–126 · 3170 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1981,8 +1981,11 @@ export default function PrimeFrontPage() {
           155,921. What does not stand is uniformity in the zone index — and
           that, not any missing estimate, is the honest distance to any infinite
           statement. The distance to RH remains large. Series complete at 125
-          parts and 3139/3139 sandbox checks; the next step is a decision about
-          extraction, not another probe. Sandbox; not RH evidence.
+          parts and 3139/3139 sandbox checks. A second phase — the full proof
+          (T126+) — has since opened on exactly that uniformity gap: the seam
+          architecture is finished (T126 · SEAMS-CERTIFIED, 31/31) and two
+          genuinely new inequalities remain, under attack in T127. Sandbox; not
+          RH evidence.
         </p>
       </DiarySection>
 
@@ -2004,7 +2007,7 @@ export default function PrimeFrontPage() {
             level="Near"
             badge="sandbox"
             title="I5 geography complete; the induction compressed to one sign plus one convention, and assembled end to end"
-            body="After 125 probes (3139/3139 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete; and the induction that would carry I5 is compressed from one matrix inequality (T104) to a sign the coarse-to-fine recursion already carries plus one declared accounting convention (T124/T125) — with the relay mechanism certified step by step, 400/400 rungs, a single certified step at zone 155,921 (T115), and the finale assembling the whole chain on 52 zones, its load-bearing spine 96.2% identity or Cholesky certificate with the Harnack pair no longer in it (T125). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH; what is missing for any infinite statement is uniformity in the zone index. The compression locates the difficulty; it does not remove it. Not RH evidence."
+            body="After 126 probes (3170/3170 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete; and the induction that would carry I5 is compressed from one matrix inequality (T104) to a sign the coarse-to-fine recursion already carries plus one declared accounting convention (T124/T125) — with the relay mechanism certified step by step, 400/400 rungs, a single certified step at zone 155,921 (T115), and the finale assembling the whole chain on 52 zones, its load-bearing spine 96.2% identity or Cholesky certificate with the Harnack pair no longer in it (T125). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH; what is missing for any infinite statement is uniformity in the zone index — now phase 2 of the diary (T126+), where the seam architecture is finished and exactly two genuinely new inequalities remain. The compression locates the difficulty; it does not remove it. Not RH evidence."
           />
           <MeaningLevel
             level="Big if"
@@ -2050,7 +2053,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 text-sm text-slate-500 sm:px-6 lg:px-8">
           Numbers and verdicts are taken from{" "}
           <code className="font-mono text-slate-400">experiments/next.txt</code>{" "}
-            (2026-07-23…28 diary, Teile 11–125) and the promoted modules{" "}
+            (2026-07-23…28 diary, Teile 11–126) and the promoted modules{" "}
           <code className="font-mono text-slate-400">
             verification/v535_*.py
           </code>{" "}
@@ -2267,12 +2270,12 @@ function BigPictureSection() {
           </p>
           <dl className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
             <BigPictureStat
-              term="125"
-              desc="diary parts — the series is complete"
+              term="126"
+              desc="diary parts — series complete at 125, phase 2 open"
               tone="sky"
             />
             <BigPictureStat
-              term="3139"
+              term="3170"
               desc="sandbox checks, all passing"
               tone="amber"
             />
@@ -2306,7 +2309,10 @@ function BigPictureSection() {
             — that pair survives only as a second, independent route, and the one
             hypothesis the spine still carries is a declared accounting
             convention. What is missing for any infinite statement is uniformity
-            in the zone index, not size. Sandbox; not RH evidence.
+            in the zone index, not size — and that is now the program: the
+            series is complete, and a second phase (T126+) attacks the two
+            remaining genuinely new inequalities, the direction lemma and the
+            zone-uniform seam floor. Sandbox; not RH evidence.
           </p>
         </div>
       </div>
@@ -2347,11 +2353,13 @@ function ProgramStatusCallout() {
         Strongest current sentence
       </p>
       <p className="mt-3 font-serif text-lg leading-relaxed text-violet-50 sm:text-xl">
-        After 125 probes and seven promoted modules, what remains TFPT-specific
+        After 126 probes and seven promoted modules, what remains TFPT-specific
         is exactly one object: I5 — and the induction that would carry it is now
-        a conditional theorem, assembled end to end on 52 zones, whose
-        load-bearing spine is 96.2% identity or Cholesky certificate and whose
-        only hypothesis is a declared accounting convention (T125).
+        a conditional theorem, assembled end to end on 52 zones (T125), whose
+        load-bearing spine is 96.2% identity or Cholesky certificate, whose only
+        hypothesis is a declared accounting convention, and whose seam
+        architecture is finished (T126): exactly two genuinely new inequalities
+        remain.
       </p>
       <ul className="mt-4 space-y-2 text-xs leading-relaxed text-slate-400">
         <li>
@@ -2410,6 +2418,23 @@ function ProgramStatusCallout() {
             sections 20–22
           </a>
           . Not almost-RH. This is not RH evidence.
+        </li>
+        <li>
+          <strong className="font-medium text-slate-200">
+            Phase 2: the full proof.
+          </strong>{" "}
+          The first post-series probe{" "}
+          <span className="font-mono text-slate-300">
+            uniformity_seams_probe.py
+          </span>{" "}
+          (T126 · UNIFORMITY.SEAMS — SEAMS-CERTIFIED, 31/31) finishes the seam
+          architecture: the partition question dissolves into a monotone
+          free-resolution construction (re-gridding only at record-small gaps,
+          all 12 real seams certified), the continuum step closes via an exact
+          fractional-Dirichlet identity, and the full-proof map contains
+          exactly two genuinely new inequalities — a direction lemma (U3) and a
+          zone-uniform seam floor (U5). T127 (TWO.INEQUALITIES) is running at
+          both.
         </li>
       </ul>
     </aside>

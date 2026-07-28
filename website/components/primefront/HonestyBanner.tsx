@@ -32,11 +32,13 @@ export function HonestyBanner() {
         T102–T125 compresses the remaining arithmetic bound step by step — from
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
-        as deep as zone 155,921 and 3139/3139 sandbox checks. The series is
-        complete at 125 parts. What remains TFPT-specific is exactly one object:
-        I5 in one-family form — by the closed ledger equivalent to Weil
-        positivity ⟺ RH, an equivalence typing only, not “almost RH.” No claim
-        of progress toward the Riemann Hypothesis is made.
+        as deep as zone 155,921. The series is complete at 125 parts; phase 2
+        (“the full proof”, T126+) is now open with 3170/3170 sandbox checks and
+        exactly two genuinely new inequalities remaining. What remains
+        TFPT-specific is exactly one object: I5 in one-family form — by the
+        closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
+        only, not “almost RH.” No claim of progress toward the Riemann
+        Hypothesis is made.
       </p>
     </aside>
   );

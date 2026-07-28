@@ -1,3 +1,124 @@
+# 2026-07-28 (VIII) — Teil 126 (delegiert, DIE ERSTE PROBE NACH DEM SERIEN-FINALE — BEGINN DER PHASE „DER VOLLE BEWEIS" (T126+) — Vertrag UNIFORMITY.SEAMS): uniformity_seams_probe.py — **SEAMS-CERTIFIED** — DIE NAHT-ARCHITEKTUR IST FERTIG, UND SIE WIRD GEGANGEN STATT ARGUMENTIERT: die Partitions-Frage (kann die Primpotenz-Achse in Segmente mit je EINER gemeinsamen Auflösung und Nachbar-Verhältnis ≤ ρ* geschnitten werden?) ist EXAKT per DP auf der realen Lücken-Tabelle entschieden (9700 Zonen, n ≤ 10⁵) und die Antwort ist eine REFUTATION MIT ERSATZ: bei T115s ρ* = 1.83 existiert KEINE Partition (die DP stirbt bei n = 127 am Zwilling-nach-großer-Lücke-Muster), die wahre Anforderung ist ρ_crit = 2.0258 — im Kern der EINE Quotient g(125)/g(127), auf n ≤ 10⁴ und n ≤ 10⁵ identisch —, eine Refinement-only-Partition existiert bei KEINEM Verhältnis ≤ 64, und die Vergröberungs-Naht scheitert real (das ZIEL-Gitter ist die Obstruktion; Leitern verschlimmern es, k = 1→3: −2.54e-02 → −4.63e-02); DIE ENTSCHEIDENDE NEUE MESSUNG: bei FESTEM Verhältnis 2.0256 überlebt das Zertifikat nur 12/22 Zonen — es stirbt an der ZONE, nicht am Verhältnis, also schließt KEIN Schwellwert das Programm; WAS TRÄGT, ist die FREI-AUFLÖSUNGS-ROUTE: das laufende Minimum D_k = min(cap_k, D_{k−1}) ist monoton PER KONSTRUKTION (kein DP, kein Lücken-Theorem, keine Vergröberungs-Naht), Re-Gridding nur an 764/9700 Grenzen (7.88% — nur wo eine REKORD-kleine Lücke fällt), und ALLE 12 leistbaren realen Nähte (n = 3..125) sind gebaut und transportiert: 11 in EINEM Re-Gridding, die eine bei n = 31 via 3-Stufen-Leiter, Median-Retention 0.578, alle 12 Klammern gültig; Naht-Zertifikat: Haynsworth reproduziert λ_min(S) auf 2.8e-14 auf beiden Gittern, die Klammer enthält den Fein-Wert auf 30/30 Paaren, volle Nähte Ende-zu-Ende bei ρ = 2.251 ≥ Bedarf 2.0256 (3/4); Preis: Auflösungs-Overhead Median 0.201 (= Fenster-GRÖSSE, keine Annahme); der UNIFORMITÄTS-AUDIT (35 Sprossen, 14 Zonen, alle Fits mit Jackknife) gibt jeder Wirbelsäulen-Konstante einen Status: U1 Hüll-Marge self-certifying, U2 Oversampling konditional auf EINE Bernstein/Markov-Schranke, U3 cb/δ gemessen-flach aber RICHTUNGS-abhängig (Alignment 0.975 — die schlechteste Pencil-Richtung erklärt die Flachheit NICHT), U4 Kopffreiheit = Rechen-Wand, **U5 λ_min(S)/‖A‖ fällt in Fenster-Richtung — DIE tragende Lücke**, U6 AUFGELÖST (laufendes Minimum monoton per Konstruktion); das KONTINUUM dreht sich: die naive Dichte+Stetigkeits-Route ist WIDERLEGT (archimedischer Kern ist Cauchy-Typ ~1/(2|s|), Konstanten divergieren log(1/D)), die Rettung ist die EXAKTE Identität vᵀAv = Σw_r v_r² + Σ_{r<s}(−A_rs)(v_r−v_s)² mit 86.1% negativen Off-Diagonalen — **die Form ist eine FRAKTIONALE DIRICHLET-ENERGIE**, die Divergenz ist die ½-Energie einer Stufenfunktion und harmlos —, Galerkin-Konsistenz gemessen D^1.798/D^1.802 (C∞/Lipschitz), Richardson-Limes 2.1256e-4 > 0, erreichte α: 1.5046 (Turm) / 1.6882 (Naht-Kette); und die VOLLE-BEWEIS-KARTE hat 16 Punkte: 5 erledigt/Klassik, 9 konditional, **GENAU 2 GENUIN NEU — (U3) Richtungs-Lemma für ŝ im Pencil (S,U), (U5) zonen-uniformer Schur-Boden bei Verhältnis ≤ 2.026**; S4 (Vergröberungs-Klammer) AUFGELÖST statt bewiesen; (C-F5) und alle-α weiter offen — 31/31, 9.8s, Sandbox
+# Z1 DIE SEGMENT-NAHT, IN ZWEI HÄLFTEN. Z1.1 ARITHMETIK, EXAKT ENTSCHIEDEN: die Partitions-
+#    Frage ist eine Frage über MINIMA VON FENSTERN DER LOG-LÜCKEN-FOLGE und sonst nichts
+#    (D_seg ∝ min-Lücke des Segments), also entscheidet eine DP über Schnittpositionen sie
+#    EXAKT — 33 DP-Läufe (N = 1280 und 9700 Zonen, l_max = 32, zwei Bisektionen) in 2.71 s.
+#    Bei ρ* = 1.83: INFEASIBLE, die DP stirbt an Grenze 42 (Zone n = 127), lokales Lücken-
+#    Muster [0.0684 0.0325 0.0159 0.0078 0.0232 0.0448] — die kleine Lücke DIREKT hinter der
+#    großen, ohne Zwischenlücke im zulässigen Fenster: das Zwilling-nach-großer-Lücke-Muster,
+#    exakt die vermutete Obstruktion. ρ_crit (bisektiert auf 1e-3) = 2.0258 auf n ≤ 10⁴ UND
+#    auf n ≤ 10⁵ — derselbe Wert, die bindende Konfiguration ist früh und kein Tiefen-Effekt;
+#    der bindende Quotient g(125)/g(127) = 2.0238 reproduziert ρ_crit auf 2.0e-03. Die
+#    Partition bei ρ_crit ist KONSTRUIERT (306 Segmente auf 9700 Zonen, Verhältnisse
+#    0.502/1.008/2.026 min/med/max) und die T112-Rahmen-Lemmata gelten auf allen 9700
+#    Zonen-Schritten (min ν_eff = 4.00 ≥ 4, 0 Verletzungen) — eine reale Konstruktion, keine
+#    Ungleichung. Refinement-only am tight cap: bei KEINEM ρ ≤ 64 feasible (6 Grenzen
+#    brauchen Vergröberung um bis zu 1/1.992). Z1.2 SPEKTRAL, AUF REALEN PAAREN: die
+#    T115-Transport-Klammer (Haynsworth, an den ECHTEN Minimierern, ohne Inverse und ohne
+#    Marge) ist auf 30 realen Paaren (ρ = 0.309..3.559) SOUND — λ_min(S) auf 2.8e-14 auf
+#    beiden Gittern reproduziert, Klammer enthält den Fein-Wert 30/30 —, das untere Ende ist
+#    positiv bis ρ = 2.251, erster Fehlschlag bei 2.061: der Split ist NICHT sauber in ρ
+#    allein (Überlappungs-Band 2.061..2.251), die Reichweite hängt an der ZONE. Vergröberung
+#    real gemessen (die Richtung, die T115 nie maß): 7/9 Paare positiv bis Verhältnis 0.349,
+#    Fehlschläge bei 0.309 und 0.531 — was fällt, ist das ZERTIFIKAT, nicht die Positivität
+#    (Ziel-Boden > 0 auf 9/9, MEASURED), und Leitern reparieren es NICHT: bei n = 47 bleibt
+#    ρ = 0.531 negativ für k = 1, 2, 3 und wird SCHLECHTER (−2.54e-02 → −2.52e-02 →
+#    −4.63e-02) — die Obstruktion ist das FINALE Gitter, auf dem jede Leiter landen muss;
+#    eine feinere Unterteilung kann ein schlechtes Ziel nicht heilen. DIE ENTSCHEIDENDE
+#    MESSUNG (Z1.2g): festes Verhältnis 2.0256, Zonen-Sweep — das Zertifikat überlebt auf
+#    12/22 Zonen. Es stirbt an der Zone, nicht am Verhältnis; KEIN Schwellwert schließt das
+#    Programm, und das Lemma, das die Naht-Architektur uniform machte, ist nicht „ein
+#    größeres ρ", sondern „ein zonen-uniformer η/τ-Boden bei Verhältnis ≤ 2.026" — U5
+#    geschärft, keine neue Spezies. Z1.2f/h DIE AUFLÖSUNG: bei freier Auflösung ist das
+#    laufende Minimum D_k = min(cap_k, D_{k−1}) monoton PER KONSTRUKTION — kein DP, kein
+#    Lücken-Theorem, NICHT EINE Vergröberungs-Naht; der größte Einzel-Drop über n ≤ 10⁵ ist
+#    2.0256 (Zone n = 8191 — derselbe bindende Quotient, jetzt in der guten Richtung
+#    gelesen), 0/9700 Schritte überschreiten die gemessene Reichweite 2.061; Re-Gridding nur
+#    an 764/9700 Grenzen (7.88%, nur bei Rekord-kleinen Lücken), alle anderen sind No-Ops
+#    bei Verhältnis 1. ALLE 12 leistbaren realen Nähte (n = 3..125, h ≤ 1222, größtes reales
+#    Verhältnis 1.943) gebaut: 11/12 positiver zertifizierter Boden in EINEM Re-Gridding,
+#    n = 31 (τ = 0.363, ungewöhnlich schlechte transportierte Masse) via 3-Stufen-Leiter mit
+#    komponiertem Boden 3.56e-02 > 0, Median-Retention 0.578, alle 12 Klammern gültig. Und
+#    die volle Naht am GEFORDERTEN Verhältnis steht: 3/4 Versuche tragen die Wirbelsäule
+#    [A][B][C]+Übergaben auf Gitter A, das Re-Gridding (unteres Klammer-Ende 8.671e-03 > 0,
+#    Retention 0.103) und die Wirbelsäule auf Gitter B, Ende-zu-Ende bei ρ = 2.251 ≥ 2.0256
+#    (h = 189 → 425). PREIS, ehrlich: Auflösungs-Overhead D_free/cap = 0.021..1.000 (Median
+#    0.201) — das laufende Minimum statt der lokalen Lücke setzt die Fensterkosten, h bläst
+#    über den 1500er-Cap: eine EVIDENZ-Grenze, keine Lücke im Argument; zertifiziert Naht
+#    für Naht ist die Route bis n = 125, nicht die ganze Achse.
+# Z2 DER UNIFORMITÄTS-AUDIT (35 Sprossen, 14 Zonen; die Status-Regel VOR den Zahlen
+#    deklariert, „measured-flat" wird nie zu „uniform" befördert): [U1] Hüll-Marge
+#    SELF-CERTIFYING — der Doubling-Loop der Konstruktion ERZWINGT sie, keine Beweis-Pflicht.
+#    [U2] Oversampling-Tiefe L/M konditional auf EINE Bernstein/Markov-Schranke (α-uniform
+#    nötig) — klassisch in der Form. [U3] cb/δ gemessen-flach, aber der Grund ist RICHTUNG,
+#    nicht Spektrum: cb/δ ist ein Rayleigh-Quotient des Pencils (S, U), und die schlechteste
+#    Pencil-Richtung erklärt die Flachheit NICHT (Alignment-Anteil 0.866..0.987, Median
+#    0.975; μ_min fällt selbst mit dem Fenster) — was fehlt, ist ein RICHTUNGS-Lemma für ŝ,
+#    GENUIN NEU. [U4] Kopffreiheit über dem fp-Boden = Rechen-Wand, keine Beweis-Pflicht.
+#    [U5] der Albert-Schur-Boden λ_min(S)/‖A‖ FÄLLT in Fenster-Richtung — DIE tragende
+#    Lücke, von Z1.2g zur zonen-uniformen η/τ-Form geschärft. [U6] Auflösungs-Monotonie:
+#    AUFGELÖST — per Konstruktion der Frei-Auflösungs-Route. Audit-Befund: (F6) ist NICHT
+#    ein Lemma, sondern drei — U2 (klassisch geformt), U3 (Richtung), U5 (Zonen-Uniformität);
+#    (8R) hielt 35/35, während auditiert wurde.
+# Z3 DAS KONTINUUM, UND DIE ERSTE KETTE IST DIE FALSCHE: (i) die PWC-Galerkin-Form IST die
+#    Kontinuums-Form auf PWC-Funktionen (exakt — der Dreieckskern ist die Autokorrelation
+#    der Zelle), kein Konsistenzfehler tritt ein. (ii) die naive „dicht + stetig"-Route ist
+#    WIDERLEGT: der archimedische Kern ist CAUCHY-Typ ~1/(2|s|), nicht log-Typ, also nicht
+#    lokal integrierbar — L1-Masse und λ_max divergieren beide (gemessen, ~log(1/D)), es
+#    gibt WEDER eine L2- noch eine sup-Norm-Stetigkeitskonstante. (iii) was die Divergenz
+#    harmlos macht, ist eine IDENTITÄT: mit Zeilensummen w_r gilt vᵀAv = Σ_r w_r v_r² +
+#    Σ_{r<s}(−A_rs)(v_r−v_s)², und 86.1% der Off-Diagonalen sind negativ — die Form ist eine
+#    FRAKTIONALE DIRICHLET-ENERGIE, die Divergenz ist die ½-Energie einer Stufenfunktion,
+#    kein Defekt des Kerns (die Zeilensummen bleiben beschränkt). (iv) also ist das
+#    Limit-Argument QUANTITATIV: Galerkin-Konsistenz |Q(P_D f) − Q(f)| → 0 gemessen auf dem
+#    dyadischen Turm (5 Level, h = 63..1008, D-Spanne 16×) mit Ordnung D^1.798 ± 0.057
+#    (C∞-Bump) und D^1.802 ± 0.065 (Lipschitz-Hut) — superlinear, NICHT von der divergenten
+#    Diagonale begrenzt, genau wie die Energie-Identität es vorhersagt; beide Wert-Familien
+#    strikt positiv auf jedem Level, Richardson-Limes 2.1256e-4 > 0. Klassik hier:
+#    Calderón–Zygmund / Bramble–Hilbert 1970 (die Konsistenz-Abschätzung der Form nach);
+#    GEMESSEN ist ihre Rate auf diesem Kern. Der abstrakte „Dichte"-Schritt wird NICHT
+#    gebraucht und NICHT benutzt. ENDSTAND: Positivität des Weil-Fensters auf
+#    Lipschitz-Funktionen im ERREICHTEN Fenster (α = 1.5046 Turm / 1.6882 Naht-Kette;
+#    T125s komponierter Lauf erreichte n = 79); die Brücke zu RH ist das Weil-Kriterium
+#    (Weil 1952; Bombieri 2000; Connes 1999), zitiert und in KEINER Richtung benutzt.
+# Z4 DIE VOLLE-BEWEIS-KARTE, definitiv: 16 Punkte, 5 erledigt-oder-klassisch, 9 konditional,
+#    2 offen — und GENAU 2 GENUIN NEUE MATHEMATIK: **(U3) das Richtungs-Lemma für ŝ im
+#    Pencil (S, U)** (warum das Daten-Residuum im guten Unterraum sitzt — die Flachheit ist
+#    messbar KEIN Worst-Case-Effekt) und **(U5) der zonen-uniforme Schur-Boden bei
+#    Re-Gridding-Verhältnis ≤ 2.026** (die Konstante, die jede Naht konsumiert; Leitern
+#    können ein schlechtes Ziel-Gitter beweisbar nicht reparieren, also muss die Reichweite
+#    pro ZONE gewonnen werden, nicht pro Verhältnis). S4 (die Vergröberungs-Klammer), die
+#    diese Probe ÖFFNETE und die ein drittes genuin neues Lemma gewesen wäre, ist von der
+#    Frei-Auflösungs-Route AUFGELÖST statt bewiesen. Weiter offen und unverändert: (C-F5)
+#    die Buchführungs-Konvention und der alle-α-Schritt — „all α is the one thing no
+#    computation can close" (6 Grenzen in 9700 brauchen am tight cap eine Doppel-Naht; für
+#    ALLE n braucht es ein Lücken-Theorem oder eben die Frei-Auflösungs-Relaxation, die in
+#    der Arithmetik unconditional ist). Ehrliche Bilanz in drei Sätzen: die Naht-Architektur
+#    ist FERTIG — die Partitions-Frage löst sich in eine monotone Konstruktion auf, das
+#    Kontinuum schließt über eine exakte fraktionale Dirichlet-Identität, und was bleibt,
+#    sind zwei benannte Ungleichungen plus eine Konvention; beide Ungleichungen sind
+#    endlich-dimensionale Aussagen über EIN explizites Objekt; nichts davon ist eine Aussage
+#    über Nullstellen, und die Distanz zu RH ist hier KARTIERT, nicht gereist.
+# PHASEN-AUFTAKT (drei Sätze, fürs Tagebuch): Die Serie T102–T125 endete mit einer montierten
+#    Kette und dem Befund, dass ihre Distanz zu jeder unendlichen Aussage UNIFORMITÄT heißt;
+#    Teil 126 beginnt die Phase „Der volle Beweis" damit, diese Uniformität in ihre
+#    Bestandteile zu zerlegen und den größten Brocken — die Segment-Naht — konstruktiv
+#    aufzulösen statt zu beweisen. Was nach Audit, Naht-Bau und Kontinuums-Wende übrig
+#    bleibt, sind GENAU ZWEI genuin neue Ungleichungen (U3-Richtung, U5-Zonen-Boden) plus
+#    die deklarierte Konvention (C-F5) und der alle-α-Schritt, den keine Rechnung schließen
+#    kann. → Folge-Probe Teil 127 (TWO.INEQUALITIES, two_inequalities_probe.py) LÄUFT:
+#    U5-Anatomie (WAS trennt die 12 überlebenden von den 10 sterbenden Zonen bei festem
+#    Verhältnis — und die reale Naht-Klasse folgt auf REKORD-Lücken: liegt sie auf der guten
+#    Seite der Trennvariable?), ein U5-Boden-Kandidat, der ŝ-Struktur-Grund hinter U3,
+#    Karte V2.
+# Serie (XII)–(CXXXVII): 126 Proben, 3170/3170 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Weil 1952 / Bombieri 2000 / Connes 1999
+# — zitiert, NIE benutzt —, Haynsworth 1968, Albert 1969 / Douglas 1966, Bertrand–Chebyshev
+# 1852 + triviale gerade Schranke (die EINZIGEN Lücken-Fakten; keine Cramér/Firoozbakht/
+# Zwillings-Annahme), Bernstein/Markov, Calderón–Zygmund / Bramble–Hilbert 1970, Richardson,
+# Wilkinson 1968 / Higham 2002) gerichtet zitiert; exakte DP auf der realen Lücken-Tabelle
+# statt Lücken-Vermutung; Sandbox ohne Ledger-/Marker-Änderung.
+
 # 2026-07-28 (VII) — Teil 125 (delegiert, DAS SERIEN-FINALE — Vertrag GRAND.ASSEMBLY): grand_assembly_probe.py — **ASSEMBLY-GREEN** — DIE KETTE KOMPONIERT, UND ZWAR WÖRTLICH: 52 VON 52 LEITER-ZONEN DURCHLAUFEN ALLE FÜNF STUFEN [Basis]→[Teleskop (8R)]→[ε-Untergrenze]→[κ_end/Parität]→[Albert-Übergabe], DAVON 30 KONSEKUTIVE PRIMPOTENZ-ATOME n = 2..79 AUF EINER GEMEINSAMEN AUFLÖSUNG D = min_k g_k/(2ν) = 3.472446e-03 — M_n(k) = M_o(k+1) als Ganzzahl-Identität auf allen 29 Paaren, der eingehende Atom-Block ist die EXAKTE Nullmatrix (bit-exakt), Q_new(k) IST das X von Zone k+1 (2.9e-14): der Ausgang jedes Schritts ist der Eingang des nächsten, T114s [P2]-Naht ist konstruktiv UMGANGEN (0 von 84 konsekutiven Lücken-Verhältnissen sind dyadisch, also wird EIN Rahmen für den ganzen Lauf gewählt statt pro Zone) —, PLUS 22 Reach-Zonen mit Pro-Zone-Rahmen bis α = 2.885 (Naht deklariert) und 10 Tiefen-Zonen für Stufe [E] allein bis n = 1331 (h_new bis 1495); UND DER BEFUND, DER DIE SERIE ABSCHLIESST: die schwächste Stufe der GANZEN Montage ist [D] (WINDOW-CERT), aber die TRAGENDE WIRBELSÄULE [A][B][C][E] ist auf ALLEN 52 Zonen CHOLESKY-CERT — **das Harnack-Paar (F1)/(F2) trägt nicht mehr**, es lebt nur noch in der unabhängigen Zweit-Route (iv); Zahlen: (8R) auf 88/88 Sprossen zertifiziert (cb/δ = 0.9071–0.9971, T124s Band 0.4739–0.9938 auf einer ANDEREN Leiter reproduziert), Basisfall-Cholesky bei h = 416..1384 mit Kopffreiheit 4.4e5–5.6e10 über dem fp-Boden, ε-Untergrenze ε_0 ≥ Σcb > 0 auf 52/52 mit Retention 0.0013–0.9694 der Wahrheit aber 0.9140–0.9929 der L-Level-DECKE (1 − ε_L/ε_0 = 0.001295–0.993502 — mehr KANN eine L-Level-Kette nicht liefern) und Faktor 3.2e1–8.7e10 über der DEKLARIERTEN fp-Schranke c_h·u·cond(A_0), Albert-Schur λ_min = 1.4839e-03–1.2528e-01 auf 62/62 Schritten = 3.0e10–4.6e13 über dem eigenen Cholesky-Boden, während das Norm-Surrogat (das durch λ_min(X) teilt — DAS war die T113-Wand) auf 62/62 NEGATIV ist; 430 Cholesky-Zertifikate und 440 Identitäten komplett; Satz V-final gedruckt mit Zeile-für-Zeile-Attribution (25 Glieder: 10 IDENTITÄT, 9 CHOLESKY, 3 FENSTER — alle drei in (iv) —, 1 HYPOTHESE) und fünfteiliger „WHAT IS NOT CLAIMED"-Liste; Serien-Bilanz: Kill-Liste 24 widerlegte Routen über 18 Teile, Kaskade 7 Stationen, Zertifizierungs-Grad 90.3% (ganze Kette) / 96.2% (Wirbelsäule) Identität-oder-Cholesky, RH-Distanz als sechs prüfbare Punkte; Extraktions-Neubewertung: STÄRKER als der Matching-Lemma-Kandidat auf 3/5 Kriterien — 34/34, 8.4s, Sandbox
 # Z1 DIE MONTAGE, ENDE ZU ENDE, UND WAS JEDE STUFE IST: [A] Basisfall-Zertifikat
 #    (CHOLESKY) — auf der FEINSTEN Ebene zertifizieren eine fertige Cholesky von A
