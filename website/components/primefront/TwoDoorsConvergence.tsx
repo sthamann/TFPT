@@ -230,9 +230,16 @@ export function TwoDoorsConvergence() {
           provably false — only the summed form holds); but the honest
           defect count went 3 → 4: the frame&apos;s window grows with the
           zone, so D₀ covers almost nothing of the real ladder, and the
-          CBS constant decays with the width. T121 (
+          CBS constant decays with the width. T121 · WIDE.WINDOW —
+          WIDE-RESTRUCTURED (21/21): section positivity survives the real
+          ladder — λ_min of the section is positive on 16/16 frame windows
+          up to α = 6.28, half of them where the symbol infimum is
+          negative — and the net α-balance shows only a poly-log deficit
+          (α^−1.57, uniform in D) instead of collapse, exactly decomposed
+          into two repairable steps (Rayleigh + CBS, nothing in γ); one
+          link honestly refuted (the odd-sector Hankel term). T122 (
           <span className="font-mono text-slate-300">
-            wide_window_probe.py
+            net_balance_repair_probe.py
           </span>
           ) running.
         </p>

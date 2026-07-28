@@ -1,3 +1,106 @@
+# 2026-07-28 (III) — Teil 121 (delegiert, die weite-Fenster-Frage — Vertrag WIDE.WINDOW): wide_window_probe.py — **WIDE-RESTRUCTURED** — DIE σ_z-ROUTE ÜBERLEBT DIE ECHTE LEITER ALS SEKTIONS-AUSSAGE UND STIRBT ALS SYMBOL-AUSSAGE, UND DIE NETTO-α-BILANZ NENNT EIN EINZIGES POLY-LOG-DEFIZIT: λ_min(T_h(σ_z)) ist bei der Frame-eigenen Auflösung POSITIV auf 16/16 Fenstern der echten Leiter (n = 7…283303, α = 0.985…6.277, h = 29…107790) — davon 8 Fenster mit inf σ_z < 0, dort sitzt der Sektions-Eigenwert bei 0.64–3.23×|inf σ_z| auf der POSITIVEN Seite (dichte Zeilen shifted-Cholesky-ZERTIFIZIERT, große Zeilen FFT-Lanczos als MESSUNG etikettiert: ein Ritz-Wert ist eine Oberschranke und kann Positivität nur widerlegen); die Christoffel-Schranke (Szegő/Grenander–Szegő Kap. 5 + Montgomery–Vaughan/Nikolskii-Dip-Budget) zertifiziert den Sektions-Boden auf 8/16 Zeilen bis α = 3.446 (Schärfe 0.20–0.76) und reißt, weil die Dip-Zahl ~ e^{2.41α} (Fit) gegen den Budget-Faktor h läuft — obwohl jeder einzelne Dip nur 0.156–0.720 einer Fejér-Breite ist; DIE KERNZAHL: **SUPPLY/ε_c ~ D^{−0.177±0.096}·α^{−1.565±0.135}** — die Einzelglieder fallen wie T120 (E4) es sah (1−γ² ~ α^−0.79, λ_min(A_z) ~ α^−1.07, ‖y‖² ~ α^−5.63 ⇒ SUPPLY ~ α^−7.49), aber der BEDARF fällt fast genauso schnell (α^−5.93): 79% des α-Abfalls war der Bedarfs-Abfall selbst, netto bleiben ein bis zwei Potenzen (Refit pro Auflösung −1.88…−1.62 — eine SPANNE, keine Dezimalzahl), und in D ist die Bilanz UNIFORM; das Defizit zerlegt EXAKT (Identität auf 2.8e-14) in α^−1.02 Rayleigh-Schritt + α^−0.51 CBS-Schritt + α^−0.04 (ε_f-Verwurf) — NICHTS davon in γ, und der Rayleigh-Schritt allein holt 65% zurück, wenn yᵀA_z y strukturell statt spektral abgeschätzt wird; NEU-WIDERLEGT: Link (5) λ_min(A_z) ≥ λ_min(T_hc(σ_z)) FALSCH auf 42/42 (Quotient 0.357–0.916) — A_z = Zᵀ(Toeplitz − HANKEL)Z, Grenander–Szegő trägt nur den Toeplitz-Teil; Ein-Vorzeichen 24/24 bei n_C = h/16 (Sicherheitsfaktor 1.68–3.38, uniform negativ; bei h/8 nur 21/24 — Zertifikate auf h/16 umgestellt, kostet nichts, denn δ ~ n_C^{+0.29}); FH-Abgleich ERGEBNISLOS UND DAS IST DAS ERGEBNIS (lokaler Ecken-Exponent driftet −0.008…+2.934 wo FH nur −0.120 zuließe); δ = 0.0126–0.1331 über 360 Zeilen ohne Ausreißer, κ_end ≥ 0.4688; Satz V5: DEFEKT-ZÄHLER BLEIBT 4, aber jeder Eintrag hat die Art gewechselt — 21/21, 22.8s, Sandbox
+# U1 SEKTIONS- STATT SYMBOL-POSITIVITÄT: die Kette braucht nicht inf σ_z > 0,
+#    sondern λ_min der SEKTION T_h(σ_z) — und auf der echten Leiter (Frame A,
+#    12945 zulässige Übergaben, 16 geometrisch gespreizte Tiefen-Fenster,
+#    M_frame = 118…431162, h = M/4 = 29…107790) ist die Sektion POSITIV auf
+#    16/16, während das Symbol-Infimum auf 8/16 negativ ist (bis −5.51 bei
+#    n = 283303); wo es negativ ist, liegt λ_min bei 0.64–3.23×|inf σ_z| auf
+#    der positiven Seite. Ehrlich getrennt: h ≤ 1700 dichte Zeilen mit
+#    shifted-Cholesky-ZERTIFIKAT (Wilkinson/Higham-Boden), darüber matrixfreies
+#    FFT-Lanczos als MESSUNG. Der MECHANISMUS quantifiziert: ein Polynom vom
+#    Grad h kann sich nicht unter die Fejér-Bandbreite 2π/h konzentrieren
+#    (Fejér 1900), und jeder Comb-Dip ist nur ρ_max = 0.156–0.720 einer
+#    Fejér-Breite — die klassische Adresse ist die CHRISTOFFEL-Funktion
+#    (Szegő 1939; Grenander–Szegő 1958 Kap. 5). Das Per-Dip-Momenten-Budget
+#    λ_min ≥ thr − Σ_j (thr+δ_j)·w_j·(h+1) ist ZERTIFIZIERT positiv auf 8/16
+#    Zeilen (bis α = 3.446, h = 1700; Schärfe 0.203–0.763) und reißt darüber:
+#    die Dip-Zahl wächst wie e^{+2.41α} (Fit, rms 0.511) gegen Ξ ~ 4e^α,
+#    und das Budget trägt einen Faktor h. (E3) ist damit von einer
+#    Symbol-Infimum-Forderung, die KEIN Leiter-Schritt erfüllt, auf ein
+#    SEKTIONS-LEMMA reduziert, das die Messung überall erfüllt: eine
+#    Christoffel-Unterschranke, die O(e^α) Fejér-unteraufgelöste Dips
+#    überlebt — eine Szegő/Fisher–Hartwig-Frage über den Kamm, keine
+#    Symbol-Frage mehr.
+# U2 DIE NETTO-α-BILANZ — DIE KERNZAHL DIESES TEILS: alle Faktoren auf
+#    demselben zweidimensionalen (D, α)-Hebel gemessen (14 Zonen × 3
+#    Auflösungen, 42 Zeilen). Die Glieder fallen: 1−γ² ~ α^−0.794±0.063,
+#    λ_min(A_z) ~ α^−1.068±0.061, ‖y‖² ~ α^−5.631±0.056 ⇒ SUPPLY ~
+#    α^−7.493±0.138. ABER der Bedarf ε_c fällt fast genauso schnell:
+#    α^−5.928±0.121 auf diesem Hebel (T116 zitierte −6.04) — 79% des
+#    α-Abfalls, den (E4) beklagt, ist der Bedarfs-Abfall selbst. Netto:
+#    SUPPLY/ε_c ~ D^{−0.177±0.096}·α^{−1.565±0.135}, gemessen
+#    4.86e-3…1.50e-1 über α = 0.98…6.31 — net-negativ in α um EIN
+#    Poly-Log der Zone (α^−1.57 = ((log n)/2)^1.57), aber UNIFORM IN D
+#    (der D-Exponent ist innerhalb der eigenen Bande null): Verfeinern
+#    hilft nicht und schadet nicht. Der Exponent ist nur auf ±0.26 stabil
+#    (Refit pro Auflösung: −1.88…−1.62) — die ehrliche Aussage ist „ein
+#    bis zwei Potenzen“, keine Dezimalzahl. DIE ZERLEGUNG IST EXAKT:
+#    yᵀSy/SUPPLY = r_ray·r_cbs/(1−γ²) auf 2.84e-14, also splittet das
+#    Defizit OHNE REST in α^−1.016 Rayleigh-Schritt (λ_min(A_z) auf einem
+#    y, das nirgends der Minimal-Eigenvektor ist; Slack 1.29–13.19),
+#    α^−0.511 CBS-Schritt (Slack 3.42–16.67) und α^−0.039 (ε_f-Verwurf) —
+#    NICHTS davon liegt im Wert von γ. Der benannte Umbau: yᵀA_z y
+#    STRUKTURELL statt spektral abschätzen (y ist der Oszillations-Anteil
+#    der Lösung, kein beliebiger Vektor) — das allein holt 65% des
+#    Defizits zurück, der CBS-eigene Slack (α^0.51) deckt den Rest.
+#    NEU-WIDERLEGT auf dem Weg: Link (5) λ_min(A_z) ≥ λ_min(T_hc(σ_z))
+#    ist FALSCH auf 42/42 Zeilen (Quotient 0.357–0.916, α-Drift
+#    −0.0602±0.0220) — strukturell, nicht numerisch: A_z =
+#    Zᵀ(Toeplitz − HANKEL)Z, und Grenander–Szegő überträgt nur den
+#    geraden Toeplitz-Teil; der Reflexions-Hankel-Term ist nicht
+#    vorzeichen-definit. Ein Glied, das T120 als KLASSISCH führte, war
+#    keines — ein sichtbar gemachter Defekt, kein neuer.
+# U3 (E1) ECKEN-VORZEICHEN + FISHER–HARTWIG: der Ein-Vorzeichen-Lauf der
+#    Inkremente deckt die Ecken-Region der Zertifikate auf 24/24 (Zone,
+#    Auflösung)-Zeilen bei n_C = h/16 (Lauf/h = 0.2100–0.4229 gegen
+#    benötigte 0.1250 — Sicherheitsfaktor 1.68–3.38, Vorzeichen uniform
+#    NEGATIV); bei der T119/T120-Konvention h/8 nur 21/24. α-Slope von
+#    Lauf/h: −0.0258±0.0042 (Fit) — linear extrapoliert wäre die h/16-Marge
+#    erst bei α ≈ 11.7 erschöpft (EXTRAPOLATION, keine Vorhersage). Der
+#    FH-ABGLEICH IST ERGEBNISLOS, UND DAS IST DAS ERGEBNIS: der lokale
+#    Exponent der Ecken-Zeile von T^{-1} driftet um −0.0076…+2.9339
+#    zwischen frühem und spätem Fenster, wo die log-korrigierte FH-Form
+#    (j^−1 log^−2 j) nur −0.1202 zuließe — die Ecke ist bei erreichbarem h
+#    in KEINEM asymptotischen Potenzregime, und ein aus diesen Zahlen
+#    zitierter FH-Exponent wäre ein Fit im Kostüm einer Struktur. Was der
+#    Block liefert: die No-Cancellation-Ratio 4.6e-8–7.1e-5 (v_i überlebt
+#    eine Auslöschung von vier Größenordnungen) erledigt, dass (E1) NIE
+#    ein Vorzeichenmuster-Argument sein kann; und (E1′) ist als explizite
+#    Kopf-gegen-Schwanz-Ungleichung ausgeschrieben (Kopf-Anteil
+#    1/(1+1.63)…1/(1+11.73) bei J = h/16), mit dem Schwanz-Exponenten als
+#    der Unbekannten, die eine Widom-Abschätzung liefern muss.
+# U4 (E2) + SATZ V5: der Paarungsquotient über die volle Leiter — 360
+#    Zeilen, n = 7…299983, drei Ecken-Anteile — bleibt in 0.01258…0.13313,
+#    IMMER unter 1, kein Ausreißer; R = 0.94386–1.03485, κ_end ≥ 0.46879;
+#    δ ~ n_C^{+0.29} (Fit): Halbieren von n_C VERBESSERT κ_end, also
+#    kosten die h/16-Zertifikate nichts. Vorzeichen-Anteil nach Fraktion:
+#    1/16: 120/120 rein, 1/8: 95/120, 1/4: 3/120 — größte verfügbare
+#    Fraktion 0.076–0.263. SATZ V5: 19 Glieder (Identitäten (1)–(3), (6),
+#    (10); zertifiziert (7′′), (9), Cholesky-Böden; klassisch (5′), (11);
+#    gemessen/Fit (4), (7′), (8), (19); WIDERLEGT: (5)). DEFEKT-ZÄHLER
+#    BLEIBT 4 (Ziel < 3 NICHT erreicht — der ehrliche Grund ist mehr wert
+#    als die Zahl), aber jeder Eintrag hat die Art gewechselt: (E3) →
+#    (E3*) Sektions-Lemma (Christoffel-Unterschranke über O(e^α)
+#    Fejér-unteraufgelöste Dips + der Hankel-Term als zweiter Teil);
+#    (E4) → (E4*) EIN benanntes Poly-Log (α^−1.57, D-uniform; Adresse:
+#    der Rayleigh-Schritt, strukturell statt spektral); (E1)/(E2)
+#    unverändert in der Art, aber mit Adressen (Ecken-Widom bzw. diskrete
+#    Gradienten-Abschätzung) und Zertifikaten bei h/16. → T122 (läuft):
+#    NET.BALANCE.REPAIR (net_balance_repair_probe.py) — die
+#    Hankel-Reparatur (Link-5-Ersatz), der strukturelle Rayleigh-Schritt
+#    (y ist hochband-lastig per Konstruktion), die neue Netto-Bilanz,
+#    Satz V6.
+# Serie (XII)–(CXXXII): 121 Proben, 3037/3037 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Szegő 1939 /
+# Grenander–Szegő 1958 Kap. 5 (Christoffel-Funktionen), Fejér 1900,
+# Montgomery–Vaughan 1974 / Selberg-Large-Sieve / Nikolskii (obere
+# Richtung), Widom 1974 / Fisher–Hartwig, Böttcher–Silbermann 1999,
+# Trench 1964 / Gohberg–Semencul, Gantmacher–Krein 1950 / Karlin 1968,
+# Yserentant 1986 / Brandt 1977 (CBS), Haynsworth 1968 / Albert 1969
+# (Schur), Cauchy–Schwarz, Chebyshev 1852 / Mertens, Weil 1952,
+# Cholesky / Wilkinson 1968 / Higham 2002) zitiert; Sandbox ohne
+# Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-28 (II) — Teil 120 (delegiert, die Harnack-Ungleichung — Vertrag HARNACK): harnack_probe.py — **HARNACK-EXPLAINED** — DER HARTE KERN IST JETZT BEWEISFÖRMIG, UND DIE NEBEN-DEFEKTE SIND SCHÄRFER UND SCHLECHTER: R ≈ 1 ist keine Konstante, sondern PARITÄTS-SYMMETRIE — a_j und w_j sind die ungerade und die gerade Hälfte EINER Inkrement-Folge v desselben u, um genau eine feine Zelle verschoben; gegeben ein Vorzeichen auf den Ecken-Zellen (gemessen auf 100% von ihnen, 3915 Zeilen) ist die Differenz der Paritäts-Summen eine Summe über DISJUNKTE Nachbar-Paare, also |R−1| ≤ Σ|v_{2j+1}−v_{2j}|/Σ|v_{2j}| ≤ 0.04745 UNBEDINGT (Zertifikat C1, dominiert die Messung ausnahmslos auf 3112/3112 vorzeichen-reinen Zeilen, zerfällt wie n_C^−0.58); R ∈ [0.9098, 1.1011] im Ecken-Regime, κ_end ≥ 0.480827 für n_C ≥ 8, und die PRO-ZELLEN-Harnack-Ungleichung ist FALSCH (|a_j/w_j| bis 4.8e3) — nur die summierte Form gilt, genau die bewiesene; ZWEI NEGATIV-Resultate, die zählen: der 40×40-Ecken-Block von T⁻¹ ist eintragsweise positiv (18/18 Zeilen, Checkerboard exakt widerlegt), aber NICHT TP2 (Minor-Anteil 0.51–0.88 — Gantmacher–Krein zu), und K⁻¹ des exakten Inkrement-RWP Kv = s − u₀G1 (Residuum 2.4e-12) ist NICHT eintragsweise positiv (Anteil 0.44–0.51, min −333) — das diskrete Maximum-Prinzip ist nicht unbewiesen, sondern FALSCH (u monoton an der Ecke, oszillatorisch im Bulk: der Kamm); das α-AUDIT macht D2 TOTAL: das Frame-Fenster ist kein freier Parameter (α_o = u_k/2 + O(D), 732 Übergaben, nur 1.4% mit α ≤ 2), B = −1.0474 ist universell (Spread 1.2e-6), das D₀-Kriterium hält auf exakt 3/1492 Zonen (alle n ≤ 4, α* = 0.693 — UNTER der ersten zulässigen Übergabe n = 7); γ hat eine exakte Symbol-Formel (σ_cσ_z − τ² = f(θ)f(θ+π), 3.9e-16), aber 1−γ² FÄLLT mit α (Slope −0.297 ± 0.013, Bereich 0.079–0.283); Satz V4: 18 Glieder, DEFEKT-LISTE 4 (war 3) — der harte Kern wurde viel leichter, die Neben-Defekte schärfer — 21/21, 8.5s, Sandbox
 # R1 DAS α-AUDIT — D2 IST NICHT GEGENSTANDSLOS, SONDERN TOTAL: das Frame-
 #    Fenster ist kein freier Parameter — in Frame A ist die Übergabe an die

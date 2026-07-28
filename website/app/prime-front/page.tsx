@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–120 · 3016 sandbox checks
+            Research diary · Teile 11–121 · 3037 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1682,8 +1682,16 @@ function ProgramStatusCallout() {
         provably false — but the honest defect count rises 3 → 4: the
         frame&apos;s window grows with the zone, so D₀ covers almost
         nothing of the real ladder, and the CBS constant decays with the
-        width; T121 (wide_window_probe.py) is running. Milestone:
-        3016/3016 checks. Not almost-RH. This is not RH evidence.
+        width. T121 (WIDE-RESTRUCTURED) then runs the σ_z route against
+        the real ladder: it survives as a SECTION statement — positive
+        16/16 up to α = 6.28, half of them where the symbol infimum is
+        negative — and dies as a symbol statement; the net α-balance
+        shows only a poly-log deficit (α^−1.57, uniform in D) instead of
+        collapse, exactly decomposed into two repairable steps (Rayleigh
+        + CBS, nothing in γ), and one link of the chain was honestly
+        refuted (the odd-sector Hankel term); both repairs are under
+        test in T122 (net_balance_repair_probe.py, running). Milestone:
+        3037/3037 checks. Not almost-RH. This is not RH evidence.
       </p>
     </aside>
   );

@@ -85,7 +85,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$120$ preregistered probes with $3016$ machine checks, which localized the residual object. That
+$121$ preregistered probes with $3037$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -225,7 +225,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots118$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots121$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -804,7 +804,7 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T120)}\label{sec:certification}
+\section{The certification arc (T102--T121)}\label{sec:certification}
 % =====================================================================
 The last eighteen parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
@@ -2110,14 +2110,152 @@ unproved but questionable in the direction that matters.
 \end{enumerate}
 \emph{Honest movement:} the one hard statement got much easier --- a two-line implication
 with one classical hypothesis --- and the side defects got sharper and both got worse; the
-count went three $\to$ four, and that is the honest direction.
+count went three $\to$ four, and that is the honest direction.\\[3pt]
+\emph{Disposition after T121:} (E3) is retired \emph{as stated} --- the chain link is a
+section eigenvalue, not a symbol infimum, and the section stayed positive on the whole real
+ladder --- and is replaced by the section lemma (E3$^*$) with the Hankel term; (E4) is
+replaced by one named poly-log, (E4$^*$); (E1) and (E2) keep their kind, with the corner
+certificates restated at $n_C=h/16$ (T121 found the $h/8$ convention used here too wide);
+and the symbol-to-section transfer this list implicitly relied on is refuted (the odd
+sector's Hankel term). The next subsection reports the measurements.
 \end{keybox}
 
-\noindent T121 (\texttt{wide\_window\_probe.py}, contract \texttt{WIDE.WINDOW} --- section
-positivity instead of symbol positivity (the Christoffel-function address), the net
-$\alpha$-balance of the chain (the demand falls like $\alpha^{-6}$ --- does the chain close
-despite the decaying links?), the Fisher--Hartwig corner comparison, and a theorem candidate
-V5) was running at the time of writing and is \emph{not} reported here.
+\subsection{Section positivity survives the real ladder; the net balance names one poly-log (T121)}
+T121 (\texttt{wide\_window\_probe.py}, contract \texttt{WIDE.WINDOW}, $21/21$,
+\textsc{wide-restructured}) asks the question the T120 defect list left sharpest: does the
+$\sigma_z$ route survive the \emph{real} ladder --- the one whose window grows with the zone,
+$\alpha_o=u_k/2$? It does, but not as the statement T120 wrote down. The route survives as a
+\emph{section} statement and dies as a \emph{symbol} statement; the net $\alpha$-balance of the
+whole chain loses only a single poly-log to a demand that itself falls like $\alpha^{-6}$, and
+that poly-log splits without residue into two repairable steps; one link of the chain, filed by
+T120 as classical, is honestly refuted on the way.
+
+\emph{Section positivity instead of symbol positivity.} The chain never needed
+$\inf\sigma_z>0$; it needs $\lambda_{\min}$ of the \emph{section} $T_h(\sigma_z)$ at the frame's
+own resolution. Over $16$ frame windows of the real ladder ($n=7\ldots283\,303$,
+$\alpha=0.985\ldots6.277$, $M_{\mathrm{frame}}=118\ldots431\,162$, $h=29\ldots107\,790$) the
+section is \emph{positive on $16/16$} while the symbol infimum is negative on $8$ of them ---
+and where it is negative, the section eigenvalue sits at $0.64$--$3.23\times|\inf\sigma_z|$ on
+the \emph{positive} side. Direction kept honest: the dense rows ($h\le1700$) carry a
+shifted-Cholesky certificate with the Wilkinson--Higham floor; the large rows are matrix-free
+FFT-Lanczos \emph{measurements} (a Ritz value is an upper bound for $\lambda_{\min}$, so it can
+refute positivity but never prove it). The mechanism is quantified at its classical address ---
+the Christoffel function (Szeg\H{o} $1939$; Grenander--Szeg\H{o} $1958$, Ch.~5): a degree-$h$
+polynomial cannot concentrate below the Fej\'er bandwidth $2\pi/h$, and every comb dip is only
+$0.156$--$0.720$ of one Fej\'er width. The certified per-dip moment budget
+$\lambda_{\min}\ge\mathrm{thr}-\sum_j(\mathrm{thr}+\delta_j)\,w_j\,(h+1)$ is positive on $8/16$
+rows (up to $\alpha=3.446$, sharpness $0.20$--$0.76$) and tears above, for a computed reason:
+the dip \emph{count} grows like $e^{2.41\alpha}$ (a fit) against the budget's factor $h$. So
+(E3) is reduced from a symbol-infimum requirement that no ladder step satisfies to a
+\emph{section lemma} the measurement satisfies everywhere: a Christoffel lower bound surviving
+$O(e^{\alpha})$ Fej\'er-subresolved dips --- a Szeg\H{o}/Fisher--Hartwig question about the
+comb, no longer a symbol question.
+
+\emph{The net $\alpha$-balance --- the core number of the part.} Every factor of the chain is
+measured on one two-dimensional $(D,\alpha)$ lever ($14$ zones $\times$ $3$ resolutions, $42$
+rows). The individual links do fall with $\alpha$, exactly as T120's (E4) recorded:
+$1-\gamma^2\sim\alpha^{-0.79}$, $\lambda_{\min}(A_z)\sim\alpha^{-1.07}$,
+$\|y\|^2\sim\alpha^{-5.63}$, so the assembled supply falls like $\alpha^{-7.49}$. But the
+\emph{demand} falls almost as fast ($\alpha^{-5.93}$ on this lever; T116 quoted $-6.04$): $79\%$
+of the decay (E4) complained about is the demand's own. What is left is the only $\alpha$
+deficit of the chain,
+\[
+\mathrm{SUPPLY}/\varepsilon_c\;\sim\;D^{-0.177\pm0.096}\,\alpha^{-1.565\pm0.135}
+\]
+(fits; the measured ratio is $4.9\times10^{-3}$--$0.15$ over $\alpha=0.98$--$6.31$) ---
+net-negative in $\alpha$ by one to two powers (the refit per resolution lands in
+$-1.88\ldots-1.62$ --- a range, not a decimal) but \emph{uniform in $D$}: the $D$ exponent is
+zero within its own band, so refining the resolution neither helps nor hurts. The deficit is
+then decomposed \emph{exactly}: the identity
+$y^{\mathsf T}Sy/\mathrm{SUPPLY}=r_{\mathrm{ray}}\,r_{\mathrm{cbs}}/(1-\gamma^2)$ holds to
+$2.8\times10^{-14}$, so $\alpha^{-1.57}$ splits without residue into $\alpha^{-1.02}$ from the
+\emph{Rayleigh step} (using $\lambda_{\min}(A_z)$ on a $y$ that is nowhere near the minimal
+eigenvector; measured slack $1.29$--$13.19$), $\alpha^{-0.51}$ from the CBS step (measured slack
+$3.42$--$16.67$) and $\alpha^{-0.04}$ from discarding $\varepsilon_f$ --- \emph{nothing} of it
+sits in the value of $\gamma$. The named rebuild is therefore structural, not a new constant:
+bounding $y^{\mathsf T}A_zy$ directly (legitimate, because $y$ is the oscillation part of the
+solution, not an arbitrary vector) recovers $65\%$ of the deficit by itself, and the CBS step's
+own slack covers the rest.
+
+\emph{Link (5) refuted: the Hankel term.} The section comparison
+$\lambda_{\min}(A_z)\ge\lambda_{\min}(T_{h_c}(\sigma_z))$ --- which T120's assembly used as a
+classical Grenander--Szeg\H{o} transfer --- is \emph{false} on $42/42$ rows (ratio
+$0.357$--$0.916$, drifting with the window). The reason is structural and was hiding in the odd
+coordinates: $A_z=Z^{\mathsf T}(\mathrm{Toeplitz}-\mathrm{Hankel})Z$, and Grenander--Szeg\H{o}
+carries the even Toeplitz part only; the reflection Hankel term is not sign-definite. A defect
+made visible rather than created: the section lemma (E3$^*$) must be about $A_z$, not about
+$T_{h_c}(\sigma_z)$.
+
+\emph{The corner sign, and the inconclusive Fisher--Hartwig comparison.} The one-sign run of
+the increments covers the corner region the (C1)/(C2) certificates need on $24/24$ (zone,
+resolution) rows at $n_C=h/16$ (run share $0.21$--$0.42$ of the section against the required
+$0.125$ --- a safety factor of $1.68$--$3.38$, the sign uniformly negative); at the $h/8$
+convention T119/T120 used it holds on only $21/24$, so the certificates are restated at $h/16$
+--- which costs nothing, because $\delta$ grows like $n_C^{+0.29}$ (a fit): halving $n_C$
+\emph{improves} $\kappa_{\mathrm{end}}$. The $\alpha$-slope of the run share is
+$-0.0258\pm0.0042$ (a fit); extrapolated linearly, the $h/16$ margin would be exhausted only
+near $\alpha\approx11.7$ (an extrapolation, not a prediction). The Fisher--Hartwig comparison
+itself is \emph{inconclusive, and that is the result}: the local exponent of the corner row of
+$T^{-1}$ drifts by $-0.008\ldots+2.934$ between dyadic windows where the log-corrected FH shape
+would allow only $-0.120$ --- the corner is in no asymptotic power regime at any resolution a
+factorisation reaches, and an FH exponent quoted from these numbers would be a fit masquerading
+as a structure. What the block does deliver: the no-cancellation ratio
+$4.6\times10^{-8}$--$7.1\times10^{-5}$ settles that (E1) can \emph{never} be a sign-pattern
+argument, and the minimal sufficient statement (E1$'$) is written out as an explicit
+head-versus-tail inequality (head share $1/(1+1.63)$ to $1/(1+11.73)$ of the mass at $J=h/16$),
+with the tail exponent as the one unknown a Widom-type estimate must supply.
+
+\emph{$\delta$ over the full ladder.} The pairing quotient stays in $0.0126$--$0.1331$ over
+$360$ rows spanning $n=7\ldots299\,983$ and three corner fractions --- always below $1$, no
+outlier --- so $\kappa_{\mathrm{end}}\ge1/(2+\delta)\ge0.4688$ everywhere measured, and
+$\delta\sim n_C^{+0.29}$ confirms the $h/16$ restatement is free.
+
+\begin{keybox}[The theorem after T121 --- the count stays four, every entry changes kind]
+\emph{Candidate (V5).} Nineteen links: the identities (Schur/Haynsworth, CBS/Yserentant, the
+T120 symbol identity, the aliasing form of $\sigma_z$, $\kappa_{\mathrm{end}}=1/(1+R)$), the
+certified pieces (the pairing certificate (C1); the shifted-Cholesky section floors; the
+Christoffel/Fej\'er per-dip budget up to $\alpha=3.446$), the classical steps (CBS + Rayleigh,
+lower; Cauchy--Schwarz, lower), the measured/fitted entries (section positivity on the ten
+Lanczos rows; the one-sign run; the net balance) --- and one link \emph{refuted}: (5), the
+symbol-to-section transfer, killed by the odd sector's Hankel term.\\[3pt]
+\emph{The defect list --- four items, each with a changed kind:}
+\begin{enumerate}[leftmargin=1.6em]
+\item[\textbf{(E1)}] \emph{one sign of the corner increments} --- unchanged in kind, sharpened
+twice: the certificates move to $n_C=h/16$ (clean on all rows there, only $21/24$ at $h/8$; the
+move is free since $\delta\sim n_C^{+0.29}$), and (E1$'$) is now an explicit head-versus-tail
+inequality whose tail exponent a corner-localised Fisher--Hartwig/Widom estimate must supply
+--- the FH comparison is inconclusive at reachable $h$, and no sign-pattern argument can ever
+do the job (no-cancellation ratio $4.6\times10^{-8}$--$7.1\times10^{-5}$);
+\item[\textbf{(E2)}] \emph{a uniform bound on the pairing ratio} $\delta$ --- unchanged: no
+outlier over $360$ rows to $n=299\,983$, $\delta=0.0126$--$0.1331$, any finite $\delta$
+suffices;
+\item[\textbf{(E3$^*$)}] \emph{the section lemma, with the Hankel term} (replaces (E3)) ---
+$\inf\sigma_z>0$ at frame resolution is \emph{retired as a requirement}: the chain link is a
+section eigenvalue, positive on $16/16$ frame windows up to $\alpha=6.277$, $h=118\,115$,
+including $8$ windows with a negative symbol infimum. What replaces it is strictly smaller but
+has two parts: (a) a Christoffel-function lower bound surviving $O(e^{\alpha})$
+Fej\'er-subresolved dips (the certified budget delivers it for $\alpha\le3.446$ and tears
+above); (b) the odd sector's Hankel term, which refutes link (5) as stated --- the lemma must
+be about $A_z=Z^{\mathsf T}(\mathrm{Toeplitz}-\mathrm{Hankel})Z$, not about
+$T_{h_c}(\sigma_z)$;
+\item[\textbf{(E4$^*$)}] \emph{one residual poly-log in $\alpha$} (replaces (E4)) --- the net
+balance carries $\alpha^{-1.565\pm0.135}$ and $D^{-0.177\pm0.096}$: net-negative by one to two
+powers of $\alpha$ (per-resolution refits $-1.88\ldots-1.62$), \emph{uniform in $D$}. Strictly
+better than (E4) as T120 wrote it: $79\%$ of the supply's $\alpha$-decay is the demand's own,
+and the deficit sits in the Rayleigh step ($\alpha^{1.02}$) and the CBS step ($\alpha^{0.51}$),
+none of it in $\gamma$ --- the address is a structural lower bound for
+$y^{\mathsf T}A_zy$, which alone recovers $65\%$.
+\end{enumerate}
+\emph{Honest movement:} the counter stays at four --- the target of getting back below three
+was not met, because the residual $\alpha$ deficit is real --- but every entry changed kind,
+and one link recorded as classical was found refuted, a defect made visible rather than
+created.
+\end{keybox}
+
+\noindent T122 (\texttt{net\_balance\_repair\_probe.py}, contract \texttt{NET.BALANCE.REPAIR}
+--- the Hankel repair (a replacement for link (5)), the structural Rayleigh step ($y$ is
+high-band by construction), the reassembled net balance, and a theorem candidate V6) was
+running at the time of writing and is \emph{not} reported here.
 
 % =====================================================================
 \section{The kill list}\label{sec:kills}
@@ -2254,7 +2392,12 @@ $3.9\times10^{-16}$; the pairing certificate (C1) --- a proved implication whose
 hypothesis is one sign of the corner increments, giving $|R-1|\le0.04745$ and
 $\kappa_{\mathrm{end}}\ge0.480827$ for $n_C\ge8$; the frame identity
 $\alpha_o=u_k/2+O(D)$ over all $732$ handovers; and the universal-$B$ evaluation of the
-$D_0$ criterion on all $1492$ zones, $\alpha^*=0.693$).\\[3pt]
+$D_0$ criterion on all $1492$ zones, $\alpha^*=0.693$), and the T121 wide-window package
+(the shifted-Cholesky section floors on the dense frame windows; the Christoffel/Fej\'er
+per-dip budget, positive on $8/16$ frame windows up to $\alpha=3.446$ at sharpness
+$0.20$--$0.76$; and the exact deficit identity
+$y^{\mathsf T}Sy/\mathrm{SUPPLY}=r_{\mathrm{ray}}r_{\mathrm{cbs}}/(1-\gamma^2)$ to
+$2.8\times10^{-14}$).\\[3pt]
 \textbf{Measured} (holds on the resolved windows; no uniform constant): $\rho_-$; the ratio
 $r=0.0053$--$0.1814$ and $\hat r<1$ at all $92$ resolution points; $\omega=0.2366$--$0.7531$; the
 strict odd-channel margin $\lambda_{\min}(Q|_{\mathrm{odd}})=1.4\times10^{-5}$--$5.1\times10^{-2}$; the
@@ -2291,7 +2434,17 @@ the sign purity $1.0000$ on all $3915$ rows with $R\in[0.9098,1.1011]$, the per-
 $|a_j/w_j|$ up to $4.8\times10^{3}$ (the per-cell inequality is false), the (C1) decay
 $n_C^{-0.58\pm0.05}$ (fit), the comb-supremum incoherence $0.038$--$0.603$ of $\Xi$ (a grid
 supremum), the large-sieve floor usable on $2/6$ zones, and the $\gamma$ drift
-$1-\gamma^2=0.079$--$0.283$ with fitted slope $-0.297\pm0.013$ in $\alpha$; every scaling
+$1-\gamma^2=0.079$--$0.283$ with fitted slope $-0.297\pm0.013$ in $\alpha$; the T121
+measurements: section positivity on all $16$ frame windows to $\alpha=6.277$ (the ten large
+rows Lanczos measurements, upper bounds by construction), the net balance
+$\mathrm{SUPPLY}/\varepsilon_c\sim D^{-0.177\pm0.096}\alpha^{-1.565\pm0.135}$ with
+per-resolution refits $-1.88\ldots-1.62$ (fits), the link-(5) ratio $0.357$--$0.916$ on
+$42/42$ rows (the Hankel refutation), the Rayleigh and CBS slacks $1.29$--$13.19$ and
+$3.42$--$16.67$, the one-sign run $24/24$ at $n_C=h/16$ against $21/24$ at $h/8$ (run-share
+slope $-0.0258\pm0.0042$, a fit), the Fisher--Hartwig drift $-0.008\ldots+2.934$ against the
+allowed $-0.120$ (inconclusive, declared as the result), the no-cancellation ratio
+$4.6\times10^{-8}$--$7.1\times10^{-5}$, and the pairing quotient $\delta=0.0126$--$0.1331$
+over $360$ rows ($\kappa_{\mathrm{end}}\ge0.4688$, $\delta\sim n_C^{+0.29}$); every scaling
 exponent quoted in this document.\\[3pt]
 \textbf{Hypothesis input / classical} (used, named, not proved here): Kneser, Witt/Eichler, Shimura,
 Waldspurger/Baruch--Mao, Cohen, Weil--Guinand, Bombieri, Yoshida, Connes--Consani, Douglas,
@@ -2386,7 +2539,18 @@ Since T120 the mountain is four named defects --- one sign of the corner increme
 (a corner-localised Fisher--Hartwig estimate), a uniform bound on the pairing ratio (a
 discrete gradient estimate), $D_0$ for the whole ladder, and the $\alpha$-dependence of
 $\gamma$ --- plus the \textbf{[SUPPORT]} obstruction; the chain contains no zeta input
-anywhere. T121 (\texttt{wide\_window\_probe.py}) was running at the time of writing.
+anywhere. T121 (\texttt{wide\_window\_probe.py}) then ran the $\sigma_z$ route against the
+real ladder and restructured two of the four: the route survives as a \emph{section}
+statement ($\lambda_{\min}(T_h(\sigma_z))>0$ on $16/16$ frame windows to $\alpha=6.277$,
+half of them where the symbol infimum is negative; the certified Christoffel budget reaches
+$\alpha=3.446$) and dies as a symbol statement, and the net $\alpha$-balance of the whole
+chain is one poly-log ($\alpha^{-1.57}$, uniform in $D$), split exactly into the Rayleigh
+and CBS steps with nothing in $\gamma$ --- while one link recorded as classical was refuted
+(the odd sector's Hankel term). Since T121 the mountain is the same four defects changed in
+kind --- the corner sign (now a head-versus-tail inequality at $n_C=h/16$), the pairing
+bound, the section lemma with the Hankel term, and one poly-log of $\alpha$-slack with a
+structural address --- plus the \textbf{[SUPPORT]} obstruction. T122
+(\texttt{net\_balance\_repair\_probe.py}) was running at the time of writing.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -2438,18 +2602,18 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T120}\label{app:index}
+\section{Probe index, diary parts T11--T121}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $110$ parts T11--T120 that the current diary file records
-($111$ runs --- T104 was a double run with two independent arms --- and $2824$ green checks); the ten
+load-bearing artefact. The index covers the $111$ parts T11--T121 that the current diary file records
+($112$ runs --- T104 was a double run with two independent arms --- and $2845$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T120: \textbf{$120$ probes, $3016/3016$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T121
-(\texttt{wide\_window\_probe.py}, contract \texttt{WIDE.WINDOW}) was still running
+diary at T121: \textbf{$121$ probes, $3037/3037$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T122
+(\texttt{net\_balance\_repair\_probe.py}, contract \texttt{NET.BALANCE.REPAIR}) was still running
 when this document was written and is deliberately absent.
 
 {\footnotesize
@@ -2576,6 +2740,7 @@ T117 & \texttt{\scriptsize epsilon\_\allowbreak theorem} & the one inequality th
 T118 & \texttt{\scriptsize symbol\_\allowbreak lemmas} & the three lemmas against their classical addresses: saturation is an \emph{identity} here ($\varepsilon_c-\varepsilon_f=y^{\mathsf T}Sy$, $\beta\in[0.252,0.336]$); the $S$-symbol is a weighted \emph{harmonic} aliasing mean, vacuous on the comb --- rescued by the CBS shift onto the oscillation Gram, whose \emph{arithmetic} mean suppresses the comb quadratically ($\inf\sigma_z>0$ on $7/14$ windows; on the $15\,680$-point FFT lever the floor rises logarithmically and crosses zero on $3/5$ zones --- under-resolved, not obstructed); the corner exponent drifts ($\log$ is the boundary of all powers) and the chain is repaired on $\|y\|^2$; one analytic statement remains --- (H2), $\|y\|^2\ge c\,D^{1.75}$ & TWO-OF-THREE & 36/36\\
 T119 & \texttt{\scriptsize oscillation\_\allowbreak mass} & the arithmetic half closes as a theorem: the comb symbol in closed form (one cosine per prime-power atom; parity rule under $\sigma_z$), the atom-count bound $|\sigma_z^{\mathrm{comb}}|\le\Xi(\alpha)$ uniform in $D$, the archimedean growth \emph{identity} $\inf\sigma_z^{\mathrm{arch}}=\log(1/D)+B$ with universal $B=-1.0474$ --- hence $\inf\sigma_z>0$ for all $D<D_0(\alpha)=e^{-(\Xi(\alpha)+B)}$, deep-verified ($M$ up to $65\,536$, matrix-free); the large sieve certifies one window's section \emph{without} pointwise positivity ($+0.396$ where $\inf\sigma_z=-0.349$) and dies structurally for $\alpha\ge2.5$ (a moment problem); the energy route to (H2) is proven empty (genuinely new content); and $\kappa_{\mathrm{end}}=1/(1+R)$ \emph{exactly} ($1.1\times10^{-16}$) --- one discrete Harnack inequality remains & ARITHMETIC-DONE & 27/27\\
 T120 & \texttt{\scriptsize harnack} & the Harnack core is proof-shaped: $a_j$ and $w_j$ are the odd/even half of \emph{one} increment sequence, offset by a single fine cell, so one sign of the corner increments gives $|R-1|\le\sum|v_{2j+1}-v_{2j}|/\sum|v_{2j}|\le0.04745$ \emph{unconditionally} (C1; the per-cell inequality is provably \emph{false}, $|a_j/w_j|$ up to $4.8\times10^{3}$); $R\in[0.9098,1.1011]$ on $3915$ rows, $\kappa_{\mathrm{end}}\ge0.480827$ for $n_C\ge8$; two structural routes refuted ($T^{-1}$ corner positive but not TP2; the discrete maximum principle false --- $u$ oscillates in the bulk); the $\alpha$-audit makes (D2) total ($\alpha_o=u_k/2$ by construction, $D_0$ holds on $3/1492$ zones, $\alpha^*=0.693$ below the first admissible handover); $\gamma$ gains an exact symbol identity but $1-\gamma^2$ falls with $\alpha$ (slope $-0.297\pm0.013$); theorem V4: $18$ links, defect list $3\to4$ & HARNACK-EXPLAINED & 21/21\\
+T121 & \texttt{\scriptsize wide\_\allowbreak window} & the $\sigma_z$ route survives the real ladder as a \emph{section} statement and dies as a symbol statement: $\lambda_{\min}(T_h(\sigma_z))>0$ on $16/16$ frame windows ($n=7\ldots283\,303$, $\alpha$ up to $6.277$, $h$ up to $107\,790$; $8$ with $\inf\sigma_z<0$, the section at $0.64$--$3.23\times|\inf\sigma_z|$ positive), the Christoffel/Fej\'er per-dip budget certified on $8/16$ up to $\alpha=3.446$ (each dip $0.156$--$0.720$ of one Fej\'er width; the dip count grows like $e^{2.41\alpha}$, a fit); the net balance $\mathrm{SUPPLY}/\varepsilon_c\sim D^{-0.18}\alpha^{-1.57}$ --- one poly-log, uniform in $D$, split exactly ($2.8\times10^{-14}$) into the Rayleigh ($\alpha^{-1.02}$) and CBS ($\alpha^{-0.51}$) steps, nothing in $\gamma$; link (5) refuted on $42/42$ (ratio $0.357$--$0.916$ --- the odd sector's Hankel term); one-sign $24/24$ at $n_C=h/16$ (only $21/24$ at $h/8$; certificates restated, free since $\delta\sim n_C^{+0.29}$); the FH comparison inconclusive at reachable $h$ (drift $-0.008\ldots+2.934$ against an allowed $-0.120$); $\delta=0.0126$--$0.1331$ over $360$ rows, $\kappa_{\mathrm{end}}\ge0.4688$; theorem V5: $19$ links, the defect count stays $4$ but every entry changes kind & WIDE-RESTRUCTURED & 21/21\\
 \end{xltabular}
 }
 
