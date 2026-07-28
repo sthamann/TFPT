@@ -43,9 +43,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 1200100,
+    bytes: 1206157,
     sha256:
-      "c3a26d8b45de3135be85b8a5f6bea7c36449b14d3ddfdf3bb8111088aefa1449",
+      "cef1417fd65dd4b7988574a622a98b6a9111fe8884361f15f3bd706c925b22d0",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
@@ -61,9 +61,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
     href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 1097841,
+    bytes: 1101773,
     sha256:
-      "5068ed4ac1ee5b7e039fd4f4aa58eaae38b0af422fcb7c154f1f485ce67b99bb",
+      "fb0a0876bf9a60084ab1d1cf18f42148da962f1b46f3fd476277470eefbbce5b",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
@@ -97,9 +97,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 1755955,
+    bytes: 1759120,
     sha256:
-      "87058832e5127a1ab3dc1e10621081d71739ba07b0e8edd0898c1ebfe3db9fbf",
+      "b7ea3c0a1f0d68b4d0cffd72afc1c3ec86372ea6f583f1922ce85f0bcf09f533",
     changelog:
       "Research contracts for the remaining interfaces: v_geo (scale anchor, [O]), G_net (metric inclusion, [C] closed modulo cited theorems), F_transfer (downstream transport, typed runnable solvers [C]).",
   },

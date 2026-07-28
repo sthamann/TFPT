@@ -81,15 +81,15 @@ out to be \emph{Hecke} data. It goes further than an analogy: the $E_8$ shell co
 $240\,\zeta(s)\zeta(s-3)$ as a Dirichlet series, and the lattice's self-duality gives its theta sum an
 exact functional equation whose fixed axis is the critical line --- a framework picture, stated as such,
 which the document opens with and then keeps at arm's length. This companion documents the line end to
-end. Ten modules are
-load-bearing and ledger-carried (\vref{v535}--\vref{v544}): Hecke from geometry on the $E_8$ census,
+end. Eleven modules are
+load-bearing and ledger-carried (\vref{v535}--\vref{v545}): Hecke from geometry on the $E_8$ census,
 the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, the matching-lemma / transport
 ledger package, and --- out of the second phase --- the margin-chain identities, the lumped
-$M$-matrix pair and the long-lag support structure. Everything beyond those ten is
-\emph{sandbox}: an exploratory program, run as
-$140$ preregistered probes with $3525$ machine checks, which localized the residual object. That
+$M$-matrix pair, the long-lag support structure and the Hardy-core identities. Everything beyond
+those eleven is \emph{sandbox}: an exploratory program, run as
+$141$ preregistered probes with $3547$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -241,7 +241,7 @@ here (the blue \texttt{[\,verification/\dots\,]} tag). Everything marked \sbx\ i
 no ledger row, no marker, and no authority. Section~\ref{sec:verified} is the only section that is
 entirely \ver.
 \item \textbf{Status markers are quoted, never upgraded.} The markers \mE\ \mC\ \mO\ \mX\ shown in
-Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v544}. This
+Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v545}. This
 document introduces no new markers and moves none.
 \item \textbf{Fits are declared as fits.} Every scaling law, slope, exponent and extrapolation quoted
 from the sandbox is a fit to finitely many measured windows and is labelled as such at the point of
@@ -266,7 +266,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T140: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T141: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -286,7 +286,12 @@ stripe distance $b\le16$ (T139), and finally that one inequality itself, which a
 \emph{exact finite core per zone} --- the telescope identity lifted to the form level, the spectral
 radius an exact eigenvalue of a closed-geometry covering kernel times a mass-plus-Dirichlet form,
 the checkerboard split replacing the $O(nb)$ Weyl steps by three $D$-independent ones, and all the
-$D$-dependence located in the geometry (T140)); Section~\ref{sec:status}
+$D$-dependence located in the geometry (T140), and finally the Hardy ingredient itself, which
+\emph{resists} but acquires an address: four exact identities put it in classical two-weight shape,
+the certified constant is not zone-uniform while the object it bounds is, the additive shape is dead
+as a shape by its own exact Weyl floor and the joint shape fails at the normalisation alone, so the
+rest list collapses to one closed conductance profile (T141, promoted together with T140 as
+\vref{v545})); Section~\ref{sec:status}
 is the status statement.
 
 % =====================================================================
@@ -371,7 +376,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the ten modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the eleven modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -501,13 +506,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: ten modules}\label{sec:verified}
+\section{The verified layer: eleven modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The ten modules and their ledger markers]
+\begin{keybox}[The eleven modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -523,6 +528,7 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v542} & \texttt{PRIME.MARGIN.IDENT.01} & margin-chain identities of phase 2 (per instance) & \mE\\
 \vref{v543} & \texttt{PRIME.MMATRIX.IDENT.01} & lumped $M$-matrix pair of phase 2 (per instance) & \mE\\
 \vref{v544} & \texttt{PRIME.LONGLAG.SUPP.01} & long-lag support structure of phase 2 (per instance) & \mE\\
+\vref{v545} & \texttt{PRIME.HARDY.IDENT.01} & Hardy-core identities of phase 2 (per instance) & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -775,6 +781,72 @@ assembled from it does not beat the margin (T137: $0$ of $35$ windows) and is no
 bracket is for the \emph{lumped comparison}, not for the target, whose entrywise inverse positivity at
 depth stays open; the envelope row closes a route, not the question, and moves no marker.
 Demko--Moss--Smith 1984 is cited as a model and \emph{not} applied --- the comparison is dense.
+\end{itemize}
+
+\subsection{The Hardy-core identities (\texorpdfstring{\vref{v545}}{v545})}\label{sec:v545}
+The identity block of the finite core: what the signed inequality \emph{is}, in closed form, and
+which two bound shapes are \emph{valid} on it \veri{v545\_hardy\_core\_identities.py} ($36$ checks,
+${\sim}1$\,s; promotion of T140 and T141 on $11$ frame-A windows, $n=8\ldots139$,
+$h=58\ldots285\le300$, core $m=57\ldots284$, $193$--$5102$ positive off-diagonal edges, $10$--$87$
+loaded stripes, $D=7.578\times10^{-3}\ldots2.388\times10^{-2}$ --- a factor $3.15$, so the last row
+is a comparison and not a single point --- exact $\rho(W)=0.997759$--$0.999981$; the explicit
+$n_e\times n_e$ signed Gram is formed only where $n_e\le900$).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The form lifting} \mE: with $M$ the edge--interval incidence matrix and
+$C=\mathrm{diag}(\sqrt\Delta)M$, the T139 telescope lifts from the \emph{entries} of the signed Gram
+to its \emph{form}, $\mathrm{Gram}=CHC^{\mathsf T}$ at $3.0\times10^{-15}$, hence
+$\mathrm{rank}(\mathrm{Gram})\le h-1$ (measured $57$--$183$ against $193$--$882$ edges); the
+unweighted incidence breaks it ($1.6$).
+\item \textbf{The exact finite-core reduction} \mE: the covering kernel in closed geometric form,
+$K_{rs}=W([r\wedge s,\,r\vee s])$ --- entrywise nonnegative and monotone by inclusion on $11/11$ ---
+equals $M^{\mathsf T}\Delta M$ ($1.3\times10^{-15}$), and
+$\rho(W)=\lambda_{\max}(K^{1/2}HK^{1/2})=1-\lambda_{\min}(A,A_B)$ ($5.4\times10^{-14}$)
+$=\lambda_{\max}(\mathrm{Gram})$ ($7.8\times10^{-16}$): three independent routes to the same number,
+no truncation anywhere. The factorwise product $\lambda_{\max}(K)\lambda_{\max}(H)$ misses by
+$7.8\times10^{2}$, which is why the joint shape below is needed. Energy reordering
+$H=\mathrm{diag}(s)+L_N$ at $4.7\times10^{-16}$; the Dirichlet weights are positive on
+$0.676$--$0.872$ of the off-diagonal area (a measurement, no law).
+\item \textbf{The checkerboard split} \mE: at group length exactly $b$,
+$\mathrm{Band}_b=D+A_{\mathrm{even}}+A_{\mathrm{odd}}$ \emph{entrywise} ($0.0$) on all $9$
+(window,\,$b$) pairs over $b=4,8,16$, and the three-step Weyl sequence dominates
+$\lambda_{\max}(\mathrm{Band}_b)$ with $0$ exceptions (worst ratio $1.6940$) at a step count
+independent of the up to $9$ groups; group length $b/2$ loses entries ($3.5\times10^{-1}$).
+\item \textbf{The four Hardy identities} \mE: (i) $\rho(W)=u^{\mathsf T}Hu/u^{\mathsf T}K^{+}u$ at
+$u=K^{1/2}v$ ($6.6\times10^{-13}$); (ii) $L_N=D^{\mathsf T}BD$ with
+$B_{kl}=\sum_{r\le k\wedge l,\;k\vee l<s}N_{rs}$, the same closed covering formula one grid in
+($4.9\times10^{-16}$); (iii) $Q=B_+\mathbf 1$ ($1.4\times10^{-15}$) --- the Cauchy--Schwarz weight
+of T140 \emph{is} a Gershgorin row sum; (iv) $DKD^{\mathsf T}=L_\Delta$ on the interior nodes
+($2.7\times10^{-14}$) with the endpoint edge mass $0.4886$--$15.15$ as diagonal, a \emph{local}
+quantity. The crossing kernel of $|N|$ does not reproduce $L_N$ ($2.6\times10^{-1}$): the signs are
+load-bearing.
+\item \textbf{The closed Muckenhoupt quantity} \mE:
+$A_{M0}=\max_kQ_k(\Delta\mathbf 1)_{k+1}$ by two closed routes agreeing to $8.3\times10^{-15}$;
+its value ($65.5$--$4244$) is \emph{reported} and neither its size nor its zone behaviour is
+promoted. Replacing the local endpoint mass by $\lambda_{\max}(K)$ inflates it by $\ge358$.
+\item \textbf{Two certified shapes, as \emph{valid} bounds} \mE: every Loewner step is certified by a
+completed Cholesky ($-1.5\times10^{-14}$, $-2.3\times10^{-10}$). The additive Hardy chain dominates
+$\rho(W)$ on $11/11$ (factor $3.074$--$10.758$); its own exact two-term Weyl split dominates too
+($1.691$--$2.503$) and lies \emph{below} the chain everywhere, so it is the floor of the additive
+family; the joint shape $\Lambda(H,Y)\cdot\Omega(Y)$ with a positive definite Jacobi Hardy form $Y$
+dominates on $11/11$ with the closed-form geometric profile ($8.815$--$74.872$ at
+$\Omega=8.33$--$36.2$) and on $11/11$ with the per-zone tridiagonal read-off of $K^{+}$. Promoted is
+the \emph{dominance}; the factors are not. Controls: the same $Y$ without its mass term is singular
+--- the constant vector lies in its kernel ($5.7\times10^{-17}$) while $H$ does not vanish there ---
+so the certificate \emph{refuses} on $11/11$; and dropping the \emph{positive} part instead of the
+negative one falls below $\rho(W)$ on $11/11$.
+\item \textbf{The sign-versus-absolute separation, as a comparison} \mX: over the measured $D$ range
+the exactly bounded object spreads by $1.36\times$ while every absolute variant spreads by at least
+$54.94\times$ (Loewner drop $62.03$, Cauchy--Schwarz $54.94$, product $56.92$), and dropping the
+positive part of $H$ costs $9.96$--$464.63\times$. The power laws are \emph{fits}, labelled as fits:
+$D^{-0.138\pm0.094}$ (signed) against $D^{-0.776\pm0.352}$ (certified Muckenhoupt) and $D^{-2.748}$,
+$D^{-2.820}$, $D^{-2.918}$ (absolute).
+\item \textbf{Named limits as content.} Per instance on small windows; nothing uniform in the zone
+index or in $D$, and every exponent above is a fit that stays in the sandbox. The bound rows promote
+\emph{validity} and not size: neither shape beats the target, the additive shape is dead as a
+\emph{shape} by its own Weyl floor, and the joint shape is decided at the normalisation $\Omega$.
+The finite-core row is an \emph{identity} and not a bound --- the zone-uniform discrete Hardy
+inequality it reduces the question to stays open, and no marker moves toward it.
 \end{itemize}
 
 % =====================================================================
@@ -3117,7 +3189,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T140)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T141)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -4219,14 +4291,73 @@ far-carried border blocks; \emph{(R5)} nothing for the layer / envelope / Jaffar
 families --- certified dead, not to be retried.
 \end{keybox}
 
-\noindent T141 (\texttt{discrete\_hardy\_probe.py}) is running at exactly that Hardy ingredient.
+\subsection{The Hardy ingredient resists, and the resistance has an address (T141)}
+T141 (\texttt{discrete\_hardy\_probe.py}, contract \texttt{DISCRETE.HARDY}, $22/22$, $51.2$\,s on
+$60$ windows with $h=50\ldots1173$, zones $n=11\ldots529$ and $D=2.31\times10^{-3}\ldots
+2.60\times10^{-2}$, verdict \textsc{hardy-resists}, bars declared in the docstring before any
+number) attacked exactly the
+ingredient T140 named --- the zone-uniform discrete Hardy inequality for the pair (Dirichlet form
+of $N$, form $K^{+}$) --- and nothing else. It did not close, and the way it fails is the content
+of the part.
+
+\emph{Four exact identities put the question in classical shape.} The reduction of T140 becomes a
+\textbf{Rayleigh quotient against the pseudoinverse}, $\rho(W)=u^{\mathsf T}Hu/u^{\mathsf T}K^{+}u$
+at $u=K^{1/2}v$; the Dirichlet part is a \textbf{signed crossing kernel},
+$L_N=D^{\mathsf T}BD$ with $B_{kl}=\sum_{r\le k\wedge l,\;k\vee l<s}N_{rs}$ --- the same closed
+covering formula as $K$, one grid further in; T140's Cauchy--Schwarz weight is \emph{identified},
+$Q=B_+\mathbf 1$, so that step is the Gershgorin diagonal step on $B_+$ and its price is
+attributable; and $DKD^{\mathsf T}=L_\Delta$ on the interior nodes, whose diagonal is the
+\textbf{endpoint edge mass} --- a \emph{local} quantity, not $\lambda_{\max}(K)$. Together these
+give the two-weight Muckenhoupt quantity in closed form,
+$A_{M0}=\max_kQ_k(\Delta\mathbf 1)_{k+1}$, computed by two independent routes. The identity block
+of T140 and T141 is now load-bearing as \vref{v545}, Section~\ref{sec:v545}.
+
+\emph{The separation is the finding.} The certified Muckenhoupt constant is \emph{not} zone-uniform:
+it grows like $D^{-0.366\pm0.036}$ (a fit) against a preregistered bar of $0.25$. But the object it
+is supposed to bound --- the exactly computed Dirichlet share of the finite core --- is
+\textbf{strictly uniform on the same surface}, $D^{-0.229\pm0.007}$. The growth therefore does not
+sit in the inequality being false; it sits in the \emph{diagonal profile} of the certificate, i.e.\
+in the weight one puts on the endpoint mass. That is a repairable defect in a way a growing target
+would not be.
+
+\emph{Both bound shapes are typed, and both types are negative.} The \textbf{additive} shape is dead
+\emph{as a shape}, not by a weak constant: its own exact Weyl floor --- the best any
+mass-plus-Dirichlet splitting can ever reach --- already sits at $1.694$--$3.855\times$ the target,
+so no sharpening of the Hardy step can rescue it. The \textbf{joint} shape
+$\Lambda(H,Y)\cdot\Omega(Y)$ survives the eigenvalue side and fails at the \emph{normalisation}
+alone, $\Omega=20.7$--$2724$: Gantmacher--Krein returns as the obstruction one grid down, and the
+whole question is now a question about the profile $Y$.
+
+\begin{keybox}[After T141: R1 collapses to R1b, a single conductance profile]
+The rest list contracts from ``a joint bound'' to \textbf{R1b: exhibit a closed conductance profile
+$Y$ with $Y\preceq K^{+}$ in the Loewner order and $\Omega(Y)\approx1$.} Both requirements are
+per-instance checkable and both are already met separately --- $Y$ positive definite with the
+geometric profile, and $\Omega\approx1$ for profiles that lose the Loewner step. The classical
+addresses are named, not invoked as authority: Muckenhoupt 1972 and Bradley 1978 for the two-weight
+criterion, Opic--Kufner 1990 for the profile calculus, Miclo's spectral-gap weights for the
+conductance reading. \emph{(R3$'$)} is now shaped as well: what the Hardy route consumes is a
+\textbf{first moment} of $(-H)_+$ and not a decay exponent --- a strictly weaker thing to have to
+prove --- and keeping the signs in the crossing kernel is worth a factor $31.95$--$15561.41$
+against the $6.4$--$239\times$ the T140 Loewner drop costs. Border pool: of $256$ blocks the
+$m$-paired ladder to $m=24$ certifies $245$; the $11$ open ones are far-carried (far mass fraction
+$0.835$--$0.902$ at index distance $13$--$15$), unchanged in kind from T140 --- a rebuilt pool, so
+the anatomy transfers and the tally does not.
+\end{keybox}
+
+\noindent \emph{Verdict integrity.} The negative half of this part rests on a comparison across
+zones, so the surface matters: the finite-core reduction of T140 is what makes an $11.21\times$
+span in $D$ affordable at all, and on a narrower surface the separation
+$D^{-0.366}$ against $D^{-0.229}$ would have been within its own error bars. The verdict
+\textsc{hardy-resists} is recorded with that span attached. Thirteen statements of T140/T141 were
+mature enough to promote (\vref{v545}); the sandbox stock stands at seventy-five items. T142
+(\texttt{conductance\_profile\_probe.py}) is running at R1b.
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
-\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the ten ledger modules
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the eleven ledger modules
 of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
@@ -4613,9 +4744,15 @@ shrinks to \emph{one signed inequality at stripe distance $b\le16$}. T140
 core per zone --- $\rho(W)=\lambda_{\max}(K^{1/2}HK^{1/2})$, a closed-geometry covering kernel
 times a mass-plus-Dirichlet form, with the checkerboard split replacing the $O(nb)$ Weyl steps by
 three $D$-independent ones and \emph{all} the $D$-dependence located in the geometry; what remains
-is a zone-uniform discrete Hardy inequality. The identity and structure
-blocks underneath the map are no longer sandbox: they are promoted as \vref{v542}, \vref{v543} and
-\vref{v544} (Sections~\ref{sec:v542}--\ref{sec:v544}). And the \emph{reverse-flow} parts have landed --- T132
+is a zone-uniform discrete Hardy inequality. T141 (\texttt{discrete\_hardy\_probe.py},
+\textsc{hardy-resists}) attacked exactly that inequality: four exact identities put it in classical
+two-weight shape, but the certified constant is \emph{not} zone-uniform ($D^{-0.366\pm0.036}$
+against a bar of $0.25$) while the object it bounds \emph{is} ($D^{-0.229\pm0.007}$) --- the growth
+sits in the diagonal profile; the additive shape is dead as a \emph{shape} by its own exact Weyl
+floor and the joint shape fails at the normalisation alone ($\Omega=20.7$--$2724$), so the residue
+is one closed conductance profile. The identity and structure
+blocks underneath the map are no longer sandbox: they are promoted as \vref{v542}, \vref{v543},
+\vref{v544} and \vref{v545} (Sections~\ref{sec:v542}--\ref{sec:v545}). And the \emph{reverse-flow} parts have landed --- T132
 (\texttt{bd\_seam\_probe.py}) made the Beurling--Deny triad an operator discriminator for
 the seam DtN, \textsc{spectrum-only} with the gap in the killing measure, T133
 (\texttt{cert\_floor\_probe.py}) audited the suite's own PSD rows and produced the exact
@@ -4694,19 +4831,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T140}\label{app:index}
+\section{Probe index, diary parts T11--T141}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $130$ parts T11--T140 that the current diary file records
-($131$ runs --- T104 was a double run with two independent arms --- and $3333$ green checks); the ten
+load-bearing artefact. The index covers the $131$ parts T11--T141 that the current diary file records
+($132$ runs --- T104 was a double run with two independent arms --- and $3355$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v544} promoted; with T126--T140, the first fifteen parts of the second phase, the
-running totals are \textbf{$140$ probes and $3525/3525$ checks}. T141
-(\texttt{discrete\_hardy\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v545} promoted; with T126--T141, the first sixteen parts of the second phase, the
+running totals are \textbf{$141$ probes and $3547/3547$ checks}. T142
+(\texttt{conductance\_profile\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -4852,6 +4989,7 @@ T137 & \texttt{\scriptsize long\_\allowbreak lag} & the long lags named, and \te
 T138 & \texttt{\scriptsize sign\_\allowbreak compensation} & the cancellation \textbf{kept instead of majorised}, and the mechanism found: the sign of an inter-stripe coupling follows the \textbf{interval geometry} of its two edges --- nested positive on $0.76$--$0.94$ of the area, crossing $0.59$--$0.63$, disjoint only $0.06$--$0.36$ (mostly negative) --- \emph{not} the lag distance (flip rate near $0.5$), with global cancellation $|\Sigma|/\Sigma|\cdot|=0.29$--$0.70$ (the one-number reason for every absolute-value overshoot); honest negatives: Karlin TP$_2$ \emph{fails} ($0.54$--$0.65$ of the minors), Green rank-one dominated but \emph{not} semiseparable; the best \textbf{certified} signed bound (band-exact Cholesky $+$ block row-sum tail) reaches $0.9758$--$1.1020$ against target $0.998556$--$0.999979$ --- $1/16$ windows, overshoot $0.02$--$565$ gaps against T137's $27$--$8\times10^{5}$, three orders better and no floor; the clamp \emph{localises}: the band crosses the target at $b=2$--$8$ with the certified tail still $0.46$--$0.70$ (never small together), the far tail is \textbf{net negative} (truncation raises $\rho$ on $59/142$ rungs), Leibniz pairing buys nothing, two-body exact but thin ($\le0.6\%$; three-body up to $2.5\times$ --- a \emph{many-body} effect); \textbf{the $m$-paired Neumann certificate} ($(I-F)^{-1}=(\sum_{j<m}F^j)(I-F^m)^{-1}$, only the outer factor majorised, condition $\rho(|F^m|)<1$) removes the arithmetic wall on \emph{all} $77$ dead blocks, certifies $52$, pool $563\to875/900$ ($\max|F^m|/|F|^m$ median $0.295$); M17 whitened: $\mathrm{St}=I-W_S$, $W_S\succeq0$, direct Kantorovich harmonic-mean route with no bad subspace, margin relaxed $0.5\to0.8284$ ($854/900$, \textsc{harmonic-partial}); promotion list $30\to37$; the margin question returns one level down ($\rho(W_S)$) & PAIR-EXACT & 26/26\\
 T139 & \texttt{\scriptsize green\_\allowbreak decay} & the decay lemma \textbf{refuted at its hypothesis, arithmetically}: the certified kernel envelope decays $d^{-0.15}$--$d^{-0.04}$ where Jaffard 1990 needs $p>1$ --- the archimedean lags sit \emph{on} the borderline ($\sim1/d$), the prime-power atoms lay $O(1)$ spikes across the window (no envelope sees the comb's thinness); constant chain constructive: Demko--Moss--Smith \emph{verified where applicable} ($75/75$ banded rungs), operator gate $0.97$--$1.83$ ($1/75$), algebra gate $3.4$--$1.6\times10^{3}$ ($0/75$); exponent \emph{not} inherited (kernel $d^{-1.5\ldots-1.1}$ vs inverse $d^{-0.52\ldots-0.37}$); the replacement is an \textbf{identity}: $b_e^{\mathsf T}Gb_{e'}=\sum_{\mathrm{box}}H$ exactly ($4\times10^{-15}$), $H<0$ on $0.71$--$0.87$ off-diagonal, $H>0$ on $100\%$ of the diagonal $\Rightarrow$ \textbf{T138's whole sign law derived} from one kernel plus box geometry (Gantmacher--Krein one-pair quantitatively dead); the never-truncating layer series \textbf{killed from below}: $3.388$--$6.171$ vs target $0.999182$--$0.999972$ ($0/15$, overshoot $681$--$46900\times$ $=$ the effective layer count), zero trace forbids dropping any layer, $\mathrm{Gram}\preceq\mathrm{Band}_b$ \emph{never} ($85/85$), Weyl floor $\max_b\mathrm{Rayleigh}(\mathrm{Band}_b)=1.0303$--$1.1116>$ target on $15/15$ --- no decay lemma can rescue it; clean-up: $m$-ladder to $m=48$ certifies $619/620$ border blocks (the one open: need $2.15$, tightness at index distance $15$), $\rho(W_S)=0.667$--$0.939$ inherits the structure verbatim, three-body cumulant negative on $0.93$--$1.00$ of $4200$ triples (certified \emph{benign}); promotion list $37\to47$; \textbf{the core shrinks to one signed inequality at stripe distance $b\le16$} & DENSE-RESISTS & 30/30\\
 T140 & \texttt{\scriptsize signed\_\allowbreak band} & the one signed inequality acquires an \textbf{exact finite core per zone}: the $H$-telescope lifted from entries to the \emph{form}, $\mathrm{Gram}=CHC^{\mathsf T}$ exactly ($3\times10^{-15}$, $C=\mathrm{diag}(\sqrt\Delta)M$ with the edge-interval incidence $M$), so $\mathrm{rank}(\mathrm{Gram})\le h-1$ ($44$--$202$ vs $128$--$1499$ edges) and $\rho(W)=\lambda_{\max}(K^{1/2}HK^{1/2})$ exactly ($6\times10^{-14}$), $K=M^{\mathsf T}\Delta M$ the covering kernel in closed geometric form $K_{rs}=W([r\wedge s,r\vee s])$ (nonnegative, monotone by inclusion; Green-like, \emph{not} one-pair); energy reordering $H=\mathrm{diag}(s)+L_N$ exact ($5\times10^{-16}$) --- the sign law as mass $+$ long-range Dirichlet form (weights positive on $0.71$--$0.87$); the certified chain \textbf{tears at the drop of the positive $H$ part} ($6.4$--$239\times$ alone; the Hardy step adds $6.4$--$9.0\times$, input $\max_kQ_k=18.5$--$339$; $0/16$ on all four routes); \textbf{the checkerboard split solves R2}: $\mathrm{Band}_b=D+A_{\mathrm{even}}+A_{\mathrm{odd}}$ entrywise exact $\Rightarrow$ three $D$-independent Weyl steps instead of $O(nb)$; blocks zone-uniform ($D^{0.13}$, $D^{0.02}$) vs $\lambda_{\max}(K)\sim D^{-2.99}$ --- \textbf{all $D$-dependence in the geometry}; band from below $>$ target on $16/16$ (rank inflation $1.2$--$10.1\times$ as mechanism), index-grid far part Loewner-\emph{positive} on $256/256$ (no truncation licence in either grid); Floquet not applicable (spread $0.15$--$0.69$), Bendixson certified at $1.07$--$1.08\times\rho(W)$; border pool $420$, $m$-ladder to $24$ certifies $402$, the $18$ open far-carried ($0.635$--$0.912$); core inherited one level down ($\rho(W_S)$ to $4\times10^{-15}$, $=0.541$--$0.925$); map V12 ($18$ rows), $17$ new promotion items (stock $47\to64$); \textbf{the rest is one zone-uniform discrete Hardy inequality} & FINITE-CORE & 31/31\\
+T141 & \texttt{\scriptsize discrete\_\allowbreak hardy} & the Hardy ingredient \textbf{resists, and the resistance gets an address}: four exact identities put R1$''$ in classical two-weight shape --- the $K^{+}$ Rayleigh form $\rho(W)=\sup\{u^{\mathsf T}Hu/u^{\mathsf T}K^{+}u\}$ ($3\times10^{-11}$), the signed crossing kernel $L_N=D^{\mathsf T}BD$, $B_{kl}=\sum_{r\le k\wedge l,\,k\vee l<s}N_{rs}$ ($7\times10^{-16}$), $Q=B_+\mathbf 1$ ($3\times10^{-15}$; T140's Cauchy--Schwarz step \emph{is} the Schur/Gershgorin diagonal step) and $DKD^{\mathsf T}=L_\Delta$ on the interior nodes ($2\times10^{-13}$; the Hardy denominator is the original Laplacian, its diagonal the \emph{endpoint edge mass}); \textbf{the uniformity separates}: the certified constant $A_M=2.20$--$31.23$ runs as $D^{-0.366\pm0.036}$ (spread $14.21\times$ over a $D$ range of $11.21\times$) --- \emph{not} zone-uniform at bar $0.25$ --- while the object it bounds, the exact Dirichlet share, is uniform in the strict sense ($D^{-0.229\pm0.007}$, band $0.235$): the growth sits in the diagonal profile, and the closed Muckenhoupt product ($D^{-2.687}$) and the Gershgorin variant ($D^{-0.993}$) overshoot the signed constant by $25$--$15903\times$ and $1.2$--$14.3\times$; \textbf{the additive shape is dead as a shape} --- its own exact two-term Weyl floor is already $1.694$--$3.855\times$ the target ($0/60$; additive Hardy $2.775$--$32.152\times$, the Hardy step costing only $1.62$--$16.86\times$ over the exact share, so the shortfall is the \emph{split}); \textbf{the joint shape fails at the normalisation alone} --- $\Lambda(H,Y_{\mathrm{tri}})=0.500$--$0.942$ is fine, $\Omega=20.71$--$2723.99$ (ideal $1$, $D^{-1.867}$) is not, with an entrywise off-tridiagonal defect of $K^{+}$ of only $0.027$--$0.285$: Gantmacher--Krein returns, the \emph{profile} is the whole remaining freedom; R3$'$ shaped as a first-moment statement (cancellation gain of the signed kernel $31.95$--$15561.41\times$ against the T140 drop cost); border pool $256$, ladder to $m=24$ certifies $245$, $11$ open and far-carried ($0.835$--$0.902$); map V13, $13$ statements ripe (stock $62\to75$); \textbf{the rest list collapses to R1b: one closed conductance profile with $Y\preceq K^{+}$ and $\Omega\approx1$} ($\to$ \vref{v545}) & HARDY-RESISTS & 22/22\\
 \end{xltabular}
 }
 

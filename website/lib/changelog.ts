@@ -43,6 +43,1526 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-28",
+    "dateLabel": "2026-07-28 · III",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v545"
+      },
+      {
+        "k": "t",
+        "v": " — the Hardy-core identities of phase 2 promoted; prime-front diary T140/T141 + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v545"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.HARDY.IDENT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the identity blocks of the discovery parts T140 ("
+        },
+        {
+          "k": "c",
+          "v": "signed_band_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") and T141 ("
+        },
+        {
+          "k": "c",
+          "v": "discrete_hardy_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "36"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}1"
+        },
+        {
+          "k": "t",
+          "v": " s, everything recomputed on small frame-A windows, nothing cited from the sandbox. Scope fence: "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "identities"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", closed-form quantities and the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "validity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — never the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "size"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — of two certified upper-bound shapes, plus one negative typing. No fit is promoted, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no zone-uniform statement, and no bound that beats the target. Battery: "
+        },
+        {
+          "k": "m",
+          "v": "11"
+        },
+        {
+          "k": "t",
+          "v": " windows ("
+        },
+        {
+          "k": "m",
+          "v": "n=8\\ldots139"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h=58\\ldots285\\le300"
+        },
+        {
+          "k": "t",
+          "v": ", core "
+        },
+        {
+          "k": "m",
+          "v": "m=57\\ldots284"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "193"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5102"
+        },
+        {
+          "k": "t",
+          "v": " positive off-diagonal edges, "
+        },
+        {
+          "k": "m",
+          "v": "10"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "87"
+        },
+        {
+          "k": "t",
+          "v": " loaded stripes), "
+        },
+        {
+          "k": "m",
+          "v": "D=7.578\\times10^{-3}\\ldots2.388\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " (a factor "
+        },
+        {
+          "k": "m",
+          "v": "3.15"
+        },
+        {
+          "k": "t",
+          "v": ", so item (8) is a comparison and not a single point), exact "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(W)=0.997759"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.999981"
+        },
+        {
+          "k": "t",
+          "v": "; the explicit "
+        },
+        {
+          "k": "m",
+          "v": "n_e\\times n_e"
+        },
+        {
+          "k": "t",
+          "v": " signed Gram is formed only on the "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " windows with "
+        },
+        {
+          "k": "m",
+          "v": "n_e\\le900"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1)–(3) The form lifting, the exact finite core and the energy reordering "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " With "
+        },
+        {
+          "k": "m",
+          "v": "M"
+        },
+        {
+          "k": "t",
+          "v": " the edge–interval incidence matrix and "
+        },
+        {
+          "k": "m",
+          "v": "C=\\mathrm{diag}(\\sqrt\\Delta)M"
+        },
+        {
+          "k": "t",
+          "v": ", the T139 telescope lifts from the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "entries"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the signed Gram to its "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "form"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Gram}=CHC^{\\mathsf T}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "3.0\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": ", hence "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{rank}(\\mathrm{Gram})\\le h-1"
+        },
+        {
+          "k": "t",
+          "v": " (measured "
+        },
+        {
+          "k": "m",
+          "v": "57"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "183"
+        },
+        {
+          "k": "t",
+          "v": " against "
+        },
+        {
+          "k": "m",
+          "v": "193"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "882"
+        },
+        {
+          "k": "t",
+          "v": " edges; control: unweighted incidence "
+        },
+        {
+          "k": "m",
+          "v": "1.6"
+        },
+        {
+          "k": "t",
+          "v": "). The covering kernel in "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "closed geometric form"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "K_{rs}=W([r\\wedge s,\\,r\\vee s])"
+        },
+        {
+          "k": "t",
+          "v": ", equals "
+        },
+        {
+          "k": "m",
+          "v": "M^{\\mathsf T}\\Delta M"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.3\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": ") and the spectral radius is an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exact"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " eigenvalue of the finite core, "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(W)=\\lambda_{\\max}(K^{1/2}HK^{1/2})=1-\\lambda_{\\min}(A,A_B)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "5.4\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "=\\lambda_{\\max}(\\mathrm{Gram})"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "7.8\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") — three independent routes, no truncation (control: the factorwise product "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\max}(K)\\lambda_{\\max}(H)"
+        },
+        {
+          "k": "t",
+          "v": " misses by "
+        },
+        {
+          "k": "m",
+          "v": "7.8\\times10^{2}"
+        },
+        {
+          "k": "t",
+          "v": "). The energy reordering "
+        },
+        {
+          "k": "m",
+          "v": "H=\\mathrm{diag}(s)+L_N"
+        },
+        {
+          "k": "t",
+          "v": " holds at "
+        },
+        {
+          "k": "m",
+          "v": "4.7\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ": a mass term plus a long-range Dirichlet form, its weights positive on "
+        },
+        {
+          "k": "m",
+          "v": "0.676"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.872"
+        },
+        {
+          "k": "t",
+          "v": " of the off-diagonal area (a measurement, no law)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The checkerboard split "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " At group length exactly "
+        },
+        {
+          "k": "m",
+          "v": "b"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Band}_b=D+A_{\\mathrm{even}}+A_{\\mathrm{odd}}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "entrywise"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "0.0"
+        },
+        {
+          "k": "t",
+          "v": ") on all "
+        },
+        {
+          "k": "m",
+          "v": "9"
+        },
+        {
+          "k": "t",
+          "v": " (window, "
+        },
+        {
+          "k": "m",
+          "v": "b"
+        },
+        {
+          "k": "t",
+          "v": ") pairs over "
+        },
+        {
+          "k": "m",
+          "v": "b=4,8,16"
+        },
+        {
+          "k": "t",
+          "v": ", and the resulting three-step Weyl sequence dominates "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\max}(\\mathrm{Band}_b)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " exceptions (worst ratio "
+        },
+        {
+          "k": "m",
+          "v": "1.6940"
+        },
+        {
+          "k": "t",
+          "v": ") at a step count independent of the up to "
+        },
+        {
+          "k": "m",
+          "v": "9"
+        },
+        {
+          "k": "t",
+          "v": " groups — three steps instead of "
+        },
+        {
+          "k": "m",
+          "v": "O(nb)"
+        },
+        {
+          "k": "t",
+          "v": " (control: "
+        },
+        {
+          "k": "m",
+          "v": "L=b/2"
+        },
+        {
+          "k": "t",
+          "v": " loses entries, "
+        },
+        {
+          "k": "m",
+          "v": "3.5\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5)–(6) The four Hardy identities and the closed Muckenhoupt quantity "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (i) the "
+        },
+        {
+          "k": "m",
+          "v": "K^{+}"
+        },
+        {
+          "k": "t",
+          "v": " Rayleigh form "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(W)=u^{\\mathsf T}Hu/u^{\\mathsf T}K^{+}u"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "u=K^{1/2}v"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "6.6\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "); (ii) the signed crossing kernel "
+        },
+        {
+          "k": "m",
+          "v": "L_N=D^{\\mathsf T}BD"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "B_{kl}=\\sum_{r\\le k\\wedge l,\\;k\\vee l<s}N_{rs}"
+        },
+        {
+          "k": "t",
+          "v": " — the same closed covering formula as "
+        },
+        {
+          "k": "m",
+          "v": "K"
+        },
+        {
+          "k": "t",
+          "v": ", on the increment grid ("
+        },
+        {
+          "k": "m",
+          "v": "4.9\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "); (iii) "
+        },
+        {
+          "k": "m",
+          "v": "Q=B_+\\mathbf 1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.4\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "): the Cauchy–Schwarz weight T140 introduced by hand "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the row sum of "
+        },
+        {
+          "k": "m",
+          "v": "B_+"
+        },
+        {
+          "k": "t",
+          "v": ", so that step is the Gershgorin diagonal step on "
+        },
+        {
+          "k": "m",
+          "v": "B_+"
+        },
+        {
+          "k": "t",
+          "v": "; (iv) "
+        },
+        {
+          "k": "m",
+          "v": "DKD^{\\mathsf T}=L_\\Delta"
+        },
+        {
+          "k": "t",
+          "v": " on the interior nodes ("
+        },
+        {
+          "k": "m",
+          "v": "2.7\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": ") with diagonal "
+        },
+        {
+          "k": "m",
+          "v": "(\\Delta\\mathbf 1)_{k+1}=0.4886"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "15.15"
+        },
+        {
+          "k": "t",
+          "v": ", the endpoint edge mass — a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "local"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " quantity and not "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\max}(K)"
+        },
+        {
+          "k": "t",
+          "v": " (control: the crossing kernel of "
+        },
+        {
+          "k": "m",
+          "v": "|N|"
+        },
+        {
+          "k": "t",
+          "v": " does not reproduce "
+        },
+        {
+          "k": "m",
+          "v": "L_N"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "2.6\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": "; the signs are load-bearing). The two-weight quantity "
+        },
+        {
+          "k": "m",
+          "v": "A_{M0}=\\max_kQ_k(\\Delta\\mathbf 1)_{k+1}"
+        },
+        {
+          "k": "t",
+          "v": " is computed by two closed routes agreeing to "
+        },
+        {
+          "k": "m",
+          "v": "8.3\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "; its value ("
+        },
+        {
+          "k": "m",
+          "v": "65.5"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4244"
+        },
+        {
+          "k": "t",
+          "v": ") is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "reported"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", its size and zone behaviour are not promoted (control: "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\max}(K)"
+        },
+        {
+          "k": "t",
+          "v": " in place of the local mass inflates it by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge358"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(7) Two certified shapes, promoted as "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "valid"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " bounds only "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Every Loewner step is certified by a completed Cholesky ("
+        },
+        {
+          "k": "m",
+          "v": "-1.5\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "-2.3\\times10^{-10}"
+        },
+        {
+          "k": "t",
+          "v": "). The additive Hardy chain dominates "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(W)"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "11/11"
+        },
+        {
+          "k": "t",
+          "v": " windows (factor "
+        },
+        {
+          "k": "m",
+          "v": "3.074"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "10.758"
+        },
+        {
+          "k": "t",
+          "v": "); the exact two-term Weyl split dominates too ("
+        },
+        {
+          "k": "m",
+          "v": "1.691"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.503"
+        },
+        {
+          "k": "t",
+          "v": ") and lies "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "below"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the chain everywhere, so it is the floor of the whole additive family; the genuinely joint shape "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda(H,Y)\\cdot\\Omega(Y)"
+        },
+        {
+          "k": "t",
+          "v": " with a positive definite Jacobi Hardy form "
+        },
+        {
+          "k": "m",
+          "v": "Y"
+        },
+        {
+          "k": "t",
+          "v": " dominates on "
+        },
+        {
+          "k": "m",
+          "v": "11/11"
+        },
+        {
+          "k": "t",
+          "v": " with the closed-form geometric profile ("
+        },
+        {
+          "k": "m",
+          "v": "8.815"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "74.872"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega=8.33"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "36.2"
+        },
+        {
+          "k": "t",
+          "v": ") and on "
+        },
+        {
+          "k": "m",
+          "v": "11/11"
+        },
+        {
+          "k": "t",
+          "v": " with the per-zone tridiagonal read-off of "
+        },
+        {
+          "k": "m",
+          "v": "K^{+}"
+        },
+        {
+          "k": "t",
+          "v": ". Promoted is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "dominance"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on these instances and nothing about the factors. Controls: the same "
+        },
+        {
+          "k": "m",
+          "v": "Y"
+        },
+        {
+          "k": "t",
+          "v": " without its mass term is singular — the constant vector lies in its kernel ("
+        },
+        {
+          "k": "m",
+          "v": "5.7\\times10^{-17}"
+        },
+        {
+          "k": "t",
+          "v": ") while "
+        },
+        {
+          "k": "m",
+          "v": "H"
+        },
+        {
+          "k": "t",
+          "v": " does not vanish there — so the certificate "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "refuses"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "11/11"
+        },
+        {
+          "k": "t",
+          "v": "; and dropping the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "positive"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " part instead of the negative one falls below "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(W)"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "11/11"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(8) The sign-versus-absolute separation — a negative typing "
+            },
+            {
+              "k": "s",
+              "v": "X"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Over the measured "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": " range the exactly bounded object (the signed Dirichlet share) spreads by "
+        },
+        {
+          "k": "m",
+          "v": "1.36\\times"
+        },
+        {
+          "k": "t",
+          "v": ", while every absolute variant spreads by at least "
+        },
+        {
+          "k": "m",
+          "v": "54.94\\times"
+        },
+        {
+          "k": "t",
+          "v": " (Loewner drop "
+        },
+        {
+          "k": "m",
+          "v": "62.03"
+        },
+        {
+          "k": "t",
+          "v": ", Cauchy–Schwarz "
+        },
+        {
+          "k": "m",
+          "v": "54.94"
+        },
+        {
+          "k": "t",
+          "v": ", product "
+        },
+        {
+          "k": "m",
+          "v": "56.92"
+        },
+        {
+          "k": "t",
+          "v": "), and dropping the positive part of "
+        },
+        {
+          "k": "m",
+          "v": "H"
+        },
+        {
+          "k": "t",
+          "v": " alone costs "
+        },
+        {
+          "k": "m",
+          "v": "9.96"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "464.63\\times"
+        },
+        {
+          "k": "t",
+          "v": ". The corresponding power laws are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "fits"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " and labelled as fits: "
+        },
+        {
+          "k": "m",
+          "v": "D^{-0.138\\pm0.094}"
+        },
+        {
+          "k": "t",
+          "v": " (signed) against "
+        },
+        {
+          "k": "m",
+          "v": "D^{-0.776\\pm0.352}"
+        },
+        {
+          "k": "t",
+          "v": " (certified Muckenhoupt) and "
+        },
+        {
+          "k": "m",
+          "v": "D^{-2.748}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "D^{-2.820}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "D^{-2.918}"
+        },
+        {
+          "k": "t",
+          "v": " (absolute). Promoted is the instance comparison of the measured spreads, not the exponents."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fences and status."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Per instance on small windows only; nothing uniform in the zone index or in "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "; item (2) is an identity and not a bound, so the zone-uniform discrete Hardy inequality stays "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "open"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; item (7) promotes validity and not size — neither shape beats the target. Abel summation, Cauchy–Schwarz, Weyl 1912, Gershgorin 1931, Haynsworth 1968, Ostrowski 1937 / Fan 1958 / Berman–Plemmons 1979, Muckenhoupt 1972, Bradley 1978, Opic–Kufner 1990, Bennett 1987/1991, Gantmacher–Krein 1950/1960, Karlin 1968, Wilkinson 1968 / Higham 2002 named classical; Weil 1952 cited, never used as a criterion; zero-firewall AST-checked. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HARDY.IDENT.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and this is not RH evidence."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Diary, paper and website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " part T141 ("
+        },
+        {
+          "k": "t",
+          "v": "hardy-resists"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "22/22"
+        },
+        {
+          "k": "t",
+          "v": "; series totals "
+        },
+        {
+          "k": "m",
+          "v": "141"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "3547"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front.tex"
+        },
+        {
+          "k": "t",
+          "v": " gains the T141 subsection, the "
+        },
+        {
+          "k": "c",
+          "v": "v545"
+        },
+        {
+          "k": "t",
+          "v": " entry in the verified layer and the updated probe index; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T141 feed entry and the "
+        },
+        {
+          "k": "c",
+          "v": "v545"
+        },
+        {
+          "k": "t",
+          "v": " promotion entry. T142 ("
+        },
+        {
+          "k": "c",
+          "v": "conductance_profile_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at the one open ingredient and is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " part of this change."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-28",
     "dateLabel": "2026-07-28 · II",
     "heading": [
       {

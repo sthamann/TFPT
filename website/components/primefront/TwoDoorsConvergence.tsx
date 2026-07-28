@@ -249,8 +249,18 @@ export function TwoDoorsConvergence() {
           split replaces the O(nb) Weyl steps by three D-independent ones
           (R2 solved), and all the D-dependence sits in the geometry
           (blocks ~ D^0.13, λ_max(K) ~ D^−2.99); what remains is a
-          zone-uniform discrete Hardy inequality, and T141
-          (discrete_hardy_probe.py) is running at exactly that ingredient.
+          zone-uniform discrete Hardy inequality. T141 · DISCRETE.HARDY
+          (HARDY-RESISTS, 22/22) attacked that ingredient: four exact
+          identities put it in classical two-weight shape, but the certified
+          constant is not zone-uniform (D^−0.366 ± 0.036 against a bar of
+          0.25) while the exact object it bounds is (D^−0.229 ± 0.007) — the
+          growth is manufactured by the diagonal profile — the additive shape
+          is dead as a shape at its own exact Weyl floor (1.694–3.855× the
+          target), and the joint shape fails at the normalisation alone
+          (Ω = 20.71–2723.99). The residue collapses to one closed conductance
+          profile with Y ⪯ K⁺ and Ω ≈ 1; the identity blocks of both parts are
+          promoted as v545, and T142 (conductance_profile_probe.py) is running
+          at exactly that profile.
         </p>
       </div>
 

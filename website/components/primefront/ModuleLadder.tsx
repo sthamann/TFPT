@@ -59,12 +59,18 @@ const MODULES = [
     title: "Long-lag support structure · phase 2",
     checks: 24,
   },
+  {
+    id: "v545",
+    claim: "PRIME.HARDY.IDENT.01",
+    title: "Hardy-core identities · phase 2",
+    checks: 36,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 140;
-const SANDBOX_CHECKS = 3525;
+const SANDBOX_PROBES = 141;
+const SANDBOX_CHECKS = 3547;
 
 export function ModuleLadder() {
   return (

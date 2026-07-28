@@ -1090,6 +1090,53 @@ Demko--Moss--Smith 1984 cited as a model and \emph{not} applied (the comparison 
 dense); Weil 1952 cited, never used as a criterion.
 \mE\ (per-instance structure) $+$ \mX\ (one family closed; no marker moves)
 
+\par\smallskip\noindent\textbf{The Hardy-core identities
+(\texttt{PRIME.HARDY.IDENT.01}).}
+The identity blocks of the discovery parts T140 and T141 are load-bearing as the
+third companion module ($36$ checks, ${\sim}1$\,s) on $11$ frame-A windows ($n=8\ldots139$, $h=58\ldots285\le300$,
+$193$--$5102$ positive off-diagonal edges, $D$ spanning a factor $3.15$).
+\emph{Form lifting and finite core.} With $C=\mathrm{diag}(\sqrt\Delta)M$ and $M$
+the edge--interval incidence, $\mathrm{Gram}=CHC^{\mathsf T}$
+($3.0\times10^{-15}$), so $\mathrm{rank}(\mathrm{Gram})\le h-1$; the covering
+kernel in closed geometric form $K_{rs}=W([r\wedge s,\,r\vee s])$ equals
+$M^{\mathsf T}\Delta M$ ($1.3\times10^{-15}$); and
+$\rho(W)=\lambda_{\max}(K^{1/2}HK^{1/2})$ is an \emph{exact} eigenvalue, agreeing
+with $1-\lambda_{\min}(A,A_B)$ ($5.4\times10^{-14}$) and with
+$\lambda_{\max}(\mathrm{Gram})$ ($7.8\times10^{-16}$) --- three independent routes,
+no truncation --- while $H=\mathrm{diag}(s)+L_N$ ($4.7\times10^{-16}$) reads the
+sign law as mass plus a long-range Dirichlet form.
+\emph{The four Hardy identities.} $\rho(W)=u^{\mathsf T}Hu/u^{\mathsf T}K^{+}u$ at
+$u=K^{1/2}v$ ($6.6\times10^{-13}$); $L_N=D^{\mathsf T}BD$ with the signed crossing
+kernel $B_{kl}=\sum_{r\le k\wedge l,\,k\vee l<s}N_{rs}$ ($4.9\times10^{-16}$);
+$Q=B_+\mathbf 1$ ($1.4\times10^{-15}$), so the Cauchy--Schwarz step is the
+Gershgorin diagonal step; and $DKD^{\mathsf T}=L_\Delta$ on the interior nodes
+($2.7\times10^{-14}$), whose diagonal is the endpoint edge mass. The crossing
+kernel of $|N|$ does \emph{not} reproduce $L_N$: the signs are load-bearing. The
+closed Muckenhoupt quantity $A_{M0}=\max_kQ_k(\Delta\mathbf 1)_{k+1}$ follows from
+two routes agreeing to $8.3\times10^{-15}$; its \emph{size} is reported, not
+promoted. The checkerboard split $\mathrm{Band}_b=D+A_{\mathrm{even}}+A_{\mathrm{odd}}$
+is entrywise exact on $9$ (window,\,$b$) pairs, with three Weyl steps dominating.
+\emph{Two shapes, promoted as valid and not by size.} Every Loewner step is
+Cholesky-certified; the additive Hardy chain dominates $\rho(W)$ on $11/11$
+($3.074$--$10.758\times$), its exact Weyl split dominates too
+($1.691$--$2.503\times$) and floors the additive family, and the joint shape
+$\Lambda(H,Y)\cdot\Omega(Y)$ dominates on $11/11$ for a positive definite Jacobi
+$Y$ --- the same $Y$ without its mass term is singular and the certificate refuses.
+\emph{A negative typing} \mX. Over the $D$ range the exactly bounded object
+spreads $1.36\times$ while every absolute variant spreads $\ge54.94\times$; the
+power laws ($D^{-0.138\pm0.094}$ signed against $D^{-0.776\pm0.352}$ and
+$D^{-2.748}$, $D^{-2.820}$, $D^{-2.918}$) are fits and labelled as fits.
+\textbf{Named limits as content:} per instance on small windows, nothing uniform
+in the zone index or in $D$; the bound rows promote \emph{validity} and not size
+--- neither shape beats the target --- and the finite-core row is an identity, so
+the zone-uniform discrete Hardy inequality stays open.
+Abel summation / Cauchy--Schwarz / Weyl 1912 / Gershgorin 1931 / Muckenhoupt 1972
+/ Bradley 1978 / Opic--Kufner 1990 / Gantmacher--Krein 1950--1960 named classical;
+Weil 1952 cited, never used as a criterion.
+Machine-checked:
+\veri{v545\_hardy\_core\_identities.py}.
+\mE\ (per-instance identities) $+$ \mX\ (one route typed; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

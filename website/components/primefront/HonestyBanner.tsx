@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v544
+          v535–v545
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -86,8 +86,14 @@ export function HonestyBanner() {
         radius is an exact eigenvalue of a closed-geometry coverage kernel
         times a mass-plus-Dirichlet form, the checkerboard split replaces the
         O(nb) Weyl steps by three D-independent ones, and all the D-dependence
-        sits in the geometry; what remains is a zone-uniform discrete Hardy
-        inequality, under test in T141. What remains
+        sits in the geometry. T141 (HARDY-RESISTS) then attacked that
+        zone-uniform discrete Hardy inequality directly: four exact identities
+        put it in classical two-weight shape, but the certified constant is not
+        zone-uniform (D^−0.366) while the exact object it bounds is
+        (D^−0.229), the additive shape is dead at its own exact Weyl floor and
+        the joint shape fails at the normalisation alone — the residue is one
+        closed conductance profile, and the identity blocks of T140 and T141
+        are load-bearing as v545. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

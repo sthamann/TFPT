@@ -179,6 +179,7 @@ const NODES: DagNode[] = [
       "v542_margin_chain_identities.py",
       "v543_lumped_pair_identities.py",
       "v544_long_lag_support.py",
+      "v545_hardy_core_identities.py",
       "v227_degree_exponent_channel_split.py",
       "v232_e8_kleinian_seam.py",
       "v234_seam_holomorphy_selection.py",

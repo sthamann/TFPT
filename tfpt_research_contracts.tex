@@ -2703,6 +2703,37 @@ never used as a criterion. Fences: zero-firewall AST-checked; not ``almost RH'';
 Machine-checked: \veri{v544\_long\_lag\_support.py}.
 \mE\ (per-instance structure) $+$ \mX\ (one family closed)
 
+\par\smallskip\noindent\textbf{\texttt{PRIME.HARDY.IDENT.01} --- the Hardy-core
+identities of phase 2 (T140, T141).}
+\emph{(1)} The form lifting $\mathrm{Gram}=CHC^{\mathsf T}$ with
+$C=\mathrm{diag}(\sqrt\Delta)M$ ($3.0\times10^{-15}$), hence
+$\mathrm{rank}(\mathrm{Gram})\le h-1$. \emph{(2)} The exact finite-core reduction:
+the closed geometric covering kernel $K_{rs}=W([r\wedge s,\,r\vee s])$ equals
+$M^{\mathsf T}\Delta M$ ($1.3\times10^{-15}$) and
+$\rho(W)=\lambda_{\max}(K^{1/2}HK^{1/2})=1-\lambda_{\min}(A,A_B)=\lambda_{\max}(\mathrm{Gram})$
+on three independent routes. \emph{(3)} $H=\mathrm{diag}(s)+L_N$
+($4.7\times10^{-16}$). \emph{(4)} The checkerboard split
+$\mathrm{Band}_b=D+A_{\mathrm{even}}+A_{\mathrm{odd}}$ entrywise exact with a
+three-step Weyl sequence. \emph{(5)} The four Hardy identities --- the $K^{+}$
+Rayleigh form, $L_N=D^{\mathsf T}BD$ with the signed crossing kernel,
+$Q=B_+\mathbf 1$ and $DKD^{\mathsf T}=L_\Delta$ on the interior nodes.
+\emph{(6)} The closed Muckenhoupt quantity $A_{M0}=\max_kQ_k(\Delta\mathbf 1)_{k+1}$
+by two routes. \emph{(7)} The additive Hardy chain and the joint shape
+$\Lambda(H,Y)\cdot\Omega(Y)$ as \emph{valid} upper bounds on $11/11$ windows ---
+dominance only. \emph{(8)} As a negative typing, the sign-versus-absolute
+separation of the measured spreads ($1.36\times$ against $\ge54.94\times$).
+\textbf{Named limits as load-bearing content:} per instance on small windows,
+nothing uniform in the zone index or in $D$; every exponent is a fit; (7) promotes
+validity and not size --- neither shape beats the target, the additive shape is
+dead as a \emph{shape} by its own exact Weyl floor and the joint shape is decided
+at the normalisation $\Omega$; (2) is an identity and not a bound, so the
+zone-uniform discrete Hardy inequality stays \emph{open}. Fences: Muckenhoupt
+1972 / Bradley 1978 / Opic--Kufner 1990 / Gantmacher--Krein 1950--1960 named
+classical; Weil 1952 cited, never used as a criterion; zero-firewall AST-checked;
+no marker moves.
+Machine-checked: \veri{v545\_hardy\_core\_identities.py}.
+\mE\ (per-instance identities) $+$ \mX\ (one route typed)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel
