@@ -158,13 +158,23 @@ export function TwoDoorsConvergence() {
           architecture, T127 · TWO.INEQUALITIES (BOTH-SHAPED, 28/28) dissects
           the two genuinely new inequalities it left — U5-as-stated is refuted
           and replaced by a band plus an enumeration, U3 collapses to a coarse
-          floor — and T128 · TEML (THREE-OF-FOUR, 27/27) works the resulting
+          floor —           and T128 · TEML (THREE-OF-FOUR, 27/27) works the resulting
           four-point list cheapest first: three of the four points stand at
           their preregistered bars (the exception list derived and closed, the
           retention bound exact bookkeeping, the boundary-layer exclusion now
           a proof with an 11.6× floor margin), while the kappa bar was missed
-          honestly — by 3.6%, systematically in the ratio. Five named open
-          points remain; T129 (kappa_deep_seams_probe.py) is running.
+          honestly — by 3.6%, systematically in the ratio. T129 ·
+          KAPPA.DEEP.SEAMS (KAPPA-WILD, 28/28) is the most productive break
+          of the phase: the fitted kappa law falls once on 331 fresh
+          transports — bar frozen, violation counted — but the theorem
+          underneath stands: flat is exactly 1, linear is exactly 2,
+          everything above is curvature, and the curvature chain is a
+          per-transport theorem on all 436; the two affordable deep seams
+          carry complete certificates on the graded space, honestly
+          downgraded with a measured 8% false-positive rate declared before
+          the results. Two irreducibles remain (the word &ldquo;for
+          all&rdquo;, the RH address); T130 (curvature_bridge_probe.py) is
+          running.
         </p>
       </div>
 

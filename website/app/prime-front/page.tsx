@@ -32,7 +32,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with the open boundary λ* (v540), the matching-lemma/transport-ledger package (v541), and the induction sprint T102–T125 — a reduction cascade from one matrix inequality down to one sign and one accounting convention, assembled end to end in the finale, with certified margin-free steps to zone 155,921. Series complete at 125 parts; phase 2 (the full proof, T126+) is open — the seam architecture is finished, both remaining inequalities are proof-shaped, and three of the four resulting points stand at their preregistered bars (the kappa bar missed honestly): five named open points remain. 128 parts, 3225 sandbox checks. Not RH evidence.",
+    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with the open boundary λ* (v540), the matching-lemma/transport-ledger package (v541), and the induction sprint T102–T125 — a reduction cascade from one matrix inequality down to one sign and one accounting convention, assembled end to end in the finale, with certified margin-free steps to zone 155,921. Series complete at 125 parts; phase 2 (the full proof, T126+) is open — the seam architecture is finished, both remaining inequalities are proof-shaped, three of the four resulting points stand at their preregistered bars, and the kappa law falls once while the curvature theorem underneath it stands on all 436 transports (T129). 129 parts, 3253 sandbox checks. Not RH evidence.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified: v535–v541. Sandbox T102–T125: one matrix inequality compressed to one sign plus one accounting convention and assembled end to end; phase 2 (T126+) open, three of four points stand at their bars, five named open points remain; 3225 sandbox checks. Residual: I5 — not almost-RH.",
+      "Research diary of the prime / zeta line. Machine-verified: v535–v541. Sandbox T102–T125: one matrix inequality compressed to one sign plus one accounting convention and assembled end to end; phase 2 (T126+) open, the kappa law falls once and the curvature theorem underneath stands (T129); 3253 sandbox checks. Residual: I5 — not almost-RH.",
   },
 };
 
@@ -94,7 +94,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–128 · 3225 sandbox checks
+            Research diary · Teile 11–129 · 3253 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1991,8 +1991,16 @@ export default function PrimeFrontPage() {
           preregistered bars — the exception list derived and closed, the
           retention bound exact bookkeeping, the boundary-layer exclusion now
           a proof — while the kappa bar was missed honestly, by 3.6%,
-          systematically in the ratio. Five named open points remain, under
-          attack in T129. Sandbox; not RH evidence.
+          systematically in the ratio. T129 (KAPPA-WILD, 28/28) then tested
+          the preregistered kappa law and broke it productively: the fitted
+          law falls once on 331 fresh transports, but the structure
+          underneath is solved with identities — flat is exactly 1, linear is
+          exactly 2, everything above is curvature, and the curvature chain
+          is a per-transport theorem on all 436 — while the two affordable
+          deep seams carry complete certificates on the graded space with a
+          measured 8% false-positive rate declared before the results. Two
+          irreducibles remain (the word &ldquo;for all&rdquo;, the RH
+          address); T130 is running. Sandbox; not RH evidence.
         </p>
       </DiarySection>
 
@@ -2014,7 +2022,7 @@ export default function PrimeFrontPage() {
             level="Near"
             badge="sandbox"
             title="I5 geography complete; the induction compressed to one sign plus one convention, and assembled end to end"
-            body="After 128 probes (3225/3225 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete; and the induction that would carry I5 is compressed from one matrix inequality (T104) to a sign the coarse-to-fine recursion already carries plus one declared accounting convention (T124/T125) — with the relay mechanism certified step by step, 400/400 rungs, a single certified step at zone 155,921 (T115), and the finale assembling the whole chain on 52 zones, its load-bearing spine 96.2% identity or Cholesky certificate with the Harnack pair no longer in it (T125). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH; what is missing for any infinite statement is uniformity in the zone index — now phase 2 of the diary (T126+), where the seam architecture is finished, both remaining inequalities are proof-shaped, and three of the four resulting points stand at their preregistered bars (T128) — five named open points remain. The compression locates the difficulty; it does not remove it. Not RH evidence."
+            body="After 129 probes (3253/3253 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete; and the induction that would carry I5 is compressed from one matrix inequality (T104) to a sign the coarse-to-fine recursion already carries plus one declared accounting convention (T124/T125) — with the relay mechanism certified step by step, 400/400 rungs, a single certified step at zone 155,921 (T115), and the finale assembling the whole chain on 52 zones, its load-bearing spine 96.2% identity or Cholesky certificate with the Harnack pair no longer in it (T125). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH; what is missing for any infinite statement is uniformity in the zone index — now phase 2 of the diary (T126+), where the seam architecture is finished, both remaining inequalities are proof-shaped, three of the four resulting points stand at their preregistered bars (T128), and the kappa law falls once while the curvature theorem underneath it stands on all 436 transports (T129) — two irreducibles remain. The compression locates the difficulty; it does not remove it. Not RH evidence."
           />
           <MeaningLevel
             level="Big if"
@@ -2060,7 +2068,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 text-sm text-slate-500 sm:px-6 lg:px-8">
           Numbers and verdicts are taken from{" "}
           <code className="font-mono text-slate-400">experiments/next.txt</code>{" "}
-            (2026-07-23…28 diary, Teile 11–128) and the promoted modules{" "}
+            (2026-07-23…28 diary, Teile 11–129) and the promoted modules{" "}
           <code className="font-mono text-slate-400">
             verification/v535_*.py
           </code>{" "}
@@ -2282,7 +2290,7 @@ function BigPictureSection() {
               tone="sky"
             />
             <BigPictureStat
-              term="3225"
+              term="3253"
               desc="sandbox checks, all passing"
               tone="amber"
             />
@@ -2360,16 +2368,18 @@ function ProgramStatusCallout() {
         Strongest current sentence
       </p>
       <p className="mt-3 font-serif text-lg leading-relaxed text-violet-50 sm:text-xl">
-        After 128 probes and seven promoted modules, what remains TFPT-specific
+        After 129 probes and seven promoted modules, what remains TFPT-specific
         is exactly one object: I5 — and the induction that would carry it is now
         a conditional theorem, assembled end to end on 52 zones (T125), whose
         load-bearing spine is 96.2% identity or Cholesky certificate, whose only
         hypothesis is a declared accounting convention, and whose seam
         architecture is finished (T126): both remaining inequalities are
-        proof-shaped (T127), and three of the four resulting points stand at
-        their preregistered bars (T128 · THREE-OF-FOUR) — the kappa bar was
-        missed honestly, by 3.6%, systematically in the ratio; five named open
-        points remain.
+        proof-shaped (T127), three of the four resulting points stand at their
+        preregistered bars (T128 · THREE-OF-FOUR), and the kappa law that T128
+        preregistered falls once on 331 fresh transports while the theorem
+        underneath it stands (T129 · KAPPA-WILD) — flat is exactly 1, linear is
+        exactly 2, everything above is curvature, and the curvature chain is a
+        per-transport theorem on all 436.
       </p>
       <ul className="mt-4 space-y-2 text-xs leading-relaxed text-slate-400">
         <li>
@@ -2462,10 +2472,28 @@ function ProgramStatusCallout() {
           boundary-layer exclusion is now a proof with an 11.6× floor margin —
           while the fourth point, the protrusion concentration kappa, missed
           its own bar by 3.6%, systematically in the ratio, which is what
-          distinguishes a bound from a fit. Five named open points remain;
-          T129 (KAPPA.DEEP.SEAMS,{" "}
+          distinguishes a bound from a fit. T129 (KAPPA.DEEP.SEAMS,{" "}
           <span className="font-mono text-slate-300">
             kappa_deep_seams_probe.py
+          </span>
+          , KAPPA-WILD, 28/28) is the most productive break of the phase: the
+          fitted kappa law C* = 0.3506 — frozen from T128&apos;s calibration
+          groups, labelled a fit — falls once on 331 fresh transports (the bar
+          not moved; the bare bar 2 would have fallen 78 times), but the
+          structure underneath is solved with identities: the flat border
+          vector sits at kappa = 1 exactly, a linear density profile at
+          kappa = 2 exactly, everything above is curvature, and the curvature
+          chain is a per-transport theorem with an explicit constant holding
+          on all 436 transports — with a matrix-free depth block to 17,669
+          fine cells (12× the cap) showing zero violations. The two affordable
+          deep seams (n = 127, 256) carry complete certificates on the graded
+          two-scale space, honestly downgraded to GRADED-CERTIFIED: a measured
+          8% false-positive rate of the compression, declared before the
+          results. A narrow verification module on the five identity/theorem
+          pieces is ready in principle; two irreducibles remain (the word
+          &ldquo;for all&rdquo;, the RH address). T130 (CURVATURE.BRIDGE,{" "}
+          <span className="font-mono text-slate-300">
+            curvature_bridge_probe.py
           </span>
           ) is running.
         </li>
@@ -2608,7 +2636,7 @@ function I5GeographyCallout() {
       </p>
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
         I5 remains ⟺ RH; the geography locates where any attack must work, it
-        does not perform one. 2428/2428 sandbox checks at T101 (3225/3225 today).
+        does not perform one. 2428/2428 sandbox checks at T101 (3253/3253 today).
         This is not RH evidence.
       </p>
     </aside>

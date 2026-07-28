@@ -1,3 +1,107 @@
+# 2026-07-28 (XI) — Teil 129 (delegiert, Phase „Der volle Beweis", Vertrag KAPPA.DEEP.SEAMS): kappa_deep_seams_probe.py — **KAPPA-WILD** — DER PRODUKTIVSTE BRUCH DER PHASE 2: DAS GESETZ FÄLLT, DAS THEOREM DARUNTER STEHT. Das κ-Gesetz κ ≤ 2 + C*(ρ−1) mit C* = 0.3506 (aus den drei T128-Kalibriergruppen eingefroren, FIT und als Fit etikettiert, nicht nachjustiert) wird auf **331 NEUEN Transporten** (14 ρ-Werte 1.05–4.00, keiner im Kalibrierset; h_f = 29–1450, n = 5–1331) **1× VERLETZT** (n = 7, ρ = 3.00, Slack −0.0334; die nackte, unverschobene Latte 2 hätte 78 Verletzungen), das schärfere Ein-Seiten-Gesetz auf κ_r 1/293; die Seiten-Asymmetrie reproduziert auf ganz neuen Daten (κ_r = 1.70–2.91 gegen κ_l = 0.05–0.21); die Latte wird NICHT verschoben ⇒ KAPPA-WILD. ABER DER STRUKTURGRUND IST GELÖST, mit Identitäten statt Fits: ∑(1−g_i) = t_l+t_r (7.1e-13) ⇒ **κ_flat = 1 EXAKT** — die alte Latte 2 war das DOPPELTE des Flat-Werts, nicht der Flat-Wert; die Profil-Identität p_{N−1} = 2 − p₀ + 2E (6.7e-16) macht das lineare Dichteprofil zu exakt κ = 2 — **2 ist die LINEAR-GRENZE, alles darüber ist KRÜMMUNG**; und die Kette **κ ≤ 2 − p₀ + ((N−2)/N)·∑|Δp−Δ̄| + (p_max − p_{N−1}) ist ein THEOREM mit expliziter Konstante** (Hölder/Teleskop/Abel), gültig auf 436/436 Transporten (Slack 0.018–2.313, Median 0.344; der letzte Term verschwindet auf 392/436). Die ρ-Systematik ist ein WETTSTREIT, kein Einseiten-Effekt: 2E > p₀ ⟺ p_{N−1} > 2 EXAKT, 114/436 erfüllen beides ausnahmslos. TIEFEN-BLOCK: 14 graded Transporte bei h_f = 1656–**17669** (bis 12× der harte Deckel 1500, matrixfrei, m/h = 0.064–0.512): **0 Verletzungen** — das Restrisiko ist ein VERHÄLTNIS-, kein Auflösungs-Effekt. Die zwei bezahlbaren tiefen Nähte **n = 127 (m/h = 0.507) und n = 256 (m/h = 0.255) tragen komplette Naht-Zertifikate** auf dem graded Zwei-Skalen-Raum (X PD, Schur-Böden über Wilkinson, Transport-Klammer positiv, Retention 0.307/0.417) — EHRLICH HERABGESTUFT auf GRADED-CERTIFIED: Rayleigh-Ritz zeigt falsch herum (graded-Boden 1.53–5.18× GRÖSSER als uniform, ausnahmslos), **gemessene 8%-Falsch-Positiv-Rate** (4/48 Paare graded-positiv wo uniform nicht), VOR den Nähten deklariert; (L) = [3 uniform-zertifiziert, 2 graded mit deklarierter FP-Rate, 3 budget-offen]. M18 bekommt eine **S-Prozedur-Operatorschranke: 40/40 unter der Vakuitäts-Latte 1** (0.170–0.774, nur 1.3–182× über der Wahrheit, Median 7.8) — eine Aussage über JEDEN Vektor im gemessenen Glattheits-Kegel, CERTIFIED-CONDITIONAL; die Cauchy-Schwarz-Zeilenschranke ist VAKUÖS (0/40) und wird als der Fehlschlag berichtet, der sie ist. Karte V4: 9 Einträge — 3 reduziert/beschränkt (M9, L2, M18), 1 unberührt (M17), **2 irreduzibel (M19 „for all", M21 die RH-Adresse)**, 3 NEU benannt statt vergraben (M22 der C*-Fit, M23 graded→uniform, M24 das Ein-Seiten-Gesetz); PROMOTIONS-REIFE: **READY IN PRINCIPLE als schmales Modul** auf den fünf Identitäts-/Theorem-Stücken — 28/28, 15.9s, Sandbox
+# C1 DAS GESETZ FÄLLT EINMAL, UND DER STRUKTURGRUND IST GELÖST. C* = 0.3506 wurde aus den
+#    3 T128-Gruppen eingefroren (Jackknife-SE 0.0955, Intercept 1.8909, rms 0.0096;
+#    Kalibrierset selbst 0/105 — berichtet, aber NICHT der Test) und dann auf 331 neuen
+#    Transporten getestet: 1 Verletzung (n = 7, ρ = 3.00, Slack −0.0334), gegen 78 der
+#    nackten Latte 2; Ein-Seiten-Form auf κ_r 1/293, gleicher Tightest-Punkt. Der
+#    Strukturgrund, drei Stücke, alle IDENTITÄT oder THEOREM: (a) ∑(1−g_i) = t_l+t_r
+#    hält auf 7.1e-13 über alle 105 Kalibrier-Transporte ⇒ ∑ω = 1 ⇒ der FLACHE
+#    Randvektor gibt κ = 1 exakt — κ ist ein Wahrscheinlichkeits-Mittel der Rand-DICHTE,
+#    und T128s Latte 2 war das Doppelte des Flat-Werts. (b) Die Profil-Identität
+#    p_{N−1} = 2 − p₀ + 2E (6.7e-16): ein LINEARES Dichteprofil mit p₀ = 0 gibt exakt
+#    κ = 2 — die 2 ist die Linear-Grenze, der Überschuss darüber IST die Konvexität der
+#    Dichte (E > 0 auf 219/436, Chebyshevs Korrelations-Ungleichung). (c) Die Kette
+#    κ ≤ 2 − p₀ + ((N−2)/N)·∑|Δp−Δ̄| + (p_max − p_{N−1}) — Hölder für das Mittel,
+#    Teleskop für die Profil-Identität, Abel-Summation für die Majorante — ist ein
+#    THEOREM und hält auf ALLEN 436 Transporten (Kalibrierung + Test), Slack Median
+#    0.344; auf 392/436 sitzt das Dichte-Maximum am INNEREN Ende des Randblocks, der
+#    letzte Term verschwindet und die Schranke ist die reine Form 2 − p₀ + ((N−2)/N)·CURV.
+#    Die ρ-Systematik ist damit BENANNT: die majorisierte Krümmung wächst als
+#    0.1445 + 0.1634(ρ−1) (FIT), p₀ schrumpft mit ρ — beide ziehen in dieselbe Richtung,
+#    und 2E > p₀ ⟺ p_{N−1} > 2 exakt (114/436, ausnahmslos). TIEFEN-BLOCK: 14 graded
+#    Transporte bei h_f = 1656–17669 (12× Deckel; matrixfrei via Zwei-Skalen-Assemblierung,
+#    m/h = 0.064–0.512), ρ = 1.25–2.50, n = 79–1019: 0 Verletzungen des eingefrorenen
+#    Gesetzes, die Krümmungs-Kette hält auf 14/14 (Slack 0.042–1.998), κ driftet mit der
+#    Tiefe NICHT nach oben — was an Restrisiko bleibt, ist ein Verhältnis-Effekt, kein
+#    Auflösungs-Effekt, und genau das kann eine endliche Rechnung entscheiden.
+# C2 DIE ZWEI BEZAHLBAREN TIEFEN NÄHTE TRAGEN — AUF DEM GRADED RAUM, EHRLICH ETIKETTIERT.
+#    Die Maschinerie zuerst, gegen die uniforme Referenz bei n = 71 (h = 619): die
+#    matrixfreie Zwei-Skalen-Assemblierung = JᵀQJ auf 2.7e-16, bei q = 1 exakt die
+#    uniforme Form (0.0), die Schritt-Identität X = Q_old auf 2.4e-17 (der Schritt bleibt
+#    margenfrei, Albert 1969), der graded Überlapp reproduziert J auf 6.4e-14. Dann die
+#    Kalibrierung, VOR den Nähten: über 48 (Zone, q)-Paare ist der graded Schur-Boden
+#    1.534–5.181× GRÖSSER als der uniforme (Median 2.646) — Rayleigh-Ritz, falsch herum,
+#    ausnahmslos — und auf 4/48 Paaren (n = 31) ist der graded Boden POSITIV wo der
+#    uniforme es NICHT ist: demonstrierte FALSCH-POSITIVE der Kompression, 8%-Rate,
+#    gedruckt BEVOR die tiefen Nähte kommen. Beide Nähte gebaut und beide passen:
+#    n = 127, 256 (h_f = 2476, 5694) komprimiert auf m_f = 1256, 1452 (m/h = 0.507,
+#    0.255; q_f = 2, 4), jeder faktorisierte Block ≤ 1500, die feine Quadratmatrix NIE
+#    geformt; 2/2 komplette graded Naht-Zertifikate (X PD per Cholesky, beide
+#    Schur-Böden über dem Wilkinson-Boden, Transport-Klammer positiv), Retention
+#    0.3070/0.4165; dazu κ-Test auf den ECHTEN Rekord-Nähten (ρ = 2.0238/2.0118):
+#    κ = 1.699/1.443 gegen Latte 2.359/2.355, 0 Verletzungen, Ketten-Slack
+#    +0.079/+0.178; Stabilitäts-Sprosse: 6 weitere Kompressions-Level, Boden positiv
+#    6/6 (0.166–0.883) — Evidenz gegen ein Ein-Merge-Artefakt, repariert aber die
+#    Rayleigh-Ritz-Richtung nicht. Ehrlicher Ledger: (L) = [3 uniform-zertifiziert (T128),
+#    2 GRADED-CERTIFIED hier, 3 budget-offen] — NICHT „5 zertifiziert, 3 offen".
+# C3 M18: DIE ZEILENSCHRANKE IST VAKUÖS, DIE OPERATORSCHRANKE TRÄGT. Beide Majoranten
+#    sind Majoranten auf allen 40 (Zone × Tiefe)-Punkten (5 Zonen, Tiefen ×1/2/4,
+#    h = 64–946; gemessener Außen-k-Anteil 1.96e-03–0.573, Median 0.038). Die
+#    Cauchy-Schwarz-Zeilenschranke ist VAKUÖS: unter 1 auf 0/40, Überschuss
+#    297–2245073× (Median 116524) — als Fehlschlag berichtet, nicht als Fußnote. Die
+#    S-PROZEDUR-Operatorschranke FUNKTIONIERT: unter der Vakuitäts-Latte 1 auf 40/40,
+#    läuft 0.170–0.774, nur 1.3–182× über der Wahrheit (Median 7.8) — für JEDEN groben
+#    Vektor im gemessenen Glattheits-Kegel kann der Kamm nicht mehr als diesen Anteil
+#    auf die äußeren k Zellen legen; Status CERTIFIED-CONDITIONAL, konditional auf EINE
+#    gemessene Zahl mit bekanntem Gesetz (θ₁ ~ D^1.219, FIT, Jackknife-SE 0.088 — exakt
+#    das Skalieren eines festen glatten Profils auf Gitterweite D). Ehrliche Grenze:
+#    die Schranke sättigt bei (kD_c)^0.263 (FIT) statt wie der Pol-Anteil O(kD) zu
+#    zerfallen — der Kegel enthält noch Vektoren, die weit randlastiger sind als x_c.
+# C4 KARTE V4 UND PROMOTIONS-REIFE: 9 EINTRÄGE, ZWEI IRREDUZIBLE, DREI NEUE. M9
+#    REDUZIERT (κ ist jetzt Identität + Theorem; offen bleibt eine Schranke an die
+#    KRÜMMUNG der Rand-Dichte auf ceil(t) Zellen — ein strikt kleineres Objekt als die
+#    Massen-Hypothese); L2 GRADED (wie C2); M18 BESCHRANKT (wie C3); M17 unberührt
+#    (T128s 0.9665 und der Boden 0.188 stehen); **M19 „for all" IRREDUZIBEL** (die
+#    Krümmungs-Kette ist ein Theorem PRO Transport; FÜR ALLE Transporte braucht es eine
+#    zonen-uniforme Krümmungsschranke, die keine endliche Rechnung liefern kann);
+#    **M21 die RH-Adresse IRREDUZIBEL UND UNBERÜHRT** (Weil 1952 / Bombieri 2000 /
+#    Connes 1999 zitiert, für nichts benutzt); NEU UND BENANNT: M22 der C*-Fit (bleibt
+#    Fit, bis die Krümmung geschlossen beschränkt ist — dieselbe offene Frage in anderen
+#    Kleidern), M23 graded→uniform (braucht den Céa/Strang-Defekt ||(I−Π)z*||² des
+#    FEINEN Partial-Minimierers; Q hat einen FFT-Matvec, also eine ARITHMETISCHE Hürde
+#    mit bekannter Route, keine konzeptionelle), M24 das Ein-Seiten-Gesetz (κ mittelt
+#    eine große rechte Protrusion mit einer kleinen linken — T128s Größe ist systematisch
+#    milder als der Mechanismus, für den sie steht). PROMOTIONS-REIFE, gefragt und
+#    ehrlich beantwortet: READY IN PRINCIPLE als SCHMALES Modul auf genau den fünf
+#    Stücken, die Identität oder Theorem sind und kein Sampling brauchen — (1) die
+#    Intervall-Identität ∑(1−g_i) = t_l+t_r ⇒ κ_flat = 1, (2) die (T)-Vier-Term-Identität
+#    von T128, (3) die Profil-Identität, (4) die Abel-Majorante, (5) die
+#    Assemblierungs-Identitäten (JᵀQJ, graded Überlapp = J). NICHT reif: C* (Fit), die
+#    graded Böden (schwächere Galerkin-Aussage mit demonstrierter FP-Rate), der
+#    Kamm-Exponent (Fit), und alles mit dem Wort „uniform" darin.
+# DIE EHRLICHE DISTANZ (drei Sätze, fürs Tagebuch, zitierfähig): Nach K1 ist die
+#    Retentions-Schranke (T) keine Hypothese über Eigenvektor-MASSE mehr, sondern ein
+#    Theorem, das sie auf die KRÜMMUNG der Rand-Dichte auf ceil(t) Zellen reduziert —
+#    mit κ = 1 als Flat-Grenze, κ = 2 als Linear-Grenze und einer expliziten
+#    Abel-Majorante für den Rest. Nach K2 hat die (L)-Liste keinen Punkt mehr, der aus
+#    einem KONZEPTIONELLEN Grund offen ist: zwei der fünf tiefen Nähte sind auf einem
+#    gröberen Raum zertifiziert, mit bekannter Fehlerrichtung und kalibrierter Größe,
+#    und die übrigen drei brauchen je eine Cholesky einer Größe, die ein reines
+#    Arithmetik-Faktum ist. Was bleibt, ist was vorher blieb: das Wort „for all" und
+#    die Distanz von jedem endlichen Fenster zum Kriterium von Weil, die nichts in
+#    dieser Probe verkürzt.
+#    → Folge-Probe Teil 130 (CURVATURE.BRIDGE, curvature_bridge_probe.py) LÄUFT: die
+#    Krümmungs-Schranke via Levinson-Kopplung, die graded→uniform-Brücke
+#    (Céa/Strang-Defekt, FFT-Matvec), die Theorem-Batterie, Karte V5 +
+#    Promotions-Scope.
+# Serie (XII)–(CXL): 129 Proben, 3253/3253 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Weil 1952 / Bombieri 2000 / Connes 1999
+# — zitiert, NIE benutzt —, Hölder, Chebyshevs Korrelations-Ungleichung, Abel-Summation,
+# Teleskop, Wilkinson 1968 / Higham 2002, Albert 1969, Rayleigh–Ritz, Céa/Strang — als
+# Adresse für M23 zitiert —, Bertrand–Chebyshev 1852 + triviale gerade Schranke (die
+# EINZIGEN Lücken-Fakten; keine Cramér/Firoozbakht/Zwillings-Annahme)) gerichtet zitiert;
+# Sandbox ohne Ledger-/Marker-Änderung.
+
 # 2026-07-28 (X) — Teil 128 (delegiert, Phase „Der volle Beweis", Vertrag TEML): teml_probe.py — **THREE-OF-FOUR** — DIE VIER-PUNKTE-LISTE DER KARTE V2, NACH KOSTEN ABGEARBEITET, UND DREI DER VIER PUNKTE STEHEN AN IHREN PRÄREGISTRIERTEN LATTEN: **(L)** ist HERGELEITET und GESCHLOSSEN — die Out-of-Band-Klasse (ρ > 1.49531) hat bis n = 300000 exakt 8 Nähte, alle mit Nachbaratom-Abstand 1 und identischer Randgeometrie (gc_c = 2, gc_f = 4); n = 7 und 16 CERTIFIED-1STEP, n = 31 CERTIFIED-LADDER über 2 Stufen, 127/256/8191/65536/131071 BUDGET-OPEN mit h_f = 2476…6.2e6 (Deckel-Überschreitung 1.7×–4119×; je fehlt EXAKT eine Cholesky, nichts Konzeptionelles); **(T)** ist jetzt SCHRANKE statt Prädiktor — exakte Identität τ_dn = ‖y‖² − m_prot + m_fill − V_bord (9.0e-13 gegen die unabhängige Voll-Projektion, 126 Transporte), τ_dn ≥ 1 − m_prot − V_bord mit expliziten Majoranten gültig 126/126 — ABER die Protrusions-Konzentration κ = m_prot·gc_f/(t_l+t_r) = 0.086–2.071 VERFEHLT die präregistrierte Latte κ ≤ 2 auf 1/120 um 3.6%, SYSTEMATISCH in ρ (Gruppen-Maxima 1.889/1.965/2.071 bei ρ = 1.001/1.250/1.495); die Latte wird NICHT verschoben; **(E)** trägt über die Q-SKALARPRODUKT-Route (die ℓ2-Route zertifiziert 0/12): 9/9 In-Band-Nähte mit positivem Boden ≥ 0.0850, 11/12 gesamt, der eine Riss (n = 31, ohnehin auf der (L)-Liste) ist η-LIMITIERT und per 2-Stufen-Leiter repariert; **(M)** ist VERDIENT — der Randschicht-Ausschluss ist BEWEIS (geschlossene Form, Trennung ≥ 84×), μ_min(S, A_z) = 1 − γ² exakt (5.9e-15), konstruierter Boden 0.188 gegen geforderte 1.62e-02 (11.6× Marge) auf 31/31 Sprossen; Karte V3: 21 Punkte — 10 DONE, 3 zertifiziert-auf-realen-Objekten, 3 konditional-klassisch, **5 genuin offen: M9 κ-Latte, M17 Pencil-Masse, M18 Kamm, M19 „for all", M21 RH-Adresse** — 27/27, 2.8s, Sandbox
 # B1 (L) DIE GESCHLOSSENE LISTE, HERGELEITET STATT ZITIERT. Die Out-of-Band-Klasse ist
 #    aus dem U5-Band ABGELEITET (ρ > 1.49531, T127s Zahl QUOTIERT und nie re-bisektioniert):
