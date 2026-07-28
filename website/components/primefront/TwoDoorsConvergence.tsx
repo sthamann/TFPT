@@ -267,8 +267,24 @@ export function TwoDoorsConvergence() {
           by a constant factor 2.27–2.45 (flat in D), and the rank ladder
           closes the whole comparison path: no comparison argument can
           deliver D-uniformity, so the next move is the sharp
-          capacity-Rayleigh route, and T143 (sharp_capacity_probe.py) is
-          running at exactly that route.
+          capacity-Rayleigh route. T143 · SHARP.CAPACITY (SHARP-CARRIES,
+          24/24) then ran exactly that route, and it carries: the exact
+          capacity-Rayleigh form is an identity on all 26 windows (with a
+          structurally new bookkeeping — the minimiser orthogonal to the
+          equilibrium charge, the mass share negative, the gap a
+          cancellation of two O(1) shares, the naive split certified dead
+          at 6–67× ρ), Maz&apos;ya&apos;s capacity criterion applied to the
+          gap form lands inside its window [1/4, 1] on 26/26
+          (Φ_sup·λ = 0.5438–0.6457) for a non-Markovian form, with a
+          zone-uniform loss factor (D^−0.048 ± 0.010); the supremum lives
+          on closed families — in node coordinates plain INTERVALS dominate
+          by 8.3–129.5 (Muckenhoupt&apos;s one-dimensional structure) — and
+          is certified by full enumeration on 6 border blocks, while
+          Miclo&apos;s constructive chain loses 46–2561× (the conclusion
+          holds, the classical proof mechanism does not). D-uniformity is
+          reduced to one named inequality — cap_E(A) ≥ |A|·λ₀/c₀ with an
+          absolute c₀ — and T144 (capacity_inequality_probe.py) is running
+          at exactly that inequality.
         </p>
       </div>
 

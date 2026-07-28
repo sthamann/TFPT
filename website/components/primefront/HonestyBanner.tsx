@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3571/3571 sandbox checks —
+        (“the full proof”, T126+) is now open with 3595/3595 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -100,7 +100,16 @@ export function HonestyBanner() {
         misses by a constant factor ~2.3 flat in D, and the rank ladder
         closes the whole comparison path — no comparison argument can
         deliver D-uniformity, so the next move is the sharp
-        capacity-Rayleigh route (T143, running). What remains
+        capacity-Rayleigh route. T143 (SHARP-CARRIES) then ran exactly that
+        route, and it carries: the exact capacity-Rayleigh form is an
+        identity on all 26 windows, Maz&apos;ya&apos;s capacity criterion
+        applied to the gap form lands inside its window [1/4, 1] with a
+        zone-uniform loss factor (D^−0.048 ± 0.010), the supremum lives on
+        closed families (intervals in node coordinates, certified by full
+        enumeration on the small border blocks), and D-uniformity is reduced
+        to <em>one</em> named inequality — a non-Markovian Maz&apos;ya
+        capacity bound cap_E(A) ≥ |A|·λ₀/c₀, pointing at Muckenhoupt&apos;s
+        1972 two-weight calculus (T144, running). What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

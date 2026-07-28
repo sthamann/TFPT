@@ -116,7 +116,8 @@ export type PrimeFrontVerdict =
   | "DENSE-RESISTS"
   | "FINITE-CORE"
   | "HARDY-RESISTS"
-  | "PROFILE-RESISTS";
+  | "PROFILE-RESISTS"
+  | "SHARP-CARRIES";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -140,6 +141,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-28",
+    part: 143,
+    title:
+      "The sharp route carries — the exact capacity-Rayleigh form is an identity, Maz'ya's capacity criterion lands inside its window [1/4, 1] on all 26 windows with a zone-uniform loss factor (D^−0.048), and D-uniformity is reduced to ONE named inequality: a non-Markovian Maz'ya capacity bound, with intervals dominating the extremal sets — pointing at Muckenhoupt's 1972 two-weight calculus",
+    verdict: "SHARP-CARRIES",
+    summary:
+      "T143 (SHARP-CARRIES, 24/24, 18.5 s, bars declared in the docstring before any number) — contract SHARP.CAPACITY: estimate the exact capacity Rayleigh form directly, with no Loewner step taken anywhere, i.e. exactly R1c. (1) THE EXACT FORM, VERIFIED AS AN IDENTITY on all 26 windows (h = 142–1173, core m up to 1172; assembly 1e-11 / 5e-12, eigenvalue reproduction 3e-06 relative under the explicitly declared 1/gap conditioning factor): 1 − ρ(W) = inf_v [dᵀ(J⁻¹−B)d + (xᵀv)²/cap − Σₖ sₖvₖ²] / [dᵀJ⁻¹d + (xᵀv)²/cap] with d = Dv — every ingredient closed geometry, no inequality taken. The ingredient bookkeeping at the exact minimiser is structurally new: the minimiser is ORTHOGONAL to the equilibrium charge (to 1e-05 — the capacity rank one carries nothing), the mass share is NEGATIVE (−0.0698..−0.0029 — the site masses HELP), and the gap is the cancellation between the Green share (exactly 1) and the crossing share (1.0029–1.0698). The naive split ρ ≤ ρ_mass + ρ_long is certified dead at 6.19–66.63 = 6–67× ρ itself — the reason the criterion must be applied to the GAP form, where its factor of four costs the coefficient and not the scale. (2) THE CORE NUMBER: Maz'ya's capacity criterion, brought to the gap form by a congruence (capacities in closed form, cap_E(A) = 1ᵀ[(E⁻¹)_AA]⁻¹1, verified against the constrained minimisation itself), gives Φ_sup·λ = 0.5438–0.6457 on 26/26 windows — INSIDE the Maz'ya window [1/4, 1] — for a form that is NOT Markovian (72–84% positive off-diagonals). The lower bound λ ≥ 1/(4Φ_sup) captures 0.3872–0.4597 of the true gap, and the route's LOSS FACTOR is ZONE-UNIFORM: D^−0.048 ± 0.010 against the 0.25 bar (the gap's own scatter D^0.000 ± 0.079 belongs to the arithmetic, not the criterion). The supremum is not an oracle: the closed families (Green diagonal, transported potentials, index intervals) recover 0.9606–1.0000 of the best value found, a full local search improves by at most 1.041×, and in the NODE coordinates the near-optimal sets are INTERVALS of window lags, dominating the extremal level sets by 8.3–129.5 — the one-dimensional structure Muckenhoupt's 1972 closed form needs. The honest half: Miclo's constructive capacitary CHAIN loses a factor 46–2561 (κ = 19.9–1144.9, drifting like D^−2.13) — the criterion's CONCLUSION holds while its classical PROOF MECHANISM does not, and that is exactly where the remaining work sits. (3) THE REST, TYPED: R1d is negative with a reason — the LP dual over the conductance cone (39 Λ and 35 Ω directions, hand-verified dual point on 4/4 windows) saturates at the trivial floor (certified class floor = ρ(W) to a factor 1.000000): a finite direction sample of Ω cannot bind the cone, R1d needs the full SDP constraint — recorded so the sampling version is never retried, and after (2) no longer on the critical path. R4: 36 border blocks rebuilt, 32 certified, 4 open; on the 6 largest blocks ALL 255–16383 subsets were enumerated, so Φ_sup is EXACT there — Φ_sup·λ = 0.6087–0.9016, again inside the window — and the capacity argmax set is ENTIRELY the far tail (1.000 of its indices at block index ≥ 8). Map V15, 10 new statements (stock 84 → 94), 0 promoted here. REST LIST (the shortest of the phase): S1 the ONE named inequality cap_E(A) ≥ |A|·λ₀/c₀ for all sets A with an absolute c₀ (for Dirichlet forms this is Maz'ya's theorem with c₀ = 4; this form is not Markovian); S2 the Muckenhoupt route to S1 — a capacity-only comparison to a path form on intervals, to which T142's obstruction does NOT apply (the capacity only has to be right to a bounded factor); S3 a closed lower bound on cap_E; R1d′ the SDP dual; R4 the 4 open blocks. What is missing is a proof, not a number. T144 (CAPACITY.INEQUALITY, capacity_inequality_probe.py) is running at exactly S1/S2. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "sharp_capacity_probe.py",
+  },
   {
     date: "2026-07-28",
     part: 142,
