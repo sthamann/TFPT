@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–121 · 3037 sandbox checks
+            Research diary · Teile 11–122 · 3057 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1689,9 +1689,16 @@ function ProgramStatusCallout() {
         shows only a poly-log deficit (α^−1.57, uniform in D) instead of
         collapse, exactly decomposed into two repairable steps (Rayleigh
         + CBS, nothing in γ), and one link of the chain was honestly
-        refuted (the odd-sector Hankel term); both repairs are under
-        test in T122 (net_balance_repair_probe.py, running). Milestone:
-        3037/3037 checks. Not almost-RH. This is not RH evidence.
+        refuted (the odd-sector Hankel term). T122 (NET-IMPROVED) then
+        lands both repairs: the Hankel term is the reflection half of an
+        exact isometry — so link (5) is retired by an identity and the
+        certified band floor survives to α = 6.31 — the structural
+        Rayleigh step is sharp (slack 1.00–1.03), the certified deficit
+        halves to α^−0.73 (exactly D-uniform), and with the measured CBS
+        coupling the balance closes to within the chain&apos;s own
+        ceiling; the structural CBS step is under test in T123
+        (structural_cbs_probe.py, running). Milestone: 3057/3057 checks.
+        Not almost-RH. This is not RH evidence.
       </p>
     </aside>
   );

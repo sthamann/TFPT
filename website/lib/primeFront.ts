@@ -98,7 +98,8 @@ export type PrimeFrontVerdict =
   | "TWO-OF-THREE"
   | "ARITHMETIC-DONE"
   | "HARNACK-EXPLAINED"
-  | "WIDE-RESTRUCTURED";
+  | "WIDE-RESTRUCTURED"
+  | "NET-IMPROVED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -122,6 +123,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-28",
+    part: 122,
+    title:
+      "The Hankel term was never an error term — A_z is exactly an isometry compression, the certified floor survives to α = 6.31 where the Christoffel budget tore at 3.45, the structural Rayleigh step is sharp, and the certified deficit halves to α^−0.73",
+    verdict: "NET-IMPROVED",
+    summary:
+      "T122 (NET-IMPROVED, 20/20) — contract NET.BALANCE.REPAIR: repair the two worst-case steps that T121's exact decomposition named — the Rayleigh step and the link-(5) transfer. Both repairs land. (V1) THE HANKEL REPAIR IS AN IDENTITY, NOT AN ESTIMATE: the compressed Hankel term has a closed form, (ZᵀHZ)_{jk} = b_{j+k} with b half a SECOND DIFFERENCE of the lag sequence — exactly like the Toeplitz-side lags — verified to 7e-16 on 36/36 rows. So the oscillation injection Z suppresses BOTH halves by the same |2sin(θ/2)|²: the norm ratio is 0.123–0.781, O(1), and every norm route is hopeless (the valid Weyl floor is positive on only 12/36 rows; the archimedean half is numerically of rank 10–14 — the Hartman/Peller smoothing — while the comb half is corner-localised: structure, not bounds). The valid replacement for link (5): A_z = Wᵀ·Toeplitz_M(c)·W EXACTLY, with W = BZ an isometry (WᵀW = I to 0.0) — the Hankel term IS the reflection half of an isometry, not an error term. From this plus a certified cell envelope and Parseval follows a certified band bound, λ_min(A_z) ≥ thr − λ_max(G), non-vacuous on 36/36 rows up to α = 6.31 — where T121's Christoffel budget tore at 3.45 — recovering 0.43–0.995 of the truth; the e^(2.41α) dip count no longer enters anywhere. Honest caveat: the threshold sweep's optimum sits at supp(g) ≈ 1 of the circle — one certified end of a one-parameter family whose other end (small thr) is the dip budget that tore. (V2) THE STRUCTURAL RAYLEIGH STEP IS SHARP: 'y is high-band' is a statement about Wy (99.3–100.0% of its mass above |θ| = π/2; ‖Wy‖² = ‖y‖² exactly), not about y itself (0.1–1.7% — the oscillation lives in the injection, not in the coefficients). The same certified band identity evaluated on y — yᵀA_z y ≥ thr‖y‖² − yᵀGy — is positive on 36/36 rows, never exceeds the truth, and beats the worst-case product λ_min(A_z)‖y‖² by a factor 1.28–18.90: it removes the WHOLE T121 slack r_ray ~ α^(+0.83), and what is left is q_str = 1.00–1.03 with drift α^(−0.002) — flat, i.e. SHARP: no α-dependence of the chain passes through the Rayleigh step any more. The CBS step is equally pessimistic: the actual coupling κ_y = 0.0067–0.531 against the worst-case γ² = 0.717–0.965 (a factor of up to 100+, growing like α^(+1.52)). (V3) THE NEW NET BALANCE — THE CORE NUMBER: the T121 baseline reproduces exactly (S0/ε_c ~ α^(−1.562)); repairing link (5) alone changes the exponent not at all (α^(−1.565) — a uniform floor cannot beat λ_min(A_z); V1 buys the LADDER, V2 buys the EXPONENT); with both repairs the CERTIFIED balance is S2/ε_c ~ D^(−0.003±0.075)·α^(−0.729±0.090) — the deficit HALVES, and it is exactly uniform in D. With the MEASURED CBS coupling the balance reads α^(−0.113±0.063) — statistically indistinguishable from the chain's own ceiling α^(−0.116±0.062), the cost of discarding ε_f, untouched by both repairs. The residual decomposition closes to 2.9e-16: −0.729 − 0.002 + 0.615 = −0.116. So the chain closes UP TO ITS OWN CEILING as soon as the CBS step is no longer a worst case. (V4) THEOREM V6: the defect count stays 4, but the kinds changed twice over — (F1) the corner sign and (F2) the uniform pairing bound are untouched by this part; (F3) NEW: an analytic (D, α) bound for the band margin 1 − yᵀGy/(thr‖y‖²), measured 0.024–0.363 ~ D^(−0.042)·α^(−0.525) — one item that absorbs link (5), the Nikolskii budget and both readings of (E3)/(E4); (F4) a structural CBS estimate (worth α^(+0.615) in the balance). Lever limit declared honestly: at M ≤ 2048 the deep dips appear only at frame resolution. What remains are two scalar estimates of the same band-profile kind. T123 (STRUCTURAL.CBS, structural_cbs_probe.py) is running: a structural κ bound by the same band machinery (the coupling needs low-band mass — Wy has essentially none there), the band margin, the certified balance against the ceiling, the ε_f question, a theorem candidate V7. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "net_balance_repair_probe.py",
+  },
   {
     date: "2026-07-28",
     part: 121,

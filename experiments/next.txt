@@ -1,3 +1,106 @@
+# 2026-07-28 (IV) — Teil 122 (delegiert, die Netto-Bilanz-Reparatur — Vertrag NET.BALANCE.REPAIR): net_balance_repair_probe.py — **NET-IMPROVED** — DER HANKEL-TERM WAR NIE EIN FEHLER-TERM, UND DIE KETTE SCHLIESST BIS AUF IHRE EIGENE DECKE, SOBALD DER CBS-SCHRITT KEIN WORST-CASE MEHR IST: der gültige Link-5-Ersatz ist eine IDENTITÄT — A_z = WᵀToeplitz_M(c)W exakt mit W = BZ Isometrie (WᵀW = I auf exakt 0.0, geschlossene Hankel-Form (ZᵀHZ)_{jk} = b_{j+k} auf 7.0e-16, 36/36): der Hankel-Term IST die Spiegelungs-Hälfte einer Isometrie (Z unterdrückt BEIDE Seiten gleich, Norm-Verhältnis 0.123–0.781, O(1); die Weyl-Floor-Route reißt auf 12/36) — daraus die zertifizierte Band-Schranke λ_min(A_z) ≥ thr − λ_max(G), nicht-vakuum **36/36 bis α = 6.31**, wo T121s Christoffel-Budget bei 3.45 riss (Recovery 0.429–0.995; die e^{2.41α}-Dip-Zählung kommt nicht mehr vor; ehrlicher Caveat: das Optimum sitzt bei supp(g) ≈ 1 — ein zertifiziertes Ende einer Ein-Parameter-Familie); der strukturelle Rayleigh-Schritt: „y ist hochband" gilt für Wy (99.3–100% Masse über |θ| = π/2, ‖Wy‖² = ‖y‖² exakt), NICHT für y selbst (0.1–1.7%), und die strukturelle Schranke yᵀA_z y ≥ thr‖y‖² − yᵀGy ist zertifiziert positiv 36/36, schlägt den Worst-Case um 1.28–18.90 (entfernt den GANZEN T121-Slack r_ray ~ α^{+0.83}); Rest-Slack **q_str = 1.00–1.03, Drift α^{−0.002} — SCHARF**; DIE KERNZAHL: **S2/ε_c (zertifiziert, V1+V2) ~ D^{−0.003±0.075}·α^{−0.729±0.090}** gegen T121s α^{−1.562} für dasselbe Objekt — das Defizit HALBIERT, exakt D-uniform; mit dem GEMESSENEN CBS (κ_y = 0.0067–0.531 gegen γ² = 0.717–0.965) liest die Bilanz α^{−0.113±0.063} — statistisch ununterscheidbar von der Ketten-eigenen Decke S4 = α^{−0.116±0.062} (ε_f-Wegwerfen); Residual-Zerlegung schließt auf 2.9e-16: −0.729 − 0.002 + 0.615 = −0.116; V1 kauft die Leiter, V2 kauft den Exponenten; Satz V6: Defekt-Zähler BLEIBT 4, aber die Arten wechseln — (F3) NEU: analytische Schranke für die Band-Marge (absorbiert Link 5, Nikolskii-Budget und beide E3/E4-Lesarten), (F4) der strukturelle CBS-Schritt — 20/20, 15.4s, Sandbox
+# V1 HANKEL-ANATOMIE + DER GÜLTIGE LINK-5-ERSATZ: die geschlossene Form
+#    (ZᵀHZ)_{jk} = b_{j+k} mit b_s = (c_{K-2s} − 2c_{K-2s-1} + c_{K-2s-2})/2 —
+#    eine HALBE ZWEITE DIFFERENZ der Lag-Folge, exakt wie die Toeplitz-Lags —
+#    reproduziert A_z = T_hc(σ_z) − ZᵀHZ auf 7.0e-16 (36/36): Z unterdrückt
+#    BEIDE Seiten um denselben Faktor |2sin(θ/2)|², der Hankel-Term ist also
+#    NICHT relativ unterdrückt (Norm-Verhältnis 0.123–0.781, O(1); die
+#    Kompression kauft 0.04–0.45, eine Ordnung, nie das Quadrat von T118).
+#    Struktur statt Schranke: die archimedische Hälfte ist numerisch Rang
+#    10–14 (Hartman 1958/Peller 2003 — Glättung), die Kamm-Hälfte lebt auf
+#    wenigen Anti-Diagonalen in der Ecke (nur 0.1–3.4% der Frobenius-Energie
+#    im h_c/16-Block). Die Weyl-Route λ_min(T_hc) − ‖ZᵀHZ‖ ist gültig und
+#    REISST (positiv 12/36, bis α = 2.44; Vakuität 0.15–9.17; Schärfe nur
+#    0.047–0.828). DER GÜLTIGE ERSATZ IST EINE IDENTITÄT: A_z =
+#    WᵀToeplitz_M(c)W exakt, W = BZ Isometrie (WᵀW = I auf 0.0) — der
+#    Hankel-Term IST die Spiegelungs-Hälfte der Isometrie, kein Fehler-Term.
+#    Daraus (5R): mit zertifizierter Zell-Einhüllender ell und g = (thr−ell)_+
+#    ist yᵀA_z y ≥ thr‖y‖² − yᵀGy (Parseval exakt, G = WᵀToeplitz_M(g)W PSD),
+#    uniform λ_min(A_z) ≥ thr − λ_max(G): nicht-vakuum 36/36 bis α = 6.31
+#    (T121s Christoffel-Budget riss bei 3.45), Recovery 0.429–0.995,
+#    Nikolskii-Gewinn 8.4–1.1e2, Dip-Zahl irrelevant geworden. Ehrlich:
+#    das thr-Optimum sitzt bei supp(g) = 0.95–1.00 — die Schranke degeneriert
+#    zum W-komprimierten EINHÜLLENDEN-Schnitt, ein zertifiziertes Ende einer
+#    Ein-Parameter-Familie, deren anderes Ende (kleines thr) das gerissene
+#    Dip-Budget ist. Naives (5a) über λ_min(Toeplitz_M(c)): nutzlos, das
+#    volle Fenster ist NEGATIV gemessen auf 36/36 (Burden-Transfer, benannt).
+# V2 DER STRUKTURELLE RAYLEIGH-SCHRITT: die T121-Adresse präzisiert — „y ist
+#    hochband" ist eine Aussage über Wy, nicht über y: Wy trägt 99.3–100.0%
+#    seiner Masse über |θ| = π/2 (der T118-Mechanismus, explizit; ‖Wy‖² =
+#    ‖y‖² auf 3.2e-16), y selbst ist in den groben Koordinaten GLATT
+#    (0.1–1.7% hochband — die Oszillation lebt in der Injektion, nicht in
+#    den Koeffizienten). Gegen die negativen Dips der zertifizierten
+#    Fenster-Einhüllenden: Avoidance-Faktor 0.001–1.564 (α^{+3.1}, Fit) —
+#    real unten, aufgebraucht oben; genau die α-Abhängigkeit, die (F3)
+#    tragen muss. Auf dem M ≤ 2048-Hebel ist die grobe σ_z-Einhüllende auf
+#    13/36 Zeilen nichtnegativ — die tiefen Dips erscheinen erst bei
+#    Frame-Auflösung: HEBEL-GRENZE, deklariert, kein Resultat. Die
+#    strukturelle Schranke yᵀA_z y ≥ thr‖y‖² − yᵀGy (dieselbe zertifizierte
+#    Band-Identität wie (5R), auf y ausgewertet statt über den ganzen Raum):
+#    positiv 36/36, nie über der Wahrheit (36/36 sound), schlägt das
+#    Worst-Case-Produkt λ_min(A_z)‖y‖² um 1.28–18.90 — der entfernte Slack
+#    ist exakt T121s r_ray = 1.29–18.95 ~ α^{+0.831±0.159}; übrig bleibt
+#    q_str = yᵀA_z y/LB = 1.00–1.03 mit Drift α^{−0.002±0.001} — FLACH, der
+#    Schritt ist SCHARF, keine α-Abhängigkeit der Kette läuft mehr durch
+#    ihn. CBS genauso pessimistisch: die tatsächliche Kopplung κ_y =
+#    ‖A_c^{-1/2}B_x y‖²/(yᵀA_z y) = 0.0067–0.5311 gegen den Worst-Case γ² =
+#    0.7173–0.9647 (Faktor 0.009–0.551, α^{+1.516}, Fit) — und 1 − κ_y =
+#    r_cbs EXAKT: T121s Slack, jetzt mit Namen.
+# V3 DIE NEUE NETTO-BILANZ — DIE KERNZAHL: fünf Supplies auf demselben
+#    (D, α)-Hebel (12 Zonen × 3 Auflösungen, 36 Zeilen), alle ≤ S4 = yᵀSy
+#    (36/36 sound). S0/ε_c (T121-Baseline, beide Schritte Worst-Case):
+#    α^{−1.562±0.163} — T121 exakt reproduziert. S1 (nur Link-5-Ersatz,
+#    uniform): α^{−1.565} — DERSELBE Exponent, ein uniformer Boden kann
+#    λ_min(A_z) nicht schlagen; V1s Beitrag ist die LEITER (Boden zertifiziert
+#    bis α = 6.31 statt Riss bei 3.45). **S2/ε_c (V1+V2, ZERTIFIZIERT):
+#    D^{−0.003±0.075}·α^{−0.729±0.090}** (gemessen 3.3e-2–2.1e-1) — das
+#    α-Defizit fällt von 1.56 auf 0.73 Potenzen: 53% davon war
+#    Worst-Case-Verschwendung, keine Eigenschaft der Kette; exakt D-uniform
+#    (θ = −0.003 innerhalb der eigenen Bande null); Exponent stabil auf 0.28
+#    über die drei Auflösungen (−0.899/−0.618/−0.678). S3/ε_c (+ GEMESSENER
+#    CBS): α^{−0.113±0.063} — statistisch ununterscheidbar von der Decke
+#    S4/ε_c = α^{−0.116±0.062} (= ε_f-Wegwerfen, von V1/V2 unberührt).
+#    Residual-Zerlegung EXAKT (linear im Log, Schluss 2.91e-16):
+#    φ(S2/ε_c) − 0.729, q_str − 0.002, CBS-Pessimismus + 0.615 ⇒ −0.116 =
+#    φ(S4/ε_c). Also: V1 kauft die Leiter, V2 kauft den Exponenten, und die
+#    Kette schließt BIS AUF IHRE EIGENE DECKE, sobald der CBS-Schritt kein
+#    Worst-Case mehr ist — auf der gemessenen Leiter α = 0.98–6.31, mit dem
+#    gemessenen κ_y, nicht mit dem zertifizierten.
+# V4 SATZ V6 + DEFEKT-ZÄHLER: die Kette neu nummeriert — (1) Haynsworth-
+#    Identität, (2) yᵀSy = (1−κ_y)yᵀA_z y IDENTITÄT + κ_y ≤ γ² klassisch
+#    (Yserentant 1986), (3) NEU: A_z = WᵀToeplitz_M(c)W, W = BZ, WᵀW = I —
+#    die Identität, die Link (5) in den Ruhestand schickt, (4) zertifizierte
+#    Zell-Einhüllende, (5R) zertifizierte Band-Schranke (ersetzt Link (5)
+#    UND das Nikolskii/Large-Sieve-Dip-Budget), (6) uniforme y-freie
+#    Variante (+ Gershgorin 1931), (7) Bedarfs-Gesetz (zitierter Fit).
+#    DEFEKT-ZÄHLER: T119 = 3, T120 = 4, T121 = 4, V6 = 4 (Ziel < 4 NICHT
+#    erreicht) — aber die Arten wechseln: (F1) Ecken-Vorzeichen und (F2)
+#    uniformes δ unverändert (von diesem Teil unberührt, aus T120/T121
+#    zitiert); (F3) NEU: eine analytische (D, α)-Schranke für die Band-Marge
+#    1 − yᵀGy/(thr‖y‖²) = 0.0243–0.3628 ~ D^{−0.042}·α^{−0.525} (Fit) —
+#    absorbiert Link 5, das Nikolskii-Budget und BEIDE Lesarten von
+#    (E3)/(E4): eine Fejér/Christoffel-Frage über die DIPS gegen die
+#    Hochband-Masse des Zwei-Level-Residuums, keine Eigenvektor-Frage; eine
+#    α-flache Band-Marge trüge die zertifizierte Kette bis auf den
+#    CBS-Schritt an die Wahrheit; (F4) ein STRUKTURELLER CBS-Schritt
+#    (κ_y ≤ γ² ist der letzte Worst-Case der Kette, Wert α^{+0.615}).
+#    Link (5) ist nicht repariert, sondern IM RUHESTAND — es war ein
+#    falscher Vergleich zwischen einer isometrischen Kompression und einer
+#    ihrer beiden Hälften. → T123 (läuft): STRUCTURAL.CBS
+#    (structural_cbs_probe.py) — strukturelle κ-Schranke (dieselbe
+#    Band-Maschinerie wie V2: die Kopplung braucht Tiefband-Masse, Wy hat
+#    dort ~0), Band-Marge, zertifizierte Bilanz an die Decke, ε_f-Frage,
+#    Satz V7.
+# Serie (XII)–(CXXXIII): 122 Proben, 3057/3057 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Hartman 1958 / Peller 2003
+# (Hankel-Glättung), Gershgorin 1931, Parseval, Szegő 1939 /
+# Grenander–Szegő 1958 Kap. 5, Fejér 1900, Montgomery–Vaughan 1974 /
+# Nikolskii (nur als das ersetzte Budget zitiert), Widom 1974 /
+# Fisher–Hartwig, Böttcher–Silbermann 1999, Yserentant 1986 (CBS),
+# Haynsworth 1968 (Schur), Cauchy–Schwarz, Weyl,
+# Cholesky / Wilkinson 1968 / Higham 2002) zitiert; Sandbox ohne
+# Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-28 (III) — Teil 121 (delegiert, die weite-Fenster-Frage — Vertrag WIDE.WINDOW): wide_window_probe.py — **WIDE-RESTRUCTURED** — DIE σ_z-ROUTE ÜBERLEBT DIE ECHTE LEITER ALS SEKTIONS-AUSSAGE UND STIRBT ALS SYMBOL-AUSSAGE, UND DIE NETTO-α-BILANZ NENNT EIN EINZIGES POLY-LOG-DEFIZIT: λ_min(T_h(σ_z)) ist bei der Frame-eigenen Auflösung POSITIV auf 16/16 Fenstern der echten Leiter (n = 7…283303, α = 0.985…6.277, h = 29…107790) — davon 8 Fenster mit inf σ_z < 0, dort sitzt der Sektions-Eigenwert bei 0.64–3.23×|inf σ_z| auf der POSITIVEN Seite (dichte Zeilen shifted-Cholesky-ZERTIFIZIERT, große Zeilen FFT-Lanczos als MESSUNG etikettiert: ein Ritz-Wert ist eine Oberschranke und kann Positivität nur widerlegen); die Christoffel-Schranke (Szegő/Grenander–Szegő Kap. 5 + Montgomery–Vaughan/Nikolskii-Dip-Budget) zertifiziert den Sektions-Boden auf 8/16 Zeilen bis α = 3.446 (Schärfe 0.20–0.76) und reißt, weil die Dip-Zahl ~ e^{2.41α} (Fit) gegen den Budget-Faktor h läuft — obwohl jeder einzelne Dip nur 0.156–0.720 einer Fejér-Breite ist; DIE KERNZAHL: **SUPPLY/ε_c ~ D^{−0.177±0.096}·α^{−1.565±0.135}** — die Einzelglieder fallen wie T120 (E4) es sah (1−γ² ~ α^−0.79, λ_min(A_z) ~ α^−1.07, ‖y‖² ~ α^−5.63 ⇒ SUPPLY ~ α^−7.49), aber der BEDARF fällt fast genauso schnell (α^−5.93): 79% des α-Abfalls war der Bedarfs-Abfall selbst, netto bleiben ein bis zwei Potenzen (Refit pro Auflösung −1.88…−1.62 — eine SPANNE, keine Dezimalzahl), und in D ist die Bilanz UNIFORM; das Defizit zerlegt EXAKT (Identität auf 2.8e-14) in α^−1.02 Rayleigh-Schritt + α^−0.51 CBS-Schritt + α^−0.04 (ε_f-Verwurf) — NICHTS davon in γ, und der Rayleigh-Schritt allein holt 65% zurück, wenn yᵀA_z y strukturell statt spektral abgeschätzt wird; NEU-WIDERLEGT: Link (5) λ_min(A_z) ≥ λ_min(T_hc(σ_z)) FALSCH auf 42/42 (Quotient 0.357–0.916) — A_z = Zᵀ(Toeplitz − HANKEL)Z, Grenander–Szegő trägt nur den Toeplitz-Teil; Ein-Vorzeichen 24/24 bei n_C = h/16 (Sicherheitsfaktor 1.68–3.38, uniform negativ; bei h/8 nur 21/24 — Zertifikate auf h/16 umgestellt, kostet nichts, denn δ ~ n_C^{+0.29}); FH-Abgleich ERGEBNISLOS UND DAS IST DAS ERGEBNIS (lokaler Ecken-Exponent driftet −0.008…+2.934 wo FH nur −0.120 zuließe); δ = 0.0126–0.1331 über 360 Zeilen ohne Ausreißer, κ_end ≥ 0.4688; Satz V5: DEFEKT-ZÄHLER BLEIBT 4, aber jeder Eintrag hat die Art gewechselt — 21/21, 22.8s, Sandbox
 # U1 SEKTIONS- STATT SYMBOL-POSITIVITÄT: die Kette braucht nicht inf σ_z > 0,
 #    sondern λ_min der SEKTION T_h(σ_z) — und auf der echten Leiter (Frame A,

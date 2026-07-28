@@ -237,9 +237,17 @@ export function TwoDoorsConvergence() {
           negative — and the net α-balance shows only a poly-log deficit
           (α^−1.57, uniform in D) instead of collapse, exactly decomposed
           into two repairable steps (Rayleigh + CBS, nothing in γ); one
-          link honestly refuted (the odd-sector Hankel term). T122 (
+          link honestly refuted (the odd-sector Hankel term). T122 ·
+          NET.BALANCE.REPAIR — NET-IMPROVED (20/20): the Hankel term was
+          never an error term — A_z is exactly an isometry compression of
+          the full Toeplitz form, the certified band floor survives to
+          α = 6.31 where the Christoffel budget tore at 3.45, the
+          structural Rayleigh step is sharp (slack 1.00–1.03), the
+          certified deficit halves to α^−0.73 (exactly D-uniform), and
+          with the measured CBS coupling the balance closes to within the
+          chain&apos;s own ceiling. T123 (
           <span className="font-mono text-slate-300">
-            net_balance_repair_probe.py
+            structural_cbs_probe.py
           </span>
           ) running.
         </p>

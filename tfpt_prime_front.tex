@@ -85,7 +85,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$121$ preregistered probes with $3037$ machine checks, which localized the residual object. That
+$122$ preregistered probes with $3057$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -225,7 +225,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots121$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots122$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -804,9 +804,9 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T121)}\label{sec:certification}
+\section{The certification arc (T102--T122)}\label{sec:certification}
 % =====================================================================
-The last eighteen parts stopped improving measurements and started converting them into certificates ---
+The last twenty-one parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
 
 \subsection{The mechanism: a crossing, not a singularity (T102)}
@@ -2249,13 +2249,126 @@ $y^{\mathsf T}A_zy$, which alone recovers $65\%$.
 \emph{Honest movement:} the counter stays at four --- the target of getting back below three
 was not met, because the residual $\alpha$ deficit is real --- but every entry changed kind,
 and one link recorded as classical was found refuted, a defect made visible rather than
-created.
+created.\\[3pt]
+\emph{Disposition after T122:} both named repairs landed. Link (5) is retired by an
+\emph{identity} --- $A_z=W^{\mathsf T}\mathrm{Toeplitz}_M(c)\,W$ with $W=BZ$ isometric, so the
+Hankel term is the reflection half of an isometry and not an error term --- and the certified
+band bound that replaces it is non-vacuous to $\alpha=6.31$, where the Christoffel budget tore
+at $3.45$; the Rayleigh step is made structural and is \emph{sharp} (residual slack
+$1.00$--$1.03$, flat in $\alpha$); the certified deficit halves to $\alpha^{-0.73}$, exactly
+uniform in $D$, and with the measured CBS coupling the balance closes to within the chain's own
+ceiling. (E3$^*$)/(E4$^*$) are thereby absorbed into one band-margin estimate (F3) plus one
+structural CBS estimate (F4). The next subsection reports the measurements.
 \end{keybox}
 
-\noindent T122 (\texttt{net\_balance\_repair\_probe.py}, contract \texttt{NET.BALANCE.REPAIR}
---- the Hankel repair (a replacement for link (5)), the structural Rayleigh step ($y$ is
-high-band by construction), the reassembled net balance, and a theorem candidate V6) was
-running at the time of writing and is \emph{not} reported here.
+\subsection{The Hankel term is an isometry half; the certified deficit halves (T122)}
+T122 (\texttt{net\_balance\_repair\_probe.py}, contract \texttt{NET.BALANCE.REPAIR}, $20/20$,
+\textsc{net-improved}) attacks the two worst-case steps the T121 decomposition named --- the
+Rayleigh step and the link-(5) transfer --- and both repairs land. The headline is structural:
+the odd sector's Hankel term, the object that refuted link (5), was never an error term to be
+estimated.
+
+\emph{The Hankel repair is an identity, not an estimate.} The compressed Hankel term has a
+closed form, $(Z^{\mathsf T}HZ)_{jk}=b_{j+k}$ with $b_s=(c_{K-2s}-2c_{K-2s-1}+c_{K-2s-2})/2$
+--- half a second difference of the lag sequence, exactly like the Toeplitz-side lags ---
+verified to $7.0\times10^{-16}$ on all $36$ (zone,\,resolution) rows. So the oscillation
+injection $Z$ suppresses \emph{both} halves by the same DTFT factor $|2\sin(\theta/2)|^2$: the
+measured norm ratio is $0.123$--$0.781$, i.e.\ $O(1)$ --- the T118 mechanism does not make the
+Hankel term small. The honest anatomy (the archimedean half numerically of rank $10$--$14$, the
+Hartman/Peller smoothing; the comb half corner-localised on few anti-diagonals) is structure,
+not a bound: the valid Weyl floor $\lambda_{\min}(T_{h_c})-\|Z^{\mathsf T}HZ\|$ is positive on
+only $12/36$ rows (up to $\alpha=2.44$) and nowhere near sharp. The valid replacement for link
+(5) is an \emph{identity}: with $W=BZ$,
+\[
+A_z\;=\;W^{\mathsf T}\,\mathrm{Toeplitz}_M(c)\,W,\qquad W^{\mathsf T}W=I\ \ \text{(exact to $0.0$)}
+\]
+--- the Hankel term \emph{is} the reflection half of an isometry. From this and a certified
+cell envelope ($g_{\mathrm{thr}}=(\mathrm{thr}-\ell)_+\ge0$; Parseval is exact because $|Wv|^2$
+has degree $<M$) follows the certified band bound
+\[
+\lambda_{\min}(A_z)\;\ge\;\mathrm{thr}-\lambda_{\max}(G),\qquad
+G=W^{\mathsf T}\mathrm{Toeplitz}_M(g_{\mathrm{thr}})\,W\succeq0,
+\]
+non-vacuous on $36/36$ rows up to $\alpha=6.31$ --- where the T121 Christoffel budget tore at
+$\alpha=3.45$ --- recovering $0.429$--$0.995$ of the true $\lambda_{\min}(A_z)$; the
+$e^{2.41\alpha}$ dip count no longer enters anywhere (measured gain over the per-dip Nikolskii
+budget: $8.4$--$1.1\times10^{2}$). The honest caveat is where the threshold sweep puts its
+optimum: $\mathrm{supp}(g)=0.95$--$1.00$ of the circle --- one certified end of a one-parameter
+family whose other end (small $\mathrm{thr}$) is the dip budget that tore.
+
+\emph{The structural Rayleigh step is sharp.} ``$y$ is high-band'' is a statement about $Wy$ at
+the window resolution ($99.3$--$100.0\%$ of its mass above $|\theta|=\pi/2$, with
+$\|Wy\|^2=\|y\|^2$ exact), not about $y$ itself ($0.1$--$1.7\%$ high-band in the coarse
+coordinates --- the oscillation lives in the injection, not in the coefficients). The same
+certified band identity, evaluated on $y$ instead of over the whole oscillation space ---
+$y^{\mathsf T}A_zy\ge\mathrm{thr}\|y\|^2-y^{\mathsf T}Gy$ --- is positive on $36/36$ rows,
+never exceeds the truth, and beats the worst-case product $\lambda_{\min}(A_z)\|y\|^2$ by a
+factor $1.28$--$18.90$: the slack it removes is exactly T121's $r_{\mathrm{ray}}$, growing like
+$\alpha^{+0.83}$, and the residual slack of the structural bound is
+$q_{\mathrm{str}}=1.00$--$1.03$ with drift $\alpha^{-0.002\pm0.001}$ --- flat, i.e.\
+\emph{sharp}: no $\alpha$-dependence of the chain passes through the Rayleigh step any more.
+The CBS step is equally pessimistic: the actual coupling is $\kappa_y=0.0067$--$0.5311$ against
+the worst case $\gamma^2=0.7173$--$0.9647$ (a factor of up to $100+$, growing like
+$\alpha^{+1.52}$), and $1-\kappa_y=r_{\mathrm{cbs}}$ exactly --- T121's slack, now with a name.
+One lever limit declared: at $M\le2048$ the coarse envelope of $\sigma_z$ is nonnegative on
+$13/36$ rows --- the deep dips T118/T121 chased appear only at the frame's own resolution.
+
+\emph{The new net balance.} Five supplies on one $(D,\alpha)$ lever ($12$ zones $\times$ $3$
+resolutions, $36$ rows), all sound ($36/36$ below the truth $S_4=y^{\mathsf T}Sy$). The T121
+baseline reproduces exactly ($S_0/\varepsilon_c\sim\alpha^{-1.562\pm0.163}$); repairing link
+(5) alone does not change the exponent at all ($\alpha^{-1.565}$ --- a uniform floor cannot
+beat $\lambda_{\min}(A_z)$; V1's contribution is that the floor is certified over the whole
+ladder instead of tearing at $\alpha\approx3.45$); with both repairs the \emph{certified}
+balance is
+\[
+S_2/\varepsilon_c\;\sim\;D^{-0.003\pm0.075}\,\alpha^{-0.729\pm0.090}
+\]
+(fits; measured $0.033$--$0.207$): the deficit \emph{halves}, and it is exactly uniform in $D$.
+Adding the \emph{measured} CBS coupling gives $\alpha^{-0.113\pm0.063}$ --- statistically
+indistinguishable from the chain's own ceiling $S_4/\varepsilon_c\sim\alpha^{-0.116\pm0.062}$
+(the cost of discarding $\varepsilon_f$, untouched by both repairs). The residual decomposition
+closes to $2.9\times10^{-16}$: $-0.729-0.002+0.615=-0.116$. In one sentence: V1 buys the ladder,
+V2 buys the exponent, and the chain closes \emph{up to its own ceiling} as soon as the CBS step
+is no longer a worst case.
+
+\begin{keybox}[The theorem after T122 --- four defects, consolidated]
+\emph{Candidate (V6).} The chain renumbered: the Haynsworth identity; the exact CBS split
+$y^{\mathsf T}Sy=(1-\kappa_y)\,y^{\mathsf T}A_zy$ with $\kappa_y\le\gamma^2$ classical
+(Yserentant); the new two-grid identity $A_z=W^{\mathsf T}\mathrm{Toeplitz}_M(c)W$ ($W=BZ$,
+$W^{\mathsf T}W=I$) --- the line that retires link (5); the certified cell envelope; the
+certified band bound (5R) with its uniform, $y$-free variant (Gershgorin); and the quoted
+demand fit.\\[3pt]
+\emph{The defect list --- four items (T119 $=3$, T120 $=$ T121 $=$ V6 $=4$; the target $<4$ not
+met, but the kinds changed twice over):}
+\begin{enumerate}[leftmargin=1.6em]
+\item[\textbf{(F1)}] \emph{one sign of the corner increments} --- unchanged from T120/T121 and
+untouched by this part: $24/24$ clean at $n_C=h/16$, no sign-pattern argument possible, the
+minimal statement is the head-versus-tail inequality (E1$'$) with an open tail exponent;
+\item[\textbf{(F2)}] \emph{a uniform bound on the pairing ratio $\delta$} --- unchanged and
+untouched: $0.0126$--$0.1331$ over $360$ rows, no outlier, a discrete gradient estimate still
+missing;
+\item[\textbf{(F3)}] \emph{an analytic $(D,\alpha)$ bound for the band margin}
+$1-y^{\mathsf T}Gy/(\mathrm{thr}\|y\|^2)$, measured $0.024$--$0.363$ over $\alpha=0.98$--$6.31$
+with fitted drift $D^{-0.042}\alpha^{-0.525}$ --- the one \emph{new} item, and it absorbs link
+(5), the Nikolskii budget and both readings of (E3)/(E4): a Fej\'er/Christoffel question about
+how the comb dips of the window symbol overlap the high-band mass of the two-level residual,
+not an eigenvector question. An $\alpha$-flat band margin would carry the certified chain to
+within the CBS step of the truth;
+\item[\textbf{(F4)}] \emph{a structural CBS estimate} --- $\kappa_y\le\gamma^2$ is the last
+worst-case step in the chain (worth $\alpha^{+0.615}$ in the balance), and the actual coupling
+is only $0.009$--$0.551$ of it.
+\end{enumerate}
+\emph{Honest movement:} link (5) is not repaired but \emph{retired} --- it was a false
+comparison between an isometric compression and one of its two halves --- and the per-dip
+Nikolskii budget went with it; what is left of the old (E3)/(E4) is a single scalar estimate
+about dips versus high-band mass, plus the CBS item.
+\end{keybox}
+
+\noindent T123 (\texttt{structural\_cbs\_probe.py}, contract \texttt{STRUCTURAL.CBS} --- a
+structural bound for the coupling $\kappa_y$ by the same band machinery (the coupling needs
+low-band mass, and $Wy$ has essentially none there), the band margin, the certified balance
+against the ceiling, the $\varepsilon_f$ question, and a theorem candidate V7) was running at
+the time of writing and is \emph{not} reported here.
 
 % =====================================================================
 \section{The kill list}\label{sec:kills}
@@ -2397,7 +2510,13 @@ $D_0$ criterion on all $1492$ zones, $\alpha^*=0.693$), and the T121 wide-window
 per-dip budget, positive on $8/16$ frame windows up to $\alpha=3.446$ at sharpness
 $0.20$--$0.76$; and the exact deficit identity
 $y^{\mathsf T}Sy/\mathrm{SUPPLY}=r_{\mathrm{ray}}r_{\mathrm{cbs}}/(1-\gamma^2)$ to
-$2.8\times10^{-14}$).\\[3pt]
+$2.8\times10^{-14}$), and the T122 net-balance package (the closed form of the compressed
+Hankel term, $(Z^{\mathsf T}HZ)_{jk}=b_{j+k}$, to $7.0\times10^{-16}$ on $36/36$ rows; the
+two-grid isometry identity $A_z=W^{\mathsf T}\mathrm{Toeplitz}_M(c)W$ with $W^{\mathsf T}W=I$
+exact; the certified band bound (5R) and its uniform $y$-free variant, non-vacuous on $36/36$
+rows to $\alpha=6.31$; the structural Rayleigh bound, positive and sound on $36/36$ rows with
+residual slack $1.00$--$1.03$; and the exact residual decomposition of the fitted balance,
+closing to $2.9\times10^{-16}$).\\[3pt]
 \textbf{Measured} (holds on the resolved windows; no uniform constant): $\rho_-$; the ratio
 $r=0.0053$--$0.1814$ and $\hat r<1$ at all $92$ resolution points; $\omega=0.2366$--$0.7531$; the
 strict odd-channel margin $\lambda_{\min}(Q|_{\mathrm{odd}})=1.4\times10^{-5}$--$5.1\times10^{-2}$; the
@@ -2444,7 +2563,14 @@ $3.42$--$16.67$, the one-sign run $24/24$ at $n_C=h/16$ against $21/24$ at $h/8$
 slope $-0.0258\pm0.0042$, a fit), the Fisher--Hartwig drift $-0.008\ldots+2.934$ against the
 allowed $-0.120$ (inconclusive, declared as the result), the no-cancellation ratio
 $4.6\times10^{-8}$--$7.1\times10^{-5}$, and the pairing quotient $\delta=0.0126$--$0.1331$
-over $360$ rows ($\kappa_{\mathrm{end}}\ge0.4688$, $\delta\sim n_C^{+0.29}$); every scaling
+over $360$ rows ($\kappa_{\mathrm{end}}\ge0.4688$, $\delta\sim n_C^{+0.29}$); the T122
+measurements: the Hankel/Toeplitz norm ratio $0.123$--$0.781$ (the Weyl floor positive on only
+$12/36$ rows), the band-bound recovery $0.429$--$0.995$, the high-band mass of $Wy$
+($99.3$--$100.0\%$ against $0.1$--$1.7\%$ for $y$ itself), the actual CBS coupling
+$\kappa_y=0.0067$--$0.5311$ against $\gamma^2=0.7173$--$0.9647$, the certified balance
+$S_2/\varepsilon_c\sim D^{-0.003\pm0.075}\alpha^{-0.729\pm0.090}$ with the measured-CBS balance
+$\alpha^{-0.113\pm0.063}$ against the ceiling $\alpha^{-0.116\pm0.062}$ (fits), and the band
+margin $0.024$--$0.363\sim D^{-0.042}\alpha^{-0.525}$ (a fit); every scaling
 exponent quoted in this document.\\[3pt]
 \textbf{Hypothesis input / classical} (used, named, not proved here): Kneser, Witt/Eichler, Shimura,
 Waldspurger/Baruch--Mao, Cohen, Weil--Guinand, Bombieri, Yoshida, Connes--Consani, Douglas,
@@ -2454,7 +2580,8 @@ Combes--Thomas/Jaffard, Prager--Synge, first-order Kato perturbation, Albert (th
 Schur criterion), Haynsworth (the partial-minimisation form of the Schur complement),
 C\'ea/Strang's first lemma, Bramble--Hilbert, Brandt/Yserentant two-scale spaces,
 Szeg\H{o}--Kolmogorov, Aubin--Nitsche duality, Payne--Weinberger, Levinson/Durbin,
-Kac--Murdock--Szeg\H{o}/Widom/Fisher--Hartwig, Fej\'er--Riesz, the local Fourier / two-grid
+Kac--Murdock--Szeg\H{o}/Widom/Fisher--Hartwig, Fej\'er--Riesz, Hartman/Peller (Hankel
+smoothing), Gershgorin, Parseval, the local Fourier / two-grid
 symbol (Brandt, Hackbusch, Fiorentino--Serra), Yserentant's strengthened Cauchy--Schwarz
 constant, the Bank--Smith/D\"orfler--Nochetto saturation assumption (with
 Bornemann--Erdmann--Kornhuber as the honest caveat that saturation can fail), the
@@ -2550,7 +2677,18 @@ and CBS steps with nothing in $\gamma$ --- while one link recorded as classical 
 kind --- the corner sign (now a head-versus-tail inequality at $n_C=h/16$), the pairing
 bound, the section lemma with the Hankel term, and one poly-log of $\alpha$-slack with a
 structural address --- plus the \textbf{[SUPPORT]} obstruction. T122
-(\texttt{net\_balance\_repair\_probe.py}) was running at the time of writing.
+(\texttt{net\_balance\_repair\_probe.py}) then repaired the two worst-case steps that poly-log
+named: the Hankel term is the reflection half of an exact isometry
+($A_z=W^{\mathsf T}\mathrm{Toeplitz}_M(c)W$, $W^{\mathsf T}W=I$), so link (5) is retired by an
+identity --- and the per-dip Nikolskii budget with it --- while the certified band floor
+reaches $\alpha=6.31$ where the Christoffel budget tore at $3.45$; the structural Rayleigh
+bound is sharp (residual slack $1.00$--$1.03$, flat in $\alpha$), the certified deficit halves
+to $\alpha^{-0.73}$ (exactly uniform in $D$), and with the measured CBS coupling the balance
+closes to within the chain's own ceiling ($\alpha^{-0.113}$ against $\alpha^{-0.116}$). Since
+T122 the mountain is the two unchanged sign/pairing defects plus two scalar estimates of the
+same band-profile kind --- the band margin (F3) and a structural CBS bound (F4) --- plus the
+\textbf{[SUPPORT]} obstruction. T123 (\texttt{structural\_cbs\_probe.py}) was running at the
+time of writing.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -2602,18 +2740,18 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T121}\label{app:index}
+\section{Probe index, diary parts T11--T122}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $111$ parts T11--T121 that the current diary file records
-($112$ runs --- T104 was a double run with two independent arms --- and $2845$ green checks); the ten
+load-bearing artefact. The index covers the $112$ parts T11--T122 that the current diary file records
+($113$ runs --- T104 was a double run with two independent arms --- and $2865$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T121: \textbf{$121$ probes, $3037/3037$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T122
-(\texttt{net\_balance\_repair\_probe.py}, contract \texttt{NET.BALANCE.REPAIR}) was still running
+diary at T122: \textbf{$122$ probes, $3057/3057$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T123
+(\texttt{structural\_cbs\_probe.py}, contract \texttt{STRUCTURAL.CBS}) was still running
 when this document was written and is deliberately absent.
 
 {\footnotesize
@@ -2741,6 +2879,7 @@ T118 & \texttt{\scriptsize symbol\_\allowbreak lemmas} & the three lemmas agains
 T119 & \texttt{\scriptsize oscillation\_\allowbreak mass} & the arithmetic half closes as a theorem: the comb symbol in closed form (one cosine per prime-power atom; parity rule under $\sigma_z$), the atom-count bound $|\sigma_z^{\mathrm{comb}}|\le\Xi(\alpha)$ uniform in $D$, the archimedean growth \emph{identity} $\inf\sigma_z^{\mathrm{arch}}=\log(1/D)+B$ with universal $B=-1.0474$ --- hence $\inf\sigma_z>0$ for all $D<D_0(\alpha)=e^{-(\Xi(\alpha)+B)}$, deep-verified ($M$ up to $65\,536$, matrix-free); the large sieve certifies one window's section \emph{without} pointwise positivity ($+0.396$ where $\inf\sigma_z=-0.349$) and dies structurally for $\alpha\ge2.5$ (a moment problem); the energy route to (H2) is proven empty (genuinely new content); and $\kappa_{\mathrm{end}}=1/(1+R)$ \emph{exactly} ($1.1\times10^{-16}$) --- one discrete Harnack inequality remains & ARITHMETIC-DONE & 27/27\\
 T120 & \texttt{\scriptsize harnack} & the Harnack core is proof-shaped: $a_j$ and $w_j$ are the odd/even half of \emph{one} increment sequence, offset by a single fine cell, so one sign of the corner increments gives $|R-1|\le\sum|v_{2j+1}-v_{2j}|/\sum|v_{2j}|\le0.04745$ \emph{unconditionally} (C1; the per-cell inequality is provably \emph{false}, $|a_j/w_j|$ up to $4.8\times10^{3}$); $R\in[0.9098,1.1011]$ on $3915$ rows, $\kappa_{\mathrm{end}}\ge0.480827$ for $n_C\ge8$; two structural routes refuted ($T^{-1}$ corner positive but not TP2; the discrete maximum principle false --- $u$ oscillates in the bulk); the $\alpha$-audit makes (D2) total ($\alpha_o=u_k/2$ by construction, $D_0$ holds on $3/1492$ zones, $\alpha^*=0.693$ below the first admissible handover); $\gamma$ gains an exact symbol identity but $1-\gamma^2$ falls with $\alpha$ (slope $-0.297\pm0.013$); theorem V4: $18$ links, defect list $3\to4$ & HARNACK-EXPLAINED & 21/21\\
 T121 & \texttt{\scriptsize wide\_\allowbreak window} & the $\sigma_z$ route survives the real ladder as a \emph{section} statement and dies as a symbol statement: $\lambda_{\min}(T_h(\sigma_z))>0$ on $16/16$ frame windows ($n=7\ldots283\,303$, $\alpha$ up to $6.277$, $h$ up to $107\,790$; $8$ with $\inf\sigma_z<0$, the section at $0.64$--$3.23\times|\inf\sigma_z|$ positive), the Christoffel/Fej\'er per-dip budget certified on $8/16$ up to $\alpha=3.446$ (each dip $0.156$--$0.720$ of one Fej\'er width; the dip count grows like $e^{2.41\alpha}$, a fit); the net balance $\mathrm{SUPPLY}/\varepsilon_c\sim D^{-0.18}\alpha^{-1.57}$ --- one poly-log, uniform in $D$, split exactly ($2.8\times10^{-14}$) into the Rayleigh ($\alpha^{-1.02}$) and CBS ($\alpha^{-0.51}$) steps, nothing in $\gamma$; link (5) refuted on $42/42$ (ratio $0.357$--$0.916$ --- the odd sector's Hankel term); one-sign $24/24$ at $n_C=h/16$ (only $21/24$ at $h/8$; certificates restated, free since $\delta\sim n_C^{+0.29}$); the FH comparison inconclusive at reachable $h$ (drift $-0.008\ldots+2.934$ against an allowed $-0.120$); $\delta=0.0126$--$0.1331$ over $360$ rows, $\kappa_{\mathrm{end}}\ge0.4688$; theorem V5: $19$ links, the defect count stays $4$ but every entry changes kind & WIDE-RESTRUCTURED & 21/21\\
+T122 & \texttt{\scriptsize net\_\allowbreak balance\_\allowbreak repair} & the Hankel term is the reflection half of an isometry, not an error term: $A_z=W^{\mathsf T}\mathrm{Toeplitz}_M(c)W$ with $W=BZ$, $W^{\mathsf T}W=I$ exact (the compressed Hankel is half a second difference of the lag sequence, closed form to $7.0\times10^{-16}$; norm ratio $0.123$--$0.781$, $O(1)$ --- $Z$ suppresses both halves equally; the Weyl floor positive on only $12/36$); the certified band bound $\lambda_{\min}(A_z)\ge\mathrm{thr}-\lambda_{\max}(G)$ non-vacuous on $36/36$ rows to $\alpha=6.31$ (the T121 Christoffel budget tore at $3.45$; recovery $0.429$--$0.995$; caveat: the optimum sits at $\mathrm{supp}(g)\approx1$); the structural Rayleigh bound is \emph{sharp} ($q_{\mathrm{str}}=1.00$--$1.03$, drift $\alpha^{-0.002}$), removing the whole $r_{\mathrm{ray}}\sim\alpha^{+0.83}$ slack; the certified balance halves the deficit, $S_2/\varepsilon_c\sim D^{-0.003}\alpha^{-0.729}$, exactly $D$-uniform, and with the measured CBS coupling ($\kappa_y=0.0067$--$0.5311$ against $\gamma^2$) it reads $\alpha^{-0.113}$ against the chain's own ceiling $\alpha^{-0.116}$ (residual decomposition closes to $2.9\times10^{-16}$); theorem V6: the count stays $4$, link (5) retired by an identity, (F3) the band margin ($0.024$--$0.363\sim D^{-0.042}\alpha^{-0.525}$) and (F4) a structural CBS estimate absorb (E3$^*$)/(E4$^*$) & NET-IMPROVED & 20/20\\
 \end{xltabular}
 }
 
