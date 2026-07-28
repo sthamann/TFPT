@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`536` registered scripts · `607` ledger claims · `10` clusters.
+`538` registered scripts · `609` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (69 scripts)
+### `core` — Compiler core & the E₈ glue  (71 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -149,6 +149,10 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v540_amplitude_linear_carrier, v539_weil_structure_family, v538_relative_trace_identity, v538, v539, v540, T78, T79 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v542_margin_chain_identities** [E/O] `PRIME.MARGIN.IDENT.01` — nine per-instance identities/theorems recomputed on small frame-A windows (24 seam instances n=3…97, ρ=1.25…4.00, every inverted matrix ≤ 300; 43 graded/fine grid pairs; 400 random
   - deps: v541_matching_lemma_ledger, v538_relative_trace_identity, v541, T128, T129, T130, T131 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v543_lumped_pair_identities** [E/O/X] `PRIME.MMATRIX.IDENT.01` — seven per-instance identities/theorems recomputed on small frame-A windows (20 seam windows n=4…59, ρ=1.25…4.00, h=25…299, every factorised matrix ≤ 300 → 40 symmetric matrices; 8 
+  - deps: v542_margin_chain_identities, v541_matching_lemma_ledger, v542, T134, T136 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v544_long_lag_support** [E/X] `PRIME.LONGLAG.SUPP.01` — six per-instance structure statements on the same 20 frame-A windows (h=25…299, 3…25 prime-power atoms, 20555 positive off-diagonal edges, 455 loaded stripes, 39 bracketed lumped c
+  - deps: v543_lumped_pair_identities, v542_margin_chain_identities, v543, T136, T137 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1143,8 +1147,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v531_coxeter_tensor_stage_a** — `COX.STAGEA.TENSOR.01`
-- **v532_e8_degree_modular_checksum** — `E8.DEGREE.MODULAR.01`
 - **v533_ftransfer_disc7_norm** — `FTR.DISC7.NORM.01`
 - **v534_seam_straddle_cone** — `SEAM.STRADDLE.CONE.01`
 - **v535_hecke_from_geometry** — `HECKE.GEOM.01`
@@ -1155,4 +1157,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v540_amplitude_linear_carrier** — `RTF.GNS.AMP.01`
 - **v541_matching_lemma_ledger** — `RTF.GNS.LEDGER.01`
 - **v542_margin_chain_identities** — `PRIME.MARGIN.IDENT.01`
+- **v543_lumped_pair_identities** — `PRIME.MMATRIX.IDENT.01`
+- **v544_long_lag_support** — `PRIME.LONGLAG.SUPP.01`
 

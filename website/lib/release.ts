@@ -43,9 +43,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 1191572,
+    bytes: 1200100,
     sha256:
-      "0a702a67a97e8b8f5e6fe7ac1ad991b72660e48a8fb1c9c5edb96f8800459499",
+      "c3a26d8b45de3135be85b8a5f6bea7c36449b14d3ddfdf3bb8111088aefa1449",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
@@ -61,9 +61,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
     href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 1092045,
+    bytes: 1097841,
     sha256:
-      "8d59251766336c2949b25f7455513bbb77b3ce51f1fe9e068cb1c00757db4f0d",
+      "5068ed4ac1ee5b7e039fd4f4aa58eaae38b0af422fcb7c154f1f485ce67b99bb",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
@@ -97,9 +97,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 1745285,
+    bytes: 1755955,
     sha256:
-      "ee810733dba80409101a4bb4ae107755735ac2272f9954ec498d4ffa3470eea9",
+      "87058832e5127a1ab3dc1e10621081d71739ba07b0e8edd0898c1ebfe3db9fbf",
     changelog:
       "Research contracts for the remaining interfaces: v_geo (scale anchor, [O]), G_net (metric inclusion, [C] closed modulo cited theorems), F_transfer (downstream transport, typed runnable solvers [C]).",
   },
@@ -124,9 +124,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 1767834,
+    bytes: 1784713,
     sha256:
-      "a33039ea7cc7b11ba7fbe7080156a05c17f2574586e004dd137e4e42c68833f0",
+      "8fb2e8331f8d1ba246084d89fdb550d9f7015b5ea3f98a4e631b67a046eb77ef",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },

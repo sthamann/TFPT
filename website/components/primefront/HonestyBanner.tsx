@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v542
+          v535–v544
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3386/3386 sandbox checks —
+        (“the full proof”, T126+) is now open with 3438/3438 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -64,7 +64,17 @@ export function HonestyBanner() {
         bounded faithful state (m_cert = 12, from the pre-declared set) where
         the Weil window provably has none — with the honest caveats that the
         driver is weight summability, the value is partly circular, and
-        QEC.SEAM.01 is not advanced. What remains
+        QEC.SEAM.01 is not advanced. T136 (ONE-CARRIES) then closed one item of
+        that M-matrix question outright — Varga’s regular splitting makes the
+        Jacobi radius an identity and Collatz–Wielandt bounds it a priori, sharp
+        to 1.00–1.03 on 900/900 blocks — while the exact three-way bookkeeping
+        puts the whole D-degradation in the margin and M17 closes negatively;
+        and T137 (BOTH-RESIST) made the long-lag support an explicit arithmetic
+        stripe set (perfect matchings, amplitude certified) and certified the
+        entire absolute-value envelope family <em>dead</em> from below
+        (ρ(|E|) ≥ 1.32 on 35/35), leaving one named residue: a sign-preserving
+        bound. Thirteen of those statements are now load-bearing as v543 and
+        v544. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

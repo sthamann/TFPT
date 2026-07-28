@@ -1,3 +1,88 @@
+# 2026-07-28 (XIX) — Teil 137 (Phase „Der volle Beweis", Vertrag LONG.LAG): long_lag_probe.py — **BOTH-RESIST** (SUPPORT-EXPLICIT / ENVELOPE-DEAD / STRUCTURE-OPEN / GREEN-OPEN) — DER TRÄGER IST JETZT ARITHMETISCH EXPLIZIT, UND DER ABSOLUTBETRAG IST DER TÄTER AUF BEIDEN SEITEN. H1 BENENNT DIE STÖRUNG, UND DER NAME IST ARITHMETISCH: die archimedische Hälfte des Kerns ist außerhalb ihres Nahfelds monoton und trägt in der odd-Sektion NULL positive Off-Diagonalen (0 von 40 Fenstern), also ist die ganze böse Hälfte L_Δ KAMM-ERZEUGT — getragen auf den Anti-Diagonal-STREIFEN r + s = M − 1 − round(u_j/D) an den Primpotenz-Atomen des Fensters (1.00–1.00 der positiven Einträge innerhalb einer Gitterzelle eines Atoms, 4–192 Streifen auf 3–99 Atomen, 1.33–1.97 Streifen/Atom), mit dem zertifizierbaren Amplitudengesetz Δ ≤ c_comb(anti) (die Ein-Atom-Form μ_j/2 ist nur TYPISCH, schlechtestes Verhältnis 2.268), und jeder Streifen ist ein PERFEKTES MATCHING ⇒ L_Δ ist explizit. H2 SCHLIESST DIE HÄLFTE UND LÄSST DIE ANDERE OFFEN: die |E|-Hüllfamilie ist PER ZERTIFIKAT UND VON UNTEN TOT — das Collatz-Wielandt-Unterende gibt ρ(|E|) ≥ 1.3218–2.2963, über 1 auf 35/35 Fenstern, also kann KEINE Gershgorin-Schranke, KEINE Zeilensummen-Norm und KEINE Umskalierung je einen Boden liefern; die Kanten-/Gram-Familie auf den ZWEITEN DIFFERENZEN der Green-Funktion erreicht 1.1530–2.3502 gegen echtes ρ = 0.9752–1.0000 und schlägt das Ziel 0.998879–0.999999 auf 0 von 35 (Überschuss 2.39e1–7.05e5 Gaps), die Vergröberungs-Leiter zeigt warum (die Schranke fällt erst unter 1, wenn der GANZE Gram ein Block ist ⇒ die Inter-Streifen-Kopplung IST das Objekt), und der gemessene Abfall dieser zweiten Differenzen ist ALGEBRAISCH (Abstand^−0.63 ± 0.02, ein FIT), wo Demko-Moss-Smith einen geometrischen bräuchte — A_B ist dicht, der Satz gilt hier nicht. H3 LIEFERT REST-POSTEN (2) UND SCHLIESST IHN DOCH NICHT: die Neumann-Reihe der regulären Zerlegung VON UNTEN gibt (S_B^{-1})_{rs} ≥ max_{k ≤ 6} (J^k)_{rs}/d_s OHNE jeden Fehlerterm — nur ein verworfener NICHTNEGATIVER Rest —, die Partialsumme holt 0.011–0.406 des echten Minimaleintrags, die anker-gewichtete Decke überschießt das Maximum um nur 2.49–12.24 (κ 0.126–0.269), die Green-Funktion ist also ZWEISEITIG durch Pfadgrößen geklammert; aber das Zertifikat für S^{-1} > 0 stoppt bei 563/900 Blöcken (716/900 mit dem vorzeichen-bewussten k-exakten Split, 66/900 aus der Struktur-Klammer allein), weil ρ(|F|) ≥ 1 auf 77 Blöcken — dieselbe Absolutbetrag-Wand wie H2. URSACHE BEIDSEITS: der Absolutbetrag vernichtet die Kompensation; was fehlt, ist eine VORZEICHEN-BEHALTENDE Schranke. Promotions-Liste 30 Posten (8 neu) ⇒ der v543-Batch mit 13 reifen Aussagen — 22/22, 94.3s, Sandbox
+# K1 DER TRÄGER IST EIN KAMM-STREIFENSATZ, UND DAS IST EINE STRUKTUR-AUSSAGE, KEINE
+#    MESSUNG. Die exakte Kernspaltung c = c_arch − c_comb mit c_comb ≥ 0 hat eine
+#    Konsequenz, die jede Fensterschleife überlebt: die archimedische Sektion allein hat
+#    ALLE Off-Diagonalen ≤ 0 (0 positive auf 40/40 Fenstern), also ist JEDE positive
+#    Off-Diagonale von A kamm-erzeugt. Und der Kamm sitzt nicht irgendwo: jeder positive
+#    Eintrag hat seinen Hankel-Index M − 1 − r − t in der Atom-Hut-Indexmenge, Anteil
+#    1.00–1.00 — supp(Δ) ist eine Vereinigung von Anti-Diagonal-Streifen an den
+#    Primpotenz-Positionen (4–192 Streifen, 1.33–1.97 pro Atom). Jeder Streifen ist ein
+#    perfektes Matching, seine Kantenvektoren b_e = e_r − e_t sind daher EXAKT orthogonal
+#    und L_Δ zerfällt auf einem Streifen in 2x2-Blöcke. Die Amplitude ist zertifiziert
+#    (Δ_rt ≤ c_comb[anti], schärfstes Verhältnis 0.99998532 im promovierten Fenster),
+#    die schärfere Ein-Atom-Form μ_j/2 aber NUR TYPISCH (schlechtestes Verhältnis 2.268 bei
+#    Hut-Überlappung) — sie wird ausdrücklich NICHT promoviert.
+# K2 DIE HÜLLFAMILIE IST ZERTIFIZIERT TOT — EIN NEGATIVES ERGEBNIS MIT BEWEISKRAFT. Alle
+#    billigen Kandidaten (Gershgorin, Zeilensummen-Norm, Collatz-Wielandt an jedem
+#    POSITIVEN Gewicht) sind Oberschranken für ρ(|E|), also entscheidet EINE strenge
+#    UNTERSCHRANKE die ganze Familie auf einmal: ρ(|E|) ≥ 1.3218–2.2963 von unten (CW an
+#    einem potenz-iterierten Gewicht), über 1 auf 35/35 Fenstern. Kein Mitglied dieser
+#    Familie kann je λ_max(W) < 1 zertifizieren — nicht „hat es noch nicht", sondern KANN
+#    NICHT. Die zweite Familie (Kanten/Gram auf den zweiten Differenzen der Green-Funktion)
+#    lebt, schlägt den Margin aber NICHT: 1.1530–2.3502 gegen echtes ρ = 0.9752–1.0000,
+#    Ziel auf 0/35 erreicht, Überschuss 24–7.1e5 Gaps (T136s Normen: 27–8.0e5), und die
+#    Vergröberungs-Leiter sagt, warum es strukturell scheitert: die Schranke fällt erst
+#    unter 1, wenn die Gröbung den GANZEN Gram in einen Block legt. Der Abfall ist
+#    algebraisch (Abstand^−0.63, FIT), Demko-Moss-Smith NICHT anwendbar (A_B dicht).
+# K3 GREEN IST ZWEISEITIG GEKLAMMERT, UND DIE DIAGNOSE IST EIN VORZEICHEN. Rest-Posten (2)
+#    aus T136 ist geliefert: die Neumann-Partialsumme ist eine EINTRAGSWEISE
+#    Unterschranke, weil der verworfene Rest NICHTNEGATIV ist (kein Truncation-Argument,
+#    keine Fehlerabschätzung), und die anker-gewichtete Decke — mit der Identität
+#    q_J = 1 − min_r 1/(d_r x_r) < 1, die aus B x = 1 > 0 folgt und NICHTS messen muss —
+#    schließt von oben. Die Klammer ist nicht scharf (unten 0.011–0.406 des Minimums, oben
+#    Faktor 2.49–12.24), aber sie ist EINE KLAMMER aus Pfadgrößen. Und sie schließt das
+#    Vorzeichen-Zertifikat nicht: 563/900 eintragsweise, 716/900 k-exakt, 66/900 rein
+#    strukturell, weil ρ(|F|) ≥ 1 auf 77 Blöcken. Beide Wände in T137 sind dieselbe Wand —
+#    der Absolutbetrag vernichtet die Kompensation, die die Naht trägt. Der Rest ist
+#    benannt und eng: eine VORZEICHEN-BEHALTENDE Schranke. NÜCHTERN: kein Marker bewegt,
+#    die Struktur-Schranke NICHT promoviert, die Zerfalls-Exponenten sind Fits.
+# Serie (XII)–(CXLVIII): 137 Proben, 3438/3438 Checks Sandbox + v535–v544 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Stieltjes, Ostrowski 1937, Fan 1958,
+# Berman-Plemmons 1979, Varga 1962, Collatz 1942/Wielandt 1950, Gershgorin 1931,
+# Neumann-Reihe, Haynsworth 1968 — gerichtet zitiert), Demko-Moss-Smith 1984 zitiert und
+# NICHT angewendet; Weil 1952 zitiert, nie als Kriterium benutzt; Sandbox ohne Ledger-Zeile
+# für die Probe — der reife Teil ist in v543/v544 promoviert.
+
+# 2026-07-28 (XVIII) — Teil 136 (Phase „Der volle Beweis", Vertrag M.MATRIX.PAIR): m_matrix_pair_probe.py — **ONE-CARRIES (G2)** (RHO-BOUNDED-A-PRIORI / PAIR-ANCHOR-ONLY / MASS-VACUOUS-DELOCALISED) — DAS ρ(K)-ITEM IST ZU, UND DIE BUCHHALTUNG SAGT EXAKT, WO DAS D VERSCHWINDET. G2 TRÄGT, UND ES TRÄGT SAUBER: das klassische Zeilensummen-Kriterium ist am Rand VAKUUM (Zeilensummen negativ auf 900/900 Blöcken — dasselbe Vorzeichen-Versagen, das in T134 die billigen A-Routen tötete), aber VARGAS REGULÄRE ZERLEGUNG macht ρ(J) = τ/(1+τ) zur IDENTITÄT für die gelumpte Stieltjes-Vergleichsmatrix, also braucht Konvergenz ÜBERHAUPT KEINE Zeilensummen-Bedingung, und die Collatz-Wielandt-Schranke am M-Matrix-Ankervektor reproduziert das gemessene ρ = 0.709–0.990 mit einem Gap-Defizit von nur 1.00–1.03, FLACH in D und in der Zone auf 900/900 (a-priori ρ ≤ 0.7160–0.9903 gegen Latte 10) — zwei Solves, keine Eigenwerte, das Item ist ZU. G1 WIDERSTEHT, aber die Anatomie ist jetzt EXAKT: das Paar ist das richtige Werkzeug und läuft in die richtige Richtung, die Anker-Hälfte ist zertifizierbar und verliert höchstens 1.51 — aber die Marge 1 − ρ(E) ist nur 2.5e-06–2.5e-02 breit, während JEDE billige Oberschranke auf ρ(E) bei 1.82–3.11 sitzt; die geshiftete Leiter ist per Monotonie der M-Matrix-Inversen STRUKTURELL LEER (ein Satz, keine Messung); und die exakte dreifache Buchhaltung zeigt, warum: λ_min(A) ~ D^2.27 = Anker D^−0.56 × Gap D^2.72 × Slack D^0.12 — die GANZE Degradation steckt in der Marge, gegen einen Anker, der sich mit D sogar VERBESSERT. G3 SCHLIESST M17 ALS ROUTE, nicht als Frage: der böse Pencil-Unterraum ist DELOKALISIERT (Partizipations-Verhältnis 0.54–0.98, 91 % der Zellen für 90 % der Masse), weder Randschicht noch Kamm-Streifen, flach auf jeder Sprosse (Flachheit 0.98), mit einer Dimension, die der ATOM-ZAHL folgt statt dem Gitter (n_bad/n_at = 1.64 median), also fällt σ_b(k) nie unter 0.646 und KEINE Wahl des Schnitts bringt M18 unter die 0.50-Latte (bester Wert 2.76–7.00). Promotions-Liste 15 → 22 Posten (7 neu) — 30/30, 12.6s, größte faktorisierte Form 1400 (Cap 1500), Sandbox
+# J1 DAS ρ(K)-ITEM SCHLIESST MIT EINER IDENTITÄT, NICHT MIT EINER MESSUNG. Der Punkt ist
+#    nicht, dass ρ(J) < 1 gemessen wird — das tat T134 schon —, sondern dass es
+#    STRUKTURELL folgt: A_B = D_0 − N_0 ist eine reguläre Zerlegung (D_0 > 0, N_0 ≥ 0,
+#    A_B^{-1} ≥ 0 — alle drei Hypothesen geprüft), und Vargas Satz macht daraus die
+#    IDENTITÄT ρ(J) = τ/(1+τ) mit τ = ρ(A_B^{-1} N_0) auf 900/900 Blöcken. Das klassische
+#    Zeilensummen-Kriterium, das man dafür sonst bräuchte, ist am Rand-Schur-Block VAKUUM
+#    (negative Zeilensummen auf 900/900) — es ist also nicht nur unnötig, es wäre
+#    unbrauchbar. Die Collatz-Wielandt-Klammer am Ankervektor x = A_B^{-1}1 > 0 liefert τ
+#    von oben ohne einen einzigen Eigenwert, und das Ergebnis ist SCHARF: Gap-Defizit
+#    1.00–1.03 auf allen 900 Blöcken, flach in D und in der Zone. Zwei Solves ersetzen ein
+#    Spektrum.
+# J2 DIE BUCHHALTUNG IST EXAKT, UND SIE SAGT: DIE MARGE FRISST DAS GANZE D. Der Zerfall
+#    λ_min(A) ~ D^2.27 spaltet sich EXAKT (Identität, mit gefitteten Exponenten) in Anker
+#    × Gap × Slack = D^−0.56 × D^2.72 × D^0.12. Der Anker VERBESSERT sich mit der Tiefe;
+#    der Slack ist praktisch flach; die ganze Degradation sitzt im Gap 1 − ρ(E), und dieses
+#    Gap ist nur 2.5e-06–2.5e-02 breit, während jede billige Oberschranke auf ρ(E) bei
+#    1.82–3.11 liegt — Faktoren, nicht Prozente. Damit ist auch die geshiftete Leiter
+#    endgültig erledigt, und zwar per SATZ: Lumping kommutiert mit Diagonal-Shifts,
+#    (A − sI)_B = A_B − sI, und M-Matrix-Inversen sind eintragsweise monoton
+#    (Berman-Plemmons), also wachsen max_r x_r(s) UND die a-priori-Marge entlang der
+#    ganzen Leiter monoton. Kein Shift kann helfen — das ist keine Messung, das ist
+#    Struktur.
+# J3 M17 SCHLIESST NEGATIV, UND DAS IST DIE INFORMATION. Die Hoffnung war, dass der böse
+#    Unterraum lokalisiert ist (Randschicht oder Kamm-Streifen), denn dann hätte ein
+#    Schnitt σ_b(k) klein gemacht und M18 wäre unter die 0.50-Latte gefallen. Er ist es
+#    NICHT: Partizipations-Verhältnis 0.54–0.98, 91 % der Zellen tragen 90 % der Masse,
+#    Flachheit 0.98 auf jeder Sprosse — der Unterraum ist DELOKALISIERT, und seine
+#    Dimension folgt der ATOM-ZAHL (n_bad/n_at = 1.64 median), nicht dem Gitter. Also ist
+#    σ_b(k) ≥ 0.646 auf der ganzen Leiter und die beste Massen-Schranke bleibt bei
+#    2.76–7.00 gegen 0.50. Die Latte wird NICHT verschoben: M18 braucht eine
+#    LOKALISIERUNGS-Aussage, und die gibt es nicht — der k-Scan ist als negatives
+#    Resultat in v543 promoviert. NÜCHTERN: alle D-Exponenten sind Fits und bleiben in der
+#    Sandbox; promoviert sind nur die Identitäten und die per-Instanz-Sätze.
+# Serie (XII)–(CXLVII): 136 Proben, 3416/3416 Checks Sandbox + v535–v542 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Stieltjes, Ostrowski 1937, Fan 1958,
+# Berman-Plemmons 1979, Varga 1962, Collatz 1942/Wielandt 1950, Haynsworth 1968,
+# Wilkinson 1968/Higham 2002 — gerichtet zitiert); Weil 1952 zitiert, nie als Kriterium
+# benutzt; Sandbox ohne Ledger-Zeile für die Probe; M18-Latte 0.50 NICHT verschoben.
+
 # 2026-07-28 (XVII) — Teil 135 (delegiert, Phase „Der volle Beweis", Vertrag COMB.COMPRESS): comb_compressibility_probe.py — **BOUNDED-STATE (MATCHED)** — DIE NAHT HAT DEN BESCHRÄNKTEN ZUSTAND, DEN DAS WEIL-FENSTER BEWEISBAR NICHT HAT. Dritte RÜCKFLUSS-Spur: die T116-Riccati-Maschinerie (Haynsworth-Schur, Rand-Zustand (Σ, r, σ)) VERBATIM auf das Naht-DtN Λ_Σ aus T132/v210 portiert — Bordered-Identität 1.5e-16, der Band-m-Marsch reproduziert den dichten Zustand auf 8.2e-16; Pol-Kandidat = die Rang-8-Calderón-Polarisation (v113) auf den 16 Restklassen, ausdrücklich als MODELL dokumentiert (v210s DtN trägt keinen eigenen Rang-1-Defekt). ZENSUS (kein Kill): 100.00% der Off-Band-Masse sitzt auf den mod-4-Streifen (Komplement Maschinen-Null), Streifenzahl exakt ⌊W/4⌋ = Θ(W) (Fit-Exponent 1.0000 ± 0.0000) gegen den echten Primkamm 0.726 ± 0.018 (π(W)-artig). DIE KERNZAHL: **m_cert = 12** — Fehler/Marge 3.3e-16 exakt (h = 64–1500) und 2.1e-17 zertifiziert (h = 1000–100000, FALLEND in h) — gegen T116s 1.3e2–1.1e6 ÜBER der Marge; die Zustands-Leiter m = 4 → 48 teilt den Fehler durch 4.7e8 (T116: kein Zerfall in m). MATCH: 12 ∈ der vorab deklarierten Menge {8, 12, 16, 24, 32} ⇒ MATCHED, nicht „hergeleitet"; latten-fragil — verteidigbar ist 8 ≤ m_cert ≤ 16. KONTROLLEN: die künstliche mod-3-Naht schließt AUCH (m = 8) ⇒ der kausale Treiber ist GEWICHTS-SUMMIERBARKEIT, nicht Kamm-Periodizität; der ECHTE Primkamm SCHEITERT unter identischer Maschinerie (kein h-uniformer Boden, Fehler/Marge 0.16–0.27 steigend, 12× Zustand kauft nur 1.69×) — Nicht-Vakuität etabliert. NÜCHTERN: QEC.SEAM.01 NICHT vorangebracht; NEU und nicht-zirkulär ist, dass die Endlich-Dimensionalität der Naht erstmals in einer REKURSION sichtbar ist, nicht nur im Spektrum, mit dem Weil-Fenster als bewiesenem Kontrast (der delegierte Lauf stoppte einmal vorzeitig und wurde fortgesetzt; alle Checks aus dem vollständigen Lauf) — 13/13, 24.2s, Sandbox
 # I1 DER PORT IST WÖRTLICH, UND DER ZENSUS IST Θ(W) GEGEN π(W). Die T116-Riccati-Rekursion
 #    läuft unverändert auf Λ_Σ = diag(|k|) + Toeplitz(f_k): die geränderte Pol-Identität

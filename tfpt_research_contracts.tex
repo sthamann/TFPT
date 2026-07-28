@@ -2603,6 +2603,106 @@ not ``almost RH''; \texttt{ZETA.HP.CARRIER} untouched; no marker moves.
 Machine-checked: \veri{v542\_margin\_chain\_identities.py}.
 \mE\ (per-instance identities; nothing uniform)
 
+\par\smallskip\noindent\textbf{The lumped $M$-matrix pair of phase 2
+(\texttt{PRIME.MMATRIX.IDENT.01}).}
+Promotion of the \emph{identity/theorem block} of the discovery part T136
+($35$ checks, ${\sim}1$\,s; every check recomputed on small frame-A windows).
+Scope fence, declared with the row: matrix identities, per-instance theorems with
+\emph{checked} hypotheses, and one \emph{negative} result --- no fit, no
+$D$-exponent, no uniform-in-zone statement, no floor value. Battery: $20$ seam
+windows ($n=4\ldots59$, $\rho=1.25\ldots4.00$, $h=25\ldots299$; every factorised
+or diagonalised matrix $\le300$) giving $39$ matrices with positive
+off-diagonals, $312$ shifted ladder rungs, $8$ whitened two-grid rungs; every
+statement is a residual against a preregistered tolerance plus a mutation control
+that must fail by $\ge10^{-3}$ relative.
+\emph{(1)--(2)} With $L_\Delta=\mathrm{diag}(\Delta\mathbf 1)-\Delta$ the
+Laplacian of the positive off-diagonal part, $A_B=A+L_\Delta$ is Stieltjes,
+row-sum preserving ($1.6\times10^{-15}$) and $A_B\succeq A$ --- an \emph{upper}
+bound on $\lambda_{\min}(A)$, a floor never; the congruence
+$A=A_B^{1/2}(I-W)A_B^{1/2}$, $W=A_B^{-1/2}L_\Delta A_B^{-1/2}\succeq0$, is a
+matrix identity ($4.4\times10^{-15}$) with
+$\lambda_{\max}(W)=\rho(L_\Delta A_B^{-1})$, and the \emph{declared}
+equivalence $\lambda_{\max}(W)<1\iff A\succ0$ is checked in \emph{both}
+directions --- the Loewner sandwich is circular by itself, which is the fence.
+\emph{(3)--(4)} With $x=A_B^{-1}\mathbf 1\ge0$ and $A_B^{-1}\ge0$ entrywise
+(Ostrowski 1937, \emph{checked}), $\lambda_{\min}(A_B)\ge1/\max_r x_r$ on all
+$39$ rows (min slack $3.0\times10^{-3}$, sharpest ratio $0.9070$) --- one solve,
+one sign check, no eigenvalue; $(A-sI)_B=A_B-sI$ ($2.5\times10^{-16}$) and
+$(A_B-sI)^{-1}\ge A_B^{-1}\ge0$ entrywise (Berman--Plemmons 1979) $\Rightarrow$
+the shifted ladder is \emph{structurally empty} ($0$ exceptions of $312$).
+\emph{(5)--(6)} For the regular splitting $A_B=D_0-N_0$ (all three hypotheses
+checked), Varga's $\rho(J)=\tau/(1+\tau)$ holds at $4.8\times10^{-15}$
+($\rho(J)=0.7347$--$0.9860$), and the Collatz--Wielandt bracket at the anchor
+vector gives an \emph{a-priori} $\rho(J)\le0.9861<1$ with no eigenvalue
+anywhere, sharp on the measured gap by $1.0062$--$1.0531$.
+\emph{(7)} The $k$-scanned M18 majorant is a \emph{valid} bound at every $k$
+($39$ (rung, $k$) pairs, $0$ violations) and does \emph{not} reach the
+preregistered bar $1/2$ on any rung (best $3.080$) while the measured bad mass is
+$\le0.0120$: a \emph{negative} result, the localisation term alone exceeding the
+bar ($0.542$), and the bar is not moved.
+\textbf{Named limits as load-bearing content:} per instance on small windows,
+nothing uniform in the zone index, in $D$ or in the gap; the T136 $D$-exponents
+(anchor $D^{-0.56}$, gap $D^{2.72}$, slack $D^{0.12}$) are fits and stay in the
+sandbox; (2) carries no floor and M25d stays open; (3) and (5) are implications
+with hypotheses checked at the instance; (4) kills a route and says nothing about
+the true $\lambda_{\max}(W)$. Classical Stieltjes / Ostrowski 1937 / Fan 1958 /
+Berman--Plemmons 1979 / Varga 1962 / Collatz 1942--Wielandt 1950 /
+Haynsworth 1968 named classical; Weil 1952 cited, never used as a criterion.
+Fences: zero-firewall AST-checked; not ``almost RH'';
+\texttt{ZETA.HP.CARRIER} untouched; no marker moves.
+Machine-checked: \veri{v543\_lumped\_pair\_identities.py}.
+\mE\ (per-instance identities) $+$ \mX\ (one closed route)
+
+\par\smallskip\noindent\textbf{The long-lag support structure of phase 2
+(\texttt{PRIME.LONGLAG.SUPP.01}).}
+Promotion of the \emph{structure block} of the discovery part T137 ($24$ checks,
+${\sim}0.2$\,s) on the same $20$ windows ($3$--$25$ prime-power atoms, $20555$
+positive off-diagonal edges, $455$ loaded stripes, $39$ bracketed lumped
+comparisons). Scope fence: support and amplitude structure, one two-sided
+bracket, and one \emph{death certificate} for a whole family of bounds --- no
+fit, no decay exponent, and \emph{no} structure bound that closes.
+\emph{(1)--(3)} The kernel splits exactly as
+$c=c_{\mathrm{arch}}-c_{\mathrm{comb}}$ with $c_{\mathrm{comb}}\ge0$, and the
+archimedean section alone has \emph{all} off-diagonals $\le0$ on $20/20$ windows
+$\Rightarrow$ every positive off-diagonal of $A$ is comb-generated (control: the
+full section carries $+2.0\times10^{-1}$); all $20555$ positive edges have their
+Hankel index $M-1-r-t$ inside the atom-hat index set (per-window fraction exactly
+$1.000000$) $\Rightarrow$ $\mathrm{supp}(\Delta)$ is a union of anti-diagonal
+stripes at prime-power atom positions (converse reported, \emph{not} claimed);
+each stripe is a perfect matching ($0$ endpoint collisions), so its edge vectors
+are exactly orthogonal and $L_\Delta$ per stripe is a direct sum of $2\times2$
+blocks.
+\emph{(4)} $\Delta_{rt}\le c_{\mathrm{comb}}[M-1-r-t]$ on all $20555$ edges
+(excess $-1.9\times10^{-6}$, sharpest ratio $0.99998532$) --- no eigenvalue, no
+norm; the Toeplitz lag in place of the Hankel index fails on $20415/20555$. The
+tighter one-atom refinement is \emph{honestly undecided} at $h\le300$ (the atom
+hats never overlap) and is not promoted.
+\emph{(5)} For the lumped comparison $B=D_0-N_0$ the anchor identity
+$q_J=1-\min_r1/(d_rx_r)<1$ ($8.2\times10^{-16}$) needs no measurement; the
+Neumann partial sum to $K=8$ is then an \emph{entrywise} lower bound for $B^{-1}$
+\emph{because the discarded terms are nonnegative}, and partial sum plus
+anchor-weighted tail an entrywise upper bound, on $39$ rows.
+\emph{(6)} Since Gershgorin, every row-sum norm and every Collatz--Wielandt
+quotient at every \emph{positive} weight are upper bounds for $\rho(|E|)$,
+$E=B^{-1}L_\Delta$, one rigorous \emph{lower} bound decides the family at once:
+$\rho(|E|)\ge1.3141\ge1$ on $20/20$ rows (cheapest four members $\ge1.5937$), so
+no member can \emph{ever} certify $\lambda_{\max}(W)<1$ --- while the
+\emph{signed} $\rho(E)=\lambda_{\max}(W)\le0.99995781$ on the same rows: the
+absolute value alone destroys the cancellation.
+\textbf{Named limits as load-bearing content:} per instance on small windows, no
+decay profile and no amplitude law (T137's decay measurements are fits); (2) is
+one inclusion; (4) bounds the amplitude and \emph{not} $\lambda_{\max}(W)$, and
+the structure bound assembled from (2)--(4) does \emph{not} beat the margin
+(T137: $0$ of $35$ windows) and is not promoted; (5) brackets the \emph{lumped}
+comparison, not the target, whose entrywise inverse positivity at depth stays
+open; (6) closes a route, not the question. Classical Gershgorin 1931 / the
+Neumann series / Haynsworth 1968 named classical; Demko--Moss--Smith 1984 cited
+as a model and \emph{not} applied (the comparison is dense); Weil 1952 cited,
+never used as a criterion. Fences: zero-firewall AST-checked; not ``almost RH'';
+\texttt{ZETA.HP.CARRIER} untouched; no marker moves.
+Machine-checked: \veri{v544\_long\_lag\_support.py}.
+\mE\ (per-instance structure) $+$ \mX\ (one family closed)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

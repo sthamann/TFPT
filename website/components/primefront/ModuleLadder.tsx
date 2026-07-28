@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 
-/** Eight promoted modules; check counts from verification/script_registry.csv. */
+/** Ten promoted modules; check counts from verification/script_registry.csv. */
 const MODULES = [
   { id: "v535", claim: "HECKE.GEOM.01", title: "Hecke from geometry", checks: 25 },
   {
@@ -47,12 +47,24 @@ const MODULES = [
     title: "Margin-chain identities · phase 2",
     checks: 44,
   },
+  {
+    id: "v543",
+    claim: "PRIME.MMATRIX.IDENT.01",
+    title: "Lumped M-matrix pair · phase 2",
+    checks: 35,
+  },
+  {
+    id: "v544",
+    claim: "PRIME.LONGLAG.SUPP.01",
+    title: "Long-lag support structure · phase 2",
+    checks: 24,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 135;
-const SANDBOX_CHECKS = 3386;
+const SANDBOX_PROBES = 137;
+const SANDBOX_CHECKS = 3438;
 
 export function ModuleLadder() {
   return (
@@ -62,7 +74,7 @@ export function ModuleLadder() {
           Load-bearing modules · checks per module
         </p>
         <span className="font-mono text-[10px] text-slate-500">
-          {TOTAL_CHECKS} checks · 8 modules
+          {TOTAL_CHECKS} checks · {MODULES.length} modules
         </span>
       </div>
 
@@ -107,7 +119,7 @@ export function ModuleLadder() {
       </div>
 
       <p className="mt-3 text-xs leading-relaxed text-slate-500">
-        Sandbox probes never move a marker; only the eight modules above are
+        Sandbox probes never move a marker; only the ten modules above are
         cited in the papers and the ledger. I5 is an equivalence typing (⟺ Weil
         positivity ⟺ RH), not a proof claim.
       </p>

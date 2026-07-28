@@ -81,14 +81,15 @@ out to be \emph{Hecke} data. It goes further than an analogy: the $E_8$ shell co
 $240\,\zeta(s)\zeta(s-3)$ as a Dirichlet series, and the lattice's self-duality gives its theta sum an
 exact functional equation whose fixed axis is the critical line --- a framework picture, stated as such,
 which the document opens with and then keeps at arm's length. This companion documents the line end to
-end. Eight modules are
-load-bearing and ledger-carried (\vref{v535}--\vref{v542}): Hecke from geometry on the $E_8$ census,
+end. Ten modules are
+load-bearing and ledger-carried (\vref{v535}--\vref{v544}): Hecke from geometry on the $E_8$ census,
 the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, the matching-lemma / transport
-ledger package, and the margin-chain identities of the second phase. Everything beyond those eight is
+ledger package, and --- out of the second phase --- the margin-chain identities, the lumped
+$M$-matrix pair and the long-lag support structure. Everything beyond those ten is
 \emph{sandbox}: an exploratory program, run as
-$135$ preregistered probes with $3386$ machine checks, which localized the residual object. That
+$137$ preregistered probes with $3438$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -240,7 +241,7 @@ here (the blue \texttt{[\,verification/\dots\,]} tag). Everything marked \sbx\ i
 no ledger row, no marker, and no authority. Section~\ref{sec:verified} is the only section that is
 entirely \ver.
 \item \textbf{Status markers are quoted, never upgraded.} The markers \mE\ \mC\ \mO\ \mX\ shown in
-Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v542}. This
+Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v544}. This
 document introduces no new markers and moves none.
 \item \textbf{Fits are declared as fits.} Every scaling law, slope, exponent and extrapolation quoted
 from the sandbox is a fit to finitely many measured windows and is labelled as such at the point of
@@ -265,14 +266,18 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T135: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T137: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
 the Perron sign theorem --- then the reverse flow: the identity block promoted to
 \vref{v542}, a spectrum-only boundary-Dirac coupling and a certificate-floor audit that hardened
-\vref{v379} --- and finally the pole-free floor closed as existence with a sign anatomy (T134)
-and a bounded seam state where the Weil window provably has none (T135)); Section~\ref{sec:status}
+\vref{v379} --- then the pole-free floor closed as existence with a sign anatomy (T134)
+and a bounded seam state where the Weil window provably has none (T135), and finally the
+$M$-matrix pair, which closes the a-priori radius item by Varga's identity while the exact
+$D$-bookkeeping puts the whole loss in the margin (T136, promoted as \vref{v543}), and the long
+lags, whose support turns out to be an arithmetic stripe set and whose absolute-value envelope
+family is certified \emph{dead} (T137, promoted as \vref{v544})); Section~\ref{sec:status}
 is the status statement.
 
 % =====================================================================
@@ -357,7 +362,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the eight modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the ten modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -487,13 +492,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: eight modules}\label{sec:verified}
+\section{The verified layer: ten modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The eight modules and their ledger markers]
+\begin{keybox}[The ten modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -507,6 +512,8 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v540} & \texttt{RTF.GNS.AMP.01} & amplitude route and positive linear carrier & \mE\ + \mC\\
 \vref{v541} & \texttt{RTF.GNS.LEDGER.01} & matching lemma and transport ledger package & \mE\ + \mC\\
 \vref{v542} & \texttt{PRIME.MARGIN.IDENT.01} & margin-chain identities of phase 2 (per instance) & \mE\\
+\vref{v543} & \texttt{PRIME.MMATRIX.IDENT.01} & lumped $M$-matrix pair of phase 2 (per instance) & \mE\\
+\vref{v544} & \texttt{PRIME.LONGLAG.SUPP.01} & long-lag support structure of phase 2 (per instance) & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -666,6 +673,99 @@ general (Section~\ref{sec:phase2}) --- only the chain underneath it. The sandwic
 value: positivity of the pole-free section at depth (M25d) stays open. The Perron step is an
 implication with a \emph{measured} hypothesis. And the defect identity says nothing about the
 \emph{size} of the defect, which is the open exponent of T130.
+\end{itemize}
+
+\subsection{The lumped \texorpdfstring{$M$}{M}-matrix pair (\texorpdfstring{\vref{v543}}{v543})}\label{sec:v543}
+The second promotion out of the second phase: the identity block of the $M$-matrix question that T134
+posed and T136 answered \veri{v543\_lumped\_pair\_identities.py} ($35$ checks, ${\sim}1$\,s; promotion
+of T136, recomputed on small frame-A windows). The battery is $20$ seam windows
+($n=4\ldots59$, $\rho=1.25\ldots4.00$, $h=25\ldots299$; every factorised or diagonalised matrix
+$\le300$) giving $40$ symmetric matrices --- pole-free odd sections and border Schur blocks --- of
+which $39$ carry positive off-diagonals at all, plus $312$ shifted ladder rungs and $8$ whitened
+two-grid rungs. Every statement is a residual against a \emph{preregistered} tolerance with at least
+one mutation control that must fail by $\ge10^{-3}$ relative.
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The lumped pair and the congruence} \mE: with $\Delta$ the positive off-diagonal part
+and $L_\Delta=\mathrm{diag}(\Delta\mathbf 1)-\Delta$, the pair $A_B=A+L_\Delta$ is Stieltjes,
+$L_\Delta$ is a graph Laplacian, so $A_B\mathbf 1=A\mathbf 1$ ($1.6\times10^{-15}$) and
+$A_B\succeq A$ --- an \emph{upper} bound on $\lambda_{\min}(A)$ and a floor never. The congruence
+$A=A_B^{1/2}(I-W)A_B^{1/2}$ with $W=A_B^{-1/2}L_\Delta A_B^{-1/2}\succeq0$ holds as a \emph{matrix}
+identity ($4.4\times10^{-15}$), $\lambda_{\max}(W)=\rho(L_\Delta A_B^{-1})$ ($4.4\times10^{-15}$),
+and the equivalence $\lambda_{\max}(W)<1\iff A\succ0$ is checked in \emph{both} directions ($39$
+shifted controls in the indefinite range all give $\lambda_{\max}(W)\ge1$) --- the Loewner sandwich is
+circular by itself, and that declared circularity is the content.
+\item \textbf{The anchor and the empty shift ladder} \mE: with $x=A_B^{-1}\mathbf 1\ge0$ and
+$A_B^{-1}\ge0$ entrywise (Ostrowski 1937, \emph{checked}), $\lambda_{\min}(A_B)\ge1/\max_r x_r$ on
+all $39$ rows (min slack $3.0\times10^{-3}$, sharpest ratio $0.9070$) --- one solve, one sign check,
+no eigenvalue. Lumping commutes with diagonal shifts, $(A-sI)_B=A_B-sI$ ($2.5\times10^{-16}$ on $312$
+rungs), and $(A_B-sI)^{-1}\ge A_B^{-1}\ge0$ entrywise (Berman--Plemmons 1979), so $\max_r x_r(s)$ and
+the a-priori margin are non-decreasing along the whole ladder: the shifted ladder is
+\emph{structurally} empty --- a theorem, not the measurement T136 first made.
+\item \textbf{Varga's identity and the a-priori Jacobi radius} \mE: for the regular splitting
+$A_B=D_0-N_0$ (all three hypotheses checked), $\rho(J)=\tau/(1+\tau)$ with $\tau=\rho(A_B^{-1}N_0)$ at
+$4.8\times10^{-15}$ ($\rho(J)=0.7347$--$0.9860$), and the Collatz--Wielandt bracket at the anchor
+vector gives an \emph{a-priori} $\rho(J)\le0.9861<1$ with no eigenvalue anywhere, sharp on the
+measured gap by $1.0062$--$1.0531$. Controls: a non-regular splitting breaks the identity
+($1.1\times10^{-1}$); at a sign-changing test vector the quotient bound is false on $39/39$.
+\item \textbf{The $k$-scanned M18 majorant --- a negative result} \mX: the whitened mass identity
+$\|L^{-1}\hat s\|^2=\hat s^{\mathsf T}U^{-1}\hat s$ holds at $7.2\times10^{-16}$ and the triangle
+chain is a \emph{valid} majorant at every $k$ separately ($39$ (rung, $k$) pairs over $k=2\ldots64$,
+$0$ violations), so minimising over the ladder is legitimate --- and it does not reach the
+preregistered bar $1/2$ on any rung (best $3.080$) while the \emph{measured} bad mass is
+$\le0.0120$. The localisation term alone already exceeds the bar ($0.542$): the loss is the bound,
+and the bar is not moved.
+\item \textbf{Named limits as content.} Per instance on small windows; nothing uniform in the zone
+index, in $D$ or in the gap. The T136 $D$-exponents (anchor $D^{-0.56}$, gap $D^{2.72}$, slack
+$D^{0.12}$) are fits and stay in the sandbox. The congruence carries no floor; the anchor and Varga
+rows are implications with hypotheses \emph{checked at the instance}; the ladder row kills a route and
+says nothing about the true $\lambda_{\max}(W)$.
+\end{itemize}
+
+\subsection{The long-lag support structure (\texorpdfstring{\vref{v544}}{v544})}\label{sec:v544}
+The companion module: what the positive off-diagonal part \emph{is}, and which bounding families are
+dead \veri{v544\_long\_lag\_support.py} ($24$ checks, ${\sim}0.2$\,s; promotion of T137 on the same
+$20$ windows, $3$--$25$ prime-power atoms, $20555$ positive off-diagonal edges, $455$ loaded stripes,
+$39$ bracketed lumped comparisons).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The support is a comb stripe set} \mE: the kernel splits exactly as
+$c=c_{\mathrm{arch}}-c_{\mathrm{comb}}$ with $c_{\mathrm{comb}}\ge0$, and the archimedean section
+alone has \emph{all} off-diagonals $\le0$ on $20/20$ windows, so every positive off-diagonal of $A$ is
+comb-generated (control: the full section carries $+2.0\times10^{-1}$). All $20555$ positive edges
+have their Hankel index $M-1-r-t$ inside the atom-hat index set --- per-window fraction exactly
+$1.000000$ --- so $\mathrm{supp}(\Delta)$ is a union of anti-diagonal stripes at prime-power atom
+positions (the converse is reported, not claimed), and each stripe is a perfect matching ($0$ endpoint
+collisions), so its edge vectors are \emph{exactly} orthogonal and $L_\Delta$ restricted to a stripe
+is a direct sum of $2\times2$ blocks.
+\item \textbf{The amplitude certificate} \mE:
+$A_{rs}=A^{\mathrm{arch}}_{rs}-c_{\mathrm{comb}}[|r-s|]+c_{\mathrm{comb}}[\mathrm{anti}]$ gives
+$\Delta_{rt}\le c_{\mathrm{comb}}[M-1-r-t]$ on all $20555$ edges (excess $-1.9\times10^{-6}$,
+sharpest ratio $0.99998532$) --- no eigenvalue, no norm; the Toeplitz lag in place of the Hankel index
+breaks it on $20415/20555$. Honestly undecided and \emph{not} promoted: at $h\le300$ the atom hats
+never overlap, so the tighter one-atom refinement (T137: worst ratio $2.268$ at depth) coincides with
+the certificate here.
+\item \textbf{The Green function, bracketed two-sidedly} \mE: for the lumped comparison $B=D_0-N_0$,
+$J=D_0^{-1}N_0\ge0$, the anchor identity $q_J=\max_r(Jx)_r/x_r=1-\min_r1/(d_rx_r)<1$
+($8.2\times10^{-16}$) needs no measurement; the Neumann partial sum to $K=8$ is then an
+\emph{entrywise} lower bound for $B^{-1}$ ($-2.1\times10^{-4}$) \emph{because the discarded terms are
+nonnegative}, and the anchor-weighted ceiling is an entrywise upper bound ($-1.4\times10^{-1}$) on
+$39$ rows. This delivers item (2) of the T136 rest list; dropping the tail makes the upper bound
+false.
+\item \textbf{The absolute-value envelope family is certified dead} \mX: with $E=B^{-1}L_\Delta$,
+Gershgorin, every row-sum norm and every Collatz--Wielandt quotient at every \emph{positive} weight
+are upper bounds for $\rho(|E|)$, so one rigorous \emph{lower} bound decides the family at once ---
+$\rho(|E|)\ge1.3141\ge1$ on $20/20$ rows (the cheapest four members all $\ge1.5937$). No member can
+ever certify $\lambda_{\max}(W)<1$. The \emph{signed} radius on the same rows is
+$\rho(E)=\lambda_{\max}(W)\le0.99995781$: the absolute value alone destroys the cancellation, and what
+survives is a sign-preserving bound that does not exist yet.
+\item \textbf{Named limits as content.} Per instance on small windows, no decay profile and no
+amplitude law (T137's decay measurements are fits). The support row is \emph{one} inclusion; the
+amplitude row bounds the amplitude and \emph{not} $\lambda_{\max}(W)$, and the structure bound
+assembled from it does not beat the margin (T137: $0$ of $35$ windows) and is not promoted; the
+bracket is for the \emph{lumped comparison}, not for the target, whose entrywise inverse positivity at
+depth stays open; the envelope row closes a route, not the question, and moves no marker.
+Demko--Moss--Smith 1984 is cited as a model and \emph{not} applied --- the comparison is dense.
 \end{itemize}
 
 % =====================================================================
@@ -3008,7 +3108,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T135)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T137)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -3875,15 +3975,93 @@ the model DtN, not the raw reflection-positive seam. What is new and non-circula
 finite-dimensionality of the seam is visible in a \emph{recursion} for the first time, not
 only in a spectrum, with the Weil window as the proved contrast.
 
-\noindent T136 (\texttt{m\_matrix\_pair\_probe.py}, contract \texttt{M.MATRIX.PAIR}) is
-running at the M-matrix question T134 named.
+\subsection{The $M$-matrix pair: one item closes, and the bookkeeping is exact (T136)}
+T136 (\texttt{m\_matrix\_pair\_probe.py}, contract \texttt{M.MATRIX.PAIR}, $30/30$, verdict
+\textsc{one-carries}) attacks the $M$-matrix question T134 named, and one of the three goals carries
+cleanly. The classical row-sum criterion --- the thing one would normally invoke to get
+$\rho(\mathrm{Jacobi})<1$ --- is \emph{vacuous} at the border block (the row sums are negative on
+$900/900$, the same sign failure that killed T134's cheap routes). It is not needed: for the lumped
+Stieltjes comparison, \textbf{Varga's regular splitting turns convergence into an identity},
+$\rho(J)=\tau/(1+\tau)$ with $\tau=\rho(A_B^{-1}N_0)$, and the Collatz--Wielandt bound at the
+$M$-matrix anchor vector reproduces the measured $\rho=0.709$--$0.990$ with a gap shortfall of only
+$1.00$--$1.03$, \emph{flat} in $D$ and in the zone on $900/900$ blocks (a priori
+$\rho\le0.7160$--$0.9903$ against the declared bar $10$). Two solves replace a spectrum, and rest item
+\emph{(3)} --- ``$\rho(K)$ a priori rather than measured'' --- is \textbf{closed}.
+
+The other goal resists, but its anatomy is now exact. The pair is the right tool and runs the right
+way; the anchor half is certifiable and loses at most $1.51$. What kills it is the margin: $1-\rho(E)$
+is only $2.5\times10^{-6}$--$2.5\times10^{-2}$ wide while \emph{every} cheap upper bound on $\rho(E)$
+sits at $1.82$--$3.11$. The shifted ladder is empty \emph{by monotonicity of $M$-matrix inverses}, not
+by measurement. And the three-way bookkeeping splits the degradation exactly:
+\[
+\lambda_{\min}(A)\ \sim\ D^{2.27}\ =\ \underbrace{D^{-0.56}}_{\text{anchor}}\times
+\underbrace{D^{2.72}}_{\text{margin gap}}\times\underbrace{D^{0.12}}_{\text{slack}}
+\qquad\text{(exact split; the exponents are fits).}
+\]
+The anchor \emph{improves} with depth; the slack is flat; the entire loss is the gap. Finally M17
+closes \emph{negatively}: the bad pencil subspace is \textbf{delocalised} (participation ratio
+$0.54$--$0.98$, $91\%$ of the cells carrying $90\%$ of the mass, flatness $0.98$ on every rung),
+neither a border layer nor the comb stripes, with a dimension tracking the \emph{atom count} rather
+than the grid ($n_{\mathrm{bad}}/n_{\mathrm{at}}=1.64$ median). Hence $\sigma_b(k)\ge0.646$ on the
+whole ladder and no choice of cut brings M18 under its $0.50$ bar (best $2.76$--$7.00$): what M18 needs
+is a localisation \emph{statement}, and there is none. The identity block of this part is promoted:
+\vref{v543}, Section~\ref{sec:v543}.
+
+\subsection{The long lags: the support is arithmetic, and the absolute value is the culprit (T137)}
+T137 (\texttt{long\_lag\_probe.py}, contract \texttt{LONG.LAG}, $22/22$, verdict
+\textsc{both-resist}) names the perturbation, and the name is arithmetic. The archimedean half of the
+kernel is nondecreasing outside its near field and its odd section carries \emph{no} positive
+off-diagonal ($0$ of $40$ windows), so the whole bad half $L_\Delta$ is \textbf{comb-generated},
+supported on the anti-diagonal stripes $r+s=M-1-\mathrm{round}(u_j/D)$ addressed by the prime-power
+atoms of the window ($1.00$--$1.00$ of the positive entries within one grid cell of an atom, $4$--$192$
+stripes on $3$--$99$ atoms, $1.33$--$1.97$ stripes per atom), with the certifiable amplitude law
+$\Delta\le c_{\mathrm{comb}}(\mathrm{anti})$ --- while the single-atom form $\mu_j/2$ is only
+\emph{typical} (worst ratio $2.268$). Each stripe is a perfect matching, so $L_\Delta$ is explicit.
+
+Half the question then closes, and it closes as a \emph{certificate of death}. Gershgorin bounds,
+row-sum norms and Collatz--Wielandt quotients at positive weights are all upper bounds for
+$\rho(|E|)$, so a single \emph{lower} bound decides them all: the Collatz--Wielandt lower end gives
+$\rho(|E|)\ge1.3218$--$2.2963$, above $1$ on $35/35$ windows. \textbf{No member of the
+absolute-value envelope family can ever produce a floor} --- not ``has not yet''. The second family
+(edge/Gram bounds built on the \emph{second differences} of the Green function) is alive but does not
+beat the margin: $1.1530$--$2.3502$ against a true $\rho$ of $0.9752$--$1.0000$ and a target of
+$0.998879$--$0.999999$, clearing it on $0$ of $35$ windows (overshoot $24$--$7.1\times10^{5}$ gaps).
+The coarsening ladder says why it fails structurally --- the bound drops below $1$ only when the entire
+Gram is a single block, so \emph{the inter-stripe coupling is the object} --- and the measured decay of
+those second differences is algebraic ($\mathrm{dist}^{-0.63}\pm0.02$, a fit) where a
+Demko--Moss--Smith argument would need a geometric one, $A_B$ being dense so that theorem does not
+apply at all.
+
+Rest item \emph{(2)} is delivered without being closed. The Neumann series of the regular splitting
+gives $(S_B^{-1})_{rs}\ge\max_{k\le6}(J^k)_{rs}/d_s$ \emph{with no error term} --- only a discarded
+nonnegative tail --- the partial sum recovering $0.011$--$0.406$ of the true minimum entry, and the
+anchor-weighted ceiling overshooting the maximum by only $2.49$--$12.24$: the Green function is
+two-sidedly bracketed by path quantities. But the certificate for $S^{-1}>0$ still stops at $563/900$
+blocks ($716/900$ with the sign-aware $k$-exact split, $66/900$ from the structural bracket alone)
+because $\rho(|F|)\ge1$ on $77$ blocks --- the same wall. \textbf{The diagnosis is one sentence:} the
+absolute value destroys the cancellation that the seam lives on, and what is missing on both sides is
+a \emph{sign-preserving} bound. The structure block of this part is promoted: \vref{v544},
+Section~\ref{sec:v544}.
+
+\begin{keybox}[After T137: thirty promotion items, and a rest list of three]
+The promotion list grows from fifteen to \textbf{thirty} per-instance items ($7$ new in T136, $8$ in
+T137); thirteen of them are now load-bearing as \vref{v543} and \vref{v544}. Of T134's five remaining
+points, \emph{(3)} $\rho(K)$ a priori is \textbf{closed} (Varga plus Collatz--Wielandt) and
+\emph{(4)} the M17 localisation is \textbf{closed negatively} (the bad subspace is delocalised, so no
+cut works); the Green lower bound asked for under \emph{(1)} is delivered two-sidedly. What is left is
+\emph{(1)} $D$-uniformity of the floor --- now sharpened to a single named requirement, a
+\emph{sign-preserving} bound on $\rho(E)$, every absolute-value route being certifiably dead ---
+together with \emph{(2)} the zone-uniform exponent and \emph{(5)} the quantifier.
+\end{keybox}
+
+\noindent T138 (\texttt{sign\_compensation\_probe.py}) is running at exactly that residue.
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
-\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the seven ledger modules
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the ten ledger modules
 of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
@@ -4247,12 +4425,21 @@ all-$\alpha$ step that no computation can close, and the \textbf{[SUPPORT]} obst
 T134 (\texttt{pole\_free\_floor\_probe.py}, \textsc{partial}) then closed the
 \emph{existence} half of that pole-free floor --- every Cholesky pivot positive on
 $79/79$ windows, per-window certificates throughout --- while every cheap lower-bound
-route fails by \emph{sign}, not size: the surviving opening is an M-matrix question
-(under attack in T136, \texttt{m\_matrix\_pair\_probe.py}, running), and the whitening
+route fails by \emph{sign}, not size: the surviving opening is an M-matrix question, and the whitening
 honestly corrected T131's diagnosis (the comb dominates the pole in the norm; what is
-missing is a localisation statement). The identity
-block underneath the map is no longer sandbox: it is promoted as \vref{v542}
-(Section~\ref{sec:v542}). And the \emph{reverse-flow} parts have landed --- T132
+missing is a localisation statement). T136 (\texttt{m\_matrix\_pair\_probe.py},
+\textsc{one-carries}) then took that question and closed one of its three items outright ---
+Varga's regular splitting makes $\rho(J)=\tau/(1+\tau)$ an \emph{identity} and Collatz--Wielandt
+bounds it a priori to $1.00$--$1.03$ of the measured gap on $900/900$ blocks --- while the exact
+bookkeeping $\lambda_{\min}\sim D^{-0.56}\cdot D^{2.72}\cdot D^{0.12}$ shows the whole degradation
+sitting in the margin and M17 closes \emph{negatively} (the bad subspace is delocalised). T137
+(\texttt{long\_lag\_probe.py}, \textsc{both-resist}) made the perturbation explicit (comb-generated
+anti-diagonal stripes at the prime-power atoms, each a perfect matching, amplitude certified) and
+\emph{killed a whole family by certificate}: $\rho(|E|)\ge1.32$ from below on $35/35$ windows, so no
+absolute-value bound can ever supply a floor --- the residue is one named object, a sign-preserving
+bound. The identity and structure
+blocks underneath the map are no longer sandbox: they are promoted as \vref{v542}, \vref{v543} and
+\vref{v544} (Sections~\ref{sec:v542}--\ref{sec:v544}). And the \emph{reverse-flow} parts have landed --- T132
 (\texttt{bd\_seam\_probe.py}) made the Beurling--Deny triad an operator discriminator for
 the seam DtN, \textsc{spectrum-only} with the gap in the killing measure, T133
 (\texttt{cert\_floor\_probe.py}) audited the suite's own PSD rows and produced the exact
@@ -4331,20 +4518,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T135}\label{app:index}
+\section{Probe index, diary parts T11--T137}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $125$ parts T11--T135 that the current diary file records
-($126$ runs --- T104 was a double run with two independent arms --- and $3194$ green checks); the ten
+load-bearing artefact. The index covers the $127$ parts T11--T137 that the current diary file records
+($128$ runs --- T104 was a double run with two independent arms --- and $3246$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v542} promoted; with T126--T135, the first ten parts of the second phase, the
-running totals are \textbf{$135$ probes and $3386/3386$ checks}. T136
-(\texttt{m\_matrix\_pair\_probe.py}, contract \texttt{M.MATRIX.PAIR}) is running and not
-yet indexed.
+\vref{v535}--\vref{v544} promoted; with T126--T137, the first twelve parts of the second phase, the
+running totals are \textbf{$137$ probes and $3438/3438$ checks}. T138
+(\texttt{sign\_compensation\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -4485,6 +4671,8 @@ T132 & \texttt{\scriptsize bd\_\allowbreak seam} & the first \emph{reverse-flow}
 T133 & \texttt{\scriptsize cert\_\allowbreak floor} & the audit that changed a load-bearing module: shifted-Cholesky certificates (Wilkinson 1968 / Higham 2002 / Rump 2006 bars) applied to the suite's own RP/PSD rows, machinery itself validated on \textbf{840 controls} ($0$ false certifications, $0$ false negative-direction fires, sharpness median $1.000$) --- the $10\times10$ Hankel \vref{v379} builds is \textbf{as a matrix of doubles certifiably NOT PSD} (certified negative direction $-7.75\times10^{-18}$ at $60$ digits; also at $n=14,20$) and the module's $\lambda_{\min}>-10^{-10}$ passes it; the cause is priced, not guessed ($\mathrm{cond}\approx1.8\times10^{18}$ over the certifiability ceiling $1.0\times10^{13}$; entry bar $7.6\times10^{-12}$ dominates every fp floor; $16/17$ window variants \textsc{measurement-only}), the blind band exhibited (a certified negative direction passes the test), and the \emph{mathematical} matrix is fine (certified floor $2.7\times10^{-25}$ at $40$ digits, while rounding to doubles moves it $3.5\times10^{-17}$ --- eight orders more; precision ladder $25/40/70/70$ digits at $n=6\ldots20$); \textbf{the exact repair needs no precision}: $M=V^{\mathsf T}\mathrm{diag}(1/1600)V$ is a positive-mixture Gram, so $M\succeq0$ in exact arithmetic with no bar --- the route \vref{v171} already takes; other rows clean (\vref{v171} exactly rank-$3$ Vandermonde Gram, $\lambda_{\min}=0$ exactly; \vref{v527}/\vref{v519} \textsc{cert-up}, $N=8,16$ even in binary64); recommendation table explicit: \textbf{no marker moves}, method and wording only --- executed in the same round as the \vref{v379} hardening and the \texttt{SEAM.S3.RP.01} rewording & MIXED & 23/23\\
 T134 & \texttt{\scriptsize pole\_\allowbreak free\_\allowbreak floor} & the three items of T131's rest list, and nothing else --- \textbf{the floor is never an existence problem}: every Cholesky pivot of the \emph{pole-free} form positive on $79/79$ windows (T119's negative pivot belonged to the form \emph{with} the pole), per-window Cholesky certificates R4 $79/79$ / R2b $68/68$ --- but \textbf{every cheap route fails by sign, not size} (Dirichlet+Gershgorin, global, Jacobi dominance, Ostrowski all $0/68$; path comparison infeasible, congestion up to $4.7\times10^{5}$): the nine decades of slack are worthless to them; anatomy: the good half $\mathrm{diag}(w)+L_N$ definite $68/68$ ($\lambda_{\min}=0.13$--$3.06$, $8$--$85{,}000\times$ above target), the \emph{entire} loss the positive-off-diagonal Laplacian $L_P$ at the long lags ($\lambda_{\max}(L_P)/\mu_1$ up to $4.7\times10^{5}$, $k_{\mathrm{eff}}=24$--$397$ --- not low-rank, T131's rank-one trick does not generalise); R5 measured: compression and Schur both \emph{above} $\lambda_{\min}$ on $56/56$ --- no coarse recursion can supply a floor; degradation $\mathrm{cert}\sim D^{2.26}$ (fit); \textbf{the inverse-positivity gets its class}: the lumped Stieltjes comparison $S_B=S+L_\Delta$ is Stieltjes and definite by construction, $\rho(\mathrm{Jacobi})=0.709$--$0.990<1$ on $900/900$ $\Rightarrow$ $S_B^{-1}$ a convergent nonnegative series (discrete Green function; naive split only $659/900$; killing reading refuted, row sums negative $900/900$; Neumann majorant $558/558$, coverage $26.9\%$; $S^{-1}>0$ certified a posteriori $900/900$ at residual $\le2.6\times10^{-11}$; RP-on-floor-eigenspace weakening refuted $535/900$); \textbf{whitening corrects T131}: the $2.18$ metric mismatch was not the dominant loss --- the comb dominates the pole by $4.7$--$81\times$; first finite bound $2.81$--$5.04$ (sharp $2.52$--$4.26$) vs bar $0.50$, $\sigma_b=0.77$--$1.00$ exhausts the budget alone $\Rightarrow$ the rest is a localisation statement; promotion list $9\to15$, rest list five points & PARTIAL & 21/21\\
 T135 & \texttt{\scriptsize comb\_\allowbreak compressibility} & the third \emph{reverse-flow} trace: the T116 Riccati machinery ported \emph{verbatim} to the seam DtN $\Lambda_\Sigma$ (bordered identity $1.5\times10^{-16}$, banded $m$-march $=$ dense state to $8.2\times10^{-16}$; pole candidate the rank-$8$ Calder\'on polarisation on the $16$ residue classes, documented as a \emph{model}) --- census not a kill: $100.00\%$ of the off-band mass on the mod-$4$ stripes (complement machine zero), stripe count exactly $\lfloor W/4\rfloor=\Theta(W)$ (exponent $1.0000\pm0.0000$) against the true prime comb's $\pi(W)$-like $0.726\pm0.018$; \textbf{the core number $m_{\mathrm{cert}}=12$}: error/margin $3.3\times10^{-16}$ exact ($h=64$--$1500$) and $2.1\times10^{-17}$ certified ($h=1000$--$100{,}000$, \emph{falling} in $h$) against T116's $1.3\times10^{2}$--$1.1\times10^{6}$ \emph{above} the margin; $m=4\to48$ divides the error by $4.7\times10^{8}$ (T116: no decay); $12\in\{8,12,16,24,32\}$ pre-declared $\Rightarrow$ \textsc{matched}, not derived (bar-fragile: $8\le m_{\mathrm{cert}}\le16$ defensible); controls: mod-$3$ also closes ($m=8$) $\Rightarrow$ the driver is \textbf{weight summability}, not comb periodicity; the \emph{true} prime comb \emph{fails} under identical machinery (error/margin $0.16$--$0.27$ rising, $12\times$ state buys $1.69\times$) --- non-vacuity established; sober: \texttt{QEC.SEAM.01} \emph{not} advanced, $m_{\mathrm{cert}}$ partly circular ($16$ channels by hand), model DtN not the raw seam; new: finite-dimensionality visible in a \emph{recursion}, not only a spectrum, with the Weil window as the proved contrast & BOUNDED-STATE & 13/13\\
+T136 & \texttt{\scriptsize m\_\allowbreak matrix\_\allowbreak pair} & the $M$-matrix question T134 left open, and \textbf{one of three goals closes outright}: the classical row-sum criterion is \emph{vacuous} at the border ($900/900$ negative row sums --- the same sign failure), but \textbf{Varga's regular splitting makes $\rho(J)=\tau/(1+\tau)$ an identity} for the lumped Stieltjes comparison and the Collatz--Wielandt bound at the $M$-matrix anchor vector reproduces the measured $\rho=0.709$--$0.990$ with a gap shortfall of only $1.00$--$1.03$, \emph{flat} in $D$ and in the zone on $900/900$ (a priori $\rho\le0.7160$--$0.9903$, bar $10$) $\Rightarrow$ rest item \emph{(3)} \textbf{closed}, two solves instead of a spectrum; the pair itself resists with an \emph{exact} anatomy: anchor half certifiable losing $\le1.51$, but margin $1-\rho(E)$ only $2.5\times10^{-6}$--$2.5\times10^{-2}$ wide against cheap $\rho(E)$ bounds at $1.82$--$3.11$, the shifted ladder empty \emph{by} monotonicity of $M$-matrix inverses (Berman--Plemmons), and the three-way split $\lambda_{\min}(A)\sim D^{2.27}=D^{-0.56}\times D^{2.72}\times D^{0.12}$ (anchor $\times$ gap $\times$ slack; fitted exponents) putting the \emph{whole} degradation in the margin against an anchor that improves with depth; \textbf{M17 closes negatively}: the bad pencil subspace is \emph{delocalised} (participation $0.54$--$0.98$, $91\%$ of cells for $90\%$ of the mass, flatness $0.98$), its dimension tracking the atom count ($n_{\mathrm{bad}}/n_{\mathrm{at}}=1.64$) not the grid, so $\sigma_b(k)\ge0.646$ and no cut brings M18 under $0.50$ (best $2.76$--$7.00$) --- what M18 needs is a localisation \emph{statement}; promotion list $15\to22$ ($\to$ \vref{v543}) & ONE-CARRIES & 30/30\\
+T137 & \texttt{\scriptsize long\_\allowbreak lag} & the long lags named, and \textbf{a whole bounding family killed by certificate}: the archimedean half carries \emph{no} positive off-diagonal ($0$ of $40$ windows), so $L_\Delta$ is entirely \textbf{comb-generated} --- supported on the anti-diagonal stripes $r+s=M-1-\mathrm{round}(u_j/D)$ at the prime-power atoms ($1.00$--$1.00$ of the positive entries within one grid cell of an atom, $4$--$192$ stripes on $3$--$99$ atoms, $1.33$--$1.97$ per atom), each stripe a \emph{perfect matching} (orthogonal edges, $2\times2$ blocks), with the certifiable amplitude law $\Delta\le c_{\mathrm{comb}}(\mathrm{anti})$ (the single-atom $\mu_j/2$ only \emph{typical}, worst ratio $2.268$); \textbf{the $|E|$-envelope family is dead by a lower bound}: Collatz--Wielandt from below gives $\rho(|E|)\ge1.3218$--$2.2963$, above $1$ on $35/35$, so no Gershgorin bound, no row-sum norm and no rescaling can \emph{ever} produce a floor; the surviving edge/Gram family (second differences of the Green function) reaches $1.1530$--$2.3502$ against a true $\rho$ of $0.9752$--$1.0000$ and clears the target on $0$ of $35$ (overshoot $24$--$7.1\times10^{5}$ gaps), the coarsening ladder crossing $1$ only when the entire Gram is one block $\Rightarrow$ \emph{the inter-stripe coupling is the object}, decay algebraic $\mathrm{dist}^{-0.63}$ (fit; Demko--Moss--Smith \emph{not} applicable, $A_B$ dense); \textbf{rest item (2) delivered}: the Neumann series bounds the Green function from below with \emph{no} error term (recovering $0.011$--$0.406$ of the minimum entry) and the anchor-weighted ceiling from above (overshoot $2.49$--$12.24$), yet the $S^{-1}>0$ certificate still stops at $563/900$ ($716/900$ $k$-exact, $66/900$ structural) because $\rho(|F|)\ge1$ on $77$ blocks --- \emph{the same wall}: the absolute value destroys the cancellation, and the residue is a sign-preserving bound; promotion list $22\to30$ ($\to$ \vref{v544}) & BOTH-RESIST & 22/22\\
 \end{xltabular}
 }
 

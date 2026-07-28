@@ -219,8 +219,20 @@ export function TwoDoorsConvergence() {
           window provably lacks — m_cert = 12, from the pre-declared set
           {'{8, 12, 16, 24, 32}'}, error falling out to h = 1e5 — with the
           honest caveats stated: the driver is weight summability, the value
-          is partly circular, and QEC.SEAM.01 is not advanced. T136
-          (m_matrix_pair_probe.py) is running at the M-matrix question.
+          is partly circular, and QEC.SEAM.01 is not advanced. T136 ·
+          M.MATRIX.PAIR (ONE-CARRIES, 30/30) closed one of the M-matrix
+          question&apos;s three items outright — Varga&apos;s regular splitting
+          makes ρ(J) = τ/(1+τ) an identity and the Collatz–Wielandt bound at the
+          anchor vector is sharp to 1.00–1.03 on 900/900, flat in D and in the
+          zone — while the exact split λ_min ~ D^−0.56 × D^2.72 × D^0.12 puts the
+          whole degradation in the margin and M17 closes negatively (the bad
+          subspace is delocalised). T137 · LONG.LAG (BOTH-RESIST, 22/22) made
+          the support explicit — anti-diagonal comb stripes at the prime-power
+          atoms, each a perfect matching, amplitude certified — and certified
+          the whole absolute-value envelope family DEAD from below
+          (ρ(|E|) ≥ 1.32 on 35/35), leaving one named residue: a sign-preserving
+          bound. Thirteen statements from both parts are promoted as v543 and
+          v544; T138 (sign_compensation_probe.py) is running at that residue.
         </p>
       </div>
 

@@ -62,6 +62,125 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-28 (II) (\texttt{v543} + \texttt{v544} --- the lumped $M$-matrix pair and the long-lag support structure promoted; prime-front diary T136/T137 + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v543} (\texttt{PRIME.MMATRIX.IDENT.01}).} Promotion of the
+identity/theorem block of the discovery part T136 ($35$ checks, ${\sim}1$\,s), recomputed on small
+frame-A windows --- nothing cited from the sandbox. Scope fence: matrix identities, per-instance
+theorems with \emph{checked} hypotheses, and one \emph{negative} per-instance result; no fit, no
+$D$-exponent, no uniform-in-zone claim, no floor value. Battery: $20$ seam windows
+($n=4\ldots59$, $\rho=1.25\ldots4.00$, $h=25\ldots299$; every factorised or diagonalised matrix
+$\le300$) giving $40$ symmetric matrices (pole-free odd sections $+$ border Schur blocks), $39$ with
+positive off-diagonals, plus $312$ shifted ladder rungs and $8$ whitened two-grid rungs.
+\item \textbf{(1)--(2) The lumped pair and the congruence \mE.} With $\Delta$ the positive
+off-diagonal part and $L_\Delta=\mathrm{diag}(\Delta\mathbf 1)-\Delta$, the pair
+$A_B=A+L_\Delta$ is Stieltjes (off-diagonals exactly $\le0$), $L_\Delta$ is a graph Laplacian hence
+PSD with zero row sums, so $A_B\mathbf 1=A\mathbf 1$ ($1.6\times10^{-15}$) and $A_B\succeq A$ ---
+an \emph{upper} bound on $\lambda_{\min}(A)$ and a floor \emph{never} (control: lumping the negative
+off-diagonals destroys Stieltjes, $2.0\times10^{-1}$). The congruence
+$A=A_B^{1/2}(I-W)A_B^{1/2}$, $W=A_B^{-1/2}L_\Delta A_B^{-1/2}\succeq0$, holds as a \emph{matrix}
+identity ($4.4\times10^{-15}$) with $\lambda_{\max}(W)=\rho(L_\Delta A_B^{-1})$
+($4.4\times10^{-15}$), and the \emph{declared circularity} $\lambda_{\max}(W)<1\iff A\succ0$ is
+checked in \emph{both} directions ($0$ exceptions forward; $39/39$ shifted controls in the
+indefinite range give $\lambda_{\max}(W)\ge1$) --- the Loewner sandwich is vacuous by itself, and
+that is the content.
+\item \textbf{(3)--(4) The anchor and the empty shift ladder \mE.} With $x=A_B^{-1}\mathbf 1\ge0$
+and $A_B^{-1}\ge0$ entrywise (Ostrowski 1937, \emph{checked}),
+$\lambda_{\min}(A_B)\ge1/\max_r x_r$ on all $39$ rows (min slack $3.0\times10^{-3}$, sharpest ratio
+$0.9070$) --- one solve, one sign check, no eigenvalue (control: a positive off-diagonal makes it
+false, $1.9000>0.1000$). Lumping commutes with diagonal shifts, $(A-sI)_B=A_B-sI$
+($2.5\times10^{-16}$ on $312$ rungs), and $(A_B-sI)^{-1}\ge A_B^{-1}\ge0$ entrywise
+(Berman--Plemmons 1979, violation $0$), so $\max_r x_r(s)$ and the a-priori margin
+$\|L_\Delta\|_\infty\max_r x_r(s)$ are non-decreasing along the whole ladder: the shifted ladder is
+\emph{structurally empty} --- a theorem, not a measurement.
+\item \textbf{(5)--(6) Varga's identity and the a-priori Jacobi radius \mE.} For the regular
+splitting $A_B=D_0-N_0$ (all three hypotheses checked on $39/39$),
+$\rho(J)=\tau/(1+\tau)$ with $\tau=\rho(A_B^{-1}N_0)$ at $4.8\times10^{-15}$
+($\rho(J)=0.7347$--$0.9860$); the Collatz--Wielandt bracket at the anchor vector gives
+$\min_r(Tx)_r/x_r\le\tau\le\max_r(Tx)_r/x_r$ ($0$ exceptions) and hence an \emph{a-priori}
+$\rho(J)\le0.9861<1$ with no eigenvalue anywhere, sharp on the measured gap by
+$1.0062$--$1.0531$. Controls: a non-regular splitting breaks the identity
+($1.1\times10^{-1}$); at a sign-changing test vector the quotient bound is false on $39/39$.
+\item \textbf{(7) The $k$-scanned M18 majorant --- a negative result \mX.} The whitened mass
+identity $\|L^{-1}\hat s\|^2=\hat s^{\mathsf T}U^{-1}\hat s$ holds at $7.2\times10^{-16}$ and the
+triangle chain is a \emph{valid} majorant at every $k$ separately ($39$ (rung, $k$) pairs over
+$k=2\ldots64$, $0$ violations), so the minimum over the ladder is legitimate --- and it does
+\emph{not} reach the preregistered T134 bar $1/2$ on any rung (best $3.080$; best over the three
+values T134 tried, also $3.080$) while the \emph{measured} bad mass is $\le0.0120$. The
+localisation term alone already exceeds the bar ($0.542$): the loss is the bound, and what is
+missing is a localisation statement. The bar is \emph{not} moved and nothing is upgraded.
+\item \textbf{New module \texttt{v544} (\texttt{PRIME.LONGLAG.SUPP.01}).} Promotion of the
+structure block of the discovery part T137 ($24$ checks, ${\sim}0.2$\,s) on the same $20$ windows
+($3$--$25$ prime-power atoms, $20555$ positive off-diagonal edges, $455$ loaded stripes, $39$
+bracketed lumped comparisons).
+\item \textbf{(1)--(4) The support is a comb stripe set, and its amplitude is certified \mE.} The
+kernel splits exactly as $c=c_{\mathrm{arch}}-c_{\mathrm{comb}}$ with $c_{\mathrm{comb}}\ge0$, and
+the archimedean section alone has \emph{all} off-diagonals $\le0$ on $20/20$ windows: every positive
+off-diagonal of $A$ is comb-generated (control: the full section carries $+2.0\times10^{-1}$). Every
+one of the $20555$ positive edges has its Hankel index $M-1-r-t$ inside the atom-hat index set ---
+per-window fraction exactly $1.000000$ --- so $\mathrm{supp}(\Delta)$ is a union of anti-diagonal
+stripes at prime-power atom positions (the converse is reported, \emph{not} claimed). Each stripe is
+a perfect matching ($0$ endpoint collisions), so its edge vectors $b_e=e_r-e_t$ are \emph{exactly}
+orthogonal and $L_\Delta$ restricted to a stripe is a direct sum of $2\times2$ blocks (control:
+edges across two stripes overlap). And $A_{rs}=A^{\mathrm{arch}}_{rs}-c_{\mathrm{comb}}[|r-s|]
++c_{\mathrm{comb}}[\mathrm{anti}]$ gives the amplitude certificate
+$\Delta_{rt}\le c_{\mathrm{comb}}[M-1-r-t]$ on all $20555$ edges (excess $-1.9\times10^{-6}$,
+sharpest ratio $0.99998532$) --- no eigenvalue, no norm; control: the Toeplitz lag in place of the
+Hankel index breaks it on $20415/20555$. Honestly undecided and \emph{not} promoted: at $h\le300$
+the hats never overlap, so the tighter one-atom refinement coincides with the certificate here.
+\item \textbf{(5) The Green function, bracketed two-sidedly \mE.} For the lumped comparison
+$B=D_0-N_0$, $J=D_0^{-1}N_0\ge0$, the anchor identity
+$q_J=\max_r(Jx)_r/x_r=1-\min_r 1/(d_rx_r)<1$ ($8.2\times10^{-16}$) needs no measurement; then the
+Neumann partial sum to $K=8$ is an \emph{entrywise} lower bound for $B^{-1}$ ($-2.1\times10^{-4}$)
+\emph{because the discarded terms are nonnegative}, and partial sum
+$+\,(x_r/x_s)q_J^{K+1}/((1-q_J)d_s)$ is an entrywise upper bound ($-1.4\times10^{-1}$), on $39$ rows
+($20$ pole-free sections $+$ $19$ border Schur blocks). Control: dropping the tail makes the upper
+bound false. This delivers item (2) of the T136 rest list.
+\item \textbf{(6) The absolute-value envelope family is certified dead \mX.} With $E=B^{-1}L_\Delta$,
+Gershgorin, every row-sum norm and every Collatz--Wielandt quotient at every \emph{positive} weight
+are all $\ge\rho(|E|)$, so one rigorous \emph{lower} bound decides the whole family at once: a
+Collatz--Wielandt quotient from below at a power-iterated weight gives $\rho(|E|)\ge1.3141\ge1$ on
+$20/20$ rows (the cheapest four members all $\ge1.5937$). No member of the family can ever certify
+$\lambda_{\max}(W)<1$ --- a certificate of \emph{death}, not a measurement. The \emph{signed}
+radius $\rho(E)=\lambda_{\max}(W)\le0.99995781$ on the same rows: the absolute value alone destroys
+the cancellation, and what survives is a sign-preserving bound that does not exist yet.
+\item \textbf{Named limits as load-bearing content.} Every statement is \emph{per instance on small
+windows} --- nothing uniform in the zone index, in $D$ or in the gap. The T136 $D$-exponents (anchor
+$D^{-0.565}$, margin gap $D^{+2.72}$, slack $D^{0.116}$) are fits and stay in the sandbox; the
+structure bound assembled from the support and amplitude facts does \emph{not} beat the margin (T137:
+$0$ of $35$ windows) and is \emph{not} promoted; entrywise positivity of the \emph{target} inverse at
+depth stays open. Stieltjes / Ostrowski 1937 / Fan 1958 / Berman--Plemmons 1979 / Varga 1962 /
+Frobenius 1912--Perron 1907 / Collatz 1942--Wielandt 1950 / Gershgorin 1931 / Neumann series /
+Haynsworth 1968 / Wilkinson 1968--Higham 2002 named classical; Demko--Moss--Smith 1984 cited as a
+model and \emph{not} applied (the comparison is dense); Weil 1952 cited, never used as a criterion;
+zero-firewall AST-checked; NOT ``almost RH''.
+\item \textbf{Diary Teile 136/137 (sandbox).} \texttt{m\_matrix\_pair\_probe.py} (contract
+\texttt{M.MATRIX.PAIR}, $30/30$, verdict \textsc{one-carries}): the $\rho(K)$ item closes with
+Varga's regular splitting and the Collatz--Wielandt bracket (sharp $1.00$--$1.03$ on $900/900$), the
+exact three-way bookkeeping $\lambda_{\min}(A)\sim D^{2.27}=\text{anchor }D^{-0.56}\times
+\text{gap }D^{2.72}\times\text{slack }D^{0.12}$ attributes the whole degradation to the margin
+(which is only $2.5\times10^{-6}$--$2.5\times10^{-2}$ wide while every cheap bound on $\rho(E)$
+sits at $1.82$--$3.11$), and M17 closes \emph{negatively} (the bad pencil subspace is delocalised,
+participation ratio $0.54$--$0.98$, its dimension tracking the atom count at
+$n_{\mathrm{bad}}/n_{\mathrm{at}}=1.64$ rather than the grid, so $\sigma_b(k)\ge0.646$ everywhere);
+promotion list $15\to22$ ready. \texttt{long\_lag\_probe.py} (contract \texttt{LONG.LAG}, $22/22$, verdict
+\textsc{both-resist}): $L_\Delta$ is fully comb-generated (the archimedean half has a positive
+off-diagonal on $0$ of $40$ windows), the structure bound does \emph{not} beat the margin ($0/35$,
+overshoot $24$--$7.1\times10^{5}$ gaps, second differences decaying only algebraically as
+$\mathrm{dist}^{-0.63}$ where Demko--Moss--Smith would need a geometric rate), the envelope family
+is certified dead from below ($\rho(|E|)\ge1.3218$ on $35/35$), and the Green bracket closes
+two-sidedly (lower recovers $0.011$--$0.406$ of the minimum entry, upper overshoots by
+$2.49$--$12.24$). Series counter: $137$ probes, $3438/3438$ sandbox checks.
+Sandbox only for the probes: no ledger row, no marker move, not RH evidence.
+\item \textbf{Ledger/papers/website.} Two new ledger rows:
+\texttt{PRIME.\allowbreak MMATRIX.\allowbreak IDENT.01} and
+\texttt{PRIME.\allowbreak LONGLAG.\allowbreak SUPP.01}; \texttt{\textbackslash veri} citations in \texttt{tfpt\_1},
+\texttt{tfpt\_3}, \texttt{tfpt\_research\_contracts} and the promotion place of
+\texttt{tfpt\_prime\_front} (verified layer now \emph{ten} modules; phase 2 extended to
+T126--T137); website mirrors (\texttt{/prime-front} feed entries T136/T137, status surfaces Teile
+11--137 / $3438$ checks, verification DAG, papers data) updated in the same change.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-28 (I) (\texttt{v542} --- the margin-chain identities of phase 2 promoted; \texttt{v379} hardened to an exact positive-mixture Gram certificate; prime-front diary T132/T133 + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v542} (\texttt{PRIME.MARGIN.IDENT.01}).} Promotion of the

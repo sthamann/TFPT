@@ -1013,6 +1013,83 @@ Yserentant 1986 / Perron--Frobenius--Ostrowski 1937 named classical; Weil 1952
 cited, never used as a criterion.
 \mE\ (per-instance identities; nothing uniform, no marker moves)
 
+\par\smallskip\noindent\textbf{The lumped $M$-matrix pair
+(\texttt{PRIME.MMATRIX.IDENT.01}).}
+The identity block of the discovery part T136 is load-bearing as a second narrow
+module (\veri{v543\_lumped\_pair\_identities.py}; $35$ checks, ${\sim}1$\,s;
+companion to \texttt{PRIME.MARGIN.IDENT.01}) on $20$ frame-A seam windows
+($n=4\ldots59$, $\rho=1.25\ldots4.00$, $h=25\ldots299$, every factorised matrix
+$\le300$) giving $39$ matrices with positive off-diagonals, $312$ shifted ladder
+rungs and $8$ whitened two-grid rungs.
+\emph{The pair and the congruence.} With $\Delta$ the positive off-diagonal part
+and $L_\Delta=\mathrm{diag}(\Delta\mathbf 1)-\Delta$, the lumped pair
+$A_B=A+L_\Delta$ is Stieltjes and row-sum preserving ($1.6\times10^{-15}$) with
+$A_B\succeq A$ --- an \emph{upper} bound on $\lambda_{\min}(A)$, never a floor;
+$A=A_B^{1/2}(I-W)A_B^{1/2}$ holds as a matrix identity ($4.4\times10^{-15}$) with
+$\lambda_{\max}(W)=\rho(L_\Delta A_B^{-1})$, and the equivalence
+$\lambda_{\max}(W)<1\iff A\succ0$ is checked in \emph{both} directions, so the
+Loewner sandwich is circular by itself.
+\emph{Anchor, ladder, Varga.} With $x=A_B^{-1}\mathbf 1\ge0$ and $A_B^{-1}\ge0$
+entrywise (Ostrowski 1937, checked), $\lambda_{\min}(A_B)\ge1/\max_r x_r$ on all
+$39$ rows (sharpest ratio $0.9070$) from one solve and one sign check; lumping
+commutes with diagonal shifts and $M$-matrix inverses are entrywise monotone
+(Berman--Plemmons 1979), so the shifted ladder is \emph{structurally} empty
+($0$ exceptions of $312$); and for the regular splitting $A_B=D_0-N_0$ Varga's
+$\rho(J)=\tau/(1+\tau)$ is an identity ($4.8\times10^{-15}$) whose
+Collatz--Wielandt bracket at the anchor vector gives an a-priori
+$\rho(J)\le0.9861<1$ with no eigenvalue anywhere.
+\emph{One negative result} \mX. The $k$-scanned M18 majorant is \emph{valid} at
+every $k$ ($39$ pairs, $0$ violations) and still stays above its preregistered
+bar $1/2$ (best $3.080$) while the measured bad mass is $\le0.0120$: the loss is
+the bound, the localisation term alone exceeds the bar, and the bar is not moved.
+\textbf{Named limits as content:} per instance on small windows, nothing uniform
+in the zone index, in $D$ or in the gap; the T136 $D$-exponents are fits and stay
+in the sandbox; the anchor and Varga rows are implications with hypotheses
+checked at the instance.
+Stieltjes / Ostrowski 1937 / Fan 1958 / Berman--Plemmons 1979 / Varga 1962 /
+Collatz 1942--Wielandt 1950 named classical; Weil 1952 cited, never used as a
+criterion.
+\mE\ (per-instance identities) $+$ \mX\ (one closed route; no marker moves)
+
+\par\smallskip\noindent\textbf{The long-lag support structure
+(\texttt{PRIME.LONGLAG.SUPP.01}).}
+The structure block of the discovery part T137 is load-bearing as the companion
+module (\veri{v544\_long\_lag\_support.py}; $24$ checks, ${\sim}0.2$\,s) on the
+same $20$ windows ($3$--$25$ prime-power atoms, $20555$ positive off-diagonal
+edges, $455$ loaded stripes, $39$ bracketed lumped comparisons).
+\emph{Support and amplitude.} The kernel splits exactly as
+$c=c_{\mathrm{arch}}-c_{\mathrm{comb}}$ with $c_{\mathrm{comb}}\ge0$, and the
+archimedean section alone has \emph{all} off-diagonals $\le0$ on $20/20$ windows,
+so every positive off-diagonal is comb-generated; all $20555$ positive edges have
+their Hankel index $M-1-r-t$ inside the atom-hat index set (per-window fraction
+exactly $1.000000$), so the support is a union of anti-diagonal stripes at
+prime-power atom positions, each stripe a perfect matching with \emph{exactly}
+orthogonal edge vectors; and
+$\Delta_{rt}\le c_{\mathrm{comb}}[M-1-r-t]$ on all $20555$ edges (sharpest ratio
+$0.99998532$), with the Toeplitz lag in place of the Hankel index failing on
+$20415$ of them.
+\emph{The Green bracket.} For the lumped comparison, $q_J=1-\min_r1/(d_rx_r)<1$
+is an identity ($8.2\times10^{-16}$) needing no measurement, and the Neumann
+partial sum brackets the Green function entrywise from below
+\emph{because the discarded terms are nonnegative}, the anchor-weighted tail from
+above, on $39$ rows.
+\emph{A death certificate} \mX. Gershgorin, every row-sum norm and every
+Collatz--Wielandt quotient at every \emph{positive} weight are upper bounds for
+$\rho(|E|)$, $E=B^{-1}L_\Delta$; one rigorous lower bound therefore decides them
+all at once: $\rho(|E|)\ge1.3141\ge1$ on $20/20$ rows, so no member of the
+absolute-value envelope family can \emph{ever} certify $\lambda_{\max}(W)<1$ ---
+while the \emph{signed} radius $\rho(E)=\lambda_{\max}(W)\le0.99995781$ on the
+same rows. The absolute value alone destroys the cancellation.
+\textbf{Named limits as content:} per instance on small windows, no decay law and
+no amplitude law; the support statement is one inclusion; the amplitude bound
+does \emph{not} bound $\lambda_{\max}(W)$, and the structure bound assembled from
+it does not beat the margin (T137: $0$ of $35$ windows) and is not promoted; the
+bracket is for the lumped comparison, not the target.
+Gershgorin 1931 / Neumann series / Haynsworth 1968 named classical;
+Demko--Moss--Smith 1984 cited as a model and \emph{not} applied (the comparison is
+dense); Weil 1952 cited, never used as a criterion.
+\mE\ (per-instance structure) $+$ \mX\ (one family closed; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

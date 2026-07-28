@@ -723,6 +723,65 @@ Perron--Frobenius--Ostrowski named classical.
 \mE\ (per-instance identities; no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The lumped $M$-matrix pair
+(\texttt{PRIME.MMATRIX.IDENT.01}).}
+The identity block of T136 as a second narrow module
+(\veri{v543\_lumped\_pair\_identities.py}; $35$ checks, ${\sim}1$\,s) on $20$
+small frame-A seam windows ($n=4\ldots59$, $\rho=1.25\ldots4.00$,
+$h=25\ldots299$, every factorised matrix $\le300$), $312$ shifted ladder rungs
+and $8$ whitened two-grid rungs, each statement with a preregistered tolerance
+and a mutation control. The lumped pair $A_B=A+L_\Delta$ is Stieltjes and
+row-sum preserving ($1.6\times10^{-15}$) with $A_B\succeq A$ --- an \emph{upper}
+bound on $\lambda_{\min}(A)$, never a floor; the congruence
+$A=A_B^{1/2}(I-W)A_B^{1/2}$ holds as a matrix identity ($4.4\times10^{-15}$) with
+$\lambda_{\max}(W)=\rho(L_\Delta A_B^{-1})$ and the \emph{declared} equivalence
+$\lambda_{\max}(W)<1\iff A\succ0$ checked in both directions, so the Loewner
+sandwich is circular by itself. The $M$-matrix anchor
+$\lambda_{\min}(A_B)\ge1/\max_r x_r$, $x=A_B^{-1}\mathbf 1\ge0$, holds on all
+$39$ rows (sharpest ratio $0.9070$) from one solve and one sign check; lumping
+commutes with diagonal shifts and $M$-matrix inverses are entrywise monotone, so
+the shifted ladder is structurally empty ($0$ of $312$); Varga's
+$\rho(J)=\tau/(1+\tau)$ is an identity ($4.8\times10^{-15}$) and the
+Collatz--Wielandt bracket at the anchor vector gives an a-priori
+$\rho(J)\le0.9861<1$ with no eigenvalue. One \emph{negative} result: the
+$k$-scanned M18 majorant is valid at every $k$ ($39$ pairs) and still stays above
+its bar $1/2$ (best $3.080$), the bar is not moved.
+\textbf{Named limits as content:} per instance on small windows, nothing uniform
+in the zone index or in $D$; the T136 $D$-exponents are fits and stay in the
+sandbox. Stieltjes / Ostrowski 1937 / Fan 1958 / Berman--Plemmons 1979 /
+Varga 1962 / Collatz--Wielandt named classical.
+\mE\ $+$ \mX\ (one closed route; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The long-lag support structure
+(\texttt{PRIME.LONGLAG.SUPP.01}).}
+The structure block of T137 as the companion module
+(\veri{v544\_long\_lag\_support.py}; $24$ checks, ${\sim}0.2$\,s) on the same $20$
+windows, $20555$ positive off-diagonal edges, $455$ loaded stripes, $39$
+bracketed lumped comparisons. The kernel splits exactly as
+$c=c_{\mathrm{arch}}-c_{\mathrm{comb}}$, $c_{\mathrm{comb}}\ge0$, and the
+archimedean section alone has \emph{all} off-diagonals $\le0$ on $20/20$ windows,
+so every positive off-diagonal is comb-generated; all $20555$ positive edges have
+their Hankel index inside the atom-hat index set (per-window fraction exactly
+$1.000000$), so the support is a union of anti-diagonal stripes at prime-power
+atoms, each a perfect matching with exactly orthogonal edge vectors; the
+amplitude certificate $\Delta_{rt}\le c_{\mathrm{comb}}[M-1-r-t]$ holds on every
+edge (sharpest $0.99998532$) while the Toeplitz lag fails on $20415$. The Green
+function of the lumped comparison is bracketed entrywise from below by the
+Neumann partial sum \emph{because the discarded terms are nonnegative} and from
+above by the anchor-weighted tail. And one \emph{death certificate}: since
+Gershgorin, all row-sum norms and all Collatz--Wielandt quotients at positive
+weights are upper bounds for $\rho(|E|)$, the single lower bound
+$\rho(|E|)\ge1.3141\ge1$ on $20/20$ rows kills the whole absolute-value envelope
+family --- while the \emph{signed} $\rho(E)=\lambda_{\max}(W)\le0.99995781$.
+\textbf{Named limits as content:} per instance on small windows, no decay law and
+no amplitude law; the support statement is one inclusion; the structure bound
+assembled from it does not beat the margin ($0$ of $35$ windows in T137) and is
+not promoted. Gershgorin 1931 / Neumann series named classical;
+Demko--Moss--Smith 1984 cited and \emph{not} applied (the comparison is dense).
+\mE\ $+$ \mX\ (one family closed; no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

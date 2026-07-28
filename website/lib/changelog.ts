@@ -43,6 +43,2130 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-28",
+    "dateLabel": "2026-07-28 · II",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v543"
+      },
+      {
+        "k": "t",
+        "v": " + "
+      },
+      {
+        "k": "c",
+        "v": "v544"
+      },
+      {
+        "k": "t",
+        "v": " — the lumped "
+      },
+      {
+        "k": "m",
+        "v": "M"
+      },
+      {
+        "k": "t",
+        "v": "-matrix pair and the long-lag support structure promoted; prime-front diary T136/T137 + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v543"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.MMATRIX.IDENT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the identity/theorem block of the discovery part T136 ("
+        },
+        {
+          "k": "m",
+          "v": "35"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}1"
+        },
+        {
+          "k": "t",
+          "v": " s), recomputed on small frame-A windows — nothing cited from the sandbox. Scope fence: matrix identities, per-instance theorems with "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "checked"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " hypotheses, and one "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "negative"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " per-instance result; no fit, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no uniform-in-zone claim, no floor value. Battery: "
+        },
+        {
+          "k": "m",
+          "v": "20"
+        },
+        {
+          "k": "t",
+          "v": " seam windows ("
+        },
+        {
+          "k": "m",
+          "v": "n=4\\ldots59"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\rho=1.25\\ldots4.00"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h=25\\ldots299"
+        },
+        {
+          "k": "t",
+          "v": "; every factorised or diagonalised matrix "
+        },
+        {
+          "k": "m",
+          "v": "\\le300"
+        },
+        {
+          "k": "t",
+          "v": ") giving "
+        },
+        {
+          "k": "m",
+          "v": "40"
+        },
+        {
+          "k": "t",
+          "v": " symmetric matrices (pole-free odd sections "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " border Schur blocks), "
+        },
+        {
+          "k": "m",
+          "v": "39"
+        },
+        {
+          "k": "t",
+          "v": " with positive off-diagonals, plus "
+        },
+        {
+          "k": "m",
+          "v": "312"
+        },
+        {
+          "k": "t",
+          "v": " shifted ladder rungs and "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " whitened two-grid rungs."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1)–(2) The lumped pair and the congruence "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " With "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta"
+        },
+        {
+          "k": "t",
+          "v": " the positive off-diagonal part and "
+        },
+        {
+          "k": "m",
+          "v": "L_\\Delta=\\mathrm{diag}(\\Delta\\mathbf 1)-\\Delta"
+        },
+        {
+          "k": "t",
+          "v": ", the pair "
+        },
+        {
+          "k": "m",
+          "v": "A_B=A+L_\\Delta"
+        },
+        {
+          "k": "t",
+          "v": " is Stieltjes (off-diagonals exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\le0"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "L_\\Delta"
+        },
+        {
+          "k": "t",
+          "v": " is a graph Laplacian hence PSD with zero row sums, so "
+        },
+        {
+          "k": "m",
+          "v": "A_B\\mathbf 1=A\\mathbf 1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.6\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "A_B\\succeq A"
+        },
+        {
+          "k": "t",
+          "v": " — an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "upper"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " bound on "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(A)"
+        },
+        {
+          "k": "t",
+          "v": " and a floor "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "never"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (control: lumping the negative off-diagonals destroys Stieltjes, "
+        },
+        {
+          "k": "m",
+          "v": "2.0\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": "). The congruence "
+        },
+        {
+          "k": "m",
+          "v": "A=A_B^{1/2}(I-W)A_B^{1/2}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "W=A_B^{-1/2}L_\\Delta A_B^{-1/2}\\succeq0"
+        },
+        {
+          "k": "t",
+          "v": ", holds as a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "matrix"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " identity ("
+        },
+        {
+          "k": "m",
+          "v": "4.4\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": ") with "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\max}(W)=\\rho(L_\\Delta A_B^{-1})"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "4.4\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "), and the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "declared circularity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\max}(W)<1\\iff A\\succ0"
+        },
+        {
+          "k": "t",
+          "v": " is checked in "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "both"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " directions ("
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " exceptions forward; "
+        },
+        {
+          "k": "m",
+          "v": "39/39"
+        },
+        {
+          "k": "t",
+          "v": " shifted controls in the indefinite range give "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\max}(W)\\ge1"
+        },
+        {
+          "k": "t",
+          "v": ") — the Loewner sandwich is vacuous by itself, and that is the content."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3)–(4) The anchor and the empty shift ladder "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " With "
+        },
+        {
+          "k": "m",
+          "v": "x=A_B^{-1}\\mathbf 1\\ge0"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "A_B^{-1}\\ge0"
+        },
+        {
+          "k": "t",
+          "v": " entrywise (Ostrowski 1937, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "checked"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(A_B)\\ge1/\\max_r x_r"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "39"
+        },
+        {
+          "k": "t",
+          "v": " rows (min slack "
+        },
+        {
+          "k": "m",
+          "v": "3.0\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ", sharpest ratio "
+        },
+        {
+          "k": "m",
+          "v": "0.9070"
+        },
+        {
+          "k": "t",
+          "v": ") — one solve, one sign check, no eigenvalue (control: a positive off-diagonal makes it false, "
+        },
+        {
+          "k": "m",
+          "v": "1.9000>0.1000"
+        },
+        {
+          "k": "t",
+          "v": "). Lumping commutes with diagonal shifts, "
+        },
+        {
+          "k": "m",
+          "v": "(A-sI)_B=A_B-sI"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "2.5\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "312"
+        },
+        {
+          "k": "t",
+          "v": " rungs), and "
+        },
+        {
+          "k": "m",
+          "v": "(A_B-sI)^{-1}\\ge A_B^{-1}\\ge0"
+        },
+        {
+          "k": "t",
+          "v": " entrywise (Berman–Plemmons 1979, violation "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": "), so "
+        },
+        {
+          "k": "m",
+          "v": "\\max_r x_r(s)"
+        },
+        {
+          "k": "t",
+          "v": " and the a-priori margin "
+        },
+        {
+          "k": "m",
+          "v": "\\|L_\\Delta\\|_\\infty\\max_r x_r(s)"
+        },
+        {
+          "k": "t",
+          "v": " are non-decreasing along the whole ladder: the shifted ladder is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "structurally empty"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — a theorem, not a measurement."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5)–(6) Varga's identity and the a-priori Jacobi radius "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " For the regular splitting "
+        },
+        {
+          "k": "m",
+          "v": "A_B=D_0-N_0"
+        },
+        {
+          "k": "t",
+          "v": " (all three hypotheses checked on "
+        },
+        {
+          "k": "m",
+          "v": "39/39"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(J)=\\tau/(1+\\tau)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\tau=\\rho(A_B^{-1}N_0)"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "4.8\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\rho(J)=0.7347"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.9860"
+        },
+        {
+          "k": "t",
+          "v": "); the Collatz–Wielandt bracket at the anchor vector gives "
+        },
+        {
+          "k": "m",
+          "v": "\\min_r(Tx)_r/x_r\\le\\tau\\le\\max_r(Tx)_r/x_r"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " exceptions) and hence an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "a-priori"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(J)\\le0.9861<1"
+        },
+        {
+          "k": "t",
+          "v": " with no eigenvalue anywhere, sharp on the measured gap by "
+        },
+        {
+          "k": "m",
+          "v": "1.0062"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.0531"
+        },
+        {
+          "k": "t",
+          "v": ". Controls: a non-regular splitting breaks the identity ("
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": "); at a sign-changing test vector the quotient bound is false on "
+        },
+        {
+          "k": "m",
+          "v": "39/39"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(7) The "
+            },
+            {
+              "k": "m",
+              "v": "k"
+            },
+            {
+              "k": "t",
+              "v": "-scanned M18 majorant — a negative result "
+            },
+            {
+              "k": "s",
+              "v": "X"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The whitened mass identity "
+        },
+        {
+          "k": "m",
+          "v": "\\|L^{-1}\\hat s\\|^2=\\hat s^{\\mathsf T}U^{-1}\\hat s"
+        },
+        {
+          "k": "t",
+          "v": " holds at "
+        },
+        {
+          "k": "m",
+          "v": "7.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " and the triangle chain is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "valid"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " majorant at every "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": " separately ("
+        },
+        {
+          "k": "m",
+          "v": "39"
+        },
+        {
+          "k": "t",
+          "v": " (rung, "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": ") pairs over "
+        },
+        {
+          "k": "m",
+          "v": "k=2\\ldots64"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " violations), so the minimum over the ladder is legitimate — and it does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " reach the preregistered T134 bar "
+        },
+        {
+          "k": "m",
+          "v": "1/2"
+        },
+        {
+          "k": "t",
+          "v": " on any rung (best "
+        },
+        {
+          "k": "m",
+          "v": "3.080"
+        },
+        {
+          "k": "t",
+          "v": "; best over the three values T134 tried, also "
+        },
+        {
+          "k": "m",
+          "v": "3.080"
+        },
+        {
+          "k": "t",
+          "v": ") while the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measured"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " bad mass is "
+        },
+        {
+          "k": "m",
+          "v": "\\le0.0120"
+        },
+        {
+          "k": "t",
+          "v": ". The localisation term alone already exceeds the bar ("
+        },
+        {
+          "k": "m",
+          "v": "0.542"
+        },
+        {
+          "k": "t",
+          "v": "): the loss is the bound, and what is missing is a localisation statement. The bar is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " moved and nothing is upgraded."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v544"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.LONGLAG.SUPP.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the structure block of the discovery part T137 ("
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.2"
+        },
+        {
+          "k": "t",
+          "v": " s) on the same "
+        },
+        {
+          "k": "m",
+          "v": "20"
+        },
+        {
+          "k": "t",
+          "v": " windows ("
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "25"
+        },
+        {
+          "k": "t",
+          "v": " prime-power atoms, "
+        },
+        {
+          "k": "m",
+          "v": "20555"
+        },
+        {
+          "k": "t",
+          "v": " positive off-diagonal edges, "
+        },
+        {
+          "k": "m",
+          "v": "455"
+        },
+        {
+          "k": "t",
+          "v": " loaded stripes, "
+        },
+        {
+          "k": "m",
+          "v": "39"
+        },
+        {
+          "k": "t",
+          "v": " bracketed lumped comparisons)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1)–(4) The support is a comb stripe set, and its amplitude is certified "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The kernel splits exactly as "
+        },
+        {
+          "k": "m",
+          "v": "c=c_{\\mathrm{arch}}-c_{\\mathrm{comb}}"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "c_{\\mathrm{comb}}\\ge0"
+        },
+        {
+          "k": "t",
+          "v": ", and the archimedean section alone has "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "all"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " off-diagonals "
+        },
+        {
+          "k": "m",
+          "v": "\\le0"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "20/20"
+        },
+        {
+          "k": "t",
+          "v": " windows: every positive off-diagonal of "
+        },
+        {
+          "k": "m",
+          "v": "A"
+        },
+        {
+          "k": "t",
+          "v": " is comb-generated (control: the full section carries "
+        },
+        {
+          "k": "m",
+          "v": "+2.0\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": "). Every one of the "
+        },
+        {
+          "k": "m",
+          "v": "20555"
+        },
+        {
+          "k": "t",
+          "v": " positive edges has its Hankel index "
+        },
+        {
+          "k": "m",
+          "v": "M-1-r-t"
+        },
+        {
+          "k": "t",
+          "v": " inside the atom-hat index set — per-window fraction exactly "
+        },
+        {
+          "k": "m",
+          "v": "1.000000"
+        },
+        {
+          "k": "t",
+          "v": " — so "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{supp}(\\Delta)"
+        },
+        {
+          "k": "t",
+          "v": " is a union of anti-diagonal stripes at prime-power atom positions (the converse is reported, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " claimed). Each stripe is a perfect matching ("
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " endpoint collisions), so its edge vectors "
+        },
+        {
+          "k": "m",
+          "v": "b_e=e_r-e_t"
+        },
+        {
+          "k": "t",
+          "v": " are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " orthogonal and "
+        },
+        {
+          "k": "m",
+          "v": "L_\\Delta"
+        },
+        {
+          "k": "t",
+          "v": " restricted to a stripe is a direct sum of "
+        },
+        {
+          "k": "m",
+          "v": "2\\times2"
+        },
+        {
+          "k": "t",
+          "v": " blocks (control: edges across two stripes overlap). And "
+        },
+        {
+          "k": "m",
+          "v": "A_{rs}=A^{\\mathrm{arch}}_{rs}-c_{\\mathrm{comb}}[|r-s|]\n+c_{\\mathrm{comb}}[\\mathrm{anti}]"
+        },
+        {
+          "k": "t",
+          "v": " gives the amplitude certificate "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta_{rt}\\le c_{\\mathrm{comb}}[M-1-r-t]"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "20555"
+        },
+        {
+          "k": "t",
+          "v": " edges (excess "
+        },
+        {
+          "k": "m",
+          "v": "-1.9\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": ", sharpest ratio "
+        },
+        {
+          "k": "m",
+          "v": "0.99998532"
+        },
+        {
+          "k": "t",
+          "v": ") — no eigenvalue, no norm; control: the Toeplitz lag in place of the Hankel index breaks it on "
+        },
+        {
+          "k": "m",
+          "v": "20415/20555"
+        },
+        {
+          "k": "t",
+          "v": ". Honestly undecided and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " promoted: at "
+        },
+        {
+          "k": "m",
+          "v": "h\\le300"
+        },
+        {
+          "k": "t",
+          "v": " the hats never overlap, so the tighter one-atom refinement coincides with the certificate here."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5) The Green function, bracketed two-sidedly "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " For the lumped comparison "
+        },
+        {
+          "k": "m",
+          "v": "B=D_0-N_0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "J=D_0^{-1}N_0\\ge0"
+        },
+        {
+          "k": "t",
+          "v": ", the anchor identity "
+        },
+        {
+          "k": "m",
+          "v": "q_J=\\max_r(Jx)_r/x_r=1-\\min_r 1/(d_rx_r)<1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "8.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") needs no measurement; then the Neumann partial sum to "
+        },
+        {
+          "k": "m",
+          "v": "K=8"
+        },
+        {
+          "k": "t",
+          "v": " is an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "entrywise"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " lower bound for "
+        },
+        {
+          "k": "m",
+          "v": "B^{-1}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "-2.1\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "because the discarded terms are nonnegative"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and partial sum "
+        },
+        {
+          "k": "m",
+          "v": "+\\,(x_r/x_s)q_J^{K+1}/((1-q_J)d_s)"
+        },
+        {
+          "k": "t",
+          "v": " is an entrywise upper bound ("
+        },
+        {
+          "k": "m",
+          "v": "-1.4\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": "), on "
+        },
+        {
+          "k": "m",
+          "v": "39"
+        },
+        {
+          "k": "t",
+          "v": " rows ("
+        },
+        {
+          "k": "m",
+          "v": "20"
+        },
+        {
+          "k": "t",
+          "v": " pole-free sections "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "19"
+        },
+        {
+          "k": "t",
+          "v": " border Schur blocks). Control: dropping the tail makes the upper bound false. This delivers item (2) of the T136 rest list."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(6) The absolute-value envelope family is certified dead "
+            },
+            {
+              "k": "s",
+              "v": "X"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " With "
+        },
+        {
+          "k": "m",
+          "v": "E=B^{-1}L_\\Delta"
+        },
+        {
+          "k": "t",
+          "v": ", Gershgorin, every row-sum norm and every Collatz–Wielandt quotient at every "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "positive"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " weight are all "
+        },
+        {
+          "k": "m",
+          "v": "\\ge\\rho(|E|)"
+        },
+        {
+          "k": "t",
+          "v": ", so one rigorous "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "lower"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " bound decides the whole family at once: a Collatz–Wielandt quotient from below at a power-iterated weight gives "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(|E|)\\ge1.3141\\ge1"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "20/20"
+        },
+        {
+          "k": "t",
+          "v": " rows (the cheapest four members all "
+        },
+        {
+          "k": "m",
+          "v": "\\ge1.5937"
+        },
+        {
+          "k": "t",
+          "v": "). No member of the family can ever certify "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\max}(W)<1"
+        },
+        {
+          "k": "t",
+          "v": " — a certificate of "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "death"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not a measurement. The "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "signed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " radius "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(E)=\\lambda_{\\max}(W)\\le0.99995781"
+        },
+        {
+          "k": "t",
+          "v": " on the same rows: the absolute value alone destroys the cancellation, and what survives is a sign-preserving bound that does not exist yet."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Named limits as load-bearing content."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Every statement is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "per instance on small windows"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — nothing uniform in the zone index, in "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": " or in the gap. The T136 "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponents (anchor "
+        },
+        {
+          "k": "m",
+          "v": "D^{-0.565}"
+        },
+        {
+          "k": "t",
+          "v": ", margin gap "
+        },
+        {
+          "k": "m",
+          "v": "D^{+2.72}"
+        },
+        {
+          "k": "t",
+          "v": ", slack "
+        },
+        {
+          "k": "m",
+          "v": "D^{0.116}"
+        },
+        {
+          "k": "t",
+          "v": ") are fits and stay in the sandbox; the structure bound assembled from the support and amplitude facts does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " beat the margin (T137: "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "35"
+        },
+        {
+          "k": "t",
+          "v": " windows) and is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " promoted; entrywise positivity of the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "target"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " inverse at depth stays open. Stieltjes / Ostrowski 1937 / Fan 1958 / Berman–Plemmons 1979 / Varga 1962 / Frobenius 1912–Perron 1907 / Collatz 1942–Wielandt 1950 / Gershgorin 1931 / Neumann series / Haynsworth 1968 / Wilkinson 1968–Higham 2002 named classical; Demko–Moss–Smith 1984 cited as a model and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " applied (the comparison is dense); Weil 1952 cited, never used as a criterion; zero-firewall AST-checked; NOT “almost RH”."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Diary Teile 136/137 (sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "m_matrix_pair_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " (contract "
+        },
+        {
+          "k": "c",
+          "v": "M.MATRIX.PAIR"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "30/30"
+        },
+        {
+          "k": "t",
+          "v": ", verdict "
+        },
+        {
+          "k": "t",
+          "v": "one-carries"
+        },
+        {
+          "k": "t",
+          "v": "): the "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(K)"
+        },
+        {
+          "k": "t",
+          "v": " item closes with Varga's regular splitting and the Collatz–Wielandt bracket (sharp "
+        },
+        {
+          "k": "m",
+          "v": "1.00"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.03"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "900/900"
+        },
+        {
+          "k": "t",
+          "v": "), the exact three-way bookkeeping "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(A)\\sim D^{2.27}=\\text{anchor }D^{-0.56}\\times\n\\text{gap }D^{2.72}\\times\\text{slack }D^{0.12}"
+        },
+        {
+          "k": "t",
+          "v": " attributes the whole degradation to the margin (which is only "
+        },
+        {
+          "k": "m",
+          "v": "2.5\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.5\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " wide while every cheap bound on "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(E)"
+        },
+        {
+          "k": "t",
+          "v": " sits at "
+        },
+        {
+          "k": "m",
+          "v": "1.82"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.11"
+        },
+        {
+          "k": "t",
+          "v": "), and M17 closes "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "negatively"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the bad pencil subspace is delocalised, participation ratio "
+        },
+        {
+          "k": "m",
+          "v": "0.54"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.98"
+        },
+        {
+          "k": "t",
+          "v": ", its dimension tracking the atom count at "
+        },
+        {
+          "k": "m",
+          "v": "n_{\\mathrm{bad}}/n_{\\mathrm{at}}=1.64"
+        },
+        {
+          "k": "t",
+          "v": " rather than the grid, so "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_b(k)\\ge0.646"
+        },
+        {
+          "k": "t",
+          "v": " everywhere); promotion list "
+        },
+        {
+          "k": "m",
+          "v": "15\\to22"
+        },
+        {
+          "k": "t",
+          "v": " ready. "
+        },
+        {
+          "k": "c",
+          "v": "long_lag_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " (contract "
+        },
+        {
+          "k": "c",
+          "v": "LONG.LAG"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "22/22"
+        },
+        {
+          "k": "t",
+          "v": ", verdict "
+        },
+        {
+          "k": "t",
+          "v": "both-resist"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "m",
+          "v": "L_\\Delta"
+        },
+        {
+          "k": "t",
+          "v": " is fully comb-generated (the archimedean half has a positive off-diagonal on "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "40"
+        },
+        {
+          "k": "t",
+          "v": " windows), the structure bound does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " beat the margin ("
+        },
+        {
+          "k": "m",
+          "v": "0/35"
+        },
+        {
+          "k": "t",
+          "v": ", overshoot "
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "7.1\\times10^{5}"
+        },
+        {
+          "k": "t",
+          "v": " gaps, second differences decaying only algebraically as "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{dist}^{-0.63}"
+        },
+        {
+          "k": "t",
+          "v": " where Demko–Moss–Smith would need a geometric rate), the envelope family is certified dead from below ("
+        },
+        {
+          "k": "m",
+          "v": "\\rho(|E|)\\ge1.3218"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "35/35"
+        },
+        {
+          "k": "t",
+          "v": "), and the Green bracket closes two-sidedly (lower recovers "
+        },
+        {
+          "k": "m",
+          "v": "0.011"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.406"
+        },
+        {
+          "k": "t",
+          "v": " of the minimum entry, upper overshoots by "
+        },
+        {
+          "k": "m",
+          "v": "2.49"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "12.24"
+        },
+        {
+          "k": "t",
+          "v": "). Series counter: "
+        },
+        {
+          "k": "m",
+          "v": "137"
+        },
+        {
+          "k": "t",
+          "v": " probes, "
+        },
+        {
+          "k": "m",
+          "v": "3438/3438"
+        },
+        {
+          "k": "t",
+          "v": " sandbox checks. Sandbox only for the probes: no ledger row, no marker move, not RH evidence."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger/papers/website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Two new ledger rows: "
+        },
+        {
+          "k": "c",
+          "v": "PRIME. MMATRIX. IDENT.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME. LONGLAG. SUPP.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": " citations in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " and the promotion place of "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " (verified layer now "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "ten"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " modules; phase 2 extended to T126–T137); website mirrors ("
+        },
+        {
+          "k": "c",
+          "v": "/prime-front"
+        },
+        {
+          "k": "t",
+          "v": " feed entries T136/T137, status surfaces Teile 11–137 / "
+        },
+        {
+          "k": "m",
+          "v": "3438"
+        },
+        {
+          "k": "t",
+          "v": " checks, verification DAG, papers data) updated in the same change."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-28",
     "dateLabel": "2026-07-28 · I",
     "heading": [
       {
