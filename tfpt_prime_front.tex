@@ -85,7 +85,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$122$ preregistered probes with $3057$ machine checks, which localized the residual object. That
+$123$ preregistered probes with $3077$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -804,9 +804,9 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T122)}\label{sec:certification}
+\section{The certification arc (T102--T123)}\label{sec:certification}
 % =====================================================================
-The last twenty-one parts stopped improving measurements and started converting them into certificates ---
+The last twenty-two parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
 
 \subsection{The mechanism: a crossing, not a singularity (T102)}
@@ -2361,14 +2361,145 @@ is only $0.009$--$0.551$ of it.
 \emph{Honest movement:} link (5) is not repaired but \emph{retired} --- it was a false
 comparison between an isometric compression and one of its two halves --- and the per-dip
 Nikolskii budget went with it; what is left of the old (E3)/(E4) is a single scalar estimate
-about dips versus high-band mass, plus the CBS item.
+about dips versus high-band mass, plus the CBS item.\\[3pt]
+\emph{Disposition after T123:} the two scalar items were run against the same band machinery
+and they \emph{split}. (F3) closes almost for free --- the reduction to the band profile of
+$Wy$ costs under $1\%$, and the oscillation block gains uniform certified positivity,
+(5R$^*$) --- while (F4) resists structurally: every certified route to $\kappa_y$ needs the
+\emph{coarse} form from below, whose near-null direction is smooth and lives on a cancellation
+that no pointwise symbol minorant can see. The remaining $\alpha^{+0.500}$ gap to the ceiling
+is thereby identified with the $\varepsilon_f$ lid itself --- the recursion base case. The
+next subsection reports the measurements.
 \end{keybox}
 
-\noindent T123 (\texttt{structural\_cbs\_probe.py}, contract \texttt{STRUCTURAL.CBS} --- a
-structural bound for the coupling $\kappa_y$ by the same band machinery (the coupling needs
-low-band mass, and $Wy$ has essentially none there), the band margin, the certified balance
-against the ceiling, the $\varepsilon_f$ question, and a theorem candidate V7) was running at
-the time of writing and is \emph{not} reported here.
+\subsection{The two-isometry completion: the margin closes, the coupling resists (T123)}
+T123 (\texttt{structural\_cbs\_probe.py}, contract \texttt{STRUCTURAL.CBS}, $20/20$,
+\textsc{cbs-resists}) attacks the two scalar estimates the V6 list left --- the structural
+CBS step (F4) and the band margin (F3) --- with the same band machinery that made the
+Rayleigh step sharp in T122. The margin closes almost for free; the coupling does not, and
+the reason \emph{why} is the content of the part.
+
+\emph{The coupling anatomy, in closed form.} The coarse block is the \emph{other} half of the
+T122 construction: with $V=BP$ ($P$ the piecewise-constant prolongation), $V$ is an isometry
+too --- $V^{\mathsf T}V=I$ and $V^{\mathsf T}W=0$ exact --- so the coarse, oscillation and
+coupling blocks are three compressions of \emph{one} window Toeplitz form,
+\[
+A_c=V^{\mathsf T}\mathrm{Toeplitz}_M(c)\,V,\qquad
+B_x=V^{\mathsf T}\mathrm{Toeplitz}_M(c)\,W,\qquad
+A_z=W^{\mathsf T}\mathrm{Toeplitz}_M(c)\,W
+\]
+(identities to $3.4\times10^{-15}$ on all $24$ rows). Two new closed forms complete the T122
+anatomy: the coupling is half a \emph{first} difference of the lag sequence,
+$(B_x)_{jk}=\beta_{j-k}-(c_{K-2(j+k)}-c_{K-2(j+k)-2})/2$ with
+$\beta_m=(c_{|2m+1|}-c_{|2m-1|})/2$, verified to $1.8\times10^{-15}$ ($A_z$ was half a
+\emph{second} difference), and in symbol form
+\[
+b(\varphi)\;=\;-\tfrac{i}{2}\,\sin(\varphi/2)\,
+\bigl[\sigma(\varphi/2)-\sigma(\varphi/2+\pi)\bigr]
+\]
+--- the \emph{aliasing difference} of the window symbol times $\sin(\varphi/2)$, verified to
+$5.7\times10^{-16}$: the coupling weight vanishes exactly where the coarse space lives. That
+explains $\kappa_y$ quantitatively for the first time: $Wy$ carries $99.64$--$100.00\%$ of
+its mass at $d=|\theta-\pi|<\pi/2$ and only $8.9\times10^{-6}$--$1.5\times10^{-3}$ in the
+cell containing $\theta=0$, while the worst-case $y^*$ that attains $\gamma^2$ is a
+\emph{middle}-band vector ($81.22$--$100.00\%$ of its mass exactly there) --- the factor
+$2$--$109$ between $\kappa_y=0.0067$--$0.4622$ and $\gamma^2=0.7248$--$0.9467$ \emph{is}
+that mismatch.
+
+\emph{The certified $\kappa$ bound: both routes fail for one reason in two guises.} Route 1,
+band-split Cauchy--Schwarz (per frequency band separately, the strengthened-CBS mechanism of
+Axelsson--Vassilevski, including the exact two-grid factorisation that puts the
+$\sin(\varphi/2)$ zero into the certificate), is correct on $24/24$ rows and non-vacuous on
+$0/24$: it costs exactly one coarse condition number
+($\mathrm{cond}(A_c)=2.1\times10^{4}$--$3.1\times10^{7}$). Route 2 substitutes the certified
+minorant $T_M(\ell)\preceq T_M(\sigma^{(M)})$ into the Schur complement's minimum
+characterisation and delivers two new links:
+\[
+\text{(5R$^*$)}\quad y^{\mathsf T}A_zy\;\ge\;y^{\mathsf T}E_zy,
+\qquad
+\text{(7R$^*$)}\quad y^{\mathsf T}Sy\;\ge\;y^{\mathsf T}E_zy-(E_xy)^{\mathsf T}E_c^{-1}(E_xy),
+\]
+with $E_c=V^{\mathsf T}T_M(\ell)V$, $E_x=V^{\mathsf T}T_M(\ell)W$,
+$E_z=W^{\mathsf T}T_M(\ell)W$. (5R$^*$) holds with
+$\lambda_{\min}(E_z)=+0.303\ldots+5.017>0$ on \emph{every} row of the ladder --- uniform
+certified positivity of the oscillation block, at slack $1.0007$--$1.007$, subsuming the
+whole T122 threshold sweep for free (since $\min(\ell,\mathrm{thr})\le\ell$ for every
+threshold) --- while (7R$^*$) is certified as soon as $E_c\succ0$, which holds on $0/24$
+rows ($\lambda_{\min}(E_c)=-3.44\ldots-0.043<0$ everywhere). The asymmetry is the result of
+the part: $\lambda_{\min}(A_z)=0.32$--$5.08$ is well conditioned, while
+$\lambda_{\min}(A_c)=1.7\times10^{-5}$--$2.9\times10^{-4}$ sits three to five orders below
+the certified envelope margin ($8.4\times10^{2}$--$4.0\times10^{5}\times\lambda_{\min}(A_c)$,
+rising like $\alpha^{+4.202}$; against $\lambda_{\min}(A_z)$ the same margin is only
+$0.037$--$17$). The near-null direction of the window form is \emph{smooth}, so it lives in
+the coarse space, and its eigenvalue comes from a cancellation \emph{inside} the form that no
+pointwise symbol minorant can see. The classical worst-case step $\kappa_y\le\gamma^2$
+(Yserentant) therefore \emph{stays} in the chain --- and V7 now states why it must.
+
+\emph{The band margin closes; the certified balance; the $\varepsilon_f$ lid.} (F3) reduces
+by the same machinery: $y^{\mathsf T}Gy$ splits \emph{exactly} over dyadic depth layers of
+the certified gap (closure $1.1\times10^{-15}$), and the two-factor bound [certified symbol
+depth] $\times$ [Parseval mass of $Wy$ per band] overshoots by only $1.20$--$3.51$ --- the
+reduction to the band profile of $Wy$, the same object the coupling analysis needs, costs
+under $1\%$. The certified margin is positive on $5/24$ rows ($+0.0024$--$+0.3290$ against
+the exact margin $0.070$--$0.560\sim\alpha^{-0.449}$); the honest lever limit:
+$\min\ell=-2187\ldots-9.7$ at $M\le2944$ --- the deep dips of the frame's own resolution
+stay out of reach. The certified balance --- the core number: the best fully certified
+supply is
+\[
+S_6/\varepsilon_c\;\sim\;D^{-0.069\pm0.099}\,\alpha^{-0.544\pm0.113}
+\]
+(fits; $\alpha=0.98$--$6.31$, uniform in $D$ and stable across the three resolutions)
+against the ceiling $S_4/\varepsilon_c\sim\alpha^{-0.044\pm0.076}$, so the gap is
+$\alpha^{+0.500}$ --- and the residual split against $S_6$ has exactly \emph{two} terms,
+closing to $2.8\times10^{-17}$: band profile $\alpha^{+0.000}$ (F3, now negligible) plus
+coupling $\alpha^{+0.499}$ (F4, all of it). The $\varepsilon_f$ question then identifies the
+lid: $\varepsilon_c=\varepsilon_f+y^{\mathsf T}Sy$ is an identity
+($\varepsilon_f/\varepsilon_c=0.177$--$0.546\sim\alpha^{+0.030}$, flat), and an additive
+chain that carries $\varepsilon_f$ instead of discarding it would have ceiling exactly $1$
+--- but $\varepsilon_f$ needs its bound one level down, $4$--$8$ recursion levels to an exact
+base case, and that base case is precisely (F4). The lid is not a modelling step; it is the
+\emph{same object} as coarse-level positivity.
+
+\begin{keybox}[The theorem after T123 --- four defects, restructured]
+\emph{Candidate (V7).} The chain rewritten with the two-isometry completion: the Haynsworth
+identity; the exact CBS split $y^{\mathsf T}Sy=(1-\kappa_y)\,y^{\mathsf T}A_zy$ with
+$\kappa_y\le\gamma^2$ classical (Yserentant; Axelsson--Vassilevski) --- the \emph{only}
+worst-case step left in the chain, and V7 states why it stays: every certified route to
+$\kappa_y$ needs coarse-level positivity from below; the two-grid identities
+$A_c=V^{\mathsf T}TV$, $B_x=V^{\mathsf T}TW$, $A_z=W^{\mathsf T}TW$ with $V=BP$, $W=BZ$ two
+orthogonal isometries ($V^{\mathsf T}W=0$); the certified cell envelope; the uniform
+oscillation positivity (5R$^*$); the certified band-margin bound; and the quoted demand
+fit.\\[3pt]
+\emph{The defect list --- four items (T120 $=$ T121 $=$ V6 $=$ V7 $=4$), restructured:}
+\begin{enumerate}[leftmargin=1.6em]
+\item[\textbf{(F1)}] \emph{one sign of the corner increments} --- unchanged, quoted from
+T120/T121; together with (F2) it is the \emph{Harnack pair}, untouched by the band
+machinery;
+\item[\textbf{(F2)}] \emph{a uniform bound on the pairing ratio $\delta$} --- unchanged:
+$0.0126$--$0.1331$ over $360$ rows, any finite value suffices;
+\item[\textbf{(F3)}] \emph{one band-profile lemma} --- the band margin reduces to the band
+profile of $Wy$ at a cost of $0.7\%$, and (5R$^*$) supplies the uniform certified positivity
+of the oscillation block for free; what remains is one analytic statement about how the mass
+of $Wy$ distributes over frequency bands;
+\item[\textbf{(F4)}] \emph{coarse-level positivity} --- \emph{identified}, not estimated:
+every certified route to the coupling needs $\lambda_{\min}$ of the coarse form from below,
+that eigenvalue is a smooth-direction cancellation invisible to symbol minorants, and it is
+the same object as the $\varepsilon_f$ lid that defines the chain's own ceiling.
+\end{enumerate}
+\emph{Honest movement:} the counter stays at four, but the terrain changed: the whole
+$\alpha^{+0.500}$ gap to the ceiling now sits in one named obstruction whose resolution
+cannot be a sharper two-level estimate. The next step is not sharper banding but the
+\emph{recursion} --- the level telescope
+$\varepsilon_\ell=\varepsilon_{\ell+1}+y_\ell^{\mathsf T}S_\ell y_\ell$ with certified
+per-level contributions.
+\end{keybox}
+
+\noindent T124 (\texttt{multilevel\_telescope\_probe.py}, contract
+\texttt{MULTILEVEL.TELESCOPE} --- the level telescope
+$\varepsilon_\ell=\varepsilon_{\ell+1}+y_\ell^{\mathsf T}S_\ell y_\ell$, certified per-level
+contributions without coarse inverses (a Levinson-bookkeeping candidate), the
+self-similarity question, and a theorem candidate V8) was running at the time of writing and
+is \emph{not} reported here.
 
 % =====================================================================
 \section{The kill list}\label{sec:kills}
@@ -2516,7 +2647,14 @@ two-grid isometry identity $A_z=W^{\mathsf T}\mathrm{Toeplitz}_M(c)W$ with $W^{\
 exact; the certified band bound (5R) and its uniform $y$-free variant, non-vacuous on $36/36$
 rows to $\alpha=6.31$; the structural Rayleigh bound, positive and sound on $36/36$ rows with
 residual slack $1.00$--$1.03$; and the exact residual decomposition of the fitted balance,
-closing to $2.9\times10^{-16}$).\\[3pt]
+closing to $2.9\times10^{-16}$), and the T123 structural-CBS package (the two-isometry
+completion $V=BP$ with $V^{\mathsf T}V=I$ and $V^{\mathsf T}W=0$ exact, the three-compression
+identities to $3.4\times10^{-15}$; the closed forms of the coupling --- half a first
+difference of the lag sequence to $1.8\times10^{-15}$, the aliasing-difference symbol to
+$5.7\times10^{-16}$; the uniform oscillation positivity (5R$^*$),
+$\lambda_{\min}(E_z)=+0.303\ldots+5.017>0$ on every row at slack $1.0007$--$1.007$; the exact
+dyadic depth-layer split of $y^{\mathsf T}Gy$ to $1.1\times10^{-15}$; and the two-term
+residual split of the certified balance, closing to $2.8\times10^{-17}$).\\[3pt]
 \textbf{Measured} (holds on the resolved windows; no uniform constant): $\rho_-$; the ratio
 $r=0.0053$--$0.1814$ and $\hat r<1$ at all $92$ resolution points; $\omega=0.2366$--$0.7531$; the
 strict odd-channel margin $\lambda_{\min}(Q|_{\mathrm{odd}})=1.4\times10^{-5}$--$5.1\times10^{-2}$; the
@@ -2570,7 +2708,18 @@ $12/36$ rows), the band-bound recovery $0.429$--$0.995$, the high-band mass of $
 $\kappa_y=0.0067$--$0.5311$ against $\gamma^2=0.7173$--$0.9647$, the certified balance
 $S_2/\varepsilon_c\sim D^{-0.003\pm0.075}\alpha^{-0.729\pm0.090}$ with the measured-CBS balance
 $\alpha^{-0.113\pm0.063}$ against the ceiling $\alpha^{-0.116\pm0.062}$ (fits), and the band
-margin $0.024$--$0.363\sim D^{-0.042}\alpha^{-0.525}$ (a fit); every scaling
+margin $0.024$--$0.363\sim D^{-0.042}\alpha^{-0.525}$ (a fit); the T123 measurements: the
+band mass of $Wy$ ($99.64$--$100.00\%$ at $d=|\theta-\pi|<\pi/2$ against
+$8.9\times10^{-6}$--$1.5\times10^{-3}$ in the $\theta=0$ cell) and of the worst-case $y^*$
+($81.22$--$100.00\%$ middle-band), the coupling range $\kappa_y=0.0067$--$0.4622$ against
+$\gamma^2=0.7248$--$0.9467$ (a factor $2$--$109$), the coarse conditioning
+$\mathrm{cond}(A_c)=2.1\times10^{4}$--$3.1\times10^{7}$ with
+$\lambda_{\min}(A_c)=1.7\times10^{-5}$--$2.9\times10^{-4}$ (envelope-margin ratio
+$8.4\times10^{2}$--$4.0\times10^{5}$, rising like $\alpha^{+4.202}$, a fit), the two-factor
+overshoot $1.20$--$3.51$ with the certified margin positive on $5/24$ rows, the certified
+balance $S_6/\varepsilon_c\sim D^{-0.069\pm0.099}\alpha^{-0.544\pm0.113}$ against the ceiling
+$\alpha^{-0.044\pm0.076}$ (fits; gap $\alpha^{+0.500}$), and the lid share
+$\varepsilon_f/\varepsilon_c=0.177$--$0.546\sim\alpha^{+0.030}$ (a fit); every scaling
 exponent quoted in this document.\\[3pt]
 \textbf{Hypothesis input / classical} (used, named, not proved here): Kneser, Witt/Eichler, Shimura,
 Waldspurger/Baruch--Mao, Cohen, Weil--Guinand, Bombieri, Yoshida, Connes--Consani, Douglas,
@@ -2583,7 +2732,8 @@ Szeg\H{o}--Kolmogorov, Aubin--Nitsche duality, Payne--Weinberger, Levinson/Durbi
 Kac--Murdock--Szeg\H{o}/Widom/Fisher--Hartwig, Fej\'er--Riesz, Hartman/Peller (Hankel
 smoothing), Gershgorin, Parseval, the local Fourier / two-grid
 symbol (Brandt, Hackbusch, Fiorentino--Serra), Yserentant's strengthened Cauchy--Schwarz
-constant, the Bank--Smith/D\"orfler--Nochetto saturation assumption (with
+constant, Axelsson/Axelsson--Vassilevski (the band-split strengthened-CBS mechanism), the
+Bank--Smith/D\"orfler--Nochetto saturation assumption (with
 Bornemann--Erdmann--Kornhuber as the honest caveat that saturation can fail), the
 Montgomery--Vaughan/Selberg large sieve (upper direction only), Chebyshev/Mertens (the atom
 count), Trench/B\"ottcher--Silbermann (explicit Toeplitz inverses), Delsarte--Genin (the split
@@ -2687,8 +2837,18 @@ to $\alpha^{-0.73}$ (exactly uniform in $D$), and with the measured CBS coupling
 closes to within the chain's own ceiling ($\alpha^{-0.113}$ against $\alpha^{-0.116}$). Since
 T122 the mountain is the two unchanged sign/pairing defects plus two scalar estimates of the
 same band-profile kind --- the band margin (F3) and a structural CBS bound (F4) --- plus the
-\textbf{[SUPPORT]} obstruction. T123 (\texttt{structural\_cbs\_probe.py}) was running at the
-time of writing.
+\textbf{[SUPPORT]} obstruction. T123 (\texttt{structural\_cbs\_probe.py}) then ran the same
+band machinery at both scalars, and they \emph{split}: the margin closes almost for free
+(the reduction to the band profile of $Wy$ costs $0.7\%$, and the oscillation block gains
+uniform certified positivity, (5R$^*$)), but the coupling resists structurally --- every
+certified route to $\kappa_y$ needs the coarse form from below, whose near-null direction is
+smooth and lives on a cancellation no pointwise symbol minorant can see --- and the remaining
+$\alpha^{+0.500}$ gap to the ceiling is identified with the $\varepsilon_f$ lid itself, the
+same object $4$--$8$ recursion levels deep. Since T123 the mountain is the unchanged Harnack
+pair (F1)/(F2), one band-profile lemma (F3), and coarse-level positivity (F4) --- no longer
+an estimate to sharpen but the recursion base case --- plus the \textbf{[SUPPORT]}
+obstruction. T124 (\texttt{multilevel\_telescope\_probe.py}) was running at the time of
+writing.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -2740,18 +2900,18 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T122}\label{app:index}
+\section{Probe index, diary parts T11--T123}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $112$ parts T11--T122 that the current diary file records
-($113$ runs --- T104 was a double run with two independent arms --- and $2865$ green checks); the ten
+load-bearing artefact. The index covers the $113$ parts T11--T123 that the current diary file records
+($114$ runs --- T104 was a double run with two independent arms --- and $2885$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T122: \textbf{$122$ probes, $3057/3057$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T123
-(\texttt{structural\_cbs\_probe.py}, contract \texttt{STRUCTURAL.CBS}) was still running
+diary at T123: \textbf{$123$ probes, $3077/3077$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T124
+(\texttt{multilevel\_telescope\_probe.py}, contract \texttt{MULTILEVEL.TELESCOPE}) was still running
 when this document was written and is deliberately absent.
 
 {\footnotesize
@@ -2880,6 +3040,7 @@ T119 & \texttt{\scriptsize oscillation\_\allowbreak mass} & the arithmetic half 
 T120 & \texttt{\scriptsize harnack} & the Harnack core is proof-shaped: $a_j$ and $w_j$ are the odd/even half of \emph{one} increment sequence, offset by a single fine cell, so one sign of the corner increments gives $|R-1|\le\sum|v_{2j+1}-v_{2j}|/\sum|v_{2j}|\le0.04745$ \emph{unconditionally} (C1; the per-cell inequality is provably \emph{false}, $|a_j/w_j|$ up to $4.8\times10^{3}$); $R\in[0.9098,1.1011]$ on $3915$ rows, $\kappa_{\mathrm{end}}\ge0.480827$ for $n_C\ge8$; two structural routes refuted ($T^{-1}$ corner positive but not TP2; the discrete maximum principle false --- $u$ oscillates in the bulk); the $\alpha$-audit makes (D2) total ($\alpha_o=u_k/2$ by construction, $D_0$ holds on $3/1492$ zones, $\alpha^*=0.693$ below the first admissible handover); $\gamma$ gains an exact symbol identity but $1-\gamma^2$ falls with $\alpha$ (slope $-0.297\pm0.013$); theorem V4: $18$ links, defect list $3\to4$ & HARNACK-EXPLAINED & 21/21\\
 T121 & \texttt{\scriptsize wide\_\allowbreak window} & the $\sigma_z$ route survives the real ladder as a \emph{section} statement and dies as a symbol statement: $\lambda_{\min}(T_h(\sigma_z))>0$ on $16/16$ frame windows ($n=7\ldots283\,303$, $\alpha$ up to $6.277$, $h$ up to $107\,790$; $8$ with $\inf\sigma_z<0$, the section at $0.64$--$3.23\times|\inf\sigma_z|$ positive), the Christoffel/Fej\'er per-dip budget certified on $8/16$ up to $\alpha=3.446$ (each dip $0.156$--$0.720$ of one Fej\'er width; the dip count grows like $e^{2.41\alpha}$, a fit); the net balance $\mathrm{SUPPLY}/\varepsilon_c\sim D^{-0.18}\alpha^{-1.57}$ --- one poly-log, uniform in $D$, split exactly ($2.8\times10^{-14}$) into the Rayleigh ($\alpha^{-1.02}$) and CBS ($\alpha^{-0.51}$) steps, nothing in $\gamma$; link (5) refuted on $42/42$ (ratio $0.357$--$0.916$ --- the odd sector's Hankel term); one-sign $24/24$ at $n_C=h/16$ (only $21/24$ at $h/8$; certificates restated, free since $\delta\sim n_C^{+0.29}$); the FH comparison inconclusive at reachable $h$ (drift $-0.008\ldots+2.934$ against an allowed $-0.120$); $\delta=0.0126$--$0.1331$ over $360$ rows, $\kappa_{\mathrm{end}}\ge0.4688$; theorem V5: $19$ links, the defect count stays $4$ but every entry changes kind & WIDE-RESTRUCTURED & 21/21\\
 T122 & \texttt{\scriptsize net\_\allowbreak balance\_\allowbreak repair} & the Hankel term is the reflection half of an isometry, not an error term: $A_z=W^{\mathsf T}\mathrm{Toeplitz}_M(c)W$ with $W=BZ$, $W^{\mathsf T}W=I$ exact (the compressed Hankel is half a second difference of the lag sequence, closed form to $7.0\times10^{-16}$; norm ratio $0.123$--$0.781$, $O(1)$ --- $Z$ suppresses both halves equally; the Weyl floor positive on only $12/36$); the certified band bound $\lambda_{\min}(A_z)\ge\mathrm{thr}-\lambda_{\max}(G)$ non-vacuous on $36/36$ rows to $\alpha=6.31$ (the T121 Christoffel budget tore at $3.45$; recovery $0.429$--$0.995$; caveat: the optimum sits at $\mathrm{supp}(g)\approx1$); the structural Rayleigh bound is \emph{sharp} ($q_{\mathrm{str}}=1.00$--$1.03$, drift $\alpha^{-0.002}$), removing the whole $r_{\mathrm{ray}}\sim\alpha^{+0.83}$ slack; the certified balance halves the deficit, $S_2/\varepsilon_c\sim D^{-0.003}\alpha^{-0.729}$, exactly $D$-uniform, and with the measured CBS coupling ($\kappa_y=0.0067$--$0.5311$ against $\gamma^2$) it reads $\alpha^{-0.113}$ against the chain's own ceiling $\alpha^{-0.116}$ (residual decomposition closes to $2.9\times10^{-16}$); theorem V6: the count stays $4$, link (5) retired by an identity, (F3) the band margin ($0.024$--$0.363\sim D^{-0.042}\alpha^{-0.525}$) and (F4) a structural CBS estimate absorb (E3$^*$)/(E4$^*$) & NET-IMPROVED & 20/20\\
+T123 & \texttt{\scriptsize structural\_\allowbreak cbs} & the coupling resists structurally: the coarse block is the other half of the T122 construction ($V=BP$ an isometry, $V^{\mathsf T}V=I$, $V^{\mathsf T}W=0$ exact --- $A_c,B_x,A_z$ three compressions of one window Toeplitz form, identities to $3.4\times10^{-15}$); the coupling is half a \emph{first} difference of the lag sequence, in symbol form $-\tfrac{i}{2}\sin(\varphi/2)[\sigma(\varphi/2)-\sigma(\varphi/2+\pi)]$ --- the aliasing difference, vanishing where the coarse space lives, which explains the factor $2$--$109$ between $\kappa_y=0.0067$--$0.4622$ and $\gamma^2=0.7248$--$0.9467$; both certified routes to $\kappa_y$ need the coarse form from below (band-split CS is correct $24/24$ and non-vacuous $0/24$, costing $\mathrm{cond}(A_c)$ up to $3.1\times10^{7}$; the Schur route yields (5R$^*$) $\lambda_{\min}(E_z)=+0.303\ldots+5.017>0$ on every row at slack $1.0007$--$1.007$ but needs $E_c\succ0$, true on $0/24$) --- the near-null direction of the window form is smooth, and its eigenvalue is a cancellation no pointwise symbol minorant sees (envelope margin $8.4\times10^{2}$--$4.0\times10^{5}\times\lambda_{\min}(A_c)$, rising $\alpha^{+4.202}$); the band margin (F3) reduces to the band profile of $Wy$ at a cost of $0.7\%$ (dyadic split exact to $1.1\times10^{-15}$, overshoot $1.20$--$3.51$); the certified balance $S_6/\varepsilon_c\sim D^{-0.069}\alpha^{-0.544}$ against the ceiling $\alpha^{-0.044}$ --- gap $\alpha^{+0.500}$, all of it the coupling (two-term residual split closes to $2.8\times10^{-17}$) --- and the gap is identified as the $\varepsilon_f$ lid itself, $4$--$8$ recursion levels deep; theorem V7: the count stays $4$, restructured --- (F1)/(F2) the Harnack pair, (F3) one band-profile lemma, (F4) coarse positivity $=$ the recursion base case & CBS-RESISTS & 20/20\\
 \end{xltabular}
 }
 

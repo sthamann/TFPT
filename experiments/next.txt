@@ -1,3 +1,89 @@
+# 2026-07-28 (V) — Teil 123 (delegiert, die strukturelle CBS-Frage — Vertrag STRUCTURAL.CBS): structural_cbs_probe.py — **CBS-RESISTS** — DIE BAND-MASCHINERIE SCHLIESST DIE MARGE FAST GRATIS UND KANN DIE KOPPLUNG BEWEISBAR NICHT SCHLIESSEN, UND DIE LÜCKE ZUR DECKE IST DER ε_f-DECKEL SELBST: die Grob-Seite ist die ANDERE Hälfte der T122-Konstruktion — V = BP ist ebenfalls Isometrie, VᵀV = WᵀW = I, VᵀW = 0 exakt, A_c/A_z/B_x sind drei Kompressionen EINER Fenster-Toeplitz-Form (Identitäten auf 3.4e-15) — mit zwei neuen geschlossenen Formen: die Kopplung B_x ist eine HALBE ERSTE DIFFERENZ der Lag-Folge (1.8e-15; A_z war die halbe zweite), Symbolform b(φ) = −(i/2)sin(φ/2)[σ(φ/2) − σ(φ/2+π)] — die ALIASING-DIFFERENZ des Fenster-Symbols (5.7e-16) —, was κ_y QUANTITATIV erklärt (Wy trägt 99.64–100.00% Masse bei d = |θ−π| < π/2 und nur 8.9e-6–1.5e-3 in der θ=0-Zelle; das Worst-Case-y* legt 81.22–100.00% GENAU dorthin — das IST der Faktor 2–109 zwischen κ_y = 0.0067–0.4622 und γ² = 0.7248–0.9467); ZERTIFIZIERTE κ-SCHRANKE: BEIDE Routen scheitern aus EINEM Grund — sie brauchen die GROB-Form von unten: Band-Split-CS (Axelsson–Vassilevski) korrekt 24/24 aber vakuum 0/24 (kostet exakt eine Grob-Konditionszahl, cond(A_c) = 2.1e4–3.1e7), die Schur-Route liefert dafür zwei neue Glieder — **(5R*)** yᵀA_zy ≥ yᵀE_zy mit λ_min(E_z) = +0.303..+5.017 > 0 auf JEDER Zeile (uniforme zertifizierte Positivität des Oszillationsblocks, Schlupf 1.0007–1.007, subsumiert den ganzen T122-Threshold-Sweep gratis) und **(7R*)** zertifiziert sobald E_c ≻ 0 — was auf 0/24 Zeilen gilt (λ_min(E_c) = −3.44..−0.043 < 0 überall); DIE ASYMMETRIE IST DAS RESULTAT: λ_min(A_z) = 0.32–5.08 gut konditioniert, λ_min(A_c) = 1.7e-5–2.9e-4 — die Fast-Null-Richtung der Fensterform ist GLATT, lebt im Grobraum, und ihr Eigenwert kommt aus Auslöschung INNERHALB der Form, die kein punktweiser Symbol-Minorant sehen kann (Hüll-Marge 8.4e2–4.0e5 × λ_min(A_c), steigend α^{+4.2}); Band-Marge (F3): yᵀGy zerfällt EXAKT über dyadische Tiefenschichten (1.1e-15), das Zwei-Faktor-Produkt überschießt nur 1.20–3.51 — **die F3-Reduktion auf das Band-Profil von Wy kostet < 1%**; DIE KERNZAHL: beste voll zertifizierte Versorgung **S6/ε_c ~ D^{−0.069±0.099}·α^{−0.544±0.113}** gegen die Decke S4/ε_c ~ α^{−0.044±0.076} ⇒ Lücke α^{+0.500}, Rest-Zerlegung exakt (2.8e-17): −0.544 + 0.000 + 0.499 — F3 kostet NULL Potenzen, die GESAMTE Lücke ist die Kopplung; und der Deckel ist kein Modellierungsschritt: ε_c = ε_f + yᵀSy ist Identität, die additive Kette hätte Decke exakt 1, aber ε_f braucht seine Schranke eine Ebene tiefer (4–8 Rekursionsebenen) und der Basisfall ist GENAU (F4) — derselbe Gegenstand; Satz V7: Defekt-Zähler 4, restrukturiert; der nächste Schritt ist nicht schärferes Banding, sondern DIE REKURSION — 20/20, 27.8s, Sandbox
+# W1 KOPPLUNGS-ANATOMIE + DIE ZERTIFIZIERTE CBS-SCHRANKE: die Grob-Seite ist die
+#    andere Hälfte der T122-Konstruktion — V = BP (P die PWC-Prolongation) ist
+#    Isometrie, VᵀV = I exakt, VᵀW = 0 exakt: das GANZE Zwei-Level-System sind
+#    zwei orthogonale Isometrien auf EINER Fenster-Toeplitz-Form (A_c =
+#    VᵀT_M(c)V, A_z = WᵀT_M(c)W, B_x = VᵀT_M(c)W, Identitäten auf 3.4e-15).
+#    Zwei neue geschlossene Formen: (B_x)_{jk} = β_{j−k} − (c_{K−2(j+k)} −
+#    c_{K−2(j+k)−2})/2 mit β_m = (c_{|2m+1|} − c_{|2m−1|})/2 — die Kopplung ist
+#    eine HALBE ERSTE DIFFERENZ der Lag-Folge (1.8e-15; A_z war die halbe
+#    zweite, T122), und in Symbolform b(φ) = −(i/2)sin(φ/2)[σ(φ/2) − σ(φ/2+π)]
+#    — die ALIASING-DIFFERENZ des Fenster-Symbols mal sin(φ/2) (5.7e-16): das
+#    Kopplungsgewicht VERSCHWINDET exakt dort, wo der Grobraum lebt. Das
+#    erklärt κ_y quantitativ: Wy trägt 99.64–100.00% seiner Masse bei
+#    d = |θ−π| < π/2 und nur 8.9e-6–1.5e-3 in der θ=0-Zelle, während das y*,
+#    das γ² erreicht, ein MITTELBAND-Vektor ist (81.22–100.00% genau dort) —
+#    der Faktor 2–109 zwischen κ_y und γ² IST diese Fehlanpassung. BEIDE
+#    zertifizierten Routen zu κ_y scheitern trotzdem, aus EINEM Grund in zwei
+#    Gestalten — sie brauchen die GROB-Form von unten: Route 1 (Band-Split-
+#    Cauchy–Schwarz à la Axelsson–Vassilevski, in jeder Band-Zelle separat,
+#    inkl. der exakten Zwei-Gitter-Faktorisierung |Vx| ≤ 2cos(|θ|/2)|X(2θ)|,
+#    |Wy| ≤ 2sin(|θ|/2)|Y(2θ)|) ist korrekt 24/24 und vakuum 0/24 — sie kostet
+#    exakt eine Grob-Konditionszahl (cond(A_c) = 2.1e4–3.1e7, Schranke/cond =
+#    6.0e-6–3.4e-2); Route 2 (Schur-Komplement als Minimum, zertifizierter
+#    Minorant T_M(ell) ≤ T_M(σ^(M)) eingesetzt) liefert zwei neue Glieder:
+#    (5R*) yᵀA_zy ≥ yᵀE_zy mit E_z = WᵀT_M(ell)W und λ_min(E_z) =
+#    +0.303..+5.017 > 0 auf JEDER Zeile der Leiter — uniforme zertifizierte
+#    Positivität des Oszillationsblocks, Schlupf nur 1.0007–1.007, subsumiert
+#    den ganzen T122-Threshold-Sweep gratis (min(ell,thr) ≤ ell für jedes thr)
+#    — und (7R*) yᵀSy ≥ yᵀE_zy − (E_xy)ᵀE_c^{-1}(E_xy), zertifiziert sobald
+#    E_c = VᵀT_M(ell)V ≻ 0: das gilt auf 0/24 Zeilen (λ_min(E_c) =
+#    −3.44..−0.043 < 0 überall). DIE ASYMMETRIE: λ_min(A_z) = 0.32–5.08 ist
+#    gut konditioniert, λ_min(A_c) = 1.7e-5–2.9e-4 liegt 3–5 Größenordnungen
+#    unter der zertifizierten Hüll-Marge (8.4e2–4.0e5 × λ_min(A_c), steigend
+#    α^{+4.202}; gegen λ_min(A_z) nur 3.7e-2–17) — die Fast-Null-Richtung der
+#    Fensterform ist GLATT, lebt im Grobraum, und ihr Eigenwert kommt aus
+#    Auslöschung INNERHALB der Form: kein punktweiser Symbol-Minorant kann ihn
+#    sehen. κ_y ≤ γ² (Yserentant 1986) BLEIBT damit der einzige Worst-Case-
+#    Schritt der Kette — und V7 sagt jetzt, WARUM er bleiben muss.
+# W2 DIE BAND-MARGE (F3), DIESELBE MASCHINERIE: yᵀGy zerfällt EXAKT über
+#    dyadische Tiefenschichten des zertifizierten Gaps g_thr (Schluss 1.1e-15),
+#    und das Zwei-Faktor-Produkt [zertifizierte Symbol-Tiefe] × [Parseval-Masse
+#    von Wy pro Band] überschießt nur um 1.20–3.51 — die fehlende analytische
+#    Abschätzung ist damit auf EIN Objekt reduziert, das Band-Profil von Wy,
+#    dasselbe Objekt, das W1 braucht; **die F3-Reduktion kostet < 1%**. Die
+#    zertifizierte Marge ist positiv auf 5/24 Zeilen (+0.0024..+0.3290, gegen
+#    die exakte Marge 0.070–0.560 ~ α^{−0.449}); Hebel-Grenze ehrlich: min ell
+#    = −2187..−9.7 bei M ≤ 2944 — die tiefen Dips der Frame-Auflösung bleiben
+#    unerreicht.
+# W3 DIE ZERTIFIZIERTE BILANZ — DIE KERNZAHL: beste voll zertifizierte
+#    Versorgung **S6/ε_c = (1−γ²)·yᵀE_zy/ε_c ~ D^{−0.069±0.099} ·
+#    α^{−0.544±0.113}** über α = 0.98–6.31 (D-uniform, auflösungsstabil) gegen
+#    die Decke S4/ε_c ~ α^{−0.044±0.076} (ε_f-Wegwerfen) ⇒ **Lücke
+#    α^{+0.500}**. Die Rest-Zerlegung gegen S6 hat exakt ZWEI Terme und
+#    schließt auf 2.8e-17: Band-Profil α^{+0.000} (F3, jetzt vernachlässigbar)
+#    + Kopplung α^{+0.499} (F4, alles) — F3 kostet NULL Potenzen, die gesamte
+#    Lücke ist die Kopplung. DIE ε_f-FRAGE: ε_c = ε_f + yᵀSy ist Identität
+#    (ε_f/ε_c = 0.177–0.546 ~ α^{+0.030}); die additive Kette (ε_f mittragen
+#    statt wegwerfen) hätte Decke exakt 1, ABER ε_f braucht seine Schranke eine
+#    Ebene tiefer — 4–8 Rekursionsebenen bis zum exakten Basisfall — und der
+#    Basisfall ist GENAU (F4): der Deckel ist kein Modellierungsschritt,
+#    sondern derselbe Gegenstand wie die Grob-Positivität.
+# W4 SATZ V7 + DEFEKT-ZÄHLER: die Kette mit (5R*)/(7R*) neu geschrieben —
+#    Haynsworth-Identität, CBS-Split-Identität, die Zwei-Isometrie-
+#    Vervollständigung (V = BP, VᵀW = 0), zertifizierte Zell-Einhüllende,
+#    (5R*) uniforme Oszillations-Positivität, Band-Marge, Bedarfs-Fit;
+#    κ_y ≤ γ² (Yserentant 1986 / Axelsson–Vassilevski 1989/91) bleibt der
+#    EINZIGE Worst-Case-Schritt. DEFEKT-ZÄHLER: T120 = T121 = V6 = V7 = 4,
+#    aber restrukturiert: (F1) Ecken-Vorzeichen + (F2) uniformes δ — das
+#    Harnack-Paar, unberührt, aus T120/T121 zitiert; (F3) EIN Band-Profil-
+#    Lemma (die Reduktion dorthin kostet jetzt 0.7%, λ_min(E_z) > 0 uniform
+#    inklusive); (F4) GROB-POSITIVITÄT — IDENTIFIZIERT statt geschätzt:
+#    dasselbe Objekt wie der ε_f-Deckel, das die Decke der Kette definiert.
+#    Fazit: das Zwei-Level-Argument lässt sich nicht weiter schärfen, es muss
+#    eine REKURSION werden. → T124 (läuft): MULTILEVEL.TELESCOPE
+#    (multilevel_telescope_probe.py) — das Level-Teleskop ε_ℓ = ε_{ℓ+1} +
+#    y_ℓᵀS_ℓy_ℓ, zertifizierte Level-Beiträge ohne Grob-Inverse (Levinson-
+#    Buchhaltungs-Kandidat), die Selbstähnlichkeits-Frage, Satz V8.
+# Serie (XII)–(CXXXIV): 123 Proben, 3077/3077 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Axelsson 1994 /
+# Axelsson–Vassilevski 1989–91 / Yserentant 1986 / Brandt 1977 (verstärkte
+# CBS), Szegő 1939 / Grenander–Szegő 1958 Kap. 5, Fejér 1900, Hartman 1958 /
+# Power 1980 / Peller 2003 (Hankel), Widom 1974 / Fisher–Hartwig,
+# Böttcher–Silbermann 1999, Haynsworth 1968 / Albert 1969 (Schur),
+# Gershgorin 1931, Parseval, Cauchy–Schwarz, Cholesky / Wilkinson 1968 /
+# Higham 2002) zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-28 (IV) — Teil 122 (delegiert, die Netto-Bilanz-Reparatur — Vertrag NET.BALANCE.REPAIR): net_balance_repair_probe.py — **NET-IMPROVED** — DER HANKEL-TERM WAR NIE EIN FEHLER-TERM, UND DIE KETTE SCHLIESST BIS AUF IHRE EIGENE DECKE, SOBALD DER CBS-SCHRITT KEIN WORST-CASE MEHR IST: der gültige Link-5-Ersatz ist eine IDENTITÄT — A_z = WᵀToeplitz_M(c)W exakt mit W = BZ Isometrie (WᵀW = I auf exakt 0.0, geschlossene Hankel-Form (ZᵀHZ)_{jk} = b_{j+k} auf 7.0e-16, 36/36): der Hankel-Term IST die Spiegelungs-Hälfte einer Isometrie (Z unterdrückt BEIDE Seiten gleich, Norm-Verhältnis 0.123–0.781, O(1); die Weyl-Floor-Route reißt auf 12/36) — daraus die zertifizierte Band-Schranke λ_min(A_z) ≥ thr − λ_max(G), nicht-vakuum **36/36 bis α = 6.31**, wo T121s Christoffel-Budget bei 3.45 riss (Recovery 0.429–0.995; die e^{2.41α}-Dip-Zählung kommt nicht mehr vor; ehrlicher Caveat: das Optimum sitzt bei supp(g) ≈ 1 — ein zertifiziertes Ende einer Ein-Parameter-Familie); der strukturelle Rayleigh-Schritt: „y ist hochband" gilt für Wy (99.3–100% Masse über |θ| = π/2, ‖Wy‖² = ‖y‖² exakt), NICHT für y selbst (0.1–1.7%), und die strukturelle Schranke yᵀA_z y ≥ thr‖y‖² − yᵀGy ist zertifiziert positiv 36/36, schlägt den Worst-Case um 1.28–18.90 (entfernt den GANZEN T121-Slack r_ray ~ α^{+0.83}); Rest-Slack **q_str = 1.00–1.03, Drift α^{−0.002} — SCHARF**; DIE KERNZAHL: **S2/ε_c (zertifiziert, V1+V2) ~ D^{−0.003±0.075}·α^{−0.729±0.090}** gegen T121s α^{−1.562} für dasselbe Objekt — das Defizit HALBIERT, exakt D-uniform; mit dem GEMESSENEN CBS (κ_y = 0.0067–0.531 gegen γ² = 0.717–0.965) liest die Bilanz α^{−0.113±0.063} — statistisch ununterscheidbar von der Ketten-eigenen Decke S4 = α^{−0.116±0.062} (ε_f-Wegwerfen); Residual-Zerlegung schließt auf 2.9e-16: −0.729 − 0.002 + 0.615 = −0.116; V1 kauft die Leiter, V2 kauft den Exponenten; Satz V6: Defekt-Zähler BLEIBT 4, aber die Arten wechseln — (F3) NEU: analytische Schranke für die Band-Marge (absorbiert Link 5, Nikolskii-Budget und beide E3/E4-Lesarten), (F4) der strukturelle CBS-Schritt — 20/20, 15.4s, Sandbox
 # V1 HANKEL-ANATOMIE + DER GÜLTIGE LINK-5-ERSATZ: die geschlossene Form
 #    (ZᵀHZ)_{jk} = b_{j+k} mit b_s = (c_{K-2s} − 2c_{K-2s-1} + c_{K-2s-2})/2 —

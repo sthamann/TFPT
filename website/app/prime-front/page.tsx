@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–122 · 3057 sandbox checks
+            Research diary · Teile 11–123 · 3077 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1696,9 +1696,18 @@ function ProgramStatusCallout() {
         Rayleigh step is sharp (slack 1.00–1.03), the certified deficit
         halves to α^−0.73 (exactly D-uniform), and with the measured CBS
         coupling the balance closes to within the chain&apos;s own
-        ceiling; the structural CBS step is under test in T123
-        (structural_cbs_probe.py, running). Milestone: 3057/3057 checks.
-        Not almost-RH. This is not RH evidence.
+        ceiling. T123 (CBS-RESISTS) then runs the same band machinery at
+        the coupling and the coupling resists structurally: the band
+        margin closes almost for free (the F3 reduction costs under 1%,
+        and the oscillation block gains uniform certified positivity via
+        (5R*)), but every certified route to κ_y needs the coarse form
+        from below — whose near-null direction is smooth and lives on a
+        cancellation no pointwise symbol minorant can see — and the
+        remaining α^0.5 gap is identified as the ε_f lid itself, the
+        same object 4–8 recursion levels deep; the multilevel telescope
+        is under test in T124 (multilevel_telescope_probe.py, running).
+        Milestone: 3077/3077 checks. Not almost-RH. This is not RH
+        evidence.
       </p>
     </aside>
   );

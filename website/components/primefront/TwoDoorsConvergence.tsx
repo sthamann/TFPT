@@ -245,9 +245,16 @@ export function TwoDoorsConvergence() {
           structural Rayleigh step is sharp (slack 1.00–1.03), the
           certified deficit halves to α^−0.73 (exactly D-uniform), and
           with the measured CBS coupling the balance closes to within the
-          chain&apos;s own ceiling. T123 (
+          chain&apos;s own ceiling. T123 · STRUCTURAL.CBS — CBS-RESISTS
+          (20/20): the band machinery closes the margin almost for free
+          (the F3 reduction costs under 1%, and the oscillation block gets
+          uniform certified positivity via (5R*)) but the coupling resists
+          structurally — every route needs the coarse form from below,
+          whose near-null direction is smooth and lives on cancellation no
+          symbol minorant can see; the remaining α^0.5 gap is identified as
+          the ε_f lid — the recursion base case, 4–8 levels deep. T124 (
           <span className="font-mono text-slate-300">
-            structural_cbs_probe.py
+            multilevel_telescope_probe.py
           </span>
           ) running.
         </p>

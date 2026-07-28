@@ -99,7 +99,8 @@ export type PrimeFrontVerdict =
   | "ARITHMETIC-DONE"
   | "HARNACK-EXPLAINED"
   | "WIDE-RESTRUCTURED"
-  | "NET-IMPROVED";
+  | "NET-IMPROVED"
+  | "CBS-RESISTS";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -123,6 +124,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-28",
+    part: 123,
+    title:
+      "The band machinery closes the margin almost for free and provably cannot close the coupling — every route needs the coarse form from below, whose near-null direction is smooth and lives on cancellation; the remaining α^0.5 gap IS the ε_f lid, 4–8 recursion levels deep",
+    verdict: "CBS-RESISTS",
+    summary:
+      "T123 (CBS-RESISTS, 20/20) — contract STRUCTURAL.CBS: attack the two remaining scalar estimates of theorem V6 — the structural CBS step (F4) and the band margin (F3) — with the same band machinery that made the Rayleigh step sharp in T122. (W1) THE COUPLING ANATOMY, IN CLOSED FORM: the coarse block is the OTHER half of the T122 construction — V = BP is an isometry too, VᵀV = WᵀW = I and VᵀW = 0 exactly, so the coarse, oscillation and coupling blocks are three compressions of ONE window Toeplitz form (identities to 3.4e-15). Two new closed forms: the coupling B_x is half a FIRST difference of the lag sequence (1.8e-15; A_z was half a second difference), and in symbol form b(φ) = −(i/2)·sin(φ/2)·[σ(φ/2) − σ(φ/2+π)] — the ALIASING DIFFERENCE of the window symbol (5.7e-16), vanishing exactly where the coarse space lives. That explains κ_y quantitatively: Wy carries 99.64–100.00% of its mass at d = |θ−π| < π/2 and only ~1e-4 in the θ = 0 cell, while the worst-case y* that attains γ² is a MIDDLE-band vector (81–100% exactly there) — the factor 2–109 between κ_y = 0.0067–0.462 and γ² = 0.725–0.947 IS that mismatch. THE CERTIFIED κ BOUND: both routes fail for ONE reason in two guises — they need the COARSE form from below. Route 1 (band-split Cauchy–Schwarz à la Axelsson–Vassilevski) is correct on 24/24 rows and non-vacuous on 0/24: it costs exactly one coarse condition number (cond(A_c) = 2.1e4–3.1e7). Route 2 (the Schur complement as a minimum with the certified minorant substituted) delivers two new links: (5R*) yᵀA_z y ≥ yᵀE_z y with λ_min(E_z) = +0.303..+5.017 > 0 on EVERY row — uniform certified positivity of the oscillation block, slack only 1.0007–1.007, subsuming the whole T122 threshold sweep for free — and (7R*), certified as soon as E_c ≻ 0, which holds on 0/24 rows (λ_min(E_c) < 0 everywhere). THE ASYMMETRY IS THE RESULT: λ_min(A_z) = 0.32–5.08 is well conditioned while λ_min(A_c) = 1.7e-5–2.9e-4 sits 3–5 orders below the certified envelope margin (8.4e2–4.0e5 × λ_min(A_c), rising like α^+4.2) — the near-null direction of the window form is SMOOTH, so it lives in the coarse space, and its eigenvalue comes from cancellation INSIDE the form that no pointwise symbol minorant can see. So κ_y ≤ γ² (Yserentant) stays the ONLY worst-case step of the chain — and V7 now says why it must. (W2) THE BAND MARGIN: yᵀGy splits EXACTLY over dyadic depth layers (1.1e-15) and the two-factor product [certified symbol depth] × [Parseval mass of Wy per band] overshoots by only 1.20–3.51 — the F3 reduction to the band profile of Wy costs UNDER 1%, and that band profile is the same object W1 needs. Certified margin positive on 5/24 rows; honest lever limit: min ell down to −2187 at M ≤ 2944 — the frame-resolution dips stay out of reach. (W3) THE CERTIFIED BALANCE — THE CORE NUMBER: the best fully certified supply is S6/ε_c ~ D^(−0.069±0.099)·α^(−0.544±0.113) over α = 0.98–6.31 (D-uniform, resolution-stable) against the ceiling S4/ε_c ~ α^(−0.044±0.076), so the gap is α^(+0.500); the residual split against S6 has exactly TWO terms and closes to 2.8e-17: band profile α^(+0.000) (F3, now negligible) + coupling α^(+0.499) (F4, all of it) — F3 costs ZERO powers, the ENTIRE gap is the coupling. THE ε_f QUESTION: ε_c = ε_f + yᵀSy is an identity (ε_f/ε_c = 0.177–0.546, flat in α); an additive chain carrying ε_f would have ceiling exactly 1 — BUT ε_f needs its bound one level down, 4–8 recursion levels to an exact base case, and that base case is precisely (F4): the lid is not a modelling step, it is the SAME OBJECT as coarse-level positivity. (W4) THEOREM V7: the chain rewritten with (5R*)/(7R*); the defect count stays 4 but is restructured — (F1)+(F2) the Harnack pair (untouched, quoted from T120/T121), (F3) ONE band-profile lemma (the reduction to it now costs 0.7%), (F4) coarse positivity — IDENTIFIED rather than estimated: the same object as the ε_f lid that defines the ceiling. Conclusion: the two-level argument cannot be tightened further — it has to become a recursion. T124 (MULTILEVEL.TELESCOPE, multilevel_telescope_probe.py) is running: the level telescope ε_ℓ = ε_{ℓ+1} + y_ℓᵀS_ℓy_ℓ, certified per-level contributions without coarse inverses (a Levinson-bookkeeping candidate), the self-similarity question, a theorem candidate V8. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "structural_cbs_probe.py",
+  },
   {
     date: "2026-07-28",
     part: 122,
