@@ -88,7 +88,7 @@ first three are projections, the Weil structure of the resulting family with two
 obstructions, the amplitude route with a positive linear carrier, the matching-lemma / transport
 ledger package, and the margin-chain identities of the second phase. Everything beyond those eight is
 \emph{sandbox}: an exploratory program, run as
-$133$ preregistered probes with $3352$ machine checks, which localized the residual object. That
+$135$ preregistered probes with $3386$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -257,7 +257,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots133$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots135$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -265,13 +265,15 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T133: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T135: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
-the Perron sign theorem --- and finally the reverse flow: the identity block promoted to
+the Perron sign theorem --- then the reverse flow: the identity block promoted to
 \vref{v542}, a spectrum-only boundary-Dirac coupling and a certificate-floor audit that hardened
-\vref{v379}); Section~\ref{sec:status} is the status statement.
+\vref{v379} --- and finally the pole-free floor closed as existence with a sign anatomy (T134)
+and a bounded seam state where the Weil window provably has none (T135)); Section~\ref{sec:status}
+is the status statement.
 
 % =====================================================================
 \section{Motivation: why a compiler meets the primes}\label{sec:motivation}
@@ -3006,7 +3008,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T133)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T135)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -3769,11 +3771,112 @@ certificate, the eigenvalue check is retained and relabelled a diagnostic
 \emph{measurement}, and the ledger row \texttt{SEAM.S3.RP.01} is reworded accordingly ---
 marker \mE\ unchanged.
 
-\noindent T134 (\texttt{pole\_free\_floor\_probe.py}, contract \texttt{POLE.FREE.FLOOR}) is
-running at the first point of the shortest list, the pole-free floor, and T135
-(\texttt{comb\_compressibility\_probe.py}, contract \texttt{COMB.COMPRESS}) at the
-compressibility of the comb. The narrow identity module of this phase is promoted:
-\vref{v542}, Section~\ref{sec:v542}.
+\noindent The narrow identity module of this phase is promoted: \vref{v542},
+Section~\ref{sec:v542}.
+
+\subsection{The pole-free floor: existence closes, and every cheap route fails by sign (T134)}
+T134 (\texttt{pole\_free\_floor\_probe.py}, contract \texttt{POLE.FREE.FLOOR}, $21/21$,
+verdict \textsc{partial}; sub-verdicts \textsc{floor-certified-per-window} /
+\textsc{class-identified} / \textsc{mass-vacuous-metric-fixed}) attacks the three items of
+T131's rest list, and nothing else. The first answer closes the existence question: the
+floor is \emph{never} an existence problem. Every Cholesky pivot of the \emph{pole-free}
+form is positive on $79/79$ windows --- T119's famous negative pivot belonged to the form
+\emph{with} the pole --- and the per-window Cholesky certificate carries R4 on $79/79$ and
+R2b on $68/68$. But the route table is unanimous: every cheap lower-bound route fails by
+\emph{sign}, not size, so the nine decades of slack T131 measured are worthless to them ---
+they die at a sign that no margin can heal.
+
+\begin{center}
+{\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Cheap route} & \textbf{Certifies} & \textbf{Failure mode}\\
+\midrule
+Dirichlet $+$ Gershgorin & $0/68$ & sign\\
+global Gershgorin & $0/68$ & sign\\
+Jacobi dominance & $0/68$ & sign\\
+Ostrowski (1937) & $0/68$ & sign\\
+path comparison & infeasible & congestion up to $4.7\times10^{5}$\\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+\noindent The anatomy names the culprit. The good half $\mathrm{diag}(w)+L_N$ of the T126
+fractional Dirichlet split is positive definite on $68/68$ windows, with
+$\lambda_{\min}=0.13$--$3.06$ --- that is $8$--$85{,}000\times$ \emph{above} the target;
+the \emph{entire} loss is the positive-off-diagonal Laplacian $L_P$ at the long lags:
+$\lambda_{\max}(L_P)/\mu_{1}$ up to $4.7\times10^{5}$ at effective rank
+$k_{\mathrm{eff}}=24$--$397$, so $L_P$ is neither small nor low-rank, and T131's rank-one
+trick does not generalise. R5 is measured rather than hoped: the compression \emph{and}
+the Schur floor both sit \emph{above} $\lambda_{\min}$ on $56/56$ pairs --- no coarse
+recursion can ever supply a lower bound here --- and the certified floor degrades like
+$D^{2.26}$ (a fit, labelled a fit). The second answer gives the inverse-positivity its
+\emph{class}: the naive split stays definite on only $659/900$ blocks, but the
+\textbf{lumped Stieltjes comparison matrix} $S_B=S+L_\Delta$ (the positive off-diagonals
+lumped onto the diagonal) is Stieltjes \emph{and} positive definite by construction, with
+Jacobi spectral radius $\rho=0.709$--$0.990<1$ on $900/900$ blocks --- so $S_B^{-1}$ is a
+convergent nonnegative Neumann series, a discrete Green function: the M-matrix ground of
+the sign constancy that T131 could only record via Perron. The naive killing reading is
+refuted (row sums negative on $900/900$), the Neumann margin is a valid majorant on
+$558/558$ (a-priori coverage $26.9\%$), entrywise positivity of $S^{-1}$ is now
+\emph{certified} a posteriori on $900/900$ (residual $\le2.6\times10^{-11}$ against
+smallest entries $\sim10^{-2}$), and the weakening ``reflection positivity on the floor
+eigenspace only'' is \emph{refuted} ($535/900$): the full statement is needed, the weaker
+one is false. The third answer honestly corrects T131's diagnosis: the $2.18$ U-metric
+mismatch was \emph{not} the dominant loss --- in the one honest norm the \emph{comb
+dominates the pole} by $4.7$--$81\times$, invisible to T131 because its comparison mixed
+two metrics. With the exact normaliser the whitened mass bound gets a \emph{finite} number
+for the first time: $2.81$--$5.04$ (sharp $2.52$--$4.26$) against the bar $0.50$ --- a
+factor $5.6$--$10$, no longer orders of magnitude --- and $\sigma_b=0.77$--$1.00$ exhausts
+the budget alone, so what is missing is a \emph{localisation} statement about the bad
+pencil subspace, not more measurement.
+
+\begin{keybox}[After T134: fifteen promotion items, five remaining points]
+The promotion list grows from nine to \textbf{fifteen} per-instance items (new: the
+per-window Cholesky certificate of the pole-free form, the lumped Stieltjes construction,
+the $\rho(\mathrm{Jacobi})<1$ series, the a-posteriori $S^{-1}>0$ certification, the
+row-sum refutation of the killing reading, the whitened mass identity). The remaining list
+has \textbf{five} points: \emph{(1)} $D$-uniformity of the floor via the M-matrix question
+(under attack in T136), \emph{(2)} a zone-uniform bound on the exponent and the run count,
+\emph{(3)} $\rho(K)$ a priori rather than measured, \emph{(4)} the M17 localisation,
+\emph{(5)} the quantifier.
+\end{keybox}
+
+\subsection{The reverse flow, continued: a bounded seam state where the Weil window has none (T135)}
+T135 (\texttt{comb\_compressibility\_probe.py}, contract \texttt{COMB.COMPRESS}, $13/13$,
+verdict \textsc{bounded-state (matched)}) is the third reverse-flow trace: does the T116
+boundary-state machinery, which \emph{failed} at the Weil window because the off-band mass
+sits in the prime comb, \emph{succeed} on the seam DtN of T132/\vref{v210}, whose comb is
+an arithmetic progression? The port is verbatim --- the T116 Riccati recursion runs
+unchanged on $\Lambda_\Sigma$ (bordered pole identity $1.5\times10^{-16}$, the banded
+$m$-march reproducing the dense state to $8.2\times10^{-16}$), with the pole candidate the
+rank-$8$ Calder\'on polarisation of \vref{v113} on the $16$ residue classes, documented as
+a \emph{model} (v210's DtN carries no rank-one defect of its own). The census is not a
+kill: $100.00\%$ of the off-band mass sits on the mod-$4$ stripes (the complement is
+machine zero), and the stripe count grows exactly like $\lfloor W/4\rfloor=\Theta(W)$
+(fitted exponent $1.0000\pm0.0000$) where the true prime comb grows like $\pi(W)$
+($0.726\pm0.018$). The core number: $\mathbf{m_{\mathrm{cert}}=12}$ --- the recursion
+error is $3.3\times10^{-16}$ of the margin exactly ($h=64$--$1500$) and
+$2.1\times10^{-17}$ certified on the deep march ($h=1000$--$100{,}000$, \emph{falling} in
+$h$) --- against T116's $1.3\times10^{2}$--$1.1\times10^{6}$ \emph{above} the margin at
+the Weil window; growing the state $m=4\to48$ divides the error by $4.7\times10^{8}$,
+where T116 saw no decay at all. The match is honestly labelled: $12$ lies in the
+pre-declared look-elsewhere set $\{8,12,16,24,32\}$ (the search ladder contains five
+non-member values), so the verdict is \textsc{matched}, not ``derived'' --- and the value
+is bar-fragile, with only the band $8\le m_{\mathrm{cert}}\le16$ defensible. The controls
+name the driver: an artificial mod-$3$ seam \emph{also} closes ($m=8$), so the causal
+driver is \textbf{weight summability}, not the comb period as such; and the \emph{true}
+prime comb \emph{fails} under identical machinery (no $h$-uniform floor, error/margin
+$0.16$--$0.27$ and rising, $12\times$ more state buying only $1.69\times$) ---
+non-vacuity established: the same recursion separates the two combs. \textbf{Sober, three
+times over:} \texttt{QEC.SEAM.01} is \emph{not} advanced (the driver is not the period),
+$m_{\mathrm{cert}}$ is partly circular (the $16$ channels are set by hand), and this is
+the model DtN, not the raw reflection-positive seam. What is new and non-circular: the
+finite-dimensionality of the seam is visible in a \emph{recursion} for the first time, not
+only in a spectrum, with the Weil window as the proved contrast.
+
+\noindent T136 (\texttt{m\_matrix\_pair\_probe.py}, contract \texttt{M.MATRIX.PAIR}) is
+running at the M-matrix question T134 named.
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
@@ -4137,17 +4240,27 @@ $7.9\times$), sign constancy became a theorem via Perron--Frobenius on $S^{-1}$,
 one-hump property honestly broke at depth, and M25 is reduced to positivity of the
 pole-free section with nine decades of slack. Since T131 the mountain is the map V6: two
 irreducibles --- the word ``for all'' (M19) and the RH address itself (M21) --- plus
-\textbf{M25 reduced-to-pole-free} (one robust number, under attack in T134), M22 collapsed
+\textbf{M25 reduced-to-pole-free}, M22 collapsed
 onto one measured exponent, the vacuous M17 assembly with its named whitening fix, the
 conditional comb bound (M18), the per-side law (M24), the (C-F5) convention, the
-all-$\alpha$ step that no computation can close, and the \textbf{[SUPPORT]} obstruction;
-T134 (\texttt{pole\_free\_floor\_probe.py}) is running at the pole-free floor. The identity
+all-$\alpha$ step that no computation can close, and the \textbf{[SUPPORT]} obstruction.
+T134 (\texttt{pole\_free\_floor\_probe.py}, \textsc{partial}) then closed the
+\emph{existence} half of that pole-free floor --- every Cholesky pivot positive on
+$79/79$ windows, per-window certificates throughout --- while every cheap lower-bound
+route fails by \emph{sign}, not size: the surviving opening is an M-matrix question
+(under attack in T136, \texttt{m\_matrix\_pair\_probe.py}, running), and the whitening
+honestly corrected T131's diagnosis (the comb dominates the pole in the norm; what is
+missing is a localisation statement). The identity
 block underneath the map is no longer sandbox: it is promoted as \vref{v542}
-(Section~\ref{sec:v542}). And the first \emph{reverse-flow} parts have landed --- T132
+(Section~\ref{sec:v542}). And the \emph{reverse-flow} parts have landed --- T132
 (\texttt{bd\_seam\_probe.py}) made the Beurling--Deny triad an operator discriminator for
-the seam DtN, \textsc{spectrum-only} with the gap in the killing measure, and T133
+the seam DtN, \textsc{spectrum-only} with the gap in the killing measure, T133
 (\texttt{cert\_floor\_probe.py}) audited the suite's own PSD rows and produced the exact
-positive-mixture Gram certificate that hardened \vref{v379} in this same round.
+positive-mixture Gram certificate that hardened \vref{v379} in this same round, and T135
+(\texttt{comb\_compressibility\_probe.py}, \textsc{bounded-state}) showed the seam DtN
+admits a bounded faithful state ($m_{\mathrm{cert}}=12$, from the pre-declared set) where
+the Weil window provably has none --- with the driver named as weight summability and
+\texttt{QEC.SEAM.01} explicitly \emph{not} advanced.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -4218,20 +4331,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T133}\label{app:index}
+\section{Probe index, diary parts T11--T135}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $123$ parts T11--T133 that the current diary file records
-($124$ runs --- T104 was a double run with two independent arms --- and $3160$ green checks); the ten
+load-bearing artefact. The index covers the $125$ parts T11--T135 that the current diary file records
+($126$ runs --- T104 was a double run with two independent arms --- and $3194$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v542} promoted; with T126--T133, the first eight parts of the second phase, the
-running totals are \textbf{$133$ probes and $3352/3352$ checks}. T134
-(\texttt{pole\_free\_floor\_probe.py}, contract \texttt{POLE.FREE.FLOOR}) and T135
-(\texttt{comb\_compressibility\_probe.py}, contract \texttt{COMB.COMPRESS}) are running and not
+\vref{v535}--\vref{v542} promoted; with T126--T135, the first ten parts of the second phase, the
+running totals are \textbf{$135$ probes and $3386/3386$ checks}. T136
+(\texttt{m\_matrix\_pair\_probe.py}, contract \texttt{M.MATRIX.PAIR}) is running and not
 yet indexed.
 
 {\footnotesize
@@ -4371,6 +4483,8 @@ T130 & \texttt{\scriptsize curvature\_\allowbreak bridge} & the two named pieces
 T131 & \texttt{\scriptsize self\_\allowbreak supply} & the self-supply loop is built, one number short of closed: \textbf{the $\varepsilon\to\lambda_{\min}$ secular sandwich is a theorem} --- $\varepsilon/(\|u\|^{2}+\varepsilon/\mu_{1})\le\lambda_{\min}(Q)\le\varepsilon/\|u\|^{2}$ with the sign half an \emph{equivalence} (Albert 1969) --- \emph{sharp} (relative width $1.2663$--$1.3894$, true value at $1.06$--$1.31\times$ the lower bound, $0$ violations on $10$ dense windows), $\varepsilon$ itself certified at the deep grid (C\'ea/Strang + CG, retention $1.0000$); \textbf{correction to T130}: the Lanczos Ritz value overestimates $\lambda_{\min}(X)$ by up to $7.9\times$ (an upper bound by construction, never a floor); the chain floor replaces it on \textbf{84 bridge pairs with 0 brackets lost} (retention $0.766$--$1.059$ against the certified Cholesky floor, median $0.875$), both deep seams \textsc{chain-positive} ($n=127$: $\varepsilon\ge2.63\times10^{-7}\to$ floor $1.08\times10^{-6}$; $n=256$: $3.83\times10^{-8}\to2.52\times10^{-7}$), $\mu_{1}$ tolerating \textbf{nine decades} of underestimate $\Rightarrow$ \textbf{M25 reduced-to-pole-free}; the mirror rung dead ($T(\ell)$ indefinite $4/4$ --- the Szeg\H{o} indefiniteness; the telescope runs coarse-from-fine only); \textbf{M22}: sign constancy a \textbf{theorem} via Perron--Frobenius on $S^{-1}$ (entrywise positive $575/575$; Metzler fails $11/575$), the one hump \textbf{broken at depth} ($530/575$ with more than two monotone runs; the certified $(2n_{\mathrm{run}}-2)\cdot\mathrm{sag}$ majorant replaces it on $575/575$), exponent and $S^{*}$ stay measurements ($a=0.727$--$0.999$, $55/492$ outside the old band; the deeper sweep lifts the required $S^{*}$ to $1.8472$, the frozen $1.1926$ exceeded $16$ times); \textbf{M17} assembled and \emph{vacuous} (majorant $27/27$, non-vacuous $0/27$; dominant loss the U-metric mismatch $2.18$; named fix: M18 whitened); map V6 ($13$ items), promotion list now \textbf{9 items} (new: the sandwich, the Perron sign theorem, the run-count chain); shortest remaining list four points & SUPPLY-PARTIAL & 25/25\\
 T132 & \texttt{\scriptsize bd\_\allowbreak seam} & the first \emph{reverse-flow} part: the phase's toolkit turned on the theory side, and the Beurling--Deny triad becomes an \textbf{operator discriminator} where the spectrum is blind --- the BD identity exact to $2.4\times10^{-16}$ at every $N$, the triad reconstructing the \emph{operator} ($1.4\times10^{-14}$ at $d=256$), diffusion part identically $0$ (finite atomic space; the continuum DtN is the pure-jump $\tfrac12$-Laplacian, Caffarelli--Silvestre 2007, fitted decay $1.980$), and the \textbf{killing measure $=$ the $\mu_4$ mark-sum profile pointwise} ($1.3\times10^{-14}$): the marks enter the operator \emph{only} through the killing term; the \textbf{Markov remainder is exactly zero} with the closed form $J_{rs}=1/(d\sin^2(\pi(r-s)/d))$ for odd $r-s$ and $0$ for even --- which explains T126's $86.1\%$ count fraction; discriminator verdict \textsc{spectrum-only}: spectra agree to $7.5\times10^{-13}$ but the triad gap sits in the \textbf{killing measure at $0.1746$ at every $N$} (spread $1.9\times10^{-14}$) while the jump gap shrinks ($7.7\times10^{-3}\to3.5\times10^{-4}$), so ``same spectrum $+$ $\mu_4$-equivariance'' is provably too weak; controls break the triad ($0.520$--$0.982$ against mark-local $7.5\times10^{-16}$) and the grading too; covariance limit named: random orthogonal ($90.4$) and generic $\mu_4$-equivariant conjugation ($86.5$) destroy the triad, the mark-preserving lattice symmetries ($D_4$: clock rotation, sheet reflection) leave it \textbf{exactly} invariant ($1.6\times10^{-14}$) $\Rightarrow$ \texttt{QGEO.MARKS.01} and \texttt{QGEO.KERNEL.01} are \textbf{coupled}; ceiling stated: this is the \emph{model} DtN, \texttt{QGEO.KERNEL.01} \textbf{not} closed & SPECTRUM-ONLY & 21/21\\
 T133 & \texttt{\scriptsize cert\_\allowbreak floor} & the audit that changed a load-bearing module: shifted-Cholesky certificates (Wilkinson 1968 / Higham 2002 / Rump 2006 bars) applied to the suite's own RP/PSD rows, machinery itself validated on \textbf{840 controls} ($0$ false certifications, $0$ false negative-direction fires, sharpness median $1.000$) --- the $10\times10$ Hankel \vref{v379} builds is \textbf{as a matrix of doubles certifiably NOT PSD} (certified negative direction $-7.75\times10^{-18}$ at $60$ digits; also at $n=14,20$) and the module's $\lambda_{\min}>-10^{-10}$ passes it; the cause is priced, not guessed ($\mathrm{cond}\approx1.8\times10^{18}$ over the certifiability ceiling $1.0\times10^{13}$; entry bar $7.6\times10^{-12}$ dominates every fp floor; $16/17$ window variants \textsc{measurement-only}), the blind band exhibited (a certified negative direction passes the test), and the \emph{mathematical} matrix is fine (certified floor $2.7\times10^{-25}$ at $40$ digits, while rounding to doubles moves it $3.5\times10^{-17}$ --- eight orders more; precision ladder $25/40/70/70$ digits at $n=6\ldots20$); \textbf{the exact repair needs no precision}: $M=V^{\mathsf T}\mathrm{diag}(1/1600)V$ is a positive-mixture Gram, so $M\succeq0$ in exact arithmetic with no bar --- the route \vref{v171} already takes; other rows clean (\vref{v171} exactly rank-$3$ Vandermonde Gram, $\lambda_{\min}=0$ exactly; \vref{v527}/\vref{v519} \textsc{cert-up}, $N=8,16$ even in binary64); recommendation table explicit: \textbf{no marker moves}, method and wording only --- executed in the same round as the \vref{v379} hardening and the \texttt{SEAM.S3.RP.01} rewording & MIXED & 23/23\\
+T134 & \texttt{\scriptsize pole\_\allowbreak free\_\allowbreak floor} & the three items of T131's rest list, and nothing else --- \textbf{the floor is never an existence problem}: every Cholesky pivot of the \emph{pole-free} form positive on $79/79$ windows (T119's negative pivot belonged to the form \emph{with} the pole), per-window Cholesky certificates R4 $79/79$ / R2b $68/68$ --- but \textbf{every cheap route fails by sign, not size} (Dirichlet+Gershgorin, global, Jacobi dominance, Ostrowski all $0/68$; path comparison infeasible, congestion up to $4.7\times10^{5}$): the nine decades of slack are worthless to them; anatomy: the good half $\mathrm{diag}(w)+L_N$ definite $68/68$ ($\lambda_{\min}=0.13$--$3.06$, $8$--$85{,}000\times$ above target), the \emph{entire} loss the positive-off-diagonal Laplacian $L_P$ at the long lags ($\lambda_{\max}(L_P)/\mu_1$ up to $4.7\times10^{5}$, $k_{\mathrm{eff}}=24$--$397$ --- not low-rank, T131's rank-one trick does not generalise); R5 measured: compression and Schur both \emph{above} $\lambda_{\min}$ on $56/56$ --- no coarse recursion can supply a floor; degradation $\mathrm{cert}\sim D^{2.26}$ (fit); \textbf{the inverse-positivity gets its class}: the lumped Stieltjes comparison $S_B=S+L_\Delta$ is Stieltjes and definite by construction, $\rho(\mathrm{Jacobi})=0.709$--$0.990<1$ on $900/900$ $\Rightarrow$ $S_B^{-1}$ a convergent nonnegative series (discrete Green function; naive split only $659/900$; killing reading refuted, row sums negative $900/900$; Neumann majorant $558/558$, coverage $26.9\%$; $S^{-1}>0$ certified a posteriori $900/900$ at residual $\le2.6\times10^{-11}$; RP-on-floor-eigenspace weakening refuted $535/900$); \textbf{whitening corrects T131}: the $2.18$ metric mismatch was not the dominant loss --- the comb dominates the pole by $4.7$--$81\times$; first finite bound $2.81$--$5.04$ (sharp $2.52$--$4.26$) vs bar $0.50$, $\sigma_b=0.77$--$1.00$ exhausts the budget alone $\Rightarrow$ the rest is a localisation statement; promotion list $9\to15$, rest list five points & PARTIAL & 21/21\\
+T135 & \texttt{\scriptsize comb\_\allowbreak compressibility} & the third \emph{reverse-flow} trace: the T116 Riccati machinery ported \emph{verbatim} to the seam DtN $\Lambda_\Sigma$ (bordered identity $1.5\times10^{-16}$, banded $m$-march $=$ dense state to $8.2\times10^{-16}$; pole candidate the rank-$8$ Calder\'on polarisation on the $16$ residue classes, documented as a \emph{model}) --- census not a kill: $100.00\%$ of the off-band mass on the mod-$4$ stripes (complement machine zero), stripe count exactly $\lfloor W/4\rfloor=\Theta(W)$ (exponent $1.0000\pm0.0000$) against the true prime comb's $\pi(W)$-like $0.726\pm0.018$; \textbf{the core number $m_{\mathrm{cert}}=12$}: error/margin $3.3\times10^{-16}$ exact ($h=64$--$1500$) and $2.1\times10^{-17}$ certified ($h=1000$--$100{,}000$, \emph{falling} in $h$) against T116's $1.3\times10^{2}$--$1.1\times10^{6}$ \emph{above} the margin; $m=4\to48$ divides the error by $4.7\times10^{8}$ (T116: no decay); $12\in\{8,12,16,24,32\}$ pre-declared $\Rightarrow$ \textsc{matched}, not derived (bar-fragile: $8\le m_{\mathrm{cert}}\le16$ defensible); controls: mod-$3$ also closes ($m=8$) $\Rightarrow$ the driver is \textbf{weight summability}, not comb periodicity; the \emph{true} prime comb \emph{fails} under identical machinery (error/margin $0.16$--$0.27$ rising, $12\times$ state buys $1.69\times$) --- non-vacuity established; sober: \texttt{QEC.SEAM.01} \emph{not} advanced, $m_{\mathrm{cert}}$ partly circular ($16$ channels by hand), model DtN not the raw seam; new: finite-dimensionality visible in a \emph{recursion}, not only a spectrum, with the Weil window as the proved contrast & BOUNDED-STATE & 13/13\\
 \end{xltabular}
 }
 

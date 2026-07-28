@@ -191,8 +191,7 @@ export function TwoDoorsConvergence() {
           rose to 1.8472 over its frozen 1.1926, and M25 is reduced to
           positivity of the pole-free section with nine decades of slack.
           Two irreducibles remain (the word &ldquo;for all&rdquo;, the RH
-          address); T134 (pole_free_floor_probe.py) attacks that pole-free
-          floor. The phase then ran in reverse: the identity block underneath
+          address). The phase then ran in reverse: the identity block underneath
           the map is promoted as load-bearing v542
           (PRIME.MARGIN.IDENT.01, 44 checks — nine per-instance identities and
           theorems, no fit, no graded floor, nothing uniform in the zone
@@ -204,7 +203,24 @@ export function TwoDoorsConvergence() {
           rows: the Hankel matrix v379 tests is, as a matrix of doubles,
           certifiably not positive semidefinite, the mathematical matrix is
           fine, and the exact positive-mixture Gram certificate now hardens
-          that module — marker unchanged.
+          that module — marker unchanged. T134 · POLE.FREE.FLOOR (PARTIAL,
+          21/21) then attacked the pole-free floor and closed its existence
+          half: every Cholesky pivot of the pole-free form is positive on
+          79/79 windows (T119&apos;s negative pivot belonged to the form with
+          the pole), but all six cheap lower-bound routes fail by sign, not
+          size — the nine decades of slack are worthless to them — and the
+          anatomy names the one surviving opening: an M-matrix question,
+          with the lumped Stieltjes comparison S_B = S + L_Δ certified on
+          900/900 blocks and the whitening honestly correcting T131&apos;s
+          diagnosis (the comb dominates the pole in the norm, 4.7–81×; the
+          rest is a localisation statement). T135 · COMB.COMPRESS
+          (BOUNDED-STATE, 13/13) ported the T116 Riccati machinery verbatim
+          to the seam DtN and found the bounded faithful state the Weil
+          window provably lacks — m_cert = 12, from the pre-declared set
+          {'{8, 12, 16, 24, 32}'}, error falling out to h = 1e5 — with the
+          honest caveats stated: the driver is weight summability, the value
+          is partly circular, and QEC.SEAM.01 is not advanced. T136
+          (m_matrix_pair_probe.py) is running at the M-matrix question.
         </p>
       </div>
 

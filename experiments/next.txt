@@ -1,3 +1,97 @@
+# 2026-07-28 (XVII) — Teil 135 (delegiert, Phase „Der volle Beweis", Vertrag COMB.COMPRESS): comb_compressibility_probe.py — **BOUNDED-STATE (MATCHED)** — DIE NAHT HAT DEN BESCHRÄNKTEN ZUSTAND, DEN DAS WEIL-FENSTER BEWEISBAR NICHT HAT. Dritte RÜCKFLUSS-Spur: die T116-Riccati-Maschinerie (Haynsworth-Schur, Rand-Zustand (Σ, r, σ)) VERBATIM auf das Naht-DtN Λ_Σ aus T132/v210 portiert — Bordered-Identität 1.5e-16, der Band-m-Marsch reproduziert den dichten Zustand auf 8.2e-16; Pol-Kandidat = die Rang-8-Calderón-Polarisation (v113) auf den 16 Restklassen, ausdrücklich als MODELL dokumentiert (v210s DtN trägt keinen eigenen Rang-1-Defekt). ZENSUS (kein Kill): 100.00% der Off-Band-Masse sitzt auf den mod-4-Streifen (Komplement Maschinen-Null), Streifenzahl exakt ⌊W/4⌋ = Θ(W) (Fit-Exponent 1.0000 ± 0.0000) gegen den echten Primkamm 0.726 ± 0.018 (π(W)-artig). DIE KERNZAHL: **m_cert = 12** — Fehler/Marge 3.3e-16 exakt (h = 64–1500) und 2.1e-17 zertifiziert (h = 1000–100000, FALLEND in h) — gegen T116s 1.3e2–1.1e6 ÜBER der Marge; die Zustands-Leiter m = 4 → 48 teilt den Fehler durch 4.7e8 (T116: kein Zerfall in m). MATCH: 12 ∈ der vorab deklarierten Menge {8, 12, 16, 24, 32} ⇒ MATCHED, nicht „hergeleitet"; latten-fragil — verteidigbar ist 8 ≤ m_cert ≤ 16. KONTROLLEN: die künstliche mod-3-Naht schließt AUCH (m = 8) ⇒ der kausale Treiber ist GEWICHTS-SUMMIERBARKEIT, nicht Kamm-Periodizität; der ECHTE Primkamm SCHEITERT unter identischer Maschinerie (kein h-uniformer Boden, Fehler/Marge 0.16–0.27 steigend, 12× Zustand kauft nur 1.69×) — Nicht-Vakuität etabliert. NÜCHTERN: QEC.SEAM.01 NICHT vorangebracht; NEU und nicht-zirkulär ist, dass die Endlich-Dimensionalität der Naht erstmals in einer REKURSION sichtbar ist, nicht nur im Spektrum, mit dem Weil-Fenster als bewiesenem Kontrast (der delegierte Lauf stoppte einmal vorzeitig und wurde fortgesetzt; alle Checks aus dem vollständigen Lauf) — 13/13, 24.2s, Sandbox
+# I1 DER PORT IST WÖRTLICH, UND DER ZENSUS IST Θ(W) GEGEN π(W). Die T116-Riccati-Rekursion
+#    läuft unverändert auf Λ_Σ = diag(|k|) + Toeplitz(f_k): die geränderte Pol-Identität
+#    hält auf 1.5e-16, der Band-m-Marsch reproduziert den dichten Zustand auf 8.2e-16 —
+#    dieselben zwei Identitäten, die T116 am Weil-Fenster trug. Der Pol-Kandidat ist die
+#    Rang-8-Calderón-Polarisation (v113) auf den 16 Restklassen, als MODELL etikettiert:
+#    v210s DtN trägt keinen eigenen Rang-1-Defekt, die Polarisation wird dem Operator
+#    ZUGEFÜGT, nicht entnommen. Der Zensus wiederholt T116s Kill-Messung auf der Naht,
+#    und sie ist KEIN Kill: 100.00% der Off-Band-Masse sitzt auf den mod-4-Streifen
+#    (das Komplement ist Maschinen-Null — wie es die exakte Fourier-Stütze
+#    f_k = 4g_k·[k ≡ 0 mod 4] verlangt), und die Streifenzahl wächst exakt wie
+#    ⌊W/4⌋ = Θ(W) (Fit-Exponent 1.0000 ± 0.0000), während sie am echten Primkamm
+#    π(W)-artig wächst (0.726 ± 0.018). Die Naht trägt einen Kamm — aber einen
+#    PERIODISCHEN, eine arithmetische Progression statt der Primzahlen.
+# I2 DIE KERNZAHL IST m_cert = 12, UND SIE FÄLLT MIT DER TIEFE. Auf dem exakten Fenster
+#    h = 64–1500 liegt der Rekursions-Fehler bei 3.3e-16 der Marge (Maschinen-Null); auf
+#    dem zertifizierten Marsch h = 1000–100000 bei 2.1e-17, FALLEND in h — ein
+#    h-uniformer beschränkter treuer Zustand, wo T116 am Weil-Fenster 1.3e2–1.1e6 ÜBER
+#    der Marge saß und 11 von 18 Fenstern brachen. Die Zustands-Leiter m = 4 → 48 teilt
+#    den Fehler durch 4.7e8 (T116: KEIN Zerfall in m). Der Match ist ehrlich etikettiert:
+#    12 liegt in der VORAB deklarierten Look-Elsewhere-Menge {8, 12, 16, 24, 32} (die
+#    Suchleiter enthält fünf Nicht-LEE-Werte, ein Treffer trägt also Information) ⇒
+#    Verdikt MATCHED, nicht „hergeleitet"; und der Wert ist latten-fragil — gegen die
+#    deklarierten Latten verteidigbar ist nur das Band 8 ≤ m_cert ≤ 16.
+# I3 DIE KONTROLLEN BENENNEN DEN TREIBER, UND DIE NÜCHTERNE LISTE STEHT DANEBEN. Die
+#    künstliche mod-3-Naht schließt AUCH (m = 8): der kausale Treiber ist die
+#    GEWICHTS-SUMMIERBARKEIT der Kamm-Gewichte, NICHT die mod-4-Periode als solche —
+#    die Level-1-Vorhersage (Floquet: Zustand ~ Periode) ist damit in ihrer Begründung
+#    korrigiert, nicht in ihrem Befund. Der ECHTE Primkamm SCHEITERT unter identischer
+#    Maschinerie (kein h-uniformer Boden, Fehler/Marge 0.16–0.27 und steigend, 12× mehr
+#    Zustand kauft nur Faktor 1.69) — die Nicht-Vakuität ist etabliert: dieselbe
+#    Rekursion trennt die beiden Kämme. NÜCHTERN, dreifach: (a) QEC.SEAM.01 ist NICHT
+#    vorangebracht — der Treiber ist nicht die Periode; (b) m_cert ist teils zirkulär —
+#    die 16 Kanäle sind per Hand gesetzt; (c) das ist das Modell-DtN, nicht die rohe
+#    RP-Naht. Was NEU und nicht-zirkulär bleibt: die Endlich-Dimensionalität der Naht
+#    ist erstmals in einer REKURSION sichtbar (nicht nur im Spektrum), mit dem
+#    Weil-Fenster als bewiesenem Kontrast.
+# Serie (XII)–(CXLVI): 135 Proben, 3386/3386 Checks Sandbox + v535–v542 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Haynsworth 1968, Riccati/
+# Transfer-Operator, Floquet/Block-Toeplitz, Calderón — gerichtet zitiert); Sandbox ohne
+# Ledger-Zeile; QEC.SEAM.01 ausdrücklich NICHT vorangebracht (Treiber ist die
+# Gewichts-Summierbarkeit, nicht die Periode; die 16 Kanäle sind per Hand gesetzt).
+
+# 2026-07-28 (XVI) — Teil 134 (delegiert, Phase „Der volle Beweis", Vertrag POLE.FREE.FLOOR): pole_free_floor_probe.py — **PARTIAL** (FLOOR-CERTIFIED-PER-WINDOW / CLASS-IDENTIFIED / MASS-VACUOUS-METRIC-FIXED) — DER BODEN WAR NIE EIN EXISTENZ-PROBLEM — JEDE BILLIGE ROUTE SCHEITERT AM VORZEICHEN, NICHT AN DER GRÖSSE. Die drei Rest-Posten von T131, und nichts sonst. (1) EXISTENZ GESCHLOSSEN: alle Cholesky-Pivots der POLFREIEN Form positiv auf 79/79 Fenstern (T119s negativer Pivot gehörte zur Form MIT Pol), per-Fenster-Cholesky-Zertifikat R4 79/79 und R2b 68/68 — ABER alle sechs billigen Boden-Routen scheitern am VORZEICHEN, nicht an der Größe: Dirichlet+Gershgorin 0/68, global 0/68, Jacobi-Dominanz 0/68, Ostrowski 0/68, Pfad-Vergleich infeasible (Congestion bis 4.7e5) — die neun Dekaden Luft von T131 sind für sie WERTLOS. Anatomie: die gute Hälfte diag(w) + L_N ist definit 68/68 (λ_min = 0.13–3.06 = 8–85000× über Ziel); der GESAMTE Verlust ist der positive-Off-Diagonal-Laplacian L_P an den langen Lags (λ_max(L_P)/μ₁ bis 4.7e5, k_eff = 24–397 — NICHT niedrig-rangig, T131s Rang-1-Trick generalisiert nicht); R5 gemessen: Kompression UND Schur liegen ÜBER λ_min auf 56/56 — keine Grob-Rekursion kann je eine Unterschranke geben; Degradation cert ~ D^2.26 (Fit). (2) S⁻¹ > 0 HAT DIE KLASSE: der naive Split bleibt nur 659/900 definit, die GELUMPTE Stieltjes-Vergleichsmatrix S_B = S + L_Δ ist Stieltjes UND definit per Konstruktion, ρ(Jacobi) = 0.709–0.990 < 1 auf 900/900 ⇒ S_B⁻¹ = konvergente nichtnegative Reihe (diskrete Green-Funktion, M-Matrix-Grund); naive Killing-Lesart widerlegt (Zeilensummen negativ 900/900); Neumann-Margin als Majorante 558/558 (a-priori-Deckung 26.9%); eintragsweise Positivität JETZT ZERTIFIZIERT a posteriori 900/900 (Residuum ≤ 2.6e-11 gegen kleinste Einträge ~1e-2); RP auf dem Boden-Eigenraum als Abschwächung WIDERLEGT (535/900). (3) M18 GEWHITENT, Diagnose-Korrektur an T131: der 2.18-Metrik-Mismatch war NICHT der dominante Verlust — der Kamm dominiert den Pol in der Norm (4.7–81×, für T131 unsichtbar wegen Zwei-Metriken-Vergleich); mit exaktem Normierer erstmals ENDLICHE Schranke 2.81–5.04 (scharf 2.52–4.26) gegen Latte 0.50 — Faktor 5.6–10, nicht Größenordnungen; σ_b = 0.77–1.00 erschöpft das Budget allein ⇒ der Rest ist eine LOKALISIERUNGS-Aussage. Promotions-Liste 15 Posten (9 + 6 neu); Rest-Liste 5 Punkte — 21/21, 14.6s, 2263 Zeilen, Sandbox
+# H1 DIE EXISTENZ SCHLIESST, UND DIE ANATOMIE IST EINE VORZEICHEN-AUSSAGE. Der Boden ist
+#    NIE ein Existenz-Problem: alle Cholesky-Pivots der polfreien Form sind positiv auf
+#    79/79 Fenstern — T119s berühmter negativer Pivot gehörte zur Form MIT Pol, nicht zur
+#    polfreien —, und das per-Fenster-Cholesky-Zertifikat trägt R4 auf 79/79 und R2b auf
+#    68/68. ABER die Routen-Tabelle ist einstimmig: alle sechs billigen Unterschranken-
+#    Routen scheitern am VORZEICHEN, nicht an der Größe (Dirichlet+Gershgorin 0/68,
+#    global 0/68, Jacobi-Dominanz 0/68, Ostrowski 0/68, Pfad-Vergleich infeasible mit
+#    Congestion bis 4.7e5) — die neun Dekaden Luft, die T131 maß, sind für sie wertlos,
+#    weil sie an einem Vorzeichen sterben, das keine Marge heilt. Die Anatomie benennt
+#    den Täter: die gute Hälfte diag(w) + L_N des T126-Dirichlet-Splits ist definit auf
+#    68/68 (λ_min = 0.13–3.06, das ist 8–85000× über dem Ziel); der GESAMTE Verlust ist
+#    der positive-Off-Diagonal-Laplacian L_P an den langen Lags — λ_max(L_P)/μ₁ bis
+#    4.7e5, effektiver Rang k_eff = 24–397, also NICHT niedrig-rangig: T131s
+#    Rang-1-Trick (Sherman-Morrison) generalisiert nicht. Und R5 ist gemessen:
+#    Kompression UND Schur liegen ÜBER λ_min auf 56/56 Paaren — keine Grob-Rekursion
+#    kann hier je eine Unterschranke geben. Die Degradation des zertifizierten Bodens
+#    folgt cert ~ D^2.26 (Fit, als Fit etikettiert).
+# H2 S⁻¹ > 0 BEKOMMT SEINE KLASSE — DER M-MATRIX-GRUND. Der naive Split des
+#    Rand-Schur-Blocks bleibt nur auf 659/900 definit; was trägt, ist die GELUMPTE
+#    Stieltjes-Vergleichsmatrix S_B = S + L_Δ (die positiven Off-Diagonalen auf die
+#    Diagonale gelumpt): S_B ist Stieltjes UND definit PER KONSTRUKTION, und
+#    ρ(Jacobi) = 0.709–0.990 < 1 auf 900/900 Blöcken ⇒ S_B⁻¹ ist eine konvergente
+#    nichtnegative Neumann-Reihe — die diskrete Green-Funktion, der M-Matrix-Grund der
+#    Vorzeichenkonstanz, die T131 nur per Perron protokollieren konnte. Die naive
+#    Killing-Lesart ist widerlegt (Zeilensummen negativ auf 900/900), die Neumann-Margin
+#    trägt als Majorante auf 558/558 (a-priori-Deckung 26.9%), und die eintragsweise
+#    Positivität von S⁻¹ ist JETZT ZERTIFIZIERT a posteriori auf 900/900 (Residuum
+#    ≤ 2.6e-11 gegen kleinste Einträge ~1e-2 — acht Dekaden Abstand). Die Abschwächung
+#    „RP nur auf dem Boden-Eigenraum" ist WIDERLEGT (535/900): die volle Aussage ist
+#    nötig, die schwächere falsch.
+# H3 M18 GEWHITENT — DIE DIAGNOSE-KORREKTUR AN T131, UND DIE ZWEI LISTEN. Der
+#    2.18-Metrik-Mismatch war NICHT der dominante Verlust: in der ehrlichen (einen)
+#    Norm dominiert der KAMM den Pol um 4.7–81× — für T131 unsichtbar, weil dessen
+#    Vergleich zwei Metriken mischte. Mit exaktem Normierer bekommt die Massen-Schranke
+#    erstmals eine ENDLICHE Zahl: 2.81–5.04 (scharf 2.52–4.26) gegen die Latte 0.50 —
+#    Faktor 5.6–10, nicht mehr Größenordnungen; und σ_b = 0.77–1.00 erschöpft das
+#    Budget ALLEIN ⇒ was fehlt, ist eine LOKALISIERUNGS-Aussage über den schlechten
+#    Pencil-Unterraum, keine weitere Messung. Die Promotions-Liste wächst von 9 auf
+#    15 Posten (neu: das per-Fenster-Cholesky-Zertifikat der polfreien Form, die
+#    gelumpte Stieltjes-Konstruktion, die ρ(Jacobi)<1-Reihe, die a-posteriori-
+#    S⁻¹-Zertifizierung, die Zeilensummen-Widerlegung, die gewhitente Massen-Identität);
+#    die Rest-Liste hat 5 Punkte: (1) D-Uniformität des Bodens via M-Matrix-Frage,
+#    (2) Exponent + n_run zonen-uniform, (3) ρ(K) a-priori statt gemessen,
+#    (4) M17-Lokalisierung, (5) der Quantor.
+# Serie (XII)–(CXLV): 134 Proben, 3373/3373 Checks Sandbox + v535–v542 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Cholesky, Gershgorin, Ostrowski 1937,
+# Stieltjes/M-Matrizen (Varga), Neumann-Reihe, Perron–Frobenius — gerichtet zitiert);
+# Sandbox ohne Ledger-Zeile; die Latte 0.50 wird NICHT verschoben, der Fit D^2.26 bleibt
+# als Fit etikettiert.
+
 # 2026-07-28 (XV) — Teil 133 (delegiert, Phase „Der volle Beweis", Vertrag CERT.FLOOR): cert_floor_probe.py — **MIXED** — DAS ZERTIFIKAT-WERKZEUG PRÜFT DIE EIGENE SUITE — UND ÄNDERT EIN LASTTRAGENDES MODUL. Zweite RÜCKFLUSS-Probe: die verschobene Cholesky-Zertifikat-Maschinerie (Wilkinson 1968 / Higham 2002 Thm 10.3–10.4 / Rump 2006, η_chol = 8·c_h(n)·u·‖A‖_∞ plus η_entry für fp-ausgewertete Kerne) auf die RP/PSD-Zeilen des Ledgers; die Maschinerie selbst zuerst auf **840 Kontrollen** validiert (0 Verletzungen auf 160 zertifizierenden Kontrollen, Schärfe Median 1.000/max 1.008; 0 Falsch-Zertifikate auf 200 indefiniten; 0 Falsch-Feuer auf 400 Richtungen). BEFUND: die 10×10-Hankel, die v379_seam_s3_rp.py baut UND testet, ist **als Double-Matrix ZERTIFIZIERT NICHT PSD** — zertifizierte negative Richtung xᵀM̂x = −7.7506e-18 bei 60 Stellen (ebenso n = 14: −4.45e-17, n = 20: −7.77e-17) — und die Modul-Toleranz min_eig > −1e-10 lässt sie DURCH. Die Ursache ist bepreist, nicht geraten: cond ≈ 1.770e18 gegen die Zertifizierbarkeits-Decke κ_ceil(10) = 1.024e13, kein fp-Cholesky der Modul-Matrix läuft durch (η_chol = 2.0e-13, η_entry = 7.6e-12 dominiert jeden fp-Boden), 16 von 17 Fenster-Varianten MEASUREMENT-ONLY, und das blinde Band ist explizit ausgestellt (eine Matrix mit ZERTIFIZIERTER negativer Richtung xᵀAx = −1.0e-11 passiert den Modul-Test). Die MATHEMATISCHE Matrix ist dagegen fein: bei 40 Stellen zertifizierter Boden λ_min ≥ 2.662e-25, während das reine RUNDEN der Einträge auf Doubles die Matrix um 3.542e-17 bewegt — acht Größenordnungen mehr (Präzisions-Leiter für Headroom ≥ 10: 25/40/70/70 Stellen bei n = 6…20). **DIE EXAKTE RETTUNG BRAUCHT KEINE PRÄZISION**: M_ij = Σ_k w_k e^{−ε_k(τ_i+τ_j)} = Vᵀdiag(w)V mit w_k = 1/1600 > 0 ist ein POSITIVES MIXTUR-GRAM, also M ⪰ 0 in EXAKTER Arithmetik ohne jede Latte (symbolisch verifiziert) — genau die Route, die v171 für seine eigene Hankel schon nimmt. Andere Zeilen sauber: QFT.OSMOMENT.01/v171 exakt Rang-3-Vandermonde-Gram (λ_min = 0 EXAKT für N > 3, der numerische Nebencheck stützt nichts), SEAM.CLOCK.SILVER.01/v527 (= WOIT.THETA.FREE.01/v519 R3.1) CERT-UP mit Headroom ≥ 6e5, N = 8/16 sogar in binary64. Empfehlungs-Tabelle: **KEINE Marker-Bewegung** ([E] bleibt) — Methode und Wortlaut. → IN DIESEM COMMIT UMGESETZT: v379 asserted jetzt die exakte Mixtur-Identität + SOS-Zertifikat (Eigenwert-Check bleibt, als MESSUNG etikettiert), Ledger-Zeile SEAM.S3.RP.01 umformuliert — 23/23, 1.4s, Sandbox
 # G1 DIE STÄRKSTE FORM DES BEFUNDS IST KEIN LATTEN-ARGUMENT. Nicht „der Boden ist nicht
 #    zertifizierbar", sondern: die Matrix, die das Modul TATSÄCHLICH TESTET, ist

@@ -108,7 +108,8 @@ export type PrimeFrontVerdict =
   | "THREE-OF-FOUR"
   | "KAPPA-WILD"
   | "SUPPLY-PARTIAL"
-  | "SPECTRUM-ONLY";
+  | "SPECTRUM-ONLY"
+  | "BOUNDED-STATE";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -132,6 +133,28 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-28",
+    part: 135,
+    title:
+      "The seam DtN admits a bounded faithful state (m_cert = 12, from the pre-declared set, error falling out to h = 1e5) where the Weil window provably has none — finite-dimensionality visible in a recursion for the first time, not only in a spectrum, with the honest caveats stated",
+    verdict: "BOUNDED-STATE",
+    summary:
+      "T135 (BOUNDED-STATE, MATCHED, 13/13) — contract COMB.COMPRESS, the third reverse-flow trace: does the T116 boundary-state machinery, which FAILED at the Weil window because the off-band mass sits in the prime comb, SUCCEED on the seam Dirichlet-to-Neumann operator of T132/v210, whose comb is an arithmetic progression? The port is verbatim: the T116 Riccati recursion runs unchanged on the seam operator (bordered pole identity 1.5e-16, the banded m-march reproducing the dense state to 8.2e-16), with the pole candidate the rank-8 Calderón polarisation of v113 on the 16 residue classes — documented as a MODEL, since v210's DtN carries no rank-one defect of its own. The census is not a kill: 100.00% of the off-band mass sits on the mod-4 stripes (the complement is machine zero, as the exact Fourier support demands), and the stripe count grows exactly like floor(W/4) — linear in the window, fitted exponent 1.0000 ± 0.0000 — where the true prime comb grows like pi(W) (0.726 ± 0.018). The core number: m_cert = 12 — the recursion error is 3.3e-16 of the margin exactly (h = 64–1500) and 2.1e-17 certified on the deep march (h = 1000–100000, FALLING in h), against T116's 1.3e2–1.1e6 ABOVE the margin at the Weil window; growing the state from m = 4 to 48 divides the error by 4.7e8, where T116 saw no decay at all. The match is honestly labelled: 12 lies in the pre-declared look-elsewhere set {8, 12, 16, 24, 32} (the search ladder contains five non-member values), so the verdict is MATCHED, not 'derived' — and the value is bar-fragile, with only the band 8 ≤ m_cert ≤ 16 defensible. The controls name the driver: an artificial mod-3 seam ALSO closes (m = 8), so the causal driver is WEIGHT SUMMABILITY, not the comb period as such; and the TRUE prime comb FAILS under identical machinery (no h-uniform floor, error/margin 0.16–0.27 and rising, 12× more state buying only 1.69×) — which establishes non-vacuity: the same recursion separates the two combs. Sober, three times over: QEC.SEAM.01 is NOT advanced (the driver is not the period), m_cert is partly circular (the 16 channels are set by hand), and this is the model DtN, not the raw reflection-positive seam. What is new and non-circular: the finite-dimensionality of the seam is visible in a RECURSION for the first time, not only in a spectrum, with the Weil window as the proved contrast. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "comb_compressibility_probe.py",
+  },
+  {
+    date: "2026-07-28",
+    part: 134,
+    title:
+      "The floor was never an existence problem — every cheap route fails by sign, not size, and the anatomy names the one surviving opening (an M-matrix question); the inverse-positivity gets its class (lumped Stieltjes comparison, certified on 900/900), and the whitening honestly corrects T131's diagnosis",
+    verdict: "PARTIAL",
+    summary:
+      "T134 (PARTIAL, 21/21) — contract POLE.FREE.FLOOR: the three items T131 left on the rest list, and nothing else; sub-verdicts FLOOR-CERTIFIED-PER-WINDOW / CLASS-IDENTIFIED / MASS-VACUOUS-METRIC-FIXED. (1) Existence closes, and the anatomy is a SIGN statement. The floor is never an existence problem: every Cholesky pivot of the pole-free form is positive on 79/79 windows (T119's famous negative pivot belonged to the form WITH the pole), and the per-window Cholesky certificate carries R4 on 79/79 and R2b on 68/68. But the route table is unanimous: all six cheap lower-bound routes fail by SIGN, not size (Dirichlet plus Gershgorin 0/68, global 0/68, Jacobi dominance 0/68, Ostrowski 0/68, path comparison infeasible with congestion up to 4.7e5) — the nine decades of slack T131 measured are worthless to them, because they die at a sign no margin can heal. The anatomy names the culprit: the good half diag(w) + L_N of the T126 Dirichlet split is definite on 68/68 (λ_min = 0.13–3.06, which is 8–85,000× above the target); the ENTIRE loss is the positive-off-diagonal Laplacian L_P at the long lags — λ_max(L_P)/μ₁ up to 4.7e5 at effective rank 24–397, so it is not low-rank and T131's rank-one trick does not generalise. And R5 is measured: compression AND Schur sit ABOVE λ_min on 56/56 pairs, so no coarse recursion can ever supply a lower bound here; the certified floor degrades like D^2.26 (a fit, labelled a fit). (2) The inverse-positivity gets its CLASS. The naive split stays definite on only 659/900 blocks; what carries is the LUMPED Stieltjes comparison matrix S_B = S + L_Δ, which is Stieltjes AND positive definite by construction, with Jacobi spectral radius 0.709–0.990 < 1 on 900/900 — so S_B⁻¹ is a convergent nonnegative Neumann series, a discrete Green function: the M-matrix ground of the sign constancy that T131 could only record via Perron. The naive killing reading is refuted (row sums negative on 900/900), the Neumann margin is a valid majorant on 558/558 (a-priori coverage 26.9%), entrywise positivity of S⁻¹ is NOW CERTIFIED a posteriori on 900/900 (residual ≤ 2.6e-11 against smallest entries ~1e-2), and the weakening 'RP on the floor eigenspace only' is REFUTED (535/900) — the full statement is needed, the weaker one is false. (3) The whitening honestly corrects T131's diagnosis: the 2.18 metric mismatch was NOT the dominant loss — in the one honest norm the comb dominates the pole by 4.7–81×, invisible to T131 because its comparison mixed two metrics. With the exact normaliser the mass bound gets a FINITE number for the first time: 2.81–5.04 (sharp 2.52–4.26) against the bar 0.50 — a factor 5.6–10, no longer orders of magnitude — and σ_b = 0.77–1.00 exhausts the budget alone, so what is missing is a LOCALISATION statement about the bad pencil subspace, not more measurement. The promotion list grows from nine to fifteen items; the remaining list has five points: D-uniformity of the floor via the M-matrix question, a zone-uniform exponent and run count, ρ(K) a priori, the M17 localisation, and the quantifier. T136 (M.MATRIX.PAIR, m_matrix_pair_probe.py) is running at exactly that M-matrix question. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "pole_free_floor_probe.py",
+  },
   {
     date: "2026-07-28",
     part: 0,

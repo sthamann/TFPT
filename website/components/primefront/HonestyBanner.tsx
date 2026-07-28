@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3352/3352 sandbox checks —
+        (“the full proof”, T126+) is now open with 3386/3386 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -55,7 +55,16 @@ export function HonestyBanner() {
         the gap in the killing measure) and a certificate audit found that the
         Hankel matrix v379 tests is, as a matrix of doubles, certifiably not
         positive semidefinite, which hardened that module to an exact
-        positive-mixture Gram certificate (T133 · MIXED). What remains
+        positive-mixture Gram certificate (T133 · MIXED). T134 (PARTIAL) then
+        closed the existence half of the pole-free floor — every Cholesky
+        pivot positive on 79/79 windows — while all six cheap lower-bound
+        routes fail by sign, not size, naming one surviving opening (an
+        M-matrix question, with the lumped Stieltjes comparison certified on
+        900/900); and T135 (BOUNDED-STATE) found that the seam DtN admits a
+        bounded faithful state (m_cert = 12, from the pre-declared set) where
+        the Weil window provably has none — with the honest caveats that the
+        driver is weight summability, the value is partly circular, and
+        QEC.SEAM.01 is not advanced. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann
