@@ -32,7 +32,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with the open boundary λ* (v540), the matching-lemma/transport-ledger package (v541), and the induction sprint T102–T125 — a reduction cascade from one matrix inequality down to one sign and one accounting convention, assembled end to end in the finale, with certified margin-free steps to zone 155,921. Series complete at 125 parts; phase 2 (the full proof, T126+) is open — the seam architecture is finished, both remaining inequalities are proof-shaped, three of the four resulting points stand at their preregistered bars, the kappa law falls once while the curvature theorem underneath it stands on all 436 transports (T129), and the graded-to-uniform bridge stands as an identity while the curvature bound is reduced to one exponent (T130). 130 parts, 3283 sandbox checks. Not RH evidence.",
+    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with the open boundary λ* (v540), the matching-lemma/transport-ledger package (v541), and the induction sprint T102–T125 — a reduction cascade from one matrix inequality down to one sign and one accounting convention, assembled end to end in the finale, with certified margin-free steps to zone 155,921. Series complete at 125 parts; phase 2 (the full proof, T126+) is open — the seam architecture is finished, both remaining inequalities are proof-shaped, three of the four resulting points stand at their preregistered bars, the kappa law falls once while the curvature theorem underneath it stands on all 436 transports (T129), the graded-to-uniform bridge stands as an identity while the curvature bound is reduced to one exponent (T130), and the self-supply loop is built one number short of closed — the epsilon-to-floor sandwich and Perron sign constancy are theorems, M25 reduces to the pole-free section (T131). 131 parts, 3308 sandbox checks. Not RH evidence.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified: v535–v541. Sandbox T102–T125: one matrix inequality compressed to one sign plus one accounting convention and assembled end to end; phase 2 (T126+) open, the bridge stands as an identity and the curvature bound is reduced to one exponent (T130); 3283 sandbox checks. Residual: I5 — not almost-RH.",
+      "Research diary of the prime / zeta line. Machine-verified: v535–v541. Sandbox T102–T125: one matrix inequality compressed to one sign plus one accounting convention and assembled end to end; phase 2 (T126+) open, the bridge stands as an identity (T130) and the self-supply sandwich is a theorem (T131); 3308 sandbox checks. Residual: I5 — not almost-RH.",
   },
 };
 
@@ -94,7 +94,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–130 · 3283 sandbox checks
+            Research diary · Teile 11–131 · 3308 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -2009,9 +2009,20 @@ export default function PrimeFrontPage() {
           its frozen shape band on 13/545 disjoint test transports and is
           reduced to a uniform bound on one exponent; one new small gap is
           named (M25, a certified floor for the old window block) with an
-          elegant candidate: the chain&apos;s own telescope supplies it. Two
+          elegant candidate: the chain&apos;s own telescope supplies it. T131
+          (SUPPLY-PARTIAL, 25/25) then tested exactly that candidate and
+          built the self-supply loop, one number short of closed: the
+          epsilon-to-floor secular sandwich is a theorem (sharp to ~1.3,
+          sign half an equivalence via Albert) that replaces the Lanczos
+          estimate on all 84 bridge pairs — exposing that the old Ritz
+          value overestimated the floor by up to 7.9× — sign constancy is
+          proved via Perron–Frobenius on the inverse (575/575), the
+          one-hump honestly broke at depth, and M25 reduces to positivity
+          of the pole-free section with nine decades of slack. Two
           irreducibles remain (the word &ldquo;for all&rdquo;, the RH
-          address); T131 is running. Sandbox; not RH evidence.
+          address); T134 attacks the pole-free floor while the reverse-flow
+          probes T132/T133 carry the certified toolkit back to the theory
+          side. Sandbox; not RH evidence.
         </p>
       </DiarySection>
 
@@ -2033,7 +2044,7 @@ export default function PrimeFrontPage() {
             level="Near"
             badge="sandbox"
             title="I5 geography complete; the induction compressed to one sign plus one convention, and assembled end to end"
-            body="After 130 probes (3283/3283 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete; and the induction that would carry I5 is compressed from one matrix inequality (T104) to a sign the coarse-to-fine recursion already carries plus one declared accounting convention (T124/T125) — with the relay mechanism certified step by step, 400/400 rungs, a single certified step at zone 155,921 (T115), and the finale assembling the whole chain on 52 zones, its load-bearing spine 96.2% identity or Cholesky certificate with the Harnack pair no longer in it (T125). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH; what is missing for any infinite statement is uniformity in the zone index — now phase 2 of the diary (T126+), where the seam architecture is finished, both remaining inequalities are proof-shaped, three of the four resulting points stand at their preregistered bars (T128), the kappa law falls once while the curvature theorem underneath it stands on all 436 transports (T129), and the graded-to-uniform bridge stands as an identity carrying both deep seams while the curvature bound is reduced to one exponent (T130) — two irreducibles remain. The compression locates the difficulty; it does not remove it. Not RH evidence."
+            body="After 131 probes (3308/3308 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete; and the induction that would carry I5 is compressed from one matrix inequality (T104) to a sign the coarse-to-fine recursion already carries plus one declared accounting convention (T124/T125) — with the relay mechanism certified step by step, 400/400 rungs, a single certified step at zone 155,921 (T115), and the finale assembling the whole chain on 52 zones, its load-bearing spine 96.2% identity or Cholesky certificate with the Harnack pair no longer in it (T125). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH; what is missing for any infinite statement is uniformity in the zone index — now phase 2 of the diary (T126+), where the seam architecture is finished, both remaining inequalities are proof-shaped, three of the four resulting points stand at their preregistered bars (T128), the kappa law falls once while the curvature theorem underneath it stands on all 436 transports (T129), the graded-to-uniform bridge stands as an identity carrying both deep seams while the curvature bound is reduced to one exponent (T130), and the self-supply loop is built one number short of closed — the epsilon-to-floor sandwich and Perron sign constancy are theorems, and M25 reduces to positivity of the pole-free section with nine decades of slack (T131) — two irreducibles remain. The compression locates the difficulty; it does not remove it. Not RH evidence."
           />
           <MeaningLevel
             level="Big if"
@@ -2079,7 +2090,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 text-sm text-slate-500 sm:px-6 lg:px-8">
           Numbers and verdicts are taken from{" "}
           <code className="font-mono text-slate-400">experiments/next.txt</code>{" "}
-            (2026-07-23…28 diary, Teile 11–130) and the promoted modules{" "}
+            (2026-07-23…28 diary, Teile 11–131) and the promoted modules{" "}
           <code className="font-mono text-slate-400">
             verification/v535_*.py
           </code>{" "}
@@ -2301,7 +2312,7 @@ function BigPictureSection() {
               tone="sky"
             />
             <BigPictureStat
-              term="3283"
+              term="3308"
               desc="sandbox checks, all passing"
               tone="amber"
             />
@@ -2379,7 +2390,7 @@ function ProgramStatusCallout() {
         Strongest current sentence
       </p>
       <p className="mt-3 font-serif text-lg leading-relaxed text-violet-50 sm:text-xl">
-        After 130 probes and seven promoted modules, what remains TFPT-specific
+        After 131 probes and seven promoted modules, what remains TFPT-specific
         is exactly one object: I5 — and the induction that would carry it is now
         a conditional theorem, assembled end to end on 52 zones (T125), whose
         load-bearing spine is 96.2% identity or Cholesky certificate, whose only
@@ -2388,10 +2399,14 @@ function ProgramStatusCallout() {
         proof-shaped (T127), three of the four resulting points stand at their
         preregistered bars (T128 · THREE-OF-FOUR), the kappa law that T128
         preregistered falls once on 331 fresh transports while the theorem
-        underneath it stands (T129 · KAPPA-WILD), and the graded-to-uniform
+        underneath it stands (T129 · KAPPA-WILD), the graded-to-uniform
         bridge stands as an identity — 84 pairs, zero overshoot, both deep
         seams carried to positive fine floors — while the curvature bound is
-        reduced to a uniform bound on one exponent (T130 · ONE-OF-TWO).
+        reduced to a uniform bound on one exponent (T130 · ONE-OF-TWO), and
+        the self-supply loop is built one number short of closed: the
+        epsilon-to-floor sandwich and sign constancy via Perron–Frobenius
+        are theorems, and M25 reduces to positivity of the pole-free
+        section with nine decades of slack (T131 · SUPPLY-PARTIAL).
       </p>
       <ul className="mt-4 space-y-2 text-xs leading-relaxed text-slate-400">
         <li>
@@ -2525,8 +2540,26 @@ function ProgramStatusCallout() {
           <span className="font-mono text-slate-300">
             self_supply_probe.py
           </span>
-          ) is running; the v542 promotion of the narrow identity module is
-          pending.
+          , SUPPLY-PARTIAL, 25/25) then tested exactly that candidate and
+          built the self-supply loop, one number short of closed: the
+          epsilon-to-floor secular sandwich is a theorem — sharp to a
+          factor ~1.3, with the sign half an equivalence (Albert 1969) —
+          that replaces the Lanczos estimate on all 84 bridge pairs with
+          zero brackets lost and exposes that the old Ritz value
+          overestimated λ_min(X) by up to 7.9×; sign constancy became a
+          theorem via Perron–Frobenius on S⁻¹ (entrywise positive
+          575/575); the one-hump honestly broke at depth (530/575, the
+          certified sag majorant replaces it) and S* rose to 1.8472 over
+          its frozen 1.1926; M17 assembled but vacuous, with the loss
+          attributed to the U-metric mismatch; M25 is REDUCED-TO-POLE-FREE
+          with nine decades of slack. T134 (POLE.FREE.FLOOR,{" "}
+          <span className="font-mono text-slate-300">
+            pole_free_floor_probe.py
+          </span>
+          ) attacks that floor; the first reverse-flow probes T132
+          (BD.SEAM) and T133 (CERT.FLOOR) carry the certified toolkit back
+          to the theory side; the v542 promotion of the narrow identity
+          module is pending.
         </li>
       </ul>
     </aside>
@@ -2667,7 +2700,7 @@ function I5GeographyCallout() {
       </p>
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
         I5 remains ⟺ RH; the geography locates where any attack must work, it
-        does not perform one. 2428/2428 sandbox checks at T101 (3283/3283 today).
+        does not perform one. 2428/2428 sandbox checks at T101 (3308/3308 today).
         This is not RH evidence.
       </p>
     </aside>

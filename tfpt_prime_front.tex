@@ -256,7 +256,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots130$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots131$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -264,10 +264,11 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T130: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T131: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
-exponent); Section~\ref{sec:status} is the status statement.
+exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
+the Perron sign theorem); Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
 \section{Motivation: why a compiler meets the primes}\label{sec:motivation}
@@ -2955,7 +2956,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T130)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T131)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -3573,11 +3574,102 @@ under the cap at all ($q=256$, $m/h=0.0042$ --- far below the calibrated range),
 two at no merge factor $q\le2048$.
 \end{keybox}
 
-\noindent T131 (\texttt{self\_supply\_probe.py}, contract \texttt{SELF.SUPPLY}) is running:
-the self-supply of $\lambda_{\min}(X_{\mathrm{fine}})$ through the chain's own telescope
-$\varepsilon$ floor (does the induction supply itself?), the hardening of the four M22
-properties, the M17 composition, and a map V6 with the final promotion list; after it, the
-v542 promotion of the narrow identity module is pending.
+\noindent T131 (\texttt{self\_supply\_probe.py}, contract \texttt{SELF.SUPPLY}, $25/25$,
+verdict \textsc{supply-partial}) then tested exactly that candidate --- the self-supply of
+$\lambda_{\min}(X_{\mathrm{fine}})$ through the chain's own telescope $\varepsilon$ floor,
+the hardening of the four M22 properties, the M17 composition, and a map V6 with the final
+promotion list --- and the answer is: \emph{the self-supply loop is built, one number short
+of closed}. The remainder of this section is that part.
+
+\subsection{The secular sandwich: the self-supply becomes a theorem (T131)}
+The $\varepsilon\to\lambda_{\min}$ chain is no longer a candidate but a \emph{theorem},
+derived from the secular equation of the rank-one downdate (Sherman--Morrison):
+\[
+\frac{\varepsilon}{\|u\|^{2}+\varepsilon/\mu_{1}}
+\;\le\; \lambda_{\min}(Q) \;\le\; \frac{\varepsilon}{\|u\|^{2}},
+\qquad
+\varepsilon>0 \ \wedge\ A\succ0 \iff \lambda_{\min}(Q)>0 ,
+\]
+with $\mu_{1}=\lambda_{\min}(A)$ --- the upper half is convexity of the secular function,
+the lower half the Sherman--Morrison denominator, and the sign half is an
+\emph{equivalence} (Albert 1969). On $10$ dense windows ($h=26$--$434$, $n=3$--$31$):
+\textbf{zero violations}, predicted relative width $1+\varepsilon/(\mu_{1}\|u\|^{2})
+= 1.2663$--$1.3894$, and the true value sits at $1.06$--$1.31\times$ the lower bound
+(median $1.22$) --- the bound is not merely valid, it is \emph{sharp}. The $\varepsilon$
+side is supplied \emph{without} a fine factorisation: the same C\'ea/Strang defect that
+carried the bridge carries $\varepsilon$ (a CG-tightened certified lower bound), valid on
+$10/10$ and retaining $1.0000$ of the true $\varepsilon$. Two side findings, both named:
+\emph{(a)} the \textbf{direction obstruction} --- the mirror rung lacks a Loewner
+\emph{minorant}, $T(\ell)$ is indefinite on $4/4$ windows ($\min\ell<0$ wherever the lag
+symbol dips: the same indefiniteness that killed the Szeg\H{o} route), so the telescope
+runs coarse-from-fine only; \emph{(b)} a \textbf{correction to T130}: the Lanczos Ritz
+value overestimates $\lambda_{\min}(X)$ by a factor of up to $\mathbf{7.9}$ --- it is an
+upper bound by construction (Rayleigh--Ritz), so T130's conditional hung on a number that
+is systematically \emph{too large}; a chain floor below the Lanczos value is not a loss but
+the difference between an estimate and a bound. The bridge test: on \textbf{84 bridge pairs
+the chain floor replaces the Lanczos floor with zero brackets lost} (bar $0$, declared),
+retaining $0.766$--$1.059$ (median $0.875$) against the genuine certified Cholesky floor;
+\textbf{both deep seams are chain-positive} ($n=127$: $\varepsilon\ge2.63\times10^{-7}\to$
+floor $1.08\times10^{-6}$, $\lambda_f=+0.2255$; $n=256$: $3.83\times10^{-8}\to
+2.52\times10^{-7}$, $\lambda_f=+0.2614$); and the residual input is robust --- $\mu_{1}$
+may be underestimated by \textbf{nine decades} before the floor dies, because $\mu_{1}$
+enters only as a correction. \textbf{M25 is thereby reduced-to-pole-free}: what was
+``certify $\lambda_{\min}$ of the near-singular inner block at $h=5694$'' is now ``certify
+positivity of the \emph{pole-free} odd Toeplitz--Hankel section, with any floor within nine
+decades of the measured value''.
+
+\subsection{The Perron sign theorem, the honest one-hump break, and the M17 vacuity (T131)}
+On $575$ transports, one of the four M22 properties becomes a theorem and one honestly
+breaks. \emph{(i)} \textbf{Sign constancy is a theorem} --- not via Metzler (the border
+block has all off-diagonals nonpositive on only $11/575$, so that route fails as a
+hypothesis) but via \textbf{Perron--Frobenius on $S^{-1}$}, which is entrywise positive on
+$575/575$ transports (Perron root $=1/\lambda_{\min}(S)$); the eigenvector is strictly
+sign-constant \emph{and} $\lambda_{\min}$ is simple --- exactly what T130's $765/765$ could
+only record. \emph{(ii)} The \textbf{one-hump property breaks at depth}, revising T130: on
+the deeper sweep $P$ has more than two monotone runs on $530/575$ transports, so the
+$\mathrm{curv}=2\cdot\mathrm{sag}$ identity is not generally available; what carries
+instead is the certified $(2n_{\mathrm{run}}-2)\cdot\mathrm{sag}$ majorant, valid on
+$575/575$ with no hump hypothesis at all, plus the run-count chain
+$n_{\mathrm{run}}\le s_{2}+2$. \emph{(iii)} The exponent band stays a \emph{measurement}
+($a=0.727$--$0.999$ over $492$ transports, $55/492$ outside the old calibration band; the
+drifts are fits, not bounds). \emph{(iv)} $S^{*}$ stays a measurement --- and the deeper
+sweep \emph{raises} it: the frozen $1.1926$ is exceeded $16$ times, and the constant this
+sweep would need is $\mathbf{1.8472}$. M22 thereby collapses onto \emph{one} object --- the
+border profile exponent --- but by a different route than expected: (i) is proved, (ii) is
+dropped rather than reduced. And M17 is \textbf{assembled --- and vacuous, with the loss
+attributed}: the mass bound is mounted from its two parts (the pole part in closed form to
+$1.8\times10^{-13}$, the harmonic-mean identity to $2.0\times10^{-11}$), majorises the true
+bad mass on $27/27$ rungs --- and reaches the bar on $0/27$. The dominant loss is the
+\textbf{U-metric mismatch} $2.18$ (the assembly measures in the $U$-metric but bounds the
+comb in the Euclidean one); the named fix is M18 run in the whitened basis --- not more
+measurement. Status: \textsc{assembled-vacuous}.
+
+\begin{keybox}[The map V6 (T131): thirteen items, and the nine-item promotion list]
+\textbf{Theorem/identity} ($3$): the $\varepsilon\to\lambda_{\min}$ sandwich (M25a), the
+Perron sign theorem (M22a), the C\'ea/Strang bridge identity (M23).
+\textbf{Certified(-conditional)} ($2$): $\varepsilon$ at a deep grid without a fine
+factorisation (M25b), the chain floors on the $84$ bridge pairs and both deep seams (M25c).
+\textbf{Measurement/hypothesis/fit} ($4$): $\lambda_{\min}(A)>0$ for the pole-free section
+(M25d --- the one number the whole loop now rests on), the exponent $a$ (M22c), the
+constant $S^{*}$ (M22d), the quantifier (M19). \textbf{Dead/broken} ($3$): the mirror rung
+(M25e), the one hump (M22b), the RH address (M21 --- cited, never used). The
+\textbf{promotion list grows from six to nine items}, each a per-instance certificate, none
+zone-uniform --- new here: \emph{(7)} the $\varepsilon\to\lambda_{\min}$ sandwich,
+\emph{(8)} sign constancy from $S^{-1}>0$ (Perron--Frobenius), \emph{(9)} the run-count
+chain $n_{\mathrm{run}}\le s_{2}+2$. The shortest honest remaining list has four points:
+\emph{(1)} $\lambda_{\min}(A)>0$ pole-free (nine decades of slack), \emph{(2)} a
+zone-uniform bound on the exponent and the run count, \emph{(3)} $S^{-1}>0$ structurally,
+\emph{(4)} the quantifier.
+\end{keybox}
+
+\noindent T134 (\texttt{pole\_free\_floor\_probe.py}, contract \texttt{POLE.FREE.FLOOR}) is
+running at exactly that first point, the pole-free floor. In parallel --- and for the first
+time in the reverse direction --- two \emph{reverse-flow} probes carry the certified
+toolkit of this phase back to the theory side of the compiler: T132
+(\texttt{bd\_seam\_probe.py}, contract \texttt{BD.SEAM}: the Beurling--Deny triad of the
+seam DtN as an operator discriminator for \texttt{QGEO.KERNEL.01}) and T133
+(\texttt{cert\_floor\_probe.py}, contract \texttt{CERT.FLOOR}: Cholesky certificates for
+the RP-PSD rows). After them, the v542 promotion of the narrow identity module is pending.
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
@@ -3932,14 +4024,22 @@ pairs with zero overshoot, explains the $8\%$ false positives completely (they s
 bracket the bridge makes unnecessary), and carries both deep seams to positive fine floors
 at up to $3.8\times$ the factorisation cap --- while the curvature bound honestly broke its
 frozen shape band on $13$ of $545$ disjoint test transports and is reduced to a zone-uniform
-bound on \emph{one} exponent. Since T130 the mountain is the map V5: two irreducibles ---
-the word ``for all'' (M19) and the RH address itself (M21) --- plus M22 reduced to one
-exponent, M23 conditionally closed by the bridge, \textbf{M25 new} (a certified positive
-lower bound for $\lambda_{\min}(X_{\mathrm{fine}})$, the one input the bridge lacks), one
-measured scalar (M17), the conditional comb bound (M18), the per-side law (M24), the (C-F5)
-convention, the all-$\alpha$ step that no computation can close, and the \textbf{[SUPPORT]}
-obstruction; T131 (\texttt{self\_supply\_probe.py}) is running at the self-supply of M25 and
-the hardening of M22.
+bound on \emph{one} exponent. T131 (\texttt{self\_supply\_probe.py}) then built the
+self-supply loop and left it one number short of closed: the $\varepsilon\to\lambda_{\min}$
+secular sandwich is a \emph{theorem} --- sharp to a factor $\approx1.3$, with the sign half
+an equivalence --- that replaces the Lanczos estimate on all $84$ bridge pairs with zero
+brackets lost (and exposes that the old Ritz value overestimated the floor by up to
+$7.9\times$), sign constancy became a theorem via Perron--Frobenius on $S^{-1}$, the
+one-hump property honestly broke at depth, and M25 is reduced to positivity of the
+pole-free section with nine decades of slack. Since T131 the mountain is the map V6: two
+irreducibles --- the word ``for all'' (M19) and the RH address itself (M21) --- plus
+\textbf{M25 reduced-to-pole-free} (one robust number, under attack in T134), M22 collapsed
+onto one measured exponent, the vacuous M17 assembly with its named whitening fix, the
+conditional comb bound (M18), the per-side law (M24), the (C-F5) convention, the
+all-$\alpha$ step that no computation can close, and the \textbf{[SUPPORT]} obstruction;
+T134 (\texttt{pole\_free\_floor\_probe.py}) is running at the pole-free floor, and the
+first \emph{reverse-flow} probes T132 (\texttt{bd\_seam\_probe.py}) and T133
+(\texttt{cert\_floor\_probe.py}) carry the certified toolkit back to the theory side.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -4010,20 +4110,21 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T130}\label{app:index}
+\section{Probe index, diary parts T11--T131}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $120$ parts T11--T130 that the current diary file records
-($121$ runs --- T104 was a double run with two independent arms --- and $3091$ green checks); the ten
+load-bearing artefact. The index covers the $121$ parts T11--T131 that the current diary file records
+($122$ runs --- T104 was a double run with two independent arms --- and $3116$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v541} promoted; with T126--T130, the first five parts of the second phase, the
-running totals are \textbf{$130$ probes and $3283/3283$ checks}. T131
-(\texttt{self\_supply\_probe.py}, contract \texttt{SELF.SUPPLY}) is running and not yet
-indexed.
+\vref{v535}--\vref{v541} promoted; with T126--T131, the first six parts of the second phase, the
+running totals are \textbf{$131$ probes and $3308/3308$ checks}. T132
+(\texttt{bd\_seam\_probe.py}, contract \texttt{BD.SEAM}), T133 (\texttt{cert\_floor\_probe.py},
+contract \texttt{CERT.FLOOR}) and T134 (\texttt{pole\_free\_floor\_probe.py}, contract
+\texttt{POLE.FREE.FLOOR}) are running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -4159,6 +4260,7 @@ T127 & \texttt{\scriptsize two\_\allowbreak inequalities} & both remaining inequ
 T128 & \texttt{\scriptsize teml} & the four-point list of map V2, worked cheapest first, and three of the four stand at their preregistered bars: \textbf{(L)} is \emph{derived} and closed --- the out-of-band class $\rho>1.49531$ has exactly $8$ seams up to $n=300\,000$, all at next-atom distance $1$ with identical border geometry ($\mathrm{gc}_c=2$, $\mathrm{gc}_f=4$); $n=7,16$ certified in one step (retention $0.179/0.156$), $n=31$ through a two-rung ladder ($0.091$), and $127/256/8191/65536/131071$ \textsc{budget-open} at $h_f=2\,476\ldots6.2\times10^{6}$ ($1.7\times$--$4119\times$ over the cap; each lacks exactly \emph{one} Cholesky, nothing conceptual; Mih\u{a}ilescu 2004 cited as the address, not used); \textbf{(T)} from predictor to bound --- the exact identity $\tau_{\mathrm{dn}}=\|y\|^2-m_{\mathrm{prot}}+m_{\mathrm{fill}}-V_{\mathrm{bord}}$ ($9.0\times10^{-13}$ against an independent full projection, $126$ transports), $\tau_{\mathrm{dn}}\ge1-m_{\mathrm{prot}}-V_{\mathrm{bord}}$ with explicit majorants valid $126/126$ (exact bound positive $126/126$, fully explicit $125/126$; slack median $0.275$, the oscillation majorant the loose part at $7\times$) --- \emph{but} the protrusion concentration $\kappa=m_{\mathrm{prot}}\,\mathrm{gc}_f/(t_l+t_r)=0.086$--$2.071$ misses the preregistered bar $\kappa\le2$ on $1/120$ by $3.6\%$, \emph{systematically} in $\rho$ (group maxima $1.889/1.965/2.071$ at $\rho=1.001/1.250/1.495$); the bar is not moved, the next hypothesis is $\kappa\le2+C(\rho-1)$; and $\kappa$ splits by side ($1.61$--$2.07$ right against $0.09$--$0.25$ left) --- (T) is an \emph{eigenvector} statement; \textbf{(E)+(T)} jointly: the $\ell_2$ route certifies $0/12$ (median $55\times$ overshoot), the $Q$-inner-product chain $\sqrt{\lambda_f}\ge\sqrt{\lambda_c\tau^*-|\eta_{\mathrm{cons}}|}-\sqrt{e_d}$ ($e_d/\lambda_c=0.041$--$0.154$) certifies $9/9$ in-band seams at floor $\ge0.0850$, $11/12$ overall; the one tear ($n=31$, already on the (L) list) is $\eta$-limited ($|\eta_{\mathrm{cons}}|/\lambda_c=0.392>\tau^*=0.363$ --- no sharper (T) would have helped, nor a smaller ratio), repaired by the two-rung ladder, every rung closing the chain by itself; \textbf{(M)} earned: the boundary-layer exclusion is a \emph{proof} from the closed form (adjacent-component ratio in $[e^{-D/2},1]$, outer-$k$-cell share $\le kD(1+\cosh\alpha)/\sinh\alpha$, separation $\ge84\times$), $\mu_{\min}(S,A_z)=1-\gamma^2$ exact ($5.9\times10^{-15}$), $U\preceq(1+\varepsilon_{\mathrm{env}})A_z$ with $\varepsilon_{\mathrm{env}}\le0.038$ Cholesky-certified --- constructed floor $0.188$ against the $1.62\times10^{-2}$ demanded, an $11.6\times$ margin on all $31$ rungs; the comb residual stays measured but is measurably no layer (half its mass needs $12$--$39\%$ of the half-window); map V3: $21$ points --- $10$ done, $3$ certified on real objects, $3$ conditional-classical, $5$ genuinely open (M9 the $\kappa$ bar, M17 the pencil mass, M18 the comb, M19 ``for all'', M21 the RH address) & THREE-OF-FOUR & 27/27\\
 T129 & \texttt{\scriptsize kappa\_\allowbreak deep\_\allowbreak seams} & the most productive break of the phase: the fitted law falls, the theorem underneath stands --- $C^*=0.3506$ frozen from T128's three calibration groups (a fit, labelled a fit, not refitted; calibration itself $0/105$, not the test); on $331$ \emph{new} transports ($14$ ratios $1.05$--$4.00$, none in the calibration set; $h_f=29$--$1450$) the law $\kappa\le2+C^*(\rho-1)$ is violated \textbf{once} ($n=7$ at $\rho=3.00$, slack $-0.0334$; the bare unmoved bar $2$ would fall $78$ times), the per-side law on $\kappa_r$ $1/293$, the side asymmetry reproduces ($\kappa_r=1.70$--$2.91$ vs $\kappa_l=0.05$--$0.21$); the bar is not moved; \textbf{the structural ground is solved with identities}: $\sum(1-g_i)=t_l+t_r$ ($7.1\times10^{-13}$) makes the flat border vector $\kappa=1$ \emph{exactly} (T128's bar $2$ was twice the flat value), the profile identity $p_{N-1}=2-p_0+2E$ ($6.7\times10^{-16}$) makes a linear density profile $\kappa=2$ \emph{exactly} (everything above is curvature; $2E>p_0\iff p_{N-1}>2$, $114/436$ with no exception), and the chain $\kappa\le2-p_0+\frac{N-2}{N}\sum|\Delta p-\overline{\Delta p}|+(p_{\max}-p_{N-1})$ is a \emph{theorem} with an explicit constant (H\"older/telescope/Abel), valid on all $436$ (slack median $0.344$; last term vanishes $392/436$); depth block: $14$ graded transports at $h_f=1656$--$17\,669$ ($12\times$ the cap, matrix-free, $m/h=0.064$--$0.512$), $0$ violations --- the residual risk is a ratio effect, not a resolution effect; \textbf{the deep seams}: machinery verified (two-scale assembly $=J^{\mathsf T}QJ$ to $2.7\times10^{-16}$, $X=Q_{\mathrm{old}}$ to $2.4\times10^{-17}$), $n=127$, $256$ compressed to $m/h=0.507$, $0.255$ carry \emph{complete} graded seam certificates ($X$ PD, Schur floors above Wilkinson, bracket positive, retentions $0.307/0.417$), the floor survives $6$ further coarsening rungs --- honestly downgraded to \textsc{graded-certified}: Rayleigh--Ritz points the wrong way ($1.53$--$5.18\times$, no exception) and a measured $8\%$ false-positive rate ($4/48$ pairs graded-positive where uniform is not), declared before the seams; $(L)=[3$ uniform, $2$ graded, $3$ budget-open$]$; \textbf{M18}: the Cauchy--Schwarz row bound is vacuous ($0/40$, reported as the failure it is), the S-procedure operator bound works ($40/40$ below $1$, $0.170$--$0.774$, $1.3$--$182\times$ above the truth, median $7.8$; \textsc{certified-conditional} on $\theta_1\sim D^{1.219}$, a fit; saturates at $(kD)^{0.263}$ instead of decaying); map V4: $9$ entries --- M9 reduced, L2 graded, M18 bounded, M17 untouched, \textbf{M19 ``for all'' and M21 the RH address irreducible}, M22/M23/M24 new and named; promotion: \emph{ready in principle} as a narrow module on the five identity/theorem pieces & KAPPA-WILD & 28/28\\
 T130 & \texttt{\scriptsize curvature\_\allowbreak bridge} & the two named pieces attacked head on, and exactly one stands --- the bridge, not the bound: \textbf{the C\'ea/Strang defect identity} $S_{\mathrm{graded}}-S_{\mathrm{uniform}}=R^{\mathsf T}X^{-1}R$ verified to $1.3\times10^{-13}$, matrix-free (FFT matvec + BPX-preconditioned CG, one graded Cholesky under the cap); the \emph{scalar} form is vacuous (loses $3$--$28\times$), the \emph{matrix} form reproduces the directly computed uniform Schur floor on \textbf{84 pairs (21 zones) to $2.5\times10^{-11}$ relative with zero overshoot} --- T129's $8\%$ false positives explained completely ($16/84$ at bracket level, $\mathbf{0/84}$ at floor level: they sat in the transport bracket, which the bridge makes unnecessary); \textbf{both deep seams carry}: $n=127\to\lambda_f=0.2255$, $n=256\to\lambda_f=0.2614$ ($h_f=2476/5694$, $1.7\times/3.8\times$ the cap), \textsc{bridged-certified-conditional} on \emph{one} measured number per grid (the Lanczos floor for $\lambda_{\min}(X_{\mathrm{fine}})$; the Grenander--Szeg\H{o} route for it \emph{dead}, symbol indefinite, floor $-76\ldots-27$; conclusion unmoved at $100\times/10^4\times$ smaller floor); \textbf{the curvature front}: the TV rewrite $\sum|\Delta p-\overline{\Delta p}|=\mathrm{TV}(P)\le(2n_{\mathrm{run}}-2)\cdot\mathrm{sag}$ is \emph{exact} (one hump on $83/765$, sign purity $765/765$), the power profile wins $635/635$ ($a=0.703$--$0.999$, median $0.856$), the T108 Levinson corner identity independently reproduced ($24$ zones to $M=1236$, $4.2\times10^{-9}$) but the pole solve only a proxy (cosine $0.992$--$0.996$, curvature ratio $1.5$--$5.3$) --- and the frozen shape band ($a\in[0.734,0.897]$, $S^*=1.1926$) \textbf{breaks on 13/545} disjoint test transports (bar not moved; per-transport exponent $520/545$) $\Rightarrow$ M22 reduced to a zone-uniform bound on \emph{one} exponent; theorem battery: $0$ violations of the exact chain on $765$, the fully explicit chain closes $635/635$ but $0$ under the bare bar $2$ ($\kappa>2$ measured on $130/765$); map V5 ($12$ items): I1--I4 + \textbf{I5 new} certified, I6 bridge + I7 seams certified-conditional, M23 conditionally closed, \textbf{M25 new} (a certified positive floor for $\lambda_{\min}(X_{\mathrm{fine}})$), promotion check list (1)--(6); M19/M21 untouched & ONE-OF-TWO & 30/30\\
+T131 & \texttt{\scriptsize self\_\allowbreak supply} & the self-supply loop is built, one number short of closed: \textbf{the $\varepsilon\to\lambda_{\min}$ secular sandwich is a theorem} --- $\varepsilon/(\|u\|^{2}+\varepsilon/\mu_{1})\le\lambda_{\min}(Q)\le\varepsilon/\|u\|^{2}$ with the sign half an \emph{equivalence} (Albert 1969) --- \emph{sharp} (relative width $1.2663$--$1.3894$, true value at $1.06$--$1.31\times$ the lower bound, $0$ violations on $10$ dense windows), $\varepsilon$ itself certified at the deep grid (C\'ea/Strang + CG, retention $1.0000$); \textbf{correction to T130}: the Lanczos Ritz value overestimates $\lambda_{\min}(X)$ by up to $7.9\times$ (an upper bound by construction, never a floor); the chain floor replaces it on \textbf{84 bridge pairs with 0 brackets lost} (retention $0.766$--$1.059$ against the certified Cholesky floor, median $0.875$), both deep seams \textsc{chain-positive} ($n=127$: $\varepsilon\ge2.63\times10^{-7}\to$ floor $1.08\times10^{-6}$; $n=256$: $3.83\times10^{-8}\to2.52\times10^{-7}$), $\mu_{1}$ tolerating \textbf{nine decades} of underestimate $\Rightarrow$ \textbf{M25 reduced-to-pole-free}; the mirror rung dead ($T(\ell)$ indefinite $4/4$ --- the Szeg\H{o} indefiniteness; the telescope runs coarse-from-fine only); \textbf{M22}: sign constancy a \textbf{theorem} via Perron--Frobenius on $S^{-1}$ (entrywise positive $575/575$; Metzler fails $11/575$), the one hump \textbf{broken at depth} ($530/575$ with more than two monotone runs; the certified $(2n_{\mathrm{run}}-2)\cdot\mathrm{sag}$ majorant replaces it on $575/575$), exponent and $S^{*}$ stay measurements ($a=0.727$--$0.999$, $55/492$ outside the old band; the deeper sweep lifts the required $S^{*}$ to $1.8472$, the frozen $1.1926$ exceeded $16$ times); \textbf{M17} assembled and \emph{vacuous} (majorant $27/27$, non-vacuous $0/27$; dominant loss the U-metric mismatch $2.18$; named fix: M18 whitened); map V6 ($13$ items), promotion list now \textbf{9 items} (new: the sandwich, the Perron sign theorem, the run-count chain); shortest remaining list four points & SUPPLY-PARTIAL & 25/25\\
 \end{xltabular}
 }
 

@@ -1,3 +1,99 @@
+# 2026-07-28 (XIII) — Teil 131 (delegiert, Phase „Der volle Beweis", Vertrag SELF.SUPPLY): self_supply_probe.py — **SUPPLY-PARTIAL** — DIE SELBST-BELIEFERUNGS-SCHLEIFE IST GEBAUT — EINE ZAHL VOM SCHLUSS ENTFERNT. Die ε→λ_min-Kette ist ein THEOREM: das Sekulär-SANDWICH aus der Sekulärgleichung (Sherman-Morrison) — λ_min(Q) ≤ ε/‖u‖² (Konvexität) und λ_min(Q) ≥ ε/(‖u‖² + ε/μ₁) — mit Vorzeichen-ÄQUIVALENZ ε > 0 ∧ A ≻ 0 ⟺ λ_min(Q) > 0 (Albert 1969); relative Weite 1.2663–1.3894, wahres λ bei 1.06–1.31× der Unterschranke: SCHARF, 0 Verletzungen auf 10 dichten Fenstern; ε am tiefen Gitter SELBST zertifiziert (Céa/Strang + CG, behält 1.0000). KORREKTUR AN T130: der Lanczos-Ritzwert ÜBERschätzt λ_min(X) um bis Faktor 7.9 — T130s Konditional hing an einer OBERschranke; ein Kettenboden unter dem Lanczos-Wert ist kein Verlust, sondern der Unterschied Schätzung vs. Schranke. Brücken-Test: **84 Paare, 0 Klammern verloren**, die Kette behält 0.766–1.059 (Median 0.875) gegen den echten Cholesky-Boden; **beide tiefe Nähte CHAIN-POSITIVE** (n = 127: ε ≥ 2.63e-7 → Boden 1.08e-6; n = 256: 3.83e-8 → 2.52e-7); μ₁ darf um **9 DEKADEN** unterschätzt werden ⇒ **M25 = REDUCED-TO-POLE-FREE** (Positivität des POLFREIEN Abschnitts). M22 (575 Transporte): (i) Vorzeichenkonstanz **THEOREM** — nicht über Metzler (scheitert 11/575), sondern **Perron-Frobenius auf S⁻¹** (eintragsweise positiv 575/575, Perron-Wurzel = 1/λ_min(S), λ_min einfach); (ii) Ein-Buckel **BROKEN-AT-DEPTH** (Revision an T130: >2 monotone Läufe auf 530/575; Ersatz die zertifizierte (2n_run−2)·sag-Majorante 575/575 ohne Buckel-Hypothese); (iii) Exponentenband MESSUNG (a = 0.727–0.999, 55/492 außerhalb des alten Bands); (iv) S* MESSUNG — **der tiefere Sweep hebt die nötige Konstante auf 1.8472** (die eingefrorene 1.1926 16× überschritten). M17 ZUSAMMENGESETZT UND VAKUUM (Identitäten 2.0e-11/1.8e-13, Majorante 27/27, unter der Latte 0/27; dominanter Verlust der U-Metrik-Mismatch 2.18; Fix = M18 in gewhitenter Basis) — ASSEMBLED-VACUOUS. Karte V6: 13 Posten (3 Theorem/Identität, 2 zertifiziert-konditional, 4 Messung, 3 tot/gebrochen); **Promotions-Liste jetzt 9 Posten** (neu: das ε→λ_min-Sandwich, das Vorzeichen aus S⁻¹ > 0, die Lauf-Zähl-Kette); kürzeste Rest-Liste 4 Punkte — 25/25, 26.6s, Sandbox
+# E1 DIE SELBST-BELIEFERUNG IST EIN THEOREM, UND SIE IST SCHARF. Das Sandwich kommt aus
+#    der Sekulärgleichung des Rang-1-Downdates (Sherman-Morrison): oben
+#    λ_min(Q) ≤ ε/‖u‖² per Konvexität der Sekulärfunktion, unten
+#    λ_min(Q) ≥ ε/(‖u‖² + ε/μ₁) mit μ₁ = λ_min(A); die Vorzeichen-Hälfte ist eine
+#    ÄQUIVALENZ ε > 0 ∧ A ≻ 0 ⟺ λ_min(Q) > 0 (Albert 1969). Auf 10 dichten Fenstern
+#    (h = 26–434, n = 3–31): 0 Verletzungen, vorhergesagte relative Weite
+#    1 + ε/(μ₁‖u‖²) = 1.2663–1.3894, wahres λ bei 1.059–1.306× der Unterschranke
+#    (Median 1.219) — nicht nur gültig, SCHARF. Die ε-Seite kommt OHNE feine
+#    Faktorisierung: derselbe Céa/Strang-Defekt, der die Brücke trug, trägt ε
+#    (ε = ε_graded − rᵀA⁻¹r, CG-verschärfte Klammer), gültige Unterschranke 10/10,
+#    behält 1.0000 des wahren ε (der Sandwich-Boden 0.766–0.944 des wahren λ_min(Q)).
+#    NEBENBEFUNDE: (a) die RICHTUNGS-OBSTRUKTION ist benannt — der Spiegel-Sprosse
+#    fehlt eine Loewner-MINORANTE, T(ℓ) ist indefinit auf 4/4 Fenstern (min ℓ < 0,
+#    dieselbe Indefinitheit, die Szegő tötete): das Teleskop läuft nur coarse-from-fine;
+#    (b) KORREKTUR AN T130 — der Lanczos-Ritzwert (m = 110) überschätzt λ_min(X) um
+#    Faktor 1.0–7.9 (Median 1.0, >2× auf 2/10): eine OBERschranke per Konstruktion
+#    (Rayleigh-Ritz), also hing T130s Konditional an einer Zahl, die systematisch ZU
+#    GROSS ist; ein Kettenboden unter dem Lanczos-Wert ist kein Verlust, sondern der
+#    Unterschied Schätzung vs. Schranke. BRÜCKEN-TEST: auf 84 Brücken-Paaren
+#    (n = 7–529, ρ = 1.025–3.000) verliert der Ketten-Boden 0 Klammern (Latte 0);
+#    gegen den echten zertifizierten Cholesky-Boden (72 Paare) behält er 0.766–1.059
+#    (Median 0.875); beide tiefe Nähte CHAIN-POSITIVE (n = 127: ε ≥ 2.633e-7 → Boden
+#    1.080e-6, λ_f = +0.2255; n = 256: 3.829e-8 → 2.515e-7, λ_f = +0.2614). Und der
+#    Rest-Input ist ROBUST: μ₁ darf um 9 DEKADEN unterschätzt werden, bevor der Boden
+#    stirbt — μ₁ geht nur als KORREKTUR ein (CG-Rest + additives ε/μ₁ im Nenner).
+#    **M25 = REDUCED-TO-POLE-FREE**: aus „zertifiziere λ_min des fast-singulären X bei
+#    h = 5694" wird „zertifiziere Positivität des POLFREIEN ungeraden
+#    Toeplitz-Hankel-Abschnitts, beliebiger Boden binnen 9 Dekaden" — die
+#    Vorzeichen-Hälfte ist Äquivalenz, die ε-Hälfte zertifiziert, das Sandwich scharf.
+# E2 M22, DIE VIER EIGENSCHAFTEN AUF 575 TRANSPORTEN: EINE WIRD THEOREM, EINE BRICHT
+#    EHRLICH. (i) VORZEICHENKONSTANZ IST THEOREM — Route (a) Metzler SCHEITERT als
+#    Hypothese (alle Off-Diagonalen ≤ 0 auf nur 11/575; der Randblock ist keine
+#    Stieltjes-Matrix), Route (b) trägt: S⁻¹ ist eintragsweise POSITIV auf 575/575,
+#    Perron-Frobenius auf S⁻¹ (Perron-Wurzel = 1/λ_min(S)) liefert den strikt
+#    vorzeichenkonstanten Eigenvektor UND die Einfachheit von λ_min — exakt was T130s
+#    765/765 nur protokollieren konnte. (ii) EIN-BUCKEL BRICHT AN DER TIEFE (Revision
+#    an T130): P hat >2 monotone Läufe auf 530/575, p ist konvex/konkav auf nur 30 —
+#    die curv = 2·sag-Identität ist NICHT generell verfügbar; was trägt, ist die
+#    zertifizierte (2n_run−2)·sag-Majorante 575/575 ohne jede Buckel-Hypothese, plus
+#    die Zähl-Kette n_run ≤ n_cross + 1 ≤ s2 + 2. (iii) Exponentenband bleibt MESSUNG:
+#    a = 0.7267–0.9985 über 492 Transporte, 55/492 außerhalb des alten T130-Bands
+#    [0.734, 0.897]; die Drifts (da/dρ = +0.0243, da/dlog n = +0.0010) sind FITS,
+#    keine Schranken. (iv) S* bleibt MESSUNG: mit per-Transport-Exponent läuft
+#    curv/curv_model auf 0.510–1.8472 (Median 0.668) — die eingefrorene 1.1926 wird
+#    16× überschritten, die Konstante, die dieser Sweep bräuchte, ist 1.8472. Darunter
+#    unangetastet und re-verifiziert: κ-Kette 575/575, TV-Umschreibung 7.8e-16,
+#    Profil-Identität 8.9e-16, sag-Majorante 575/575. M22 kollabiert damit auf EIN
+#    Objekt — den Rand-Profil-Exponenten a — aber auf anderem Weg als erwartet:
+#    (i) bewiesen, (ii) fallengelassen statt reduziert.
+# E3 M17 ZUSAMMENGESETZT — UND VAKUUM, MIT ATTRIBUIERTEM VERLUST. Die Masse-Schranke
+#    ist aus ihren zwei Teilen montiert (Pol-Anteil in GESCHLOSSENER FORM, Kamm-Anteil
+#    über die M18-S-Prozedur): die Identitäten halten zuerst (harmonisches Mittel
+#    2.0e-11, geschlossene Form des Pol-Anteils 1.8e-13), die montierte Schranke
+#    majorisiert die wahre bad-Masse auf 27/27 Sprossen (14 Zonen, h = 52–868) — und
+#    erreicht bad ≤ 0.50 auf 0/27: eine SCHRANKE, noch kein Beweis. Der Verlust ist
+#    ATTRIBUIERT: dominant der U-METRIK-MISMATCH √(λ_max U/λ_min U) = 2.18 (die
+#    Montage misst ŝ in der U-Metrik, schrankt den Kamm aber euklidisch), dann die
+#    innere Leckage der bad-Richtungen σ_b = 0.741, dann der S-Prozedur-Anteil
+#    (Median 0.498 gegen gemessene 0.285). Der Fix ist BENANNT: M18 in gewhitenter
+#    Basis (S-Prozedur in der U-Metrik) — nicht mehr Messung. ASSEMBLED-VACUOUS.
+# E4 KARTE V6 (13 POSTEN) UND DIE FINALE PROMOTIONS-LISTE. 3 Theorem/Identität (das
+#    Sandwich M25a, das Perron-Vorzeichen M22a, die Brücken-Identität M23), 2
+#    zertifiziert(-konditional) (ε am tiefen Gitter M25b, die Ketten-Böden M25c), 4
+#    Messung/Hypothese/Fit (der polfreie Boden M25d, der Exponent M22c, S* M22d, der
+#    Quantor M19), 3 tot/gebrochen (Spiegel-Sprosse M25e, Ein-Buckel M22b, RH-Adresse
+#    M21 — zitiert, nie benutzt). Die PROMOTIONS-LISTE wächst von 6 auf **9 Posten**
+#    (alle pro Instanz zertifizierbar, keiner zonen-uniform): (1) κ-Mittel + Hölder,
+#    (2) Profil-Identität + 2E/p₀-Wettstreit, (3) Abel-Majorante, (4) TV-Umschreibung
+#    + sag-Kollaps, (5) Transport-Klammer (Haynsworth 1968), (6) Céa/Strang-Brücke,
+#    NEU: (7) das ε→λ_min-Sandwich, (8) Vorzeichenkonstanz aus S⁻¹ > 0
+#    (Perron-Frobenius), (9) die Lauf-Zähl-Kette n_run ≤ s2 + 2. Die kürzeste ehrliche
+#    REST-LISTE, vier Punkte: (a) λ_min(A) > 0 für den POLFREIEN Abschnitt (9 Dekaden
+#    Luft; danach folgt alles über die Fensterformen: ε zertifiziert → Sandwich →
+#    Brücke → Transport-Klammer), (b) Exponent a + n_run zonen-uniform beschränkt,
+#    (b') S⁻¹ > 0 strukturell (hielt auf jedem gemessenen Transport; die einzige noch
+#    nicht hergeleitete Zutat des Vorzeichen-Theorems), (c) der Quantor — alles oben
+#    ist pro Zone, die Zonen-Liste endlich (n ≤ 300000), nichts uniform in n.
+#    → Folge-Probe Teil 134 (POLE.FREE.FLOOR, pole_free_floor_probe.py) LÄUFT: der
+#    polfreie Boden λ_min(A) > 0 — der eine Punkt, auf dem die Schleife jetzt ruht.
+#    NEU, aus der Big-Picture-Analyse, die erste RÜCKFLUSS-Spur (das zertifizierte
+#    Sandbox-Werkzeug fließt erstmals zur Theorie-Seite zurück, Compiler-Richtung):
+#    Teil 132 (BD.SEAM, bd_seam_probe.py — die Beurling–Deny-Trias des Naht-DtN als
+#    Operator-Diskriminator für QGEO.KERNEL.01) und Teil 133 (CERT.FLOOR,
+#    cert_floor_probe.py — Cholesky-Zertifikate für die RP-PSD-Zeilen) LAUFEN.
+#    DANACH steht die v542-Promotion des schmalen Identitäts-Moduls an.
+# Serie (XII)–(CXLII): 131 Proben, 3308/3308 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Weil 1952 / Bombieri 2000 / Connes 1999
+# — zitiert, NIE benutzt —, Sherman–Morrison / Sekulärgleichung, Albert 1969, Perron 1907 /
+# Frobenius 1912, Céa 1964 / Strangs erstes Lemma, Hestenes–Stiefel 1952, Lanczos 1950 /
+# Rayleigh–Ritz, Grenander–Szegő 1958 (tote Route, benannt), Hölder, Abel-Summation,
+# Teleskop, Haynsworth 1968, Wilkinson 1968 / Higham 2002, Bertrand–Chebyshev 1852 +
+# triviale gerade Schranke (die EINZIGEN Lücken-Fakten; keine
+# Cramér/Firoozbakht/Zwillings-Annahme)) gerichtet zitiert; Sandbox ohne
+# Ledger-/Marker-Änderung.
+
 # 2026-07-28 (XII) — Teil 130 (delegiert, Phase „Der volle Beweis", Vertrag CURVATURE.BRIDGE): curvature_bridge_probe.py — **ONE-OF-TWO** — DIE BRÜCKE STEHT, DIE KRÜMMUNGS-SCHRANKE NICHT. Die Céa/Strang-Defekt-IDENTITÄT S_graded − S_uniform = RᵀX⁻¹R ist als Matrix-Identität verifiziert (1.3e-13) und matrixfrei implementiert (FFT-Matvec + BPX-präkonditionierter CG); entscheidend ist Skalar- gegen MATRIX-Form: die skalare Schranke ist vakuum (verliert 3–28×), die Matrixform reproduziert den direkt gerechneten uniformen Schur-Boden auf **84 Paaren (21 Zonen) auf 2.5e-11 relativ, OHNE einen einzigen Überschuss**, und erklärt T129s 8%-Falsch-Positive VOLLSTÄNDIG: 16/84 auf Bracket-Ebene reproduziert, **0/84 auf Boden-Ebene** — sie saßen im Transport-Bracket (graded Testvektoren), das die Brücke überflüssig macht. BEIDE TIEFE NÄHTE TRAGEN: n = 127 → λ_f = 0.2255, n = 256 → λ_f = 0.2614 (h_f = 2476/5694, bei 1.7×/3.8× des Faktorisierungs-Deckels), Status **BRIDGED-CERTIFIED-CONDITIONAL** — genau EINE gemessene Zahl pro Gitter geht ein (der Lanczos-Boden für λ_min(X_fine); Grenander–Szegő dafür TOT: Symbol indefinit, Boden −76…−27; Robustheit gutartig: das Ergebnis bewegt sich nicht bei 100×/10000× kleinerem Boden). Die Krümmungs-Schranke dagegen ehrlich NICHT geschlossen — der strukturelle Gewinn ist die TV-UMSCHREIBUNG Σ|Δp−Δ̄| = TV(Sehnen-Abweichung P), zertifiziert pro Transport TV(P) ≤ (2n_run−2)·sag (Gleichheit bei einem Buckel; auf 83/765 Transporten EINE Zahl), das Potenzgesetz |w_i| ~ (i+1)^a gewinnt 635/635 (a = 0.703–0.999, Median 0.856), die T108-Ecken-Identität unabhängig reproduziert (24 Zonen bis M = 1236, 4.2e-9) — aber das eingefrorene Formband (a ∈ [0.734, 0.897], S* = 1.1926) BRACH auf 13/545 disjunkten Test-Transporten (Latte nicht verschoben); mit per-Transport-Exponent hält S* auf 520/545 ⇒ **M22 ist auf eine zonen-uniforme Schranke an EINEM Exponenten reduziert, nicht geschlossen**. Karte V5 (12 Posten): I1–I4 + **I5 neu (TV-Umschreibung)** zertifiziert, I6 Brücke + I7 Nähte CERTIFIED-CONDITIONAL, M23 konditional geschlossen, **M25 NEU benannt** (zertifizierter positiver Boden für λ_min(X_fine)); Promotions-Check-Liste (1)–(6) — 30/30, 19.3s, Sandbox
 # D1 DIE TV-UMSCHREIBUNG IST DER STRUKTURELLE GEWINN, DIE SCHRANKE BLEIBT OFFEN. Neu und
 #    exakt: Σ|Δp−Δ̄| = TV(P) mit P_k = p_k − (p₀ + kΔ̄), P_0 = P_{N−1} = 0 — der

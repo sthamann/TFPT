@@ -180,10 +180,22 @@ export function TwoDoorsConvergence() {
           carries both deep seams to positive fine floors at up to 3.8× the
           factorization cap — while the curvature bound honestly broke its
           frozen shape band on 13/545 and is reduced to a uniform bound on
-          one exponent. Two irreducibles remain (the word &ldquo;for
-          all&rdquo;, the RH address); T131 (self_supply_probe.py) is
-          running, and the v542 promotion of the narrow identity module is
-          pending.
+          one exponent. T131 · SELF.SUPPLY (SUPPLY-PARTIAL, 25/25) then
+          built the self-supply loop and left it one number short of
+          closed, with two new theorems: the epsilon-to-floor secular
+          sandwich (sharp to ~1.3, sign half an equivalence) replaces the
+          Lanczos estimate on all 84 bridge pairs with zero brackets lost —
+          exposing that the old Ritz value overestimated the floor by up to
+          7.9× — and sign constancy is proved via Perron–Frobenius on the
+          inverse (575/575); the one-hump honestly broke at depth, S*
+          rose to 1.8472 over its frozen 1.1926, and M25 is reduced to
+          positivity of the pole-free section with nine decades of slack.
+          Two irreducibles remain (the word &ldquo;for all&rdquo;, the RH
+          address); T134 (pole_free_floor_probe.py) attacks that pole-free
+          floor, the first reverse-flow probes T132 (bd_seam_probe.py) and
+          T133 (cert_floor_probe.py) carry the certified toolkit back to
+          the theory side, and the v542 promotion of the narrow identity
+          module is pending.
         </p>
       </div>
 
