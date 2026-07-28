@@ -29,10 +29,11 @@ export function HonestyBanner() {
         matching-lemma/transport-ledger package. Sandbox T86–T93 complete the
         I5 geography (with honest self-corrections through T98); T94 is a blind
         lattice prime demo; T99–T101 close the induction arc; and the sprint
-        T102–T124 compresses the remaining arithmetic bound step by step — from
-        one matrix inequality down to a Harnack pair plus one sign, with
-        certified steps as deep as zone 155,921 and 3105/3105 sandbox checks.
-        T125 is running. What remains TFPT-specific is exactly one object:
+        T102–T125 compresses the remaining arithmetic bound step by step — from
+        one matrix inequality down to one sign plus one declared accounting
+        convention, assembled end to end in the T125 finale, with certified steps
+        as deep as zone 155,921 and 3139/3139 sandbox checks. The series is
+        complete at 125 parts. What remains TFPT-specific is exactly one object:
         I5 in one-family form — by the closed ledger equivalent to Weil
         positivity ⟺ RH, an equivalence typing only, not “almost RH.” No claim
         of progress toward the Riemann Hypothesis is made.

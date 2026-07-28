@@ -32,7 +32,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with the open boundary λ* (v540), the matching-lemma/transport-ledger package (v541), and the induction sprint T102–T124 — a reduction cascade from one matrix inequality down to a Harnack pair plus one sign, with certified margin-free steps to zone 155,921. 124 parts, 3105 sandbox checks. Not RH evidence.",
+    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with the open boundary λ* (v540), the matching-lemma/transport-ledger package (v541), and the induction sprint T102–T125 — a reduction cascade from one matrix inequality down to one sign and one accounting convention, assembled end to end in the finale, with certified margin-free steps to zone 155,921. Series complete: 125 parts, 3139 sandbox checks. Not RH evidence.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "The Prime Front — TFPT research diary",
     description:
-      "Primes, the E8 census, and load-bearing results v535–v541. Program status: the relay induction is certified step by step to zone 155,921 and the remaining core is a Harnack pair plus one sign (T124); T125 assembles the chain end to end. No claim of progress toward the Riemann Hypothesis.",
+      "Primes, the E8 census, and load-bearing results v535–v541. Program status: the relay induction is certified step by step to zone 155,921, and the T125 finale assembles the chain end to end — a load-bearing spine that is 96.2% identity-or-Cholesky with one declared accounting convention. Series complete at 125 parts. No claim of progress toward the Riemann Hypothesis.",
     url: `${SITE_URL}/prime-front`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified: v535–v541. Sandbox T102–T124: one matrix inequality compressed to a Harnack pair plus one sign; certified steps to zone 155,921; 3105 sandbox checks. Residual: I5 — not almost-RH.",
+      "Research diary of the prime / zeta line. Machine-verified: v535–v541. Sandbox T102–T125: one matrix inequality compressed to one sign plus one accounting convention and assembled end to end; certified steps to zone 155,921; 3139 sandbox checks. Residual: I5 — not almost-RH.",
   },
 };
 
@@ -94,7 +94,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–124 · 3105 sandbox checks
+            Research diary · Teile 11–125 · 3139 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -718,7 +718,7 @@ export default function PrimeFrontPage() {
           Induction skeleton: identities proved, zones 2–4 closed, zone-5 tip =
           equality problem, asymptotics = one named arithmetic bound (A){" "}
           <span className="font-mono text-amber-200">[sandbox · T99–T101]</span>.
-          Milestone at T101: 2428/2428 sandbox checks (3105/3105 at T124).
+          Milestone at T101: 2428/2428 sandbox checks (3139/3139 at T125).
           Fence: fits/extrapolations marked; geography locates; it does not
           attack; I5 remains ⟺ RH. This is not RH evidence.
         </p>
@@ -752,18 +752,19 @@ export default function PrimeFrontPage() {
             <span className="text-sky-200">Since then:</span> the induction
             sprint{" "}
             <span className="font-mono text-amber-200">
-              [sandbox · T102–T124]
+              [sandbox · T102–T125]
             </span>{" "}
-            compressed that named bound from one matrix inequality to a Harnack
-            pair plus one sign, with certified steps to zone 155,921 and 400/400
-            certified rungs — told in{" "}
+            compressed that named bound from one matrix inequality to one sign
+            plus one accounting convention, with certified steps to zone 155,921
+            and 400/400 certified rungs, and the finale assembled the whole
+            chain end to end on 52 zones — told in{" "}
             <a
               href="#compression"
               className="text-sky-300 underline decoration-sky-400/30 underline-offset-2 hover:text-sky-200"
             >
               sections 20–22
             </a>
-            . 3105/3105 sandbox checks; T125 running.
+            . Series complete: 3139/3139 sandbox checks at T125.
           </li>
         </ul>
 
@@ -1787,11 +1788,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 22 — The Harnack pair and the telescope (T120–T124) */}
+      {/* 22 — The Harnack pair, the telescope, and the assembly (T120–T125) */}
       <DiarySection
         id="harnack-telescope"
-        eyebrow="22 · The Harnack pair and the telescope · Teile 120–124"
-        title="Why the last constant is one, why the coupling resists — and the direction flip that made the recursion carry"
+        eyebrow="22 · The Harnack pair, the telescope, the assembly · Teile 120–125"
+        title="Why the last constant is one, why the coupling resists, the direction flip that made the recursion carry — and the finale that composed the whole chain"
         badge="sandbox"
         visual={<TelescopeRungs />}
       >
@@ -1924,17 +1925,64 @@ export default function PrimeFrontPage() {
           of the chain. The Harnack pair from T120/T121 is untouched.
         </p>
 
+        <p>
+          <strong className="font-medium text-slate-200">
+            The finale: the chain composes, and the Harnack pair leaves the
+            spine.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T125]</span>{" "}
+          ASSEMBLY-GREEN (34/34): every certificate of the arc mounted on one
+          ladder, end to end. All five stages — base Cholesky, telescope rungs, ε
+          lower bound, the κ chain, the margin-free handover — complete on 52 of
+          52 zones, and 30 of those zones form a run that{" "}
+          <em>literally composes</em>: consecutive prime-power atoms on{" "}
+          <em>one</em> common resolution, so the new window of a zone{" "}
+          <em>is</em> the old window of the next one (an integer identity on
+          29/29 pairs), the incoming atom&apos;s block is bit-exactly zero, and
+          the output of every step is the input of the next (residual 2.9e-14).
+          That is a way <em>around</em> the frame seam rather than through it: no
+          two consecutive gap ratios are dyadic, so per-zone frames can never be
+          refined onto one another — the run picks one frame for all of it and
+          pays with its length. The load-bearing finding is a change of shape:
+          the weakest stage of the whole mounting is the κ chain, but that chain
+          is the second, independent route — the{" "}
+          <strong className="font-medium text-slate-200">
+            load-bearing spine is Cholesky-certified on all 52 zones
+          </strong>
+          , so the Harnack pair no longer carries anything. 430 completed
+          Cholesky certificates, 440 identities, the certified margin a factor
+          32–8.7e10 above the <em>declared</em> floating-point bound, and the
+          base case an <em>equivalence</em> rather than a bridge.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            And then the accounting.
+          </strong>{" "}
+          Theorem V-final is printed with line-by-line attribution — 25 lines: 10
+          identities, 9 Cholesky certificates, 3 window certificates (all three
+          inside the route the spine does not use), and exactly{" "}
+          <em>one</em> hypothesis, which is an accounting convention — plus a
+          five-point statement of what is <em>not</em> claimed. Of the 31 links
+          of the chain, 90.3% are an identity or a completed Cholesky; on the
+          spine it is 96.2%, with zero window certificates. The series ledger:
+          24 refuted routes across 18 parts, four of them killed by the{" "}
+          <em>same</em> cause — a bound that needs the coarse form from below,
+          which is why the exit was a direction flip and not a sharper estimate —
+          and a seven-station cascade whose last station is new. What remains is
+          named as what it is: <em>uniformity</em> in the zone index, not size.
+        </p>
+
         <p className="rounded-xl border border-slate-700/40 bg-slate-900/40 px-4 py-3 text-sm text-slate-400">
-          Current stand: a conditional theorem whose hypotheses are the Harnack
-          pair plus one sign, a relay mechanism that has never failed a step, and
-          certified single steps as deep as zone 155,921. T125 —{" "}
-          <span className="font-mono text-slate-300">
-            grand_assembly_probe.py
-          </span>
-          , running as the series finale — assembles the chain end to end with
-          full attribution, the kill list, the compression cascade, the degree of
-          certification, and an honest statement of the distance to RH. That
-          distance remains large. Sandbox; not RH evidence.
+          Where the series ends: a finite, machine-certified chain whose
+          load-bearing spine is 96.2% identity or Cholesky certificate and whose
+          only hypothesis is a declared accounting convention; a relay mechanism
+          that never failed a step; and certified single steps as deep as zone
+          155,921. What does not stand is uniformity in the zone index — and
+          that, not any missing estimate, is the honest distance to any infinite
+          statement. The distance to RH remains large. Series complete at 125
+          parts and 3139/3139 sandbox checks; the next step is a decision about
+          extraction, not another probe. Sandbox; not RH evidence.
         </p>
       </DiarySection>
 
@@ -1955,8 +2003,8 @@ export default function PrimeFrontPage() {
           <MeaningLevel
             level="Near"
             badge="sandbox"
-            title="I5 geography complete; the induction compressed to two statements plus a sign"
-            body="After 124 probes (3105/3105 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete; and the induction that would carry I5 is compressed from one matrix inequality (T104) to a Harnack pair plus one sign the coarse-to-fine recursion already carries (T124) — with the relay mechanism certified step by step, 400/400 rungs, and a single certified step at zone 155,921 (T115). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH. The compression locates the difficulty; it does not remove it. Not RH evidence."
+            title="I5 geography complete; the induction compressed to one sign plus one convention, and assembled end to end"
+            body="After 125 probes (3139/3139 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete; and the induction that would carry I5 is compressed from one matrix inequality (T104) to a sign the coarse-to-fine recursion already carries plus one declared accounting convention (T124/T125) — with the relay mechanism certified step by step, 400/400 rungs, a single certified step at zone 155,921 (T115), and the finale assembling the whole chain on 52 zones, its load-bearing spine 96.2% identity or Cholesky certificate with the Harnack pair no longer in it (T125). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH; what is missing for any infinite statement is uniformity in the zone index. The compression locates the difficulty; it does not remove it. Not RH evidence."
           />
           <MeaningLevel
             level="Big if"
@@ -2002,7 +2050,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 text-sm text-slate-500 sm:px-6 lg:px-8">
           Numbers and verdicts are taken from{" "}
           <code className="font-mono text-slate-400">experiments/next.txt</code>{" "}
-          (2026-07-23…28 diary, Teile 11–124) and the promoted modules{" "}
+            (2026-07-23…28 diary, Teile 11–125) and the promoted modules{" "}
           <code className="font-mono text-slate-400">
             verification/v535_*.py
           </code>{" "}
@@ -2131,7 +2179,8 @@ function BigPictureSection() {
                 matrix inequality
               </strong>
               : a statement about every direction of a large window at once.
-              Twenty parts later it is two small statements plus a sign.
+              Twenty-one parts later the load-bearing part of it is one sign and
+              one accounting convention.
             </p>
             <p className="text-sm">
               Nothing was assumed away on the route. At each stage the older,
@@ -2140,14 +2189,18 @@ function BigPictureSection() {
               which is why the list is shorter and not longer.
             </p>
             <p className="text-sm text-slate-400">
-              What is left today: a{" "}
+              What is left today: on the load-bearing spine, one <em>sign</em>{" "}
+              that the induction already carries on its own plus one declared{" "}
+              <strong className="font-medium text-slate-200">
+                accounting convention
+              </strong>{" "}
+              <span className="font-mono text-amber-200">[T124, T125]</span>. The{" "}
               <strong className="font-medium text-slate-200">
                 Harnack pair
               </strong>{" "}
-              — two statements that hold on every window measured so far — plus
-              one <em>sign</em> that the induction already carries on its own{" "}
-              <span className="font-mono text-amber-200">[T124]</span>. Neither
-              is proved. Both now have classical addresses.
+              — two statements that hold on every window measured so far —
+              survives as a second, independent route and no longer holds the
+              spine up. Neither is proved. Both now have classical addresses.
             </p>
           </div>
           <ReductionCascade />
@@ -2214,12 +2267,12 @@ function BigPictureSection() {
           </p>
           <dl className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
             <BigPictureStat
-              term="124"
-              desc="diary parts (T125 running)"
+              term="125"
+              desc="diary parts — the series is complete"
               tone="sky"
             />
             <BigPictureStat
-              term="3105"
+              term="3139"
               desc="sandbox checks, all passing"
               tone="amber"
             />
@@ -2229,8 +2282,8 @@ function BigPictureSection() {
               tone="emerald"
             />
             <BigPictureStat
-              term="2 + 1"
-              desc="what is left: a Harnack pair plus one sign"
+              term="96.2%"
+              desc="of the load-bearing spine is an identity or a Cholesky certificate"
               tone="violet"
             />
           </dl>
@@ -2239,15 +2292,21 @@ function BigPictureSection() {
             <strong className="font-medium text-slate-200">
               conditional theorem
             </strong>
-            : everything after the word “suppose” is proved or certified, and
-            what is supposed is the Harnack pair. T125 —{" "}
+            : everything after the word “suppose” is proved or certified. The
+            finale{" "}
             <span className="font-mono text-slate-300">
               grand_assembly_probe.py
-            </span>
-            , running as the series finale — assembles that chain end to end
-            with full attribution, together with the kill list, the compression
-            cascade, the degree of certification, and an honest statement of the
-            distance to RH. Sandbox; not RH evidence.
+            </span>{" "}
+            assembled it end to end on 52 zones and changed what has to be
+            supposed:{" "}
+            <strong className="font-medium text-slate-200">
+              the series is complete, and the chain&apos;s spine needs no Harnack
+              pair
+            </strong>{" "}
+            — that pair survives only as a second, independent route, and the one
+            hypothesis the spine still carries is a declared accounting
+            convention. What is missing for any infinite statement is uniformity
+            in the zone index, not size. Sandbox; not RH evidence.
           </p>
         </div>
       </div>
@@ -2288,10 +2347,11 @@ function ProgramStatusCallout() {
         Strongest current sentence
       </p>
       <p className="mt-3 font-serif text-lg leading-relaxed text-violet-50 sm:text-xl">
-        After 124 probes and seven promoted modules, what remains TFPT-specific
+        After 125 probes and seven promoted modules, what remains TFPT-specific
         is exactly one object: I5 — and the induction that would carry it is now
-        a conditional theorem whose hypotheses are a Harnack pair plus one sign
-        the coarse-to-fine recursion already carries (T124).
+        a conditional theorem, assembled end to end on 52 zones, whose
+        load-bearing spine is 96.2% identity or Cholesky certificate and whose
+        only hypothesis is a declared accounting convention (T125).
       </p>
       <ul className="mt-4 space-y-2 text-xs leading-relaxed text-slate-400">
         <li>
@@ -2322,22 +2382,27 @@ function ProgramStatusCallout() {
           <strong className="font-medium text-slate-200">
             What is left, named.
           </strong>{" "}
-          A Harnack pair (T120/T121, unconditional |R − 1| ≤ 0.047 plus a section
-          statement) and one sign the coarse-to-fine induction already carries
-          (T124). Honestly booked against it: the solution-free version of the
-          rung fails, and the unconditional D₀ criterion covers only the first
-          three zones (T120).
+          On the spine: one sign the coarse-to-fine induction already carries
+          plus one declared accounting convention (T124/T125). The Harnack pair
+          (T120/T121, unconditional |R − 1| ≤ 0.047 plus a section statement) is
+          a second, independent route and no longer load-bearing. Honestly booked
+          against it: the solution-free version of the rung fails, the
+          unconditional D₀ criterion covers only the first three zones (T120),
+          and uniformity in the zone index is open (T125).
         </li>
         <li>
           <strong className="font-medium text-slate-200">
-            Series balance.
+            Series balance — complete.
           </strong>{" "}
-          124 parts, 3105/3105 sandbox checks, seven promoted modules; T125 (
+          125 parts, 3139/3139 sandbox checks, seven promoted modules; the finale{" "}
           <span className="font-mono text-slate-300">
             grand_assembly_probe.py
-          </span>
-          , running) assembles the chain end to end as the series finale. The
-          full sprint is told in{" "}
+          </span>{" "}
+          (ASSEMBLY-GREEN, 34/34) assembled the chain end to end — 52 zones, 430
+          completed Cholesky certificates, 24 refuted routes and a seven-station
+          cascade booked. The mandate T ≤ 125 is fulfilled; the next step is a
+          decision about extraction, not another probe. The full sprint is told
+          in{" "}
           <a
             href="#compression"
             className="text-sky-300 underline decoration-sky-400/30 underline-offset-2 hover:text-sky-200"
@@ -2485,7 +2550,7 @@ function I5GeographyCallout() {
       </p>
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
         I5 remains ⟺ RH; the geography locates where any attack must work, it
-        does not perform one. 2428/2428 sandbox checks at T101 (3105/3105 today).
+        does not perform one. 2428/2428 sandbox checks at T101 (3139/3139 today).
         This is not RH evidence.
       </p>
     </aside>

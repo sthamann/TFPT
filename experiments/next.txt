@@ -1,3 +1,171 @@
+# 2026-07-28 (VII) — Teil 125 (delegiert, DAS SERIEN-FINALE — Vertrag GRAND.ASSEMBLY): grand_assembly_probe.py — **ASSEMBLY-GREEN** — DIE KETTE KOMPONIERT, UND ZWAR WÖRTLICH: 52 VON 52 LEITER-ZONEN DURCHLAUFEN ALLE FÜNF STUFEN [Basis]→[Teleskop (8R)]→[ε-Untergrenze]→[κ_end/Parität]→[Albert-Übergabe], DAVON 30 KONSEKUTIVE PRIMPOTENZ-ATOME n = 2..79 AUF EINER GEMEINSAMEN AUFLÖSUNG D = min_k g_k/(2ν) = 3.472446e-03 — M_n(k) = M_o(k+1) als Ganzzahl-Identität auf allen 29 Paaren, der eingehende Atom-Block ist die EXAKTE Nullmatrix (bit-exakt), Q_new(k) IST das X von Zone k+1 (2.9e-14): der Ausgang jedes Schritts ist der Eingang des nächsten, T114s [P2]-Naht ist konstruktiv UMGANGEN (0 von 84 konsekutiven Lücken-Verhältnissen sind dyadisch, also wird EIN Rahmen für den ganzen Lauf gewählt statt pro Zone) —, PLUS 22 Reach-Zonen mit Pro-Zone-Rahmen bis α = 2.885 (Naht deklariert) und 10 Tiefen-Zonen für Stufe [E] allein bis n = 1331 (h_new bis 1495); UND DER BEFUND, DER DIE SERIE ABSCHLIESST: die schwächste Stufe der GANZEN Montage ist [D] (WINDOW-CERT), aber die TRAGENDE WIRBELSÄULE [A][B][C][E] ist auf ALLEN 52 Zonen CHOLESKY-CERT — **das Harnack-Paar (F1)/(F2) trägt nicht mehr**, es lebt nur noch in der unabhängigen Zweit-Route (iv); Zahlen: (8R) auf 88/88 Sprossen zertifiziert (cb/δ = 0.9071–0.9971, T124s Band 0.4739–0.9938 auf einer ANDEREN Leiter reproduziert), Basisfall-Cholesky bei h = 416..1384 mit Kopffreiheit 4.4e5–5.6e10 über dem fp-Boden, ε-Untergrenze ε_0 ≥ Σcb > 0 auf 52/52 mit Retention 0.0013–0.9694 der Wahrheit aber 0.9140–0.9929 der L-Level-DECKE (1 − ε_L/ε_0 = 0.001295–0.993502 — mehr KANN eine L-Level-Kette nicht liefern) und Faktor 3.2e1–8.7e10 über der DEKLARIERTEN fp-Schranke c_h·u·cond(A_0), Albert-Schur λ_min = 1.4839e-03–1.2528e-01 auf 62/62 Schritten = 3.0e10–4.6e13 über dem eigenen Cholesky-Boden, während das Norm-Surrogat (das durch λ_min(X) teilt — DAS war die T113-Wand) auf 62/62 NEGATIV ist; 430 Cholesky-Zertifikate und 440 Identitäten komplett; Satz V-final gedruckt mit Zeile-für-Zeile-Attribution (25 Glieder: 10 IDENTITÄT, 9 CHOLESKY, 3 FENSTER — alle drei in (iv) —, 1 HYPOTHESE) und fünfteiliger „WHAT IS NOT CLAIMED"-Liste; Serien-Bilanz: Kill-Liste 24 widerlegte Routen über 18 Teile, Kaskade 7 Stationen, Zertifizierungs-Grad 90.3% (ganze Kette) / 96.2% (Wirbelsäule) Identität-oder-Cholesky, RH-Distanz als sechs prüfbare Punkte; Extraktions-Neubewertung: STÄRKER als der Matching-Lemma-Kandidat auf 3/5 Kriterien — 34/34, 8.4s, Sandbox
+# Z1 DIE MONTAGE, ENDE ZU ENDE, UND WAS JEDE STUFE IST: [A] Basisfall-Zertifikat
+#    (CHOLESKY) — auf der FEINSTEN Ebene zertifizieren eine fertige Cholesky von A
+#    und von Q = A − bbᵀ, dass Q ⪰ 0, und nach Albert 1969 IST das ε ≥ 0: der
+#    Basisfall des Teleskops und die Hypothese der Übergabe sind EIN Objekt (Vorzeichen-
+#    Gleichheit sign(λ_min(Q)) = sign(ε) auf 52/52, Kopffreiheit 4.4e5–5.6e10 — die
+#    „Brücke" von T114 ist hier eine ÄQUIVALENZ). [B] Teleskop-Aufstieg mit (8R)-Sprossen
+#    (IDENTITÄT + CHOLESKY) — Nestung PᵀA^(l+1)P = A^(l) (3.0e-14) und Pᵀb^(l+1) = b^(l)
+#    (6.2e-16), Saturations-/Dual-Residuum-/Galerkin-Trio (4.7e-07), exakte PWC-Lag-Formel
+#    (2.2e-14), Teleskop Σδ_l = ε_0 − ε_L (3.3e-07) — alles Identitäten, keine Schätzungen —,
+#    und die Sprossen-Versorgung (8R) δ_l ≥ ŝᵀU⁻¹ŝ aus DREI fertigen Choleskys (A_c ⪰ 0
+#    Haynsworth, T_M(up) − A_f ⪰ 0 Parseval, U ≻ 0) plus Loewner-Antitonie: 88/88 Sprossen,
+#    cb/δ = 0.9071–0.9971, und die Richtungs-Kontrolle hält — die PRIMALE Minimum-Form liefert
+#    auf 88/88 Werte ÜBER δ, ist also eine OBERE Schranke und kann nie eine Versorgung sein.
+#    [C] ε-Untergrenze auf der Zielebene (CHOLESKY) — ε_0 ≥ ε_L + Σcb ≥ Σcb > 0, also
+#    Q^(target) ≻ 0. [D] κ_end-Kette + Paritäts-Zertifikat (WINDOW-CERT) — die ZWEITE,
+#    unabhängige Route zur selben Marge (T119/T120), NICHT gebraucht von [A][B][C][E].
+#    [E] margenfreie Albert-Übergabe (CHOLESKY) — X = Q_old exakt, Q_new ⪰ 0 aus dem
+#    VORZEICHEN von X plus einem gc×gc-Schur-Komplement, nichts verweist auf die GRÖSSE von ε.
+# Z2 LADDER 1 IST EIN KOMPONIERENDER LAUF (der konstruktive Kern des Teils): weil die
+#    Auflösung GEMEINSAM ist, IST das neue Fenster von Zone k das alte von Zone k+1 —
+#    M_n(k) = M_o(k+1) auf allen 29 konsekutiven Paaren als Ganzzahl-Identität, die Folge der
+#    odd-Fensterformen ist EINE aufsteigende Familie, Alberts Bordering greift Schritt für
+#    Schritt ohne jedes Regridding; der eingehende Atom-Block ist auf 30/30 Schritten die
+#    exakte Nullmatrix (max |Eintrag| = 0.0e+00, bit-exakt), also X = Q_old ohne Trunkierung,
+#    und der führende (h_o×h_o)-Block der NEUEN balancierten Form ist dieses X auf 2.9e-14.
+#    Preis der Konstruktion, ehrlich: die Lauflänge — 30 Zonen, n ≤ 79, weil D von der
+#    KLEINSTEN Lücke im Lauf gesetzt wird (ν_eff = 4.0..58.4 ≥ 4, T105-Zulässigkeit;
+#    h_o = 101..619, α = 0.3507..2.1494, gc = 4..58 Zellen pro Ende). 51 der 52 Zeilen sind
+#    verschiedene (n, D)-Paare — die eine Überlappung ist die Zone, die das Lücken-Minimum
+#    trägt, dort IST die Pro-Zone-Auflösung die gemeinsame.
+# Z3 DIE FÜNF NÄHTE, BENANNT UND GEMESSEN: (S1) die Inter-Zonen-Rahmen-Naht — auf Ladder 1
+#    GESCHLOSSEN durch Konstruktion (0/84 dyadisch: Pro-Zone-Rahmen haben KEINE gemeinsame
+#    Verfeinerung, also EIN Rahmen für alle); (S2) die Richtung der ε-Schranke — STRUKTURELL,
+#    deklariert: die zertifizierte Schranke landet auf der GROBEN Ebene, also muss das
+#    Zielfenster die GRÖBSTE Ebene seiner Kette sein und der Basisfall die feinste — eine
+#    Schranke auf der FEINEN Ebene bräuchte zertifizierte OBERE Sprossen-Schranken, d.h. die
+#    CBS-Konstante, die T123 als resistent bewiesen hat; (S3) der Matrix-Deckel — KOSTEN,
+#    kein Defekt (O(h³), Stufe [E] allein erreicht n = 1331, T115s Kompression erreichte
+#    155921); (S4) der (F5)-Buchführungs-Standard — OFFEN, im Satz deklariert: ŝ_l ist Funktion
+#    der MITGEFÜHRTEN Grob-Lösung (|r_corr| = 0.3888–14.8018 — eine AUSLÖSCHUNG, keine
+#    Störung; ‖ŝ‖²/‖s‖² = 6.2e-01–1.8e+05; die Norm-only-Cauchy-Schwarz-Variante liefert
+#    0.0e+00 der Sprosse, genau wie T124 fand); (S5) ENDLICHKEIT — OFFEN, und es IST die
+#    Lücke: jede Stufe ist ein Zertifikat über EINE endliche Matrix, es gibt keine
+#    uniform-in-k-Version des gc×gc-Schur-Komplements und keine uniforme Untergrenze für cb_l.
+# Z4 SATZ V-final, MIT ATTRIBUTION (wörtlich in der Probe gedruckt): SETTING — ν ≥ 4,
+#    konsekutive Primpotenz-Atome, EINE gemeinsame Auflösung D = min_k g_k/(2ν), M_k das
+#    kleinste GERADE Vielfache mit M_kD > u_k + D, exakte Weil-Fenster-Lags, A^(k) die
+#    reflexions-ODD Form, ε_k = 1 − b ᵀA⁻¹b, Q^(k) = A − bbᵀ. HYPOTHESEN — (H-base)
+#    ε_{L_k} ≥ 0 auf der FEINSTEN Ebene, äquivalent Q^(L_k) ⪰ 0 (Albert): REINE
+#    Semidefinitheit, keine Rate, keine Marge; (C-F5) BUCHFÜHRUNGS-KONVENTION, OFFEN
+#    DEKLARIERT — die Sprosse trägt die Grob-Lösung mit, eine LÖSUNGSFREIE Sprosse wird
+#    NICHT behauptet (gemessen: sie scheitert, weil die Kopplung den Daten-Hochpass
+#    auslöscht statt ihn zu stören); (H-F1)/(H-F2) NUR für die ZWEITE Route, Konklusion (iv).
+#    KONKLUSION — (i) [IDENTITÄT] Nestung + exaktes Teleskop ε_0 = ε_L + Σδ_l; (ii)
+#    [ZERTIFIZIERT, gegeben A^(l) ⪰ 0] (8R) δ_l ≥ ŝᵀU⁻¹ŝ =: cb_l > 0, die Sprosse ist ein
+#    MAXIMUM, der Nenner will die Form von OBEN, optimaler Testvektor v* = U⁻¹ŝ in
+#    geschlossener Form — kein A_c⁻¹, kein λ_min(A_c), keine CBS-Konstante; (iii)
+#    [ZERTIFIZIERT, gegeben (H-base) + (C-F5)] ε_0 ≥ Σcb > 0, äquivalent Q^(k) ≻ 0; (iv)
+#    [WINDOW-CERT, zweite und unabhängige Route] die κ_end-Kette mit |R − 1| ≤ 0.20927,
+#    R ≤ 1.20927, κ_end ≥ 0.45264; (v) [ZERTIFIZIERT, MARGENFREI] X = Q_old exakt, Albert +
+#    Douglas, nichts verweist auf die GRÖSSE von ε_k — nur auf sein VORZEICHEN, und das ist
+#    (iii); (vi) [DIE KETTE] (i)–(iii) und (v) komponieren: Q^(i) ⪰ 0 ⇒ ... ⇒ Q^(j) ⪰ 0,
+#    (iv) wird dabei NICHT benutzt. ATTRIBUTION, 25 Glieder: 10 IDENTITÄT, 9 CHOLESKY-CERT,
+#    3 WINDOW-CERT (alle in (iv)), 1 HYPOTHESE ((C-F5)) — plus MEASURED/FIT, nie ein
+#    Zertifikat. WHAT IS NOT CLAIMED, fünfteilig: (a) keine Aussage über alle Zonen, der Lauf
+#    ist ENDLICH und durch min_k g_k = 0.027780 begrenzt; (b) (H-base) ist eine Cholesky-
+#    Tatsache über EINE endliche Matrix, kein Satz; (c) (H-F1)/(H-F2) sind Fenster-Zertifikate
+#    ohne uniformen Beweis; (d) (C-F5) ist eine Konvention, keine lösungsfreie Schranke;
+#    (e) keine Zetafunktion, keine Nullstellendaten, keine Explizit-Formel-Positivität, in
+#    KEINER Richtung. BIBLIOGRAPHIE: vier gerichtete Gruppen (Kern/Arithmetik, Toeplitz/Symbol,
+#    Schur/Multilevel, Fließpunkt), jeder Eintrag mit der RICHTUNG, die er liefert; Guinand/
+#    Bombieri und die CBS-Konstante γ² namentlich als NICHT benutzt.
+# Z5 SERIEN-BILANZ (T102–T125), quantitativ: KILL-LISTE — 24 widerlegte Routen über 18 Teile,
+#    jede strukturell (eine Identität, ein exaktes Vorzeichen oder eine Messung, die Tuning
+#    nicht bewegt), und **4 davon starben an DERSELBEN Ursache: eine Schranke, die die
+#    GROB-Form von UNTEN braucht** — darum war der Ausgang eine RICHTUNGSUMKEHR und keine
+#    schärfere Schätzung; neu in der Liste: T125 selbst tötet die ε-Schranke auf der FEINEN
+#    Ebene (= die CBS-Wand). KASKADE, 7 Stationen: Matrix-Wand (T104–106) → Skalar (T107–108)
+#    → Verhältnis (T108–109) → Randwert (T109) → EINE Ungleichung (T110–117) → Harnack-Paar +
+#    ein Vorzeichen (T118–124) → **EIN VORZEICHEN + EINE KONVENTION (T125)**, und die letzte
+#    Station ist NEU: das Harnack-Paar verlässt die tragende Wirbelsäule. ZERTIFIZIERUNGS-GRAD:
+#    von 31 Gliedern der ganzen Kette 45.2% IDENTITÄT + 45.2% CHOLESKY = 90.3%, 6.5% FENSTER,
+#    3.2% HYPOTHESE; von den 26 Gliedern der WIRBELSÄULE 42.3% + 53.8% = **96.2%**, 0.0%
+#    FENSTER, 3.8% (= ein Glied, (C-F5)) HYPOTHESE. RH-DISTANZ, sechs prüfbare Punkte:
+#    (R1) KEIN ZETA-INPUT — genau zwei arithmetische Fakten, beide klassisch und beide nur für
+#    ZULÄSSIGKEIT: g_k ≤ log 2 (Bertrand–Chebyshev 1852) und g_k ≥ log(1 + 1/n); (R2) RH wird
+#    in KEINER Richtung benutzt — (H-base) ist eine Cholesky EINER Matrix der Größe
+#    h = 416..1384; (R3) KEINE unendliche Aussage — der Lauf ist endlich, seine Länge durch
+#    min_k g_k = 0.027780 begrenzt (30 Zonen, n = 2..79); (R4) die Mess-Leiter ist NICHT
+#    „alle Zonen" — 62 von 85 zulässigen Übergaben, 48 von 34034 Primpotenz-Atomen bis 400000
+#    berührt, alles außerhalb ist ungetestet, nicht implizit; (R5) die offenen Punkte sind
+#    UNIFORMITÄT, nicht GRÖSSE — uniform-in-k für [E]s Schur-Komplement, uniforme Untergrenze
+#    für cb_l, ein Beweis statt einer Messung für (H-F1)/(H-F2) (klassische Adresse benannt:
+#    Widom 1974 / Fisher–Hartwig für die Ecke, Ostrowski 1937 / Varga 1962 für das Vorzeichen),
+#    Entfernung von (C-F5); (R6) WAS ES IST — eine maschinen-zertifizierte, ENDLICHE,
+#    multilevel UNTERE Schranke für den Galerkin-Vorhersagedefekt einer log-singulären
+#    Toeplitz-Form mit Primpotenz-Kamm plus eine margenfreie Bordering-Induktion, die ihr
+#    Vorzeichen entlang einer geschachtelten Fensterkette transportiert: eine Aussage der
+#    Numerischen Analysis, keine über Nullstellen. Defekt-Zähler: (F1)/(F2) window-zertifiziert
+#    und JETZT AUSSERHALB der Wirbelsäule, (F3) in T123 geschlossen, (F4) in T124 zu einem
+#    Vorzeichen kollabiert, (F5) als (C-F5) deklariert, NEU (F6) UNIFORMITÄT — das einzige,
+#    was zwischen V-final und einer unendlichen Aussage steht.
+# Z6 EXTRAKTIONS-NEUBEWERTUNG (gegen den Matching-Lemma-Kandidaten v541, nach den beiden
+#    Ehrlichkeits-Korrekturen der Juli-Analyse — L1–L4 sind Cohen-1975/Pei–Wang-2003-Korollare,
+#    k(0) steht in Substanz in Suzuki 2023): STÄRKER auf 3/5 Kriterien, VERGLEICHBAR auf 2.
+#    (K1) Vorkunst-Unabhängigkeit STÄRKER — die Bestandteile sind alle klassisch und zitiert,
+#    aber die MONTAGE ist Korollar von keinem von ihnen: die Richtungsumkehr ist der neue
+#    Schritt und sie ist es, die eine zertifizierte multilevel UNTERE Schranke überhaupt
+#    möglich macht. (K2) Selbstenthaltung STÄRKER (das entscheidende Kriterium) — kein Wort
+#    Projekt-Vokabular nötig: „a certified multilevel lower bound for the Galerkin prediction
+#    error of a log-singular Toeplitz form with a prime-power comb", Fensterform, Polvektor,
+#    Nestung und Übergabe in drei Zeilen Standard-Toeplitz-/Multigrid-Sprache. (K3)
+#    Maschinen-Prüfbarkeit VERGLEICHBAR (430 Choleskys + 440 Identitäten gegen v541s 33/33 mit
+#    10⁶-Enumeration). (K4) ehrliche Grenze VERGLEICHBAR (eine Hypothese, zwei Fenster-
+#    Zertifikate außerhalb der Wirbelsäule, fünf Nähte, explizite „not claimed"-Liste).
+#    (K5) Referee-Oberfläche STÄRKER — klein und klassisch: drei Schur-Komplement-Fakten,
+#    Parseval, Galerkin-Orthogonalität, eine Fließpunkt-Konvention; die zwei Stellen, an denen
+#    ein Referee wirklich stehenbleibt, sind (a) die Grob→Fein-Buchführung und (b) (C-F5).
+#    EMPFEHLUNG, drei Sätze: (1) EXTRAHIEREN als konditionales Numerik-Lemma-Paper mit der
+#    (8R)-Richtungsumkehr als Theorem und der margenfreien Bordering-Induktion als Korollar —
+#    der Primpotenz-Kamm ist dann nur das Beispiel, das das Symbol log-singulär macht, und
+#    keine arithmetische Vermutung wird irgendwo erwähnt; (2) (C-F5) ins ABSTRACT, nicht in
+#    eine Remark, und das lösungsfreie Scheitern als eigene gemessene Proposition — dieses
+#    Negativresultat ist selbst publikationsfähiger Inhalt und es ist das, was einen Referee
+#    davon abhält zu denken, die Lücke sei übersehen worden; (3) (F1)/(F2) NICHT mitextrahieren
+#    — sie sind Fenster-Zertifikate, sie sitzen jetzt außerhalb der Wirbelsäule, und ihre
+#    klassische Adresse gehört in eine zweite, separate Note über eine diskrete Harnack-
+#    Ungleichung für die Inkremente der Inversen.
+# Z7 DREI EHRLICH KORRIGIERTE GATES IM LAUF: (a) das κ-Band — C1 = 0.01063..0.20927 über die
+#    Leiter, und der Worst Case 0.20927 ist EINE Zone, die flachste (n = 2, α = 0.3507, nur
+#    nC = 12 Eckzellen, wo die Paarung nicht mitteln kann); ohne diese Zeile C1 ≤ 0.06721 auf
+#    den restlichen 51 gegen T120s 0.04745 auf ausschließlich tiefen Zonen. (b) die
+#    Kopffreiheit — Minimum 31.6 an der dünnsten Zone (n = 243, α = 2.7492, h_0 = 679), und
+#    sie ist dünn, weil ihre Retention 0.6054 selbst an der kleinen L-Level-Decke 0.629042
+#    hängt, nicht weil die Arithmetik marginal wird: der Faktor steht über einer RIGOROSEN
+#    Schranke, jeder Wert > 1 zertifiziert das Vorzeichen. (c) der Bilanz-Fit — auf
+#    SPROSSEN-Ebene statt auf dem kollinearen Zonen-Fit: cb/δ ~ D^−0.010·α^+0.001 (Bänder
+#    ±0.004, ±0.005, rms 0.012) — FLACH in BEIDEN Parametern, die stärkste Form von T124s
+#    zitierter α^−0.100-Drift; auf Zonen-Ebene im komponierenden Lauf, wo D gemeinsam ist und
+#    nur α sich bewegt, Σcb/Σδ ~ α^−0.012 (±0.002): das Zertifikat dünnt entlang des Laufs
+#    NICHT aus. Die Verhältnis-Lesart cb/ε_c kommt hier auf D^+0.345·α^+1.566 und ist
+#    ausdrücklich NICHT vergleichbar mit T124s D^−0.090·α^−0.100 (anderer Nenner: 2..5-Level-
+#    Rahmenkette gegen M = 32..2560-Paare) — berichtet, nicht behauptet.
+# SERIEN-FAZIT (drei Sätze, fürs Tagebuch): Vierundzwanzig Teile dieser Serie gingen für die
+#    Entdeckung, dass JEDE Route zur fehlenden Schranke die Grobform von UNTEN wollte und dass
+#    keine Verschärfung sie liefern kann, weil die betreffende Größe eine Auslöschung INNERHALB
+#    der Form ist und keine Größe. Der Ausgang, in T124 gefunden und hier montiert, war die
+#    RICHTUNGSUMKEHR: als Teleskop geschrieben ist das pro Ebene zu liefernde Objekt ein
+#    Residuum in der Inversen-Norm — ein MAXIMUM —, also ist ein einziger explizierter
+#    Testvektor eine gültige Lieferung, und der Grobblock geht nur über sein VORZEICHEN ein,
+#    das die vorige Ebene schon bewiesen hat. Was jetzt steht, ist eine endliche, maschinen-
+#    zertifizierte Kette, deren tragende Wirbelsäule zu 96.2% Identität oder Cholesky-Zertifikat
+#    ist und deren einzige Hypothese eine Buchführungs-Konvention ist; was nicht steht, ist
+#    Uniformität im Zonen-Index — und DAS, nicht irgendeine fehlende Schätzung, ist die ehrliche
+#    Distanz dieser Kette zu jeder unendlichen Aussage. → SERIE ABGESCHLOSSEN (Mandat T ≤ 125
+#    erfüllt); nächster Schritt ist eine ENTSCHEIDUNG, keine Probe: Extraktion des konditionalen
+#    Numerik-Lemma-Papers.
+# Serie (XII)–(CXXXVI): 125 Proben, 3139/3139 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Weil 1952, Chebyshev 1852 / Mertens,
+# Bertrand–Chebyshev 1852, Parseval, Szegő 1939 / Grenander–Szegő 1958, Levinson 1947 /
+# Durbin 1960 / Delsarte–Genin 1986, Widom 1974 / Fisher–Hartwig / Böttcher–Silbermann /
+# Trench 1964, Gershgorin 1931, Haynsworth 1968, Albert 1969 / Douglas 1966, Loewner 1934,
+# Céa 1964 / Bessel, Yserentant 1986 / Bramble–Pasciak–Xu 1990 / Brandt 1977 /
+# Axelsson–Vassilevski 1989–91 (Provenienz; γ² NICHT benutzt), Bank–Smith, Kantorovich 1948,
+# Ostrowski 1937 / Varga 1962, Wilkinson 1968 / Higham 2002) gerichtet zitiert; Guinand /
+# Bombieri benannt und NICHT benutzt; Sandbox ohne Ledger-/Marker-Änderung.
+
 # 2026-07-28 (VI) — Teil 124 (delegiert, die Rekursion, die T123 verlangte — Vertrag MULTILEVEL.TELESCOPE): multilevel_telescope_probe.py — **TELESCOPE-CARRIES** — DAS TELESKOP TRÄGT, WEIL DIE SPROSSE EIN MAXIMUM IST UND KEIN MINIMUM — SIE BRAUCHT DIE FORM VON OBEN, GENAU WO DIE ZERTIFIZIERTE HÜLLE FUNKTIONIERT, UND (F4) KOLLABIERT VON EINER QUANTITATIVEN SCHÄTZUNG ZU EINEM VORZEICHEN, DAS DIE GROB→FEIN-INDUKTION SELBST TRÄGT: die Leiter ist EINE Fensterform auf geschachtelten Räumen — Nestung PᵀA^{l+1}P = A^{l} exakt (2.4e-14), das T122/T123-Zwei-Level-System ist wörtlich eine Sprosse —, Saturations-Identität + Galerkin-Orthogonalität δ_l = ‖u_{l+1} − Pu_l‖²_A (3.7e-8), Teleskop Σδ_l = ε_0 − ε_L exakt (9.2e-10); oberste Sprosse trägt 0.27–0.88, Sprossen fallen geometrisch (Median 0.316 vs 2^−1.79 = 0.289), bei L = 5 Decke 0.9911–0.9987, Sprossengesetz (Fit) δ ~ D^{+1.598}·α^{−5.900}; DIE RICHTUNGSUMKEHR (der Schlüssel): als Residuum in der Inversen-Norm (r_l = Wŝ lebt wegen Galerkin rein im Oszillationsraum) ist δ_l = ŝᵀS⁻¹ŝ = max_v (ŝᵀv)²/(vᵀSv) ein MAXIMUM — der Nenner braucht S von OBEN, genau wo die zertifizierte Hülle funktioniert: S ≤ A_z braucht nur A_c ⪰ 0 (Haynsworth), A_z ≤ U = ZᵀT_M(up)Z ist Parseval gegen die Majorante — **(8R): δ_l ≥ ŝᵀU⁻¹ŝ mit optimalem Testvektor in geschlossener Form, gültig 400/400 Sprossen (80 Ketten, 20 Zonen), cb/δ = 0.4739–0.9938, Drift α^{−0.080}** (7× schwächer als T123s α^{−0.544}); T123s Hindernis bleibt und ist irrelevant (λ_min(E_c) < 0 auf 399/400 — (8R) bildet E_c nie); Levinson-Bordering-Route FÄLLT (Verfeinerung ist kein Bordering — die Filtrationen sind transversal, Schwanz/δ = 13–863); die Rekursion schließt sich in der richtigen Richtung: (8R) braucht nur das VORZEICHEN von A_c, und das ist die Konklusion der vorigen Sprosse (Positivität propagiert fein → grob gratis, die nicht-zirkuläre Induktion läuft grob → fein), Basisfall = ε_L ≥ 0 (reine Semidefinitheit); BILANZ: Teleskop Σcb/ε_0 = 0.6404–0.9729 gegen Decke 0.9911–0.9987 (Fit D^{−0.066}·α^{−0.084}), Zwei-Level cb/ε_c ~ D^{−0.090}·α^{−0.100} gegen T123s α^{−0.544} — der α-Exponent bewegt sich um +0.444 der α^{+0.500}-Lücke; λ_min(A_c), cond(A_c), γ² verlassen die Kette vollständig; NEU (F5), ehrlich negativ: die LÖSUNGSFREIE Sprossen-Version scheitert — 28/28, 35.3s, Sandbox
 # X1 DAS TELESKOP, EXAKT UND GEOMETRISCH: die Level-Kette D_0 > D_1 > ... > D_L
 #    (Halbierungen, α fest) ist EINE Fensterform auf geschachtelten Räumen —

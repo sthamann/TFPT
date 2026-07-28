@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 
 /**
- * The reduction cascade T104 → T124: what the "one remaining object" was at each
+ * The reduction cascade T104 → T125: what the "one remaining object" was at each
  * stage. Part numbers and named objects are literal (experiments/next.txt);
  * the bar widths are schematic — they order the stages, they do not measure them.
  */
@@ -49,6 +49,13 @@ const STAGES = [
       "Two window-certified statements, plus a sign the coarse-to-fine induction already carries.",
     width: 9,
   },
+  {
+    part: "T125",
+    object: "one sign + one convention",
+    detail:
+      "Assembled on 52 zones: the load-bearing spine needs the sign on one finite matrix plus a declared accounting convention — the Harnack pair survives as a second, independent route.",
+    width: 5,
+  },
 ] as const;
 
 export function ReductionCascade() {
@@ -59,7 +66,7 @@ export function ReductionCascade() {
           The reduction cascade · what is still missing, per stage
         </p>
         <span className="font-mono text-[10px] text-slate-500">
-          T104 → T124
+          T104 → T125
         </span>
       </div>
 

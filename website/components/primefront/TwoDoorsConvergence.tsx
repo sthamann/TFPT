@@ -138,16 +138,23 @@ export function TwoDoorsConvergence() {
           bare_k lower bound plus the soft dressing scalar L. T105 ·
           BARE.AVOIDANCE.CORE — ONE-OF-TWO (28/28): bare is certified in closed
           form and the avoidance law becomes a theorem, leaving one
-          Friedrichs-angle statement. Everything after that — the twenty parts
-          that compress this one statement into a Harnack pair plus one sign,
-          and drive the certified ladder to zone 155,921 — is told in{" "}
+          Friedrichs-angle statement. Everything after that — the twenty-one
+          parts that compress this one statement down to one sign plus one
+          declared accounting convention, drive the certified ladder to zone
+          155,921, and finally assemble the whole chain end to end (T125 ·
+          GRAND.ASSEMBLY — ASSEMBLY-GREEN, 34/34: all five stages on 52 of 52
+          zones, 430 completed Cholesky certificates, the load-bearing spine
+          96.2% identity-or-Cholesky with the Harnack pair no longer in it) — is
+          told in{" "}
           <a
             href="#compression"
             className="text-sky-300 underline decoration-sky-400/30 underline-offset-2 hover:text-sky-200"
           >
             sections 20–22
           </a>
-          .
+          . Series complete at 125 parts / 3139 sandbox checks; the mandate
+          T ≤ 125 is fulfilled, and the next step is a decision about extraction
+          rather than another probe.
         </p>
       </div>
 
