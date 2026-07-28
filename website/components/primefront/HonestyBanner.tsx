@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3494/3494 sandbox checks —
+        (“the full proof”, T126+) is now open with 3525/3525 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -80,7 +80,14 @@ export function HonestyBanner() {
         T139 (DENSE-RESISTS) refuted the classical decay lemma at its
         hypothesis for an arithmetic reason while <em>deriving</em> that sign
         law from one exact telescoping identity: the measured core shrinks to
-        one signed inequality at stripe distance b ≤ 16. What remains
+        one signed inequality at stripe distance b ≤ 16. T140 (FINITE-CORE)
+        then gave that inequality an exact finite core per zone — the telescope
+        identity lifts to the form level (Gram = CHCᵀ exactly), the spectral
+        radius is an exact eigenvalue of a closed-geometry coverage kernel
+        times a mass-plus-Dirichlet form, the checkerboard split replaces the
+        O(nb) Weyl steps by three D-independent ones, and all the D-dependence
+        sits in the geometry; what remains is a zone-uniform discrete Hardy
+        inequality, under test in T141. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

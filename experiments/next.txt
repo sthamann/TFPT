@@ -1,3 +1,85 @@
+# 2026-07-28 (XXII) — Teil 140 (Phase „Der volle Beweis", Vertrag SIGNED.BAND): signed_band_probe.py — **FINITE-CORE** (Latten vorab im Docstring deklariert) — DIE EINE SIGNIERTE UNGLEICHUNG HAT JETZT EINEN EXAKTEN ENDLICH-KERN PRO ZONE, UND DIE GANZE D-ABHÄNGIGKEIT SITZT IN DER GEOMETRIE, NICHT IN DEN STREIFENBLÖCKEN. N1 HEBT DIE TELESKOP-IDENTITÄT VON DEN EINTRÄGEN AUF DIE FORM: Gram = CHCᵀ exakt (3e-15, C = diag(√Δ)M mit der Kanten-Intervall-Inzidenz M), also rank(Gram) ≤ h−1 (gemessen 44–202 gegen 128–1499 Kanten — Faktor 2–10), und daraus DIE EXAKTE ENDLICH-KERN-REDUKTION ρ(W) = λ_max(K^{1/2}HK^{1/2}) (6e-14 auf 16/16 Fenstern) mit dem Überdeckungskern K = MᵀΔM = W([r∧s, r∨s]) in GESCHLOSSENER GEOMETRIE (eintragsweise nichtnegativ, monoton per Inklusion; Green-artig, aber NICHT Ein-Paar — Off-Tridiagonal-Defekt von K⁻¹ 0.08–0.43); und die Energie-Umordnung H = diag(s) + L_N exakt (5e-16) liest T139s Vorzeichen-Gesetz als DIRICHLET-FORM: Massenterm + langreichweitige Dirichlet-Form mit positiven Gewichten auf 0.71–0.87 der Off-Diagonale. Die zertifizierte Kette (jeder Loewner-Schritt per Cholesky) reißt bei Schritt (i): das Weglassen der 13–29% POSITIVEN H-Off-Diagonale kostet ALLEIN die ganze Marge (E1 = 6.4–239× ρ(W)); der Hardy-Schritt addiert nur 6.4–9.0× obendrauf, sein Input ist max_k Q_k = 18.5–339; unterm Ziel auf 0/16, auf allen vier Routen. N2 LÖST R2 MIT DEM SCHACHBRETT-SPLIT: Band_b = D + A_even + A_odd eintragsweise EXAKT, die adjazenten Gruppen-Paare zweifärben in zwei disjunkte Familien ⇒ DREI D-unabhängige Weyl-Schritte statt O(nb) (Wert 0.76–1.79× ρ(W)); die Zonen-Frage ist BEANTWORTET: die Blocknormen sind zonen-uniform (Gruppendiagonale D^{0.13±0.01}, Kreuzblöcke D^{0.02±0.01}), während λ_max(K) ~ D^{−2.99} — die ganze D-Abhängigkeit sitzt in der Geometrie. Floquet nicht anwendbar (quasi-periodisch, Gruppen-Spread 0.15–0.69); Bendixson gibt eine zertifizierte Schranke OHNE jeden Gram: Spektrum reell, 1.07–1.08× ρ(W), 0/16. Zwei harte Negative: das Band VON UNTEN liegt auf 16/16 Fenstern überm Ziel (Rayleigh 0.3894–1.1116 auf 229 (Fenster, b)-Paaren, b ≤ 16 — Mechanismus RANG-INFLATION: die Trunkierung bläst den Rang um 1.2–10.1× auf und schneidet genau die Kompensations-Richtungen), und die NEUE Index-Gitter-Band-Familie — die einzige, in der eine Trunkierung legitim sein KÖNNTE — fällt auch: der weggelassene Fernteil ist zertifiziert Loewner-POSITIV (λ_max ≥ 1.14e-01) auf 256/256. N3 RÄUMT AUF UND VERERBT: 420 Randblöcke, die m-Leiter bis m = 24 zertifiziert 402; die 18 offenen tragen need 1.01–10.99, argmax bei Indexdistanz 11–15, FERN-MASSENANTEIL 0.635–0.912 — echt ferngetragen: dort (und nur dort) ist ein Abkling-Statement das richtige Werkzeug, im Gegensatz zu R1. Der Endlich-Kern wird eine Ebene tiefer GEERBT (ρ(W_S) = λ_max(K_S^{1/2}H_SK_S^{1/2}) auf 4e-15; ρ(W_S) = 0.541–0.925). Karte V12 (18 Zeilen), 17 neue Promotions (Vorrat 47 → 64). Die kürzeste Rest-Liste der Serie: R1′ eine GEMEINSAME Schranke für λ_max(K^{1/2}HK^{1/2}) (nicht faktorweise, nicht Loewner-verstümmelt, nicht einseitig trunkiert); R1″ die Zutat, BENANNT: eine zonen-uniforme DISKRETE HARDY-UNGLEICHUNG (die Dirichlet-Form von N gegen K⁺, Input max_k Q_k); R3′ eine Erste-Moment-Schranke für (−H)₊; R4 die 18 ferngetragenen Randblöcke; R5 nichts für die zertifiziert toten Familien. FAZIT (3 Sätze, zitierfähig): R1 hat jetzt einen ENDLICH-KERN pro Zone, exakt und ohne jede Trunkierung — zwei Matrizen der Größe h−1, K in geschlossener Geometrie, H mit hergeleitetem Vorzeichen-Gesetz; die ADDITIVE Lesart von R1 ist von unten und bei jedem b ≤ 16 negativ geschlossen, mit der Rang-Inflation als Mechanismus; was bleibt, ist EINE benennbare Uniformitäts-Zutat — die zonen-uniforme Dirichlet-Vergleichs-Ungleichung mit max_k Q_k als Input, und N2 hat sie sogar lokalisiert — 31/31, 14.8s, 2441 Zeilen, Sandbox
+# N1 DIE FORM-HEBUNG IST DER ZENTRALE GEWINN, UND SIE IST EINE IDENTITÄT, KEINE
+#    ABSCHÄTZUNG. T139s Doppel-Teleskop war eine Aussage über EINTRÄGE des Gram;
+#    hier wird sie zur Aussage über seine FORM: Gram = CHCᵀ mit C = diag(√Δ)M
+#    (6.5e-16–3.0e-15 auf allen 16 Fenstern), d.h. xᵀGram x = uᵀHu mit der
+#    Besetzungsfunktion u = Cᵀx — Abel-Summation über die Box-Struktur, ohne
+#    Absolutbetrag, ohne Faktorisierung. Drei exakte Konsequenzen: (1) der
+#    signierte Gram ist NIEDRIG-RANGIG, rank ≤ h−1 (44–202 gegen 128–1499
+#    Kanten) — die ganze Spektralfrage lebt auf dem h-Gitter; (2) ρ(W) =
+#    λ_max(K^{1/2}HK^{1/2}) exakt (nichtnull-Spektren von CHCᵀ und
+#    K^{1/2}HK^{1/2} stimmen überein), mit K = MᵀΔM und der geschlossenen
+#    Geometrie-Formel K_rs = W([r∧s, r∨s]) (2e-15, monoton, nichtnegativ) — R1
+#    ist damit eine Frage über ZWEI kleine Matrizen pro Zone, ohne Trunkierung,
+#    ohne Hülle, ohne Reihe; (3) H = diag(s) + L_N exakt (5e-16): das
+#    Vorzeichen-Gesetz IST eine langreichweitige Dirichlet-Form (Gewichte
+#    positiv auf 0.71–0.87), plus ein Massenterm, dessen Koeffizienten nur auf
+#    0.52–0.73 positiv sind. Die direkte Kette E0 ≤ E1 ≤ E2 ist auf jedem
+#    Fenster zertifiziert (L_{N_-} ⪰ 0 mit λ_min ≥ −7e-15; T_Q − L_{N_+} ⪰ 0
+#    mit λ_min ≥ −6e-11) und REISST BEI SCHRITT (i): der Loewner-Drop der
+#    positiven H-Off-Diagonale allein kostet 6.4–239.4×, der Hardy-Schritt
+#    addiert 6.4–9.0×, die Produkt-Schranke λ_max(K)λ_max(H) liegt bei
+#    3.6e2–1.0e4 und die Betrags-Zeilensumme bei 2.2–3.5 — alle vier 0/16.
+#    Ehrlich dazu: genau der weggelassene positive Teil IST die Kompensation,
+#    von der das Vorzeichen-Gesetz lebt.
+# N2 DAS BAND IST ALS EIN OBJEKT ENTSCHIEDEN, UND DIE D-FRAGE IST LOKALISIERT.
+#    Lesart A von R1 (Band plus Schwanz) stirbt VON UNTEN, bei jedem b ≤ 16
+#    gleichzeitig: der Band-Rayleigh-Quotient 0.3894–1.1116 (attained bei
+#    b = 3–11) liegt überm Ziel auf 16/16 Fenstern — T139 zitierte 1.03–1.11
+#    von der Schichtseite, hier reproduziert mit dem Band als EINEM Objekt,
+#    also war der Überschuss nie ein Artefakt der Schicht-Summation. Der
+#    Mechanismus hat jetzt einen Namen: RANG-INFLATION — die Band-Trunkierung
+#    ist nicht von der Form CHCᵀ, ihr Rang ist 1.2–10.1× größer, und jede
+#    Einheit Extra-Rang ist eine abgeschnittene Kompensations-Richtung. Der
+#    SCHACHBRETT-SPLIT liefert R2: Band_b = D + A_even + A_odd exakt (0e+00),
+#    drei D-unabhängige Weyl-Schritte (Kerne 68–1444 Kanten pro Gruppen-Paar),
+#    Wert 0.76–1.79× ρ(W); Floquet hat keine Zelle zum Iterieren (Spread
+#    0.15–0.69, die Streifen sitzen an Atom-Positionen); Bendixson 1902 gibt
+#    ohne jeden Gram die zertifizierte Schranke λ_max(sym W) = 1.0640–1.0833,
+#    1.07–1.08× ρ(W), 0/16. Die Zonen-Messung ist die Information des Teils:
+#    Gruppendiagonale ~ D^{0.13±0.01}, Kreuzblöcke ~ D^{0.02±0.01} (FITS,
+#    zonen-uniform), aber λ_max(K) ~ D^{−2.99±0.09}, λ_max(H) ~ D^{+0.33},
+#    max_k Q_k ~ D^{−2.20}, Produkt ~ D^{−2.66} gegen flaches ρ(W) =
+#    0.9962–0.9999 — nur eine GEMEINSAME Schranke kann D-uniform sein, die
+#    Faktoren laufen gegeneinander. Und die Index-Gitter-Band-Familie (H nach
+#    Indexdistanz geschnitten, die einzige, die T139s Kill NICHT abdeckt, weil
+#    dort eine Trunkierung legitim sein könnte) fällt am Loewner-Test: der
+#    Fernteil hat zertifiziertes λ_max(K^{1/2}H_far K^{1/2}) = 1.145e-01–1.429
+#    auf 256/256 (Fenster, b)-Paaren — NIEMALS nichtpositiv, die Lizenz fehlt
+#    bei jedem b ≤ 16, aus demselben strukturellen Grund.
+# N3 DER REST IST GEERBT, KARTIERT UND KURZ. Der neu gebaute Pool hat 420
+#    Randblöcke (g = 4–16; die Zählung ist NICHT mit T139s 620er-Pool
+#    vergleichbar, die Anatomie schon); die m-Leiter bis m = 24 zertifiziert
+#    402, die 18 offenen tragen need 1.01–10.99 mit argmax bei Indexdistanz
+#    11–15 und Fern-Massenanteil 0.635–0.912 — echt ferngetragen, also ist
+#    GENAU DORT ein Abkling-Statement das richtige Werkzeug (R4), während K2
+#    zeigt, dass die R1-Obstruktion bei KLEINEM b sitzt, wo kein Abklingen
+#    hilft. Der Endlich-Kern ist eine Ebene tiefer geerbt: auf 16 Randblöcken
+#    gilt ρ(W_S) = λ_max(K_S^{1/2}H_SK_S^{1/2}) auf 4e-15, die
+#    Energie-Identität auf 1e-16, ρ(W_S) = 0.541–0.925 — K1 ist eine
+#    Eigenschaft der KONSTRUKTION, nicht des obersten Fensters. Karte V12:
+#    18 Zeilen, A1–A6 geschlossen/gebaut, B–B5 negativ/ersetzt/gemessen, C/C1
+#    ferngetragen/geerbt, D zertifiziert tot, E (RH) nicht angefasst. 17 neue
+#    Promotions-Posten (Vorrat 47 → 64), 0 hier promoviert. Rest-Liste (5
+#    Posten, kürzer als T139s): R1′ die GEMEINSAME Schranke; R1″ die benannte
+#    Zutat — zonen-uniforme diskrete Hardy-Ungleichung mit Erste-Moment-Gewicht
+#    max_k Q_k = 18.5–339 als natürlichem Input; R3′ Erste-Moment-Schranke für
+#    N₊ = (−H)₊ statt eines Abkling-Exponenten; R4 die ferngetragenen Blöcke;
+#    R5 nichts für Schicht/Hülle/Jaffard/Ein-Paar — zertifiziert tot, nicht
+#    wieder anfassen. NÜCHTERN: alle D-Exponenten sind Fits; nichts uniform in
+#    n; kein Marker bewegt. Folge-Vertrag T141 (DISCRETE.HARDY,
+#    discrete_hardy_probe.py) LÄUFT: das Muckenhoupt-Kriterium für das Paar
+#    (Dirichlet-Form von N gegen K⁺), die gemeinsame Schranke, v545-Einschätzung.
+# Serie (XII)–(CLI): 140 Proben, 3525/3525 Checks Sandbox + v535–v544 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Bertrand-Chebyshev 1852,
+# Fan 1958, Berman-Plemmons 1979, Wilkinson 1968/Higham 2002, Weyl 1912,
+# Bendixson 1902/Hirsch 1902, Abel-Summation, Cauchy-Schwarz/diskrete Hardy,
+# Gantmacher-Krein 1950/1960 als Negativ-Test; Floquet 1883/Bloch 1929 zitiert
+# und NICHT angewendet, die Streifen sind quasi-periodisch — gerichtet zitiert);
+# Weil 1952 (Bombieri 2000, Connes 1999) zitiert, nie als Kriterium benutzt;
+# Sandbox ohne Ledger-Zeile für die Probe; kein Zero-Input (AST-Firewall);
+# jede Zahl CERTIFIED/CERTIFIABLE/MEASURED/FIT/HYPOTHESIS getaggt.
+
 # 2026-07-28 (XXI) — Teil 139 (Phase „Der volle Beweis", Vertrag GREEN.DECAY): green_decay_probe.py — **DENSE-RESISTS** (Latten vorab im Docstring deklariert) — DAS ABKLING-LEMMA EXISTIERT KLASSISCH NICHT FÜR DIESES OBJEKT, UND DER GRUND IST ARITHMETISCH; DAS RICHTIGE OBJEKT IST EXAKT IDENTIFIZIERT, UND DER GEMESSENE KERN SCHRUMPFT AUF EINE SIGNIERTE UNGLEICHUNG. M1 TÖTET DIE HYPOTHESE, NICHT DIE TECHNIK: die zertifizierte Kern-Hülle der gelumpten Paar-Matrix fällt nur wie d^{−0.15}..d^{−0.04}, wo Jaffard 1990 p > 1 BRAUCHT — die archimedischen Lags liegen AUF der Grenzlinie (~1/d), und die Primpotenz-Atome legen O(1)-Spikes über das ganze Fenster: eine Hülle sieht die Dünnheit des Kamms nicht, also scheitert das Lemma AN DER HYPOTHESE, arithmetisch. Die Konstanten-Kette ist konstruktiv gebaut statt behauptet: Demko-Moss-Smith VERIFIZIERT, wo es anwendbar ist (75/75 Band-Sprossen — das Scheitern am dichten Objekt ist eine Aussage über das Objekt), Operator-Gate 0.97–1.83 (1/75 unter 1), Algebra-Gate 3.4–1.6e3 (0/75); und der Exponent wird NICHT vererbt (Kern d^{−1.5..−1.1} gegen Inverse d^{−0.52..−0.37}). DAS POSITIVE ERSATZ-OBJEKT: die EXAKTE Doppel-Teleskop-Identität b_eᵀG b_{e'} = Σ_box H (4e-15), H der gemischte zweite Differenzen-Kern — H negativ auf 0.71–0.87 der Off-Diagonale, positiv auf 100% der Diagonale, und weil disjunkte Kanten-Paare Boxen OHNE Diagonalzellen haben, FOLGT T138s gesamtes Vorzeichen-Gesetz aus einem Kern plus Box-Geometrie (hergeleitet statt gemessen; die Gantmacher-Krein-Ein-Paar-Form ist quantitativ tot). M2 TÖTET DIE SCHICHTREIHE VON UNTEN: die nie-abschneidende Reihe liefert 3.388–6.171 gegen Ziel 0.999182–0.999972 (0/15, Überschuss 681–46900×), und die dreifache Richtungs-Pedanterie zahlt sich aus — keine Schicht darf fallen (Spur null ⇒ λ_max > 0), Gram ⪯ Band_b gilt NIE (85/85), und per Weyl ist JEDE Schichtreihe ≥ max_b Rayleigh(Band_b) = 1.0303–1.1116 > Ziel auf 15/15: die Familie ist VON UNTEN getötet, KEIN Abkling-Lemma irgendeiner Stärke kann sie retten, und der Überschuss IST die effektive Schichtzahl (wächst mit dem Fenster). M3 RÄUMT AUF: Pool neu gebaut, 620 Rand-Blöcke; die m-Leiter bis m = 48 konvergiert auf ALLEN 620 und zertifiziert 619/620 — der eine offene Block (need 2.15) hat sein argmax bei Index-Distanz 15, ferngetragen 1.000: das einzige Item, für das ein H-Abkling-Statement das richtige Werkzeug wäre. Eine Ebene tiefer erbt ρ(W_S) = 0.667–0.939 die M1-Struktur wörtlich; die Drei-Körper-Kumulante ist negativ auf 0.93–1.00 von 4200 Tripeln — ZERTIFIZIERT GUTARTIG (drückt obere Schranken nach unten). Promotions-Liste 47 Posten (10 neu). FAZIT (3 Sätze, zitierfähig): das Lemma existiert klassisch nicht für dieses Objekt, aus arithmetischem Grund; das richtige Objekt ist exakt identifiziert (das Vorzeichen-Gesetz ist jetzt hergeleitet), aber jede Betrags-Hülle daraus ist zertifiziert tot; der gemessene Kern ist von „ein Abkling-Gesetz fehlt" auf „EINE signierte Ungleichung bei Streifen-Distanz b ≤ 16 fehlt" geschrumpft — 30/30, 20.8s, 2876 Zeilen, Sandbox
 # M1 DIE JAFFARD-REFUTATION IST ARITHMETISCH, UND DAS ERSATZ-OBJEKT IST EINE IDENTITÄT.
 #    Der Reihe nach: die Anti-Index-Dominanz M − 1 − r − s ≥ |r − s| + 1 ist exakte

@@ -241,8 +241,16 @@ export function TwoDoorsConvergence() {
           hypothesis, arithmetically — while deriving T138&apos;s sign law from
           one exact telescoping identity and killing the layer series from
           below; the core shrinks to one signed inequality at stripe distance
-          b ≤ 16, and T140 (signed_band_probe.py) is running at exactly that
-          inequality.
+          b ≤ 16. T140 · SIGNED.BAND (FINITE-CORE, 31/31) attacked exactly
+          that inequality and gave it an exact finite core per zone: the
+          telescope identity lifts to the form level (Gram = CHCᵀ exactly,
+          rank ≤ h−1), ρ(W) = λ_max(K^½HK^½) with K a closed-geometry
+          coverage kernel and H a mass-plus-Dirichlet form, the checkerboard
+          split replaces the O(nb) Weyl steps by three D-independent ones
+          (R2 solved), and all the D-dependence sits in the geometry
+          (blocks ~ D^0.13, λ_max(K) ~ D^−2.99); what remains is a
+          zone-uniform discrete Hardy inequality, and T141
+          (discrete_hardy_probe.py) is running at exactly that ingredient.
         </p>
       </div>
 

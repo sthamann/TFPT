@@ -32,7 +32,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with the open boundary λ* (v540), the matching-lemma/transport-ledger package (v541), the margin-chain identities of phase 2 (v542), and the induction sprint T102–T125 — a reduction cascade from one matrix inequality down to one sign and one accounting convention, assembled end to end in the finale, with certified margin-free steps to zone 155,921. Series complete at 125 parts; phase 2 (the full proof, T126+) is open — the seam architecture is finished, both remaining inequalities are proof-shaped, three of the four resulting points stand at their preregistered bars, the kappa law falls once while the curvature theorem underneath it stands on all 436 transports (T129), the graded-to-uniform bridge stands as an identity while the curvature bound is reduced to one exponent (T130), and the self-supply loop is built one number short of closed — the epsilon-to-floor sandwich and Perron sign constancy are theorems, M25 reduces to the pole-free section (T131); then the phase reversed direction — the identity block is promoted as v542, the Beurling–Deny triad became an operator discriminator for the seam DtN (T132), a certificate audit hardened v379 to an exact positive-mixture Gram certificate (T133), the pole-free floor closed its existence half with every cheap route failing by sign (T134), the seam DtN showed a bounded faithful state where the Weil window provably has none (T135), the M-matrix pair closed the a-priori radius item by Varga's identity while the exact D-bookkeeping put the whole loss in the margin (T136, promoted as v543), the long lags turned out to be an arithmetic stripe set whose absolute-value envelope family is certified dead (T137, promoted as v544), the compensation itself proved geometric — the sign of every inter-stripe coupling follows the interval geometry, and the m-paired Neumann certificate removed the arithmetic wall on all 77 dead blocks (T138) — and the classical decay lemma was refuted at its hypothesis for an arithmetic reason, with the sign law now DERIVED from one exact telescoping identity and the measured core shrunk to one signed inequality at stripe distance b ≤ 16 (T139). 139 parts, 3494 sandbox checks. Not RH evidence.",
+    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with the open boundary λ* (v540), the matching-lemma/transport-ledger package (v541), the margin-chain identities of phase 2 (v542), and the induction sprint T102–T125 — a reduction cascade from one matrix inequality down to one sign and one accounting convention, assembled end to end in the finale, with certified margin-free steps to zone 155,921. Series complete at 125 parts; phase 2 (the full proof, T126+) is open — the seam architecture is finished, both remaining inequalities are proof-shaped, three of the four resulting points stand at their preregistered bars, the kappa law falls once while the curvature theorem underneath it stands on all 436 transports (T129), the graded-to-uniform bridge stands as an identity while the curvature bound is reduced to one exponent (T130), and the self-supply loop is built one number short of closed — the epsilon-to-floor sandwich and Perron sign constancy are theorems, M25 reduces to the pole-free section (T131); then the phase reversed direction — the identity block is promoted as v542, the Beurling–Deny triad became an operator discriminator for the seam DtN (T132), a certificate audit hardened v379 to an exact positive-mixture Gram certificate (T133), the pole-free floor closed its existence half with every cheap route failing by sign (T134), the seam DtN showed a bounded faithful state where the Weil window provably has none (T135), the M-matrix pair closed the a-priori radius item by Varga's identity while the exact D-bookkeeping put the whole loss in the margin (T136, promoted as v543), the long lags turned out to be an arithmetic stripe set whose absolute-value envelope family is certified dead (T137, promoted as v544), the compensation itself proved geometric — the sign of every inter-stripe coupling follows the interval geometry, and the m-paired Neumann certificate removed the arithmetic wall on all 77 dead blocks (T138) — the classical decay lemma was refuted at its hypothesis for an arithmetic reason, with the sign law now DERIVED from one exact telescoping identity and the measured core shrunk to one signed inequality at stripe distance b ≤ 16 (T139) — and that inequality now has an exact finite core per zone: the telescope identity lifts to the form level, ρ(W) is an exact eigenvalue of a closed-geometry coverage kernel times a mass-plus-Dirichlet form, the checkerboard split replaces the O(nb) Weyl steps by three D-independent ones, and all the D-dependence sits in the geometry (T140). 140 parts, 3525 sandbox checks. Not RH evidence.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified: v535–v544. Sandbox T102–T125: one matrix inequality compressed to one sign plus one accounting convention and assembled end to end; phase 2 (T126+) open, the bridge stands as an identity (T130), the self-supply sandwich is a theorem (T131), the identity block is promoted as v542, the reverse flow landed (T132/T133), the pole-free floor closed as existence with a sign anatomy (T134), the seam admits a bounded state (T135), Varga's identity closed the a-priori radius item (T136 → v543), the absolute-value envelope family is certified dead (T137 → v544), the sign law is geometric and the m-paired certificate removes the arithmetic wall (T138), and the decay lemma is refuted arithmetically — the core shrinks to one signed inequality (T139); 3494 sandbox checks. Residual: I5 — not almost-RH.",
+      "Research diary of the prime / zeta line. Machine-verified: v535–v544. Sandbox T102–T125: one matrix inequality compressed to one sign plus one accounting convention and assembled end to end; phase 2 (T126+) open, the bridge stands as an identity (T130), the self-supply sandwich is a theorem (T131), the identity block is promoted as v542, the reverse flow landed (T132/T133), the pole-free floor closed as existence with a sign anatomy (T134), the seam admits a bounded state (T135), Varga's identity closed the a-priori radius item (T136 → v543), the absolute-value envelope family is certified dead (T137 → v544), the sign law is geometric and the m-paired certificate removes the arithmetic wall (T138), the decay lemma is refuted arithmetically — the core shrinks to one signed inequality (T139), and that inequality acquires an exact finite core per zone with all the D-dependence in the geometry (T140); 3525 sandbox checks. Residual: I5 — not almost-RH.",
   },
 };
 
@@ -94,7 +94,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–139 · 3494 sandbox checks
+            Research diary · Teile 11–140 · 3525 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -2057,8 +2057,19 @@ export default function PrimeFrontPage() {
           derived, not measured — and the m-ladder certifies 619/620 border
           blocks. The measured core has shrunk from &ldquo;a decay law is
           missing&rdquo; to &ldquo;one signed inequality at stripe distance
-          b ≤ 16 is missing&rdquo;; T140 (signed_band_probe.py) is running
-          at exactly that inequality. Sandbox; not RH evidence.
+          b ≤ 16 is missing&rdquo;. T140 (FINITE-CORE, 31/31) then attacked
+          exactly that inequality and gave it an exact finite core per zone:
+          the telescope identity lifts to the form level (Gram = CHCᵀ exactly,
+          rank ≤ h−1), the spectral radius is an exact eigenvalue
+          ρ(W) = λ_max(K^½HK^½) of a closed-geometry coverage kernel K times
+          the mass-plus-Dirichlet form H, the checkerboard split replaces the
+          O(nb) Weyl steps by three D-independent ones, and all the
+          D-dependence sits in the geometry (blocks zone-uniform at D^0.13,
+          λ_max(K) ~ D^−2.99) — while the additive band reading is closed
+          negative from below at every b ≤ 16, with rank inflation as its
+          mechanism. What remains is a zone-uniform discrete Hardy inequality;
+          T141 (discrete_hardy_probe.py) is running at exactly that
+          ingredient. Sandbox; not RH evidence.
         </p>
       </DiarySection>
 
@@ -2080,7 +2091,7 @@ export default function PrimeFrontPage() {
             level="Near"
             badge="sandbox"
             title="I5 geography complete; the induction compressed to one sign plus one convention, and assembled end to end"
-            body="After 139 probes (3494/3494 sandbox checks) and v535–v544: matching lemma closed; I5 geography complete; and the induction that would carry I5 is compressed from one matrix inequality (T104) to a sign the coarse-to-fine recursion already carries plus one declared accounting convention (T124/T125) — with the relay mechanism certified step by step, 400/400 rungs, a single certified step at zone 155,921 (T115), and the finale assembling the whole chain on 52 zones, its load-bearing spine 96.2% identity or Cholesky certificate with the Harnack pair no longer in it (T125). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH; what is missing for any infinite statement is uniformity in the zone index — now phase 2 of the diary (T126+), where the seam architecture is finished, both remaining inequalities are proof-shaped, three of the four resulting points stand at their preregistered bars (T128), the kappa law falls once while the curvature theorem underneath it stands on all 436 transports (T129), the graded-to-uniform bridge stands as an identity carrying both deep seams while the curvature bound is reduced to one exponent (T130), and the self-supply loop is built one number short of closed — the epsilon-to-floor sandwich and Perron sign constancy are theorems, and M25 reduces to positivity of the pole-free section with nine decades of slack (T131) — two irreducibles remain; the identity block underneath that map is now load-bearing v542, the two reverse-flow parts landed (T132: the Beurling–Deny triad as an operator discriminator, spectrum-only; T133: the certificate audit that hardened v379 to an exact positive-mixture Gram), T134 closed the existence half of the pole-free floor while every cheap route fails by sign (the surviving opening is an M-matrix question), T135 showed the seam DtN admits a bounded faithful state where the Weil window provably has none, T136 closed the a-priori radius item of that M-matrix question by Varga's identity while the exact bookkeeping put the whole degradation in the margin and M17 closed negatively, and T137 made the long-lag support an explicit arithmetic stripe set and certified the whole absolute-value envelope family DEAD (ρ(|E|) ≥ 1.32 from below on 35/35) — the thirteen mature statements of both parts are load-bearing as v543 and v544, T138 found the mechanism of the compensation (the sign law is interval geometry, and the m-paired certificate removes the arithmetic wall on all 77 dead blocks), and T139 refuted the classical decay lemma at its hypothesis for an arithmetic reason while DERIVING that sign law from one exact telescoping identity — the residue is one named object: a signed inequality at stripe distance b ≤ 16. The compression locates the difficulty; it does not remove it. Not RH evidence."
+            body="After 140 probes (3525/3525 sandbox checks) and v535–v544: matching lemma closed; I5 geography complete; and the induction that would carry I5 is compressed from one matrix inequality (T104) to a sign the coarse-to-fine recursion already carries plus one declared accounting convention (T124/T125) — with the relay mechanism certified step by step, 400/400 rungs, a single certified step at zone 155,921 (T115), and the finale assembling the whole chain on 52 zones, its load-bearing spine 96.2% identity or Cholesky certificate with the Harnack pair no longer in it (T125). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH; what is missing for any infinite statement is uniformity in the zone index — now phase 2 of the diary (T126+), where the seam architecture is finished, both remaining inequalities are proof-shaped, three of the four resulting points stand at their preregistered bars (T128), the kappa law falls once while the curvature theorem underneath it stands on all 436 transports (T129), the graded-to-uniform bridge stands as an identity carrying both deep seams while the curvature bound is reduced to one exponent (T130), and the self-supply loop is built one number short of closed — the epsilon-to-floor sandwich and Perron sign constancy are theorems, and M25 reduces to positivity of the pole-free section with nine decades of slack (T131) — two irreducibles remain; the identity block underneath that map is now load-bearing v542, the two reverse-flow parts landed (T132: the Beurling–Deny triad as an operator discriminator, spectrum-only; T133: the certificate audit that hardened v379 to an exact positive-mixture Gram), T134 closed the existence half of the pole-free floor while every cheap route fails by sign (the surviving opening is an M-matrix question), T135 showed the seam DtN admits a bounded faithful state where the Weil window provably has none, T136 closed the a-priori radius item of that M-matrix question by Varga's identity while the exact bookkeeping put the whole degradation in the margin and M17 closed negatively, and T137 made the long-lag support an explicit arithmetic stripe set and certified the whole absolute-value envelope family DEAD (ρ(|E|) ≥ 1.32 from below on 35/35) — the thirteen mature statements of both parts are load-bearing as v543 and v544, T138 found the mechanism of the compensation (the sign law is interval geometry, and the m-paired certificate removes the arithmetic wall on all 77 dead blocks), T139 refuted the classical decay lemma at its hypothesis for an arithmetic reason while DERIVING that sign law from one exact telescoping identity — the residue is one named object: a signed inequality at stripe distance b ≤ 16 — and T140 gave that inequality an exact finite core per zone (ρ(W) = λ_max(K^½HK^½), a closed-geometry coverage kernel times a mass-plus-Dirichlet form) with all the D-dependence in the geometry; the residue is now a zone-uniform discrete Hardy inequality. The compression locates the difficulty; it does not remove it. Not RH evidence."
           />
           <MeaningLevel
             level="Big if"
@@ -2126,7 +2137,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 text-sm text-slate-500 sm:px-6 lg:px-8">
           Numbers and verdicts are taken from{" "}
           <code className="font-mono text-slate-400">experiments/next.txt</code>{" "}
-            (2026-07-23…28 diary, Teile 11–139) and the promoted modules{" "}
+            (2026-07-23…28 diary, Teile 11–140) and the promoted modules{" "}
           <code className="font-mono text-slate-400">
             verification/v535_*.py
           </code>{" "}
@@ -2343,12 +2354,12 @@ function BigPictureSection() {
           </p>
           <dl className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
             <BigPictureStat
-              term="139"
+              term="140"
               desc="diary parts — series complete at 125, phase 2 open"
               tone="sky"
             />
             <BigPictureStat
-              term="3494"
+              term="3525"
               desc="sandbox checks, all passing"
               tone="amber"
             />
@@ -2666,9 +2677,22 @@ function ProgramStatusCallout() {
           like d^−0.15..−0.04 where Jaffard needs p &gt; 1 — while deriving
           T138&apos;s sign law from one exact telescoping identity and killing
           the never-truncating layer series from below; the core shrinks to one
-          signed inequality at stripe distance b ≤ 16, and T140 (
+          signed inequality at stripe distance b ≤ 16. T140 (SIGNED.BAND,{" "}
           <span className="font-mono text-slate-300">signed_band_probe.py</span>
-          ) is running at exactly that inequality.
+          , FINITE-CORE, 31/31) attacked exactly that inequality: the telescope
+          identity lifts to the form level (Gram = CHCᵀ exactly, rank ≤ h−1),
+          the spectral radius is the exact finite-core eigenvalue
+          ρ(W) = λ_max(K^½HK^½) of a closed-geometry coverage kernel times a
+          mass-plus-Dirichlet form, the checkerboard split replaces the O(nb)
+          Weyl steps by three D-independent ones, the additive band reading is
+          closed negative from below at every b ≤ 16 (rank inflation
+          1.2–10.1× is the mechanism), and all the D-dependence sits in the
+          geometry — the remaining ingredient is a zone-uniform discrete Hardy
+          inequality, and T141 (
+          <span className="font-mono text-slate-300">
+            discrete_hardy_probe.py
+          </span>
+          ) is running at exactly that ingredient.
         </li>
       </ul>
     </aside>
@@ -2809,7 +2833,7 @@ function I5GeographyCallout() {
       </p>
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
         I5 remains ⟺ RH; the geography locates where any attack must work, it
-        does not perform one. 2428/2428 sandbox checks at T101 (3494/3494 today).
+        does not perform one. 2428/2428 sandbox checks at T101 (3525/3525 today).
         This is not RH evidence.
       </p>
     </aside>

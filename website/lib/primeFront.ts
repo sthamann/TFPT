@@ -113,7 +113,8 @@ export type PrimeFrontVerdict =
   | "ONE-CARRIES"
   | "BOTH-RESIST"
   | "PAIR-EXACT"
-  | "DENSE-RESISTS";
+  | "DENSE-RESISTS"
+  | "FINITE-CORE";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -137,6 +138,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-28",
+    part: 140,
+    title:
+      "The one signed inequality now has textbook shape — the telescope identity lifts to the form level (Gram = CHCᵀ exactly), the spectral radius is an exact finite-core eigenvalue of a closed-geometry coverage kernel times a mass-plus-Dirichlet form, the checkerboard split replaces O(nb) Weyl steps by three D-independent ones, and ALL the D-dependence sits in the geometry",
+    verdict: "FINITE-CORE",
+    summary:
+      "T140 (FINITE-CORE, 31/31, 14.8 s, bars declared in the docstring before any number) — contract SIGNED.BAND: attack exactly the one signed inequality at stripe distance b ≤ 16 that T139 left, and nothing else. (1) The H-telescope identity is lifted from the ENTRIES of the Gram to its FORM: Gram = CHCᵀ exactly (3e-15, C = diag(√Δ)M with the edge-interval incidence matrix M), so rank(Gram) ≤ h−1 (measured 44–202 against 128–1499 edges, a 2–10× reduction) and — the central result — THE EXACT FINITE-CORE REDUCTION ρ(W) = λ_max(K^{1/2}HK^{1/2}) to 6e-14 on every window, with K = MᵀΔM the coverage kernel in CLOSED GEOMETRIC FORM K_rs = W([r∧s, r∨s]) (entrywise nonnegative, monotone by inclusion; Green-like but NOT one-pair). The energy reordering H = diag(s) + L_N is exact to 5e-16: T139's sign law read as a mass term plus a long-range DIRICHLET form with positive weights on 0.71–0.87 of the off-diagonal. The certified chain (every Loewner step by completed Cholesky) tears at step (i): dropping the 13–29% POSITIVE part of H's off-diagonal alone costs the whole margin (6.4–239× ρ(W)); the discrete Hardy step adds only 6.4–9.0× on top, with first-moment input max_k Q_k = 18.5–339; below the target on 0/16 for all four routes. (2) The CHECKERBOARD SPLIT solves R2: Band_b = D + A_even + A_odd entrywise exactly, adjacent group pairs two-colour into two disjoint families — THREE D-independent Weyl steps instead of O(nb). And the zone question is ANSWERED: the stripe block norms are zone-uniform (group diagonal D^0.13±0.01, cross blocks D^0.02±0.01) while λ_max(K) ~ D^−2.99 — the entire D-dependence sits in the geometry, not in the stripe blocks. Floquet is not applicable (quasi-periodic, spread 0.15–0.69); Bendixson certifies 1.07–1.08× ρ(W) without any Gram (spectrum real), 0/16. Two hard negatives: the band FROM BELOW exceeds the target on 16/16 windows (Rayleigh 0.3894–1.1116 on 229 (window, b) pairs — mechanism: truncation inflates the rank by 1.2–10.1×, cutting exactly the compensating directions), and the new index-grid band family — the only one in which a truncation could have been legitimate — fails the Loewner test too: the discarded far part is certified Loewner-POSITIVE (λ_max ≥ 1.14e-01) on 256/256 pairs. (3) 420 border blocks; the m-paired ladder to m = 24 certifies 402; the 18 open ones carry need 1.01–10.99 with argmax at index distance 11–15 and FAR MASS FRACTION 0.635–0.912 — genuinely far-carried, so a decay statement is the right tool THERE (unlike R1). The finite core is INHERITED one level down (ρ(W_S) = λ_max(K_S^{1/2}H_SK_S^{1/2}) to 4e-15; ρ(W_S) = 0.541–0.925). (4) Map V12 (18 rows), 17 new promotion items (stock 47 → 64). The shortest rest list of the series: R1′ a JOINT bound on λ_max(K^{1/2}HK^{1/2}) (not factor-wise — the D-exponents −2.99 and +0.33 cancel; not Loewner-mutilated; not one-sidedly truncated); R1″ the named ingredient — a zone-uniform DISCRETE HARDY INEQUALITY (the Dirichlet form of N against K⁺, input max_k Q_k); R3′ a first-moment bound on (−H)₊; R4 the 18 far-carried border blocks; R5 nothing for the certified-dead families. T141 (discrete_hardy_probe.py) is running at exactly that Hardy ingredient. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "signed_band_probe.py",
+  },
   {
     date: "2026-07-28",
     part: 139,
