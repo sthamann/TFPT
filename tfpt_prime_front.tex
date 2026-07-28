@@ -87,7 +87,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$126$ preregistered probes with $3170$ machine checks, which localized the residual object. That
+$127$ preregistered probes with $3198$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -242,15 +242,16 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots126$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots127$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
 end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\ref{sec:i5},
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
-certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening part of the
-second phase (T126, the seam architecture); Section~\ref{sec:status} is the status statement.
+certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
+second phase (T126--T127: the seam architecture, then the two inequalities dissected);
+Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
 \section{Motivation: why a compiler meets the primes}\label{sec:motivation}
@@ -2938,7 +2939,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T127)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -3078,10 +3079,88 @@ Still open and unchanged: the (C-F5) accounting convention, and the all-$\alpha$
 thing no computation can close (at the tight cap, $6$ boundaries in $9\,700$ would need a double
 seam; for all $n$ one needs a gap theorem, or the free-resolution relaxation, which is unconditional
 in the arithmetic). T127 (\texttt{two\_inequalities\_probe.py}, contract
-\texttt{TWO.INEQUALITIES}) is running: the anatomy of U5 (what separates the $12$ surviving from the
-$10$ dying zones at fixed ratio --- and whether the real seam class, which follows record-small
-gaps, lies on the good side of that separating variable), a U5 floor candidate, the structural
-reason behind U3, and a map V2.
+\texttt{TWO.INEQUALITIES}, $28/28$, verdict \textsc{both-shaped}) then took both inequalities
+head-on. The result --- both come back proof-shaped, and \emph{neither is the statement T126
+named} --- is the remainder of this section.
+
+\subsection{The separating variable is geometric, not arithmetic (T127)}
+The fixed-ratio sweep reproduces exactly: at the worst-case ratio $2.0256$ the transported
+certificate survives on $12$ of $22$ zones, T126's list --- and what dies is the
+\emph{certificate}, not the positivity: the true target eigenvalue $\lambda_{\min}(S_f)$ is
+positive on all $22$ zones. Of $29$ candidate separating variables, exactly $5$ separate the
+surviving from the dying zones perfectly ($22/22$; the rank statistic is a description of a
+$22$-point sample and is never called a test), and all five measure the same \emph{geometric}
+quantity: the right-hand protrusion $s_{l,r}$ --- the two grids quantise the same window
+independently, their border blocks have equal width but sit offset by one rounding, and the
+transported mass $\tau_{\mathrm{dn}}$ loses exactly what protrudes past the coarse block's inner
+edge (correlation $+0.997$ with $\tau_{\mathrm{dn}}$). Every arithmetic candidate fails (gap,
+$\alpha$, atom weight, alias phase; best separation $0.727$) --- the separation is \emph{not} the
+atom and \emph{not} the gap. Deep arithmetic ($n\le300\,000$, $1\,082$ record seams): the fine
+border block has $4$ cells everywhere, $97.60\%$ of real seams have ratio $\le1.05$ with median
+$1.00140$ --- real seams are \emph{near-identity re-griddings} --- and the $11$ seams with ratio
+$>1.2$ \emph{all} have next-atom distance $\le2$: Mersenne ($3,7,31,127,8191$), Fermat-like
+($4,16,256,65536,131071$), one twin ($101,103$). Mih\u{a}ilescu 2004 (Catalan) is cited as the
+classical address of that list and not used.
+
+\subsection{U5 as posed is refuted; the U5 band replaces it}
+As a zone-uniform certificate at ratio $\le2.026$, U5 is \emph{dead as posed}. The replacement is
+\textbf{U5-band}: all $22$ zones survive for every ratio $\rho\le1.49531$, and at least one dies
+for every $\rho\ge1.49766$ (bisected to $2.3\times10^{-3}$; binding zone $n=19$) --- a band that
+covers $99.26\%$ of the route's real seams, the remainder being the $8$ enumerated pairs above.
+The split of the form defect is an \emph{identity} ($\eta=\eta_{\mathrm{cons}}+\eta_{\mathrm{proj}}$,
+exact), and $\eta$ does \emph{not} become small as $\rho\to1$ (max $|\eta|/\lambda=1.146$ at the
+\emph{tightest} ratio): the band buys $\tau_{\mathrm{dn}}\approx1$, not small $\eta$. The floor is
+measured at $c\ge0.0090$ over $307$ in-band transports with a positive single-step floor up to
+$n=1331$, $h=1496$. \textbf{The sharpest new finding:} the near-identity census ($43$ deep zones,
+all at ratio $1.00140$) fails \emph{once} --- $n=479$, $|\eta|/\lambda=1.472$, within $0.14\%$ of
+the identity --- so the ratio band is only a \emph{proxy} for the border geometry; the failure is
+repaired by a three-stage ladder (retention $0.5027$), exactly as T126 repaired $n=31$ --- the
+fallback is part of the statement. And the risk is recognisable \emph{before} any factorisation:
+the indicator $\tau_{\mathrm{dn}}/\tau_{\mathrm{flat}}$ ranks the margin at Spearman $+0.749$, and
+the one failure is its argmax ($\tau_{\mathrm{flat}}$ is a predictor, not a bound).
+
+\subsection{U3 defuses to a coarse floor: the harmonic-mean identity}
+Three identities restructure U3. The pole part of the rung data has the closed form
+$(Z^{\mathsf T}b)_j=-\tfrac{16}{\sqrt{2D}}\sinh^2(D/4)\cosh(\bar x^{\mathrm c}_j/2)$ (to
+$3.2\times10^{-13}$); the rung quality is a \emph{harmonic mean},
+$\mathrm{cb}/\delta=1/\sum_i w_i/\mu_i$ (to $1.5\times10^{-7}$); and the weights split by Parseval
+(to $6.1\times10^{-16}$). The residual's mass on the good half of the pencil spectrum
+$\{\mu\ge\tfrac12\}$ is $0.9665\ldots0.99998$ over $42$ rungs (flat), so
+$\mathrm{cb}/\delta\ge1/(2m+(1-m)/\mu_{\min})$ --- a floor as \emph{crude} as
+$\mu_{\min}\ge1.62\times10^{-2}$ (one part in $62$) already gives $\mathrm{cb}/\delta\ge\tfrac14$,
+where T126 had to measure $0.192$--$0.307$ sharply. The reading ``$\hat s$ avoids the bad
+direction'' is \emph{refuted}: the flatness is generic --- every smooth, flat, alternating or
+quasi-random direction has good-band mass above $0.50$ --- and exactly \emph{one} direction type
+fails, a \emph{boundary layer} at the window edge (concentration $3.1\times$ there, against
+$0.03\times$ for $\hat s$ and $0.001\times$ for its closed-form pole part). The bad pencil
+directions are \emph{not} edge-localised in the $\ell_2$ sense ($1.23\times$) --- only the
+$U$-metric concentration separates.
+
+\subsection{The map V2: three inequalities and one enumeration}
+The map V2 has $16$ points: $10$ carried, $2$ conditional-classical (one Bernstein/Markov bound,
+the declared fp floor), and the $2$ genuinely new ones of T126 \emph{reformulated}:
+
+\begin{keybox}[The remaining mathematics (T127, map V2)]
+\textbf{(T) The border-retention bound.} A lower bound for the transported mass
+$\tau_{\mathrm{dn}}$ under the edge-geometry hypothesis --- from predictor to bound, via the
+support of the $S_f$ eigenvector; the ratio band $\rho\le1.50$ is only a proxy for it.\\[3pt]
+\textbf{(E) The $|\eta|$ upper bound.} Both parts of the form defect
+$\eta=\eta_{\mathrm{cons}}+\eta_{\mathrm{proj}}$, to be bounded \emph{jointly} with (T): the two
+rank together at $+0.749$.\\[3pt]
+\textbf{(M) The pencil-mass bound.} The residual's good-band mass plus the crude floor
+$\mu_{\min}\ge1.62\times10^{-2}$; the one direction type to exclude is named (a boundary layer at
+the window edge), and the closed-form pole part provably is none.\\[3pt]
+\textbf{(L) The enumeration.} The $8$ out-of-band seams up to $n=300\,000$ (Mersenne/Fermat pairs
+and one twin), a finite list; where a single step fails, a three-stage ladder composes --- the
+fallback is part of the statement.
+\end{keybox}
+
+\noindent The craft judgement, labelled as one: the three remaining inequalities are of the
+\emph{same craft} as the proven links of the chain --- finite-dimensional inequalities between
+constructed matrices --- and the residual risk is concentrated in the word \emph{uniform}, which
+no amount of this probe's arithmetic can discharge. T128 (\texttt{teml\_probe.py}, contract
+\texttt{TEML}) is running: (L) complete, (T) from predictor to bound, (E) jointly with (T), the
+(M) boundary-layer exclusion, and a map V3.
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
@@ -3409,10 +3488,16 @@ architecture: the segment-partition question dissolves into a monotone free-reso
 to end at the ratio the arithmetic demands), the continuum step closes through an exact
 fractional-Dirichlet identity onto Lipschitz test functions in the reached window, and the audit
 splits (F6) into three named lemmas of which exactly \emph{two} are genuinely new --- the U3
-direction lemma and the U5 zone-uniform seam floor. Since T126 the mountain is those two
-inequalities, the (C-F5) convention, the all-$\alpha$ step that no computation can close, and the
-\textbf{[SUPPORT]} obstruction; T127 (\texttt{two\_inequalities\_probe.py}) is running at both
-inequalities.
+direction lemma and the U5 zone-uniform seam floor. T127 (\texttt{two\_inequalities\_probe.py})
+then dissected both, and both changed: the U5 separating variable is pure interval geometry (the
+border protrusion $s_{l,r}$, not the atom and not the gap), U5 as posed is \emph{refuted} and
+replaced by a band covering $99.26\%$ of the real seams with the $8$ exceptions enumerated
+(Mersenne/Fermat pairs and one twin), and U3 collapses to a coarse floor through the harmonic-mean
+identity, with exactly one direction type to exclude. Since T127 the mountain is \emph{three}
+inequalities of the same craft as the proven links --- (T) the border retention, (E) the form
+defect, (M) the pencil mass --- plus the enumeration (L), the (C-F5) convention, the all-$\alpha$
+step that no computation can close, and the \textbf{[SUPPORT]} obstruction; T128
+(\texttt{teml\_probe.py}) is running at all four.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -3483,19 +3568,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T126}\label{app:index}
+\section{Probe index, diary parts T11--T127}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $116$ parts T11--T126 that the current diary file records
-($117$ runs --- T104 was a double run with two independent arms --- and $2978$ green checks); the ten
+load-bearing artefact. The index covers the $117$ parts T11--T127 that the current diary file records
+($118$ runs --- T104 was a double run with two independent arms --- and $3006$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v541} promoted; with T126, the first part of the second phase, the running totals
-are \textbf{$126$ probes and $3170/3170$ checks}. T127 (\texttt{two\_inequalities\_probe.py},
-contract \texttt{TWO.INEQUALITIES}) is running and not yet indexed.
+\vref{v535}--\vref{v541} promoted; with T126--T127, the first two parts of the second phase, the
+running totals are \textbf{$127$ probes and $3198/3198$ checks}. T128 (\texttt{teml\_probe.py},
+contract \texttt{TEML}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -3627,6 +3712,7 @@ T123 & \texttt{\scriptsize structural\_\allowbreak cbs} & the coupling resists s
 T124 & \texttt{\scriptsize multilevel\_\allowbreak telescope} & the telescope carries: the ladder is one window form on nested spaces ($P^{\mathsf T}A^{(\ell+1)}P=A^{(\ell)}$ exact to $2.4\times10^{-14}$ --- the T122/T123 two-level system is one rung), every rung is the saturation identity and the Galerkin energy of the level correction ($\delta_\ell=\|u_{\ell+1}-Pu_\ell\|^2_A$ to $3.7\times10^{-8}$; telescope $\sum\delta_\ell=\varepsilon_0-\varepsilon_L$ to $9.2\times10^{-10}$; top rung $0.27$--$0.88$, geometric decay, $L=5$ ceiling $0.9911$--$0.9987$); the rung is a \emph{maximum} (dual residual form $\delta_\ell=\hat s^{\mathsf T}S^{-1}\hat s$; $r_\ell=W\hat s$ by Galerkin), so it wants $S$ from \emph{above}: $S\preceq A_z$ needs only $A_c\succeq0$ (Haynsworth), $A_z\preceq U=Z^{\mathsf T}T_M(\mathrm{up})Z$ is Parseval against the certified majorant --- (8R) $\delta_\ell\ge\hat s^{\mathsf T}U^{-1}\hat s$ valid on $400/400$ rungs ($80$ chains, $20$ zones), $\mathrm{cb}/\delta=0.4739$--$0.9938$ at drift $\alpha^{-0.080}$, $7\times$ weaker than T123's $\alpha^{-0.544}$ ($\lambda_{\min}(E_c)<0$ on $399/400$ is irrelevant --- (8R) never forms $E_c$; the Levinson bordering route falls: refinement is not a bordering, tail$/\delta=13$--$863$); the near-null direction stays smooth and self-similar (prolonged Rayleigh quotient exactly $\lambda_{\min}(A^{(\ell)})$, overlap $0.944$--$1.000$), and (8R) needs only the \emph{sign} of $A_c$ --- the previous rung's conclusion: the non-circular induction runs coarse $\to$ fine, base case $\varepsilon_L\ge0$; balance $\sum\mathrm{cb}/\varepsilon_0=0.6404$--$0.9729$ against the ceiling, two-level $\mathrm{cb}/\varepsilon_c\sim D^{-0.090}\alpha^{-0.100}$ against T123's $\alpha^{-0.544}$ --- $+0.444$ of the $\alpha^{+0.500}$ gap; theorem V8: (F1)/(F2) the Harnack pair, (F3) closed, (F4) \emph{collapsed} to a sign, (F5) new, a bookkeeping convention --- the solution-free rung provably fails & TELESCOPE-CARRIES & 28/28\\
 T125 & \texttt{\scriptsize grand\_\allowbreak assembly} & the series finale --- the chain composes: all five stages ([A] base Cholesky, [B] telescope with (8R) rungs, [C] $\varepsilon$ lower bound, [D] $\kappa_{\mathrm{end}}$/parity, [E] margin-free handover) complete on $52/52$ ladder zones plus $10$ handover-only zones to $n=1331$, and ladder~1 is a \emph{literally composing} run --- $30$ consecutive atoms $n=2\ldots79$ on ONE common resolution $D=3.472446\times10^{-3}$, $M_n(k)=M_o(k+1)$ as an integer identity on $29/29$ pairs, the incoming atom block bit-exactly zero, so $X=Q_{\mathrm{old}}$ and the next zone's leading block is that $X$ to $2.9\times10^{-14}$ (T114's [P2] seam constructively \emph{circumvented}: $0/84$ gap ratios dyadic, so one frame is chosen for the whole run, at the price of its length); the load-bearing finding: the weakest stage of the whole mounting is [D] at \textsc{window-cert}, but the SPINE [A][B][C][E] is \textsc{cholesky-cert} on $52/52$ --- \emph{the Harnack pair (F1)/(F2) no longer carries}, it lives only in the independent second route (iv); (8R) on $88/88$ rungs at $\mathrm{cb}/\delta=0.9071$--$0.9971$ (primal form above $\delta$ on $88/88$ --- an upper bound, never a supply), base-case equivalence $\operatorname{sign}\lambda_{\min}(Q^{(L)})=\operatorname{sign}\varepsilon$ on $52/52$ at head-room $4.4\times10^{5}$--$5.6\times10^{10}$, $\varepsilon$ lower bound on $52/52$ at $0.9140$--$0.9929$ of the $L$-level ceiling and $3.2\times10^{1}$--$8.7\times10^{10}$ over the declared fp bound, Albert Schur $3.0\times10^{10}$--$4.6\times10^{13}$ above its floor on $62/62$ steps while the norm surrogate is negative throughout; $430$ completed Choleskys, $440$ identities; theorem V-final printed with line-by-line attribution ($25$ lines: $10$ identity, $9$ Cholesky, $3$ window --- all in (iv) ---, $1$ hypothesis = (C-F5)) and a five-point ``what is not claimed''; series balance: kill list $24$ routes over $18$ parts ($4$ of them one cause), cascade $7$ stations, certification degree $90.3\%$ chain / $\mathbf{96.2\%}$ spine identity-or-Cholesky, RH distance in six checkable points; new defect (F6) uniformity; extraction reassessment: stronger on $3/5$ criteria than the matching-lemma candidate & ASSEMBLY-GREEN & 34/34\\
 T126 & \texttt{\scriptsize uniformity\_\allowbreak seams} & the first part of phase 2 (``the full proof'') --- the seam architecture is finished: the partition question is decided \emph{exactly} by DP on the real gap table ($9\,700$ zones, $n\le10^{5}$) and refuted at T115's $\rho^*=1.83$ (dies at $n=127$, the twin-after-a-large-gap pattern; true requirement $\rho_{\mathrm{crit}}=2.0258$, essentially the single quotient $g(125)/g(127)$; refinement-only infeasible at any ratio $\le64$; coarsening fails at the destination grid, and ladders make it worse); the decisive new measurement: at fixed ratio $2.0256$ the certificate survives on only $12/22$ zones --- the seam dies at the \emph{zone}, not the ratio, so no threshold closes the programme; what carries is the \emph{free-resolution route}: the running minimum $D_k=\min(\mathrm{cap}_k,D_{k-1})$ is monotone by construction, re-gridding at only $764/9\,700$ boundaries ($7.88\%$, record-small gaps), all $12$ affordable real seams certified ($11$ in one re-gridding, $n=31$ via a three-stage ladder, median retention $0.578$), a full seam end to end at $\rho=2.251\ge2.0256$; the uniformity audit (35 rungs, 14 zones) gives every spine constant a status --- U1 self-certifying, U2 one Bernstein bound, U3 measured-flat but \emph{directional} (alignment $0.975$), U4 a compute wall, U5 \emph{falls} (the load-bearing gap), U6 resolved; the continuum step closes via the exact fractional-Dirichlet identity ($86.1\%$ negative off-diagonals; consistency $D^{1.798}/D^{1.802}$, Richardson limit $2.1256\times10^{-4}>0$); the full-proof map has $16$ points, $5$ done/classical, $9$ conditional, exactly $2$ genuinely new --- the (U3) direction lemma and the (U5) zone-uniform seam floor at ratio $\le2.026$ & SEAMS-CERTIFIED & 31/31\\
+T127 & \texttt{\scriptsize two\_\allowbreak inequalities} & both remaining inequalities are proof-shaped, and neither is the statement T126 named: the fixed-ratio sweep reproduces ($12/22$, T126's list --- the \emph{certificate} dies, not the positivity: $\lambda_{\min}(S_f)>0$ on all $22$); of $29$ candidate separating variables $5$ separate perfectly ($22/22$), all the same \emph{geometric} quantity --- the border protrusion $s_{l,r}$, i.e.\ what the fine border block protrudes past the coarse block's inner edge (corr $+0.997$ with $\tau_{\mathrm{dn}}$; every arithmetic candidate fails, best $0.727$); U5 as posed \emph{refuted}, replaced by \textbf{U5-band}: zone-uniform for every $\rho\le1.49531$, at least one zone dies for $\rho\ge1.49766$ (bisected to $2.3\times10^{-3}$, binding $n=19$), covering $99.26\%$ of real seams --- the remaining $8$ are an enumerated list of next-atom-distance $\le2$ pairs (Mersenne $3,7,31,127,8191$; Fermat-like $4,16,256,65536,131071$; twin $101,103$; Mih\u{a}ilescu 2004 cited, not used); the band buys $\tau_{\mathrm{dn}}\approx1$, not small $\eta$ ($\eta=\eta_{\mathrm{cons}}+\eta_{\mathrm{proj}}$ exact; max $|\eta|/\lambda=1.146$ at the tightest ratio; floor $c\ge0.0090$ over $307$ in-band transports); the sharpest finding: the near-identity census ($43$ deep zones, $\rho=1.00140$) fails \emph{once} ($n=479$, $|\eta|/\lambda=1.472$) --- the band is a \emph{proxy} for the border geometry, repaired by a three-stage ladder (retention $0.5027$), and the risk indicator $\tau_{\mathrm{dn}}/\tau_{\mathrm{flat}}$ (Spearman $+0.749$, the failure its argmax) sees it before any factorisation; U3 defuses via the harmonic-mean identity $\mathrm{cb}/\delta=1/\sum w_i/\mu_i$ ($\hat s$-mass on $\{\mu\ge\tfrac12\}$ $\ge0.9665$ over $42$ rungs, so a \emph{crude} floor $\mu_{\min}\ge1.62\times10^{-2}$ gives $\mathrm{cb}/\delta\ge\tfrac14$); ``$\hat s$ avoids the bad direction'' refuted --- flatness is generic, exactly one direction type fails (a boundary layer at the window edge, concentration $3.1\times$ vs $0.03\times$ for $\hat s$); map V2: $16$ points, $10$ carried, $2$ conditional-classical, the $2$ genuinely new reformulated as (T)/(E)/(M) plus the enumeration (L) --- three inequalities of the same craft as the proven links, residual risk in the word \emph{uniform} & BOTH-SHAPED & 28/28\\
 \end{xltabular}
 }
 
