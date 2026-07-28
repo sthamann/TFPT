@@ -85,7 +85,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$123$ preregistered probes with $3077$ machine checks, which localized the residual object. That
+$124$ preregistered probes with $3105$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -804,9 +804,9 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T123)}\label{sec:certification}
+\section{The certification arc (T102--T124)}\label{sec:certification}
 % =====================================================================
-The last twenty-two parts stopped improving measurements and started converting them into certificates ---
+The last twenty-three parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
 
 \subsection{The mechanism: a crossing, not a singularity (T102)}
@@ -2491,15 +2491,138 @@ $\alpha^{+0.500}$ gap to the ceiling now sits in one named obstruction whose res
 cannot be a sharper two-level estimate. The next step is not sharper banding but the
 \emph{recursion} --- the level telescope
 $\varepsilon_\ell=\varepsilon_{\ell+1}+y_\ell^{\mathsf T}S_\ell y_\ell$ with certified
-per-level contributions.
+per-level contributions.\\[3pt]
+\emph{Disposition after T124:} the recursion was built, and the direction flipped. Written as
+a telescope, the rung contribution is a residual in the \emph{inverse} norm --- a maximum,
+not a minimum --- so it is certifiable from \emph{above}, where the certified envelope works:
+(F4) collapses from a quantitative estimate to the sign a coarse-to-fine induction already
+carries, the base case becomes pure semidefiniteness, and $\lambda_{\min}(A_c)$,
+$\mathrm{cond}(A_c)$ and $\gamma^2$ leave the chain entirely. The next subsection reports the
+measurements.
 \end{keybox}
 
-\noindent T124 (\texttt{multilevel\_telescope\_probe.py}, contract
-\texttt{MULTILEVEL.TELESCOPE} --- the level telescope
-$\varepsilon_\ell=\varepsilon_{\ell+1}+y_\ell^{\mathsf T}S_\ell y_\ell$, certified per-level
-contributions without coarse inverses (a Levinson-bookkeeping candidate), the
-self-similarity question, and a theorem candidate V8) was running at the time of writing and
-is \emph{not} reported here.
+\subsection{The direction flip: the telescope carries, and (F4) collapses to a sign (T124)}
+T124 (\texttt{multilevel\_telescope\_probe.py}, contract \texttt{MULTILEVEL.TELESCOPE},
+$28/28$, \textsc{telescope-carries}) builds the recursion T123 demanded, and the exit turns
+out to be not the recursion's \emph{length} but its \emph{direction}: written as a telescope,
+the quantity each rung must supply is not a Rayleigh quotient (a minimum, needing the form
+from below) but a residual in the inverse norm (a maximum, needing the form from above) ---
+and from above, the certified envelope works, because Parseval is two-sided.
+
+\emph{The telescope, exact and geometric.} On the level chain $D_0>D_1>\cdots>D_L$
+(halvings, $\alpha$ fixed) the ladder is \emph{one} window form on nested spaces:
+\[
+P^{\mathsf T}A^{(\ell+1)}P=A^{(\ell)},\qquad P^{\mathsf T}b^{(\ell+1)}=b^{(\ell)}
+\]
+exactly ($2.4\times10^{-14}$; the pole-vector consistency is the identity
+$\sinh(a-d)+\sinh(a+d)=2\cosh d\,\sinh a$) --- the coarse block of the window form at
+$D_{\ell+1}$ \emph{is} the window form at $D_\ell=2D_{\ell+1}$, so the T122/T123 two-level
+system is literally one rung of the ladder. Every rung is the T118 saturation identity,
+$\varepsilon_\ell=\varepsilon_{\ell+1}+\delta_\ell$ with
+$\delta_\ell=y_\ell^{\mathsf T}S_\ell y_\ell$, and Galerkin orthogonality (C\'ea) makes it
+the energy of the level correction,
+$\delta_\ell=\|u_{\ell+1}-Pu_\ell\|^2_{A^{(\ell+1)}}$ (verified to $3.7\times10^{-8}$) ---
+nonnegative, hence the exact telescope
+$\sum_\ell\delta_\ell=\varepsilon_0-\varepsilon_L$ ($9.2\times10^{-10}$). The level
+distribution is geometric on average: the top rung carries $0.2722$--$0.8806$ of
+$\varepsilon_0$, consecutive rungs fall by a median factor $0.316$ (quartiles
+$0.229$--$0.473$, against $2^{-\theta}=0.289$ from the demand law), and at $L=5$ the ceiling
+of the additive chain is $0.9911$--$0.9987$ --- against T123's two-level ceiling
+$\alpha^{-0.044}$. Rung law (a fit): $\delta\sim D^{+1.598}\alpha^{-5.900}$.
+
+\emph{The certified rung contribution --- the direction flip.} The rung has two dual
+descriptions. Primal, $\delta_\ell=\min_{w\in V_\ell}\|u_{\ell+1}-w\|^2_A$: a
+\emph{minimum}, every test vector an upper bound --- the wrong direction for a supply. Dual:
+the level residual $r_\ell=t_{\ell+1}-A^{(\ell+1)}Pu_\ell$ satisfies
+$V^{\mathsf T}r_\ell=0$ (Galerkin), so $r_\ell=W\hat s_\ell$ lives purely in the oscillation
+space, and
+\[
+\delta_\ell\;=\;\|r_\ell\|^2_{A^{-1}}\;=\;\hat s^{\mathsf T}S^{-1}\hat s
+\;=\;\max_v\;\frac{(\hat s^{\mathsf T}v)^2}{v^{\mathsf T}Sv}
+\]
+--- a \emph{maximum}: every test vector gives a lower bound, and the denominator wants $S$
+from \emph{above}. That is where the certified machinery works: $S\preceq A_z$ needs only
+$A_c\succeq0$ (Haynsworth monotonicity), $A_z\preceq U:=Z^{\mathsf T}T_M(\mathrm{up})Z$ is
+Parseval against the certified majorant $\mathrm{up}\ge\sigma^{(M)}$ (the \emph{mirror} of
+T123's $E_z=W^{\mathsf T}T_M(\ell)W$, on the block where it works), and Loewner inversion
+turns the upper bound on $S$ into the lower bound on the rung,
+\[
+\text{(8R)}\qquad \delta_\ell\;\ge\;\hat s^{\mathsf T}U^{-1}\hat s,
+\]
+with the optimal test vector $v^*=U^{-1}\hat s$ in closed form --- no coarse inverse, no
+$\lambda_{\min}(A_c)$, no CBS constant. (8R) is valid on $400/400$ rungs ($80$ chains
+$\times$ $L=5$, $20$ zones), recovering $\mathrm{cb}/\delta=0.4739$--$0.9938$ at drift
+$\alpha^{-0.080\pm0.007}$ --- seven times weaker than T123's $\alpha^{-0.544}$; of the loss,
+the coupling accounts for $0.5036$--$0.9967$ and the envelope only $0.7895$--$0.9994$.
+T123's obstruction remains and is \emph{irrelevant}: $\lambda_{\min}(E_c)<0$ on $399/400$
+rungs, and (8R) never forms $E_c$. The Levinson bordering route honestly \emph{falls}: the
+innovation ledger $q=\sum_n\rho_n^2/E_n$ is exact per level ($9.6\times10^{-12}$;
+Levinson--Durbin--Delsarte--Genin), but refinement is not a bordering --- the two
+filtrations are transversal (head$/q_\ell=0.61$--$1.00$, tail$/\delta_\ell=13$--$863$) ---
+so the rung must be read in the (8R) form.
+
+\emph{Self-similarity, and why the recursion closes.} The near-null direction of the window
+form stays \emph{smooth} at every level (oscillation fraction
+$4.3\times10^{-6}$--$1.2\times10^{-1}$) --- T123's diagnosis, confirmed level by level ---
+and it is self-similar along the ladder: prolonged, $w_\ell$ has Rayleigh quotient exactly
+$\lambda_{\min}(A^{(\ell)})$ at the finer level (an identity, from nesting), i.e.\ within a
+factor $1.30$--$10.11$ of that level's own minimum, at subspace overlap
+$\|Q_K^{\mathsf T}Pw_\ell\|=0.944$--$1.000$. But (8R) asks only for the \emph{sign} of
+$A_c$, and by the nesting identity that sign is the previous rung's own conclusion:
+positivity propagates fine $\to$ coarse for free (so the opposite direction would be
+circular --- stated explicitly), and the non-circular induction runs coarse $\to$ fine, with
+base case $\varepsilon_L\ge0$ --- pure semidefiniteness of the smallest window form.
+
+\emph{The balance; the honest negative.} Telescope reading:
+$\sum_\ell\mathrm{cb}_\ell/\varepsilon_0=0.6404$--$0.9729$ against the ceiling
+$0.9911$--$0.9987$ (fit $D^{-0.066}\alpha^{-0.084\pm0.033}$). Two-level comparison,
+like-for-like against T123's certified balance: $\mathrm{cb}/\varepsilon_c\sim
+D^{-0.090}\alpha^{-0.100}$ against T123's $D^{-0.069}\alpha^{-0.544}$ --- the $\alpha$
+exponent moves by $+0.444$ of the $\alpha^{+0.500}$ gap. The honest negative, recorded as
+(F5): the \emph{solution-free} version of the rung fails --- the coupling term cancels the
+data high-pass rather than perturbing it ($|r_{\mathrm{corr}}|=0.88$--$2.61$ of the explicit
+part), so any norm bound kills the certificate to exactly $0$; what would be needed is a
+bound on a \emph{direction}, not a size. (8R) therefore carries the coarse solution along
+--- on the same bookkeeping standard as the whole chain: $\hat s$ is a function of the
+carried coarse solution exactly as $y$ is in T122/T123's own certified supplies.
+
+\begin{keybox}[The theorem after T124 --- (F4) collapses to a sign]
+\emph{Candidate (V8).} The telescope chain: the nesting identity
+$P^{\mathsf T}A^{(\ell+1)}P=A^{(\ell)}$ (the ladder is one window form on nested spaces);
+the saturation telescope $\varepsilon_0=\varepsilon_L+\sum_\ell\delta_\ell$ (exact); the
+dual residual form of the rung with the certified per-rung bound (8R)
+$\delta_\ell\ge\hat s^{\mathsf T}U^{-1}\hat s$, needing only $A_c\succeq0$ (Haynsworth) and
+the Parseval majorant $U\succ0$; and the coarse-to-fine induction whose hypothesis at rung
+$\ell$ is the conclusion of rung $\ell-1$, with base case $\varepsilon_L\ge0$.\\[3pt]
+\emph{The defect list --- the counter reads differently now:}
+\begin{enumerate}[leftmargin=1.6em]
+\item[\textbf{(F1)}] \emph{one sign of the corner increments} --- unchanged, quoted from
+T120/T121; with (F2) the \emph{Harnack pair}, untouched by telescope and band machinery
+alike;
+\item[\textbf{(F2)}] \emph{a uniform bound on the pairing ratio $\delta$} --- unchanged:
+$0.0126$--$0.1331$ over $360$ rows, any finite value suffices;
+\item[\textbf{(F3)}] \emph{closed} --- the T123 reduction to the band profile of $Wy$ plus
+the uniform oscillation positivity (5R$^*$); the telescope no longer needs it;
+\item[\textbf{(F4)}] \emph{collapsed} --- no longer a quantitative estimate: (8R) needs
+only the sign of $A_c$, which the coarse-to-fine induction already carries;
+$\lambda_{\min}(A_c)$, $\mathrm{cond}(A_c)$ and $\gamma^2$ leave the chain entirely, and
+the base case is pure semidefiniteness;
+\item[\textbf{(F5)}] \emph{new, a bookkeeping convention, honestly stated} --- the
+certified rung carries the coarse solution along (the solution-free version provably kills
+to zero: the coupling is a cancellation, not a perturbation); this is the same standard the
+whole chain already uses, but it is a convention, not a theorem, and it is listed.
+\end{enumerate}
+\emph{Honest movement:} the two-level worst case is gone --- the last quantitative
+obstruction of the certification arc is replaced by a sign that the induction itself
+supplies, at the price of one named convention. What remains is the Harnack pair, one
+constant-not-rate loss per rung, and the assembly of the full chain end to end.
+\end{keybox}
+
+\noindent T125 (\texttt{grand\_assembly\_probe.py}, contract \texttt{GRAND.ASSEMBLY} ---
+the series finale: the complete chain end to end, a theorem V-final with full attribution,
+the series balance (kill list, cascade, certification degree, the honest RH distance), and
+the extraction reassessment) was running at the time of writing and is \emph{not} reported
+here.
 
 % =====================================================================
 \section{The kill list}\label{sec:kills}
@@ -2847,8 +2970,18 @@ $\alpha^{+0.500}$ gap to the ceiling is identified with the $\varepsilon_f$ lid 
 same object $4$--$8$ recursion levels deep. Since T123 the mountain is the unchanged Harnack
 pair (F1)/(F2), one band-profile lemma (F3), and coarse-level positivity (F4) --- no longer
 an estimate to sharpen but the recursion base case --- plus the \textbf{[SUPPORT]}
-obstruction. T124 (\texttt{multilevel\_telescope\_probe.py}) was running at the time of
-writing.
+obstruction. T124 (\texttt{multilevel\_telescope\_probe.py}) then built that recursion, and
+the telescope carries: the ladder is one window form on nested spaces
+($P^{\mathsf T}A^{(\ell+1)}P=A^{(\ell)}$ exact --- the two-level system is literally one
+rung), the rung contribution is a residual in the inverse norm --- a maximum, not a minimum
+--- so it is certified from \emph{above}, where the envelope works ((8R), valid on $400/400$
+rungs at a drift seven times weaker than T123's), and (F4) collapses from a quantitative
+estimate to a sign the coarse-to-fine induction already carries, with base case pure
+semidefiniteness --- $\lambda_{\min}(A_c)$, $\mathrm{cond}(A_c)$ and $\gamma^2$ leave the
+chain entirely. Since T124 the mountain is the unchanged Harnack pair (F1)/(F2) plus one
+bookkeeping convention ((F5): the certified rung carries the coarse solution along; the
+solution-free version fails honestly) --- plus the \textbf{[SUPPORT]} obstruction. T125
+(\texttt{grand\_assembly\_probe.py}, the series finale) was running at the time of writing.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -2900,19 +3033,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T123}\label{app:index}
+\section{Probe index, diary parts T11--T124}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $113$ parts T11--T123 that the current diary file records
-($114$ runs --- T104 was a double run with two independent arms --- and $2885$ green checks); the ten
+load-bearing artefact. The index covers the $114$ parts T11--T124 that the current diary file records
+($115$ runs --- T104 was a double run with two independent arms --- and $2913$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T123: \textbf{$123$ probes, $3077/3077$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T124
-(\texttt{multilevel\_telescope\_probe.py}, contract \texttt{MULTILEVEL.TELESCOPE}) was still running
-when this document was written and is deliberately absent.
+diary at T124: \textbf{$124$ probes, $3105/3105$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T125
+(\texttt{grand\_assembly\_probe.py}, contract \texttt{GRAND.ASSEMBLY} --- the series finale) was still
+running when this document was written and is deliberately absent.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -3041,6 +3174,7 @@ T120 & \texttt{\scriptsize harnack} & the Harnack core is proof-shaped: $a_j$ an
 T121 & \texttt{\scriptsize wide\_\allowbreak window} & the $\sigma_z$ route survives the real ladder as a \emph{section} statement and dies as a symbol statement: $\lambda_{\min}(T_h(\sigma_z))>0$ on $16/16$ frame windows ($n=7\ldots283\,303$, $\alpha$ up to $6.277$, $h$ up to $107\,790$; $8$ with $\inf\sigma_z<0$, the section at $0.64$--$3.23\times|\inf\sigma_z|$ positive), the Christoffel/Fej\'er per-dip budget certified on $8/16$ up to $\alpha=3.446$ (each dip $0.156$--$0.720$ of one Fej\'er width; the dip count grows like $e^{2.41\alpha}$, a fit); the net balance $\mathrm{SUPPLY}/\varepsilon_c\sim D^{-0.18}\alpha^{-1.57}$ --- one poly-log, uniform in $D$, split exactly ($2.8\times10^{-14}$) into the Rayleigh ($\alpha^{-1.02}$) and CBS ($\alpha^{-0.51}$) steps, nothing in $\gamma$; link (5) refuted on $42/42$ (ratio $0.357$--$0.916$ --- the odd sector's Hankel term); one-sign $24/24$ at $n_C=h/16$ (only $21/24$ at $h/8$; certificates restated, free since $\delta\sim n_C^{+0.29}$); the FH comparison inconclusive at reachable $h$ (drift $-0.008\ldots+2.934$ against an allowed $-0.120$); $\delta=0.0126$--$0.1331$ over $360$ rows, $\kappa_{\mathrm{end}}\ge0.4688$; theorem V5: $19$ links, the defect count stays $4$ but every entry changes kind & WIDE-RESTRUCTURED & 21/21\\
 T122 & \texttt{\scriptsize net\_\allowbreak balance\_\allowbreak repair} & the Hankel term is the reflection half of an isometry, not an error term: $A_z=W^{\mathsf T}\mathrm{Toeplitz}_M(c)W$ with $W=BZ$, $W^{\mathsf T}W=I$ exact (the compressed Hankel is half a second difference of the lag sequence, closed form to $7.0\times10^{-16}$; norm ratio $0.123$--$0.781$, $O(1)$ --- $Z$ suppresses both halves equally; the Weyl floor positive on only $12/36$); the certified band bound $\lambda_{\min}(A_z)\ge\mathrm{thr}-\lambda_{\max}(G)$ non-vacuous on $36/36$ rows to $\alpha=6.31$ (the T121 Christoffel budget tore at $3.45$; recovery $0.429$--$0.995$; caveat: the optimum sits at $\mathrm{supp}(g)\approx1$); the structural Rayleigh bound is \emph{sharp} ($q_{\mathrm{str}}=1.00$--$1.03$, drift $\alpha^{-0.002}$), removing the whole $r_{\mathrm{ray}}\sim\alpha^{+0.83}$ slack; the certified balance halves the deficit, $S_2/\varepsilon_c\sim D^{-0.003}\alpha^{-0.729}$, exactly $D$-uniform, and with the measured CBS coupling ($\kappa_y=0.0067$--$0.5311$ against $\gamma^2$) it reads $\alpha^{-0.113}$ against the chain's own ceiling $\alpha^{-0.116}$ (residual decomposition closes to $2.9\times10^{-16}$); theorem V6: the count stays $4$, link (5) retired by an identity, (F3) the band margin ($0.024$--$0.363\sim D^{-0.042}\alpha^{-0.525}$) and (F4) a structural CBS estimate absorb (E3$^*$)/(E4$^*$) & NET-IMPROVED & 20/20\\
 T123 & \texttt{\scriptsize structural\_\allowbreak cbs} & the coupling resists structurally: the coarse block is the other half of the T122 construction ($V=BP$ an isometry, $V^{\mathsf T}V=I$, $V^{\mathsf T}W=0$ exact --- $A_c,B_x,A_z$ three compressions of one window Toeplitz form, identities to $3.4\times10^{-15}$); the coupling is half a \emph{first} difference of the lag sequence, in symbol form $-\tfrac{i}{2}\sin(\varphi/2)[\sigma(\varphi/2)-\sigma(\varphi/2+\pi)]$ --- the aliasing difference, vanishing where the coarse space lives, which explains the factor $2$--$109$ between $\kappa_y=0.0067$--$0.4622$ and $\gamma^2=0.7248$--$0.9467$; both certified routes to $\kappa_y$ need the coarse form from below (band-split CS is correct $24/24$ and non-vacuous $0/24$, costing $\mathrm{cond}(A_c)$ up to $3.1\times10^{7}$; the Schur route yields (5R$^*$) $\lambda_{\min}(E_z)=+0.303\ldots+5.017>0$ on every row at slack $1.0007$--$1.007$ but needs $E_c\succ0$, true on $0/24$) --- the near-null direction of the window form is smooth, and its eigenvalue is a cancellation no pointwise symbol minorant sees (envelope margin $8.4\times10^{2}$--$4.0\times10^{5}\times\lambda_{\min}(A_c)$, rising $\alpha^{+4.202}$); the band margin (F3) reduces to the band profile of $Wy$ at a cost of $0.7\%$ (dyadic split exact to $1.1\times10^{-15}$, overshoot $1.20$--$3.51$); the certified balance $S_6/\varepsilon_c\sim D^{-0.069}\alpha^{-0.544}$ against the ceiling $\alpha^{-0.044}$ --- gap $\alpha^{+0.500}$, all of it the coupling (two-term residual split closes to $2.8\times10^{-17}$) --- and the gap is identified as the $\varepsilon_f$ lid itself, $4$--$8$ recursion levels deep; theorem V7: the count stays $4$, restructured --- (F1)/(F2) the Harnack pair, (F3) one band-profile lemma, (F4) coarse positivity $=$ the recursion base case & CBS-RESISTS & 20/20\\
+T124 & \texttt{\scriptsize multilevel\_\allowbreak telescope} & the telescope carries: the ladder is one window form on nested spaces ($P^{\mathsf T}A^{(\ell+1)}P=A^{(\ell)}$ exact to $2.4\times10^{-14}$ --- the T122/T123 two-level system is one rung), every rung is the saturation identity and the Galerkin energy of the level correction ($\delta_\ell=\|u_{\ell+1}-Pu_\ell\|^2_A$ to $3.7\times10^{-8}$; telescope $\sum\delta_\ell=\varepsilon_0-\varepsilon_L$ to $9.2\times10^{-10}$; top rung $0.27$--$0.88$, geometric decay, $L=5$ ceiling $0.9911$--$0.9987$); the rung is a \emph{maximum} (dual residual form $\delta_\ell=\hat s^{\mathsf T}S^{-1}\hat s$; $r_\ell=W\hat s$ by Galerkin), so it wants $S$ from \emph{above}: $S\preceq A_z$ needs only $A_c\succeq0$ (Haynsworth), $A_z\preceq U=Z^{\mathsf T}T_M(\mathrm{up})Z$ is Parseval against the certified majorant --- (8R) $\delta_\ell\ge\hat s^{\mathsf T}U^{-1}\hat s$ valid on $400/400$ rungs ($80$ chains, $20$ zones), $\mathrm{cb}/\delta=0.4739$--$0.9938$ at drift $\alpha^{-0.080}$, $7\times$ weaker than T123's $\alpha^{-0.544}$ ($\lambda_{\min}(E_c)<0$ on $399/400$ is irrelevant --- (8R) never forms $E_c$; the Levinson bordering route falls: refinement is not a bordering, tail$/\delta=13$--$863$); the near-null direction stays smooth and self-similar (prolonged Rayleigh quotient exactly $\lambda_{\min}(A^{(\ell)})$, overlap $0.944$--$1.000$), and (8R) needs only the \emph{sign} of $A_c$ --- the previous rung's conclusion: the non-circular induction runs coarse $\to$ fine, base case $\varepsilon_L\ge0$; balance $\sum\mathrm{cb}/\varepsilon_0=0.6404$--$0.9729$ against the ceiling, two-level $\mathrm{cb}/\varepsilon_c\sim D^{-0.090}\alpha^{-0.100}$ against T123's $\alpha^{-0.544}$ --- $+0.444$ of the $\alpha^{+0.500}$ gap; theorem V8: (F1)/(F2) the Harnack pair, (F3) closed, (F4) \emph{collapsed} to a sign, (F5) new, a bookkeeping convention --- the solution-free rung provably fails & TELESCOPE-CARRIES & 28/28\\
 \end{xltabular}
 }
 
@@ -3080,6 +3214,10 @@ $(\Sigma,r,\sigma)$; $\theta$, $\varphi$ & the boundary state of the Riccati rec
 minimisation of the pole-free form over the interior; carries the pole exactly), and the two
 exponents of the measured law $\varepsilon\approx8.34\,D^{\theta}\alpha^{\varphi}$,
 $\theta=1.790$, $\varphi=-6.04$ (T116)\\
+$\delta_\ell$, $\hat s_\ell$, $U$ & the rung contribution of the level telescope
+($\varepsilon_\ell=\varepsilon_{\ell+1}+\delta_\ell$), its oscillation-space residual data
+($r_\ell=W\hat s_\ell$), and the certified Parseval majorant
+$U=Z^{\mathsf T}T_M(\mathrm{up})Z$ of the per-rung bound (8R) (T124)\\
 \bottomrule
 \end{tabularx}
 }

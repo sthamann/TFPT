@@ -252,11 +252,17 @@ export function TwoDoorsConvergence() {
           structurally — every route needs the coarse form from below,
           whose near-null direction is smooth and lives on cancellation no
           symbol minorant can see; the remaining α^0.5 gap is identified as
-          the ε_f lid — the recursion base case, 4–8 levels deep. T124 (
+          the ε_f lid — the recursion base case, 4–8 levels deep. T124 ·
+          MULTILEVEL.TELESCOPE — TELESCOPE-CARRIES (28/28): the telescope
+          carries — the rung is a maximum, not a minimum, so it wants the
+          form from above, exactly where the certified envelope works ((8R)
+          valid on 400/400 rungs, drift 7× weaker than T123&apos;s); (F4)
+          collapses from a quantitative estimate to a sign the coarse-to-fine
+          induction already carries, base case pure semidefiniteness. T125 (
           <span className="font-mono text-slate-300">
-            multilevel_telescope_probe.py
+            grand_assembly_probe.py
           </span>
-          ) running.
+          ) running — the series finale.
         </p>
       </div>
 

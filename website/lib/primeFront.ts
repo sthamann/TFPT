@@ -100,7 +100,8 @@ export type PrimeFrontVerdict =
   | "HARNACK-EXPLAINED"
   | "WIDE-RESTRUCTURED"
   | "NET-IMPROVED"
-  | "CBS-RESISTS";
+  | "CBS-RESISTS"
+  | "TELESCOPE-CARRIES";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -124,6 +125,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-28",
+    part: 124,
+    title:
+      "The telescope carries — the rung is a maximum, not a minimum, so it wants the form from above, exactly where the certified envelope works; (F4) collapses from a quantitative estimate to a sign the coarse-to-fine induction already carries, and the base case is pure semidefiniteness",
+    verdict: "TELESCOPE-CARRIES",
+    summary:
+      "T124 (TELESCOPE-CARRIES, 28/28) — contract MULTILEVEL.TELESCOPE: build the recursion T123 demanded, and test whether the telescope carries the rate. (X1) THE TELESCOPE, EXACT AND GEOMETRIC: the level chain D_0 > D_1 > … > D_L is ONE window form on NESTED spaces — the nesting PᵀA^(l+1)P = A^(l) holds exactly (2.4e-14), so the T122/T123 two-level system is literally one rung of the ladder. Every rung is the T118 saturation identity, and Galerkin orthogonality makes it the energy of the level correction, δ_l = ‖u_(l+1) − Pu_l‖²_A (3.7e-8) — nonnegative, hence the exact telescope Σδ_l = ε_0 − ε_L (9.2e-10). The top rung carries 0.27–0.88 of ε_0, consecutive rungs fall geometrically (median 0.316 vs 2^−1.79 = 0.289 from the demand law), and at L = 5 the ceiling of the additive chain is 0.9911–0.9987 — against T123's two-level ceiling. Rung law (fit): δ ~ D^(+1.598)·α^(−5.900). (X2) THE CERTIFIED RUNG — THE DIRECTION FLIP, the key of the part: the rung is a MAXIMUM, not a minimum. As a residual in the inverse norm (r_l = Wŝ lives purely in the oscillation space by Galerkin), δ_l = ŝᵀS⁻¹ŝ = max_v (ŝᵀv)²/(vᵀSv) — every test vector gives a LOWER bound, and the denominator wants S from ABOVE, exactly where the certified machinery works: S ≤ A_z needs only A_c ⪰ 0 (Haynsworth), A_z ≤ U = ZᵀT_M(up)Z is Parseval against the certified majorant (the MIRROR of T123's E_z, on the block where it works), and Loewner inversion turns that into (8R): δ_l ≥ ŝᵀU⁻¹ŝ with the optimal test vector in closed form — no coarse inverse, no λ_min(A_c), no CBS constant. Valid on 400/400 rungs (80 chains, 20 zones), cb/δ = 0.4739–0.9938, drift α^(−0.080) — 7× weaker than T123's α^(−0.544). T123's obstruction remains and is irrelevant: λ_min(E_c) < 0 on 399/400 rungs, and (8R) never forms E_c. The Levinson bordering route honestly FALLS: the innovation ledger is exact per level (9.6e-12) but refinement is not a bordering — the filtrations are transversal (tail/δ = 13–863). (X3) SELF-SIMILARITY AND WHY THE RECURSION CLOSES: the near-null direction stays smooth at every level (T123's diagnosis confirmed level by level); prolonged, w_l has exact Rayleigh quotient λ_min(A^(l)) at the finer level (factor 1.30–10.11 from that level's own minimum, subspace overlap 0.944–1.000). But (8R) asks only for the SIGN of A_c — and by the nesting identity that sign is the previous rung's own conclusion: positivity propagates fine → coarse for free, and the non-circular induction runs coarse → fine, with base case ε_L ≥ 0 — pure semidefiniteness. (X4) THE BALANCE: telescope reading Σcb/ε_0 = 0.6404–0.9729 against the ceiling 0.9911–0.9987 (fit D^(−0.066)·α^(−0.084)); two-level comparison cb/ε_c ~ D^(−0.090)·α^(−0.100) against T123's certified α^(−0.544) — the α exponent moves by +0.444 of the α^(+0.500) gap, i.e. ~90% of the way to the ceiling. (F4) COLLAPSES: no longer a quantitative estimate, just a sign the induction already carries; λ_min(A_c), cond(A_c) and γ² leave the chain entirely. NEW (F5), honestly negative: the SOLUTION-FREE rung version fails — the coupling term cancels the data high-pass rather than perturbing it, so a norm bound kills to exactly 0; a directional bound would be needed — (8R) carries the solution along, on the same bookkeeping standard as the whole chain. The Harnack pair (F1)/(F2) is untouched. T125 (GRAND.ASSEMBLY, grand_assembly_probe.py) is running: the series finale — the complete chain end to end, theorem V-final with full attribution, the series balance (kill list, cascade, certification degree, the honest RH distance), and the extraction reassessment. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "multilevel_telescope_probe.py",
+  },
   {
     date: "2026-07-28",
     part: 123,

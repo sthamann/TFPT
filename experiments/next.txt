@@ -1,3 +1,86 @@
+# 2026-07-28 (VI) — Teil 124 (delegiert, die Rekursion, die T123 verlangte — Vertrag MULTILEVEL.TELESCOPE): multilevel_telescope_probe.py — **TELESCOPE-CARRIES** — DAS TELESKOP TRÄGT, WEIL DIE SPROSSE EIN MAXIMUM IST UND KEIN MINIMUM — SIE BRAUCHT DIE FORM VON OBEN, GENAU WO DIE ZERTIFIZIERTE HÜLLE FUNKTIONIERT, UND (F4) KOLLABIERT VON EINER QUANTITATIVEN SCHÄTZUNG ZU EINEM VORZEICHEN, DAS DIE GROB→FEIN-INDUKTION SELBST TRÄGT: die Leiter ist EINE Fensterform auf geschachtelten Räumen — Nestung PᵀA^{l+1}P = A^{l} exakt (2.4e-14), das T122/T123-Zwei-Level-System ist wörtlich eine Sprosse —, Saturations-Identität + Galerkin-Orthogonalität δ_l = ‖u_{l+1} − Pu_l‖²_A (3.7e-8), Teleskop Σδ_l = ε_0 − ε_L exakt (9.2e-10); oberste Sprosse trägt 0.27–0.88, Sprossen fallen geometrisch (Median 0.316 vs 2^−1.79 = 0.289), bei L = 5 Decke 0.9911–0.9987, Sprossengesetz (Fit) δ ~ D^{+1.598}·α^{−5.900}; DIE RICHTUNGSUMKEHR (der Schlüssel): als Residuum in der Inversen-Norm (r_l = Wŝ lebt wegen Galerkin rein im Oszillationsraum) ist δ_l = ŝᵀS⁻¹ŝ = max_v (ŝᵀv)²/(vᵀSv) ein MAXIMUM — der Nenner braucht S von OBEN, genau wo die zertifizierte Hülle funktioniert: S ≤ A_z braucht nur A_c ⪰ 0 (Haynsworth), A_z ≤ U = ZᵀT_M(up)Z ist Parseval gegen die Majorante — **(8R): δ_l ≥ ŝᵀU⁻¹ŝ mit optimalem Testvektor in geschlossener Form, gültig 400/400 Sprossen (80 Ketten, 20 Zonen), cb/δ = 0.4739–0.9938, Drift α^{−0.080}** (7× schwächer als T123s α^{−0.544}); T123s Hindernis bleibt und ist irrelevant (λ_min(E_c) < 0 auf 399/400 — (8R) bildet E_c nie); Levinson-Bordering-Route FÄLLT (Verfeinerung ist kein Bordering — die Filtrationen sind transversal, Schwanz/δ = 13–863); die Rekursion schließt sich in der richtigen Richtung: (8R) braucht nur das VORZEICHEN von A_c, und das ist die Konklusion der vorigen Sprosse (Positivität propagiert fein → grob gratis, die nicht-zirkuläre Induktion läuft grob → fein), Basisfall = ε_L ≥ 0 (reine Semidefinitheit); BILANZ: Teleskop Σcb/ε_0 = 0.6404–0.9729 gegen Decke 0.9911–0.9987 (Fit D^{−0.066}·α^{−0.084}), Zwei-Level cb/ε_c ~ D^{−0.090}·α^{−0.100} gegen T123s α^{−0.544} — der α-Exponent bewegt sich um +0.444 der α^{+0.500}-Lücke; λ_min(A_c), cond(A_c), γ² verlassen die Kette vollständig; NEU (F5), ehrlich negativ: die LÖSUNGSFREIE Sprossen-Version scheitert — 28/28, 35.3s, Sandbox
+# X1 DAS TELESKOP, EXAKT UND GEOMETRISCH: die Level-Kette D_0 > D_1 > ... > D_L
+#    (Halbierungen, α fest) ist EINE Fensterform auf geschachtelten Räumen —
+#    PᵀA^{l+1}P = A^{l} und Pᵀb^{l+1} = b^{l} exakt (2.4e-14; die Pol-Vektor-
+#    Konsistenz ist sinh(a−d) + sinh(a+d) = 2·cosh(d)·sinh(a)): der Grob-Block
+#    der Fensterform bei D_{l+1} IST die Fensterform bei D_l = 2D_{l+1}, das
+#    T122/T123-Zwei-Level-System ist wörtlich eine Sprosse der Leiter. Auf
+#    jeder Sprosse gilt die T118-Saturations-Identität ε_l = ε_{l+1} + δ_l mit
+#    δ_l = y_lᵀS_ly_l, und Galerkin-Orthogonalität (Céa 1964) macht daraus
+#    δ_l = ‖u_{l+1} − Pu_l‖²_{A^{l+1}} (3.7e-8) — die Sprosse ist die Energie
+#    der Level-Korrektur, darum nichtnegativ, darum teleskopiert die Summe:
+#    Σδ_l = ε_0 − ε_L exakt (9.2e-10). Level-Verteilung: die oberste Sprosse
+#    trägt 0.2722–0.8806 von ε_0, konsekutive Sprossen fallen im Median um
+#    0.3162 (Quartile 0.229–0.473; 2^−θ = 0.289 aus dem Bedarfsgesetz), bei
+#    L = 5 ist ε_L/ε_0 = 1.3e-3–8.9e-3 und die Decke der additiven Kette
+#    0.991052–0.998733 — gegen T123s Zwei-Level-Decke α^{−0.044}. Sprossen-
+#    gesetz (Fit): δ ~ D^{+1.598}·α^{−5.900}.
+# X2 DER ZERTIFIZIERTE LEVEL-BEITRAG — DIE RICHTUNGSUMKEHR (der Kern des
+#    Teils): zwei duale Beschreibungen derselben Sprosse. Primal (Minimum):
+#    δ_l = min_{w∈V_l} ‖u_{l+1} − w‖²_A — jeder Testvektor gibt eine OBERE
+#    Schranke, die falsche Richtung für eine Versorgung. Dual (Maximum): mit
+#    dem Level-Residuum r_l = t_{l+1} − A^{l+1}Pu_l gilt Vᵀr_l = 0 (Galerkin),
+#    also r_l = Wŝ mit ŝ = s_l − B_xᵀu_l — das Residuum lebt rein im
+#    Oszillationsraum — und δ_l = ‖r_l‖²_{A⁻¹} = ŝᵀS⁻¹ŝ = max_v (ŝᵀv)²/(vᵀSv):
+#    jeder Testvektor gibt eine UNTERE Schranke, und der Nenner braucht S von
+#    OBEN. Genau dort funktioniert die zertifizierte Maschinerie: S ≤ A_z
+#    braucht nur A_c ⪰ 0 (Haynsworth-Monotonie), A_z ≤ U = ZᵀT_M(up)Z ist
+#    Parseval gegen die zertifizierte Majorante up ≥ σ^(M) (der SPIEGEL von
+#    T123s E_z = WᵀT_M(ell)W, auf dem Block, wo sie funktioniert), Loewner
+#    (Inversen-Antitonie) dreht die obere S-Schranke in die untere Sprossen-
+#    Schranke: **(8R) δ_l ≥ ŝᵀU⁻¹ŝ**, optimaler Testvektor v* = U⁻¹ŝ in
+#    geschlossener Form — kein A_c⁻¹, kein λ_min(A_c), keine CBS-Konstante.
+#    Gültig 400/400 Sprossen (80 Ketten × L = 5, 20 Zonen), cb/δ = 0.4739–
+#    0.9938, Drift α^{−0.080±0.007} — 7× schwächer als T123s α^{−0.544}; vom
+#    Verlust ist die Kopplung 0.5036–0.9967, die Hülle nur 0.7895–0.9994.
+#    T123s Hindernis bleibt und ist irrelevant: λ_min(E_c) < 0 auf 399/400 —
+#    (8R) bildet E_c nie. Die Levinson-Bordering-Route FÄLLT ehrlich: der
+#    Innovations-Ledger q = Σρ²/E ist exakt pro Level (9.6e-12, Levinson 1947 /
+#    Durbin 1960 / Delsarte–Genin 1986), aber Verfeinerung ist KEIN Bordering —
+#    die Filtrationen sind transversal (head/q = 0.6146–1.0000, Schwanz/δ =
+#    13–863): die Sprosse muss in der (8R)-Form gelesen werden.
+# X3 SELBSTÄHNLICHKEIT + DIE INDUKTIONS-RICHTUNG: die Fast-Null-Richtung der
+#    Fensterform bleibt GLATT auf jeder Ebene (Oszillations-Anteil 4.3e-6–
+#    1.2e-1) und selbstähnlich entlang der Leiter: prolongiert hat w_l EXAKTEN
+#    Rayleigh-Quotienten λ_min(A^{l}) auf der feineren Ebene (Identität aus der
+#    Nestung), d.h. Faktor 1.30–10.11 vom dortigen Minimum, Subraum-Überlappung
+#    ‖Q_KᵀPw_l‖ = 0.9442–1.0000; ihr Eigenwert ist eine Auslöschung der Tiefe
+#    4.6e-8–9.3e-3 innerhalb der Form, Hüll-Marge 3.1–1.1e6 × λ_min(A_c) —
+#    T123s Diagnose, auf jeder Ebene bestätigt. ABER: (8R) fragt nur nach dem
+#    VORZEICHEN von A_c, und per Nestungs-Identität ist dieses Vorzeichen die
+#    Konklusion der vorigen Sprosse — die Induktion läuft GROB → FEIN und
+#    schließt sich; Positivität propagiert fein → grob gratis (die Gegen-
+#    richtung wäre zirkulär, explizit deklariert). Basisfall = ε_L ≥ 0, reine
+#    Semidefinitheit der kleinsten Fensterform.
+# X4 BILANZ + DEFEKT-ZÄHLER: Teleskop-Lesart Σcb/ε_0 = 0.6404–0.9729 gegen die
+#    Decke 0.991052–0.998733 (Fit D^{−0.066}·α^{−0.084±0.033}); Zwei-Level-
+#    Vergleich (like-for-like gegen T123s zertifizierte S6-Bilanz): cb/ε_c ~
+#    D^{−0.090}·α^{−0.100} gegen α^{−0.544} — **der α-Exponent bewegt sich um
+#    +0.444 der α^{+0.500}-Lücke**. DEFEKT-LISTE (6 Einträge, restrukturiert):
+#    (F1) Ecken-Vorzeichen + (F2) uniformes δ — das Harnack-Paar, unberührt;
+#    (F3) GESCHLOSSEN (T123-Reduktion + (5R*), hier nicht mehr gebraucht);
+#    (F4) KOLLABIERT: keine Schätzung mehr, nur ein Vorzeichen aus der
+#    Induktion — λ_min(A_c), cond(A_c), γ² verlassen die Kette vollständig,
+#    Basisfall reine Semidefinitheit; NEU (F5), ehrlich negativ: die
+#    LÖSUNGSFREIE Sprossen-Version scheitert — der Kopplungsterm löscht den
+#    Daten-Hochpass aus statt ihn zu stören (|r_corr| = 0.8825–2.6128), die
+#    Norm-Schranke tötet exakt auf 0; es bräuchte eine Richtungs- statt
+#    Größen-Schranke — (8R) trägt die Lösung mit, auf demselben Buchführungs-
+#    Standard wie die ganze Kette (ŝ ist Funktion der mitgeführten Grob-
+#    Lösung, exakt wie y in T122/T123s S2/S6). → T125 (läuft): GRAND.ASSEMBLY
+#    (grand_assembly_probe.py) — das Serien-Finale: die komplette Kette
+#    Ende-zu-Ende, Satz V-final mit voller Attribution, Serien-Bilanz
+#    (Kill-Liste, Kaskade, Zertifizierungs-Grad, ehrliche RH-Distanz),
+#    Extraktions-Neubewertung.
+# Serie (XII)–(CXXXV): 124 Proben, 3105/3105 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Parseval, Haynsworth 1968 /
+# Albert 1969 (Schur), Loewner (Inversen-Antitonie), Céa 1964 / Galerkin /
+# Bessel, Kantorovich, Levinson 1947 / Durbin 1960 / Delsarte–Genin 1986,
+# Yserentant 1986 / Bramble–Pasciak–Xu 1990 / Axelsson–Vassilevski 1989–91
+# (Teleskop-Provenienz; γ² NICHT benutzt), Szegő 1939 / Grenander–Szegő 1958,
+# Wilkinson 1968 / Higham 2002 (Cholesky)) zitiert; Sandbox ohne Ledger-/
+# Paper-/Marker-Änderung.
+
 # 2026-07-28 (V) — Teil 123 (delegiert, die strukturelle CBS-Frage — Vertrag STRUCTURAL.CBS): structural_cbs_probe.py — **CBS-RESISTS** — DIE BAND-MASCHINERIE SCHLIESST DIE MARGE FAST GRATIS UND KANN DIE KOPPLUNG BEWEISBAR NICHT SCHLIESSEN, UND DIE LÜCKE ZUR DECKE IST DER ε_f-DECKEL SELBST: die Grob-Seite ist die ANDERE Hälfte der T122-Konstruktion — V = BP ist ebenfalls Isometrie, VᵀV = WᵀW = I, VᵀW = 0 exakt, A_c/A_z/B_x sind drei Kompressionen EINER Fenster-Toeplitz-Form (Identitäten auf 3.4e-15) — mit zwei neuen geschlossenen Formen: die Kopplung B_x ist eine HALBE ERSTE DIFFERENZ der Lag-Folge (1.8e-15; A_z war die halbe zweite), Symbolform b(φ) = −(i/2)sin(φ/2)[σ(φ/2) − σ(φ/2+π)] — die ALIASING-DIFFERENZ des Fenster-Symbols (5.7e-16) —, was κ_y QUANTITATIV erklärt (Wy trägt 99.64–100.00% Masse bei d = |θ−π| < π/2 und nur 8.9e-6–1.5e-3 in der θ=0-Zelle; das Worst-Case-y* legt 81.22–100.00% GENAU dorthin — das IST der Faktor 2–109 zwischen κ_y = 0.0067–0.4622 und γ² = 0.7248–0.9467); ZERTIFIZIERTE κ-SCHRANKE: BEIDE Routen scheitern aus EINEM Grund — sie brauchen die GROB-Form von unten: Band-Split-CS (Axelsson–Vassilevski) korrekt 24/24 aber vakuum 0/24 (kostet exakt eine Grob-Konditionszahl, cond(A_c) = 2.1e4–3.1e7), die Schur-Route liefert dafür zwei neue Glieder — **(5R*)** yᵀA_zy ≥ yᵀE_zy mit λ_min(E_z) = +0.303..+5.017 > 0 auf JEDER Zeile (uniforme zertifizierte Positivität des Oszillationsblocks, Schlupf 1.0007–1.007, subsumiert den ganzen T122-Threshold-Sweep gratis) und **(7R*)** zertifiziert sobald E_c ≻ 0 — was auf 0/24 Zeilen gilt (λ_min(E_c) = −3.44..−0.043 < 0 überall); DIE ASYMMETRIE IST DAS RESULTAT: λ_min(A_z) = 0.32–5.08 gut konditioniert, λ_min(A_c) = 1.7e-5–2.9e-4 — die Fast-Null-Richtung der Fensterform ist GLATT, lebt im Grobraum, und ihr Eigenwert kommt aus Auslöschung INNERHALB der Form, die kein punktweiser Symbol-Minorant sehen kann (Hüll-Marge 8.4e2–4.0e5 × λ_min(A_c), steigend α^{+4.2}); Band-Marge (F3): yᵀGy zerfällt EXAKT über dyadische Tiefenschichten (1.1e-15), das Zwei-Faktor-Produkt überschießt nur 1.20–3.51 — **die F3-Reduktion auf das Band-Profil von Wy kostet < 1%**; DIE KERNZAHL: beste voll zertifizierte Versorgung **S6/ε_c ~ D^{−0.069±0.099}·α^{−0.544±0.113}** gegen die Decke S4/ε_c ~ α^{−0.044±0.076} ⇒ Lücke α^{+0.500}, Rest-Zerlegung exakt (2.8e-17): −0.544 + 0.000 + 0.499 — F3 kostet NULL Potenzen, die GESAMTE Lücke ist die Kopplung; und der Deckel ist kein Modellierungsschritt: ε_c = ε_f + yᵀSy ist Identität, die additive Kette hätte Decke exakt 1, aber ε_f braucht seine Schranke eine Ebene tiefer (4–8 Rekursionsebenen) und der Basisfall ist GENAU (F4) — derselbe Gegenstand; Satz V7: Defekt-Zähler 4, restrukturiert; der nächste Schritt ist nicht schärferes Banding, sondern DIE REKURSION — 20/20, 27.8s, Sandbox
 # W1 KOPPLUNGS-ANATOMIE + DIE ZERTIFIZIERTE CBS-SCHRANKE: die Grob-Seite ist die
 #    andere Hälfte der T122-Konstruktion — V = BP (P die PWC-Prolongation) ist

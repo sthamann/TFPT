@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–123 · 3077 sandbox checks
+            Research diary · Teile 11–124 · 3105 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1704,9 +1704,22 @@ function ProgramStatusCallout() {
         from below — whose near-null direction is smooth and lives on a
         cancellation no pointwise symbol minorant can see — and the
         remaining α^0.5 gap is identified as the ε_f lid itself, the
-        same object 4–8 recursion levels deep; the multilevel telescope
-        is under test in T124 (multilevel_telescope_probe.py, running).
-        Milestone: 3077/3077 checks. Not almost-RH. This is not RH
+        same object 4–8 recursion levels deep. T124 (TELESCOPE-CARRIES)
+        then builds that recursion and the telescope carries: the nested
+        ladder is one window form — the two-level system is literally one
+        rung — and the rung contribution is a residual in the inverse
+        norm, a maximum rather than a minimum, so it wants the form from
+        above, exactly where the certified envelope works; the certified
+        rung bound (8R) is valid on 400/400 rungs with a drift 7× weaker
+        than T123&apos;s, (F4) collapses from a quantitative estimate to
+        a sign the coarse-to-fine induction already carries (base case:
+        pure semidefiniteness — λ_min(A_c), cond(A_c) and γ² leave the
+        chain entirely), and the two-level balance moves +0.444 of the
+        α^0.5 gap — most of the way to the ceiling; what remains is the
+        Harnack pair plus one honest bookkeeping note (the solution-free
+        rung fails), and T125 (grand_assembly_probe.py, running)
+        assembles the full chain end to end as the series finale.
+        Milestone: 3105/3105 checks. Not almost-RH. This is not RH
         evidence.
       </p>
     </aside>
