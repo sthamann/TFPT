@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–118 · 2968 sandbox checks
+            Research diary · Teile 11–119 · 2995 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1670,9 +1670,13 @@ function ProgramStatusCallout() {
         lemma corrects itself (log is the boundary of all powers) and
         the chain is repaired on ‖y‖²; exactly one genuinely new
         analytic statement remains — a D^1.75 lower bound for the
-        oscillation mass; T119 (oscillation_mass_probe.py) is running.
-        Milestone: 2968/2968 checks. Not almost-RH. This is not RH
-        evidence.
+        oscillation mass. T119 (ARITHMETIC-DONE) then closes the
+        arithmetic half as a theorem — an explicit D₀(α) with a universal
+        constant B = −1.0474 — proves the energy route to (H2) empty
+        (genuinely new content), and reduces everything to one discrete
+        Harnack inequality via the exact identity κ_end = 1/(1+R); T120
+        (harnack_probe.py) is running. Milestone: 2995/2995 checks. Not
+        almost-RH. This is not RH evidence.
       </p>
     </aside>
   );

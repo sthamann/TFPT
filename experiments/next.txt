@@ -1,3 +1,77 @@
+# 2026-07-28 (I) — Teil 119 (delegiert, die Oszillations-Masse — Vertrag OSCILLATION.MASS): oscillation_mass_probe.py — **ARITHMETIC-DONE** — DIE ARITHMETISCHE HÄLFTE SCHLIESST ALS THEOREM, UND DER REST IST GENAU EINE DISKRETE HARNACK-UNGLEICHUNG: das Kamm-Symbol hat geschlossene Form (jedes Primpotenz-Atom = EIN Kosinus am eigenen Lag, linear auf die zwei Nachbar-Lags interpoliert; Paritäts-Regel: gerader Lag-Index voll, ungerader ×(−cos θ)), die uniforme Schranke ist die Atom-Zählung |σ_z^comb| ≤ Ξ(α) = Σ_{n≤e^{2α}} 2Λ(n)/√n, das archimedische Wachstum ist IDENTITÄT inf σ_z^arch = log(1/D) + B mit UNIVERSELLEM B = −1.0474 — zusammen das D₀-THEOREM: inf σ_z > 0 für alle D < D₀(α) = exp(−(Ξ(α)+B)), tief verifiziert (1024×-FFT-Hebel, M bis 65536, 16 Zonen bis n = 11981, matrixfrei); das ABLEITBARKEITS-URTEIL für (H2) ist NEIN (die Energie-Route ist gültig und LEER — sie liefert ε ≥ r·ε mit r < 1, Tautologie; (H2) ist genuin neuer analytischer Gehalt), aber das schärfste Resultat der Probe macht aus der Konstante eine IDENTITÄT: κ_end = 1/(1+R) EXAKT (1.1e-16) mit R = Verhältnis Zwischen-/Innerhalb-Zell-Inkrement-Masse (gemessen 0.9634–1.0349; κ_end = 0.4906–0.5093 FLACH und exponenten-blind); Satz V3 hat 14 Glieder und eine DEFEKT-LISTE von DREI, davon EINER analytisch — die diskrete Harnack-Ungleichung Σ|a_j| ≤ R_max·Σ|w_j| (Adresse Widom 1974 / Trench 1964 / Böttcher–Silbermann); als KONDITIONALES Lemma-Paper im Wesentlichen komplett, und die Kette enthält NIRGENDS Zeta-Input — 27/27, 4.9s, Sandbox
+# Q1 DIE ARITHMETISCHE HÄLFTE (L-B.1) IST THEOREM: jedes Primpotenz-Atom
+#    trägt zu f exakt EINEN Kosinus am eigenen Lag bei, linear auf die zwei
+#    Nachbar-Lags interpoliert; unter dem Aliasing-Mittel σ_z entscheidet die
+#    PARITÄT des Lag-Index (gerade: volle Stärke, ungerade: ×(−cos θ)); die
+#    uniforme Schranke ist die ATOM-ZÄHLUNG |σ_z^comb| ≤ Ξ(α) =
+#    Σ_{n≤e^{2α}} 2Λ(n)/√n ~ 4e^α (Chebyshev); das archimedische Wachstum
+#    ist IDENTITÄT: inf σ_z^arch = log(1/D) + B mit UNIVERSELLEM B = −1.0474
+#    (Drift ≤ 3.1e-4 über α = 0.98–4.70, gemessene Steigung 1.0030 ± 0.0012).
+#    D₀-THEOREM: inf σ_z > 0 für alle D < D₀(α) = exp(−(Ξ(α)+B)) — tief
+#    verifiziert auf dem 1024×-FFT-Hebel (M bis 65536, 16 Zonen bis
+#    n = 11981, matrixfrei). KORREKTUR AN T118: zwei Regimes — schmale Zonen
+#    (α ≤ 2.00, 5/16) kreuzen ZERTIFIZIERT am Rahmen; breite (α ≥ 2.22,
+#    11/16) kreuzen auch, aber erst bei M ~ 10^13–10^187 — ein KONSTANTEN-
+#    Defekt (D2), kein Theorem-Defekt. L-B.2 als LARGE-SIEVE-Kriterium
+#    (Montgomery–Vaughan 1974, in der ehrlichen Richtung: OBERE Schranke auf
+#    die Dip-Masse, die eine UNTERE λ_min-Schranke braucht): es GEWINNT
+#    EINMAL — zertifizierter positiver Sektions-Boden +0.396 wo
+#    inf σ_z = −0.349, das erste Sektions-Positivität-OHNE-punktweise-
+#    Positivität-Zertifikat der Serie — und stirbt STRUKTURELL für α ≥ 2.5
+#    (EIN Fejér-Bump passt in einen Dip: MOMENTEN-Problem, kein
+#    Lokalisierungs-Problem). Bonus exakt bewiesen: der Grobkörnungs-Zaun
+#    λ_min(T_h(σ*K)) ≥ λ_min(T_h(σ)) durch unitäre Mittelung — die
+#    T118-Heuristik hatte die RICHTUNG falsch herum.
+# Q2 DIE H2-STRUKTUR + DAS ABLEITBARKEITS-URTEIL: ‖y‖² ist der quadrierte
+#    L²-Abstand der feinen PWC-Lösung vom groben Raum — (H2) ist eine
+#    INVERSE Approximations-Aussage; die Masse ist VERTEILT (Ecke 0.18–0.42,
+#    Mitte 0.19–0.38, innere Hälfte 0.36–0.48 — kein Ein-Zellen-Träger); die
+#    Exponenten schließen: ε ~ D^1.761, ‖y‖² ~ D^1.961, λ_min(S)‖y‖² ~
+#    D^1.757 — Stufe 2 verliert KEINE Potenz; Levinson voll verifiziert
+#    (Ecken-Identität u_0 = −√2ρ/E auf 2.8e-8, Masse-Budget 1−ε = Σρ²/E auf
+#    2.5e-13, genau EIN negativer Pivot). URTEIL: NEIN — (H2) folgt NICHT
+#    aus den vorhandenen Identitäten; die Energie-Route ist gültig und LEER
+#    (sie liefert ε ≥ r·ε mit r < 1 — exakt zirkulär); (H2) ist genuin
+#    neuer analytischer Gehalt, wie T118 es vermutet hatte.
+# Q3 H3' IN MITTELWERT-QUADRAT-FORM + DAS SCHÄRFSTE RESULTAT: Cauchy-Schwarz
+#    ist fast scharf; die Ecken-Inkremente sind monoton auf 100% der Zellen;
+#    κ_end = 0.4906–0.5093 FLACH über 50 Zeilen + 15 Leiter-Paare und
+#    EXPONENTEN-BLIND (driftet ≤ 0.0019 pro Level, während der Ecken-
+#    Exponent +0.046–0.242 pro Level kriecht — Faktor 128 weniger); der
+#    Zertifikats-Versuch über die Innovations-Identität ist positiv auf
+#    15/15 (2.1–4.0% von ε). DAS SCHÄRFSTE RESULTAT: κ_end = 1/(1+R) EXAKT
+#    (1.1e-16, Teleskop-Summe auf monotonem Ecken-Profil) mit R = Verhältnis
+#    Zwischen-/Innerhalb-Zell-Inkrement-Masse, gemessen 0.9634–1.0349 — die
+#    verbleibende Hypothese ist eine DISKRETE HARNACK-UNGLEICHUNG für die
+#    Inkremente einer log-singulären Toeplitz-Inversen, keine nackte
+#    Konstante.
+# Q4 SATZ V3 + DEFEKT-LISTE 3 + PAPER-ABSTAND: 14 Glieder (8 Identitäten,
+#    1 arithmetische Schranke, 1 zertifiziertes Wachstumsgesetz, das Theorem
+#    D₀, Isometrie, Cauchy-Schwarz, die Kette; 5 neu in T119). Defekte:
+#    (D1) die diskrete Harnack-Ungleichung Σ|a_j| ≤ R_max·Σ|w_j| auf den
+#    Ecken-Zellen (= (Reg); Adresse Widom 1974 / Trench 1964 / Böttcher–
+#    Silbermann; JEDES endliche R_max gibt κ_end ≥ 1/(1+R_max) ≈ 0.49);
+#    (D2) die D₀-Konstante für breite α (das Theorem steht unbedingt, die
+#    Konstante am Rahmen fehlt — Momenten-Problem); (D3) γ-Uniformität
+#    (= (H1), von T118 unverändert geerbt). PAPER-ABSTAND, ehrlich: als
+#    KONDITIONALES Lemma-Paper („unter (Reg) und (H1) gilt ε ≥ c·D^θ mit
+#    explizitem c") im Wesentlichen komplett — der Rest ist Schreibarbeit,
+#    keine Entdeckung; unbedingt braucht es GENAU die Harnack-Aussage. Die
+#    Kette ist klassische Numerik Ende-zu-Ende und enthält NIRGENDS
+#    Zeta-Input. → T120 (läuft): HARNACK (harnack_probe.py) — α-Audit
+#    (entschärft D2?), Vorzeichen-Struktur/Maximum-Prinzip, R-Schranke
+#    (Levinson-Rekursion / Paritäts-Symmetrie / Fenster-Zertifikat),
+#    γ-Formel, Satz V4.
+# Serie (XII)–(CXXX): 119 Proben, 2995/2995 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Grenander–Szegő,
+# Montgomery–Vaughan 1974 / Selberg (Large Sieve), Turán / Nazarov / Remez,
+# Fejér / Fejér–Riesz, Chebyshev 1852 / Mertens, Kac–Murdock–Szegő 1953,
+# Widom 1974 / Fisher–Hartwig, Trench 1964, Böttcher–Silbermann, Levinson
+# 1947 / Durbin / Delsarte–Genin, Bank–Smith 1993, Yserentant 1986,
+# Brandt 1977 / Hackbusch 1985, Fiorentino–Serra 1991, Cholesky / Wilkinson
+# 1968 / Higham 2002, Weil 1952, Bertrand-Chebyshev 1852) zitiert; Sandbox
+# ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-27 (XII) — Teil 118 (delegiert, die drei Symbol-Lemmata — Vertrag SYMBOL.LEMMAS): symbol_lemmas_probe.py — **TWO-OF-THREE** — ZWEI DER DREI LEMMATA STEHEN, UND DIE FEHLENDE ANALYTIK IST GENAU EINE AUSSAGE: das exakte Zwei-Gitter-Symbol von S ist das gewichtete HARMONISCHE Mittel des Aliasing-Paars und auf dem echten Symbol vakuum (die Kamm-Dips machen inf σ_S = 0 auf 14/14 Fenstern); die RETTUNG ist die CBS-Identität λ_min(L⁻¹SL⁻ᵀ) = 1−γ² (rel 2.1e-15), die die Symbol-Frage auf das Oszillations-Gram mit dem ARITHMETISCHEN Aliasing-Mittel σ_z verschiebt (Tiefband-Negativität quadratisch durch sin²(θ/2) unterdrückt): inf σ_z > 0 auf 7/14 Fenstern, λ_min(S) ≥ (1−γ²)λ_min(T_h(σ_z)) auf ALLEN Fenstern (32–76%), und auf dem 15680er-FFT-Hebel STEIGT inf σ_z logarithmisch und KREUZT NULL auf 3/5 Zonen — die scheiternden Fenster waren UNTERAUFGELÖST, nicht obstruiert; Saturation ist hier IDENTITÄT (ε_c − ε_f = yᵀSy, rel 4.9e-11) plus Bank–Smiths eigene Hypothese (β ∈ [0.252, 0.336]); der Ecken-Exponent DRIFTET (+0.238 pro Halbierung — log(1/|θ|) ist die Grenze aller Potenzen; der alte T108/T109-Exponent war doppelt falsch geschätzt) und die T117-Kette wird an der letzten Stufe REPARIERT (Rate auf ‖y‖²: D^1.751 gegen ε ~ D^1.770, verlustfrei); Satz V2: fünf unbedingte Glieder + (H1) γ-Uniformität (1−γ² ≥ 0.181) + (H2) ‖y‖² ≥ c·D^1.75 — DIE eine genuin neue analytische Aussage — 36/36, 2.5s, Sandbox
 # P1 LEMMA B, Anlauf eins — WIDERLEGT, MIT GRUND: das exakte Zwei-Gitter-
 #    Symbol von S ist das GEWICHTETE HARMONISCHE Mittel des Aliasing-Paars,

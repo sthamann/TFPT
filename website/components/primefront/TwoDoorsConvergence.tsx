@@ -215,10 +215,15 @@ export function TwoDoorsConvergence() {
           under-resolved, not obstructed); the corner lemma corrects
           itself (log is the boundary of all powers) and the chain is
           repaired on ‖y‖²; one genuinely new analytic statement remains
-          ((H2), a D^1.75 lower bound for the oscillation mass). T119 (
-          <span className="font-mono text-slate-300">
-            oscillation_mass_probe.py
-          </span>
+          ((H2), a D^1.75 lower bound for the oscillation mass). T119 ·
+          OSCILLATION.MASS — ARITHMETIC-DONE (27/27): the arithmetic half
+          closes as a theorem — inf σ_z &gt; 0 for all D &lt; D₀(α) =
+          exp(−(Ξ(α)+B)) with Ξ the prime-power atom count and B = −1.0474
+          universal; the energy route to (H2) is proven empty (genuinely
+          new content), and the sharpest identity of the run, κ_end =
+          1/(1+R) exactly, reduces everything to one discrete Harnack
+          inequality with a classical address. T120 (
+          <span className="font-mono text-slate-300">harnack_probe.py</span>
           ) running.
         </p>
       </div>

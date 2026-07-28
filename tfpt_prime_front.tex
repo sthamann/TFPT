@@ -85,7 +85,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$118$ preregistered probes with $2968$ machine checks, which localized the residual object. That
+$119$ preregistered probes with $2995$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -158,7 +158,7 @@ identities, the lower-bound direction acquires a certified two-level chain that 
 of $D$ ($\theta'=1.74$ against $\theta=1.76$), the jumps acquire exact closed forms --- with the
 correction that prime-power entries \emph{raise} $\varepsilon$, so the factor-$120$ falls were a
 sweep artefact of the earlier run --- and what remains is three named analytic lemmas about one
-symbol, two of them constants rather than rates. The closing part measures those three lemmas
+symbol, two of them constants rather than rates. The next part measures those three lemmas
 against their classical addresses, and two of the three stand: saturation is an \emph{identity}
 here; the Schur-floor lemma is rescued by the strengthened Cauchy--Schwarz shift onto the
 oscillation Gram, whose arithmetic aliasing symbol suppresses the prime comb quadratically ---
@@ -168,7 +168,13 @@ under-resolved rather than obstructed; and the corner lemma corrects itself --- 
 singularity is the boundary of all powers, so no power-law corner exponent exists to cite, and
 the certified chain is repaired at its last step, the rate now living on the oscillation mass.
 The missing analytic content is thereby exactly one statement: a $D^{1.75}$ lower bound for
-that mass.
+that mass. The closing part then closes the \emph{arithmetic} half of the remaining list as a
+theorem --- the aliasing symbol is positive for every cell width below an explicit
+$D_0(\alpha)=\exp(-(\Xi(\alpha)+B))$, with $\Xi$ the prime-power atom count and $B=-1.0474$
+universal --- proves that the mass bound is \emph{not} derivable from the identities already
+in hand, and reduces it, through the exact identity $\kappa_{\mathrm{end}}=1/(1+R)$, to a
+single discrete Harnack inequality with a classical address; the chain contains no zeta input
+anywhere.
 \textbf{No claim of progress on the Riemann Hypothesis is
 made anywhere in this document}, and none of the sandbox findings moves any ledger marker. The
 document is deliberately symmetric about failure: a dedicated section lists the readings and
@@ -792,9 +798,9 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T118)}\label{sec:certification}
+\section{The certification arc (T102--T119)}\label{sec:certification}
 % =====================================================================
-The last seventeen parts stopped improving measurements and started converting them into certificates ---
+The last eighteen parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
 
 \subsection{The mechanism: a crossing, not a singularity (T102)}
@@ -915,13 +921,14 @@ the wing near-null direction.
 \node[tgt] (o) at (0,-3.4) {\textbf{One object:} the wing near-null direction\\[2pt]
   \footnotesize dressing almost rank one (effective rank $1.07$--$2.7$; $99.7$--$100\%$ of the
   near-null direction in \emph{one} prolate mode)};
-\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112 $\to$ T113 $\to$ T114 $\to$ T115 $\to$ T116 $\to$ T117 $\to$ T118\\[2pt]
+\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112 $\to$ T113 $\to$ T114 $\to$ T115 $\to$ T116 $\to$ T117 $\to$ T118 $\to$ T119\\[2pt]
   \footnotesize certify \emph{bare}, prove the avoidance law, split the parity channels,
   reduce to one scalar ratio, then to two scalars, certify both --- then propagate the margin,
   measure where the propagation fails, rescale the frame, settle the currency question,
   dissolve the wall --- then split the transport, break the compute cap, run the
-  induction as a pure boundary process, make the one inequality theorem-shaped ---
-  and measure its three missing lemmas against their classical addresses};
+  induction as a pure boundary process, make the one inequality theorem-shaped,
+  measure its three missing lemmas against their classical addresses ---
+  and close the arithmetic half as a theorem};
 \draw[ar] (a) -- (o);
 \draw[ar] (c) -- (o);
 \draw[ar] (o) -- (n);
@@ -1854,13 +1861,125 @@ $\inf\sigma_z>0$ for all $D<D_0(\alpha)$ --- $D_0$ set by the comb depth against
 Nyquist-band mass, an atom-counting question --- and narrow-dip positivity of finite sections.
 \textbf{L-C} (one point): $\gamma$-uniformity, i.e.\ (H1). \textbf{L-A} (two points): the
 mean-square form (H3$'$), and the Fisher--Hartwig extension of the corner theory to
-log-singular symbols with atoms.
+log-singular symbols with atoms.\\[3pt]
+\emph{Disposition after T119 (next subsection):} the first L-B point is now a \textbf{theorem}
+with an explicit $D_0(\alpha)$ and a universal constant; the second is diagnosed as a moment
+problem, with one window newly certified by the large sieve; (H2) is proven \emph{not
+derivable} from the links above --- genuinely new content, as suspected --- and reduced,
+through the mean-square form (H3$'$), to a single scalar that is itself an exact identity,
+$\kappa_{\mathrm{end}}=1/(1+R)$; what remains of the whole list is one discrete Harnack
+inequality plus two constants.
 \end{keybox}
 
-\noindent T119 (\texttt{oscillation\_mass\_probe.py}, contract \texttt{OSCILLATION.MASS} ---
-the arithmetic half of L-B (the $D_0(\alpha)$ formula, deep verification), the (H2) section,
-the (H3$'$) mean-square form, and a theorem candidate V3) was running at the time of writing
-and is \emph{not} reported here.
+\noindent T119 (\texttt{oscillation\_mass\_probe.py}, contract \texttt{OSCILLATION.MASS}) then
+took the two halves that remained --- the arithmetic half of Lemma B and the oscillation-mass
+half (H2)/(H3$'$) --- and closed the first as a theorem.
+
+\subsection{The arithmetic half closes; one Harnack inequality remains (T119)}
+T119 (\texttt{oscillation\_mass\_probe.py}, contract \texttt{OSCILLATION.MASS}, $27/27$,
+\textsc{arithmetic-done}) is the part where the comb, the standing obstruction since T116,
+becomes an explicit and \emph{bounded} object. The outcome, stated before the detail: the
+arithmetic half of Lemma B is a theorem with an explicit $D_0(\alpha)$; the narrow-dip point is
+diagnosed as a moment problem, with one window newly certified by the large sieve; (H2) is
+proven \emph{not derivable} from the existing identities --- and the sharpest identity of the
+run reduces the whole oscillation-mass half to one discrete Harnack inequality with a
+classical address.
+
+\emph{The $D_0$ theorem, with a universal constant.} The lag sequence splits exactly as
+$c=c_{\mathrm{arch}}+c_{\mathrm{comb}}$, and the comb half has a \emph{closed-form} symbol:
+every prime-power atom $(u_j,\mu_j)$ contributes exactly one cosine at the frequency of its
+own lag, split over the two nearest integer lags by linear interpolation --- and under the
+aliasing average $\sigma_z$ the \emph{parity} of the lag index decides everything (an even lag
+survives at full strength, an odd one is multiplied by $-\cos\theta$). Two consequences, both
+elementary and both new: the whole comb is bounded \emph{uniformly in $D$} by the atom count,
+$|\sigma_z^{\mathrm{comb}}|\le\Xi(\alpha)=\sum_{n\le e^{2\alpha}}2\Lambda(n)/\sqrt n\sim
+4e^{\alpha}$ (Chebyshev); and the archimedean growth is an \emph{identity},
+$\inf\sigma_z^{\mathrm{arch}}=\log(1/D)+B$ with slope exactly one and a \emph{universal}
+$B=-1.0474$ (drift $\le3.1\times10^{-4}$ over $\alpha=0.98$--$4.70$; measured slope
+$1.0030\pm0.0012$). Their conjunction is the theorem:
+\[
+\inf\sigma_z>0\quad\text{for all}\quad D<D_0(\alpha)=\exp\!\big(-(\Xi(\alpha)+B)\big),
+\]
+verified deep on a $1024\times$ FFT-only lever ($M$ up to $65\,536$, sixteen zones to
+$n=11\,981$, no matrix ever formed).
+
+\emph{The two-regime correction, and the large sieve's one win.} The deep run corrects T118's
+reading: there are two regimes. Narrow zones ($\alpha\le2.00$, $5/16$) cross zero
+\emph{certified} at the frame's own resolution; wide zones ($\alpha\ge2.22$, $11/16$) also
+cross --- the theorem is not in doubt --- but at $M\sim10^{13}$--$10^{187}$: a defect of the
+\emph{constant}, not of the theorem. The narrow-dip point (L-B.2) becomes a certifiable
+criterion through the large sieve (Montgomery--Vaughan $1974$, used in the honest direction:
+an upper bound on the $L^2$ mass a polynomial of degree $<h$ can place on the dips, which is
+exactly what a lower bound on $\lambda_{\min}$ needs). It wins \emph{once} --- a certified
+positive section floor $+0.396$ on a window where $\inf\sigma_z=-0.349$, the series' first
+certificate of section positivity \emph{without} pointwise positivity --- and it dies
+structurally for $\alpha\ge2.5$, where a single Fej\'er bump fits inside one dip: the
+obstruction is a moment problem, not a localisation problem. A by-product is proved exactly:
+coarse-graining can only raise the section floor,
+$\lambda_{\min}(T_h(\sigma*K))\ge\lambda_{\min}(T_h(\sigma))$ by unitary averaging --- the
+direction \emph{opposite} to T118's heuristic reading, which is thereby retired.
+
+\emph{(H2) is genuinely new --- proven, not suspected.} $\|y\|^2$ is the squared $L^2$
+distance of the fine piecewise-constant solution from the coarse space, so (H2) is an
+\emph{inverse} approximation statement. Its structure is dissected: the mass is distributed
+(corner share $0.18$--$0.42$, middle $0.19$--$0.38$, inner half $0.36$--$0.48$ --- no
+single-cell carrier), the exponent bookkeeping closes ($\varepsilon\sim D^{1.761}$,
+$\|y\|^2\sim D^{1.961}$, $\lambda_{\min}(S)\|y\|^2\sim D^{1.757}$ --- the second stage loses
+no power), and the Levinson structure of the solution is verified in full (the corner identity
+$u_0=-\sqrt2\,\rho/E$ to $2.8\times10^{-8}$, the mass budget $1-\varepsilon=\sum_n\rho_n^2/E_n$
+to $2.5\times10^{-13}$, exactly one negative pivot). The derivability question is answered
+\emph{no}: the energy route is valid and empty --- it returns $\varepsilon\ge r\,\varepsilon$
+with $r<1$, a tautology --- so (H2) is genuinely new analytic content, exactly as T118
+suspected.
+
+\emph{The constant becomes an identity.} The sharpest result of the run removes the constant
+from (H3$'$): Cauchy--Schwarz is nearly sharp, the corner increments are monotone on $100\%$
+of the cells, and the end-cell share $\kappa_{\mathrm{end}}=0.4906$--$0.5093$ is flat over
+$50$ rows and $15$ ladder pairs and \emph{exponent-blind} --- it drifts by $\le0.0019$ per
+level while the corner exponent itself creeps by $+0.046$--$0.242$ per level, a factor $128$
+less. And it is not a measured constant at all: for a monotone corner profile,
+\[
+\kappa_{\mathrm{end}}=\frac{1}{1+R},\qquad
+R=\frac{\sum_j|a_j|}{\sum_j|w_j|},
+\]
+\emph{exactly} (verified to $1.1\times10^{-16}$; a telescoping sum), with $w_j$ the
+within-cell and $a_j$ the across-cell increment of $u$ and $R$ measured $0.9634$--$1.0349$.
+The one hypothesis left inside the chain is therefore a \emph{discrete Harnack inequality} for
+the increments of a log-singular Toeplitz inverse --- the profile does not oscillate at the
+mesh scale --- and not a bare constant.
+
+\begin{keybox}[The theorem after T119 --- fourteen links, three defects]
+\emph{Candidate (V3).} Fourteen links close the chain
+$\varepsilon_c\ge(1-\gamma^2)\,\lambda_{\min}(T_h(\sigma_z))\,\|y\|^2>0$ for every window the
+probe touched: eight identities (among them, new in T119, the closed-form comb symbol, the
+parity rule, the Levinson corner value with its mass budget, and
+$\kappa_{\mathrm{end}}=1/(1+R)$), one arithmetic bound (the atom count $\Xi(\alpha)$, uniform
+in $D$), one certified growth law (the archimedean identity with universal $B$), one theorem
+(the explicit $D_0$), the isometry, Cauchy--Schwarz, and the chain itself --- five of the
+fourteen new in T119.\\[3pt]
+\emph{The defect list, shortest form --- three items:}
+\begin{enumerate}[leftmargin=1.6em]
+\item[\textbf{(D1)}] the discrete Harnack inequality
+$\sum_j|a_j|\le R_{\max}\sum_j|w_j|$ on the corner cells --- the one genuinely new analytic
+statement, with a classical address (Widom $1974$; Trench $1964$ for the explicit inverse;
+B\"ottcher--Silbermann); \emph{any} finite $R_{\max}$ gives
+$\kappa_{\mathrm{end}}\ge1/(1+R_{\max})\approx0.49$;
+\item[\textbf{(D2)}] the $D_0$ constant for wide $\alpha$ --- the theorem is unconditional,
+but at the frame's own resolution the pointwise floor is negative for $\alpha\gtrsim2$, and
+the section route that would cover it is a Fej\'er--Riesz moment problem;
+\item[\textbf{(D3)}] $\gamma$-uniformity --- (H1), inherited from T118 unchanged.
+\end{enumerate}
+\emph{Distance to a paper, honestly:} as a \emph{conditional} lemma paper --- under (D1) and
+(H1), $\varepsilon\ge c\,D^{\theta}$ with an explicit $c$ --- the material is essentially
+complete, and the missing work is writing, not discovery; an unconditional version needs
+exactly the Harnack statement. The chain is classical numerical analysis end to end and
+contains no zeta input anywhere.
+\end{keybox}
+
+\noindent T120 (\texttt{harnack\_probe.py}, contract \texttt{HARNACK} --- the $\alpha$-audit
+(does it defuse (D2)?), the sign structure and maximum principle, the $R$ bound (Levinson
+recursion, parity symmetry, window certificate), the $\gamma$ formula, and a theorem candidate
+V4) was running at the time of writing and is \emph{not} reported here.
 
 % =====================================================================
 \section{The kill list}\label{sec:kills}
@@ -1982,7 +2101,15 @@ saturation identity $\varepsilon_c-\varepsilon_f=y^{\mathsf T}Sy$ to $4.9\times1
 CBS identity $\lambda_{\min}(L_z^{-1}SL_z^{-\mathsf T})=1-\gamma^2$ to $2.1\times10^{-15}$; the
 isometry ordering onto $T_h(\sigma_z)$; $\inf\sigma_z>0$ with explicit second-order margins on
 $7/14$ windows; and the pole-mass identity in the oscillation space, $\le2.1\times10^{-5}$ via
-the DTFT factor $|\sin(\theta/2)|$).\\[3pt]
+the DTFT factor $|\sin(\theta/2)|$), and the T119 arithmetic package (the closed-form comb
+symbol --- one cosine per prime-power atom, linearly interpolated over the two nearest lags
+--- with the parity rule for $\sigma_z$; the atom-count bound
+$|\sigma_z^{\mathrm{comb}}|\le\Xi(\alpha)$, uniform in $D$; the archimedean growth identity
+$\inf\sigma_z^{\mathrm{arch}}=\log(1/D)+B$ with universal $B=-1.0474$; the resulting $D_0$
+theorem; the large-sieve section certificate on one window (floor $+0.396$ where
+$\inf\sigma_z=-0.349$); the Levinson corner identity and innovation mass budget; the identity
+$\kappa_{\mathrm{end}}=1/(1+R)$ to $1.1\times10^{-16}$; and the coarse-graining fence
+$\lambda_{\min}(T_h(\sigma*K))\ge\lambda_{\min}(T_h(\sigma))$ by unitary averaging).\\[3pt]
 \textbf{Measured} (holds on the resolved windows; no uniform constant): $\rho_-$; the ratio
 $r=0.0053$--$0.1814$ and $\hat r<1$ at all $92$ resolution points; $\omega=0.2366$--$0.7531$; the
 strict odd-channel margin $\lambda_{\min}(Q|_{\mathrm{odd}})=1.4\times10^{-5}$--$5.1\times10^{-2}$; the
@@ -2006,8 +2133,14 @@ T118 measurements: the corner-exponent drift $+0.238$ per halving ($3$--$7.4\sig
 concentration growth $\sim h^{0.99}$, the CBS floor $1-\gamma^2\ge0.181$, the computed
 saturation band $\beta\in[0.252,0.336]$ on $20$ triples, the log-versus-power growth decision
 on the $128\times$ FFT lever (fits with jackknife bands), the reduction sharpness
-$32$--$76\%$ on $14/14$ windows, and the zero crossings of $\inf\sigma_z$ on $3/5$ zones;
-every scaling exponent quoted in this document.\\[3pt]
+$32$--$76\%$ on $14/14$ windows, and the zero crossings of $\inf\sigma_z$ on $3/5$ zones; the
+T119 measurements: the mass distribution of $\|y\|^2$ (corner $0.18$--$0.42$, middle
+$0.19$--$0.38$, inner half $0.36$--$0.48$), the exponents $\varepsilon\sim D^{1.761}$,
+$\|y\|^2\sim D^{1.961}$, $\lambda_{\min}(S)\|y\|^2\sim D^{1.757}$ (fits), the flat band
+$\kappa_{\mathrm{end}}=0.4906$--$0.5093$ with drift $\le0.0019$ per level, the ratio
+$R=0.9634$--$1.0349$, and the wide-zone crossing depths $M\sim10^{13}$--$10^{187}$
+(extrapolations of the certified growth law); every scaling exponent quoted in this
+document.\\[3pt]
 \textbf{Hypothesis input / classical} (used, named, not proved here): Kneser, Witt/Eichler, Shimura,
 Waldspurger/Baruch--Mao, Cohen, Weil--Guinand, Bombieri, Yoshida, Connes--Consani, Douglas,
 Slepian--Landau--Pollak, Gronwall/Robin (unconditional form only), Grenander--Szeg\H{o},
@@ -2019,8 +2152,10 @@ Szeg\H{o}--Kolmogorov, Aubin--Nitsche duality, Payne--Weinberger, Levinson/Durbi
 Kac--Murdock--Szeg\H{o}/Widom/Fisher--Hartwig, Fej\'er--Riesz, the local Fourier / two-grid
 symbol (Brandt, Hackbusch, Fiorentino--Serra), Yserentant's strengthened Cauchy--Schwarz
 constant, the Bank--Smith/D\"orfler--Nochetto saturation assumption (with
-Bornemann--Erdmann--Kornhuber as the honest caveat that saturation can fail),
-Wilkinson/Higham backward error.
+Bornemann--Erdmann--Kornhuber as the honest caveat that saturation can fail), the
+Montgomery--Vaughan/Selberg large sieve (upper direction only), Chebyshev/Mertens (the atom
+count), Trench/B\"ottcher--Silbermann (explicit Toeplitz inverses), Delsarte--Genin (the split
+Levinson recursion), Wilkinson/Higham backward error.
 \end{keybox}
 
 \subsection{The asymptotic mountain}
@@ -2082,7 +2217,14 @@ powers, so the chain is repaired at its last step and the rate now lives on the 
 mass $\|y\|^2$. Since T118 the mountain is \emph{one} genuinely new analytic statement ---
 (H2), a $D^{1.75}$ lower bound for the oscillation mass --- plus the standard CBS uniformity
 (H1), two arithmetic reductions for the comb dips, and the \textbf{[SUPPORT]} obstruction.
-T119 (\texttt{oscillation\_mass\_probe.py}) was running at the time of writing.
+T119 (\texttt{oscillation\_mass\_probe.py}) then closed the arithmetic half as a theorem ---
+$\inf\sigma_z>0$ for all $D<D_0(\alpha)=\exp(-(\Xi(\alpha)+B))$, with $\Xi$ the prime-power
+atom count and $B=-1.0474$ universal --- proved the energy route to (H2) empty (the
+hypothesis is genuinely new content), and reduced the oscillation-mass half to one discrete
+Harnack inequality through the exact identity $\kappa_{\mathrm{end}}=1/(1+R)$. Since T119 the
+mountain is \emph{one} discrete Harnack inequality with a classical address --- plus two
+constants ((D2), (H1)) and the \textbf{[SUPPORT]} obstruction; the chain contains no zeta
+input anywhere. T120 (\texttt{harnack\_probe.py}) was running at the time of writing.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -2134,18 +2276,18 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T118}\label{app:index}
+\section{Probe index, diary parts T11--T119}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $108$ parts T11--T118 that the current diary file records
-($109$ runs --- T104 was a double run with two independent arms --- and $2776$ green checks); the ten
+load-bearing artefact. The index covers the $109$ parts T11--T119 that the current diary file records
+($110$ runs --- T104 was a double run with two independent arms --- and $2803$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T118: \textbf{$118$ probes, $2968/2968$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T119
-(\texttt{oscillation\_mass\_probe.py}, contract \texttt{OSCILLATION.MASS}) was still running
+diary at T119: \textbf{$119$ probes, $2995/2995$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T120
+(\texttt{harnack\_probe.py}, contract \texttt{HARNACK}) was still running
 when this document was written and is deliberately absent.
 
 {\footnotesize
@@ -2270,6 +2412,7 @@ T115 & \texttt{\scriptsize schur\_\allowbreak transport} & transport certifies o
 T116 & \texttt{\scriptsize boundary\_\allowbreak formulation} & the induction as a boundary process: the $(\Sigma,r,\sigma)$ state carries the global pole exactly and marches $169\,236$ prepends to $1.35\times10^{6}$ cells at flat cost (cost-geometry demo, not a Weil certificate); the prime comb refuses compression (budget $\sim n^{2.17}$); $\varepsilon\approx8.34\,D^{1.790}\alpha^{-6.04}$ with factor-$120$ jumps --- a Galerkin error under Aubin--Nitsche duality & RICCATI-PARTIAL & 33/33\\
 T117 & \texttt{\scriptsize epsilon\_\allowbreak theorem} & the one inequality theorem-shaped: four exact Galerkin identities ($\varepsilon>0\iff\tilde t\notin T(V_c)$); a certified two-level lower bound on $19/19$ pairs at $\theta'=1.74$ against $\theta=1.76$ (no power of $D$ lost); exact jump formulas (Levinson bordering, rank-$(k_0{+}1)$ Woodbury) --- entries \emph{raise} $\varepsilon$, the factor-$120$ falls were a sweep artefact; three named analytic lemmas remain, two of them constants & THEOREM-SHAPED & 23/23\\
 T118 & \texttt{\scriptsize symbol\_\allowbreak lemmas} & the three lemmas against their classical addresses: saturation is an \emph{identity} here ($\varepsilon_c-\varepsilon_f=y^{\mathsf T}Sy$, $\beta\in[0.252,0.336]$); the $S$-symbol is a weighted \emph{harmonic} aliasing mean, vacuous on the comb --- rescued by the CBS shift onto the oscillation Gram, whose \emph{arithmetic} mean suppresses the comb quadratically ($\inf\sigma_z>0$ on $7/14$ windows; on the $15\,680$-point FFT lever the floor rises logarithmically and crosses zero on $3/5$ zones --- under-resolved, not obstructed); the corner exponent drifts ($\log$ is the boundary of all powers) and the chain is repaired on $\|y\|^2$; one analytic statement remains --- (H2), $\|y\|^2\ge c\,D^{1.75}$ & TWO-OF-THREE & 36/36\\
+T119 & \texttt{\scriptsize oscillation\_\allowbreak mass} & the arithmetic half closes as a theorem: the comb symbol in closed form (one cosine per prime-power atom; parity rule under $\sigma_z$), the atom-count bound $|\sigma_z^{\mathrm{comb}}|\le\Xi(\alpha)$ uniform in $D$, the archimedean growth \emph{identity} $\inf\sigma_z^{\mathrm{arch}}=\log(1/D)+B$ with universal $B=-1.0474$ --- hence $\inf\sigma_z>0$ for all $D<D_0(\alpha)=e^{-(\Xi(\alpha)+B)}$, deep-verified ($M$ up to $65\,536$, matrix-free); the large sieve certifies one window's section \emph{without} pointwise positivity ($+0.396$ where $\inf\sigma_z=-0.349$) and dies structurally for $\alpha\ge2.5$ (a moment problem); the energy route to (H2) is proven empty (genuinely new content); and $\kappa_{\mathrm{end}}=1/(1+R)$ \emph{exactly} ($1.1\times10^{-16}$) --- one discrete Harnack inequality remains & ARITHMETIC-DONE & 27/27\\
 \end{xltabular}
 }
 

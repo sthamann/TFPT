@@ -95,7 +95,8 @@ export type PrimeFrontVerdict =
   | "TRANSPORT-BLOCKED"
   | "RICCATI-PARTIAL"
   | "THEOREM-SHAPED"
-  | "TWO-OF-THREE";
+  | "TWO-OF-THREE"
+  | "ARITHMETIC-DONE";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -119,6 +120,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-28",
+    part: 119,
+    title:
+      "The arithmetic half closes as a theorem — an explicit D₀(α) with a universal constant; H2 is proven non-derivable, and the sharpest identity of the run, κ_end = 1/(1+R) exactly, reduces everything to one discrete Harnack inequality",
+    verdict: "ARITHMETIC-DONE",
+    summary:
+      "T119 (ARITHMETIC-DONE, 27/27) — contract OSCILLATION.MASS: the two last pieces of the margin theorem — the arithmetic half of Lemma B and the oscillation-mass half (H2)/(H3′). (R1) THE ARITHMETIC HALF CLOSES AS A THEOREM: the comb symbol has a closed form — every prime-power atom contributes exactly ONE cosine at the frequency of its own lag, split over the two nearest integer lags by linear interpolation — and under the aliasing average σ_z the PARITY of the lag index decides everything (an even lag survives at full strength, an odd one is multiplied by −cos θ); the whole comb is bounded UNIFORMLY IN D by the atom count |σ_z^comb| ≤ Ξ(α) = Σ_{n≤e^{2α}} 2Λ(n)/√n; and the archimedean growth is an IDENTITY, inf σ_z^arch = log(1/D) + B with a UNIVERSAL B = −1.0474 (drift ≤ 3.1e-4 over α = 0.98–4.70, measured slope 1.0030 ± 0.0012). Their conjunction is THE D₀ THEOREM: inf σ_z > 0 for all D < D₀(α) = exp(−(Ξ(α)+B)) — verified deep on a 1024× FFT-only lever (M up to 65,536, 16 zones to n = 11,981, matrix-free). Correction to T118: two regimes — narrow zones (α ≤ 2.00, 5/16) cross zero CERTIFIED at the frame's own resolution; wide zones (α ≥ 2.22, 11/16) also cross, but at M ~ 10^13–10^187 — a CONSTANT defect (D2), not a theorem defect. L-B.2 becomes a large-sieve criterion (Montgomery–Vaughan 1974, in the honest direction): it wins ONCE — a certified positive section floor +0.396 on a window where inf σ_z = −0.349, the series' first certificate of section positivity WITHOUT pointwise positivity — and dies structurally for α ≥ 2.5 (one Fejér bump fits inside a dip: a MOMENT problem, not a localization problem); bonus, proven exactly: coarse-graining can only raise the section floor, λ_min(T_h(σ*K)) ≥ λ_min(T_h(σ)) by unitary averaging. (R2) THE H2 STRUCTURE: ‖y‖² is the squared L² distance of the fine PWC solution from the coarse space — (H2) is an INVERSE approximation statement; the mass is DISTRIBUTED (corner 0.18–0.42, middle 0.19–0.38, inner half 0.36–0.48); the exponents close (ε ~ D^1.761, ‖y‖² ~ D^1.961, λ_min(S)‖y‖² ~ D^1.757 — stage two loses no power); Levinson fully verified (corner identity u_0 = −√2ρ/E to 2.8e-8, mass budget to 2.5e-13, exactly ONE negative pivot). THE DERIVABILITY VERDICT: NO — the energy route is valid and EMPTY (it yields ε ≥ r·ε with r < 1, a tautology), so (H2) is genuinely new analytic content. (R3) H3′ IN MEAN-SQUARE FORM: Cauchy–Schwarz is nearly sharp; the corner increments are monotone on 100% of the cells; κ_end = 0.4906–0.5093 FLAT over 50 rows + 15 ladder pairs and EXPONENT-BLIND (drifts ≤ 0.0019 per level while the corner exponent creeps +0.046–0.242 per level — a factor 128 less); a certificate attempt through the innovation identity is positive on 15/15 (2.1–4.0% of ε). THE SHARPEST RESULT OF THE RUN: κ_end = 1/(1+R) EXACTLY (1.1e-16, a telescoping sum on a monotone corner profile), with R the across-/within-cell increment mass ratio, measured 0.9634–1.0349 — the remaining hypothesis is a DISCRETE HARNACK INEQUALITY for the increments of a log-singular Toeplitz inverse, not a bare constant. (R4) Theorem V3: 14 links (8 identities, one arithmetic bound, one certified growth law, the D₀ theorem, one chain; 5 new in T119). The defect list has THREE items: (D1) the discrete Harnack inequality Σ|a_j| ≤ R_max·Σ|w_j| on the corner cells — the one genuinely new analytic statement, with a classical address (Widom 1974 / Trench 1964 / Böttcher–Silbermann); ANY finite R_max gives κ_end ≥ 1/(1+R_max) ≈ 0.49; (D2) the D₀ constant for wide α; (D3) γ-uniformity ((H1), inherited from T118 unchanged). Honest distance: as a CONDITIONAL lemma paper the material is essentially complete — the missing work is writing, not discovery; unconditionally it needs exactly the Harnack statement. The chain is classical numerical analysis end to end and contains no zeta input anywhere. T120 (HARNACK, harnack_probe.py) is running: the α-audit (does it defuse D2?), sign structure / maximum principle, the R bound (Levinson recursion / parity symmetry / window certificate), the γ formula, a theorem candidate V4. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "oscillation_mass_probe.py",
+  },
   {
     date: "2026-07-27",
     part: 118,
