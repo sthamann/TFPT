@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 
-/** Seven promoted modules; check counts from verification/script_registry.csv. */
+/** Eight promoted modules; check counts from verification/script_registry.csv. */
 const MODULES = [
   { id: "v535", claim: "HECKE.GEOM.01", title: "Hecke from geometry", checks: 25 },
   {
@@ -41,12 +41,18 @@ const MODULES = [
     title: "Matching lemma · transport ledger",
     checks: 33,
   },
+  {
+    id: "v542",
+    claim: "PRIME.MARGIN.IDENT.01",
+    title: "Margin-chain identities · phase 2",
+    checks: 44,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 131;
-const SANDBOX_CHECKS = 3308;
+const SANDBOX_PROBES = 133;
+const SANDBOX_CHECKS = 3352;
 
 export function ModuleLadder() {
   return (
@@ -56,7 +62,7 @@ export function ModuleLadder() {
           Load-bearing modules · checks per module
         </p>
         <span className="font-mono text-[10px] text-slate-500">
-          {TOTAL_CHECKS} checks · 7 modules
+          {TOTAL_CHECKS} checks · 8 modules
         </span>
       </div>
 
@@ -101,7 +107,7 @@ export function ModuleLadder() {
       </div>
 
       <p className="mt-3 text-xs leading-relaxed text-slate-500">
-        Sandbox probes never move a marker; only the seven modules above are
+        Sandbox probes never move a marker; only the eight modules above are
         cited in the papers and the ledger. I5 is an equivalence typing (⟺ Weil
         positivity ⟺ RH), not a proof claim.
       </p>

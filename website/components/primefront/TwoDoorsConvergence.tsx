@@ -192,10 +192,19 @@ export function TwoDoorsConvergence() {
           positivity of the pole-free section with nine decades of slack.
           Two irreducibles remain (the word &ldquo;for all&rdquo;, the RH
           address); T134 (pole_free_floor_probe.py) attacks that pole-free
-          floor, the first reverse-flow probes T132 (bd_seam_probe.py) and
-          T133 (cert_floor_probe.py) carry the certified toolkit back to
-          the theory side, and the v542 promotion of the narrow identity
-          module is pending.
+          floor. The phase then ran in reverse: the identity block underneath
+          the map is promoted as load-bearing v542
+          (PRIME.MARGIN.IDENT.01, 44 checks — nine per-instance identities and
+          theorems, no fit, no graded floor, nothing uniform in the zone
+          index), T132 · BD.SEAM (SPECTRUM-ONLY, 21/21) made the
+          Beurling–Deny triad an operator discriminator for the seam DtN (same
+          spectrum to 7.5e-13, different operator, the N-stable gap 0.1746
+          sitting in the killing measure — and KERNEL coupled to MARKS), and
+          T133 · CERT.FLOOR (MIXED, 23/23) audited the suite&apos;s own PSD
+          rows: the Hankel matrix v379 tests is, as a matrix of doubles,
+          certifiably not positive semidefinite, the mathematical matrix is
+          fine, and the exact positive-mixture Gram certificate now hardens
+          that module — marker unchanged.
         </p>
       </div>
 

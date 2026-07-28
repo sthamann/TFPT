@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v541
+          v535–v542
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3308/3308 sandbox checks —
+        (“the full proof”, T126+) is now open with 3352/3352 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -46,7 +46,16 @@ export function HonestyBanner() {
         sandwich and sign constancy via Perron–Frobenius are theorems, the
         one-hump honestly broke at depth, and M25 reduces to positivity of
         the pole-free section with nine decades of slack (T131 ·
-        SUPPLY-PARTIAL). What remains
+        SUPPLY-PARTIAL). The phase then reversed direction: the identity block
+        underneath that map is promoted as load-bearing v542 (44 checks, nine
+        per-instance identities and theorems, nothing uniform in the zone
+        index), and the certified toolkit flowed back to the theory side — the
+        Beurling–Deny triad became an operator discriminator for the seam DtN
+        (T132 · SPECTRUM-ONLY: same spectrum to 7.5e-13, different operator,
+        the gap in the killing measure) and a certificate audit found that the
+        Hankel matrix v379 tests is, as a matrix of doubles, certifiably not
+        positive semidefinite, which hardened that module to an exact
+        positive-mixture Gram certificate (T133 · MIXED). What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

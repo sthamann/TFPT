@@ -81,13 +81,14 @@ out to be \emph{Hecke} data. It goes further than an analogy: the $E_8$ shell co
 $240\,\zeta(s)\zeta(s-3)$ as a Dirichlet series, and the lattice's self-duality gives its theta sum an
 exact functional equation whose fixed axis is the critical line --- a framework picture, stated as such,
 which the document opens with and then keeps at arm's length. This companion documents the line end to
-end. Seven modules are
-load-bearing and ledger-carried (\vref{v535}--\vref{v541}): Hecke from geometry on the $E_8$ census,
+end. Eight modules are
+load-bearing and ledger-carried (\vref{v535}--\vref{v542}): Hecke from geometry on the $E_8$ census,
 the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
-obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
-ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$127$ preregistered probes with $3198$ machine checks, which localized the residual object. That
+obstructions, the amplitude route with a positive linear carrier, the matching-lemma / transport
+ledger package, and the margin-chain identities of the second phase. Everything beyond those eight is
+\emph{sandbox}: an exploratory program, run as
+$133$ preregistered probes with $3352$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -239,7 +240,7 @@ here (the blue \texttt{[\,verification/\dots\,]} tag). Everything marked \sbx\ i
 no ledger row, no marker, and no authority. Section~\ref{sec:verified} is the only section that is
 entirely \ver.
 \item \textbf{Status markers are quoted, never upgraded.} The markers \mE\ \mC\ \mO\ \mX\ shown in
-Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v541}. This
+Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v542}. This
 document introduces no new markers and moves none.
 \item \textbf{Fits are declared as fits.} Every scaling law, slope, exponent and extrapolation quoted
 from the sandbox is a fit to finitely many measured windows and is labelled as such at the point of
@@ -256,7 +257,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots131$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots133$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -264,11 +265,13 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T131: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T133: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
-the Perron sign theorem); Section~\ref{sec:status} is the status statement.
+the Perron sign theorem --- and finally the reverse flow: the identity block promoted to
+\vref{v542}, a spectrum-only boundary-Dirac coupling and a certificate-floor audit that hardened
+\vref{v379}); Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
 \section{Motivation: why a compiler meets the primes}\label{sec:motivation}
@@ -352,7 +355,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the seven modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the eight modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -482,13 +485,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: seven modules}\label{sec:verified}
+\section{The verified layer: eight modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The seven modules and their ledger markers]
+\begin{keybox}[The eight modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -501,6 +504,7 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v539} & \texttt{RTF.GNS.WEIL.01} & Weil structure of the compiler family & \mE\ + \mC\\
 \vref{v540} & \texttt{RTF.GNS.AMP.01} & amplitude route and positive linear carrier & \mE\ + \mC\\
 \vref{v541} & \texttt{RTF.GNS.LEDGER.01} & matching lemma and transport ledger package & \mE\ + \mC\\
+\vref{v542} & \texttt{PRIME.MARGIN.IDENT.01} & margin-chain identities of phase 2 (per instance) & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -614,6 +618,52 @@ open.
 one classically-shaped open lemma (correlated cancellation on credit-rich non-coherent tail atoms), and
 the I5 equivalence typing discussed next. The row states explicitly: \emph{NOT ``almost RH''};
 \texttt{ZETA.HP.CARRIER} untouched.
+\end{itemize}
+
+\subsection{The margin-chain identities of phase 2 (\texorpdfstring{\vref{v542}}{v542})}\label{sec:v542}
+The first promotion \emph{out of} the second phase --- and the narrowest module of the line
+\veri{v542\_margin\_chain\_identities.py} ($44$ checks, ${\sim}0.2$\,s; promotion of the
+identity/theorem block of T128--T131, recomputed on small frame-A windows, nothing cited from the
+sandbox). What is promoted is exactly the algebra: nine identities and per-instance theorems, each a
+numerical residual against a \emph{preregistered} tolerance plus at least one mutation control that
+must fail by $\ge10^{-3}$ relative. What is \emph{not} promoted is everything the sandbox still owes:
+no fit, no graded floor, no Lanczos value, and no statement uniform in the zone index. The battery is
+$24$ seam instances ($n=3\ldots97$, $\rho=1.25\ldots4.00$, $h_c=24\ldots214$, $h_f=36\ldots299$;
+every inverted or diagonalised matrix $\le300$), $43$ graded/fine grid pairs ($m\le172$) and $400$
+randomised profiles.
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Border geometry and the $(T)$ identity} \mE: $\sum_i(1-g_i)=t_l+t_r$ exactly
+($5.5\times10^{-13}$), so the $\kappa$ weights are a probability vector and the flat border vector
+gives $\kappa_{\mathrm{flat}}=1$; and
+$\tau_{\mathrm{dn}}=\|y\|^2-m_{\mathrm{prot}}+m_{\mathrm{fill}}-V_{\mathrm{bord}}$ at
+$2.2\times10^{-16}$, with $\tau$ recomputed independently from the \emph{full} odd overlap matrix
+($1.1\times10^{-13}$).
+\item \textbf{The profile identity and the curvature chain} \mE: $p_{N-1}=2-p_0+2E$ at
+$2.3\times10^{-16}$ (instances) and $1.4\times10^{-15}$ ($400$ random profiles), hence the
+equivalence $2E>p_0\iff p_{N-1}>2$ with $0$ exceptions and both branches realised ($60/400$); the
+Abel/H\"older chain holds per instance with $0$ violations, and the \emph{same} chain without the
+curvature term is violated on $88/400$ profiles --- which is the honest statement of why the
+curvature term is in it.
+\item \textbf{Assembly and the compression defect} \mE: the matrix-free two-scale assembly equals
+$J^{\mathsf T}QJ$ ($5.2\times10^{-16}$), the graded overlap operator equals $J$
+($5.2\times10^{-14}$), and $S_{\mathrm{graded}}-S_{\mathrm{uniform}}=R^{\mathsf T}X^{-1}R$ holds as a
+\emph{matrix} identity on all $43$ grids ($2.1\times10^{-14}$) with a PSD defect --- the compression
+error is one-sided \emph{by} the identity, which is what T130 needed and all it gives.
+\item \textbf{Sandwich, sign, counting} \mE: the secular sandwich holds on all $48$ pole-free
+sections at which $A>0$ \emph{and} $\varepsilon>0$ are \emph{checked} (relative width $\le1.4448$),
+with Albert's sign equivalence verified in both directions ($6$ rescaled controls with
+$\varepsilon<0$ all give $\lambda_{\min}(Q)<0$); $S^{-1}>0$ entrywise (measured on $48/48$ blocks)
+implies a sign-constant and simple ground vector, with a control matrix where hypothesis and
+conclusion fail together; and $n_{\mathrm{run}}\le n_{\mathrm{cross}}+1\le s_2+2$ together with
+$\sum_j|\Delta p_j-\overline{\Delta p}|=\mathrm{TV}(P)$ hold without exception on a battery that is
+not vacuous ($s_2$ up to $31$, $n_{\mathrm{run}}$ up to $33$).
+\item \textbf{Named limits as content.} Every statement is per instance on small windows; nothing is
+uniform in the zone index. The $\kappa$ \emph{law} is \emph{not} claimed --- T129 found it false in
+general (Section~\ref{sec:phase2}) --- only the chain underneath it. The sandwich carries no floor
+value: positivity of the pole-free section at depth (M25d) stays open. The Perron step is an
+implication with a \emph{measured} hypothesis. And the defect identity says nothing about the
+\emph{size} of the defect, which is the open exponent of T130.
 \end{itemize}
 
 % =====================================================================
@@ -2956,7 +3006,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T131)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T133)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -3662,14 +3712,68 @@ zone-uniform bound on the exponent and the run count, \emph{(3)} $S^{-1}>0$ stru
 \emph{(4)} the quantifier.
 \end{keybox}
 
+\subsection{The reverse flow: the toolkit pays the theory side back (T132/T133)}
+For the first time the direction of the program inverts. Two \emph{reverse-flow} probes
+carry the certification toolkit built for the prime front back to the theory side of the
+compiler, and both land.
+
+\noindent T132 (\texttt{bd\_seam\_probe.py}, contract \texttt{BD.SEAM}, $21/21$, verdict
+\textsc{spectrum-only}) reads the seam Dirichlet-to-Neumann operator through the
+Beurling--Deny triad (jump kernel, killing measure, diffusion part) and uses it as an
+\emph{operator} discriminator where the spectrum alone is blind. The Beurling--Deny identity
+is exact to $2.4\times10^{-16}$ at every $N$; the triad reconstructs the operator, not just
+its form ($1.4\times10^{-14}$ at $d=256$); the diffusion part vanishes identically (a finite
+atomic state space carries no strongly local part, and the continuum DtN is the pure-jump
+$\tfrac12$-Laplacian, Caffarelli--Silvestre 2007, fitted decay exponent $1.980$); and the
+killing measure \emph{is} the $\mu_4$ mark-sum curvature profile pointwise
+($1.3\times10^{-14}$) --- the marks enter the operator exclusively through the killing term.
+The Markov remainder is not small but \emph{exactly zero}, with a closed jump-weight form
+$J_{rs}=1/(d\sin^2(\pi(r-s)/d))$ for $r-s$ odd and exactly $0$ for $r-s$ even, which is what
+explains T126's $86.1\%$ count fraction (the even lags are the zeros, not defects). The
+discriminator then separates: the model DtN and the $\mu_4$-graded free contraction share
+their spectrum to $7.5\times10^{-13}$ but are \emph{not} the same operator, and the gap sits
+in the killing measure at $0.1746$ at every $N$ (spread $1.9\times10^{-14}$ relative) while
+the jump gap shrinks monotonically ($7.7\times10^{-3}\to3.5\times10^{-4}$) --- so the
+difference is not a truncation artefact. The mark-preserving lattice symmetries (the clock
+rotation and the sheet reflection, generating $D_4$) leave the triad exactly invariant
+($1.6\times10^{-14}$), while a random orthogonal or a generic $\mu_4$-equivariant
+conjugation destroys it: the triad is canonical relative to the \emph{marked boundary
+coordinate}, not to the marks alone --- which is a coupling statement,
+\texttt{QGEO.MARKS.01} $\leftrightarrow$ \texttt{QGEO.KERNEL.01}. \textbf{Ceiling, stated:}
+this is the \emph{model} DtN, not the raw RP seam, so \texttt{QGEO.KERNEL.01} is
+\emph{not} closed.
+
+\noindent T133 (\texttt{cert\_floor\_probe.py}, contract \texttt{CERT.FLOOR}, $23/23$,
+verdict \textsc{mixed}, $840$ control validations on the certificate machinery itself) turns
+the toolkit on the load-bearing suite's own PSD rows and produces one finding that changed a
+module in this same round. The $10\times10$ Hankel matrix \vref{v379} builds is, \emph{as a
+matrix of doubles}, certifiably \emph{not} positive semidefinite --- a certified negative
+direction $x^{\mathsf T}\widehat Mx=-7.75\times10^{-18}$ at $60$ digits --- and the module's
+own tolerance ($\lambda_{\min}>-10^{-10}$) passes it. The reason is priced, not guessed:
+$\mathrm{cond}\approx1.8\times10^{18}$ against a certifiability ceiling of
+$1.0\times10^{13}$ at $n=10$, and the entry bar $7.6\times10^{-12}$ from evaluating a
+transcendental kernel in binary64 dominates every floor the floating-point route could
+produce; the blind band is exhibited explicitly (a matrix with a certified negative
+direction passes the test). The \emph{mathematical} matrix is fine --- at $40$ digits it
+carries a certified floor $2.7\times10^{-25}$, while rounding its entries to doubles moves
+it by $3.5\times10^{-17}$, eight orders more --- and the exact repair needs no precision at
+all: the same object is a \emph{positive-mixture Gram}
+$M=V^{\mathsf T}\mathrm{diag}(1/1600)V$ with $V_{ki}=e^{-\varepsilon_k\tau_i}$, so
+$x^{\mathsf T}Mx=\sum_kw_k(v_k\!\cdot\!x)^2$ is a sum of squares and $M\succeq0$ holds in
+exact arithmetic with no bar. The probe's recommendation table asks for method and wording,
+explicitly \emph{not} a marker move (\vref{v171}'s Vandermonde Gram is exactly certified
+already; \vref{v527}/\vref{v519} certify at the $40$ digits they already run).
+\textbf{That repair is executed in this same change:} \vref{v379} now asserts the exact
+mixture identity ($1.1\times10^{-15}$, at the rounding level) plus a sum-of-squares
+certificate, the eigenvalue check is retained and relabelled a diagnostic
+\emph{measurement}, and the ledger row \texttt{SEAM.S3.RP.01} is reworded accordingly ---
+marker \mE\ unchanged.
+
 \noindent T134 (\texttt{pole\_free\_floor\_probe.py}, contract \texttt{POLE.FREE.FLOOR}) is
-running at exactly that first point, the pole-free floor. In parallel --- and for the first
-time in the reverse direction --- two \emph{reverse-flow} probes carry the certified
-toolkit of this phase back to the theory side of the compiler: T132
-(\texttt{bd\_seam\_probe.py}, contract \texttt{BD.SEAM}: the Beurling--Deny triad of the
-seam DtN as an operator discriminator for \texttt{QGEO.KERNEL.01}) and T133
-(\texttt{cert\_floor\_probe.py}, contract \texttt{CERT.FLOOR}: Cholesky certificates for
-the RP-PSD rows). After them, the v542 promotion of the narrow identity module is pending.
+running at the first point of the shortest list, the pole-free floor, and T135
+(\texttt{comb\_compressibility\_probe.py}, contract \texttt{COMB.COMPRESS}) at the
+compressibility of the comb. The narrow identity module of this phase is promoted:
+\vref{v542}, Section~\ref{sec:v542}.
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
@@ -4037,9 +4141,13 @@ irreducibles --- the word ``for all'' (M19) and the RH address itself (M21) --- 
 onto one measured exponent, the vacuous M17 assembly with its named whitening fix, the
 conditional comb bound (M18), the per-side law (M24), the (C-F5) convention, the
 all-$\alpha$ step that no computation can close, and the \textbf{[SUPPORT]} obstruction;
-T134 (\texttt{pole\_free\_floor\_probe.py}) is running at the pole-free floor, and the
-first \emph{reverse-flow} probes T132 (\texttt{bd\_seam\_probe.py}) and T133
-(\texttt{cert\_floor\_probe.py}) carry the certified toolkit back to the theory side.
+T134 (\texttt{pole\_free\_floor\_probe.py}) is running at the pole-free floor. The identity
+block underneath the map is no longer sandbox: it is promoted as \vref{v542}
+(Section~\ref{sec:v542}). And the first \emph{reverse-flow} parts have landed --- T132
+(\texttt{bd\_seam\_probe.py}) made the Beurling--Deny triad an operator discriminator for
+the seam DtN, \textsc{spectrum-only} with the gap in the killing measure, and T133
+(\texttt{cert\_floor\_probe.py}) audited the suite's own PSD rows and produced the exact
+positive-mixture Gram certificate that hardened \vref{v379} in this same round.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -4110,21 +4218,21 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T131}\label{app:index}
+\section{Probe index, diary parts T11--T133}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $121$ parts T11--T131 that the current diary file records
-($122$ runs --- T104 was a double run with two independent arms --- and $3116$ green checks); the ten
+load-bearing artefact. The index covers the $123$ parts T11--T133 that the current diary file records
+($124$ runs --- T104 was a double run with two independent arms --- and $3160$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v541} promoted; with T126--T131, the first six parts of the second phase, the
-running totals are \textbf{$131$ probes and $3308/3308$ checks}. T132
-(\texttt{bd\_seam\_probe.py}, contract \texttt{BD.SEAM}), T133 (\texttt{cert\_floor\_probe.py},
-contract \texttt{CERT.FLOOR}) and T134 (\texttt{pole\_free\_floor\_probe.py}, contract
-\texttt{POLE.FREE.FLOOR}) are running and not yet indexed.
+\vref{v535}--\vref{v542} promoted; with T126--T133, the first eight parts of the second phase, the
+running totals are \textbf{$133$ probes and $3352/3352$ checks}. T134
+(\texttt{pole\_free\_floor\_probe.py}, contract \texttt{POLE.FREE.FLOOR}) and T135
+(\texttt{comb\_compressibility\_probe.py}, contract \texttt{COMB.COMPRESS}) are running and not
+yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -4261,6 +4369,8 @@ T128 & \texttt{\scriptsize teml} & the four-point list of map V2, worked cheapes
 T129 & \texttt{\scriptsize kappa\_\allowbreak deep\_\allowbreak seams} & the most productive break of the phase: the fitted law falls, the theorem underneath stands --- $C^*=0.3506$ frozen from T128's three calibration groups (a fit, labelled a fit, not refitted; calibration itself $0/105$, not the test); on $331$ \emph{new} transports ($14$ ratios $1.05$--$4.00$, none in the calibration set; $h_f=29$--$1450$) the law $\kappa\le2+C^*(\rho-1)$ is violated \textbf{once} ($n=7$ at $\rho=3.00$, slack $-0.0334$; the bare unmoved bar $2$ would fall $78$ times), the per-side law on $\kappa_r$ $1/293$, the side asymmetry reproduces ($\kappa_r=1.70$--$2.91$ vs $\kappa_l=0.05$--$0.21$); the bar is not moved; \textbf{the structural ground is solved with identities}: $\sum(1-g_i)=t_l+t_r$ ($7.1\times10^{-13}$) makes the flat border vector $\kappa=1$ \emph{exactly} (T128's bar $2$ was twice the flat value), the profile identity $p_{N-1}=2-p_0+2E$ ($6.7\times10^{-16}$) makes a linear density profile $\kappa=2$ \emph{exactly} (everything above is curvature; $2E>p_0\iff p_{N-1}>2$, $114/436$ with no exception), and the chain $\kappa\le2-p_0+\frac{N-2}{N}\sum|\Delta p-\overline{\Delta p}|+(p_{\max}-p_{N-1})$ is a \emph{theorem} with an explicit constant (H\"older/telescope/Abel), valid on all $436$ (slack median $0.344$; last term vanishes $392/436$); depth block: $14$ graded transports at $h_f=1656$--$17\,669$ ($12\times$ the cap, matrix-free, $m/h=0.064$--$0.512$), $0$ violations --- the residual risk is a ratio effect, not a resolution effect; \textbf{the deep seams}: machinery verified (two-scale assembly $=J^{\mathsf T}QJ$ to $2.7\times10^{-16}$, $X=Q_{\mathrm{old}}$ to $2.4\times10^{-17}$), $n=127$, $256$ compressed to $m/h=0.507$, $0.255$ carry \emph{complete} graded seam certificates ($X$ PD, Schur floors above Wilkinson, bracket positive, retentions $0.307/0.417$), the floor survives $6$ further coarsening rungs --- honestly downgraded to \textsc{graded-certified}: Rayleigh--Ritz points the wrong way ($1.53$--$5.18\times$, no exception) and a measured $8\%$ false-positive rate ($4/48$ pairs graded-positive where uniform is not), declared before the seams; $(L)=[3$ uniform, $2$ graded, $3$ budget-open$]$; \textbf{M18}: the Cauchy--Schwarz row bound is vacuous ($0/40$, reported as the failure it is), the S-procedure operator bound works ($40/40$ below $1$, $0.170$--$0.774$, $1.3$--$182\times$ above the truth, median $7.8$; \textsc{certified-conditional} on $\theta_1\sim D^{1.219}$, a fit; saturates at $(kD)^{0.263}$ instead of decaying); map V4: $9$ entries --- M9 reduced, L2 graded, M18 bounded, M17 untouched, \textbf{M19 ``for all'' and M21 the RH address irreducible}, M22/M23/M24 new and named; promotion: \emph{ready in principle} as a narrow module on the five identity/theorem pieces & KAPPA-WILD & 28/28\\
 T130 & \texttt{\scriptsize curvature\_\allowbreak bridge} & the two named pieces attacked head on, and exactly one stands --- the bridge, not the bound: \textbf{the C\'ea/Strang defect identity} $S_{\mathrm{graded}}-S_{\mathrm{uniform}}=R^{\mathsf T}X^{-1}R$ verified to $1.3\times10^{-13}$, matrix-free (FFT matvec + BPX-preconditioned CG, one graded Cholesky under the cap); the \emph{scalar} form is vacuous (loses $3$--$28\times$), the \emph{matrix} form reproduces the directly computed uniform Schur floor on \textbf{84 pairs (21 zones) to $2.5\times10^{-11}$ relative with zero overshoot} --- T129's $8\%$ false positives explained completely ($16/84$ at bracket level, $\mathbf{0/84}$ at floor level: they sat in the transport bracket, which the bridge makes unnecessary); \textbf{both deep seams carry}: $n=127\to\lambda_f=0.2255$, $n=256\to\lambda_f=0.2614$ ($h_f=2476/5694$, $1.7\times/3.8\times$ the cap), \textsc{bridged-certified-conditional} on \emph{one} measured number per grid (the Lanczos floor for $\lambda_{\min}(X_{\mathrm{fine}})$; the Grenander--Szeg\H{o} route for it \emph{dead}, symbol indefinite, floor $-76\ldots-27$; conclusion unmoved at $100\times/10^4\times$ smaller floor); \textbf{the curvature front}: the TV rewrite $\sum|\Delta p-\overline{\Delta p}|=\mathrm{TV}(P)\le(2n_{\mathrm{run}}-2)\cdot\mathrm{sag}$ is \emph{exact} (one hump on $83/765$, sign purity $765/765$), the power profile wins $635/635$ ($a=0.703$--$0.999$, median $0.856$), the T108 Levinson corner identity independently reproduced ($24$ zones to $M=1236$, $4.2\times10^{-9}$) but the pole solve only a proxy (cosine $0.992$--$0.996$, curvature ratio $1.5$--$5.3$) --- and the frozen shape band ($a\in[0.734,0.897]$, $S^*=1.1926$) \textbf{breaks on 13/545} disjoint test transports (bar not moved; per-transport exponent $520/545$) $\Rightarrow$ M22 reduced to a zone-uniform bound on \emph{one} exponent; theorem battery: $0$ violations of the exact chain on $765$, the fully explicit chain closes $635/635$ but $0$ under the bare bar $2$ ($\kappa>2$ measured on $130/765$); map V5 ($12$ items): I1--I4 + \textbf{I5 new} certified, I6 bridge + I7 seams certified-conditional, M23 conditionally closed, \textbf{M25 new} (a certified positive floor for $\lambda_{\min}(X_{\mathrm{fine}})$), promotion check list (1)--(6); M19/M21 untouched & ONE-OF-TWO & 30/30\\
 T131 & \texttt{\scriptsize self\_\allowbreak supply} & the self-supply loop is built, one number short of closed: \textbf{the $\varepsilon\to\lambda_{\min}$ secular sandwich is a theorem} --- $\varepsilon/(\|u\|^{2}+\varepsilon/\mu_{1})\le\lambda_{\min}(Q)\le\varepsilon/\|u\|^{2}$ with the sign half an \emph{equivalence} (Albert 1969) --- \emph{sharp} (relative width $1.2663$--$1.3894$, true value at $1.06$--$1.31\times$ the lower bound, $0$ violations on $10$ dense windows), $\varepsilon$ itself certified at the deep grid (C\'ea/Strang + CG, retention $1.0000$); \textbf{correction to T130}: the Lanczos Ritz value overestimates $\lambda_{\min}(X)$ by up to $7.9\times$ (an upper bound by construction, never a floor); the chain floor replaces it on \textbf{84 bridge pairs with 0 brackets lost} (retention $0.766$--$1.059$ against the certified Cholesky floor, median $0.875$), both deep seams \textsc{chain-positive} ($n=127$: $\varepsilon\ge2.63\times10^{-7}\to$ floor $1.08\times10^{-6}$; $n=256$: $3.83\times10^{-8}\to2.52\times10^{-7}$), $\mu_{1}$ tolerating \textbf{nine decades} of underestimate $\Rightarrow$ \textbf{M25 reduced-to-pole-free}; the mirror rung dead ($T(\ell)$ indefinite $4/4$ --- the Szeg\H{o} indefiniteness; the telescope runs coarse-from-fine only); \textbf{M22}: sign constancy a \textbf{theorem} via Perron--Frobenius on $S^{-1}$ (entrywise positive $575/575$; Metzler fails $11/575$), the one hump \textbf{broken at depth} ($530/575$ with more than two monotone runs; the certified $(2n_{\mathrm{run}}-2)\cdot\mathrm{sag}$ majorant replaces it on $575/575$), exponent and $S^{*}$ stay measurements ($a=0.727$--$0.999$, $55/492$ outside the old band; the deeper sweep lifts the required $S^{*}$ to $1.8472$, the frozen $1.1926$ exceeded $16$ times); \textbf{M17} assembled and \emph{vacuous} (majorant $27/27$, non-vacuous $0/27$; dominant loss the U-metric mismatch $2.18$; named fix: M18 whitened); map V6 ($13$ items), promotion list now \textbf{9 items} (new: the sandwich, the Perron sign theorem, the run-count chain); shortest remaining list four points & SUPPLY-PARTIAL & 25/25\\
+T132 & \texttt{\scriptsize bd\_\allowbreak seam} & the first \emph{reverse-flow} part: the phase's toolkit turned on the theory side, and the Beurling--Deny triad becomes an \textbf{operator discriminator} where the spectrum is blind --- the BD identity exact to $2.4\times10^{-16}$ at every $N$, the triad reconstructing the \emph{operator} ($1.4\times10^{-14}$ at $d=256$), diffusion part identically $0$ (finite atomic space; the continuum DtN is the pure-jump $\tfrac12$-Laplacian, Caffarelli--Silvestre 2007, fitted decay $1.980$), and the \textbf{killing measure $=$ the $\mu_4$ mark-sum profile pointwise} ($1.3\times10^{-14}$): the marks enter the operator \emph{only} through the killing term; the \textbf{Markov remainder is exactly zero} with the closed form $J_{rs}=1/(d\sin^2(\pi(r-s)/d))$ for odd $r-s$ and $0$ for even --- which explains T126's $86.1\%$ count fraction; discriminator verdict \textsc{spectrum-only}: spectra agree to $7.5\times10^{-13}$ but the triad gap sits in the \textbf{killing measure at $0.1746$ at every $N$} (spread $1.9\times10^{-14}$) while the jump gap shrinks ($7.7\times10^{-3}\to3.5\times10^{-4}$), so ``same spectrum $+$ $\mu_4$-equivariance'' is provably too weak; controls break the triad ($0.520$--$0.982$ against mark-local $7.5\times10^{-16}$) and the grading too; covariance limit named: random orthogonal ($90.4$) and generic $\mu_4$-equivariant conjugation ($86.5$) destroy the triad, the mark-preserving lattice symmetries ($D_4$: clock rotation, sheet reflection) leave it \textbf{exactly} invariant ($1.6\times10^{-14}$) $\Rightarrow$ \texttt{QGEO.MARKS.01} and \texttt{QGEO.KERNEL.01} are \textbf{coupled}; ceiling stated: this is the \emph{model} DtN, \texttt{QGEO.KERNEL.01} \textbf{not} closed & SPECTRUM-ONLY & 21/21\\
+T133 & \texttt{\scriptsize cert\_\allowbreak floor} & the audit that changed a load-bearing module: shifted-Cholesky certificates (Wilkinson 1968 / Higham 2002 / Rump 2006 bars) applied to the suite's own RP/PSD rows, machinery itself validated on \textbf{840 controls} ($0$ false certifications, $0$ false negative-direction fires, sharpness median $1.000$) --- the $10\times10$ Hankel \vref{v379} builds is \textbf{as a matrix of doubles certifiably NOT PSD} (certified negative direction $-7.75\times10^{-18}$ at $60$ digits; also at $n=14,20$) and the module's $\lambda_{\min}>-10^{-10}$ passes it; the cause is priced, not guessed ($\mathrm{cond}\approx1.8\times10^{18}$ over the certifiability ceiling $1.0\times10^{13}$; entry bar $7.6\times10^{-12}$ dominates every fp floor; $16/17$ window variants \textsc{measurement-only}), the blind band exhibited (a certified negative direction passes the test), and the \emph{mathematical} matrix is fine (certified floor $2.7\times10^{-25}$ at $40$ digits, while rounding to doubles moves it $3.5\times10^{-17}$ --- eight orders more; precision ladder $25/40/70/70$ digits at $n=6\ldots20$); \textbf{the exact repair needs no precision}: $M=V^{\mathsf T}\mathrm{diag}(1/1600)V$ is a positive-mixture Gram, so $M\succeq0$ in exact arithmetic with no bar --- the route \vref{v171} already takes; other rows clean (\vref{v171} exactly rank-$3$ Vandermonde Gram, $\lambda_{\min}=0$ exactly; \vref{v527}/\vref{v519} \textsc{cert-up}, $N=8,16$ even in binary64); recommendation table explicit: \textbf{no marker moves}, method and wording only --- executed in the same round as the \vref{v379} hardening and the \texttt{SEAM.S3.RP.01} rewording & MIXED & 23/23\\
 \end{xltabular}
 }
 

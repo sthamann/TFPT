@@ -107,7 +107,8 @@ export type PrimeFrontVerdict =
   | "BOTH-SHAPED"
   | "THREE-OF-FOUR"
   | "KAPPA-WILD"
-  | "SUPPLY-PARTIAL";
+  | "SUPPLY-PARTIAL"
+  | "SPECTRUM-ONLY";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -131,6 +132,39 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-28",
+    part: 0,
+    title:
+      "Promoted: the margin-chain identities of phase 2 (v542) — nine per-instance identities and theorems, nothing uniform",
+    verdict: "MACHINE-VERIFIED",
+    summary:
+      "The identity/theorem block of the diary parts T128–T131 is now load-bearing as one deliberately narrow module (44 checks, ~0.2 s, ledger row PRIME.MARGIN.IDENT.01, marker [E]). Every check is recomputed on small windows of the frame-A construction — 24 seam instances (n = 3…97, ρ = 1.25…4.00, every inverted or diagonalised matrix ≤ 300), 43 graded/fine grid pairs and 400 randomised profiles — and every identity is a numerical residual against a preregistered tolerance plus at least one mutation control that must fail by ≥ 1e-3 relative. What is promoted: (1) the border-weight identity Σ(1 − g_i) = t_l + t_r from the exact interval geometry (5.5e-13), so the kappa weights are a probability vector and the flat border vector gives kappa = 1 exactly; (2) the four-term identity τ = ‖y‖² − m_prot + m_fill − V_bord (2.2e-16), with τ independently recomputed from the full odd overlap matrix; (3) the profile identity p_(N−1) = 2 − p₀ + 2E (2.3e-16), hence the equivalence 2E > p₀ ⟺ p_(N−1) > 2 with zero exceptions and both branches realised; (4) the Abel/Hölder curvature chain as a per-instance theorem with zero violations — while the same chain WITHOUT the curvature term is violated on 88 of 400 profiles, which is the honest reason the term is in it; (5) the matrix-free two-scale assembly = JᵀQJ and the graded overlap = J; (6) the Céa/Strang defect identity S_graded − S_uniform = RᵀX⁻¹R as a MATRIX identity on all 43 grids (2.1e-14) with a positive semidefinite defect, so the compression error is one-sided by the identity; (7) the secular sandwich with Albert's sign equivalence in both directions, on all 48 sections where positivity of A and ε > 0 are CHECKED at the instance; (8) sign constancy and simplicity of the ground vector from S⁻¹ > 0 entrywise, as an IMPLICATION with a measured hypothesis (and a control where hypothesis and conclusion fail together); (9) the run-count chain n_run ≤ n_cross + 1 ≤ s₂ + 2 together with the total-variation rewrite. What is NOT promoted, stated with the row: no fit, no graded floor, no Lanczos value, and nothing uniform in the zone index; the kappa LAW itself is not claimed (T129 found it false in general), positivity of the pole-free section at depth stays open and carries no floor value here, and the defect identity says nothing about the SIZE of the defect. Classical results are named classical (Abel, Hölder, Schur–Haynsworth 1968, Albert 1969, Céa 1964/Strang, Yserentant 1986, Perron–Frobenius/Ostrowski 1937); Weil 1952 is cited, never used as a criterion. Not RH evidence, not 'almost RH', and no marker of any pre-existing contract moves.",
+    badge: "machine-verified",
+    script: "v542_margin_chain_identities.py",
+  },
+  {
+    date: "2026-07-28",
+    part: 133,
+    title:
+      "The certificate tool audits its own suite — and changes a load-bearing module: the 10x10 Hankel matrix v379 builds and tests is, as a matrix of doubles, certifiably NOT positive semidefinite, the module tolerance passes it anyway, the mathematical matrix is fine, and the exact repair needs no precision at all (a positive-mixture Gram) — implemented in the same change",
+    verdict: "MIXED",
+    summary:
+      "T133 (MIXED, 23/23) — contract CERT.FLOOR, the second reverse-flow probe: take the shifted-Cholesky certificate machinery (Wilkinson 1968, Higham 2002, Rump 2006 backward-error bars, plus an entry bar for kernels evaluated in floating point) and turn it on the load-bearing suite's own reflection-positivity and PSD rows. The machinery is validated first, on 840 controls: zero violations on 160 certifying controls (sharpness median 1.000), zero false certifications on 200 indefinite controls, zero false negative-direction fires on 400 directions. The finding: the 10x10 Hankel matrix that v379_seam_s3_rp.py builds AND tests carries, at 60 digits on the exact double entries, a CERTIFIED negative direction xᵀMx = −7.7506e-18 (also at n = 14 and n = 20) — and the module's own test, min eigenvalue > −1e-10, passes it. The cause is priced rather than guessed: condition number ≈ 1.77e18 against a certifiability ceiling of 1.02e13 at n = 10, no floating-point Cholesky of the module's matrix completes, and the entry bar 7.6e-12 from evaluating a transcendental kernel in binary64 dominates every floor the fp route could produce (16 of 17 window variants are MEASUREMENT-ONLY). The blind band is exhibited explicitly: a matrix with a certified negative direction at −1e-11 passes the tolerance. But the MATHEMATICAL matrix is fine — at 40 digits it carries a certified floor 2.662e-25, while merely rounding its entries to doubles moves the matrix by 3.542e-17, eight orders of magnitude more — so the indefiniteness of the tested object is a pure rounding artefact and no binary64 eigenvalue test can decide the mathematical statement in either direction. The repair needs no extra precision: the same object is a POSITIVE-MIXTURE GRAM, M = Vᵀdiag(1/1600)V with V_ki = exp(−ε_k τ_i), so xᵀMx is a sum of squares and M ⪰ 0 holds in exact arithmetic with no bar at all — the route v171 already takes for its own Hankel (exactly rank-3 Vandermonde Gram, λ_min = 0 exactly for N > 3), while v527/v519 certify with large headroom at the 40 digits they already run, and N = 8 and 16 even certify in binary64. The recommendation table asks for method and wording, explicitly NOT a marker move — and that repair is executed in the same change: v379 now asserts the exact mixture identity (residual 1.1e-15, at the rounding level) plus a sum-of-squares certificate on 510 test directions, the eigenvalue check is retained and relabelled a diagnostic MEASUREMENT, and the ledger row SEAM.S3.RP.01 is reworded accordingly with its [E] marker unchanged. One honest deletion stands: an eigenvalue tolerance is not a certificate. Sandbox probe; the hardening it recommends is the load-bearing part. Not RH evidence.",
+    badge: "sandbox",
+    script: "cert_floor_probe.py",
+  },
+  {
+    date: "2026-07-28",
+    part: 132,
+    title:
+      "The first reverse flow: the Beurling–Deny triad becomes an operator discriminator where the spectrum is blind — the seam DtN and its mu4-graded rival share their spectrum to 7.5e-13 but are not the same operator, and the gap sits in the killing measure at 0.1746 at every N",
+    verdict: "SPECTRUM-ONLY",
+    summary:
+      "T132 (SPECTRUM-ONLY, 21/21) — contract BD.SEAM, the first reverse-flow probe: for the first time the certified sandbox toolkit flows BACK to the theory side of the compiler. The seam Dirichlet-to-Neumann operator of v210 is rebuilt in the position basis (support 3.5e-17, mode form 1.7e-11, periodisation 3.8e-14, clock 4.0e-14, state 6.5e-14) and read through the Beurling–Deny triad: jump kernel, killing measure, diffusion part. The identity vᵀΛv = Σ w_r v_r² + Σ (−Λ_rs)(v_r − v_s)² is exact at every N (2.4e-16), the triad reconstructs the OPERATOR rather than just its quadratic form (1.4e-14 at dimension 256), the diffusion part is identically zero (a finite atomic state space carries no strongly local part, and the continuum DtN of the harmonic extension is the half-Laplacian, a pure jump form — Caffarelli–Silvestre 2007, fitted decay exponent 1.980), and the KILLING MEASURE IS THE MARK PROFILE POINTWISE (1.3e-14): the mu4 marks enter the operator exclusively through the killing term. The Markov remainder is not small but EXACTLY ZERO, with a closed jump-weight form J_rs = 1/(d sin²(π(r−s)/d)) for odd lags and exactly 0 for even lags — which explains T126's 86.1% count fraction completely (the even lags are the zeros, not defects). The discriminator then separates what the spectrum cannot: the seam DtN and the mu4-graded free contraction share their spectrum to 7.5e-13 but are NOT the same operator, and the triad gap sits in the killing measure at 0.1746 at every N (relative spread 1.9e-14) while the jump gap shrinks monotonically with N (7.7e-3 → 3.5e-4) — so the operator gap is not a truncation artefact, and 'same spectrum plus mu4-equivariance' is provably too weak to determine the seam DtN. Controls break the triad (0.520–0.982 against a mark-local 7.5e-16) and already break the grading, so the discriminator is not vacuous. The honest ceiling is a covariance statement: a random orthogonal (90.4) and even the mildest mark-preserving mu4-equivariant conjugation (86.5) destroy the triad, while the mark-preserving LATTICE symmetries — rotation by π/2 (the clock) and the sheet reflection, generating the D4 dihedral group — leave it EXACTLY invariant (1.6e-14). Read through the Dirichlet-form lens this couples two obligations: QGEO.KERNEL.01 becomes operator-formulable in finite terms only after QGEO.MARKS.01 has fixed the marked boundary coordinate. And the ceiling is stated, not hidden: this is v210's MODEL DtN, not the raw reflection-positive seam, so QGEO.KERNEL.01 is NOT closed; what is new is a finite operator-level discriminator and the coupling of KERNEL to MARKS. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "bd_seam_probe.py",
+  },
   {
     date: "2026-07-28",
     part: 131,

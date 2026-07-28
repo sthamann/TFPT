@@ -62,6 +62,88 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-28 (I) (\texttt{v542} --- the margin-chain identities of phase 2 promoted; \texttt{v379} hardened to an exact positive-mixture Gram certificate; prime-front diary T132/T133 + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v542} (\texttt{PRIME.MARGIN.IDENT.01}).} Promotion of the
+\emph{identity/theorem block} of the discovery parts T128--T131 into one narrow load-bearing module
+($44$ checks, ${\sim}0.2$\,s), recomputed on small frame-A windows --- nothing cited from the
+sandbox. Scope fence: identities and \emph{per-instance} theorems only; no fit, no graded floor, no
+Lanczos value, no uniform-in-zone statement. Battery: $24$ seam instances ($n=3\ldots97$,
+$\rho=1.25\ldots4.00$, $h_c=24\ldots214$, $h_f=36\ldots299$; every inverted or diagonalised matrix
+$\le300$), $43$ graded/fine grid pairs ($m\le172$) and $400$ randomised profiles; each identity is a
+numerical residual against a \emph{preregistered} tolerance plus at least one mutation control that
+must fail by $\ge10^{-3}$ relative.
+\item \textbf{(1)--(2) Border geometry and the (T) identity \mE.} $\sum_i(1-g_i)=t_l+t_r$ from the
+exact interval geometry (max rel $5.5\times10^{-13}$), so the $\kappa$ weights are a probability
+vector and the flat border vector gives $\kappa_{\mathrm{flat}}=1$ \emph{exactly} (control: a $1\%$
+perturbation of $g_i$ breaks it by $7.9\times10^{-2}$);
+$\tau_{\mathrm{dn}}=\|y\|^2-m_{\mathrm{prot}}+m_{\mathrm{fill}}-V_{\mathrm{bord}}$ at
+$2.2\times10^{-16}$, with $\tau$ independently recomputed from the \emph{full} odd overlap matrix
+($1.1\times10^{-13}$); dropping any of the three correction terms breaks the identity.
+\item \textbf{(3)--(4) The profile identity and the curvature chain \mE.}
+$p_{N-1}=2-p_0+2E$ at $2.3\times10^{-16}$ (instances) / $1.4\times10^{-15}$ ($400$ random
+profiles), hence the equivalence $2E>p_0\iff p_{N-1}>2$ with $0$ exceptions and both branches
+realised ($60/400$); the Abel/H\"older chain
+$\kappa\le2-p_0+\frac{N-2}{N}\sum_j|\Delta p_j-\overline{\Delta p}|+(p_{\max}-p_{N-1})$ holds per
+instance with $0$ violations (min slack $1.0\times10^{-1}$ / $3.7\times10^{-2}$), while the
+\emph{same} chain without the curvature term is violated on $88/400$ profiles --- the curvature term
+is load-bearing, not decorative.
+\item \textbf{(5)--(6) Assembly and the C\'ea/Strang defect \mE.} The matrix-free two-scale assembly
+equals $J^{\mathsf T}QJ$ ($5.2\times10^{-16}$) and the graded overlap operator equals $J$
+($5.2\times10^{-14}$), reducing to the uniform odd overlap when both partitions are uniform;
+$S_{\mathrm{graded}}-S_{\mathrm{uniform}}=R^{\mathsf T}X^{-1}R$ as a \emph{matrix} identity on all
+$43$ grids ($2.1\times10^{-14}$) with a PSD defect on every grid, so the compression error is
+one-sided \emph{by} the identity (controls: unnormalised merge weights $8.4\times10^{-1}$; dropping
+the $-B$ term in $R$ $4.0\times10^{-1}$).
+\item \textbf{(7)--(9) Sandwich, Perron implication, counting chain \mE.} The secular sandwich
+$\varepsilon/(\|u\|^2+\varepsilon/\mu_1)\le\lambda_{\min}(Q)\le\varepsilon/\|u\|^2$ holds on all
+$48$ pole-free sections at which $A>0$ \emph{and} $\varepsilon>0$ are \emph{checked} (relative width
+$\le1.4448$), with Albert's sign equivalence verified in \emph{both} directions ($6$ rescaled
+controls with $\varepsilon<0$ all give $\lambda_{\min}(Q)<0$); $S^{-1}>0$ entrywise (measured
+$48/48$) $\Rightarrow$ sign-constant \emph{and} simple ground vector as an \emph{implication}
+(tridiagonal control: hypothesis fails, conclusion fails with it);
+$n_{\mathrm{run}}\le n_{\mathrm{cross}}+1\le s_2+2$ and $\sum_j|\Delta p_j-\overline{\Delta p}|=\mathrm{TV}(P)$
+with $0$ exceptions on a non-vacuous battery ($s_2$ up to $31$).
+\item \textbf{Named limits as load-bearing content.} Every statement is \emph{per instance on small
+windows} --- nothing is uniform in the zone index; the $\kappa$ \emph{law} is \emph{not} claimed
+(T129 found it false in general), only the chain underneath it; (7) assumes nothing --- positivity
+of the pole-free section at depth (the open M25d) is not extended and no floor value is carried;
+(8) has a \emph{measured} hypothesis; (6) says nothing about the \emph{size} of the defect (the open
+T130 exponent). Abel / H\"older / Schur--Haynsworth 1968 / Albert 1969 / C\'ea 1964--Strang /
+Yserentant 1986 / Perron--Frobenius--Ostrowski 1937 named classical; Weil 1952 cited, never used as
+a criterion; zero-firewall AST-checked; NOT ``almost RH''.
+\item \textbf{Hardening of \texttt{v379} (\texttt{SEAM.S3.RP.01}).} T133 (\textsc{cert.floor})
+certified that the $10\times10$ Hankel matrix \texttt{v379} assembles has, \emph{as a
+double-precision object}, a negative direction at $-7.75\times10^{-18}$ ($60$ digits) --- inside the
+module's old \texttt{min\_eig > -1e-10} tolerance. The mathematical matrix is fine and the exact
+rescue is now in the module: the RP Gram is built explicitly as a \emph{positive mixture}
+$M=V^{\mathsf T}\mathrm{diag}(1/1600)V$, $V_{ki}=e^{-\varepsilon_k\tau_i}$, so
+$x^{\mathsf T}Mx=\sum_k w_k(v_k\!\cdot\!x)^2$ is a \emph{sum of squares} and $M\succeq0$ holds
+exactly; the mixture identity is zero at the rounding level ($1.1\times10^{-15}\le64u|M|$) and the
+sum-of-squares route is nonnegative on $510/510$ test directions where the assembled float form is
+negative on $2$. The eigenvalue check is \emph{retained and relabelled a diagnostic measurement}.
+Ledger row \texttt{SEAM.S3.RP.01} reworded accordingly (method text: exact positive-mixture Gram
+identity, eigenvalue check as diagnostic); \textbf{marker stays \mE\ --- no upgrade}. $7$ checks
+(was $5$), \texttt{run\_all} green.
+\item \textbf{Diary Teile 132/133 (sandbox).} \texttt{bd\_seam\_probe.py} (contract
+\texttt{BD.SEAM}, $21/21$, verdict \textsc{spectrum-only}): the model boundary-Dirac and the marks
+kernel share their spectrum to $7.5\times10^{-13}$ but are \emph{not} the same operator --- the gap
+sits in the killing mass $0.1746$ ($N$-stable), the killing measure equals the marks profile
+pointwise, the Markov remainder is exactly zero with a closed jump-weight form (odd lags positive,
+even lags zero --- which explains T126's $86.1\%$), and the $D_4$ lattice symmetries leave the triad
+exactly invariant; ceiling: the DtN is a model DtN, the gate is \emph{not} closed.
+\texttt{cert\_floor\_probe.py} (contract \texttt{CERT.FLOOR}, $23/23$, verdict \textsc{mixed}, $840$
+control validations): the \texttt{v379} finding above plus a recommendation table --- the hardening
+is implemented in this same change. Series counter: $133$ probes, $3352/3352$ sandbox checks.
+Sandbox only: no ledger row for the probes, no marker move, not RH evidence.
+\item \textbf{Ledger/papers/website.} New ledger row \texttt{PRIME.MARGIN.IDENT.01};
+\texttt{\textbackslash veri} citations in \texttt{tfpt\_1}, \texttt{tfpt\_3},
+\texttt{tfpt\_research\_contracts} and the promotion place of \texttt{tfpt\_prime\_front} (verified
+layer now \emph{eight} modules; phase 2 extended to T126--T133); website mirrors
+(\texttt{/prime-front} feed entries T132/T133, status surfaces Teile 11--133 / $3352$ checks,
+verification DAG, papers data) updated in the same change.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-27 (IV) (prime front: T111 deep ladder maps three walls, crossing measured at $n\approx462$ --- CROSSING-CONFIRMED; paper + diary + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{Diary Teil 111 (sandbox).} \texttt{experiments/tfpt-discovery/deep\_zone\_stress\_probe.py}

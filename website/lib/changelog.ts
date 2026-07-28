@@ -42,6 +42,1415 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-28",
+    "dateLabel": "2026-07-28 · I",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v542"
+      },
+      {
+        "k": "t",
+        "v": " — the margin-chain identities of phase 2 promoted; "
+      },
+      {
+        "k": "c",
+        "v": "v379"
+      },
+      {
+        "k": "t",
+        "v": " hardened to an exact positive-mixture Gram certificate; prime-front diary T132/T133 + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v542"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.MARGIN.IDENT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "identity/theorem block"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the discovery parts T128–T131 into one narrow load-bearing module ("
+        },
+        {
+          "k": "m",
+          "v": "44"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.2"
+        },
+        {
+          "k": "t",
+          "v": " s), recomputed on small frame-A windows — nothing cited from the sandbox. Scope fence: identities and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "per-instance"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " theorems only; no fit, no graded floor, no Lanczos value, no uniform-in-zone statement. Battery: "
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": " seam instances ("
+        },
+        {
+          "k": "m",
+          "v": "n=3\\ldots97"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\rho=1.25\\ldots4.00"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h_c=24\\ldots214"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h_f=36\\ldots299"
+        },
+        {
+          "k": "t",
+          "v": "; every inverted or diagonalised matrix "
+        },
+        {
+          "k": "m",
+          "v": "\\le300"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "43"
+        },
+        {
+          "k": "t",
+          "v": " graded/fine grid pairs ("
+        },
+        {
+          "k": "m",
+          "v": "m\\le172"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "400"
+        },
+        {
+          "k": "t",
+          "v": " randomised profiles; each identity is a numerical residual against a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "preregistered"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " tolerance plus at least one mutation control that must fail by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " relative."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1)–(2) Border geometry and the (T) identity "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_i(1-g_i)=t_l+t_r"
+        },
+        {
+          "k": "t",
+          "v": " from the exact interval geometry (max rel "
+        },
+        {
+          "k": "m",
+          "v": "5.5\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "), so the "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa"
+        },
+        {
+          "k": "t",
+          "v": " weights are a probability vector and the flat border vector gives "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa_{\\mathrm{flat}}=1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (control: a "
+        },
+        {
+          "k": "m",
+          "v": "1\\%"
+        },
+        {
+          "k": "t",
+          "v": " perturbation of "
+        },
+        {
+          "k": "m",
+          "v": "g_i"
+        },
+        {
+          "k": "t",
+          "v": " breaks it by "
+        },
+        {
+          "k": "m",
+          "v": "7.9\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_{\\mathrm{dn}}=\\|y\\|^2-m_{\\mathrm{prot}}+m_{\\mathrm{fill}}-V_{\\mathrm{bord}}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "2.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ", with "
+        },
+        {
+          "k": "m",
+          "v": "\\tau"
+        },
+        {
+          "k": "t",
+          "v": " independently recomputed from the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "full"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " odd overlap matrix ("
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "); dropping any of the three correction terms breaks the identity."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3)–(4) The profile identity and the curvature chain "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "p_{N-1}=2-p_0+2E"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "2.3\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " (instances) / "
+        },
+        {
+          "k": "m",
+          "v": "1.4\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "400"
+        },
+        {
+          "k": "t",
+          "v": " random profiles), hence the equivalence "
+        },
+        {
+          "k": "m",
+          "v": "2E>p_0\\iff p_{N-1}>2"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " exceptions and both branches realised ("
+        },
+        {
+          "k": "m",
+          "v": "60/400"
+        },
+        {
+          "k": "t",
+          "v": "); the Abel/Hölder chain "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa\\le2-p_0+\\frac{N-2}{N}\\sum_j|\\Delta p_j-\\overline{\\Delta p}|+(p_{\\max}-p_{N-1})"
+        },
+        {
+          "k": "t",
+          "v": " holds per instance with "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " violations (min slack "
+        },
+        {
+          "k": "m",
+          "v": "1.0\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "3.7\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "), while the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " chain without the curvature term is violated on "
+        },
+        {
+          "k": "m",
+          "v": "88/400"
+        },
+        {
+          "k": "t",
+          "v": " profiles — the curvature term is load-bearing, not decorative."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5)–(6) Assembly and the Céa/Strang defect "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The matrix-free two-scale assembly equals "
+        },
+        {
+          "k": "m",
+          "v": "J^{\\mathsf T}QJ"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "5.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") and the graded overlap operator equals "
+        },
+        {
+          "k": "m",
+          "v": "J"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "5.2\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "), reducing to the uniform odd overlap when both partitions are uniform; "
+        },
+        {
+          "k": "m",
+          "v": "S_{\\mathrm{graded}}-S_{\\mathrm{uniform}}=R^{\\mathsf T}X^{-1}R"
+        },
+        {
+          "k": "t",
+          "v": " as a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "matrix"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " identity on all "
+        },
+        {
+          "k": "m",
+          "v": "43"
+        },
+        {
+          "k": "t",
+          "v": " grids ("
+        },
+        {
+          "k": "m",
+          "v": "2.1\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": ") with a PSD defect on every grid, so the compression error is one-sided "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "by"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the identity (controls: unnormalised merge weights "
+        },
+        {
+          "k": "m",
+          "v": "8.4\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": "; dropping the "
+        },
+        {
+          "k": "m",
+          "v": "-B"
+        },
+        {
+          "k": "t",
+          "v": " term in "
+        },
+        {
+          "k": "m",
+          "v": "R"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "4.0\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(7)–(9) Sandwich, Perron implication, counting chain "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The secular sandwich "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon/(\\|u\\|^2+\\varepsilon/\\mu_1)\\le\\lambda_{\\min}(Q)\\le\\varepsilon/\\|u\\|^2"
+        },
+        {
+          "k": "t",
+          "v": " holds on all "
+        },
+        {
+          "k": "m",
+          "v": "48"
+        },
+        {
+          "k": "t",
+          "v": " pole-free sections at which "
+        },
+        {
+          "k": "m",
+          "v": "A>0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon>0"
+        },
+        {
+          "k": "t",
+          "v": " are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "checked"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (relative width "
+        },
+        {
+          "k": "m",
+          "v": "\\le1.4448"
+        },
+        {
+          "k": "t",
+          "v": "), with Albert's sign equivalence verified in "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "both"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " directions ("
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " rescaled controls with "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon<0"
+        },
+        {
+          "k": "t",
+          "v": " all give "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(Q)<0"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "S^{-1}>0"
+        },
+        {
+          "k": "t",
+          "v": " entrywise (measured "
+        },
+        {
+          "k": "m",
+          "v": "48/48"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " sign-constant "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " simple ground vector as an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "implication"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (tridiagonal control: hypothesis fails, conclusion fails with it); "
+        },
+        {
+          "k": "m",
+          "v": "n_{\\mathrm{run}}\\le n_{\\mathrm{cross}}+1\\le s_2+2"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_j|\\Delta p_j-\\overline{\\Delta p}|=\\mathrm{TV}(P)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " exceptions on a non-vacuous battery ("
+        },
+        {
+          "k": "m",
+          "v": "s_2"
+        },
+        {
+          "k": "t",
+          "v": " up to "
+        },
+        {
+          "k": "m",
+          "v": "31"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Named limits as load-bearing content."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Every statement is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "per instance on small windows"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — nothing is uniform in the zone index; the "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "law"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " claimed (T129 found it false in general), only the chain underneath it; (7) assumes nothing — positivity of the pole-free section at depth (the open M25d) is not extended and no floor value is carried; (8) has a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measured"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " hypothesis; (6) says nothing about the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "size"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the defect (the open T130 exponent). Abel / Hölder / Schur–Haynsworth 1968 / Albert 1969 / Céa 1964–Strang / Yserentant 1986 / Perron–Frobenius–Ostrowski 1937 named classical; Weil 1952 cited, never used as a criterion; zero-firewall AST-checked; NOT “almost RH”."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Hardening of "
+            },
+            {
+              "k": "c",
+              "v": "v379"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.S3.RP.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " T133 ("
+        },
+        {
+          "k": "t",
+          "v": "cert.floor"
+        },
+        {
+          "k": "t",
+          "v": ") certified that the "
+        },
+        {
+          "k": "m",
+          "v": "10\\times10"
+        },
+        {
+          "k": "t",
+          "v": " Hankel matrix "
+        },
+        {
+          "k": "c",
+          "v": "v379"
+        },
+        {
+          "k": "t",
+          "v": " assembles has, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "as a double-precision object"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", a negative direction at "
+        },
+        {
+          "k": "m",
+          "v": "-7.75\\times10^{-18}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "60"
+        },
+        {
+          "k": "t",
+          "v": " digits) — inside the module's old "
+        },
+        {
+          "k": "c",
+          "v": "min_eig > -1e-10"
+        },
+        {
+          "k": "t",
+          "v": " tolerance. The mathematical matrix is fine and the exact rescue is now in the module: the RP Gram is built explicitly as a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "positive mixture"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "M=V^{\\mathsf T}\\mathrm{diag}(1/1600)V"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "V_{ki}=e^{-\\varepsilon_k\\tau_i}"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "x^{\\mathsf T}Mx=\\sum_k w_k(v_k\\!\\cdot\\!x)^2"
+        },
+        {
+          "k": "t",
+          "v": " is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "sum of squares"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "M\\succeq0"
+        },
+        {
+          "k": "t",
+          "v": " holds exactly; the mixture identity is zero at the rounding level ("
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{-15}\\le64u|M|"
+        },
+        {
+          "k": "t",
+          "v": ") and the sum-of-squares route is nonnegative on "
+        },
+        {
+          "k": "m",
+          "v": "510/510"
+        },
+        {
+          "k": "t",
+          "v": " test directions where the assembled float form is negative on "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": ". The eigenvalue check is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "retained and relabelled a diagnostic measurement"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.S3.RP.01"
+        },
+        {
+          "k": "t",
+          "v": " reworded accordingly (method text: exact positive-mixture Gram identity, eigenvalue check as diagnostic); "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "marker stays "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "— no upgrade"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " checks (was "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "run_all"
+        },
+        {
+          "k": "t",
+          "v": " green."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Diary Teile 132/133 (sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "bd_seam_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " (contract "
+        },
+        {
+          "k": "c",
+          "v": "BD.SEAM"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "21/21"
+        },
+        {
+          "k": "t",
+          "v": ", verdict "
+        },
+        {
+          "k": "t",
+          "v": "spectrum-only"
+        },
+        {
+          "k": "t",
+          "v": "): the model boundary-Dirac and the marks kernel share their spectrum to "
+        },
+        {
+          "k": "m",
+          "v": "7.5\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": " but are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the same operator — the gap sits in the killing mass "
+        },
+        {
+          "k": "m",
+          "v": "0.1746"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": "-stable), the killing measure equals the marks profile pointwise, the Markov remainder is exactly zero with a closed jump-weight form (odd lags positive, even lags zero — which explains T126's "
+        },
+        {
+          "k": "m",
+          "v": "86.1\\%"
+        },
+        {
+          "k": "t",
+          "v": "), and the "
+        },
+        {
+          "k": "m",
+          "v": "D_4"
+        },
+        {
+          "k": "t",
+          "v": " lattice symmetries leave the triad exactly invariant; ceiling: the DtN is a model DtN, the gate is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " closed. "
+        },
+        {
+          "k": "c",
+          "v": "cert_floor_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " (contract "
+        },
+        {
+          "k": "c",
+          "v": "CERT.FLOOR"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "23/23"
+        },
+        {
+          "k": "t",
+          "v": ", verdict "
+        },
+        {
+          "k": "t",
+          "v": "mixed"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "840"
+        },
+        {
+          "k": "t",
+          "v": " control validations): the "
+        },
+        {
+          "k": "c",
+          "v": "v379"
+        },
+        {
+          "k": "t",
+          "v": " finding above plus a recommendation table — the hardening is implemented in this same change. Series counter: "
+        },
+        {
+          "k": "m",
+          "v": "133"
+        },
+        {
+          "k": "t",
+          "v": " probes, "
+        },
+        {
+          "k": "m",
+          "v": "3352/3352"
+        },
+        {
+          "k": "t",
+          "v": " sandbox checks. Sandbox only: no ledger row for the probes, no marker move, not RH evidence."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger/papers/website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.MARGIN.IDENT.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": " citations in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " and the promotion place of "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " (verified layer now "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "eight"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " modules; phase 2 extended to T126–T133); website mirrors ("
+        },
+        {
+          "k": "c",
+          "v": "/prime-front"
+        },
+        {
+          "k": "t",
+          "v": " feed entries T132/T133, status surfaces Teile 11–133 / "
+        },
+        {
+          "k": "m",
+          "v": "3352"
+        },
+        {
+          "k": "t",
+          "v": " checks, verification DAG, papers data) updated in the same change."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-27",
     "dateLabel": "2026-07-27 · IV",
     "heading": [

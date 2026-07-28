@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`535` registered scripts · `606` ledger claims · `10` clusters.
+`536` registered scripts · `607` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (68 scripts)
+### `core` — Compiler core & the E₈ glue  (69 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -147,6 +147,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v539_weil_structure_family, v538_relative_trace_identity, v538, v539, T67, T68, T69, T70 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v541_matching_lemma_ledger** [E/C/O] `RTF.GNS.LEDGER.01` — window proof 7S<40A on ALL j≤10⁶ (0 violations, exact margin X=0.082159, ρ_crit=1.144); ledger Q_Weil=Q_cert+Δ_arch+Δ₂ closes exactly (Δ_pole≡Δ_conv≡0 proven); −ψ=(χ₋₄+¼χ₈+¼χ₋₈)·Θ 
   - deps: v540_amplitude_linear_carrier, v539_weil_structure_family, v538_relative_trace_identity, v538, v539, v540, T78, T79 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v542_margin_chain_identities** [E/O] `PRIME.MARGIN.IDENT.01` — nine per-instance identities/theorems recomputed on small frame-A windows (24 seam instances n=3…97, ρ=1.25…4.00, every inverted matrix ≤ 300; 43 graded/fine grid pairs; 400 random
+  - deps: v541_matching_lemma_ledger, v538_relative_trace_identity, v541, T128, T129, T130, T131 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1141,7 +1143,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v530_center_quotient_compiler** — `DIAMOND.CENTER.QUOTIENT.01`
 - **v531_coxeter_tensor_stage_a** — `COX.STAGEA.TENSOR.01`
 - **v532_e8_degree_modular_checksum** — `E8.DEGREE.MODULAR.01`
 - **v533_ftransfer_disc7_norm** — `FTR.DISC7.NORM.01`
@@ -1153,4 +1154,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v539_weil_structure_family** — `RTF.GNS.WEIL.01`
 - **v540_amplitude_linear_carrier** — `RTF.GNS.AMP.01`
 - **v541_matching_lemma_ledger** — `RTF.GNS.LEDGER.01`
+- **v542_margin_chain_identities** — `PRIME.MARGIN.IDENT.01`
 

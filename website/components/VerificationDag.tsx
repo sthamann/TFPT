@@ -176,6 +176,7 @@ const NODES: DagNode[] = [
       "v539_weil_structure_family.py",
       "v540_amplitude_linear_carrier.py",
       "v541_matching_lemma_ledger.py",
+      "v542_margin_chain_identities.py",
       "v227_degree_exponent_channel_split.py",
       "v232_e8_kleinian_seam.py",
       "v234_seam_holomorphy_selection.py",

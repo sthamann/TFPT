@@ -963,6 +963,56 @@ Honest fences: no RH-evidence language; \emph{not} ``almost RH'';
 \texttt{ZETA.HP.CARRIER} untouched; no marker moves.
 \mE\ (A--E exact) / \mC\ (frontier facts; two named limits open)
 
+\par\smallskip\noindent\textbf{The margin-chain identities of phase 2
+(\texttt{PRIME.MARGIN.IDENT.01}).}
+The identity/theorem block of the discovery parts T128--T131 is now load-bearing
+as one \emph{narrow} module (\veri{v542\_margin\_chain\_identities.py}; $44$
+checks, ${\sim}0.2$\,s; companion to \texttt{RTF.GNS.LEDGER.01}), recomputed on
+small frame-A windows: $24$ seam instances ($n=3\ldots97$,
+$\rho=1.25\ldots4.00$, every inverted or diagonalised matrix $\le300$), $43$
+graded/fine grid pairs and $400$ randomised profiles, each identity a numerical
+residual against a preregistered tolerance \emph{plus} a mutation control that
+must fail by $\ge10^{-3}$ relative.
+\emph{Border geometry.} $\sum_i(1-g_i)=t_l+t_r$ exactly
+($5.5\times10^{-13}$), so the $\kappa$ weights are a probability vector and the
+flat border vector gives $\kappa_{\mathrm{flat}}=1$; the $(T)$ four-term
+identity $\tau_{\mathrm{dn}}=\|y\|^2-m_{\mathrm{prot}}+m_{\mathrm{fill}}-V_{\mathrm{bord}}$
+holds at $2.2\times10^{-16}$, with $\tau$ recomputed independently from the full
+odd overlap matrix ($1.1\times10^{-13}$).
+\emph{Profile and curvature.} $p_{N-1}=2-p_0+2E$ at $2.3\times10^{-16}$, hence
+the equivalence $2E>p_0\iff p_{N-1}>2$ with $0$ exceptions (both branches
+realised), and the Abel/H\"older chain
+$\kappa\le2-p_0+\frac{N-2}{N}\sum_j|\Delta p_j-\overline{\Delta p}|+(p_{\max}-p_{N-1})$
+holds per instance with $0$ violations --- while the same chain \emph{without}
+the curvature term is violated on $88/400$ profiles, which is what makes the
+curvature term load-bearing.
+\emph{Assembly and compression.} The matrix-free two-scale assembly equals
+$J^{\mathsf T}QJ$ ($5.2\times10^{-16}$), the graded overlap operator equals $J$,
+and the C\'ea/Strang defect identity
+$S_{\mathrm{graded}}-S_{\mathrm{uniform}}=R^{\mathsf T}X^{-1}R$ holds as a
+\emph{matrix} identity on all $43$ grids ($2.1\times10^{-14}$) with a PSD defect
+--- the compression error is one-sided \emph{by} the identity.
+\emph{Sandwich, sign, counting.} The secular sandwich
+$\varepsilon/(\|u\|^2+\varepsilon/\mu_1)\le\lambda_{\min}(Q)\le\varepsilon/\|u\|^2$
+holds on all $48$ sections at which $A>0$ and $\varepsilon>0$ are \emph{checked}
+(relative width $\le1.4448$), with Albert's sign equivalence verified in both
+directions; $S^{-1}>0$ entrywise (measured $48/48$) implies a sign-constant and
+simple ground vector (Perron--Frobenius), with a control matrix where hypothesis
+and conclusion fail together; and
+$n_{\mathrm{run}}\le n_{\mathrm{cross}}+1\le s_2+2$ together with
+$\sum_j|\Delta p_j-\overline{\Delta p}|=\mathrm{TV}(P)$ hold without exception on
+a non-vacuous battery.
+\textbf{Named limits as content:} every statement is \emph{per instance on small
+windows} --- nothing is uniform in the zone index; the $\kappa$ \emph{law} is
+\emph{not} claimed (T129 broke it), only the chain underneath it; positivity of
+the pole-free section at depth stays open and carries no floor value here; the
+Perron step has a \emph{measured} hypothesis; and the defect identity says
+nothing about the \emph{size} of the defect.
+Abel / H\"older / Schur--Haynsworth 1968 / Albert 1969 / C\'ea 1964--Strang /
+Yserentant 1986 / Perron--Frobenius--Ostrowski 1937 named classical; Weil 1952
+cited, never used as a criterion.
+\mE\ (per-instance identities; nothing uniform, no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:
