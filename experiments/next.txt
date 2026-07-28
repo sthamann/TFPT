@@ -1,3 +1,92 @@
+# 2026-07-28 (XII) — Teil 130 (delegiert, Phase „Der volle Beweis", Vertrag CURVATURE.BRIDGE): curvature_bridge_probe.py — **ONE-OF-TWO** — DIE BRÜCKE STEHT, DIE KRÜMMUNGS-SCHRANKE NICHT. Die Céa/Strang-Defekt-IDENTITÄT S_graded − S_uniform = RᵀX⁻¹R ist als Matrix-Identität verifiziert (1.3e-13) und matrixfrei implementiert (FFT-Matvec + BPX-präkonditionierter CG); entscheidend ist Skalar- gegen MATRIX-Form: die skalare Schranke ist vakuum (verliert 3–28×), die Matrixform reproduziert den direkt gerechneten uniformen Schur-Boden auf **84 Paaren (21 Zonen) auf 2.5e-11 relativ, OHNE einen einzigen Überschuss**, und erklärt T129s 8%-Falsch-Positive VOLLSTÄNDIG: 16/84 auf Bracket-Ebene reproduziert, **0/84 auf Boden-Ebene** — sie saßen im Transport-Bracket (graded Testvektoren), das die Brücke überflüssig macht. BEIDE TIEFE NÄHTE TRAGEN: n = 127 → λ_f = 0.2255, n = 256 → λ_f = 0.2614 (h_f = 2476/5694, bei 1.7×/3.8× des Faktorisierungs-Deckels), Status **BRIDGED-CERTIFIED-CONDITIONAL** — genau EINE gemessene Zahl pro Gitter geht ein (der Lanczos-Boden für λ_min(X_fine); Grenander–Szegő dafür TOT: Symbol indefinit, Boden −76…−27; Robustheit gutartig: das Ergebnis bewegt sich nicht bei 100×/10000× kleinerem Boden). Die Krümmungs-Schranke dagegen ehrlich NICHT geschlossen — der strukturelle Gewinn ist die TV-UMSCHREIBUNG Σ|Δp−Δ̄| = TV(Sehnen-Abweichung P), zertifiziert pro Transport TV(P) ≤ (2n_run−2)·sag (Gleichheit bei einem Buckel; auf 83/765 Transporten EINE Zahl), das Potenzgesetz |w_i| ~ (i+1)^a gewinnt 635/635 (a = 0.703–0.999, Median 0.856), die T108-Ecken-Identität unabhängig reproduziert (24 Zonen bis M = 1236, 4.2e-9) — aber das eingefrorene Formband (a ∈ [0.734, 0.897], S* = 1.1926) BRACH auf 13/545 disjunkten Test-Transporten (Latte nicht verschoben); mit per-Transport-Exponent hält S* auf 520/545 ⇒ **M22 ist auf eine zonen-uniforme Schranke an EINEM Exponenten reduziert, nicht geschlossen**. Karte V5 (12 Posten): I1–I4 + **I5 neu (TV-Umschreibung)** zertifiziert, I6 Brücke + I7 Nähte CERTIFIED-CONDITIONAL, M23 konditional geschlossen, **M25 NEU benannt** (zertifizierter positiver Boden für λ_min(X_fine)); Promotions-Check-Liste (1)–(6) — 30/30, 19.3s, Sandbox
+# D1 DIE TV-UMSCHREIBUNG IST DER STRUKTURELLE GEWINN, DIE SCHRANKE BLEIBT OFFEN. Neu und
+#    exakt: Σ|Δp−Δ̄| = TV(P) mit P_k = p_k − (p₀ + kΔ̄), P_0 = P_{N−1} = 0 — der
+#    Krümmungsterm IST die Totalvariation der Sehnen-Abweichung des Dichteprofils,
+#    zertifiziert pro Transport TV(P) ≤ (2n_run−2)·sag (Gleichheit bei genau einem
+#    Buckel; auf 83/765 Transporten der Batterie ist der Term damit EINE geometrische
+#    Zahl, der Durchhang). Der Randeigenvektor wechselt auf 765/765 Transporten NIE das
+#    Vorzeichen im Randblock — die T109-Auslöschungsgeometrie liegt außerhalb des Blocks.
+#    Die Formfamilie ist entschieden: das Potenzgesetz |w_i| ~ (i+1)^a gewinnt auf
+#    635/635 Transporten gegen linear/exponentiell/Reziprok-Pol (a = 0.703–0.999, Median
+#    0.856) — T109s lineares Randprofil, unabhängig wiedergefunden. Die Levinson-Kopplung
+#    liefert die Struktur, nicht die Schranke: die T108-Ecken-Identität
+#    u_0 = −√2·ρ_{M−1}/E_{M−1} ist unabhängig reproduziert (24 Zonen bis M = 1236,
+#    4.2e-9, genau ein negativer Pivot pro Zone), aber der Pol-Löser ist als
+#    Profil-Modell nur PROXY (Richtungs-Cosinus 0.992–0.996, Krümmungsverhältnis 1.5–5.3)
+#    — kein Majoranten-Einsatz. Der ehrliche Kern: das auf der Kalibrierhälfte
+#    eingefrorene Formband (a ∈ [0.734, 0.897], S* = 1.1926) BRICHT auf 13/545 disjunkten
+#    Test-Transporten — die Latte wird NICHT verschoben; mit dem per-Transport gemessenen
+#    Exponenten hält dasselbe S* auf 520/545. M22 ist damit REDUZIERT, nicht geschlossen:
+#    was fehlt, ist genau eine zonen-uniforme Schranke an EINEN Exponenten.
+# D2 DIE BRÜCKE STEHT — ALS IDENTITÄT, UND NUR IN MATRIXFORM. Die Céa/Strang-Defekt-
+#    IDENTITÄT S_graded − S_uniform = RᵀX⁻¹R hält auf 1.3e-13 und ist vollständig
+#    matrixfrei (FFT-Matvec für die feine Form, BPX-präkonditionierter CG, eine graded
+#    Cholesky ≤ 1500 — die feine Quadratmatrix wird NIE geformt). Skalar gegen MATRIX:
+#    die skalare Schranke λ_min(S_graded) − λ_max(G) ist vakuum (verliert den Faktor
+#    3–28), die Matrixform reproduziert den direkt gerechneten uniformen Boden auf 84
+#    Kompressions-Paaren (21 Zonen) auf 2.5e-11 relativ, OHNE einen einzigen Überschuss —
+#    aus GRADED-CERTIFIED wird eine einseitige Aussage über den FEINEN Raum. Die
+#    8%-Falsch-Positiven von T129 sind damit VOLLSTÄNDIG erklärt: 16/84 reproduzieren
+#    sich auf Bracket-Ebene, aber 0/84 auf Boden-Ebene — sie saßen im Transport-Bracket
+#    (graded Testvektoren), einem Objekt, das die Brücke überflüssig macht, nicht im
+#    Schur-Boden. BEIDE TIEFE NÄHTE TRAGEN: n = 127 (h_f = 2476) → λ_f = 0.2255 und
+#    n = 256 (h_f = 5694) → λ_f = 0.2614, positive gebrückte Transport-Klammern, bei
+#    1.7× und 3.8× des Deckels, erreicht nur über FFT-Matvec + CG. Status ehrlich:
+#    BRIDGED-CERTIFIED-CONDITIONAL — genau EINE gemessene Zahl pro Gitter geht ein, ein
+#    positiver unterer Boden für λ_min(X_fine), derzeit vom Lanczos geliefert (der λ_min
+#    von OBEN schrankt: MESSUNG, nie Zertifikat); die Grenander–Szegő-Symbol-Route dafür
+#    ist TOT (das Weil-Lag-Symbol ist an diesen Fenstern indefinit, rigoroser
+#    Symbol-Boden −76…−27); Robustheit gutartig: das Brücken-Ergebnis bewegt sich nicht,
+#    wenn der angenommene Boden 100× oder 10000× kleiner gesetzt wird.
+# D3 DIE THEOREM-BATTERIE: 0 VERLETZUNGEN AUF 765 — UND DER EHRLICHE ZUSATZ. Die exakte
+#    Kette κ ≤ 2 − p₀ + ((N−2)/N)·Σ|Δp−Δ̄| + (p_max − p_{N−1}) hält auf 765/765
+#    Transporten der neuen Batterie (Implementations-Verifikation: die Kette ist pro
+#    Transport bewiesen, ein Fehlschlag wäre ein Bug, kein Befund). Die VOLL-EXPLIZITE
+#    Kette (D1-Kandidat substituiert) schließt 635/635 der Form-Transporte — aber unter
+#    der nackten Latte 2 auf NULL: gemessenes κ > 2 auf 130/765. Ehrlich gelesen: der
+#    eigene Slack der Kette übersteht die 13 D1-Fehlschüsse des Formbands — das ist
+#    Robustheit, keine Reparatur; die Schranke, die M22 schlösse, existiert weiter nicht.
+# D4 KARTE V5 (12 POSTEN) UND DER PROMOTIONS-SCOPE. Zertifiziert: I1 (Intervall-Identität,
+#    ω Wahrscheinlichkeitsmaß, κ_flat = 1), I2 (κ als gewichtetes Dichte-Mittel, Hölder),
+#    I3 (Profil-Identität, 2E > p₀ ⟺ p_{N−1} > 2), I4 (Abel-Kette), **I5 NEU: die
+#    TV-Umschreibung mit Ein-Buckel-Kollaps und (2n_run−2)·sag-Schranke**; I6 die Brücke
+#    und I7 die zwei tiefen Nähte CERTIFIED-CONDITIONAL (eine gemessene Zahl pro Gitter);
+#    M23 KONDITIONAL GESCHLOSSEN (die Bracket-FPs bleiben als Testvektor-Artefakt; die
+#    Brücke ersetzt das Bracket, statt es zu reparieren); M22 auf EINEN Exponenten
+#    reduziert; **M25 NEU benannt: ein zertifizierter positiver Boden für λ_min(X_fine)**
+#    — die einzige Zutat, die I6 fehlt, und sie ist klein (10⁴-Robustheit). Die
+#    Promotions-Check-Liste eines schmalen vN-Moduls: T129s (1)–(5) + (6) die
+#    Defekt-Identität S_graded − S_uniform = RᵀX⁻¹R — reine Schur/Galerkin-Algebra, an
+#    einem zufälligen symmetrischen Paar in drei Zeilen prüfbar. NICHT hinein: das
+#    Formband/S* (kalibrierte Hypothese, M22), der Lanczos-Boden (M25), beide
+#    Naht-Zertifikate (erben M25). Die drei übrigen (L)-Nähte sind reine Skalenfragen:
+#    nur n = 8191 (h_f = 295253) ließe überhaupt einen graded Rahmen unter dem Deckel zu
+#    (q = 256, m/h = 0.0042 — weit unter dem kalibrierten Bereich), die anderen zwei bei
+#    keinem Merge-Faktor q ≤ 2048. M19 („for all") und M21 (die RH-Adresse) unberührt.
+# DIE EHRLICHE DISTANZ (drei Sätze, fürs Tagebuch, zitierfähig): Die Brücke ist eine
+#    Identität und macht aus jedem graded Zertifikat eine einseitige Aussage über den
+#    feinen Raum — konditional auf genau eine gemessene Zahl pro Gitter, die jetzt M25
+#    heißt und einen eleganten Kandidaten hat: der Ketten-eigene Teleskop-ε-Boden könnte
+#    sie selbst beliefern. Die Krümmungs-Schranke ist auf eine zonen-uniforme Schranke an
+#    einem einzigen Exponenten reduziert und hat ihr eigenes eingefrorenes Formband
+#    ehrlich gebrochen — 13/545, die Latte steht. Was bleibt, ist was vorher blieb: das
+#    Wort „for all" und die Distanz von jedem endlichen Fenster zum Kriterium von Weil,
+#    die nichts in dieser Probe verkürzt.
+#    → Folge-Probe Teil 131 (SELF.SUPPLY, self_supply_probe.py) LÄUFT: die
+#    Selbst-Belieferung (λ_min(X_fine) über den Ketten-eigenen Teleskop-ε-Boden — die
+#    Induktion beliefert sich selbst?), die vier M22-Eigenschaften härten, die
+#    M17-Zusammensetzung, Karte V6 + finale Promotions-Liste; DANACH steht die
+#    v542-Promotion des schmalen Identitäts-Moduls an.
+# Serie (XII)–(CXLI): 130 Proben, 3283/3283 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Weil 1952 / Bombieri 2000 / Connes 1999
+# — zitiert, NIE benutzt —, Hölder/Cauchy–Schwarz, Abel-Summation, Teleskop, Levinson 1947
+# / Durbin 1960 / Trench, Céa 1964 / Strangs erstes Lemma, Rayleigh–Ritz, Yserentant 1986,
+# Eijkhout–Vassilevski 1991, Bramble–Pasciak–Xu 1990, Hestenes–Stiefel 1952,
+# Grenander–Szegő 1958, Cauchy-Interlacing, Haynsworth 1968, Albert 1969 / Douglas 1966,
+# Wilkinson 1968 / Higham 2002, Sherman–Morrison, Bertrand–Chebyshev 1852 + triviale
+# gerade Schranke (die EINZIGEN Lücken-Fakten; keine Cramér/Firoozbakht/Zwillings-Annahme))
+# gerichtet zitiert; Sandbox ohne Ledger-/Marker-Änderung.
+
 # 2026-07-28 (XI) — Teil 129 (delegiert, Phase „Der volle Beweis", Vertrag KAPPA.DEEP.SEAMS): kappa_deep_seams_probe.py — **KAPPA-WILD** — DER PRODUKTIVSTE BRUCH DER PHASE 2: DAS GESETZ FÄLLT, DAS THEOREM DARUNTER STEHT. Das κ-Gesetz κ ≤ 2 + C*(ρ−1) mit C* = 0.3506 (aus den drei T128-Kalibriergruppen eingefroren, FIT und als Fit etikettiert, nicht nachjustiert) wird auf **331 NEUEN Transporten** (14 ρ-Werte 1.05–4.00, keiner im Kalibrierset; h_f = 29–1450, n = 5–1331) **1× VERLETZT** (n = 7, ρ = 3.00, Slack −0.0334; die nackte, unverschobene Latte 2 hätte 78 Verletzungen), das schärfere Ein-Seiten-Gesetz auf κ_r 1/293; die Seiten-Asymmetrie reproduziert auf ganz neuen Daten (κ_r = 1.70–2.91 gegen κ_l = 0.05–0.21); die Latte wird NICHT verschoben ⇒ KAPPA-WILD. ABER DER STRUKTURGRUND IST GELÖST, mit Identitäten statt Fits: ∑(1−g_i) = t_l+t_r (7.1e-13) ⇒ **κ_flat = 1 EXAKT** — die alte Latte 2 war das DOPPELTE des Flat-Werts, nicht der Flat-Wert; die Profil-Identität p_{N−1} = 2 − p₀ + 2E (6.7e-16) macht das lineare Dichteprofil zu exakt κ = 2 — **2 ist die LINEAR-GRENZE, alles darüber ist KRÜMMUNG**; und die Kette **κ ≤ 2 − p₀ + ((N−2)/N)·∑|Δp−Δ̄| + (p_max − p_{N−1}) ist ein THEOREM mit expliziter Konstante** (Hölder/Teleskop/Abel), gültig auf 436/436 Transporten (Slack 0.018–2.313, Median 0.344; der letzte Term verschwindet auf 392/436). Die ρ-Systematik ist ein WETTSTREIT, kein Einseiten-Effekt: 2E > p₀ ⟺ p_{N−1} > 2 EXAKT, 114/436 erfüllen beides ausnahmslos. TIEFEN-BLOCK: 14 graded Transporte bei h_f = 1656–**17669** (bis 12× der harte Deckel 1500, matrixfrei, m/h = 0.064–0.512): **0 Verletzungen** — das Restrisiko ist ein VERHÄLTNIS-, kein Auflösungs-Effekt. Die zwei bezahlbaren tiefen Nähte **n = 127 (m/h = 0.507) und n = 256 (m/h = 0.255) tragen komplette Naht-Zertifikate** auf dem graded Zwei-Skalen-Raum (X PD, Schur-Böden über Wilkinson, Transport-Klammer positiv, Retention 0.307/0.417) — EHRLICH HERABGESTUFT auf GRADED-CERTIFIED: Rayleigh-Ritz zeigt falsch herum (graded-Boden 1.53–5.18× GRÖSSER als uniform, ausnahmslos), **gemessene 8%-Falsch-Positiv-Rate** (4/48 Paare graded-positiv wo uniform nicht), VOR den Nähten deklariert; (L) = [3 uniform-zertifiziert, 2 graded mit deklarierter FP-Rate, 3 budget-offen]. M18 bekommt eine **S-Prozedur-Operatorschranke: 40/40 unter der Vakuitäts-Latte 1** (0.170–0.774, nur 1.3–182× über der Wahrheit, Median 7.8) — eine Aussage über JEDEN Vektor im gemessenen Glattheits-Kegel, CERTIFIED-CONDITIONAL; die Cauchy-Schwarz-Zeilenschranke ist VAKUÖS (0/40) und wird als der Fehlschlag berichtet, der sie ist. Karte V4: 9 Einträge — 3 reduziert/beschränkt (M9, L2, M18), 1 unberührt (M17), **2 irreduzibel (M19 „for all", M21 die RH-Adresse)**, 3 NEU benannt statt vergraben (M22 der C*-Fit, M23 graded→uniform, M24 das Ein-Seiten-Gesetz); PROMOTIONS-REIFE: **READY IN PRINCIPLE als schmales Modul** auf den fünf Identitäts-/Theorem-Stücken — 28/28, 15.9s, Sandbox
 # C1 DAS GESETZ FÄLLT EINMAL, UND DER STRUKTURGRUND IST GELÖST. C* = 0.3506 wurde aus den
 #    3 T128-Gruppen eingefroren (Jackknife-SE 0.0955, Intercept 1.8909, rms 0.0096;

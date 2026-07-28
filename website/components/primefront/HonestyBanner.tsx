@@ -33,12 +33,15 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3253/3253 sandbox checks —
+        (“the full proof”, T126+) is now open with 3283/3283 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
-        their preregistered bars (T128), and the kappa law that T128
+        their preregistered bars (T128), the kappa law that T128
         preregistered falls once on 331 fresh transports while the curvature
-        theorem underneath it stands on all 436 (T129 · KAPPA-WILD). What remains
+        theorem underneath it stands on all 436 (T129 · KAPPA-WILD), and the
+        graded-to-uniform bridge stands as an identity — 84 pairs, zero
+        overshoot, both deep seams carried — while the curvature bound is
+        reduced to one exponent (T130 · ONE-OF-TWO). What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

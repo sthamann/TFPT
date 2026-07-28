@@ -165,16 +165,25 @@ export function TwoDoorsConvergence() {
           a proof with an 11.6× floor margin), while the kappa bar was missed
           honestly — by 3.6%, systematically in the ratio. T129 ·
           KAPPA.DEEP.SEAMS (KAPPA-WILD, 28/28) is the most productive break
-          of the phase: the fitted kappa law falls once on 331 fresh
+          of the phase:           the fitted kappa law falls once on 331 fresh
           transports — bar frozen, violation counted — but the theorem
           underneath stands: flat is exactly 1, linear is exactly 2,
           everything above is curvature, and the curvature chain is a
           per-transport theorem on all 436; the two affordable deep seams
           carry complete certificates on the graded space, honestly
           downgraded with a measured 8% false-positive rate declared before
-          the results. Two irreducibles remain (the word &ldquo;for
-          all&rdquo;, the RH address); T130 (curvature_bridge_probe.py) is
-          running.
+          the results. T130 · CURVATURE.BRIDGE (ONE-OF-TWO, 30/30) then
+          attacked the two named pieces and exactly one stands: the
+          graded-to-uniform bridge stands as an identity — the matrix-form
+          Céa/Strang defect reproduces the uniform floor on 84 pairs with
+          zero overshoot, explains the 8% false positives completely, and
+          carries both deep seams to positive fine floors at up to 3.8× the
+          factorization cap — while the curvature bound honestly broke its
+          frozen shape band on 13/545 and is reduced to a uniform bound on
+          one exponent. Two irreducibles remain (the word &ldquo;for
+          all&rdquo;, the RH address); T131 (self_supply_probe.py) is
+          running, and the v542 promotion of the narrow identity module is
+          pending.
         </p>
       </div>
 
