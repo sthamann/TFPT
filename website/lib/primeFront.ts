@@ -1267,6 +1267,7 @@ export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
 
 /** Display order for the narrative sections (anchor ids). */
 export const PRIME_FRONT_SECTIONS = [
+  { id: "big-picture", label: "Big picture" },
   { id: "hook", label: "Hook" },
   { id: "compiler", label: "Compiler" },
   { id: "census", label: "Signed census" },
@@ -1286,6 +1287,9 @@ export const PRIME_FRONT_SECTIONS = [
   { id: "mechanism", label: "The mechanism" },
   { id: "instrument-race", label: "The race" },
   { id: "two-doors", label: "Two doors" },
+  { id: "compression", label: "The compression" },
+  { id: "certification-sprint", label: "Certification sprint" },
+  { id: "harnack-telescope", label: "Harnack & telescope" },
   { id: "meaning", label: "What it would mean" },
   { id: "updates", label: "Live updates" },
 ] as const;

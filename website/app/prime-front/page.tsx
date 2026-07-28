@@ -24,13 +24,15 @@ import { HandoverCrossing } from "@/components/primefront/HandoverCrossing";
 import { InstrumentRace } from "@/components/primefront/InstrumentRace";
 import { ClosureMapGrid } from "@/components/primefront/ClosureMapGrid";
 import { TwoDoorsConvergence } from "@/components/primefront/TwoDoorsConvergence";
+import { ReductionCascade } from "@/components/primefront/ReductionCascade";
+import { TelescopeRungs } from "@/components/primefront/TelescopeRungs";
 import { UpdateFeed } from "@/components/primefront/UpdateFeed";
 import { StatusBadge } from "@/components/primefront/StatusBadge";
 
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with positive linear carrier whose open boundary is the FE-covariant gap functional λ* on n ≡ 6 mod 8 (v540), the matching-lemma/transport-ledger package with two named limits (v541), the I5 geography through T94, and a blind lattice prime demo (753/753). Not RH evidence.",
+    "A plain-language research diary of TFPT's prime / zeta investigation: signed E8 census, Hecke from geometry (v535–v537), the relative-trace identity (v538), Weil structure with two isolated obstructions (v539), the amplitude route with the open boundary λ* (v540), the matching-lemma/transport-ledger package (v541), and the induction sprint T102–T124 — a reduction cascade from one matrix inequality down to a Harnack pair plus one sign, with certified margin-free steps to zone 155,921. 124 parts, 3105 sandbox checks. Not RH evidence.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -42,6 +44,8 @@ export const metadata: Metadata = {
     "v541",
     "Weil structure",
     "relative trace formula",
+    "relay induction",
+    "Harnack inequality",
     "zeta research diary",
     "Stefan Hamann",
   ],
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "The Prime Front — TFPT research diary",
     description:
-      "Primes, the E8 census, and load-bearing results v535–v541. Program status: I5 geography through T93 (a_neg = 0.7486); blind lattice demo 753/753; residual object I5. No claim of progress toward the Riemann Hypothesis.",
+      "Primes, the E8 census, and load-bearing results v535–v541. Program status: the relay induction is certified step by step to zone 155,921 and the remaining core is a Harnack pair plus one sign (T124); T125 assembles the chain end to end. No claim of progress toward the Riemann Hypothesis.",
     url: `${SITE_URL}/prime-front`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -59,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified: v535–v541. Induction closeout T99–T101: zones 2–4 closed; asymptotics = one named arithmetic bound (2428 sandbox checks). Residual: I5 — not almost-RH.",
+      "Research diary of the prime / zeta line. Machine-verified: v535–v541. Sandbox T102–T124: one matrix inequality compressed to a Harnack pair plus one sign; certified steps to zone 155,921; 3105 sandbox checks. Residual: I5 — not almost-RH.",
   },
 };
 
@@ -120,6 +124,8 @@ export default function PrimeFrontPage() {
           </nav>
         </div>
       </section>
+
+      <BigPictureSection />
 
       {/* 1 — Hook */}
       <DiarySection
@@ -676,8 +682,9 @@ export default function PrimeFrontPage() {
         </p>
 
         <p className="rounded-xl border border-violet-400/35 bg-violet-500/10 px-4 py-3 text-sm leading-relaxed text-violet-50 sm:text-base">
-          After 91 probes and seven promoted modules (v535–v541), the matching
-          lemma is closed on ALL atom classes (window-certificate format,
+          At T86 — 91 probes in — and with seven promoted modules (v535–v541),
+          the matching lemma is closed on ALL atom classes (window-certificate
+          format,
           modulo proven classics only). What remains TFPT-specific is exactly
           ONE object: I5 in one-family form —{" "}
           <span className="font-mono text-violet-100">
@@ -711,9 +718,9 @@ export default function PrimeFrontPage() {
           Induction skeleton: identities proved, zones 2–4 closed, zone-5 tip =
           equality problem, asymptotics = one named arithmetic bound (A){" "}
           <span className="font-mono text-amber-200">[sandbox · T99–T101]</span>.
-          Milestone: 2428/2428 sandbox checks. Fence: fits/extrapolations marked;
-          geography locates; it does not attack; I5 remains ⟺ RH. This is not
-          RH evidence.
+          Milestone at T101: 2428/2428 sandbox checks (3105/3105 at T124).
+          Fence: fits/extrapolations marked; geography locates; it does not
+          attack; I5 remains ⟺ RH. This is not RH evidence.
         </p>
 
         <p>
@@ -740,6 +747,23 @@ export default function PrimeFrontPage() {
             (A){" "}
             <span className="font-mono text-amber-200">[sandbox · T99–T101]</span>
             ; I5 in one-family form — the single remaining TFPT-specific object.
+          </li>
+          <li>
+            <span className="text-sky-200">Since then:</span> the induction
+            sprint{" "}
+            <span className="font-mono text-amber-200">
+              [sandbox · T102–T124]
+            </span>{" "}
+            compressed that named bound from one matrix inequality to a Harnack
+            pair plus one sign, with certified steps to zone 155,921 and 400/400
+            certified rungs — told in{" "}
+            <a
+              href="#compression"
+              className="text-sky-300 underline decoration-sky-400/30 underline-offset-2 hover:text-sky-200"
+            >
+              sections 20–22
+            </a>
+            . 3105/3105 sandbox checks; T125 running.
           </li>
         </ul>
 
@@ -1327,9 +1351,17 @@ export default function PrimeFrontPage() {
           arithmetic lower bound. Status: identities proved, zones 2–4 closed,
           zone-5 tip = equality problem, asymptotics = one named arithmetic
           bound (A). I5 remains ⟺ RH; the geography locates where any attack
-          must work, it does not perform one. Milestone: 2428/2428 sandbox
-          checks. All laws marked as fits/extrapolations. This is not RH
-          evidence.
+          must work, it does not perform one. Milestone at T101: 2428/2428
+          sandbox checks. All laws marked as fits/extrapolations. This is not RH
+          evidence. What happens to that named arithmetic bound over the next
+          twenty-three parts is{" "}
+          <a
+            href="#compression"
+            className="text-sky-300 underline decoration-sky-400/30 underline-offset-2 hover:text-sky-200"
+          >
+            the compression story below
+          </a>
+          .
         </p>
       </DiarySection>
 
@@ -1487,14 +1519,429 @@ export default function PrimeFrontPage() {
           ) is CHAIN-PARTIAL: the naive margin route is dead, exact
           spectral-split chains close 16/16 with finite data, and the hard
           core moves to a bare_k lower bound plus the soft dressing scalar L.
-          T105 (BARE.AVOIDANCE.CORE) is running. Sandbox; not RH evidence.
+          From here the diary runs twenty parts of pure compression on exactly
+          that core —{" "}
+          <a
+            href="#compression"
+            className="text-sky-300 underline decoration-sky-400/30 underline-offset-2 hover:text-sky-200"
+          >
+            the next three sections
+          </a>
+          . Sandbox; not RH evidence.
         </p>
       </DiarySection>
 
-      {/* 20 — Meaning */}
+      {/* 20 — The compression (T105–T112) */}
+      <DiarySection
+        id="compression"
+        eyebrow="20 · The compression · Teile 105–112"
+        title="From one matrix inequality down to one boundary value — then a wall that turned out to be a ruler"
+        badge="sandbox"
+      >
+        <p>
+          <strong className="font-medium text-slate-200">
+            The bare bound gets a closed form; the avoidance law becomes a
+            theorem.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T105]</span>{" "}
+          ONE-OF-TWO (28/28): the T104 arm discrepancy dissolves — one currency,
+          exact split bare = μ_k/2 + b0 — and three classical steps (Bessel;
+          Legendre; Cauchy–Schwarz at the pole pair) collapse into a closed lower
+          bound, positive 16/16 at 81.1–92.7% of the measured value, with no
+          eigenvalue and no induction data as input. The avoidance law is
+          upgraded to a theorem, and an exact parity superselection appears: two
+          channels that never mix.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            Parity halves the object.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T106]</span>{" "}
+          DENSITY-MAPPED (32/32): the Weil pole splits exactly into a positive
+          rank-1 lift in the even channel and a negative rank-1 pressure in the
+          odd one. The even channel closes 16/16; the odd channel — the one with
+          the <em>better</em> density — carries all remaining hardness. Two
+          routes are honestly killed on the way (the density chain, invariant
+          amplification). What is left is one Loewner statement on half the
+          dimensions.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            One scalar, then one number.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T107]</span>{" "}
+          SCALAR-TRACTABLE (30/30): the matrix statement becomes exactly one
+          scalar ratio{" "}
+          <span className="font-mono text-slate-200">r = κ/ε ≤ 1</span>, measured
+          r = 0.005…0.18 — two orders of magnitude of room instead of five
+          decimal places. The symbol route is structurally dead: the certified
+          symbol bound is negative (−2.54…−0.81) where the truth is positive, so
+          Grenander–Szegő cannot deliver here in principle.{" "}
+          <span className="font-mono text-amber-200">[sandbox · T108]</span>{" "}
+          EPSILON-IDENTITY (44/44): ε turns out to be exactly the square of the
+          last Cholesky pivot — the classical Szegő–Levinson prediction error —
+          so its positivity <em>coincides with</em> the induction&apos;s own
+          positivity rather than being an extra demand. (R) drops to two scalars,
+          and on eight zones what remains is literally one boundary value of one
+          explicit vector.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            Both scalars certified; the circle closes on the measured zones.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T109]</span>{" "}
+          BOUNDARY-CERTIFIED (29/29): the mechanism is not decay but
+          cancellation (the source sits <em>on</em> the boundary), so
+          Combes–Thomas is refuted with the exact Green row and replaced by a
+          residual certificate that carries the cancellation instead of bounding
+          it away; ω is cracked unconditionally by a graded matrix cap. The chain
+          closes 16/16 on exactly one strict-margin input, 10²–10⁶ weaker than
+          the conclusion.{" "}
+          <span className="font-mono text-amber-200">[sandbox · T110]</span>{" "}
+          MARGIN-PROPAGATES (28/28): that input propagates — certified base case,
+          15 certified handover steps, and the atom entry is structurally free
+          (the new atom <em>raises</em> the floor on 15/15). Three sharp gaps
+          stay: no reserve, no scalar step law, no k-uniformity.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            Then the ladder is driven deep — and the wall is measured, not
+            extrapolated.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T111]</span>{" "}
+          CROSSING-CONFIRMED (23/23): 199 zones, 117 handovers to n = 521. The
+          crossing sits at n* ≈ 462 — an upper bound; T110&apos;s n ≈ 170 was a
+          fit artefact — and it splits into three separate walls: the margin wall
+          n ≈ 462, a twin-prime ladder wall at 521→523 (purely arithmetic), and a
+          requirement wall at n = 727. Decisive detail: the handover mechanism
+          itself never fails, 117/117 at retention 1.000000. The chain tears at
+          a ratio, never at a step.{" "}
+          <span className="font-mono text-amber-200">[sandbox · T112]</span>{" "}
+          SCALING-PARTIAL (20/20): rebuilt in a frame whose cell width follows
+          the local prime gap, two of the three walls fall structurally — but the
+          margin wall is frame-invariant at exponent −0.974. It is the substance
+          of the requirement, not the geometry.
+        </p>
+
+        <p className="rounded-xl border border-slate-700/40 bg-slate-900/40 px-4 py-3 text-sm text-slate-400">
+          Eight parts, one direction: every stage removed something and named
+          what was left. The honest state at T112 is a wall that survives every
+          reframing — and the next part asks the question that decides its
+          status: what currency is it measured in? Sandbox; not RH evidence.
+        </p>
+      </DiarySection>
+
+      {/* 21 — The certification sprint (T113–T119) */}
+      <DiarySection
+        id="certification-sprint"
+        eyebrow="21 · The certification sprint · Teile 113–119"
+        title="The wall dissolves, the depth explodes, and the last inequality gets a textbook address"
+        badge="sandbox"
+        visual={<DepthReachCallout />}
+      >
+        <p>
+          <strong className="font-medium text-slate-200">
+            The currency question: the wall measures the ruler.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T113]</span>{" "}
+          SUBSTANCE-CONFIRMED (27/27): the falling ratio carries the same
+          exponent −1.168 ± 0.259 in <em>all five</em> currencies (raw, /λ_max,
+          /trace density, /D, /D²), so it cannot be normalised away. But the
+          substance is not the expected one. Under refinement there is{" "}
+          <em>no plateau</em>: both eigenvalues carry the same power of the cell
+          width (D^1.83 and D^1.76). The continuum window form has no gap at all
+          — the quantity that was falling measures the{" "}
+          <strong className="font-medium text-slate-200">discretization</strong>
+          , not the spectrum. And the positive floor survives only as a
+          cancellation of relative size ~1e-7, so norm perturbation theory is
+          five orders of magnitude too coarse. Consequence: the T109 requirement
+          chain was dividing by an artifact.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            Remove the division, and the wall dissolves.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T114]</span>{" "}
+          WALL-DISSOLVES (22/22): rebuilt without the margin division, the exact
+          Schur complement (Albert 1969) certifies 27/27 ladder steps —{" "}
+          <strong className="font-medium text-emerald-200">
+            eleven of them beyond the old wall, up to n = 1331
+          </strong>{" "}
+          — and all seven zones where the T109 chain tore, including the wall
+          zone n = 449 itself. The exact object is O(0.1) with no cancellation
+          (λ_min(S) = 0.068–0.154, i.e. 42–67% of the block scale), while the
+          same quantity via the norm bound is negative by a factor 2.4e5–9.6e7:
+          an O(1) numerator divided by a 1e-6 artifact floor. Every norm route
+          <em>had</em> to fail. From here on chains stop at the compute cap
+          (h ≤ 1500), never at a step.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            Compression breaks the cap: a certified step at zone 155,921.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T115]</span>{" "}
+          TRANSPORT-BLOCKED (26/26), with a large compression gain. Transport
+          between the ladder&apos;s non-nested grids certifies only mild
+          refinement — and for a principled reason, not a weak bound: on nested
+          ladders, where the transport error is exactly zero, the Schur floor
+          itself falls like ρ^−1.7, so no bound can undo it. The two-scale
+          compression, however, keeps the step bit-exactly margin-free and{" "}
+          <strong className="font-medium text-emerald-200">
+            certifies a step at n = 155,921
+          </strong>{" "}
+          (117× deeper than T114), on a fine lattice of 93,470 cells compressed
+          to 1490; the longest chain runs 10 steps, 33 certified steps over four
+          chains, every certificate 10⁵–10¹¹× above the numerical noise floor.
+          The stopper is cost on 3 of 4 chains and a failing step on none. The
+          remaining list is the shortest of the series so far: three points, only
+          one of them an inequality.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            The induction step is a boundary process — and the prime comb refuses
+            to be compressed.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T116]</span>{" "}
+          RICCATI-PARTIAL (33/33): the global pole rides exactly in a
+          12×12+12+1 state (bordered elimination, no truncation anywhere), and
+          the Riccati march runs 169,236 prepends to 1,354,088 cells — 903× the
+          old cap — at flat cost, 76 µs per step. Declared honestly as a
+          cost-geometry demonstration, not a Weil certificate. What breaks is
+          unexpected: the full symbol does not decay at all, because every
+          incoming cell couples back to every prime power in the window. The
+          prime comb is the object that refuses compression. Bonus, and the hinge
+          of the next three parts: the one remaining inequality acquires textbook
+          shape — ε is the error of a piecewise-constant Galerkin method, and
+          classical Aubin–Nitsche duality hits the measured exponent.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            Theorem-shaped, and no rate lost.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T117]</span>{" "}
+          THEOREM-SHAPED (23/23): the family is exactly nested, so ε is a
+          Galerkin best-approximation error of <em>one</em> bilinear form and its
+          monotonicity is a theorem rather than a fit; positivity becomes a
+          non-membership statement. The direction trap is handled in the open —
+          Céa and Aubin–Nitsche give <em>upper</em> bounds — and the two-level
+          chain delivers a certified <em>lower</em> bound on 19/19 pairs
+          (bound/ε ∈ [0.111, 0.185]) at rate θ&apos; = 1.74 against θ = 1.76: no
+          power of D is lost. Self-correction: T116&apos;s factor-120 jumps were
+          a sweep artifact — all 23 prime-power entries actually{" "}
+          <em>raise</em> ε. What remains is three named analytic lemmas about one
+          symbol, each with a classical address, two of them constants rather
+          than rates.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            Two of three lemmas stand — and the arithmetic half closes as a
+            theorem.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T118]</span>{" "}
+          TWO-OF-THREE (36/36): the first route is refuted with a reason (the
+          exact two-grid symbol is a <em>harmonic</em> mean, which the comb dips
+          make vacuous on 14/14 windows), and the rescue is a classical shift
+          onto the oscillation Gram, whose symbol is the{" "}
+          <em>arithmetic</em> mean of the same aliasing pair — the low-frequency
+          negativity is suppressed quadratically instead of poisoning the
+          statement. On a 15,680-point FFT lever the certified floor rises
+          logarithmically and crosses zero on 3 of 5 zones: the failing windows
+          were under-resolved, not obstructed. Saturation turns out to be an
+          identity here, so its constant is computed (0.252–0.336) rather than
+          assumed.{" "}
+          <span className="font-mono text-amber-200">[sandbox · T119]</span>{" "}
+          ARITHMETIC-DONE (27/27): the arithmetic half closes as a theorem —
+          positivity of the symbol for every cell width below an{" "}
+          <em>explicit</em>{" "}
+          <span className="font-mono text-slate-200">
+            D₀(α) = exp(−(Ξ(α) + B))
+          </span>
+          , with Ξ the prime-power atom count and B = −1.0474 universal (drift
+          ≤ 3.1e-4). The energy route to the remaining statement is proven{" "}
+          <em>empty</em> — a tautology — which is what makes that statement
+          genuinely new content. And the sharpest identity of the run,{" "}
+          <span className="font-mono text-slate-200">κ_end = 1/(1+R)</span>{" "}
+          exactly (1.1e-16), reduces everything to one discrete Harnack
+          inequality with a classical address.
+        </p>
+
+        <p className="rounded-xl border border-slate-700/40 bg-slate-900/40 px-4 py-3 text-sm text-slate-400">
+          Worth stating plainly, because it is the load-bearing fence of the
+          whole sprint: this chain is classical numerical analysis from end to
+          end and{" "}
+          <strong className="font-medium text-slate-200">
+            contains no zeta input anywhere
+          </strong>
+          . As a conditional lemma the material is essentially complete — what is
+          missing is a proof of the Harnack statement, not a discovery. Sandbox;
+          not RH evidence.
+        </p>
+      </DiarySection>
+
+      {/* 22 — The Harnack pair and the telescope (T120–T124) */}
+      <DiarySection
+        id="harnack-telescope"
+        eyebrow="22 · The Harnack pair and the telescope · Teile 120–124"
+        title="Why the last constant is one, why the coupling resists — and the direction flip that made the recursion carry"
+        badge="sandbox"
+        visual={<TelescopeRungs />}
+      >
+        <p>
+          <strong className="font-medium text-slate-200">
+            The Harnack core becomes proof-shaped — at the price of one more
+            defect.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T120]</span>{" "}
+          HARNACK-EXPLAINED (21/21): the mysterious constant R ≈ 1 is not a
+          constant at all but a <em>symmetry</em>. The two increment families are
+          the odd and the even half of <em>one</em> sequence, offset by a single
+          fine cell — so given one sign on the corner cells their difference is a
+          sum over disjoint neighbour pairs, and{" "}
+          <span className="font-mono text-slate-200">|R − 1| ≤ 0.04745</span>{" "}
+          follows <em>unconditionally</em>, dominating the measurement on
+          3112/3112 sign-pure rows. Two negative results count as much: the
+          per-cell version of the inequality is provably <em>false</em> (ratios
+          up to 4.8e3 — only the summed form holds, which is exactly the form
+          proved), and the discrete maximum principle is false too, so the sign
+          route is closed and needs a corner-localized decay estimate instead.
+          The honest cost: the defect count rises 3 → 4, because in the real
+          frame the window grows with the zone, and the unconditional D₀
+          criterion then covers exactly 3 of 1492 zones — below the first
+          handover the ladder actually uses.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            Against the real ladder: a section statement survives where a symbol
+            statement dies.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T121]</span>{" "}
+          WIDE-RESTRUCTURED (21/21): the chain never needed the symbol to be
+          positive — it needs the finite <em>section</em> to be, at the
+          frame&apos;s own resolution. Over 16 windows of the real ladder
+          (n = 7…283,303) the section is positive 16/16 while the symbol infimum
+          is negative on 8 of them; where it is negative the section eigenvalue
+          sits on the positive side at 0.64–3.23× its size. The mechanism has a
+          classical address (Christoffel functions): a polynomial of that degree
+          cannot fit inside one comb dip. The measurement discipline is kept
+          explicit — dense rows carry a Cholesky certificate, large rows are
+          labelled measurements, because a Ritz value can refute positivity but
+          never prove it. The net balance is then computed instead of feared:
+          only a poly-log deficit (α^−1.57, uniform in the resolution) rather
+          than collapse, decomposed exactly into two repairable steps — and one
+          link of the chain is honestly refuted on 42/42 rows.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            Both repairs land: the refuted link was an identity all along.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T122]</span>{" "}
+          NET-IMPROVED (20/20): the term that broke T121&apos;s link is not an
+          error term but the reflection half of an{" "}
+          <strong className="font-medium text-slate-200">isometry</strong> — the
+          oscillation block is exactly a compression of one window Toeplitz form.
+          From that plus a certified cell envelope and Parseval follows a
+          certified band floor, non-vacuous 36/36 up to α = 6.31, where
+          T121&apos;s budget tore at 3.45. The structural version of the
+          Rayleigh step is <em>sharp</em> (slack 1.00–1.03, drift α^−0.002): no
+          α-dependence passes through it any more. Certified deficit halves to
+          α^−0.729 and is exactly uniform in the resolution; with the measured
+          coupling the balance reads α^−0.113 against the chain&apos;s own
+          ceiling α^−0.116 — statistically indistinguishable. The chain closes up
+          to its own ceiling as soon as the coupling step stops being a worst
+          case.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            The coupling resists — structurally, and the reason is the result.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T123]</span>{" "}
+          CBS-RESISTS (20/20): the band margin closes almost for free (that
+          reduction costs under 1%) and the oscillation block gains{" "}
+          <em>uniform</em> certified positivity on every row of the ladder. But
+          every certified route to the coupling needs the coarse form from below,
+          and there the numbers are brutal: λ_min of the coarse block is
+          1.7e-5–2.9e-4, three to five orders below the certified envelope. The
+          diagnosis is exact — the near-null direction of the window form is{" "}
+          <em>smooth</em>, so it lives in the coarse space, and its eigenvalue
+          comes from a cancellation <em>inside</em> the form that no pointwise
+          symbol minorant can see. So the worst-case coupling step must stay, and
+          the theorem now says why. The entire remaining gap (α^0.5) is that one
+          coupling — and it is identified, not estimated: it is the same object
+          as the lid the chain throws away, four to eight recursion levels deep.
+          Verdict: the two-level argument cannot be tightened. It has to become a
+          recursion.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            The telescope carries — because the rung is a maximum.
+          </strong>{" "}
+          <span className="font-mono text-amber-200">[sandbox · T124]</span>{" "}
+          TELESCOPE-CARRIES (28/28): the nested level chain is <em>one</em>{" "}
+          window form on nested spaces (nesting exact to 2.4e-14), so the whole
+          two-level system of the previous part is literally one rung of a
+          ladder, every rung is the saturation identity, and the rungs telescope:
+          their sum is the whole quantity (9.2e-10). Then the key of the part —
+          the <strong className="font-medium text-slate-200">
+            direction flip
+          </strong>
+          . Read as a residual in the inverse norm, the rung is a{" "}
+          <em>maximum</em>, not a minimum: every test vector gives a{" "}
+          <em>lower</em> bound, and the denominator wants the form from{" "}
+          <em>above</em> — exactly where the certified machinery works. The
+          resulting certified rung bound holds on 400/400 rungs with a drift
+          seven times weaker than T123&apos;s. T123&apos;s obstruction is still
+          there and is now irrelevant: the new bound never forms the object that
+          was obstructed. The recursion closes in the right direction, coarse to
+          fine, with base case pure semidefiniteness — and the balance moves
+          +0.444 of the α^0.5 gap, about nine tenths of the way to the ceiling.
+        </p>
+
+        <p>
+          <strong className="font-medium text-slate-200">
+            What that leaves — stated as the diary states it.
+          </strong>{" "}
+          The coupling defect{" "}
+          <em>collapses</em>: it is no longer a quantitative estimate but a sign
+          that the coarse-to-fine induction already carries, and three quantities
+          (the coarse minimum, its condition number, and the coupling constant)
+          leave the chain entirely. One new defect is booked, honestly negative:
+          the solution-free version of the rung fails, because the coupling term
+          cancels the data instead of perturbing it — so the certified bound
+          carries the solution along, on the same bookkeeping standard as the rest
+          of the chain. The Harnack pair from T120/T121 is untouched.
+        </p>
+
+        <p className="rounded-xl border border-slate-700/40 bg-slate-900/40 px-4 py-3 text-sm text-slate-400">
+          Current stand: a conditional theorem whose hypotheses are the Harnack
+          pair plus one sign, a relay mechanism that has never failed a step, and
+          certified single steps as deep as zone 155,921. T125 —{" "}
+          <span className="font-mono text-slate-300">
+            grand_assembly_probe.py
+          </span>
+          , running as the series finale — assembles the chain end to end with
+          full attribution, the kill list, the compression cascade, the degree of
+          certification, and an honest statement of the distance to RH. That
+          distance remains large. Sandbox; not RH evidence.
+        </p>
+      </DiarySection>
+
+      {/* 23 — Meaning */}
       <DiarySection
         id="meaning"
-        eyebrow="20 · What would it mean"
+        eyebrow="23 · What would it mean"
         title="Four calibrated levels — with caveats"
         badge="sandbox"
       >
@@ -1508,8 +1955,8 @@ export default function PrimeFrontPage() {
           <MeaningLevel
             level="Near"
             badge="sandbox"
-            title="I5 geography complete — one object remains"
-            body="After 101 probes (2428/2428 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete; induction skeleton closed through T101 — identities proved, zones 2–4 closed, zone-5 tip = equality problem, asymptotics = one named arithmetic bound (A). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH. Geography locates; it does not attack. Not RH evidence."
+            title="I5 geography complete; the induction compressed to two statements plus a sign"
+            body="After 124 probes (3105/3105 sandbox checks) and v535–v541: matching lemma closed; I5 geography complete; and the induction that would carry I5 is compressed from one matrix inequality (T104) to a Harnack pair plus one sign the coarse-to-fine recursion already carries (T124) — with the relay mechanism certified step by step, 400/400 rungs, and a single certified step at zone 155,921 (T115). What remains TFPT-specific is exactly ONE object: I5 in one-family form ⟺ Weil positivity ⟺ RH. The compression locates the difficulty; it does not remove it. Not RH evidence."
           />
           <MeaningLevel
             level="Big if"
@@ -1526,7 +1973,7 @@ export default function PrimeFrontPage() {
         </ol>
       </DiarySection>
 
-      {/* 21 — Live updates */}
+      {/* 24 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -1535,7 +1982,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              21 · Live updates
+              24 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -1555,7 +2002,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 text-sm text-slate-500 sm:px-6 lg:px-8">
           Numbers and verdicts are taken from{" "}
           <code className="font-mono text-slate-400">experiments/next.txt</code>{" "}
-          (2026-07-23…26 diary) and the promoted modules{" "}
+          (2026-07-23…28 diary, Teile 11–124) and the promoted modules{" "}
           <code className="font-mono text-slate-400">
             verification/v535_*.py
           </code>{" "}
@@ -1574,6 +2021,266 @@ export default function PrimeFrontPage() {
   );
 }
 
+function BigPictureSection() {
+  return (
+    <section
+      id="big-picture"
+      aria-labelledby="big-picture-heading"
+      className="scroll-mt-24 border-t border-slate-800/60 py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            00 · Start here
+          </span>
+          <StatusBadge badge="sandbox" />
+        </div>
+        <h2
+          id="big-picture-heading"
+          className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
+        >
+          The big picture, in plain words
+        </h2>
+        <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-300">
+          The rest of this page is a diary, written as the work happened, in the
+          language of the work. This section says the same thing in ordinary
+          words. Every number below is copied from the diary. Every limit is
+          named.
+        </p>
+
+        <div className="mt-8 grid gap-4 lg:grid-cols-2">
+          <article className="rounded-2xl border border-sky-400/30 bg-sky-500/[0.07] p-5 sm:p-6">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-sky-300/90">
+              What we are trying to do
+            </p>
+            <h3 className="mt-2 font-serif text-xl text-sky-50">
+              A relay that has to work forever
+            </h3>
+            <div className="mt-3 space-y-3 text-sm leading-relaxed text-slate-300">
+              <p>
+                There is one quantity in this story that must never go negative.
+                It is assembled out of the prime numbers, one prime at a time.
+              </p>
+              <p>
+                Picture a bridge built span by span. Each new span has to carry
+                the load the previous one can no longer hold. Each prime is a
+                span. The handover from one span to the next is the whole
+                question: does it keep working, prime after prime, without end?
+              </p>
+              <p>
+                If it does, a classical statement called{" "}
+                <strong className="font-medium text-slate-100">
+                  Weil positivity
+                </strong>{" "}
+                holds — and that statement is equivalent to the Riemann
+                Hypothesis. So this is where the difficulty of the Riemann
+                question actually sits, in the form the diary can touch. We do
+                not prove it. We test the relay span by span, and we write down
+                precisely what a proof would still need.
+              </p>
+            </div>
+          </article>
+
+          <article className="rounded-2xl border border-emerald-400/30 bg-emerald-500/[0.07] p-5 sm:p-6">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-emerald-300/90">
+              What actually works today
+            </p>
+            <h3 className="mt-2 font-serif text-xl text-emerald-50">
+              The mechanism has never failed a step
+            </h3>
+            <div className="mt-3 space-y-3 text-sm leading-relaxed text-slate-300">
+              <p>
+                Every handover that has been checked, checks out. 117 of 117 in
+                the deep ladder{" "}
+                <span className="font-mono text-amber-200">[T111]</span>, 400 of
+                400 rungs of the nested ladder{" "}
+                <span className="font-mono text-amber-200">[T124]</span>, and a
+                single certified step as deep as{" "}
+                <strong className="font-medium text-emerald-100">
+                  zone 155,921
+                </strong>{" "}
+                <span className="font-mono text-amber-200">[T115]</span>.
+              </p>
+              <p>
+                When a chain of steps stops, it stops because the computer runs
+                out of budget — never because a step failed.
+              </p>
+              <p>
+                It did not always look like that. For a while there seemed to be
+                a wall near zone 462{" "}
+                <span className="font-mono text-amber-200">[T111]</span>. Then
+                T113 showed the wall was measuring our own grid rather than the
+                mathematics, and T114 removed the division that produced it. The
+                wall dissolved, and eleven steps opened up beyond it at once.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div className="mt-8 grid gap-4 lg:grid-cols-2 lg:items-start">
+          <div className="space-y-3 text-base leading-relaxed text-slate-300">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+              The great compression
+            </p>
+            <h3 className="font-serif text-xl text-slate-50">
+              One huge inequality, squeezed down to two small ones
+            </h3>
+            <p className="text-sm">
+              At T104 the thing left to prove was a{" "}
+              <strong className="font-medium text-slate-100">
+                matrix inequality
+              </strong>
+              : a statement about every direction of a large window at once.
+              Twenty parts later it is two small statements plus a sign.
+            </p>
+            <p className="text-sm">
+              Nothing was assumed away on the route. At each stage the older,
+              bigger statement was shown to <em>follow</em> from the smaller one
+              — and several times a step of our own was refuted and replaced,
+              which is why the list is shorter and not longer.
+            </p>
+            <p className="text-sm text-slate-400">
+              What is left today: a{" "}
+              <strong className="font-medium text-slate-200">
+                Harnack pair
+              </strong>{" "}
+              — two statements that hold on every window measured so far — plus
+              one <em>sign</em> that the induction already carries on its own{" "}
+              <span className="font-mono text-amber-200">[T124]</span>. Neither
+              is proved. Both now have classical addresses.
+            </p>
+          </div>
+          <ReductionCascade />
+        </div>
+
+        <aside className="mt-8 rounded-2xl border border-rose-400/35 bg-rose-500/[0.08] p-5 sm:p-6">
+          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-rose-300">
+            The honest box — what this is not
+          </p>
+          <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-slate-300">
+            <li>
+              <strong className="font-medium text-rose-100">
+                No zeta input anywhere.
+              </strong>{" "}
+              The chain is classical numerical analysis from end to end. The
+              zeta function is never fed in, so nothing here can be a
+              circular re-derivation of it.
+            </li>
+            <li>
+              <strong className="font-medium text-rose-100">
+                No infinite statement.
+              </strong>{" "}
+              Every certificate is a finite computation on a finite window. An
+              infinite claim would need the two open statements — that is the
+              whole point of naming them.
+            </li>
+            <li>
+              <strong className="font-medium text-rose-100">
+                A measured ladder is not all zones.
+              </strong>{" "}
+              Where this page says “certified”, it means the zones that were
+              actually run. Trends beyond them are labelled as fits or
+              extrapolations, never as results.
+            </li>
+            <li>
+              <strong className="font-medium text-rose-100">
+                Sandbox, not verified physics.
+              </strong>{" "}
+              This entire diary is exploratory. Only the seven promoted modules{" "}
+              <Link
+                href="/verification"
+                className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
+              >
+                v535–v541
+              </Link>{" "}
+              are machine-verified and cited in the papers. Sandbox probes never
+              move a status marker.
+            </li>
+            <li>
+              <strong className="font-medium text-rose-100">
+                Not RH, and not almost-RH.
+              </strong>{" "}
+              “I5 ⟺ RH” is a <em>typing</em> of what the remaining core is
+              equivalent to — not a proof claim and not a measure of distance.
+              No progress toward the Riemann Hypothesis is claimed. Cryptography
+              is unaffected.
+            </li>
+          </ul>
+        </aside>
+
+        <div className="mt-8">
+          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            Where it stands now
+          </p>
+          <dl className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <BigPictureStat
+              term="124"
+              desc="diary parts (T125 running)"
+              tone="sky"
+            />
+            <BigPictureStat
+              term="3105"
+              desc="sandbox checks, all passing"
+              tone="amber"
+            />
+            <BigPictureStat
+              term="7"
+              desc="machine-verified modules (v535–v541)"
+              tone="emerald"
+            />
+            <BigPictureStat
+              term="2 + 1"
+              desc="what is left: a Harnack pair plus one sign"
+              tone="violet"
+            />
+          </dl>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-400">
+            The chain is written as a{" "}
+            <strong className="font-medium text-slate-200">
+              conditional theorem
+            </strong>
+            : everything after the word “suppose” is proved or certified, and
+            what is supposed is the Harnack pair. T125 —{" "}
+            <span className="font-mono text-slate-300">
+              grand_assembly_probe.py
+            </span>
+            , running as the series finale — assembles that chain end to end
+            with full attribution, together with the kill list, the compression
+            cascade, the degree of certification, and an honest statement of the
+            distance to RH. Sandbox; not RH evidence.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const BIG_PICTURE_TONE = {
+  sky: "border-sky-400/30 bg-sky-500/[0.08] text-sky-100",
+  amber: "border-amber-400/30 bg-amber-500/[0.08] text-amber-100",
+  emerald: "border-emerald-400/30 bg-emerald-500/[0.08] text-emerald-100",
+  violet: "border-violet-400/30 bg-violet-500/[0.08] text-violet-100",
+} as const;
+
+function BigPictureStat({
+  term,
+  desc,
+  tone,
+}: {
+  term: string;
+  desc: string;
+  tone: keyof typeof BIG_PICTURE_TONE;
+}) {
+  return (
+    <div className={`rounded-xl border px-3 py-3 ${BIG_PICTURE_TONE[tone]}`}>
+      <dt className="font-mono text-xl leading-none">{term}</dt>
+      <dd className="mt-1.5 text-[11px] leading-tight text-slate-400">
+        {desc}
+      </dd>
+    </div>
+  );
+}
+
 function ProgramStatusCallout() {
   return (
     <aside className="rounded-2xl border border-violet-400/35 bg-violet-500/10 p-5 sm:p-6">
@@ -1581,146 +2288,102 @@ function ProgramStatusCallout() {
         Strongest current sentence
       </p>
       <p className="mt-3 font-serif text-lg leading-relaxed text-violet-50 sm:text-xl">
-        After 105 probes and seven promoted modules, what remains TFPT-specific
-        is exactly one object: I5 — with an induction skeleton whose identities
-        are proved, zones 2–4 closed, and asymptotics localized to one named
-        arithmetic bound (A), whose mechanism T102 identifies (Schur dressing
-        against E₀⊕E₊ — one scalar per zone).
+        After 124 probes and seven promoted modules, what remains TFPT-specific
+        is exactly one object: I5 — and the induction that would carry it is now
+        a conditional theorem whose hypotheses are a Harnack pair plus one sign
+        the coarse-to-fine recursion already carries (T124).
       </p>
+      <ul className="mt-4 space-y-2 text-xs leading-relaxed text-slate-400">
+        <li>
+          <strong className="font-medium text-slate-200">
+            The mechanism never failed.
+          </strong>{" "}
+          Every certified handover step holds — 117/117 on the deep ladder at
+          retention 1.000000 (T111), 400/400 rungs of the nested ladder (T124).
+          Chains stop at the compute budget, never at a step (T114 onward).
+        </li>
+        <li>
+          <strong className="font-medium text-slate-200">
+            Depth reached, certified.
+          </strong>{" "}
+          Margin-free steps up to n = 1331 (T114) and a single certified step at
+          n = 155,921 (T115); a boundary march to 1.35 million cells at flat cost
+          (T116, declared a cost-geometry demonstration, not a Weil certificate).
+        </li>
+        <li>
+          <strong className="font-medium text-slate-200">
+            The wall was a ruler.
+          </strong>{" "}
+          The apparent margin wall near zone 462 (T111) is currency-invariant
+          (T113) but measures the discretization, not the spectrum — and it
+          dissolves once the artifact division is removed (T114).
+        </li>
+        <li>
+          <strong className="font-medium text-slate-200">
+            What is left, named.
+          </strong>{" "}
+          A Harnack pair (T120/T121, unconditional |R − 1| ≤ 0.047 plus a section
+          statement) and one sign the coarse-to-fine induction already carries
+          (T124). Honestly booked against it: the solution-free version of the
+          rung fails, and the unconditional D₀ criterion covers only the first
+          three zones (T120).
+        </li>
+        <li>
+          <strong className="font-medium text-slate-200">
+            Series balance.
+          </strong>{" "}
+          124 parts, 3105/3105 sandbox checks, seven promoted modules; T125 (
+          <span className="font-mono text-slate-300">
+            grand_assembly_probe.py
+          </span>
+          , running) assembles the chain end to end as the series finale. The
+          full sprint is told in{" "}
+          <a
+            href="#compression"
+            className="text-sky-300 underline decoration-sky-400/30 underline-offset-2 hover:text-sky-200"
+          >
+            sections 20–22
+          </a>
+          . Not almost-RH. This is not RH evidence.
+        </li>
+      </ul>
+    </aside>
+  );
+}
+
+/** Depth reach of the certified chain across the sprint. Numbers from T110–T116. */
+const DEPTH_REACH = [
+  { part: "T110", label: "certified handover steps", value: "15" },
+  { part: "T111", label: "handovers, retention 1.000000", value: "117/117" },
+  { part: "T114", label: "deepest certified zone", value: "n = 1331" },
+  { part: "T115", label: "deepest certified zone", value: "n = 155,921" },
+  { part: "T116", label: "boundary march, flat cost", value: "1.35M cells" },
+] as const;
+
+function DepthReachCallout() {
+  return (
+    <aside className="rounded-2xl border border-emerald-400/35 bg-emerald-500/10 p-5 sm:p-6">
+      <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-emerald-300/90">
+        Depth reach · what the chain certified, part by part
+      </p>
+      <dl className="mt-4 space-y-2.5">
+        {DEPTH_REACH.map((d) => (
+          <div
+            key={`${d.part}-${d.value}`}
+            className="flex flex-wrap items-baseline gap-x-2 border-b border-emerald-400/15 pb-2 last:border-0 last:pb-0"
+          >
+            <dt className="font-mono text-[11px] text-emerald-200">{d.part}</dt>
+            <dd className="font-mono text-sm text-emerald-50">{d.value}</dd>
+            <dd className="min-w-0 flex-1 text-right text-[11px] text-slate-400">
+              {d.label}
+            </dd>
+          </div>
+        ))}
+      </dl>
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
-        Zone-5 tip = equality problem; crowding sits in the proof family, not
-        the mathematics — T103&apos;s improved instrument closes 44/64
-        (probe-level), and T104 (CHAIN-PARTIAL, two independent arms) closes
-        the exact spectral-split chain 16/16 with finite data, moving the hard
-        core to a bare_k lower bound plus one soft dressing scalar L. T105
-        (ONE-OF-TWO) certifies the bare bound in closed form and upgrades the
-        avoidance law to a theorem — the whole remaining hardness is one
-        Friedrichs-angle statement. T106 (DENSITY-MAPPED) splits that
-        statement by parity: the even channel closes 16/16 and all remaining
-        hardness localizes in the odd channel — one Loewner statement on half
-        the dimensions. T107 (SCALAR-TRACTABLE) reduces that statement to
-        exactly one scalar ratio r = κ/ε ≤ 1 with two orders of magnitude of
-        measured room (r = 0.005…0.18); the symbol route is structurally
-        dead, and exactly one object remains to certify. T108
-        (EPSILON-IDENTITY) makes ε&apos;s positivity an exact identity — the
-        square of the last Cholesky pivot (Szegő), coinciding with the
-        induction positivity itself — and reduces (R) to two scalars; what
-        remains is literally one boundary value of an explicit vector. T109
-        (BOUNDARY-CERTIFIED) certifies both scalars — ω unconditionally via a
-        graded matrix cap, the boundary value via a residual certificate that
-        carries the cancellation — so the whole chain for (R) now closes 16/16
-        conditional on exactly one strict-margin input that is 10²–10⁶ weaker
-        than the conclusion. T110 (MARGIN-PROPAGATES) closes the induction
-        circle end-to-end on the measured zones — certified base case, 15
-        certified handover steps, atom entry structurally free — with three
-        sharp gaps remaining (no reserve, no scalar step law, no
-        k-uniformity). T111 (CROSSING-CONFIRMED) drives the ladder deep and
-        measures the wall instead of extrapolating it: the crossing sits at
-        n* ≈ 462 (an upper bound; n ≈ 170 was a fit artefact) and splits into
-        three separate walls — margin, twin-prime ladder death, vacuous
-        requirement — while the handover mechanism itself never fails
-        (117/117 at retention 1.000000); depth, not n, is the operating
-        variable. T112 (SCALING-PARTIAL) then rebuilds the construction in
-        the gap-coupled scaled frame: two of the three walls fall
-        structurally, but the margin wall is frame-invariant at exponent
-        −0.974 — the hardness is now one limit operator plus one convergence
-        rate, with the prime-gap dependence disclosed. T113
-        (SUBSTANCE-CONFIRMED) settles the currency question with a
-        fundamental reinterpretation: the margin wall is real in every
-        currency, but it measures the discretization, not the spectrum — the
-        continuum window form has no gap, the positive floor is a
-        cancellation (~1e-7 relative), and the T109 requirement chain
-        divides by an artifact margin. T114 (WALL-DISSOLVES) then builds
-        the repair and the wall dissolves: the exact Schur complement
-        (Albert 1969) certifies every step margin-free — eleven beyond the
-        old wall, up to n = 1331, and all seven torn zones — the wall was
-        an O(1) numerator divided by an artifact floor; chains now stop
-        only at compute cost, never at a step, and the remaining core is
-        two objects (ε relative to κ via the exact Szegő identity, and
-        transporting an O(0.1) Schur complement between grids). T115
-        (TRANSPORT-BLOCKED) then splits that core: transport certifies
-        only mild refinement (the Schur floor itself falls like ρ^−1.7 on
-        nested ladders — no bound can fix that), but the two-scale
-        compression breaks the cap — a certified margin-free step at
-        n = 155,921 (117× deeper), chains of 10 steps, the stopper always
-        cost and never a step — leaving the shortest list ever: three
-        points, only one of which is an inequality (the classical
-        Szegő–Levinson prediction-error bound for one symbol). T116
-        (RICCATI-PARTIAL) then runs the boundary reformulation: the
-        induction step IS a boundary process — the global pole rides
-        exactly in a 12×12+12+1 state and the Riccati march runs 169,236
-        steps to 1.35 million cells at flat cost (a cost-geometry demo,
-        not a Weil certificate) — but the prime comb itself refuses
-        compression, and the one remaining inequality acquires textbook
-        shape (ε is a Galerkin error; Aubin–Nitsche hits the measured
-        exponent). T117 (THEOREM-SHAPED) then makes that inequality
-        theorem-shaped: ε is an identity plus a certified lower-bound
-        chain that loses no power of D (θ&apos; = 1.74 against θ = 1.76);
-        the jumps have closed forms — T116&apos;s factor-120 drops were a
-        sweep artifact, prime-power entries actually raise ε — and what
-        remains are three named analytic lemmas about one symbol, each
-        with a classical address, two of them constants, not rates. T118
-        (TWO-OF-THREE) then measures the three against their addresses
-        and two of them stand: saturation is an identity here, and the
-        Schur floor is rescued by the CBS shift onto the oscillation
-        Gram, whose arithmetic aliasing symbol suppresses the prime comb
-        quadratically (certified on 7/14 windows; on a 15,680-point FFT
-        lever the floor rises logarithmically and crosses zero — the
-        failing windows were under-resolved, not obstructed); the corner
-        lemma corrects itself (log is the boundary of all powers) and
-        the chain is repaired on ‖y‖²; exactly one genuinely new
-        analytic statement remains — a D^1.75 lower bound for the
-        oscillation mass. T119 (ARITHMETIC-DONE) then closes the
-        arithmetic half as a theorem — an explicit D₀(α) with a universal
-        constant B = −1.0474 — proves the energy route to (H2) empty
-        (genuinely new content), and reduces everything to one discrete
-        Harnack inequality via the exact identity κ_end = 1/(1+R). T120
-        (HARNACK-EXPLAINED) then explains that inequality: R ≈ 1 is
-        parity symmetry — the two increment families are one sequence
-        shifted by a single fine cell, giving an unconditional
-        |R−1| ≤ 0.047 certificate, while the per-cell inequality is
-        provably false — but the honest defect count rises 3 → 4: the
-        frame&apos;s window grows with the zone, so D₀ covers almost
-        nothing of the real ladder, and the CBS constant decays with the
-        width. T121 (WIDE-RESTRUCTURED) then runs the σ_z route against
-        the real ladder: it survives as a SECTION statement — positive
-        16/16 up to α = 6.28, half of them where the symbol infimum is
-        negative — and dies as a symbol statement; the net α-balance
-        shows only a poly-log deficit (α^−1.57, uniform in D) instead of
-        collapse, exactly decomposed into two repairable steps (Rayleigh
-        + CBS, nothing in γ), and one link of the chain was honestly
-        refuted (the odd-sector Hankel term). T122 (NET-IMPROVED) then
-        lands both repairs: the Hankel term is the reflection half of an
-        exact isometry — so link (5) is retired by an identity and the
-        certified band floor survives to α = 6.31 — the structural
-        Rayleigh step is sharp (slack 1.00–1.03), the certified deficit
-        halves to α^−0.73 (exactly D-uniform), and with the measured CBS
-        coupling the balance closes to within the chain&apos;s own
-        ceiling. T123 (CBS-RESISTS) then runs the same band machinery at
-        the coupling and the coupling resists structurally: the band
-        margin closes almost for free (the F3 reduction costs under 1%,
-        and the oscillation block gains uniform certified positivity via
-        (5R*)), but every certified route to κ_y needs the coarse form
-        from below — whose near-null direction is smooth and lives on a
-        cancellation no pointwise symbol minorant can see — and the
-        remaining α^0.5 gap is identified as the ε_f lid itself, the
-        same object 4–8 recursion levels deep. T124 (TELESCOPE-CARRIES)
-        then builds that recursion and the telescope carries: the nested
-        ladder is one window form — the two-level system is literally one
-        rung — and the rung contribution is a residual in the inverse
-        norm, a maximum rather than a minimum, so it wants the form from
-        above, exactly where the certified envelope works; the certified
-        rung bound (8R) is valid on 400/400 rungs with a drift 7× weaker
-        than T123&apos;s, (F4) collapses from a quantitative estimate to
-        a sign the coarse-to-fine induction already carries (base case:
-        pure semidefiniteness — λ_min(A_c), cond(A_c) and γ² leave the
-        chain entirely), and the two-level balance moves +0.444 of the
-        α^0.5 gap — most of the way to the ceiling; what remains is the
-        Harnack pair plus one honest bookkeeping note (the solution-free
-        rung fails), and T125 (grand_assembly_probe.py, running)
-        assembles the full chain end to end as the series finale.
-        Milestone: 3105/3105 checks. Not almost-RH. This is not RH
-        evidence.
+        Chains stop at the compute budget, never at a step. T116&apos;s march is
+        a cost-geometry demonstration, not a Weil certificate — declared as such
+        in the probe. Sandbox; not RH evidence.
       </p>
     </aside>
   );
@@ -1822,8 +2485,8 @@ function I5GeographyCallout() {
       </p>
       <p className="mt-4 text-xs leading-relaxed text-slate-400">
         I5 remains ⟺ RH; the geography locates where any attack must work, it
-        does not perform one. 2428/2428 sandbox checks. This is not RH
-        evidence.
+        does not perform one. 2428/2428 sandbox checks at T101 (3105/3105 today).
+        This is not RH evidence.
       </p>
     </aside>
   );
