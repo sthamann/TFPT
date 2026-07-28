@@ -206,9 +206,18 @@ export function TwoDoorsConvergence() {
           forms and T116&apos;s factor-120 drops were a sweep artifact
           (prime-power entries raise ε); what remains are three named
           analytic lemmas about one symbol — two of them constants, not
-          rates. T118 (
+          rates. T118 · SYMBOL.LEMMAS — TWO-OF-THREE (36/36): two of the
+          three lemmas stand — saturation is an identity here, and the
+          Schur floor is rescued by the CBS shift onto the oscillation
+          Gram, whose arithmetic aliasing symbol suppresses the comb
+          quadratically (certified on 7/14 windows; on a 15,680-point FFT
+          lever the floor rises logarithmically and crosses zero —
+          under-resolved, not obstructed); the corner lemma corrects
+          itself (log is the boundary of all powers) and the chain is
+          repaired on ‖y‖²; one genuinely new analytic statement remains
+          ((H2), a D^1.75 lower bound for the oscillation mass). T119 (
           <span className="font-mono text-slate-300">
-            symbol_lemmas_probe.py
+            oscillation_mass_probe.py
           </span>
           ) running.
         </p>

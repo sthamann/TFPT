@@ -94,7 +94,8 @@ export type PrimeFrontVerdict =
   | "WALL-DISSOLVES"
   | "TRANSPORT-BLOCKED"
   | "RICCATI-PARTIAL"
-  | "THEOREM-SHAPED";
+  | "THEOREM-SHAPED"
+  | "TWO-OF-THREE";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -118,6 +119,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-27",
+    part: 118,
+    title:
+      "Two of three lemmas stand — saturation is an identity here, the Schur floor is rescued by the CBS shift onto the oscillation Gram, and the corner lemma corrects itself; one genuinely new analytic statement remains",
+    verdict: "TWO-OF-THREE",
+    summary:
+      "T118 (TWO-OF-THREE, 36/36) — contract SYMBOL.LEMMAS: measure the three missing lemmata of the T117 theorem candidate one by one against their classical addresses. (Q1) Lemma B, attempt one — REFUTED, WITH A REASON: the exact two-grid symbol of the oscillation Schur complement S is the WEIGHTED HARMONIC MEAN of the aliasing pair, 1/σ_S = cos²(θ/2)/f(θ+π) + sin²(θ/2)/f(θ) (derived, verified on exactly positive model symbols). A harmonic mean needs BOTH entries positive, and the window's comb dips make inf σ_S = 0 on 14/14 (zone, level) rows — every pointwise route through σ_S is VACUOUS on the real symbol, not merely weak (a perturbative split recovers at most 2.6e-5 of λ_min(S); the comb is non-perturbative). The classical reason is computed, not asserted: λ_min at finite M is a Fejér–Riesz MOMENT problem, not a pointwise infimum — the ground state of S CONCENTRATES on the negative set (3.3–43× the uniform share) and positivity is a cancellation of relative size 10²–10⁴; the one-cell-averaged symbol is positive on 14/14 windows (a heuristic, declared as such). GROWTH: on an FFT-only lever of up to 128× in D the LOG model beats the POWER model (b = 0.44–0.93 per log(1/D)) — a logarithm, as the log-singular kernel demands (Kac–Murdock–Szegő 1953 / Widom 1974); and the pole mass in the oscillation space is ≤ 2.1e-5 (an identity via the DTFT factor |sin(θ/2)|) — which is why the finite-section effect is absent there. (Q2) Lemma A, the corner — THE ADDRESS DOES NOT TRANSFER: the edge-exponent estimator is calibrated (model class |2sin(θ/2)|^{2s} exact, p = s; the KMS 1953 closed-form inverse as the s = 0 control), but on the real symbol the corner exponent DRIFTS (+0.238 per halving of D, 3–7.4σ) — log(1/|θ|) is the boundary of all powers, so there is no asymptotic (s, κ) to cite. (The old T108/T109 24-cell exponent was DOUBLY mis-estimated; its apparent stability was the cancellation of two errors.) The (H3) correction: the single-cell form is mis-dimensioned — the concentration factor grows ~h^0.99, the slope mass sits on a fixed FRACTION of cells; the T117 chain is REPAIRED at its last step: the rate lives on ‖y‖² (stage-2 bound D^1.751 against ε ~ D^1.770 — lossless; the single-cell stage costs D^2.74). (Q3) Lemma C — AND THE RESCUE OF LEMMA B: saturation is not an assumption for a nested PWC pair but an IDENTITY, ε_c − ε_f = yᵀSy (rel 4.9e-11), so β is COMPUTED: β ∈ [0.252, 0.336] over 20 triples, monotone in the favourable direction — what remains of Lemma C is the one hypothesis Bank–Smith 1993 themselves assume. Their CBS constant γ (Yserentant 1986) is the lever that rescues Lemma B: the identity λ_min(L_z⁻¹SL_z⁻ᵀ) = 1−γ² (rel 2.1e-15) moves the symbol question off S and onto the oscillation Gram with σ_z = sin²(θ/2)f(θ) + cos²(θ/2)f(θ+π) — the ARITHMETIC mean of the same aliasing pair, the low-frequency negativity suppressed QUADRATICALLY by sin²(θ/2) instead of poisoning a harmonic mean: inf σ_z > 0 on 7/14 windows (systematically: every window with α ≤ 1.30 and h ≥ 200) with up to 52% sharpness; on ALL 14 windows λ_min(S) ≥ (1−γ²)λ_min(T_h(σ_z)) at 32–76% — Lemma B is reduced to the positivity of a plain Toeplitz section of an explicit symbol; and on the long FFT lever (M up to 15,680, no matrix ever formed) the certified floor RISES logarithmically and CROSSES ZERO on 3/5 zones — the failing windows were UNDER-RESOLVED, not obstructed. (Q4) Theorem V2: five unconditional links (identities + isometry + Grenander–Szegő + certified Choleskys) + (H1) γ-uniformity (measured 1−γ² ≥ 0.181) + (H2) ‖y‖² ≥ c·D^1.75 — THE one genuinely new analytic statement the theorem needs, not importable from the KMS/Widom power-law corner theory because this symbol is log-singular with atoms. Per-lemma missing lists: L-B two points (both ARITHMETIC: inf σ_z > 0 for D < D₀(α) — comb depth against Nyquist-band mass, an atom-counting question — and narrow-dip positivity of finite sections), L-C one point (γ-uniformity, (H1)), L-A two points ((H3′) mean-square form; the Fisher–Hartwig extension of the corner theory to log-singular symbols with atoms). T119 (OSCILLATION.MASS, oscillation_mass_probe.py) is running: the arithmetic half of L-B (the D₀(α) formula, deep verification), the (H2) section, the (H3′) mean-square form, a theorem candidate V3. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "symbol_lemmas_probe.py",
+  },
   {
     date: "2026-07-27",
     part: 117,

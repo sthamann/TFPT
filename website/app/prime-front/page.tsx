@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–117 · 2932 sandbox checks
+            Research diary · Teile 11–118 · 2968 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1659,9 +1659,20 @@ function ProgramStatusCallout() {
         the jumps have closed forms — T116&apos;s factor-120 drops were a
         sweep artifact, prime-power entries actually raise ε — and what
         remains are three named analytic lemmas about one symbol, each
-        with a classical address, two of them constants, not rates; T118
-        (symbol_lemmas_probe.py) is running. Milestone: 2932/2932 checks.
-        Not almost-RH. This is not RH evidence.
+        with a classical address, two of them constants, not rates. T118
+        (TWO-OF-THREE) then measures the three against their addresses
+        and two of them stand: saturation is an identity here, and the
+        Schur floor is rescued by the CBS shift onto the oscillation
+        Gram, whose arithmetic aliasing symbol suppresses the prime comb
+        quadratically (certified on 7/14 windows; on a 15,680-point FFT
+        lever the floor rises logarithmically and crosses zero — the
+        failing windows were under-resolved, not obstructed); the corner
+        lemma corrects itself (log is the boundary of all powers) and
+        the chain is repaired on ‖y‖²; exactly one genuinely new
+        analytic statement remains — a D^1.75 lower bound for the
+        oscillation mass; T119 (oscillation_mass_probe.py) is running.
+        Milestone: 2968/2968 checks. Not almost-RH. This is not RH
+        evidence.
       </p>
     </aside>
   );

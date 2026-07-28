@@ -1,3 +1,66 @@
+# 2026-07-27 (XII) — Teil 118 (delegiert, die drei Symbol-Lemmata — Vertrag SYMBOL.LEMMAS): symbol_lemmas_probe.py — **TWO-OF-THREE** — ZWEI DER DREI LEMMATA STEHEN, UND DIE FEHLENDE ANALYTIK IST GENAU EINE AUSSAGE: das exakte Zwei-Gitter-Symbol von S ist das gewichtete HARMONISCHE Mittel des Aliasing-Paars und auf dem echten Symbol vakuum (die Kamm-Dips machen inf σ_S = 0 auf 14/14 Fenstern); die RETTUNG ist die CBS-Identität λ_min(L⁻¹SL⁻ᵀ) = 1−γ² (rel 2.1e-15), die die Symbol-Frage auf das Oszillations-Gram mit dem ARITHMETISCHEN Aliasing-Mittel σ_z verschiebt (Tiefband-Negativität quadratisch durch sin²(θ/2) unterdrückt): inf σ_z > 0 auf 7/14 Fenstern, λ_min(S) ≥ (1−γ²)λ_min(T_h(σ_z)) auf ALLEN Fenstern (32–76%), und auf dem 15680er-FFT-Hebel STEIGT inf σ_z logarithmisch und KREUZT NULL auf 3/5 Zonen — die scheiternden Fenster waren UNTERAUFGELÖST, nicht obstruiert; Saturation ist hier IDENTITÄT (ε_c − ε_f = yᵀSy, rel 4.9e-11) plus Bank–Smiths eigene Hypothese (β ∈ [0.252, 0.336]); der Ecken-Exponent DRIFTET (+0.238 pro Halbierung — log(1/|θ|) ist die Grenze aller Potenzen; der alte T108/T109-Exponent war doppelt falsch geschätzt) und die T117-Kette wird an der letzten Stufe REPARIERT (Rate auf ‖y‖²: D^1.751 gegen ε ~ D^1.770, verlustfrei); Satz V2: fünf unbedingte Glieder + (H1) γ-Uniformität (1−γ² ≥ 0.181) + (H2) ‖y‖² ≥ c·D^1.75 — DIE eine genuin neue analytische Aussage — 36/36, 2.5s, Sandbox
+# P1 LEMMA B, Anlauf eins — WIDERLEGT, MIT GRUND: das exakte Zwei-Gitter-
+#    Symbol von S ist das GEWICHTETE HARMONISCHE Mittel des Aliasing-Paars,
+#    1/σ_S = cos²(θ/2)/f(θ+π) + sin²(θ/2)/f(θ) (hergeleitet, auf exakt
+#    positiven Modell-Symbolen verifiziert). Ein harmonisches Mittel braucht
+#    f > 0 an BEIDEN Frequenzen; die Kamm-Dips des Fensters machen
+#    inf σ_S = 0 auf 14/14 Fenstern — VAKUUM, nicht schwach (perturbativer
+#    Split holt max 2.6e-5 zurück — der Kamm ist nicht-perturbativ). Der
+#    klassische Grund AUSGERECHNET: λ_min bei endlichem M ist ein MOMENTEN-
+#    Problem (Fejér–Riesz), kein punktweises Infimum — der Grundzustand
+#    konzentriert auf der Negativmenge (3.3–43×), Positivität ist Auslöschung
+#    der relativen Größe 10²–10⁴; Grobkörnung hilft: das Nyquist-Halbband-
+#    Mittel ist positiv 14/14 (Heuristik). WACHSTUM: das Log-Modell schlägt
+#    das Potenz-Modell auf dem FFT-Hebel (bis 128×; b = 0.44–0.93 pro
+#    log(1/D)) — wie der log-singuläre Kern es verlangt (KMS/Widom).
+#    Pol-Masse im Oszillationsraum ≤ 2.1e-5 (DTFT-Faktor |sin(θ/2)| —
+#    Identität): darum fehlt dort der Finite-Section-Effekt.
+# P2 LEMMA A, die Ecke — DIE ADRESSE ÜBERTRÄGT NICHT: der Schätzer ist
+#    kalibriert (Modellklasse |2sin(θ/2)|^{2s} exakt, p = s; KMS-1953-
+#    Kontrolle s = 0), aber auf dem echten Symbol DRIFTET der Ecken-Exponent
+#    (+0.238 pro Halbierung, 3–7.4σ) — log(1/|θ|) ist die Grenze aller
+#    Potenzen, es gibt kein asymptotisches (s,κ) zu zitieren. (Der alte
+#    T108/T109-24-Zellen-Exponent war DOPPELT falsch geschätzt; seine
+#    Stabilität war die Auslöschung zweier Fehler.) (H3)-KORREKTUR: die
+#    Einzel-Zellen-Form ist falsch dimensioniert — der Konzentrationsfaktor
+#    wächst ~h^0.99, die Masse sitzt auf einem festen Zellen-Bruchteil; die
+#    T117-Kette an der letzten Stufe REPARIERT: die Rate lebt auf ‖y‖²
+#    (Stufe-2-Schranke D^1.751 gegen ε ~ D^1.770 — verlustfrei; die
+#    Einzel-Zellen-Stufe kostet D^2.74).
+# P3 LEMMA C + DIE RETTUNG VON LEMMA B: Saturation ist hier IDENTITÄT
+#    (ε_c − ε_f = yᵀSy, rel 4.9e-11) plus Bank–Smiths eigene Hypothese;
+#    Band β ∈ [0.252, 0.336] über 20 Tripel, Monotonie in die richtige
+#    Richtung. Die CBS-Identität λ_min(L_z⁻¹SL_z⁻ᵀ) = 1−γ² (rel 2.1e-15)
+#    verschiebt die Symbol-Frage von S auf das Oszillations-Gram mit
+#    σ_z = sin²(θ/2)f(θ) + cos²(θ/2)f(θ+π) — das ARITHMETISCHE Mittel
+#    desselben Aliasing-Paars, die Tiefband-Negativität quadratisch durch
+#    sin²(θ/2) unterdrückt statt ein harmonisches Mittel zu vergiften:
+#    inf σ_z > 0 auf 7/14 Fenstern (alle α ≤ 1.30, h ≥ 200) mit bis 52%
+#    Schärfe; auf ALLEN Fenstern λ_min(S) ≥ (1−γ²)λ_min(T_h(σ_z)) (32–76%);
+#    und auf dem langen FFT-Hebel (M bis 15680, ohne je eine Matrix zu
+#    bilden) STEIGT inf σ_z logarithmisch und KREUZT NULL auf 3/5 Zonen —
+#    die scheiternden Fenster waren UNTERAUFGELÖST, nicht obstruiert.
+# P4 SATZ V2 + FEHLLISTE: fünf unbedingte Glieder (Identitäten + Isometrie +
+#    Grenander–Szegő + zertifizierte Cholesky) + (H1) γ-Uniformität
+#    (gemessen 1−γ² ≥ 0.181) + (H2) ‖y‖² ≥ c·D^1.75 — DIE eine genuin neue
+#    analytische Aussage des Satzes. Fehllisten pro Lemma: L-B 2 Punkte
+#    (beide ARITHMETIK: inf σ_z > 0 für D < D₀(α) — D₀ = Kamm-Tiefe gegen
+#    Nyquist-Masse = Atom-Zählung; Narrow-Dip-Positivität endlicher
+#    Sektionen), L-C 1 Punkt (γ-Uniformität), L-A 2 Punkte ((H3')
+#    Mittelwert-Quadrat-Form; Fisher–Hartwig-Erweiterung auf log + Atome).
+#    → T119 (läuft): OSCILLATION.MASS (oscillation_mass_probe.py) — die
+#    arithmetische Hälfte (D₀(α)-Formel, tiefe Verifikation) + H2-Sektion +
+#    H3'-Mittelwert-Form + Satz V3.
+# Serie (XII)–(CXXIX): 118 Proben, 2968/2968 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Grenander–Szegő,
+# Brandt 1977 / Hackbusch 1985 (Zwei-Gitter-Symbol), Fiorentino–Serra 1991 /
+# Chan–Chang–Sun 1998, Kac–Murdock–Szegő 1953, Widom 1974 / Fisher–Hartwig,
+# Fejér–Riesz, Getoor 1961 / Ros-Oton–Serra 2014, Payne–Weinberger 1960,
+# Bank–Smith 1993 / Dörfler–Nochetto 2002, Yserentant 1986,
+# Bornemann–Erdmann–Kornhuber 1996, Haynsworth 1968 / Albert 1969,
+# Cholesky / Wilkinson 1968 / Higham 2002, Weil 1952, Bertrand-Chebyshev
+# 1852) zitiert; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-27 (XI) — Teil 117 (delegiert, der Epsilon-Satz — Vertrag EPSILON.THEOREM): epsilon_theorem_probe.py — **THEOREM-SHAPED** — DIE EINE UNGLEICHUNG IST JETZT IDENTITÄT PLUS ZERTIFIZIERTE UNTERGRENZEN-KETTE OHNE RATENVERLUST: ε ist exakt die Energie, die der PWC-Raum aus der festen Funktion 2sinh(x/2) nicht herausholt — die Familie ist EXAKT GESCHACHTELT (T_c = PᵀT_fP), ε ist das Galerkin-Minimum, ε > 0 ⟺ Nicht-Zugehörigkeit t̃ ∉ T(V_c) (vier Identitäten, rel ≤ 6.2e-11); die Zwei-Level-Kette ε ≥ yᵀSy ≥ λ_min(S)‖y‖² ≥ λ_min(S)·max(Δu)²/2 zertifiziert auf 19/19 Paaren eine POSITIVE Untergrenze (Schranke/ε ∈ [0.111, 0.185]) mit Rate θ' = 1.74 gegen θ = 1.76 — KEINE D-Potenz verloren (λ_min(S) WÄCHST unter Verfeinerung); die Sprünge haben geschlossene Formen (Levinson-Bordering 3.7e-12, Woodbury-Ecken-Update mit Rang exakt k₀+1, 23/23) und KORRIGIEREN T116: alle 23 Primpotenz-Eintritte heben ε (1.0003–1.0506), die Faktor-120-„Sprünge“ waren das akkumulierte glatte Bordering-Produkt zwischen den Sweep-Punkten — die Sprung-Nebenbedingung ENTFÄLLT; Satz-Kandidat formuliert, Fehlliste = drei benannte analytische Lemmata über EIN Symbol, zwei davon Konstanten — 23/23, 2.3s, Sandbox
 # O1 Galerkin-Identität EXAKT (vier Identitäten auf 6 Fenstern): t̃ ist das
 #    Zellmittel der D-unabhängigen Funktion 2sinh(x/2) (unabhängige Quadratur,
