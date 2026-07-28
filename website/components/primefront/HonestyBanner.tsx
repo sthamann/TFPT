@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3438/3438 sandbox checks —
+        (“the full proof”, T126+) is now open with 3494/3494 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -74,7 +74,13 @@ export function HonestyBanner() {
         entire absolute-value envelope family <em>dead</em> from below
         (ρ(|E|) ≥ 1.32 on 35/35), leaving one named residue: a sign-preserving
         bound. Thirteen of those statements are now load-bearing as v543 and
-        v544. What remains
+        v544. T138 (PAIR-EXACT) kept the signs and found the mechanism — the
+        coupling sign follows the interval geometry, and the m-paired Neumann
+        certificate removes the arithmetic wall on all 77 dead blocks — and
+        T139 (DENSE-RESISTS) refuted the classical decay lemma at its
+        hypothesis for an arithmetic reason while <em>deriving</em> that sign
+        law from one exact telescoping identity: the measured core shrinks to
+        one signed inequality at stripe distance b ≤ 16. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

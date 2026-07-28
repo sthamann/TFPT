@@ -1,3 +1,116 @@
+# 2026-07-28 (XXI) — Teil 139 (Phase „Der volle Beweis", Vertrag GREEN.DECAY): green_decay_probe.py — **DENSE-RESISTS** (Latten vorab im Docstring deklariert) — DAS ABKLING-LEMMA EXISTIERT KLASSISCH NICHT FÜR DIESES OBJEKT, UND DER GRUND IST ARITHMETISCH; DAS RICHTIGE OBJEKT IST EXAKT IDENTIFIZIERT, UND DER GEMESSENE KERN SCHRUMPFT AUF EINE SIGNIERTE UNGLEICHUNG. M1 TÖTET DIE HYPOTHESE, NICHT DIE TECHNIK: die zertifizierte Kern-Hülle der gelumpten Paar-Matrix fällt nur wie d^{−0.15}..d^{−0.04}, wo Jaffard 1990 p > 1 BRAUCHT — die archimedischen Lags liegen AUF der Grenzlinie (~1/d), und die Primpotenz-Atome legen O(1)-Spikes über das ganze Fenster: eine Hülle sieht die Dünnheit des Kamms nicht, also scheitert das Lemma AN DER HYPOTHESE, arithmetisch. Die Konstanten-Kette ist konstruktiv gebaut statt behauptet: Demko-Moss-Smith VERIFIZIERT, wo es anwendbar ist (75/75 Band-Sprossen — das Scheitern am dichten Objekt ist eine Aussage über das Objekt), Operator-Gate 0.97–1.83 (1/75 unter 1), Algebra-Gate 3.4–1.6e3 (0/75); und der Exponent wird NICHT vererbt (Kern d^{−1.5..−1.1} gegen Inverse d^{−0.52..−0.37}). DAS POSITIVE ERSATZ-OBJEKT: die EXAKTE Doppel-Teleskop-Identität b_eᵀG b_{e'} = Σ_box H (4e-15), H der gemischte zweite Differenzen-Kern — H negativ auf 0.71–0.87 der Off-Diagonale, positiv auf 100% der Diagonale, und weil disjunkte Kanten-Paare Boxen OHNE Diagonalzellen haben, FOLGT T138s gesamtes Vorzeichen-Gesetz aus einem Kern plus Box-Geometrie (hergeleitet statt gemessen; die Gantmacher-Krein-Ein-Paar-Form ist quantitativ tot). M2 TÖTET DIE SCHICHTREIHE VON UNTEN: die nie-abschneidende Reihe liefert 3.388–6.171 gegen Ziel 0.999182–0.999972 (0/15, Überschuss 681–46900×), und die dreifache Richtungs-Pedanterie zahlt sich aus — keine Schicht darf fallen (Spur null ⇒ λ_max > 0), Gram ⪯ Band_b gilt NIE (85/85), und per Weyl ist JEDE Schichtreihe ≥ max_b Rayleigh(Band_b) = 1.0303–1.1116 > Ziel auf 15/15: die Familie ist VON UNTEN getötet, KEIN Abkling-Lemma irgendeiner Stärke kann sie retten, und der Überschuss IST die effektive Schichtzahl (wächst mit dem Fenster). M3 RÄUMT AUF: Pool neu gebaut, 620 Rand-Blöcke; die m-Leiter bis m = 48 konvergiert auf ALLEN 620 und zertifiziert 619/620 — der eine offene Block (need 2.15) hat sein argmax bei Index-Distanz 15, ferngetragen 1.000: das einzige Item, für das ein H-Abkling-Statement das richtige Werkzeug wäre. Eine Ebene tiefer erbt ρ(W_S) = 0.667–0.939 die M1-Struktur wörtlich; die Drei-Körper-Kumulante ist negativ auf 0.93–1.00 von 4200 Tripeln — ZERTIFIZIERT GUTARTIG (drückt obere Schranken nach unten). Promotions-Liste 47 Posten (10 neu). FAZIT (3 Sätze, zitierfähig): das Lemma existiert klassisch nicht für dieses Objekt, aus arithmetischem Grund; das richtige Objekt ist exakt identifiziert (das Vorzeichen-Gesetz ist jetzt hergeleitet), aber jede Betrags-Hülle daraus ist zertifiziert tot; der gemessene Kern ist von „ein Abkling-Gesetz fehlt" auf „EINE signierte Ungleichung bei Streifen-Distanz b ≤ 16 fehlt" geschrumpft — 30/30, 20.8s, 2876 Zeilen, Sandbox
+# M1 DIE JAFFARD-REFUTATION IST ARITHMETISCH, UND DAS ERSATZ-OBJEKT IST EINE IDENTITÄT.
+#    Der Reihe nach: die Anti-Index-Dominanz M − 1 − r − s ≥ |r − s| + 1 ist exakte
+#    Ganzzahl-Arithmetik, also erbt der Anti-Toeplitz-Teil den Lag-Zerfall des
+#    Toeplitz-Teils, und die zertifizierte Hülle |(A_B)_rs| ≤ |c_d| + max_{k>d}|c_k|
+#    steht per Konstruktion. Aber ihr Exponent ist d^{−0.15}..d^{−0.04} — Jaffard 1990
+#    (und Baskakov/Gröchenig-Leinert für die gewichteten Algebren) verlangt p > 1. Das
+#    ist kein Implementations-Artefakt: Demko-Moss-Smith läuft auf der ehrlich
+#    gebandeten Trunkierung fehlerfrei (75/75), das Versagen am dichten Objekt liegt am
+#    Objekt. Und der Grund ist benannt: die archimedische Hälfte fällt wie ~1/d (die
+#    Grenzlinie selbst), die Primpotenz-Atome legen O(1)-Spikes über das ganze Fenster —
+#    eine ENTRYWISE-Hülle kann die Dünnheit des Kamms prinzipiell nicht sehen. Der
+#    Ausweg ist kein Fit, sondern eine Identität: b_eᵀG b_{e'} = Σ_box H exakt (4e-15),
+#    der gesamte Zerfall EINES zweidimensionalen Kerns, dessen Vorzeichen-Split das
+#    T138-Gesetz HERLEITET (H < 0 auf 0.71–0.87 off-diagonal, H > 0 auf 100% der
+#    Diagonale; disjunkte Paare = Boxen ohne Diagonalzellen). Ehrlich dazu: H-Zerfall
+#    d^{−1.36..−0.89} ist ein FIT, und per Posten (42) darf KEINE entrywise Hülle aus H
+#    je mit dem Vorzeichen-Gesetz kombiniert werden — das wäre wieder die Betrags-Route,
+#    die T137 von unten getötet hat.
+# M2 DIE NIE-ABSCHNEIDENDE REIHE IST TOT, UND ZWAR VON UNTEN — DAS IST DIE INFORMATION.
+#    Weyl 1912 gibt λ_max(Σ) ≤ Σ λ_max, aber jede nichtleere Schicht hat Spur null,
+#    also λ_max > 0: KEINE Schicht darf fallen, wie negativ ihr Mittel auch ist (ein
+#    negatives MITTEL ist kein Loewner-Vorzeichen — der zertifizierte Schwanz ist
+#    positiv auf 85/85 (Fenster, Bandbreite)-Paaren). Die Reihe liefert 3.388–6.171
+#    gegen 0.999182–0.999972 — Überschuss 681–46900×, und dieser Faktor IST die
+#    effektive Schichtzahl: jeder Weyl-Schritt verwirft genau eine Kompensation. Die
+#    Familie ist vorab entschieden, mit demselben Zug, der T137s |E|-Familie tötete:
+#    jede Schichtreihe ≥ max_b Rayleigh(Band_b) = 1.0303–1.1116 > Ziel auf 15/15.
+#    Konsequenz, als Satz formuliert (Posten 44): kein Abkling-Lemma kann eine
+#    Streifen-Schicht-Reihe je unter die Marge bringen — die Schicht-Zerlegung selbst
+#    muss weg, nicht ihre Terme.
+# M3 DER REST IST LOKALISIERT, UND ER IST KLEIN. Die m-Leiter (T138) auf dem neu
+#    gebauten Pool von 620 Rand-Blöcken konvergiert überall und zertifiziert 619/620;
+#    der eine offene Block braucht Faktor 2.15, sein argmax sitzt bei Index-Distanz 15
+#    (fern), ferngetragen 1.000 — das ist das EINE Item, für das ein zertifiziertes
+#    H-Abkling-Statement (R3) das richtige Werkzeug wäre, und selbst das würde per (42)
+#    Item (a) nicht schließen. Eine Ebene tiefer: ρ(W_S) = 0.667–0.939 auf dem
+#    Rand-Paar, erbt die M1-Struktur wörtlich — keine neue Frage, dieselbe Frage. Die
+#    Drei-Körper-Kumulante ist negativ auf 0.93–1.00 der 4200 Tripel (typisch 0.1 der
+#    Zwei-Körper-Summe): der Cluster-Rest drückt obere Schranken nach UNTEN und ist
+#    nicht die Obstruktion. Rest-Liste R1–R5, kürzer als T138s und woanders zeigend:
+#    R1 EINE signierte Klein-Bandbreiten-Ungleichung bei b ≤ 16 (alles, was in M2
+#    scheitert, scheitert dort; alles Fernere ist zertifiziert harmlos), R2 ein Ersatz
+#    für den Weyl-Schritt (jede O(nb)-Dreiecks-Route ist per Konstruktion tot), R3 ein
+#    H-Zerfalls-Statement (optional, klassische Adresse NICHT Jaffard/DMS — beide
+#    schranken Einträge einer Inversen, nicht ihre gemischten Differenzen), R4 der eine
+#    offene Rand-Block, R5 nichts für ρ(W_S) und nichts für den Cluster-Rest. NÜCHTERN:
+#    alle Zerfalls-Exponenten sind Fits; nichts uniform in n; kein Marker bewegt.
+# Serie (XII)–(CL): 139 Proben, 3494/3494 Checks Sandbox + v535–v544 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Jaffard 1990, Baskakov 1990,
+# Gröchenig-Leinert 2006, Demko-Moss-Smith 1984 — verifiziert wo anwendbar, nicht
+# angewendet wo nicht; Gantmacher-Krein 1950/1960, Karlin 1968, Vandebril-Van
+# Barel-Mastronardi 2005, Stieltjes, Ostrowski 1937, Fan 1958, Berman-Plemmons 1979,
+# Varga 1962, Perron 1907/Frobenius 1912, Collatz 1942/Wielandt 1950, Weyl 1912,
+# Gershgorin 1931, Feingold-Varga 1962, Haynsworth 1968, Kirchhoff/Klein-Randic 1993,
+# Mayer/Brydges 1984/Kotecky-Preiss 1986 als Form, nicht als Konvergenzsatz —
+# gerichtet zitiert); Weil 1952 zitiert, nie als Kriterium benutzt; Sandbox ohne
+# Ledger-Zeile für die Probe; kein Zero-Input (AST-Firewall).
+
+# 2026-07-28 (XX) — Teil 138 (Phase „Der volle Beweis", Vertrag SIGN.COMPENSATION): sign_compensation_probe.py — **PAIR-EXACT** — DIE KOMPENSATION IST GEOMETRIE, NICHT STATISTIK, UND DIE ARITHMETISCHE WAND FÄLLT AUF ALLEN 77 TOTEN BLÖCKEN. L1 FINDET DEN MECHANISMUS: das Vorzeichen der Inter-Streifen-Kopplungen folgt der INTERVALL-GEOMETRIE der beiden Kanten — verschachtelte Paare positiv auf 0.76–0.94 der Fläche, kreuzende auf 0.59–0.63, disjunkte auf nur 0.06–0.36 (also überwiegend NEGATIV) — und NICHT der Lag-Distanz; die Kopplungen löschen sich global zu |Σ|/Σ|·| = 0.29–0.70 aus, und DAS ist der Grund für jeden Absolutbetrag-Überschuss der Teile 134–137. Ehrlich negativ dazu: die Lag-Alternation gilt NICHT (Flip-Rate um 0.5), Karlin-Totalpositivität SCHEITERT (nur 0.54–0.65 der TP₂-Minoren nichtnegativ), und die Green-Funktion ist rang-1-dominiert, aber NICHT semiseparabel — die Ein-Paar-Form ist Kandidat, kein Satz. L2 DRÜCKT DEN ÜBERSCHUSS UM DREI GRÖSSENORDNUNGEN UND LOKALISIERT DEN REST: die beste ZERTIFIZIERTE signierte Schranke (Band-exakt per Cholesky + Schwanz per Blockzeilensumme) erreicht 0.9758–1.1020 gegen Ziel 0.998556–0.999979 — 1/16 Fenster geschafft, Überschuss 0.02–565 Gaps gegen T137s 27–8e5, aber KEIN Boden; die Klemme ist gemessen, nicht vermutet: das Band allein kreuzt das Ziel bei b = 2–8, der zertifizierte Schwanz dort ist noch 0.46–0.70 — die beiden Terme sind NIE gleichzeitig klein; der ferne Schwanz ist NETTO-NEGATIV (Abschneiden ERHÖHT ρ auf 59/142 Sprossen — der Schwanz ist kein kleiner Rest, er trägt Kompensation); die Leibniz-Paarung kauft nichts; und die Zwei-Körper-Blöcke sind EXAKT, aber dünn: ≤ 0.6% Gewinn, Drei-Körper bis 2.5× — die Kompensation ist ein VIELTEILCHEN-Effekt. L3 IST DER GEWINN DES TEILS: das m-GEPAARTE NEUMANN-ZERTIFIKAT — aus der Identität (I−F)⁻¹ = (Σ_{j<m}F^j)(I−F^m)⁻¹, nur der äußere Faktor wird majorisiert, Bedingung ρ(|F^m|) < 1, echt schwächer als ρ(|F|) < 1, weil die Vorzeichen im m-fachen Produkt BEHALTEN werden (m = 1 ist wörtlich T137s Zertifikat) — beseitigt die arithmetische Wand auf ALLEN 77 toten Blöcken (ρ(|F^m|) < 1 erreicht überall) und zertifiziert 52 davon; der Pool steigt von 563 auf 875/900 (Mechanismus: max|F^m|/|F|^m fällt auf Median 0.295). Und M17 bekommt seine Charakterisierung: gewhitent ist St = I − W_S mit W_S ⪰ 0, also λ(St) = 1 − λ(W_S) strukturell ≤ 1, und die DIREKTE Kantorovich-Route auf das harmonische Mittel braucht KEINEN bösen Unterraum — sie entspannt die nötige Marge von 0.5 auf 0.8284 (854/900), Status HARMONIC-PARTIAL. Promotions-Liste 37 Posten (7 neu). Ehrliches Fazit: die signierte Route erbt die Absolutbetrag-Wand NICHT — die m-Leiter ist ein echter struktureller Gewinn —, aber die MARGEN-Frage kehrt eine Ebene tiefer wieder (obere Schranke auf ρ(W_S), dieselbe gelumpte-Paar-Marge) — 26/26, 23.4s, 2608 Zeilen, Sandbox
+# L1 DAS VORZEICHEN-GESETZ IST GEOMETRISCH, UND ES IST GEMESSEN, NICHT GEWÜNSCHT. Über
+#    die volle Fläche (jedes geordnete Kanten-Paar) und in der streifen-reduzierten
+#    Form entscheidet die INTERVALL-GEOMETRIE: verschachtelt ⇒ positiv (0.76–0.94),
+#    kreuzend ⇒ gemischt (0.59–0.63), disjunkt ⇒ überwiegend negativ (positiv nur
+#    0.06–0.36). Die naive Lesart „Vorzeichen alterniert mit der Lag-Distanz" ist
+#    FALSCH (Flip-Rate um 0.5 — Münzwurf). Die globale Auslöschung |Σ|/Σ|·| =
+#    0.29–0.70 beziffert, was der Absolutbetrag wegwirft — T137s toter |E|-Faktor in
+#    einer Zahl. Der klassische Kandidat (Jacobi-Stieltjes-Green als Ein-Paar-Kernel,
+#    Gantmacher-Krein/Karlin; zweite Differenzen mit exakter Zwei-Term-Formel, deren
+#    Vorzeichen verschachtelt/kreuzend entscheidet) reproduziert die Green-Funktion
+#    bis auf kleinen Defekt und sagt das Vorzeichen auf dem Großteil der Fläche
+#    voraus — aber A_B ist DICHT: TP₂ scheitert an 0.35–0.46 der Minoren, semiseparabel
+#    ist es nicht. Kandidat dokumentiert, nicht promoviert.
+# L2 DER ÜBERSCHUSS FÄLLT VON FÜNF GRÖSSENORDNUNGEN AUF NULL BIS DREI, UND DIE KLEMME
+#    IST JETZT EIN MESSWERT. Die Band-exakte Route (alle Streifen-Blöcke bis Distanz b
+#    mit Vorzeichen, Cholesky-zertifiziert; nur der ferne Schwanz majorisiert) ist die
+#    beste zertifizierte signierte Schranke: 0.9758–1.1020 gegen echtes ρ(W) =
+#    0.9752–1.0000 und Ziel 0.998556–0.999979 — auf einem Fenster UNTER dem Ziel,
+#    Überschuss sonst 0.02–565 Gaps (T137: 27–8e5). Warum kein Boden: das Band allein
+#    kreuzt das Ziel bei b = 2–8, der zertifizierte Schwanz an der letzten lebenden
+#    Bandbreite ist noch 0.46–0.70 — was fehlt, ist NICHT ein schärferer Schwanz und
+#    NICHT ein billigeres Band-Zertifikat, sondern eine Schranke, die NIE abschneidet.
+#    Dazu passt: der ferne Schwanz ist netto-negativ (Trunkieren ERHÖHT ρ auf 59/142),
+#    die Leibniz/Abel-Paarung bewegt den Schwanz-Majoranten kaum, und die exakten
+#    Zwei-Streifen-Blöcke (das kleinste nichttriviale signierte System, geschlossen
+#    gelöst) gewinnen ≤ 0.6% — Drei-Körper-Terme erreichen 2.5× der Zwei-Körper-Summe:
+#    VIELTEILCHEN, kein Paar-Effekt. Genau diese Lücke (Zerfalls-Gesetz × Vorzeichen-
+#    Gesetz in EINEM Argument) ist T139s Vertrag.
+# L3 DIE m-LEITER IST EIN SATZ, KEIN TRICK, UND SIE BESEITIGT DIE WAND. Die Identität
+#    (I−F)⁻¹ = (Σ_{j<m}F^j)(I−F^m)⁻¹ ist exakt; majorisiert wird NUR der äußere
+#    Faktor, und |F^m| ≤ |F|^m gilt entrywise mit möglicher STRIKTER Ungleichung —
+#    die Vorzeichen im Produkt bleiben. Auf den 77 Blöcken, wo T137s m = 1-Zertifikat
+#    an ρ(|F|) ≥ 1 starb (arithmetisch, nicht an Schwäche der Abschätzung), erreicht
+#    die Leiter ρ(|F^m|) < 1 auf ALLEN, zertifiziert 52, und hebt den Pool von
+#    563/900 auf 875/900 — der Mechanismus ist max|F^m|/|F|^m mit Median 0.295. M17:
+#    die gewhitente Form St = I − W_S (W_S ⪰ 0 per Konstruktion) macht λ(St) ≤ 1
+#    strukturell, und Kantorovich (1948; Greub-Rheinboldt 1959) schrankt das
+#    harmonische Funktional DIREKT — kein böser Unterraum irgendwo —, entspannt die
+#    Schwelle von 0.5 auf 0.8284 und hält sie auf 854/900: HARMONIC-PARTIAL. NÜCHTERN:
+#    die verbleibende Frage ist eine OBERE Schranke auf ρ(W_S) — wörtlich dieselbe
+#    gelumpte-Paar-Marge, eine Ebene tiefer; kein Marker bewegt, die Ein-Paar-Form
+#    nicht promoviert, alle Zerfalls-Exponenten Fits.
+# Serie (XII)–(CXLIX): 138 Proben, 3464/3464 Checks Sandbox + v535–v544 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Stieltjes, Ostrowski 1937,
+# Berman-Plemmons 1979, Fan 1958, Varga 1962, Perron 1907/Frobenius 1912, Collatz
+# 1942/Wielandt 1950, Weyl 1912, Gershgorin 1931, Feingold-Varga 1962,
+# Gantmacher-Krein 1950/1960, Karlin 1968/Fekete 1912, Leibniz/Abel, Kantorovich
+# 1948/Greub-Rheinboldt 1959, Kirchhoff/Klein-Randic 1993, Haynsworth 1968 —
+# gerichtet zitiert; Mayer/Brydges 1984/Kotecky-Preiss 1986 als Form des Rests
+# zitiert, NICHT als Konvergenzsatz; Demko-Moss-Smith 1984 zitiert und NICHT
+# angewendet, A_B ist dicht); Weil 1952 zitiert, nie als Kriterium benutzt; Sandbox
+# ohne Ledger-Zeile für die Probe; kein Zero-Input (AST-Firewall).
+
 # 2026-07-28 (XIX) — Teil 137 (Phase „Der volle Beweis", Vertrag LONG.LAG): long_lag_probe.py — **BOTH-RESIST** (SUPPORT-EXPLICIT / ENVELOPE-DEAD / STRUCTURE-OPEN / GREEN-OPEN) — DER TRÄGER IST JETZT ARITHMETISCH EXPLIZIT, UND DER ABSOLUTBETRAG IST DER TÄTER AUF BEIDEN SEITEN. H1 BENENNT DIE STÖRUNG, UND DER NAME IST ARITHMETISCH: die archimedische Hälfte des Kerns ist außerhalb ihres Nahfelds monoton und trägt in der odd-Sektion NULL positive Off-Diagonalen (0 von 40 Fenstern), also ist die ganze böse Hälfte L_Δ KAMM-ERZEUGT — getragen auf den Anti-Diagonal-STREIFEN r + s = M − 1 − round(u_j/D) an den Primpotenz-Atomen des Fensters (1.00–1.00 der positiven Einträge innerhalb einer Gitterzelle eines Atoms, 4–192 Streifen auf 3–99 Atomen, 1.33–1.97 Streifen/Atom), mit dem zertifizierbaren Amplitudengesetz Δ ≤ c_comb(anti) (die Ein-Atom-Form μ_j/2 ist nur TYPISCH, schlechtestes Verhältnis 2.268), und jeder Streifen ist ein PERFEKTES MATCHING ⇒ L_Δ ist explizit. H2 SCHLIESST DIE HÄLFTE UND LÄSST DIE ANDERE OFFEN: die |E|-Hüllfamilie ist PER ZERTIFIKAT UND VON UNTEN TOT — das Collatz-Wielandt-Unterende gibt ρ(|E|) ≥ 1.3218–2.2963, über 1 auf 35/35 Fenstern, also kann KEINE Gershgorin-Schranke, KEINE Zeilensummen-Norm und KEINE Umskalierung je einen Boden liefern; die Kanten-/Gram-Familie auf den ZWEITEN DIFFERENZEN der Green-Funktion erreicht 1.1530–2.3502 gegen echtes ρ = 0.9752–1.0000 und schlägt das Ziel 0.998879–0.999999 auf 0 von 35 (Überschuss 2.39e1–7.05e5 Gaps), die Vergröberungs-Leiter zeigt warum (die Schranke fällt erst unter 1, wenn der GANZE Gram ein Block ist ⇒ die Inter-Streifen-Kopplung IST das Objekt), und der gemessene Abfall dieser zweiten Differenzen ist ALGEBRAISCH (Abstand^−0.63 ± 0.02, ein FIT), wo Demko-Moss-Smith einen geometrischen bräuchte — A_B ist dicht, der Satz gilt hier nicht. H3 LIEFERT REST-POSTEN (2) UND SCHLIESST IHN DOCH NICHT: die Neumann-Reihe der regulären Zerlegung VON UNTEN gibt (S_B^{-1})_{rs} ≥ max_{k ≤ 6} (J^k)_{rs}/d_s OHNE jeden Fehlerterm — nur ein verworfener NICHTNEGATIVER Rest —, die Partialsumme holt 0.011–0.406 des echten Minimaleintrags, die anker-gewichtete Decke überschießt das Maximum um nur 2.49–12.24 (κ 0.126–0.269), die Green-Funktion ist also ZWEISEITIG durch Pfadgrößen geklammert; aber das Zertifikat für S^{-1} > 0 stoppt bei 563/900 Blöcken (716/900 mit dem vorzeichen-bewussten k-exakten Split, 66/900 aus der Struktur-Klammer allein), weil ρ(|F|) ≥ 1 auf 77 Blöcken — dieselbe Absolutbetrag-Wand wie H2. URSACHE BEIDSEITS: der Absolutbetrag vernichtet die Kompensation; was fehlt, ist eine VORZEICHEN-BEHALTENDE Schranke. Promotions-Liste 30 Posten (8 neu) ⇒ der v543-Batch mit 13 reifen Aussagen — 22/22, 94.3s, Sandbox
 # K1 DER TRÄGER IST EIN KAMM-STREIFENSATZ, UND DAS IST EINE STRUKTUR-AUSSAGE, KEINE
 #    MESSUNG. Die exakte Kernspaltung c = c_arch − c_comb mit c_comb ≥ 0 hat eine

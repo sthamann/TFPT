@@ -111,7 +111,9 @@ export type PrimeFrontVerdict =
   | "SPECTRUM-ONLY"
   | "BOUNDED-STATE"
   | "ONE-CARRIES"
-  | "BOTH-RESIST";
+  | "BOTH-RESIST"
+  | "PAIR-EXACT"
+  | "DENSE-RESISTS";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -135,6 +137,28 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-28",
+    part: 139,
+    title:
+      "The decay lemma does not exist classically for this object, and the reason is arithmetic — Jaffard's hypothesis fails as certified, the sign law of T138 is DERIVED from one exact telescoping identity, and the measured core shrinks to ONE signed inequality at stripe distance b ≤ 16",
+    verdict: "DENSE-RESISTS",
+    summary:
+      "T139 (DENSE-RESISTS, 30/30, 20.8 s, bars declared in the docstring before any number) — contract GREEN.DECAY: does the classical dense-matrix literature supply the decay lemma T138 named as the one missing input? (1) The lemma fails AT THE HYPOTHESIS, and the reason is arithmetic: the certified kernel envelope of the lumped pair decays only like d^−0.15..d^−0.04 where Jaffard 1990 needs p > 1 — the archimedean lags sit ON the borderline (~1/d) and the prime-power atoms lay O(1) spikes across the whole window, so no entrywise envelope can see the thinness of the comb. The constant chain is built constructively rather than asserted: Demko–Moss–Smith VERIFIED where it applies (75/75 banded rungs, so the failure on the dense object is a statement about the object), operator gate 0.97–1.83 (1/75 below 1), algebra gate 3.4–1.6e3 (0/75); and the exponent is NOT inherited (kernel d^−1.5..−1.1 against inverse d^−0.52..−0.37). The positive replacement object is an identity, not a fit: the exact double telescoping b_eᵀG b_e′ = Σ_box H (4e-15), with H negative on 0.71–0.87 of the off-diagonal and positive on 100% of the diagonal — T138's ENTIRE geometric sign law FOLLOWS from one kernel plus box geometry, derived instead of measured (the Gantmacher–Krein one-pair form is quantitatively dead). (2) The never-truncating layer series is killed FROM BELOW: it delivers 3.388–6.171 against a target of 0.999182–0.999972 (0/15, overshoot 681–46900×), and triple direction pedantry pays — no layer may be dropped (zero trace forces λ_max > 0), Gram ⪯ Band_b holds NEVER (85/85), and by Weyl every layer series is ≥ max_b Rayleigh(Band_b) = 1.0303–1.1116 > target on 15/15 — so NO decay lemma of any strength can rescue the family, and the overshoot IS the effective layer count, growing with the window. (3) Clean-up: on a rebuilt pool of 620 border blocks the m-paired ladder out to m = 48 converges on all 620 and certifies 619/620 — the one open block (need 2.15) has its tightness at index distance 15, far from the diagonal: the single item for which an H-decay statement would be the right tool. One level down, ρ(W_S) = 0.667–0.939 inherits the structure verbatim; the three-body cumulant is negative on 0.93–1.00 of 4200 stripe triples — certified BENIGN (it pushes upper bounds down). Promotion list 47 items (10 new). The three-sentence conclusion, quotable: the lemma does not exist classically for this object, for an arithmetic reason; the right object is now identified exactly (the sign law is derived), but every absolute-value envelope built from it is certified dead; the measured core has shrunk from 'a decay law is missing' to 'ONE signed inequality at stripe distance b ≤ 16 is missing'. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "green_decay_probe.py",
+  },
+  {
+    date: "2026-07-28",
+    part: 138,
+    title:
+      "The compensation is geometry, not statistics — the sign of every inter-stripe coupling follows the interval geometry of its two edges — and the m-paired Neumann certificate removes the arithmetic wall on all 77 dead blocks (pool 563 → 875/900)",
+    verdict: "PAIR-EXACT",
+    summary:
+      "T138 (PAIR-EXACT, 26/26, 23.4 s) — contract SIGN.COMPENSATION: KEEP the cancellation instead of majorising it, and nothing else. (1) The mechanism is found and it is geometric: the sign of an inter-stripe coupling is decided by the INTERVAL GEOMETRY of the two edges — nested pairs positive on 0.76–0.94 of the area, crossing on 0.59–0.63, disjoint on only 0.06–0.36 (i.e. mostly negative) — and NOT by the lag distance (the alternation reading is false, flip rate near 0.5); the couplings cancel globally to |Σ|/Σ|·| = 0.29–0.70, which is the one-number reason for every absolute-value overshoot of parts 134–137. Honest negatives beside it: Karlin total positivity FAILS (only 0.54–0.65 of the TP₂ minors nonnegative) and the Green function is rank-one dominated but NOT semiseparable — the one-pair form stays a candidate, not a theorem. (2) The best CERTIFIED signed bound (band-exact by Cholesky, tail by block row sums) reaches 0.9758–1.1020 against a target of 0.998556–0.999979 — clearing 1 of 16 windows, overshoot 0.02–565 gaps against T137's 27–8e5: three orders of magnitude better, and still no floor. The clamp is measured, not conjectured: the band part alone crosses the target at b = 2–8 while the certified tail there is still 0.46–0.70 — the two terms are never small together; the far tail is NET NEGATIVE (truncation RAISES ρ on 59/142 rungs); the Leibniz pairing buys nothing; and the exact two-stripe blocks are thin (≤ 0.6% gain, three-body terms up to 2.5× — the compensation is a MANY-BODY effect). (3) The gain of the part: the m-PAIRED NEUMANN CERTIFICATE — from the identity (I−F)⁻¹ = (Σ_{j<m}F^j)(I−F^m)⁻¹, majorising only the outer factor, with the genuinely weaker condition ρ(|F^m|) < 1 (signs kept inside the m-fold product; m = 1 is verbatim T137's certificate) — removes the arithmetic wall on ALL 77 dead blocks and certifies 52 of them; the pool rises from 563 to 875/900 (mechanism: max|F^m|/|F|^m falls to median 0.295). And M17 gets its characterisation: whitened, St = I − W_S with W_S ⪰ 0, and the direct Kantorovich harmonic-mean route needs no bad subspace anywhere, relaxing the required margin from 0.5 to 0.8284 (854/900) — HARMONIC-PARTIAL. Promotion list 37 items (7 new). The honest conclusion: the signed route does NOT inherit the absolute-value wall — the m-ladder is a real structural gain — but the margin question returns one level down, as an upper bound on ρ(W_S). Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "sign_compensation_probe.py",
+  },
   {
     date: "2026-07-28",
     part: 0,

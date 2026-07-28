@@ -232,7 +232,17 @@ export function TwoDoorsConvergence() {
           the whole absolute-value envelope family DEAD from below
           (ρ(|E|) ≥ 1.32 on 35/35), leaving one named residue: a sign-preserving
           bound. Thirteen statements from both parts are promoted as v543 and
-          v544; T138 (sign_compensation_probe.py) is running at that residue.
+          v544. T138 · SIGN.COMPENSATION (PAIR-EXACT, 26/26) found the
+          mechanism: the coupling sign follows the interval geometry of the
+          two edges, and the m-paired Neumann certificate removes the
+          arithmetic wall on all 77 dead blocks (pool 563 → 875/900) — the
+          margin question returns one level down as ρ(W_S). T139 · GREEN.DECAY
+          (DENSE-RESISTS, 30/30) refuted the classical decay lemma at its
+          hypothesis, arithmetically — while deriving T138&apos;s sign law from
+          one exact telescoping identity and killing the layer series from
+          below; the core shrinks to one signed inequality at stripe distance
+          b ≤ 16, and T140 (signed_band_probe.py) is running at exactly that
+          inequality.
         </p>
       </div>
 

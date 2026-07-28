@@ -89,7 +89,7 @@ obstructions, the amplitude route with a positive linear carrier, the matching-l
 ledger package, and --- out of the second phase --- the margin-chain identities, the lumped
 $M$-matrix pair and the long-lag support structure. Everything beyond those ten is
 \emph{sandbox}: an exploratory program, run as
-$137$ preregistered probes with $3438$ machine checks, which localized the residual object. That
+$139$ preregistered probes with $3494$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -258,7 +258,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots135$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots139$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -266,7 +266,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T137: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T139: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -277,7 +277,12 @@ and a bounded seam state where the Weil window provably has none (T135), and fin
 $M$-matrix pair, which closes the a-priori radius item by Varga's identity while the exact
 $D$-bookkeeping puts the whole loss in the margin (T136, promoted as \vref{v543}), and the long
 lags, whose support turns out to be an arithmetic stripe set and whose absolute-value envelope
-family is certified \emph{dead} (T137, promoted as \vref{v544})); Section~\ref{sec:status}
+family is certified \emph{dead} (T137, promoted as \vref{v544}) --- and finally the compensation
+itself, whose sign law turns out to be \emph{interval geometry} while the $m$-paired Neumann
+certificate removes the arithmetic wall on all $77$ dead blocks (T138), and the classical decay
+lemma, refuted at its hypothesis for an arithmetic reason while the sign law is \emph{derived}
+from one exact telescoping identity and the measured core shrinks to one signed inequality at
+stripe distance $b\le16$ (T139)); Section~\ref{sec:status}
 is the status statement.
 
 % =====================================================================
@@ -3108,7 +3113,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T137)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T139)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -4054,7 +4059,94 @@ cut works); the Green lower bound asked for under \emph{(1)} is delivered two-si
 together with \emph{(2)} the zone-uniform exponent and \emph{(5)} the quantifier.
 \end{keybox}
 
-\noindent T138 (\texttt{sign\_compensation\_probe.py}) is running at exactly that residue.
+\subsection{The sign law is interval geometry, and the $m$-paired certificate removes the arithmetic wall (T138)}
+T138 (\texttt{sign\_compensation\_probe.py}, contract \texttt{SIGN.COMPENSATION}, $26/26$, verdict
+\textsc{pair-exact}) keeps the cancellation instead of majorising it, and finds the mechanism. The
+sign of an inter-stripe coupling is decided by the \textbf{interval geometry} of its two edges ---
+nested pairs positive on $0.76$--$0.94$ of the area, crossing pairs on $0.59$--$0.63$, disjoint pairs
+on only $0.06$--$0.36$ (i.e.\ mostly \emph{negative}) --- and \emph{not} by the lag distance (the
+alternation reading is false, flip rate near $0.5$). The couplings cancel globally to
+$|\Sigma|/\Sigma|\cdot|=0.29$--$0.70$: that one number is the reason for every absolute-value
+overshoot of T134--T137. The honest negatives stand beside it: Karlin total positivity \emph{fails}
+(only $0.54$--$0.65$ of the TP$_2$ minors nonnegative), and the Green function is rank-one dominated
+but \emph{not} semiseparable --- the Gantmacher--Krein one-pair form stays a candidate, not a theorem.
+
+The best \emph{certified} signed bound (band-exact by completed Cholesky, tail by block row sums)
+reaches $0.9758$--$1.1020$ against a target of $0.998556$--$0.999979$ --- clearing $1$ of $16$
+windows, overshoot $0.02$--$565$ gaps against T137's $27$--$8\times10^{5}$: three orders of magnitude
+better, and still no floor. The clamp is measured, not conjectured: the band part alone crosses the
+target at bandwidth $b=2$--$8$ while the certified tail there is still $0.46$--$0.70$ --- the two
+terms are never small together; the far tail is \emph{net negative} (truncation \emph{raises} $\rho$
+on $59/142$ rungs, so the tail is no small remainder --- it carries compensation); the Leibniz
+pairing buys nothing; and the exact two-stripe blocks are thin ($\le0.6\%$ gain, three-body terms up
+to $2.5\times$): \textbf{the compensation is a many-body effect}.
+
+The gain of the part is the \textbf{$m$-paired Neumann certificate}. From the identity
+$(I-F)^{-1}=\bigl(\sum_{j<m}F^{j}\bigr)(I-F^{m})^{-1}$ only the \emph{outer} factor is majorised, so
+the condition is $\rho(|F^{m}|)<1$ --- genuinely weaker than $\rho(|F|)<1$, because the signs inside
+the $m$-fold product are kept ($m=1$ is verbatim T137's certificate). It removes the arithmetic wall
+on \emph{all} $77$ dead blocks and certifies $52$ of them; the pool rises from $563$ to $875/900$
+(mechanism: $\max|F^{m}|/|F|^{m}$ falls to median $0.295$). And M17 gets its characterisation:
+whitened, $\mathrm{St}=I-W_S$ with $W_S\succeq0$, so $\lambda(\mathrm{St})\le1$ structurally, and the
+\emph{direct} Kantorovich harmonic-mean route needs no bad subspace anywhere, relaxing the required
+margin from $0.5$ to $0.8284$ ($854/900$) --- \textsc{harmonic-partial}. The honest conclusion: the
+signed route does \emph{not} inherit the absolute-value wall --- the $m$-ladder is a real structural
+gain --- but the margin question returns one level down, as an upper bound on $\rho(W_S)$.
+
+\subsection{The decay lemma is refuted at its hypothesis, and the sign law is derived (T139)}
+T139 (\texttt{green\_decay\_probe.py}, contract \texttt{GREEN.DECAY}, $30/30$, verdict
+\textsc{dense-resists}, bars declared in the docstring before any number) asks whether the classical
+dense-matrix literature supplies the decay lemma T138 named as the one missing input --- and the
+answer is an \emph{arithmetic} refusal. The lemma fails \textbf{at the hypothesis}: the certified
+kernel envelope of the lumped pair decays only like $d^{-0.15}$--$d^{-0.04}$ where Jaffard 1990 needs
+$p>1$ --- the archimedean lags sit \emph{on} the borderline ($\sim1/d$) and the prime-power atoms lay
+$O(1)$ spikes across the whole window, so no entrywise envelope can see the thinness of the comb. The
+constant chain is built constructively rather than asserted: Demko--Moss--Smith is \emph{verified}
+where it applies ($75/75$ banded rungs --- the failure on the dense object is a statement about the
+object), the operator gate reads $0.97$--$1.83$ ($1/75$ below $1$), the algebra gate
+$3.4$--$1.6\times10^{3}$ ($0/75$); and the exponent is \emph{not} inherited (kernel
+$d^{-1.5\ldots-1.1}$ against inverse $d^{-0.52\ldots-0.37}$). The positive replacement object is an
+identity, not a fit: the exact double telescoping
+$b_e^{\mathsf T}Gb_{e'}=\sum_{\mathrm{box}}H$ ($4\times10^{-15}$), with the mixed second-difference
+kernel $H$ negative on $0.71$--$0.87$ of the off-diagonal and positive on $100\%$ of the diagonal ---
+\textbf{T138's entire sign law follows from one kernel plus box geometry} (disjoint pairs have boxes
+missing the diagonal), derived instead of measured; the Gantmacher--Krein one-pair form is
+quantitatively dead.
+
+The never-truncating layer series is then killed \emph{from below}. It delivers $3.388$--$6.171$
+against a target of $0.999182$--$0.999972$ ($0/15$, overshoot $681$--$46900\times$), and triple
+direction pedantry pays: no layer may be dropped (zero trace forces $\lambda_{\max}>0$, and a
+negative \emph{mean} is not a Loewner sign), $\mathrm{Gram}\preceq\mathrm{Band}_b$ holds \emph{never}
+($85/85$), and by Weyl every layer series is
+$\ge\max_b\mathrm{Rayleigh}(\mathrm{Band}_b)=1.0303$--$1.1116$, above the target on $15/15$ windows
+--- \textbf{no decay lemma of any strength can rescue the family}, and the overshoot \emph{is} the
+effective layer count, growing with the window. The clean-up localises the rest: on a rebuilt pool of
+$620$ border blocks the $m$-paired ladder out to $m=48$ converges on all $620$ and certifies
+$\mathbf{619/620}$ --- the one open block (need $2.15$) has its tightness at index distance $15$,
+far-carried $1.000$: the single item for which an $H$-decay statement would be the right tool. One
+level down, $\rho(W_S)=0.667$--$0.939$ inherits the structure verbatim; the three-body cumulant is
+negative on $0.93$--$1.00$ of $4200$ stripe triples --- certified \emph{benign} (it pushes upper
+bounds down). The three-sentence verdict, quotable: the lemma does not exist classically for this
+object, for an arithmetic reason; the right object is now identified exactly (the sign law is
+derived), but every absolute-value envelope built from it is certified dead; \textbf{the measured
+core has shrunk from ``a decay law is missing'' to ``one signed inequality at stripe distance
+$b\le16$ is missing''}.
+
+\begin{keybox}[After T139: forty-seven promotion items, and a rest list led by one signed inequality]
+The promotion list grows from thirty to \textbf{forty-seven} per-instance items ($7$ new in T138,
+$10$ in T139). The sign-preserving bound T137 asked for is now \emph{located} rather than merely
+named: everything that fails, fails at stripe distance $b\le16$ --- the far layers are certifiably
+harmless (the tail is net negative, the three-body remainder certified benign, the border pool at
+$619/620$) --- so \emph{(R1)} is \textbf{one signed small-bandwidth inequality} that keeps the
+cancellation among the first few stripe layers (a signed block-Rayleigh or interlacing step, not a
+norm). Behind it: \emph{(R2)} a replacement for the Weyl step (any $O(nb)$ triangle-inequality route
+is dead by construction), \emph{(R3)} an optional certified decay statement for $H$ (which by
+construction cannot close R1 --- every entrywise envelope is an absolute-value route), the same
+margin question one level down ($\rho(W_S)$), and, unchanged, the zone-uniform exponent and the
+quantifier.
+\end{keybox}
+
+\noindent T140 (\texttt{signed\_band\_probe.py}) is running at exactly that inequality.
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
@@ -4437,7 +4529,13 @@ sitting in the margin and M17 closes \emph{negatively} (the bad subspace is delo
 anti-diagonal stripes at the prime-power atoms, each a perfect matching, amplitude certified) and
 \emph{killed a whole family by certificate}: $\rho(|E|)\ge1.32$ from below on $35/35$ windows, so no
 absolute-value bound can ever supply a floor --- the residue is one named object, a sign-preserving
-bound. The identity and structure
+bound. T138 (\texttt{sign\_compensation\_probe.py}, \textsc{pair-exact}) kept the signs and found the
+mechanism --- the coupling sign follows the \emph{interval geometry} of the two edges, and the
+$m$-paired Neumann certificate removes the arithmetic wall on all $77$ dead blocks (pool
+$563\to875/900$) --- while T139 (\texttt{green\_decay\_probe.py}, \textsc{dense-resists}) refuted the
+classical decay lemma \emph{at its hypothesis}, arithmetically, derived the sign law from one exact
+telescoping identity and killed the never-truncating layer series from below: the measured core
+shrinks to \emph{one signed inequality at stripe distance $b\le16$}. The identity and structure
 blocks underneath the map are no longer sandbox: they are promoted as \vref{v542}, \vref{v543} and
 \vref{v544} (Sections~\ref{sec:v542}--\ref{sec:v544}). And the \emph{reverse-flow} parts have landed --- T132
 (\texttt{bd\_seam\_probe.py}) made the Beurling--Deny triad an operator discriminator for
@@ -4518,19 +4616,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T137}\label{app:index}
+\section{Probe index, diary parts T11--T139}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $127$ parts T11--T137 that the current diary file records
-($128$ runs --- T104 was a double run with two independent arms --- and $3246$ green checks); the ten
+load-bearing artefact. The index covers the $129$ parts T11--T139 that the current diary file records
+($130$ runs --- T104 was a double run with two independent arms --- and $3302$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v544} promoted; with T126--T137, the first twelve parts of the second phase, the
-running totals are \textbf{$137$ probes and $3438/3438$ checks}. T138
-(\texttt{sign\_compensation\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v544} promoted; with T126--T139, the first fourteen parts of the second phase, the
+running totals are \textbf{$139$ probes and $3494/3494$ checks}. T140
+(\texttt{signed\_band\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -4673,6 +4771,8 @@ T134 & \texttt{\scriptsize pole\_\allowbreak free\_\allowbreak floor} & the thre
 T135 & \texttt{\scriptsize comb\_\allowbreak compressibility} & the third \emph{reverse-flow} trace: the T116 Riccati machinery ported \emph{verbatim} to the seam DtN $\Lambda_\Sigma$ (bordered identity $1.5\times10^{-16}$, banded $m$-march $=$ dense state to $8.2\times10^{-16}$; pole candidate the rank-$8$ Calder\'on polarisation on the $16$ residue classes, documented as a \emph{model}) --- census not a kill: $100.00\%$ of the off-band mass on the mod-$4$ stripes (complement machine zero), stripe count exactly $\lfloor W/4\rfloor=\Theta(W)$ (exponent $1.0000\pm0.0000$) against the true prime comb's $\pi(W)$-like $0.726\pm0.018$; \textbf{the core number $m_{\mathrm{cert}}=12$}: error/margin $3.3\times10^{-16}$ exact ($h=64$--$1500$) and $2.1\times10^{-17}$ certified ($h=1000$--$100{,}000$, \emph{falling} in $h$) against T116's $1.3\times10^{2}$--$1.1\times10^{6}$ \emph{above} the margin; $m=4\to48$ divides the error by $4.7\times10^{8}$ (T116: no decay); $12\in\{8,12,16,24,32\}$ pre-declared $\Rightarrow$ \textsc{matched}, not derived (bar-fragile: $8\le m_{\mathrm{cert}}\le16$ defensible); controls: mod-$3$ also closes ($m=8$) $\Rightarrow$ the driver is \textbf{weight summability}, not comb periodicity; the \emph{true} prime comb \emph{fails} under identical machinery (error/margin $0.16$--$0.27$ rising, $12\times$ state buys $1.69\times$) --- non-vacuity established; sober: \texttt{QEC.SEAM.01} \emph{not} advanced, $m_{\mathrm{cert}}$ partly circular ($16$ channels by hand), model DtN not the raw seam; new: finite-dimensionality visible in a \emph{recursion}, not only a spectrum, with the Weil window as the proved contrast & BOUNDED-STATE & 13/13\\
 T136 & \texttt{\scriptsize m\_\allowbreak matrix\_\allowbreak pair} & the $M$-matrix question T134 left open, and \textbf{one of three goals closes outright}: the classical row-sum criterion is \emph{vacuous} at the border ($900/900$ negative row sums --- the same sign failure), but \textbf{Varga's regular splitting makes $\rho(J)=\tau/(1+\tau)$ an identity} for the lumped Stieltjes comparison and the Collatz--Wielandt bound at the $M$-matrix anchor vector reproduces the measured $\rho=0.709$--$0.990$ with a gap shortfall of only $1.00$--$1.03$, \emph{flat} in $D$ and in the zone on $900/900$ (a priori $\rho\le0.7160$--$0.9903$, bar $10$) $\Rightarrow$ rest item \emph{(3)} \textbf{closed}, two solves instead of a spectrum; the pair itself resists with an \emph{exact} anatomy: anchor half certifiable losing $\le1.51$, but margin $1-\rho(E)$ only $2.5\times10^{-6}$--$2.5\times10^{-2}$ wide against cheap $\rho(E)$ bounds at $1.82$--$3.11$, the shifted ladder empty \emph{by} monotonicity of $M$-matrix inverses (Berman--Plemmons), and the three-way split $\lambda_{\min}(A)\sim D^{2.27}=D^{-0.56}\times D^{2.72}\times D^{0.12}$ (anchor $\times$ gap $\times$ slack; fitted exponents) putting the \emph{whole} degradation in the margin against an anchor that improves with depth; \textbf{M17 closes negatively}: the bad pencil subspace is \emph{delocalised} (participation $0.54$--$0.98$, $91\%$ of cells for $90\%$ of the mass, flatness $0.98$), its dimension tracking the atom count ($n_{\mathrm{bad}}/n_{\mathrm{at}}=1.64$) not the grid, so $\sigma_b(k)\ge0.646$ and no cut brings M18 under $0.50$ (best $2.76$--$7.00$) --- what M18 needs is a localisation \emph{statement}; promotion list $15\to22$ ($\to$ \vref{v543}) & ONE-CARRIES & 30/30\\
 T137 & \texttt{\scriptsize long\_\allowbreak lag} & the long lags named, and \textbf{a whole bounding family killed by certificate}: the archimedean half carries \emph{no} positive off-diagonal ($0$ of $40$ windows), so $L_\Delta$ is entirely \textbf{comb-generated} --- supported on the anti-diagonal stripes $r+s=M-1-\mathrm{round}(u_j/D)$ at the prime-power atoms ($1.00$--$1.00$ of the positive entries within one grid cell of an atom, $4$--$192$ stripes on $3$--$99$ atoms, $1.33$--$1.97$ per atom), each stripe a \emph{perfect matching} (orthogonal edges, $2\times2$ blocks), with the certifiable amplitude law $\Delta\le c_{\mathrm{comb}}(\mathrm{anti})$ (the single-atom $\mu_j/2$ only \emph{typical}, worst ratio $2.268$); \textbf{the $|E|$-envelope family is dead by a lower bound}: Collatz--Wielandt from below gives $\rho(|E|)\ge1.3218$--$2.2963$, above $1$ on $35/35$, so no Gershgorin bound, no row-sum norm and no rescaling can \emph{ever} produce a floor; the surviving edge/Gram family (second differences of the Green function) reaches $1.1530$--$2.3502$ against a true $\rho$ of $0.9752$--$1.0000$ and clears the target on $0$ of $35$ (overshoot $24$--$7.1\times10^{5}$ gaps), the coarsening ladder crossing $1$ only when the entire Gram is one block $\Rightarrow$ \emph{the inter-stripe coupling is the object}, decay algebraic $\mathrm{dist}^{-0.63}$ (fit; Demko--Moss--Smith \emph{not} applicable, $A_B$ dense); \textbf{rest item (2) delivered}: the Neumann series bounds the Green function from below with \emph{no} error term (recovering $0.011$--$0.406$ of the minimum entry) and the anchor-weighted ceiling from above (overshoot $2.49$--$12.24$), yet the $S^{-1}>0$ certificate still stops at $563/900$ ($716/900$ $k$-exact, $66/900$ structural) because $\rho(|F|)\ge1$ on $77$ blocks --- \emph{the same wall}: the absolute value destroys the cancellation, and the residue is a sign-preserving bound; promotion list $22\to30$ ($\to$ \vref{v544}) & BOTH-RESIST & 22/22\\
+T138 & \texttt{\scriptsize sign\_\allowbreak compensation} & the cancellation \textbf{kept instead of majorised}, and the mechanism found: the sign of an inter-stripe coupling follows the \textbf{interval geometry} of its two edges --- nested positive on $0.76$--$0.94$ of the area, crossing $0.59$--$0.63$, disjoint only $0.06$--$0.36$ (mostly negative) --- \emph{not} the lag distance (flip rate near $0.5$), with global cancellation $|\Sigma|/\Sigma|\cdot|=0.29$--$0.70$ (the one-number reason for every absolute-value overshoot); honest negatives: Karlin TP$_2$ \emph{fails} ($0.54$--$0.65$ of the minors), Green rank-one dominated but \emph{not} semiseparable; the best \textbf{certified} signed bound (band-exact Cholesky $+$ block row-sum tail) reaches $0.9758$--$1.1020$ against target $0.998556$--$0.999979$ --- $1/16$ windows, overshoot $0.02$--$565$ gaps against T137's $27$--$8\times10^{5}$, three orders better and no floor; the clamp \emph{localises}: the band crosses the target at $b=2$--$8$ with the certified tail still $0.46$--$0.70$ (never small together), the far tail is \textbf{net negative} (truncation raises $\rho$ on $59/142$ rungs), Leibniz pairing buys nothing, two-body exact but thin ($\le0.6\%$; three-body up to $2.5\times$ --- a \emph{many-body} effect); \textbf{the $m$-paired Neumann certificate} ($(I-F)^{-1}=(\sum_{j<m}F^j)(I-F^m)^{-1}$, only the outer factor majorised, condition $\rho(|F^m|)<1$) removes the arithmetic wall on \emph{all} $77$ dead blocks, certifies $52$, pool $563\to875/900$ ($\max|F^m|/|F|^m$ median $0.295$); M17 whitened: $\mathrm{St}=I-W_S$, $W_S\succeq0$, direct Kantorovich harmonic-mean route with no bad subspace, margin relaxed $0.5\to0.8284$ ($854/900$, \textsc{harmonic-partial}); promotion list $30\to37$; the margin question returns one level down ($\rho(W_S)$) & PAIR-EXACT & 26/26\\
+T139 & \texttt{\scriptsize green\_\allowbreak decay} & the decay lemma \textbf{refuted at its hypothesis, arithmetically}: the certified kernel envelope decays $d^{-0.15}$--$d^{-0.04}$ where Jaffard 1990 needs $p>1$ --- the archimedean lags sit \emph{on} the borderline ($\sim1/d$), the prime-power atoms lay $O(1)$ spikes across the window (no envelope sees the comb's thinness); constant chain constructive: Demko--Moss--Smith \emph{verified where applicable} ($75/75$ banded rungs), operator gate $0.97$--$1.83$ ($1/75$), algebra gate $3.4$--$1.6\times10^{3}$ ($0/75$); exponent \emph{not} inherited (kernel $d^{-1.5\ldots-1.1}$ vs inverse $d^{-0.52\ldots-0.37}$); the replacement is an \textbf{identity}: $b_e^{\mathsf T}Gb_{e'}=\sum_{\mathrm{box}}H$ exactly ($4\times10^{-15}$), $H<0$ on $0.71$--$0.87$ off-diagonal, $H>0$ on $100\%$ of the diagonal $\Rightarrow$ \textbf{T138's whole sign law derived} from one kernel plus box geometry (Gantmacher--Krein one-pair quantitatively dead); the never-truncating layer series \textbf{killed from below}: $3.388$--$6.171$ vs target $0.999182$--$0.999972$ ($0/15$, overshoot $681$--$46900\times$ $=$ the effective layer count), zero trace forbids dropping any layer, $\mathrm{Gram}\preceq\mathrm{Band}_b$ \emph{never} ($85/85$), Weyl floor $\max_b\mathrm{Rayleigh}(\mathrm{Band}_b)=1.0303$--$1.1116>$ target on $15/15$ --- no decay lemma can rescue it; clean-up: $m$-ladder to $m=48$ certifies $619/620$ border blocks (the one open: need $2.15$, tightness at index distance $15$), $\rho(W_S)=0.667$--$0.939$ inherits the structure verbatim, three-body cumulant negative on $0.93$--$1.00$ of $4200$ triples (certified \emph{benign}); promotion list $37\to47$; \textbf{the core shrinks to one signed inequality at stripe distance $b\le16$} & DENSE-RESISTS & 30/30\\
 \end{xltabular}
 }
 
