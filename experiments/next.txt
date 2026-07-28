@@ -1,3 +1,89 @@
+# 2026-07-28 (II) — Teil 120 (delegiert, die Harnack-Ungleichung — Vertrag HARNACK): harnack_probe.py — **HARNACK-EXPLAINED** — DER HARTE KERN IST JETZT BEWEISFÖRMIG, UND DIE NEBEN-DEFEKTE SIND SCHÄRFER UND SCHLECHTER: R ≈ 1 ist keine Konstante, sondern PARITÄTS-SYMMETRIE — a_j und w_j sind die ungerade und die gerade Hälfte EINER Inkrement-Folge v desselben u, um genau eine feine Zelle verschoben; gegeben ein Vorzeichen auf den Ecken-Zellen (gemessen auf 100% von ihnen, 3915 Zeilen) ist die Differenz der Paritäts-Summen eine Summe über DISJUNKTE Nachbar-Paare, also |R−1| ≤ Σ|v_{2j+1}−v_{2j}|/Σ|v_{2j}| ≤ 0.04745 UNBEDINGT (Zertifikat C1, dominiert die Messung ausnahmslos auf 3112/3112 vorzeichen-reinen Zeilen, zerfällt wie n_C^−0.58); R ∈ [0.9098, 1.1011] im Ecken-Regime, κ_end ≥ 0.480827 für n_C ≥ 8, und die PRO-ZELLEN-Harnack-Ungleichung ist FALSCH (|a_j/w_j| bis 4.8e3) — nur die summierte Form gilt, genau die bewiesene; ZWEI NEGATIV-Resultate, die zählen: der 40×40-Ecken-Block von T⁻¹ ist eintragsweise positiv (18/18 Zeilen, Checkerboard exakt widerlegt), aber NICHT TP2 (Minor-Anteil 0.51–0.88 — Gantmacher–Krein zu), und K⁻¹ des exakten Inkrement-RWP Kv = s − u₀G1 (Residuum 2.4e-12) ist NICHT eintragsweise positiv (Anteil 0.44–0.51, min −333) — das diskrete Maximum-Prinzip ist nicht unbewiesen, sondern FALSCH (u monoton an der Ecke, oszillatorisch im Bulk: der Kamm); das α-AUDIT macht D2 TOTAL: das Frame-Fenster ist kein freier Parameter (α_o = u_k/2 + O(D), 732 Übergaben, nur 1.4% mit α ≤ 2), B = −1.0474 ist universell (Spread 1.2e-6), das D₀-Kriterium hält auf exakt 3/1492 Zonen (alle n ≤ 4, α* = 0.693 — UNTER der ersten zulässigen Übergabe n = 7); γ hat eine exakte Symbol-Formel (σ_cσ_z − τ² = f(θ)f(θ+π), 3.9e-16), aber 1−γ² FÄLLT mit α (Slope −0.297 ± 0.013, Bereich 0.079–0.283); Satz V4: 18 Glieder, DEFEKT-LISTE 4 (war 3) — der harte Kern wurde viel leichter, die Neben-Defekte schärfer — 21/21, 8.5s, Sandbox
+# R1 DAS α-AUDIT — D2 IST NICHT GEGENSTANDSLOS, SONDERN TOTAL: das Frame-
+#    Fenster ist kein freier Parameter — in Frame A ist die Übergabe an die
+#    Zone gepinnt, α_o = u_k/2 + O(D) exakt (max-Abweichung 1.5e-2 über alle
+#    732 zulässigen Übergaben); nur 1.4% der Übergaben haben α ≤ 2.00 (erste
+#    Zone darüber: n = 59). B = −1.0474 ist eine Eigenschaft des
+#    archimedischen Kerns allein und damit universell (Spread 1.2e-6), also
+#    ist das D₀-Kriterium log(1/D_frame) ≥ Ξ(α) + B auf allen 1492 Zonen
+#    auswertbar: es hält auf exakt 3 (n = 2, 3, 4), α* = 0.693 — UNTER der
+#    ersten zulässigen Übergabe n = 7; KEINE Stufe der Induktion ist von der
+#    unbedingten D₀-Route gedeckt (benötigtes M explodiert auf 2.4e2–1.7e188).
+#    Fallbacks gemessen und etikettiert: (a) das Kamm-Supremum ist real nur
+#    0.038–0.603 der Ξ-Kappe (Inkohärenz-Gewinn bis 1.7×, aber ein
+#    Gitter-Supremum — MESSUNG, nie Zertifikat; bräuchte eine
+#    Exponentialsummen-Abschätzung über Primpotenzen); (b) der
+#    Large-Sieve-Boden (Montgomery–Vaughan 1974) ist positiv auf 2/6 Zonen —
+#    bei n = 32, wo inf σ_z = −0.45: die Dip-Route kauft echt etwas — und
+#    stirbt jenseits α ≈ 2.
+# R2 VORZEICHEN-STRUKTUR — ZWEI NEGATIV-RESULTATE, DIE ZÄHLEN: der
+#    40×40-Ecken-Block von T⁻¹ ist eintragsweise positiv (18/18 Zeilen ohne
+#    Ausnahme), Checkerboard exakt widerlegt (0.5000, Münzwurf) — aber NICHT
+#    TP2 (Minor-Anteil nur 0.51–0.88: die Gantmacher–Krein-Oszillations-
+#    Matrix-Route ist ZU), und T ist keine M-Matrix (der negative
+#    Nebendiagonal-Anteil FÄLLT mit α). Die Inkremente lösen ein EXAKTES
+#    diskretes Randwertproblem Kv = s − u₀G1 (K = D₁TL, Residuum 2.4e-12)
+#    mit glatter, positiver rechter Seite — die korrekte klassische Form für
+#    ein Maximum-Prinzip-Argument — aber **K⁻¹ ist NICHT eintragsweise
+#    positiv** (Anteil 0.44–0.51, min-Eintrag −333): das diskrete
+#    Maximum-Prinzip ist nicht unbewiesen, sondern FALSCH. Der Grund ist
+#    sichtbar: u ist monoton an der Ecke und oszillatorisch im Bulk (der
+#    Primpotenz-Kamm). Der Ecken-Block von K⁻¹ IST positiv (0.9961–1.0000) —
+#    eine lokale Aussage ist nicht ausgeschlossen, braucht aber eine
+#    Ecken-lokalisierte Fisher–Hartwig-Abkling-Abschätzung (Widom 1974 /
+#    Böttcher–Silbermann) statt eines Vorzeichen-Arguments (No-Cancellation-
+#    Ratio nur 1.7e-7–7.8e-4).
+# R3 WELCHE ROUTE TRÄGT — (ii) PARITÄTS-/VERSCHIEBUNGS-SYMMETRIE: a_j und
+#    w_j sind die ungerade/gerade Hälfte EINER Inkrement-Folge v desselben
+#    u, um genau eine feine Zelle verschoben; gegeben ein Vorzeichen ist die
+#    Differenz der Paritäts-Summen eine Summe über disjunkte Nachbar-Paare:
+#    |R−1| ≤ Σ|v_{2j+1}−v_{2j}|/Σ|v_{2j}| ≤ 0.04745 UNBEDINGT (C1),
+#    dominiert die Messung auf 3112/3112 vorzeichen-reinen Zeilen; das
+#    Zertifikat selbst zerfällt wie n_C^−0.58 ± 0.05 (Fit) — die
+#    Verschiebung ist wirklich eine Rand-Störung, und R ist
+#    auflösungs-blind, weil Verfeinern n_C hebt und den Rand-Term im selben
+#    Maß senkt (C2, konditional: |R−1| ≤ (C−1)/n_C mit JEDEM groben
+#    Ecken-Verhältnis C). Route (iii) über 3915 Zeilen (Zonen × Auflösungen
+#    × Ecken-Anteile): R ∈ [0.9098, 1.1011] im Ecken-Regime
+#    (Vorzeichen-Reinheit exakt 1.0000; einziger Ausreißer über 1.1 bei
+#    n_C = 4, dem geklemmten Minimal-Eck — wie der Mechanismus es
+#    vorhersagt); für n_C ≥ 8: κ_end ≥ 0.480827. Route (i)
+#    (Levinson/Schur) ist exakt, aber NICHT reduzierend (a_j/w_j ist keine
+#    geschlossene Funktion der Reflexions-Koeffizienten). NEGATIV: die
+#    PRO-ZELLEN-Harnack-Ungleichung ist FALSCH (|a_j/w_j| bis 4.8e3) — nur
+#    die summierte Form gilt, genau die bewiesene.
+# R4 γ + SATZ V4: γ hat eine Symbol-Formel — σ_cσ_z − τ² = f(θ)f(θ+π) exakt
+#    (3.9e-16), also 1−γ(θ)² = f₁f₂/(σ_cσ_z) — aber das naive
+#    Symbol-Infimum ist 25–210× zu klein (die endliche ungerade Sektion
+#    sieht das schlechteste Aliasing-Paar nie), und die Messung selbst hat
+#    sich bewegt: **1−γ² FÄLLT mit α (Slope −0.297 ± 0.013, Bereich
+#    0.079–0.283, flach in der Auflösung)** — T119s ≥ 0.181 ist auf seinem
+#    α-Bereich reproduziert, aber NICHT uniform. SATZ V4: 18 Glieder (7
+#    Identitäten, 4 zertifiziert, 2 klassisch, 2 gemessen, 1 Kette),
+#    DEFEKT-LISTE 4 (war 3): (E1) EIN Vorzeichen der Ecken-Inkremente — die
+#    einzige Hypothese der C1/C2-Zertifikate; braucht Ecken-lokalisiertes
+#    Fisher–Hartwig, TP2 und Maximum-Prinzip sind beide widerlegt; (E2) ein
+#    uniformes δ für das C1-Verhältnis (diskrete Gradienten-Abschätzung —
+#    jedes endliche δ genügt, κ_end ≥ 1/(2+δ)); (E3) D₀ für die ganze
+#    Leiter (verschärftes D2); (E4) die α-Abhängigkeit von γ. Ehrlich: der
+#    harte Kern wurde viel leichter (Zwei-Zeilen-Implikation; alles nach
+#    „gegeben“ ist bewiesen), die Neben-Defekte wurden schärfer und
+#    schlechter (3 → 4). → T121 (läuft): WIDE.WINDOW
+#    (wide_window_probe.py) — Sektions- statt Symbol-Positivität
+#    (Christoffel-Funktions-Adresse), die Netto-α-Bilanz der Kette (der
+#    Bedarf fällt α^−6 — schließt sie trotz fallender Glieder?), der
+#    FH-Ecken-Abgleich, Satz V5.
+# Serie (XII)–(CXXXI): 120 Proben, 3016/3016 Checks Sandbox + v535–v541 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Trench 1964 /
+# Gohberg–Semencul, Ostrowski 1937 / Varga 1962 (monotone Matrizen),
+# Gantmacher–Krein 1950 / Karlin 1968 (TP2), Widom 1974 / Fisher–Hartwig,
+# Böttcher–Silbermann, Levinson 1947 / Durbin 1960 (Schur-Parameter),
+# Montgomery–Vaughan 1974 (Large Sieve), Chebyshev 1852 / Mertens,
+# Brandt 1977 (lokale Fourier-Analyse), Yserentant 1986 (CBS),
+# Grenander–Szegő, Cholesky / Wilkinson 1968 / Higham 2002, Weil 1952,
+# Bertrand-Chebyshev 1852) zitiert; Sandbox ohne Ledger-/Paper-/Marker-
+# Änderung.
+
 # 2026-07-28 (I) — Teil 119 (delegiert, die Oszillations-Masse — Vertrag OSCILLATION.MASS): oscillation_mass_probe.py — **ARITHMETIC-DONE** — DIE ARITHMETISCHE HÄLFTE SCHLIESST ALS THEOREM, UND DER REST IST GENAU EINE DISKRETE HARNACK-UNGLEICHUNG: das Kamm-Symbol hat geschlossene Form (jedes Primpotenz-Atom = EIN Kosinus am eigenen Lag, linear auf die zwei Nachbar-Lags interpoliert; Paritäts-Regel: gerader Lag-Index voll, ungerader ×(−cos θ)), die uniforme Schranke ist die Atom-Zählung |σ_z^comb| ≤ Ξ(α) = Σ_{n≤e^{2α}} 2Λ(n)/√n, das archimedische Wachstum ist IDENTITÄT inf σ_z^arch = log(1/D) + B mit UNIVERSELLEM B = −1.0474 — zusammen das D₀-THEOREM: inf σ_z > 0 für alle D < D₀(α) = exp(−(Ξ(α)+B)), tief verifiziert (1024×-FFT-Hebel, M bis 65536, 16 Zonen bis n = 11981, matrixfrei); das ABLEITBARKEITS-URTEIL für (H2) ist NEIN (die Energie-Route ist gültig und LEER — sie liefert ε ≥ r·ε mit r < 1, Tautologie; (H2) ist genuin neuer analytischer Gehalt), aber das schärfste Resultat der Probe macht aus der Konstante eine IDENTITÄT: κ_end = 1/(1+R) EXAKT (1.1e-16) mit R = Verhältnis Zwischen-/Innerhalb-Zell-Inkrement-Masse (gemessen 0.9634–1.0349; κ_end = 0.4906–0.5093 FLACH und exponenten-blind); Satz V3 hat 14 Glieder und eine DEFEKT-LISTE von DREI, davon EINER analytisch — die diskrete Harnack-Ungleichung Σ|a_j| ≤ R_max·Σ|w_j| (Adresse Widom 1974 / Trench 1964 / Böttcher–Silbermann); als KONDITIONALES Lemma-Paper im Wesentlichen komplett, und die Kette enthält NIRGENDS Zeta-Input — 27/27, 4.9s, Sandbox
 # Q1 DIE ARITHMETISCHE HÄLFTE (L-B.1) IST THEOREM: jedes Primpotenz-Atom
 #    trägt zu f exakt EINEN Kosinus am eigenen Lag bei, linear auf die zwei

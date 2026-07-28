@@ -90,7 +90,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · Teile 11–119 · 2995 sandbox checks
+            Research diary · Teile 11–120 · 3016 sandbox checks
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -1674,9 +1674,16 @@ function ProgramStatusCallout() {
         arithmetic half as a theorem — an explicit D₀(α) with a universal
         constant B = −1.0474 — proves the energy route to (H2) empty
         (genuinely new content), and reduces everything to one discrete
-        Harnack inequality via the exact identity κ_end = 1/(1+R); T120
-        (harnack_probe.py) is running. Milestone: 2995/2995 checks. Not
-        almost-RH. This is not RH evidence.
+        Harnack inequality via the exact identity κ_end = 1/(1+R). T120
+        (HARNACK-EXPLAINED) then explains that inequality: R ≈ 1 is
+        parity symmetry — the two increment families are one sequence
+        shifted by a single fine cell, giving an unconditional
+        |R−1| ≤ 0.047 certificate, while the per-cell inequality is
+        provably false — but the honest defect count rises 3 → 4: the
+        frame&apos;s window grows with the zone, so D₀ covers almost
+        nothing of the real ladder, and the CBS constant decays with the
+        width; T121 (wide_window_probe.py) is running. Milestone:
+        3016/3016 checks. Not almost-RH. This is not RH evidence.
       </p>
     </aside>
   );

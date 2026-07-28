@@ -222,8 +222,18 @@ export function TwoDoorsConvergence() {
           universal; the energy route to (H2) is proven empty (genuinely
           new content), and the sharpest identity of the run, κ_end =
           1/(1+R) exactly, reduces everything to one discrete Harnack
-          inequality with a classical address. T120 (
-          <span className="font-mono text-slate-300">harnack_probe.py</span>
+          inequality with a classical address. T120 · HARNACK —
+          HARNACK-EXPLAINED (21/21): the Harnack core is proof-shaped —
+          R ≈ 1 because the two increment families are one sequence
+          shifted by a single fine cell, giving an unconditional
+          |R−1| ≤ 0.047 certificate (and the per-cell inequality is
+          provably false — only the summed form holds); but the honest
+          defect count went 3 → 4: the frame&apos;s window grows with the
+          zone, so D₀ covers almost nothing of the real ladder, and the
+          CBS constant decays with the width. T121 (
+          <span className="font-mono text-slate-300">
+            wide_window_probe.py
+          </span>
           ) running.
         </p>
       </div>

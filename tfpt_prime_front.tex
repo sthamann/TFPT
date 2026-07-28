@@ -85,7 +85,7 @@ the Eichler trace layer, the half-integral bridge, one finite relative-trace ide
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, and the matching-lemma / transport
 ledger package. Everything beyond those seven is \emph{sandbox}: an exploratory program, run as
-$119$ preregistered probes with $2995$ machine checks, which localized the residual object. That
+$120$ preregistered probes with $3016$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -174,7 +174,13 @@ $D_0(\alpha)=\exp(-(\Xi(\alpha)+B))$, with $\Xi$ the prime-power atom count and 
 universal --- proves that the mass bound is \emph{not} derivable from the identities already
 in hand, and reduces it, through the exact identity $\kappa_{\mathrm{end}}=1/(1+R)$, to a
 single discrete Harnack inequality with a classical address; the chain contains no zeta input
-anywhere.
+anywhere. The final part then \emph{explains} that inequality: the two increment families are
+the odd and the even half of one sequence, offset by a single fine cell, so given one sign on
+the corner cells $|R-1|\le0.047$ holds \emph{unconditionally} by a two-line pairing argument
+--- while the per-cell version of the inequality is provably false, and the honest defect count
+rises from three to four, because the frame's window grows with the zone (the unconditional
+$D_0$ route covers not one handover of the real ladder) and the strengthened Cauchy--Schwarz
+constant decays with the width.
 \textbf{No claim of progress on the Riemann Hypothesis is
 made anywhere in this document}, and none of the sandbox findings moves any ledger marker. The
 document is deliberately symmetric about failure: a dedicated section lists the readings and
@@ -798,7 +804,7 @@ $\exp(-c/\delta')$ onset; (B) a uniform relative margin; (C) a replacement for t
 (D) a finite check of the low zones. If crowding ever wins, the hardness sits entirely in (A).
 
 % =====================================================================
-\section{The certification arc (T102--T119)}\label{sec:certification}
+\section{The certification arc (T102--T120)}\label{sec:certification}
 % =====================================================================
 The last eighteen parts stopped improving measurements and started converting them into certificates ---
 and, where that failed, into explicit refutations.
@@ -921,7 +927,7 @@ the wing near-null direction.
 \node[tgt] (o) at (0,-3.4) {\textbf{One object:} the wing near-null direction\\[2pt]
   \footnotesize dressing almost rank one (effective rank $1.07$--$2.7$; $99.7$--$100\%$ of the
   near-null direction in \emph{one} prolate mode)};
-\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112 $\to$ T113 $\to$ T114 $\to$ T115 $\to$ T116 $\to$ T117 $\to$ T118 $\to$ T119\\[2pt]
+\node[nxt] (n) at (0,-6.1) {T104 $\to$ T105 $\to$ T106 $\to$ T107 $\to$ T108 $\to$ T109 $\to$ T110 $\to$ T111 $\to$ T112 $\to$ T113 $\to$ T114 $\to$ T115 $\to$ T116 $\to$ T117 $\to$ T118 $\to$ T119 $\to$ T120\\[2pt]
   \footnotesize certify \emph{bare}, prove the avoidance law, split the parity channels,
   reduce to one scalar ratio, then to two scalars, certify both --- then propagate the margin,
   measure where the propagation fails, rescale the frame, settle the currency question,
@@ -1973,13 +1979,145 @@ the section route that would cover it is a Fej\'er--Riesz moment problem;
 (H1), $\varepsilon\ge c\,D^{\theta}$ with an explicit $c$ --- the material is essentially
 complete, and the missing work is writing, not discovery; an unconditional version needs
 exactly the Harnack statement. The chain is classical numerical analysis end to end and
-contains no zeta input anywhere.
+contains no zeta input anywhere.\\[3pt]
+\emph{Disposition after T120 (next subsection):} (D1) is \emph{explained} --- $R\approx1$ is
+parity symmetry, and the summed inequality follows unconditionally from one sign of the corner
+increments by a two-line pairing argument, while the per-cell version is provably false ---
+so the one hard statement is replaced by a strictly weaker and far more classical hypothesis;
+but (D2) is enlarged (the frame consumes broad windows by construction, and the unconditional
+$D_0$ route covers not one handover of the real ladder) and (D3) loses ground as a uniformity
+claim ($1-\gamma^2$ drifts down with $\alpha$): the defect count goes three $\to$ four.
 \end{keybox}
 
-\noindent T120 (\texttt{harnack\_probe.py}, contract \texttt{HARNACK} --- the $\alpha$-audit
-(does it defuse (D2)?), the sign structure and maximum principle, the $R$ bound (Levinson
-recursion, parity symmetry, window certificate), the $\gamma$ formula, and a theorem candidate
-V4) was running at the time of writing and is \emph{not} reported here.
+\noindent T120 (\texttt{harnack\_probe.py}, contract \texttt{HARNACK}) then attacked that
+defect list head on --- and explained the Harnack core while sharpening the side defects.
+
+\subsection{The Harnack core is proof-shaped; the wide-window defects sharpen (T120)}
+T120 (\texttt{harnack\_probe.py}, contract \texttt{HARNACK}, $21/21$,
+\textsc{harnack-explained}) is the part where the one hard statement of V3 stops being an
+inequality about two families and becomes a two-line consequence of a symmetry. The outcome,
+stated before the detail: $R\approx1$ is \emph{parity symmetry} --- the two increment families
+are one sequence offset by a single fine cell --- with an unconditional $|R-1|\le0.047$
+certificate; two structural routes to the remaining hypothesis are refuted, and the per-cell
+version of the inequality is provably \emph{false}; and the honest defect count rises from
+three to four, because the $\alpha$-audit shows the unconditional $D_0$ route covers not one
+handover of the real ladder and the CBS constant decays with the width.
+
+\emph{The parity symmetry, and the certificate.} The two families of (D1) are not two objects:
+with $v_i=u[i+1]-u[i]$ the single increment sequence of the \emph{same} solution
+$u=T^{-1}\tilde t$, the within-cell and across-cell increments are the even and the odd half,
+$w_j=v_{2j}$ and $a_j=v_{2j+1}$ --- offset by exactly one fine cell. If $v$ has one sign on the
+corner cells (measured at $100\%$ of them on every one of $3915$ rows), the difference of the
+two parity sums is a sum over \emph{disjoint} adjacent pairs, so
+\[
+|R-1|\;\le\;\frac{\sum_j|v_{2j+1}-v_{2j}|}{\sum_j|v_{2j}|}
+\tag{C1}
+\]
+\emph{unconditionally} --- no monotonicity, no smoothness. Measured over the whole sweep, (C1)
+gives $|R-1|\le0.04745$ against a measured $0.03485$, and it dominates the measurement on all
+$3112$ sign-pure rows, as it must. If $v$ is moreover monotone the left side telescopes to a
+boundary term over a bulk sum, $|R-1|\le|v_{2n_C}-v_0|/\sum_j|v_{2j}|\le(C-1)/n_C$ (C2) ---
+recorded as \emph{conditional} (the monotone share is only $0.50$--$0.96$) and kept as the
+explanation of the rate: $R$ sits at $1$ because a shift by one fine cell is a boundary
+perturbation, and $R$ is resolution-blind because refining raises $n_C$ and shrinks the
+boundary term at the same rate. The certificate itself confirms the rate: (C1) decays like
+$n_C^{-0.58\pm0.05}$ (a fit). The brute-force sweep ($155$ windows $\times$ resolutions
+$\times$ corner fractions, $3915$ rows) keeps $R\in[0.9098,\,1.1011]$ in the corner regime
+with sign purity exactly $1.0000$; the single excursion above $1.1$ sits at the clamped
+minimal corner $n_C=4$, exactly where the boundary-term mechanism predicts it, and for
+$n_C\ge8$ the window certificate is $\kappa_{\mathrm{end}}\ge0.480827$. One negative result
+belongs to this positive one: the \emph{per-cell} Harnack inequality is \emph{false} ---
+$|a_j/w_j|$ reaches $4.8\times10^{3}$ --- so no cellwise comparison can be true; only the
+summed form holds, which is exactly the form (C1) proves.
+
+\emph{Two structural routes refuted.} Both obvious routes to the one remaining sign hypothesis
+are now closed, each by a measurement. First, the $40\times40$ corner block of $T^{-1}$ is
+entrywise positive on $18/18$ (zone, level) rows without exception --- and the checkerboard
+alternative is refuted exactly ($0.5000$, a coin flip) --- but it is \emph{not} TP2 (the
+share of non-negative $2\times2$ minors is only $0.51$--$0.88$), so the Gantmacher--Krein
+oscillation-matrix route is closed; nor is $T$ an M-matrix. Second, differencing $Tu=\tilde t$
+once gives an \emph{exact} discrete boundary-value problem for the increments alone,
+$Kv=s-u_0G\mathbf 1$ with $K=D_1TL$ (relative residual $2.4\times10^{-12}$), with a smooth,
+positive right-hand side --- the correct classical shape for a maximum-principle argument ---
+but $K^{-1}$ is \emph{not} entrywise positive (positive share $0.44$--$0.51$, minimum entry
+$-333$): the discrete maximum principle is not unproved, it is \emph{false}. The reason is
+visible in the solution itself: $u$ is monotone at the corner and oscillatory in the bulk ---
+that is the prime-power comb. The corner block of $K^{-1}$ \emph{is} entrywise positive
+($0.9961$--$1.0000$), so a localised statement is not excluded --- but the corner components
+of $v$ contract full rows of $K^{-1}$ carrying a genuine cancellation (no-cancellation ratio
+$10^{-7}$--$10^{-3}$), so what the sign hypothesis needs is a corner-localised
+Fisher--Hartwig decay estimate (Widom $1974$; B\"ottcher--Silbermann), not a sign pattern.
+
+\emph{The $\alpha$-audit: (D2) is not vacuous but total.} The frame's window is not a free
+parameter: in frame A the handover at the atom $u_k=\log n_k$ uses $D=g_k/(2\nu)$ and
+$M_o=\lceil u_k/D\rceil+1$, hence $\alpha_o=u_k/2+O(D)$ \emph{exactly} (maximum deviation
+$1.5\times10^{-2}$ over all $732$ admissible handovers) --- the consumed half-width \emph{is}
+half the log of the zone, and only $1.4\%$ of the handovers have $\alpha\le2$. Because
+$B=-1.0474$ is a property of the archimedean kernel alone and hence universal (spread
+$1.2\times10^{-6}$), the criterion $\log(1/D_{\mathrm{frame}})\ge\Xi(\alpha)+B$ can be
+evaluated on the whole zone table: it holds on exactly $3$ of $1492$ zones ($n=2,3,4$), i.e.\
+for $\alpha\le\alpha^*=0.693$ --- \emph{below} the first admissible handover $n=7$. Not one
+step of the induction is covered by the unconditional $D_0$ route (the resolution it would
+need explodes to $M\sim10^{2}$--$10^{188}$). The fallbacks, measured and labelled: the comb
+supremum is only $0.038$--$0.603$ of its certified cap $\Xi$ --- an incoherence gain of up to
+$1.7\times$, but a grid supremum, hence a measurement and never a certificate (a certified
+version would be an exponential-sum estimate over prime powers) --- and the large-sieve
+narrow-dip floor (Montgomery--Vaughan $1974$) is positive on $2/6$ surveyed zones, at $n=32$
+where $\inf\sigma_z=-0.45$ --- the dip route genuinely buys something --- and dies beyond
+$\alpha\approx2$.
+
+\emph{The $\gamma$ formula, and the wrong direction.} The CBS constant has an exact local
+symbol identity: with $f_1=f(\theta)$, $f_2=f(\theta+\pi)$,
+$\sigma_c\sigma_z-\tau^2=f_1f_2$ (relative residual $3.9\times10^{-16}$), hence
+$1-\gamma(\theta)^2=f_1f_2/(\sigma_c\sigma_z)$ --- (D3) is no longer a bare measured constant
+but a symbol infimum, the same class of object as $\inf\sigma_z$. Two honest caveats, both
+measured: the naive symbol infimum is $25$--$210\times$ \emph{below} the matrix constant (the
+finite odd section never sees the worst aliasing pair --- a finite-section transfer is
+needed, not the infimum), and the measurement itself moved: $1-\gamma^2$ \emph{falls} with
+$\alpha$ (fitted slope $-0.297\pm0.013$, range $0.079$--$0.283$, flat in the resolution at a
+fixed zone) --- T119's $\ge0.181$ is reproduced on its own $\alpha$-range but is \emph{not}
+uniform.
+
+\begin{keybox}[The theorem after T120 --- eighteen links, four defects]
+\emph{Candidate (V4).} Eighteen links ($7$ identities --- among them, new in T120, the
+increment system $Kv=s-u_0G\mathbf 1$ and the symbol identity
+$\sigma_c\sigma_z-\tau^2=f_1f_2$ --- $4$ certified, $2$ classical, $2$ measured, and the
+chain), and the one hard statement of V3 is \emph{replaced}: (D1) is no longer a bare
+inequality but a proved two-line implication --- the pairing certificate (C1), unconditional
+given one sign of the corner increments. What a lemma paper could claim today: \emph{let $T$
+be the finite odd Weil form on a window, $u=T^{-1}\tilde t$, and suppose the increments of
+$u$ have one sign on the outer $n_C$ coarse cells; then $|R-1|\le\delta(n_C)$ with the
+explicit pairing ratio $\delta$, hence $\kappa_{\mathrm{end}}\ge1/(2+\delta)$ and
+$\|y\|^2\ge(u_{\mathrm{end}}-u_0)^2/(2n_C(2+\delta)^2)$} --- everything after ``suppose'' is
+proved; measured, $\delta\le0.0964$ for $n_C\ge8$, falling like $n_C^{-0.58}$.\\[3pt]
+\emph{The defect list --- four items (was three):}
+\begin{enumerate}[leftmargin=1.6em]
+\item[\textbf{(E1)}] \emph{one sign of the corner increments} --- the single hypothesis of
+(C1)/(C2), measured on $100\%$ of the corner cells on all $3915$ rows; the two obvious
+structural routes are refuted (the corner of $T^{-1}$ is positive but not TP2; the global
+discrete maximum principle is false), so what remains is a corner-localised Fisher--Hartwig
+estimate (Widom $1974$; B\"ottcher--Silbermann);
+\item[\textbf{(E2)}] \emph{a uniform bound on the pairing ratio} $\delta$ --- a discrete
+gradient estimate for the increments of $T^{-1}\tilde t$, strictly weaker than the old
+Harnack statement (any finite $\delta$ suffices, $\kappa_{\mathrm{end}}\ge1/(2+\delta)$);
+\item[\textbf{(E3)}] \emph{$D_0$ for the whole ladder} --- (D2), enlarged: the frame consumes
+$\alpha=u_k/2$ by construction and the criterion fails at $\alpha^*=0.693$, below the first
+admissible handover; the open routes are a certified comb-incoherence bound or the
+large-sieve dip geometry, which works on the first zones and dies beyond $\alpha\approx2$;
+\item[\textbf{(E4)}] \emph{the $\alpha$-dependence of $\gamma$} --- (D3) with the direction
+now known: $1-\gamma^2$ shrinks like $e^{-0.30\alpha}$ (a fit), so uniformity is not merely
+unproved but questionable in the direction that matters.
+\end{enumerate}
+\emph{Honest movement:} the one hard statement got much easier --- a two-line implication
+with one classical hypothesis --- and the side defects got sharper and both got worse; the
+count went three $\to$ four, and that is the honest direction.
+\end{keybox}
+
+\noindent T121 (\texttt{wide\_window\_probe.py}, contract \texttt{WIDE.WINDOW} --- section
+positivity instead of symbol positivity (the Christoffel-function address), the net
+$\alpha$-balance of the chain (the demand falls like $\alpha^{-6}$ --- does the chain close
+despite the decaying links?), the Fisher--Hartwig corner comparison, and a theorem candidate
+V5) was running at the time of writing and is \emph{not} reported here.
 
 % =====================================================================
 \section{The kill list}\label{sec:kills}
@@ -2109,7 +2247,14 @@ $\inf\sigma_z^{\mathrm{arch}}=\log(1/D)+B$ with universal $B=-1.0474$; the resul
 theorem; the large-sieve section certificate on one window (floor $+0.396$ where
 $\inf\sigma_z=-0.349$); the Levinson corner identity and innovation mass budget; the identity
 $\kappa_{\mathrm{end}}=1/(1+R)$ to $1.1\times10^{-16}$; and the coarse-graining fence
-$\lambda_{\min}(T_h(\sigma*K))\ge\lambda_{\min}(T_h(\sigma))$ by unitary averaging).\\[3pt]
+$\lambda_{\min}(T_h(\sigma*K))\ge\lambda_{\min}(T_h(\sigma))$ by unitary averaging), and the
+T120 Harnack package (the exact increment system $Kv=s-u_0G\mathbf 1$ to
+$2.4\times10^{-12}$; the exact symbol identity $\sigma_c\sigma_z-\tau^2=f_1f_2$ to
+$3.9\times10^{-16}$; the pairing certificate (C1) --- a proved implication whose single
+hypothesis is one sign of the corner increments, giving $|R-1|\le0.04745$ and
+$\kappa_{\mathrm{end}}\ge0.480827$ for $n_C\ge8$; the frame identity
+$\alpha_o=u_k/2+O(D)$ over all $732$ handovers; and the universal-$B$ evaluation of the
+$D_0$ criterion on all $1492$ zones, $\alpha^*=0.693$).\\[3pt]
 \textbf{Measured} (holds on the resolved windows; no uniform constant): $\rho_-$; the ratio
 $r=0.0053$--$0.1814$ and $\hat r<1$ at all $92$ resolution points; $\omega=0.2366$--$0.7531$; the
 strict odd-channel margin $\lambda_{\min}(Q|_{\mathrm{odd}})=1.4\times10^{-5}$--$5.1\times10^{-2}$; the
@@ -2139,8 +2284,15 @@ $0.19$--$0.38$, inner half $0.36$--$0.48$), the exponents $\varepsilon\sim D^{1.
 $\|y\|^2\sim D^{1.961}$, $\lambda_{\min}(S)\|y\|^2\sim D^{1.757}$ (fits), the flat band
 $\kappa_{\mathrm{end}}=0.4906$--$0.5093$ with drift $\le0.0019$ per level, the ratio
 $R=0.9634$--$1.0349$, and the wide-zone crossing depths $M\sim10^{13}$--$10^{187}$
-(extrapolations of the certified growth law); every scaling exponent quoted in this
-document.\\[3pt]
+(extrapolations of the certified growth law); the T120 measurements: the corner sign
+structure (the $T^{-1}$ corner block positive share $1.0000$ against a TP2 minor share of
+only $0.51$--$0.88$ and a $K^{-1}$ positive share of $0.44$--$0.51$ --- the two refutations),
+the sign purity $1.0000$ on all $3915$ rows with $R\in[0.9098,1.1011]$, the per-cell ratio
+$|a_j/w_j|$ up to $4.8\times10^{3}$ (the per-cell inequality is false), the (C1) decay
+$n_C^{-0.58\pm0.05}$ (fit), the comb-supremum incoherence $0.038$--$0.603$ of $\Xi$ (a grid
+supremum), the large-sieve floor usable on $2/6$ zones, and the $\gamma$ drift
+$1-\gamma^2=0.079$--$0.283$ with fitted slope $-0.297\pm0.013$ in $\alpha$; every scaling
+exponent quoted in this document.\\[3pt]
 \textbf{Hypothesis input / classical} (used, named, not proved here): Kneser, Witt/Eichler, Shimura,
 Waldspurger/Baruch--Mao, Cohen, Weil--Guinand, Bombieri, Yoshida, Connes--Consani, Douglas,
 Slepian--Landau--Pollak, Gronwall/Robin (unconditional form only), Grenander--Szeg\H{o},
@@ -2221,10 +2373,20 @@ T119 (\texttt{oscillation\_mass\_probe.py}) then closed the arithmetic half as a
 $\inf\sigma_z>0$ for all $D<D_0(\alpha)=\exp(-(\Xi(\alpha)+B))$, with $\Xi$ the prime-power
 atom count and $B=-1.0474$ universal --- proved the energy route to (H2) empty (the
 hypothesis is genuinely new content), and reduced the oscillation-mass half to one discrete
-Harnack inequality through the exact identity $\kappa_{\mathrm{end}}=1/(1+R)$. Since T119 the
-mountain is \emph{one} discrete Harnack inequality with a classical address --- plus two
-constants ((D2), (H1)) and the \textbf{[SUPPORT]} obstruction; the chain contains no zeta
-input anywhere. T120 (\texttt{harnack\_probe.py}) was running at the time of writing.
+Harnack inequality through the exact identity $\kappa_{\mathrm{end}}=1/(1+R)$. T120
+(\texttt{harnack\_probe.py}) then \emph{explained} that inequality --- the two increment
+families are one sequence offset by a single fine cell, so given one sign of the corner
+increments the summed bound $|R-1|\le0.047$ is a proved two-line implication, while the
+per-cell version is provably false and the two obvious structural routes to the sign (total
+positivity, the discrete maximum principle) are refuted by measurement --- and at the same
+time sharpened the wide-window defects: the frame consumes $\alpha=u_k/2$ by construction, so
+the unconditional $D_0$ route covers not one handover of the real ladder
+($\alpha^*=0.693$, below the first admissible zone), and $1-\gamma^2$ decays with $\alpha$.
+Since T120 the mountain is four named defects --- one sign of the corner increments
+(a corner-localised Fisher--Hartwig estimate), a uniform bound on the pairing ratio (a
+discrete gradient estimate), $D_0$ for the whole ladder, and the $\alpha$-dependence of
+$\gamma$ --- plus the \textbf{[SUPPORT]} obstruction; the chain contains no zeta input
+anywhere. T121 (\texttt{wide\_window\_probe.py}) was running at the time of writing.
 
 \begin{enumerate}[leftmargin=1.6em]
 \item \textbf{Sixteen zones are sixteen zones.} Everything below the top line of the cascade is
@@ -2276,18 +2438,18 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T119}\label{app:index}
+\section{Probe index, diary parts T11--T120}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $109$ parts T11--T119 that the current diary file records
-($110$ runs --- T104 was a double run with two independent arms --- and $2803$ green checks); the ten
+load-bearing artefact. The index covers the $110$ parts T11--T120 that the current diary file records
+($111$ runs --- T104 was a double run with two independent arms --- and $2824$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
-diary at T119: \textbf{$119$ probes, $2995/2995$ sandbox checks}, plus \vref{v535}--\vref{v541}
-promoted. T120
-(\texttt{harnack\_probe.py}, contract \texttt{HARNACK}) was still running
+diary at T120: \textbf{$120$ probes, $3016/3016$ sandbox checks}, plus \vref{v535}--\vref{v541}
+promoted. T121
+(\texttt{wide\_window\_probe.py}, contract \texttt{WIDE.WINDOW}) was still running
 when this document was written and is deliberately absent.
 
 {\footnotesize
@@ -2413,6 +2575,7 @@ T116 & \texttt{\scriptsize boundary\_\allowbreak formulation} & the induction as
 T117 & \texttt{\scriptsize epsilon\_\allowbreak theorem} & the one inequality theorem-shaped: four exact Galerkin identities ($\varepsilon>0\iff\tilde t\notin T(V_c)$); a certified two-level lower bound on $19/19$ pairs at $\theta'=1.74$ against $\theta=1.76$ (no power of $D$ lost); exact jump formulas (Levinson bordering, rank-$(k_0{+}1)$ Woodbury) --- entries \emph{raise} $\varepsilon$, the factor-$120$ falls were a sweep artefact; three named analytic lemmas remain, two of them constants & THEOREM-SHAPED & 23/23\\
 T118 & \texttt{\scriptsize symbol\_\allowbreak lemmas} & the three lemmas against their classical addresses: saturation is an \emph{identity} here ($\varepsilon_c-\varepsilon_f=y^{\mathsf T}Sy$, $\beta\in[0.252,0.336]$); the $S$-symbol is a weighted \emph{harmonic} aliasing mean, vacuous on the comb --- rescued by the CBS shift onto the oscillation Gram, whose \emph{arithmetic} mean suppresses the comb quadratically ($\inf\sigma_z>0$ on $7/14$ windows; on the $15\,680$-point FFT lever the floor rises logarithmically and crosses zero on $3/5$ zones --- under-resolved, not obstructed); the corner exponent drifts ($\log$ is the boundary of all powers) and the chain is repaired on $\|y\|^2$; one analytic statement remains --- (H2), $\|y\|^2\ge c\,D^{1.75}$ & TWO-OF-THREE & 36/36\\
 T119 & \texttt{\scriptsize oscillation\_\allowbreak mass} & the arithmetic half closes as a theorem: the comb symbol in closed form (one cosine per prime-power atom; parity rule under $\sigma_z$), the atom-count bound $|\sigma_z^{\mathrm{comb}}|\le\Xi(\alpha)$ uniform in $D$, the archimedean growth \emph{identity} $\inf\sigma_z^{\mathrm{arch}}=\log(1/D)+B$ with universal $B=-1.0474$ --- hence $\inf\sigma_z>0$ for all $D<D_0(\alpha)=e^{-(\Xi(\alpha)+B)}$, deep-verified ($M$ up to $65\,536$, matrix-free); the large sieve certifies one window's section \emph{without} pointwise positivity ($+0.396$ where $\inf\sigma_z=-0.349$) and dies structurally for $\alpha\ge2.5$ (a moment problem); the energy route to (H2) is proven empty (genuinely new content); and $\kappa_{\mathrm{end}}=1/(1+R)$ \emph{exactly} ($1.1\times10^{-16}$) --- one discrete Harnack inequality remains & ARITHMETIC-DONE & 27/27\\
+T120 & \texttt{\scriptsize harnack} & the Harnack core is proof-shaped: $a_j$ and $w_j$ are the odd/even half of \emph{one} increment sequence, offset by a single fine cell, so one sign of the corner increments gives $|R-1|\le\sum|v_{2j+1}-v_{2j}|/\sum|v_{2j}|\le0.04745$ \emph{unconditionally} (C1; the per-cell inequality is provably \emph{false}, $|a_j/w_j|$ up to $4.8\times10^{3}$); $R\in[0.9098,1.1011]$ on $3915$ rows, $\kappa_{\mathrm{end}}\ge0.480827$ for $n_C\ge8$; two structural routes refuted ($T^{-1}$ corner positive but not TP2; the discrete maximum principle false --- $u$ oscillates in the bulk); the $\alpha$-audit makes (D2) total ($\alpha_o=u_k/2$ by construction, $D_0$ holds on $3/1492$ zones, $\alpha^*=0.693$ below the first admissible handover); $\gamma$ gains an exact symbol identity but $1-\gamma^2$ falls with $\alpha$ (slope $-0.297\pm0.013$); theorem V4: $18$ links, defect list $3\to4$ & HARNACK-EXPLAINED & 21/21\\
 \end{xltabular}
 }
 

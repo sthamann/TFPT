@@ -96,7 +96,8 @@ export type PrimeFrontVerdict =
   | "RICCATI-PARTIAL"
   | "THEOREM-SHAPED"
   | "TWO-OF-THREE"
-  | "ARITHMETIC-DONE";
+  | "ARITHMETIC-DONE"
+  | "HARNACK-EXPLAINED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -120,6 +121,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-28",
+    part: 120,
+    title:
+      "The Harnack core is proof-shaped — R ≈ 1 is parity symmetry with an unconditional |R−1| ≤ 0.047 certificate, and the per-cell inequality is provably false; the honest defect count rises 3 → 4",
+    verdict: "HARNACK-EXPLAINED",
+    summary:
+      "T120 (HARNACK-EXPLAINED, 21/21) — contract HARNACK: attack the T119 defect list head on — the α-audit, the sign structure, the R bound, the γ formula, a theorem candidate V4. (R1) THE α-AUDIT — (D2) IS NOT VACUOUS BUT TOTAL: the frame's window is not a free parameter — in frame A the handover is pinned to the zone, α_o = u_k/2 + O(D) exactly (max deviation 1.5e-2 over all 732 admissible handovers), so only 1.4% of the handovers have α ≤ 2. B = −1.0474 is a property of the archimedean kernel alone and hence universal (spread 1.2e-6), so the D₀ criterion can be evaluated on all 1492 zones: it holds on exactly 3 of them (n = 2, 3, 4), i.e. for α ≤ α* = 0.693 — BELOW the first admissible handover n = 7. Not one step of the induction is covered by the unconditional D₀ route (the required resolution explodes to M ~ 2.4e2–1.7e188). The fallbacks, measured and labelled: the comb supremum is only 0.038–0.603 of its certified cap Ξ (an incoherence gain up to 1.7×, but a grid supremum — a MEASUREMENT, never a certificate); the large-sieve floor (Montgomery–Vaughan 1974) is positive on 2/6 zones — at n = 32 where inf σ_z = −0.45, so the dip route genuinely buys something — and dies beyond α ≈ 2. (R2) SIGN STRUCTURE — TWO NEGATIVE RESULTS THAT COUNT: the 40×40 corner block of T⁻¹ is entrywise positive (18/18 rows without exception; the checkerboard alternative refuted exactly at 0.5000, a coin flip) but NOT TP2 (minor share only 0.51–0.88 — the Gantmacher–Krein oscillation-matrix route is CLOSED), and T is not an M-matrix. The increments solve an EXACT discrete boundary-value problem Kv = s − u₀G1 (residual 2.4e-12) with a smooth positive right-hand side — the correct classical shape for a maximum principle — but K⁻¹ is NOT entrywise positive (share 0.44–0.51, min entry −333): the discrete maximum principle is not unproved, it is FALSE. The reason is visible: u is monotone at the corner and oscillatory in the bulk (the prime-power comb). The corner block of K⁻¹ IS positive (0.9961–1.0000), so a local statement is not excluded — but it needs a corner-localized Fisher–Hartwig decay estimate (Widom 1974 / Böttcher–Silbermann), not a sign argument. (R3) WHICH ROUTE CARRIES — (ii) PARITY / SHIFT SYMMETRY: a_j and w_j are the odd and the even half of ONE increment sequence v of ONE solution u, offset by a single fine cell; given one sign, the difference of the two parity sums is a sum over DISJOINT adjacent pairs, so |R−1| ≤ Σ|v_{2j+1}−v_{2j}|/Σ|v_{2j}| ≤ 0.04745 UNCONDITIONALLY (certificate C1), dominating the measurement on 3112/3112 sign-pure rows; the certificate itself decays like n_C^−0.58 (a fit) — the shift really is a boundary perturbation, and R is resolution-blind because refining raises n_C and shrinks the boundary term at the same rate. Route (iii), brute force over 3915 rows: R ∈ [0.9098, 1.1011] in the corner regime (sign purity exactly 1.0000; the single excursion above 1.1 sits at the clamped minimal corner n_C = 4, exactly where the mechanism predicts it); for n_C ≥ 8 the window certificate is κ_end ≥ 0.480827. NEGATIVE: the PER-CELL Harnack inequality is FALSE (|a_j/w_j| up to 4.8e3) — only the summed form holds, which is exactly the form proved. (R4) γ AND THEOREM V4: γ has a symbol formula — σ_cσ_z − τ² = f(θ)f(θ+π) exactly (3.9e-16) — but the naive symbol infimum is 25–210× too small (the finite odd section never sees the worst aliasing pair), and the measurement itself moved: 1−γ² FALLS with α (slope −0.297 ± 0.013, range 0.079–0.283, flat in the resolution) — T119's ≥ 0.181 is not uniform. Theorem V4: 18 links (7 identities, 4 certified, 2 classical, 2 measured, 1 chain) and a DEFECT LIST OF FOUR (was three): (E1) one sign of the corner increments — the single hypothesis of the C1/C2 certificates; needs corner-localized Fisher–Hartwig, TP2 and the maximum principle both refuted; (E2) a uniform bound on the C1 pairing ratio (a discrete gradient estimate; any finite δ suffices, κ_end ≥ 1/(2+δ)); (E3) D₀ for the whole ladder (D2, enlarged); (E4) the α-dependence of γ. Honest reading: the hard core became much easier (a two-line implication — everything after 'suppose' is proved), and the side defects became sharper and worse (3 → 4). T121 (WIDE.WINDOW, wide_window_probe.py) is running: section positivity instead of symbol positivity (the Christoffel-function address), the net α-balance of the chain (the demand falls like α^−6 — does the chain close despite the decaying links?), the Fisher–Hartwig corner comparison, a theorem candidate V5. Sandbox; not RH evidence.",
+    badge: "sandbox",
+    script: "harnack_probe.py",
+  },
   {
     date: "2026-07-28",
     part: 119,
