@@ -42,6 +42,1360 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · I",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v546"
+      },
+      {
+        "k": "t",
+        "v": " — the capacity-chain identities of phase 2 promoted; prime-front diary T145 (Maz'ya proof, ONE-STEP-MISSING) + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v546"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.CAPCHAIN.IDENT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the identity-shaped core of the capacity cycle T142 ("
+        },
+        {
+          "k": "c",
+          "v": "conductance_profile_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "), T143 ("
+        },
+        {
+          "k": "c",
+          "v": "sharp_capacity_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "), T144 ("
+        },
+        {
+          "k": "c",
+          "v": "capacity_inequality_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") and T145 ("
+        },
+        {
+          "k": "c",
+          "v": "mazya_proof_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "26"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.5"
+        },
+        {
+          "k": "t",
+          "v": " s, everything recomputed on small frame-A windows, nothing cited from the sandbox. Scope fence: identities, per-instance theorems with checked hypotheses and per-window "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "certified"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " inequalities — no fit, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no zone-uniform statement, and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no level lemma"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (T145's L1 stays open, unclaimed). Battery: "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " windows ("
+        },
+        {
+          "k": "m",
+          "v": "n=4\\ldots139"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h=26\\ldots285\\le300"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "D=7.578\\times10^{-3}\\ldots2.789\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "32"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5102"
+        },
+        {
+          "k": "t",
+          "v": " positive off-diagonal edges); the covering kernel is positive definite on "
+        },
+        {
+          "k": "m",
+          "v": "11"
+        },
+        {
+          "k": "t",
+          "v": ", where items (1)–(2) run; each identity carries a mutation control that must fail by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The capacity decomposition (T142) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "K^{-1}=D^{\\mathsf T}J^{-1}D+xx^{\\mathsf T}/\\mathrm{cap}"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "J=DKD^{\\mathsf T}"
+        },
+        {
+          "k": "t",
+          "v": " (assembled entrywise, "
+        },
+        {
+          "k": "m",
+          "v": "3.8\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "x=K^{-1}\\mathbf 1"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{cap}=\\mathbf 1^{\\mathsf T}K^{-1}\\mathbf 1"
+        },
+        {
+          "k": "t",
+          "v": ", as a matrix identity ("
+        },
+        {
+          "k": "m",
+          "v": "1.4\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "); under the congruence "
+        },
+        {
+          "k": "m",
+          "v": "u=K^{1/2}v"
+        },
+        {
+          "k": "t",
+          "v": " the Dirichlet half is an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "orthogonal projection"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "P^2=P"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "1.9\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega=\\lambda_{\\max}(P)=1"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "5.1\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": " — the T142 normalisation, where T141 had guessed "
+        },
+        {
+          "k": "m",
+          "v": "20.7"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2724"
+        },
+        {
+          "k": "t",
+          "v": "), its complement "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the capacity rank-one and it annihilates "
+        },
+        {
+          "k": "m",
+          "v": "K^{-1/2}\\mathbf 1"
+        },
+        {
+          "k": "t",
+          "v": " (controls: dropping the rank-one "
+        },
+        {
+          "k": "m",
+          "v": "3.4\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ", a "
+        },
+        {
+          "k": "m",
+          "v": "1\\%"
+        },
+        {
+          "k": "t",
+          "v": " cap perturbation "
+        },
+        {
+          "k": "m",
+          "v": "3.4\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The exact capacity–Rayleigh identity (T143) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " With "
+        },
+        {
+          "k": "m",
+          "v": "H=\\mathrm{diag}(s)+L_N"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "4.7\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "L_N=D^{\\mathsf T}BD"
+        },
+        {
+          "k": "t",
+          "v": " for the signed crossing kernel ("
+        },
+        {
+          "k": "m",
+          "v": "4.9\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(W)=1-\\lambda_{\\min}(A,A_B)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "5.4\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "), the assembled quotient "
+        },
+        {
+          "k": "m",
+          "v": "[d^{\\mathsf T}(J^{-1}-B)d+(x^{\\mathsf T}v)^2/\\mathrm{cap}-\\sum_ks_kv_k^2]/[d^{\\mathsf T}J^{-1}d+(x^{\\mathsf T}v)^2/\\mathrm{cap}]"
+        },
+        {
+          "k": "t",
+          "v": " equals "
+        },
+        {
+          "k": "m",
+          "v": "v^{\\mathsf T}(K^{-1}-H)v/v^{\\mathsf T}K^{-1}v"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "every"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "v"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "9.5\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": " random vectors per window), reproduces "
+        },
+        {
+          "k": "m",
+          "v": "1-\\rho(W)"
+        },
+        {
+          "k": "t",
+          "v": " at the exact top eigenvector ("
+        },
+        {
+          "k": "m",
+          "v": "1.7\\times10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": " under the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "declared"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "1/\\mathrm{gap}"
+        },
+        {
+          "k": "t",
+          "v": " conditioning bar "
+        },
+        {
+          "k": "m",
+          "v": "5.4\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": "), and every random quotient stays "
+        },
+        {
+          "k": "m",
+          "v": "\\ge1-\\rho(W)"
+        },
+        {
+          "k": "t",
+          "v": "; on the constant vector the whole denominator "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the capacity term (controls: dropping it, rel "
+        },
+        {
+          "k": "m",
+          "v": "=1"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "|N|"
+        },
+        {
+          "k": "t",
+          "v": " crossing kernel, "
+        },
+        {
+          "k": "m",
+          "v": "2.6\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) Cholesky nestedness (T144) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{cap}_E([a,a{+}j))"
+        },
+        {
+          "k": "t",
+          "v": " equals the prefix sum of squared forward-substitution entries of "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " triangular solve: "
+        },
+        {
+          "k": "m",
+          "v": "3404"
+        },
+        {
+          "k": "t",
+          "v": " interval capacities from "
+        },
+        {
+          "k": "m",
+          "v": "36"
+        },
+        {
+          "k": "t",
+          "v": " solves at "
+        },
+        {
+          "k": "m",
+          "v": "2.0\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": " against independent Schur solves, exhaustive on the median window (every prefix, "
+        },
+        {
+          "k": "m",
+          "v": "2.8\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "), monotone in "
+        },
+        {
+          "k": "m",
+          "v": "b"
+        },
+        {
+          "k": "t",
+          "v": " by construction (control: the reversed ordering computes "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "suffix"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " capacities and deviates by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge4.6\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The whitening certificate (T144) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\max}(W)\\le\\kappa_{\\mathrm{up}}"
+        },
+        {
+          "k": "t",
+          "v": " (completed Cholesky) "
+        },
+        {
+          "k": "m",
+          "v": "\\le"
+        },
+        {
+          "k": "t",
+          "v": " the Gershgorin ceiling on every window ("
+        },
+        {
+          "k": "m",
+          "v": "\\kappa_{\\mathrm{up}}=1.2245"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.4236"
+        },
+        {
+          "k": "t",
+          "v": " against "
+        },
+        {
+          "k": "m",
+          "v": "\\le2.1213"
+        },
+        {
+          "k": "t",
+          "v": "); the licensed chain direction "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(E)/\\kappa_{\\mathrm{up}}\\le\\lambda_{\\min}(A,A_B)"
+        },
+        {
+          "k": "t",
+          "v": " holds on every window — a denominator comparison, untouched by T142's numerator obstruction — and the Cholesky refuses at the shrunken shift "
+        },
+        {
+          "k": "m",
+          "v": "0.995\\,\\lambda_{\\max}(W)"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5) The M4 split and the certified chain (T145) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The mass half of Maz'ya's step M4: "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_kf_k^2\\le\\psi^2"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "pointwise"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (a theorem for nonnegative truncations, exact slack "
+        },
+        {
+          "k": "m",
+          "v": "\\ge0"
+        },
+        {
+          "k": "t",
+          "v": "), the row-wise implication on rows with "
+        },
+        {
+          "k": "m",
+          "v": "(E\\mathbf 1)_i\\ge0"
+        },
+        {
+          "k": "t",
+          "v": ", measured mass ratio "
+        },
+        {
+          "k": "m",
+          "v": "\\le0.2995"
+        },
+        {
+          "k": "t",
+          "v": " and the full step "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_{\\mathrm{tot}}=0.2197"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.4425<1"
+        },
+        {
+          "k": "t",
+          "v": " on every window although the Markov hypothesis is absent. Licence 4 is stated with "
+        },
+        {
+          "k": "m",
+          "v": "|R|"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "R^{+}"
+        },
+        {
+          "k": "t",
+          "v": ", with the witness "
+        },
+        {
+          "k": "m",
+          "v": "R=[[1,-\\tfrac12],[-\\tfrac12,1]]"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "x=(1,-1)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "3.0>2.0"
+        },
+        {
+          "k": "t",
+          "v": ") built in as a counterexample check. The sign-free chain is ordered on every window, and S1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "certified per window on both routes"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{cert\\_lam\\_max}(R)\\le12\\,\\sigma_{\\mathrm{tot}}\\Psi_{\\mathrm{pos}}"
+        },
+        {
+          "k": "t",
+          "v": " (energy, "
+        },
+        {
+          "k": "m",
+          "v": "c_0=2.6369"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5.3099"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "\\le G_{\\mathrm{dy}}\\Psi_{\\mathrm{abs}}"
+        },
+        {
+          "k": "t",
+          "v": " (sign-free, "
+        },
+        {
+          "k": "m",
+          "v": "c_0=2.5154"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "6.1449"
+        },
+        {
+          "k": "t",
+          "v": "); the better route gives "
+        },
+        {
+          "k": "m",
+          "v": "c_0=2.5154"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.2265"
+        },
+        {
+          "k": "t",
+          "v": " against the classical Dirichlet value "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": ". The all-sets density bound carries Charikar's cited constant, bracketed by exhaustive enumeration of all "
+        },
+        {
+          "k": "m",
+          "v": "4095"
+        },
+        {
+          "k": "t",
+          "v": " subsets of a small block (control: "
+        },
+        {
+          "k": "m",
+          "v": "c_0\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " breaks the certificate on every window)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fences and status."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Per instance on small windows only; nothing uniform in the zone index or in "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "c_0"
+        },
+        {
+          "k": "t",
+          "v": " of item (5) is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measured"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at the minimiser's own layer cake and the a-priori level lemma (T145's L1) stays open. Maz'ya 1985 (the strong-type half "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " used as a theorem anywhere — it is the thing the cycle transcribes), Muckenhoupt 1972, Fukushima–Oshima–Takeda 1994, Miclo 1999, Charikar 2000, Goldberg 1984, Gershgorin 1931, Wilkinson 1968 / Higham 2002 named classical; Weil 1952 cited, never used as a criterion; zero-firewall AST-checked. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CAPCHAIN.IDENT.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and this is not RH evidence."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Diary, paper and website (T145, "
+            },
+            {
+              "k": "t",
+              "v": "one-step-missing"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The T145 probe ("
+        },
+        {
+          "k": "c",
+          "v": "mazya_proof_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "MAZYA.PROOF"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "33/33"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "8.0"
+        },
+        {
+          "k": "t",
+          "v": " s, "
+        },
+        {
+          "k": "m",
+          "v": "64"
+        },
+        {
+          "k": "t",
+          "v": " windows "
+        },
+        {
+          "k": "m",
+          "v": "m=26\\ldots1173"
+        },
+        {
+          "k": "t",
+          "v": ") transcribes Maz'ya's classical proof step by step onto the non-Markovian form: M1, M2, M3 are theorems, the Markov property sits in exactly one line (M4), that line splits, its mass half is a theorem and dominates ("
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_{\\mathrm{tot}}=0.215"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.443<1"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "c_0"
+        },
+        {
+          "k": "t",
+          "v": " becomes explicit ("
+        },
+        {
+          "k": "m",
+          "v": "2.248"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.227"
+        },
+        {
+          "k": "t",
+          "v": ", fit "
+        },
+        {
+          "k": "m",
+          "v": "D^{0.028\\pm0.017}"
+        },
+        {
+          "k": "t",
+          "v": ", zone-uniform) and S1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " is certified on "
+        },
+        {
+          "k": "m",
+          "v": "64/64"
+        },
+        {
+          "k": "t",
+          "v": " windows; an explicit no-go proves a level-profile hypothesis is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "necessary"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; S2"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " retired, R5 downgraded, R4 closed — the mathematical rest is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " named lemma, L1. "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " part T145 (series totals "
+        },
+        {
+          "k": "m",
+          "v": "145"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "3659"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front.tex"
+        },
+        {
+          "k": "t",
+          "v": " gains the T145 subsection, the "
+        },
+        {
+          "k": "c",
+          "v": "v546"
+        },
+        {
+          "k": "t",
+          "v": " entry in the verified layer (now twelve modules) and the updated probe index; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T145 feed entry; suite counter "
+        },
+        {
+          "k": "m",
+          "v": "539\\to540"
+        },
+        {
+          "k": "t",
+          "v": " scripts. T146 ("
+        },
+        {
+          "k": "c",
+          "v": "level_lemma_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at exactly L1 and is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " part of this change."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-28",
     "dateLabel": "2026-07-28 · III",
     "heading": [

@@ -82,14 +82,15 @@ $240\,\zeta(s)\zeta(s-3)$ as a Dirichlet series, and the lattice's self-duality 
 exact functional equation whose fixed axis is the critical line --- a framework picture, stated as such,
 which the document opens with and then keeps at arm's length. This companion documents the line end to
 end. Eleven modules are
-load-bearing and ledger-carried (\vref{v535}--\vref{v545}): Hecke from geometry on the $E_8$ census,
+load-bearing and ledger-carried (\vref{v535}--\vref{v546}): Hecke from geometry on the $E_8$ census,
 the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, the matching-lemma / transport
 ledger package, and --- out of the second phase --- the margin-chain identities, the lumped
-$M$-matrix pair, the long-lag support structure and the Hardy-core identities. Everything beyond
-those eleven is \emph{sandbox}: an exploratory program, run as
-$144$ preregistered probes with $3626$ machine checks, which localized the residual object. That
+$M$-matrix pair, the long-lag support structure, the Hardy-core identities and the capacity-chain
+identities. Everything beyond
+those twelve is \emph{sandbox}: an exploratory program, run as
+$145$ preregistered probes with $3659$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -258,7 +259,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots144$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots145$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -266,7 +267,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T144: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T145: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -306,7 +307,14 @@ identity), the closed two-weight sup lands inside the Maz'ya window flat in $D$,
 restriction falls entirely by a max-density-subgraph bound over all $2^m$ sets, the Markov
 perturbation route is certified dead, and the certified chain has exactly \emph{one} unproven
 input --- the absolute Maz'ya constant $c_0$, its sharpest shape a Muckenhoupt-type hypothesis
-(T144)); Section~\ref{sec:status}
+(T144), and at last the proof attempt itself, whose verdict is \emph{one step missing}: the
+classical Maz'ya proof transcribes step by step onto the non-Markovian form, the Markov property
+sits in exactly \emph{one} line (M4), that line splits with its mass half a theorem that
+dominates ($\sigma_{\mathrm{tot}}=0.215$--$0.443<1$ everywhere), $c_0$ becomes explicit
+($2.248$--$4.227$, flat in $D$) and S1$'$ is \emph{certified} per window on $64/64$ windows,
+while an explicit no-go proves that an a-priori bound on the minimiser's level profile --- the
+level lemma L1 --- is necessary and cannot be replaced by any weaker hypothesis (T145; the
+identity spine of the capacity cycle is promoted as \vref{v546})); Section~\ref{sec:status}
 is the status statement.
 
 % =====================================================================
@@ -391,7 +399,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the eleven modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the twelve modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -521,13 +529,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: eleven modules}\label{sec:verified}
+\section{The verified layer: twelve modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The eleven modules and their ledger markers]
+\begin{keybox}[The twelve modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -544,6 +552,7 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v543} & \texttt{PRIME.MMATRIX.IDENT.01} & lumped $M$-matrix pair of phase 2 (per instance) & \mE\\
 \vref{v544} & \texttt{PRIME.LONGLAG.SUPP.01} & long-lag support structure of phase 2 (per instance) & \mE\\
 \vref{v545} & \texttt{PRIME.HARDY.IDENT.01} & Hardy-core identities of phase 2 (per instance) & \mE\\
+\vref{v546} & \texttt{PRIME.CAPCHAIN.IDENT.01} & capacity-chain identities of phase 2 (per instance) & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -862,6 +871,70 @@ index or in $D$, and every exponent above is a fit that stays in the sandbox. Th
 \emph{shape} by its own Weyl floor, and the joint shape is decided at the normalisation $\Omega$.
 The finite-core row is an \emph{identity} and not a bound --- the zone-uniform discrete Hardy
 inequality it reduces the question to stays open, and no marker moves toward it.
+\end{itemize}
+
+\subsection{The capacity-chain identities (\texorpdfstring{\vref{v546}}{v546})}\label{sec:v546}
+The identity spine of the capacity cycle T142--T145 of Section~\ref{sec:phase2}: what the
+certified chain \emph{is}, per instance and machine-checked, with the one open lemma fenced
+out \veri{v546\_capacity\_chain\_identities.py} ($26$ checks, ${\sim}0.5$\,s; promotion of
+the identity blocks of T142--T145 on $12$ frame-A windows, $n=4\ldots139$, $h=26\ldots285\le300$,
+$D=7.578\times10^{-3}\ldots2.789\times10^{-2}$, $32$--$5102$ positive off-diagonal edges; the
+covering kernel is positive definite on $11$ of them, where the first two items run; each
+statement carries a mutation control that must fail by $\ge10^{-3}$).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The capacity decomposition (T142)} \mE:
+$K^{-1}=D^{\mathsf T}J^{-1}D+xx^{\mathsf T}/\mathrm{cap}$ with $J=DKD^{\mathsf T}$ (assembled
+entrywise, $3.8\times10^{-15}$), $x=K^{-1}\mathbf 1$ the equilibrium charge and
+$\mathrm{cap}=\mathbf 1^{\mathsf T}K^{-1}\mathbf 1$, as a matrix identity ($1.4\times10^{-13}$);
+under the congruence $u=K^{1/2}v$ the Dirichlet half is an \emph{orthogonal projection} ($P^2=P$
+at $1.9\times10^{-12}$, $\Omega=\lambda_{\max}(P)=1$ to $5.1\times10^{-12}$ --- the T142
+normalisation, where T141 had guessed $20.7$--$2724$), its complement \emph{is} the capacity
+rank-one, and it annihilates the equilibrium direction $K^{-1/2}\mathbf 1$. Controls: dropping
+the rank-one ($3.4\times10^{-1}$), a $1\%$ cap perturbation ($3.4\times10^{-3}$).
+\item \textbf{The exact capacity--Rayleigh identity (T143)} \mE: with $H=\mathrm{diag}(s)+L_N$
+($4.7\times10^{-16}$), $L_N=D^{\mathsf T}BD$ for the signed crossing kernel
+($4.9\times10^{-16}$) and $\rho(W)=1-\lambda_{\min}(A,A_B)$ ($5.4\times10^{-14}$), the assembled
+quotient
+$[\,d^{\mathsf T}(J^{-1}-B)d+(x^{\mathsf T}v)^2/\mathrm{cap}-\sum_ks_kv_k^2\,]/[\,d^{\mathsf T}J^{-1}d+(x^{\mathsf T}v)^2/\mathrm{cap}\,]$
+equals $v^{\mathsf T}(K^{-1}-H)v/v^{\mathsf T}K^{-1}v$ for \emph{every} $v$
+($9.5\times10^{-14}$ on $24$ random vectors per window), reproduces $1-\rho(W)$ at the exact top
+eigenvector ($1.7\times10^{-9}$ under the \emph{declared} $1/\mathrm{gap}$ conditioning bar
+$5.4\times10^{-8}$), and every random quotient stays $\ge1-\rho(W)$ (the inf property); on the
+constant vector the whole denominator \emph{is} the capacity term. Controls: dropping the cap
+term (rel $=1$), the $|N|$ crossing kernel ($2.6\times10^{-1}$).
+\item \textbf{Cholesky nestedness (T144)} \mE: $\mathrm{cap}_E([a,a{+}j))$ equals the prefix sum
+of squared forward-substitution entries of \emph{one} triangular solve --- $3404$ interval
+capacities from $36$ solves at $2.0\times10^{-14}$ against independent Schur solves, exhaustive
+on the median window (every prefix, $2.8\times10^{-14}$), monotone in $b$ by construction.
+Control: the reversed ordering computes \emph{suffix} capacities and deviates by
+$\ge4.6\times10^{-1}$.
+\item \textbf{The whitening certificate (T144)} \mE:
+$\lambda_{\max}(W)\le\kappa_{\mathrm{up}}$ (completed Cholesky) $\le$ the Gershgorin ceiling on
+every window ($\kappa_{\mathrm{up}}=1.2245$--$1.4236$ against $\le2.1213$); the licensed chain
+direction $\lambda_{\min}(E)/\kappa_{\mathrm{up}}\le\lambda_{\min}(A,A_B)$ holds on every window
+--- a \emph{denominator} comparison, untouched by T142's numerator obstruction --- and the
+Cholesky refuses at the shrunken shift $0.995\,\lambda_{\max}(W)$.
+\item \textbf{The M4 split and the certified chain (T145)} \mE: the mass half of Maz'ya's step
+M4 --- $\sum_kf_k^2\le\psi^2$ \emph{pointwise} (a theorem for nonnegative truncations, exact
+slack $\ge0$), the row-wise implication on rows with $(E\mathbf 1)_i\ge0$, and the full step
+$\sigma_{\mathrm{tot}}=0.2197$--$0.4425<1$ on every window although the Markov hypothesis is
+absent. Licence 4 is stated with $|R|$ and \emph{not} $R^{+}$, with the witness
+$R=\bigl[\begin{smallmatrix}1&-1/2\\-1/2&1\end{smallmatrix}\bigr]$, $x=(1,-1)$ ($3.0>2.0$) built
+in as a counterexample check. The sign-free chain is ordered on every window, and S1$'$ is
+\emph{certified per window on both routes}:
+$\mathrm{cert\_lam\_max}(R)\le12\,\sigma_{\mathrm{tot}}\Psi_{\mathrm{pos}}$ (energy,
+$c_0=2.6369$--$5.3099$) and $\le G_{\mathrm{dy}}\Psi_{\mathrm{abs}}$ (sign-free,
+$c_0=2.5154$--$6.1449$), better route $c_0=2.5154$--$4.2265$ against the classical Dirichlet
+value $4$; the all-sets density bound carries Charikar's cited constant, bracketed by exhaustive
+enumeration of all $4095$ subsets of a small block. Control: $c_0\times10^{-3}$ breaks the
+certificate on every window.
+\item \textbf{Named limits as content.} Per instance on small windows; nothing uniform in the
+zone index or in $D$, and every T142--T145 exponent is a fit that stays in the sandbox. The
+$c_0$ of the last row is \emph{measured} at the minimiser's own layer cake --- the a-priori
+\emph{level lemma} (T145's L1) stays open, unclaimed and unapproached, and no marker moves
+toward it. Maz'ya's strong-type half is \emph{not} used as a theorem anywhere: it is the thing
+the cycle transcribes.
 \end{itemize}
 
 % =====================================================================
@@ -3204,7 +3277,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T144)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T145)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -4592,12 +4665,125 @@ statements ripe (stock $93$), $0$ promoted here. The honest state, in one senten
 (\texttt{mazya\_proof\_probe.py}) is running at exactly S1$'$.
 \end{keybox}
 
+\subsection{The proof attempt: one step missing, and it has a name (T145)}
+T145 (\texttt{mazya\_proof\_probe.py}, contract \texttt{MAZYA.PROOF}, $33/33$, $8.0$\,s on $64$
+windows $m=26\ldots1173$, verdict \textsc{one-step-missing}, the verdict rule hard-wired and
+checked \emph{before} the verdict is printed) attacks exactly S1$'$: it does not look for a
+better chain, it takes the classical \emph{proof} of the capacitary strong-type inequality
+apart, transcribes it onto the non-Markovian form line by line, and reads off what survives.
+The step list, declared before it is measured:
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}l Y l l@{}}
+\toprule
+\textbf{Step} & \textbf{Content} & \textbf{Status here} & \textbf{Factor}\\
+\midrule
+M1 & dyadic level decomposition of the minimiser & theorem, verified & $1.649$--$2.670$ ($\le3$)\\
+M2 & $|A|\le\Phi_{\sup}\,\mathrm{cap}(A)\le\Psi\,\mathrm{cap}(A)$ (Green floor) & theorem (Cauchy--Schwarz) & $\times1$\\
+M3 & $\mathrm{cap}(A_{k+1})\le4^{-k}E(f_k)$, truncation admissible & theorem, verified & $\times4$, slack $\le1.036$\\
+M4 & $\sum_kE(f_k)\le E(f)$ --- \emph{the} Markov line & \textbf{void} on this form & measured\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\noindent M1--M3 are theorems for \emph{any} positive definite form (verified here in the
+direction they are used, on $168$ levels of $24$ windows for M3). M4 is the only step that uses
+the Markov property, and it uses it twice --- the sign of the conductances and the
+sign-coherence of the truncation increments. On this form it is \emph{void}, not merely
+unproved: on all $64$ windows $3.2$--$14.9\%$ of the off-diagonal entries of $E$ are positive
+and carry $18.3$--$58.7\%$ of the off-diagonal mass, the conductance part of the minimiser's
+energy is itself \emph{negative} on $61$ of $64$ windows ($-0.380\ldots0.593$ of $E(\psi)$) ---
+and the same code on the Stieltjes surrogate $E-P$ reproduces the classical step, so the death
+belongs to the form and not to the measurement. T143's Miclo chain loss of $46$--$2561$ is the
+same death, now localised in \emph{one line} of the proof instead of in a construction.
+
+\emph{But M4 splits, and only one half is Markovian.} By the pair (Beurling--Deny)
+decomposition the step is the sum of a \emph{conductance} half, which needs a nonnegative
+weight and fails above, and a \emph{mass} half, which rests on the pointwise theorem
+$\sum_kf_{k}^2\le\psi^2$ for the dyadic truncations (measured ratio $0.2639$--$0.2995\le1$) ---
+and the mass half \emph{dominates} ($0.407$--$1.380$ of $E(\psi)$), so the full step
+$\sigma_{\mathrm{tot}}=\sum_kE(f_k)/E(\psi)=0.2145$--$0.4425$ is below $1$ on every window
+although its Markov half is dead. That one exact number per window is all the classical proof
+ever needed. Two routes then make the constant \emph{explicit}: the \textbf{energy route}
+(the classical proof with M4 replaced by its exact value at the minimiser) gives
+$c_0=12\,\sigma_{\mathrm{tot}}=2.5734$--$5.3099$; the \textbf{sign-free Green route}
+(entrywise domination $x^{\mathsf T}Rx\le|x|^{\mathsf T}|R||x|$ for the first use of Markov,
+nested-set domination of a nonnegative matrix for the second --- no sign hypothesis anywhere)
+gives $c_0=G_{\mathrm{dy}}=2.1559$--$6.3937$, the geometric level constant of the minimiser's
+own layer cake. The better route:
+\[
+c_0 \;=\; 2.2480\text{--}4.2265,\qquad \text{fit } D^{0.028\pm0.017}\ \text{(zone-uniform)},
+\]
+against Maz'ya's classical Dirichlet value $4$ and the minimum $1.067$--$1.352$ the measured
+density sup allows. And S1$'$ stands as a \emph{certified window inequality} on all $64$
+windows: $\mathrm{cert\_lam\_max}(R)\le c_0\,\Psi$, with the certified side independent of
+whether the computed vector is the minimiser. The price of dropping the sign, as a number: the
+density hypothesis must be stated for $|R|$ rather than $R^{+}$, a factor $1.12$--$1.41$ ---
+and the direction error this fences ($x^{\mathsf T}Rx\le|x|^{\mathsf T}R^{+}|x|$ is \emph{false})
+carries its own built-in witness,
+$R=\bigl[\begin{smallmatrix}1&-1/2\\-1/2&1\end{smallmatrix}\bigr]$ at $x=(1,-1)$, where
+$3>2$.
+
+\emph{The no-go, and why the hypothesis list is tight.} The ``direct spectral argument'' is not
+an independent bypass: $\Psi(A)$ is a Rayleigh quotient of $R$ at $\mathbf 1_A$, so
+$\Psi_{\mathrm{all}}\hat\lambda\le1$ is a theorem with \emph{no content} for S1$'$ --- the
+load-bearing direction is the lower one, a statement about the minimiser's \emph{profile}
+(participation ratio $0.3026$--$0.4588$, $K=35$ levels, delocalised and sign-structured). And
+the explicit form $R=aa^{\mathsf T}+\varepsilon I$ with $a_i=i^{-1/2}$ --- positive definite,
+entrywise \emph{nonnegative}, with the \emph{proved} density ceiling $4+\varepsilon$ (prefixes
+by rearrangement) --- has $\lambda_{\max}\sim\log m$: $\Psi_{\mathrm{all}}\hat\lambda$ decays
+$0.7023\to0.4882$ along $m=64\to1500$ while $G_{\mathrm{dy}}$ grows $7.6\to36.8$ (flat
+$1.69$--$4.16$ on the Markovian control, $2.25$--$4.23$ on the TFPT windows). So positivity, a
+nonnegative Green function and a bounded density sup do \emph{not} imply S1$'$ with any
+absolute constant: a hypothesis on the minimiser's \emph{level profile} is necessary, and the
+step list is not merely sufficient but tight.
+
+\emph{The verdict discipline, as its own statement.} The verdict rule is checked before the
+verdict is printed: \textsc{proof-shaped} requires every step factor to be a theorem or a
+certified bound, the replacement of M4 is a \emph{measured} constant at the minimiser, no
+a-priori bound for it is available here --- so exactly one step of the transcribed proof is
+open and the verdict is \textsc{one-step-missing}. Boundedness (max $4.2265\le16$, the
+preregistered ceiling) and flatness ($D^{0.028\pm0.017}$ against the $0.25$ bar) of that
+constant are \emph{evidence} for the missing lemma and are reported as such, never as the
+lemma. The rest, typed: S2$'$ is \emph{retired as a requirement} (the chain never mentions an
+interval, so $c_{\mathrm{glob}}$ is not an input; the finite test family brackets the all-sets
+sup with $c_{\mathrm{test}}=1.0782$--$1.1327$ against Charikar's cited $2$); R5 is certified on
+\emph{both} sides per window but the sandwich width
+$\kappa_{\mathrm{up}}/\kappa_{\mathrm{lo}}=2.668$--$28.532$ drifts like $D^{0.543}$ ---
+downgraded, not retired, the used side $\kappa_{\mathrm{up}}=1.1491$--$1.4230$ staying flat
+($D^{0.065}$); R4: all $24$ border blocks of this pool close directly and inherit exactly the
+one missing input. Map V17, $11$ new statements (stock $104$). The identity spine of the whole
+cycle T142--T145 --- the capacity decomposition, the exact capacity--Rayleigh identity, the
+Cholesky nestedness, the whitening certificate and the M4 split with the certified chain --- is
+load-bearing as \vref{v546} \veri{v546\_capacity\_chain\_identities.py}
+(Section~\ref{sec:v546}).
+
+\begin{keybox}[After T145: one named lemma --- L1, the level lemma]
+\emph{(L1)} \textbf{the only mathematical item left in the S1$'$ branch}: an a-priori bound,
+uniform in $D$, for \emph{one} constant of the minimiser's own dyadic layer cake --- either
+$\sigma_{\mathrm{tot}}=\sum_kE(f_k)/E(\psi)\le C$ on the energy route (measured
+$0.2145$--$0.4425$) or $G_{\mathrm{dy}}\le C$ on the sign-free route (measured
+$2.1559$--$6.3937$). Either one alone closes S1$'$ with an explicit $c_0$; the no-go proves
+some such bound is \emph{necessary}; and both are delocalisation statements about the
+minimiser (participation ratio $0.303$--$0.459$). \emph{(L2)} the visible route: the T143
+profile (orthogonal to the charge, masses help) plus a perturbation estimate, with the level
+count $K=35$ and the sign share $0.348$--$0.672$ as the profile's address. \emph{(R4)}
+bookkeeping only. Retired with reasons: S2$'$ (the chain has no interval step), the Markov
+perturbation search (T144 certified it dead, and the proof needs Markov in exactly one line
+with two replacements), and the reading of $\Psi_{\mathrm{all}}\hat\lambda\le1$ as evidence (a
+content-free theorem). The honest state, in one sentence: T144's unproven input was an absolute
+constant with no address --- after T145 it is a bounded, flat, exactly computable quantity
+attached to a named object with a necessity proof behind it, which is a strictly better place
+to stand and still not a theorem. T146 (\texttt{level\_lemma\_probe.py}) is running at exactly
+L1.
+\end{keybox}
+
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
-\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the eleven ledger modules
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the twelve ledger modules
 of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
@@ -5071,19 +5257,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T144}\label{app:index}
+\section{Probe index, diary parts T11--T145}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $134$ parts T11--T144 that the current diary file records
-($135$ runs --- T104 was a double run with two independent arms --- and $3434$ green checks); the ten
+load-bearing artefact. The index covers the $135$ parts T11--T145 that the current diary file records
+($136$ runs --- T104 was a double run with two independent arms --- and $3467$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v545} promoted; with T126--T144, the first nineteen parts of the second phase, the
-running totals are \textbf{$144$ probes and $3626/3626$ checks}. T145
-(\texttt{mazya\_proof\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v546} promoted; with T126--T145, the first twenty parts of the second phase, the
+running totals are \textbf{$145$ probes and $3659/3659$ checks}. T146
+(\texttt{level\_lemma\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -5233,6 +5419,7 @@ T141 & \texttt{\scriptsize discrete\_\allowbreak hardy} & the Hardy ingredient \
 T142 & \texttt{\scriptsize conductance\_\allowbreak profile} & the optimal Hardy weight \textbf{found exactly, not guessed}: the capacity decomposition $K^{-1}=D^{\mathsf T}J^{-1}D+xx^{\mathsf T}/\mathrm{cap}$ ($J=DKD^{\mathsf T}=L_\Delta$ the endpoint Laplacian, $x=K^{-1}\mathbf 1$ the equilibrium charge, $\mathrm{cap}=\mathbf 1^{\mathsf T}K^{-1}\mathbf 1$) verified to $5.5\times10^{-12}$ on $26/26$ windows; the Dirichlet half is an \emph{orthogonal projection}, so $\Omega=1$ \textbf{exactly} (T141 guessed $20.7$--$2724$, $D^{-1.87}$) --- the weight is geometry (Miclo 1999, Maz'ya capacity), and the exact capacity Rayleigh form follows with no inequality taken; the variational class optimum is $\Lambda\Omega=1.3160$--$1.4235$ at $D^{-0.029\pm0.014}$ --- \textbf{the failure is a constant factor, not a power} --- with the stable shape $c_k\sim1/J_{kk}$ (correlation $0.988$--$0.995$) and essentially no mass; the certified chain reads $\Lambda\Omega=2.2671$--$2.4536$ vs target ${\sim}1$ ($0/26$, flat at $D^{0.006\pm0.004}$; gain over guessing $31.9$--$137\times$); \textbf{the rank ladder closes the comparison path}: the diagonal minorant $+$ $r$ dominant residual modes stalls at $1.39$--$1.41$ for all $r\le128$ and crosses $1$ only at $r^*/m=0.995$--$0.998$ (the tautology $Y=K^{-1}$; anchored to $\rho$ at $1.7\times10^{-11}$), and since $\rho(W)=1-\Theta(D^3)$ with equality only at $Y\propto K^{-1}$, \textbf{no comparison argument can deliver $D$-uniformity}; R3$'$ corrected --- only $0.03\%$ of the first moment of $(-H)_+$ inside distance $8$ (support radius $204$--$873$), the long-range Loewner step certified, its constant $\sim D^{-1.73}$ not uniform $\Rightarrow$ R3$''$; border pool $72$, $68$ certified, $4$ open (required far shrink $0.656$--$1.052$); map V14, $9$ statements ripe (stock $75\to84$); \textbf{rest list: R1c the sharp capacity--Rayleigh route, R1d the LP/SDP dual, R3$''$, R4} & PROFILE-RESISTS & 24/24\\
 T143 & \texttt{\scriptsize sharp\_\allowbreak capacity} & the sharp route \textbf{carries}: the exact capacity--Rayleigh form $1-\rho(W)=\inf_v[d^{\mathsf T}(J^{-1}-B)d+(x^{\mathsf T}v)^2/\mathrm{cap}-\sum_ks_kv_k^2]/[d^{\mathsf T}J^{-1}d+(x^{\mathsf T}v)^2/\mathrm{cap}]$, $d=Dv$, is an \emph{identity} on $26/26$ windows (assembly $10^{-11}$/$5\times10^{-12}$, eigenvalue $3\times10^{-6}$ relative under the declared $1/\mathrm{gap}$ conditioning), with a structurally new bookkeeping --- the minimiser \emph{orthogonal} to the equilibrium charge (the capacity rank one carries nothing), the mass share \emph{negative} ($-0.0698$ to $-0.0029$), the gap a cancellation between Green share (exactly $1$) and crossing share ($1.0029$--$1.0698$), the naive split certified dead at $6.19$--$66.63\times\rho$; \textbf{Maz'ya's criterion lands inside its window}: $\Phi_{\sup}\lambda=0.5438$--$0.6457$ on $26/26$ (window $[1/4,1]$) for a \emph{non-Markovian} form ($72$--$84\%$ positive off-diagonals), the bound $\lambda\ge1/(4\Phi_{\sup})$ captures $0.387$--$0.460$ of the true gap with a \textbf{zone-uniform loss factor} $D^{-0.048\pm0.010}$ (bar $0.25$); the supremum lives on closed families ($0.9606$--$1.0000$ of the best, local search $\le1.041\times$; in node coordinates \emph{intervals} dominate by $8.3$--$129.5$ --- Muckenhoupt's one-dimensional structure) and is \emph{certified by enumerating all $255$--$16383$ subsets} on $6$ border blocks ($\Phi_{\sup}\lambda=0.6087$--$0.9016$, inside the window); Miclo's constructive chain loses $46$--$2561$ ($D^{-2.13}$) --- the conclusion holds, the classical proof mechanism does not; R1d dead as a direction sample (the LP dual saturates at the trivial floor, $\rho(W)$ to a factor $1.000000$; needs the full SDP constraint), border pool $36$, $32$ certified, $4$ open, the capacity argmax entirely the far tail; map V15, $10$ statements ripe (stock $84\to94$); \textbf{rest list: S1 one named capacity inequality $\mathrm{cap}_E(A)\ge|A|\lambda_0/c_0$ with absolute $c_0$, S2 the Muckenhoupt/interval route to it, S3 a closed capacity lower bound, R1d$'$, R4} & SHARP-CARRIES & 24/24\\
 T144 & \texttt{\scriptsize capacity\_\allowbreak inequality} & the interval route \textbf{carries, and the chain has exactly one unproven input}: with the \emph{Jacobi whitening} as the single comparison licence ($\kappa_{\mathrm{up}}=1.1195$--$1.3162$ certified per window; Gershgorin would allow $\le1.983$; a denominator comparison, untouched by T142's obstruction), two interval-reduction statements separate --- the \emph{pointwise hull comparison is false} (up to $425$, drifting $D^{-1.137}$, scattered level sets as offenders $\Rightarrow$ S2 must be a testing condition) while the \emph{best-interval comparison holds}, $c_{\mathrm{glob}}=1.0000$--$1.6876$ zone-uniform at $D^{-0.068\pm0.024}$, measured on $2.24$ million sets incl.\ \emph{all} $16383$ subsets of $136$ enumerated blocks (capacity monotonicity holds on all of them, though the form is not Dirichlet); \textbf{the two-weight sup is exact, not sampled}: $11\,390\,676$ intervals exhausted via a Cholesky prefix-sum identity (verified to $10^{-11}$), giving the core number $B_{\mathrm{res}}\hat\lambda=0.6694$--$0.7813$ inside the Maz'ya window $[1/4,1]$ on the whole surface, flat at $D^{0.013\pm0.005}$ and coordinate-robust (T143: $0.5438$--$0.6457$), with the free half $\Phi_{\sup}\hat\lambda\le1$ passing on all $2.24$M sets; \textbf{the chain} $\lambda\ge1/(c_0\kappa_{\mathrm{up}}c_{\mathrm{glob}}B_{\mathrm{res}})$ certifies $0.1002$--$0.2653$ of the exact gap per window, the residual $D$-dependence in the Jacobi transfer ($D^{-0.178}$), not the capacity calculus; dead: the naive Muckenhoupt trial-energy transcription ($89$--$6995$, $D^{-1.885}$); honest counter-side exact: $\Phi_{\mathrm{int}}\hat\lambda=0.0928$--$0.3578$ drifts $D^{0.654\pm0.016}$ --- intervals saturate S1 only from above; \textbf{the Markov perturbation route is certified dead} ($\lambda_{\min}(E-P)<0$ everywhere, $t^*\sim D^{3.96}$; $3$--$12\%$ positive off-diagonal entries carrying $36.7$--$64.5\%$ of the mass); \textbf{S3 stronger than asked}: the Cauchy--Schwarz floor makes $\Phi_{\sup}$ a max-density-subgraph value (Charikar 2000; Goldberg 1984), $\Psi_{\mathrm{all}}\hat\lambda=0.7399$--$0.8515$ at $D^{0.015\pm0.005}$ over \emph{all} $2^m$ sets --- the flattest number of the probe, argmax on intervals ($B_{\mathrm{res}}$ only $1.078$--$1.129$ below); R4: $22$ blocks, $19$ certified, $3$ open, $c_{\mathrm{glob}}=1.0000$ exact on $5$ enumerated; map V16, $9$ statements ripe (stock $93$); \textbf{rest list: S1$'$ --- S1 under a Green mean-density bound, a Muckenhoupt-type instead of a Markov-type hypothesis --- S2$'$ as testing condition, R4, R5; the only unproven input is the absolute constant $c_0$} & INTERVAL-CARRIES & 31/31\\
+T145 & \texttt{\scriptsize mazya\_\allowbreak proof} & the proof attempt for S1$'$, \textbf{one step missing, and it has a name}: the classical Maz'ya proof transcribes step by step onto the non-Markovian form --- M1 level arithmetic (theorem, factor $1.649$--$2.670$ against the ceiling $3$), M2 the Green floor (theorem, Cauchy--Schwarz), M3 truncation admissibility (theorem, $\times4$, slack $\le1.036$ on $168$ levels) --- and \textbf{the Markov property sits in exactly one line}, M4 truncation subadditivity, which is \emph{void} here: $3.2$--$14.9\%$ positive off-diagonals carrying $18.3$--$58.7\%$ of the mass, the conductance share of the minimiser's energy negative on $61/64$ windows, while the same code on the Stieltjes surrogate $E-P$ reproduces the classical step; \textbf{but M4 splits} --- the mass half is a theorem ($\sum_kf_k^2\le\psi^2$ pointwise; ratio $0.2639$--$0.2995$) and dominates, so $\sigma_{\mathrm{tot}}=0.2145$--$0.4425<1$ everywhere; two routes make $c_0$ \textbf{explicit}: energy $12\sigma_{\mathrm{tot}}=2.5734$--$5.3099$, sign-free $G_{\mathrm{dy}}=2.1559$--$6.3937$, better route $c_0=2.2480$--$4.2265$ at $D^{0.028\pm0.017}$ (zone-uniform) against Maz'ya's Dirichlet value $4$, and \textbf{S1$'$ is certified per window}: $\mathrm{cert\_lam\_max}(R)\le c_0\Psi$ on $64/64$ (sign price $|R|$ vs $R^{+}$: $1.12$--$1.41$, witness built in); the \textbf{no-go} $R=aa^{\mathsf T}+\varepsilon I$, $a_i=i^{-1/2}$ (entrywise nonnegative, proved density ceiling $4+\varepsilon$, $\lambda_{\max}\sim\log m$) shows $\Psi_{\mathrm{all}}\hat\lambda$ decaying $0.702\to0.488$ and $G_{\mathrm{dy}}$ growing $7.6\to36.8$ --- a level-profile hypothesis is \emph{necessary}; S2$'$ retired as a requirement ($c_{\mathrm{test}}=1.0782$--$1.1327$ against Charikar's cited $2$), R5 two-sided but width $D^{0.543}$ (downgraded; used side flat $D^{0.065}$), R4 all $24$ blocks closed; map V17, $11$ statements ripe (stock $104$); \textbf{rest: L1 the level lemma --- an a-priori bound for $\sigma_{\mathrm{tot}}$ or $G_{\mathrm{dy}}$, either alone closes S1$'$ --- L2 the profile route to it, R4 bookkeeping}; identity spine of T142--T145 promoted as \vref{v546} & ONE-STEP-MISSING & 33/33\\
 \end{xltabular}
 }
 

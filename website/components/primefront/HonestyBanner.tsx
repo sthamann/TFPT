@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v545
+          v535–v546
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3626/3626 sandbox checks —
+        (“the full proof”, T126+) is now open with 3659/3659 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -119,7 +119,17 @@ export function HonestyBanner() {
         Markov perturbation route is certified dead, and the certified chain
         λ ≥ 1/(c₀·κ_up·c_glob·B_res) now has exactly <em>one</em> unproven
         input: the absolute Maz&apos;ya constant c₀, whose sharpest shape
-        S1′ is a Muckenhoupt-type hypothesis (T145, running). What remains
+        S1′ is a Muckenhoupt-type hypothesis. T145 (ONE-STEP-MISSING) then
+        ran the proof attempt itself: the Maz&apos;ya proof transcribes step
+        by step, the Markov property sits in exactly one line (M4), that
+        line splits — the mass half is a theorem and dominates
+        (σ_tot = 0.215–0.443 &lt; 1 everywhere) — so c₀ becomes explicit
+        (best 2.248–4.227, flat in D) and S1′ is certified per window on
+        64/64 windows, while an explicit no-go proves that an a-priori bound
+        on the minimiser&apos;s level profile (the level lemma L1) is
+        necessary and cannot be replaced by any weaker hypothesis; the
+        identity spine of T142–T145 is load-bearing as v546, and T146
+        (level_lemma_probe.py) is running at exactly L1. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

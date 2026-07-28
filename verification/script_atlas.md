@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`539` registered scripts · `610` ledger claims · `10` clusters.
+`540` registered scripts · `611` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (72 scripts)
+### `core` — Compiler core & the E₈ glue  (73 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -155,6 +155,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v543_lumped_pair_identities, v542_margin_chain_identities, v543, T136, T137 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v545_hardy_core_identities** [E/O/X] `PRIME.HARDY.IDENT.01` — eight per-instance identities / certified forms recomputed on small frame-A windows (11 windows n=8…139, h=58…285 ≤ 300, core m=57…284, 193…5102 positive off-diagonal edges, 10…87 
   - deps: v543_lumped_pair_identities, v544_long_lag_support, v542_margin_chain_identities, v543, v544, T139, T140, T141 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v546_capacity_chain_identities** [E/O] `PRIME.CAPCHAIN.IDENT.01` — the identity-shaped core of the capacity cycle T142–T145 recomputed on small frame-A windows (12 windows n=4…139, h=26…285 ≤ 300, D spanning 7.6e-03…2.8e-02; covering kernel positi
+  - deps: v545_hardy_core_identities, v543_lumped_pair_identities, v545, T142, T143, T144, T145 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1149,7 +1151,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v534_seam_straddle_cone** — `SEAM.STRADDLE.CONE.01`
 - **v535_hecke_from_geometry** — `HECKE.GEOM.01`
 - **v536_eichler_trace_layer** — `HECKE.GEOM.EICHLER.01`
 - **v537_halfintegral_bridge** — `HECKE.GEOM.HALFINT.01`
@@ -1161,4 +1162,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v543_lumped_pair_identities** — `PRIME.MMATRIX.IDENT.01`
 - **v544_long_lag_support** — `PRIME.LONGLAG.SUPP.01`
 - **v545_hardy_core_identities** — `PRIME.HARDY.IDENT.01`
+- **v546_capacity_chain_identities** — `PRIME.CAPCHAIN.IDENT.01`
 

@@ -2734,6 +2734,41 @@ no marker moves.
 Machine-checked: \veri{v545\_hardy\_core\_identities.py}.
 \mE\ (per-instance identities) $+$ \mX\ (one route typed)
 
+\par\smallskip\noindent\textbf{\texttt{PRIME.CAPCHAIN.IDENT.01} --- the
+capacity-chain identities of phase 2 (T142--T145).}
+\emph{(1)} The capacity decomposition
+$K^{-1}=D^{\mathsf T}J^{-1}D+xx^{\mathsf T}/\mathrm{cap}$ with
+$J=DKD^{\mathsf T}$ (entrywise, $3.8\times10^{-15}$), $x=K^{-1}\mathbf 1$,
+$\mathrm{cap}=\mathbf 1^{\mathsf T}K^{-1}\mathbf 1$, as a matrix identity
+($1.4\times10^{-13}$) whose Dirichlet half is an \emph{orthogonal projection}
+under the congruence --- $\Omega=1$ exactly ($5.1\times10^{-12}$). \emph{(2)} The
+exact capacity--Rayleigh identity for $1-\rho(W)$: numerator/denominator
+assembly equals the direct quotient for every $v$ ($9.5\times10^{-14}$),
+eigenvalue reproduced under the declared $1/\mathrm{gap}$ conditioning, inf
+property verified, the constant vector carried entirely by the capacity term.
+\emph{(3)} Cholesky nestedness: $\mathrm{cap}_E([a,a{+}j))$ as a prefix sum of
+squared forward-substitution entries of one triangular solve ($3404$ interval
+capacities at $2.0\times10^{-14}$, exhaustive on the median window; the reversed
+ordering fails at $\ge4.6\times10^{-1}$). \emph{(4)} The whitening certificate
+$\lambda_{\max}(W)\le\kappa_{\mathrm{up}}=1.2245$--$1.4236\le$ Gershgorin
+$2.1213$, direction-correct, refusing at the shrunken shift. \emph{(5)} The T145
+M4 split: the pointwise mass-half theorem ($\sum_kf_k^2\le\psi^2$ exact),
+$\sigma_{\mathrm{tot}}=0.2197$--$0.4425<1$ per window, licence 4 with $|R|$ and
+not $R^{+}$ (witness $[[1,-\tfrac12],[-\tfrac12,1]]$, $3>2$, built in), the
+ordered sign-free chain, and S1$'$ \emph{certified per window on both routes}
+(better route $c_0=2.5154$--$4.2265$ against Maz'ya's Dirichlet value $4$), with
+Charikar's cited density constant bracketed by exhaustive enumeration.
+\textbf{Named limits as load-bearing content:} per instance on small windows,
+nothing uniform in the zone index or in $D$; the $c_0$ of (5) is
+\emph{measured} at the minimiser's own layer cake and the a-priori level lemma
+(T145's L1) stays open, unclaimed; Maz'ya's strong-type half is not used as a
+theorem anywhere --- it is the thing the cycle transcribes. Fences: Maz'ya 1985 /
+Muckenhoupt 1972 / Fukushima--\=Oshima--Takeda 1994 / Miclo 1999 / Charikar
+2000 / Goldberg 1984 / Gershgorin 1931 named classical; Weil 1952 cited, never
+used as a criterion; zero-firewall AST-checked; no marker moves.
+Machine-checked: \veri{v546\_capacity\_chain\_identities.py}.
+\mE\ (per-instance identities and certified inequalities)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

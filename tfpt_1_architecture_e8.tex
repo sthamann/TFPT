@@ -1137,6 +1137,50 @@ Machine-checked:
 \veri{v545\_hardy\_core\_identities.py}.
 \mE\ (per-instance identities) $+$ \mX\ (one route typed; no marker moves)
 
+\par\smallskip\noindent\textbf{The capacity-chain identities
+(\texttt{PRIME.CAPCHAIN.IDENT.01}).}
+The identity spine of the capacity cycle T142--T145 is load-bearing as the
+fourth companion module ($26$ checks, ${\sim}0.5$\,s) on $12$ frame-A windows
+($n=4\ldots139$, $h=26\ldots285\le300$, $D$ spanning
+$7.6\times10^{-3}$--$2.8\times10^{-2}$; the covering kernel positive definite on
+$11$, where the first two items run).
+\emph{The capacity decomposition.}
+$K^{-1}=D^{\mathsf T}J^{-1}D+xx^{\mathsf T}/\mathrm{cap}$ with $J=DKD^{\mathsf T}$
+($3.8\times10^{-15}$ entrywise), $x=K^{-1}\mathbf 1$,
+$\mathrm{cap}=\mathbf 1^{\mathsf T}K^{-1}\mathbf 1$, as a matrix identity
+($1.4\times10^{-13}$); under the congruence the Dirichlet half is an
+\emph{orthogonal projection} --- $\Omega=1$ exactly ($5.1\times10^{-12}$), where
+T141 had guessed $20.7$--$2724$ --- and its complement is the capacity rank-one.
+\emph{The exact capacity--Rayleigh identity.} The assembled quotient for
+$1-\rho(W)$ equals $v^{\mathsf T}(K^{-1}-H)v/v^{\mathsf T}K^{-1}v$ for every $v$
+($9.5\times10^{-14}$), reproduces $1-\rho(W)$ at the exact top eigenvector under
+the declared $1/\mathrm{gap}$ conditioning, and satisfies the inf property; on
+the constant vector the whole denominator \emph{is} the capacity term.
+\emph{Cholesky nestedness.} $\mathrm{cap}_E([a,a{+}j))$ is a prefix sum of
+squared forward-substitution entries of one triangular solve ($3404$ interval
+capacities at $2.0\times10^{-14}$, exhaustive on the median window); the
+reversed ordering fails at $\ge4.6\times10^{-1}$.
+\emph{The whitening certificate.} $\lambda_{\max}(W)\le\kappa_{\mathrm{up}}\le$
+Gershgorin ceiling ($1.2245$--$1.4236$ against $\le2.1213$), direction-correct,
+refusing at the shrunken shift.
+\emph{The M4 split and the certified chain.} The mass half of Maz'ya's Markov
+step is a pointwise theorem, $\sigma_{\mathrm{tot}}=0.2197$--$0.4425<1$ on every
+window; licence 4 holds with $|R|$ and \emph{not} $R^{+}$ (witness
+$[[1,-\tfrac12],[-\tfrac12,1]]$ built in); and S1$'$ is \emph{certified per
+window on both routes}, better route $c_0=2.5154$--$4.2265$ against the
+classical Dirichlet value $4$, with Charikar's cited density constant bracketed
+by exhaustive enumeration.
+\textbf{Named limits as content:} per instance on small windows, nothing uniform
+in the zone index or in $D$; the $c_0$ is \emph{measured} at the minimiser's own
+layer cake and the a-priori level lemma (T145's L1) stays open --- Maz'ya's
+strong-type half is not used as a theorem anywhere.
+Maz'ya 1985 / Muckenhoupt 1972 / Fukushima--\=Oshima--Takeda 1994 / Miclo 1999 /
+Charikar 2000 / Goldberg 1984 / Gershgorin 1931 named classical; Weil 1952
+cited, never used as a criterion.
+Machine-checked:
+\veri{v546\_capacity\_chain\_identities.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

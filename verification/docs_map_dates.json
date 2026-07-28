@@ -132,8 +132,8 @@
   "date": "2026-06-17"
  },
  "tfpt_1_architecture_e8::subsection::The $\\mu_4$ glue and the $5/4+3/4=2$ discriminant theorem (proved)::1": {
-  "hash": "35fc118f8290",
-  "date": "2026-07-28"
+  "hash": "a821dc48c81d",
+  "date": "2026-07-29"
  },
  "tfpt_1_architecture_e8::subsection::Glue-norm arithmetic, and three readings of $41$, $60$, $120$::1": {
   "hash": "0c702b08140b",
@@ -524,8 +524,8 @@
   "date": "2026-06-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
-  "hash": "1ff315ce0602",
-  "date": "2026-07-28"
+  "hash": "78f12de9fec2",
+  "date": "2026-07-29"
  },
  "tfpt_3_e8_audit_bootstrap::section::Further audit lemmas (machine-verified this round)::1": {
   "hash": "f779e820e593",
@@ -724,8 +724,8 @@
   "date": "2026-07-28"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "9e97ba0e6bb0",
-  "date": "2026-07-28"
+  "hash": "5f23e29e1ff4",
+  "date": "2026-07-29"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {
   "hash": "62902eaaa0d2",
