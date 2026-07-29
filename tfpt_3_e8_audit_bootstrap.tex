@@ -927,6 +927,53 @@ Sylvester 1852--Bunch--Kaufman 1977 / Euler 1735 / Davis--Kahan 1970
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The gauge/parity identities
+(\texttt{PRIME.GAUGE.PARITY.IDENT.01}).}
+The identity/certificate core of T149+T150 as the seventh companion module
+(\veri{v549\_gauge\_parity\_identities.py}; $21$ checks, ${\sim}0.3$\,s) on
+$12$ frame-A windows ($n=4\ldots139$, $m=26\ldots285\le300$), $48$ gauge
+assemblies, the full-section parity items on the $6$ windows with $M\le300$,
+and a parity control model at $m=2001$ --- the gauge freedom around the
+Green/Szeg\H{o} machinery and the parity structure underneath it, certified.
+For any positive diagonal $\tilde\Lambda$ the chain
+$\lambda_{\min}(A)\ge\mathrm{cert}\,\lambda_{\min}(\tilde E)\cdot
+\min_j\tilde\Lambda_j$ is a valid certified lower bound (identity plus one
+Rayleigh step; family maximum valid), $\Gamma=\sqrt{Q^\star}S_w$ holds
+gauge-invariantly at $2.4\times10^{-16}$, and the const gauge has
+$\mathrm{TV}(\log\tilde\Lambda)=0$ exactly with certified sandwich
+$\sigma=1.3868$--$2.5805$ (the completed-Cholesky floor refusing on the
+shifted indefinite form, $12/12$); the two-regime discriminator: the flutter
+smoother removes $\mathrm{TV}$ by $\ge2.88\times$ while the
+Liouville-transported $\nu_{\tilde L}$ moves $\le0.0088$ (rough re-gauge
+$\le0.0046$), the untransported functional jumping $0.41$--$9.76$ under the
+same rough gauge --- the roughness is in the form, not the multiplier; the
+explicit zone diagonal
+$\Lambda_r=c_0-c_{M-1-2r}+\sum_{s\ne r}\max(c_{|r-s|}-c_{M-1-r-s},0)$ at
+$5.9\times10^{-16}$ with the exact split
+$c=c^{\mathrm{arch}}+c^{\mathrm{atom}}$ ($c^{\mathrm{atom}}\le0$) and the
+closed atom budget $\|c^{\mathrm{atom}}\|_1\le4B\sqrt N$ ($B=1.038821$
+verified on the table), the archimedean section itself indefinite on
+$12/12$ --- the atoms co-responsible for the positivity, the additive
+perturbation reading structurally empty; the parity compression
+$U_-^{\mathsf T}T_M(c)\,U_-=T-H$ exact (cross block $1.4\times10^{-16}$)
+with the negative inertia of the sign-changing symbol localised entirely in
+the \emph{even} sector (odd sector zero, LDL$^{\mathsf T}$) --- $f(0)<0$
+explained rather than worked around; and the parity-sine calibration
+$\nu^P_k=\pi k^2$ on the exact model ($3.0\times10^{-5}$) with the
+per-window ladder $\nu^P_k\le Ck^2$, certified $C=11.70$--$17.28$.
+\textbf{Named limits as content:} per instance on small windows, nothing
+uniform in the zone index or in $D$, and explicitly no statement for all $D$
+--- the one open input (an $m$-free $C$ in the odd-sector ladder for a
+sign-changing symbol) stays open, typed open; $\mathrm{TV}(\log\Lambda)$
+stays withdrawn as a hypothesis; $\sigma_{\mathrm{tot}}$ stays retired as a
+route. KMS 1953 (parity sector) / Widom 1958 / Basor--Ehrhardt 2009 (the
+sign-changing symbol is exactly what it does not cover) / Sylvester
+1852--Bunch--Kaufman 1977 / Chebyshev 1852 (verified on the table) / Abel /
+Weyl 1912--Bauer--Fike 1960--Davis--Kahan 1970 (cited, computed dead, not
+used) named classical.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

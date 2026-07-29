@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v548
+          v535–v549
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3789/3789 sandbox checks —
+        (“the full proof”, T126+) is now open with 3825/3825 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -174,8 +174,25 @@ export function HonestyBanner() {
         by at most 0.9%, so the roughness sits in the form, not in the
         multiplier. The missing input relocates to the deep modes of the
         pure Toeplitz-minus-Hankel section (ladder form ν_k ≤ C·k² with
-        m-free C, the flutter amplitude measured flat as the second lever);
-        T150 (mode_ladder_probe.py) is running at exactly that ladder. What
+        m-free C, the flutter amplitude measured flat as the second lever).
+        T150 (ONE-TERM-MISSING) then ran exactly that ladder, and the
+        mechanism acquired a name — parity: the form is exactly the
+        compression of the full symmetric Toeplitz section onto its
+        antisymmetric parity sector (U₋ᵀT_M U₋ = T − H, certified), and the
+        sign-changing symbol&apos;s entire negative inertia sits in the EVEN
+        sector (72/72, LDLᵀ) — T148&apos;s honest negative is explained
+        rather than worked around. The flutter amplitude became a certified
+        form functional (0.0606–0.1993, falling, atom budget closed at
+        4B√N), the whitening diagonal an explicit zone functional, and the
+        arithmetic atoms turn out to be co-responsible for the positivity —
+        the archimedean section alone would have 2–7 negative eigenvalues,
+        so the additive perturbation route is structurally dead while the
+        multiplicative gauge step closes. One gate remains: the ladder
+        constant still grows (C ≤ 43.391 = 13.81π certified per stratum,
+        trend x^0.258 against the bar 0.25), and the gap from π is exactly
+        the arithmetic leakage of the bottom mode; the identity/certificate
+        core of T149+T150 is load-bearing as v549, and T151
+        (odd_ladder_probe.py) is running at the odd-sector ladder. What
         remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing

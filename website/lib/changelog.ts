@@ -43,6 +43,1701 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · IV",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v549"
+      },
+      {
+        "k": "t",
+        "v": " — the gauge/parity identities of phase 2 promoted; prime-front diary T150 (the parity mechanism named, ONE-TERM-MISSING) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v549"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.GAUGE.PARITY.IDENT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the identity/certificate core of the discovery parts T149 ("
+        },
+        {
+          "k": "c",
+          "v": "weight_smoothing_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") and T150 ("
+        },
+        {
+          "k": "c",
+          "v": "mode_ladder_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "21"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.3"
+        },
+        {
+          "k": "t",
+          "v": " s, everything recomputed on small frame-A windows, nothing cited from the sandbox; the companion to "
+        },
+        {
+          "k": "c",
+          "v": "v548"
+        },
+        {
+          "k": "t",
+          "v": ", which certified the factorisation "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma=\\sqrt{Q^\\star}S_w"
+        },
+        {
+          "k": "t",
+          "v": " and the Liouville machinery in the Jacobi gauge — this module certifies the gauge "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "freedom"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " around that machinery and the parity "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "structure"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " underneath it. Scope fence: identities, per-instance theorems with checked hypotheses and per-window "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "certified"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " inequalities — no fit, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no zone-uniform statement, and explicitly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no statement for all "
+            },
+            {
+              "k": "m",
+              "v": "D"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the one open input after T150 — an "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free constant "
+        },
+        {
+          "k": "m",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " in the odd-parity-sector ladder "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_k\\le Ck^2"
+        },
+        {
+          "k": "t",
+          "v": " for a sign-changing-symbol Toeplitz section — stays open and typed open). Battery: "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " frame-A windows ("
+        },
+        {
+          "k": "m",
+          "v": "n=4\\ldots139"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "m=26\\ldots285\\le300"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "D=7.578\\times10^{-3}\\ldots2.789\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "48"
+        },
+        {
+          "k": "t",
+          "v": " gauge assemblies (Jacobi, const, moving-geometric-mean, and the arithmetic-free archimedean diagonal), the full-section parity items on the "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " windows with "
+        },
+        {
+          "k": "m",
+          "v": "M\\le300"
+        },
+        {
+          "k": "t",
+          "v": ", and a parity control model at "
+        },
+        {
+          "k": "m",
+          "v": "m=2001"
+        },
+        {
+          "k": "t",
+          "v": " (vector operations only); each statement carries a mutation control that must fail by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The gauge freedom (T149) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " For "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "any"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " positive diagonal "
+        },
+        {
+          "k": "m",
+          "v": "\\tilde\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " the whitening "
+        },
+        {
+          "k": "m",
+          "v": "\\tilde E=\\tilde\\Lambda^{-1/2}A\\tilde\\Lambda^{-1/2}"
+        },
+        {
+          "k": "t",
+          "v": " is an exact congruence, so "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(A)\\ge\\mathrm{cert}\\,\\lambda_{\\min}(\\tilde E)\\cdot\\min_j\n\\tilde\\Lambda_j"
+        },
+        {
+          "k": "t",
+          "v": " is a valid certified lower bound for every gauge — an identity plus one Rayleigh step — and the family maximum is valid too (verified on all "
+        },
+        {
+          "k": "m",
+          "v": "48"
+        },
+        {
+          "k": "t",
+          "v": " assemblies); the factorisation identity "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma=\\sqrt{Q^\\star}S_w"
+        },
+        {
+          "k": "t",
+          "v": " holds "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "gauge-invariantly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (max rel "
+        },
+        {
+          "k": "m",
+          "v": "2.4\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "); the const gauge (the geometric mean of the Jacobi diagonal) has "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TV}(\\log\\tilde\\Lambda)=0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on every window — T149's elimination, not reduction, of T148's blocking scalar — with the certified entrywise sandwich "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma=c_2/c_1=1.3868"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.5805"
+        },
+        {
+          "k": "t",
+          "v": " (controls: a "
+        },
+        {
+          "k": "m",
+          "v": "1\\%"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "Q^\\star"
+        },
+        {
+          "k": "t",
+          "v": " perturbation breaks the identity at "
+        },
+        {
+          "k": "m",
+          "v": "4.99\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ", and on the shifted indefinite form "
+        },
+        {
+          "k": "m",
+          "v": "A-1.05\\lambda_{\\min}I"
+        },
+        {
+          "k": "t",
+          "v": " the completed-Cholesky floor "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "refuses"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": " windows)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The two-regime discriminator (T149, the refutation as a check) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The flutter-smoothing gauge (moving geometric mean, preregistered half-width "
+        },
+        {
+          "k": "m",
+          "v": "m/16"
+        },
+        {
+          "k": "t",
+          "v": ") removes "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TV}(\\log\\Lambda)"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge2.88\\times"
+        },
+        {
+          "k": "t",
+          "v": " on every window while moving the Liouville-"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "transported"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " bottom-block smoothness functional "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_{\\tilde L}"
+        },
+        {
+          "k": "t",
+          "v": " by at most "
+        },
+        {
+          "k": "m",
+          "v": "0.0088"
+        },
+        {
+          "k": "t",
+          "v": " — and even the matched-amplitude "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "rough"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " re-gauge (lattice-scale oscillation) moves it by at most "
+        },
+        {
+          "k": "m",
+          "v": "0.0046"
+        },
+        {
+          "k": "t",
+          "v": " (bar "
+        },
+        {
+          "k": "m",
+          "v": "0.01"
+        },
+        {
+          "k": "t",
+          "v": " for both): the roughness "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_{\\tilde L}"
+        },
+        {
+          "k": "t",
+          "v": " responds to is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " in the multiplier — T149's withdrawal of the TV hypothesis, wired as a per-instance check (control: the same functional read "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "without"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the transport, on the whitened modes "
+        },
+        {
+          "k": "m",
+          "v": "\\psi"
+        },
+        {
+          "k": "t",
+          "v": " which carry the multiplier, jumps by "
+        },
+        {
+          "k": "m",
+          "v": "0.41"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "9.76"
+        },
+        {
+          "k": "t",
+          "v": " under the same rough re-gauge — the invariance is carried by the transport, not by numbness of the functional)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) The explicit zone diagonal (T150) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda_r=c_0-c_{M-1-2r}+\\sum_{s\\ne r}\\max(c_{|r-s|}-c_{M-1-r-s},0)"
+        },
+        {
+          "k": "t",
+          "v": ", assembled lagwise with no matrix anywhere, equals the lumped-pair diagonal on every window (max rel "
+        },
+        {
+          "k": "m",
+          "v": "5.9\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") — the whitening diagonal is an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "explicit"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " functional of the zone's lag arithmetic and of nothing else; the lag vector splits "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " as "
+        },
+        {
+          "k": "m",
+          "v": "c=c^{\\mathrm{arch}}+c^{\\mathrm{atom}}"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "c^{\\mathrm{atom}}\\le0"
+        },
+        {
+          "k": "t",
+          "v": " entrywise, and the arithmetic mass carries the closed budget "
+        },
+        {
+          "k": "m",
+          "v": "\\|c^{\\mathrm{atom}}\\|_1\\le\\sum_j\\mu_j\\le4B\\sqrt N"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "B=1.038821"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "verified"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " maximum of "
+        },
+        {
+          "k": "m",
+          "v": "\\psi(n)/n"
+        },
+        {
+          "k": "t",
+          "v": " over the whole atom table (Chebyshev 1852, computed and never assumed; Abel summation carries the closed form). The honest negative as content: the archimedean section alone is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "indefinite"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": " windows (completed LDL"
+        },
+        {
+          "k": "m",
+          "v": "^{\\mathsf T}"
+        },
+        {
+          "k": "t",
+          "v": ", up to "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " negative eigenvalues) while the full section has zero — the atoms are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "co-responsible"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " for the positivity, so the additive perturbation reading (Weyl 1912 / Bauer–Fike 1960 / Davis–Kahan 1970, cited, computed dead by T150 at "
+        },
+        {
+          "k": "m",
+          "v": "2.4"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5.8"
+        },
+        {
+          "k": "t",
+          "v": " orders, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " used) is structurally empty and only the multiplicative / Loewner gauge step transfers (control: dropping the positive part in the zone formula breaks the identity at "
+        },
+        {
+          "k": "m",
+          "v": "4.25\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The parity compression (T150, the named mechanism) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " With "
+        },
+        {
+          "k": "m",
+          "v": "U_-"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "U_+"
+        },
+        {
+          "k": "t",
+          "v": " the antisymmetric / symmetric parity isometries of the full window, "
+        },
+        {
+          "k": "m",
+          "v": "U_-^{\\mathsf T}T_M(c)\\,U_-=T-H"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "U_+^{\\mathsf T}T_M(c)\\,U_+=T+H"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (max rel "
+        },
+        {
+          "k": "m",
+          "v": "3.9\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") with cross block "
+        },
+        {
+          "k": "m",
+          "v": "U_+^{\\mathsf T}T_MU_-=0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.4\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") on all "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " windows with "
+        },
+        {
+          "k": "m",
+          "v": "M\\le300"
+        },
+        {
+          "k": "t",
+          "v": ": the reflection-odd section used since T106 "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the compression of the full symmetric Toeplitz section onto its antisymmetric parity sector (Basor–Ehrhardt 2009: the parity sectors are the natural objects of the Toeplitz"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "Hankel algebra, cited as the address and never as an authority); the completed LDL"
+        },
+        {
+          "k": "m",
+          "v": "^{\\mathsf T}"
+        },
+        {
+          "k": "t",
+          "v": " counts "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "localise"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the negative inertia — the full section's negative eigenvalues (forced by the sign-changing symbol, "
+        },
+        {
+          "k": "m",
+          "v": "f(0)=-29.2\\ldots-6.3<0"
+        },
+        {
+          "k": "t",
+          "v": "; T148's honest negative "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "re-read"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", never re-derived) sit entirely in the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "even"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " sector while the odd sector counts zero: "
+        },
+        {
+          "k": "m",
+          "v": "f(0)<0"
+        },
+        {
+          "k": "t",
+          "v": " is explained rather than worked around (control: the sign-flipped basis does not reproduce "
+        },
+        {
+          "k": "m",
+          "v": "T-H"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "3.99\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5) The parity-sine calibration and the ladder certificate (T150) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The parity sines "
+        },
+        {
+          "k": "m",
+          "v": "t_k(r)=\\tfrac{2}{\\sqrt N}\\sin(2\\pi k(r{+}1)/N)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "N=2m{+}1"
+        },
+        {
+          "k": "t",
+          "v": ", are the exact eigenpairs of the parity Laplacian (reflecting corner "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": ", forced by antisymmetry) at "
+        },
+        {
+          "k": "m",
+          "v": "\\mu^P_k=4\\sin^2(\\pi k/N)"
+        },
+        {
+          "k": "t",
+          "v": " — eigen-residual "
+        },
+        {
+          "k": "m",
+          "v": "2.3\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": " — and the smoothness ladder "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "calibrates"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on the exact model: "
+        },
+        {
+          "k": "m",
+          "v": "\\nu^P_k=\\pi k^2"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "k=1\\ldots12"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "m=2001"
+        },
+        {
+          "k": "t",
+          "v": " (max deviation "
+        },
+        {
+          "k": "m",
+          "v": "3.0\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": "), so the ladder form "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_k\\le Ck^2"
+        },
+        {
+          "k": "t",
+          "v": " is the right question and "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": " its exact floor; on every window, in the const gauge ("
+        },
+        {
+          "k": "m",
+          "v": "\\varphi=\\psi"
+        },
+        {
+          "k": "t",
+          "v": " exactly — the ladder of the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "pure"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Toeplitz-minus-Hankel section), the parity coefficient licence holds, "
+        },
+        {
+          "k": "m",
+          "v": "\\nu^P_k\\le Ck^2"
+        },
+        {
+          "k": "t",
+          "v": " with the per-window certified constant "
+        },
+        {
+          "k": "m",
+          "v": "C=11.70"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "17.28"
+        },
+        {
+          "k": "t",
+          "v": ", and the derived per-mode ceiling "
+        },
+        {
+          "k": "m",
+          "v": "m\\|\\psi_k\\|_\\infty^2\\le2(2\\sqrt Ck+1)^2"
+        },
+        {
+          "k": "t",
+          "v": " is a certified instance inequality — an "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free "
+        },
+        {
+          "k": "m",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " is exactly the one open input and is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " claimed (controls: the ladder "
+        },
+        {
+          "k": "m",
+          "v": "\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " fails everywhere, a one-index calibration shift misses by "
+        },
+        {
+          "k": "m",
+          "v": "0.75"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fences and status."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Per instance on small windows only — a finite list of certified window inequalities with an explicit maximum; nothing uniform in the zone index or in "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TV}(\\log\\Lambda)"
+        },
+        {
+          "k": "t",
+          "v": " stays withdrawn as a hypothesis (T149), "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_{\\mathrm{tot}}"
+        },
+        {
+          "k": "t",
+          "v": " stays retired as a route (T148); every T149/T150 exponent is a fit that stays in the sandbox. Kac–Murdock–Szeg"
+        },
+        {
+          "k": "t",
+          "v": "o"
+        },
+        {
+          "k": "t",
+          "v": " 1953 (in the parity sector), Widom 1958 / Basor–Ehrhardt 2009 / Böttcher–Silbermann (the parity sectors as the algebra's natural objects — the address, never an authority; the sign-changing symbol is exactly what Basor–Ehrhardt does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " cover, and that gap is the open input), Sylvester 1852 / Bunch–Kaufman 1977, Chebyshev 1852 (verified on the table), Abel, Weyl 1912 / Bauer–Fike 1960 / Davis–Kahan 1970 (cited, computed dead, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " used), Rayleigh 1877 / Ritz 1909, Cauchy–Schwarz, Gershgorin 1931, Wilkinson 1968 / Higham 2002 named classical; Weil 1952 cited, never used as a criterion; zero-firewall AST-checked. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GAUGE.PARITY.IDENT.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and this is not RH evidence."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Diary, paper and website (T150, "
+            },
+            {
+              "k": "t",
+              "v": "one-term-missing"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The T150 probe ("
+        },
+        {
+          "k": "c",
+          "v": "mode_ ladder_ probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "MODE.LADDER"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "36/36"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "48.0"
+        },
+        {
+          "k": "t",
+          "v": " s, "
+        },
+        {
+          "k": "m",
+          "v": "72"
+        },
+        {
+          "k": "t",
+          "v": " prime-power windows "
+        },
+        {
+          "k": "m",
+          "v": "m=50\\ldots1393"
+        },
+        {
+          "k": "t",
+          "v": ") names the mechanism: the form is exactly the compression of the full symmetric Toeplitz section onto its antisymmetric parity sector, and the sign-changing symbol's entire negative inertia sits in the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "even"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " sector (certified "
+        },
+        {
+          "k": "m",
+          "v": "72/72"
+        },
+        {
+          "k": "t",
+          "v": ") — T148's honest negative is explained rather than worked around. The flutter amplitude becomes a certified form functional ("
+        },
+        {
+          "k": "m",
+          "v": "0.0606"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.1993"
+        },
+        {
+          "k": "t",
+          "v": ", trend "
+        },
+        {
+          "k": "m",
+          "v": "x^{-0.165\\pm0.015}"
+        },
+        {
+          "k": "t",
+          "v": ", T149's fit reproduced fit-free), the whitening diagonal an explicit zone functional, and the arithmetic atoms turn out to be co-responsible for the positivity (the archimedean section alone has "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " negative eigenvalues); the additive perturbation route is dead by "
+        },
+        {
+          "k": "m",
+          "v": "2.4"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5.8"
+        },
+        {
+          "k": "t",
+          "v": " orders while the multiplicative gauge step closes. One gate remains: the ladder constant still grows — "
+        },
+        {
+          "k": "m",
+          "v": "C\\le43.391=13.81\\pi"
+        },
+        {
+          "k": "t",
+          "v": " certified per stratum, trend "
+        },
+        {
+          "k": "m",
+          "v": "x^{0.258\\pm0.009}"
+        },
+        {
+          "k": "t",
+          "v": " against the flatness bar "
+        },
+        {
+          "k": "m",
+          "v": "0.25"
+        },
+        {
+          "k": "t",
+          "v": " — and the gap from "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": " is exactly the arithmetic leakage of the bottom mode ("
+        },
+        {
+          "k": "m",
+          "v": "\\ell^1"
+        },
+        {
+          "k": "t",
+          "v": " mass "
+        },
+        {
+          "k": "m",
+          "v": "1.41"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.79"
+        },
+        {
+          "k": "t",
+          "v": "). Verdict "
+        },
+        {
+          "k": "t",
+          "v": "one-term-missing"
+        },
+        {
+          "k": "t",
+          "v": ": one named inequality left — "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_k\\le Ck^2"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free "
+        },
+        {
+          "k": "m",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " for the odd parity sector at a sign-changing symbol. "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " part T150 (series totals "
+        },
+        {
+          "k": "m",
+          "v": "150"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "3825"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front.tex"
+        },
+        {
+          "k": "t",
+          "v": " gains the T150 subsection with the “After T150” keybox, the "
+        },
+        {
+          "k": "c",
+          "v": "v549"
+        },
+        {
+          "k": "t",
+          "v": " entry in the verified layer (now fifteen modules), the phase-2 section retitled T126–T150 and the updated probe index; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " gain the "
+        },
+        {
+          "k": "c",
+          "v": "v549"
+        },
+        {
+          "k": "t",
+          "v": " companion blocks; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T150 and "
+        },
+        {
+          "k": "c",
+          "v": "v549"
+        },
+        {
+          "k": "t",
+          "v": " feed entries; suite counter "
+        },
+        {
+          "k": "m",
+          "v": "542\\to543"
+        },
+        {
+          "k": "t",
+          "v": " scripts. T151 ("
+        },
+        {
+          "k": "c",
+          "v": "odd_ladder_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at exactly the remaining inequality — the odd-sector ladder — and is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " part of this change."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · III",
     "heading": [
       {

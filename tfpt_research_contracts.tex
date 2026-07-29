@@ -2874,6 +2874,77 @@ criterion; zero-firewall AST-checked; no marker moves.
 Machine-checked: \veri{v548\_green\_szego\_identities.py}.
 \mE\ (per-instance identities and certified inequalities)
 
+\par\smallskip\noindent\textbf{\texttt{PRIME.GAUGE.PARITY.IDENT.01} --- the
+gauge/parity identities of phase 2 (T149, T150).}
+\emph{(1)} The gauge freedom: for \emph{any} positive diagonal
+$\tilde\Lambda$ the whitening $\tilde E=\tilde\Lambda^{-1/2}A
+\tilde\Lambda^{-1/2}$ is an exact congruence, so
+$\lambda_{\min}(A)\ge\mathrm{cert}\,\lambda_{\min}(\tilde E)\cdot
+\min_j\tilde\Lambda_j$ is a valid certified lower bound for every gauge (an
+identity plus one Rayleigh step; family maximum valid) --- verified on all
+$48$ gauge assemblies over $12$ frame-A windows ($m=26\ldots285\le300$);
+$\Gamma=\sqrt{Q^\star}S_w$ holds \emph{gauge-invariantly} at
+$2.4\times10^{-16}$; the const gauge has
+$\mathrm{TV}(\log\tilde\Lambda)=0$ \emph{exactly} with the certified
+entrywise sandwich $\sigma=1.3868$--$2.5805$ (controls: a $1\%$ $Q^\star$
+perturbation breaks at $4.99\times10^{-3}$; the completed-Cholesky floor
+refuses on the shifted indefinite form, $12/12$). \emph{(2)} The two-regime
+discriminator: the flutter smoother (moving geometric mean, half-width
+$m/16$) removes $\mathrm{TV}$ by $\ge2.88\times$ while moving the
+Liouville-transported $\nu_{\tilde L}$ by $\le0.0088$ --- even the
+matched-amplitude rough re-gauge moves it $\le0.0046$ (bar $0.01$) --- while
+the \emph{untransported} functional jumps $0.41$--$9.76$ under the same
+rough gauge: the roughness is in the form, not the multiplier (T149's
+withdrawal of the TV hypothesis, wired per instance). \emph{(3)} The
+explicit zone diagonal
+$\Lambda_r=c_0-c_{M-1-2r}+\sum_{s\ne r}\max(c_{|r-s|}-c_{M-1-r-s},0)$ at
+residual $5.9\times10^{-16}$; the exact split
+$c=c^{\mathrm{arch}}+c^{\mathrm{atom}}$ with $c^{\mathrm{atom}}\le0$
+entrywise and the closed atom budget
+$\|c^{\mathrm{atom}}\|_1\le\sum_j\mu_j\le4B\sqrt N$, $B=1.038821$ the
+verified maximum of $\psi(n)/n$ over the whole atom table (Chebyshev 1852,
+computed, never assumed; Abel summation); the archimedean section alone is
+\emph{indefinite} on $12/12$ (up to $5$ negative eigenvalues,
+LDL$^{\mathsf T}$) while the full section has zero --- the atoms are
+co-responsible for the positivity, the additive perturbation reading
+structurally empty (control: dropping the positive part breaks at
+$4.25\times10^{-1}$). \emph{(4)} The parity compression
+$U_-^{\mathsf T}T_M(c)\,U_-=T-H$ and $U_+^{\mathsf T}T_M(c)\,U_+=T+H$
+exact ($3.9\times10^{-16}$, cross block $1.4\times10^{-16}$) on the $6$
+windows with $M\le300$: the reflection-odd section \emph{is} the
+compression of the full symmetric Toeplitz section onto its antisymmetric
+parity sector, and the negative inertia of the sign-changing symbol
+($f(0)=-29.2\ldots-6.3<0$, re-read from T148, never re-derived) sits
+entirely in the \emph{even} sector, the odd sector counting zero (control:
+the sign-flipped basis misses by $3.99\times10^{-1}$). \emph{(5)} The
+parity-sine calibration: the parity sines are exact eigenpairs of the
+parity Laplacian (corner $3$ forced by antisymmetry; eigen-residual
+$2.3\times10^{-13}$), $\nu^P_k=\pi k^2$ on the exact model at $m=2001$ to
+$3.0\times10^{-5}$, and the per-window ladder $\nu^P_k\le Ck^2$ holds with
+certified $C=11.70$--$17.28$ and the derived per-mode ceiling
+$m\|\psi_k\|_\infty^2\le2(2\sqrt Ck+1)^2$ (controls: $\times10^{-3}$
+fails, a one-index shift misses by $0.75$).
+\textbf{Named limits as load-bearing content:} per instance on small windows
+--- a finite list of certified window inequalities with an explicit maximum;
+nothing uniform in the zone index or in $D$, and explicitly \emph{no}
+statement for all $D$: the one open input after T150 (an $m$-free constant
+$C$ in the odd-parity-sector ladder $\nu_k\le Ck^2$ for a
+sign-changing-symbol Toeplitz section) stays \emph{open}, typed open;
+$\mathrm{TV}(\log\Lambda)$ stays withdrawn as a hypothesis (T149);
+$\sigma_{\mathrm{tot}}$ stays retired as a route (T148); every T149/T150
+exponent is a fit, sandbox. Fences: Kac--Murdock--Szeg\H{o} 1953 (parity
+sector) / Widom 1958 / Basor--Ehrhardt 2009 / B\"ottcher--Silbermann (the
+parity sectors as the algebra's natural objects; the sign-changing symbol
+is exactly what Basor--Ehrhardt does not cover, and that gap is the open
+input) / Sylvester 1852 / Bunch--Kaufman 1977 / Chebyshev 1852 (verified on
+the table) / Abel / Weyl 1912 / Bauer--Fike 1960 / Davis--Kahan 1970
+(cited, computed dead, not used) / Rayleigh 1877--Ritz 1909 /
+Cauchy--Schwarz / Gershgorin 1931 / Wilkinson 1968--Higham 2002 named
+classical; Weil 1952 cited, never used as a criterion; zero-firewall
+AST-checked; no marker moves.
+Machine-checked: \veri{v549\_gauge\_parity\_identities.py}.
+\mE\ (per-instance identities and certified inequalities)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

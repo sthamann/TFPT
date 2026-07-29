@@ -62,6 +62,126 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (IV) (\texttt{v549} --- the gauge/parity identities of phase 2 promoted; prime-front diary T150 (the parity mechanism named, ONE-TERM-MISSING) + paper + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v549} (\texttt{PRIME.GAUGE.PARITY.IDENT.01}).} Promotion of the
+identity/certificate core of the discovery parts T149 (\texttt{weight\_smoothing\_probe.py}) and
+T150 (\texttt{mode\_ladder\_probe.py}) --- $21$ checks, ${\sim}0.3$\,s, everything recomputed on
+small frame-A windows, nothing cited from the sandbox; the companion to \texttt{v548}, which
+certified the factorisation $\Gamma=\sqrt{Q^\star}S_w$ and the Liouville machinery in the Jacobi
+gauge --- this module certifies the gauge \emph{freedom} around that machinery and the parity
+\emph{structure} underneath it. Scope fence: identities, per-instance theorems with checked
+hypotheses and per-window \emph{certified} inequalities --- no fit, no $D$-exponent, no
+zone-uniform statement, and explicitly \emph{no statement for all $D$} (the one open input after
+T150 --- an $m$-free constant $C$ in the odd-parity-sector ladder $\nu_k\le Ck^2$ for a
+sign-changing-symbol Toeplitz section --- stays open and typed open). Battery: $12$ frame-A
+windows ($n=4\ldots139$, $m=26\ldots285\le300$,
+$D=7.578\times10^{-3}\ldots2.789\times10^{-2}$), $48$ gauge assemblies (Jacobi, const,
+moving-geometric-mean, and the arithmetic-free archimedean diagonal), the full-section parity
+items on the $6$ windows with $M\le300$, and a parity control model at $m=2001$ (vector
+operations only); each statement carries a mutation control that must fail by $\ge10^{-3}$.
+\item \textbf{(1) The gauge freedom (T149) \mE.} For \emph{any} positive diagonal
+$\tilde\Lambda$ the whitening $\tilde E=\tilde\Lambda^{-1/2}A\tilde\Lambda^{-1/2}$ is an exact
+congruence, so $\lambda_{\min}(A)\ge\mathrm{cert}\,\lambda_{\min}(\tilde E)\cdot\min_j
+\tilde\Lambda_j$ is a valid certified lower bound for every gauge --- an identity plus one
+Rayleigh step --- and the family maximum is valid too (verified on all $48$ assemblies); the
+factorisation identity $\Gamma=\sqrt{Q^\star}S_w$ holds \emph{gauge-invariantly} (max rel
+$2.4\times10^{-16}$); the const gauge (the geometric mean of the Jacobi diagonal) has
+$\mathrm{TV}(\log\tilde\Lambda)=0$ \emph{exactly} on every window --- T149's elimination, not
+reduction, of T148's blocking scalar --- with the certified entrywise sandwich
+$\sigma=c_2/c_1=1.3868$--$2.5805$ (controls: a $1\%$ $Q^\star$ perturbation breaks the identity
+at $4.99\times10^{-3}$, and on the shifted indefinite form $A-1.05\lambda_{\min}I$ the
+completed-Cholesky floor \emph{refuses} on $12/12$ windows).
+\item \textbf{(2) The two-regime discriminator (T149, the refutation as a check) \mE.} The
+flutter-smoothing gauge (moving geometric mean, preregistered half-width $m/16$) removes
+$\mathrm{TV}(\log\Lambda)$ by $\ge2.88\times$ on every window while moving the
+Liouville-\emph{transported} bottom-block smoothness functional $\nu_{\tilde L}$ by at most
+$0.0088$ --- and even the matched-amplitude \emph{rough} re-gauge (lattice-scale oscillation)
+moves it by at most $0.0046$ (bar $0.01$ for both): the roughness $\nu_{\tilde L}$ responds to
+is \emph{not} in the multiplier --- T149's withdrawal of the TV hypothesis, wired as a
+per-instance check (control: the same functional read \emph{without} the transport, on the
+whitened modes $\psi$ which carry the multiplier, jumps by $0.41$--$9.76$ under the same rough
+re-gauge --- the invariance is carried by the transport, not by numbness of the functional).
+\item \textbf{(3) The explicit zone diagonal (T150) \mE.}
+$\Lambda_r=c_0-c_{M-1-2r}+\sum_{s\ne r}\max(c_{|r-s|}-c_{M-1-r-s},0)$, assembled lagwise with no
+matrix anywhere, equals the lumped-pair diagonal on every window (max rel $5.9\times10^{-16}$)
+--- the whitening diagonal is an \emph{explicit} functional of the zone's lag arithmetic and of
+nothing else; the lag vector splits \emph{exactly} as $c=c^{\mathrm{arch}}+c^{\mathrm{atom}}$
+with $c^{\mathrm{atom}}\le0$ entrywise, and the arithmetic mass carries the closed budget
+$\|c^{\mathrm{atom}}\|_1\le\sum_j\mu_j\le4B\sqrt N$ with $B=1.038821$ the \emph{verified}
+maximum of $\psi(n)/n$ over the whole atom table (Chebyshev 1852, computed and never assumed;
+Abel summation carries the closed form). The honest negative as content: the archimedean
+section alone is \emph{indefinite} on $12/12$ windows (completed LDL$^{\mathsf T}$, up to $5$
+negative eigenvalues) while the full section has zero --- the atoms are \emph{co-responsible}
+for the positivity, so the additive perturbation reading (Weyl 1912 / Bauer--Fike 1960 /
+Davis--Kahan 1970, cited, computed dead by T150 at $2.4$--$5.8$ orders, \emph{not} used) is
+structurally empty and only the multiplicative / Loewner gauge step transfers (control:
+dropping the positive part in the zone formula breaks the identity at $4.25\times10^{-1}$).
+\item \textbf{(4) The parity compression (T150, the named mechanism) \mE.} With $U_-$, $U_+$
+the antisymmetric / symmetric parity isometries of the full window,
+$U_-^{\mathsf T}T_M(c)\,U_-=T-H$ and $U_+^{\mathsf T}T_M(c)\,U_+=T+H$ \emph{exactly} (max rel
+$3.9\times10^{-16}$) with cross block $U_+^{\mathsf T}T_MU_-=0$ ($1.4\times10^{-16}$) on all
+$6$ windows with $M\le300$: the reflection-odd section used since T106 \emph{is} the
+compression of the full symmetric Toeplitz section onto its antisymmetric parity sector
+(Basor--Ehrhardt 2009: the parity sectors are the natural objects of the Toeplitz$+$Hankel
+algebra, cited as the address and never as an authority); the completed LDL$^{\mathsf T}$
+counts \emph{localise} the negative inertia --- the full section's negative eigenvalues
+(forced by the sign-changing symbol, $f(0)=-29.2\ldots-6.3<0$; T148's honest negative
+\emph{re-read}, never re-derived) sit entirely in the \emph{even} sector while the odd sector
+counts zero: $f(0)<0$ is explained rather than worked around (control: the sign-flipped basis
+does not reproduce $T-H$, $3.99\times10^{-1}$).
+\item \textbf{(5) The parity-sine calibration and the ladder certificate (T150) \mE.} The
+parity sines $t_k(r)=\tfrac{2}{\sqrt N}\sin(2\pi k(r{+}1)/N)$, $N=2m{+}1$, are the exact
+eigenpairs of the parity Laplacian (reflecting corner $3$, forced by antisymmetry) at
+$\mu^P_k=4\sin^2(\pi k/N)$ --- eigen-residual $2.3\times10^{-13}$ --- and the smoothness ladder
+\emph{calibrates} on the exact model: $\nu^P_k=\pi k^2$ for $k=1\ldots12$ at $m=2001$ (max
+deviation $3.0\times10^{-5}$), so the ladder form $\nu_k\le Ck^2$ is the right question and
+$\pi$ its exact floor; on every window, in the const gauge ($\varphi=\psi$ exactly --- the
+ladder of the \emph{pure} Toeplitz-minus-Hankel section), the parity coefficient licence holds,
+$\nu^P_k\le Ck^2$ with the per-window certified constant $C=11.70$--$17.28$, and the derived
+per-mode ceiling $m\|\psi_k\|_\infty^2\le2(2\sqrt Ck+1)^2$ is a certified instance inequality
+--- an $m$-free $C$ is exactly the one open input and is \emph{not} claimed (controls: the
+ladder $\times10^{-3}$ fails everywhere, a one-index calibration shift misses by $0.75$).
+\item \textbf{Fences and status.} Per instance on small windows only --- a finite list of
+certified window inequalities with an explicit maximum; nothing uniform in the zone index or in
+$D$; $\mathrm{TV}(\log\Lambda)$ stays withdrawn as a hypothesis (T149),
+$\sigma_{\mathrm{tot}}$ stays retired as a route (T148); every T149/T150 exponent is a fit that
+stays in the sandbox. Kac--Murdock--Szeg\H{o} 1953 (in the parity sector), Widom 1958 /
+Basor--Ehrhardt 2009 / B\"ottcher--Silbermann (the parity sectors as the algebra's natural
+objects --- the address, never an authority; the sign-changing symbol is exactly what
+Basor--Ehrhardt does \emph{not} cover, and that gap is the open input), Sylvester 1852 /
+Bunch--Kaufman 1977, Chebyshev 1852 (verified on the table), Abel, Weyl 1912 / Bauer--Fike 1960
+/ Davis--Kahan 1970 (cited, computed dead, \emph{not} used), Rayleigh 1877 / Ritz 1909,
+Cauchy--Schwarz, Gershgorin 1931, Wilkinson 1968 / Higham 2002 named classical; Weil 1952
+cited, never used as a criterion; zero-firewall AST-checked. Ledger row
+\texttt{PRIME.GAUGE.PARITY.IDENT.01} \mE; \textbf{no marker of any pre-existing contract
+moves}, and this is not RH evidence.
+\item \textbf{Diary, paper and website (T150, \textsc{one-term-missing}).} The T150 probe
+(\texttt{mode\_\allowbreak ladder\_\allowbreak probe.py}, contract \texttt{MODE.LADDER},
+$36/36$, $48.0$\,s, $72$ prime-power windows $m=50\ldots1393$) names the mechanism: the form is
+exactly the compression of the full symmetric Toeplitz section onto its antisymmetric parity
+sector, and the sign-changing symbol's entire negative inertia sits in the \emph{even} sector
+(certified $72/72$) --- T148's honest negative is explained rather than worked around. The
+flutter amplitude becomes a certified form functional ($0.0606$--$0.1993$, trend
+$x^{-0.165\pm0.015}$, T149's fit reproduced fit-free), the whitening diagonal an explicit zone
+functional, and the arithmetic atoms turn out to be co-responsible for the positivity (the
+archimedean section alone has $2$--$7$ negative eigenvalues); the additive perturbation route
+is dead by $2.4$--$5.8$ orders while the multiplicative gauge step closes. One gate remains:
+the ladder constant still grows --- $C\le43.391=13.81\pi$ certified per stratum, trend
+$x^{0.258\pm0.009}$ against the flatness bar $0.25$ --- and the gap from $\pi$ is exactly the
+arithmetic leakage of the bottom mode ($\ell^1$ mass $1.41$--$1.79$). Verdict
+\textsc{one-term-missing}: one named inequality left --- $\nu_k\le Ck^2$ with $m$-free $C$ for
+the odd parity sector at a sign-changing symbol.
+\texttt{experiments/next.txt} part T150 (series totals $150$ probes / $3825$ checks);
+\texttt{tfpt\_prime\_front.tex} gains the T150 subsection with the ``After T150'' keybox, the
+\texttt{v549} entry in the verified layer (now fifteen modules), the phase-2 section retitled
+T126--T150 and the updated probe index; \texttt{tfpt\_1}, \texttt{tfpt\_3} and
+\texttt{tfpt\_research\_contracts} gain the \texttt{v549} companion blocks;
+\texttt{website/lib/primeFront.ts} gains the T150 and \texttt{v549} feed entries; suite counter
+$542\to543$ scripts. T151 (\texttt{odd\_ladder\_probe.py}) is running at exactly the remaining
+inequality --- the odd-sector ladder --- and is \emph{not} part of this change.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (III) (\texttt{v548} --- the Green/Szeg\H{o} identities of phase 2 promoted; prime-front diary T148 (lifting statement, ONE-INPUT-MISSING) + paper + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v548} (\texttt{PRIME.GREEN.SZEGO.IDENT.01}).} Promotion of the

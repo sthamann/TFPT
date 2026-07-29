@@ -82,15 +82,16 @@ $240\,\zeta(s)\zeta(s-3)$ as a Dirichlet series, and the lattice's self-duality 
 exact functional equation whose fixed axis is the critical line --- a framework picture, stated as such,
 which the document opens with and then keeps at arm's length. This companion documents the line end to
 end. Fourteen modules are
-load-bearing and ledger-carried (\vref{v535}--\vref{v548}): Hecke from geometry on the $E_8$ census,
+load-bearing and ledger-carried (\vref{v535}--\vref{v549}): Hecke from geometry on the $E_8$ census,
 the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, the matching-lemma / transport
 ledger package, and --- out of the second phase --- the margin-chain identities, the lumped
 $M$-matrix pair, the long-lag support structure, the Hardy-core identities, the capacity-chain
-identities, the level-lemma identities and the Green/Szeg\H{o} identities. Everything beyond
-those fourteen is \emph{sandbox}: an exploratory program, run as
-$149$ preregistered probes with $3789$ machine checks, which localized the residual object. That
+identities, the level-lemma identities, the Green/Szeg\H{o} identities and the gauge/parity
+identities. Everything beyond
+those fifteen is \emph{sandbox}: an exploratory program, run as
+$150$ preregistered probes with $3825$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -242,7 +243,7 @@ here (the blue \texttt{[\,verification/\dots\,]} tag). Everything marked \sbx\ i
 no ledger row, no marker, and no authority. Section~\ref{sec:verified} is the only section that is
 entirely \ver.
 \item \textbf{Status markers are quoted, never upgraded.} The markers \mE\ \mC\ \mO\ \mX\ shown in
-Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v545}. This
+Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v549}. This
 document introduces no new markers and moves none.
 \item \textbf{Fits are declared as fits.} Every scaling law, slope, exponent and extrapolation quoted
 from the sandbox is a fit to finitely many measured windows and is labelled as such at the point of
@@ -259,7 +260,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots149$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots150$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -267,7 +268,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T149: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T150: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -343,7 +344,16 @@ sandwich price --- and thereby refutes the hypothesis, since the gauges that kil
 move the smoothness functional by at most $0.9\%$: the roughness sits in the \emph{form}, not
 in the multiplier, the missing input relocates to the deep modes of the pure
 Toeplitz-minus-Hankel section, and the Dirichlet control corrects the question to a ladder
-bound $\nu_k\le Ck^2$ with $m$-free $C$ (T149));
+bound $\nu_k\le Ck^2$ with $m$-free $C$ (T149), and at last that ladder itself, which
+\emph{names the mechanism --- parity}: the form is exactly the compression of the full
+symmetric Toeplitz section onto its antisymmetric parity sector, the sign-changing symbol's
+entire negative inertia sits in the \emph{even} sector (certified $72/72$) --- T148's honest
+negative explained rather than worked around --- the flutter amplitude becomes a certified
+form functional with a closed atom budget, and the arithmetic atoms turn out to be
+co-responsible for the positivity (the archimedean section alone would be indefinite), while
+one gate remains: the ladder constant still grows ($13.81\pi$, $x^{0.258}$ against the bar
+$0.25$) --- the gap from $\pi$ exactly the arithmetic leakage of the bottom mode (T150; the
+identity/certificate core of T149+T150 is promoted as \vref{v549}));
 Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
@@ -428,7 +438,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the fourteen modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the fifteen modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -558,13 +568,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: fourteen modules}\label{sec:verified}
+\section{The verified layer: fifteen modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The fourteen modules and their ledger markers]
+\begin{keybox}[The fifteen modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -584,6 +594,7 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v546} & \texttt{PRIME.CAPCHAIN.IDENT.01} & capacity-chain identities of phase 2 (per instance) & \mE\\
 \vref{v547} & \texttt{PRIME.LEVEL.LEMMA.01} & level-lemma identities of phase 2 (per instance) & \mE\\
 \vref{v548} & \texttt{PRIME.GREEN.SZEGO.IDENT.01} & Green/Szeg\H{o} identities of phase 2 (per instance) & \mE\\
+\vref{v549} & \texttt{PRIME.GAUGE.PARITY.IDENT.01} & gauge/parity identities of phase 2 (per instance) & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -1116,6 +1127,98 @@ or any weaker smoothness of the multiplier) stays open and typed open. The symbo
 order-2 hypothesis is \emph{refuted} (T148: $f(0)<0$ on every surface window) and enters
 nowhere as a theorem; $\sigma_{\mathrm{tot}}$ stays retired as a route; every T147/T148
 exponent is a fit that stays in the sandbox.
+\end{itemize}
+
+\subsection{The gauge/parity identities (\texorpdfstring{\vref{v549}}{v549})}\label{sec:v549}
+The identity/certificate core of T149 and T150 (Section~\ref{sec:phase2}): the gauge
+\emph{freedom} around the machinery \vref{v548} certified in the Jacobi gauge, and the parity
+\emph{structure} underneath it \veri{v549\_gauge\_parity\_identities.py} ($21$ checks,
+${\sim}0.3$\,s; promotion of the identity/certificate pieces of T149+T150 on $12$ frame-A
+windows, $n=4\ldots139$, $m=26\ldots285\le300$,
+$D=7.578\times10^{-3}\ldots2.789\times10^{-2}$, with $48$ gauge assemblies, the full-section
+parity items on the $6$ windows with $M\le300$, and a parity control model at $m=2001$; each
+statement carries a mutation control that must fail by $\ge10^{-3}$).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The gauge freedom (T149)} \mE: for \emph{any} positive diagonal
+$\tilde\Lambda$ the whitening $\tilde E=\tilde\Lambda^{-1/2}A\tilde\Lambda^{-1/2}$ is an
+exact congruence, so
+$\lambda_{\min}(A)\ge\mathrm{cert\_lam\_min}(\tilde E)\cdot\min_j\tilde\Lambda_j$ is a
+\emph{valid} certified lower bound for every gauge --- an identity plus one Rayleigh step ---
+and the family maximum is valid too (all $48$ assemblies: Jacobi, const, moving-geometric-mean,
+and the arithmetic-free archimedean diagonal); the factorisation identity
+$\Gamma=\sqrt{Q^\star}S_w$ holds \emph{gauge-invariantly} (max rel $2.4\times10^{-16}$); the
+const gauge (the geometric mean of the Jacobi diagonal) has $\mathrm{TV}(\log\tilde\Lambda)=0$
+\emph{exactly} on every window --- T149's elimination, not reduction, of T148's blocking scalar
+--- with the certified entrywise sandwich $\sigma=c_2/c_1=1.3868$--$2.5805$. Controls: a $1\%$
+$Q^\star$ perturbation breaks the identity ($4.99\times10^{-3}$); on the shifted indefinite
+form $A-1.05\lambda_{\min}I$ the completed-Cholesky floor \emph{refuses} on $12/12$.
+\item \textbf{The two-regime discriminator (T149, the refutation as a check)} \mE: the
+flutter-smoothing gauge (moving geometric mean, preregistered half-width $m/16$) removes
+$\mathrm{TV}(\log\Lambda)$ by $\ge2.88\times$ on every window while moving the
+Liouville-\emph{transported} bottom-block smoothness functional $\nu_{\tilde L}$ by at most
+$0.0088$ --- and even the matched-amplitude \emph{rough} re-gauge (lattice-scale oscillation)
+moves it by at most $0.0046$ (bar $0.01$ for both): the roughness $\nu_{\tilde L}$ responds to
+is \emph{not} in the multiplier --- T149's withdrawal of the TV hypothesis, wired as a
+per-instance check. Control: the same functional read \emph{without} the transport (on the
+whitened modes $\psi$, which carry the multiplier) jumps by $0.41$--$9.76$ under the same rough
+re-gauge --- the invariance is carried by the transport, not by numbness of the functional.
+\item \textbf{The explicit zone diagonal (T150)} \mE:
+\[
+\Lambda_r\;=\;c_0-c_{M-1-2r}+\sum_{s\ne r}\max\bigl(c_{|r-s|}-c_{M-1-r-s},\,0\bigr)\,,
+\]
+assembled lagwise with no matrix anywhere, equals the lumped-pair diagonal on every window
+(max rel $5.9\times10^{-16}$) --- the whitening diagonal is an \emph{explicit} functional of
+the zone's lag arithmetic and of nothing else; the lag vector splits \emph{exactly} as
+$c=c^{\mathrm{arch}}+c^{\mathrm{atom}}$ with $c^{\mathrm{atom}}\le0$ entrywise, and the
+arithmetic mass carries the closed budget
+$\|c^{\mathrm{atom}}\|_1\le\sum_j\mu_j\le4B\sqrt N$ with $B=1.038821$ the \emph{verified}
+maximum of $\psi(n)/n$ over the whole atom table (Chebyshev 1852, computed and never assumed;
+Abel summation carries the closed form). \emph{The honest negative as content}: the archimedean
+section alone is \emph{indefinite} on $12/12$ windows (completed LDL$^{\mathsf T}$, up to $5$
+negative eigenvalues) while the full section has zero --- the atoms are \emph{co-responsible}
+for the positivity, so the additive perturbation reading (Weyl 1912 / Bauer--Fike 1960 /
+Davis--Kahan 1970, cited, computed dead by T150 at $2.4$--$5.8$ orders, \emph{not} used) is
+structurally empty and only the multiplicative / Loewner gauge step transfers. Control:
+dropping the positive part in the zone formula breaks the identity ($4.25\times10^{-1}$).
+\item \textbf{The parity compression (T150, the named mechanism)} \mE: with $U_-$, $U_+$ the
+antisymmetric / symmetric parity isometries of the full window,
+\[
+U_-^{\mathsf T}\,T_M(c)\,U_-\;=\;T-H\,,\qquad
+U_+^{\mathsf T}\,T_M(c)\,U_+\;=\;T+H\,,\qquad
+U_+^{\mathsf T}\,T_M(c)\,U_-\;=\;0\,,
+\]
+\emph{exactly} (max rel $3.9\times10^{-16}$, cross block $1.4\times10^{-16}$) on all $6$
+windows with $M\le300$: the reflection-odd section used since T106 \emph{is} the compression
+of the full symmetric Toeplitz section onto its antisymmetric parity sector (Basor--Ehrhardt
+2009: the parity sectors are the natural objects of the Toeplitz$+$Hankel algebra, cited as the
+address and never as an authority); the completed LDL$^{\mathsf T}$ counts \emph{localise} the
+negative inertia --- the full section's negative eigenvalues (forced by the sign-changing
+symbol, $f(0)=-29.2\ldots-6.3<0$; T148's honest negative \emph{re-read}, never re-derived) sit
+entirely in the \emph{even} sector while the odd sector counts zero: $f(0)<0$ is explained
+rather than worked around. Control: the sign-flipped basis does not reproduce $T-H$
+($3.99\times10^{-1}$).
+\item \textbf{The parity-sine calibration and the ladder certificate (T150)} \mE: the parity
+sines $t_k(r)=\tfrac{2}{\sqrt N}\sin(2\pi k(r{+}1)/N)$, $N=2m{+}1$, are the exact eigenpairs
+of the parity Laplacian (reflecting corner $3$, forced by antisymmetry, not chosen) at
+$\mu^P_k=4\sin^2(\pi k/N)$ --- eigen-residual $2.3\times10^{-13}$ --- and the smoothness
+ladder \emph{calibrates} on the exact model: $\nu^P_k=\pi k^2$ for $k=1\ldots12$ at $m=2001$
+(max deviation $3.0\times10^{-5}$), so the ladder form $\nu_k\le Ck^2$ is the right question
+and $\pi$ its exact floor; on every window, in the const gauge ($\varphi=\psi$ exactly ---
+the ladder of the \emph{pure} Toeplitz-minus-Hankel section, no multiplier, no arithmetic
+weight), the parity coefficient licence holds, $\nu^P_k\le Ck^2$ with the per-window certified
+constant $C=11.70$--$17.28$, and the derived per-mode ceiling
+$m\|\psi_k\|_\infty^2\le2(2\sqrt Ck+1)^2$ is a certified instance inequality --- an
+$m$-free $C$ is exactly the one open input and is \emph{not} claimed. Controls: the ladder
+$\times10^{-3}$ fails everywhere, a one-index calibration shift misses by $0.75$.
+\item \textbf{Named limits as content.} Per instance on small windows --- a \emph{finite list}
+of certified window inequalities with an explicit maximum; nothing uniform in the zone index
+or in $D$, and explicitly \emph{no} statement for all $D$: the one open input after T150 (an
+$m$-free constant $C$ in the odd-parity-sector ladder $\nu_k\le Ck^2$ for a
+sign-changing-symbol Toeplitz section) stays open and typed open;
+$\mathrm{TV}(\log\Lambda)$ stays withdrawn as a hypothesis (T149),
+$\sigma_{\mathrm{tot}}$ stays retired as a route (T148); every T149/T150 exponent is a fit
+that stays in the sandbox.
 \end{itemize}
 
 % =====================================================================
@@ -3458,7 +3561,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T149)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T150)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -5297,12 +5400,96 @@ T150 (\texttt{mode\_ladder\_probe.py}) is running at exactly that ladder, throug
 flutter amplitude.
 \end{keybox}
 
+\subsection{The mode ladder and the parity mechanism (T150)}
+T150 (\texttt{mode\_ladder\_probe.py}, contract \texttt{MODE.LADDER}, $36/36$, $48.0$\,s on
+$72$ prime-power windows $m=50\ldots1393$, verdict \textsc{one-term-missing}, the verdict rule
+wired constructively: ``proved'' cannot be returned in any branch) attacks the ladder
+$\nu_k\le Ck^2$ through the flat flutter amplitude --- T149's rest (1) via rest (2) --- and
+comes back with the mechanism's \emph{name}.
+
+\emph{The parity compression.} The reflection-odd form that every probe since T106 works with
+is \emph{exactly} the compression of the full symmetric Toeplitz section onto its
+antisymmetric parity sector:
+\[
+U_-^{\mathsf T}\,T_M(c)\,U_-\;=\;T-H\,,\qquad
+U_+^{\mathsf T}\,T_M(c)\,U_+\;=\;T+H\,,\qquad
+U_+^{\mathsf T}\,T_M(c)\,U_-\;\le\;4.0\times10^{-16}
+\]
+also on real windows (Basor--Ehrhardt 2009: the parity sectors are the natural objects of the
+Toeplitz$+$Hankel algebra) --- and the inertia \emph{localises}: \textbf{the entire negative
+inertia of the sign-changing symbol sits in the even sector} (odd $0$, even $1$ on $72/72$,
+LDL$^{\mathsf T}$ certified). T148's honest negative $f(0)<0$ is thereby \emph{explained
+rather than worked around}: it is a statement about the \emph{other} parity sector. The
+matched parity sines $t_k(r)=\tfrac{2}{\sqrt N}\sin(2\pi k(r{+}1)/N)$, $N=2m{+}1$ (exact
+eigenpairs of the parity Laplacian, corner $3$ forced by the antisymmetry; control model exact,
+$\nu_k=\pi k^2$ to $0.0002$) give a third valid ceiling, improving the ladder constant by
+$1.000$--$1.130$ over the Dirichlet$+$Neumann minimum of T148/T149.
+
+\emph{The zone diagonal, and who carries the positivity.} The whitening diagonal is an
+\emph{explicit zone function},
+$\Lambda_r=c_0-c_{M-1-2r}+\sum_{s\ne r}\max(c_{|r-s|}-c_{M-1-r-s},0)$ (residual $0.0$ on
+$72/72$), and the lag vector splits exactly as $c=c^{\mathrm{arch}}+c^{\mathrm{atom}}$ with
+$c^{\mathrm{atom}}\le0$. The flutter amplitude becomes a certified \emph{form} functional,
+no fit anywhere: $\mathrm{amp}_{\mathrm{loc}}=0.0606$--$0.1993$ at trend $x^{-0.165\pm0.015}$
+(T149's fit-based $0.064$--$0.182$ reproduced fit-free), with the certified chain
+$\mathrm{amp}_{\mathrm{loc}}\le\mathrm{half}\cdot d_1^{\log}\le
+\mathrm{half}\cdot d_1^\lambda/\min\Lambda$ ($1.345$--$3.954$) and the closed atom budget
+$\|c^{\mathrm{atom}}\|_1\le4B\sqrt N$. The honest negative beside it: the archimedean
+diagonal is \emph{not} the macro profile --- the level shift
+$\|\log(\Lambda/\Lambda^{\mathrm{arch}})\|_\infty=0.734$--$2.647$ grows as $x^{0.244}$;
+the flutter is small and a priori, the \emph{level} is not. And the perturbation step is
+precisely dead, for two independent reasons: the multiplicative (Loewner) step transfers
+scale-free with $\exp(\mathrm{amp})\le14.11$ --- the gauge step \emph{closes} --- while the
+additive step (Weyl 1912 / Bauer--Fike 1960 / Davis--Kahan 1970) compares
+$\|A^{\mathrm{atom}}\|=4.3$--$12.3\%$ of the section against a $\Theta(D^3)$ bottom and
+misses by $2.4$--$5.8$ \emph{orders of magnitude}; moreover the archimedean-only section is
+itself \emph{indefinite} ($2$--$7$ negative eigenvalues, LDL$^{\mathsf T}$ certified) while
+the full section has none --- \textbf{the atoms are co-responsible for the positivity}, not a
+perturbation of it.
+
+\emph{The one gate, with its number.} The chain delivers $0.0680$--$0.1845$ of the true gap
+certified (the best window reproduces T149's $0.1845$ exactly), a priori
+$8.16\times10^{-3}$--$1.74\times10^{-2}$; the ladder-shaped $Q^\star$ ceiling is valid by
+monotonicity ($38.76$--$261.3$ against the certified minimum $36.98$--$144.6$, price
+$\le2.555\times$ for the reduction to \emph{one} constant). But
+$C=14.24$--$43.39\;(=13.81\pi)$ with trend $x^{0.258\pm0.009}$: the gate ``ladder constant
+non-growing'' falls --- the only one of all. The maximum sits at $k=1$ ($67/72$), the growth is
+carried by the deeper modes, and the gap $\pi\to13.81\pi$ is exactly the \emph{arithmetic
+leakage} of the bottom mode ($\ell^1$ mass $1.41$--$1.79$,
+$m\|\psi\|_\infty^2=2.45$--$3.41$ against the model's $2$). The stress is now localised:
+because the amplitude and the ladder are separate statements, the T145 no-go can be asked
+\emph{which} it violates --- the answer is the ladder alone (its multiplier is smooth,
+$\mathrm{TV}\le0.2334$; its ladder constant grows $x^{1.840\pm0.130}$), while the Dirichlet
+and parity controls reproduce $C=\pi$ to $0.0004/0.0002$. The identity/certificate core of
+T149+T150 --- the gauge freedom with the const gauge and its certified sandwich, the two-regime
+discriminator, the explicit zone diagonal with the closed atom budget, the parity compression
+with the inertia localisation, and the parity-sine calibration with the per-window ladder
+certificate --- is load-bearing as \vref{v549} \veri{v549\_gauge\_parity\_identities.py}
+(Section~\ref{sec:v549}).
+
+\begin{keybox}[After T150: the mechanism is named --- one inequality remains]
+\emph{(K1)} \textbf{the load-bearing rest}: $\nu_k\le Ck^2$ with an $m$-free $C$ for the
+\emph{odd parity sector} of a sign-changing-symbol Toeplitz section --- \emph{the} one
+inequality; measured $C\le43.391=13.81\pi$ certified per stratum, trend $x^{0.258\pm0.009}$
+against the flatness bar $0.25$. \emph{(K2)} a closed lower bound on
+$\min\Lambda^{\mathrm{arch}}$ from the smooth kernel --- it would make the flutter-amplitude
+ceiling closed rather than per-window certified. \emph{(K3)} the extension of Basor--Ehrhardt
+2009 to a symbol with $f(0)<0$, or an explicit local model at the symbol minimum inside the odd
+sector. The honest state, in one sentence: after T150 the mechanism has a name --- parity ---
+T148's honest negative is explained (the negative inertia lives in the even sector), the
+flutter amplitude and the zone diagonal are certified form objects with the atoms
+co-responsible for positivity, and the one input between the finite list and a statement for
+all $D$ is a single named inequality about the low modes of one explicitly described finite
+matrix.
+T151 (\texttt{odd\_ladder\_probe.py}) is running at exactly that odd-sector ladder.
+\end{keybox}
+
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
-\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the fourteen ledger modules
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the fifteen ledger modules
 of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
@@ -5776,19 +5963,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T149}\label{app:index}
+\section{Probe index, diary parts T11--T150}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $139$ parts T11--T149 that the current diary file records
-($140$ runs --- T104 was a double run with two independent arms --- and $3597$ green checks); the ten
+load-bearing artefact. The index covers the $140$ parts T11--T150 that the current diary file records
+($141$ runs --- T104 was a double run with two independent arms --- and $3633$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v548} promoted; with T126--T149, the first twenty-four parts of the second phase, the
-running totals are \textbf{$149$ probes and $3789/3789$ checks}. T150
-(\texttt{mode\_ladder\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v549} promoted; with T126--T150, the first twenty-five parts of the second phase, the
+running totals are \textbf{$150$ probes and $3825/3825$ checks}. T151
+(\texttt{odd\_ladder\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -5943,6 +6130,7 @@ T146 & \texttt{\scriptsize level\_\allowbreak lemma} & the proof attempt for L1,
 T147 & \texttt{\scriptsize green\_\allowbreak asymptotic} & the asymptotics itself, \textbf{and the last open object becomes an exact identity}: $\Gamma=\sqrt{Q^\star}\,S_w$ (verified to $2.3\times10^{-16}$ on all $85$ windows $m=26$--$1491$ and both stress forms) --- $D$-uniformity \emph{equivalent} to the boundedness of two named scalars, $S_w=\lambda_{\mathrm{up}}\|R\|_F$ purely spectral (effective bottom multiplicity $n_{\mathrm{eff}}=1.251$--$2.831$, certified $\le4.6438$ at a certified cut by LDL$^{\mathsf T}$ inertia) and $Q^\star=m\max_j(R^2)_{jj}/\operatorname{tr}(R^2)$ purely geometric, scale-free (certified $\le2.8634$ against the localised extreme $m=1491$); \textbf{the classical decay route is computationally dead} (Demko--Moss--Smith $q=0.994815$--$0.999999$, envelope $q^{m/2}=0.9346$--$0.9995$ above the $0.05$ bar everywhere; Jaffard exponent of $E$ itself $0.06$--$0.82$) and the columns are \emph{delocalised} (half-mass radius $0.048$--$0.105$ of the window) --- delocalisation \emph{is} the bound: $0.9864$--$0.9996$ of $\|Re_j\|^2$ from the bottom block alone, $Q_B/|B|=1.375$--$1.839$ against the exact floor (naive $Q_B\sim m$ wrong by $5$--$258$), T146's unexplained factor $2.7$--$16.0$ identified as $\sqrt{m/Q_B}$ up to $\lambda_{\mathrm{up}}/\lambda_{\mathrm{lo}}$; honest negative: the crude free-tail split grows $m^{0.538\pm0.020}$, reported, not used; \textbf{the mechanism is named}: Toeplitz-minus-Hankel section, bottom eigenvectors Fourier modes by Szeg\H{o}/Widom (Kac--Murdock--Szeg\H{o} 1953, Widom 1958, Basor--Ehrhardt 2009), sharp prediction $Q_B\le2|B|$ \textbf{holds}, chain $Q_B\le\sum_Bm\|\psi_k\|_\infty^2\le2\sum_B\|a_k\|_1^2$ pure arithmetic (sparsity $\le8.773$ per mode, $0.999{+}$ of the energy in the lowest $4|B|$ modes); four $D$-strata with certified maxima, six trend exponents flat at bar $0.25$, all fits; congruence structure discarded (scatter $0.465$); $\sigma_{\mathrm{tot}}$ does not fall but is located (block leakage $0.9627$ vs required $2.7\times10^{-7}$); \textbf{the 3 open R4 border blocks close} ($8/8$ rebuilt border windows, $c_0^{\mathrm{ap}}=2.9135$--$3.0383$, same mechanism); stress separates: no-go diverges and hits $Q_B=m/H_m$ to $1.0000$, Dirichlet control flat ($1.4142$--$1.4376$ vs sine value $2$); honest limit: translation covariance broken by the whitening (Toeplitz defect $0.21$--$0.54$), the spectral factor needs its own a-priori input; map V19, stock $114$; \textbf{rest: a Szeg\H{o} theorem for the reweighted section (lifts the chain to all $D$), an a-priori bound for $S_w$, the $\sigma_{\mathrm{tot}}$ classification} & ASYMPTOTIC-SHAPED & 39/39\\
 T148 & \texttt{\scriptsize szego\_\allowbreak bottom} & the lifting statement dissected, \textbf{and the second factor closes on the surface}: the passage from the pure to the reweighted section classified in seven typed steps --- the order-2 model ladder and the pure section's Fourier sparsity THEOREMS (KMS 1953, Widom 1958, Basor--Ehrhardt 2009; model $\nu=4.236$--$4.257$ flat), the $\ell^1$ ceiling $\|a\|_1\le2\sqrt\nu+1$ CERTIFIED ($\nu=(m+1)^{3/2}\|L_0\psi\|_1/(2\sqrt2)$, every $m$-power cancelled; excess $-2.6\times10^{-6}$), the chain $Q^\star\le2\langle\|a\|_1^2\rangle_w\le2\langle\mathrm{ceil}^2\rangle_w$ CERTIFIED $48/48$, the commutator/Davis--Kahan route DEAD ($5.4\times10^{2}$--$5.3\times10^{5}$, $2.7$--$5.7$ orders vacuous), the live route the LIOUVILLE transform $m\|\psi\|_\infty^2\le2\kappa_\Lambda\mathrm{ceil}(\hat\varphi)^2$ with $\kappa_\Lambda=1.733$--$3.933$ certified (gain $50.6$), and $\nu\le F(\text{form})$ THE OPEN INPUT (a-priori ceiling $81.4$--$469.0$, grows $m^{0.615}$; $\nu_L$ needs $\lesssim34$, measures $282$, $x^{0.166}$); \textbf{the hypothesis isolated}: weight-class experiment at identical $\kappa_\Lambda=4$ --- two BV classes flat ($x^{0.000}$/$x^{-0.007}$), the rough class $x^{1.994}$ --- $\mathrm{TV}(\log\Lambda)$ is the named scalar, measured $3.63$--$11.93$ on the real surface, $x^{0.444}$ NOT flat; \textbf{$S_w$ closes}: LDL$^{\mathsf T}$ layer cake $\Rightarrow S_w\le1.9587$ certified (true $1.282$--$1.683$), $x^{0.007\pm0.007}$ flat, per $D$-stratum; \textbf{honest negative}: the Toeplitz symbol has $f(0)<0$ on $48/48$ ($-87.3\ldots-22.5$) --- positive definiteness is a finite-section effect of minus-Hankel + lumping, the KMS order-2 hypothesis survives only as a measurement ($\alpha=1.643$--$1.989$ in $[1.5,2.5]$); no-go violates exactly the smoothness hypothesis ($\nu$ diverges, $n_{\mathrm{eff}}=1.0000$ innocent), Dirichlet exact ($\nu\to\pi$, $m\|\psi\|_\infty^2\to2$); \textbf{the big number}: the certified chain delivers $8.36$--$15.86\%$ of the true gap (median $11.74\%$, no window loses more than $12\times$), a-priori-shaped factors still a lower bound at factor $10.5$; balance $6$ certified / $2$ measured / $2$ fits, fits in no inequality; $\sigma_{\mathrm{tot}}$ RETIRED AS A ROUTE; map V20, stock $114$; core promoted as \vref{v548}; \textbf{rest: $\nu_L\le F$(form) $m$-free (= bounded $\mathrm{TV}(\log\Lambda)$ or weaker, target $\lesssim34$ vs $282$); cosmetic: an order-2 theorem from the minus-Hankel structure} & ONE-INPUT-MISSING & 31/31\\
 T149 & \texttt{\scriptsize weight\_\allowbreak smoothing} & the one open input attacked through the gauge freedom, \textbf{and the hypothesis is refuted rather than weakened}: the whitening diagonal is a FREE GAUGE (identity plus one Rayleigh step, $9$ preregistered candidates, every one a valid lower bound, family maximum valid); the preregistered winner \texttt{const} (geometric mean of the Jacobi diagonal) delivers the three ordered numbers --- sandwich $\sigma\le5.5789$ CERTIFIED ($x^{0.154}$, bar $8.0$), $\mathrm{TV}(\log\tilde\Lambda)$ \textbf{exactly $0.0000$} (T148's $11.93$ at $x^{0.444}$ ELIMINATED, not reduced), $\nu_{\tilde L}=222.70$ in target on $21/44$ windows only ($\rho=1.347\to0.485$) --- at price $\tilde\kappa_{\mathrm{up}}\le2.3146$ vs $1.2647$; \textbf{the two-regime decomposition}: flutter-killers cheap (sandwich $1.129$--$1.572$) but move $\nu_{\tilde L}$ by $\le0.9\%$, only macro-removers improve it (factor $1.27$) --- $\mathrm{TV}(\log\Lambda)$ was the MISLOCATED hypothesis, the roughness sits in the FORM; chain: $\Gamma=\sqrt{Q^\star}S_w$ gauge-invariant at $4.4\times10^{-16}$ ($89$ assemblies), family maximum $9.52$--$18.45\%$ of the true gap certified (median $12.68\%$), a priori $0.800$--$1.566\%$ (up to $1.284\times$ better), Jacobi still wins certified $44/44$; $Q^\star$ ceiling $697.9\to149.1$, exponent $0.551\to0.330$, NOT flat (driver $\nu_{\tilde L}=265.2$, $x^{0.772}$, above the bottom block); stress: no-go already smooth, $\nu$ diverges $x^{1.420}$ under EVERY gauge; Dirichlet exact ($\nu\to\pi$, $5.9\times10^{-14}$) and CORRECTS the question to the ladder $\nu_k\le Ck^2$ with $m$-free $C$ ($C=18.66$--$44.61$, $x^{0.272}$); TV anatomy: $85\%$+ flutter, amplitude $0.064$--$0.182$ FLAT, edges innocent; $7$ promotion candidates, unpromoted; \textbf{rest: $m$-free $C$ in $\nu_k\le Ck^2$ (load-bearing); an a-priori flutter-amplitude bound (closes it outright); cosmetic order-2 theorem} & PARTIAL-SMOOTHING & 30/30\\
+T150 & \texttt{\scriptsize mode\_\allowbreak ladder} & the ladder attacked through the flutter amplitude, \textbf{and the mechanism has a name --- parity}: the form is EXACTLY the compression of the full symmetric Toeplitz section onto its antisymmetric parity sector ($U_-^{\mathsf T}T_MU_-=T-H$, cross block $\le4.0\times10^{-16}$ on real windows; Basor--Ehrhardt 2009 the address) and \textbf{the entire negative inertia of the sign-changing symbol sits in the EVEN sector} (odd $0$ / even $1$ on $72/72$, LDL$^{\mathsf T}$) --- $f(0)<0$ EXPLAINED, not worked around; the diagonal is an EXPLICIT zone function ($\Lambda_r=c_0-c_{M-1-2r}+\sum\max(c_{|r-s|}-c_{M-1-r-s},0)$, residual $0.0$ on $72/72$) with the exact split $c=c^{\mathrm{arch}}+c^{\mathrm{atom}}$, $c^{\mathrm{atom}}\le0$; the flutter amplitude a CERTIFIED form functional, fit-free ($\mathrm{amp}_{\mathrm{loc}}=0.0606$--$0.1993$, $x^{-0.165\pm0.015}$, largest log step $0.1927$; chain $\le\mathrm{half}\cdot d_1^\lambda/\min\Lambda=1.345$--$3.954$; atom budget $4B\sqrt N$ CLOSED); honest negative: the archimedean diagonal is NOT the macro profile (level shift $0.734$--$2.647$, $x^{0.244}$); \textbf{the perturbation step precisely dead, twice}: multiplicative (Loewner) transfers with $\exp(\mathrm{amp})\le14.11$ --- the gauge step CLOSES --- additive (Weyl / Bauer--Fike / Davis--Kahan) misses by $2.4$--$5.8$ orders ($\|A^{\mathrm{atom}}\|=4.3$--$12.3\%$ of the section) AND the archimedean-only section is itself INDEFINITE ($2$--$7$ negatives) --- \textbf{the atoms are co-responsible for the positivity}; third valid ceiling from the parity sines ($\nu_k=\pi k^2$ on the control to $0.0002$, gain $1.000$--$1.130$); BUT $C=14.24$--$43.39=13.81\pi$, $x^{0.258\pm0.009}$ --- the one gate falls; max at $k=1$ ($67/72$), the gap $\pi\to13.81\pi$ exactly the ARITHMETIC LEAKAGE of the bottom mode ($\ell^1$ $1.41$--$1.79$, $m\|\psi\|_\infty^2=2.45$--$3.41$ vs $2$); chain $0.0680$--$0.1845$ certified (T149's best reproduced exactly), ladder-shaped $Q^\star$ ceiling valid by monotonicity (price $\le2.555\times$ for ONE constant); $5/10$ factors flat; stress LOCALISED: the no-go violates the ladder alone ($x^{1.840}$, multiplier smooth), controls $C=\pi$ ($0.0004/0.0002$); $9$ candidates (stock $121+9-6=124$); core of T149+T150 promoted as \vref{v549}; \textbf{rest: $\nu_k\le Ck^2$ with $m$-free $C$ for the ODD parity sector at a sign-changing symbol --- THE one inequality; a closed bound on $\min\Lambda^{\mathrm{arch}}$; Basor--Ehrhardt at $f(0)<0$} & ONE-TERM-MISSING & 36/36\\
 \end{xltabular}
 }
 

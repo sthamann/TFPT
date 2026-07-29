@@ -1284,6 +1284,66 @@ Machine-checked:
 \veri{v548\_green\_szego\_identities.py}.
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 
+\par\smallskip\noindent\textbf{The gauge/parity identities
+(\texttt{PRIME.GAUGE.PARITY.IDENT.01}).}
+The identity/certificate core of T149+T150 is load-bearing as the seventh
+companion module ($21$ checks, ${\sim}0.3$\,s) on $12$ frame-A windows
+($n=4\ldots139$, $m=26\ldots285\le300$), $48$ gauge assemblies (Jacobi,
+const, moving-geometric-mean, and the arithmetic-free archimedean diagonal),
+the full-section parity items on the $6$ windows with $M\le300$, and a
+parity control model at $m=2001$ --- the companion to the Green/Szeg\H{o}
+module: here the gauge \emph{freedom} around that machinery and the parity
+\emph{structure} underneath it are certified.
+\emph{The gauge freedom.} For any positive diagonal $\tilde\Lambda$,
+$\lambda_{\min}(A)\ge\mathrm{cert}\,\lambda_{\min}(\tilde E)\cdot
+\min_j\tilde\Lambda_j$ is a valid certified lower bound (an identity plus
+one Rayleigh step; family maximum valid); $\Gamma=\sqrt{Q^\star}S_w$ holds
+gauge-invariantly at $2.4\times10^{-16}$; the const gauge has
+$\mathrm{TV}(\log\tilde\Lambda)=0$ \emph{exactly} with the certified
+entrywise sandwich $\sigma=1.3868$--$2.5805$; on the shifted indefinite
+form the completed-Cholesky floor refuses on $12/12$.
+\emph{The two-regime discriminator.} The flutter smoother removes
+$\mathrm{TV}$ by $\ge2.88\times$ while the Liouville-transported
+$\nu_{\tilde L}$ moves $\le0.0088$ --- even the rough re-gauge moves it
+$\le0.0046$ --- while the untransported functional jumps $0.41$--$9.76$
+under the same rough gauge: the roughness is in the form, not in the
+multiplier (T149's withdrawal of the TV hypothesis, wired per instance).
+\emph{The explicit zone diagonal.}
+$\Lambda_r=c_0-c_{M-1-2r}+\sum_{s\ne r}\max(c_{|r-s|}-c_{M-1-r-s},0)$ at
+residual $5.9\times10^{-16}$, the exact split
+$c=c^{\mathrm{arch}}+c^{\mathrm{atom}}$ with $c^{\mathrm{atom}}\le0$, the
+closed atom budget $\|c^{\mathrm{atom}}\|_1\le4B\sqrt N$ ($B=1.038821$
+verified on the table); the archimedean section alone is indefinite on
+$12/12$ (the atoms are co-responsible for the positivity --- the additive
+perturbation reading is structurally empty).
+\emph{The parity compression.} $U_-^{\mathsf T}T_M(c)\,U_-=T-H$ exactly
+(cross block $1.4\times10^{-16}$): the reflection-odd section is the
+compression of the full symmetric Toeplitz section onto its antisymmetric
+parity sector, and the negative inertia of the sign-changing symbol sits
+entirely in the \emph{even} sector (odd sector zero, LDL$^{\mathsf T}$) ---
+$f(0)<0$ explained rather than worked around.
+\emph{The parity-sine calibration.} The parity sines are exact eigenpairs of
+the parity Laplacian (corner $3$ forced by antisymmetry), $\nu^P_k=\pi k^2$
+on the exact model to $3.0\times10^{-5}$, and the per-window ladder
+$\nu^P_k\le Ck^2$ holds with certified $C=11.70$--$17.28$ and the derived
+per-mode ceiling $m\|\psi_k\|_\infty^2\le2(2\sqrt Ck+1)^2$.
+\textbf{Named limits as content:} per instance on small windows --- a finite
+list with an explicit maximum; nothing uniform in the zone index or in $D$,
+and explicitly \emph{no} statement for all $D$ (the one open input, an
+$m$-free $C$ in the odd-sector ladder for a sign-changing symbol, stays
+open, typed open); $\mathrm{TV}(\log\Lambda)$ stays withdrawn as a
+hypothesis; $\sigma_{\mathrm{tot}}$ stays retired as a route.
+KMS 1953 (parity sector) / Widom 1958--Basor--Ehrhardt
+2009--B\"ottcher--Silbermann (the parity sectors as the algebra's natural
+objects; the sign-changing symbol is exactly what Basor--Ehrhardt does not
+cover) / Sylvester 1852--Bunch--Kaufman 1977 / Chebyshev 1852 (verified on
+the table) / Abel / Weyl 1912--Bauer--Fike 1960--Davis--Kahan 1970 (cited,
+computed dead, not used) / Rayleigh 1877--Ritz 1909 / Gershgorin 1931 named
+classical; Weil 1952 cited, never used as a criterion.
+Machine-checked:
+\veri{v549\_gauge\_parity\_identities.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:
