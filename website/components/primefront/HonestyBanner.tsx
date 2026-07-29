@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v555
+          v535–v556
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4295/4295 sandbox checks —
+        (“the full proof”, T126+) is now open with 4325/4325 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -409,8 +409,19 @@ export function HonestyBanner() {
         floor holds on it — at a price h^+3.30, worse than the crossing —
         so the binding axis is the gauge-invariant ALIGNMENT between the
         weight increments and their partial sums, named R-F. T165
-        (alignment_eta_probe.py) is running exactly that alignment
-        question. What remains
+        (ETA-RESISTS) then closed exactly that question by certificate:
+        the gauge-invariant identity P_pr = g₁₆·R·(TV/(t₁v)²)/μᴾ₁ makes
+        demand and price one equation, so every crossing vector pays the
+        old KMS h² and the alignment question was never independent — its
+        m-uniform form IS the quantifier; the price exponent decomposes
+        exactly (61% the same h² since T152), the quarter-bar drift is
+        settled as zone depth on a decoupled surface (retiring
+        U_ref = 4.90 → 5.7327), and exactly ONE genuine open object
+        remains: a lower bound on the 16-step Schur-cascade gain,
+        inf_m g₁₆(m) &gt; 0 — a cancellation, provably beyond
+        absolute-value budgets; the theorem cores of T164+T165 are
+        load-bearing as v556. T166 (schur_cascade_probe.py) is running
+        exactly that cascade lower bound. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

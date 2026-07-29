@@ -1695,6 +1695,64 @@ Machine-checked:
 \veri{v555\_pareto\_tv\_identities.py}.
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 
+\par\smallskip\noindent\textbf{The gauge/$P_{\mathrm{pr}}$ identities
+(\texttt{PRIME.GAUGE.PPR.01}).}
+The closed theorem cores of T164 and T165 are load-bearing as the
+fourteenth companion module ($23$ checks, ${\sim}0.3$\,s), recomputed on
+the same declared surface as the module above ($12$ deepest in-cap
+frame-A windows, $m=96\ldots291\le300$) with the one arithmetic input
+$\kappa=0.038821$ \emph{verified} at every jump point of $\psi(x)/x$ on
+the von-Mangoldt table --- the \emph{gauge structure} of the pairing,
+and it does not close the one remaining quantifier.
+\emph{The gauge theorem (T164).} $x_1=1$ fixes only the \emph{scale} of
+$a$; $Q$ and TV are homogeneous of degree two; hence the demand ratio
+$Q/\mathrm{TV}$ of the same $a$-direction is the \emph{same number in
+every sector} --- unchanged to $2.9\times10^{-11}$ on $2520$
+sector-by-trial-vector combinations ($5$ weight families $\times$ $7$
+shifts $\times$ $6$ taper widths), with the pure shift scaling the
+certified value by exactly $\theta=\mu^P_1/(\mu^P_1+\kappa_s)$; the full
+space is settled strictly worse ($\mu_0=0$ exactly); the wrong transport
+map breaks loudly ($2.0\times10^{2}$--$5.4\times10^{3}$).
+\emph{The $h^2$ conservation law (T164).}
+floor${}\times{}$transfer $=1/(\mu^P_1+\kappa_s)\cdot(1+\kappa_s/\mu^P_1)
+=1/\mu^P_1$ \emph{identically} at every shift ($2.2\times10^{-16}$): the
+$h^2$ is conserved, never removed --- it lives in the ratio, not in the
+floor; the wrong transfer misses by $0.9995$ at the largest shift.
+\emph{The power-one spend (T164).} The $r$-ceiling $r\le U/L$ with
+$L=\lambda_1(A)/\mu^P_1$ is linear in the entry ceiling, so
+$d\log r/d\log U=+1$ exactly ($1.1\times10^{-14}$); the quadratic
+consumption reads slope $2$ and is recognised.
+\emph{The $P_{\mathrm{pr}}$ identity and the predicate equivalence
+(T165).} $P_{\mathrm{pr}}=g_{16}\cdot R\cdot(\mathrm{TV}/(t_1v)^2)/\mu^P_1$
+exact to $4.3\times10^{-16}$ on all $192$ battery vectors, with the
+predicates $R>2\kappa$ and
+$P_{\mathrm{pr}}>2\kappa g_{16}\,\mathrm{tvf}/\mu^P_1$ agreeing as
+booleans everywhere and every crossing vector paying
+$P_{\mathrm{pr}}>2\kappa g_{16}/\mu^P_1=15.4$--$142.8$ above the
+preregistered tolerance $10$ on $12/12$ --- the successor question R-F
+closes negatively by an identity plus a floor; the price with $(t_1v)$
+unsquared breaks the gauge invariance loudly.
+\emph{The Schur-cascade direction and the exponent closure (T164/T165).}
+$s=\mu^P_1t_1^{\mathsf T}A^{-1}t_1\ge g_{16}\ge g_1$ window by window
+with $P_K=\hat a\,s\ge1$ (Kantorovich 1948), and the exponent closure
+$\log(1/g_1)=\log(g_{16}/g_1)+\log(1/g_{16})$ is exact per instance and
+on the fitted lists ($1.3\times10^{-15}$); plus the monotone no-go
+staircase and exact Dirichlet/parity controls.
+\textbf{Named limits as content:} per instance on small windows ---
+nothing uniform in the zone index or in $D$; the T164/T165 $h$-exponents
+and the measured anatomy are sandbox, \emph{not} consumed; finite
+$\Lambda$-sums allowed and used, \emph{no} RH statement; \textbf{the one
+open object after T165 stays open, typed open}: $\inf_m g_{16}(m)>0$,
+equivalently a lower bound on the sixteen-step Schur-cascade gain
+$g_{16}/g_1$ uniform in $m$ --- a quantifier over a certified flat list.
+Schur 1917--Haynsworth 1968 / KMS 1953 / Abel 1826 / Chebyshev
+1852--Rosser--Schoenfeld 1962 / Kantorovich 1948 / Fej\'er 1915 /
+Dirichlet 1829 named classical; Weil 1952 / Bombieri 2000 cited, never
+used as a criterion.
+Machine-checked:
+\veri{v556\_gauge\_ppr\_identities.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

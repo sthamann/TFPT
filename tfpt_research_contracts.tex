@@ -3427,6 +3427,109 @@ AST-checked; no marker moves.
 Machine-checked: \veri{v555\_pareto\_tv\_identities.py}.
 \mE\ (per-instance identities and certified inequalities)
 
+\par\smallskip\noindent\textbf{The gauge/$P_{\mathrm{pr}}$ identities
+(\texttt{PRIME.GAUGE.PPR.01}).}
+The closed theorem cores of the discovery parts T164 and T165,
+recomputed on the same declared surface as
+\texttt{PRIME.PARETO.TV.01} (the $12$ deepest in-cap frame-A windows,
+$n=29\ldots139$, $m=96\ldots291\le300$), with the one arithmetic input
+$\kappa=0.038821$ \emph{verified} at every jump point of $\psi(x)/x$ on
+the von-Mangoldt table in $[100,3.2\times10^{5}]$ (each statement with
+at least one mutation control that must fail loudly) --- the \emph{gauge
+structure} of the pairing, and it does not close the one remaining
+quantifier. \emph{(1)} The gauge theorem (T164): $x_1=1$ fixes
+$a_1=1/\sqrt{\mu_1}$, i.e.\ only the \emph{scale} of $a$; $Q$ and TV are
+homogeneous of degree two in $a$; hence the demand ratio
+$Q/\mathrm{TV}$ of the same $a$-direction --- and with it
+$\delta_{\mathrm{bnd}}$ --- is the same number in \emph{every} sector,
+unchanged to $2.9\times10^{-11}$ on $2520$ sector-by-trial-vector
+combinations ($5$ weight families $\times$ $7$ shifts $\times$ $6$
+Fej\'er taper widths on $12$ windows), with $\mathrm{TV}\ge|w_0|$ in
+every sector and the pure shift scaling the certified value by exactly
+$\theta=\mu^P_1/(\mu^P_1+\kappa_s)$ ($2.2\times10^{-11}$ on $432$
+points); the full space is settled in closed form and strictly worse
+($\mu_0=0$ exactly, the lowest remaining eigenvalue $\le\mu^P_1$ on
+$12/12$); mutation: the wrong transport map (the $x$-coordinates
+carried unchanged instead of the $a$-direction) moves the ratio by
+$2.0\times10^{2}$--$5.4\times10^{3}$. \emph{(2)} The $h^2$ conservation
+law (T164): floor${}\times{}$transfer
+$=1/(\mu^P_1+\kappa_s)\cdot(1+\kappa_s/\mu^P_1)=1/\mu^P_1$
+\emph{identically} at every shift on the declared grid ($72$
+window-by-shift points, $2.2\times10^{-16}$ of $1/\mu^P_1$) --- the
+$h^2$ is conserved, never removed; it lives in the ratio, not in the
+floor; mutation: the wrong transfer misses by $0.9995$ at the largest
+shift on every window. \emph{(3)} The power-one spend as an identity
+(T164): the $r$-ceiling $r\le U/L$ with
+$L=\lambda_1(A)/\mu^P_1=1.1019$--$1.5845$ (computed per instance from
+the full window) is linear in the entry ceiling, so
+$d\log r/d\log U=+1$ exactly (within $1.1\times10^{-14}$ on $12/12$)
+--- an $h^{\varepsilon}$ ceiling costs $h^{-\varepsilon}$ of
+$r$-margin for every $\varepsilon>0$, no free tolerance in the
+consumption step (the measured power of the full T156 loss margin
+stays sandbox); mutation: the quadratic consumption reads slope
+$2.0000$ and is recognised. \emph{(4)} The $P_{\mathrm{pr}}$ identity
+and the predicate equivalence (T165):
+$P_{\mathrm{pr}}=g_{16}\cdot R\cdot(\mathrm{TV}/(t_1v)^2)/\mu^P_1$
+with no inequality anywhere --- four factors, each a named object: the
+R-E-A quantifier $g_{16}=0.1559$--$0.2227$, the demand
+$R=Q/\mathrm{TV}$, the T163 floor $\mathrm{tvf}\ge1$, and the KMS 1953
+scale $1/\mu^P_1=943.6$--$8609.6\sim h^2$ --- exact to
+$4.3\times10^{-16}$ on all $192$ battery vectors ($6$ knob settings,
+$6$ random sixteen-vectors and $4$ random \emph{full-window} vectors
+per window), gauge-invariant under $v\to tv$ to $1.5\times10^{-11}$
+against the declared cancellation horizon; the predicates $R>2\kappa$
+and $P_{\mathrm{pr}}>2\kappa g_{16}\,\mathrm{tvf}/\mu^P_1$ agree as
+booleans on all $192$ (no search is run --- T165's ascent stays
+sandbox), so the demand half of R2$''$ and the gauge-invariant
+crossing condition are \emph{one} predicate --- R-F is strictly
+stronger than the R2$''$ demand and its $m$-uniform form \emph{is}
+R-E-A --- and $\mathrm{tvf}\ge1$ pointwise, hence every crossing
+vector pays $P_{\mathrm{pr}}>2\kappa g_{16}/\mu^P_1=15.4$--$142.8$,
+above the preregistered tolerance $\Theta_{\mathrm{TOL}}=10$ on
+$12/12$ windows: the R-F conjunction is \emph{empty} on this surface
+by an identity plus a floor; mutation: the price with $(t_1v)$
+unsquared scales like $t$ and moves by $1.0$--$1.0\times10^{4}$ under
+the same round trips. \emph{(5)} The Schur-cascade direction and the
+exponent closure (T164/T165):
+$s=\mu^P_1t_1^{\mathsf T}A^{-1}t_1=0.1696$--$0.2472\ge g_{16}\ge g_1$
+window by window ($1/s\le1/g_{16}\le1/g_1=B_{11}$; Schur
+1917--Haynsworth 1968), $P_K=\hat a\,s=254.8$--$7.7\times10^{3}\ge1$
+(Kantorovich 1948); the exponent closure is an identity of the lists
+--- per instance $\log(1/g_1)=\log(g_{16}/g_1)+\log(1/g_{16})$ to
+$1.6\times10^{-15}$, the least-squares fits closing to
+$1.3\times10^{-15}$ by linearity (the exponent \emph{values} are
+sandbox fits, not consumed --- what is promoted is that the whole
+certification lives in the cascade gain $g_{16}/g_1$, the object of
+the one open quantifier); mutations: the $g_8$ closure breaks by
+$0.10$--$0.24$, a corrupted sixteen-block makes the Cholesky
+\emph{refuse} on $12/12$. Stress: the monotone no-go staircase
+($1.00\to3.49\to10.81\to24.98$, the $\nu=4$ column an exact null
+control); the Dirichlet cosine-sum identity ($2.9\times10^{-14}$,
+including the degenerate branch), the KMS eigenpairs
+($1.4\times10^{-14}$) and $\mathrm{odd\_toeplitz}(c^L)=L_P$ (zero
+tolerance) are exact.
+\textbf{Named limits as load-bearing content:} per instance on small
+windows --- a finite list with an explicit maximum; nothing uniform in
+the zone index or in $D$; the T164/T165 $h$-exponents and the measured
+anatomy (the free ascent, the $\eta(\mathrm{Cap})$ profile, the
+decoupled $\nu$ surface with its zone-depth finding, the retired
+constant $U_{\mathrm{ref}}=4.90\to5.7327$) stay in the diary and the
+paper; finite $\Lambda$-sums are allowed and used, \emph{no} RH
+statement is made ($\tfrac12$ appears in exactly one role: as the
+strength of a classical statement a required depth is compared
+against); \textbf{the one open object after T165 stays open, typed
+open}: $\inf_m g_{16}(m)>0$, equivalently a lower bound on the
+sixteen-step Schur-cascade gain $g_{16}/g_1$ uniform in $m$ --- a
+quantifier over a certified flat list; R-B$'''$ (an independent
+$\alpha$/$h$ surface) stays open as narrowed by T164. Fences: Schur
+1917--Haynsworth 1968 / KMS 1953 / Abel 1826 / Chebyshev
+1852--Rosser--Schoenfeld 1962 (verified on the table) / Kantorovich
+1948 / Fej\'er 1915 / Dirichlet 1829 named classical; Weil 1952 /
+Bombieri 2000 cited, never used as a criterion; zero-firewall
+AST-checked; no marker moves.
+Machine-checked: \veri{v556\_gauge\_ppr\_identities.py}.
+\mE\ (per-instance identities and certified inequalities)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

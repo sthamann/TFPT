@@ -43,6 +43,2168 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · XII",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v556"
+      },
+      {
+        "k": "t",
+        "v": " — the gauge/"
+      },
+      {
+        "k": "m",
+        "v": "P_{\\mathrm{pr}}"
+      },
+      {
+        "k": "t",
+        "v": " identities of phase 2 promoted; prime-front diary T165 (the successor closes by certificate, one quantifier remains — ETA-RESISTS) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v556"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.GAUGE.PPR.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the closed theorem cores of the discovery parts T164 ("
+        },
+        {
+          "k": "c",
+          "v": "sector_change_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") and T165 ("
+        },
+        {
+          "k": "c",
+          "v": "alignment_eta_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "23"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.3"
+        },
+        {
+          "k": "t",
+          "v": " s, everything recomputed on "
+        },
+        {
+          "k": "c",
+          "v": "v551"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v555"
+        },
+        {
+          "k": "t",
+          "v": "'s declared surface (the "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " deepest prime-power zones admitting a frame-A window inside the cap, "
+        },
+        {
+          "k": "m",
+          "v": "n=29\\ldots139"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "m=96\\ldots291\\le300"
+        },
+        {
+          "k": "t",
+          "v": "), with the one arithmetic input "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa=0.038821"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "verified"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at every jump point of "
+        },
+        {
+          "k": "m",
+          "v": "\\psi(x)/x"
+        },
+        {
+          "k": "t",
+          "v": " on the von-Mangoldt table in "
+        },
+        {
+          "k": "m",
+          "v": "[100,3.2\\times10^{5}]"
+        },
+        {
+          "k": "t",
+          "v": " (Chebyshev 1852 / Rosser–Schoenfeld 1962), nothing cited from the sandbox; the companion to "
+        },
+        {
+          "k": "c",
+          "v": "v555"
+        },
+        {
+          "k": "t",
+          "v": ", which certified the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "price structure"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the pairing — this module certifies its "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "gauge structure"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". Scope fence: per-instance identities and certified inequalities with the direction in the name — no fit, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no zone-uniform statement; the T164/T165 "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-exponents ("
+        },
+        {
+          "k": "m",
+          "v": "1/g_{16}\\sim h^{+0.061}"
+        },
+        {
+          "k": "t",
+          "v": ", the ascent price "
+        },
+        {
+          "k": "m",
+          "v": "\\sim h^{+3.3}"
+        },
+        {
+          "k": "t",
+          "v": ", the split "
+        },
+        {
+          "k": "m",
+          "v": "+3.110-3.049=+0.061"
+        },
+        {
+          "k": "t",
+          "v": ") are sandbox fits and are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " consumed; finite "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "-sums are allowed and used, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no RH statement"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is made; the ONE open object after T165 ("
+        },
+        {
+          "k": "m",
+          "v": "\\inf_m g_{16}(m)>0"
+        },
+        {
+          "k": "t",
+          "v": ", the cascade-gain quantifier) stays open and typed open; each statement carries at least one mutation control that must fail loudly."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The gauge theorem (T164, S2.1) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "x_1=1"
+        },
+        {
+          "k": "t",
+          "v": " fixes "
+        },
+        {
+          "k": "m",
+          "v": "a_1=1/\\sqrt{\\mu_1}"
+        },
+        {
+          "k": "t",
+          "v": ", i.e. only the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "scale"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "a"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " and TV are homogeneous of degree two in "
+        },
+        {
+          "k": "m",
+          "v": "a"
+        },
+        {
+          "k": "t",
+          "v": "; hence the demand ratio "
+        },
+        {
+          "k": "m",
+          "v": "Q/\\mathrm{TV}"
+        },
+        {
+          "k": "t",
+          "v": " of the same "
+        },
+        {
+          "k": "m",
+          "v": "a"
+        },
+        {
+          "k": "t",
+          "v": "-direction — and with it "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{bnd}}"
+        },
+        {
+          "k": "t",
+          "v": " — is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same number in every sector"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": unchanged to "
+        },
+        {
+          "k": "m",
+          "v": "2.9\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "2520"
+        },
+        {
+          "k": "t",
+          "v": " sector-by-trial-vector combinations ("
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " weight families "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " shifts "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " taper widths on "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " windows), with "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TV}\\ge|w_0|"
+        },
+        {
+          "k": "t",
+          "v": " in every sector and the pure shift scaling the certified value by exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\theta=\\mu^P_1/(\\mu^P_1+\\kappa_s)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "2.2\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "432"
+        },
+        {
+          "k": "t",
+          "v": " points); candidate (i) settled in closed form — full-space "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_0=0"
+        },
+        {
+          "k": "t",
+          "v": " exactly, strictly worse. Mutation: the wrong transport map (the "
+        },
+        {
+          "k": "m",
+          "v": "x"
+        },
+        {
+          "k": "t",
+          "v": "-coordinates instead of the "
+        },
+        {
+          "k": "m",
+          "v": "a"
+        },
+        {
+          "k": "t",
+          "v": "-direction) moves the ratio by "
+        },
+        {
+          "k": "m",
+          "v": "2.0\\times10^{2}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5.4\\times10^{3}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The "
+            },
+            {
+              "k": "m",
+              "v": "h^2"
+            },
+            {
+              "k": "t",
+              "v": " conservation law (T164, S2.2) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " floor "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " transfer "
+        },
+        {
+          "k": "m",
+          "v": "=1/(\\mu^P_1+\\kappa_s)\\cdot(1+\\kappa_s/\\mu^P_1)=1/\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "identically"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at every shift on the declared grid ("
+        },
+        {
+          "k": "m",
+          "v": "72"
+        },
+        {
+          "k": "t",
+          "v": " window-by-shift points, "
+        },
+        {
+          "k": "m",
+          "v": "2.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "): a sector shift can flatten the floor but pays the identical factor back as a transfer — the "
+        },
+        {
+          "k": "m",
+          "v": "h^2"
+        },
+        {
+          "k": "t",
+          "v": " is conserved, never removed; it lives in the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "ratio"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not in the floor. Mutation: the wrong transfer misses by "
+        },
+        {
+          "k": "m",
+          "v": "0.9995"
+        },
+        {
+          "k": "t",
+          "v": " at the largest shift on every window."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) The power-one spend as an identity (T164, S1) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "m",
+          "v": "r"
+        },
+        {
+          "k": "t",
+          "v": "-ceiling "
+        },
+        {
+          "k": "m",
+          "v": "r\\le U/L"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "L=\\lambda_1(A)/\\mu^P_1=1.1019"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.5845"
+        },
+        {
+          "k": "t",
+          "v": " (computed per instance from the full window) is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "linear"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " in the entry ceiling, so "
+        },
+        {
+          "k": "m",
+          "v": "d\\log r/d\\log U=+1"
+        },
+        {
+          "k": "t",
+          "v": " exactly (central difference at "
+        },
+        {
+          "k": "m",
+          "v": "U=1/g_{16}"
+        },
+        {
+          "k": "t",
+          "v": ", within "
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "): an "
+        },
+        {
+          "k": "m",
+          "v": "h^{\\varepsilon}"
+        },
+        {
+          "k": "t",
+          "v": " ceiling costs "
+        },
+        {
+          "k": "m",
+          "v": "h^{-\\varepsilon}"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "r"
+        },
+        {
+          "k": "t",
+          "v": "-margin for every "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon>0"
+        },
+        {
+          "k": "t",
+          "v": " — no free tolerance in the consumption step (the measured power of the full T156 loss margin stays sandbox). Mutation: the quadratic consumption reads slope "
+        },
+        {
+          "k": "m",
+          "v": "2.0000"
+        },
+        {
+          "k": "t",
+          "v": " and is recognised."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The "
+            },
+            {
+              "k": "m",
+              "v": "P_{\\mathrm{pr}}"
+            },
+            {
+              "k": "t",
+              "v": " identity and the predicate equivalence (T165, T1) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The gauge-invariant dashboard satisfies "
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{pr}}=g_{16}\\cdot R\\cdot(\\mathrm{TV}/(t_1v)^2)/\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": " with no inequality anywhere — four factors, each a named object of the chain: the R-E-A quantifier "
+        },
+        {
+          "k": "m",
+          "v": "g_{16}"
+        },
+        {
+          "k": "t",
+          "v": ", the demand "
+        },
+        {
+          "k": "m",
+          "v": "R=Q/\\mathrm{TV}"
+        },
+        {
+          "k": "t",
+          "v": ", the T163 floor "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{tvf}\\ge1"
+        },
+        {
+          "k": "t",
+          "v": ", and the Kac–Murdock–Szeg"
+        },
+        {
+          "k": "t",
+          "v": "o"
+        },
+        {
+          "k": "t",
+          "v": " 1953 scale "
+        },
+        {
+          "k": "m",
+          "v": "1/\\mu^P_1=943.6"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "8609.6\\sim h^2"
+        },
+        {
+          "k": "t",
+          "v": " — exact to "
+        },
+        {
+          "k": "m",
+          "v": "4.3\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "192"
+        },
+        {
+          "k": "t",
+          "v": " battery vectors (knob settings, random sixteen-vectors "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " random full-window vectors), gauge-invariant under "
+        },
+        {
+          "k": "m",
+          "v": "v\\to tv"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "1.5\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": "; the predicates "
+        },
+        {
+          "k": "m",
+          "v": "R>2\\kappa"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{pr}}>2\\kappa g_{16}\\,\\mathrm{tvf}/\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": " agree as booleans on all "
+        },
+        {
+          "k": "m",
+          "v": "192"
+        },
+        {
+          "k": "t",
+          "v": " — the demand half of R2"
+        },
+        {
+          "k": "m",
+          "v": "''"
+        },
+        {
+          "k": "t",
+          "v": " and the crossing condition are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " predicate, so R-F was never independent and its "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-uniform form "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " R-E-A — and every crossing vector pays "
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{pr}}>2\\kappa g_{16}/\\mu^P_1=15.4"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "142.8"
+        },
+        {
+          "k": "t",
+          "v": ", above the preregistered tolerance "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta_{\\mathrm{TOL}}=10"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the R-F conjunction is empty by an identity plus a floor, a certificate and not a failed search"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (T165's ascent stays sandbox, no search is run). Mutation: "
+        },
+        {
+          "k": "m",
+          "v": "(t_1v)"
+        },
+        {
+          "k": "t",
+          "v": " unsquared scales like "
+        },
+        {
+          "k": "m",
+          "v": "t"
+        },
+        {
+          "k": "t",
+          "v": " and moves by "
+        },
+        {
+          "k": "m",
+          "v": "1.0"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.0\\times10^{4}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5) The Schur-cascade direction and the exponent closure (T164/T165) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "s=\\mu^P_1t_1^{\\mathsf T}A^{-1}t_1=0.1696"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.2472\\ge g_{16}\\ge g_1"
+        },
+        {
+          "k": "t",
+          "v": " window by window ("
+        },
+        {
+          "k": "m",
+          "v": "1/s\\le1/g_{16}\\le1/g_1=B_{11}"
+        },
+        {
+          "k": "t",
+          "v": " — the T158 ladder is a chain of upper bounds with the route-(0) rung the loosest), "
+        },
+        {
+          "k": "m",
+          "v": "P_K=\\hat a\\,s=254.8"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "7.7\\times10^{3}\n\\ge1"
+        },
+        {
+          "k": "t",
+          "v": " (Kantorovich 1948); the exponent closure is an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "identity of the lists"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — per instance "
+        },
+        {
+          "k": "m",
+          "v": "\\log(1/g_1)=\\log(g_{16}/g_1)+\\log(1/g_{16})"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "1.6\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": ", the least-squares fits closing to "
+        },
+        {
+          "k": "m",
+          "v": "1.3\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": " by linearity (T165's "
+        },
+        {
+          "k": "m",
+          "v": "+3.110-3.049=+0.061"
+        },
+        {
+          "k": "t",
+          "v": " is this identity; the exponent values are sandbox fits, not consumed — what is promoted is that the certification lives in the cascade gain "
+        },
+        {
+          "k": "m",
+          "v": "g_{16}/g_1"
+        },
+        {
+          "k": "t",
+          "v": ", the object of the one open quantifier). Mutations: the "
+        },
+        {
+          "k": "m",
+          "v": "g_8"
+        },
+        {
+          "k": "t",
+          "v": " closure breaks by "
+        },
+        {
+          "k": "m",
+          "v": "0.10"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.24"
+        },
+        {
+          "k": "t",
+          "v": "; a corrupted sixteen-block makes the Cholesky "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "refuse"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ". Plus the monotone no-go staircase (damage "
+        },
+        {
+          "k": "m",
+          "v": "1.00\\to3.49\\to10.81\\to24.98"
+        },
+        {
+          "k": "t",
+          "v": " over "
+        },
+        {
+          "k": "m",
+          "v": "\\nu=4/2/1/0.5"
+        },
+        {
+          "k": "t",
+          "v": ", exact null control) and exact Dirichlet/parity controls."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T165 ("
+            },
+            {
+              "k": "c",
+              "v": "alignment_eta_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "ALIGNMENT.ETA"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "30/30"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "15.1"
+            },
+            {
+              "k": "t",
+              "v": " s, the T163/T164 surface rebuilt and re-verified, window ladder up to "
+            },
+            {
+              "k": "m",
+              "v": "h=1445"
+            },
+            {
+              "k": "t",
+              "v": ", verdict ETA-RESISTS in the strong form, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The successor question R-F closes "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "by certificate, not by failed search"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the new gauge-invariant identity "
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{pr}}=g_{16}\\cdot R\\cdot(\\mathrm{TV}/(t_1v)^2)/\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": " (machine-checked to "
+        },
+        {
+          "k": "m",
+          "v": "3.3\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") makes demand and price "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " equation, so with T163's floor every crossing vector pays "
+        },
+        {
+          "k": "m",
+          "v": "\\ge2\\kappa g_{16}/\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": " — the old KMS "
+        },
+        {
+          "k": "m",
+          "v": "h^2"
+        },
+        {
+          "k": "t",
+          "v": " — and the two R-F clauses cannot be chosen independently. The anatomy: the free optimum is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "low-harmonic"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " object ("
+        },
+        {
+          "k": "m",
+          "v": "93.7"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "96.8\\%"
+        },
+        {
+          "k": "t",
+          "v": " of its energy in the first "
+        },
+        {
+          "k": "m",
+          "v": "32"
+        },
+        {
+          "k": "t",
+          "v": " parity modes against a "
+        },
+        {
+          "k": "m",
+          "v": "2.4"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "22.5\\%"
+        },
+        {
+          "k": "t",
+          "v": " baseline), essentially orthogonal to the PNT main term (cosine "
+        },
+        {
+          "k": "m",
+          "v": "-0.070\\ldots-0.031"
+        },
+        {
+          "k": "t",
+          "v": "), with heavy edges on prime-power cells (lift "
+        },
+        {
+          "k": "m",
+          "v": "1.36"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.12"
+        },
+        {
+          "k": "t",
+          "v": "); the price decomposes "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (to "
+        },
+        {
+          "k": "m",
+          "v": "0.0"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "m",
+          "v": "h^{+3.261}=+1.997"
+        },
+        {
+          "k": "t",
+          "v": " (KMS — the same "
+        },
+        {
+          "k": "m",
+          "v": "h^2"
+        },
+        {
+          "k": "t",
+          "v": " since T152) "
+        },
+        {
+          "k": "m",
+          "v": "+1.279"
+        },
+        {
+          "k": "t",
+          "v": " (demand overshoot the chain never asked for) "
+        },
+        {
+          "k": "m",
+          "v": "+0.093"
+        },
+        {
+          "k": "t",
+          "v": " (floor) "
+        },
+        {
+          "k": "m",
+          "v": "-0.108"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "g_{16}"
+        },
+        {
+          "k": "t",
+          "v": "); the bar-tight counterfactual stays "
+        },
+        {
+          "k": "m",
+          "v": "h^{+1.982}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "m",
+          "v": "\\eta(\\mathrm{Cap})"
+        },
+        {
+          "k": "t",
+          "v": " is two-sided: the ceiling is a theorem, and at "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Cap}=10"
+        },
+        {
+          "k": "t",
+          "v": " it falls short of the requirement by "
+        },
+        {
+          "k": "m",
+          "v": "5.5"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "392\\times"
+        },
+        {
+          "k": "t",
+          "v": " on every window, "
+        },
+        {
+          "k": "m",
+          "v": "0/27"
+        },
+        {
+          "k": "t",
+          "v": " ladder points reach the bar. The equivalence: "
+        },
+        {
+          "k": "m",
+          "v": "R>2\\kappa"
+        },
+        {
+          "k": "t",
+          "v": " and T163's crossing predicate are the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " predicate ("
+        },
+        {
+          "k": "m",
+          "v": "105/105"
+        },
+        {
+          "k": "t",
+          "v": " vectors) "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " R-F is strictly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "stronger"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " than the R2"
+        },
+        {
+          "k": "m",
+          "v": "''"
+        },
+        {
+          "k": "t",
+          "v": " demand, and the clauses collide — "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "R-F is empty; its "
+            },
+            {
+              "k": "m",
+              "v": "m"
+            },
+            {
+              "k": "t",
+              "v": "-uniform form is R-E-A"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". T2 localises the quantifier further: the "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free budgets bound "
+        },
+        {
+          "k": "m",
+          "v": "B_{11}"
+        },
+        {
+          "k": "t",
+          "v": " sharply (factor "
+        },
+        {
+          "k": "m",
+          "v": "21"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "26"
+        },
+        {
+          "k": "t",
+          "v": ") — but the wrong object: "
+        },
+        {
+          "k": "m",
+          "v": "1/g_1"
+        },
+        {
+          "k": "t",
+          "v": " grows "
+        },
+        {
+          "k": "m",
+          "v": "h^{+3.110}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "1/g_{16}"
+        },
+        {
+          "k": "t",
+          "v": " is flat "
+        },
+        {
+          "k": "m",
+          "v": "h^{+0.061}"
+        },
+        {
+          "k": "t",
+          "v": ", exponents close exactly; the whole certification lives in the "
+        },
+        {
+          "k": "m",
+          "v": "15"
+        },
+        {
+          "k": "t",
+          "v": " ladder increments — “bound "
+        },
+        {
+          "k": "m",
+          "v": "g_{16}/g_1"
+        },
+        {
+          "k": "t",
+          "v": " from below by "
+        },
+        {
+          "k": "m",
+          "v": "h^{3-\\varepsilon}"
+        },
+        {
+          "k": "t",
+          "v": "”, one scalar per window, a cancellation and hence provably beyond absolute-value budgets. T3, the decoupled surface ("
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": " as a knob: "
+        },
+        {
+          "k": "m",
+          "v": "25"
+        },
+        {
+          "k": "t",
+          "v": " admissible windows over "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " zones, "
+        },
+        {
+          "k": "m",
+          "v": "\\nu\\in\\{4,5,6,8,11,16\\}"
+        },
+        {
+          "k": "t",
+          "v": ", collinearity "
+        },
+        {
+          "k": "m",
+          "v": "0.87\\to0.68"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the quarter-bar drift is zone depth, not window length (factor "
+            },
+            {
+              "k": "m",
+              "v": "19"
+            },
+            {
+              "k": "t",
+              "v": ")"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — and two honest costs reported openly: "
+        },
+        {
+          "k": "m",
+          "v": "\\sup1/g_{16}"
+        },
+        {
+          "k": "t",
+          "v": " rises to "
+        },
+        {
+          "k": "m",
+          "v": "5.7327"
+        },
+        {
+          "k": "t",
+          "v": ", exceeding T164's "
+        },
+        {
+          "k": "m",
+          "v": "U_{\\mathrm{ref}}=4.90"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "17\\%"
+        },
+        {
+          "k": "t",
+          "v": " (the constant was frame-A-specific and is retired as a surface constant), and the "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-coefficient of "
+        },
+        {
+          "k": "m",
+          "v": "1/g_{16}"
+        },
+        {
+          "k": "t",
+          "v": " is no longer negligible at free "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": ". End-to-end on the union ("
+        },
+        {
+          "k": "m",
+          "v": "52"
+        },
+        {
+          "k": "t",
+          "v": " windows, "
+        },
+        {
+          "k": "m",
+          "v": "h=142"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1320"
+        },
+        {
+          "k": "t",
+          "v": "): every crossing vector has "
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{pr}}\\ge54.6"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5865\n>\\Theta_{\\mathrm{TOL}}"
+        },
+        {
+          "k": "t",
+          "v": ", closed for every "
+        },
+        {
+          "k": "m",
+          "v": "h>84.9"
+        },
+        {
+          "k": "t",
+          "v": ". Stress: T145 coarsening monotone ("
+        },
+        {
+          "k": "m",
+          "v": "1.0/2.8/12.1/27.5"
+        },
+        {
+          "k": "t",
+          "v": ", up to "
+        },
+        {
+          "k": "m",
+          "v": "102\\times"
+        },
+        {
+          "k": "t",
+          "v": "); surrogate "
+        },
+        {
+          "k": "m",
+          "v": "8.6\\times10^{3}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "6.9\\times10^{4}"
+        },
+        {
+          "k": "t",
+          "v": "; Dirichlet/KMS exact. Balance "
+        },
+        {
+          "k": "m",
+          "v": "11"
+        },
+        {
+          "k": "t",
+          "v": " THEOREM / "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " CERT-UNIF / "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " CERT-WINDOW / "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " MEASURED; "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " new PENDING candidates. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The honest bottom line: exactly ONE genuine open object remains — "
+            },
+            {
+              "k": "m",
+              "v": "\\inf_m g_{16}(m)>0"
+            },
+            {
+              "k": "t",
+              "v": ", a quantifier over a certified flat list; no missing term, no missing device, no sector."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " T166 ("
+        },
+        {
+          "k": "c",
+          "v": "schur_cascade_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "SCHUR.CASCADE"
+        },
+        {
+          "k": "t",
+          "v": ") is running at exactly that quantifier. NOT RH evidence; no marker of any pre-existing contract moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Docs + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " gains the T165 subsection (the "
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{pr}}"
+        },
+        {
+          "k": "t",
+          "v": " identity as the key display, the exact price decomposition, the R-F "
+        },
+        {
+          "k": "m",
+          "v": "\\iff"
+        },
+        {
+          "k": "t",
+          "v": " R-E-A equivalence, the decoupled surface with the zone-depth answer and the retired "
+        },
+        {
+          "k": "m",
+          "v": "U_{\\mathrm{ref}}"
+        },
+        {
+          "k": "t",
+          "v": " reported honestly) and the After-T165 keybox (the one cascade-gain quantifier, T166 running), the "
+        },
+        {
+          "k": "c",
+          "v": "v556"
+        },
+        {
+          "k": "t",
+          "v": " subsection in the verified layer (now twenty-two modules), the phase-2 section retitled T126–T165, the T165 row in the probe index and the updated counters ("
+        },
+        {
+          "k": "m",
+          "v": "165"
+        },
+        {
+          "k": "t",
+          "v": " probes, "
+        },
+        {
+          "k": "m",
+          "v": "4325"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " gain the "
+        },
+        {
+          "k": "c",
+          "v": "v556"
+        },
+        {
+          "k": "t",
+          "v": " companion blocks; "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " gains the Teil-165 entry; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T165 and "
+        },
+        {
+          "k": "c",
+          "v": "v556"
+        },
+        {
+          "k": "t",
+          "v": " feed entries; the prime-front status surfaces move to Teile 11–165 / "
+        },
+        {
+          "k": "m",
+          "v": "4325"
+        },
+        {
+          "k": "t",
+          "v": " checks / 22 modules ("
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v556"
+        },
+        {
+          "k": "t",
+          "v": "); suite counter "
+        },
+        {
+          "k": "m",
+          "v": "549\\to550"
+        },
+        {
+          "k": "t",
+          "v": " scripts. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GAUGE.PPR.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · XI",
     "heading": [
       {

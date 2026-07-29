@@ -62,6 +62,144 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (XII) (\texttt{v556} --- the gauge/$P_{\mathrm{pr}}$ identities of phase 2 promoted; prime-front diary T165 (the successor closes by certificate, one quantifier remains --- ETA-RESISTS) + paper + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v556} (\texttt{PRIME.GAUGE.PPR.01}).} Promotion of
+the closed theorem cores of the discovery parts T164 (\texttt{sector\_change\_probe.py})
+and T165 (\texttt{alignment\_eta\_probe.py}) --- $23$ checks, ${\sim}0.3$\,s, everything
+recomputed on \texttt{v551}--\texttt{v555}'s declared surface (the $12$ deepest
+prime-power zones admitting a frame-A window inside the cap, $n=29\ldots139$,
+$m=96\ldots291\le300$), with the one arithmetic input $\kappa=0.038821$
+\emph{verified} at every jump point of $\psi(x)/x$ on the von-Mangoldt table in
+$[100,3.2\times10^{5}]$ (Chebyshev 1852 / Rosser--Schoenfeld 1962), nothing cited from
+the sandbox; the companion to \texttt{v555}, which certified the \emph{price
+structure} of the pairing --- this module certifies its \emph{gauge structure}. Scope
+fence: per-instance identities and certified inequalities with the direction in the
+name --- no fit, no $D$-exponent, no zone-uniform statement; the T164/T165
+$h$-exponents ($1/g_{16}\sim h^{+0.061}$, the ascent price $\sim h^{+3.3}$, the split
+$+3.110-3.049=+0.061$) are sandbox fits and are \emph{not} consumed; finite
+$\Lambda$-sums are allowed and used, \emph{no RH statement} is made; the ONE open
+object after T165 ($\inf_m g_{16}(m)>0$, the cascade-gain quantifier) stays open and
+typed open; each statement carries at least one mutation control that must fail
+loudly.
+\item \textbf{(1) The gauge theorem (T164, S2.1) \mE.} $x_1=1$ fixes
+$a_1=1/\sqrt{\mu_1}$, i.e.\ only the \emph{scale} of $a$; $Q$ and TV are homogeneous
+of degree two in $a$; hence the demand ratio $Q/\mathrm{TV}$ of the same
+$a$-direction --- and with it $\delta_{\mathrm{bnd}}$ --- is the \emph{same number in
+every sector}: unchanged to $2.9\times10^{-11}$ on $2520$ sector-by-trial-vector
+combinations ($5$ weight families $\times$ $7$ shifts $\times$ $6$ taper widths on
+$12$ windows), with $\mathrm{TV}\ge|w_0|$ in every sector and the pure shift scaling
+the certified value by exactly $\theta=\mu^P_1/(\mu^P_1+\kappa_s)$
+($2.2\times10^{-11}$ on $432$ points); candidate (i) settled in closed form ---
+full-space $\mu_0=0$ exactly, strictly worse. Mutation: the wrong transport map
+(the $x$-coordinates instead of the $a$-direction) moves the ratio by
+$2.0\times10^{2}$--$5.4\times10^{3}$.
+\item \textbf{(2) The $h^2$ conservation law (T164, S2.2) \mE.} floor $\times$
+transfer $=1/(\mu^P_1+\kappa_s)\cdot(1+\kappa_s/\mu^P_1)=1/\mu^P_1$
+\emph{identically} at every shift on the declared grid ($72$ window-by-shift points,
+$2.2\times10^{-16}$): a sector shift can flatten the floor but pays the identical
+factor back as a transfer --- the $h^2$ is conserved, never removed; it lives in the
+\emph{ratio}, not in the floor. Mutation: the wrong transfer misses by $0.9995$ at
+the largest shift on every window.
+\item \textbf{(3) The power-one spend as an identity (T164, S1) \mE.} The $r$-ceiling
+$r\le U/L$ with $L=\lambda_1(A)/\mu^P_1=1.1019$--$1.5845$ (computed per instance from
+the full window) is \emph{linear} in the entry ceiling, so $d\log r/d\log U=+1$
+exactly (central difference at $U=1/g_{16}$, within $1.1\times10^{-14}$ on $12/12$):
+an $h^{\varepsilon}$ ceiling costs $h^{-\varepsilon}$ of $r$-margin for every
+$\varepsilon>0$ --- no free tolerance in the consumption step (the measured power of
+the full T156 loss margin stays sandbox). Mutation: the quadratic consumption reads
+slope $2.0000$ and is recognised.
+\item \textbf{(4) The $P_{\mathrm{pr}}$ identity and the predicate equivalence
+(T165, T1) \mE.} The gauge-invariant dashboard satisfies
+$P_{\mathrm{pr}}=g_{16}\cdot R\cdot(\mathrm{TV}/(t_1v)^2)/\mu^P_1$ with no inequality
+anywhere --- four factors, each a named object of the chain: the R-E-A quantifier
+$g_{16}$, the demand $R=Q/\mathrm{TV}$, the T163 floor $\mathrm{tvf}\ge1$, and the
+Kac--Murdock--Szeg\H{o} 1953 scale $1/\mu^P_1=943.6$--$8609.6\sim h^2$ --- exact to
+$4.3\times10^{-16}$ on all $192$ battery vectors (knob settings, random
+sixteen-vectors \emph{and} random full-window vectors), gauge-invariant under
+$v\to tv$ to $1.5\times10^{-11}$; the predicates $R>2\kappa$ and
+$P_{\mathrm{pr}}>2\kappa g_{16}\,\mathrm{tvf}/\mu^P_1$ agree as booleans on all
+$192$ --- the demand half of R2$''$ and the crossing condition are \emph{one}
+predicate, so R-F was never independent and its $m$-uniform form \emph{is} R-E-A ---
+and every crossing vector pays $P_{\mathrm{pr}}>2\kappa g_{16}/\mu^P_1=15.4$--$142.8$,
+above the preregistered tolerance $\Theta_{\mathrm{TOL}}=10$ on $12/12$: \textbf{the
+R-F conjunction is empty by an identity plus a floor, a certificate and not a failed
+search} (T165's ascent stays sandbox, no search is run). Mutation: $(t_1v)$
+unsquared scales like $t$ and moves by $1.0$--$1.0\times10^{4}$.
+\item \textbf{(5) The Schur-cascade direction and the exponent closure (T164/T165)
+\mE.} $s=\mu^P_1t_1^{\mathsf T}A^{-1}t_1=0.1696$--$0.2472\ge g_{16}\ge g_1$ window by
+window ($1/s\le1/g_{16}\le1/g_1=B_{11}$ --- the T158 ladder is a chain of upper
+bounds with the route-(0) rung the loosest), $P_K=\hat a\,s=254.8$--$7.7\times10^{3}
+\ge1$ (Kantorovich 1948); the exponent closure is an \emph{identity of the lists}
+--- per instance $\log(1/g_1)=\log(g_{16}/g_1)+\log(1/g_{16})$ to
+$1.6\times10^{-15}$, the least-squares fits closing to $1.3\times10^{-15}$ by
+linearity (T165's $+3.110-3.049=+0.061$ is this identity; the exponent values are
+sandbox fits, not consumed --- what is promoted is that the certification lives in
+the cascade gain $g_{16}/g_1$, the object of the one open quantifier). Mutations:
+the $g_8$ closure breaks by $0.10$--$0.24$; a corrupted sixteen-block makes the
+Cholesky \emph{refuse} on $12/12$. Plus the monotone no-go staircase (damage
+$1.00\to3.49\to10.81\to24.98$ over $\nu=4/2/1/0.5$, exact null control) and exact
+Dirichlet/parity controls.
+\item \textbf{Prime-front diary T165 (\texttt{alignment\_eta\_probe.py}, contract
+\texttt{ALIGNMENT.ETA}, $30/30$, $15.1$\,s, the T163/T164 surface rebuilt and
+re-verified, window ladder up to $h=1445$, verdict ETA-RESISTS in the strong form,
+sandbox).} The successor question R-F closes \emph{by certificate, not by failed
+search}: the new gauge-invariant identity
+$P_{\mathrm{pr}}=g_{16}\cdot R\cdot(\mathrm{TV}/(t_1v)^2)/\mu^P_1$ (machine-checked
+to $3.3\times10^{-16}$) makes demand and price \emph{one} equation, so with T163's
+floor every crossing vector pays $\ge2\kappa g_{16}/\mu^P_1$ --- the old KMS $h^2$
+--- and the two R-F clauses cannot be chosen independently. The anatomy: the free
+optimum is a \emph{low-harmonic} object ($93.7$--$96.8\%$ of its energy in the first
+$32$ parity modes against a $2.4$--$22.5\%$ baseline), essentially orthogonal to the
+PNT main term (cosine $-0.070\ldots-0.031$), with heavy edges on prime-power cells
+(lift $1.36$--$2.12$); the price decomposes \emph{exactly} (to $0.0$):
+$h^{+3.261}=+1.997$ (KMS --- the same $h^2$ since T152) $+1.279$ (demand overshoot
+the chain never asked for) $+0.093$ (floor) $-0.108$ ($g_{16}$); the bar-tight
+counterfactual stays $h^{+1.982}$. $\eta(\mathrm{Cap})$ is two-sided: the ceiling is
+a theorem, and at $\mathrm{Cap}=10$ it falls short of the requirement by
+$5.5$--$392\times$ on every window, $0/27$ ladder points reach the bar. The
+equivalence: $R>2\kappa$ and T163's crossing predicate are the \emph{same} predicate
+($105/105$ vectors) $\Rightarrow$ R-F is strictly \emph{stronger} than the R2$''$
+demand, and the clauses collide --- \textbf{R-F is empty; its $m$-uniform form is
+R-E-A}. T2 localises the quantifier further: the $m$-free budgets bound $B_{11}$
+sharply (factor $21$--$26$) --- but the wrong object: $1/g_1$ grows $h^{+3.110}$,
+$1/g_{16}$ is flat $h^{+0.061}$, exponents close exactly; the whole certification
+lives in the $15$ ladder increments --- ``bound $g_{16}/g_1$ from below by
+$h^{3-\varepsilon}$'', one scalar per window, a cancellation and hence provably
+beyond absolute-value budgets. T3, the decoupled surface ($\nu$ as a knob: $25$
+admissible windows over $6$ zones, $\nu\in\{4,5,6,8,11,16\}$, collinearity
+$0.87\to0.68$): \textbf{the quarter-bar drift is zone depth, not window length
+(factor $19$)} --- and two honest costs reported openly: $\sup1/g_{16}$ rises to
+$5.7327$, exceeding T164's $U_{\mathrm{ref}}=4.90$ by $17\%$ (the constant was
+frame-A-specific and is retired as a surface constant), and the $h$-coefficient of
+$1/g_{16}$ is no longer negligible at free $\nu$. End-to-end on the union ($52$
+windows, $h=142$--$1320$): every crossing vector has $P_{\mathrm{pr}}\ge54.6$--$5865
+>\Theta_{\mathrm{TOL}}$, closed for every $h>84.9$. Stress: T145 coarsening
+monotone ($1.0/2.8/12.1/27.5$, up to $102\times$); surrogate
+$8.6\times10^{3}$--$6.9\times10^{4}$; Dirichlet/KMS exact. Balance $11$ THEOREM /
+$1$ CERT-UNIF / $4$ CERT-WINDOW / $6$ MEASURED; $6$ new PENDING candidates.
+\textbf{The honest bottom line: exactly ONE genuine open object remains ---
+$\inf_m g_{16}(m)>0$, a quantifier over a certified flat list; no missing term, no
+missing device, no sector.} T166 (\texttt{schur\_cascade\_probe.py}, contract
+\texttt{SCHUR.CASCADE}) is running at exactly that quantifier. NOT RH evidence; no
+marker of any pre-existing contract moves.
+\item \textbf{Docs + website sync.} \texttt{tfpt\_prime\_front} gains the T165
+subsection (the $P_{\mathrm{pr}}$ identity as the key display, the exact price
+decomposition, the R-F $\iff$ R-E-A equivalence, the decoupled surface with the
+zone-depth answer and the retired $U_{\mathrm{ref}}$ reported honestly) and the
+After-T165 keybox (the one cascade-gain quantifier, T166 running), the \texttt{v556}
+subsection in the verified layer (now twenty-two modules), the phase-2 section
+retitled T126--T165, the T165 row in the probe index and the updated counters
+($165$ probes, $4325$ checks); \texttt{tfpt\_1}, \texttt{tfpt\_3} and
+\texttt{tfpt\_research\_contracts} gain the \texttt{v556} companion blocks;
+\texttt{experiments/next.txt} gains the Teil-165 entry;
+\texttt{website/lib/primeFront.ts} gains the T165 and \texttt{v556} feed entries; the
+prime-front status surfaces move to Teile 11--165 / $4325$ checks / 22 modules
+(\texttt{v535}--\texttt{v556}); suite counter $549\to550$ scripts. Ledger row
+\texttt{PRIME.GAUGE.PPR.01} \mE; \textbf{no marker of any pre-existing contract
+moves}.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (XI) (prime-front diary T164 (both arms of the successor decided: the $O(1)$ gate discharges to a single quantifier, sectors are a gauge --- TOLERANCE-CARRIES (arm A) / SECTOR-RESISTS (arm B)) + paper + website sync; NO promotion, NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{Prime-front diary T164 (\texttt{sector\_change\_probe.py}, contract

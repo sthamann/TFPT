@@ -125,12 +125,18 @@ const MODULES = [
     title: "Pareto/total-variation identities · phase 2",
     checks: 23,
   },
+  {
+    id: "v556",
+    claim: "PRIME.GAUGE.PPR.01",
+    title: "Gauge/P_pr identities · phase 2",
+    checks: 23,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 164;
-const SANDBOX_CHECKS = 4295;
+const SANDBOX_PROBES = 165;
+const SANDBOX_CHECKS = 4325;
 
 export function ModuleLadder() {
   return (
