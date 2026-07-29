@@ -50,6 +50,7 @@
 \newcommand{\PSD}{\succeq 0}
 \newcommand{\PD}{\succ 0}
 \newcommand{\Ah}{\widehat{A}}
+\newcommand{\Qt}{\widetilde{Q}}
 \newcommand{\ah}{\widehat{a}}
 \newcommand{\MM}{\mathcal{M}}
 \newcommand{\TV}{\operatorname{TV}}
@@ -108,8 +109,8 @@ bilinear form. Around it we report, as measurements on declared surfaces: the
 rates; a table of five unconditional majorants together with the exponent each
 certifies, the best of them short of the demanded one by two units in the
 exponent; five structural obstructions, each exhibited failing; a curve of the
-deficit against comb density over four decades of density, whose densest bins
-are consistent with zero and whose undecidability under the declared caps is
+binned exponent against comb density over four decades of density, whose densest
+bins are consistent with zero and whose undecidability under the declared caps is
 part of the claim; and two controlled placement experiments, the second of which
 closes into an exact identity for the response of the ratio to a displacement of
 comb nodes inside their lag cells. Randomising the node positions at fixed
@@ -216,7 +217,8 @@ them.
   Measurement~\ref{meas:routes} reports the exponent each certifies on a
   declared surface; Measurement~\ref{meas:nogo} exhibits five further routes
   failing for structural reasons; Measurement~\ref{meas:density} gives the
-  deficit against comb density over four decades, with
+  binned exponent of Definition~\ref{def:ratio} against comb density over four
+  decades, with
   Remark~\ref{rem:undecidable} stating what that curve cannot decide and at what
   price; and Measurements~\ref{meas:placement} and \ref{meas:pole} locate the
   phenomenon by intervention, the second through the closed-form response of
@@ -230,8 +232,11 @@ Section~\ref{sec:typing} rather than left to the reader.
 \subsection{Typing of the results}
 \label{sec:typing}
 
-Every numbered statement of this paper carries exactly one of three types, and
-the type is part of the statement.
+Every numbered statement of this paper that makes a claim carries exactly one of
+three types, and the type is part of the statement. Table~\ref{tab:typing} types
+every one of them: a definition and the open problem are marked as what they
+are, and a remark that only reads results already stated carries a dash, since
+it claims nothing of its own.
 
 \begin{description}[leftmargin=2.2em,style=nextline]
 \item[\textnormal{\emph{proved}}] A written proof is given (or, for classical
@@ -269,6 +274,10 @@ statement & type & remark \\
 \endlastfoot
 \multicolumn{3}{@{}l}{\emph{Section~\ref{sec:setting} --- setting and
   scaffolding}}\\
+the comb is not used (Rem.~\ref{rem:combfree}) & --- & the scope statement:
+  Secs.~\ref{sec:setting}--\ref{sec:rank} hold for an arbitrary finite comb \\
+parity spectrum (Lem.~\ref{lem:kms}) & proved & closed eigenpairs and the gap
+  \eqref{eq:gap}; Kac--Murdock--Szeg\H{o} \cite{KMS1953} \\
 L1 interlacing (Lem.~\ref{lem:interlacing}) & proved (cited) &
   Cauchy \cite{Cauchy1829}, Courant--Fischer \cite{CourantFischer1920} \\
 L2 Schur nesting (Lem.~\ref{lem:nesting}) & proved &
@@ -315,30 +324,40 @@ C10 Gershgorin (Lem.~\ref{lem:gershgorin}) & proved & uniform in the window \\
 C11 det-collapse (Prop.~\ref{prop:collapse}) & proved / \emph{conditional} &
   the closed form is unconditional; the harmonic-mean bound needs
   $\Ah_2\PD$ \\
+wrong sign priced (Rem.~\ref{rem:wrongsign}) & proved & the identity
+  \eqref{eq:wrongsign}, $\rho=4r_{12}^{2}/(1-r_{12}^{2})$ \\
+one obstruction, three readings (Rem.~\ref{rem:onedress}) & proved & the
+  explicit factor $1+3r_{12}^{2}\in[1,4]$; the reading is an observation \\
+the section read together (Rem.~\ref{rem:selfsimilar}) & --- & which statements
+  are identities and which two are not \\
 \midrule
 \multicolumn{3}{@{}l}{\emph{Section~\ref{sec:rank} --- bilinear form and rank}}\\
 D0 exact split (Prop.~\ref{prop:split}) & proved & needs an admissible
   resolution \\
 D1 polarisation (Prop.~\ref{prop:polarisation}) & proved & \\
-D Theorem D, rank three (Thm.~\ref{thm:rank3}) & proved & every $h$, every
+D rank three (Thm.~\ref{thm:rank3}) & proved & every $h$, every
   truncation \\
 D wedge form (Lem.~\ref{lem:wedge}) & \emph{conditional} & proved given
   rank-one reads; the defect is measured \\
 D3 majorants (Cor.~\ref{cor:majorant}) & proved & the class
   $\mathfrak M$ of Def.~\ref{def:majclass}; the route reading of
   Rem.~\ref{rem:routeclass} is a reading \\
-D3$'$ $\ell^{1}$ mass (Meas.~\ref{meas:l1}) & measured & $41\times$ the signed
-  value; the rank-one defect priced on both surfaces \\
+D3$'$ $\ell^{1}$ mass (Meas.~\ref{meas:l1}) & measured & $40.6\times$ the signed
+  value on the declared subsample; the rank-one defect priced on both
+  surfaces \\
 D4a closed weights (Lem.~\ref{lem:closedweight}) & proved & one formula on
   $1\le d\le M-1$ \\
 D4b bandwidth $K$ (Lem.~\ref{lem:band}) & proved & the $4K$-dimensional band
   space \eqref{eq:bandspace} \\
 D4c band $\Rightarrow\eta$-rank (Lem.~\ref{lem:etarank}) & proved & general;
-  $r=(2\Omega+1)(D+1)$ \\
+  $r=(2\Omega+1)(q+1)$ for $\Omega$ frequencies and degree bound $q$ \\
 D4d spline read (Lem.~\ref{lem:spline}) & proved & $\eta=O(K^{2}/N^{2})$ \\
 D4 Type II $\eta$-rank (Prop.~\ref{prop:typeII}) & proved &
   $\sigma_{4K+1}\le\eta\sqrt{RC}$; needs the interior hypothesis
   \eqref{eq:interior} \\
+D4$''$ what the interior hypothesis costs (Rem.~\ref{rem:interior}) & --- &
+  without \eqref{eq:interior} the conclusion is false as stated; the triangular
+  cut-off is not of low rank \\
 D4$'$ Type II collapse (Meas.~\ref{meas:typeII}) & measured & the observed
   $2$ is sharper than the proved $8$ and stays measured \\
 D5 reference window (Meas.~\ref{meas:refwindow}) & measured & the
@@ -351,6 +370,8 @@ E1 angle against determinant (Lem.~\ref{lem:angle}) & proved & the factor lies
   in $(0,1]$; used only to relate two readings \\
 E2 rates (Meas.~\ref{meas:rate}) & measured & fitted exponents; every surface
   and both readings declared \\
+E3a dual-point read (Lem.~\ref{lem:dualpoint}) & proved & the two points
+  $\gamma_k=2\pi k/(ND)$ and their spacing are derived, not assumed \\
 E3 five majorants (Prop.~\ref{prop:routes}) & proved & five unconditional
   inequalities with their hypotheses \\
 E4 priced routes (Meas.~\ref{meas:routes}) & measured & the exponent each
@@ -1912,7 +1933,9 @@ members of $\mathfrak M$ as they are stated: the large-sieve/duality route, with
 $\mathcal N=\lVert\cdot\rVert_2$ and
 $\Phi(t)=\lVert\mathcal K\rVert_{\mathrm{op}}t^{2}$; the
 Montgomery--Vaughan route, which bounds each of the three linear functionals
-through $\lVert\varrho\rVert_2$ and then combines them by
+through $\lVert\varrho\rVert_2$ --- its interpolation residual through
+$\lVert\varrho\rVert_1\le\sqrt n\,\lVert\varrho\rVert_2$ on a window with $n$
+nodes, so that one norm suffices --- and then combines them by
 $|\det S|\le|S_{11}||S_{22}|+S_{12}^{2}$; and the comb--comb term of the exact
 split $|\det B|+|D(B,S)|+|\det S|$. Vaughan's Type~I $+$ Type~II route is of
 the shape of Corollary~\ref{cor:majorant}\ref{M:decomp} with $p=4$. The
@@ -1934,17 +1957,18 @@ $4.6\cdot10^{-3}$ and $3.1\cdot10^{-2}$, below the declared bar
 $5\cdot10^{-2}$ on every window. So the wedge reading of
 Lemma~\ref{lem:wedge} is accurate but not exact --- the diagonal of
 $\mathcal K$ is small, not zero, and it carries about $6\%$ of $\det S$ on the
-reference window. \emph{The $\ell^{1}$ mass}: on a declared atom
+reference window. \emph{The $\ell^{1}$ mass}: on a declared node
 subsample of the reference window,
 \begin{equation}
 \label{eq:l1mass}
   \sum_{\ell,\ell'}\varrho_\ell\varrho_{\ell'}
   \bigl|\mathcal K(\ell,\ell')\bigr|
-  \;=\;41\times
+  \;=\;40.6\times
   \Bigl|\sum_{\ell,\ell'}\varrho_\ell\varrho_{\ell'}
   \mathcal K(\ell,\ell')\Bigr| ,
 \end{equation}
-the ratio being reported on the window it was computed on and on no other. A
+the subsample being the $900$ nodes of the declared horizon and the ratio being
+reported on the window it was computed on and on no other. A
 route that replaces the signed double sum by its absolute value therefore loses
 that factor before it begins, which is the measured content of
 Corollary~\ref{cor:majorant}\ref{M:decomp}; the mixed signs it loses are the
@@ -2285,7 +2309,8 @@ from the results of this section and are recorded as part of the measurement:
 the cancellation is between the three terms of the exact polarisation
 \eqref{eq:polarisation}, so no route of Definition~\ref{def:majclass} sees it
 (Corollary~\ref{cor:majorant}\ref{M:blind}); the signed kernel sum behind
-$\det S$ is $41$ times smaller than its $\ell^{1}$ mass
+$\det S$ is $40.6$ times smaller than its $\ell^{1}$ mass on the declared
+subsample
 (Measurement~\ref{meas:l1}); and the sum in \eqref{eq:refwindow} is
 $\det\Ah_2$, whose normalisation by $\ah_{11}\ah_{22}$ is the quantity of
 Problem~\ref{prob:R1} --- so five orders of magnitude here is a statement about
@@ -2440,6 +2465,99 @@ proved; none of them involves a fit. The fitted exponents that these majorants
 \emph{certify} on a declared surface are a separate matter and are reported
 afterwards, in Measurement~\ref{meas:routes}.
 
+One hypothesis of one of the five is not an assumption at all but a consequence
+of the assembly, and it is separated out first, because a sieve route has to be
+told which points it is applied at and the window decides them. The reads of
+Proposition~\ref{prop:split} are values of one exponential sum at two points
+fixed by the parity modes and the resolution, and their spacing is closed.
+
+\begin{lemma}[the three linear functionals are dual-point reads]
+\label{lem:dualpoint}
+Let $D$ be admissible, let $K=2$, and take the prime-power instance of
+Section~\ref{sec:window}: $u_\ell=\log n_\ell$,
+$\varrho_\ell=2\Lambda(n_\ell)/\sqrt{n_\ell}$ over the prime powers
+$n_\ell\le X$, with $X$ the smaller of $e^{2\alpha}$ and the declared node cap,
+and with every read interior, $1\le\tau_\ell=u_\ell/D\le M-1$. Write the band
+representation of the polarised weight $w^{(ij)}$ of \eqref{eq:Yread}, which
+exists by Lemma~\ref{lem:band}, as
+\begin{equation}
+\label{eq:bandij}
+  W^{(ij)}(\tau)=\sum_{k=1,2}
+  \bigl[(a_k+b_k\tau)\cos(\omega_k\tau)
+  +(c_k+d_k\tau)\sin(\omega_k\tau)\bigr],
+\end{equation}
+its coefficients being those of Lemma~\ref{lem:spline} with the letters chosen
+so as to leave $\gamma$ for the dual points, and let
+$\Lambda_0^{(ij)}=\sum_k(|a_k|+|c_k|)+M\sum_k(|b_k|+|d_k|)$ and $\eta^{(ij)}$
+be the coefficient budget and the interpolation bound of
+\eqref{eq:splinebound} for that weight. Put
+\begin{equation}
+\label{eq:dualpoints}
+  \gamma_k=\frac{\omega_k}D=\frac{2\pi k}{ND}\quad(k=1,2),
+  \qquad
+  \Delta\gamma=\gamma_2-\gamma_1=\frac{2\pi}{ND},
+  \qquad
+  T_q(\gamma)=\sum_{n\le X}\varrho_n(\log n)^{q}n^{\mathrm i\gamma} .
+\end{equation}
+Then
+\begin{equation}
+\label{eq:dualread}
+  S_{ij}=\sum_{k=1,2}\operatorname{Re}
+  \Bigl[(a_k-\mathrm ic_k)T_0(\gamma_k)
+  +\tfrac1D(b_k-\mathrm id_k)T_1(\gamma_k)\Bigr]+E_{ij},
+  \qquad
+  |E_{ij}|\le\eta^{(ij)}\lVert\varrho\rVert_1 ,
+\end{equation}
+so each of the three reads is a value of one exponential sum of length $X$, and
+of its first logarithmic moment, at the two points \eqref{eq:dualpoints} and at
+no others. If in addition the Montgomery--Vaughan inequality
+\cite{MontgomeryVaughan1974} is applied at those two points, in the form
+$\sum_{k\le2}|T_0(\gamma_k)|^{2}
+\le(X+\Delta\gamma^{-1})\lVert\varrho\rVert_2^{2}$ and the same with the weights
+$\varrho_n\log n$ for $T_1$, then
+\begin{equation}
+\label{eq:mvread}
+  |S_{ij}|\;\le\;\Lambda_0^{(ij)}\,Q+\eta^{(ij)}\lVert\varrho\rVert_1,
+  \qquad
+  Q^{2}=\bigl(X+\Delta\gamma^{-1}\bigr)\lVert\varrho\rVert_2^{2} .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:band} at $K=2$ the analytic read $W^{(ij)}$ lies in the span
+of the eight sequences \eqref{eq:bandspace} with $k\le2$, which is
+\eqref{eq:bandij}. The proof of Lemma~\ref{lem:spline} uses nothing about $v$
+beyond that representation, so its bound \eqref{eq:splinebound} applies verbatim
+to $W^{(ij)}$ with the coefficients of \eqref{eq:bandij}: the two-point read of
+\eqref{eq:split} differs from $W^{(ij)}$ by at most $\eta^{(ij)}$ at every
+$\tau\in[1,M-1]$, and every $\tau_\ell$ lies there by hypothesis, so
+$|E_{ij}|=\bigl|\sum_\ell\varrho_\ell
+(\widehat W^{(ij)}-W^{(ij)})(\tau_\ell)\bigr|
+\le\eta^{(ij)}\sum_\ell\varrho_\ell$, the weights being positive. For the main
+term, $\tau_\ell=u_\ell/D=(\log n_\ell)/D$, hence
+$\omega_k\tau_\ell=\gamma_k\log n_\ell$ and
+$\cos(\omega_k\tau_\ell)+\mathrm i\sin(\omega_k\tau_\ell)
+=n_\ell^{\mathrm i\gamma_k}$ with $\gamma_k=\omega_k/D$; summing
+$\varrho_\ell W^{(ij)}(\tau_\ell)$ over $\ell$ and using
+$\operatorname{Re}[(a-\mathrm ic)(x+\mathrm iy)]=ax+cy$ gives the two groups of
+\eqref{eq:dualread}, the second carrying the extra factor
+$\tau_\ell=(\log n_\ell)/D$, which is what makes it the first logarithmic
+moment. That the two points are $2\pi/(ND)$ apart is $\omega_k=2\pi k/N$.
+
+For \eqref{eq:mvread}: the quoted inequality gives $|T_0(\gamma_k)|\le Q$ for
+each of the two $k$, and applied with the weights $\varrho_n\log n$, together
+with $\log n\le\log X\le2\alpha=MD$, it gives $|T_1(\gamma_k)|\le MD\,Q$.
+Insert both into \eqref{eq:dualread} and use the triangle inequality: the
+constant terms contribute at most $\sum_k(|a_k|+|c_k|)\,Q$ and the moment terms
+at most $\tfrac1D\sum_k(|b_k|+|d_k|)\,MD\,Q$, and the two sums are
+$\Lambda_0^{(ij)}Q$.
+\end{proof}
+
+On the reference window of Measurement~\ref{meas:refwindow} the two points and
+their spacing are $\gamma_1=0.6208$, $\gamma_2=1.2415$,
+$\Delta\gamma^{-1}=1.611$, with $X=2.465\cdot10^{4}$; they are read off
+\eqref{eq:dualpoints} and not fitted.
+
 \begin{proposition}[five unconditional majorants]
 \label{prop:routes}
 Let $\Ah_2=B-S$ be the split of Proposition~\ref{prop:split}, let
@@ -2463,16 +2581,23 @@ $1-r_{12}^{2}=\det\Ah_2/(\ah_{11}\ah_{22})$ by Lemma~\ref{lem:detread}:
   bound and is the form in which the large sieve enters
   \cite{MontgomeryVaughan1974}.
 \item\label{RT:mv} \emph{Montgomery--Vaughan on the three linear functionals.}
-  Suppose the three reads $X^{(\ell)}_{ij}$ are values at two dual points
-  $\gamma_1,\gamma_2$ of an exponential sum of length $X$ with spacing
-  $\Delta\gamma=|\gamma_1-\gamma_2|$, so that the large sieve gives
-  $|S_{ij}|\le Q$ with
-  $Q^{2}=(X+\Delta\gamma^{-1})\lVert\varrho\rVert_2^{2}$. Then
+  On the prime-power instance with interior reads, Lemma~\ref{lem:dualpoint}
+  identifies the three reads as values of one exponential sum of length $X$, and
+  of its first logarithmic moment, at the two points $\gamma_k=2\pi k/(ND)$ of
+  spacing $\Delta\gamma=2\pi/(ND)$, and gives $|S_{ij}|\le\Qt$ with
+  \begin{equation}
+  \label{eq:Qtilde}
+    \Qt=\Lambda_0\,Q+\eta\lVert\varrho\rVert_1,
+    \qquad
+    Q^{2}=\bigl(X+\Delta\gamma^{-1}\bigr)\lVert\varrho\rVert_2^{2},
+  \end{equation}
+  where $\Lambda_0=\max_{ij}\Lambda_0^{(ij)}$ and $\eta=\max_{ij}\eta^{(ij)}$
+  are the coefficient budget and the interpolation bound of that lemma. Then
   $|1-r_{12}^{2}|\le\bigl[|\det B|
-  +(|B_{11}|+|B_{22}|+2|B_{12}|)\,Q+2Q^{2}\bigr]/\Xi$. Hypotheses: the
-  Montgomery--Vaughan inequality \cite{MontgomeryVaughan1974} at the two dual
-  points, and the triangle inequality on
-  $\det S=S_{11}S_{22}-S_{12}^{2}$.
+  +(|B_{11}|+|B_{22}|+2|B_{12}|)\,\Qt+2\Qt^{2}\bigr]/\Xi$. Hypotheses: those of
+  Lemma~\ref{lem:dualpoint}, the Montgomery--Vaughan inequality
+  \cite{MontgomeryVaughan1974} at the two points that lemma derives, and the
+  triangle inequality on $\det S=S_{11}S_{22}-S_{12}^{2}$.
 \item\label{RT:split} \emph{The exact split.}
   $|1-r_{12}^{2}|\le\bigl[|\det B|+|D(B,S)|+|\det S|\bigr]/\Xi$. Hypotheses:
   the identity \eqref{eq:polarisation} and the triangle inequality; nothing
@@ -2504,8 +2629,10 @@ $\det S=\varrho^{\T}\mathcal K\varrho$, and for a symmetric matrix
 $|\varrho^{\T}\mathcal K\varrho|
 \le\lVert\mathcal K\rVert_{\mathrm{op}}\lVert\varrho\rVert_2^{2}$; insert into
 \eqref{eq:polarisation} and apply the triangle inequality.
-\ref{RT:mv}: $|\det S|\le|S_{11}||S_{22}|+S_{12}^{2}\le2Q^{2}$ and
-$|D(B,S)|\le(|B_{11}|+|B_{22}|+2|B_{12}|)\max_{ij}|S_{ij}|$; insert into
+\ref{RT:mv}: by Lemma~\ref{lem:dualpoint} every $|S_{ij}|\le\Qt$, so
+$|\det S|\le|S_{11}||S_{22}|+S_{12}^{2}\le2\Qt^{2}$ and
+$|D(B,S)|\le(|B_{11}|+|B_{22}|+2|B_{12}|)\max_{ij}|S_{ij}|
+\le(|B_{11}|+|B_{22}|+2|B_{12}|)\Qt$; insert into
 \eqref{eq:polarisation}. \ref{RT:split} is the triangle inequality on
 \eqref{eq:polarisation}. \ref{RT:vaughan}: expand
 $\det S=\sum_{q,q'}(\varrho^{(q)})^{\T}\mathcal K\varrho^{(q')}$ by bilinearity
@@ -2547,6 +2674,12 @@ $1-r_{12}^{2}$ itself & Meas.~\ref{meas:rate}
 \end{center}
 
 \noindent
+Row \ref{RT:mv} is priced on the bare Montgomery--Vaughan factor $Q$ of
+\eqref{eq:Qtilde}, i.e.\ at $\Lambda_0=1$ and $\eta=0$; the coefficient budget
+and the interpolation residual of Lemma~\ref{lem:dualpoint} are window-dependent
+prefactors of that factor, and the exponent in the row is the exponent of $Q$ on
+this surface. Every other row is priced on the majorant exactly as displayed.
+
 The best of the five on this surface is the triangle inequality on the exact
 three-term split, at $\delta=+0.996$; the exponent in \eqref{eq:R1} is $3$, so
 on this surface the best priced route falls short by $2.004$ \emph{in the
@@ -2592,7 +2725,7 @@ classification predicts.
   factor $1.71$ to $2.83$ on $12/12$ windows, so a route that would dominate the
   comb band by the archimedean band loses on the instance.
 \item\label{NG:l1} \emph{The signed sum is far below its $\ell^{1}$ mass.} On
-  the declared subsample of the reference window the ratio is $41$
+  the declared subsample of the reference window the ratio is $40.6$
   (Measurement~\ref{meas:l1}, equation~\eqref{eq:l1mass}); any route that
   replaces the signed double sum by its absolute value pays that factor before
   it starts.
@@ -2657,41 +2790,66 @@ ratio-$4$ density bins, fixed before any window was built, the binned exponent
 of Definition~\ref{def:ratio} is:
 
 \begin{center}\small
-\begin{tabular}{@{}lrrl@{}}
+\begin{tabular}{@{}lrrcc@{}}
 \toprule
-bin (nodes per lag cell) & exponent & s.e. & note \\
+bin (nodes per lag cell) & cells & anchors & exponent $\pm$ s.e.
+  & on the $\sqrt2$ sub-ladder \\
 \midrule
-$[0.1,\ 0.4)$        & $+0.8886$ & $0.1027$ & \\
-$[0.4,\ 1.6)$        & $+0.5148$ & $\ast$ & \\
-$[1.6,\ 6.4)$        & $+0.1948$ & $\ast$ & \\
-$[6.4,\ 25.6)$       & $+0.3922$ & $\ast$ & monotonicity violation, declared \\
-$[25.6,\ 102.4)$     & $+0.1520$ & $\ast$ & \\
-$[102.4,\ 409.6)$    & $+0.0579$ & $\ast$ & \\
-$[409.6,\ 1638.4)$   & $+0.0376$ & $0.0410$ & new; $0.9\sigma$ from zero \\
-$[1638.4,\ 6553.6)$  & $+0.1046$ & $0.0881$ & new; $1.2\sigma$ from zero \\
+$[0.1,\ 0.4)$        &   $83$ &  $11$ & $+0.8886\pm0.1027$
+  & $+0.9818\pm0.2129$ \\
+$[0.4,\ 1.6)$        &  $318$ &  $34$ & $+0.5148\pm0.0883$
+  & $+0.5762\pm0.0743$ \\
+$[1.6,\ 6.4)$        &  $597$ &  $69$ & $+0.1948\pm0.0861$
+  & $+0.2073\pm0.0679$ \\
+$[6.4,\ 25.6)$       & $1056$ & $117$ & $+0.3922\pm0.0935$
+  & $+0.1942\pm0.0734$ \\
+$[25.6,\ 102.4)$     & $1924$ & $218$ & $+0.1520\pm0.0573$
+  & $+0.0879\pm0.0589$ \\
+$[102.4,\ 409.6)$    & $3588$ & $403$ & $+0.0579\pm0.0542$
+  & $-0.0573\pm0.1320$ \\
+$[409.6,\ 1638.4)$   & $4891$ & $471$ & $+0.0376\pm0.0410$
+  & --- \\
+$[1638.4,\ 6553.6)$  & $2075$ & $272$ & $+0.1046\pm0.0881$
+  & --- \\
 \midrule
-pooled, the two new bins & $+0.0496$ & $0.0372$ & $1.3\sigma$ from zero \\
+pooled, the two densest bins & & & $+0.0496\pm0.0372$ & --- \\
 \bottomrule
 \end{tabular}
 \end{center}
 
 \noindent
-$\ast$: for the six older bins the source reports the values and the joint
-density slope but not the individual standard errors, and none is invented
-here. The joint slope of the binned exponent against $\log(\mathrm{dens})$ is
-$-0.0725\pm0.0090$, i.e.\ $8.0\sigma$ over the $4.0$ attained decades. The
-violation of monotonicity in the fourth bin is declared and not smoothed: it is
-where the finer rung ladder samples the curvature of $\log R$ differently from
-the coarser one.
+Every band is the cluster-robust standard error of
+Definition~\ref{def:ratio}, the cluster being the anchor; the pooled row is the
+inverse-variance pool of the last two bins. Read against zero, the eight bins
+sit at $8.7$, $5.8$, $2.3$, $4.2$, $2.7$, $1.1$, $0.9$ and $1.2$ standard
+errors, and the pool of the last two at $1.3$. The joint slope of the binned
+exponent against $\log(\mathrm{dens})$ is $-0.0725\pm0.0090$, i.e.\ $8.0\sigma$
+over the $4.0$ attained decades. The violation of monotonicity in the fourth
+bin is declared and not smoothed; the last column is where it comes from.
 
-Two consistency facts belong to the measurement. \emph{(i)} A larger node table
-adds nodes above the old cap and nothing else, so on every window whose comb was
-already complete under the old cap the lag vector is unchanged bit for bit, $R$
-is unchanged exactly, and the binned exponent is identical --- a statement about
-complete combs, not about tables, and its must-break control is a window whose
-comb was truncated under the old cap, which does move. \emph{(ii)} Under a node
-table $20.8$ times larger, all six previously reported bins reproduce at
-$0.0\sigma$.
+That column is the same bins evaluated on the $\sqrt2$ sub-ladder of the same
+rung ladder, over the anchor range of the earlier and $20.8$ times smaller node
+table, and it carries two readings at once. It is the \emph{node-table}
+consistency check: each of the six entries reproduces the value published for
+that bin under the smaller table to $0.0\sigma$, which is the sharpest form the
+check can take --- with the caveat that the sixth bin ran to $500$ rather than to
+$409.6$ there, so the comparison is like-for-like only up to that edge. And it is
+the \emph{estimator} dependence, exhibited rather than asserted: the two exponent
+columns differ by up to $0.20$, the largest gap in the fourth bin and the next in
+the sixth. What differs between them is the rung ladder and the anchor range;
+what does not is the node table, so the movement is the estimator and its sample
+and not the arithmetic input. That is the caveat of
+Remark~\ref{rem:undecidable} as a number.
+
+Two further consistency facts belong to the measurement. \emph{(i)} A larger node
+table adds nodes above the old cap and nothing else, so on every window whose
+comb was already complete under the old cap the lag vector is unchanged bit for
+bit, $R$ is unchanged exactly, and the binned exponent is identical --- a
+statement about complete combs, not about tables, and its must-break control is a
+window whose comb was truncated under the old cap, which does move.
+\emph{(ii)} The two densest bins have no counterpart under the smaller table at
+all: they lie beyond the density its cap could reach, which is why they are the
+reason for the enlargement.
 \end{measurement}
 
 \begin{remark}[what the curve does and does not decide, and at what price]
@@ -2718,8 +2876,8 @@ extrapolated is a local slope of a curved surface and not an exponent.
 \emph{The ladder caveat.} The estimator of Definition~\ref{def:ratio} is
 ladder-dependent. The same density bin evaluated on a $2^{1/4}$ rung ladder and
 on its $\sqrt2$ sub-ladder gives different values, with shifts up to $0.20$ on
-the surface above, because a bin with twelve rungs samples the curvature of
-$\log R$ differently from one with six. Every number in
+the surface above, because a bin with about eight rungs samples the curvature of
+$\log R$ differently from one with about four. Every number in
 Measurement~\ref{meas:density} is therefore quoted \emph{with} its rung ladder,
 and a bin value quoted without one is not reproducible.
 \end{remark}
@@ -2923,7 +3081,8 @@ this paper is conditional on it. Explicitly:
 \section{Numerical verification}
 \label{sec:numerics}
 
-Every numbered statement of this paper is recomputed by a machine check. This
+Every proved statement of this paper is recomputed by a machine check, and every
+measured number is quoted with the surface it was taken on. This
 section states the convention under which a numerical statement counts as a
 certificate, declares the three surfaces on which anything is evaluated, and
 gives the table that maps each statement to its check.
@@ -3010,11 +3169,22 @@ of the surface, and Remark~\ref{rem:undecidable} is the price it charges.
 \subsection{Cross-reference table}
 \label{sec:crossref}
 
+Three readings are quoted in this paper and are not in the table below, because
+no module recomputes them: the tightness range of
+Measurement~\ref{meas:sharpness}, the fitted exponents of
+Measurement~\ref{meas:rate} and the four numbers of
+Measurement~\ref{meas:refwindow}. Each is a quantity read off an eigenvalue
+routine on a surface declared above, each is typed \emph{measured} in
+Table~\ref{tab:typing}, and none is used as a bound anywhere; what the modules
+certify are the identities those readings are readings of. The definitions and
+remarks are likewise absent: a definition is a procedure and a remark is a
+reading, and both are typed as such in Table~\ref{tab:typing}.
+
 {\footnotesize\relpenalty=0 \binoppenalty=0
 \begin{xltabular}{\textwidth}{@{}llY@{}}
-\caption{Every numbered statement and the check that recomputes it. Module
-identifiers refer to the verification suite accompanying this work; item
-numbers are those of the module documentation.}
+\caption{Every proved statement and every measurement carried by a module, with
+the check that recomputes it. Module identifiers refer to the verification suite
+accompanying this work; item numbers are those of the module documentation.}
 \label{tab:crossref}\\
 \toprule
 statement & check & what the check recomputes \\
@@ -3033,6 +3203,10 @@ Lem.~\ref{lem:kms} (parity spectrum)
   & \texttt{v555}--\texttt{v559}, parity control
   & $L_Pt_k=\mu_kt_k$ with an orthonormal basis;
     $\Pi^{\T}\Tm{M}(c^{L})\Pi=L_P$ at zero tolerance \\
+Lem.~\ref{lem:interlacing}, \ref{lem:nesting} (interlacing, nesting)
+  & \texttt{v559} links~1, 4
+  & the two-block Schur floor; a $K$-truncated Rayleigh minimum as an upper
+    bound for $\lmin$ and never a lower one \\
 Lem.~\ref{lem:gauge} (gauge law)
   & \texttt{v555} item~(4); \texttt{v559} link~3
   & $\sum_dw_d=0$; $\sum_dc_dw_d=x^{\T}Gx$ \\
@@ -3057,15 +3231,28 @@ Cor.~\ref{cor:holder} (Abel/H\"older)
 Cor.~\ref{cor:abis} (floor at one coordinate)
   & \texttt{v556} item~(4b)
   & $\TV\ge\lVert v\rVert^{2}\ge(t_1^{\T}v)^{2}$ \\
+Cor.~\ref{cor:price} (the price)
+  & \texttt{v555} item~(2), step T3
+  & \eqref{eq:price} is $\mu_1\TV\ge1$ divided by $\TV$, and that inequality is
+    what the step certifies \\
 Rem.~\ref{rem:negcontrol} (negative control)
   & \texttt{v555} item~(2), control
   & an inadmissible vector undercuts the floor \\
 Thm.~\ref{thm:gauge} (gauge)
   & \texttt{v556} item~(1); \texttt{v559} link~10
   & degree-two homogeneity; ratio equal across sectors \\
-Prop.~\ref{prop:shift} (conservation)
+Prop.~\ref{prop:shift}, Cor.~\ref{cor:noescape} (conservation, no escape)
   & \texttt{v556} item~(2)
-  & floor $\times$ transfer $=1/\mu_1$ at every shift \\
+  & floor $\times$ transfer $=1/\mu_1$ at every shift of the declared shift
+    list, which is also the corollary \\
+Meas.~\ref{meas:battery} (the sector battery)
+  & \texttt{v556} item~(1)
+  & the ratio across the declared battery of weight families, taper widths and
+    shifts; the wrong transport map failing loudly \\
+Prop.~\ref{prop:nullmode} (null mode, other sector)
+  & \texttt{v555}--\texttt{v559}, parity control
+  & the sine family at $k\ge1$ with an orthonormal basis; its parts
+    \ref{N:noreps} and \ref{N:even} are closed forms of the same recurrence \\
 Prop.~\ref{prop:K2} ($K=2$ exact)
   & \texttt{v557} item~(3); \texttt{v559} link~13
   & the closed vector attains $1/g_2$; $G_{11}g_2=1/(1-r_{12}^{2})$ \\
@@ -3096,8 +3283,9 @@ Thm.~\ref{thm:rank3} (rank three)
   & $J$, its spectrum, $\rank\mathcal K\le3$, the inertia bound \\
 Lem.~\ref{lem:wedge}, Meas.~\ref{meas:l1} (wedge, $\ell^{1}$)
   & \texttt{v558} items~(4), (6)
-  & the wedge reading with its rank-one defect; the $\ell^{1}$-to-signed
-    ratio \\
+  & the wedge reading, and its rank-one defect against the declared bar
+    $5\cdot10^{-2}$; the $\ell^{1}$-to-signed ratio itself is measured on the
+    declared subsample and is not recomputed \\
 Cor.~\ref{cor:majorant} (majorants)
   & \texttt{v558} item~(6)
   & the image of a norm ball; the scramble discriminator \\
@@ -3118,6 +3306,12 @@ Lem.~\ref{lem:angle} (angle against determinant)
   & \texttt{v558} item~(2)
   & the ratio \eqref{eq:angleid} and its two-sided bound
     \eqref{eq:anglebound} \\
+Lem.~\ref{lem:dualpoint} (dual-point read)
+  & \texttt{v558} items~(4), (5)
+  & the three reads as two-point reads of the polarised closed weights against
+    the direct block; those weights seeing a node only through $\log n$; the
+    parity frequencies $\omega_k$ at zero tolerance, the two points of
+    \eqref{eq:dualpoints} being $\omega_k/D$ \\
 Prop.~\ref{prop:routes} (five majorants)
   & \texttt{v558} items~(5), (6); \texttt{v559} NG1--NG8
   & each majorant re-derived from its hypotheses; Vaughan's identity
