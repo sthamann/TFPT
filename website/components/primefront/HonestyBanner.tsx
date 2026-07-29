@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4205/4205 sandbox checks —
+        (“the full proof”, T126+) is now open with 4235/4235 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -357,9 +357,27 @@ export function HonestyBanner() {
         degree schedule K(h) = O(log h)), the sign inequality R-B is
         refuted in all four readings, and a certified off-diagonal
         fraction bound with constant 1/4 survives; the closed cores of
-        T160+T161 are load-bearing as v554. T162
-        (third_split_probe.py) is running — the search for one split
-        with effective δ below 1/2, the whole remaining R2″ task. What remains
+        T160+T161 are load-bearing as v554. T162 (DELTA-REDUCED) then ran
+        exactly that search, and the third split exists while the exhaustion
+        saturates: the archimedean Mellin ladder lowers the demand
+        1.88 → 1.38 → 0.93 in closed cell moments, forced and not fitted,
+        but it is an asymptotic series that turns around at K* = 2; one
+        Abel step makes the demand prime-free (every arithmetic input in
+        the single Chebyshev constant κ = 0.038821) and its optimal level
+        is exactly one, for the closed reason 32π/α &gt; 1; and the Fejér
+        split — tapering the trial vector, which by self-adjointness IS
+        pairing against Fejér-averaged Λ-mass — pushes the proof demand
+        BELOW the RH threshold 1/2 on all 18 windows (δ_bnd =
+        0.133–0.417), at a price in the 1/s ceiling that grows like
+        h^2.86: the hardness is relocated into the price, not closed.
+        Alongside, R-A′ closes (the log-moment agrees on three independent
+        routes to machine precision, via a Lerch/Frullani integral) and
+        R-B′ is refuted (the 16×16 Gram form is indefinite on every
+        window; the a-weighted quarter bar survives as a contribution
+        bound). The remaining R2″ question is a Pareto front — does an
+        operating point exist where demand and price are simultaneously
+        affordable? T163 (pareto_front_probe.py) is running exactly that
+        survey. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

@@ -93,7 +93,7 @@ identities, the odd-sector identities, the fixed-size Ritz ceiling certificate, 
 fixed-size angle instruments, the exact-form identities and the sampling/harmonics
 identities. Everything beyond
 those twenty is \emph{sandbox}: an exploratory program, run as
-$161$ preregistered probes with $4205$ machine checks, which localized the residual object. That
+$162$ preregistered probes with $4235$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -262,7 +262,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots161$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots162$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -270,7 +270,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T161: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T162: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -4108,7 +4108,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T161)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T162)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -7391,8 +7391,192 @@ $\delta_{\mathrm{eff}}<\tfrac12$; the arch/atom split gives $1.148$--$1.881$ and
 the arch+smooth/fluctuation split $0.984$--$1.377$, both above $\tfrac12$, and
 finding a third is the whole remaining R2$''$ problem. \emph{(R-D)} a fifth device
 for R1$''$: $\rho=1.0036$--$1.0140>1$, flat, stays the surviving structure fact.
-T162 (\texttt{third\_split\_probe.py}, contract \texttt{THIRD.SPLIT}) is running
---- the search for exactly that third split.
+T162 (\texttt{third\_split\_probe.py}, contract \texttt{THIRD.SPLIT}) executed
+exactly that search --- next subsection.
+\end{keybox}
+
+\subsection{The third split: the Mellin ladder saturates, and the Fej\'er split
+goes sub-RH at a price (T162)}
+T162 (\texttt{third\_split\_probe.py}, contract \texttt{THIRD.SPLIT}, $30/30$,
+$5.2$\,s on the T161 surface rebuilt \emph{independently} from the declared
+recipe: $19$ log-spaced prime-power zones of $75$ admissible, $h=50\ldots1445$,
+of which $18$ windows sit inside the declared condition horizon
+$\mathrm{cond}(B_{LL})\le10^{12}$, $h=50\ldots1218$; the pairing identity
+re-checked to $9.98\times10^{-18}$--$3.01\times10^{-14}$ of the large scale and
+the gauge identity to $2.5\times10^{-16}$; $\psi(x)/x\le1.038830$ verified at
+every jump point up to $n=400000$, i.e.\ $\kappa=0.038821$ --- the \emph{one}
+unconditional arithmetic input every number below is priced against; verdict
+\textsc{delta-reduced}) searches for the third split, and the search returns
+both the split and its limit.
+
+\emph{The currency, declared before any candidate.} Two numbers are kept
+strictly apart from here on, because T161 used only the first:
+$\delta_{\mathrm{val}}=\log(|R|_{\mathrm{meas}}/|Q|)/\log X$ is the measured
+residual \emph{value} --- a floor --- and
+$\delta_{\mathrm{bnd}}=\log(E_{\mathrm{triv}}\,C_w/|Q|)/\log X$ is what a
+\emph{proof} must beat, with $E_{\mathrm{triv}}$ the Chebyshev-strength
+(unconditional) size of the arithmetic factor. RH strength is $\tfrac12$ in both
+currencies, as a comparison of strengths and never as a claim; always
+$\delta_{\mathrm{bnd}}\ge\delta_{\mathrm{val}}$. The taxonomy, in both
+currencies (smooth part closed on every row):
+
+\begin{center}\small
+\begin{tabular}{@{}l l l@{}}
+\toprule
+\textbf{split} & \textbf{$\delta_{\mathrm{val}}$ (floor)} & \textbf{$\delta_{\mathrm{bnd}}$ (demand)}\\
+\midrule
+C0 arch / atom & $1.1482$--$1.8809$ & --- (no factorisation)\\
+C1 arch$+$smooth / fluctuation & $0.9839$--$1.3767$ & --- (no cell-level input)\\
+C2 $=$ C1 $+$ Mellin ladder at $K^*$ & $0.6247$--$0.9307$ & --- (same)\\
+C5 $=$ C2 $+$ one Abel step & $0.6247$--$0.9307$ & $1.3965$--$1.7867$\\
+C3 spectral (ground pair, $\le16$ modes) & --- & $0.4602$--$1.3145$ (price $\sim h^{+2.93}$)\\
+C4 Fej\'er taper (\texttt{fejer\_2}) & --- & $\boldsymbol{0.1332}$--$\boldsymbol{0.4169}$ (price $\sim h^{+2.86}$)\\
+\midrule
+frontier, price $\le2$ & & $1.319$--$1.650$\\
+frontier, price $\le10^{2}$ & & $0.412$--$1.126$\\
+frontier, price $\le10^{4}$ & & $-0.079$--$0.681$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\emph{The Mellin ladder is the third genuine gain, and it is an asymptotic
+series.} Past the PNT main term the smooth part of $d\psi$ is the derivative of
+the \emph{elementary} closed function $-\tfrac12\log(1-x^{-2})$, so the $k$-th
+rung pays $+\sum_dw_d\,C_d(-(2k+\tfrac12))$ in closed cell moments (Mellin
+1896) --- no zero data anywhere. The residual is minimised at $K^*=2$ on all
+$18$ windows (relative drop $0.9015$--$0.9256$ --- a genuine factor), and past
+$K^*$ it \emph{rises} by $15.5$--$25.1$ up to $K=20$: the predicted
+log-divergence of the formal sum $\sum_kx^{-2k-1}=1/(x(x^2-1))$, not a
+numerical artefact. What it buys: $\delta_{\mathrm{val}}=0.6247$--$0.9307$
+against C1's $0.9839$--$1.3767$, a forced (not fitted) gain of
+$0.359$--$0.446$ --- and it \emph{cannot} be iterated to the missing
+$X^{0.12}$--$X^{0.43}$, because the series diverges. C0 and C1 reproduce
+T161's $1.148$--$1.881$ and $0.984$--$1.377$ to $0.01$ at both ends on the
+independently rebuilt surface.
+
+\emph{One Abel step, and R-C$'$ stops being an arithmetic problem.} Level $0$
+admits no unconditional input at all (no cell-level Chebyshev bound --- T161's
+granularity finding restated); one Abel step, licensed by the gauge identity,
+gives $|V_d|\le2\kappa\sqrt X$ by two partial summations, and the ladder
+identity $\sum_dv_dw_d=\sum_dV^{(k)}_d(\Delta^kw)_d$ is machine-checked at
+every level $k=1\ldots4$ ($3.9\times10^{-15}$--$3.1\times10^{-14}$, boundary
+free). The optimal level is \emph{exactly one} on $18/18$, for a closed reason:
+each further step multiplies the envelope by ${\sim}2/D$ and divides
+$\|\Delta^kw\|_1$ by ${\sim}\omega_{16}$, and the product is
+$32\pi/\alpha=16.7$--$41.9>1$ --- partial summation is a single step, and it has
+been taken. At that level the demand factorises \emph{exactly} as
+\[
+\delta_{\mathrm{bnd}}\;=\;\tfrac12+\frac{\log\!\bigl(2\kappa\,\|\Delta
+w\|_1/|Q|\bigr)}{\log X},
+\]
+so every arithmetic input sits in the single constant $\kappa$ and the
+remaining question is the closed, \emph{prime-free} ratio
+$\|\Delta w\|_1/|Q|=2.25\times10^{3}$--$1.15\times10^{6}$, growing as
+$h^{+1.769}$ (fit); an RH-strength input misses the corresponding test
+statistic by $4.8$--$8.2$ orders of magnitude.
+
+\emph{The Fej\'er split, and the price of going below one half.} The Thomson
+dual makes every trial vector $x$ with $x_1=1$, $Q(x)>0$ admissible at the
+price $P(x)=Q(x)/Q(x^*)\ge1$ in the $1/s$ ceiling --- and the objective must be
+priced, or it is gamed: an \emph{unpriced} search does find
+$\delta_{\mathrm{bnd}}<0$ here, by making $Q(x)$ huge and the bound vacuous.
+Priced ($778$ trial vectors per window, the fast path re-assembled against a
+literal double loop at $0.0$), the result is an exchange rate: a sub-$\tfrac12$
+demand \emph{exists} on every window, at minimum price
+$P_{\min}=7.2\times10^{1}$--$8.2\times10^{4}$ growing as $h^{+2.0}$ (fit), and
+every unit of $\delta$ costs $1.17$--$3.31$ \emph{decades} of price. The
+structured families beat the sweep: the spectral truncation C3 reaches
+$0.4602$--$1.3145$ (below $\tfrac12$ on $5/18$), and the \textbf{Fej\'er taper
+C4} --- $x_k$ weighted by $1-k/n_b$ (Fej\'er 1915), which by self-adjointness
+of the smoothing \emph{is} the contract's ``pairing against Fej\'er-averaged
+$\Lambda$-mass'' --- reaches
+$\delta_{\mathrm{bnd}}=\mathbf{0.1332}$--$\mathbf{0.4169}$, \emph{below
+$\tfrac12$ on all $18$ windows}, lowering the demand by $1.15$--$1.51$ in
+$\delta$ against the untapered optimiser. The catch, stated without hedging:
+its price grows as $h^{+2.86}$ (fit), so the sub-RH demand is bought with an
+asymptotically diverging loss in the $1/s$ bound, and a per-window certificate
+at growing price is not a uniform statement --- R2$''$ is \emph{relocated} into
+the price, not closed.
+
+\emph{R-A$'$ closes, R-B$'$ is refuted.} The log-moment $L=\sum_d\Psi_dw_d$ ---
+the one non-polynomial moment of the arch half --- agrees on three independent
+routes: the direct sum; the double-Abel form \emph{with} its Wronskian boundary
+term, $L=-\tfrac12\sum_d(d\log d)(\Delta^2w)_d-\tfrac12M\log M\,w_{M-1}$
+exactly ($2.1\times10^{-15}$--$4.2\times10^{-14}$; the boundary term is
+$3.2\times10^{-6}$--$3.5\times10^{-2}$ of $L$ and not optional --- T161's
+identity is completed here, not quoted); and the Lerch/Frullani integral
+\[
+L\;=\;-\tfrac12\int_0^\infty\frac{(1-e^{-y})^2}{y^{2}}\,G(y)\,dy,\qquad
+G(y)=\sum_{d\ge1}w_d\,e^{-(d-1)y}\ \text{closed},
+\]
+agreeing with the direct sum to $0.0$--$6.0\times10^{-16}$ --- machine
+precision --- and converging at $y=0$ for exactly one reason, the gauge
+identity; the $d=1$ term peels in closed form via
+$\int_0^\infty((1-e^{-y})/y)^2dy=2\log2$, and the same constant reproduces
+$\Psi_1=-\log2$ to $0.0$, an independent confirmation of the whole derivation
+(Frullani 1828 / Lerch 1887 / Clausen 1832). R-A$'$ moves from open to
+certified-per-window; it is $m$-indexed, and no $m$-freeness is claimed. R-B$'$
+is \emph{refuted}, and the refutation is a result: the $16\times16$ Gram form
+\emph{is} the arch half ($a^{\mathsf T}Ga=Q^{\mathrm{arch}}$ to
+$0.0$--$1.9\times10^{-15}$, a theorem) and it is \emph{indefinite on every
+window}, $\lambda_{\min}/|\lambda_{\max}|=-13.34\ldots-1.59$, zero of $18$
+windows semidefinite in either sign; the mechanism is measured --- the diagonal
+is strictly positive but small, the unweighted Gershgorin ratio is
+$7.97$--$580.76$, so Gershgorin 1931 does not apply and no semidefiniteness
+certificate exists. What survives is the $a$-weighted quarter bar: off-diagonal
+mass against the arch half $=0.1435$--$0.2902$, flat (exponent $-0.102$, fit),
+holding on $14$ of $18$ windows and exceeded by $16.1\%$ on four --- reported
+honestly as $0.29$ and not as $\tfrac14$: a bound on a \emph{contribution}, not
+a spectral property.
+
+\emph{The assembly, the stress, and the anti-fitting refusal.} The full chain
+$Q=(Q^{\mathrm{arch}}+Q^{\mathrm{smooth}}_K)+R$ closes end to end at
+$6.1\times10^{-17}$--$1.8\times10^{-15}$ of the large scale
+$\max(|\mathrm{arch}|,|\mathrm{atom}|)$ --- one unbroken chain of identities
+followed by exactly one inequality, which holds with $2.0$--$3.2$ orders of
+slack; the gap $\delta_{\mathrm{bnd}}-\delta_{\mathrm{val}}=0.77$--$0.86$
+\emph{is} the price of factorising, and it is bigger than the $0.12$--$0.43$
+separating the residual value from RH strength: the factorisation, not the
+arithmetic, now dominates the loss. The must-break controls break --- uniform
+surrogate prime powers (same mass multiset) drive the total to
+$5.2\times10^{2}$--$4.6\times10^{7}$ of $|Q|$, and violating the gauge breaks
+the Abel identity by \emph{precisely} $c_0\sum_dw_d$ (reproduced to
+$1.9\times10^{-14}$, a positive control on the mechanism) --- while a control
+that did \emph{not} break is declared as information: $4\times$
+under-resolution leaves the total $O(1)$ ($0.41$--$1.83$), so the cancellation
+does not rest on resolving individual prime powers. And the anti-fitting
+refusal, the most uncomfortable number of the probe, reported in full: the
+exponent $\beta=\tfrac12$ in the smooth prime term is \emph{forced} by the
+$n^{-1/2}$ weighting; the empirical minimiser over $[0.2,0.8]$ is
+$\beta^*=0.600$--$0.800\ne\tfrac12$, where the residual would look up to a
+hundred times better --- and it is \emph{refused}: the drift is a property of
+the residual being large ($50$--$76\%$ of the object), not evidence about the
+exponent. The verdict, in the two currencies: the $\delta$ trajectory
+$1.88\to1.38\to0.93$ is real and monotone and does \emph{not} reach $\tfrac12$
+(the best provable demand after the one Abel step is $X^{0.90}$--$X^{1.29}$
+beyond RH strength), and the exhaustion \emph{saturates rather than
+converges} --- three independent ladders all turn around at their first or
+second step. The balance of T162: $10$~theorem~$/\,2$~certified-uniform~$/\,
+3$~certified-per-window~$/\,9$~measured, zero fit rows (the only fitted numbers
+are $h$-exponents, labelled in place); the candidates T162-P1$\ldots$P6 (the
+closed log-moment; the Abel form with its boundary term; the quarter bar; the
+Gram indefiniteness --- a negative result that closes a route; the Abel-level
+theorem; the exchange rate) are all \textsc{pending} --- no promotion here, and
+\vref{v554} is untouched.
+
+\begin{keybox}[After T162: one front, one substitute, one device]
+\emph{(R-C$''$)} the Pareto front, now prime-free: find an admissible trial
+vector $x$ with $\delta_{\mathrm{bnd}}(x)<\tfrac12$ at a price $Q(x)/Q(x^*)$
+the T159/T160 chain can pay --- such $x$ exist at price
+$\ge7.2\times10^{1}$ growing as $h^{+2.0}$, and both ways out are closed
+questions: fix the affordable price from the chain and read the frontier, or
+enlarge the search space beyond the $16$ low modes, where the total variation
+may drop at constant price. \emph{(R-B$''$)} a substitute for the refuted Gram
+positivity: the chain wanted a \emph{sign} and has a contribution bound (the
+$a$-weighted quarter bar, certified-uniform via flatness). \emph{(R-D)} a
+fifth device for R1$''$: $\rho=1.0036$--$1.0140>1$, flat, untouched by T162.
+T163 (\texttt{pareto\_front\_probe.py}, contract \texttt{PARETO.FRONT}) is
+running --- the survey of exactly that front.
 \end{keybox}
 
 % =====================================================================
@@ -7874,19 +8058,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T161}\label{app:index}
+\section{Probe index, diary parts T11--T162}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $151$ parts T11--T161 that the current diary file records
-($152$ runs --- T104 was a double run with two independent arms --- and $4013$ green checks); the ten
+load-bearing artefact. The index covers the $152$ parts T11--T162 that the current diary file records
+($153$ runs --- T104 was a double run with two independent arms --- and $4043$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v554} promoted; with T126--T161, the first thirty-six parts of the second phase, the
-running totals are \textbf{$161$ probes and $4205/4205$ checks}. T162
-(\texttt{third\_split\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v554} promoted; with T126--T162, the first thirty-seven parts of the second phase, the
+running totals are \textbf{$162$ probes and $4235/4235$ checks}. T163
+(\texttt{pareto\_front\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -8053,6 +8237,7 @@ T158 & \texttt{\scriptsize schur\_\allowbreak entry} & the cancellation-seeing b
 T159 & \texttt{\scriptsize exact\_\allowbreak form} & the cancellation executed ALGEBRAICALLY --- \textbf{seven machine-checked identities} (to $10^{-12}$ against the absolute scale $\sum|c_d w_d|$; relative to the cancelled total only $10^{-12}$--$1.2\times10^{-8}$: the cancellation eats $4.0$--$8.1$ decimal digits, reported as a measurement): (P1) $x^{\mathsf T}B_{LL}x=y^{\mathsf T}Ay$, pencil gone; (P2) the EXACT LAG SUM $=\sum_d c_d w_d$, $w_d=T_d-H_d$, arithmetic and geometry separated; (P3) $w_d$ in CLOSED form ($256$-term Dirichlet kernel, $1.4\times10^{-15}$); (P4) \textbf{the GAUGE IDENTITY $\sum_d w_d=0$ EXACTLY} --- Toeplitz-minus-Hankel annihilates constant lag vectors: the form is BLIND to the lag mass, exactly where the $h^2$ halves live; (P5) $w_0=\sum x_k^2/\mu_k$ and $2w_0-w_1=\|x\|^2$; (P6) $p$-fold Abel exact to $p=5$; (P7) the TmH signature $A_{r,s}-A_{r+1,s+1}=f(r+s)$; \textbf{$m$-free NOT reached, four routes closed with exponents}: the $h^2$ does NOT telescope (both halves grow $h^{+2.104}$ $=$ the common WEIGHT); T158's fixed sixteen-vector REFUTED ($h^{+3.510}$, $\mathrm{cond}(B_{LL})\sim h^{+2.887}$, needed accuracy $h^{-3/2}$ vs optimiser drift $2.5\times10^{-2}$--$1.5\times10^{-1}$); one sine $h^{+3.066}$; ansatz family $h^{+3.001}$; Abel-$\ell^1\times\sup$ best rung $h^{+3.604}$ (misses by $5.6\times10^{6}$--$2.2\times10^{10}$, $W^1_1=-w_0$ makes $\sup|W^1|\ge h^2$ unavoidable); two $m$-free-shaped pieces NEW: $\|\Delta c^{\mathrm{arch}}\|_1=3.65$--$5.38$ flat (BV $\le6$) and the T150 budget at the atom cutoff $X=e^{2\alpha}$; \textbf{(S1) EXACT: $B^{\mathrm{arch}}_{HH}$ is a symmetric Z-MATRIX} ($100\%$ off-band nonpositive, raw, $18/18$), checkerboard refuted ($0.489$--$0.494$ $=$ coin flip); Collatz--Wielandt BITES on the arch half: \textbf{closed sign-based floor $\min_k(B^{\mathrm{arch}}_{HH}\mathbf 1)_k=0.819$--$1.165$, flat, above $t=0.25$} --- but the atom block has NO sign law ($0.31$--$0.49$) and the full-block M-matrix criterion is vacuous ($-9.32\ldots-0.61$ vs exact $0.074$--$0.197$); end to end $t=0.0705$--$0.1583$ unmoved (M1/M2 structural, not quantitative); no-go breaks $5/5$; balance $6/3/4/1\to$ \textbf{$13$ THEOREM / $6$ CERT-UNIF / $4$ CERT-WINDOW / $1$ MEASURED} (seven new theorems, three new CERT-UNIF); NUMERICAL HORIZON declared: $\mathrm{cond}(B_{LL})>10^{12}$ from $h=1292$, one window dropped, the same obstruction as its own measurement; \textbf{rest: ONE fully explicit pairing inequality} $\sum(\Delta c)_d W^1_d$ needing CORRELATION instead of sizes ($\ell^1\times\sup$ off by $h^{3.7}$, the cancellation exactly $h^2$); a third device for the atom off-band block; theorem cores promoted & FORM-RESISTS $\to$ \vref{v553} & 41/41\\
 T160 & \texttt{\scriptsize pairing} & the one pairing $\sum(\Delta c)_d W^1_d$ attacked through its CORRELATION structure, \textbf{and the watershed of the phase arrives --- the SAMPLING IDENTITY: the last term IS a prime exponential sum} ($19$ of $20$ zones $h=199$--$1256$, $1$ dropped at the declared horizon); \textbf{$W^1$ does NOT oscillate}: $J=3$ sign blocks, flat, CLOSED bound $J\le130$ (trigonometric zero count) --- one smooth three-lobe profile; \textbf{block/Leibniz device REFUTED}: block-H\"older $h^{+4.115}$, block-Abel $h^{+4.131}$ --- $5.2$--$16.5\times$ WORSE than $\ell^1\times\sup$ at $h^{+3.595}$; head peel refuted ($K^*=M$ on $19/19$; best overshoot $60.3$--$4.80\times10^{3}\sim h^{+2.428}$ = the $h^2$ itself); \textbf{NEW THEOREMS --- the sign-definite MOMENT LAWS} $m_1=-[S_0^2+2\sum_jP_j^2]\le0$, $m_2=-[2S_1-(M-1)S_0]^2\le0$, $m_p$ closed for every even $p$; the fixed witness (frac $0.2$, degree $48$) reproduces the arch half to worst slack $1.95\times10^{-8}$ of the $O(1)$ total --- \textbf{FLOOR-LIMITED at $4.12$--$428\times$ the double-precision floor: SECOND HORIZON declared}, the arch half neither established nor refuted on any double-precision surface; sparsity refuted (support fills $0.32$--$0.64$; support-localised $\ell^1$ misses $h^{+3.505}$); \textbf{the SAMPLING IDENTITY ($1.0\times10^{-16}$--$2.9\times10^{-15}$)}: $\sum_dc^{\mathrm{atom}}_dw_d=-\tfrac12\sum_{n\le X}(2\Lambda(n)/\sqrt n)\,\widehat w(\log n)$ $\Rightarrow$ \textbf{the atom half IS a finite combination of $\sum_{n\le X}\Lambda(n)n^{-1/2}\cos(t\log n)$ at $32$ EXPLICIT frequencies $t=\pi(k\pm l)/\alpha$}, needed to depth $h^{-2}=2.19\times10^{-6}$--$1.12\times10^{-4}$, measured to cancel only to $0.00$--$0.37$ of the trivial bound --- \textbf{the $h^2$ cancellation is the INTRINSIC ARITHMETIC HARDNESS}, not an assembly artefact (finite von-Mangoldt table only; no zero read, no equivalence claimed); R1$''$: rank/support and corner (T2) refuted (the norm route in disguise, $\|M_{12}\|_2\le71.4$); \textbf{the surviving fact $\rho=1.0036$--$1.0140>1$ on every window, FLAT} --- arch dominates atom on every destructive direction; its inequality form refuted (floor $-7.93\ldots-1.09$; margin vs cross-coupling = factor $10^4$); \textbf{U3 UPGRADED to THEOREM}: TV $<6$, measured $3.9101$--$5.4153$ vs closed $3.9105$--$5.4153$ (FOUR digits); U1 PARTIAL: Z-law $\Leftrightarrow$ ONE prime-free trigonometric inequality (pointwise form refuted --- the weight is essential); end to end $3.79\times10^{-10}$--$2.10\times10^{-7}$, with an exact atom half the SAME chain gives $1.0000$ (deficit in ONE term); no-go breaks $6/6$; balance $13/6/4/1\to$ \textbf{$14$ THEOREM ($6$ new) / $4$ CERT-UNIF / $3$ CERT-WINDOW / $3$ MEASURED / $8$ refuted families}; T160-P1\ldots P7 PENDING, no promotion; \textbf{rest: R-A the symbolic Chebyshev bound; R-B the prime-free inequality; R-C the exponential-sum bound at the $32$ frequencies (not an exercise); R-D a fifth R1$''$ device} & PAIRING-RESISTS & 46/46\\
 T161 & \texttt{\scriptsize classical\_\allowbreak closure} & the two classical rests plus the circularity triage, \textbf{and the triage returns its most consequential answer: THE CHAIN IS NOT CIRCULAR} ($19$ log-spaced zones $h=50$--$1445$, a $28\times$ lever arm; $X=e^{2\alpha}=n_{\mathrm{zone}}^2$ exactly; $\psi(x)/x\le1.038830$ verified at every jump to $400000$); \textbf{R-A closes $m$-free}: $A=D\widehat A$ exactly ($4.2\times10^{-16}$--$2.0\times10^{-13}$), only the $1/s$ head binds ($i\pi$ margin $1.29$--$3.29$) $\Rightarrow$ \textbf{scale-free Bernstein rate $\rho^*=(3+\sqrt5)/2=2.618034$} (interval ratio $5$ only), $M=3.06$--$5.93$ uniform, envelope $0.055$--$0.074\le1$; \textbf{the head needs NO peeling}: $c^{\mathrm{arch}}_d=\Psi_d+D\widehat G(dD,D)$ with $\Psi_d=-\tfrac12[(d{+}1)\log(d{+}1)-2d\log d+(d{-}1)\log(d{-}1)]$ CLOSED, $D$-free, $m$-free ($1.7$--$4.8\times10^{-16}$ at every lag); full-interval rate $\rho_{\mathrm{reg}}=2.05$--$3.38$ NOT scale-free; ``fixed degree'' REFUTED: schedule $K(h)=O(\log h)$ both routes ($K=12$--$19$ / $9$--$25$); residual the prime-free LOG-MOMENT $\sum\Psi_dw_d=2.15$--$3.14$ of the arch half, outside the polynomial ladder; \textbf{R-B REFUTED in all four readings} (per pair $3168/4320$, worst $+0.92$; Abel tail $1229$; aggregate by SIGN --- arch negative, off-diagonal positive $=$ the harmful direction; Abel condition false $3801/4320$) --- \textbf{survives: the FRACTION bound $|{\rm off}|/|Q^{\mathrm{arch}}|=0.1035$--$0.1713\le\tfrac14$, flat} ($h^{-0.116}$), $m$-free version a $16\times16$ Gram question (Fej\'er 1915, Schur 1917); \textbf{NEW THEOREM: $t(2\alpha)=2\pi j$ exactly --- the $32$ frequencies ARE the Fourier harmonics of the log-window}; the measured cancellation is FULLY the PNT main term ($(\sqrt X-1)/(\tfrac14+t^2)$ to $0.014$--$0.232$ of mass, improving $X^{-0.39}$ --- a Mellin factor, no arithmetic saving); \textbf{$\delta$ arithmetic: needed $\delta=1.1482$--$1.8809$ against RH strength $\tfrac12$} --- gap $X^{0.648}$--$X^{1.381}$; absolute demand $0.012$--$0.31$ of the LAST TERM, below the boundary term of every partial summation $\Rightarrow$ no $\psi(x)-x$ input reaches it; frequency geometry worth $\delta=0.29$--$0.92$ (suppression $7.0$--$19.8$, matched control), already inside the numbers; \textbf{re-split moves the demand} (smooth prime term cancels the arch half to $0.50$--$0.76$; $\delta_{\mathrm{eff}}=0.984$--$1.377$, still $>\tfrac12$ on $18/18$) $\Rightarrow$ \textbf{the $h^2$ sits in the SPLIT, not in the primes}; balance $20/10/4/9/3$; closed cores of T160+T161 promoted; \textbf{rest: R-A$'$ the log-moment; R-B$'$ the Gram fraction bound; R-C$'$ ONE split with $\delta_{\mathrm{eff}}<\tfrac12$; R-D a fifth device} & CLOSURE-RESISTS $\to$ \vref{v554} & 35/35\\
+T162 & \texttt{\scriptsize third\_\allowbreak split} & the search for the third split, \textbf{and it EXISTS while the exhaustion SATURATES} (the T161 surface rebuilt independently: $19$ zones $h=50$--$1445$, $18$ windows inside the cond horizon $h=50$--$1218$; two currencies declared before any candidate: $\delta_{\mathrm{val}}$ the measured residual value, $\delta_{\mathrm{bnd}}$ what a proof must beat, RH strength $\tfrac12$ in both); C0/C1 REPRODUCE T161 to $0.01$ ($1.1482$--$1.8809$ / $0.9839$--$1.3767$); \textbf{C2 the MELLIN LADDER --- the third genuine gain, an ASYMPTOTIC series}: closed cell moments $C_d(-(2k+\tfrac12))$, optimum $K^*=2$ on $18/18$, gain $0.359$--$0.446$ ($\delta_{\mathrm{val}}=0.6247$--$0.9307$), past $K^*$ the residual RISES $\times15.5$--$25.1$ (the predicted log-divergence) --- not iterable; \textbf{C5 the Abel ladder: optimal level EXACTLY ONE} ($32\pi/\alpha=16.7$--$41.9>1$, closed), $\delta_{\mathrm{bnd}}=1.3965$--$1.7867$, and after the step the demand is EXACTLY $\tfrac12+\log(2\kappa\|\Delta w\|_1/|Q|)/\log X$ --- \textbf{R-C$'$ is PRIME-FREE}, all arithmetic in $\kappa=0.038821$; \textbf{C4 the FEJ\'ER split --- the actual find: $\delta_{\mathrm{bnd}}=0.1332$--$0.4169$ BELOW $\tfrac12$ on $18/18$} (taper $=$ smoothing of the $\Lambda$-mass by self-adjointness; lowering $1.15$--$1.51$) --- \textbf{at a price growing $h^{+2.86}$: RELOCATED, not closed}; frontier $P_{\min}=7.2\times10^{1}$--$8.2\times10^{4}\sim h^{+2.0}$, $1.17$--$3.31$ decades per $\delta$ unit; \textbf{R-A$'$ CLOSED}: the log-moment on three routes to machine precision ($0.0$--$6.0\times10^{-16}$; Lerch/Frullani integral, $d=1$ peel $=2\log2$ reproduces $\Psi_1=-\log2$; Wronskian boundary term completes T161); \textbf{R-B$'$ REFUTED}: the $16\times16$ Gram form INDEFINITE on $18/18$ ($\lambda_{\min}/|\lambda_{\max}|=-13.34\ldots-1.59$; Gershgorin inapplicable at $7.97$--$580.76$) --- survives: the $a$-weighted quarter bar $0.1435$--$0.2902$ flat ($h^{-0.102}$), $14/18$; end to end $6.1\times10^{-17}$--$1.8\times10^{-15}$ of the large scale; the factorising gap $0.77$--$0.86>0.12$--$0.43$ to RH strength; surrogate breaks $\times5.2\times10^{2}$--$4.6\times10^{7}$, gauge break EXACTLY $c_0\sum w_d$, under-resolution does NOT break (declared as INFO); \textbf{anti-fitting: $\beta^*=0.600$--$0.800\ne\tfrac12$ would look $100\times$ better and is REFUSED} ($\tfrac12$ forced by the $n^{-1/2}$ weighting); balance $10$ THEOREM / $2$ CERT-UNIF / $3$ CERT-WINDOW / $9$ MEASURED, zero FIT rows; T162-P1\ldots P6 PENDING, no promotion; \textbf{rest: R-C$''$ the Pareto front; R-B$''$ a substitute for the Gram positivity; R-D a fifth device} & DELTA-REDUCED & 30/30\\
 \end{xltabular}
 }
 
