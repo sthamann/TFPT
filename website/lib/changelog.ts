@@ -43,6 +43,1478 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · VI",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v551"
+      },
+      {
+        "k": "t",
+        "v": " — the fixed-size Ritz ceiling certificate of phase 2 promoted; prime-front diary T154 (the ceiling closes exactly at fixed size, ALIGN-RESISTS) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v551"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.RITZ.CEIL.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the certificate core of the discovery part T154 ("
+        },
+        {
+          "k": "c",
+          "v": "green_align_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.4"
+        },
+        {
+          "k": "t",
+          "v": " s, everything recomputed on small frame-A windows, nothing cited from the sandbox; the companion to "
+        },
+        {
+          "k": "c",
+          "v": "v550"
+        },
+        {
+          "k": "t",
+          "v": ", which certified the bottom ladder "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_k(A)\\le S\\mu^P_k"
+        },
+        {
+          "k": "t",
+          "v": " by per-window LDL"
+        },
+        {
+          "k": "m",
+          "v": "^{\\mathsf T}"
+        },
+        {
+          "k": "t",
+          "v": " counts of "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "size "
+            },
+            {
+              "k": "m",
+              "v": "m"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — this module certifies the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "fixed-size"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " replacement T154 found for the ceiling step. Scope fence: per-instance theorems with checked hypotheses and per-window "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "certified"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " inequalities — no fit, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no zone-uniform statement, and explicitly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no statement for all "
+            },
+            {
+              "k": "m",
+              "v": "D"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the two open inputs after T154 — R1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": ", an "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free floor for "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(B_{HH})"
+        },
+        {
+          "k": "t",
+          "v": " on the bulk parity block, and R2"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": ", an "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free lower bound for the "
+        },
+        {
+          "k": "m",
+          "v": "L_P"
+        },
+        {
+          "k": "t",
+          "v": " floor on the complement of the eight bottom Ritz directions — stay open and typed open; every floor consumed is a per-window certificate of size "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "). Battery: the "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "deepest"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " prime-power zones admitting a frame-A window inside the cap ("
+        },
+        {
+          "k": "m",
+          "v": "n=29\\ldots139"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "m=96\\ldots291\\le300"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "D=7.248\\times10^{-3}\\ldots1.815\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " — mirroring T154's own surface selection, declared rather than tuned: on the shallowest zones "
+        },
+        {
+          "k": "m",
+          "v": "n\\le11"
+        },
+        {
+          "k": "t",
+          "v": " more than one bottom direction leaves the sine block and the fixed-depth certificate is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " claimed there), a no-go size ladder "
+        },
+        {
+          "k": "m",
+          "v": "m=48\\ldots288"
+        },
+        {
+          "k": "t",
+          "v": ", parity controls at "
+        },
+        {
+          "k": "m",
+          "v": "m=64,128,256"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " Dirichlet control windows; each statement carries a mutation control that must fail by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The direction lemma (T154) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " For orthonormal "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "W=Q^{\\mathsf T}AQ"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_k(A)\\le\\theta_k"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "every"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "k\\le\\dim"
+        },
+        {
+          "k": "t",
+          "v": " — Ritz values are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "upper"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " bounds for the eigenvalues of the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same index"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (Courant–Fischer 1920 / Cauchy 1829), verified against the exact spectrum on the certificate subspace of every window and on "
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": " random subspaces (one-sided excess "
+        },
+        {
+          "k": "m",
+          "v": "0.0"
+        },
+        {
+          "k": "t",
+          "v": ") — so the fixed-size ceiling needs "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " residual argument at all; Temple 1928 / Kato 1949 is a floor device and is used nowhere in the module. Negative control: the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "reversed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " reading (Ritz values as lower bounds) is recognised as false on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": " windows, "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_k"
+        },
+        {
+          "k": "t",
+          "v": " overshooting "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_k"
+        },
+        {
+          "k": "t",
+          "v": " by a factor "
+        },
+        {
+          "k": "m",
+          "v": "\\ge18.6"
+        },
+        {
+          "k": "t",
+          "v": " somewhere on every window."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The sixteen-column certificate (T154) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{span}\\{t_1..t_8\\}+A^{-1}L_P\\,\\mathrm{span}\\{t_1..t_8\\}"
+        },
+        {
+          "k": "t",
+          "v": " has "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "fixed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " dimension "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": ", independent of "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": " (one Green step by Cholesky back-solves, no inverse formed), and its ceiling "
+        },
+        {
+          "k": "m",
+          "v": "K^F=\\max_k\\theta_k/\\mu^P_k"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " completed Choleskys of matrices "
+        },
+        {
+          "k": "m",
+          "v": "\\le8\\times8"
+        },
+        {
+          "k": "t",
+          "v": ") equals "
+        },
+        {
+          "k": "m",
+          "v": "1.1019"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.5845"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "K^F\\ge\\max_k\\lambda_k/\\mu^P_k"
+        },
+        {
+          "k": "t",
+          "v": " on every window "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "|K^F/K_{\\mathrm{bot}}-1|\\le9.9\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": " against the declared cap "
+        },
+        {
+          "k": "m",
+          "v": "10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ", where "
+        },
+        {
+          "k": "m",
+          "v": "K_{\\mathrm{bot}}"
+        },
+        {
+          "k": "t",
+          "v": " is the inertia-certified true ladder constant ("
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " completed LDL"
+        },
+        {
+          "k": "m",
+          "v": "^{\\mathsf T}"
+        },
+        {
+          "k": "t",
+          "v": " counts of size "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": " per window; count "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " direct spectral count on all "
+        },
+        {
+          "k": "m",
+          "v": "96"
+        },
+        {
+          "k": "t",
+          "v": " pairs): the fixed-size ceiling "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "attains"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the truth, and the size-"
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": " counts are retired from the ceiling step (controls: the parity sines alone overshoot by "
+        },
+        {
+          "k": "m",
+          "v": "41.6"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "739"
+        },
+        {
+          "k": "t",
+          "v": " — T152/T153's "
+        },
+        {
+          "k": "m",
+          "v": "O(m^2)"
+        },
+        {
+          "k": "t",
+          "v": " overshoot reproduced at fixed size — and corrupting the Green columns breaks the attainment on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) The one-direction anatomy (T154) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "(angles measured)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The median of the seven aligned principal angles between the bottom eight of "
+        },
+        {
+          "k": "m",
+          "v": "A"
+        },
+        {
+          "k": "t",
+          "v": " and the bottom eight of "
+        },
+        {
+          "k": "m",
+          "v": "L_P"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "m",
+          "v": "0.03"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.14^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " while the largest is "
+        },
+        {
+          "k": "m",
+          "v": "83.79"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "89.70^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " on every window (Björck–Golub 1973) — the misalignment is carried by "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " nearly orthogonal direction, and that single direction "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the collapse price "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_1(A)/(t\\,\\mu^P_1)=4.408"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "7.042"
+        },
+        {
+          "k": "t",
+          "v": ", recovered in full per window by one completed Cholesky of "
+        },
+        {
+          "k": "m",
+          "v": "A-\\gamma I"
+        },
+        {
+          "k": "t",
+          "v": " (size "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": ", certified, not fixed size, labelled as such); control: "
+        },
+        {
+          "k": "m",
+          "v": "A=L_P"
+        },
+        {
+          "k": "t",
+          "v": " through the same instrument returns "
+        },
+        {
+          "k": "m",
+          "v": "K_{\\mathrm{bot}}=K^F=1"
+        },
+        {
+          "k": "t",
+          "v": " and zero misalignment (deviations "
+        },
+        {
+          "k": "m",
+          "v": "<10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": ", the inertia ladder's backoff step) with the price exactly "
+        },
+        {
+          "k": "m",
+          "v": "1/t"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The no-go discriminator (T154) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " On the T145 no-go reconstruction "
+        },
+        {
+          "k": "m",
+          "v": "c(l)=1/(1+l)"
+        },
+        {
+          "k": "t",
+          "v": " the odd section is positive definite and the Schur floor survives ("
+        },
+        {
+          "k": "m",
+          "v": "t=0.05"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " sizes) but "
+        },
+        {
+          "k": "m",
+          "v": "K_{\\mathrm{bot}}"
+        },
+        {
+          "k": "t",
+          "v": " explodes ("
+        },
+        {
+          "k": "m",
+          "v": "\\times35.4"
+        },
+        {
+          "k": "t",
+          "v": ") and the sixteen-column ceiling explodes "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "with"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " it ("
+        },
+        {
+          "k": "m",
+          "v": "\\times57.5"
+        },
+        {
+          "k": "t",
+          "v": ") over "
+        },
+        {
+          "k": "m",
+          "v": "m=48\\ldots288"
+        },
+        {
+          "k": "t",
+          "v": " — the instrument does not report flatness where flatness is false and manufactures no closure; the Courant–Fischer direction is violated nowhere ("
+        },
+        {
+          "k": "m",
+          "v": "16/16"
+        },
+        {
+          "k": "t",
+          "v": " positive-definite cases); the Dirichlet control (the Hankel half removed, arithmetic kept bit for bit) stops being positive definite — "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_1=-5.60\\ldots-3.55"
+        },
+        {
+          "k": "t",
+          "v": " certified on "
+        },
+        {
+          "k": "m",
+          "v": "3/3"
+        },
+        {
+          "k": "t",
+          "v": " — so no ceiling exists there: the reflection half is load-bearing for positivity."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T154 ("
+            },
+            {
+              "k": "c",
+              "v": "green_align_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "GREEN.ALIGN"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "29/29"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "5.0"
+            },
+            {
+              "k": "t",
+              "v": " s, "
+            },
+            {
+              "k": "m",
+              "v": "12"
+            },
+            {
+              "k": "t",
+              "v": " prime-power windows "
+            },
+            {
+              "k": "m",
+              "v": "h=50\\ldots1077"
+            },
+            {
+              "k": "t",
+              "v": ", verdict ALIGN-RESISTS, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The ceiling half of T153's R2 closes exactly at fixed size ("
+        },
+        {
+          "k": "m",
+          "v": "K^F=1.1019"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.9964"
+        },
+        {
+          "k": "t",
+          "v": " flat, agreement "
+        },
+        {
+          "k": "m",
+          "v": "5.17\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "); the floor half is refuted at fixed size ("
+        },
+        {
+          "k": "m",
+          "v": "\\|R\\|^2/(\\beta\\lambda_1)=6.3\\times10^{3}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5.6\\times10^{9}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "x^{4.50}"
+        },
+        {
+          "k": "t",
+          "v": ") and recovered at full size (one Cholesky per window recovers the whole collapse price "
+        },
+        {
+          "k": "m",
+          "v": "4.408"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "7.985"
+        },
+        {
+          "k": "t",
+          "v": "; per-window end to end "
+        },
+        {
+          "k": "m",
+          "v": "4.45\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.13\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ", inside the target band, while the "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free-in-shape number stays "
+        },
+        {
+          "k": "m",
+          "v": "1.01\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.92\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "); the obstruction is named (seven bottom directions agree to "
+        },
+        {
+          "k": "m",
+          "v": "0.15"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.35^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " median, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " sits at "
+        },
+        {
+          "k": "m",
+          "v": "82.93"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "89.79^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ") and the missing fixed-size ingredient is priced (the "
+        },
+        {
+          "k": "m",
+          "v": "L_P"
+        },
+        {
+          "k": "t",
+          "v": " floor on the Ritz complement, arithmetic-free, flat "
+        },
+        {
+          "k": "m",
+          "v": "5.93"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "8.25\\,\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": ", worth "
+        },
+        {
+          "k": "m",
+          "v": "91"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "100\\%"
+        },
+        {
+          "k": "t",
+          "v": " of the price); the Kato route to R1 fails by the same geometry (loss "
+        },
+        {
+          "k": "m",
+          "v": "1.97"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "121"
+        },
+        {
+          "k": "t",
+          "v": " attained "
+        },
+        {
+          "k": "m",
+          "v": "24.9"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "89.8^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " apart; the Hankel-reflection culprit refuted twice). Two open terms remain (R1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": "/R2"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": ", both uniformity terms); T155 ("
+        },
+        {
+          "k": "c",
+          "v": "bottom_floor_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at exactly those two floors. NOT RH evidence; no marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Docs + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " gains the T154 subsection with the After-T154 keybox, the "
+        },
+        {
+          "k": "c",
+          "v": "v551"
+        },
+        {
+          "k": "t",
+          "v": " entry in the verified layer (now seventeen modules), the phase-2 section retitled T126–T154, the T154 row in the probe index and the updated counters ("
+        },
+        {
+          "k": "m",
+          "v": "154"
+        },
+        {
+          "k": "t",
+          "v": " probes, "
+        },
+        {
+          "k": "m",
+          "v": "3951"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " gain the "
+        },
+        {
+          "k": "c",
+          "v": "v551"
+        },
+        {
+          "k": "t",
+          "v": " companion blocks; "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " gains the Teil-154 entry; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T154 and "
+        },
+        {
+          "k": "c",
+          "v": "v551"
+        },
+        {
+          "k": "t",
+          "v": " feed entries; the prime-front status surfaces move to Teile 11–154 / 3951 checks / 17 modules; suite counter "
+        },
+        {
+          "k": "m",
+          "v": "544\\to545"
+        },
+        {
+          "k": "t",
+          "v": " scripts. T155 ("
+        },
+        {
+          "k": "c",
+          "v": "bottom_floor_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at the two uniformity floors. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RITZ.CEIL.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · V",
     "heading": [
       {

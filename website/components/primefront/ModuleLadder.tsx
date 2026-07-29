@@ -95,12 +95,18 @@ const MODULES = [
     title: "Odd-sector identities · phase 2",
     checks: 19,
   },
+  {
+    id: "v551",
+    claim: "PRIME.RITZ.CEIL.01",
+    title: "Fixed-size Ritz ceiling certificate · phase 2",
+    checks: 16,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 153;
-const SANDBOX_CHECKS = 3922;
+const SANDBOX_PROBES = 154;
+const SANDBOX_CHECKS = 3951;
 
 export function ModuleLadder() {
   return (
@@ -155,8 +161,8 @@ export function ModuleLadder() {
       </div>
 
       <p className="mt-3 text-xs leading-relaxed text-slate-500">
-        Sandbox probes never move a marker; only the fifteen modules above are
-        cited in the papers and the ledger. I5 is an equivalence typing (⟺ Weil
+        Sandbox probes never move a marker; only the seventeen modules above
+        are cited in the papers and the ledger. I5 is an equivalence typing (⟺ Weil
         positivity ⟺ RH), not a proof claim.
       </p>
     </div>

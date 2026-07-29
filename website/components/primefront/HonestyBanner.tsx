@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v550
+          v535–v551
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3922/3922 sandbox checks —
+        (“the full proof”, T126+) is now open with 3951/3951 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -228,9 +228,29 @@ export function HonestyBanner() {
         m-free peeling of at most 8 modes), and the two remaining terms —
         the block inequality and a Green/alignment estimate of two
         inverse-iteration columns, which already yields a flat ceiling on a
-        fixed-size certificate — lose to the same missing object; T154
-        (green_align_probe.py) is running at exactly that estimate. What
-        remains
+        fixed-size certificate — lose to the same missing object. T154
+        (ALIGN-RESISTS) then attacked exactly that estimate, and the
+        ceiling CLOSES exactly at fixed size: the sixteen-column
+        certificate span{"{"}t₁..t₈{"}"} + A⁻¹L_P·span{"{"}t₁..t₈{"}"}{" "}
+        needs no residual argument at all — Ritz values are upper bounds
+        for the eigenvalues of the same index (Courant–Fischer) — and its
+        K^F = 1.1019–1.9964 (flat, x^0.094) agrees with the
+        inertia-certified K_bot to 5.17e-7 on every window, retiring the
+        size-m factorisations from the ceiling step (the T145 no-go
+        confirms the instrument explodes exactly where flatness is false);
+        the obstruction is NAMED — seven of eight bottom directions agree
+        with the parity Laplacian to 0.15–1.35° (median), ONE sits at
+        82.93–89.79°, and that single misalignment IS the collapse price,
+        recovered in full per window by one Cholesky (4.408–7.985):
+        per-window end-to-end moves to 4.45e-2–3.13e-1, inside the target
+        band, while the m-free-in-shape number stays 1.01e-2–3.92e-2 — two
+        numbers, never conflated; both remaining terms are now UNIFORMITY
+        terms with certified per-window numbers (R1′ the m-free block
+        floor λ_min(B_HH), direction-aware; R2′ the m-free bottom-mode
+        floor on the Ritz complement — arithmetic-free, flat 5.93–8.25
+        μᴾ₁, worth 91–100% of the price); the fixed-size certificate core
+        is load-bearing as v551. T155 (bottom_floor_probe.py) is running
+        at exactly those two floors. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

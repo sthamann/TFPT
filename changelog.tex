@@ -62,6 +62,95 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (VI) (\texttt{v551} --- the fixed-size Ritz ceiling certificate of phase 2 promoted; prime-front diary T154 (the ceiling closes exactly at fixed size, ALIGN-RESISTS) + paper + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v551} (\texttt{PRIME.RITZ.CEIL.01}).} Promotion of the
+certificate core of the discovery part T154 (\texttt{green\_align\_probe.py}) --- $16$ checks,
+${\sim}0.4$\,s, everything recomputed on small frame-A windows, nothing cited from the sandbox;
+the companion to \texttt{v550}, which certified the bottom ladder
+$\lambda_k(A)\le S\mu^P_k$ by per-window LDL$^{\mathsf T}$ counts of \emph{size $m$} --- this
+module certifies the \emph{fixed-size} replacement T154 found for the ceiling step. Scope
+fence: per-instance theorems with checked hypotheses and per-window \emph{certified}
+inequalities --- no fit, no $D$-exponent, no zone-uniform statement, and explicitly \emph{no
+statement for all $D$} (the two open inputs after T154 --- R1$'$, an $m$-free floor for
+$\lambda_{\min}(B_{HH})$ on the bulk parity block, and R2$'$, an $m$-free lower bound for the
+$L_P$ floor on the complement of the eight bottom Ritz directions --- stay open and typed
+open; every floor consumed is a per-window certificate of size $m$). Battery: the $12$
+\emph{deepest} prime-power zones admitting a frame-A window inside the cap ($n=29\ldots139$,
+$m=96\ldots291\le300$, $D=7.248\times10^{-3}\ldots1.815\times10^{-2}$ --- mirroring T154's own
+surface selection, declared rather than tuned: on the shallowest zones $n\le11$ more than one
+bottom direction leaves the sine block and the fixed-depth certificate is \emph{not} claimed
+there), a no-go size ladder $m=48\ldots288$, parity controls at $m=64,128,256$, and $3$
+Dirichlet control windows; each statement carries a mutation control that must fail by
+$\ge10^{-3}$.
+\item \textbf{(1) The direction lemma (T154) \mE.} For orthonormal $Q$ and
+$W=Q^{\mathsf T}AQ$, $\lambda_k(A)\le\theta_k$ for \emph{every} $k\le\dim$ --- Ritz values are
+\emph{upper} bounds for the eigenvalues of the \emph{same index} (Courant--Fischer 1920 /
+Cauchy 1829), verified against the exact spectrum on the certificate subspace of every window
+and on $24$ random subspaces (one-sided excess $0.0$) --- so the fixed-size ceiling needs
+\emph{no} residual argument at all; Temple 1928 / Kato 1949 is a floor device and is used
+nowhere in the module. Negative control: the \emph{reversed} reading (Ritz values as lower
+bounds) is recognised as false on $12/12$ windows, $\theta_k$ overshooting $\lambda_k$ by a
+factor $\ge18.6$ somewhere on every window.
+\item \textbf{(2) The sixteen-column certificate (T154) \mE.}
+$\mathrm{span}\{t_1..t_8\}+A^{-1}L_P\,\mathrm{span}\{t_1..t_8\}$ has \emph{fixed} dimension
+$16$, independent of $m$ (one Green step by Cholesky back-solves, no inverse formed), and its
+ceiling $K^F=\max_k\theta_k/\mu^P_k$ ($8$ completed Choleskys of matrices $\le8\times8$)
+equals $1.1019$--$1.5845$ with $K^F\ge\max_k\lambda_k/\mu^P_k$ on every window \emph{and}
+$|K^F/K_{\mathrm{bot}}-1|\le9.9\times10^{-7}$ against the declared cap $10^{-4}$ on $12/12$,
+where $K_{\mathrm{bot}}$ is the inertia-certified true ladder constant ($8$ completed
+LDL$^{\mathsf T}$ counts of size $m$ per window; count $=$ direct spectral count on all $96$
+pairs): the fixed-size ceiling \emph{attains} the truth, and the size-$m$ counts are retired
+from the ceiling step (controls: the parity sines alone overshoot by $41.6$--$739$ ---
+T152/T153's $O(m^2)$ overshoot reproduced at fixed size --- and corrupting the Green columns
+breaks the attainment on $12/12$).
+\item \textbf{(3) The one-direction anatomy (T154) \mE\ (angles measured).} The median of the
+seven aligned principal angles between the bottom eight of $A$ and the bottom eight of $L_P$
+is $0.03$--$0.14^\circ$ while the largest is $83.79$--$89.70^\circ$ on every window
+(Bj\"orck--Golub 1973) --- the misalignment is carried by \emph{one} nearly orthogonal
+direction, and that single direction \emph{is} the collapse price
+$\lambda_1(A)/(t\,\mu^P_1)=4.408$--$7.042$, recovered in full per window by one completed
+Cholesky of $A-\gamma I$ (size $m$, certified, not fixed size, labelled as such); control:
+$A=L_P$ through the same instrument returns $K_{\mathrm{bot}}=K^F=1$ and zero misalignment
+(deviations $<10^{-5}$, the inertia ladder's backoff step) with the price exactly $1/t$.
+\item \textbf{(4) The no-go discriminator (T154) \mE.} On the T145 no-go reconstruction
+$c(l)=1/(1+l)$ the odd section is positive definite and the Schur floor survives ($t=0.05$ on
+all $4$ sizes) but $K_{\mathrm{bot}}$ explodes ($\times35.4$) and the sixteen-column ceiling
+explodes \emph{with} it ($\times57.5$) over $m=48\ldots288$ ---
+the instrument does not report flatness where flatness is false and manufactures no closure;
+the Courant--Fischer direction is violated nowhere ($16/16$ positive-definite cases); the
+Dirichlet control (the Hankel half removed, arithmetic kept bit for bit) stops being positive
+definite --- $\lambda_1=-5.60\ldots-3.55$ certified on $3/3$ --- so no ceiling exists there:
+the reflection half is load-bearing for positivity.
+\item \textbf{Prime-front diary T154 (\texttt{green\_align\_probe.py}, contract
+\texttt{GREEN.ALIGN}, $29/29$, $5.0$\,s, $12$ prime-power windows $h=50\ldots1077$, verdict
+ALIGN-RESISTS, sandbox).} The ceiling half of T153's R2 closes exactly at fixed size
+($K^F=1.1019$--$1.9964$ flat, agreement $5.17\times10^{-7}$ on $12/12$); the floor half is
+refuted at fixed size ($\|R\|^2/(\beta\lambda_1)=6.3\times10^{3}$--$5.6\times10^{9}$,
+$x^{4.50}$) and recovered at full size (one Cholesky per window recovers the whole collapse
+price $4.408$--$7.985$; per-window end to end $4.45\times10^{-2}$--$3.13\times10^{-1}$, inside
+the target band, while the $m$-free-in-shape number stays
+$1.01\times10^{-2}$--$3.92\times10^{-2}$); the obstruction is named (seven bottom directions
+agree to $0.15$--$1.35^\circ$ median, \emph{one} sits at $82.93$--$89.79^\circ$) and the
+missing fixed-size ingredient is priced (the $L_P$ floor on the Ritz complement,
+arithmetic-free, flat $5.93$--$8.25\,\mu^P_1$, worth $91$--$100\%$ of the price); the Kato
+route to R1 fails by the same geometry (loss $1.97$--$121$ attained $24.9$--$89.8^\circ$
+apart; the Hankel-reflection culprit refuted twice). Two open terms remain (R1$'$/R2$'$, both
+uniformity terms); T155 (\texttt{bottom\_floor\_probe.py}) is running at exactly those two
+floors. NOT RH evidence; no marker moves.
+\item \textbf{Docs + website sync.} \texttt{tfpt\_prime\_front} gains the T154 subsection with
+the After-T154 keybox, the \texttt{v551} entry in the verified layer (now seventeen modules),
+the phase-2 section retitled T126--T154, the T154 row in the probe index and the updated
+counters ($154$ probes, $3951$ checks); \texttt{tfpt\_1}, \texttt{tfpt\_3} and
+\texttt{tfpt\_research\_contracts} gain the \texttt{v551} companion blocks;
+\texttt{experiments/next.txt} gains the Teil-154 entry;
+\texttt{website/lib/primeFront.ts} gains the T154 and \texttt{v551} feed entries; the
+prime-front status surfaces move to Teile 11--154 / 3951 checks / 17 modules; suite counter
+$544\to545$ scripts. T155 (\texttt{bottom\_floor\_probe.py}) is running at the two uniformity
+floors. Ledger row \texttt{PRIME.RITZ.CEIL.01} \mE; \textbf{no marker of any pre-existing
+contract moves}.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (V) (\texttt{v550} --- the odd-sector identities of phase 2 promoted; prime-front diary T151 (the one inequality closes by rerouting off the ladder, ODD-CARRIES) + paper + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v550} (\texttt{PRIME.ODD.SECTOR.IDENT.01}).} Promotion of the

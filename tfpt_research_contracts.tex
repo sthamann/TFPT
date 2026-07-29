@@ -3022,6 +3022,76 @@ moves.
 Machine-checked: \veri{v550\_odd\_sector\_identities.py}.
 \mE\ (per-instance identities and certified inequalities)
 
+\par\smallskip\noindent\textbf{\texttt{PRIME.RITZ.CEIL.01} --- the
+fixed-size Ritz ceiling certificate of phase 2 (T154).}
+\emph{(1)} The direction lemma: for orthonormal $Q$ and
+$W=Q^{\mathsf T}AQ$, $\lambda_k(A)\le\theta_k$ for \emph{every}
+$k\le\dim$ --- Ritz values are \emph{upper} bounds for the eigenvalues of
+the \emph{same index} (Courant--Fischer 1920 / Cauchy 1829), verified
+against the exact spectrum on the certificate subspace of every window
+and on $24$ random subspaces (one-sided excess $0.0$) --- so the
+fixed-size ceiling needs \emph{no} residual argument; Temple 1928 / Kato
+1949 is a floor device and is used nowhere in the module (control: the
+reversed reading is recognised as false on $12/12$ windows, $\theta_k$
+overshooting $\lambda_k$ by $\ge18.6$ somewhere on every window).
+\emph{(2)} The sixteen-column certificate:
+$\mathrm{span}\{t_1..t_8\}+A^{-1}L_P\,\mathrm{span}\{t_1..t_8\}$ has
+fixed dimension $16$, independent of $m$ (one Green step by Cholesky
+back-solves, no inverse formed), and its ceiling
+$K^F=\max_k\theta_k/\mu^P_k$ ($8$ completed Choleskys of matrices
+$\le8\times8$) equals $1.1019$--$1.5845$ with
+$K^F\ge\max_k\lambda_k/\mu^P_k$ on every window and
+$|K^F/K_{\mathrm{bot}}-1|\le9.9\times10^{-7}$ against the declared cap
+$10^{-4}$ on $12/12$ ($K_{\mathrm{bot}}$ the inertia-certified true
+ladder constant, count $=$ direct count on all $96$ pairs): the
+fixed-size ceiling \emph{attains} the truth, retiring the size-$m$
+LDL$^{\mathsf T}$ counts from the ceiling step (controls: the parity
+sines alone overshoot $41.6$--$739$; corrupting the Green columns breaks
+the attainment on $12/12$; Kaniel 1966 / Paige 1971 quoted as the
+mechanism, never used as a bound). \emph{(3)} The one-direction anatomy
+(angles measured, Bj\"orck--Golub 1973): the median of the seven aligned
+angles between the bottom eight of $A$ and the bottom eight of $L_P$ is
+$0.03$--$0.14^\circ$ while the largest is $83.79$--$89.70^\circ$ on every
+window of the battery (the $12$ deepest in-cap frame-A windows,
+$n=29\ldots139$, $m=96\ldots291\le300$ --- declared, not tuned) --- the
+misalignment is carried by \emph{one} nearly orthogonal direction, and
+that direction \emph{is} the collapse price
+$\lambda_1(A)/(t\,\mu^P_1)=4.408$--$7.042$, recovered in full per window
+by one completed Cholesky of $A-\gamma I$ (size $m$, certified, not
+fixed size, labelled as such; control: $A=L_P$ returns
+$K_{\mathrm{bot}}=K^F=1$, zero misalignment, price exactly $1/t$).
+\emph{(4)} The no-go discriminator: on the T145 reconstruction
+$c(l)=1/(1+l)$ the odd section is positive definite and the Schur floor
+survives ($t=0.05$ on all $4$ sizes) but $K_{\mathrm{bot}}$ explodes
+($\times35.4$) and the sixteen-column ceiling explodes \emph{with} it
+($\times57.5$) over $m=48\ldots288$ --- no manufactured closure; the
+Courant--Fischer direction is violated nowhere ($16/16$); the Dirichlet
+control (the Hankel half removed, arithmetic kept bit for bit) stops
+being positive definite ($\lambda_1=-5.60\ldots-3.55$ certified on
+$3/3$) --- the reflection half is load-bearing for positivity.
+\textbf{Named limits as load-bearing content:} per instance on small
+windows --- a finite list of certified window inequalities with an
+explicit maximum; nothing uniform in the zone index or in $D$, and
+explicitly \emph{no} statement for all $D$; the attainment is exhibited
+per window and \emph{not} promoted to a theorem (T154's no-go stress
+shows the certificate overshoots there by $1.12$--$2.19$ --- a property
+of the real section, not of the instrument); the two open inputs after
+T154 (R1$'$, an $m$-free floor for $\lambda_{\min}(B_{HH})$ on the bulk
+parity block; R2$'$, an $m$-free lower bound for the $L_P$ floor on the
+complement of the eight bottom Ritz directions --- arithmetic-free,
+worth $91$--$100\%$ of the collapse price) stay \emph{open}, typed open;
+every floor consumed is certified per window at size $m$;
+\texttt{PRIME.ODD.SECTOR.IDENT.01}'s ladder stays as stated and nothing
+is re-opened. Fences: Courant--Fischer 1920 / Cauchy 1829 /
+Kac--Murdock--Szeg\H{o} 1953 / Schur 1917--Haynsworth 1968 / Sylvester
+1852--Bunch--Kaufman 1977 / Weyl 1912 / Temple 1928--Kato 1949 (a floor
+device, not used here) / Kaniel 1966--Paige 1971 (quoted, never a bound)
+/ Bj\"orck--Golub 1973 / Wilkinson 1968--Higham 2002 / Chebyshev 1852
+named classical; Weil 1952 cited, never used as a criterion;
+zero-firewall AST-checked; no marker moves.
+Machine-checked: \veri{v551\_ritz\_ceiling\_certificate.py}.
+\mE\ (per-instance theorems and certified inequalities)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

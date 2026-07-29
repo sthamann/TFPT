@@ -1011,6 +1011,47 @@ Hardy--Littlewood--P\'olya 1934--Agmon 1965 / Sylvester
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The fixed-size Ritz ceiling certificate
+(\texttt{PRIME.RITZ.CEIL.01}).}
+The certificate core of T154 as the ninth companion module
+(\veri{v551\_ritz\_ceiling\_certificate.py}; $16$ checks, ${\sim}0.4$\,s)
+on the $12$ deepest in-cap frame-A windows ($n=29\ldots139$,
+$m=96\ldots291\le300$; a no-go size ladder $m=48\ldots288$; parity
+controls $m=64\ldots256$; $3$ Dirichlet control windows) --- the
+fixed-size replacement for the ceiling step, certified: the direction
+lemma ($\lambda_k(A)\le\theta_k$ for every $k\le\dim$ --- Ritz values are
+upper bounds of the same-index eigenvalues, Courant--Fischer 1920 /
+Cauchy 1829, verified against exact spectra; the reversed reading refuted
+on $12/12$ --- so the ceiling needs no residual argument); the
+sixteen-column certificate
+$\mathrm{span}\{t_1..t_8\}+A^{-1}L_P\,\mathrm{span}\{t_1..t_8\}$
+(dimension $16$ fixed, independent of $m$; $8$ completed Choleskys
+$\le8\times8$) with $K^F=1.1019$--$1.5845$ attaining the
+inertia-certified $K_{\mathrm{bot}}$ to $\le9.9\times10^{-7}$ against the
+declared cap $10^{-4}$ on $12/12$ --- the size-$m$ LDL$^{\mathsf T}$
+counts retired from the ceiling step (sines alone overshoot
+$41.6$--$739$; corrupted Green columns break the attainment); the
+one-direction anatomy (median of the seven aligned angles
+$0.03$--$0.14^\circ$ against the largest $83.79$--$89.70^\circ$; the
+collapse price $\lambda_1(A)/(t\,\mu^P_1)=4.408$--$7.042$ recovered in
+full per window by one Cholesky, size $m$, labelled as such); and the
+no-go discriminator (the floor survives at $t=0.05$ while
+$K_{\mathrm{bot}}$ explodes $\times35.4$ and the ceiling with it
+$\times57.5$; the Dirichlet control certified non-positive on $3/3$ ---
+the reflection half is load-bearing for positivity).
+\textbf{Named limits as content:} per instance on small windows, nothing
+uniform in the zone index or in $D$, and explicitly no statement for all
+$D$ --- the attainment is not promoted to a theorem (the no-go
+overshoots), and the two open inputs after T154 (R1$'$ the $m$-free block
+floor, R2$'$ the $m$-free bottom-mode floor on the Ritz complement,
+arithmetic-free and worth $91$--$100\%$ of the price) stay open, typed
+open. Courant--Fischer 1920--Cauchy 1829 / KMS 1953 / Schur
+1917--Haynsworth 1968 / Sylvester 1852--Bunch--Kaufman 1977 / Temple
+1928--Kato 1949 (a floor device, not used here) / Kaniel 1966--Paige 1971
+(quoted, never a bound) / Bj\"orck--Golub 1973 named classical.
+\mE\ (per-instance theorems and certified inequalities; no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

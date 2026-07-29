@@ -1398,6 +1398,62 @@ Machine-checked:
 \veri{v550\_odd\_sector\_identities.py}.
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 
+\par\smallskip\noindent\textbf{The fixed-size Ritz ceiling certificate
+(\texttt{PRIME.RITZ.CEIL.01}).}
+The certificate core of T154 is load-bearing as the ninth companion module
+($16$ checks, ${\sim}0.4$\,s) on the $12$ \emph{deepest} prime-power zones
+admitting a frame-A window inside the cap ($n=29\ldots139$,
+$m=96\ldots291\le300$ --- declared, not tuned: on the shallowest zones
+$n\le11$ more than one bottom direction leaves the sine block and the
+fixed-depth certificate is not claimed there), a no-go size ladder
+$m=48\ldots288$, parity controls at $m=64,128,256$ and $3$ Dirichlet
+control windows --- the companion to the odd-sector module: here the
+\emph{fixed-size} replacement for the ceiling step is certified.
+\emph{The direction lemma.} $\lambda_k(A)\le\theta_k$ for every
+$k\le\dim$ --- Ritz values are upper bounds for the eigenvalues of the
+\emph{same index} (Courant--Fischer 1920 / Cauchy 1829), verified against
+exact spectra with zero one-sided excess --- so the ceiling needs
+\emph{no} residual argument; the reversed reading is refuted on $12/12$
+(overshoot $\ge18.6$).
+\emph{The sixteen-column certificate.}
+$\mathrm{span}\{t_1..t_8\}+A^{-1}L_P\,\mathrm{span}\{t_1..t_8\}$ (dimension
+$16$ fixed, independent of $m$; $8$ completed Choleskys of matrices
+$\le8\times8$) carries $K^F=1.1019$--$1.5845$ attaining the
+inertia-certified $K_{\mathrm{bot}}$ to $\le9.9\times10^{-7}$ against the
+declared cap $10^{-4}$ on $12/12$ --- the $8$ size-$m$
+LDL$^{\mathsf T}$ counts retired from the ceiling step (controls: the
+sines alone overshoot $41.6$--$739$; corrupted Green columns break the
+attainment on $12/12$).
+\emph{The one-direction anatomy.} Median of the seven aligned angles
+$0.03$--$0.14^\circ$, the largest $83.79$--$89.70^\circ$ (measured): the
+single misaligned direction \emph{is} the collapse price
+$\lambda_1(A)/(t\,\mu^P_1)=4.408$--$7.042$, recovered in full per window
+by one Cholesky of $A-\gamma I$ (size $m$, certified, not fixed size).
+\emph{The no-go discriminator.} On the T145 reconstruction
+$c(l)=1/(1+l)$ the floor survives ($t=0.05$) but $K_{\mathrm{bot}}$
+explodes $\times35.4$ and the ceiling explodes with it $\times57.5$ ---
+no manufactured closure; the Dirichlet control (the Hankel half removed)
+is certified non-positive on $3/3$: the reflection half is load-bearing
+for positivity.
+\textbf{Named limits as content:} per instance on small windows --- a
+finite list with an explicit maximum; nothing uniform in the zone index
+or in $D$, and explicitly \emph{no} statement for all $D$; the attainment
+is not promoted to a theorem (the no-go overshoots --- it is a property
+of the real section); the two open inputs after T154 (R1$'$, an $m$-free
+floor for $\lambda_{\min}(B_{HH})$ on the bulk parity block; R2$'$, an
+$m$-free lower bound for the $L_P$ floor on the Ritz complement,
+arithmetic-free and worth $91$--$100\%$ of the collapse price) stay open,
+typed open.
+Courant--Fischer 1920--Cauchy 1829 / KMS 1953 / Schur 1917--Haynsworth
+1968 / Sylvester 1852--Bunch--Kaufman 1977 / Weyl 1912 / Temple
+1928--Kato 1949 (a floor device, not used here) / Kaniel 1966--Paige 1971
+(quoted, never a bound) / Bj\"orck--Golub 1973 / Wilkinson 1968--Higham
+2002 / Chebyshev 1852 named classical; Weil 1952 cited, never used as a
+criterion.
+Machine-checked:
+\veri{v551\_ritz\_ceiling\_certificate.py}.
+\mE\ (per-instance theorems and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:
