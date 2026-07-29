@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`548` registered scripts · `619` ledger claims · `10` clusters.
+`549` registered scripts · `620` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (81 scripts)
+### `core` — Compiler core & the E₈ glue  (82 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -173,6 +173,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v552_angle_instruments, v551_ritz_ceiling_certificate, v552, T158, T159 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v554_sampling_harmonics_identities** [E/O] `PRIME.SAMPLING.HARM.01` — the closed theorem cores of T160+T161 recomputed on small frame-A windows (the 12 deepest in-cap zones n = 29…139, m = 96…291 ≤ 300 — v551…v553's declared surface — plus a declared
   - deps: v553_exact_form_identities, v552_angle_instruments, v553, T160, T161 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v555_pareto_tv_identities** [E/O] `PRIME.PARETO.TV.01` — the closed theorem cores of T162+T163 recomputed on small frame-A windows (the 12 deepest in-cap zones n = 29…139, m = 96…291 ≤ 300 — v551…v554's declared surface — with the one ar
+  - deps: v554_sampling_harmonics_identities, v553_exact_form_identities, v554, T162, T163 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1167,7 +1169,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v543_lumped_pair_identities** — `PRIME.MMATRIX.IDENT.01`
 - **v544_long_lag_support** — `PRIME.LONGLAG.SUPP.01`
 - **v545_hardy_core_identities** — `PRIME.HARDY.IDENT.01`
 - **v546_capacity_chain_identities** — `PRIME.CAPCHAIN.IDENT.01`
@@ -1179,4 +1180,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v552_angle_instruments** — `PRIME.ANGLE.INSTR.01`
 - **v553_exact_form_identities** — `PRIME.EXACT.FORM.IDENT.01`
 - **v554_sampling_harmonics_identities** — `PRIME.SAMPLING.HARM.01`
+- **v555_pareto_tv_identities** — `PRIME.PARETO.TV.01`
 

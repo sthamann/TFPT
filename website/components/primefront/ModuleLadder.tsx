@@ -119,12 +119,18 @@ const MODULES = [
     title: "Sampling/harmonics identities · phase 2",
     checks: 21,
   },
+  {
+    id: "v555",
+    claim: "PRIME.PARETO.TV.01",
+    title: "Pareto/total-variation identities · phase 2",
+    checks: 23,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 162;
-const SANDBOX_CHECKS = 4235;
+const SANDBOX_PROBES = 163;
+const SANDBOX_CHECKS = 4267;
 
 export function ModuleLadder() {
   return (

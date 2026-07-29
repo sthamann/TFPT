@@ -62,6 +62,115 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (X) (\texttt{v555} --- the Pareto/total-variation identities of phase 2 promoted; prime-front diary T163 (the front resists as a theorem --- the $h^2$ is the parity spectral gap, not the primes, FRONT-RESISTS) + paper + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v555} (\texttt{PRIME.PARETO.TV.01}).} Promotion of
+the closed theorem cores of the discovery parts T162 (\texttt{third\_split\_probe.py})
+and T163 (\texttt{pareto\_front\_probe.py}) --- $23$ checks, ${\sim}0.4$\,s, everything
+recomputed on \texttt{v551}--\texttt{v554}'s declared surface (the $12$ deepest
+prime-power zones admitting a frame-A window inside the cap, $n=29\ldots139$,
+$m=96\ldots291\le300$), with the one arithmetic input $\kappa=0.038821$
+\emph{verified} at every jump point of $\psi(x)/x$ on the von-Mangoldt table in
+$[100,3.2\times10^{5}]$ (Chebyshev 1852 / Rosser--Schoenfeld 1962, reproduced to
+$4.2\times10^{-7}$), nothing cited from the sandbox; the companion to \texttt{v554},
+which certified what the sixteen-form \emph{pairs against} --- this module certifies
+the \emph{price structure} of that pairing. Scope fence: per-instance identities and
+certified inequalities with the direction in the name --- no fit, no $D$-exponent, no
+zone-uniform statement; the T163 $h$-exponents ($P_{\mathrm{aff}}\sim h^{3.05}$,
+$P_{\mathrm{cross}}\sim h^{1.91}$, the TV exponent $\sim h^{2.00}$) are sandbox fits
+and are \emph{not} consumed; finite $\Lambda$-sums are allowed and used, \emph{no RH
+statement} is made ($\tfrac12$ appears in exactly one role: as the strength of a
+classical statement a required depth is compared against); the open terms after T163
+(R-E the successor with both arms prime-free; R-B$'''$ the $h$-uniform positivity
+margin; R-D a fifth R1$''$ device) stay open and typed open; each statement carries at
+least one mutation control that must fail loudly.
+\item \textbf{(1) The exchange law and the crossing criterion (T163, R1.2) \mE.}
+$\delta_{\mathrm{bnd}}(x)=\tfrac12+\log(2\kappa\,g_{16}\,\mathrm{TV}(x)/P(x))/\log X$
+is an \emph{identity} at all $612$ grid points of the declared Fej\'er knob ($50$
+geometric $\sigma$ on $[1,4096]$ plus $\infty$, $12$ windows; $5.1\times10^{-16}$
+relative, admissibility $Q(x)>0$ everywhere), and the crossing criterion
+$\delta_{\mathrm{bnd}}<\tfrac12\iff P>2\kappa g_{16}\mathrm{TV}$ holds as an exact
+equivalence at every point --- price and demand are two coordinates of \emph{one}
+object. Mutation: the wrong constant moves the law by $6.5\times10^{-2}$--$3.4$.
+\item \textbf{(2) The total-variation floor (T163, R2.2) \mE.} (T1)
+$w_0(x)=\|a(x)\|^2$ ($4.9\times10^{-16}$); (T2) $\mathrm{TV}(x)\ge|w_0(x)|$ by
+telescoping with $w_M=0$; (T3) $x_1=1$ forces $\|a\|^2\ge1/\mu^P_1$, hence
+$\mu^P_1\,\mathrm{TV}(x)=5.00$--$28.84\ge1$ on all $708$ trial vectors built, against
+the closed floor $1/\mu^P_1=1/(4\sin^2(\pi/N))=943.6$--$8609.6\sim h^2$; (T4) every
+sub-$\tfrac12$ grid point pays $P>2\kappa g_{16}/\mu^P_1=15.4$--$142.8$ (all $54$
+respect it) --- a flat-price sub-$\tfrac12$ demand is impossible in the parity sector
+on this surface: \textbf{R-C$'''$ is closed negatively, by an inequality}. Negative
+control: the \emph{inadmissible} vector $0.01x^*$ undercuts the floor
+($2.5$--$2.9\times10^{-3}$) and is recognised --- the floor is a property of the
+normalisation meeting the smallest parity eigenvalue (Kac--Murdock--Szeg\H{o} 1953).
+\item \textbf{(3) The chain-derived price axis (T163, R1.0) \mE.} $\sigma=1$ gives
+$x=e_1$ exactly with $P=g_{16}/g_1$ (the $K=1$ rung of the T158 Cholesky ladder, the
+T157 route-(0) certificate; $4.1\times10^{-16}$), $\sigma=\infty$ gives
+$g_{16}Q(x^*)=1$ (the $K=16$ top rung; $1.2\times10^{-12}$); the ladder carries all
+$16$ terms strictly positive with monotone partial sums, the knob is monotone in both
+coordinates on every window (the knob curve \emph{is} the Pareto front). Mutation: a
+corrupted sixteen-block makes the Cholesky \emph{refuse} on $12/12$.
+\item \textbf{(4) The Mellin cell moments and the Abel step (T162, C2/C5) \mE.} The
+$k$-th Mellin rung $\sum_dw_dC_d(-(2k+\tfrac12))$ with $C_d(s)$ the closed tent
+integral (Mellin 1896) agrees with an independent per-cell Gauss--Legendre quadrature
+to $2.8\times10^{-13}$ on every rung $k=1\ldots4$ (shifted tent centres break by
+$\ge1.3\times10^{-2}$); the boundary-free Abel identities hold at levels $k=1\ldots3$
+($8.3\times10^{-17}$; Abel 1826), the dropped-boundary level-$1$ form agrees because
+the gauge identity kills the boundary term exactly, the optimal level is \emph{one}
+for T162's closed reason ($32\pi/\alpha=40.6$--$59.4>1$, measured ratio
+$30.8$--$69.1$), and a gauge violation breaks by its closed prediction $v_0c_0M$ to
+$1.2\times10^{-15}$ (the positive control).
+\item \textbf{(5) The Lerch/Frullani log-moment (T162, R-A$'$) \mE.}
+$L=\sum_d\Psi_dw_d$ agrees on three routes per window: direct; double-Abel \emph{with}
+the Wronskian boundary term ($2.8\times10^{-14}$; dropping it breaks by
+$2.2\times10^{-4}$--$1.3\times10^{-2}$); the Lerch/Frullani integral with the $d=1$
+term peeled closed ($1.8\times10^{-15}$) --- the peel constant $2\log2$ reproduced to
+$2.2\times10^{-16}$ and $\Psi_1=-\log2$ exactly (Frullani 1828 / Lerch 1887 / Clausen
+1832). Plus the monotone no-go staircase (damage $1.00\to3.49\to10.81\to24.98$ over
+$\nu=4/2/1/0.5$, exact null control) and exact Dirichlet/parity controls.
+\item \textbf{Prime-front diary T163 (\texttt{pareto\_front\_probe.py}, contract
+\texttt{PARETO.FRONT}, $32/32$, $1.9$\,s, $28$ log-spaced prime-power zones
+$h=142\ldots1445$ with declared caps, $27$ windows inside the cond horizon, verdict
+FRONT-RESISTS, sandbox).} The survey of the Pareto front, and the front resists
+\emph{as a theorem}: the price axis is chain-derived ($P_{\mathrm{aff}}=g_{16}B_{11}
+\sim h^{+3.049}$, the T157 route-(0) certificate), the Fej\'er knob has both endpoints
+in the chain and is measured monotone in both coordinates (the knob curve \emph{is}
+the front), no flat price crosses the yardstick ($0/27$ at caps $1.25/2/10$ and every
+flat rung tier; only the full $P_{\mathrm{aff}}$ reaches $27/27$), the crossing price
+$P_{\mathrm{cross}}\sim h^{+1.906}$ sits at $0.0066$--$0.2047$ of $P_{\mathrm{aff}}$
+--- $5$--$152\times$ strictly inside the already-accepted certificate, margin widening
+--- and the price anatomy is an \emph{identity}:
+$\delta_{\mathrm{bnd}}=\tfrac12+\log(2\kappa g_{16}\mathrm{TV}/P)/\log X$ exactly at
+all $27\times50$ grid points, the crossing exponent decomposing additively (TV
+$+2.013$, $g_{16}$ $-0.061$). The four-line theorem (T1--T4) gives every admissible
+trial vector the total-variation floor $\mathrm{TV}\ge1/\mu^P_1\sim h^2$ (verified on
+all $1674$ built, slack $5.0$--$23.2$), so the crossing price is bounded below by a
+quantity growing like $h^2$: the $h^{2.86}$ of T162, the $h^{1.91}$ of the crossing
+and T161's granularity are \emph{all} the reciprocal smallest parity eigenvalue ---
+\textbf{the spectral gap of the parity Laplacian meeting the entry normalisation
+$x_1=1$: it was never in the primes}. The mode sweep $K=16\to64$ confirms it from the
+other side (price dividend, worse demand, TV exponent unmoved at $h^{+1.81}$); R-B$''$
+reduces to an $h$-uniformity question (the chain never needed the sign: duality plus
+an evaluated number, headroom $\ge10^{14.9}$); R-D is a type mismatch (operator
+smoothing degrades the floor by the same $h^2$). Balance $11/1/4/10$, zero fit rows.
+T164 (\texttt{sector\_change\_probe.py}), running, tests the successor R-E. NOT RH
+evidence; no marker moves.
+\item \textbf{Docs + website sync.} \texttt{tfpt\_prime\_front} gains the T163
+subsection with the exchange-law display, the T1--T4 floor theorem as the key result,
+the chain-derived price axis, the monotone no-go staircase and the After-T163 keybox
+(R-E/R-B$'''$/R-D, T164 running), the \texttt{v555} subsection in the verified layer
+(now twenty-one modules), the phase-2 section retitled T126--T163, the T163 row in the
+probe index and the updated counters ($163$ probes, $4267$ checks);
+\texttt{tfpt\_1}, \texttt{tfpt\_3} and \texttt{tfpt\_research\_contracts} gain the
+\texttt{v555} companion blocks; \texttt{experiments/next.txt} gains the Teil-163
+entry; \texttt{website/lib/primeFront.ts} gains the T163 and \texttt{v555} feed
+entries; the prime-front status surfaces move to Teile 11--163 / $4267$ checks / 21
+modules (\texttt{v535}--\texttt{v555}); suite counter $548\to549$ scripts. T164
+(\texttt{sector\_change\_probe.py}) is running at the sector-change successor. Ledger
+row \texttt{PRIME.PARETO.TV.01} \mE; \textbf{no marker of any pre-existing contract
+moves}.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (IX) (\texttt{v554} --- the sampling/harmonics identities of phase 2 promoted; prime-front diary T161 (the circularity triage: the hardness sits in the split, not in the primes, CLOSURE-RESISTS) + paper + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v554} (\texttt{PRIME.SAMPLING.HARM.01}).} Promotion of

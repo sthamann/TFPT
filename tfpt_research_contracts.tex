@@ -3331,6 +3331,102 @@ criterion; zero-firewall AST-checked; no marker moves.
 Machine-checked: \veri{v554\_sampling\_harmonics\_identities.py}.
 \mE\ (per-instance identities and certified inequalities)
 
+\par\smallskip\noindent\textbf{The Pareto/total-variation identities
+(\texttt{PRIME.PARETO.TV.01}).}
+The closed theorem cores of the discovery parts T162 and T163,
+recomputed on the same declared surface as
+\texttt{PRIME.SAMPLING.HARM.01} (the $12$ deepest in-cap frame-A
+windows, $n=29\ldots139$, $m=96\ldots291\le300$), with the one
+arithmetic input $\kappa=0.038821$ \emph{verified} at every jump point
+of $\psi(x)/x$ on the von-Mangoldt table in $[100,3.2\times10^{5}]$
+(reproduced to $4.2\times10^{-7}$; each statement with at least one
+mutation control that must fail loudly) --- the \emph{price structure}
+of the pairing, and it closes no open term beyond the negative closure
+that the floor inequality itself is. \emph{(1)} The exchange law and
+the crossing criterion:
+$\delta_{\mathrm{bnd}}(x)=\tfrac12+\log(2\kappa\,g_{16}\,
+\mathrm{TV}(x)/P(x))/\log X$ is an identity at all $612$ grid points of
+the declared Fej\'er knob ($50$ geometric $\sigma$ on $[1,4096]$ plus
+$\infty$; $5.1\times10^{-16}$ relative, admissibility $Q(x)>0$
+everywhere), and $\delta_{\mathrm{bnd}}<\tfrac12\iff
+P>2\kappa g_{16}\mathrm{TV}$ holds as an exact equivalence at every
+point --- price and demand are two coordinates of \emph{one} object;
+mutation: the wrong constant ($\kappa$ for $2\kappa$) moves the law by
+$6.5\times10^{-2}$--$3.4$. \emph{(2)} The total-variation floor --- the
+theorem that carries the T163 verdict: (T1) $w_0(x)=\|a(x)\|^2$
+($4.9\times10^{-16}$; orthonormal parity rows); (T2)
+$\mathrm{TV}(x)\ge|w_0(x)|$ by telescoping with $w_M=0$; (T3) $x_1=1$
+forces $\|a\|^2\ge1/\mu^P_1$, hence
+$\mu^P_1\mathrm{TV}(x)=5.00$--$28.84\ge1$ on all $708$ trial vectors
+built ($51$ knob settings plus $8$ random admissible sixteen-vectors
+per window), the closed floor
+$1/\mu^P_1=1/(4\sin^2(\pi/N))=943.6$--$8609.6\sim h^2$; (T4) every
+sub-$\tfrac12$ grid point pays
+$P>2\kappa g_{16}/\mu^P_1=15.4$--$142.8$ (all $54$ respect it) --- a
+flat-price sub-$\tfrac12$ demand is impossible in the parity sector on
+this surface, the inequality that closes R-C$'''$ negatively; negative
+control: the \emph{inadmissible} vector $0.01x^*$ ($x_1\ne1$) does
+undercut the floor ($\mu^P_1\mathrm{TV}=2.5$--$2.9\times10^{-3}$) and
+is recognised as inadmissible --- the floor is a property of the
+normalisation meeting the smallest parity eigenvalue
+(Kac--Murdock--Szeg\H{o} 1953). \emph{(3)} The chain-derived price
+axis: $\sigma=1$ gives $x=e_1$ exactly with $P=g_{16}/g_1$ (the $K=1$
+rung of the T158 Cholesky ladder, the T157 route-(0) certificate;
+$4.1\times10^{-16}$), $\sigma=\infty$ gives $g_{16}Q(x^*)=1$ (the
+$K=16$ top rung; $1.2\times10^{-12}$); the ladder carries all $16$
+terms strictly positive with monotone partial sums, and the knob is
+monotone in both coordinates on every window --- the knob curve
+\emph{is} the Pareto front; mutation: a corrupted off-diagonal
+sixteen-block entry makes the Cholesky \emph{refuse} on $12/12$.
+\emph{(4)} The Mellin cell moments and the Abel step: the $k$-th rung
+$\sum_dw_dC_d(-(2k+\tfrac12))$ with $C_d(s)$ the closed tent integral
+(Mellin 1896) agrees with an independent per-cell Gauss--Legendre
+quadrature to $2.8\times10^{-13}$ on every rung $k=1\ldots4$ (shifted
+tent centres break by $\ge1.3\times10^{-2}$); the boundary-free Abel
+identities hold at levels $k=1\ldots3$ ($8.3\times10^{-17}$; Abel
+1826), the dropped-boundary level-$1$ form agreeing because the gauge
+identity kills the boundary term exactly; the optimal level is
+\emph{one} for T162's closed reason ($32\pi/\alpha=40.6$--$59.4>1$,
+measured level-$2$/level-$1$ ratio $30.8$--$69.1>1$), and a gauge
+violation breaks the dropped form by its closed prediction $v_0c_0M$
+to $1.2\times10^{-15}$ --- the positive control. \emph{(5)} The
+Lerch/Frullani log-moment: $L=\sum_d\Psi_dw_d$ agrees on three
+independent routes on every window --- direct; double-Abel \emph{with}
+the Wronskian boundary term $-\tfrac12M\log M\,w_{M-1}$
+($2.8\times10^{-14}$; dropping it breaks by
+$2.2\times10^{-4}$--$1.3\times10^{-2}$); the Lerch/Frullani integral
+with the $d=1$ term peeled closed ($1.8\times10^{-15}$; the peel
+constant $2\log2$ to $2.2\times10^{-16}$, $\Psi_1=-\log2$ exact;
+Frullani 1828 / Lerch 1887 / Clausen 1832). Stress: the monotone no-go
+staircase --- coarsening over $\nu=4/2/1/0.5$ degrades the arch/atom
+cancellation monotonically in the median
+($1.00\to3.49\to10.81\to24.98$, the $\nu=4$ column an exact null
+control); the Dirichlet cosine-sum identity ($2.4\times10^{-14}$,
+including the degenerate branch), the KMS eigenpairs
+($1.4\times10^{-14}$) and $\mathrm{odd\_toeplitz}(c^L)=L_P$ (zero
+tolerance) are exact.
+\textbf{Named limits as load-bearing content:} per instance on small
+windows --- a finite list with an explicit maximum; nothing uniform in
+the zone index or in $D$; the T163 $h$-exponents
+($P_{\mathrm{aff}}\sim h^{3.05}$, $P_{\mathrm{cross}}\sim h^{1.91}$,
+the TV exponent $\sim h^{2.00}$) are sandbox fits and are \emph{not}
+consumed --- what is consumed is the closed per-window floor; finite
+$\Lambda$-sums are allowed and used, \emph{no} RH statement is made
+($\tfrac12$ appears in exactly one role: as the strength of a
+classical statement a required depth is compared against); the open
+terms after T163 (R-E the successor, both arms prime-free --- arm A: a
+growing $1/s$ ceiling for the downstream T159/T160 chain; arm B: a
+sector whose lowest eigenvalue does not vanish like $h^{-2}$; R-B$'''$
+the $h$-uniform positivity margin; R-D a fifth R1$''$ device) stay
+open, typed open. Fences: Fej\'er 1915 / Mellin 1896 / Abel 1826 /
+Chebyshev 1852--Rosser--Schoenfeld 1962 (verified on the table) /
+Legendre / Dirichlet 1829 / KMS 1953 / Frullani 1828--Lerch
+1887--Clausen 1832 / Schur 1917--Haynsworth 1968 named classical; Weil
+1952 / Bombieri 2000 cited, never used as a criterion; zero-firewall
+AST-checked; no marker moves.
+Machine-checked: \veri{v555\_pareto\_tv\_identities.py}.
+\mE\ (per-instance identities and certified inequalities)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

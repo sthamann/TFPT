@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v554
+          v535–v555
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4235/4235 sandbox checks —
+        (“the full proof”, T126+) is now open with 4267/4267 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -376,8 +376,24 @@ export function HonestyBanner() {
         window; the a-weighted quarter bar survives as a contribution
         bound). The remaining R2″ question is a Pareto front — does an
         operating point exist where demand and price are simultaneously
-        affordable? T163 (pareto_front_probe.py) is running exactly that
-        survey. What remains
+        affordable? T163 (FRONT-RESISTS) then answered it with a theorem
+        rather than a failed search: the exchange law
+        δ_bnd = 1/2 + log(2κg₁₆TV/P)/log X makes price and demand two
+        coordinates of ONE exact identity (checked at all 27×50 grid
+        points of the Fejér knob, whose endpoints are the chain&apos;s own
+        ladder rungs), no flat price crosses the yardstick (0/27), and a
+        new four-line theorem forces every admissible trial vector to pay
+        a total-variation floor ~ h² — the entry normalisation x₁ = 1
+        meeting the smallest parity eigenvalue: the hardness was never in
+        the primes, it is the spectral gap of the parity Laplacian
+        (KMS 1953). R-C‴ is closed negatively by the inequality, the
+        crossing price sits 5–152× strictly inside the certificate the
+        chain already accepts (the honest positive, not a flat
+        certificate), the theorem cores of T162+T163 are load-bearing as
+        v555, and the successor R-E has two prime-free arms — a growing
+        1/s ceiling for the downstream chain, or a sector whose gap does
+        not vanish like h⁻². T164 (sector_change_probe.py) is running
+        exactly that sector change. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

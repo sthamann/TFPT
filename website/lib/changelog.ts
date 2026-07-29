@@ -43,6 +43,1677 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · X",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v555"
+      },
+      {
+        "k": "t",
+        "v": " — the Pareto/total-variation identities of phase 2 promoted; prime-front diary T163 (the front resists as a theorem — the "
+      },
+      {
+        "k": "m",
+        "v": "h^2"
+      },
+      {
+        "k": "t",
+        "v": " is the parity spectral gap, not the primes, FRONT-RESISTS) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v555"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.PARETO.TV.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the closed theorem cores of the discovery parts T162 ("
+        },
+        {
+          "k": "c",
+          "v": "third_split_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") and T163 ("
+        },
+        {
+          "k": "c",
+          "v": "pareto_front_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "23"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.4"
+        },
+        {
+          "k": "t",
+          "v": " s, everything recomputed on "
+        },
+        {
+          "k": "c",
+          "v": "v551"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v554"
+        },
+        {
+          "k": "t",
+          "v": "'s declared surface (the "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " deepest prime-power zones admitting a frame-A window inside the cap, "
+        },
+        {
+          "k": "m",
+          "v": "n=29\\ldots139"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "m=96\\ldots291\\le300"
+        },
+        {
+          "k": "t",
+          "v": "), with the one arithmetic input "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa=0.038821"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "verified"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at every jump point of "
+        },
+        {
+          "k": "m",
+          "v": "\\psi(x)/x"
+        },
+        {
+          "k": "t",
+          "v": " on the von-Mangoldt table in "
+        },
+        {
+          "k": "m",
+          "v": "[100,3.2\\times10^{5}]"
+        },
+        {
+          "k": "t",
+          "v": " (Chebyshev 1852 / Rosser–Schoenfeld 1962, reproduced to "
+        },
+        {
+          "k": "m",
+          "v": "4.2\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": "), nothing cited from the sandbox; the companion to "
+        },
+        {
+          "k": "c",
+          "v": "v554"
+        },
+        {
+          "k": "t",
+          "v": ", which certified what the sixteen-form "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "pairs against"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — this module certifies the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "price structure"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of that pairing. Scope fence: per-instance identities and certified inequalities with the direction in the name — no fit, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no zone-uniform statement; the T163 "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-exponents ("
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{aff}}\\sim h^{3.05}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{cross}}\\sim h^{1.91}"
+        },
+        {
+          "k": "t",
+          "v": ", the TV exponent "
+        },
+        {
+          "k": "m",
+          "v": "\\sim h^{2.00}"
+        },
+        {
+          "k": "t",
+          "v": ") are sandbox fits and are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " consumed; finite "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "-sums are allowed and used, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no RH statement"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is made ("
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": " appears in exactly one role: as the strength of a classical statement a required depth is compared against); the open terms after T163 (R-E the successor with both arms prime-free; R-B"
+        },
+        {
+          "k": "m",
+          "v": "'''"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-uniform positivity margin; R-D a fifth R1"
+        },
+        {
+          "k": "m",
+          "v": "''"
+        },
+        {
+          "k": "t",
+          "v": " device) stay open and typed open; each statement carries at least one mutation control that must fail loudly."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The exchange law and the crossing criterion (T163, R1.2) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{bnd}}(x)=\\tfrac12+\\log(2\\kappa\\,g_{16}\\,\\mathrm{TV}(x)/P(x))/\\log X"
+        },
+        {
+          "k": "t",
+          "v": " is an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "identity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at all "
+        },
+        {
+          "k": "m",
+          "v": "612"
+        },
+        {
+          "k": "t",
+          "v": " grid points of the declared Fejér knob ("
+        },
+        {
+          "k": "m",
+          "v": "50"
+        },
+        {
+          "k": "t",
+          "v": " geometric "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "[1,4096]"
+        },
+        {
+          "k": "t",
+          "v": " plus "
+        },
+        {
+          "k": "m",
+          "v": "\\infty"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " windows; "
+        },
+        {
+          "k": "m",
+          "v": "5.1\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " relative, admissibility "
+        },
+        {
+          "k": "m",
+          "v": "Q(x)>0"
+        },
+        {
+          "k": "t",
+          "v": " everywhere), and the crossing criterion "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{bnd}}<\\tfrac12\\iff P>2\\kappa g_{16}\\mathrm{TV}"
+        },
+        {
+          "k": "t",
+          "v": " holds as an exact equivalence at every point — price and demand are two coordinates of "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " object. Mutation: the wrong constant moves the law by "
+        },
+        {
+          "k": "m",
+          "v": "6.5\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.4"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The total-variation floor (T163, R2.2) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (T1) "
+        },
+        {
+          "k": "m",
+          "v": "w_0(x)=\\|a(x)\\|^2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "4.9\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "); (T2) "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TV}(x)\\ge|w_0(x)|"
+        },
+        {
+          "k": "t",
+          "v": " by telescoping with "
+        },
+        {
+          "k": "m",
+          "v": "w_M=0"
+        },
+        {
+          "k": "t",
+          "v": "; (T3) "
+        },
+        {
+          "k": "m",
+          "v": "x_1=1"
+        },
+        {
+          "k": "t",
+          "v": " forces "
+        },
+        {
+          "k": "m",
+          "v": "\\|a\\|^2\\ge1/\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": ", hence "
+        },
+        {
+          "k": "m",
+          "v": "\\mu^P_1\\,\\mathrm{TV}(x)=5.00"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "28.84\\ge1"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "708"
+        },
+        {
+          "k": "t",
+          "v": " trial vectors built, against the closed floor "
+        },
+        {
+          "k": "m",
+          "v": "1/\\mu^P_1=1/(4\\sin^2(\\pi/N))=943.6"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "8609.6\\sim h^2"
+        },
+        {
+          "k": "t",
+          "v": "; (T4) every sub-"
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": " grid point pays "
+        },
+        {
+          "k": "m",
+          "v": "P>2\\kappa g_{16}/\\mu^P_1=15.4"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "142.8"
+        },
+        {
+          "k": "t",
+          "v": " (all "
+        },
+        {
+          "k": "m",
+          "v": "54"
+        },
+        {
+          "k": "t",
+          "v": " respect it) — a flat-price sub-"
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": " demand is impossible in the parity sector on this surface: "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "R-C"
+            },
+            {
+              "k": "m",
+              "v": "'''"
+            },
+            {
+              "k": "t",
+              "v": " is closed negatively, by an inequality"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". Negative control: the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "inadmissible"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " vector "
+        },
+        {
+          "k": "m",
+          "v": "0.01x^*"
+        },
+        {
+          "k": "t",
+          "v": " undercuts the floor ("
+        },
+        {
+          "k": "m",
+          "v": "2.5"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.9\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ") and is recognised — the floor is a property of the normalisation meeting the smallest parity eigenvalue (Kac–Murdock–Szeg"
+        },
+        {
+          "k": "t",
+          "v": "o"
+        },
+        {
+          "k": "t",
+          "v": " 1953)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) The chain-derived price axis (T163, R1.0) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma=1"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "x=e_1"
+        },
+        {
+          "k": "t",
+          "v": " exactly with "
+        },
+        {
+          "k": "m",
+          "v": "P=g_{16}/g_1"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "K=1"
+        },
+        {
+          "k": "t",
+          "v": " rung of the T158 Cholesky ladder, the T157 route-(0) certificate; "
+        },
+        {
+          "k": "m",
+          "v": "4.1\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma=\\infty"
+        },
+        {
+          "k": "t",
+          "v": " gives "
+        },
+        {
+          "k": "m",
+          "v": "g_{16}Q(x^*)=1"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "K=16"
+        },
+        {
+          "k": "t",
+          "v": " top rung; "
+        },
+        {
+          "k": "m",
+          "v": "1.2\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "); the ladder carries all "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " terms strictly positive with monotone partial sums, the knob is monotone in both coordinates on every window (the knob curve "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the Pareto front). Mutation: a corrupted sixteen-block makes the Cholesky "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "refuse"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The Mellin cell moments and the Abel step (T162, C2/C5) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": "-th Mellin rung "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_dw_dC_d(-(2k+\\tfrac12))"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "C_d(s)"
+        },
+        {
+          "k": "t",
+          "v": " the closed tent integral (Mellin 1896) agrees with an independent per-cell Gauss–Legendre quadrature to "
+        },
+        {
+          "k": "m",
+          "v": "2.8\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": " on every rung "
+        },
+        {
+          "k": "m",
+          "v": "k=1\\ldots4"
+        },
+        {
+          "k": "t",
+          "v": " (shifted tent centres break by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge1.3\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "); the boundary-free Abel identities hold at levels "
+        },
+        {
+          "k": "m",
+          "v": "k=1\\ldots3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "8.3\\times10^{-17}"
+        },
+        {
+          "k": "t",
+          "v": "; Abel 1826), the dropped-boundary level-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " form agrees because the gauge identity kills the boundary term exactly, the optimal level is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " for T162's closed reason ("
+        },
+        {
+          "k": "m",
+          "v": "32\\pi/\\alpha=40.6"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "59.4>1"
+        },
+        {
+          "k": "t",
+          "v": ", measured ratio "
+        },
+        {
+          "k": "m",
+          "v": "30.8"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "69.1"
+        },
+        {
+          "k": "t",
+          "v": "), and a gauge violation breaks by its closed prediction "
+        },
+        {
+          "k": "m",
+          "v": "v_0c_0M"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "1.2\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": " (the positive control)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5) The Lerch/Frullani log-moment (T162, R-A"
+            },
+            {
+              "k": "m",
+              "v": "'"
+            },
+            {
+              "k": "t",
+              "v": ") "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "L=\\sum_d\\Psi_dw_d"
+        },
+        {
+          "k": "t",
+          "v": " agrees on three routes per window: direct; double-Abel "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "with"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the Wronskian boundary term ("
+        },
+        {
+          "k": "m",
+          "v": "2.8\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "; dropping it breaks by "
+        },
+        {
+          "k": "m",
+          "v": "2.2\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.3\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "); the Lerch/Frullani integral with the "
+        },
+        {
+          "k": "m",
+          "v": "d=1"
+        },
+        {
+          "k": "t",
+          "v": " term peeled closed ("
+        },
+        {
+          "k": "m",
+          "v": "1.8\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": ") — the peel constant "
+        },
+        {
+          "k": "m",
+          "v": "2\\log2"
+        },
+        {
+          "k": "t",
+          "v": " reproduced to "
+        },
+        {
+          "k": "m",
+          "v": "2.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\Psi_1=-\\log2"
+        },
+        {
+          "k": "t",
+          "v": " exactly (Frullani 1828 / Lerch 1887 / Clausen 1832). Plus the monotone no-go staircase (damage "
+        },
+        {
+          "k": "m",
+          "v": "1.00\\to3.49\\to10.81\\to24.98"
+        },
+        {
+          "k": "t",
+          "v": " over "
+        },
+        {
+          "k": "m",
+          "v": "\\nu=4/2/1/0.5"
+        },
+        {
+          "k": "t",
+          "v": ", exact null control) and exact Dirichlet/parity controls."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T163 ("
+            },
+            {
+              "k": "c",
+              "v": "pareto_front_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "PARETO.FRONT"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "32/32"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "1.9"
+            },
+            {
+              "k": "t",
+              "v": " s, "
+            },
+            {
+              "k": "m",
+              "v": "28"
+            },
+            {
+              "k": "t",
+              "v": " log-spaced prime-power zones "
+            },
+            {
+              "k": "m",
+              "v": "h=142\\ldots1445"
+            },
+            {
+              "k": "t",
+              "v": " with declared caps, "
+            },
+            {
+              "k": "m",
+              "v": "27"
+            },
+            {
+              "k": "t",
+              "v": " windows inside the cond horizon, verdict FRONT-RESISTS, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The survey of the Pareto front, and the front resists "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "as a theorem"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the price axis is chain-derived ("
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{aff}}=g_{16}B_{11}\n\\sim h^{+3.049}"
+        },
+        {
+          "k": "t",
+          "v": ", the T157 route-(0) certificate), the Fejér knob has both endpoints in the chain and is measured monotone in both coordinates (the knob curve "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the front), no flat price crosses the yardstick ("
+        },
+        {
+          "k": "m",
+          "v": "0/27"
+        },
+        {
+          "k": "t",
+          "v": " at caps "
+        },
+        {
+          "k": "m",
+          "v": "1.25/2/10"
+        },
+        {
+          "k": "t",
+          "v": " and every flat rung tier; only the full "
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{aff}}"
+        },
+        {
+          "k": "t",
+          "v": " reaches "
+        },
+        {
+          "k": "m",
+          "v": "27/27"
+        },
+        {
+          "k": "t",
+          "v": "), the crossing price "
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{cross}}\\sim h^{+1.906}"
+        },
+        {
+          "k": "t",
+          "v": " sits at "
+        },
+        {
+          "k": "m",
+          "v": "0.0066"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.2047"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{aff}}"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "152\\times"
+        },
+        {
+          "k": "t",
+          "v": " strictly inside the already-accepted certificate, margin widening — and the price anatomy is an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "identity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{bnd}}=\\tfrac12+\\log(2\\kappa g_{16}\\mathrm{TV}/P)/\\log X"
+        },
+        {
+          "k": "t",
+          "v": " exactly at all "
+        },
+        {
+          "k": "m",
+          "v": "27\\times50"
+        },
+        {
+          "k": "t",
+          "v": " grid points, the crossing exponent decomposing additively (TV "
+        },
+        {
+          "k": "m",
+          "v": "+2.013"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "g_{16}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "-0.061"
+        },
+        {
+          "k": "t",
+          "v": "). The four-line theorem (T1–T4) gives every admissible trial vector the total-variation floor "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TV}\\ge1/\\mu^P_1\\sim h^2"
+        },
+        {
+          "k": "t",
+          "v": " (verified on all "
+        },
+        {
+          "k": "m",
+          "v": "1674"
+        },
+        {
+          "k": "t",
+          "v": " built, slack "
+        },
+        {
+          "k": "m",
+          "v": "5.0"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "23.2"
+        },
+        {
+          "k": "t",
+          "v": "), so the crossing price is bounded below by a quantity growing like "
+        },
+        {
+          "k": "m",
+          "v": "h^2"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "h^{2.86}"
+        },
+        {
+          "k": "t",
+          "v": " of T162, the "
+        },
+        {
+          "k": "m",
+          "v": "h^{1.91}"
+        },
+        {
+          "k": "t",
+          "v": " of the crossing and T161's granularity are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "all"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the reciprocal smallest parity eigenvalue — "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the spectral gap of the parity Laplacian meeting the entry normalisation "
+            },
+            {
+              "k": "m",
+              "v": "x_1=1"
+            },
+            {
+              "k": "t",
+              "v": ": it was never in the primes"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". The mode sweep "
+        },
+        {
+          "k": "m",
+          "v": "K=16\\to64"
+        },
+        {
+          "k": "t",
+          "v": " confirms it from the other side (price dividend, worse demand, TV exponent unmoved at "
+        },
+        {
+          "k": "m",
+          "v": "h^{+1.81}"
+        },
+        {
+          "k": "t",
+          "v": "); R-B"
+        },
+        {
+          "k": "m",
+          "v": "''"
+        },
+        {
+          "k": "t",
+          "v": " reduces to an "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-uniformity question (the chain never needed the sign: duality plus an evaluated number, headroom "
+        },
+        {
+          "k": "m",
+          "v": "\\ge10^{14.9}"
+        },
+        {
+          "k": "t",
+          "v": "); R-D is a type mismatch (operator smoothing degrades the floor by the same "
+        },
+        {
+          "k": "m",
+          "v": "h^2"
+        },
+        {
+          "k": "t",
+          "v": "). Balance "
+        },
+        {
+          "k": "m",
+          "v": "11/1/4/10"
+        },
+        {
+          "k": "t",
+          "v": ", zero fit rows. T164 ("
+        },
+        {
+          "k": "c",
+          "v": "sector_change_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "), running, tests the successor R-E. NOT RH evidence; no marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Docs + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " gains the T163 subsection with the exchange-law display, the T1–T4 floor theorem as the key result, the chain-derived price axis, the monotone no-go staircase and the After-T163 keybox (R-E/R-B"
+        },
+        {
+          "k": "m",
+          "v": "'''"
+        },
+        {
+          "k": "t",
+          "v": "/R-D, T164 running), the "
+        },
+        {
+          "k": "c",
+          "v": "v555"
+        },
+        {
+          "k": "t",
+          "v": " subsection in the verified layer (now twenty-one modules), the phase-2 section retitled T126–T163, the T163 row in the probe index and the updated counters ("
+        },
+        {
+          "k": "m",
+          "v": "163"
+        },
+        {
+          "k": "t",
+          "v": " probes, "
+        },
+        {
+          "k": "m",
+          "v": "4267"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " gain the "
+        },
+        {
+          "k": "c",
+          "v": "v555"
+        },
+        {
+          "k": "t",
+          "v": " companion blocks; "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " gains the Teil-163 entry; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T163 and "
+        },
+        {
+          "k": "c",
+          "v": "v555"
+        },
+        {
+          "k": "t",
+          "v": " feed entries; the prime-front status surfaces move to Teile 11–163 / "
+        },
+        {
+          "k": "m",
+          "v": "4267"
+        },
+        {
+          "k": "t",
+          "v": " checks / 21 modules ("
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v555"
+        },
+        {
+          "k": "t",
+          "v": "); suite counter "
+        },
+        {
+          "k": "m",
+          "v": "548\\to549"
+        },
+        {
+          "k": "t",
+          "v": " scripts. T164 ("
+        },
+        {
+          "k": "c",
+          "v": "sector_change_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at the sector-change successor. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PARETO.TV.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · IX",
     "heading": [
       {
