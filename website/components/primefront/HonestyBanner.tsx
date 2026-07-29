@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4325/4325 sandbox checks —
+        (“the full proof”, T126+) is now open with 4355/4355 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -420,8 +420,20 @@ export function HonestyBanner() {
         remains: a lower bound on the 16-step Schur-cascade gain,
         inf_m g₁₆(m) &gt; 0 — a cancellation, provably beyond
         absolute-value budgets; the theorem cores of T164+T165 are
-        load-bearing as v556. T166 (schur_cascade_probe.py) is running
-        exactly that cascade lower bound. What remains
+        load-bearing as v556. T166 (CASCADE-RESISTS) then dissected
+        exactly that lower bound on a 63-window union of both surfaces:
+        the whole gain is a near-collinearity (g_K/g₁ = 1/(1 − R_K²)),
+        rung 2 alone carries a median 59% of it, and the gain is
+        invariant under the spectral normalisation — the h³ is a
+        property of the arithmetic Gram block alone; the cancellation
+        lives in a 2×2 Gram determinant (no entry cancels, neither half
+        is collinear alone — the same arch-against-atom mechanism as
+        T159/T160, one level up), an anti-fitting scramble destroys the
+        effect by a factor 4569, and the best closed route reaches
+        h^+1.32 against the target h^+3.11 — an exponent gap, so the
+        one missing inequality IS the cancellation, now in three
+        equivalent dresses. T167 (null_vector_probe.py) is running the
+        most constructive dress — the closed near-null vector. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

@@ -43,6 +43,983 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · XIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "prime-front diary T166 (the cascade gain is a Gram-determinant cancellation, one inequality in three dresses — CASCADE-RESISTS) + paper + website sync; NO promotion, NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T166 ("
+            },
+            {
+              "k": "c",
+              "v": "schur_cascade_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "SCHUR.CASCADE"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "30/30"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "2.1"
+            },
+            {
+              "k": "t",
+              "v": " s, the two surfaces rebuilt as a "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "union"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": ": "
+            },
+            {
+              "k": "m",
+              "v": "27"
+            },
+            {
+              "k": "t",
+              "v": " frame-A windows "
+            },
+            {
+              "k": "m",
+              "v": "h=142"
+            },
+            {
+              "k": "t",
+              "v": "–"
+            },
+            {
+              "k": "m",
+              "v": "1320"
+            },
+            {
+              "k": "t",
+              "v": " plus "
+            },
+            {
+              "k": "m",
+              "v": "36"
+            },
+            {
+              "k": "t",
+              "v": " decoupled-"
+            },
+            {
+              "k": "m",
+              "v": "\\nu"
+            },
+            {
+              "k": "t",
+              "v": " windows over "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " zones, "
+            },
+            {
+              "k": "m",
+              "v": "\\nu\\in\\{4,5,6,8,11,16\\}"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "h=96"
+            },
+            {
+              "k": "t",
+              "v": "–"
+            },
+            {
+              "k": "m",
+              "v": "1371"
+            },
+            {
+              "k": "t",
+              "v": " — "
+            },
+            {
+              "k": "m",
+              "v": "63"
+            },
+            {
+              "k": "t",
+              "v": " windows with a "
+            },
+            {
+              "k": "m",
+              "v": "14\\times"
+            },
+            {
+              "k": "t",
+              "v": " lever arm on which zone depth and resolution are independent knobs ("
+            },
+            {
+              "k": "m",
+              "v": "\\log h"
+            },
+            {
+              "k": "t",
+              "v": " vs "
+            },
+            {
+              "k": "m",
+              "v": "\\log\\nu"
+            },
+            {
+              "k": "t",
+              "v": " correlated "
+            },
+            {
+              "k": "m",
+              "v": "0.33"
+            },
+            {
+              "k": "t",
+              "v": "); T165's three numbers reproduced on frame A, the union reading "
+            },
+            {
+              "k": "m",
+              "v": "h^{+2.759}/h^{+0.193}/h^{+2.566}"
+            },
+            {
+              "k": "t",
+              "v": "; "
+            },
+            {
+              "k": "m",
+              "v": "\\kappa=0.038821"
+            },
+            {
+              "k": "t",
+              "v": " verified at every jump point in "
+            },
+            {
+              "k": "m",
+              "v": "[100,4\\times10^{5}]"
+            },
+            {
+              "k": "t",
+              "v": "; verdict CASCADE-RESISTS, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The one open object of T165 — the cascade lower bound "
+        },
+        {
+          "k": "m",
+          "v": "g_{16}/g_1\\ge c\\,h^{3-\\varepsilon}"
+        },
+        {
+          "k": "t",
+          "v": " uniform in "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": " — attacked head-on and dissected completely. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The anatomy:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " four identities, all theorems re-verified on "
+        },
+        {
+          "k": "m",
+          "v": "63/63"
+        },
+        {
+          "k": "t",
+          "v": " windows — the prefix property (one Cholesky yields all sixteen rungs), the minor form (Schur 1917), the "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "regression form "
+            },
+            {
+              "k": "m",
+              "v": "g_K/g_1=1/(1-R_K^2)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the open object "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a near-collinearity: mode "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " explained by modes "
+        },
+        {
+          "k": "m",
+          "v": "2\\ldots16"
+        },
+        {
+          "k": "t",
+          "v": " up to a residual "
+        },
+        {
+          "k": "m",
+          "v": "h^{-3+\\varepsilon}"
+        },
+        {
+          "k": "t",
+          "v": "), and the "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "diagonal invariance"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the gain under "
+        },
+        {
+          "k": "m",
+          "v": "B\\to DBD"
+        },
+        {
+          "k": "t",
+          "v": " — it does not see the KMS "
+        },
+        {
+          "k": "m",
+          "v": "1/\\sqrt{\\mu}"
+        },
+        {
+          "k": "t",
+          "v": " normalisation at all: the "
+        },
+        {
+          "k": "m",
+          "v": "h^3"
+        },
+        {
+          "k": "t",
+          "v": " is a property of the arithmetic Gram block "
+        },
+        {
+          "k": "m",
+          "v": "G=TAT^{\\mathsf T}"
+        },
+        {
+          "k": "t",
+          "v": " alone. The rung profile is extreme: rung "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " alone carries a median "
+        },
+        {
+          "k": "m",
+          "v": "59\\%"
+        },
+        {
+          "k": "t",
+          "v": " of the gain, rungs "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "72\\%"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "K_{\\mathrm{half}}\\in\\{2..5\\}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "63/63"
+        },
+        {
+          "k": "t",
+          "v": "; rung "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " in closed form has "
+        },
+        {
+          "k": "m",
+          "v": "1-r_{12}^2=1.3\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.5\\times10^{-4}\\sim h^{-2.92}"
+        },
+        {
+          "k": "t",
+          "v": " (frame A) — one rung multiplies "
+        },
+        {
+          "k": "m",
+          "v": "g"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "2207"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "7.8\\times10^{6}"
+        },
+        {
+          "k": "t",
+          "v": " where the "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free budgets are sharp only to a factor "
+        },
+        {
+          "k": "m",
+          "v": "21"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "26"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The cancellation finding — a third mechanism."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No entry of the "
+        },
+        {
+          "k": "m",
+          "v": "2\\times2"
+        },
+        {
+          "k": "t",
+          "v": " bottom block cancels (each keeps "
+        },
+        {
+          "k": "m",
+          "v": "60"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "99\\%"
+        },
+        {
+          "k": "t",
+          "v": " of its larger half) and neither half alone is collinear (arch "
+        },
+        {
+          "k": "m",
+          "v": "1-r^2=0.98"
+        },
+        {
+          "k": "t",
+          "v": ", atoms "
+        },
+        {
+          "k": "m",
+          "v": "0.29"
+        },
+        {
+          "k": "t",
+          "v": ") — yet the sum is degenerate to seven digits: "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the cancellation lives in the "
+            },
+            {
+              "k": "m",
+              "v": "2\\times2"
+            },
+            {
+              "k": "t",
+              "v": " Gram determinant"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — the polarisation split "
+        },
+        {
+          "k": "m",
+          "v": "\\det(G_{\\mathrm{ar}}+G_{\\mathrm{at}})=\\det G_{\\mathrm{ar}}+\\det\nG_{\\mathrm{at}}+\\Pi"
+        },
+        {
+          "k": "t",
+          "v": " (exact to "
+        },
+        {
+          "k": "m",
+          "v": "6.7\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": ") has pieces "
+        },
+        {
+          "k": "m",
+          "v": "2.6"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "630"
+        },
+        {
+          "k": "t",
+          "v": " cancelling to "
+        },
+        {
+          "k": "m",
+          "v": "1.0\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.7\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": ", a ratio "
+        },
+        {
+          "k": "m",
+          "v": "2.6\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5.1\\times10^{-4}\\sim h^{-1.45}"
+        },
+        {
+          "k": "t",
+          "v": " — the same arch-against-atom mechanism as T159/T160, one level up, in a quadratic functional of the lag sums. Pinned to the arithmetic twice: the "
+        },
+        {
+          "k": "m",
+          "v": "L_P"
+        },
+        {
+          "k": "t",
+          "v": " no-go breaks completely (gain "
+        },
+        {
+          "k": "m",
+          "v": "\\equiv1.0000000000"
+        },
+        {
+          "k": "t",
+          "v": " exactly), and the anti-fitting scramble (uniform random atom positions, same total mass) destroys the effect by a factor "
+        },
+        {
+          "k": "m",
+          "v": "4569"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The best lower bound, the verdict, and two honest contract corrections."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Every route is an instance of the trial-vector theorem ("
+        },
+        {
+          "k": "m",
+          "v": "1/g_K=\\mu_1^{P\\,-1}\\min\\{u^{\\mathsf T}Gu:u_1=1\\}"
+        },
+        {
+          "k": "t",
+          "v": "); the best closed route (two-rung, "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " from the atom block) certifies gain "
+        },
+        {
+          "k": "m",
+          "v": "h^{+1.319}"
+        },
+        {
+          "k": "t",
+          "v": " against the target "
+        },
+        {
+          "k": "m",
+          "v": "h^{+3.110}"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "an exponent gap of "
+            },
+            {
+              "k": "m",
+              "v": "h^{+1.791}"
+            },
+            {
+              "k": "t",
+              "v": ", not a constant: the one missing inequality "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "is"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " the cancellation"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (required "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " precision "
+        },
+        {
+          "k": "m",
+          "v": "3.57\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": ", all closed candidates miss by "
+        },
+        {
+          "k": "m",
+          "v": "12.4"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2540"
+        },
+        {
+          "k": "t",
+          "v": "); sharpest restatement "
+        },
+        {
+          "k": "m",
+          "v": "1/g_K=\\det G_{[1..K]}/(\\mu^P_1\\det G_{[2..K]})"
+        },
+        {
+          "k": "t",
+          "v": ", first flat at "
+        },
+        {
+          "k": "m",
+          "v": "K=6"
+        },
+        {
+          "k": "t",
+          "v": " — exactly one uniform inequality missing, in three dresses (the det-ratio bound, the closed "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": ", a closed near-null vector of "
+        },
+        {
+          "k": "m",
+          "v": "A"
+        },
+        {
+          "k": "t",
+          "v": " in the low modes). Corrections recorded honestly: form F2 (gain "
+        },
+        {
+          "k": "m",
+          "v": "\\ge c\\,h^{3-\\varepsilon}"
+        },
+        {
+          "k": "t",
+          "v": ") is strictly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "weaker"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " than "
+        },
+        {
+          "k": "m",
+          "v": "\\inf_m g_{16}>0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "B_{11}\\sim h^{+3.110}"
+        },
+        {
+          "k": "t",
+          "v": ", F1 needs "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon\\le-0.110"
+        },
+        {
+          "k": "t",
+          "v": "); the confinement route was a sub-surface artefact ("
+        },
+        {
+          "k": "m",
+          "v": "h^{+2.714}"
+        },
+        {
+          "k": "t",
+          "v": " on frame A "
+        },
+        {
+          "k": "m",
+          "v": "h\\le780"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "h^{+1.963}"
+        },
+        {
+          "k": "t",
+          "v": " on the full union — exposed by raising the eigen-horizon to the cap). Errand closed: "
+        },
+        {
+          "k": "m",
+          "v": "U_{\\mathrm{ref}}(\\text{union})=1.15\\times6.4781=7.45"
+        },
+        {
+          "k": "t",
+          "v": " supersedes T164's "
+        },
+        {
+          "k": "m",
+          "v": "4.90"
+        },
+        {
+          "k": "t",
+          "v": " and T165's "
+        },
+        {
+          "k": "m",
+          "v": "5.7327"
+        },
+        {
+          "k": "t",
+          "v": " on the union (off-recipe rule declared, CERT-WINDOW, never CERT-UNIF); the union supremum is zone-depth-driven (multi-covariate gain "
+        },
+        {
+          "k": "m",
+          "v": "\\sim h^{+2.92}\\nu^{-1.53}"
+        },
+        {
+          "k": "t",
+          "v": "). Balance "
+        },
+        {
+          "k": "m",
+          "v": "+5"
+        },
+        {
+          "k": "t",
+          "v": " THEOREM / "
+        },
+        {
+          "k": "m",
+          "v": "+3"
+        },
+        {
+          "k": "t",
+          "v": " CERT-WINDOW / "
+        },
+        {
+          "k": "m",
+          "v": "+4"
+        },
+        {
+          "k": "t",
+          "v": " MEASURED, deliberately no new CERT-UNIF; candidates P166.1… P166.9 all PENDING (no promotion — bundling with T167 planned). T167 ("
+        },
+        {
+          "k": "c",
+          "v": "null_vector_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "NULL.VECTOR"
+        },
+        {
+          "k": "t",
+          "v": ") is running the most constructive dress."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Docs + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " gains the T166 subsection (regression form, diagonal invariance and the Gram-minor ratio as displays, the Gram-determinant key result with the T159/T160 connection, the scramble factor, the two contract corrections, the “After T166” keybox), the phase-2 section title moves to T126–T166, the probe index gains the T166 row and the running totals move to "
+        },
+        {
+          "k": "m",
+          "v": "166"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4355"
+        },
+        {
+          "k": "t",
+          "v": " checks; "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " gains the T166 entry (series (CLXXVII)); website: "
+        },
+        {
+          "k": "c",
+          "v": "primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " feed entry T166, status surfaces Teile 11–166 / 4355 checks, T167 running. Firewall unchanged: sandbox, no RH evidence, no zero data; every number typed THEOREM/CERT-UNIF/CERT-WINDOW/MEASURED/FIT."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · XII",
     "heading": [
       {
