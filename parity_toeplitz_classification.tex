@@ -1,0 +1,1920 @@
+% ---------------------------------------------------------------------
+%  A total-variation floor and a rank-three classification for the
+%  parity-compressed sector of a log-singular Toeplitz form with a
+%  prime-power comb.
+%
+%  Standalone draft.  Self-contained preamble, no external \input:
+%  the paper is deliberately independent of any surrounding document
+%  set and uses no vocabulary beyond standard numerical analysis.
+%
+%  DRAFT STATUS (this revision): Sections 1-4 are written out in full,
+%  with complete proofs.  Sections 5-9 carry their statements in final
+%  form together with proof sketches; the full write-ups, the no-go
+%  table of Section 7 and the measurement tables of Section 8 are
+%  completed in a later pass.  The typing table of Section 1.3 records
+%  the intended status of every numbered statement, and nothing in it is
+%  silently upgraded.
+% ---------------------------------------------------------------------
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.6cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs,array,tabularx}
+\usepackage{xltabular}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\emergencystretch=3em
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{convention}[theorem]{Convention}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{measurement}[theorem]{Measurement}
+\newtheorem{problem}[theorem]{Problem}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\T}{\mathsf{T}}
+\newcommand{\Tm}[1]{T_{#1}}
+\newcommand{\lmin}{\lambda_{\min}}
+\newcommand{\lmax}{\lambda_{\max}}
+\newcommand{\cond}{\operatorname{cond}}
+\newcommand{\PSD}{\succeq 0}
+\newcommand{\PD}{\succ 0}
+\newcommand{\Ah}{\widehat{A}}
+\newcommand{\ah}{\widehat{a}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\Ac}{\operatorname{Ac}}
+\newcommand{\Cv}{\operatorname{Cv}}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\sgn}{sgn}
+\newcommand{\draftnote}[1]{%
+  \par\smallskip\noindent\textit{[Draft note: #1]}\par\smallskip}
+\setlist{itemsep=2pt,topsep=3pt}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\title{A total-variation floor and a rank-three classification\\
+for the parity-compressed sector of a log-singular\\
+Toeplitz form with a prime-power comb}
+\author{Stefan Hamann}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+This paper is about the near-degeneracy behind a Toeplitz spectral floor: a
+total-variation bound, three linear functionals, and a priced table of what the
+standard unconditional toolbox reaches. The object is the reflection-odd
+compression $A$ of a finite Toeplitz form whose lag sequence is a logarithmic
+profile minus an explicit comb, and the question is how small the Rayleigh
+quotient of $A$ can be on the low end of the parity spectrum. Four results are
+proved. First, a \emph{total-variation floor}: every trial vector whose leading
+parity coordinate is normalised to one has lag weights of total variation at
+least $1/\mu_1$, where $\mu_1=4\sin^2(\pi/(2h+1))$ is the spectral gap of the
+parity compression of the second difference; the floor is closed, involves no
+comb node, no taper and no truncation, and it prices the entire trial-vector
+route at $O(h^{-2})$ for every vector of bounded value. Second, a \emph{gauge
+rigidity} statement: the leading-coordinate normalisation pins only the scale of
+the trial direction, both the value and the total variation are homogeneous of
+degree two, hence their ratio is a function of the ray and takes the same range
+in every reparametrisation of the entry spectrum --- no sector change removes
+the floor, and a shifted sector conserves it exactly, floor times transfer
+being $1/\mu_1$ identically. Third, an exact \emph{rank-three classification}:
+the two-by-two raw Gram block of the low parity modes splits as an archimedean
+block minus a comb block, the determinant polarises into three terms, and the
+comb--comb term is the polarisation of the determinant on symmetric
+two-by-two matrices --- a form of rank three and signature $(1,2)$ --- so the
+comb enters the determinant only through \emph{three} linear functionals of its
+weights, for every window and every truncation. Fourth, a classification of
+what this costs: any majorant of the comb--comb term built from a norm of the
+weight vector must dominate the supremum of a rank-three quadratic over the
+image of that norm ball, which is where the priced routes lose. The remaining
+question --- whether the two rows of the block become collinear at a rate
+uniform in the window index --- is stated as an open problem about a finite
+bilinear form, with the measured evidence, the placement discriminators and the
+priced routes reported as measurements on declared surfaces. The arithmetic
+enters the theorems only as the source of the comb positions and weights: every
+statement proved here holds for an arbitrary finite comb.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+\subsection{The problem, and why the direction is hard}
+\label{sec:problem}
+
+Let $c=(c_m)_{m=0}^{M-1}$ be a real lag sequence, let $\Tm{M}(c)$ be its
+symmetric Toeplitz matrix, and let $A$ be the compression of $\Tm{M}(c)$ to the
+reflection-odd sector of the window (Section~\ref{sec:setting}). The question
+this paper is about is a lower bound for the Rayleigh quotient of $A$ on the low
+end of a fixed orthonormal mode family --- equivalently, an upper bound for the
+extent to which the quadratic form $v\mapsto v^{\T}Av$ can cancel along a smooth
+direction.
+
+The classical route from a Toeplitz form to a spectral bound is the symbol. If
+$\ell\le\sigma$ pointwise then $\Tm{M}(\ell)\preceq\Tm{M}(\sigma)$ by Parseval,
+and a positive pointwise minorant of the symbol transfers to a positive floor
+for the form \cite{Szego1939,GrenanderSzego1958,KMS1953,Dirichlet1829,Fejer1916}. For the
+class considered here that route is unavailable, and not marginally so: the
+symbol is a logarithmic profile minus an explicit cosine comb, the comb dips are
+numerous and narrow, and on every window of the declared surface of
+Section~\ref{sec:numerics} the infimum of the symbol is negative, while the form
+restricted to the parity sector is positive. The smallest Rayleigh quotient is
+therefore not produced by a small value of the symbol at some frequency; it is
+produced by \emph{cancellation inside the quadratic form}, along a direction that
+lives in the low modes. A pointwise minorant is by construction blind to which
+vector realises the minimum.
+
+The natural substitute is a trial-vector route: exhibit an explicit direction,
+evaluate the form on it, and price the evaluation. This paper is a
+classification of that route. Its first two results say that the route has a
+closed price which no reparametrisation removes; its second two say that the
+object which remains after the price is paid is a quadratic polynomial in three
+linear functionals of the comb weights, and that this is exactly why the
+unconditional toolbox --- size budgets, symbol arguments, sectors and gauges,
+splits, perturbation theory, the bilinear sieve box --- does not reach it. What
+is \emph{not} claimed anywhere is a bound on the arithmetic: the three
+functionals are finite sums over the comb, all four results hold for an
+arbitrary finite comb, and the one remaining question is stated as an open
+problem in Section~\ref{sec:open}.
+
+The companion paper \cite{PaperI} treats the same window form from the opposite
+direction --- a certified lower bound for a Galerkin defect on a nested ladder
+--- and we cite it for the window form and the comb class rather than repeating
+them.
+
+\subsection{Contribution}
+\label{sec:contrib}
+
+\begin{enumerate}[label=(C\arabic*),leftmargin=3.1em]
+\item\label{C:floor} \textbf{The total-variation floor, and the price it
+  fixes} (Theorem~\ref{thm:tvfloor} with
+  Corollaries~\ref{cor:price}--\ref{cor:abis}). For every trial vector whose
+  leading parity coordinate is normalised to one, the lag weights $w$ of the
+  associated window vector satisfy
+  $\TV(w)\ge|w_0|=\lVert v\rVert^{2}\ge1/\mu_1\ge N^{2}/(4\pi^{2})$, where
+  $\mu_1=4\sin^{2}(\pi/N)$, $N=2h+1$, is the spectral gap of the parity
+  compression $L_P$ of the second difference \cite{KMS1953}. The proof is four
+  steps and uses no property of the comb whatsoever. The load-bearing
+  consequence is a \emph{price}: the ratio of the value to the total variation
+  is at most $\mu_1$ times the value, so every trial vector of bounded value
+  certifies a ratio $O(h^{-2})$, and the boundary-free summation by parts
+  \cite{Abel1826} can certify nothing better.
+\item\label{C:gauge} \textbf{Gauge rigidity of the normalisation}
+  (Theorem~\ref{thm:gauge} with
+  Propositions~\ref{prop:shift}--\ref{prop:nullmode} and
+  Corollary~\ref{cor:noescape}). The normalisation pins only the scale of the
+  trial direction; value and total variation are homogeneous of degree two;
+  hence their ratio is a function of the ray, and its range over admissible
+  vectors is the \emph{same} for every entry spectrum. A shifted spectrum does
+  flatten the floor, but the transfer factor that returns the bound to the
+  original scale conserves the product exactly: floor times transfer is
+  $1/\mu_1$ at every shift. So (C1) cannot be reparametrised away, and the
+  parity compression is not a convenience --- Proposition~\ref{prop:nullmode}
+  shows it is what makes the normalisation well posed at all.
+\item\label{C:rank} \textbf{The exact bilinear form and the rank-three
+  classification} (Section~\ref{sec:rank}: Propositions~\ref{prop:split} and
+  \ref{prop:polarisation}, Theorem~\ref{thm:rank3},
+  Corollary~\ref{cor:majorant}). The two-by-two raw Gram block of the two lowest
+  parity modes splits exactly as $\Ah_2=B-S$ with $B$ archimedean and $S$ a
+  weighted sum of comb reads; the determinant polarises as
+  $\det\Ah_2=\det B-D(B,S)+\det S$; and $D$ is the polarisation of $\det$ on
+  symmetric two-by-two matrices, a form of rank three and signature $(1,2)$ in
+  the coordinates $(X_{11},X_{22},X_{12})$. Consequently the comb--comb term is
+  $S_{11}S_{22}-S_{12}^{2}$: a quadratic polynomial in \emph{three} linear
+  functionals of the comb weights, for every window, every $h$ and every
+  truncation. Corollary~\ref{cor:majorant} turns this into the statement about
+  majorants that the priced routes of Section~\ref{sec:open} run into.
+\item\label{C:nogo} \textbf{A priced table and one open problem}
+  (Section~\ref{sec:open}). What remains after (C1)--(C3) is a single question
+  about a finite bilinear form: is the near-collinearity of the two rows of
+  $\Ah_2$ bounded uniformly in the window index? It is stated as
+  Problem~\ref{prob:R1} in three equivalent forms, with the priced routes, the
+  measured rates, the density curve and the placement discriminators reported as
+  measurements on declared surfaces --- never as an approach to, a weakening of,
+  or a consequence of any conjecture.
+\end{enumerate}
+
+Two of these four are theorems; two are classifications supported by theorems
+together with declared measurements. Which is which is recorded in
+Section~\ref{sec:typing} rather than left to the reader.
+
+\subsection{Typing of the results}
+\label{sec:typing}
+
+Every numbered statement of this paper carries exactly one of three types, and
+the type is part of the statement.
+
+\begin{description}[leftmargin=2.2em,style=nextline]
+\item[\textnormal{\emph{proved}}] A written proof is given (or, for classical
+  facts, cited). The statement holds for every window and every finite comb
+  within its stated hypotheses. Where a hypothesis is itself of a different
+  type --- positive definiteness of $A$ on the parity sector, for instance ---
+  the statement is \emph{conditional} and says so.
+\item[\textnormal{\emph{certified per window}}] The statement is verified on
+  each window of a declared finite surface by a computation whose failure mode
+  is loud (a completed Cholesky factorisation, an exact identity residual
+  against a declared floor). No quantifier over windows is claimed.
+\item[\textnormal{\emph{measured}}] The statement is a number, a fitted
+  exponent, or a controlled experiment on a declared finite surface, reported as
+  such. Fitted exponents are never used as bounds.
+\end{description}
+
+{\small
+\begin{xltabular}{\textwidth}{@{}llY@{}}
+\caption{Typing of every numbered statement. ``Conditional'' marks a proved
+implication whose hypothesis is of a weaker type; the hypothesis is then named
+in the statement.}
+\label{tab:typing}\\
+\toprule
+statement & type & remark \\
+\midrule
+\endfirsthead
+\toprule
+statement & type & remark \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r@{}}{\emph{continued on the next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\multicolumn{3}{@{}l}{\emph{Section~\ref{sec:setting} --- setting and
+  scaffolding}}\\
+L1 interlacing (Lem.~\ref{lem:interlacing}) & proved (cited) &
+  Cauchy \cite{Cauchy1829}, Courant--Fischer \cite{CourantFischer1920} \\
+L2 Schur nesting (Lem.~\ref{lem:nesting}) & proved &
+  Schur \cite{Schur1917}, Haynsworth \cite{Haynsworth1968} \\
+L3 constrained minimum (Lem.~\ref{lem:constrained}) & proved &
+  requires $G_k\PD$ \\
+gauge law (Lem.~\ref{lem:gauge}) & proved & $\sum_dw_d=0$, unconditional \\
+Abel swap (Lem.~\ref{lem:abel}) & proved & boundary-free, $w_M=0$ \\
+C5 cascade forms (Prop.~\ref{prop:cascade}) & proved & prefix / minor /
+  regression \\
+C6 diagonal invariance (Lem.~\ref{lem:diaginv}) & proved & one line \\
+B4 cascade direction (Prop.~\ref{prop:direction}) & \emph{conditional}
+  & proved given $\Ah\PD$; the hypothesis is certified per window \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Section~\ref{sec:tvfloor} --- the
+  total-variation floor}}\\
+A the floor (Thm.~\ref{thm:tvfloor}) & proved & comb-free, taper-free \\
+A1 the price (Cor.~\ref{cor:price}) & proved & the load-bearing corollary \\
+A2 Abel/H\"older (Cor.~\ref{cor:holder}) & proved & \\
+A-bis (Cor.~\ref{cor:abis}) & proved & no normalisation needed \\
+A4 negative control (Rem.~\ref{rem:negcontrol}) & proved & one line \\
+A3 sharpness (Meas.~\ref{meas:sharpness}) & measured & $\mu_1\TV\in[5.00,23.20]$
+  on Surface~II \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Section~\ref{sec:gauge} --- gauge rigidity}}\\
+B homogeneity (Thm.~\ref{thm:gauge}) & proved & \\
+B1 floor $\times$ transfer (Prop.~\ref{prop:shift}) & proved & pure shift \\
+B2 the null mode (Prop.~\ref{prop:nullmode}) & proved & closed spectra \\
+no escape (Cor.~\ref{cor:noescape}) & proved & \\
+sector battery (Meas.~\ref{meas:battery}) & certified per window &
+  $35\times6\times27$, residual $\le8.8\cdot10^{-10}$ \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Section~\ref{sec:twodim} --- the two-dimensional
+  reduction}}\\
+C1 exact $K=2$ (Prop.~\ref{prop:K2}) & proved & \\
+C2 pivot identity (Prop.~\ref{prop:pivot}) & proved & \\
+C3 union identity (Prop.~\ref{prop:union}) & proved & \\
+C7 Wronskian (Lem.~\ref{lem:wronskian}) & proved & the corner entry $3$ closes
+  it \\
+C8 maximal minors (Lem.~\ref{lem:minors}) & proved & Lagrange
+  \cite{Lagrange1773} \\
+C9 determinant reading (Lem.~\ref{lem:detread}) & proved & uses no positivity \\
+C10 Gershgorin (Lem.~\ref{lem:gershgorin}) & proved & uniform in the window \\
+C11 det-collapse (Prop.~\ref{prop:collapse}) & proved / \emph{conditional} &
+  the closed form is unconditional; the harmonic-mean bound needs
+  $\Ah_2\PD$ \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Section~\ref{sec:rank} --- bilinear form and rank}}\\
+D0 exact split (Prop.~\ref{prop:split}) & proved & needs an admissible
+  resolution \\
+D1 polarisation (Prop.~\ref{prop:polarisation}) & proved & \\
+D Theorem D, rank three (Thm.~\ref{thm:rank3}) & proved & every $h$, every
+  truncation \\
+D3 majorants (Cor.~\ref{cor:majorant}) & proved & declared class of
+  majorants \\
+D4 Type II rank (Meas.~\ref{meas:typeII}) & measured & bandwidth
+  $\Rightarrow\eta$-rank lemma: open writing task \\
+D5 reference window (Meas.~\ref{meas:refwindow}) & measured & the
+  three-term cancellation \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Section~\ref{sec:open} --- the open problem}}\\
+Problem~\ref{prob:R1} & open & three equivalent forms \\
+rates (Meas.~\ref{meas:rate}) & measured & fitted exponents, declared
+  surfaces \\
+priced routes (Meas.~\ref{meas:routes}) & proved per route / measured
+  exponent & each bound unconditional, each exponent a fit \\
+density curve (Meas.~\ref{meas:density}) & measured & undecidability is part
+  of the claim \\
+placement (Meas.~\ref{meas:placement}) & measured & controlled experiment \\
+\end{xltabular}}
+
+Table~\ref{tab:typing} is the first thing to read. Three entries deserve
+emphasis. Proposition~\ref{prop:direction} and the harmonic-mean half of
+Proposition~\ref{prop:collapse} are \emph{conditional}: they are proved
+implications whose hypothesis is positive definiteness of the raw Gram block,
+which on the surfaces of Section~\ref{sec:numerics} is a numerical fact about
+finitely many finite matrices and nothing more. Measurement~\ref{meas:typeII} is
+the one place where a statement of the source material does not convert:
+``effective rank $O(1)$'' is not a theorem, the substitute (a bandwidth
+$\Rightarrow$ $\eta$-rank lemma with a declared truncation error) is not written
+in this revision, and the row therefore stays measured.
+
+\subsection{Notation}
+\label{sec:notation}
+
+Notation is fixed once, in Table~\ref{tab:notation}, and not varied. Three
+choices need a word. The symbol $\Pi$ denotes the reflection-odd isometry, so
+that $B$ can be reserved for the archimedean Gram block of
+Section~\ref{sec:rank}; $\MM$ (calligraphic) denotes $\diag(\mu_1,\dots,\mu_K)$,
+so that $M$ (upright) keeps its meaning as the window dimension; and the comb
+weights, written $\mu_j$ in \cite{PaperI}, are written $\varrho_j$ here, because
+$\mu_k$ is needed for the parity eigenvalues. The archimedean kernel is written
+$a(\cdot)$ and always carries its argument; the coefficient vector of a trial
+vector is written $a$ and never does.
+
+\begin{table}[t]
+\centering\small
+\begin{tabularx}{\textwidth}{@{}lY@{}}
+\toprule
+symbol & meaning \\
+\midrule
+$D,\ M\in2\N,\ \alpha=MD/2,\ h=M/2,\ N=2h+1$ & cell width, window dimension,
+  half-width, sector dimension, parity period \\
+$\Tm{M}(c)=(c_{|r-r'|})_{r,r'=0}^{M-1}$ & symmetric Toeplitz matrix of the lag
+  sequence $c$ \\
+$\Pi\in\R^{M\times h}$, $\Pi e_r=\tfrac1{\sqrt2}(e_r-e_{M-1-r})$ &
+  reflection-odd isometry, $\Pi^{\T}\Pi=I_h$ \\
+$A=\Pi^{\T}\Tm{M}(c)\Pi$, $A_{rr'}=c_{|r-r'|}-c_{M-1-r-r'}$ & the odd window
+  form \\
+$a(\cdot)$; $S_D(s,u)$; $\varrho_j,u_j$ & archimedean kernel; symmetrised hat;
+  comb weights and node positions \\
+$L_P$ & odd compression of the lag sequence $(2,-1,0,\dots)$: tridiagonal
+  $2I-E-E^{\T}$ with corner entry $3$ \\
+$\mu_k=4\sin^{2}(k\pi/N)$, $(t_k)_r=\tfrac2{\sqrt N}\sin\tfrac{2\pi k(r+1)}N$ &
+  parity eigenvalues and orthonormal parity modes, $k=1,\dots,h$ \\
+$\ah_{ij}=t_i^{\T}At_j$, $\Ah_K=(\ah_{ij})_{i,j\le K}$ & the raw Gram block \\
+$\MM=\diag(\mu_1,\dots,\mu_K)$, $G=\MM^{-1/2}\Ah_K\MM^{-1/2}$ & the normalised
+  $K$-block \\
+$G_k$, $g_k=e_1^{\T}G_k^{-1}e_1$, $s=\mu_1t_1^{\T}A^{-1}t_1$ & leading blocks,
+  the ladder, the entry functional \\
+$x$ admissible: $x\in\R^{K}$, $x_1=1$ & trial vector \\
+$a_k=x_k/\sqrt{\mu_k}$, $v=\sum_{k\le K}a_kt_k$ & coefficient vector and window
+  vector \\
+$Q(x)=x^{\T}Gx=v^{\T}Av$ & the value \\
+$w_0=\Ac_0(v)$, $w_d=2\Ac_d(v)-\Cv_{M-1-d}(v)$ $(d\ge1)$, $w_M:=0$ & lag
+  weights; $\Ac$ autocorrelation, $\Cv$ self-convolution \\
+$(\Delta w)_d=w_d-w_{d+1}$, $\TV(x)=\lVert\Delta w\rVert_1$ & lag increments and
+  total variation \\
+$C_d=\sum_{e\le d}c_e$, $C_{-1}:=0$ & partial sums of the lag sequence \\
+$B$, $S$, $r_{12}^{2}=\ah_{12}^{2}/(\ah_{11}\ah_{22})$, $\nu_1\ge\nu_2$ &
+  archimedean block, comb block, squared correlation, eigenvalues of $\Ah_2$ \\
+$D(P,Q)=P_{11}Q_{22}+P_{22}Q_{11}-2P_{12}Q_{12}$ & polarisation of $\det$ on
+  symmetric $2\times2$ matrices \\
+\bottomrule
+\end{tabularx}
+\caption{Notation, fixed for the whole paper.}
+\label{tab:notation}
+\end{table}
+
+$X\PSD$ and $X\PD$ denote positive semidefiniteness and definiteness,
+$\preceq$ the L\"owner order, $\lVert\cdot\rVert$ the Euclidean norm,
+$e_k$ the $k$-th coordinate vector, $|X|$ the entrywise absolute value of a
+matrix, and $\sgn$ the entrywise sign. For $v\in\R^{h}$ the autocorrelation and
+self-convolution are
+\begin{equation}
+\label{eq:accv}
+  \Ac_d(v)=\sum_{r}v_rv_{r+d}\quad(d\ge0),
+  \qquad
+  \Cv_j(v)=\sum_{r+r'=j}v_rv_{r'},
+\end{equation}
+both sums over indices in $\{0,\dots,h-1\}$ and empty sums being zero.
+\emph{Admissible} always means $x_1=1$.
+
+\section{Setting}
+\label{sec:setting}
+
+\subsection{The odd window form and the comb class}
+\label{sec:window}
+
+We use the window form and the comb class of \cite{PaperI} verbatim and recall
+only what is needed. Fix a cell width $D>0$ and an even $M$, put $\alpha=MD/2$,
+$h=M/2$, and let $\Pi$ be the reflection-odd isometry of
+Table~\ref{tab:notation}. Given a real lag sequence $c=(c_m)_{m=0}^{M-1}$ the
+odd window form is
+\begin{equation}
+\label{eq:Adef}
+  A=\Pi^{\T}\Tm{M}(c)\,\Pi\in\R^{h\times h},
+  \qquad
+  A_{rr'}=c_{|r-r'|}-c_{M-1-r-r'} .
+\end{equation}
+The class we verify on is the comb class of \cite[Def.~2.6]{PaperI}: with
+$a(\cdot)$ the archimedean kernel of that definition, a finite node set
+$\{(u_j,\varrho_j)\}_j$ with $u_j>0$, $\varrho_j>0$, and
+$S_D(s,u)=\tfrac12[\Delta_D(s-u)+\Delta_D(s+u)]$ the symmetrised hat built from
+the unit-height triangle $\Delta_D(t)=\max\{0,1-|t|/D\}$ of half-width $D$,
+\begin{equation}
+\label{eq:lags}
+  c_m=a(mD)-\sum_{j:\,u_j\le2\alpha}\varrho_j\,S_D(mD,u_j),
+  \qquad m=0,\dots,M-1 .
+\end{equation}
+The \emph{prime-power instance} is $u_j=\log n_j$ over the prime powers
+$n_j=p^{\nu}$ in increasing order with $\varrho_j=2\Lambda(n_j)/\sqrt{n_j}$,
+$\Lambda$ the von Mangoldt weight. By linearity of $c\mapsto A$ the split of
+\eqref{eq:lags} induces a split
+\begin{equation}
+\label{eq:Asplit}
+  A=A_{\mathrm{arch}}-A_{\mathrm{comb}},
+  \qquad
+  A_{\mathrm{comb}}=\sum_{j}\varrho_j\,A^{(j)},
+  \quad
+  A^{(j)}=\Pi^{\T}\Tm{M}\bigl(S_D(\cdot D,u_j)\bigr)\Pi .
+\end{equation}
+Throughout, a \emph{resolution} $D$ is called \emph{admissible} if
+$D<\min_ju_j$; for the prime-power instance this is implied by the admissibility
+convention of \cite[Def.~5.1]{PaperI}, which fixes $D$ as a fraction of the
+smallest log-gap in the run.
+
+\begin{remark}[the arithmetic is not used]
+\label{rem:combfree}
+Theorems~\ref{thm:tvfloor}, \ref{thm:gauge} and \ref{thm:rank3}, and every
+lemma, proposition and corollary of Sections~\ref{sec:setting}--\ref{sec:rank},
+hold for an \emph{arbitrary} finite comb: the node positions $u_j$ and the
+weights $\varrho_j$ enter only as the data of \eqref{eq:lags}, and no property of
+the sequence $(u_j)$ or $(\varrho_j)$ is used. Where the prime-power instance is
+mentioned it is as the instance the measurements of
+Sections~\ref{sec:open}--\ref{sec:numerics} were taken on, and the only
+arithmetic facts consumed anywhere are the two classical gap inequalities used
+in \cite{PaperI} to check that a resolution is admissible
+\cite{Chebyshev1852,RosserSchoenfeld1962}. No arithmetic statement is claimed.
+\end{remark}
+
+\subsection{The parity spectrum}
+\label{sec:parity}
+
+Let $c^{L}=(2,-1,0,\dots,0)$ and let $L_P$ be the odd window form
+\eqref{eq:Adef} of $c^{L}$.
+
+\begin{lemma}[the parity compression and its spectrum]
+\label{lem:kms}
+$L_P$ is the tridiagonal matrix $2I-E-E^{\T}$ on $\R^{h}$ with corner entry
+$(L_P)_{h-1,h-1}=3$; equivalently, $L_P$ is the second-difference form with a
+Dirichlet condition at the outer end and the odd reflection $u_h=-u_{h-1}$ at
+the inner end. Its eigenpairs are
+\begin{equation}
+\label{eq:kms}
+  \mu_k=4\sin^{2}\Bigl(\frac{k\pi}{N}\Bigr),
+  \qquad
+  (t_k)_r=\frac2{\sqrt N}\,\sin\frac{2\pi k(r+1)}{N},
+  \qquad k=1,\dots,h,\ r=0,\dots,h-1,
+\end{equation}
+with $N=2h+1$, and $\{t_k\}_{k=1}^{h}$ is an orthonormal basis of $\R^{h}$. In
+particular $\mu_1=4\sin^{2}(\pi/N)$ is the smallest eigenvalue and
+\begin{equation}
+\label{eq:gap}
+  \frac1{\mu_1}\;\ge\;\frac{N^{2}}{4\pi^{2}}\;>\;\frac{h^{2}}{\pi^{2}} .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For $c^{L}$ the Hankel part of \eqref{eq:Adef} is
+$-c^{L}_{M-1-r-r'}$, which is nonzero only if $M-1-r-r'\in\{0,1\}$, i.e.\ only
+if $r+r'\in\{2h-2,2h-1\}$; since $r,r'\le h-1$ the only possibility is
+$r=r'=h-1$, contributing $-c^{L}_1=+1$. Hence $L_P$ is tridiagonal with
+diagonal $2$ except for the corner entry $2+1=3$, which is the first assertion.
+Reading the rows as a recurrence, row $0$ is $2u_0-u_1=\mu u_0$, i.e.\ the
+convention $u_{-1}=0$, and row $h-1$ is $-u_{h-2}+3u_{h-1}=\mu u_{h-1}$, i.e.\
+$-u_{h-2}+2u_{h-1}-u_h=\mu u_{h-1}$ with $u_h=-u_{h-1}$.
+
+For the eigenpairs, put $u_r=\sin(\omega(r+1))$. Then $u_{-1}=0$ and the
+interior recurrence holds with $\mu=2-2\cos\omega=4\sin^{2}(\omega/2)$. The
+inner condition $u_h=-u_{h-1}$ reads
+$\sin(\omega(h+1))+\sin(\omega h)=2\sin\bigl(\tfrac{\omega N}2\bigr)
+\cos\bigl(\tfrac\omega2\bigr)=0$, and since $0<\omega<\pi$ the second factor is
+positive, so $\omega N/2=k\pi$, i.e.\ $\omega=2k\pi/N$ and
+$\mu=4\sin^{2}(k\pi/N)$. The values $k=1,\dots,h$ give $h$ distinct eigenvalues,
+hence all of them. For the normalisation,
+$\sum_{r=0}^{N-1}\sin^{2}(2\pi kr/N)=N/2$, the term $r=0$ vanishes, and the
+remaining $2h$ terms pair up as $r\leftrightarrow N-r$ with equal values, so
+$\sum_{r=1}^{h}\sin^{2}(2\pi kr/N)=N/4$ and the factor $2/\sqrt N$ normalises.
+Orthogonality is symmetry of $L_P$ together with simplicity of the spectrum.
+Finally $\sin t\le t$ on $[0,\pi/2]$ gives
+$\mu_1\le4\pi^{2}/N^{2}$, which is \eqref{eq:gap}; the last inequality is
+$N=2h+1>2h$.
+\end{proof}
+
+The spectrum \eqref{eq:kms} is the classical Kac--Murdock--Szeg\H{o} spectrum of
+the second difference in the reflection-odd sector \cite{KMS1953}, and $\mu_1$
+is its spectral gap. Everything in Sections~\ref{sec:tvfloor} and
+\ref{sec:gauge} is driven by \eqref{eq:gap} and by nothing else.
+
+\subsection{The raw Gram block, the normalised block, and the ladder}
+\label{sec:gram}
+
+Fix $K\le h$ (the verified surfaces use $K=16$; nothing below depends on the
+value). With $\{t_k\}$ of Lemma~\ref{lem:kms} put
+\begin{equation}
+\label{eq:gram}
+  \ah_{ij}=t_i^{\T}At_j,
+  \qquad
+  \Ah_K=(\ah_{ij})_{i,j\le K},
+  \qquad
+  G=\MM^{-1/2}\Ah_K\MM^{-1/2},
+  \qquad \MM=\diag(\mu_1,\dots,\mu_K),
+\end{equation}
+write $G_k$ for the leading $k\times k$ block of $G$, and
+\begin{equation}
+\label{eq:ladder}
+  g_k=e_1^{\T}G_k^{-1}e_1\quad(k=1,\dots,K),
+  \qquad
+  s=\mu_1\,t_1^{\T}A^{-1}t_1 .
+\end{equation}
+The following three facts are classical; we record them in the form used later.
+
+\begin{lemma}[interlacing]
+\label{lem:interlacing}
+Let $X\in\R^{n\times n}$ be symmetric and $P\in\R^{n\times m}$ an isometry.
+Then the eigenvalues of $P^{\T}XP$ interlace those of $X$; in particular
+$\lmin(X)\le\lmin(P^{\T}XP)$. Consequently a $K$-truncated Rayleigh minimum is
+an upper bound for $\lmin$ and never a lower bound.
+\end{lemma}
+
+\begin{proof}
+Cauchy's interlacing theorem \cite{Cauchy1829} in the Courant--Fischer form
+\cite{CourantFischer1920}.
+\end{proof}
+
+\begin{lemma}[Schur nesting]
+\label{lem:nesting}
+Let $X\PD$ be partitioned as
+$\bigl[\begin{smallmatrix}\xi&b^{\T}\\ b&Y\end{smallmatrix}\bigr]$ with
+$\xi\in\R$. Then $Y\PD$ and
+\begin{equation}
+\label{eq:schur}
+  \frac1{(X^{-1})_{11}}=\xi-b^{\T}Y^{-1}b,
+  \qquad
+  (X^{-1})_{11}=\frac{\det Y}{\det X} .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The first identity is the Schur complement of the $(1,1)$ pivot
+\cite{Schur1917,Haynsworth1968}; the second is Jacobi's formula for a cofactor
+of the inverse, i.e.\ Cramer's rule.
+\end{proof}
+
+\begin{lemma}[constrained minimum]
+\label{lem:constrained}
+Let $X\PD$ be $k\times k$. Then
+\begin{equation}
+\label{eq:constrmin}
+  \min\{u^{\T}Xu:\ u\in\R^{k},\ u_1=1\}
+  =\frac1{e_1^{\T}X^{-1}e_1},
+\end{equation}
+attained exactly at $u^{\star}=X^{-1}e_1/(e_1^{\T}X^{-1}e_1)$. Equivalently,
+\emph{every} admissible $u$ gives $u^{\T}Xu\ge1/(e_1^{\T}X^{-1}e_1)$: an
+explicit trial vector is a certified lower bound for the reciprocal, never an
+upper one.
+\end{lemma}
+
+\begin{proof}
+Write $u=u^{\star}+\delta$ with $\delta_1=0$. Since
+$Xu^{\star}=e_1/(e_1^{\T}X^{-1}e_1)$, the cross term is
+$2\delta^{\T}Xu^{\star}=2\delta_1/(e_1^{\T}X^{-1}e_1)=0$, so
+$u^{\T}Xu=(u^{\star})^{\T}Xu^{\star}+\delta^{\T}X\delta$ and
+$(u^{\star})^{\T}Xu^{\star}=(u^{\star})^{\T}e_1/(e_1^{\T}X^{-1}e_1)
+=1/(e_1^{\T}X^{-1}e_1)$ because $u^{\star}_1=1$. As $X\PD$ the remainder is
+positive unless $\delta=0$.
+\end{proof}
+
+\begin{proposition}[three forms of the ladder]
+\label{prop:cascade}
+Assume $G\PD$ and let $G=LL^{\T}$ be its Cholesky factorisation,
+$y=L^{-1}e_1$. Then for every $k\le K$:
+\begin{align}
+\label{eq:prefix}
+  \text{(prefix)}\qquad & g_k=\sum_{j\le k}y_j^{2};\\
+\label{eq:minor}
+  \text{(minor)}\qquad & \frac1{g_k}
+    =\frac{\det\Ah_{[1..k]}}{\mu_1\,\det\Ah_{[2..k]}}
+    \qquad(\det\Ah_{[2..1]}:=1);\\
+\label{eq:regression}
+  \text{(regression)}\qquad & \frac{g_k}{g_1}=\frac1{1-R_k^{2}},
+    \qquad R_k^{2}=\frac{b^{\T}G_{HH}^{-1}b}{G_{11}},
+\end{align}
+where in \eqref{eq:regression} the block $G_k$ is partitioned as
+$\bigl[\begin{smallmatrix}G_{11}&b^{\T}\\ b&G_{HH}\end{smallmatrix}\bigr]$ with
+$H=\{2,\dots,k\}$. In particular $k\mapsto g_k$ is nondecreasing, strictly
+increasing whenever $y_k\ne0$, and $R_k^{2}\in[0,1)$ is the squared multiple
+correlation of the first coordinate on the remaining $k-1$.
+\end{proposition}
+
+\begin{proof}
+\emph{Prefix.} For a Cholesky factorisation the leading $k\times k$ block of $G$
+is $L_kL_k^{\T}$ with $L_k$ the leading block of $L$, so
+$g_k=e_1^{\T}L_k^{-\T}L_k^{-1}e_1=\lVert L_k^{-1}e_1\rVert^{2}$; and since $L$
+is lower triangular, forward substitution gives
+$L_k^{-1}e_1=(L^{-1}e_1)_{1:k}=y_{1:k}$. Monotonicity is immediate.
+
+\emph{Minor.} By \eqref{eq:schur},
+$g_k=\det G_{[2..k]}/\det G_{[1..k]}$. Substituting
+$G=\MM^{-1/2}\Ah_K\MM^{-1/2}$ gives
+$\det G_{[1..k]}=\det\Ah_{[1..k]}/\prod_{j\le k}\mu_j$ and
+$\det G_{[2..k]}=\det\Ah_{[2..k]}/\prod_{2\le j\le k}\mu_j$, and all factors
+cancel except $\mu_1$, which yields \eqref{eq:minor}.
+
+\emph{Regression.} By \eqref{eq:schur}, $1/g_k=G_{11}-b^{\T}G_{HH}^{-1}b
+=G_{11}(1-R_k^{2})$, while $g_1=1/G_{11}$; divide.
+\end{proof}
+
+\begin{lemma}[diagonal invariance of the ladder gain]
+\label{lem:diaginv}
+For every positive diagonal $\Lambda=\diag(d_1,\dots,d_K)$ the gain
+$g_k/g_1=G_{11}\,(G_k^{-1})_{11}$ is unchanged under $G\mapsto\Lambda G\Lambda$.
+\end{lemma}
+
+\begin{proof}
+$(\Lambda G\Lambda)_{11}=d_1^{2}G_{11}$ and
+$\bigl((\Lambda G\Lambda)_k^{-1}\bigr)_{11}=d_1^{-2}(G_k^{-1})_{11}$; the
+product is invariant.
+\end{proof}
+
+Lemma~\ref{lem:diaginv} localises the phenomenon: the gain does not see the
+$\mu^{-1/2}$ normalisation of \eqref{eq:gram} at all, so whatever makes
+$g_K/g_1$ large is a property of the raw Gram block $\Ah_K$ alone, and the
+parity spectrum enters it only through the choice of the modes.
+
+\begin{proposition}[direction of the ladder]
+\label{prop:direction}
+Assume $\Ah_h\PD$, i.e.\ $A\PD$ on the parity sector. Then
+\begin{equation}
+\label{eq:direction}
+  s\;\ge\;g_K\;\ge\;g_1=\frac1{G_{11}},
+  \qquad\text{equivalently}\qquad
+  \frac1s\;\le\;\frac1{g_K}\;\le\;\frac1{g_1},
+\end{equation}
+with every ladder increment $g_{k+1}-g_k\ge0$. The hypothesis is used only for
+the Cholesky factorisation of Proposition~\ref{prop:cascade} and is, on the
+surfaces of Section~\ref{sec:numerics}, certified per window.
+\end{proposition}
+
+\begin{proof}
+Let $T=[t_1,\dots,t_h]$, so $T$ is orthogonal and $\Ah_h=T^{\T}AT$. Then
+$A^{-1}=T\Ah_h^{-1}T^{\T}$, hence
+$t_1^{\T}A^{-1}t_1=(\Ah_h^{-1})_{11}$; and with
+$\MM_h=\diag(\mu_1,\dots,\mu_h)$ and $G^{(h)}=\MM_h^{-1/2}\Ah_h\MM_h^{-1/2}$
+one has $\bigl((G^{(h)})^{-1}\bigr)_{11}=\mu_1(\Ah_h^{-1})_{11}$, i.e.\
+$s=g_h$. Now apply \eqref{eq:prefix}: $g_k$ is a partial sum of squares, so
+$g_1\le g_K\le g_h=s$.
+\end{proof}
+
+\subsection{Lag weights, the gauge law, and the boundary-free swap}
+\label{sec:lag}
+
+Let $v\in\R^{h}$ and define the \emph{lag weights} of $v$ by
+\begin{equation}
+\label{eq:weights}
+  w_0=\Ac_0(v),
+  \qquad
+  w_d=2\Ac_d(v)-\Cv_{M-1-d}(v)\quad(1\le d\le M-1),
+  \qquad w_M:=0 ,
+\end{equation}
+with $\Ac,\Cv$ as in \eqref{eq:accv}, and put $(\Delta w)_d=w_d-w_{d+1}$ and
+$\TV=\lVert\Delta w\rVert_1=\sum_{d=0}^{M-1}|(\Delta w)_d|$. For an admissible
+$x$ we write $w(x)$, $\TV(x)$ for the weights and total variation of the window
+vector $v=\sum_{k\le K}a_kt_k$, $a_k=x_k/\sqrt{\mu_k}$.
+
+\begin{lemma}[the weights represent the form; the gauge law]
+\label{lem:gauge}
+For every $v\in\R^{h}$ and every lag sequence $c$,
+\begin{equation}
+\label{eq:represent}
+  v^{\T}Av=\sum_{d=0}^{M-1}c_d\,w_d,
+  \qquad
+  w_0=\lVert v\rVert^{2},
+  \qquad
+  \sum_{d=0}^{M-1}w_d=0 .
+\end{equation}
+In particular, for an admissible $x$, $Q(x)=x^{\T}Gx=v^{\T}Av=\sum_dc_dw_d(x)$.
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:Adef},
+$v^{\T}Av=\sum_{r,r'}v_rv_{r'}c_{|r-r'|}-\sum_{r,r'}v_rv_{r'}c_{M-1-r-r'}$. The
+first sum collects the lag $d=|r-r'|$ with multiplicity $1$ for $d=0$ and $2$
+for $d\ge1$, i.e.\ it equals $c_0\Ac_0(v)+2\sum_{d\ge1}c_d\Ac_d(v)$. The second
+sum collects the index $d=M-1-r-r'$, and
+since $r,r'\le h-1$ we have $r+r'\le M-2$, so $d\ge1$ throughout and the
+coefficient of $c_d$ is $\Cv_{M-1-d}(v)$. This is the first identity of
+\eqref{eq:represent} with the weights \eqref{eq:weights}, and it also shows
+$w_0=\Ac_0(v)=\lVert v\rVert^{2}$: the reflection term cannot reach $d=0$.
+
+For the gauge law, sum \eqref{eq:weights}. Over all $d\ge0$,
+$\Ac_0(v)+2\sum_{d\ge1}\Ac_d(v)=\bigl(\sum_rv_r\bigr)^{2}$, and as $d$ runs
+through $1,\dots,M-1$ the index $j=M-1-d$ runs through $0,\dots,M-2=2h-2$, so
+$\sum_{d\ge1}\Cv_{M-1-d}(v)=\sum_{j=0}^{2h-2}\Cv_j(v)
+=\bigl(\sum_rv_r\bigr)^{2}$. The two contributions cancel.
+\end{proof}
+
+The gauge law has a consequence we use once: since $\sum_dw_d=0$, the value
+$\sum_dc_dw_d$ is unchanged if a constant is added to every $c_d$. So the
+representation \eqref{eq:represent} determines the form only up to an additive
+normalisation of $c$, and any bound obtained from it may be optimised over that
+normalisation.
+
+\begin{lemma}[boundary-free summation by parts]
+\label{lem:abel}
+With $C_d=\sum_{e\le d}c_e$, $C_{-1}=0$, and $w_M=0$,
+\begin{equation}
+\label{eq:abel}
+  \sum_{d=0}^{M-1}c_d\,w_d\;=\;\sum_{d=0}^{M-1}C_d\,(\Delta w)_d
+\end{equation}
+with no boundary term at either end.
+\end{lemma}
+
+\begin{proof}
+Substituting $c_d=C_d-C_{d-1}$,
+\[
+  \sum_{d=0}^{M-1}c_dw_d
+  =\sum_{d=0}^{M-1}C_dw_d-\sum_{d=0}^{M-1}C_{d-1}w_d
+  =\sum_{d=0}^{M-1}C_dw_d-\sum_{d=0}^{M-2}C_dw_{d+1}
+  =\sum_{d=0}^{M-1}C_d(w_d-w_{d+1}),
+\]
+where the second equality shifted the index and used $C_{-1}=0$, and the third
+used $w_M=0$ to absorb the last term.
+\end{proof}
+
+This is Abel's summation by parts \cite{Abel1826}. Both boundary terms vanish
+for structural reasons and not by a choice: $C_{-1}=0$ by definition of a
+partial sum, and $w_M=0$ because both terms of \eqref{eq:weights} vanish at
+$d=M$.
+
+\section{The total-variation floor}
+\label{sec:tvfloor}
+
+\begin{theorem}[the total-variation floor]
+\label{thm:tvfloor}
+Let $x\in\R^{K}$ be admissible, i.e.\ $x_1=1$, and let $w=w(x)$ be the lag
+weights of $v=\sum_{k\le K}a_kt_k$, $a_k=x_k/\sqrt{\mu_k}$. Then
+\begin{equation}
+\label{eq:tvfloor}
+  \TV(x)\;\ge\;|w_0|\;=\;\lVert v\rVert^{2}\;=\;\lVert a\rVert^{2}
+  \;\ge\;\frac1{\mu_1}\;=\;\frac1{4\sin^{2}(\pi/N)}
+  \;\ge\;\frac{N^{2}}{4\pi^{2}} .
+\end{equation}
+The bound involves no comb node, no taper and no truncation, and it holds for
+every lag sequence $c$ --- indeed the left- and right-hand sides do not depend
+on $c$ at all.
+\end{theorem}
+
+\begin{proof}
+Four steps.
+
+\emph{(i) $w_0=\lVert a\rVert^{2}$.} By Lemma~\ref{lem:gauge},
+$w_0=\lVert v\rVert^{2}$; and $\lVert v\rVert^{2}=\lVert a\rVert^{2}$ because
+$\{t_k\}$ is orthonormal (Lemma~\ref{lem:kms}).
+
+\emph{(ii) $\TV\ge|w_0|$.} With $w_M=0$ the increments telescope:
+$\sum_{d=0}^{M-1}(\Delta w)_d=w_0-w_M=w_0$. Hence
+$|w_0|\le\sum_{d=0}^{M-1}|(\Delta w)_d|=\TV$.
+
+\emph{(iii) $\lVert a\rVert^{2}\ge1/\mu_1$.} Admissibility gives
+$a_1=x_1/\sqrt{\mu_1}=1/\sqrt{\mu_1}$, so
+$\lVert a\rVert^{2}\ge a_1^{2}=1/\mu_1$.
+
+\emph{(iv) $1/\mu_1\ge N^{2}/(4\pi^{2})$.} This is \eqref{eq:gap}, i.e.\
+$\sin t\le t$.
+\end{proof}
+
+Three features of \eqref{eq:tvfloor} are worth separating. It is a statement
+about the \emph{normalisation}, not about the form: step (iii) is the only place
+where admissibility is used, and it is where the whole $h^{2}$ comes from. It is
+a statement about the \emph{sector}: step (i) uses orthonormality of the parity
+modes and step (iv) uses their spectrum, both of which are the classical
+Kac--Murdock--Szeg\H{o} data \cite{KMS1953}. And it is \emph{closed}: no
+constant is fitted, no window is excluded, and the right-hand side is an
+elementary function of $h$.
+
+\begin{corollary}[the price]
+\label{cor:price}
+For every admissible $x$,
+\begin{equation}
+\label{eq:price}
+  \frac{|Q(x)|}{\TV(x)}\;\le\;\mu_1\,|Q(x)| .
+\end{equation}
+Consequently, if a family of admissible trial vectors has values bounded by
+$|Q(x)|\le U$ with $U$ independent of $h$, the ratio it certifies is at most
+$U\mu_1=O(h^{-2})$.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:tvfloor}, $\TV(x)\ge1/\mu_1>0$, so
+$1/\TV(x)\le\mu_1$; multiply by $|Q(x)|\ge0$. The consequence is
+$\mu_1=4\sin^{2}(\pi/N)\le4\pi^{2}/N^{2}$.
+\end{proof}
+
+Corollary~\ref{cor:price} is the load-bearing statement of the section. It says
+that the pair (value, total variation) cannot be improved by choosing a better
+trial vector: the ratio is pinned by the value alone, up to the spectral gap.
+Any route whose output is the ratio therefore pays a factor $h^{-2}$ that is a
+property of the parity spectrum meeting the normalisation, and not a property of
+the comb.
+
+\begin{corollary}[what summation by parts can certify]
+\label{cor:holder}
+For every admissible $x$,
+\begin{equation}
+\label{eq:holder}
+  |Q(x)|\;\le\;\Bigl(\max_{0\le d\le M-1}|C_d|\Bigr)\,\TV(x),
+  \qquad\text{hence}\qquad
+  \max_{d}|C_d|\;\ge\;\frac{|Q(x)|}{\TV(x)} .
+\end{equation}
+Combined with \eqref{eq:price}, a family of bounded value certifies
+$\max_d|C_d|\ge$ a quantity that is $O(h^{-2})$, and nothing stronger. By the
+gauge law of Lemma~\ref{lem:gauge} the estimate may be applied to $c+\gamma$ for
+any $\gamma\in\R$, so $\max_d|C_d|$ may be replaced by
+$\inf_{\gamma}\max_d|C_d+\gamma(d+1)|$.
+\end{corollary}
+
+\begin{proof}
+Lemma~\ref{lem:abel} and H\"older: $|\sum_dC_d(\Delta w)_d|
+\le\max_d|C_d|\cdot\lVert\Delta w\rVert_1$. The final sentence is the remark
+after Lemma~\ref{lem:gauge}, since replacing $c_d$ by $c_d+\gamma$ leaves
+$Q$ unchanged and replaces $C_d$ by $C_d+\gamma(d+1)$.
+\end{proof}
+
+\begin{corollary}[the floor at one coordinate]
+\label{cor:abis}
+For every $v\in\R^{h}\setminus\{0\}$ with $t_1^{\T}v\ne0$,
+\begin{equation}
+\label{eq:abis}
+  \frac{\TV(v)}{(t_1^{\T}v)^{2}}\;\ge\;1,
+  \qquad\text{because}\qquad
+  \TV(v)\;\ge\;|w_0|=\lVert v\rVert^{2}\;\ge\;(t_1^{\T}v)^{2} .
+\end{equation}
+No normalisation is required: \eqref{eq:abis} holds for every window vector, and
+for admissible $x$ it reduces to \eqref{eq:tvfloor} because
+$(t_1^{\T}v)^{2}=a_1^{2}=1/\mu_1$.
+\end{corollary}
+
+\begin{proof}
+The first two relations are steps (i)--(ii) of Theorem~\ref{thm:tvfloor}, which
+used no admissibility; the third is Cauchy--Schwarz with $\lVert t_1\rVert=1$.
+\end{proof}
+
+\begin{remark}[negative control: the floor is a property of the normalisation]
+\label{rem:negcontrol}
+Step (iii) is the only step that uses $x_1=1$, and it is indispensable: for
+$\lambda\ne0$ the vector $\lambda x$ has $\TV(\lambda x)=\lambda^{2}\TV(x)$
+(both $\Ac$ and $\Cv$ are quadratic in $v$, and $v$ is linear in $x$), so
+$\mu_1\TV(\lambda x)=\lambda^{2}\mu_1\TV(x)$ falls below $1$ as soon as
+$|\lambda|$ is small enough. An inadmissible vector therefore undercuts the
+floor, and recognising it as inadmissible is the whole content of the
+observation. This is also the reason Theorem~\ref{thm:gauge} below is a
+statement about rays.
+\end{remark}
+
+\begin{measurement}[sharpness of the floor]
+\label{meas:sharpness}
+On Surface~II of Section~\ref{sec:numerics} --- $27$ windows of the frame-A
+family, $h=142$ to $1445$, all with $\cond(G)\le10^{12}$ --- the floor of
+Theorem~\ref{thm:tvfloor} is tight to about one order of magnitude: the measured
+ratio is
+\begin{equation}
+\label{eq:sharp}
+  \mu_1\,\TV(x)\in[5.00,\ 23.20]
+\end{equation}
+at the optimiser of the declared trial family, while the floor itself takes the
+values $2.06\cdot10^{3}$ to $1.77\cdot10^{5}$, growing as $h^{+1.997}$ (a
+least-squares fit, reported for orientation and not used anywhere) against the
+closed $h^{2}$ of \eqref{eq:gap}. The inadmissible control of
+Remark~\ref{rem:negcontrol} returns $\mu_1\TV\approx7\cdot10^{-4}$ at
+$\lambda=10^{-2}$, i.e.\ it undercuts the floor by the predicted factor
+$\lambda^{2}$.
+\draftnote{the declared caps of Surface~II, and the definition of the trial
+family whose optimiser \eqref{eq:sharp} is evaluated at, are written out with
+Section~\ref{sec:numerics}.}
+\end{measurement}
+
+We close the section by saying plainly what the floor does not know about. It
+does not know where the comb nodes are, or how many there are, or what their
+weights are; it does not know whether the trial vector was tapered, and it does
+not know at which $K$ the mode family was truncated. It is a statement about
+$\{t_k\}$, about $\mu_1$, and about the normalisation $x_1=1$. The next section
+shows that the last of these three cannot be traded away.
+
+\section{Gauge rigidity of the normalisation}
+\label{sec:gauge}
+
+Theorem~\ref{thm:tvfloor} raises an obvious question: the floor is $1/\mu_1$
+because the normalisation is imposed on the mode with eigenvalue $\mu_1$, so
+could a different \emph{entry spectrum} --- a reweighted, shifted or otherwise
+reparametrised family --- produce a flatter floor and hence a better ratio? The
+answer is no, and it is no for a structural reason.
+
+\begin{theorem}[the normalisation is a gauge]
+\label{thm:gauge}
+For $a\in\R^{K}$ let $v(a)=\sum_{k\le K}a_kt_k$ and
+\begin{equation}
+\label{eq:functionals}
+  \widetilde Q(a)=v(a)^{\T}Av(a),
+  \qquad
+  \widetilde{\TV}(a)=\lVert\Delta w(v(a))\rVert_1 .
+\end{equation}
+Then:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.6em]
+\item\label{G:hom} $\widetilde Q$ and $\widetilde{\TV}$ are homogeneous of
+  degree $2$: $\widetilde Q(\lambda a)=\lambda^{2}\widetilde Q(a)$ and
+  $\widetilde{\TV}(\lambda a)=\lambda^{2}\widetilde{\TV}(a)$ for all
+  $\lambda\in\R$.
+\item\label{G:ray} Hence the ratio
+  $\varrho(a)=\widetilde Q(a)/\widetilde{\TV}(a)$ is constant on rays: it is a
+  function of the direction of $a$ alone.
+\item\label{G:gauge} Let $\mu'=(\mu'_1,\dots,\mu'_K)$ be \emph{any} positive
+  entry spectrum and let $x\mapsto a$, $a_k=x_k/\sqrt{\mu'_k}$, be the
+  associated parametrisation. Then the constraint $x_1=1$ describes the affine
+  slice $\{a:a_1=1/\sqrt{\mu'_1}\}$, every ray $\{\lambda a:\lambda>0\}$ with
+  $a_1>0$ meets that slice exactly once, and consequently
+  \begin{equation}
+  \label{eq:gaugeequal}
+    \bigl\{\varrho(a):a_k=x_k/\sqrt{\mu'_k},\ x_1=1\bigr\}
+    \;=\;\bigl\{\varrho(a):a\in\R^{K},\ a_1>0\bigr\}
+  \end{equation}
+  \emph{independently of $\mu'$}. The entry normalisation is a gauge: the range
+  of the ratio is the same in every sector.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\ref{G:hom} $a\mapsto v(a)$ is linear, and by \eqref{eq:accv} both $\Ac_d$ and
+$\Cv_j$ are quadratic forms in $v$, so $w(v(\lambda a))=\lambda^{2}w(v(a))$ by
+\eqref{eq:weights}, hence $\Delta w$ and its $\ell^{1}$ norm scale by
+$\lambda^{2}$; and $\widetilde Q$ is a quadratic form in $a$.
+
+\ref{G:ray} Immediate from \ref{G:hom}, both numerator and denominator having
+the same degree.
+
+\ref{G:gauge} The map $x\mapsto a$ is a linear bijection of $\R^{K}$ taking
+$\{x_1=1\}$ onto $\{a_1=1/\sqrt{\mu'_1}\}$. A ray $\{\lambda a:\lambda>0\}$ with
+$a_1>0$ meets $\{a_1=\theta\}$ exactly once for every $\theta>0$, namely at
+$\lambda=\theta/a_1$. So the slice $\{a_1=1/\sqrt{\mu'_1}\}$ is a
+cross-section of the family of all rays with $a_1>0$, whatever the value of
+$\mu'_1>0$; by \ref{G:ray} the ratio takes the same set of values on the slice
+as on the family of rays, which is \eqref{eq:gaugeequal}. The right-hand side
+does not mention $\mu'$.
+\end{proof}
+
+Theorem~\ref{thm:gauge} is a fact about degree-two homogeneous functionals, and
+we state it modestly for that reason. Its force is entirely in the
+consequence: since the accessible range of the ratio is a sector-independent
+set, and since Theorem~\ref{thm:tvfloor} bounds that range in the parity
+parametrisation, no change of sector can enlarge it.
+
+\begin{corollary}[no sector change removes the $h^{2}$]
+\label{cor:noescape}
+Let $\mu'$ be any positive entry spectrum and let $x'$ be admissible for it.
+Then
+\begin{equation}
+\label{eq:noescape}
+  \frac{|\widetilde Q(a')|}{\widetilde{\TV}(a')}
+  \;\le\;\mu_1\;\sup\bigl\{|\widetilde Q(a)|:a\ \text{in the parity slice}\bigr\},
+\end{equation}
+with $\mu_1=4\sin^{2}(\pi/N)$ the parity gap --- i.e.\ the bound of
+Corollary~\ref{cor:price} transfers verbatim, with the \emph{parity} gap, to
+every sector. In particular a family of trial vectors with $h$-bounded value in
+some sector certifies a ratio $O(h^{-2})$ in that sector as well.
+\end{corollary}
+
+\begin{proof}
+By \eqref{eq:gaugeequal} the value $\varrho(a')$ is attained by some $a$ in the
+parity slice ($\mu'=\mu$), i.e.\ by some admissible $x$; apply
+Corollary~\ref{cor:price} to that $x$.
+\end{proof}
+
+The next proposition is the quantitative form of Corollary~\ref{cor:noescape}
+for the simplest reparametrisation, a rigid shift of the entry spectrum. It is a
+two-line computation, and we state it as a proposition rather than dressing it
+up: the point is not that the computation is hard but that the product it
+computes is \emph{exactly} constant.
+
+\begin{proposition}[floor $\times$ transfer is conserved]
+\label{prop:shift}
+Let $\tau\ge0$ and let $\mu'_k=\mu_k+\tau$ be the shifted entry spectrum, so
+that admissibility in the shifted sector reads $a'_1=1/\sqrt{\mu_1+\tau}$. Then
+the shifted floor of Theorem~\ref{thm:tvfloor} is
+$\widetilde{\TV}(a')\ge1/(\mu_1+\tau)$, the transfer factor relating the two
+normalisations is
+\begin{equation}
+\label{eq:transfer}
+  \theta=\frac{(a'_1)^{2}}{a_1^{2}}=\frac{\mu_1}{\mu_1+\tau},
+  \qquad
+  \frac1\theta=1+\frac\tau{\mu_1},
+\end{equation}
+and
+\begin{equation}
+\label{eq:conserved}
+  \underbrace{\frac1{\mu_1+\tau}}_{\text{shifted floor}}\cdot
+  \underbrace{\Bigl(1+\frac\tau{\mu_1}\Bigr)}_{\text{transfer}}
+  \;=\;\frac1{\mu_1+\tau}\cdot\frac{\mu_1+\tau}{\mu_1}
+  \;=\;\frac1{\mu_1}
+  \qquad\text{identically, at every shift }\tau .
+\end{equation}
+A shift does flatten the floor; it does not remove the $h^{2}$, which lives in
+the ratio and not in the floor.
+\end{proposition}
+
+\begin{proof}
+The floor is Theorem~\ref{thm:tvfloor} applied in the shifted parametrisation,
+whose step (iii) reads $\lVert a'\rVert^{2}\ge(a'_1)^{2}=1/(\mu_1+\tau)$.
+For the transfer, the two admissibility constraints differ only in the value of
+the first coefficient, $a_1=1/\sqrt{\mu_1}$ against
+$a'_1=1/\sqrt{\mu_1+\tau}$; by Theorem~\ref{thm:gauge}\ref{G:hom} a value
+computed at $a'$ is converted to the corresponding value on the same ray in the
+unshifted slice by the factor $(a_1/a'_1)^{2}=1/\theta$. The displayed product
+is then \eqref{eq:conserved}.
+\end{proof}
+
+\begin{proposition}[the null mode, and the other sector]
+\label{prop:nullmode}
+Let $c^{L}=(2,-1,0,\dots)$ be as in Lemma~\ref{lem:kms}.
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.6em]
+\item\label{N:sine} The parity family $\mu_k=4\sin^{2}(k\pi/N)$,
+  $k=1,\dots,h$, is the restriction to $k\ge1$ of the sine family
+  $\{4\sin^{2}(k\pi/N)\}_{k\ge0}$, whose member at $k=0$ is $\mu_0=0$.
+\item\label{N:noreps} The parametrisation $a_k=x_k/\sqrt{\mu'_k}$ of
+  Theorem~\ref{thm:gauge}\ref{G:gauge} requires $\mu'_k>0$. If a mode family
+  containing a null mode is used and the normalisation is imposed on that mode,
+  the constraint has \emph{no} representative $a$ of finite norm; if the
+  normalisation is imposed elsewhere, step (iii) of
+  Theorem~\ref{thm:tvfloor} yields the floor of the normalised mode and the
+  null mode contributes nothing. In neither case is a flatter admissible floor
+  obtained.
+\item\label{N:even} Write $\Pi_+e_r=\tfrac1{\sqrt2}(e_r+e_{M-1-r})$ for the
+  reflection-even isometry. The complementary compression
+  $\Pi_+^{\T}\Tm{M}(c^{L})\Pi_+$ has spectrum
+  $\bigl\{4\sin^{2}\bigl((2k+1)\pi/(2N)\bigr)\bigr\}_{k=0}^{h-1}$, whose
+  minimum $4\sin^{2}(\pi/(2N))$ is \emph{strictly smaller} than $\mu_1$. Hence
+  no reflection sector of the second-difference form has a lowest eigenvalue
+  exceeding $\mu_1$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\ref{N:sine} is the formula of Lemma~\ref{lem:kms} read at $k=0$.
+
+\ref{N:noreps} is the definition of the parametrisation together with step (iii)
+of Theorem~\ref{thm:tvfloor}, which bounds $\lVert a\rVert^{2}$ below by the
+square of the \emph{normalised} coordinate only.
+
+\ref{N:even} For $c^{L}$ the even compression is
+$(\Pi_+^{\T}\Tm{M}(c^{L})\Pi_+)_{rr'}=c^{L}_{|r-r'|}+c^{L}_{M-1-r-r'}$, which by
+the computation in the proof of Lemma~\ref{lem:kms} is tridiagonal
+$2I-E-E^{\T}$ with corner entry $2-1=1$; as a recurrence this is $u_{-1}=0$ and
+$u_h=+u_{h-1}$. With $u_r=\sin(\omega(r+1))$ the inner condition reads
+$\sin(\omega(h+1))-\sin(\omega h)
+=2\cos\bigl(\tfrac{\omega N}2\bigr)\sin\bigl(\tfrac\omega2\bigr)=0$, hence
+$\omega N/2=(k+\tfrac12)\pi$ and $\mu=4\sin^{2}\bigl((2k+1)\pi/(2N)\bigr)$ for
+$k=0,\dots,h-1$, which are $h$ distinct values, hence all. The minimum is at
+$k=0$ and $4\sin^{2}(\pi/(2N))<4\sin^{2}(\pi/N)=\mu_1$ because $\sin$ is
+increasing on $[0,\pi/2]$.
+\end{proof}
+
+Part~\ref{N:even} is the precise sense in which the parity compression is the
+best of the two reflection sectors for this purpose, and part~\ref{N:noreps} is
+the sense in which enlarging the mode family removes the statement instead of
+improving it. Together with Theorem~\ref{thm:gauge} and
+Proposition~\ref{prop:shift} this closes the sector question: reweighting,
+shifting, or enlarging the entry spectrum changes neither the accessible range
+of the ratio nor the conserved product.
+
+\begin{measurement}[the sector battery]
+\label{meas:battery}
+Theorem~\ref{thm:gauge} and Proposition~\ref{prop:shift} are proved statements;
+the following is their machine verification on a declared battery, reported
+because it also checks the implementation of the transport map. Over
+$35$ weight families $\times$ $6$ taper widths $\times$ $27$ windows of
+Surface~II the ratio $\varrho$ is reproduced across sectors with residual at
+most $8.8\cdot10^{-10}$ against a declared round-off horizon of
+$2.6\cdot10^{-8}$, and the product \eqref{eq:conserved} is reproduced as an
+exact identity at every shift of the declared shift list. Transporting the
+$x$-coordinates instead of the ray --- the wrong map --- moves the ratio by a
+large factor on the spread-out weight families, which is the mutation control of
+the battery.
+\end{measurement}
+
+\section{The two-dimensional reduction}
+\label{sec:twodim}
+
+\draftnote{Sections~\ref{sec:twodim}--\ref{sec:limits} carry their statements in
+final form together with proof sketches. The full write-ups, the priced table of
+Section~\ref{sec:open} and the measurement tables of
+Section~\ref{sec:numerics} are completed in a later pass; the type of each
+statement is recorded in Table~\ref{tab:typing} and nothing is upgraded in the
+meantime.}
+
+Sections~\ref{sec:tvfloor} and \ref{sec:gauge} priced the trial-vector route.
+This section identifies what is left: at $K=2$ the optimal trial vector is
+available in closed form, so the entire question collapses onto a single scalar,
+the squared correlation of the two lowest parity modes in the metric of $A$.
+
+\begin{proposition}[the closed vector is exact at $K=2$]
+\label{prop:K2}
+Assume $G_2\PD$ and put $r_{12}^{2}=G_{12}^{2}/(G_{11}G_{22})
+=\ah_{12}^{2}/(\ah_{11}\ah_{22})$. Then $u=(1,-G_{21}/G_{22})$ attains the
+constrained minimum of Lemma~\ref{lem:constrained} at $k=2$:
+\begin{equation}
+\label{eq:K2}
+  u^{\T}G_2u=\frac1{g_2}=G_{11}\bigl(1-r_{12}^{2}\bigr),
+  \qquad
+  G_{11}\,g_2=\frac1{1-r_{12}^{2}}\quad\text{identically}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Lemma~\ref{lem:nesting} at $k=2$ gives
+$1/g_2=G_{11}-G_{12}^{2}/G_{22}=G_{11}(1-r_{12}^{2})$, and
+Lemma~\ref{lem:constrained} identifies the minimiser as
+$G_2^{-1}e_1/(G_2^{-1}e_1)_1=(1,-G_{21}/G_{22})$. The second identity is the
+first divided by $g_1=1/G_{11}$, i.e.\ the case $k=2$ of
+\eqref{eq:regression}.
+\end{proof}
+
+\begin{proposition}[pivot identity]
+\label{prop:pivot}
+Assume $G_k\PD$ and let $x^{\star}$ be the minimiser of
+Lemma~\ref{lem:constrained}. Then for every $\delta$ with $\delta_1=0$,
+\begin{equation}
+\label{eq:pivot}
+  (x^{\star}+\delta)^{\T}G_k(x^{\star}+\delta)
+  =\frac1{g_k}+\delta^{\T}G_k\delta
+  \qquad\text{exactly},
+\end{equation}
+so the relative excess $\rho=g_k\,\delta^{\T}G_k\delta$ of any explicit
+candidate is an exact number and never an estimate.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+$G_kx^{\star}=e_1/g_k$ and $\delta_1=0$ annihilate the cross term; this is the
+computation already carried out in the proof of Lemma~\ref{lem:constrained}.
+\end{proof}
+
+\begin{proposition}[the entrywise perturbation, and one cancellation ratio]
+\label{prop:union}
+Let $x^{\star}$ be as above, $\sigma=\sgn(x^{\star})$,
+$\Theta_k=|x^{\star}|^{\T}|G_k|\,|x^{\star}|$, and for $\varepsilon>0$ let
+$E$ be the sign-aligned entrywise perturbation $E_{ij}=\varepsilon|G_{ij}|
+\sigma_i\sigma_j$. Then
+\begin{equation}
+\label{eq:union}
+  \bigl|(x^{\star})^{\T}Ex^{\star}\bigr|=\varepsilon\,\Theta_k
+  \qquad\text{exactly},
+\end{equation}
+so the entry threshold at which the perturbation exhausts the value is
+$\varepsilon_{\mathrm{ent}}(k)=\rho\,(1/g_k)/\Theta_k$ with $\rho$ of
+\eqref{eq:pivot}. At $k=2$ the ratio is closed:
+\begin{equation}
+\label{eq:union2}
+  \Theta_2=G_{11}\bigl(1+3r_{12}^{2}\bigr),
+  \qquad
+  \frac{1/g_2}{\Theta_2}=\frac{1-r_{12}^{2}}{1+3r_{12}^{2}},
+\end{equation}
+and $1+3r_{12}^{2}\to4$ as $r_{12}^{2}\to1$.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+\eqref{eq:union} is the definition of $E$: the signs align every term, so the
+sum of $|x^{\star}_i||x^{\star}_j||G_{ij}|$ is attained without cancellation.
+At $k=2$, $|x^{\star}|=(1,|G_{12}|/G_{22})$, whence
+$\Theta_2=G_{11}+2G_{12}^{2}/G_{22}+G_{12}^{2}/G_{22}
+=G_{11}(1+3r_{12}^{2})$; divide by \eqref{eq:K2}.
+\end{proof}
+
+\begin{remark}
+\label{rem:onedress}
+Proposition~\ref{prop:union} is the reason the three natural readings of the
+same obstruction --- a determinant ratio, the scalar $1-r_{12}^{2}$, and an
+entrywise perturbation threshold --- are one object rather than three: at $k=2$
+they differ by the explicit factor $1+3r_{12}^{2}\in[1,4]$. We state the two
+formulae and leave the reading to the reader; ``three dresses of one
+inequality'' is an observation about identities, not a theorem.
+\end{remark}
+
+\begin{lemma}[Wronskian telescope]
+\label{lem:wronskian}
+Let $u=t_1$, $v=t_2$ be the two lowest parity modes of Lemma~\ref{lem:kms},
+extended by $u_{-1}=v_{-1}=0$ and $u_h=-u_{h-1}$, $v_h=-v_{h-1}$, and put
+$W_r=u_{r+1}v_r-u_rv_{r+1}$. Then
+\begin{equation}
+\label{eq:wronskian}
+  (\mu_1-\mu_2)\,u_rv_r=W_{r-1}-W_r\quad(0\le r\le h-1),
+  \qquad W_{-1}=W_{h-1}=0,
+\end{equation}
+and summing \eqref{eq:wronskian} re-derives $t_1^{\T}t_2=0$.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+$W_{r-1}-W_r=u_r(v_{r-1}+v_{r+1})-v_r(u_{r-1}+u_{r+1})$, and the recurrences
+$u_{r-1}+u_{r+1}=(2-\mu_1)u_r$, $v_{r-1}+v_{r+1}=(2-\mu_2)v_r$ give
+\eqref{eq:wronskian}. $W_{-1}=0$ is the Dirichlet end; $W_{h-1}=0$ is the odd
+reflection $u_h=-u_{h-1}$, $v_h=-v_{h-1}$, i.e.\ exactly the corner entry $3$ of
+$L_P$.
+\end{proof}
+
+\begin{lemma}[maximal minors carry no arithmetic]
+\label{lem:minors}
+With $u=t_1/\sqrt{\mu_1}$, $v=t_2/\sqrt{\mu_2}$ and
+$\mathcal W_{rr'}=u_rv_{r'}-u_{r'}v_r$,
+\begin{equation}
+\label{eq:lagrange}
+  \tfrac12\sum_{r,r'}\mathcal W_{rr'}^{2}
+  =\lVert u\rVert^{2}\lVert v\rVert^{2}-\langle u,v\rangle^{2}
+  =\frac1{\mu_1\mu_2}
+  \qquad\text{exactly}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+Lagrange's identity \cite{Lagrange1773} gives the first equality; the second is
+orthonormality of $t_1,t_2$ (Lemma~\ref{lem:kms}).
+\end{proof}
+
+\begin{lemma}[the determinant reading, free of positivity]
+\label{lem:detread}
+With $\nu_1\ge\nu_2$ the eigenvalues of $\Ah_2$,
+\begin{equation}
+\label{eq:detread}
+  1-r_{12}^{2}
+  =\frac{\det\Ah_2}{\ah_{11}\ah_{22}}
+  =\frac{\nu_1\nu_2}{\ah_{11}\ah_{22}}
+  =\frac{\det G_2}{G_{11}G_{22}},
+\end{equation}
+and no positivity of $A$, of $\Ah_2$ or of $G$ is used.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+$\det\Ah_2=\ah_{11}\ah_{22}-\ah_{12}^{2}=\nu_1\nu_2$; divide by
+$\ah_{11}\ah_{22}$. The last expression is the same computation after the
+diagonal congruence \eqref{eq:gram}, which cancels by
+Lemma~\ref{lem:diaginv}.
+\end{proof}
+
+Lemma~\ref{lem:detread} is load-bearing in a negative sense, and we say so
+plainly: it is what makes the whole reduction free of any positivity input about
+$A$. Whether $A$ is positive definite on the parity sector is, on the surfaces
+of Section~\ref{sec:numerics}, a numerical fact about finitely many finite
+matrices; no statement of this paper is routed through a uniform version of it.
+
+\begin{lemma}[an unconditional bound for the large eigenvalue]
+\label{lem:gershgorin}
+$\nu_1\le\max(\ah_{11},\ah_{22})+|\ah_{12}|$, closed in the three entries and
+uniform in the window.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+Gershgorin's theorem \cite{Gershgorin1931} for the symmetric $2\times2$ matrix
+$\Ah_2$.
+\end{proof}
+
+\begin{proposition}[the determinant returns: the $t^{\star}$ collapse]
+\label{prop:collapse}
+Assume $\ah_{11},\ah_{22}>0$ and consider the one-parameter family
+$u(t)=(t,-1)$. At $t^{\star}=\sqrt{\ah_{22}/\ah_{11}}$ the Rayleigh quotient of
+$\Ah_2$ is
+\begin{equation}
+\label{eq:collapse}
+  R(t^{\star})
+  =\frac{u(t^{\star})^{\T}\Ah_2u(t^{\star})}{\lVert u(t^{\star})\rVert^{2}}
+  =\frac{2\sqrt{\ah_{11}\ah_{22}}\;\det\Ah_2}
+        {(\ah_{11}+\ah_{22})\bigl(\sqrt{\ah_{11}\ah_{22}}+\ah_{12}\bigr)}
+  \qquad\text{identically},
+\end{equation}
+so the only member of the family that meets the threshold does so by
+reintroducing $\det\Ah_2$. If in addition $\Ah_2\PD$, then
+\begin{equation}
+\label{eq:harmonic}
+  \nu_2\;\le\;\frac{2\det\Ah_2}{\ah_{11}+\ah_{22}}
+  \;=\;\frac{2\nu_1\nu_2}{\nu_1+\nu_2}\;\le\;2\nu_2,
+\end{equation}
+i.e.\ the harmonic mean of the two eigenvalues bounds $\nu_2$ from above and is
+tight within a factor $2$.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+For \eqref{eq:collapse}: with $\tau=t^{\star}$ the numerator is
+$\tau^{2}\ah_{11}-2\tau\ah_{12}+\ah_{22}=2(\ah_{22}-\tau\ah_{12})
+=2\tau\bigl(\sqrt{\ah_{11}\ah_{22}}-\ah_{12}\bigr)$ and the denominator is
+$\tau^{2}+1=(\ah_{11}+\ah_{22})/\ah_{11}$; multiply numerator and denominator by
+$\sqrt{\ah_{11}\ah_{22}}+\ah_{12}$ and use
+$\ah_{11}\ah_{22}-\ah_{12}^{2}=\det\Ah_2$. For \eqref{eq:harmonic}, substitute
+$\tr\Ah_2=\nu_1+\nu_2$ and $\det\Ah_2=\nu_1\nu_2$; the two inequalities are
+$\nu_2\le\nu_1$ and $\nu_1+\nu_2\ge\nu_1$ respectively, both of which use
+$\nu_2>0$. Without positivity \eqref{eq:harmonic} is false --- if
+$\nu_1>0>\nu_2$ and $\tr>0$ the right-hand side is negative --- which is why
+the hypothesis is named.
+\end{proof}
+
+\begin{remark}
+\label{rem:selfsimilar}
+Propositions~\ref{prop:K2}--\ref{prop:collapse} are exact reformulations of one
+another, and none of them lowers the accuracy demanded of $\det\Ah_2$: the
+determinant is reintroduced by \eqref{eq:collapse}, the scalar $1-r_{12}^{2}$ is
+the determinant normalised by \eqref{eq:detread}, and the entry threshold of
+\eqref{eq:union2} differs from it by the bounded factor $1+3r_{12}^{2}$. We
+record this as an observation about the identities, not as a theorem; the
+statement ``every exact reformulation costs the same precision'' is a reading of
+a family of identities together with measured accuracy demands, and it belongs
+in Section~\ref{sec:open} in that form.
+\end{remark}
+
+\section{The exact bilinear form and the rank classification}
+\label{sec:rank}
+
+This section writes $\Ah_2$ out in terms of the comb and identifies the exact
+algebraic shape of the resulting object. Throughout the section the comb nodes
+are indexed by $\ell$, so that $i,j$ stay free for matrix indices.
+
+\begin{proposition}[exact split]
+\label{prop:split}
+Let $D$ be admissible, $D<\min_\ell u_\ell$, and for a node $u_\ell$ let
+$m_\ell\in\N$ and $\theta_\ell\in[0,1)$ be defined by
+$u_\ell/D=m_\ell+\theta_\ell$. Put $Y^{(m)}=\Pi^{\T}\Tm{M}(\delta_{m})\Pi$ with
+$\delta_m$ the lag sequence supported at the single lag $m$, and $Y^{(m)}:=0$
+for $m\ge M$. Then, with $B_{ij}=t_i^{\T}A_{\mathrm{arch}}t_j$ and
+\begin{equation}
+\label{eq:split}
+  X^{(\ell)}_{ij}
+  =\tfrac12\Bigl[(1-\theta_\ell)\,t_i^{\T}Y^{(m_\ell)}t_j
+  +\theta_\ell\,t_i^{\T}Y^{(m_\ell+1)}t_j\Bigr],
+  \qquad
+  S=\sum_\ell\varrho_\ell\,X^{(\ell)}
+  \qquad(i,j\in\{1,2\}),
+\end{equation}
+one has $\Ah_2=B-S$ exactly, and each of $S_{11},S_{22},S_{12}$ is a
+\emph{linear} functional of the weight vector $(\varrho_\ell)_\ell$.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Linearity of $c\mapsto A\mapsto\Ah$ applied to \eqref{eq:lags} and
+\eqref{eq:Asplit}. For the two-point read: $S_D(mD,u_\ell)
+=\tfrac12[\Delta_D(mD-u_\ell)+\Delta_D(mD+u_\ell)]$; the reflected hat vanishes
+for every $m\ge0$ because $mD+u_\ell\ge u_\ell>D$, and the direct hat is nonzero
+only for $m\in\{m_\ell,m_\ell+1\}$, where the unit-height triangle $\Delta_D$
+takes the values $1-\theta_\ell$ and $\theta_\ell$ respectively. The factor
+$\tfrac12$ is the symmetrisation, and a lag index $\ge M$ falls outside the
+window and contributes nothing.
+\end{proof}
+
+\begin{proposition}[polarisation of the determinant]
+\label{prop:polarisation}
+With $D(P,Q)=P_{11}Q_{22}+P_{22}Q_{11}-2P_{12}Q_{12}$,
+\begin{equation}
+\label{eq:polarisation}
+  \det\Ah_2=\det B-D(B,S)+\det S,
+\end{equation}
+where the three terms are respectively archimedean--archimedean, linear in the
+comb weights, and bilinear in them. Moreover
+\begin{equation}
+\label{eq:doublesum}
+  \det S=\sum_{\ell,\ell'}\varrho_\ell\varrho_{\ell'}\,
+    \mathcal K(\ell,\ell'),
+  \qquad
+  \mathcal K(\ell,\ell')=\tfrac12D\bigl(X^{(\ell)},X^{(\ell')}\bigr),
+\end{equation}
+with $X^{(\ell)}$ the $2\times2$ matrix of \eqref{eq:split}.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+Both are instances of Theorem~\ref{thm:rank3}\ref{R:pol} below, applied to
+$\Ah_2=B-S$ and to $S=\sum_\ell\varrho_\ell X^{(\ell)}$ respectively; the
+second uses
+bilinearity of $D$ and $\det S=\tfrac12D(S,S)$
+\cite{Lagrange1773,CauchyBinet}.
+\end{proof}
+
+\begin{theorem}[rank three]
+\label{thm:rank3}
+Identify a symmetric $2\times2$ matrix $X$ with its coordinate vector
+$y(X)=(X_{11},X_{22},X_{12})\in\R^{3}$ and let
+\begin{equation}
+\label{eq:J}
+  J=\begin{pmatrix}0&1&0\\ 1&0&0\\ 0&0&-2\end{pmatrix}.
+\end{equation}
+Then:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.6em]
+\item\label{R:pol} $\det X=\tfrac12\,y(X)^{\T}Jy(X)$ and
+  $D(P,Q)=y(P)^{\T}Jy(Q)$; in particular $D$ is the polarisation of $\det$ and
+  $\det(P-Q)=\det P-D(P,Q)+\det Q$.
+\item\label{R:rank} $J$ has eigenvalues $\{1,-1,-2\}$: it has \textbf{rank
+  three} and \textbf{signature $(1,2)$}.
+\item\label{R:kernel} Let $P\in\R^{3\times n}$ have columns $y(X^{(\ell)})$,
+  $\ell=1,\dots,n$. Then the kernel of \eqref{eq:doublesum} is
+  $\mathcal K=\tfrac12P^{\T}JP$, so
+  \begin{equation}
+  \label{eq:rank3}
+    \rank\mathcal K\;\le\;3
+    \qquad\text{for every window, every }h\text{ and every truncation},
+  \end{equation}
+  and the nonzero spectrum of $P^{\T}JP$ equals the nonzero spectrum of
+  $JPP^{\T}$, a $3\times3$ matrix.
+\item\label{R:three} Consequently
+  $\det S=S_{11}S_{22}-S_{12}^{2}$: the comb--comb term of
+  \eqref{eq:polarisation} is a quadratic polynomial in exactly \emph{three}
+  linear functionals of the comb weights, and depends on the weight vector
+  $(\varrho_\ell)$ through nothing else.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+\ref{R:pol} Both sides of the first identity are
+$X_{11}X_{22}-X_{12}^{2}$; reading off the bilinear form gives
+$y(P)^{\T}Jy(Q)=P_{11}Q_{22}+P_{22}Q_{11}-2P_{12}Q_{12}=D(P,Q)$, and expanding
+$\tfrac12(y(P)-y(Q))^{\T}J(y(P)-y(Q))$ gives the third relation.
+\ref{R:rank} The upper-left $2\times2$ block $\left(\begin{smallmatrix}0&1\\
+1&0\end{smallmatrix}\right)$ has eigenvalues $\pm1$, and the remaining entry is
+$-2$.
+\ref{R:kernel} $\mathcal K(\ell,\ell')
+=\tfrac12y(X^{(\ell)})^{\T}Jy(X^{(\ell')})$ is the
+$(\ell,\ell')$ entry of $\tfrac12P^{\T}JP$, whose rank is at most $\rank J=3$;
+the
+statement about spectra is the standard fact
+$\operatorname{spec}(UV)\setminus\{0\}=\operatorname{spec}(VU)\setminus\{0\}$
+with $U=P^{\T}$, $V=JP$.
+\ref{R:three} is \ref{R:pol} applied to $S$, whose coordinates are the three
+linear functionals of Proposition~\ref{prop:split}.
+\end{proof}
+
+Part~\ref{R:rank} will strike a reader as elementary --- the determinant of a
+$2\times2$ matrix is visibly a quadratic form in its three entries --- and it
+is. What the theorem is for is part~\ref{R:three} together with the following
+corollary, which is where the elementary observation has teeth.
+
+\begin{corollary}[what a majorant of the comb--comb term can see]
+\label{cor:majorant}
+Let $\mathcal N$ be any norm on the weight vectors and suppose
+$|\det S|\le\Phi(\mathcal N(\varrho))$ for all admissible weight vectors, with
+$\Phi$ nondecreasing. Then necessarily
+\begin{equation}
+\label{eq:majorant}
+  \Phi(t)\;\ge\;\sup\bigl\{|y_1y_2-y_3^{2}|:\ y\in\R^{3},\
+  y=\bigl(S_{11},S_{22},S_{12}\bigr)\ \text{for some }\varrho\ \text{with }
+  \mathcal N(\varrho)\le t\bigr\}.
+\end{equation}
+In particular, no estimate that reaches $\det S$ through a norm of $\varrho$ can
+distinguish two weight vectors with the same image
+$(S_{11},S_{22},S_{12})$, and any cancellation between the three terms of
+\eqref{eq:polarisation} is invisible to it.
+\end{corollary}
+
+\begin{proof}[Proof sketch]
+Immediate from Theorem~\ref{thm:rank3}\ref{R:three}: $\det S$ is a function of
+the image point only, so a bound valid for all $\varrho$ in a norm ball must
+dominate the supremum over the image of that ball.
+\end{proof}
+
+\begin{measurement}[Type II blocks: a measured rank collapse]
+\label{meas:typeII}
+The closed weights of Proposition~\ref{prop:split} see a node only through its
+position $u_\ell$, i.e.\ for the prime-power instance only through
+$\log n_\ell$; under a factorisation $n=bd$ that is $\log b+\log d$, and a
+bounded-frequency function of a sum is a finite-rank kernel. On the declared
+surface the Type~II blocks of Vaughan's identity \cite{Vaughan1977} built from
+these weights are measured to have $2$ singular values carrying $99.9\%$ of the
+mass, against $153$ for a generic kernel of the same size, over the scanned
+range of the decomposition parameter; the four-term identity for $\Lambda$ is
+verified coefficientwise first.
+\draftnote{This row is \emph{measured} and stays measured. ``Effective rank
+$O(1)$'' is not a theorem. The provable substitute --- \emph{if} the weight
+kernel admits an $\Omega$-band expansion in $\log b+\log d$ with declared
+truncation error $\eta$, then the block has $\eta$-rank at most $2\Omega+1$ ---
+requires a decay estimate for the closed weight kernel in $\log n$ that is not
+written in this revision. Bandwidth $\Rightarrow$ $\eta$-rank lemma: open
+writing task.}
+\end{measurement}
+
+\begin{measurement}[the reference window: a three-term cancellation]
+\label{meas:refwindow}
+On the reference window $h=540$, with the comb truncated at the node cap
+$2.465\cdot10^{4}$, the three terms of \eqref{eq:polarisation} are
+\begin{equation}
+\label{eq:refwindow}
+  \det B=6.18,
+  \qquad
+  -D(B,S)=-198.8,
+  \qquad
+  \det S=192.6,
+  \qquad
+  \text{sum}=4.22\cdot10^{-3},
+\end{equation}
+i.e.\ five orders of magnitude of cancellation between three pieces of size
+$\approx200$; the target value at that window is $1.10\cdot10^{-5}$.
+\draftnote{the window's caps and the definition of the target are written out
+with Section~\ref{sec:numerics}.}
+\end{measurement}
+
+\section{A measured obstruction, and an open problem}
+\label{sec:open}
+
+\begin{problem}[three equivalent forms]
+\label{prob:R1}
+Is there, for each $\varepsilon>0$, a constant $C_\varepsilon$ such that
+\emph{uniformly in the window index},
+\begin{equation}
+\label{eq:R1}
+  1-r_{12}^{2}
+  =\frac{\det\Ah_2}{\ah_{11}\ah_{22}}
+  \;\le\;C_\varepsilon\,h^{-3+\varepsilon}\,?
+\end{equation}
+Equivalently, by Lemma~\ref{lem:detread} and Lemma~\ref{lem:minors}:
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.6em]
+\item\label{R1:rows} \emph{Row collinearity.} Do the two rows of $\Ah_2$ ---
+  two explicit finite sums against the closed weights of
+  Proposition~\ref{prop:split} --- become collinear at rate $h^{-3+\varepsilon}$,
+  the sine of the angle between them being
+  $|\det\Ah_2|/(\lVert\text{row}_1\rVert\lVert\text{row}_2\rVert)$?
+\item\label{R1:det} \emph{Determinant form.} Does the normalised determinant
+  $\det\Ah_2/(\ah_{11}\ah_{22})$ satisfy \eqref{eq:R1}?
+\item\label{R1:triple} \emph{Joint near-degeneracy.} Does the triple
+  $(S_{11},S_{22},S_{12})$ of Theorem~\ref{thm:rank3}\ref{R:three} approach the
+  archimedean block $B$ jointly, at relative precision sharpening like
+  $h^{-3}$, in the sense that the three terms of \eqref{eq:polarisation} cancel
+  to that order?
+\end{enumerate}
+The problem is open. It is a question about a finite bilinear form; it is not
+formulated as, and must not be read as, an approach to, a weakening of, or a
+consequence of any conjecture, and no comparison of strengths is made anywhere
+in this paper.
+\end{problem}
+
+\begin{measurement}[measured rates]
+\label{meas:rate}
+On the declared surfaces the left-hand side of \eqref{eq:R1} is measured to fall
+as a power of $h$ with fitted exponent between $-2.7$ and $-2.95$ depending on
+the surface, and the sine-of-angle reading of Problem~\ref{prob:R1}\ref{R1:rows}
+falls at the same rate to within the fit uncertainty. Fitted exponents are fits.
+\draftnote{the surfaces, the window counts, the caps, and the exponents with
+their jackknife bands are written out in the next pass; nothing here is used as
+a bound.}
+\end{measurement}
+
+\begin{measurement}[priced routes: a table of what the unconditional toolbox
+reaches]
+\label{meas:routes}
+Each row of the table below is an unconditional bound, evaluated on a declared
+surface, together with the exponent it certifies; the bound is proved, the
+exponent is measured, and the two are typed separately. The routes are:
+Cauchy--Schwarz on $\Ah_2$; the large sieve and duality applied to $\det S$
+\cite{MontgomeryVaughan1974}; Montgomery--Vaughan applied to the three linear
+functionals of Theorem~\ref{thm:rank3}\ref{R:three}; the exact split
+$|\det B|+|D(B,S)|+|\det S|$ of \eqref{eq:polarisation}; and Vaughan's
+Type I $+$ Type II decomposition \cite{Vaughan1977}. Alongside them sit the
+structural no-gos: the symbol infimum (negative on every window of the declared
+surface, so no symbol-positivity argument can deliver a floor); perturbation
+theory around the parity bottom mode, which bounds at the scale of the matrix
+\cite{Kato1949}; band-local domination; and the $\ell^{1}$ mass of the kernel
+$\mathcal K$ against its signed value.
+\draftnote{Placeholder for the priced table. Each row needs its route's
+hypotheses spelled out and its exponent re-read from a declared surface with
+caps; until that is written, no exponent is quoted here. Corollary
+\ref{cor:majorant} is the structural reason the norm-based rows lose.}
+\end{measurement}
+
+\begin{measurement}[the density curve]
+\label{meas:density}
+The gap between the rate delivered by the best route of
+Measurement~\ref{meas:routes} and the rate $h^{-3+\varepsilon}$ of
+Problem~\ref{prob:R1}, measured against the density of comb nodes per lag cell,
+falls monotonically over three decades of density; the densest reachable bin is
+consistent with zero. A true zero, a
+power-law approach and a low plateau are \emph{undecidable} under the finite
+sieve that the declared caps permit, and this undecidability is part of the
+claim, not a caveat attached to it.
+\draftnote{Placeholder for the density curve: the six binned values with their
+standard errors, the caps that make the dense corner reachable, the jackknife
+correction to the scatter, and the explicit undecidability sentence.}
+\end{measurement}
+
+\begin{measurement}[placement discriminators]
+\label{meas:placement}
+Two controlled experiments locate where the arithmetic actually sits. Replacing
+the node positions by sorted uniform samples at the \emph{same} weight multiset
+leaves the rank-three collapse of Theorem~\ref{thm:rank3} and every
+unconditional bound of Measurement~\ref{meas:routes} numerically almost
+unchanged, while the \emph{value} of $1-r_{12}^{2}$ moves by orders of
+magnitude; and displacing a few nodes by a small fraction of a lag cell moves
+$\log$ of the ratio linearly over several declared decades, with a first-harmonic
+prediction that under-predicts by a large factor --- the response is not smooth
+in the placement. The theorems of this paper are therefore provably not where
+the arithmetic is, and the equidistribution of the relevant cell phases is a
+classical Weyl statement \cite{Weyl1916}.
+\draftnote{Placeholder: the scramble factors, the interventional slope, the
+declared decades and the positive-definiteness threshold.}
+\end{measurement}
+
+\begin{remark}[what is not claimed]
+\label{rem:notclaimed}
+Problem~\ref{prob:R1} is open. Nothing in this paper bounds it, and nothing in
+this paper is conditional on it. In particular: no statement here is an
+arithmetic statement; the positivity of $A$ on the parity sector is used only
+where it is named as a hypothesis, and only as a per-window certificate; and the
+comparison of a demanded precision against the strength of any conjecture is
+deliberately absent from the whole paper.
+\end{remark}
+
+\section{Numerical verification}
+\label{sec:numerics}
+
+\draftnote{Section skeleton. The floating-point convention, the two declared
+surfaces with their caps, and the certificate inventory are written out in the
+next pass; the cross-reference table below is complete as it stands.}
+
+\subsection{Floating-point convention and the two surfaces}
+\label{sec:surfaces}
+
+Positivity statements are completed Cholesky factorisations relative to a
+declared floor in the sense of Wilkinson and Higham
+\cite{Wilkinson1963,Higham2002}: with $u=2^{-53}$ the unit roundoff and
+$c_h=(h+1)/(1-(h+1)u)$, a completed factorisation of $X-\delta I$ with
+$\delta=c_hu\lVert X\rVert_\infty$ certifies $\lmin(X)>0$, and the cheap
+certified bound $\lVert X\rVert_2\le\lVert X\rVert_\infty$ is used for the norm
+\cite{Gershgorin1931}. Quantities obtained from an eigenvalue routine are
+labelled \emph{measured} and never used as certificates. Diagonally dominant
+comparisons, where used, are Ostrowski's \cite{Ostrowski1937}.
+
+Two surfaces are declared and never mixed. \emph{Surface~I} (exact, small): the
+deepest nodes admitting a window inside a cap on the lag index, on which every
+identity of Sections~\ref{sec:setting}--\ref{sec:rank} is recomputed from
+scratch. \emph{Surface~II} (measurement): the frame family with
+$h=142$ to $1445$ and $\cond(G)\le10^{12}$, on which
+Measurements~\ref{meas:sharpness}, \ref{meas:battery}, \ref{meas:refwindow} and
+\ref{meas:rate} are taken.
+
+\subsection{Cross-reference table}
+\label{sec:crossref}
+
+{\small
+\begin{xltabular}{\textwidth}{@{}llY@{}}
+\caption{Every numbered statement and the check that recomputes it. Module
+identifiers refer to the verification suite accompanying this work; item
+numbers are those of the module documentation.}
+\label{tab:crossref}\\
+\toprule
+statement & check & what the check recomputes \\
+\midrule
+\endfirsthead
+\toprule
+statement & check & what the check recomputes \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r@{}}{\emph{continued on the next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Lem.~\ref{lem:kms} (parity spectrum)
+  & \texttt{v555}--\texttt{v559}, parity control
+  & $L_Pt_k=\mu_kt_k$ with an orthonormal basis;
+    $\Pi^{\T}\Tm{M}(c^{L})\Pi=L_P$ at zero tolerance \\
+Lem.~\ref{lem:gauge} (gauge law)
+  & \texttt{v555} item~(4); \texttt{v559} link~3
+  & $\sum_dw_d=0$; $\sum_dc_dw_d=x^{\T}Gx$ \\
+Lem.~\ref{lem:abel} (Abel swap)
+  & \texttt{v555} item~(4); \texttt{v559} link~9
+  & the boundary-free identity at levels $k=1,2,3$ \\
+Prop.~\ref{prop:cascade} (three ladder forms)
+  & \texttt{v557} item~(1) I1--I3; \texttt{v559} link~12
+  & prefix from one Cholesky; minor form; regression form \\
+Lem.~\ref{lem:diaginv} (diagonal invariance)
+  & \texttt{v557} item~(2)
+  & invariance of $g_K/g_1$ under $G\mapsto\Lambda G\Lambda$ \\
+Prop.~\ref{prop:direction} (ladder direction)
+  & \texttt{v556} item~(5); \texttt{v559} link~4
+  & $s\ge g_K\ge g_1$ with strictly positive increments \\
+Thm.~\ref{thm:tvfloor} (TV floor)
+  & \texttt{v555} item~(2), steps T1--T3
+  & $w_0=\lVert a\rVert^{2}$; $\TV\ge|w_0|$; $\mu_1\TV\ge1$ \\
+Cor.~\ref{cor:holder} (Abel/H\"older)
+  & \texttt{v555} item~(4); \texttt{v559} link~9
+  & $|Q|\le\TV\max_d|C_d|$ \\
+Cor.~\ref{cor:abis} (floor at one coordinate)
+  & \texttt{v556} item~(4b)
+  & $\TV\ge\lVert v\rVert^{2}\ge(t_1^{\T}v)^{2}$ \\
+Rem.~\ref{rem:negcontrol} (negative control)
+  & \texttt{v555} item~(2), control
+  & an inadmissible vector undercuts the floor \\
+Thm.~\ref{thm:gauge} (gauge)
+  & \texttt{v556} item~(1); \texttt{v559} link~10
+  & degree-two homogeneity; ratio equal across sectors \\
+Prop.~\ref{prop:shift} (conservation)
+  & \texttt{v556} item~(2)
+  & floor $\times$ transfer $=1/\mu_1$ at every shift \\
+Prop.~\ref{prop:K2} ($K=2$ exact)
+  & \texttt{v557} item~(3); \texttt{v559} link~13
+  & the closed vector attains $1/g_2$; $G_{11}g_2=1/(1-r_{12}^{2})$ \\
+Prop.~\ref{prop:pivot}, \ref{prop:union} (pivot, entrywise)
+  & \texttt{v557} item~(4)
+  & the pivot identity; $|x^{\star\T}Ex^{\star}|=\varepsilon\Theta_K$ \\
+Lem.~\ref{lem:constrained} (trial direction)
+  & \texttt{v557} item~(5); \texttt{v559} links~4, 7
+  & every admissible trial is a lower bound for $1/g_K$ \\
+Lem.~\ref{lem:wronskian}, \ref{lem:minors} (Wronskian, minors)
+  & \texttt{v558} item~(1) I3
+  & the telescope with $W_{-1}=W_{h-1}=0$;
+    $\tfrac12\sum\mathcal W^{2}=1/(\mu_1\mu_2)$ \\
+Lem.~\ref{lem:detread} (determinant reading)
+  & \texttt{v558} items~(2), (6); \texttt{v559} link~14
+  & the three equal expressions, no positivity used \\
+Lem.~\ref{lem:gershgorin} (Gershgorin)
+  & \texttt{v558} item~(2)
+  & $\nu_1\le\max(\ah_{11},\ah_{22})+|\ah_{12}|$ \\
+Prop.~\ref{prop:collapse} ($t^{\star}$ collapse)
+  & \texttt{v558} item~(3)
+  & the closed form \eqref{eq:collapse}; the harmonic-mean bound \\
+Prop.~\ref{prop:split}, \ref{prop:polarisation} (split, polarisation)
+  & \texttt{v558} item~(4) TH1--TH3; \texttt{v559} link~15
+  & $\Ah_2=B-S$; \eqref{eq:polarisation}; the kernel $\mathcal K$ \\
+Thm.~\ref{thm:rank3} (rank three)
+  & \texttt{v558} item~(5) TH4; \texttt{v559} link~15
+  & $J$, its spectrum, $\rank\mathcal K\le3$ \\
+Meas.~\ref{meas:typeII} (Type II)
+  & \texttt{v558} item~(5) TH5
+  & singular-value profile against a generic kernel \\
+Cor.~\ref{cor:majorant} (majorants)
+  & \texttt{v558} items~(4), (6)
+  & the wedge reading; the scramble discriminator \\
+Prob.~\ref{prob:R1} (the open problem)
+  & \texttt{v559} link~16
+  & the \emph{shape} is certified per window; the rate and the
+    quantifier stay open \\
+Meas.~\ref{meas:routes} (priced routes)
+  & \texttt{v559} NG1--NG8
+  & each classified route exhibited failing as classified \\
+\end{xltabular}}
+
+\subsection{Reproducibility}
+\label{sec:repro}
+
+\draftnote{Placeholder: the scripts, their runtimes, the number of checks, and
+the statement that every factorised matrix stays under the declared cap.}
+
+\section{Limitations, and what is not claimed}
+\label{sec:limits}
+
+\begin{enumerate}[label=\textup{(L\arabic*)},leftmargin=3.2em]
+\item\label{L:uniform} \textbf{No uniformity in the window index.} Every
+  statement typed \emph{certified per window} in Table~\ref{tab:typing} is
+  verified window by window on a declared finite surface, and no quantifier over
+  windows is claimed. In particular the hypothesis of
+  Proposition~\ref{prop:direction} and the positivity hypothesis of
+  \eqref{eq:harmonic} are certificates, not theorems.
+\item\label{L:positivity} \textbf{Positivity facts are facts about finitely
+  many finite matrices.} That $A$ is positive definite on the parity sector on
+  the tested windows is a numerical statement with a declared floor. It is not
+  routed through, compared with, or used to suggest anything about any
+  criterion; Lemma~\ref{lem:detread} exists precisely so that the reduction
+  never needs it.
+\item\label{L:fits} \textbf{Fits are fits.} Every exponent in
+  Measurements~\ref{meas:sharpness}, \ref{meas:rate} and \ref{meas:density} is a
+  least-squares fit on a declared surface, reported for orientation. No fit is
+  used as a bound anywhere.
+\item\label{L:corner} \textbf{The dense corner is exhausted only up to the
+  declared caps.} Measurement~\ref{meas:density} states its own
+  undecidability, and that statement is part of the claim.
+\item\label{L:D4} \textbf{One statement did not convert.}
+  Measurement~\ref{meas:typeII} stays measured: the bandwidth $\Rightarrow$
+  $\eta$-rank lemma that would make it a theorem is not written, and until it is,
+  ``effective rank $O(1)$'' is a measurement and is labelled one.
+\item\label{L:arith} \textbf{The comb's arithmetic is not used by any
+  theorem.} Remark~\ref{rem:combfree} is meant literally: replacing the
+  prime-power instance by an arbitrary finite comb changes no proof in
+  Sections~\ref{sec:setting}--\ref{sec:rank}. What changes is the \emph{value}
+  of the three functionals of Theorem~\ref{thm:rank3}\ref{R:three}, and
+  Measurement~\ref{meas:placement} is the controlled experiment that says so.
+\item\label{L:sections} \textbf{Draft scope.} In this revision
+  Sections~\ref{sec:setting}--\ref{sec:gauge} are complete with proofs;
+  Sections~\ref{sec:twodim}--\ref{sec:limits} carry final statements with proof
+  sketches and placeholders as marked. Table~\ref{tab:typing} is the binding
+  record of what is claimed at what strength.
+\end{enumerate}
+
+\begin{thebibliography}{99}\small
+
+\bibitem{Abel1826} N.~H.~Abel,
+\emph{Untersuchungen \"uber die Reihe
+$1+\frac m1x+\frac{m(m-1)}{1\cdot2}x^{2}+\dots$},
+J. Reine Angew. Math. \textbf{1} (1826), 311--339.
+
+\bibitem{CauchyBinet} A.-L.~Cauchy and J.~Binet,
+\emph{M\'emoire sur les fonctions qui ne peuvent obtenir que deux valeurs
+\'egales et de signes contraires},
+J. \'Ecole Polytech. \textbf{10} (1815), 29--112.
+
+\bibitem{Cauchy1829} A.-L.~Cauchy,
+\emph{Sur l'\'equation \`a l'aide de laquelle on d\'etermine les
+in\'egalit\'es s\'eculaires des mouvements des plan\`etes},
+Oeuvres compl\`etes, 2\textsuperscript{e} s\'erie, tome 9, 174--195 (1829).
+
+\bibitem{Chebyshev1852} P.~L.~Chebyshev,
+\emph{M\'emoire sur les nombres premiers},
+J. Math. Pures Appl. \textbf{17} (1852), 366--390.
+
+\bibitem{CourantFischer1920} R.~Courant,
+\emph{\"Uber die Eigenwerte bei den Differentialgleichungen der
+mathematischen Physik},
+Math. Z. \textbf{7} (1920), 1--57.
+
+\bibitem{Dirichlet1829} P.~G.~L.~Dirichlet,
+\emph{Sur la convergence des s\'eries trigonom\'etriques},
+J. Reine Angew. Math. \textbf{4} (1829), 157--169.
+
+\bibitem{Fejer1916} L.~Fej\'er,
+\emph{\"Uber trigonometrische Polynome},
+J. Reine Angew. Math. \textbf{146} (1916), 53--82.
+
+\bibitem{Gershgorin1931} S.~Gershgorin,
+\emph{\"Uber die Abgrenzung der Eigenwerte einer Matrix},
+Izv. Akad. Nauk SSSR Ser. Mat. \textbf{6} (1931), 749--754.
+
+\bibitem{GrenanderSzego1958} U.~Grenander and G.~Szeg\H{o},
+\emph{Toeplitz Forms and Their Applications},
+University of California Press, Berkeley, 1958.
+
+\bibitem{PaperI} S.~Hamann,
+\emph{A certified multilevel lower bound for the Galerkin prediction error of a
+log-singular Toeplitz form with a prime-power comb}, companion preprint.
+
+\bibitem{Haynsworth1968} E.~V.~Haynsworth,
+\emph{Determination of the inertia of a partitioned Hermitian matrix},
+Linear Algebra Appl. \textbf{1} (1968), 73--81.
+
+\bibitem{Higham2002} N.~J.~Higham,
+\emph{Accuracy and Stability of Numerical Algorithms}, 2nd ed., SIAM,
+Philadelphia, 2002.
+
+\bibitem{KMS1953} M.~Kac, W.~L.~Murdock and G.~Szeg\H{o},
+\emph{On the eigenvalues of certain Hermitian forms},
+J. Rational Mech. Anal. \textbf{2} (1953), 767--800.
+
+\bibitem{Kato1949} T.~Kato,
+\emph{On the convergence of the perturbation method, I},
+Progr. Theoret. Phys. \textbf{4} (1949), 514--523.
+
+\bibitem{Lagrange1773} J.-L.~Lagrange,
+\emph{Solutions analytiques de quelques probl\`emes sur les pyramides
+triangulaires},
+Nouv. M\'em. Acad. Roy. Sci. Berlin (1773), 149--176.
+
+\bibitem{MontgomeryVaughan1974} H.~L.~Montgomery and R.~C.~Vaughan,
+\emph{Hilbert's inequality},
+J. London Math. Soc. (2) \textbf{8} (1974), 73--82.
+
+\bibitem{Ostrowski1937} A.~M.~Ostrowski,
+\emph{\"Uber die Determinanten mit \"uberwiegender Hauptdiagonale},
+Comment. Math. Helv. \textbf{10} (1937), 69--96.
+
+\bibitem{RosserSchoenfeld1962} J.~B.~Rosser and L.~Schoenfeld,
+\emph{Approximate formulas for some functions of prime numbers},
+Illinois J. Math. \textbf{6} (1962), 64--94.
+
+\bibitem{Schur1917} I.~Schur,
+\emph{\"Uber Potenzreihen, die im Innern des Einheitskreises beschr\"ankt
+sind},
+J. Reine Angew. Math. \textbf{147} (1917), 205--232.
+
+\bibitem{Szego1939} G.~Szeg\H{o},
+\emph{Orthogonal Polynomials},
+Amer. Math. Soc. Colloquium Publications \textbf{23}, New York, 1939.
+
+\bibitem{Vaughan1977} R.~C.~Vaughan,
+\emph{Sommes trigonom\'etriques sur les nombres premiers},
+C. R. Acad. Sci. Paris S\'er. A \textbf{285} (1977), 981--983.
+
+\bibitem{Weyl1916} H.~Weyl,
+\emph{\"Uber die Gleichverteilung von Zahlen mod. Eins},
+Math. Ann. \textbf{77} (1916), 313--352.
+
+\bibitem{Wilkinson1963} J.~H.~Wilkinson,
+\emph{Rounding Errors in Algebraic Processes},
+Prentice-Hall, Englewood Cliffs, 1963.
+
+\end{thebibliography}
+
+\end{document}
