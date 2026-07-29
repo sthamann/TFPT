@@ -43,6 +43,1393 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · XIX",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v560"
+      },
+      {
+        "k": "t",
+        "v": " — the frame/deficit identities promoted; prime-front diary T174 (the gauge route is exhausted by theorems, and the deficit is measured frame-free at "
+      },
+      {
+        "k": "m",
+        "v": "5.0\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " — PARTIAL-CANCEL) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v560"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.FRAME.DEFICIT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the theorem cores of discoveries T172 (contract "
+        },
+        {
+          "k": "c",
+          "v": "FRAME.BEYOND"
+        },
+        {
+          "k": "t",
+          "v": "), T173 ("
+        },
+        {
+          "k": "c",
+          "v": "FRAME.RATE"
+        },
+        {
+          "k": "t",
+          "v": ") and T174 ("
+        },
+        {
+          "k": "c",
+          "v": "CANCEL.IDENTITY"
+        },
+        {
+          "k": "t",
+          "v": ") as one module ("
+        },
+        {
+          "k": "c",
+          "v": "v560_frame_deficit_identities.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.5"
+        },
+        {
+          "k": "t",
+          "v": " s) — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the gauge route of phase 2, closed as algebra"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", the companion to "
+        },
+        {
+          "k": "c",
+          "v": "v559"
+        },
+        {
+          "k": "t",
+          "v": "'s sixteen-link map, recomputed on a small declared surface (a "
+        },
+        {
+          "k": "m",
+          "v": "4\\times3"
+        },
+        {
+          "k": "t",
+          "v": " (anchor, "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": ") rectangle of gap-blind frame-B cells, prime-power anchors "
+        },
+        {
+          "k": "m",
+          "v": "n=41\\ldots557"
+        },
+        {
+          "k": "t",
+          "v": " crossed with the declared ladder "
+        },
+        {
+          "k": "m",
+          "v": "h=(160,226,320)"
+        },
+        {
+          "k": "t",
+          "v": ", comb COMPLETE on every cell, PD low block on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "; one non-prime-power instance "
+        },
+        {
+          "k": "m",
+          "v": "n=210"
+        },
+        {
+          "k": "t",
+          "v": "; one truncated-comb stress instance "
+        },
+        {
+          "k": "m",
+          "v": "n=1009"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa=0.038821"
+        },
+        {
+          "k": "t",
+          "v": " verified at every jump point of "
+        },
+        {
+          "k": "m",
+          "v": "\\psi(x)/x"
+        },
+        {
+          "k": "t",
+          "v": "; the builder's signature is "
+        },
+        {
+          "k": "m",
+          "v": "(n_{\\mathrm{zone}},\\alpha,M)"
+        },
+        {
+          "k": "t",
+          "v": " — no frame label is an argument of any observable). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The identity transfer "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " the sieve-horizon discriminator"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (T172): the KMS/Schur pair ("
+        },
+        {
+          "k": "m",
+          "v": "3.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "), the lag-sum/correlation identity ("
+        },
+        {
+          "k": "m",
+          "v": "1.4\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " of the larger half; Abel 1826), the R4-free det collapse (at "
+        },
+        {
+          "k": "m",
+          "v": "0.020"
+        },
+        {
+          "k": "t",
+          "v": " of the conditioned bar "
+        },
+        {
+          "k": "m",
+          "v": "64\\varepsilon/|1-r_{12}^2|"
+        },
+        {
+          "k": "t",
+          "v": ") and the additive split ("
+        },
+        {
+          "k": "m",
+          "v": "7.6\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") re-derived EXACTLY on a frame-B "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a non-prime-power instance; the truncated-comb instance turns INDEFINITE ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}=-9.6\\times10^{4}"
+        },
+        {
+          "k": "t",
+          "v": ") against "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": " PD complete-comb cells, the identity links holding either way (none uses positivity) — indefiniteness sits at the declared sieve horizon, not at a frame or zone. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The "
+            },
+            {
+              "k": "m",
+              "v": "q=1-s"
+            },
+            {
+              "k": "t",
+              "v": " identity "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " the calibration"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (T173): "
+        },
+        {
+          "k": "m",
+          "v": "hD=\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " per cell forces the OLS slopes to obey "
+        },
+        {
+          "k": "m",
+          "v": "q=1-s"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "2.9\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "h^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " target was the "
+        },
+        {
+          "k": "m",
+          "v": "q=1"
+        },
+        {
+          "k": "t",
+          "v": " idealisation of a "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta(D^3)"
+        },
+        {
+          "k": "t",
+          "v": " law, as an identity); the gauge-degree account comes out as integers — "
+        },
+        {
+          "k": "m",
+          "v": "G2=t/\\lambda_{\\max}(B_{LL})"
+        },
+        {
+          "k": "t",
+          "v": " and the delivery "
+        },
+        {
+          "k": "m",
+          "v": "1-r_{12}^2"
+        },
+        {
+          "k": "t",
+          "v": " both "
+        },
+        {
+          "k": "m",
+          "v": "(0,0)"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "G2"
+        },
+        {
+          "k": "t",
+          "v": " is the unique doubly gauge-invariant arithmetic member; "
+        },
+        {
+          "k": "m",
+          "v": "G3=\\mu^P_1G2"
+        },
+        {
+          "k": "t",
+          "v": " identically (the offset-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " explained); "
+        },
+        {
+          "k": "m",
+          "v": "(D/\\alpha)^3h^3=1"
+        },
+        {
+          "k": "t",
+          "v": " a tautology. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) The blindness theorems "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " the additive limit"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (T174): the amplitude "
+        },
+        {
+          "k": "m",
+          "v": "c\\to\\kappa c"
+        },
+        {
+          "k": "t",
+          "v": " is a gauge of both sides and of "
+        },
+        {
+          "k": "m",
+          "v": "R"
+        },
+        {
+          "k": "t",
+          "v": " over twelve decades (worst "
+        },
+        {
+          "k": "m",
+          "v": "0.026"
+        },
+        {
+          "k": "t",
+          "v": " of the per-cell conditioned bar); the scalar "
+        },
+        {
+          "k": "m",
+          "v": "\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the entire "
+            },
+            {
+              "k": "m",
+              "v": "h^{-2}"
+            },
+            {
+              "k": "t",
+              "v": " channel of the demand"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — cancels exactly on both sides; the delivery is invariant under the full positive diagonal group while a non-scalar diagonal moves the demand by "
+        },
+        {
+          "k": "m",
+          "v": "0.23"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.40"
+        },
+        {
+          "k": "t",
+          "v": "; and neither the arch term nor the comb term alone has a positive Schur floor on a single cell ("
+        },
+        {
+          "k": "m",
+          "v": "0/12"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "0/12"
+        },
+        {
+          "k": "t",
+          "v": " against "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": " for the sum): no factorisation exists, so T173's P6 is NOT promoted to a theorem — only its multiplicative half. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The KMS shape band"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (unconditional, declared "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=(K\\pi/(2h+1))^2/6"
+        },
+        {
+          "k": "t",
+          "v": "): the "
+        },
+        {
+          "k": "m",
+          "v": "k^2"
+        },
+        {
+          "k": "t",
+          "v": "-swap moves "
+        },
+        {
+          "k": "m",
+          "v": "\\log\\mathrm{GAP}"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "\\le0.312"
+        },
+        {
+          "k": "t",
+          "v": " of the certified band while the delivery does not move at all. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5) The placement discriminator"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the value-multiset scramble destroys the floor on "
+        },
+        {
+          "k": "m",
+          "v": "24/24"
+        },
+        {
+          "k": "t",
+          "v": " draws. Each statement carries a mutation control that fails loudly. THE FRAME-FREE DEFICIT IS A MEASUREMENT, NOT A CLAIM OF THE MODULE ("
+        },
+        {
+          "k": "m",
+          "v": "+0.1111\\pm0.0222"
+        },
+        {
+          "k": "t",
+          "v": " stays sandbox MEASURED); R1 typed OPEN (frame-free form); NO RH statement. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FRAME.DEFICIT.01"
+        },
+        {
+          "k": "t",
+          "v": "; registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": "; suite counter "
+        },
+        {
+          "k": "m",
+          "v": "553\\to554"
+        },
+        {
+          "k": "t",
+          "v": " scripts."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T174 ("
+            },
+            {
+              "k": "c",
+              "v": "cancellation_identity_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "CANCEL.IDENTITY"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "37/37"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6.5"
+            },
+            {
+              "k": "t",
+              "v": " s, "
+            },
+            {
+              "k": "m",
+              "v": "84"
+            },
+            {
+              "k": "t",
+              "v": " rectangle "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " "
+            },
+            {
+              "k": "m",
+              "v": "1020"
+            },
+            {
+              "k": "t",
+              "v": " power-check "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " "
+            },
+            {
+              "k": "m",
+              "v": "147"
+            },
+            {
+              "k": "t",
+              "v": " anchor-ladder "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " "
+            },
+            {
+              "k": "m",
+              "v": "178"
+            },
+            {
+              "k": "t",
+              "v": " leg windows; verdict PARTIAL-CANCEL, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The cancellation question turned into blindness algebra: both sides of the T173 deficit are scale-free functionals of ONE raw Gram matrix, and the ledger reads — amplitude gauge THEOREM ("
+        },
+        {
+          "k": "m",
+          "v": "\\le0.028"
+        },
+        {
+          "k": "t",
+          "v": " of the per-cell conditioned bar over twelve decades); "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the complete "
+            },
+            {
+              "k": "m",
+              "v": "\\mu^P_1\\approx h^{-2}"
+            },
+            {
+              "k": "t",
+              "v": " channel THEOREM"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\le0.009"
+        },
+        {
+          "k": "t",
+          "v": " — exactly absent from the deficit); full positive diagonal group THEOREM (delivery exact; the demand keeps the SHAPE — the asymmetry is the whole anatomy); KMS shape against "
+        },
+        {
+          "k": "m",
+          "v": "k^2"
+        },
+        {
+          "k": "t",
+          "v": " CERTIFIED (unconditional band, "
+        },
+        {
+          "k": "m",
+          "v": "\\le0.0075"
+        },
+        {
+          "k": "t",
+          "v": " in deficit units "
+        },
+        {
+          "k": "m",
+          "v": "=4.8\\%"
+        },
+        {
+          "k": "t",
+          "v": " of T173's number); arch/comb mixture DOES NOT CANCEL (additive and exact; no factorisation; neither term alone has a positive Schur floor on one of "
+        },
+        {
+          "k": "m",
+          "v": "84"
+        },
+        {
+          "k": "t",
+          "v": " cells); frame rule THEOREM ("
+        },
+        {
+          "k": "m",
+          "v": "R=R(\\alpha,M)"
+        },
+        {
+          "k": "t",
+          "v": " identically — a sampling map, two frames on one cell agree bit for bit). Explained along the way: "
+        },
+        {
+          "k": "m",
+          "v": "G2"
+        },
+        {
+          "k": "t",
+          "v": " is the unique doubly gauge-invariant arithmetic member of T173's family, and the "
+        },
+        {
+          "k": "m",
+          "v": "G3"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "G2"
+        },
+        {
+          "k": "t",
+          "v": " offset of exactly "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": " exponent (measured "
+        },
+        {
+          "k": "m",
+          "v": "h^{-1.9975}"
+        },
+        {
+          "k": "t",
+          "v": "). The key result is a direct measurement: on the preregistered "
+        },
+        {
+          "k": "m",
+          "v": "12\\times7"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(\\alpha,h)"
+        },
+        {
+          "k": "t",
+          "v": " rectangle the "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-direction carries the deficit ("
+        },
+        {
+          "k": "m",
+          "v": "a=-0.281\\pm0.066"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "4.3\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "; anchor direction flat); the exact between/within split puts it in the GRID response ("
+        },
+        {
+          "k": "m",
+          "v": "3.3\\times"
+        },
+        {
+          "k": "t",
+          "v": " the anchor selection, whose sign is mostly wrong — the selection reading tested and rejected); the driver is the COMB DENSITY per lag cell (monotone "
+        },
+        {
+          "k": "m",
+          "v": "+0.281\\to+0.062"
+        },
+        {
+          "k": "t",
+          "v": " across the density cuts; on legs "
+        },
+        {
+          "k": "m",
+          "v": "\\log\\nu"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\log\\mathrm{dens}"
+        },
+        {
+          "k": "t",
+          "v": " collinear at "
+        },
+        {
+          "k": "m",
+          "v": "r=-0.921"
+        },
+        {
+          "k": "t",
+          "v": " — T173's "
+        },
+        {
+          "k": "m",
+          "v": "2.8\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\log\\nu"
+        },
+        {
+          "k": "t",
+          "v": " driver named and discharged); and the dense corner, exhausted ("
+        },
+        {
+          "k": "m",
+          "v": "1069"
+        },
+        {
+          "k": "t",
+          "v": " cells, "
+        },
+        {
+          "k": "m",
+          "v": "151"
+        },
+        {
+          "k": "t",
+          "v": " anchor clusters, cluster-robust), gives "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "DEFICIT(frame-free, dens "
+            },
+            {
+              "k": "m",
+              "v": "\\ge3"
+            },
+            {
+              "k": "t",
+              "v": ") "
+            },
+            {
+              "k": "m",
+              "v": "=+0.1111\\pm0.0222"
+            },
+            {
+              "k": "t",
+              "v": " — "
+            },
+            {
+              "k": "m",
+              "v": "5.0\\sigma"
+            },
+            {
+              "k": "t",
+              "v": " from zero, "
+            },
+            {
+              "k": "m",
+              "v": "0.4\\sigma"
+            },
+            {
+              "k": "t",
+              "v": " from T173's "
+            },
+            {
+              "k": "m",
+              "v": "+0.155\\pm0.102"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". P6 does NOT become a theorem (only the multiplicative half) but is less load-bearing: the deficit is measured on a D-rule-free surface, and the fixed-"
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": " invariance is explained (fixed "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " fixed density regime). Stress green (scramble "
+        },
+        {
+          "k": "m",
+          "v": "24/24"
+        },
+        {
+          "k": "t",
+          "v": " destroys the block and moves "
+        },
+        {
+          "k": "m",
+          "v": "R"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "10^2"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "10^5"
+        },
+        {
+          "k": "t",
+          "v": "; jackknives stable; horizons declared). Candidates P9–P15; the rest: the per-anchor scatter ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2/\\mathrm{dof}=3.02"
+        },
+        {
+          "k": "t",
+          "v": "; candidate: the placement phases "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{frac}(\\log p/D)"
+        },
+        {
+          "k": "t",
+          "v": "), the admissibility question ("
+        },
+        {
+          "k": "m",
+          "v": "0.11"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "\\ge3"
+        },
+        {
+          "k": "t",
+          "v": " atoms per cell: factor "
+        },
+        {
+          "k": "m",
+          "v": "2.5"
+        },
+        {
+          "k": "t",
+          "v": "), the sparse corner. T175 ("
+        },
+        {
+          "k": "c",
+          "v": "PHASE.PLACEMENT"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "phase_placement_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running — the phases and the dense limit. Diary counters "
+        },
+        {
+          "k": "m",
+          "v": "174"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4678"
+        },
+        {
+          "k": "t",
+          "v": " checks (series (CLXXXV))."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": new phase-2 subsection (T174: the cancellation ledger as a compact table, the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": "-channel theorem, the "
+        },
+        {
+          "k": "m",
+          "v": "G2"
+        },
+        {
+          "k": "t",
+          "v": "/offset-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " explanation, the sampling-map reading of the frame rule, the frame-free rectangle measurement as key result with the density ordering, keybox “After T174” with the phases / dense limit and T175 running), the verified layer extended to twenty-six modules (new subsection for "
+        },
+        {
+          "k": "c",
+          "v": "v560"
+        },
+        {
+          "k": "t",
+          "v": "), section title T126"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "T174, abstract counters "
+        },
+        {
+          "k": "m",
+          "v": "174/4678"
+        },
+        {
+          "k": "t",
+          "v": ", probe index extended (T174 row "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v560"
+        },
+        {
+          "k": "t",
+          "v": ", running totals, T175 running); companion blocks for "
+        },
+        {
+          "k": "c",
+          "v": "v560"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1_architecture_e8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3_e8_audit_bootstrap"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " T174 entry (counters "
+        },
+        {
+          "k": "m",
+          "v": "174"
+        },
+        {
+          "k": "t",
+          "v": " Proben / "
+        },
+        {
+          "k": "m",
+          "v": "4678"
+        },
+        {
+          "k": "t",
+          "v": " Checks, Serie (CLXXXV)); website: "
+        },
+        {
+          "k": "c",
+          "v": "primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " feed entries T174 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " v560 promotion (verdict enum PARTIAL-CANCEL added), status surfaces Teile 11–174 / "
+        },
+        {
+          "k": "m",
+          "v": "4678"
+        },
+        {
+          "k": "t",
+          "v": " checks / "
+        },
+        {
+          "k": "m",
+          "v": "26"
+        },
+        {
+          "k": "t",
+          "v": " modules v535–v560 ("
+        },
+        {
+          "k": "c",
+          "v": "page.tsx"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HonestyBanner.tsx"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ModuleLadder.tsx"
+        },
+        {
+          "k": "t",
+          "v": "), suite counter "
+        },
+        {
+          "k": "m",
+          "v": "554"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "suite.ts"
+        },
+        {
+          "k": "t",
+          "v": "). NO marker moves; not RH evidence."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · XVIII",
     "heading": [
       {

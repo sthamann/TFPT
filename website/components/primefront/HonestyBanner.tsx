@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v559
+          v535–v560
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4641/4641 sandbox checks —
+        (“the full proof”, T126+) is now open with 4678/4678 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -503,8 +503,17 @@ export function HonestyBanner() {
         constant in ν; no frame closes it, so frame shopping is over by
         numbers, and R1 stands frame-free — the delivered
         near-degeneracy closes slower than the relative gap it must
-        pay. T174 (cancellation_identity_probe.py) is testing whether
-        the frame factors cancel algebraically. What remains
+        pay. T174 (PARTIAL-CANCEL) then closed the gauge route by
+        theorems — everything multiplicative cancels exactly (including
+        the entire h⁻² channel, which is exactly absent from the
+        deficit), the one shared channel is certified unconditionally
+        at under five percent, and the additive arch/comb mixture
+        provably admits no factorisation — and measured the deficit
+        directly on a frame-rule-free rectangle: +0.1111 ± 0.0222, five
+        sigma from zero, its driver identified as comb density per lag
+        cell; the theorem cores of T172–T174 are load-bearing as v560.
+        T175 (phase_placement_probe.py) is testing the placement phases
+        and the dense limit. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

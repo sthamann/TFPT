@@ -149,12 +149,18 @@ const MODULES = [
     title: "Phase-2 capstone: the sixteen-link chain · phase 2",
     checks: 35,
   },
+  {
+    id: "v560",
+    claim: "PRIME.FRAME.DEFICIT.01",
+    title: "Frame/deficit identities · phase 2",
+    checks: 24,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 173;
-const SANDBOX_CHECKS = 4641;
+const SANDBOX_PROBES = 174;
+const SANDBOX_CHECKS = 4678;
 
 export function ModuleLadder() {
   return (

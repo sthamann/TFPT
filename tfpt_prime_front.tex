@@ -81,8 +81,8 @@ out to be \emph{Hecke} data. It goes further than an analogy: the $E_8$ shell co
 $240\,\zeta(s)\zeta(s-3)$ as a Dirichlet series, and the lattice's self-duality gives its theta sum an
 exact functional equation whose fixed axis is the critical line --- a framework picture, stated as such,
 which the document opens with and then keeps at arm's length. This companion documents the line end to
-end. Twenty-four modules are
-load-bearing and ledger-carried (\vref{v535}--\vref{v559}): Hecke from geometry on the $E_8$ census,
+end. Twenty-six modules are
+load-bearing and ledger-carried (\vref{v535}--\vref{v560}): Hecke from geometry on the $E_8$ census,
 the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, the matching-lemma / transport
@@ -92,10 +92,10 @@ identities, the level-lemma identities, the Green/Szeg\H{o} identities, the gaug
 identities, the odd-sector identities, the fixed-size Ritz ceiling certificate, the four
 fixed-size angle instruments, the exact-form identities, the sampling/harmonics
 identities, the Pareto/total-variation identities, the gauge/$P_{\mathrm{pr}}$
-identities, the cascade/vector identities, the bilinear/rank identities and the phase-2
-capstone. Everything beyond
-those twenty-five is \emph{sandbox}: an exploratory program, run as
-$173$ preregistered probes with $4641$ machine checks, which localized the residual object. That
+identities, the cascade/vector identities, the bilinear/rank identities, the phase-2
+capstone and the frame/deficit identities. Everything beyond
+those twenty-six is \emph{sandbox}: an exploratory program, run as
+$174$ preregistered probes with $4678$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -264,7 +264,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots173$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots174$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -272,7 +272,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T173: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T174: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -517,7 +517,15 @@ the theorem cores of T168+T169+T170 promoted as \vref{v558} (T170); and the caps
 assembles the whole map in one connected run --- all sixteen links of the reduction chain, from
 the I5 floor to the final R1 shape, thirteen as theorems and three as per-window certificates,
 the eight-route no-go battery failing exactly as classified, and the precision ledger closed ---
-adding \emph{zero} new uniform statements, with the capstone promoted as \vref{v559} (T171));
+adding \emph{zero} new uniform statements, with the capstone promoted as \vref{v559} (T171);
+and the frame arc then measures the map's frame dependence --- the identity tower carries
+unchanged beyond frame A while every carried number is frame-bound (T172), the demanded rate
+is itself a frame datum by the exact identity $q=1-s$ and the deficit between demand and
+delivery becomes the number of the phase (T173), and the gauge route is exhausted by
+theorems: everything multiplicative cancels exactly, the additive arch/comb mixture admits
+no factorisation, and the deficit is measured frame-free at $+0.1111\pm0.0222$ ($5.0\sigma$)
+with its driver identified as comb density per lag cell (T174) --- with the theorem cores of
+T172+T173+T174 promoted as \vref{v560});
 Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
@@ -602,7 +610,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the twenty-five modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the twenty-six modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -743,13 +751,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: twenty-five modules}\label{sec:verified}
+\section{The verified layer: twenty-six modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The twenty-five modules and their ledger markers]
+\begin{keybox}[The twenty-six modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -780,6 +788,7 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v557} & \texttt{PRIME.CASCADE.VECT.01} & cascade/vector identities of phase 2 (per instance) & \mE\\
 \vref{v558} & \texttt{PRIME.BILINEAR.RANK.01} & bilinear/rank identities of phase 2 (per instance) & \mE\\
 \vref{v559} & \texttt{PRIME.PHASE2.CAPSTONE.01} & phase-2 capstone: the sixteen-link chain (per instance) & \mE\\
+\vref{v560} & \texttt{PRIME.FRAME.DEFICIT.01} & frame/deficit identities of phase 2 (per instance) & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -2319,6 +2328,82 @@ linear $\Lambda$-sums against the archimedean block; R2/R3 booked (T169), R4 off
 path (T170-TH6), nothing else open in phase 2; the T171 verdict \textsc{map-complete}
 is a verdict about the \emph{map}, not about R1, and stays a sandbox verdict;
 \vref{v558}'s identities stay as stated, and nothing is re-opened.
+\end{itemize}
+
+\subsection{The frame/deficit identities (\texorpdfstring{\vref{v560}}{v560})}\label{sec:v560}
+The gauge route of phase 2, closed as algebra (T172 \texttt{FRAME.BEYOND} $+$ T173
+\texttt{FRAME.RATE} $+$ T174 \texttt{CANCEL.IDENTITY}, Section~\ref{sec:phase2}): the
+companion to \vref{v559}, which certified the sixteen-link map on the small frame-A
+surface --- this module certifies what T172/T173/T174 established \emph{about} that map's
+frame dependence, and it makes no rate claim and no uniformity claim
+\veri{v560\_frame\_deficit\_identities.py} ($24$ checks, ${\sim}0.5$\,s; a small declared
+surface: a $4\times3$ (anchor, $h$) rectangle of gap-blind frame-B cells, prime-power
+anchors $n=41\ldots557$ crossed with the declared ladder $h=(160,226,320)$, comb
+\emph{complete} on every cell, positive definite low block on $12/12$; one
+non-prime-power instance $n=210$ and one truncated-comb stress instance $n=1009$; the one
+arithmetic input $\kappa=0.038821$ \emph{verified} at every jump point of $\psi(x)/x$ on
+the table; the builder's signature is $(n_{\mathrm{zone}},\alpha,M)$ --- no frame label
+is an argument of any observable).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The identity transfer $+$ the sieve-horizon discriminator} \mE\ (T172):
+four representative chain links --- the KMS/Schur pair
+$TL_PT^{\mathsf T}=\operatorname{diag}(\mu^P)$ ($3.2\times10^{-16}$; quadratic-form pair
+$5.2\times10^{-15}$), the lag-sum / correlation identity $v^{\mathsf T}A_hv=\sum_dc_dw_d$
+($1.4\times10^{-16}$ of the larger half; Abel 1826), the R4-free det collapse
+$1-r_{12}^2=\det\hat A_2/(\hat a_{11}\hat a_{22})=\nu_1\nu_2/(\hat a_{11}\hat a_{22})
+=\det G_2/(G_{11}G_{22})$ (at $0.020$ of the conditioned bar $64\varepsilon/|1-r_{12}^2|$
+--- the $2\times2$ determinant is a near-null number and the bar says so), and the
+additive split $\hat A=\hat A_{\mathrm{arch}}+\hat A_{\mathrm{comb}}$
+($7.6\times10^{-16}$) --- re-derived \emph{exactly} on a gap-blind frame-B instance
+\emph{and} a non-prime-power-anchor instance: the links use no property of the frame rule
+or the anchor arithmetic, which is why they transfer. The discriminator: the
+truncated-comb instance turns \emph{indefinite} ($\lambda_{\min}=-9.6\times10^{4}$)
+against $12/12$ positive definite complete-comb cells --- indefiniteness sits at the
+declared sieve horizon, not at a frame or zone --- and the identity links keep holding
+there, because none of them uses positivity.
+\item \textbf{The $q=1-s$ identity $+$ the calibration} \mE\ (T173): $hD=\alpha$ per cell
+($8.9\times10^{-16}$) forces $\log D=\log\alpha-\log h$ pointwise, hence the OLS slopes
+obey $q=1-s$ to $2.9\times10^{-14}$ (OLS is linear in its response --- the identity lifts
+from cells to slopes): T171's $h^{-3}$ is the $q=1$ idealisation of a $\Theta(D^3)$ law
+\emph{as an identity}; the gauge-degree account comes out as integers ---
+$G2=t/\lambda_{\max}(B_{LL})$ and the delivery $1-r_{12}^2$ both at
+$(d_{\mathrm{amp}},d_\mu)=(0,0)$, so $G2$ is the \emph{unique} doubly gauge-invariant
+arithmetic member of T173's family; $G3=\mu^P_1G2$ identically ($2.2\times10^{-16}$, the
+offset-$2$ explained: $G2$ is $\mu^P_1$-blind); and the $G6$ tautology
+$(D/\alpha)^3h^3=1$ exactly.
+\item \textbf{The blindness theorems $+$ the additive limit} \mE\ (T174): the amplitude
+$c\to\kappa c$ is a gauge of $\mathrm{GAP}$, of $1-r_{12}^2$ and of $R$ over twelve
+decades (worst $0.026$ of the per-cell conditioned bar; rebuilt from scratch $0.098$);
+the scalar $\mu^P_1=4\sin^2(\pi/(2h+1))$ --- \emph{the entire $h^{-2}$ channel of the
+demand} --- cancels exactly on both sides ($0.001$ of bar); the delivery is invariant
+under the full positive diagonal group while a non-scalar diagonal moves the demand by
+$0.23$--$1.40$ (the asymmetry is the anatomy); and the additive limit: neither the arch
+term nor the comb term alone has a positive definite low block on a single cell ($0/12$
+$+$ $0/12$ against $12/12$ for the sum) --- no factorisation $\hat A=(\mathrm{frame})
+\times(\mathrm{arithmetic})$ exists, so T173's P6 is \emph{not} promoted to a theorem:
+only its multiplicative half is.
+\item \textbf{The KMS shape band (unconditional) $+$ the placement discriminator} \mE\
+(T174/T172): with $x=\pi/(2h+1)$ and $K=16$,
+$|\sqrt{\hat S_k/k^2}-1|\le\varepsilon_{\mathrm{cert}}=(Kx)^2/6$ on $12/12$ and the
+$k^2$-swap moves $\log\mathrm{GAP}$ by at most $0.312$ of the certified band
+$2\log((1+\varepsilon)/(1-\varepsilon))$ (Rayleigh 1877; Schur 1917) while the delivery
+does not move at all; the value-multiset scramble destroys the positive low block on
+$24/24$ declared draws and moves $|R|$ by a median factor $10^{6}$ --- the demand side is
+a statement about \emph{where} the prime powers are. Every statement carries a mutation
+control that fails loudly.
+\item \textbf{Named limits as content.} Per instance on a small declared surface --- a
+finite list with an explicit maximum; nothing uniform in the zone index or in $D$;
+\textbf{the frame-free deficit is a measurement, not a claim of this module}: T174's
+$+0.1111\pm0.0222$ ($5.0\sigma$, $151$ anchor clusters, cluster-robust; $0.4\sigma$ from
+T173's $+0.155\pm0.102$) stays a sandbox \textsc{measured} number in
+Section~\ref{sec:phase2}, as do all T172/T173/T174 $h$-exponents, the density anatomy and
+the $\nu$/density collinearity; finite $\Lambda$-sums are allowed and used, \emph{no} RH
+statement is made; \textbf{the one open phase-2 object stays open and typed open}: R1,
+now stated frame-free; the residual per-anchor scatter ($\chi^2/\mathrm{dof}=3.02$) and
+the sparse corner are sandbox items under test in T175; the T172/T173/T174 verdicts
+\textsc{partially-portable} / \textsc{deficit-varies} / \textsc{partial-cancel} are
+sandbox verdicts; \vref{v559}'s chain stays as stated, and nothing is re-opened.
 \end{itemize}
 
 % =====================================================================
@@ -4661,7 +4746,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T173)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T174)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -9566,41 +9651,170 @@ the relative I5 gap and the $2\times2$ near-degeneracy, in the style of
 T164's gauge machinery: that would turn the $D$-rule invariance into a
 theorem and make the deficit \emph{the} number of the phase. T174
 (\texttt{cancellation\_identity\_probe.py}, contract
-\texttt{CANCEL.IDENTITY}) is running. \emph{(Rest)} the $h$-versus-$D$
+\texttt{CANCEL.IDENTITY}) then asked exactly that --- next subsection.
+\emph{(Rest)} the $h$-versus-$D$
 split (needs a frame whose $\alpha$ does not track $\log h$ while the
 comb still moves --- hard under the cap; T171's R-B$'''$ surface); and
 the remaining rate: close $+0.155$ in the exponent unconditionally, for
 two explicit finite $\Lambda$ sums --- unchanged as the one open
 object, now stated frame-free. \emph{(Candidates P5--P8, pending)} the
 frame-bound demand ($q=1-s$), the $D$-rule invariance, the T172
-correction, the calibration --- bundling with T174 planned, nothing
-booked.
+correction, the calibration --- bundled with T174's cores into
+\vref{v560}.
+\end{keybox}
+
+\subsection{The cancellation identity: the gauge route exhausted, the
+deficit measured frame-free (T174)}\label{sec:t174}
+T174 (\texttt{cancellation\_identity\_probe.py}, contract
+\texttt{CANCEL.IDENTITY}, $37/37$, $6.5$\,s, $84$ rectangle $+$ $1020$
+power-check $+$ $147$ anchor-ladder $+$ $178$ leg windows; $93192$
+prime-power atoms to $n=1.2\times10^{6}$, $\kappa=0.038821$ verified at
+every jump point; the preregistered $12\times7$ $(\alpha,h)$ rectangle
+--- $12$ prime-power anchors $n=41\ldots1087$ crossed with the declared
+geometric ladder $h=160\ldots1280$, fixed \emph{before} any window was
+built, comb complete on every cell, $84/84$ positive definite; verdict
+\textsc{partial-cancel}) turns ``do the frame factors cancel'' into
+checkable algebra and then measures what does not cancel.
+
+\emph{The decomposition --- which factors is each functional blind to.}
+Both sides of the T173 deficit are scale-free functionals of \emph{one}
+raw Gram matrix $\hat a_{ij}=t_i^{\mathsf T}A_ht_j$: the demand is the
+relative gap of its $16\times16$ $\mu$-congruence, the delivery is the
+$2\times2$ corner of the very same matrix. Blindness on both sides is a
+cancellation in $R=\mathrm{GAP}/(1-r_{12}^2)$ --- and blindness is an
+algebraic property, checkable to machine precision, not a fit. The
+cancellation ledger:
+\begin{center}\small
+\begin{tabular}{@{}l l l@{}}
+\toprule
+\textbf{factor} & \textbf{status} & \textbf{size of the residue}\\
+\midrule
+amplitude of $c$ ($\kappa$) & \textsc{theorem} & $\le0.028$ of the round-off bar\\
+scalar of the KMS ladder ($\mu^P_1$) & \textsc{theorem} & $\le0.009$ --- the whole $h^{-2}$ channel\\
+full positive diagonal group & \textsc{theorem} & delivery only, exact\\
+shape of the KMS ladder ($\hat S$ vs $k^2$) & \textsc{certified} & $\le0.0075$ in the deficit\\
+arch/comb mixture in $\hat A$ & \emph{does not cancel} & additive; no factorisation\\
+the frame rule itself & \textsc{theorem} & nothing to cancel: $R=R(\alpha,M)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\noindent The load-bearing entry is the second: writing the KMS ladder
+as $S=\mu^P_1\hat S$ with $\hat S_k=\mu^P_k/\mu^P_1$, the scalar
+$\mu^P_1=4\sin^2(\pi/(2h+1))$ --- the one factor of the demand that is
+a pure function of the grid --- cancels \emph{exactly} on both sides:
+on the delivery because a correlation is invariant under the full
+positive diagonal group, on the demand because a relative gap kills any
+scalar congruence. \textbf{The entire $h^{-2}$ channel is exactly
+absent from the deficit.} What survives is the \emph{shape} $\hat S$,
+which the delivery is exactly blind to but the demand is not --- and
+that one channel is bounded \emph{unconditionally}:
+$|\log\mathrm{GAP}(k^2)-\log\mathrm{GAP}(\mathrm{KMS})|\le
+2\log((1+\varepsilon)/(1-\varepsilon))$ with
+$\varepsilon=(K\pi/(2h+1))^2/6$, worth at most $0.0075$ in deficit
+units $=4.8\%$ of T173's $+0.155$. The honest boundary: the frame
+enters the Gram \emph{additively}, $\hat A=\hat A_{\mathrm{arch}}+\hat
+A_{\mathrm{comb}}$ exactly, and neither term alone has a positive Schur
+floor on a single one of the $84$ cells --- the $4\%$-arch term decides
+the positivity, no factorisation $(\mathrm{frame})\times(\mathrm{
+arithmetic})$ exists, and no gauge argument can absorb an additive
+term: \emph{this is where the cancellation identity stops being exact}.
+Two side results settle T173's family: $G2$ is the \emph{unique} doubly
+gauge-invariant and arithmetic member (the measured gauge degrees come
+out as integers), and the $G3$--$G2$ offset of exactly $2$ is explained
+($G2$ is $\mu^P_1$-blind, so the offset is the $\mu^P_1$ exponent,
+measured $h^{-1.9975}$ --- T173's $1.9974$).
+
+\emph{The frame rule is a sampling map, and the deficit is measured
+without it (the key result).} The window builder takes
+$(n_{\mathrm{zone}},\alpha,M)$ and nothing else, so $R=R(\alpha,M)$
+identically: a frame rule is a \emph{curve} on that surface, two frames
+reaching the same cell agree bit for bit, and pointwise there is
+nothing to cancel. On the preregistered rectangle the $h$-direction
+carries the deficit ($a=-0.281\pm0.066$, $4.3\sigma$) while the anchor
+direction is flat; the exact between/within split of every leg deficit
+(the split is an identity, exact to $5.6\times10^{-16}$) shows the
+\emph{grid response} carries it --- $3.3\times$ the anchor-selection
+part, whose sign is wrong on most legs: the cheap reading ``the frame
+rule reads $h$ off the local log-gap, so the deficit is a selection
+effect'' is tested and rejected. The driver is then identified: on a
+leg, $\log\mathrm{dens}=\mathrm{const}(\alpha)-\log\nu$ identically
+(dens $=$ comb atoms per lag cell), so no leg statistic could ever
+separate $\nu$ from comb content ($r=-0.921$ on the ten gap-reading
+legs --- the same signal under two names); the rectangle separates
+them, and the deficit falls \emph{monotonically} $+0.281\to+0.172\to
++0.147\to+0.062$ across the density cuts $\mathrm{dens}\ge0/0.5/1/3$
+while the anchor slope stays flat. The leg table orders perfectly by
+density (A16/dens $0.38\to+1.19$; A8/$0.75\to+0.74$; A4/$2.5\to-0.10$)
+--- T173's $2.8\sigma$ $\log\nu$ driver is a named and discharged
+confounding. Exhausting the dense corner ($1020$ fresh power-check
+cells on $153$ new anchors; pooled $1069$ cells on $151$ anchors with
+$\ge4$ rungs each, the cluster-robust anchor mean the honest estimator)
+gives
+\begin{keyeq}$\displaystyle
+\mathrm{DEFICIT}(\text{frame-free},\ \mathrm{dens}\ge3.0)\;=\;
++0.1111\pm0.0222\quad(5.0\sigma\ \text{from zero;}\ 0.4\sigma\ \text{from
+T173's}\ +0.155\pm0.102)$
+\end{keyeq}
+\noindent --- the deficit survives an independent measurement with no
+$D$-rule anywhere in it. Stress green: the comb scramble destroys the
+positive block on $24/24$ test cells and moves $R$ by
+$10^{2}$--$10^{5}$; jackknives stable; every numerical horizon declared
+($1-r_{12}^2$ down to $9.3\times10^{-8}$, bars conditioned per cell).
+
+\begin{keybox}[After T174: the phases and the dense limit]
+\emph{(Verdict)} \textsc{partial-cancel} --- the gauge route is
+\emph{exhausted}: multiplicative cancellation is theorem-form, the one
+shared channel is certified $\le4.8\%$, the additive mixture cannot
+cancel; any further cancellation claim needs a different pair of
+functionals. P6 does \emph{not} become a theorem (only its
+multiplicative half) but is less load-bearing: the deficit needs no
+invariance argument --- it is measured on a $D$-rule-free surface, and
+the fixed-$\nu$ invariance is explained (fixed $\nu$ $=$ fixed density
+regime). The theorem cores of T172+T173+T174 are promoted as
+\vref{v560} \veri{v560\_frame\_deficit\_identities.py}
+(Section~\ref{sec:v560}). \emph{(Rest)} the per-anchor rate is not
+universal ($\chi^2/\mathrm{dof}=3.02$, no residual $\alpha$-trend) ---
+the untried candidate is the placement \emph{phases} of the heavy low
+atoms $\mathrm{frac}(\log p/D)$; an admissibility question for the
+chain (T173 admits $0.11$ atoms per lag cell; $\mathrm{dens}\ge3$
+against all is a factor $2.5$ in the deficit); and the sparse corner
+($+0.51$--$0.80$) --- regime or spline artefact. T175
+(\texttt{phase\_placement\_probe.py}, contract
+\texttt{PHASE.PLACEMENT}) is running --- the phases and the dense
+limit.
 \end{keybox}
 
 \medskip
-\noindent\emph{Where phase 2 now stands.} The map is complete and its
-portability is measured: the reduction from the I5 uniformity question
-to a single object runs end to end and reproduces in one file (T171),
-its identity tower carries unchanged onto every frame and anchor
-arithmetic tried while every carried number must be recomputed per
-surface (T172), and the demand side itself is a frame datum whose
-difference against the delivery is the one surviving number (T173):
-the delivered near-degeneracy closes slower than the relative gap it
-must pay, by $h^{+0.155\pm0.102}$, invariant under the anchor-to-grid
-rule, not yet constant in $\nu$, closed by no frame. What is left is
-one statement --- an unconditional certificate that two explicit
+\noindent\emph{Where phase 2 now stands.} The map is complete, its
+portability is measured, and its frame dependence is dissected: the
+reduction from the I5 uniformity question to a single object runs end
+to end and reproduces in one file (T171), its identity tower carries
+unchanged onto every frame and anchor arithmetic tried while every
+carried number must be recomputed per surface (T172), the demand side
+itself is a frame datum whose difference against the delivery is the
+one surviving number (T173), and the gauge route on that number is
+exhausted by theorems (T174): everything multiplicative cancels
+exactly --- including the entire $h^{-2}$ channel --- the one shared
+channel is certified unconditionally at under five percent, the
+additive arch/comb mixture admits no factorisation, and the deficit
+stands measured on a frame-rule-free surface at $+0.1111\pm0.0222$
+($5.0\sigma$), its driver the comb density per lag cell. What is left
+is one statement --- an unconditional certificate that two explicit
 finite $\Lambda$-sum vectors become collinear at the demanded rate,
-now stated frame-free. The measurement surface is certified, the
-quantifier is open, R1 is classified; the capstone that certifies
-exactly this map --- and nothing more --- is load-bearing
-\veri{v559\_phase2\_capstone.py}.
+now stated frame-free --- plus two precise questions: the dense limit,
+and the placement phases behind the per-anchor scatter. The
+measurement surface is certified, the quantifier is open, R1 is
+classified; the capstone that certifies exactly this map is
+load-bearing \veri{v559\_phase2\_capstone.py}, and the frame/deficit
+identities of the closing arc are load-bearing
+\veri{v560\_frame\_deficit\_identities.py}.
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
-\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the twenty-five ledger modules
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the twenty-six ledger modules
 of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
@@ -10074,19 +10288,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T173}\label{app:index}
+\section{Probe index, diary parts T11--T174}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $163$ parts T11--T173 that the current diary file records
-($164$ runs --- T104 was a double run with two independent arms --- and $4449$ green checks); the ten
+load-bearing artefact. The index covers the $164$ parts T11--T174 that the current diary file records
+($165$ runs --- T104 was a double run with two independent arms --- and $4486$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v559} promoted; with T126--T173, the first forty-eight parts of the second phase, the
-running totals are \textbf{$173$ probes and $4641/4641$ checks}. T174
-(\texttt{cancellation\_identity\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v560} promoted; with T126--T174, the first forty-nine parts of the second phase, the
+running totals are \textbf{$174$ probes and $4678/4678$ checks}. T175
+(\texttt{phase\_placement\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -10265,6 +10479,7 @@ T170 & \texttt{\scriptsize bilinear\_\allowbreak sieve} & T169's standard shape 
 T171 & \texttt{\scriptsize final\_\allowbreak map} & \textbf{the capstone: the map is complete} --- all sixteen links of the reduction chain, from the I5 floor to the final R1 shape, reproduce in ONE connected run on $12$ windows over two frames ($\nu=4/6$, $h=142$--$1445$, lever arm $10.2\times$): $13$ THEOREM ($T152$ Schur two-block sharp at $0.5\lambda/1.02\lambda$; T151 Sobolev $0.483$; T153 $\Psi$-collapse $1.19\times10^{-15}$ with $\sum w_d=0$; T154 Ritz from below $g_{32}/s=0.923$--$0.986$; T158 Thomson $=$ ladder $1.45\times10^{-9}$, $33/33$ trials below; T160 sampling $1.05\times10^{-15}$; T163 swap/TV overshoot $\times7.3\times10^{5}$--$6.2\times10^{8}$; T164 gauge/quantifier $\Psi(x^*)=1/g_{16}$; T165 $P_{\mathrm{pr}}=1$; T166 cascade diagonal-invariant; T167 $K=2$ mildest; T169 det collapse R4-free on ALL $12$ incl.\ the indefinite window; T170 rank-3 $\{-2,-1,+1\}$) $+\,3$ CERT (T155 $12\times12$ floor sharp; T156 $F(P,r)$ $L_{16}=5.0$--$19.6$; T170 R1 shape $\sin\angle=1.09\times10^{-7}$--$1.15\times10^{-4}$, rate frame-dependent $\nu=4$: $h^{-1.86}$ / $\nu=6$: $h^{-2.87}$, COLLAPSE not); honest exclusion: $\nu=4$, $h=1445$ has $\lambda_{\min}(B_{LL})=-343$ --- ladder links $11/12$, identity links $12/12$; \textbf{all eight classified no-gos fail as classified} (budget $h^{+1.32}$; symbol $<0$ on $12/12$; sector invariant $2.1\times10^{-9}$; Kato $2.0\times10^{4}$--$1.9\times10^{7}$ off scale; atom band $+0.79$ faster; sieve $\delta=+1.044$ vs $3.0$; scramble type-flip $h^{-2.57}\to h^{+0.21}$, $\times11421$; $L_P$ gain $=1$ exactly); \textbf{the precision ledger closes}: needed $2.284\times10^{-7}$ at $h=1444$ (rate $h^{-3.0}$) vs RH yardstick $h^{-0.5}=2.63\times10^{-2}$ (short $1.2\times10^{5}\times$) and best unconditional $h^{-0.996}=7.13\times10^{-4}$ (short $3.1\times10^{3}\times$); both self-similarity identities check ($4.2\times10^{-10}$ / $9.9\times10^{-10}$, sign-agnostic); balance of the quotable parts $40$ THEOREM / $5$ CERT-UNIF / $9$ CERT-WINDOW / $16$ MEASURED / $9$ NO-GO (T126--T161 unaggregated); \textbf{adds ZERO new uniform-in-$m$ statements --- exactly why it is promotable}; R1 the only open phase-2 object, classified $\to$ \vref{v559} & MAP-COMPLETE & 43/43\\
 T172 & \texttt{\scriptsize frame\_\allowbreak beyond} & \textbf{the map is portable, the numbers are not} --- the recipe inventory has FOUR degrees of freedom (frame rule $D$; $\nu$; zone family; the atom set NOT free --- $\Lambda$ lives on prime powers, ``beyond'' means different ANCHOR arithmetic), measured on four surfaces ($54$ windows: frame-A reference; gap-blind frame B $D=\alpha/h$ $+$ $\nu$-extremes $3/8$; non-prime-power anchors; congruence classes $p\equiv1$ vs $3\bmod4$) $+$ $3$ truncated-comb stress windows; \textbf{IDENTITY TRANSFER: $13/16$ links UNIVERSAL, $0$ broken} (the whole identity tower $+$ both direction lemmas; the sampling identity --- the most zone-sensitive link --- exact on every window of every surface); the $3$ that shift are exactly the number-carrying ones (links 5/6 $=$ window certificates, link 16 $=$ the rate); \textbf{indefiniteness LOCALISED at the sieve horizon} ($\lambda_{\min}=-3.7\times10^{5}$\,--\,$-6.2\times10^{6}$ on $3/3$ cut-comb stress windows against $0/54$ complete-comb; identity links hold there ${\sim}10^{-15}$ --- no positivity used), NOT at a frame or zone --- T171's worry retired; constants map: $8/11$ inside frame A's band, $3$ wander on S3 ($K^F$ $\times2.3$, $U_{\mathrm{ref}}$ $\times1.2$, $s$ $\times1.5$) --- a certificate on a new surface is a NEW certificate (procedure $+$ directions transfer, $54/54$); \textbf{R1's near-degeneracy PERSISTS everywhere} (angle $<10^{-2}$ on $54/54$, decay on $9/9$ legs, $1-r_{12}^2=1.4\times10^{-7}$--$6.2\times10^{-4}$), the RATE frame-bound ($\nu=3$: $h^{-2.19}$ / $\nu=4$: $h^{-2.46}$ / $\nu=6$: $h^{-2.55}$ / $\nu=8$: $h^{-1.83}$ / B: $h^{-2.76}$; zone spread $0.40$ vs frame spread $1.03$); \textbf{THE PLACEMENT FINDING: scramble at fixed $\Lambda$-value multiset raises the angle $\times6.6\times10^{4}$ median and REMOVES the decay ($h^{+0.11}$ vs $h^{-1.93}$) --- the collapse belongs to the actual prime-power placement}; candidates P1--P4 PENDING (bundling with T174) & PARTIALLY-PORTABLE & 44/44\\
 T173 & \texttt{\scriptsize frame\_\allowbreak rate} & \textbf{the demanded rate is itself a frame datum, and the deficit is the number of the phase} --- $284$ windows $+$ $109$ scramble twins over ELEVEN preregistered frame data (A at $\nu\in\{3,4,5,6,8,10,12,16\}$, gap-blind B, smoothed C at $\nu=4/6$); \textbf{$q=1-s$ EXACT ($1.9\times10^{-15}$) and $q=0.667$--$0.777<1$ on every frame datum --- the $h^{-3}$ target was the $q=1$ idealisation of a $\Theta(D^{3})$ law}; gap functional CALIBRATED, not guessed ($6$ preregistered candidates; the relative I5 gap $t/\lambda_{\max}(B_{LL})$ hits the chain's $3$ on frame A --- median $3.033$ --- and is the only dimensionless one; $(D/\alpha)^{3}$ named a tautology); REQ $=2.831$--$3.438$ (spread $0.607$); deficit as ONE slope of $R=\mathrm{GAP}/(1-r_{12}^2)$: \textbf{pooled $+0.155\pm0.102$} ($\times1.54$ over-scatter inflation; $3.0\sigma$ above zero), $1.8\times$ flatter than either side ($\chi^2/\mathrm{dof}$: REQ $4.87$ / DEL $4.17$ / difference $2.38$ $=2.4\sigma$ --- constancy REJECTED), split-stable to $0.214$ where both sides drift ${\sim}0.5$; exact supports: $\mu^P_1$-convention shifts by exactly $2$ ($1.9974$), fixed-$h^{-3}$ $\chi^2$ $=$ delivery $\chi^2$ to $8\times10^{-15}$ (a frame-independent demand cancels nothing); \textbf{invariant under the D-rule at fixed $\nu$ ($\chi^2/\mathrm{dof}\le0.64$ --- theorem candidate for that half), NOT under $\nu$ ($r=+0.76$, $2.8\sigma$, confounded with arithmetic content under the cap; $q$ the weakest driver, $0.2\sigma$)}; \textbf{CORRECTION TO T172 (P7): fixed-$h^{-3}$ gives $+0.015\pm0.084$ --- consistent with zero; T172's $C$-growth neither sign- nor split-stable (verdict untouched)}; $h$-vs-$D$ not resolved (declared; fixed-$\alpha$ diagnostic legs do not settle it); \textbf{R1 frame-free: the delivered near-degeneracy closes $h^{+0.155\pm0.102}$ SLOWER than the relative I5 gap it must pay --- no frame closes it ($0/11$ upper edges $\le0$, best $+0.170$ at B; $8/11$ individually consistent with zero --- pooled, not claimed per leg); frame shopping over by numbers} (B delivers $3.449$, demands $3.438$); stress: scramble removes the decay ($4/4$ legs), lag identity $\le1.9\times10^{-16}$, jackknife $\le0.026$, shuffle null $3.7\sigma$ away; candidates P5--P8 PENDING (bundling with T174) & DEFICIT-VARIES & 40/40\\
+T174 & \texttt{\scriptsize cancellation\_\allowbreak identity} & \textbf{the gauge route is exhausted, by theorems, and the deficit is measured frame-free at $5.0\sigma$} --- both sides of the T173 deficit are scale-free functionals of ONE raw Gram $\hat a_{ij}=t_i^{\mathsf T}A_ht_j$ (demand $=$ relative gap of the $16\times16$ $\mu$-congruence; delivery $=$ the $2\times2$ corner of the SAME matrix), so ``do the frame factors cancel'' becomes checkable blindness algebra; THE LEDGER: amplitude gauge THEOREM ($\le0.028$ of the per-cell conditioned bar over $12$ decades), \textbf{the COMPLETE $\mu^P_1\approx h^{-2}$ channel THEOREM ($\le0.009$ --- exactly absent from the deficit)}, full positive diagonal group THEOREM (delivery exact; the demand keeps the SHAPE --- the asymmetry is the anatomy), KMS shape vs $k^2$ CERTIFIED (unconditional band $2\log((1+\varepsilon)/(1-\varepsilon))$, $\varepsilon=(K\pi/(2h+1))^2/6$; $\le0.0075$ in deficit units $=4.8\%$ of T173's number), \textbf{arch/comb mixture DOES NOT CANCEL} (additive and exact; NO factorisation; neither term alone has a positive Schur floor on one of $84$ cells), frame rule THEOREM ($R=R(\alpha,M)$ identically --- a SAMPLING map); explained: G2 the UNIQUE doubly gauge-invariant arithmetic member (integer degrees); the G3 offset exactly $2$ ($G2$ is $\mu^P_1$-blind; $h^{-1.9975}$); \textbf{the rectangle measurement}: $a=-0.281\pm0.066$ ($4.3\sigma$) with the anchor direction flat; the exact between/within split puts the deficit in the GRID response ($3.3\times$ selection, whose sign is mostly wrong --- selection reading rejected); the driver is COMB DENSITY per lag cell (monotone $+0.281\to+0.062$ across the cuts; on legs $\log\nu$ collinear with $\log\mathrm{dens}$ at $r=-0.921$ --- T173's $\nu$-driver discharged); \textbf{dense corner exhausted ($1069$ cells, $151$ anchors, cluster-robust): DEFICIT(frame-free, dens $\ge3$) $=+0.1111\pm0.0222$ --- $5.0\sigma$ from zero, $0.4\sigma$ from T173's $+0.155\pm0.102$}; P6 NOT a theorem (multiplicative half only) but less load-bearing --- the deficit is measured $D$-rule-free; candidates P9--P15; rest: per-anchor scatter $\chi^2/\mathrm{dof}=3.02$ (candidate: placement phases $\mathrm{frac}(\log p/D)$), the admissibility question ($0.11$ vs $\ge3$ atoms/cell: factor $2.5$), the sparse corner $\to$ \vref{v560} & PARTIAL-CANCEL & 37/37\\
 \end{xltabular}
 }
 
