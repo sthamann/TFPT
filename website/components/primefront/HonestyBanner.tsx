@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3951/3951 sandbox checks —
+        (“the full proof”, T126+) is now open with 3978/3978 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -249,8 +249,21 @@ export function HonestyBanner() {
         floor λ_min(B_HH), direction-aware; R2′ the m-free bottom-mode
         floor on the Ritz complement — arithmetic-free, flat 5.93–8.25
         μᴾ₁, worth 91–100% of the price); the fixed-size certificate core
-        is load-bearing as v551. T155 (bottom_floor_probe.py) is running
-        at exactly those two floors. What remains
+        is load-bearing as v551. T155 (FLOORS-RESIST) then attacked exactly
+        those two floors: the complement floor became an EXACT fixed-size
+        certificate — a 12×12 problem in the exact Kac–Murdock–Szegő
+        numbers reproduces the size-m eigenproblem to 0.999999783–
+        0.999999958 on every window, the 83–90° direction is demystified
+        (it lives on modes 9–12, which is exactly why K = 12), and the
+        collapse price is recovered 78.8–100% at fixed size — while on the
+        block side the strongest negative statement of the series arrived:
+        the full symbol infimum is negative on every window
+        (−714.2…−7.6) while the block minimum is positive, so NO symbol
+        argument can ever deliver that floor; the mechanism must be Fejér
+        cancellation in the finite section (the arch half alone IS its
+        symbol infimum to 5e-4 — a theorem candidate). T156
+        (twelve_by_eight_probe.py) is running at the two m-free rest
+        objects. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann
