@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`541` registered scripts · `612` ledger claims · `10` clusters.
+`542` registered scripts · `613` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (74 scripts)
+### `core` — Compiler core & the E₈ glue  (75 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -159,6 +159,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v545_hardy_core_identities, v543_lumped_pair_identities, v545, T142, T143, T144, T145 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v547_level_lemma_identities** [E/O] `PRIME.LEVEL.LEMMA.01` — the a-priori side of T146's level lemma recomputed on small frame-A windows (12 windows n=4…139, m=26…285 ≤ 300, D spanning 7.6e-03…2.8e-02; 9 random PD forms for the form-independ
   - deps: v546_capacity_chain_identities, v545_hardy_core_identities, v546, T146 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v548_green_szego_identities** [E/O] `PRIME.GREEN.SZEGO.IDENT.01` — the identity/certificate core of T147+T148 recomputed on small frame-A windows (12 windows n=4…139, m=26…285 ≤ 300, D spanning 7.6e-03…2.8e-02; 7 random PD forms; weight-class mode
+  - deps: v547_level_lemma_identities, v546_capacity_chain_identities, v547, T147, T148 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1153,7 +1155,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v536_eichler_trace_layer** — `HECKE.GEOM.EICHLER.01`
 - **v537_halfintegral_bridge** — `HECKE.GEOM.HALFINT.01`
 - **v538_relative_trace_identity** — `HECKE.GEOM.RTF.01`
 - **v539_weil_structure_family** — `RTF.GNS.WEIL.01`
@@ -1165,4 +1166,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v545_hardy_core_identities** — `PRIME.HARDY.IDENT.01`
 - **v546_capacity_chain_identities** — `PRIME.CAPCHAIN.IDENT.01`
 - **v547_level_lemma_identities** — `PRIME.LEVEL.LEMMA.01`
+- **v548_green_szego_identities** — `PRIME.GREEN.SZEGO.IDENT.01`
 

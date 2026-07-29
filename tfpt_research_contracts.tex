@@ -2816,6 +2816,64 @@ zero-firewall AST-checked; no marker moves.
 Machine-checked: \veri{v547\_level\_lemma\_identities.py}.
 \mE\ (per-instance identities and certified inequalities)
 
+\par\smallskip\noindent\textbf{\texttt{PRIME.GREEN.SZEGO.IDENT.01} --- the
+Green/Szeg\H{o} identities of phase 2 (T147, T148).}
+\emph{(1)} The factorisation identity
+$\Gamma=\sqrt m\,\lambda_{\mathrm{up}}\max_j\|Re_j\|=\sqrt{Q^\star}\cdot S_w$
+with $S_w=\lambda_{\mathrm{up}}\|R\|_F$ purely spectral and
+$Q^\star=m\max_j(R^2)_{jj}/\operatorname{tr}(R^2)$ purely geometric ---
+exact at $2.2\times10^{-16}$ on $12$ frame-A windows ($m=26\ldots285\le300$)
+and $7$ random positive definite forms; the certified factorisation
+(residual-paid column norms, Frobenius bracket) dominates the true $\Gamma$
+everywhere ($S_w=1.1186$--$1.5777$, $Q^\star=2.0879$--$2.8634$; controls
+$5.0\times10^{-3}$ / $\ge10^{-3}$). \emph{(2)} The bottom-block trace
+identity $\sum_j(\Pi_B)_{jj}=|B|$ exact ($3.3\times10^{-16}$; $\theta=10$,
+$|B|=3$--$5$), hence $Q_B\ge|B|$ a theorem; the \emph{measured}
+$Q_B/|B|=1.5091$--$1.7980$ inside the preregistered band $[1,2.2]$ against
+the Szeg\H{o}/Widom sharp reference $2|B|$ (the rank-$|B|$ coordinate
+projector overshoots by $\ge3.9$). \emph{(3)} The second-difference $\ell^1$
+ceiling: $|a_k|\le\min(1,\|s_k\|_\infty\|L_0^p\psi\|_1/\mu_k^p)$ for
+$p=1,2$ against the true coefficients everywhere, the $m$-free closed form
+$\|a\|_1\le2\sqrt\nu+1$ with $\nu=(m+1)^{3/2}\|L_0\psi\|_1/(2\sqrt2)$, and
+$m\|\psi\|_\infty^2\le2\|a\|_1^2$; Dirichlet calibration $\|a\|_1=1$ exact,
+$\nu\to\pi$ (controls: $\times10^{-3}$ fails, a one-index $\mu$ shift
+breaks the identity at $1.5\times10^{-1}$). \emph{(4)} The layer-cake $S_w$
+certificate: completed LDL$^{\mathsf T}$ inertia counts equal the direct
+spectral counts on all $96$ (window, rung) pairs (Sylvester 1852;
+Bunch--Kaufman 1977), and the layer cake certifies $S_w\le1.3288$--$1.8220$
+per window (true $1.1186$--$1.5777$, slack $\le1.216$; dropping the bottom
+layer breaks it everywhere). \emph{(5)} The Liouville transform
+$m\|\psi\|_\infty^2\le\kappa_\Lambda m\|\hat\varphi\|_\infty^2\le
+2\kappa_\Lambda\|a(\hat\varphi)\|_1^2\le
+2\kappa_\Lambda\,\mathrm{ceil}(\hat\varphi)^2$ with
+$\varphi=\Lambda^{-1/2}\psi$ and a-priori
+$\kappa_\Lambda=\max\Lambda/\min\Lambda=1.3868$--$2.5805$, stepwise on every
+bottom-block mode; the weight-class discriminator on a model section with a
+genuine order-2 zero ($f(0)=0$, $f''(0)/2=1$ exact), ladder $m=64\ldots288$
+at matched $\kappa_\Lambda$ (mismatch $0.0013$): the bounded-variation
+multiplier keeps $\nu$ flat (max/min $1.003$) while the rough one
+($\mathrm{TV}$ larger by $162.6$) grows by $19.9$ --- the roughness, not
+the conditioning; the first step $\times10^{-3}$ fails provably (slack
+$\le\kappa_\Lambda^2$).
+\textbf{Named limits as load-bearing content:} per instance on small windows
+--- a finite list of certified window inequalities with an explicit maximum;
+nothing uniform in the zone index or in $D$, and explicitly \emph{no}
+statement for all $D$: the one open lifting input ($\nu_L\le
+F(\text{form})$ with $F$ $m$-free; equivalently bounded
+$\mathrm{TV}(\log\Lambda)$ or any weaker smoothness of the multiplier)
+stays \emph{open}, typed open; the symbol-level order-2 hypothesis is
+\emph{refuted} (T148: $f(0)<0$ on every surface window) and enters nowhere
+as a theorem; $\sigma_{\mathrm{tot}}$ stays retired as a route; every
+T147/T148 exponent is a fit, sandbox. Fences: Kac--Murdock--Szeg\H{o} 1953 /
+Widom 1958 / Basor--Ehrhardt 2009 / B\"ottcher--Silbermann (the mechanism's
+address, never an authority) / Sylvester 1852 / Bunch--Kaufman 1977 / Euler
+1735 / Rayleigh 1877--Ritz 1909 / Cauchy--Schwarz / Davis--Kahan 1970
+(cited, computed vacuous, not used) / Gershgorin 1931 / Wilkinson
+1968--Higham 2002 named classical; Weil 1952 cited, never used as a
+criterion; zero-firewall AST-checked; no marker moves.
+Machine-checked: \veri{v548\_green\_szego\_identities.py}.
+\mE\ (per-instance identities and certified inequalities)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

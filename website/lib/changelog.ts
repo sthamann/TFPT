@@ -43,6 +43,1528 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · III",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v548"
+      },
+      {
+        "k": "t",
+        "v": " — the Green/Szeg"
+      },
+      {
+        "k": "t",
+        "v": "o"
+      },
+      {
+        "k": "t",
+        "v": " identities of phase 2 promoted; prime-front diary T148 (lifting statement, ONE-INPUT-MISSING) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v548"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.GREEN.SZEGO.IDENT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the identity/certificate core of the discovery parts T147 ("
+        },
+        {
+          "k": "c",
+          "v": "green_asymptotic_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") and T148 ("
+        },
+        {
+          "k": "c",
+          "v": "szego_bottom_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "21"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.4"
+        },
+        {
+          "k": "t",
+          "v": " s, everything recomputed on small frame-A windows, nothing cited from the sandbox; the companion to "
+        },
+        {
+          "k": "c",
+          "v": "v547"
+        },
+        {
+          "k": "t",
+          "v": ", which certified the a-priori level constant "
+        },
+        {
+          "k": "m",
+          "v": "c_0^{\\mathrm{ap}}"
+        },
+        {
+          "k": "t",
+          "v": " — this module certifies the two scalars that constant is made of. Scope fence: identities, per-instance theorems with checked hypotheses and per-window "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "certified"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " inequalities — no fit, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no zone-uniform statement, and explicitly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no statement for all "
+            },
+            {
+              "k": "m",
+              "v": "D"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the one open lifting input — "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_L\\le F(\\text{form})"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "F"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free, equivalently bounded "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TV}(\\log\\Lambda)"
+        },
+        {
+          "k": "t",
+          "v": " or any weaker smoothness of the multiplier — stays open and typed open). Battery: "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " frame-A windows ("
+        },
+        {
+          "k": "m",
+          "v": "n=4\\ldots139"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "m=26\\ldots285\\le300"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "D=7.578\\times10^{-3}\\ldots2.789\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " random positive definite forms for the form-independent items, and a weight-class model ladder "
+        },
+        {
+          "k": "m",
+          "v": "m=64\\ldots288"
+        },
+        {
+          "k": "t",
+          "v": "; each statement carries a mutation control that must fail by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The factorisation identity (T147) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma=\\sqrt m\\,\\lambda_{\\mathrm{up}}\\max_j\\|Re_j\\|=\\sqrt{Q^\\star}\\cdot S_w"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "S_w=\\lambda_{\\mathrm{up}}\\|R\\|_F"
+        },
+        {
+          "k": "t",
+          "v": " purely spectral and "
+        },
+        {
+          "k": "m",
+          "v": "Q^\\star=m\\max_j(R^2)_{jj}/\\operatorname{tr}(R^2)"
+        },
+        {
+          "k": "t",
+          "v": " purely geometric — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exact"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "2.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " windows and "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " random forms: the all-"
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": " question splits into two named scalars and into nothing else; the certified factorisation (residual-paid column norms, Frobenius bracket) dominates the true "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma"
+        },
+        {
+          "k": "t",
+          "v": " everywhere ("
+        },
+        {
+          "k": "m",
+          "v": "S_w=1.1186"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.5777"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "Q^\\star=2.0879"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.8634"
+        },
+        {
+          "k": "t",
+          "v": "; controls: a "
+        },
+        {
+          "k": "m",
+          "v": "1\\%"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "Q^\\star"
+        },
+        {
+          "k": "t",
+          "v": " perturbation breaks the identity at "
+        },
+        {
+          "k": "m",
+          "v": "5.0\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ", perturbing the largest Green column breaks the factorisation)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The bottom-block equidistribution constant (T147) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " With "
+        },
+        {
+          "k": "m",
+          "v": "\\Pi_B"
+        },
+        {
+          "k": "t",
+          "v": " the spectral projector onto "
+        },
+        {
+          "k": "m",
+          "v": "B=\\{k:\\lambda_k\\le10\\hat\\lambda\\}"
+        },
+        {
+          "k": "t",
+          "v": " (preregistered rule, "
+        },
+        {
+          "k": "m",
+          "v": "|B|=3\\ldots5"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_j(\\Pi_B)_{jj}=|B|"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "3.3\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "), hence "
+        },
+        {
+          "k": "m",
+          "v": "Q_B\\ge|B|"
+        },
+        {
+          "k": "t",
+          "v": " is a theorem (max "
+        },
+        {
+          "k": "m",
+          "v": "\\ge"
+        },
+        {
+          "k": "t",
+          "v": " mean); the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measured"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "Q_B/|B|=1.5091"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.7980"
+        },
+        {
+          "k": "t",
+          "v": " lies in the preregistered band "
+        },
+        {
+          "k": "m",
+          "v": "[1,2.2]"
+        },
+        {
+          "k": "t",
+          "v": " against the Szeg"
+        },
+        {
+          "k": "t",
+          "v": "o"
+        },
+        {
+          "k": "t",
+          "v": "/Widom sharp reference "
+        },
+        {
+          "k": "m",
+          "v": "Q_B\\le2|B|"
+        },
+        {
+          "k": "t",
+          "v": " — a measurement on a finite list, typed as such (controls: the rank-"
+        },
+        {
+          "k": "m",
+          "v": "|B|"
+        },
+        {
+          "k": "t",
+          "v": " coordinate projector gives "
+        },
+        {
+          "k": "m",
+          "v": "Q_B=m"
+        },
+        {
+          "k": "t",
+          "v": " and overshoots by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge3.9"
+        },
+        {
+          "k": "t",
+          "v": ", a "
+        },
+        {
+          "k": "m",
+          "v": "1\\%"
+        },
+        {
+          "k": "t",
+          "v": " basis scaling breaks the trace identity)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) The second-difference "
+            },
+            {
+              "k": "m",
+              "v": "\\ell^1"
+            },
+            {
+              "k": "t",
+              "v": " ceiling (T148, the lever) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " From the exact Dirichlet eigenpair "
+        },
+        {
+          "k": "m",
+          "v": "L_0s_k=\\mu_ks_k"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_k\\ge4k^2/(m+1)^2"
+        },
+        {
+          "k": "t",
+          "v": ": the coefficient bound "
+        },
+        {
+          "k": "m",
+          "v": "|a_k|\\le\\min(1,\\|s_k\\|_\\infty\\|L_0^p\\psi\\|_1/\\mu_k^p)"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "p=1,2"
+        },
+        {
+          "k": "t",
+          "v": " against the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "true"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " coefficients on every window bottom mode and on random unit vectors (worst excess "
+        },
+        {
+          "k": "m",
+          "v": "\\le0"
+        },
+        {
+          "k": "t",
+          "v": "), the "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "free"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " closed form "
+        },
+        {
+          "k": "m",
+          "v": "\\|a\\|_1\\le2\\sqrt\\nu+1"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\nu=(m+1)^{3/2}\\|L_0\\psi\\|_1/(2\\sqrt2)"
+        },
+        {
+          "k": "t",
+          "v": " — every power of "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": " cancelled — and the chain "
+        },
+        {
+          "k": "m",
+          "v": "m\\|\\psi\\|_\\infty^2\\le2\\|a\\|_1^2"
+        },
+        {
+          "k": "t",
+          "v": "; calibration: for the Dirichlet bottom mode "
+        },
+        {
+          "k": "m",
+          "v": "\\|a\\|_1=1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\nu=3.1415\\to\\pi"
+        },
+        {
+          "k": "t",
+          "v": " at every size (controls: the ceiling "
+        },
+        {
+          "k": "m",
+          "v": "\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " fails on every window, a one-index "
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": " shift breaks the coefficient identity at "
+        },
+        {
+          "k": "m",
+          "v": "1.5\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The layer-cake "
+            },
+            {
+              "k": "m",
+              "v": "S_w"
+            },
+            {
+              "k": "t",
+              "v": " certificate (T148) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The completed LDL"
+        },
+        {
+          "k": "m",
+          "v": "^{\\mathsf T}"
+        },
+        {
+          "k": "t",
+          "v": " inertia count at every rung of the preregistered ladder "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_i=\\rho_i\\lambda_{\\mathrm{lo}}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\rho=1.5\\ldots1024"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\mathrm{lo}}"
+        },
+        {
+          "k": "t",
+          "v": " a certified positive floor) equals the direct spectral count "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "96"
+        },
+        {
+          "k": "t",
+          "v": " (window, rung) pairs (Sylvester 1852; Bunch–Kaufman 1977 — a certificate, never a sorted list), and the layer cake certifies "
+        },
+        {
+          "k": "m",
+          "v": "S_w\\le1.3288"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.8220"
+        },
+        {
+          "k": "t",
+          "v": " per window (true "
+        },
+        {
+          "k": "m",
+          "v": "1.1186"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.5777"
+        },
+        {
+          "k": "t",
+          "v": ", slack "
+        },
+        {
+          "k": "m",
+          "v": "\\le1.216"
+        },
+        {
+          "k": "t",
+          "v": "); nothing here says "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free (control: dropping the bottom layer breaks the bound on every window — the bottom eigenvalue is the weight)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5) The Liouville transform and the weight-class discriminator (T148) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The chain "
+        },
+        {
+          "k": "m",
+          "v": "m\\|\\psi\\|_\\infty^2\\le\\kappa_\\Lambda m\\|\\hat\\varphi\\|_\\infty^2\\le\n2\\kappa_\\Lambda\\|a(\\hat\\varphi)\\|_1^2\\le2\\kappa_\\Lambda\\,\\mathrm{ceil}(\\hat\\varphi)^2"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi=\\Lambda^{-1/2}\\psi"
+        },
+        {
+          "k": "t",
+          "v": " (the exact pencil equivalence, a change of variables and not a perturbation) holds stepwise on every bottom-block mode; "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa_\\Lambda=\\max\\Lambda/\\min\\Lambda=1.3868"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.5805"
+        },
+        {
+          "k": "t",
+          "v": " is a priori (a ratio of two diagonal entries of the form). The discriminator: on a model section with a genuine order-2 zero ("
+        },
+        {
+          "k": "m",
+          "v": "f(0)=0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "f''(0)/2=1"
+        },
+        {
+          "k": "t",
+          "v": " exact), over the ladder "
+        },
+        {
+          "k": "m",
+          "v": "m=64\\ldots288"
+        },
+        {
+          "k": "t",
+          "v": " at matched "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa_\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " (mismatch "
+        },
+        {
+          "k": "m",
+          "v": "0.0013"
+        },
+        {
+          "k": "t",
+          "v": "), the bounded-variation multiplier keeps "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": " flat (max/min "
+        },
+        {
+          "k": "m",
+          "v": "1.003"
+        },
+        {
+          "k": "t",
+          "v": ") while the rough one ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TV}"
+        },
+        {
+          "k": "t",
+          "v": " larger by "
+        },
+        {
+          "k": "m",
+          "v": "162.6"
+        },
+        {
+          "k": "t",
+          "v": ") grows by "
+        },
+        {
+          "k": "m",
+          "v": "19.9"
+        },
+        {
+          "k": "t",
+          "v": " — the roughness, not the conditioning (control: the first Liouville step "
+        },
+        {
+          "k": "m",
+          "v": "\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " fails on every mode, provably — the step slack is bounded by "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa_\\Lambda^2"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fences and status."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Per instance on small windows only — a finite list of certified window inequalities with an explicit maximum; nothing uniform in the zone index or in "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "; the symbol-level order-2 hypothesis is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "refuted"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (T148: "
+        },
+        {
+          "k": "m",
+          "v": "f(0)<0"
+        },
+        {
+          "k": "t",
+          "v": " on every surface window) and enters nowhere as a theorem; "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_{\\mathrm{tot}}"
+        },
+        {
+          "k": "t",
+          "v": " stays retired as a route; every T147/T148 exponent is a fit that stays in the sandbox. Kac–Murdock–Szeg"
+        },
+        {
+          "k": "t",
+          "v": "o"
+        },
+        {
+          "k": "t",
+          "v": " 1953, Widom 1958 / Basor–Ehrhardt 2009 / Böttcher–Silbermann (the mechanism's address, never an authority), Sylvester 1852 / Bunch–Kaufman 1977, Euler 1735, Rayleigh 1877 / Ritz 1909, Cauchy–Schwarz, Davis–Kahan 1970 (cited, computed vacuous, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " used), Gershgorin 1931, Wilkinson 1968 / Higham 2002 named classical; Weil 1952 cited, never used as a criterion; zero-firewall AST-checked. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GREEN.SZEGO.IDENT.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and this is not RH evidence."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Diary, paper and website (T148, "
+            },
+            {
+              "k": "t",
+              "v": "one-input-missing"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The T148 probe ("
+        },
+        {
+          "k": "c",
+          "v": "szego_ bottom_ probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "SZEGO.BOTTOM"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "31/31"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "13.0"
+        },
+        {
+          "k": "t",
+          "v": " s, "
+        },
+        {
+          "k": "m",
+          "v": "48"
+        },
+        {
+          "k": "t",
+          "v": " windows "
+        },
+        {
+          "k": "m",
+          "v": "m=96\\ldots1077"
+        },
+        {
+          "k": "t",
+          "v": " in four "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-strata, stress ladders to "
+        },
+        {
+          "k": "m",
+          "v": "m=1500"
+        },
+        {
+          "k": "t",
+          "v": ") dissects the lifting statement: the second factor "
+        },
+        {
+          "k": "m",
+          "v": "S_w"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "closes"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on the surface (LDL"
+        },
+        {
+          "k": "m",
+          "v": "^{\\mathsf T}"
+        },
+        {
+          "k": "t",
+          "v": " layer cake, "
+        },
+        {
+          "k": "m",
+          "v": "S_w\\le1.9587"
+        },
+        {
+          "k": "t",
+          "v": " certified against true "
+        },
+        {
+          "k": "m",
+          "v": "1.282"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.683"
+        },
+        {
+          "k": "t",
+          "v": ", trend flat, per "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-stratum), at the price of an honest negative — the arithmetic Toeplitz symbol has "
+        },
+        {
+          "k": "m",
+          "v": "f(0)<0"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "48/48"
+        },
+        {
+          "k": "t",
+          "v": " windows, so positive definiteness is a finite-section effect of the minus-Hankel part and the lumping and the KMS order-2 hypothesis survives only as a measurement ("
+        },
+        {
+          "k": "m",
+          "v": "\\alpha=1.643"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.989"
+        },
+        {
+          "k": "t",
+          "v": ") — while the lifting statement resists with its hypothesis isolated to one named scalar ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TV}(\\log\\Lambda)"
+        },
+        {
+          "k": "t",
+          "v": ", proved to be the roughness and not the conditioning by the weight-class experiment); the first end-to-end number arrives: the certified chain delivers "
+        },
+        {
+          "k": "m",
+          "v": "8.36"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "15.86\\%"
+        },
+        {
+          "k": "t",
+          "v": " of the true gap on all "
+        },
+        {
+          "k": "m",
+          "v": "48"
+        },
+        {
+          "k": "t",
+          "v": " windows (median "
+        },
+        {
+          "k": "m",
+          "v": "11.74\\%"
+        },
+        {
+          "k": "t",
+          "v": "), and the a-priori-shaped chain is still a lower bound at a factor "
+        },
+        {
+          "k": "m",
+          "v": "10.5"
+        },
+        {
+          "k": "t",
+          "v": ". Verdict "
+        },
+        {
+          "k": "t",
+          "v": "one-input-missing"
+        },
+        {
+          "k": "t",
+          "v": ": exactly one scalar side ("
+        },
+        {
+          "k": "m",
+          "v": "Q^\\star"
+        },
+        {
+          "k": "t",
+          "v": ") lacks an "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free certified statement, target "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_L\\lesssim34"
+        },
+        {
+          "k": "t",
+          "v": " against "
+        },
+        {
+          "k": "m",
+          "v": "282"
+        },
+        {
+          "k": "t",
+          "v": " measured. "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " part T148 (series totals "
+        },
+        {
+          "k": "m",
+          "v": "148"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "3759"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front.tex"
+        },
+        {
+          "k": "t",
+          "v": " gains the T148 subsection with the “After T148” keybox, the "
+        },
+        {
+          "k": "c",
+          "v": "v548"
+        },
+        {
+          "k": "t",
+          "v": " entry in the verified layer (now fourteen modules), the phase-2 section retitled T126–T148 and the updated probe index; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " gain the "
+        },
+        {
+          "k": "c",
+          "v": "v548"
+        },
+        {
+          "k": "t",
+          "v": " companion blocks; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T148 and "
+        },
+        {
+          "k": "c",
+          "v": "v548"
+        },
+        {
+          "k": "t",
+          "v": " feed entries; suite counter "
+        },
+        {
+          "k": "m",
+          "v": "541\\to542"
+        },
+        {
+          "k": "t",
+          "v": " scripts. T149 ("
+        },
+        {
+          "k": "c",
+          "v": "weight_smoothing_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at exactly the remaining input — whether a smoothed whitening removes the TV roughness — and is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " part of this change."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · II",
     "heading": [
       {

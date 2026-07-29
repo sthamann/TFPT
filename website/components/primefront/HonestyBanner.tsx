@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v547
+          v535–v548
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3728/3728 sandbox checks —
+        (“the full proof”, T126+) is now open with 3759/3759 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -152,8 +152,21 @@ export function HonestyBanner() {
         modes (Szegő/Widom), with the sharp prediction Q_B ≤ 2|B| holding
         at 1.375–1.839 × |B| and the 3 open R4 border blocks closing by the
         same mechanism. One statement — a Szegő theorem for the diagonally
-        reweighted section — lifts the chain to all D; T148
-        (szego_bottom_probe.py) is running at exactly that statement. What
+        reweighted section — lifts the chain to all D. T148
+        (ONE-INPUT-MISSING) then dissected exactly that statement: the second
+        factor Sw closes on the surface via an LDLᵀ layer-cake certificate
+        (Sw ≤ 1.9587, flat), at the price of an honest negative — the
+        arithmetic Toeplitz symbol is refuted at 0 (f(0) &lt; 0 on all 48
+        windows), so positive definiteness is a finite-section effect — while
+        the lifting statement resists with its hypothesis reduced to a single
+        named scalar, the total variation of the log-whitening weight: a
+        controlled weight-class experiment proves it is the roughness, not
+        the conditioning (BV classes flat, a TV ~ m class diverging at
+        identical κ_Λ = 4). First end-to-end number: the certified chain
+        delivers 8.4–15.9% of the true gap on all 48 windows; the
+        identity/certificate core of T147+T148 is load-bearing as v548. T149
+        (weight_smoothing_probe.py) is running at exactly the remaining
+        input — whether a smoothed whitening removes the TV roughness. What
         remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing

@@ -1231,6 +1231,59 @@ Machine-checked:
 \veri{v547\_level\_lemma\_identities.py}.
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 
+\par\smallskip\noindent\textbf{The Green/Szeg\H{o} identities
+(\texttt{PRIME.GREEN.SZEGO.IDENT.01}).}
+The identity/certificate core of T147+T148 is load-bearing as the sixth
+companion module ($21$ checks, ${\sim}0.4$\,s) on $12$ frame-A windows
+($n=4\ldots139$, $m=26\ldots285\le300$), $7$ random positive definite forms
+for the form-independent items, and a weight-class model ladder
+$m=64\ldots288$ --- the companion to the level-lemma module: here the two
+scalars its constant is made of are certified.
+\emph{The factorisation identity.}
+$\Gamma=\sqrt m\,\lambda_{\mathrm{up}}\max_j\|Re_j\|=\sqrt{Q^\star}\cdot S_w$
+with $S_w=\lambda_{\mathrm{up}}\|R\|_F$ purely spectral and
+$Q^\star=m\max_j(R^2)_{jj}/\operatorname{tr}(R^2)$ purely geometric ---
+exact at $2.2\times10^{-16}$; the certified factorisation dominates the true
+$\Gamma$ everywhere ($S_w=1.1186$--$1.5777$, $Q^\star=2.0879$--$2.8634$).
+\emph{The bottom-block constant.} $\sum_j(\Pi_B)_{jj}=|B|$ exactly
+($3.3\times10^{-16}$; $B$ the preregistered $\theta=10$ block, $|B|=3$--$5$),
+so $Q_B\ge|B|$ is a theorem; measured $Q_B/|B|=1.5091$--$1.7980$ inside the
+preregistered band $[1,2.2]$ against the Szeg\H{o}/Widom sharp reference
+$2|B|$ --- the coordinate-projector control overshoots by $\ge3.9$.
+\emph{The second-difference $\ell^1$ ceiling.}
+$|a_k|\le\min(1,\|s_k\|_\infty\|L_0^p\psi\|_1/\mu_k^p)$ from the exact
+Dirichlet eigenpair, with the $m$-free closed form $\|a\|_1\le2\sqrt\nu+1$
+($\nu=(m+1)^{3/2}\|L_0\psi\|_1/(2\sqrt2)$) and the chain
+$m\|\psi\|_\infty^2\le2\|a\|_1^2$; Dirichlet calibration $\|a\|_1=1$ exact,
+$\nu\to\pi$.
+\emph{The layer-cake $S_w$ certificate.} LDL$^{\mathsf T}$ inertia counts
+equal the direct spectral counts on all $96$ (window, rung) pairs, and the
+layer cake certifies $S_w\le1.3288$--$1.8220$ (true $1.1186$--$1.5777$);
+dropping the bottom layer breaks it everywhere.
+\emph{The Liouville transform.}
+$m\|\psi\|_\infty^2\le2\kappa_\Lambda\,\mathrm{ceil}(\hat\varphi)^2$ with
+$\varphi=\Lambda^{-1/2}\psi$ and a-priori
+$\kappa_\Lambda=\max\Lambda/\min\Lambda=1.3868$--$2.5805$, stepwise on every
+bottom-block mode; the weight-class discriminator at matched $\kappa_\Lambda$
+(mismatch $0.0013$): the BV multiplier flat ($1.003$), the rough one
+($\mathrm{TV}$ larger by $162.6$) grows by $19.9$ --- the roughness, not the
+conditioning.
+\textbf{Named limits as content:} per instance on small windows --- a finite
+list with an explicit maximum; nothing uniform in the zone index or in $D$,
+and explicitly \emph{no} statement for all $D$ (the one open lifting input,
+$\nu_L\le F(\text{form})$ $m$-free / bounded $\mathrm{TV}(\log\Lambda)$,
+stays open, typed open); the symbol-level order-2 hypothesis is refuted
+(T148: $f(0)<0$ on every surface window) and enters nowhere as a theorem;
+$\sigma_{\mathrm{tot}}$ stays retired as a route.
+KMS 1953 / Widom 1958--Basor--Ehrhardt 2009--B\"ottcher--Silbermann (the
+mechanism's address, never an authority) / Sylvester 1852--Bunch--Kaufman
+1977 / Euler 1735 / Rayleigh 1877--Ritz 1909 / Davis--Kahan 1970 (cited,
+computed vacuous, not used) / Gershgorin 1931 named classical; Weil 1952
+cited, never used as a criterion.
+Machine-checked:
+\veri{v548\_green\_szego\_identities.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

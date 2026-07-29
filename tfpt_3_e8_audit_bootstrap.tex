@@ -883,6 +883,50 @@ Rayleigh--Ritz / Miclo 1999 / Davis--Kahan 1970 (cited, deliberately not used)
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The Green/Szeg\H{o} identities
+(\texttt{PRIME.GREEN.SZEGO.IDENT.01}).}
+The identity/certificate core of T147+T148 as the sixth companion module
+(\veri{v548\_green\_szego\_identities.py}; $21$ checks, ${\sim}0.4$\,s) on
+$12$ frame-A windows ($n=4\ldots139$, $m=26\ldots285\le300$), $7$ random
+positive definite forms and a weight-class model ladder $m=64\ldots288$ ---
+the two scalars the level-lemma constant is made of, certified. The
+factorisation identity
+$\Gamma=\sqrt m\,\lambda_{\mathrm{up}}\max_j\|Re_j\|=\sqrt{Q^\star}\cdot S_w$
+($S_w=\lambda_{\mathrm{up}}\|R\|_F$ spectral,
+$Q^\star=m\max_j(R^2)_{jj}/\operatorname{tr}(R^2)$ geometric) is exact at
+$2.2\times10^{-16}$ on all windows and random forms, the certified
+factorisation dominating everywhere ($S_w=1.1186$--$1.5777$,
+$Q^\star=2.0879$--$2.8634$); the bottom-block trace identity
+$\sum_j(\Pi_B)_{jj}=|B|$ is exact ($3.3\times10^{-16}$, $\theta=10$,
+$|B|=3$--$5$) with the measured equidistribution $Q_B/|B|=1.5091$--$1.7980$
+inside the preregistered $[1,2.2]$ against the Szeg\H{o}/Widom reference
+$2|B|$ (coordinate-projector control overshoots $\ge3.9$); the
+second-difference $\ell^1$ ceiling
+$|a_k|\le\min(1,\|s_k\|_\infty\|L_0^p\psi\|_1/\mu_k^p)$ holds against the
+true coefficients everywhere with the $m$-free closed form
+$\|a\|_1\le2\sqrt\nu+1$ and the Dirichlet calibration $\|a\|_1=1$ exact,
+$\nu\to\pi$; the layer-cake $S_w$ certificate from completed
+LDL$^{\mathsf T}$ inertia counts (inertia $=$ direct count on all $96$
+rungs) gives $S_w\le1.3288$--$1.8220$ (true $1.1186$--$1.5777$, the
+bottom-layer drop breaking it everywhere); and the Liouville transform
+$m\|\psi\|_\infty^2\le2\kappa_\Lambda\,\mathrm{ceil}(\hat\varphi)^2$
+($\varphi=\Lambda^{-1/2}\psi$, a-priori
+$\kappa_\Lambda=1.3868$--$2.5805$) holds stepwise, with the weight-class
+discriminator at matched $\kappa_\Lambda$ (mismatch $0.0013$): BV flat
+($1.003$) versus rough growing $19.9$ ($\mathrm{TV}$ split $162.6$) --- the
+roughness, not the conditioning.
+\textbf{Named limits as content:} per instance on small windows, nothing
+uniform in the zone index or in $D$, and explicitly no statement for all $D$
+--- the one open lifting input ($\nu_L\le F(\text{form})$ $m$-free /
+bounded $\mathrm{TV}(\log\Lambda)$) stays open, typed open; the
+symbol-level order-2 hypothesis is refuted ($f(0)<0$ on every surface
+window) and enters nowhere as a theorem; $\sigma_{\mathrm{tot}}$ stays
+retired as a route. KMS 1953 / Widom 1958 / Basor--Ehrhardt 2009 /
+Sylvester 1852--Bunch--Kaufman 1977 / Euler 1735 / Davis--Kahan 1970
+(cited, computed vacuous, not used) named classical.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

@@ -62,6 +62,105 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (III) (\texttt{v548} --- the Green/Szeg\H{o} identities of phase 2 promoted; prime-front diary T148 (lifting statement, ONE-INPUT-MISSING) + paper + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v548} (\texttt{PRIME.GREEN.SZEGO.IDENT.01}).} Promotion of the
+identity/certificate core of the discovery parts T147 (\texttt{green\_asymptotic\_probe.py}) and
+T148 (\texttt{szego\_bottom\_probe.py}) --- $21$ checks, ${\sim}0.4$\,s, everything recomputed on
+small frame-A windows, nothing cited from the sandbox; the companion to \texttt{v547}, which
+certified the a-priori level constant $c_0^{\mathrm{ap}}$ --- this module certifies the two
+scalars that constant is made of. Scope fence: identities, per-instance theorems with checked
+hypotheses and per-window \emph{certified} inequalities --- no fit, no $D$-exponent, no
+zone-uniform statement, and explicitly \emph{no statement for all $D$} (the one open lifting
+input --- $\nu_L\le F(\text{form})$ with $F$ $m$-free, equivalently bounded
+$\mathrm{TV}(\log\Lambda)$ or any weaker smoothness of the multiplier --- stays open and typed
+open). Battery: $12$ frame-A windows ($n=4\ldots139$, $m=26\ldots285\le300$,
+$D=7.578\times10^{-3}\ldots2.789\times10^{-2}$), $7$ random positive definite forms for the
+form-independent items, and a weight-class model ladder $m=64\ldots288$; each statement carries a
+mutation control that must fail by $\ge10^{-3}$.
+\item \textbf{(1) The factorisation identity (T147) \mE.}
+$\Gamma=\sqrt m\,\lambda_{\mathrm{up}}\max_j\|Re_j\|=\sqrt{Q^\star}\cdot S_w$ with
+$S_w=\lambda_{\mathrm{up}}\|R\|_F$ purely spectral and
+$Q^\star=m\max_j(R^2)_{jj}/\operatorname{tr}(R^2)$ purely geometric --- \emph{exact} at
+$2.2\times10^{-16}$ on all $12$ windows and $7$ random forms: the all-$D$ question splits into
+two named scalars and into nothing else; the certified factorisation (residual-paid column norms,
+Frobenius bracket) dominates the true $\Gamma$ everywhere ($S_w=1.1186$--$1.5777$,
+$Q^\star=2.0879$--$2.8634$; controls: a $1\%$ $Q^\star$ perturbation breaks the identity at
+$5.0\times10^{-3}$, perturbing the largest Green column breaks the factorisation).
+\item \textbf{(2) The bottom-block equidistribution constant (T147) \mE.} With $\Pi_B$ the
+spectral projector onto $B=\{k:\lambda_k\le10\hat\lambda\}$ (preregistered rule, $|B|=3\ldots5$),
+$\sum_j(\Pi_B)_{jj}=|B|$ \emph{exactly} ($3.3\times10^{-16}$), hence $Q_B\ge|B|$ is a theorem
+(max $\ge$ mean); the \emph{measured} $Q_B/|B|=1.5091$--$1.7980$ lies in the preregistered band
+$[1,2.2]$ against the Szeg\H{o}/Widom sharp reference $Q_B\le2|B|$ --- a measurement on a finite
+list, typed as such (controls: the rank-$|B|$ coordinate projector gives $Q_B=m$ and overshoots
+by $\ge3.9$, a $1\%$ basis scaling breaks the trace identity).
+\item \textbf{(3) The second-difference $\ell^1$ ceiling (T148, the lever) \mE.} From the exact
+Dirichlet eigenpair $L_0s_k=\mu_ks_k$ and $\mu_k\ge4k^2/(m+1)^2$: the coefficient bound
+$|a_k|\le\min(1,\|s_k\|_\infty\|L_0^p\psi\|_1/\mu_k^p)$ for $p=1,2$ against the \emph{true}
+coefficients on every window bottom mode and on random unit vectors (worst excess $\le0$), the
+$m$-\emph{free} closed form $\|a\|_1\le2\sqrt\nu+1$ with
+$\nu=(m+1)^{3/2}\|L_0\psi\|_1/(2\sqrt2)$ --- every power of $m$ cancelled --- and the chain
+$m\|\psi\|_\infty^2\le2\|a\|_1^2$; calibration: for the Dirichlet bottom mode $\|a\|_1=1$
+\emph{exactly} and $\nu=3.1415\to\pi$ at every size (controls: the ceiling $\times10^{-3}$ fails
+on every window, a one-index $\mu$ shift breaks the coefficient identity at $1.5\times10^{-1}$).
+\item \textbf{(4) The layer-cake $S_w$ certificate (T148) \mE.} The completed LDL$^{\mathsf T}$
+inertia count at every rung of the preregistered ladder
+$\tau_i=\rho_i\lambda_{\mathrm{lo}}$ ($\rho=1.5\ldots1024$, $\lambda_{\mathrm{lo}}$ a certified
+positive floor) equals the direct spectral count \emph{exactly} on all $96$ (window, rung) pairs
+(Sylvester 1852; Bunch--Kaufman 1977 --- a certificate, never a sorted list), and the layer cake
+certifies $S_w\le1.3288$--$1.8220$ per window (true $1.1186$--$1.5777$, slack $\le1.216$);
+nothing here says $m$-free (control: dropping the bottom layer breaks the bound on every window
+--- the bottom eigenvalue is the weight).
+\item \textbf{(5) The Liouville transform and the weight-class discriminator (T148) \mE.} The
+chain $m\|\psi\|_\infty^2\le\kappa_\Lambda m\|\hat\varphi\|_\infty^2\le
+2\kappa_\Lambda\|a(\hat\varphi)\|_1^2\le2\kappa_\Lambda\,\mathrm{ceil}(\hat\varphi)^2$ with
+$\varphi=\Lambda^{-1/2}\psi$ (the exact pencil equivalence, a change of variables and not a
+perturbation) holds stepwise on every bottom-block mode;
+$\kappa_\Lambda=\max\Lambda/\min\Lambda=1.3868$--$2.5805$ is a priori (a ratio of two diagonal
+entries of the form). The discriminator: on a model section with a genuine order-2 zero
+($f(0)=0$, $f''(0)/2=1$ exact), over the ladder $m=64\ldots288$ at matched $\kappa_\Lambda$
+(mismatch $0.0013$), the bounded-variation multiplier keeps $\nu$ flat (max/min $1.003$) while
+the rough one ($\mathrm{TV}$ larger by $162.6$) grows by $19.9$ --- the roughness, not the
+conditioning (control: the first Liouville step $\times10^{-3}$ fails on every mode, provably ---
+the step slack is bounded by $\kappa_\Lambda^2$).
+\item \textbf{Fences and status.} Per instance on small windows only --- a finite list of
+certified window inequalities with an explicit maximum; nothing uniform in the zone index or in
+$D$; the symbol-level order-2 hypothesis is \emph{refuted} (T148: $f(0)<0$ on every surface
+window) and enters nowhere as a theorem; $\sigma_{\mathrm{tot}}$ stays retired as a route; every
+T147/T148 exponent is a fit that stays in the sandbox. Kac--Murdock--Szeg\H{o} 1953, Widom 1958 /
+Basor--Ehrhardt 2009 / B\"ottcher--Silbermann (the mechanism's address, never an authority),
+Sylvester 1852 / Bunch--Kaufman 1977, Euler 1735, Rayleigh 1877 / Ritz 1909, Cauchy--Schwarz,
+Davis--Kahan 1970 (cited, computed vacuous, \emph{not} used), Gershgorin 1931, Wilkinson 1968 /
+Higham 2002 named classical; Weil 1952 cited, never used as a criterion; zero-firewall
+AST-checked. Ledger row \texttt{PRIME.GREEN.SZEGO.IDENT.01} \mE; \textbf{no marker of any
+pre-existing contract moves}, and this is not RH evidence.
+\item \textbf{Diary, paper and website (T148, \textsc{one-input-missing}).} The T148 probe
+(\texttt{szego\_\allowbreak bottom\_\allowbreak probe.py}, contract \texttt{SZEGO.BOTTOM},
+$31/31$, $13.0$\,s, $48$
+windows $m=96\ldots1077$ in four $D$-strata, stress ladders to $m=1500$) dissects the lifting
+statement: the second factor $S_w$ \emph{closes} on the surface (LDL$^{\mathsf T}$ layer cake,
+$S_w\le1.9587$ certified against true $1.282$--$1.683$, trend flat, per $D$-stratum), at the
+price of an honest negative --- the arithmetic Toeplitz symbol has $f(0)<0$ on $48/48$ windows,
+so positive definiteness is a finite-section effect of the minus-Hankel part and the lumping and
+the KMS order-2 hypothesis survives only as a measurement ($\alpha=1.643$--$1.989$) --- while
+the lifting statement resists with its hypothesis isolated to one named scalar
+($\mathrm{TV}(\log\Lambda)$, proved to be the roughness and not the conditioning by the
+weight-class experiment); the first end-to-end number arrives: the certified chain delivers
+$8.36$--$15.86\%$ of the true gap on all $48$ windows (median $11.74\%$), and the
+a-priori-shaped chain is still a lower bound at a factor $10.5$. Verdict
+\textsc{one-input-missing}: exactly one scalar side ($Q^\star$) lacks an $m$-free certified
+statement, target $\nu_L\lesssim34$ against $282$ measured.
+\texttt{experiments/next.txt} part T148 (series totals $148$ probes / $3759$ checks);
+\texttt{tfpt\_prime\_front.tex} gains the T148 subsection with the ``After T148'' keybox, the
+\texttt{v548} entry in the verified layer (now fourteen modules), the phase-2 section retitled
+T126--T148 and the updated probe index; \texttt{tfpt\_1}, \texttt{tfpt\_3} and
+\texttt{tfpt\_research\_contracts} gain the \texttt{v548} companion blocks;
+\texttt{website/lib/primeFront.ts} gains the T148 and \texttt{v548} feed entries; suite counter
+$541\to542$ scripts. T149 (\texttt{weight\_smoothing\_probe.py}) is running at exactly the
+remaining input --- whether a smoothed whitening removes the TV roughness --- and is \emph{not}
+part of this change.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (II) (\texttt{v547} --- the level-lemma identities of phase 2 promoted; prime-front diary T146 (level lemma, LEVEL-CARRIES) + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v547} (\texttt{PRIME.LEVEL.LEMMA.01}).} Promotion of the a-priori
