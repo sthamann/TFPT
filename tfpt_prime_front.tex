@@ -90,7 +90,7 @@ ledger package, and --- out of the second phase --- the margin-chain identities,
 $M$-matrix pair, the long-lag support structure, the Hardy-core identities, the capacity-chain
 identities and the level-lemma identities. Everything beyond
 those thirteen is \emph{sandbox}: an exploratory program, run as
-$146$ preregistered probes with $3689$ machine checks, which localized the residual object. That
+$147$ preregistered probes with $3728$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -259,7 +259,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots146$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots147$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -267,7 +267,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T146: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T147: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -321,7 +321,14 @@ resolvent identity $\psi=\lambda R\psi$ itself (the $\Theta(D^3)$ smallness turn
 into tool), Davis--Kahan is instrumented and discarded, Maz'ya's classical dyadic $8$ falls to
 $2$ because the cake base is free, and the a-priori constant $c_0^{\mathrm{ap}}=3.90$--$4.85$
 lands at the size of Maz'ya's classical Dirichlet value $4$ --- with one genuine remainder,
-$D$-uniformity for \emph{all} $D$ (T146; the a-priori core is promoted as \vref{v547}));
+$D$-uniformity for \emph{all} $D$ (T146; the a-priori core is promoted as \vref{v547}), and at last
+that asymptotics itself, which acquires an \emph{exact shape}: the last open object becomes the
+identity $\Gamma=\sqrt{Q^\star}\,S_w$ --- all-$D$ uniformity split into a purely spectral and a
+purely geometric factor, both certified on the surface --- the classical decay route is shown by
+computation to be asymptotically vacuous, delocalisation itself \emph{is} the bound, the mechanism
+is named (a Toeplitz-minus-Hankel section whose bottom eigenvectors are Fourier modes, by
+Szeg\H{o}/Widom theory) with the sharp prediction $Q_B\le2|B|$ holding, and one statement --- a
+Szeg\H{o} theorem for the diagonally reweighted section --- lifts the chain to all $D$ (T147));
 Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
@@ -3351,7 +3358,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T146)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T147)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -4941,6 +4948,87 @@ separates it from a statement for all $D$ is exactly one asymptotic delocalisati
 T147 (\texttt{green\_asymptotic\_probe.py}) is running at exactly that asymptotics.
 \end{keybox}
 
+\subsection{The identity and the named mechanism (T147)}
+T147 (\texttt{green\_asymptotic\_probe.py}, contract \texttt{GREEN.ASYMPTOTIC}, $39/39$,
+$27.2$\,s on $85$ windows $m=26\ldots1491$ spanning a factor $15$ in $D$, verdict
+\textsc{asymptotic-shaped}, the verdict rule wired constructively: ``proved'' cannot be returned
+in any branch, because a finite surface proves no statement for all $D$) attacks exactly the one
+remainder of T146 --- and the last open object becomes an \emph{exact identity},
+\[
+\Gamma\;=\;\sqrt{Q^\star}\,\cdot\,S_w\,,\qquad
+S_w=\lambda_{\mathrm{up}}\|R\|_F\,,\qquad
+Q^\star=m\,\max_j (R^2)_{jj}/\operatorname{tr}(R^2)\,,
+\]
+verified to $2.3\times10^{-16}$ on all $85$ windows and on both stress forms: the $D$-uniformity
+of the level constant is \emph{equivalent} to the boundedness of two named scalars and to nothing
+else --- $S_w$ purely spectral (the effective bottom multiplicity
+$n_{\mathrm{eff}}=\sum_k(\lambda_{\mathrm{up}}/\lambda_k)^2=1.251$--$2.831$, certified
+$S_w\le4.6438$ at a certified cut of a preregistered ladder, the count confirmed by a completed
+LDL$^{\mathsf T}$ inertia and no eigenvector read), and $Q^\star$ purely geometric and scale-free
+(one for a perfectly flat Green diagonal, $m$ for a localised column; certified $\le2.8634$
+against the localised extreme $m=1491$).
+
+\emph{The classical route dies first, by computation.} Demko--Moss--Smith 1984 gives the decay rate
+$q=0.994815$--$0.999999$ on this surface, so the envelope $q^{m/2}=0.9346$--$0.9995$ sits above
+the $0.05$ bar on \emph{every} window --- the culprit is the condition number $1/\Theta(D^3)$,
+not the form ($E$ itself decays off-diagonally with Jaffard exponent $0.06$--$0.82$) --- and the
+Green columns are \emph{delocalised} (half-mass radius $0.048$--$0.105$ of the window width), so
+no decay statement can be the mechanism: the delocalisation itself \emph{is} the bound. The norm
+anatomy locates it --- $0.9864$--$0.9996$ of $\|Re_j\|^2$ at the largest column comes from the
+bottom block alone ($|B|=3$--$6$, certified by inertia) --- and the equidistribution constant
+$Q_B=m\,\max_j(\Pi_B)_{jj}$, whose exact floor is $|B|$, measures $Q_B/|B|=1.375$--$1.839$: the
+naive alternative $Q_B\sim m$ is wrong by a factor $5$--$258$, and T146's unexplained factor
+$2.7$--$16.0$ is \emph{identified} as $\sqrt{m/Q_B}$ up to $\lambda_{\mathrm{up}}/
+\lambda_{\mathrm{lo}}$ --- growing like $\sqrt m$, exactly the rate that makes $\Gamma$ bounded.
+The honest negative is reported with it: the crude free-tail split (drop the mid-spectrum with
+$\|\Pi^\perp e_j\|\le1$) is valid but its tail piece grows like $m^{0.538\pm0.020}$ --- on record,
+\emph{not} used.
+
+\emph{The mechanism, named and made quantitative.} The form is a \emph{Toeplitz-minus-Hankel
+section} ($A_{rs}=c_{|r-s|}-c_{M-1-r-s}$), whose bottom eigenvectors are the Fourier modes at the
+symbol's near-zero by Szeg\H{o}/Widom theory (Kac--Murdock--Szeg\H{o} 1953; Widom 1958;
+Basor--Ehrhardt 2009) --- and a Fourier mode is \emph{exactly} equidistributed. The sharp
+prediction $Q_B\le2|B|(1+o(1))$ \emph{holds} ($1.375$--$1.839\times|B|$), and the chain down to it
+is pure arithmetic: $Q_B\le\sum_{k\in B}m\|\psi_k\|_\infty^2\le2\sum_B\|a_k\|_1^2$, with sparsity
+$\le8.773$ per bottom mode and $0.999{+}$ of each mode's energy in the lowest $4|B|$ Fourier
+modes. The surface is stratified in four $D$-strata with their own certified maxima; six trend
+exponents are all flat against the preregistered $0.25$ bar and all labelled fits, never
+load-bearing. Discarded with a reason: the congruence structure of the zones does not carry
+(scatter $0.465$ --- the equidistribution is a property of the frame, not of the zone
+arithmetic).
+
+\emph{Clean-up, in both directions.} $\sigma_{\mathrm{tot}}$ on the energy route does \emph{not}
+fall, but now has an address: truncation is a nonlinear operation and leaves the invariant
+subspace (block leakage up to $0.9627$ against the $2.7\times10^{-7}$ that boundedness through
+the split would need) --- not a hole, the Green route is the certified one. \textbf{The $3$ open
+R4 border blocks close}: rebuilt in this probe's coordinates, $8/8$ border windows carry a valid
+positive lower bound through the T146 chain plus the new spectral bound
+($c_0^{\mathrm{ap}}=2.9135$--$3.0383$) --- the same mechanism, no border-specific argument; what
+stays open there is the same all-$D$ step, not a border gap. The mandatory stress separates the
+forms: on T145's no-go form both constants \emph{diverge} as required ($Q_B=13.49\to190.10$ over
+$m=64\to1500$) and hit the closed-form prediction $Q_B=m/H_m$ to $1.0000$, while on the Dirichlet
+path-Laplacian control --- whose bottom modes are half-sines, exactly the Fourier modes the
+mechanism predicts --- both stay flat ($Q_B/|B|=1.4142$--$1.4376$ against the closed sine value
+$2$). A bound that stayed finite on the no-go would be too strong and therefore wrong.
+
+\begin{keybox}[After T147: an exact identity, two certified factors --- one lifting statement]
+\emph{(H1)} \textbf{the one lifting statement}: a Szeg\H{o}-type theorem for the \emph{diagonally
+reweighted} Toeplitz-minus-Hankel section --- that the bottom block of
+$\Lambda^{-1/2}A\Lambda^{-1/2}$ is Fourier-sparse with an $m$-independent $\ell^1$ norm. That
+single statement lifts the whole chain from the stratified surface to all $D$ (address: Widom
+1958; Basor--Ehrhardt 2009; the measured obstacle is that the mechanism's hypothesis is
+translation covariance, which the Jacobi whitening breaks --- Toeplitz defect $0.21$--$0.54$).
+\emph{(H2)} an a-priori bound for the spectral half $S_w$, i.e.\ for the eigenvalue counting
+function of the form near zero: the factorisation pays $S_w\ge1$ whatever $Q^\star$ does, so a
+bottom block whose width grows with $D$ would break the bound even at perfect equidistribution ---
+a separate question from the shape of the eigenvectors. \emph{(H3)} the $\sigma_{\mathrm{tot}}$
+classification --- either an energy-side analogue of the split or the explicit statement that the
+Green route is the only certified one. The honest state, in one sentence: what stands after T147
+is a theorem-shaped task with two addresses --- the all-$D$ claim remains an extrapolation over
+$85$ stratified windows and a factor $15$ in $D$ until the two statements are proved.
+T148 (\texttt{szego\_bottom\_probe.py}) is running at exactly the Szeg\H{o} statement.
+\end{keybox}
+
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
@@ -5420,19 +5508,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T146}\label{app:index}
+\section{Probe index, diary parts T11--T147}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $136$ parts T11--T146 that the current diary file records
-($137$ runs --- T104 was a double run with two independent arms --- and $3497$ green checks); the ten
+load-bearing artefact. The index covers the $137$ parts T11--T147 that the current diary file records
+($138$ runs --- T104 was a double run with two independent arms --- and $3536$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v547} promoted; with T126--T146, the first twenty-one parts of the second phase, the
-running totals are \textbf{$146$ probes and $3689/3689$ checks}. T147
-(\texttt{green\_asymptotic\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v547} promoted; with T126--T147, the first twenty-two parts of the second phase, the
+running totals are \textbf{$147$ probes and $3728/3728$ checks}. T148
+(\texttt{szego\_bottom\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -5584,6 +5672,7 @@ T143 & \texttt{\scriptsize sharp\_\allowbreak capacity} & the sharp route \textb
 T144 & \texttt{\scriptsize capacity\_\allowbreak inequality} & the interval route \textbf{carries, and the chain has exactly one unproven input}: with the \emph{Jacobi whitening} as the single comparison licence ($\kappa_{\mathrm{up}}=1.1195$--$1.3162$ certified per window; Gershgorin would allow $\le1.983$; a denominator comparison, untouched by T142's obstruction), two interval-reduction statements separate --- the \emph{pointwise hull comparison is false} (up to $425$, drifting $D^{-1.137}$, scattered level sets as offenders $\Rightarrow$ S2 must be a testing condition) while the \emph{best-interval comparison holds}, $c_{\mathrm{glob}}=1.0000$--$1.6876$ zone-uniform at $D^{-0.068\pm0.024}$, measured on $2.24$ million sets incl.\ \emph{all} $16383$ subsets of $136$ enumerated blocks (capacity monotonicity holds on all of them, though the form is not Dirichlet); \textbf{the two-weight sup is exact, not sampled}: $11\,390\,676$ intervals exhausted via a Cholesky prefix-sum identity (verified to $10^{-11}$), giving the core number $B_{\mathrm{res}}\hat\lambda=0.6694$--$0.7813$ inside the Maz'ya window $[1/4,1]$ on the whole surface, flat at $D^{0.013\pm0.005}$ and coordinate-robust (T143: $0.5438$--$0.6457$), with the free half $\Phi_{\sup}\hat\lambda\le1$ passing on all $2.24$M sets; \textbf{the chain} $\lambda\ge1/(c_0\kappa_{\mathrm{up}}c_{\mathrm{glob}}B_{\mathrm{res}})$ certifies $0.1002$--$0.2653$ of the exact gap per window, the residual $D$-dependence in the Jacobi transfer ($D^{-0.178}$), not the capacity calculus; dead: the naive Muckenhoupt trial-energy transcription ($89$--$6995$, $D^{-1.885}$); honest counter-side exact: $\Phi_{\mathrm{int}}\hat\lambda=0.0928$--$0.3578$ drifts $D^{0.654\pm0.016}$ --- intervals saturate S1 only from above; \textbf{the Markov perturbation route is certified dead} ($\lambda_{\min}(E-P)<0$ everywhere, $t^*\sim D^{3.96}$; $3$--$12\%$ positive off-diagonal entries carrying $36.7$--$64.5\%$ of the mass); \textbf{S3 stronger than asked}: the Cauchy--Schwarz floor makes $\Phi_{\sup}$ a max-density-subgraph value (Charikar 2000; Goldberg 1984), $\Psi_{\mathrm{all}}\hat\lambda=0.7399$--$0.8515$ at $D^{0.015\pm0.005}$ over \emph{all} $2^m$ sets --- the flattest number of the probe, argmax on intervals ($B_{\mathrm{res}}$ only $1.078$--$1.129$ below); R4: $22$ blocks, $19$ certified, $3$ open, $c_{\mathrm{glob}}=1.0000$ exact on $5$ enumerated; map V16, $9$ statements ripe (stock $93$); \textbf{rest list: S1$'$ --- S1 under a Green mean-density bound, a Muckenhoupt-type instead of a Markov-type hypothesis --- S2$'$ as testing condition, R4, R5; the only unproven input is the absolute constant $c_0$} & INTERVAL-CARRIES & 31/31\\
 T145 & \texttt{\scriptsize mazya\_\allowbreak proof} & the proof attempt for S1$'$, \textbf{one step missing, and it has a name}: the classical Maz'ya proof transcribes step by step onto the non-Markovian form --- M1 level arithmetic (theorem, factor $1.649$--$2.670$ against the ceiling $3$), M2 the Green floor (theorem, Cauchy--Schwarz), M3 truncation admissibility (theorem, $\times4$, slack $\le1.036$ on $168$ levels) --- and \textbf{the Markov property sits in exactly one line}, M4 truncation subadditivity, which is \emph{void} here: $3.2$--$14.9\%$ positive off-diagonals carrying $18.3$--$58.7\%$ of the mass, the conductance share of the minimiser's energy negative on $61/64$ windows, while the same code on the Stieltjes surrogate $E-P$ reproduces the classical step; \textbf{but M4 splits} --- the mass half is a theorem ($\sum_kf_k^2\le\psi^2$ pointwise; ratio $0.2639$--$0.2995$) and dominates, so $\sigma_{\mathrm{tot}}=0.2145$--$0.4425<1$ everywhere; two routes make $c_0$ \textbf{explicit}: energy $12\sigma_{\mathrm{tot}}=2.5734$--$5.3099$, sign-free $G_{\mathrm{dy}}=2.1559$--$6.3937$, better route $c_0=2.2480$--$4.2265$ at $D^{0.028\pm0.017}$ (zone-uniform) against Maz'ya's Dirichlet value $4$, and \textbf{S1$'$ is certified per window}: $\mathrm{cert\_lam\_max}(R)\le c_0\Psi$ on $64/64$ (sign price $|R|$ vs $R^{+}$: $1.12$--$1.41$, witness built in); the \textbf{no-go} $R=aa^{\mathsf T}+\varepsilon I$, $a_i=i^{-1/2}$ (entrywise nonnegative, proved density ceiling $4+\varepsilon$, $\lambda_{\max}\sim\log m$) shows $\Psi_{\mathrm{all}}\hat\lambda$ decaying $0.702\to0.488$ and $G_{\mathrm{dy}}$ growing $7.6\to36.8$ --- a level-profile hypothesis is \emph{necessary}; S2$'$ retired as a requirement ($c_{\mathrm{test}}=1.0782$--$1.1327$ against Charikar's cited $2$), R5 two-sided but width $D^{0.543}$ (downgraded; used side flat $D^{0.065}$), R4 all $24$ blocks closed; map V17, $11$ statements ripe (stock $104$); \textbf{rest: L1 the level lemma --- an a-priori bound for $\sigma_{\mathrm{tot}}$ or $G_{\mathrm{dy}}$, either alone closes S1$'$ --- L2 the profile route to it, R4 bookkeeping}; identity spine of T142--T145 promoted as \vref{v546} & ONE-STEP-MISSING & 33/33\\
 T146 & \texttt{\scriptsize level\_\allowbreak lemma} & the proof attempt for L1, \textbf{and the level lemma stands}: closed on the measurement surface as a chain of theorems and certified window inequalities, no step reading the minimiser --- four hand-written closed profiles (sine, ramp, pole vector, equilibrium potential) lose by \textbf{5--9 orders of magnitude} (every guess sees $O(1)$, the gap is $O(D^3)$); what survives is the \textbf{Green column} itself ($\lambda_{\mathrm{up}}/\hat\lambda=1.0497$--$1.3764$), and \textbf{Davis--Kahan is instrumented and discarded} (informative on $0/64$: the spectrum bottom is a near-degenerate block, $\lambda_2/\hat\lambda=1.2542$--$3.4471$, separation in the denominator) because $\psi=\lambda R\psi$ is an \emph{identity} --- no transfer step exists in the argument; the lever: $\|\psi\|_\infty\le\lambda_{\mathrm{up}}\max_j\|Re_j\|$ within $1.055$--$1.426$ of the truth, the trivial ceiling would give $\Gamma\le\sqrt m=5.1$--$34.2$, measured $\Gamma=1.8356$--$2.2797$ (columns $2.7$--$16.0$ below trivial --- that factor \emph{is} the delocalisation, read off the form); the localisation contradiction stays qualitative (leak tolerance $\le2.38\times10^{-3}$), Perron only on the lumped partner; \textbf{the cake base is free} (the chain uses only $|\psi|\le\psi_t$, Maz'ya's dyadic $8$ falls to $2b^2\approx2$, gain $3.76$, price zero via the $O(m)$ union identity) and $c_0^{\mathrm{ap}}=2b^2\Gamma\min(1,\Gamma_1)+\varepsilon=\mathbf{3.9042}$--$\mathbf{4.8488}$ ($b=1.031$, $64/64$) against T145's measured $2.156$--$6.394$ --- at the size of Maz'ya's Dirichlet value $4$ --- chain loss $0.0422$--$0.1586$; stress tests discriminate (no-go $\Gamma$ $3.676\to13.800$, $m^{0.420}$, unbounded; theorem half survives, slack $1.087$--$1.242$; Dirichlet control flat $1.7183$--$1.7315$); border pool $24/24$ closed, a-priori chain positive on $24$ ($c_0^{\mathrm{ap}}=2.855$--$3.176$); map V18, stock $108$; \textbf{rest: all-$D$ asymptotics of the Green columns ($\max_j\|Re_j\|\lambda_{\min}$), $\sigma_{\mathrm{tot}}$ stays measured (not a hole), the actual 3 T134 blocks}; a-priori core promoted as \vref{v547} & LEVEL-CARRIES & 30/30\\
+T147 & \texttt{\scriptsize green\_\allowbreak asymptotic} & the asymptotics itself, \textbf{and the last open object becomes an exact identity}: $\Gamma=\sqrt{Q^\star}\,S_w$ (verified to $2.3\times10^{-16}$ on all $85$ windows $m=26$--$1491$ and both stress forms) --- $D$-uniformity \emph{equivalent} to the boundedness of two named scalars, $S_w=\lambda_{\mathrm{up}}\|R\|_F$ purely spectral (effective bottom multiplicity $n_{\mathrm{eff}}=1.251$--$2.831$, certified $\le4.6438$ at a certified cut by LDL$^{\mathsf T}$ inertia) and $Q^\star=m\max_j(R^2)_{jj}/\operatorname{tr}(R^2)$ purely geometric, scale-free (certified $\le2.8634$ against the localised extreme $m=1491$); \textbf{the classical decay route is computationally dead} (Demko--Moss--Smith $q=0.994815$--$0.999999$, envelope $q^{m/2}=0.9346$--$0.9995$ above the $0.05$ bar everywhere; Jaffard exponent of $E$ itself $0.06$--$0.82$) and the columns are \emph{delocalised} (half-mass radius $0.048$--$0.105$ of the window) --- delocalisation \emph{is} the bound: $0.9864$--$0.9996$ of $\|Re_j\|^2$ from the bottom block alone, $Q_B/|B|=1.375$--$1.839$ against the exact floor (naive $Q_B\sim m$ wrong by $5$--$258$), T146's unexplained factor $2.7$--$16.0$ identified as $\sqrt{m/Q_B}$ up to $\lambda_{\mathrm{up}}/\lambda_{\mathrm{lo}}$; honest negative: the crude free-tail split grows $m^{0.538\pm0.020}$, reported, not used; \textbf{the mechanism is named}: Toeplitz-minus-Hankel section, bottom eigenvectors Fourier modes by Szeg\H{o}/Widom (Kac--Murdock--Szeg\H{o} 1953, Widom 1958, Basor--Ehrhardt 2009), sharp prediction $Q_B\le2|B|$ \textbf{holds}, chain $Q_B\le\sum_Bm\|\psi_k\|_\infty^2\le2\sum_B\|a_k\|_1^2$ pure arithmetic (sparsity $\le8.773$ per mode, $0.999{+}$ of the energy in the lowest $4|B|$ modes); four $D$-strata with certified maxima, six trend exponents flat at bar $0.25$, all fits; congruence structure discarded (scatter $0.465$); $\sigma_{\mathrm{tot}}$ does not fall but is located (block leakage $0.9627$ vs required $2.7\times10^{-7}$); \textbf{the 3 open R4 border blocks close} ($8/8$ rebuilt border windows, $c_0^{\mathrm{ap}}=2.9135$--$3.0383$, same mechanism); stress separates: no-go diverges and hits $Q_B=m/H_m$ to $1.0000$, Dirichlet control flat ($1.4142$--$1.4376$ vs sine value $2$); honest limit: translation covariance broken by the whitening (Toeplitz defect $0.21$--$0.54$), the spectral factor needs its own a-priori input; map V19, stock $114$; \textbf{rest: a Szeg\H{o} theorem for the reweighted section (lifts the chain to all $D$), an a-priori bound for $S_w$, the $\sigma_{\mathrm{tot}}$ classification} & ASYMPTOTIC-SHAPED & 39/39\\
 \end{xltabular}
 }
 

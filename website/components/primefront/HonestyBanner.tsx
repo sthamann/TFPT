@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3689/3689 sandbox checks —
+        (“the full proof”, T126+) is now open with 3728/3728 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -141,8 +141,20 @@ export function HonestyBanner() {
         size of Maz&apos;ya&apos;s classical Dirichlet value 4. The one
         genuine remainder is D-uniformity for ALL D — the asymptotic
         delocalization of the Green columns; the a-priori core of T146 is
-        load-bearing as v547, and T147 (green_asymptotic_probe.py) is
-        running at exactly that asymptotics. What remains
+        load-bearing as v547. T147 (ASYMPTOTIC-SHAPED) then made exactly
+        that asymptotics an exact identity: Γ = √Q★ · Sw (verified to
+        2.3e-16 on all 85 windows) splits all-D uniformity into a purely
+        spectral factor Sw (certified ≤ 4.6438 by LDLᵀ inertia at a
+        certified cut) and a purely geometric one Q★ (certified ≤ 2.8634)
+        — the classical decay route is computationally dead, delocalization
+        itself IS the bound, and the mechanism is named: a
+        Toeplitz-minus-Hankel section whose bottom eigenvectors are Fourier
+        modes (Szegő/Widom), with the sharp prediction Q_B ≤ 2|B| holding
+        at 1.375–1.839 × |B| and the 3 open R4 border blocks closing by the
+        same mechanism. One statement — a Szegő theorem for the diagonally
+        reweighted section — lifts the chain to all D; T148
+        (szego_bottom_probe.py) is running at exactly that statement. What
+        remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann
