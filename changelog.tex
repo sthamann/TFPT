@@ -62,6 +62,102 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (XV) (prime-front diary T168+T169 (the self-similarity of the hardness is \emph{proved}, the one open object becomes a bilinear von Mangoldt sum --- MINORS-RESIST / RATIO-RESISTS) + paper + website sync; NO promotion, NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Prime-front diary T168 (\texttt{lagrange\_minors\_probe.py}, contract
+\texttt{LAGRANGE.MINORS}, $39/39$, $2.3$\,s, the same $63$-window union as
+T163--T167, recipe untouched; verdict MINORS-RESIST, sandbox).} The determinant
+attacked as a sum of squares via the Lagrange identity --- and the sum of
+squares is \emph{real}: the $h\times h$ arithmetic kernel $A$ is
+\textbf{positive definite on all $63$ windows}
+($\lambda_{\min}=5.0\times10^{-6}$--$8.5\times10^{-4}$, $8$--$12$ orders above
+the solver floor), so the Lagrange identity is a genuine sum of strictly
+positive squares ($\rho_{\mathrm{LAG}}=1.000$ exactly, no sign cancellation)
+--- hard-fenced as a statement about one finite matrix per window; the Weil
+criterion is never tested, assumed or reverse-inferred. The anatomy is exact:
+$Q=X^{\mathsf T}AX$ ($3.9\times10^{-15}$), the mode vectors are
+\textbf{Euclidean-orthogonal} ($r_{12}=0$ to $6.2\times10^{-17}$ --- the
+near-parallelism is created \emph{entirely} by the arithmetic metric), the
+Wronskian telescopes exactly ($W_r-W_{r-1}=(\mu_1-\mu_2)u_rv_r$,
+$1.7\times10^{-13}$), the minor sup is closed and $m$-free ($\sim N/\pi^2$,
+attained to $0.770$), Cauchy--Binet verified as algebra. The key measurement
+splits by basis: in the closed basis the minors are \emph{maximal}
+($\tfrac12\sum M^2=1/(\mu_1\mu_2)$ exactly $\sim h^4$ --- the Wronskians carry
+zero arithmetic, all smallness sits in the PSD kernel at one closed vector);
+in the eigenbasis the sum is \emph{thin} ($90\%$ from $4$--$101$ pairs, top
+pair always $(\lambda_{\min},\lambda_{\max})$ at $6.8$--$41.7\%$ alone, raw
+$\kappa_w=0.30$--$0.94$). The exponent ledger closes arithmetic-free:
+$1-r_{12}^2=\nu_1\nu_2/(\hat a_{11}\hat a_{22})$ with $\nu_1\sim h^{+0.81}$,
+$\hat a_{11}\sim h^{+0.76}$, $\hat a_{22}\sim h^{+0.91}$ --- every factor but
+one at the right power; best $m$-free-shaped bound $h^{-0.548}$ union /
+$h^{-0.880}$ frame A, short by $h^{2.45}/h^{2.04}$; the open factor is
+identified exactly: $\nu_2$ with minimiser $t^*=Q_{12}/Q_{11}$, needed to
+$6.05\times10^{-3}$ median / $2.82\times10^{-4}$ worst ($h^{-1.146}$) --- by
+T168-TH7 that factor \emph{is} the target rewritten (ONE-TERM-MISSING
+deliberately not rendered). Scramble breaks harder than T167 ($8/8$ windows
+lose $A\succ0$ \emph{and} the Gram property, $n_{\mathrm{neg}}$ up to $73$);
+$L_P$ control exact. \textbf{The hardness is self-similar under exact
+reformulation} --- determinant $\to$ PSD compound at a closed vector $\to$
+near-null Rayleigh value $\to$ one ratio of two closed lag sums, same
+accuracy price. Balance $8$ THEOREM / $0$ CERT-UNIF / $3$ CERT-WINDOW /
+$11$ MEASURED / $7$ NO-GO.
+\item \textbf{Prime-front diary T169 (\texttt{tstar\_ratio\_probe.py}, contract
+\texttt{TSTAR.RATIO}, $41/41$, $3.0$\,s, same union surface; verdict
+RATIO-RESISTS --- the self-similarity \emph{proved}, sandbox).} T168's one
+open factor attacked as a preregistered candidate table: every genuinely
+closed candidate misses by $O(1)$ and \emph{diverges} from the threshold at
+$h^{+1.99}$ (the block is atom-dominated, $|{\rm atom/arch}|=3.5$--$43$ resp.\
+$14$--$461$, and $\hat a_{11}^{\mathrm{arch}}<0$ on $63/63$ --- the
+archimedean half is not even PSD); \textbf{the only candidate that meets the
+threshold, $K7=\sqrt{\hat a_{22}/\hat a_{11}}$ ($63/63$), does so by a new
+theorem (T169-TH7) because it puts $\det\hat A$ back into the numerator}:
+$R(K7)$ collapses in closed form to $2\sqrt{\hat a_{11}\hat a_{22}}\,\det\hat
+A/[(\hat a_{11}+\hat a_{22})(\sqrt{\hat a_{11}\hat a_{22}}+\hat a_{12})]$
+($1.1\times10^{-9}$) --- \textbf{the $t^*$-language is provably exactly as
+hard as T167's determinant: the loop closes as an identity} (T167 scalar
+$\to$ T168 factor $\to$ T169 candidate = the same object). The real gains:
+\textbf{R3 is booked CERT-UNIF --- $\nu_1\le\max(\hat a_{11},\hat
+a_{22})+|\hat a_{12}|$ (Gershgorin, unconditional, uniform in $h$), $63/63$,
+losing only $1.10$--$1.19$ --- the CERT-UNIF column moves off zero}; R2 is
+honestly downgraded from cheap to OPEN (the absolute-value budget cannot even
+certify positivity); the chain is \textbf{rebuilt R4-free} ($1-r_{12}^2\le
+[\max(\hat a_{11},\hat a_{22})+|\hat a_{12}|]\cdot R(\hat t)/(\hat
+a_{11}\hat a_{22})$, valid $63/63$, frame-A trend $h^{-2.948}$, i.e.\
+$\varepsilon=0.052$ inside the $0.5$ carry window) so the Weil-shaped
+positivity of $A_h$ never enters it --- the Weil fence is respected by
+construction (uniform-in-$h$ positivity of $A_h$ is RH-equivalent-shaped and
+is never routed or claimed); and by T169-TH3 the $1/\sqrt{\mu}$ factors
+cancel, so the $\mathrm{cond}\sim10^{8}$ ladder leaves the file. Stress:
+$L_P$ exact (the $t^*$-recipe is a near-degeneracy artefact --- its tightness
+\emph{measures} $\det\hat A$), scramble $8/8$, flat-weight null $8/8$,
+parity-pair control only $6.7\times$ (honestly PARTIAL). Balance
+\textbf{$10$ THEOREM / $2$ CERT-UNIF / $1$ CERT-WINDOW / $4$ NO-GO}. The rest:
+\textbf{R1, for the first time in standard analytic shape --- an $m$-free
+bound on $\det\hat A$ at $h^{-3+\varepsilon}$ as a bilinear von Mangoldt sum
+against closed Dirichlet weights} (equivalently the diagonal ratio to
+$1.2\times10^{-2}/5.6\times10^{-4}$); R2 $=$ R1; R3 closed; R4 not needed.
+T170 (\texttt{bilinear\_sieve\_probe.py}, contract \texttt{BILINEAR.SIEVE})
+is running the unconditional sieve toolbox (Montgomery--Vaughan, Vaughan
+decomposition) on the bilinear form --- T161's beyond-RH triage applied to
+\emph{linear} sums; for \emph{bilinear} forms the large sieve gives
+unconditional square-root cancellation.
+\item \textbf{Docs + website sync.} \texttt{tfpt\_prime\_front} gains the T168
+subsection (the Lagrange identity and the PSD finding with the hard Weil
+fence, the basis split of the key measurement, the closed exponent ledger,
+the self-similarity statement) and the T169 subsection (the candidate table,
+the collapse theorem TH7 with the loop closure as the key result, the
+CERT-UNIF gain, the R4-free chain with $\varepsilon=0.052$, the
+standard-shape restatement, the ``After T169'' keybox with R1 in bilinear
+shape and T170 running); the phase-2 section title moves to T126--T169, the
+probe index gains the T168+T169 rows and the running totals move to $169$
+probes / $4474$ checks; \texttt{experiments/next.txt} gains both entries
+(series (CLXXIX), (CLXXX)); website: \texttt{primeFront.ts} feed entries
+T168+T169, status surfaces Teile 11--169 / $4474$ checks, T170 running. NO
+promotion (T168/T169 candidates PENDING --- bundling with T170 planned).
+Firewall unchanged: sandbox, no RH evidence, no zero data; every number typed
+THEOREM/CERT-UNIF/CERT-WINDOW/MEASURED/FIT.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (XIV) (\texttt{v557} --- the cascade/vector identities of phase 2 promoted; prime-front diary T167 (three dresses are one inequality, the closed vector exact at $K=2$ --- VECTOR-RESISTS) + paper + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v557} (\texttt{PRIME.CASCADE.VECT.01}).} Promotion of

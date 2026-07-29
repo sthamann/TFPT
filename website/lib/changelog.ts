@@ -43,6 +43,1276 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · XV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "prime-front diary T168+T169 (the self-similarity of the hardness is "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "proved"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ", the one open object becomes a bilinear von Mangoldt sum — MINORS-RESIST / RATIO-RESISTS) + paper + website sync; NO promotion, NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T168 ("
+            },
+            {
+              "k": "c",
+              "v": "lagrange_minors_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "LAGRANGE.MINORS"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "39/39"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "2.3"
+            },
+            {
+              "k": "t",
+              "v": " s, the same "
+            },
+            {
+              "k": "m",
+              "v": "63"
+            },
+            {
+              "k": "t",
+              "v": "-window union as T163–T167, recipe untouched; verdict MINORS-RESIST, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The determinant attacked as a sum of squares via the Lagrange identity — and the sum of squares is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "real"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "h\\times h"
+        },
+        {
+          "k": "t",
+          "v": " arithmetic kernel "
+        },
+        {
+          "k": "m",
+          "v": "A"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "positive definite on all "
+            },
+            {
+              "k": "m",
+              "v": "63"
+            },
+            {
+              "k": "t",
+              "v": " windows"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}=5.0\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "8.5\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " orders above the solver floor), so the Lagrange identity is a genuine sum of strictly positive squares ("
+        },
+        {
+          "k": "m",
+          "v": "\\rho_{\\mathrm{LAG}}=1.000"
+        },
+        {
+          "k": "t",
+          "v": " exactly, no sign cancellation) — hard-fenced as a statement about one finite matrix per window; the Weil criterion is never tested, assumed or reverse-inferred. The anatomy is exact: "
+        },
+        {
+          "k": "m",
+          "v": "Q=X^{\\mathsf T}AX"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "3.9\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "), the mode vectors are "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Euclidean-orthogonal"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "r_{12}=0"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "6.2\\times10^{-17}"
+        },
+        {
+          "k": "t",
+          "v": " — the near-parallelism is created "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "entirely"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " by the arithmetic metric), the Wronskian telescopes exactly ("
+        },
+        {
+          "k": "m",
+          "v": "W_r-W_{r-1}=(\\mu_1-\\mu_2)u_rv_r"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "1.7\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "), the minor sup is closed and "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free ("
+        },
+        {
+          "k": "m",
+          "v": "\\sim N/\\pi^2"
+        },
+        {
+          "k": "t",
+          "v": ", attained to "
+        },
+        {
+          "k": "m",
+          "v": "0.770"
+        },
+        {
+          "k": "t",
+          "v": "), Cauchy–Binet verified as algebra. The key measurement splits by basis: in the closed basis the minors are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "maximal"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12\\sum M^2=1/(\\mu_1\\mu_2)"
+        },
+        {
+          "k": "t",
+          "v": " exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\sim h^4"
+        },
+        {
+          "k": "t",
+          "v": " — the Wronskians carry zero arithmetic, all smallness sits in the PSD kernel at one closed vector); in the eigenbasis the sum is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "thin"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "90\\%"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "101"
+        },
+        {
+          "k": "t",
+          "v": " pairs, top pair always "
+        },
+        {
+          "k": "m",
+          "v": "(\\lambda_{\\min},\\lambda_{\\max})"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "6.8"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "41.7\\%"
+        },
+        {
+          "k": "t",
+          "v": " alone, raw "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa_w=0.30"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.94"
+        },
+        {
+          "k": "t",
+          "v": "). The exponent ledger closes arithmetic-free: "
+        },
+        {
+          "k": "m",
+          "v": "1-r_{12}^2=\\nu_1\\nu_2/(\\hat a_{11}\\hat a_{22})"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_1\\sim h^{+0.81}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\hat a_{11}\\sim h^{+0.76}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\hat a_{22}\\sim h^{+0.91}"
+        },
+        {
+          "k": "t",
+          "v": " — every factor but one at the right power; best "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free-shaped bound "
+        },
+        {
+          "k": "m",
+          "v": "h^{-0.548}"
+        },
+        {
+          "k": "t",
+          "v": " union / "
+        },
+        {
+          "k": "m",
+          "v": "h^{-0.880}"
+        },
+        {
+          "k": "t",
+          "v": " frame A, short by "
+        },
+        {
+          "k": "m",
+          "v": "h^{2.45}/h^{2.04}"
+        },
+        {
+          "k": "t",
+          "v": "; the open factor is identified exactly: "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_2"
+        },
+        {
+          "k": "t",
+          "v": " with minimiser "
+        },
+        {
+          "k": "m",
+          "v": "t^*=Q_{12}/Q_{11}"
+        },
+        {
+          "k": "t",
+          "v": ", needed to "
+        },
+        {
+          "k": "m",
+          "v": "6.05\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " median / "
+        },
+        {
+          "k": "m",
+          "v": "2.82\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": " worst ("
+        },
+        {
+          "k": "m",
+          "v": "h^{-1.146}"
+        },
+        {
+          "k": "t",
+          "v": ") — by T168-TH7 that factor "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the target rewritten (ONE-TERM-MISSING deliberately not rendered). Scramble breaks harder than T167 ("
+        },
+        {
+          "k": "m",
+          "v": "8/8"
+        },
+        {
+          "k": "t",
+          "v": " windows lose "
+        },
+        {
+          "k": "m",
+          "v": "A\\succ0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the Gram property, "
+        },
+        {
+          "k": "m",
+          "v": "n_{\\mathrm{neg}}"
+        },
+        {
+          "k": "t",
+          "v": " up to "
+        },
+        {
+          "k": "m",
+          "v": "73"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "L_P"
+        },
+        {
+          "k": "t",
+          "v": " control exact. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The hardness is self-similar under exact reformulation"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — determinant "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " PSD compound at a closed vector "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " near-null Rayleigh value "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " one ratio of two closed lag sums, same accuracy price. Balance "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " THEOREM / "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " CERT-UNIF / "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " CERT-WINDOW / "
+        },
+        {
+          "k": "m",
+          "v": "11"
+        },
+        {
+          "k": "t",
+          "v": " MEASURED / "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " NO-GO."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T169 ("
+            },
+            {
+              "k": "c",
+              "v": "tstar_ratio_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "TSTAR.RATIO"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "41/41"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "3.0"
+            },
+            {
+              "k": "t",
+              "v": " s, same union surface; verdict RATIO-RESISTS — the self-similarity "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "proved"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": ", sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " T168's one open factor attacked as a preregistered candidate table: every genuinely closed candidate misses by "
+        },
+        {
+          "k": "m",
+          "v": "O(1)"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "diverges"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " from the threshold at "
+        },
+        {
+          "k": "m",
+          "v": "h^{+1.99}"
+        },
+        {
+          "k": "t",
+          "v": " (the block is atom-dominated, "
+        },
+        {
+          "k": "m",
+          "v": "|{\\rm atom/arch}|=3.5"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "43"
+        },
+        {
+          "k": "t",
+          "v": " resp. "
+        },
+        {
+          "k": "m",
+          "v": "14"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "461"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "\\hat a_{11}^{\\mathrm{arch}}<0"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "63/63"
+        },
+        {
+          "k": "t",
+          "v": " — the archimedean half is not even PSD); "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the only candidate that meets the threshold, "
+            },
+            {
+              "k": "m",
+              "v": "K7=\\sqrt{\\hat a_{22}/\\hat a_{11}}"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "m",
+              "v": "63/63"
+            },
+            {
+              "k": "t",
+              "v": "), does so by a new theorem (T169-TH7) because it puts "
+            },
+            {
+              "k": "m",
+              "v": "\\det\\hat A"
+            },
+            {
+              "k": "t",
+              "v": " back into the numerator"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "R(K7)"
+        },
+        {
+          "k": "t",
+          "v": " collapses in closed form to "
+        },
+        {
+          "k": "m",
+          "v": "2\\sqrt{\\hat a_{11}\\hat a_{22}}\\,\\det\\hat\nA/[(\\hat a_{11}+\\hat a_{22})(\\sqrt{\\hat a_{11}\\hat a_{22}}+\\hat a_{12})]"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the "
+            },
+            {
+              "k": "m",
+              "v": "t^*"
+            },
+            {
+              "k": "t",
+              "v": "-language is provably exactly as hard as T167's determinant: the loop closes as an identity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (T167 scalar "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " T168 factor "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " T169 candidate = the same object). The real gains: "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "R3 is booked CERT-UNIF — "
+            },
+            {
+              "k": "m",
+              "v": "\\nu_1\\le\\max(\\hat a_{11},\\hat\na_{22})+|\\hat a_{12}|"
+            },
+            {
+              "k": "t",
+              "v": " (Gershgorin, unconditional, uniform in "
+            },
+            {
+              "k": "m",
+              "v": "h"
+            },
+            {
+              "k": "t",
+              "v": "), "
+            },
+            {
+              "k": "m",
+              "v": "63/63"
+            },
+            {
+              "k": "t",
+              "v": ", losing only "
+            },
+            {
+              "k": "m",
+              "v": "1.10"
+            },
+            {
+              "k": "t",
+              "v": "–"
+            },
+            {
+              "k": "m",
+              "v": "1.19"
+            },
+            {
+              "k": "t",
+              "v": " — the CERT-UNIF column moves off zero"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; R2 is honestly downgraded from cheap to OPEN (the absolute-value budget cannot even certify positivity); the chain is "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "rebuilt R4-free"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1-r_{12}^2\\le\n[\\max(\\hat a_{11},\\hat a_{22})+|\\hat a_{12}|]\\cdot R(\\hat t)/(\\hat\na_{11}\\hat a_{22})"
+        },
+        {
+          "k": "t",
+          "v": ", valid "
+        },
+        {
+          "k": "m",
+          "v": "63/63"
+        },
+        {
+          "k": "t",
+          "v": ", frame-A trend "
+        },
+        {
+          "k": "m",
+          "v": "h^{-2.948}"
+        },
+        {
+          "k": "t",
+          "v": ", i.e. "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=0.052"
+        },
+        {
+          "k": "t",
+          "v": " inside the "
+        },
+        {
+          "k": "m",
+          "v": "0.5"
+        },
+        {
+          "k": "t",
+          "v": " carry window) so the Weil-shaped positivity of "
+        },
+        {
+          "k": "m",
+          "v": "A_h"
+        },
+        {
+          "k": "t",
+          "v": " never enters it — the Weil fence is respected by construction (uniform-in-"
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " positivity of "
+        },
+        {
+          "k": "m",
+          "v": "A_h"
+        },
+        {
+          "k": "t",
+          "v": " is RH-equivalent-shaped and is never routed or claimed); and by T169-TH3 the "
+        },
+        {
+          "k": "m",
+          "v": "1/\\sqrt{\\mu}"
+        },
+        {
+          "k": "t",
+          "v": " factors cancel, so the "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{cond}\\sim10^{8}"
+        },
+        {
+          "k": "t",
+          "v": " ladder leaves the file. Stress: "
+        },
+        {
+          "k": "m",
+          "v": "L_P"
+        },
+        {
+          "k": "t",
+          "v": " exact (the "
+        },
+        {
+          "k": "m",
+          "v": "t^*"
+        },
+        {
+          "k": "t",
+          "v": "-recipe is a near-degeneracy artefact — its tightness "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measures"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\det\\hat A"
+        },
+        {
+          "k": "t",
+          "v": "), scramble "
+        },
+        {
+          "k": "m",
+          "v": "8/8"
+        },
+        {
+          "k": "t",
+          "v": ", flat-weight null "
+        },
+        {
+          "k": "m",
+          "v": "8/8"
+        },
+        {
+          "k": "t",
+          "v": ", parity-pair control only "
+        },
+        {
+          "k": "m",
+          "v": "6.7\\times"
+        },
+        {
+          "k": "t",
+          "v": " (honestly PARTIAL). Balance "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "m",
+              "v": "10"
+            },
+            {
+              "k": "t",
+              "v": " THEOREM / "
+            },
+            {
+              "k": "m",
+              "v": "2"
+            },
+            {
+              "k": "t",
+              "v": " CERT-UNIF / "
+            },
+            {
+              "k": "m",
+              "v": "1"
+            },
+            {
+              "k": "t",
+              "v": " CERT-WINDOW / "
+            },
+            {
+              "k": "m",
+              "v": "4"
+            },
+            {
+              "k": "t",
+              "v": " NO-GO"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". The rest: "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "R1, for the first time in standard analytic shape — an "
+            },
+            {
+              "k": "m",
+              "v": "m"
+            },
+            {
+              "k": "t",
+              "v": "-free bound on "
+            },
+            {
+              "k": "m",
+              "v": "\\det\\hat A"
+            },
+            {
+              "k": "t",
+              "v": " at "
+            },
+            {
+              "k": "m",
+              "v": "h^{-3+\\varepsilon}"
+            },
+            {
+              "k": "t",
+              "v": " as a bilinear von Mangoldt sum against closed Dirichlet weights"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (equivalently the diagonal ratio to "
+        },
+        {
+          "k": "m",
+          "v": "1.2\\times10^{-2}/5.6\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": "); R2 "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " R1; R3 closed; R4 not needed. T170 ("
+        },
+        {
+          "k": "c",
+          "v": "bilinear_sieve_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "BILINEAR.SIEVE"
+        },
+        {
+          "k": "t",
+          "v": ") is running the unconditional sieve toolbox (Montgomery–Vaughan, Vaughan decomposition) on the bilinear form — T161's beyond-RH triage applied to "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "linear"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " sums; for "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "bilinear"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " forms the large sieve gives unconditional square-root cancellation."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Docs + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " gains the T168 subsection (the Lagrange identity and the PSD finding with the hard Weil fence, the basis split of the key measurement, the closed exponent ledger, the self-similarity statement) and the T169 subsection (the candidate table, the collapse theorem TH7 with the loop closure as the key result, the CERT-UNIF gain, the R4-free chain with "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=0.052"
+        },
+        {
+          "k": "t",
+          "v": ", the standard-shape restatement, the “After T169” keybox with R1 in bilinear shape and T170 running); the phase-2 section title moves to T126–T169, the probe index gains the T168+T169 rows and the running totals move to "
+        },
+        {
+          "k": "m",
+          "v": "169"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4474"
+        },
+        {
+          "k": "t",
+          "v": " checks; "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " gains both entries (series (CLXXIX), (CLXXX)); website: "
+        },
+        {
+          "k": "c",
+          "v": "primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " feed entries T168+T169, status surfaces Teile 11–169 / "
+        },
+        {
+          "k": "m",
+          "v": "4474"
+        },
+        {
+          "k": "t",
+          "v": " checks, T170 running. NO promotion (T168/T169 candidates PENDING — bundling with T170 planned). Firewall unchanged: sandbox, no RH evidence, no zero data; every number typed THEOREM/CERT-UNIF/CERT-WINDOW/MEASURED/FIT."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · XIV",
     "heading": [
       {

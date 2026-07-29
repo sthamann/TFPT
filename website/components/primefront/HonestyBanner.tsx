@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4394/4394 sandbox checks —
+        (“the full proof”, T126+) is now open with 4474/4474 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -443,8 +443,25 @@ export function HonestyBanner() {
         the whole programme now rests on one scalar built from three
         closed lag sums (R1: an m-free upper bound on 1 − r₁₂²); the
         theorem cores of T166+T167 are load-bearing as v557. T168
-        (lagrange_minors_probe.py) is running the Lagrange identity —
-        the determinant as a sum of squares. What remains
+        (MINORS-RESIST) then ran the Lagrange identity on that scalar —
+        and the sum of squares is real: the arithmetic kernel is
+        positive definite on all 63 windows (hard-fenced per window, no
+        Weil test), the Wronskian minors are closed and provably
+        maximal in norm, and the one open factor is a single ratio
+        t* = Q₁₂/Q₁₁ of two closed lag sums — by T168-TH7 the target
+        itself, rewritten: the hardness is self-similar under exact
+        reformulation. T169 (RATIO-RESISTS) then PROVED that
+        self-similarity: every genuinely closed candidate for t* misses
+        by O(1) and diverges at h^+1.99, and the only accurate one,
+        √(â₂₂/â₁₁), collapses by a new identity (T169-TH7) back onto
+        det Â itself — the loop closes as an identity; the real gains
+        are the first CERT-UNIF in weeks (an unconditional Gershgorin
+        bound on ν₁), a chain rebuilt so the Weil-shaped positivity
+        never enters it (frame-A trend h^−2.948, ε = 0.052), and the
+        one open object in STANDARD analytic shape for the first time —
+        a bilinear von Mangoldt sum against closed Dirichlet weights.
+        T170 (bilinear_sieve_probe.py) is running the unconditional
+        sieve toolbox on that bilinear form. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

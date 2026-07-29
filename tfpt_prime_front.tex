@@ -94,7 +94,7 @@ fixed-size angle instruments, the exact-form identities, the sampling/harmonics
 identities, the Pareto/total-variation identities, the gauge/$P_{\mathrm{pr}}$
 identities and the cascade/vector identities. Everything beyond
 those twenty-three is \emph{sandbox}: an exploratory program, run as
-$167$ preregistered probes with $4394$ machine checks, which localized the residual object. That
+$169$ preregistered probes with $4474$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -271,7 +271,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T167: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T169: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -4435,7 +4435,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T167)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T169)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -8685,8 +8685,211 @@ position-blind $m$-free surrogates (the archimedean-only minimiser
 certifies $h^{-0.017}$, i.e.\ nothing; the type-change scramble).
 \emph{(Redirected)} work at $K=2$, not at the first flat $K=6$ (milder by
 $1.90$ and $h^{+0.353}$). T168 (\texttt{lagrange\_minors\_probe.py},
-contract \texttt{LAGRANGE.MINORS}) is running --- the Lagrange identity,
-the determinant as a sum of squares.
+contract \texttt{LAGRANGE.MINORS}) attacked exactly that scalar through the
+Lagrange identity --- the determinant as a sum of squares --- next
+subsection.
+\end{keybox}
+
+\subsection{The Lagrange identity: the sum of squares is real, and the
+hardness is self-similar (T168)}
+T168 (\texttt{lagrange\_minors\_probe.py}, contract \texttt{LAGRANGE.MINORS},
+$39/39$, $2.3$\,s, the same $63$-window union as T163--T167, recipe
+untouched, $h=96$--$1371$; T167's scalar reproduced bit-compatibly before it
+is attacked ($1-r_{12}^2=1.28\times10^{-7}$--$4.53\times10^{-4}$,
+$h^{-2.921}$ on frame A); $\kappa=0.038821$ verified at every jump point up
+to $n=4\times10^{5}$; verdict \textsc{minors-resist}) attacks R1 through the
+Lagrange identity --- the determinant as a sum of squares --- and returns a
+fully mapped relocation.
+
+\emph{The anatomy is exact.} $Q=X^{\mathsf T}AX$ with $X=[u,v]$ the two
+lowest parity modes in the $A$-metric ($3.9\times10^{-15}$); the mode
+vectors are closed trigonometry, $m$-free ($1.0\times10^{-14}$), and ---
+the first anatomy fact --- \textbf{Euclidean-orthogonal}: the Euclidean
+$r_{12}$ is $0$ to $6.2\times10^{-17}$, so the near-parallelism
+$r_{12}^2=1-O(h^{-3})$ is created \emph{entirely} by the arithmetic metric
+$A$ and not at all by the vectors. The Wronskian telescopes exactly,
+\begin{keyeq}$\displaystyle
+W_r-W_{r-1}=(\mu_1-\mu_2)\,u_rv_r$\quad($1.7\times10^{-13}$;
+$W_{h-1}=0$ to $2.7\times10^{-18}$),
+\end{keyeq}
+\noindent so the near-diagonal minors are one closed one-parameter family
+--- a Dirichlet partial sum; the minor sup is closed and $m$-free
+($\sim N/\pi^2$, attained to $0.770$); and Cauchy--Binet is verified as
+algebra ($1.1\times10^{-15}$ on random indefinite $A$): the second compound
+of $A$ is the exact kernel of the Lagrange form.
+
+\emph{The finding.} \textbf{On every one of the $63$ windows the $h\times h$
+arithmetic kernel $A$ is positive definite}
+($\lambda_{\min}=5.0\times10^{-6}$--$8.5\times10^{-4}$, $8$--$12$ orders
+above the solver floor), so the second compound is PSD and the Lagrange
+identity is a genuine sum of squares with strictly positive weights ---
+$\rho_{\mathrm{LAG}}=S_+/\det Q=1.000$ exactly, no sign cancellation. Hard
+fence, stated with the finding: this is a statement about one finite matrix
+per window, certified on \emph{this} surface ($h\le1371$); the Weil
+criterion is not tested, not assumed and not reverse-inferred.
+
+\emph{The key measurement --- it splits by basis.} In the closed basis the
+minors are \emph{maximal}:
+\begin{keyeq}$\displaystyle
+\tfrac12\sum_{r,s}M_{rs}^2=\|u\|^2\|v\|^2-\langle u,v\rangle^2
+=\frac1{\mu_1\mu_2}$\quad(exact, $6.9\times10^{-16}$; $\sim h^4$),
+\end{keyeq}
+\noindent --- the Wronskians carry zero arithmetic and the \emph{largest}
+norm they could have: all smallness sits in the PSD kernel evaluated at one
+closed vector. In the eigenbasis the sum is \emph{thin}: $90\%$ of the
+weighted sum of squares from $4$--$101$ pairs ($\le8\times10^{-4}$ of the
+$h^2$ eigen-pairs), the top pair always $(\lambda_{\min},\lambda_{\max})$
+carrying $6.8$--$41.7\%$ alone, and the pairs are \emph{raw}
+($\kappa_w=0.30$--$0.94$; a typical minor cancels only ${\sim}100{:}1$) ---
+no internal cancellation, the thinness is the story.
+
+\emph{The exponent ledger closes.} $1-r_{12}^2=\nu_1\nu_2/(\hat a_{11}\hat
+a_{22})$ ($1.0\times10^{-9}$, Poincar\'e separation) with $\nu_1\sim
+h^{+0.81}$, $\hat a_{11}\sim h^{+0.76}$, $\hat a_{22}\sim h^{+0.91}$ and
+$\nu_2\sim h^{-1.38}$: \textbf{every factor but one at the right power}.
+The best $m$-free-shaped bound $B_1=\lambda_1\lambda_2/(\hat a_{11}\hat
+a_{22})$ reads $h^{-0.548}$ on the union / $h^{-0.880}$ on frame A against
+the required $h^{-3}$ --- short by $h^{2.45}/h^{2.04}$; the literal
+count-times-sup budget costs $h^{+2.049}$, twelve orders above target,
+closed so it is never tried again. The open factor is identified exactly:
+$\nu_2$, with minimiser $t^*=Q_{12}/Q_{11}$ (factor $1.0000$), needed to
+relative accuracy $6.05\times10^{-3}$ median / $2.82\times10^{-4}$ worst,
+sharpening $h^{-1.146}$ --- T167 measured the same requirement from the
+other end, and \textbf{by T168-TH7 this factor \emph{is} the target
+rewritten}: the Lagrange route does not lower the accuracy demand, it
+relocates it (which is why \textsc{one-term-missing} is deliberately not
+rendered --- it would misread a reduction as progress on the inequality).
+No closed constant candidate works ($1/\sqrt2$ misses by up to $0.194$
+relative; $t^*$ drifts $h^{+0.076}$), no single-mode trial (overshoot
+$285$--$1.5\times10^{6}$), the ground state is only $0.982$-confined
+($\delta$ does not decay), and the Tur\'an band is neither sign-definite
+nor telescoping.
+
+\emph{Chain and stress.} $1/g_2=Q_{11}(1-r_{12}^2)$ verified to
+$1.2\times10^{-8}$ on $63/63$; certified end-to-end gain $\ge1.00$--$2.13$
+(weak, valid, direction-verified). \textbf{The scramble breaks harder than
+T167: $8/8$ windows lose $A\succ0$ \emph{and} the Gram property}
+($n_{\mathrm{neg}}$ up to $73$) --- no window survives, and on those windows
+the Lagrange identity is no longer a sum of squares at all; the $L_P$
+control has $Q_{12}=0$ and $1-r_{12}^2=1$ exactly, the sum collapsing onto
+its diagonal pair; the KMS/Dirichlet/correlation controls are exact.
+\textbf{The conclusion: the hardness is self-similar under exact
+reformulation} --- determinant $\to$ PSD compound at a closed vector $\to$
+near-null Rayleigh value $\to$ one ratio of two closed lag sums, same
+accuracy price --- and the seven no-gos say that no position-blind budget,
+no $m$-free trial vector, no $h$-independent constant and no count-times-sup
+budget can pay it. The balance of T168:
+$8$~theorem~$/\,0$~certified-uniform~$/\,3$~certified-per-window~$/\,
+11$~measured~$/\,7$~no-go.
+
+\begin{keybox}[After T168: one ratio]
+\emph{(The open factor)} $\nu_2$, equivalently the single ratio
+$t^*=Q_{12}/Q_{11}$ of two closed lag sums, to relative accuracy
+$6.05\times10^{-3}$ median / $2.82\times10^{-4}$ worst ($h^{-1.146}$) ---
+by T168-TH7 the target itself in a new notation. \emph{(Closed off)} the
+count-times-sup budget ($h^{+2.049}$), $h$-independent constants ($t^*$
+drifts $h^{+0.076}$), single-mode trials, the ground-state route ($\delta$
+does not decay), the Tur\'an band. T169 (\texttt{tstar\_ratio\_probe.py},
+contract \texttt{TSTAR.RATIO}) attacked exactly that ratio as a
+preregistered candidate table --- next subsection.
+\end{keybox}
+
+\subsection{The candidate table closes the loop: the self-similarity is
+proved (T169)}
+T169 (\texttt{tstar\_ratio\_probe.py}, contract \texttt{TSTAR.RATIO},
+$41/41$, $3.0$\,s, the same $63$-window union, recipe untouched; T168
+reproduced bit-compatibly ($t^*=0.5700$--$0.7898\sim h^{+0.076}$); the whole
+$2\times2$ block verified as a lag sum ($4.7\times10^{-16}$) with an exact
+arch/atom split ($5.6\times10^{-16}$); verdict \textsc{ratio-resists})
+attacks T168's one open factor as a preregistered candidate table --- and
+the table speaks with two voices.
+
+\emph{The negative half.} Every genuinely closed candidate fails by $O(1)$:
+the archimedean ratio at $0.84$ relative median, the lag heads at ${\sim}1$,
+the Toeplitz half at $1.0$; the best closed candidate is T168's constant
+$1/\sqrt2$ at $0.15/0.24$ (hitting $1/63$ windows, with the wrong sign of
+trend). The structural reason: the block is \textbf{atom-dominated}
+($|{\rm atom/arch}|=3.5$--$43$ on the diagonal, $14$--$461$ off it) and
+\textbf{$\hat a_{11}^{\mathrm{arch}}<0$ on $63/63$} --- the archimedean half
+is not even PSD, so the budget interval is vacuous \emph{by sign}; the atom
+shares are correlated ($0.994$) but not proportional
+($s_{12}/s_{11}=4.1$--$10.7$), and $|s_{12}-s_{11}|$ grows $h^{+0.84}$
+against a threshold sharpening $h^{-1.146}$ --- a divergence of
+$h^{+1.99}$.
+
+\emph{The key result --- the loop closes as an identity.} The only
+candidate that meets both thresholds, $K7=\sqrt{\hat a_{22}/\hat a_{11}}$
+($2.49\times10^{-5}$ median / $2.27\times10^{-4}$ worst, on $63/63$ windows
+individually, right trend $h^{-1.379}$ against the target $h^{-1.380}$),
+does so by a new theorem (T169-TH7):
+\begin{keyeq}$\displaystyle
+R\Bigl(\sqrt{\tfrac{\hat a_{22}}{\hat a_{11}}}\Bigr)
+=\frac{2\sqrt{\hat a_{11}\hat a_{22}}\;\det\hat A}
+{(\hat a_{11}+\hat a_{22})\bigl(\sqrt{\hat a_{11}\hat a_{22}}+\hat a_{12}\bigr)}$
+\quad($1.1\times10^{-9}$),
+\end{keyeq}
+\noindent --- it meets the threshold precisely because it puts $\det\hat A$
+back into the numerator. \textbf{The $t^*$-language is provably exactly as
+hard as T167's determinant --- no cheaper, no dearer: T167's scalar, T168's
+factor and T169's candidate are the same object, and the self-similarity is
+now proved, not observed.} In its usable form: $\nu_2\le2\det\hat A/(\hat
+a_{11}+\hat a_{22})$, tight to a factor $2.000$.
+
+\emph{The real gains.} \textbf{R3 is booked, the first certified-uniform
+row in weeks}: $\nu_1\le\max(\hat a_{11},\hat a_{22})+|\hat a_{12}|$
+(Gershgorin, unconditional, uniform in $h$, closed in the three entries),
+holding on $63/63$ and losing only $1.10$--$1.19$ at the same exponent ---
+the certified-uniform column moves off zero. R2 is refuted and honestly
+downgraded from cheap to open: the absolute-value budget gives $\hat
+a_{11}\ge-1.7\times10^{2}\ldots-13$ --- it cannot even certify positivity;
+a lower bound at $h^{+0.76}$ needs the sign structure of the atom lag sum,
+i.e.\ R1's difficulty again. R4: Cholesky on $63/63$ ---
+certified-per-window, permanently; three uniform routes refuted (the
+Gershgorin margin is negative on $63/63$; the $Z$-/$M$-matrix route cannot
+start, $A$ has positive off-diagonals on $63/63$; the perturbation split is
+off by $6.4\times10^{5}$). \textbf{The Weil fence, prominent:
+uniform-in-$h$ positivity of $A_h$ is RH-equivalent-shaped and is never
+routed, never claimed, never reverse-inferred --- instead the chain is
+rebuilt R4-free (T169-TH9): it does not need $A$-positivity.} And by
+T169-TH3 the $1/\sqrt{\mu}$ factors cancel exactly --- $\hat a_{ij}=
+t_i^{\mathsf T}At_j$ are single-sine lag sums against the closed T159
+Dirichlet weights, so the $\mathrm{cond}\sim10^{8}$ ladder leaves the file.
+
+\emph{The R4-free chain, end to end.}
+\begin{keyeq}$\displaystyle
+1-r_{12}^2\;\le\;\frac{\bigl[\max(\hat a_{11},\hat a_{22})+|\hat a_{12}|\bigr]\,
+R(\hat t)}{\hat a_{11}\hat a_{22}}$
+\quad(valid on $63/63$; loss $1.10$--$1.19$ with $\hat t=K7$),
+\end{keyeq}
+\noindent following the true scalar exponent for exponent: \textbf{frame-A
+trend $h^{-2.948}$, i.e.\ $h^{-3+\varepsilon}$ with $\varepsilon=0.052$
+inside the $0.5$ carry window} (union $h^{-2.262}$ against the true
+$h^{-2.246}$); with the best \emph{closed} $\hat t=1/\sqrt2$ it flattens to
+$h^{-0.990}$. Stress: the $L_P$ control is the sharpest line of the file
+($\hat a_{12}=4\times10^{-17}$, $t^*=0$ exactly as T168 predicts, overshoot
+exactly $4\cos^2(\pi/N)$ --- the $t^*$-recipe is a near-degeneracy artefact:
+its tightness \emph{measures} $\det\hat A$, it does not bound it); scramble
+$8/8$ (K7 accuracy $2.5\times10^{-5}\to4.6$); flat-weight null $8/8$ (both
+halves of the arithmetic input are necessary); the parity-pair control is
+only $6.7\times$ --- honestly reported as partial (the near-degeneracy is a
+low-spectrum property, not specific to $(t_1,t_2)$). The balance of T169:
+\textbf{$10$~theorem~$/\,2$~certified-uniform~$/\,1$~certified-per-window~$/\,
+4$~no-go}.
+
+\begin{keybox}[After T169: one bilinear von Mangoldt sum]
+\emph{(R1, in standard shape for the first time)} an $m$-free upper bound on
+$\det\hat A$ at $h^{-3+\varepsilon}$, now a \textbf{bilinear von Mangoldt
+sum against closed Dirichlet weights} (equivalently the diagonal ratio
+$\hat a_{22}/\hat a_{11}$ to $1.2\times10^{-2}$ median /
+$5.6\times10^{-4}$ worst). \emph{(Housekeeping)} R2 $=$ R1 (it needs the
+same sign structure); R3 closed (off the list); R4 not needed (the chain is
+R4-free). The strategic point: T161's beyond-RH triage applied to
+\emph{linear} sums --- for \emph{bilinear} forms the large sieve gives
+unconditional square-root cancellation, so for the first time the one open
+object stands where an unconditional classical tool is in principle
+competent. T170 (\texttt{bilinear\_sieve\_probe.py}, contract
+\texttt{BILINEAR.SIEVE}) is running the unconditional sieve toolbox
+(Montgomery--Vaughan, the Vaughan decomposition) on the bilinear form.
 \end{keybox}
 
 % =====================================================================
@@ -9178,9 +9381,9 @@ load-bearing artefact. The index covers the $156$ parts T11--T166 that the curre
 ($157$ runs --- T104 was a double run with two independent arms --- and $4163$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v557} promoted; with T126--T167, the first forty-two parts of the second phase, the
-running totals are \textbf{$167$ probes and $4394/4394$ checks}. T168
-(\texttt{lagrange\_minors\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v557} promoted; with T126--T169, the first forty-four parts of the second phase, the
+running totals are \textbf{$169$ probes and $4474/4474$ checks}. T170
+(\texttt{bilinear\_sieve\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -9353,6 +9556,8 @@ T164 & \texttt{\scriptsize sector\_\allowbreak change} & both arms of the succes
 T165 & \texttt{\scriptsize alignment\_\allowbreak eta} & the alignment successor R-F closed BY CERTIFICATE, not by failed search (the T163/T164 surface rebuilt and re-verified, ladder to $h=1445$, $27$ windows inside the cond horizon; the dashboard $R$, $\eta$, $P_{\mathrm{pr}}$, $\mathrm{TV}/(t_1v)^2$, QB gauge-invariant under $v\to tv$, THEOREM); \textbf{the T165 exchange identity $P_{\mathrm{pr}}=g_{16}\cdot R\cdot(\mathrm{TV}/(t_1v)^2)/\mu^P_1$ ($3.3\times10^{-16}$) --- four named objects, no inequality: demand and price are ONE equation}, so with T163's floor every crossing vector pays $\ge2\kappa g_{16}/\mu^P_1$ = the old KMS $h^2$; anatomy: the free optimum is LOW-HARMONIC ($93.7$--$96.8\%$ in the first $32$ parity modes vs $2.4$--$22.5\%$ baseline, lift $4.2$--$39.7$), orthogonal to the PNT main term ($-0.070\ldots-0.031$), heavy edges on prime-power cells (lift $1.36$--$2.12$), a CANCELLING sum (participation $8$--$18\%$); \textbf{the price decomposes EXACTLY (to $0.0$): $h^{+3.261}=+1.997$ (KMS, the same $h^2$ since T152) $+1.279$ (demand overshoot) $+0.093$ (floor) $-0.108$ ($g_{16}$)}; bar-tight counterfactual $h^{+1.982}$; $\eta(\mathrm{Cap})$ two-sided: the ceiling is a THEOREM, at $\mathrm{Cap}=10$ short by $5.5$--$392\times$ on every window, $0/27$ ladder points reach the bar; \textbf{EQUIVALENCE: $R>2\kappa$ and T163's crossing predicate are THE SAME predicate ($105/105$) $\Rightarrow$ R-F strictly STRONGER than the R2$''$ demand, the clauses collide --- R-F is EMPTY, its $m$-uniform form IS R-E-A}; T2: the $m$-free budgets bound $B_{11}$ sharply ($21$--$26$, $h^{+0.039}$) but it is the WRONG object ($1/g_1\sim h^{+3.110}$, $1/g_{16}\sim h^{+0.061}$, closure exact $+3.110-3.049=+0.061$) --- the certification lives in the $15$ ladder increments; T3, the DECOUPLED surface ($25$ windows / $6$ zones, $\nu\in\{4,5,6,8,11,16\}$, collinearity $0.87\to0.68$): \textbf{the quarter-bar drift is ZONE DEPTH, not window length ($19\times$)}; honest costs: $\sup1/g_{16}=5.7327$ RETIRES $U_{\mathrm{ref}}=4.90$ ($+17\%$, frame-A-specific); union ($52$ windows): $P_{\mathrm{pr}}\ge54.6$--$5865>\Theta_{\mathrm{TOL}}$, closed for $h>84.9$; stress: T145 monotone $1.0/2.8/12.1/27.5$ (to $102\times$), surrogate $8.6\times10^{3}$--$6.9\times10^{4}$, Dirichlet/KMS $10^{-15}$; balance $11$ THEOREM / $1$ CERT-UNIF / $4$ CERT-WINDOW / $6$ MEASURED; \textbf{rest: EXACTLY ONE genuine open object --- $\inf_m g_{16}(m)>0$, i.e.\ $g_{16}/g_1\ge c\,h^{3-\varepsilon}$ uniform in $m$: a quantifier over a certified flat list, a cancellation beyond absolute-value budgets} & ETA-RESISTS $\to$ \vref{v556} & 30/30\\
 T166 & \texttt{\scriptsize schur\_\allowbreak cascade} & the cascade lower bound dissected completely (a UNION surface: $27$ frame-A $+$ $36$ decoupled-$\nu$ windows $=63$, $h=96$--$1371$, $14\times$ lever arm, $\log h$/$\log\nu$ correlated only $0.33$; T165's numbers reproduced on frame A, the union reading $h^{+2.759}/h^{+0.193}/h^{+2.566}$); \textbf{FOUR IDENTITIES, all THEOREM on $63/63$: prefix (one Cholesky, all rungs), minor form (Schur 1917), the REGRESSION form $g_K/g_1=1/(1-R_K^2)$ --- the open object IS a near-collinearity --- and DIAGONAL INVARIANCE under $B\to DBD$: the $h^3$ belongs to the arithmetic Gram block alone}; rung profile extreme (rung $2$ alone median $59\%$, $K_{\mathrm{half}}\in\{2..5\}$ on $63/63$, flat first at $K=6$); rung $2$ closed: $1-r_{12}^2=1.3\times10^{-7}$--$4.5\times10^{-4}\sim h^{-2.92}$ (frame A) against $m$-free budgets sharp to $21$--$26$; \textbf{the CANCELLATION --- a third mechanism: no entry cancels ($60$--$99\%$ kept), neither half is collinear alone (arch $0.98$, atoms $0.29$), yet the SUM degenerates to seven digits: it lives in the $2\times2$ GRAM DETERMINANT} (polarisation split $6.7\times10^{-14}$; pieces $2.6$--$630$ vs det $1.0\times10^{-3}$--$1.7\times10^{-2}$, ratio $\sim h^{-1.45}$): the T159/T160 mechanism ONE LEVEL UP, in a quadratic functional of the lag sums; best closed route $h^{+1.319}$ (required $\beta$ precision $3.57\times10^{-4}$, all candidates miss by $12.4$--$2540$); sharpest form: \textbf{$1/g_K=\det G_{[1..K]}/(\mu^P_1\det G_{[2..K]})$, first flat at $K=6$ --- exactly ONE uniform inequality missing}; $U_{\mathrm{ref}}(\text{union})=7.45$ (supersedes $4.90$/$5.7327$; zone-depth-driven; CERT-WINDOW, off-recipe); full chain $g_1\le$ best $\le g_{16}\le s$ on $63/63$; $K=64$: the surrogate's loss is TRUNCATION ($h^{+1.963}\to h^{+2.574}$), no certificate; \textbf{two honest corrections: F2 STRICTLY WEAKER than F1 ($B_{11}\sim h^{+3.110}$, F1 needs $\varepsilon\le-0.110$); the confinement route a SUB-SURFACE ARTEFACT ($h^{+2.714}$ at $h\le780$ vs $h^{+1.963}$ on the union)}; stress: $L_P$ no-go breaks COMPLETELY (gain $\equiv1$ exactly), anti-fitting scramble factor $4569$ --- the mechanism hangs on WHERE the prime powers sit; balance $+5$ THEOREM / $+3$ CERT-WINDOW / $+4$ MEASURED, no new CERT-UNIF; P166.1\ldots P166.9 PENDING; \textbf{verdict by exponent gap: $h^{+1.319}$ vs $h^{+3.110}$, gap $h^{+1.791}$ --- the one missing inequality IS the cancellation, in three dresses} & CASCADE-RESISTS & 30/30\\
 T167 & \texttt{\scriptsize null\_\allowbreak vector} & the most constructive dress attacked and closed AS A CONSTRUCTION (the $63$-window union rebuilt bit for bit; T163--T166 reproduced as fits; $22$ families preregistered); \textbf{the PIVOT IDENTITY $u^{\mathsf T}Q_Ku=1/g_K+\delta^{\mathsf T}Q_K\delta$ for $\delta_1=0$ (THEOREM, $10206$ evaluations, $3.2\times10^{-9}$) --- every candidate excess $\rho=g_K\delta^{\mathsf T}Q\delta$ is an EXACT number}; \textbf{gram2 EXACT at $K=2$ ($\rho=0$, THEOREM): $(1,-Q_{21}/Q_{22})$ attains $1/g_2$ on $63/63$ ($8.7\times10^{-10}$), $B_{11}g_2=1/(1-r_{12}^2)$ an identity; certified gain exponent $h^{+2.921}$ frame A ($=h^{3-0.079}$), $h^{+2.246}$ union --- dress (c) collapses onto dress (b)}; perturbation theory dies structurally: Jacobi diverges (radius $1.0$--$12.7$) but \textbf{the KATO series CONVERGES (radius $0.067$) --- to the WRONG object} (the exact bottom eigenvector is itself useless, $\rho=6.04$, overlap $0.083$, relative gap $5.4\times10^{-7}$) --- closed off in EVERY order; moment route $h^{+1.320}$ = T166's $h^{+1.319}$ (flagged); two thresholds separated ($\mathrm{eps}_{\mathrm{vec}}$, $\mathrm{eps}_{\mathrm{ent}}$ = its square), envelopes on $189$ perturbations each; \textbf{monotone SHARPER in $K$ --- mildest at $K=2$ ($1.90\times$, $h^{+0.353}$), against the hypothesis and exactly where the vector is free}; at $K=6$ no closed family hits (separation $h^{+1.138}$, ratio $264\times$ --- the curves diverge); anchor $\mathrm{eps}_{\mathrm{ent}}(2)\to(1-r_{12}^2)/4$ = T166's quarter; end-to-end gain $2207$--$7.84\times10^{6}$ certified; gram2's $\rho$ at $K=16$ in $[0.17,6.16]$ --- the deficit is the higher rungs, not the vector; \textbf{scramble TYPE-CHANGE: $8/8$ windows lose positivity of the $2\times2$ diagonal ITSELF ($Q_{11}=-1.35\times10^{5}\ldots-1.02\times10^{4}$)}; anti-fitting cheat only $h^{-0.823}$; off-recipe $1-r_{12}^2\sim h^{-2.740}$ vs $h^{-2.921}$ ($+0.181$); \textbf{THE UNIFICATION AS AN IDENTITY: $\mathrm{eps}_{\mathrm{ent}}(K)=\rho\,(1/g_K)/S_K$ --- dress (a) = det ratio, dress (b) = $1-r_{12}^2$ (factor $1+3r_{12}^2\to4$), dress (c) = the threshold: ONE inequality, not three}; balance $6$ THEOREM / $0$ CERT-UNIF / $2$ CERT-WINDOW / $7$ MEASURED; ONE-TERM-MISSING deliberately NOT rendered (the one missing term IS dress (b)); \textbf{REST: R1, the only item --- an $m$-free upper bound on $1-Q_{12}^2/(Q_{11}Q_{22})\le C\,h^{-3+\varepsilon}$ (required $1.25\times10^{-5}$ median, $3.19\times10^{-8}$ worst)}; theorem cores of T166+T167 promoted as \vref{v557} & VECTOR-RESISTS $\to$ \vref{v557} & 39/39\\
+T168 & \texttt{\scriptsize lagrange\_\allowbreak minors} & R1 attacked via the Lagrange identity --- the determinant as a sum of squares (the same $63$-window union as T163--T167, recipe untouched; T167's scalar reproduced bit-compatibly); anatomy EXACT: $Q=X^{\mathsf T}AX$ ($3.9\times10^{-15}$), the mode vectors EUCLIDEAN-ORTHOGONAL ($r_{12}=0$ to $6.2\times10^{-17}$ --- \textbf{the near-parallelism is created ENTIRELY by the arithmetic metric}), the Wronskian TELESCOPES ($W_r-W_{r-1}=(\mu_1-\mu_2)u_rv_r$, $1.7\times10^{-13}$; one closed Dirichlet-partial-sum family), minor sup closed $m$-free $\sim N/\pi^2$ (attained $0.770$), Cauchy--Binet verified as algebra; \textbf{FINDING: the $h\times h$ kernel $A$ is POSITIVE DEFINITE on $63/63$ ($\lambda_{\min}=5.0\times10^{-6}$--$8.5\times10^{-4}$, $8$--$12$ orders above the solver floor) $\Rightarrow$ the Lagrange identity is a GENUINE sum of squares, $\rho_{\mathrm{LAG}}=1.000$ exactly --- hard-fenced: a finite matrix per window, NO Weil test/assumption/reverse inference}; the key measurement SPLITS BY BASIS: closed basis --- minors MAXIMAL ($\tfrac12\sum M^2=1/(\mu_1\mu_2)$ exact $\sim h^4$: the Wronskians carry ZERO arithmetic, all smallness sits in the PSD kernel at one closed vector); eigenbasis --- the sum is THIN ($90\%$ from $4$--$101$ pairs $\le8\times10^{-4}$, top pair always $(\lambda_{\min},\lambda_{\max})$ at $6.8$--$41.7\%$ alone, raw $\kappa_w=0.30$--$0.94$, typical minor $100{:}1$); exponent ledger CLOSED, arithmetic-free: $1-r_{12}^2=\nu_1\nu_2/(\hat a_{11}\hat a_{22})$ with $\nu_1\sim h^{+0.81}$, $\hat a_{11}\sim h^{+0.76}$, $\hat a_{22}\sim h^{+0.91}$ ($\nu_2\sim h^{-1.38}$) --- \textbf{every factor but one at the right power}; best $m$-free-shaped bound $B_1$ $h^{-0.548}$ union / $h^{-0.880}$ frame A --- short by $h^{2.45}$/$h^{2.04}$; literal budget $h^{+2.049}$ ($12$ orders above); \textbf{the open factor EXACT: $\nu_2$ with minimiser $t^*=Q_{12}/Q_{11}$ (factor $1.0000$), needed to $6.05\times10^{-3}$ median / $2.82\times10^{-4}$ worst ($h^{-1.146}$) --- by T168-TH7 that factor IS the target rewritten} (ONE-TERM-MISSING deliberately NOT rendered); no closed constant ($1/\sqrt2$ misses $0.194$), no single-mode trial (overshoot $285$--$1.5\times10^{6}$), ground state only $0.982$-confined ($\delta$ does not decay), Tur\'an band neither sign-definite nor telescoping; chain $1/g_2=Q_{11}(1-r_{12}^2)$ ($1.2\times10^{-8}$), certified gain $\ge1.00$--$2.13$ (weak, valid); \textbf{scramble breaks HARDER than T167: $8/8$ lose $A\succ0$ AND the Gram property ($n_{\mathrm{neg}}$ up to $73$) --- no window survives}; $L_P$: $Q_{12}=0$, $1-r_{12}^2=1$ exactly; \textbf{the hardness is SELF-SIMILAR under exact reformulation} (determinant $\to$ PSD compound at a closed vector $\to$ near-null Rayleigh $\to$ one ratio of two lag sums, same accuracy price); balance $8$ THEOREM / $0$ CERT-UNIF / $3$ CERT-WINDOW / $11$ MEASURED / $7$ NO-GO & MINORS-RESIST & 39/39\\
+T169 & \texttt{\scriptsize tstar\_\allowbreak ratio} & T168's one open factor attacked as a preregistered candidate table (same union; the block verified as a lag sum, $4.7\times10^{-16}$, with an exact arch/atom split, $5.6\times10^{-16}$); \textbf{every genuinely CLOSED candidate misses by $O(1)$ and DIVERGES from the threshold at $h^{+1.99}$} (the block is ATOM-DOMINATED, $|{\rm atom/arch}|=3.5$--$43$ resp.\ $14$--$461$; $\hat a_{11}^{\mathrm{arch}}<0$ on $63/63$ --- the arch half not even PSD; atom shares correlated $0.994$ but NOT proportional, $s_{12}/s_{11}=4.1$--$10.7$; budget interval vacuous BY SIGN); \textbf{the ONLY candidate meeting the threshold, $K7=\sqrt{\hat a_{22}/\hat a_{11}}$ ($2.49\times10^{-5}$ median / $2.27\times10^{-4}$ worst, $63/63$), does so by T169-TH7: $R(K7)=2\sqrt{\hat a_{11}\hat a_{22}}\,\det\hat A/[(\hat a_{11}+\hat a_{22})(\sqrt{\hat a_{11}\hat a_{22}}+\hat a_{12})]$ ($1.1\times10^{-9}$) --- it reintroduces $\det\hat A$: the $t^*$-language is provably exactly as hard as T167's determinant, THE LOOP CLOSES AS AN IDENTITY} (T167 scalar $\to$ T168 factor $\to$ T169 candidate = the same object); gains: \textbf{R3 booked CERT-UNIF --- $\nu_1\le\max(\hat a_{11},\hat a_{22})+|\hat a_{12}|$ (Gershgorin, unconditional, uniform in $h$), $63/63$, loses only $1.10$--$1.19$ --- the CERT-UNIF column moves off zero}; R2 refuted and downgraded to OPEN (the absolute-value budget gives $\hat a_{11}\ge-1.7\times10^{2}\ldots-13$ --- cannot even certify positivity); R4: Cholesky $63/63$ CERT-WINDOW permanent, three uniform routes refuted (Gershgorin margin negative $63/63$; $Z$-/$M$-matrix route cannot start; perturbation split off by $6.4\times10^{5}$); \textbf{Weil fence prominent: uniform-in-$h$ positivity of $A_h$ is RH-equivalent-shaped and never routed or claimed --- the chain REBUILT R4-FREE (TH9)}, valid $63/63$, loss $1.10$--$1.19$, \textbf{frame-A trend $h^{-2.948}$ ($\varepsilon=0.052$ in the $0.5$ carry window)}; TH3: the $1/\sqrt{\mu}$ factors cancel --- $\hat a_{ij}=t_i^{\mathsf T}At_j$ are single-sine lag sums, the cond-$10^{8}$ ladder leaves the file; stress: $L_P$ exact ($\hat a_{12}=4\times10^{-17}$, overshoot exactly $4\cos^2(\pi/N)$ --- the $t^*$-tightness MEASURES $\det\hat A$), scramble $8/8$ (K7 $2.5\times10^{-5}\to4.6$), flat-weight null $8/8$, parity-pair only $6.7\times$ (honestly PARTIAL); \textbf{REST: R1 in STANDARD SHAPE for the first time --- a BILINEAR VON MANGOLDT SUM against closed Dirichlet weights} (diagonal ratio to $1.2\times10^{-2}$/$5.6\times10^{-4}$); R2 $=$ R1, R3 closed, R4 not needed; balance $10$ THEOREM / $2$ CERT-UNIF / $1$ CERT-WINDOW / $4$ NO-GO & RATIO-RESISTS & 41/41\\
 \end{xltabular}
 }
 
