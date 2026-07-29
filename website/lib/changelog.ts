@@ -43,6 +43,1021 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · XX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "prime-front diary T175 (the placement phases are real and causal but non-smooth, the heterogeneity dissolves into the error bar, and the densest reachable bin is consistent with zero — PHASES-RESIST) + paper + website sync; NO promotion, NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T175 ("
+            },
+            {
+              "k": "c",
+              "v": "phase_placement_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "PHASE.PLACEMENT"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "38/38"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "20.2"
+            },
+            {
+              "k": "t",
+              "v": " s, "
+            },
+            {
+              "k": "m",
+              "v": "1504"
+            },
+            {
+              "k": "t",
+              "v": " cells on "
+            },
+            {
+              "k": "m",
+              "v": "188"
+            },
+            {
+              "k": "t",
+              "v": " anchors — every prime power in "
+            },
+            {
+              "k": "m",
+              "v": "[40,1090]"
+            },
+            {
+              "k": "t",
+              "v": " is an anchor, no selection, no frame rule anywhere — crossed with the T174 ladder "
+            },
+            {
+              "k": "m",
+              "v": "h=160\\ldots1280"
+            },
+            {
+              "k": "t",
+              "v": " plus the declared floor "
+            },
+            {
+              "k": "m",
+              "v": "h=128"
+            },
+            {
+              "k": "t",
+              "v": "; verdict PHASES-RESIST, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The phases."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The preregistered anchor invariant "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_p=\\mathrm{frac}(\\log p/\\alpha)"
+        },
+        {
+          "k": "t",
+          "v": " is unusable and the probe says so out loud (a smooth monotone function of "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": ", Rayleigh "
+        },
+        {
+          "k": "m",
+          "v": "Z=1296"
+        },
+        {
+          "k": "t",
+          "v": " — a regression on it would be an "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-regression in disguise); only the cell phase "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi_p(h)=\\mathrm{frac}(h\\theta_p)"
+        },
+        {
+          "k": "t",
+          "v": " is free and equidistributed (largest "
+        },
+        {
+          "k": "m",
+          "v": "Z=1.41"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "1316"
+        },
+        {
+          "k": "t",
+          "v": " cells), with the generating identity "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{frac}(\\log p/D)=\\mathrm{frac}(h\\,\\mathrm{frac}(\\log p/\\alpha))"
+        },
+        {
+          "k": "t",
+          "v": " certified at "
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": " (Weyl 1916). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The phases are real in "
+            },
+            {
+              "k": "m",
+              "v": "\\log R"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "F=10.80"
+        },
+        {
+          "k": "t",
+          "v": " against a within-rung-scrambled null with "
+        },
+        {
+          "k": "m",
+          "v": "95\\%"
+        },
+        {
+          "k": "t",
+          "v": " point "
+        },
+        {
+          "k": "m",
+          "v": "1.69"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "+10.3\\%"
+        },
+        {
+          "k": "t",
+          "v": " held-out residual variance under a rank-parity split, a composite placebo family at "
+        },
+        {
+          "k": "m",
+          "v": "F=0.81/-0.0275"
+        },
+        {
+          "k": "t",
+          "v": ", amplitudes monotone in "
+        },
+        {
+          "k": "m",
+          "v": "p"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "0.018"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "p=5"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "0.141"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "p=19"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "But they are not the heterogeneity channel"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": residual "
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2/\\mathrm{dof}=2.52"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "3.14"
+        },
+        {
+          "k": "t",
+          "v": " (target "
+        },
+        {
+          "k": "m",
+          "v": "<2"
+        },
+        {
+          "k": "t",
+          "v": " missed), the held-out excess scatter gets "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "worse"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "-15.4\\%"
+        },
+        {
+          "k": "t",
+          "v": "), the deficit untouched ("
+        },
+        {
+          "k": "m",
+          "v": "0.18\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "); the exploratory scan excludes every other anchor statistic (all improve in sample and worsen held out). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "What resolves the heterogeneity is the error bar"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": with jackknife slope errors the excess scatter goes "
+        },
+        {
+          "k": "m",
+          "v": "0.1224\\to0.0000"
+        },
+        {
+          "k": "t",
+          "v": " and the robust pull spread "
+        },
+        {
+          "k": "m",
+          "v": "1.41\\to1.22"
+        },
+        {
+          "k": "t",
+          "v": " (model-free interleaved half-split "
+        },
+        {
+          "k": "m",
+          "v": "0.2722"
+        },
+        {
+          "k": "t",
+          "v": " against "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{sd}=0.2789"
+        },
+        {
+          "k": "t",
+          "v": ") — T174's "
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2"
+        },
+        {
+          "k": "t",
+          "v": " was substantially an OLS independence assumption, not a physical spread; "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the "
+            },
+            {
+              "k": "m",
+              "v": "5\\sigma"
+            },
+            {
+              "k": "t",
+              "v": " deficit is unaffected"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (its bar never came from "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{se}_n"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The dense limit."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The corner is exhausted ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{dens}\\le361"
+        },
+        {
+          "k": "t",
+          "v": " forced by the sieve cap and "
+        },
+        {
+          "k": "m",
+          "v": "h\\ge128"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "359"
+        },
+        {
+          "k": "t",
+          "v": " reached); the deficit(dens) curve over three decades ("
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " declared ratio-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " bins, cluster-robust) falls "
+        },
+        {
+          "k": "m",
+          "v": "+0.982\\pm0.213\\to+0.576\\to+0.207\\to+0.194\\to+0.088\\to-0.057\\pm0.132"
+        },
+        {
+          "k": "t",
+          "v": " — monotone within "
+        },
+        {
+          "k": "m",
+          "v": "2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " at every step, density slope "
+        },
+        {
+          "k": "m",
+          "v": "6.1\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the densest reachable bin consistent with zero"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; the extrapolation fence is explicit: a true zero, a power-law approach and a plateau below "
+        },
+        {
+          "k": "m",
+          "v": "0.132"
+        },
+        {
+          "k": "t",
+          "v": " are all consistent — undecidable under this sieve. The sharpened confound test finds "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "both"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " channels significant ("
+        },
+        {
+          "k": "m",
+          "v": "\\log h"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+0.2435\\pm0.0670"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\log\\mathrm{dens}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "-0.0631\\pm0.0172"
+        },
+        {
+          "k": "t",
+          "v": "; curvature "
+        },
+        {
+          "k": "m",
+          "v": "a_2=-0.137\\pm0.029"
+        },
+        {
+          "k": "t",
+          "v": ") — T174's density driver survives but is no longer unique; the deficit is not a single exponent. Unplanned load-bearing finding: mass-preserving alternative assemblies are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "inadmissible"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (lump "
+        },
+        {
+          "k": "m",
+          "v": "0\\%"
+        },
+        {
+          "k": "t",
+          "v": ", wide "
+        },
+        {
+          "k": "m",
+          "v": "46\\%/0\\%"
+        },
+        {
+          "k": "t",
+          "v": " PD survival); the admissible continuous deformation gives sensitivities "
+        },
+        {
+          "k": "m",
+          "v": "+0.384"
+        },
+        {
+          "k": "t",
+          "v": " (sparse) vs "
+        },
+        {
+          "k": "m",
+          "v": "-1.054"
+        },
+        {
+          "k": "t",
+          "v": " (dense), ratio "
+        },
+        {
+          "k": "m",
+          "v": "0.4"
+        },
+        {
+          "k": "t",
+          "v": " — the sparse corner is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " an assembly artefact. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) Rule proposal "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " intervention."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{dens}\\ge1"
+        },
+        {
+          "k": "t",
+          "v": " proposed for the chain convention ("
+        },
+        {
+          "k": "m",
+          "v": "+0.722\\pm0.094"
+        },
+        {
+          "k": "t",
+          "v": " unresolved vs "
+        },
+        {
+          "k": "m",
+          "v": "+0.099\\pm0.019"
+        },
+        {
+          "k": "t",
+          "v": " resolved, "
+        },
+        {
+          "k": "m",
+          "v": "6.5\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " separation, "
+        },
+        {
+          "k": "m",
+          "v": "6\\%"
+        },
+        {
+          "k": "t",
+          "v": " of cells; explicitly not retroactive); comb scramble destroys "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the new phase intervention"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (with an exact "
+        },
+        {
+          "k": "m",
+          "v": "\\delta=0"
+        },
+        {
+          "k": "t",
+          "v": " rebuild control): displacing the six family atoms inside their cells gives "
+        },
+        {
+          "k": "m",
+          "v": "d\\log R/d\\delta=879"
+        },
+        {
+          "k": "t",
+          "v": ", linear to a factor "
+        },
+        {
+          "k": "m",
+          "v": "1.011"
+        },
+        {
+          "k": "t",
+          "v": " over four declared decades — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the placement phase is causal for "
+            },
+            {
+              "k": "m",
+              "v": "R"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", the first interventional statement of the series — and it overturns the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "shape"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the D1 result: the fitted first harmonic predicts only "
+        },
+        {
+          "k": "m",
+          "v": "2.89"
+        },
+        {
+          "k": "t",
+          "v": " (a factor "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}300"
+        },
+        {
+          "k": "t",
+          "v": " too small), positive definiteness dies for "
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\ge10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{GAP}=1.6\\times10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.8\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " — the Schur floor is a near-degeneracy and "
+        },
+        {
+          "k": "m",
+          "v": "\\log R"
+        },
+        {
+          "k": "t",
+          "v": " is necessarily "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "non-smooth"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " in the phases. Candidates P175-1–P175-8 PENDING, no promotion. The rest: the closed-form "
+        },
+        {
+          "k": "m",
+          "v": "d\\lambda_{\\min}=v^{\\mathsf T}\\,d\\hat A\\,v"
+        },
+        {
+          "k": "t",
+          "v": " response (R1); "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the dense-corner zero needs a larger sieve, nothing else"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (R2); the curvature vs the exponent reading (R3); an "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " floor for the positivity margin (R4); the last "
+        },
+        {
+          "k": "m",
+          "v": "22\\%"
+        },
+        {
+          "k": "t",
+          "v": " of the pull spread (R5). T176 ("
+        },
+        {
+          "k": "c",
+          "v": "DENSE.LIMIT"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "dense_limit_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running — the larger sieve. Diary counters "
+        },
+        {
+          "k": "m",
+          "v": "175"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4716"
+        },
+        {
+          "k": "t",
+          "v": " checks (series (CLXXXVI))."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": new phase-2 subsection (T175: the cell-phase construction with the invariant trap said out loud, the causality finding as key result, the error-bar resolution of the heterogeneity as the honest correction, the density curve with the zero-consistent end bin and the extrapolation fence, keybox “After T175” with the larger sieve as the only road and T176 running), section title T126"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "T175, abstract counters "
+        },
+        {
+          "k": "m",
+          "v": "175/4716"
+        },
+        {
+          "k": "t",
+          "v": ", probe index extended (T175 row, running totals, T176 running); "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " T175 entry (counters "
+        },
+        {
+          "k": "m",
+          "v": "175"
+        },
+        {
+          "k": "t",
+          "v": " Proben / "
+        },
+        {
+          "k": "m",
+          "v": "4716"
+        },
+        {
+          "k": "t",
+          "v": " Checks, Serie (CLXXXVI)); website: "
+        },
+        {
+          "k": "c",
+          "v": "primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " feed entry T175 (verdict enum PHASES-RESIST added), status surfaces Teile 11–175 / "
+        },
+        {
+          "k": "m",
+          "v": "4716"
+        },
+        {
+          "k": "t",
+          "v": " checks ("
+        },
+        {
+          "k": "c",
+          "v": "page.tsx"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HonestyBanner.tsx"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ModuleLadder.tsx"
+        },
+        {
+          "k": "t",
+          "v": "). NO promotion; NO marker moves; not RH evidence."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · XIX",
     "heading": [
       {

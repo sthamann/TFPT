@@ -62,6 +62,77 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (XX) (prime-front diary T175 (the placement phases are real and causal but non-smooth, the heterogeneity dissolves into the error bar, and the densest reachable bin is consistent with zero --- PHASES-RESIST) + paper + website sync; NO promotion, NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Prime-front diary T175 (\texttt{phase\_placement\_probe.py}, contract
+\texttt{PHASE.PLACEMENT}, $38/38$, $20.2$\,s, $1504$ cells on $188$ anchors --- every
+prime power in $[40,1090]$ is an anchor, no selection, no frame rule anywhere ---
+crossed with the T174 ladder $h=160\ldots1280$ plus the declared floor $h=128$; verdict
+PHASES-RESIST, sandbox).} \emph{(1) The phases.} The preregistered anchor invariant
+$\theta_p=\mathrm{frac}(\log p/\alpha)$ is unusable and the probe says so out loud (a
+smooth monotone function of $\alpha$, Rayleigh $Z=1296$ --- a regression on it would be
+an $\alpha$-regression in disguise); only the cell phase
+$\varphi_p(h)=\mathrm{frac}(h\theta_p)$ is free and equidistributed (largest $Z=1.41$
+on $1316$ cells), with the generating identity
+$\mathrm{frac}(\log p/D)=\mathrm{frac}(h\,\mathrm{frac}(\log p/\alpha))$ certified at
+$1.1\times10^{-13}$ (Weyl 1916). \emph{The phases are real in $\log R$}: $F=10.80$
+against a within-rung-scrambled null with $95\%$ point $1.69$, $+10.3\%$ held-out
+residual variance under a rank-parity split, a composite placebo family at
+$F=0.81/-0.0275$, amplitudes monotone in $p$ ($0.018$ at $p=5$ to $0.141$ at $p=19$).
+\emph{But they are not the heterogeneity channel}: residual
+$\chi^2/\mathrm{dof}=2.52$ from $3.14$ (target $<2$ missed), the held-out excess
+scatter gets \emph{worse} ($-15.4\%$), the deficit untouched ($0.18\sigma$); the
+exploratory scan excludes every other anchor statistic (all improve in sample and
+worsen held out). \emph{What resolves the heterogeneity is the error bar}: with
+jackknife slope errors the excess scatter goes $0.1224\to0.0000$ and the robust pull
+spread $1.41\to1.22$ (model-free interleaved half-split $0.2722$ against
+$\mathrm{sd}=0.2789$) --- T174's $\chi^2$ was substantially an OLS independence
+assumption, not a physical spread; \emph{the $5\sigma$ deficit is unaffected} (its bar
+never came from $\mathrm{se}_n$). \emph{(2) The dense limit.} The corner is exhausted
+($\mathrm{dens}\le361$ forced by the sieve cap and $h\ge128$; $359$ reached); the
+deficit(dens) curve over three decades ($6$ declared ratio-$4$ bins, cluster-robust)
+falls $+0.982\pm0.213\to+0.576\to+0.207\to+0.194\to+0.088\to-0.057\pm0.132$ ---
+monotone within $2\sigma$ at every step, density slope $6.1\sigma$, \emph{the densest
+reachable bin consistent with zero}; the extrapolation fence is explicit: a true zero,
+a power-law approach and a plateau below $0.132$ are all consistent --- undecidable
+under this sieve. The sharpened confound test finds \emph{both} channels significant
+($\log h$ $+0.2435\pm0.0670$, $\log\mathrm{dens}$ $-0.0631\pm0.0172$; curvature
+$a_2=-0.137\pm0.029$) --- T174's density driver survives but is no longer unique; the
+deficit is not a single exponent. Unplanned load-bearing finding: mass-preserving
+alternative assemblies are \emph{inadmissible} (lump $0\%$, wide $46\%/0\%$ PD
+survival); the admissible continuous deformation gives sensitivities $+0.384$ (sparse)
+vs $-1.054$ (dense), ratio $0.4$ --- the sparse corner is \emph{not} an assembly
+artefact. \emph{(3) Rule proposal $+$ intervention.} $\mathrm{dens}\ge1$ proposed for
+the chain convention ($+0.722\pm0.094$ unresolved vs $+0.099\pm0.019$ resolved,
+$6.5\sigma$ separation, $6\%$ of cells; explicitly not retroactive); comb scramble
+destroys $12/12$; \emph{the new phase intervention} (with an exact $\delta=0$ rebuild
+control): displacing the six family atoms inside their cells gives
+$d\log R/d\delta=879$, linear to a factor $1.011$ over four declared decades ---
+\emph{the placement phase is causal for $R$}, the first interventional statement of
+the series --- and it overturns the \emph{shape} of the D1 result: the fitted first
+harmonic predicts only $2.89$ (a factor ${\sim}300$ too small), positive definiteness
+dies for $\delta\ge10^{-3}$, $\mathrm{GAP}=1.6\times10^{-9}$--$4.8\times10^{-6}$ ---
+the Schur floor is a near-degeneracy and $\log R$ is necessarily \emph{non-smooth} in
+the phases. Candidates P175-1--P175-8 PENDING, no promotion. The rest: the closed-form
+$d\lambda_{\min}=v^{\mathsf T}\,d\hat A\,v$ response (R1); \emph{the dense-corner zero
+needs a larger sieve, nothing else} (R2); the curvature vs the exponent reading (R3);
+an $h$ floor for the positivity margin (R4); the last $22\%$ of the pull spread (R5).
+T176 (\texttt{DENSE.LIMIT}, \texttt{dense\_limit\_probe.py}) is running --- the larger
+sieve. Diary counters $175$ probes / $4716$ checks (series (CLXXXVI)).
+\item \textbf{Paper + website sync.} \texttt{tfpt\_prime\_front}: new phase-2
+subsection (T175: the cell-phase construction with the invariant trap said out loud,
+the causality finding as key result, the error-bar resolution of the heterogeneity as
+the honest correction, the density curve with the zero-consistent end bin and the
+extrapolation fence, keybox ``After T175'' with the larger sieve as the only road and
+T176 running), section title T126$\to$T175, abstract counters $175/4716$, probe index
+extended (T175 row, running totals, T176 running);
+\texttt{experiments/next.txt} T175 entry (counters $175$ Proben / $4716$ Checks, Serie
+(CLXXXVI)); website: \texttt{primeFront.ts} feed entry T175 (verdict enum
+PHASES-RESIST added), status surfaces Teile 11--175 / $4716$ checks
+(\texttt{page.tsx}, \texttt{HonestyBanner.tsx}, \texttt{ModuleLadder.tsx}). NO
+promotion; NO marker moves; not RH evidence.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (XIX) (\texttt{v560} --- the frame/deficit identities promoted; prime-front diary T174 (the gauge route is exhausted by theorems, and the deficit is measured frame-free at $5.0\sigma$ --- PARTIAL-CANCEL) + paper + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v560} (\texttt{PRIME.FRAME.DEFICIT.01}).} Promotion of

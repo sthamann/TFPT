@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4678/4678 sandbox checks —
+        (“the full proof”, T126+) is now open with 4716/4716 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -512,8 +512,18 @@ export function HonestyBanner() {
         directly on a frame-rule-free rectangle: +0.1111 ± 0.0222, five
         sigma from zero, its driver identified as comb density per lag
         cell; the theorem cores of T172–T174 are load-bearing as v560.
-        T175 (phase_placement_probe.py) is testing the placement phases
-        and the dense limit. What remains
+        T175 (PHASES-RESIST) then measured the placement phases
+        directly: they are real in log R and causal for R under an
+        intervention with an exact rebuild control (dlog R/dδ = 879,
+        linear over four declared decades), but no phase formula is
+        certifiable — the response is provably non-smooth, the Schur
+        floor a near-degeneracy — the per-anchor heterogeneity
+        dissolved substantially into the error bar (jackknife excess
+        scatter 0.1224 → 0.0000; the five-sigma deficit untouched), and
+        the deficit falls monotonically with comb density to a densest
+        reachable bin consistent with zero, with true zero, power-law
+        approach and low plateau undecidable under this sieve. T176
+        (dense_limit_probe.py) is running — the larger sieve. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann
