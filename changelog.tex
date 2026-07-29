@@ -62,6 +62,83 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (XIV) (\texttt{v557} --- the cascade/vector identities of phase 2 promoted; prime-front diary T167 (three dresses are one inequality, the closed vector exact at $K=2$ --- VECTOR-RESISTS) + paper + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v557} (\texttt{PRIME.CASCADE.VECT.01}).} Promotion of
+the closed theorem cores of T166 (contract \texttt{SCHUR.CASCADE}) and T167 (contract
+\texttt{NULL.VECTOR}) as one deliberately narrow module
+(\texttt{v557\_cascade\_vector\_identities.py}, $23$ checks, ${\sim}0.1$\,s), everything
+recomputed on \texttt{v551}--\texttt{v556}'s declared small frame-A surface ($12$ deepest
+in-cap zones, $m=96\ldots291\le300$; $\kappa=0.038821$ verified at every jump point of
+$\psi(x)/x$ on the table): \emph{(1)} the cascade identities --- prefix (one Cholesky,
+all sixteen rungs, $1.1\times10^{-12}$ on $192$ comparisons), minor form
+$1/g_K=\det G_{[1..K]}/(\mu^P_1\det G_{[2..K]})$ on the raw arithmetic Gram block
+($2.7\times10^{-12}$; Schur 1917) and regression form $g_K/g_1=1/(1-R_K^2)$
+($8.8\times10^{-13}$); \emph{(2)} the diagonal invariance of the gain under $B\to DBD$
+($2.7\times10^{-12}$ on $144$ random diagonals --- the gain belongs to the arithmetic
+Gram block alone); \emph{(3)} the exact $K=2$ identity --- the closed vector
+$(1,-Q_{21}/Q_{22})$ attains $1/g_2=Q_{11}(1-r_{12}^2)$ exactly and
+$B_{11}g_2=1/(1-r_{12}^2)$ identically ($1.2\times10^{-12}$): the fast-null-vector is
+FREE at $K=2$, dress (c) collapses onto dress (b); \emph{(4)} the pivot identity
+$u^{\mathsf T}Q_Ku=1/g_K+\delta^{\mathsf T}Q_K\delta$ for $\delta_1=0$
+($2.0\times10^{-12}$ on $252$ evaluations; the $\delta_1=0.1$ mutation breaks by exactly
+the closed cross term $2\delta_1$) with the exact entry threshold and the unification
+$(1/g_2)/S_2=(1-r_{12}^2)/(1+3r_{12}^2)$ --- ONE inequality, not three; \emph{(5)} the
+trial theorem ($288$ trials, every candidate a certified lower bound), the $L_P$ no-go
+(cascade gain exactly $1$, deviation $0.0$) and the scramble type-change ($B_{11}$
+itself loses positivity on $49/60$ declared draws, a majority on $12/12$ windows) as
+must-breaks; every statement with a mutation control; the one open scalar R1 (an
+$m$-free upper bound on $1-r_{12}^2$) explicitly typed OPEN; NO RH statement. Ledger row
+\texttt{PRIME.CASCADE.VECT.01}; registered in \texttt{run\_all.py} and
+\texttt{script\_registry.csv}; suite counter $550\to551$ scripts.
+\item \textbf{Prime-front diary T167 (\texttt{null\_vector\_probe.py}, contract
+\texttt{NULL.VECTOR}, $39/39$, $1.4$\,s, the $63$-window union of T166 rebuilt bit for
+bit; T163--T166 reproduced as fits; verdict VECTOR-RESISTS with a strong reduction,
+sandbox).} The most constructive dress attacked and closed \emph{as a construction}:
+$22$ families preregistered, all evaluated through the pivot identity
+$u^{\mathsf T}Qu=1/g_K+\delta^{\mathsf T}Q\delta$ ($10206$ evaluations,
+$3.2\times10^{-9}$) --- \textbf{gram2 is EXACT at $K=2$} ($\rho=0$, a theorem: the
+closed vector attains $1/g_2$ on $63/63$, $B_{11}g_2=1/(1-r_{12}^2)$ an identity,
+certified gain exponent $h^{+2.921}$ on frame A $=h^{3-0.079}$, $h^{+2.246}$ union).
+Perturbation theory dies structurally: Jacobi diverges (radius $1.0$--$12.7$) but
+\textbf{the Kato series CONVERGES (radius $0.067$) --- to the WRONG object} (the exact
+bottom eigenvector is itself a useless trial, $\rho=6.04$, overlap $0.083$, relative
+gap $5.4\times10^{-7}$) --- closed off in every order. Two thresholds separated
+(envelopes on $189$ perturbations each); \textbf{monotonically sharper in $K$ ---
+mildest at $K=2$ ($1.90\times$, $h^{+0.353}$), against the hypothesis and exactly where
+the vector is free}; at $K=6$ no closed family hits (separation $h^{+1.138}$, ratio
+$264\times$); anchor $\mathrm{eps}_{\mathrm{ent}}(2)\to(1-r_{12}^2)/4$ --- T166's
+$3.57\times10^{-4}$ is literally the quarter. End-to-end gain $2207$--$7.84\times10^{6}$
+certified; the deficit is the higher rungs, not the vector; \textbf{the scramble breaks
+harder than T166 saw: $8/8$ windows lose positivity of the $2\times2$ diagonal itself
+($Q_{11}=-1.35\times10^{5}\ldots-1.02\times10^{4}$) --- a change of TYPE, not a
+factor}; anti-fitting cheat only $h^{-0.823}$; off-recipe $1-r_{12}^2\sim h^{-2.740}$
+vs $h^{-2.921}$. \textbf{The unification as an identity:}
+$\mathrm{eps}_{\mathrm{ent}}(K)=\rho\,(1/g_K)/S_K$ to machine precision --- the
+determinant ratio (dress a), $1-r_{12}^2$ (dress b) and the entry threshold (dress c)
+are ONE inequality, not three. Balance $6$ THEOREM / $0$ CERT-UNIF / $2$ CERT-WINDOW /
+$7$ MEASURED; ONE-TERM-MISSING deliberately NOT rendered (the one missing term IS dress
+(b)); rest: R1, the only item --- an $m$-free upper bound on
+$1-Q_{12}^2/(Q_{11}Q_{22})\le C\,h^{-3+\varepsilon}$ (required $1.25\times10^{-5}$
+median, $3.19\times10^{-8}$ worst); redirected: work at $K=2$. T168
+(\texttt{lagrange\_minors\_probe.py}, contract \texttt{LAGRANGE.MINORS}) is running ---
+the Lagrange identity, the determinant as a sum of squares.
+\item \textbf{Docs + website sync.} \texttt{tfpt\_prime\_front} gains the T167
+subsection (the pivot identity and the gram2 exactness as displays, the
+Kato-converges-to-the-wrong-object lesson, the threshold monotonicity against the
+hypothesis, the unification identity as the key result, the type-change scramble, the
+``After T167'' keybox with R1 as the only item and T168 running), the \texttt{v557}
+subsection in the verified layer, the module table row, the phase-2 section title moves
+to T126--T167, the probe index gains the T167 row and the running totals move to $167$
+probes / $4394$ checks; \texttt{tfpt\_1}, \texttt{tfpt\_3} and
+\texttt{tfpt\_research\_contracts} gain the \texttt{v557} companion blocks;
+\texttt{experiments/next.txt} gains the T167 entry (series (CLXXVIII));
+website: \texttt{primeFront.ts} gains the T167 and \texttt{v557} feed entries, status
+surfaces Teile 11--167 / 4394 checks, $23$ modules \texttt{v535}--\texttt{v557}, T168
+running. Firewall unchanged: sandbox, no RH evidence, no zero data; every number typed
+THEOREM/CERT-UNIF/CERT-WINDOW/MEASURED/FIT; ledger row \texttt{PRIME.CASCADE.VECT.01}.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (XIII) (prime-front diary T166 (the cascade gain is a Gram-determinant cancellation, one inequality in three dresses --- CASCADE-RESISTS) + paper + website sync; NO promotion, NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{Prime-front diary T166 (\texttt{schur\_cascade\_probe.py}, contract

@@ -3530,6 +3530,97 @@ AST-checked; no marker moves.
 Machine-checked: \veri{v556\_gauge\_ppr\_identities.py}.
 \mE\ (per-instance identities and certified inequalities)
 
+\par\smallskip\noindent\textbf{The cascade/vector identities
+(\texttt{PRIME.CASCADE.VECT.01}).}
+The closed theorem cores of the discovery parts T166 and T167,
+recomputed on the same declared surface as
+\texttt{PRIME.GAUGE.PPR.01} (the $12$ deepest in-cap frame-A windows,
+$n=29\ldots139$, $m=96\ldots291\le300$), with the one arithmetic input
+$\kappa=0.038821$ \emph{verified} at every jump point of $\psi(x)/x$ on
+the von-Mangoldt table in $[100,3.2\times10^{5}]$ (each statement with
+at least one mutation control that must fail loudly) --- the
+\emph{anatomy of the cascade} and the \emph{exactness of the closed
+vector at $K=2$}, and it does not close the one remaining scalar.
+\emph{(1)} The cascade identities (T166): the prefix property --- one
+Cholesky of the sixteen-block yields all sixteen rungs,
+$g_K=e_1^{\mathsf T}Q_K^{-1}e_1$ at every $K$ ($192$ comparisons,
+$1.1\times10^{-12}$); the minor form
+$1/g_K=\det G_{[1..K]}/(\mu^P_1\det G_{[2..K]})$ on the raw arithmetic
+Gram block $G=TAT^{\mathsf T}$ ($2.7\times10^{-12}$ on $36$ (window,
+$K$) pairs, $K\in\{2,6,16\}$; Schur 1917--Haynsworth 1968); the
+regression form $g_K/g_1=1/(1-R_K^2)$ with $R_K^2$ the squared multiple
+correlation of mode $1$ on modes $2\ldots K$ ($8.8\times10^{-13}$) ---
+the open object \emph{is} a near-collinearity statement; mutation: the
+minor with the wrong row/column deleted misses by $0.99$--$1.45$.
+\emph{(2)} The diagonal invariance (T166): the gain
+$g_K/g_1=B_{11}(Q_K^{-1})_{11}$ is unchanged under $B\to DBD$ on $144$
+random positive diagonals ($2.7\times10^{-12}$) --- the cascade does
+not see the KMS $1/\sqrt{\mu}$ normalisation, the gain is a property of
+the arithmetic Gram block alone; mutation: a non-diagonal congruence
+moves the gain by $2.7$--$3.8$. \emph{(3)} The exact $K=2$ identity
+(T167): the closed vector $u=(1,-Q_{21}/Q_{22})$ \emph{attains} the
+constrained minimum, $u^{\mathsf T}Q_2u=1/g_2=Q_{11}(1-r_{12}^2)$ to
+$1.1\times10^{-12}$, and $B_{11}g_2=1/(1-r_{12}^2)$ identically to
+$1.2\times10^{-12}$ (measured
+$1-r_{12}^2=2.8\times10^{-4}$--$5.9\times10^{-3}$ on this surface, the
+$h$-trend a sandbox fit): at $K=2$ the fast-null-vector needs no
+approximation --- the third dress collapses onto the second, one scalar
+built from three closed lag sums; mutation: the wrong-sign vector pays
+the relative excess
+$4r_{12}^2/(1-r_{12}^2)=6.7\times10^{2}$--$1.5\times10^{4}$.
+\emph{(4)} The pivot identity and the unification (T167): for
+$u=x^*_K+\delta$ with $\delta_1=0$,
+$u^{\mathsf T}Q_Ku=1/g_K+\delta^{\mathsf T}Q_K\delta$ exactly
+($2.0\times10^{-12}$ on $252$ evaluations across three $\delta$ scales)
+--- every relative excess is an exact number; the Rayleigh envelope
+holds with its $\delta_1=0$ ceiling attained exactly
+($1.1\times10^{-15}$) and Cauchy-interlaced; the sign-aligned entrywise
+perturbation attains $|x^{*\mathsf T}Ex^*|=\varepsilon S_K$ exactly
+($3.8\times10^{-16}$), so the entry threshold
+$\rho_{\mathrm{carry}}(1/g_K)/S_K$ is exact --- and the unification:
+$(1/g_K)/S_K$ is the one cancellation ratio of all three dresses, at
+$K=2$ literally $(1/g_2)/S_2=(1-r_{12}^2)/(1+3r_{12}^2)$
+($1.2\times10^{-12}$; the closed factor $1+3r_{12}^2\to4$ is T166's
+independently derived quarter): \emph{one} inequality, not three;
+mutation: $\delta_1=0.1$ breaks the pivot identity by exactly the
+closed cross term $2\delta_1=0.2$. \emph{(5)} The trial theorem and the
+two must-breaks (T166/T167): all $288$ random trials with $u_1=1$
+satisfy $u^{\mathsf T}Q_Ku\ge1/g_K$ (min ratio $15.14$) --- every
+closed candidate is a certified \emph{lower} bound (Schur 1917); the
+$L_P$ no-go: the normalised block is the identity
+($1.6\times10^{-15}$) and the cascade gain exactly $1$ (deviation
+$0.0$) at $m=64/128/256$; the scramble type-change: uniform random
+atom positions at the same total mass make $B_{11}$ itself lose
+positivity on $49/60$ declared draws and on a majority of draws on
+$12/12$ windows --- at $K=2$ the collapse under scrambling is a change
+of \emph{type}, not a factor. Stress: exact Dirichlet/parity controls
+($2.3\times10^{-14}$ / $1.4\times10^{-14}$ / zero tolerance).
+\textbf{Named limits as load-bearing content:} per instance on small
+windows --- a finite list with an explicit maximum; nothing uniform in
+the zone index or in $D$; the T166/T167 $h$-exponents
+($1-r_{12}^2\sim h^{-2.921}$ on frame A, the certified gain exponent
+$h^{+2.921}$, the threshold monotonicity in $K$, the $K=6$ separation
+$h^{+1.138}$) and the measured anatomy (the rung profile, the
+polarisation split, the Kato radius, the headroom) stay in the diary
+and the paper; finite $\Lambda$-sums are allowed and used, \emph{no} RH
+statement is made ($\tfrac12$ appears in exactly one role: as the
+strength of a classical statement a required depth is compared
+against); \textbf{the one open object after T167 stays open, typed
+open}: R1, the single scalar --- an $m$-free upper bound on
+$1-r_{12}^2=1-Q_{12}^2/(Q_{11}Q_{22})\le C\,h^{-3+\varepsilon}$, three
+closed lag sums and nothing else; the routes T167 closed off
+(perturbation theory of every order around the KMS bottom mode --- the
+Kato series converges to the \emph{wrong} object; position-blind
+surrogates) stay sandbox negatives; R-B$'''$ stays open as narrowed.
+Fences: Schur 1917--Haynsworth 1968 / KMS 1953 / Rayleigh
+1877--Courant--Fischer 1920 / Cauchy 1829 / Kato 1949 (cited as the
+closed-off route, never used) / Chebyshev 1852--Rosser--Schoenfeld 1962
+(verified on the table) / Dirichlet 1829 named classical; Weil 1952 /
+Bombieri 2000 cited, never used as a criterion; zero-firewall
+AST-checked; no marker moves.
+Machine-checked: \veri{v557\_cascade\_vector\_identities.py}.
+\mE\ (per-instance identities and certified inequalities)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

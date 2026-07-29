@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v556
+          v535–v557
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4355/4355 sandbox checks —
+        (“the full proof”, T126+) is now open with 4394/4394 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -432,8 +432,19 @@ export function HonestyBanner() {
         effect by a factor 4569, and the best closed route reaches
         h^+1.32 against the target h^+3.11 — an exponent gap, so the
         one missing inequality IS the cancellation, now in three
-        equivalent dresses. T167 (null_vector_probe.py) is running the
-        most constructive dress — the closed near-null vector. What remains
+        equivalent dresses. T167 (VECTOR-RESISTS) then closed the most
+        constructive dress as a construction: at K = 2 the closed vector
+        is EXACT — a theorem — so the third dress collapses onto the
+        second, and the machine-checked identity
+        eps_ent(K) = ρ·(1/g_K)/S_K unifies all three dresses into ONE
+        inequality; the threshold is mildest exactly where the vector is
+        free, the Kato series converges fast to the wrong object, the
+        scrambled control loses positivity of the 2×2 block itself, and
+        the whole programme now rests on one scalar built from three
+        closed lag sums (R1: an m-free upper bound on 1 − r₁₂²); the
+        theorem cores of T166+T167 are load-bearing as v557. T168
+        (lagrange_minors_probe.py) is running the Lagrange identity —
+        the determinant as a sum of squares. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

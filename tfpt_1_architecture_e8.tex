@@ -1753,6 +1753,68 @@ Machine-checked:
 \veri{v556\_gauge\_ppr\_identities.py}.
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 
+\par\smallskip\noindent\textbf{The cascade/vector identities
+(\texttt{PRIME.CASCADE.VECT.01}).}
+The closed theorem cores of T166 and T167 are load-bearing as the
+fifteenth companion module ($23$ checks, ${\sim}0.1$\,s), recomputed on
+the same declared surface as the module above ($12$ deepest in-cap
+frame-A windows, $m=96\ldots291\le300$) with the one arithmetic input
+$\kappa=0.038821$ \emph{verified} at every jump point of $\psi(x)/x$ on
+the von-Mangoldt table --- the \emph{anatomy of the cascade} and the
+\emph{exactness of the closed vector at $K=2$}, and it does not close
+the one remaining scalar.
+\emph{The cascade identities (T166).} The prefix property (one Cholesky
+of the sixteen-block yields all sixteen rungs; $192$ comparisons,
+$1.1\times10^{-12}$), the minor form
+$1/g_K=\det G_{[1..K]}/(\mu^P_1\det G_{[2..K]})$ on the raw arithmetic
+Gram block ($2.7\times10^{-12}$; Schur 1917--Haynsworth 1968), and the
+regression form $g_K/g_1=1/(1-R_K^2)$ ($8.8\times10^{-13}$) --- the open
+object \emph{is} a near-collinearity statement; the wrong minor misses
+by $0.99$--$1.45$.
+\emph{The diagonal invariance (T166).} The gain
+$g_K/g_1=B_{11}(Q_K^{-1})_{11}$ is unchanged under $B\to DBD$ on $144$
+random positive diagonals ($2.7\times10^{-12}$): the cascade does not
+see the KMS normalisation --- the gain belongs to the arithmetic Gram
+block alone; a non-diagonal congruence moves it by $2.7$--$3.8$.
+\emph{The exact $K=2$ identity (T167).} The closed vector
+$u=(1,-Q_{21}/Q_{22})$ \emph{attains}
+$1/g_2=Q_{11}(1-r_{12}^2)$ exactly ($1.1\times10^{-12}$) and
+$B_{11}g_2=1/(1-r_{12}^2)$ identically ($1.2\times10^{-12}$): at $K=2$
+the fast-null-vector is free --- the third dress collapses onto the
+second, one scalar built from three closed lag sums; the wrong-sign
+vector pays $4r_{12}^2/(1-r_{12}^2)=6.7\times10^{2}$--$1.5\times10^{4}$.
+\emph{The pivot identity and the unification (T167).}
+$u^{\mathsf T}Q_Ku=1/g_K+\delta^{\mathsf T}Q_K\delta$ for $\delta_1=0$
+($2.0\times10^{-12}$ on $252$ evaluations) --- every candidate excess is
+an exact number; the sign-aligned entry attainment
+$|x^{*\mathsf T}Ex^*|=\varepsilon S_K$ ($3.8\times10^{-16}$) makes the
+entry threshold exact, and the unification
+$(1/g_2)/S_2=(1-r_{12}^2)/(1+3r_{12}^2)$ ($1.2\times10^{-12}$) makes the
+three dresses \emph{one} inequality; the $\delta_1=0.1$ mutation breaks
+by exactly the closed cross term $2\delta_1$.
+\emph{The trial theorem and the two must-breaks (T166/T167).} All $288$
+random trials with $u_1=1$ bound $g_K$ from below (min ratio $15.14$;
+Schur 1917); the $L_P$ no-go gives cascade gain exactly $1$ (deviation
+$0.0$); the scramble type-change makes $B_{11}$ itself lose positivity
+on a majority of draws on $12/12$ windows --- at $K=2$ the collapse
+under scrambling is a change of type, not a factor; plus exact
+Dirichlet/parity controls.
+\textbf{Named limits as content:} per instance on small windows ---
+nothing uniform in the zone index or in $D$; the T166/T167 $h$-exponents
+and the measured anatomy are sandbox, \emph{not} consumed; finite
+$\Lambda$-sums allowed and used, \emph{no} RH statement; \textbf{the one
+open object after T167 stays open, typed open}: R1, the single scalar
+--- an $m$-free upper bound on
+$1-r_{12}^2=1-Q_{12}^2/(Q_{11}Q_{22})\le C\,h^{-3+\varepsilon}$, three
+closed lag sums and nothing else.
+Schur 1917--Haynsworth 1968 / KMS 1953 / Rayleigh 1877--Courant--Fischer
+1920 / Cauchy 1829 / Kato 1949 (cited as the closed-off route, never
+used) / Chebyshev 1852--Rosser--Schoenfeld 1962 / Dirichlet 1829 named
+classical; Weil 1952 / Bombieri 2000 cited, never used as a criterion.
+Machine-checked:
+\veri{v557\_cascade\_vector\_identities.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

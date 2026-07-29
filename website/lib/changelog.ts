@@ -43,6 +43,1150 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · XIV",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v557"
+      },
+      {
+        "k": "t",
+        "v": " — the cascade/vector identities of phase 2 promoted; prime-front diary T167 (three dresses are one inequality, the closed vector exact at "
+      },
+      {
+        "k": "m",
+        "v": "K=2"
+      },
+      {
+        "k": "t",
+        "v": " — VECTOR-RESISTS) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v557"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.CASCADE.VECT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the closed theorem cores of T166 (contract "
+        },
+        {
+          "k": "c",
+          "v": "SCHUR.CASCADE"
+        },
+        {
+          "k": "t",
+          "v": ") and T167 (contract "
+        },
+        {
+          "k": "c",
+          "v": "NULL.VECTOR"
+        },
+        {
+          "k": "t",
+          "v": ") as one deliberately narrow module ("
+        },
+        {
+          "k": "c",
+          "v": "v557_cascade_vector_identities.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "23"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.1"
+        },
+        {
+          "k": "t",
+          "v": " s), everything recomputed on "
+        },
+        {
+          "k": "c",
+          "v": "v551"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v556"
+        },
+        {
+          "k": "t",
+          "v": "'s declared small frame-A surface ("
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " deepest in-cap zones, "
+        },
+        {
+          "k": "m",
+          "v": "m=96\\ldots291\\le300"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa=0.038821"
+        },
+        {
+          "k": "t",
+          "v": " verified at every jump point of "
+        },
+        {
+          "k": "m",
+          "v": "\\psi(x)/x"
+        },
+        {
+          "k": "t",
+          "v": " on the table): "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the cascade identities — prefix (one Cholesky, all sixteen rungs, "
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "192"
+        },
+        {
+          "k": "t",
+          "v": " comparisons), minor form "
+        },
+        {
+          "k": "m",
+          "v": "1/g_K=\\det G_{[1..K]}/(\\mu^P_1\\det G_{[2..K]})"
+        },
+        {
+          "k": "t",
+          "v": " on the raw arithmetic Gram block ("
+        },
+        {
+          "k": "m",
+          "v": "2.7\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "; Schur 1917) and regression form "
+        },
+        {
+          "k": "m",
+          "v": "g_K/g_1=1/(1-R_K^2)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "8.8\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the diagonal invariance of the gain under "
+        },
+        {
+          "k": "m",
+          "v": "B\\to DBD"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "2.7\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "144"
+        },
+        {
+          "k": "t",
+          "v": " random diagonals — the gain belongs to the arithmetic Gram block alone); "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the exact "
+        },
+        {
+          "k": "m",
+          "v": "K=2"
+        },
+        {
+          "k": "t",
+          "v": " identity — the closed vector "
+        },
+        {
+          "k": "m",
+          "v": "(1,-Q_{21}/Q_{22})"
+        },
+        {
+          "k": "t",
+          "v": " attains "
+        },
+        {
+          "k": "m",
+          "v": "1/g_2=Q_{11}(1-r_{12}^2)"
+        },
+        {
+          "k": "t",
+          "v": " exactly and "
+        },
+        {
+          "k": "m",
+          "v": "B_{11}g_2=1/(1-r_{12}^2)"
+        },
+        {
+          "k": "t",
+          "v": " identically ("
+        },
+        {
+          "k": "m",
+          "v": "1.2\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "): the fast-null-vector is FREE at "
+        },
+        {
+          "k": "m",
+          "v": "K=2"
+        },
+        {
+          "k": "t",
+          "v": ", dress (c) collapses onto dress (b); "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the pivot identity "
+        },
+        {
+          "k": "m",
+          "v": "u^{\\mathsf T}Q_Ku=1/g_K+\\delta^{\\mathsf T}Q_K\\delta"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_1=0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "2.0\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "252"
+        },
+        {
+          "k": "t",
+          "v": " evaluations; the "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_1=0.1"
+        },
+        {
+          "k": "t",
+          "v": " mutation breaks by exactly the closed cross term "
+        },
+        {
+          "k": "m",
+          "v": "2\\delta_1"
+        },
+        {
+          "k": "t",
+          "v": ") with the exact entry threshold and the unification "
+        },
+        {
+          "k": "m",
+          "v": "(1/g_2)/S_2=(1-r_{12}^2)/(1+3r_{12}^2)"
+        },
+        {
+          "k": "t",
+          "v": " — ONE inequality, not three; "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the trial theorem ("
+        },
+        {
+          "k": "m",
+          "v": "288"
+        },
+        {
+          "k": "t",
+          "v": " trials, every candidate a certified lower bound), the "
+        },
+        {
+          "k": "m",
+          "v": "L_P"
+        },
+        {
+          "k": "t",
+          "v": " no-go (cascade gain exactly "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ", deviation "
+        },
+        {
+          "k": "m",
+          "v": "0.0"
+        },
+        {
+          "k": "t",
+          "v": ") and the scramble type-change ("
+        },
+        {
+          "k": "m",
+          "v": "B_{11}"
+        },
+        {
+          "k": "t",
+          "v": " itself loses positivity on "
+        },
+        {
+          "k": "m",
+          "v": "49/60"
+        },
+        {
+          "k": "t",
+          "v": " declared draws, a majority on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": " windows) as must-breaks; every statement with a mutation control; the one open scalar R1 (an "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free upper bound on "
+        },
+        {
+          "k": "m",
+          "v": "1-r_{12}^2"
+        },
+        {
+          "k": "t",
+          "v": ") explicitly typed OPEN; NO RH statement. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CASCADE.VECT.01"
+        },
+        {
+          "k": "t",
+          "v": "; registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": "; suite counter "
+        },
+        {
+          "k": "m",
+          "v": "550\\to551"
+        },
+        {
+          "k": "t",
+          "v": " scripts."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T167 ("
+            },
+            {
+              "k": "c",
+              "v": "null_vector_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "NULL.VECTOR"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "39/39"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "1.4"
+            },
+            {
+              "k": "t",
+              "v": " s, the "
+            },
+            {
+              "k": "m",
+              "v": "63"
+            },
+            {
+              "k": "t",
+              "v": "-window union of T166 rebuilt bit for bit; T163–T166 reproduced as fits; verdict VECTOR-RESISTS with a strong reduction, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The most constructive dress attacked and closed "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "as a construction"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "22"
+        },
+        {
+          "k": "t",
+          "v": " families preregistered, all evaluated through the pivot identity "
+        },
+        {
+          "k": "m",
+          "v": "u^{\\mathsf T}Qu=1/g_K+\\delta^{\\mathsf T}Q\\delta"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "10206"
+        },
+        {
+          "k": "t",
+          "v": " evaluations, "
+        },
+        {
+          "k": "m",
+          "v": "3.2\\times10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "gram2 is EXACT at "
+            },
+            {
+              "k": "m",
+              "v": "K=2"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\rho=0"
+        },
+        {
+          "k": "t",
+          "v": ", a theorem: the closed vector attains "
+        },
+        {
+          "k": "m",
+          "v": "1/g_2"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "63/63"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "B_{11}g_2=1/(1-r_{12}^2)"
+        },
+        {
+          "k": "t",
+          "v": " an identity, certified gain exponent "
+        },
+        {
+          "k": "m",
+          "v": "h^{+2.921}"
+        },
+        {
+          "k": "t",
+          "v": " on frame A "
+        },
+        {
+          "k": "m",
+          "v": "=h^{3-0.079}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h^{+2.246}"
+        },
+        {
+          "k": "t",
+          "v": " union). Perturbation theory dies structurally: Jacobi diverges (radius "
+        },
+        {
+          "k": "m",
+          "v": "1.0"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "12.7"
+        },
+        {
+          "k": "t",
+          "v": ") but "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the Kato series CONVERGES (radius "
+            },
+            {
+              "k": "m",
+              "v": "0.067"
+            },
+            {
+              "k": "t",
+              "v": ") — to the WRONG object"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the exact bottom eigenvector is itself a useless trial, "
+        },
+        {
+          "k": "m",
+          "v": "\\rho=6.04"
+        },
+        {
+          "k": "t",
+          "v": ", overlap "
+        },
+        {
+          "k": "m",
+          "v": "0.083"
+        },
+        {
+          "k": "t",
+          "v": ", relative gap "
+        },
+        {
+          "k": "m",
+          "v": "5.4\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": ") — closed off in every order. Two thresholds separated (envelopes on "
+        },
+        {
+          "k": "m",
+          "v": "189"
+        },
+        {
+          "k": "t",
+          "v": " perturbations each); "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "monotonically sharper in "
+            },
+            {
+              "k": "m",
+              "v": "K"
+            },
+            {
+              "k": "t",
+              "v": " — mildest at "
+            },
+            {
+              "k": "m",
+              "v": "K=2"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "m",
+              "v": "1.90\\times"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "h^{+0.353}"
+            },
+            {
+              "k": "t",
+              "v": "), against the hypothesis and exactly where the vector is free"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; at "
+        },
+        {
+          "k": "m",
+          "v": "K=6"
+        },
+        {
+          "k": "t",
+          "v": " no closed family hits (separation "
+        },
+        {
+          "k": "m",
+          "v": "h^{+1.138}"
+        },
+        {
+          "k": "t",
+          "v": ", ratio "
+        },
+        {
+          "k": "m",
+          "v": "264\\times"
+        },
+        {
+          "k": "t",
+          "v": "); anchor "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{eps}_{\\mathrm{ent}}(2)\\to(1-r_{12}^2)/4"
+        },
+        {
+          "k": "t",
+          "v": " — T166's "
+        },
+        {
+          "k": "m",
+          "v": "3.57\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": " is literally the quarter. End-to-end gain "
+        },
+        {
+          "k": "m",
+          "v": "2207"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "7.84\\times10^{6}"
+        },
+        {
+          "k": "t",
+          "v": " certified; the deficit is the higher rungs, not the vector; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the scramble breaks harder than T166 saw: "
+            },
+            {
+              "k": "m",
+              "v": "8/8"
+            },
+            {
+              "k": "t",
+              "v": " windows lose positivity of the "
+            },
+            {
+              "k": "m",
+              "v": "2\\times2"
+            },
+            {
+              "k": "t",
+              "v": " diagonal itself ("
+            },
+            {
+              "k": "m",
+              "v": "Q_{11}=-1.35\\times10^{5}\\ldots-1.02\\times10^{4}"
+            },
+            {
+              "k": "t",
+              "v": ") — a change of TYPE, not a factor"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; anti-fitting cheat only "
+        },
+        {
+          "k": "m",
+          "v": "h^{-0.823}"
+        },
+        {
+          "k": "t",
+          "v": "; off-recipe "
+        },
+        {
+          "k": "m",
+          "v": "1-r_{12}^2\\sim h^{-2.740}"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "h^{-2.921}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The unification as an identity:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{eps}_{\\mathrm{ent}}(K)=\\rho\\,(1/g_K)/S_K"
+        },
+        {
+          "k": "t",
+          "v": " to machine precision — the determinant ratio (dress a), "
+        },
+        {
+          "k": "m",
+          "v": "1-r_{12}^2"
+        },
+        {
+          "k": "t",
+          "v": " (dress b) and the entry threshold (dress c) are ONE inequality, not three. Balance "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " THEOREM / "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " CERT-UNIF / "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " CERT-WINDOW / "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " MEASURED; ONE-TERM-MISSING deliberately NOT rendered (the one missing term IS dress (b)); rest: R1, the only item — an "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free upper bound on "
+        },
+        {
+          "k": "m",
+          "v": "1-Q_{12}^2/(Q_{11}Q_{22})\\le C\\,h^{-3+\\varepsilon}"
+        },
+        {
+          "k": "t",
+          "v": " (required "
+        },
+        {
+          "k": "m",
+          "v": "1.25\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": " median, "
+        },
+        {
+          "k": "m",
+          "v": "3.19\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": " worst); redirected: work at "
+        },
+        {
+          "k": "m",
+          "v": "K=2"
+        },
+        {
+          "k": "t",
+          "v": ". T168 ("
+        },
+        {
+          "k": "c",
+          "v": "lagrange_minors_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "LAGRANGE.MINORS"
+        },
+        {
+          "k": "t",
+          "v": ") is running — the Lagrange identity, the determinant as a sum of squares."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Docs + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " gains the T167 subsection (the pivot identity and the gram2 exactness as displays, the Kato-converges-to-the-wrong-object lesson, the threshold monotonicity against the hypothesis, the unification identity as the key result, the type-change scramble, the “After T167” keybox with R1 as the only item and T168 running), the "
+        },
+        {
+          "k": "c",
+          "v": "v557"
+        },
+        {
+          "k": "t",
+          "v": " subsection in the verified layer, the module table row, the phase-2 section title moves to T126–T167, the probe index gains the T167 row and the running totals move to "
+        },
+        {
+          "k": "m",
+          "v": "167"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4394"
+        },
+        {
+          "k": "t",
+          "v": " checks; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " gain the "
+        },
+        {
+          "k": "c",
+          "v": "v557"
+        },
+        {
+          "k": "t",
+          "v": " companion blocks; "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " gains the T167 entry (series (CLXXVIII)); website: "
+        },
+        {
+          "k": "c",
+          "v": "primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T167 and "
+        },
+        {
+          "k": "c",
+          "v": "v557"
+        },
+        {
+          "k": "t",
+          "v": " feed entries, status surfaces Teile 11–167 / 4394 checks, "
+        },
+        {
+          "k": "m",
+          "v": "23"
+        },
+        {
+          "k": "t",
+          "v": " modules "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v557"
+        },
+        {
+          "k": "t",
+          "v": ", T168 running. Firewall unchanged: sandbox, no RH evidence, no zero data; every number typed THEOREM/CERT-UNIF/CERT-WINDOW/MEASURED/FIT; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CASCADE.VECT.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · XIII",
     "heading": [
       {

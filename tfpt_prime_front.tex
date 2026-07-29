@@ -82,7 +82,7 @@ $240\,\zeta(s)\zeta(s-3)$ as a Dirichlet series, and the lattice's self-duality 
 exact functional equation whose fixed axis is the critical line --- a framework picture, stated as such,
 which the document opens with and then keeps at arm's length. This companion documents the line end to
 end. Twenty-two modules are
-load-bearing and ledger-carried (\vref{v535}--\vref{v556}): Hecke from geometry on the $E_8$ census,
+load-bearing and ledger-carried (\vref{v535}--\vref{v557}): Hecke from geometry on the $E_8$ census,
 the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, the matching-lemma / transport
@@ -91,10 +91,10 @@ $M$-matrix pair, the long-lag support structure, the Hardy-core identities, the 
 identities, the level-lemma identities, the Green/Szeg\H{o} identities, the gauge/parity
 identities, the odd-sector identities, the fixed-size Ritz ceiling certificate, the four
 fixed-size angle instruments, the exact-form identities, the sampling/harmonics
-identities, the Pareto/total-variation identities and the gauge/$P_{\mathrm{pr}}$
-identities. Everything beyond
-those twenty-two is \emph{sandbox}: an exploratory program, run as
-$166$ preregistered probes with $4355$ machine checks, which localized the residual object. That
+identities, the Pareto/total-variation identities, the gauge/$P_{\mathrm{pr}}$
+identities and the cascade/vector identities. Everything beyond
+those twenty-three is \emph{sandbox}: an exploratory program, run as
+$167$ preregistered probes with $4394$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -246,7 +246,7 @@ here (the blue \texttt{[\,verification/\dots\,]} tag). Everything marked \sbx\ i
 no ledger row, no marker, and no authority. Section~\ref{sec:verified} is the only section that is
 entirely \ver.
 \item \textbf{Status markers are quoted, never upgraded.} The markers \mE\ \mC\ \mO\ \mX\ shown in
-Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v556}. This
+Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v557}. This
 document introduces no new markers and moves none.
 \item \textbf{Fits are declared as fits.} Every scaling law, slope, exponent and extrapolation quoted
 from the sandbox is a fit to finitely many measured windows and is labelled as such at the point of
@@ -263,7 +263,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots166$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots167$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -271,7 +271,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T166: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T167: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -495,7 +495,14 @@ determinant (no entry cancels, neither half is collinear alone: the same arch-ag
 mechanism as T159/T160, one level up), an anti-fitting scramble destroys the effect by a
 factor $4569$, and the best closed route reaches gain $h^{+1.32}$ against the target
 $h^{+3.11}$ --- an exponent gap: the one missing inequality \emph{is} the cancellation, now
-stated in three equivalent dresses, with two honest contract corrections recorded (T166));
+stated in three equivalent dresses, with two honest contract corrections recorded (T166); and
+finally the most constructive dress, closed \emph{as a construction}: at $K=2$ the closed
+vector is exact --- a theorem --- so the third dress collapses onto the second, a
+machine-checked identity unifies all three dresses into \emph{one} inequality, the threshold
+is mildest exactly where the vector is free, perturbation theory converges to the wrong
+object, the scrambled control loses positivity of the $2\times2$ block itself, and the whole
+programme rests on one scalar built from three closed lag sums, with the theorem cores of
+T166+T167 promoted as \vref{v557} (T167));
 Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
@@ -580,7 +587,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the twenty-two modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the twenty-three modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -721,13 +728,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: twenty-two modules}\label{sec:verified}
+\section{The verified layer: twenty-three modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The twenty-two modules and their ledger markers]
+\begin{keybox}[The twenty-three modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -755,6 +762,7 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v554} & \texttt{PRIME.SAMPLING.HARM.01} & sampling/harmonics identities of phase 2 (per instance) & \mE\\
 \vref{v555} & \texttt{PRIME.PARETO.TV.01} & Pareto/total-variation identities of phase 2 (per instance) & \mE\\
 \vref{v556} & \texttt{PRIME.GAUGE.PPR.01} & gauge/$P_{\mathrm{pr}}$ identities of phase 2 (per instance) & \mE\\
+\vref{v557} & \texttt{PRIME.CASCADE.VECT.01} & cascade/vector identities of phase 2 (per instance) & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -1986,6 +1994,104 @@ statement is made; \textbf{the one open object after T165 stays open and typed o
 $\inf_m g_{16}(m)>0$, equivalently a lower bound on the sixteen-step Schur-cascade gain
 $g_{16}/g_1$ uniform in $m$ --- a quantifier over a certified flat list; R-B$'''$ (an
 independent $\alpha$/$h$ surface) stays open as narrowed by T164; \vref{v555}'s
+identities stay as stated, and nothing is re-opened.
+\end{itemize}
+
+\subsection{The cascade/vector identities (\texorpdfstring{\vref{v557}}{v557})}\label{sec:v557}
+The closed theorem cores of T166 and T167 (Section~\ref{sec:phase2}): the \emph{anatomy of
+the cascade} and the \emph{exactness of the closed vector at $K=2$} --- the prefix / minor /
+regression identities that make the sixteen rungs closed objects of the raw arithmetic Gram
+block, the diagonal invariance that makes the gain blind to the KMS normalisation, the exact
+$K=2$ identity that makes the fast-null-vector free (the third dress collapses onto the
+second), the pivot identity that makes every candidate excess an exact number, the
+unification that makes the three dresses \emph{one} inequality, and the trial theorem with
+the $L_P$ no-go and the scramble type-change as must-breaks --- and it does not close the one
+remaining scalar
+\veri{v557\_cascade\_vector\_identities.py} ($23$ checks, ${\sim}0.1$\,s; everything
+recomputed on \vref{v551}--\vref{v556}'s declared surface, the $12$ deepest prime-power zones
+admitting a frame-A window inside the cap, $n=29\ldots139$, $m=96\ldots291\le300$; the one
+arithmetic input $\kappa=0.038821$ \emph{verified} at every jump point of $\psi(x)/x$ on the
+von-Mangoldt table in $[100,3.2\times10^{5}]$; each statement carries at least one mutation
+control that must fail loudly).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The cascade identities (T166, U1)} \mE: with $Q_K$ the leading $K\times K$
+block of the normalised sixteen-block and $G=TAT^{\mathsf T}$ the raw arithmetic Gram
+block --- the \emph{prefix} property ($g_K=\sum_{j\le K}y_j^2$ from \emph{one} Cholesky
+equals the per-$K$ direct solves $e_1^{\mathsf T}Q_K^{-1}e_1$ at every $K=1\ldots16$;
+$192$ comparisons, $1.1\times10^{-12}$), the \emph{minor} form
+$1/g_K=\det G_{[1..K]}/(\mu^P_1\det G_{[2..K]})$ in log space to $2.7\times10^{-12}$ on
+$36$ (window, $K$) pairs, $K\in\{2,6,16\}$ (the rungs are ratios of consecutive Gram
+minors of the \emph{raw} block --- closed objects, not factorisation outputs; Schur 1917
+/ Haynsworth 1968), and the \emph{regression} form $g_K/g_1=1/(1-R_K^2)$ with $R_K^2$
+the squared multiple correlation of mode $1$ on modes $2\ldots K$
+($8.8\times10^{-13}$) --- the open object \emph{is} a near-collinearity statement.
+Mutation: the minor with the wrong row/column deleted misses by $0.99$--$1.45$.
+\item \textbf{The diagonal invariance (T166, I4)} \mE: the gain
+$g_K/g_1=B_{11}(Q_K^{-1})_{11}$ is unchanged under $B\to DBD$ on $144$ random positive
+diagonals across $K\in\{2,6,16\}$ ($2.7\times10^{-12}$): the cascade does \emph{not} see
+the KMS $1/\sqrt{\mu}$ normalisation --- the gain, and with it the whole $h^3$ of the
+sandbox surface, is a property of the arithmetic Gram block alone (Kac--Murdock--Szeg\H{o}
+1953 enters only through the spectrum). Mutation: a non-diagonal congruence moves the
+gain by $2.7$--$3.8$.
+\item \textbf{The exact $K=2$ identity (T167, V1 --- the central positive result)} \mE:
+the \emph{closed} vector $u=(1,-Q_{21}/Q_{22})$ \emph{attains} the constrained minimum
+on every window --- $u^{\mathsf T}Q_2u=1/g_2=Q_{11}(1-r_{12}^2)$ to
+$1.1\times10^{-12}$ with $r_{12}^2=Q_{12}^2/(Q_{11}Q_{22})$, and
+$B_{11}g_2=1/(1-r_{12}^2)$ \emph{identically} to $1.2\times10^{-12}$ (measured
+$1-r_{12}^2=2.8\times10^{-4}$--$5.9\times10^{-3}$ on this small surface; the $h$-trend
+is a sandbox fit and is not consumed): at $K=2$ the fast-null-vector needs \emph{no}
+approximation --- the vector is free, dress (c) collapses onto dress (b), and everything
+the gain certifies at $K=2$ is carried by \emph{one} scalar built from three closed lag
+sums. Mutation: the wrong-sign vector pays the relative excess
+$4r_{12}^2/(1-r_{12}^2)=6.7\times10^{2}$--$1.5\times10^{4}$.
+\item \textbf{The pivot identity and the unification (T167, V1/V4)} \mE: for
+$u=x^*_K+\delta$ with $\delta_1=0$,
+$u^{\mathsf T}Q_Ku=1/g_K+\delta^{\mathsf T}Q_K\delta$ \emph{exactly}
+($2.0\times10^{-12}$ on $252$ evaluations across three $\delta$ scales) --- every
+relative excess $\rho=g_K\,\delta^{\mathsf T}Q_K\delta$ is an exact number, never an
+estimate; the Rayleigh envelope holds on the battery, its $\delta_1=0$ ceiling
+$\lambda_{\max}(Q_{HH})$ is attained exactly ($1.1\times10^{-15}$) and Cauchy-interlaced,
+turning $\rho$ into the vector threshold
+$\mathrm{eps}_{\mathrm{vec}}=\sqrt{\rho/(g_K\lambda_{\max})}/\|x^*\|$ with the square law
+$\mathrm{eps}_{\mathrm{ent}}\sim\mathrm{eps}_{\mathrm{vec}}^2$; the sign-aligned
+entrywise perturbation attains $|x^{*\mathsf T}Ex^*|=\varepsilon S_K$ exactly
+($3.8\times10^{-16}$, $S_K=|x^*|^{\mathsf T}|Q||x^*|$), so the entry threshold
+$\mathrm{eps}_{\mathrm{ent}}(K)=\rho_{\mathrm{carry}}(1/g_K)/S_K$ is exact --- and the
+\emph{unification}: $(1/g_K)/S_K$ is the one cancellation ratio of all three dresses ---
+T166's determinant ratio over the absolute-value mass (dress a), at $K=2$ literally
+$(1/g_2)/S_2=(1-r_{12}^2)/(1+3r_{12}^2)$ verified to $1.2\times10^{-12}$ (dress b, up to
+the closed factor $1+3r_{12}^2\to4$ --- T166's independently derived quarter), and the
+entry threshold itself (dress c): \emph{one} inequality, not three. Mutation:
+$\delta_1=0.1$ breaks the pivot identity by exactly the closed cross term
+$2\delta_1=0.2$ ($2.0\times10^{-12}$).
+\item \textbf{The trial theorem and the two must-breaks (T166/T167)} \mE: $x^*_K$
+attains $1/g_K$ ($2.1\times10^{-12}$) and all $288$ random trials with $u_1=1$ satisfy
+$u^{\mathsf T}Q_Ku\ge1/g_K$ (min ratio $15.14$) --- every closed candidate is a
+certified \emph{lower} bound on $g_K$, never an upper one (Schur 1917); the $L_P$
+no-go: for $A=L_P$ the normalised sixteen-block is the identity
+($1.6\times10^{-15}$) and the cascade gain is exactly $1$ (deviation $0.0$) at
+$m=64/128/256$ --- a candidate blind to the off-diagonal block entries cannot carry a
+single power of $h$; the scramble type-change: uniform random atom positions at the
+\emph{same} total mass make $B_{11}$ itself lose positivity on $49/60$ declared draws
+and on a majority of draws on $12/12$ windows (range
+$-1.05\times10^{5}\ldots2.4\times10^{4}$ against the true
+$B_{11}=1134.9$--$31117.9>0$), so $g_2$ does not even exist there --- at $K=2$ the
+collapse under scrambling is a change of \emph{type}, not a factor. Plus exact
+Dirichlet/parity controls ($2.3\times10^{-14}$ / $1.4\times10^{-14}$ / zero tolerance).
+\item \textbf{Named limits as content.} Per instance on small windows --- a \emph{finite
+list} with an explicit maximum; nothing uniform in the zone index or in $D$; the
+T166/T167 $h$-exponents ($1-r_{12}^2\sim h^{-2.921}$ on frame A, the certified gain
+exponent $h^{+2.921}$, the threshold monotonicity in $K$, the $K=6$ separation
+$h^{+1.138}$) and the measured anatomy (the rung profile, the polarisation split, the
+Kato radius, the headroom) stay in the diary and Section~\ref{sec:phase2}; finite
+$\Lambda$-sums are allowed and used, \emph{no} RH statement is made; \textbf{the one
+open object after T167 stays open and typed open}: R1, the single scalar --- an
+$m$-free upper bound on $1-r_{12}^2=1-Q_{12}^2/(Q_{11}Q_{22})\le C\,h^{-3+\varepsilon}$,
+three closed lag sums and nothing else; the routes T167 closed off stay closed as
+sandbox negatives (perturbation theory of every order around the KMS bottom mode ---
+the Kato series converges to the \emph{wrong} object; position-blind surrogates) and
+are not promoted as theorems; R-B$'''$ stays open as narrowed; \vref{v556}'s
 identities stay as stated, and nothing is re-opened.
 \end{itemize}
 
@@ -4329,7 +4435,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T166)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T167)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -8440,8 +8546,147 @@ list: ``a better trial space'' (the contract object \emph{is} the optimum
 over the sixteen modes), ``which rungs matter'' (rungs $2$--$5$, measured,
 rung $2$ closed), ``arch-vs-atom or mode-vs-mode'' (arch against atom, in
 the Gram determinant). T167 (\texttt{null\_vector\_probe.py}, contract
-\texttt{NULL.VECTOR}) is running --- the most constructive dress, the closed
-near-null vector.
+\texttt{NULL.VECTOR}) attacked exactly that most constructive dress ---
+next subsection.
+\end{keybox}
+
+\subsection{The closed vector is exact at $K=2$: three dresses are one
+inequality (T167)}
+T167 (\texttt{null\_vector\_probe.py}, contract \texttt{NULL.VECTOR},
+$39/39$, $1.4$\,s, the $63$-window union of T166 rebuilt bit for bit ($27$
+frame-A windows $h=142$--$1320$ plus $36$ decoupled-$\nu$ windows,
+$h=96$--$1371$, lever arm $14\times$); T163--T166 reproduced as fits, never
+as inputs (frame A $B_{11}\sim h^{+3.110}$, gain $\sim h^{+3.049}$; union
+$h^{+2.759}/h^{+0.193}/h^{+2.566}$, closure $4.4\times10^{-16}$);
+$\kappa=0.038821$ verified at every jump point up to $n=4\times10^{5}$;
+verdict \textsc{vector-resists}) attacks the most constructive of the three
+dresses --- the closed fast-null-vector --- and returns the strongest
+reduction of the series.
+
+\emph{The pivot identity, and the exact vector.} Twenty-two candidate
+families are \emph{preregistered} before any number is seen (the
+Neumann/Jacobi and Kato/Rayleigh--Schr\"odinger perturbation routes, the
+Gram route, the moment route, and the KMS/arch/exact controls), and all of
+them are evaluated through one instrument:
+\begin{keyeq}$\displaystyle
+u=x^*_K+\delta,\quad\delta_1=0\ \Longrightarrow\
+u^{\mathsf T}Q_Ku\;=\;\frac1{g_K}\;+\;\delta^{\mathsf T}Q_K\delta$
+\quad(theorem; $10206$ evaluations, $3.2\times10^{-9}$),
+\end{keyeq}
+\noindent because $Q_Kx^*_K=e_1/g_K$ and $\delta_1=0$ kills the cross term
+--- so the relative excess $\rho=g_K\,\delta^{\mathsf T}Q_K\delta\ge0$ of
+every candidate is an \emph{exact number}, never an estimate, and by the
+trial theorem ($u^{\mathsf T}Q_Ku\ge1/g_K$ for every $u_1=1$; $252$ random
+trials, Schur 1917) every candidate is a certified \emph{lower} bound. The
+central positive result:
+\begin{keyeq}$\displaystyle
+u=\Bigl(1,\,-\tfrac{Q_{21}}{Q_{22}}\Bigr)\ \text{attains}\
+\frac1{g_2}=Q_{11}\bigl(1-r_{12}^2\bigr),\qquad
+B_{11}\,g_2=\frac1{1-r_{12}^2}$
+\quad(exact on $63/63$; $8.7\times10^{-10}$),
+\end{keyeq}
+\noindent with $r_{12}^2=Q_{12}^2/(Q_{11}Q_{22})$: \textbf{at $K=2$ the
+fast-null-vector needs no approximation at all --- the vector is free},
+$\rho=0$ as a theorem, and the certified gain exponent is $h^{+2.921}$ on
+frame A --- that is $h^{3-0.079}$, already inside the preregistered
+$\varepsilon$ budget --- and $h^{+2.246}$ on the union, with rung $2$
+carrying $96\%$ of the exponent: dress (c) collapses onto dress (b).
+
+\emph{Why perturbation theory dies --- and it is not what one would
+guess.} The Jacobi map genuinely diverges (spectral radius $1.0$--$12.7$
+at $K=2/6/16$), so the Neumann route fails honestly; but the Kato
+reduced-resolvent map has radius only $0.067$ --- \textbf{it converges,
+fast, to the wrong object}: the Rayleigh--Schr\"odinger series builds the
+\emph{eigenvector} attached to level $1$ (Kato 1949), and the constrained
+minimum $1/g_K$ is not an eigenvector problem. The diagnostic that proves
+it: the exact bottom eigenvector of $Q_6$ is itself a useless trial
+($\rho=6.04$), because its overlap with mode $1$ is only $|v_1|=0.083$ and
+the trial theorem divides by $v_1^2$; the underlying structure is the
+relative spectral gap $5.4\times10^{-7}$ --- the RS denominators are
+meaningless, the fast degeneracy makes the level assignment meaningless.
+This closes off the perturbation route in \emph{every} order. The moment
+route reaches $h^{+1.320}$, reproducing T166's $h^{+1.319}$ to three
+digits (flagged, not interpreted).
+
+\emph{The thresholds, and the monotonicity against the hypothesis.} Two
+thresholds are separated and both envelopes verified on $189$ random
+perturbations each: the vector accuracy
+$\mathrm{eps}_{\mathrm{vec}}=\sqrt{\rho/(g_K\lambda_{\max})}/\|x^*\|$ and
+the entry accuracy $\mathrm{eps}_{\mathrm{ent}}=\rho\,(1/g_K)/S_K$ --- its
+\emph{square} (the square law is exactly why the vector dress looked
+cheaper, and at $K=2$ genuinely is). \textbf{The threshold sharpens
+monotonically in $K$ --- against the working hypothesis it is mildest at
+$K=2$} (by $1.90$ in the median and $h^{+0.353}$ in trend:
+$\mathrm{eps}_{\mathrm{ent}}\sim h^{-2.246}$ at $K=2$ against $h^{-2.600}$
+at $K=6$), the \emph{only} $K$ at which the closed vector is exact --- the
+line should be worked at $K=2$, and the first flat $K=6$ is the worst
+place to stand: there no closed family hits (best separation $h^{+1.138}$,
+best ratio already $264\times$ --- the achieved and required accuracy
+curves \emph{diverge}). The anchor:
+$\mathrm{eps}_{\mathrm{ent}}(2)\to(1-r_{12}^2)/4$ --- T166's independently
+derived $3.57\times10^{-4}$ is literally the quarter of $1-r_{12}^2$, same
+exponent.
+
+\emph{End-to-end and stress.} The best closed candidate certifies gain
+$2207.3$--$7.84\times10^{6}$ ($h^{+2.921}$ on frame A against the
+preregistered $\varepsilon_{\mathrm{carry}}=0.50$ bar); gram2's $\rho$ at
+$K=16$ stays in $[0.17,6.16]$ and $(1+\rho)$ carries $h^{+0.320}$ ---
+\textbf{the deficit is the higher rungs, not the vector}. All four
+must-breaks break, and the scramble breaks \emph{harder} than T166 saw:
+\textbf{$8/8$ windows lose positivity of the $2\times2$ diagonal itself}
+($Q_{11}=-1.35\times10^{5}\ldots-1.02\times10^{4}$) --- at $K=2$ the
+collapse under scrambled prime-power positions is a change of \emph{type},
+not a factor: $g_2$ does not even exist there. Headroom
+$5.7\times10^{8}$--$2.0\times10^{12}$. The anti-fitting control
+(power-fitted coefficients --- the most generous cheat) reaches only
+$h^{-0.823}$, \emph{worse} than the honest candidate. The off-recipe sweep
+($1.6\times$ denser, same cap) reads $1-r_{12}^2\sim h^{-2.740}$ against
+$h^{-2.921}$ ($+0.181$): the exponent is a property of the arithmetic Gram
+block, not of the zone recipe.
+
+\emph{The unification --- the key result.} The entry threshold is an
+identity at every $K$ of the ladder, to machine precision:
+\begin{keyeq}$\displaystyle
+\mathrm{eps}_{\mathrm{ent}}(K)\;=\;\rho_{\mathrm{carry}}\,
+\frac{1/g_K}{S_K},\qquad
+S_K=|x^*_K|^{\mathsf T}\,|Q_K|\,|x^*_K|$
+\quad(machine precision at every $K$),
+\end{keyeq}
+\noindent and $(1/g_K)/S_K$ --- the certified value against the
+absolute-value mass --- \emph{is} the one object of all three dresses:
+T166's determinant ratio against its polarisation pieces (dress a), the
+$1-r_{12}^2$ of dress (b) up to the closed factor $1+3r_{12}^2\to4$
+(T166's independently derived quarter is this factor), and the entry
+threshold of dress (c). \textbf{There is one inequality, not three.} The
+verdict is \textsc{vector-resists}, with \textsc{one-term-missing}
+deliberately \emph{not} rendered: exactly one term is missing and it has a
+number, but that term \emph{is} dress (b) itself --- rendering it would
+misread a reduction as progress on the inequality. The balance of T167:
+$6$~theorem~$/\,0$~certified-uniform~$/\,2$~certified-per-window~$/\,
+7$~measured --- certified-uniform zero \emph{by construction}: T167
+supplies a map, not a step towards the bound. The theorem-shaped cores of
+T166 and T167 --- the cascade identities, the diagonal invariance, the
+exact $K=2$ identity, the pivot identity with the unification, and the
+trial theorem with both must-breaks --- are promoted as \vref{v557}
+\veri{v557\_cascade\_vector\_identities.py} (Section~\ref{sec:v557}).
+
+\begin{keybox}[After T167: one scalar]
+\emph{(R1, the only item)} an $m$-free upper bound on the single scalar
+$1-r_{12}^2=1-Q_{12}^2/(Q_{11}Q_{22})\le C\,h^{-3+\varepsilon}$ --- three
+closed lag sums (the T159 apparatus, no zeros, no $L$-evaluation, finite
+$\Lambda$-sums only); required relative accuracy on $r_{12}^2$:
+$1.25\times10^{-5}$ at the median union window, $3.19\times10^{-8}$ at the
+worst; the measured exponent $h^{+2.921}$ ($\varepsilon=0.079$) sits
+comfortably inside $\varepsilon_{\mathrm{carry}}=0.50$. Nothing else is
+missing: the vector is exact and the gain is the inverse of this scalar.
+\emph{(Closed off permanently)} perturbation theory of every order around
+the KMS bottom mode (the Kato series converges to the wrong object);
+position-blind $m$-free surrogates (the archimedean-only minimiser
+certifies $h^{-0.017}$, i.e.\ nothing; the type-change scramble).
+\emph{(Redirected)} work at $K=2$, not at the first flat $K=6$ (milder by
+$1.90$ and $h^{+0.353}$). T168 (\texttt{lagrange\_minors\_probe.py},
+contract \texttt{LAGRANGE.MINORS}) is running --- the Lagrange identity,
+the determinant as a sum of squares.
 \end{keybox}
 
 % =====================================================================
@@ -8449,7 +8694,7 @@ near-null vector.
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
-\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the twenty-two ledger modules
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the twenty-three ledger modules
 of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
@@ -8933,9 +9178,9 @@ load-bearing artefact. The index covers the $156$ parts T11--T166 that the curre
 ($157$ runs --- T104 was a double run with two independent arms --- and $4163$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v556} promoted; with T126--T166, the first forty-one parts of the second phase, the
-running totals are \textbf{$166$ probes and $4355/4355$ checks}. T167
-(\texttt{null\_vector\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v557} promoted; with T126--T167, the first forty-two parts of the second phase, the
+running totals are \textbf{$167$ probes and $4394/4394$ checks}. T168
+(\texttt{lagrange\_minors\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -9107,6 +9352,7 @@ T163 & \texttt{\scriptsize pareto\_\allowbreak front} & the survey of the Pareto
 T164 & \texttt{\scriptsize sector\_\allowbreak change} & both arms of the successor R-E decided (the T163 surface rebuilt and re-verified: $28$ zones $h=142$--$1445$, $27$ windows inside the cond horizon; $\kappa=0.038821$ at every jump in $[100,4\times10^{5}]$); \textbf{ARM A: the kernel spends the ceiling at power EXACTLY ONE} --- $d\log(1-F)/d\log U=-1.0005\ldots-1.0000$, $d\log r/d\log U=+1.0000$ exactly, an $h^{\varepsilon}$ ceiling costs $h^{-\varepsilon}$ margin for every $\varepsilon>0$; $\varepsilon^*=0.50$ DISOWNED as the $\varepsilon=0$ tailwind ($h^{+0.391}$ from the $L$-drift) divided by power one; \textbf{the single constant $U_{\mathrm{ref}}=4.9008=\max_h1/g_{16}$ carries all $9$ sub-surface windows out of sample}, $1/g_{16}=1.7527$--$5.3286\sim h^{+0.061}$ ($9\times$ lever arm, split halves $-0.010/+0.103$), every $g_K$ strictly increasing (Schur 1917) $\Rightarrow$ \textbf{the $O(1)$ gate is discharged window by window by a Cholesky identity --- the rest is ONE QUANTIFIER: $\sup_m1/g_{16}(m)<\infty$}; \textbf{ARM B --- NEGATIVE BY A THEOREM: $Q$ and TV homogeneous of degree two, $x_1=1$ fixes only the scale $\Rightarrow$ $Q/\mathrm{TV}$ and $\delta_{\mathrm{bnd}}$ the same in EVERY sector --- the entry normalisation is a GAUGE} ($5670$ combinations to $8.8\times10^{-10}$, horizon $2.6\times10^{-8}$); full space strictly worse ($\mu_0=0$ EXACTLY); weighted sector: floor flattens ($h^{+0.000}$ at $\kappa_s=4$) but \textbf{floor $\times$ transfer $=1/\mu^P_1$ IDENTICALLY at every shift (exponent sum $+1.997$ to $10^{-9}$)}; Abel: $Q/\mathrm{TV}\le\|C\|_\infty=30.3$--$930.6\sim h^{+1.185}$ growing --- forbids nothing; $\eta:=(Q/\mathrm{TV})/\|C\|_\infty$; \textbf{the unconstrained ascent reaches $Q/\mathrm{TV}=2.38$--$74.57$ --- $31$--$960\times$ over $2\kappa$ on $9/9$, $\eta=7.9$--$11.1\%$ --- and T163's TV floor HOLDS on it} ($\mathrm{TV}\mu^P_1=8.30$--$11.72$, a family T163 never searched) at price $h^{+3.299}$, above the crossing $h^{+1.91}$ and $3.5$--$7.6\times$ above $P_{\mathrm{aff}}$: relocated, not reduced; R-B$'''$ a NAMING problem (the T162 quarter bar $0.1001$--$0.1623$ carries the $-0.172$, $<0.25$ on $27/27$; regression $-0.046\log h$ vs $-0.477\log\alpha$, $\alpha/h$ coupled --- NARROWED); R-D settled in TYPE ($P_K$, $r$, $F$ unchanged to $3.5\times10^{-16}$ on $54$ combinations --- no fifth device from a sector change); stress: surrogate $1.5\times10^{3}$--$4.9\times10^{7}$, T145 no-go MONOTONE $1.0\to9.1\to25.4\to129\to434$ (exact null control), gauge break $3.4\times10^{-2}$, random-$v$ identity $3.8\times10^{-16}$; balance $11$ THEOREM / $1$ CERT-UNIF / $4$ CERT-WINDOW / $6$ MEASURED, zero load-bearing FIT rows; Q1\ldots Q9 PENDING, no promotion; \textbf{rest: R-E-A the quantifier; R-E-B closed negatively; R-F the alignment question ($\eta$ above $2\kappa/\|C\|_\infty$ at bounded price --- no sector, no normalisation, no prime); R-B$'''$; R-D} & TOLERANCE-CARRIES / SECTOR-RESISTS & 28/28\\
 T165 & \texttt{\scriptsize alignment\_\allowbreak eta} & the alignment successor R-F closed BY CERTIFICATE, not by failed search (the T163/T164 surface rebuilt and re-verified, ladder to $h=1445$, $27$ windows inside the cond horizon; the dashboard $R$, $\eta$, $P_{\mathrm{pr}}$, $\mathrm{TV}/(t_1v)^2$, QB gauge-invariant under $v\to tv$, THEOREM); \textbf{the T165 exchange identity $P_{\mathrm{pr}}=g_{16}\cdot R\cdot(\mathrm{TV}/(t_1v)^2)/\mu^P_1$ ($3.3\times10^{-16}$) --- four named objects, no inequality: demand and price are ONE equation}, so with T163's floor every crossing vector pays $\ge2\kappa g_{16}/\mu^P_1$ = the old KMS $h^2$; anatomy: the free optimum is LOW-HARMONIC ($93.7$--$96.8\%$ in the first $32$ parity modes vs $2.4$--$22.5\%$ baseline, lift $4.2$--$39.7$), orthogonal to the PNT main term ($-0.070\ldots-0.031$), heavy edges on prime-power cells (lift $1.36$--$2.12$), a CANCELLING sum (participation $8$--$18\%$); \textbf{the price decomposes EXACTLY (to $0.0$): $h^{+3.261}=+1.997$ (KMS, the same $h^2$ since T152) $+1.279$ (demand overshoot) $+0.093$ (floor) $-0.108$ ($g_{16}$)}; bar-tight counterfactual $h^{+1.982}$; $\eta(\mathrm{Cap})$ two-sided: the ceiling is a THEOREM, at $\mathrm{Cap}=10$ short by $5.5$--$392\times$ on every window, $0/27$ ladder points reach the bar; \textbf{EQUIVALENCE: $R>2\kappa$ and T163's crossing predicate are THE SAME predicate ($105/105$) $\Rightarrow$ R-F strictly STRONGER than the R2$''$ demand, the clauses collide --- R-F is EMPTY, its $m$-uniform form IS R-E-A}; T2: the $m$-free budgets bound $B_{11}$ sharply ($21$--$26$, $h^{+0.039}$) but it is the WRONG object ($1/g_1\sim h^{+3.110}$, $1/g_{16}\sim h^{+0.061}$, closure exact $+3.110-3.049=+0.061$) --- the certification lives in the $15$ ladder increments; T3, the DECOUPLED surface ($25$ windows / $6$ zones, $\nu\in\{4,5,6,8,11,16\}$, collinearity $0.87\to0.68$): \textbf{the quarter-bar drift is ZONE DEPTH, not window length ($19\times$)}; honest costs: $\sup1/g_{16}=5.7327$ RETIRES $U_{\mathrm{ref}}=4.90$ ($+17\%$, frame-A-specific); union ($52$ windows): $P_{\mathrm{pr}}\ge54.6$--$5865>\Theta_{\mathrm{TOL}}$, closed for $h>84.9$; stress: T145 monotone $1.0/2.8/12.1/27.5$ (to $102\times$), surrogate $8.6\times10^{3}$--$6.9\times10^{4}$, Dirichlet/KMS $10^{-15}$; balance $11$ THEOREM / $1$ CERT-UNIF / $4$ CERT-WINDOW / $6$ MEASURED; \textbf{rest: EXACTLY ONE genuine open object --- $\inf_m g_{16}(m)>0$, i.e.\ $g_{16}/g_1\ge c\,h^{3-\varepsilon}$ uniform in $m$: a quantifier over a certified flat list, a cancellation beyond absolute-value budgets} & ETA-RESISTS $\to$ \vref{v556} & 30/30\\
 T166 & \texttt{\scriptsize schur\_\allowbreak cascade} & the cascade lower bound dissected completely (a UNION surface: $27$ frame-A $+$ $36$ decoupled-$\nu$ windows $=63$, $h=96$--$1371$, $14\times$ lever arm, $\log h$/$\log\nu$ correlated only $0.33$; T165's numbers reproduced on frame A, the union reading $h^{+2.759}/h^{+0.193}/h^{+2.566}$); \textbf{FOUR IDENTITIES, all THEOREM on $63/63$: prefix (one Cholesky, all rungs), minor form (Schur 1917), the REGRESSION form $g_K/g_1=1/(1-R_K^2)$ --- the open object IS a near-collinearity --- and DIAGONAL INVARIANCE under $B\to DBD$: the $h^3$ belongs to the arithmetic Gram block alone}; rung profile extreme (rung $2$ alone median $59\%$, $K_{\mathrm{half}}\in\{2..5\}$ on $63/63$, flat first at $K=6$); rung $2$ closed: $1-r_{12}^2=1.3\times10^{-7}$--$4.5\times10^{-4}\sim h^{-2.92}$ (frame A) against $m$-free budgets sharp to $21$--$26$; \textbf{the CANCELLATION --- a third mechanism: no entry cancels ($60$--$99\%$ kept), neither half is collinear alone (arch $0.98$, atoms $0.29$), yet the SUM degenerates to seven digits: it lives in the $2\times2$ GRAM DETERMINANT} (polarisation split $6.7\times10^{-14}$; pieces $2.6$--$630$ vs det $1.0\times10^{-3}$--$1.7\times10^{-2}$, ratio $\sim h^{-1.45}$): the T159/T160 mechanism ONE LEVEL UP, in a quadratic functional of the lag sums; best closed route $h^{+1.319}$ (required $\beta$ precision $3.57\times10^{-4}$, all candidates miss by $12.4$--$2540$); sharpest form: \textbf{$1/g_K=\det G_{[1..K]}/(\mu^P_1\det G_{[2..K]})$, first flat at $K=6$ --- exactly ONE uniform inequality missing}; $U_{\mathrm{ref}}(\text{union})=7.45$ (supersedes $4.90$/$5.7327$; zone-depth-driven; CERT-WINDOW, off-recipe); full chain $g_1\le$ best $\le g_{16}\le s$ on $63/63$; $K=64$: the surrogate's loss is TRUNCATION ($h^{+1.963}\to h^{+2.574}$), no certificate; \textbf{two honest corrections: F2 STRICTLY WEAKER than F1 ($B_{11}\sim h^{+3.110}$, F1 needs $\varepsilon\le-0.110$); the confinement route a SUB-SURFACE ARTEFACT ($h^{+2.714}$ at $h\le780$ vs $h^{+1.963}$ on the union)}; stress: $L_P$ no-go breaks COMPLETELY (gain $\equiv1$ exactly), anti-fitting scramble factor $4569$ --- the mechanism hangs on WHERE the prime powers sit; balance $+5$ THEOREM / $+3$ CERT-WINDOW / $+4$ MEASURED, no new CERT-UNIF; P166.1\ldots P166.9 PENDING; \textbf{verdict by exponent gap: $h^{+1.319}$ vs $h^{+3.110}$, gap $h^{+1.791}$ --- the one missing inequality IS the cancellation, in three dresses} & CASCADE-RESISTS & 30/30\\
+T167 & \texttt{\scriptsize null\_\allowbreak vector} & the most constructive dress attacked and closed AS A CONSTRUCTION (the $63$-window union rebuilt bit for bit; T163--T166 reproduced as fits; $22$ families preregistered); \textbf{the PIVOT IDENTITY $u^{\mathsf T}Q_Ku=1/g_K+\delta^{\mathsf T}Q_K\delta$ for $\delta_1=0$ (THEOREM, $10206$ evaluations, $3.2\times10^{-9}$) --- every candidate excess $\rho=g_K\delta^{\mathsf T}Q\delta$ is an EXACT number}; \textbf{gram2 EXACT at $K=2$ ($\rho=0$, THEOREM): $(1,-Q_{21}/Q_{22})$ attains $1/g_2$ on $63/63$ ($8.7\times10^{-10}$), $B_{11}g_2=1/(1-r_{12}^2)$ an identity; certified gain exponent $h^{+2.921}$ frame A ($=h^{3-0.079}$), $h^{+2.246}$ union --- dress (c) collapses onto dress (b)}; perturbation theory dies structurally: Jacobi diverges (radius $1.0$--$12.7$) but \textbf{the KATO series CONVERGES (radius $0.067$) --- to the WRONG object} (the exact bottom eigenvector is itself useless, $\rho=6.04$, overlap $0.083$, relative gap $5.4\times10^{-7}$) --- closed off in EVERY order; moment route $h^{+1.320}$ = T166's $h^{+1.319}$ (flagged); two thresholds separated ($\mathrm{eps}_{\mathrm{vec}}$, $\mathrm{eps}_{\mathrm{ent}}$ = its square), envelopes on $189$ perturbations each; \textbf{monotone SHARPER in $K$ --- mildest at $K=2$ ($1.90\times$, $h^{+0.353}$), against the hypothesis and exactly where the vector is free}; at $K=6$ no closed family hits (separation $h^{+1.138}$, ratio $264\times$ --- the curves diverge); anchor $\mathrm{eps}_{\mathrm{ent}}(2)\to(1-r_{12}^2)/4$ = T166's quarter; end-to-end gain $2207$--$7.84\times10^{6}$ certified; gram2's $\rho$ at $K=16$ in $[0.17,6.16]$ --- the deficit is the higher rungs, not the vector; \textbf{scramble TYPE-CHANGE: $8/8$ windows lose positivity of the $2\times2$ diagonal ITSELF ($Q_{11}=-1.35\times10^{5}\ldots-1.02\times10^{4}$)}; anti-fitting cheat only $h^{-0.823}$; off-recipe $1-r_{12}^2\sim h^{-2.740}$ vs $h^{-2.921}$ ($+0.181$); \textbf{THE UNIFICATION AS AN IDENTITY: $\mathrm{eps}_{\mathrm{ent}}(K)=\rho\,(1/g_K)/S_K$ --- dress (a) = det ratio, dress (b) = $1-r_{12}^2$ (factor $1+3r_{12}^2\to4$), dress (c) = the threshold: ONE inequality, not three}; balance $6$ THEOREM / $0$ CERT-UNIF / $2$ CERT-WINDOW / $7$ MEASURED; ONE-TERM-MISSING deliberately NOT rendered (the one missing term IS dress (b)); \textbf{REST: R1, the only item --- an $m$-free upper bound on $1-Q_{12}^2/(Q_{11}Q_{22})\le C\,h^{-3+\varepsilon}$ (required $1.25\times10^{-5}$ median, $3.19\times10^{-8}$ worst)}; theorem cores of T166+T167 promoted as \vref{v557} & VECTOR-RESISTS $\to$ \vref{v557} & 39/39\\
 \end{xltabular}
 }
 
