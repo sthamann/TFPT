@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4047/4047 sandbox checks —
+        (“the full proof”, T126+) is now open with 4083/4083 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -298,8 +298,22 @@ export function HonestyBanner() {
         per-window domination with a 7.3e-4 margin and a shrinking
         trend, the no-go family breaks on five axes, and the four
         instrument candidates of T155/T157 are load-bearing as v552.
-        T158 (schur_entry_probe.py) is running at the cancellation-seeing
-        bound. What remains
+        T158 (ENTRY-RESISTS) then found exactly that cancellation-seeing
+        bound, and it is a theorem: the Thomson dual form turns the Schur
+        entry into a Dirichlet maximum — every trial vector bounds it from
+        the right side, which is exactly why Cauchy–Schwarz missed by up
+        to five orders of magnitude (a maximum evaluated at one direction)
+        — and a Cholesky ladder of strictly positive terms pins the entry
+        to within 1.13–1.27, flat, from one 16×16 factorisation the chain
+        already builds; the entry is exactly two-dimensional once one
+        Green column is granted, T157&apos;s growth pointer is refuted
+        (the atom mass grows faster than the arch floor in every band —
+        what carries the inequality is the off-band coupling a dyadic
+        argument discards), the T156 debt moves MEASURED → CERT-UNIF, and
+        the measured-step count falls from three to one; the five T158
+        candidates stay PENDING, to be bundled with T159.
+        T159 (exact_form_probe.py) is running — executing the
+        cancellation algebraically. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann
