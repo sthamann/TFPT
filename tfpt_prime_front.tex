@@ -91,7 +91,7 @@ $M$-matrix pair, the long-lag support structure, the Hardy-core identities, the 
 identities, the level-lemma identities, the Green/Szeg\H{o} identities, the gauge/parity
 identities and the odd-sector identities. Everything beyond
 those sixteen is \emph{sandbox}: an exploratory program, run as
-$151$ preregistered probes with $3852$ machine checks, which localized the residual object. That
+$152$ preregistered probes with $3889$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -260,7 +260,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots151$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots152$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -268,7 +268,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T151: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T152: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -364,7 +364,15 @@ three rest items settled (the archimedean minimum closed and attained exactly; t
 route a computed dead end: the local model is a matrix statement, not a symbol one), one
 scalar remaining a fit --- the bottom pencil ratio $R=K_{\mathrm{bot}}/\kappa=3.36$--$9.71$,
 flat, exactly where the no-go breaks (T151; the identity/certificate core of T151 is promoted
-as \vref{v550}));
+as \vref{v550}), and finally that pencil ratio itself, attacked head-on: both hoped-for
+gifts from the smooth kernel are \emph{refuted} --- the archimedean section is itself
+negative in the odd sector and the atom part too, so odd-sector positivity is a
+\emph{cancellation} between geometry and arithmetic, not a property of either half ---
+while the floor nevertheless closes structurally, a Schur two-block criterion with a fixed
+$16$-mode block certifying $\kappa\ge0.225$--$0.250$ flat across all windows, leaving the
+ratio certified on both ends ($R\le K_{\mathrm{bot}}/t=4.41$--$8.47$) with one term missing
+--- an $m$-free ceiling on $K_{\mathrm{bot}}$ --- and $89$--$92\%$ of the dominant loss
+$\Psi$ mapped onto the eight modes the certified ladder already controls (T152));
 Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
@@ -3659,7 +3667,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T151)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T152)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -5670,6 +5678,95 @@ the $m$-freeness of a single printed scalar.
 T152 (\texttt{pencil\_ratio\_probe.py}) is running at exactly that scalar.
 \end{keybox}
 
+\subsection{The pencil ratio and the cancellation (T152)}
+T152 (\texttt{pencil\_ratio\_probe.py}, contract \texttt{PENCIL.RATIO}, $37/37$, $33.2$\,s on
+$60$ prime-power windows $m=149\ldots1445$, verdict \textsc{one-term-missing}, the verdict
+rule wired constructively: ``proved'' cannot be returned in any branch) attacks the one
+scalar T151 left as a fit --- the $m$-freeness of the bottom pencil ratio
+$R=K_{\mathrm{bot}}/\kappa$ --- and returns the sharpest structural fact of the phase.
+
+\emph{Both hoped-for gifts refuted: positivity is a cancellation.} $A^{\mathrm{arch}}$ is
+\emph{not} positive in the odd sector on any of the $60$ windows
+($\lambda_{\min}=-2.8132$--$-1.8396$, certified negative by a completed Cholesky of
+$A^{\mathrm{arch}}-tI$ with the floor carried): the odd sector removes the constant mode but
+not the negative archimedean mass near the origin. In pencil normalisation the failure is
+catastrophic, not marginal --- $\kappa_{\mathrm{ar}}=\nu_{\min}(A^{\mathrm{arch}},L_P)
+=-5.28\times10^{5}$--$-4.00\times10^{3}=O(-m^{2})$, because the lowest parity sine has
+$L_P$-energy $\mu^P_1=O(m^{-2})$ while it sees an $O(1)$-negative form. And the atom part is
+negative too ($\nu_{\min}(A^{\mathrm{atom}},L_P)=-1408$--$-25.6$ on $60/60$): \emph{neither}
+summand of the exact split is positive, and the sum is --- \textbf{the positivity of the odd
+section is a cancellation between the archimedean kernel and the prime-power atoms, not a
+property of either half} (exhibited exactly at $t_1$: an archimedean part
+$-5.26\times10^{5}$--$-3.98\times10^{3}$ plus an atom part
+$8.19\times10^{3}$--$2.88\times10^{6}$ add to a near-$O(1)$ quotient --- the atoms even
+\emph{overshoot} the archimedean hole). The additive Weyl route misses $\kappa$ by a measured
+$1.5\times10^{4}$--$1.8\times10^{6}$ and the closed $\ell^1$ budget route by a further
+$2.3\times10^{5}$--$9.9\times10^{7}$ --- the $O(m^{2})$ conversion $1/\mu^P_1$ kills both.
+But the archimedean diagonal is negative on only an $m$-\emph{independent} number of parity
+modes ($k\le4$--$7$ of up to $1445$), and above them its pencil quotient is $\ge0.989$ on
+$60/60$: \textbf{the Schur two-block criterion (Schur 1917 --- an equivalence, with both
+Cholesky floors subtracted) with a fixed $16$-mode low block certifies
+$\kappa\ge t=0.2250$--$0.2500$ on every window}, at $m^{0.006\pm0.036}$ with identical
+quartile medians --- the floor is no longer a fit. It consumes \emph{one} unproven
+inequality --- $B_{HH}\succeq tI$ on the bulk block --- and entrywise routes are provably
+insufficient for it: Gershgorin returns $-8.99\times10^{5}$--$-1.3\times10^{3}$ on the full
+whitened parity block and still $-7189$--$-58$ after cutting at the last arch-negative mode,
+the median row coupling being $3.9$--$19.6$ against a diagonal of $0.36$--$0.89$. What is
+needed is a \emph{block} statement, not a bound on individual prime-power sums.
+
+\emph{The ratio, certified on both ends.} The archimedean part does not carry the
+\emph{ceiling} either: $K^{\mathrm{arch}}_{\mathrm{bot}}=24.6$--$1326$ at $m^{1.519}$, one
+to two orders of magnitude above the true $K_{\mathrm{bot}}=1.102$--$2.118$ and growing
+where the true one is flat --- the atoms do not perturb an archimedean alignment, they
+\emph{create} it. The new number: \textbf{$R\le K_{\mathrm{bot}}/t=4.408$--$8.471$ at
+$m^{0.099\pm0.167}$, certified on both ends} (inertia ladder above, Schur floor below), with
+a quartile walk of $1.269$ over a $4.54\times$ $m$-range. Two structural $m$-free routes to
+the ceiling lose four to six orders of magnitude: Courant--Fischer on the parity basis (the
+atom overshoot is $O(m^{2})$), and the two-sided bulk block --- whose KMS ratio step \emph{is}
+a theorem ($\sin a/\sin b\le a/b$, hence $\mu^P_{k+16}/\mu^P_k\le289$, verified
+$285.95$--$288.97\le289$ on the table) but whose ingredient $T_{HH}=26.8$--$3116$ grows
+$m^{2.044}$: the section's low \emph{eigenvalues} track the model's while its low
+\emph{eigenvectors} do not. The no-go reconstruction breaks exactly at the unclosed step
+(the floor survives; ceiling and $R$ grow $m^{1.994}$) --- the gap is real, not a tool loss;
+the control ($L_P$ against itself) is $(1,1,1)$ to $3.5\times10^{-11}$.
+
+\emph{The $\Psi$ map, and the honest dual reading.} $\Psi\le8.70\times10^{3}$--$6.24\times
+10^{5}$ \emph{is} $1/\lambda_{\min}(E)$ to within $1.12$--$1.19$ --- the spectral bottom of
+the whitened section and essentially nothing else; it grows $m^{2.18}$ because
+$\mu^P_1=O(m^{-2})$, not because $\kappa$ degrades. The reserve: \textbf{$89$--$92\%$ of
+$\operatorname{trace}(E^{-1})$ sits on the eight lowest modes --- exactly those the
+certified ladder already controls}; rebuilding the subset supremum into a ladder sum is
+worth $3.46$--$5.29\times$ end to end (it would lift T151's
+$2.01\times10^{-2}$--$3.52\times10^{-2}$ into the
+$8\times10^{-2}$--$1.4\times10^{-1}$ range) --- now the dominant loss, outranking any
+further sharpening of $R$. The verdict is kept honest by printing both readings: on the
+band estimator alone gate B would fail and the verdict would read \textsc{ratio-resists};
+the quartile-median reading ($15$ windows per stratum, high variance of the band fit) is the
+declared one, and both are in the output. Also on the record: T151's $R$ exponent $0.037$
+was fitted against the zone variable (not monotone in $m$) --- the same quantity refit in
+$m$ is $0.099$, so part of that flatness was the fit variable rather than the object. Ten
+map entries are named; \emph{none is promoted} --- the strongest candidates consume the
+unproven block positivity $B_{HH}\succeq tI$ and stay pending with exactly that reason.
+
+\begin{keybox}[After T152: the floor is structural --- one term and one rebuild remain]
+\emph{(M1)} \textbf{the block inequality}: $B_{HH}\succeq tI$ on the bulk block --- the
+single unproven input the Schur certificate consumes; entrywise/Gershgorin bounds provably
+cannot deliver it ($-8.99\times10^{5}$--$-58$ even after the cut), so it must be a block
+statement. \emph{(M2)} \textbf{the load-bearing rest}: an $m$-free ceiling on
+$K_{\mathrm{bot}}$ --- every structural route loses four to six orders of magnitude because
+the low eigenvectors are not the model's, and the T145 no-go breaks exactly there
+($m^{1.994}$). \emph{(M3)} the $\Psi$ rebuild, subset supremum $\to$ ladder sum --- worth
+$3.46$--$5.29\times$ end to end, now the dominant loss and ahead of any further work on $R$.
+Only after these: frames beyond A, zones beyond prime powers. The honest state, in one
+sentence: after T152 the positivity of the odd sector is known to be a cancellation between
+geometry and arithmetic rather than a property of either half, the pencil floor is certified
+by a fixed-size Schur block instead of a fit, the ratio is certified on both ends with one
+$m$-free ceiling missing --- and the largest remaining loss sits on modes the certified
+ladder already controls.
+T153 (\texttt{psi\_ladder\_probe.py}) is running at exactly that rebuild and that block
+inequality.
+\end{keybox}
+
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
@@ -6149,19 +6246,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T151}\label{app:index}
+\section{Probe index, diary parts T11--T152}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $141$ parts T11--T151 that the current diary file records
-($142$ runs --- T104 was a double run with two independent arms --- and $3660$ green checks); the ten
+load-bearing artefact. The index covers the $142$ parts T11--T152 that the current diary file records
+($143$ runs --- T104 was a double run with two independent arms --- and $3697$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v550} promoted; with T126--T151, the first twenty-six parts of the second phase, the
-running totals are \textbf{$151$ probes and $3852/3852$ checks}. T152
-(\texttt{pencil\_ratio\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v550} promoted; with T126--T152, the first twenty-seven parts of the second phase, the
+running totals are \textbf{$152$ probes and $3889/3889$ checks}. T153
+(\texttt{psi\_ladder\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -6318,6 +6415,7 @@ T148 & \texttt{\scriptsize szego\_\allowbreak bottom} & the lifting statement di
 T149 & \texttt{\scriptsize weight\_\allowbreak smoothing} & the one open input attacked through the gauge freedom, \textbf{and the hypothesis is refuted rather than weakened}: the whitening diagonal is a FREE GAUGE (identity plus one Rayleigh step, $9$ preregistered candidates, every one a valid lower bound, family maximum valid); the preregistered winner \texttt{const} (geometric mean of the Jacobi diagonal) delivers the three ordered numbers --- sandwich $\sigma\le5.5789$ CERTIFIED ($x^{0.154}$, bar $8.0$), $\mathrm{TV}(\log\tilde\Lambda)$ \textbf{exactly $0.0000$} (T148's $11.93$ at $x^{0.444}$ ELIMINATED, not reduced), $\nu_{\tilde L}=222.70$ in target on $21/44$ windows only ($\rho=1.347\to0.485$) --- at price $\tilde\kappa_{\mathrm{up}}\le2.3146$ vs $1.2647$; \textbf{the two-regime decomposition}: flutter-killers cheap (sandwich $1.129$--$1.572$) but move $\nu_{\tilde L}$ by $\le0.9\%$, only macro-removers improve it (factor $1.27$) --- $\mathrm{TV}(\log\Lambda)$ was the MISLOCATED hypothesis, the roughness sits in the FORM; chain: $\Gamma=\sqrt{Q^\star}S_w$ gauge-invariant at $4.4\times10^{-16}$ ($89$ assemblies), family maximum $9.52$--$18.45\%$ of the true gap certified (median $12.68\%$), a priori $0.800$--$1.566\%$ (up to $1.284\times$ better), Jacobi still wins certified $44/44$; $Q^\star$ ceiling $697.9\to149.1$, exponent $0.551\to0.330$, NOT flat (driver $\nu_{\tilde L}=265.2$, $x^{0.772}$, above the bottom block); stress: no-go already smooth, $\nu$ diverges $x^{1.420}$ under EVERY gauge; Dirichlet exact ($\nu\to\pi$, $5.9\times10^{-14}$) and CORRECTS the question to the ladder $\nu_k\le Ck^2$ with $m$-free $C$ ($C=18.66$--$44.61$, $x^{0.272}$); TV anatomy: $85\%$+ flutter, amplitude $0.064$--$0.182$ FLAT, edges innocent; $7$ promotion candidates, unpromoted; \textbf{rest: $m$-free $C$ in $\nu_k\le Ck^2$ (load-bearing); an a-priori flutter-amplitude bound (closes it outright); cosmetic order-2 theorem} & PARTIAL-SMOOTHING & 30/30\\
 T150 & \texttt{\scriptsize mode\_\allowbreak ladder} & the ladder attacked through the flutter amplitude, \textbf{and the mechanism has a name --- parity}: the form is EXACTLY the compression of the full symmetric Toeplitz section onto its antisymmetric parity sector ($U_-^{\mathsf T}T_MU_-=T-H$, cross block $\le4.0\times10^{-16}$ on real windows; Basor--Ehrhardt 2009 the address) and \textbf{the entire negative inertia of the sign-changing symbol sits in the EVEN sector} (odd $0$ / even $1$ on $72/72$, LDL$^{\mathsf T}$) --- $f(0)<0$ EXPLAINED, not worked around; the diagonal is an EXPLICIT zone function ($\Lambda_r=c_0-c_{M-1-2r}+\sum\max(c_{|r-s|}-c_{M-1-r-s},0)$, residual $0.0$ on $72/72$) with the exact split $c=c^{\mathrm{arch}}+c^{\mathrm{atom}}$, $c^{\mathrm{atom}}\le0$; the flutter amplitude a CERTIFIED form functional, fit-free ($\mathrm{amp}_{\mathrm{loc}}=0.0606$--$0.1993$, $x^{-0.165\pm0.015}$, largest log step $0.1927$; chain $\le\mathrm{half}\cdot d_1^\lambda/\min\Lambda=1.345$--$3.954$; atom budget $4B\sqrt N$ CLOSED); honest negative: the archimedean diagonal is NOT the macro profile (level shift $0.734$--$2.647$, $x^{0.244}$); \textbf{the perturbation step precisely dead, twice}: multiplicative (Loewner) transfers with $\exp(\mathrm{amp})\le14.11$ --- the gauge step CLOSES --- additive (Weyl / Bauer--Fike / Davis--Kahan) misses by $2.4$--$5.8$ orders ($\|A^{\mathrm{atom}}\|=4.3$--$12.3\%$ of the section) AND the archimedean-only section is itself INDEFINITE ($2$--$7$ negatives) --- \textbf{the atoms are co-responsible for the positivity}; third valid ceiling from the parity sines ($\nu_k=\pi k^2$ on the control to $0.0002$, gain $1.000$--$1.130$); BUT $C=14.24$--$43.39=13.81\pi$, $x^{0.258\pm0.009}$ --- the one gate falls; max at $k=1$ ($67/72$), the gap $\pi\to13.81\pi$ exactly the ARITHMETIC LEAKAGE of the bottom mode ($\ell^1$ $1.41$--$1.79$, $m\|\psi\|_\infty^2=2.45$--$3.41$ vs $2$); chain $0.0680$--$0.1845$ certified (T149's best reproduced exactly), ladder-shaped $Q^\star$ ceiling valid by monotonicity (price $\le2.555\times$ for ONE constant); $5/10$ factors flat; stress LOCALISED: the no-go violates the ladder alone ($x^{1.840}$, multiplier smooth), controls $C=\pi$ ($0.0004/0.0002$); $9$ candidates (stock $121+9-6=124$); core of T149+T150 promoted as \vref{v549}; \textbf{rest: $\nu_k\le Ck^2$ with $m$-free $C$ for the ODD parity sector at a sign-changing symbol --- THE one inequality; a closed bound on $\min\Lambda^{\mathrm{arch}}$; Basor--Ehrhardt at $f(0)<0$} & ONE-TERM-MISSING & 36/36\\
 T151 & \texttt{\scriptsize odd\_\allowbreak ladder} & the one inequality attacked head-on, \textbf{and it closes by REROUTING OFF THE LADDER}: the positivity of the odd sector is a GRID fact --- the parity sines live on $\theta_k=2\pi k/N$ with $\mu^P_k=2-2\cos\theta_k$ exact, and the symbol's negative window ($\theta_c=7.06\times10^{-4}$--$1.32\times10^{-2}$) lies UNDER the odd spacing $\theta_1$ (ratio $0.328$--$0.407$, $x^{-0.057}$) --- stepped over on $72/72$; BUT the symbol language fails ($f''(0)=3.8\times10^{5}$--$6.8\times10^{8}$, $f$ moves $0.47$--$0.85$ across ONE mode spacing, Fej\'er averaging instead of sampling, deviation $1.39$--$1.83$ at $k=1$, margin vacuous $72/72$) --- \textbf{T150's rest 3 answered NEGATIVELY: the local model is a MATRIX statement} --- $\lambda_k(A)\le S\mu^P_k$ for $k\le8$ via LDL$^{\mathsf T}$ (Sylvester), $S=1.1019$--$2.3870$, $f(0)<0$ ABSORBED (Rayleigh floor $L_P\ge\mu^P_1I$); leakage = LOW-$k$ ROTATION ($\sin\angle(\psi,t_1)=0.816$--$0.894$, shares $0.355$/$0.687$/$0.005$ at $k=1$/$2$--$4$/${>}64$), no arithmetic sideband; \textbf{the Sobolev step IS the multiplicative mode comparison}: virtual node $\Rightarrow\|\psi\|_\infty^2\le2\|\psi\|_2\|\nabla\psi\|_2$, certified pencil floor $\kappa=0.2273$--$0.4502$ $\Rightarrow b_k\le2m\sqrt{K_{\mathrm{bot}}\mu^P_k/\kappa}\le C_Sk$ --- \textbf{LINEAR, $C_S=11.5137$--$19.5731$ (median $13.82$), trend $x^{0.020\pm0.007}$ NON-GROWING} vs $13.81\pi$ at $x^{0.258}$; factor $7.5$--$34.9$ better at the bottom; rotation route priced and discarded ($4\sqrt m$, overshoots $4.2\times10^{3}$--$1.0\times10^{6}$); global pencil useless ($x^{2.695}$) --- ALL carried by $R=K_{\mathrm{bot}}/\kappa=3.3634$--$9.7108$ ($x^{0.037\pm0.015}$), the ONE fit; $\min\Lambda^{\mathrm{arch}}=c^{\mathrm{arch}}_0-c^{\mathrm{arch}}_{M-1}=2.5928$--$4.8981$ CLOSED AND ATTAINED (rest 2 done); $Q^\star_{\mathrm{sob}}=12.39$--$23.94$ beats the $\ell^1$ ceiling $2.69$--$10.13\times$, end to end $\to2.01\times10^{-2}$--$3.52\times10^{-2}$ (gain up to $3.18\times$), dominant loss now $\Psi=4.7\times10^{3}$--$6.1\times10^{6}$; no-go breaks IN THE PENCIL only ($x^{1.986}$), controls exact (pencil $(1,1)$ to $3.7\times10^{-12}$, Sobolev price EXACTLY $\pi$); $10$ candidates (stock $124+10-5=129$); core promoted as \vref{v550}; \textbf{rest: the $m$-freeness of $R=K_{\mathrm{bot}}/\kappa$ --- ONE scalar; a closed $\kappa$ floor from the lag vector; $\Psi$} & ODD-CARRIES & 27/27\\
+T152 & \texttt{\scriptsize pencil\_\allowbreak ratio} & the one scalar attacked head-on, \textbf{and both hoped-for arch gifts are REFUTED while the floor closes structurally}: $A^{\mathrm{arch}}$ is NOT positive in the odd sector on any window ($\lambda_{\min}=-2.8132$--$-1.8396$, certified by completed Cholesky; in pencil normalisation $\kappa_{\mathrm{ar}}=-5.28\times10^{5}$--$-4.00\times10^{3}=O(-m^{2})$, the lowest parity sine having $L_P$-energy $O(m^{-2})$ against an $O(1)$-negative form) and the atom part is negative too ($-1408$--$-25.6$): \textbf{odd-sector positivity is a CANCELLATION between geometry and arithmetic, not a property of either half} (at $t_1$: arch $-5.26\times10^{5}$--$-3.98\times10^{3}$ plus atom $8.19\times10^{3}$--$2.88\times10^{6}$ --- the atoms OVERSHOOT); additive Weyl misses $\kappa$ by $1.5\times10^{4}$--$1.8\times10^{6}$, the $\ell^1$ budget by a further $2.3\times10^{5}$--$9.9\times10^{7}$; BUT the arch diagonal is negative on only $k\le4$--$7$ modes ($m$-independent), above them quotient $\ge0.989$ $\Rightarrow$ \textbf{the Schur two-block criterion (Schur 1917, both Cholesky floors subtracted) with a FIXED $16$-mode low block certifies $\kappa\ge t=0.2250$--$0.2500$ on every window, $m^{0.006\pm0.036}$, quartile medians identical --- the floor is no longer a fit}, consuming ONE unproven inequality $B_{HH}\succeq tI$ (entrywise/Gershgorin provably insufficient: $-8.99\times10^{5}$--$-58$ even after the cut; median row coupling $3.9$--$19.6$ vs diagonal $0.36$--$0.89$); the arch part does not carry the CEILING either ($K^{\mathrm{arch}}_{\mathrm{bot}}=24.6$--$1326$, $m^{1.519}$, one to two orders above the true $K_{\mathrm{bot}}=1.102$--$2.118$ --- the atoms CREATE the alignment); new number \textbf{$R\le K_{\mathrm{bot}}/t=4.408$--$8.471$, $m^{0.099\pm0.167}$, certified on BOTH ends}, quartile walk $1.269$ over a $4.54\times$ $m$-range; two structural $m$-free routes lose $4$--$6$ orders (Courant--Fischer: atom overshoot $O(m^{2})$; two-sided bulk: KMS ratio a theorem, $285.95$--$288.97\le289$, but $T_{HH}=26.8$--$3116$ grows $m^{2.044}$); no-go breaks exactly at the unclosed step ($m^{1.994}$), control $(1,1,1)$ to $3.5\times10^{-11}$; $\Psi\le8.70\times10^{3}$--$6.24\times10^{5}$ IS $1/\lambda_{\min}(E)$ to within $1.12$--$1.19$, grows $m^{2.18}$ because $\mu^P_1=O(m^{-2})$, and $89$--$92\%$ of $\mathrm{trace}(E^{-1})$ sits on the eight lowest modes --- the ladder-sum rebuild is worth $3.46$--$5.29\times$ end to end; honest dual reading printed (band estimator alone: RATIO-RESISTS); T151's $x^{0.037}$ was fitted against the zone variable, refit in $m$: $0.099$; $10$ map entries, NO promotion (the candidates consume the unproven block positivity); \textbf{rest: $B_{HH}\succeq tI$ as a block statement; an $m$-free $K_{\mathrm{bot}}$ ceiling; the $\Psi$ rebuild, subset sup $\to$ ladder sum} & ONE-TERM-MISSING & 37/37\\
 \end{xltabular}
 }
 

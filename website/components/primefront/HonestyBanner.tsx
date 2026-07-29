@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3852/3852 sandbox checks —
+        (“the full proof”, T126+) is now open with 3889/3889 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -205,8 +205,19 @@ export function HonestyBanner() {
         statement, not a symbol one), and one scalar remains a fit: the
         bottom pencil ratio R = K_bot/κ = 3.36–9.71 (flat, x^0.037) — the
         T145 no-go breaks exactly there (x^1.986). The identity/certificate
-        core of T151 is load-bearing as v550, and T152
-        (pencil_ratio_probe.py) is running at exactly that scalar. What
+        core of T151 is load-bearing as v550. T152 (ONE-TERM-MISSING) then
+        attacked exactly that scalar: both hoped-for archimedean gifts are
+        refuted — the arch section is itself negative in the odd sector
+        (λ_min = −2.81…−1.84, O(−m²) in pencil normalisation) and the atom
+        part too, so positivity is a cancellation between geometry and
+        arithmetic, not a property of either half — while the floor closes
+        structurally via a Schur two-block criterion with a fixed 16-mode
+        block (κ ≥ 0.225–0.250, flat, consuming one unproven block
+        inequality B_HH ⪰ t·I), R ≤ K_bot/t = 4.41–8.47 is certified on
+        both ends with one term missing (an m-free ceiling on K_bot), and
+        89–92% of the dominant loss Ψ sits on the eight modes the
+        certified ladder already controls — T153 (psi_ladder_probe.py) is
+        running at exactly that rebuild. What
         remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
