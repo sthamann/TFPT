@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v553
+          v535–v554
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4170/4170 sandbox checks —
+        (“the full proof”, T126+) is now open with 4205/4205 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -341,10 +341,25 @@ export function HonestyBanner() {
         hardness of the problem, not an assembly artefact; the
         total-variation bound became a genuine theorem (four digits),
         and ρ &gt; 1 on every destructive direction, flat, is the sole
-        surviving R1″ fact. T161 (classical_closure_probe.py) is
-        running — the circularity triage: do unconditional classical
-        bounds suffice at those 32 frequencies, or does the required
-        cancellation have RH strength? What remains
+        surviving R1″ fact. T161 (CLOSURE-RESISTS) then ran the two
+        classical rests plus the circularity triage, and the triage
+        returned its most consequential answer: the chain is NOT
+        circular — the required cancellation at the 32 frequencies (now
+        identified exactly as the Fourier harmonics of the log-window, a
+        theorem) has δ = 1.148–1.881 against RH strength 1/2, and in
+        absolute terms it sits below the boundary term of every partial
+        summation, so the chain does not secretly need RH: it needs MORE
+        than RH-strength input would supply, which localises the h² in
+        the SPLIT rather than in the primes (a re-split moves the demand
+        to δ_eff = 0.98–1.38 — still above 1/2). Meanwhile the analytic
+        half of the arch bound closes m-free (scale-free Bernstein rate
+        (3+√5)/2, a closed head split Ψ with no peeling, an explicit
+        degree schedule K(h) = O(log h)), the sign inequality R-B is
+        refuted in all four readings, and a certified off-diagonal
+        fraction bound with constant 1/4 survives; the closed cores of
+        T160+T161 are load-bearing as v554. T162
+        (third_split_probe.py) is running — the search for one split
+        with effective δ below 1/2, the whole remaining R2″ task. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

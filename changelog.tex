@@ -62,6 +62,114 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (IX) (\texttt{v554} --- the sampling/harmonics identities of phase 2 promoted; prime-front diary T161 (the circularity triage: the hardness sits in the split, not in the primes, CLOSURE-RESISTS) + paper + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v554} (\texttt{PRIME.SAMPLING.HARM.01}).} Promotion of
+the closed theorem cores of the discovery parts T160 (\texttt{pairing\_probe.py}) and
+T161 (\texttt{classical\_closure\_probe.py}) --- $21$ checks, ${\sim}0.5$\,s, everything
+recomputed on \texttt{v551}--\texttt{v553}'s declared surface (the $12$ deepest
+prime-power zones admitting a frame-A window inside the cap, $n=29\ldots139$,
+$m=96\ldots291\le300$) plus a declared $\Lambda$-battery of six log-spaced cut-offs
+$X=10^{3}\ldots3.2\times10^{5}$ for the PNT item (finite von-Mangoldt sums only, no
+matrix anywhere), nothing cited from the sandbox; the companion to \texttt{v553}, which
+certified the algebra of the sixteen-form --- this module certifies \emph{what that form
+pairs against}, and it closes no open term. Scope fence: per-instance identities and
+certified inequalities with the direction in the name --- no fit, no $D$-exponent, no
+zone-uniform statement; finite $\Lambda$-sums are allowed and used, \emph{no RH
+statement} is made, and the $\delta$ triage of T161 (required cancellation depth against
+RH strength) is a documentation item, \emph{not} a module claim; the open terms after
+T161 (R-A$'$ the prime-free log-moment; R-B$'$ the $m$-free $16\times16$ Gram fraction
+bound; R-C$'$ one split of the pairing with $\delta_{\mathrm{eff}}<\tfrac12$; R-D a
+fifth R1$''$ device) stay open and typed open; each statement carries at least one
+mutation control that must fail loudly.
+\item \textbf{(1) The sampling identity (T160, P2) \mE.} The atom half of the pairing
+equals $-\tfrac12\sum_{n\le X}(2\Lambda(n)/\sqrt n)\,\widehat w(\log n)$ (plus one
+reflected term below the grid; $\widehat w$ the linear interpolant of the lag weights),
+exact to $5.6\times10^{-15}$ of the absolute atom scale on $12/12$ windows: identically
+a finite combination of sums $\sum_n\Lambda(n)n^{-1/2}\cos(t\log n)$ at $32$ explicit
+frequencies. Mutation: a one-index grid shift breaks by
+$5.1\times10^{-5}$--$3.1\times10^{-3}$.
+\item \textbf{(2) The moment laws and the TV theorem (T160, P1/P4) \mE.} $m_0=0$
+($1.0\times10^{-16}$ of $\|w\|_1$), $m_1=-[S_0^2+2\sum_jP_j^2]$ ($9.2\times10^{-16}$)
+and $m_2=-[2S_1-(M{-}1)S_0]^2$ ($3.4\times10^{-14}$, a perfect square), both strictly
+negative on every window; U3 as a theorem with \emph{checked} hypotheses
+($c^{\mathrm{arch}}\le0$ and monotone on $d\ge1$, $12/12$):
+$\mathrm{TV}(c^{\mathrm{arch}})=3.9817$--$4.8991\le|c_0|+2\sup<6$, closed and
+window-independent. Mutations: a one-index prefix shift breaks $m_1$ by
+$\ge1.25\times10^{-2}$, an $(M{-}2)$ mis-normalisation breaks $m_2$ by
+$\ge6.1\times10^{-2}$, the full atom-including kernel violates the monotone hypothesis
+on $12/12$.
+\item \textbf{(3) The harmonic-frequency theorem and the PNT main term (T161, P3) \mE.}
+$t_j(2\alpha)=2\pi j$ \emph{exactly} ($2.8\times10^{-14}$) on every window and every
+battery cut-off --- the $32$ frequencies of the sampling identity are precisely the
+Fourier harmonics of the log-window $[0,2\alpha]$; at those frequencies
+$\theta=2\pi j$ collapses the partial-summation main term to the closed, parameter-free
+prediction $(\sqrt X-1)/(\tfrac14+t^2)$ (de la Vall\'ee Poussin 1896; the Mellin factor
+of $x^{-1/2}$), matching the finite sums to $0.0007$--$0.097$ of the trivial mass
+against the declared cap $0.12$, the subtraction reducing the aggregate residual to
+$0.008$--$0.466\le0.5$ on every cut-off. Mutations: a wrong Mellin pole worsens the
+aggregate residual by $\times1.8$--$\times95.8$; a mass-matched \emph{uniform} fake
+measure misses by $0.23$--$0.51$ --- the agreement is a property of the von-Mangoldt
+measure, not of any measure with the same mass.
+\item \textbf{(4) The head split and the scale-free Bernstein rate (T161, P1) \mE.}
+$c^{\mathrm{arch}}_d=\Psi_d+D\widehat G(dD,D)$ with
+$\Psi_d=-\tfrac12[(d{+}1)\log(d{+}1)-2d\log d+(d{-}1)\log(d{-}1)]$ closed, $D$-free and
+$m$-free (the triangle-smeared simple pole; the $\log D$ cancels identically), exact to
+$3.2\times10^{-16}$ of $\sup|c^{\mathrm{arch}}|$ at \emph{every} lag of every window,
+the two $\Psi$ representations agreeing to $2.9\times10^{-14}$; and
+$\rho^*=(3+\sqrt5)/2=2.618034$: the root of $x^2-3x+1$, returned exactly by the $D\to0$
+limit of the peeled interval $[0.4\alpha,2\alpha]$ and invariant under
+$\alpha\times10$ --- scale-free, every window's $\rho(D)=2.588$--$2.608$ below it
+(Bernstein 1912). Mutations: dropping $\Psi$ misses $c^{\mathrm{arch}}$ by
+$0.99$--$1.00$; the wrong interval ratio moves the limit to $3.0$.
+\item \textbf{(5) The off-diagonal fraction bound and the sign refutation (T161, P2)
+\mE.} The gauge identity licenses one boundary-free Abel step,
+$Q^{\mathrm{arch}}=\sum_{k,l}a_ka_l\sum_{d\ge1}(\Delta c^{\mathrm{arch}})_dR^1_{kl}(d)$
+exactly ($2.0\times10^{-13}$), and the certified per-window inequality is
+$|\text{off-diagonal block}|\le\tfrac14|Q^{\mathrm{arch}}|$ (measured $0.171$--$0.212$
+on $12/12$) --- with the \emph{refuted} sign law wired as the negative control: the
+arch half is negative while its off-diagonal block is positive on $12/12$, and
+$176/240$ off-diagonal pairs violate the per-pair form on every window --- nothing
+single-signed is promoted. Mutation: a one-index $R$-kernel shift breaks by
+$\ge6.8\times10^{-5}$. Stress: the head split misses the T145 no-go reconstruction by
+$2.39$; the Dirichlet cosine-sum identity (including the degenerate branch), the KMS
+eigenpairs and $\mathrm{odd\_toeplitz}(c^L)=L_P$ (zero tolerance) are exact.
+\item \textbf{Prime-front diary T161 (\texttt{classical\_closure\_probe.py}, contract
+\texttt{CLASSICAL.CLOSURE}, $35/35$, $1.2$\,s, $19$ log-spaced prime-power zones
+$h=50\ldots1445$, verdict CLOSURE-RESISTS, triage verdict NEEDS-BEYOND-RH-STRENGTH,
+sandbox).} The two classical rests plus the circularity triage, and the triage returns
+its most consequential answer: \emph{the chain is not circular}. R-A closes $m$-free ---
+$A=D\widehat A$ exactly, only the $1/s$ head binds, the scale-free Bernstein rate
+$\rho^*=(3+\sqrt5)/2$, the closed head split (no peeling), and an explicit degree
+schedule $K(h)=O(\log h)$ (a \emph{fixed} degree is refuted with a number; the residual
+is the prime-free log-moment, outside the polynomial ladder). R-B is refuted in all four
+readings ($3168/4320$ pairs; the aggregate by \emph{sign}) and replaced by the certified
+fraction bound $0.1035$--$0.1713\le\tfrac14$, flat. The triage: the $32$ frequencies are
+exactly the Fourier harmonics of the log-window (theorem), the measured cancellation is
+fully the PNT main term, and the required depth is $\delta=1.1482$--$1.8809$ against RH
+strength $\tfrac12$ --- in absolute terms $0.012$--$0.31$ of the last term of the sum,
+below the boundary term of every partial summation, so no strengthening of the
+$\psi(x)-x$ input reaches it: the chain needs \emph{more} than RH-strength input would
+supply, which localises the $h^2$ in the \emph{split} rather than in the primes; a
+re-split moves the demand to $\delta_{\mathrm{eff}}=0.9839$--$1.3767$ --- it moves, but
+stays above $\tfrac12$ on $18/18$. Balance $20/10/4/9/3$. T162
+(\texttt{third\_split\_probe.py}), running, searches for one split with
+$\delta_{\mathrm{eff}}<\tfrac12$. NOT RH evidence; no marker moves.
+\item \textbf{Docs + website sync.} \texttt{tfpt\_prime\_front} gains the T161
+subsection with the $\delta$ table, the head-split display and the After-T161 keybox,
+the \texttt{v554} subsection in the verified layer (now twenty modules), the phase-2
+section retitled T126--T161, the T161 row in the probe index and the updated counters
+($161$ probes, $4205$ checks); the big-picture section states the split-design reading
+soberly; \texttt{tfpt\_1}, \texttt{tfpt\_3} and \texttt{tfpt\_research\_contracts} gain
+the \texttt{v554} companion blocks; \texttt{experiments/next.txt} gains the Teil-161
+entry; \texttt{website/lib/primeFront.ts} gains the T161 and \texttt{v554} feed entries;
+the prime-front status surfaces move to Teile 11--161 / $4205$ checks / 20 modules
+(\texttt{v535}--\texttt{v554}); suite counter $547\to548$ scripts. T162
+(\texttt{third\_split\_probe.py}) is running at the third-split search. Ledger row
+\texttt{PRIME.SAMPLING.HARM.01} \mE; \textbf{no marker of any pre-existing contract
+moves}.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (VIII) (\texttt{v553} --- the exact-form identities of phase 2 promoted; prime-front diary T159 (the gauge identity and the Z-matrix law, cancellation is the weight, FORM-RESISTS) + paper + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v553} (\texttt{PRIME.EXACT.FORM.IDENT.01}).} Promotion of

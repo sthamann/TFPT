@@ -1578,6 +1578,66 @@ Machine-checked:
 \veri{v553\_exact\_form\_identities.py}.
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 
+\par\smallskip\noindent\textbf{The sampling/harmonics identities
+(\texttt{PRIME.SAMPLING.HARM.01}).}
+The closed theorem cores of T160 and T161 are load-bearing as the twelfth
+companion module ($21$ checks, ${\sim}0.5$\,s), recomputed on the same
+declared surface as the module above ($12$ deepest in-cap frame-A
+windows, $m=96\ldots291\le300$) plus a declared $\Lambda$-battery of six
+log-spaced cut-offs $X=10^{3}\ldots3.2\times10^{5}$ (finite von-Mangoldt
+sums only, no matrix anywhere) --- what the sixteen-form \emph{pairs
+against}, and it closes no open term.
+\emph{The sampling identity (T160).} The atom half of the pairing equals
+$-\tfrac12\sum_{n\le X}(2\Lambda(n)/\sqrt n)\,\widehat w(\log n)$
+($\widehat w$ the linear interpolant of the lag weights; exact to
+$5.6\times10^{-15}$ of the absolute atom scale on $12/12$): identically a
+finite combination of sums $\sum_n\Lambda(n)n^{-1/2}\cos(t\log n)$ at
+$32$ explicit frequencies; a one-index grid shift breaks the identity
+loudly.
+\emph{The moment laws and the TV theorem (T160).} $m_0=0$,
+$m_1=-[S_0^2+2\sum_jP_j^2]\le0$ and $m_2=-[2S_1-(M{-}1)S_0]^2\le0$ (a
+perfect square), both strictly negative on every window; and U3 as a
+theorem with \emph{checked} hypotheses:
+$\mathrm{TV}(c^{\mathrm{arch}})=3.98$--$4.90\le|c_0|+2\sup<6$, closed and
+window-independent --- the full atom-including kernel violates the
+monotone hypothesis on $12/12$ (the wired mutation).
+\emph{The harmonic-frequency theorem and the PNT main term (T161).}
+$t_j(2\alpha)=2\pi j$ \emph{exactly}: the $32$ frequencies are the
+Fourier harmonics of the log-window, and the closed parameter-free
+prediction $(\sqrt X-1)/(\tfrac14+t^2)$ (de la Vall\'ee Poussin 1896)
+matches the finite sums to $0.0007$--$0.097$ of the trivial mass against
+the declared cap $0.12$; a wrong Mellin pole and a mass-matched uniform
+fake measure both fail loudly --- the agreement is a property of the
+von-Mangoldt measure.
+\emph{The head split and the scale-free Bernstein rate (T161).}
+$c^{\mathrm{arch}}_d=\Psi_d+D\widehat G(dD,D)$ with
+$\Psi_d=-\tfrac12[(d{+}1)\log(d{+}1)-2d\log d+(d{-}1)\log(d{-}1)]$
+closed, $D$-free and $m$-free, exact to $3.2\times10^{-16}$ at every lag;
+$\rho^*=(3+\sqrt5)/2=2.618034$ is the root of $x^2-3x+1$, scale-free
+(interval ratio $5$ only), with every window's $\rho(D)=2.588$--$2.608$
+below it.
+\emph{The fraction bound and the sign refutation (T161).}
+$|\text{off-diagonal}|\le\tfrac14|Q^{\mathrm{arch}}|$ certified per
+window ($0.171$--$0.212$ on $12/12$), with the \emph{refuted} sign law
+wired as the negative control (arch half negative, off-diagonal block
+positive, $176/240$ pairs violate the per-pair form) --- nothing
+single-signed is promoted.
+\textbf{Named limits as content:} per instance on small windows ---
+nothing uniform in the zone index or in $D$; finite $\Lambda$-sums
+allowed and used, \emph{no} RH statement, and the $\delta$ triage of
+T161 (required depth against RH strength) is a documentation item, not a
+module claim; the open terms after T161 (R-A$'$ the prime-free
+log-moment; R-B$'$ the $m$-free $16\times16$ Gram fraction bound; R-C$'$
+one split of the pairing with $\delta_{\mathrm{eff}}<\tfrac12$; R-D a
+fifth R1$''$ device) stay open, typed open.
+Dirichlet 1829 / Abel 1826 / Fej\'er 1915--Schur 1917 / Bernstein 1912 /
+Chebyshev 1852--Mertens 1874 / de la Vall\'ee Poussin 1896 /
+Clausen--Lerch / KMS 1953 named classical; Weil 1952 / Bombieri 2000
+cited, never used as a criterion.
+Machine-checked:
+\veri{v554\_sampling\_harmonics\_identities.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

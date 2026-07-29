@@ -43,6 +43,1540 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · IX",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v554"
+      },
+      {
+        "k": "t",
+        "v": " — the sampling/harmonics identities of phase 2 promoted; prime-front diary T161 (the circularity triage: the hardness sits in the split, not in the primes, CLOSURE-RESISTS) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v554"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.SAMPLING.HARM.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the closed theorem cores of the discovery parts T160 ("
+        },
+        {
+          "k": "c",
+          "v": "pairing_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") and T161 ("
+        },
+        {
+          "k": "c",
+          "v": "classical_closure_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "21"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.5"
+        },
+        {
+          "k": "t",
+          "v": " s, everything recomputed on "
+        },
+        {
+          "k": "c",
+          "v": "v551"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v553"
+        },
+        {
+          "k": "t",
+          "v": "'s declared surface (the "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " deepest prime-power zones admitting a frame-A window inside the cap, "
+        },
+        {
+          "k": "m",
+          "v": "n=29\\ldots139"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "m=96\\ldots291\\le300"
+        },
+        {
+          "k": "t",
+          "v": ") plus a declared "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "-battery of six log-spaced cut-offs "
+        },
+        {
+          "k": "m",
+          "v": "X=10^{3}\\ldots3.2\\times10^{5}"
+        },
+        {
+          "k": "t",
+          "v": " for the PNT item (finite von-Mangoldt sums only, no matrix anywhere), nothing cited from the sandbox; the companion to "
+        },
+        {
+          "k": "c",
+          "v": "v553"
+        },
+        {
+          "k": "t",
+          "v": ", which certified the algebra of the sixteen-form — this module certifies "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "what that form pairs against"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and it closes no open term. Scope fence: per-instance identities and certified inequalities with the direction in the name — no fit, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no zone-uniform statement; finite "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "-sums are allowed and used, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no RH statement"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is made, and the "
+        },
+        {
+          "k": "m",
+          "v": "\\delta"
+        },
+        {
+          "k": "t",
+          "v": " triage of T161 (required cancellation depth against RH strength) is a documentation item, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a module claim; the open terms after T161 (R-A"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " the prime-free log-moment; R-B"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free "
+        },
+        {
+          "k": "m",
+          "v": "16\\times16"
+        },
+        {
+          "k": "t",
+          "v": " Gram fraction bound; R-C"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " one split of the pairing with "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{eff}}<\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": "; R-D a fifth R1"
+        },
+        {
+          "k": "m",
+          "v": "''"
+        },
+        {
+          "k": "t",
+          "v": " device) stay open and typed open; each statement carries at least one mutation control that must fail loudly."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The sampling identity (T160, P2) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The atom half of the pairing equals "
+        },
+        {
+          "k": "m",
+          "v": "-\\tfrac12\\sum_{n\\le X}(2\\Lambda(n)/\\sqrt n)\\,\\widehat w(\\log n)"
+        },
+        {
+          "k": "t",
+          "v": " (plus one reflected term below the grid; "
+        },
+        {
+          "k": "m",
+          "v": "\\widehat w"
+        },
+        {
+          "k": "t",
+          "v": " the linear interpolant of the lag weights), exact to "
+        },
+        {
+          "k": "m",
+          "v": "5.6\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": " of the absolute atom scale on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": " windows: identically a finite combination of sums "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_n\\Lambda(n)n^{-1/2}\\cos(t\\log n)"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "32"
+        },
+        {
+          "k": "t",
+          "v": " explicit frequencies. Mutation: a one-index grid shift breaks by "
+        },
+        {
+          "k": "m",
+          "v": "5.1\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.1\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The moment laws and the TV theorem (T160, P1/P4) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "m_0=0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.0\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "\\|w\\|_1"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "m_1=-[S_0^2+2\\sum_jP_j^2]"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "9.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "m_2=-[2S_1-(M{-}1)S_0]^2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "3.4\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": ", a perfect square), both strictly negative on every window; U3 as a theorem with "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "checked"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " hypotheses ("
+        },
+        {
+          "k": "m",
+          "v": "c^{\\mathrm{arch}}\\le0"
+        },
+        {
+          "k": "t",
+          "v": " and monotone on "
+        },
+        {
+          "k": "m",
+          "v": "d\\ge1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TV}(c^{\\mathrm{arch}})=3.9817"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.8991\\le|c_0|+2\\sup<6"
+        },
+        {
+          "k": "t",
+          "v": ", closed and window-independent. Mutations: a one-index prefix shift breaks "
+        },
+        {
+          "k": "m",
+          "v": "m_1"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge1.25\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": ", an "
+        },
+        {
+          "k": "m",
+          "v": "(M{-}2)"
+        },
+        {
+          "k": "t",
+          "v": " mis-normalisation breaks "
+        },
+        {
+          "k": "m",
+          "v": "m_2"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge6.1\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": ", the full atom-including kernel violates the monotone hypothesis on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) The harmonic-frequency theorem and the PNT main term (T161, P3) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "t_j(2\\alpha)=2\\pi j"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "2.8\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": ") on every window and every battery cut-off — the "
+        },
+        {
+          "k": "m",
+          "v": "32"
+        },
+        {
+          "k": "t",
+          "v": " frequencies of the sampling identity are precisely the Fourier harmonics of the log-window "
+        },
+        {
+          "k": "m",
+          "v": "[0,2\\alpha]"
+        },
+        {
+          "k": "t",
+          "v": "; at those frequencies "
+        },
+        {
+          "k": "m",
+          "v": "\\theta=2\\pi j"
+        },
+        {
+          "k": "t",
+          "v": " collapses the partial-summation main term to the closed, parameter-free prediction "
+        },
+        {
+          "k": "m",
+          "v": "(\\sqrt X-1)/(\\tfrac14+t^2)"
+        },
+        {
+          "k": "t",
+          "v": " (de la Vallée Poussin 1896; the Mellin factor of "
+        },
+        {
+          "k": "m",
+          "v": "x^{-1/2}"
+        },
+        {
+          "k": "t",
+          "v": "), matching the finite sums to "
+        },
+        {
+          "k": "m",
+          "v": "0.0007"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.097"
+        },
+        {
+          "k": "t",
+          "v": " of the trivial mass against the declared cap "
+        },
+        {
+          "k": "m",
+          "v": "0.12"
+        },
+        {
+          "k": "t",
+          "v": ", the subtraction reducing the aggregate residual to "
+        },
+        {
+          "k": "m",
+          "v": "0.008"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.466\\le0.5"
+        },
+        {
+          "k": "t",
+          "v": " on every cut-off. Mutations: a wrong Mellin pole worsens the aggregate residual by "
+        },
+        {
+          "k": "m",
+          "v": "\\times1.8"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "\\times95.8"
+        },
+        {
+          "k": "t",
+          "v": "; a mass-matched "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "uniform"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " fake measure misses by "
+        },
+        {
+          "k": "m",
+          "v": "0.23"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.51"
+        },
+        {
+          "k": "t",
+          "v": " — the agreement is a property of the von-Mangoldt measure, not of any measure with the same mass."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The head split and the scale-free Bernstein rate (T161, P1) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "c^{\\mathrm{arch}}_d=\\Psi_d+D\\widehat G(dD,D)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\Psi_d=-\\tfrac12[(d{+}1)\\log(d{+}1)-2d\\log d+(d{-}1)\\log(d{-}1)]"
+        },
+        {
+          "k": "t",
+          "v": " closed, "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-free and "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free (the triangle-smeared simple pole; the "
+        },
+        {
+          "k": "m",
+          "v": "\\log D"
+        },
+        {
+          "k": "t",
+          "v": " cancels identically), exact to "
+        },
+        {
+          "k": "m",
+          "v": "3.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "\\sup|c^{\\mathrm{arch}}|"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "every"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " lag of every window, the two "
+        },
+        {
+          "k": "m",
+          "v": "\\Psi"
+        },
+        {
+          "k": "t",
+          "v": " representations agreeing to "
+        },
+        {
+          "k": "m",
+          "v": "2.9\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "; and "
+        },
+        {
+          "k": "m",
+          "v": "\\rho^*=(3+\\sqrt5)/2=2.618034"
+        },
+        {
+          "k": "t",
+          "v": ": the root of "
+        },
+        {
+          "k": "m",
+          "v": "x^2-3x+1"
+        },
+        {
+          "k": "t",
+          "v": ", returned exactly by the "
+        },
+        {
+          "k": "m",
+          "v": "D\\to0"
+        },
+        {
+          "k": "t",
+          "v": " limit of the peeled interval "
+        },
+        {
+          "k": "m",
+          "v": "[0.4\\alpha,2\\alpha]"
+        },
+        {
+          "k": "t",
+          "v": " and invariant under "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha\\times10"
+        },
+        {
+          "k": "t",
+          "v": " — scale-free, every window's "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(D)=2.588"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.608"
+        },
+        {
+          "k": "t",
+          "v": " below it (Bernstein 1912). Mutations: dropping "
+        },
+        {
+          "k": "m",
+          "v": "\\Psi"
+        },
+        {
+          "k": "t",
+          "v": " misses "
+        },
+        {
+          "k": "m",
+          "v": "c^{\\mathrm{arch}}"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "0.99"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.00"
+        },
+        {
+          "k": "t",
+          "v": "; the wrong interval ratio moves the limit to "
+        },
+        {
+          "k": "m",
+          "v": "3.0"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5) The off-diagonal fraction bound and the sign refutation (T161, P2) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The gauge identity licenses one boundary-free Abel step, "
+        },
+        {
+          "k": "m",
+          "v": "Q^{\\mathrm{arch}}=\\sum_{k,l}a_ka_l\\sum_{d\\ge1}(\\Delta c^{\\mathrm{arch}})_dR^1_{kl}(d)"
+        },
+        {
+          "k": "t",
+          "v": " exactly ("
+        },
+        {
+          "k": "m",
+          "v": "2.0\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "), and the certified per-window inequality is "
+        },
+        {
+          "k": "m",
+          "v": "|\\text{off-diagonal block}|\\le\\tfrac14|Q^{\\mathrm{arch}}|"
+        },
+        {
+          "k": "t",
+          "v": " (measured "
+        },
+        {
+          "k": "m",
+          "v": "0.171"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.212"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ") — with the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "refuted"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " sign law wired as the negative control: the arch half is negative while its off-diagonal block is positive on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "176/240"
+        },
+        {
+          "k": "t",
+          "v": " off-diagonal pairs violate the per-pair form on every window — nothing single-signed is promoted. Mutation: a one-index "
+        },
+        {
+          "k": "m",
+          "v": "R"
+        },
+        {
+          "k": "t",
+          "v": "-kernel shift breaks by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge6.8\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": ". Stress: the head split misses the T145 no-go reconstruction by "
+        },
+        {
+          "k": "m",
+          "v": "2.39"
+        },
+        {
+          "k": "t",
+          "v": "; the Dirichlet cosine-sum identity (including the degenerate branch), the KMS eigenpairs and "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{odd\\_toeplitz}(c^L)=L_P"
+        },
+        {
+          "k": "t",
+          "v": " (zero tolerance) are exact."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T161 ("
+            },
+            {
+              "k": "c",
+              "v": "classical_closure_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "CLASSICAL.CLOSURE"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "35/35"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "1.2"
+            },
+            {
+              "k": "t",
+              "v": " s, "
+            },
+            {
+              "k": "m",
+              "v": "19"
+            },
+            {
+              "k": "t",
+              "v": " log-spaced prime-power zones "
+            },
+            {
+              "k": "m",
+              "v": "h=50\\ldots1445"
+            },
+            {
+              "k": "t",
+              "v": ", verdict CLOSURE-RESISTS, triage verdict NEEDS-BEYOND-RH-STRENGTH, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The two classical rests plus the circularity triage, and the triage returns its most consequential answer: "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the chain is not circular"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". R-A closes "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free — "
+        },
+        {
+          "k": "m",
+          "v": "A=D\\widehat A"
+        },
+        {
+          "k": "t",
+          "v": " exactly, only the "
+        },
+        {
+          "k": "m",
+          "v": "1/s"
+        },
+        {
+          "k": "t",
+          "v": " head binds, the scale-free Bernstein rate "
+        },
+        {
+          "k": "m",
+          "v": "\\rho^*=(3+\\sqrt5)/2"
+        },
+        {
+          "k": "t",
+          "v": ", the closed head split (no peeling), and an explicit degree schedule "
+        },
+        {
+          "k": "m",
+          "v": "K(h)=O(\\log h)"
+        },
+        {
+          "k": "t",
+          "v": " (a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "fixed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " degree is refuted with a number; the residual is the prime-free log-moment, outside the polynomial ladder). R-B is refuted in all four readings ("
+        },
+        {
+          "k": "m",
+          "v": "3168/4320"
+        },
+        {
+          "k": "t",
+          "v": " pairs; the aggregate by "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "sign"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ") and replaced by the certified fraction bound "
+        },
+        {
+          "k": "m",
+          "v": "0.1035"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.1713\\le\\tfrac14"
+        },
+        {
+          "k": "t",
+          "v": ", flat. The triage: the "
+        },
+        {
+          "k": "m",
+          "v": "32"
+        },
+        {
+          "k": "t",
+          "v": " frequencies are exactly the Fourier harmonics of the log-window (theorem), the measured cancellation is fully the PNT main term, and the required depth is "
+        },
+        {
+          "k": "m",
+          "v": "\\delta=1.1482"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.8809"
+        },
+        {
+          "k": "t",
+          "v": " against RH strength "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": " — in absolute terms "
+        },
+        {
+          "k": "m",
+          "v": "0.012"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.31"
+        },
+        {
+          "k": "t",
+          "v": " of the last term of the sum, below the boundary term of every partial summation, so no strengthening of the "
+        },
+        {
+          "k": "m",
+          "v": "\\psi(x)-x"
+        },
+        {
+          "k": "t",
+          "v": " input reaches it: the chain needs "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "more"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " than RH-strength input would supply, which localises the "
+        },
+        {
+          "k": "m",
+          "v": "h^2"
+        },
+        {
+          "k": "t",
+          "v": " in the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "split"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " rather than in the primes; a re-split moves the demand to "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{eff}}=0.9839"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.3767"
+        },
+        {
+          "k": "t",
+          "v": " — it moves, but stays above "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "18/18"
+        },
+        {
+          "k": "t",
+          "v": ". Balance "
+        },
+        {
+          "k": "m",
+          "v": "20/10/4/9/3"
+        },
+        {
+          "k": "t",
+          "v": ". T162 ("
+        },
+        {
+          "k": "c",
+          "v": "third_split_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "), running, searches for one split with "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{eff}}<\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": ". NOT RH evidence; no marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Docs + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " gains the T161 subsection with the "
+        },
+        {
+          "k": "m",
+          "v": "\\delta"
+        },
+        {
+          "k": "t",
+          "v": " table, the head-split display and the After-T161 keybox, the "
+        },
+        {
+          "k": "c",
+          "v": "v554"
+        },
+        {
+          "k": "t",
+          "v": " subsection in the verified layer (now twenty modules), the phase-2 section retitled T126–T161, the T161 row in the probe index and the updated counters ("
+        },
+        {
+          "k": "m",
+          "v": "161"
+        },
+        {
+          "k": "t",
+          "v": " probes, "
+        },
+        {
+          "k": "m",
+          "v": "4205"
+        },
+        {
+          "k": "t",
+          "v": " checks); the big-picture section states the split-design reading soberly; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " gain the "
+        },
+        {
+          "k": "c",
+          "v": "v554"
+        },
+        {
+          "k": "t",
+          "v": " companion blocks; "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " gains the Teil-161 entry; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T161 and "
+        },
+        {
+          "k": "c",
+          "v": "v554"
+        },
+        {
+          "k": "t",
+          "v": " feed entries; the prime-front status surfaces move to Teile 11–161 / "
+        },
+        {
+          "k": "m",
+          "v": "4205"
+        },
+        {
+          "k": "t",
+          "v": " checks / 20 modules ("
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v554"
+        },
+        {
+          "k": "t",
+          "v": "); suite counter "
+        },
+        {
+          "k": "m",
+          "v": "547\\to548"
+        },
+        {
+          "k": "t",
+          "v": " scripts. T162 ("
+        },
+        {
+          "k": "c",
+          "v": "third_split_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at the third-split search. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.SAMPLING.HARM.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · VIII",
     "heading": [
       {
