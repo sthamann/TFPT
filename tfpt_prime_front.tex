@@ -90,7 +90,7 @@ ledger package, and --- out of the second phase --- the margin-chain identities,
 $M$-matrix pair, the long-lag support structure, the Hardy-core identities, the capacity-chain
 identities, the level-lemma identities and the Green/Szeg\H{o} identities. Everything beyond
 those fourteen is \emph{sandbox}: an exploratory program, run as
-$148$ preregistered probes with $3759$ machine checks, which localized the residual object. That
+$149$ preregistered probes with $3789$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -259,7 +259,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots148$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots149$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -267,7 +267,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T148: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T149: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -336,7 +336,14 @@ while the lifting statement resists with its hypothesis isolated to a single nam
 total variation of the log-whitening weight, proved to be the roughness and not the conditioning
 by a controlled weight-class experiment; the first end-to-end number arrives --- the certified
 chain delivers $8.4$--$15.9\%$ of the true gap on all $48$ windows (T148; the
-identity/certificate core of T147+T148 is promoted as \vref{v548}));
+identity/certificate core of T147+T148 is promoted as \vref{v548}), and at last that scalar
+itself, attacked through the gauge freedom: the whitening diagonal is a free choice, the
+constant gauge \emph{eliminates} the total variation exactly ($0.0000$) at a certified
+sandwich price --- and thereby refutes the hypothesis, since the gauges that kill the flutter
+move the smoothness functional by at most $0.9\%$: the roughness sits in the \emph{form}, not
+in the multiplier, the missing input relocates to the deep modes of the pure
+Toeplitz-minus-Hankel section, and the Dirichlet control corrects the question to a ladder
+bound $\nu_k\le Ck^2$ with $m$-free $C$ (T149));
 Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
@@ -3451,7 +3458,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T148)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T149)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -5213,6 +5220,83 @@ T149 (\texttt{weight\_smoothing\_probe.py}) is running at exactly that scalar: w
 smoothed whitening $\tilde\Lambda$ with a certified sandwich removes the TV roughness.
 \end{keybox}
 
+\subsection{The smoothing freedom (T149)}
+T149 (\texttt{weight\_smoothing\_probe.py}, contract \texttt{WEIGHT.SMOOTHING}, $30/30$,
+$61.4$\,s on $44$ prime-power windows $m=277\ldots1393$ in four $D$-strata, $9$ preregistered
+gauges, verdict \textsc{partial-smoothing}, the verdict rule wired constructively: ``proved''
+cannot be returned in any branch) attacks exactly T148's one open input, through the
+observation that the whitening diagonal is a \emph{free gauge}: for any positive diagonal
+$\tilde\Lambda$ the chain runs unchanged --- an identity plus one Rayleigh step, licensed and
+verified before use --- so every gauge gives a valid lower bound and the maximum over the
+family is valid too.
+
+\emph{The three numbers, under the preregistered winner rule} ($8$ admissible of $9$
+candidates; the winner is \texttt{const}, the geometric mean of the Jacobi diagonal): the
+sandwich is \textsc{certified} at $\sigma\le5.5789$ (trend $x^{0.154\pm0.022}$, bar $8.0$
+held); $\mathbf{TV(\log\tilde\Lambda)}$ \textbf{is exactly} $\mathbf{0.0000}$ --- T148's
+blocking number, $11.93$ growing as $x^{0.444}$, is not reduced but \emph{eliminated}; and
+$\nu_{\tilde L}=222.70$ ($x^{0.170\pm0.047}$) meets the target $m/(8\kappa)$ only on
+$\mathbf{21/44}$ windows ($\rho=1.347$ at $m=277$ falling to $0.485$ at $m=1393$) ---
+\textsc{partial}: the small-$m$ end is missed. The price of the gauge:
+$\tilde\kappa_{\mathrm{up}}\le2.3146$ against Jacobi's $1.2647$ (a factor $1.83$, paid once
+and linearly, certified). \emph{The real finding is the two-regime decomposition, and it
+refutes the hypothesis}: the flutter-smoothing gauges (flutter removed, macro profile kept)
+are \emph{cheap} (sandwich $1.129$--$1.572$, $\mathrm{TV}\to1.27$--$1.73$) yet move
+$\nu_{\tilde L}$ by at most $\mathbf{0.9\%}$; only the macro-removing gauges improve
+$\nu_{\tilde L}$ at all (factor $1.27$) --- the roughness the smoothness functional responds
+to was never in the multiplier: $\mathrm{TV}(\log\Lambda)$ \emph{was the mislocated
+hypothesis}, withdrawn and relocated --- the roughness sits in the \emph{form} itself.
+
+\emph{The lifted chain.} All $178$ assembled chains are valid lower bounds;
+$\Gamma=\sqrt{Q^\star}S_w$ holds gauge-invariantly at $4.4\times10^{-16}$ over $89$
+assemblies. Certified, the family-maximum chain delivers $\mathbf{9.52}$--$\mathbf{18.45\%}$
+\textbf{of the true gap} (median $12.68\%$; T148's $8.36$--$15.86\%$ reproduced on a longer
+surface), a priori $0.800$--$1.566\%$ (an improvement of up to $1.284\times$); on the
+certified side the Jacobi gauge still wins ($44/44$ --- its sharper
+$\tilde\kappa_{\mathrm{up}}$ outweighs the smoother $Q^\star$ ceiling: the gauge freedom is a
+tool for the a-priori side, not a free win). The $Q^\star$ ceiling falls $697.9\to149.1$ with
+its exponent falling $0.551\to0.330$ --- bounded yes, \emph{flat no}, and the driver is named:
+$\nu_{\tilde L}=265.2$ ($x^{0.772\pm0.048}$) on the Green-weighted modes \emph{above} the
+bottom block.
+
+\emph{Stress, and the corrected question.} The mandatory no-go's own multiplier is already
+smooth (best sandwich $1.2629$ over the whole family), and its $\nu$ diverges as
+$x^{1.420\pm0.004}$ under \emph{every} gauge --- the break stays visible in the form,
+smoothing rescues nothing and cannot manufacture equidistribution (passed, preregistered).
+The Dirichlet control has a constant diagonal, all $9$ candidates are the identity on it
+($5.9\times10^{-14}$), $\nu\to\pi$ exactly, $m\|\psi\|_\infty^2\to2$ --- and the control
+\emph{corrects the question}: classically $\nu_k=\pi k^2$ \emph{exactly}, so the right form is
+the ladder $\mathbf{\nu_k\le Ck^2}$ \textbf{with} $m$\textbf{-free} $C$ (measured in the
+\texttt{const} gauge: $C=18.66$--$44.61$, $x^{0.272\pm0.021}$, attained at $k=1$). The TV
+anatomy of the Jacobi diagonal locates the cheapness: the macro part is $0.78$--$1.52$
+($8.5$--$14.2\%$ of the total), the flutter part $6.42$--$13.02$ --- many \emph{small} steps
+(amplitude $0.064$--$0.182$, \emph{flat} at $x^{-0.007\pm0.028}$, largest single log-step
+$\le0.193$) spread over the whole window, with the frame edges not the source (enrichment
+$0.75$--$1.20$): TV grows through the step count while the sandwich pays only the amplitude.
+The order-2 bottom ladder from the minus-Hankel structure stays \textsc{named open}, cosmetic
+($C_{\mathrm{bot}}=5.6$--$14.1$; Basor--Ehrhardt 2009 does not cover a sign-changing symbol;
+the chain does not wait on it --- $S_w$ is certified by an inertia count). Seven promotion
+candidates are named and stay unpromoted.
+
+\begin{keybox}[After T149: TV eliminated, the missing input relocated --- a ladder remains]
+\emph{(J1)} \textbf{the load-bearing rest}: an $m$-free constant $C$ in the ladder
+$\nu_k\le Ck^2$ for the modes of the smoothed section (measured $C=18.66$--$44.61$,
+$x^{0.272\pm0.021}$) --- with the constant gauge this is \emph{exactly} a question about the
+deep modes of the pure Toeplitz-minus-Hankel section, no multiplier, no whitening, no
+arithmetic weight; it makes the $Q^\star$ ceiling $m$-free and the whole measurement-surface
+chain a priori. \emph{(J2)} \textbf{the second lever, which would close (J1) outright}: an
+a-priori bound on the flutter \emph{amplitude} of $\log\operatorname{diag}(A_B)$ --- measured
+$0.064$--$0.182$ and \emph{flat} ($x^{-0.007\pm0.028}$); it would make
+$\kappa_{\tilde\Lambda}=1$ and $\tilde\kappa_{\mathrm{up}}\le2.3146$ a priori rather than
+certified per window. \emph{(J3)} cosmetic: the order-2 ladder theorem from the minus-Hankel
+structure (unchanged from T148). The honest state, in one sentence: after T149 the smoothing
+freedom has retired $\mathrm{TV}(\log\Lambda)$ as a hypothesis --- eliminated exactly, at a
+certified price --- and the one input between the finite list and a statement for all $D$ is
+now the smoothness of the deep modes of the pure section, in ladder form.
+T150 (\texttt{mode\_ladder\_probe.py}) is running at exactly that ladder, through the flat
+flutter amplitude.
+\end{keybox}
+
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
@@ -5692,19 +5776,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T148}\label{app:index}
+\section{Probe index, diary parts T11--T149}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $138$ parts T11--T148 that the current diary file records
-($139$ runs --- T104 was a double run with two independent arms --- and $3567$ green checks); the ten
+load-bearing artefact. The index covers the $139$ parts T11--T149 that the current diary file records
+($140$ runs --- T104 was a double run with two independent arms --- and $3597$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v548} promoted; with T126--T148, the first twenty-three parts of the second phase, the
-running totals are \textbf{$148$ probes and $3759/3759$ checks}. T149
-(\texttt{weight\_smoothing\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v548} promoted; with T126--T149, the first twenty-four parts of the second phase, the
+running totals are \textbf{$149$ probes and $3789/3789$ checks}. T150
+(\texttt{mode\_ladder\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -5858,6 +5942,7 @@ T145 & \texttt{\scriptsize mazya\_\allowbreak proof} & the proof attempt for S1$
 T146 & \texttt{\scriptsize level\_\allowbreak lemma} & the proof attempt for L1, \textbf{and the level lemma stands}: closed on the measurement surface as a chain of theorems and certified window inequalities, no step reading the minimiser --- four hand-written closed profiles (sine, ramp, pole vector, equilibrium potential) lose by \textbf{5--9 orders of magnitude} (every guess sees $O(1)$, the gap is $O(D^3)$); what survives is the \textbf{Green column} itself ($\lambda_{\mathrm{up}}/\hat\lambda=1.0497$--$1.3764$), and \textbf{Davis--Kahan is instrumented and discarded} (informative on $0/64$: the spectrum bottom is a near-degenerate block, $\lambda_2/\hat\lambda=1.2542$--$3.4471$, separation in the denominator) because $\psi=\lambda R\psi$ is an \emph{identity} --- no transfer step exists in the argument; the lever: $\|\psi\|_\infty\le\lambda_{\mathrm{up}}\max_j\|Re_j\|$ within $1.055$--$1.426$ of the truth, the trivial ceiling would give $\Gamma\le\sqrt m=5.1$--$34.2$, measured $\Gamma=1.8356$--$2.2797$ (columns $2.7$--$16.0$ below trivial --- that factor \emph{is} the delocalisation, read off the form); the localisation contradiction stays qualitative (leak tolerance $\le2.38\times10^{-3}$), Perron only on the lumped partner; \textbf{the cake base is free} (the chain uses only $|\psi|\le\psi_t$, Maz'ya's dyadic $8$ falls to $2b^2\approx2$, gain $3.76$, price zero via the $O(m)$ union identity) and $c_0^{\mathrm{ap}}=2b^2\Gamma\min(1,\Gamma_1)+\varepsilon=\mathbf{3.9042}$--$\mathbf{4.8488}$ ($b=1.031$, $64/64$) against T145's measured $2.156$--$6.394$ --- at the size of Maz'ya's Dirichlet value $4$ --- chain loss $0.0422$--$0.1586$; stress tests discriminate (no-go $\Gamma$ $3.676\to13.800$, $m^{0.420}$, unbounded; theorem half survives, slack $1.087$--$1.242$; Dirichlet control flat $1.7183$--$1.7315$); border pool $24/24$ closed, a-priori chain positive on $24$ ($c_0^{\mathrm{ap}}=2.855$--$3.176$); map V18, stock $108$; \textbf{rest: all-$D$ asymptotics of the Green columns ($\max_j\|Re_j\|\lambda_{\min}$), $\sigma_{\mathrm{tot}}$ stays measured (not a hole), the actual 3 T134 blocks}; a-priori core promoted as \vref{v547} & LEVEL-CARRIES & 30/30\\
 T147 & \texttt{\scriptsize green\_\allowbreak asymptotic} & the asymptotics itself, \textbf{and the last open object becomes an exact identity}: $\Gamma=\sqrt{Q^\star}\,S_w$ (verified to $2.3\times10^{-16}$ on all $85$ windows $m=26$--$1491$ and both stress forms) --- $D$-uniformity \emph{equivalent} to the boundedness of two named scalars, $S_w=\lambda_{\mathrm{up}}\|R\|_F$ purely spectral (effective bottom multiplicity $n_{\mathrm{eff}}=1.251$--$2.831$, certified $\le4.6438$ at a certified cut by LDL$^{\mathsf T}$ inertia) and $Q^\star=m\max_j(R^2)_{jj}/\operatorname{tr}(R^2)$ purely geometric, scale-free (certified $\le2.8634$ against the localised extreme $m=1491$); \textbf{the classical decay route is computationally dead} (Demko--Moss--Smith $q=0.994815$--$0.999999$, envelope $q^{m/2}=0.9346$--$0.9995$ above the $0.05$ bar everywhere; Jaffard exponent of $E$ itself $0.06$--$0.82$) and the columns are \emph{delocalised} (half-mass radius $0.048$--$0.105$ of the window) --- delocalisation \emph{is} the bound: $0.9864$--$0.9996$ of $\|Re_j\|^2$ from the bottom block alone, $Q_B/|B|=1.375$--$1.839$ against the exact floor (naive $Q_B\sim m$ wrong by $5$--$258$), T146's unexplained factor $2.7$--$16.0$ identified as $\sqrt{m/Q_B}$ up to $\lambda_{\mathrm{up}}/\lambda_{\mathrm{lo}}$; honest negative: the crude free-tail split grows $m^{0.538\pm0.020}$, reported, not used; \textbf{the mechanism is named}: Toeplitz-minus-Hankel section, bottom eigenvectors Fourier modes by Szeg\H{o}/Widom (Kac--Murdock--Szeg\H{o} 1953, Widom 1958, Basor--Ehrhardt 2009), sharp prediction $Q_B\le2|B|$ \textbf{holds}, chain $Q_B\le\sum_Bm\|\psi_k\|_\infty^2\le2\sum_B\|a_k\|_1^2$ pure arithmetic (sparsity $\le8.773$ per mode, $0.999{+}$ of the energy in the lowest $4|B|$ modes); four $D$-strata with certified maxima, six trend exponents flat at bar $0.25$, all fits; congruence structure discarded (scatter $0.465$); $\sigma_{\mathrm{tot}}$ does not fall but is located (block leakage $0.9627$ vs required $2.7\times10^{-7}$); \textbf{the 3 open R4 border blocks close} ($8/8$ rebuilt border windows, $c_0^{\mathrm{ap}}=2.9135$--$3.0383$, same mechanism); stress separates: no-go diverges and hits $Q_B=m/H_m$ to $1.0000$, Dirichlet control flat ($1.4142$--$1.4376$ vs sine value $2$); honest limit: translation covariance broken by the whitening (Toeplitz defect $0.21$--$0.54$), the spectral factor needs its own a-priori input; map V19, stock $114$; \textbf{rest: a Szeg\H{o} theorem for the reweighted section (lifts the chain to all $D$), an a-priori bound for $S_w$, the $\sigma_{\mathrm{tot}}$ classification} & ASYMPTOTIC-SHAPED & 39/39\\
 T148 & \texttt{\scriptsize szego\_\allowbreak bottom} & the lifting statement dissected, \textbf{and the second factor closes on the surface}: the passage from the pure to the reweighted section classified in seven typed steps --- the order-2 model ladder and the pure section's Fourier sparsity THEOREMS (KMS 1953, Widom 1958, Basor--Ehrhardt 2009; model $\nu=4.236$--$4.257$ flat), the $\ell^1$ ceiling $\|a\|_1\le2\sqrt\nu+1$ CERTIFIED ($\nu=(m+1)^{3/2}\|L_0\psi\|_1/(2\sqrt2)$, every $m$-power cancelled; excess $-2.6\times10^{-6}$), the chain $Q^\star\le2\langle\|a\|_1^2\rangle_w\le2\langle\mathrm{ceil}^2\rangle_w$ CERTIFIED $48/48$, the commutator/Davis--Kahan route DEAD ($5.4\times10^{2}$--$5.3\times10^{5}$, $2.7$--$5.7$ orders vacuous), the live route the LIOUVILLE transform $m\|\psi\|_\infty^2\le2\kappa_\Lambda\mathrm{ceil}(\hat\varphi)^2$ with $\kappa_\Lambda=1.733$--$3.933$ certified (gain $50.6$), and $\nu\le F(\text{form})$ THE OPEN INPUT (a-priori ceiling $81.4$--$469.0$, grows $m^{0.615}$; $\nu_L$ needs $\lesssim34$, measures $282$, $x^{0.166}$); \textbf{the hypothesis isolated}: weight-class experiment at identical $\kappa_\Lambda=4$ --- two BV classes flat ($x^{0.000}$/$x^{-0.007}$), the rough class $x^{1.994}$ --- $\mathrm{TV}(\log\Lambda)$ is the named scalar, measured $3.63$--$11.93$ on the real surface, $x^{0.444}$ NOT flat; \textbf{$S_w$ closes}: LDL$^{\mathsf T}$ layer cake $\Rightarrow S_w\le1.9587$ certified (true $1.282$--$1.683$), $x^{0.007\pm0.007}$ flat, per $D$-stratum; \textbf{honest negative}: the Toeplitz symbol has $f(0)<0$ on $48/48$ ($-87.3\ldots-22.5$) --- positive definiteness is a finite-section effect of minus-Hankel + lumping, the KMS order-2 hypothesis survives only as a measurement ($\alpha=1.643$--$1.989$ in $[1.5,2.5]$); no-go violates exactly the smoothness hypothesis ($\nu$ diverges, $n_{\mathrm{eff}}=1.0000$ innocent), Dirichlet exact ($\nu\to\pi$, $m\|\psi\|_\infty^2\to2$); \textbf{the big number}: the certified chain delivers $8.36$--$15.86\%$ of the true gap (median $11.74\%$, no window loses more than $12\times$), a-priori-shaped factors still a lower bound at factor $10.5$; balance $6$ certified / $2$ measured / $2$ fits, fits in no inequality; $\sigma_{\mathrm{tot}}$ RETIRED AS A ROUTE; map V20, stock $114$; core promoted as \vref{v548}; \textbf{rest: $\nu_L\le F$(form) $m$-free (= bounded $\mathrm{TV}(\log\Lambda)$ or weaker, target $\lesssim34$ vs $282$); cosmetic: an order-2 theorem from the minus-Hankel structure} & ONE-INPUT-MISSING & 31/31\\
+T149 & \texttt{\scriptsize weight\_\allowbreak smoothing} & the one open input attacked through the gauge freedom, \textbf{and the hypothesis is refuted rather than weakened}: the whitening diagonal is a FREE GAUGE (identity plus one Rayleigh step, $9$ preregistered candidates, every one a valid lower bound, family maximum valid); the preregistered winner \texttt{const} (geometric mean of the Jacobi diagonal) delivers the three ordered numbers --- sandwich $\sigma\le5.5789$ CERTIFIED ($x^{0.154}$, bar $8.0$), $\mathrm{TV}(\log\tilde\Lambda)$ \textbf{exactly $0.0000$} (T148's $11.93$ at $x^{0.444}$ ELIMINATED, not reduced), $\nu_{\tilde L}=222.70$ in target on $21/44$ windows only ($\rho=1.347\to0.485$) --- at price $\tilde\kappa_{\mathrm{up}}\le2.3146$ vs $1.2647$; \textbf{the two-regime decomposition}: flutter-killers cheap (sandwich $1.129$--$1.572$) but move $\nu_{\tilde L}$ by $\le0.9\%$, only macro-removers improve it (factor $1.27$) --- $\mathrm{TV}(\log\Lambda)$ was the MISLOCATED hypothesis, the roughness sits in the FORM; chain: $\Gamma=\sqrt{Q^\star}S_w$ gauge-invariant at $4.4\times10^{-16}$ ($89$ assemblies), family maximum $9.52$--$18.45\%$ of the true gap certified (median $12.68\%$), a priori $0.800$--$1.566\%$ (up to $1.284\times$ better), Jacobi still wins certified $44/44$; $Q^\star$ ceiling $697.9\to149.1$, exponent $0.551\to0.330$, NOT flat (driver $\nu_{\tilde L}=265.2$, $x^{0.772}$, above the bottom block); stress: no-go already smooth, $\nu$ diverges $x^{1.420}$ under EVERY gauge; Dirichlet exact ($\nu\to\pi$, $5.9\times10^{-14}$) and CORRECTS the question to the ladder $\nu_k\le Ck^2$ with $m$-free $C$ ($C=18.66$--$44.61$, $x^{0.272}$); TV anatomy: $85\%$+ flutter, amplitude $0.064$--$0.182$ FLAT, edges innocent; $7$ promotion candidates, unpromoted; \textbf{rest: $m$-free $C$ in $\nu_k\le Ck^2$ (load-bearing); an a-priori flutter-amplitude bound (closes it outright); cosmetic order-2 theorem} & PARTIAL-SMOOTHING & 30/30\\
 \end{xltabular}
 }
 

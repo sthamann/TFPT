@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3759/3759 sandbox checks —
+        (“the full proof”, T126+) is now open with 3789/3789 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -165,8 +165,17 @@ export function HonestyBanner() {
         identical κ_Λ = 4). First end-to-end number: the certified chain
         delivers 8.4–15.9% of the true gap on all 48 windows; the
         identity/certificate core of T147+T148 is load-bearing as v548. T149
-        (weight_smoothing_probe.py) is running at exactly the remaining
-        input — whether a smoothed whitening removes the TV roughness. What
+        (PARTIAL-SMOOTHING) then attacked exactly that input through the
+        gauge freedom: the whitening diagonal is a free gauge, and the
+        constant gauge eliminates the blocking scalar exactly —
+        TV(log Λ̃) = 0.0000 at a certified sandwich price (σ ≤ 5.5789,
+        κ̃_up ≤ 2.3146 against 1.2647) — which refutes the hypothesis
+        itself: gauges that kill the flutter move the smoothness functional
+        by at most 0.9%, so the roughness sits in the form, not in the
+        multiplier. The missing input relocates to the deep modes of the
+        pure Toeplitz-minus-Hankel section (ladder form ν_k ≤ C·k² with
+        m-free C, the flutter amplitude measured flat as the second lever);
+        T150 (mode_ladder_probe.py) is running at exactly that ladder. What
         remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
