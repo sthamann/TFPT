@@ -7,13 +7,10 @@
 %  the paper is deliberately independent of any surrounding document
 %  set and uses no vocabulary beyond standard numerical analysis.
 %
-%  DRAFT STATUS (this revision): Sections 1-6 are written out in full,
-%  with complete proofs.  Sections 7-9 carry their statements in final
-%  form; the no-go table of Section 7 and the measurement tables of
-%  Section 8 are completed in a later pass.  The typing table of
-%  Section 1.3 records
-%  the intended status of every numbered statement, and nothing in it is
-%  silently upgraded.
+%  STATUS (this revision): complete draft.  Sections 1-9 are written out
+%  in full, with proofs where a statement is typed as proved.  The typing
+%  table of Section 1.3 records the status of every numbered statement,
+%  and nothing in it is silently upgraded.
 % ---------------------------------------------------------------------
 \documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
@@ -107,10 +104,18 @@ weight vector must dominate the supremum of a rank-three quadratic over the
 image of that norm ball, which is where the priced routes lose. The remaining
 question --- whether the two rows of the block become collinear at a rate
 uniform in the window index --- is stated as an open problem about a finite
-bilinear form, with the measured evidence, the placement discriminators and the
-priced routes reported as measurements on declared surfaces. The arithmetic
-enters the theorems only as the source of the comb positions and weights: every
-statement proved here holds for an arbitrary finite comb.
+bilinear form. Around it we report, as measurements on declared surfaces: the
+rates; a table of five unconditional majorants together with the exponent each
+certifies, the best of them short of the demanded one by two units in the
+exponent; five structural obstructions, each exhibited failing; a curve of the
+deficit against comb density over four decades of density, whose densest bins
+are consistent with zero and whose undecidability under the declared caps is
+part of the claim; and two controlled placement experiments, the second of which
+closes into an exact identity for the response of the ratio to a displacement of
+comb nodes inside their lag cells. Randomising the node positions at fixed
+weights leaves every theorem here intact and removes the phenomenon: the
+arithmetic enters the theorems only as the source of the comb positions and
+weights, and every statement proved here holds for an arbitrary finite comb.
 \end{abstract}
 
 \section{Introduction}
@@ -201,14 +206,21 @@ them.
   functionals of the comb weights, for every window, every $h$ and every
   truncation. Corollary~\ref{cor:majorant} turns this into the statement about
   majorants that the priced routes of Section~\ref{sec:open} run into.
-\item\label{C:nogo} \textbf{A priced table and one open problem}
-  (Section~\ref{sec:open}). What remains after (C1)--(C3) is a single question
-  about a finite bilinear form: is the near-collinearity of the two rows of
-  $\Ah_2$ bounded uniformly in the window index? It is stated as
-  Problem~\ref{prob:R1} in three equivalent forms, with the priced routes, the
-  measured rates, the density curve and the placement discriminators reported as
-  measurements on declared surfaces --- never as an approach to, a weakening of,
-  or a consequence of any conjecture.
+\item\label{C:nogo} \textbf{A priced table, a density curve, and one open
+  problem} (Section~\ref{sec:open}). What remains after (C1)--(C3) is a single
+  question about a finite bilinear form: is the near-collinearity of the two
+  rows of $\Ah_2$ bounded uniformly in the window index? It is stated as
+  Problem~\ref{prob:R1} in three equivalent forms --- never as an approach to, a
+  weakening of, or a consequence of any conjecture. Around it,
+  Proposition~\ref{prop:routes} proves five unconditional majorants and
+  Measurement~\ref{meas:routes} reports the exponent each certifies on a
+  declared surface; Measurement~\ref{meas:nogo} exhibits five further routes
+  failing for structural reasons; Measurement~\ref{meas:density} gives the
+  deficit against comb density over four decades, with
+  Remark~\ref{rem:undecidable} stating what that curve cannot decide and at what
+  price; and Measurements~\ref{meas:placement} and \ref{meas:pole} locate the
+  phenomenon by intervention, the second through the closed-form response of
+  Proposition~\ref{prop:fh}.
 \end{enumerate}
 
 Two of these four are theorems; two are classifications supported by theorems
@@ -333,14 +345,46 @@ D5 reference window (Meas.~\ref{meas:refwindow}) & measured & the
   three-term cancellation \\
 \midrule
 \multicolumn{3}{@{}l}{\emph{Section~\ref{sec:open} --- the open problem}}\\
-Problem~\ref{prob:R1} & open & three equivalent forms \\
-rates (Meas.~\ref{meas:rate}) & measured & fitted exponents, declared
-  surfaces \\
-priced routes (Meas.~\ref{meas:routes}) & proved per route / measured
-  exponent & each bound unconditional, each exponent a fit \\
-density curve (Meas.~\ref{meas:density}) & measured & undecidability is part
-  of the claim \\
-placement (Meas.~\ref{meas:placement}) & measured & controlled experiment \\
+E0 Problem~\ref{prob:R1} & \emph{open} & three equivalent forms; a question
+  about a finite bilinear form \\
+E1 angle against determinant (Lem.~\ref{lem:angle}) & proved & the factor lies
+  in $(0,1]$; used only to relate two readings \\
+E2 rates (Meas.~\ref{meas:rate}) & measured & fitted exponents; every surface
+  and both readings declared \\
+E3 five majorants (Prop.~\ref{prop:routes}) & proved & five unconditional
+  inequalities with their hypotheses \\
+E4 priced routes (Meas.~\ref{meas:routes}) & measured & the exponent each
+  proved route certifies on Surface~II \\
+E5 structural obstructions (Meas.~\ref{meas:nogo}) & certified per window &
+  each route exhibited failing on Surface~I \\
+E6 the binned exponent (Def.~\ref{def:ratio}) & definition & deterministic;
+  ladder-dependent by Rem.~\ref{rem:undecidable} \\
+E7 density curve (Meas.~\ref{meas:density}) & measured & on Surface~III,
+  quoted with its rung ladder \\
+E8 undecidability, fence, caveat (Rem.~\ref{rem:undecidable}) & measured &
+  part of the claim of E7, not a caveat on it \\
+E9 the scramble (Meas.~\ref{meas:placement}) & measured & controlled
+  experiment at fixed weight multiset \\
+E10 exact placement derivative (Lem.~\ref{lem:dcexact}) & proved & $\dot c$
+  affine and piecewise constant \\
+E11 placement response (Prop.~\ref{prop:fh}) & proved &
+  Hellmann--Feynman \cite{Hellmann1937,Feynman1939}; simple extreme
+  eigenvalues \\
+E12 causality and the pole (Meas.~\ref{meas:pole}) & measured & a derivative
+  at a point on named instances, not a rate \\
+E13 what is not claimed (Rem.~\ref{rem:notclaimed}) & --- & the binding
+  negative list \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Section~\ref{sec:numerics} --- numerical
+  verification}}\\
+F1--F3 conventions (Sec.~\ref{sec:fp}) & --- & floors, conditioning cap,
+  mutation controls \\
+the three surfaces (Sec.~\ref{sec:surfaces}) & --- & declared before any
+  number is read \\
+cross-reference (Tab.~\ref{tab:crossref}) & --- & every numbered statement to
+  its check \\
+the two fit remarks (Rem.~\ref{rem:fit2}, \ref{rem:twoexponents}) & measured &
+  why $h^{+1.997}$ is the closed $h^{2}$; why two exponents are one object \\
 \end{xltabular}}
 
 Table~\ref{tab:typing} is the first thing to read. Four entries deserve
@@ -358,6 +402,15 @@ Proposition~\ref{prop:typeII}, which bounds the $(4K+1)$-st singular value of a
 factorisation-indexed block by a declared truncation error under a declared
 interior hypothesis; the measured number of significant singular values is
 smaller than what that proposition gives, and it therefore stays measured.
+
+Two entries in the last block of the table need the same care.
+Measurement~\ref{meas:routes} carries two types in one row on purpose: the
+inequality of each route is proved (Proposition~\ref{prop:routes}), and only
+the exponent it certifies is a fit on Surface~II. And
+Measurement~\ref{meas:density} is quoted with its rung ladder, because the
+estimator of Definition~\ref{def:ratio} is ladder-dependent: a bin value
+reported without the ladder it was computed on is not reproducible
+(Remark~\ref{rem:undecidable}).
 
 \subsection{Notation}
 \label{sec:notation}
@@ -930,9 +983,9 @@ closed $h^{2}$ of \eqref{eq:gap}. The inadmissible control of
 Remark~\ref{rem:negcontrol} returns $\mu_1\TV\approx7\cdot10^{-4}$ at
 $\lambda=10^{-2}$, i.e.\ it undercuts the floor by the predicted factor
 $\lambda^{2}$.
-\draftnote{the declared caps of Surface~II, and the definition of the trial
-family whose optimiser \eqref{eq:sharp} is evaluated at, are written out with
-Section~\ref{sec:numerics}.}
+The trial family is the declared tapered mode family also used in
+Measurement~\ref{meas:battery}, its taper width running over a fixed geometric
+list; the caps of Surface~II are written out in Section~\ref{sec:surfaces}.
 \end{measurement}
 
 We close the section by saying plainly what the floor does not know about. It
@@ -1143,13 +1196,6 @@ the battery.
 
 \section{The two-dimensional reduction}
 \label{sec:twodim}
-
-\draftnote{Sections~\ref{sec:open}--\ref{sec:limits} carry their statements in
-final form together with proof sketches. The priced table of
-Section~\ref{sec:open} and the measurement tables of
-Section~\ref{sec:numerics} are completed in a later pass; the type of each
-statement is recorded in Table~\ref{tab:typing} and nothing is upgraded in the
-meantime.}
 
 Sections~\ref{sec:tvfloor} and \ref{sec:gauge} priced the trial-vector route.
 This section identifies what is left: at $K=2$ the optimal trial vector is
@@ -2229,8 +2275,9 @@ $2.465\cdot10^{4}$, the three terms of \eqref{eq:polarisation} are
 i.e.\ five orders of magnitude of cancellation between three pieces of size
 $\approx200$; the absolute value demanded of $\det\Ah_2$ at that window --- the
 target against which the cancellation has to be resolved --- is
-$1.10\cdot10^{-5}$, a further factor $384$ below the residual sum. The caps are
-those of Surface~II
+$1.10\cdot10^{-5}$, a further factor $384$ below the residual sum. The four
+numbers are read under the per-window near-null convention \ref{F:null}, and the
+caps are those of Surface~II
 (Section~\ref{sec:surfaces}): the window index inside $[142,1445]$, the
 conditioning of the raw Gram block inside $\cond(G)\le10^{12}$, and the comb
 truncated at the node cap quoted above. Three readings of the same window follow
@@ -2243,12 +2290,22 @@ $\det S$ is $41$ times smaller than its $\ell^{1}$ mass
 $\det\Ah_2$, whose normalisation by $\ah_{11}\ah_{22}$ is the quantity of
 Problem~\ref{prob:R1} --- so five orders of magnitude here is a statement about
 one window and about nothing else.
-\draftnote{the per-window table and the floating-point certificate for these
-four numbers are written out with Section~\ref{sec:numerics}.}
 \end{measurement}
 
 \section{A measured obstruction, and an open problem}
 \label{sec:open}
+
+Sections~\ref{sec:tvfloor}--\ref{sec:rank} reduce the question of
+Section~\ref{sec:problem} to a single scalar and classify what the standard
+unconditional toolbox does to it. This section states the scalar question that
+remains, reports what is measured about it on declared surfaces, prices the
+routes, and locates --- by controlled experiment --- where the phenomenon
+actually lives. Everything here is either a proved statement about a route or a
+number on a named surface; the two are never mixed, and
+Table~\ref{tab:typing} is the binding record.
+
+\subsection{The open problem}
+\label{sec:problem71}
 
 \begin{problem}[three equivalent forms]
 \label{prob:R1}
@@ -2260,7 +2317,8 @@ Is there, for each $\varepsilon>0$, a constant $C_\varepsilon$ such that
   =\frac{\det\Ah_2}{\ah_{11}\ah_{22}}
   \;\le\;C_\varepsilon\,h^{-3+\varepsilon}\,?
 \end{equation}
-Equivalently, by Lemma~\ref{lem:detread} and Lemma~\ref{lem:minors}:
+Equivalently, by Lemmata~\ref{lem:detread}, \ref{lem:minors} and
+\ref{lem:angle}:
 \begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.6em]
 \item\label{R1:rows} \emph{Row collinearity.} Do the two rows of $\Ah_2$ ---
   two explicit finite sums against the closed weights of
@@ -2275,96 +2333,603 @@ Equivalently, by Lemma~\ref{lem:detread} and Lemma~\ref{lem:minors}:
   $h^{-3}$, in the sense that the three terms of \eqref{eq:polarisation} cancel
   to that order?
 \end{enumerate}
-The problem is open. It is a question about a finite bilinear form; it is not
-formulated as, and must not be read as, an approach to, a weakening of, or a
-consequence of any conjecture, and no comparison of strengths is made anywhere
-in this paper.
+The problem is open. It is a question about a finite bilinear form --- for each
+window a polynomial identity in three explicit finite sums --- and the only
+thing missing is a bound uniform in $h$. It is not formulated as, and must not
+be read as, an approach to, a weakening of, or a consequence of any conjecture;
+no comparison of strengths against any conjecture is made anywhere in this
+paper, and no such comparison is needed to state the problem or to read the
+measurements below.
 \end{problem}
+
+The three forms are equivalent because the quantities in \ref{R1:rows} and
+\ref{R1:det} differ by a factor that is bounded above and below in closed form.
+We record this once, because it is also what makes the two fitted exponents of
+Measurement~\ref{meas:rate} non-independent (Remark~\ref{rem:twoexponents}).
+
+\begin{lemma}[the angle reading against the determinant reading]
+\label{lem:angle}
+Assume $\ah_{11},\ah_{22}>0$ and $|\ah_{12}|\le\sqrt{\ah_{11}\ah_{22}}$, and
+write $\rho_1=\lVert(\ah_{11},\ah_{12})\rVert$,
+$\rho_2=\lVert(\ah_{12},\ah_{22})\rVert$ for the two row norms of $\Ah_2$ and
+$\sin\angle=|\det\Ah_2|/(\rho_1\rho_2)$ for the sine of the angle between the
+rows. Then
+\begin{equation}
+\label{eq:angleid}
+  \frac{\sin\angle}{\,|1-r_{12}^{2}|\,}
+  =\frac{\ah_{11}\ah_{22}}{\rho_1\rho_2}
+  =\frac{\sqrt{\ah_{11}\ah_{22}}}
+        {\sqrt{(\ah_{11}+r_{12}^{2}\ah_{22})(\ah_{22}+r_{12}^{2}\ah_{11})}},
+\end{equation}
+and this factor obeys
+\begin{equation}
+\label{eq:anglebound}
+  \frac12\cdot\frac{2\sqrt{\ah_{11}\ah_{22}}}{\ah_{11}+\ah_{22}}
+  \;\le\;\frac{\sin\angle}{\,|1-r_{12}^{2}|\,}\;\le\;1 ,
+\end{equation}
+so the two readings differ by a factor confined to $(0,1]$ whose two-sided
+bound depends on the window only through the diagonal ratio
+$\ah_{22}/\ah_{11}$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:detread}, $|1-r_{12}^{2}|=|\det\Ah_2|/(\ah_{11}\ah_{22})$, and
+$\sin\angle=|\det\Ah_2|/(\rho_1\rho_2)$ by definition; dividing gives the first
+equality of \eqref{eq:angleid}. For the second, substitute
+$\ah_{12}^{2}=r_{12}^{2}\ah_{11}\ah_{22}$:
+\[
+  \rho_1^{2}=\ah_{11}^{2}+\ah_{12}^{2}
+  =\ah_{11}\bigl(\ah_{11}+r_{12}^{2}\ah_{22}\bigr),
+  \qquad
+  \rho_2^{2}=\ah_{12}^{2}+\ah_{22}^{2}
+  =\ah_{22}\bigl(\ah_{22}+r_{12}^{2}\ah_{11}\bigr),
+\]
+and take the product. For \eqref{eq:anglebound}: the upper bound is
+$\rho_1\rho_2\ge\ah_{11}\ah_{22}$, which follows from
+$\rho_1\ge\ah_{11}$ and $\rho_2\ge\ah_{22}$; the lower bound uses
+$r_{12}^{2}\le1$, whence $\ah_{11}+r_{12}^{2}\ah_{22}\le\ah_{11}+\ah_{22}$ and
+likewise for the second factor, so
+$\rho_1\rho_2\le\sqrt{\ah_{11}\ah_{22}}\,(\ah_{11}+\ah_{22})$. The final form is
+$\tfrac12$ times the ratio of the geometric to the arithmetic mean of
+$\ah_{11}$ and $\ah_{22}$, i.e.\ $\sqrt t/(1+t)$ with $t=\ah_{22}/\ah_{11}$.
+\end{proof}
+
+\subsection{What is measured}
+\label{sec:measured}
 
 \begin{measurement}[measured rates]
 \label{meas:rate}
-On the declared surfaces the left-hand side of \eqref{eq:R1} is measured to fall
-as a power of $h$ with fitted exponent between $-2.7$ and $-2.95$ depending on
-the surface, and the sine-of-angle reading of Problem~\ref{prob:R1}\ref{R1:rows}
-falls at the same rate to within the fit uncertainty. Fitted exponents are fits.
-\draftnote{the surfaces, the window counts, the caps, and the exponents with
-their jackknife bands are written out in the next pass; nothing here is used as
-a bound.}
+All numbers here are least-squares fits of $\log$ of the quantity against
+$\log h$ on the stated finite surface, reported for orientation and used as
+bounds nowhere. On Surface~II of Section~\ref{sec:surfaces} the readings are:
+\begin{itemize}
+\item $1-r_{12}^{2}\sim h^{-2.747}$ on the $67$ node-complete windows,
+  $h=142$ to $1433$;
+\item $1-r_{12}^{2}\sim h^{-2.260}$ on the full family of $70$ windows,
+  $h=142$ to $1445$, i.e.\ including the $3$ windows whose comb is truncated by
+  the node cap. Both numbers are quoted; the difference is the cap, not the
+  phenomenon, and it is not hidden;
+\item the angle reading of Problem~\ref{prob:R1}\ref{R1:rows},
+  $\sin\angle=|\det\Ah_2|/(\rho_1\rho_2)$, falls as $h^{-2.711}$ on the same
+  $67$ windows;
+\item on the $27$-window frame ladder of Measurements~\ref{meas:sharpness} and
+  \ref{meas:battery} the fitted exponent is $-2.921$; on the union of that
+  ladder with the decoupled families below it is $-2.246$.
+\end{itemize}
+The exponent is \emph{not} a single number across surfaces, and this is reported
+without smoothing. On three independently generated frames obtained by
+decoupling the cell width from the window index the fitted exponents are
+$-1.702$, $-1.270$ and $-1.735$, while the best priced route of
+Measurement~\ref{meas:routes} certifies $+0.529$, $+0.339$ and $+0.611$ there
+--- short of the exponent in \eqref{eq:R1} by $1.17$, $0.93$ and $1.12$. On five
+further frame data the pooled exponents are $-2.19$, $-2.46$, $-2.55$, $-1.83$
+and $-2.76$, and across the nine individual ladders of those families they
+range from $-1.83$ to $-2.87$. What does transfer is the near-degeneracy itself:
+the row angle stays below $10^{-2}$ on every window of every family and decays
+on every ladder. The rate is a property of the family; the collapse is not.
+Nothing in Sections~\ref{sec:setting}--\ref{sec:rank} depends on any of these
+numbers.
 \end{measurement}
 
-\begin{measurement}[priced routes: a table of what the unconditional toolbox
-reaches]
+\subsection{The priced routes, and the structural obstructions}
+\label{sec:nogo}
+
+The next proposition collects five unconditional majorants for
+$|1-r_{12}^{2}|$. Each is an inequality with its hypotheses written out; each is
+proved; none of them involves a fit. The fitted exponents that these majorants
+\emph{certify} on a declared surface are a separate matter and are reported
+afterwards, in Measurement~\ref{meas:routes}.
+
+\begin{proposition}[five unconditional majorants]
+\label{prop:routes}
+Let $\Ah_2=B-S$ be the split of Proposition~\ref{prop:split}, let
+$\mathcal K$ be the kernel of \eqref{eq:doublesum}, let $\varrho$ be the weight
+vector and $\lVert\varrho\rVert_2$ its Euclidean norm. Assume
+$\ah_{11}\ah_{22}\ne0$ and write $\Xi=|\ah_{11}\ah_{22}|$ for the length of
+this proposition only. Then, with
+$1-r_{12}^{2}=\det\Ah_2/(\ah_{11}\ah_{22})$ by Lemma~\ref{lem:detread}:
+\begin{enumerate}[label=\textup{(R\arabic*)},leftmargin=3.2em]
+\item\label{RT:cs} \emph{Cauchy--Schwarz on $\Ah_2$.}
+  $|\det\Ah_2|\le|\ah_{11}\ah_{22}|+\ah_{12}^{2}$, hence
+  $|1-r_{12}^{2}|\le1+\ah_{12}^{2}/\Xi\le2$ whenever $\Ah_2\PSD$. Hypotheses:
+  none for the first inequality; $\Ah_2\PSD$ for the numerical bound $2$.
+\item\label{RT:ls} \emph{Large sieve / duality on the comb--comb term.}
+  $|\det S|\le\lVert\mathcal K\rVert_{\mathrm{op}}\lVert\varrho\rVert_2^{2}$,
+  hence
+  $|1-r_{12}^{2}|\le\bigl[|\det B|+|D(B,S)|
+  +\lVert\mathcal K\rVert_{\mathrm{op}}\lVert\varrho\rVert_2^{2}\bigr]/\Xi$.
+  Hypotheses: $\mathcal K$ symmetric, which is
+  Proposition~\ref{prop:polarisation}; the operator-norm step is the Rayleigh
+  bound and is the form in which the large sieve enters
+  \cite{MontgomeryVaughan1974}.
+\item\label{RT:mv} \emph{Montgomery--Vaughan on the three linear functionals.}
+  Suppose the three reads $X^{(\ell)}_{ij}$ are values at two dual points
+  $\gamma_1,\gamma_2$ of an exponential sum of length $X$ with spacing
+  $\Delta\gamma=|\gamma_1-\gamma_2|$, so that the large sieve gives
+  $|S_{ij}|\le Q$ with
+  $Q^{2}=(X+\Delta\gamma^{-1})\lVert\varrho\rVert_2^{2}$. Then
+  $|1-r_{12}^{2}|\le\bigl[|\det B|
+  +(|B_{11}|+|B_{22}|+2|B_{12}|)\,Q+2Q^{2}\bigr]/\Xi$. Hypotheses: the
+  Montgomery--Vaughan inequality \cite{MontgomeryVaughan1974} at the two dual
+  points, and the triangle inequality on
+  $\det S=S_{11}S_{22}-S_{12}^{2}$.
+\item\label{RT:split} \emph{The exact split.}
+  $|1-r_{12}^{2}|\le\bigl[|\det B|+|D(B,S)|+|\det S|\bigr]/\Xi$. Hypotheses:
+  the identity \eqref{eq:polarisation} and the triangle inequality; nothing
+  else.
+\item\label{RT:vaughan} \emph{Vaughan Type I $+$ Type II.} Write
+  $\varrho=\sum_{q\le4}\varrho^{(q)}$ for Vaughan's decomposition
+  \cite{Vaughan1977} of the weight vector and bound each of the sixteen
+  resulting blocks of the bilinear form by its own operator norm as in
+  \ref{RT:ls}. Then
+  $|1-r_{12}^{2}|\le\bigl[|\det B|+|D(B,S)|
+  +\sum_{q,q'}\lVert\mathcal K\rVert_{\mathrm{op}}
+  \lVert\varrho^{(q)}\rVert_2\lVert\varrho^{(q')}\rVert_2\bigr]/\Xi$.
+  Hypotheses: those of \ref{RT:ls} for each block, plus
+  Corollary~\ref{cor:majorant}\ref{M:decomp}.
+\end{enumerate}
+Routes \ref{RT:ls}, \ref{RT:mv} and \ref{RT:split} are members of the class
+$\mathfrak M$ of Definition~\ref{def:majclass} as stated;
+\ref{RT:vaughan} is of the decomposed shape of
+Corollary~\ref{cor:majorant}\ref{M:decomp} with $p=4$; \ref{RT:cs} is not a
+majorant of $\det S$ at all and is carried as the trivial baseline
+(Remark~\ref{rem:routeclass}).
+\end{proposition}
+
+\begin{proof}
+\ref{RT:cs} is $|\ah_{11}\ah_{22}-\ah_{12}^{2}|\le|\ah_{11}\ah_{22}|
++\ah_{12}^{2}$, and if $\Ah_2\PSD$ then $\ah_{12}^{2}\le\ah_{11}\ah_{22}$.
+\ref{RT:ls}: by \eqref{eq:doublesum},
+$\det S=\varrho^{\T}\mathcal K\varrho$, and for a symmetric matrix
+$|\varrho^{\T}\mathcal K\varrho|
+\le\lVert\mathcal K\rVert_{\mathrm{op}}\lVert\varrho\rVert_2^{2}$; insert into
+\eqref{eq:polarisation} and apply the triangle inequality.
+\ref{RT:mv}: $|\det S|\le|S_{11}||S_{22}|+S_{12}^{2}\le2Q^{2}$ and
+$|D(B,S)|\le(|B_{11}|+|B_{22}|+2|B_{12}|)\max_{ij}|S_{ij}|$; insert into
+\eqref{eq:polarisation}. \ref{RT:split} is the triangle inequality on
+\eqref{eq:polarisation}. \ref{RT:vaughan}: expand
+$\det S=\sum_{q,q'}(\varrho^{(q)})^{\T}\mathcal K\varrho^{(q')}$ by bilinearity
+of $D$ and bound each term as in \ref{RT:ls}; that the four pieces sum to
+$\varrho$ is Vaughan's identity, which is a coefficientwise statement about the
+weight vector and is verified as such (Section~\ref{sec:crossref}). Dividing by
+$\Xi$ and using Lemma~\ref{lem:detread} gives each displayed form.
+\end{proof}
+
+\begin{measurement}[the priced table]
 \label{meas:routes}
-Each row of the table below is an unconditional bound, evaluated on a declared
-surface, together with the exponent it certifies; the bound is proved, the
-exponent is measured, and the two are typed separately. The routes are:
-Cauchy--Schwarz on $\Ah_2$; the large sieve and duality applied to $\det S$
-\cite{MontgomeryVaughan1974}; Montgomery--Vaughan applied to the three linear
-functionals of Theorem~\ref{thm:rank3}\ref{R:three}; the exact split
-$|\det B|+|D(B,S)|+|\det S|$ of \eqref{eq:polarisation}; and Vaughan's
-Type I $+$ Type II decomposition \cite{Vaughan1977}. Alongside them sit the
-structural no-gos: the symbol infimum (negative on every window of the declared
-surface, so no symbol-positivity argument can deliver a floor); perturbation
-theory around the parity bottom mode, which bounds at the scale of the matrix
-\cite{Kato1949}; band-local domination; and the $\ell^{1}$ mass of the kernel
-$\mathcal K$ against its signed value.
-\draftnote{Placeholder for the priced table. Each row needs its route's
-hypotheses spelled out and its exponent re-read from a declared surface with
-caps; until that is written, no exponent is quoted here. Corollary
-\ref{cor:majorant} is the structural reason the norm-based rows lose.}
+Each majorant of Proposition~\ref{prop:routes} is evaluated window by window on
+the $67$ node-complete windows of Surface~II and its logarithm regressed against
+$\log h$. The resulting $\delta$ is the exponent that the route certifies for
+$1-r_{12}^{2}\le C\,h^{-\delta}$ on that surface: the bound is proved, the
+exponent is a fit, and the two are typed separately in every row.
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}llrY@{}}
+\toprule
+route & where & $\delta$ & type of the row \\
+\midrule
+$1-r_{12}^{2}$ itself & Meas.~\ref{meas:rate}
+  & $+2.747$ & measured (the object, not a route) \\
+\ref{RT:cs} Cauchy--Schwarz on $\Ah_2$ & Prop.~\ref{prop:routes}
+  & $-0.000$ & bound proved, exponent measured \\
+\ref{RT:ls} large sieve / duality on $\det S$ & Prop.~\ref{prop:routes}
+  & $+0.669$ & bound proved, exponent measured \\
+\ref{RT:mv} Montgomery--Vaughan on $S_{11},S_{22},S_{12}$
+  & Prop.~\ref{prop:routes}
+  & $-0.384$ & bound proved, exponent measured \\
+\ref{RT:split} exact split $|\det B|+|D(B,S)|+|\det S|$
+  & Prop.~\ref{prop:routes}
+  & $+0.996$ & bound proved, exponent measured \\
+\ref{RT:vaughan} Vaughan Type~I $+$ Type~II & Prop.~\ref{prop:routes}
+  & $+0.669$ & bound proved, exponent measured \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\noindent
+The best of the five on this surface is the triangle inequality on the exact
+three-term split, at $\delta=+0.996$; the exponent in \eqref{eq:R1} is $3$, so
+on this surface the best priced route falls short by $2.004$ \emph{in the
+exponent}. Two readings are part of the measurement.
+Corollary~\ref{cor:majorant}\ref{M:blind} says why the three norm-based rows
+cannot do better in principle: they see the image point
+$y(S)=(S_{11},S_{22},S_{12})$ and not its relation to $B$, and the phenomenon
+of Measurement~\ref{meas:refwindow} is exactly that relation.
+Theorem~\ref{thm:rank3}\ref{R:three} says why \ref{RT:ls} and \ref{RT:vaughan}
+land on the same number: a bilinear tool applied to a kernel of rank three
+degenerates to a statement about three linear functionals, and the Vaughan
+blocks inherit the degeneracy block by block.
 \end{measurement}
+
+\begin{measurement}[the structural obstructions]
+\label{meas:nogo}
+Five further routes are excluded not by their exponent but by their shape. Each
+is exhibited failing on the windows of Surface~I
+(Section~\ref{sec:surfaces}), $12$ windows with $m\le300$, in the way the
+classification predicts.
+\begin{enumerate}[label=\textup{(N\arabic*)},leftmargin=3.2em]
+\item\label{NG:symbol} \emph{The symbol infimum is negative.} The Toeplitz
+  symbol $\sigma(\theta)=c_0+2\sum_{d\ge1}c_d\cos(d\theta)$ has
+  $\min_\theta\sigma\in[-47.6,-21.3]$ on $12/12$ windows, while the parity
+  compression is positive definite there. No pointwise minorant of the symbol
+  can therefore deliver a positive floor: the positivity is a finite-section
+  fact --- a Fej\'er cancellation \cite{Fejer1916} between the Toeplitz and the
+  Hankel half of \eqref{eq:Adef} --- and not a symbol fact.
+\item\label{NG:kato} \emph{Perturbation theory prices at the wrong scale.}
+  Kato's bound $|\nu_2(\Ah_2+E)-\nu_2(\Ah_2)|\le\lVert E\rVert$ \cite{Kato1949}
+  is sharp at the scale of the matrix, and on Surface~I the small eigenvalue
+  sits a factor $9.8\cdot10^{2}$ to $2.0\cdot10^{4}$ below
+  $\lVert\Ah_2\rVert$. A perturbative argument would have to control the matrix
+  to that relative accuracy first, which is the original problem. The
+  observation is sharper than a divergence statement: on a declared family of
+  perturbative expansions the Neumann/Jacobi series diverges (radius $1.0$ to
+  $12.7$) while the Kato series \emph{converges}, with radius $0.067$ --- to the
+  wrong object, since the exact bottom eigenvector of the corresponding
+  $6\times6$ block overshoots the constrained minimum by a relative excess
+  $6.04$ at overlap $0.083$ and relative gap $5.4\cdot10^{-7}$.
+\item\label{NG:band} \emph{Band-local domination fails.} On the mode-$1$ weight
+  vector the comb half of the lag sum dominates the archimedean half by a
+  factor $1.71$ to $2.83$ on $12/12$ windows, so a route that would dominate the
+  comb band by the archimedean band loses on the instance.
+\item\label{NG:l1} \emph{The signed sum is far below its $\ell^{1}$ mass.} On
+  the declared subsample of the reference window the ratio is $41$
+  (Measurement~\ref{meas:l1}, equation~\eqref{eq:l1mass}); any route that
+  replaces the signed double sum by its absolute value pays that factor before
+  it starts.
+\item\label{NG:LP} \emph{The $L_P$ control is exact and empty.} Replacing the
+  comb by nothing --- i.e.\ running the whole reduction on the lag sequence
+  $c^{L}$ of Lemma~\ref{lem:kms} --- gives $\ah_{12}=1.1\cdot10^{-17}$, hence
+  $1-r_{12}^{2}=1$ with no decay at all at $m=64$, $128$ and $256$, a Gram
+  matrix that is diagonal to an off-diagonal mass $2.3\cdot10^{-13}$, and a
+  ladder gain $g_K/g_1=1$ at zero tolerance. Any argument
+  that would already work for $L_P$ alone is therefore vacuous for $A$: the
+  phenomenon of Problem~\ref{prob:R1} is not a property of the two parity modes.
+\end{enumerate}
+\end{measurement}
+
+\subsection{The density curve}
+\label{sec:density}
+
+The measurements so far are taken along a ladder in $h$ at a fixed rule
+relating the resolution to the window. The next one is taken on a rectangle,
+which separates the window index from the number of comb nodes per lag cell,
+and it is the last decidable measurement the declared caps permit.
+
+\begin{definition}[the ratio and its binned exponent]
+\label{def:ratio}
+For a window put
+\begin{equation}
+\label{eq:ratio}
+  \gamma=\frac{\lmin(G)}{\lmax(G)},
+  \qquad
+  R=\frac{\gamma}{\,1-r_{12}^{2}\,},
+  \qquad
+  \mathrm{dens}=\frac{\#\{\ell:u_\ell\le2\alpha\}}{M},
+\end{equation}
+with $G$ the normalised $K$-block of \eqref{eq:gram} at $K=16$ and
+$\mathrm{dens}$ the number of comb nodes per lag cell. For a density interval
+$[\lambda,4\lambda)$ the \emph{binned exponent} is: for each anchor with at
+least three ladder rungs inside the interval, the ordinary least-squares slope
+of $\log|R|$ against $\log h$ over its rungs; then the unweighted mean of the
+anchor slopes, with the cluster-robust standard error of that mean, and with the
+sign reversed so that a positive value means that $R$ falls. The procedure is
+deterministic and independent of the order in which the cells are enumerated.
+\end{definition}
+
+Two remarks fix the reading. First, $R$ compares two spectral functionals of one
+and the same finite matrix --- the relative spectral gap of the normalised low
+block, and the near-degeneracy scalar of Problem~\ref{prob:R1} --- so a positive
+binned exponent says that the second closes more slowly than the first, on that
+surface, at that density. Second, the binned exponent is a \emph{local slope of
+a curved surface} and not an exponent of a power law: $\log R$ is measurably
+curved in $\log h$ (the per-anchor quadratic coefficient is
+$-0.0842\pm0.0085$), which is why the value depends on the rung ladder ---
+see Remark~\ref{rem:undecidable}.
 
 \begin{measurement}[the density curve]
 \label{meas:density}
-The gap between the rate delivered by the best route of
-Measurement~\ref{meas:routes} and the rate $h^{-3+\varepsilon}$ of
-Problem~\ref{prob:R1}, measured against the density of comb nodes per lag cell,
-falls monotonically over three decades of density; the densest reachable bin is
-consistent with zero. A true zero, a
-power-law approach and a low plateau are \emph{undecidable} under the finite
-sieve that the declared caps permit, and this undecidability is part of the
-claim, not a caveat attached to it.
-\draftnote{Placeholder for the density curve: the six binned values with their
-standard errors, the caps that make the dense corner reachable, the jackknife
-correction to the scatter, and the explicit undecidability sentence.}
+Surface~III of Section~\ref{sec:surfaces}: $692$ anchors, $14\,532$ windows, a
+node table capped at $2.5\cdot10^{7}$ containing $1\,566\,727$ nodes, every
+window with a complete comb, none of them indefinite. The cap and the smallest
+admissible rung force $\mathrm{dens}\le6120$, of which $6118$ is attained; the
+attained density spans $4.0$ decades. On the declared geometric ladder of
+ratio-$4$ density bins, fixed before any window was built, the binned exponent
+of Definition~\ref{def:ratio} is:
+
+\begin{center}\small
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+bin (nodes per lag cell) & exponent & s.e. & note \\
+\midrule
+$[0.1,\ 0.4)$        & $+0.8886$ & $0.1027$ & \\
+$[0.4,\ 1.6)$        & $+0.5148$ & $\ast$ & \\
+$[1.6,\ 6.4)$        & $+0.1948$ & $\ast$ & \\
+$[6.4,\ 25.6)$       & $+0.3922$ & $\ast$ & monotonicity violation, declared \\
+$[25.6,\ 102.4)$     & $+0.1520$ & $\ast$ & \\
+$[102.4,\ 409.6)$    & $+0.0579$ & $\ast$ & \\
+$[409.6,\ 1638.4)$   & $+0.0376$ & $0.0410$ & new; $0.9\sigma$ from zero \\
+$[1638.4,\ 6553.6)$  & $+0.1046$ & $0.0881$ & new; $1.2\sigma$ from zero \\
+\midrule
+pooled, the two new bins & $+0.0496$ & $0.0372$ & $1.3\sigma$ from zero \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+$\ast$: for the six older bins the source reports the values and the joint
+density slope but not the individual standard errors, and none is invented
+here. The joint slope of the binned exponent against $\log(\mathrm{dens})$ is
+$-0.0725\pm0.0090$, i.e.\ $8.0\sigma$ over the $4.0$ attained decades. The
+violation of monotonicity in the fourth bin is declared and not smoothed: it is
+where the finer rung ladder samples the curvature of $\log R$ differently from
+the coarser one.
+
+Two consistency facts belong to the measurement. \emph{(i)} A larger node table
+adds nodes above the old cap and nothing else, so on every window whose comb was
+already complete under the old cap the lag vector is unchanged bit for bit, $R$
+is unchanged exactly, and the binned exponent is identical --- a statement about
+complete combs, not about tables, and its must-break control is a window whose
+comb was truncated under the old cap, which does move. \emph{(ii)} Under a node
+table $20.8$ times larger, all six previously reported bins reproduce at
+$0.0\sigma$.
 \end{measurement}
 
-\begin{measurement}[placement discriminators]
+\begin{remark}[what the curve does and does not decide, and at what price]
+\label{rem:undecidable}
+Three statements are part of the claim rather than caveats attached to it.
+
+\emph{Undecidability.} On this surface, a true zero of the binned exponent at
+finite density, a power-law approach to zero, and a plateau at any level below
+$0.074$ are mutually indistinguishable: $0.074$ is the two-sigma resolution of
+the densest bins, and no finite node table reachable under the declared budget
+separates the three. No limit is claimed, and the quantifier in
+Problem~\ref{prob:R1} is untouched by the curve.
+
+\emph{The resource fence.} The resolution narrows like the square root of the
+anchor cap, so the width of the plateau window improves by a factor $2$ for
+every factor $4$ in the node table; raising the table by the factor $20.8$ that
+produced Surface~III narrowed the window from $0.264$ to $0.074$, a factor
+$3.6$. Extending the curve by one further decade of
+density needs a node table of about $2.5\cdot10^{9}$, a factor $100$ above the
+one used; that is outside the declared budget, and --- this is the honest half
+--- it is not obviously the right question either, since the object being
+extrapolated is a local slope of a curved surface and not an exponent.
+
+\emph{The ladder caveat.} The estimator of Definition~\ref{def:ratio} is
+ladder-dependent. The same density bin evaluated on a $2^{1/4}$ rung ladder and
+on its $\sqrt2$ sub-ladder gives different values, with shifts up to $0.20$ on
+the surface above, because a bin with twelve rungs samples the curvature of
+$\log R$ differently from one with six. Every number in
+Measurement~\ref{meas:density} is therefore quoted \emph{with} its rung ladder,
+and a bin value quoted without one is not reproducible.
+\end{remark}
+
+\subsection{Placement: two controlled experiments and one identity}
+\label{sec:placement}
+
+The results of Sections~\ref{sec:setting}--\ref{sec:rank} hold for an arbitrary
+finite comb (Remark~\ref{rem:combfree}). It is therefore a fair question where
+the phenomenon of Problem~\ref{prob:R1} actually lives. Two interventions answer
+it, and the second one closes into an identity.
+
+\begin{measurement}[the value-multiset scramble]
 \label{meas:placement}
-Two controlled experiments locate where the arithmetic actually sits. Replacing
-the node positions by sorted uniform samples at the \emph{same} weight multiset
-leaves the rank-three collapse of Theorem~\ref{thm:rank3} and every
-unconditional bound of Measurement~\ref{meas:routes} numerically almost
-unchanged, while the \emph{value} of $1-r_{12}^{2}$ moves by orders of
-magnitude; and displacing a few nodes by a small fraction of a lag cell moves
-$\log$ of the ratio linearly over several declared decades, with a first-harmonic
-prediction that under-predicts by a large factor --- the response is not smooth
-in the placement. The theorems of this paper are therefore provably not where
-the arithmetic is, and the equidistribution of the relevant cell phases is a
-classical Weyl statement \cite{Weyl1916}.
-\draftnote{Placeholder: the scramble factors, the interventional slope, the
-declared decades and the positive-definiteness threshold.}
+Replace the node positions $u_\ell$ by sorted uniform samples on the same range,
+keeping the weight multiset $\{\varrho_\ell\}$ exactly, and recompute. On $60$
+declared draws over the windows of Surface~I:
+\begin{itemize}
+\item the rank-three collapse is untouched:
+  $\sigma_4/\sigma_1\le2.5\cdot10^{-16}$ on every draw, as
+  Theorem~\ref{thm:rank3}\ref{R:kernel} requires --- the theorem does not know
+  where the nodes are;
+\item every majorant of Proposition~\ref{prop:routes} moves by a bounded factor
+  and keeps its exponent;
+\item the \emph{value} $1-r_{12}^{2}$ moves by a median factor $679$, range
+  $26$ to $4.9\cdot10^{3}$. An independent set of draws in the rank module
+  gives median $835$, range $69$ to $1.8\cdot10^{4}$; both are quoted, and the
+  spread between them is the spread of the sampling.
+\end{itemize}
+On a second declared surface the same intervention destroys positive
+definiteness of the low block on all $24$ draws and moves $R$ by a median
+factor $\approx10^{6}$; on the first of the two new density bins of
+Surface~III it destroys it on $194/194$ cells with the cell occupancy preserved
+exactly, so that only the sub-cell placement is randomised. On Surface~II the
+decay is removed outright: over $18$ windows the fitted exponent of
+$1-r_{12}^{2}$ moves from $-2.747$ to $+0.009$, a gap of $2.76$ in the
+exponent; on a further family the angle $\sin\angle$ rises by a median factor
+$6.6\cdot10^{4}$ and its exponent moves from $-1.93$ to $+0.11$. Position and
+weight are both load-bearing, and the second is checked separately: keeping the
+node positions and replacing each weight by the mean weight gives $h^{-0.116}$
+against the true $h^{-2.747}$. The conclusion is
+the one sentence this subsection exists for: \emph{every theorem in this paper
+survives the scramble and the phenomenon does not}, so the theorems are provably
+not where the arithmetic sits. What moves is the joint value of
+$(S_{11},S_{22},S_{12})$ against $B$ --- exactly the object
+Corollary~\ref{cor:majorant}\ref{M:blind} says no member of $\mathfrak M$ can
+see.
 \end{measurement}
+
+The second experiment displaces a few nodes by a fraction of a lag cell. That
+the response is available in closed form is not an accident: the assembly is
+affine in the fractional positions.
+
+\begin{lemma}[the exact placement derivative]
+\label{lem:dcexact}
+Fix a finite set $F$ of nodes and displace their fractional positions,
+$\theta_\ell\mapsto\theta_\ell+\vartheta$ for $\ell\in F$, keeping $m_\ell$ and
+all other nodes fixed. As long as no $\theta_\ell+\vartheta$ leaves $[0,1)$, the
+lag sequence is affine in $\vartheta$,
+\begin{equation}
+\label{eq:dcexact}
+  c(\vartheta)=c(0)+\vartheta\,\dot c,
+  \qquad
+  \dot c=\tfrac12\sum_{\ell\in F}\varrho_\ell
+  \bigl(\delta_{m_\ell}-\delta_{m_\ell+1}\bigr),
+\end{equation}
+where $\delta_m$ is the lag sequence supported at the single lag $m$. In
+particular $\dot c$ is exact and piecewise constant in $\vartheta$, and the
+induced $\dot A=\Pi^{\T}\Tm{M}(\dot c)\Pi$, $\dot G=\MM^{-1/2}
+(t_i^{\T}\dot At_j)_{ij}\MM^{-1/2}$ are exact as well.
+\end{lemma}
+
+\begin{proof}
+By the two-point read in the proof of Proposition~\ref{prop:split}, the node
+$u_\ell$ contributes $-\varrho_\ell\tfrac12[(1-\theta_\ell)\delta_{m_\ell}
++\theta_\ell\delta_{m_\ell+1}]$ to $c$ and nothing else. This is affine in
+$\theta_\ell$ with slope
+$\tfrac12\varrho_\ell(\delta_{m_\ell}-\delta_{m_\ell+1})$; summing over
+$\ell\in F$ gives \eqref{eq:dcexact}. The reflected hat still vanishes and
+$m_\ell$ is unchanged because $\theta_\ell+\vartheta$ stays in $[0,1)$, so no
+other lag entry moves. The maps $c\mapsto\Tm{M}(c)\mapsto\Pi^{\T}\cdot\Pi$ and
+$A\mapsto G$ are linear, which transports exactness to $\dot A$ and $\dot G$.
+\end{proof}
+
+\begin{proposition}[the placement response in closed form]
+\label{prop:fh}
+Let $\vartheta\mapsto G(\vartheta)$ be as in Lemma~\ref{lem:dcexact}, suppose
+$\lmin(G)$ and $\lmax(G)$ are simple with unit eigenvectors $v$ and $w$, and
+suppose $\ah_{11}\ah_{22}\ne0$ and $r_{12}^{2}\ne1$. Then, with
+$R=\gamma/(1-r_{12}^{2})$ as in \eqref{eq:ratio},
+\begin{equation}
+\label{eq:fh}
+  \frac{\mathrm d\log R}{\mathrm d\vartheta}
+  =\frac{v^{\T}\dot Gv}{\lmin(G)}-\frac{w^{\T}\dot Gw}{\lmax(G)}
+   -\frac{1}{1-r_{12}^{2}}\,
+    \frac{\mathrm d\,(1-r_{12}^{2})}{\mathrm d\vartheta},
+\end{equation}
+where the last derivative is the closed expression
+\begin{equation}
+\label{eq:ddel}
+  \frac{\mathrm d\,(1-r_{12}^{2})}{\mathrm d\vartheta}
+  =-\frac{2\ah_{12}\dot a_{12}}{\ah_{11}\ah_{22}}
+   +\frac{\ah_{12}^{2}}{\ah_{11}\ah_{22}}
+    \Bigl(\frac{\dot a_{11}}{\ah_{11}}+\frac{\dot a_{22}}{\ah_{22}}\Bigr),
+  \qquad \dot a_{ij}=t_i^{\T}\dot At_j .
+\end{equation}
+Every quantity on the right is an explicit finite sum; no fit enters.
+\end{proposition}
+
+\begin{proof}
+For a simple eigenvalue of a symmetric matrix depending differentiably on a
+parameter, $\mathrm d\lambda/\mathrm d\vartheta=v^{\T}\dot Gv$ with $v$ the
+normalised eigenvector \cite{Hellmann1937,Feynman1939}; by
+Lemma~\ref{lem:dcexact} the dependence is affine, so $\dot G$ is constant and
+the hypothesis of differentiability is automatic. Then
+$\mathrm d\log\gamma/\mathrm d\vartheta
+=\dot\lambda_{\min}/\lmin-\dot\lambda_{\max}/\lmax$, and
+$\log R=\log\gamma-\log(1-r_{12}^{2})$ gives \eqref{eq:fh}. For
+\eqref{eq:ddel}, differentiate
+$1-r_{12}^{2}=1-\ah_{12}^{2}/(\ah_{11}\ah_{22})$ by the quotient rule; the
+entries $\ah_{ij}$ are affine in $\vartheta$ with derivatives $\dot a_{ij}$.
+\end{proof}
+
+\begin{measurement}[causality, the pole, and where the response lives]
+\label{meas:pole}
+Three numbers on a declared instance family.
+
+\emph{(i) The intervention is causal, and linear over four decades.} Displacing
+six declared nodes inside their lag cells --- the cell index fixed, the mass
+exactly preserved, twelve lag entries changing --- gives
+$\mathrm d\log R/\mathrm d\vartheta=879$, linear to a factor $1.011$ over the
+declared range $\vartheta=10^{-7}$ to $10^{-4}$, with an exact
+$\vartheta=0$ rebuild control (residual $0$ on $40$ windows). This is a
+statement of causation, not of correlation: nothing but the placement was
+changed.
+
+\emph{(ii) The number is an identity, not a regression.} On the declared
+instance list the closed form \eqref{eq:fh} reproduces the full nonlinear rebuild to
+a median relative residual $3.37\cdot10^{-6}$ at the minimum of a declared
+central-difference step ladder, with the U-shape exhibited --- round-off limited
+below, truncation limited above, both ends at least three times the minimum. A
+wrong first-order formula has a floor, not a minimum; two deliberately mutated
+formulas (swapped eigenvectors, dropped last term) miss the measured quotient by
+a factor of order $40$. Of the three terms of \eqref{eq:fh} the last one, the
+near-degeneracy channel, carries the largest share on every instance --- a
+median $84\%$, against $7\%$ for the $\lmin$ term.
+
+\emph{(iii) The intervention walks along a near-degeneracy that is already
+there.} Sweeping the full placement period on a declared $64$-point grid,
+positive definiteness of the low block survives only about $2\%$ of the period:
+$\lmin$ changes sign inside the period, so $\log R$ has a \emph{pole} there and
+is not defined on the whole period. The bisected loss point satisfies
+$\vartheta_{\mathrm{PD}}\cdot|\mathrm d\log R/\mathrm d\vartheta|=5.8$, a pole at
+the natural scale, with $\vartheta_{\mathrm{PD}}=5.9\cdot10^{-3}$ median. And
+the two lowest modes of the normalised low block already sit only $13.4\%$ apart
+at $\vartheta=0$. Consequently a first-harmonic regression of $\log R$ over the
+period estimates a Fourier coefficient of a function with a pole in the
+interval, and returns $2.89$ against a local derivative of $879$; neither number
+is wrong, they measure different things, and the discrepancy is not an anomaly
+but a pole.
+
+The cell phases themselves are equidistributed in the classical sense: they are
+generated by $\varphi_\ell(h)=\{h\,\theta_\ell\}$ from one real invariant per
+node --- an identity certified to $1.14\cdot10^{-13}$ over $1316$ windows and
+eight nodes --- and the largest circular-uniformity statistic over those windows
+is $1.41$, i.e.\ consistent with uniformity after correction for multiplicity.
+Equidistribution of $\{h\theta\}$ is Weyl's theorem \cite{Weyl1916}; it is cited
+as the classical address of the phases and is used in no proof.
+\end{measurement}
+
+\subsection{What is not claimed}
+\label{sec:notclaimed}
 
 \begin{remark}[what is not claimed]
 \label{rem:notclaimed}
 Problem~\ref{prob:R1} is open. Nothing in this paper bounds it, and nothing in
-this paper is conditional on it. In particular: no statement here is an
-arithmetic statement; the positivity of $A$ on the parity sector is used only
-where it is named as a hypothesis, and only as a per-window certificate; and the
-comparison of a demanded precision against the strength of any conjecture is
-deliberately absent from the whole paper.
+this paper is conditional on it. Explicitly:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.6em]
+\item No statement of this paper is an arithmetic statement.
+  Theorems~\ref{thm:tvfloor}, \ref{thm:gauge}, \ref{thm:rank3} and every
+  proposition, lemma and corollary of
+  Sections~\ref{sec:setting}--\ref{sec:rank} hold for an arbitrary finite comb,
+  and Measurement~\ref{meas:placement} is the controlled experiment that says
+  what changes when the comb does.
+\item No fitted exponent is used as a bound. In particular the $\delta$ column
+  of Measurement~\ref{meas:routes} certifies nothing beyond the finite surface
+  it was fitted on; the inequalities of Proposition~\ref{prop:routes} are the
+  proved content of those rows.
+\item Measurement~\ref{meas:density} claims no limit. Its explicit content
+  includes its own undecidability (Remark~\ref{rem:undecidable}), and the
+  quantifier in \eqref{eq:R1} is untouched by it.
+\item Positivity of $A$ on the parity sector is used only where it is named as a
+  hypothesis, and there only as a per-window certificate.
+  Lemma~\ref{lem:detread} exists so that the reduction never needs it.
+\item No comparison of a demanded precision against the strength of any
+  conjecture appears anywhere in this paper. Problem~\ref{prob:R1} is stated as
+  a question about a finite bilinear form and about nothing else.
+\end{enumerate}
 \end{remark}
 
 \section{Numerical verification}
 \label{sec:numerics}
 
-\draftnote{Section skeleton. The floating-point convention, the two declared
-surfaces with their caps, and the certificate inventory are written out in the
-next pass; the cross-reference table below is complete as it stands.}
+Every numbered statement of this paper is recomputed by a machine check. This
+section states the convention under which a numerical statement counts as a
+certificate, declares the three surfaces on which anything is evaluated, and
+gives the table that maps each statement to its check.
 
-\subsection{Floating-point convention and the two surfaces}
-\label{sec:surfaces}
+\subsection{Floating-point convention and declared floors}
+\label{sec:fp}
 
 Positivity statements are completed Cholesky factorisations relative to a
 declared floor in the sense of Wilkinson and Higham
@@ -2376,18 +2941,76 @@ certified bound $\lVert X\rVert_2\le\lVert X\rVert_\infty$ is used for the norm
 labelled \emph{measured} and never used as certificates. Diagonally dominant
 comparisons, where used, are Ostrowski's \cite{Ostrowski1937}.
 
-Two surfaces are declared and never mixed. \emph{Surface~I} (exact, small): the
-deepest nodes admitting a window inside a cap on the lag index, on which every
+Three further conventions are fixed once.
+\begin{enumerate}[label=\textup{(F\arabic*)},leftmargin=3.2em]
+\item\label{F:null} \emph{Near-null horizons are declared per window, not
+  globally.} An identity between two quantities that cancel to $k$ digits is
+  checked against a bar proportional to $u$ times the larger of the two halves,
+  computed on that window. Where the paper quotes a residual --- for instance
+  $1.0\cdot10^{-10}$ for the polarisation \eqref{eq:polarisation} --- the bar
+  it is compared against is quoted with it. The cancellation reaches seven
+  digits on the deepest windows ($|1-r_{12}^{2}|$ down to $9.3\cdot10^{-8}$),
+  and that residual sits an order of magnitude below the declared near-null
+  horizon $10^{-9}$ for that identity. Identities that do not cancel are
+  checked at the ordinary round-off scale and their residuals are reported
+  there.
+\item\label{F:cond} \emph{Conditioning cap.} No matrix with
+  $\cond\ge10^{12}$ is factorised or inverted anywhere; windows exceeding the
+  cap are dropped before any number is read from them, and the number dropped
+  is reported with the surface.
+\item\label{F:mutation} \emph{Every identity carries a mutation control.} A
+  deliberately wrong variant of the same identity --- a swapped eigenvalue
+  pair, a dropped term, an off-by-one in the lag index --- is evaluated
+  alongside it and must fail by a margin that is also reported. An identity
+  verified without a mutation control is not counted.
+\end{enumerate}
+
+\subsection{The three surfaces}
+\label{sec:surfaces}
+
+Three surfaces are declared and never mixed; each is fixed before any number is
+read from it.
+
+\emph{Surface~I (exact, small).} The $12$ deepest prime-power anchors admitting
+a window inside the lag cap, $n=29$ to $139$, $m=96$ to $291\le300$. Every
 identity of Sections~\ref{sec:setting}--\ref{sec:rank} is recomputed from
-scratch. \emph{Surface~II} (measurement): the frame family with
-$h=142$ to $1445$ and $\cond(G)\le10^{12}$, on which
-Measurements~\ref{meas:sharpness}, \ref{meas:battery}, \ref{meas:refwindow} and
-\ref{meas:rate} are taken.
+scratch here, together with the structural obstructions of
+Measurement~\ref{meas:nogo}. The one unconditional arithmetic input,
+$|\psi(x)-x|\le\kappa x$ with $\kappa=0.038821$, is verified at every jump point
+of $\psi(x)/x$ on the finite table \cite{Chebyshev1852,RosserSchoenfeld1962}.
+
+\emph{Surface~II (measurement).} The frame-A family with $h=142$ to $1445$, all
+windows with $\cond(G)\le10^{12}$. Two subsets are used and are always named.
+The \emph{ladder}, $27$ windows with $h=142$ to $1320$, carries
+Measurements~\ref{meas:sharpness}, \ref{meas:battery} and \ref{meas:refwindow}.
+The \emph{refinement}, $70$ windows with $h=142$ to $1445$, carries
+Measurements~\ref{meas:rate} and \ref{meas:routes}; of these, $67$ have a comb
+complete under the node cap and span $h=142$ to $1433$, and every rate quoted on
+the node-complete subset is quoted alongside the value on the full family
+(Measurement~\ref{meas:rate}). Truncation of the comb by the node cap is not a
+nuisance to be averaged away: on a truncated window the low block can be
+indefinite, with $\lmin=-9.6\cdot10^{4}$ on the declared stress instance, while
+every window with a complete comb on this surface is positive definite.
+Indefiniteness sits at the declared sieve horizon and nowhere else.
+
+\emph{Surface~III (the density rectangle).} A rectangle, not a ladder: every
+prime power in the declared anchor range is an anchor --- $692$ of them ---
+crossed with a rung ladder of ratio $2^{1/4}$ containing the seven rungs of the
+earlier ladder verbatim, $21$ rungs from $h=128$ to $h=1280$. This gives
+$14\,532$ windows, all with a complete comb and none indefinite. The node table
+is capped at $2.5\cdot10^{7}$ and contains $1\,566\,727$ prime powers. The cap
+and the smallest admissible rung together force $\mathrm{dens}\le6120$, of which
+$6118$ is attained; the smallest rung is itself forced, since a $K\times K$ low
+block needs $2K$ modes and the conditioning floor of \ref{F:cond} does the rest.
+Surface~III carries Measurement~\ref{meas:density} and the sweeps of
+Measurement~\ref{meas:pole}. The bin edges, the rung ladder and the anchor range
+are all fixed before the first window is built; this is the anti-fitting device
+of the surface, and Remark~\ref{rem:undecidable} is the price it charges.
 
 \subsection{Cross-reference table}
 \label{sec:crossref}
 
-{\small
+{\footnotesize\relpenalty=0 \binoppenalty=0
 \begin{xltabular}{\textwidth}{@{}llY@{}}
 \caption{Every numbered statement and the check that recomputes it. Module
 identifiers refer to the verification suite accompanying this work; item
@@ -2491,16 +3114,90 @@ Prob.~\ref{prob:R1} (the open problem)
   & \texttt{v559} link~16
   & the \emph{shape} is certified per window; the rate and the
     quantifier stay open \\
+Lem.~\ref{lem:angle} (angle against determinant)
+  & \texttt{v558} item~(2)
+  & the ratio \eqref{eq:angleid} and its two-sided bound
+    \eqref{eq:anglebound} \\
+Prop.~\ref{prop:routes} (five majorants)
+  & \texttt{v558} items~(5), (6); \texttt{v559} NG1--NG8
+  & each majorant re-derived from its hypotheses; Vaughan's identity
+    coefficient by coefficient \\
 Meas.~\ref{meas:routes} (priced routes)
   & \texttt{v559} NG1--NG8
   & each classified route exhibited failing as classified \\
+Meas.~\ref{meas:nogo} (structural obstructions)
+  & \texttt{v559} NG1--NG8; \texttt{v558} item~(6)
+  & the symbol infimum; the Kato scale and the two radii; the band-local
+    ratio; the $L_P$ control at zero tolerance \\
+Meas.~\ref{meas:density} (the density curve)
+  & \texttt{v562} items~(3), (4)
+  & the binned exponent as a deterministic procedure; the ladder
+    dependence; the node-table invariance on complete combs, with its
+    must-break \\
+Lem.~\ref{lem:dcexact}, Prop.~\ref{prop:fh} (placement response)
+  & \texttt{v562} item~(1)
+  & $\dot c$ exact and piecewise constant; \eqref{eq:fh} against a full
+    rebuild on a step ladder with its U-shape and two mutants \\
+Meas.~\ref{meas:pole} (causality, the pole)
+  & \texttt{v562} items~(1), (2)
+  & the slope and its linearity; the sign change inside the period; the
+    near-degeneracy at $\vartheta=0$ \\
+Meas.~\ref{meas:placement} (the scramble)
+  & \texttt{v558} item~(6); \texttt{v560} item~(5); \texttt{v562} item~(2)
+  & rank and majorants unchanged; the value moved; the low block lost at
+    fixed cell occupancy \\
 \end{xltabular}}
+
+\subsection{Two remarks on the fits}
+\label{sec:fits}
+
+\begin{remark}[the floor exponent against the closed exponent]
+\label{rem:fit2}
+Measurement~\ref{meas:sharpness} reports the floor of
+Theorem~\ref{thm:tvfloor} growing as $h^{+1.997}$ on Surface~II, while
+\eqref{eq:gap} gives the closed value $1/\mu_1=1/(4\sin^{2}(\pi/N))$ with
+$N=2h+1$, whose growth is exactly $h^{2}$ up to the discrete correction. The
+two agree, and the small deficit is that correction: expanding the sine,
+$1/\mu_1=(2h+1)^{2}/(4\pi^{2})\,(1+O(h^{-2}))$, so a least-squares fit of
+$\log(1/\mu_1)$ against $\log h$ over a finite window range returns
+$2-c/\log h_{\mathrm{eff}}$ for a positive $c$ coming from the $+1$ in $2h+1$.
+The fit is therefore a consistency check on the surface and not an independent
+statement; the closed form is what is used, and the fitted number is quoted
+because suppressing it would hide the size of the discretisation.
+\end{remark}
+
+\begin{remark}[two reported exponents, one measured object]
+\label{rem:twoexponents}
+Measurement~\ref{meas:rate} reports $h^{-2.747}$ for $1-r_{12}^{2}$ and
+$h^{-2.711}$ for the sine of the angle between the rows of $\Ah_2$, on the same
+$67$ windows. These are not two independent readings. By
+Lemma~\ref{lem:angle} the two quantities differ by the factor
+$\ah_{11}\ah_{22}/(\rho_1\rho_2)$, which lies in $(0,1]$ and equals
+$\tfrac12$ times the ratio of the geometric to the arithmetic mean of the two
+diagonal entries when $r_{12}^{2}$ is close to $1$; the diagonal ratio
+$\ah_{22}/\ah_{11}$ stays in a bounded interval on the surface, so the factor
+is bounded above and below there and can shift the fitted exponent only by the
+slow drift of that ratio. The observed difference, $0.036$ in the exponent, is
+of exactly that size. The two numbers are reported because both readings of
+Problem~\ref{prob:R1} are in circulation and a reader should be able to match
+either; no regression theorem is claimed, and neither number is used as a
+bound.
+\end{remark}
 
 \subsection{Reproducibility}
 \label{sec:repro}
 
-\draftnote{Placeholder: the scripts, their runtimes, the number of checks, and
-the statement that every factorised matrix stays under the declared cap.}
+The checks are grouped into eight modules, \texttt{v555} to \texttt{v562},
+run in a single suite. Each module rebuilds its surface from the declared caps
+rather than reading stored data, verifies the arithmetic input at every jump
+point of the finite table it uses, and carries the mutation controls of
+\ref{F:mutation}. Total runtime is under two seconds for the identity modules
+and about two minutes for the module that builds Surface~III. Every matrix that
+is factorised or inverted anywhere in the suite satisfies the cap of
+\ref{F:cond}; the two exceptions --- the truncated-comb stress instance of
+Surface~II and the deliberately inadmissible vector of
+Remark~\ref{rem:negcontrol} --- are must-break controls, are declared as such,
+and no number is read from them except the failure they are built to exhibit.
 
 \section{Limitations, and what is not claimed}
 \label{sec:limits}
@@ -2519,12 +3216,38 @@ the statement that every factorised matrix stays under the declared cap.}
   criterion; Lemma~\ref{lem:detread} exists precisely so that the reduction
   never needs it.
 \item\label{L:fits} \textbf{Fits are fits.} Every exponent in
-  Measurements~\ref{meas:sharpness}, \ref{meas:rate} and \ref{meas:density} is a
-  least-squares fit on a declared surface, reported for orientation. No fit is
-  used as a bound anywhere.
+  Measurements~\ref{meas:sharpness}, \ref{meas:rate}, \ref{meas:routes} and
+  \ref{meas:density} is a least-squares fit on a declared surface, reported for
+  orientation. No fit is used as a bound anywhere. In particular the $\delta$
+  column of Measurement~\ref{meas:routes} is a property of the surface: what is
+  proved about those five routes is the inequalities of
+  Proposition~\ref{prop:routes}, and nothing else.
+\item\label{L:exponent} \textbf{The exponent is not one number.} On the
+  surfaces of Measurement~\ref{meas:rate} the fitted exponent of
+  $1-r_{12}^{2}$ ranges from $-1.27$ to $-2.95$, and the two readings of
+  Problem~\ref{prob:R1} give different fits on the same windows
+  (Remark~\ref{rem:twoexponents}). Any sentence of the form ``the quantity
+  decays like $h^{-\delta}$'' is a statement about a declared surface and a
+  declared reading, and this paper never makes it in any other form.
 \item\label{L:corner} \textbf{The dense corner is exhausted only up to the
   declared caps.} Measurement~\ref{meas:density} states its own
-  undecidability, and that statement is part of the claim.
+  undecidability, and that statement is part of the claim: a true zero, a
+  power-law approach, and a plateau below $0.074$ are indistinguishable on
+  Surface~III. Extending the curve by one decade costs a node table a factor
+  $100$ larger, which is outside the declared budget.
+\item\label{L:ladder} \textbf{The curve estimator is ladder-dependent.} The
+  binned exponent of Definition~\ref{def:ratio} shifts by up to $0.20$ between
+  the declared rung ladder and its coarse sub-ladder, because $\log R$ is
+  curved in $\log h$ (measured per-anchor curvature $-0.0842\pm0.0085$). Every
+  value in Measurement~\ref{meas:density} is quoted with its rung ladder, and a
+  value quoted without one is not reproducible. A ladder-robust estimator ---
+  integrating the curvature rather than sampling it --- is not attempted here.
+\item\label{L:errors} \textbf{Not every standard error is reproduced.} For the
+  six older bins of Measurement~\ref{meas:density} the source reports the
+  values and the joint density slope but not the individual standard errors,
+  and the table says so rather than filling the column. The declared
+  monotonicity violation in the fourth bin is likewise reported and not
+  smoothed.
 \item\label{L:D4} \textbf{One phrase did not convert.} The bandwidth
   $\Rightarrow$ $\eta$-rank mechanism is proved
   (Lemmata~\ref{lem:closedweight}--\ref{lem:spline},
@@ -2540,11 +3263,20 @@ the statement that every factorised matrix stays under the declared cap.}
   Sections~\ref{sec:setting}--\ref{sec:rank}. What changes is the \emph{value}
   of the three functionals of Theorem~\ref{thm:rank3}\ref{R:three}, and
   Measurement~\ref{meas:placement} is the controlled experiment that says so.
-\item\label{L:sections} \textbf{Draft scope.} In this revision
-  Sections~\ref{sec:setting}--\ref{sec:rank} are complete with proofs;
-  Sections~\ref{sec:open}--\ref{sec:limits} carry final statements with
-  placeholders for the tables and curves as marked. Table~\ref{tab:typing} is the binding
-  record of what is claimed at what strength.
+\item\label{L:placement} \textbf{The placement results are local.}
+  Proposition~\ref{prop:fh} is an identity, but
+  Measurement~\ref{meas:pole} evaluates it on a declared instance list and at a
+  declared displacement scale; $\log R$ has a pole inside the placement period,
+  so no global statement over the period is available, and none is made. The
+  number $879$ is a derivative at a point on named instances, not a rate.
+\item\label{L:scope} \textbf{What is not claimed.} Problem~\ref{prob:R1} is
+  open; nothing here bounds it and nothing here is conditional on it. No
+  statement of this paper is an arithmetic statement, no comparison against the
+  strength of any conjecture appears anywhere, and
+  Measurement~\ref{meas:density} claims no limit.
+  Remark~\ref{rem:notclaimed} states this in full, and
+  Table~\ref{tab:typing} is the binding record of what is claimed at what
+  strength: where the prose and the table disagree, the table governs.
 \end{enumerate}
 
 \begin{thebibliography}{99}\small
@@ -2581,6 +3313,10 @@ J. Reine Angew. Math. \textbf{4} (1829), 157--169.
 \emph{\"Uber trigonometrische Polynome},
 J. Reine Angew. Math. \textbf{146} (1916), 53--82.
 
+\bibitem{Feynman1939} R.~P.~Feynman,
+\emph{Forces in molecules},
+Phys. Rev. \textbf{56} (1939), 340--343.
+
 \bibitem{Gershgorin1931} S.~Gershgorin,
 \emph{\"Uber die Abgrenzung der Eigenwerte einer Matrix},
 Izv. Akad. Nauk SSSR Ser. Mat. \textbf{6} (1931), 749--754.
@@ -2596,6 +3332,10 @@ log-singular Toeplitz form with a prime-power comb}, companion preprint.
 \bibitem{Haynsworth1968} E.~V.~Haynsworth,
 \emph{Determination of the inertia of a partitioned Hermitian matrix},
 Linear Algebra Appl. \textbf{1} (1968), 73--81.
+
+\bibitem{Hellmann1937} H.~Hellmann,
+\emph{Einf\"uhrung in die Quantenchemie},
+Franz Deuticke, Leipzig and Vienna, 1937.
 
 \bibitem{Higham2002} N.~J.~Higham,
 \emph{Accuracy and Stability of Numerical Algorithms}, 2nd ed., SIAM,
