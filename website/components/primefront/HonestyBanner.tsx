@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v546
+          v535–v547
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3659/3659 sandbox checks —
+        (“the full proof”, T126+) is now open with 3689/3689 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -128,8 +128,21 @@ export function HonestyBanner() {
         64/64 windows, while an explicit no-go proves that an a-priori bound
         on the minimiser&apos;s level profile (the level lemma L1) is
         necessary and cannot be replaced by any weaker hypothesis; the
-        identity spine of T142–T145 is load-bearing as v546, and T146
-        (level_lemma_probe.py) is running at exactly L1. What remains
+        identity spine of T142–T145 is load-bearing as v546. T146
+        (LEVEL-CARRIES) then closed exactly that level lemma on the
+        measurement surface, as a chain of theorems and certified window
+        inequalities with no step reading the minimiser: the proof lever
+        is the resolvent identity ψ = λRψ itself — the Θ(D³) smallness,
+        everywhere else the obstacle, turns into the tool — Davis–Kahan is
+        instrumented and discarded (the spectrum bottom is a
+        near-degenerate block), Maz&apos;ya&apos;s classical dyadic 8 falls
+        to 2 because the cake base is free, and the a-priori constant
+        c₀^ap = 3.9042–4.8488 on all 64 windows lands, remarkably, at the
+        size of Maz&apos;ya&apos;s classical Dirichlet value 4. The one
+        genuine remainder is D-uniformity for ALL D — the asymptotic
+        delocalization of the Green columns; the a-priori core of T146 is
+        load-bearing as v547, and T147 (green_asymptotic_probe.py) is
+        running at exactly that asymptotics. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

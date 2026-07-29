@@ -43,6 +43,1395 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · II",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v547"
+      },
+      {
+        "k": "t",
+        "v": " — the level-lemma identities of phase 2 promoted; prime-front diary T146 (level lemma, LEVEL-CARRIES) + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v547"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.LEVEL.LEMMA.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the a-priori core of the discovery part T146 ("
+        },
+        {
+          "k": "c",
+          "v": "level_lemma_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "20"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.4"
+        },
+        {
+          "k": "t",
+          "v": " s, everything recomputed on small frame-A windows, nothing cited from the sandbox; the companion to "
+        },
+        {
+          "k": "c",
+          "v": "v546"
+        },
+        {
+          "k": "t",
+          "v": ", whose item (5) certified S1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " with a "
+        },
+        {
+          "k": "m",
+          "v": "c_0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measured"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at the minimiser's own layer cake — this module supplies the a-priori side, every factor a functional of the form alone. Scope fence: identities, per-instance theorems with checked hypotheses and per-window "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "certified"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " inequalities — no fit, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no zone-uniform statement, and explicitly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no statement for all "
+            },
+            {
+              "k": "m",
+              "v": "D"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the asymptotic delocalisation of the Green columns, T146's remainder, stays open and typed open). Battery: "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " frame-A windows ("
+        },
+        {
+          "k": "m",
+          "v": "n=4\\ldots139"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "m=26\\ldots285\\le300"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "D=7.578\\times10^{-3}\\ldots2.789\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "9"
+        },
+        {
+          "k": "t",
+          "v": " random positive definite forms for the form-independent items, and a stress ladder "
+        },
+        {
+          "k": "m",
+          "v": "m=64\\ldots288"
+        },
+        {
+          "k": "t",
+          "v": "; each statement carries a mutation control that must fail by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The union identity for nested cakes (T146) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " For a nested decreasing chain with positive coefficients, "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_{j,l}c_jc_l\\,|S_j\\cup S_l|=2T\\|\\psi_t\\|_1-\\|\\psi_t\\|^2"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "T=\\sum_jc_j"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\psi_t=\\sum_jc_j\\mathbf 1_{S_j}"
+        },
+        {
+          "k": "t",
+          "v": " — form-independent and "
+        },
+        {
+          "k": "m",
+          "v": "O(m)"
+        },
+        {
+          "k": "t",
+          "v": ", the reason the cake base is movable at all; exact ("
+        },
+        {
+          "k": "m",
+          "v": "0.0"
+        },
+        {
+          "k": "t",
+          "v": ") against T145's "
+        },
+        {
+          "k": "m",
+          "v": "K\\times K"
+        },
+        {
+          "k": "t",
+          "v": " double sum on all "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " window minimisers and "
+        },
+        {
+          "k": "m",
+          "v": "9"
+        },
+        {
+          "k": "t",
+          "v": " random vectors, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " against the union sizes computed from the sets themselves with no nestedness used (controls: one shuffled proper level set "
+        },
+        {
+          "k": "m",
+          "v": "3.2\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": ", a "
+        },
+        {
+          "k": "m",
+          "v": "1\\%"
+        },
+        {
+          "k": "t",
+          "v": " perturbation of the heaviest coefficient "
+        },
+        {
+          "k": "m",
+          "v": "4.8\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The layer-cake counting lemma at a general base (T146) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "G(b)\\le2b^2\\,\\|v\\|_\\infty\\|v\\|_1/\\|v\\|^2+\\varepsilon(b)"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "any"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " vector at all "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " preregistered bases (margin "
+        },
+        {
+          "k": "m",
+          "v": "\\ge1.08"
+        },
+        {
+          "k": "t",
+          "v": " on the battery and on every window minimiser); at "
+        },
+        {
+          "k": "m",
+          "v": "b=2"
+        },
+        {
+          "k": "t",
+          "v": " the leading constant is the classical dyadic "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and the base is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "free"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " because the chain consumes only the lower domination "
+        },
+        {
+          "k": "m",
+          "v": "|v|\\le\\psi_t"
+        },
+        {
+          "k": "t",
+          "v": " — the a-priori constant gains "
+        },
+        {
+          "k": "m",
+          "v": "4/b_*^2=3.7612"
+        },
+        {
+          "k": "t",
+          "v": " over base "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " on every window (controls: the bound "
+        },
+        {
+          "k": "m",
+          "v": "\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " fails on every draw and base, and the one-level-down cake breaks the domination on every draw — the "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " in the cake exponent is load-bearing)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) The resolvent delocalisation bound (T146) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\psi=\\lambda R\\psi"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "9.0\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": " — an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "identity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", so no Davis–Kahan transfer step appears anywhere — with "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\mathrm{up}}=\\min_j\\mathrm{Rayleigh}(Re_j)\\ge\\lambda_{\\min}"
+        },
+        {
+          "k": "t",
+          "v": " (Rayleigh–Ritz; window ratio "
+        },
+        {
+          "k": "m",
+          "v": "1.0592"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.2883"
+        },
+        {
+          "k": "t",
+          "v": "), the coordinate bound "
+        },
+        {
+          "k": "m",
+          "v": "|\\psi_j|\\le\\lambda\\|Re_j\\|"
+        },
+        {
+          "k": "t",
+          "v": " (Cauchy–Schwarz) and the column norms certified from above with the linear-solve residual paid for, giving "
+        },
+        {
+          "k": "m",
+          "v": "\\|\\psi\\|_\\infty\\le\\lambda_{\\mathrm{up}}\\max_j\\|Re_j\\|"
+        },
+        {
+          "k": "t",
+          "v": " on every window (within "
+        },
+        {
+          "k": "m",
+          "v": "1.061"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.337"
+        },
+        {
+          "k": "t",
+          "v": " of the truth) and "
+        },
+        {
+          "k": "m",
+          "v": "\\|\\psi\\|_1\\le\\sqrt m\\min(1,\\Gamma_1)"
+        },
+        {
+          "k": "t",
+          "v": ". The lever: the trivial ceiling "
+        },
+        {
+          "k": "m",
+          "v": "\\max_j\\|Re_j\\|\\le1/\\lambda_{\\min}"
+        },
+        {
+          "k": "t",
+          "v": " would give "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma\\le\\sqrt m=5.1"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "16.9"
+        },
+        {
+          "k": "t",
+          "v": " (useless); the certified columns sit a factor "
+        },
+        {
+          "k": "m",
+          "v": "2.85"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "10.17"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "below"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " it (preregistered bar "
+        },
+        {
+          "k": "m",
+          "v": "2.0"
+        },
+        {
+          "k": "t",
+          "v": "), giving "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma=1.8356"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.2797"
+        },
+        {
+          "k": "t",
+          "v": " — read off the form, never off the minimiser (controls: a "
+        },
+        {
+          "k": "m",
+          "v": "1\\%"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda"
+        },
+        {
+          "k": "t",
+          "v": " perturbation breaks the identity at "
+        },
+        {
+          "k": "m",
+          "v": "1.0\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": ", the sup bound "
+        },
+        {
+          "k": "m",
+          "v": "\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " fails on every window)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The composite level lemma (T146) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "c_0^{\\mathrm{ap}}=2b^2\\,\\Gamma\\min(1,\\Gamma_1)+\\varepsilon=3.9042"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.8488"
+        },
+        {
+          "k": "t",
+          "v": " dominates the measured level constant on all "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " windows (slack "
+        },
+        {
+          "k": "m",
+          "v": "1.986"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.418"
+        },
+        {
+          "k": "t",
+          "v": ") and stays under the preregistered ceiling "
+        },
+        {
+          "k": "m",
+          "v": "16=4\\times"
+        },
+        {
+          "k": "t",
+          "v": " Maz'ya's Dirichlet value "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "; the certified window inequality "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{cert\\_lam\\_max}(R)\\le c_0^{\\mathrm{ap}}\\Psi_{\\mathrm{abs}}"
+        },
+        {
+          "k": "t",
+          "v": " holds on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": " (both sides by completed Cholesky, the density the "
+        },
+        {
+          "k": "m",
+          "v": "|R|"
+        },
+        {
+          "k": "t",
+          "v": " one with Charikar's cited constant), closing the chain "
+        },
+        {
+          "k": "m",
+          "v": "\\hat\\lambda\\ge1/(c_0^{\\mathrm{ap}}\\Psi_{\\mathrm{abs}})"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{gap}\\ge\\hat\\lambda/\\kappa_{\\mathrm{up}}"
+        },
+        {
+          "k": "t",
+          "v": " at loss factor "
+        },
+        {
+          "k": "m",
+          "v": "0.0423"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.1272"
+        },
+        {
+          "k": "t",
+          "v": " of the exact gap. The built-in discriminator: on T145's no-go form "
+        },
+        {
+          "k": "m",
+          "v": "R=aa^{\\mathsf T}+\\varepsilon I"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "a_i=i^{-1/2}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma"
+        },
+        {
+          "k": "t",
+          "v": " grows "
+        },
+        {
+          "k": "m",
+          "v": "3.676\\to6.798"
+        },
+        {
+          "k": "t",
+          "v": " over "
+        },
+        {
+          "k": "m",
+          "v": "m=64\\ldots288"
+        },
+        {
+          "k": "t",
+          "v": " (ratio "
+        },
+        {
+          "k": "m",
+          "v": "1.85\\ge"
+        },
+        {
+          "k": "t",
+          "v": " the preregistered "
+        },
+        {
+          "k": "m",
+          "v": "1.5"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "c_0^{\\mathrm{ap}}=11.10"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exceeds"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " every window value — the bound must be worse there, since a candidate that did not fail on the no-go would prove a false statement — while the theorem half survives on every no-go size and the Dirichlet path-Laplacian control stays flat (max/min "
+        },
+        {
+          "k": "m",
+          "v": "1.0063"
+        },
+        {
+          "k": "t",
+          "v": "; control: "
+        },
+        {
+          "k": "m",
+          "v": "c_0^{\\mathrm{ap}}\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " breaks the certificate on every window)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fences and status."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Per instance on small windows only — a finite list of certified window inequalities with an explicit maximum; nothing uniform in the zone index or in "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "; only the sign-free / Green constant is bounded a priori, the energy-route "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_{\\mathrm{tot}}"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measured"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and every T146 exponent is a fit that stays in the sandbox. Maz'ya 1985 (the strong-type half "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " used as a theorem anywhere), Rayleigh 1877 / Ritz 1909, Cauchy–Schwarz, Miclo 1999, Davis–Kahan 1970 (cited, deliberately "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " used), Perron–Frobenius (not applicable to "
+        },
+        {
+          "k": "m",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ", not used), Fukushima–Oshima–Takeda 1994, Charikar 2000, Goldberg 1984, Gershgorin 1931, Wilkinson 1968 / Higham 2002 named classical; Weil 1952 cited, never used as a criterion; zero-firewall AST-checked. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LEVEL.LEMMA.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and this is not RH evidence."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Diary, paper and website (T146, "
+            },
+            {
+              "k": "t",
+              "v": "level-carries"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The T146 probe ("
+        },
+        {
+          "k": "c",
+          "v": "level_lemma_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "LEVEL.LEMMA"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "30/30"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "7.6"
+        },
+        {
+          "k": "t",
+          "v": " s, "
+        },
+        {
+          "k": "m",
+          "v": "64"
+        },
+        {
+          "k": "t",
+          "v": " windows "
+        },
+        {
+          "k": "m",
+          "v": "m=26\\ldots1173"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "9/9"
+        },
+        {
+          "k": "t",
+          "v": " preregistered verdict conditions) closes L1 on the measurement surface as a chain of theorems and certified window inequalities with no step reading the minimiser: four hand-written profiles lose by "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "9"
+        },
+        {
+          "k": "t",
+          "v": " orders of magnitude, the Green column survives ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\mathrm{up}}/\\hat\\lambda=1.0497"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.3764"
+        },
+        {
+          "k": "t",
+          "v": "), Davis–Kahan is instrumented and discarded (informative on "
+        },
+        {
+          "k": "m",
+          "v": "0/64"
+        },
+        {
+          "k": "t",
+          "v": "; the spectrum bottom is a near-degenerate block, "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_2/\\hat\\lambda=1.2542"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.4471"
+        },
+        {
+          "k": "t",
+          "v": "), the cake base proves free (the dyadic "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " falls to "
+        },
+        {
+          "k": "m",
+          "v": "2b^2\\approx2"
+        },
+        {
+          "k": "t",
+          "v": ", gain "
+        },
+        {
+          "k": "m",
+          "v": "3.76"
+        },
+        {
+          "k": "t",
+          "v": " at zero cost) and "
+        },
+        {
+          "k": "m",
+          "v": "c_0^{\\mathrm{ap}}=3.9042"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.8488"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "64/64"
+        },
+        {
+          "k": "t",
+          "v": " windows lands at the size of Maz'ya's classical Dirichlet value "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": ", closing the chain at loss factor "
+        },
+        {
+          "k": "m",
+          "v": "0.0422"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.1586"
+        },
+        {
+          "k": "t",
+          "v": "; the one genuine remainder is "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-uniformity for "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "all"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": " — the asymptotic delocalisation of the Green columns. "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " part T146 (series totals "
+        },
+        {
+          "k": "m",
+          "v": "146"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "3689"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front.tex"
+        },
+        {
+          "k": "t",
+          "v": " gains the T146 subsection with the “After T146” keybox, the "
+        },
+        {
+          "k": "c",
+          "v": "v547"
+        },
+        {
+          "k": "t",
+          "v": " entry in the verified layer (now thirteen modules), the phase-2 section retitled T126–T146 and the updated probe index; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " gain the "
+        },
+        {
+          "k": "c",
+          "v": "v547"
+        },
+        {
+          "k": "t",
+          "v": " companion blocks; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T146 and "
+        },
+        {
+          "k": "c",
+          "v": "v547"
+        },
+        {
+          "k": "t",
+          "v": " feed entries; suite counter "
+        },
+        {
+          "k": "m",
+          "v": "540\\to541"
+        },
+        {
+          "k": "t",
+          "v": " scripts. T147 ("
+        },
+        {
+          "k": "c",
+          "v": "green_asymptotic_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at exactly the all-"
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": " asymptotics and is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " part of this change."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · I",
     "heading": [
       {

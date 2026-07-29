@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 
-/** Twelve promoted modules; check counts from verification/script_registry.csv. */
+/** Thirteen promoted modules; check counts from verification/script_registry.csv. */
 const MODULES = [
   { id: "v535", claim: "HECKE.GEOM.01", title: "Hecke from geometry", checks: 25 },
   {
@@ -71,12 +71,18 @@ const MODULES = [
     title: "Capacity-chain identities · phase 2",
     checks: 26,
   },
+  {
+    id: "v547",
+    claim: "PRIME.LEVEL.LEMMA.01",
+    title: "Level-lemma identities · phase 2",
+    checks: 20,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 144;
-const SANDBOX_CHECKS = 3659;
+const SANDBOX_PROBES = 145;
+const SANDBOX_CHECKS = 3689;
 
 export function ModuleLadder() {
   return (
@@ -131,7 +137,7 @@ export function ModuleLadder() {
       </div>
 
       <p className="mt-3 text-xs leading-relaxed text-slate-500">
-        Sandbox probes never move a marker; only the twelve modules above are
+        Sandbox probes never move a marker; only the thirteen modules above are
         cited in the papers and the ledger. I5 is an equivalence typing (⟺ Weil
         positivity ⟺ RH), not a proof claim.
       </p>

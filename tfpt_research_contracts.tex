@@ -2769,6 +2769,53 @@ used as a criterion; zero-firewall AST-checked; no marker moves.
 Machine-checked: \veri{v546\_capacity\_chain\_identities.py}.
 \mE\ (per-instance identities and certified inequalities)
 
+\par\smallskip\noindent\textbf{\texttt{PRIME.LEVEL.LEMMA.01} --- the
+level-lemma identities of phase 2 (T146).}
+\emph{(1)} The union identity for nested cakes:
+$\sum_{j,l}c_jc_l|S_j\cup S_l|=2T\|\psi_t\|_1-\|\psi_t\|^2$ with $T=\sum_jc_j$
+and $\psi_t=\sum_jc_j\mathbf 1_{S_j}$ --- form-independent and $O(m)$, exact
+($0.0$) against the $K\times K$ double sum and against union sizes computed
+with no nestedness used (controls: one shuffled level set $3.2\times10^{-2}$,
+a $1\%$ coefficient perturbation $4.8\times10^{-3}$). \emph{(2)} The
+layer-cake counting lemma at a general base:
+$G(b)\le2b^2\|v\|_\infty\|v\|_1/\|v\|^2+\varepsilon$ for \emph{any} vector at
+all $6$ preregistered bases; the classical dyadic $8$ at $b=2$ exactly, the
+base free (gain $4/b_*^2=3.7612$; the one-level-down cake breaks the
+domination on every draw). \emph{(3)} The resolvent delocalisation bound:
+$\psi=\lambda R\psi$ ($9.0\times10^{-14}$, an identity --- no Davis--Kahan
+transfer anywhere) $\Rightarrow\|\psi\|_\infty\le\lambda_{\mathrm{up}}
+\max_j\|Re_j\|$ with Rayleigh--Ritz $\lambda_{\mathrm{up}}$
+($1.0592$--$1.2883$) and residual-paid certified column norms, within
+$1.061$--$1.337$ of the truth; the lever: the certified columns sit
+$2.85$--$10.17$ below the trivial ceiling $1/\lambda_{\min}$, giving
+$\Gamma=1.8356$--$2.2797$ against the useless $\sqrt m$. \emph{(4)} The
+composite level lemma:
+$c_0^{\mathrm{ap}}=2b^2\Gamma\min(1,\Gamma_1)+\varepsilon=3.9042$--$4.8488$
+(slack $1.986$--$2.418$ over the measured constant, under the ceiling
+$16=4\times$ Maz'ya's Dirichlet $4$), the certified window inequality
+$\mathrm{cert\_lam\_max}(R)\le c_0^{\mathrm{ap}}\Psi_{\mathrm{abs}}$ on
+$12/12$ windows, chain loss $0.0423$--$0.1272$ of the exact gap; the built-in
+no-go discriminator ($R=aa^{\mathsf T}+\varepsilon I$, $a_i=i^{-1/2}$:
+$\Gamma$ grows $3.676\to6.798$, ratio $1.85\ge1.5$, $c_0^{\mathrm{ap}}=11.10$
+exceeds every window value) fails exactly where it must, the theorem half
+surviving on every no-go size and the Dirichlet path-Laplacian control flat
+($1.0063$).
+\textbf{Named limits as load-bearing content:} per instance on small windows
+--- a finite list of certified window inequalities with an explicit maximum;
+nothing uniform in the zone index or in $D$, and explicitly \emph{no}
+statement for all $D$: the asymptotic delocalisation of the Green columns
+(T146's remainder) stays \emph{open}, typed open; only the sign-free / Green
+constant is bounded a priori --- the energy-route $\sigma_{\mathrm{tot}}$
+stays measured; every T146 exponent is a fit, sandbox. Fences: Maz'ya 1985
+(strong-type half not used as a theorem anywhere) / Rayleigh 1877--Ritz 1909 /
+Cauchy--Schwarz / Miclo 1999 / Davis--Kahan 1970 (cited, deliberately not
+used) / Perron--Frobenius (not applicable to $E$, not used) /
+Fukushima--\=Oshima--Takeda 1994 / Charikar 2000 / Goldberg 1984 / Gershgorin
+1931 named classical; Weil 1952 cited, never used as a criterion;
+zero-firewall AST-checked; no marker moves.
+Machine-checked: \veri{v547\_level\_lemma\_identities.py}.
+\mE\ (per-instance identities and certified inequalities)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

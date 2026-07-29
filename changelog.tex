@@ -62,6 +62,95 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (II) (\texttt{v547} --- the level-lemma identities of phase 2 promoted; prime-front diary T146 (level lemma, LEVEL-CARRIES) + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v547} (\texttt{PRIME.LEVEL.LEMMA.01}).} Promotion of the a-priori
+core of the discovery part T146 (\texttt{level\_lemma\_probe.py}) --- $20$ checks, ${\sim}0.4$\,s,
+everything recomputed on small frame-A windows, nothing cited from the sandbox; the companion to
+\texttt{v546}, whose item (5) certified S1$'$ with a $c_0$ \emph{measured} at the minimiser's own
+layer cake --- this module supplies the a-priori side, every factor a functional of the form alone.
+Scope fence: identities, per-instance theorems with checked hypotheses and per-window
+\emph{certified} inequalities --- no fit, no $D$-exponent, no zone-uniform statement, and explicitly
+\emph{no statement for all $D$} (the asymptotic delocalisation of the Green columns, T146's
+remainder, stays open and typed open). Battery: $12$ frame-A windows ($n=4\ldots139$,
+$m=26\ldots285\le300$, $D=7.578\times10^{-3}\ldots2.789\times10^{-2}$), $9$ random positive definite
+forms for the form-independent items, and a stress ladder $m=64\ldots288$; each statement carries a
+mutation control that must fail by $\ge10^{-3}$.
+\item \textbf{(1) The union identity for nested cakes (T146) \mE.} For a nested decreasing chain
+with positive coefficients,
+$\sum_{j,l}c_jc_l\,|S_j\cup S_l|=2T\|\psi_t\|_1-\|\psi_t\|^2$ with $T=\sum_jc_j$ and
+$\psi_t=\sum_jc_j\mathbf 1_{S_j}$ --- form-independent and $O(m)$, the reason the cake base is
+movable at all; exact ($0.0$) against T145's $K\times K$ double sum on all $12$ window minimisers
+and $9$ random vectors, \emph{and} against the union sizes computed from the sets themselves with
+no nestedness used (controls: one shuffled proper level set $3.2\times10^{-2}$, a $1\%$
+perturbation of the heaviest coefficient $4.8\times10^{-3}$).
+\item \textbf{(2) The layer-cake counting lemma at a general base (T146) \mE.}
+$G(b)\le2b^2\,\|v\|_\infty\|v\|_1/\|v\|^2+\varepsilon(b)$ for \emph{any} vector at all $6$
+preregistered bases (margin $\ge1.08$ on the battery and on every window minimiser); at $b=2$ the
+leading constant is the classical dyadic $8$ \emph{exactly}, and the base is \emph{free} because
+the chain consumes only the lower domination $|v|\le\psi_t$ --- the a-priori constant gains
+$4/b_*^2=3.7612$ over base $2$ on every window (controls: the bound $\times10^{-3}$ fails on every
+draw and base, and the one-level-down cake breaks the domination on every draw --- the $+1$ in the
+cake exponent is load-bearing).
+\item \textbf{(3) The resolvent delocalisation bound (T146) \mE.} $\psi=\lambda R\psi$ to
+$9.0\times10^{-14}$ --- an \emph{identity}, so no Davis--Kahan transfer step appears anywhere ---
+with $\lambda_{\mathrm{up}}=\min_j\mathrm{Rayleigh}(Re_j)\ge\lambda_{\min}$ (Rayleigh--Ritz; window
+ratio $1.0592$--$1.2883$), the coordinate bound $|\psi_j|\le\lambda\|Re_j\|$ (Cauchy--Schwarz) and
+the column norms certified from above with the linear-solve residual paid for, giving
+$\|\psi\|_\infty\le\lambda_{\mathrm{up}}\max_j\|Re_j\|$ on every window (within
+$1.061$--$1.337$ of the truth) and $\|\psi\|_1\le\sqrt m\min(1,\Gamma_1)$. The lever: the trivial
+ceiling $\max_j\|Re_j\|\le1/\lambda_{\min}$ would give $\Gamma\le\sqrt m=5.1$--$16.9$ (useless);
+the certified columns sit a factor $2.85$--$10.17$ \emph{below} it (preregistered bar $2.0$),
+giving $\Gamma=1.8356$--$2.2797$ --- read off the form, never off the minimiser (controls: a $1\%$
+$\lambda$ perturbation breaks the identity at $1.0\times10^{-2}$, the sup bound $\times10^{-3}$
+fails on every window).
+\item \textbf{(4) The composite level lemma (T146) \mE.}
+$c_0^{\mathrm{ap}}=2b^2\,\Gamma\min(1,\Gamma_1)+\varepsilon=3.9042$--$4.8488$ dominates the
+measured level constant on all $12$ windows (slack $1.986$--$2.418$) and stays under the
+preregistered ceiling $16=4\times$ Maz'ya's Dirichlet value $4$; the certified window inequality
+$\mathrm{cert\_lam\_max}(R)\le c_0^{\mathrm{ap}}\Psi_{\mathrm{abs}}$ holds on $12/12$ (both sides
+by completed Cholesky, the density the $|R|$ one with Charikar's cited constant), closing the chain
+$\hat\lambda\ge1/(c_0^{\mathrm{ap}}\Psi_{\mathrm{abs}})$,
+$\mathrm{gap}\ge\hat\lambda/\kappa_{\mathrm{up}}$ at loss factor $0.0423$--$0.1272$ of the exact
+gap. The built-in discriminator: on T145's no-go form $R=aa^{\mathsf T}+\varepsilon I$,
+$a_i=i^{-1/2}$, $\Gamma$ grows $3.676\to6.798$ over $m=64\ldots288$ (ratio $1.85\ge$ the
+preregistered $1.5$) and $c_0^{\mathrm{ap}}=11.10$ \emph{exceeds} every window value --- the bound
+must be worse there, since a candidate that did not fail on the no-go would prove a false statement
+--- while the theorem half survives on every no-go size and the Dirichlet path-Laplacian control
+stays flat (max/min $1.0063$; control: $c_0^{\mathrm{ap}}\times10^{-3}$ breaks the certificate on
+every window).
+\item \textbf{Fences and status.} Per instance on small windows only --- a finite list of certified
+window inequalities with an explicit maximum; nothing uniform in the zone index or in $D$; only the
+sign-free / Green constant is bounded a priori, the energy-route $\sigma_{\mathrm{tot}}$ stays
+\emph{measured}, and every T146 exponent is a fit that stays in the sandbox. Maz'ya 1985 (the
+strong-type half \emph{not} used as a theorem anywhere), Rayleigh 1877 / Ritz 1909, Cauchy--Schwarz,
+Miclo 1999, Davis--Kahan 1970 (cited, deliberately \emph{not} used), Perron--Frobenius (not
+applicable to $E$, not used), Fukushima--\=Oshima--Takeda 1994, Charikar 2000, Goldberg 1984,
+Gershgorin 1931, Wilkinson 1968 / Higham 2002 named classical; Weil 1952 cited, never used as a
+criterion; zero-firewall AST-checked. Ledger row \texttt{PRIME.LEVEL.LEMMA.01} \mE; \textbf{no
+marker of any pre-existing contract moves}, and this is not RH evidence.
+\item \textbf{Diary, paper and website (T146, \textsc{level-carries}).} The T146 probe
+(\texttt{level\_lemma\_probe.py}, contract \texttt{LEVEL.LEMMA}, $30/30$, $7.6$\,s, $64$ windows
+$m=26\ldots1173$, $9/9$ preregistered verdict conditions) closes L1 on the measurement surface as
+a chain of theorems and certified window inequalities with no step reading the minimiser: four
+hand-written profiles lose by $5$--$9$ orders of magnitude, the Green column survives
+($\lambda_{\mathrm{up}}/\hat\lambda=1.0497$--$1.3764$), Davis--Kahan is instrumented and discarded
+(informative on $0/64$; the spectrum bottom is a near-degenerate block,
+$\lambda_2/\hat\lambda=1.2542$--$3.4471$), the cake base proves free (the dyadic $8$ falls to
+$2b^2\approx2$, gain $3.76$ at zero cost) and
+$c_0^{\mathrm{ap}}=3.9042$--$4.8488$ on $64/64$ windows lands at the size of Maz'ya's classical
+Dirichlet value $4$, closing the chain at loss factor $0.0422$--$0.1586$; the one genuine remainder
+is $D$-uniformity for \emph{all} $D$ --- the asymptotic delocalisation of the Green columns.
+\texttt{experiments/next.txt} part T146 (series totals $146$ probes / $3689$ checks);
+\texttt{tfpt\_prime\_front.tex} gains the T146 subsection with the ``After T146'' keybox, the
+\texttt{v547} entry in the verified layer (now thirteen modules), the phase-2 section retitled
+T126--T146 and the updated probe index; \texttt{tfpt\_1}, \texttt{tfpt\_3} and
+\texttt{tfpt\_research\_contracts} gain the \texttt{v547} companion blocks;
+\texttt{website/lib/primeFront.ts} gains the T146 and \texttt{v547} feed entries; suite counter
+$540\to541$ scripts. T147 (\texttt{green\_asymptotic\_probe.py}) is running at exactly the all-$D$
+asymptotics and is \emph{not} part of this change.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (I) (\texttt{v546} --- the capacity-chain identities of phase 2 promoted; prime-front diary T145 (Maz'ya proof, ONE-STEP-MISSING) + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v546} (\texttt{PRIME.CAPCHAIN.IDENT.01}).} Promotion of the

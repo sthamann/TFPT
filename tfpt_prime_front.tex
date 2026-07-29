@@ -81,16 +81,16 @@ out to be \emph{Hecke} data. It goes further than an analogy: the $E_8$ shell co
 $240\,\zeta(s)\zeta(s-3)$ as a Dirichlet series, and the lattice's self-duality gives its theta sum an
 exact functional equation whose fixed axis is the critical line --- a framework picture, stated as such,
 which the document opens with and then keeps at arm's length. This companion documents the line end to
-end. Eleven modules are
-load-bearing and ledger-carried (\vref{v535}--\vref{v546}): Hecke from geometry on the $E_8$ census,
+end. Thirteen modules are
+load-bearing and ledger-carried (\vref{v535}--\vref{v547}): Hecke from geometry on the $E_8$ census,
 the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, the matching-lemma / transport
 ledger package, and --- out of the second phase --- the margin-chain identities, the lumped
-$M$-matrix pair, the long-lag support structure, the Hardy-core identities and the capacity-chain
-identities. Everything beyond
-those twelve is \emph{sandbox}: an exploratory program, run as
-$145$ preregistered probes with $3659$ machine checks, which localized the residual object. That
+$M$-matrix pair, the long-lag support structure, the Hardy-core identities, the capacity-chain
+identities and the level-lemma identities. Everything beyond
+those thirteen is \emph{sandbox}: an exploratory program, run as
+$146$ preregistered probes with $3689$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -259,7 +259,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots145$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots146$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -267,7 +267,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T145: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T146: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -314,8 +314,15 @@ dominates ($\sigma_{\mathrm{tot}}=0.215$--$0.443<1$ everywhere), $c_0$ becomes e
 ($2.248$--$4.227$, flat in $D$) and S1$'$ is \emph{certified} per window on $64/64$ windows,
 while an explicit no-go proves that an a-priori bound on the minimiser's level profile --- the
 level lemma L1 --- is necessary and cannot be replaced by any weaker hypothesis (T145; the
-identity spine of the capacity cycle is promoted as \vref{v546})); Section~\ref{sec:status}
-is the status statement.
+identity spine of the capacity cycle is promoted as \vref{v546}), and at last the level lemma
+itself, which \emph{stands}: L1 closes on the measurement surface as a chain of theorems and
+certified window inequalities with no step reading the minimiser --- the proof lever is the
+resolvent identity $\psi=\lambda R\psi$ itself (the $\Theta(D^3)$ smallness turns from obstacle
+into tool), Davis--Kahan is instrumented and discarded, Maz'ya's classical dyadic $8$ falls to
+$2$ because the cake base is free, and the a-priori constant $c_0^{\mathrm{ap}}=3.90$--$4.85$
+lands at the size of Maz'ya's classical Dirichlet value $4$ --- with one genuine remainder,
+$D$-uniformity for \emph{all} $D$ (T146; the a-priori core is promoted as \vref{v547}));
+Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
 \section{Motivation: why a compiler meets the primes}\label{sec:motivation}
@@ -399,7 +406,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the twelve modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the thirteen modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -529,13 +536,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: twelve modules}\label{sec:verified}
+\section{The verified layer: thirteen modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The twelve modules and their ledger markers]
+\begin{keybox}[The thirteen modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -553,6 +560,7 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v544} & \texttt{PRIME.LONGLAG.SUPP.01} & long-lag support structure of phase 2 (per instance) & \mE\\
 \vref{v545} & \texttt{PRIME.HARDY.IDENT.01} & Hardy-core identities of phase 2 (per instance) & \mE\\
 \vref{v546} & \texttt{PRIME.CAPCHAIN.IDENT.01} & capacity-chain identities of phase 2 (per instance) & \mE\\
+\vref{v547} & \texttt{PRIME.LEVEL.LEMMA.01} & level-lemma identities of phase 2 (per instance) & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -935,6 +943,72 @@ $c_0$ of the last row is \emph{measured} at the minimiser's own layer cake --- t
 \emph{level lemma} (T145's L1) stays open, unclaimed and unapproached, and no marker moves
 toward it. Maz'ya's strong-type half is \emph{not} used as a theorem anywhere: it is the thing
 the cycle transcribes.
+\end{itemize}
+
+\subsection{The level-lemma identities (\texorpdfstring{\vref{v547}}{v547})}\label{sec:v547}
+The a-priori core of T146 (Section~\ref{sec:phase2}): the same level constant that \vref{v546}
+certified with a \emph{measured} input, now supplied as a functional of the form alone
+\veri{v547\_level\_lemma\_identities.py} ($20$ checks, ${\sim}0.4$\,s; promotion of the four
+a-priori pieces of T146 on $12$ frame-A windows, $n=4\ldots139$, $m=26\ldots285\le300$,
+$D=7.578\times10^{-3}\ldots2.789\times10^{-2}$, plus $9$ random positive definite forms for the
+form-independent items and a stress ladder $m=64\ldots288$; each statement carries a mutation
+control that must fail by $\ge10^{-3}$).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The union identity for nested cakes (T146)} \mE: for a nested decreasing chain
+with positive coefficients,
+$\sum_{j,l}c_jc_l\,|S_j\cup S_l|=2T\|\psi_t\|_1-\|\psi_t\|^2$ with $T=\sum_jc_j$ and
+$\psi_t=\sum_jc_j\mathbf 1_{S_j}$ --- form-independent and $O(m)$, the reason the cake base is
+movable at all; checked against T145's $K\times K$ double sum on all $12$ window minimisers and
+$9$ random vectors (max rel $0.0$) \emph{and} against the union sizes computed from the sets
+themselves with no nestedness used. Controls: shuffling one proper level set breaks it
+($3.2\times10^{-2}$), a $1\%$ perturbation of the heaviest coefficient breaks the double sum
+($4.8\times10^{-3}$).
+\item \textbf{The layer-cake counting lemma at a general base (T146)} \mE:
+$G(b)\le2b^2\,\|v\|_\infty\|v\|_1/\|v\|^2+\varepsilon(b)$ for \emph{any} vector $v$ at all $6$
+preregistered bases (margin $\ge1.08$ on the battery and on every window minimiser); at $b=2$
+the leading constant is the classical dyadic $8$ \emph{exactly}, and the base is \emph{free}
+because the chain consumes only the lower domination $|v|\le\psi_t$: the a-priori constant
+gains $4/b_*^2=3.7612$ over base $2$ on every window. Controls: the bound $\times10^{-3}$
+fails everywhere, and the one-level-down cake ($\psi_t/b$) breaks the domination on every draw
+--- the $+1$ in the cake exponent is load-bearing.
+\item \textbf{The resolvent delocalisation bound (T146)} \mE: $\psi=\lambda R\psi$ to
+$9.0\times10^{-14}$ --- an \emph{identity}, so no Davis--Kahan transfer step appears anywhere
+--- and per coordinate (Cauchy--Schwarz), with $\lambda_{\mathrm{up}}=\min_j
+\mathrm{Rayleigh}(Re_j)\ge\lambda_{\min}$ (Rayleigh--Ritz; window ratio $1.0592$--$1.2883$) and
+the column norms certified from above with the linear-solve residual paid for,
+\[
+\|\psi\|_\infty\;\le\;\lambda_{\mathrm{up}}\,\max_j\|R e_j\|\,\|\psi\|
+\]
+on every window, within a factor $1.061$--$1.337$ of the truth. \emph{The lever}: the trivial
+ceiling $\max_j\|Re_j\|\le1/\lambda_{\min}$ would give $\Gamma\le\sqrt m=5.1$--$16.9$
+(useless); the certified columns sit a factor $2.85$--$10.17$ \emph{below} it (preregistered
+bar $2.0$), giving $\Gamma=1.8356$--$2.2797$ --- read off the form, never off the minimiser.
+Controls: a $1\%$ $\lambda$ perturbation breaks the identity ($1.0\times10^{-2}$), the sup
+bound $\times10^{-3}$ fails on every window.
+\item \textbf{The composite level lemma (T146)} \mE:
+$c_0^{\mathrm{ap}}=2b^2\,\Gamma\min(1,\Gamma_1)+\varepsilon=3.9042$--$4.8488$ dominates the
+measured level constant on all $12$ windows (slack $1.986$--$2.418$) and stays under the
+preregistered ceiling $16=4\times$ Maz'ya's Dirichlet value $4$; the certified window
+inequality $\mathrm{cert\_lam\_max}(R)\le c_0^{\mathrm{ap}}\Psi_{\mathrm{abs}}$ holds on
+$12/12$ (both sides by completed Cholesky, the density the $|R|$ one with Charikar's cited
+constant), closing the chain at loss factor $0.0423$--$0.1272$ of the exact gap ---
+\vref{v546}'s certified chain with its one measured input replaced by a functional of the
+form. \emph{The built-in discriminator}: on T145's no-go form $R=aa^{\mathsf T}+\varepsilon I$,
+$a_i=i^{-1/2}$, $\Gamma$ grows $3.676\to6.798$ over $m=64\ldots288$ (ratio $1.85\ge$ the
+preregistered $1.5$) and $c_0^{\mathrm{ap}}=11.10$ \emph{exceeds} every window value --- the
+bound must be worse there, since a candidate that did not fail on the no-go would prove a
+false statement --- while the theorem half survives on every no-go size and the Dirichlet
+path-Laplacian control stays flat (max/min $1.0063$). Control: $c_0^{\mathrm{ap}}\times
+10^{-3}$ breaks the certificate on every window.
+\item \textbf{Named limits as content.} Per instance on small windows --- a \emph{finite list}
+of certified window inequalities with an explicit maximum; nothing uniform in the zone index
+or in $D$, and explicitly \emph{no} statement for all $D$: the asymptotic delocalisation of
+the Green columns (T146's remainder) stays open and typed open. Only the sign-free / Green
+constant is bounded a priori --- the energy-route $\sigma_{\mathrm{tot}}$ stays
+\emph{measured} --- and every T146 exponent is a fit that stays in the sandbox. Davis--Kahan
+1970 is cited as the transfer step this route deliberately avoids; Maz'ya's strong-type half
+is \emph{not} used as a theorem anywhere.
 \end{itemize}
 
 % =====================================================================
@@ -3277,7 +3351,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T145)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T146)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -4778,12 +4852,101 @@ to stand and still not a theorem. T146 (\texttt{level\_lemma\_probe.py}) is runn
 L1.
 \end{keybox}
 
+\subsection{The level lemma stands (T146)}
+T146 (\texttt{level\_lemma\_probe.py}, contract \texttt{LEVEL.LEMMA}, $30/30$, $7.6$\,s on $64$
+windows $m=26\ldots1173$, verdict \textsc{level-carries}, the verdict rule hard-wired on $9$
+preregistered conditions: a constant \emph{measured at the minimiser} counts as \emph{not} a
+priori, and the rule cannot be argued out of that) attacks exactly L1 --- and closes it on the
+measurement surface as a chain of theorems and certified window inequalities, with no step
+reading the minimiser.
+
+\emph{The profile defeat is the point.} Four hand-written closed profiles --- the endpoint
+sine mode, the linear ramp, the frame's own pole vector, the equilibrium potential of the
+lumped partner --- lose against the true minimiser by \emph{five to nine orders of magnitude}
+in the Rayleigh quotient: T143's cancellation anatomy seen from the other side, since every
+guessed profile sees $O(1)$ while the gap is $O(D^3)$. What survives is the \emph{Green
+column} itself --- one solve of the closed endpoint-Laplacian geometry, a legal test vector
+(Rayleigh--Ritz) with $\lambda_{\mathrm{up}}/\hat\lambda=1.0497$--$1.3764$, tens of percent
+and not orders. The transfer step one would write next is instrumented and then
+\emph{discarded}: Davis--Kahan is informative on $0$ of $64$ windows (bound $1.28$--$87.4$),
+because the bottom of the whitened spectrum is a near-degenerate \emph{block}
+($\lambda_2/\hat\lambda=1.2542$--$3.4471$ --- the separation sits in the denominator); and
+even where informative it would not help, since transferring a level-set functional needs an
+anti-concentration hypothesis, a second unproved input. L1 bypasses the transfer entirely
+because $\psi=\lambda R\psi$ is an \emph{identity}. The step classification, declared before
+it is run and then earned: S1 a certified window object, S2 a theorem (Rayleigh--Ritz), S3 a
+theorem (the counting lemma, form-independent), S4 a theorem (the resolvent identity) plus
+certified column norms with the solve residual paid for --- and S5, the transfer, \emph{not
+needed}.
+
+\emph{Delocalisation, read off the form.} The lever of the whole part is one display:
+\[
+\|\psi\|_\infty\;\le\;\lambda_{\mathrm{up}}\,\max_j\|R e_j\|\,,
+\]
+verified on every window within a factor $1.055$--$1.426$ of the truth --- the $\Theta(D^3)$
+smallness of the gap, everywhere else in this line the obstacle, is here the \emph{tool}: the
+minimiser is $\lambda$ times the Green function applied to itself, so it cannot concentrate
+where the Green columns do not. Made quantitative: the trivial ceiling
+$\max_j\|Re_j\|\le1/\lambda_{\min}$ would give only $\Gamma=\sqrt m\,\lambda_{\mathrm{up}}
+\max_j\|Re_j\|\le\sqrt m=5.1$--$34.2$ (useless); measured, $\Gamma=1.8356$--$2.2797$ --- the
+column norms sit a factor $2.7$--$16.0$ \emph{below} the trivial ceiling, and that factor
+\emph{is} the delocalisation, a functional of the form and never of the minimiser. The
+localisation contradiction (restricted Gershgorin over all $\binom{m}{l}$ sets, $\ell^*=2$--$5$)
+stays a theorem with no quantitative content (leak tolerance $\le2.38\times10^{-3}$ --- it
+forbids only exact localisation), and Perron--Frobenius applies only to the lumped partner
+(sign purity $1.0000$), not to $E$ ($0.348$--$0.672$ positive entries): delocalisation does
+not come from positivity on this surface.
+
+\emph{The composite constant, and the two structural findings.} The a-priori level constant
+\[
+c_0^{\mathrm{ap}}\;=\;2b^2\,\Gamma\,\min(1,\Gamma_1)+\varepsilon\;=\;3.9042\text{--}4.8488
+\qquad(b=1.031,\ 64/64\text{ windows})
+\]
+dominates T145's \emph{measured} $2.156$--$6.394$, and the chain
+$\lambda\ge1/(\kappa_{\mathrm{up}}\,c_0^{\mathrm{ap}}\,\Psi_{\mathrm{abs}})$ holds with loss
+factor $0.0422$--$0.1586$ of the exact gap --- every factor a functional of the form alone.
+Finding (a): \emph{the cake base is free}. The chain consumes only the lower domination
+$|\psi|\le\psi_t$, so Maz'ya's classical dyadic $8$ was never a price of the theorem, only of
+the convention: $2b^2\to2$ as $b\to1$, a gain of $3.76$ at zero cost, because the union
+identity makes the level constant an $O(m)$ closed form and the levels are never materialised.
+Finding (b): the spectrum bottom is a \emph{block}, which kills every perturbation route and
+costs the identity route nothing --- the resolvent identity holds for every eigenvector at the
+bottom. Remarkably, $c_0^{\mathrm{ap}}$ lands at the size of Maz'ya's classical Dirichlet
+value $4$. The stress tests discriminate in both directions: on T145's no-go form $\Gamma$
+grows $3.676\to13.800$ ($m^{0.420}$, \emph{unbounded} --- the preregistered criterion) while
+the theorem half survives there (slack $1.087$--$1.242$), and on the Dirichlet path-Laplacian
+control $\Gamma$ stays flat ($1.7183$--$1.7315$); $\kappa_{\mathrm{up}}$ counts as a certified
+building block with its qualification stated (per-window completed Cholesky, maximum $1.4230$;
+the $D$-flatness is a fit, so what is certified is a finite list --- the same status the level
+lemma has, and the chain is homogeneous). The border pool of this part: $24$ blocks, the
+direct Schur route closes $24/24$ and the a-priori chain is positive on all $24$
+($c_0^{\mathrm{ap}}=2.855$--$3.176$); T145's $3$ open blocks are not reproducible from a
+rebuilt pool --- the anatomy transfers, the count does not. The four a-priori pieces --- the
+union identity, the counting lemma at a general base, the resolvent delocalisation bound and
+the composite level lemma with its no-go discriminator --- are load-bearing as \vref{v547}
+\veri{v547\_level\_lemma\_identities.py} (Section~\ref{sec:v547}).
+
+\begin{keybox}[After T146: the level lemma stands --- one remainder, all-$D$]
+\emph{(G1)} \textbf{the one genuine remainder}: $D$-uniformity for \emph{all} $D$ rather than
+on a finite surface --- $\Gamma$ is a certified per-window number (fit $D^{-0.016\pm0.005}$, a
+fit and never load-bearing), and turning the finite list into a theorem needs an asymptotic
+bound on $\max_j\|Re_j\|\,\lambda_{\min}$, i.e.\ the delocalisation of the \emph{Green
+columns} themselves. \emph{(G2)} $\sigma_{\mathrm{tot}}$ on the energy route stays measured
+--- \emph{not} a hole (either constant alone closes S1$'$, and the Green route is the
+certified one), recorded so nobody mistakes the asymmetry for a gap. \emph{(G3)} the
+\emph{actual} $3$ open R4 border blocks from the T134 assembly, rather than a proxy pool ---
+bookkeeping. The honest state, in one sentence: T145's missing lemma is now a theorem chain on
+the measurement surface with an explicit a-priori constant of classical size, and what
+separates it from a statement for all $D$ is exactly one asymptotic delocalisation bound.
+T147 (\texttt{green\_asymptotic\_probe.py}) is running at exactly that asymptotics.
+\end{keybox}
+
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
-\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the twelve ledger modules
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the thirteen ledger modules
 of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
@@ -5257,19 +5420,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T145}\label{app:index}
+\section{Probe index, diary parts T11--T146}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $135$ parts T11--T145 that the current diary file records
-($136$ runs --- T104 was a double run with two independent arms --- and $3467$ green checks); the ten
+load-bearing artefact. The index covers the $136$ parts T11--T146 that the current diary file records
+($137$ runs --- T104 was a double run with two independent arms --- and $3497$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v546} promoted; with T126--T145, the first twenty parts of the second phase, the
-running totals are \textbf{$145$ probes and $3659/3659$ checks}. T146
-(\texttt{level\_lemma\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v547} promoted; with T126--T146, the first twenty-one parts of the second phase, the
+running totals are \textbf{$146$ probes and $3689/3689$ checks}. T147
+(\texttt{green\_asymptotic\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -5420,6 +5583,7 @@ T142 & \texttt{\scriptsize conductance\_\allowbreak profile} & the optimal Hardy
 T143 & \texttt{\scriptsize sharp\_\allowbreak capacity} & the sharp route \textbf{carries}: the exact capacity--Rayleigh form $1-\rho(W)=\inf_v[d^{\mathsf T}(J^{-1}-B)d+(x^{\mathsf T}v)^2/\mathrm{cap}-\sum_ks_kv_k^2]/[d^{\mathsf T}J^{-1}d+(x^{\mathsf T}v)^2/\mathrm{cap}]$, $d=Dv$, is an \emph{identity} on $26/26$ windows (assembly $10^{-11}$/$5\times10^{-12}$, eigenvalue $3\times10^{-6}$ relative under the declared $1/\mathrm{gap}$ conditioning), with a structurally new bookkeeping --- the minimiser \emph{orthogonal} to the equilibrium charge (the capacity rank one carries nothing), the mass share \emph{negative} ($-0.0698$ to $-0.0029$), the gap a cancellation between Green share (exactly $1$) and crossing share ($1.0029$--$1.0698$), the naive split certified dead at $6.19$--$66.63\times\rho$; \textbf{Maz'ya's criterion lands inside its window}: $\Phi_{\sup}\lambda=0.5438$--$0.6457$ on $26/26$ (window $[1/4,1]$) for a \emph{non-Markovian} form ($72$--$84\%$ positive off-diagonals), the bound $\lambda\ge1/(4\Phi_{\sup})$ captures $0.387$--$0.460$ of the true gap with a \textbf{zone-uniform loss factor} $D^{-0.048\pm0.010}$ (bar $0.25$); the supremum lives on closed families ($0.9606$--$1.0000$ of the best, local search $\le1.041\times$; in node coordinates \emph{intervals} dominate by $8.3$--$129.5$ --- Muckenhoupt's one-dimensional structure) and is \emph{certified by enumerating all $255$--$16383$ subsets} on $6$ border blocks ($\Phi_{\sup}\lambda=0.6087$--$0.9016$, inside the window); Miclo's constructive chain loses $46$--$2561$ ($D^{-2.13}$) --- the conclusion holds, the classical proof mechanism does not; R1d dead as a direction sample (the LP dual saturates at the trivial floor, $\rho(W)$ to a factor $1.000000$; needs the full SDP constraint), border pool $36$, $32$ certified, $4$ open, the capacity argmax entirely the far tail; map V15, $10$ statements ripe (stock $84\to94$); \textbf{rest list: S1 one named capacity inequality $\mathrm{cap}_E(A)\ge|A|\lambda_0/c_0$ with absolute $c_0$, S2 the Muckenhoupt/interval route to it, S3 a closed capacity lower bound, R1d$'$, R4} & SHARP-CARRIES & 24/24\\
 T144 & \texttt{\scriptsize capacity\_\allowbreak inequality} & the interval route \textbf{carries, and the chain has exactly one unproven input}: with the \emph{Jacobi whitening} as the single comparison licence ($\kappa_{\mathrm{up}}=1.1195$--$1.3162$ certified per window; Gershgorin would allow $\le1.983$; a denominator comparison, untouched by T142's obstruction), two interval-reduction statements separate --- the \emph{pointwise hull comparison is false} (up to $425$, drifting $D^{-1.137}$, scattered level sets as offenders $\Rightarrow$ S2 must be a testing condition) while the \emph{best-interval comparison holds}, $c_{\mathrm{glob}}=1.0000$--$1.6876$ zone-uniform at $D^{-0.068\pm0.024}$, measured on $2.24$ million sets incl.\ \emph{all} $16383$ subsets of $136$ enumerated blocks (capacity monotonicity holds on all of them, though the form is not Dirichlet); \textbf{the two-weight sup is exact, not sampled}: $11\,390\,676$ intervals exhausted via a Cholesky prefix-sum identity (verified to $10^{-11}$), giving the core number $B_{\mathrm{res}}\hat\lambda=0.6694$--$0.7813$ inside the Maz'ya window $[1/4,1]$ on the whole surface, flat at $D^{0.013\pm0.005}$ and coordinate-robust (T143: $0.5438$--$0.6457$), with the free half $\Phi_{\sup}\hat\lambda\le1$ passing on all $2.24$M sets; \textbf{the chain} $\lambda\ge1/(c_0\kappa_{\mathrm{up}}c_{\mathrm{glob}}B_{\mathrm{res}})$ certifies $0.1002$--$0.2653$ of the exact gap per window, the residual $D$-dependence in the Jacobi transfer ($D^{-0.178}$), not the capacity calculus; dead: the naive Muckenhoupt trial-energy transcription ($89$--$6995$, $D^{-1.885}$); honest counter-side exact: $\Phi_{\mathrm{int}}\hat\lambda=0.0928$--$0.3578$ drifts $D^{0.654\pm0.016}$ --- intervals saturate S1 only from above; \textbf{the Markov perturbation route is certified dead} ($\lambda_{\min}(E-P)<0$ everywhere, $t^*\sim D^{3.96}$; $3$--$12\%$ positive off-diagonal entries carrying $36.7$--$64.5\%$ of the mass); \textbf{S3 stronger than asked}: the Cauchy--Schwarz floor makes $\Phi_{\sup}$ a max-density-subgraph value (Charikar 2000; Goldberg 1984), $\Psi_{\mathrm{all}}\hat\lambda=0.7399$--$0.8515$ at $D^{0.015\pm0.005}$ over \emph{all} $2^m$ sets --- the flattest number of the probe, argmax on intervals ($B_{\mathrm{res}}$ only $1.078$--$1.129$ below); R4: $22$ blocks, $19$ certified, $3$ open, $c_{\mathrm{glob}}=1.0000$ exact on $5$ enumerated; map V16, $9$ statements ripe (stock $93$); \textbf{rest list: S1$'$ --- S1 under a Green mean-density bound, a Muckenhoupt-type instead of a Markov-type hypothesis --- S2$'$ as testing condition, R4, R5; the only unproven input is the absolute constant $c_0$} & INTERVAL-CARRIES & 31/31\\
 T145 & \texttt{\scriptsize mazya\_\allowbreak proof} & the proof attempt for S1$'$, \textbf{one step missing, and it has a name}: the classical Maz'ya proof transcribes step by step onto the non-Markovian form --- M1 level arithmetic (theorem, factor $1.649$--$2.670$ against the ceiling $3$), M2 the Green floor (theorem, Cauchy--Schwarz), M3 truncation admissibility (theorem, $\times4$, slack $\le1.036$ on $168$ levels) --- and \textbf{the Markov property sits in exactly one line}, M4 truncation subadditivity, which is \emph{void} here: $3.2$--$14.9\%$ positive off-diagonals carrying $18.3$--$58.7\%$ of the mass, the conductance share of the minimiser's energy negative on $61/64$ windows, while the same code on the Stieltjes surrogate $E-P$ reproduces the classical step; \textbf{but M4 splits} --- the mass half is a theorem ($\sum_kf_k^2\le\psi^2$ pointwise; ratio $0.2639$--$0.2995$) and dominates, so $\sigma_{\mathrm{tot}}=0.2145$--$0.4425<1$ everywhere; two routes make $c_0$ \textbf{explicit}: energy $12\sigma_{\mathrm{tot}}=2.5734$--$5.3099$, sign-free $G_{\mathrm{dy}}=2.1559$--$6.3937$, better route $c_0=2.2480$--$4.2265$ at $D^{0.028\pm0.017}$ (zone-uniform) against Maz'ya's Dirichlet value $4$, and \textbf{S1$'$ is certified per window}: $\mathrm{cert\_lam\_max}(R)\le c_0\Psi$ on $64/64$ (sign price $|R|$ vs $R^{+}$: $1.12$--$1.41$, witness built in); the \textbf{no-go} $R=aa^{\mathsf T}+\varepsilon I$, $a_i=i^{-1/2}$ (entrywise nonnegative, proved density ceiling $4+\varepsilon$, $\lambda_{\max}\sim\log m$) shows $\Psi_{\mathrm{all}}\hat\lambda$ decaying $0.702\to0.488$ and $G_{\mathrm{dy}}$ growing $7.6\to36.8$ --- a level-profile hypothesis is \emph{necessary}; S2$'$ retired as a requirement ($c_{\mathrm{test}}=1.0782$--$1.1327$ against Charikar's cited $2$), R5 two-sided but width $D^{0.543}$ (downgraded; used side flat $D^{0.065}$), R4 all $24$ blocks closed; map V17, $11$ statements ripe (stock $104$); \textbf{rest: L1 the level lemma --- an a-priori bound for $\sigma_{\mathrm{tot}}$ or $G_{\mathrm{dy}}$, either alone closes S1$'$ --- L2 the profile route to it, R4 bookkeeping}; identity spine of T142--T145 promoted as \vref{v546} & ONE-STEP-MISSING & 33/33\\
+T146 & \texttt{\scriptsize level\_\allowbreak lemma} & the proof attempt for L1, \textbf{and the level lemma stands}: closed on the measurement surface as a chain of theorems and certified window inequalities, no step reading the minimiser --- four hand-written closed profiles (sine, ramp, pole vector, equilibrium potential) lose by \textbf{5--9 orders of magnitude} (every guess sees $O(1)$, the gap is $O(D^3)$); what survives is the \textbf{Green column} itself ($\lambda_{\mathrm{up}}/\hat\lambda=1.0497$--$1.3764$), and \textbf{Davis--Kahan is instrumented and discarded} (informative on $0/64$: the spectrum bottom is a near-degenerate block, $\lambda_2/\hat\lambda=1.2542$--$3.4471$, separation in the denominator) because $\psi=\lambda R\psi$ is an \emph{identity} --- no transfer step exists in the argument; the lever: $\|\psi\|_\infty\le\lambda_{\mathrm{up}}\max_j\|Re_j\|$ within $1.055$--$1.426$ of the truth, the trivial ceiling would give $\Gamma\le\sqrt m=5.1$--$34.2$, measured $\Gamma=1.8356$--$2.2797$ (columns $2.7$--$16.0$ below trivial --- that factor \emph{is} the delocalisation, read off the form); the localisation contradiction stays qualitative (leak tolerance $\le2.38\times10^{-3}$), Perron only on the lumped partner; \textbf{the cake base is free} (the chain uses only $|\psi|\le\psi_t$, Maz'ya's dyadic $8$ falls to $2b^2\approx2$, gain $3.76$, price zero via the $O(m)$ union identity) and $c_0^{\mathrm{ap}}=2b^2\Gamma\min(1,\Gamma_1)+\varepsilon=\mathbf{3.9042}$--$\mathbf{4.8488}$ ($b=1.031$, $64/64$) against T145's measured $2.156$--$6.394$ --- at the size of Maz'ya's Dirichlet value $4$ --- chain loss $0.0422$--$0.1586$; stress tests discriminate (no-go $\Gamma$ $3.676\to13.800$, $m^{0.420}$, unbounded; theorem half survives, slack $1.087$--$1.242$; Dirichlet control flat $1.7183$--$1.7315$); border pool $24/24$ closed, a-priori chain positive on $24$ ($c_0^{\mathrm{ap}}=2.855$--$3.176$); map V18, stock $108$; \textbf{rest: all-$D$ asymptotics of the Green columns ($\max_j\|Re_j\|\lambda_{\min}$), $\sigma_{\mathrm{tot}}$ stays measured (not a hole), the actual 3 T134 blocks}; a-priori core promoted as \vref{v547} & LEVEL-CARRIES & 30/30\\
 \end{xltabular}
 }
 
