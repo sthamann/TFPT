@@ -1344,6 +1344,60 @@ Machine-checked:
 \veri{v549\_gauge\_parity\_identities.py}.
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 
+\par\smallskip\noindent\textbf{The odd-sector identities
+(\texttt{PRIME.ODD.SECTOR.IDENT.01}).}
+The identity/certificate core of T151 is load-bearing as the eighth
+companion module ($19$ checks, ${\sim}0.2$\,s) on $12$ frame-A windows
+($n=4\ldots139$, $m=26\ldots285\le300$), parity control models at $m=241$
+and $m=2001$, and a no-go size ladder $m=64\ldots256$ --- the companion to
+the gauge/parity module: here the \emph{reroute} off the quadratic ladder
+is certified --- through the pencil against the parity Laplacian and one
+elementary Sobolev step, to a per-mode bound \emph{linear} in $k$.
+\emph{The grid step-over.} The parity sines live on the shifted grid
+$\theta_k=2\pi k/N$ with $\mu^P_k=2-2\cos\theta_k$ exactly; the symbol has
+$f(0)=-47.6\ldots-6.3<0$ with a nonempty negative window $[0,\theta_c)$,
+and $\theta_c/\theta_1=0.371$--$0.485$ on every window: the odd grid steps
+over the negative window --- odd-sector positivity is a grid fact. The
+honest negative beside it, promoted as content: the symbol-only pencil
+floor is vacuous ($\rho\ge1$ on $12/12$) and the symbol moves by
+$0.45$--$3.27$ across one mode spacing --- the local model is a
+\emph{matrix} statement, not a symbol statement.
+\emph{The certified bottom ladder.} $\lambda_k(A)\le S\mu^P_k$ for $k\le8$
+by completed LDL$^{\mathsf T}$ counts (Sylvester 1852), $S=1.1019$--$6.4725$
+--- order $2$ in $k$, with $f(0)<0$ absorbed by the Rayleigh floor
+$L_P\ge\mu^P_1I$.
+\emph{The Sobolev step.} $\|\psi\|_\infty^2\le2\|\psi\|_2\|\nabla\psi\|_2$,
+licensed by the odd sector's virtual node $\psi_{-1}=0$; on the exact
+parity model the pencil is $(1,1)$ (certified $1.1\times10^{-12}$) and the
+per-mode price is exactly $\pi$ ($5.1\times10^{-8}$).
+\emph{The closed archimedean minimum.}
+$\min_r\Lambda^{\mathrm{arch}}_r=c^{\mathrm{arch}}_0-c^{\mathrm{arch}}_{M-1}$
+exactly (residual $0.0$), attained at $r=0$, from two per-window-checked
+shape properties of the smooth kernel.
+\emph{The linear per-mode bound.} With the certified pencil floor
+$\kappa=0.1939$--$0.3599$ and $K_{\mathrm{bot}}=S$,
+$b_k=2m\sqrt{K_{\mathrm{bot}}\mu^P_k/\kappa}\le C_Sk$ with
+$C_S=12.081$--$26.953\le2\pi\sqrt{K_{\mathrm{bot}}/\kappa}$ --- linear
+where the quadratic ladder grew, nothing additive anywhere; on the T145
+no-go the bottom pencil ratio explodes ($\times15.8$ over $m=64\ldots256$)
+while the parity model holds $1$.
+\textbf{Named limits as content:} per instance on small windows --- a
+finite list with an explicit maximum; nothing uniform in the zone index or
+in $D$, and explicitly \emph{no} statement for all $D$ (the one open
+input, the $m$-freeness of the bottom pencil ratio
+$R=K_{\mathrm{bot}}/\kappa=3.7362$--$18.6607$, stays open, typed open);
+the symbol route stays certified vacuous.
+KMS 1953 / Widom 1958--Basor--Ehrhardt 2009--B\"ottcher--Silbermann (the
+symbol question's address --- the computed answer: the pointwise symbol
+language does not extend to the bottom mode) / Weyl 1912 / Parlett /
+Hardy--Littlewood--P\'olya 1934--Agmon 1965 / Sylvester
+1852--Bunch--Kaufman 1977 / Rayleigh 1877--Ritz 1909 / Wilkinson
+1968--Higham 2002 / Chebyshev 1852 named classical; Weil 1952 cited, never
+used as a criterion.
+Machine-checked:
+\veri{v550\_odd\_sector\_identities.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

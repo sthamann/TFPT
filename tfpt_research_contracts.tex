@@ -2945,6 +2945,83 @@ AST-checked; no marker moves.
 Machine-checked: \veri{v549\_gauge\_parity\_identities.py}.
 \mE\ (per-instance identities and certified inequalities)
 
+\par\smallskip\noindent\textbf{\texttt{PRIME.ODD.SECTOR.IDENT.01} --- the
+odd-sector identities of phase 2 (T151).}
+\emph{(1)} The grid step-over: the parity sines live on the \emph{shifted}
+grid $\theta_k=2\pi k/N$, $N=2m{+}1$, which never contains $\theta=0$, with
+$\mu^P_k=2-2\cos\theta_k$ \emph{exactly} ($2.2\times10^{-16}$;
+eigen-residual $2.3\times10^{-13}$); the symbol has
+$f(0)=-47.6\ldots-6.3<0$ (T148's honest negative, re-read, never
+re-derived) with a nonempty negative window $[0,\theta_c)$, and
+$\theta_c/\theta_1=0.371$--$0.485\le0.9$ on \emph{every} window of the
+battery ($12$ frame-A windows, $m=26\ldots285\le300$): the odd grid
+\emph{steps over} the negative window --- odd-sector positivity is a grid
+fact. The honest negative beside it, promoted as content (T150's rest item
+3 answered negatively): the symbol-only pencil floor
+$\kappa_{\mathrm{sym}}(1-\rho)$ is vacuous ($\rho\ge1$) on $12/12$ and the
+symbol moves by $0.45$--$3.27$ relative across \emph{one} mode spacing ---
+the local model is a \emph{matrix} statement, not a symbol statement
+(controls: the Dirichlet corner breaks the eigenpairs at $1.0$, a one-index
+shift misses by $6.5\times10^{-3}$). \emph{(2)} The certified bottom
+ladder: $\lambda_k(A)\le S\mu^P_k$ for $k\le8$ by completed
+LDL$^{\mathsf T}$ inertia counts (Sylvester 1852; a certificate, never a
+sorted list), $S=1.1019$--$6.4725$, the count equal to the direct spectral
+count on all $96$ (window, $k$) pairs --- order $2$ in $k$, $f(0)<0$
+absorbed by the Rayleigh floor $L_P\ge\mu^P_1I$ (control:
+$S\times10^{-3}$ certifies no eigenvalue below it). \emph{(3)} The discrete
+Sobolev step: $\|\nabla\psi\|_2^2=\langle\psi,L_0\psi\rangle-
+\psi_{\mathrm{last}}^2$ exactly ($7.6\times10^{-15}$),
+$\|\nabla\psi\|_2^2\le\langle\psi,L_P\psi\rangle$, and
+$\|\psi\|_\infty^2\le2\|\psi\|_2\|\nabla\psi\|_2$ --- licensed by the odd
+sector's virtual node $\psi_{-1}=0$; calibration: the model pencil is
+$(1,1)$ (certified $1.1\times10^{-12}$ at $m=241$) and the Sobolev
+per-mode price is $\pi$ to $5.1\times10^{-8}$ at $m=2001$ --- the honest,
+$m$-free cost of leaving the $\ell^2$ world (controls: the boundary term
+$4.8\times10^{-2}$, the Neumann undercount $0.50$). \emph{(4)} The closed
+archimedean minimum (T150's rest item 2 closed \emph{and attained}): given
+the two per-window-checked shape properties ($c^{\mathrm{arch}}_i<0$,
+non-decreasing on $i\ge1$),
+$\min_r\Lambda^{\mathrm{arch}}_r=c^{\mathrm{arch}}_0-c^{\mathrm{arch}}_{M-1}$
+exactly (residual $0.0$; value $2.1719$--$3.4674$), attained at $r=0$
+(control: the full atom-including kernel breaks the shape and misses by
+$\ge8.7\times10^{-2}$). \emph{(5)} The linear per-mode bound: with the
+certified pencil floor $\kappa=0.1939$--$0.3599$ (one completed Cholesky
+per window, floor carried as $\mathrm{fl}/\mu^P_1$, direction re-read on
+the actual bottom eigenvalue) and $K_{\mathrm{bot}}=S$,
+$b_k=2m\sqrt{K_{\mathrm{bot}}\mu^P_k/\kappa}\le C_Sk$ with
+$C_S=12.081$--$26.953\le2\pi\sqrt{K_{\mathrm{bot}}/\kappa}$ on the bottom
+$8$ modes of every window --- \emph{linear} in $k$ where the quadratic
+$\nu$ ladder grew, every $m$-power cancelled, nothing additive anywhere;
+the bound dominates the truth and the parity Dirichlet energy on every
+read mode; the bottom pencil ratio
+$R=K_{\mathrm{bot}}/\kappa=3.7362$--$18.6607$ is the one scalar the chain
+still owes, typed \emph{open} in $m$; the discriminator: on the T145 no-go
+form the ratio explodes ($1.686\times10^{3}\to2.667\times10^{4}$, factor
+$15.8$ over $m=64\ldots256$) while the exact parity model holds $R=1$ to
+$1.1\times10^{-12}$ (controls: the ladder $\times10^{-3}$ fails, the
+inflated floor $1.5\kappa$ makes the Cholesky refuse on $12/12$).
+\textbf{Named limits as load-bearing content:} per instance on small
+windows --- a finite list of certified window inequalities with an explicit
+maximum; nothing uniform in the zone index or in $D$, and explicitly
+\emph{no} statement for all $D$: the one open input after T151 (the
+$m$-freeness of the bottom pencil ratio $R=K_{\mathrm{bot}}/\kappa$ for
+the odd parity sector of a sign-changing-symbol Toeplitz section) stays
+\emph{open}, typed open --- its flat trend ($x^{0.037\pm0.015}$) is a fit,
+sandbox; the symbol-only route stays certified vacuous;
+$\mathrm{TV}(\log\Lambda)$ stays withdrawn as a hypothesis (T149);
+$\sigma_{\mathrm{tot}}$ stays retired as a route (T148); every T151
+exponent is a fit, sandbox. Fences: Kac--Murdock--Szeg\H{o} 1953 / Widom
+1958 / Basor--Ehrhardt 2009 / B\"ottcher--Silbermann (the address of the
+symbol question --- the computed answer: the pointwise symbol language
+does not extend to the bottom mode) / Weyl 1912 / Parlett /
+Hardy--Littlewood--P\'olya 1934--Agmon 1965 / Sylvester
+1852--Bunch--Kaufman 1977 / Rayleigh 1877--Ritz 1909 / Cauchy--Schwarz /
+Wilkinson 1968--Higham 2002 / Chebyshev 1852 named classical; Weil 1952
+cited, never used as a criterion; zero-firewall AST-checked; no marker
+moves.
+Machine-checked: \veri{v550\_odd\_sector\_identities.py}.
+\mE\ (per-instance identities and certified inequalities)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

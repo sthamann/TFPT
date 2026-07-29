@@ -62,6 +62,124 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (V) (\texttt{v550} --- the odd-sector identities of phase 2 promoted; prime-front diary T151 (the one inequality closes by rerouting off the ladder, ODD-CARRIES) + paper + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v550} (\texttt{PRIME.ODD.SECTOR.IDENT.01}).} Promotion of the
+identity/certificate core of the discovery part T151 (\texttt{odd\_ladder\_probe.py}) --- $19$
+checks, ${\sim}0.2$\,s, everything recomputed on small frame-A windows, nothing cited from the
+sandbox; the companion to \texttt{v549}, which certified the parity compression and the
+quadratic ladder certificate $\nu^P_k\le Ck^2$ --- this module certifies the \emph{reroute}
+T151 found: off the $\nu$ ladder, through the pencil against the parity Laplacian and one
+elementary Sobolev step, to a per-mode bound \emph{linear} in $k$. Scope fence: identities,
+per-instance theorems with checked hypotheses and per-window \emph{certified} inequalities ---
+no fit, no $D$-exponent, no zone-uniform statement, and explicitly \emph{no statement for all
+$D$} (the one open input after T151 --- the $m$-freeness of the bottom pencil ratio
+$R=K_{\mathrm{bot}}/\kappa$ for the odd parity sector of a sign-changing-symbol Toeplitz
+section --- stays open and typed open). Battery: $12$ frame-A windows ($n=4\ldots139$,
+$m=26\ldots285\le300$, $D=7.578\times10^{-3}\ldots2.789\times10^{-2}$), parity control models
+at $m=241$ (the certified $(1,1)$ pencil) and $m=2001$ (the $\pi$ price), and a no-go size
+ladder $m=64\ldots256$; each statement carries a mutation control that must fail by
+$\ge10^{-3}$.
+\item \textbf{(1) The grid step-over and the honest negative (T151) \mE.} The parity sines
+live on the \emph{shifted} grid $\theta_k=2\pi k/N$, $N=2m{+}1$, which never contains
+$\theta=0$, with $\mu^P_k=2-2\cos\theta_k$ \emph{exactly} ($2.2\times10^{-16}$; eigen-residual
+$2.3\times10^{-13}$); the symbol has $f(0)=-47.6\ldots-6.3<0$ (T148's honest negative, re-read
+and never re-derived) with a nonempty negative window $[0,\theta_c)$, and
+$\theta_c/\theta_1=0.371$--$0.485\le0.9$ on \emph{every} window: the odd grid \emph{steps over}
+the negative window --- odd-sector positivity is a grid fact, stepped over rather than
+cancelled. The honest negative beside it, promoted as content (T150's rest item 3 answered
+\emph{negatively}): the symbol-only pencil floor $\kappa_{\mathrm{sym}}(1-\rho)$ is vacuous
+($\rho\ge1$) on $12/12$ windows and the symbol moves by $0.45$--$3.27$ relative across
+\emph{one} mode spacing --- no pointwise symbol statement is admissible at the bottom mode's
+resolution: the local model is a \emph{matrix} statement, not a symbol statement (controls:
+the Dirichlet corner breaks the eigenpairs at $1.0$, a one-index shift misses by
+$6.5\times10^{-3}$).
+\item \textbf{(2) The certified bottom ladder (T151) \mE.} $\lambda_k(A)\le S\mu^P_k$ for
+$k\le8$ is certified per window by $8$ completed LDL$^{\mathsf T}$ inertia counts (Sylvester
+1852; Bunch--Kaufman 1977 --- a certificate, never a sorted list), $S=1.1019$--$6.4725$: the
+odd sector's bottom spectrum \emph{is} the parity-Laplacian ladder up to a printed $O(1)$
+factor --- order $2$ in $k$, with no trace of $f(0)<0$ in it (the Rayleigh floor
+$L_P\ge\mu^P_1 I$ absorbs it); the count equals the direct spectral count on all $96$
+(window, $k$) pairs (control: $S\times10^{-3}$ certifies no eigenvalue below it anywhere).
+\item \textbf{(3) The discrete Sobolev step and the $\pi$ price (T151) \mE.}
+$\|\nabla\psi\|_2^2=\langle\psi,L_0\psi\rangle-\psi_{\mathrm{last}}^2$ exactly
+($7.6\times10^{-15}$), $\|\nabla\psi\|_2^2\le\langle\psi,L_P\psi\rangle$, and
+$\|\psi\|_\infty^2\le2\|\psi\|_2\|\nabla\psi\|_2$ on the true window modes, the parity sines
+and random unit vectors --- elementary, licensed by the odd sector's virtual node
+$\psi_{-1}=0$ (Hardy--Littlewood--P\'olya 1934 / Agmon 1965 the continuum address);
+calibration: on the exact parity model the pencil is $(1,1)$ (certified
+$|\kappa-1|=1.1\times10^{-12}$ at $m=241$) and the Sobolev per-mode price is $\pi$ to
+$5.1\times10^{-8}$ at $m=2001$ --- the honest, $m$-free cost of leaving the $\ell^2$ world
+(controls: dropping the boundary term breaks the identity at $4.8\times10^{-2}$, the Neumann
+energy undercounts a first-node vector by $0.50$).
+\item \textbf{(4) The closed archimedean minimum (T151; T150's rest item 2 closed and
+attained) \mE.} The archimedean lag kernel has two shape properties, checked per window and
+never assumed --- $c^{\mathrm{arch}}_i<0$ for $i\ge1$ and $c^{\mathrm{arch}}_i$ non-decreasing
+on $i\ge1$ --- and given those,
+$\min_r\Lambda^{\mathrm{arch}}_r=c^{\mathrm{arch}}_0-c^{\mathrm{arch}}_{M-1}$ \emph{exactly}
+(max rel $0.0$; value $2.1719$--$3.4674$), attained at $r=0$: a closed two-term functional of
+the smooth kernel, no matrix, no eigenvector, no loss (control: the full atom-including kernel
+violates the monotone shape on every window and the closed formula misses its minimum by
+$\ge8.7\times10^{-2}$).
+\item \textbf{(5) The linear per-mode bound and the no-go discriminator (T151) \mE.} With
+$\kappa=0.1939$--$0.3599$ the certified pencil floor (\emph{one} completed Cholesky of
+$A-\kappa L_P$ per window, the floating-point floor carried as $\mathrm{fl}/\mu^P_1$; the
+direction re-read on the actual bottom eigenvalue) and $K_{\mathrm{bot}}=S$ from item (2), the
+chain $b_k:=2m\sqrt{K_{\mathrm{bot}}\mu^P_k/\kappa}\le C_Sk$ holds with
+$C_S=12.081$--$26.953\le2\pi\sqrt{K_{\mathrm{bot}}/\kappa}$ on the bottom $8$ modes of every
+window --- \emph{linear} in $k$ where the quadratic $\nu$ ladder grew, every $m$-power
+cancelled, nothing additive anywhere (the $\Theta(D^3)$ bottom that killed the Weyl /
+Bauer--Fike / Davis--Kahan route never enters) --- and the bound dominates the truth
+$m\|\psi_k\|_\infty^2$ and the parity Dirichlet energy on every read mode; the bottom pencil
+ratio $R=K_{\mathrm{bot}}/\kappa=3.7362$--$18.6607$ is the \emph{one} scalar the chain still
+owes, printed per window and typed open in $m$. The discriminator: on the T145 no-go form the
+ratio \emph{explodes} on the size ladder ($1.686\times10^{3}\to2.667\times10^{4}$, factor
+$15.8$ over $m=64\ldots256$) while the exact parity model holds $R=1$ to $1.1\times10^{-12}$
+--- a route that did not fail there would prove a false statement (controls: the ladder
+$\times10^{-3}$ fails against the true sups, the inflated floor $1.5\kappa$ makes the Cholesky
+\emph{refuse} on $12/12$).
+\item \textbf{Fences and status.} Per instance on small windows only --- a finite list of
+certified window inequalities with an explicit maximum; nothing uniform in the zone index or
+in $D$; the symbol-only route stays certified vacuous; $\mathrm{TV}(\log\Lambda)$ stays
+withdrawn as a hypothesis (T149), $\sigma_{\mathrm{tot}}$ stays retired as a route (T148);
+every T151 exponent is a fit that stays in the sandbox. Kac--Murdock--Szeg\H{o} 1953, Widom
+1958 / Basor--Ehrhardt 2009 / B\"ottcher--Silbermann (the address of the symbol question ---
+the computed answer is that the pointwise symbol language does \emph{not} extend to the bottom
+mode), Weyl 1912, Parlett, Hardy--Littlewood--P\'olya 1934 / Agmon 1965, Sylvester 1852 /
+Bunch--Kaufman 1977, Rayleigh 1877 / Ritz 1909, Cauchy--Schwarz, Wilkinson 1968 / Higham 2002,
+Chebyshev 1852 named classical; Weil 1952 cited, never used as a criterion; zero-firewall
+AST-checked. Ledger row \texttt{PRIME.ODD.SECTOR.IDENT.01} \mE; \textbf{no marker of any
+pre-existing contract moves}, and this is not RH evidence.
+\item \textbf{Diary, paper and website (T151, \textsc{odd-carries}).} The T151 probe
+(\texttt{odd\_\allowbreak ladder\_\allowbreak probe.py}, contract \texttt{ODD.LADDER},
+$27/27$, $43.4$\,s, $72$ prime-power windows $m=96\ldots1491$) closes the one inequality by
+rerouting off the ladder: the odd grid steps over the symbol's negative window
+($\theta_c/\theta_1=0.328$--$0.407$ on $72/72$), the bottom spectrum is certified against the
+parity Laplacian ($\lambda_k\le S\mu^P_k$, $S=1.1019$--$2.3870$), and the discrete Sobolev
+step yields the \emph{linear} per-mode bound $b_k\le C_Sk$ with a \emph{non-growing} constant
+($C_S=11.5137$--$19.5731$, trend $x^{0.020\pm0.007}$) where the quadratic ladder grew
+($13.81\pi$ at $x^{0.258}$); end to end moves to
+$2.01\times10^{-2}$--$3.52\times10^{-2}$ of the true gap (gain up to $3.18\times$), the
+bottleneck relocating from $Q^\star$ to $\Psi$. Two of T150's three rest items settled: the
+minimum of the archimedean diagonal is closed \emph{and attained exactly}
+($\min_r\Lambda^{\mathrm{arch}}_r=c^{\mathrm{arch}}_0-c^{\mathrm{arch}}_{M-1}=2.5928$--$4.8981$,
+deviation $0.0$), and the symbol route is a computed dead end (the local model is a matrix
+statement --- the pointwise symbol language fails at the bottom mode's resolution, margin
+vacuous on $72/72$). One scalar remains a fit: the bottom pencil ratio
+$R=K_{\mathrm{bot}}/\kappa=3.3634$--$9.7108$ at $x^{0.037\pm0.015}$ --- and the T145 no-go
+breaks exactly there ($x^{1.986}$). Verdict \textsc{odd-carries}: all six preregistered gates
+met, every layer typed (theorem / certified / elementary-verified), the one fit named.
+\texttt{experiments/next.txt} part T151 (series totals $151$ probes / $3852$ checks);
+\texttt{tfpt\_prime\_front.tex} gains the T151 subsection with the ``After T151'' keybox, the
+\texttt{v550} entry in the verified layer (now sixteen modules), the phase-2 section retitled
+T126--T151 and the updated probe index; \texttt{tfpt\_1}, \texttt{tfpt\_3} and
+\texttt{tfpt\_research\_contracts} gain the \texttt{v550} companion blocks;
+\texttt{website/lib/primeFront.ts} gains the T151 and \texttt{v550} feed entries; suite counter
+$543\to544$ scripts. T152 (\texttt{pencil\_ratio\_probe.py}) is running at exactly the
+remaining scalar --- the $m$-freeness of the bottom pencil ratio --- and is \emph{not} part of
+this change.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (IV) (\texttt{v549} --- the gauge/parity identities of phase 2 promoted; prime-front diary T150 (the parity mechanism named, ONE-TERM-MISSING) + paper + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v549} (\texttt{PRIME.GAUGE.PARITY.IDENT.01}).} Promotion of the

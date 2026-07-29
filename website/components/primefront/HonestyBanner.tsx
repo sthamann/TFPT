@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v549
+          v535–v550
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3825/3825 sandbox checks —
+        (“the full proof”, T126+) is now open with 3852/3852 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -191,8 +191,22 @@ export function HonestyBanner() {
         constant still grows (C ≤ 43.391 = 13.81π certified per stratum,
         trend x^0.258 against the bar 0.25), and the gap from π is exactly
         the arithmetic leakage of the bottom mode; the identity/certificate
-        core of T149+T150 is load-bearing as v549, and T151
-        (odd_ladder_probe.py) is running at the odd-sector ladder. What
+        core of T149+T150 is load-bearing as v549. T151 (ODD-CARRIES) then
+        closed exactly that inequality by rerouting off the ladder: the odd
+        grid steps over the symbol&apos;s negative window
+        (θ_c/θ_1 = 0.328–0.407 on 72/72 — positivity is a grid fact), the
+        bottom spectrum is certified against the parity Laplacian
+        (λ_k ≤ S·μᴾ_k, S = 1.10–2.39, LDLᵀ), and a discrete Sobolev step at
+        the odd sector&apos;s virtual node yields a per-mode bound LINEAR in
+        k with a non-growing constant (C_S = 11.51–19.57, trend x^0.020)
+        where the quadratic ladder grew; two of T150&apos;s three rest items
+        settled (the archimedean minimum closed and attained exactly; the
+        symbol route a computed dead end — the local model is a matrix
+        statement, not a symbol one), and one scalar remains a fit: the
+        bottom pencil ratio R = K_bot/κ = 3.36–9.71 (flat, x^0.037) — the
+        T145 no-go breaks exactly there (x^1.986). The identity/certificate
+        core of T151 is load-bearing as v550, and T152
+        (pencil_ratio_probe.py) is running at exactly that scalar. What
         remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing

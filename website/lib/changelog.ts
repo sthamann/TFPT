@@ -43,6 +43,1754 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · V",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v550"
+      },
+      {
+        "k": "t",
+        "v": " — the odd-sector identities of phase 2 promoted; prime-front diary T151 (the one inequality closes by rerouting off the ladder, ODD-CARRIES) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v550"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.ODD.SECTOR.IDENT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the identity/certificate core of the discovery part T151 ("
+        },
+        {
+          "k": "c",
+          "v": "odd_ladder_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "19"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.2"
+        },
+        {
+          "k": "t",
+          "v": " s, everything recomputed on small frame-A windows, nothing cited from the sandbox; the companion to "
+        },
+        {
+          "k": "c",
+          "v": "v549"
+        },
+        {
+          "k": "t",
+          "v": ", which certified the parity compression and the quadratic ladder certificate "
+        },
+        {
+          "k": "m",
+          "v": "\\nu^P_k\\le Ck^2"
+        },
+        {
+          "k": "t",
+          "v": " — this module certifies the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "reroute"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " T151 found: off the "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": " ladder, through the pencil against the parity Laplacian and one elementary Sobolev step, to a per-mode bound "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "linear"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": ". Scope fence: identities, per-instance theorems with checked hypotheses and per-window "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "certified"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " inequalities — no fit, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no zone-uniform statement, and explicitly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no statement for all "
+            },
+            {
+              "k": "m",
+              "v": "D"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the one open input after T151 — the "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-freeness of the bottom pencil ratio "
+        },
+        {
+          "k": "m",
+          "v": "R=K_{\\mathrm{bot}}/\\kappa"
+        },
+        {
+          "k": "t",
+          "v": " for the odd parity sector of a sign-changing-symbol Toeplitz section — stays open and typed open). Battery: "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " frame-A windows ("
+        },
+        {
+          "k": "m",
+          "v": "n=4\\ldots139"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "m=26\\ldots285\\le300"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "D=7.578\\times10^{-3}\\ldots2.789\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "), parity control models at "
+        },
+        {
+          "k": "m",
+          "v": "m=241"
+        },
+        {
+          "k": "t",
+          "v": " (the certified "
+        },
+        {
+          "k": "m",
+          "v": "(1,1)"
+        },
+        {
+          "k": "t",
+          "v": " pencil) and "
+        },
+        {
+          "k": "m",
+          "v": "m=2001"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": " price), and a no-go size ladder "
+        },
+        {
+          "k": "m",
+          "v": "m=64\\ldots256"
+        },
+        {
+          "k": "t",
+          "v": "; each statement carries a mutation control that must fail by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The grid step-over and the honest negative (T151) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The parity sines live on the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "shifted"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " grid "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_k=2\\pi k/N"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "N=2m{+}1"
+        },
+        {
+          "k": "t",
+          "v": ", which never contains "
+        },
+        {
+          "k": "m",
+          "v": "\\theta=0"
+        },
+        {
+          "k": "t",
+          "v": ", with "
+        },
+        {
+          "k": "m",
+          "v": "\\mu^P_k=2-2\\cos\\theta_k"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "2.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "; eigen-residual "
+        },
+        {
+          "k": "m",
+          "v": "2.3\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "); the symbol has "
+        },
+        {
+          "k": "m",
+          "v": "f(0)=-47.6\\ldots-6.3<0"
+        },
+        {
+          "k": "t",
+          "v": " (T148's honest negative, re-read and never re-derived) with a nonempty negative window "
+        },
+        {
+          "k": "m",
+          "v": "[0,\\theta_c)"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_c/\\theta_1=0.371"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.485\\le0.9"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "every"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " window: the odd grid "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "steps over"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the negative window — odd-sector positivity is a grid fact, stepped over rather than cancelled. The honest negative beside it, promoted as content (T150's rest item 3 answered "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "negatively"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "): the symbol-only pencil floor "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa_{\\mathrm{sym}}(1-\\rho)"
+        },
+        {
+          "k": "t",
+          "v": " is vacuous ("
+        },
+        {
+          "k": "m",
+          "v": "\\rho\\ge1"
+        },
+        {
+          "k": "t",
+          "v": ") on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": " windows and the symbol moves by "
+        },
+        {
+          "k": "m",
+          "v": "0.45"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.27"
+        },
+        {
+          "k": "t",
+          "v": " relative across "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " mode spacing — no pointwise symbol statement is admissible at the bottom mode's resolution: the local model is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "matrix"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " statement, not a symbol statement (controls: the Dirichlet corner breaks the eigenpairs at "
+        },
+        {
+          "k": "m",
+          "v": "1.0"
+        },
+        {
+          "k": "t",
+          "v": ", a one-index shift misses by "
+        },
+        {
+          "k": "m",
+          "v": "6.5\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The certified bottom ladder (T151) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_k(A)\\le S\\mu^P_k"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "k\\le8"
+        },
+        {
+          "k": "t",
+          "v": " is certified per window by "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " completed LDL"
+        },
+        {
+          "k": "m",
+          "v": "^{\\mathsf T}"
+        },
+        {
+          "k": "t",
+          "v": " inertia counts (Sylvester 1852; Bunch–Kaufman 1977 — a certificate, never a sorted list), "
+        },
+        {
+          "k": "m",
+          "v": "S=1.1019"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "6.4725"
+        },
+        {
+          "k": "t",
+          "v": ": the odd sector's bottom spectrum "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the parity-Laplacian ladder up to a printed "
+        },
+        {
+          "k": "m",
+          "v": "O(1)"
+        },
+        {
+          "k": "t",
+          "v": " factor — order "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": ", with no trace of "
+        },
+        {
+          "k": "m",
+          "v": "f(0)<0"
+        },
+        {
+          "k": "t",
+          "v": " in it (the Rayleigh floor "
+        },
+        {
+          "k": "m",
+          "v": "L_P\\ge\\mu^P_1 I"
+        },
+        {
+          "k": "t",
+          "v": " absorbs it); the count equals the direct spectral count on all "
+        },
+        {
+          "k": "m",
+          "v": "96"
+        },
+        {
+          "k": "t",
+          "v": " (window, "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": ") pairs (control: "
+        },
+        {
+          "k": "m",
+          "v": "S\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " certifies no eigenvalue below it anywhere)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) The discrete Sobolev step and the "
+            },
+            {
+              "k": "m",
+              "v": "\\pi"
+            },
+            {
+              "k": "t",
+              "v": " price (T151) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\|\\nabla\\psi\\|_2^2=\\langle\\psi,L_0\\psi\\rangle-\\psi_{\\mathrm{last}}^2"
+        },
+        {
+          "k": "t",
+          "v": " exactly ("
+        },
+        {
+          "k": "m",
+          "v": "7.6\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\|\\nabla\\psi\\|_2^2\\le\\langle\\psi,L_P\\psi\\rangle"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "\\|\\psi\\|_\\infty^2\\le2\\|\\psi\\|_2\\|\\nabla\\psi\\|_2"
+        },
+        {
+          "k": "t",
+          "v": " on the true window modes, the parity sines and random unit vectors — elementary, licensed by the odd sector's virtual node "
+        },
+        {
+          "k": "m",
+          "v": "\\psi_{-1}=0"
+        },
+        {
+          "k": "t",
+          "v": " (Hardy–Littlewood–Pólya 1934 / Agmon 1965 the continuum address); calibration: on the exact parity model the pencil is "
+        },
+        {
+          "k": "m",
+          "v": "(1,1)"
+        },
+        {
+          "k": "t",
+          "v": " (certified "
+        },
+        {
+          "k": "m",
+          "v": "|\\kappa-1|=1.1\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "m=241"
+        },
+        {
+          "k": "t",
+          "v": ") and the Sobolev per-mode price is "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "5.1\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "m=2001"
+        },
+        {
+          "k": "t",
+          "v": " — the honest, "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free cost of leaving the "
+        },
+        {
+          "k": "m",
+          "v": "\\ell^2"
+        },
+        {
+          "k": "t",
+          "v": " world (controls: dropping the boundary term breaks the identity at "
+        },
+        {
+          "k": "m",
+          "v": "4.8\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": ", the Neumann energy undercounts a first-node vector by "
+        },
+        {
+          "k": "m",
+          "v": "0.50"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The closed archimedean minimum (T151; T150's rest item 2 closed and attained) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The archimedean lag kernel has two shape properties, checked per window and never assumed — "
+        },
+        {
+          "k": "m",
+          "v": "c^{\\mathrm{arch}}_i<0"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "i\\ge1"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "c^{\\mathrm{arch}}_i"
+        },
+        {
+          "k": "t",
+          "v": " non-decreasing on "
+        },
+        {
+          "k": "m",
+          "v": "i\\ge1"
+        },
+        {
+          "k": "t",
+          "v": " — and given those, "
+        },
+        {
+          "k": "m",
+          "v": "\\min_r\\Lambda^{\\mathrm{arch}}_r=c^{\\mathrm{arch}}_0-c^{\\mathrm{arch}}_{M-1}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (max rel "
+        },
+        {
+          "k": "m",
+          "v": "0.0"
+        },
+        {
+          "k": "t",
+          "v": "; value "
+        },
+        {
+          "k": "m",
+          "v": "2.1719"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.4674"
+        },
+        {
+          "k": "t",
+          "v": "), attained at "
+        },
+        {
+          "k": "m",
+          "v": "r=0"
+        },
+        {
+          "k": "t",
+          "v": ": a closed two-term functional of the smooth kernel, no matrix, no eigenvector, no loss (control: the full atom-including kernel violates the monotone shape on every window and the closed formula misses its minimum by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge8.7\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5) The linear per-mode bound and the no-go discriminator (T151) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " With "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa=0.1939"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.3599"
+        },
+        {
+          "k": "t",
+          "v": " the certified pencil floor ("
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " completed Cholesky of "
+        },
+        {
+          "k": "m",
+          "v": "A-\\kappa L_P"
+        },
+        {
+          "k": "t",
+          "v": " per window, the floating-point floor carried as "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{fl}/\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": "; the direction re-read on the actual bottom eigenvalue) and "
+        },
+        {
+          "k": "m",
+          "v": "K_{\\mathrm{bot}}=S"
+        },
+        {
+          "k": "t",
+          "v": " from item (2), the chain "
+        },
+        {
+          "k": "m",
+          "v": "b_k:=2m\\sqrt{K_{\\mathrm{bot}}\\mu^P_k/\\kappa}\\le C_Sk"
+        },
+        {
+          "k": "t",
+          "v": " holds with "
+        },
+        {
+          "k": "m",
+          "v": "C_S=12.081"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "26.953\\le2\\pi\\sqrt{K_{\\mathrm{bot}}/\\kappa}"
+        },
+        {
+          "k": "t",
+          "v": " on the bottom "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " modes of every window — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "linear"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": " where the quadratic "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": " ladder grew, every "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-power cancelled, nothing additive anywhere (the "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta(D^3)"
+        },
+        {
+          "k": "t",
+          "v": " bottom that killed the Weyl / Bauer–Fike / Davis–Kahan route never enters) — and the bound dominates the truth "
+        },
+        {
+          "k": "m",
+          "v": "m\\|\\psi_k\\|_\\infty^2"
+        },
+        {
+          "k": "t",
+          "v": " and the parity Dirichlet energy on every read mode; the bottom pencil ratio "
+        },
+        {
+          "k": "m",
+          "v": "R=K_{\\mathrm{bot}}/\\kappa=3.7362"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "18.6607"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " scalar the chain still owes, printed per window and typed open in "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": ". The discriminator: on the T145 no-go form the ratio "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "explodes"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on the size ladder ("
+        },
+        {
+          "k": "m",
+          "v": "1.686\\times10^{3}\\to2.667\\times10^{4}"
+        },
+        {
+          "k": "t",
+          "v": ", factor "
+        },
+        {
+          "k": "m",
+          "v": "15.8"
+        },
+        {
+          "k": "t",
+          "v": " over "
+        },
+        {
+          "k": "m",
+          "v": "m=64\\ldots256"
+        },
+        {
+          "k": "t",
+          "v": ") while the exact parity model holds "
+        },
+        {
+          "k": "m",
+          "v": "R=1"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": " — a route that did not fail there would prove a false statement (controls: the ladder "
+        },
+        {
+          "k": "m",
+          "v": "\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " fails against the true sups, the inflated floor "
+        },
+        {
+          "k": "m",
+          "v": "1.5\\kappa"
+        },
+        {
+          "k": "t",
+          "v": " makes the Cholesky "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "refuse"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fences and status."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Per instance on small windows only — a finite list of certified window inequalities with an explicit maximum; nothing uniform in the zone index or in "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "; the symbol-only route stays certified vacuous; "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TV}(\\log\\Lambda)"
+        },
+        {
+          "k": "t",
+          "v": " stays withdrawn as a hypothesis (T149), "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_{\\mathrm{tot}}"
+        },
+        {
+          "k": "t",
+          "v": " stays retired as a route (T148); every T151 exponent is a fit that stays in the sandbox. Kac–Murdock–Szeg"
+        },
+        {
+          "k": "t",
+          "v": "o"
+        },
+        {
+          "k": "t",
+          "v": " 1953, Widom 1958 / Basor–Ehrhardt 2009 / Böttcher–Silbermann (the address of the symbol question — the computed answer is that the pointwise symbol language does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " extend to the bottom mode), Weyl 1912, Parlett, Hardy–Littlewood–Pólya 1934 / Agmon 1965, Sylvester 1852 / Bunch–Kaufman 1977, Rayleigh 1877 / Ritz 1909, Cauchy–Schwarz, Wilkinson 1968 / Higham 2002, Chebyshev 1852 named classical; Weil 1952 cited, never used as a criterion; zero-firewall AST-checked. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.ODD.SECTOR.IDENT.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and this is not RH evidence."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Diary, paper and website (T151, "
+            },
+            {
+              "k": "t",
+              "v": "odd-carries"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The T151 probe ("
+        },
+        {
+          "k": "c",
+          "v": "odd_ ladder_ probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "ODD.LADDER"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "27/27"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "43.4"
+        },
+        {
+          "k": "t",
+          "v": " s, "
+        },
+        {
+          "k": "m",
+          "v": "72"
+        },
+        {
+          "k": "t",
+          "v": " prime-power windows "
+        },
+        {
+          "k": "m",
+          "v": "m=96\\ldots1491"
+        },
+        {
+          "k": "t",
+          "v": ") closes the one inequality by rerouting off the ladder: the odd grid steps over the symbol's negative window ("
+        },
+        {
+          "k": "m",
+          "v": "\\theta_c/\\theta_1=0.328"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.407"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "72/72"
+        },
+        {
+          "k": "t",
+          "v": "), the bottom spectrum is certified against the parity Laplacian ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_k\\le S\\mu^P_k"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "S=1.1019"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.3870"
+        },
+        {
+          "k": "t",
+          "v": "), and the discrete Sobolev step yields the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "linear"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " per-mode bound "
+        },
+        {
+          "k": "m",
+          "v": "b_k\\le C_Sk"
+        },
+        {
+          "k": "t",
+          "v": " with a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "non-growing"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " constant ("
+        },
+        {
+          "k": "m",
+          "v": "C_S=11.5137"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "19.5731"
+        },
+        {
+          "k": "t",
+          "v": ", trend "
+        },
+        {
+          "k": "m",
+          "v": "x^{0.020\\pm0.007}"
+        },
+        {
+          "k": "t",
+          "v": ") where the quadratic ladder grew ("
+        },
+        {
+          "k": "m",
+          "v": "13.81\\pi"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "x^{0.258}"
+        },
+        {
+          "k": "t",
+          "v": "); end to end moves to "
+        },
+        {
+          "k": "m",
+          "v": "2.01\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.52\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " of the true gap (gain up to "
+        },
+        {
+          "k": "m",
+          "v": "3.18\\times"
+        },
+        {
+          "k": "t",
+          "v": "), the bottleneck relocating from "
+        },
+        {
+          "k": "m",
+          "v": "Q^\\star"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "\\Psi"
+        },
+        {
+          "k": "t",
+          "v": ". Two of T150's three rest items settled: the minimum of the archimedean diagonal is closed "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and attained exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\min_r\\Lambda^{\\mathrm{arch}}_r=c^{\\mathrm{arch}}_0-c^{\\mathrm{arch}}_{M-1}=2.5928"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.8981"
+        },
+        {
+          "k": "t",
+          "v": ", deviation "
+        },
+        {
+          "k": "m",
+          "v": "0.0"
+        },
+        {
+          "k": "t",
+          "v": "), and the symbol route is a computed dead end (the local model is a matrix statement — the pointwise symbol language fails at the bottom mode's resolution, margin vacuous on "
+        },
+        {
+          "k": "m",
+          "v": "72/72"
+        },
+        {
+          "k": "t",
+          "v": "). One scalar remains a fit: the bottom pencil ratio "
+        },
+        {
+          "k": "m",
+          "v": "R=K_{\\mathrm{bot}}/\\kappa=3.3634"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "9.7108"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "x^{0.037\\pm0.015}"
+        },
+        {
+          "k": "t",
+          "v": " — and the T145 no-go breaks exactly there ("
+        },
+        {
+          "k": "m",
+          "v": "x^{1.986}"
+        },
+        {
+          "k": "t",
+          "v": "). Verdict "
+        },
+        {
+          "k": "t",
+          "v": "odd-carries"
+        },
+        {
+          "k": "t",
+          "v": ": all six preregistered gates met, every layer typed (theorem / certified / elementary-verified), the one fit named. "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " part T151 (series totals "
+        },
+        {
+          "k": "m",
+          "v": "151"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "3852"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front.tex"
+        },
+        {
+          "k": "t",
+          "v": " gains the T151 subsection with the “After T151” keybox, the "
+        },
+        {
+          "k": "c",
+          "v": "v550"
+        },
+        {
+          "k": "t",
+          "v": " entry in the verified layer (now sixteen modules), the phase-2 section retitled T126–T151 and the updated probe index; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " gain the "
+        },
+        {
+          "k": "c",
+          "v": "v550"
+        },
+        {
+          "k": "t",
+          "v": " companion blocks; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T151 and "
+        },
+        {
+          "k": "c",
+          "v": "v550"
+        },
+        {
+          "k": "t",
+          "v": " feed entries; suite counter "
+        },
+        {
+          "k": "m",
+          "v": "543\\to544"
+        },
+        {
+          "k": "t",
+          "v": " scripts. T152 ("
+        },
+        {
+          "k": "c",
+          "v": "pencil_ratio_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at exactly the remaining scalar — the "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-freeness of the bottom pencil ratio — and is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " part of this change."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · IV",
     "heading": [
       {

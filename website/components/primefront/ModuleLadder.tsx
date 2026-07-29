@@ -89,12 +89,18 @@ const MODULES = [
     title: "Gauge/parity identities · phase 2",
     checks: 21,
   },
+  {
+    id: "v550",
+    claim: "PRIME.ODD.SECTOR.IDENT.01",
+    title: "Odd-sector identities · phase 2",
+    checks: 19,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 150;
-const SANDBOX_CHECKS = 3825;
+const SANDBOX_PROBES = 151;
+const SANDBOX_CHECKS = 3852;
 
 export function ModuleLadder() {
   return (
