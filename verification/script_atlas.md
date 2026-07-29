@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`554` registered scripts · `625` ledger claims · `10` clusters.
+`555` registered scripts · `626` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -33,8 +33,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: AX.P2.01, v1_e8_glue, v53_compiler_core · cited: introduction, origin theory, 1 architecture e8, 5 redteam
 - **v222_cm_norm_duality** [E/C] `CMNORM.DUAL.01` — CM-norm duality: the two exceptional moduli give 41 and 7. SQUARE (Gaussian ℤ[i], j=1728): N(g_car+i|μ₄|)=5²+4²=41=10b₁ (the EM index IS the Gaussian norm of the carrier-glue vecto
   - deps: v23_anchor_generator, EM.B1.01, v73_k_c3_half · cited: origin theory, 1 architecture e8, 2 standard model
-- **v227_degree_exponent_channel_split** [E/C/O] `E8.CHAN.01` — 248=120+128 as a magnitude/phase channel typing (replaces the over-strong S⁻-dark-matter reading). E₈ exponents {1,7,11,13,17,19,23,29} sum 120=|R⁺(E₈)| (MAGNITUDE channel); E₈ deg
-  - deps: E8.CAS.01, v88_cp_phase_audit · cited: 3 e8 audit bootstrap, 5 redteam
+- **v227_degree_exponent_channel_split** [-] `(no ledger claim)` — 248=120+128 as a magnitude/phase channel typing (replaces the over-strong S⁻-dark-matter reading). E₈ exponents {1,7,11,13,17,19,23,29} sum 120=|R⁺(E₈)| (MAGNITUDE channel); E₈ deg
+  - cited: 3 e8 audit bootstrap, 5 redteam
 - **v228_rr_index_gate** [E/C/O] `QGEO.RR.01` — P2 as the mode space of a degree-4 seam divisor (a Riemann-Roch INDEX GATE; bedrock language for P2, not a proof from nothing). deg D=4=|μ₄| on P¹ ⇒ h⁰(O(D))=5=g_car (Riemann-Roch,
   - deps: ARCH.RR.01, v197_rr_carrier_clifford_d5, v181_clock_is_conformal_symmetry · cited: origin theory, research contracts
 - **v318_arithmetic_capstone** [E/C/O] `ARITH.CAPSTONE.01` — The capstone: the SM structural sector is Q(zeta30) + Galois mu4 x Z2, and the complete input is {a, pi, v_geo} (synthesis of the v313-v317 arc). The structural sector (3 generatio
@@ -208,7 +208,7 @@ _The fine-structure constant as the unique root of the boundary U(1) Ward identi
 - **v435_alpha_quillen_chernlevel** [E/C/O] `ALPHA.QUILLEN.PROGRESS.04` — ALPHA.QUILLEN.PROGRESS.04: a FOURTH honest step on ALPHA.QUILLEN.EXACT.01 (v382) -- it attacks the SINGLE remaining [O] after v434 (residual (2), the cubic alpha^3 Chern level) and
   - deps: v382_alpha_quillen_exact, v391_alpha_quillen_progress, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v48_em_ward, v342_em_ward_heatkernel, v48, v342 · cited: 1 architecture e8
 
-### `flavor` — Flavor matrix & operators  (16 scripts)
+### `flavor` — Flavor matrix & operators  (17 scripts)
 _The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature._
 
 - **v4_flavor_matrix** [E] `FLAV.R.01, FLAV.H2.01` — residue matrix R: det 8, minors (2,3,5), χ_R, Σ L = 40
@@ -227,14 +227,14 @@ _The integer operator ladder (R, K, Q, L) and its spectral invariants — the fl
   - deps: v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v37 · cited: 2 standard model
 - **v202_rare_kaon** [E/C/X] `FR.RAREKAON.01` — X_t, P_c, κ_± are external EW/QCD input); [N] BR(K⁺)=9.45×10⁻¹¹ lands ON the NA62 2016-2024 combination (9.6 +1.9/-1.8)×10⁻¹¹ (La Thuile 2026), +0.08σ (the 2016-2022 obs (13.0₋₃.₀⁺
   - deps: v18_quark_yukawa, v88_cp_phase_audit · cited: 2 standard model
-- **v220_cp_hexagonal_modulus** [E/C] `CP.MOD.01` — CP lives in the HEXAGONAL phase fiber, not the square seam deck (a geometric sharpening of red-team Target D). The seam deck is the SQUARE modulus j(i)=1728, Aut Z/4 (the μ₄ clock)
-  - deps: v88_cp_phase_audit, v214_seam_pillowcase, v215_seam_deck_killtest · cited: 2 standard model, 5 redteam
-- **v225_dual_normal_frame** [E/C] `DUAL.FRAME.01` — CP sits where the magnitude bijection (Target D) fails.
-  - deps: HOR.DUALANCHOR.01, FLAV.SELECTOR.01, v220_cp_hexagonal_modulus · cited: 5 redteam
+- **v220_cp_hexagonal_modulus** [-] `(no ledger claim)` — CP lives in the HEXAGONAL phase fiber, not the square seam deck (a geometric sharpening of red-team Target D). The seam deck is the SQUARE modulus j(i)=1728, Aut Z/4 (the μ₄ clock)
+  - cited: 2 standard model, 5 redteam
+- **v225_dual_normal_frame** [-] `(no ledger claim)` — CP sits where the magnitude bijection (Target D) fails.
+  - cited: 5 redteam
 - **v230_center_budget_norms** [E/C] `CENTER.NORM.01` — The Sheet-Diamond center budget (7,11,13) is the three LOCAL NORMS of the theory. C=R+Q diag(1,0,0), row sums (7,11,13): 7=N_ℤ[ω](3+2ω) (Eisenstein/hex = scalaron), 13=N_ℤ[i](3+2i)
   - deps: v222_cm_norm_duality, v218_diamond_axis_geometry, ARCH.QBL.01 · cited: 2 standard model
 - **v231_cp_mu6_phases** [E/C] `CP.MU6.01` — Both CP phases are mu6 powers of ONE hexagonal CM unit, split by the sheet -- a structural reduction of red-team Target D. With rho=e^{i pi/3} (the j=0 Eisenstein CM unit): delta_C
-  - deps: v220_cp_hexagonal_modulus, v225_dual_normal_frame, v88_cp_phase_audit · cited: 5 redteam
+  - deps: v220_cp_hexagonal_modulus.py; v561_cp_channel_identities, v225_dual_normal_frame.py; v561_cp_channel_identities, v88_cp_phase_audit · cited: 5 redteam
 - **v233_cp_triality_phase** [E/C] `CP.TRIALITY.01` — The CP phase is the UNIVERSAL family/triality phase, only sheet-split -- one step past v231 in mu6 = mu3 (family/triality) x mu2 (sheet). mu6=mu3 x mu2 (gcd(3,2)=1): the Z3 trialit
   - deps: v231_cp_mu6_phases, v88_cp_phase_audit, v232_e8_kleinian_seam · cited: origin theory, 5 redteam
 - **v415_gaussian_operator** [E/C] `DIAMOND.GAUSS.01` — The square CM-norm dictionary is operator-realised and the mu4 deck is intrinsic: the Gaussian arithmetic of v222/v230 lifted from numbers to OPERATORS via J=[U,V]/3, the complex s
@@ -243,6 +243,8 @@ _The integer operator ladder (R, K, Q, L) and its spectral invariants — the fl
   - deps: v415_gaussian_operator, v222_cm_norm_duality, v230_center_budget_norms, v88_cp_phase_audit, v415, v222, v230, v233 · cited: 2 standard model
 - **v488_majorana_clebsch_door** [E/O] `FLAV.NUSCALE.04` — FLAV.NUSCALE.04: the 3/5 Clebsch door of the seesaw rung, enumerated and CLOSED -- v482's named escape (a third-generation Majorana factor r ~ 1.6696, 0.18% from g_car/N_fam = 5/3)
   - deps: v482_seesaw_rung_decision, v481_seesaw_carrier_ladder, v247_e8_branching_no126, v247, v249, v470, v481, v482 · cited: 2 standard model
+- **v561_cp_channel_identities** [E/O] `CP.CHANNEL.IDENT.01` — the CP mirror as algebra: the prime-front gauge-degree toolkit turned on the four CP ledger rows, promoted as exact narrowings (no marker moves, no CP derivation claimed): (1) the 
+  - deps: redteam/rt_D_upoint.py; v561_cp_channel_identities, v227_degree_exponent_channel_split.py; v561_cp_channel_identities, v220_cp_hexagonal_modulus.py; v561_cp_channel_identities, v225_dual_normal_frame.py; v561_cp_channel_identities, v231_cp_mu6_phases, v88_cp_phase_audit, v84_frozen_registry, v88 · cited: 5 redteam
 
 ### `masses` — Masses, leptons & quark ratios  (12 scripts)
 _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-Plücker quark ratios._
@@ -268,7 +270,7 @@ _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-P
 - **v224_diamond_ftransfer_path** [E/C] `FTR.PATH.01` — F_transfer as ONE path on the Sheet Diamond, not four external interfaces. Family M(s,t)=R+Q diag(s,t,t): the transfer corners K=M(1,−1),C=M(1,0),F=M(1,1) lie on the SHEET axis (s=
   - deps: v218_diamond_axis_geometry, v213_ftransfer_functor · cited: 2 standard model, research contracts
 - **v229_lepton_frobenius_algebra** [E/C] `LEP.FROB.01` — a commutative Frobenius algebra. The C₆ shift has charpoly t⁶−1 (spectrum μ₆=μ₃ family ×μ₂ sheet). PMNS extension via Aut(A)+the hex CM point is [C].
-  - deps: FLAV.LEPTON.01, ARCH.HEXRES.01, v220_cp_hexagonal_modulus · cited: 2 standard model
+  - deps: FLAV.LEPTON.01, ARCH.HEXRES.01, v220_cp_hexagonal_modulus.py; v561_cp_channel_identities · cited: 2 standard model
 - **v533_ftransfer_disc7_norm** [E/C/O] `FTR.DISC7.NORM.01` — Sheet transfer = disc −7 norm line: D(t)=N(α_t), α_{t+1}=α_t+2, norms (2,4,14,32) on J→K→C→F, constant disc −7
   - deps: v224_diamond_ftransfer_path, DIAMOND.SHEET.SOURCE.J.01 (v412), DIAMOND.SHEET.CALCULUS.01 (v413), v224 · cited: 2 standard model, research contracts
 
@@ -798,7 +800,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v87_bulk_uniqueness_reduction** [E/C/O] `GATE.METRIC.05` — red-team Target A = ONE residual: holomorphy ⇒ unique 2D bulk (LR/KLM/BKLR); machine contrast: SO(16)₁ admits SIX modular invariants (incl. both E₈-extension pairings) ⇒ non-holomo
   - deps: v83_e8net_holomorphic_uniqueness, redteam/rt_A_e8net, v83, v77 · cited: 5 redteam
 - **v88_cp_phase_audit** [E/C/O] `FLAV.CP.01` — decision at σ_γ ≤ 0.96° (LHCb/Belle II); J-inversion flagged magnitude-contaminated
-  - deps: redteam/rt_D_upoint, v84_frozen_registry, FLAV.CKM.01 · cited: 1 architecture e8, 5 redteam
+  - deps: redteam/rt_D_upoint.py; v561_cp_channel_identities, v84_frozen_registry, FLAV.CKM.01 · cited: 1 architecture e8, 5 redteam
 - **v89_carrier_index_lemma** [E/C/O] `GATE.METRIC.06` — the glue-group order IS the inclusion index; all three glue sectors are h=1 currents (248=45+15+64+64+60); holomorphy FOLLOWS from μ-additivity 16/4²=1 ⇒ Gate A ⇔ an index computat
   - deps: v87_bulk_uniqueness_reduction, v83_e8net_holomorphic_uniqueness, v1_e8_glue, v77 · cited: 5 redteam
 - **v90_conical_defect_chain** [E/O] `SEAM.AREACOEFF.03` — Fursaev–Solodukhin factor DERIVED, not imported: smoothed-cone Gauss–Bonnet ∫K = 2π(1−α) exactly (smoothing-independent), codim-2 lift 4π(1−α)A, replica ⇒ S = 4πkA; with k=c₃/2: S 
@@ -1140,7 +1142,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v428_overdet_reclass** [E/C] `OVERDET.WITNESS.RECLASS.01` — OVERDET.WITNESS.RECLASS.01 -- the honest correction of v427: applying v427's own multiply-vs-compress test to v427 itself. The (2,3,5) Brieskorn singularity (v236) is the ONE gener
   - deps: v427_overdet_witness_map, v236_brieskorn_capstone, v53_compiler_core, v305, v313 · cited: safeguards
 - **v430_other_side_reverse_audit** [E/O] `E8.OTHERSIDE.AUDIT.01` — E8.OTHERSIDE.AUDIT.01: the 'other side of the seam' (double-cover deck / conjugate sheet S⁻) audited against E8's UNMAPPED Casimir degrees -- the sheet/deck complement of v354/v355
-  - deps: v354_e8_reverse_audit, v355_e8_unmapped_bandwidth, v227_degree_exponent_channel_split, E8.CAS.01, v58, v109 · cited: 4 frontier, 5 redteam
+  - deps: v354_e8_reverse_audit, v355_e8_unmapped_bandwidth, v227_degree_exponent_channel_split.py; v561_cp_channel_identities, E8.CAS.01, v58, v109 · cited: 4 frontier, 5 redteam
 - **v431_e8_degree_ladder** [E/C/O] `E8.DEGREE.LADDER.01` — E8.DEGREE.LADDER.01: the reverse-audit 'unmapped' E8 Casimir degrees are NOT diffuse overhead but the forced two-family decomposition deg(E8) = 6·spine{2,3,4,5} (+) ({2} U flavor-d
   - deps: v354_e8_reverse_audit, v355_e8_unmapped_bandwidth, v430_other_side_reverse_audit, E8.CAS.01, v91, v135 · cited: 5 redteam
 - **v432_overdet_floor** [E/C] `OVERDET.FLOOR.01` — OVERDET.FLOOR.01: the UNCONDITIONAL improbability floor + the L1<->L2 bridge -- the defensible number that survives even if a skeptic REJECTS the declared formula grammar, compleme
@@ -1173,13 +1175,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `v492`×18, `E8.GLU.01`×17, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `v492`×18, `E8.GLU.01`×17, `v312`×16, `REG.FREEZE.01`×16, `v54`×15, `HOR.NARIAI.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v549_gauge_parity_identities** — `PRIME.GAUGE.PARITY.IDENT.01`
 - **v550_odd_sector_identities** — `PRIME.ODD.SECTOR.IDENT.01`
 - **v551_ritz_ceiling_certificate** — `PRIME.RITZ.CEIL.01`
 - **v552_angle_instruments** — `PRIME.ANGLE.INSTR.01`
@@ -1191,4 +1192,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v558_bilinear_rank_identities** — `PRIME.BILINEAR.RANK.01`
 - **v559_phase2_capstone** — `PRIME.PHASE2.CAPSTONE.01`
 - **v560_frame_deficit_identities** — `PRIME.FRAME.DEFICIT.01`
+- **v561_cp_channel_identities** — `CP.CHANNEL.IDENT.01`
 

@@ -180,6 +180,11 @@ $6$); complex amplitudes leave an $n$-th-root branch ambiguity ($\{1,1,1\},\{\om
 \{\omega^2,\omega^2,\omega^2\}$ share all ratios and product $1$); a zero amplitude is degenerate.
 \textbf{Genuine residual:} the bijection fixes amplitude \emph{magnitudes} only --- CP phases
 $\delta_{\mathrm{CKM}},\delta_{\mathrm{PMNS}}$ are complex and are \emph{not} folded into $\vgeo$.
+\textbf{Narrowed (T177 mirror, \veri{v561\_cp\_channel\_identities.py}):} the magnitude data carry
+\emph{exactly zero} phase on the TFPT sectors ($\arg\prod_ic_i=0$ exactly for both the lepton and
+the up-quark triple), and the $\mu_3$ branch group is blind precisely because its order divides
+$\Nfam=3$ (a $\mu_4$ branch would already shift the product phase) --- so the residual is a
+\emph{fiber} datum (the hexagonal CM unit), not a magnitude datum.
 \end{keybox}
 
 \noindent\textbf{Verdict.} Holds for TFPT once four hypotheses (real, positive, fixed branch, no
@@ -561,16 +566,31 @@ $(\text{ratios},\text{product})\Rightarrow\vgeo$ bijection lives), the fundament
 $128=\operatorname{rank}E_8\cdot\dim S^+$ (the \emph{phase/glue} channel). The un-covered CP phases of
 Target~D are exactly the $128$ phase channel --- a clean home, not a new gate; whether $128$ also hosts a
 dark sector is Frontier, \emph{not} asserted (this replaces the over-strong ``$S^-$ is dark matter''
-reading, now sharpened by \vref{v430}: the other side $S^-$ is matched $\{2,128\}$ structure, forced-disjoint from the unmapped $\{12,14,18,20,24\}$). \textbf{(ii) A hexagonal modulus (\veri{v220\_cp\_hexagonal\_modulus.py}).} The seam
+reading, now sharpened by \vref{v430}: the other side $S^-$ is matched $\{2,128\}$ structure, forced-disjoint from the unmapped $\{12,14,18,20,24\}$).
+Strengthened on the fiber by the T177 mirror (\veri{v561\_cp\_channel\_identities.py}): the typing has
+an \emph{exact} hexagonal realisation --- $\sum_k\rho^{d_k}=4\rho$ ($\arg=\pi/3$ exactly) against
+$\sum_k\rho^{m_k}=4$ ($\arg=0$ exactly) --- with a parity typing forced by integer parity (all degrees
+even $\Rightarrow$ the phase channel is sheet-\emph{even}; all exponents odd $\Rightarrow$ the
+magnitude channel is sheet-\emph{odd}), so the phase-channel angle is \emph{sheet-blind}: it carries
+$\pi/3$ but cannot distinguish quark from lepton (the channel typing stays \mC). \textbf{(ii) A hexagonal modulus (\veri{v220\_cp\_hexagonal\_modulus.py}).} The seam
 deck is the \emph{square} modulus ($j{=}1728$, $\Z/4$ clock; the kill-test selects it), which is real and
 carries no phase; its exceptional partner is the \emph{hexagonal} modulus $j{=}0$ ($\tau{=}\rho{=}e^{i\pi/3}$,
 $\Z/6$, CM by $\Z[\omega]$). The frozen leading reading $\delta=\pi/3+3\lambda_C^2=68.65^\circ$ has leading
 term $\pi/3=\arg\rho$, the hexagonal CM phase; CP lives in the $\Z/6$ phase \emph{fiber} over the $\Z/4$ seam,
-not in the deck. \textbf{(iii) An orientation (\veri{v225\_dual\_normal\_frame.py}).} The dual
+not in the deck. The T177 mirror \emph{scopes} the reading (\veri{v561\_cp\_channel\_identities.py}):
+only the leading term $\arg\rho=\pi/3$ is character-covariant under the parity/sector involution; the
+full $\delta=\pi/3+3\lambda_C^2$ has \emph{no} character (a CP-even correction added to a CP-odd
+angle) and is a branch/frame-relative quantity --- the frozen reading itself is untouched
+(\texttt{REG.FREEZE.01}). \textbf{(iii) An orientation (\veri{v225\_dual\_normal\_frame.py}).} The dual
 normal frame $d=a^\top R^{-1}=-\tfrac12(1,1,-2)$ (Nariai/horizon normal) and $n=(5,-9,6)$ (first-generation
 selector, $n^\top R=(8,0,0)$) has oriented volume $\det(\mathbf1,d,n)=21=\Nfam\cdot7$, and rotating by the
-hexagonal unit gives $\operatorname{Im}\det(\mathbf1,d,\rho n)=21\sin(\pi/3)\neq0$ --- CP sits precisely in
-the \emph{orientation} of the normal frame, exactly where the magnitude bijection fails. All three are \mE\
+hexagonal unit gives $\operatorname{Im}\det(\mathbf1,d,\rho n)=21\sin(\pi/3)\neq0$ --- the CP orientation
+\emph{reading}, sitting exactly where the magnitude bijection fails. Narrowed sharply by the T177
+mirror (\veri{v561\_cp\_channel\_identities.py}): that reading is homogeneous of degree $+1$ in the
+frame normalisation, so the \emph{number} $21\sin(\pi/3)$ is frame data, not an invariant; dividing by
+the oriented volume removes the frame identically
+($\operatorname{Im}(\rho\det)/\det=\operatorname{Im}\rho$ exactly), so the invariant core is the fiber
+datum $\operatorname{Im}\rho=\sin(\pi/3)$ and the \emph{sign} is a declared orientation. All three are \mE\
 geometry; the physical CP \emph{derivation} stays the Target-D \mC\ residual (the seam deck is not
 re-selected, the registry $\delta$ is untouched). \textbf{(iv) One hexagonal unit, two sheets
 (\veri{v231\_cp\_mu6\_phases.py}).} The reduction is sharper still: \emph{both} CP phases are $\mu_6$ powers

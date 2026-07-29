@@ -43,6 +43,599 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · XXI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "T177 backflow: the CP mirror — two invariants carry "
+      },
+      {
+        "k": "m",
+        "v": "\\pi/3"
+      },
+      {
+        "k": "t",
+        "v": ", four CP ledger rows narrowed, none upgraded (DEGENERATE) + "
+      },
+      {
+        "k": "c",
+        "v": "v561"
+      },
+      {
+        "k": "t",
+        "v": " CP channel identities promoted + ledger/paper/diary/website sync"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T177 ("
+            },
+            {
+              "k": "c",
+              "v": "cp_invariant_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "CP.INVARIANT"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "49/49"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "0.2"
+            },
+            {
+              "k": "t",
+              "v": " s, verdict DEGENERATE, sandbox; the reverse flow resumed while T176 runs)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The gauge-degree toolkit of T173/T174 turned on the four CP ledger rows ("
+        },
+        {
+          "k": "c",
+          "v": "REDTEAM.D.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.CHAN.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "CP.MOD.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "DUAL.FRAME.01"
+        },
+        {
+          "k": "t",
+          "v": "). All four constructions rebuilt exactly from the compiler primitives ("
+        },
+        {
+          "k": "m",
+          "v": "\\delta=\\pi/3+3\\lambda_C^2=1.198231638"
+        },
+        {
+          "k": "t",
+          "v": " rad certified against v88/v220; "
+        },
+        {
+          "k": "m",
+          "v": "\\det(\\mathbf1,d,n)=21"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "J=3.327\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": " with the CKM unitary to "
+        },
+        {
+          "k": "m",
+          "v": "10^{-41}"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "New exact identity:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on the hexagonal unit "
+        },
+        {
+          "k": "m",
+          "v": "\\rho=e^{i\\pi/3}"
+        },
+        {
+          "k": "t",
+          "v": " the phase channel carries "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_k\\rho^{d_k}=4\\rho"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\arg=\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": " exactly, sheet-even — the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " degrees are even) against the magnitude channel "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_k\\rho^{m_k}=4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\arg=0"
+        },
+        {
+          "k": "t",
+          "v": " exactly, sheet-odd — the exponents are odd). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Tier-1 invariance is empty by algebra"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (both kernels commute with conjugation, so every "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": "-carrier is conjugation-odd); "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "two"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " inequivalent Jarlskog-class invariants carry "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": " (sheet-even channel angle vs sheet-odd orientation), neither coupled to the frame — what is frame data is the oriented volume "
+        },
+        {
+          "k": "m",
+          "v": "21"
+        },
+        {
+          "k": "t",
+          "v": " and the sign, not the angle. The Jarlskog benchmark passes the invariance criteria and fails only the "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": "-carrier test (its content is "
+        },
+        {
+          "k": "m",
+          "v": "\\delta"
+        },
+        {
+          "k": "t",
+          "v": "), validating the criterion instead of the value."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Four ledger rows narrowed, NO marker moves."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "REDTEAM.D.01"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\arg\\prod c=0"
+        },
+        {
+          "k": "t",
+          "v": " exactly on both sectors; the residual is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "fiber"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " datum, not a magnitude datum (branch blindness "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " order divides "
+        },
+        {
+          "k": "m",
+          "v": "\\Nfam=3"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "c",
+          "v": "E8.CHAN.01"
+        },
+        {
+          "k": "t",
+          "v": ": the exact hexagonal realisation "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " parity typing recorded; the phase-channel angle is sheet-blind (cannot distinguish quark from lepton). "
+        },
+        {
+          "k": "c",
+          "v": "CP.MOD.01"
+        },
+        {
+          "k": "t",
+          "v": ": scope narrowed — the invariant part of the frozen reading is the leading term "
+        },
+        {
+          "k": "m",
+          "v": "\\arg\\rho=\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": ", the full "
+        },
+        {
+          "k": "m",
+          "v": "\\delta"
+        },
+        {
+          "k": "t",
+          "v": " is branch/frame-relative (no character; "
+        },
+        {
+          "k": "c",
+          "v": "REG.FREEZE.01"
+        },
+        {
+          "k": "t",
+          "v": " untouched). "
+        },
+        {
+          "k": "c",
+          "v": "DUAL.FRAME.01"
+        },
+        {
+          "k": "t",
+          "v": ": the orientation "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "reading"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is degree "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " in the frame normalisation ("
+        },
+        {
+          "k": "m",
+          "v": "21\\sin(\\pi/3)"
+        },
+        {
+          "k": "t",
+          "v": " is frame data); the invariant core is the fiber datum "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Im}\\rho=\\sin(\\pi/3)"
+        },
+        {
+          "k": "t",
+          "v": ", the sign a declared orientation. Prose narrowed in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " (Target D keybox "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the located-residual box)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Promotion "
+            },
+            {
+              "k": "c",
+              "v": "v561_cp_channel_identities.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CP.CHANNEL.IDENT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "25"
+            },
+            {
+              "k": "t",
+              "v": " checks, "
+            },
+            {
+              "k": "m",
+              "v": "{\\sim}1"
+            },
+            {
+              "k": "t",
+              "v": " s, sympy-exact)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact cores as one load-bearing module: the hexagonal channel identity with parity typing and mutation controls ("
+        },
+        {
+          "k": "m",
+          "v": "e^{i\\pi/5}"
+        },
+        {
+          "k": "t",
+          "v": ", mutated lists) plus the honest caveat wired as a check; Tier-1 emptiness as algebra; the frame removal ("
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Im}(\\rho\\det)/\\det=\\operatorname{Im}\\rho"
+        },
+        {
+          "k": "t",
+          "v": " exactly, degree "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " account); the two Tier-2 characters as verified homomorphisms; the Jarlskog anchor ("
+        },
+        {
+          "k": "m",
+          "v": "J"
+        },
+        {
+          "k": "t",
+          "v": " passes rephasing/CP-oddness, fails only the carrier test). Narrowing statements only — no CP derivation claimed, R1/R2 explicitly OPEN. Suite "
+        },
+        {
+          "k": "m",
+          "v": "554\\to555"
+        },
+        {
+          "k": "t",
+          "v": " scripts."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Diary entry Teil 177 in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " (counters "
+        },
+        {
+          "k": "m",
+          "v": "176"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4765/4765"
+        },
+        {
+          "k": "t",
+          "v": " checks; T176 and Paper II run in parallel); prime-front paper T177 reverse-flow subsection "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " probe-index row "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " counters; website: prime-front feed entry T177 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " v561 promotion entry, status counters, DAG node, "
+        },
+        {
+          "k": "c",
+          "v": "ScriptIndex"
+        },
+        {
+          "k": "t",
+          "v": " / changelog mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · XX",
     "heading": [
       {

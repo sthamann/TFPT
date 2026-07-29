@@ -415,6 +415,7 @@ const NODES: DagNode[] = [
       "v225_dual_normal_frame.py",
       "v231_cp_mu6_phases.py",
       "v233_cp_triality_phase.py",
+      "v561_cp_channel_identities.py",
     ],
   },
   {

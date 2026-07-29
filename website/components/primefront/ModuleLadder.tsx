@@ -155,12 +155,18 @@ const MODULES = [
     title: "Frame/deficit identities · phase 2",
     checks: 24,
   },
+  {
+    id: "v561",
+    claim: "CP.CHANNEL.IDENT.01",
+    title: "CP channel/invariant identities · T177 backflow",
+    checks: 25,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 175;
-const SANDBOX_CHECKS = 4716;
+const SANDBOX_PROBES = 176;
+const SANDBOX_CHECKS = 4765;
 
 export function ModuleLadder() {
   return (

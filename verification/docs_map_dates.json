@@ -656,8 +656,8 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Target D --- $U_{\\mathrm{point}}\\to\\vgeo$::1": {
-  "hash": "97cb4a7ed0bf",
-  "date": "2026-06-12"
+  "hash": "53aacccc4826",
+  "date": "2026-07-29"
  },
  "tfpt_5_redteam::section::Target E --- $\\vgeo$ as the unique dimensional floor::1": {
   "hash": "b7454d7d4217",
@@ -672,8 +672,8 @@
   "date": "2026-07-24"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "8d14ae920ad2",
-  "date": "2026-07-24"
+  "hash": "590287dcbc66",
+  "date": "2026-07-29"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
   "hash": "50c90976f69a",
