@@ -7,11 +7,11 @@
 %  the paper is deliberately independent of any surrounding document
 %  set and uses no vocabulary beyond standard numerical analysis.
 %
-%  DRAFT STATUS (this revision): Sections 1-4 are written out in full,
-%  with complete proofs.  Sections 5-9 carry their statements in final
-%  form together with proof sketches; the full write-ups, the no-go
-%  table of Section 7 and the measurement tables of Section 8 are
-%  completed in a later pass.  The typing table of Section 1.3 records
+%  DRAFT STATUS (this revision): Sections 1-6 are written out in full,
+%  with complete proofs.  Sections 7-9 carry their statements in final
+%  form; the no-go table of Section 7 and the measurement tables of
+%  Section 8 are completed in a later pass.  The typing table of
+%  Section 1.3 records
 %  the intended status of every numbered statement, and nothing in it is
 %  silently upgraded.
 % ---------------------------------------------------------------------
@@ -310,10 +310,25 @@ D0 exact split (Prop.~\ref{prop:split}) & proved & needs an admissible
 D1 polarisation (Prop.~\ref{prop:polarisation}) & proved & \\
 D Theorem D, rank three (Thm.~\ref{thm:rank3}) & proved & every $h$, every
   truncation \\
-D3 majorants (Cor.~\ref{cor:majorant}) & proved & declared class of
-  majorants \\
-D4 Type II rank (Meas.~\ref{meas:typeII}) & measured & bandwidth
-  $\Rightarrow\eta$-rank lemma: open writing task \\
+D wedge form (Lem.~\ref{lem:wedge}) & \emph{conditional} & proved given
+  rank-one reads; the defect is measured \\
+D3 majorants (Cor.~\ref{cor:majorant}) & proved & the class
+  $\mathfrak M$ of Def.~\ref{def:majclass}; the route reading of
+  Rem.~\ref{rem:routeclass} is a reading \\
+D3$'$ $\ell^{1}$ mass (Meas.~\ref{meas:l1}) & measured & $41\times$ the signed
+  value; the rank-one defect priced on both surfaces \\
+D4a closed weights (Lem.~\ref{lem:closedweight}) & proved & one formula on
+  $1\le d\le M-1$ \\
+D4b bandwidth $K$ (Lem.~\ref{lem:band}) & proved & the $4K$-dimensional band
+  space \eqref{eq:bandspace} \\
+D4c band $\Rightarrow\eta$-rank (Lem.~\ref{lem:etarank}) & proved & general;
+  $r=(2\Omega+1)(D+1)$ \\
+D4d spline read (Lem.~\ref{lem:spline}) & proved & $\eta=O(K^{2}/N^{2})$ \\
+D4 Type II $\eta$-rank (Prop.~\ref{prop:typeII}) & proved &
+  $\sigma_{4K+1}\le\eta\sqrt{RC}$; needs the interior hypothesis
+  \eqref{eq:interior} \\
+D4$'$ Type II collapse (Meas.~\ref{meas:typeII}) & measured & the observed
+  $2$ is sharper than the proved $8$ and stays measured \\
 D5 reference window (Meas.~\ref{meas:refwindow}) & measured & the
   three-term cancellation \\
 \midrule
@@ -328,16 +343,21 @@ density curve (Meas.~\ref{meas:density}) & measured & undecidability is part
 placement (Meas.~\ref{meas:placement}) & measured & controlled experiment \\
 \end{xltabular}}
 
-Table~\ref{tab:typing} is the first thing to read. Three entries deserve
+Table~\ref{tab:typing} is the first thing to read. Four entries deserve
 emphasis. Proposition~\ref{prop:direction} and the harmonic-mean half of
 Proposition~\ref{prop:collapse} are \emph{conditional}: they are proved
 implications whose hypothesis is positive definiteness of the raw Gram block,
 which on the surfaces of Section~\ref{sec:numerics} is a numerical fact about
-finitely many finite matrices and nothing more. Measurement~\ref{meas:typeII} is
-the one place where a statement of the source material does not convert:
-``effective rank $O(1)$'' is not a theorem, the substitute (a bandwidth
-$\Rightarrow$ $\eta$-rank lemma with a declared truncation error) is not written
-in this revision, and the row therefore stays measured.
+finitely many finite matrices and nothing more. Lemma~\ref{lem:wedge} is
+conditional in the same sense, on a rank-one hypothesis whose defect is
+measured. And Measurement~\ref{meas:typeII} is the one place where a phrase of
+the source material does not convert: ``effective rank $O(1)$'' is not a
+theorem. What is proved instead is the chain
+Lemmata~\ref{lem:closedweight}--\ref{lem:spline} and
+Proposition~\ref{prop:typeII}, which bounds the $(4K+1)$-st singular value of a
+factorisation-indexed block by a declared truncation error under a declared
+interior hypothesis; the measured number of significant singular values is
+smaller than what that proposition gives, and it therefore stays measured.
 
 \subsection{Notation}
 \label{sec:notation}
@@ -1124,8 +1144,8 @@ the battery.
 \section{The two-dimensional reduction}
 \label{sec:twodim}
 
-\draftnote{Sections~\ref{sec:twodim}--\ref{sec:limits} carry their statements in
-final form together with proof sketches. The full write-ups, the priced table of
+\draftnote{Sections~\ref{sec:open}--\ref{sec:limits} carry their statements in
+final form together with proof sketches. The priced table of
 Section~\ref{sec:open} and the measurement tables of
 Section~\ref{sec:numerics} are completed in a later pass; the type of each
 statement is recorded in Table~\ref{tab:typing} and nothing is upgraded in the
@@ -1149,13 +1169,44 @@ constrained minimum of Lemma~\ref{lem:constrained} at $k=2$:
 \end{equation}
 \end{proposition}
 
-\begin{proof}[Proof sketch]
-Lemma~\ref{lem:nesting} at $k=2$ gives
-$1/g_2=G_{11}-G_{12}^{2}/G_{22}=G_{11}(1-r_{12}^{2})$, and
-Lemma~\ref{lem:constrained} identifies the minimiser as
-$G_2^{-1}e_1/(G_2^{-1}e_1)_1=(1,-G_{21}/G_{22})$. The second identity is the
-first divided by $g_1=1/G_{11}$, i.e.\ the case $k=2$ of
-\eqref{eq:regression}.
+\begin{proof}
+Since $G_2\PD$ we have $G_{11}>0$, $G_{22}>0$ and $\det G_2>0$.
+
+\emph{The minimum.} Lemma~\ref{lem:nesting} applied to $X=G_2$ with
+$\xi=G_{11}$, $b=G_{12}$ and $Y=G_{22}$ gives
+\[
+  \frac1{g_2}=\frac1{(G_2^{-1})_{11}}=G_{11}-\frac{G_{12}^{2}}{G_{22}}
+  =G_{11}\Bigl(1-\frac{G_{12}^{2}}{G_{11}G_{22}}\Bigr)
+  =G_{11}\bigl(1-r_{12}^{2}\bigr),
+\]
+and by Lemma~\ref{lem:constrained} this number is the constrained minimum.
+
+\emph{The minimiser.} By Cramer's rule
+$G_2^{-1}e_1=(\det G_2)^{-1}(G_{22},-G_{12})^{\T}$, so
+$G_2^{-1}e_1/(e_1^{\T}G_2^{-1}e_1)=(1,-G_{12}/G_{22})^{\T}=u$ because
+$G_{21}=G_{12}$; Lemma~\ref{lem:constrained} identifies this vector as the
+unique minimiser. It is worth verifying the value on $u$ by substitution rather
+than through the inverse:
+\[
+  u^{\T}G_2u=G_{11}-2\frac{G_{12}^{2}}{G_{22}}
+  +\frac{G_{12}^{2}}{G_{22}^{2}}\,G_{22}
+  =G_{11}-\frac{G_{12}^{2}}{G_{22}},
+\]
+the same number, and this second computation uses only $G_{22}\ne0$.
+
+\emph{The gain.} $g_1=1/G_{11}$, so dividing the first display by $g_1$ gives
+$G_{11}g_2=1/(1-r_{12}^{2})$, which is the case $k=2$ of
+\eqref{eq:regression} with $R_2^{2}=r_{12}^{2}$.
+
+\emph{The two readings of $r_{12}^{2}$ agree.} By \eqref{eq:gram},
+$G_{ij}=\ah_{ij}/\sqrt{\mu_i\mu_j}$, hence
+\[
+  \frac{G_{12}^{2}}{G_{11}G_{22}}
+  =\frac{\ah_{12}^{2}/(\mu_1\mu_2)}
+        {(\ah_{11}/\mu_1)\,(\ah_{22}/\mu_2)}
+  =\frac{\ah_{12}^{2}}{\ah_{11}\ah_{22}} :
+\]
+the diagonal congruence cancels, as it must by Lemma~\ref{lem:diaginv}.
 \end{proof}
 
 \begin{proposition}[pivot identity]
@@ -1172,10 +1223,38 @@ so the relative excess $\rho=g_k\,\delta^{\T}G_k\delta$ of any explicit
 candidate is an exact number and never an estimate.
 \end{proposition}
 
-\begin{proof}[Proof sketch]
-$G_kx^{\star}=e_1/g_k$ and $\delta_1=0$ annihilate the cross term; this is the
-computation already carried out in the proof of Lemma~\ref{lem:constrained}.
+\begin{proof}
+Write $x^{\star}=G_k^{-1}e_1/g_k$, so that $G_kx^{\star}=e_1/g_k$ and
+$x^{\star}_1=e_1^{\T}G_k^{-1}e_1/g_k=1$. Expanding the quadratic form,
+\[
+  (x^{\star}+\delta)^{\T}G_k(x^{\star}+\delta)
+  =(x^{\star})^{\T}G_kx^{\star}+2\,\delta^{\T}G_kx^{\star}
+  +\delta^{\T}G_k\delta .
+\]
+The first term is $(x^{\star})^{\T}e_1/g_k=x^{\star}_1/g_k=1/g_k$ and the
+cross term is $2\delta^{\T}e_1/g_k=2\delta_1/g_k=0$. No inequality is used at
+any point, which is the content of the word ``exactly'' in \eqref{eq:pivot}:
+$\delta^{\T}G_k\delta$ is not an estimate for the gap between an explicit
+candidate and the optimum, it \emph{is} the gap.
 \end{proof}
+
+\begin{remark}[the sign of the closed vector is not cosmetic]
+\label{rem:wrongsign}
+At $k=2$ the candidate $(1,+G_{12}/G_{22})$ differs from the minimiser of
+Proposition~\ref{prop:K2} by $\delta=(0,2G_{12}/G_{22})$, and
+\eqref{eq:pivot} prices it exactly:
+$\delta^{\T}G_2\delta=4G_{12}^{2}/G_{22}$, so the relative excess is
+\begin{equation}
+\label{eq:wrongsign}
+  \rho=g_2\,\delta^{\T}G_2\delta
+  =\frac{4G_{12}^{2}/G_{22}}{G_{11}\bigl(1-r_{12}^{2}\bigr)}
+  =\frac{4r_{12}^{2}}{1-r_{12}^{2}}
+  \qquad\text{identically},
+\end{equation}
+which diverges precisely where the cancellation is deep. The pivot identity
+therefore also quantifies how a wrong closed vector fails, and it does so
+without a single inequality.
+\end{remark}
 
 \begin{proposition}[the entrywise perturbation, and one cancellation ratio]
 \label{prop:union}
@@ -1200,12 +1279,36 @@ $\varepsilon_{\mathrm{ent}}(k)=\rho\,(1/g_k)/\Theta_k$ with $\rho$ of
 and $1+3r_{12}^{2}\to4$ as $r_{12}^{2}\to1$.
 \end{proposition}
 
-\begin{proof}[Proof sketch]
-\eqref{eq:union} is the definition of $E$: the signs align every term, so the
-sum of $|x^{\star}_i||x^{\star}_j||G_{ij}|$ is attained without cancellation.
-At $k=2$, $|x^{\star}|=(1,|G_{12}|/G_{22})$, whence
-$\Theta_2=G_{11}+2G_{12}^{2}/G_{22}+G_{12}^{2}/G_{22}
-=G_{11}(1+3r_{12}^{2})$; divide by \eqref{eq:K2}.
+\begin{proof}
+\emph{The union identity.} Since $x^{\star}_i\sigma_i=|x^{\star}_i|$ for every
+$i$,
+\[
+  (x^{\star})^{\T}Ex^{\star}
+  =\varepsilon\sum_{i,j}x^{\star}_i\sigma_i\,|G_{ij}|\,\sigma_jx^{\star}_j
+  =\varepsilon\sum_{i,j}|x^{\star}_i|\,|G_{ij}|\,|x^{\star}_j|
+  =\varepsilon\,\Theta_k ,
+\]
+and every term of the middle sum is nonnegative, so no cancellation occurs and
+the modulus may be taken termwise: the sign-aligned perturbation is the one
+that realises the $\ell^{1}$ mass of $G_k$ in the direction $x^{\star}$. For
+the threshold, \eqref{eq:pivot} says the value at $x^{\star}$ is $1/g_k$ and
+that a relative excess $\rho$ is an absolute excess $\rho/g_k$, so the
+perturbation exhausts the value exactly when $\varepsilon\Theta_k=\rho/g_k$.
+
+\emph{The closed ratio at $k=2$.} By Proposition~\ref{prop:K2},
+$x^{\star}=(1,-G_{12}/G_{22})$, hence $|x^{\star}|=(1,|G_{12}|/G_{22})$ because
+$G_{22}>0$; and since $G_{11},G_{22}>0$,
+\[
+  \Theta_2
+  =\underbrace{G_{11}}_{(1,1)}
+  +\underbrace{2\,\frac{|G_{12}|}{G_{22}}\,|G_{12}|}_{(1,2)\text{ and }(2,1)}
+  +\underbrace{\frac{G_{12}^{2}}{G_{22}^{2}}\,G_{22}}_{(2,2)}
+  =G_{11}+3\,\frac{G_{12}^{2}}{G_{22}}
+  =G_{11}\bigl(1+3r_{12}^{2}\bigr).
+\]
+The constant is $3$ and not $2$ because the off-diagonal is counted twice and
+the $(2,2)$ entry once. Dividing \eqref{eq:K2} by this gives
+\eqref{eq:union2}, and $1+3r_{12}^{2}\to4$ as $r_{12}^{2}\to1$.
 \end{proof}
 
 \begin{remark}
@@ -1231,12 +1334,32 @@ $W_r=u_{r+1}v_r-u_rv_{r+1}$. Then
 and summing \eqref{eq:wronskian} re-derives $t_1^{\T}t_2=0$.
 \end{lemma}
 
-\begin{proof}[Proof sketch]
-$W_{r-1}-W_r=u_r(v_{r-1}+v_{r+1})-v_r(u_{r-1}+u_{r+1})$, and the recurrences
-$u_{r-1}+u_{r+1}=(2-\mu_1)u_r$, $v_{r-1}+v_{r+1}=(2-\mu_2)v_r$ give
-\eqref{eq:wronskian}. $W_{-1}=0$ is the Dirichlet end; $W_{h-1}=0$ is the odd
-reflection $u_h=-u_{h-1}$, $v_h=-v_{h-1}$, i.e.\ exactly the corner entry $3$ of
-$L_P$.
+\begin{proof}
+By the definition of $W_r$,
+\[
+  W_{r-1}-W_r=(u_rv_{r-1}-u_{r-1}v_r)-(u_{r+1}v_r-u_rv_{r+1})
+  =u_r\bigl(v_{r-1}+v_{r+1}\bigr)-v_r\bigl(u_{r-1}+u_{r+1}\bigr).
+\]
+Rows $0,\dots,h-1$ of $L_Pt_1=\mu_1t_1$ read
+$-u_{r-1}+2u_r-u_{r+1}=\mu_1u_r$ under the two conventions $u_{-1}=0$ and
+$u_h=-u_{h-1}$ --- this is exactly the reading of the rows carried out in the
+proof of Lemma~\ref{lem:kms} --- i.e.\ $u_{r-1}+u_{r+1}=(2-\mu_1)u_r$, and
+likewise $v_{r-1}+v_{r+1}=(2-\mu_2)v_r$. Substituting,
+\[
+  W_{r-1}-W_r=(2-\mu_2)u_rv_r-(2-\mu_1)u_rv_r=(\mu_1-\mu_2)\,u_rv_r ,
+\]
+which is \eqref{eq:wronskian}. The two ends are the two boundary conventions
+and nothing else: $W_{-1}=u_0v_{-1}-u_{-1}v_0=0$ is the Dirichlet end, and
+\[
+  W_{h-1}=u_hv_{h-1}-u_{h-1}v_h
+  =(-u_{h-1})v_{h-1}-u_{h-1}(-v_{h-1})=0
+\]
+is the odd reflection, which by the computation in the proof of
+Lemma~\ref{lem:kms} is precisely the corner entry $3$ of $L_P$. Summing
+\eqref{eq:wronskian} over $r=0,\dots,h-1$ telescopes the right-hand side to
+$W_{-1}-W_{h-1}=0$, so $(\mu_1-\mu_2)\,t_1^{\T}t_2=0$; as $\mu_1\ne\mu_2$,
+orthogonality of the two lowest parity modes is a \emph{consequence} of the
+telescope rather than an independent input.
 \end{proof}
 
 \begin{lemma}[maximal minors carry no arithmetic]
@@ -1252,10 +1375,25 @@ $\mathcal W_{rr'}=u_rv_{r'}-u_{r'}v_r$,
 \end{equation}
 \end{lemma}
 
-\begin{proof}[Proof sketch]
-Lagrange's identity \cite{Lagrange1773} gives the first equality; the second is
-orthonormality of $t_1,t_2$ (Lemma~\ref{lem:kms}).
+\begin{proof}
+Expanding the square and using the symmetry of the double sum,
+\[
+  \tfrac12\sum_{r,r'}\bigl(u_rv_{r'}-u_{r'}v_r\bigr)^{2}
+  =\tfrac12\Bigl[\sum_{r,r'}u_r^{2}v_{r'}^{2}
+    -2\sum_{r,r'}u_rv_r\,u_{r'}v_{r'}
+    +\sum_{r,r'}u_{r'}^{2}v_r^{2}\Bigr]
+  =\lVert u\rVert^{2}\lVert v\rVert^{2}-\langle u,v\rangle^{2},
+\]
+the two outer sums being equal; this is Lagrange's identity
+\cite{Lagrange1773}. For the value, $t_1$ and $t_2$ are orthonormal by
+Lemma~\ref{lem:kms}, so $\lVert u\rVert^{2}=1/\mu_1$,
+$\lVert v\rVert^{2}=1/\mu_2$ and $\langle u,v\rangle=0$.
 \end{proof}
+
+Lemma~\ref{lem:minors} is the reason the near-degeneracy cannot be attributed
+to the mode pair: the full Gram determinant of the two rescaled modes is the
+closed number $1/(\mu_1\mu_2)$, with no comb in it. Whatever becomes small in
+Problem~\ref{prob:R1} becomes small in the metric of $A$ and nowhere else.
 
 \begin{lemma}[the determinant reading, free of positivity]
 \label{lem:detread}
@@ -1270,11 +1408,16 @@ With $\nu_1\ge\nu_2$ the eigenvalues of $\Ah_2$,
 and no positivity of $A$, of $\Ah_2$ or of $G$ is used.
 \end{lemma}
 
-\begin{proof}[Proof sketch]
-$\det\Ah_2=\ah_{11}\ah_{22}-\ah_{12}^{2}=\nu_1\nu_2$; divide by
-$\ah_{11}\ah_{22}$. The last expression is the same computation after the
-diagonal congruence \eqref{eq:gram}, which cancels by
-Lemma~\ref{lem:diaginv}.
+\begin{proof}
+$\det\Ah_2=\ah_{11}\ah_{22}-\ah_{12}^{2}$, so dividing by $\ah_{11}\ah_{22}$
+gives the first equality by the definition of $r_{12}^{2}$. The second is
+$\det\Ah_2=\nu_1\nu_2$, valid for every symmetric $2\times2$ matrix whatever
+the signs of its eigenvalues. The third repeats the first computation for
+$G_2=\MM_2^{-1/2}\Ah_2\MM_2^{-1/2}$, where the diagonal factors cancel exactly
+as in the last step of the proof of Proposition~\ref{prop:K2}. The chain uses
+only $\ah_{11}\ah_{22}\ne0$: no eigenvalue is assumed positive, no
+factorisation is performed, and $\nu_2$ may be negative on both sides of every
+equality.
 \end{proof}
 
 Lemma~\ref{lem:detread} is load-bearing in a negative sense, and we say so
@@ -1289,9 +1432,24 @@ $\nu_1\le\max(\ah_{11},\ah_{22})+|\ah_{12}|$, closed in the three entries and
 uniform in the window.
 \end{lemma}
 
-\begin{proof}[Proof sketch]
-Gershgorin's theorem \cite{Gershgorin1931} for the symmetric $2\times2$ matrix
-$\Ah_2$.
+\begin{proof}
+This is Gershgorin's theorem \cite{Gershgorin1931} for $\Ah_2$; we give the two
+lines because the statement is used with no positivity hypothesis anywhere. The
+eigenvalues of a symmetric $2\times2$ matrix are
+\[
+  \nu_{1,2}=\tfrac12\Bigl[\ah_{11}+\ah_{22}
+  \pm\sqrt{(\ah_{11}-\ah_{22})^{2}+4\ah_{12}^{2}}\Bigr],
+\]
+and $\sqrt{p^{2}+q^{2}}\le|p|+|q|$ gives
+$\sqrt{(\ah_{11}-\ah_{22})^{2}+4\ah_{12}^{2}}\le|\ah_{11}-\ah_{22}|
++2|\ah_{12}|$, whence
+\[
+  \nu_1\le\tfrac12\bigl[\ah_{11}+\ah_{22}+|\ah_{11}-\ah_{22}|\bigr]+|\ah_{12}|
+  =\max(\ah_{11},\ah_{22})+|\ah_{12}| .
+\]
+The closed form makes visible in what sense the bound is uniform in the window:
+it is a function of the three entries alone, with no constant fitted and no
+window excluded.
 \end{proof}
 
 \begin{proposition}[the determinant returns: the $t^{\star}$ collapse]
@@ -1318,31 +1476,86 @@ i.e.\ the harmonic mean of the two eigenvalues bounds $\nu_2$ from above and is
 tight within a factor $2$.
 \end{proposition}
 
-\begin{proof}[Proof sketch]
-For \eqref{eq:collapse}: with $\tau=t^{\star}$ the numerator is
-$\tau^{2}\ah_{11}-2\tau\ah_{12}+\ah_{22}=2(\ah_{22}-\tau\ah_{12})
-=2\tau\bigl(\sqrt{\ah_{11}\ah_{22}}-\ah_{12}\bigr)$ and the denominator is
-$\tau^{2}+1=(\ah_{11}+\ah_{22})/\ah_{11}$; multiply numerator and denominator by
-$\sqrt{\ah_{11}\ah_{22}}+\ah_{12}$ and use
-$\ah_{11}\ah_{22}-\ah_{12}^{2}=\det\Ah_2$. For \eqref{eq:harmonic}, substitute
-$\tr\Ah_2=\nu_1+\nu_2$ and $\det\Ah_2=\nu_1\nu_2$; the two inequalities are
-$\nu_2\le\nu_1$ and $\nu_1+\nu_2\ge\nu_1$ respectively, both of which use
-$\nu_2>0$. Without positivity \eqref{eq:harmonic} is false --- if
-$\nu_1>0>\nu_2$ and $\tr>0$ the right-hand side is negative --- which is why
-the hypothesis is named.
+\begin{proof}
+\emph{The closed form, unconditional.} Put
+$\tau=t^{\star}=\sqrt{\ah_{22}/\ah_{11}}$, well defined because
+$\ah_{11},\ah_{22}>0$, and note the two identities
+$\tau^{2}\ah_{11}=\ah_{22}$ and $\tau\ah_{11}=\sqrt{\ah_{11}\ah_{22}}$, the
+second of which also gives $\ah_{22}=\tau\sqrt{\ah_{11}\ah_{22}}$. The
+numerator of the Rayleigh quotient is
+\[
+  u(\tau)^{\T}\Ah_2u(\tau)=\tau^{2}\ah_{11}-2\tau\ah_{12}+\ah_{22}
+  =2\bigl(\ah_{22}-\tau\ah_{12}\bigr)
+  =2\tau\bigl(\sqrt{\ah_{11}\ah_{22}}-\ah_{12}\bigr),
+\]
+and the denominator is
+$\lVert u(\tau)\rVert^{2}=\tau^{2}+1=(\ah_{11}+\ah_{22})/\ah_{11}$. Hence
+\[
+  R(t^{\star})
+  =\frac{2\tau\ah_{11}\bigl(\sqrt{\ah_{11}\ah_{22}}-\ah_{12}\bigr)}
+        {\ah_{11}+\ah_{22}},
+\]
+and multiplying numerator and denominator by
+$\sqrt{\ah_{11}\ah_{22}}+\ah_{12}$, then using
+$\ah_{11}\ah_{22}-\ah_{12}^{2}=\det\Ah_2$ and once more
+$\tau\ah_{11}=\sqrt{\ah_{11}\ah_{22}}$, produces \eqref{eq:collapse}. No sign
+is assumed for $\ah_{12}$, for $\det\Ah_2$ or for $\nu_2$; the hypotheses are
+$\ah_{11},\ah_{22}>0$ and, for the displayed quotient,
+$\sqrt{\ah_{11}\ah_{22}}+\ah_{12}\ne0$.
+
+\emph{The harmonic-mean bound, conditional.} Assume $\Ah_2\PD$, so that
+$\nu_1\ge\nu_2>0$. Substituting $\tr\Ah_2=\ah_{11}+\ah_{22}=\nu_1+\nu_2$ and
+$\det\Ah_2=\nu_1\nu_2$ identifies the middle expression of
+\eqref{eq:harmonic} as the harmonic mean of the two eigenvalues, and
+\[
+  \frac{2\nu_1\nu_2}{\nu_1+\nu_2}-\nu_2
+  =\frac{\nu_2(\nu_1-\nu_2)}{\nu_1+\nu_2}\ \ge\ 0,
+  \qquad
+  2\nu_2-\frac{2\nu_1\nu_2}{\nu_1+\nu_2}
+  =\frac{2\nu_2^{2}}{\nu_1+\nu_2}\ \ge\ 0,
+\]
+which are the two inequalities of \eqref{eq:harmonic}. Both use $\nu_2>0$, and
+the hypothesis cannot be dropped: for
+$\Ah_2=\bigl[\begin{smallmatrix}3&4\\4&1\end{smallmatrix}\bigr]$ one has
+$\tr\Ah_2=4>0$ and $\det\Ah_2=-13$, so the middle expression of
+\eqref{eq:harmonic} equals $-13/2$ while
+$\nu_2=2-\sqrt{17}=-2.123\ldots$; the claimed upper bound fails by a wide
+margin. That is why the hypothesis is named in the statement, and why
+Table~\ref{tab:typing} types the two halves of this proposition differently.
 \end{proof}
 
-\begin{remark}
+\begin{remark}[observation: the section is a closed loop]
 \label{rem:selfsimilar}
-Propositions~\ref{prop:K2}--\ref{prop:collapse} are exact reformulations of one
-another, and none of them lowers the accuracy demanded of $\det\Ah_2$: the
-determinant is reintroduced by \eqref{eq:collapse}, the scalar $1-r_{12}^{2}$ is
-the determinant normalised by \eqref{eq:detread}, and the entry threshold of
-\eqref{eq:union2} differs from it by the bounded factor $1+3r_{12}^{2}$. We
-record this as an observation about the identities, not as a theorem; the
-statement ``every exact reformulation costs the same precision'' is a reading of
-a family of identities together with measured accuracy demands, and it belongs
-in Section~\ref{sec:open} in that form.
+Every statement of this section is an \emph{identity} --- with the single
+exception of the Gershgorin bound of Lemma~\ref{lem:gershgorin}, which is an
+inequality about $\nu_1$ and not about $\nu_2$, and of the second half of
+Proposition~\ref{prop:collapse}, which carries a named hypothesis. Reading them
+together:
+\begin{itemize}
+\item the constrained minimum at $K=2$ is $G_{11}(1-r_{12}^{2})$
+  (Proposition~\ref{prop:K2}), so the value of the optimal trial vector is the
+  scalar $1-r_{12}^{2}$ up to the closed factor $G_{11}$;
+\item that scalar is the normalised determinant
+  $\det\Ah_2/(\ah_{11}\ah_{22})$ (Lemma~\ref{lem:detread}), with no positivity
+  used;
+\item the entrywise perturbation threshold is the same scalar up to the factor
+  $1+3r_{12}^{2}\in[1,4]$ (Proposition~\ref{prop:union});
+\item the only member of the Rayleigh family $u(t)=(t,-1)$ that meets the
+  threshold, $t^{\star}=\sqrt{\ah_{22}/\ah_{11}}$, reintroduces
+  $\det\Ah_2$ exactly (Proposition~\ref{prop:collapse});
+\item and the Wronskian and Lagrange identities
+  (Lemmata~\ref{lem:wronskian}--\ref{lem:minors}) say that none of the
+  smallness can be attributed to the two modes.
+\end{itemize}
+Consequently \emph{no stage of the reduction lowers the accuracy demanded of
+$\det\Ah_2$}: the four readings differ by the explicit factors $G_{11}$,
+$\ah_{11}\ah_{22}$, $1+3r_{12}^{2}$ and the closed prefactor of
+\eqref{eq:collapse}, all of which are computable from the three entries and
+none of which is small. We record this as an \emph{observation} about a family
+of identities, not as a theorem: it is a reading, the statement ``every exact
+reformulation costs the same precision'' quantifies over reformulations rather
+than over windows, and how much precision is in fact demanded is a measured
+number that belongs in Section~\ref{sec:open}.
 \end{remark}
 
 \section{The exact bilinear form and the rank classification}
@@ -1372,15 +1585,47 @@ one has $\Ah_2=B-S$ exactly, and each of $S_{11},S_{22},S_{12}$ is a
 \emph{linear} functional of the weight vector $(\varrho_\ell)_\ell$.
 \end{proposition}
 
-\begin{proof}[Proof sketch]
-Linearity of $c\mapsto A\mapsto\Ah$ applied to \eqref{eq:lags} and
-\eqref{eq:Asplit}. For the two-point read: $S_D(mD,u_\ell)
-=\tfrac12[\Delta_D(mD-u_\ell)+\Delta_D(mD+u_\ell)]$; the reflected hat vanishes
-for every $m\ge0$ because $mD+u_\ell\ge u_\ell>D$, and the direct hat is nonzero
-only for $m\in\{m_\ell,m_\ell+1\}$, where the unit-height triangle $\Delta_D$
-takes the values $1-\theta_\ell$ and $\theta_\ell$ respectively. The factor
-$\tfrac12$ is the symmetrisation, and a lag index $\ge M$ falls outside the
-window and contributes nothing.
+\begin{proof}
+\emph{Linearity.} The three maps $c\mapsto\Tm{M}(c)$,
+$X\mapsto\Pi^{\T}X\Pi$ and $Y\mapsto(t_i^{\T}Yt_j)_{i,j\le2}$ are linear, so
+the split \eqref{eq:lags} of the lag sequence induces the corresponding split of
+the $2\times2$ block. Writing $\delta_m$ for the lag sequence supported at the
+single lag $m$ we have $c=c^{\mathrm{arch}}
+-\sum_\ell\varrho_\ell\,\varphi^{(\ell)}$ with $c^{\mathrm{arch}}_m=a(mD)$ and
+$\varphi^{(\ell)}_m=S_D(mD,u_\ell)$, and therefore $\Ah_2=B-S$ with
+$S_{ij}=\sum_\ell\varrho_\ell\sum_{m=0}^{M-1}\varphi^{(\ell)}_m\,
+t_i^{\T}Y^{(m)}t_j$.
+
+\emph{The two-point read.} Fix $\ell$ and $m\ge0$. By definition
+$S_D(mD,u_\ell)=\tfrac12\bigl[\Delta_D(mD-u_\ell)+\Delta_D(mD+u_\ell)\bigr]$,
+and the reflected hat vanishes identically: $mD+u_\ell\ge u_\ell>D$ by
+admissibility, while $\Delta_D$ is supported in $(-D,D)$. For the direct hat,
+$\Delta_D(mD-u_\ell)=\max\{0,1-|m-m_\ell-\theta_\ell|\}$, which is nonzero only
+when $|m-m_\ell-\theta_\ell|<1$, i.e.\ only for $m\in\{m_\ell,m_\ell+1\}$, where
+it takes the values $1-\theta_\ell$ and $\theta_\ell$ --- including the case
+$\theta_\ell=0$, where the second value is $0$ and only one lag is read.
+Admissibility also gives $m_\ell\ge1$, so the lag $m=0$ is never touched by any
+node. The factor $\tfrac12$ in \eqref{eq:split} is the symmetrisation of
+$S_D$, and a lag index $\ge M$ falls outside the window and contributes nothing
+because $Y^{(m)}=0$ there.
+
+\emph{The lag-weight reading.} By Lemma~\ref{lem:gauge} applied to $v=t_i$, the
+coefficient of $c_m$ in $t_i^{\T}At_i$ is the lag weight $w_m(t_i)$ of
+\eqref{eq:weights}; polarising in $i$ and $j$,
+\begin{equation}
+\label{eq:Yread}
+  t_i^{\T}Y^{(m)}t_j=w^{(ij)}_m,
+  \qquad
+  w^{(ij)}:=\tfrac12\bigl[w(t_i+t_j)-w(t_i)-w(t_j)\bigr],
+\end{equation}
+so each entry of $X^{(\ell)}$ is the two-point read of \emph{one closed weight
+vector} at the node position $u_\ell$, and nothing else. This is the form used
+in Section~\ref{sec:band}.
+
+\emph{Linearity in the weights.} Each $S_{ij}=\sum_\ell\varrho_\ell
+X^{(\ell)}_{ij}$ is by construction a linear functional of
+$(\varrho_\ell)_\ell$, with coefficients $X^{(\ell)}_{ij}$ that depend on the
+window, the resolution and the node positions but not on the weights.
 \end{proof}
 
 \begin{proposition}[polarisation of the determinant]
@@ -1402,12 +1647,31 @@ comb weights, and bilinear in them. Moreover
 with $X^{(\ell)}$ the $2\times2$ matrix of \eqref{eq:split}.
 \end{proposition}
 
-\begin{proof}[Proof sketch]
-Both are instances of Theorem~\ref{thm:rank3}\ref{R:pol} below, applied to
-$\Ah_2=B-S$ and to $S=\sum_\ell\varrho_\ell X^{(\ell)}$ respectively; the
-second uses
-bilinearity of $D$ and $\det S=\tfrac12D(S,S)$
-\cite{Lagrange1773,CauchyBinet}.
+\begin{proof}
+\emph{The polarisation.} Expand directly:
+\[
+  \det(B-S)=(B_{11}-S_{11})(B_{22}-S_{22})-(B_{12}-S_{12})^{2}
+  =\det B-\bigl(B_{11}S_{22}+B_{22}S_{11}-2B_{12}S_{12}\bigr)+\det S,
+\]
+which is \eqref{eq:polarisation}; it is also the instance $P=B$, $Q=S$ of
+Theorem~\ref{thm:rank3}\ref{R:pol} below, whose proof is independent of this
+proposition. By Proposition~\ref{prop:split} the three terms are of degree
+$0$, $1$ and $2$ in the weight vector respectively.
+
+\emph{The double sum.} $D$ is symmetric and visibly linear in each argument,
+and $D(S,S)=2S_{11}S_{22}-2S_{12}^{2}=2\det S$. Hence with
+$S=\sum_\ell\varrho_\ell X^{(\ell)}$,
+\[
+  \det S=\tfrac12D(S,S)
+  =\tfrac12\sum_{\ell,\ell'}\varrho_\ell\varrho_{\ell'}\,
+   D\bigl(X^{(\ell)},X^{(\ell')}\bigr)
+  =\sum_{\ell,\ell'}\varrho_\ell\varrho_{\ell'}\,\mathcal K(\ell,\ell'),
+\]
+which is \eqref{eq:doublesum} \cite{Lagrange1773,CauchyBinet}. The kernel is
+symmetric, $\mathcal K(\ell,\ell')=\mathcal K(\ell',\ell)$, and its diagonal is
+$\mathcal K(\ell,\ell)=\tfrac12D(X^{(\ell)},X^{(\ell)})=\det X^{(\ell)}$ ---
+a fact used twice below, in Lemma~\ref{lem:wedge} and in
+Measurement~\ref{meas:l1}.
 \end{proof}
 
 \begin{theorem}[rank three]
@@ -1433,8 +1697,12 @@ Then:
     \rank\mathcal K\;\le\;3
     \qquad\text{for every window, every }h\text{ and every truncation},
   \end{equation}
-  and the nonzero spectrum of $P^{\T}JP$ equals the nonzero spectrum of
-  $JPP^{\T}$, a $3\times3$ matrix.
+  and the nonzero spectrum of $\mathcal K$ equals the nonzero spectrum of the
+  $3\times3$ matrix $\tfrac12JPP^{\T}$.
+\item\label{R:inertia} Moreover $\mathcal K$ has at most \emph{one} positive
+  and at most \emph{two} negative eigenvalues, for every $n$ and every $P$: the
+  signature of $J$ is inherited, so the kernel of \eqref{eq:doublesum} is
+  necessarily indefinite as soon as it has rank $2$ or more.
 \item\label{R:three} Consequently
   $\det S=S_{11}S_{22}-S_{12}^{2}$: the comb--comb term of
   \eqref{eq:polarisation} is a quadratic polynomial in exactly \emph{three}
@@ -1443,71 +1711,505 @@ Then:
 \end{enumerate}
 \end{theorem}
 
-\begin{proof}[Proof sketch]
-\ref{R:pol} Both sides of the first identity are
-$X_{11}X_{22}-X_{12}^{2}$; reading off the bilinear form gives
-$y(P)^{\T}Jy(Q)=P_{11}Q_{22}+P_{22}Q_{11}-2P_{12}Q_{12}=D(P,Q)$, and expanding
-$\tfrac12(y(P)-y(Q))^{\T}J(y(P)-y(Q))$ gives the third relation.
-\ref{R:rank} The upper-left $2\times2$ block $\left(\begin{smallmatrix}0&1\\
-1&0\end{smallmatrix}\right)$ has eigenvalues $\pm1$, and the remaining entry is
-$-2$.
-\ref{R:kernel} $\mathcal K(\ell,\ell')
-=\tfrac12y(X^{(\ell)})^{\T}Jy(X^{(\ell')})$ is the
-$(\ell,\ell')$ entry of $\tfrac12P^{\T}JP$, whose rank is at most $\rank J=3$;
-the
-statement about spectra is the standard fact
-$\operatorname{spec}(UV)\setminus\{0\}=\operatorname{spec}(VU)\setminus\{0\}$
-with $U=P^{\T}$, $V=JP$.
-\ref{R:three} is \ref{R:pol} applied to $S$, whose coordinates are the three
-linear functionals of Proposition~\ref{prop:split}.
+\begin{proof}
+\ref{R:pol} With $y=y(X)$,
+$\tfrac12y^{\T}Jy=\tfrac12\bigl[2X_{11}X_{22}-2X_{12}^{2}\bigr]
+=X_{11}X_{22}-X_{12}^{2}=\det X$. Reading off the associated bilinear form,
+\[
+  y(P)^{\T}Jy(Q)=P_{11}Q_{22}+P_{22}Q_{11}-2P_{12}Q_{12}=D(P,Q),
+\]
+so $D$ is the polarisation of $\det$, and since $y$ is linear,
+\[
+  \det(P-Q)=\tfrac12\bigl(y(P)-y(Q)\bigr)^{\T}J\bigl(y(P)-y(Q)\bigr)
+  =\det P-y(P)^{\T}Jy(Q)+\det Q,
+\]
+which is the third relation.
+
+\ref{R:rank} $J$ is block diagonal: the upper-left block
+$\bigl(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\bigr)$ has eigenvalues
+$\pm1$ with eigenvectors $(1,\pm1,0)$, and the remaining diagonal entry is
+$-2$ with eigenvector $(0,0,1)$. Hence $\operatorname{spec}J=\{1,-1,-2\}$, all
+nonzero, so $\rank J=3$, and the inertia is $(n_+,n_-)=(1,2)$.
+
+\ref{R:kernel} By \ref{R:pol},
+$\mathcal K(\ell,\ell')=\tfrac12D(X^{(\ell)},X^{(\ell')})
+=\tfrac12y(X^{(\ell)})^{\T}Jy(X^{(\ell')})$, which is the $(\ell,\ell')$ entry
+of $\tfrac12P^{\T}JP$; and $\rank(P^{\T}JP)\le\rank J=3$ whatever $n$ and
+whatever the columns of $P$ are. For the spectra, apply
+$\operatorname{spec}(UV)\setminus\{0\}
+=\operatorname{spec}(VU)\setminus\{0\}$ with $U=P^{\T}$ and
+$V=\tfrac12JP$: then $UV=\mathcal K$ and $VU=\tfrac12JPP^{\T}$. The latter is a
+product of the symmetric matrices $J$ and $PP^{\T}\PSD$, so its spectrum is
+real, as it must be.
+
+\ref{R:inertia} Suppose $\mathcal K$ had two positive eigenvalues. Then there
+is a two-dimensional $Z\subseteq\R^{n}$ with $z^{\T}\mathcal Kz>0$ for every
+$z\in Z\setminus\{0\}$. For such $z$ this forces $Pz\ne0$, so $P|_Z$ is
+injective and $PZ$ is two-dimensional; and every $0\ne\eta\in PZ$ is $\eta=Pz$
+for some $0\ne z\in Z$, so $\eta^{\T}J\eta=2z^{\T}\mathcal Kz>0$. Thus $J$
+would be positive definite on a two-dimensional subspace, contradicting
+$n_+(J)=1$ by Sylvester's law of inertia \cite{Sylvester1852} in the
+Courant--Fischer form \cite{CourantFischer1920}. The same argument with three
+and $n_-(J)=2$ gives the second half.
+
+\ref{R:three} Apply \ref{R:pol} to $X=S$: $\det S=S_{11}S_{22}-S_{12}^{2}$,
+and the three coordinates of $y(S)$ are the three linear functionals of
+Proposition~\ref{prop:split}. Since $\det S$ is a function of $y(S)$ alone, it
+depends on $(\varrho_\ell)$ through nothing else.
 \end{proof}
 
 Part~\ref{R:rank} will strike a reader as elementary --- the determinant of a
 $2\times2$ matrix is visibly a quadratic form in its three entries --- and it
-is. What the theorem is for is part~\ref{R:three} together with the following
-corollary, which is where the elementary observation has teeth.
+is. What the theorem is for is parts~\ref{R:inertia}--\ref{R:three} together
+with the corollary below, which is where the elementary observation has teeth.
+Before that, one reading of the kernel deserves to be isolated, because it is
+the source of the mixed signs.
+
+\begin{lemma}[the wedge form of the kernel, under exact rank one]
+\label{lem:wedge}
+Write $x\wedge x'=x_1x'_2-x_2x'_1$ for $x,x'\in\R^{2}$. If every read is of
+rank one, $X^{(\ell)}=\epsilon_\ell\,x_\ell x_\ell^{\T}$ with
+$\epsilon_\ell\in\{\pm1\}$ and $x_\ell\in\R^{2}$, then
+\begin{equation}
+\label{eq:wedge}
+  \mathcal K(\ell,\ell')
+  =\tfrac12\,\epsilon_\ell\epsilon_{\ell'}\,
+  \bigl(x_\ell\wedge x_{\ell'}\bigr)^{2} .
+\end{equation}
+In particular the diagonal vanishes, $\mathcal K(\ell,\ell)=0$, and the sign
+pattern of $\mathcal K$ is exactly that of $\epsilon_\ell\epsilon_{\ell'}$ ---
+mixed as soon as the $\epsilon_\ell$ are not all equal. The hypothesis is
+equivalent to $\det X^{(\ell)}=0$ for every $\ell$ and is \emph{not} an
+identity: Measurement~\ref{meas:l1} reports how far from it the reads are.
+\end{lemma}
+
+\begin{proof}
+For $P=\epsilon aa^{\T}$ and $Q=\epsilon'bb^{\T}$,
+\[
+  D(P,Q)=\epsilon\epsilon'\bigl[a_1^{2}b_2^{2}+a_2^{2}b_1^{2}
+  -2a_1a_2b_1b_2\bigr]
+  =\epsilon\epsilon'\bigl(a_1b_2-a_2b_1\bigr)^{2},
+\]
+and $\mathcal K=\tfrac12D$. The diagonal is
+$\tfrac12(x_\ell\wedge x_\ell)^{2}=0$. That the hypothesis is equivalent to
+$\det X^{(\ell)}=0$ is the classification of symmetric $2\times2$ matrices of
+rank at most one, and $\mathcal K(\ell,\ell)=\det X^{(\ell)}$ by the last line
+of the proof of Proposition~\ref{prop:polarisation}, so the diagonal vanishes
+if and only if the hypothesis holds.
+\end{proof}
+
+\begin{definition}[norm-factorised majorants]
+\label{def:majclass}
+A bound on the comb--comb term is \emph{norm-factorised} if there are a norm
+$\mathcal N$ on $\R^{n}$ and a nondecreasing
+$\Phi:[0,\infty)\to[0,\infty)$ with
+\begin{equation}
+\label{eq:majclass}
+  |\det S|\;\le\;\Phi\bigl(\mathcal N(\varrho)\bigr)
+  \qquad\text{for every admissible weight vector }\varrho .
+\end{equation}
+The class of all such bounds, over all norms and all nondecreasing $\Phi$, is
+written $\mathfrak M$.
+\end{definition}
 
 \begin{corollary}[what a majorant of the comb--comb term can see]
 \label{cor:majorant}
-Let $\mathcal N$ be any norm on the weight vectors and suppose
-$|\det S|\le\Phi(\mathcal N(\varrho))$ for all admissible weight vectors, with
-$\Phi$ nondecreasing. Then necessarily
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.6em]
+\item\label{M:bound} If \eqref{eq:majclass} holds then necessarily
 \begin{equation}
 \label{eq:majorant}
   \Phi(t)\;\ge\;\sup\bigl\{|y_1y_2-y_3^{2}|:\ y\in\R^{3},\
   y=\bigl(S_{11},S_{22},S_{12}\bigr)\ \text{for some }\varrho\ \text{with }
   \mathcal N(\varrho)\le t\bigr\}.
 \end{equation}
-In particular, no estimate that reaches $\det S$ through a norm of $\varrho$ can
-distinguish two weight vectors with the same image
-$(S_{11},S_{22},S_{12})$, and any cancellation between the three terms of
-\eqref{eq:polarisation} is invisible to it.
+\item\label{M:blind} Consequently no member of $\mathfrak M$ distinguishes two
+  weight vectors with the same image $y(S)=(S_{11},S_{22},S_{12})$, and every
+  cancellation between the three terms of \eqref{eq:polarisation} is invisible
+  to it: the bound sees a point of $\R^{3}$, the phenomenon is a relation
+  between that point and $B$.
+\item\label{M:decomp} If a route proceeds through a declared linear
+  decomposition $\varrho=\sum_{q\le p}\varrho^{(q)}$ and bounds
+  $|\det S|\le\sum_{q,q'}\Phi_{qq'}\bigl(\mathcal N(\varrho^{(q)}),
+  \mathcal N(\varrho^{(q')})\bigr)$ with each $\Phi_{qq'}$ nondecreasing in
+  both arguments, then each summand obeys the analogue of \ref{M:bound} for the
+  corresponding block of the bilinear form, and the total pays in addition the
+  triangle inequality across the $p^{2}$ pairs --- whose cost is measured in
+  Measurement~\ref{meas:l1}.
+\end{enumerate}
 \end{corollary}
 
-\begin{proof}[Proof sketch]
-Immediate from Theorem~\ref{thm:rank3}\ref{R:three}: $\det S$ is a function of
-the image point only, so a bound valid for all $\varrho$ in a norm ball must
-dominate the supremum over the image of that ball.
+\begin{proof}
+\ref{M:bound} By Theorem~\ref{thm:rank3}\ref{R:three}, $\det S=y_1y_2-y_3^{2}$
+at $y=y(S)$. Fix $t>0$ and let $\varrho$ satisfy $\mathcal N(\varrho)\le t$.
+Then \eqref{eq:majclass} and monotonicity of $\Phi$ give
+$|y_1y_2-y_3^{2}|\le\Phi(\mathcal N(\varrho))\le\Phi(t)$; taking the supremum
+over all such $\varrho$ gives \eqref{eq:majorant}.
+
+\ref{M:blind} $\varrho\mapsto y(S)$ is linear and, for $n\ge4$, has a kernel of
+dimension at least $n-3$; two weight vectors differing by an element of that
+kernel have the same $\det S$ and the same $\det\Ah_2$, while
+\eqref{eq:majclass} sees them only through $\mathcal N$. That the three terms
+of \eqref{eq:polarisation} may cancel to any order without $\Phi$ noticing is
+then immediate, since $\Phi$ does not involve $B$ at all.
+
+\ref{M:decomp} Apply \ref{M:bound} to each pair $(q,q')$ with $S$ replaced by
+the pair of blocks, using bilinearity of $D$ in
+\eqref{eq:doublesum}; the last clause is the statement that
+$|\sum_{q,q'}\cdot|\le\sum_{q,q'}|\cdot|$ has been used, whose slack is the
+$\ell^{1}$-versus-signed ratio measured below.
 \end{proof}
 
-\begin{measurement}[Type II blocks: a measured rank collapse]
+\begin{remark}[the five declared routes, classified]
+\label{rem:routeclass}
+Of the five preregistered routes of Measurement~\ref{meas:routes}, three are
+members of $\mathfrak M$ as they are stated: the large-sieve/duality route, with
+$\mathcal N=\lVert\cdot\rVert_2$ and
+$\Phi(t)=\lVert\mathcal K\rVert_{\mathrm{op}}t^{2}$; the
+Montgomery--Vaughan route, which bounds each of the three linear functionals
+through $\lVert\varrho\rVert_2$ and then combines them by
+$|\det S|\le|S_{11}||S_{22}|+S_{12}^{2}$; and the comb--comb term of the exact
+split $|\det B|+|D(B,S)|+|\det S|$. Vaughan's Type~I $+$ Type~II route is of
+the shape of Corollary~\ref{cor:majorant}\ref{M:decomp} with $p=4$. The
+remaining route, Cauchy--Schwarz on $\Ah_2$, is not a majorant of $\det S$ at
+all: it asserts $\ah_{12}^{2}\le\ah_{11}\ah_{22}$, i.e.\ $\det\Ah_2\ge0$, and
+is carried in the table as the trivial baseline. This classification is a
+\emph{reading of the five routes as declared}, not a theorem about every
+conceivable implementation of them; what is a theorem is
+Corollary~\ref{cor:majorant} itself.
+\end{remark}
+
+\begin{measurement}[mixed signs, and what the triangle inequality costs]
+\label{meas:l1}
+Two numbers price the two hypotheses just used. \emph{The rank-one defect}: the
+median of $|\det X^{(\ell)}|/\lVert X^{(\ell)}\rVert^{2}$ over the nodes is
+$1.3\cdot10^{-4}$ on the reference window of
+Measurement~\ref{meas:refwindow}, and on Surface~I it lies between
+$4.6\cdot10^{-3}$ and $3.1\cdot10^{-2}$, below the declared bar
+$5\cdot10^{-2}$ on every window. So the wedge reading of
+Lemma~\ref{lem:wedge} is accurate but not exact --- the diagonal of
+$\mathcal K$ is small, not zero, and it carries about $6\%$ of $\det S$ on the
+reference window. \emph{The $\ell^{1}$ mass}: on a declared atom
+subsample of the reference window,
+\begin{equation}
+\label{eq:l1mass}
+  \sum_{\ell,\ell'}\varrho_\ell\varrho_{\ell'}
+  \bigl|\mathcal K(\ell,\ell')\bigr|
+  \;=\;41\times
+  \Bigl|\sum_{\ell,\ell'}\varrho_\ell\varrho_{\ell'}
+  \mathcal K(\ell,\ell')\Bigr| ,
+\end{equation}
+the ratio being reported on the window it was computed on and on no other. A
+route that replaces the signed double sum by its absolute value therefore loses
+that factor before it begins, which is the measured content of
+Corollary~\ref{cor:majorant}\ref{M:decomp}; the mixed signs it loses are the
+ones Lemma~\ref{lem:wedge} and Theorem~\ref{thm:rank3}\ref{R:inertia} predict.
+\end{measurement}
+
+\subsection{The bandwidth of the weight kernel}
+\label{sec:band}
+
+By Proposition~\ref{prop:split} an entry of $X^{(\ell)}$ is the two-point read
+of one closed weight vector at the single real argument $\tau_\ell=u_\ell/D$.
+This subsection identifies that weight vector in closed form, extracts the
+consequence for a factorisation-indexed block, and says exactly where the
+argument stops. Throughout, $\tau$ denotes a real lag argument, $N=2h+1$ and
+$\omega_k=2\pi k/N$ as in \eqref{eq:kms}.
+
+\begin{lemma}[the closed lag weights of a parity mode]
+\label{lem:closedweight}
+For $1\le k\le h$ the lag weights \eqref{eq:weights} of the parity mode $t_k$
+are $w_0(t_k)=1$ and
+\begin{equation}
+\label{eq:closedweight}
+  w_d(t_k)
+  =\frac2N\Bigl[(N-d)\cos(\omega_kd)+\cot(\omega_k)\,\sin(\omega_kd)\Bigr],
+  \qquad 1\le d\le M-1 ,
+\end{equation}
+one formula for the whole range, with no change of branch at $d=h$.
+\end{lemma}
+
+\begin{proof}
+Apply Lemma~\ref{lem:gauge} with $c=\delta_d$ the lag sequence supported at the
+single lag $d$, and let $A_{(d)}$ be the odd window form \eqref{eq:Adef} of
+$\delta_d$: since $\sum_ec_ew_e=w_d$ for this $c$, we get
+$w_d(v)=v^{\T}A_{(d)}v$, i.e.\ by \eqref{eq:Adef}
+\begin{equation}
+\label{eq:wquad}
+  w_d(v)=\sum_{r,r'=0}^{h-1}v_rv_{r'}
+  \Bigl(\mathbf 1[\,|r-r'|=d\,]-\mathbf 1[\,r+r'=M-1-d\,]\Bigr).
+\end{equation}
+Put $T_x=\sin(\omega_kx)$ for $x\in\Z$. Then $T$ is $N$-periodic and odd, so
+$T_{N-m}=-T_m$, and $(t_k)_r=(2/\sqrt N)T_{r+1}$. Substituting $x=r+1$,
+$y=r'+1\in[1,h]$ in \eqref{eq:wquad}, the Hankel condition $r+r'=M-1-d$ becomes
+$x+y=N-d$, where $T_y=T_{N-d-x}=-T_{x+d}$, so the Hankel term enters with a
+$+$ sign; the constraint $y\in[1,h]$ becomes $x\in[h+1-d,2h-d]$. The Toeplitz
+term contributes $\sum_{|x-y|=d}T_xT_y=2\sum_{x=1}^{h-d}T_xT_{x+d}$, each pair
+being counted twice for $d\ge1$. Hence, for $d\ge1$,
+\begin{equation}
+\label{eq:twopartial}
+  w_d(t_k)=\frac4N\Bigl[\,2\!\!\sum_{x=1}^{h-d}\!T_xT_{x+d}
+  +\sum_{x\in I_d}T_xT_{x+d}\Bigr],
+  \qquad
+  I_d=[h+1-d,\,2h-d]\cap[1,h] .
+\end{equation}
+Write $\Phi(m)=\sum_{x=1}^{m}T_xT_{x+d}$. For $1\le d\le h$ one has
+$I_d=[h+1-d,h]$, so the bracket is
+$2\Phi(h-d)+[\Phi(h)-\Phi(h-d)]=\Phi(h-d)+\Phi(h)$; for $h<d\le M-1$ the first
+sum is empty and $I_d=[1,2h-d]$, so the bracket is $\Phi(2h-d)$.
+
+For $\Phi$, use $2\sin a\sin b=\cos(a-b)-\cos(a+b)$ and the Dirichlet sum
+$\sum_{x=1}^{m}\cos(a+2\omega x)
+=\frac{\sin(m\omega)}{\sin\omega}\cos\bigl(a+(m+1)\omega\bigr)$, legitimate
+because $N$ is odd and $1\le k\le h$, so $\sin\omega_k\ne0$ and
+$2\omega_k\notin2\pi\Z$:
+\begin{equation}
+\label{eq:Phi}
+  \Phi(m)=\frac m2\cos(\omega d)
+  -\frac12\,\frac{\sin(m\omega)}{\sin\omega}\,
+  \cos\bigl(\omega(m+d+1)\bigr),
+  \qquad\omega=\omega_k .
+\end{equation}
+Now evaluate, using $\omega N=2\pi k$ and $h=(N-1)/2$, so that
+$\omega h=\pi k-\omega/2$. At $m=h$: $\sin(\omega h)=-(-1)^k\sin(\omega/2)$ and
+$\cos(\omega(h+d+1))=(-1)^k\cos(\omega(d+\tfrac12))$, whence
+$\Phi(h)=\tfrac N4\cos(\omega d)-\tfrac14\tan(\tfrac\omega2)\sin(\omega d)$
+after expanding $\cos(\omega(d+\tfrac12))$. At $m=h-d$:
+$\sin(\omega(h-d))=-(-1)^k\sin(\omega(d+\tfrac12))$ and
+$\cos(\omega(h+1))=(-1)^k\cos(\omega/2)$, whence
+$\Phi(h-d)=\tfrac{N-2d}4\cos(\omega d)
++\tfrac14\cot(\tfrac\omega2)\sin(\omega d)$. Adding, and using
+$\cot(\tfrac\omega2)-\tan(\tfrac\omega2)=2\cot\omega$,
+\[
+  \Phi(h-d)+\Phi(h)=\frac{N-d}2\cos(\omega d)
+  +\frac12\cot(\omega)\sin(\omega d),
+\]
+which with the factor $4/N$ is \eqref{eq:closedweight}. At $m=2h-d=N-1-d$ one
+has $\sin(\omega m)=-\sin(\omega(d+1))$ and $\cos(\omega(m+d+1))=1$, so
+$\Phi(2h-d)=\tfrac{N-d}2\cos(\omega d)+\tfrac12\cot(\omega)\sin(\omega d)$ as
+well --- the same expression, which is why \eqref{eq:closedweight} has no branch
+at $d=h$. Finally $w_0=\lVert t_k\rVert^{2}=1$ by \eqref{eq:represent}; the
+right-hand side of \eqref{eq:closedweight} equals $2$ at $d=0$, the discrepancy
+being the doubling of the lag-$d$ pairs, which does not occur at $d=0$.
+\end{proof}
+
+\begin{lemma}[the weight sequence has bandwidth $K$ and degree one]
+\label{lem:band}
+Let $\mathcal V_K\subset\R^{M-1}$ be the span of the $4K$ sequences
+\begin{equation}
+\label{eq:bandspace}
+  d\mapsto\cos(\omega_kd),\quad \sin(\omega_kd),\quad
+  d\cos(\omega_kd),\quad d\sin(\omega_kd),
+  \qquad k=1,\dots,K,\ 1\le d\le M-1 .
+\end{equation}
+Then $\bigl(w_d(v)\bigr)_{d=1}^{M-1}\in\mathcal V_K$ for every
+$v\in\operatorname{span}\{t_1,\dots,t_K\}$, and consequently also for every
+polarised weight vector $w^{(ij)}$ of \eqref{eq:Yread} with $i,j\le K$. The
+coefficients of $d\cos(\omega_kd)$ and $d\sin(\omega_kd)$ are proportional to
+$a_k^{2}$, where $v=\sum_ka_kt_k$.
+\end{lemma}
+
+\begin{proof}
+Repeat the proof of Lemma~\ref{lem:closedweight} with $T_x$ replaced by
+$V_x=\sum_{k\le K}a_k\sin(\omega_kx)$: \eqref{eq:twopartial} holds verbatim with
+$\Phi_v(m)=\sum_{x=1}^{m}V_xV_{x+d}
+=\sum_{k,l}a_ka_l\sum_{x=1}^{m}\sin(\omega_kx)\sin(\omega_l(x+d))$. For $k=l$
+the inner sum is \eqref{eq:Phi}, contributing the four sequences of
+\eqref{eq:bandspace} at frequency $\omega_k$, the linear-in-$d$ ones with
+coefficient proportional to $a_k^{2}$ through the term $\tfrac m2\cos(\omega d)$
+at $m=h-d$ resp.\ $m=2h-d$. For $k\ne l$ write
+$2\sin(\omega_kx)\sin(\omega_lx+\omega_ld)
+=\cos(\lambda_-x-\omega_ld)-\cos(\lambda_+x+\omega_ld)$ with
+$\lambda_\pm=\omega_k\pm\omega_l$, and sum by
+$\sum_{x=1}^{m}\cos(a+\lambda x)
+=\frac{\sin(\lambda m/2)}{\sin(\lambda/2)}\cos\bigl(a+\lambda(m+1)/2\bigr)$,
+legitimate since $0<|k\pm l|<N$ gives $\sin(\lambda_\pm/2)\ne0$. Each such term
+is a product $\sin P\cos Q=\tfrac12[\sin(P+Q)+\sin(P-Q)]$ in which $P$ and $Q$
+are affine in $d$ --- the evaluation points $m\in\{h,h-d,2h-d\}$ are affine in
+$d$ with slope $0$ or $-1$ --- and a direct computation of the slopes, using
+$\omega_kN,\omega_lN\in2\pi\Z$, gives $\mathrm{slope}(P+Q)=-\omega_k$ and
+$\mathrm{slope}(P-Q)=+\omega_l$ in both cases $\lambda_\pm$ and at all three
+evaluation points. So the off-diagonal terms contribute only the frequencies
+$\omega_k,\omega_l$ with constant coefficients, and no linear-in-$d$ factor
+appears because $\sin(\lambda m/2)/\sin(\lambda/2)$ is bounded, not linear. The
+statement for $w^{(ij)}$ follows because $\mathcal V_K$ is a linear space and
+$w^{(ij)}=\tfrac12[w(t_i+t_j)-w(t_i)-w(t_j)]$ with all three arguments in
+$\operatorname{span}\{t_1,\dots,t_K\}$.
+\end{proof}
+
+The next lemma is the general mechanism, stated once and independently of the
+weights. It is the statement asked for in the source material: bandwidth in an
+additive variable implies rank at a declared truncation error.
+
+\begin{lemma}[bandwidth $\Rightarrow$ $\eta$-rank]
+\label{lem:etarank}
+Let $x_1,\dots,x_R$ and $y_1,\dots,y_C$ be real and let $I\subseteq\R$ contain
+every $x_b+y_e$. Let $\Omega\ge0$ be the number of frequencies
+$\nu_1,\dots,\nu_\Omega>0$, let $q\ge0$ be a degree bound, and let
+\begin{equation}
+\label{eq:bandexp}
+  W_\Omega(\tau)=p_0(\tau)+\sum_{j=1}^{\Omega}
+  \bigl[p_j(\tau)\cos(\nu_j\tau)+\tilde p_j(\tau)\sin(\nu_j\tau)\bigr],
+  \qquad \deg p_j,\deg\tilde p_j\le q .
+\end{equation}
+If $W:I\to\R$ satisfies $\sup_{\tau\in I}|W(\tau)-W_\Omega(\tau)|\le\eta$, then
+the matrix $F_{be}=W(x_b+y_e)$ obeys
+\begin{equation}
+\label{eq:etarank}
+  \sigma_{r+1}(F)\;\le\;\eta\sqrt{RC},
+  \qquad r=(2\Omega+1)(q+1);
+\end{equation}
+if the expansion \eqref{eq:bandexp} has no polynomial term $p_0$, then
+$r=2\Omega(q+1)$ suffices. Row and column rescalings
+$F\mapsto\diag(\alpha)F\diag(\beta)$ leave $r$ unchanged and replace the
+right-hand side by $\eta\lVert\alpha\rVert_2\lVert\beta\rVert_2$.
+\end{lemma}
+
+\begin{proof}
+Let $F_\Omega$ be the matrix built from $W_\Omega$. Fix $j$ and $a\le q$. Since
+$(x+y)^{a}=\sum_{p\le a}\binom ap x^{p}y^{a-p}$ and
+$e^{i\nu(x+y)}=e^{i\nu x}e^{i\nu y}$, the function
+$\tau^{a}e^{i\nu_j\tau}$ of $\tau=x+y$ is a finite sum of products
+$[x^{p}e^{i\nu_jx}]\cdot[y^{a-p}e^{i\nu_jy}]$. Taking real and
+imaginary parts, the columns of the matrices
+$\bigl[\tau^{a}\cos(\nu_j\tau)\bigr]_{be}$ and
+$\bigl[\tau^{a}\sin(\nu_j\tau)\bigr]_{be}$ lie in the span of the $2(q+1)$
+vectors $\bigl(x_b^{p}\cos(\nu_jx_b)\bigr)_b$,
+$\bigl(x_b^{p}\sin(\nu_jx_b)\bigr)_b$, $p\le q$. Likewise the columns of
+$[p_0(x_b+y_e)]_{be}$ lie in the span of the $q+1$ vectors $(x_b^{p})_b$.
+Summing over $j$, $\rank F_\Omega\le2\Omega(q+1)+(q+1)=(2\Omega+1)(q+1)$, and
+the $p_0$-free case drops the last summand. Write $E=F-F_\Omega$; then
+$\lVert E\rVert_2\le\lVert E\rVert_F\le\eta\sqrt{RC}$, and Weyl's perturbation
+inequality for singular values \cite{Weyl1912} gives
+$\sigma_{r+1}(F)\le\sigma_{r+1}(F_\Omega)+\lVert E\rVert_2=\lVert E\rVert_2$
+because $\sigma_{r+1}(F_\Omega)=0$. For the rescaling, ranks are unchanged by
+invertible diagonal factors, and
+$|\alpha_bE_{be}\beta_e|\le\eta|\alpha_b||\beta_e|$ gives
+$\lVert\diag(\alpha)E\diag(\beta)\rVert_F
+\le\eta\lVert\alpha\rVert_2\lVert\beta\rVert_2$.
+\end{proof}
+
+What Lemma~\ref{lem:etarank} needs is a band expansion of the \emph{read}, and
+the read of Proposition~\ref{prop:split} is not the sequence $(w_d)$ but its
+piecewise-linear interpolant. That interpolation is the only source of $\eta$.
+
+\begin{lemma}[the two-point read against the analytic read]
+\label{lem:spline}
+Let $v\in\operatorname{span}\{t_1,\dots,t_K\}$ and let $W_v$ be the function
+obtained by evaluating the representation of Lemma~\ref{lem:band} at real
+argument, so that $W_v(d)=w_d(v)$ for integers $1\le d\le M-1$. For
+$1\le\tau\le M-1$ the two-point read
+$\widehat W_v(\tau)=(1-\theta)w_{m}(v)+\theta w_{m+1}(v)$,
+$m=\lfloor\tau\rfloor$, $\theta=\tau-m$, of \eqref{eq:split} satisfies
+\begin{equation}
+\label{eq:splinebound}
+  \sup_{1\le\tau\le M-1}\bigl|\widehat W_v(\tau)-W_v(\tau)\bigr|
+  \;\le\;\tfrac18\sup_{1\le\tau\le M-1}|W_v''(\tau)|
+  \;\le\;\tfrac18\bigl[\omega_K^{2}\Lambda_0+2\omega_K\Lambda_1\bigr],
+\end{equation}
+where $\Lambda_0=\sum_k(|\alpha_k|+|\gamma_k|+M(|\beta_k|+|\delta_k|))$ and
+$\Lambda_1=\sum_k(|\beta_k|+|\delta_k|)$ in the notation
+$W_v(\tau)=\sum_k[(\alpha_k+\beta_k\tau)\cos(\omega_k\tau)
++(\gamma_k+\delta_k\tau)\sin(\omega_k\tau)]$. For the single mode $t_k$,
+\begin{equation}
+\label{eq:splinemode}
+  \sup_{1\le\tau\le M-1}\bigl|\widehat W_{t_k}(\tau)-W_{t_k}(\tau)\bigr|
+  \;\le\;\frac{\pi^{2}k^{2}}{N^{2}}\Bigl(1+\frac3{2\pi k}\Bigr)
+  \;=\;O\!\left(\frac{k^{2}}{N^{2}}\right).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The first inequality is the standard error of linear interpolation on a unit
+interval: for $f\in C^{2}[m,m+1]$ the error at $\tau=m+\theta$ is
+$-\tfrac12\theta(1-\theta)f''(\xi)$ for some $\xi$, and
+$\max_\theta\theta(1-\theta)=\tfrac14$. For the second, differentiate the
+representation twice: each term contributes
+$-\omega_k^{2}(\alpha_k+\beta_k\tau)\cos(\omega_k\tau)
++2\omega_k\beta_k\bigl(-\sin(\omega_k\tau)\bigr)$ and its sine analogue, so
+$|W_v''|\le\omega_K^{2}\Lambda_0+2\omega_K\Lambda_1$ on $\tau\le M$. For a
+single mode, \eqref{eq:closedweight} gives
+$\alpha_k=2$, $\beta_k=-2/N$, $\gamma_k=(2/N)\cot\omega_k$, $\delta_k=0$, hence
+$|W_{t_k}''|\le\tfrac2N[\omega_k^{2}N+2\omega_k+\omega_k^{2}\cot\omega_k]
+\le2\omega_k^{2}+6\omega_k/N$ using $\omega\cot\omega\le1$; dividing by $8$ and
+inserting $\omega_k=2\pi k/N$ gives \eqref{eq:splinemode}.
+\end{proof}
+
+\begin{proposition}[$\eta$-rank of a factorisation-indexed block]
+\label{prop:typeII}
+Fix $K$, let the weight vector be either $w(v)$ for some
+$v\in\operatorname{span}\{t_1,\dots,t_K\}$ or a polarised $w^{(ij)}$ with
+$i,j\le K$, and let $\widehat W$ be its two-point read as in
+Lemma~\ref{lem:spline}. Let $\mathcal B_1,\mathcal B_2$ be two finite sets of
+reals $>1$, put $x_{b_1}=\log b_1/D$, $y_{b_2}=\log b_2/D$, and assume the block
+is \emph{interior}:
+\begin{equation}
+\label{eq:interior}
+  1\le x_{b_1}+y_{b_2}\le M-1
+  \qquad\text{for all } b_1\in\mathcal B_1,\ b_2\in\mathcal B_2 .
+\end{equation}
+Then the matrix of reads
+$F_{b_1b_2}=\widehat W\bigl(x_{b_1}+y_{b_2}\bigr)$, $R=|\mathcal B_1|$,
+$C=|\mathcal B_2|$, satisfies
+\begin{equation}
+\label{eq:typeIIrank}
+  \sigma_{4K+1}(F)\;\le\;\eta\sqrt{RC},
+  \qquad
+  \eta=\tfrac18\sup_{1\le\tau\le M-1}|W''| ,
+\end{equation}
+with $\eta$ bounded by \eqref{eq:splinebound}; for a single mode
+$\eta\le\pi^{2}k^{2}N^{-2}(1+3/(2\pi k))$. The same bound holds for
+$\diag(\alpha)F\diag(\beta)$ with $\eta$ replaced by
+$\eta\lVert\alpha\rVert_2\lVert\beta\rVert_2$, so arithmetic coefficients
+attached to the two index sets do not change the rank count.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:band} the analytic read $W$ lies in the span of the $4K$
+functions \eqref{eq:bandspace}, which is an expansion \eqref{eq:bandexp} with
+$\Omega=K$ frequencies, degree bound $q=1$ and no polynomial term $p_0$; by
+Lemma~\ref{lem:spline} $\sup|\widehat W-W|\le\eta$ on $[1,M-1]$, which by
+\eqref{eq:interior} contains every $x_{b_1}+y_{b_2}$. Lemma~\ref{lem:etarank}
+with $r=2\Omega(q+1)=4K$ gives \eqref{eq:typeIIrank}, and its last clause gives
+the rescaled version.
+\end{proof}
+
+\begin{remark}[what \eqref{eq:interior} costs, and what the proposition does not
+say]
+\label{rem:interior}
+Hypothesis \eqref{eq:interior} is not cosmetic. Outside the window the weights
+are set to zero ($w_m:=0$ for $m\ge M$ in Proposition~\ref{prop:split}), and the
+truncation $\mathbf 1[x+y\le M-1]$ is a triangular cut-off, which is \emph{not}
+of low rank: without \eqref{eq:interior} the conclusion is false as stated, and
+what survives is the same bound for the interior sub-block plus the cut-off
+part. On the declared surfaces the node cap makes the block interior by
+construction, and that is how the hypothesis is met. Two further limits are
+worth naming. The bound \eqref{eq:typeIIrank} is a statement about $4K$ singular
+values with a declared $\eta$; it is not a statement that the block ``has rank
+$O(1)$'' in any asymptotic sense, and the $\sqrt{RC}$ factor means that the
+useful regime is $\eta\sqrt{RC}\ll\sigma_1(F)$, which is a condition on the
+declared surface and is checked there, not here. And the whole mechanism is
+about \emph{additivity} of the lag argument under factorisation: it uses that
+the read happens at $\tau=u/D$ with $u=\log n$, so that $n=b_1b_2$ gives
+$\tau=x_{b_1}+y_{b_2}$. Nothing arithmetic beyond that additivity is used, and
+nothing is claimed about any Type~II sum beyond the singular values of its
+weight matrix.
+\end{remark}
+
+\begin{measurement}[Type II blocks: the measured collapse inside the proved
+bound]
 \label{meas:typeII}
-The closed weights of Proposition~\ref{prop:split} see a node only through its
-position $u_\ell$, i.e.\ for the prime-power instance only through
-$\log n_\ell$; under a factorisation $n=bd$ that is $\log b+\log d$, and a
-bounded-frequency function of a sum is a finite-rank kernel. On the declared
-surface the Type~II blocks of Vaughan's identity \cite{Vaughan1977} built from
-these weights are measured to have $2$ singular values carrying $99.9\%$ of the
-mass, against $153$ for a generic kernel of the same size, over the scanned
-range of the decomposition parameter; the four-term identity for $\Lambda$ is
-verified coefficientwise first.
-\draftnote{This row is \emph{measured} and stays measured. ``Effective rank
-$O(1)$'' is not a theorem. The provable substitute --- \emph{if} the weight
-kernel admits an $\Omega$-band expansion in $\log b+\log d$ with declared
-truncation error $\eta$, then the block has $\eta$-rank at most $2\Omega+1$ ---
-requires a decay estimate for the closed weight kernel in $\log n$ that is not
-written in this revision. Bandwidth $\Rightarrow$ $\eta$-rank lemma: open
-writing task.}
+Proposition~\ref{prop:typeII} bounds $\sigma_{4K+1}$; the surfaces report a
+much sharper collapse, and the two are typed separately. On the declared surface
+the Type~II blocks of Vaughan's identity \cite{Vaughan1977} built from the
+closed weights, with $K=2$ so that the proved bound is $\sigma_9\le\eta\sqrt{RC}$
+with $\eta\le2.6\cdot10^{-4}$ at $h=301$ for each of the three polarised reads by
+\eqref{eq:splinebound}, are measured
+to have $2$ singular values carrying $99.9\%$ of the mass, against $153$ for a
+generic kernel of the same size, over the scanned range of the decomposition
+parameter; the four-term identity for $\Lambda$ is verified coefficientwise
+first. The number $2$ is measured and stays measured: the theorem gives $8$ at
+$K=2$, the observed sufficiency of $2$ is a property of the declared surface and
+is not proved here.
 \end{measurement}
 
 \begin{measurement}[the reference window: a three-term cancellation]
@@ -1525,9 +2227,24 @@ $2.465\cdot10^{4}$, the three terms of \eqref{eq:polarisation} are
   \text{sum}=4.22\cdot10^{-3},
 \end{equation}
 i.e.\ five orders of magnitude of cancellation between three pieces of size
-$\approx200$; the target value at that window is $1.10\cdot10^{-5}$.
-\draftnote{the window's caps and the definition of the target are written out
-with Section~\ref{sec:numerics}.}
+$\approx200$; the absolute value demanded of $\det\Ah_2$ at that window --- the
+target against which the cancellation has to be resolved --- is
+$1.10\cdot10^{-5}$, a further factor $384$ below the residual sum. The caps are
+those of Surface~II
+(Section~\ref{sec:surfaces}): the window index inside $[142,1445]$, the
+conditioning of the raw Gram block inside $\cond(G)\le10^{12}$, and the comb
+truncated at the node cap quoted above. Three readings of the same window follow
+from the results of this section and are recorded as part of the measurement:
+the cancellation is between the three terms of the exact polarisation
+\eqref{eq:polarisation}, so no route of Definition~\ref{def:majclass} sees it
+(Corollary~\ref{cor:majorant}\ref{M:blind}); the signed kernel sum behind
+$\det S$ is $41$ times smaller than its $\ell^{1}$ mass
+(Measurement~\ref{meas:l1}); and the sum in \eqref{eq:refwindow} is
+$\det\Ah_2$, whose normalisation by $\ah_{11}\ah_{22}$ is the quantity of
+Problem~\ref{prob:R1} --- so five orders of magnitude here is a statement about
+one window and about nothing else.
+\draftnote{the per-window table and the floating-point certificate for these
+four numbers are written out with Section~\ref{sec:numerics}.}
 \end{measurement}
 
 \section{A measured obstruction, and an open problem}
@@ -1753,13 +2470,23 @@ Prop.~\ref{prop:split}, \ref{prop:polarisation} (split, polarisation)
   & $\Ah_2=B-S$; \eqref{eq:polarisation}; the kernel $\mathcal K$ \\
 Thm.~\ref{thm:rank3} (rank three)
   & \texttt{v558} item~(5) TH4; \texttt{v559} link~15
-  & $J$, its spectrum, $\rank\mathcal K\le3$ \\
-Meas.~\ref{meas:typeII} (Type II)
-  & \texttt{v558} item~(5) TH5
-  & singular-value profile against a generic kernel \\
-Cor.~\ref{cor:majorant} (majorants)
+  & $J$, its spectrum, $\rank\mathcal K\le3$, the inertia bound \\
+Lem.~\ref{lem:wedge}, Meas.~\ref{meas:l1} (wedge, $\ell^{1}$)
   & \texttt{v558} items~(4), (6)
-  & the wedge reading; the scramble discriminator \\
+  & the wedge reading with its rank-one defect; the $\ell^{1}$-to-signed
+    ratio \\
+Cor.~\ref{cor:majorant} (majorants)
+  & \texttt{v558} item~(6)
+  & the image of a norm ball; the scramble discriminator \\
+Lem.~\ref{lem:closedweight}--\ref{lem:spline} (weights, band, spline)
+  & \texttt{v558} item~(5), band checks
+  & \eqref{eq:closedweight} at zero tolerance on $1\le d\le M-1$; the fit of
+    $(w_d)$ in \eqref{eq:bandspace}; the interpolation bound
+    \eqref{eq:splinemode} \\
+Prop.~\ref{prop:typeII}, Meas.~\ref{meas:typeII} (Type II)
+  & \texttt{v558} item~(5) TH5
+  & $\sigma_{4K+1}\le\eta\sqrt{RC}$ on an interior block; the measured
+    singular-value profile against a generic kernel \\
 Prob.~\ref{prob:R1} (the open problem)
   & \texttt{v559} link~16
   & the \emph{shape} is certified per window; the rate and the
@@ -1798,10 +2525,15 @@ the statement that every factorised matrix stays under the declared cap.}
 \item\label{L:corner} \textbf{The dense corner is exhausted only up to the
   declared caps.} Measurement~\ref{meas:density} states its own
   undecidability, and that statement is part of the claim.
-\item\label{L:D4} \textbf{One statement did not convert.}
-  Measurement~\ref{meas:typeII} stays measured: the bandwidth $\Rightarrow$
-  $\eta$-rank lemma that would make it a theorem is not written, and until it is,
-  ``effective rank $O(1)$'' is a measurement and is labelled one.
+\item\label{L:D4} \textbf{One phrase did not convert.} The bandwidth
+  $\Rightarrow$ $\eta$-rank mechanism is proved
+  (Lemmata~\ref{lem:closedweight}--\ref{lem:spline},
+  Proposition~\ref{prop:typeII}), but it delivers $4K$ singular values at a
+  declared truncation error and only for blocks satisfying the interior
+  hypothesis \eqref{eq:interior}; it does not deliver ``effective rank $O(1)$'',
+  and the smaller number actually observed stays a measurement
+  (Measurement~\ref{meas:typeII}). Remark~\ref{rem:interior} states what the
+  interior hypothesis excludes.
 \item\label{L:arith} \textbf{The comb's arithmetic is not used by any
   theorem.} Remark~\ref{rem:combfree} is meant literally: replacing the
   prime-power instance by an arbitrary finite comb changes no proof in
@@ -1809,9 +2541,9 @@ the statement that every factorised matrix stays under the declared cap.}
   of the three functionals of Theorem~\ref{thm:rank3}\ref{R:three}, and
   Measurement~\ref{meas:placement} is the controlled experiment that says so.
 \item\label{L:sections} \textbf{Draft scope.} In this revision
-  Sections~\ref{sec:setting}--\ref{sec:gauge} are complete with proofs;
-  Sections~\ref{sec:twodim}--\ref{sec:limits} carry final statements with proof
-  sketches and placeholders as marked. Table~\ref{tab:typing} is the binding
+  Sections~\ref{sec:setting}--\ref{sec:rank} are complete with proofs;
+  Sections~\ref{sec:open}--\ref{sec:limits} carry final statements with
+  placeholders for the tables and curves as marked. Table~\ref{tab:typing} is the binding
   record of what is claimed at what strength.
 \end{enumerate}
 
@@ -1899,6 +2631,12 @@ Illinois J. Math. \textbf{6} (1962), 64--94.
 sind},
 J. Reine Angew. Math. \textbf{147} (1917), 205--232.
 
+\bibitem{Sylvester1852} J.~J.~Sylvester,
+\emph{A demonstration of the theorem that every homogeneous quadratic polynomial
+is reducible by real orthogonal substitutions to the form of a sum of positive
+and negative squares},
+Philos. Mag. (4) \textbf{4} (1852), 138--142.
+
 \bibitem{Szego1939} G.~Szeg\H{o},
 \emph{Orthogonal Polynomials},
 Amer. Math. Soc. Colloquium Publications \textbf{23}, New York, 1939.
@@ -1906,6 +2644,11 @@ Amer. Math. Soc. Colloquium Publications \textbf{23}, New York, 1939.
 \bibitem{Vaughan1977} R.~C.~Vaughan,
 \emph{Sommes trigonom\'etriques sur les nombres premiers},
 C. R. Acad. Sci. Paris S\'er. A \textbf{285} (1977), 981--983.
+
+\bibitem{Weyl1912} H.~Weyl,
+\emph{Das asymptotische Verteilungsgesetz der Eigenwerte linearer partieller
+Differentialgleichungen},
+Math. Ann. \textbf{71} (1912), 441--479.
 
 \bibitem{Weyl1916} H.~Weyl,
 \emph{\"Uber die Gleichverteilung von Zahlen mod. Eins},
