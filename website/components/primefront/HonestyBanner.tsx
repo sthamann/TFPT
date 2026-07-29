@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4267/4267 sandbox checks —
+        (“the full proof”, T126+) is now open with 4295/4295 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -392,8 +392,25 @@ export function HonestyBanner() {
         certificate), the theorem cores of T162+T163 are load-bearing as
         v555, and the successor R-E has two prime-free arms — a growing
         1/s ceiling for the downstream chain, or a sector whose gap does
-        not vanish like h⁻². T164 (sector_change_probe.py) is running
-        exactly that sector change. What remains
+        not vanish like h⁻². T164 (TOLERANCE-CARRIES / SECTOR-RESISTS)
+        then decided both arms: the chain spends its ceiling at power
+        exactly one (d log(1−F)/d log U = −1.00, so no free tolerance —
+        the declared ε* = 0.50 is disowned as the surface&apos;s own
+        tailwind), yet the O(1) gate is discharged window by window by a
+        Cholesky identity — a single constant U_ref = 4.90 carries every
+        window out of sample and 1/g₁₆ is flat (h^+0.061) — so the last
+        analytic term collapses onto one quantifier, sup_m 1/g₁₆(m) &lt; ∞,
+        the m-freedom of a certified flat list; and no sector can help, as
+        a theorem: the entry normalisation is a gauge (Q/TV is the same
+        number in every sector, to 8.8e-10 on 5670 combinations), the full
+        space is strictly worse (μ₀ = 0 exactly), and floor times transfer
+        reproduces the h² identically at every shift. An unconstrained
+        ascent overshoots the demand bar by 31–960× while T163&apos;s TV
+        floor holds on it — at a price h^+3.30, worse than the crossing —
+        so the binding axis is the gauge-invariant ALIGNMENT between the
+        weight increments and their partial sums, named R-F. T165
+        (alignment_eta_probe.py) is running exactly that alignment
+        question. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

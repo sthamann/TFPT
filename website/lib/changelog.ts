@@ -43,6 +43,1287 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · XI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "prime-front diary T164 (both arms of the successor decided: the "
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": " gate discharges to a single quantifier, sectors are a gauge — TOLERANCE-CARRIES (arm A) / SECTOR-RESISTS (arm B)) + paper + website sync; NO promotion, NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T164 ("
+            },
+            {
+              "k": "c",
+              "v": "sector_change_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "SECTOR.CHANGE"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "28/28"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "31.7"
+            },
+            {
+              "k": "t",
+              "v": " s, the T163 surface rebuilt and re-verified: "
+            },
+            {
+              "k": "m",
+              "v": "28"
+            },
+            {
+              "k": "t",
+              "v": " log-spaced prime-power zones "
+            },
+            {
+              "k": "m",
+              "v": "h=142\\ldots1445"
+            },
+            {
+              "k": "t",
+              "v": " with declared caps, "
+            },
+            {
+              "k": "m",
+              "v": "27"
+            },
+            {
+              "k": "t",
+              "v": " windows inside the cond horizon, "
+            },
+            {
+              "k": "m",
+              "v": "|\\psi(x)-x|\\le\\kappa x"
+            },
+            {
+              "k": "t",
+              "v": " with "
+            },
+            {
+              "k": "m",
+              "v": "\\kappa=0.038821"
+            },
+            {
+              "k": "t",
+              "v": " verified at every jump point in "
+            },
+            {
+              "k": "m",
+              "v": "[100,4\\times10^{5}]"
+            },
+            {
+              "k": "t",
+              "v": "; verdict TOLERANCE-CARRIES (arm A) / SECTOR-RESISTS (arm B), sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Both arms of T163's successor R-E are decided. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Arm A (the tolerance analysis):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the station chain is instrumented with a power at every station — the T158 ladder really is a chain of upper bounds on the entry ceiling ("
+        },
+        {
+          "k": "m",
+          "v": "s\\ge g_{16}\\ge g_1"
+        },
+        {
+          "k": "t",
+          "v": " window by window), and at the heart the T156 kernel spends the ceiling at power "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "d\\log(1-F)/d\\log U=-1.0005\\ldots-1.0000"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "d\\log r/d\\log U=+1.0000"
+        },
+        {
+          "k": "t",
+          "v": " exactly, so a ceiling growing like "
+        },
+        {
+          "k": "m",
+          "v": "h^{\\varepsilon}"
+        },
+        {
+          "k": "t",
+          "v": " costs a margin decaying like "
+        },
+        {
+          "k": "m",
+          "v": "h^{-\\varepsilon}"
+        },
+        {
+          "k": "t",
+          "v": " for every "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon>0"
+        },
+        {
+          "k": "t",
+          "v": " — the declared one-sided rule returns "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon^*=0.50"
+        },
+        {
+          "k": "t",
+          "v": " and the probe "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "disowns"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " it at once as the "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=0"
+        },
+        {
+          "k": "t",
+          "v": " tailwind ("
+        },
+        {
+          "k": "m",
+          "v": "h^{+0.391}"
+        },
+        {
+          "k": "t",
+          "v": ", bought from the measured drift of "
+        },
+        {
+          "k": "m",
+          "v": "L"
+        },
+        {
+          "k": "t",
+          "v": ") divided by power one: no structural slack. But the sharp question is answered the other way: the single constant "
+        },
+        {
+          "k": "m",
+          "v": "U_{\\mathrm{ref}}=4.9008=\\max_h 1/g_{16}"
+        },
+        {
+          "k": "t",
+          "v": " carries all "
+        },
+        {
+          "k": "m",
+          "v": "9"
+        },
+        {
+          "k": "t",
+          "v": " sub-surface windows out of sample, "
+        },
+        {
+          "k": "m",
+          "v": "1/g_{16}=1.7527"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5.3286"
+        },
+        {
+          "k": "t",
+          "v": " is flat ("
+        },
+        {
+          "k": "m",
+          "v": "h^{+0.061}"
+        },
+        {
+          "k": "t",
+          "v": " over a "
+        },
+        {
+          "k": "m",
+          "v": "9\\times"
+        },
+        {
+          "k": "t",
+          "v": " lever arm, split halves "
+        },
+        {
+          "k": "m",
+          "v": "-0.010/+0.103"
+        },
+        {
+          "k": "t",
+          "v": "), and every "
+        },
+        {
+          "k": "m",
+          "v": "g_K"
+        },
+        {
+          "k": "t",
+          "v": " is strictly increasing (Schur 1917) — "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the "
+            },
+            {
+              "k": "m",
+              "v": "O(1)"
+            },
+            {
+              "k": "t",
+              "v": " gate is not open as a "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "quantity"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": ": it is discharged window by window by a Cholesky identity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and what remains is exactly one quantifier, "
+        },
+        {
+          "k": "m",
+          "v": "\\sup_m 1/g_{16}(m)<\\infty"
+        },
+        {
+          "k": "t",
+          "v": " — the "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-freedom of a certified flat list, the same grammatical form as every other open uniformity item and no longer an existence question about trial vectors. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Arm B (the sector change), negative by a theorem:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "x_1=1"
+        },
+        {
+          "k": "t",
+          "v": " fixes only the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "scale"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "a"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " and TV are homogeneous of degree two, hence "
+        },
+        {
+          "k": "m",
+          "v": "Q/\\mathrm{TV}"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{bnd}}"
+        },
+        {
+          "k": "t",
+          "v": " are the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same numbers in every sector"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — the entry normalisation is a "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "gauge"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (machine-checked to "
+        },
+        {
+          "k": "m",
+          "v": "8.8\\times10^{-10}"
+        },
+        {
+          "k": "t",
+          "v": " over "
+        },
+        {
+          "k": "m",
+          "v": "5670"
+        },
+        {
+          "k": "t",
+          "v": " sector-by-vector combinations, declared horizon "
+        },
+        {
+          "k": "m",
+          "v": "2.6\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": "); the full space is strictly worse ("
+        },
+        {
+          "k": "m",
+          "v": "\\mu_0=0"
+        },
+        {
+          "k": "t",
+          "v": " exactly, no finite floor); a shifted or weighted sector does flatten the floor ("
+        },
+        {
+          "k": "m",
+          "v": "h^{+0.000}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa_s=4"
+        },
+        {
+          "k": "t",
+          "v": ") but pays the transfer factor "
+        },
+        {
+          "k": "m",
+          "v": "1/\\theta\\sim h^{+1.997}"
+        },
+        {
+          "k": "t",
+          "v": ", and floor"
+        },
+        {
+          "k": "m",
+          "v": "{}\\times{}"
+        },
+        {
+          "k": "t",
+          "v": "transfer "
+        },
+        {
+          "k": "m",
+          "v": "=1/\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "identically"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — the two exponents sum to "
+        },
+        {
+          "k": "m",
+          "v": "+1.997"
+        },
+        {
+          "k": "t",
+          "v": " at every shift on the declared grid to "
+        },
+        {
+          "k": "m",
+          "v": "10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "h^2"
+        },
+        {
+          "k": "t",
+          "v": " lives in the ratio, never in the floor. The genuine surprise, stated and immediately priced: a normalisation-free first-order ascent on "
+        },
+        {
+          "k": "m",
+          "v": "Q/\\mathrm{TV}"
+        },
+        {
+          "k": "t",
+          "v": " over the full window reaches "
+        },
+        {
+          "k": "m",
+          "v": "2.38"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "74.57"
+        },
+        {
+          "k": "t",
+          "v": " against the crossing bar "
+        },
+        {
+          "k": "m",
+          "v": "2\\kappa=0.0776"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "31"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "960\\times"
+        },
+        {
+          "k": "t",
+          "v": " over on "
+        },
+        {
+          "k": "m",
+          "v": "9/9"
+        },
+        {
+          "k": "t",
+          "v": " windows ("
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{bnd}}=-0.124\\ldots-0.090"
+        },
+        {
+          "k": "t",
+          "v": ", alignment efficiency "
+        },
+        {
+          "k": "m",
+          "v": "\\eta=7.9"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "11.1\\%"
+        },
+        {
+          "k": "t",
+          "v": " of the Abel ceiling "
+        },
+        {
+          "k": "m",
+          "v": "\\|C\\|_\\infty=30.3"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "930.6\\sim h^{+1.185}"
+        },
+        {
+          "k": "t",
+          "v": ") — and T163's TV floor "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "holds on the unconstrained optimiser"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{TV}\\,\\mu^P_1=8.30"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "11.72\n\\ge1"
+        },
+        {
+          "k": "t",
+          "v": ", a family T163 never searched), at a price "
+        },
+        {
+          "k": "m",
+          "v": "h^{+3.299}"
+        },
+        {
+          "k": "t",
+          "v": ", worse than T163's crossing price "
+        },
+        {
+          "k": "m",
+          "v": "h^{+1.91}"
+        },
+        {
+          "k": "t",
+          "v": ": dropping the normalisation relocated the difficulty without reducing it."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "R-B"
+            },
+            {
+              "k": "m",
+              "v": "'''"
+            },
+            {
+              "k": "t",
+              "v": " narrowed, R-D settled in type, R-F named."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " R-B"
+        },
+        {
+          "k": "m",
+          "v": "'''"
+        },
+        {
+          "k": "t",
+          "v": " is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "naming"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " problem — two different quantities carried one name: the T162 "
+        },
+        {
+          "k": "m",
+          "v": "a"
+        },
+        {
+          "k": "t",
+          "v": "-weighted quarter-bar object is "
+        },
+        {
+          "k": "m",
+          "v": "0.1001"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.1623\\sim h^{-0.172}"
+        },
+        {
+          "k": "t",
+          "v": " (T163's "
+        },
+        {
+          "k": "m",
+          "v": "-0.172"
+        },
+        {
+          "k": "t",
+          "v": " reproduced to "
+        },
+        {
+          "k": "m",
+          "v": "0.0004"
+        },
+        {
+          "k": "t",
+          "v": ", under the "
+        },
+        {
+          "k": "m",
+          "v": "0.25"
+        },
+        {
+          "k": "t",
+          "v": " bar on all "
+        },
+        {
+          "k": "m",
+          "v": "27"
+        },
+        {
+          "k": "t",
+          "v": " windows with "
+        },
+        {
+          "k": "m",
+          "v": "35\\%"
+        },
+        {
+          "k": "t",
+          "v": " margin), the raw arch/atom cancellation is a different number ("
+        },
+        {
+          "k": "m",
+          "v": "h^{-2.04}"
+        },
+        {
+          "k": "t",
+          "v": "); a two-variable regression puts "
+        },
+        {
+          "k": "m",
+          "v": "-0.046"
+        },
+        {
+          "k": "t",
+          "v": " of the drift on "
+        },
+        {
+          "k": "m",
+          "v": "\\log h"
+        },
+        {
+          "k": "t",
+          "v": " against "
+        },
+        {
+          "k": "m",
+          "v": "-0.477"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "\\log\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "10\\times"
+        },
+        {
+          "k": "t",
+          "v": " more on the zone scale), and on this recipe "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " are coupled by construction — narrowed, not closed: a surface with independent "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " is needed. R-D is settled in "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "type"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": under the shift "
+        },
+        {
+          "k": "m",
+          "v": "s\\to s/\\theta"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\hat a\\to\\theta\\hat a"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "L\\to\\theta L"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "P_K"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "r"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "F(P_K,r)"
+        },
+        {
+          "k": "t",
+          "v": " are unchanged to "
+        },
+        {
+          "k": "m",
+          "v": "3.5\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "54"
+        },
+        {
+          "k": "t",
+          "v": " combinations — every object the chain consumes downstream is a ratio of equally-homogeneous forms, hence no fifth device can come from a sector change ("
+        },
+        {
+          "k": "m",
+          "v": "\\rho=1.0036"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.0140>1"
+        },
+        {
+          "k": "t",
+          "v": " flat, T161, quoted and untouched). The one genuinely new item is "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "R-F"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": is there a "
+        },
+        {
+          "k": "m",
+          "v": "v"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "Q(v)/\\mathrm{TV}(v)>2\\kappa"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "Q(v)"
+        },
+        {
+          "k": "t",
+          "v": " comparable to "
+        },
+        {
+          "k": "m",
+          "v": "1/s"
+        },
+        {
+          "k": "t",
+          "v": " — equivalently, can the alignment efficiency "
+        },
+        {
+          "k": "m",
+          "v": "\\eta"
+        },
+        {
+          "k": "t",
+          "v": " stay above "
+        },
+        {
+          "k": "m",
+          "v": "2\\kappa/\\|C\\|_\\infty"
+        },
+        {
+          "k": "t",
+          "v": " at bounded price? No sector, no normalisation, no prime. Stress: the uniform surrogate breaks by "
+        },
+        {
+          "k": "m",
+          "v": "1.5\\times10^{3}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.9\\times10^{7}"
+        },
+        {
+          "k": "t",
+          "v": ", the T145 no-go staircase is monotone ("
+        },
+        {
+          "k": "m",
+          "v": "1.0\\to9.1\\to25.4\\to129\\to434"
+        },
+        {
+          "k": "t",
+          "v": ", exact null control at "
+        },
+        {
+          "k": "m",
+          "v": "\\nu=4"
+        },
+        {
+          "k": "t",
+          "v": ", damage "
+        },
+        {
+          "k": "m",
+          "v": "\\ge26.1"
+        },
+        {
+          "k": "t",
+          "v": " at the coarsest setting on every window), the gauge break is "
+        },
+        {
+          "k": "m",
+          "v": "3.4\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": ", Dirichlet/parity/orthonormality controls "
+        },
+        {
+          "k": "m",
+          "v": "\\le2\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": ", and the random-"
+        },
+        {
+          "k": "m",
+          "v": "v"
+        },
+        {
+          "k": "t",
+          "v": " pairing identity holds to "
+        },
+        {
+          "k": "m",
+          "v": "3.8\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ". Balance "
+        },
+        {
+          "k": "m",
+          "v": "11"
+        },
+        {
+          "k": "t",
+          "v": " THEOREM / "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " CERT-UNIF / "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " CERT-WINDOW / "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " MEASURED, zero load-bearing fit rows; candidates T164-Q1… Q9 all "
+        },
+        {
+          "k": "t",
+          "v": "pending"
+        },
+        {
+          "k": "t",
+          "v": " (no promotion — to be bundled with T165). NOT RH evidence; no marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Docs + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " gains the T164 subsection (the power-one measurement, the quantifier collapse as the key result, the gauge theorem with the product identity, the unconstrained ascent with the TV-floor hold, the R-B"
+        },
+        {
+          "k": "m",
+          "v": "'''"
+        },
+        {
+          "k": "t",
+          "v": " narrowing with the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-coupling lesson) and the After-T164 keybox (R-E-A/R-F/R-B"
+        },
+        {
+          "k": "m",
+          "v": "'''"
+        },
+        {
+          "k": "t",
+          "v": "/R-D, T165 running), the phase-2 section retitled T126–T164, the T164 row in the probe index and the updated counters ("
+        },
+        {
+          "k": "m",
+          "v": "164"
+        },
+        {
+          "k": "t",
+          "v": " probes, "
+        },
+        {
+          "k": "m",
+          "v": "4295"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " gains the Teil-164 entry; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T164 feed entry; the prime-front status surfaces move to Teile 11–164 / "
+        },
+        {
+          "k": "m",
+          "v": "4295"
+        },
+        {
+          "k": "t",
+          "v": " checks. T165 ("
+        },
+        {
+          "k": "c",
+          "v": "alignment_eta_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "ALIGNMENT.ETA"
+        },
+        {
+          "k": "t",
+          "v": ") is running at the alignment successor R-F. No ledger row (sandbox); "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · X",
     "heading": [
       {
