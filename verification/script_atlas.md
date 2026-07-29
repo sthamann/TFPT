@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`545` registered scripts · `616` ledger claims · `10` clusters.
+`546` registered scripts · `617` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (78 scripts)
+### `core` — Compiler core & the E₈ glue  (79 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -167,6 +167,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v549_gauge_parity_identities, v548_green_szego_identities, v549, T150, T151 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v551_ritz_ceiling_certificate** [E/O] `PRIME.RITZ.CEIL.01` — the certificate core of the GREEN.ALIGN probe recomputed on the 12 deepest in-cap frame-A windows (n = 29…139, m = 96…291 ≤ 300, D = 7.2e-03…1.8e-02; a no-go size ladder m = 48…288
   - deps: v550_odd_sector_identities, v549_gauge_parity_identities, v550, T153, T154 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v552_angle_instruments** [E/O] `PRIME.ANGLE.INSTR.01` — min over v ⊥ W of vᵀL_Pv ≥ μᴾ₁₃ − λ_max(M^(1/2)(I − GGᵀ)M^(1/2)), an identity plus one certified Rayleigh bound valid for every m and every subspace — never exceeds the exact size-
+  - deps: v551_ritz_ceiling_certificate, v550_odd_sector_identities, v551, T155, T157 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1161,7 +1163,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v540_amplitude_linear_carrier** — `RTF.GNS.AMP.01`
 - **v541_matching_lemma_ledger** — `RTF.GNS.LEDGER.01`
 - **v542_margin_chain_identities** — `PRIME.MARGIN.IDENT.01`
 - **v543_lumped_pair_identities** — `PRIME.MMATRIX.IDENT.01`
@@ -1173,4 +1174,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v549_gauge_parity_identities** — `PRIME.GAUGE.PARITY.IDENT.01`
 - **v550_odd_sector_identities** — `PRIME.ODD.SECTOR.IDENT.01`
 - **v551_ritz_ceiling_certificate** — `PRIME.RITZ.CEIL.01`
+- **v552_angle_instruments** — `PRIME.ANGLE.INSTR.01`
 

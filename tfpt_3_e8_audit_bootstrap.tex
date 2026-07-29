@@ -1052,6 +1052,47 @@ open. Courant--Fischer 1920--Cauchy 1829 / KMS 1953 / Schur
 \mE\ (per-instance theorems and certified inequalities; no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The four fixed-size angle instruments
+(\texttt{PRIME.ANGLE.INSTR.01}).}
+The instrument cores of T155 and T157 as the tenth companion module
+(\veri{v552\_angle\_instruments.py}; $18$ checks, ${\sim}0.4$\,s) on the
+same declared surface (the $12$ deepest in-cap frame-A windows,
+$n=29\ldots139$, $m=96\ldots291\le300$; no-go ladder $m=48\ldots288$;
+parity and Dirichlet controls at $m=64,128,256$) --- none of the four
+closes an angle: the $12\times12$ complement-floor certificate
+($\min_{v\perp W}v^{\mathsf T}L_Pv\ge\mu^P_{13}-\lambda_{\max}(M^{1/2}
+(I-GG^{\mathsf T})M^{1/2})$, an identity plus one certified Rayleigh
+bound; never above the exact complement bottom, agreement
+$\le1.01\times10^{-3}$ against the declared cap $2\times10^{-3}$ on this
+surface, both closed-form controls to $2.0\times10^{-11}$ including the
+worthless configuration); the sine-block confinement
+($\|\gamma_H\|^2\le(S/t)/\rho_{17}=0.0153$--$0.0245$ from the certified
+floor and ladder alone --- the bottom eigenvector is $97.5$--$98.5\%$
+inside the first $16$ parity sines by a per-instance theorem; $\kappa$
+in place of $S$: vacuous, $17.6$--$477$); the Schur-entry identity
+($s=\mu^P_1\,t_1^{\mathsf T}A^{-1}t_1=(B^{-1})_{11}$ to
+$1.1\times10^{-11}$, $(B^{-1})_{LL}S_L=I$ to $5.8\times10^{-11}$ ---
+$1/s=4.0460$--$5.8962$ is an $O(1)$ number carried by one entry of the
+fixed-size $16\times16$ Schur complement, while the inversion-free
+Cauchy--Schwarz ceiling misses by $250$--$7.27\times10^{3}$); and the
+adaptive Lipschitz ceiling (an \emph{executed} certificate
+$\inf f^{\mathrm{arch}}/(4\sin^2(\theta/2))\ge0.25$ on $12/12$ in
+$519$--$1201$ evaluations, refusing false targets on $12/12$). The no-go
+floor survives while the confinement goes vacuous ($\times52.0$) and
+$(S_L)_{11}$ explodes ($\times60.0$); parity exact to
+$4.9\times10^{-14}$; Dirichlet hits $2/\sqrt N$ to $7.4\times10^{-5}$.
+\textbf{Named limits as content:} per instance on small windows, nothing
+uniform in the zone index or in $D$, and explicitly no statement for all
+$D$ --- nothing about the angles is closed; the two open terms after
+T157 (an $m$-free upper bound on the one Schur diagonal entry; an
+$m$-free R1$''$ domination with a non-shrinking margin) stay open, typed
+open. KMS 1953 / Schur 1917--Haynsworth 1968 / Cauchy--Schwarz (refuted
+as a ceiling, wired as a control) / Kantorovich 1948 / Sylvester
+1852--Bunch--Kaufman 1977 / Szeg\H{o} 1915--Widom 1958 (a named address,
+never a licence) named classical.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

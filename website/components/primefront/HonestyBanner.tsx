@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v551
+          v535–v552
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4015/4015 sandbox checks —
+        (“the full proof”, T126+) is now open with 4047/4047 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -281,8 +281,25 @@ export function HonestyBanner() {
         including a collapse of the angle itself (p₁ down to 7e-15), and
         kills the one measured step of the reduction (the 2×2-model
         domination holds 16/16 real, fails 8/8 no-go). T157
-        (angle_floor_probe.py) is running at exactly those two angles.
-        What remains
+        (ANGLES-RESIST) then attacked exactly those two angles, and
+        neither falls but both change shape: a NEW THEOREM — the
+        sine-block confinement — derives from the certified floor and
+        ladder alone that the bottom eigenvector lives 97.1–98.4% inside
+        the first sixteen parity sines (replacing a measured statement
+        with one line), the resolvent route then pins the angle to 97.9%
+        of its measured value with a single measured fixed-size scalar
+        left (ĝ₁² = 0.2010–0.3282), the whole first term is a bound on
+        ONE diagonal entry of a 16×16 Schur complement the chain already
+        forms (1/s = (S_L)₁₁ = 2.34–6.20, flat — with Cauchy–Schwarz
+        missing it by 5.4e2–5.2e5 because the cancellation is nearly
+        complete), and the arch half of the second term is uniformly
+        certified for the first time via an executed adaptive Lipschitz
+        ceiling (12/12 windows, cost ~h^0.85); the alignment term stays a
+        per-window domination with a 7.3e-4 margin and a shrinking
+        trend, the no-go family breaks on five axes, and the four
+        instrument candidates of T155/T157 are load-bearing as v552.
+        T158 (schur_entry_probe.py) is running at the cancellation-seeing
+        bound. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

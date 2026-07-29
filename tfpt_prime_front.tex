@@ -81,17 +81,18 @@ out to be \emph{Hecke} data. It goes further than an analogy: the $E_8$ shell co
 $240\,\zeta(s)\zeta(s-3)$ as a Dirichlet series, and the lattice's self-duality gives its theta sum an
 exact functional equation whose fixed axis is the critical line --- a framework picture, stated as such,
 which the document opens with and then keeps at arm's length. This companion documents the line end to
-end. Seventeen modules are
-load-bearing and ledger-carried (\vref{v535}--\vref{v551}): Hecke from geometry on the $E_8$ census,
+end. Eighteen modules are
+load-bearing and ledger-carried (\vref{v535}--\vref{v552}): Hecke from geometry on the $E_8$ census,
 the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, the matching-lemma / transport
 ledger package, and --- out of the second phase --- the margin-chain identities, the lumped
 $M$-matrix pair, the long-lag support structure, the Hardy-core identities, the capacity-chain
 identities, the level-lemma identities, the Green/Szeg\H{o} identities, the gauge/parity
-identities, the odd-sector identities and the fixed-size Ritz ceiling certificate. Everything beyond
-those seventeen is \emph{sandbox}: an exploratory program, run as
-$156$ preregistered probes with $4015$ machine checks, which localized the residual object. That
+identities, the odd-sector identities, the fixed-size Ritz ceiling certificate and the four
+fixed-size angle instruments. Everything beyond
+those eighteen is \emph{sandbox}: an exploratory program, run as
+$157$ preregistered probes with $4047$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -243,7 +244,7 @@ here (the blue \texttt{[\,verification/\dots\,]} tag). Everything marked \sbx\ i
 no ledger row, no marker, and no authority. Section~\ref{sec:verified} is the only section that is
 entirely \ver.
 \item \textbf{Status markers are quoted, never upgraded.} The markers \mE\ \mC\ \mO\ \mX\ shown in
-Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v551}. This
+Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v552}. This
 document introduces no new markers and moves none.
 \item \textbf{Fits are declared as fits.} Every scaling law, slope, exponent and extrapolation quoted
 from the sandbox is a fit to finitely many measured windows and is labelled as such at the point of
@@ -268,7 +269,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T156: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T157: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -408,7 +409,17 @@ $1.03$--$1.16$, and the whole first term is \emph{one} $m$-free lower bound on t
 $p_1=\cos^2\angle(t_1,e_1(A))=0.2010$--$0.3282$, while the block positivity is
 re-identified as an \emph{alignment} fact rather than Fej\'er mass damping --- on the
 minimiser an arch part and an atom part of nearly equal size cancel, the expected arch
-inequality $\ge1$ is refuted and the additive split is divergent (T156));
+inequality $\ge1$ is refuted and the additive split is divergent (T156), and at last those
+two angles themselves, attacked head-on --- neither falls, but both change shape: the
+$p_1$ floor becomes a \emph{theorem} times one measured fixed-size number (the sine-block
+confinement, from the certified floor and ladder alone, proves $e_1(A)$ lives
+$97.1$--$98.4\%$ inside the first sixteen parity sines, and the resolvent route then pins
+$97.9\%$ of the measured angle), the whole first term is re-stated as a bound on
+\emph{one} diagonal entry of a $16\times16$ Schur complement the chain already forms ---
+which Cauchy--Schwarz misses by two to five orders of magnitude, because the cancellation
+is nearly complete --- and the arch half acquires an \emph{executed} adaptive Lipschitz
+certificate, while the alignment term stays a per-window domination with a shrinking
+margin (T157; the four instrument candidates of T155/T157 are promoted as \vref{v552}));
 Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
@@ -493,7 +504,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the seventeen modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the eighteen modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -623,13 +634,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: seventeen modules}\label{sec:verified}
+\section{The verified layer: eighteen modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The seventeen modules and their ledger markers]
+\begin{keybox}[The eighteen modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -652,6 +663,7 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v549} & \texttt{PRIME.GAUGE.PARITY.IDENT.01} & gauge/parity identities of phase 2 (per instance) & \mE\\
 \vref{v550} & \texttt{PRIME.ODD.SECTOR.IDENT.01} & odd-sector identities of phase 2 (per instance) & \mE\\
 \vref{v551} & \texttt{PRIME.RITZ.CEIL.01} & fixed-size Ritz ceiling certificate of phase 2 (per instance) & \mE\\
+\vref{v552} & \texttt{PRIME.ANGLE.INSTR.01} & four fixed-size angle instruments of phase 2 (per instance) & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -1436,6 +1448,88 @@ parity block; R2$'$, an $m$-free lower bound for the $L_P$ floor on the compleme
 the eight bottom Ritz directions --- arithmetic-free, worth $91$--$100\%$ of the
 collapse price) stay open and typed open; every floor consumed is certified per window
 at size $m$; \vref{v550}'s ladder stays as stated, and nothing is re-opened.
+\end{itemize}
+
+\subsection{The four fixed-size angle instruments (\texorpdfstring{\vref{v552}}{v552})}\label{sec:v552}
+The instrument cores of T155 and T157 (Section~\ref{sec:phase2}): the four fixed-size
+instruments the angle campaign produced --- none of them closes an angle, and none is
+promoted as anything but a per-instance instrument
+\veri{v552\_angle\_instruments.py} ($18$ checks, ${\sim}0.4$\,s; everything recomputed on
+\vref{v551}'s declared surface, the $12$ deepest prime-power zones admitting a frame-A
+window inside the cap, $n=29\ldots139$, $m=96\ldots291\le300$; a no-go size ladder
+$m=48\ldots288$; parity and Dirichlet controls at $m=64,128,256$; each statement carries
+at least one mutation control that must fail loudly).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The complement-floor certificate (T155)} \mE:
+$\min_{v\perp W}v^{\mathsf T}L_Pv\ge\mu^P_{13}-\lambda_{\max}(M^{1/2}(I-GG^{\mathsf T})
+M^{1/2})$ with $M=\mathrm{diag}(\mu^P_{13}-\mu^P_k)$ and $G=T_{12}Q_W$ --- an identity
+plus \emph{one} certified Rayleigh bound on the high block, a theorem for every $m$ and
+every subspace, direction checked: the certificate \emph{never} exceeds the exact size-$m$
+complement bottom ($12/12$) and agrees with it to $1-\mathrm{ratio}\le1.01\times10^{-3}$
+against the declared cap $2\times10^{-3}$ on this small surface (the agreement tightens
+with depth: T155 measured $\le2.2\times10^{-7}$ at $h=142\ldots1293$, sandbox, not
+consumed here). Exactness controls in \emph{both} known configurations:
+$W=\mathrm{span}\{t_1..t_8\}$ returns $\mu^P_9$ and the \emph{worthless} configuration
+$W=\mathrm{span}\{t_2..t_{13}\}$ returns $\mu^P_1$, both to $2.0\times10^{-11}$ --- the
+instrument reports its own worthlessness. Mutation: one corrupted overlap row moves the
+certificate by $\ge0.549$, only downward.
+\item \textbf{The sine-block confinement (T157)} \mE: from the certified pencil floor
+$A\succeq tL_P$ (Schur two-block, $k_b=16$) and the certified ladder ceiling
+$\lambda_1\le S\mu^P_1$ (\vref{v551}'s sixteen-column certificate) \emph{alone}, with
+$\gamma=Te_1(A)$ the parity coordinates of the bottom eigenvector,
+$\|\gamma_H\|^2\le\lambda_1/(t\,\mu^P_{17})\le(S/t)/\rho_{17}=0.0153$--$0.0245<1$ on
+$12/12$: $e_1(A)$ lives $97.5$--$98.5\%$ inside the first $16$ parity sines by a
+\emph{per-instance theorem} (measured tail $6.7\times10^{-6}$--$3.0\times10^{-5}$; T146's
+measured ``$98$ per cent'' replaced by one line). Negative control: substituting the
+pencil ceiling $\kappa$ for the ladder $S$ makes the bound \emph{vacuous}
+($17.6$--$477>1$ on $12/12$, at least $997\times$ above the $S$ form) --- $\kappa$ carries
+the whole atom mass, and the choice of ceiling is the whole content. Mutation: the
+inflated floor $\kappa L_P$ is refuted at $e_1(A)$ itself by
+$3.3\times10^{3}$--$1.0\times10^{5}$.
+\item \textbf{The Schur-entry identity (T157)} \mE:
+$s=\mu^P_1\,t_1^{\mathsf T}A^{-1}t_1=(B^{-1})_{11}$ exactly (worst relative
+$1.1\times10^{-11}$) and $(B^{-1})_{LL}S_L=I$ to $5.8\times10^{-11}$ with
+$S_L=B_{LL}-B_{LH}B_{HH}^{-1}B_{HL}$ the \emph{same} fixed-size $16\times16$ Schur
+complement the T152..T157 chain already forms, with the literal-entry direction
+$1/s\le(S_L)_{11}$ on $12/12$: $1/s=4.0460$--$5.8962$ is an $O(1)$ number carried by
+\emph{one} fixed-size object, so T156's R2$''$ loss ceiling $r\le1/(Ls)$ is a statement
+about one entry. Negative control (T157's refutation wired as a check): the
+inversion-free Cauchy--Schwarz ceiling $\hat a-\|b\|^4/(b^{\mathsf T}B_{HH}b)$ is valid
+and \emph{useless}, off by $250$--$7.27\times10^{3}$ ($\hat
+a=1.13\times10^{3}$--$3.11\times10^{4}$ is the same entry \emph{without} the Schur
+subtraction) --- the cancellation in $b^{\mathsf T}B_{HH}^{-1}b$ is nearly complete and
+Cauchy--Schwarz cannot see it. Mutation: a one-index shift breaks the identity by
+$1.55$--$2.15$.
+\item \textbf{The adaptive Lipschitz ceiling (T157)} \mE: interval bisection with the
+\emph{local} Lipschitz constant $\mathrm{lip}(a)=d/g(a)+2f/g(a)^2$ certifies
+$\inf f^{\mathrm{arch}}/(4\sin^2(\theta/2))\ge t=0.25$ on $12/12$ windows in
+$519$--$1201$ symbol evaluations (certified floor $0.2505$--$0.3062$, never above the
+fine-grid minimum --- direction checked): the arch one-variable statement carries an
+\emph{executed} certificate per window, not a grid observation. The \emph{global}
+$\theta_{\mathrm{lo}}$ constant is documented insufficient (a uniform grid would need
+$2.14\times10^{3}$--$7.33\times10^{4}$ points, up to $61.4\times$ the adaptive cost).
+Mutation: fed a target above the true grid minimum the certificate \emph{refuses} on
+$12/12$ --- it cannot be talked into certifying a false floor.
+\item \textbf{The no-go discriminator and the controls} \mE: on the T145 family
+$c(l)=1/(1+l)$ the certified Schur floor \emph{survives} ($t=0.05$ on all $4$ sizes)
+while both new instruments break --- the confinement bound goes vacuous
+($7.93$--$413>1$, $\times52.0$ over $m=48\ldots288$) and $(S_L)_{11}$ explodes
+($1185\to7.11\times10^{4}$, $\times60.0$) against the flat $4.05$--$5.90$ real band: the
+instruments do not report confinement or $O(1)$ entries where both are false. Parity
+control $A=L_P$ exact to $4.9\times10^{-14}$ ($B=I$, $s=1$, zero tail); the Dirichlet
+residual hits the predicted $2/\sqrt N$ to $7.4\times10^{-5}$.
+\item \textbf{Named limits as content.} Per instance on small windows --- a \emph{finite
+list} with an explicit maximum; nothing uniform in the zone index or in $D$, and
+explicitly \emph{no} statement for all $D$: \emph{nothing about the angles is closed} ---
+the two open terms after T157 (an $m$-free lower bound on $\hat g_1^2$, equivalently an
+$m$-free upper bound on the one Schur diagonal entry $1/s$, since the resolvent route is
+a theorem times that one measured fixed-size number; and an $m$-free R1$''$ domination
+with a non-shrinking margin, which T157 certifies per window with a $7.3\times10^{-4}$
+margin at the largest window and a \emph{shrinking} trend) stay open and typed open;
+every floor $t$ and ceiling $S$ consumed is certified per window and its $m$-freeness is
+exactly what remains open; \vref{v551}'s ceiling and \vref{v550}'s ladder stay as stated,
+and nothing is re-opened.
 \end{itemize}
 
 % =====================================================================
@@ -3778,7 +3872,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T156)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T157)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -6096,7 +6190,9 @@ replaces the $m$-sized eigenproblem T154 had to solve. Both closed-form controls
 $W=\mathrm{span}\{t_1..t_8\}$ returns $\mu^P_9$ to $1.05\times10^{-12}$, and
 $W=\mathrm{span}\{t_2..t_9\}$ --- the configuration in which the certificate is
 \emph{worthless} --- returns $\mu^P_1$ to $8.89\times10^{-11}$: the instrument reports its
-own worthlessness rather than something flattering.
+own worthlessness rather than something flattering. (This certificate is now
+load-bearing: it is promoted, together with T157's three instruments, as
+\vref{v552}, Section~\ref{sec:v552} --- \veri{v552\_angle\_instruments.py}.)
 
 \emph{The defect is localised, and the $83$--$90^\circ$ direction is demystified.} If $Q_8$
 covered the eight lowest $L_P$ modes, the floor would be $\mu^P_9=80.74$--$81.00\,\mu^P_1$
@@ -6346,12 +6442,138 @@ not a matter of measuring more windows but of proving one inequality each.
 T157 (\texttt{angle\_floor\_probe.py}) is running at exactly those two angles.
 \end{keybox}
 
+\subsection{Neither angle falls, both change shape: the $p_1$ floor becomes a theorem
+times one number, the arch half is certified (T157)}
+T157 (\texttt{angle\_floor\_probe.py}, contract \texttt{ANGLE.FLOOR}, $32/32$,
+$3.9$\,s on $16$ prime-power windows $h=142\ldots1293$, the alignment surface on $12$
+windows $h=50\ldots1077$, verdict \textsc{angles-resist}, the gates evaluated from the
+numbers: $p_1$ $m$-free \textsc{false}, $p_1$ non-trivial \textsc{true}, arch half
+certified \textsc{true}, alignment $m$-free \textsc{false} --- terms $=2$) attacks the
+two angles T156 left, and neither falls --- but both change shape. The instrument cores
+below are promoted as \veri{v552\_angle\_instruments.py}.
+
+\emph{The best $p_1$ route is the resolvent, and it splits into a theorem times one
+number.} Write $\gamma=Te_1(A)$ for the parity coordinates of the bottom eigenvector and
+split the modes at $k_b=16$. The tail is a \emph{theorem}, one line from the certified
+pencil floor $A\succeq tL_P$ and the certified ladder ceiling
+$\lambda_1\le S\mu^P_1$ alone:
+\[
+\|\gamma_H\|^2 \;\le\; \frac{\lambda_1}{t\,\mu^P_{17}} \;\le\;
+\frac{S/t}{\rho_{17}} \;=\; 0.0165\text{--}0.0293 ,
+\qquad \rho_{17}=\frac{\mu^P_{17}}{\mu^P_1},
+\]
+so $e_1(A)$ lives $97.1$--$98.4\%$ inside the first sixteen parity sines,
+\emph{$m$-freely in shape} --- T146's measured ``$98$ per cent in the sine block'' now
+has a one-line proof, and the lesson is the ceiling: substituting the pencil ceiling
+$\kappa$ ($3.1\times10^{3}$--$2.7\times10^{6}$, growing $x^{2.821\pm0.038}$) for the flat
+ladder $S=1.1676$--$2.1178$ ($x^{0.010\pm0.092}$) would make the bound vacuous
+($43.5$--$38632$). What remains measured is \emph{one} number: $\hat
+g_1^2=0.2010$--$0.3282$ (flat, $x^{0.054\pm0.029}$), the first coordinate of the bottom
+vector of a $16\times16$ Schur null problem (solved to a relative residual
+$8.4\times10^{-15}$), and the resulting floor $p_1\ge\hat
+g_1^2(1-\mathrm{tail})=0.1968$--$0.3228$ is $97.9\%$ of the measured $p_1$. Three other
+routes are refuted with numbers: the classical Rayleigh angle bound
+$p_1\ge(\lambda_2-\mathrm{RQ})/(\lambda_2-\lambda_1)$ is \emph{empty already in its
+measured form} ($16/16$ negative --- $\mathrm{RQ}(t_1)$ exceeds $\lambda_2$ by
+$818$--$519458$, and the bottom is nearly degenerate, $\lambda_2/\lambda_1=1.73$--$5.87$:
+the shape fails, no certification can rescue it); its block version answers the T156
+question --- the chain \emph{does} admit the block, and the block mass is spectacular,
+$p_{\mathrm{blk}}(2)=0.9369$--$0.9993$ ($t_1$ lives almost entirely in the bottom
+\emph{pair}) --- but the block Rayleigh bound stays empty at every $J$ of the ladder; and
+the angle-free Cauchy--Schwarz route $Ls\ge L/\hat a$ is a theorem that loses exactly the
+Kantorovich product $P=5.6\times10^{2}$--$1.0\times10^{6}$, beating the $p_1$ floor on
+$0$ of $16$ windows.
+
+\emph{The structural gem: the whole first term is one diagonal entry.} There is an
+identity nobody had used: $s=\mu^P_1\,t_1^{\mathsf T}A^{-1}t_1=(B^{-1})_{11}$, hence
+$1/s$ is carried by the $(1,1)$ entry of the \emph{same} fixed-size $16\times16$ Schur
+complement $S_L=B_{LL}-B_{LH}B_{HH}^{-1}B_{HL}$ that the T152..T157 chain already forms
+for its floor certificate --- and $1/s=2.3359$--$6.2049$ is \emph{flat}
+($x^{-0.088\pm0.008}$), an $O(1)$ number, against $\hat
+a=2.8\times10^{3}$--$2.4\times10^{6}$ for the same entry \emph{without} the Schur
+subtraction. R2$''$ is thereby an $m$-free \emph{upper} bound on one diagonal entry of a
+fixed-size matrix instead of a lower bound on an angle between two $m$-sized vectors.
+The obvious certificate fails for a named reason: the inversion-free Cauchy--Schwarz
+ceiling on $b^{\mathsf T}B_{HH}^{-1}b$ is off by $5.4\times10^{2}$--$5.2\times10^{5}$ ---
+the cancellation in that one bilinear form is nearly complete, and Cauchy--Schwarz
+cannot see it.
+
+\emph{The arch half is now certified, and the mechanism is localised.} The adaptive
+Lipschitz ceiling is \emph{executed}, not asserted: interval bisection with the local
+Lipschitz constant (the global $\theta_{\mathrm{lo}}$ constant would need up to
+$7.8\times10^{6}$ uniform grid points, $x^{3.365\pm0.147}$) certifies
+$\inf f^{\mathrm{arch}}/(4\sin^2(\theta/2))\ge t$ on $12/12$ windows --- certified floor
+$0.2500$--$0.5353$ in $255$--$3139$ symbol evaluations, cost growing only like
+$h^{0.850\pm0.097}$: the arch half carries a certificate for the first time
+(T156's $1.4\times10^{-5}$ grid stability was evidence; this is a certificate). And the
+extremals are located exactly: the \emph{atom} extremal sits at
+$\theta/\pi=0.0158$--$0.3762$, the \emph{arch} extremal at $0.9901$--$0.9995$ ---
+opposite ends of the band (separation $0.61$--$0.98$), with the bulk minimiser going
+with the atom. The strategy turn this forces: the arch Rayleigh quotient is
+\emph{smallest} at $\theta=\pi$ and \emph{grows} as $\theta$ falls, so a proof of
+R1$''$ must use the $\theta$-\emph{growth} of $f^{\mathrm{arch}}/(4\sin^2(\theta/2))$,
+not its infimum at $\pi$ --- the one-variable infimum is the wrong number to feed it.
+The shape $\lambda_{\min}(B_{HH})\ge\inf_{\mathrm{arch}}\cos^2\varphi-\|\mathrm{atom}\|$
+is refuted as a shape (on the minimiser the arch form is $1.47$--$91.71$, nowhere near
+its infimum); what replaces it is the domination form $B^{\mathrm{arch}}_{HH}-tI\succeq
+(-B^{\mathrm{atom}}_{HH})_+$, which holds per window with quotient $1.0003$--$1.0907$
+--- but the margin at the largest window is $7.3\times10^{-4}$ with a shrinking trend
+($x^{-0.018\pm0.015}$): a certificate, not a uniform statement.
+
+\emph{The balance, the stress, and the price of the substitution.} Substituting the
+resolvent bound into the first row of $G$ costs a factor $1.00$--$1.62$
+(direction-clean and conservative: the substituted complement floor
+$4.37$--$6.20\,\mu^P_1$ never exceeds the measured $5.84$--$7.88$). The balance: $9$
+theorem rungs, $2$ certified-uniform (the ladder $S$; the executed arch ceiling), $2$
+certified-per-window (the pencil floor $t$; the R1$''$ domination), $\mathbf 3$
+\textbf{measured} ($\hat g_1^2$, the eleven other rows of $G$, the T156 model
+domination) --- the target of one is missed, but all three measured steps are now
+\emph{fixed-size in their statement}, which is the change T157 bought. The obligatory
+stress breaks on \emph{five} axes: $p_1$ collapses ($x^{-4.818\pm0.080}$, T156
+reproduced); the ladder $S$ explodes ($x^{2.289\pm0.079}$) against flat on the real
+family; the confinement dies ($(S/t)/\rho_{17}=7.9$--$1.6\times10^{3}$,
+$x^{2.253\pm0.120}$ --- the no-go bottom eigenvector is \emph{not} confined, and the
+$m$-free bound correctly reports vacuum); the resolvent floor is \emph{identically
+zero} there (the route reports its own vacuum); and $(S_L)_{11}$ explodes
+($x^{2.268\pm0.041}$) against flat. The floor survives ($t=0.05$), so a floors-only
+probe would have seen nothing. Controls: parity $4.8\times10^{-14}$; $\mu^P_9$ to
+$2.3\times10^{-13}$ and $\mu^P_1$ to $2.0\times10^{-11}$ in the worthless configuration;
+$s=(B^{-1})_{11}$ to $1.9\times10^{-13}$ with $s=1$ exactly on $A=L_P$; the Dirichlet
+negative control hits its own $2/\sqrt N$ prediction to $7.4\times10^{-5}$.
+
+\begin{keybox}[After T157: both angles resist --- three named rests remain]
+\emph{(O1)} \textbf{an $m$-free upper bound on one number}: $(S_L)_{11}=1/s=
+2.3359$--$6.2049$, the $(1,1)$ entry of the $16\times16$ Schur complement of $B$ ---
+equivalently an $m$-free lower bound on $\hat g_1^2=0.2010$--$0.3282$. Cauchy--Schwarz
+on $b^{\mathsf T}B_{HH}^{-1}b$ is refuted (off by $5.4\times10^{2}$--$5.2\times10^{5}$),
+so what is needed is a bound that \emph{sees} the cancellation in that one bilinear
+form. \emph{(O2)} \textbf{an $m$-free R1$''$ domination with a margin that does not
+shrink}: the certified quotient is $1.0003$--$1.0907$ with trend $x^{-0.018\pm0.015}$
+and a margin of $7.3\times10^{-4}$ at $h=970$; the pointer is the mechanism finding ---
+use the $\theta$-growth of $f^{\mathrm{arch}}/(4\sin^2(\theta/2))$ as $\theta$ falls,
+not its infimum at $\pi$. \emph{(O3)} the T156 debt T157 did not touch: the
+two-dimensional model dominating the eight-dimensional defect --- measured on the real
+family, refuted on the no-go family, and the only remaining measured step whose
+\emph{statement} is not fixed size. What stands a priori on the measurement surface,
+precisely: the KMS spectrum and the exactness of the parity sines, the ratio floors
+$\rho_k$, the identity $F(P,r)$ with $r\le1/(Ls)$, the identity $1/s=(S_L)_{11}$, the
+sine-block confinement, the classical inequalities the chain is assembled from, and the
+arch one-variable infimum with an \emph{executed} Lipschitz certificate per window ---
+and nothing else: neither $p_1$ nor the alignment margin is available before the window
+is built. The four instrument candidates of T155/T157 (the $12\times12$ complement
+certificate, the sine-block confinement, the Schur-entry identity, the adaptive
+Lipschitz ceiling) are promoted as \vref{v552} --- per-instance instruments, no angle
+closed, both open terms typed open.
+T158 (\texttt{schur\_entry\_probe.py}) is running at exactly the cancellation-seeing
+bound.
+\end{keybox}
+
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
-\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the seventeen ledger modules
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the eighteen ledger modules
 of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
@@ -6825,19 +7047,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T156}\label{app:index}
+\section{Probe index, diary parts T11--T157}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $146$ parts T11--T156 that the current diary file records
-($147$ runs --- T104 was a double run with two independent arms --- and $3823$ green checks); the ten
+load-bearing artefact. The index covers the $147$ parts T11--T157 that the current diary file records
+($148$ runs --- T104 was a double run with two independent arms --- and $3855$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v551} promoted; with T126--T156, the first thirty-one parts of the second phase, the
-running totals are \textbf{$156$ probes and $4015/4015$ checks}. T157
-(\texttt{angle\_floor\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v552} promoted; with T126--T157, the first thirty-two parts of the second phase, the
+running totals are \textbf{$157$ probes and $4047/4047$ checks}. T158
+(\texttt{schur\_entry\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -6999,6 +7221,7 @@ T153 & \texttt{\scriptsize psi\_\allowbreak ladder} & the mapped rebuild carried
 T154 & \texttt{\scriptsize green\_\allowbreak align} & the Green/alignment estimate attacked head-on, \textbf{and the CEILING CLOSES, exactly and at fixed size} --- with a direction lesson: the ceiling needs NO residual argument (Ritz values are UPPER bounds of the same-index eigenvalues, Courant--Fischer 1920/Cauchy 1829; Temple 1928/Kato 1949 is a FLOOR device) --- the certificate $\mathrm{span}\{t_1..t_8\}+A^{-1}L_P\,\mathrm{span}\{t_1..t_8\}$ ($16$ columns, FIXED size, $8$ Choleskys $\le8\times8$) carries $K^F=1.1019$--$1.9964$ flat ($x^{0.094\pm0.058}$) \textbf{agreeing with the inertia-certified $K_{\mathrm{bot}}$ to $5.17\times10^{-7}$ on $12/12$} --- the $8$ size-$m$ LDL$^{\mathsf T}$ counts RETIRED from the ceiling step (sines alone: $11.2$--$2.1\times10^{4}$, $x^{2.47}$); FLOOR at fixed size REFUTED ($\|R\|^2/(\beta\lambda_1)=6.3\times10^{3}$--$5.6\times10^{9}$, $x^{4.50}$; scan closes $1/12$ at $k_c/m=0.64$; scalar Temple vacuous $12/12$); \textbf{the obstruction NAMED: seven bottom directions agree to $0.15$--$1.35^\circ$ (median), ONE sits at $82.93$--$89.79^\circ$ --- that single misalignment IS the collapse price}, recovered IN FULL per window by one Cholesky ($4.408$--$7.985$); the missing fixed-size ingredient reduces to ONE arithmetic-free number (the $L_P$ floor on the Ritz complement, flat $5.93$--$8.25\,\mu^P_1$, worth $91$--$100\%$); Kato anatomy: the loss is NOT the floor ($\lambda_{\min}(B_{HH})=0.266$--$0.415>t$) but misalignment ($1.97$--$121$ at $24.9$--$89.8^\circ$; minimiser $96.5$--$100\%$ on the $8$ modes above the cut), Hankel culprit refuted TWICE (both halves hurt at the minimiser; without the reflection $\lambda_1=-7.49\ldots-2.64$), the only working peel needs $0.40$--$0.69$ of the window; end to end, two numbers never conflated: $m$-free-in-shape UNCHANGED $1.01\times10^{-2}$--$3.92\times10^{-2}$, \textbf{per-window certified $4.45\times10^{-2}$--$3.13\times10^{-1}$ --- inside the target band}; no-go: floor survives ($t=0.05$), ceiling explodes $x^{1.99}$, certificate WITH it ($x^{2.29}$, overshoot $1.12$--$2.19$) --- attainment is a property of the REAL section; parity control $3.5\times10^{-6}$, direction violated $0/26$; \textbf{rest: TWO uniformity terms --- R1$'$ the $m$-free block floor (direction-aware) and R2$'$ the $m$-free bottom-mode floor on the Ritz complement (arithmetic-free)}; certificate core promoted as \vref{v551} & ALIGN-RESISTS & 29/29\\
 T155 & \texttt{\scriptsize bottom\_\allowbreak floor} & the two uniformity floors attacked head-on, \textbf{and the complement floor becomes an EXACT fixed-size certificate}: $\min_{v\perp W}v^{\mathsf T}L_Pv\ge\mu^P_{K+1}-\lambda_{\max}(M^{1/2}(I-GG^{\mathsf T})M^{1/2})$, $M=\operatorname{diag}(\mu^P_{K+1}-\mu^P_k)$, $G=T_KQ_W$ --- an identity plus one Rayleigh bound, a THEOREM for every $m$ and every subspace, direction checked (the certified $\lambda_{\max}$ is SUBTRACTED and the certificate never exceeds the exact value) --- reproducing the $m$-sized number to $0.999999783$--$0.999999958$ on $16/16$ windows, $K=12$ sufficient everywhere (ladder $8\ldots64$ preregistered); controls hit from both sides ($\mathrm{span}\{t_1..t_8\}\to\mu^P_9$ at $1.05\times10^{-12}$; the WORTHLESS configuration $\mathrm{span}\{t_2..t_9\}\to\mu^P_1$ at $8.89\times10^{-11}$, reported rather than flattered); \textbf{the defect is localised at $k=1$, the bottom mode itself}: free scale $80.74$--$81.00$ against measured $5.82$--$7.86$ (factor $10.31$--$13.92$), largest uncovered fraction $0.539$--$0.611$ ($x^{-0.063\pm0.016}$), and the $82$--$90^\circ$ direction is DEMYSTIFIED --- it lives on modes $9$--$12$ ($L_P$ Rayleigh $81.2$--$103.4\,\mu^P_1$, $\le1.9\times10^{-2}$ of its mass on modes $1$--$8$): exactly why $K=12$; \textbf{the collapse price $3.250$--$8.471$ is recovered $78.8$--$100.0\%$ AT FIXED SIZE} (in full on $12/16$, $\ge90\%$ on $14/16$; $32$ Green columns $+$ an $8\times8$ Ritz block $+$ one $12\times12$ certificate, no size-$m$ factorisation anywhere); two repairs refuted with mechanism (the pencil-ceiling chain dies on $\kappa=\lambda_{\max}(B)=3.1\times10^{3}$--$2.7\times10^{6}$, $x^{2.82}$, attained where $L_P$ is small; wider $r=12/16/24$ raises the floor $\times1.19$--$3.71$ but the residual $\times12.4$--$8514$, Temple $0/32$); block side: $\lambda_{\min}(B_{HH})=0.2430$--$0.4249$ certified positive, T154's anatomy belongs to a DIFFERENT vector (the $B_{HH}$ minimiser puts only $1.5\times10^{-5}$--$0.69$ on the eight-mode window), the direction-aware $2\times2$ split dies on the coupling ($\|B_{wd}\|=5.81$--$389.41$, $\times16.8$--$908$ too large, $x^{1.94}$), the local atom norm exceeds the local arch reserve by $1.50$--$5.12$, the deeper cut does not terminate; \textbf{the arch reserve IS the symbol infimum} ($1.000022$--$1.000521$ on $14/14$; band $1.0004$--$1.4049$, factor $4.0$--$5.6$ over $t$ --- theorem candidate, Szeg\H{o} 1915/Widom 1958) while \textbf{the FULL symbol infimum is $-714.2\ldots-7.6$, negative on every window against a positive section floor: NO symbol argument can produce R1$'$} --- the mechanism must be finite-section Fej\'er cancellation (min diagonal $0.3840$--$0.7444$); end to end $3.28\times10^{-2}$--$2.83\times10^{-1}$ CERTIFIED AT FIXED SIZE, the declared $4\times10^{-2}$ bar missed by $1.22$ and reported (like-for-like: the share $78.8$--$100\%$); no-go breaks on TWO axes (ceiling $x^{2.010}$; the new instrument reads defect $0.999$--$1.000$ at exactly $90.00^\circ$, recovery $0/8$); parity control $4.85\times10^{-14}$, Dirichlet hits its own $2/\sqrt N$ prediction to $4.1\times10^{-7}$; \textbf{rest: R2$''$ an $m$-free upper bound on ONE $12\times8$ object; R1$''$ the $m$-free atom part on the bulk, with every symbol argument excluded} & FLOORS-RESIST & 27/27\\
 T156 & \texttt{\scriptsize twelve\_by\_\allowbreak eight} & the two rest objects attacked head-on, \textbf{and both become SINGLE SCALARS}: on $\mathrm{span}\{t_1,A^{-1}L_Pt_1\}$ the coupling is the identity $t_1^{\mathsf T}Ay_1=t_1^{\mathsf T}L_Pt_1=\mu^P_1$ (no $A$ in it), so the $t_1$-loss of the bottom Ritz mixing is an EXACT closed function $F(P,r)$ of the Kantorovich product $P=(t_1^{\mathsf T}At_1)(t_1^{\mathsf T}A^{-1}t_1)=5.6\times10^{2}$--$1.0\times10^{6}$ and the inverse moment ratio $r=\|A^{-1}t_1\|^2/(t_1^{\mathsf T}A^{-1}t_1)^2=2.7158$--$3.4089$, FLAT ($x^{-0.047\pm0.020}$; reduction verified to $2.2\times10^{-16}$, against the true $2\times2$ Ritz pair to $4.4\times10^{-16}$); the box route is VACUOUS despite the new $m$-free bound $P-1\ge L^2s^2(r-1)$ ($\sup F=1.0000$ where $\le0.632$ is needed, attained at $P\to1$); the best route is the two-line theorem $r\le1/(Ls)\le1/p_1$, TIGHT to $1.03$--$1.16$, so \textbf{R2$''$ is ONE $m$-free lower bound on $p_1=\cos^2\angle(t_1,e_1(A))=0.2010$--$0.3282$} ($55.05$--$63.36^\circ$, flat $x^{0.054\pm0.029}$; loss at the ceiling $0.6718$--$0.7990$ against truth $0.5392$--$0.6316$); interlacing refuted in BOTH forms (rank hole at $K=12$: eigenvalue $1$ exactly; empty at $K=8$: floor $1.02$--$2.58\,\mu^P_1$ against $5.78$--$7.83$); the model dominates the truth $16/16$ (ratio $0.833$--$0.917$) --- MEASURED, and the stress kills it; block side: \textbf{J2a in T155's $\ge1$ form REFUTED} --- $\inf f^{\mathrm{arch}}/(4\sin^2(\theta/2))=0.8226$--$1.3973$, BELOW $1$ on $3/12$ (T155's $1.00002$--$1.00052$ was the upper surface); survives as the weaker $\inf\ge t$ (factor $3.29$--$5.59$, non-decreasing, grid-stable $1.4\times10^{-5}$, minimum at $\theta/\pi=0.990$--$1.000$); Fej\'er damping real but ONE order ($5$--$31$ where the split needs $3$--$1981$ growing); additive split DIVERGENT ($\|B^{\mathrm{atom}}_{HH}\|=2.2$--$2673.4$, $h^{2.31}$, closes $0/12$); \textbf{the mechanism is ALIGNMENT}: on the minimiser arch $1.4685$--$91.7130$ $+$ atom $-91.2694\ldots-1.1151$ $=\lambda_{\min}(B_{HH})=0.2661$--$0.4436$, the minimiser seeing $6.2\times10^{-3}$--$5.0\times10^{-1}$ of the atom operator ($x^{-1.044}$) at $52.7$--$90.0^\circ$ from the atom-extremal vector; end to end UNCHANGED $3.28\times10^{-2}$--$2.83\times10^{-1}$, recovery median $99.8\%$ ($\ge75\%$ on $12/16$, like-for-like); balance $9$ THEOREM ($3$ new), $6$ CERTIFIED, $3$ MEASURED (zero-MEASURED target missed); no-go breaks on THREE axes ($K^F$ $x^{2.047}$; $p_1$ COLLAPSES to $7.4\times10^{-15}$--$6.6\times10^{-10}$, $x^{-4.818}$; $r$-ceiling tightness $12.5$--$24.6$ vs $1.03$--$1.16$) and kills the domination step ($16/16$ real, $0/8$ no-go); controls: parity $4.8\times10^{-14}$, $\mu^P_9$ at $2.3\times10^{-13}$, $\mu^P_1$ at $2.0\times10^{-11}$ in the worthless configuration, Dirichlet $2/\sqrt N$ to $7.4\times10^{-5}$; \textbf{rest: R2$''$ one $m$-free lower bound on the angle $p_1$; R1$''$ one $m$-free alignment statement (the arch half ready: a one-variable grid infimum)} & TERMS-RESIST & 37/37\\
+T157 & \texttt{\scriptsize angle\_\allowbreak floor} & the two angles attacked head-on, \textbf{and neither falls, but both change shape}: the best $p_1$ route is the RESOLVENT, $p_1\ge\hat g_1^2(1-\mathrm{tail})=0.1968$--$0.3228$ ($97.9\%$ of the measured $0.2010$--$0.3282$), splitting into a NEW THEOREM times ONE measured number --- \textbf{the sine-block confinement $\|\gamma_H\|^2\le\lambda_1/(t\mu^P_{17})\le(S/t)/\rho_{17}=0.0165$--$0.0293$} (from the certified floor $t$ and ladder $S$ alone: $e_1(A)$ is $97.1$--$98.4\%$ inside the first $16$ parity sines; with $\kappa$ instead of $S$ the bound is VACUOUS $43.5$--$38632$) times $\hat g_1^2=0.2010$--$0.3282$ (flat, ONE entry of the bottom vector of a $16\times16$ Schur null problem); three routes refuted with numbers: the classical Rayleigh angle bound EMPTY already measured ($16/16$ negative, $\lambda_2/\lambda_1=1.73$--$5.87$ nearly degenerate), its block version empty at every $J$ although $p_{\mathrm{blk}}(2)=0.9369$--$0.9993$ ($t_1$ lives in the bottom PAIR --- the T156 question answered), the angle-free Cauchy--Schwarz route loses exactly the Kantorovich $P=5.6\times10^{2}$--$1.0\times10^{6}$; \textbf{the structural gem: $1/s=(S_L)_{11}=2.3359$--$6.2049$ FLAT} --- R2$''$ is a bound on ONE diagonal entry of the $16\times16$ Schur complement the chain already forms, and the inversion-free CS ceiling is off by $5.4\times10^{2}$--$5.2\times10^{5}$ (the cancellation is nearly complete); \textbf{the Lipschitz deckel is EXECUTED}: adaptive bisection with the local constant certifies $\inf f^{\mathrm{arch}}/(4\sin^2(\theta/2))\ge t$ on $12/12$ ($0.2500$--$0.5353$, $255$--$3139$ evaluations, cost $x^{0.850}$) --- the arch half is CERT-UNIF for the first time; mechanism localised: atom extremal $\theta/\pi=0.0158$--$0.3762$ against arch $0.9901$--$0.9995$ --- OPPOSITE ends, so a proof must use the $\theta$-GROWTH of the arch ratio, not its infimum at $\pi$; the domination $B^{\mathrm{arch}}_{HH}-tI\succeq(-B^{\mathrm{atom}}_{HH})_+$ holds $12/12$ (quotient $1.0003$--$1.0907$, margin $7.3\times10^{-4}$ at $h=970$, trend shrinking --- per window, NOT uniform); substitution costs $1.00$--$1.62$; balance $9$ THEOREM, $2$ CERT-UNIF, $2$ CERT-WINDOW, $3$ MEASURED (target $1$ missed --- but all three now fixed-size in the statement); no-go breaks on FIVE axes ($p_1$ $x^{-4.818}$; $S$ $x^{2.289}$; confinement to vacuum; resolvent identically ZERO; $(S_L)_{11}$ $x^{2.268}$), floor survives; parity $4.8\times10^{-14}$, Dirichlet $2/\sqrt N$ to $7.4\times10^{-5}$; \textbf{rest: an $m$-free UPPER bound on $(S_L)_{11}$ (cancellation-seeing); an $m$-free non-shrinking R1$''$ domination (pointer: $\theta$-growth); the T156 model-domination debt}; the four instrument candidates of T155/T157 promoted as \vref{v552} & ANGLES-RESIST & 32/32\\
 \end{xltabular}
 }
 

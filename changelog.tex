@@ -62,6 +62,99 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (VII) (\texttt{v552} --- the four fixed-size angle instruments of phase 2 promoted; prime-front diary T157 (the confinement theorem and the one-entry reduction, ANGLES-RESIST) + paper + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v552} (\texttt{PRIME.ANGLE.INSTR.01}).} Promotion of the
+instrument cores of the discovery parts T155 (\texttt{bottom\_floor\_probe.py}) and T157
+(\texttt{angle\_floor\_probe.py}) --- $18$ checks, ${\sim}0.4$\,s, everything recomputed on
+\texttt{v551}'s declared surface (the $12$ deepest prime-power zones admitting a frame-A
+window inside the cap, $n=29\ldots139$, $m=96\ldots291\le300$; a no-go size ladder
+$m=48\ldots288$; parity and Dirichlet controls at $m=64,128,256$), nothing cited from the
+sandbox; the companion to \texttt{v551}, which certified the fixed-size ceiling step ---
+this module certifies the four fixed-size \emph{instruments} the angle campaign produced,
+and none of them closes an angle. Scope fence: per-instance identities and certified
+inequalities with the direction in the name --- no fit, no $D$-exponent, no zone-uniform
+statement, and explicitly \emph{no statement for all $D$} (the two open terms after T157
+--- an $m$-free lower bound on $\hat g_1^2$, equivalently an $m$-free upper bound on the
+one Schur diagonal entry $1/s$; and an $m$-free R1$''$ domination with a non-shrinking
+margin --- stay open and typed open); each statement carries at least one mutation control
+that must fail loudly.
+\item \textbf{(1) The complement-floor certificate (T155) \mE.}
+$\min_{v\perp W}v^{\mathsf T}L_Pv\ge\mu^P_{13}-\lambda_{\max}(M^{1/2}(I-GG^{\mathsf T})
+M^{1/2})$ with $M=\mathrm{diag}(\mu^P_{13}-\mu^P_k)$ and $G=T_{12}Q_W$ --- an identity
+plus \emph{one} certified Rayleigh bound on the high block, a theorem for every $m$ and
+every subspace, direction checked: the certificate never exceeds the exact size-$m$
+complement bottom ($12/12$) and agrees to $1-\mathrm{ratio}\le1.01\times10^{-3}$ against
+the declared cap $2\times10^{-3}$ on this small surface (T155 measured
+$\le2.2\times10^{-7}$ at $h=142\ldots1293$, sandbox). Exactness controls both ways:
+$W=\mathrm{span}\{t_1..t_8\}$ returns $\mu^P_9$ and the \emph{worthless} configuration
+$W=\mathrm{span}\{t_2..t_{13}\}$ returns $\mu^P_1$, both to $2.0\times10^{-11}$ --- the
+instrument reports its own worthlessness; mutation: one corrupted overlap row moves the
+certificate by $\ge0.549$, only downward.
+\item \textbf{(2) The sine-block confinement (T157) \mE.} From the certified pencil floor
+$A\succeq tL_P$ and the certified ladder ceiling $\lambda_1\le S\mu^P_1$ \emph{alone},
+$\|\gamma_H\|^2\le\lambda_1/(t\,\mu^P_{17})\le(S/t)/\rho_{17}=0.0153$--$0.0245<1$ on
+$12/12$: the bottom eigenvector lives $97.5$--$98.5\%$ inside the first $16$ parity sines
+by a \emph{per-instance theorem} (measured tail $6.7\times10^{-6}$--$3.0\times10^{-5}$;
+T146's measured ``$98$ per cent'' replaced by one line). Negative control: the pencil
+ceiling $\kappa$ in place of the ladder $S$ makes the bound vacuous ($17.6$--$477>1$ on
+$12/12$); mutation: the inflated floor $\kappa L_P$ is refuted at $e_1(A)$ by
+$3.3\times10^{3}$--$1.0\times10^{5}$.
+\item \textbf{(3) The Schur-entry identity (T157) \mE.}
+$s=\mu^P_1\,t_1^{\mathsf T}A^{-1}t_1=(B^{-1})_{11}$ exactly ($1.1\times10^{-11}$) and
+$(B^{-1})_{LL}S_L=I$ to $5.8\times10^{-11}$ with $S_L=B_{LL}-B_{LH}B_{HH}^{-1}B_{HL}$ the
+\emph{same} fixed-size $16\times16$ Schur complement the chain already forms:
+$1/s=4.0460$--$5.8962$ is an $O(1)$ number carried by \emph{one} entry, so T156's R2$''$
+loss ceiling $r\le1/(Ls)$ is a statement about one number. Negative control (T157's
+refutation wired as a check): the inversion-free Cauchy--Schwarz ceiling is valid and
+useless, off by $250$--$7.27\times10^{3}$ --- the cancellation in
+$b^{\mathsf T}B_{HH}^{-1}b$ is nearly complete and Cauchy--Schwarz cannot see it;
+mutation: a one-index shift breaks the identity by $1.55$--$2.15$.
+\item \textbf{(4) The adaptive Lipschitz ceiling (T157) \mE.} Interval bisection with the
+\emph{local} Lipschitz constant certifies
+$\inf f^{\mathrm{arch}}/(4\sin^2(\theta/2))\ge0.25$ on $12/12$ windows in $519$--$1201$
+symbol evaluations (certified floor $0.2505$--$0.3062$, never above the fine-grid
+minimum); the global constant is documented insufficient (a uniform grid would need up to
+$61.4\times$ more points); mutation: fed a target above the true grid minimum the
+certificate \emph{refuses} on $12/12$. Stress: on the T145 no-go family the Schur floor
+survives ($t=0.05$) while the confinement goes vacuous ($\times52.0$) and $(S_L)_{11}$
+explodes ($\times60.0$) against the flat real band; parity control exact to
+$4.9\times10^{-14}$; the Dirichlet residual hits the predicted $2/\sqrt N$ to
+$7.4\times10^{-5}$.
+\item \textbf{Prime-front diary T157 (\texttt{angle\_floor\_probe.py}, contract
+\texttt{ANGLE.FLOOR}, $32/32$, $3.9$\,s, $16$ prime-power windows $h=142\ldots1293$, the
+alignment surface on $12$ ($h=50\ldots1077$), verdict ANGLES-RESIST, sandbox).} Neither
+angle falls, but both change shape: the $p_1$ floor becomes a theorem times one measured
+fixed-size number --- the sine-block confinement
+$\|\gamma_H\|^2\le(S/t)/\rho_{17}=0.0165$--$0.0293$ proves $e_1(A)$ lives
+$97.1$--$98.4\%$ inside the first sixteen parity sines, and the resolvent route pins
+$p_1\ge\hat g_1^2(1-\mathrm{tail})=0.1968$--$0.3228$, $97.9\%$ of the measurement (the
+classical Rayleigh angle bound is empty on $16/16$, its block version empty at every $J$,
+the angle-free Cauchy--Schwarz route loses exactly the Kantorovich
+$P=5.6\times10^{2}$--$1.0\times10^{6}$); the structural gem
+$1/s=(S_L)_{11}=2.3359$--$6.2049$ flat makes the whole first term a bound on \emph{one}
+diagonal entry of the $16\times16$ Schur complement the chain already forms
+(Cauchy--Schwarz off by $5.4\times10^{2}$--$5.2\times10^{5}$); the arch half is uniformly
+certified for the first time (executed adaptive Lipschitz ceiling, $12/12$, cost
+$h^{0.85}$) with the two extremals at opposite ends of the band (the pointer: use the
+$\theta$-growth, not the infimum at $\pi$); the alignment term stays a per-window
+domination ($1.0003$--$1.0907$, margin $7.3\times10^{-4}$, shrinking trend); balance $9$
+theorem / $2$ cert-unif / $2$ cert-window / $3$ measured (all three now fixed-size in the
+statement); the no-go breaks on \emph{five} axes. T158 (\texttt{schur\_entry\_probe.py})
+is running at the cancellation-seeing bound. NOT RH evidence; no marker moves.
+\item \textbf{Docs + website sync.} \texttt{tfpt\_prime\_front} gains the T157 subsection
+with the After-T157 keybox, the \texttt{v552} subsection in the verified layer (now
+eighteen modules), the phase-2 section retitled T126--T157, the T157 row in the probe
+index and the updated counters ($157$ probes, $4047$ checks); \texttt{tfpt\_1},
+\texttt{tfpt\_3} and \texttt{tfpt\_research\_contracts} gain the \texttt{v552} companion
+blocks; \texttt{experiments/next.txt} gains the Teil-157 entry;
+\texttt{website/lib/primeFront.ts} gains the T157 and \texttt{v552} feed entries; the
+prime-front status surfaces move to Teile 11--157 / $4047$ checks / 18 modules; suite
+counter $545\to546$ scripts. T158 (\texttt{schur\_entry\_probe.py}) is running at the
+cancellation-seeing bound. Ledger row \texttt{PRIME.ANGLE.INSTR.01} \mE; \textbf{no marker
+of any pre-existing contract moves}.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (VI) (\texttt{v551} --- the fixed-size Ritz ceiling certificate of phase 2 promoted; prime-front diary T154 (the ceiling closes exactly at fixed size, ALIGN-RESISTS) + paper + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v551} (\texttt{PRIME.RITZ.CEIL.01}).} Promotion of the

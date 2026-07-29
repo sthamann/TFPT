@@ -1454,6 +1454,70 @@ Machine-checked:
 \veri{v551\_ritz\_ceiling\_certificate.py}.
 \mE\ (per-instance theorems and certified inequalities; no marker moves)
 
+\par\smallskip\noindent\textbf{The four fixed-size angle instruments
+(\texttt{PRIME.ANGLE.INSTR.01}).}
+The instrument cores of T155 and T157 are load-bearing as the tenth
+companion module ($18$ checks, ${\sim}0.4$\,s) on the same declared
+surface as the Ritz module (the $12$ deepest in-cap frame-A windows,
+$n=29\ldots139$, $m=96\ldots291\le300$; a no-go size ladder
+$m=48\ldots288$; parity and Dirichlet controls at $m=64,128,256$) ---
+none of the four closes an angle, and none is promoted as anything but a
+per-instance instrument.
+\emph{The complement-floor certificate (T155).}
+$\min_{v\perp W}v^{\mathsf T}L_Pv\ge\mu^P_{13}-\lambda_{\max}(M^{1/2}
+(I-GG^{\mathsf T})M^{1/2})$ with $G=T_{12}Q_W$ --- an identity plus one
+certified Rayleigh bound, a theorem for every $m$ and every subspace;
+never above the exact size-$m$ complement bottom, agreement
+$\le1.01\times10^{-3}$ against the declared cap $2\times10^{-3}$ on this
+small surface, both closed-form controls to $2.0\times10^{-11}$
+(including the \emph{worthless} configuration
+$W=\mathrm{span}\{t_2..t_{13}\}\to\mu^P_1$: the instrument reports its
+own worthlessness); a corrupted overlap row moves it by $\ge0.549$.
+\emph{The sine-block confinement (T157).} From the certified pencil
+floor and ladder ceiling alone,
+$\|\gamma_H\|^2\le\lambda_1/(t\,\mu^P_{17})\le(S/t)/\rho_{17}
+=0.0153$--$0.0245<1$ on $12/12$ --- the bottom eigenvector lives
+$97.5$--$98.5\%$ inside the first $16$ parity sines by a per-instance
+theorem (measured tail $6.7\times10^{-6}$--$3.0\times10^{-5}$); with the
+pencil ceiling $\kappa$ instead of the ladder $S$ the bound is vacuous
+($17.6$--$477$), and the inflated floor is refuted at $e_1(A)$ by
+$3.3\times10^{3}$--$1.0\times10^{5}$.
+\emph{The Schur-entry identity (T157).}
+$s=\mu^P_1\,t_1^{\mathsf T}A^{-1}t_1=(B^{-1})_{11}$ exactly
+($1.1\times10^{-11}$), $(B^{-1})_{LL}S_L=I$ to $5.8\times10^{-11}$ with
+$S_L$ the fixed-size $16\times16$ Schur complement the chain already
+forms: $1/s=4.0460$--$5.8962$ is an $O(1)$ number carried by \emph{one}
+entry, while the inversion-free Cauchy--Schwarz ceiling misses by
+$250$--$7.27\times10^{3}$ (the cancellation is nearly complete); a
+one-index shift breaks the identity by $1.55$--$2.15$.
+\emph{The adaptive Lipschitz ceiling (T157).} Interval bisection with
+the local Lipschitz constant certifies
+$\inf f^{\mathrm{arch}}/(4\sin^2(\theta/2))\ge0.25$ on $12/12$ windows in
+$519$--$1201$ evaluations (a uniform grid at the global constant would
+need up to $61\times$ more); fed a target above the true grid minimum it
+\emph{refuses} on $12/12$.
+\emph{The no-go discriminator.} On $c(l)=1/(1+l)$ the floor survives
+($t=0.05$) while the confinement goes vacuous ($\times52.0$) and
+$(S_L)_{11}$ explodes ($\times60.0$) against the flat $4.05$--$5.90$
+real band; parity control exact to $4.9\times10^{-14}$, the Dirichlet
+residual hits $2/\sqrt N$ to $7.4\times10^{-5}$.
+\textbf{Named limits as content:} per instance on small windows ---
+nothing uniform in the zone index or in $D$, and explicitly \emph{no}
+statement for all $D$; nothing about the angles is closed --- the two
+open terms after T157 (an $m$-free lower bound on $\hat g_1^2$,
+equivalently an $m$-free upper bound on the one Schur diagonal entry;
+an $m$-free R1$''$ domination with a non-shrinking margin) stay open,
+typed open.
+KMS 1953 / Schur 1917--Haynsworth 1968 / Courant--Fischer 1920--Cauchy
+1829 / Cauchy--Schwarz (refuted as a ceiling, wired as a control) /
+Kantorovich 1948 / Temple 1928--Kato 1949 (floor devices, not used here)
+/ Sylvester 1852--Bunch--Kaufman 1977 / Wilkinson 1968--Higham 2002 /
+Chebyshev 1852 / Szeg\H{o} 1915--Widom 1958 (a named address, never a
+licence) named classical; Weil 1952 cited, never used as a criterion.
+Machine-checked:
+\veri{v552\_angle\_instruments.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

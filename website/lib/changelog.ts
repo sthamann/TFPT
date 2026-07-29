@@ -43,6 +43,1460 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · VII",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v552"
+      },
+      {
+        "k": "t",
+        "v": " — the four fixed-size angle instruments of phase 2 promoted; prime-front diary T157 (the confinement theorem and the one-entry reduction, ANGLES-RESIST) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v552"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.ANGLE.INSTR.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the instrument cores of the discovery parts T155 ("
+        },
+        {
+          "k": "c",
+          "v": "bottom_floor_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") and T157 ("
+        },
+        {
+          "k": "c",
+          "v": "angle_floor_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "18"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.4"
+        },
+        {
+          "k": "t",
+          "v": " s, everything recomputed on "
+        },
+        {
+          "k": "c",
+          "v": "v551"
+        },
+        {
+          "k": "t",
+          "v": "'s declared surface (the "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " deepest prime-power zones admitting a frame-A window inside the cap, "
+        },
+        {
+          "k": "m",
+          "v": "n=29\\ldots139"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "m=96\\ldots291\\le300"
+        },
+        {
+          "k": "t",
+          "v": "; a no-go size ladder "
+        },
+        {
+          "k": "m",
+          "v": "m=48\\ldots288"
+        },
+        {
+          "k": "t",
+          "v": "; parity and Dirichlet controls at "
+        },
+        {
+          "k": "m",
+          "v": "m=64,128,256"
+        },
+        {
+          "k": "t",
+          "v": "), nothing cited from the sandbox; the companion to "
+        },
+        {
+          "k": "c",
+          "v": "v551"
+        },
+        {
+          "k": "t",
+          "v": ", which certified the fixed-size ceiling step — this module certifies the four fixed-size "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "instruments"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the angle campaign produced, and none of them closes an angle. Scope fence: per-instance identities and certified inequalities with the direction in the name — no fit, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no zone-uniform statement, and explicitly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no statement for all "
+            },
+            {
+              "k": "m",
+              "v": "D"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the two open terms after T157 — an "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free lower bound on "
+        },
+        {
+          "k": "m",
+          "v": "\\hat g_1^2"
+        },
+        {
+          "k": "t",
+          "v": ", equivalently an "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free upper bound on the one Schur diagonal entry "
+        },
+        {
+          "k": "m",
+          "v": "1/s"
+        },
+        {
+          "k": "t",
+          "v": "; and an "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": "-free R1"
+        },
+        {
+          "k": "m",
+          "v": "''"
+        },
+        {
+          "k": "t",
+          "v": " domination with a non-shrinking margin — stay open and typed open); each statement carries at least one mutation control that must fail loudly."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The complement-floor certificate (T155) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\min_{v\\perp W}v^{\\mathsf T}L_Pv\\ge\\mu^P_{13}-\\lambda_{\\max}(M^{1/2}(I-GG^{\\mathsf T})\nM^{1/2})"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "M=\\mathrm{diag}(\\mu^P_{13}-\\mu^P_k)"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "G=T_{12}Q_W"
+        },
+        {
+          "k": "t",
+          "v": " — an identity plus "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " certified Rayleigh bound on the high block, a theorem for every "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": " and every subspace, direction checked: the certificate never exceeds the exact size-"
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": " complement bottom ("
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ") and agrees to "
+        },
+        {
+          "k": "m",
+          "v": "1-\\mathrm{ratio}\\le1.01\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " against the declared cap "
+        },
+        {
+          "k": "m",
+          "v": "2\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " on this small surface (T155 measured "
+        },
+        {
+          "k": "m",
+          "v": "\\le2.2\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "h=142\\ldots1293"
+        },
+        {
+          "k": "t",
+          "v": ", sandbox). Exactness controls both ways: "
+        },
+        {
+          "k": "m",
+          "v": "W=\\mathrm{span}\\{t_1..t_8\\}"
+        },
+        {
+          "k": "t",
+          "v": " returns "
+        },
+        {
+          "k": "m",
+          "v": "\\mu^P_9"
+        },
+        {
+          "k": "t",
+          "v": " and the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "worthless"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " configuration "
+        },
+        {
+          "k": "m",
+          "v": "W=\\mathrm{span}\\{t_2..t_{13}\\}"
+        },
+        {
+          "k": "t",
+          "v": " returns "
+        },
+        {
+          "k": "m",
+          "v": "\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": ", both to "
+        },
+        {
+          "k": "m",
+          "v": "2.0\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": " — the instrument reports its own worthlessness; mutation: one corrupted overlap row moves the certificate by "
+        },
+        {
+          "k": "m",
+          "v": "\\ge0.549"
+        },
+        {
+          "k": "t",
+          "v": ", only downward."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The sine-block confinement (T157) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " From the certified pencil floor "
+        },
+        {
+          "k": "m",
+          "v": "A\\succeq tL_P"
+        },
+        {
+          "k": "t",
+          "v": " and the certified ladder ceiling "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_1\\le S\\mu^P_1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "alone"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\|\\gamma_H\\|^2\\le\\lambda_1/(t\\,\\mu^P_{17})\\le(S/t)/\\rho_{17}=0.0153"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.0245<1"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ": the bottom eigenvector lives "
+        },
+        {
+          "k": "m",
+          "v": "97.5"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "98.5\\%"
+        },
+        {
+          "k": "t",
+          "v": " inside the first "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " parity sines by a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "per-instance theorem"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (measured tail "
+        },
+        {
+          "k": "m",
+          "v": "6.7\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.0\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": "; T146's measured “"
+        },
+        {
+          "k": "m",
+          "v": "98"
+        },
+        {
+          "k": "t",
+          "v": " per cent” replaced by one line). Negative control: the pencil ceiling "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa"
+        },
+        {
+          "k": "t",
+          "v": " in place of the ladder "
+        },
+        {
+          "k": "m",
+          "v": "S"
+        },
+        {
+          "k": "t",
+          "v": " makes the bound vacuous ("
+        },
+        {
+          "k": "m",
+          "v": "17.6"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "477>1"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "); mutation: the inflated floor "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa L_P"
+        },
+        {
+          "k": "t",
+          "v": " is refuted at "
+        },
+        {
+          "k": "m",
+          "v": "e_1(A)"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "3.3\\times10^{3}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.0\\times10^{5}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) The Schur-entry identity (T157) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "s=\\mu^P_1\\,t_1^{\\mathsf T}A^{-1}t_1=(B^{-1})_{11}"
+        },
+        {
+          "k": "t",
+          "v": " exactly ("
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "(B^{-1})_{LL}S_L=I"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "5.8\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "S_L=B_{LL}-B_{LH}B_{HH}^{-1}B_{HL}"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " fixed-size "
+        },
+        {
+          "k": "m",
+          "v": "16\\times16"
+        },
+        {
+          "k": "t",
+          "v": " Schur complement the chain already forms: "
+        },
+        {
+          "k": "m",
+          "v": "1/s=4.0460"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5.8962"
+        },
+        {
+          "k": "t",
+          "v": " is an "
+        },
+        {
+          "k": "m",
+          "v": "O(1)"
+        },
+        {
+          "k": "t",
+          "v": " number carried by "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " entry, so T156's R2"
+        },
+        {
+          "k": "m",
+          "v": "''"
+        },
+        {
+          "k": "t",
+          "v": " loss ceiling "
+        },
+        {
+          "k": "m",
+          "v": "r\\le1/(Ls)"
+        },
+        {
+          "k": "t",
+          "v": " is a statement about one number. Negative control (T157's refutation wired as a check): the inversion-free Cauchy–Schwarz ceiling is valid and useless, off by "
+        },
+        {
+          "k": "m",
+          "v": "250"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "7.27\\times10^{3}"
+        },
+        {
+          "k": "t",
+          "v": " — the cancellation in "
+        },
+        {
+          "k": "m",
+          "v": "b^{\\mathsf T}B_{HH}^{-1}b"
+        },
+        {
+          "k": "t",
+          "v": " is nearly complete and Cauchy–Schwarz cannot see it; mutation: a one-index shift breaks the identity by "
+        },
+        {
+          "k": "m",
+          "v": "1.55"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.15"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The adaptive Lipschitz ceiling (T157) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Interval bisection with the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "local"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Lipschitz constant certifies "
+        },
+        {
+          "k": "m",
+          "v": "\\inf f^{\\mathrm{arch}}/(4\\sin^2(\\theta/2))\\ge0.25"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": " windows in "
+        },
+        {
+          "k": "m",
+          "v": "519"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1201"
+        },
+        {
+          "k": "t",
+          "v": " symbol evaluations (certified floor "
+        },
+        {
+          "k": "m",
+          "v": "0.2505"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.3062"
+        },
+        {
+          "k": "t",
+          "v": ", never above the fine-grid minimum); the global constant is documented insufficient (a uniform grid would need up to "
+        },
+        {
+          "k": "m",
+          "v": "61.4\\times"
+        },
+        {
+          "k": "t",
+          "v": " more points); mutation: fed a target above the true grid minimum the certificate "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "refuses"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ". Stress: on the T145 no-go family the Schur floor survives ("
+        },
+        {
+          "k": "m",
+          "v": "t=0.05"
+        },
+        {
+          "k": "t",
+          "v": ") while the confinement goes vacuous ("
+        },
+        {
+          "k": "m",
+          "v": "\\times52.0"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "(S_L)_{11}"
+        },
+        {
+          "k": "t",
+          "v": " explodes ("
+        },
+        {
+          "k": "m",
+          "v": "\\times60.0"
+        },
+        {
+          "k": "t",
+          "v": ") against the flat real band; parity control exact to "
+        },
+        {
+          "k": "m",
+          "v": "4.9\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "; the Dirichlet residual hits the predicted "
+        },
+        {
+          "k": "m",
+          "v": "2/\\sqrt N"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "7.4\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T157 ("
+            },
+            {
+              "k": "c",
+              "v": "angle_floor_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "ANGLE.FLOOR"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "32/32"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "3.9"
+            },
+            {
+              "k": "t",
+              "v": " s, "
+            },
+            {
+              "k": "m",
+              "v": "16"
+            },
+            {
+              "k": "t",
+              "v": " prime-power windows "
+            },
+            {
+              "k": "m",
+              "v": "h=142\\ldots1293"
+            },
+            {
+              "k": "t",
+              "v": ", the alignment surface on "
+            },
+            {
+              "k": "m",
+              "v": "12"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "m",
+              "v": "h=50\\ldots1077"
+            },
+            {
+              "k": "t",
+              "v": "), verdict ANGLES-RESIST, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Neither angle falls, but both change shape: the "
+        },
+        {
+          "k": "m",
+          "v": "p_1"
+        },
+        {
+          "k": "t",
+          "v": " floor becomes a theorem times one measured fixed-size number — the sine-block confinement "
+        },
+        {
+          "k": "m",
+          "v": "\\|\\gamma_H\\|^2\\le(S/t)/\\rho_{17}=0.0165"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.0293"
+        },
+        {
+          "k": "t",
+          "v": " proves "
+        },
+        {
+          "k": "m",
+          "v": "e_1(A)"
+        },
+        {
+          "k": "t",
+          "v": " lives "
+        },
+        {
+          "k": "m",
+          "v": "97.1"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "98.4\\%"
+        },
+        {
+          "k": "t",
+          "v": " inside the first sixteen parity sines, and the resolvent route pins "
+        },
+        {
+          "k": "m",
+          "v": "p_1\\ge\\hat g_1^2(1-\\mathrm{tail})=0.1968"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.3228"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "97.9\\%"
+        },
+        {
+          "k": "t",
+          "v": " of the measurement (the classical Rayleigh angle bound is empty on "
+        },
+        {
+          "k": "m",
+          "v": "16/16"
+        },
+        {
+          "k": "t",
+          "v": ", its block version empty at every "
+        },
+        {
+          "k": "m",
+          "v": "J"
+        },
+        {
+          "k": "t",
+          "v": ", the angle-free Cauchy–Schwarz route loses exactly the Kantorovich "
+        },
+        {
+          "k": "m",
+          "v": "P=5.6\\times10^{2}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.0\\times10^{6}"
+        },
+        {
+          "k": "t",
+          "v": "); the structural gem "
+        },
+        {
+          "k": "m",
+          "v": "1/s=(S_L)_{11}=2.3359"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "6.2049"
+        },
+        {
+          "k": "t",
+          "v": " flat makes the whole first term a bound on "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " diagonal entry of the "
+        },
+        {
+          "k": "m",
+          "v": "16\\times16"
+        },
+        {
+          "k": "t",
+          "v": " Schur complement the chain already forms (Cauchy–Schwarz off by "
+        },
+        {
+          "k": "m",
+          "v": "5.4\\times10^{2}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5.2\\times10^{5}"
+        },
+        {
+          "k": "t",
+          "v": "); the arch half is uniformly certified for the first time (executed adaptive Lipschitz ceiling, "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ", cost "
+        },
+        {
+          "k": "m",
+          "v": "h^{0.85}"
+        },
+        {
+          "k": "t",
+          "v": ") with the two extremals at opposite ends of the band (the pointer: use the "
+        },
+        {
+          "k": "m",
+          "v": "\\theta"
+        },
+        {
+          "k": "t",
+          "v": "-growth, not the infimum at "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": "); the alignment term stays a per-window domination ("
+        },
+        {
+          "k": "m",
+          "v": "1.0003"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.0907"
+        },
+        {
+          "k": "t",
+          "v": ", margin "
+        },
+        {
+          "k": "m",
+          "v": "7.3\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": ", shrinking trend); balance "
+        },
+        {
+          "k": "m",
+          "v": "9"
+        },
+        {
+          "k": "t",
+          "v": " theorem / "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " cert-unif / "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " cert-window / "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " measured (all three now fixed-size in the statement); the no-go breaks on "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "five"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " axes. T158 ("
+        },
+        {
+          "k": "c",
+          "v": "schur_entry_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at the cancellation-seeing bound. NOT RH evidence; no marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Docs + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " gains the T157 subsection with the After-T157 keybox, the "
+        },
+        {
+          "k": "c",
+          "v": "v552"
+        },
+        {
+          "k": "t",
+          "v": " subsection in the verified layer (now eighteen modules), the phase-2 section retitled T126–T157, the T157 row in the probe index and the updated counters ("
+        },
+        {
+          "k": "m",
+          "v": "157"
+        },
+        {
+          "k": "t",
+          "v": " probes, "
+        },
+        {
+          "k": "m",
+          "v": "4047"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " gain the "
+        },
+        {
+          "k": "c",
+          "v": "v552"
+        },
+        {
+          "k": "t",
+          "v": " companion blocks; "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " gains the Teil-157 entry; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T157 and "
+        },
+        {
+          "k": "c",
+          "v": "v552"
+        },
+        {
+          "k": "t",
+          "v": " feed entries; the prime-front status surfaces move to Teile 11–157 / "
+        },
+        {
+          "k": "m",
+          "v": "4047"
+        },
+        {
+          "k": "t",
+          "v": " checks / 18 modules; suite counter "
+        },
+        {
+          "k": "m",
+          "v": "545\\to546"
+        },
+        {
+          "k": "t",
+          "v": " scripts. T158 ("
+        },
+        {
+          "k": "c",
+          "v": "schur_entry_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at the cancellation-seeing bound. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.ANGLE.INSTR.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · VI",
     "heading": [
       {
