@@ -105,8 +105,8 @@ const MODULES = [
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 155;
-const SANDBOX_CHECKS = 3978;
+const SANDBOX_PROBES = 156;
+const SANDBOX_CHECKS = 4015;
 
 export function ModuleLadder() {
   return (

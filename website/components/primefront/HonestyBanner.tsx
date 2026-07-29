@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3978/3978 sandbox checks —
+        (“the full proof”, T126+) is now open with 4015/4015 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -261,9 +261,28 @@ export function HonestyBanner() {
         (−714.2…−7.6) while the block minimum is positive, so NO symbol
         argument can ever deliver that floor; the mechanism must be Fejér
         cancellation in the finite section (the arch half alone IS its
-        symbol infimum to 5e-4 — a theorem candidate). T156
-        (twelve_by_eight_probe.py) is running at the two m-free rest
-        objects. What remains
+        symbol infimum to 5e-4 — a theorem candidate). T156 (TERMS-RESIST)
+        then attacked exactly those two objects, and both remaining terms
+        are now single scalars, not matrices: the t₁-loss of the bottom
+        Ritz mixing collapses to an exact closed function F(P, r) of two
+        dimensionless numbers (verified to 2e-16), whose two-line ceiling
+        r ≤ 1/(Ls) ≤ 1/p₁ is tight to a factor 1.03–1.16 — so the whole
+        first term is ONE m-free lower bound on an angle, the first parity
+        sine against the bottom eigenvector of the section, measured flat
+        at p₁ = 0.2010–0.3282 (55–63°) — while the second term is
+        re-identified against expectation: the block positivity is an
+        ALIGNMENT fact, not Fejér mass damping (the expected arch
+        inequality ≥ 1 is refuted, below 1 on 3 of 12 windows; the
+        additive split is divergent, the atom norm growing like h^2.31) —
+        on the minimiser an arch part of 1.47–91.71 and an atom part of
+        −91.27…−1.12 cancel to 0.2661–0.4436, with the minimiser seeing
+        only 6.2e-3–0.50 of the atom operator at 52.7–90.0° from the
+        atom-extremal vector; the no-go family breaks on three axes,
+        including a collapse of the angle itself (p₁ down to 7e-15), and
+        kills the one measured step of the reduction (the 2×2-model
+        domination holds 16/16 real, fails 8/8 no-go). T157
+        (angle_floor_probe.py) is running at exactly those two angles.
+        What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann
