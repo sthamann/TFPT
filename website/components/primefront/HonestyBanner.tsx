@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v558
+          v535–v559
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4514/4514 sandbox checks —
+        (“the full proof”, T126+) is now open with 4557/4557 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -472,8 +472,20 @@ export function HonestyBanner() {
         the target 3.0, and R1 is finally classified as a
         NEAR-DEGENERACY, not a size — beyond any size-bounding tool;
         the theorem cores of T168+T169+T170 are load-bearing as v558.
-        T171 (final_map_probe.py) is assembling the capstone map of the
-        whole phase. What remains
+        T171 (MAP-COMPLETE) then assembled the capstone, and the map is
+        complete: all sixteen links of the reduction chain — from the I5
+        floor to the final R1 shape — reproduce in ONE connected run
+        (thirteen as theorems, three as per-window certificates), all
+        eight classified no-go routes fail on instances exactly as
+        classified, and the precision ledger closes with the needed
+        joint precision standing five orders beyond the RH yardstick
+        (1.2e5×) and three beyond the best unconditional bound (3.1e3×);
+        the file adds ZERO new uniform statements — which is precisely
+        why it is promotable: phase 2 is now a certified map with one
+        open object (R1, classified as a near-degeneracy, not a size),
+        and the capstone is load-bearing as v559. T172
+        (frame_beyond_probe.py) is testing how far the map carries
+        beyond frame A. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

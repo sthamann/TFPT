@@ -1884,6 +1884,77 @@ Machine-checked:
 \veri{v558\_bilinear\_rank\_identities.py}.
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 
+\par\smallskip\noindent\textbf{The phase-2 capstone
+(\texttt{PRIME.PHASE2.CAPSTONE.01}).}
+The capstone \emph{verifies the map and claims nothing new}: T126--T170
+reduced the I5 uniformity question through sixteen exact reformulations
+to one object (R1), T171 (contract \texttt{FINAL.MAP}, verdict
+\textsc{map-complete}) reproduced every link of that reduction in one
+connected sandbox run, and the seventeenth companion module ($35$
+checks, ${\sim}0.3$\,s) is the load-bearing version of that run on the
+same declared surface as the module above ($12$ deepest in-cap frame-A
+windows, $m=96\ldots291\le300$; $\kappa=0.038821$ \emph{verified} at
+every jump point of $\psi(x)/x$; the $16\times16$ low block positive
+definite on $12/12$ --- a numerical fact, never routed through the Weil
+criterion).
+\emph{The chain, sixteen links in one pass} ($13$ THEOREM / $3$ CERT):
+the T152 Schur two-block criterion sharp on both sides (holds at
+$0.5\lambda_{\min}$, fails at $1.02\lambda_{\min}$; KMS
+$1.3\times10^{-15}$, Haynsworth $3.8\times10^{-15}$); the T151 Sobolev
+bound $b_k\le C_Sk$ (worst ratio $0.4816$); the T153 $\Psi$-collapse
+$\Psi=\sum_dc_dw_d=x^{\mathsf T}Gx$ ($6.3\times10^{-16}$; $\sum_dw_d=0$
+to $9.0\times10^{-17}$); the T154 Ritz ceiling from \emph{below}
+($g_{32}/s=0.9520$--$0.9849$); the sharp T155 $12\times12$ floor
+($t=0.2295$--$0.3719$); the T156 $F(P,r)$ chain ($L(16)=6.6$--$15.6$);
+the T158 Thomson/ladder duality ($3.1\times10^{-12}$; $36/36$ trials
+below); the T160 sampling identity ($1.1\times10^{-15}$ /
+$9.9\times10^{-15}$); the T163 Abel swap with the TV floor (overshoot
+$\times5.2\times10^{4}$--$1.1\times10^{6}$); the T164 gauge/quantifier
+collapse ($\Psi(x^*)=1/g_{16}$ to $7.0\times10^{-12}$; $48/48$
+perturbed vectors larger); the T165 $P_{\mathrm{pr}}$ identity
+($=1$ at $x^*$); the T166 cascade $1/(1-R_{16}^2)$
+($1.8\times10^{-12}$, diagonal-invariant); the T167 $K=2$ exactness
+(milder $\times1.62$--$5.20$); the T169 det collapse, R4-\emph{free}
+($\le4.2\times10^{-12}$, no positivity of $A_h$ consumed --- the Weil
+fence never approached); the T170 rank-3 theorem ($J$-eigenvalues
+$\{-2,-1,+1\}$ exact; $\sigma_4/\sigma_1\le1.6\times10^{-16}$); and the
+T170 R1 shape via the $2\times2$ Lagrange identity ($\sin\angle=
+1.169\times10^{-4}$--$2.467\times10^{-3}\le10^{-2}$ per window ---
+\emph{rate and quantifier typed OPEN}).
+\emph{The no-go battery}, all eight failing as classified: size budget
+$\times2.7\times10^{3}$--$1.6\times10^{4}$; symbol infimum $<0$ on
+$12/12$; sector change an invariance ($\le4.2\times10^{-12}$);
+perturbation $\times9.8\times10^{2}$--$2.0\times10^{4}$ off scale
+(Kato 1949); atom band dominates $\times1.71$--$2.83$; sieve
+operator-norm $\times8.8\times10^{3}$--$7.5\times10^{4}$ over
+(Montgomery--Vaughan 1973 / Vaughan 1977 the priced route); scramble
+$\times679$ median with rank-3 \emph{untouched} on $60$ draws; $L_P$
+gain $=1$ exactly.
+\emph{The precision ledger}: needed $2.752\times10^{-4}$ at the deepest
+window --- finer than the RH yardstick $h^{-0.5}$ by $215\times$ and
+the best unconditional $h^{-0.996}$ by $13\times$ on this surface; both
+self-similarity identities $\le6.8\times10^{-13}$; mutations fail
+loudly.
+\textbf{Named limits as content:} per instance on small windows ---
+nothing uniform in the zone index or in $D$; the T171 trend fits
+(pooled $h^{-2.33}$, per-frame $h^{-1.86}/h^{-2.87}$, $\delta=+1.044$
+against $3.0$, the full-surface numbers $2.284\times10^{-7}$ /
+$1.2\times10^{5}\times$ / $3.1\times10^{3}\times$) are sandbox,
+\emph{not} consumed; \emph{zero} new uniform-in-$m$ statements ---
+which is exactly why the capstone is promotable; the one open phase-2
+object (R1, an $m$-free unconditional certificate that the two rows of
+$\hat A$ become collinear at rate $h^{-3+\varepsilon}$) stays open,
+typed open; \emph{no} RH statement.
+Schur 1917--Haynsworth 1968 / KMS 1953 / Cauchy 1829--Courant--Fischer
+1920 / Rayleigh 1877 / Abel 1826 / Dirichlet 1829 / Lagrange 1773 /
+Cauchy--Binet 1812--1815 / Kato 1949 (the closed-off route) /
+Montgomery--Vaughan 1973--Vaughan 1977 / Chebyshev
+1852--Rosser--Schoenfeld 1962 / Fej\'er 1915 named classical; Weil 1952
+/ Bombieri 2000 cited, never used as a criterion.
+Machine-checked:
+\veri{v559\_phase2\_capstone.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

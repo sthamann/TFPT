@@ -82,7 +82,7 @@ $240\,\zeta(s)\zeta(s-3)$ as a Dirichlet series, and the lattice's self-duality 
 exact functional equation whose fixed axis is the critical line --- a framework picture, stated as such,
 which the document opens with and then keeps at arm's length. This companion documents the line end to
 end. Twenty-four modules are
-load-bearing and ledger-carried (\vref{v535}--\vref{v558}): Hecke from geometry on the $E_8$ census,
+load-bearing and ledger-carried (\vref{v535}--\vref{v559}): Hecke from geometry on the $E_8$ census,
 the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, the matching-lemma / transport
@@ -92,9 +92,10 @@ identities, the level-lemma identities, the Green/Szeg\H{o} identities, the gaug
 identities, the odd-sector identities, the fixed-size Ritz ceiling certificate, the four
 fixed-size angle instruments, the exact-form identities, the sampling/harmonics
 identities, the Pareto/total-variation identities, the gauge/$P_{\mathrm{pr}}$
-identities, the cascade/vector identities and the bilinear/rank identities. Everything beyond
-those twenty-four is \emph{sandbox}: an exploratory program, run as
-$170$ preregistered probes with $4514$ machine checks, which localized the residual object. That
+identities, the cascade/vector identities, the bilinear/rank identities and the phase-2
+capstone. Everything beyond
+those twenty-five is \emph{sandbox}: an exploratory program, run as
+$171$ preregistered probes with $4557$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -263,7 +264,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots167$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots171$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -271,7 +272,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T170: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T171: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -512,7 +513,11 @@ weights (T169); and the unconditional sieve box classifies that shape \emph{as a
 form is written down exactly, a five-order cancellation between three explicit pieces, and it
 collapses back onto three linear $\Lambda$-sums by a rank-3 theorem and a Type II collapse, so
 R1 is finally a \emph{near-degeneracy}, not a size --- beyond every size-bounding tool --- with
-the theorem cores of T168+T169+T170 promoted as \vref{v558} (T170));
+the theorem cores of T168+T169+T170 promoted as \vref{v558} (T170); and the capstone then
+assembles the whole map in one connected run --- all sixteen links of the reduction chain, from
+the I5 floor to the final R1 shape, thirteen as theorems and three as per-window certificates,
+the eight-route no-go battery failing exactly as classified, and the precision ledger closed ---
+adding \emph{zero} new uniform statements, with the capstone promoted as \vref{v559} (T171));
 Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
@@ -597,7 +602,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the twenty-four modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the twenty-five modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -738,13 +743,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: twenty-four modules}\label{sec:verified}
+\section{The verified layer: twenty-five modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The twenty-four modules and their ledger markers]
+\begin{keybox}[The twenty-five modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -774,6 +779,7 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v556} & \texttt{PRIME.GAUGE.PPR.01} & gauge/$P_{\mathrm{pr}}$ identities of phase 2 (per instance) & \mE\\
 \vref{v557} & \texttt{PRIME.CASCADE.VECT.01} & cascade/vector identities of phase 2 (per instance) & \mE\\
 \vref{v558} & \texttt{PRIME.BILINEAR.RANK.01} & bilinear/rank identities of phase 2 (per instance) & \mE\\
+\vref{v559} & \texttt{PRIME.PHASE2.CAPSTONE.01} & phase-2 capstone: the sixteen-link chain (per instance) & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -2214,6 +2220,105 @@ $\Lambda$-sums $(S_{11},S_{22},S_{12})$ against the archimedean block --- a rate
 statement the module neither makes nor approaches; the T168/T169/T170 verdicts
 (\textsc{minors-resist} / \textsc{ratio-resists} / \textsc{sieve-resists}) are sandbox
 verdicts; \vref{v557}'s identities stay as stated, and nothing is re-opened.
+\end{itemize}
+
+\subsection{The phase-2 capstone (\texorpdfstring{\vref{v559}}{v559})}\label{sec:v559}
+The capstone \emph{verifies the map and claims nothing new} (T171, contract
+\texttt{FINAL.MAP}, Section~\ref{sec:phase2}): T126--T170 reduced the I5 uniformity
+question through sixteen exact reformulations to \emph{one} object (R1); T171 reproduced
+every link of that reduction in one connected sandbox run; this module is the
+load-bearing version of that run --- the whole sixteen-link chain as one machine-checked
+pass ($13$ links \textsc{theorem}: algebra for every $h$, checked on instances; $3$ links
+\textsc{cert}: per window, no quantifier in $m$), the eight-route no-go battery (each
+classified dead route exhibited failing on an instance exactly as classified), and the
+precision ledger with both self-similarity identities --- and it adds \emph{zero} new
+uniform-in-$m$ statements, which is precisely why it is promotable
+\veri{v559\_phase2\_capstone.py} ($35$ checks, ${\sim}0.3$\,s; everything recomputed on
+\vref{v551}--\vref{v558}'s declared surface, the $12$ deepest prime-power zones admitting a
+frame-A window inside the cap, $n=29\ldots139$, $m=96\ldots291\le300$; the one arithmetic
+input $\kappa=0.038821$ \emph{verified} at every jump point of $\psi(x)/x$ on the
+von-Mangoldt table; the $16\times16$ low block positive definite on $12/12$ --- a numerical
+fact about finite matrices, never routed through the Weil criterion).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The chain, sixteen links in one pass} \mE: (1) the T152 Schur two-block
+criterion --- $TL_PT^{\mathsf T}=\operatorname{diag}(\mu^P)$ to $1.3\times10^{-15}$ (KMS
+1953), the identity pair $x^{\mathsf T}Gx=v^{\mathsf T}A_hv$ / $x^{\mathsf T}x=
+v^{\mathsf T}L_Pv$ to $1.8\times10^{-14}$, the criterion \emph{holds} at
+$0.5\lambda_{\min}$ and \emph{fails} at $1.02\lambda_{\min}$ (sharp, the direction check),
+Haynsworth product $3.8\times10^{-15}$ (Schur 1917 / Haynsworth 1968); (2) the T151
+Sobolev bound $b_k\le C_Sk$ with $C_S=(2\pi+2)/\sqrt N$, worst ratio $0.4816$; (3) the
+T153 $\Psi$-collapse $\Psi(x)=\sum_dc_dw_d=x^{\mathsf T}Gx$ to $6.3\times10^{-16}$ with
+$\sum_dw_d=0$ to $9.0\times10^{-17}$ (the Z-law) and cancellation headroom
+$2.1\times10^{15}$ (the declared horizon); (4) the T154 Ritz ceiling --- Cauchy
+interlacing and the dual chain $g_{12}\le g_{16}\le g_{32}\le s$ with
+$g_{32}/s=0.9520$--$0.9849$ from \emph{below} (Cauchy 1829; Courant--Fischer 1920); (5)
+the T155 $12\times12$ floor [\textsc{cert}] --- holds at $(1-10^{-9})\lambda$, fails at
+$(1+10^{-4})\lambda$, certified $t=0.2295$--$0.3719$; (6) the T156 $F(P,r)$ chain
+[\textsc{cert}] --- $P_K\ge1$, $r_K\ge0$ at $K=2,4,8,16$ with certified $L$ increasing,
+$L(16)=6.6$--$15.6$; (7) the T158 Thomson/ladder duality --- the dual maximum equals the
+Cholesky rung to $3.1\times10^{-12}$, every increment strictly positive, $36/36$ random
+admissible trials below; (8) the T160 sampling identity --- the four-Dirichlet-kernel
+closed weights equal the correlation weights to $1.1\times10^{-15}$ (Dirichlet 1829) and
+the atom half of $\Psi$ equals the sampled $\Lambda$-mass to $9.9\times10^{-15}$; (9) the
+T163 TV floor / Abel swap to $1.8\times10^{-11}$ with $\mathrm{TV}(w)\max|C_d|$
+overshooting $|\Psi|$ by $5.2\times10^{4}$--$1.1\times10^{6}$ (Abel 1826); (10) the T164
+gauge/quantifier collapse --- $R=\Psi/\mathrm{TV}$ scale-invariant to
+$2.2\times10^{-11}$, $\Psi(x^*)=1/g_{16}$ to $7.0\times10^{-12}$, $48/48$ perturbed
+admissible vectors larger; (11) the T165 $P_{\mathrm{pr}}$ identity to
+$1.1\times10^{-16}$ with $P_{\mathrm{pr}}=1$ at $x^*$; (12) the T166 cascade
+$g_{16}/g_1=1/(1-R_{16}^2)$ to $1.8\times10^{-12}$, diagonal-invariant to
+$2.3\times10^{-12}$; (13) the T167 $K=2$ exactness --- $G_{11}g_2=1/(1-r_{12}^2)$ to
+$6.8\times10^{-13}$ with the closed minimiser, $K=2$ \emph{milder} than $K=16$ by
+$1.62$--$5.20$; (14) the T169 det collapse, R4-\emph{free} ---
+$1-r_{12}^2=\det\hat A/(\hat a_{11}\hat a_{22})=\nu_1\nu_2/(\hat a_{11}\hat a_{22})
+=\det G_2/(G_{11}G_{22})$ and $1/g_2=G_{11}(1-r_{12}^2)$, all $\le4.2\times10^{-12}$,
+consuming \emph{no} positivity of $A_h$ (T170-TH6; the Weil fence is never approached);
+(15) the T170 rank-3 theorem --- $J$-eigenvalues $\{-2,-1,+1\}$ exact, the split to
+$1.7\times10^{-14}$, the polarisation to $1.0\times10^{-10}$, $\det S=\tfrac12
+y^{\mathsf T}Jy$ to $3.9\times10^{-16}$, $\sigma_4/\sigma_1\le1.6\times10^{-16}$
+(Lagrange 1773; Cauchy--Binet 1812/1815); (16) the T170 R1 shape [\textsc{cert}] ---
+$\sin\angle(\mathrm{row}_1,\mathrm{row}_2)=|\det\hat A|/(|r_1||r_2|)$ via the $2\times2$
+Lagrange identity ($3.6\times10^{-16}$ at the natural scale; $3.7\times10^{-15}$ as
+algebra on well-conditioned controls), measured $\sin\angle=1.169\times10^{-4}$--$2.467
+\times10^{-3}\le10^{-2}$ per window --- \emph{the rate and the quantifier in $m$ stay
+open: that statement is R1}.
+\item \textbf{The no-go battery, eight routes failing as classified} \mE: the size
+budget (the $\ell^1$ majorant overshoots $|\det\hat A|$ by $2.7\times10^{3}$--$1.6\times
+10^{4}$); the symbol infimum ($-47.6$\,--\,$-21.3<0$ on $12/12$ --- no symbol-positivity
+argument can deliver the floor; Fej\'er 1915 cited); the sector/gauge change (an
+invariance, moves $\le4.2\times10^{-12}$); perturbation theory ($\nu_2$ sits
+$9.8\times10^{2}$--$2.0\times10^{4}$ below $\|\hat A\|$; Kato 1949 the closed-off
+route); band-local domination (the atom half dominates $\times1.71$--$2.83$); the sieve
+box (the operator-norm bound on $\det S$ alone overshoots $\times8.8\times10^{3}$--$7.5
+\times10^{4}$ --- by the rank-3 theorem a bound on $\det S$ alone cannot see the
+three-term cancellation; Montgomery--Vaughan 1973 / Vaughan 1977 the \emph{priced}
+route); the scramble (the value moves $\times679$ median, range $68$--$2.3\times10^{6}$,
+while the rank-3 collapse is \emph{untouched} on all $60$ draws); and the $L_P$ control
+(the Gram exactly diagonal, cascade gain $=1$ to $0.0$).
+\item \textbf{The precision ledger} \mE: the needed joint relative precision on
+$(S_{11},S_{22},S_{12})$ against the archimedean block --- the value
+$1-r_{12}^2=2.752\times10^{-4}$ at the deepest window ($m=285$) --- is finer than the
+RH-equivalent yardstick $h^{-1/2}$ by $215\times$ and finer than the best unconditional
+$h^{-0.996}$ by $13\times$, \emph{on this surface}; both self-similarity identities
+check ($6.8\times10^{-13}$ / $3.1\times10^{-13}$, the $t^*$ overshoot $\ge0$ everywhere,
+sign-agnostic; Rayleigh 1877). Mutations fail loudly (the wrong regression row, the
+wrong Thomson entry, the off-by-one swap, the wrong polarisation coefficient --- the
+$10^{-2}$ bar missed by orders).
+\item \textbf{Named limits as content.} Per instance on small windows --- a \emph{finite
+list} with an explicit maximum; nothing uniform in the zone index or in $D$; the T171
+trend fits (the pooled sin-angle $h^{-2.33}$, the frame-split rates $\nu=4$:
+$h^{-1.86}$ / $\nu=6$: $h^{-2.87}$, the no-go growth exponents, $\delta=+1.044$ against
+$3.0$, the full-surface precision numbers $2.284\times10^{-7}$ / $1.2\times10^{5}\times$
+/ $3.1\times10^{3}\times$ at $h=1444$) are sandbox numbers on T171's two-frame surface
+and stay in Section~\ref{sec:phase2}; finite $\Lambda$-sums are allowed and used,
+\emph{no} RH statement is made; \textbf{the one open phase-2 object stays open and typed
+open}: R1 --- an $m$-free unconditional certificate that the two rows of $\hat A$ become
+collinear at rate $h^{-3+\varepsilon}$, a joint near-degeneracy of the three explicit
+linear $\Lambda$-sums against the archimedean block; R2/R3 booked (T169), R4 off the
+path (T170-TH6), nothing else open in phase 2; the T171 verdict \textsc{map-complete}
+is a verdict about the \emph{map}, not about R1, and stays a sandbox verdict;
+\vref{v558}'s identities stay as stated, and nothing is re-opened.
 \end{itemize}
 
 % =====================================================================
@@ -4556,7 +4661,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T170)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T171)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -9127,16 +9232,134 @@ $1.1\times10^{3}$ finer than the RH yardstick: \emph{beyond-RH joint
 precision on three linear $\Lambda$-sums}, and not a size question at all.
 \emph{(Housekeeping)} R2/R3 booked in T169; R4 entirely off the path
 (T170-TH6); nothing else is open. T171 (\texttt{final\_map\_probe.py},
-contract \texttt{FINAL.MAP}) is running --- the capstone: the whole
-sixteen-link reduction chain end to end in one file.
+contract \texttt{FINAL.MAP}) then assembled the capstone: the whole
+sixteen-link reduction chain end to end in one file --- next subsection.
 \end{keybox}
+
+\subsection{The capstone: the map is complete (T171)}\label{sec:t171}
+T171 (\texttt{final\_map\_probe.py}, contract \texttt{FINAL.MAP},
+$43/43$, $0.6$\,s, $12$ windows over \emph{two} frames $\nu=4/6$,
+$h=142$--$1445$, lever arm $10.2\times$; $\kappa=0.038821$ verified at
+every jump point up to $n=4\times10^{5}$; \textsc{RH\_delta} $=0.5$ stays
+a yardstick and the quantifier over $m$ stays \emph{open} at link 16;
+verdict \textsc{map-complete}) reproduces the whole reduction chain ---
+from the I5 floor to the final R1 shape --- in \emph{one connected run},
+exhibits every classified no-go failing, and closes the precision
+ledger. The honest exclusion is said out loud: on the $\nu=4$, $h=1445$
+window the low block is indefinite ($\lambda_{\min}(B_{LL})=-343$), so
+the ladder links (6, 7, 12, 13) carry $11/12$ while the identity links
+carry $12/12$.
+
+\emph{The chain, sixteen links, one check each} (13 \textsc{theorem}:
+algebra valid for every $h$; 3 \textsc{cert}: per window, no quantifier
+in $m$):
+\begin{center}\small
+\begin{tabular}{@{}r l l l@{}}
+\toprule
+\# & \textbf{link} & \textbf{type} & \textbf{sharpest number}\\
+\midrule
+1 & T152 Schur two-block & theorem & sharp at $0.5\lambda$ vs $1.02\lambda$; KMS $2.1\times10^{-15}$\\
+2 & T151 Sobolev $b_k\le C_Sk$ & theorem & worst ratio $0.483$\\
+3 & T153 $\Psi$-collapse + Z-law & theorem & $1.19\times10^{-15}$; $\sum w_d=0$ to $10^{-16}$\\
+4 & T154 Ritz ceiling & theorem & $g_{32}/s=0.923$--$0.986$ from below\\
+5 & T155 $12\times12$ floor & cert & $t=7.8\times10^{-2}$--$2.13\times10^{-1}$, sharp\\
+6 & T156 $F(P,r)$ chain & cert & $L_{16}=5.0$--$19.6$\\
+7 & T158 Thomson/ladder & theorem & $1.45\times10^{-9}$; $33/33$ trials below\\
+8 & T160 sampling identity & theorem & $1.05\times10^{-15}$\\
+9 & T163 TV floor / swap & theorem & overshoot $\times7.3\times10^{5}$--$6.2\times10^{8}$\\
+10 & T164 gauge / quantifier & theorem & $\Psi(x^*)=1/g_{16}$ to $3.2\times10^{-9}$\\
+11 & T165 $P_{\mathrm{pr}}$ identity & theorem & $2.2\times10^{-16}$; $=1$ at $x^*$\\
+12 & T166 cascade $1/(1-R^2)$ & theorem & $4.0\times10^{-10}$; diagonal-invariant\\
+13 & T167 $K=2$ exactness & theorem & $4.2\times10^{-10}$; mildest rung ($\times1.36$--$2.23$)\\
+14 & T169 det collapse (R4-free) & theorem & $\le2.2\times10^{-9}$ on all $12$, positivity-free\\
+15 & T170 rank-3 collapse & theorem & $J=\{-2,-1,+1\}$; $\sigma_4/\sigma_1=1.6\times10^{-15}$\\
+16 & T170 the R1 shape & cert & $\sin\angle=1.09\times10^{-7}$--$1.15\times10^{-4}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\noindent At link 16 the \emph{rate} is frame-dependent ($\nu=4$:
+$h^{-1.86}$; $\nu=6$: $h^{-2.87}$; pooled $h^{-2.33}$) while the
+\emph{collapse} is not: on every frame the two rows become collinear at
+a rate steeper than $h^{-2}$ --- and no line of the file proves that
+rate for all $m$.
+
+\emph{The no-go battery} --- all eight classified routes fail on
+instances exactly as classified: the size budget overshoots at
+$h^{+1.32}$ (the $\ell^1$ majorant exceeds $|\det\hat A|$ by
+$8.4\times10^{3}$--$6.5\times10^{5}$, growing); the symbol infimum is
+negative on $12/12$ ($-2.5\times10^{3}$\,--\,$-68$); the sector/gauge
+change moves $1-r_{12}^2$ by at most $2.1\times10^{-9}$ (an invariance);
+perturbation theory addresses an object $2.0\times10^{4}$--$1.9\times
+10^{7}$ below its scale (Kato 1949); the atom band outruns the
+archimedean band by $h^{+0.79}$; the sieve box certifies
+$\delta=+1.044$ against a target of $3.0$ --- short by $h^{1.96}$, and
+by the rank-3 theorem the kernel has rank $\le3$, so the sieve cannot
+recover it; the scramble flips the \emph{type} ($h^{-2.57}\to
+h^{+0.21}$, inflation $\times11421$ median); and the $L_P$ gain is
+$1.000000000000000$ exactly.
+
+\emph{The precision ledger} --- needed against available, in one
+display:
+\begin{keyeq}$\displaystyle
+\underbrace{2.284\times10^{-7}}_{\text{needed at }h=1444,\ \text{rate }h^{-3.0}}
+\;\ll\;
+\underbrace{7.13\times10^{-4}}_{\text{best unconditional }h^{-0.996}}
+\;\ll\;
+\underbrace{2.63\times10^{-2}}_{\text{RH yardstick }h^{-0.5}}$
+\end{keyeq}
+\noindent short by $3.1\times10^{3}\times$ of the best unconditional
+exponent and by $1.2\times10^{5}\times$ of the RH-equivalent yardstick
+--- and it is a \emph{rate} gap: the demand sharpens with $h$, so the
+gap widens, which is why no constant and no range can close it.
+\textsc{RH\_delta} is used in exactly one role, translating ``how
+precise'' into ``which exponent''; nothing here assumes RH and nothing
+concludes it. Both self-similarity identities check (the T167 union to
+$4.2\times10^{-10}$; the T169 collapse at the exact stationary points to
+$9.9\times10^{-10}$, sign-agnostic including $\nu_2<0$ on $1/12$). The
+balance of the five quotable parts (T162/T167/T168/T169/T170):
+$40$~theorem~$/\,5$~cert-unif~$/\,9$~cert-window~$/\,16$~measured~$/\,
+9$~no-go --- T126--T161 honestly left unaggregated. What T171 itself
+adds: $16$ links end to end, $8$ exhibited no-gos, $1$ precision ledger,
+and \textbf{zero new uniform-in-$m$ statements --- the honest number,
+and exactly why it is promotable}. The capstone --- the sixteen-link
+chain as one machine-checked pass, the no-go battery, and the precision
+ledger, recomputed on the declared small surface --- is promoted as
+\vref{v559} \veri{v559\_phase2\_capstone.py} (Section~\ref{sec:v559}).
+
+\begin{keybox}[After T171: the map is complete]
+\emph{(R1, the only open phase-2 object)} an $m$-free unconditional
+bound $|\det\hat A|\le C\,h^{-3+\varepsilon}\,\hat a_{11}\hat a_{22}$,
+equivalently $|S_{11}S_{22}-S_{12}^2-D(B,S)+\det B|\le C\,
+h^{-3+\varepsilon}\,\hat a_{11}\hat a_{22}$ for the three explicit
+linear von Mangoldt sums --- \emph{classified} as a near-degeneracy,
+not a size. \emph{(Inherited, not phase-2)} other frames and zones ---
+the decay rate of link 16 is frame-dependent while the collapse is not
+--- and the R-B$'''$ $\alpha/h$ surface. \emph{(Housekeeping)} R2/R3
+booked in T169; R4 removed by T170-TH6. Nothing else is open in phase
+2. T172 (\texttt{frame\_beyond\_probe.py}, contract
+\texttt{FRAME.BEYOND}) is running --- how far the map carries beyond
+frame A.
+\end{keybox}
+
+\medskip
+\noindent\emph{Where phase 2 now stands.} The map is complete: the
+reduction from the I5 uniformity question to a single object runs end
+to end and reproduces in one file, the eight routes the phase
+classified as dead fail on instances in exactly the classified manner,
+and what is left is one statement --- not a shortfall of effort but a
+rate gap of $1.2\times10^{5}\times$ against the RH yardstick: an
+unconditional certificate that two explicit finite $\Lambda$-sum
+vectors become collinear at rate $h^{-3}$. The measurement surface is
+certified, the quantifier is open, and R1 is classified; the capstone
+that certifies exactly this map --- and nothing more --- is
+load-bearing \veri{v559\_phase2\_capstone.py}.
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
-\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the twenty-four ledger modules
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the twenty-five ledger modules
 of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
@@ -9610,19 +9833,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T170}\label{app:index}
+\section{Probe index, diary parts T11--T171}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $160$ parts T11--T170 that the current diary file records
-($161$ runs --- T104 was a double run with two independent arms --- and $4322$ green checks); the ten
+load-bearing artefact. The index covers the $161$ parts T11--T171 that the current diary file records
+($162$ runs --- T104 was a double run with two independent arms --- and $4365$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v558} promoted; with T126--T170, the first forty-five parts of the second phase, the
-running totals are \textbf{$170$ probes and $4514/4514$ checks}. T171
-(\texttt{final\_map\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v559} promoted; with T126--T171, the first forty-six parts of the second phase, the
+running totals are \textbf{$171$ probes and $4557/4557$ checks}. T172
+(\texttt{frame\_beyond\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -9798,6 +10021,7 @@ T167 & \texttt{\scriptsize null\_\allowbreak vector} & the most constructive dre
 T168 & \texttt{\scriptsize lagrange\_\allowbreak minors} & R1 attacked via the Lagrange identity --- the determinant as a sum of squares (the same $63$-window union as T163--T167, recipe untouched; T167's scalar reproduced bit-compatibly); anatomy EXACT: $Q=X^{\mathsf T}AX$ ($3.9\times10^{-15}$), the mode vectors EUCLIDEAN-ORTHOGONAL ($r_{12}=0$ to $6.2\times10^{-17}$ --- \textbf{the near-parallelism is created ENTIRELY by the arithmetic metric}), the Wronskian TELESCOPES ($W_r-W_{r-1}=(\mu_1-\mu_2)u_rv_r$, $1.7\times10^{-13}$; one closed Dirichlet-partial-sum family), minor sup closed $m$-free $\sim N/\pi^2$ (attained $0.770$), Cauchy--Binet verified as algebra; \textbf{FINDING: the $h\times h$ kernel $A$ is POSITIVE DEFINITE on $63/63$ ($\lambda_{\min}=5.0\times10^{-6}$--$8.5\times10^{-4}$, $8$--$12$ orders above the solver floor) $\Rightarrow$ the Lagrange identity is a GENUINE sum of squares, $\rho_{\mathrm{LAG}}=1.000$ exactly --- hard-fenced: a finite matrix per window, NO Weil test/assumption/reverse inference}; the key measurement SPLITS BY BASIS: closed basis --- minors MAXIMAL ($\tfrac12\sum M^2=1/(\mu_1\mu_2)$ exact $\sim h^4$: the Wronskians carry ZERO arithmetic, all smallness sits in the PSD kernel at one closed vector); eigenbasis --- the sum is THIN ($90\%$ from $4$--$101$ pairs $\le8\times10^{-4}$, top pair always $(\lambda_{\min},\lambda_{\max})$ at $6.8$--$41.7\%$ alone, raw $\kappa_w=0.30$--$0.94$, typical minor $100{:}1$); exponent ledger CLOSED, arithmetic-free: $1-r_{12}^2=\nu_1\nu_2/(\hat a_{11}\hat a_{22})$ with $\nu_1\sim h^{+0.81}$, $\hat a_{11}\sim h^{+0.76}$, $\hat a_{22}\sim h^{+0.91}$ ($\nu_2\sim h^{-1.38}$) --- \textbf{every factor but one at the right power}; best $m$-free-shaped bound $B_1$ $h^{-0.548}$ union / $h^{-0.880}$ frame A --- short by $h^{2.45}$/$h^{2.04}$; literal budget $h^{+2.049}$ ($12$ orders above); \textbf{the open factor EXACT: $\nu_2$ with minimiser $t^*=Q_{12}/Q_{11}$ (factor $1.0000$), needed to $6.05\times10^{-3}$ median / $2.82\times10^{-4}$ worst ($h^{-1.146}$) --- by T168-TH7 that factor IS the target rewritten} (ONE-TERM-MISSING deliberately NOT rendered); no closed constant ($1/\sqrt2$ misses $0.194$), no single-mode trial (overshoot $285$--$1.5\times10^{6}$), ground state only $0.982$-confined ($\delta$ does not decay), Tur\'an band neither sign-definite nor telescoping; chain $1/g_2=Q_{11}(1-r_{12}^2)$ ($1.2\times10^{-8}$), certified gain $\ge1.00$--$2.13$ (weak, valid); \textbf{scramble breaks HARDER than T167: $8/8$ lose $A\succ0$ AND the Gram property ($n_{\mathrm{neg}}$ up to $73$) --- no window survives}; $L_P$: $Q_{12}=0$, $1-r_{12}^2=1$ exactly; \textbf{the hardness is SELF-SIMILAR under exact reformulation} (determinant $\to$ PSD compound at a closed vector $\to$ near-null Rayleigh $\to$ one ratio of two lag sums, same accuracy price); balance $8$ THEOREM / $0$ CERT-UNIF / $3$ CERT-WINDOW / $11$ MEASURED / $7$ NO-GO & MINORS-RESIST & 39/39\\
 T169 & \texttt{\scriptsize tstar\_\allowbreak ratio} & T168's one open factor attacked as a preregistered candidate table (same union; the block verified as a lag sum, $4.7\times10^{-16}$, with an exact arch/atom split, $5.6\times10^{-16}$); \textbf{every genuinely CLOSED candidate misses by $O(1)$ and DIVERGES from the threshold at $h^{+1.99}$} (the block is ATOM-DOMINATED, $|{\rm atom/arch}|=3.5$--$43$ resp.\ $14$--$461$; $\hat a_{11}^{\mathrm{arch}}<0$ on $63/63$ --- the arch half not even PSD; atom shares correlated $0.994$ but NOT proportional, $s_{12}/s_{11}=4.1$--$10.7$; budget interval vacuous BY SIGN); \textbf{the ONLY candidate meeting the threshold, $K7=\sqrt{\hat a_{22}/\hat a_{11}}$ ($2.49\times10^{-5}$ median / $2.27\times10^{-4}$ worst, $63/63$), does so by T169-TH7: $R(K7)=2\sqrt{\hat a_{11}\hat a_{22}}\,\det\hat A/[(\hat a_{11}+\hat a_{22})(\sqrt{\hat a_{11}\hat a_{22}}+\hat a_{12})]$ ($1.1\times10^{-9}$) --- it reintroduces $\det\hat A$: the $t^*$-language is provably exactly as hard as T167's determinant, THE LOOP CLOSES AS AN IDENTITY} (T167 scalar $\to$ T168 factor $\to$ T169 candidate = the same object); gains: \textbf{R3 booked CERT-UNIF --- $\nu_1\le\max(\hat a_{11},\hat a_{22})+|\hat a_{12}|$ (Gershgorin, unconditional, uniform in $h$), $63/63$, loses only $1.10$--$1.19$ --- the CERT-UNIF column moves off zero}; R2 refuted and downgraded to OPEN (the absolute-value budget gives $\hat a_{11}\ge-1.7\times10^{2}\ldots-13$ --- cannot even certify positivity); R4: Cholesky $63/63$ CERT-WINDOW permanent, three uniform routes refuted (Gershgorin margin negative $63/63$; $Z$-/$M$-matrix route cannot start; perturbation split off by $6.4\times10^{5}$); \textbf{Weil fence prominent: uniform-in-$h$ positivity of $A_h$ is RH-equivalent-shaped and never routed or claimed --- the chain REBUILT R4-FREE (TH9)}, valid $63/63$, loss $1.10$--$1.19$, \textbf{frame-A trend $h^{-2.948}$ ($\varepsilon=0.052$ in the $0.5$ carry window)}; TH3: the $1/\sqrt{\mu}$ factors cancel --- $\hat a_{ij}=t_i^{\mathsf T}At_j$ are single-sine lag sums, the cond-$10^{8}$ ladder leaves the file; stress: $L_P$ exact ($\hat a_{12}=4\times10^{-17}$, overshoot exactly $4\cos^2(\pi/N)$ --- the $t^*$-tightness MEASURES $\det\hat A$), scramble $8/8$ (K7 $2.5\times10^{-5}\to4.6$), flat-weight null $8/8$, parity-pair only $6.7\times$ (honestly PARTIAL); \textbf{REST: R1 in STANDARD SHAPE for the first time --- a BILINEAR VON MANGOLDT SUM against closed Dirichlet weights} (diagonal ratio to $1.2\times10^{-2}$/$5.6\times10^{-4}$); R2 $=$ R1, R3 closed, R4 not needed; balance $10$ THEOREM / $2$ CERT-UNIF / $1$ CERT-WINDOW / $4$ NO-GO & RATIO-RESISTS & 41/41\\
 T170 & \texttt{\scriptsize bilinear\_\allowbreak sieve} & T169's standard shape cashed in: the bilinear form written out EXACTLY --- $\hat A=B-\sum_n(\Lambda(n)/\sqrt n)X_n$ (TH1, $3.5\times10^{-15}$), $\det\hat A=\det B-D(B,S)+\det S$ (TH2, $1.3\times10^{-10}$), $\det S=\sum\sum\Lambda(n)\Lambda(m)K(n,m)/\sqrt{nm}$ with $K=\tfrac12D(X_n,X_m)$ (TH3, $1.5\times10^{-14}$; Cauchy--Binet/Lagrange); $X_n$ rank one ($1.3\times10^{-4}$) $\Rightarrow$ wedge square with mixed signs; \textbf{the reference window: $\det B=6.18$, $-D(B,S)=-198.8$, $\det S=192.6$ summing to $4.22\times10^{-3}$ --- a FIVE-ORDER cancellation between three ${\sim}200$-sized pieces} (absolute target $1.10\times10^{-5}$); the route table (target $\delta\ge3.0$): truth $+2.747$ MEASURED, CS $-0.000$, large sieve $+0.669$, MV 1973 $-0.384$, exact split $+0.996$ (best), Vaughan $+0.669$ --- all THEOREM; \textbf{the collapse is structural, by two theorems: TH4 RANK-3 --- $D$ is the polarisation of $\det$, matrix $[[0,1,0],[1,0,0],[0,0,-2]]$, rank $3$, signature $(1,2)$, so $\operatorname{rank}K\le3$ for every $h$, $X$ ($\sigma_4/\sigma_1=2.0\times10^{-15}$, eff.\ rank $1.38$--$2.71$ vs $N\sim10^3$): the form IS $S_{11}S_{22}-S_{12}^2$ in THREE linear $\Lambda$-sums; TH5 TYPE II --- the weights see $n$ only through $\log n$, so Vaughan Type II blocks have effective rank $O(1)$ for every $U,V$ ($2$ SVs $=99.9\%$ vs $153$ generic, $U=12$--$70$ scanned, identity coefficient-exact)}; honest T161 comparison: GAINED $32\to3$ functionals (theorem), NOT GAINED the precision ($5.3\times10^{-5}$ at $h=285$, $h^{-3}$, RH yardstick $1.1\times10^{3}$ too coarse; $\ell^1$ mass $41\times$); \textbf{TH6: the chain R4-free for free} --- $1-r_{12}^2=\det\hat A/(\hat a_{11}\hat a_{22})$ an identity, sharper than T169-TH9 ($-2.747$ vs $-2.771$), Weil fence never approached; best unconditional carry $h^{-0.996}$ vs required $\le h^{-2.50}$ --- \textbf{missing $1.50$ in the exponent, and the shortfall is a THEOREM}; scramble: rank-3 and bounds UNCHANGED, truth moves $2.76$ --- \textbf{the arithmetic sits in the JOINT VALUES of $(S_{11},S_{22},S_{12})$ against $B$}; flat-weight breaks; $L_P$ exact; $\nu$-decoupling honest (frames fall $-1.70/-1.27/-1.74$ --- T169's $h^{-2.95}$ is frame-A, the shortfall is not); \textbf{R1 FINALLY CLASSIFIED: the row-angle sine falls $h^{-2.711}$ --- a NEAR-DEGENERACY of two explicit finite $\Lambda$-sum vectors at $h^{-3}$, not a size; beyond-RH JOINT precision}; R2/R3 booked (T169), R4 off the path; balance $6$ THEOREM / $1$ CERT-UNIF / $5$ NO-GO $\to$ \vref{v558} & SIEVE-RESISTS & 40/40\\
+T171 & \texttt{\scriptsize final\_\allowbreak map} & \textbf{the capstone: the map is complete} --- all sixteen links of the reduction chain, from the I5 floor to the final R1 shape, reproduce in ONE connected run on $12$ windows over two frames ($\nu=4/6$, $h=142$--$1445$, lever arm $10.2\times$): $13$ THEOREM ($T152$ Schur two-block sharp at $0.5\lambda/1.02\lambda$; T151 Sobolev $0.483$; T153 $\Psi$-collapse $1.19\times10^{-15}$ with $\sum w_d=0$; T154 Ritz from below $g_{32}/s=0.923$--$0.986$; T158 Thomson $=$ ladder $1.45\times10^{-9}$, $33/33$ trials below; T160 sampling $1.05\times10^{-15}$; T163 swap/TV overshoot $\times7.3\times10^{5}$--$6.2\times10^{8}$; T164 gauge/quantifier $\Psi(x^*)=1/g_{16}$; T165 $P_{\mathrm{pr}}=1$; T166 cascade diagonal-invariant; T167 $K=2$ mildest; T169 det collapse R4-free on ALL $12$ incl.\ the indefinite window; T170 rank-3 $\{-2,-1,+1\}$) $+\,3$ CERT (T155 $12\times12$ floor sharp; T156 $F(P,r)$ $L_{16}=5.0$--$19.6$; T170 R1 shape $\sin\angle=1.09\times10^{-7}$--$1.15\times10^{-4}$, rate frame-dependent $\nu=4$: $h^{-1.86}$ / $\nu=6$: $h^{-2.87}$, COLLAPSE not); honest exclusion: $\nu=4$, $h=1445$ has $\lambda_{\min}(B_{LL})=-343$ --- ladder links $11/12$, identity links $12/12$; \textbf{all eight classified no-gos fail as classified} (budget $h^{+1.32}$; symbol $<0$ on $12/12$; sector invariant $2.1\times10^{-9}$; Kato $2.0\times10^{4}$--$1.9\times10^{7}$ off scale; atom band $+0.79$ faster; sieve $\delta=+1.044$ vs $3.0$; scramble type-flip $h^{-2.57}\to h^{+0.21}$, $\times11421$; $L_P$ gain $=1$ exactly); \textbf{the precision ledger closes}: needed $2.284\times10^{-7}$ at $h=1444$ (rate $h^{-3.0}$) vs RH yardstick $h^{-0.5}=2.63\times10^{-2}$ (short $1.2\times10^{5}\times$) and best unconditional $h^{-0.996}=7.13\times10^{-4}$ (short $3.1\times10^{3}\times$); both self-similarity identities check ($4.2\times10^{-10}$ / $9.9\times10^{-10}$, sign-agnostic); balance of the quotable parts $40$ THEOREM / $5$ CERT-UNIF / $9$ CERT-WINDOW / $16$ MEASURED / $9$ NO-GO (T126--T161 unaggregated); \textbf{adds ZERO new uniform-in-$m$ statements --- exactly why it is promotable}; R1 the only open phase-2 object, classified $\to$ \vref{v559} & MAP-COMPLETE & 43/43\\
 \end{xltabular}
 }
 

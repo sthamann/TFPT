@@ -43,6 +43,1357 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · XVII",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v559"
+      },
+      {
+        "k": "t",
+        "v": " — the phase-2 capstone promoted; prime-front diary T171 (the map is complete: all sixteen links in one connected run, eight no-gos as classified, the precision ledger closed — MAP-COMPLETE) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v559"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.PHASE2.CAPSTONE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of discovery T171 (contract "
+        },
+        {
+          "k": "c",
+          "v": "FINAL.MAP"
+        },
+        {
+          "k": "t",
+          "v": ", verdict MAP-COMPLETE) as the phase-2 capstone ("
+        },
+        {
+          "k": "c",
+          "v": "v559_phase2_capstone.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "35"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.3"
+        },
+        {
+          "k": "t",
+          "v": " s) — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the capstone verifies the map and claims nothing new"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": T126–T170 reduced the I5 uniformity question through sixteen exact reformulations to ONE object (R1), and this module is the load-bearing version of T171's connected run, everything recomputed on "
+        },
+        {
+          "k": "c",
+          "v": "v551"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v558"
+        },
+        {
+          "k": "t",
+          "v": "'s declared small frame-A surface ("
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " deepest in-cap zones, "
+        },
+        {
+          "k": "m",
+          "v": "m=96\\ldots291\\le300"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa=0.038821"
+        },
+        {
+          "k": "t",
+          "v": " verified at every jump point of "
+        },
+        {
+          "k": "m",
+          "v": "\\psi(x)/x"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "16\\times16"
+        },
+        {
+          "k": "t",
+          "v": " low block positive definite on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": " — a numerical fact, never routed through the Weil criterion). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The chain, sixteen links in one pass"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "13"
+        },
+        {
+          "k": "t",
+          "v": " THEOREM / "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " CERT): T152 Schur two-block (KMS "
+        },
+        {
+          "k": "m",
+          "v": "1.3\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "; holds at "
+        },
+        {
+          "k": "m",
+          "v": "0.5\\lambda_{\\min}"
+        },
+        {
+          "k": "t",
+          "v": ", fails at "
+        },
+        {
+          "k": "m",
+          "v": "1.02\\lambda_{\\min}"
+        },
+        {
+          "k": "t",
+          "v": " — sharp; Haynsworth "
+        },
+        {
+          "k": "m",
+          "v": "3.8\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "); T151 Sobolev "
+        },
+        {
+          "k": "m",
+          "v": "b_k\\le C_Sk"
+        },
+        {
+          "k": "t",
+          "v": " (worst ratio "
+        },
+        {
+          "k": "m",
+          "v": "0.4816"
+        },
+        {
+          "k": "t",
+          "v": "); T153 "
+        },
+        {
+          "k": "m",
+          "v": "\\Psi"
+        },
+        {
+          "k": "t",
+          "v": "-collapse with the Z-law ("
+        },
+        {
+          "k": "m",
+          "v": "6.3\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "9.0\\times10^{-17}"
+        },
+        {
+          "k": "t",
+          "v": "); T154 Ritz ceiling from below ("
+        },
+        {
+          "k": "m",
+          "v": "g_{32}/s=0.9520"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.9849"
+        },
+        {
+          "k": "t",
+          "v": "); T155 "
+        },
+        {
+          "k": "m",
+          "v": "12\\times12"
+        },
+        {
+          "k": "t",
+          "v": " floor, sharp ("
+        },
+        {
+          "k": "m",
+          "v": "t=0.2295"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.3719"
+        },
+        {
+          "k": "t",
+          "v": "); T156 "
+        },
+        {
+          "k": "m",
+          "v": "F(P,r)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "L(16)=6.6"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "15.6"
+        },
+        {
+          "k": "t",
+          "v": "); T158 Thomson/ladder ("
+        },
+        {
+          "k": "m",
+          "v": "3.1\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "36/36"
+        },
+        {
+          "k": "t",
+          "v": " trials below); T160 sampling (closed Dirichlet weights "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " correlation weights "
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "; sampled "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "-mass "
+        },
+        {
+          "k": "m",
+          "v": "9.9\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "); T163 Abel swap with the TV floor (overshoot "
+        },
+        {
+          "k": "m",
+          "v": "\\times5.2\\times10^{4}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{6}"
+        },
+        {
+          "k": "t",
+          "v": "); T164 gauge/quantifier ("
+        },
+        {
+          "k": "m",
+          "v": "\\Psi(x^*)=1/g_{16}"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "7.0\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "48/48"
+        },
+        {
+          "k": "t",
+          "v": " perturbed vectors larger); T165 "
+        },
+        {
+          "k": "m",
+          "v": "P_{\\mathrm{pr}}=1"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "x^*"
+        },
+        {
+          "k": "t",
+          "v": "; T166 cascade "
+        },
+        {
+          "k": "m",
+          "v": "1/(1-R_{16}^2)"
+        },
+        {
+          "k": "t",
+          "v": ", diagonal-invariant; T167 "
+        },
+        {
+          "k": "m",
+          "v": "K=2"
+        },
+        {
+          "k": "t",
+          "v": " exactness (milder "
+        },
+        {
+          "k": "m",
+          "v": "\\times1.62"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "5.20"
+        },
+        {
+          "k": "t",
+          "v": "); T169 det collapse R4-free ("
+        },
+        {
+          "k": "m",
+          "v": "\\le4.2\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": ", no positivity of "
+        },
+        {
+          "k": "m",
+          "v": "A_h"
+        },
+        {
+          "k": "t",
+          "v": " consumed); T170 rank-3 ("
+        },
+        {
+          "k": "m",
+          "v": "\\{-2,-1,+1\\}"
+        },
+        {
+          "k": "t",
+          "v": " exact; "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_4/\\sigma_1\\le1.6\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "); T170 R1 shape via the "
+        },
+        {
+          "k": "m",
+          "v": "2\\times2"
+        },
+        {
+          "k": "t",
+          "v": " Lagrange identity ("
+        },
+        {
+          "k": "m",
+          "v": "\\sin\\angle=1.169\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.467\\times10^{-3}\n\\le10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " per window; "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "rate and quantifier typed OPEN"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The no-go battery"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "8/8"
+        },
+        {
+          "k": "t",
+          "v": " failing as classified (size budget "
+        },
+        {
+          "k": "m",
+          "v": "\\times2.7\\times10^{3}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.6\\times\n10^{4}"
+        },
+        {
+          "k": "t",
+          "v": "; symbol infimum "
+        },
+        {
+          "k": "m",
+          "v": "<0"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "; sector invariance; perturbation scale; atom band dominates; sieve operator-norm "
+        },
+        {
+          "k": "m",
+          "v": "\\times8.8\\times10^{3}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "7.5\\times10^{4}"
+        },
+        {
+          "k": "t",
+          "v": "; scramble "
+        },
+        {
+          "k": "m",
+          "v": "\\times679"
+        },
+        {
+          "k": "t",
+          "v": " median with rank-3 untouched on "
+        },
+        {
+          "k": "m",
+          "v": "60"
+        },
+        {
+          "k": "t",
+          "v": " draws; "
+        },
+        {
+          "k": "m",
+          "v": "L_P"
+        },
+        {
+          "k": "t",
+          "v": " gain "
+        },
+        {
+          "k": "m",
+          "v": "=1"
+        },
+        {
+          "k": "t",
+          "v": " exactly). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The precision ledger"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": needed "
+        },
+        {
+          "k": "m",
+          "v": "2.752\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": " at the deepest window — finer than the RH yardstick "
+        },
+        {
+          "k": "m",
+          "v": "h^{-0.5}"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "215\\times"
+        },
+        {
+          "k": "t",
+          "v": " and the best unconditional "
+        },
+        {
+          "k": "m",
+          "v": "h^{-0.996}"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "13\\times"
+        },
+        {
+          "k": "t",
+          "v": " on this surface; both self-similarity identities "
+        },
+        {
+          "k": "m",
+          "v": "\\le6.8\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "; mutation controls fail loudly. ZERO new uniform-in-"
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": " statements; the one open phase-2 object R1 explicitly typed OPEN; NO RH statement (RH_DELTA "
+        },
+        {
+          "k": "m",
+          "v": "=0.5"
+        },
+        {
+          "k": "t",
+          "v": " a yardstick in exactly one role); Weil fence documented (link 14 R4-free by construction). Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PHASE2.CAPSTONE.01"
+        },
+        {
+          "k": "t",
+          "v": "; registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": "; suite counter "
+        },
+        {
+          "k": "m",
+          "v": "552\\to553"
+        },
+        {
+          "k": "t",
+          "v": " scripts."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T171 ("
+            },
+            {
+              "k": "c",
+              "v": "final_map_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "FINAL.MAP"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "43/43"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "0.6"
+            },
+            {
+              "k": "t",
+              "v": " s, "
+            },
+            {
+              "k": "m",
+              "v": "12"
+            },
+            {
+              "k": "t",
+              "v": " windows over two frames "
+            },
+            {
+              "k": "m",
+              "v": "\\nu=4/6"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "h=142"
+            },
+            {
+              "k": "t",
+              "v": "–"
+            },
+            {
+              "k": "m",
+              "v": "1445"
+            },
+            {
+              "k": "t",
+              "v": ", lever arm "
+            },
+            {
+              "k": "m",
+              "v": "10.2\\times"
+            },
+            {
+              "k": "t",
+              "v": "; verdict MAP-COMPLETE, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The capstone stands — the map is complete: all sixteen links of the reduction chain, from the I5 floor to the final R1 shape, reproduce in ONE connected run ("
+        },
+        {
+          "k": "m",
+          "v": "13"
+        },
+        {
+          "k": "t",
+          "v": " THEOREM / "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " CERT; honest exclusion said out loud: on "
+        },
+        {
+          "k": "m",
+          "v": "\\nu=4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h=1445"
+        },
+        {
+          "k": "t",
+          "v": " the low block is indefinite, "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}=-343"
+        },
+        {
+          "k": "t",
+          "v": ", so the ladder links carry "
+        },
+        {
+          "k": "m",
+          "v": "11/12"
+        },
+        {
+          "k": "t",
+          "v": " while the identity links carry "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "); all eight classified no-go routes fail on instances exactly as classified (size budget "
+        },
+        {
+          "k": "m",
+          "v": "h^{+1.32}"
+        },
+        {
+          "k": "t",
+          "v": "; symbol infimum negative on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "; sector change an invariance "
+        },
+        {
+          "k": "m",
+          "v": "\\le2.1\\times10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": "; Kato "
+        },
+        {
+          "k": "m",
+          "v": "2.0\\times10^{4}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.9\\times10^{7}"
+        },
+        {
+          "k": "t",
+          "v": " off scale; atom band "
+        },
+        {
+          "k": "m",
+          "v": "h^{+0.79}"
+        },
+        {
+          "k": "t",
+          "v": " faster; sieve "
+        },
+        {
+          "k": "m",
+          "v": "\\delta=+1.044"
+        },
+        {
+          "k": "t",
+          "v": " against "
+        },
+        {
+          "k": "m",
+          "v": "3.0"
+        },
+        {
+          "k": "t",
+          "v": "; scramble type-flip "
+        },
+        {
+          "k": "m",
+          "v": "h^{-2.57}\\to h^{+0.21}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\times11421"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "L_P"
+        },
+        {
+          "k": "t",
+          "v": " gain "
+        },
+        {
+          "k": "m",
+          "v": "=1"
+        },
+        {
+          "k": "t",
+          "v": " exactly); and the precision ledger closes: needed "
+        },
+        {
+          "k": "m",
+          "v": "2.284\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "h=1444"
+        },
+        {
+          "k": "t",
+          "v": " (rate "
+        },
+        {
+          "k": "m",
+          "v": "h^{-3.0}"
+        },
+        {
+          "k": "t",
+          "v": ") against the RH yardstick "
+        },
+        {
+          "k": "m",
+          "v": "h^{-0.5}=2.63\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "short by "
+            },
+            {
+              "k": "m",
+              "v": "1.2\\times10^{5}\\times"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — and the best unconditional "
+        },
+        {
+          "k": "m",
+          "v": "h^{-0.996}=7.13\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": " — short by "
+        },
+        {
+          "k": "m",
+          "v": "3.1\\times10^{3}\\times"
+        },
+        {
+          "k": "t",
+          "v": "; both self-similarity identities check ("
+        },
+        {
+          "k": "m",
+          "v": "4.2\\times10^{-10}"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "9.9\\times10^{-10}"
+        },
+        {
+          "k": "t",
+          "v": ", sign-agnostic incl. "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_2<0"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "1/12"
+        },
+        {
+          "k": "t",
+          "v": "). At link 16 the RATE is frame-dependent ("
+        },
+        {
+          "k": "m",
+          "v": "\\nu=4"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "h^{-1.86}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\nu=6"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "h^{-2.87}"
+        },
+        {
+          "k": "t",
+          "v": ") while the COLLAPSE is not. Balance of the quotable parts: "
+        },
+        {
+          "k": "m",
+          "v": "40"
+        },
+        {
+          "k": "t",
+          "v": " THEOREM / "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " CERT-UNIF / "
+        },
+        {
+          "k": "m",
+          "v": "9"
+        },
+        {
+          "k": "t",
+          "v": " CERT-WINDOW / "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " MEASURED / "
+        },
+        {
+          "k": "m",
+          "v": "9"
+        },
+        {
+          "k": "t",
+          "v": " NO-GO (T126–T161 honestly unaggregated). The file adds ZERO new uniform-in-"
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": " statements — exactly why it is promotable: phase 2 is now a certified map with ONE open object (R1, classified as a near-degeneracy, not a size); R2/R3 booked, R4 removed. T172 ("
+        },
+        {
+          "k": "c",
+          "v": "FRAME.BEYOND"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "frame_beyond_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running — how far the map carries beyond frame A. Diary counters "
+        },
+        {
+          "k": "m",
+          "v": "171"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4557"
+        },
+        {
+          "k": "t",
+          "v": " checks (series (CLXXXII))."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": new capstone subsection (T171) with the sixteen-link table, the no-go list and the precision-ledger display, a closing paragraph of the phase-2 section, the verified layer extended to twenty-five modules (new subsection for "
+        },
+        {
+          "k": "c",
+          "v": "v559"
+        },
+        {
+          "k": "t",
+          "v": "), section title T126"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "T171, abstract counters "
+        },
+        {
+          "k": "m",
+          "v": "171/4557"
+        },
+        {
+          "k": "t",
+          "v": ", probe index extended (T171 row, running totals, T172 running); companion blocks for "
+        },
+        {
+          "k": "c",
+          "v": "v559"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1_architecture_e8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3_e8_audit_bootstrap"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " T171 capstone entry (counters "
+        },
+        {
+          "k": "m",
+          "v": "171"
+        },
+        {
+          "k": "t",
+          "v": " Proben / "
+        },
+        {
+          "k": "m",
+          "v": "4557"
+        },
+        {
+          "k": "t",
+          "v": " Checks); website: "
+        },
+        {
+          "k": "c",
+          "v": "primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " feed entries T171 + v559 promotion (verdict enum MAP-COMPLETE added), status surfaces Teile 11–171 / "
+        },
+        {
+          "k": "m",
+          "v": "4557"
+        },
+        {
+          "k": "t",
+          "v": " checks / "
+        },
+        {
+          "k": "m",
+          "v": "25"
+        },
+        {
+          "k": "t",
+          "v": " modules v535–v559 ("
+        },
+        {
+          "k": "c",
+          "v": "page.tsx"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HonestyBanner.tsx"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ModuleLadder.tsx"
+        },
+        {
+          "k": "t",
+          "v": "), suite counter "
+        },
+        {
+          "k": "m",
+          "v": "553"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "suite.ts"
+        },
+        {
+          "k": "t",
+          "v": "). NO marker moves; not RH evidence."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · XVI",
     "heading": [
       {

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`552` registered scripts · `623` ledger claims · `10` clusters.
+`553` registered scripts · `624` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (85 scripts)
+### `core` — Compiler core & the E₈ glue  (86 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -181,6 +181,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v556_gauge_ppr_identities, v555_pareto_tv_identities, v556, T166, T167 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v558_bilinear_rank_identities** [E/O] `PRIME.BILINEAR.RANK.01` — the closed theorem cores of T168+T169+T170 recomputed on small frame-A windows (the 12 deepest in-cap zones n = 29…139, m = 96…291 ≤ 300 — v551…v557's declared surface — with the o
   - deps: v557_cascade_vector_identities, v556_gauge_ppr_identities, v557, T168, T169, T170 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v559_phase2_capstone** [E/C/O] `PRIME.PHASE2.CAPSTONE.01` — the capstone VERIFIES the map and CLAIMS NOTHING NEW: the whole sixteen-link reduction chain from the I5 floor to the R1 shape reproduced as ONE machine-checked pass on the declare
+  - deps: v558_bilinear_rank_identities, v557_cascade_vector_identities, v558, T171, T151, T152, T153, T154 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1175,7 +1177,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v547_level_lemma_identities** — `PRIME.LEVEL.LEMMA.01`
 - **v548_green_szego_identities** — `PRIME.GREEN.SZEGO.IDENT.01`
 - **v549_gauge_parity_identities** — `PRIME.GAUGE.PARITY.IDENT.01`
 - **v550_odd_sector_identities** — `PRIME.ODD.SECTOR.IDENT.01`
@@ -1187,4 +1188,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v556_gauge_ppr_identities** — `PRIME.GAUGE.PPR.01`
 - **v557_cascade_vector_identities** — `PRIME.CASCADE.VECT.01`
 - **v558_bilinear_rank_identities** — `PRIME.BILINEAR.RANK.01`
+- **v559_phase2_capstone** — `PRIME.PHASE2.CAPSTONE.01`
 
