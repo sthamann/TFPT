@@ -1485,6 +1485,51 @@ never a criterion. Machine-checked:
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The dense-limit identities
+(\texttt{PRIME.DENSE.LIMIT.01}).}
+The exact cores of the phase-2 endgame, T176 (contract
+\texttt{DENSE.LIMIT}, probe $24/24$, verdict \textsc{sits-at-zero}):
+the twentyfold sieve raised the density ceiling $361\to6120$, both new
+ratio-4 bins came out consistent with zero (pooled $+0.0496\pm0.0372$),
+the plateau window narrowed by a factor $3.6$, and \emph{the phase-2
+measurement programme closed as planned}. This module carries the
+identities per instance ($16$ checks, ${\sim}0.5$\,s, deterministic,
+small sieve --- the identities are sieve-size-free): \emph{R1 closed}
+--- the Feynman--Hellmann identity $d\log R/d\delta
+=v^{\mathsf T}d\tilde Av/\lambda_{\min}
+-w^{\mathsf T}d\tilde Aw/\lambda_{\max}-d\mathrm{DEL}/\mathrm{DEL}$
+with the exact lag derivative (piecewise linear at $7.0\times10^{-12}$
+of the increment) reproduces the full rebuild on $6/6$ instances at
+the U-minimum of a declared step ladder ($2.3\times10^{-7}$ at
+$\delta=10^{-6}$; mutations miss by $4\times10^{1}$), retiring T175's
+measured intervention slope as a separate claim, with the
+near-degeneracy channel $d\mathrm{DEL}/\mathrm{DEL}$ carrying the
+largest share; \emph{the phase pole} --- positive definiteness
+survives only $2\%$ of the period,
+$\delta_{\mathrm{PD}}\cdot|d\log R/d\delta|=7.2$ median (the declared
+$O(1)$ band), the two lowest modes already within $0.02$--$0.17$ at
+$\delta=0$: the ${\sim}300\times$ harmonic anomaly is retired;
+\emph{sieve consistency at construction level} --- complete-comb lag
+vectors bit for bit, $R$ exact, the bin deficit identical, the
+truncated must-break moving as it must; and \emph{the estimator with
+the ladder caveat as a check} --- deterministic, exactly reproducible,
+and ladder-dependent (shift $0.036$ fine vs coarse; up to $0.20$ on
+T176's surface): any quoted bin deficit must cite its rung ladder, and
+the ledger row \texttt{PRIME.DENSE.LIMIT.01} does.
+\textbf{Named limits as content:} the \textsc{sits-at-zero} verdict is
+a sandbox \textsc{measured} number on T176's $2.5\times10^{7}$ surface
+with its rung ladder, \emph{not} consumed; true zero, power-law
+approach and low plateau stay indistinguishable under any
+resource-reachable sieve (one more decade of window costs
+$\mathtt{ATOM\_MAX}\sim2.5\times10^{9}$); the closure is of the
+measurement programme, not of the question; \emph{no} RH statement.
+Feynman--Hellmann (Hellmann 1937, Feynman 1939) / Schur 1917 / KMS
+1953 / Dirichlet 1829 / Chebyshev 1852--Rosser--Schoenfeld 1962 named
+classical; Weil 1952 cited, never a criterion. Machine-checked:
+\veri{v562\_dense\_limit\_identities.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

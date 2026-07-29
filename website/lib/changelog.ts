@@ -43,6 +43,683 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · XXII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "prime-front phase 2, the endgame: T176 — the density curve sits at zero and the measurement programme closes (SITS-AT-ZERO) + "
+      },
+      {
+        "k": "c",
+        "v": "v562"
+      },
+      {
+        "k": "t",
+        "v": " dense-limit identities promoted + paper/diary/website sync"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T176 ("
+            },
+            {
+              "k": "c",
+              "v": "dense_limit_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "DENSE.LIMIT"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "24/24"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "118.7"
+            },
+            {
+              "k": "t",
+              "v": " s, verdict SITS-AT-ZERO, sandbox; lands "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "after"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": " T177 — part numbering by contract, series counters raised by T176's checks)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The big sieve: "
+        },
+        {
+          "k": "c",
+          "v": "ATOM_MAX"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "1.2\\times10^{6}\\to2.5\\times10^{7}"
+        },
+        {
+          "k": "t",
+          "v": " (factor "
+        },
+        {
+          "k": "m",
+          "v": "20.8"
+        },
+        {
+          "k": "t",
+          "v": "; cost "
+        },
+        {
+          "k": "m",
+          "v": "0.08"
+        },
+        {
+          "k": "t",
+          "v": " s / "
+        },
+        {
+          "k": "m",
+          "v": "59.7"
+        },
+        {
+          "k": "t",
+          "v": " MB peak — the sieve was never the binding constraint), "
+        },
+        {
+          "k": "m",
+          "v": "1\\,566\\,727"
+        },
+        {
+          "k": "t",
+          "v": " prime-power atoms, density ceiling "
+        },
+        {
+          "k": "m",
+          "v": "361\\to6120"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "6118"
+        },
+        {
+          "k": "t",
+          "v": " reached), "
+        },
+        {
+          "k": "m",
+          "v": "14\\,532"
+        },
+        {
+          "k": "t",
+          "v": " cells on "
+        },
+        {
+          "k": "m",
+          "v": "692"
+        },
+        {
+          "k": "t",
+          "v": " anchors, "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " indefinite. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The extended curve"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (eight ratio-4 bins, cluster-robust): "
+        },
+        {
+          "k": "m",
+          "v": "+0.8886\\pm0.1027\\to+0.5148\\to+0.1948\\to+0.3922"
+        },
+        {
+          "k": "t",
+          "v": " (declared monotonicity violation, explained by curvature) "
+        },
+        {
+          "k": "m",
+          "v": "\\to+0.1520\\to+0.0579\\to\\mathbf{+0.0376\\pm0.0410}"
+        },
+        {
+          "k": "t",
+          "v": " (dens "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}779"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "0.9\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\to\\mathbf{+0.1046\\pm0.0881}"
+        },
+        {
+          "k": "t",
+          "v": " (dens "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}2512"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "1.2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "); pooled over the new bins "
+        },
+        {
+          "k": "m",
+          "v": "+0.0496\\pm0.0372"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.3\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ") — no sign change, no stabilisation above zero; density slope "
+        },
+        {
+          "k": "m",
+          "v": "-0.0725\\pm0.0090"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "8.0\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " over "
+        },
+        {
+          "k": "m",
+          "v": "4.0"
+        },
+        {
+          "k": "t",
+          "v": " decades); "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the plateau window narrows "
+            },
+            {
+              "k": "m",
+              "v": "0.264\\to0.074"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "m",
+              "v": "2\\sigma"
+            },
+            {
+              "k": "t",
+              "v": "), a factor "
+            },
+            {
+              "k": "m",
+              "v": "3.6"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; all six old bins reproduce at "
+        },
+        {
+          "k": "m",
+          "v": "0.0\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " against T175. Both curvature channels survive ("
+        },
+        {
+          "k": "m",
+          "v": "\\log h"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+0.1529\\pm0.0258"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "5.9\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\log\\mathrm{dens}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "-0.0434\\pm0.0060"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "7.3\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "); none of the six preregistered reparametrisations makes it one exponent. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "R1 (T175) closed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the Feynman–Hellmann form "
+        },
+        {
+          "k": "m",
+          "v": "d\\lambda_{\\min}=v^{\\mathsf T}\\,d\\hat A\\,v"
+        },
+        {
+          "k": "t",
+          "v": " reproduces the rebuild to "
+        },
+        {
+          "k": "m",
+          "v": "3.37\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " at the minimum of a declared step ladder with the U-shape exhibited; "
+        },
+        {
+          "k": "m",
+          "v": "d\\mathrm{DEL}/\\mathrm{DEL}"
+        },
+        {
+          "k": "t",
+          "v": " carries "
+        },
+        {
+          "k": "m",
+          "v": "84\\%"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The "
+            },
+            {
+              "k": "m",
+              "v": "300\\times"
+            },
+            {
+              "k": "t",
+              "v": " harmonic anomaly explained as a pole"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": PD survives "
+        },
+        {
+          "k": "m",
+          "v": "2\\%"
+        },
+        {
+          "k": "t",
+          "v": " of the phase period ("
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PD}}=5.9\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ", product "
+        },
+        {
+          "k": "m",
+          "v": "5.8=O(1)"
+        },
+        {
+          "k": "t",
+          "v": "), and the two lowest modes are already "
+        },
+        {
+          "k": "m",
+          "v": "13.4\\%"
+        },
+        {
+          "k": "t",
+          "v": " apart at "
+        },
+        {
+          "k": "m",
+          "v": "\\delta=0"
+        },
+        {
+          "k": "t",
+          "v": " — the intervention runs along a near-degeneracy, it does not create one. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Anti-promotion"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the estimator is LADDER-DEPENDENT at the "
+        },
+        {
+          "k": "m",
+          "v": "0.20"
+        },
+        {
+          "k": "t",
+          "v": " level — every quoted bin deficit must cite its rung ladder. True zero / power-law approach / low plateau stay indistinguishable (one more decade of window would cost "
+        },
+        {
+          "k": "c",
+          "v": "ATOM_MAX"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}2.5\\times10^{9}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the phase-2 measurement programme closes as planned"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — no follow-up probe; the work continues in the classification papers and the backflow lines."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Promotion "
+            },
+            {
+              "k": "c",
+              "v": "v562_dense_limit_identities.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.DENSE.LIMIT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "16"
+            },
+            {
+              "k": "t",
+              "v": " checks, "
+            },
+            {
+              "k": "m",
+              "v": "{\\sim}0.5"
+            },
+            {
+              "k": "t",
+              "v": " s, deterministic, small sieve)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact cores per instance: the Feynman–Hellmann identity with the step-ladder U-shape check and must-break mutations (R1.CLOSED); the phase-pole mechanism (PD-survival window, near-degeneracy at "
+        },
+        {
+          "k": "m",
+          "v": "\\delta=0"
+        },
+        {
+          "k": "t",
+          "v": ", sign change bracketed); sieve consistency at construction level (complete-comb lag vectors bit for bit under the bigger table; the truncated must-break moves); and the curve estimator as a deterministic procedure "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "with the ladder caveat wired as a check and into the ledger row"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". SITS-AT-ZERO typed as a MEASUREMENT with the ladder caveat; the plateau/zero distinction explicitly OPEN; no RH statement. Suite "
+        },
+        {
+          "k": "m",
+          "v": "555\\to556"
+        },
+        {
+          "k": "t",
+          "v": " scripts."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Diary entry Teil 176 in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " (counters "
+        },
+        {
+          "k": "m",
+          "v": "177"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4789/4789"
+        },
+        {
+          "k": "t",
+          "v": " checks; phase-2 closure noted); prime-front paper T176 subsection (the extended curve as a table, the sieve result, the pole finding, the ladder caveat; keybox “After T176: the measurement programme closes”) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " probe-index row "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " abstract counters "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the final “Where phase 2 now stands” paragraph; website: prime-front feed entry T176 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " v562 promotion entry, status counters, "
+        },
+        {
+          "k": "c",
+          "v": "ScriptIndex"
+        },
+        {
+          "k": "t",
+          "v": " / changelog mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · XXI",
     "heading": [
       {

@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v561
+          v535–v562
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,8 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4765/4765 sandbox checks —
+        (“the full proof”, T126+) stands at 4789/4789 sandbox checks with its
+        measurement programme closed as planned (T176) —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -523,7 +524,14 @@ export function HonestyBanner() {
         the deficit falls monotonically with comb density to a densest
         reachable bin consistent with zero, with true zero, power-law
         approach and low plateau undecidable under this sieve. T176
-        (dense_limit_probe.py) is running — the larger sieve. What remains
+        (SITS-AT-ZERO) then ran the larger sieve — the last decidable
+        measurement of phase 2: the density ceiling rose from 361 to 6120,
+        both new bins are consistent with zero (pooled +0.0496 ± 0.0372),
+        the plateau window narrowed by a factor 3.6, the derivative identity
+        closed (Feynman–Hellmann), the 300× harmonic anomaly resolved into a
+        pole, and the measurement programme closed as planned (the exact
+        cores are load-bearing as v562; the work continues in the
+        classification papers and the backflow lines). What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

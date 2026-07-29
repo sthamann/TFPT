@@ -81,8 +81,8 @@ out to be \emph{Hecke} data. It goes further than an analogy: the $E_8$ shell co
 $240\,\zeta(s)\zeta(s-3)$ as a Dirichlet series, and the lattice's self-duality gives its theta sum an
 exact functional equation whose fixed axis is the critical line --- a framework picture, stated as such,
 which the document opens with and then keeps at arm's length. This companion documents the line end to
-end. Twenty-six modules are
-load-bearing and ledger-carried (\vref{v535}--\vref{v560}): Hecke from geometry on the $E_8$ census,
+end. Twenty-seven modules are
+load-bearing and ledger-carried (\vref{v535}--\vref{v560} and \vref{v562}): Hecke from geometry on the $E_8$ census,
 the Eichler trace layer, the half-integral bridge, one finite relative-trace identity of which the
 first three are projections, the Weil structure of the resulting family with two explicitly isolated
 obstructions, the amplitude route with a positive linear carrier, the matching-lemma / transport
@@ -93,9 +93,10 @@ identities, the odd-sector identities, the fixed-size Ritz ceiling certificate, 
 fixed-size angle instruments, the exact-form identities, the sampling/harmonics
 identities, the Pareto/total-variation identities, the gauge/$P_{\mathrm{pr}}$
 identities, the cascade/vector identities, the bilinear/rank identities, the phase-2
-capstone and the frame/deficit identities. Everything beyond
-those twenty-six is \emph{sandbox}: an exploratory program, run as
-$176$ preregistered probes with $4765$ machine checks, which localized the residual object
+capstone, the frame/deficit identities and the dense-limit identities of the phase-2
+endgame. Everything beyond
+those twenty-seven is \emph{sandbox}: an exploratory program, run as
+$177$ preregistered probes with $4789$ machine checks, which localized the residual object
 (the reverse-flow promotions --- the \vref{v379} hardening of T133 and the CP channel
 identities \vref{v561} of T177 --- live on the physics side and are counted there). That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
@@ -266,7 +267,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots175$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots177$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -538,7 +539,13 @@ flow then resumes at the far end: the CP mirror turns the gauge-degree toolkit o
 CP ledger rows of the physics side --- Tier-1 invariance of the $\pi/3$ structure is empty
 by algebra, \emph{two} inequivalent Jarlskog-class invariants carry $\pi/3$, neither
 frame-coupled, four ledger readings are narrowed with no marker moves, and the exact cores
-are promoted as \vref{v561} (T177, landed while T176 runs));
+are promoted as \vref{v561} (T177, landed while T176 ran); and the larger sieve then
+lands (T176, numbered by contract, landed after T177): the density ceiling rises
+$361\to6120$ under a $20.8\times$ sieve, both new ratio-4 bins are consistent with zero
+(pooled $+0.0496\pm0.0372$), the plateau window narrows by a factor $3.6$, R1 closes as
+the Feynman--Hellmann identity, the $300\times$ harmonic anomaly resolves into a pole,
+and \emph{the phase-2 measurement programme closes as planned} --- the exact cores
+promoted as \vref{v562});
 Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
@@ -623,7 +630,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the twenty-six modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the twenty-seven modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -764,13 +771,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: twenty-six modules}\label{sec:verified}
+\section{The verified layer: twenty-seven modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The twenty-six modules and their ledger markers]
+\begin{keybox}[The twenty-seven modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -802,6 +809,7 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v558} & \texttt{PRIME.BILINEAR.RANK.01} & bilinear/rank identities of phase 2 (per instance) & \mE\\
 \vref{v559} & \texttt{PRIME.PHASE2.CAPSTONE.01} & phase-2 capstone: the sixteen-link chain (per instance) & \mE\\
 \vref{v560} & \texttt{PRIME.FRAME.DEFICIT.01} & frame/deficit identities of phase 2 (per instance) & \mE\\
+\vref{v562} & \texttt{PRIME.DENSE.LIMIT.01} & dense-limit identities of the phase-2 endgame (per instance) & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -2419,6 +2427,73 @@ scatter is substantially an error-bar artefact, the sparse corner is not an asse
 artefact); the T172/T173/T174 verdicts
 \textsc{partially-portable} / \textsc{deficit-varies} / \textsc{partial-cancel} are
 sandbox verdicts; \vref{v559}'s chain stays as stated, and nothing is re-opened.
+\end{itemize}
+
+\subsection{The dense-limit identities (\texorpdfstring{\vref{v562}}{v562})}\label{sec:v562}
+The exact cores of the phase-2 endgame (T176 \texttt{DENSE.LIMIT},
+Section~\ref{sec:t176}) --- the probe that raised the sieve twentyfold, extended the
+deficit(dens) curve to a densest bin consistent with zero, and closed the phase-2
+measurement programme as planned. This module carries the identities, not the
+measurement: everything is recomputed per instance on a small declared surface, and
+the big sieve is \emph{not} rebuilt --- the identities are sieve-size-free, which is
+their point \veri{v562\_dense\_limit\_identities.py} ($16$ checks, ${\sim}0.5$\,s,
+deterministic; $18$ prime-power anchors in $[40,565]$ crossed with the declared
+$2^{1/4}$ ladder $h=(128,152,181,215,256,304)$ $=108$ cells, comb complete, positive
+definite on $108/108$; the one arithmetic input $\kappa=0.038821$ verified at every
+jump point of $\psi(x)/x$ on the table).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{R1 closed: the Feynman--Hellmann identity} \mE\ (T176 P2, the
+strongest): $d\log R/d\delta=v^{\mathsf T}d\tilde Av/\lambda_{\min}
+-w^{\mathsf T}d\tilde Aw/\lambda_{\max}-d\mathrm{DEL}/\mathrm{DEL}$, with $d\tilde A$
+the odd-Toeplitz image of the \emph{exact} lag derivative $dc/d\delta$ (the assembly
+moves $0.5\mu_p$ per unit phase between two adjacent lag cells and nothing else;
+piecewise linearity checked at $7.0\times10^{-12}$ of the increment), reproduces the
+full nonlinear rebuild on $6/6$ declared instances at the minimum of the declared
+step ladder ($2.3\times10^{-7}$ at $\delta=10^{-6}$; T176's own optimum
+$3.37\times10^{-6}$) \emph{with the U-shape exhibited} --- round-off limited below,
+truncation limited above, both $\ge3\times$ the minimum: a wrong formula has a floor,
+not a minimum (mutations --- swapped eigenvectors, dropped
+$d\mathrm{DEL}/\mathrm{DEL}$ --- miss by a factor $4\times10^{1}$ while the true form
+sits at $5\times10^{-8}$). T175's measured intervention slope ($879$) is retired as a
+separate claim, and the decomposition corrects the expected story: the near-degeneracy
+channel $d\mathrm{DEL}/\mathrm{DEL}$ carries the largest share on every instance
+($0.54$--$0.98$; T176: $84\%$ median).
+\item \textbf{The phase pole} \mE\ (T176 P3): on the densest declared instances,
+positive definiteness survives only $2\%$ of the phase period (declared $64$-point
+grid, bisection to $40$ levels), the loss point satisfies
+$\delta_{\mathrm{PD}}\cdot|d\log R/d\delta|=7.2$ median --- inside the declared
+$O(1)$ band, a pole at the natural scale --- and the two lowest modes of the
+normalised low block sit within $0.02$--$0.17$ of each other already at $\delta=0$:
+the intervention walks along a crossing, it does not create one. The ${\sim}300\times$
+harmonic anomaly of T175 is \emph{retired}: a first-harmonic regression over the
+period estimates a Fourier coefficient of a function with a pole in the interval.
+\item \textbf{Sieve consistency at construction level} \mE\ (T176 P4): a bigger sieve
+adds atoms above the old cap and nothing else, so on anchors whose comb is complete
+under the old cap the lag vectors agree \emph{bit for bit}, $R$ exactly, and the
+cluster-robust bin deficit identically; the must-break moves exactly where it must
+(the deepest declared anchor past the old cap). T176's cell-by-cell audit --- all six
+T175 bins at $0.0\sigma$ under the $20.8\times$ sieve --- is this construction fact
+plus statistics, and it is what lets any later probe raise the cap without
+re-deriving the chain.
+\item \textbf{The estimator $+$ the anti-promotion as a check} \mE\ (T176 P1): the
+cluster-robust bin statistic is deterministic and exactly reproducible under a
+permuted cell order --- and it is \emph{ladder-dependent}, exhibited per instance
+(fine $2^{1/4}$ vs coarse $\sqrt2$ ladder shift $0.036$ on the module surface; T176
+saw up to $0.20$): \textbf{any ledger row quoting a bin deficit must quote the rung
+ladder with it}, and \texttt{PRIME.DENSE.LIMIT.01} does exactly that. The
+occupancy-preserving phase scramble destroys positive definiteness on $6/6$ draws
+(T176: $194/194$) --- a one-sided destruction control, never a calibrated null.
+\item \textbf{Named limits as content.} T176's \textsc{sits-at-zero} verdict ---
+pooled $+0.0496\pm0.0372$ over the two new bins, plateau window $0.074$ at $2\sigma$,
+a $3.6\times$ narrowing --- stays a sandbox \textsc{measured} number on T176's
+$2.5\times10^{7}$ surface \emph{with its rung ladder} (the ladder caveat is part of
+the quote); the limit stays open and typed open (true zero at finite density,
+power-law approach and low plateau remain indistinguishable under any
+resource-reachable sieve --- one more decade of window would cost
+$\mathtt{ATOM\_MAX}\sim2.5\times10^{9}$); the phase-2 closure is a closure of the
+\emph{measurement programme}, not of the question; no RH statement anywhere, and the
+open quantifier at link 16 is untouched.
 \end{itemize}
 
 % =====================================================================
@@ -9934,11 +10009,137 @@ the density curve, the two channels, the causality finding, the
 error-bar resolution, the spline-positivity finding, the
 $\mathrm{dens}\ge1$ proposal, the exclusion --- no promotion here.
 T176 (\texttt{dense\_limit\_probe.py}, contract \texttt{DENSE.LIMIT})
-is running --- the larger sieve.
+ran exactly that larger sieve --- the next subsection (landed after
+the reverse-flow part T177; numbered by contract).
+\end{keybox}
+
+\subsection{The bigger sieve: the density curve sits at zero, and the
+measurement programme closes (T176)}\label{sec:t176}
+T176 (\texttt{dense\_limit\_probe.py}, contract \texttt{DENSE.LIMIT},
+$24/24$, $118.7$\,s, verdict \textsc{sits-at-zero}; landed after T177
+--- part numbering by contract) is the last decidable measurement of
+phase 2, and it is deliberately \emph{one} change: the sieve cap rises
+by a factor $20.8$ ($\mathtt{ATOM\_MAX}=1.2\times10^{6}\to
+2.5\times10^{7}$; $1\,566\,727$ prime-power atoms) while the ratio
+$R$, the cluster-robust estimator, the assembly, the KMS basis and the
+Schur block are held \emph{verbatim} at T175, so the extension is an
+extension and not a new measurement. The cost statement is the first
+result: the sieve builds in $0.08$\,s at $59.7$\,MB peak --- \emph{the
+sieve was never the binding constraint} (the $14\,532$-cell grid costs
+the $110$\,s) --- and the honest resource fence follows: a further
+factor $5$ in the cap would fit the budget, a factor $100$ (the next
+decade of window, ${\sim}2.5\times10^{9}$) would not. The density
+ceiling moves $361\to6120$ ($6118$ reached), $14\,532$ admissible
+cells on $692$ anchors carry a positive definite low block, $0$
+indefinite.
+
+\emph{The extended curve.} Eight declared ratio-4 bins over $4.0$
+decades of comb density, cluster-robust over anchors:
+
+\begin{center}\small
+\begin{tabular}{@{}r r r r l@{}}
+\toprule
+dens bin & anchors & med.\ dens & deficit $\pm$ s.e. & \\
+\midrule
+$[0.1,0.4)$ & $11$ & $0.27$ & $+0.8886\pm0.1027$ & \\
+$[0.4,1.6)$ & $34$ & $0.92$ & $+0.5148\pm0.0883$ & \\
+$[1.6,6.4)$ & $69$ & $3.5$ & $+0.1948\pm0.0861$ & \\
+$[6.4,25.6)$ & $117$ & $14.1$ & $+0.3922\pm0.0935$ & (declared violation)\\
+$[25.6,102.4)$ & $218$ & $56.8$ & $+0.1520\pm0.0573$ & \\
+$[102.4,409.6)$ & $403$ & $227.6$ & $+0.0579\pm0.0542$ & \\
+$[409.6,1638.4)$ & $471$ & $779.2$ & $+0.0376\pm0.0410$ & \textbf{new} ($0.9\sigma$)\\
+$[1638.4,6553.6)$ & $272$ & $2511.8$ & $+0.1046\pm0.0881$ & \textbf{new} ($1.2\sigma$)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Pooled over the two new bins the deficit is
+$+0.0496\pm0.0372$ ($1.3\sigma$): \emph{no sign change anywhere on the
+curve, no stabilisation above zero --- the curve sits at zero from
+dens ${\sim}410$ upward}. The density slope is $-0.0725\pm0.0090$
+($8.0\sigma$ over $4.0$ decades), and the bin-4 monotonicity violation
+is declared, not smoothed: the finer $2^{1/4}$ rung ladder samples the
+curvature of $\log R$ in $\log h$ differently from T175's $\sqrt2$
+ladder (below). What the bigger sieve actually bought is a number:
+\emph{any plateau of the deficit above $0.074$ is excluded at
+$2\sigma$ for dens in $[410,6118]$, against T175's $0.264$ --- a
+factor $3.6$} --- and that is the whole content of the extra
+$48$\,MB of sieve. The consistency stress could have killed the file
+and did not: all six T175 bins, re-measured with T175's exact anchor
+set and rung ladder under the new sieve, reproduce at $0.0\sigma$.
+The curvature map survives with T175's coefficients (both channels:
+$\log h$ $+0.1529\pm0.0258$ at $5.9\sigma$, $\log\mathrm{dens}$
+$-0.0434\pm0.0060$ at $7.3\sigma$; per-anchor $a_2=-0.0842\pm0.0085$;
+all $\le1.7\sigma$ from T175), and none of the six preregistered
+reparametrisations makes the surface one exponent --- the fitted
+direction wants $\mathrm{dens}^{+0.284}h$, and no candidate sits
+there.
+
+\emph{R1 closed, and the $300\times$ anomaly explained.} The
+Feynman--Hellmann form
+\begin{keyeq}$\displaystyle
+\frac{d\log R}{d\delta}
+=\frac{v^{\mathsf T}d\tilde A\,v}{\lambda_{\min}}
+-\frac{w^{\mathsf T}d\tilde A\,w}{\lambda_{\max}}
+-\frac{d\mathrm{DEL}}{\mathrm{DEL}}$
+\end{keyeq}
+\noindent reproduces the full rebuild to $3.37\times10^{-6}$ at the
+minimum of a declared step ladder whose U-shape is exhibited (no
+floor $\Rightarrow$ the residual is the difference quotient, not the
+formula): T175's intervention regression is now an \emph{identity}
+about the assembly, and the decomposition corrects the expected
+story --- $d\mathrm{DEL}/\mathrm{DEL}$ carries $84\%$ of the response,
+$\lambda_{\min}$ only $7\%$. And the ${\sim}300\times$ gap between
+T175's first harmonic and its local derivative is \emph{a pole}:
+positive definiteness survives only $2\%$ of the phase period
+($\delta_{\mathrm{PD}}=5.9\times10^{-3}$ median,
+$\delta_{\mathrm{PD}}\cdot|d\log R/d\delta|=5.8=O(1)$), so a
+first-harmonic regression estimates a Fourier coefficient of a
+function with a pole in the interval --- neither number is wrong.
+Measured against the going-in hypothesis: the two lowest modes of the
+normalised low block sit $13.4\%$ apart \emph{already at} $\delta=0$
+--- the intervention does not create a degeneracy, it runs along one,
+which closes the loop with the decomposition: $\mathrm{DEL}=1-r_{12}^2$
+\emph{is} the near-degeneracy of the bottom two directions, exactly
+the channel T174 proved does not cancel. Stress: the
+occupancy-preserving scramble kills positive definiteness on
+$194/194$ cells in the first new bin; $L_P$ exact at $1.9\times
+10^{-15}$; the anti-fitting battery is mechanical (bin edges ratio-4
+exact, the first five bins bit-for-bit T175's).
+
+\emph{The ladder caveat (the anti-promotion).} The bin estimator is
+\emph{ladder-dependent} at the $0.20$ level: a ratio-4 bin holds
+${\sim}12$ rungs of the $2^{1/4}$ ladder against ${\sim}6$ of T175's
+$\sqrt2$ ladder, and with $a_2\neq0$ they sample the curvature
+differently. Consequence, carried into the ledger row: any quoted bin
+deficit must cite its rung ladder, or the number is not reproducible.
+
+\begin{keybox}[After T176: the measurement programme closes]
+\emph{(Verdict)} \textsc{sits-at-zero} --- at the densest combs a
+$2.5\times10^{7}$ sieve can build, the deficit is consistent with
+zero, with no sign change and no stabilisation above zero; the
+plateau window is $3.6\times$ narrower than T175's; and the three
+readings T175 could not separate --- true zero at finite density,
+power-law approach, small plateau --- are still three readings,
+confined to a smaller box. No finite sieve can decide the limit (the
+window shrinks like the square root of the anchor cap), so
+\textbf{the phase-2 measurement programme closes here, as planned}:
+no follow-up probe. What T176 leaves for the \emph{papers} rather
+than for new probes: a ladder-robust estimator (integrate the
+curvature instead of sampling it), the $\mathrm{dens}^{+0.284}h$
+direction (derive it from the assembly or drop the word ``exponent''
+from the chain), and the $2\times2$ effective model of the
+near-degenerate bottom --- the cheapest structural question left,
+and the file's real contribution to it is that the phase response
+there is now closed in form. The exact cores are load-bearing:
+\veri{v562\_dense\_limit\_identities.py} (\texttt{PRIME.DENSE.LIMIT.01};
+Section~\ref{sec:v562}). The work continues in the classification
+papers (Paper II) and the backflow lines (T177,
+Section~\ref{sec:t177}).
 \end{keybox}
 
 \subsection{The reverse flow, resumed: the CP mirror narrows four ledger rows (T177)}\label{sec:t177}
-While T176 runs, the reverse flow resumes: T177 (\texttt{cp\_invariant\_probe.py}, contract
+While T176 was running, the reverse flow resumed: T177 (\texttt{cp\_invariant\_probe.py}, contract
 \texttt{CP.INVARIANT}, $49/49$, verdict \textsc{degenerate}) carries the newest tool of the
 phase --- gauge-degree bookkeeping under declared group actions (T173/T174) --- back to the
 physics side and runs it on the four CP ledger rows (\texttt{REDTEAM.D.01},
@@ -10003,22 +10204,34 @@ the OLS error bar (a correction to T174's reading, not to its number);
 and the deficit falls monotonically with comb density over three
 decades to a densest reachable bin consistent with zero, with true
 zero, power-law approach and low plateau undecidable under this sieve.
-What is left is one statement --- an unconditional certificate that
-two explicit finite $\Lambda$-sum vectors become collinear at the
-demanded rate, now stated frame-free --- plus one instrument question:
-the larger sieve that alone can decide the dense limit (T176,
-running). The measurement surface is certified, the quantifier is
-open, R1 is classified; the capstone that certifies exactly this map
-is load-bearing \veri{v559\_phase2\_capstone.py}, and the
-frame/deficit identities of the closing arc are load-bearing
-\veri{v560\_frame\_deficit\_identities.py}.
+The instrument question is then answered by the instrument itself
+(T176): the twentyfold sieve raises the ceiling to $6120$, both new
+bins are consistent with zero (pooled $+0.0496\pm0.0372$), the plateau
+window narrows by a factor $3.6$ --- \textsc{sits-at-zero}, the last
+decidable measurement of phase 2 --- while the derivative identity
+closes in Feynman--Hellmann form and the $300\times$ harmonic anomaly
+resolves into a pole. \emph{With that, the phase-2 measurement
+programme closes as planned}: what is left is one statement --- an
+unconditional certificate that two explicit finite $\Lambda$-sum
+vectors become collinear at the demanded rate, now stated frame-free,
+with the true-zero/power-law/plateau reading of the dense limit
+explicitly open and no finite sieve able to decide it --- and the
+work continues in the classification papers (Paper II) and the
+backflow lines (T177), not in further probes of this instrument. The
+measurement surface is certified, the quantifier is open, R1 is
+classified; the capstone that certifies exactly this map is
+load-bearing \veri{v559\_phase2\_capstone.py}, the frame/deficit
+identities of the closing arc are load-bearing
+\veri{v560\_frame\_deficit\_identities.py}, and the dense-limit
+identities of the endgame are load-bearing
+\veri{v562\_dense\_limit\_identities.py}.
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
-\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the twenty-six ledger modules
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the twenty-seven ledger modules
 of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
@@ -10503,13 +10716,13 @@ document.
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $166$ parts T11--T175 and T177 that the current diary file
-records ($167$ runs --- T104 was a double run with two independent arms --- and $4573$ green checks);
+load-bearing artefact. The index covers the $167$ parts T11--T177 that the current diary file
+records ($168$ runs --- T104 was a double run with two independent arms --- and $4597$ green checks);
 the ten earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded
 by the diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks},
-plus \vref{v535}--\vref{v561} promoted; with T126--T175 and the reverse-flow part T177, the first
-fifty-one landed parts of the second phase, the running totals are \textbf{$176$ probes and
-$4765/4765$ checks}. T176 (\texttt{dense\_limit\_probe.py}) is running and not yet indexed.
+plus \vref{v535}--\vref{v562} promoted; with T126--T177 (T176, the endgame measurement, landed after
+the reverse-flow part T177 and is numbered by contract), the first fifty-two landed parts of the
+second phase, the running totals are \textbf{$177$ probes and $4789/4789$ checks}.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -10690,6 +10903,7 @@ T172 & \texttt{\scriptsize frame\_\allowbreak beyond} & \textbf{the map is porta
 T173 & \texttt{\scriptsize frame\_\allowbreak rate} & \textbf{the demanded rate is itself a frame datum, and the deficit is the number of the phase} --- $284$ windows $+$ $109$ scramble twins over ELEVEN preregistered frame data (A at $\nu\in\{3,4,5,6,8,10,12,16\}$, gap-blind B, smoothed C at $\nu=4/6$); \textbf{$q=1-s$ EXACT ($1.9\times10^{-15}$) and $q=0.667$--$0.777<1$ on every frame datum --- the $h^{-3}$ target was the $q=1$ idealisation of a $\Theta(D^{3})$ law}; gap functional CALIBRATED, not guessed ($6$ preregistered candidates; the relative I5 gap $t/\lambda_{\max}(B_{LL})$ hits the chain's $3$ on frame A --- median $3.033$ --- and is the only dimensionless one; $(D/\alpha)^{3}$ named a tautology); REQ $=2.831$--$3.438$ (spread $0.607$); deficit as ONE slope of $R=\mathrm{GAP}/(1-r_{12}^2)$: \textbf{pooled $+0.155\pm0.102$} ($\times1.54$ over-scatter inflation; $3.0\sigma$ above zero), $1.8\times$ flatter than either side ($\chi^2/\mathrm{dof}$: REQ $4.87$ / DEL $4.17$ / difference $2.38$ $=2.4\sigma$ --- constancy REJECTED), split-stable to $0.214$ where both sides drift ${\sim}0.5$; exact supports: $\mu^P_1$-convention shifts by exactly $2$ ($1.9974$), fixed-$h^{-3}$ $\chi^2$ $=$ delivery $\chi^2$ to $8\times10^{-15}$ (a frame-independent demand cancels nothing); \textbf{invariant under the D-rule at fixed $\nu$ ($\chi^2/\mathrm{dof}\le0.64$ --- theorem candidate for that half), NOT under $\nu$ ($r=+0.76$, $2.8\sigma$, confounded with arithmetic content under the cap; $q$ the weakest driver, $0.2\sigma$)}; \textbf{CORRECTION TO T172 (P7): fixed-$h^{-3}$ gives $+0.015\pm0.084$ --- consistent with zero; T172's $C$-growth neither sign- nor split-stable (verdict untouched)}; $h$-vs-$D$ not resolved (declared; fixed-$\alpha$ diagnostic legs do not settle it); \textbf{R1 frame-free: the delivered near-degeneracy closes $h^{+0.155\pm0.102}$ SLOWER than the relative I5 gap it must pay --- no frame closes it ($0/11$ upper edges $\le0$, best $+0.170$ at B; $8/11$ individually consistent with zero --- pooled, not claimed per leg); frame shopping over by numbers} (B delivers $3.449$, demands $3.438$); stress: scramble removes the decay ($4/4$ legs), lag identity $\le1.9\times10^{-16}$, jackknife $\le0.026$, shuffle null $3.7\sigma$ away; candidates P5--P8 PENDING (bundling with T174) & DEFICIT-VARIES & 40/40\\
 T174 & \texttt{\scriptsize cancellation\_\allowbreak identity} & \textbf{the gauge route is exhausted, by theorems, and the deficit is measured frame-free at $5.0\sigma$} --- both sides of the T173 deficit are scale-free functionals of ONE raw Gram $\hat a_{ij}=t_i^{\mathsf T}A_ht_j$ (demand $=$ relative gap of the $16\times16$ $\mu$-congruence; delivery $=$ the $2\times2$ corner of the SAME matrix), so ``do the frame factors cancel'' becomes checkable blindness algebra; THE LEDGER: amplitude gauge THEOREM ($\le0.028$ of the per-cell conditioned bar over $12$ decades), \textbf{the COMPLETE $\mu^P_1\approx h^{-2}$ channel THEOREM ($\le0.009$ --- exactly absent from the deficit)}, full positive diagonal group THEOREM (delivery exact; the demand keeps the SHAPE --- the asymmetry is the anatomy), KMS shape vs $k^2$ CERTIFIED (unconditional band $2\log((1+\varepsilon)/(1-\varepsilon))$, $\varepsilon=(K\pi/(2h+1))^2/6$; $\le0.0075$ in deficit units $=4.8\%$ of T173's number), \textbf{arch/comb mixture DOES NOT CANCEL} (additive and exact; NO factorisation; neither term alone has a positive Schur floor on one of $84$ cells), frame rule THEOREM ($R=R(\alpha,M)$ identically --- a SAMPLING map); explained: G2 the UNIQUE doubly gauge-invariant arithmetic member (integer degrees); the G3 offset exactly $2$ ($G2$ is $\mu^P_1$-blind; $h^{-1.9975}$); \textbf{the rectangle measurement}: $a=-0.281\pm0.066$ ($4.3\sigma$) with the anchor direction flat; the exact between/within split puts the deficit in the GRID response ($3.3\times$ selection, whose sign is mostly wrong --- selection reading rejected); the driver is COMB DENSITY per lag cell (monotone $+0.281\to+0.062$ across the cuts; on legs $\log\nu$ collinear with $\log\mathrm{dens}$ at $r=-0.921$ --- T173's $\nu$-driver discharged); \textbf{dense corner exhausted ($1069$ cells, $151$ anchors, cluster-robust): DEFICIT(frame-free, dens $\ge3$) $=+0.1111\pm0.0222$ --- $5.0\sigma$ from zero, $0.4\sigma$ from T173's $+0.155\pm0.102$}; P6 NOT a theorem (multiplicative half only) but less load-bearing --- the deficit is measured $D$-rule-free; candidates P9--P15; rest: per-anchor scatter $\chi^2/\mathrm{dof}=3.02$ (candidate: placement phases $\mathrm{frac}(\log p/D)$), the admissibility question ($0.11$ vs $\ge3$ atoms/cell: factor $2.5$), the sparse corner $\to$ \vref{v560} & PARTIAL-CANCEL & 37/37\\
 T175 & \texttt{\scriptsize phase\_\allowbreak placement} & \textbf{the placement phases are real and causal, but non-smooth --- and the heterogeneity dissolves into the error bar} --- $1504$ cells on $188$ anchors (EVERY prime power in $[40,1090]$; no frame rule anywhere) $\times$ the T174 ladder $+$ declared floor $h=128$; the deficit REPRODUCES ($+0.1069\pm0.0222$, $0.13\sigma$ from T174); \textbf{the trap said out loud: the preregistered anchor invariant $\theta_p=\mathrm{frac}(\log p/\alpha)$ is a smooth monotone function of $\alpha$ (Rayleigh $Z=1296$) --- a regression on it would be an $\alpha$-regression in disguise}; only the cell phase $\varphi_p(h)=\mathrm{frac}(h\theta_p)$ is free and equidistributed (max $Z=1.41$; generating identity certified $1.1\times10^{-13}$, Weyl 1916); \textbf{the phases are REAL in $\log R$} ($F=10.80$ vs within-rung null $95\%$ point $1.69$; $+10.3\%$ held out; composite placebo $0.81/-0.0275$; amplitudes monotone $0.018\to0.141$) \textbf{but NOT the heterogeneity channel} ($\chi^2/\mathrm{dof}$ $3.14\to2.52$, target $<2$ missed; held out $-15.4\%$; deficit untouched, $0.18\sigma$); the exploratory scan excludes every anchor statistic; \textbf{the resolution is the ERROR BAR: jackknife slope errors take the excess scatter $0.1224\to0.0000$ and the robust pull $1.41\to1.22$ (half-split $0.2722$ vs sd $0.2789$) --- T174's $\chi^2$ was substantially an OLS independence assumption, the $5\sigma$ deficit unaffected}; \textbf{the dense corner EXHAUSTED} ($\mathrm{dens}\le361$ by the caps; $359$ reached): the curve falls $+0.982\pm0.213\to-0.057\pm0.132$ over $3$ decades, monotone, slope $6.1\sigma$, \textbf{the densest bin CONSISTENT WITH ZERO --- true zero / power law / plateau $<0.132$ undecidable under this sieve}; both channels significant ($\log h$ $+0.2435$, $\log\mathrm{dens}$ $-0.0631$; curvature $-0.137$) --- not a single exponent; alternative assemblies INADMISSIBLE (lump $0\%$/wide $0\%$ PD dense), deformation sensitivity ratio $0.4$ --- the sparse corner is no assembly artefact; rule proposal $\mathrm{dens}\ge1$ ($6.5\sigma$, not retroactive); scramble $12/12$; \textbf{the INTERVENTION (exact rebuild control): displacing the six family atoms gives $d\log R/d\delta=879$, linear over four declared decades --- the placement phase is CAUSAL for $R$, the first interventional statement of the series; the first harmonic predicts $2.89$ (factor ${\sim}300$ too small), PD dies at $\delta\ge10^{-3}$, GAP $=1.6\times10^{-9}$--$4.8\times10^{-6}$: the floor is a near-degeneracy, $\log R$ non-smooth in the phases}; candidates P175-1--P175-8 PENDING & PHASES-RESIST & 38/38\\
+T176 & \texttt{\scriptsize dense\_\allowbreak limit} & \textbf{the density curve sits at zero, and the phase-2 measurement programme closes as planned} (landed after T177; numbered by contract) --- the bigger sieve and ONE change only: $\mathtt{ATOM\_MAX}$ $1.2\times10^{6}\to2.5\times10^{7}$ (factor $20.8$; cost $0.08$\,s / $59.7$\,MB peak --- \textbf{the sieve was never the binding constraint}, the grid costs the $110$\,s), $1\,566\,727$ prime-power atoms, density ceiling $361\to6120$ ($6118$ reached), $14\,532$ cells on $692$ anchors, $0$ indefinite; \textbf{the extended curve} (eight ratio-4 bins, cluster-robust): $+0.8886\pm0.1027\to+0.5148\to+0.1948\to+0.3922$ (declared violation, curvature) $\to+0.1520\to+0.0579\to+0.0376\pm0.0410$ (dens ${\sim}779$, $0.9\sigma$, NEW) $\to+0.1046\pm0.0881$ (dens ${\sim}2512$, $1.2\sigma$, NEW); \textbf{pooled over the new bins $+0.0496\pm0.0372$ ($1.3\sigma$) --- no sign change, no stabilisation above zero}; density slope $8.0\sigma$ over $4.0$ decades; \textbf{plateau window $0.264\to0.074$ at $2\sigma$ --- a $3.6\times$ narrowing, the whole content of the bigger sieve}; sieve consistency: all six T175 bins at $0.0\sigma$ under T175's exact ladder $+$ anchors; both curvature channels survive with T175's coefficients ($\log h$ $+0.1529\pm0.0258$, $5.9\sigma$; $\log\mathrm{dens}$ $-0.0434\pm0.0060$, $7.3\sigma$; $a_2=-0.0842\pm0.0085$; $\le1.7\sigma$), none of six preregistered reparametrisations is one exponent (the data wants $\mathrm{dens}^{+0.284}h$); \textbf{R1 CLOSED: the Feynman--Hellmann form reproduces the rebuild to $3.37\times10^{-6}$} at the U-minimum of a declared step ladder ($d\mathrm{DEL}/\mathrm{DEL}$ carries $84\%$, $\lambda_{\min}$ $7\%$); \textbf{the $300\times$ harmonic anomaly is a POLE} (PD survives $2\%$ of the period, $\delta_{\mathrm{PD}}\cdot|d\log R/d\delta|=5.8$; the two lowest modes $13.4\%$ apart at $\delta=0$ --- the intervention runs along a crossing); scramble $194/194$; \textbf{anti-promotion: the estimator is LADDER-DEPENDENT ($0.20$) --- every quoted bin deficit must cite its rung ladder}; resource fence: factor $5$ more sieve fits, factor $100$ ($\sim2.5\times10^{9}$, one more decade of window) does not; true zero / power law / plateau stay OPEN $\to$ \vref{v562} & SITS-AT-ZERO & 24/24\\
 T177 & \texttt{\scriptsize cp\_\allowbreak invariant} & \textbf{the reverse flow resumed at the CP ledger: two invariants carry $\pi/3$, four rows narrowed, none upgraded} --- the gauge-degree toolkit (T173/T174) turned on the four CP ledger rows; all four constructions rebuilt exactly from the compiler primitives ($\delta=\pi/3+3\lambda_C^2=1.198231638$ certified vs v88/v220; $\det(\mathbf1,d,n)=21$; $J=3.327\times10^{-5}$, CKM unitary to $10^{-41}$); \textbf{new exact identity}: on the hexagonal unit the phase channel carries $\sum_k\rho^{d_k}=4\rho$ ($\arg=\pi/3$, sheet-EVEN --- the $E_8$ degrees are even) against the magnitude channel $\sum_k\rho^{m_k}=4$ ($\arg=0$, sheet-ODD --- the exponents are odd): the E8.CHAN.01 typing has an exact fiber realisation (mutation controls: $e^{i\pi/5}$ and mutated lists break; caveat: exponent-sum reality alone is not hexagon-specific); THE TABLE ($6$ functionals $\times$ $4$ groups, character bookkeeping a homomorphism in every non-trivial cell): the magnitude data carry NO phase ($\arg\prod c=0$ on both triples), the full $\delta$ has NO character (CP-even correction on a CP-odd angle), the raw orientation is HOMOGENEITY DEGREE $+1$ in the frame normalisation ($21\sin(\pi/3)$ is frame data) while $\operatorname{Im}(\rho\det)/\det=\operatorname{Im}\rho$ removes the frame exactly, and Jarlskog passes (a)--(c), failing only the $\pi/3$-carrier test (its content is $\delta$) --- the benchmark validates the criterion; \textbf{Tier-1 is EMPTY BY ALGEBRA} (kernels commute with conjugation $\Rightarrow$ every $\pi/3$-carrier is $\kappa$-odd); \textbf{Tier-2: TWO passers, P2 and V5, in two inequivalent character classes} (sheet-even vs sheet-odd), NEITHER frame-coupled; four ledger rows narrowed (REDTEAM.D.01 residual $=$ a fiber datum; E8.CHAN.01 phase channel sheet-blind; CP.MOD.01 scoped to the leading term; DUAL.FRAME.01 orientation reading degree $+1$, invariant core $\sin(\pi/3)$, sign a declared orientation), NO marker moves; rest: which Tier-2 character is physical (the sheet-odd reproduces CP.MU6.01 --- a preference, not a derivation), the deck column a declared model $\to$ \vref{v561} & DEGENERATE & 49/49\\
 \end{xltabular}
 }

@@ -2015,6 +2015,57 @@ Machine-checked:
 \veri{v560\_frame\_deficit\_identities.py}.
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 
+\par\smallskip\noindent\textbf{The dense-limit identities
+(\texttt{PRIME.DENSE.LIMIT.01}).}
+The exact cores of the phase-2 endgame (T176, contract
+\texttt{DENSE.LIMIT}, verdict \textsc{sits-at-zero} --- the probe that
+raised the sieve twentyfold, extended the deficit(dens) curve to a
+densest bin consistent with zero, and \emph{closed the phase-2
+measurement programme as planned}), as one machine-checked module
+($16$ checks, ${\sim}0.5$\,s, deterministic) on a small declared
+surface ($18$ prime-power anchors in $[40,565]$ $\times$ the declared
+$2^{1/4}$ ladder $h=(128\ldots304)$, comb complete, positive definite
+on $108/108$; $\kappa=0.038821$ verified at every jump point; the big
+sieve is \emph{not} rebuilt --- the identities are sieve-size-free).
+\emph{R1 closed} (T176 P2): the Feynman--Hellmann identity
+$d\log R/d\delta=v^{\mathsf T}d\tilde Av/\lambda_{\min}
+-w^{\mathsf T}d\tilde Aw/\lambda_{\max}-d\mathrm{DEL}/\mathrm{DEL}$
+with the exact lag derivative reproduces the full nonlinear rebuild on
+$6/6$ instances at the minimum of a declared step ladder whose U-shape
+is exhibited ($2.3\times10^{-7}$ at $\delta=10^{-6}$; a wrong formula
+has a floor, not a minimum) --- T175's measured intervention slope is
+retired as a separate claim, and the near-degeneracy channel
+$d\mathrm{DEL}/\mathrm{DEL}$ carries the largest share
+($0.54$--$0.98$).
+\emph{The phase pole} (T176 P3): positive definiteness survives only
+$2\%$ of the phase period, $\delta_{\mathrm{PD}}\cdot|d\log
+R/d\delta|=O(1)$, and the two lowest modes are already near-degenerate
+at $\delta=0$ --- the ${\sim}300\times$ harmonic anomaly is retired (a
+first-harmonic regression of a function with a pole in the interval).
+\emph{Sieve consistency at construction level} (T176 P4): complete-comb
+lag vectors agree bit for bit under a bigger table, $R$ exactly, the
+bin deficit identically --- what lets any later probe raise the cap
+without re-deriving the chain; the truncated must-break moves as it
+must.
+\emph{The estimator $+$ the ladder caveat as a check} (T176 P1): the
+cluster-robust bin statistic is deterministic and exactly reproducible
+--- and \emph{ladder-dependent} (fine vs coarse rung ladder shift
+$0.036$ here, up to $0.20$ on T176's surface): any quoted bin deficit
+must cite its rung ladder, and the ledger row does.
+\textbf{Named limits as content:} T176's \textsc{sits-at-zero} (pooled
+$+0.0496\pm0.0372$ over the two new bins; plateau window $3.6\times$
+narrower) is a sandbox \textsc{measured} number with its rung ladder,
+\emph{not} consumed; the limit --- true zero, power law, plateau ---
+stays open, typed open, under \emph{every} resource-reachable sieve;
+the closure is of the measurement programme, not of the question;
+\emph{no} RH statement.
+Feynman--Hellmann (Hellmann 1937, Feynman 1939) / Schur 1917 / KMS
+1953 / Dirichlet 1829 / Chebyshev 1852--Rosser--Schoenfeld 1962 named
+classical; Weil 1952 cited, never used as a criterion.
+Machine-checked:
+\veri{v562\_dense\_limit\_identities.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

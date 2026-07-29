@@ -161,12 +161,18 @@ const MODULES = [
     title: "CP channel/invariant identities · T177 backflow",
     checks: 25,
   },
+  {
+    id: "v562",
+    claim: "PRIME.DENSE.LIMIT.01",
+    title: "Dense-limit identities · phase-2 endgame",
+    checks: 16,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 176;
-const SANDBOX_CHECKS = 4765;
+const SANDBOX_PROBES = 177;
+const SANDBOX_CHECKS = 4789;
 
 export function ModuleLadder() {
   return (

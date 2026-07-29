@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`555` registered scripts · `626` ledger claims · `10` clusters.
+`556` registered scripts · `627` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (87 scripts)
+### `core` — Compiler core & the E₈ glue  (88 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -185,6 +185,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v558_bilinear_rank_identities, v557_cascade_vector_identities, v558, T171, T151, T152, T153, T154 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v560_frame_deficit_identities** [E/C/O] `PRIME.FRAME.DEFICIT.01` — the closed theorem cores of T172 (FRAME.BEYOND), T173 (FRAME.RATE) and T174 (CANCEL.IDENTITY) recomputed on a small declared surface (a 4×3 (anchor, h) rectangle of gap-blind frame
   - deps: v559_phase2_capstone, v558_bilinear_rank_identities, v559, T172, T173, T174 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v562_dense_limit_identities** [E/O] `PRIME.DENSE.LIMIT.01` — the exact cores of T176 (DENSE.LIMIT), the endgame of the phase-2 measurement programme, recomputed on a small declared surface (18 prime-power anchors in [40, 565] × the declared 
+  - deps: v560_frame_deficit_identities, v559_phase2_capstone, v559, v560, T174, T175, T176 · cited: 1 architecture e8, 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1181,7 +1183,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v550_odd_sector_identities** — `PRIME.ODD.SECTOR.IDENT.01`
 - **v551_ritz_ceiling_certificate** — `PRIME.RITZ.CEIL.01`
 - **v552_angle_instruments** — `PRIME.ANGLE.INSTR.01`
 - **v553_exact_form_identities** — `PRIME.EXACT.FORM.IDENT.01`
@@ -1193,4 +1194,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v559_phase2_capstone** — `PRIME.PHASE2.CAPSTONE.01`
 - **v560_frame_deficit_identities** — `PRIME.FRAME.DEFICIT.01`
 - **v561_cp_channel_identities** — `CP.CHANNEL.IDENT.01`
+- **v562_dense_limit_identities** — `PRIME.DENSE.LIMIT.01`
 
