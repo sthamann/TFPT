@@ -1815,6 +1815,75 @@ Machine-checked:
 \veri{v557\_cascade\_vector\_identities.py}.
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 
+\par\smallskip\noindent\textbf{The bilinear/rank identities
+(\texttt{PRIME.BILINEAR.RANK.01}).}
+The closed theorem cores of T168, T169 and T170 are load-bearing as the
+sixteenth companion module ($27$ checks, ${\sim}0.2$\,s), recomputed on
+the same declared surface as the module above ($12$ deepest in-cap
+frame-A windows, $m=96\ldots291\le300$) with the one arithmetic input
+$\kappa=0.038821$ \emph{verified} at every jump point of $\psi(x)/x$ on
+the von-Mangoldt table --- the \emph{exact shape of the one remaining
+scalar}, and it does not close that scalar.
+\emph{The Lagrange/Wronskian anatomy (T168).} The lag-sum identity
+$\hat a_{ij}=t_i^{\mathsf T}A_ht_j=\sum_d c_dW^{ij}_d$ with the closed
+correlation weights ($1.6\times10^{-15}$; the $1/\sqrt{\mu}$ factors
+cancel, T169-TH3); Euclidean orthogonality $t_1\cdot t_2=0$
+($4.4\times10^{-16}$) --- the near-parallelism is created \emph{entirely}
+by the arithmetic metric; the Wronskian telescope
+$(\mu_1-\mu_2)u_rv_r=W_{r-1}-W_r$ with $W_{-1}=W_{h-1}=0$
+($1.9\times10^{-17}$) and $\tfrac12\sum M^2=1/(\mu_1\mu_2)$ exactly
+($4.6\times10^{-16}$; Lagrange 1773); the wrong eigenvalue pair misses by
+$1.66$--$1.67$ relative.
+\emph{The exponent account and the Gershgorin certificate (T168/T169).}
+$1-r_{12}^2=\nu_1\nu_2/(\hat a_{11}\hat a_{22})$ identically
+($2.5\times10^{-13}$); $\nu_1\le\max(\hat a_{11},\hat a_{22})+|\hat a_{12}|$
+(Gershgorin 1931, unconditional) on $12/12$ with loss $1.1885$--$1.1947$;
+dropping $|\hat a_{12}|$ fails on every window.
+\emph{The det-collapse theorem (T169-TH7).}
+$R(K7)=2\sqrt{\hat a_{11}\hat a_{22}}\,\det\hat A/[(\hat a_{11}+\hat a_{22})
+(\sqrt{\hat a_{11}\hat a_{22}}+\hat a_{12})]$ in closed form
+($8.7\times10^{-13}$) --- the loop T167 scalar $\to$ T168 factor $\to$
+T169 candidate closes as an identity; usable form
+$\nu_2\le2\det\hat A/(\hat a_{11}+\hat a_{22})$, tight to $<2$ exactly;
+the closed constant $1/\sqrt2$ overshoots by $17$--$2.3\times10^{2}$.
+\emph{The exact bilinear von Mangoldt form (T170).} $\hat A=B-S$ against
+the direct block ($1.7\times10^{-14}$);
+$\det\hat A=\det B-D(B,S)+\det S$ ($1.0\times10^{-10}$); $\det S=
+\sum_{n,m}\Lambda(n)\Lambda(m)K(n,m)/\sqrt{nm}$ with
+$K=\tfrac12D(X_n,X_m)$ through the \emph{explicit} kernel matrix
+($7.5\times10^{-16}$; Cauchy--Binet); the wedge reading to the measured
+rank-one defect $4.6\times10^{-3}$--$3.1\times10^{-2}$.
+\emph{The rank-3 theorem and the Type II collapse (T170).} The
+polarisation matrix has eigenvalues $\{-2,-1,+1\}$ exactly --- rank $3$,
+signature $(1,2)$ --- so $\sigma_4/\sigma_1\le1.6\times10^{-16}$ on every
+window: the bilinear form \emph{is} the rank-3 polynomial
+$S_{11}S_{22}-S_{12}^2$ in three linear $\Lambda$-sums; Vaughan's
+identity is coefficient-exact for every $U=V\in\{3,4,5,6\}$ and the Type
+II kernel has $99.9\%$-energy rank $[2,2,2,2]$ against generic
+$[20,15,11,9]$.
+\emph{The R4-free chain and the discriminators (T170/T169).}
+$1-r_{12}^2=\det\hat A/(\hat a_{11}\hat a_{22})$ is an identity --- no
+$A$-positivity, the Weil fence never approached; the $L_P$ no-go gives
+$\hat a_{12}=1.1\times10^{-17}$ identically (no decay); the scramble
+leaves the rank-3 collapse \emph{untouched} on all $60$ draws while the
+value moves $\times834.8$ median --- the arithmetic sits in the joint
+values of $(S_{11},S_{22},S_{12})$ against $B$; plus exact
+Dirichlet/parity controls.
+\textbf{Named limits as content:} per instance on small windows ---
+nothing uniform in the zone index or in $D$; the T168--T170 $h$-exponents
+and route-table deltas are sandbox, \emph{not} consumed; finite
+$\Lambda$-sums allowed and used, \emph{no} RH statement --- the one open
+object after T170 (R1, now finally \emph{classified} but not closed: an
+$m$-free unconditional certificate that the two rows of $\hat A$ become
+collinear at rate $h^{-3+\varepsilon}$ --- a joint near-degeneracy of
+three explicit linear $\Lambda$-sums, not a size) stays open, typed open.
+Lagrange 1773 / Cauchy--Binet 1812--1815 / Gershgorin 1931 / Rayleigh 1877
+/ Montgomery--Vaughan 1973--Vaughan 1977 (the priced route) / KMS 1953 /
+Chebyshev 1852--Rosser--Schoenfeld 1962 / Dirichlet 1829 named classical.
+Machine-checked:
+\veri{v558\_bilinear\_rank\_identities.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

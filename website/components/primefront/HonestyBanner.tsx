@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v557
+          v535–v558
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4474/4474 sandbox checks —
+        (“the full proof”, T126+) is now open with 4514/4514 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -460,8 +460,20 @@ export function HonestyBanner() {
         never enters it (frame-A trend h^−2.948, ε = 0.052), and the
         one open object in STANDARD analytic shape for the first time —
         a bilinear von Mangoldt sum against closed Dirichlet weights.
-        T170 (bilinear_sieve_probe.py) is running the unconditional
-        sieve toolbox on that bilinear form. What remains
+        T170 (SIEVE-RESISTS) then ran the unconditional sieve toolbox
+        on that form, and the classification completed as a theorem:
+        the form is written down exactly (a five-order cancellation
+        between three ~200-sized pieces on the reference window) and
+        collapses back onto the linear hardness for structural reasons
+        — the kernel is the polarisation of the determinant, rank 3 for
+        every window, so the form IS a rank-3 polynomial in three
+        linear Λ-sums, and the Vaughan Type II blocks have effective
+        rank O(1); no unconditional route exceeds δ = +0.996 against
+        the target 3.0, and R1 is finally classified as a
+        NEAR-DEGENERACY, not a size — beyond any size-bounding tool;
+        the theorem cores of T168+T169+T170 are load-bearing as v558.
+        T171 (final_map_probe.py) is assembling the capstone map of the
+        whole phase. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

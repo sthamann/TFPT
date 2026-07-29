@@ -43,6 +43,1669 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · XVI",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v558"
+      },
+      {
+        "k": "t",
+        "v": " — the bilinear/rank identities of phase 2 promoted; prime-front diary T170 (the bilinear form collapses by a rank-3 theorem, R1 classified as a near-degeneracy — SIEVE-RESISTS) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v558"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.BILINEAR.RANK.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the closed theorem cores of T168 (contract "
+        },
+        {
+          "k": "c",
+          "v": "LAGRANGE.MINORS"
+        },
+        {
+          "k": "t",
+          "v": "), T169 (contract "
+        },
+        {
+          "k": "c",
+          "v": "TSTAR.RATIO"
+        },
+        {
+          "k": "t",
+          "v": ") and T170 (contract "
+        },
+        {
+          "k": "c",
+          "v": "BILINEAR.SIEVE"
+        },
+        {
+          "k": "t",
+          "v": ") as one deliberately narrow module ("
+        },
+        {
+          "k": "c",
+          "v": "v558_bilinear_rank_identities.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "27"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.2"
+        },
+        {
+          "k": "t",
+          "v": " s), everything recomputed on "
+        },
+        {
+          "k": "c",
+          "v": "v551"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v557"
+        },
+        {
+          "k": "t",
+          "v": "'s declared small frame-A surface ("
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " deepest in-cap zones, "
+        },
+        {
+          "k": "m",
+          "v": "m=96\\ldots291\\le300"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa=0.038821"
+        },
+        {
+          "k": "t",
+          "v": " verified at every jump point of "
+        },
+        {
+          "k": "m",
+          "v": "\\psi(x)/x"
+        },
+        {
+          "k": "t",
+          "v": " on the table): "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the Lagrange/Wronskian anatomy — the lag-sum identity "
+        },
+        {
+          "k": "m",
+          "v": "\\hat a_{ij}=t_i^{\\mathsf T}A_ht_j\n=\\sum_d c_dW^{ij}_d"
+        },
+        {
+          "k": "t",
+          "v": " with the closed correlation weights ("
+        },
+        {
+          "k": "m",
+          "v": "1.6\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "1/\\sqrt{\\mu}"
+        },
+        {
+          "k": "t",
+          "v": " factors cancel, T169-TH3), Euclidean orthogonality "
+        },
+        {
+          "k": "m",
+          "v": "t_1\\cdot t_2=0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "4.4\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " — the near-parallelism is created "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "entirely"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " by the arithmetic metric), the Wronskian telescope "
+        },
+        {
+          "k": "m",
+          "v": "(\\mu_1-\\mu_2)u_rv_r=W_{r-1}-W_r"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "W_{-1}=W_{h-1}=0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.9\\times10^{-17}"
+        },
+        {
+          "k": "t",
+          "v": ") and the maximal-minor identity "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12\\sum M^2=1/(\\mu_1\\mu_2)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "4.6\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "; Lagrange 1773); "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the exponent account "
+        },
+        {
+          "k": "m",
+          "v": "1-r_{12}^2=\\nu_1\\nu_2/(\\hat a_{11}\\hat a_{22})"
+        },
+        {
+          "k": "t",
+          "v": " identically ("
+        },
+        {
+          "k": "m",
+          "v": "2.5\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": ") with the unconditional Gershgorin certificate "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_1\\le\\max(\\hat a_{11},\\hat a_{22})+|\\hat a_{12}|"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ", loss "
+        },
+        {
+          "k": "m",
+          "v": "1.1885"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.1947"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "|\\hat a_{12}|"
+        },
+        {
+          "k": "t",
+          "v": "-free mutation fails on every window); "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the T169-TH7 det-collapse in closed form, "
+        },
+        {
+          "k": "m",
+          "v": "R(K7)=2\\sqrt{\\hat a_{11}\\hat a_{22}}\\det\\hat A/[(\\hat a_{11}+\\hat a_{22})\n(\\sqrt{\\hat a_{11}\\hat a_{22}}+\\hat a_{12})]"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "8.7\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": ") — the loop T167 scalar "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " T168 factor "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " T169 candidate closes as an identity, with the usable bound "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_2\\le2\\det\\hat A/(\\hat a_{11}+\\hat a_{22})"
+        },
+        {
+          "k": "t",
+          "v": " tight to "
+        },
+        {
+          "k": "m",
+          "v": "<2"
+        },
+        {
+          "k": "t",
+          "v": " exactly; "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the exact bilinear von Mangoldt form (T170 TH1–TH3) — "
+        },
+        {
+          "k": "m",
+          "v": "\\hat A=B-S"
+        },
+        {
+          "k": "t",
+          "v": " against the direct block ("
+        },
+        {
+          "k": "m",
+          "v": "1.7\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "), the polarisation "
+        },
+        {
+          "k": "m",
+          "v": "\\det\\hat A=\\det B-D(B,S)+\\det S"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.0\\times10^{-10}"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "\\det S=\\sum_{n,m}\\Lambda(n)\\Lambda(m)K(n,m)/\\sqrt{nm}"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "K=\\tfrac12D(X_n,X_m)"
+        },
+        {
+          "k": "t",
+          "v": " through the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "explicit"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " kernel matrix ("
+        },
+        {
+          "k": "m",
+          "v": "7.5\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "; Cauchy–Binet 1812/1815), the wedge reading to the measured rank-one defect "
+        },
+        {
+          "k": "m",
+          "v": "4.6\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.1\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " (honest CERT); "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the rank-3 theorem (T170-TH4: polarisation matrix eigenvalues "
+        },
+        {
+          "k": "m",
+          "v": "\\{-2,-1,+1\\}"
+        },
+        {
+          "k": "t",
+          "v": " exactly, "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_4/\\sigma_1\\le1.6\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ", nonzero spectrum "
+        },
+        {
+          "k": "m",
+          "v": "=\\operatorname{spec}(M\\,\nP^{\\mathsf T}P)"
+        },
+        {
+          "k": "t",
+          "v": " — the bilinear form "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the rank-3 polynomial "
+        },
+        {
+          "k": "m",
+          "v": "S_{11}S_{22}-S_{12}^2"
+        },
+        {
+          "k": "t",
+          "v": " in three linear "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "-sums) and the Type II collapse (T170-TH5: Vaughan's identity coefficient-exact for every "
+        },
+        {
+          "k": "m",
+          "v": "U=V\\in\\{3,4,5,6\\}"
+        },
+        {
+          "k": "t",
+          "v": ", Type II kernel "
+        },
+        {
+          "k": "m",
+          "v": "99.9\\%"
+        },
+        {
+          "k": "t",
+          "v": "-energy rank "
+        },
+        {
+          "k": "m",
+          "v": "[2,2,2,2]"
+        },
+        {
+          "k": "t",
+          "v": " against generic "
+        },
+        {
+          "k": "m",
+          "v": "[20,15,11,9]"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "(6)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the R4-free chain identity "
+        },
+        {
+          "k": "m",
+          "v": "1-r_{12}^2=\\det\\hat A/(\\hat a_{11}\\hat a_{22})"
+        },
+        {
+          "k": "t",
+          "v": " (T170-TH6 — the Weil fence never approached), the "
+        },
+        {
+          "k": "m",
+          "v": "L_P"
+        },
+        {
+          "k": "t",
+          "v": " no-go ("
+        },
+        {
+          "k": "m",
+          "v": "\\hat a_{12}=1.1\\times10^{-17}"
+        },
+        {
+          "k": "t",
+          "v": " identically, no decay) and the scramble discriminator (rank-3 "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "untouched"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "60"
+        },
+        {
+          "k": "t",
+          "v": " draws while the value of "
+        },
+        {
+          "k": "m",
+          "v": "1-r_{12}^2"
+        },
+        {
+          "k": "t",
+          "v": " moves by a median factor "
+        },
+        {
+          "k": "m",
+          "v": "834.8"
+        },
+        {
+          "k": "t",
+          "v": ": the arithmetic sits in the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "joint values"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "(S_{11},S_{22},S_{12})"
+        },
+        {
+          "k": "t",
+          "v": " against "
+        },
+        {
+          "k": "m",
+          "v": "B"
+        },
+        {
+          "k": "t",
+          "v": ") as must-breaks; every statement with a mutation control; the one open object R1 (the collinearity/near-degeneracy rate) explicitly typed OPEN; NO RH statement. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.BILINEAR.RANK.01"
+        },
+        {
+          "k": "t",
+          "v": "; registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": "; suite counter "
+        },
+        {
+          "k": "m",
+          "v": "551\\to552"
+        },
+        {
+          "k": "t",
+          "v": " scripts."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T170 ("
+            },
+            {
+              "k": "c",
+              "v": "bilinear_sieve_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "BILINEAR.SIEVE"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "40/40"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "1.8"
+            },
+            {
+              "k": "t",
+              "v": " s, "
+            },
+            {
+              "k": "m",
+              "v": "70"
+            },
+            {
+              "k": "t",
+              "v": " frame-A windows "
+            },
+            {
+              "k": "m",
+              "v": "h=142"
+            },
+            {
+              "k": "t",
+              "v": "–"
+            },
+            {
+              "k": "m",
+              "v": "1445"
+            },
+            {
+              "k": "t",
+              "v": " on the T163–T169 union recipe, "
+            },
+            {
+              "k": "m",
+              "v": "67"
+            },
+            {
+              "k": "t",
+              "v": " arithmetically complete; verdict SIEVE-RESISTS, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " T169's standard shape cashed in: the bilinear form is written down "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "\\hat A=B-S"
+        },
+        {
+          "k": "t",
+          "v": " (TH1, "
+        },
+        {
+          "k": "m",
+          "v": "3.5\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\det\\hat A=\\det B-D(B,S)+\\det S"
+        },
+        {
+          "k": "t",
+          "v": " (TH2, "
+        },
+        {
+          "k": "m",
+          "v": "1.3\\times10^{-10}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\det S"
+        },
+        {
+          "k": "t",
+          "v": " a genuine double von Mangoldt sum against the closed wedge kernel "
+        },
+        {
+          "k": "m",
+          "v": "K=\\tfrac12D(X_n,X_m)"
+        },
+        {
+          "k": "t",
+          "v": " (TH3, "
+        },
+        {
+          "k": "m",
+          "v": "1.5\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": ") — and on the reference window ("
+        },
+        {
+          "k": "m",
+          "v": "h=540"
+        },
+        {
+          "k": "t",
+          "v": ") the three pieces read "
+        },
+        {
+          "k": "m",
+          "v": "6.18"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "-198.8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "192.6"
+        },
+        {
+          "k": "t",
+          "v": " and sum to "
+        },
+        {
+          "k": "m",
+          "v": "4.22\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ": a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "five-order cancellation"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " between three "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}200"
+        },
+        {
+          "k": "t",
+          "v": "-sized pieces, with absolute target "
+        },
+        {
+          "k": "m",
+          "v": "1.10\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": ". The route table (target "
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\ge3.0"
+        },
+        {
+          "k": "t",
+          "v": "): truth "
+        },
+        {
+          "k": "m",
+          "v": "+2.747"
+        },
+        {
+          "k": "t",
+          "v": " MEASURED; Cauchy–Schwarz "
+        },
+        {
+          "k": "m",
+          "v": "-0.000"
+        },
+        {
+          "k": "t",
+          "v": "; large sieve/duality "
+        },
+        {
+          "k": "m",
+          "v": "+0.669"
+        },
+        {
+          "k": "t",
+          "v": "; Montgomery–Vaughan 1973 "
+        },
+        {
+          "k": "m",
+          "v": "-0.384"
+        },
+        {
+          "k": "t",
+          "v": "; the exact split "
+        },
+        {
+          "k": "m",
+          "v": "+0.996"
+        },
+        {
+          "k": "t",
+          "v": " (best); Vaughan Type I+II "
+        },
+        {
+          "k": "m",
+          "v": "+0.669"
+        },
+        {
+          "k": "t",
+          "v": " — all THEOREM. The collapse is structural, by two theorems: the "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "rank-3 theorem"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (TH4: "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": " is the polarisation of "
+        },
+        {
+          "k": "m",
+          "v": "\\det"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "2\\times2"
+        },
+        {
+          "k": "t",
+          "v": " symmetric matrices, rank "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": ", signature "
+        },
+        {
+          "k": "m",
+          "v": "(1,2)"
+        },
+        {
+          "k": "t",
+          "v": ", so "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{rank}K\\le3"
+        },
+        {
+          "k": "t",
+          "v": " for every "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_4/\\sigma_1=2.0\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": ", effective rank "
+        },
+        {
+          "k": "m",
+          "v": "1.38"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.71"
+        },
+        {
+          "k": "t",
+          "v": " against "
+        },
+        {
+          "k": "m",
+          "v": "N\\sim10^3"
+        },
+        {
+          "k": "t",
+          "v": ": the form "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "S_{11}S_{22}-S_{12}^2"
+        },
+        {
+          "k": "t",
+          "v": " in three linear "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "-sums) and the "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Type II collapse"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (TH5: the closed weights see "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": " only through "
+        },
+        {
+          "k": "m",
+          "v": "\\log n"
+        },
+        {
+          "k": "t",
+          "v": ", so Vaughan Type II blocks have effective rank "
+        },
+        {
+          "k": "m",
+          "v": "O(1)"
+        },
+        {
+          "k": "t",
+          "v": " for every "
+        },
+        {
+          "k": "m",
+          "v": "U,V"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " singular values carry "
+        },
+        {
+          "k": "m",
+          "v": "99.9\\%"
+        },
+        {
+          "k": "t",
+          "v": " against "
+        },
+        {
+          "k": "m",
+          "v": "153"
+        },
+        {
+          "k": "t",
+          "v": " generic, "
+        },
+        {
+          "k": "m",
+          "v": "U=12"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "70"
+        },
+        {
+          "k": "t",
+          "v": " scanned). Honest T161 comparison: GAINED — "
+        },
+        {
+          "k": "m",
+          "v": "32"
+        },
+        {
+          "k": "t",
+          "v": " frequencies reduce to THREE linear functionals, by theorem; NOT GAINED — the precision, which binds ("
+        },
+        {
+          "k": "m",
+          "v": "5.3\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": " per sum at "
+        },
+        {
+          "k": "m",
+          "v": "h=285"
+        },
+        {
+          "k": "t",
+          "v": ", sharpening "
+        },
+        {
+          "k": "m",
+          "v": "h^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ", the RH yardstick "
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{3}"
+        },
+        {
+          "k": "t",
+          "v": " too coarse; "
+        },
+        {
+          "k": "m",
+          "v": "\\ell^1"
+        },
+        {
+          "k": "t",
+          "v": " mass "
+        },
+        {
+          "k": "m",
+          "v": "41\\times"
+        },
+        {
+          "k": "t",
+          "v": " over the signed value). The chain becomes R4-free for free (TH6: "
+        },
+        {
+          "k": "m",
+          "v": "1-r_{12}^2=\\det\\hat A/(\\hat a_{11}\\hat a_{22})"
+        },
+        {
+          "k": "t",
+          "v": " an identity, sharper than T169-TH9 at "
+        },
+        {
+          "k": "m",
+          "v": "-2.747"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "-2.771"
+        },
+        {
+          "k": "t",
+          "v": "; the Weil fence never approached); end to end the best unconditional bound carries "
+        },
+        {
+          "k": "m",
+          "v": "h^{-0.996}"
+        },
+        {
+          "k": "t",
+          "v": " against the required "
+        },
+        {
+          "k": "m",
+          "v": "\\le h^{-2.50}"
+        },
+        {
+          "k": "t",
+          "v": " — missing by "
+        },
+        {
+          "k": "m",
+          "v": "1.50"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "in the exponent"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and the shortfall is a theorem. Stress: the scramble leaves rank-3 and the unconditional bounds unchanged while the truth moves "
+        },
+        {
+          "k": "m",
+          "v": "2.76"
+        },
+        {
+          "k": "t",
+          "v": " in the exponent — "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "the arithmetic sits entirely in the joint values of "
+            },
+            {
+              "k": "m",
+              "v": "(S_{11},S_{22},S_{12})"
+            },
+            {
+              "k": "t",
+              "v": " against "
+            },
+            {
+              "k": "m",
+              "v": "B"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; flat-weight breaks; "
+        },
+        {
+          "k": "m",
+          "v": "L_P"
+        },
+        {
+          "k": "t",
+          "v": " exact; the "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": "-decoupling is reported unsmoothed (frames "
+        },
+        {
+          "k": "m",
+          "v": "\\nu=5/8/11"
+        },
+        {
+          "k": "t",
+          "v": " fall at "
+        },
+        {
+          "k": "m",
+          "v": "-1.70/-1.27/-1.74"
+        },
+        {
+          "k": "t",
+          "v": " — T169's "
+        },
+        {
+          "k": "m",
+          "v": "h^{-2.95}"
+        },
+        {
+          "k": "t",
+          "v": " is frame-A, the shortfall is not). Balance "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " THEOREM / "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " CERT-UNIF / "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " NO-GO. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "R1 finally classified"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\det\\hat A/(|\\mathrm{row}_1||\\mathrm{row}_2|)"
+        },
+        {
+          "k": "t",
+          "v": " is the sine of the angle between the two rows of "
+        },
+        {
+          "k": "m",
+          "v": "\\hat A"
+        },
+        {
+          "k": "t",
+          "v": ", falling "
+        },
+        {
+          "k": "m",
+          "v": "h^{-2.711}"
+        },
+        {
+          "k": "t",
+          "v": " — R1 asks for an unconditional certificate that two explicit finite "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "-sum vectors become collinear at rate "
+        },
+        {
+          "k": "m",
+          "v": "h^{-3}"
+        },
+        {
+          "k": "t",
+          "v": ": a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "near-degeneracy"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not a size, beyond any size-bounding tool; needs beyond-RH "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "joint"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " precision. R2/R3 booked in T169; R4 off the path. T171 ("
+        },
+        {
+          "k": "c",
+          "v": "final_map_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", contract "
+        },
+        {
+          "k": "c",
+          "v": "FINAL.MAP"
+        },
+        {
+          "k": "t",
+          "v": ") is running — the capstone map of the whole phase."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Docs + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " gains the T170 subsection (the exact bilinear decomposition as a display, the rank-3 theorem and the Type II collapse as key results, the route table with its "
+        },
+        {
+          "k": "m",
+          "v": "\\delta"
+        },
+        {
+          "k": "t",
+          "v": " numbers, the five-order cancellation, the final R1 classification as a row-angle near-degeneracy, the honest T161 comparison, the “After T170” keybox with R1-final and T171 running) and the "
+        },
+        {
+          "k": "c",
+          "v": "v558"
+        },
+        {
+          "k": "t",
+          "v": " subsection in the verified layer (now "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "twenty-four"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " modules); the phase-2 section title moves to T126–T170, the probe index gains the T170 row and the running totals move to "
+        },
+        {
+          "k": "m",
+          "v": "170"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4514"
+        },
+        {
+          "k": "t",
+          "v": " checks; companion "
+        },
+        {
+          "k": "c",
+          "v": "v558"
+        },
+        {
+          "k": "t",
+          "v": " blocks in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " gains the entry (series (CLXXXI)); website: "
+        },
+        {
+          "k": "c",
+          "v": "primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " feed entries T170 + v558 promotion, status surfaces Teile 11–170 / "
+        },
+        {
+          "k": "m",
+          "v": "4514"
+        },
+        {
+          "k": "t",
+          "v": " checks / "
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": " modules "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v558"
+        },
+        {
+          "k": "t",
+          "v": ", T171 running. Firewall unchanged: sandbox, no RH evidence, no zero data; every number typed THEOREM/CERT-UNIF/CERT-WINDOW/MEASURED/FIT."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · XV",
     "heading": [
       {

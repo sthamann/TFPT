@@ -3621,6 +3621,106 @@ AST-checked; no marker moves.
 Machine-checked: \veri{v557\_cascade\_vector\_identities.py}.
 \mE\ (per-instance identities and certified inequalities)
 
+\par\smallskip\noindent\textbf{The bilinear/rank identities
+(\texttt{PRIME.BILINEAR.RANK.01}).}
+The closed theorem cores of T168 (contract \texttt{LAGRANGE.MINORS}),
+T169 (contract \texttt{TSTAR.RATIO}) and T170 (contract
+\texttt{BILINEAR.SIEVE}) as one deliberately narrow module ($27$ checks,
+${\sim}0.2$\,s), recomputed on the declared small frame-A surface ($12$
+deepest in-cap zones, $m=96\ldots291\le300$; $\kappa=0.038821$ verified
+at every jump point of $\psi(x)/x$ on the table) --- the \emph{exact
+shape of the one remaining scalar}, and it does not close that scalar.
+\emph{(1)} The Lagrange/Wronskian anatomy (T168): the lag-sum identity
+$\hat a_{ij}=t_i^{\mathsf T}A_ht_j=\sum_d c_dW^{ij}_d$ with the closed
+correlation weights ($1.6\times10^{-15}$; the $1/\sqrt{\mu}$ factors
+cancel, T169-TH3), Euclidean orthogonality $t_1\cdot t_2=0$
+($4.4\times10^{-16}$) --- the near-parallelism is created \emph{entirely}
+by the arithmetic metric --- the Wronskian telescope
+$(\mu_1-\mu_2)u_rv_r=W_{r-1}-W_r$ with $W_{-1}=W_{h-1}=0$
+($1.9\times10^{-17}$) and the maximal-minor identity
+$\tfrac12\sum M^2=1/(\mu_1\mu_2)$ exactly ($4.6\times10^{-16}$; Lagrange
+1773); mutation: the wrong eigenvalue pair misses by $1.66$--$1.67$
+relative (the closed miss $(\mu_2-\mu_3)/(\mu_1-\mu_2)\to5/3$).
+\emph{(2)} The exponent account and the Gershgorin certificate
+(T168/T169): $1-r_{12}^2=\nu_1\nu_2/(\hat a_{11}\hat a_{22})$
+identically ($2.5\times10^{-13}$; measured
+$1-r_{12}^2=2.8\times10^{-4}$--$5.9\times10^{-3}$ on this surface, the
+$h$-trend a sandbox fit); $\nu_1\le\max(\hat a_{11},\hat a_{22})+
+|\hat a_{12}|$ (Gershgorin 1931, unconditional, closed in the three
+entries) on $12/12$ with loss $1.1885$--$1.1947$; mutation: dropping
+$|\hat a_{12}|$ fails on every window ($\nu_1-\max$ diag
+$=0.30$--$1.17>0$).
+\emph{(3)} The det-collapse theorem (T169-TH7): on the Rayleigh family
+$u(t)=(t,-1)$ the candidate $K7=\sqrt{\hat a_{22}/\hat a_{11}}$
+collapses in closed form,
+$R(K7)=2\sqrt{\hat a_{11}\hat a_{22}}\,\det\hat A/[(\hat a_{11}+
+\hat a_{22})(\sqrt{\hat a_{11}\hat a_{22}}+\hat a_{12})]$
+($8.7\times10^{-13}$) --- it meets the threshold precisely because it
+reintroduces $\det\hat A$: the loop T167 scalar $\to$ T168 factor $\to$
+T169 candidate closes as an identity; usable form
+$\nu_2\le2\det\hat A/(\hat a_{11}+\hat a_{22})=2\nu_1\nu_2/(\nu_1+\nu_2)$,
+tight to $1.9980$--$1.9999<2$ exactly (Rayleigh 1877); mutation: the
+closed constant $1/\sqrt2$ overshoots $\nu_2$ by
+$17.1$--$2.3\times10^{2}$.
+\emph{(4)} The exact bilinear von Mangoldt form (T170 TH1--TH3): the
+exact split $\hat A=B-S$ with $S_{ij}=\sum_{n\le X}(\Lambda(n)/\sqrt n)
+X_n[ij]$ against the direct block ($1.7\times10^{-14}$); the
+polarisation $\det\hat A=\det B-D(B,S)+\det S$ ($1.0\times10^{-10}$);
+the double sum $\det S=\sum_{n,m\le X}\Lambda(n)\Lambda(m)K(n,m)/
+\sqrt{nm}$ with $K=\tfrac12D(X_n,X_m)$ through the \emph{explicit}
+kernel matrix ($7.5\times10^{-16}$; Cauchy--Binet 1812--1815); the
+wedge reading to the measured rank-one defect
+$4.6\times10^{-3}$--$3.1\times10^{-2}$ (honest certificate); mutation:
+the wrong cross-coefficient breaks by $64$--$430$.
+\emph{(5)} The rank-3 theorem and the Type II collapse (T170 TH4--TH5):
+the polarisation matrix on $(X_{11},X_{22},X_{12})$ has eigenvalues
+$\{-2,-1,+1\}$ exactly --- rank $3$, signature $(1,2)$ --- so the kernel
+$K=PMP^{\mathsf T}$ has $\sigma_4/\sigma_1\le1.6\times10^{-16}$ with
+nonzero spectrum $=\operatorname{spec}(M\,P^{\mathsf T}P)$
+($1.0\times10^{-15}$): the bilinear form \emph{is} the rank-3 polynomial
+$S_{11}S_{22}-S_{12}^2$ in three linear $\Lambda$-sums; Vaughan's
+identity coefficient-exact for every $U=V\in\{3,4,5,6\}$ (residual
+$0.0$; Vaughan 1977), Type II kernel $99.9\%$-energy rank $[2,2,2,2]$
+against generic $[20,15,11,9]$ ($4.5\times$--$10\times$;
+Montgomery--Vaughan 1973 cited as the priced route).
+\emph{(6)} The R4-free chain and the two discriminators (T170-TH6):
+$1-r_{12}^2=\det\hat A/(\hat a_{11}\hat a_{22})$ is an identity ($0.0$)
+--- no positivity of $A_h$, the Weil fence never approached; the $L_P$
+no-go: $\hat a_{12}=1.1\times10^{-17}$ identically, no decay; the
+scramble discriminator: rank-3 \emph{untouched} on all $60$ draws while
+the value of $1-r_{12}^2$ moves by a median factor $834.8$ (range
+$69$--$1.8\times10^{4}$) --- the arithmetic sits entirely in the joint
+values of $(S_{11},S_{22},S_{12})$ against $B$. Stress: exact
+Dirichlet/parity controls ($1.2\times10^{-14}$ / $1.4\times10^{-14}$ /
+zero tolerance).
+\textbf{Named limits as load-bearing content:} per instance on small
+windows --- a finite list with an explicit maximum; nothing uniform in
+the zone index or in $D$; the T168--T170 $h$-exponents
+($1-r_{12}^2\sim h^{-2.92}$ on the deep frame-A surface, the
+route-table deltas --- large sieve $+0.669$, MV $-0.384$, exact split
+$+0.996$, Vaughan $+0.669$ against the measured truth $2.747$ --- the
+five-order cancellation and the $h^{-2.711}$ row-angle trend) and the
+measured anatomy stay in the diary and the paper; finite
+$\Lambda$-sums are allowed and used, \emph{no} RH statement is made
+($\tfrac12$ appears in exactly one role: as the strength of a classical
+statement a required depth is compared against); \textbf{the one open
+object after T170 stays open, typed open}: R1, now finally
+\emph{classified} but not closed --- an $m$-free unconditional
+certificate that the two rows of $\hat A$ become collinear at rate
+$h^{-3+\varepsilon}$, equally a joint near-degeneracy of the three
+explicit linear $\Lambda$-sums $(S_{11},S_{22},S_{12})$ against the
+archimedean block --- a rate statement the module neither makes nor
+approaches; the T168/T169/T170 verdicts (\textsc{minors-resist} /
+\textsc{ratio-resists} / \textsc{sieve-resists}) are sandbox verdicts.
+Fences: Lagrange 1773 / Cauchy--Binet 1812--1815 / Gershgorin 1931 /
+Rayleigh 1877--Courant--Fischer 1920 / Montgomery--Vaughan
+1973--Vaughan 1977 (the priced route) / KMS 1953 / Chebyshev
+1852--Rosser--Schoenfeld 1962 (verified on the table) / Dirichlet 1829
+named classical; Weil 1952 / Bombieri 2000 cited, never used as a
+criterion; zero-firewall AST-checked; no marker moves.
+Machine-checked: \veri{v558\_bilinear\_rank\_identities.py}.
+\mE\ (per-instance identities and certified inequalities)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel
