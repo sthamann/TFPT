@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4124/4124 sandbox checks —
+        (“the full proof”, T126+) is now open with 4170/4170 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -329,9 +329,22 @@ export function HonestyBanner() {
         0.82–1.16 comfortably above the 0.25 target, but the atom block
         obeys no sign law, so the second term stays open; the theorem
         count jumps from 6 to 13, and the theorem cores of T158+T159 are
-        load-bearing as v553. T160 (pairing_probe.py) is running —
-        attacking the one remaining pairing inequality via correlation
-        structure. What remains
+        load-bearing as v553. T160 (PAIRING-RESISTS) then attacked the
+        pairing through its correlation structure, and the watershed of
+        phase 2 arrived: a machine-checked sampling identity shows the
+        last term&apos;s atom half IS a Λ-weighted prime sum at 32
+        explicit frequencies — needed to relative depth h⁻², measured to
+        cancel only to 0.00–0.37 of the trivial bound — while three
+        closed sign-definite moment laws evaluate the geometric half
+        down to the double-precision floor (a second declared numerical
+        horizon): the h² cancellation is the intrinsic arithmetic
+        hardness of the problem, not an assembly artefact; the
+        total-variation bound became a genuine theorem (four digits),
+        and ρ &gt; 1 on every destructive direction, flat, is the sole
+        surviving R1″ fact. T161 (classical_closure_probe.py) is
+        running — the circularity triage: do unconditional classical
+        bounds suffice at those 32 frequencies, or does the required
+        cancellation have RH strength? What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

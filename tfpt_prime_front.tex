@@ -92,7 +92,7 @@ identities, the level-lemma identities, the Green/Szeg\H{o} identities, the gaug
 identities, the odd-sector identities, the fixed-size Ritz ceiling certificate, the four
 fixed-size angle instruments and the exact-form identities. Everything beyond
 those nineteen is \emph{sandbox}: an exploratory program, run as
-$159$ preregistered probes with $4124$ machine checks, which localized the residual object. That
+$160$ preregistered probes with $4170$ machine checks, which localized the residual object. That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -261,7 +261,7 @@ quantities in the figure are literal.
 \end{gapboxnb}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
-$n=11\ldots159$). The probe file, the contract name, the verdict and the check count of every part are
+$n=11\ldots160$). The probe file, the contract name, the verdict and the check count of every part are
 listed in Appendix~\ref{app:index}. Section~\ref{sec:motivation} explains why a physics compiler meets
 the primes at all and Section~\ref{sec:bigpicture} states the framework interpretation that motivated
 the whole line --- a self-dual lattice, its functional equation, and a mirror that returns at the far
@@ -269,7 +269,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T159: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T160: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -441,7 +441,17 @@ exponents, including T158's own fixed sixteen-vector --- while the genuinely new
 win is a sign law: the archimedean bulk block is exactly a symmetric $Z$-matrix, raw, with
 a closed sign-based floor comfortably above target, and the atom block obeys no sign law;
 the theorem count jumps from six to thirteen (T159; the theorem cores of T158/T159 are
-promoted as \vref{v553}));
+promoted as \vref{v553}), and finally the pairing itself, attacked through its correlation
+structure --- and the watershed of the phase arrives: the tail sum $W^1$ does not oscillate
+at all (three sign blocks, with a closed bound from the trigonometric zero count, so the
+Leibniz block device is refuted by being \emph{worse} than the pricing it was meant to
+beat), three closed sign-definite moment laws evaluate the smooth archimedean half of the
+pairing down to the double-precision floor (a second numerical horizon, declared), and a
+machine-checked \emph{sampling identity} shows that the atom half \emph{is}, identically, a
+finite combination of $\Lambda$-weighted prime sums at thirty-two explicit frequencies,
+needed to relative depth $h^{-2}$ and measured to cancel only to $0.00$--$0.37$ of the
+trivial bound --- the $h^2$ cancellation is the intrinsic arithmetic hardness of the
+problem, not an assembly artefact (T160));
 Section~\ref{sec:status} is the status statement.
 
 % =====================================================================
@@ -611,7 +621,12 @@ question is then reorganised as a per-zone handover induction (Section~\ref{sec:
 induction is certified ingredient by ingredient until only one Loewner statement (R) on the $J$-odd half
 of a window remains; and (R) reduces first to one scalar ratio, then to two scalars, and finally ---
 with both scalars certified --- to one strict-positivity margin input
-(Section~\ref{sec:certification}). The full
+(Section~\ref{sec:certification}). The second phase continued the same conversion, and by T160 the
+chain localizes its residual hardness in a single classical object: by a machine-checked identity, the
+last open term of the pairing \emph{is} the cancellation of
+$\sum_{n\le X}\Lambda(n)\,n^{-1/2}\cos(t\log n)$ at thirty-two explicit frequencies
+(Section~\ref{sec:phase2}) --- a statement about a finite sum over prime powers, reported as a
+localization and not as progress on it. The full
 cascade, with the type of every arrow marked, is Figure~\ref{fig:cascade}; the reason it is a route and
 not a proof sketch is stated there and in Section~\ref{sec:status}.
 
@@ -3988,7 +4003,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T159)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T160)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -6956,8 +6971,176 @@ $0.31$--$0.49$). \emph{(O3)} two cheap proofs would upgrade rows: U1 from the
 Hankel half of the closed T115 kernel, U3 as a total-variation bound on the same
 integral. Permanently off the list: the fixed sixteen-vector, the single sine,
 power ans\"atze, Abel-$\ell^1$ at every rung, the checkerboard, the full-block
-M-matrix. T160 (\texttt{pairing\_probe.py}, contract \texttt{PAIRING}) is running
---- attacking the pairing through its correlation structure.
+M-matrix. T160 (\texttt{pairing\_probe.py}, contract \texttt{PAIRING}) executed
+exactly that attack --- next subsection.
+\end{keybox}
+
+\subsection{The pairing attacked through correlation: the sampling identity ---
+the last term is a prime exponential sum (T160)}
+T160 (\texttt{pairing\_probe.py}, contract \texttt{PAIRING}, $46/46$, $2.8$\,s on
+$19$ of $20$ prime-power zones $h=199\ldots1256$ ($187$--$19593$ atoms per window;
+the R1$''$ sub-surface on $8$ windows $h=199\ldots534$; one window dropped at the
+declared T159 horizon $\mathrm{cond}(B_{LL})>10^{12}$, first at $h=1292$ --- not
+fitted through), verdict \textsc{pairing-resists}, the gates evaluated from the
+numbers: arch half inside the bar \textsc{true} (slack $1.95\times10^{-8}$ of the
+$O(1)$ total); arch half non-growing at a fixed witness \textsc{false} ($0$ of
+$120$ fixed pairs --- but floor-limited, see below); atom half inside the bar
+\textsc{false} (best device $4.78\times10^{6}$); third R1$''$ device positive
+\textsc{false} (floor $-7.93$) --- terms $=2$) attacks the one pairing
+$\sum_{d\ge1}(\Delta c)_d\,W^1_d$ through its correlation structure. Two terms
+remain open --- the same \emph{count} as T159, and that is the honest headline ---
+but both are now \emph{located}, and one of them is no longer an algebra problem.
+
+\emph{No oscillation: the sign-block count is closed, and the block device is
+refuted by its own numbers.} $W^1$ has $J=3$ sign blocks on every window, flat
+($h^{+0.000}$), with a \emph{closed} bound $J\le4(2\cdot16)+2=130$ from the
+trigonometric zero count ($w_d$ is a piecewise trigonometric polynomial of degree
+$\le32$; F\'ejer 1915): $W^1$ is one smooth \emph{three-lobe profile} with
+quasi-period $0.332$--$0.333$ of the window, not an oscillation. The prefix ratio
+$\sup|\Psi|/\sup|W^1|=83.5$--$569.8$ grows as $h^{+1.022}$ --- the quantitative
+reason iterated Abel loses: each further summation by parts trades a factor $h$
+of tail size for a factor $h$ of difference smallness, neutral in the exponent
+and strictly worse in the constant. Consequently the Leibniz block device the
+contract asked for is refuted \emph{quantitatively}: block-H\"older overshoots as
+$h^{+4.115}$ and block-Abel as $h^{+4.131}$ --- $5.2$--$16.5$ times \emph{worse}
+than the already-refuted $\ell^1\times\sup$ pricing at $h^{+3.595}$, because with
+three blocks the block masses are of prefix size. The head peel is refuted too:
+no proper split clears the bar on any window ($K^*=M$ on $19/19$), and the best
+improper one ($K/M=0.97$) still overshoots the true pairing $Q=1.7527$--$6.0895$
+by $60.3$--$4.80\times10^{3}$, growing as $h^{+2.428}$ --- the $h^2$ cancellation
+itself, essentially undiminished.
+
+\emph{The moment laws, and the second numerical horizon.} What carries on the
+smooth half are three \emph{closed sign-definite moment laws}, new theorems,
+machine-checked: $m_0=\sum_d w_d=0$ (the T159 gauge identity), $m_1=\sum_d
+d\,w_d=-[S_0^2+2\sum_jP_j^2]\le0$ (the $\max(r,s)$ identity: minus a sum of
+squares; $7.1\times10^{-16}$), and $m_2=\sum_d d^2w_d=-[2S_1-(M-1)S_0]^2\le0$ (a
+\emph{perfect square}; $3.0\times10^{-16}$), with closure of $m_p$ in the moments
+of $y$ for every even $p$ (verified at $p=2,4$): the pairing cannot see the lag
+mass, and it sees a linear or quadratic trend only with a sign known in advance.
+Against a \emph{fixed} polynomial witness (fraction $0.2$ of the lags, degree
+$48$, the same pair on every window --- a device, not a fit) the smooth
+archimedean half of the pairing is \emph{reproduced} to $0$--$2.44\times10^{-15}$
+relative, worst slack $1.95\times10^{-8}$ of the $O(1)$ total on all $19$
+windows. And a \textbf{second numerical horizon is declared} rather than hidden:
+the measured residual is $4.12$--$428$ times the double-precision floor
+$\varepsilon\,\sup|c^{\mathrm{arch}}|\,\|w\|_1$, so the surface reports the
+arithmetic floor of the measurement and \emph{not} the witness error --- the arch
+half is honestly reported as \emph{neither established nor refuted} on any
+double-precision surface; only a symbolic Chebyshev bound on the T115 kernel
+could decide it (rest item R-A below). Atom sparsity is refuted in one number:
+the support is \emph{not} sparse --- it fills $0.3226$--$0.6377$ of the lag range,
+because the prime-power gaps $\log(1+1/n)$ fall below the grid spacing $D$ as
+soon as $n>1/D$; even the support-localised $\ell^1$ (exact position \emph{and}
+exact local value of every atom, absolute values taken) misses by
+$4.78\times10^{6}$--$2.64\times10^{9}$ growing as $h^{+3.505}$, while the required
+relative precision on the atom half is the cancellation depth itself,
+$|{\rm total}|/|{\rm atom}|=2.19\times10^{-6}$--$1.12\times10^{-4}\sim h^{-2}$.
+
+\emph{The core of T160: the sampling identity.} The atom half of the pairing is a
+\emph{weighted sampling} of the closed weight vector at the prime-power
+positions --- a theorem, machine-checked to $1.0\times10^{-16}$--$2.9\times
+10^{-15}$ of the absolute scale on every window:
+\[
+\sum_d c^{\mathrm{atom}}_d\,w_d
+\;=\;-\frac12\sum_{n\le X}\frac{2\Lambda(n)}{\sqrt n}\;\widehat w(\log n)
+\quad(\text{plus one reflected term below the grid}),
+\]
+with $\widehat w$ the linear interpolant of the closed weight vector --- and by
+T159's Dirichlet-kernel form, $\widehat w(u)$ is a \emph{fixed} trigonometric
+polynomial with frequencies $\pi(k\pm l)/\alpha+O(1/h)$, $k,l\le16$. So
+\textbf{the atom half of R2$''$ is, identically, a finite combination of sums
+$\sum_{n\le X}\Lambda(n)\,n^{-1/2}\cos(t\log n)$ at thirty-two explicit
+frequencies $t$} --- needed to relative depth $2.19\times10^{-6}$--$1.12\times
+10^{-4}=h^{-2}$, and measured to cancel only to $0.0000$--$0.3659$ of the trivial
+mass bound. The consequence, stated with the fence in place: \emph{the $h^2$
+cancellation is the intrinsic arithmetic hardness of the problem}, not an
+artefact of the T115 assembly --- the geometric half is now evaluated down to the
+arithmetic floor, so nothing geometric is left to trade against the prime sum.
+$\sum_n\Lambda(n)\,n^{-1/2-it}$ is the \emph{shape} of a partial sum of a
+Dirichlet series on the line $\operatorname{Re}s=\tfrac12$; that is reported as a
+\emph{diagnosis} of where the $h^2$ lives, never as an input: the sums are
+assembled from the finite von-Mangoldt table and nothing else, no zero of any
+$L$-function is read, generated or approximated, no equivalence is claimed, and
+Weil 1952 / Bombieri 2000 remains an address.
+
+\emph{The third R1$''$ device: $\rho>1$, flat --- and its inequality form is
+refuted.} On the sub-surface ($8$ windows, $\lambda_{\min}(B_{HH})=0.0748$--$0.2023$;
+the Z-matrix and its Collatz--Wielandt floor $0.8811$--$1.0988$ reproduced
+exactly): the rank/support route is refuted --- the effective negative rank of the
+atom block is $0.455$--$0.634$ of the block dimension, so no fixed-size corner can
+contain it; the corner device is refuted --- it prices the coupling by
+$\|M_{12}\|_2=1.554$--$71.447$ and is T158's refuted norm route in disguise. The
+surviving fact: $\rho=\min_{0\ne v\in V_-}(v^{\mathsf T}B^{\mathrm{arch}}_{HH}v)/
+(-v^{\mathsf T}B^{\mathrm{atom}}_{HH}v)=\mathbf{1.0036}$--$\mathbf{1.0140}>1$ on
+\emph{every} window, flat ($h^{-0.011}$) --- the archimedean block dominates the
+atom block on every destructive direction, an \emph{angle} statement no norm can
+see, and the first R1$''$ fact that is neither a norm nor a sign nor a rank
+(\textsc{measured}: a generalised eigenvalue of two size-$h$ blocks). Its
+inequality form $B_{HH}\succeq B^{\mathrm{arch}}_{HH}-(1/\rho)\,P_-
+B^{\mathrm{arch}}_{HH}P_-$ is a theorem given $\rho$, with no arithmetic on the
+right --- and as a device it is refuted: floor $-7.9261\ldots-1.0919<0$ on $8/8$,
+because the margin $(1-1/\rho)\lambda_{\min}=3.76\times10^{-3}$--$1.24\times
+10^{-2}$ loses to the archimedean cross-coupling $2.808$--$18.15$ between $V_-$
+and its complement by a factor $10^{4}$. Any future device must use $\rho$
+\emph{together with} the geometry of $V_-$ inside $B^{\mathrm{arch}}_{HH}$ ---
+pricing that geometry by a norm is exactly what fails.
+
+\emph{Two cheap theorems, the reassembly, the stress.} \textbf{U3 is upgraded
+\textsc{cert-unif}${}\to{}$theorem}: $c^{\mathrm{arch}}$ is nonpositive and
+monotone increasing on $d\ge1$ (both hypotheses machine-checked; fraction
+$1.0000$ of $25458$ pairs), so the total variation equals the total rise and
+$\|\Delta c^{\mathrm{arch}}\|_1\le|c^{\mathrm{arch}}_0|+2\sup_{d\ge1}
+|c^{\mathrm{arch}}_d|<6$ --- measured $3.9101$--$5.4153$ against the closed bound
+$3.9105$--$5.4153$: \emph{four digits}, the constant closed and
+window-independent. U1 is \emph{partially} upgraded, and the honest statement is
+the interesting one: $K_{kl}(0)=0$ and $\sum_dK_{kl}(d)=0$ exactly, so
+$R_{kl}(0)=R_{kl}(1)=0$ and the Abel step has no boundary term --- the Z-law of
+$B^{\mathrm{arch}}_{HH}$ is \emph{equivalent} to one \emph{prime-free}
+trigonometric inequality $\sum_{d\ge2}(\Delta c^{\mathrm{arch}})_d\,R_{kl}(d)
+\le0$ (the weight nonnegative by U3); it holds on every sampled pair, but the
+pointwise strengthening $R_{kl}(d)\le0$ is refuted (it holds at only $0.4848$ of
+the lags): the monotone weight is essential, and the statement is \emph{not} yet
+a theorem and not reported as one. End to end, the number is the verdict: the
+composite chain (arch half by the fixed witness, atom half by the
+support-localised $\ell^1$) recovers $3.79\times10^{-10}$--$2.10\times10^{-7}$ of
+the exact per-window value --- \emph{if the atom half were evaluated as exactly as
+the arch half now is, the same chain would recover $1.0000$}: the whole deficit
+of R2$''$ is carried by one term, of size $4.77\times10^{6}$--$2.64\times10^{9}$.
+T159's certified per-window band $0.287$--$1.0$ is unchanged --- T160 moves the
+obstruction, it does not sharpen the number. The identities roll up worst-case at
+$2.95\times10^{-12}$; the T145 no-go breaks on $\mathbf{6/6}$ axes including the
+two new ones (A5 the gauge/moment structure --- the no-go form does not
+annihilate constants, so the Abel step has no analogue on it; A6 the
+complementarity --- $\rho$ is undefined on it); Dirichlet and parity eigenpair
+controls at $8.2\times10^{-15}$ with the $2/\sqrt N$ bound saturated. The balance
+moves $13/6/4/1\to\mathbf{14}$ \textbf{theorem} ($6$ new) $/\,4$
+certified-uniform $/\,3$ certified-per-window $/\,3$ measured, with $8$ refuted
+device families; the candidates T160-P1$\ldots$P7 (the moment laws; the sampling
+identity; the block count with its refutation; the U3 upgrade; the U1 partial
+upgrade; $\rho$; the second horizon) are all \textsc{pending} --- no promotion
+here, and \vref{v553} is untouched.
+
+\begin{keybox}[After T160: two classical rests, one arithmetic object, and the
+circularity question]
+\emph{(R-A)} one classical estimate: a symbolic Chebyshev bound for $s\mapsto
+A(s,D)$ on $[0.2\cdot2\alpha,\,2\alpha]$ (the Bernstein ellipse of the T115
+integral, whose only singularity is the $1/s$ head at the origin) --- it decides
+the \emph{arch} half of R2$''$ $m$-freely, which no double-precision surface can
+(T160-P7). \emph{(R-B)} one trigonometric inequality, prime-free:
+$\sum_{d\ge2}(\Delta c^{\mathrm{arch}})_d\,R_{kl}(d)\le0$ --- it turns the Z-law
+(T159-U1) and with it the Collatz--Wielandt floor into a theorem. \emph{(R-C)}
+the arithmetic term, and it is not an exercise: a bound on $\sum_{n\le X}
+\Lambda(n)\,n^{-1/2}\cos(t\log n)$ at the thirty-two explicit frequencies
+$t=\pi(k\pm l)/\alpha$, to relative depth $h^{-2}$ --- by the sampling identity
+(T160-P2) this \emph{is} the atom half of R2$''$, and nothing geometric is left
+to trade against it. \emph{(R-D)} a fifth device for R1$''$: $\rho$ together
+with the geometry of $V_-$, without pricing that geometry by a norm.
+\emph{(R-E)} optional: closed odd-$p$ moment functionals. T161
+(\texttt{classical\_closure\_probe.py}, contract \texttt{CLASSICAL.CLOSURE}) is
+running --- the two classical rests R-A/R-B plus the \emph{circularity triage}
+for R-C: do unconditional classical bounds suffice at those thirty-two
+frequencies, or does the required cancellation have RH strength?
 \end{keybox}
 
 % =====================================================================
@@ -7439,19 +7622,19 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T159}\label{app:index}
+\section{Probe index, diary parts T11--T160}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $149$ parts T11--T159 that the current diary file records
-($150$ runs --- T104 was a double run with two independent arms --- and $3932$ green checks); the ten
+load-bearing artefact. The index covers the $150$ parts T11--T160 that the current diary file records
+($151$ runs --- T104 was a double run with two independent arms --- and $3978$ green checks); the ten
 earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded by the
 diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks}, plus
-\vref{v535}--\vref{v553} promoted; with T126--T159, the first thirty-four parts of the second phase, the
-running totals are \textbf{$159$ probes and $4124/4124$ checks}. T160
-(\texttt{pairing\_probe.py}) is running and not yet indexed.
+\vref{v535}--\vref{v553} promoted; with T126--T160, the first thirty-five parts of the second phase, the
+running totals are \textbf{$160$ probes and $4170/4170$ checks}. T161
+(\texttt{classical\_closure\_probe.py}) is running and not yet indexed.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -7616,6 +7799,7 @@ T156 & \texttt{\scriptsize twelve\_by\_\allowbreak eight} & the two rest objects
 T157 & \texttt{\scriptsize angle\_\allowbreak floor} & the two angles attacked head-on, \textbf{and neither falls, but both change shape}: the best $p_1$ route is the RESOLVENT, $p_1\ge\hat g_1^2(1-\mathrm{tail})=0.1968$--$0.3228$ ($97.9\%$ of the measured $0.2010$--$0.3282$), splitting into a NEW THEOREM times ONE measured number --- \textbf{the sine-block confinement $\|\gamma_H\|^2\le\lambda_1/(t\mu^P_{17})\le(S/t)/\rho_{17}=0.0165$--$0.0293$} (from the certified floor $t$ and ladder $S$ alone: $e_1(A)$ is $97.1$--$98.4\%$ inside the first $16$ parity sines; with $\kappa$ instead of $S$ the bound is VACUOUS $43.5$--$38632$) times $\hat g_1^2=0.2010$--$0.3282$ (flat, ONE entry of the bottom vector of a $16\times16$ Schur null problem); three routes refuted with numbers: the classical Rayleigh angle bound EMPTY already measured ($16/16$ negative, $\lambda_2/\lambda_1=1.73$--$5.87$ nearly degenerate), its block version empty at every $J$ although $p_{\mathrm{blk}}(2)=0.9369$--$0.9993$ ($t_1$ lives in the bottom PAIR --- the T156 question answered), the angle-free Cauchy--Schwarz route loses exactly the Kantorovich $P=5.6\times10^{2}$--$1.0\times10^{6}$; \textbf{the structural gem: $1/s=(S_L)_{11}=2.3359$--$6.2049$ FLAT} --- R2$''$ is a bound on ONE diagonal entry of the $16\times16$ Schur complement the chain already forms, and the inversion-free CS ceiling is off by $5.4\times10^{2}$--$5.2\times10^{5}$ (the cancellation is nearly complete); \textbf{the Lipschitz deckel is EXECUTED}: adaptive bisection with the local constant certifies $\inf f^{\mathrm{arch}}/(4\sin^2(\theta/2))\ge t$ on $12/12$ ($0.2500$--$0.5353$, $255$--$3139$ evaluations, cost $x^{0.850}$) --- the arch half is CERT-UNIF for the first time; mechanism localised: atom extremal $\theta/\pi=0.0158$--$0.3762$ against arch $0.9901$--$0.9995$ --- OPPOSITE ends, so a proof must use the $\theta$-GROWTH of the arch ratio, not its infimum at $\pi$; the domination $B^{\mathrm{arch}}_{HH}-tI\succeq(-B^{\mathrm{atom}}_{HH})_+$ holds $12/12$ (quotient $1.0003$--$1.0907$, margin $7.3\times10^{-4}$ at $h=970$, trend shrinking --- per window, NOT uniform); substitution costs $1.00$--$1.62$; balance $9$ THEOREM, $2$ CERT-UNIF, $2$ CERT-WINDOW, $3$ MEASURED (target $1$ missed --- but all three now fixed-size in the statement); no-go breaks on FIVE axes ($p_1$ $x^{-4.818}$; $S$ $x^{2.289}$; confinement to vacuum; resolvent identically ZERO; $(S_L)_{11}$ $x^{2.268}$), floor survives; parity $4.8\times10^{-14}$, Dirichlet $2/\sqrt N$ to $7.4\times10^{-5}$; \textbf{rest: an $m$-free UPPER bound on $(S_L)_{11}$ (cancellation-seeing); an $m$-free non-shrinking R1$''$ domination (pointer: $\theta$-growth); the T156 model-domination debt}; the four instrument candidates of T155/T157 promoted as \vref{v552} & ANGLES-RESIST & 32/32\\
 T158 & \texttt{\scriptsize schur\_\allowbreak entry} & the cancellation-seeing bound attacked head-on, \textbf{and it EXISTS, as a THEOREM}: the Thomson dual form $s=(B^{-1})_{11}=\max_x(2x_1-x^{\mathsf T}Bx)$ (Maz'ya 1985) makes every trial vector a LOWER bound on $s$, hence an UPPER bound on $1/s$ --- exactly the variational structure Cauchy--Schwarz lacks (CS evaluates a MAXIMUM at one direction and missed by $3.13\times10^{3}$--$5.18\times10^{5}$; reproduced, direction intact $28/28$); the Cholesky ladder $g_K=\sum_{j\le K}y_j^2$, $y=L_K^{-1}e_1$: terms STRICTLY POSITIVE, partial sums monotone $28/28$, $1/g_1=\hat a$ = T157's route; at $K=16$ \textbf{certified $1/g_{16}=2.9670$--$7.9664$ against true $1/s=2.3359$--$6.3868$, TIGHT to $1.1323$--$1.2738$, flat ($x^{0.059\pm0.017}$)}; the Green route is the IDENTITY --- $\mathrm{span}\{t_1,A^{-1}L_Pt_1\}$ attains $s$ to $10^{-9}$ because $L_Pt_1=\mu^P_1t_1$ (KMS 1953): \textbf{the entry is TWO-dimensional} once one Green column is granted, the sine truncation pays exactly $1.13$--$1.27$; floor $L\,g_{16}=0.2143$--$0.2724$ lands in the band of T157's measured $p_1$ WITHOUT an angle; \textbf{the T157 growth pointer REFUTED}: the growth is real and sub-quadratic ($q=1.259$--$1.438$) and the binding vector does sit in the lowest dyadic band ($0.6818$--$0.9988$ of its mass --- localisation confirmed), BUT the atom negative mass grows FASTER ($\theta^{-1.546\ldots-1.744}$ vs arch $\theta^{-1.203\ldots-1.458}$), band-local domination fails in EVERY band $21/21$ (lowest-band cover $0.4161$--$0.4507$), the off-band coupling exceeds the margin by $660$--$7.71\times10^{5}$ --- what carries the inequality is the structure a dyadic argument discards; margin $3.57\times10^{-5}$--$2.86\times10^{-3}$, SHRINKING ($x^{-1.649\pm0.643}$); the T156 debt RELABELLED MEASURED $\to$ CERT-UNIF ($F(P,1/(L\,g_{16}))=0.7276$--$0.7857$ vs $d_1=0.5392$--$0.6241$, margin $1.1969$--$1.3568$ on $28/28$, both sides fixed-size); end to end survives the substitution ($0.2872$--$1.0$ of $\lambda_1(A)$, cost $1.000$--$1.724$); balance \textbf{$6$ THEOREM / $3$ CERT-UNIF / $4$ CERT-WINDOW / $1$ MEASURED} (was $5/2/3/3$ --- the measured count falls three $\to$ one, $p_1$ RETIRED); no-go breaks FIVE-FOLD ($p_1$ $x^{-4.818}$; $1/g_{16}$ $x^{2.267}$ tracks the collapse; $L\,g_{16}$ $x^{-0.275}$; tightness stays $1.001$ --- the size breaks, not the sharpness); parity $4.8\times10^{-14}$, ladder exactly constant in $K$ on $A=L_P$ ($4.0\times10^{-15}$), Dirichlet $2/\sqrt N$ to $7.4\times10^{-5}$; \textbf{rest: an $m$-free upper bound on ONE quadratic form $x^{\mathsf T}B_{LL}x=2.9670$--$7.9664$ (halves cancel to depth $h^2$ --- the explicit formula's own cancellation); the SIGN STRUCTURE of the off-band arch entries}; five candidates (P1--P5) bundled with T159, theorem cores promoted & ENTRY-RESISTS $\to$ \vref{v553} & 36/36\\
 T159 & \texttt{\scriptsize exact\_\allowbreak form} & the cancellation executed ALGEBRAICALLY --- \textbf{seven machine-checked identities} (to $10^{-12}$ against the absolute scale $\sum|c_d w_d|$; relative to the cancelled total only $10^{-12}$--$1.2\times10^{-8}$: the cancellation eats $4.0$--$8.1$ decimal digits, reported as a measurement): (P1) $x^{\mathsf T}B_{LL}x=y^{\mathsf T}Ay$, pencil gone; (P2) the EXACT LAG SUM $=\sum_d c_d w_d$, $w_d=T_d-H_d$, arithmetic and geometry separated; (P3) $w_d$ in CLOSED form ($256$-term Dirichlet kernel, $1.4\times10^{-15}$); (P4) \textbf{the GAUGE IDENTITY $\sum_d w_d=0$ EXACTLY} --- Toeplitz-minus-Hankel annihilates constant lag vectors: the form is BLIND to the lag mass, exactly where the $h^2$ halves live; (P5) $w_0=\sum x_k^2/\mu_k$ and $2w_0-w_1=\|x\|^2$; (P6) $p$-fold Abel exact to $p=5$; (P7) the TmH signature $A_{r,s}-A_{r+1,s+1}=f(r+s)$; \textbf{$m$-free NOT reached, four routes closed with exponents}: the $h^2$ does NOT telescope (both halves grow $h^{+2.104}$ $=$ the common WEIGHT); T158's fixed sixteen-vector REFUTED ($h^{+3.510}$, $\mathrm{cond}(B_{LL})\sim h^{+2.887}$, needed accuracy $h^{-3/2}$ vs optimiser drift $2.5\times10^{-2}$--$1.5\times10^{-1}$); one sine $h^{+3.066}$; ansatz family $h^{+3.001}$; Abel-$\ell^1\times\sup$ best rung $h^{+3.604}$ (misses by $5.6\times10^{6}$--$2.2\times10^{10}$, $W^1_1=-w_0$ makes $\sup|W^1|\ge h^2$ unavoidable); two $m$-free-shaped pieces NEW: $\|\Delta c^{\mathrm{arch}}\|_1=3.65$--$5.38$ flat (BV $\le6$) and the T150 budget at the atom cutoff $X=e^{2\alpha}$; \textbf{(S1) EXACT: $B^{\mathrm{arch}}_{HH}$ is a symmetric Z-MATRIX} ($100\%$ off-band nonpositive, raw, $18/18$), checkerboard refuted ($0.489$--$0.494$ $=$ coin flip); Collatz--Wielandt BITES on the arch half: \textbf{closed sign-based floor $\min_k(B^{\mathrm{arch}}_{HH}\mathbf 1)_k=0.819$--$1.165$, flat, above $t=0.25$} --- but the atom block has NO sign law ($0.31$--$0.49$) and the full-block M-matrix criterion is vacuous ($-9.32\ldots-0.61$ vs exact $0.074$--$0.197$); end to end $t=0.0705$--$0.1583$ unmoved (M1/M2 structural, not quantitative); no-go breaks $5/5$; balance $6/3/4/1\to$ \textbf{$13$ THEOREM / $6$ CERT-UNIF / $4$ CERT-WINDOW / $1$ MEASURED} (seven new theorems, three new CERT-UNIF); NUMERICAL HORIZON declared: $\mathrm{cond}(B_{LL})>10^{12}$ from $h=1292$, one window dropped, the same obstruction as its own measurement; \textbf{rest: ONE fully explicit pairing inequality} $\sum(\Delta c)_d W^1_d$ needing CORRELATION instead of sizes ($\ell^1\times\sup$ off by $h^{3.7}$, the cancellation exactly $h^2$); a third device for the atom off-band block; theorem cores promoted & FORM-RESISTS $\to$ \vref{v553} & 41/41\\
+T160 & \texttt{\scriptsize pairing} & the one pairing $\sum(\Delta c)_d W^1_d$ attacked through its CORRELATION structure, \textbf{and the watershed of the phase arrives --- the SAMPLING IDENTITY: the last term IS a prime exponential sum} ($19$ of $20$ zones $h=199$--$1256$, $1$ dropped at the declared horizon); \textbf{$W^1$ does NOT oscillate}: $J=3$ sign blocks, flat, CLOSED bound $J\le130$ (trigonometric zero count) --- one smooth three-lobe profile; \textbf{block/Leibniz device REFUTED}: block-H\"older $h^{+4.115}$, block-Abel $h^{+4.131}$ --- $5.2$--$16.5\times$ WORSE than $\ell^1\times\sup$ at $h^{+3.595}$; head peel refuted ($K^*=M$ on $19/19$; best overshoot $60.3$--$4.80\times10^{3}\sim h^{+2.428}$ = the $h^2$ itself); \textbf{NEW THEOREMS --- the sign-definite MOMENT LAWS} $m_1=-[S_0^2+2\sum_jP_j^2]\le0$, $m_2=-[2S_1-(M-1)S_0]^2\le0$, $m_p$ closed for every even $p$; the fixed witness (frac $0.2$, degree $48$) reproduces the arch half to worst slack $1.95\times10^{-8}$ of the $O(1)$ total --- \textbf{FLOOR-LIMITED at $4.12$--$428\times$ the double-precision floor: SECOND HORIZON declared}, the arch half neither established nor refuted on any double-precision surface; sparsity refuted (support fills $0.32$--$0.64$; support-localised $\ell^1$ misses $h^{+3.505}$); \textbf{the SAMPLING IDENTITY ($1.0\times10^{-16}$--$2.9\times10^{-15}$)}: $\sum_dc^{\mathrm{atom}}_dw_d=-\tfrac12\sum_{n\le X}(2\Lambda(n)/\sqrt n)\,\widehat w(\log n)$ $\Rightarrow$ \textbf{the atom half IS a finite combination of $\sum_{n\le X}\Lambda(n)n^{-1/2}\cos(t\log n)$ at $32$ EXPLICIT frequencies $t=\pi(k\pm l)/\alpha$}, needed to depth $h^{-2}=2.19\times10^{-6}$--$1.12\times10^{-4}$, measured to cancel only to $0.00$--$0.37$ of the trivial bound --- \textbf{the $h^2$ cancellation is the INTRINSIC ARITHMETIC HARDNESS}, not an assembly artefact (finite von-Mangoldt table only; no zero read, no equivalence claimed); R1$''$: rank/support and corner (T2) refuted (the norm route in disguise, $\|M_{12}\|_2\le71.4$); \textbf{the surviving fact $\rho=1.0036$--$1.0140>1$ on every window, FLAT} --- arch dominates atom on every destructive direction; its inequality form refuted (floor $-7.93\ldots-1.09$; margin vs cross-coupling = factor $10^4$); \textbf{U3 UPGRADED to THEOREM}: TV $<6$, measured $3.9101$--$5.4153$ vs closed $3.9105$--$5.4153$ (FOUR digits); U1 PARTIAL: Z-law $\Leftrightarrow$ ONE prime-free trigonometric inequality (pointwise form refuted --- the weight is essential); end to end $3.79\times10^{-10}$--$2.10\times10^{-7}$, with an exact atom half the SAME chain gives $1.0000$ (deficit in ONE term); no-go breaks $6/6$; balance $13/6/4/1\to$ \textbf{$14$ THEOREM ($6$ new) / $4$ CERT-UNIF / $3$ CERT-WINDOW / $3$ MEASURED / $8$ refuted families}; T160-P1\ldots P7 PENDING, no promotion; \textbf{rest: R-A the symbolic Chebyshev bound; R-B the prime-free inequality; R-C the exponential-sum bound at the $32$ frequencies (not an exercise); R-D a fifth R1$''$ device} & PAIRING-RESISTS & 46/46\\
 \end{xltabular}
 }
 
