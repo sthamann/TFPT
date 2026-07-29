@@ -21,7 +21,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v552
+          v535–v553
         </Link>
         ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4083/4083 sandbox checks —
+        (“the full proof”, T126+) is now open with 4124/4124 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -311,9 +311,27 @@ export function HonestyBanner() {
         what carries the inequality is the off-band coupling a dyadic
         argument discards), the T156 debt moves MEASURED → CERT-UNIF, and
         the measured-step count falls from three to one; the five T158
-        candidates stay PENDING, to be bundled with T159.
-        T159 (exact_form_probe.py) is running — executing the
-        cancellation algebraically. What remains
+        candidates stay PENDING, to be bundled with T159. T159
+        (FORM-RESISTS) then executed the cancellation algebraically, and
+        the algebra was delivered while the bound was not: seven
+        machine-checked identities land at once — among them the gauge
+        identity, Σ w_d = 0 exactly, because Toeplitz-minus-Hankel
+        annihilates constant lag vectors, so the form is exactly BLIND to
+        the lag mass of the arithmetic, which is precisely where the
+        h²-sized halves live — and the geometric weights acquire a closed
+        Dirichlet-kernel form of fixed size; the honest answer to the core
+        question is negative (the h² does NOT telescope away: both halves
+        grow like h^2.1 because the cancellation IS the common weight, and
+        four hoped-for routes are closed with exponents, including
+        T158&apos;s own fixed sixteen-vector at h^3.51); the genuinely new
+        structural win is a sign law — the archimedean bulk block is
+        exactly a symmetric Z-matrix, raw, with a closed sign-based floor
+        0.82–1.16 comfortably above the 0.25 target, but the atom block
+        obeys no sign law, so the second term stays open; the theorem
+        count jumps from 6 to 13, and the theorem cores of T158+T159 are
+        load-bearing as v553. T160 (pairing_probe.py) is running —
+        attacking the one remaining pairing inequality via correlation
+        structure. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann

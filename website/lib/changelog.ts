@@ -43,6 +43,1644 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · VIII",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v553"
+      },
+      {
+        "k": "t",
+        "v": " — the exact-form identities of phase 2 promoted; prime-front diary T159 (the gauge identity and the Z-matrix law, cancellation is the weight, FORM-RESISTS) + paper + website sync; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v553"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.EXACT.FORM.IDENT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Promotion of the theorem cores of the discovery parts T158 ("
+        },
+        {
+          "k": "c",
+          "v": "schur_entry_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") and T159 ("
+        },
+        {
+          "k": "c",
+          "v": "exact_form_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "25"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.2"
+        },
+        {
+          "k": "t",
+          "v": " s, everything recomputed on "
+        },
+        {
+          "k": "c",
+          "v": "v551"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v552"
+        },
+        {
+          "k": "t",
+          "v": "'s declared surface (the "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " deepest prime-power zones admitting a frame-A window inside the cap, "
+        },
+        {
+          "k": "m",
+          "v": "n=29\\ldots139"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "m=96\\ldots291\\le300"
+        },
+        {
+          "k": "t",
+          "v": "; no-go ladders "
+        },
+        {
+          "k": "m",
+          "v": "m=48\\ldots288"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "both"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " T145 forms; parity and Dirichlet controls at "
+        },
+        {
+          "k": "m",
+          "v": "m=64,128,256"
+        },
+        {
+          "k": "t",
+          "v": "), nothing cited from the sandbox; the companion to "
+        },
+        {
+          "k": "c",
+          "v": "v552"
+        },
+        {
+          "k": "t",
+          "v": ", which certified the four angle instruments — this module certifies the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "algebra of the sixteen-form itself"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", and it closes neither open term. Scope fence: per-instance identities and certified inequalities with the direction in the name — no fit, no "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": "-exponent, no zone-uniform statement, and explicitly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no statement for all "
+            },
+            {
+              "k": "m",
+              "v": "D"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the two open terms after T159 — the one explicit pairing inequality for R2"
+        },
+        {
+          "k": "m",
+          "v": "''"
+        },
+        {
+          "k": "t",
+          "v": ", needing a correlation bound instead of sizes; a third device for the atom off-band block for R1"
+        },
+        {
+          "k": "m",
+          "v": "''"
+        },
+        {
+          "k": "t",
+          "v": " — stay open and typed open); each statement carries at least one mutation control that must fail loudly."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(1) The Thomson dual form and the positive Cholesky ladder (T158, P1) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "s=(B^{-1})_{11}=\\max_x(2x_1-x^{\\mathsf T}Bx)"
+        },
+        {
+          "k": "t",
+          "v": " (Maz'ya 1985 / Miclo 1999) with the direction "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "executed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", not asserted: "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " random trial vectors per window never exceed "
+        },
+        {
+          "k": "m",
+          "v": "s"
+        },
+        {
+          "k": "t",
+          "v": ", so every trial is an upper bound on "
+        },
+        {
+          "k": "m",
+          "v": "1/s"
+        },
+        {
+          "k": "t",
+          "v": " — exactly the variational structure Cauchy–Schwarz lacks ("
+        },
+        {
+          "k": "c",
+          "v": "v552"
+        },
+        {
+          "k": "t",
+          "v": " wired that refutation as a control; here the direction itself is the check). The ladder "
+        },
+        {
+          "k": "m",
+          "v": "g_K=\\sum_{j\\le K}y_j^2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "y=L^{-1}e_1"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Cholesky of the leading "
+        },
+        {
+          "k": "m",
+          "v": "16\\times16"
+        },
+        {
+          "k": "t",
+          "v": " block: all terms strictly positive, partial sums strictly monotone, "
+        },
+        {
+          "k": "m",
+          "v": "1/s\\le1/g_{16}\\le1/g_1=B_{11}"
+        },
+        {
+          "k": "t",
+          "v": " literally on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ", tight to "
+        },
+        {
+          "k": "m",
+          "v": "1.0642"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.1522"
+        },
+        {
+          "k": "t",
+          "v": " against the declared cap "
+        },
+        {
+          "k": "m",
+          "v": "1.5"
+        },
+        {
+          "k": "t",
+          "v": " (T158 measured "
+        },
+        {
+          "k": "m",
+          "v": "\\le1.2738"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "h=254\\ldots1393"
+        },
+        {
+          "k": "t",
+          "v": ", sandbox); mutation: a "
+        },
+        {
+          "k": "m",
+          "v": "5\\%"
+        },
+        {
+          "k": "t",
+          "v": " corruption of one off-diagonal entry destroys positive definiteness — the Cholesky "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "refuses"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(2) The two-dimensionality (T158, P2) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{span}\\{t_1,A^{-1}L_Pt_1\\}"
+        },
+        {
+          "k": "t",
+          "v": " attains "
+        },
+        {
+          "k": "m",
+          "v": "s"
+        },
+        {
+          "k": "t",
+          "v": " exactly ("
+        },
+        {
+          "k": "m",
+          "v": "g/s=1"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "9.0\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ") for the theorem reason "
+        },
+        {
+          "k": "m",
+          "v": "L_Pt_1=\\mu^P_1t_1"
+        },
+        {
+          "k": "t",
+          "v": " (KMS 1953, eigenpair residual "
+        },
+        {
+          "k": "m",
+          "v": "8.1\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "): the entry is a two-dimensional quantity the moment one Green column is granted. Negative controls: the two-sine span (no Green column) misses by "
+        },
+        {
+          "k": "m",
+          "v": "1.42"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.8"
+        },
+        {
+          "k": "t",
+          "v": ", the corrupted Green column (no solve) by "
+        },
+        {
+          "k": "m",
+          "v": "255"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "7.7\\times10^{3}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(3) The gauge identity and the TmH signature (T159, P4/P7) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The reflection-odd section "
+        },
+        {
+          "k": "m",
+          "v": "A_{rs}=c_{|r-s|}-c_{M-1-r-s}"
+        },
+        {
+          "k": "t",
+          "v": " annihilates constant lag vectors "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "entrywise with zero tolerance"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{odd\\_toeplitz}(\\mathbf 1)=0"
+        },
+        {
+          "k": "t",
+          "v": " exactly — the mechanism in one line), hence the gauge identity "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_dw_d=0"
+        },
+        {
+          "k": "t",
+          "v": " holds to "
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "\\sup|w|"
+        },
+        {
+          "k": "t",
+          "v": " for the per-window optimiser and "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " random sixteen-vectors: the form is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "blind"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " to the lag mass of "
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": ", and the lag mass is exactly where the archimedean and atom halves of the sixteen-form are "
+        },
+        {
+          "k": "m",
+          "v": "h^2"
+        },
+        {
+          "k": "t",
+          "v": "-sized and cancel. The premise — the Toeplitz-minus-Hankel signature "
+        },
+        {
+          "k": "m",
+          "v": "A_{r,s}-A_{r+1,s+1}=f(r+s)"
+        },
+        {
+          "k": "t",
+          "v": " — holds to "
+        },
+        {
+          "k": "m",
+          "v": "1.4\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ". Mutations: a one-index Hankel shift breaks the identity by "
+        },
+        {
+          "k": "m",
+          "v": "2.7\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.2\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": "; the T145 form "
+        },
+        {
+          "k": "m",
+          "v": "R=aa^{\\mathsf T}+\\varepsilon I"
+        },
+        {
+          "k": "t",
+          "v": " has signature defect "
+        },
+        {
+          "k": "m",
+          "v": "7.4\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " — not a parity section, the gauge identity is not even "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "defined"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " for it."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(4) The exact lag sum and the two closed scalars (T159, P2/P5) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "x^{\\mathsf T}B_{LL}x=\\sum_dc_dw_d"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "w_d=T_d-H_d"
+        },
+        {
+          "k": "t",
+          "v": " against the direct assembly to "
+        },
+        {
+          "k": "m",
+          "v": "2.7\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " of the absolute scale "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_d|c_dw_d|"
+        },
+        {
+          "k": "t",
+          "v": " — and the honest price "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measured"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": relative to the cancelled total the same identity holds only to "
+        },
+        {
+          "k": "m",
+          "v": "1.4\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": " on this small surface (the sandbox at "
+        },
+        {
+          "k": "m",
+          "v": "h\\le1293"
+        },
+        {
+          "k": "t",
+          "v": " loses "
+        },
+        {
+          "k": "m",
+          "v": "4.0"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "8.1"
+        },
+        {
+          "k": "t",
+          "v": " digits; that depth "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "h^2"
+        },
+        {
+          "k": "t",
+          "v": " obstruction). The two closed scalars: "
+        },
+        {
+          "k": "m",
+          "v": "w_0=\\sum_kx_k^2/\\mu^P_k"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "N^2/4\\pi^2"
+        },
+        {
+          "k": "t",
+          "v": " factor itself) to "
+        },
+        {
+          "k": "m",
+          "v": "4.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "2w_0-w_1=\\|x\\|^2"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "7.4\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " (KMS 1953). Mutations: a "
+        },
+        {
+          "k": "m",
+          "v": "1\\%"
+        },
+        {
+          "k": "t",
+          "v": " perturbation of the largest lag breaks the lag sum by "
+        },
+        {
+          "k": "m",
+          "v": "2.2\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "; a one-index "
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": " shift breaks "
+        },
+        {
+          "k": "m",
+          "v": "w_0"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "0.60"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(5) The Z-matrix law and the Collatz–Wielandt floor (T159, U1/U2) "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "B^{\\mathrm{arch}}_{HH}"
+        },
+        {
+          "k": "t",
+          "v": " is a symmetric Z-matrix "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "raw"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — every off-diagonal entry "
+        },
+        {
+          "k": "m",
+          "v": "\\le0"
+        },
+        {
+          "k": "t",
+          "v": " with no tolerance on "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": "; the closed sign-based floor "
+        },
+        {
+          "k": "m",
+          "v": "\\min_k(B^{\\mathrm{arch}}_{HH}\\mathbf 1)_k=0.9093"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.1284\\ge t=0.25"
+        },
+        {
+          "k": "t",
+          "v": " with the theorem direction verified per instance against the exact "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(B^{\\mathrm{arch}}_{HH})=0.9138"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.1432"
+        },
+        {
+          "k": "t",
+          "v": " (Perron 1907 / Frobenius 1912 / Collatz 1942 / Wielandt 1950), beating the sign-free norm route by "
+        },
+        {
+          "k": "m",
+          "v": "0.69"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "8.8"
+        },
+        {
+          "k": "t",
+          "v": " on every window. The honest limit as content: the atom block obeys "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " sign law ("
+        },
+        {
+          "k": "m",
+          "v": "0.44"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.53"
+        },
+        {
+          "k": "t",
+          "v": ", a coin toss), the full block is not a Z-matrix and its row-sum floor is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "negative"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "-48.3\\ldots-0.79"
+        },
+        {
+          "k": "t",
+          "v": ") against a positive exact bottom — admissible and vacuous, R1"
+        },
+        {
+          "k": "m",
+          "v": "''"
+        },
+        {
+          "k": "t",
+          "v": " stays open. Mutation: the checkerboard similarity "
+        },
+        {
+          "k": "m",
+          "v": "S=\\mathrm{diag}((-1)^k)"
+        },
+        {
+          "k": "t",
+          "v": " — an isometry, "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}"
+        },
+        {
+          "k": "t",
+          "v": " moves by "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " exactly — destroys the raw law (fraction "
+        },
+        {
+          "k": "m",
+          "v": "1.0000\\to0.494"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.498"
+        },
+        {
+          "k": "t",
+          "v": "): the Z law is an entrywise fact, not a spectral one, and T159's checkerboard reading (S2) is refuted. Stress: the T145 no-go breaks on three axes of this module's structure; on the "
+        },
+        {
+          "k": "m",
+          "v": "c(l)=1/(1+l)"
+        },
+        {
+          "k": "t",
+          "v": " reconstruction the ladder theorem survives while "
+        },
+        {
+          "k": "m",
+          "v": "1/g_{16}"
+        },
+        {
+          "k": "t",
+          "v": " explodes ("
+        },
+        {
+          "k": "m",
+          "v": "1187\\to7.11\\times10^{4}"
+        },
+        {
+          "k": "t",
+          "v": ") — the instrument reports the collapse instead of hiding it; parity: for "
+        },
+        {
+          "k": "m",
+          "v": "A=L_P"
+        },
+        {
+          "k": "t",
+          "v": " the machinery returns "
+        },
+        {
+          "k": "m",
+          "v": "s=1"
+        },
+        {
+          "k": "t",
+          "v": " with every ladder partial sum constant in "
+        },
+        {
+          "k": "m",
+          "v": "K"
+        },
+        {
+          "k": "t",
+          "v": "; Dirichlet controls exact."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T159 ("
+            },
+            {
+              "k": "c",
+              "v": "exact_form_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "EXACT.FORM"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "41/41"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "2.9"
+            },
+            {
+              "k": "t",
+              "v": " s, "
+            },
+            {
+              "k": "m",
+              "v": "23"
+            },
+            {
+              "k": "t",
+              "v": " of "
+            },
+            {
+              "k": "m",
+              "v": "24"
+            },
+            {
+              "k": "t",
+              "v": " prime-power zones "
+            },
+            {
+              "k": "m",
+              "v": "h=142\\ldots1293"
+            },
+            {
+              "k": "t",
+              "v": ", the sign surface on "
+            },
+            {
+              "k": "m",
+              "v": "18"
+            },
+            {
+              "k": "t",
+              "v": " windows "
+            },
+            {
+              "k": "m",
+              "v": "h=142\\ldots963"
+            },
+            {
+              "k": "t",
+              "v": ", verdict FORM-RESISTS, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The cancellation executed algebraically: seven machine-checked identities to "
+        },
+        {
+          "k": "m",
+          "v": "10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": " against the absolute scale (the cancellation eats "
+        },
+        {
+          "k": "m",
+          "v": "4.0"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "8.1"
+        },
+        {
+          "k": "t",
+          "v": " decimal digits, reported as a measurement), among them the closed "
+        },
+        {
+          "k": "m",
+          "v": "256"
+        },
+        {
+          "k": "t",
+          "v": "-term Dirichlet-kernel form of the geometric weights and the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "gauge identity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_dw_d=0"
+        },
+        {
+          "k": "t",
+          "v": " exactly — the form is blind to the lag mass, exactly where the "
+        },
+        {
+          "k": "m",
+          "v": "h^2"
+        },
+        {
+          "k": "t",
+          "v": " halves live. The honest core answer is negative: the "
+        },
+        {
+          "k": "m",
+          "v": "h^2"
+        },
+        {
+          "k": "t",
+          "v": " does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " telescope away, it is the common "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "weight"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of both halves (both grow "
+        },
+        {
+          "k": "m",
+          "v": "h^{+2.104}"
+        },
+        {
+          "k": "t",
+          "v": "), and four routes are closed with exponents — T158's own fixed sixteen-vector refuted at "
+        },
+        {
+          "k": "m",
+          "v": "h^{+3.510}"
+        },
+        {
+          "k": "t",
+          "v": ", one sine at "
+        },
+        {
+          "k": "m",
+          "v": "h^{+3.066}"
+        },
+        {
+          "k": "t",
+          "v": ", the preregistered ansatz family at "
+        },
+        {
+          "k": "m",
+          "v": "h^{+3.001}"
+        },
+        {
+          "k": "t",
+          "v": ", Abel-"
+        },
+        {
+          "k": "m",
+          "v": "\\ell^1\\times\\sup"
+        },
+        {
+          "k": "t",
+          "v": " at every rung (best "
+        },
+        {
+          "k": "m",
+          "v": "h^{+3.604}"
+        },
+        {
+          "k": "t",
+          "v": "). The structural win: "
+        },
+        {
+          "k": "m",
+          "v": "B^{\\mathrm{arch}}_{HH}"
+        },
+        {
+          "k": "t",
+          "v": " is exactly a symmetric Z-matrix with a closed sign-based Collatz–Wielandt floor "
+        },
+        {
+          "k": "m",
+          "v": "0.819"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.165"
+        },
+        {
+          "k": "t",
+          "v": " comfortably above "
+        },
+        {
+          "k": "m",
+          "v": "t=0.25"
+        },
+        {
+          "k": "t",
+          "v": " — but the atom block obeys no sign law, and the full-block criterion is vacuous. Balance "
+        },
+        {
+          "k": "m",
+          "v": "6/3/4/1\\to13"
+        },
+        {
+          "k": "t",
+          "v": " theorem / "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " cert-unif / "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " cert-window / "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " measured; a numerical horizon declared as its own measurement ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{cond}(B_{LL})>10^{12}"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "h=1292"
+        },
+        {
+          "k": "t",
+          "v": "); one fully explicit pairing inequality remains, under attack via correlation structure in T160 ("
+        },
+        {
+          "k": "c",
+          "v": "pairing_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "), running. NOT RH evidence; no marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Docs + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " gains the T159 subsection with the After-T159 keybox, the "
+        },
+        {
+          "k": "c",
+          "v": "v553"
+        },
+        {
+          "k": "t",
+          "v": " subsection in the verified layer (now nineteen modules), the phase-2 section retitled T126–T159, the T159 row in the probe index and the updated counters ("
+        },
+        {
+          "k": "m",
+          "v": "159"
+        },
+        {
+          "k": "t",
+          "v": " probes, "
+        },
+        {
+          "k": "m",
+          "v": "4124"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " gain the "
+        },
+        {
+          "k": "c",
+          "v": "v553"
+        },
+        {
+          "k": "t",
+          "v": " companion blocks; "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " gains the Teil-159 entry; "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the T159 and "
+        },
+        {
+          "k": "c",
+          "v": "v553"
+        },
+        {
+          "k": "t",
+          "v": " feed entries; the prime-front status surfaces move to Teile 11–159 / "
+        },
+        {
+          "k": "m",
+          "v": "4124"
+        },
+        {
+          "k": "t",
+          "v": " checks / 19 modules ("
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v553"
+        },
+        {
+          "k": "t",
+          "v": "); suite counter "
+        },
+        {
+          "k": "m",
+          "v": "546\\to547"
+        },
+        {
+          "k": "t",
+          "v": " scripts. T160 ("
+        },
+        {
+          "k": "c",
+          "v": "pairing_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running at the pairing bound. Ledger row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.EXACT.FORM.IDENT.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker of any pre-existing contract moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · VII",
     "heading": [
       {

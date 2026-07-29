@@ -1518,6 +1518,66 @@ Machine-checked:
 \veri{v552\_angle\_instruments.py}.
 \mE\ (per-instance identities and certified inequalities; no marker moves)
 
+\par\smallskip\noindent\textbf{The exact-form identities
+(\texttt{PRIME.EXACT.FORM.IDENT.01}).}
+The theorem cores of T158 and T159 are load-bearing as the eleventh
+companion module ($25$ checks, ${\sim}0.2$\,s), recomputed on the same
+declared surface as the two modules above ($12$ deepest in-cap frame-A
+windows, $m=96\ldots291\le300$; no-go ladders $m=48\ldots288$ on
+\emph{both} T145 forms; parity and Dirichlet controls at $m=64,128,256$)
+--- the algebra of the sixteen-form itself, and it closes neither open
+term.
+\emph{The Thomson dual form and the positive Cholesky ladder (T158).}
+$s=(B^{-1})_{11}=\max_x(2x_1-x^{\mathsf T}Bx)$ with the direction
+\emph{executed} ($8$ random trials per window never exceed $s$); the
+ladder $g_K$ from one Cholesky of the leading $16\times16$ block: terms
+strictly positive, partial sums monotone, $1/s\le1/g_{16}\le1/g_1=B_{11}$
+literally, tight to $1.0642$--$1.1522$; a $5\%$ corruption of one
+off-diagonal entry makes the Cholesky \emph{refuse} on $12/12$.
+\emph{The two-dimensionality (T158).} $\mathrm{span}\{t_1,A^{-1}L_Pt_1\}$
+attains $s$ exactly ($9.0\times10^{-13}$) because $L_Pt_1=\mu^P_1t_1$;
+without the Green column the two-sine span misses by $1.42$--$4.8$, the
+corrupted column by $255$--$7.7\times10^{3}$.
+\emph{The gauge identity and the signature (T159).} The reflection-odd
+section annihilates constant lag vectors entrywise with \emph{zero}
+tolerance, hence $\sum_dw_d=0$ to $1.1\times10^{-14}$ of $\sup|w|$: the
+form is blind to the lag mass of $c$ --- exactly where the archimedean
+and atom halves are $h^2$-sized and cancel; the Toeplitz-minus-Hankel
+signature holds to $1.4\times10^{-16}$; a one-index Hankel shift breaks
+the identity loudly, and the T145 form is not even a parity section
+(signature defect $7.4\times10^{-2}$).
+\emph{The exact lag sum and the two closed scalars (T159).}
+$x^{\mathsf T}B_{LL}x=\sum_dc_dw_d$ to $2.7\times10^{-16}$ of the
+absolute scale, with the honest price measured (relative to the
+cancelled total only $1.4\times10^{-11}$ on this small surface);
+$w_0=\sum_kx_k^2/\mu^P_k$ and $2w_0-w_1=\|x\|^2$ exact.
+\emph{The Z-matrix law and the Collatz--Wielandt floor (T159).}
+$B^{\mathrm{arch}}_{HH}$ is a symmetric Z-matrix \emph{raw} (no
+tolerance, $12/12$); the closed sign-based floor
+$\min_k(B^{\mathrm{arch}}_{HH}\mathbf 1)_k=0.9093$--$1.1284\ge0.25$ with
+the theorem direction verified against the exact
+$\lambda_{\min}=0.9138$--$1.1432$; the atom block obeys \emph{no} sign
+law (a coin toss) and the full-block row-sum floor is negative ---
+admissible and vacuous; the checkerboard similarity (an isometry)
+destroys the raw law: an entrywise fact, not a spectral one.
+\emph{The no-go discriminator.} The T145 family breaks on three axes of
+this module's structure, while on the $c(l)=1/(1+l)$ reconstruction the
+ladder theorem survives and $1/g_{16}$ explodes
+($1187\to7.11\times10^{4}$) --- the instrument reports the collapse.
+\textbf{Named limits as content:} per instance on small windows ---
+nothing uniform in the zone index or in $D$, and explicitly \emph{no}
+statement for all $D$; the two open terms after T159 (the one explicit
+pairing inequality for R2$''$, needing correlation instead of sizes; a
+third device for the atom off-band block for R1$''$) stay open, typed
+open.
+Maz'ya 1985 / Miclo 1999 / Schur 1917--Haynsworth 1968 / KMS 1953 /
+Dirichlet 1829 / Perron 1907--Frobenius 1912 / Collatz 1942--Wielandt
+1950 / Gantmacher--Krein 1950 named classical; Weil 1952 cited, never
+used as a criterion.
+Machine-checked:
+\veri{v553\_exact\_form\_identities.py}.
+\mE\ (per-instance identities and certified inequalities; no marker moves)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

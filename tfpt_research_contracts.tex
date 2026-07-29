@@ -3172,6 +3172,83 @@ AST-checked; no marker moves.
 Machine-checked: \veri{v552\_angle\_instruments.py}.
 \mE\ (per-instance identities and certified inequalities)
 
+\par\smallskip\noindent\textbf{The exact-form identities
+(\texttt{PRIME.EXACT.FORM.IDENT.01}).}
+The theorem cores of the discovery parts T158 and T159, recomputed on
+the same declared surface as \texttt{PRIME.RITZ.CEIL.01} and
+\texttt{PRIME.ANGLE.INSTR.01} (the $12$ deepest in-cap frame-A windows,
+$n=29\ldots139$, $m=96\ldots291\le300$; no-go ladders $m=48\ldots288$ on
+\emph{both} T145 forms; parity and Dirichlet controls at $m=64,128,256$;
+each statement with at least one mutation control that must fail loudly)
+--- the algebra of the sixteen-form itself, and it closes neither open
+term. \emph{(1)} The Thomson dual form and the positive Cholesky
+ladder: $s=(B^{-1})_{11}=\max_x(2x_1-x^{\mathsf T}Bx)$ (Maz'ya 1985 /
+Miclo 1999) with the direction \emph{executed}, not asserted --- $8$
+random trials per window never exceed $s$; the ladder
+$g_K=\sum_{j\le K}y_j^2$, $y=L^{-1}e_1$ from one Cholesky of the leading
+$16\times16$ block (nested Schur complements): all terms strictly
+positive, partial sums strictly monotone, $1/s\le1/g_{16}\le1/g_1=
+B_{11}$ literally on $12/12$, tight to $1.0642$--$1.1522$ against the
+declared cap $1.5$; mutation: a $5\%$ corruption of one off-diagonal
+entry destroys positive definiteness --- the Cholesky \emph{refuses} on
+$12/12$. \emph{(2)} The two-dimensionality:
+$\mathrm{span}\{t_1,A^{-1}L_Pt_1\}$ attains $s$ exactly ($g/s=1$ to
+$9.0\times10^{-13}$) for the theorem reason $L_Pt_1=\mu^P_1t_1$ (KMS
+1953); negative controls: the two-sine span misses by $1.42$--$4.8$, the
+corrupted Green column by $255$--$7.7\times10^{3}$. \emph{(3)} The gauge
+identity and the Toeplitz-minus-Hankel signature: the reflection-odd
+section annihilates constant lag vectors \emph{entrywise with zero
+tolerance} ($\mathrm{odd\_toeplitz}(\mathbf 1)=0$ exactly), hence
+$\sum_dw_d=0$ to $1.1\times10^{-14}$ of $\sup|w|$ --- the form is blind
+to the lag mass of $c$, exactly where the archimedean and atom halves
+are $h^2$-sized and cancel; the signature $A_{r,s}-A_{r+1,s+1}=f(r+s)$
+holds to $1.4\times10^{-16}$; mutations: a one-index Hankel shift breaks
+the identity by $2.7\times10^{-7}$--$4.2\times10^{-5}$, and the T145
+form has signature defect $7.4\times10^{-2}$ --- not a parity section,
+the identity is not even defined for it. \emph{(4)} The exact lag sum
+and the two closed scalars: $x^{\mathsf T}B_{LL}x=\sum_dc_dw_d$
+($w_d=T_d-H_d$) against the direct assembly to $2.7\times10^{-16}$ of
+the absolute scale $\sum_d|c_dw_d|$, with the honest price
+\emph{measured} (relative to the cancelled total only
+$1.4\times10^{-11}$ on this small surface --- that depth is the $h^2$
+obstruction); $w_0=\sum_kx_k^2/\mu^P_k$ to $4.2\times10^{-16}$ and
+$2w_0-w_1=\|x\|^2$ to $7.4\times10^{-16}$; mutations: a $1\%$ lag
+perturbation and a one-index $\mu$ shift both break loudly. \emph{(5)}
+The Z-matrix law and the Collatz--Wielandt floor:
+$B^{\mathrm{arch}}_{HH}$ is a symmetric Z-matrix \emph{raw} --- every
+off-diagonal entry $\le0$ with no tolerance on $12/12$; the closed
+sign-based floor $\min_k(B^{\mathrm{arch}}_{HH}\mathbf 1)_k=
+0.9093$--$1.1284\ge0.25$ with the theorem direction verified per
+instance against the exact $\lambda_{\min}=0.9138$--$1.1432$ (Perron
+1907 / Frobenius 1912 / Collatz 1942 / Wielandt 1950), beating the
+sign-free norm route by $0.69$--$8.8$; the honest limit as content: the
+atom block obeys no sign law ($0.44$--$0.53$, a coin toss), the full
+block is not a Z-matrix and its row-sum floor is negative
+($-48.3\ldots-0.79$) --- admissible and vacuous, R1$''$ stays open;
+mutation: the checkerboard similarity (an isometry, $\lambda_{\min}$
+moves by $0$ exactly) destroys the raw law --- an entrywise fact, not a
+spectral one. Stress: the T145 no-go breaks on three axes of this
+module's structure; on the $c(l)=1/(1+l)$ reconstruction the ladder
+theorem survives while $1/g_{16}$ explodes ($1187\to7.11\times10^{4}$)
+--- the instrument reports the collapse instead of hiding it; parity:
+for $A=L_P$ the machinery returns $s=1$ with every ladder partial sum
+constant in $K$; Dirichlet controls exact.
+\textbf{Named limits as load-bearing content:} per instance on small
+windows --- a finite list with an explicit maximum; nothing uniform in
+the zone index or in $D$, and explicitly \emph{no} statement for all
+$D$; the two open terms after T159 (the one explicit pairing inequality
+for R2$''$ --- $\sum_d(\Delta c)_dW^1_d$ with $\|\Delta c^{\mathrm{arch}}
+\|_1\le6$, needing a correlation bound instead of sizes; a third device
+for the atom off-band block for R1$''$, neither norm nor sign) stay
+open, typed open; the pairing bound and $m$-freeness are explicitly
+\emph{not} claimed. Fences: Maz'ya 1985 / Miclo 1999 / Schur
+1917--Haynsworth 1968 / KMS 1953 / Dirichlet 1829 / Abel / Fej\'er 1915
+/ Perron 1907--Frobenius 1912 / Collatz 1942--Wielandt 1950 /
+Gantmacher--Krein 1950 named classical; Weil 1952 cited, never used as a
+criterion; zero-firewall AST-checked; no marker moves.
+Machine-checked: \veri{v553\_exact\_form\_identities.py}.
+\mE\ (per-instance identities and certified inequalities)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

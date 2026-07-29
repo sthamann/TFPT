@@ -62,6 +62,114 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-29 (VIII) (\texttt{v553} --- the exact-form identities of phase 2 promoted; prime-front diary T159 (the gauge identity and the Z-matrix law, cancellation is the weight, FORM-RESISTS) + paper + website sync; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v553} (\texttt{PRIME.EXACT.FORM.IDENT.01}).} Promotion of
+the theorem cores of the discovery parts T158 (\texttt{schur\_entry\_probe.py}) and T159
+(\texttt{exact\_form\_probe.py}) --- $25$ checks, ${\sim}0.2$\,s, everything recomputed on
+\texttt{v551}/\texttt{v552}'s declared surface (the $12$ deepest prime-power zones
+admitting a frame-A window inside the cap, $n=29\ldots139$, $m=96\ldots291\le300$; no-go
+ladders $m=48\ldots288$ on \emph{both} T145 forms; parity and Dirichlet controls at
+$m=64,128,256$), nothing cited from the sandbox; the companion to \texttt{v552}, which
+certified the four angle instruments --- this module certifies the \emph{algebra of the
+sixteen-form itself}, and it closes neither open term. Scope fence: per-instance
+identities and certified inequalities with the direction in the name --- no fit, no
+$D$-exponent, no zone-uniform statement, and explicitly \emph{no statement for all $D$}
+(the two open terms after T159 --- the one explicit pairing inequality for R2$''$, needing
+a correlation bound instead of sizes; a third device for the atom off-band block for
+R1$''$ --- stay open and typed open); each statement carries at least one mutation
+control that must fail loudly.
+\item \textbf{(1) The Thomson dual form and the positive Cholesky ladder (T158, P1) \mE.}
+$s=(B^{-1})_{11}=\max_x(2x_1-x^{\mathsf T}Bx)$ (Maz'ya 1985 / Miclo 1999) with the
+direction \emph{executed}, not asserted: $8$ random trial vectors per window never exceed
+$s$, so every trial is an upper bound on $1/s$ --- exactly the variational structure
+Cauchy--Schwarz lacks (\texttt{v552} wired that refutation as a control; here the
+direction itself is the check). The ladder $g_K=\sum_{j\le K}y_j^2$, $y=L^{-1}e_1$ from
+\emph{one} Cholesky of the leading $16\times16$ block: all terms strictly positive,
+partial sums strictly monotone, $1/s\le1/g_{16}\le1/g_1=B_{11}$ literally on $12/12$,
+tight to $1.0642$--$1.1522$ against the declared cap $1.5$ (T158 measured $\le1.2738$ at
+$h=254\ldots1393$, sandbox); mutation: a $5\%$ corruption of one off-diagonal entry
+destroys positive definiteness --- the Cholesky \emph{refuses} on $12/12$.
+\item \textbf{(2) The two-dimensionality (T158, P2) \mE.}
+$\mathrm{span}\{t_1,A^{-1}L_Pt_1\}$ attains $s$ exactly ($g/s=1$ to $9.0\times10^{-13}$ on
+$12/12$) for the theorem reason $L_Pt_1=\mu^P_1t_1$ (KMS 1953, eigenpair residual
+$8.1\times10^{-13}$): the entry is a two-dimensional quantity the moment one Green column
+is granted. Negative controls: the two-sine span (no Green column) misses by
+$1.42$--$4.8$, the corrupted Green column (no solve) by $255$--$7.7\times10^{3}$.
+\item \textbf{(3) The gauge identity and the TmH signature (T159, P4/P7) \mE.} The
+reflection-odd section $A_{rs}=c_{|r-s|}-c_{M-1-r-s}$ annihilates constant lag vectors
+\emph{entrywise with zero tolerance} ($\mathrm{odd\_toeplitz}(\mathbf 1)=0$ exactly ---
+the mechanism in one line), hence the gauge identity $\sum_dw_d=0$ holds to
+$1.1\times10^{-14}$ of $\sup|w|$ for the per-window optimiser and $3$ random
+sixteen-vectors: the form is \emph{blind} to the lag mass of $c$, and the lag mass is
+exactly where the archimedean and atom halves of the sixteen-form are $h^2$-sized and
+cancel. The premise --- the Toeplitz-minus-Hankel signature $A_{r,s}-A_{r+1,s+1}=f(r+s)$
+--- holds to $1.4\times10^{-16}$. Mutations: a one-index Hankel shift breaks the identity
+by $2.7\times10^{-7}$--$4.2\times10^{-5}$; the T145 form $R=aa^{\mathsf T}+\varepsilon I$
+has signature defect $7.4\times10^{-2}$ --- not a parity section, the gauge identity is
+not even \emph{defined} for it.
+\item \textbf{(4) The exact lag sum and the two closed scalars (T159, P2/P5) \mE.}
+$x^{\mathsf T}B_{LL}x=\sum_dc_dw_d$ with $w_d=T_d-H_d$ against the direct assembly to
+$2.7\times10^{-16}$ of the absolute scale $\sum_d|c_dw_d|$ --- and the honest price
+\emph{measured}: relative to the cancelled total the same identity holds only to
+$1.4\times10^{-11}$ on this small surface (the sandbox at $h\le1293$ loses $4.0$--$8.1$
+digits; that depth \emph{is} the $h^2$ obstruction). The two closed scalars:
+$w_0=\sum_kx_k^2/\mu^P_k$ (the $N^2/4\pi^2$ factor itself) to $4.2\times10^{-16}$ and
+$2w_0-w_1=\|x\|^2$ to $7.4\times10^{-16}$ (KMS 1953). Mutations: a $1\%$ perturbation of
+the largest lag breaks the lag sum by $2.2\times10^{-3}$; a one-index $\mu$ shift breaks
+$w_0$ by $0.60$.
+\item \textbf{(5) The Z-matrix law and the Collatz--Wielandt floor (T159, U1/U2) \mE.}
+$B^{\mathrm{arch}}_{HH}$ is a symmetric Z-matrix \emph{raw} --- every off-diagonal entry
+$\le0$ with no tolerance on $12/12$; the closed sign-based floor
+$\min_k(B^{\mathrm{arch}}_{HH}\mathbf 1)_k=0.9093$--$1.1284\ge t=0.25$ with the theorem
+direction verified per instance against the exact
+$\lambda_{\min}(B^{\mathrm{arch}}_{HH})=0.9138$--$1.1432$ (Perron 1907 / Frobenius 1912 /
+Collatz 1942 / Wielandt 1950), beating the sign-free norm route by $0.69$--$8.8$ on every
+window. The honest limit as content: the atom block obeys \emph{no} sign law
+($0.44$--$0.53$, a coin toss), the full block is not a Z-matrix and its row-sum floor is
+\emph{negative} ($-48.3\ldots-0.79$) against a positive exact bottom --- admissible and
+vacuous, R1$''$ stays open. Mutation: the checkerboard similarity
+$S=\mathrm{diag}((-1)^k)$ --- an isometry, $\lambda_{\min}$ moves by $0$ exactly ---
+destroys the raw law (fraction $1.0000\to0.494$--$0.498$): the Z law is an entrywise
+fact, not a spectral one, and T159's checkerboard reading (S2) is refuted. Stress: the
+T145 no-go breaks on three axes of this module's structure; on the $c(l)=1/(1+l)$
+reconstruction the ladder theorem survives while $1/g_{16}$ explodes
+($1187\to7.11\times10^{4}$) --- the instrument reports the collapse instead of hiding it;
+parity: for $A=L_P$ the machinery returns $s=1$ with every ladder partial sum constant in
+$K$; Dirichlet controls exact.
+\item \textbf{Prime-front diary T159 (\texttt{exact\_form\_probe.py}, contract
+\texttt{EXACT.FORM}, $41/41$, $2.9$\,s, $23$ of $24$ prime-power zones $h=142\ldots1293$,
+the sign surface on $18$ windows $h=142\ldots963$, verdict FORM-RESISTS, sandbox).} The
+cancellation executed algebraically: seven machine-checked identities to $10^{-12}$
+against the absolute scale (the cancellation eats $4.0$--$8.1$ decimal digits, reported
+as a measurement), among them the closed $256$-term Dirichlet-kernel form of the
+geometric weights and the \emph{gauge identity} $\sum_dw_d=0$ exactly --- the form is
+blind to the lag mass, exactly where the $h^2$ halves live. The honest core answer is
+negative: the $h^2$ does \emph{not} telescope away, it is the common \emph{weight} of
+both halves (both grow $h^{+2.104}$), and four routes are closed with exponents ---
+T158's own fixed sixteen-vector refuted at $h^{+3.510}$, one sine at $h^{+3.066}$, the
+preregistered ansatz family at $h^{+3.001}$, Abel-$\ell^1\times\sup$ at every rung (best
+$h^{+3.604}$). The structural win: $B^{\mathrm{arch}}_{HH}$ is exactly a symmetric
+Z-matrix with a closed sign-based Collatz--Wielandt floor $0.819$--$1.165$ comfortably
+above $t=0.25$ --- but the atom block obeys no sign law, and the full-block criterion is
+vacuous. Balance $6/3/4/1\to13$ theorem / $6$ cert-unif / $4$ cert-window / $1$ measured;
+a numerical horizon declared as its own measurement ($\mathrm{cond}(B_{LL})>10^{12}$ from
+$h=1292$); one fully explicit pairing inequality remains, under attack via correlation
+structure in T160 (\texttt{pairing\_probe.py}), running. NOT RH evidence; no marker moves.
+\item \textbf{Docs + website sync.} \texttt{tfpt\_prime\_front} gains the T159 subsection
+with the After-T159 keybox, the \texttt{v553} subsection in the verified layer (now
+nineteen modules), the phase-2 section retitled T126--T159, the T159 row in the probe
+index and the updated counters ($159$ probes, $4124$ checks); \texttt{tfpt\_1},
+\texttt{tfpt\_3} and \texttt{tfpt\_research\_contracts} gain the \texttt{v553} companion
+blocks; \texttt{experiments/next.txt} gains the Teil-159 entry;
+\texttt{website/lib/primeFront.ts} gains the T159 and \texttt{v553} feed entries; the
+prime-front status surfaces move to Teile 11--159 / $4124$ checks / 19 modules
+(\texttt{v535}--\texttt{v553}); suite counter $546\to547$ scripts. T160
+(\texttt{pairing\_probe.py}) is running at the pairing bound. Ledger row
+\texttt{PRIME.EXACT.FORM.IDENT.01} \mE; \textbf{no marker of any pre-existing contract
+moves}.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-29 (VII) (\texttt{v552} --- the four fixed-size angle instruments of phase 2 promoted; prime-front diary T157 (the confinement theorem and the one-entry reduction, ANGLES-RESIST) + paper + website sync; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v552} (\texttt{PRIME.ANGLE.INSTR.01}).} Promotion of the
