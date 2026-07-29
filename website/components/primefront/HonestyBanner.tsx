@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 3889/3889 sandbox checks —
+        (“the full proof”, T126+) is now open with 3922/3922 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -216,8 +216,20 @@ export function HonestyBanner() {
         inequality B_HH ⪰ t·I), R ≤ K_bot/t = 4.41–8.47 is certified on
         both ends with one term missing (an m-free ceiling on K_bot), and
         89–92% of the dominant loss Ψ sits on the eight modes the
-        certified ladder already controls — T153 (psi_ladder_probe.py) is
-        running at exactly that rebuild. What
+        certified ladder already controls. T153 (REBUILD-RESISTS) then
+        carried out exactly that rebuild and refuted it by its own factor:
+        Ψ is pinned between a₁/λ₁ and 1/λ₁ with a₁ exactly the 8/π² of the
+        first parity sine, so it is determined to within 1.20–1.30× and the
+        mapped 3.5–5.3× reserve never existed (the head/tail replacement
+        falls 2.31–6.12× below the hard lower bound) — while the
+        theorem-grade collapse Ψ ≤ const/(t·μᴾ₁) CLOSES Ψ as a term,
+        needing nothing beyond the certified floor, a T152 sign reverses
+        (the archimedean part is POSITIVE on the bulk parity block after an
+        m-free peeling of at most 8 modes), and the two remaining terms —
+        the block inequality and a Green/alignment estimate of two
+        inverse-iteration columns, which already yields a flat ceiling on a
+        fixed-size certificate — lose to the same missing object; T154
+        (green_align_probe.py) is running at exactly that estimate. What
         remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
