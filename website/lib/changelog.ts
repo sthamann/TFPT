@@ -43,6 +43,942 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-29",
+    "dateLabel": "2026-07-29 · XVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "prime-front diary T172 (the map is portable, the numbers are not — PARTIALLY-PORTABLE) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " T173 (the demanded rate is itself a frame datum; the deficit "
+      },
+      {
+        "k": "m",
+        "v": "+0.155\\pm0.102"
+      },
+      {
+        "k": "t",
+        "v": " is the number of the phase and no frame closes it — DEFICIT-VARIES) + paper + website sync; NO promotion, NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T172 ("
+            },
+            {
+              "k": "c",
+              "v": "frame_beyond_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "FRAME.BEYOND"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "44/44"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "1.3"
+            },
+            {
+              "k": "t",
+              "v": " s, "
+            },
+            {
+              "k": "m",
+              "v": "54"
+            },
+            {
+              "k": "t",
+              "v": " windows on four surfaces plus "
+            },
+            {
+              "k": "m",
+              "v": "3"
+            },
+            {
+              "k": "t",
+              "v": " truncated-comb stress windows, "
+            },
+            {
+              "k": "m",
+              "v": "h=128"
+            },
+            {
+              "k": "t",
+              "v": "–"
+            },
+            {
+              "k": "m",
+              "v": "1444"
+            },
+            {
+              "k": "t",
+              "v": "; verdict PARTIALLY-PORTABLE, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " T171's inherited question — how far does the certified map carry beyond frame A? — answered by a recipe inventory (four degrees of freedom: the frame rule "
+        },
+        {
+          "k": "m",
+          "v": "D"
+        },
+        {
+          "k": "t",
+          "v": ", the subdivision "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": ", the zone family; the atom set is NOT free — "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": " lives on prime powers, “beyond” means different "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "anchor"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " arithmetic) and a transfer table: "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "13 of the 16 links transfer unchanged — the whole identity tower plus both direction lemmas — and none breaks"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; the three that shift are exactly the number-carrying ones (the two window certificates and the rate of link 16). Indefiniteness is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "localised at the declared sieve horizon"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}=-3.7\\times10^{5}"
+        },
+        {
+          "k": "t",
+          "v": " – "
+        },
+        {
+          "k": "m",
+          "v": "-6.2\\times10^{6}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "3/3"
+        },
+        {
+          "k": "t",
+          "v": " cut-comb stress windows against "
+        },
+        {
+          "k": "m",
+          "v": "0/54"
+        },
+        {
+          "k": "t",
+          "v": " complete-comb; the identity links keep holding there), not at a frame or zone. Constants map: "
+        },
+        {
+          "k": "m",
+          "v": "8/11"
+        },
+        {
+          "k": "t",
+          "v": " stay in frame A's band, "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " wander on the congruence surface — a certificate on a new surface is a NEW certificate; the procedure and the directions transfer ("
+        },
+        {
+          "k": "m",
+          "v": "54/54"
+        },
+        {
+          "k": "t",
+          "v": "). R1's near-degeneracy persists on every surface (angle "
+        },
+        {
+          "k": "m",
+          "v": "<10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "54/54"
+        },
+        {
+          "k": "t",
+          "v": ", decay on "
+        },
+        {
+          "k": "m",
+          "v": "9/9"
+        },
+        {
+          "k": "t",
+          "v": " legs) while the rate is frame-bound ("
+        },
+        {
+          "k": "m",
+          "v": "h^{-1.83}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "h^{-2.87}"
+        },
+        {
+          "k": "t",
+          "v": "; zone arithmetic secondary, spread "
+        },
+        {
+          "k": "m",
+          "v": "0.40"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "1.03"
+        },
+        {
+          "k": "t",
+          "v": "); sharpest new result, the placement finding: scrambling atom positions at a fixed "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "-value multiset raises the angle by a median "
+        },
+        {
+          "k": "m",
+          "v": "6.6\\times10^{4}"
+        },
+        {
+          "k": "t",
+          "v": " and removes the decay — the collapse belongs to the actual prime-power placement. Candidates P1–P4 PENDING (no promotion — bundling with T174 planned). Diary counters "
+        },
+        {
+          "k": "m",
+          "v": "172"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4601"
+        },
+        {
+          "k": "t",
+          "v": " checks (series (CLXXXIII))."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T173 ("
+            },
+            {
+              "k": "c",
+              "v": "frame_rate_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "FRAME.RATE"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "40/40"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "2.2"
+            },
+            {
+              "k": "t",
+              "v": " s, "
+            },
+            {
+              "k": "m",
+              "v": "284"
+            },
+            {
+              "k": "t",
+              "v": " windows plus "
+            },
+            {
+              "k": "m",
+              "v": "109"
+            },
+            {
+              "k": "t",
+              "v": " scramble twins over eleven preregistered frame data (A at "
+            },
+            {
+              "k": "m",
+              "v": "\\nu\\in\\{3,\\ldots,16\\}"
+            },
+            {
+              "k": "t",
+              "v": ", gap-blind B, smoothed C), "
+            },
+            {
+              "k": "m",
+              "v": "h=128"
+            },
+            {
+              "k": "t",
+              "v": "–"
+            },
+            {
+              "k": "m",
+              "v": "1447"
+            },
+            {
+              "k": "t",
+              "v": "; verdict DEFICIT-VARIES, sandbox)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The demand side itself put on the measurement table: "
+        },
+        {
+          "k": "m",
+          "v": "q=1-s"
+        },
+        {
+          "k": "t",
+          "v": " is an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exact identity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.9\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": ", from "
+        },
+        {
+          "k": "m",
+          "v": "hD=\\alpha"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "q=0.667"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.777<1"
+        },
+        {
+          "k": "t",
+          "v": " on every frame datum — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "T171's "
+            },
+            {
+              "k": "m",
+              "v": "h^{-3}"
+            },
+            {
+              "k": "t",
+              "v": " target was the "
+            },
+            {
+              "k": "m",
+              "v": "q=1"
+            },
+            {
+              "k": "t",
+              "v": " idealisation of a "
+            },
+            {
+              "k": "m",
+              "v": "\\Theta(D^{3})"
+            },
+            {
+              "k": "t",
+              "v": " law"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". The gap functional is calibrated instead of guessed (six preregistered candidates; the relative I5 gap "
+        },
+        {
+          "k": "m",
+          "v": "t/\\lambda_{\\max}(B_{LL})"
+        },
+        {
+          "k": "t",
+          "v": " hits the chain's "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " on frame A, median "
+        },
+        {
+          "k": "m",
+          "v": "3.033"
+        },
+        {
+          "k": "t",
+          "v": ", and is the only dimensionless one; "
+        },
+        {
+          "k": "m",
+          "v": "(D/\\alpha)^{3}"
+        },
+        {
+          "k": "t",
+          "v": " exposed as a tautology). The deficit, read as one slope of the per-window ratio "
+        },
+        {
+          "k": "m",
+          "v": "R=\\mathrm{GAP}/(1-r_{12}^2)"
+        },
+        {
+          "k": "t",
+          "v": ": pooled "
+        },
+        {
+          "k": "m",
+          "v": "+0.155\\pm0.102"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\times1.54"
+        },
+        {
+          "k": "t",
+          "v": " over-scatter inflation, "
+        },
+        {
+          "k": "m",
+          "v": "3.0\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " above zero), "
+        },
+        {
+          "k": "m",
+          "v": "1.8\\times"
+        },
+        {
+          "k": "t",
+          "v": " flatter than either side ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2/\\mathrm{dof}"
+        },
+        {
+          "k": "t",
+          "v": " REQ "
+        },
+        {
+          "k": "m",
+          "v": "4.87"
+        },
+        {
+          "k": "t",
+          "v": " / DEL "
+        },
+        {
+          "k": "m",
+          "v": "4.17"
+        },
+        {
+          "k": "t",
+          "v": " / difference "
+        },
+        {
+          "k": "m",
+          "v": "2.38=2.4\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " — constancy rejected), split-stable to "
+        },
+        {
+          "k": "m",
+          "v": "0.214"
+        },
+        {
+          "k": "t",
+          "v": " where both single sides drift "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.5"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "invariant under the anchor-to-grid rule at fixed "
+            },
+            {
+              "k": "m",
+              "v": "\\nu"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi^2/\\mathrm{dof}\\le0.64"
+        },
+        {
+          "k": "t",
+          "v": " — theorem candidate for that half only), not invariant under "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "2.8\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", confounded with arithmetic content under the cap; "
+        },
+        {
+          "k": "m",
+          "v": "q"
+        },
+        {
+          "k": "t",
+          "v": " the weakest driver at "
+        },
+        {
+          "k": "m",
+          "v": "0.2\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "). Honest correction to T172 (P7): in the fixed-"
+        },
+        {
+          "k": "m",
+          "v": "h^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " convention the wider surface gives "
+        },
+        {
+          "k": "m",
+          "v": "+0.015\\pm0.084"
+        },
+        {
+          "k": "t",
+          "v": " — consistent with zero — so T172's "
+        },
+        {
+          "k": "m",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "-growth was neither sign- nor split-stable (its verdict is untouched). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "R1 now stands frame-free"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the delivered near-degeneracy closes slower than the relative I5 gap it must pay, by "
+        },
+        {
+          "k": "m",
+          "v": "h^{+0.155\\pm0.102}"
+        },
+        {
+          "k": "t",
+          "v": "; no frame closes it (best "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " s.e. upper edge "
+        },
+        {
+          "k": "m",
+          "v": "+0.170"
+        },
+        {
+          "k": "t",
+          "v": " at B; "
+        },
+        {
+          "k": "m",
+          "v": "8/11"
+        },
+        {
+          "k": "t",
+          "v": " legs individually consistent with zero — pooled with the penalty, not claimed per leg) — frame shopping is over, by numbers. Stress: scramble removes the decay on "
+        },
+        {
+          "k": "m",
+          "v": "4/4"
+        },
+        {
+          "k": "t",
+          "v": " declared legs; jackknife "
+        },
+        {
+          "k": "m",
+          "v": "\\le0.026"
+        },
+        {
+          "k": "t",
+          "v": "; shuffle null "
+        },
+        {
+          "k": "m",
+          "v": "3.7\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " away. Candidates P5–P8 PENDING (no promotion — bundling with T174 planned). T174 ("
+        },
+        {
+          "k": "c",
+          "v": "CANCEL.IDENTITY"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "cancellation_identity_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") is running — the cancellation identity. Diary counters "
+        },
+        {
+          "k": "m",
+          "v": "173"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4641"
+        },
+        {
+          "k": "t",
+          "v": " checks (series (CLXXXIV))."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper + website sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": two new phase-2 subsections (T172: the four-degrees-of-freedom inventory, the "
+        },
+        {
+          "k": "m",
+          "v": "13/16"
+        },
+        {
+          "k": "t",
+          "v": " transfer, the sieve-horizon localisation, the placement finding as key result; T173: the "
+        },
+        {
+          "k": "m",
+          "v": "q=1-s"
+        },
+        {
+          "k": "t",
+          "v": " identity as display, the calibration, the compact deficit table, the honest T172 correction, the frame-free R1 statement as key result, keybox “After T173” with the cancellation identity and T174 running), section title T126"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "T173, abstract counters "
+        },
+        {
+          "k": "m",
+          "v": "173/4641"
+        },
+        {
+          "k": "t",
+          "v": ", probe index extended (T172 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " T173 rows, running totals, T174 running); "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " T172 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " T173 entries (counters "
+        },
+        {
+          "k": "m",
+          "v": "172/4601"
+        },
+        {
+          "k": "t",
+          "v": " (CLXXXIII) and "
+        },
+        {
+          "k": "m",
+          "v": "173/4641"
+        },
+        {
+          "k": "t",
+          "v": " (CLXXXIV)); website: "
+        },
+        {
+          "k": "c",
+          "v": "primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " feed entries T172 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " T173 (verdict enums PARTIALLY-PORTABLE and DEFICIT-VARIES added), status surfaces Teile 11–173 / "
+        },
+        {
+          "k": "m",
+          "v": "4641"
+        },
+        {
+          "k": "t",
+          "v": " checks ("
+        },
+        {
+          "k": "c",
+          "v": "page.tsx"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HonestyBanner.tsx"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ModuleLadder.tsx"
+        },
+        {
+          "k": "t",
+          "v": "). NO promotion (T172s P1–P4 and T173s P5–P8 PENDING — bundling with T174 planned); NO marker moves; not RH evidence."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-29",
     "dateLabel": "2026-07-29 · XVII",
     "heading": [
       {

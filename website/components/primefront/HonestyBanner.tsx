@@ -33,7 +33,7 @@ export function HonestyBanner() {
         one matrix inequality down to one sign plus one declared accounting
         convention, assembled end to end in the T125 finale, with certified steps
         as deep as zone 155,921. The series is complete at 125 parts; phase 2
-        (“the full proof”, T126+) is now open with 4557/4557 sandbox checks —
+        (“the full proof”, T126+) is now open with 4641/4641 sandbox checks —
         the seam architecture is finished (T126), both remaining inequalities
         are proof-shaped (T127), three of the four resulting points stand at
         their preregistered bars (T128), the kappa law that T128
@@ -484,8 +484,27 @@ export function HonestyBanner() {
         why it is promotable: phase 2 is now a certified map with one
         open object (R1, classified as a near-degeneracy, not a size),
         and the capstone is load-bearing as v559. T172
-        (frame_beyond_probe.py) is testing how far the map carries
-        beyond frame A. What remains
+        (PARTIALLY-PORTABLE) then tested how far the map carries beyond
+        frame A — 13 of the 16 links transfer unchanged to a gap-blind
+        frame, to ν = 3 and ν = 8, to non-prime-power anchors and to
+        both congruence classes mod 4 (none breaks; the three that
+        shift are exactly the number-carrying ones), the indefiniteness
+        is localised at the sieve horizon rather than at any frame or
+        zone, R1&apos;s near-degeneracy persists everywhere while its
+        rate is frame-bound, and the scramble at fixed Λ-value multiset
+        removes the decay: the collapse belongs to the actual
+        prime-power placement. T173 (DEFICIT-VARIES) then showed the
+        demanded rate is itself a frame datum — q = 1 − s is an exact
+        identity with q &lt; 1 on every frame of an eleven-member
+        family, so the h^−3 target was the q = 1 idealisation — and
+        made the deficit between demand and delivery the number of the
+        phase: +0.155 ± 0.102, 1.8× flatter than either side, invariant
+        under the anchor-to-grid rule and the lever split, not yet
+        constant in ν; no frame closes it, so frame shopping is over by
+        numbers, and R1 stands frame-free — the delivered
+        near-degeneracy closes slower than the relative gap it must
+        pay. T174 (cancellation_identity_probe.py) is testing whether
+        the frame factors cancel algebraically. What remains
         TFPT-specific is exactly one object: I5 in one-family form — by the
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann
