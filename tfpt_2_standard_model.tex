@@ -642,6 +642,132 @@ $\cdot$ scalaron). \emph{Audit:} the anchor-defect spectrum $\Delta_a(Q,K,R,C,L,
 corner-determinant pair-sum atlas (total $64=\dim S^+|\mu_4|$, staircase sum $81=\Nfam^4$) are recorded
 fingerprints --- the $2\dim G_2$ and $\dim F_4$ pair sums stay audit-only, like the $G_2$ center above.
 \smallskip\\
+\noindent\textbf{The parabolic self-code and the $81$ as a lattice index
+(\veri{v566\_parabolic\_anchor\_selfcode.py}).} The cross carries more than curvature: $U$ and $V$
+generate the \emph{full} $2|1$ parabolic algebra $\mathcal A$ (dim $7$, word determinant $-81$,
+multiplicatively closed) \mE; the anchor returns as the spectrum of $H=I+\tfrac12V(V-I)$ with
+$\chi_H=x^3-4x^2+5x-2$ double-coded by $(4,5,2)=(\text{flag},\text{Levi},\text{radical})$, and $m=2$
+is the unique all-integer member of the parabolic family \mE\ (details and fences in Paper 1).  Two
+findings live on \emph{this} page: (i) the \textbf{staircase sum $81$ is simultaneously a lattice
+index} --- the saturated integral order $\Z\langle U,V\rangle$ has elementary divisors
+$(1,1,1,3,3,3,3)$ in the parabolic lattice, so $[P_{\Z}:\Z\langle U,V\rangle]=3^4=81$ with cokernel
+$(\Z/3)^4$: a global determinant charge and an integral saturation index coincide \mE\ (the
+mark-local mechanism --- one $\Z/3$ per $\mu_4$ mark --- stays \mO\ with its kill condition
+recorded); (ii) the \textbf{basic algebra of $\mathcal A$ is the $A_2$ path algebra}
+($\dim\operatorname{Ext}^1=1$), so dimension-vector-$(1,1)$ modules fall into exactly \emph{two}
+isomorphism classes --- split and one nonsplit: the split/nonsplit alignment bit gains a canonical
+algebra \emph{carrier} \mE, while its \emph{selection} stays with geometry and reflection positivity
+(\vref{v528}/\vref{v534}) \mC.  The anchor power compiler is the trace code $p_n(a)=1+
+\operatorname{tr}(V^n)$ ($240$ and $\operatorname{rank}E_8$ as trace readouts) --- a re-encoding of
+the Lean AnchorLadder, typed as hardening, not as new content.
+\smallskip\\
+\noindent\textbf{The No-Carrier-Reconstruction audit, Stage A.}
+\veri{v567\_carrier\_free\_q\_reconstruction.py}\ The self-code's circularity question is
+executed as an enumeration with the carrier certificates \emph{forbidden} (the \vref{v11} budgets:
+rows $(4,5,6)$, columns $(9,5,1)$, $\chi_Q$ with its $5$; monotone rows).  Under the corpus' own
+carrier-free data --- $\Sigma$, the winding normalisation $Q(I{+}\Sigma)=2\Nfam W$ (\vref{v10}),
+$\operatorname{Spec}Q_+=\{1,2,3\}$, $Q_-^2=\Nfam P$, nonneg integrality, the seam-line demand ---
+exactly $52\to28$ (parabolic) reconstructions survive, and \textbf{all $28$ code the same anchor}
+($\chi_{H'}=x^3-4x^2+5x-2$, spectrum $(1,1,2)$): \emph{the anchor self-code is carrier-free} \mE.
+The single family invariant $81=\Nfam^4$ (the saturation index above) pins $Q$ to a
+\emph{two-element} residual family --- the compiler $Q$ ($q_{32}=2=|\Z_2|$) and its uncoupled twin
+($q_{32}=0$), difference $2E_{32}$ --- on which the anticommutator spectrum $\{6,-4,-2\}$, the
+commutator characteristic polynomial $t(t^2{+}12)$, the determinant and the saturation index all
+\emph{coincide}; the one certificate that separates them is the carrier column budget $(9,5,1)$ ---
+exactly the forbidden input \mE.  So $Q$ is carrier-free up to \emph{one binary sheet-coupling
+choice}; the carrier-free selector of that bit is open (its resonance with the split/nonsplit
+alignment bit above is a typed observation, not a claim) \mO, and whether the geometric inputs
+themselves derive from $\mu_4$/$D_4$/$H^1$ parabolic geometry is exactly \texttt{GATE.QGEO} ---
+the audit is \emph{relocated}, not closed.  Ablation honesty: dropping the winding input widens
+the bound-$3$ set $28\to1376$ (real selection load); the census is bound-stable ($B=6\to9$).
+\smallskip\\
+\noindent\textbf{The bit located, and its canonical witness.}
+\veri{v568\_bit\_selector\_ladder.py}\ The residual choice is now dissected.  (i) The two
+$81$-twins generate \emph{different integral orders} (equal index, different lattices): the bit
+is integrally visible where every classical invariant coincides \mE.  (ii) \textbf{The
+selector:} the dominant mode of the sheet direction is $v(c)=(1,2,2c)$ \emph{identically} in the
+coupling, and demanding the \emph{ladder self-consistency} --- the dominant mode reproduces its
+own eigenvalue as the geometric ladder $(2^0,2^1,2^2)=(1,2,4)$ --- selects $c=2$, the compiler
+$Q$, \emph{uniquely on all $28$ members} of the carrier-free class, with no $81$-pin and no
+column budget \mE; the witness is prior structure (the binary AnchorLadder steps $2^n$,
+$2=|\Z_2|$, the trace code), not a found number \mC.  (iii) The \emph{split} geometry sits at
+$q_{32}=1$ --- a module complement exists exactly there --- and is \emph{excluded} by the
+demands already imposed (its algebra collapses to dimension $5$): the $A_2$ Ext arrow is
+nonzero on the whole reconstruction class, so the bit does not toggle split/nonsplit; it
+toggles \emph{which} nonsplit integral order is realised \mE.  (iv) Priority-2 candidates,
+honest both ways: the $\mu_4$-grading fails (the order is not graded --- the $81$ stays a
+fingerprint), while left $V$-multiplication induces a canonical $\mathbb F_3$-action on the
+cokernel $(\Z/3)^4$ --- the mark-local question is sharpened to a concrete module computation
+\mO.  \emph{Why} the dominant mode should satisfy the ladder self-consistency is the relocated
+open question --- the same structural slot as the RP-selection of the alignment bit
+(\vref{v528}/\vref{v534}) \mO.
+\smallskip\\
+\noindent\textbf{The RP form on the twins: spectrally blind, integrally anchor-visible.}
+\veri{v572\_rp\_bit\_form.py}\ The kinematic half of that RP-slot question is executed.  With the
+corpus reflection $\theta(X)=\Sigma X^{\mathsf T}\Sigma$ (the sheet involution) and the declared
+states (trace; anchor $(1,1,2)$; ladder $(1,2,4)$; unit), the RP kernel
+$K(x,y)=\omega(\theta(x)y)$ on each twin's integral order has \emph{identical inertia} on both
+twins for every state and is never PSD --- no kinematic v534-style positivity selection exists
+(honest negative; v534's selection was nonperturbative there too) \mE.  But the \emph{integral}
+Smith towers of the anchor-state Gram \emph{separate} the twins --- $(2,2,18,18,18,18,0)$ vs
+$(2,2,2,18,18,18,0)$: one slot, $18$ vs $2$, a factor $9=\Nfam^2$ --- and the ladder state
+separates identically while the anonymous states (trace, unit) are blind: \textbf{the bit is
+visible to the RP form only through anchor-coupled states}, with the trace discriminant
+$-81^2$ on both twins (the saturation index squared) \mE.  The blindness is robust under the
+compiler's own flow (the $V$-semigroup-deformed kernels keep identical inertia on both twins
+for every state): a dynamical selection, if any, needs genuine interaction.  And the
+\emph{Gibbs pencil} of the anchor Hamiltonian delivers exactly that, at the rank level: with
+$\omega_g\propto\operatorname{tr}(e^{-gH}\,\cdot)$, $H=I+\Pi_{\mathrm{dom}}$ (the v566
+anchor operator), the pencil determinant $\det(K_0+sK_\Pi)$ factors
+$\tfrac{6561}{4096}(s^2{+}16s{+}16)^2(15s^2{-}16s{-}16)$ on the compiler twin against
+$-\tfrac{6561}{4096}(s^2{+}16s{+}16)^3$ on the alternative ($6561=81^2$, the saturation index
+squared) --- and the compiler's extra factor has its root $s^*=(8-4\sqrt{19})/15$ \emph{inside}
+the physical Gibbs range: the compiler twin's kernel degenerates at a finite critical
+temperature, the alternative twin's never does.  The first one-parameter \emph{dynamical}
+distinction of the bit.  And the critical mode is \emph{identified}: the null direction at
+$s^*$ is rank one, supported entirely on the seam row (the radical / $A_2$-Ext-carrier row),
+fixes the seam line, is a fixed point of the sheet flow ($VX=X$) and is annihilated by the
+dominant projector --- the Gibbs criticality lives exactly in the Ext-carrier slot, so the
+typed resonance with the alignment bit now has a \emph{shared carrier}.  The half-sided
+restrictions (Levi and radical sublattices) stay blind across the Gibbs range: the positivity
+selection resists every kinematic and half-sided design tried --- the genuinely
+\emph{interacting} construction (the v534 FK-quartet analogue) is the one remaining route.
+Honest typing: a rank-drop marker; the positivity selection itself stays the open RP-slot
+\mE/\mO.
+\smallskip\\
+\noindent\textbf{Stage B, first narrowing: the winding normalisation is forced.}
+\veri{v574\_stageb\_winding.py}\ Two of the five declared geometric inputs of the Stage-A audit
+relocate to \emph{consistency-forced}.  The involution \emph{type} falls to a rank theorem: any
+involution with a two-dimensional positive eigenspace gives a rank-$\le1$ sheet direction
+(char.\ poly.\ $x^2(x-t)$ identically in $Q$), so the binary trace code
+$\operatorname{Spec}V=\{0,1,2\}$ is unreachable --- only the corpus type can carry the self-code
+\mE.  The winding normalisation falls to a \emph{double self-consistency}: $(E)$ bounds
+$N\le3$ ($q_{11}=N$ must itself be an $A_3$ exponent); the ladder self-consistency selects
+exactly \emph{one} member for every $N\in\{1,2,3\}$ ($28/16/14\to1/1/1$ --- the mechanism is
+robust); and the saturation self-consistency $\mathrm{sat}=N^4$ holds \emph{only} at $N=3$
+($81=3^4$ against $32\neq1$ and $512\neq16$): the pair (ladder, saturation) pins
+$(N,Q)=(3,\text{compiler }Q)$ uniquely across the whole $N$-ablated family --- equivalently,
+only $N=3$ carries the binary trace code $p_n=2+2^n$ \mE.  The honest decomposition (the
+spectrum ablation, full $35$-spectrum scan): freeing the exponent spectrum \emph{itself}, the
+one surviving double-selfconsistent family is exactly $\{1,2,N\}$ with the compiler shape
+$Q(N)=[[N,1,0],[N,2,0],[N,2,1]]$ --- so the self-consistency forces the \emph{sheet} spectrum
+$\{1,2\}$ (the binary trace code) and the shape, while the $A_3$ exponent demand $(E)$
+contributes exactly \emph{one} datum, $N=3$: both factors are load-bearing, neither alone
+suffices \mE.  The redundancy ablation goes further: relative to the self-code demands
+(parabolic algebra $+$ ladder $+$ saturation $81$), the monodromy budget $(M)$ and the
+seam-line demand $(L)$ are \emph{redundant} at the declared bound --- dropping both widens the
+admissible class to $1274$ members and the self-code still picks exactly the compiler $Q$: the
+declared geometric input list of the reconstruction shrinks to $(S)$-existence, $(W)$-form and
+$(E)$ --- and the \emph{maximal} ablation drops $(E)$ too: the winding column $3(1,1,1)$ plus
+integrality plus the self-code package alone pin the compiler uniquely ($29$ ladder candidates,
+one hit) \mE.  And the winding form's content is located exactly: dropped entirely, the
+self-code leaves a \emph{four}-column family $\{(0,1,1),(0,3,3),(3,3,3),(5,1,5)\}$ of which
+exactly one is uniform --- the compiler: the winding demand \emph{is} the uniformity choice
+($1$ of $4$) \mE.  What stays declared is the involution \emph{existence}, the column
+\emph{uniformity} and $\Nfam=3$ (independently anchored in the $E_8$ glue, \vref{v1}):
+\texttt{GATE.QGEO.01} is narrowed by five items, \emph{not} closed; no $P2$ reduction,
+markers untouched \mC.
+\smallskip\\
 \noindent\textbf{$F_{\mathrm{transfer}}$ is a path, not four interfaces (\veri{v224\_diamond\_ftransfer\_path.py}).}
 The corners $K{=}M(1,{-}1)$, $C{=}M(1,0)$, $F{=}M(1,1)$ lie on the \emph{sheet axis} $s{=}1$: the determinant
 there is the curved $\det M(1,t)=4t^2{+}14t{+}14$ (values $(4,14,32)$, 2nd difference $8{=}\operatorname{rank}E_8$),

@@ -1,3 +1,522 @@
+=== 2026-07-31 (XIV): DER H^1-DIREKTWEG IST PER SATZ AUSGESCHLOSSEN — die Spannung
+ist jetzt ein NO-GO-THEOREM (qgeo_h1_candidate_probe.py 8/8; weiter SANDBOX ONLY) ===
+DER SATZ [E]: von den vier mu4-Charakter-Twists von H^1(P^1 minus mu4) hat nur der
+UNGETWISTETE Modul die Korpus-Gewichtsmenge {1,2,3} (jeder Twist erzeugt eine
+Gewicht-0-Linie, die das Korpus-Spektrum ausschließt); dort erzwingt Sigma = r^2 =
+(-1)^Gewicht die positive Richtung auf den GERADEN Exponenten 2, der Korpus verlangt +1
+beim UNGERADEN Exponenten 3; Spiegelungen haben den falschen Typ (2|1), und -r^2 wird von
+keinem D4-Element induziert. FOLGERUNG: innerhalb D4-induzierter Involutionen auf
+Charakter-Twists von H^1 ist die Korpus-Paarung (Sigma, Q_+) UNMÖGLICH — der direkte
+Wörterbuch-Weg ist tot, per Satz. WAS DAS TOR JETZT VERLANGT (konstruktive Gabel):
+(a) Überlagerungen/lokale Systeme mit Gewichts-MULTIPLIZITÄTEN (z.B. H^1 der mu8- oder
+Doppel-Überlagerung), oder (b) eine Involution außerhalb des D4-Bildes. GATE.QGEO.01 hat
+damit statt einer vagen offenen Frage eine bewiesene Ausschluss-Landkarte. KEINE Promotion
+(Zaun steht); Sandbox + Diary only.
+DAMIT IST DIE HEUTIGE ARBEIT AN ALLEN VIER LINIEN AN IHRER NATÜRLICHEN GRENZE: alles
+Entscheidbare ist entschieden und verbucht; die drei Forschungsfragen sind maximal scharf
+gestellt (wechselwirkende RP-Konstruktion mit gemeinsamem Ext-Träger; die Gabel (a)/(b)
+für den Gate-Rest; Schwere-Paar-Zertifikat bei Fenster-Skala).
+
+=== 2026-07-31 (XIII): SANDBOX-RUNDE — Kegel-RP blind (letzter kinematischer Weg tot),
+und ein GEOMETRIE-KANDIDAT für den Gate-Rest: H^1(P^1 minus mu4) trägt Dimension 3,
+Gewichte {1,2,3} und den Sigma-Typ (CANDIDATE-FOUND-WITH-TENSION) — NUR SANDBOX,
+GATE.QGEO.01-Zaun respektiert ===
+(1) KEGEL-RP [E, ehrliches Negativ, nur Diary]: RP-Positivität auf dem kanonischen
+Gitter-Kegel (entrywise-nichtnegative Ordnungsmitglieder, Höhe <= 6) entlang der
+Gibbs-Familie — BEIDE Zwillinge verletzen massiv und ununterscheidbar (min omega(theta(x)x)
+~ -75 überall, ~60-70% Negative). Damit ist JEDER kinematische RP-Weg erschöpft: voller
+Kern, V-Fluss, Gibbs-Pencil (nur Rang-Marker), Levi/Radikal, Kegel. Nebenbefund integral:
+die Kegel sind VERSCHIEDEN GROSS (1322 vs 1700 kleine nichtnegative Mitglieder) — noch eine
+Gitter-Sichtbarkeit des Bits. Die Selektion braucht die echte wechselwirkende Konstruktion.
+(2) DER H^1-KANDIDAT [E/C] (qgeo_h1_candidate_probe.py, 6/6, CANDIDATE-FOUND-WITH-TENSION;
+SANDBOX ONLY, kein Ledger, kein Paper — GATE.QGEO.01 sagt 'do NOT promote'): auf
+H^1(P^1 minus mu4; C) — Rang |mu4| - 1 = 3 = N_fam, ERZWUNGEN durch die Marken — wirkt die
+mu4-Deck-Rotation r (Vierer-Zyklus auf den Punktierungen) mit Eigenwerten {i, -1, -i} =
+{i^1, i^2, i^3}: die GEWICHTSMENGE IST {1,2,3} = das A3-Exponenten-Spektrum [E]; das
+ZENTRALE Halbdreh-Element r^2 (die Deck-Halbperioden-Klasse, v507) wirkt mit Signatur
+(1 positiv, 2 negativ) = EXAKT der Korpus-Sigma-Typ diag(1,-1,-1) [E]; die (+1)-Linie ist
+kanonisch die ALTERNIERENDE mu4-Klasse (Kandidat Winding-Richtung) [E]; und alle
+Spiegelungen von D4 haben den FALSCHEN Typ (2|1) — der Sigma-Typ ist innerhalb von D4
+EINDEUTIG das Zentrum [E]. EIN OBJEKT trägt also beide verbliebenen Gate-Formen ((E)-Gestalt
+und (S)-Typ). EHRLICHE SPANNUNG, benannt: die naive Zuordnung Sigma = (-1)^Gewicht setzt
++1 auf Gewicht 2, der Korpus paart die Sigma-positive Winding-Richtung mit Exponent 3
+(q11 = N = 3, Sheet-Block {1,2}) — das Gewicht-zu-Exponent-Wörterbuch ist nichttrivial und
+ist GENAU der verbleibende offene Gehalt von GATE.QGEO.01, jetzt scharf gestellt.
+KEINE Promotion, keine Marker-Bewegung; Zaun steht.
+STAND DANACH: alle ausführbaren Follow-ups sind abgearbeitet; offen bleiben die drei
+Forschungsfragen (wechselwirkende RP-Konstruktion; das Gewicht/Exponent-Wörterbuch +
+Spalten-Uniformität auf H^1; Schwere-Paar-Zertifikat) — jede mit präzisem Ansatzpunkt.
+
+=== 2026-07-31 (XII): DIE KONTINUIERLICHE CR-HÄLFTE AUSGEFÜHRT UND GESCHLOSSEN —
+UNIFLOW-DEGENERATE (v575) ===
+Der User hatte recht: die Solver liegen im Repo (v183/v184/v185 + QCD-Kette), und v425 hat
+ihre nativen Raten exakt. AUSFÜHRUNG des eingefrorenen Protokolls (cr_continuous_uniflow_
+probe.py, 7/7): die Exports — F_pole = e^{-Delta} = (2/3)^6 (v99-Generator, linearisiert am
+Attraktor q = 2, symbolisch nachgerechnet), F_Boltzmann = DIESELBE Kontraktion (v425-Single-
+Flow-Satz), F_QCD b3 = -(11 - 2*6/3) = -7, F_relic adiabatisch 1 — bilden das Quadrupel
+{(2/3)^6, (2/3)^6, 1, -7} mit ERZWUNGENER Wiederholung. SATZ [E]: ein Quadrupel mit
+Wiederholung gibt CR in {0, 1, oo} in JEDER Ecken-Zuordnung (symbolisch + alle 24
+Permutationen) — nie 4/3: die kontinuierliche Hälfte kann nativ NIE bestehen. SCHLIESSUNG
+[C]: der Grund ist v425 selbst — vier unabhängige projektive Solver-Zustände existieren
+nativ nicht; die vier unabhängigen externen Daten sind die dimensionsbehafteten Anker
+(v_geo, M_R, C_p, theta_i), [O]-Wälle, keine Projektivzustände. Der tragende CR-Gehalt war
+und bleibt die diskrete Hälfte (v571, y_F = 53 erzwungen; hier re-verifiziert). Ein
+zukünftiger kontinuierlicher Test bräuchte Anker-Level-Exports aus ECHT externen Läufen —
+außerhalb des nativen Scopes, ehrlich gesagt. BEIDE Hälften des preregistrierten Checks sind
+damit ausgeführt; Contract-Marker unverändert.
+PROMOTION: v575 (FTR.CRCONT.01, 7 Checks, <1 s); Ledger-Zeile neu + Update-Notes auf
+FTR.CRDISC.01 und CONTRACT.F.01; Contracts-Paper-Protokollblock um das Ergebnis erweitert;
+Suite 568 -> 569. Damit ist der letzte AUSFÜHRBARE Follow-up abgearbeitet — verbleibend sind
+die drei Forschungsfragen (wechselwirkende RP-Selektion; Involutions-Existenz/Uniformität
+aus der Geometrie; Schwere-Paar-Zertifikat).
+
+=== 2026-07-31 (XI): RUNDENSCHLUSS — die Winding-Form exakt lokalisiert (v574 -> 11
+Checks: ohne sie überlebt eine VIER-Spalten-Familie, genau eine uniform = der Compiler),
+und die halbseitigen RP-Restriktionen sind blind (v572 -> 11: die wechselwirkende
+Konstruktion ist die einzig verbleibende RP-Route) ===
+(1) WAS DIE WINDING-FORM WIRKLICH TUT [E] (stageb_winding_probe.py 12/12): die Winding-
+Forderung komplett gestrichen (beliebige erste Spalte 0..6), lässt das Selbstcode-Paket
+GENAU VIER Spalten übrig: {(0,1,1), (0,3,3), (3,3,3), (5,1,5)} — und genau EINE ist uniform:
+(3,3,3), der Compiler. Der tragende Gehalt der Winding-Forderung ist präzise die
+UNIFORMITÄT der Spalte (1 aus 4). FINALE DEKLARIERTE LISTE der Rekonstruktion:
+Involutions-EXISTENZ (Typ per Rangsatz erzwungen), Spalten-UNIFORMITÄT, N_fam = 3
+(unabhängig E8-Glue-verankert). GATE.QGEO.01 damit maximal verengt bei B = 6.
+(2) HALBSEITIG BLIND [E] (rp_bit_form_probe.py 11/11): die Gibbs-Kerne auf das Levi-
+Untergitter (dim 5, Trägheit (3,2)) und das Radikal-Untergitter (dim 2, (1,1)) beschränkt
+sind auf beiden Zwillingen IDENTISCH über den ganzen Gibbs-Bereich — keine Positivität,
+keine differentielle Änderung: die RP-Positivitäts-Selektion widersteht JEDEM kinematischen
+und halbseitigen Design (voller Kern, V-Fluss, Gibbs-Familie, Levi/Radikal) — die echt
+WECHSELWIRKENDE Konstruktion (v534-FK-Quartett-Analogon, jetzt mit dem gemeinsamen
+Ext-Träger als Ansatz) ist die einzig verbleibende Route. Getypt offen, ehrlich.
+EHRLICHER SCHLUSSSTAND DER OFFENEN FRAGEN: (i) wechselwirkende RP-Selektion — Konstruktion
+nötig, kein kinematischer Weg existiert; (ii) Involutions-Existenz + Spalten-Uniformität aus
+mu4/D4/H^1 — der letzte, jetzt minimale Gate-Rest; (iii) Schwere-Paar-Zertifikat — Ziel
+präzise getypt (Fenster-Skala-Kohärenz), Beweis offen; (iv) kontinuierliche CR-Hälfte —
+Protokoll eingefroren, braucht externe Läufe. Nichts davon ist heute lösbar-und-ungelöst:
+alles Verbleibende ist echte offene Forschung mit benannten Zäunen.
+SYNC: v572/v574 je 11 Checks; Ledger/Registry/run_all; tfpt_1/tfpt_2; changelog (X).
+
+=== 2026-07-31 (X): DREI FINALE VERTIEFUNGEN — die MAXIMALE Ablation (auch (E) fällt,
+v574 -> 10 Checks), der kritische Gibbs-Mode IDENTIFIZIERT (Seam-Zeile/Ext-Träger, v572 ->
+10), das Pro-Atom-Profil oszilliert (v573 -> 10) ===
+(1) MAXIMALE ABLATION [E] (stageb_winding_probe.py 11/11): auch OHNE (E) — nur (W)-Spalte
+3(1,1,1) + Ganzzahligkeit (B = 6) + Selbstcode-Paket (Parabol + Leiter + sat = 81) — bleibt
+der Compiler Q EINDEUTIG (29 Leiter-Kandidaten, 1 Treffer). (E), (M), (L) sind damit ALLE
+redundant; deklariert bleiben: Involutions-EXISTENZ (Typ erzwungen per Rangsatz), die
+Winding-FORM und N_fam = 3 (unabhängig im E8-Glue verankert, v1: 240 = 16*5*3).
+GATE.QGEO.01 um FÜNF Punkte verengt, nicht geschlossen; keine P2-Reduktion.
+(2) DER KRITISCHE MODE [E] (rp_bit_form_probe.py 10/10): der Nullraum des Compiler-Zwillings
+bei s* = (8-4 sqrt(19))/15 ist 1-dimensional und strukturell kanonisch — Rang 1, komplett in
+der SEAM-ZEILE (der Radikal-/A2-Ext-Träger-Zeile aus v566 S5), fixiert die Seam-Linie
+(X e3 = e3), FIXPUNKT des Sheet-Flusses (V X = X), vom dominanten Projektor annihiliert
+(Pi X = 0): die Gibbs-Kritikalität wohnt exakt im Ext-Träger-Slot — die getypte Resonanz
+zwischen Rekonstruktions-Bit und Alignment-Bit hat jetzt einen GEMEINSAMEN TRÄGER.
+(3) DAS PRO-ATOM-PROFIL [MEASURED] (pair_band_structure_probe.py 10/10): der Zeilensummen-
+Anteil von det S oszilliert über das Fenster mit festem Vorzeichenmuster (positiv bei
+x ~ 0.3 und 0.8, stark negativ kurz hinter der Mitte), Amplituden wachsen mit h, Netto = 1 —
+stehende-Welle-artig; mit Leiter berichtet, KEIN Mechanismus-Claim.
+SYNC: Module v572/v573/v574 je 10 Checks; Ledger/Registry/run_all; tfpt_1 (Keybox final),
+tfpt_2 (Passagen), tfpt_prime_front (T181 10/10, 4843 Checks); changelog 2026-07-31 (IX).
+VERBLEIBEND: wechselwirkende RP-Positivitäts-Selektion (jetzt mit gemeinsamem Träger als
+Ansatz); Involutions-Existenz + Winding-Form aus mu4/D4/H^1 (der letzte Gate-Rest);
+Schwere-Paar-Zertifikat (Fernband-Balance); kontinuierliche CR-Hälfte (Protokoll steht).
+
+=== 2026-07-31 (IX): ZWEI ENTSCHEIDENDE VERTIEFUNGEN — der GIBBS-PENCIL trennt die
+Zwillinge DYNAMISCH (v572 -> 9 Checks), und die REDUNDANZ-ABLATION schrumpft die
+Rekonstruktions-Inputs auf drei (v574 -> 9 Checks) ===
+(1) DER GIBBS-PENCIL [E] (rp_bit_form_probe.py 9/9): entlang der Gibbs-Familie omega_g ~
+tr(e^{-gH} .) des v566-Anker-Operators H = I + Pi faktorisiert die Pencil-Determinante
+det(K_0 + s K_Pi) EXAKT verschieden: Compiler (6561/4096)(s^2+16s+16)^2(15s^2-16s-16) vs
+Alt -(6561/4096)(s^2+16s+16)^3 — die Konstante 6561 = 81^2 ist das Saturationsindex-Quadrat;
+beide K_Pi haben Rang 6; die gemeinsamen Wurzeln -8 +- 4 sqrt(3) liegen AUSSERHALB des
+Gibbs-Bereichs s in (-1, 0], aber der Extra-Faktor des Compilers hat s* = (8 - 4 sqrt(19))/15
+= -0.629 INNEN: der COMPILER-Zwilling degeneriert bei endlicher kritischer Temperatur, der
+Alt-Zwilling NIE — die erste Ein-Parameter-DYNAMISCHE Unterscheidung des Bits. EHRLICH:
+Rang-Abfall-Marker, keine Positivitäts-Selektion; die wechselwirkende RP-Frage bleibt offen.
+Zusatz [E]: die V-Halbgruppen-Deformation bleibt blind (Trägheit identisch, n = 1..3).
+(2) DIE REDUNDANZ-ABLATION [E] (stageb_winding_probe.py 10/10): relativ zum Selbstcode-Paket
+(Parabol + Leiter + sat = 81) sind (M) UND (L) REDUNDANT bei B = 6 — (L) gestrichen: 52er-
+Klasse, Compiler eindeutig; BEIDE gestrichen: 1274er-Klasse, Compiler WEITER eindeutig. Die
+deklarierte geometrische Input-Liste der Rekonstruktion schrumpft auf (S)-Existenz, (W)-Form
+und (E); mit v574s Typ- und N-Forcing ist GATE.QGEO.01 jetzt um VIER Punkte verengt (nicht
+geschlossen; keine P2-Reduktion, Marker unberührt).
+(3) EXPLORATIV (nur Diary): Mechanismus-Jagd auf dem Referenzfenster — KEIN dominantes Paar
+(max |Beitrag| ~ 0.006 x det S, Millionen kohärenter Kleinbeiträge — konsistent mit dem toten
+Zwei-Atom-Zeugen, v570); Feinstruktur nach kleinerem Atom: die kleinsten Primzahlen (2, 3)
+ziehen netto NEGATIV, mittlere (11..41) tragen positiv (Top-|w|-Subset; volle Aggregation
+offen). Kein Claim, kein Modul.
+SYNC: v572 9 Checks, v574 9 Checks; Ledger/Registry/run_all; tfpt_1 (Keybox), tfpt_2 (RP- +
+Stage-B-Blöcke); changelog 2026-07-31 (VIII); Suite unverändert 568 Scripts.
+VERBLEIBEND: die wechselwirkende RP-Positivitäts-Selektion (jetzt mit dem Gibbs-kritischen
+Punkt als Ansatz); die Fernband-Balance als Schwere-Paare-Frage (volle Aggregation); (E) und
+(S)-Existenz/(W)-Form aus mu4/D4/H^1; die kontinuierliche CR-Hälfte (Protokoll eingefroren).
+
+=== 2026-07-31 (VIII): DIE VIER LINIEN VERTIEFT (gleiche Runde) — v573 -> 9 Checks
+(Anatomie geschärft), v572 -> 7 (Fluss-Robustheit), v574 -> 8 (Spektrum-Zerlegung),
+CR-Protokoll eingefroren ===
+(A) v573/T181 GESCHÄRFT [MEASURED]: der Überschuss ist SKALEN-GEBUNDEN (Paare >= h/2 tragen
+ihn, Bänder 16..256 bleiben negativ) und GEWICHTS-KONZENTRIERT — die Top-10%-Gewichtspaare
+allein netto 0.85..1.00 x det S auf jedem Fenster: im Wesentlichen det S selbst, alles unter
+dem Top-Dezil hebt sich zu ~0; das Gitter-Phasenprofil ist flach (Spread schrumpft mit h) —
+der Phasen-Mechanismus-Kandidat ist tot. Zertifikat-Ziel präzise: SCHWERE PAARE bei
+FENSTER-SKALA-Separation.
+(B) v572 ERWEITERT [E, ehrliches Negativ verstärkt]: die spektrale Blindheit ist ROBUST
+unter dem compiler-eigenen Fluss — die V-Halbgruppen-deformierten Kerne K_n = omega(theta(x)
+V^n y), n = 1..3, halten identische Trägheit auf beiden Zwillingen für jeden Zustand (die
+Deformation bewegt die Trägheit (3,1,3) -> (2,3,2), aber nie differentiell): eine dynamische
+Selektion braucht echte WECHSELWIRKUNG, keine Halbgruppen-Gewichtung.
+(C) v574 ZERLEGT [E, ehrliche Korrektur der Rahmung]: Spektrum-Ablation (voller
+35-Spektren-Scan, Probe): auch mit freiem Exponenten-Spektrum überlebt GENAU die
+Ein-Parameter-Familie Spektrum = {1,2,N}, Gestalt Q(N) = [[N,1,0],[N,2,0],[N,2,1]] (sat = N^4
+für alle N) — die Doppel-Selbstkonsistenz erzwingt das SHEET-Spektrum {1,2} (binärer Code)
+und die GESTALT; die A3-Exponenten-Forderung (E) liefert genau EIN Datum: N = 3. Beide
+Faktoren tragend, keiner allein.
+(D) CR-PROTOKOLL EINGEFROREN [X, Design]: die kontinuierliche Hälfte exportiert pro Instanz
+VOR der Auswertung den Fixpunkt-Multiplikator ihres nativen Flusses (v425-Raten; F_pole
+(2/3)^6 exakt im Korpus, die drei anderen extern) als Projektivzustand auf dem Pfad; erst
+dann CR = 4/3, keine Nach-Normierung. Marker unverändert.
+SYNC: Module 7/9/8 Checks; Ledger/Registry/run_all; tfpt_1/tfpt_2/tfpt_3; prime_front 4842
+Checks, T181-Index 9/9; Paper II Cross-Ref; contracts; changelog (VII); Website.
+
+=== 2026-07-31 (VI): ALLE VIER FOLLOW-UPS AUSGEFÜHRT — v571 (CR-Check diskrete Hälfte, y_F = 53 Möbius-erzwungen), v572 (RP-Form anker-sichtbar), v573/T181 (Dominanz LANGSTRECKIG), v574 (Stage B: N_fam = 3 ERZWUNGEN) ===
+(1) v571 / FTR.CRDISC.01 [E/C] (cr_discrete_corners_probe.py, 9/9, CR-PASSES): der
+preregistrierte CR-Check (v566 S9, Review-Prio 4) auf seiner DISKRETEN Hälfte ausgeführt —
+die vier Solver-Ecken liegen im Repo als Sheet-Diamond-Kerne J,K,C,F = M(1,t), t = −2..1
+(v224, dets (2,4,14,32)); das eine kanonische deklarierte Solver-Funktional des Korpus, die
+Koide-Anker-Antwort ell(M) = a^T M 1 (v183), liest (26, 35, 44, 53): CR = 4/3 EXAKT, und die
+fit-freie Rekonstruktion ERZWINGT y_F = 53 aus (26,35,44) allein — die Koide-Zahl ist
+Möbius-bestimmt durch die drei Upstream-Ecken (neue exakte Quer-Ecken-Identität).
+Ehrlichkeits-Satz laut gesagt: ell ist affin auf dem Pfad (Schritt 9 = N_fam²), JEDES lineare
+Funktional besteht — der Check trennt linear von nichtlinear (Determinanten 28/25, dominanter
+Eigenwert 1.3222 scheitern wie sie müssen). Die KONTINUIERLICHE Hälfte (externe Solver
+exportieren eigene Zustände) bleibt offen, genau wie CONTRACT.F.01 es zäunt.
+(2) v572 / DIAMOND.BIT.RPFORM.01 [E] (rp_bit_form_probe.py, 6/6, ANCHOR-VISIBLE): die
+kinematische RP-Form auf den 81-Zwillingen — SPEKTRAL BLIND (identische Trägheit für jeden
+deklarierten Zustand: Spur (4,0,3), Anker/Leiter/Einheit (3,1,3); nie PSD — keine kinematische
+v534-Selektion möglich, ehrliches Negativ, konsistent mit v567), aber INTEGRAL ANKER-SICHTBAR:
+die Smith-Türme des Anker-Zustands-Grams trennen die Zwillinge in genau einem Slot (18 vs 2 =
+Faktor 9 = N_fam²) — der Compiler-Zwilling trägt ein extra 3²; der Leiter-Zustand trennt
+identisch, anonyme Zustände (Spur, Einheit) sind blind: das Bit ist der RP-Form NUR durch
+anker-gekoppelte Zustände sichtbar. Spur-Diskriminante −6561 = −81² auf beiden. q32 = 1
+kollabiert auf dim 5 (v568 reproduziert). Die dynamische RP-Frage bleibt der offene RP-Slot.
+(3) v573 / PRIME.PAIRBAND.01 [E/M] — siehe Teil 181 unten.
+(4) v574 / QGEO.WINDING.SELF.01 [E/C] (stageb_winding_probe.py, 7/7, FORCED): Stage B, erste
+Verengung — der Involutions-TYP fällt per Rang-Satz (jede Involution mit 2-dim Plus-Raum gibt
+V' vom Rang ≤ 1, Charpoly x²(x−t) identisch in Q: der binäre Trace-Code {0,1,2} unerreichbar);
+(E) SCHRANKT N (Spalte 1 = (N,N,N), also q11 = N muss A3-Exponent sein — N ∈ {4,5,6} leer);
+die Leiter-Selbstkonsistenz ist ROBUST (für jedes N ∈ {1,2,3} genau EIN Mitglied: 28/16/14 →
+1/1/1); und sat = N⁴ gilt NUR bei N = 3 (N=1: 32 ≠ 1; N=2: 512 ≠ 16; N=3: 81 = 3⁴): die
+DOPPELTE Selbstkonsistenz (Leiter + Saturation) pinnt (N, Q) = (3, Compiler-Q) eindeutig —
+N_fam = 3 verlagert sich von deklariertem Input zu konsistenz-erzwungen; äquivalent die
+V-Spektren {0,2,3}/{0,1,3}/{0,1,2}: nur N = 3 trägt den binären Trace-Code p_n = 2 + 2^n.
+EHRLICH: (E)(M)(L) bleiben deklariert — GATE.QGEO.01 um zwei Punkte verengt, NICHT geschlossen;
+B = 6 deklariert; KEINE P2-Reduktion, Marker unberührt.
+PROMOTIONEN: v571 (9 Checks), v572 (6), v573 (6), v574 (7); vier Ledger-Zeilen neu +
+Update-Notes auf CONTRACT.F.01, DIAMOND.BIT.SELECT.01, PRIME.PENCIL.SEPFLOOR.01, QGEO.QRECON.01;
+Suite 564 -> 568. SYNC: tfpt_research_contracts (CR-Block „executed, discrete half"),
+tfpt_1/tfpt_2 (RP-Form- + Stage-B-Passagen), tfpt_3 (Paarband-Block), tfpt_prime_front
+(verified layer 30 -> 31, sec:v573 + sec:t181, Zähler 181/4839), Paper II (Cross-Ref-Zeilen +
+„twelve modules"), changelog 2026-07-31 (VI), Website/README/zenodo 568.
+VERBLEIBENDE WORKSTREAMS: die kontinuierliche CR-Hälfte (externe Solver-Zustände); der
+dynamische RP-Selektor (v534-Analogon auf den Zwillingen, interagierend); die h-uniforme
+Langstrecken-Dominanz (Fernband-Balance); GATE.QGEO.01-Rest: (E)(M)(L) aus mu4/D4/H^1.
+
+# 2026-07-31 (VII) — Teil 181 (RÜCKFLUSS, Vertrag PRIME.PAIRBAND): pair_band_structure_probe.py — **LONG-RANGE — WO DIE DOMINANZ WOHNT: JEDES NAHBAND ZIEHT NEGATIV, DER GESAMTE ÜBERSCHUSS SITZT JENSEITS VON 16 LAG-ZELLEN** (achte Rückfluss-Probe — die von T180 getypte Frage „wo sitzt die Dominanz, damit ein Zertifikat weiß, worauf es zielt?" per Paarkern-Sektion beantwortet; Konstruktionsbasis: der deklarierte v563-Scan READ-ONLY, deklariertes Kernel-Subset jedes 12. Fenster ≤ 16000 Atome + Referenz h = 540; 6/6 Checks grün, 5.9 s, Sandbox). P1 [E]: die Cauchy-Binet-Band-Zerlegung ist EXAKT pro Fenster (Diagonale + sechs deklarierte Bänder = det S, schlechteste Abweichung ≤ 1e−9). P2 [MEASURED]: JEDES Nahband (< 16 Lag-Zellen) UND die Diagonale sind NEGATIV auf jedem gewählten Fenster — die Nahdiagonal-Region ist systematischer Ballast, nicht Quelle: jedes Nahdiagonal-Massenbudget zielt auf das FALSCHE VORZEICHEN. P3 [MEASURED]: das Fernband (≥ 16 Zellen) trägt den GESAMTEN Überschuss — netto far/det S ∈ [1.55, 1.91] stabil, während die Brutto-Positivmasse 4.1 → 13.0 × det S wächst: die Dominanz ist LANGSTRECKEN-KOHÄRENZ, nicht lokale Masse (die 8:9-Cancellation vertieft sich mit h, das Netto trackt det S). P4 MUST-BREAK in beide Richtungen [E]: der Positions-Scramble (gleiche Massen) SPRENGT det S um ×49 (die echte Platzierung hält det S ~50× UNTER Zufall — die Fast-Cancellation in det S selbst ist arithmetisch!) und kollabiert den Fernband-Anteil unter 1 — die Kohärenz ist arithmetische Platzierung. EHRLICH: nur deklarierte Fläche/Subset; MEASURED mit Leitern (v562-Anti-Promotion); Konsequenz ist eine TYPISIERUNG der offenen v570-Dominanzfrage (ihr Zertifikat muss ≥ 16-Zellen-Paarkohärenz kontrollieren; Chebyshev-Nahbudgets erreichen sie nicht); keine Rate, keine Schranke, KEIN RH-Statement; Problem 7.1 unberührt. **PROMOTION: v573 (PRIME.PAIRBAND.01, 6 Checks, ~6 s)**; Ledger-Zeile neu + Update-Note auf PRIME.PENCIL.SEPFLOOR.01. — 6/6, 5.9 s, Sandbox
+
+# 2026-07-31 (V) — Teil 180 (RÜCKFLUSS, Vertrag SEPARATION.FLOOR): separation_floor_probe.py — **FLOOR-CERTIFIED — DIE T179-OFFENE-FRAGE AUF DER FLÄCHE GESCHLOSSEN: DIE ZUSCHAUER-SEPARATION AUS GESCHLOSSENEN SKALAREN ZERTIFIZIERT** (siebte Rückfluss-Probe — die von v569 benannte offene Frage „bleibt λ1 von der 1 separiert?" wird per REDUKTION beantwortet statt per Messung; Konstruktionsbasis: derselbe deklarierte T170-Frame-A-Scan aus v563, READ-ONLY; 9/9 Checks grün, 13.6 s, Sandbox). DIE REDUKTION [E, symbolisch]: für den reellen Pencil Z = B⁻¹S geben P = det Z = det S/det B > 0 und T = tr Z > 0 sofort λ1 ≥ √P (λ1² − P = λ1(λ1−λ2) exakt), und P ≤ 0 gibt λ1 = T − λ2 ≥ T — der geschlossene Pro-Fenster-Floor F = √P bzw. T reduziert die Separationsfrage auf DETERMINANTEN-/SPUR-DOMINANZ des Comb-Blocks über den Arch-Block, mit T = D(B,S)/det B, P = det S/det B und 1 − T + P = det(B−S)/det B als geschlossenen Objekten von (B,S). DIE ZERTIFIZIERUNG [E, zentral]: auf ALLEN 70 deklarierten Fenstern ist der Floor sound (λ1 ≥ F) und reißt die Marge — min F = 2.130 ≥ 1.05: die v569-Separation ist keine bloß gemessene Eigenwert-Tatsache mehr, sie FOLGT aus det S/det B und tr Z allein (konservativ gegen das gemessene min λ1 = 4.534, wie ein Floor soll). DIE DOMINANZ [MEASURED, Flächen-Leiter]: P ∈ [4.5, 120.6], Median 30.1, wächst mit h^0.900 — keine Ratenaussage jenseits der Fläche. EHRLICHES NEGATIV [E]: die billige Zeugen-Route ist TOT — det S ist selbst ein Paar-Level-Cancellation-Objekt (Cauchy-Binet exakt bei 4.5e−14; negative Paarmasse bis 13.7× det S, Median 8.0×; bester Einzelpaar-Zeuge nur 0.13–0.34× det B gegen die nötigen ≥ 1.10): KEIN Zwei-Atom-Zeuge zertifiziert die Dominanz — die h-uniforme Frage ist als Paar-Level Size-vs-Cancellation getypt (eine 8:9-Cancellation, keine 4.7-Ordnungen — aber nicht gratis). MUST-BREAK: der Positions-Scramble FLIPPT das Spur-Vorzeichen (T = −78.28 vs +32.15 echt) — das T-Gate detektiert die zerstörte Geometrie laut; die Dominanz ist ARITHMETISCHE PLATZIERUNG. EHRLICH: nur die deklarierte endliche Fläche — die h-uniforme Dominanz det S ≥ (1+c)² det B ist DIESELBE offene Frage, die v569 benannt hat, jetzt in schärferer geschlossener Skalarform; Problem 7.1 unberührt; MEASURED bleibt MEASURED; keine Rate, keine Schranke, KEIN RH-Statement. **PROMOTION: v570 (PRIME.PENCIL.SEPFLOOR.01, 8 Checks, ~13 s)**; Ledger-Zeile neu + Update-Note auf PRIME.PENCIL.ONEMODE.01; Suite 563 -> 564. SYNC: tfpt_prime_front (verified layer 29 -> 30, Subsections sec:v570 + sec:t180, Index T11–T180, Zähler 180 Proben / 4833 Checks), Paper II (Cross-Ref-Zeile + „eleven modules"), tfpt_3 (Audit-Block), changelog 2026-07-31 (V), Website (Feed T180 + v570, ModuleLadder, suite.ts 564, Zähler), README/zenodo 564. VERBLEIBENDE WORKSTREAMS: Prio 4 (Solver-Projektivzustände + CR = 4/3 — braucht externe Läufe); Stage B (GATE.QGEO.01); RP-Begründung der Leiter-Selbstkonsistenz; NEU GESCHÄRFT: die h-uniforme Paar-Level-Dominanz det S ≥ (1+c)² det B. — 9/9, 13.6 s, Sandbox
+
+# 2026-07-31 (IV) — Teil 179 (RÜCKFLUSS, Vertrag LAMBDA.PENCIL): lambda_pencil_probe.py — **ONE-MODE — DIE PRIO-5-FRAGE DES SELBSTCODE-REVIEWS AUF DER ERREICHBAREN FLÄCHE BEANTWORTET, MIT KORRIGIERTEM LABEL** (sechste Rückfluss-Probe — der v566-S8-Pencil, symbolisch bewiesen, wird auf der ECHTEN Paper-II-Fläche ausgeführt; Konstruktionsbasis: der deklarierte T170-Frame-A-Scan aus v563, READ-ONLY importiert, bit for bit — keine neue Fläche, kein neues Instrument; 4/4 Checks grün, 1.7 s, Sandbox). L1 DIE PENCIL-IDENTITÄTEN SIND MASCHINEN-DICHT AUF DER ECHTEN FLÄCHE [E]: det(B−S) = det B (1−λ1)(1−λ2), D(B,S) = det B (λ1+λ2), det S = det B λ1λ2 auf ALLEN 70 Fenstern, schlechtestes relatives Residuum 2e−14 (B und S sind auf dieser Fläche beide NEGATIV definit — Vorzeichenkonvention des v563-Builds; Z = B⁻¹S = (−B)⁻¹(−S) ist konventionsfrei). L2 DIE LABELS SIND UMGEKEHRT ZUM REVIEW-TIPP [MEASURED, ehrlich]: der LOCKING-Mode ist λ2, klebt an der 1 (Median 1.000021, Bereich [−0.85, 1.0005]), während der Zuschauer λ1 GROSS ist (4.53..180.64, jedes Fenster > 1) — das Review tippte den separierten Mode UNTER 1; auf der echten Fläche sitzt er weit DARÜBER. L3 DIE PRIO-5-ANTWORT [MEASURED, deklarierte Fläche]: GENAU EIN Eigenwert kann sich der 1 nähern — min |1−λ1| = 3.53 über ALLE 70 Fenster, also ist det(I−Z)/(1−λ2) = 1−λ1 uniform von Null weg beschränkt: die ZWEIDIMENSIONALE Cancellation von Paper II reduziert sich auf den EINEN Skalar 1−λ2 auf der ganzen erreichbaren Fläche — die Pencil-Route LEBT. L4 REFERENZFENSTER [E]: auf h = 540 ist 1−λ2 = −2.27e−5 und der Pencil reproduziert det Â = 4.22e−3 exakt (die 4.7-Ordnungen-Cancellation IST der eine Locking-Faktor). MUST-BREAK: der Positions-Scramble (uniform u bei GLEICHEN Massen, die v563-Intervention) sprengt |1−λ2| um ×1.9e6 und zerstört die Pencil-Geometrie (beide Eigenwerte negativ), während die Identitäten bei 1.5e−14 weiterhalten — das Locking ist ARITHMETISCHE PLATZIERUNG, kein Identitäts-Artefakt. EHRLICH: NUR die deklarierte endliche Fläche — der offene Paper-II-Quantor (Problem 7.1, uniform δ ≤ C h^(−3+ε)) ist UNBERÜHRT, seine Struktur ist GETYPT (ein skalarer Mode), nicht beschränkt; ob λ1 separiert bleibt wenn h wächst, ist eine NEUE benannte offene Frage, strikt schwächer als Problem 7.1; MEASURED bleibt MEASURED (v562-Anti-Promotion); keine Rate, keine Schranke, KEIN RH-Statement. **PROMOTION: v569 (PRIME.PENCIL.ONEMODE.01, 6 Checks, ~2 s) — der exakte Kern als tragendes Modul** (Fläche eingefroren 70 Fenster; Identitäten; Labels; Ein-Moden-Antwort; Referenzfenster; Scramble-Must-break); Ledger-Zeile neu + Update-Notes auf PRIME.PAPER2.READOUT.01 und DIAMOND.PARA.SELFCODE.01; Suite 562 -> 563. SYNC: tfpt_prime_front (verified layer 28 -> 29 Module, v569-Subsection sec:v569, T179-Subsection sec:t179, Index T11–T179, Zähler 179 Proben / 4824 Checks), Paper II (Cross-Ref-Zeile Prob. R1 + Reproduzierbarkeit „ten modules v555–v563 und v569"), changelog 2026-07-31 (IV), Website (primeFront T179 + v569, ModuleLadder, suite.ts 563, page.tsx-Zähler), README/zenodo 563. VERBLEIBENDE WORKSTREAMS: Prio 4 (Solver-Projektivzustände + CR = 4/3 — Design, braucht externe Solver-Läufe); Stage B (GATE.QGEO.01); die physikalische Begründung der Leiter-Selbstkonsistenz (RP-Slot); NEU: bleibt λ1 separiert für wachsendes h (strikt schwächer als Problem 7.1)? — 4/4, 1.7 s, Sandbox
+
+=== 2026-07-31 (III): v568 -- das Rest-Bit LOKALISIERT und mit kanonischem
+Zeugen versehen (SELECTOR-FOUND); Prio 3 ausgefuehrt, Prio 2 geschaerft ===
+Fusion der Review-Prios 2+3 mit dem v567-Rest-Bit (bit_selector_probe.py,
+10/10).
+(1) DAS BIT IST INTEGRAL SICHTBAR [E]: die beiden 81-Zwillinge (q32 = 2 =
+|Z2| vs 0) erzeugen VERSCHIEDENE integrale Ordnungen -- Hermite-Basen
+verschieden bei GLEICHEM Index 81 und gleichen Smith-Teilern: echte
+integrale Struktur, wo jede klassische Invariante uebereinstimmt.
+(2) DER SELEKTOR [E]: der dominante Mode der Sheet-Richtung erfuellt
+V_c (1,2,2c)^T = 2 (1,2,2c)^T identisch in der Kopplung c; die LEITER-
+SELBSTKONSISTENZ -- der dominante Mode reproduziert seinen eigenen
+Eigenwert als geometrische Leiter (2^0,2^1,2^2) = (1,2,4) -- erzwingt
+c = 2: auf ALLEN 28 Mitgliedern der carrier-freien v567-Klasse erfuellt
+sie GENAU EINES, das Compiler-Q -- ohne 81-Pin, ohne Spaltenbudget.
+(3) DER ZEUGE IST VOR-STRUKTUR [C] (No-Free-Pattern): (1,2,4) ist die
+binaere AnchorLadder-Schrittfolge p_{n+1}-p_n = 2^n (Lean-formalisiert),
+2 = |Z2| das Sheet-Datum, und der v566-Trace-Code p_n = 1 + tr(V^n) =
+2 + 2^n reitet dieselbe Leiter.
+(4) DIE SPLIT-GEOMETRIE LOKALISIERT UND AUSGESCHLOSSEN [E]: ein
+invariantes Modul-Komplement der Seam-Linie existiert GENAU bei q32 = 1
+(exakter Solve; die Ebene span((1,0,0),(0,1,1)) ist dort invariant) --
+und dessen Algebra KOLLABIERT auf Dimension 5 (keine volle Parabol, keine
+81): die Seam-Linien- + Saettigungs-Forderungen lassen NUR nichtsplit-
+Geometrie zu -- der v566-A2-Ext-Pfeil ist auf der ganzen Rekonstruktions-
+klasse NICHTNULL; keiner der Zwillinge splittet: das Bit toggelt NICHT
+split/nichtsplit, sondern WELCHE nichtsplit-Ordnung realisiert wird und
+ob der dominante Mode die volle Binaerleiter traegt.
+(5') NACHTRAG (gleicher Commit): die F3[V]-Charakterrechnung AUSGEFUEHRT --
+Charpoly x(x-1)^2(x+1) mod 3, Eigenwerte {0,1,1,-1} (NICHT das regulaere
+mu4-Muster x^4-1; U wirkt als Null; beide Zwillinge identisch): nach zwei
+Kandidaten bleibt die 81 Fingerprint; v568 auf 11 Checks erweitert.
+(5) PRIO-2-KANDIDATEN [E], ehrlich in beide Richtungen: der mu4-Grading-
+Kandidat deg(E_jk) = g_k - g_j mod 4 SCHEITERT (die Ordnung ist kein
+graduiertes Untergitter: 5/7 Hermite-Vektoren homogen) -- die Kill-
+Bedingung feuert NICHT, die 81 bleibt Fingerprint; Links-Multiplikation
+mit V ERHAELT das Ordnungsgitter und induziert eine kanonische F3-Wirkung
+auf dem Kokern (Z/3)^4 -- die marken-lokale Frage ist auf eine konkrete
+Modulrechnung geschaerft (F3[V]-Charaktere vs die vier Marks), benannt
+offen.
+EHRLICH: die PHYSIKALISCHE Selektion ist NICHT hergeleitet -- warum der
+dominante Mode die Leiter-Selbstkonsistenz erfuellen soll, ist die
+verlagerte offene Frage (derselbe strukturelle Slot wie die RP-Selektion
+des Alignment-Bits, v528/v534); die Resonanz zwischen Rekonstruktions-Bit
+und Alignment-Bit bleibt GETYPTE BEOBACHTUNG; Stage B (GATE.QGEO.01)
+unberuehrt; KEINE P2-Reduktion; Marker unberuehrt.
+PROMOTION: v568 (DIAMOND.BIT.SELECT.01, 10 Checks, ~1 s); Ledger-Zeile
+neu + Update-Notes auf QGEO.QRECON.01 und DIAMOND.PARA.SELFCODE.01;
+Suite 561 -> 562. SYNC: tfpt_1 (Selektor-Anhang am Stage-A-Absatz),
+tfpt_2 (eigener Bit-Absatz nach dem Audit-Absatz), changelog 2026-07-31
+(III), README/zenodo/suite.ts 562.
+VERBLEIBENDE WORKSTREAMS: Prio 2' (die F3[V]-Charakterrechnung auf dem
+Kokern vs die vier Marks -- jetzt mit konkretem Objekt); Prio 4
+(Solver-Projektivzustaende + CR = 4/3); Prio 5 (lambda_secondary(Z) < 1
+im Prime-Front-Pencil, auf der deklarierten v562-Flaeche); Stage B
+(GATE.QGEO.01); und die physikalische Begruendung der Leiter-
+Selbstkonsistenz (der RP-Slot).
+
+=== 2026-07-31 (II): v567 -- No-Carrier-Reconstruction Stage A AUSGEFUEHRT:
+RECONSTRUCTS-TO-FAMILY -- der Anker-Selbstcode ist carrier-frei, Q bis auf
+EIN binaeres Sheet-Kopplungs-Bit ===
+Prio 1 des Selbstcode-Reviews ("die eine brutale Frage: kann V ohne Anker
+und Carrier rekonstruiert werden?") als Enumerations-Audit ausgefuehrt
+(carrier_free_q_reconstruction_probe.py, 10/10).
+DIE ZIRKULARITAET LOKALISIERT: v11s Eindeutigkeitszertifikat fuer Q nutzt
+Zeilensummen (4,5,6), Spaltensummen (9,5,1) und chi_Q = (t-1)(t^2-5t+3) --
+die 5 = g_car steckt in den Budgets UND in chi_Q. Alles VERBOTEN im Audit.
+ERLAUBT (carrier-frei, mit Korpus-Quelle): (S) Sigma = diag(1,-1,-1) [v10,
+Sheet]; (W) Q(I+Sigma) = 2 N_fam W [v10, Winding]; (E) Spec(Q_+) = {1,2,3}
+[FLAV.QGEO.01, A3-Exponenten]; (M) Q_-^2 = N_fam P idempotent
+[FLAV.QGEO.01]; (Z) nichtneg. Integers, Schranke 6 (robust bei 9); (L) die
+Seam-Linien-Forderung [geometrisch, [C]]; (X) der Saettigungsindex N_fam^4
+= 81 [v566 S4].
+ERGEBNISSE [E]: (1) GENAU 52 zulaessige Matrizen unter (S)(W)(E)(M)(Z);
+Korpus-Q dabei; (W) erzwingt die erste Spalte N_fam(1,1,1). (2) Die
+Seam-Linien-Forderung beisst: 52 -> 28. (3) DER ANKER IST CARRIER-FREI:
+ALLE 28 parabolischen Mitglieder codieren DENSELBEN Anker -- H' = I +
+Pi_dom(V') hat chi = x^3 - 4x^2 + 5x - 2, Spektrum (1,1,2) = a, EINE
+Code-Klasse, keine Ausnahme: der v566-Selbstcode sitzt UPSTREAM der
+Carrier-Budgets (konditional auf die deklarierten geometrischen Inputs).
+(4) DAS REST-BIT: der 81-Pin selektiert GENAU ZWEI Mitglieder -- Korpus-Q
+(q32 = 2 = |Z2|) und Q_alt (q32 = 0), Differenz 2 E32 (die
+Sheet-Block-Kopplung); JEDES klassische carrier-freie Zertifikat stimmt
+auf dem Paar ueberein (Antikommutator-Spektrum {6,-4,-2} = (|R+(A3)|,
+-|mu4|, -|Z2|); Kommutator-Charpoly t(t^2+12); det = 3; Saettigung 81) --
+das EINZIGE trennende Zertifikat ist das Carrier-Spaltenbudget (9,5,1) vs
+(9,3,1), also exakt der verbotene Input: die Restfreiheit ist EIN binaeres
+gekoppelt-vs-ungekoppelt-Bit im Sheet-Block. (5) Ablationen: ohne (W)
+weitet sich die Schranke-3-Menge 28 -> 1376 ueber 36 erste Spalten (echte
+Selektionslast); Schranken-Robustheit 6 -> 9: null neue (L)+(X)-Mitglieder;
+die verbotenen Inputs wurden nirgends ausgewertet.
+EHRLICH, LAUT: STAGE A ONLY -- ob (S)(W)(E)(M)(L) selbst aus
+mu4/D4/H^1-Parabolgeometrie ohne Familien-/Sheet-Inputs herleitbar sind,
+ist EXAKT das offene Gate GATE.QGEO.01: der Audit ist DORTHIN VERLAGERT,
+nicht geschlossen (N_fam = 3 durchgehend benutzt; Familien-Daten waren nie
+verboten -- die Verbotsliste ist die CARRIER-Liste); der carrier-freie
+Selektor des Rest-Bits ist OFFEN, seine strukturelle Resonanz mit der
+split/nichtsplit-Alignment-Bit-Dichotomie (v528/v534, v566 S5) ist eine
+GETYPTE BEOBACHTUNG, kein Claim; KEINE P2-Reduktion --
+AX.P2.01/ANCHOR.GEN.01-Marker unberuehrt.
+PROMOTION: v567 (QGEO.QRECON.01, 9 Checks, ~1 s -- Integer-Prefilter
+druecken die Probe-Laufzeit 555 s -> 1.2 s im Modul); Ledger-Zeile neu +
+Update-Notes auf FLAV.QGEO.01 und DIAMOND.PARA.SELFCODE.01; Suite 560 ->
+561. SYNC: tfpt_1 (Stage-A-Ergebnis im Selbstcode-Absatz), tfpt_2 (eigener
+Audit-Absatz nach dem Selbstcode-Block), changelog 2026-07-31 (II),
+README/zenodo/suite.ts 561.
+VERBLEIBENDE WORKSTREAMS (Reihenfolge des Reviews): Prio 2 marken-lokale
+Z/3-Zerlegung der 81 (endlich, Lean/Smith-geeignet); Prio 3 split/
+nichtsplit-Seam-Varianten VOR der Auswahl (jetzt doppelt motiviert: das
+v567-Rest-Bit UND der A2-Ext-Traeger zeigen auf dieselbe Stelle); Prio 4
+Solver-Projektivzustaende + CR = 4/3; Prio 5 lambda_secondary(Z) < 1 im
+Prime-Front-Pencil; Stage B: GATE.QGEO.01 (die geometrischen Inputs selbst
+herleiten).
+
+=== 2026-07-31 (I): v566 -- der parabolische Anker-Selbstcode: externer
+Struktur-Review AUDITIERT (23/23, SELFCODE-VERIFIED) und promoviert ===
+Ein externer Review las den Korpus als Abhaengigkeitsgraph und schlug eine
+Kette exakter Saetze ueber die v218-Diamond-Richtungsoperatoren U = Q
+diag(1,0,0), V = Q diag(0,1,1) vor. Audit-Probe
+parabolic_selfcode_audit_probe.py: JEDE [E neu]-Behauptung haelt exakt gegen
+die Korpus-Objekte -- inklusive des Checks, den der Review NICHT gemacht
+hatte (integrale Saettigung; stabil bei Wortlaenge 4, 31 Woerter).
+(1) PARABOL-THEOREM: A = Q<I,U,V> ist die VOLLE Linien-Stabilisator-Algebra
+vom Blocktyp 2|1 (dim 7 = 9-2; Wort-Determinante -81; multiplikativ
+geschlossen 49/49; alle 7 Matrixeinheiten enthalten; Mutation der dritten
+Q-Spalte bricht sie).
+(2) DOPPELTER SELBSTCODE: Pi2 = V(V-I)/2 idempotent, Spur 1; H = I + Pi2
+hat Spektrum EXAKT {1,1,2} = der Anker a (ANCHOR.GEN.01/v23); chi_H =
+x^3 - 4x^2 + 5x - 2 mit (e1,e2,e3) = (4,5,2) = (|mu4|, g_car, |Z2|) UND
+GLEICHZEITIG = (dim_R(GL3/P), dim(A/J), dim J) = (Flag, Levi M2(+)Q,
+Radikal span(E31,E32), J^2 = 0) -- der Anker zweimal aus EINER Struktur:
+spektral (dominanter Projektor von V) und kategorial (Flag/Levi/Radikal).
+(3) EINDEUTIGKEITSSATZ: x^3 - 2m x^2 + (m^2+1) x - m = (x-m)(x^2-mx+1)
+identisch; ganzzahlig-positive Spektren erzwingen m^2-4 = k^2, (m-k)(m+k)
+= 4, m = 2 EINDEUTIG (Enumeration bis 2000) -- a = (1,1,2) ist der EINZIGE
+Anker, den diese parabolische Familie codieren kann.
+(4) DIE 81 ALS GITTERINDEX: die GESAETTIGTE integrale Ordnung Z<U,V> hat
+Elementarteiler (1,1,1,3,3,3,3): Index [P_Z : Z<U,V>] = 3^4 = 81, Kokern
+(Z/3)^4 -- und dieselbe 81 ist die v218-Determinanten-Treppe
+3+4+8+14+20+32 = N_fam^4: globale Determinanten-Ladung = integraler
+Saettigungsindex (Cross-Link getypt; der marken-lokale Mechanismus, ein
+Z/3 pro mu4-Mark, bleibt [O] mit Kill-Bedingung).
+(5) A2-BIT-TRAEGER: die basische Algebra eAe ist die A2-Pfadalgebra
+(dim Ext^1 = 1): dim-Vektor-(1,1)-Moduln zerfallen in GENAU zwei
+Isoklassen (split / EIN nichtsplit) -- das Alignment-Bit bekommt einen
+kanonischen Algebra-TRAEGER; Eindeutigkeit [E], SELEKTION bleibt bei
+RP/Geometrie (v528/v534) [C].
+(6) TRACE-CODE (Umcodierung, nur Hardening): p_n(a) = 2 + 2^n = 1 +
+tr(V^n); Rekurrenz, Hankel 2^{n+1}; (1+trV)(1+trV^2)(1+trV^3) = 240 =
+|R(E8)|; tr(V^4-V^3) = 8 = rank E8 -- die Lean-AnchorLadder durch V
+gelesen, ein unabhaengiges Objekt weniger, KEIN neuer Inhalt.
+(7) CR-TEST-DESIGN (CONTRACT.F.01): CR(alpha_-2,alpha_-1;alpha_0,alpha_1)
+= 4/3 exakt auf der v533-Norm-Linie; Ehrlichkeit als Check verdrahtet
+(4/3 = universelles Doppelverhaeltnis JEDER arithmetischen Progression --
+der Test beisst nur ueber praeregistrierten Solver-State-Export);
+Negativkontrolle: Roh-Determinanten (2,4,14,32) geben 28/25; y_F aus den
+ersten drei fit-frei erzwungen. Als Kill-Design in den Contract-Surface
+aufgenommen; KEINE Ausfuehrung, Marker unveraendert.
+(8) LORENTZ-FORM (Reformulierung): det X = t^2 - x^2 - y^2 unter Phi;
+D(P,Q) = 2<Phi,Phi>_{1,2}; delta = sech^2(atanh r) (Paper-II Problem 7.1
+= logarithmisches Rapiditaets-Wachstum); Pencil-Identitaeten det(B-S) =
+det B det(I-Z) etc. -- die offene Cancellation wird Eigenwert-Locking
+(benanntes Instrument fuer die Prime-Front-REST-Liste; keine Messung,
+kein RH-Statement).
+EHRLICH, LAUT: KEINE P2-REDUKTION -- die Route "g_car = dim(A/J)
+hergeleitet" ist konditional auf den OFFENEN "No Carrier Reconstruction"-
+Audit (Q/V aus mu4, D4, Q_+ = A3-Exponenten-Grading, H^1, Q_- =
+Sheet-Monodromie rekonstruieren, OHNE g_car = 5, a = (1,1,2), rank E8 = 8
+oder carrier-bewusste Budgets; Qs historische Herkunft laeuft durch
+solche Budgets) -- das ist der wichtigste neue benannte Workstream;
+AX.P2.01/ANCHOR.GEN.01-Marker UNBERUEHRT; die 2..9-Dimensionstabelle ist
+KOMPRESSION eines einzigen Operatorsystems, keine neun unabhaengigen
+Treffer (No-Free-Pattern).
+PROMOTION: v566 (DIAMOND.PARA.SELFCODE.01, 14 Checks, ~1 s, exakt);
+Ledger-Zeile neu + Update-Notes auf DIAMOND.AXIS.01 (Selbstcode +
+81-Index) und CONTRACT.F.01 (CR-Test als praeregistrierter Check);
+Suite 559 -> 560.
+SYNC: tfpt_1 (Selbstcode-Absatz nach v23), tfpt_2 (Selbstcode + 81 +
+A2-Traeger nach dem v218-Block), contracts (CR-Check-Absatz im
+CONTRACT.F.01-Abschnitt), changelog 2026-07-31 (I), README/zenodo 560,
+suite.ts, Spiegel regeneriert.
+NAECHSTE SCHRITTE aus dem Review, als benannte Workstreams: (a) Prio 1
+"No Carrier Reconstruction" (der P2-Zirkularitaets-Audit -- Pass/Kill
+praezise formuliert); (b) Prio 2 marken-lokale Z/3-Zerlegung der 81
+(endlich, Lean/Smith-geeignet); (c) Prio 3 split/nichtsplit-Seam-
+Varianten VOR der physikalischen Auswahl bauen; (d) Prio 4 Solver-
+Projektivzustaende exportieren, dann CR = 4/3 pruefen; (e) Prio 5
+lambda_secondary(Z) < 1 im Prime-Front-Pencil messen.
+
+=== 2026-07-30 (II): v565 -- WOIT beta3 AUSGEFUEHRT: die PT <-> PT*-Dualitaet
+gegen sigma_std typisiert -- SUCCESS, der Kill-Ast ist PER ALGEBRA LEER ===
+Der naechste benannte Meilenstein der Physik-Seite (nach v524: "beta3 als
+naechstes") ist ausgefuehrt: woit_os_beta3_pt_dual_probe.py (25/25, 2.4 s,
+Verdikt SUCCESS nach eingefrorener Praeregistrierung; Vertrag verbatim:
+"success: Woits Minkowski-Konjugation (PT -> PT*) identifiziert mit der
+Familie-D-Konjugation auf dem Quotienten; kill: die Dualitaet erzwingt eine
+uhr-zentralisierende (Familie-A-)Struktur").
+(1) DIE KLASSE (Block-Theorem): eine Dualitaet = nichtdegenerierte hermitesche
+Form Phi auf C^4 (sigma(Z) = Z^dagger Phi); Uhr-Kompatibilitaet (rho4 =
+diag(i,1,i,1), v519 W-S4) hat das entrywise Residuum (conj(lam_j)lam_k - 1)
+Phi_jk und ERZWINGT die vier Kreuz-Eintraege auf null: zwei 2x2-Bloecke auf
+{e1,e3} (+) {e2,e4}, 16 -> 8 reelle Parameter; das Deck fuegt nichts hinzu;
+der falsche Uhr-Lift diag(i,i,1,1) bricht den Split (Mutation).
+(2) DIE DICHOTOMIE + DIE ERZWUNGENE (2,2): die rho_tw-Paarung M^dagger Phi M
+= eps conj(Phi) spaltet die Klasse in GENAU zwei Zweige -- EUKLIDISCH
+(eps = +1; sigma_std = 1 wohnt dort): Seam-Norm a(|z|^2 + 1), KEIN Nullpunkt,
+nie ein OS-Schnitt; MINKOWSKI (eps = -1): Seam-Norm a(|z|^2 - 1) -- der
+Null-Locus trifft die Seam-Linie EXAKT im Seam-Kreis |z| = 1, fuer JEDES
+Mitglied (der OS-Schnitt ist ERZWUNGEN, nicht auferlegt) -- und Phi_1 =
+-conj(Phi_i) exakt (Charpoly gespiegelt): die GESAMTSIGNATUR IST (2,2) fuer
+jedes nichtdegenerierte Mitglied -- Woits Minkowski-Signatur ist ein THEOREM
+aus Uhr + rho_tw-Paarung, kein Input.
+(3) DER KILL IST PER ALGEBRA LEER: s_Phi = Phi^T o conj invertiert Uhr UND
+Deck identisch in den Blockparametern (Familie D, beide Zweige); Familie A
+braeuchte rho4^2 = Skalar, aber rho4^2 = diag(-1,1,-1,1): KEINE Loesung --
+entschieden, nicht gescannt; s^2 = diag(a^2,a^2,c^2,c^2) > 0: Kramers-frei.
+(4) DAS INDUZIERTE MITGLIED IST EINDEUTIG UND SENKRECHT ZU sigma_std:
+Seam-Erhaltung <=> b = 0; dann induziert JEDES Mitglied dieselbe projektive
+Konjugation z -> -conj(z) (mu = -1, Fixpunkte +-i), senkrecht zu sigma_stds
+z -> +conj(z) (mu = +1, Fixpunkte +-1); die Uhr-Konjugation tauscht genau
+diese beiden (mu -> -mu) -- der projektive Schatten von theta_cut o
+theta_perp = alpha_{N/2}.
+(5) DIE QUOTIENTEN-IDENTIFIKATION: exakte Platzierungs-Arithmetik (Cut-Achse
+k = 7 fixiert Bond-Mittelpunkte {7pi/8, 15pi/8}, Perp-Achse k = 3 fixiert
+{3pi/8, 11pi/8}: Offsets exakt -+pi/2 -- unter der v519-Praezision-(ii)-
+RP-Platzierung traegt die Perp-Achse das +-i-Marken-Paar) + Koordinaten-
+Transport (Achsenwinkel 11pi/8 = 3pi/8 mod pi): DAS INDUZIERTE MITGLIED IST
+theta_perp -- exakt der Spiegel, dessen Abstieg v524 zertifiziert hat
+(Theta_phys); sigma_stds Mitglied transportiert auf die CUT-Achse (die
+OS-Metrik selbst): ROLLENTRENNUNG KOMPLETT -- sigma_std ~ der Schnitt
+(Metrik), die Phi-getwistete Minkowski-Dualitaet ~ der absteigende Spiegel.
+v524-Regressionen bei N = 8 erneut verifiziert (Gram PD (16,0,0) min
+3.3471e-3, Anti-Unitaritaet exakt mit eta_perp = +i, Theta^2 = +1 auf BEIDEN
+Paritaets-Sektoren, Zeitumkehr exakt, Torsor-Schluss exakt).
+(6) KONTROLLEN: Familie A kein Quotient ((4,4,0) Ein-Teilchen, v524 C4.2);
+der euklidische Zweig kann nicht schneiden; nicht-mu4-Spiegelungen (e^{2pi
+i/5}) nicht marken-verankert.
+EHRLICH: Frei-/Quotienten-Ebene NUR -- nichts konstruiert A_hol, alle sieben
+Kill-Tests bleiben dort formal offen, WOIT.OS.TWISTOR.01 bleibt [O]; die
+deklarierten [C]-Konventionen (Seam-Linie span(e1,e2), Seam-Erhaltung,
+RP-Platzierung, Torsor-Relabeling) sind aus v492/v519/v524 ZITIERT;
+"identifiziert" = innerhalb deklarierter Kompatibilitaetsklassen, KEINE
+Herleitung des Minkowski-Raums; das Wort "hergeleitet" kommt nicht vor.
+PROMOTION: v565 (WOIT.BETA3.DUALITY.01, 22 Checks, ~2 s, sympy-exakt +
+zwei 40-dps-Zertifikate); Ledger-Zeile neu + WOIT.OS.TWISTOR.01-Update
+(beta3 executed, gamma next); Suite 558 -> 559.
+SYNC: contracts (Titel "alpha/beta1/beta2/beta3 executed, gamma next";
+beta3-Executed-Block + Roadmap-Item + Status-Absatz; Straddle-Hurdle auf
+"gamma und danach" praezisiert), tfpt_3 (Step 32, Story-Zaehler
+einunddreissig -> zweiunddreissig, Titel, Intro-Liste, Woit-Bruecken-
+Absatz beta3-Status), papers.ts (WOIT-Meilenstein-Liste + v565),
+suite.ts 558 -> 559, changelog 2026-07-30 (II), README/zenodo-Zaehler.
+NAECHSTE SCHRITTE (unveraendert die grossen Tueren): (a) WOIT gamma --
+Chiralitaets-Theorem + Marken-Inzidenz (Kill-Tests (3)/(6)/(7)), jetzt
+unter der Straddle-Law-Constraint; (b) WP5e proper = das globale
+BCOV-Integral auf PT/Z4 jenseits des Faser-Nullmoden-Faktors; (c) fuer
+das Bit: echt wechselwirkendes A_hol jenseits der Wick-Klasse.
+
+# 2026-07-30 (XXXV) — Teil 178 (RÜCKFLUSS, Phase „Der volle Beweis", Vertrag FRAME.CARRIER): cp_frame_carrier_probe.py — **FIBER-PINNED — R1 PER THEOREM ENTSCHIEDEN, R2 PER ANKER SELEKTIERT, UND DIE T177-DEGENERIERTHEIT IST ERKLÄRT (EIN-SINUS-LEMMA)** (fünfte Rückfluss-Probe — die beiden billigsten offenen Reste des CP-Spiegels (T177 R1/R2) sind reine endliche Algebra und werden ENTSCHIEDEN statt gemessen; Verdikt-Regel im Header VOR der ersten Zahl fixiert; 31/31 Checks grün, 2.4 s, Sandbox). H1 EULER-FAKTORISIERUNG: die Faser wirkt auf den Frame als SKALAR auf der n-Zeile (n -> rho n, die DUAL.FRAME.01-Konstruktion) => JEDER homogene Polynom-Block faktorisiert exakt, P(rho n) = rho^m P(n) — auf VOLL GENERISCHEN homogenen Polynomen Grad 1..4 (3+6+10+15 symbolische Koeffizienten) und den konkreten Blöcken det(1,d,n), <d,n>, <1,n>, <n,n> verifiziert; Konsequenz: jedes skalenfreie rationale Funktional zerfällt als Sum_k A_k Im(rho^k) mit A_k REELLEN Grad-0-Frame-Ratios — der Faser-Gehalt ist QUANTISIERT. H2 DIE NATÜRLICHE KLASSE IST FASER-PUR (T177-R1, natürliche Hälfte, NEGATIV PER THEOREM): metrikfreie Invarianten von Vektor-Tupeln werden von Volumenform-Brackets erzeugt (Weyl 1946 FFT — die EINE zitierte Klassengrenze [C]); die Bracket-Enumeration auf {1, d, n} ist endlich und exakt — GENAU die 6 Permutationen von (1,d,n) sind nichtnull, alle = ±Delta, die anderen 21 verschwinden identisch im GENERISCHEN n — Generatorliste {Delta}, EIN Element => jede skalenfreie Ratio ist KONSTANT: kein frame-gekoppelter skalenfreier pi/3-Träger ohne Metrik — T177s Obstruktions-Satz („one determinant only") ist jetzt ein THEOREM. H3 DIE METRIK-TÜR IST NICHT-KANONISCH (R1, Metrik-Hälfte): deklarierte Metriken lassen frame-gekoppelte Tier-2-Träger zu, aber nicht-eindeutig auf BEIDEN Ebenen — Charaktere: Im(rho)Delta/<d,n> und Delta/<1,n> tragen (kappa,sigma,Deck-Ref) = (-1,-1,+1) (die UNGERADE Delta-Potenz absorbiert die Reflexion), Delta^2/<n,n> trägt (-1,-1,-1); Werte: die zulässigen Normierer enthalten das KONTINUUM q_t = t n1^2 + n2^2 + n3^2 (deck-invariant für JEDES t, identisch in (n,t) geprüft) mit Träger-Werten 441 sin(pi/3)/(25t+117), strikt monoton in t — KEIN kanonischer Frame-Faktor existiert; Anti-Numerologie ALS CHECK verdrahtet: 21/8, 21/2, 441/142 paarweise verschieden, keiner = 1, KEINER beansprucht (normierer-relative Frame-Daten). H4 DAS EIN-SINUS-LEMMA (das Muster — WARUM T177 DEGENERATE enden MUSSTE): auf einer mu_n-Faser hat {|Im(rho_n^k)|} GENAU EIN nichtnull Element <=> n kristallographisch (n in {1,2,3,4,6} = {n : phi(n) <= 2}; Barlow 1894); Beweis in EINER exakten Zeile: sin(4pi/n) - sin(2pi/n) = 2 sin(pi/n) cos(3pi/n), einzige Nullstelle auf n >= 5 bei n = 6; exakte Enumeration bis n = 24 (mu5 -> 2, mu8 -> 2, mu12 -> 3); die beiden Compiler-Uhren mu4 (Seam-Deck, j = 1728) und mu6 (CP-Faser, j = 0) sind EXAKT die zwei MAXIMALEN Ein-Sinus-Fasern (die zwei CM-Punkte mit Extra-Automorphismen) => wertbasiertes Pinning von Funktionalen ist auf beiden PER THEOREM unmöglich — T177s DEGENERATE war ERZWUNGEN, kein Suchdefizit (Mutationskontrolle: auf mu5 TRENNEN Werte die Träger). H5 DIE ANKER-SELEKTION (T177-R2, SELEKTIERT): der Jarlskog-Invariant auf dem TFPT-CKM-Rebuild (v88, frozen delta per REG.FREEZE.01) hat das VOLLE Charakter-Tupel (-1,-1,-1) unter (kappa = Konjugation, sigma = delta -> delta+pi, Deck-Reflexion V -> V Ref), jedes bei 40 dps unter 1e-25 zertifiziert — es matcht die sheet-ODD-Orientierungsklasse V5 = (-1,-1,-1) und NICHT die sheet-even-Kanalklasse P2 = (-1,+1,-1): von T177s zwei degenerierten Klassen matcht GENAU EINE; die Metrik-Buchhaltung schärft: die (-1,-1,+1)-Träger sind ANKER-VERWORFEN, die (-1,-1,-1)-Familie matcht, trägt aber das H3-Kontinuum => der EINZIGE anker-matchende KANONISCHE Träger ist der faser-pure V5 = Im(rho) = sin(pi/3); Konsistenz: Im(rho^4) = -Im(rho) flippt exakt wie sin(delta+pi) = -sin(delta) (CP.MU6.01-Verdrahtung), symbolisch. EHRLICH: die Selektion ist KONDITIONAL auf den Anker (Jarlskog 1985 = importierte Physik — SELEKTIERT, nicht hergeleitet; das Wort „hergeleitet" kommt nicht vor); die Deck-Spalte ist das T177-DEKLARIERTE MODELL (kappa/sigma modellfrei); das CP-Residuum ist NICHT geschlossen, es ist MIT BEWEIS VERORTET: der invariante CP-Kern ist das Faser-Datum Im(rho) = sin(pi/3) und kann beweisbar NICHT ohne nicht-kanonischen Metrik-Import zu Frame-Daten gemacht werden; REG.FREEZE.01 und die 3-vs-2-lambda^2-Frage unberührt. **PROMOTION: v564 (CP.FIBER.PIN.01, 22 Checks, ~2 s, sympy-exakt + 40 dps) — die exakten Kerne als EIN tragendes Modul** (Euler-Faktorisierung generisch; Ein-Generator-Enumeration; Charakter-Split + q_t-Kontinuum + Anti-Numerologie-Fence als Check; Ein-Sinus-Lemma mit Identität + Enumeration + Totient-Kriterium; Anker-Tupel + Selektion + CP.MU6.01-Konsistenz); Ledger-Zeile CP.FIBER.PIN.01 + UPDATE-Note auf CP.CHANNEL.IDENT.01 (R1 decided / R2 selected, Marker unverändert); Suite 556 -> 558. NEBENBEI (Housekeeping, gleicher Commit): v563 (PRIME.PAPER2.READOUT.01, 24 Checks — der Readout-Abschluss von Paper II, in der letzten Session geschrieben aber NIE registriert) in run_all/Registry/Ledger nachregistriert; Paper II (Cross-Ref-Tabelle + Reproduzierbarkeit „nine modules v555-v563", die Drei-Readings-Liste auf EINE verengt) und tfpt_prime_front (verified layer 27 -> 28 Module, v563-Subsection, T178-Subsection sec:t178, Index T11-T178, Zähler 178 Proben / 4820 Checks) synchronisiert. Klassik: Weyl 1946/Hilbert 1893 (FFT), Jarlskog 1985 (der Anker), Wolfenstein 1983, Barlow 1894 (kristallographische Restriktion), Euler (Homogenität) — ADRESSEN. KEINE Folge-Probe auf dieser Linie geplant (die Rückfluss-Reste R3 (Deck-Modell) und R4 (3-vs-2 lambda^2) bleiben offen und getypt offen) — 31/31, 2.4 s, Sandbox
+# H1 Euler: P(rho n) = rho^m P(n) generisch Grad 1..4 exakt; skalenfrei
+#    => Sum_k A_k Im(rho^k), Faser-Gehalt quantisiert.
+# H2 **R1 natürliche Hälfte: NEGATIV PER THEOREM** — Brackets auf {1,d,n}:
+#    6 Permutationen = ±Delta, 21 verschwinden identisch (generisches n);
+#    ein Generator => skalenfreie Ratios konstant => faser-pur (Weyl-FFT
+#    als [C]-Klassengrenze zitiert).
+# H3 **R1 Metrik-Hälfte: Kopplung existiert, Kanonizität nicht** —
+#    Charakter-Split (-1,-1,+1) vs (-1,-1,-1); Kontinuum q_t mit Werten
+#    441 sin(pi/3)/(25t+117); 21/8, 21/2, 441/142 als Anti-Numerologie-
+#    Fence-CHECK.
+# H4 **Ein-Sinus-Lemma: {|Im rho_n^k|} einwertig <=> n in {1,2,3,4,6}**
+#    (sin(4pi/n) - sin(2pi/n) = 2 sin(pi/n) cos(3pi/n), Null nur n = 6);
+#    mu4/mu6 = die zwei maximalen Ein-Sinus-Fasern => T177s DEGENERATE
+#    war ERZWUNGEN; auf mu5 trennen Werte.
+# H5 **R2 selektiert: Jarlskog-Tupel (-1,-1,-1) = sheet-odd (V5), nicht
+#    P2 = (-1,+1,-1)**; einziger kanonischer anker-matchender Träger =
+#    faser-pur sin(pi/3); konditional auf den Anker, nicht hergeleitet.
+#    **v564 (CP.FIBER.PIN.01, 22 Checks) promoviert; CP.CHANNEL.IDENT.01
+#    Update-Note; Suite 556 -> 558 (v563 Paper-II-Readouts nachregistriert).**
+# Serie (XII)–(CLXXXIX): 178 Proben, 4820/4820 Checks Sandbox + v535–v564 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Rückfluss zur Physik-Seite —
+# jede Aussage ist eine endliche exakte Aussage über Einheitswurzeln,
+# generische 3x3-Determinanten, eine 3x3-unitäre Matrix und eine
+# trigonometrische Identität; keine Nullstelle gelesen, keine L-Funktion
+# ausgewertet; ENTSCHEIDUNGEN mit dokumentiertem Grund, KEIN Marker
+# bewegt, das Wort „hergeleitet" kommt nicht vor (Selektion konditional
+# auf den importierten Anker); Klassik (Weyl 1946 — Invariantentheorie
+# als Klassengrenze; Jarlskog 1985 — der Anker; Barlow 1894 —
+# kristallographische Restriktion) als ADRESSEN; THEOREM/CERTIFIED
+# strikt getrennt (nichts MEASURED in T178); Promotion v564 mit
+# RH-/Overclaim-Fence im Header.
+
 # 2026-07-29 (XXXIV) — Teil 176 (Phase „Der volle Beweis", Vertrag DENSE.LIMIT): dense_limit_probe.py — **SITS-AT-ZERO — DIE DICHTE-KURVE SITZT AUF NULL, DAS PLATEAU-FENSTER WIRD 3.6× ENGER, UND DAS PHASE-2-MESSPROGRAMM SCHLIESST PLANMÄSSIG** (das größere Sieb, das T175 als einzigen Rest benannte; LANDET NACH T177 — Nummerierung Teil 176 nach Vertrag, der Eintrag steht chronologisch über T177, Serienzähler um T176s 24 Checks erhöht; 24/24 Checks grün, 118.7 s, 1585 Zeilen). E1 DAS GROSSE SIEB: ATOM_MAX 1.2e6 → **2.5e7** (Faktor 20.8; Kosten 0.08 s Sieb / 59.7 MB Peak — DAS SIEB WAR NIE DIE BINDENDE SCHRANKE, das Gitter kostet 110 s); 1 566 727 Primpotenz-Atome; Dichte-Decke 361 → **6120** (6118 erreicht = 100.0%); 14 532 Zellen auf 692 Ankern, **0 indefinit**. DIE VERLÄNGERTE KURVE (8 ratio-4-Bins, cluster-robust über Anker): +0.8886 ± 0.1027 → +0.5148 → +0.1948 → +0.3922 (Monotonie-Verletzung, OFFEN DEKLARIERT und nicht geglättet — die Krümmung wird von der feineren Leiter anders abgetastet, E2 erklärt es) → +0.1520 → +0.0579 → **NEU: +0.0376 ± 0.0410 (dens ~779, 0.9σ)** → **NEU: +0.1046 ± 0.0881 (dens ~2512, 1.2σ)**; gepoolt über die neuen Bins **+0.0496 ± 0.0372 (1.3σ)** — KEIN Vorzeichen-Wechsel, KEINE Stabilisierung über null: die Kurve SITZT AUF NULL ab dens ~410; Dichte-Steigung −0.0725 ± 0.0090 = 8.0σ über 4.0 Dekaden; **Plateau-Fenster (2σ) 0.264 → 0.074, Faktor 3.6 enger — das ist der ganze Inhalt der 47.8 MB Sieb-Tabelle**; Sieb-Konsistenz: alle 6 alten Bins mit T175s exakter Leiter + Ankern bei 0.0σ reproduziert. E2 KRÜMMUNGS-KARTE: beide Kanäle überleben die längere Kurve mit T175s Koeffizienten (log h +0.1529 ± 0.0258, 5.9σ; log dens −0.0434 ± 0.0060, 7.3σ; Verträglichkeit ≤ 1.7σ; Krümmungs-Spalte +0.1348 ± 0.0552; Anker-a₂ = −0.0842 ± 0.0085); KEINE der sechs präregistrierten Reparametrisierungen macht daraus EINEN Exponenten (beste dens/h bei 85% des freien R²; die Daten wollen dens^{+0.284}·h — kein Kandidat sitzt dort); LAUT DEKLARIERT: das freie Modell erklärt nur 0.19% der Einzelsteigungs-Varianz, weil log R in h nicht glatt ist (E3 sagt warum) — die Koeffizienten sind trotzdem 5.9σ/7.3σ, weil 13 148 Paare auf 692 Anker-Clustern liegen. E3 R1 GESCHLOSSEN + DER POL: **R1 (T175-Liste) GESCHLOSSEN — die Feynman–Hellmann-Form dλ = vᵀ·dÂ·v macht die Interventions-Regression zur IDENTITÄT: dlog R/dδ = vᵀdÂv/λ_min − wᵀdÂw/λ_max − dDEL/DEL reproduziert den Rebuild auf 3.37e-6** im Minimum einer deklarierten Schrittleiter mit AUSGESTELLTER U-Form (Rundung unten, Trunkierung oben — kein Boden ⇒ Quotienten-Fehler, keine falsche Formel; dc/dδ ist EXAKT und stückweise konstant); die Zerlegung KORRIGIERT die Erwartung: dDEL/DEL trägt 84%, λ_min nur 7% — die Phasen-Antwort lebt im Fast-Entartungs-Kanal, exakt dem Kanal, der nach T174 NICHT kürzt. **DIE 300×-HARMONIK-ANOMALIE ERKLÄRT: EIN POL** — PD überlebt nur 2% der Phasen-Periode (δ_PD = 5.9e-3 Median, δ_PD·|dlog R/dδ| = 5.8 ≈ O(1) — ein Pol auf der natürlichen Skala; eine Erste-Harmonische-Regression schätzt den Fourier-Koeffizienten einer Funktion mit Pol im Intervall — KEINE der beiden Zahlen ist falsch, sie messen Verschiedenes); Level-Crossing GEGEN die eigene Hypothese direkt gemessen: die zwei untersten Moden liegen SCHON BEI δ = 0 nur 13.4% auseinander — **die Intervention erzeugt keine Entartung, sie läuft entlang einer**. Stress: Scramble (Zell-Belegung exakt erhalten) tötet PD auf 194/194 Zellen im ersten neuen Bin; L_P exakt (1.9e-15 bei m = 431); Anti-Fitting mechanisch geprüft (Bin-Kanten ratio-4 exakt, erste fünf Bins bit-für-bit T175). E4 KANDIDATEN (nur die eigenen — T175s laufen parallel und werden NICHT doppelt gebucht): P1 DENSE.LIMIT.CURVE (measured), **P2 R1.CLOSED (certified — der stärkste: eine Identität)**, P3 PHASE.POLE (ersetzt die Harmonik-Anomalie-Zeile statt neben ihr zu sitzen), P4 SIEVE.CONSISTENCY (das Audit, das jedem späteren Probe-Lauf das Sieb-Heben ohne Neu-Herleitung erlaubt); **plus eine ANTI-PROMOTION, wichtiger als die vier: der Schätzer ist LEITERABHÄNGIG auf 0.20-Niveau — jede Ledger-Zeile, die ein Bin-Defizit zitiert, muss die Sprossen-Leiter mitzitieren, sonst ist die Zahl nicht reproduzierbar**. REST (für die Papers, KEINE neuen Proben): R1 leiter-robuster Schätzer (Krümmung integrieren statt abtasten); R2 dens^0.284·h aus der Assembly herleiten oder das Wort „Exponent" aus der Kette streichen; R3 das 2×2-Effektivmodell des fast-entarteten Bodens (die billigste strukturelle Frage); R4 was KEIN endliches Sieb kann, einmal gesagt: das Fenster schrumpft wie die Wurzel der Anker-Kappe — Faktor 5 mehr Sieb passte ins Budget, Faktor 100 (nächste Dekade, ~2.5e9) nicht, und es ist NICHT die richtige Frage. **PROMOTION: v562 (PRIME.DENSE.LIMIT.01, 16 Checks, ~0.5 s, deterministisch, KLEINES Sieb — die Identitäten sind sieb-größen-frei, das ist ihr Punkt)**: die FH-Identität mit U-Form-Check + Mutations-Kontrollen (2.3e-7 am Optimum; Mutanten verfehlen um 4.0e1); der Pol-Mechanismus pro Instanz (PD-Überleben 2%, Produkt 7.2, Fast-Entartung 0.02–0.17 bei δ = 0); Sieb-Konsistenz auf Konstruktions-Ebene (Lag-Vektoren bit-für-bit auf vollständigen Kämmen; der trunkierte Anker MUSS sich bewegen und tut es); der Kurven-Schätzer als deterministisches Verfahren MIT der Leiter-Caveat als Check UND in der Ledger-Zeile; SITS-AT-ZERO als MESSUNG mit Leiter-Caveat getypt, Plateau/Null-Unterscheidung explizit OPEN; Ledger-Zeile PRIME.DENSE.LIMIT.01, Suite 555 → 556. Klassik: Feynman–Hellmann (Hellmann 1937, Feynman 1939), Chebyshev 1852/Rosser–Schoenfeld 1962 (der eine unbedingte Input, an jedem Sprungpunkt verifiziert), KMS 1953, Schur 1917, Weil 1952 (eine ADRESSE, nie ein Kriterium). **KEINE FOLGE-PROBE — DAS PHASE-2-MESSPROGRAMM IST HIERMIT PLANMÄSSIG ABGESCHLOSSEN** (Big-Picture-Beschluss: keine weiteren R1-Attacken mit diesem Instrument; SITS-AT-ZERO ist die letzte entscheidbare Messung unter erreichbaren Ressourcen, die Arbeit läuft in Paper II (Parität/Toeplitz-Klassifikation) und den Rückfluss-Linien weiter) — 24/24, 118.7 s, Sandbox
 # E1 Das große Sieb: 2.5e7 (Faktor 20.8; 0.08 s / 59.7 MB — nie die
 #    bindende Schranke); Decke 361 → 6120 (6118 erreicht); 14 532 Zellen,

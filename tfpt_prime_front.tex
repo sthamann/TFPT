@@ -93,12 +93,14 @@ identities, the odd-sector identities, the fixed-size Ritz ceiling certificate, 
 fixed-size angle instruments, the exact-form identities, the sampling/harmonics
 identities, the Pareto/total-variation identities, the gauge/$P_{\mathrm{pr}}$
 identities, the cascade/vector identities, the bilinear/rank identities, the phase-2
-capstone, the frame/deficit identities and the dense-limit identities of the phase-2
-endgame. Everything beyond
-those twenty-seven is \emph{sandbox}: an exploratory program, run as
-$177$ preregistered probes with $4789$ machine checks, which localized the residual object
-(the reverse-flow promotions --- the \vref{v379} hardening of T133 and the CP channel
-identities \vref{v561} of T177 --- live on the physics side and are counted there). That
+capstone, the frame/deficit identities, the dense-limit identities of the phase-2
+endgame, the Paper-II readout closure, the relative pencil one-mode structure, the separation
+floor and the pair-band anatomy. Everything beyond
+those thirty-one is \emph{sandbox}: an exploratory program, run as
+$181$ preregistered probes with $4843$ machine checks, which localized the residual object
+(the reverse-flow promotions --- the \vref{v379} hardening of T133, the CP channel
+identities \vref{v561} of T177 and the frame-door decision \vref{v564} of T178 --- live on
+the physics side and are counted there). That
 localization is the actual content of this document. The transport ledger closes exactly, leaving one
 coupled inequality (called \textbf{I5}) which is --- \emph{by identity, as a typing and not as
 progress} --- equivalent to Weil positivity and hence to the Riemann Hypothesis. The subsequent arc
@@ -250,7 +252,7 @@ here (the blue \texttt{[\,verification/\dots\,]} tag). Everything marked \sbx\ i
 no ledger row, no marker, and no authority. Section~\ref{sec:verified} is the only section that is
 entirely \ver.
 \item \textbf{Status markers are quoted, never upgraded.} The markers \mE\ \mC\ \mO\ \mX\ shown in
-Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v558}. This
+Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v563}, \vref{v569}--\vref{v570} and \vref{v573}. This
 document introduces no new markers and moves none.
 \item \textbf{Fits are declared as fits.} Every scaling law, slope, exponent and extrapolation quoted
 from the sandbox is a fit to finitely many measured windows and is labelled as such at the point of
@@ -275,7 +277,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T177: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T181: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -630,7 +632,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the twenty-seven modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the thirty-one modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -771,13 +773,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: twenty-seven modules}\label{sec:verified}
+\section{The verified layer: thirty-one modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The twenty-seven modules and their ledger markers]
+\begin{keybox}[The thirty-one modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -810,6 +812,10 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v559} & \texttt{PRIME.PHASE2.CAPSTONE.01} & phase-2 capstone: the sixteen-link chain (per instance) & \mE\\
 \vref{v560} & \texttt{PRIME.FRAME.DEFICIT.01} & frame/deficit identities of phase 2 (per instance) & \mE\\
 \vref{v562} & \texttt{PRIME.DENSE.LIMIT.01} & dense-limit identities of the phase-2 endgame (per instance) & \mE\\
+\vref{v563} & \texttt{PRIME.PAPER2.READOUT.01} & Paper-II readout closure (per instance) & \mE\\
+\vref{v569} & \texttt{PRIME.PENCIL.ONEMODE.01} & relative pencil one-mode (declared surface; measured readouts) & \mE\\
+\vref{v570} & \texttt{PRIME.PENCIL.SEPFLOOR.01} & separation floor certified (closed scalars; declared surface) & \mE\\
+\vref{v573} & \texttt{PRIME.PAIRBAND.01} & pair-band anatomy: the dominance is long-range & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -2494,6 +2500,152 @@ resource-reachable sieve --- one more decade of window would cost
 $\mathtt{ATOM\_MAX}\sim2.5\times10^{9}$); the phase-2 closure is a closure of the
 \emph{measurement programme}, not of the question; no RH statement anywhere, and the
 open quantifier at link 16 is untouched.
+\end{itemize}
+
+\subsection{The Paper-II readout closure (\texorpdfstring{\vref{v563}}{v563})}\label{sec:v563}
+The check closure of the classification paper (Paper~II,
+\texttt{parity\_toeplitz\_classification}): every number that paper quoted from an
+exploration probe without a recomputing module is recomputed on the identical
+declared surface, and the one mechanism it declared as a caveat without exhibiting
+it --- the rung-ladder shift of the binned exponent --- is exhibited as a
+\emph{structure fact} \veri{v563\_paper2\_readouts.py} ($24$ checks, ${\sim}0.5$\,s;
+pure readout/identity checks, no new claim, no rate, no uniformity).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The reference window} \mE: the declared T170 frame-A scan, bit for
+bit, lands on $h=540$ (node cap $X=2.465\times10^{4}=157^{2}$), and the four quoted
+numbers are recomputed --- $\det B=6.18$, $-D(B,S)=-198.8$, $\det S=192.6$,
+$\det\hat A=4.22\times10^{-3}$: a $4.7$-order cancellation between three pieces of
+size ${\sim}200$, a further factor $383$ above the absolute target --- with the
+split and the polarisation identity at round-off (mutations: the wrong
+cross-coefficient misses by $2.7\times10^{3}$; the position scramble moves
+$|1-r_{12}^{2}|$ by $4\times10^{5}$ while every identity keeps holding).
+\item \textbf{The $\ell^{1}$-to-signed ratio} \mE: $40.6\times$ on the declared
+$900$-node subsample (the price of any triangle-inequality route); the kernel double
+sum equals $\det S$ at round-off (Cauchy--Binet), the kernel diagonal carries
+$5.9\%$.
+\item \textbf{The tightness range where cheap} \mE: the declared Fej\'er trial
+family reproduces the quoted envelope $\mu^{P}_{1}\mathrm{TV}\in[5.00,23.20]$ with
+both ends attained on $22$ windows; the floor $\ge1$ holds on all $1122$ trial
+vectors, and the inadmissible vector undercuts by exactly $\lambda^{2}$ (degree-$2$
+homogeneity, $1.9\times10^{-16}$).
+\item \textbf{The rung-ladder shift is anchor selection} \mE\ (the Paper-II caveat,
+exhibited): the fine $2^{1/4}$ and coarse $\sqrt2$ ladders select \emph{different
+anchor sets} in the same declared bin ($13$ vs $12$; an anchor needs three in-bin
+rungs), and removing the extra anchors reproduces the whole shift ($+0.0490$ anchor
+part against $-0.0135$ rung part at fixed anchors); curvature transport with the
+paper's measured $a_2=-0.0842$ moves the shift by only $-0.0111$ (a wrong curvature
+is $11.9\times$ louder): the shift lives in \emph{which} anchors enter the bin, not
+in how the rungs sample the curvature.
+\item \textbf{Named limits as content.} Readouts of measured sandbox quantities stay
+typed \textsc{measured} with their ladders --- the \vref{v562} anti-promotion
+applies to every number here, this module included; no bound, rate or uniformity
+statement anywhere.
+\end{itemize}
+
+\subsection{The relative pencil one-mode structure (\texorpdfstring{\vref{v569}}{v569})}\label{sec:v569}
+The same declared surface, read through a new exact lens
+\veri{v569\_lambda\_pencil\_onemode.py} ($6$ checks, ${\sim}2$\,s; construction
+base: the T170 frame-A scan of \vref{v563}, imported read-only, bit for bit).
+The rank-3 polarisation of Paper~II is exactly $(2{+}1)$-Lorentz geometry, and
+the low $2\times2$ block carries the relative pencil $Z=B^{-1}S$ with the exact
+identities $\det(B-S)=\det B\,(1-\lambda_1)(1-\lambda_2)$,
+$D(B,S)=\det B\,(\lambda_1{+}\lambda_2)$, $\det S=\det B\,\lambda_1\lambda_2$
+(proved symbolically in the parabolic self-code module; here executed on the
+real surface at worst residual $2\times10^{-14}$ across all $70$ windows).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The labels, corrected honestly} (\textsc{measured}): the \emph{locking} mode is
+$\lambda_2$, hugging $1$ (median $1.000021$, range $[-0.85,\,1.0005]$), while
+the spectator $\lambda_1$ is large --- $[4.53,\,180.64]$, every window above
+$1$. (The review that motivated the question guessed the separated mode
+\emph{below} $1$; on the real surface it sits far above.)
+\item \textbf{The one-mode answer} (\textsc{measured}): $\min|1-\lambda_1|=3.53$ across all
+$70$ windows, so $\det(I-Z)/(1-\lambda_2)=1-\lambda_1$ is uniformly bounded
+away from zero on the reachable surface and the two-dimensional cancellation
+reduces to the \emph{single scalar} $1-\lambda_2$: verdict \textsc{one-mode}.
+\item \textbf{The reference window} \mE: on $h=540$ the locking factor is
+$1-\lambda_2=-2.27\times10^{-5}$ and the pencil reproduces
+$\det\hat A=4.22\times10^{-3}$ --- the $4.7$-order cancellation of Paper~II
+\emph{is} the single factor $1-\lambda_2$.
+\item \textbf{Must-break} \mE: the position scramble at the same masses
+explodes $|1-\lambda_2|$ by $\times1.9\times10^{6}$ and destroys the pencil
+geometry (both eigenvalues negative) while every identity keeps holding: the
+locking is arithmetic placement, not an identity artefact.
+\item \textbf{Named limits as content.} Declared finite surface only ---
+Problem~7.1 of Paper~II (the uniform quantifier) is \emph{untouched}: its
+structure is typed (one scalar mode), not bounded; whether $\lambda_1$ stays
+separated as $h$ grows is a new named open question, strictly weaker than
+Problem~7.1; \textsc{measured} stays \textsc{measured}, no rate, no bound, no
+RH statement.
+\end{itemize}
+
+\subsection{The separation floor, certified (\texorpdfstring{\vref{v570}}{v570})}\label{sec:v570}
+The open question \vref{v569} left behind, reduced and certified on the
+surface \veri{v570\_separation\_floor.py} ($8$ checks, ${\sim}13$\,s;
+construction base: the same T170 frame-A scan, read-only). Two one-line
+theorems --- $P=\det Z=\det S/\det B>0$ and $T=\operatorname{tr}Z>0$ give
+$\lambda_1\ge\sqrt P$ (since $\lambda_1^2-P=\lambda_1(\lambda_1-\lambda_2)$),
+and $P\le0$ gives $\lambda_1=T-\lambda_2\ge T$ --- turn the spectator
+separation into a \emph{closed per-window floor}.
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The certification} \mE: on all $70$ declared windows the floor
+is sound and clears the margin, $\min F=2.130\ge1.05$ --- the \vref{v569}
+separation is no longer only a measured eigenvalue fact, it follows from
+$\det S/\det B$ and $\operatorname{tr}Z$ alone (conservative against the
+measured $\min\lambda_1=4.534$, as a floor should be).
+\item \textbf{The dominance} (\textsc{measured}): $P=\det S/\det B$ lies in
+$[4.5,\,120.6]$ (median $30.1$) and \emph{grows} with depth (log-log slope
+$+0.900$ in $h$, with its surface ladder); the exact link
+$1-T+P=\det(B-S)/\det B$ makes trace and determinant dominance one question.
+\item \textbf{The cheap route is dead} \mE\ (honest negative): $\det S$ is
+itself a pair-level cancellation object --- Cauchy--Binet exact, negative
+pair mass up to $13.7\times\det S$ (median $8.0\times$), best single-pair
+witness only $0.13$--$0.34\times\det B$ against the $\ge1.10$ it would need:
+no two-atom witness certifies the dominance.
+\item \textbf{Must-break} \mE: the position scramble flips the trace sign
+($T=-78.28$ against $+32.15$ real) --- the $T>0$ gate detects the destroyed
+geometry loudly; the dominance is arithmetic placement.
+\item \textbf{Named limits as content.} The $h$-uniform dominance
+$\det S\ge(1+c)^2\det B$ is the \emph{same} open question \vref{v569} named,
+now in sharper closed-scalar form --- typed as pair-level
+size-vs-cancellation (an $8{:}9$ cancellation, not a $4.7$-order one, but
+not free); Problem~7.1 untouched; no rate, no bound, no RH statement.
+\end{itemize}
+
+\subsection{The pair-band anatomy: the dominance is long-range (\texorpdfstring{\vref{v573}}{v573})}\label{sec:v573}
+Where the certified dominance lives
+\veri{v573\_pair\_band\_structure.py} ($6$ checks, ${\sim}6$\,s;
+construction base: the same declared scan, read-only, with a declared
+kernel subset --- every twelfth window with $\le16000$ atoms plus the
+$h=540$ reference).
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{The near region drags} (\textsc{measured}): \emph{every}
+band below $16$ lag cells \emph{and} the diagonal of the Cauchy--Binet
+pair kernel are negative on every selected window --- a near-diagonal
+mass budget aims at the wrong sign.
+\item \textbf{The far band carries everything} (\textsc{measured}): the
+net far-band share of $\det S$ sits in the stable band $[1.55,\,1.91]$
+while its gross positive mass grows $4.1\to13.0\times\det S$: the
+dominance is \emph{long-range coherence}, not local mass.
+\item \textbf{The sharper anatomy} (\textsc{measured}): the excess is
+\emph{scale-locked} --- pairs $\ge h/2$ apart carry a large growing net
+while the bands $16..256$ stay negative --- and \emph{weight-concentrated}:
+the top-$10\%$-weight pairs alone net $0.85$--$1.00\times\det S$ on every
+selected window, essentially $\det S$ itself (everything below the top
+decile cancels to ${\sim}0$); the lag-grid phase plays no role (flat
+profile across the declared bins, spread shrinking with $h$ --- the
+phase-mechanism candidate is dead).
+\item \textbf{Must-break, both directions} \mE: the position scramble
+\emph{explodes} $\det S$ by ${\sim}\times49$ --- the real placement holds
+$\det S$ fifty-fold \emph{below} random while organising its far-band
+coherence --- and collapses the far share below $1$.
+\item \textbf{Named limits as content.} A \emph{typing} of the \vref{v570}
+dominance question: its certificate must control \emph{heavy-pair
+coherence at window-scale separation}; declared surface and subset only,
+\textsc{measured} with ladders, no bound, no rate, no RH statement.
 \end{itemize}
 
 % =====================================================================
@@ -4836,7 +4988,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T177)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T181)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -10134,8 +10286,8 @@ and the file's real contribution to it is that the phase response
 there is now closed in form. The exact cores are load-bearing:
 \veri{v562\_dense\_limit\_identities.py} (\texttt{PRIME.DENSE.LIMIT.01};
 Section~\ref{sec:v562}). The work continues in the classification
-papers (Paper II) and the backflow lines (T177,
-Section~\ref{sec:t177}).
+papers (Paper II) and the backflow lines (T177--T181,
+Sections~\ref{sec:t177}, \ref{sec:t178}, \ref{sec:t179}, \ref{sec:t180} and \ref{sec:t181}).
 \end{keybox}
 
 \subsection{The reverse flow, resumed: the CP mirror narrows four ledger rows (T177)}\label{sec:t177}
@@ -10175,9 +10327,10 @@ the magnitude data carry exactly zero phase ($\arg\prod c=0$ on both sectors), t
 sheet-blind, the full $\delta$ has no character (a CP-even correction on a CP-odd angle;
 only the leading term $\pi/3$ is character-covariant), and \texttt{DUAL.FRAME.01}'s
 $21\sin(\pi/3)$ splits into an invariant fiber core and a non-invariant frame factor. Which
-of the two Tier-2 characters is physical stays open --- the sheet-odd reading reproduces
+of the two Tier-2 characters is physical stayed open at T177 --- the sheet-odd reading reproduces
 \texttt{CP.MU6.01}'s quark/lepton split, a structural preference and not a derivation ---
-and no follow-up probe is planned on this line. The exact cores are promoted to the physics
+together with the frame-coupling question; both are decided one part later
+(T178, Section~\ref{sec:t178}). The exact cores are promoted to the physics
 side: \veri{v561\_cp\_channel\_identities.py}.
 
 \medskip
@@ -10217,7 +10370,7 @@ vectors become collinear at the demanded rate, now stated frame-free,
 with the true-zero/power-law/plateau reading of the dense limit
 explicitly open and no finite sieve able to decide it --- and the
 work continues in the classification papers (Paper II) and the
-backflow lines (T177), not in further probes of this instrument. The
+backflow lines (T177--T181), not in further probes of this instrument. The
 measurement surface is certified, the quantifier is open, R1 is
 classified; the capstone that certifies exactly this map is
 load-bearing \veri{v559\_phase2\_capstone.py}, the frame/deficit
@@ -10226,12 +10379,123 @@ identities of the closing arc are load-bearing
 identities of the endgame are load-bearing
 \veri{v562\_dense\_limit\_identities.py}.
 
+\subsection{The reverse flow, continued: the frame door of the CP mirror, decided (T178)}\label{sec:t178}
+One part after the mirror, the backflow line answers T177's two open items ---
+and they are pure finite algebra, so the answer is a decision, not a measurement:
+T178 (\texttt{cp\_frame\_carrier\_probe.py}, contract \texttt{FRAME.CARRIER},
+$31/31$, verdict \textsc{fiber-pinned}). \textbf{R1 is decided.} The natural
+(metric-free) half is negative \emph{by theorem}: the fiber acts on the frame by
+a scalar on the $n$-row, so every homogeneous frame block factorises exactly
+(checked on fully generic degree-$1..4$ polynomials with symbolic coefficients),
+and the metric-free invariants of $(\mathbf1,d,n)$ have \emph{one} generator ---
+the exact bracket enumeration gives six permutations $=\pm\Delta$ and $21$
+identically vanishing brackets (Weyl 1946 first fundamental theorem as the cited
+class boundary) --- so every scale-free ratio is constant and no frame-coupled
+scale-free $\pi/3$-carrier exists without a metric: T177's obstruction sentence
+(``one determinant only'') is now a theorem. The metric half couples but is
+\emph{non-canonical}: declared metrics admit frame-coupled Tier-2 carriers, but
+they split into two character classes ($\Delta/\langle d,n\rangle$ and
+$\Delta/\langle\mathbf1,n\rangle$ at $(-1,-1,+1)$ against
+$\Delta^{2}/\langle n,n\rangle$ at $(-1,-1,-1)$) and the admissible normalisers
+contain a whole continuum $q_t=t\,n_1^{2}+n_2^{2}+n_3^{2}$ (deck-invariant for
+every $t$, values $441\sin(\pi/3)/(25t+117)$) --- no canonical frame factor, and
+the exhibited factors $21/8$, $21/2$, $441/142$ are normaliser-relative frame
+data with the anti-numerology fence wired as a check. \textbf{R2 is selected.}
+The classical anchor itself does the selecting: the Jarlskog invariant carries
+the full character tuple $(-1,-1,-1)$ under conjugation, the sheet flip and the
+declared deck reflection (each certified at $40$ digits), matching the sheet-odd
+orientation class and not the sheet-even channel class --- of T177's two
+degenerate classes, exactly one; the unique anchor-matching \emph{canonical}
+carrier is the fiber-pure $\operatorname{Im}\rho=\sin(\pi/3)$ (selected,
+conditional on the anchor --- not derived). \textbf{And the degeneracy is
+explained}: the single-sine lemma --- on a $\mu_n$ fiber the nonzero carrier
+magnitudes $\{|\operatorname{Im}\rho_n^{k}|\}$ form a one-element set iff $n$ is
+crystallographic, $n\in\{1,2,3,4,6\}$, by
+$\sin(4\pi/n)-\sin(2\pi/n)=2\sin(\pi/n)\cos(3\pi/n)$ --- makes T177's
+\textsc{degenerate} verdict \emph{forced}: the compiler's two clocks $\mu_4$
+($j=1728$) and $\mu_6$ ($j=0$) are exactly the two maximal single-sine fibers,
+so value-based pinning of functionals is impossible there by theorem (on
+$\mu_5$, values do separate carriers). No marker moves, the frozen reading is
+untouched, and the CP residual is not closed --- it is \emph{relocated with a
+proof}: the invariant CP core is the fiber datum $\sin(\pi/3)$ and provably
+cannot be made frame data without a non-canonical metric import. The exact
+cores are promoted to the physics side: \veri{v564\_cp\_fiber\_pin.py}.
+
+\subsection{The backflow, continued: the relative pencil answers the one-mode question (T179)}\label{sec:t179}
+The backflow then runs in the \emph{other} direction --- from the physics-side
+operator algebra back onto this document's own open problem. The parabolic
+self-code module had proved, symbolically, that the Paper-II rank-3
+polarisation is $(2{+}1)$-Lorentz geometry and that the low block carries a
+relative pencil $Z=B^{-1}S$ with three exact identities; the one measurable
+question that decides whether that lens buys anything is whether \emph{one}
+pencil eigenvalue stays uniformly separated from $1$ on the reachable surface.
+T179 (\texttt{lambda\_pencil\_probe.py}, contract \texttt{LAMBDA.PENCIL},
+$4/4$, verdict \textsc{one-mode}) answers it on the declared T170 frame-A scan
+(all $70$ windows, the \vref{v563} surface bit for bit): the identities are
+machine-tight at $2\times10^{-14}$; the \emph{locking} mode is $\lambda_2$,
+hugging $1$ at median $1.000021$, while the spectator $\lambda_1$ sits far
+\emph{above} $1$ ($[4.53,180.64]$, $\min|1-\lambda_1|=3.53$) --- the label
+guess of the motivating review, reversed --- so the two-dimensional
+cancellation of the classification paper reduces to the single scalar
+$1-\lambda_2$ on the whole reachable surface (on the $h=540$ reference window
+$1-\lambda_2=-2.27\times10^{-5}$ reproduces $\det\hat A=4.22\times10^{-3}$
+exactly), and the position scramble explodes $|1-\lambda_2|$ by
+$\times1.9\times10^{6}$ while the identities keep holding: the locking is
+arithmetic placement. No uniformity claim beyond the surface, no rate, no RH
+statement --- Problem~7.1 is \emph{typed}, not bounded. The exact core is
+load-bearing: \veri{v569\_lambda\_pencil\_onemode.py}
+(Section~\ref{sec:v569}).
+
+\subsection{The backflow, continued: the separation floor closes on the surface (T180)}\label{sec:t180}
+One part later the open question T179 named --- does the spectator stay
+separated? --- is answered on the reachable surface by reduction rather than
+by more measurement: T180 (\texttt{separation\_floor\_probe.py}, contract
+\texttt{SEPARATION.FLOOR}, $9/9$, verdict \textsc{floor-certified}). Two
+one-line theorems turn the separation into a closed per-window floor
+($\lambda_1\ge\sqrt{\det S/\det B}$ when the pencil determinant is positive,
+$\lambda_1\ge\operatorname{tr}Z$ when it is not), and on all $70$ declared
+windows the floor clears the margin, $\min F=2.130\ge1.05$: the separation
+now \emph{follows} from two closed scalars instead of being read off an
+eigenvalue routine. The dominance behind it --- the comb determinant over
+the arch determinant --- is large (median $30.1$) and grows with depth
+($h^{0.90}$ on the surface ladder). The honest negative travels with it:
+the cheap two-atom witness route is dead ($\det S$ is itself a pair-level
+cancellation, negative pair mass up to $13.7\times$ the total), so the
+$h$-uniform dominance stays open --- typed now as a pair-level
+size-vs-cancellation question, strictly weaker than Problem~7.1 but not
+free. The scramble control flips the trace sign ($-78.28$): arithmetic
+placement again. The exact core is load-bearing:
+\veri{v570\_separation\_floor.py} (Section~\ref{sec:v570}).
+
+\subsection{The backflow, continued: where the dominance lives (T181)}\label{sec:t181}
+The typed question T180 left --- \emph{where} does the dominance sit, so
+that a certificate knows what to aim at? --- is answered by dissecting the
+pair kernel: T181 (\texttt{pair\_band\_structure\_probe.py}, contract
+\texttt{PRIME.PAIRBAND}, $10/10$, verdict \textsc{long-range}). The Cauchy--Binet band decomposition is exact per
+window; on every selected window \emph{every} near band ($<16$ lag cells)
+and the diagonal drag \emph{negative} --- so near-diagonal Chebyshev
+budgets aim at the wrong sign --- while the far band carries the whole
+positive excess with a stable net ($[1.55,1.91]\times\det S$) even as its
+gross mass grows to $13\times\det S$: the dominance is long-range
+coherence. Sharper still, the excess is scale-locked ($\ge h/2$ pairs
+carry it) and weight-concentrated --- the top-$10\%$-weight pairs alone
+net $0.85$--$1.00\times\det S$ on every window, essentially $\det S$
+itself --- while the lag-grid phase plays no role (flat, shrinking with
+$h$): the certificate target is \emph{heavy-pair coherence at
+window-scale separation}. The scramble control cuts both ways: random
+placement at the
+same masses explodes $\det S$ by ${\sim}\times49$ and collapses the far
+share --- the real placement \emph{suppresses} $\det S$ fifty-fold while
+organising its coherence. Declared surface and subset only; no rate, no
+RH statement. The exact core is load-bearing:
+\veri{v573\_pair\_band\_structure.py} (Section~\ref{sec:v573}).
+
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
-\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the twenty-seven ledger modules
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the thirty-one ledger modules
 of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
@@ -10710,19 +10974,20 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T177}\label{app:index}
+\section{Probe index, diary parts T11--T181}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $167$ parts T11--T177 that the current diary file
-records ($168$ runs --- T104 was a double run with two independent arms --- and $4597$ green checks);
+load-bearing artefact. The index covers the $171$ parts T11--T181 that the current diary file
+records ($172$ runs --- T104 was a double run with two independent arms --- and $4651$ green checks);
 the ten earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded
 by the diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks},
-plus \vref{v535}--\vref{v562} promoted; with T126--T177 (T176, the endgame measurement, landed after
-the reverse-flow part T177 and is numbered by contract), the first fifty-two landed parts of the
-second phase, the running totals are \textbf{$177$ probes and $4789/4789$ checks}.
+plus \vref{v535}--\vref{v564}, \vref{v569}--\vref{v570} and \vref{v573} promoted; with T126--T181 (T176, the endgame measurement, landed after
+the reverse-flow part T177 and is numbered by contract; T178--T181 are the post-closure backflow parts), the
+first fifty-six landed parts of the second phase, the running totals are \textbf{$181$ probes and
+$4843/4843$ checks}.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -10905,6 +11170,10 @@ T174 & \texttt{\scriptsize cancellation\_\allowbreak identity} & \textbf{the gau
 T175 & \texttt{\scriptsize phase\_\allowbreak placement} & \textbf{the placement phases are real and causal, but non-smooth --- and the heterogeneity dissolves into the error bar} --- $1504$ cells on $188$ anchors (EVERY prime power in $[40,1090]$; no frame rule anywhere) $\times$ the T174 ladder $+$ declared floor $h=128$; the deficit REPRODUCES ($+0.1069\pm0.0222$, $0.13\sigma$ from T174); \textbf{the trap said out loud: the preregistered anchor invariant $\theta_p=\mathrm{frac}(\log p/\alpha)$ is a smooth monotone function of $\alpha$ (Rayleigh $Z=1296$) --- a regression on it would be an $\alpha$-regression in disguise}; only the cell phase $\varphi_p(h)=\mathrm{frac}(h\theta_p)$ is free and equidistributed (max $Z=1.41$; generating identity certified $1.1\times10^{-13}$, Weyl 1916); \textbf{the phases are REAL in $\log R$} ($F=10.80$ vs within-rung null $95\%$ point $1.69$; $+10.3\%$ held out; composite placebo $0.81/-0.0275$; amplitudes monotone $0.018\to0.141$) \textbf{but NOT the heterogeneity channel} ($\chi^2/\mathrm{dof}$ $3.14\to2.52$, target $<2$ missed; held out $-15.4\%$; deficit untouched, $0.18\sigma$); the exploratory scan excludes every anchor statistic; \textbf{the resolution is the ERROR BAR: jackknife slope errors take the excess scatter $0.1224\to0.0000$ and the robust pull $1.41\to1.22$ (half-split $0.2722$ vs sd $0.2789$) --- T174's $\chi^2$ was substantially an OLS independence assumption, the $5\sigma$ deficit unaffected}; \textbf{the dense corner EXHAUSTED} ($\mathrm{dens}\le361$ by the caps; $359$ reached): the curve falls $+0.982\pm0.213\to-0.057\pm0.132$ over $3$ decades, monotone, slope $6.1\sigma$, \textbf{the densest bin CONSISTENT WITH ZERO --- true zero / power law / plateau $<0.132$ undecidable under this sieve}; both channels significant ($\log h$ $+0.2435$, $\log\mathrm{dens}$ $-0.0631$; curvature $-0.137$) --- not a single exponent; alternative assemblies INADMISSIBLE (lump $0\%$/wide $0\%$ PD dense), deformation sensitivity ratio $0.4$ --- the sparse corner is no assembly artefact; rule proposal $\mathrm{dens}\ge1$ ($6.5\sigma$, not retroactive); scramble $12/12$; \textbf{the INTERVENTION (exact rebuild control): displacing the six family atoms gives $d\log R/d\delta=879$, linear over four declared decades --- the placement phase is CAUSAL for $R$, the first interventional statement of the series; the first harmonic predicts $2.89$ (factor ${\sim}300$ too small), PD dies at $\delta\ge10^{-3}$, GAP $=1.6\times10^{-9}$--$4.8\times10^{-6}$: the floor is a near-degeneracy, $\log R$ non-smooth in the phases}; candidates P175-1--P175-8 PENDING & PHASES-RESIST & 38/38\\
 T176 & \texttt{\scriptsize dense\_\allowbreak limit} & \textbf{the density curve sits at zero, and the phase-2 measurement programme closes as planned} (landed after T177; numbered by contract) --- the bigger sieve and ONE change only: $\mathtt{ATOM\_MAX}$ $1.2\times10^{6}\to2.5\times10^{7}$ (factor $20.8$; cost $0.08$\,s / $59.7$\,MB peak --- \textbf{the sieve was never the binding constraint}, the grid costs the $110$\,s), $1\,566\,727$ prime-power atoms, density ceiling $361\to6120$ ($6118$ reached), $14\,532$ cells on $692$ anchors, $0$ indefinite; \textbf{the extended curve} (eight ratio-4 bins, cluster-robust): $+0.8886\pm0.1027\to+0.5148\to+0.1948\to+0.3922$ (declared violation, curvature) $\to+0.1520\to+0.0579\to+0.0376\pm0.0410$ (dens ${\sim}779$, $0.9\sigma$, NEW) $\to+0.1046\pm0.0881$ (dens ${\sim}2512$, $1.2\sigma$, NEW); \textbf{pooled over the new bins $+0.0496\pm0.0372$ ($1.3\sigma$) --- no sign change, no stabilisation above zero}; density slope $8.0\sigma$ over $4.0$ decades; \textbf{plateau window $0.264\to0.074$ at $2\sigma$ --- a $3.6\times$ narrowing, the whole content of the bigger sieve}; sieve consistency: all six T175 bins at $0.0\sigma$ under T175's exact ladder $+$ anchors; both curvature channels survive with T175's coefficients ($\log h$ $+0.1529\pm0.0258$, $5.9\sigma$; $\log\mathrm{dens}$ $-0.0434\pm0.0060$, $7.3\sigma$; $a_2=-0.0842\pm0.0085$; $\le1.7\sigma$), none of six preregistered reparametrisations is one exponent (the data wants $\mathrm{dens}^{+0.284}h$); \textbf{R1 CLOSED: the Feynman--Hellmann form reproduces the rebuild to $3.37\times10^{-6}$} at the U-minimum of a declared step ladder ($d\mathrm{DEL}/\mathrm{DEL}$ carries $84\%$, $\lambda_{\min}$ $7\%$); \textbf{the $300\times$ harmonic anomaly is a POLE} (PD survives $2\%$ of the period, $\delta_{\mathrm{PD}}\cdot|d\log R/d\delta|=5.8$; the two lowest modes $13.4\%$ apart at $\delta=0$ --- the intervention runs along a crossing); scramble $194/194$; \textbf{anti-promotion: the estimator is LADDER-DEPENDENT ($0.20$) --- every quoted bin deficit must cite its rung ladder}; resource fence: factor $5$ more sieve fits, factor $100$ ($\sim2.5\times10^{9}$, one more decade of window) does not; true zero / power law / plateau stay OPEN $\to$ \vref{v562} & SITS-AT-ZERO & 24/24\\
 T177 & \texttt{\scriptsize cp\_\allowbreak invariant} & \textbf{the reverse flow resumed at the CP ledger: two invariants carry $\pi/3$, four rows narrowed, none upgraded} --- the gauge-degree toolkit (T173/T174) turned on the four CP ledger rows; all four constructions rebuilt exactly from the compiler primitives ($\delta=\pi/3+3\lambda_C^2=1.198231638$ certified vs v88/v220; $\det(\mathbf1,d,n)=21$; $J=3.327\times10^{-5}$, CKM unitary to $10^{-41}$); \textbf{new exact identity}: on the hexagonal unit the phase channel carries $\sum_k\rho^{d_k}=4\rho$ ($\arg=\pi/3$, sheet-EVEN --- the $E_8$ degrees are even) against the magnitude channel $\sum_k\rho^{m_k}=4$ ($\arg=0$, sheet-ODD --- the exponents are odd): the E8.CHAN.01 typing has an exact fiber realisation (mutation controls: $e^{i\pi/5}$ and mutated lists break; caveat: exponent-sum reality alone is not hexagon-specific); THE TABLE ($6$ functionals $\times$ $4$ groups, character bookkeeping a homomorphism in every non-trivial cell): the magnitude data carry NO phase ($\arg\prod c=0$ on both triples), the full $\delta$ has NO character (CP-even correction on a CP-odd angle), the raw orientation is HOMOGENEITY DEGREE $+1$ in the frame normalisation ($21\sin(\pi/3)$ is frame data) while $\operatorname{Im}(\rho\det)/\det=\operatorname{Im}\rho$ removes the frame exactly, and Jarlskog passes (a)--(c), failing only the $\pi/3$-carrier test (its content is $\delta$) --- the benchmark validates the criterion; \textbf{Tier-1 is EMPTY BY ALGEBRA} (kernels commute with conjugation $\Rightarrow$ every $\pi/3$-carrier is $\kappa$-odd); \textbf{Tier-2: TWO passers, P2 and V5, in two inequivalent character classes} (sheet-even vs sheet-odd), NEITHER frame-coupled; four ledger rows narrowed (REDTEAM.D.01 residual $=$ a fiber datum; E8.CHAN.01 phase channel sheet-blind; CP.MOD.01 scoped to the leading term; DUAL.FRAME.01 orientation reading degree $+1$, invariant core $\sin(\pi/3)$, sign a declared orientation), NO marker moves; rest: which Tier-2 character is physical (the sheet-odd reproduces CP.MU6.01 --- a preference, not a derivation), the deck column a declared model $\to$ \vref{v561} & DEGENERATE & 49/49\\
+T178 & \texttt{\scriptsize cp\_frame\_\allowbreak carrier} & \textbf{the frame door of the CP mirror, decided: R1 by theorem, R2 by anchor, the degeneracy explained} (post-closure backflow part) --- \textbf{R1, natural half, NEGATIVE BY THEOREM}: the fiber acts by a scalar on the $n$-row, so every homogeneous frame block factorises $P(\rho n)=\rho^{m}P(n)$ (fully generic degree-$1..4$ polynomials, symbolic coefficients) and every scale-free functional is $\sum_k A_k\operatorname{Im}(\rho^k)$ with real degree-$0$ frame ratios; the metric-free invariants of $(\mathbf1,d,n)$ have ONE generator (exact bracket enumeration: six permutations $=\pm\Delta$, $21$ vanish identically; Weyl 1946 FFT the cited class boundary) $\Rightarrow$ every scale-free ratio is constant --- no frame-coupled scale-free $\pi/3$-carrier without a metric; \textbf{R1, metric half, NON-CANONICAL}: frame-coupled Tier-2 carriers exist but split into two character classes ($\Delta/\langle d,n\rangle$, $\Delta/\langle\mathbf1,n\rangle$ at $(-1,-1,+1)$ vs $\Delta^{2}/\langle n,n\rangle$ at $(-1,-1,-1)$) and the normalisers contain the continuum $q_t=t n_1^2+n_2^2+n_3^2$ (values $441\sin(\pi/3)/(25t+117)$) --- no canonical frame factor ($21/8$, $21/2$, $441/142$ normaliser-relative, anti-numerology fence as a check); \textbf{the SINGLE-SINE LEMMA}: $\{|\operatorname{Im}\rho_n^k|\}$ has one nonzero element iff $n\in\{1,2,3,4,6\}$ (crystallographic, $\varphi(n)\le2$; $\sin(4\pi/n)-\sin(2\pi/n)=2\sin(\pi/n)\cos(3\pi/n)$, zero only at $n=6$ for $n\ge5$) --- the compiler clocks $\mu_4$/$\mu_6$ are the two maximal single-sine fibers, so T177's DEGENERATE was FORCED (on $\mu_5$ values separate carriers); \textbf{R2 SELECTED by the anchor}: Jarlskog carries the full tuple $(-1,-1,-1)$ at $40$ dps, matching the sheet-odd orientation class only --- the unique anchor-matching canonical carrier is the fiber-pure $\operatorname{Im}\rho=\sin(\pi/3)$ (conditional on the anchor, not derived); no marker moves, REG.FREEZE.01 untouched $\to$ \vref{v564} & FIBER-PINNED & 31/31\\
+T179 & \texttt{\scriptsize lambda\_\allowbreak pencil} & \textbf{the relative pencil on the declared Paper-II surface: the one-mode question, answered} (post-closure backflow part) --- the pencil identities $\det(B-S)=\det B\,(1-\lambda_1)(1-\lambda_2)$, $D(B,S)=\det B\,(\lambda_1+\lambda_2)$, $\det S=\det B\,\lambda_1\lambda_2$ machine-tight on all $70$ declared T170 frame-A windows (worst residual $2\times10^{-14}$; the \vref{v563} surface bit for bit); the LOCKING mode is $\lambda_2$ hugging $1$ (median $1.000021$) while the spectator $\lambda_1$ is uniformly separated --- $\min|1-\lambda_1|=3.53$, $\lambda_1\in[4.53,180.64]$, always ABOVE $1$ (the review guess, reversed): the two-dimensional cancellation reduces to the SINGLE scalar $1-\lambda_2$ on the reachable surface; $h=540$ reads $1-\lambda_2=-2.27\times10^{-5}$ (reproducing $\det\hat A=4.22\times10^{-3}$); position scramble explodes $|1-\lambda_2|$ by $\times1.9\times10^{6}$ while the identities keep holding --- arithmetic placement, not an identity artefact; declared surface only, Problem 7.1 typed not bounded $\to$ \vref{v569} & ONE-MODE & 4/4\\
+T180 & \texttt{\scriptsize separation\_\allowbreak floor} & \textbf{the T179 open question closed on the surface: the spectator separation certified from closed scalars} (post-closure backflow part) --- two one-line theorems ($P=\det S/\det B>0$, $T=\operatorname{tr}Z>0\Rightarrow\lambda_1\ge\sqrt P$; $P\le0\Rightarrow\lambda_1\ge T$) turn the separation into a closed per-window floor: $\min F=2.130\ge1.05$ on ALL $70$ declared windows (measured $\min\lambda_1=4.534$) --- the separation follows from $\det S/\det B$ and $\operatorname{tr}Z$ alone; the dominance $P\in[4.5,120.6]$ (median $30.1$) grows $h^{0.90}$ (surface ladder), $1-T+P=\det(B-S)/\det B$ links the scalars exactly; HONEST NEGATIVE: the cheap witness route is dead --- $\det S$ is itself a pair-level cancellation (Cauchy--Binet exact; negative pair mass up to $13.7\times\det S$; best single pair $0.13$--$0.34\times\det B$ vs $\ge1.10$ needed): the $h$-uniform dominance stays open, typed as pair-level size-vs-cancellation; scramble flips $\operatorname{tr}Z$ to $-78.3$; declared surface only, Problem 7.1 untouched $\to$ \vref{v570} & FLOOR-CERTIFIED & 9/9\\
+T181 & \texttt{\scriptsize pair\_band\_\allowbreak structure} & \textbf{where the dominance lives: LONG-RANGE} (post-closure backflow part) --- the Cauchy--Binet band decomposition of $\det S$ is exact per window; EVERY near band ($<16$ lag cells) and the diagonal drag NEGATIVE on every selected window (near-diagonal budgets aim at the WRONG SIGN); the far band ($\ge16$ cells) carries the WHOLE excess with stable net (far/$\det S\in[1.55,1.91]$) while the gross far mass grows $4.1\to13.0\times\det S$ --- long-range coherence, not local mass; must-break both directions: the scramble EXPLODES $\det S$ $\times49$ (the real placement holds it ${\sim}50\times$ below random) and collapses the far share below $1$; sharper: scale-locked ($\ge h/2$), weight-concentrated (top decile nets $0.85$--$1.00\times\det S$), phase-flat --- the target is heavy-pair window-scale coherence; per-atom share oscillating (standing-wave-like); typing of the v570 dominance question; declared surface/subset only $\to$ \vref{v573} & LONG-RANGE & 10/10\\
 \end{xltabular}
 }
 

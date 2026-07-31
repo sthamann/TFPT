@@ -150,7 +150,11 @@ export type PrimeFrontVerdict =
   | "PARTIAL-CANCEL"
   | "PHASES-RESIST"
   | "DEGENERATE"
-  | "SITS-AT-ZERO";
+  | "SITS-AT-ZERO"
+  | "FIBER-PINNED"
+  | "ONE-MODE"
+  | "FLOOR-CERTIFIED"
+  | "LONG-RANGE";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -174,6 +178,94 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-31",
+    part: 181,
+    title:
+      "Where the dominance lives: LONG-RANGE. T180 certified the spectator separation from the dominance det S ≫ det B and left the typed question: where does that dominance sit, so a certificate knows what to aim at? T181 dissects the Cauchy–Binet pair kernel of det S on a declared subset of the surface and finds a clean anatomy: EVERY near band (below 16 lag cells) and the diagonal drag NEGATIVE on every selected window — so near-diagonal Chebyshev budgets aim at the wrong sign — while the far band (≥ 16 cells) carries the WHOLE positive excess with a stable net (1.55–1.91 × det S) even as its gross mass grows to 13 × det S. The scramble control cuts both ways: random placement at the same masses explodes det S by ×49 (the real placement holds it ~50× BELOW random while organising its coherence) and collapses the far-band share. The dominance is long-range coherence, arithmetic placement — not local mass.",
+    verdict: "LONG-RANGE",
+    summary:
+      "T181 (LONG-RANGE — where the v570 dominance lives; 10/10, 12.9 s; eighth backflow probe) — contract PRIME.PAIRBAND: the Cauchy–Binet band decomposition of det S is exact per window (worst 1e−9); every near band (< 16 lag cells) and the diagonal are NEGATIVE on every selected window (declared subset: every 12th window ≤ 16000 atoms + the h = 540 reference); the far band carries the whole excess — net far/det S in [1.55, 1.91] stable while the gross positive far mass grows 4.1 → 13.0 × det S (the 8:9 cancellation deepens with h, the net tracks det S); must-break both directions: the position scramble EXPLODES det S ×49 (the real placement suppresses det S ~50× below random) and collapses the far share below 1. Sharper anatomy: scale-locked (pairs ≥ h/2 carry the excess), weight-concentrated (the top-10%-weight pairs alone net 0.85–1.00× det S — essentially det S itself), phase-flat (mechanism killed). Typing of the open v570 dominance question: its certificate must control heavy-pair coherence at window-scale separation. Declared surface/subset only; MEASURED with ladders; no rate, no bound, NO RH statement; Problem 7.1 untouched. The exact core is promoted as v573 (PRIME.PAIRBAND.01).",
+    badge: "sandbox",
+    script: "pair_band_structure_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 0,
+    title:
+      "Promoted: four review follow-ups as one round (v571–v574) — the preregistered cross-ratio check passes on its discrete half (v571: the declared Koide functional reads (26, 35, 44, 53) on the four in-repo solver corners, CR = 4/3 exactly, and y_F = 53 is Möbius-forced by the three upstream corners — a new exact cross-corner identity; negative controls fail as preregistered); the RP form on the 81-twins is spectrally blind but integrally anchor-visible (v572: the Smith towers of the anchor-state Gram separate the twins in one slot, 18 vs 2 = 9 = N²fam — the bit shows only through anchor-coupled states); the dominance is typed long-range (v573, the T181 core); and Stage B forces the winding normalisation (v574: the involution type dies by a rank theorem, and the double self-consistency — ladder + saturation sat = N⁴ — pins (N, Q) = (3, compiler Q) uniquely: N_fam = 3 relocates from declared input to consistency-forced).",
+    verdict: "MACHINE-VERIFIED",
+    summary:
+      "Four modules promoted in one round (suite 564 → 568 scripts): v571_cr_discrete_corners.py (FTR.CRDISC.01, 9 checks — the v566 S9 preregistered check executed on its discrete half; the continuous-solver half stays open per CONTRACT.F.01); v572_rp_bit_form.py (DIAMOND.BIT.RPFORM.01, 11 checks — kinematically no positivity selection exists, honest negative; integrally the anchor/ladder states separate the twins; and the anchor-Hamiltonian Gibbs pencil separates DYNAMICALLY: the compiler twin is Gibbs-critical at s* = (8−4√19)/15, the alt never — a rank-drop marker; the positivity selection stays open); v573_pair_band_structure.py (PRIME.PAIRBAND.01, 10 checks — the dominance anatomy: near bands negative, far band carries everything — scale-locked, weight-concentrated in the top decile, phase-flat; scramble explodes det S ×49); v574_stageb_winding.py (QGEO.WINDING.SELF.01, 11 checks — type killed by rank theorem, N ≤ 3 by the exponent demand, sat = N⁴ only at N = 3, the spectrum ablation decomposes the forcing (self-consistency ⇒ sheet {1,2} + shape; A₃ exponents ⇒ N = 3), and (M)/(L) prove redundant relative to the self-code: the declared inputs shrink to three; GATE.QGEO.01 narrowed by four items, not closed; no P2 reduction). Four ledger rows + update notes; full paper/diary/website sync. No RH statement anywhere.",
+    badge: "machine-verified",
+    script: "v574_stageb_winding.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 180,
+    title:
+      "The T179 open question, closed on the surface: the spectator separation is certified from closed scalars. T179 had left one named open question — does the spectator eigenvalue λ₁ of the relative pencil stay separated from 1? T180 answers it on the reachable surface by reduction rather than by more measurement. Two one-line theorems (det Z > 0 and tr Z > 0 give λ₁ ≥ √(det S/det B); det Z ≤ 0 gives λ₁ ≥ tr Z) turn the separation into a closed per-window floor, and on all 70 declared windows that floor clears the margin: min F = 2.130 ≥ 1.05 — the separation now FOLLOWS from two closed scalars (the comb determinant over the arch determinant, and the pencil trace) instead of being read off an eigenvalue routine. The dominance behind it is large (median 30.1) and grows with depth (h^0.90 on the surface ladder). The honest negative travels with the result: the cheap two-atom witness route is dead — det S is itself a pair-level cancellation object (negative pair mass up to 13.7× the total), so the h-uniform dominance stays open, typed now as pair-level size-vs-cancellation, strictly weaker than Problem 7.1 but not free. The scramble control flips the trace sign (−78.28): arithmetic placement again.",
+    verdict: "FLOOR-CERTIFIED",
+    summary:
+      "T180 (FLOOR-CERTIFIED — the T179 open question closed on the surface; 9/9, 13.6 s; seventh backflow probe) — contract SEPARATION.FLOOR: two one-line theorems (P = det S/det B > 0, T = tr Z > 0 ⇒ λ₁ ≥ √P via λ₁² − P = λ₁(λ₁−λ₂); P ≤ 0 ⇒ λ₁ ≥ T) reduce the spectator separation to determinant/trace dominance of the comb block over the arch block, with T = D(B,S)/det B, P = det S/det B and 1 − T + P = det(B−S)/det B closed objects of (B, S). THE CERTIFICATION: min floor = 2.130 ≥ 1.05 on ALL 70 declared windows (measured min λ₁ = 4.534) — sound and conservative. THE DOMINANCE: P ∈ [4.5, 120.6], median 30.1, growing h^0.900 (surface ladder). HONEST NEGATIVE: the cheap witness route is dead — det S is a pair-level cancellation (Cauchy–Binet exact at 4.5e−14; negative pair mass up to 13.7× det S, median 8.0×; best single pair only 0.13–0.34× det B vs ≥ 1.10 needed): the h-uniform dominance det S ≥ (1+c)² det B stays open, typed as pair-level size-vs-cancellation (an 8:9 cancellation, not a 4.7-order one — but not free). Must-break: the position scramble flips tr Z to −78.28. Declared surface only; Problem 7.1 untouched; no uniformity, no rate, NO RH statement. The exact core is promoted as v570 (PRIME.PENCIL.SEPFLOOR.01).",
+    badge: "sandbox",
+    script: "separation_floor_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 0,
+    title:
+      "Promoted: the separation floor certified (v570) — the exact core of T180 as one load-bearing module: the two floor lemmas verified symbolically; the closed per-window floor sound and clearing the margin on all 70 declared windows (min 2.130 ≥ 1.05) — the v569 separation now rests on det S/det B and tr Z alone; the dominance growth measured with its ladder; the exact trace/determinant link; the Cauchy–Binet pair decomposition with the honest witness-kill; and the trace-sign must-break. The h-uniform dominance stays the named open question, in sharper closed-scalar form.",
+    verdict: "MACHINE-VERIFIED",
+    summary:
+      "The exact core of T180 is now load-bearing as one module (v570_separation_floor.py, 8 checks, ~13 s; ledger row PRIME.PENCIL.SEPFLOOR.01, markers [E] for the lemmas, floor and controls, MEASURED for the dominance growth with its ladder). Content: the reduction theorems (λ₁ ≥ √P for P > 0, λ₁ ≥ T for P ≤ 0, symbolic); the certification min floor = 2.130 ≥ 1.05 on all 70 windows — the v569 separation follows from closed scalars; the dominance P ∈ [4.5, 120.6] median 30.1 growing h^0.90; the exact link 1 − T + P = det(B−S)/det B; the pair-level witness-kill (negative pair mass up to 13.7× det S — no two-atom certificate exists); the scramble must-break (tr Z flips to −78.28). Update note on PRIME.PENCIL.ONEMODE.01. Named limits: declared finite surface only — the h-uniform dominance det S ≥ (1+c)² det B is the SAME open question v569 named, now typed as pair-level size-vs-cancellation; Problem 7.1 untouched; MEASURED stays MEASURED. Suite 563 → 564 scripts. Full ledger/paper/diary/website sync. No RH statement anywhere.",
+    badge: "machine-verified",
+    script: "v570_separation_floor.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 179,
+    title:
+      "The relative pencil answers the one-mode question — with the labels reversed. The parabolic self-code work on the physics side had proved, symbolically, that Paper II's rank-3 polarisation is (2+1)-Lorentz geometry and that the low 2×2 block carries a relative pencil Z = B⁻¹S with three exact identities. T179 runs that lens on the real declared surface (all 70 T170 frame-A windows, bit for bit) and answers the one measurable question that decides whether the lens buys anything: is one pencil eigenvalue uniformly separated from 1? Yes — but with the labels reversed against the guess. The locking mode is λ₂, hugging 1 at median 1.000021; the spectator λ₁ sits far ABOVE 1 (4.53 to 180.64, min |1−λ₁| = 3.53 across every window). So the two-dimensional cancellation of Paper II reduces to the single scalar 1−λ₂ on the whole reachable surface: on the h = 540 reference window 1−λ₂ = −2.27e−5 reproduces det Â = 4.22e−3 exactly, and the position scramble at the same masses explodes it by ×1.9e6 while every identity keeps holding — the locking is arithmetic placement. Declared surface only; Problem 7.1 is typed, not bounded.",
+    verdict: "ONE-MODE",
+    summary:
+      "T179 (ONE-MODE — the Priority-5 question of the self-code review, answered on the reachable surface; 4/4, 1.7 s; sixth backflow probe) — contract LAMBDA.PENCIL: the v566 S8 pencil identities det(B−S) = det B (1−λ₁)(1−λ₂), D(B,S) = det B (λ₁+λ₂), det S = det B λ₁λ₂ are machine-tight on all 70 declared windows (worst residual 2e−14; the v563 surface imported read-only). The LOCKING mode is λ₂ (median 1.000021, range [−0.85, 1.0005]); the spectator λ₁ is large and uniformly separated (min |1−λ₁| = 3.53, always above 1 — the review guessed below): exactly one eigenvalue can approach 1, so the cancellation reduces to the single scalar 1−λ₂. Reference window h = 540: 1−λ₂ = −2.27e−5, reproducing det Â = 4.22e−3. Must-break: the position scramble explodes |1−λ₂| by ×1.9e6 while the identities hold — arithmetic placement, not an identity artefact. Declared surface only; whether λ₁ stays separated as h grows is a new named open question, strictly weaker than Problem 7.1; no uniformity, no rate, NO RH statement. The exact core is promoted as v569 (PRIME.PENCIL.ONEMODE.01).",
+    badge: "sandbox",
+    script: "lambda_pencil_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 0,
+    title:
+      "Promoted: the relative pencil one-mode structure (v569) — the exact core of T179 as one load-bearing module: the surface frozen at 70 declared windows; the three pencil identities machine-tight on the real data; the locking/spectator labels measured and corrected against the review guess (λ₂ locks to 1, λ₁ uniformly separated above 1); the one-mode reduction of Paper II's near-degeneracy to the single scalar 1−λ₂ on the reachable surface; the h = 540 reference read; and the position-scramble must-break. Problem 7.1 stays untouched — typed, not bounded.",
+    verdict: "MACHINE-VERIFIED",
+    summary:
+      "The exact core of T179 is now load-bearing as one module (v569_lambda_pencil_onemode.py, 6 checks, ~2 s; ledger row PRIME.PENCIL.ONEMODE.01, markers [E] for the identities and controls, MEASURED for the eigenvalue readouts with their ladders). Content: the declared T170 frame-A scan (the v563 surface, read-only) yields 70 windows; the pencil identities hold at 2e−14; λ₂ locks to 1 (median 1.000021) while min |1−λ₁| = 3.53 uniformly — the two-dimensional cancellation reduces to ONE scalar on the whole reachable surface (verdict ONE-MODE); the reference window reproduces det Â = 4.22e−3 through the pencil; the scramble explodes the locking factor by ×1.9e6 while the identities keep holding. Update notes on PRIME.PAPER2.READOUT.01 and DIAMOND.PARA.SELFCODE.01 (the S8 route is now executed on real data). Named limits: declared finite surface only, Problem 7.1 untouched (typed, not bounded), whether λ₁ stays separated as h grows is a new named open question strictly weaker than Problem 7.1; MEASURED stays MEASURED. Suite 562 → 563 scripts. Full ledger/paper/diary/website sync. No RH statement anywhere.",
+    badge: "machine-verified",
+    script: "v569_lambda_pencil_onemode.py",
+  },
+  {
+    date: "2026-07-30",
+    part: 178,
+    title:
+      "The frame door of the CP mirror, decided: R1 by theorem, R2 by anchor, and the degeneracy explained. T178 took the two open items the CP mirror (T177) left behind — can a frame-coupled, scale-free π/3 carrier exist at all, and which of the two degenerate invariant classes is physical — and decided both, because they are pure finite algebra. R1, natural half: NO, by theorem — the fiber acts on the frame by a scalar on one row, so every homogeneous frame block factorises exactly (Euler), and the metric-free invariants of the (1, d, n) frame have exactly one generator (the bracket enumeration is exact: six permutations = ±Δ, the other 21 vanish identically), so every scale-free ratio is constant. R1, metric half: coupling exists but is non-canonical — declared metrics admit frame-coupled carriers, but they split into two character classes and the admissible normalisers form a continuum (values 441·sin(π/3)/(25t+117)): no canonical frame factor, and the exhibited numbers 21/8, 21/2, 441/142 are normaliser-relative frame data with the anti-numerology fence wired as a check. R2: the classical anchor selects — the Jarlskog invariant carries the full character tuple (−1,−1,−1), matching the sheet-odd orientation class only; the unique anchor-matching canonical carrier is the fiber-pure Im ρ = sin(π/3). And a new exact pattern explains why T177 had to end DEGENERATE: the single-sine lemma — on a μ_n fiber all carriers emit the same sine iff n is crystallographic (n ∈ {1,2,3,4,6}), and the compiler's two clocks μ4 (j = 1728) and μ6 (j = 0) are exactly the two maximal single-sine fibers, so value-based pinning of functionals was impossible there by theorem. No marker moves; the CP residual is relocated with a proof, not closed.",
+    verdict: "FIBER-PINNED",
+    summary:
+      "T178 (FIBER-PINNED — R1 decided, R2 selected, the degeneracy explained; 31/31, 2.4 s; fifth reverse-flow probe) — contract FRAME.CARRIER: T177's two open rests are pure finite algebra and are decided, not measured. H1 EULER FACTORISATION: the fiber acts on the frame by a scalar on the n-row (n → ρn), so P(ρn) = ρ^m P(n) for every homogeneous block — checked on fully generic degree-1..4 polynomials with symbolic coefficients; every scale-free rational functional decomposes as Σ_k A_k·Im(ρ^k) with A_k real degree-0 frame ratios: the fiber content is QUANTISED. H2 THE NATURAL CLASS IS FIBER-ONLY (R1, natural half, negative BY THEOREM): metric-free invariants of vector tuples are generated by volume-form brackets (Weyl 1946 FFT, the one cited class boundary); the exact enumeration on {1, d, n} gives ONE generator (six permutations = ±Δ, 21 brackets vanish identically in a generic n), so every scale-free ratio is constant — no frame-coupled scale-free π/3 carrier exists without a metric; T177's obstruction sentence ('one determinant only') is now a theorem. H3 THE METRIC DOOR IS NON-CANONICAL (R1, metric half): declared metrics admit frame-coupled Tier-2 carriers, non-unique at BOTH levels — characters: Δ/⟨d,n⟩ and Δ/⟨1,n⟩ carry (κ,σ,Ref) = (−1,−1,+1) (the odd Δ-power absorbs the reflection) while Δ²/⟨n,n⟩ carries (−1,−1,−1); values: the admissible normalisers contain the continuum q_t = t·n₁² + n₂² + n₃² (deck-invariant for every t) with carrier values 441·sin(π/3)/(25t+117), strictly monotone in t — NO canonical frame factor; anti-numerology wired as a check (21/8, 21/2, 441/142 pairwise distinct, none claimed). H4 THE SINGLE-SINE LEMMA (the pattern): {|Im ρ_n^k|} has exactly one nonzero element iff n is crystallographic (n ∈ {1,2,3,4,6} = {n : φ(n) ≤ 2}), by sin(4π/n) − sin(2π/n) = 2·sin(π/n)·cos(3π/n) with its only zero at n = 6 on n ≥ 5, enumerated exactly to n = 24; the compiler's two clocks μ4 (seam deck, j = 1728) and μ6 (CP fiber, j = 0) are the two MAXIMAL single-sine fibers — T177's DEGENERATE verdict was forced, not found (on μ5, values DO separate carriers). H5 THE ANCHOR SELECTION (R2): the Jarlskog invariant on the TFPT CKM rebuild has full character tuple (−1,−1,−1) under (conjugation, sheet flip, deck reflection), each certified at 40 dps — matching the sheet-odd orientation class V5 and not the sheet-even channel class P2 = (−1,+1,−1); the (−1,−1,+1) metric carriers are anchor-rejected and the matching family carries the continuum, so the unique anchor-matching CANONICAL carrier is the fiber-pure Im ρ = sin(π/3); conditional on the anchor (selected, not derived). No marker moves; REG.FREEZE.01 untouched; the deck column stays a declared model; R3/R4 of T177 stay open. The exact cores are promoted as v564 (CP.FIBER.PIN.01). Backflow to the physics side; no RH statement anywhere.",
+    badge: "sandbox",
+    script: "cp_frame_carrier_probe.py",
+  },
+  {
+    date: "2026-07-30",
+    part: 0,
+    title:
+      "Promoted: the frame door decided (v564) — the exact cores of T178 as one load-bearing module: the generic Euler factorisation (the fiber factors off the frame for the whole polynomial class); the one-generator bracket enumeration (the natural class is fiber-only — T177's R1 obstruction as a theorem); the metric-door non-uniqueness (character split (−1,−1,+1) vs (−1,−1,−1) and the q_t continuum of values, anti-numerology wired as a check); the single-sine lemma (crystallographic ⇔ one carrier sine — why T177's verdict was forced); and the anchor selection (the Jarlskog character tuple (−1,−1,−1) matches the sheet-odd orientation class only — R2 selected, conditional on the anchor). Plus housekeeping: v563 (the Paper-II readout closure, written in the previous session) registered in run_all/registry/ledger with its own row.",
+    verdict: "MACHINE-VERIFIED",
+    summary:
+      "The exact cores of T178 are now load-bearing as one module (v564_cp_fiber_pin.py, 22 checks, ~2 s, sympy-exact + one 3×3 unitary matrix at 40 dps; ledger row CP.FIBER.PIN.01, marker [E] with the Weyl-FFT class boundary and the anchor conditionality typed [C]) — R1 decided (natural class fiber-only by theorem; metric class couples but is non-canonical by an exhibited continuum), R2 selected (anchor tuple (−1,−1,−1) = the sheet-odd orientation class; the unique anchor-matching canonical carrier is the fiber-pure sin(π/3)), and the single-sine lemma types T177's DEGENERATE verdict as forced on crystallographic fibers (n ∈ {1,2,3,4,6}; the two compiler clocks μ4/μ6 are the two maximal single-sine fibers). Update note on CP.CHANNEL.IDENT.01 (markers unchanged); the CP residual is relocated with a proof, not closed — the invariant CP core is the fiber datum Im ρ = sin(π/3) and provably cannot be made frame data without a non-canonical metric import. Same change: v563_paper2_readouts.py (PRIME.PAPER2.READOUT.01, 24 checks — the readout closure of Paper II, left unregistered by the previous session) registered in run_all/registry/ledger; Paper II's non-recomputed-readings list narrows from three to one. Suite 556 → 558 scripts. Full ledger/paper/diary/website sync. Backflow to the physics side; no RH statement anywhere.",
+    badge: "machine-verified",
+    script: "v564_cp_fiber_pin.py",
+  },
   {
     date: "2026-07-29",
     part: 176,

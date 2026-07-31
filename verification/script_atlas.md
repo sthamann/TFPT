@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`556` registered scripts · `627` ledger claims · `10` clusters.
+`569` registered scripts · `640` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (88 scripts)
+### `core` — Compiler core & the E₈ glue  (92 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -187,6 +187,14 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v559_phase2_capstone, v558_bilinear_rank_identities, v559, T172, T173, T174 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v562_dense_limit_identities** [E/O] `PRIME.DENSE.LIMIT.01` — the exact cores of T176 (DENSE.LIMIT), the endgame of the phase-2 measurement programme, recomputed on a small declared surface (18 prime-power anchors in [40, 565] × the declared 
   - deps: v560_frame_deficit_identities, v559_phase2_capstone, v559, v560, T174, T175, T176 · cited: 1 architecture e8, 3 e8 audit bootstrap
+- **v563_paper2_readouts** [E] `PRIME.PAPER2.READOUT.01` — the check closure of the classification paper (Paper II, parity_toeplitz_classification): every number the paper quoted from an exploration probe without a recomputing module is re
+  - deps: v562_dense_limit_identities, v560_frame_deficit_identities, v559_phase2_capstone, v555, v558, v560, v562, T170 · cited: 1 architecture e8, 3 e8 audit bootstrap
+- **v569_lambda_pencil_onemode** [E] `PRIME.PENCIL.ONEMODE.01` — the Priority-5 question of the self-code review answered on the reachable surface: across ALL 70 declared frame-A windows the pencil identities det(B−S) = det B (1−λ₁)(1−λ₂), D(B,S
+  - deps: v563_paper2_readouts, v566_parabolic_anchor_selfcode, v563, v566 · cited: 3 e8 audit bootstrap
+- **v570_separation_floor** [E/O/X] `PRIME.PENCIL.SEPFLOOR.01` — two one-line theorems (P = det S/det B > 0, T = tr Z > 0 ⇒ λ₁ ≥ √P; P ≤ 0 ⇒ λ₁ ≥ T) turn the spectator separation into a closed per-window floor: min floor = 2.130 ≥ 1.05 on ALL 70
+  - deps: v569_lambda_pencil_onemode, v563_paper2_readouts, v563, v566, v569 · cited: 3 e8 audit bootstrap
+- **v573_pair_band_structure** [E] `PRIME.PAIRBAND.01` — on the declared surface every near band (< 16 lag cells) and the diagonal of the Cauchy–Binet pair kernel drag NEGATIVE, the whole positive excess of det S lives beyond 16 lag cell
+  - deps: v570_separation_floor, v569_lambda_pencil_onemode, v563_paper2_readouts, v563, v570 · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -210,7 +218,7 @@ _The fine-structure constant as the unique root of the boundary U(1) Ward identi
 - **v435_alpha_quillen_chernlevel** [E/C/O] `ALPHA.QUILLEN.PROGRESS.04` — ALPHA.QUILLEN.PROGRESS.04: a FOURTH honest step on ALPHA.QUILLEN.EXACT.01 (v382) -- it attacks the SINGLE remaining [O] after v434 (residual (2), the cubic alpha^3 Chern level) and
   - deps: v382_alpha_quillen_exact, v391_alpha_quillen_progress, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v48_em_ward, v342_em_ward_heatkernel, v48, v342 · cited: 1 architecture e8
 
-### `flavor` — Flavor matrix & operators  (17 scripts)
+### `flavor` — Flavor matrix & operators  (23 scripts)
 _The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature._
 
 - **v4_flavor_matrix** [E] `FLAV.R.01, FLAV.H2.01` — residue matrix R: det 8, minors (2,3,5), χ_R, Σ L = 40
@@ -247,6 +255,18 @@ _The integer operator ladder (R, K, Q, L) and its spectral invariants — the fl
   - deps: v482_seesaw_rung_decision, v481_seesaw_carrier_ladder, v247_e8_branching_no126, v247, v249, v470, v481, v482 · cited: 2 standard model
 - **v561_cp_channel_identities** [E/O] `CP.CHANNEL.IDENT.01` — the CP mirror as algebra: the prime-front gauge-degree toolkit turned on the four CP ledger rows, promoted as exact narrowings (no marker moves, no CP derivation claimed): (1) the 
   - deps: redteam/rt_D_upoint.py; v561_cp_channel_identities, v227_degree_exponent_channel_split.py; v561_cp_channel_identities, v220_cp_hexagonal_modulus.py; v561_cp_channel_identities, v225_dual_normal_frame.py; v561_cp_channel_identities, v231_cp_mu6_phases, v88_cp_phase_audit, v84_frozen_registry, v88 · cited: 5 redteam
+- **v564_cp_fiber_pin** [E/C] `CP.FIBER.PIN.01` — R1 decided, R2 selected, the degeneracy explained (verdict FIBER-PINNED; no CP derivation anywhere): (1) the EULER FACTORISATION — the fiber acts on the frame by a scalar on the n-
+  - deps: v561_cp_channel_identities, redteam/rt_D_upoint.py; v561_cp_channel_identities, v227_degree_exponent_channel_split.py; v561_cp_channel_identities, v220_cp_hexagonal_modulus.py; v561_cp_channel_identities, v225_dual_normal_frame.py; v561_cp_channel_identities, v231_cp_mu6_phases, v84_frozen_registry, v88 · cited: 5 redteam
+- **v566_parabolic_anchor_selfcode** [E/C/O] `DIAMOND.PARA.SELFCODE.01` — the v218 sheet-diamond direction operators U = Q·diag(1,0,0), V = Q·diag(0,1,1) generate the FULL 2|1 parabolic (line-stabiliser) algebra A (dim 7, word determinant −81, multiplica
+  - deps: v218_diamond_axis_geometry, v23_anchor_generator, AX.P2.01, v13_open_gates, v213_ftransfer_functor, v521_seam_bit_rp_blind, FORM.LADDER.01, v23 · cited: 1 architecture e8, 2 standard model, research contracts
+- **v567_carrier_free_q_reconstruction** [E/C/O] `QGEO.QRECON.01` — can Q (hence V and the v566 anchor self-code) be reconstructed WITHOUT carrier/anchor inputs? The circularity located: v11's uniqueness certificate uses row sums (4,5,6), column su
+  - deps: v566_parabolic_anchor_selfcode, v13_open_gates, v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, AX.P2.01, v23_anchor_generator, v10, v11 · cited: 1 architecture e8, 2 standard model
+- **v568_bit_selector_ladder** [E/C/O] `DIAMOND.BIT.SELECT.01` — the two 81-twins of the v567 audit (q32 = 2 = |Z2| vs 0) generate DIFFERENT integral orders (equal index 81, different lattices: the bit is integrally visible where every classical
+  - deps: v567_carrier_free_q_reconstruction, v566_parabolic_anchor_selfcode, v218_diamond_axis_geometry, v521_seam_bit_rp_blind, FORM.LADDER.01, v10, v218, v528 · cited: 1 architecture e8, 2 standard model
+- **v572_rp_bit_form** [E/O] `DIAMOND.BIT.RPFORM.01` — spectrally BLIND, integrally ANCHOR-VISIBLE: with the corpus reflection θ(X) = ΣXᵀΣ and the declared states (trace, anchor (1,1,2), ladder (1,2,4), unit), the RP kernel has identic
+  - deps: v568_bit_selector_ladder, v567_carrier_free_q_reconstruction, v566_parabolic_anchor_selfcode, v10, v23, v534, v568 · cited: 1 architecture e8, 2 standard model
+- **v574_stageb_winding** [E/C/X] `QGEO.WINDING.SELF.01` — the involution TYPE is killed by a rank theorem (any 2-dim-positive involution gives rank-1 V′, char poly x²(x−t) identically: the binary trace code {0,1,2} is unreachable), (E) bo
+  - deps: v567_carrier_free_q_reconstruction, v568_bit_selector_ladder, v566_parabolic_anchor_selfcode, v13_open_gates, v567, v568 · cited: 1 architecture e8, 2 standard model
 
 ### `masses` — Masses, leptons & quark ratios  (12 scripts)
 _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-Plücker quark ratios._
@@ -400,7 +420,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (193 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (196 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -789,6 +809,12 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v519_woit_theta_rp_free, v524_woit_beta2_os_quotient, v525_seam_bit_twist_blind, v528_seam_bit_twist_class_definition, v512_seam_tau_flag, v492_celestial_z4_orbifold, v510, v512 · cited: 3 e8 audit bootstrap, 5 redteam, research contracts
 - **v534_seam_straddle_cone** [E/C/O/X] `SEAM.STRADDLE.CONE.01` — the FIRST DYNAMICAL SELECTION of the alignment bit (15 checks, ~7 s). V1=KILL: the literal leading-order cone is empty everywhere (linear pencil cannot carry the selection; recover
   - deps: v529_seam_interacting_toy_fk, v528_seam_bit_twist_class_definition, v519_woit_theta_rp_free, v524_woit_beta2_os_quotient, v525_seam_bit_twist_blind, v510, v519, v524 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, 5 redteam, research contracts
+- **v565_woit_beta3_pt_duality** [E/C/X] `WOIT.BETA3.DUALITY.01` — 'the PT ↔ PT* duality typed against sigma_std' (verdict SUCCESS per the frozen preregistration; the contract kill branch is EMPTY BY ALGEBRA; no marker moves): (1) the COMPATIBLE C
+  - deps: v519_woit_theta_rp_free, v522_woit_beta1_gso_gauge, v524_woit_beta2_os_quotient, v521_seam_bit_rp_blind, v492, v519, v522, v524 · cited: 3 e8 audit bootstrap, research contracts
+- **v571_cr_discrete_corners** [E/C/O] `FTR.CRDISC.01` — the four solver corners are the in-repo Sheet-Diamond kernels J,K,C,F = M(1,t), t = −2..1 (v224, dets (2,4,14,32)), and the corpus's one canonical declared solver reading, the Koid
+  - deps: v213_ftransfer_functor, v224_diamond_ftransfer_path, v566_parabolic_anchor_selfcode, v183, v224, v533, v566 · cited: research contracts
+- **v575_cr_continuous_uniflow** [E/C/O] `FTR.CRCONT.01` — UNIFLOW-DEGENERATE: the frozen protocol exports (fixed-point multipliers of the native contractions, v425) give the quadruple {(2/3)⁶, (2/3)⁶, 1, −7} — the repetition is FORCED by 
+  - deps: v571_cr_discrete_corners, v213_ftransfer_functor, v425_dyn_transfer_universal, v99, v159, v320, v425, v571 · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (183 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1177,22 +1203,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `v492`×18, `E8.GLU.01`×17, `v312`×16, `REG.FREEZE.01`×16, `v54`×15, `HOR.NARIAI.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `REG.FREEZE.01`×17, `v312`×16, `FLAV.KQ.01`×15, `v54`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v551_ritz_ceiling_certificate** — `PRIME.RITZ.CEIL.01`
-- **v552_angle_instruments** — `PRIME.ANGLE.INSTR.01`
-- **v553_exact_form_identities** — `PRIME.EXACT.FORM.IDENT.01`
-- **v554_sampling_harmonics_identities** — `PRIME.SAMPLING.HARM.01`
-- **v555_pareto_tv_identities** — `PRIME.PARETO.TV.01`
-- **v556_gauge_ppr_identities** — `PRIME.GAUGE.PPR.01`
-- **v557_cascade_vector_identities** — `PRIME.CASCADE.VECT.01`
-- **v558_bilinear_rank_identities** — `PRIME.BILINEAR.RANK.01`
-- **v559_phase2_capstone** — `PRIME.PHASE2.CAPSTONE.01`
-- **v560_frame_deficit_identities** — `PRIME.FRAME.DEFICIT.01`
-- **v561_cp_channel_identities** — `CP.CHANNEL.IDENT.01`
-- **v562_dense_limit_identities** — `PRIME.DENSE.LIMIT.01`
+- **v564_cp_fiber_pin** — `CP.FIBER.PIN.01`
+- **v565_woit_beta3_pt_duality** — `WOIT.BETA3.DUALITY.01`
+- **v566_parabolic_anchor_selfcode** — `DIAMOND.PARA.SELFCODE.01`
+- **v567_carrier_free_q_reconstruction** — `QGEO.QRECON.01`
+- **v568_bit_selector_ladder** — `DIAMOND.BIT.SELECT.01`
+- **v569_lambda_pencil_onemode** — `PRIME.PENCIL.ONEMODE.01`
+- **v570_separation_floor** — `PRIME.PENCIL.SEPFLOOR.01`
+- **v571_cr_discrete_corners** — `FTR.CRDISC.01`
+- **v572_rp_bit_form** — `DIAMOND.BIT.RPFORM.01`
+- **v573_pair_band_structure** — `PRIME.PAIRBAND.01`
+- **v574_stageb_winding** — `QGEO.WINDING.SELF.01`
+- **v575_cr_continuous_uniflow** — `FTR.CRCONT.01`
 

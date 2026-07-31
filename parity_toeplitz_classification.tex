@@ -3169,14 +3169,16 @@ of the surface, and Remark~\ref{rem:undecidable} is the price it charges.
 \subsection{Cross-reference table}
 \label{sec:crossref}
 
-Three readings are quoted in this paper and are not in the table below, because
-no module recomputes them: the tightness range of
-Measurement~\ref{meas:sharpness}, the fitted exponents of
-Measurement~\ref{meas:rate} and the four numbers of
-Measurement~\ref{meas:refwindow}. Each is a quantity read off an eigenvalue
-routine on a surface declared above, each is typed \emph{measured} in
-Table~\ref{tab:typing}, and none is used as a bound anywhere; what the modules
-certify are the identities those readings are readings of. The definitions and
+One reading is quoted in this paper and is not in the table below, because no
+module recomputes it: the fitted exponents of Measurement~\ref{meas:rate}. It is
+a quantity read off an eigenvalue routine on a surface declared above, is typed
+\emph{measured} in Table~\ref{tab:typing}, and is not used as a bound anywhere;
+what the modules certify are the identities the reading is a reading of. (The
+tightness range of Measurement~\ref{meas:sharpness} and the four numbers of
+Measurement~\ref{meas:refwindow}, originally in this list, are now recomputed on
+their identical declared surfaces by the readout module \texttt{v563}, which
+also exhibits the rung-ladder caveat of Remark~\ref{rem:undecidable} as a
+structure fact: the shift is anchor selection.) The definitions and
 remarks are likewise absent: a definition is a procedure and a remark is a
 reading, and both are typed as such in Table~\ref{tab:typing}.
 
@@ -3340,6 +3342,53 @@ Meas.~\ref{meas:placement} (the scramble)
   & \texttt{v558} item~(6); \texttt{v560} item~(5); \texttt{v562} item~(2)
   & rank and majorants unchanged; the value moved; the low block lost at
     fixed cell occupancy \\
+Meas.~\ref{meas:refwindow} (the reference window)
+  & \texttt{v563} item~(1)
+  & the declared scan bit for bit ($h=540$, $X=157^{2}$); the four quoted
+    numbers; split and polarisation at round-off, with two mutants \\
+Meas.~\ref{meas:l1} (the $\ell^{1}$ mass)
+  & \texttt{v563} item~(2)
+  & the $40.6\times$ ratio on the declared subsample; the kernel double sum
+    against $\det S$ (Cauchy--Binet) at round-off \\
+Meas.~\ref{meas:sharpness} (the tightness range)
+  & \texttt{v563} item~(3)
+  & the envelope $[5.00,\,23.20]$ with both ends attained; the floor on all
+    $1122$ trial vectors; the inadmissible vector undercutting by exactly
+    $\lambda^{2}$ \\
+Rem.~\ref{rem:undecidable} (the ladder caveat)
+  & \texttt{v563} items~(4), (5)
+  & the curve endpoints on identical bin edges; the shift reproduced as
+    anchor selection ($13$ vs $12$ anchors), curvature transport small,
+    a wrong curvature $11.9\times$ louder \\
+Prob.~\ref{prob:R1} (structure typing on the surface)
+  & \texttt{v569} items~(1)--(6)
+  & the relative pencil $Z=B^{-1}S$ on all $70$ declared windows: the three
+    pencil identities at $2\times10^{-14}$; the locking mode $\lambda_2$
+    hugging $1$ (median $1.000021$) with the spectator uniformly separated
+    ($\min|1-\lambda_1|=3.53$, always above $1$) --- the near-degeneracy
+    reduces to the single scalar $1-\lambda_2$ on the reachable surface;
+    $h=540$ reads $1-\lambda_2=-2.27\times10^{-5}$; the scramble explodes it
+    by $\times1.9\times10^{6}$ (typing only: the uniform quantifier of
+    Prob.~\ref{prob:R1} is untouched) \\
+Prob.~\ref{prob:R1} (the spectator separation, certified)
+  & \texttt{v570} items~(1)--(5)
+  & the closed per-window floor $\lambda_1\ge\sqrt{\det S/\det B}$ (or
+    $\operatorname{tr}Z$) clears the margin on all $70$ windows,
+    $\min F=2.130\ge1.05$ --- the one-mode reduction rests on closed
+    scalars, not on an eigenvalue routine; the $h$-uniform dominance
+    $\det S\ge(1+c)^2\det B$ stays open (the cheap two-atom witness route
+    is killed: negative pair mass up to $13.7\times\det S$) \\
+Prob.~\ref{prob:R1} (the dominance, typed long-range)
+  & \texttt{v573} items~(1)--(5)
+  & the pair-band anatomy on a declared subset: every near band
+    ($<16$ lag cells) and the diagonal drag negative; the far band
+    carries the whole excess with stable net ($[1.55,1.91]\times\det S$,
+    gross growing to $13\times$); scale-locked ($\ge h/2$ pairs) and
+    weight-concentrated --- the top-$10\%$-weight pairs alone net
+    $0.85$--$1.00\times\det S$, essentially $\det S$ itself --- with a
+    flat phase profile; the scramble explodes $\det S$
+    $\times49$ and collapses the far share --- a certificate for the
+    dominance must control heavy-pair window-scale coherence \\
 \end{xltabular}}
 
 \subsection{Two remarks on the fits}
@@ -3381,8 +3430,22 @@ bound.
 \subsection{Reproducibility}
 \label{sec:repro}
 
-The checks are grouped into eight modules, \texttt{v555} to \texttt{v562},
-run in a single suite. Each module rebuilds its surface from the declared caps
+The checks are grouped into twelve modules, \texttt{v555} to \texttt{v563},
+\texttt{v569}--\texttt{v570} and \texttt{v573}, run in a single suite; \texttt{v563} is the readout closure of
+this paper --- it recomputes every number quoted here from an exploration probe
+without a recomputing module, on the identical declared surface ---
+\texttt{v569} reads the same surface through the relative pencil
+$Z=B^{-1}S$: the near-degeneracy of Problem~\ref{prob:R1} is carried by a
+single eigenvalue locking to $1$ while the other stays uniformly separated
+(a typing of the problem's structure on the reachable surface, not a bound)
+--- \texttt{v570} certifies that separation from closed scalars (the
+floor $\sqrt{\det S/\det B}$, resp.\ $\operatorname{tr}Z$, clears the margin
+on every window), so the one-mode structure rests on determinant/trace
+dominance rather than on an eigenvalue computation --- and \texttt{v573}
+types \emph{where} that dominance lives: every near band of the pair kernel
+drags negative and the whole excess is long-range ($\ge16$ lag cells), so a
+certificate must control far-pair coherence, not near-diagonal mass.
+Each module rebuilds its surface from the declared caps
 rather than reading stored data, verifies the arithmetic input at every jump
 point of the finite table it uses, and carries the mutation controls of
 \ref{F:mutation}. Total runtime is under two seconds for the identity modules

@@ -192,6 +192,89 @@ $\mathcal O(-2)\oplus\mathcal O(-1)^2$): $e_1(a)=4=|\mu_4|$, $e_2(a)=5=\gcar$, $
 $\cthree=1/(2e_1(a)\pi)=1/(8\pi)$. The power sums $p_n(a)=2+2^n$ then give $|R(E_8)|=p_1p_2p_3=240$,
 $\dim E_8=240+(p_4{-}p_3)=248$ and the binary ladder $p_{n+1}{-}p_n=2^n$. So the input set reduces to
 $\{a=(1,1,2),\,\pi\}$. \veri{v23\_anchor\_generator.py}
+\par\smallskip\noindent\textbf{The parabolic self-code of the anchor
+(\veri{v566\_parabolic\_anchor\_selfcode.py}).} The anchor is not only
+generated --- it is \emph{coded twice} by one operator structure that
+already lives in the compiler.  The sheet-diamond direction operators
+$U=Q\,\mathrm{diag}(1,0,0)$ and $V=Q\,\mathrm{diag}(0,1,1)$ (\vref{v218};
+$\operatorname{Spec}V=\{0,1,2\}$) generate the \emph{full} $2|1$ parabolic
+(line-stabiliser) algebra $\mathcal A$ (dimension $7$, word determinant
+$-81$, multiplicatively closed; a perturbed $Q$ breaks it) \mE.  The
+Lagrange projector onto $V$'s dominant eigenvalue gives
+$H=I+\tfrac12V(V-I)$ with spectrum \emph{exactly} $\{1,1,2\}=a$, and
+$\chi_H(x)=x^3-4x^2+5x-2$ carries the double code
+$(4,5,2)=(|\mu_4|,\gcar,|\Z_2|)=(\dim_{\mathbb R}(GL_3/P),\dim(\mathcal
+A/J),\dim J)$ --- flag, Levi quotient and radical of $\mathcal A$ \mE.  A
+uniqueness theorem closes the family: the line-stabiliser structure
+polynomial factorises as $(x-m)(x^2-mx+1)$, and all-positive-integer
+spectra force $m=2$ --- $a=(1,1,2)$ is the \emph{only} anchor this
+parabolic family can code \mE.  Honest typing: this is a
+\emph{compression} of one operator system, not new independent evidence
+(no-free-pattern), and it is \emph{not} a $P2$ reduction --- the route
+``$\gcar=\dim(\mathcal A/J)$ as a derived value'' is conditional on the
+\emph{No Carrier Reconstruction} audit \mO; the axioms' markers are
+untouched.  \emph{Stage A of that audit is since executed}
+(\veri{v567\_carrier\_free\_q\_reconstruction.py}): with the v11 carrier
+budgets \emph{forbidden} (rows $(4,5,6)$, columns $(9,5,1)$, $\chi_Q$
+with its $5$), the carrier-free inputs --- sheet involution, winding
+normalisation, $A_3$ exponent spectrum, monodromy budget, seam-line
+demand --- admit exactly $28$ parabolic reconstructions, and \textbf{all
+$28$ code the same anchor} $\chi_{H'}=x^3-4x^2+5x-2$: the anchor
+self-code is carrier-free; the single family invariant $81=\Nfam^4$ then
+pins $Q$ to a two-element residual family ($q_{32}\in\{2{=}|\Z_2|,0\}$)
+on which every classical carrier-free certificate coincides --- the one
+separating certificate is exactly the forbidden column budget.  Verdict
+\textsc{reconstructs-to-family}; the audit relocates to
+\texttt{GATE.QGEO.01} (derive the geometric inputs themselves) and to
+the one binary sheet-coupling selector \mO\ --- which is since
+\emph{located and given a canonical witness}
+(\veri{v568\_bit\_selector\_ladder.py}): the twins generate different
+integral orders, and the \emph{ladder self-consistency} (the dominant
+mode reproduces its own eigenvalue as the geometric ladder
+$(1,2,4)=(2^0,2^1,2^2)$, the binary AnchorLadder) selects the compiler
+$Q$ uniquely on all $28$ members; the split geometry ($q_{32}=1$) is
+excluded by the demands already imposed; \emph{why} the ladder
+self-consistency should hold physically stays open (the RP-selection
+slot) \mO.  Two follow-ups since executed: the \emph{kinematic RP form}
+on the twins (\veri{v572\_rp\_bit\_form.py}) is spectrally blind
+(identical inertia for every declared corpus state; never PSD --- no
+kinematic positivity selection exists) but \emph{integrally
+anchor-visible}: the Smith towers of the anchor-state Gram separate the
+twins in one slot ($18$ vs $2$, a factor $9=\Nfam^2$) --- the bit shows
+to the RP form only through anchor-coupled states \mE; and \emph{Stage B
+is narrowed} (\veri{v574\_stageb\_winding.py}): the involution
+\emph{type} is forced by a rank theorem (a two-dim-positive involution
+cannot carry the binary trace code), and the winding normalisation
+$\Nfam=3$ is \emph{forced} by the double self-consistency --- the ladder
+selects one member for every $N\le3$ (higher $N$ die on the exponent
+demand), and $\mathrm{sat}=N^4$ holds only at $N=3$ ($81=3^4$; $N=1,2$
+give $32\neq1$, $512\neq16$): two of the five declared geometric inputs
+relocate to consistency-forced; \texttt{GATE.QGEO.01} is narrowed, not
+closed \mE/\mC.  The honest decomposition (spectrum ablation): freeing
+the exponent spectrum too, the one surviving double-selfconsistent
+family is exactly $\{1,2,N\}$ with the compiler shape --- the
+self-consistency forces the \emph{sheet} spectrum $\{1,2\}$ (the binary
+code) and the shape, and the $A_3$ exponent demand contributes exactly
+\emph{one} datum, $N=3$ \mE.  And the redundancy ablation shrinks the
+input list further: relative to the self-code demands, the monodromy
+budget $(M)$ and the seam-line demand $(L)$ are \emph{redundant} (both
+dropped, the class widens to $1274$ members and the self-code still
+picks the compiler $Q$ uniquely), and the maximal ablation drops $(E)$
+too: the winding column $3(1,1,1)$ plus integrality plus the self-code
+already pin the compiler alone.  Even the winding \emph{form} is now
+located: dropped entirely, the self-code leaves a four-column family of
+which exactly one is uniform --- the compiler; the winding demand
+\emph{is} the uniformity choice ($1$ of $4$).  What remains declared:
+the involution \emph{existence}, the column \emph{uniformity}, and
+$\Nfam=3$ (independently anchored in the $E_8$ glue,
+$240=16\times5\times3$) \mE.  On the bit itself, the
+anchor-Hamiltonian \emph{Gibbs pencil} delivers the first dynamical
+distinction: the compiler twin's RP kernel degenerates at a finite
+critical temperature $s^*=(8-4\sqrt{19})/15$ (determinant constant
+$81^2$), the alternative twin's never does --- and the critical mode is
+the seam-row, sheet-flow-fixed direction (the $A_2$-Ext carrier): a
+rank-drop marker, not yet a positivity selection, but the resonance
+with the alignment bit now has a shared carrier \mE.
 \end{keybox}
 
 \begin{keybox}[The current reduction state of P2 (2026-07-22) --- text consolidation, markers unchanged]
@@ -2065,6 +2148,30 @@ classical; Weil 1952 cited, never used as a criterion.
 Machine-checked:
 \veri{v562\_dense\_limit\_identities.py}.
 \mE\ (per-instance identities and certified inequalities; no marker moves)
+
+\par\smallskip\noindent\textbf{The Paper-II readout closure
+(\texttt{PRIME.PAPER2.READOUT.01}).}
+The check closure of the classification paper (Paper~II,
+\texttt{parity\_toeplitz\_classification}): every number that paper
+quoted from an exploration probe without a recomputing module is
+recomputed on the identical declared surface ($24$ checks,
+${\sim}0.5$\,s) --- the T170 reference window bit for bit ($h=540$,
+$X=157^{2}$; $\det\hat A=4.22\times10^{-3}$, a $4.7$-order
+cancellation), the $\ell^{1}$-to-signed ratio $40.6\times$
+(Cauchy--Binet at round-off), the tightness envelope
+$\mu^{P}_{1}\mathrm{TV}\in[5.00,23.20]$ with both ends attained, the
+density-curve endpoints on identical bin edges --- and the one caveat
+Paper~II declared without exhibiting it is exhibited as a structure
+fact: the rung-ladder shift of the binned exponent is \emph{anchor
+selection} (fine vs coarse ladders select different anchor sets in
+the same bin, $13$ vs $12$; removing the extra anchors reproduces the
+whole shift, curvature transport moves it by only $-0.0111$). Pure
+readout/identity checks --- no new claim, no rate, no uniformity; every
+measured quantity stays \textsc{measured} with its rung ladder; no RH
+statement.
+Machine-checked:
+\veri{v563\_paper2\_readouts.py}.
+\mE\ (readout/identity checks with mutation controls; no marker moves)
 
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With

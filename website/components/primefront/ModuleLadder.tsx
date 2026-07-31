@@ -167,12 +167,42 @@ const MODULES = [
     title: "Dense-limit identities · phase-2 endgame",
     checks: 16,
   },
+  {
+    id: "v563",
+    claim: "PRIME.PAPER2.READOUT.01",
+    title: "Paper-II readout closure",
+    checks: 24,
+  },
+  {
+    id: "v564",
+    claim: "CP.FIBER.PIN.01",
+    title: "CP frame door decided · T178 backflow",
+    checks: 22,
+  },
+  {
+    id: "v569",
+    claim: "PRIME.PENCIL.ONEMODE.01",
+    title: "Relative pencil one-mode · T179 backflow",
+    checks: 6,
+  },
+  {
+    id: "v570",
+    claim: "PRIME.PENCIL.SEPFLOOR.01",
+    title: "Separation floor certified · T180 backflow",
+    checks: 8,
+  },
+  {
+    id: "v573",
+    claim: "PRIME.PAIRBAND.01",
+    title: "Pair-band anatomy: long-range · T181 backflow",
+    checks: 10,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 177;
-const SANDBOX_CHECKS = 4789;
+const SANDBOX_PROBES = 181;
+const SANDBOX_CHECKS = 4843;
 
 export function ModuleLadder() {
   return (

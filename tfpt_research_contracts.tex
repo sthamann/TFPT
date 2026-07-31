@@ -37,7 +37,7 @@
 \large $(U_{\mathrm{wall}})$: the parabolic flavor wall-selection \quad and\quad
 $(G_{\mathrm{metric}})$: the full quantum-gravity measure\\[1mm]
 \large plus the two continuum contracts \texttt{CELEST.SEAM.01} and \texttt{WOIT.OS.TWISTOR.01}\\
-(M1--M3 and the $\delta$-chains executed and decided; $\alpha/\beta_1/\beta_2$ executed, $\beta_3$ next)}
+(M1--M3 and the $\delta$-chains executed and decided; $\alpha/\beta_1/\beta_2/\beta_3$ executed, $\gamma$ next)}
 \author{\TFPTauthors}\date{\TFPTdatestamp}
 
 \def\TFPTdoctitle{Research Contracts}
@@ -152,8 +152,11 @@ from compiler to physics): the $\alpha$ stage executed ($\Theta$ exists at the f
 free RP selects the same family, \vref{v519}), $\beta_1$ executed (the $\mu_4$ clock is the
 euclidean rotation, the gaugeable datum is the GSO $\Z_2$, gauge-fixed RP holds, \vref{v522}),
 $\beta_2$ executed (the OS quotient explicit, $\mathcal H_{\mathrm{phys}}$ positive definite at
-both levels, the clock a positive transfer operator with spectral calculus, \vref{v524}) ---
-$\beta_3$ is next, now under the \emph{straddle-law} constraint: the first interacting seam toy
+both levels, the clock a positive transfer operator with spectral calculus, \vref{v524}),
+$\beta_3$ executed (the $\mathbb{PT}\leftrightarrow\mathbb{PT}^*$ duality typed against
+$\sigma_{\mathrm{std}}$: the OS cut and the $(2,2)$ signature \emph{forced}, the kill branch
+empty by algebra, the induced member $=$ the $\Theta_{\mathrm{phys}}$ carrier, \vref{v565}) ---
+$\gamma$ is next, still under the \emph{straddle-law} constraint: the first interacting seam toy
 fires Kill-Test~2 at toy level (RP breaks on exactly the quartet-straddling cuts,
 \vref{v529}) --- an honest threat and simultaneously the first hard selection principle for
 $\mathcal A_{\mathrm{hol}}$, since \emph{executed} as such: run as a selector on the interacting
@@ -5702,7 +5705,8 @@ Fidkowski--Kitaev seam toy (\texttt{SEAM.INT.FKTOY.01}, \veri{v529\_seam\_intera
 Kill-Test 1 does \emph{not} fire ($\Theta$ exists with $\Theta^2=+1$ and clock-tower inversion),
 but Kill-Test 2 \emph{fires at toy level} --- RP breaks for every $g>0$ by an interference
 mechanism, with the \emph{straddle law} (RP fails exactly on quartet-straddled cuts, stays PD on
-quartet-avoiding ones; $24/24$) as a concrete hurdle for $\beta_3/\gamma$. Fence: one toy / one
+quartet-avoiding ones; $24/24$) as a concrete hurdle for the interacting stages ($\gamma$ and
+beyond; the free/quotient-level $\beta_3$ is since executed, \vref{v565}). Fence: one toy / one
 interaction class / \mC\ flat-band parent --- this narrows the route (every $\mathcal A_{\mathrm{hol}}$
 must protect RP against exactly this mechanism), it does not close it.
 \emph{The hurdle, executed as a selector (\texttt{SEAM.STRADDLE.CONE.01},
@@ -5833,7 +5837,46 @@ $\mathcal A_{\mathrm{hol}}$. Transparency (documented in the module): run 1 scor
 --- a sympy simplify failure on a \emph{true} $\pi/16$ product formula
 ($\sin(7\pi/16) - \sin(5\pi/16) = 2\cos(3\pi/8)\sin(\pi/16)$), fixed by a Laurent-polynomial
 certificate; no criterion, tolerance or expectation changed. No marker moves: the contract
-stays \mO; $\beta_3$ is the next milestone.
+stays \mO; $\beta_3$ is executed next (below).
+
+\par\smallskip\noindent\textbf{The $\beta_3$ stage, executed
+(\texttt{WOIT.BETA3.DUALITY.01}, \veri{v565\_woit\_beta3\_pt\_duality.py}; verdict SUCCESS per
+the frozen preregistration; no status change).}  The $\mathbb{PT}\leftrightarrow\mathbb{PT}^*$
+duality is \emph{constructed as a compatibility class} and typed against
+$\sigma_{\mathrm{std}}$, with the contract kill branch decided \emph{empty by algebra}.
+\textbf{(i) The class:} a duality is a nondegenerate Hermitian form $\Phi$ on $\mathbb{C}^4$
+($\sigma(Z)=Z^\dagger\Phi$, mapping $\mathbb{PT}\to\mathbb{PT}^*$); clock compatibility has the
+entrywise residual $(\bar\lambda_j\lambda_k-1)\Phi_{jk}$ and forces the four cross-eigenspace
+entries to zero exactly: two $2\times2$ Hermitian blocks, $16\to8$ real parameters (the deck
+adds nothing; the wrong clock lift $\operatorname{diag}(i,i,1,1)$ breaks the split).
+\textbf{(ii) The dichotomy and the forced $(2,2)$:} pairing against Woit's Euclidean structure
+$\rho_{\mathrm{tw}}$ via $M_{\mathrm{tw}}^\dagger\Phi M_{\mathrm{tw}}=\varepsilon\bar\Phi$
+splits the class exactly in two.  The \emph{Euclidean} branch ($\varepsilon=+1$;
+$\sigma_{\mathrm{std}}=\mathbf 1$ lives here) has seam-line norm $a(|z|^2+1)$: no null point,
+no OS cut, ever --- exactly the section-defining role Woit assigns it.  The \emph{Minkowski}
+branch ($\varepsilon=-1$) has seam-line norm $a(|z|^2-1)$: \textbf{the null locus meets the
+seam line exactly in the seam circle} --- the OS cut is \emph{forced}, not imposed --- and the
+second block is exactly minus the conjugate of the first (charpoly mirrored), so the
+\textbf{total signature is $(2,2)$ for every nondegenerate member}: Woit's Minkowski signature
+is a theorem of clock $+$ $\rho_{\mathrm{tw}}$ pairing, not an input.  \textbf{(iii) The kill
+is empty:} every compatible duality inverts clock \emph{and} deck exactly (family D); a
+clock-centralising (family A) duality would need $\rho_4^2=$ scalar, but
+$\rho_4^2=\operatorname{diag}(-1,1,-1,1)$ --- no solution; and family A independently has no
+quotient ($(4,4,0)$, the v524 control).  \textbf{(iv) The identification:} every
+seam-preserving Minkowski member induces \emph{one} projective conjugation
+$z\to-\bar z$ ($\mu=-1$, fixed points $\pm i$), perpendicular to $\sigma_{\mathrm{std}}$'s
+$z\to+\bar z$; under the declared RP-side placement (v519 precision (ii); exact
+rational-$\pi$ arithmetic, offsets $\mp\pi/2$) that member \textbf{is} $\theta_\perp$ --- the
+mirror whose quotient descent \vref{v524} certified: $\Theta_{\mathrm{phys}}$ is the shadow of
+the $\mathbb{PT}\leftrightarrow\mathbb{PT}^*$ duality, anti-unitary, Kramers-free
+($\Theta^2=+1$ per sector), time-reversing the semigroup, closing with the
+$\sigma_{\mathrm{std}}$-type cut onto the deck ($\theta_{\mathrm{cut}}\circ\theta_\perp
+=\alpha_{N/2}$; upstairs: the clock conjugation exchanges $\mu=+1\leftrightarrow\mu=-1$).
+\emph{Role separation complete:} $\sigma_{\mathrm{std}}\sim$ the OS cut (the metric), the
+$\Phi$-twisted Minkowski duality $\sim$ the descending mirror.  Free/quotient level only;
+$\mathcal A_{\mathrm{hol}}$ untouched; all seven kill tests stay live there; the declared
+conventions (seam line, seam preservation, placement, torsor relabeling) are cited, not
+invented.  No marker moves: the contract stays \mO; $\gamma$ is the next milestone.
 
 \par\smallskip\noindent\textbf{Thermal follow-on (no status change).} The free OS quotient of
 $\beta_2$ is KMS, and its temperature normalisation closes onto the Nariai/BH chain as the
@@ -5865,7 +5908,11 @@ $\beta_3$ is next.}
 \textbf{($\beta_3$)} The $\mathbb{PT}\leftrightarrow\mathbb{PT}^*$ duality typed against
 $\sigma_{\mathrm{std}}$ --- success: Woit's Minkowski conjugation ($\mathbb{PT}\to\mathbb{PT}^*$)
 identified with the family-D conjugation on the quotient; kill: the duality forces a
-clock-centralising (family A) structure instead.
+clock-centralising (family A) structure instead. \emph{Executed via \vref{v565} (above):
+SUCCESS --- the kill branch is empty by algebra (every clock-compatible duality is family D;
+family A would need $\rho_4^2=$ scalar), the OS cut and the $(2,2)$ signature are forced on
+the Minkowski branch, and the unique induced seam member is $\theta_\perp$, the v524
+$\Theta_{\mathrm{phys}}$ carrier.}
 \textbf{($\gamma$)} The chirality theorem $+$ the mark incidence --- success: the odd-sector
 definiteness flip of v519 upgraded to ``one chiral generation without mirrors'' on the
 reconstructed net, and the four $\mu_4$ marks extended incidence-compatibly; kill: kill tests
@@ -5887,7 +5934,11 @@ gauge datum typed as the GSO $\Z_2$ and contract precision (iii) added; the $\be
 is executed --- \texttt{WOIT.BETA2.OS.01}, \vref{v524}, verdict SUCCESS, \mC-typed per
 precision (iii), with the OS quotient explicit and PD at both levels, the clock a positive
 transfer step with spectral calculus and a reconstructed unitary rotation group, and the
-pre-declared KMS deviation carrying exactly the silver witnesses; no marker move).
+pre-declared KMS deviation carrying exactly the silver witnesses; the $\beta_3$ stage is
+executed --- \texttt{WOIT.BETA3.DUALITY.01}, \vref{v565}, verdict SUCCESS, with the kill
+branch empty by algebra, the OS cut and the $(2,2)$ signature forced on the Minkowski branch
+of the duality class, and the unique induced seam member identified with the v524
+$\Theta_{\mathrm{phys}}$ carrier; no marker move).
 
 % =====================================================================
 \section*{Certifiability and recommended order}
@@ -5957,6 +6008,45 @@ is positive (RP/OS), $\kappa_f{\in}(0,1)$; \textbf{(4) external modules explicit
 external, never a compiler number. So \texttt{CONTRACT.F.01} is the third research contract alongside
 $(U_{\mathrm{wall}})$ and $(G_{\mathrm{metric}})$: a typed functor, \emph{not} a bag of open topics --- but a
 consolidation, \emph{not} a closure.
+\par\smallskip\noindent\textbf{A preregistered cross-ratio check for the four solvers ---
+designed, and since executed on its discrete half.}
+The design is machine-checked in \veri{v566\_parabolic\_anchor\_selfcode.py}, the discrete-half
+execution in \veri{v571\_cr\_discrete\_corners.py}.  The disc~$-7$ norm
+line $\alpha_{t+1}=\alpha_t+2$ (\vref{v533}) equips the transfer path with a projective invariant:
+$\operatorname{CR}(\alpha_{-2},\alpha_{-1};\alpha_0,\alpha_1)=\tfrac43$ \emph{exactly} --- and,
+honesty first, $\tfrac43$ is the \emph{universal} cross-ratio of any arithmetic progression, so the
+test content is not the number but the \emph{discipline}: if the four solvers $(J,K,C,F)$ export
+canonical one-dimensional projective states $y_J,y_K,y_C,y_F$ --- declared \emph{before} any
+evaluation --- then M\"obius transport along the path forces
+$\operatorname{CR}(y_J,y_K;y_C,y_F)=\tfrac43$, and the fourth state is determined fit-free by the
+first three ($y_F$ reconstruction identity).  Negative control with teeth: the raw determinant path
+$(2,4,14,32)$ gives $\operatorname{CR}=\tfrac{28}{25}\neq\tfrac43$ --- the already-known norm
+sequence cannot pass.  \emph{The discrete half is now executed}: the four corners are the in-repo
+kernels $J,K,C,F=M(1,t)=R+Q\,\mathrm{diag}(1,t,t)$, $t=-2..1$ (\vref{v224}), and the corpus's one
+canonical declared solver reading --- the Koide anchor response $\ell(M)=a^{\mathsf T}M\mathbf 1$
+(\vref{v183}) --- reads $(26,35,44,53)$ on them: $\operatorname{CR}=\tfrac43$ exactly, and the
+fit-free reconstruction \emph{forces} $y_F=53$ from $(26,35,44)$ alone --- the Koide numerator is
+M\"obius-determined by the three upstream corners (a new exact cross-corner identity); honesty
+theorem stated out loud: $\ell$ is affine on the path (step $9=\Nfam^2$), and \emph{every} linear
+functional of the kernel passes --- the check separates linear from nonlinear exports (the
+dominant-eigenvalue export fails at $1.3222$, the determinants at $\tfrac{28}{25}$, both as they
+must) \mE.  Status: the \emph{continuous} half (the external solvers exporting their own states)
+stays open exactly as this contract fences it; contract markers unchanged \mC.  \emph{The frozen
+export protocol for the continuous half} (design \mX, preregistered here): each instance must
+export, \emph{before} evaluation, the canonical one-dimensional datum of its own native flow ---
+the fixed-point multiplier of its contraction (cf.\ the native rates of \vref{v425}: F\_pole
+$(2/3)^6$ exact in-corpus, F\_Boltzmann/F\_relic/F\_QCD external) --- as a projective state on
+the path; only then is $\operatorname{CR}=\tfrac43$ tested, with no renormalisation after the
+fact.  \emph{Executed} (\veri{v575\_cr\_continuous\_uniflow.py}): the in-repo native exports
+form the quadruple $\{(2/3)^6,(2/3)^6,1,-7\}$ --- the repetition is \emph{forced} by the
+single-flow theorem (\vref{v425}: F\_pole and F\_Boltzmann are literally the same seam
+contraction) --- and a repeated quadruple gives $\operatorname{CR}\in\{0,1,\infty\}$ in every
+corner assignment (theorem, plus all $24$ permutations): the continuous half can never pass
+\emph{natively}; it closes onto the single-flow reduction, verdict \textsc{uniflow-degenerate}.
+The four independent external data are the dimensionful anchors ($v_{\mathrm{geo}}$, $M_R$,
+$C_p$, $\theta_i$) --- \mO\ walls, not projective states --- so a future continuous test needs
+genuinely \emph{external} anchor-level exports; the meaningful cross-ratio content was and
+remains the discrete half.  Both halves of the check are now executed \mE/\mC.
 \par\smallskip\noindent\textbf{The discrete$\to$dynamic lens: \texttt{F\_transfer} is the readout end of the one
 principle (\veri{v303\_ftransfer\_dynamics.py}, \texttt{FR.DYNAMICS.01}).} The typing above is sharpened by a
 \emph{dynamical} reading. The main-branch mechanism is a gapped, positivity-preserving relaxation to a

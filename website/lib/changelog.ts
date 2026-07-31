@@ -42,6 +42,6249 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · XI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the continuous half of the cross-ratio check executed and closed: UNIFLOW-DEGENERATE ("
+      },
+      {
+        "k": "c",
+        "v": "v575"
+      },
+      {
+        "k": "t",
+        "v": " promoted) — the native exports are forced degenerate by the single-flow theorem, so the continuous half closes onto "
+      },
+      {
+        "k": "c",
+        "v": "v425"
+      },
+      {
+        "k": "t",
+        "v": "; both halves of the preregistered check are now executed"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v575_cr_continuous_uniflow.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FTR.CRCONT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "7"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe "
+            },
+            {
+              "k": "m",
+              "v": "7/7"
+            },
+            {
+              "k": "t",
+              "v": ", UNIFLOW-DEGENERATE)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The frozen protocol exports, recomputed from primitives (F_pole "
+        },
+        {
+          "k": "m",
+          "v": "=e^{-\\Delta}=(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " via the v99 generator; F_Boltzmann the SAME contraction by the v425 single-flow theorem; F_QCD "
+        },
+        {
+          "k": "m",
+          "v": "b_3=-7"
+        },
+        {
+          "k": "t",
+          "v": "; F_relic adiabatic "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "), form the quadruple "
+        },
+        {
+          "k": "m",
+          "v": "\\{(2/3)^6,(2/3)^6,1,-7\\}"
+        },
+        {
+          "k": "t",
+          "v": " with a forced repetition — and a repeated quadruple gives "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{CR}\\in\\{0,1,\\infty\\}"
+        },
+        {
+          "k": "t",
+          "v": " in every corner assignment (theorem "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " all "
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": " permutations): the continuous half can never pass natively. It closes onto the single-flow reduction; the anchors ("
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "M_R"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "C_p"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_i"
+        },
+        {
+          "k": "t",
+          "v": ") stay "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "walls; the meaningful cross-ratio content remains the discrete half ("
+        },
+        {
+          "k": "c",
+          "v": "v571"
+        },
+        {
+          "k": "t",
+          "v": "). Contract markers unchanged."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New ledger row "
+        },
+        {
+          "k": "c",
+          "v": "FTR.CRCONT.01"
+        },
+        {
+          "k": "t",
+          "v": "; update notes on "
+        },
+        {
+          "k": "c",
+          "v": "FTR.CRDISC.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "CONTRACT.F.01"
+        },
+        {
+          "k": "t",
+          "v": "; contracts-paper protocol block extended with the execution result; suite "
+        },
+        {
+          "k": "m",
+          "v": "568\\to569"
+        },
+        {
+          "k": "t",
+          "v": " scripts; diary; README/zenodo/website counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · X",
+    "heading": [
+      {
+        "k": "t",
+        "v": "closing the round: the winding form's content located exactly ("
+      },
+      {
+        "k": "c",
+        "v": "v574"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to11"
+      },
+      {
+        "k": "t",
+        "v": " checks — without it a four-column family survives, exactly one uniform: the compiler), and the half-sided RP restrictions shown blind ("
+      },
+      {
+        "k": "c",
+        "v": "v572"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to11"
+      },
+      {
+        "k": "t",
+        "v": " — the interacting construction is the one remaining RP route)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v574"
+            },
+            {
+              "k": "t",
+              "v": " extended (probe "
+            },
+            {
+              "k": "m",
+              "v": "12/12"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Dropping the winding demand entirely (arbitrary first column), the self-code package leaves the four-column family "
+        },
+        {
+          "k": "m",
+          "v": "\\{(0,1,1),(0,3,3),(3,3,3),(5,1,5)\\}"
+        },
+        {
+          "k": "t",
+          "v": " — exactly one uniform: the compiler. The winding demand "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the uniformity choice ("
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "). Final declared list of the reconstruction: involution existence, column uniformity, "
+        },
+        {
+          "k": "m",
+          "v": "N_{\\mathrm{fam}}=3"
+        },
+        {
+          "k": "t",
+          "v": " (E8-glue)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v572"
+            },
+            {
+              "k": "t",
+              "v": " extended (probe "
+            },
+            {
+              "k": "m",
+              "v": "11/11"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The Gibbs kernels restricted to the Levi and radical sublattices have identical inertia on both twins across the sampled range: the RP-positivity selection resists every kinematic and half-sided design tried — the genuinely interacting construction (the v534 FK-quartet analogue) is the one remaining route, typed open."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger/registry/run_all counts; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " passages; diary; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · IX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "three final deepenings: the maximal ablation drops "
+      },
+      {
+        "k": "m",
+        "v": "(E)"
+      },
+      {
+        "k": "t",
+        "v": " too ("
+      },
+      {
+        "k": "c",
+        "v": "v574"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to10"
+      },
+      {
+        "k": "t",
+        "v": " checks — the reconstruction needs only involution existence, the winding column with "
+      },
+      {
+        "k": "m",
+        "v": "N_{\\mathrm{fam}}=3"
+      },
+      {
+        "k": "t",
+        "v": " and the self-code), the Gibbs-critical mode is identified as the seam-row Ext-carrier direction ("
+      },
+      {
+        "k": "c",
+        "v": "v572"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to10"
+      },
+      {
+        "k": "t",
+        "v": "), and the per-atom profile of the dominance oscillates standing-wave-like ("
+      },
+      {
+        "k": "c",
+        "v": "v573"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to10"
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v574"
+            },
+            {
+              "k": "t",
+              "v": " extended (probe "
+            },
+            {
+              "k": "m",
+              "v": "11/11"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The maximal ablation: dropping the exponent demand "
+        },
+        {
+          "k": "m",
+          "v": "(E)"
+        },
+        {
+          "k": "t",
+          "v": " entirely, the winding column "
+        },
+        {
+          "k": "m",
+          "v": "3(1,1,1)"
+        },
+        {
+          "k": "t",
+          "v": " plus integrality plus the self-code package (parabolic "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " ladder "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " saturation "
+        },
+        {
+          "k": "m",
+          "v": "81"
+        },
+        {
+          "k": "t",
+          "v": ") still pin the compiler "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " uniquely ("
+        },
+        {
+          "k": "m",
+          "v": "29"
+        },
+        {
+          "k": "t",
+          "v": " ladder candidates, one hit). "
+        },
+        {
+          "k": "m",
+          "v": "(E)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "(M)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "(L)"
+        },
+        {
+          "k": "t",
+          "v": " are ALL redundant at the declared bound — what stays declared is the involution existence, the winding form and "
+        },
+        {
+          "k": "m",
+          "v": "N_{\\mathrm{fam}}=3"
+        },
+        {
+          "k": "t",
+          "v": " (independently anchored in the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " glue, "
+        },
+        {
+          "k": "m",
+          "v": "240=16\\times5\\times3"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO.01"
+        },
+        {
+          "k": "t",
+          "v": " narrowed by five items, not closed."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v572"
+            },
+            {
+              "k": "t",
+              "v": " extended (probe "
+            },
+            {
+              "k": "m",
+              "v": "10/10"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The critical mode at the compiler twin's Gibbs temperature is identified: rank one, supported entirely on the seam row (the radical / "
+        },
+        {
+          "k": "m",
+          "v": "A_2"
+        },
+        {
+          "k": "t",
+          "v": "-Ext-carrier row), fixes the seam line, is a fixed point of the sheet flow ("
+        },
+        {
+          "k": "m",
+          "v": "VX=X"
+        },
+        {
+          "k": "t",
+          "v": "), annihilated by the dominant projector — the Gibbs criticality lives exactly in the Ext-carrier slot: the typed resonance with the alignment bit deepens to a shared carrier."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v573"
+            },
+            {
+              "k": "t",
+              "v": " extended (probe "
+            },
+            {
+              "k": "m",
+              "v": "10/10"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The per-atom share of "
+        },
+        {
+          "k": "m",
+          "v": "\\det S"
+        },
+        {
+          "k": "t",
+          "v": " oscillates across the window with a fixed sign pattern (positive at "
+        },
+        {
+          "k": "m",
+          "v": "x\\sim0.3/0.8"
+        },
+        {
+          "k": "t",
+          "v": ", negative past the midpoint), amplitudes growing with "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " while the net stays "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " — a standing-wave-like anatomy, measured with its ladder, no mechanism claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger/registry/run_all; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " passages; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " counters ("
+        },
+        {
+          "k": "m",
+          "v": "4843"
+        },
+        {
+          "k": "t",
+          "v": " checks, T181 "
+        },
+        {
+          "k": "m",
+          "v": "10/10"
+        },
+        {
+          "k": "t",
+          "v": "); diary; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · VIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "two decisive deepenings: the anchor-Hamiltonian Gibbs pencil delivers the first DYNAMICAL distinction of the reconstruction bit ("
+      },
+      {
+        "k": "c",
+        "v": "v572"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to9"
+      },
+      {
+        "k": "t",
+        "v": " checks: the compiler twin is Gibbs-critical at "
+      },
+      {
+        "k": "m",
+        "v": "s^*=(8-4\\sqrt{19})/15"
+      },
+      {
+        "k": "t",
+        "v": ", the alternative never), and the redundancy ablation shrinks the reconstruction inputs to three ("
+      },
+      {
+        "k": "c",
+        "v": "v574"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to9"
+      },
+      {
+        "k": "t",
+        "v": " checks: "
+      },
+      {
+        "k": "m",
+        "v": "(M)"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "(L)"
+      },
+      {
+        "k": "t",
+        "v": " fall relative to the self-code demands)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v572"
+            },
+            {
+              "k": "t",
+              "v": " extended (probe "
+            },
+            {
+              "k": "m",
+              "v": "9/9"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Along the Gibbs family "
+        },
+        {
+          "k": "m",
+          "v": "\\omega_g\\propto\\operatorname{tr}(e^{-gH}\\cdot)"
+        },
+        {
+          "k": "t",
+          "v": " of the v566 anchor operator "
+        },
+        {
+          "k": "m",
+          "v": "H=I+\\Pi"
+        },
+        {
+          "k": "t",
+          "v": ", the pencil determinant factors exactly differently on the twins — compiler "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac{6561}{4096}(s^2{+}16s{+}16)^2(15s^2{-}16s{-}16)"
+        },
+        {
+          "k": "t",
+          "v": ", alternative "
+        },
+        {
+          "k": "m",
+          "v": "-\\tfrac{6561}{4096}(s^2{+}16s{+}16)^3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "6561=81^2"
+        },
+        {
+          "k": "t",
+          "v": ") — and only the compiler's extra factor has a root inside the physical Gibbs range: the compiler twin's RP kernel degenerates at a finite critical temperature, the alternative twin's never does. Honest typing: a rank-drop marker, not a positivity selection; the interacting RP question stays open."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v574"
+            },
+            {
+              "k": "t",
+              "v": " extended (probe "
+            },
+            {
+              "k": "m",
+              "v": "10/10"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Redundancy ablation: relative to the self-code demands (parabolic "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " ladder "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " saturation "
+        },
+        {
+          "k": "m",
+          "v": "81"
+        },
+        {
+          "k": "t",
+          "v": ") the monodromy budget "
+        },
+        {
+          "k": "m",
+          "v": "(M)"
+        },
+        {
+          "k": "t",
+          "v": " and the seam-line demand "
+        },
+        {
+          "k": "m",
+          "v": "(L)"
+        },
+        {
+          "k": "t",
+          "v": " are redundant at "
+        },
+        {
+          "k": "m",
+          "v": "B=6"
+        },
+        {
+          "k": "t",
+          "v": " — dropping both widens the class to "
+        },
+        {
+          "k": "m",
+          "v": "1274"
+        },
+        {
+          "k": "t",
+          "v": " members and the self-code still picks exactly the compiler "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": ": the declared geometric input list shrinks to "
+        },
+        {
+          "k": "m",
+          "v": "(S)"
+        },
+        {
+          "k": "t",
+          "v": "-existence, "
+        },
+        {
+          "k": "m",
+          "v": "(W)"
+        },
+        {
+          "k": "t",
+          "v": "-form and "
+        },
+        {
+          "k": "m",
+          "v": "(E)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO.01"
+        },
+        {
+          "k": "t",
+          "v": " narrowed by four items, not closed."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Exploratory (diary only)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The pair-mechanism hunt on the reference window: no dominant pair exists (max "
+        },
+        {
+          "k": "m",
+          "v": "|"
+        },
+        {
+          "k": "t",
+          "v": "contribution"
+        },
+        {
+          "k": "m",
+          "v": "|\\sim0.006\\times\\det S"
+        },
+        {
+          "k": "t",
+          "v": " — consistent with the dead two-atom witness), and the fine structure by smaller atom shows the smallest primes ("
+        },
+        {
+          "k": "m",
+          "v": "2,3"
+        },
+        {
+          "k": "t",
+          "v": ") dragging negative while medium primes ("
+        },
+        {
+          "k": "m",
+          "v": "11..41"
+        },
+        {
+          "k": "t",
+          "v": ") carry positive net."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger/registry/run_all counts; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " passages; diary; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · VII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the four lines deepened in the same round: the dominance anatomy sharpened to heavy-pair window-scale coherence ("
+      },
+      {
+        "k": "c",
+        "v": "v573"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to9"
+      },
+      {
+        "k": "t",
+        "v": " checks), the RP blindness shown robust under the compiler flow ("
+      },
+      {
+        "k": "c",
+        "v": "v572"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to7"
+      },
+      {
+        "k": "t",
+        "v": "), the Stage-B forcing decomposed by the spectrum ablation ("
+      },
+      {
+        "k": "c",
+        "v": "v574"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to8"
+      },
+      {
+        "k": "t",
+        "v": "), and the continuous-half export protocol frozen on the contract surface"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v573"
+            },
+            {
+              "k": "t",
+              "v": " extended (probe T181 "
+            },
+            {
+              "k": "m",
+              "v": "9/9"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The excess is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "scale-locked"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (pairs "
+        },
+        {
+          "k": "m",
+          "v": "\\ge h/2"
+        },
+        {
+          "k": "t",
+          "v": " carry it; bands "
+        },
+        {
+          "k": "m",
+          "v": "16..256"
+        },
+        {
+          "k": "t",
+          "v": " stay negative) and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "weight-concentrated"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the top-"
+        },
+        {
+          "k": "m",
+          "v": "10\\%"
+        },
+        {
+          "k": "t",
+          "v": "-weight pairs alone net "
+        },
+        {
+          "k": "m",
+          "v": "0.85"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.00\\times\\det S"
+        },
+        {
+          "k": "t",
+          "v": " on every selected window — essentially "
+        },
+        {
+          "k": "m",
+          "v": "\\det S"
+        },
+        {
+          "k": "t",
+          "v": " itself; the lag-grid phase is flat (mechanism killed). The certificate target is typed precisely: heavy-pair coherence at window-scale separation."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v572"
+            },
+            {
+              "k": "t",
+              "v": " extended (probe "
+            },
+            {
+              "k": "m",
+              "v": "7/7"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The spectral blindness is robust under the compiler's own flow: the "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": "-semigroup-deformed kernels keep identical inertia on both twins for every declared state and every "
+        },
+        {
+          "k": "m",
+          "v": "n=1..3"
+        },
+        {
+          "k": "t",
+          "v": " — a dynamical selection needs genuine interaction."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v574"
+            },
+            {
+              "k": "t",
+              "v": " extended (probe "
+            },
+            {
+              "k": "m",
+              "v": "9/9"
+            },
+            {
+              "k": "t",
+              "v": ", full "
+            },
+            {
+              "k": "m",
+              "v": "35"
+            },
+            {
+              "k": "t",
+              "v": "-spectrum scan)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The honest decomposition: freeing the exponent spectrum, the one surviving double-selfconsistent family is exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,2,N\\}"
+        },
+        {
+          "k": "t",
+          "v": " with the compiler shape — the self-consistency forces the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "sheet"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,2\\}"
+        },
+        {
+          "k": "t",
+          "v": " and the shape, while the "
+        },
+        {
+          "k": "m",
+          "v": "A_3"
+        },
+        {
+          "k": "t",
+          "v": " exponent demand contributes exactly one datum, "
+        },
+        {
+          "k": "m",
+          "v": "N=3"
+        },
+        {
+          "k": "t",
+          "v": "; both factors load-bearing."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contract surface."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The frozen export protocol for the continuous cross-ratio half preregistered (each instance exports the fixed-point multiplier of its native flow, cf. "
+        },
+        {
+          "k": "c",
+          "v": "v425"
+        },
+        {
+          "k": "t",
+          "v": ", before evaluation); design "
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": ", markers unchanged."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger/registry/run_all counts updated; papers ("
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " counters "
+        },
+        {
+          "k": "m",
+          "v": "4842"
+        },
+        {
+          "k": "t",
+          "v": " checks, Paper II cross-reference row, "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "); diary; website mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · VI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "all four review follow-ups executed: the cross-ratio check passes on its discrete half ("
+      },
+      {
+        "k": "c",
+        "v": "v571"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "y_F=53"
+      },
+      {
+        "k": "t",
+        "v": " Möbius-forced), the RP form is integrally anchor-visible on the twins ("
+      },
+      {
+        "k": "c",
+        "v": "v572"
+      },
+      {
+        "k": "t",
+        "v": "), the dominance is typed long-range ("
+      },
+      {
+        "k": "c",
+        "v": "v573"
+      },
+      {
+        "k": "t",
+        "v": ", T181), and Stage B forces the winding normalisation ("
+      },
+      {
+        "k": "c",
+        "v": "v574"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "N_{\\mathrm{fam}}=3"
+      },
+      {
+        "k": "t",
+        "v": " by double self-consistency) + ledger/paper/diary/website sync"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v571_cr_discrete_corners.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FTR.CRDISC.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "9"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe "
+            },
+            {
+              "k": "m",
+              "v": "9/9"
+            },
+            {
+              "k": "t",
+              "v": ", CR-PASSES)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The preregistered cross-ratio check (v566 S9), executed on its discrete half: the four solver corners are the in-repo kernels "
+        },
+        {
+          "k": "m",
+          "v": "J,K,C,F=M(1,t)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "t=-2..1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v224"
+        },
+        {
+          "k": "t",
+          "v": "), and the corpus' one canonical declared solver reading — the Koide anchor response "
+        },
+        {
+          "k": "m",
+          "v": "\\ell(M)=a^TM\\mathbf1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v183"
+        },
+        {
+          "k": "t",
+          "v": ") — reads "
+        },
+        {
+          "k": "m",
+          "v": "(26,35,44,53)"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{CR}=4/3"
+        },
+        {
+          "k": "t",
+          "v": " exactly, and the fit-free reconstruction "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "forces"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "y_F=53"
+        },
+        {
+          "k": "t",
+          "v": " from the three upstream corners (a new exact cross-corner identity). Honesty theorem: every linear functional passes (the check separates linear from nonlinear exports); negative controls fail as preregistered (determinants "
+        },
+        {
+          "k": "m",
+          "v": "28/25"
+        },
+        {
+          "k": "t",
+          "v": ", dominant eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "1.3222"
+        },
+        {
+          "k": "t",
+          "v": "). The continuous-solver half stays open per "
+        },
+        {
+          "k": "c",
+          "v": "CONTRACT.F.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v572_rp_bit_form.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DIAMOND.BIT.RPFORM.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe "
+            },
+            {
+              "k": "m",
+              "v": "6/6"
+            },
+            {
+              "k": "t",
+              "v": ", ANCHOR-VISIBLE)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The kinematic RP form on the "
+        },
+        {
+          "k": "m",
+          "v": "81"
+        },
+        {
+          "k": "t",
+          "v": "-twins: spectrally blind (identical inertia for every declared state; never PSD — no v534-style kinematic positivity selection exists, honest negative), but the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "integral"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Smith towers of the anchor-state Gram separate the twins in one slot ("
+        },
+        {
+          "k": "m",
+          "v": "18"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": ", a factor "
+        },
+        {
+          "k": "m",
+          "v": "9=N_{\\mathrm{fam}}^2"
+        },
+        {
+          "k": "t",
+          "v": ") — the bit is visible to the RP form only through anchor-coupled states; trace discriminant "
+        },
+        {
+          "k": "m",
+          "v": "-81^2"
+        },
+        {
+          "k": "t",
+          "v": " on both twins; the dynamical RP question stays the open RP-slot."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v573_pair_band_structure.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.PAIRBAND.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T181 "
+            },
+            {
+              "k": "m",
+              "v": "6/6"
+            },
+            {
+              "k": "t",
+              "v": ", LONG-RANGE)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Where the v570 dominance lives: every near band ("
+        },
+        {
+          "k": "m",
+          "v": "<16"
+        },
+        {
+          "k": "t",
+          "v": " lag cells) and the diagonal drag negative on the declared subset; the far band carries the whole excess with stable net ("
+        },
+        {
+          "k": "m",
+          "v": "[1.55,1.91]\\times\\det S"
+        },
+        {
+          "k": "t",
+          "v": ", gross growing to "
+        },
+        {
+          "k": "m",
+          "v": "13\\times"
+        },
+        {
+          "k": "t",
+          "v": "); the scramble explodes "
+        },
+        {
+          "k": "m",
+          "v": "\\det S"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\times49"
+        },
+        {
+          "k": "t",
+          "v": " and collapses the far share — long-range coherence, arithmetic placement; a certificate must control far-pair coherence (near-diagonal budgets aim at the wrong sign)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v574_stageb_winding.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.WINDING.SELF.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "7"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe "
+            },
+            {
+              "k": "m",
+              "v": "7/7"
+            },
+            {
+              "k": "t",
+              "v": ", FORCED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Stage B, first narrowing: the involution "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "type"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is killed by a rank theorem (a two-dim-positive involution cannot carry the binary trace code), "
+        },
+        {
+          "k": "m",
+          "v": "(E)"
+        },
+        {
+          "k": "t",
+          "v": " bounds "
+        },
+        {
+          "k": "m",
+          "v": "N\\le3"
+        },
+        {
+          "k": "t",
+          "v": ", the ladder self-consistency selects one member per "
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "28/16/14\\to1/1/1"
+        },
+        {
+          "k": "t",
+          "v": "), and "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{sat}=N^4"
+        },
+        {
+          "k": "t",
+          "v": " holds "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "only"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "N=3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "81=3^4"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "32\\neq1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "512\\neq16"
+        },
+        {
+          "k": "t",
+          "v": "): the double self-consistency pins "
+        },
+        {
+          "k": "m",
+          "v": "(N,Q)=(3,\\text{compiler }Q)"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "N_{\\mathrm{fam}}=3"
+        },
+        {
+          "k": "t",
+          "v": " relocates from declared input to consistency-forced; "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO.01"
+        },
+        {
+          "k": "t",
+          "v": " narrowed by two items, not closed; no P2 reduction, markers untouched."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Four ledger rows + update notes on "
+        },
+        {
+          "k": "c",
+          "v": "CONTRACT.F.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "DIAMOND.BIT.SELECT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PENCIL.SEPFLOOR.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.QRECON.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (CR block “executed, discrete half”), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/ "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " (RP-form and Stage-B passages), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (pair-band audit block), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " (verified layer "
+        },
+        {
+          "k": "m",
+          "v": "30\\to31"
+        },
+        {
+          "k": "t",
+          "v": ", subsections "
+        },
+        {
+          "k": "c",
+          "v": "sec:v573"
+        },
+        {
+          "k": "t",
+          "v": "/% "
+        },
+        {
+          "k": "c",
+          "v": "sec:t181"
+        },
+        {
+          "k": "t",
+          "v": ", counters "
+        },
+        {
+          "k": "m",
+          "v": "181"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4839"
+        },
+        {
+          "k": "t",
+          "v": " checks), Paper II (cross-reference rows, “twelve modules”); diary entries; suite "
+        },
+        {
+          "k": "m",
+          "v": "564\\to568"
+        },
+        {
+          "k": "t",
+          "v": " scripts; README/zenodo/website counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · V",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the T179 open question closed on the surface: the spectator separation certified from closed scalars (FLOOR-CERTIFIED) + "
+      },
+      {
+        "k": "c",
+        "v": "v570"
+      },
+      {
+        "k": "t",
+        "v": " promoted + backflow part T180 + ledger/paper/diary/website sync"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Probe "
+            },
+            {
+              "k": "c",
+              "v": "separation_floor_probe.py"
+            },
+            {
+              "k": "t",
+              "v": " (T180, "
+            },
+            {
+              "k": "m",
+              "v": "9/9"
+            },
+            {
+              "k": "t",
+              "v": ", verdict FLOOR-CERTIFIED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The open question "
+        },
+        {
+          "k": "c",
+          "v": "v569"
+        },
+        {
+          "k": "t",
+          "v": " named — does the spectator eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_1"
+        },
+        {
+          "k": "t",
+          "v": " of the relative pencil stay separated from "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "? — answered on the reachable surface by "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "reduction"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": two one-line theorems ("
+        },
+        {
+          "k": "m",
+          "v": "P=\\det S/\\det B>0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "T=\\operatorname{tr}Z>0\n\\Rightarrow\\lambda_1\\ge\\sqrt P"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "P\\le0\\Rightarrow\\lambda_1\\ge T"
+        },
+        {
+          "k": "t",
+          "v": ") turn the separation into a closed per-window floor, and on all "
+        },
+        {
+          "k": "m",
+          "v": "70"
+        },
+        {
+          "k": "t",
+          "v": " declared T170 frame-A windows the floor clears the margin, "
+        },
+        {
+          "k": "m",
+          "v": "\\min F=2.130\\ge1.05"
+        },
+        {
+          "k": "t",
+          "v": " (measured "
+        },
+        {
+          "k": "m",
+          "v": "\\min\\lambda_1=4.534"
+        },
+        {
+          "k": "t",
+          "v": "): the separation follows from "
+        },
+        {
+          "k": "m",
+          "v": "\\det S/\\det B"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}Z"
+        },
+        {
+          "k": "t",
+          "v": " alone. The dominance is large and grows with depth ("
+        },
+        {
+          "k": "m",
+          "v": "P"
+        },
+        {
+          "k": "t",
+          "v": " median "
+        },
+        {
+          "k": "m",
+          "v": "30.1"
+        },
+        {
+          "k": "t",
+          "v": ", slope "
+        },
+        {
+          "k": "m",
+          "v": "h^{0.90}"
+        },
+        {
+          "k": "t",
+          "v": " on the surface ladder), and "
+        },
+        {
+          "k": "m",
+          "v": "1-T+P=\\det(B-S)/\\det B"
+        },
+        {
+          "k": "t",
+          "v": " links trace and determinant dominance exactly. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Honest negative:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the cheap two-atom witness route is dead — "
+        },
+        {
+          "k": "m",
+          "v": "\\det S"
+        },
+        {
+          "k": "t",
+          "v": " is itself a pair-level cancellation object (Cauchy–Binet exact; negative pair mass up to "
+        },
+        {
+          "k": "m",
+          "v": "13.7\\times\\det S"
+        },
+        {
+          "k": "t",
+          "v": "; best single pair "
+        },
+        {
+          "k": "m",
+          "v": "0.13"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.34\\times\\det B"
+        },
+        {
+          "k": "t",
+          "v": " against the "
+        },
+        {
+          "k": "m",
+          "v": "\\ge1.10"
+        },
+        {
+          "k": "t",
+          "v": " needed) — so the "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-uniform dominance stays open, typed as pair-level size-vs-cancellation. Must-break: the position scramble flips "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}Z"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "-78.28"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Promotion "
+            },
+            {
+              "k": "c",
+              "v": "v570_separation_floor.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.PENCIL.SEPFLOOR.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "8"
+            },
+            {
+              "k": "t",
+              "v": " checks, "
+            },
+            {
+              "k": "m",
+              "v": "{\\sim}13"
+            },
+            {
+              "k": "t",
+              "v": " s)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New ledger row; update note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PENCIL.ONEMODE.01"
+        },
+        {
+          "k": "t",
+          "v": "; suite "
+        },
+        {
+          "k": "m",
+          "v": "563\\to564"
+        },
+        {
+          "k": "t",
+          "v": " scripts. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Named limits:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " declared finite surface only — the "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-uniform dominance "
+        },
+        {
+          "k": "m",
+          "v": "\\det S\\ge(1+c)^2\\det B"
+        },
+        {
+          "k": "t",
+          "v": " is the same open question "
+        },
+        {
+          "k": "c",
+          "v": "v569"
+        },
+        {
+          "k": "t",
+          "v": " named, in sharper closed-scalar form; Paper-II Problem 7.1 untouched; no rate, no bound, no RH statement."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " (verified layer "
+        },
+        {
+          "k": "m",
+          "v": "29\\to30"
+        },
+        {
+          "k": "t",
+          "v": " modules, subsections "
+        },
+        {
+          "k": "c",
+          "v": "sec:v570"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "sec:t180"
+        },
+        {
+          "k": "t",
+          "v": ", index T11–T180, counters "
+        },
+        {
+          "k": "m",
+          "v": "180"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4833"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (cross-reference row, reproducibility “eleven modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " audit block; diary entry in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": "; README/zenodo/website counters "
+        },
+        {
+          "k": "m",
+          "v": "564"
+        },
+        {
+          "k": "t",
+          "v": "; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · IV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the relative pencil on the declared Paper-II surface: the one-mode question of the self-code review answered (ONE-MODE, labels corrected) + "
+      },
+      {
+        "k": "c",
+        "v": "v569"
+      },
+      {
+        "k": "t",
+        "v": " promoted + backflow part T179 + ledger/paper/diary/website sync"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Probe "
+            },
+            {
+              "k": "c",
+              "v": "lambda_pencil_probe.py"
+            },
+            {
+              "k": "t",
+              "v": " (T179, "
+            },
+            {
+              "k": "m",
+              "v": "4/4"
+            },
+            {
+              "k": "t",
+              "v": ", verdict ONE-MODE)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Priority 5 of the self-code review, executed on the real surface: the "
+        },
+        {
+          "k": "c",
+          "v": "v566"
+        },
+        {
+          "k": "t",
+          "v": " S8 pencil identities "
+        },
+        {
+          "k": "m",
+          "v": "\\det(B{-}S)=\\det B\\,(1{-}\\lambda_1)(1{-}\\lambda_2)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "D(B,S)=\\det B\\,(\\lambda_1{+}\\lambda_2)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det S=\\det B\\,\\lambda_1\\lambda_2"
+        },
+        {
+          "k": "t",
+          "v": " are machine-tight on all "
+        },
+        {
+          "k": "m",
+          "v": "70"
+        },
+        {
+          "k": "t",
+          "v": " declared T170 frame-A windows (worst residual "
+        },
+        {
+          "k": "m",
+          "v": "2\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "c",
+          "v": "v563"
+        },
+        {
+          "k": "t",
+          "v": " surface imported read-only, bit for bit). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The labels are the reverse of the review guess:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the locking mode is "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_2"
+        },
+        {
+          "k": "t",
+          "v": ", hugging "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " (median "
+        },
+        {
+          "k": "m",
+          "v": "1.000021"
+        },
+        {
+          "k": "t",
+          "v": "), while the spectator "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_1"
+        },
+        {
+          "k": "t",
+          "v": " is large and uniformly separated — "
+        },
+        {
+          "k": "m",
+          "v": "\\min|1-\\lambda_1|=3.53"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_1\\in[4.53,180.64]"
+        },
+        {
+          "k": "t",
+          "v": ", every window "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "above"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The one-mode answer:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " exactly one eigenvalue can approach "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ", so the two-dimensional cancellation of Paper II reduces to the single scalar "
+        },
+        {
+          "k": "m",
+          "v": "1-\\lambda_2"
+        },
+        {
+          "k": "t",
+          "v": " on the whole reachable surface; the "
+        },
+        {
+          "k": "m",
+          "v": "h=540"
+        },
+        {
+          "k": "t",
+          "v": " reference window reads "
+        },
+        {
+          "k": "m",
+          "v": "1-\\lambda_2=-2.27\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": " (reproducing "
+        },
+        {
+          "k": "m",
+          "v": "\\det\\hat A=4.22\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "), and the position scramble explodes "
+        },
+        {
+          "k": "m",
+          "v": "|1-\\lambda_2|"
+        },
+        {
+          "k": "t",
+          "v": " by "
+        },
+        {
+          "k": "m",
+          "v": "\\times1.9\\times10^{6}"
+        },
+        {
+          "k": "t",
+          "v": " while the identities keep holding: the locking is arithmetic placement."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Promotion "
+            },
+            {
+              "k": "c",
+              "v": "v569_lambda_pencil_onemode.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.PENCIL.ONEMODE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks, "
+            },
+            {
+              "k": "m",
+              "v": "{\\sim}2"
+            },
+            {
+              "k": "t",
+              "v": " s)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New ledger row; update notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PAPER2.READOUT.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "DIAMOND.PARA.SELFCODE.01"
+        },
+        {
+          "k": "t",
+          "v": "; suite "
+        },
+        {
+          "k": "m",
+          "v": "562\\to563"
+        },
+        {
+          "k": "t",
+          "v": " scripts. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Named limits:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " declared finite surface only — Paper-II Problem 7.1 (the uniform quantifier) is untouched, typed not bounded; whether "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_1"
+        },
+        {
+          "k": "t",
+          "v": " stays separated as "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " grows is a new named open question, strictly weaker than Problem 7.1; no rate, no bound, no RH statement."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " (verified layer "
+        },
+        {
+          "k": "m",
+          "v": "28\\to29"
+        },
+        {
+          "k": "t",
+          "v": " modules, subsections "
+        },
+        {
+          "k": "c",
+          "v": "sec:v569"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "sec:t179"
+        },
+        {
+          "k": "t",
+          "v": ", index T11–T179, counters "
+        },
+        {
+          "k": "m",
+          "v": "179"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4824"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (cross-reference row for Problem "
+        },
+        {
+          "k": "c",
+          "v": "prob:R1"
+        },
+        {
+          "k": "t",
+          "v": ", reproducibility “ten modules”); diary entry in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": "; README/zenodo/website counters "
+        },
+        {
+          "k": "m",
+          "v": "563"
+        },
+        {
+          "k": "t",
+          "v": "; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · III",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the residual reconstruction bit located and given a canonical witness: the ladder self-consistency selects the compiler "
+      },
+      {
+        "k": "m",
+        "v": "Q"
+      },
+      {
+        "k": "t",
+        "v": " uniquely (SELECTOR-FOUND); the split geometry excluded; Priority 2 sharpened + "
+      },
+      {
+        "k": "c",
+        "v": "v568"
+      },
+      {
+        "k": "t",
+        "v": " promoted + ledger/paper/diary/website sync"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Probe "
+            },
+            {
+              "k": "c",
+              "v": "bit_selector_probe.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "m",
+              "v": "10/10"
+            },
+            {
+              "k": "t",
+              "v": ", verdict SELECTOR-FOUND)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Priorities 2+3 of the self-code review, fused with the "
+        },
+        {
+          "k": "c",
+          "v": "v567"
+        },
+        {
+          "k": "t",
+          "v": " residual bit. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The bit is integrally visible:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the two "
+        },
+        {
+          "k": "m",
+          "v": "81"
+        },
+        {
+          "k": "t",
+          "v": "-twins ("
+        },
+        {
+          "k": "m",
+          "v": "q_{32}=2{=}|\\Z_2|"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": ") generate "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "different"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " integral orders (equal index, equal Smith divisors, different lattices). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The selector:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the dominant mode of the sheet direction is "
+        },
+        {
+          "k": "m",
+          "v": "v(c)=(1,2,2c)"
+        },
+        {
+          "k": "t",
+          "v": " identically, and the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "ladder self-consistency"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — the dominant mode reproduces its own eigenvalue as the geometric ladder "
+        },
+        {
+          "k": "m",
+          "v": "(2^0,2^1,2^2)=(1,2,4)"
+        },
+        {
+          "k": "t",
+          "v": " — selects "
+        },
+        {
+          "k": "m",
+          "v": "c=2"
+        },
+        {
+          "k": "t",
+          "v": ", the compiler "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": ", uniquely on all "
+        },
+        {
+          "k": "m",
+          "v": "28"
+        },
+        {
+          "k": "t",
+          "v": " members of the carrier-free class (no "
+        },
+        {
+          "k": "m",
+          "v": "81"
+        },
+        {
+          "k": "t",
+          "v": "-pin, no column budget); the witness is prior structure (binary AnchorLadder steps "
+        },
+        {
+          "k": "m",
+          "v": "2^n"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "2=|\\Z_2|"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "c",
+          "v": "v566"
+        },
+        {
+          "k": "t",
+          "v": " trace code). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The split geometry located and excluded:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a module complement exists iff "
+        },
+        {
+          "k": "m",
+          "v": "q_{32}=1"
+        },
+        {
+          "k": "t",
+          "v": ", and that member's algebra collapses to dimension "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " — the "
+        },
+        {
+          "k": "m",
+          "v": "A_2"
+        },
+        {
+          "k": "t",
+          "v": " Ext arrow is nonzero on the whole reconstruction class; neither twin splits: the bit toggles "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "which"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " nonsplit integral order is realised, not split-vs-nonsplit. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Priority-2 candidates, honest both ways:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-grading fails (the order is not graded; the "
+        },
+        {
+          "k": "m",
+          "v": "81"
+        },
+        {
+          "k": "t",
+          "v": " stays a fingerprint, the kill condition does not fire), while left "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": "-multiplication induces a canonical "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb F_3"
+        },
+        {
+          "k": "t",
+          "v": "-action on the cokernel "
+        },
+        {
+          "k": "m",
+          "v": "(\\Z/3)^4"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "computed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": its characteristic polynomial is "
+        },
+        {
+          "k": "m",
+          "v": "x(x-1)^2(x+1)"
+        },
+        {
+          "k": "t",
+          "v": " mod "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " (eigenvalues "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,1,1,-1\\}"
+        },
+        {
+          "k": "t",
+          "v": ", NOT the regular "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " pattern "
+        },
+        {
+          "k": "m",
+          "v": "x^4-1"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "U"
+        },
+        {
+          "k": "t",
+          "v": " acts as zero; both twins identical) — after two candidates the "
+        },
+        {
+          "k": "m",
+          "v": "81"
+        },
+        {
+          "k": "t",
+          "v": " stays a fingerprint."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Promotion "
+            },
+            {
+              "k": "c",
+              "v": "v568_bit_selector_ladder.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DIAMOND.BIT.SELECT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "11"
+            },
+            {
+              "k": "t",
+              "v": " checks, "
+            },
+            {
+              "k": "m",
+              "v": "{\\sim}1"
+            },
+            {
+              "k": "t",
+              "v": " s)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New ledger row; update notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.QRECON.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "DIAMOND.PARA.SELFCODE.01"
+        },
+        {
+          "k": "t",
+          "v": "; suite "
+        },
+        {
+          "k": "m",
+          "v": "561\\to562"
+        },
+        {
+          "k": "t",
+          "v": " scripts. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The physical selection is not derived:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " why the dominant mode should satisfy the ladder self-consistency is the relocated open question — the same structural slot as the RP-selection of the alignment bit ("
+        },
+        {
+          "k": "c",
+          "v": "v528"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v534"
+        },
+        {
+          "k": "t",
+          "v": "); no marker moves, no P2 reduction."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " (selector appended to the Stage-A passage), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " (a dedicated bit paragraph after the audit paragraph); diary entry in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": "; README/zenodo/website counters "
+        },
+        {
+          "k": "m",
+          "v": "562"
+        },
+        {
+          "k": "t",
+          "v": "; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · II",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the No-Carrier-Reconstruction audit, Stage A: the anchor self-code is carrier-free, and "
+      },
+      {
+        "k": "m",
+        "v": "Q"
+      },
+      {
+        "k": "t",
+        "v": " reconstructs up to ONE binary sheet-coupling choice (RECONSTRUCTS-TO-FAMILY) + "
+      },
+      {
+        "k": "c",
+        "v": "v567"
+      },
+      {
+        "k": "t",
+        "v": " promoted + ledger/paper/diary/website sync"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Audit probe "
+            },
+            {
+              "k": "c",
+              "v": "carrier_free_q_reconstruction_probe.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "m",
+              "v": "10/10"
+            },
+            {
+              "k": "t",
+              "v": ", verdict RECONSTRUCTS-TO-FAMILY)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Priority 1 of the self-code review executed. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The circularity located:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v11"
+        },
+        {
+          "k": "t",
+          "v": "'s uniqueness certificate for "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " uses row sums "
+        },
+        {
+          "k": "m",
+          "v": "(4,5,6)"
+        },
+        {
+          "k": "t",
+          "v": ", column sums "
+        },
+        {
+          "k": "m",
+          "v": "(9,5,1)"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_Q=(t{-}1)(t^2{-}5t{+}3)"
+        },
+        {
+          "k": "t",
+          "v": " — the "
+        },
+        {
+          "k": "m",
+          "v": "5=g_{\\mathrm{car}}"
+        },
+        {
+          "k": "t",
+          "v": " in the budgets and in "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_Q"
+        },
+        {
+          "k": "t",
+          "v": "; all of it "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "forbidden"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " in the audit. Under the corpus' own carrier-free data (sheet involution, "
+        },
+        {
+          "k": "c",
+          "v": "v10"
+        },
+        {
+          "k": "t",
+          "v": " winding normalisation, "
+        },
+        {
+          "k": "m",
+          "v": "A_3"
+        },
+        {
+          "k": "t",
+          "v": " exponent spectrum, monodromy budget, integrality, seam-line demand): exactly "
+        },
+        {
+          "k": "m",
+          "v": "52\\to28"
+        },
+        {
+          "k": "t",
+          "v": " (parabolic) admissible reconstructions — and "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "all "
+            },
+            {
+              "k": "m",
+              "v": "28"
+            },
+            {
+              "k": "t",
+              "v": " code the same anchor"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{H'}=x^3-4x^2+5x-2"
+        },
+        {
+          "k": "t",
+          "v": ", spectrum "
+        },
+        {
+          "k": "m",
+          "v": "(1,1,2)=a"
+        },
+        {
+          "k": "t",
+          "v": "): the anchor self-code sits "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "upstream"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the carrier budgets. The single family invariant "
+        },
+        {
+          "k": "m",
+          "v": "81=N_{\\mathrm{fam}}^4"
+        },
+        {
+          "k": "t",
+          "v": " (saturation index) pins "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " to a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "two-element"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " residual family ("
+        },
+        {
+          "k": "m",
+          "v": "q_{32}\\in\\{2{=}|\\Z_2|,0\\}"
+        },
+        {
+          "k": "t",
+          "v": ", difference "
+        },
+        {
+          "k": "m",
+          "v": "2E_{32}"
+        },
+        {
+          "k": "t",
+          "v": ") on which every classical carrier-free certificate coincides (anticommutator spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{6,-4,-2\\}"
+        },
+        {
+          "k": "t",
+          "v": ", commutator charpoly "
+        },
+        {
+          "k": "m",
+          "v": "t(t^2{+}12)"
+        },
+        {
+          "k": "t",
+          "v": ", determinant, saturation) — the one separating certificate is the carrier column budget "
+        },
+        {
+          "k": "m",
+          "v": "(9,5,1)"
+        },
+        {
+          "k": "t",
+          "v": ": exactly the forbidden input. Ablations: dropping the winding input widens the bound-"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " set "
+        },
+        {
+          "k": "m",
+          "v": "28\\to1376"
+        },
+        {
+          "k": "t",
+          "v": " (real load); bound-stable at "
+        },
+        {
+          "k": "m",
+          "v": "B=9"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Promotion "
+            },
+            {
+              "k": "c",
+              "v": "v567_carrier_free_q_reconstruction.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.QRECON.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "9"
+            },
+            {
+              "k": "t",
+              "v": " checks, "
+            },
+            {
+              "k": "m",
+              "v": "{\\sim}1"
+            },
+            {
+              "k": "t",
+              "v": " s; integer prefilters take the probe's "
+            },
+            {
+              "k": "m",
+              "v": "555"
+            },
+            {
+              "k": "t",
+              "v": " s to "
+            },
+            {
+              "k": "m",
+              "v": "1.2"
+            },
+            {
+              "k": "t",
+              "v": " s)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New ledger row; update notes on "
+        },
+        {
+          "k": "c",
+          "v": "FLAV.QGEO.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "DIAMOND.PARA.SELFCODE.01"
+        },
+        {
+          "k": "t",
+          "v": "; suite "
+        },
+        {
+          "k": "m",
+          "v": "560\\to561"
+        },
+        {
+          "k": "t",
+          "v": " scripts. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Stage A only, no marker moves:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " whether the geometric inputs themselves derive from "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "D_4"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "H^1"
+        },
+        {
+          "k": "t",
+          "v": " parabolic geometry is exactly "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO.01"
+        },
+        {
+          "k": "t",
+          "v": " (the audit is relocated, not closed); the carrier-free selector of the residual bit is open, its resonance with the split/nonsplit alignment bit a typed observation; no P2 reduction, "
+        },
+        {
+          "k": "c",
+          "v": "AX.P2.01"
+        },
+        {
+          "k": "t",
+          "v": " untouched."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " (Stage-A result appended to the self-code paragraph), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " (a dedicated audit paragraph after the self-code block); diary entry in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": "; README/zenodo/website counters "
+        },
+        {
+          "k": "m",
+          "v": "561"
+        },
+        {
+          "k": "t",
+          "v": "; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · I",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the parabolic anchor self-code: an external structural review audited (SELFCODE-VERIFIED) — the anchor "
+      },
+      {
+        "k": "m",
+        "v": "a=(1,1,2)"
+      },
+      {
+        "k": "t",
+        "v": " as the spectrum of a sheet-direction operator, double-coded by flag/Levi/radical, unique in its parabolic family; the "
+      },
+      {
+        "k": "m",
+        "v": "81"
+      },
+      {
+        "k": "t",
+        "v": " as a saturated lattice index; the "
+      },
+      {
+        "k": "m",
+        "v": "A_2"
+      },
+      {
+        "k": "t",
+        "v": " bit carrier + "
+      },
+      {
+        "k": "c",
+        "v": "v566"
+      },
+      {
+        "k": "t",
+        "v": " promoted + ledger/paper/diary/website sync"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Audit probe "
+            },
+            {
+              "k": "c",
+              "v": "parabolic_selfcode_audit_probe.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "m",
+              "v": "23/23"
+            },
+            {
+              "k": "t",
+              "v": ", verdict SELFCODE-VERIFIED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " An external review proposed exact statements about the "
+        },
+        {
+          "k": "c",
+          "v": "v218"
+        },
+        {
+          "k": "t",
+          "v": " sheet-diamond direction operators "
+        },
+        {
+          "k": "m",
+          "v": "U=Q\\,\\mathrm{diag}(1,0,0)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "V=Q\\,\\mathrm{diag}(0,1,1)"
+        },
+        {
+          "k": "t",
+          "v": "; every claim holds exactly against the corpus objects, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "including the saturation check the review had not run"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the integral order stabilises at word length "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "; the word-basis Smith form survives). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The parabolic theorem:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathcal A=\\Q\\langle I,U,V\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " is the full "
+        },
+        {
+          "k": "m",
+          "v": "2|1"
+        },
+        {
+          "k": "t",
+          "v": " line-stabiliser algebra (dim "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": ", word determinant "
+        },
+        {
+          "k": "m",
+          "v": "-81"
+        },
+        {
+          "k": "t",
+          "v": ", multiplicatively closed, mutation-fragile). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The double self-code:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "H=I+\\tfrac12V(V-I)"
+        },
+        {
+          "k": "t",
+          "v": " has spectrum exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,1,2\\}=a"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_H=x^3-4x^2+5x-2"
+        },
+        {
+          "k": "t",
+          "v": " carries "
+        },
+        {
+          "k": "m",
+          "v": "(4,5,2)=(|\\mu_4|,g_{\\mathrm{car}},|\\Z_2|)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "=(\\text{flag},\\text{Levi},\\text{radical})"
+        },
+        {
+          "k": "t",
+          "v": " of "
+        },
+        {
+          "k": "m",
+          "v": "\\mathcal A"
+        },
+        {
+          "k": "t",
+          "v": " simultaneously. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The uniqueness theorem:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(x-m)(x^2-mx+1)"
+        },
+        {
+          "k": "t",
+          "v": " with all-positive-integer roots forces "
+        },
+        {
+          "k": "m",
+          "v": "m=2"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "a=(1,1,2)"
+        },
+        {
+          "k": "t",
+          "v": " is the only anchor this family can code. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The "
+            },
+            {
+              "k": "m",
+              "v": "81"
+            },
+            {
+              "k": "t",
+              "v": ":"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the saturated order has elementary divisors "
+        },
+        {
+          "k": "m",
+          "v": "(1,1,1,3,3,3,3)"
+        },
+        {
+          "k": "t",
+          "v": " — index "
+        },
+        {
+          "k": "m",
+          "v": "3^4=81"
+        },
+        {
+          "k": "t",
+          "v": ", cokernel "
+        },
+        {
+          "k": "m",
+          "v": "(\\Z/3)^4"
+        },
+        {
+          "k": "t",
+          "v": " — equal to the "
+        },
+        {
+          "k": "c",
+          "v": "v218"
+        },
+        {
+          "k": "t",
+          "v": " determinant-staircase sum ("
+        },
+        {
+          "k": "m",
+          "v": "N_{\\mathrm{fam}}^4"
+        },
+        {
+          "k": "t",
+          "v": "); the mark-local mechanism stays open. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The "
+            },
+            {
+              "k": "m",
+              "v": "A_2"
+            },
+            {
+              "k": "t",
+              "v": " bit carrier:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the basic algebra is the "
+        },
+        {
+          "k": "m",
+          "v": "A_2"
+        },
+        {
+          "k": "t",
+          "v": " path algebra with "
+        },
+        {
+          "k": "m",
+          "v": "\\dim\\operatorname{Ext}^1=1"
+        },
+        {
+          "k": "t",
+          "v": ": exactly two module classes (split / one nonsplit) — a canonical carrier for the alignment bit; the selection stays with RP/geometry. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Re-encoding typed as such:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "p_n(a)=1+\\operatorname{tr}(V^n)"
+        },
+        {
+          "k": "t",
+          "v": " (AnchorLadder through "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " and rank "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " as trace readouts). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Test design:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the cross-ratio check "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{CR}=4/3"
+        },
+        {
+          "k": "t",
+          "v": " for the four "
+        },
+        {
+          "k": "c",
+          "v": "CONTRACT.F.01"
+        },
+        {
+          "k": "t",
+          "v": " solvers (universal-progression honesty wired; negative control "
+        },
+        {
+          "k": "m",
+          "v": "28/25"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Reformulation:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the Paper-II rank-3 form as "
+        },
+        {
+          "k": "m",
+          "v": "(1,2)"
+        },
+        {
+          "k": "t",
+          "v": " Lorentz geometry with the relative-pencil identities (eigenvalue locking as the named prime-front instrument)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Promotion "
+            },
+            {
+              "k": "c",
+              "v": "v566_parabolic_anchor_selfcode.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DIAMOND.PARA.SELFCODE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "14"
+            },
+            {
+              "k": "t",
+              "v": " checks, "
+            },
+            {
+              "k": "m",
+              "v": "{\\sim}1"
+            },
+            {
+              "k": "t",
+              "v": " s, exact)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New ledger row; update notes on "
+        },
+        {
+          "k": "c",
+          "v": "DIAMOND.AXIS.01"
+        },
+        {
+          "k": "t",
+          "v": " (self-code "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "81"
+        },
+        {
+          "k": "t",
+          "v": "-index cross-link) and "
+        },
+        {
+          "k": "c",
+          "v": "CONTRACT.F.01"
+        },
+        {
+          "k": "t",
+          "v": " (the preregistered cross-ratio check added to the contract surface); suite "
+        },
+        {
+          "k": "m",
+          "v": "559\\to560"
+        },
+        {
+          "k": "t",
+          "v": " scripts. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "No P2 reduction and no marker moves:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the “"
+        },
+        {
+          "k": "m",
+          "v": "g_{\\mathrm{car}}=\\dim(\\mathcal A/J)"
+        },
+        {
+          "k": "t",
+          "v": " derived” route is conditional on the open "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "No Carrier Reconstruction"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " audit (rebuild "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": " without carrier-aware inputs) — the review's Priority-1 workstream, recorded as the named open door; the "
+        },
+        {
+          "k": "m",
+          "v": "2..9"
+        },
+        {
+          "k": "t",
+          "v": " dimension table is typed as compression (no-free-pattern)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " (self-code paragraph after "
+        },
+        {
+          "k": "c",
+          "v": "v23"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " (self-code "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "81"
+        },
+        {
+          "k": "t",
+          "v": "-index "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "A_2"
+        },
+        {
+          "k": "t",
+          "v": "-carrier paragraph after the "
+        },
+        {
+          "k": "c",
+          "v": "v218"
+        },
+        {
+          "k": "t",
+          "v": " block), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (cross-ratio check in the "
+        },
+        {
+          "k": "c",
+          "v": "CONTRACT.F.01"
+        },
+        {
+          "k": "t",
+          "v": " section); diary entry in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": "; website counters and mirrors regenerated; README/zenodo "
+        },
+        {
+          "k": "m",
+          "v": "560"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-30",
+    "dateLabel": "2026-07-30 · II",
+    "heading": [
+      {
+        "k": "t",
+        "v": "WOIT "
+      },
+      {
+        "k": "m",
+        "v": "\\beta_3"
+      },
+      {
+        "k": "t",
+        "v": " executed: the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{PT}\\leftrightarrow\\mathbb{PT}^*"
+      },
+      {
+        "k": "t",
+        "v": " duality typed against "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma_{\\mathrm{std}}"
+      },
+      {
+        "k": "t",
+        "v": " — the OS cut and the "
+      },
+      {
+        "k": "m",
+        "v": "(2,2)"
+      },
+      {
+        "k": "t",
+        "v": " signature forced, the kill branch empty by algebra, the induced member "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "\\Theta_{\\mathrm{phys}}"
+      },
+      {
+        "k": "t",
+        "v": " carrier (SUCCESS) + "
+      },
+      {
+        "k": "c",
+        "v": "v565"
+      },
+      {
+        "k": "t",
+        "v": " promoted + contract/paper/diary/website sync"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Discovery probe "
+            },
+            {
+              "k": "c",
+              "v": "woit_os_beta3_pt_dual_probe.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "m",
+              "v": "25/25"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "2.4"
+            },
+            {
+              "k": "t",
+              "v": " s, verdict SUCCESS per the frozen preregistration; contract wording verbatim: success "
+            },
+            {
+              "k": "m",
+              "v": "="
+            },
+            {
+              "k": "t",
+              "v": " Woit's Minkowski conjugation identified with the family-D conjugation on the quotient, kill "
+            },
+            {
+              "k": "m",
+              "v": "="
+            },
+            {
+              "k": "t",
+              "v": " the duality forces a clock-centralising (family A) structure)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The class (block theorem):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{PT}\\leftrightarrow\\mathbb{PT}^*"
+        },
+        {
+          "k": "t",
+          "v": " duality is a nondegenerate Hermitian form "
+        },
+        {
+          "k": "m",
+          "v": "\\Phi"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{C}^4"
+        },
+        {
+          "k": "t",
+          "v": "; clock compatibility has entrywise residual "
+        },
+        {
+          "k": "m",
+          "v": "(\\bar\\lambda_j\\lambda_k-1)\\Phi_{jk}"
+        },
+        {
+          "k": "t",
+          "v": " and forces the four cross-eigenspace entries to zero: two "
+        },
+        {
+          "k": "m",
+          "v": "2\\times2"
+        },
+        {
+          "k": "t",
+          "v": " Hermitian blocks, "
+        },
+        {
+          "k": "m",
+          "v": "16\\to8"
+        },
+        {
+          "k": "t",
+          "v": " real parameters (the deck adds nothing; the wrong clock lift breaks the split). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The dichotomy and the forced "
+            },
+            {
+              "k": "m",
+              "v": "(2,2)"
+            },
+            {
+              "k": "t",
+              "v": ":"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "\\rho_{\\mathrm{tw}}"
+        },
+        {
+          "k": "t",
+          "v": " pairing "
+        },
+        {
+          "k": "m",
+          "v": "M^\\dagger\\Phi M=\\varepsilon\\bar\\Phi"
+        },
+        {
+          "k": "t",
+          "v": " splits the class exactly in two — the Euclidean branch ("
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_{\\mathrm{std}}"
+        },
+        {
+          "k": "t",
+          "v": "'s home) has seam-line norm "
+        },
+        {
+          "k": "m",
+          "v": "a(|z|^2+1)"
+        },
+        {
+          "k": "t",
+          "v": ", no null point, no OS cut ever; the Minkowski branch has norm "
+        },
+        {
+          "k": "m",
+          "v": "a(|z|^2-1)"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the null locus meets the seam line exactly in the seam circle"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " for every member (the OS cut is forced, not imposed), and "
+        },
+        {
+          "k": "m",
+          "v": "\\Phi_1=-\\bar\\Phi_i"
+        },
+        {
+          "k": "t",
+          "v": " exactly (charpoly mirrored), so the total signature is "
+        },
+        {
+          "k": "m",
+          "v": "(2,2)"
+        },
+        {
+          "k": "t",
+          "v": " for every nondegenerate member — Woit's Minkowski signature is a theorem of clock "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\rho_{\\mathrm{tw}}"
+        },
+        {
+          "k": "t",
+          "v": " pairing, not an input. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The kill is empty by algebra:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " every compatible duality inverts clock and deck (family D); family A would need "
+        },
+        {
+          "k": "m",
+          "v": "\\rho_4^2="
+        },
+        {
+          "k": "t",
+          "v": " scalar, but "
+        },
+        {
+          "k": "m",
+          "v": "\\rho_4^2=\\operatorname{diag}(-1,1,-1,1)"
+        },
+        {
+          "k": "t",
+          "v": " — no solution, decided not scanned; "
+        },
+        {
+          "k": "m",
+          "v": "s_\\Phi^2>0"
+        },
+        {
+          "k": "t",
+          "v": ": the Kramers-free class. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The identification:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " every seam-preserving Minkowski member induces the same conjugation "
+        },
+        {
+          "k": "m",
+          "v": "z\\to-\\bar z"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\mu=-1"
+        },
+        {
+          "k": "t",
+          "v": ", fixed points "
+        },
+        {
+          "k": "m",
+          "v": "\\pm i"
+        },
+        {
+          "k": "t",
+          "v": "), perpendicular to "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_{\\mathrm{std}}"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "z\\to+\\bar z"
+        },
+        {
+          "k": "t",
+          "v": "; under the declared RP-side placement (exact rational-"
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": " arithmetic, offsets "
+        },
+        {
+          "k": "m",
+          "v": "\\mp\\pi/2"
+        },
+        {
+          "k": "t",
+          "v": ") it "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_\\perp"
+        },
+        {
+          "k": "t",
+          "v": " — the mirror whose descent "
+        },
+        {
+          "k": "c",
+          "v": "v524"
+        },
+        {
+          "k": "t",
+          "v": " certified: "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta_{\\mathrm{phys}}"
+        },
+        {
+          "k": "t",
+          "v": " is the quotient shadow of the duality (regressions re-verified: Gram PD "
+        },
+        {
+          "k": "m",
+          "v": "(16,0,0)"
+        },
+        {
+          "k": "t",
+          "v": ", anti-unitary with "
+        },
+        {
+          "k": "m",
+          "v": "\\eta_\\perp=+i"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta^2=+1"
+        },
+        {
+          "k": "t",
+          "v": " per sector, time reversal, torsor closure). Role separation complete: "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_{\\mathrm{std}}\\sim"
+        },
+        {
+          "k": "t",
+          "v": " the OS cut (the metric), the "
+        },
+        {
+          "k": "m",
+          "v": "\\Phi"
+        },
+        {
+          "k": "t",
+          "v": "-twisted duality "
+        },
+        {
+          "k": "m",
+          "v": "\\sim"
+        },
+        {
+          "k": "t",
+          "v": " the descending mirror. Free/quotient level only; "
+        },
+        {
+          "k": "m",
+          "v": "\\mathcal A_{\\mathrm{hol}}"
+        },
+        {
+          "k": "t",
+          "v": " untouched; all seven kill tests stay live; no marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Promotion "
+            },
+            {
+              "k": "c",
+              "v": "v565_woit_beta3_pt_duality.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "WOIT.BETA3.DUALITY.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "22"
+            },
+            {
+              "k": "t",
+              "v": " checks, "
+            },
+            {
+              "k": "m",
+              "v": "{\\sim}2"
+            },
+            {
+              "k": "t",
+              "v": " s, sympy-exact "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " two 40-digit inertia certificates)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New ledger row; "
+        },
+        {
+          "k": "c",
+          "v": "WOIT.OS.TWISTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " updated ("
+        },
+        {
+          "k": "m",
+          "v": "\\beta_3"
+        },
+        {
+          "k": "t",
+          "v": " executed, "
+        },
+        {
+          "k": "m",
+          "v": "\\gamma"
+        },
+        {
+          "k": "t",
+          "v": " next); suite "
+        },
+        {
+          "k": "m",
+          "v": "558\\to559"
+        },
+        {
+          "k": "t",
+          "v": " scripts."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": title line ("
+        },
+        {
+          "k": "m",
+          "v": "\\alpha/\\beta_1/\\beta_2/\\beta_3"
+        },
+        {
+          "k": "t",
+          "v": " executed, "
+        },
+        {
+          "k": "m",
+          "v": "\\gamma"
+        },
+        {
+          "k": "t",
+          "v": " next), the "
+        },
+        {
+          "k": "m",
+          "v": "\\beta_3"
+        },
+        {
+          "k": "t",
+          "v": " executed block, the roadmap item, the status paragraph, the straddle-hurdle wording ("
+        },
+        {
+          "k": "m",
+          "v": "\\gamma"
+        },
+        {
+          "k": "t",
+          "v": " and beyond); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": new Step 32, story counters thirty-one "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " thirty-two (title, intro, preamble), the Woit-bridge paragraph gains the "
+        },
+        {
+          "k": "m",
+          "v": "\\beta_3"
+        },
+        {
+          "k": "t",
+          "v": "-stage status; diary entry in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": "; website: "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " WOIT milestone list "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v565"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "suite.ts"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "558\\to559"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ScriptIndex"
+        },
+        {
+          "k": "t",
+          "v": "/changelog mirrors regenerated; README/zenodo counters "
+        },
+        {
+          "k": "m",
+          "v": "559"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-30",
+    "dateLabel": "2026-07-30 · I",
+    "heading": [
+      {
+        "k": "t",
+        "v": "T178 backflow: the frame door of the CP mirror decided — R1 by theorem, R2 by anchor, the degeneracy explained (FIBER-PINNED) + "
+      },
+      {
+        "k": "c",
+        "v": "v564"
+      },
+      {
+        "k": "t",
+        "v": " promoted + "
+      },
+      {
+        "k": "c",
+        "v": "v563"
+      },
+      {
+        "k": "t",
+        "v": " Paper-II readouts registered + ledger/paper/diary/website sync"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-front diary T178 ("
+            },
+            {
+              "k": "c",
+              "v": "cp_frame_carrier_probe.py"
+            },
+            {
+              "k": "t",
+              "v": ", contract "
+            },
+            {
+              "k": "c",
+              "v": "FRAME.CARRIER"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "31/31"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "2.4"
+            },
+            {
+              "k": "t",
+              "v": " s, verdict FIBER-PINNED, sandbox; fifth reverse-flow probe — T177's two open items are pure finite algebra and are "
+            },
+            {
+              "k": "i",
+              "c": [
+                {
+                  "k": "t",
+                  "v": "decided"
+                }
+              ]
+            },
+            {
+              "k": "t",
+              "v": ", not measured)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "R1, natural half, negative by theorem:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the fiber acts on the frame by a scalar on the "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": "-row, so every homogeneous frame block factorises exactly ("
+        },
+        {
+          "k": "m",
+          "v": "P(\\rho n)=\\rho^{m}P(n)"
+        },
+        {
+          "k": "t",
+          "v": ", checked on fully generic degree-"
+        },
+        {
+          "k": "m",
+          "v": "1..4"
+        },
+        {
+          "k": "t",
+          "v": " polynomials with symbolic coefficients), and the metric-free invariants of "
+        },
+        {
+          "k": "m",
+          "v": "(\\mathbf1,d,n)"
+        },
+        {
+          "k": "t",
+          "v": " have "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " generator (bracket enumeration exact: the six permutations "
+        },
+        {
+          "k": "m",
+          "v": "=\\pm\\Delta"
+        },
+        {
+          "k": "t",
+          "v": ", the other "
+        },
+        {
+          "k": "m",
+          "v": "21"
+        },
+        {
+          "k": "t",
+          "v": " vanish identically in a generic "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": "; Weyl 1946 FFT as the cited class boundary) — every scale-free ratio is constant, so no frame-coupled scale-free "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/3"
+        },
+        {
+          "k": "t",
+          "v": "-carrier exists without a metric: T177's obstruction sentence is now a theorem. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "R1, metric half, non-canonical:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " declared metrics admit frame-coupled Tier-2 carriers, but they split into two character classes ("
+        },
+        {
+          "k": "m",
+          "v": "(-1,-1,+1)"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "(-1,-1,-1)"
+        },
+        {
+          "k": "t",
+          "v": ") and the admissible normalisers contain the continuum "
+        },
+        {
+          "k": "m",
+          "v": "q_t=t\\,n_1^{2}+n_2^{2}+n_3^{2}"
+        },
+        {
+          "k": "t",
+          "v": " (values "
+        },
+        {
+          "k": "m",
+          "v": "441\\sin(\\pi/3)/(25t+117)"
+        },
+        {
+          "k": "t",
+          "v": ", strictly monotone) — no canonical frame factor; the factors "
+        },
+        {
+          "k": "m",
+          "v": "21/8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "21/2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "441/142"
+        },
+        {
+          "k": "t",
+          "v": " are normaliser-relative frame data with the anti-numerology fence wired as a check. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The single-sine lemma (why T177 ended DEGENERATE):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\{|\\operatorname{Im}\\rho_n^{k}|\\}"
+        },
+        {
+          "k": "t",
+          "v": " has exactly one nonzero element iff "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": " is crystallographic ("
+        },
+        {
+          "k": "m",
+          "v": "n\\in\\{1,2,3,4,6\\}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi(n)\\le2"
+        },
+        {
+          "k": "t",
+          "v": "), by "
+        },
+        {
+          "k": "m",
+          "v": "\\sin(4\\pi/n)-\\sin(2\\pi/n)=2\\sin(\\pi/n)\\cos(3\\pi/n)"
+        },
+        {
+          "k": "t",
+          "v": " (only zero at "
+        },
+        {
+          "k": "m",
+          "v": "n=6"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "n\\ge5"
+        },
+        {
+          "k": "t",
+          "v": ") — the compiler's two clocks "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "j=1728"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_6"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "j=0"
+        },
+        {
+          "k": "t",
+          "v": ") are exactly the two maximal single-sine fibers, so value-based pinning of functionals is impossible there by theorem: T177's verdict was "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "forced"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "R2 selected by the anchor:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the Jarlskog invariant carries the full character tuple "
+        },
+        {
+          "k": "m",
+          "v": "(-1,-1,-1)"
+        },
+        {
+          "k": "t",
+          "v": " under (conjugation, sheet flip, deck reflection), each certified at "
+        },
+        {
+          "k": "m",
+          "v": "40"
+        },
+        {
+          "k": "t",
+          "v": " dps — matching the sheet-odd orientation class only; the unique anchor-matching "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "canonical"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " carrier is the fiber-pure "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Im}\\rho=\\sin(\\pi/3)"
+        },
+        {
+          "k": "t",
+          "v": " (selected, conditional on the anchor — not derived). No marker moves; "
+        },
+        {
+          "k": "c",
+          "v": "REG.FREEZE.01"
+        },
+        {
+          "k": "t",
+          "v": " untouched; the CP residual is relocated with a proof, not closed."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Promotion "
+            },
+            {
+              "k": "c",
+              "v": "v564_cp_fiber_pin.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CP.FIBER.PIN.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "22"
+            },
+            {
+              "k": "t",
+              "v": " checks, "
+            },
+            {
+              "k": "m",
+              "v": "{\\sim}2"
+            },
+            {
+              "k": "t",
+              "v": " s, sympy-exact)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact cores as one load-bearing module: the generic Euler factorisation, the one-generator bracket enumeration, the character split and the "
+        },
+        {
+          "k": "m",
+          "v": "q_t"
+        },
+        {
+          "k": "t",
+          "v": " continuum (anti-numerology as a check), the single-sine lemma (identity "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " enumeration to "
+        },
+        {
+          "k": "m",
+          "v": "n=24"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " totient criterion), and the anchor tuple with the selection and the "
+        },
+        {
+          "k": "c",
+          "v": "CP.MU6.01"
+        },
+        {
+          "k": "t",
+          "v": " consistency control. New ledger row "
+        },
+        {
+          "k": "c",
+          "v": "CP.FIBER.PIN.01"
+        },
+        {
+          "k": "t",
+          "v": "; update note on "
+        },
+        {
+          "k": "c",
+          "v": "CP.CHANNEL.IDENT.01"
+        },
+        {
+          "k": "t",
+          "v": " (R1 decided / R2 selected, markers unchanged)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Housekeeping: "
+            },
+            {
+              "k": "c",
+              "v": "v563_paper2_readouts.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.PAPER2.READOUT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "24"
+            },
+            {
+              "k": "t",
+              "v": " checks) registered."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The Paper-II readout closure was written in the previous session but never entered "
+        },
+        {
+          "k": "c",
+          "v": "run_all"
+        },
+        {
+          "k": "t",
+          "v": "/registry/ledger; registered now with its own ledger row. Paper II ("
+        },
+        {
+          "k": "c",
+          "v": "parity_toeplitz_classification"
+        },
+        {
+          "k": "t",
+          "v": "): the cross-reference list of non-recomputed readings narrows from three to one (the fitted exponents of the rate measurement), four new cross-reference rows, reproducibility section now “nine modules "
+        },
+        {
+          "k": "c",
+          "v": "v555"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v563"
+        },
+        {
+          "k": "t",
+          "v": "”."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Diary entry Teil 178 in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " (counters "
+        },
+        {
+          "k": "m",
+          "v": "178"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4820/4820"
+        },
+        {
+          "k": "t",
+          "v": " checks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": verified layer "
+        },
+        {
+          "k": "m",
+          "v": "27\\to28"
+        },
+        {
+          "k": "t",
+          "v": " modules ("
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v563"
+        },
+        {
+          "k": "t",
+          "v": " subsection), new T178 subsection ("
+        },
+        {
+          "k": "c",
+          "v": "sec:t178"
+        },
+        {
+          "k": "t",
+          "v": "), T177 rest-list pointer updated, probe index T11–T178 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " T178 row, counters and phase-2 range labels; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": ": Target-D keybox (the fiber location now a theorem) and the CP-location winbox (frame door decided, single-sine lemma, anchor selection) citing "
+        },
+        {
+          "k": "c",
+          "v": "v564_cp_fiber_pin.py"
+        },
+        {
+          "k": "t",
+          "v": "; suite "
+        },
+        {
+          "k": "m",
+          "v": "556\\to558"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-29",
     "dateLabel": "2026-07-29 · XXII",
     "heading": [
