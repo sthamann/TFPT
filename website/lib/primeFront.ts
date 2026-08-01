@@ -199,7 +199,8 @@ export type PrimeFrontVerdict =
   | "UNIFORM-C1"
   | "FLIPS-ARE-TRUNCATION"
   | "N3-PINNED"
-  | "CLOCK-SURVIVES-INTERACTING";
+  | "CLOCK-SURVIVES-INTERACTING"
+  | "SEAM-IDENTIFIED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -223,6 +224,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The seam identification — the physical seam IS the conformal seam. The bedrock premise of the cover program had two named residues after v617/v620; the second one — identify the PHYSICAL seam (the 16-Majorana circle of the RP program) with the CONFORMAL seam (the unit circle with μ₄ marks that forces the curve) — closes now at the kernel and dictionary level. The centerpiece is an exact identity: the v519 chiral seam kernel c(d) = (2/N)/sin(πd/N) for odd distances, zero for even, is EXACTLY the antiperiodic (NS) chiral mode sum on the 16-site circle — for all fifteen distances, including the even-distance zeros. The flat-band structure that the whole seam program is built on IS the NS spectrum of a chiral Majorana on the circle (closed form: Σ sin((2j+1)x) = sin²(8x)/sin(x)). The must-fail control: the Ramond (periodic) mode sum does NOT reproduce the kernel — NS is forced, not a convention. The geometry follows: placing the sites at half-integer angles θ_a = (2a+1)π/16, the four mark-bond midpoints land EXACTLY on μ₄ = {1, i, −1, −i} and no site touches a mark — v519's 'marks at bond midpoints' becomes literal geometry. The group dictionary is exact (the clock is z → iz, the RP reflections are diameter reflections), and the v534 straddle law turns out to be geometry: the straddled cuts {7, 15} are exactly the axes that pass THROUGH marks, the avoiding cuts {3, 11} the axes between marks. What remains of the bedrock: the covering-level identification — the μ₃-cover of the seam double carrying the full interacting theory. The gate does not move, but both v617 residues are now processed: one conditional (N = 3 pinned by the compiler's constants), one closed at kernel level.",
+    verdict: "SEAM-IDENTIFIED",
+    summary:
+      "v622_seam_identification.py promoted (QGEO.SEAMID.01, 10 checks; probe seam_identification_probe.py 10/10, SEAM-IDENTIFIED): v519 kernel = discrete NS mode sum exactly (all d, even zeros included; Ramond must-fail); mark-bond midpoints = μ₄ exactly; group dictionary exact (clock = z→iz, cuts = diameters {π/4, π/2, 3π/4, π}); straddle law = axis-through-marks geometry; residue: covering-level identification. GATE.QGEO does not move. Suite 615 → 616 scripts.",
+    badge: "sandbox",
+    script: "seam_identification_probe.py",
+  },
   {
     date: "2026-08-01",
     part: 0,

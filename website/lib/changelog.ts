@@ -43,6 +43,236 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXXV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the seam identification lands ("
+      },
+      {
+        "k": "c",
+        "v": "v622"
+      },
+      {
+        "k": "t",
+        "v": " promoted) — THE PHYSICAL SEAM IS THE CONFORMAL SEAM: the v519 chiral seam kernel is EXACTLY the discrete NS (antiperiodic) chiral mode sum on the 16-site circle, including the even-distance zeros (the flat band IS the NS spectrum; the Ramond sum fails as must-fail control); the four mark-bond midpoints sit EXACTLY at "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " under the site map "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_a=(2a+1)\\pi/16"
+      },
+      {
+        "k": "t",
+        "v": " (no site touches a mark — the v519 “marks at bond midpoints” becomes literal geometry); the group dictionary is exact (clock "
+      },
+      {
+        "k": "m",
+        "v": "=z\\mapsto iz"
+      },
+      {
+        "k": "t",
+        "v": ", RP reflections "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " diameter reflections); and the v534 STRADDLE LAW becomes geometry — straddled cuts "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " exactly the through-mark axes; the second v617 bedrock residue closes at the kernel "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " dictionary level, leaving the covering-level identification"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v622_seam_identification.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.SEAMID.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "10"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 10/10, SEAM-IDENTIFIED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Mode-sum identity for all "
+        },
+        {
+          "k": "m",
+          "v": "d=1..15"
+        },
+        {
+          "k": "t",
+          "v": " with the closed form "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_{j<8}\\sin((2j{+}1)x)=\\sin^2(8x)/\\sin(x)"
+        },
+        {
+          "k": "t",
+          "v": "; Ramond must-fail; mark midpoints "
+        },
+        {
+          "k": "m",
+          "v": "=\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " exact; reflection axes "
+        },
+        {
+          "k": "m",
+          "v": "(k{+}1)\\pi/16"
+        },
+        {
+          "k": "t",
+          "v": " with cuts "
+        },
+        {
+          "k": "m",
+          "v": "\\mapsto\\{\\pi/4,\\pi/2,3\\pi/4,\\pi\\}"
+        },
+        {
+          "k": "t",
+          "v": "; through-mark axes "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the straddled cuts "
+        },
+        {
+          "k": "m",
+          "v": "\\{7,15\\}"
+        },
+        {
+          "k": "t",
+          "v": "; v617's bond reflection "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " cut "
+        },
+        {
+          "k": "m",
+          "v": "k=11"
+        },
+        {
+          "k": "t",
+          "v": " with the v599 "
+        },
+        {
+          "k": "m",
+          "v": "(k,5{-}k)"
+        },
+        {
+          "k": "t",
+          "v": " pattern."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SEAMFORCE.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO.01"
+        },
+        {
+          "k": "t",
+          "v": " (bedrock state after v617/v620/v622; no status move); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "615\\to616"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XXXIV",
     "heading": [
       {
