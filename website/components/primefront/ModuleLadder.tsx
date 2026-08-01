@@ -293,12 +293,24 @@ const MODULES = [
     title: "Unconditional entry certificate · T197 backflow",
     checks: 5,
   },
+  {
+    id: "v595",
+    claim: "PRIME.MAPCLOSE.01",
+    title: "Mapping completion · T198 backflow",
+    checks: 4,
+  },
+  {
+    id: "v596",
+    claim: "PRIME.LOCKPROJ.01",
+    title: "1D lock projection · T199 backflow",
+    checks: 6,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 197;
-const SANDBOX_CHECKS = 4934;
+const SANDBOX_PROBES = 199;
+const SANDBOX_CHECKS = 4944;
 
 export function ModuleLadder() {
   return (

@@ -43,6 +43,1428 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "dictionary round 2 honest negative (the "
+      },
+      {
+        "k": "m",
+        "v": "Q=U+V"
+      },
+      {
+        "k": "t",
+        "v": " double criterion over "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}50"
+      },
+      {
+        "k": "t",
+        "v": " canonical elements: no "
+      },
+      {
+        "k": "m",
+        "v": "Q"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "m",
+        "v": "V"
+      },
+      {
+        "k": "t",
+        "v": " hit; kill not triggered, the flag-adapted search is the designed next session); the real-structure map documented as blocked on the dictionary; and the self-contained equidistribution problem statement added to "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "c",
+        "v": "sec:theory-open"
+      },
+      {
+        "k": "t",
+        "v": ") — the v596 identity family posed TFPT-free for external consumption"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "No module."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Exploration and editorial only: ledger untouched except mirrors; the one dictionary entry stays "
+        },
+        {
+          "k": "m",
+          "v": "U = G_2"
+        },
+        {
+          "k": "t",
+          "v": " (2026-08-01 XI); the open problem now has a publication-grade statement (explicit couplings "
+        },
+        {
+          "k": "m",
+          "v": "c_\\gamma"
+        },
+        {
+          "k": "t",
+          "v": ", closed constant "
+        },
+        {
+          "k": "m",
+          "v": "K(\\alpha,D)"
+        },
+        {
+          "k": "t",
+          "v": ", the observed collective cancellation, and the uniformity question named as the open content)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the dictionary's first entry: U IS LOCATED — the winding operator appears as a cusp Gram on the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_3"
+      },
+      {
+        "k": "t",
+        "v": "-cover; exploration round, documented as a note on "
+      },
+      {
+        "k": "c",
+        "v": "QGEO.COVER.01"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The hit."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The cusp Gram "
+        },
+        {
+          "k": "m",
+          "v": "(1-T_2)(1-T_2)^\\dagger"
+        },
+        {
+          "k": "t",
+          "v": " has characteristic polynomial "
+        },
+        {
+          "k": "m",
+          "v": "x^2(x-3)=\\operatorname{char}(U)"
+        },
+        {
+          "k": "t",
+          "v": " exactly — the rank-one winding operator (trace "
+        },
+        {
+          "k": "m",
+          "v": "3=N_{\\mathrm{fam}}"
+        },
+        {
+          "k": "t",
+          "v": ") as a Gram of a "
+        },
+        {
+          "k": "m",
+          "v": "D_4"
+        },
+        {
+          "k": "t",
+          "v": "-conjugate cusp twist: the fifth fingerprint. Additional exact structure: opposite-twist products "
+        },
+        {
+          "k": "m",
+          "v": "(1-T_1)(1-T_3)"
+        },
+        {
+          "k": "t",
+          "v": " are nilpotent ("
+        },
+        {
+          "k": "m",
+          "v": "x^3"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "G_1+G_3"
+        },
+        {
+          "k": "t",
+          "v": " has spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,1,3\\}"
+        },
+        {
+          "k": "t",
+          "v": ". Honest negative: "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "H"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " not located in the scanned canonical ranges (products/sums/"
+        },
+        {
+          "k": "m",
+          "v": "\\omega"
+        },
+        {
+          "k": "t",
+          "v": "-twists of length "
+        },
+        {
+          "k": "m",
+          "v": "\\le2"
+        },
+        {
+          "k": "t",
+          "v": ") — the "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": "-dictionary likely requires the parabolic flag (the seam-cusp filtration); named next step; kill criterion unchanged."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger note on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.COVER.01"
+        },
+        {
+          "k": "t",
+          "v": "; diary; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · X",
+    "heading": [
+      {
+        "k": "t",
+        "v": "Strategy I/II executed: the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_3"
+      },
+      {
+        "k": "t",
+        "v": "-cover "
+      },
+      {
+        "k": "m",
+        "v": "y^3=x^4-1"
+      },
+      {
+        "k": "t",
+        "v": " hits FOUR compiler fingerprints ("
+      },
+      {
+        "k": "c",
+        "v": "v597"
+      },
+      {
+        "k": "t",
+        "v": " promoted) — rank-3 Eisenstein "
+      },
+      {
+        "k": "m",
+        "v": "H_1"
+      },
+      {
+        "k": "t",
+        "v": ", projective "
+      },
+      {
+        "k": "m",
+        "v": "D_4"
+      },
+      {
+        "k": "t",
+        "v": " via the deck, cusp-class group "
+      },
+      {
+        "k": "m",
+        "v": "(\\mathbb{Z}/3)^4"
+      },
+      {
+        "k": "t",
+        "v": " of order "
+      },
+      {
+        "k": "m",
+        "v": "81"
+      },
+      {
+        "k": "t",
+        "v": ", and the unique invariant hermitian form of LORENTZ signature "
+      },
+      {
+        "k": "m",
+        "v": "(1,2)"
+      },
+      {
+        "k": "t",
+        "v": " matching Paper II's polarization: the first geometric candidate that could close GATE.QGEO and the RP slot with one construction"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v597_mu4_cover_model.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.COVER.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 6/6, FINGERPRINTS-HIT)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Genus "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": ", five cusps ("
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4+\\infty"
+        },
+        {
+          "k": "t",
+          "v": "), Chevalley–Weil "
+        },
+        {
+          "k": "m",
+          "v": "H^{1,0}=(1,2)"
+        },
+        {
+          "k": "t",
+          "v": "; Burau at "
+        },
+        {
+          "k": "m",
+          "v": "t=\\omega"
+        },
+        {
+          "k": "t",
+          "v": " with verified braid relations, "
+        },
+        {
+          "k": "m",
+          "v": "r^4=\\omega\\cdot1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "r^{12}=1"
+        },
+        {
+          "k": "t",
+          "v": "; cusp classes "
+        },
+        {
+          "k": "m",
+          "v": "(\\mathbb{Z}/3)^5/\\text{one relation}=(\\mathbb{Z}/3)^4"
+        },
+        {
+          "k": "t",
+          "v": ", order "
+        },
+        {
+          "k": "m",
+          "v": "81=3^4"
+        },
+        {
+          "k": "t",
+          "v": " with the per-mark "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}/3"
+        },
+        {
+          "k": "t",
+          "v": " mechanism ("
+        },
+        {
+          "k": "m",
+          "v": "\\det_{\\mathbb{Z}}(1-\\text{deck})=27"
+        },
+        {
+          "k": "t",
+          "v": " complementarily); invariant form unique up to scale, eigenvalues "
+        },
+        {
+          "k": "m",
+          "v": "\\{-2, 2{-}2\\sqrt2,\n2{+}2\\sqrt2\\}"
+        },
+        {
+          "k": "t",
+          "v": ", signature "
+        },
+        {
+          "k": "m",
+          "v": "(1,2)"
+        },
+        {
+          "k": "t",
+          "v": "; single-cusp Gram spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,0,2\\}"
+        },
+        {
+          "k": "t",
+          "v": " all-integer. OPEN and named: the "
+        },
+        {
+          "k": "m",
+          "v": "Q/V"
+        },
+        {
+          "k": "t",
+          "v": " operator dictionary, the real-structure/RP map to the v572 Gram data; kill criteria live, not triggered; GATE.QGEO does not move."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.INVOL.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "DIAMOND.PARA.SELFCODE.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " (candidate paragraphs), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "590\\to591"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · IX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the C-D-E round: the 1D lock projection ("
+      },
+      {
+        "k": "c",
+        "v": "v596"
+      },
+      {
+        "k": "t",
+        "v": " promoted, T199 — the near-identity along the closed direction, median "
+      },
+      {
+        "k": "m",
+        "v": "7.7\\times10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": ", coupling spectrum collective); the v590 involution group formalized in Lean with its Klein-four closure "
+      },
+      {
+        "k": "m",
+        "v": "A\\cdot B=S_0"
+      },
+      {
+        "k": "t",
+        "v": "; and the big-picture strategy survey (the open core funnels into GATE.QGEO "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the RP slot; two new geometric strategies preregistered)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v596_lock_projection.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.LOCKPROJ.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; T199 "
+            },
+            {
+              "k": "m",
+              "v": "6/6"
+            },
+            {
+              "k": "t",
+              "v": ", NEAR-IDENTITY-1D)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Along the closed v591 direction (parameter-free): "
+        },
+        {
+          "k": "m",
+          "v": "|q_{\\mathrm{real}}/q_{\\mathrm{model}}|"
+        },
+        {
+          "k": "t",
+          "v": " median "
+        },
+        {
+          "k": "m",
+          "v": "7.7\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": ", decay "
+        },
+        {
+          "k": "m",
+          "v": "h^{-1.01}"
+        },
+        {
+          "k": "t",
+          "v": "; the coupling spectrum is collective (max single-zero share "
+        },
+        {
+          "k": "m",
+          "v": "5.9\\%"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "N_{50}=56"
+        },
+        {
+          "k": "t",
+          "v": ", heavy zeros "
+        },
+        {
+          "k": "m",
+          "v": "14.1/25.0/30.4/40.9"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "400"
+        },
+        {
+          "k": "t",
+          "v": "-zero truncation fails (v589 plateau); scramble breaks by six orders — the arithmetic content of Problem 7.1 is ONE explicit identity family, equidistribution-flavored."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "A"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "B"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "klein_closure"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "A\\cdot B=S_0"
+        },
+        {
+          "k": "t",
+          "v": "), involutions and "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": "-commutation added to "
+        },
+        {
+          "k": "c",
+          "v": "ParityWeightLaws.lean"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green ("
+        },
+        {
+          "k": "m",
+          "v": "3374"
+        },
+        {
+          "k": "t",
+          "v": " jobs)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The big-picture survey (E)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The gate/contract census shows the open core is SMALL: "
+        },
+        {
+          "k": "c",
+          "v": "GATE.METRIC.19"
+        },
+        {
+          "k": "t",
+          "v": " funnels the whole "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{net}}"
+        },
+        {
+          "k": "t",
+          "v": " line into "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " standard AQFT assembly; "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": " itself is narrowed (v574/v590) to the parabolic "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " realization; the RP slot is the one dynamical open; absolute scales and external interfaces are typed contracts. Two new strategies preregistered in the diary: (i) the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-cover homology model ("
+        },
+        {
+          "k": "m",
+          "v": "H_1"
+        },
+        {
+          "k": "t",
+          "v": " of the cyclic covers "
+        },
+        {
+          "k": "m",
+          "v": "y^4{=}x^4{-}1"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "y^3{=}x^4{-}1"
+        },
+        {
+          "k": "t",
+          "v": " as "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}[i]"
+        },
+        {
+          "k": "t",
+          "v": "- resp. "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}[\\omega]"
+        },
+        {
+          "k": "t",
+          "v": "-modules of rank "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " — the compiler "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " as a canonical homology operator; testable by finite computation); (ii) RP positivity as HODGE positivity (the seam kernel as the polarization form of the cover's Hodge structure — the Riemann bilinear relations would make positivity a theorem; testable against the v572 Gram data via exact Beta-function periods)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "48\\to49"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v596"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t199"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "199"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4944"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“thirty modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "589\\to590"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · VIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the 0-1-2-3-4-5 round: repository pushed (v576–v594, 111 files); the residual bookkeeping executed ("
+      },
+      {
+        "k": "c",
+        "v": "v595"
+      },
+      {
+        "k": "t",
+        "v": " promoted, T198: the v593 residual was the "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " MAPPING — identity-level closed forms "
+      },
+      {
+        "k": "m",
+        "v": "1.00000"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "1.00017"
+      },
+      {
+        "k": "t",
+        "v": ", honest amendment of the v593 attribution); derivation sketches added to the theorem section; the determinant law formalized in Lean ("
+      },
+      {
+        "k": "c",
+        "v": "det_S_closed"
+      },
+      {
+        "k": "t",
+        "v": ", build green)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v595_mapping_completion.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.MAPCLOSE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "4"
+            },
+            {
+              "k": "t",
+              "v": " checks; T198 "
+            },
+            {
+              "k": "m",
+              "v": "4/4"
+            },
+            {
+              "k": "t",
+              "v": ", MAPPING-CLOSES)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact dictionary is "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma=d/N"
+        },
+        {
+          "k": "t",
+          "v": ", hence "
+        },
+        {
+          "k": "m",
+          "v": "a_{\\mathrm{eff}}=ND/2"
+        },
+        {
+          "k": "t",
+          "v": " with limits "
+        },
+        {
+          "k": "m",
+          "v": "[u_0/(ND),2\\alpha/(ND)]"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "ND=2\\alpha+O(D)"
+        },
+        {
+          "k": "t",
+          "v": " — why the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-form carried a first-order residual); entries AND det match at "
+        },
+        {
+          "k": "m",
+          "v": "1.00000"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.00017"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "1.00000"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "h=1445"
+        },
+        {
+          "k": "t",
+          "v": "); kernel piece "
+        },
+        {
+          "k": "m",
+          "v": "9\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the genuine "
+        },
+        {
+          "k": "m",
+          "v": "O(1/N^2)"
+        },
+        {
+          "k": "t",
+          "v": "); the v593 numbers stand, its residual attribution is superseded (note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CUTOFF.01"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Manuscript-grade theory section."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "sec:theory-proofs"
+        },
+        {
+          "k": "t",
+          "v": " added to "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": derivation sketches for all seven theorems (Dirichlet sums and branch merge; geometric ladders; factorization/separability; the direction and determinant laws; the exact dictionary; partial summation "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Büthe)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "det_S_closed"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "det_denominators_factor"
+        },
+        {
+          "k": "t",
+          "v": " added to "
+        },
+        {
+          "k": "c",
+          "v": "ParityWeightLaws.lean"
+        },
+        {
+          "k": "t",
+          "v": " (the closed determinant law as a field identity; the "
+        },
+        {
+          "k": "m",
+          "v": "E^2"
+        },
+        {
+          "k": "t",
+          "v": " cancellation structural); full "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green ("
+        },
+        {
+          "k": "m",
+          "v": "3374"
+        },
+        {
+          "k": "t",
+          "v": " jobs)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Repository."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Commit "
+        },
+        {
+          "k": "c",
+          "v": "0701e1e"
+        },
+        {
+          "k": "t",
+          "v": " pushed (v576–v594, "
+        },
+        {
+          "k": "m",
+          "v": "111"
+        },
+        {
+          "k": "t",
+          "v": " files, "
+        },
+        {
+          "k": "m",
+          "v": "+19133"
+        },
+        {
+          "k": "t",
+          "v": " lines); the remaining hard opens (determinant-level zero theorem; OS/RP; the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " geometric model) stay documented."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + amendment note; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "47\\to48"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v595"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t198"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "198"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4938"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“twenty-nine modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "588\\to589"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · VII",
     "heading": [
       {

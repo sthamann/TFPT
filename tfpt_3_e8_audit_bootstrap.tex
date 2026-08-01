@@ -1895,6 +1895,51 @@ determinant, direction law, sheet involution).  Machine-checked:
 \mE\ (closed forms exact; one cited external bound; no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The mapping completion
+(\texttt{PRIME.MAPCLOSE.01}).}
+The residual bookkeeping lands ($4$ checks, ${\sim}4$\,s): the v593
+residual was the $\sigma$ mapping --- with the exact dictionary
+($a_{\mathrm{eff}}=ND/2$, limits $[u_0/(ND),2\alpha/(ND)]$) the closed
+entries and determinant match the deterministic model at the identity
+level ($1.00000$--$1.00017$; kernel piece $9\times10^{-6}$); honest
+amendment of the v593 attribution (first-order in $D$ via the mapping,
+not $O(1/N^2)$ kernel terms); the density layer of Problem~7.1 is a
+finite set of exact elementary evaluations, and the determinant law is
+formalized in Lean (\texttt{det\_S\_closed}).  Machine-checked:
+\veri{v595\_mapping\_completion.py}.
+\mE\ (closed forms exact; declared windows; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The 1D lock projection
+(\texttt{PRIME.LOCKPROJ.01}).}
+The arithmetic layer in one dimension ($6$ checks, ${\sim}35$\,s):
+along the closed v591 direction the zero-side functional cancels the
+closed density value in a near-identity (median
+$|q_{\mathrm{real}}/q_{\mathrm{model}}|=7.7\times10^{-4}$, decay
+$h^{-1.01}$; scramble breaks by $10^6$); the coupling spectrum is
+collective (max share $5.9\%$, $N_{50}=56$) --- the arithmetic content
+of Problem~7.1 is one explicit identity family, equidistribution-
+flavored; no bound claimed, no RH statement. Machine-checked:
+\veri{v596\_lock\_projection.py}.
+\mE\ (closed direction parameter-free; declared floor; no marker
+moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The $\mu_3$-cover candidate
+(\texttt{QGEO.COVER.01}).}
+Strategy I/II, first executed step ($6$ checks, $<1$\,s): the cover
+$y^3=x^4-1$ hits four compiler fingerprints --- rank-3 Eisenstein
+$H_1$ (Chevalley--Weil $(1,2)$), projective $D_4$ via the deck
+($r^4=\omega$, Burau at $t=\omega$ with verified braid relations),
+cusp-class group $(\mathbb{Z}/3)^4$ of order $81$ (the saturation
+index with the per-mark mechanism), and the unique invariant hermitian
+form of LORENTZ signature $(1,2)$ (matching Paper~II's rank-3
+polarization --- Strategy II's first prediction).  The $Q/V$
+dictionary and the RP map are the named next steps; the gate does not
+move. Machine-checked: \veri{v597\_mu4\_cover\_model.py}.
+\mE\ (exact sympy; convention validated; no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

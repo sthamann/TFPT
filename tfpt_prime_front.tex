@@ -100,9 +100,10 @@ two-scale kernel signs, the occupation map, the transport census, the density-do
 reduction, the prime-free closed form, the two-layer locking split, the density-fixed
 locking direction, the exact diagonal weight formula, the closed deterministic defect, the
 zero-comb identification, the rank-one pole term, the continuum determinant law, the cutoff
-completion and the unconditional entry certificate. Everything beyond
-those forty-seven is \emph{sandbox}: an exploratory program, run as
-$197$ preregistered probes with $4934$ machine checks, which localized the residual object
+completion, the unconditional entry certificate, the mapping completion and the 1D lock
+projection. Everything beyond
+those forty-nine is \emph{sandbox}: an exploratory program, run as
+$199$ preregistered probes with $4944$ machine checks, which localized the residual object
 (the reverse-flow promotions --- the \vref{v379} hardening of T133, the CP channel
 identities \vref{v561} of T177 and the frame-door decision \vref{v564} of T178 --- live on
 the physics side and are counted there). That
@@ -257,7 +258,7 @@ here (the blue \texttt{[\,verification/\dots\,]} tag). Everything marked \sbx\ i
 no ledger row, no marker, and no authority. Section~\ref{sec:verified} is the only section that is
 entirely \ver.
 \item \textbf{Status markers are quoted, never upgraded.} The markers \mE\ \mC\ \mO\ \mX\ shown in
-Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v563}, \vref{v569}--\vref{v570}, \vref{v573} and \vref{v576}--\vref{v594}. This
+Section~\ref{sec:verified} are read verbatim from the ledger rows of \vref{v535}--\vref{v563}, \vref{v569}--\vref{v570}, \vref{v573} and \vref{v576}--\vref{v596}. This
 document introduces no new markers and moves none.
 \item \textbf{Fits are declared as fits.} Every scaling law, slope, exponent and extrapolation quoted
 from the sandbox is a fit to finitely many measured windows and is labelled as such at the point of
@@ -282,7 +283,7 @@ end of the program; Section~\ref{sec:verified} is the verified layer; Sections~\
 \ref{sec:handover} and \ref{sec:certification} are the sandbox program in three acts;
 Section~\ref{sec:kills} is the kill list; Section~\ref{sec:balance} is the series balance (cascade,
 certification degree, the honest RH distance); Section~\ref{sec:phase2} is the opening arc of the
-second phase (T126--T197: the seam architecture, the two inequalities dissected, the four-point
+second phase (T126--T199: the seam architecture, the two inequalities dissected, the four-point
 list worked cheapest first, then the $\kappa$ law tested and broken productively, then the
 graded-to-uniform bridge established as an identity while the curvature bound is reduced to one
 exponent, then the self-supply loop built one number short of closed --- the secular sandwich and
@@ -637,7 +638,7 @@ family, not from the seam.
 \begin{gapboxnb}[What this section is]
 A \textbf{framework interpretation}, not a result. It says how the pieces fit together and why the line
 was pursued for a hundred parts. Every factual statement it uses is either classical (and named as
-such), one of the forty-seven modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
+such), one of the forty-nine modules of Section~\ref{sec:verified}, or a sandbox probe with its part number.
 Nothing here is an argument about the Riemann Hypothesis, nothing here is used later as a premise, and
 the picture itself carries no status marker.
 \end{gapboxnb}
@@ -778,13 +779,13 @@ an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
 
 % =====================================================================
-\section{The verified layer: forty-seven modules}\label{sec:verified}
+\section{The verified layer: forty-nine modules}\label{sec:verified}
 % =====================================================================
 \noindent This section is entirely \ver. Each subsection states the claim as the ledger states it,
 cites the module, and quotes the ledger's own status markers. Nothing here depends on
 Sections~\ref{sec:i5}--\ref{sec:certification}.
 
-\begin{keybox}[The forty-seven modules and their ledger markers]
+\begin{keybox}[The forty-nine modules and their ledger markers]
 \centering\small
 \begin{tabularx}{\linewidth}{@{}l l Y l@{}}
 \toprule
@@ -837,6 +838,8 @@ Sections~\ref{sec:i5}--\ref{sec:certification}.
 \vref{v592} & \texttt{PRIME.DETLAW.01} & continuum determinant law (the dominance growth derived) & \mE\\
 \vref{v593} & \texttt{PRIME.CUTOFF.01} & cutoff completion (the density layer closed end-to-end) & \mE\\
 \vref{v594} & \texttt{PRIME.UNCONDCERT.01} & unconditional entry certificate (via B\"uthe 2018) & \mE\\
+\vref{v595} & \texttt{PRIME.MAPCLOSE.01} & mapping completion (identity-level closed forms) & \mE\\
+\vref{v596} & \texttt{PRIME.LOCKPROJ.01} & 1D lock projection (the near-identity along the closed direction) & \mE\\
 \bottomrule
 \end{tabularx}
 \markerkey
@@ -3042,6 +3045,34 @@ the certificate $|S^{\mathrm{real}}-S^{\mathrm{model}}|\le
 window --- the entry-level arithmetic layer needs no conjecture and no
 runtime zero input.  The determinant-level lock stays with the
 zero-oscillation theorem.
+
+\subsection{The mapping completion (\texorpdfstring{\vref{v595}}{v595})}\label{sec:v595}
+Identity-level closed forms
+\veri{v595\_mapping\_completion.py} ($4$ checks, ${\sim}4$\,s).
+The \vref{v593} residual was the $\sigma$ \emph{mapping}: the lag
+variable is $\sigma=d/N$, so the continuum cell sum carries
+$a_{\mathrm{eff}}=ND/2$ with limits $[u_0/(ND),\,2\alpha/(ND)]$
+($ND=2\alpha+O(D)$, which is why the $\alpha$-form carried a
+first-order residual).  With the exact dictionary the closed entries
+\emph{and} determinant match the model to $1.00000$--$1.00017$ across
+the ladder ($1.00000$ at $h=1445$); the kernel correction enters at
+$9\times10^{-6}$ (the genuine $O(1/N^2)$ piece).  Honest amendment:
+\vref{v593}'s attribution of its residual to kernel corrections is
+superseded --- the numbers stand, the interpretation was wrong.
+
+\subsection{The 1D lock projection (\texorpdfstring{\vref{v596}}{v596})}\label{sec:v596}
+The near-identity along the closed direction
+\veri{v596\_lock\_projection.py} ($6$ checks, ${\sim}35$\,s).
+Projecting the defect onto the \emph{closed} \vref{v591} direction
+(parameter-free), the zero-side functional cancels the closed density
+value in a near-identity: $|q_{\mathrm{real}}/q_{\mathrm{model}}|$ has
+median $7.7\times10^{-4}$, decaying ${\sim}h^{-1.01}$; the coupling
+spectrum is \emph{collective} (max single-zero share $5.9\%$, $56$
+zeros for half the mass) --- equidistribution-flavored, killing
+single-resonance explanations; scrambled combs break the identity by
+six orders of magnitude.  After the closed density layer, the
+arithmetic content of Problem~7.1 is \emph{one approximate identity
+per window} with explicit couplings.
 
 % =====================================================================
 \section{The localization program (sandbox)}\label{sec:i5}
@@ -5383,7 +5414,7 @@ the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared 
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
 
 % =====================================================================
-\section{Phase 2: toward uniformity (T126--T197)}\label{sec:phase2}
+\section{Phase 2: toward uniformity (T126--T199)}\label{sec:phase2}
 % =====================================================================
 \noindent The series closed at T125 with a mandate fulfilled and a distance named: what separates
 V-final from any infinite statement is \emph{uniformity in the zone index}, not size. The first
@@ -10681,8 +10712,8 @@ and the file's real contribution to it is that the phase response
 there is now closed in form. The exact cores are load-bearing:
 \veri{v562\_dense\_limit\_identities.py} (\texttt{PRIME.DENSE.LIMIT.01};
 Section~\ref{sec:v562}). The work continues in the classification
-papers (Paper II) and the backflow lines (T177--T197,
-Sections~\ref{sec:t177}--\ref{sec:t197}).
+papers (Paper II) and the backflow lines (T177--T199,
+Sections~\ref{sec:t177}--\ref{sec:t199}).
 \end{keybox}
 
 \subsection{The reverse flow, resumed: the CP mirror narrows four ledger rows (T177)}\label{sec:t177}
@@ -10765,7 +10796,7 @@ vectors become collinear at the demanded rate, now stated frame-free,
 with the true-zero/power-law/plateau reading of the dense limit
 explicitly open and no finite sieve able to decide it --- and the
 work continues in the classification papers (Paper II) and the
-backflow lines (T177--T197), not in further probes of this instrument. The
+backflow lines (T177--T199), not in further probes of this instrument. The
 measurement surface is certified, the quantifier is open, R1 is
 classified; the capstone that certifies exactly this map is
 load-bearing \veri{v559\_phase2\_capstone.py}, the frame/deficit
@@ -11104,6 +11135,30 @@ The exact cores are load-bearing:
 (Sections~\ref{sec:v593}--\ref{sec:v594}).
 \label{sec:t197}
 
+\subsection{The dictionary closes the books (T198)}\label{sec:t198}
+The residual bookkeeping lands: T198
+(\texttt{mapping\_completion\_probe.py}, contract
+\texttt{PRIME.MAPCLOSE}, $4/4$, verdict \textsc{mapping-closes}). The
+v593 residual was the $\sigma$ mapping; with $a_{\mathrm{eff}}=ND/2$
+the closed forms match the deterministic model at the identity level
+($1.00000$--$1.00017$), the kernel piece sits at $9\times10^{-6}$, and
+the density layer of Problem~7.1 is a finite set of exact elementary
+evaluations. The determinant law is formalized in Lean
+(\texttt{det\_S\_closed}). The exact core is load-bearing:
+\veri{v595\_mapping\_completion.py} (Section~\ref{sec:v595}).
+
+\subsection{The arithmetic layer becomes one identity family (T199)}\label{sec:t199}
+The 1D reduction lands: T199 (\texttt{lock\_projection\_probe.py},
+contract \texttt{PRIME.LOCKPROJ}, $6/6$, verdict
+\textsc{near-identity-1d}). Along the closed \vref{v591} direction the
+zero functional cancels the closed density value to a median
+$7.7\times10^{-4}$ (decay $h^{-1.01}$), collectively across the zeros
+--- the arithmetic content of Problem~7.1 is one explicit identity
+family, equidistribution-flavored. The involution group of \vref{v590}
+is additionally formalized in Lean with its Klein-four closure
+$A\cdot B=S_0$. The exact core is load-bearing:
+\veri{v596\_lock\_projection.py} (Section~\ref{sec:v596}).
+
 % =====================================================================
 \section{The closed-form theory of the parity read block: statements}\label{sec:theory}
 % =====================================================================
@@ -11163,12 +11218,97 @@ with large margin --- the first unconditional statement of the program.
 The determinant-level lock stays with the zero-oscillation theorem.
 \end{keybox}
 
+\subsection{Derivation sketches}\label{sec:theory-proofs}
+
+\emph{Theorem 1.} For the sine mode $v_j=\tfrac{2}{\sqrt N}\sin(\omega_k(j{+}1))$
+the autocorrelation and self-convolution are Dirichlet sums:
+$\mathrm{ac}_k(d)=\tfrac{2}{N}\big[(m{-}d)\cos(\omega_kd)
++\tfrac{\sin(\omega_k(d{+}1))+\sin(\omega_kd)}{2\sin\omega_k}\big]$ and the two
+convolution branches close analogously (all machine-exact,
+\vref{v587}~E2.1).  Substituting into the corpus assembly
+$W(d)=2\,\mathrm{ac}(d)-\mathrm{cv}(2m{-}1{-}d)$ and using
+$\omega_k(2m{+}1)=2\pi k$, the two branches produce the \emph{same}
+expression --- the cancellation is the linear-in-trig-values field identity
+formalized as \texttt{branch\_merge} in Lean.  At $d=N{-}1{-}s$ both terms are
+$O(s)$, which is the exact edge suppression.
+
+\emph{Theorem 2.} The cell masses $2(e^{(d+1)D/2}-e^{dD/2})$ are geometric in
+$e^{dD/2}$, and the Weil kernel is the geometric ladder
+$f(w)=e^{-w/2}/(1-e^{-2w})=\sum_{n\ge0}e^{-(2n+1/2)w}$; hence both sides of
+the defect are values of the one finite geometric-trig sum
+$G_{ij}(\beta)$, evaluated in closed form via
+$\sum_{d=1}^{L-1}z^d$ and $\sum_{d=1}^{L-1}dz^d$ with
+$z=e^{-\beta+i\omega_k}$.
+
+\emph{Theorems 3--5.} The Laplace integrals
+$2a\int e^{a\sigma}g_{ij}(\sigma)\,d\sigma$ are elementary; their
+denominators factor as $D_{11}=(a^2{+}4\pi^2)^2$,
+$D_{22}=(a^2{+}16\pi^2)^2$, $D_{12}=(a^2{+}4\pi^2)(a^2{+}16\pi^2)$, so
+$D_{11}D_{22}=D_{12}^2$ and the exponential parts are exactly separable
+($S^{\mathrm{pole}}=-32\pi^2ae^a\,gg^T$, $g_k=k/(a^2{+}4\pi^2k^2)$;
+Lean: \texttt{pole\_rank\_one}).  The null direction of $gg^T$ gives the
+direction law with $-\tfrac12$ limit (Lean: \texttt{direction\_law},
+\texttt{direction\_law\_approach}); the determinant follows by expanding
+$S_{11}S_{22}-S_{12}^2$ --- the $e^{2a}$ terms cancel by separability and the
+$e^{a}$ coefficient is
+$128\pi^2a^3(5a^2{+}32\pi^2)/D_{12}^2\sim640\pi^2/a^3$ (Lean:
+\texttt{det\_S\_closed}).
+
+\emph{Theorem 6 and the exact dictionary.} The lag variable is
+$\sigma=d/N$, so the continuum form of the cell sum carries
+$a_{\mathrm{eff}}=ND/2$ and the limits $[u_0/(ND),\,2\alpha/(ND)]$; since
+$ND=2\alpha+O(D)$ by the window construction, the naive $\alpha$-form
+carries a first-order-in-$D$ residual --- which is exactly the
+\vref{v593} gap, closed at the identity level ($1.00000$--$1.00017$) by
+\vref{v595}.
+
+\emph{Theorem 7.} Partial summation gives
+$\mathrm{mass}(u)=4\sqrt x-2+2E(x)/\sqrt x+\int_1^xE(t)t^{-3/2}dt$ with
+$E=\psi-t$ (machine-verified); inserting the published bound
+$|E|<0.94\sqrt t$ ($t>11$) and the exact small-range integral yields the
+unconditional sup, and integration by parts against the read profiles
+gives the certificate (\vref{v594}).
+
+\subsection{The remaining arithmetic statement, self-contained}\label{sec:theory-open}
+
+For external consumption, the one remaining arithmetic statement of the
+program can be posed without any TFPT context.  Fix a window (an
+admissible pair $(\alpha, D)$ with $M = \lceil 2\alpha/D\rceil$ even,
+$N = M+1$ odd, $h = M/2$) and let $W_{ij}(d)$ be the closed parity
+weights of Theorem~1 and $X_v(u)$ the read profile projected onto the
+closed direction of Theorem~4.  Define, for each nontrivial zeta zero
+$\tfrac12 + i\gamma$, the explicit coupling
+\[
+c_\gamma \;=\; -2\int_{u_0}^{2\alpha}
+\frac{\sin(\gamma u)}{\gamma}\, dX_v(u)
+\qquad(u_0 = 2\log(-C_\infty/4),\; C_\infty = -2(\zeta'/\zeta)(\tfrac12)),
+\]
+and let $K(\alpha, D)$ be the closed density value of the same
+projected form (an elementary function by Theorems~3--6).  The
+machine-verified observation (\vref{v596}) is
+\[
+\sum_{\gamma>0} c_\gamma \;=\; -\,K(\alpha, D)\,
+\bigl(1 + O(h^{-1})\bigr)
+\]
+across the declared ladder, with median relative deviation
+$7.7\times10^{-4}$, and with the sum \emph{collective} (no single zero
+contributes more than $6\%$; scrambling the underlying prime comb
+breaks the identity by six orders of magnitude).  \textbf{Open
+problem (equidistribution form).} Prove, for the window family, that
+the zero couplings satisfy this cancellation law with a uniform rate
+--- i.e.\ bound $\bigl|\sum_\gamma c_\gamma + K\bigr|/|K|$ by
+$C h^{-1}$ uniformly.  No RH-type input is expected to be necessary
+for fixed windows (the couplings decay in $\gamma$ and the identity is
+an explicit-formula statement); the \emph{uniformity} in the window is
+the open content.  Nothing in this paper or its companions claims
+progress on any conjecture beyond this statement.
+
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
 \begin{keybox}[The three-way split, stated once]
-\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the forty-seven ledger modules
+\textbf{Certified} (exact identities or closed-form bounds, machine-checked): the forty-nine ledger modules
 of Section~\ref{sec:verified}; and, in the sandbox arc, the bare bound $b_0$ in closed form, the parity
 superselection $JQJ=Q$, $JB=-BR$, the pole splitting
 $ab^{\mathsf T}+ba^{\mathsf T}=ss^{\mathsf T}-tt^{\mathsf T}$, the channel inertia, the avoidance law
@@ -11647,20 +11787,20 @@ document.
 
 % =====================================================================
 \appendix
-\section{Probe index, diary parts T11--T197}\label{app:index}
+\section{Probe index, diary parts T11--T199}\label{app:index}
 % =====================================================================
 \noindent Every row is one exploratory probe in \texttt{experiments/tfpt-discovery/}; the file column
 omits the common suffix \texttt{\_probe.py}. ``Checks'' is the probe's own assertion count, all green.
 Verdict strings are the diary's preregistered verdict enums. Rows marked ``$\to$ \vref{vN}'' were later
 consolidated into the corresponding load-bearing module; the promotion, not the probe, is the
-load-bearing artefact. The index covers the $187$ parts T11--T197 that the current diary file
-records ($188$ runs --- T104 was a double run with two independent arms --- and $4742$ green checks);
+load-bearing artefact. The index covers the $189$ parts T11--T199 that the current diary file
+records ($190$ runs --- T104 was a double run with two independent arms --- and $4752$ green checks);
 the ten earlier probes T1--T10 predate that file and are not indexed here. Series totals as recorded
 by the diary at T125, the final part of the series: \textbf{$125$ probes, $3139/3139$ sandbox checks},
-plus \vref{v535}--\vref{v564}, \vref{v569}--\vref{v570}, \vref{v573} and \vref{v576}--\vref{v594} promoted; with T126--T197 (T176, the endgame measurement, landed after
-the reverse-flow part T177 and is numbered by contract; T178--T197 are the post-closure backflow parts), the
-first seventy-two landed parts of the second phase, the running totals are \textbf{$197$ probes and
-$4934/4934$ checks}.
+plus \vref{v535}--\vref{v564}, \vref{v569}--\vref{v570}, \vref{v573} and \vref{v576}--\vref{v596} promoted; with T126--T199 (T176, the endgame measurement, landed after
+the reverse-flow part T177 and is numbered by contract; T178--T199 are the post-closure backflow parts), the
+first seventy-four landed parts of the second phase, the running totals are \textbf{$199$ probes and
+$4944/4944$ checks}.
 
 {\footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -11863,6 +12003,8 @@ T194 & \texttt{\scriptsize pole\_rank\_\allowbreak one} & \textbf{the rank-one p
 T195 & \texttt{\scriptsize continuum\_det\_\allowbreak law} & \textbf{the continuum determinant law} (post-closure backflow part) --- $\det S(a)$ closed, $e^{2a}$ coefficient identically zero, exact leading law $640\pi^2e^a/a^3$ (one full order suppressed); the real dominance tracks the closed formula at correlation $0.9985$ (the v570 growth derived); finite-$N$ gap typed ($0.19\to0.50$); entry-level arithmetic certificate $\sup|\mathrm{Osc}|\times\mathrm{TV}$ with margin $47.6\times$ $\to$ \vref{v592} & DET-LAW-DERIVED & 6/6\\
 T196 & \texttt{\scriptsize cutoff\_\allowbreak completion} & \textbf{the cutoff completes the closed entries} (post-closure backflow part) --- the v592 finite-$N$ det gap ($0.19$--$0.50$) was the integration cutoff; $\sigma_0$-corrected closed integrals match entries to $0.7$--$1\%$ and det to $0.2$--$1\%$; residual $O(1/N^2)$, shrinking --- THE DENSITY LAYER IS CLOSED END-TO-END $\to$ \vref{v593} & CUTOFF-CLOSES & 4/4\\
 T197 & \texttt{\scriptsize unconditional\_\allowbreak cert} & \textbf{the first unconditional statement} (post-closure backflow part) --- partial summation (verified) $+$ B\"uthe 2018 ($|\psi(x)-x|<0.94\sqrt{x}$ unconditional to $10^{19}$) give $\sup|\mathrm{Osc}|\le17.4$ on the surface (measured $1.474$); the entry certificate holds with margin $565\times$; the determinant level stays with the zero-oscillation theorem $\to$ \vref{v594} & UNCONDITIONAL-ENTRY-CERT & 5/5\\
+T198 & \texttt{\scriptsize mapping\_\allowbreak completion} & \textbf{the dictionary closes the books} (post-closure backflow part) --- the v593 residual was the $\sigma$ mapping ($\sigma=d/N$, $a_{\mathrm{eff}}=ND/2$, limits $[u_0/(ND), 2\alpha/(ND)]$); with the exact dictionary the closed entries AND determinant match at identity level ($1.00000$--$1.00017$; $1.00000$ at $h=1445$); kernel piece $9\times10^{-6}$ = the genuine $O(1/N^2)$; honest amendment of the v593 attribution; det law in Lean (\texttt{det\_S\_closed}) $\to$ \vref{v595} & MAPPING-CLOSES & 4/4\\
+T199 & \texttt{\scriptsize lock\_\allowbreak projection} & \textbf{the 1D lock projection} (post-closure backflow part) --- along the CLOSED v591 direction the zero functional cancels the closed density value in a NEAR-IDENTITY (median $|q_{\mathrm{real}}/q_{\mathrm{model}}|=7.7\times10^{-4}$, decay $h^{-1.01}$); coupling spectrum COLLECTIVE (max share $5.9\%$, $N_{50}=56$; heavy zeros $14.1/25.0/30.4/40.9$); $400$-zero truncation fails (v589 plateau); scramble breaks by $10^6$; the arithmetic content of Problem~7.1 $=$ one explicit identity family $\to$ \vref{v596} & NEAR-IDENTITY-1D & 6/6\\
 \end{xltabular}
 }
 

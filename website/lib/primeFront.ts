@@ -172,7 +172,10 @@ export type PrimeFrontVerdict =
   | "POLE-RANK-ONE"
   | "DET-LAW-DERIVED"
   | "CUTOFF-CLOSES"
-  | "UNCONDITIONAL-ENTRY-CERT";
+  | "UNCONDITIONAL-ENTRY-CERT"
+  | "MAPPING-CLOSES"
+  | "NEAR-IDENTITY-1D"
+  | "FINGERPRINTS-HIT";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -196,6 +199,39 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "Strategy I/II executed: the μ₃-cover hits four compiler fingerprints at once. The big-picture survey named one construction that could close both remaining theory opens (GATE.QGEO and the RP slot) — and its first executed step lands four for four. The candidate is the cyclic ℤ/3-cover y³ = x⁴−1 of P¹, branched at the four μ₄ points with ORDER-THREE local monodromies (exactly the research contract's cusp structure) plus one cusp at infinity. Machine-checked: (1) genus 3 with H₁ a rank-3 module over the Eisenstein integers — the compiler's 3-dimensional integral frame; (2) the μ₄ rotation closes projectively via the deck twist (r⁴ = ω·1 in the Burau model at t = ω, braid relations verified); (3) the cusp-class group is (ℤ/3)⁵ mod one relation = (ℤ/3)⁴ of order 81 — the v566 saturation index with exactly the per-mark ℤ/3 mechanism the self-code program asked for; (4) the invariant hermitian form is unique up to scale with eigenvalues {−2, 2−2√2, 2+2√2}: LORENTZ SIGNATURE (1,2) — simultaneously the Chevalley–Weil Hodge numbers and Paper II's rank-3 polarization signature. If the identification completes, RP positivity becomes the Riemann bilinear relations — a theorem, not an assumption. Open and named: the Q/V operator dictionary and the real-structure map; the gate does not move.",
+    verdict: "FINGERPRINTS-HIT",
+    summary:
+      "v597_mu4_cover_model.py promoted (QGEO.COVER.01, 6 checks; probe mu4_cover_model_probe.py 6/6, FINGERPRINTS-HIT): Riemann-Hurwitz genus 3; five cusps (μ₄ + ∞), monodromy product 1; Chevalley-Weil H^{1,0} = (1,2); Burau at t = ω with verified braid relations, r⁴ = ω·1, r¹² = 1; cusp classes (ℤ/3)⁴, order 81 = 3⁴ (det_ℤ(1−deck) = 27 complementarily); invariant form unique up to scale, signature (1,2); single-cusp Gram spectrum {0,0,2} all-integer; V-spectrum {0,1,2} not yet located — the operator dictionary and the RP map to the v572 Gram data are the named next steps; kill criteria live, not triggered. GATE.QGEO does not move. Suite 590 → 591 scripts.",
+    badge: "sandbox",
+    script: "mu4_cover_model_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 199,
+    title:
+      "The arithmetic layer becomes one identity family — and the open core of the theory gets two new geometric strategies. T199 projects the defect onto the CLOSED locking direction (the v591 law, parameter-free) and finds the sharpest 1D statement yet: the zero-side functional cancels the closed density value in a near-identity, median |q_real/q_model| = 7.7·10⁻⁴, decaying h^−1.01 — and the cancellation is COLLECTIVE (no zero contributes more than 5.9%, 56 zeros carry half the coupling mass). After the closed density layer, the entire arithmetic content of Problem 7.1 is one approximate identity per window with explicit couplings; an equidistribution-type theorem for this family IS the remaining statement. Also landed: the v590 involution group in Lean with its Klein-four closure A·B = S₀, and the big-picture survey — the theory's open core funnels into GATE.QGEO (the parabolic μ₄ realization) plus the RP slot, and two new strategies are preregistered: the μ₄-cover homology model (H₁ of y⁴ = x⁴−1 is a rank-3 module over the Gaussian integers — the compiler Q as a canonical homology operator) and RP positivity as Hodge positivity (the seam kernel as a polarization form — the Riemann bilinear relations would make positivity a theorem).",
+    verdict: "NEAR-IDENTITY-1D",
+    summary:
+      "T199 (NEAR-IDENTITY-1D — the C-D-E round; 6/6, 34.7 s; twenty-fourth backflow probe) — contract PRIME.LOCKPROJ: closed v591 direction, |q_real/q_model| median 7.7e-4 (min 1.8e-4), decay h^-1.01; coupling spectrum collective (max share 5.9%, N50 = 56, heavy zeros 14.1/25.0/30.4/40.9); 400-zero truncation fails (v589 plateau); scramble breaks by 1e6; one declared outlier excluded by floor. Lean: A/B involutions, V-commutation, klein_closure A·B = S₀ (lake build green). Big picture: GATE.METRIC.19 funnels G_net into GATE.QGEO + standard AQFT; GATE.QGEO narrowed to the parabolic μ₄ realization; the RP slot is the one dynamical open; two preregistered strategies — μ₄-cover homology (Z[i]-rank-3) and RP = Hodge positivity — with explicit kill criteria. Promoted as v596 (PRIME.LOCKPROJ.01). Suite 589 → 590 scripts.",
+    badge: "sandbox",
+    script: "lock_projection_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 198,
+    title:
+      "The dictionary closes the books — identity-level closed forms, and an honest amendment. The last open bookkeeping item of the density layer is resolved, and the resolution corrects our own earlier reading: the v593 residual (0.2–1%) was not O(1/N²) kernel corrections — it was the σ mapping. The lag variable is σ = d/N, so the continuum cell sum carries a_eff = ND/2 with limits [u₀/(ND), 2α/(ND)]; since ND = 2α + O(D) by the window construction, the naive α-form carried a first-order-in-D residual. With the exact dictionary the closed entries AND the determinant match the deterministic model at 1.00000–1.00017 across the ladder — exactly 1.00000 at the deepest window — and the genuine kernel correction sits at 9·10⁻⁶. The density layer of Problem 7.1 is now a finite set of exact elementary evaluations. Also this round: the repository state v576–v594 was committed and pushed (111 files), derivation sketches for all seven theorems went into the theory section, and the closed determinant law is formalized in Lean (det_S_closed — the E² cancellation structural in the statement, build green).",
+    verdict: "MAPPING-CLOSES",
+    summary:
+      "T198 (MAPPING-CLOSES — the residual bookkeeping; 4/4, 3.9 s; twenty-third backflow probe) — contract PRIME.MAPCLOSE: exact dictionary σ = d/N, a_eff = ND/2, limits [u₀/(ND), 2α/(ND)]; entries and det at 1.00000–1.00017 (1.00000 at h = 1445); kernel piece 9e-6; honest amendment: v593's attribution superseded (numbers stand). Plus: repo pushed (commit 0701e1e, v576–v594, +19133 lines), sec:theory-proofs added (derivation sketches for Theorems 1–7), Lean det_S_closed + det_denominators_factor (lake build green, 3374 jobs). Remaining hard opens documented: determinant-level zero theorem, OS/RP positivity, the μ₄ geometric model. Promoted as v595 (PRIME.MAPCLOSE.01). Suite 588 → 589 scripts.",
+    badge: "sandbox",
+    script: "mapping_completion_probe.py",
+  },
   {
     date: "2026-08-01",
     part: 197,

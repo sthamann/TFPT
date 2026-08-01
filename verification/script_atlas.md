@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`588` registered scripts · `659` ledger claims · `10` clusters.
+`591` registered scripts · `662` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (110 scripts)
+### `core` — Compiler core & the E₈ glue  (113 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -231,6 +231,12 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v592_continuum_det_law, v587_w_closed_form, v583_pnt_model, v583, v587, v592 · cited: 3 e8 audit bootstrap
 - **v594_unconditional_cert** [E/C/O] `PRIME.UNCONDCERT.01` — partielle Summation (maschinen-verifiziert) + die publizierte unbedingte Schranke |ψ(x)−x| < 0.94√x (Büthe 2018, bis 10¹⁹, via verifizierte Nullstellen; die Fläche liegt 16 Größeno
   - deps: v592_continuum_det_law, v589_zero_comb, v583_pnt_model, v583, v589, v592 · cited: 3 e8 audit bootstrap
+- **v595_mapping_completion** [E] `PRIME.MAPCLOSE.01` — das v593-Residuum war die σ-ABBILDUNG: mit dem exakten Wörterbuch (a_eff = ND/2, Grenzen [u₀/(ND), 2α/(ND)]; ND = 2α + O(D)) treffen die geschlossenen Formeln Einträge UND Determin
+  - deps: v593_cutoff_completion, v592_continuum_det_law, v587_w_closed_form, v583, v587, v593 · cited: 3 e8 audit bootstrap
+- **v596_lock_projection** [E/C] `PRIME.LOCKPROJ.01` — entlang der GESCHLOSSENEN Locking-Richtung (v591-Gesetz, parameterfrei) cancelt das Nullstellen-Funktional den geschlossenen Dichte-Wert in einer FAST-IDENTITÄT: |q_real/q_model| M
+  - deps: v591_pole_rank_one, v586_pnt_lock_direction, v589_zero_comb, v595_mapping_completion, v583, v589, v591, v595 · cited: 3 e8 audit bootstrap
+- **v597_mu4_cover_model** [E/C/O] `QGEO.COVER.01` — der μ₃-Cover y³ = x⁴−1 (verzweigt an μ₄ + ∞) trägt VIER unabhängige Compiler-Fingerprints: (1) Genus 3, H₁ = Rang-3-Modul über den Eisenstein-Zahlen (Chevalley-Weil H^{1,0} = (1,2)
+  - deps: v590_involution_existence, v574_stageb_winding, v566_parabolic_anchor_selfcode, v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v566, v574, v590 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1247,9 +1253,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v583_pnt_model** — `PRIME.PNTMODEL.01`
-- **v584_ext_source_response** — `DIAMOND.BIT.EXTSOURCE.01`
-- **v585_pnt_locking_split** — `PRIME.LOCKSPLIT.01`
 - **v586_pnt_lock_direction** — `PRIME.LOCKDIR.01`
 - **v587_w_closed_form** — `PRIME.WCLOSED.01`
 - **v588_closed_delta** — `PRIME.CLOSEDDELTA.01`
@@ -1259,4 +1262,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v592_continuum_det_law** — `PRIME.DETLAW.01`
 - **v593_cutoff_completion** — `PRIME.CUTOFF.01`
 - **v594_unconditional_cert** — `PRIME.UNCONDCERT.01`
+- **v595_mapping_completion** — `PRIME.MAPCLOSE.01`
+- **v596_lock_projection** — `PRIME.LOCKPROJ.01`
+- **v597_mu4_cover_model** — `QGEO.COVER.01`
 
