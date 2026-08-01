@@ -193,7 +193,10 @@ export type PrimeFrontVerdict =
   | "POLARIZATION-FRAMED"
   | "PERIOD-NORMALIZED"
   | "TRANSPORT-CANONICAL"
-  | "GAMMA-TOY-LANDED";
+  | "GAMMA-TOY-LANDED"
+  | "SU2-KINEMATIC-SEPARATED"
+  | "SEAM-FORCES-COVER"
+  | "UNIFORM-C1";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -217,6 +220,39 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The uniform constant, frozen — C = 1 on the declared surface, and the violators are exactly the sign flips. The equidistribution conjecture (sec:theory-open) asked for |q_real/q_model| ≤ C·h⁻¹ uniformly; the measured constant is now a frozen, reproducible module. On the declared frame-A surface (69 floor-passed windows, h = 142..1445) the model value q_model keeps ONE sign on the whole ladder (0.039..0.112 — no model zero crossing anywhere), and on every lock-sign window (67 of 69) the deviation times h stays below 1: C = 1, measured max 0.982 at h = 184, tertile medians 0.61/0.45/0.39 non-increasing with depth. The sharpened typing is the real news: exactly TWO windows carry a q_real SIGN FLIP (h = 1219 blowing up to 9.2e3, and the edge window h = 1445 at 3.5) — and the violator set of the C = 1 bound equals the flip set EXACTLY. The sign predicts the bound violation window-sharp. This comes with an honest correction: the earlier diary note attributed the h = 1219 blow-up to a q_model zero crossing (wrong — q_model never crosses zero on the ladder) and missed the edge flip at h = 1445 entirely. Scrambled combs break the bound by more than four orders of magnitude: the constant is genuine arithmetic placement. No uniformity proof, no RH statement — the conjecture now has a frozen measured anchor.",
+    verdict: "UNIFORM-C1",
+    summary:
+      "v618_uniform_constant.py promoted (PRIME.UNIFC.01, 6 checks; probe uniform_constant_probe.py 6/6, UNIFORM-C1): 69 windows, q_model one-signed (0.039..0.112); eps·h ≤ 0.982 on all 67 lock-sign windows (C = 1); tertiles 0.61/0.45/0.39; exactly two q_real sign-flip windows (1219, 1445) = the violator set exactly (XXIII note corrected); scramble breaks by > 1e4. Suite 611 → 612 scripts.",
+    badge: "sandbox",
+    script: "uniform_constant_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The seam forcing round — the conformal seam axioms force the cover. The cover program spent eighteen rounds showing that the curve y³ = x⁴ − 1 CARRIES the compiler; the bedrock question (QGEO.SYM.01) runs the other way: why THIS geometry? Now the direction reverses. Z4-Möbius rigidity: any four points on the sphere that a Möbius transformation of order 4 permutes cyclically are Möbius-equivalent to μ₄ = {1, i, −1, −i} — the multiplier is forced to a primitive fourth root, and the cross-ratio census is the harmonic orbit {2, 1/2, −1} exactly (must-fail control: 4/3, the disc-7 jet datum, is NOT in the orbit — two distinct conformal data). The weight census: among all 81 ways to put μ₃-monodromy on the four marks, exactly four are clock-equivariant, and the demand that the four marks be EQUIVALENT kills the alternating pair — the weights are FORCED uniform, j ∈ {1, 2}, which is precisely the conjugate sheet pair (t = ω vs ω̄) of the period dictionary. Uniform weight gives y³ = (x−1)(x−i)(x+1)(x+i) = x⁴ − 1 exactly, full ramification at infinity (the separated infinity-cusp of v603), and Riemann–Hurwitz genus 3. And the seam geometry matches piece by piece: the marks lie ON the unit circle, the doubling reflection fixes seam and marks, and the OS-cut (bond) reflection z ↦ −i·z̄ permutes the marks by exactly the (k, 5−k) pattern of the v599 real structure, meeting the circle at the two v519 cut points. What remains of the bedrock: why cyclic-3 (N_fam = 3, anchored in the E8 glue 240 = 16·5·3), and the physical-seam ↔ conformal-seam identification. The gate does not move — but the residue just got much smaller.",
+    verdict: "SEAM-FORCES-COVER",
+    summary:
+      "v617_seam_cover_forcing.py promoted (QGEO.SEAMFORCE.01, 14 checks; probe seam_cover_forcing_probe.py 14/14, SEAM-FORCES-COVER): Z4-Möbius rigidity (multiplier forced ±i; harmonic CR orbit {2, 1/2, −1}, 4/3 excluded); weight census 81 → 4 → 2 (uniform j ∈ {1,2} forced); y³ = x⁴−1 exact; genus 3 (Riemann–Hurwitz); bond reflection = v599 (k,5−k) pattern with the two v519 cut points. GATE.QGEO does not move. Suite 610 → 611 scripts.",
+    badge: "sandbox",
+    script: "seam_cover_forcing_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The internal SU(2) separates — kill test (6) gets its first slice. The last untouched gamma kill test asks whether the internal SU(2) 'remains a spacetime factor'. At the kinematic twistor level the answer is now exact linear algebra. Twistor space C⁴ is a two-dimensional quaternionic module, and the split is clean: LEFT quaternion multiplications are the spacetime side (they move the fibers of PT → S⁴), RIGHT quaternion multiplications are the internal side (they preserve every fiber — they act trivially on spacetime). The surprise of the conventions: Woit's Euclidean structure ρ_tw IS the internal j-direction, verbatim. The internal su(2) commutes exactly with the full spacetime action and intersects it in {0}: the internal factor SEPARATES — the kinematic branch of kill test (6) does not fire. Then the structure of the clock itself: RHO4 = left-e^{iπ/4} ∘ right-e^{iπ/4} EXACTLY — the μ₄ clock entangles a spacetime half-quarter turn with an internal half-quarter phase, neither factor alone is the clock, the ALE deck is purely spacetime-side (DECK4 = left-i), and RHO4² = deck × internal quarter phase. Finally the breaking: the complex-linear part of the internal algebra is exactly the U(1) generated by right-i — choosing the Euclidean section breaks the internal SU(2) to U(1) kinematically, and the v519 mark torsor is exactly the μ₄ subgroup of that internal U(1). The dynamical half (a genuine gauge action on the reconstructed net) stays open on A_hol — but the kinematic geometry is now settled, and it is consistent with the electroweak reading.",
+    verdict: "SU2-KINEMATIC-SEPARATED",
+    summary:
+      "v616_su2_internal_kinematic.py promoted (WOIT.SU2.KIN.01, 17 checks; probe su2_internal_kinematic_probe.py 17/17, SU2-KINEMATIC-SEPARATED): ρ_tw = right-j verbatim; internal su(2) fiber-preserving, commutes with spacetime, intersection {0} — kill test (6) kinematic branch does not fire; RHO4 = left-u ∘ right-u exact (u = e^{iπ/4}); DECK4 = left-i; internal SU(2) → U(1) by the complex choice, mark torsor = internal μ₄. Dynamical half stays live on A_hol. Suite 609 → 610 scripts.",
+    badge: "sandbox",
+    script: "su2_internal_kinematic_probe.py",
+  },
   {
     date: "2026-08-01",
     part: 0,

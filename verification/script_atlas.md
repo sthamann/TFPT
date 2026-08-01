@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`609` registered scripts · `680` ledger claims · `10` clusters.
+`612` registered scripts · `683` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (131 scripts)
+### `core` — Compiler core & the E₈ glue  (134 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -273,6 +273,12 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v613_canonical_periods, v612_polarization_frame, v597, v612, v613 · cited: 3 e8 audit bootstrap
 - **v615_gamma_toy_interacting** [C/X] `WOIT.GAMMA.TOY.01` — die γ-Batterie AUF der RP-überlebenden Wechselwirkungsklasse (das Alignment-Bit: δ = π/2, positive Kopplung, v534) des 16-Majorana-FK-Seam-Toys: **DER WECHSELWIRKENDE SPIEGEL-FLIP*
   - deps: v608_gamma_free_slice, v534_seam_straddle_cone, v529_seam_interacting_toy_fk, v519_woit_theta_rp_free, v524_woit_beta2_os_quotient, v519, v524, v529 · cited: 3 e8 audit bootstrap, research contracts
+- **v616_su2_internal_kinematic** [E/C/X] `WOIT.SU2.KIN.01` — die erste ausgeführte Scheibe des letzten unberührten γ-Kill-Tests (6): auf ℂ⁴ = ℍ² ist **Woits euklidische Struktur wörtlich die interne j-Richtung** (ρ_tw = right-j, v519/v565-Ko
+  - deps: v615_gamma_toy_interacting, v565_woit_beta3_pt_duality, v519_woit_theta_rp_free, v519, v565, v608, v615 · cited: 3 e8 audit bootstrap, research contracts
+- **v617_seam_cover_forcing** [E/C] `QGEO.SEAMFORCE.01` — **DIE KONFORMEN SEAM-AXIOME ERZWINGEN DEN μ₃-COVER** (konstruktive Scheibe der Bedrock-Prämisse QGEO.SYM.01): ℤ₄-MÖBIUS-RIGIDITÄT — jede zyklisch ℤ₄-symmetrische 4-Punkt-Konfigurat
+  - deps: v597_mu4_cover_model, v599_real_structure, v603_seam_marks, v613_canonical_periods, v597, v599, v603, v613 · cited: 3 e8 audit bootstrap
+- **v618_uniform_constant** [E] `PRIME.UNIFC.01` — **C = 1 AUF DER DEKLARIERTEN FLÄCHE EINGEFROREN, MIT DER GESCHÄRFTEN VORZEICHEN-DICHOTOMIE**: die deklarierte Frame-A-Fläche reproduziert (69 Floor-Fenster, h = 142..1445), q_model
+  - deps: v596_lock_projection, v586_pnt_lock_direction, v582_density_dominance, v563, v591, v596 · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1283,15 +1289,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `REG.FREEZE.01`×17, `v312`×16, `FLAV.KQ.01`×15, `v54`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `REG.FREEZE.01`×17, `v312`×16, `v563`×16, `FLAV.KQ.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v604_equivariant_order** — `QGEO.EQORDER.01`
-- **v605_translator** — `QGEO.TRANSLATOR.01`
-- **v606_mode_separation** — `QGEO.MODESEP.01`
 - **v607_selection_rule** — `QGEO.SELRULE.01`
 - **v608_gamma_free_slice** — `WOIT.GAMMA.FREE.01`
 - **v609_translator_factorization** — `QGEO.CFACTOR.01`
@@ -1301,4 +1304,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v613_canonical_periods** — `QGEO.PERNORM.01`
 - **v614_transport_deck** — `QGEO.TRANSPORT.01`
 - **v615_gamma_toy_interacting** — `WOIT.GAMMA.TOY.01`
+- **v616_su2_internal_kinematic** — `WOIT.SU2.KIN.01`
+- **v617_seam_cover_forcing** — `QGEO.SEAMFORCE.01`
+- **v618_uniform_constant** — `PRIME.UNIFC.01`
 

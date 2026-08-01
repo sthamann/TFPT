@@ -2403,6 +2403,88 @@ Machine-checked: \veri{v615\_gamma\_toy\_interacting.py}.
 no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The internal $SU(2)$, kinematic
+separation (\texttt{WOIT.SU2.KIN.01}).}
+The first executed slice of gamma kill test (6) ($17$ checks,
+${<}1$\,s).  On $\mathbb{C}^4=\mathbb{H}^2$ the right multiplications
+close the (opposite) quaternion algebra exactly, and Woit's Euclidean
+structure \emph{is} an internal direction:
+$\rho_{\mathrm{tw}}=$ right-$j$ verbatim in the v519/v565
+conventions.  The internal algebra right-sp(1) preserves \emph{every}
+fiber of the twistor fibration $\mathbb{PT}\to S^4$ (trivial on
+spacetime; the left multiplications move a generic fiber), commutes
+\emph{exactly} with the full spacetime quaternion action, and the two
+algebras intersect in $\{0\}$: the internal factor \emph{separates}
+from the Euclidean rotation group --- kill test (6)'s kinematic
+branch does not fire.  The clock factorizes exactly:
+$\mathrm{RHO4}=\mathrm{left}\text{-}u\circ\mathrm{right}\text{-}u$
+with $u=e^{i\pi/4}$ (neither factor alone; must-fail controls); the
+ALE deck is \emph{purely} spacetime-side ($\mathrm{DECK4}=$ left-$i$
+exactly) and $\mathrm{RHO4}^2=\mathrm{DECK4}\circ$ right-$i$.  The
+complex choice breaks the internal $SU(2)$ to $U(1)$ kinematically,
+and the v519 mark torsor is exactly the $\mu_4$ subgroup of the
+internal $U(1)$ composed with the OS conjugation;
+$\sigma_{\mathrm{std}}$ fixes right-$j$ and inverts the internal
+charge and both clock factors.  The dynamical half of kill test (6)
+stays open and formally live on $\mathcal A_{\mathrm{hol}}$.
+Machine-checked: \veri{v616\_su2\_internal\_kinematic.py}.
+\mE/\mC\ (exact operator identities; kinematic fence; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The seam forcing round
+(\texttt{QGEO.SEAMFORCE.01}).}
+A constructive slice of the bedrock premise \texttt{QGEO.SYM.01}
+($14$ checks, ${<}1$\,s): the conformal seam axioms \emph{force} the
+$\mu_3$-cover.  $\mathbb{Z}_4$-M\"obius rigidity: any 4-point
+configuration on $\mathbb{P}^1$ cyclically permuted by an order-4
+M\"obius map is M\"obius-equivalent to $\mu_4$ (the multiplier is
+forced to a primitive fourth root); the cross-ratio census of $\mu_4$
+is the harmonic orbit $\{2,1/2,-1\}$ exactly (must-fail: $4/3$, the
+disc-7 jet datum, is not in the orbit).  The weight census: among all
+$81$ $\mu_3$-monodromy weight vectors exactly four are
+clock-equivariant, and the mark-equivalence demand kills the
+alternating pair --- the weights are \emph{forced} uniform,
+$j\in\{1,2\}$, the conjugate sheet pair of v613.  Uniform $j=1$ gives
+$y^3=(x-1)(x-i)(x+1)(x+i)=x^4-1$ \emph{exactly}; the total finite
+monodromy forces full ramification at infinity (the v603 separated
+cusp); Riemann--Hurwitz gives genus $3$ exactly.  And the seam
+geometry matches: the marks lie on the unit circle, the doubling
+reflection fixes seam and marks, the OS-cut (bond) reflection
+$z\mapsto-i\bar z$ permutes the marks by exactly the $(k,5{-}k)$
+pattern of the v599 real structure and meets the circle at the two
+v519 cut points.  The bedrock residue narrows to two named steps: the
+cyclic-3 choice ($N_{\mathrm{fam}}=3$, anchored in the $E_8$ glue)
+and the physical-seam $\leftrightarrow$ conformal-seam
+identification.  GATE.QGEO does not move.
+Machine-checked: \veri{v617\_seam\_cover\_forcing.py}.
+\mE/\mC\ (exact rigidity/census/genus identities; residue typing;
+no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The uniform constant round
+(\texttt{PRIME.UNIFC.01}).}
+The equidistribution constant $C=1$, frozen ($6$ checks,
+${\sim}3$\,s).  On the declared frame-A surface ($69$ floor-passed
+windows, $h=142..1445$) the model value $q_{\mathrm{model}}$ keeps
+\emph{one} sign on the whole ladder ($0.039..0.112$ --- no model zero
+crossing anywhere), and on \emph{every} lock-sign window ($67$ of
+$69$) the rate $|q_{\mathrm{real}}/q_{\mathrm{model}}|\cdot h\le1$
+holds --- the conjecture's explicit constant $C=1$, measured max
+$0.982$; the tertile medians are non-increasing
+($0.61/0.45/0.39$).  The sharpened typing: exactly \emph{two} windows
+carry a $q_{\mathrm{real}}$ sign flip ($h=1219$ at $9.2\cdot10^3$,
+$h=1445$ at $3.5$), and the violator set of the $C=1$ bound
+\emph{equals} the flip set exactly --- the sign predicts the bound
+violation window-sharp.  Honest correction of the earlier diary note:
+the blow-up mechanism is the $q_{\mathrm{real}}$ flip (not a
+$q_{\mathrm{model}}$ crossing), and the note missed the edge window
+$h=1445$.  Scrambled combs break the bound by more than $10^4$.  No
+uniformity proof, no RH statement; Problem 7.1 untouched.
+Machine-checked: \veri{v618\_uniform\_constant.py}.
+(\textsc{measured}) $+$ \mE\ controls (declared surface and floors;
+no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

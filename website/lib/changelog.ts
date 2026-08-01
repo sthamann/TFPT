@@ -43,6 +43,546 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXXIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the three-front round ("
+      },
+      {
+        "k": "c",
+        "v": "v616"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v618"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the internal SU(2) SEPARATES kinematically (kill test (6)'s first slice — "
+      },
+      {
+        "k": "m",
+        "v": "\\rho_{\\mathrm{tw}}="
+      },
+      {
+        "k": "t",
+        "v": " right-"
+      },
+      {
+        "k": "m",
+        "v": "j"
+      },
+      {
+        "k": "t",
+        "v": " verbatim, the clock factorizes as left-"
+      },
+      {
+        "k": "m",
+        "v": "u\\circ"
+      },
+      {
+        "k": "t",
+        "v": "right-"
+      },
+      {
+        "k": "m",
+        "v": "u"
+      },
+      {
+        "k": "t",
+        "v": " exactly, the deck is spacetime-side, and the complex choice breaks the internal factor to "
+      },
+      {
+        "k": "m",
+        "v": "U(1)"
+      },
+      {
+        "k": "t",
+        "v": " with the mark torsor as its "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "); the conformal seam axioms FORCE the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_3"
+      },
+      {
+        "k": "t",
+        "v": "-cover ("
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}_4"
+      },
+      {
+        "k": "t",
+        "v": "-Möbius rigidity + uniform weights + genus "
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": " + the seam reflections matching v599's pattern — the bedrock residue narrows to the cyclic-3 choice and the physical"
+      },
+      {
+        "k": "m",
+        "v": "\\leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": "conformal identification); and the equidistribution constant "
+      },
+      {
+        "k": "m",
+        "v": "C=1"
+      },
+      {
+        "k": "t",
+        "v": " is FROZEN on the declared surface with the sharpened sign-flip dichotomy (violator set "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " flip set exactly; honest correction of the XXIII note)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v616_su2_internal_kinematic.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "WOIT.SU2.KIN.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "17"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 17/17, SU2-KINEMATIC-SEPARATED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Right-sp(1) fiber-preserving, commutes exactly with the spacetime quaternion action, intersection "
+        },
+        {
+          "k": "m",
+          "v": "\\{0\\}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{RHO4} ="
+        },
+        {
+          "k": "t",
+          "v": " left-"
+        },
+        {
+          "k": "m",
+          "v": "e^{i\\pi/4}\n\\circ"
+        },
+        {
+          "k": "t",
+          "v": " right-"
+        },
+        {
+          "k": "m",
+          "v": "e^{i\\pi/4}"
+        },
+        {
+          "k": "t",
+          "v": " exact; "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{DECK4}="
+        },
+        {
+          "k": "t",
+          "v": " left-"
+        },
+        {
+          "k": "m",
+          "v": "i"
+        },
+        {
+          "k": "t",
+          "v": "; internal "
+        },
+        {
+          "k": "m",
+          "v": "SU(2)\\to U(1)"
+        },
+        {
+          "k": "t",
+          "v": " by the complex choice; "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_{\\mathrm{std}}"
+        },
+        {
+          "k": "t",
+          "v": " fixes right-"
+        },
+        {
+          "k": "m",
+          "v": "j"
+        },
+        {
+          "k": "t",
+          "v": " and inverts the internal charge. Kill test (6)'s kinematic branch does not fire; the dynamical half stays live on "
+        },
+        {
+          "k": "m",
+          "v": "\\mathcal A_{\\mathrm{hol}}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v617_seam_cover_forcing.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.SEAMFORCE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "14"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 14/14, SEAM-FORCES-COVER)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Order-4 Möbius multiplier forced primitive; harmonic cross-ratio orbit "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,1/2,-1\\}"
+        },
+        {
+          "k": "t",
+          "v": " (must-fail: "
+        },
+        {
+          "k": "m",
+          "v": "4/3"
+        },
+        {
+          "k": "t",
+          "v": " not in it); weight census "
+        },
+        {
+          "k": "m",
+          "v": "81\\to4\\to2"
+        },
+        {
+          "k": "t",
+          "v": " (mark equivalence kills the alternating pair); "
+        },
+        {
+          "k": "m",
+          "v": "y^3=x^4-1"
+        },
+        {
+          "k": "t",
+          "v": " exact; Riemann–Hurwitz genus "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": "; bond reflection "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the v599 "
+        },
+        {
+          "k": "m",
+          "v": "(k,5{-}k)"
+        },
+        {
+          "k": "t",
+          "v": " pattern with the two v519 cut points."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v618_uniform_constant.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.UNIFC.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 6/6, UNIFORM-C1)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "69"
+        },
+        {
+          "k": "t",
+          "v": " windows, "
+        },
+        {
+          "k": "m",
+          "v": "q_{\\mathrm{model}}"
+        },
+        {
+          "k": "t",
+          "v": " one-signed on the whole ladder; "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon h\\le0.982"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "67"
+        },
+        {
+          "k": "t",
+          "v": " lock-sign windows ("
+        },
+        {
+          "k": "m",
+          "v": "C=1"
+        },
+        {
+          "k": "t",
+          "v": "); tertiles "
+        },
+        {
+          "k": "m",
+          "v": "0.61/0.45/0.39"
+        },
+        {
+          "k": "t",
+          "v": "; exactly two "
+        },
+        {
+          "k": "m",
+          "v": "q_{\\mathrm{real}}"
+        },
+        {
+          "k": "t",
+          "v": " sign-flip windows ("
+        },
+        {
+          "k": "m",
+          "v": "1219"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "1445"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the violator set exactly; scramble breaks by "
+        },
+        {
+          "k": "m",
+          "v": ">10^4"
+        },
+        {
+          "k": "t",
+          "v": ". Honest correction: the XXIII note's mechanism (“"
+        },
+        {
+          "k": "m",
+          "v": "q_{\\mathrm{model}}"
+        },
+        {
+          "k": "t",
+          "v": " crossing”) was wrong and the edge flip "
+        },
+        {
+          "k": "m",
+          "v": "1445"
+        },
+        {
+          "k": "t",
+          "v": " was missed."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Three ledger rows + notes on "
+        },
+        {
+          "k": "c",
+          "v": "WOIT.GAMMA.TOY.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.COVER.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LOCKPROJ.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (three audit blocks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (kill-test-(6) slice note); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " (C=1 frozen-module note); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "609\\to612"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XXXII",
     "heading": [
       {

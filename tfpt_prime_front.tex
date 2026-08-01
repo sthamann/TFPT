@@ -11300,15 +11300,24 @@ the zero couplings satisfy this cancellation law with a uniform rate
 $C h^{-1}$ uniformly.  No RH-type input is expected to be necessary
 for fixed windows (the couplings decay in $\gamma$ and the identity is
 an explicit-formula statement); the \emph{uniformity} in the window is
-the open content.  The measured constant is now explicit: on the
-declared surface the relative deviation times $h$ stays below $0.98$
-on \emph{all} $68$ floor-passed windows, with tercile medians
-$0.61/0.44/0.39$ over $h=142$--$1445$ (stable, slightly decreasing)
---- so the conjecture can be posed with the concrete constant $C=1$;
-the single excluded window ($h=1219$) is the declared
-$q_{\mathrm{model}}$ zero crossing, where the normalized statement is
-$0/0$-degenerate.  Nothing in this paper or its companions claims
-progress on any conjecture beyond this statement.
+the open content.  The measured constant is now explicit and
+\emph{frozen as a module} (\veri{v618\_uniform\_constant.py}): on the
+declared surface ($69$ floor-passed windows, $h=142$--$1445$) the
+model value $q_{\mathrm{model}}$ keeps \emph{one} sign on the whole
+ladder ($0.039$--$0.112$; no model zero crossing anywhere), and on
+every \emph{lock-sign} window ($67$ of $69$) the relative deviation
+times $h$ stays below $1$ (measured max $0.982$), with tercile
+medians $0.61/0.45/0.39$ (non-increasing) --- so the conjecture is
+posed with the concrete constant $C=1$.  The sharpened typing:
+exactly \emph{two} windows carry a $q_{\mathrm{real}}$ sign flip
+($h=1219$ at $9.2\cdot10^3$ and the edge window $h=1445$ at $3.5$),
+and the violator set of the $C=1$ bound equals the flip set
+\emph{exactly} --- the sign predicts the bound violation
+window-sharp.  (This corrects an earlier note that attributed the
+$h=1219$ blow-up to a $q_{\mathrm{model}}$ zero crossing and missed
+the edge flip.)  Scrambled combs break the bound by more than
+$10^4$.  Nothing in this paper or its companions claims progress on
+any conjecture beyond this statement.
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
