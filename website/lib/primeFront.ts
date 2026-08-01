@@ -189,7 +189,8 @@ export type PrimeFrontVerdict =
   | "GAMMA-FREE-SLICE-LANDED"
   | "C-FACTORIZATION-LANDED"
   | "LANDSCAPE-MAPPED"
-  | "PERIODS-CLASSICAL";
+  | "PERIODS-CLASSICAL"
+  | "POLARIZATION-FRAMED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -213,6 +214,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The polarization frame — the Hodge direction is the ζ₁₂ eigenspace. The form-level piece of the period bridge. The braid rotation r has three SIMPLE eigenvalues — ζ₁₂·{1, −1, −i}, the twelfth roots organizing the spectrum — and in its eigenbasis the polarization J becomes EXACTLY diagonal: diag((1+√3)/2, (1−√3)/2, −1). The honest typing first: diagonality itself is the standard consequence of r preserving J with simple unimodular eigenvalues. The content is where the signs sit — and the centerpiece is this: the unique POSITIVE direction of J (its signature is (1,2)) is exactly the eigenspace of the primitive twelfth root e^{iπ/6} = ζ₁₂. In Hodge language: the h^{1,0} = 1 holomorphic line of the ω-sheet lives on the ζ₁₂ eigenvector of the rotation. The analytic Hodge structure and the finite rotation agree on where positivity lives — one more layer where the 12 = |μ₄|·|μ₃| grid governs everything. Combined with v611 (all periods are Beta values on the ζ₁₂ grid), the analytic bridge is one step from closing: what remains is the canonical period normalization of the eigenvectors, fixing the diagonal weights as explicit Beta monomials.",
+    verdict: "POLARIZATION-FRAMED",
+    summary:
+      "v612_polarization_frame.py promoted (QGEO.POLFRAME.01, 9 checks; probe polarization_frame_probe.py 9/9, POLARIZATION-FRAMED): r eigenvalues e^{iπ/6}, e^{−i5π/6}, e^{−iπ/3} simple, det r = −1; (W†)⁻¹JW⁻¹ = diag((1+√3)/2, (1−√3)/2, −1) exact; positive direction = ζ₁₂ eigenspace; r†Jr = J re-verified; product of diagonal = det J/|det W|² = 1/2. Period normalization (Beta weights) named next. GATE.QGEO does not move. Suite 605 → 606 scripts.",
+    badge: "sandbox",
+    script: "polarization_frame_probe.py",
+  },
   {
     date: "2026-08-01",
     part: 0,

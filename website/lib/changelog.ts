@@ -43,6 +43,164 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the polarization frame lands ("
+      },
+      {
+        "k": "c",
+        "v": "v612"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the braid rotation has three simple eigenvalues "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta_{12}\\cdot\\{1,-1,-i\\}"
+      },
+      {
+        "k": "t",
+        "v": ", the polarization "
+      },
+      {
+        "k": "m",
+        "v": "J"
+      },
+      {
+        "k": "t",
+        "v": " diagonalizes EXACTLY in the rotation eigenbasis (values "
+      },
+      {
+        "k": "m",
+        "v": "(1+\\sqrt3)/2"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "(1-\\sqrt3)/2"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "-1"
+      },
+      {
+        "k": "t",
+        "v": "), and THE UNIQUE POSITIVE (HODGE) DIRECTION IS THE PRIMITIVE "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta_{12}"
+      },
+      {
+        "k": "t",
+        "v": " EIGENSPACE — the analytic Hodge structure and the finite rotation agree on where positivity lives; the canonical period normalization (Beta weights) is the named next step"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v612_polarization_frame.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.POLFRAME.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "9"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 9/9, POLARIZATION-FRAMED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Simple spectrum, "
+        },
+        {
+          "k": "m",
+          "v": "\\det r=-1"
+        },
+        {
+          "k": "t",
+          "v": "; exact diagonalization (honest typing: diagonality follows from J-unitarity, the content is the values and the signature distribution); product of diagonal values "
+        },
+        {
+          "k": "m",
+          "v": "=\\det J/|\\det W|^2=1/2"
+        },
+        {
+          "k": "t",
+          "v": " exactly."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + note on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.PERIODS.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "605\\to606"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XXVIII",
     "heading": [
       {

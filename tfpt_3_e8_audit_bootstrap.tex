@@ -2271,6 +2271,28 @@ Machine-checked: \veri{v611\_periods.py}.
 no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The polarization frame
+(\texttt{QGEO.POLFRAME.01}).}
+The form-level bridge ($9$ checks, ${\sim}2$\,s): the braid rotation
+has three \emph{simple} eigenvalues $\zeta_{12}\cdot\{1,-1,-i\}$
+($\det r=-1$), and in its left-eigenvector basis the polarization
+diagonalizes \emph{exactly},
+$(W^\dagger)^{-1}JW^{-1}=\mathrm{diag}((1{+}\sqrt3)/2,(1{-}\sqrt3)/2,-1)$
+(honest typing: diagonality follows from J-unitarity with simple
+unimodular eigenvalues; the content is the exact values and the
+signature distribution).  The centerpiece: the unique \emph{positive}
+direction of $J$ --- the $h^{1,0}=1$ Hodge line of the
+$\omega$-sheet --- is \emph{exactly} the eigenspace of the primitive
+twelfth root $e^{i\pi/6}=\zeta_{12}$: the analytic Hodge structure
+and the finite rotation agree on where positivity lives.  With v611
+(periods $=$ Beta values on the $\zeta_{12}$ grid) the analytic
+bridge is one step from closing; the canonical period normalization
+(Beta weights for the diagonal) is the named next step.
+Machine-checked: \veri{v612\_polarization\_frame.py}.
+\mE\ (exact spectrum/diagonalization/signature; bridge reading
+typed; no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================
