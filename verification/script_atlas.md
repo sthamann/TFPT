@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`599` registered scripts · `670` ledger claims · `10` clusters.
+`605` registered scripts · `676` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (121 scripts)
+### `core` — Compiler core & the E₈ glue  (127 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -253,6 +253,18 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v603_seam_marks, v602_duality_forms, v600_joint_embedding, v597_mu4_cover_model, v597, v600, v601, v602 · cited: 3 e8 audit bootstrap
 - **v605_translator** [E/C/O] `QGEO.TRANSLATOR.01` — DER RP-ÜBERSETZER EXISTIERT: die Korpus-RP-Anti-Automorphie θ(X) = ΣXᵀΣ, zurückgezogen und mit der J-Adjungierten komponiert, ist ein INNERER Automorphismus φ(A) = cAc⁻¹ (Intertwin
   - deps: v604_equivariant_order, v603_seam_marks, v602_duality_forms, v600_joint_embedding, v572, v600, v601, v602 · cited: 3 e8 audit bootstrap
+- **v606_mode_separation** [E/C/O/X] `QGEO.MODESEP.01` — DIE ∞-TORSION TRENNT DIE DREI V-EIGENLINIEN: alle drei Moden (0, 1, 2), auf das unreduzierte integrale Modul geliftet, sind REINE 3-Torsions-Klassen bei ∞ (null freier Anteil), und
+  - deps: v605_translator, v603_seam_marks, v604_equivariant_order, v590, v603, v604, v605 · cited: 3 e8 audit bootstrap
+- **v607_selection_rule** [E/C] `QGEO.SELRULE.01` — DIE KANONISCHE „+1“-REGEL IST GEFUNDEN: die Torsion des ∞-Kokerns ist ein echter F₃-Raum (ω wirkt als Identität), die Deck-Rotation wirkt F₃-linear mit der expliziten Matrix [[0,1,
+  - deps: v606_mode_separation, v605_translator, v590_involution_existence, v590, v603, v605, v606 · cited: 3 e8 audit bootstrap
+- **v608_gamma_free_slice** [E/C/O] `WOIT.GAMMA.FREE.01` — SPIEGEL-MODEN SIND STRIKT OS-NEGATIV: der Anti-chirale Zustand hat Inertia (8,8,0) mit SEKTOR-EXAKTEM Split (gerade (8,0,0) PD, ungerade (0,8,0) strikt ND) — jeder Spiegel-Fermion-
+  - deps: v519_woit_theta_rp_free, v524_woit_beta2_os_quotient, v519, v524, v565 · cited: 3 e8 audit bootstrap, research contracts
+- **v609_translator_factorization** [E/C] `QGEO.CFACTOR.01` — DIE GEOMETRISCHE IDENTITÄT VON c IST GESCHLOSSEN: der Spiegel-Intertwiner d (dA = Γ(A)d für das realisierte Paar) ist EINDEUTIG (1-dim Lösungsraum), UNIMODULAR (det d = 1), INTEGRA
+  - deps: v605_translator, v606_mode_separation, v599_real_structure, v599, v605, v606 · cited: 3 e8 audit bootstrap
+- **v610_curve_landscape** [E/C] `QGEO.LANDSCAPE.01` — WAS DIE KURVE SONST NOCH TRÄGT: die Jacobische ZERFÄLLT (Differential-Charaktere der Ordnungen (12,12,6)) in eine abelsche Fläche mit CM durch Q(ζ₁₂) = Q(i,√3) — den Körper von Dec
+  - deps: v597_mu4_cover_model, v598_cover_dictionary, v600_joint_embedding, v597, v598, v600 · cited: 3 e8 audit bootstrap
+- **v611_periods** [E/C] `QGEO.PERIODS.01` — DIE ANALYTISCHE SCHICHT DES COVERS IST KLASSISCH: die fünf Basis-Perioden-Integrale sind EXAKT Beta-Werte ((1/4)B((k+1)/4, 1−j/3), symbolisch), und die Gamma-Nenner (Γ(11/12), Γ(7/
+  - deps: v610_curve_landscape, v597_mu4_cover_model, v597, v610 · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1269,16 +1281,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v594_unconditional_cert** — `PRIME.UNCONDCERT.01`
-- **v595_mapping_completion** — `PRIME.MAPCLOSE.01`
-- **v596_lock_projection** — `PRIME.LOCKPROJ.01`
-- **v597_mu4_cover_model** — `QGEO.COVER.01`
-- **v598_cover_dictionary** — `QGEO.DICT.01`
-- **v599_real_structure** — `QGEO.REAL.01`
 - **v600_joint_embedding** — `QGEO.EMBED.01`
 - **v601_equivariant_dual** — `QGEO.CANON.01`
 - **v602_duality_forms** — `QGEO.DUALFORMS.01`
 - **v603_seam_marks** — `QGEO.SEAMMARKS.01`
 - **v604_equivariant_order** — `QGEO.EQORDER.01`
 - **v605_translator** — `QGEO.TRANSLATOR.01`
+- **v606_mode_separation** — `QGEO.MODESEP.01`
+- **v607_selection_rule** — `QGEO.SELRULE.01`
+- **v608_gamma_free_slice** — `WOIT.GAMMA.FREE.01`
+- **v609_translator_factorization** — `QGEO.CFACTOR.01`
+- **v610_curve_landscape** — `QGEO.LANDSCAPE.01`
+- **v611_periods** — `QGEO.PERIODS.01`
 

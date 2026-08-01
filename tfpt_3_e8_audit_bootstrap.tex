@@ -2134,6 +2134,143 @@ Machine-checked: \veri{v605\_translator.py}.
 moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The mode-separation round
+(\texttt{QGEO.MODESEP.01}).}
+The zero-mode selection gains its carrier ($7$ checks, ${\sim}2$\,s):
+all three eigenlines of the sheet operator $V$ (eigenvalues $0,1,2$),
+lifted to the unreduced integral module along the \emph{unique}
+intertwiner, are \emph{pure 3-torsion classes at infinity} (zero free
+part), and the three classes are \emph{pairwise distinct} elements of
+$(\mathbb{Z}/3)^3$ (fixed Smith frame $(2,0,2)/(2,2,0)/(1,2,0)$;
+distinctness frame-invariant, none trivial) --- the infinity-cusp
+torsion distinguishes the zero mode from the top mode, exactly the
+separation the real structure could not provide.  The canonical rule
+singling out the ``$+1$'' class stays open.  And the
+arithmetic-identity route for the translator element is closed
+honestly: $\operatorname{char}(7\Gamma(c)c)=y^3+3y^2+6y-1$ has
+discriminant $-783=-3^3\cdot29$, not a square --- Galois $S_3$, not
+abelian, no cyclotomic identity (Kronecker--Weber).
+Machine-checked: \veri{v606\_mode\_separation.py}.
+\mE\ (exact separation; typed frame caveat; honest arithmetic
+negative; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The selection rule
+(\texttt{QGEO.SELRULE.01}).}
+The canonical ``$+1$'' rule found ($10$ checks, ${\sim}2$\,s): the
+infinity torsion is a genuine $\mathbb{F}_3$ space
+($\omega$-multiplication acts as the identity), and the deck rotation
+acts on it with characteristic polynomial $(x+1)(x^2+1)$ mod $3$ ---
+$x^2+1$ irreducible over $\mathbb{F}_3$, so there is \emph{exactly
+one} projective eigenline (eigenvalue $-1$), and it \emph{is} the
+top-mode class; the zero mode and the seam are not projectively fixed
+(nor under $r^2$).  With v603/v605 the three modes carry mutually
+exclusive canonical labels --- seam $=$ the $R$-\emph{real} line, top
+$=$ the unique \emph{deck-eigen} torsion class, zero $=$ the only
+\emph{unlabeled} mode --- and the two-demand involution flips exactly
+the labeled pair: \emph{both} v590 demands are now expressed through
+canonical cover structure (typed reading; the continuum derivation
+from the raw seam stays the gate residual).
+Machine-checked: \veri{v607\_selection\_rule.py}.
+\mE\ (exact $\mathbb{F}_3$/rigidity/labeling; typed selection
+reading; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The free gamma slice
+(\texttt{WOIT.GAMMA.FREE.01}).}
+The first executed step of the WOIT $\gamma$ milestone ($9$ checks,
+${\sim}1$\,s, on the explicit v524 net): the mirror (anti-chiral)
+state's OS Gram splits \emph{sector-exactly} --- even $(8,0,0)$
+positive definite, odd $(0,8,0)$ \emph{strictly negative definite}
+--- so every mirror fermion vector has strictly negative OS norm and
+\emph{no mirror mode survives OS reconstruction}: kill test (3)
+cannot fire at the free level (the v519 shadow upgraded to the
+sector level).  The chiral generation is multiplicity-free (clock
+spectrum exactly $\{1,\sqrt2-1\}$ on the fermion domain), and the
+mark incidence holds at the free level: the two mark algebras have
+PD Grams of dimension $4=|\mu_4|$, jointly generate the full
+$16$-dim $H_{\mathrm{phys}}$, and the quarter-turn transfer
+$\tau_2$ \emph{is} the mark-A$\to$B transport (Hermitian PD) ---
+kill test (7) does not fire there.  The $\gamma$ milestone itself
+stays open on $\mathcal A_{\mathrm{hol}}$ (kill tests live; (6)
+untouched).
+Machine-checked: \veri{v608\_gamma\_free\_slice.py}.
+\mE\ (exact sector/spectrum/incidence on the explicit net; free
+slice only; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The translator factorization
+(\texttt{QGEO.CFACTOR.01}).}
+The geometric identity of the translator element is \emph{closed}
+($8$ checks, ${\sim}8$\,s): the mirror intertwiner $d$ (defined by
+$dA=\Gamma(A)d$ on the realized pair, $\Gamma$ the real-structure
+conjugation) is \emph{unique} (1-dim intertwiner space),
+\emph{unimodular} ($\det d=1$), \emph{integral} over
+$\mathbb{Z}[\omega]$, and $\Gamma$-\emph{involutive}
+($\Gamma(d)d=1$ exactly); and the v605 element factorizes exactly,
+$c=\lambda K_1d$ with $K_1=J^{-1}\overline{F_2}^TM^{-1}$ --- so
+$\theta_{\mathrm{corpus}}=J\mathrm{adj}\circ\mathrm{inner}(K_1)\circ
+\mathrm{inner}(d)$: polarization $\times$ RP metric $\times$ real
+structure $\times$ canonical mirror intertwiner.  With this, all
+three v605 residuals are resolved (seam reversal geometric v603;
+zero-mode rule canonical v607; $c$-identity factorized v609); the
+v606 arithmetic negative stands as the reason the cyclotomic route
+had to fail.  Honest scope: $F_2$ carries the corpus datum $\Sigma$
+by definition of the translator; the gate does not move.
+Machine-checked: \veri{v609\_translator\_factorization.py}.
+\mE\ (exact factorization; closed-identity reading; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The curve landscape
+(\texttt{QGEO.LANDSCAPE.01}).}
+The inverse question --- what \emph{else} does the cover carry? ---
+answered ($9$ checks, ${\sim}1$\,s).  The Jacobian \emph{splits}: the
+three holomorphic differentials carry (deck, rotation) characters of
+combined orders $(12,12,6)$, so by CM theory
+$\mathrm{Jac}(C)\sim A_2(\mathrm{CM}\ \mathbb{Q}(\zeta_{12}))\times
+E(\mathrm{CM}\ \mathbb{Q}(\omega))$ --- with
+$\mathbb{Q}(\zeta_{12})=\mathbb{Q}(i,\sqrt3)$ the field generated by
+the deck \emph{and} the mark rotation together, and $E: y^3=u^2-1$
+the $x\mapsto-x$ quotient.  Point counts confirm the splitting:
+$a_p(C)=a_p(E)$ \emph{exactly} for all ten tested
+$p\not\equiv1\ (12)$ (the $\zeta_{12}$ surface is supersingular
+there), with nonzero surface traces exactly at $p\equiv1\ (12)$.
+And the integer-spectrum census honestly relativizes single-char
+hits: integer characteristic polynomials are \emph{common} in the
+declared pool ($7894$ entries) --- the anchor class is the most
+frequent nontrivial family ($286$), non-compiler spectra exist
+($\{1,1,3\}$: $254$) --- the compiler's distinction is the
+\emph{joint} algebra structure (v600), not individual spectra.  Two
+canonical period resources named for future RP/Hodge rounds.
+Machine-checked: \veri{v610\_curve\_landscape.py}.
+\mE\ (exact characters/point counts/census; CM reading typed; no
+marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The periods round
+(\texttt{QGEO.PERIODS.01}).}
+The analytic layer of the cover is \emph{classical} ($6$ checks,
+${\sim}1$\,s): the five basic period integrals
+$I_{k,j}=\int_0^1x^k(1-x^4)^{-j/3}dx$ equal
+$\tfrac14B(\tfrac{k+1}4,1-\tfrac j3)$ \emph{exactly} (symbolic), with
+all Gamma denominators on the $\zeta_{12}$ grid
+($\Gamma(11/12),\Gamma(7/12),\Gamma(5/12),\Gamma(1/12)$) --- the
+$12=|\mu_4|\cdot|\mu_3|$ structure appears in the analytic layer;
+the $\mu_4$ rotation acts on actual periods with the exact
+characters $i^{k+1}$ ($40$-digit certificates); the quotient curve's
+real period is the classical $\omega$-CM value
+$\Omega_E=B(1/3,1/6)/2=\Gamma(1/6)\Gamma(1/3)/(2\sqrt\pi)$ exactly;
+and the cross-factor period ratio admits \emph{no} low-degree
+integer relation (PSLQ null) --- the two CM factors are
+period-independent, exactly as the v610 splitting demands.  The
+period dictionary (every cover period a Beta/Gamma monomial on the
+$12$-grid) is the named analytic resource for the Hodge/RP
+comparisons.
+Machine-checked: \veri{v611\_periods.py}.
+\mE\ (symbolic Beta identities; certificates; PSLQ-null consistency;
+no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

@@ -43,6 +43,1374 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the periods round lands ("
+      },
+      {
+        "k": "c",
+        "v": "v611"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the analytic layer of the cover is CLASSICAL — all five basic period integrals are exact Beta values with Gamma denominators on the "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta_{12}"
+      },
+      {
+        "k": "t",
+        "v": " grid ("
+      },
+      {
+        "k": "m",
+        "v": "\\Gamma(11/12),\\Gamma(7/12),\\Gamma(5/12),\\Gamma(1/12)"
+      },
+      {
+        "k": "t",
+        "v": "); the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " rotation acts on periods with the exact characters "
+      },
+      {
+        "k": "m",
+        "v": "i^{k+1}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\Omega_E=B(1/3,1/6)/2"
+      },
+      {
+        "k": "t",
+        "v": " exactly; and the cross-factor period ratio admits no low-degree integer relation (PSLQ null) — the two CM factors are period-independent, as the v610 splitting demands"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v611_periods.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.PERIODS.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 6/6, PERIODS-CLASSICAL)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Five symbolic Beta identities; three 40-digit rotation-character certificates; the classical "
+        },
+        {
+          "k": "m",
+          "v": "\\omega"
+        },
+        {
+          "k": "t",
+          "v": "-CM period; the PSLQ-null cross-factor consistency; the period dictionary named as the Hodge/RP resource."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + note on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.LANDSCAPE.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "604\\to605"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXVII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the curve landscape lands ("
+      },
+      {
+        "k": "c",
+        "v": "v610"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the Jacobian SPLITS into a "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Q}(\\zeta_{12})"
+      },
+      {
+        "k": "t",
+        "v": "-CM abelian surface — the field of deck AND marks together — times the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Q}(\\omega)"
+      },
+      {
+        "k": "t",
+        "v": "-CM elliptic quotient "
+      },
+      {
+        "k": "m",
+        "v": "E: y^3=u^2-1"
+      },
+      {
+        "k": "t",
+        "v": ", point-count-confirmed ("
+      },
+      {
+        "k": "m",
+        "v": "a_p(C)=a_p(E)"
+      },
+      {
+        "k": "t",
+        "v": " exactly for all ten tested "
+      },
+      {
+        "k": "m",
+        "v": "p\\not\\equiv1"
+      },
+      {
+        "k": "t",
+        "v": " mod "
+      },
+      {
+        "k": "m",
+        "v": "12"
+      },
+      {
+        "k": "t",
+        "v": "); the integer-spectrum census honestly relativizes single-char hits (7894 integer entries — single spectra are cheap; the anchor class is the most frequent nontrivial family at "
+      },
+      {
+        "k": "m",
+        "v": "286"
+      },
+      {
+        "k": "t",
+        "v": "; the compiler's distinction is the joint structure); two new canonical period resources named"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v610_curve_landscape.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.LANDSCAPE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "9"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 9/9, LANDSCAPE-MAPPED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Differential characters "
+        },
+        {
+          "k": "m",
+          "v": "(12,12,6)"
+        },
+        {
+          "k": "t",
+          "v": "; splitting confirmed at "
+        },
+        {
+          "k": "m",
+          "v": "14"
+        },
+        {
+          "k": "t",
+          "v": " primes (ten exact zero-differences; surface traces "
+        },
+        {
+          "k": "m",
+          "v": "(-8,4,-20,-32)"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "p\\equiv1"
+        },
+        {
+          "k": "t",
+          "v": " mod "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "a_p=0"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "p\\equiv2"
+        },
+        {
+          "k": "t",
+          "v": " mod "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": "; census: anchor class "
+        },
+        {
+          "k": "m",
+          "v": "286="
+        },
+        {
+          "k": "t",
+          "v": " max nontrivial, "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,1,3\\}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "254"
+        },
+        {
+          "k": "t",
+          "v": "; v598/v599 char hits retroactively confirmed as correctly typed candidates."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.COVER.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.DICT.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "603\\to604"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the translator factorization lands ("
+      },
+      {
+        "k": "c",
+        "v": "v609"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the geometric identity of "
+      },
+      {
+        "k": "m",
+        "v": "c"
+      },
+      {
+        "k": "t",
+        "v": " is CLOSED — the mirror intertwiner "
+      },
+      {
+        "k": "m",
+        "v": "d"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "dA=\\Gamma(A)d"
+      },
+      {
+        "k": "t",
+        "v": ") is unique, unimodular ("
+      },
+      {
+        "k": "m",
+        "v": "\\det d=1"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}[\\omega]"
+      },
+      {
+        "k": "t",
+        "v": "-integral and "
+      },
+      {
+        "k": "m",
+        "v": "\\Gamma"
+      },
+      {
+        "k": "t",
+        "v": "-involutive ("
+      },
+      {
+        "k": "m",
+        "v": "\\Gamma(d)d=1"
+      },
+      {
+        "k": "t",
+        "v": " exactly), and the v605 element factorizes exactly as "
+      },
+      {
+        "k": "m",
+        "v": "c=\\lambda K_1d"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "K_1=J^{-1}\\overline{F_2}^TM^{-1}"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_{\\mathrm{corpus}}=J\\mathrm{adj}\\circ\\mathrm{inner}(K_1)\\circ\\mathrm{inner}(d)"
+      },
+      {
+        "k": "t",
+        "v": " — all three v605 residuals are now resolved (seam reversal v603, zero-mode rule v607, "
+      },
+      {
+        "k": "m",
+        "v": "c"
+      },
+      {
+        "k": "t",
+        "v": "-identity v609)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v609_translator_factorization.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.CFACTOR.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "8"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 8/8, C-FACTORIZATION-LANDED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Intertwiner space 1-dim; "
+        },
+        {
+          "k": "m",
+          "v": "\\det d=1"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "d\\in M_3(\\mathbb{Z}[\\omega])"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma(d)d=1"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "c=\\lambda K_1d"
+        },
+        {
+          "k": "t",
+          "v": " exact ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda=1/7-3\\sqrt3 i/7"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{inner}(K_1d)"
+        },
+        {
+          "k": "t",
+          "v": " reproduces "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi"
+        },
+        {
+          "k": "t",
+          "v": " on the pair; honest scope: "
+        },
+        {
+          "k": "m",
+          "v": "F_2"
+        },
+        {
+          "k": "t",
+          "v": " carries the corpus datum by definition; the v606 arithmetic negative explains why the cyclotomic route had to fail."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.TRANSLATOR.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.MODESEP.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "602\\to603"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the free gamma slice lands ("
+      },
+      {
+        "k": "c",
+        "v": "v608"
+      },
+      {
+        "k": "t",
+        "v": " promoted) — the first executed step of the WOIT "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma"
+      },
+      {
+        "k": "t",
+        "v": " milestone: mirror modes are STRICTLY OS-negative sector-exactly (every mirror fermion vector has negative OS norm — no mirror survives reconstruction, kill test (3) cannot fire at the free level), the chiral generation is multiplicity-free (clock spectrum exactly "
+      },
+      {
+        "k": "m",
+        "v": "\\{1,\\sqrt2-1\\}"
+      },
+      {
+        "k": "t",
+        "v": "), and the mark transport exists ("
+      },
+      {
+        "k": "m",
+        "v": "\\tau_2"
+      },
+      {
+        "k": "t",
+        "v": " is the mark-A"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "B transport, PD — kill test (7) does not fire free); "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma"
+      },
+      {
+        "k": "t",
+        "v": " itself stays open on "
+      },
+      {
+        "k": "m",
+        "v": "\\mathcal A_{\\mathrm{hol}}"
+      },
+      {
+        "k": "t",
+        "v": "; side finding: "
+      },
+      {
+        "k": "m",
+        "v": "14c"
+      },
+      {
+        "k": "t",
+        "v": " is unipotent mod "
+      },
+      {
+        "k": "m",
+        "v": "(1-\\omega)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v608_gamma_free_slice.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "WOIT.GAMMA.FREE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "9"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 9/9, GAMMA-FREE-SLICE-LANDED; the v524 machinery imported read-only)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Chiral "
+        },
+        {
+          "k": "m",
+          "v": "(16,0,0)"
+        },
+        {
+          "k": "t",
+          "v": "; anti-chiral "
+        },
+        {
+          "k": "m",
+          "v": "(8,8,0)"
+        },
+        {
+          "k": "t",
+          "v": " with even "
+        },
+        {
+          "k": "m",
+          "v": "(8,0,0)"
+        },
+        {
+          "k": "t",
+          "v": " PD and odd "
+        },
+        {
+          "k": "m",
+          "v": "(0,8,0)"
+        },
+        {
+          "k": "t",
+          "v": " strictly ND; clock spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,\\sqrt2-1\\}"
+        },
+        {
+          "k": "t",
+          "v": " multiplicity-free on the fermion domain; mark algebras PD "
+        },
+        {
+          "k": "m",
+          "v": "(4,0,0)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\dim 4=|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": ", products generate the full "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-dim basis, "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_2"
+        },
+        {
+          "k": "t",
+          "v": " transports mark A to mark B."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "WOIT.OS.TWISTOR.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "WOIT.BETA2.OS.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\gamma"
+        },
+        {
+          "k": "t",
+          "v": "-stage free-slice note); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary (incl. the "
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": "-unipotency side finding); suite "
+        },
+        {
+          "k": "m",
+          "v": "601\\to602"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXIV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the selection rule lands ("
+      },
+      {
+        "k": "c",
+        "v": "v607"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the infinity torsion is a genuine "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{F}_3"
+      },
+      {
+        "k": "t",
+        "v": " space, the deck rotation acts with char "
+      },
+      {
+        "k": "m",
+        "v": "(x+1)(x^2+1)"
+      },
+      {
+        "k": "t",
+        "v": " mod "
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": " — EXACTLY ONE projective eigenline, and it IS the top mode; the three modes carry mutually exclusive canonical labels (seam "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "R"
+      },
+      {
+        "k": "t",
+        "v": "-real, top "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " deck-eigen, zero "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the only unlabeled) and "
+      },
+      {
+        "k": "m",
+        "v": "S_0"
+      },
+      {
+        "k": "t",
+        "v": " flips exactly the labeled pair: BOTH v590 demands expressed through cover structure (typed reading; the gate residual is the continuum derivation)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v607_selection_rule.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.SELRULE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "10"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 10/10, SELECTION-RULE-LANDED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\omega"
+        },
+        {
+          "k": "t",
+          "v": "-multiplication acts as the identity on the torsion; the induced "
+        },
+        {
+          "k": "m",
+          "v": "r"
+        },
+        {
+          "k": "t",
+          "v": "-action is "
+        },
+        {
+          "k": "m",
+          "v": "[[0,1,0],[1,0,2],[2,2,2]]"
+        },
+        {
+          "k": "t",
+          "v": " mod "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " with only fixed class "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "x^2+1"
+        },
+        {
+          "k": "t",
+          "v": " irreducible over "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{F}_3"
+        },
+        {
+          "k": "t",
+          "v": " gives structural uniqueness of the eigenline ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda=-1"
+        },
+        {
+          "k": "t",
+          "v": "), census-confirmed; the top-mode class is that eigenline, the zero mode and the seam are not projectively fixed (nor under "
+        },
+        {
+          "k": "m",
+          "v": "r^2"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.MODESEP.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.INVOL.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "600\\to601"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the mode-separation round lands ("
+      },
+      {
+        "k": "c",
+        "v": "v606"
+      },
+      {
+        "k": "t",
+        "v": " promoted — the suite reaches "
+      },
+      {
+        "k": "m",
+        "v": "600"
+      },
+      {
+        "k": "t",
+        "v": " scripts): the infinity torsion SEPARATES the three "
+      },
+      {
+        "k": "m",
+        "v": "V"
+      },
+      {
+        "k": "t",
+        "v": "-eigenlines (all pure 3-torsion at infinity, classes pairwise distinct — the selection carrier the real structure could not provide; the canonical “"
+      },
+      {
+        "k": "m",
+        "v": "+1"
+      },
+      {
+        "k": "t",
+        "v": "” rule stays open); the arithmetic-identity route for "
+      },
+      {
+        "k": "m",
+        "v": "c"
+      },
+      {
+        "k": "t",
+        "v": " is closed (cubic field disc "
+      },
+      {
+        "k": "m",
+        "v": "-783"
+      },
+      {
+        "k": "t",
+        "v": ", Galois "
+      },
+      {
+        "k": "m",
+        "v": "S_3"
+      },
+      {
+        "k": "t",
+        "v": ", not abelian); the equidistribution conjecture is posed with the explicit constant "
+      },
+      {
+        "k": "m",
+        "v": "C=1"
+      },
+      {
+        "k": "t",
+        "v": " in the prime-front paper; and the contract survey executes its bookkeeping (the disc-"
+      },
+      {
+        "k": "m",
+        "v": "7"
+      },
+      {
+        "k": "t",
+        "v": " preregistration's discrete half marked executed via v571/v575/v578; the WOIT "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma"
+      },
+      {
+        "k": "t",
+        "v": " milestone documented as the designed next step)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v606_mode_separation.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.MODESEP.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "7"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 7/7, MODES-SEPARATED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Unique intertwiner (rank 3, 1-param); all three eigenline lifts pure torsion; fixed-frame signatures "
+        },
+        {
+          "k": "m",
+          "v": "(2,0,2)/(2,2,0)/(1,2,0)"
+        },
+        {
+          "k": "t",
+          "v": ", pairwise distinct, none trivial; "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{char}(7\\Gamma(c)c)=y^3+3y^2+6y-1"
+        },
+        {
+          "k": "t",
+          "v": " irreducible with discriminant "
+        },
+        {
+          "k": "m",
+          "v": "-783=-3^3\\cdot29"
+        },
+        {
+          "k": "t",
+          "v": " non-square."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.TRANSLATOR.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SEAMMARKS.01"
+        },
+        {
+          "k": "t",
+          "v": " and the cross-reference on "
+        },
+        {
+          "k": "c",
+          "v": "FTR.DISC7.NORM.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " (the constant-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " statement in "
+        },
+        {
+          "k": "c",
+          "v": "sec:theory-open"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "599\\to600"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XXII",
     "heading": [
       {
