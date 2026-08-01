@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`608` registered scripts · `679` ledger claims · `10` clusters.
+`609` registered scripts · `680` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (130 scripts)
+### `core` — Compiler core & the E₈ glue  (131 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -271,6 +271,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v612_polarization_frame, v611_periods, v610_curve_landscape, v599_real_structure, v597, v599, v610, v611 · cited: 3 e8 audit bootstrap
 - **v614_transport_deck** [E/C] `QGEO.TRANSPORT.01` — **DER DECK-SCHRITT IST DIE RAND-MONODROMIE**: der Transport der Segment-Zyklen entlang der starren Viertel-Rotations-Schleife der vier Verzweigungspunkte lässt die Diskriminante λ(
   - deps: v613_canonical_periods, v612_polarization_frame, v597, v612, v613 · cited: 3 e8 audit bootstrap
+- **v615_gamma_toy_interacting** [C/X] `WOIT.GAMMA.TOY.01` — die γ-Batterie AUF der RP-überlebenden Wechselwirkungsklasse (das Alignment-Bit: δ = π/2, positive Kopplung, v534) des 16-Majorana-FK-Seam-Toys: **DER WECHSELWIRKENDE SPIEGEL-FLIP*
+  - deps: v608_gamma_free_slice, v534_seam_straddle_cone, v529_seam_interacting_toy_fk, v519_woit_theta_rp_free, v524_woit_beta2_os_quotient, v519, v524, v529 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1287,7 +1289,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v603_seam_marks** — `QGEO.SEAMMARKS.01`
 - **v604_equivariant_order** — `QGEO.EQORDER.01`
 - **v605_translator** — `QGEO.TRANSLATOR.01`
 - **v606_mode_separation** — `QGEO.MODESEP.01`
@@ -1299,4 +1300,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v612_polarization_frame** — `QGEO.POLFRAME.01`
 - **v613_canonical_periods** — `QGEO.PERNORM.01`
 - **v614_transport_deck** — `QGEO.TRANSPORT.01`
+- **v615_gamma_toy_interacting** — `WOIT.GAMMA.TOY.01`
 

@@ -192,7 +192,8 @@ export type PrimeFrontVerdict =
   | "PERIODS-CLASSICAL"
   | "POLARIZATION-FRAMED"
   | "PERIOD-NORMALIZED"
-  | "TRANSPORT-CANONICAL";
+  | "TRANSPORT-CANONICAL"
+  | "GAMMA-TOY-LANDED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -216,6 +217,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The interacting gamma slice — chirality survives the interaction, exactly where RP survives. The WOIT gamma milestone asks: does the one-generation-without-mirrors structure survive on the INTERACTING algebra? v608 answered at the free level; this round answers on the only interacting model the corpus has — the 16-Majorana Fidkowski–Kitaev seam toy, at the ONE interaction that reflection positivity allows (the alignment bit δ = π/2 with positive coupling, the unique survivor of v534's selection law). The results, over the whole coupling grid g ∈ {1/32 … 8}: the chiral OS Grams stay positive definite on all four cuts (the survivor anchor), and at the SAME forced twist the MIRROR state splits sector-exactly — even sector positive, odd sector STRICTLY NEGATIVE DEFINITE, bounded away from zero (max odd eigenvalue ≤ −1.5e−3). Every mirror fermion vector has strictly negative OS norm at the interacting level: no mirror mode survives reconstruction — kill test (3) cannot fire on the surviving interaction class. The mark transport also survives: the quarter turn maps the mark-A quartet algebra exactly onto the mark-B sites, and both the mark Gram and the transport form are Hermitian positive definite at every coupling — kill test (7) does not fire. The odd transfer spectrum stays multiplicity-free at every g (honest finding: at strong coupling g = 8 the eigenvalues pair up to gaps ~2e−5 without closing — a near-doubling tendency worth watching). And the control that makes the story sharp: the RP-dead member (m = 2) has NO gamma home — its straddled cut is indefinite. The dynamical selection of the alignment bit and the chirality data CO-LOCATE on the same interaction: reflection positivity does not just pick the bit, it picks the member where chirality is protected. Fence: one toy, one interaction class; gamma proper stays open on A_hol; kill test (6) untouched.",
+    verdict: "GAMMA-TOY-LANDED",
+    summary:
+      "v615_gamma_toy_interacting.py promoted (WOIT.GAMMA.TOY.01, 11 checks; probe gamma_toy_interacting_probe.py 11/11, GAMMA-TOY-LANDED): chiral/mirror parents I ± iC; chiral Grams PD (37,0,0) on all four cuts, g ∈ {1/32..8} (v534 regression); mirror odd sector (0,8,0) strictly ND, bounded ≤ −1.5e−3 — kill test (3) cannot fire on the survivor; mark transport α₄ exact 16/16, Gram + transport form PD at every g — kill test (7) does not fire; odd spectrum multiplicity-free (min gap 2.3e−5); dead member m = 2 indefinite. Kill tests (3)/(6)/(7) stay live on A_hol. Suite 608 → 609 scripts.",
+    badge: "sandbox",
+    script: "gamma_toy_interacting_probe.py",
+  },
   {
     date: "2026-08-01",
     part: 0,

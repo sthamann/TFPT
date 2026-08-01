@@ -43,6 +43,276 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXXII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the interacting gamma slice lands at toy level ("
+      },
+      {
+        "k": "c",
+        "v": "v615"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the gamma battery executed ON the RP-surviving interaction class (the alignment bit "
+      },
+      {
+        "k": "m",
+        "v": "\\delta=\\pi/2"
+      },
+      {
+        "k": "t",
+        "v": ", positive coupling, v534) — THE INTERACTING MIRROR FLIP: at the forced twist "
+      },
+      {
+        "k": "m",
+        "v": "\\eta=+i"
+      },
+      {
+        "k": "t",
+        "v": " the mirror state's odd sector is STRICTLY NEGATIVE DEFINITE on every cut and every coupling "
+      },
+      {
+        "k": "m",
+        "v": "g\\in\\{1/32..8\\}"
+      },
+      {
+        "k": "t",
+        "v": " (bounded away from zero: kill test (3) cannot fire on the surviving class — v608 upgraded from "
+      },
+      {
+        "k": "m",
+        "v": "g=0"
+      },
+      {
+        "k": "t",
+        "v": " to the full grid); the mark transport exists interacting (kill test (7) does not fire); the odd transfer spectrum stays multiplicity-free; and the dead member has no RP home — the dynamical bit selection and the chirality data CO-LOCATE on the same member"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v615_gamma_toy_interacting.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "WOIT.GAMMA.TOY.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "11"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 11/11, GAMMA-TOY-LANDED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Chiral/mirror parents ("
+        },
+        {
+          "k": "m",
+          "v": "I\\pm iC"
+        },
+        {
+          "k": "t",
+          "v": ", gap "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "); v534 survivor anchor reproduced; sector-exact mirror flip (even "
+        },
+        {
+          "k": "m",
+          "v": "(29,0,0)"
+        },
+        {
+          "k": "t",
+          "v": " PD, odd "
+        },
+        {
+          "k": "m",
+          "v": "(0,8,0)"
+        },
+        {
+          "k": "t",
+          "v": " ND, max odd eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "\\le-1.5\\cdot10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\eta=-i"
+        },
+        {
+          "k": "t",
+          "v": " convention control; mark transport "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_4"
+        },
+        {
+          "k": "t",
+          "v": " exact "
+        },
+        {
+          "k": "m",
+          "v": "16/16"
+        },
+        {
+          "k": "t",
+          "v": " with Gram and transport form Hermitian PD at every "
+        },
+        {
+          "k": "m",
+          "v": "g"
+        },
+        {
+          "k": "t",
+          "v": "; odd transfer spectrum simple at every "
+        },
+        {
+          "k": "m",
+          "v": "g"
+        },
+        {
+          "k": "t",
+          "v": " (honest finding: strong-coupling near-doubling at "
+        },
+        {
+          "k": "m",
+          "v": "g=8"
+        },
+        {
+          "k": "t",
+          "v": " without closing; "
+        },
+        {
+          "k": "m",
+          "v": "g=0"
+        },
+        {
+          "k": "t",
+          "v": " top "
+        },
+        {
+          "k": "m",
+          "v": "1.641438"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " numerically the v524 clock top); dead-member control "
+        },
+        {
+          "k": "m",
+          "v": "(m{=}2,s{=}+)"
+        },
+        {
+          "k": "t",
+          "v": " indefinite. Kill tests (3)/(6)/(7) stay formally live on "
+        },
+        {
+          "k": "m",
+          "v": "\\mathcal A_{\\mathrm{hol}}"
+        },
+        {
+          "k": "t",
+          "v": "; kill test (6) untouched."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + note on "
+        },
+        {
+          "k": "c",
+          "v": "WOIT.GAMMA.FREE.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\gamma"
+        },
+        {
+          "k": "t",
+          "v": "-stage note); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "608\\to609"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XXXI",
     "heading": [
       {

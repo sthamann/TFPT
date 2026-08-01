@@ -2364,6 +2364,45 @@ Machine-checked: \veri{v614\_transport\_deck.py}.
 no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The interacting gamma slice at toy level
+(\texttt{WOIT.GAMMA.TOY.01}).}
+The gamma battery executed \emph{on} the RP-surviving interaction
+class ($11$ checks, ${\sim}2$\,s): the alignment bit $\delta=\pi/2$
+with positive coupling --- the unique member of the equivariant FK
+mark family that keeps reflection positivity (v534) --- now carries
+the chirality data at $g>0$.  The two parents (chiral $I+iC$, mirror
+$I-iC$, both gap $1$) are identified; the chiral interacting Grams
+stay PD $(37,0,0)$ at the forced twist $\eta=+i$ on all four cuts
+for $g\in\{1/32,1/4,1,8\}$ (v534 regression); and the centerpiece:
+at the \emph{same} twist the mirror state splits sector-exactly on
+\emph{every} cut and \emph{every} coupling --- even $(29,0,0)$ PD,
+odd $(0,8,0)$ \emph{strictly negative definite} with max odd
+eigenvalue $\le-1.5\cdot10^{-3}$, bounded away from zero over the
+whole grid.  Every mirror fermion vector has strictly negative OS
+norm at the interacting level: in the doubled vector-like system any
+OS-positive subspace meets the mirror odd sector in $\{0\}$ ---
+kill test (3) cannot fire on the surviving interaction class
+(v608 upgraded from $g=0$ to the full grid).  The mark transport
+exists interacting: $\alpha_4$ maps the mark-A quartet algebra
+exactly into the mark-B sites ($16/16$), and both the mark Gram and
+the transport form are Hermitian PD at every $g$ --- kill test (7)
+does not fire at the interacting toy level.  The odd transfer
+spectrum stays multiplicity-free at every $g$ (honest finding: a
+strong-coupling near-doubling at $g=8$, gaps ${\sim}2\cdot10^{-5}$,
+without closing; the $g=0$ top $1.641438$ is numerically the v524
+compressed-clock top --- the quarter-turn transfer datum recurs
+across $N$).  Dead-member control: the RP-dead member
+$(m{=}2,s{=}+)$ is indefinite on its straddled cut --- off the
+survivor the gamma battery has no RP home: the dynamical bit
+selection and the chirality data \emph{co-locate} on the same
+member.  Fence: one toy, one interaction class; kill tests
+(3)/(6)/(7) stay formally live on $\mathcal A_{\mathrm{hol}}$; kill
+test (6) untouched.
+Machine-checked: \veri{v615\_gamma\_toy\_interacting.py}.
+\mE/\mC\ (float certificates, declared tolerances; toy fence;
+no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================
