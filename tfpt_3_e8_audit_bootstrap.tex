@@ -2080,6 +2080,60 @@ Machine-checked: \veri{v603\_seam\_marks.py}.
 moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The equivariant order and the infinity
+bridge (\texttt{QGEO.EQORDER.01}).}
+Three integral statements ($12$ checks, ${\sim}4$\,s).  First, a
+correction with a payoff: $R$ \emph{is} an anti-isometry of the
+polarization --- the correct compatibility equation
+$M^\dagger JM=J^T$ holds exactly --- so $J$ restricts to a real
+symmetric \emph{integer} form on the saturated fixed lattice,
+$J_{\mathrm{fix}}=[[16,2,4],[2,-2,2],[4,2,-2]]$ with
+$\det=72=8\cdot9$.  Second, the four mark frames together generate a
+\emph{full} order: the joint lattice of all $28$ rotated words has
+rank $18$ in $M_3(\mathbb{Z}[\omega])$ with Smith divisors
+$(1^{15},3,3,3)$ --- index $27=3^3$ (one frame: the $7$-dim parabolic
+of index $81=3^4$; all four: the full algebra of index $27$).  Third,
+the 3-torsion \emph{localizes at infinity}:
+$\mathrm{coker}(1-T_\infty)=\mathbb{Z}^2\oplus(\mathbb{Z}/3)^3$ while
+every finite cusp twist is torsion-free --- three objects share
+$(\mathbb{Z}/3)^3=27$ (infinity monodromy, equivariant order,
+$\det_{\mathbb{Z}}(1-\mathrm{deck})$): the compiler constants
+localize, $81$ at the finite marks and $27$ at infinity.  Translator
+negatives extended ($J_{\mathrm{fix}}$-menu and algebra twists fail;
+the $\bar\omega$-sheet is the named candidate).
+Machine-checked: \veri{v604\_equivariant\_order.py}.
+\mE\ (exact integral statements; typed localization reading; no
+marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The translator round
+(\texttt{QGEO.TRANSLATOR.01}).}
+The corpus RP anti-automorphism is \emph{found} on the curve ($11$
+checks, ${\sim}11$\,s): pulling $\theta(X)=\Sigma X^T\Sigma$ back
+along the compiler conjugation and composing with the J-adjoint gives
+an algebra automorphism $\varphi$ --- and $\varphi$ is \emph{inner}:
+the intertwiner space is one-dimensional, its generator $c$ is
+invertible, and $\varphi(A)=cAc^{-1}$ holds exactly.  Hence
+$\theta_{\mathrm{corpus}}=J\mathrm{adj}\circ\mathrm{inner}(c)$ --- the
+RP structure is fully expressed in curve language (polarization plus
+one explicit element), with $14c$ integral over
+$\mathbb{Z}[\omega]$ (denominator $14=2\cdot7$, the parabolic
+dimension); the single-sheet negatives of v603/v604 are thereby
+resolved (the missing object was inner, not a new form).  The seam is
+a \emph{nonzero pure 3-torsion class at infinity}: its lift has zero
+free coordinates and torsion coordinates $(2,2,0)$ in
+$\mathrm{coker}(1-T_\infty)$ --- the integral seam/infinity
+identification.  The $81$ \emph{survives} frame-joining: the chain
+$O_1\subset O_{\mathrm{joint}}\cap\mathrm{span}_1\subset P_1$ has
+indices $3^5$ and $3^4=81$.  And the $J_{\mathrm{fix}}$ duality is
+certified with an explicit integer dual
+($C_V^TJ_{\mathrm{fix}}=J_{\mathrm{fix}}C_{V\mathrm{dual}}$; Lean
+addendum green).  $c$'s independent geometric identity stays open.
+Machine-checked: \veri{v605\_translator.py}.
+\mE\ (exact translator/bridge/chain/duality; typed opens; no marker
+moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

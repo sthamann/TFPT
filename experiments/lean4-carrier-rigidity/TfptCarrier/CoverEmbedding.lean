@@ -157,4 +157,40 @@ theorem S_primitive : Smin * SminInv = 1 := by decide
 theorem index_is_three_pow_four : (1 * 1 * 1 * 3 * 3 * 3 * 3 : ℤ) = 3 ^ 4 := by
   norm_num
 
+/-! ### The restricted polarization form (v604)
+
+The real structure is an anti-isometry of the polarization
+(`M^dagger J M = J^T`, machine-checked in v604), so J restricts to a
+real symmetric INTEGER form on the saturated fixed lattice. -/
+
+/-- The restricted polarization form on the fixed lattice. -/
+def Jfix : Matrix (Fin 3) (Fin 3) ℤ :=
+  !![16, 2, 4; 2, -2, 2; 4, 2, -2]
+
+theorem Jfix_symmetric : Jfix.transpose = Jfix := by decide
+
+/-- det J_fix = 72 = 8 * 9: the polarization determinant times the
+    (1-omega)-covolume factor. -/
+theorem Jfix_det : Jfix.det = 72 := by decide
+
+theorem Jfix_det_factorization : (72 : ℤ) = 8 * 3 ^ 2 := by norm_num
+
+/-- The J_fix-dual of the sheet operator (the plane-stabilizer half of
+    the duality, v602/v604). -/
+def CVdual : Matrix (Fin 3) (Fin 3) ℤ :=
+  !![1, 0, 0; -2, 0, 0; 2, 1, 2]
+
+/-- Duality certificate: C_V^T * J_fix = J_fix * C_Vdual (the transpose
+    with respect to the restricted polarization form is the explicit
+    integer dual operator). -/
+theorem CV_dual_certificate : CV.transpose * Jfix = Jfix * CVdual := by decide
+
+/-- The dual sheet operator carries the same binary code:
+    C_Vdual^3 = 3 C_Vdual^2 - 2 C_Vdual (Spec = {0,1,2}). -/
+theorem CVdual_cubic :
+    CVdual * CVdual * CVdual = 3 • (CVdual * CVdual) - 2 • CVdual := by decide
+
+/-- Dual joint trace: tr(C_U * C_Vdual) = 3. -/
+theorem dual_joint_trace : Matrix.trace (CU * CVdual) = 3 := by decide
+
 end TfptCarrier.CoverEmbedding

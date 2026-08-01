@@ -43,6 +43,665 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the translator round lands ("
+      },
+      {
+        "k": "c",
+        "v": "v605"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the corpus RP anti-automorphism IS the J-adjoint twisted by an explicit inner element "
+      },
+      {
+        "k": "m",
+        "v": "c"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\varphi=J\\mathrm{adj}\\circ\\theta_{\\mathrm{pull}}"
+      },
+      {
+        "k": "t",
+        "v": " is inner, "
+      },
+      {
+        "k": "m",
+        "v": "c"
+      },
+      {
+        "k": "t",
+        "v": " unique up to scale, "
+      },
+      {
+        "k": "m",
+        "v": "14c"
+      },
+      {
+        "k": "t",
+        "v": " integral over "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}[\\omega]"
+      },
+      {
+        "k": "t",
+        "v": " — the single-sheet negatives resolved, the "
+      },
+      {
+        "k": "m",
+        "v": "\\bar\\omega"
+      },
+      {
+        "k": "t",
+        "v": " detour unnecessary); the seam is a NONZERO pure 3-torsion class at infinity (torsion coordinates "
+      },
+      {
+        "k": "m",
+        "v": "(2,2,0)"
+      },
+      {
+        "k": "t",
+        "v": "); the "
+      },
+      {
+        "k": "m",
+        "v": "81"
+      },
+      {
+        "k": "t",
+        "v": " survives frame-joining as the saturation defect (chain indices "
+      },
+      {
+        "k": "m",
+        "v": "3^5"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "3^4"
+      },
+      {
+        "k": "t",
+        "v": "); the "
+      },
+      {
+        "k": "m",
+        "v": "J_{\\mathrm{fix}}"
+      },
+      {
+        "k": "t",
+        "v": " duality certified with a Lean addendum"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v605_translator.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.TRANSLATOR.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "11"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 11/11, TRANSLATOR-LANDED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\varphi(A)=cAc^{-1}"
+        },
+        {
+          "k": "t",
+          "v": " exact (1-dim intertwiner space, "
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": " invertible); "
+        },
+        {
+          "k": "m",
+          "v": "14c"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}[\\omega]"
+        },
+        {
+          "k": "t",
+          "v": "-integral (denominator "
+        },
+        {
+          "k": "m",
+          "v": "14=2\\cdot7"
+        },
+        {
+          "k": "t",
+          "v": "); seam lift zero in the free part, "
+        },
+        {
+          "k": "m",
+          "v": "(2,2,0)"
+        },
+        {
+          "k": "t",
+          "v": " in the torsion of "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{coker}(1-T_\\infty)"
+        },
+        {
+          "k": "t",
+          "v": "; order chain "
+        },
+        {
+          "k": "m",
+          "v": "O_1\\subset O_{\\mathrm{joint}}\\cap\\mathrm{span}_1\\subset P_1"
+        },
+        {
+          "k": "t",
+          "v": " with indices "
+        },
+        {
+          "k": "m",
+          "v": "243"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "81"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "C_V^TJ_{\\mathrm{fix}}=J_{\\mathrm{fix}}C_{V\\mathrm{dual}}"
+        },
+        {
+          "k": "t",
+          "v": " integer; "
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": "'s independent geometric identity typed open."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "CoverEmbedding.lean"
+        },
+        {
+          "k": "t",
+          "v": " addendum: "
+        },
+        {
+          "k": "c",
+          "v": "Jfix_symmetric"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "Jfix_det"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "=72"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "CV_dual_certificate"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "CVdual_cubic"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "dual_joint_trace"
+        },
+        {
+          "k": "t",
+          "v": "; lake build green ("
+        },
+        {
+          "k": "m",
+          "v": "3375"
+        },
+        {
+          "k": "t",
+          "v": " jobs)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.EQORDER.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SEAMMARKS.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.DUALFORMS.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "598\\to599"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the equivariant-order round lands ("
+      },
+      {
+        "k": "c",
+        "v": "v604"
+      },
+      {
+        "k": "t",
+        "v": " promoted): "
+      },
+      {
+        "k": "m",
+        "v": "R"
+      },
+      {
+        "k": "t",
+        "v": " IS an anti-isometry of the polarization ("
+      },
+      {
+        "k": "m",
+        "v": "M^\\dagger JM=J^T"
+      },
+      {
+        "k": "t",
+        "v": " exact — correcting a diary side remark), "
+      },
+      {
+        "k": "m",
+        "v": "J"
+      },
+      {
+        "k": "t",
+        "v": " restricts to the integer form "
+      },
+      {
+        "k": "m",
+        "v": "J_{\\mathrm{fix}}"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\det=72=8\\cdot9"
+      },
+      {
+        "k": "t",
+        "v": "; the four mark frames generate a FULL order of index "
+      },
+      {
+        "k": "m",
+        "v": "27=3^3"
+      },
+      {
+        "k": "t",
+        "v": " in "
+      },
+      {
+        "k": "m",
+        "v": "M_3(\\mathbb{Z}[\\omega])"
+      },
+      {
+        "k": "t",
+        "v": "; and the 3-torsion localizes at infinity ("
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{coker}(1-T_\\infty)=\\mathbb{Z}^2\\oplus(\\mathbb{Z}/3)^3"
+      },
+      {
+        "k": "t",
+        "v": ", finite cusps torsion-free): "
+      },
+      {
+        "k": "m",
+        "v": "81"
+      },
+      {
+        "k": "t",
+        "v": " at the marks, "
+      },
+      {
+        "k": "m",
+        "v": "27"
+      },
+      {
+        "k": "t",
+        "v": " at infinity — the integral infinity/order-torsion bridge; translator negatives extended (the "
+      },
+      {
+        "k": "m",
+        "v": "\\bar\\omega"
+      },
+      {
+        "k": "t",
+        "v": "-sheet named)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v604_equivariant_order.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.EQORDER.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "12"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 12/12, EQUIVARIANT-ORDER-LANDED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Anti-isometry exact; "
+        },
+        {
+          "k": "m",
+          "v": "J_{\\mathrm{fix}}=[[16,2,4],[2,-2,2],[4,2,-2]]"
+        },
+        {
+          "k": "t",
+          "v": "; all "
+        },
+        {
+          "k": "m",
+          "v": "28"
+        },
+        {
+          "k": "t",
+          "v": " rotated words "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}[\\omega]"
+        },
+        {
+          "k": "t",
+          "v": "-integral, joint lattice full rank "
+        },
+        {
+          "k": "m",
+          "v": "18"
+        },
+        {
+          "k": "t",
+          "v": ", Smith divisors "
+        },
+        {
+          "k": "m",
+          "v": "(1^{15},3,3,3)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{coker}(1-T_\\infty)"
+        },
+        {
+          "k": "t",
+          "v": " divisors "
+        },
+        {
+          "k": "m",
+          "v": "(1,1,1,3,3,3,0,0)"
+        },
+        {
+          "k": "t",
+          "v": "; each finite cusp twist torsion-free; three objects share "
+        },
+        {
+          "k": "m",
+          "v": "(\\mathbb{Z}/3)^3=27"
+        },
+        {
+          "k": "t",
+          "v": " (infinity monodromy, equivariant order, "
+        },
+        {
+          "k": "m",
+          "v": "\\det(1-\\mathrm{deck})"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "F_2"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "J_{\\mathrm{fix}}"
+        },
+        {
+          "k": "t",
+          "v": "-menu and algebra-twist negatives quantified."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SEAMMARKS.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.COVER.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary (incl. the exploration round XX: "
+        },
+        {
+          "k": "m",
+          "v": "\\infty"
+        },
+        {
+          "k": "t",
+          "v": "-embedding, R-orbit classes, translator hunt); suite "
+        },
+        {
+          "k": "m",
+          "v": "597\\to598"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XIX",
     "heading": [
       {

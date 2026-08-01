@@ -181,7 +181,9 @@ export type PrimeFrontVerdict =
   | "JOINT-EMBEDDING-LANDED"
   | "EQUIVARIANT-DUAL-LANDED"
   | "DUALITY-FORMS-LANDED"
-  | "SEAM-REAL-LANDED";
+  | "SEAM-REAL-LANDED"
+  | "EQUIVARIANT-ORDER-LANDED"
+  | "TRANSLATOR-LANDED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -205,6 +207,28 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The translator round — the RP structure is found on the curve: it is the J-adjoint twisted by one explicit element. The corpus RP anti-automorphism θ(X) = ΣXᵀΣ had resisted every direct form-matching attempt (menu forms, Klein twists, J_fix — all quantified negatives). The right question was different: not 'which FORM translates θ' but 'which AUTOMORPHISM is left over'. Composing the pulled-back θ with the J-adjoint gives an algebra automorphism — and it is INNER: φ(A) = cAc⁻¹ exactly, with a unique (up to scale) invertible c whose normalization 14c is integral over the Eisenstein numbers (denominator 14 = 2·7, the parabolic dimension). So the corpus RP structure IS the polarization adjoint composed with one explicit inner twist — fully expressed in curve language, and the ω̄-sheet detour turned out unnecessary. Two more integral results in the same round: the seam line is a NONZERO pure 3-torsion class at infinity (its lift has zero free coordinates and torsion pattern (2,2,0) in the infinity cokernel — the integral seam/infinity identification), and the 81 SURVIVES frame-joining (the order chain has indices 3⁵ then 3⁴ = 81: joining all four marks refines each frame by exactly 3⁵, leaving the v566 index as the residual defect). Plus: the J_fix duality certified with an explicit integer dual operator, and a Lean addendum (build green). Open and named: c's independent geometric identity.",
+    verdict: "TRANSLATOR-LANDED",
+    summary:
+      "v605_translator.py promoted (QGEO.TRANSLATOR.01, 11 checks; probe translator_probe.py 11/11, TRANSLATOR-LANDED): φ = Jadj∘θ_pull inner, φ(A) = cAc⁻¹ exact, intertwiner space 1-dim, 14c ℤ[ω]-integral; seam lift free coords (0,0), torsion (2,2,0) in coker(1−T∞); order chain O₁ ⊂ O_joint∩span₁ ⊂ P₁ indices 243/81; C_VᵀJ_fix = J_fix·C_Vdual integer (char x(x−1)(x−2)); Lean: Jfix_symmetric, Jfix_det = 72, CV_dual_certificate, CVdual_cubic, dual_joint_trace (3375 jobs green). GATE.QGEO does not move. Suite 598 → 599 scripts.",
+    badge: "sandbox",
+    script: "translator_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The equivariant-order round — the two compiler constants localize on the cover: 81 at the marks, 27 at infinity. Three integral statements in one module. First, a correction that pays off: the real structure IS an anti-isometry of the polarization (the correct compatibility equation M†JM = Jᵀ holds exactly; an earlier diary side remark had tested the wrong equation) — so the polarization form J restricts to a genuinely INTEGER symmetric form on the fixed lattice, with determinant 72 = 8·9. Second, the four mark frames together generate a FULL order: rotating the equivariant pair through all four marks and taking all seven-word lattices jointly gives rank 18 — the entire 3×3 matrix algebra over the Eisenstein integers — with saturation index 27 = 3³ (one frame: the 7-dim parabolic of index 81 = 3⁴; all four: the full algebra of index 27). Third, the 3-torsion LOCALIZES AT INFINITY: the infinity-monodromy cokernel is ℤ² ⊕ (ℤ/3)³ while every finite cusp twist is torsion-free — three objects share the same (ℤ/3)³ = 27: the infinity monodromy, the equivariant order, and det(1−deck) from v597. The reading: 81 = 3⁴ lives at the finite marks (divisor classes, per-frame word order) and 27 = 3³ lives at infinity — the integral infinity/order-torsion bridge. Honest opens: the corpus RP translator resists all single-sheet constructions (J_fix menu and algebra twists quantified negative); the conjugate ω̄-sheet is the named next candidate.",
+    verdict: "EQUIVARIANT-ORDER-LANDED",
+    summary:
+      "v604_equivariant_order.py promoted (QGEO.EQORDER.01, 12 checks; probe equivariant_order_probe.py 12/12, EQUIVARIANT-ORDER-LANDED): M†JM = Jᵀ exact (R anti-isometry; corrects a v599 diary side remark); J_fix = [[16,2,4],[2,−2,2],[4,2,−2]], det 72; 28 rotated words ℤ[ω]-integral, joint lattice rank 18, Smith (1¹⁵,3,3,3), index 27 = 3³; coker(1−T∞) = ℤ²⊕(ℤ/3)³, finite cusps torsion-free; 81 at marks / 27 at infinity; F₂ vs J_fix menu + algebra twists negative (ω̄-sheet named). GATE.QGEO does not move. Suite 597 → 598 scripts.",
+    badge: "sandbox",
+    script: "equivariant_order_probe.py",
+  },
   {
     date: "2026-08-01",
     part: 0,

@@ -62,6 +62,39 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-08-01 (XXI) (the translator round lands (\texttt{v605} promoted): the corpus RP anti-automorphism IS the J-adjoint twisted by an explicit inner element $c$ ($\varphi=J\mathrm{adj}\circ\theta_{\mathrm{pull}}$ is inner, $c$ unique up to scale, $14c$ integral over $\mathbb{Z}[\omega]$ --- the single-sheet negatives resolved, the $\bar\omega$ detour unnecessary); the seam is a NONZERO pure 3-torsion class at infinity (torsion coordinates $(2,2,0)$); the $81$ survives frame-joining as the saturation defect (chain indices $3^5$, $3^4$); the $J_{\mathrm{fix}}$ duality certified with a Lean addendum)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v605\_translator.py} (\texttt{QGEO.TRANSLATOR.01}, $11$ checks; probe
+11/11, TRANSLATOR-LANDED).} $\varphi(A)=cAc^{-1}$ exact (1-dim intertwiner space, $c$
+invertible); $14c$ $\mathbb{Z}[\omega]$-integral (denominator $14=2\cdot7$); seam lift zero
+in the free part, $(2,2,0)$ in the torsion of $\mathrm{coker}(1-T_\infty)$; order chain
+$O_1\subset O_{\mathrm{joint}}\cap\mathrm{span}_1\subset P_1$ with indices $243$ and $81$;
+$C_V^TJ_{\mathrm{fix}}=J_{\mathrm{fix}}C_{V\mathrm{dual}}$ integer; $c$'s independent
+geometric identity typed open.
+\item \textbf{Lean.} \texttt{CoverEmbedding.lean} addendum: \texttt{Jfix\_symmetric},
+\texttt{Jfix\_det} $=72$, \texttt{CV\_dual\_certificate}, \texttt{CVdual\_cubic},
+\texttt{dual\_joint\_trace}; lake build green ($3375$ jobs).
+\item \textbf{Sync.} Ledger row + notes on
+\texttt{QGEO.EQORDER.01}/\texttt{QGEO.SEAMMARKS.01}/\texttt{QGEO.DUALFORMS.01};
+\texttt{tfpt\_3} (audit block); diary; suite $598\to599$ scripts; website/README/zenodo
+counters; mirrors regenerated.
+\end{itemize}
+
+\subsection*{\interlinepenalty=150\relax 2026-08-01 (XX) (the equivariant-order round lands (\texttt{v604} promoted): $R$ IS an anti-isometry of the polarization ($M^\dagger JM=J^T$ exact --- correcting a diary side remark), $J$ restricts to the integer form $J_{\mathrm{fix}}$ with $\det=72=8\cdot9$; the four mark frames generate a FULL order of index $27=3^3$ in $M_3(\mathbb{Z}[\omega])$; and the 3-torsion localizes at infinity ($\mathrm{coker}(1-T_\infty)=\mathbb{Z}^2\oplus(\mathbb{Z}/3)^3$, finite cusps torsion-free): $81$ at the marks, $27$ at infinity --- the integral infinity/order-torsion bridge; translator negatives extended (the $\bar\omega$-sheet named))}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v604\_equivariant\_order.py} (\texttt{QGEO.EQORDER.01}, $12$ checks; probe
+12/12, EQUIVARIANT-ORDER-LANDED).} Anti-isometry exact; $J_{\mathrm{fix}}=[[16,2,4],[2,-2,2],[4,2,-2]]$;
+all $28$ rotated words $\mathbb{Z}[\omega]$-integral, joint lattice full rank $18$, Smith
+divisors $(1^{15},3,3,3)$; $\mathrm{coker}(1-T_\infty)$ divisors $(1,1,1,3,3,3,0,0)$; each
+finite cusp twist torsion-free; three objects share $(\mathbb{Z}/3)^3=27$ (infinity
+monodromy, equivariant order, $\det(1-\mathrm{deck})$); $F_2$ vs $J_{\mathrm{fix}}$-menu and
+algebra-twist negatives quantified.
+\item \textbf{Sync.} Ledger row + notes on
+\texttt{QGEO.SEAMMARKS.01}/\texttt{QGEO.COVER.01}; \texttt{tfpt\_3} (audit block); diary
+(incl.\ the exploration round XX: $\infty$-embedding, R-orbit classes, translator hunt);
+suite $597\to598$ scripts; website/README/zenodo counters; mirrors regenerated.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-08-01 (XIX) (the seam-and-marks round lands (\texttt{v603} promoted): the seam line is a REAL line of the cover (unique common eigenline, $R$-fixed) and $S_0$ reverses it --- the v590 seam-reversal demand holds geometrically; the infinity cusp separates in the unreduced Burau module; the first per-mark $\mathbb{Z}/3$ witness lands ($E_1$, class order $3$ in the word-order cokernel); the corpus-transpose translator negatives are quantified)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v603\_seam\_marks.py} (\texttt{QGEO.SEAMMARKS.01}, $15$ checks; probe

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`597` registered scripts · `668` ledger claims · `10` clusters.
+`599` registered scripts · `670` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (119 scripts)
+### `core` — Compiler core & the E₈ glue  (121 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -249,6 +249,10 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v601_equivariant_dual, v600_joint_embedding, v599_real_structure, v566_parabolic_anchor_selfcode, v572, v590, v600, v601 · cited: 3 e8 audit bootstrap, research contracts
 - **v603_seam_marks** [E/C/X] `QGEO.SEAMMARKS.01` — DIE SEAM-LINIE IST REELL: das Linien-Stabilisator-Paar hat eine EINDEUTIGE gemeinsame Eigenlinie v (Uv = 0, Vv = v; explizit (0, (√3−i)/(√3+i), 1)); die reelle Struktur FIXIERT sie
   - deps: v602_duality_forms, v601_equivariant_dual, v600_joint_embedding, v590_involution_existence, v590, v600, v601, v602 · cited: 3 e8 audit bootstrap
+- **v604_equivariant_order** [E/C/X] `QGEO.EQORDER.01` — KORREKTUR: R IST eine Anti-Isometrie der Polarisierung (die richtige Gleichung M†JM = Jᵀ gilt EXAKT; die v599-Diary-Nebenbemerkung testete die falsche); J restringiert zu einer REE
+  - deps: v603_seam_marks, v602_duality_forms, v600_joint_embedding, v597_mu4_cover_model, v597, v600, v601, v602 · cited: 3 e8 audit bootstrap
+- **v605_translator** [E/C/O] `QGEO.TRANSLATOR.01` — DER RP-ÜBERSETZER EXISTIERT: die Korpus-RP-Anti-Automorphie θ(X) = ΣXᵀΣ, zurückgezogen und mit der J-Adjungierten komponiert, ist ein INNERER Automorphismus φ(A) = cAc⁻¹ (Intertwin
+  - deps: v604_equivariant_order, v603_seam_marks, v602_duality_forms, v600_joint_embedding, v572, v600, v601, v602 · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1265,8 +1269,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v592_continuum_det_law** — `PRIME.DETLAW.01`
-- **v593_cutoff_completion** — `PRIME.CUTOFF.01`
 - **v594_unconditional_cert** — `PRIME.UNCONDCERT.01`
 - **v595_mapping_completion** — `PRIME.MAPCLOSE.01`
 - **v596_lock_projection** — `PRIME.LOCKPROJ.01`
@@ -1277,4 +1279,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v601_equivariant_dual** — `QGEO.CANON.01`
 - **v602_duality_forms** — `QGEO.DUALFORMS.01`
 - **v603_seam_marks** — `QGEO.SEAMMARKS.01`
+- **v604_equivariant_order** — `QGEO.EQORDER.01`
+- **v605_translator** — `QGEO.TRANSLATOR.01`
 
