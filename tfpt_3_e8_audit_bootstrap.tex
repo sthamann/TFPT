@@ -1625,6 +1625,276 @@ RH statement. Machine-checked:
 on the declared subset with their ladders; no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The Chebyshev--Loewner edge structure
+(\texttt{PRIME.CHEBLOEWNER.01}).}
+A second external review proposed closed formulas for the parity read
+block; all of them audit EXACT ($9$ checks, ${\sim}6$\,s): the polarized
+cross-weight formula closes the whole $K=2$ read block analytically; the
+reflection-edge read is a scaled Loewner matrix of $U_{s-1}$ (rank
+$\le s-1$; the first edge read rank one by theorem); the leading
+modes-$(1,2)$ profile has Lorentz image $(5,-3,4)$ --- null exactly, the
+same Pythagorean triple as $(\gcar,\Nfam,|\mu_4|)$ via Euclid, typed
+compression; the normalized edge defect is the exact series coefficient
+$-\tfrac{3\pi^4}{175}(s^2{-}4)(11s^2{+}6)N^{-4}$; and the pair-kernel
+polynomial $P(s,z)$ ($P(2,3)=0$ exact; sign transition
+$s/z\approx0.503/1.987$) is the analytic prototype of the measured
+near-negative/far-positive anatomy. Three-regime split: edge closed at
+$N^{-4}$, macro and transition open; Problem~7.1 untouched; no RH
+statement. Machine-checked: \veri{v576\_cheb\_loewner\_edge.py}.
+\mE\ (exact formulas and series coefficients; the null bridge typed
+compression; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The null-ray locking census
+(\texttt{PRIME.NULLRAY.01}).}
+The review's Priority-2 prediction, tested verbatim: the pencil locking
+mode aligns with the exact null ray $(2,-1)$ on all $70$ declared windows
+($23.5$--$33.8^\circ$, below random), the decline is real but slow
+($h^{-0.10}$ --- the clean success bar honestly not met), and the
+scramble destroys the alignment ($+21^\circ$): a real \emph{partial}
+carrier; the macro regime bends the locking direction, exactly as the
+three-regime split predicts. Declared surface only; measured with
+ladders; no RH statement. Machine-checked:
+\veri{v577\_nullray\_census.py}.
+\mE\ (the ray exact; angles measured; honest partial verdict; no marker
+moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The two-scale kernel signs
+(\texttt{PRIME.MACROKERNEL.01}).}
+The macro object gets its global test ($6$ checks, ${<}1$\,s):
+$\operatorname{sign}K_\infty(\sigma,\tau)$ matches the sign of the real
+two-lag kernel on \emph{every} resolved grid cell at $h=300$ ($332/332$);
+the diagonal $\det W^\infty(\sigma)$ is negative on ${\sim}72\%$ of the
+range --- same-scale pairs couple negative, analytically: the macro
+origin of the measured near-diagonal drag --- and the wrong polarisation
+breaks the match loudly. The \emph{geometric} half of Regime~B closes;
+the arithmetic half (the $\Lambda$-weighted occupation of the cells by
+actual prime pairs) is the remaining open content; no RH statement.
+Machine-checked: \veri{v579\_macro\_kernel\_signs.py}.
+\mE\ (kernel geometry exact and sign-verified; the arithmetic half open;
+no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The arithmetic occupation map
+(\texttt{PRIME.OCCUPATION.01}).}
+The lag-side polarization identity $\det S=\tfrac12\sum
+c_{\mathrm{at}}(d_1)c_{\mathrm{at}}(d_2)D(W(d_1),W(d_2))$ is exact, and
+every significant cell of its binned occupation map sign-matches
+$K_\infty$ on every tested window: the primes \emph{populate} the
+geometric sign map --- the open Regime-B content is the amounts, not the
+signs; scramble control clean. Machine-checked:
+\veri{v580\_occupation\_map.py}.
+\mE\ (identity exact; occupation measured with ladders; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The multilevel transport census
+(\texttt{PRIME.TRANSPORT.01}).}
+The second review's transport lemma, measured on $40$ doubling pairs and
+killed honestly: the locking-direction drift is small
+($0.3$--$6.7^\circ$ per octave) but grows ($h^{+0.36}$) against the
+proposed summability bar $h^{-1-\delta}$ --- the review's own kill
+criterion fires; any future transport must carry the window-dependent
+macro direction. Machine-checked: \veri{v581\_locking\_transport.py}.
+\mE\ (census exact; drift measured; an honest negative; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The density-dominance reduction
+(\texttt{PRIME.DENSITYDOM.01}).}
+The distilled quantitative question receives its first-level answer
+($5$ checks, ${\sim}2$\,s): the smoothed comb reproduces $\det S$ to
+$99.8$--$99.9\%$ ($2\%$ smoothing) on every regular window through the
+exact lag-side identity, while on the scrambled window the smooth model
+captures only $70\%$ --- the real comb is anomalously \emph{smooth} at
+the $\det S$-relevant scales: the dominance is carried by the
+deterministic density profile, and the $h$-uniform question relocates to
+PNT-level regularity of the smooth functional (plus a ${\sim}1\%$
+fluctuation correction needing only a crude bound); the anomalous
+$h=1292$ boundary named; no RH statement. Machine-checked:
+\veri{v582\_density\_dominance.py}.
+\mE\ (identity exact; ratios measured with ladders; the smooth
+functional not yet bounded; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The prime-free closed form
+(\texttt{PRIME.PNTMODEL.01}).}
+The named next step lands the same day ($8$ checks, ${\sim}4$\,s): the
+two-term classical law
+$\mathrm{mass}(u)=4e^{u/2}-2(\zeta'/\zeta)(\tfrac12)$ --- pole term
+plus the $s=\tfrac12$ constant, \emph{no zeros} --- reproduces
+$\det S$ on all $69$ regular windows \emph{parameter-free} to
+$1.016$--$1.143$ (entries $0.995$--$1.001$; dominance correlation
+$0.998$); the anomalous $h=1292$ sign flip is typed as genuine
+prime-fluctuation content (prime-free $+1844$ vs real $-1465$). The
+$h$-uniform dominance splits into a deterministic prime-free
+two-integral inequality plus a zero-oscillation bound; no RH statement.
+Machine-checked: \veri{v583\_pnt\_model.py}.
+\mE\ (two-term law classical; theoretical constant, no fit; the
+inequality not yet proven; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The interacting Ext-source response
+(\texttt{DIAMOND.BIT.EXTSOURCE.01}).}
+The v572 remaining route is executed ($8$ checks, ${\sim}1$\,s):
+rank-one Ext-source coupling on the Gibbs pencil has exact rational
+flip thresholds $J_c(s)=-1/(v^{T}K(s)^{-1}v)$ whose numerators are
+exactly the twins' pencil factors; in the crossed phase positive
+coupling $J_c\le15/16<1$ heals exactly the compiler twin, while the
+alt twin cannot be flipped by any positive coupling in the open unit
+box --- the healing direction is strictly positive (consistent with
+v534); the response pole sits on the golden polynomial $s^2-s-1$
+(observed).  A response-level selection, not a positivity theorem; the
+alignment-bit contract stays open. Machine-checked:
+\veri{v584\_ext\_source\_response.py}.
+\mE\ (thresholds exact; response level only; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The two-layer locking split
+(\texttt{PRIME.LOCKSPLIT.01}).}
+The complementary side of the prime-free closed form ($6$ checks,
+${\sim}3$\,s): the same model that reproduces $\det S$ to
+$1.02$--$1.14$ \emph{misses} the Paper-II locking defect by $2$--$4$
+orders of magnitude (median $1350\times$, growing $h^{1.08}$) --- the
+dominance is density, the \emph{depth} of the lock is the primes; the
+one-mode geometry is density-level (coarse lock $10^{-2}$--$10^{-4}$
+without primes); layers $h^{-1.43}\times h^{-1.08}=h^{-2.51}$, with
+real sign overshoots at the deep windows $h=1219,1445$.  The
+Problem-7.1 budget splits into a classical density part and a
+zero-oscillation part; no RH statement. Machine-checked:
+\veri{v585\_pnt\_locking\_split.py}.
+\mE\ (model verbatim from v583; ladder slopes on the declared
+surface; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The density-fixed locking direction
+(\texttt{PRIME.LOCKDIR.01}).}
+The direction side of the split ($7$ checks, ${\sim}3$\,s): the real
+locking eigenvector agrees with the prime-free model's to a median
+$0.030^\circ$ (max $0.331^\circ$, decaying $h^{-1.16}$) while the
+depth stays $1350\times$ apart --- the primes are a pure depth
+amplifier along a density-fixed direction; the deterministic direction
+certifies the real defect within a factor $\le2.9$; the v577
+slow-decay puzzle dissolves as a comparator artifact (drift limit
+$-0.551$ under $1/\log h$, consistent with $-0.5$, not settled);
+scramble must-break fires ($6$--$25^\circ$).  No RH statement.
+Machine-checked: \veri{v586\_pnt\_lock\_direction.py}.
+\mE\ (census with ladders; deterministic asymptotics open; no marker
+moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The exact diagonal weight formula
+(\texttt{PRIME.WCLOSED.01}).}
+A new exact formula ($6$ checks, ${\sim}2$\,s): the corpus diagonal lag
+weight is the single closed expression
+$W_{kk}(d)=\tfrac{2}{N}[(N{-}1{-}d)\cos(\omega_k d)
++\sin(\omega_k(d{+}1))/\sin\omega_k]$ --- machine-exact for all lags
+($h=7$--$1000$, $k=1$--$3$); the apparent piecewise break cancels, the
+edge suppression is an exact two-term cancellation; the exact cell-sum
+reproduces the prime-free model's entries and determinant to $0.03\%$
+--- the $S$-side of the deterministic layer is closed-form (the first
+executed step of the v585/v586 classical program); the v579 kernel is
+the edge-anchored version identically. Machine-checked:
+\veri{v587\_w\_closed\_form.py}.
+\mE\ (formula machine-exact; model comparison at declared tolerances;
+no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The closed deterministic defect
+(\texttt{PRIME.CLOSEDDELTA.01}).}
+Both sides in one function ($6$ checks, ${\sim}5$\,s): the closed
+geometric-trig sums $G_{ij}(\beta)$ carry the $S$ side at the pole
+exponent and the $B$ side as the \emph{trivial-zero ladder}
+($c_{\mathrm{ar}}(d)=-Df(dD)$, $f=\sum_n e^{-(2n+1/2)w}$); closed $B$
+to $2\times10^{-5}$, the closed defect to $0.2\%$ against the
+deterministic layer on all $70$ windows, census decay $h^{-1.40}$ ---
+the deterministic half of Problem~7.1 is the explicit formula's
+skeleton (pole vs $\Gamma$-factor) in closed form; elementary
+asymptotics remain for a theorem; no RH statement. Machine-checked:
+\veri{v588\_closed\_delta.py}.
+\mE\ (G machine-exact; near field declared; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The zero-comb identification
+(\texttt{PRIME.ZEROCOMB.01}).}
+The arithmetic layer gets its object ($4$ checks, ${\sim}16$\,s): the
+atom table's residual mass oscillation is the explicit-formula zero
+comb (correlation $0.82$, slope $1.28$ with the first $200$ damped
+zeros; pointwise at low $u$); the comb recovers a factor $5.7$ of the
+lock depth at the smallest window ($176\to31$) while the deep windows
+stay honestly out of reach --- the zero-oscillation bound is a
+quantified explicit-formula target (resolution $\pi/D$, amplitude
+accuracy $=$ lock depth); no bound claimed, no RH statement.
+Machine-checked: \veri{v589\_zero\_comb.py}.
+\mE\ (zeros from mpmath; damping declared; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The sheet-involution existence
+(\texttt{QGEO.INVOL.01}).}
+The involution-existence input of \texttt{GATE.QGEO.01} is derived
+($7$ checks, $<1$\,s): the integral $V$-commuting involutions are
+exactly $(\mathbb{Z}/2)^3$ (rigidity, both twins); the v574 type
+theorem plus seam reversal plus zero-mode fixing single out the
+explicit $S_0$ of exact $\Sigma$-signature uniquely --- existence
+unconditional; the corpus RP reflection is a different structure
+(anti-automorphism, does not commute with $V$); the two demands'
+continuum derivation stays the named open. Machine-checked:
+\veri{v590\_involution\_existence.py}.
+\mE\ (exact sympy; demands declared; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The rank-one pole term
+(\texttt{PRIME.POLERANKONE.01}).}
+The formal expansion of the closed entries delivers a theorem-grade
+identity ($5$ checks, ${\sim}2$\,s): the pole part is \emph{exactly}
+separable rank-one ($S^{\mathrm{pole}}=-32\pi^2ae^a\,gg^T$,
+$g_k=k/(a^2+4\pi^2k^2)$, $\det\equiv0$ symbolically), and its null
+direction gives the closed locking-direction law
+$v_2/v_1=-(a^2+16\pi^2)/(2(a^2+4\pi^2))$ with limit exactly
+$-\tfrac12$ --- deriving the v577 null-ray conjecture, explaining the
+v586 drift, and matching the measured directions to $0.04$--$1.4\%$;
+the density layer becomes the correction theory of a rank-one matrix.
+Machine-checked: \veri{v591\_pole\_rank\_one.py}.
+\mE\ (symbolic exact; ladder match measured; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The continuum determinant law
+(\texttt{PRIME.DETLAW.01}).}
+The correction theory of the rank-one pole term begins ($6$ checks,
+${\sim}2$\,s): $\det S(a)$ is closed with the $e^{2a}$ coefficient
+identically zero and the exact leading law $640\pi^2e^a/a^3$ (one full
+exponential order suppressed, derived); the real dominance growth
+tracks the closed formula at correlation $0.9985$ (the v570 growth
+derived at the continuum level); the finite-$N$ gap is typed and the
+entry-level arithmetic deviation is certified by
+$\sup|\mathrm{Osc}|\times\mathrm{TV}$ with margin $47.6\times$,
+conditional on the measured oscillation sup.  No RH statement.
+Machine-checked: \veri{v592\_continuum\_det\_law.py}.
+\mE\ (symbolic exact; conditional certificate declared; no marker
+moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The cutoff completion and the first
+unconditional bound (\texttt{PRIME.CUTOFF.01},
+\texttt{PRIME.UNCONDCERT.01}).}
+Two modules close the round ($4+5$ checks): the v592 finite-$N$
+determinant gap was the integration \emph{cutoff} --- with the
+$\sigma_0$-corrected closed integrals the entries match to
+$0.7$--$1\%$ and the determinant to $0.2$--$1\%$ (the density layer of
+Problem~7.1 is closed end-to-end, residual $O(1/N^2)$); and via
+partial summation plus the published bound
+$|\psi(x)-x|<0.94\sqrt{x}$ (B\"uthe 2018, unconditional to
+$10^{19}$) the entry-level arithmetic deviation is bounded
+UNCONDITIONALLY (sup $17.4$ vs measured $1.474$; certificate margin
+$565\times$) --- the program's first unconditional statement; the
+determinant-level lock stays with the zero-oscillation theorem.  The
+algebraic cores of the round are additionally formalized in Lean~4
+(\texttt{TfptCarrier/ParityWeightLaws.lean}: branch merge, rank-one
+determinant, direction law, sheet involution).  Machine-checked:
+\veri{v593\_cutoff\_completion.py},
+\veri{v594\_unconditional\_cert.py}.
+\mE\ (closed forms exact; one cited external bound; no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

@@ -3166,6 +3166,44 @@ Measurement~\ref{meas:pole}. The bin edges, the rung ladder and the anchor range
 are all fixed before the first window is built; this is the anti-fitting device
 of the surface, and Remark~\ref{rem:undecidable} is the price it charges.
 
+\subsection{The deterministic--arithmetic dissection (machine survey)}
+\label{sec:dissection}
+
+The backflow campaign of 2026-07-31/08-01 (modules \texttt{v582}--\texttt{v592},
+individually cited in the table below) assembles into one coherent picture of
+the normalized defect, and it is worth stating it once as a narrative rather
+than as fourteen table rows.  \emph{First}, the defect has exactly two layers.
+Replacing the prime comb by the two-term classical density
+$4e^{u/2}-2(\zeta'/\zeta)(\tfrac12)$ --- the pole term plus the $s=\tfrac12$
+constant, no zeros --- reproduces $\det S$ on every regular window
+parameter-free to $1.6$--$14\%$ (\texttt{v582}/\texttt{v583}), the one-mode
+pencil geometry, and the locking \emph{direction} to a median $0.030^\circ$
+(\texttt{v586}); it misses the locking \emph{depth} by a median factor $1350$
+(\texttt{v585}).  The primes act as a pure depth amplifier along a
+density-fixed direction.  \emph{Second}, the density layer is closed-form.
+The diagonal lag weights obey the single exact expression
+$W_{kk}(d)=\tfrac{2}{N}[(N{-}1{-}d)\cos(\omega_kd)+\sin(\omega_k(d{+}1))/\sin\omega_k]$
+(\texttt{v587}), both sides of the defect are one exact geometric-trig
+function $G_{ij}(\beta)$ --- the comb side at the pole exponent, the
+archimedean side summed over the trivial-zero ladder $\beta_n=(2n{+}\tfrac12)D$
+(\texttt{v588}) --- and the pole part is \emph{exactly} rank-one, giving the
+closed locking-direction law $v_2/v_1=-(a^2{+}16\pi^2)/(2(a^2{+}4\pi^2))$ with
+limit $-\tfrac12$ and the closed determinant law
+$\det S\sim640\pi^2e^a/a^3$ (\texttt{v591}/\texttt{v592}); the measured
+dominance growth of Problem~\ref{prob:R1}'s floor reduction tracks the closed
+formula at correlation $0.9985$.  \emph{Third}, the arithmetic layer is
+identified: the residual mass oscillation is the explicit-formula zero comb
+(correlation $0.82$ with $200$ damped zeros), the comb recovers a factor $5.7$
+of the lock depth at the smallest window, and the recovery plateau is
+structural --- finite zero sums cannot replace the bound (\texttt{v589}).
+What remains of Problem~\ref{prob:R1} after this dissection is therefore
+precisely: (a) the finite-$N$ (Euler--Maclaurin/edge) expansion of the closed
+density layer, elementary in character; and (b) a bound on
+$\sum_\gamma\sin(\gamma u)/\gamma$ at window resolution with amplitude
+accuracy set by the lock depth --- explicit-formula analytic number theory.
+None of this is claimed as progress toward any conjecture beyond this paper's
+scope; the typing discipline of Table~\ref{tab:typing} applies verbatim.
+
 \subsection{Cross-reference table}
 \label{sec:crossref}
 
@@ -3378,6 +3416,112 @@ Prob.~\ref{prob:R1} (the spectator separation, certified)
     scalars, not on an eigenvalue routine; the $h$-uniform dominance
     $\det S\ge(1+c)^2\det B$ stays open (the cheap two-atom witness route
     is killed: negative pair mass up to $13.7\times\det S$) \\
+Lem.~(new) the cross-weight formula and the edge Loewner structure
+  & \texttt{v576} items~(1)--(6)
+  & the polarized cross weights closed in trigonometric form (exact,
+    symbolic $N\le11$ + $10^{-11}$ surface); the reflection-edge read a
+    scaled Loewner matrix of $U_{s-1}$ (rank $\le s-1$; $s=2$ rank one);
+    the exact edge-defect coefficient
+    $-\tfrac{3\pi^4}{175}(s^2-4)(11s^2+6)N^{-4}$; the pair-kernel sign
+    polynomial $P(s,z)$ with $P(2,3)=0$; the macro kernels
+    $W^\infty(\sigma)$ \\
+Prob.~\ref{prob:R1} (the locking direction, censused)
+  & \texttt{v577} items~(1)--(5)
+  & the locking mode aligns with the null ray $(2,-1)$ at
+    $23.5$--$33.8^\circ$ on all $70$ windows (below random; scramble
+    $+21^\circ$), declining slowly ($h^{-0.10}$): a real partial
+    carrier --- the macro regime bends the direction \\
+Prob.~\ref{prob:R1} (Regime B, geometric half closed)
+  & \texttt{v579} items~(1)--(5)
+  & $\operatorname{sign}K_\infty(\sigma,\tau)$ matches the real two-lag
+    kernel on every resolved grid cell ($332/332$ at $h=300$); the
+    diagonal $\det W^\infty(\sigma)$ negative on ${\sim}72\%$
+    (same-scale coupling negative, analytically); the wrong polarisation
+    breaks the match --- the $\Lambda$-weighted arithmetic occupation
+    stays open \\
+Prob.~\ref{prob:R1} (the arithmetic occupation, measured)
+  & \texttt{v580} items~(1)--(4)
+  & the lag-side identity $\det S=\tfrac12\sum c_{\mathrm{at}}
+    c_{\mathrm{at}}D(W,W)$ exact; every significant occupation cell
+    sign-matches $K_\infty$ on every tested window --- the primes
+    populate the geometric sign map; the open content is quantitative \\
+Prob.~\ref{prob:R1} (the transport lemma, killed)
+  & \texttt{v581} items~(1)--(4)
+  & $40$ doubling pairs: locking-direction drift $0.3$--$6.7^\circ$ per
+    octave but growing ($h^{+0.36}$ vs the $h^{-1-\delta}$ bar) --- not
+    summable; no fixed-direction scalar transport \\
+Prob.~\ref{prob:R1} (cutoff completion; unconditional certificate)
+  & \texttt{v593}/\texttt{v594}
+  & the v592 finite-$N$ gap was the integration cutoff: the
+    $\sigma_0$-corrected closed forms match the determinant to
+    $0.2$--$1\%$ (density layer closed end-to-end, residual
+    $O(1/N^2)$); and the entry-level arithmetic deviation is bounded
+    unconditionally via B\"uthe 2018 (sup $17.4$, certificate margin
+    $565\times$) --- the first unconditional statement \\
+Prob.~\ref{prob:R1} (the continuum determinant law)
+  & \texttt{v592} items~(1)--(4)
+  & $\det S(a)$ closed with the $e^{2a}$ coefficient identically zero;
+    exact leading law $640\pi^2e^a/a^3$; the measured dominance tracks
+    the closed formula at correlation $0.9985$; entry-level arithmetic
+    certificate $\sup|\mathrm{Osc}|\times\mathrm{TV}$ with margin
+    $47.6\times$, conditional on the measured oscillation sup \\
+Prob.~\ref{prob:R1} (the rank-one pole term)
+  & \texttt{v591} items~(1)--(3)
+  & the pole part of the closed entries is exactly rank-one
+    ($\det\equiv0$ symbolically); the locking direction obeys
+    $v_2/v_1=-(a^2+16\pi^2)/(2(a^2+4\pi^2))$ with limit $-1/2$,
+    matching the measured directions to $0.04$--$1.4\%$ --- the
+    near-collinearity of Prob.~7.1 is the correction theory of a
+    rank-one matrix \\
+Prob.~\ref{prob:R1} (the zero comb)
+  & \texttt{v589} items~(1)--(3)
+  & the arithmetic depth layer is identified as the zeta-zero comb
+    (correlation $0.82$ with $200$ damped zeros; the comb recovers a
+    factor $5.7$ of the lock depth at $h=184$); the zero-oscillation
+    bound is a quantified explicit-formula target; no bound claimed \\
+Prob.~\ref{prob:R1} (the closed deterministic defect)
+  & \texttt{v588} items~(1)--(4)
+  & one exact function $G_{ij}(\beta)$ carries both sides -- the pole
+    exponent ($S$) against the trivial-zero ladder ($B$); closed $B$
+    to $2\times10^{-5}$, the closed defect matches the density layer
+    to $0.2\%$ on all $70$ windows with census decay $h^{-1.40}$ ---
+    the deterministic half of Prob.~7.1 in closed form \\
+Prob.~\ref{prob:R1} (the entry closed forms)
+  & \texttt{v587} items~(1)--(4)
+  & a new exact formula closes the diagonal lag weights:
+    $W_{kk}(d)=(2/N)[(N{-}1{-}d)\cos(\omega_k d)+\sin(\omega_k(d{+}1))
+    /\sin\omega_k]$, machine-exact for all lags; the exact cell-sum
+    reproduces the prime-free entries and det to $0.03\%$ --- the
+    deterministic layer's $S$-side is closed-form \\
+Prob.~\ref{prob:R1} (the locking direction, density-fixed)
+  & \texttt{v586} items~(1)--(4)
+  & the real locking eigenvector agrees with the prime-free model's to
+    $0.030^\circ$ median (max $0.331^\circ$, decay $h^{-1.16}$) while
+    the depth differs by $1350\times$: the primes are a pure depth
+    amplifier; the deterministic direction certifies the defect within
+    $\le2.9$; the Prob.~7.4-adjacent near-collinearity question gets
+    its direction from the density model \\
+Prob.~\ref{prob:R1} (the locking, two-layer split)
+  & \texttt{v585} items~(1)--(4)
+  & the prime-free model misses the normalised defect by $2$--$4$
+    orders (median $1350\times$) while reproducing $\det S$: the
+    dominance is density, the locking depth is the primes; layers
+    $h^{-1.43}$ (density) $\times$ $h^{-1.08}$ (arithmetic) $=$
+    $h^{-2.51}$ real, sign overshoots at $h=1219,1445$ \\
+Prob.~\ref{prob:R1} (the dominance, prime-free closed form)
+  & \texttt{v583} items~(1)--(5)
+  & the two-term classical law $4e^{u/2}-2(\zeta'/\zeta)(1/2)$ (no
+    zeros) reproduces $\det S$ on all $69$ regular windows
+    parameter-free to $1.016$--$1.143$; the $h=1292$ sign flip is
+    genuine prime-fluctuation content; the dominance splits into a
+    prime-free two-integral inequality plus a zero-oscillation bound \\
+Prob.~\ref{prob:R1} (the dominance, density-driven)
+  & \texttt{v582} items~(1)--(4)
+  & the smoothed comb reproduces $\det S$ to $99.8$--$99.9\%$ ($2\%$
+    window) on every regular window; scrambled control $70\%$ --- the
+    real comb is anomalously smooth at these scales; the $h$-uniform
+    dominance relocates to PNT-level regularity of the smooth density
+    functional; boundary $h=1292$ named \\
 Prob.~\ref{prob:R1} (the dominance, typed long-range)
   & \texttt{v573} items~(1)--(5)
   & the pair-band anatomy on a declared subset: every near band
@@ -3430,8 +3574,9 @@ bound.
 \subsection{Reproducibility}
 \label{sec:repro}
 
-The checks are grouped into twelve modules, \texttt{v555} to \texttt{v563},
-\texttt{v569}--\texttt{v570} and \texttt{v573}, run in a single suite; \texttt{v563} is the readout closure of
+The checks are grouped into twenty-eight modules, \texttt{v555} to \texttt{v563},
+\texttt{v569}--\texttt{v570}, \texttt{v573}, \texttt{v576}--\texttt{v583} and
+\texttt{v585}--\texttt{v594}, run in a single suite; \texttt{v563} is the readout closure of
 this paper --- it recomputes every number quoted here from an exploration probe
 without a recomputing module, on the identical declared surface ---
 \texttt{v569} reads the same surface through the relative pencil
@@ -3441,10 +3586,16 @@ single eigenvalue locking to $1$ while the other stays uniformly separated
 --- \texttt{v570} certifies that separation from closed scalars (the
 floor $\sqrt{\det S/\det B}$, resp.\ $\operatorname{tr}Z$, clears the margin
 on every window), so the one-mode structure rests on determinant/trace
-dominance rather than on an eigenvalue computation --- and \texttt{v573}
+dominance rather than on an eigenvalue computation --- \texttt{v573}
 types \emph{where} that dominance lives: every near band of the pair kernel
 drags negative and the whole excess is long-range ($\ge16$ lag cells), so a
-certificate must control far-pair coherence, not near-diagonal mass.
+certificate must control far-pair coherence, not near-diagonal mass ---
+\texttt{v576} closes the parity read block analytically (the cross-weight
+formula; the Chebyshev--Loewner edge structure with the exact $N^{-4}$
+defect coefficient; the pair-kernel sign polynomial: the analytic prototype
+of the long-range pattern) --- and \texttt{v577} censuses the locking
+direction against the rank-one null ray (correlated on every window,
+declining slowly, scramble-sensitive: a partial carrier).
 Each module rebuilds its surface from the declared caps
 rather than reading stored data, verifies the arithmetic input at every jump
 point of the finite table it uses, and carries the mutation controls of

@@ -42,6 +42,5020 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · VII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the full follow-up slate lands: the cutoff completes the density layer END-TO-END ("
+      },
+      {
+        "k": "c",
+        "v": "v593"
+      },
+      {
+        "k": "t",
+        "v": ", T196), the FIRST UNCONDITIONAL STATEMENT via Büthe 2018 ("
+      },
+      {
+        "k": "c",
+        "v": "v594"
+      },
+      {
+        "k": "t",
+        "v": ", T197), the consolidated theorem section in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": ", and the Lean-4 formalization of the round's algebraic cores ("
+      },
+      {
+        "k": "c",
+        "v": "ParityWeightLaws.lean"
+      },
+      {
+        "k": "t",
+        "v": ", builds green against Mathlib)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v593_cutoff_completion.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.CUTOFF.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "4"
+            },
+            {
+              "k": "t",
+              "v": " checks; T196 "
+            },
+            {
+              "k": "m",
+              "v": "4/4"
+            },
+            {
+              "k": "t",
+              "v": ", CUTOFF-CLOSES)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The v592 finite-"
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": " det gap ("
+        },
+        {
+          "k": "m",
+          "v": "0.19"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.50"
+        },
+        {
+          "k": "t",
+          "v": ") was the integration cutoff: "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_0"
+        },
+        {
+          "k": "t",
+          "v": "-corrected closed integrals match entries to "
+        },
+        {
+          "k": "m",
+          "v": "0.7"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1\\%"
+        },
+        {
+          "k": "t",
+          "v": ", det to "
+        },
+        {
+          "k": "m",
+          "v": "0.2"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1\\%"
+        },
+        {
+          "k": "t",
+          "v": "; residual "
+        },
+        {
+          "k": "m",
+          "v": "O(1/N^2)"
+        },
+        {
+          "k": "t",
+          "v": ", shrinking — the density layer of Problem 7.1 is analytically closed end-to-end."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v594_unconditional_cert.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.UNCONDCERT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "5"
+            },
+            {
+              "k": "t",
+              "v": " checks; T197 "
+            },
+            {
+              "k": "m",
+              "v": "5/5"
+            },
+            {
+              "k": "t",
+              "v": ", verdict UNCONDITIONAL ENTRY CERT)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Partial summation (machine-verified) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "|\\psi(x)-x|<0.94\\sqrt{x}"
+        },
+        {
+          "k": "t",
+          "v": " (Büthe 2018, unconditional to "
+        },
+        {
+          "k": "m",
+          "v": "10^{19}"
+        },
+        {
+          "k": "t",
+          "v": "; external data) "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\sup|\\mathrm{Osc}|\\le17.4"
+        },
+        {
+          "k": "t",
+          "v": " unconditional (measured "
+        },
+        {
+          "k": "m",
+          "v": "1.474"
+        },
+        {
+          "k": "t",
+          "v": "); certificate margin "
+        },
+        {
+          "k": "m",
+          "v": "565\\times"
+        },
+        {
+          "k": "t",
+          "v": " — the first unconditional statement of the program; the determinant level stays with the zero-oscillation theorem."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Theory section + Lean."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " gains "
+        },
+        {
+          "k": "c",
+          "v": "sec:theory"
+        },
+        {
+          "k": "t",
+          "v": " (“The closed-form theory: seven statements”, Theorems 1–7 with module and Lean citations); new Lean-4 module "
+        },
+        {
+          "k": "c",
+          "v": "ParityWeightLaws.lean"
+        },
+        {
+          "k": "t",
+          "v": " (branch merge, rank-one determinant, null vector, direction law "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " approach, sheet involution "
+        },
+        {
+          "k": "m",
+          "v": "S_0^2=1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "[S_0,V]=0"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}=-1"
+        },
+        {
+          "k": "t",
+          "v": ") — full "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green ("
+        },
+        {
+          "k": "m",
+          "v": "3374"
+        },
+        {
+          "k": "t",
+          "v": " jobs)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger rows + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.DETLAW.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.ZEROCOMB.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "45\\to47"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v593"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:v594"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t196"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "197"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4934"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“twenty-eight modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "586\\to588"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · VI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the continuum determinant law ("
+      },
+      {
+        "k": "c",
+        "v": "v592"
+      },
+      {
+        "k": "t",
+        "v": " promoted, T195): "
+      },
+      {
+        "k": "m",
+        "v": "\\det S(a)"
+      },
+      {
+        "k": "t",
+        "v": " closed with the "
+      },
+      {
+        "k": "m",
+        "v": "e^{2a}"
+      },
+      {
+        "k": "t",
+        "v": " coefficient identically zero and exact leading law "
+      },
+      {
+        "k": "m",
+        "v": "640\\pi^2e^a/a^3"
+      },
+      {
+        "k": "t",
+        "v": "; the real dominance tracks the closed formula at correlation "
+      },
+      {
+        "k": "m",
+        "v": "0.9985"
+      },
+      {
+        "k": "t",
+        "v": " (the v570 growth derived); entry-level arithmetic certificate with margin "
+      },
+      {
+        "k": "m",
+        "v": "47.6\\times"
+      },
+      {
+        "k": "t",
+        "v": "; PLUS the Paper-II consolidation section (the deterministic–arithmetic dissection as one narrative)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v592_continuum_det_law.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.DETLAW.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T195 "
+            },
+            {
+              "k": "m",
+              "v": "6/6"
+            },
+            {
+              "k": "t",
+              "v": ", DET-LAW-DERIVED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "e^{2a}"
+        },
+        {
+          "k": "t",
+          "v": " coefficient "
+        },
+        {
+          "k": "m",
+          "v": "\\equiv0"
+        },
+        {
+          "k": "t",
+          "v": " (rank-one); "
+        },
+        {
+          "k": "m",
+          "v": "e^a"
+        },
+        {
+          "k": "t",
+          "v": " term with exact closed coefficient carries the determinant at window scales ("
+        },
+        {
+          "k": "m",
+          "v": "0.995"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.0002"
+        },
+        {
+          "k": "t",
+          "v": "); leading law converges monotonically; dominance correlation "
+        },
+        {
+          "k": "m",
+          "v": "0.9985"
+        },
+        {
+          "k": "t",
+          "v": "; finite-"
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": " gap typed ("
+        },
+        {
+          "k": "m",
+          "v": "0.19\\to0.50"
+        },
+        {
+          "k": "t",
+          "v": "); entry certificate "
+        },
+        {
+          "k": "m",
+          "v": "\\sup|\\mathrm{Osc}|\\times\\mathrm{TV}"
+        },
+        {
+          "k": "t",
+          "v": ", margin "
+        },
+        {
+          "k": "m",
+          "v": "47.6\\times"
+        },
+        {
+          "k": "t",
+          "v": ", conditional on the measured sup ("
+        },
+        {
+          "k": "m",
+          "v": "1.47"
+        },
+        {
+          "k": "t",
+          "v": ") — the unconditional sup IS the zero-oscillation theorem."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper-II consolidation (follow-up 5)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New subsection “The deterministic–arithmetic dissection (machine survey)” before the cross-reference table: the v582–v592 arc as one narrative (two layers; the density layer closed-form with the rank-one pole term and the two laws; the arithmetic layer identified as the zero comb with a structural recovery plateau; the two named remaining opens). Follow-ups 2/3/4 stay open with reasons documented (no forced modules)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PENCIL.SEPFLOOR.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.POLERANKONE.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "44\\to45"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v592"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t195"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "195"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4925"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“twenty-six modules” + dissection section); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "585\\to586"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · V",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the pole term is EXACTLY rank-one and the locking-direction law is derived ("
+      },
+      {
+        "k": "c",
+        "v": "v591"
+      },
+      {
+        "k": "t",
+        "v": " promoted, T194): "
+      },
+      {
+        "k": "m",
+        "v": "S^{\\mathrm{pole}}=-32\\pi^2ae^a\\,gg^T"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\det\\equiv0"
+      },
+      {
+        "k": "t",
+        "v": " symbolically; "
+      },
+      {
+        "k": "m",
+        "v": "v_2/v_1=-(a^2+16\\pi^2)/(2(a^2+4\\pi^2))"
+      },
+      {
+        "k": "t",
+        "v": " with limit exactly "
+      },
+      {
+        "k": "m",
+        "v": "-1/2"
+      },
+      {
+        "k": "t",
+        "v": " — the v577 null-ray conjecture DERIVED, the v586 drift explained; plus the honest B/C rounds: deeper zero sums plateau (structural, note on "
+      },
+      {
+        "k": "c",
+        "v": "v589"
+      },
+      {
+        "k": "t",
+        "v": ") and the grading shortcut for the involution demands is falsified (note on "
+      },
+      {
+        "k": "c",
+        "v": "v590"
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v591_pole_rank_one.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.POLERANKONE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "5"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T194 "
+            },
+            {
+              "k": "m",
+              "v": "5/5"
+            },
+            {
+              "k": "t",
+              "v": ", POLE-RANK-ONE)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Denominators factor completely ("
+        },
+        {
+          "k": "m",
+          "v": "D_{11}D_{22}=D_{12}^2"
+        },
+        {
+          "k": "t",
+          "v": "); pole part exactly separable, residuals exponential-free; direction law with limit "
+        },
+        {
+          "k": "m",
+          "v": "-1/2"
+        },
+        {
+          "k": "t",
+          "v": " and approach "
+        },
+        {
+          "k": "m",
+          "v": "-6\\pi^2/(a^2+4\\pi^2)"
+        },
+        {
+          "k": "t",
+          "v": "; ladder match "
+        },
+        {
+          "k": "m",
+          "v": "0.04"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.4\\%"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "h=1445"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "-1.2248"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "-1.2253"
+        },
+        {
+          "k": "t",
+          "v": "); via "
+        },
+        {
+          "k": "c",
+          "v": "v586"
+        },
+        {
+          "k": "t",
+          "v": " the law describes the real corpus locking direction; the density layer "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the correction theory of a rank-one matrix."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The B and C rounds, honest."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Deeper zero sums ("
+        },
+        {
+          "k": "m",
+          "v": "500/1000"
+        },
+        {
+          "k": "t",
+          "v": " zeros, "
+        },
+        {
+          "k": "m",
+          "v": "\\gamma\\le1419"
+        },
+        {
+          "k": "t",
+          "v": ") do NOT improve the depth recovery (plateau "
+        },
+        {
+          "k": "m",
+          "v": "\\sim31"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "37"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "h=184"
+        },
+        {
+          "k": "t",
+          "v": "; entries degrade): the bottleneck is sub-cell placement reconstruction, exponentially beyond finite sums — note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.ZEROCOMB.01"
+        },
+        {
+          "k": "t",
+          "v": ". And NO "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": "-commuting involution implements the corpus "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " grading (all six fail; "
+        },
+        {
+          "k": "m",
+          "v": "\\Sigma S_0"
+        },
+        {
+          "k": "t",
+          "v": " is an infinite-order shear): the two "
+        },
+        {
+          "k": "c",
+          "v": "v590"
+        },
+        {
+          "k": "t",
+          "v": " demands stay independent — note on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.INVOL.01"
+        },
+        {
+          "k": "t",
+          "v": ". The OS/RP positivity theorem (D) remains open (no quick construction; the v572/v584 design space is exhausted)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.NULLRAY.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LOCKDIR.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "43\\to44"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v591"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t194"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "194"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4919"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“twenty-five modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "584\\to585"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · IV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the sheet involution exists unconditionally ("
+      },
+      {
+        "k": "c",
+        "v": "v590"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the integral "
+      },
+      {
+        "k": "m",
+        "v": "V"
+      },
+      {
+        "k": "t",
+        "v": "-commuting involutions are exactly "
+      },
+      {
+        "k": "m",
+        "v": "(\\mathbb{Z}/2)^3"
+      },
+      {
+        "k": "t",
+        "v": " (rigidity, both twins); the v574 type theorem "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " seam reversal "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " zero-mode fixing single out the explicit "
+      },
+      {
+        "k": "m",
+        "v": "S_0"
+      },
+      {
+        "k": "t",
+        "v": " with exact "
+      },
+      {
+        "k": "m",
+        "v": "\\Sigma"
+      },
+      {
+        "k": "t",
+        "v": "-signature uniquely — GATE.QGEO.01's involution-existence input relocates to DERIVED"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v590_involution_existence.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.INVOL.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "7"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 7/7, EXISTENCE-UNCONDITIONAL)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " All eight spectral sign choices on "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": "'s eigenspaces are integer, involutive and order-stabilizing on both twins; narrowing "
+        },
+        {
+          "k": "m",
+          "v": "6\\to3\\to2\\to1"
+        },
+        {
+          "k": "t",
+          "v": ": the trace "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " half dies by the v574 rank theorem, "
+        },
+        {
+          "k": "m",
+          "v": "Se_3=-e_3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "\\ker V"
+        },
+        {
+          "k": "t",
+          "v": " single out "
+        },
+        {
+          "k": "m",
+          "v": "S_0=[[1,-1,0],[0,-1,0],[0,0,-1]]"
+        },
+        {
+          "k": "t",
+          "v": "; honest scope: the corpus RP reflection does not commute with "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": " (different structure), the alt twin has the same classification (not a bit selector); the two demands' continuum derivation ("
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "D_4"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "H^1"
+        },
+        {
+          "k": "t",
+          "v": ") stays the named open."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + note on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.WINDING.SELF.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " (Stage-B passage), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " (new paragraph), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "583\\to584"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · III",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the zeta zeros enter the instrument ("
+      },
+      {
+        "k": "c",
+        "v": "v589"
+      },
+      {
+        "k": "t",
+        "v": " promoted, T193): the arithmetic depth layer is IDENTIFIED as the explicit-formula zero comb — correlation "
+      },
+      {
+        "k": "m",
+        "v": "0.82"
+      },
+      {
+        "k": "t",
+        "v": " with the first "
+      },
+      {
+        "k": "m",
+        "v": "200"
+      },
+      {
+        "k": "t",
+        "v": " damped zeros, a factor "
+      },
+      {
+        "k": "m",
+        "v": "5.7"
+      },
+      {
+        "k": "t",
+        "v": " of the lock depth recovered at the smallest window; the zero-oscillation bound becomes a quantified target"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v589_zero_comb.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.ZEROCOMB.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "4"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T193 "
+            },
+            {
+              "k": "m",
+              "v": "4/4"
+            },
+            {
+              "k": "t",
+              "v": ", ZERO-COMB-IDENTIFIED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The residual mass oscillation of the atom table is the explicit-formula comb "
+        },
+        {
+          "k": "m",
+          "v": "-4\\sum_{\\gamma>0}\\sin(\\gamma u)/\\gamma"
+        },
+        {
+          "k": "t",
+          "v": " (dense-grid correlation "
+        },
+        {
+          "k": "m",
+          "v": "0.82"
+        },
+        {
+          "k": "t",
+          "v": ", slope "
+        },
+        {
+          "k": "m",
+          "v": "1.28"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " truncation deficit; pointwise "
+        },
+        {
+          "k": "m",
+          "v": "1.00"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "u=3"
+        },
+        {
+          "k": "t",
+          "v": "); adding the comb to the density model improves the "
+        },
+        {
+          "k": "m",
+          "v": "h=184"
+        },
+        {
+          "k": "t",
+          "v": " lock ratio "
+        },
+        {
+          "k": "m",
+          "v": "176\\to31"
+        },
+        {
+          "k": "t",
+          "v": " (factor "
+        },
+        {
+          "k": "m",
+          "v": "5.7"
+        },
+        {
+          "k": "t",
+          "v": "; non-monotone in truncation — honest), deep windows out of reach ("
+        },
+        {
+          "k": "m",
+          "v": "h=540"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "2646\\times"
+        },
+        {
+          "k": "t",
+          "v": "); the zero-oscillation bound is now the quantified target “control "
+        },
+        {
+          "k": "m",
+          "v": "\\sum\\sin(\\gamma u)/\\gamma"
+        },
+        {
+          "k": "t",
+          "v": " at resolution "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/D"
+        },
+        {
+          "k": "t",
+          "v": " with amplitude accuracy "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " lock depth”. No bound claimed, NO RH statement."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CLOSEDDELTA.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LOCKSPLIT.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "42\\to43"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v589"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t193"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "193"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4914"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“twenty-four modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "582\\to583"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · II",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the deterministic layer of Problem 7.1 closes in one function ("
+      },
+      {
+        "k": "c",
+        "v": "v588"
+      },
+      {
+        "k": "t",
+        "v": " promoted, T192): "
+      },
+      {
+        "k": "m",
+        "v": "G_{ij}(\\beta)"
+      },
+      {
+        "k": "t",
+        "v": " carries the comb side at the pole exponent and the archimedean side as the TRIVIAL-ZERO LADDER; closed "
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "2\\times10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": ", the closed defect to "
+      },
+      {
+        "k": "m",
+        "v": "0.2\\%"
+      },
+      {
+        "k": "t",
+        "v": " on all "
+      },
+      {
+        "k": "m",
+        "v": "70"
+      },
+      {
+        "k": "t",
+        "v": " windows, census decay "
+      },
+      {
+        "k": "m",
+        "v": "h^{-1.40}"
+      },
+      {
+        "k": "t",
+        "v": " — the explicit formula's skeleton, pole vs "
+      },
+      {
+        "k": "m",
+        "v": "\\Gamma"
+      },
+      {
+        "k": "t",
+        "v": "-factor, in closed form"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v588_closed_delta.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.CLOSEDDELTA.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T192 "
+            },
+            {
+              "k": "m",
+              "v": "6/6"
+            },
+            {
+              "k": "t",
+              "v": ", CLOSED-DELTA-EXACT)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "G_{ij}(\\beta)=\\sum_d e^{-\\beta d}W_{ij}(d)"
+        },
+        {
+          "k": "t",
+          "v": " machine-exact (finite geometric-trig series over the "
+        },
+        {
+          "k": "c",
+          "v": "v587"
+        },
+        {
+          "k": "t",
+          "v": " formulas); "
+        },
+        {
+          "k": "m",
+          "v": "c_{\\mathrm{ar}}(d)=-Df(dD)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "f(w)=\\sum_n e^{-(2n+1/2)w}"
+        },
+        {
+          "k": "t",
+          "v": " verified "
+        },
+        {
+          "k": "m",
+          "v": "1.000002"
+        },
+        {
+          "k": "t",
+          "v": " (near field "
+        },
+        {
+          "k": "m",
+          "v": "d\\le32"
+        },
+        {
+          "k": "t",
+          "v": " as explicit quadrature constants); closed "
+        },
+        {
+          "k": "m",
+          "v": "B"
+        },
+        {
+          "k": "t",
+          "v": ": entries "
+        },
+        {
+          "k": "m",
+          "v": "2\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": ", det "
+        },
+        {
+          "k": "m",
+          "v": "6\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": ", all "
+        },
+        {
+          "k": "m",
+          "v": "70"
+        },
+        {
+          "k": "t",
+          "v": " windows; closed defect vs the v585 deterministic layer: "
+        },
+        {
+          "k": "m",
+          "v": "0.9999"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.0023"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "70"
+        },
+        {
+          "k": "t",
+          "v": " windows incl. deep/anomalous; census decay "
+        },
+        {
+          "k": "m",
+          "v": "h^{-1.40}"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " v585's "
+        },
+        {
+          "k": "m",
+          "v": "-1.43"
+        },
+        {
+          "k": "t",
+          "v": "). Remaining for a theorem: elementary asymptotics of "
+        },
+        {
+          "k": "m",
+          "v": "G"
+        },
+        {
+          "k": "t",
+          "v": " and the ladder; the arithmetic layer stays with the primes."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WCLOSED.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LOCKSPLIT.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "41\\to42"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v588"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t192"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "192"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4910"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“twenty-three modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "581\\to582"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · I",
+    "heading": [
+      {
+        "k": "t",
+        "v": "a NEW EXACT FORMULA closes the deterministic layer's entries ("
+      },
+      {
+        "k": "c",
+        "v": "v587"
+      },
+      {
+        "k": "t",
+        "v": " promoted, T191): the diagonal lag weight is the single closed expression "
+      },
+      {
+        "k": "m",
+        "v": "W_{kk}(d)=(2/N)[(N{-}1{-}d)\\cos(\\omega_k d)+\\sin(\\omega_k(d{+}1))/\\sin\\omega_k]"
+      },
+      {
+        "k": "t",
+        "v": ", machine-exact for all lags; the exact cell-sum reproduces the prime-free model's entries and determinant to "
+      },
+      {
+        "k": "m",
+        "v": "0.03\\%"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v587_w_closed_form.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.WCLOSED.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T191 "
+            },
+            {
+              "k": "m",
+              "v": "6/6"
+            },
+            {
+              "k": "t",
+              "v": ", CLOSED-FORM-EXACT)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The diagonal companion of the "
+        },
+        {
+          "k": "c",
+          "v": "v576"
+        },
+        {
+          "k": "t",
+          "v": " cross formula, machine-exact ("
+        },
+        {
+          "k": "m",
+          "v": "1.9\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": ") for "
+        },
+        {
+          "k": "m",
+          "v": "h=7"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1000"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "k=1"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": ", all lags; the building blocks are closed Dirichlet sums, the apparent piecewise break at "
+        },
+        {
+          "k": "m",
+          "v": "d=m"
+        },
+        {
+          "k": "t",
+          "v": " cancels on assembly, the reflection-edge suppression is an exact two-term cancellation; the exact cell-sum reproduces the "
+        },
+        {
+          "k": "c",
+          "v": "v583"
+        },
+        {
+          "k": "t",
+          "v": " entries ("
+        },
+        {
+          "k": "m",
+          "v": "1.0011"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.0036"
+        },
+        {
+          "k": "t",
+          "v": ") and det ("
+        },
+        {
+          "k": "m",
+          "v": "0.9999"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.0003"
+        },
+        {
+          "k": "t",
+          "v": "); macro limit "
+        },
+        {
+          "k": "m",
+          "v": "g_k(\\sigma)=2(1{-}\\sigma)\\cos(2\\pi k\\sigma)+\\sin(2\\pi\nk\\sigma)/(\\pi k)"
+        },
+        {
+          "k": "t",
+          "v": " with the "
+        },
+        {
+          "k": "c",
+          "v": "v579"
+        },
+        {
+          "k": "t",
+          "v": " kernel its edge-anchored version identically. The first executed step of the v585/v586 classical program; named next: the arch/"
+        },
+        {
+          "k": "m",
+          "v": "B"
+        },
+        {
+          "k": "t",
+          "v": "-side closed form, then the "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\mathrm{PNT}}"
+        },
+        {
+          "k": "t",
+          "v": " expansion."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CHEBLOEWNER.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LOCKSPLIT.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "40\\to41"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v587"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t191"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "191"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4904"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“twenty-two modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "580\\to581"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · XIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the locking DIRECTION is density-fixed ("
+      },
+      {
+        "k": "c",
+        "v": "v586"
+      },
+      {
+        "k": "t",
+        "v": " promoted, T190): real vs prime-free locking eigenvector "
+      },
+      {
+        "k": "m",
+        "v": "0.030^\\circ"
+      },
+      {
+        "k": "t",
+        "v": " median on all "
+      },
+      {
+        "k": "m",
+        "v": "69"
+      },
+      {
+        "k": "t",
+        "v": " windows while the depth stays "
+      },
+      {
+        "k": "m",
+        "v": "1350\\times"
+      },
+      {
+        "k": "t",
+        "v": " apart — THE PRIMES ARE A PURE DEPTH AMPLIFIER ALONG A DENSITY-FIXED DIRECTION; the v577 slow-decay puzzle dissolves as a comparator artifact"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v586_pnt_lock_direction.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.LOCKDIR.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "7"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T190 "
+            },
+            {
+              "k": "m",
+              "v": "7/7"
+            },
+            {
+              "k": "t",
+              "v": ", DIRECTION-DENSITY-FIXED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Census on all "
+        },
+        {
+          "k": "m",
+          "v": "69"
+        },
+        {
+          "k": "t",
+          "v": " regular windows: angle max "
+        },
+        {
+          "k": "m",
+          "v": "0.331^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ", median "
+        },
+        {
+          "k": "m",
+          "v": "0.030^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ", decay "
+        },
+        {
+          "k": "m",
+          "v": "h^{-1.16}"
+        },
+        {
+          "k": "t",
+          "v": "; witness certificate — the quadratic form of the real "
+        },
+        {
+          "k": "m",
+          "v": "B-S"
+        },
+        {
+          "k": "t",
+          "v": " along the deterministic direction reproduces the minimal eigenvalue within "
+        },
+        {
+          "k": "m",
+          "v": "[0.98, 2.9]"
+        },
+        {
+          "k": "t",
+          "v": " (median "
+        },
+        {
+          "k": "m",
+          "v": "1.42"
+        },
+        {
+          "k": "t",
+          "v": "): the arithmetic content of Problem 7.1 is ONE quadratic form along ONE deterministic vector; the deterministic direction drifts ("
+        },
+        {
+          "k": "m",
+          "v": "-1.73\\to-1.19"
+        },
+        {
+          "k": "t",
+          "v": ", limit "
+        },
+        {
+          "k": "m",
+          "v": "-0.551"
+        },
+        {
+          "k": "t",
+          "v": " under "
+        },
+        {
+          "k": "m",
+          "v": "1/\\log h"
+        },
+        {
+          "k": "t",
+          "v": ", consistent with the null-ray "
+        },
+        {
+          "k": "m",
+          "v": "-0.5"
+        },
+        {
+          "k": "t",
+          "v": ", not settled) — resolving v577's comparator artifact; scramble must-break "
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "25^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "0.026^\\circ"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.NULLRAY.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LOCKSPLIT.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "39\\to40"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v586"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t190"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "190"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4898"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“twenty-one modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "579\\to580"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · XVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the two-layer split of the locking cancellation ("
+      },
+      {
+        "k": "c",
+        "v": "v585"
+      },
+      {
+        "k": "t",
+        "v": " promoted, T189): THE DOMINANCE IS DENSITY, THE LOCKING IS ARITHMETIC — the prime-free model misses the Paper-II defect by "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " orders (median "
+      },
+      {
+        "k": "m",
+        "v": "1350\\times"
+      },
+      {
+        "k": "t",
+        "v": ") while reproducing "
+      },
+      {
+        "k": "m",
+        "v": "\\det S"
+      },
+      {
+        "k": "t",
+        "v": "; layers "
+      },
+      {
+        "k": "m",
+        "v": "h^{-1.43}\\times h^{-1.08}=h^{-2.51}"
+      },
+      {
+        "k": "t",
+        "v": "; the Problem-7.1 budget splits into a classical density part and a zero-oscillation part"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v585_pnt_locking_split.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.LOCKSPLIT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T189 "
+            },
+            {
+              "k": "m",
+              "v": "6/6"
+            },
+            {
+              "k": "t",
+              "v": ", TWO-LAYER-SPLIT)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The v583 model through the normalised defect on all "
+        },
+        {
+          "k": "m",
+          "v": "70"
+        },
+        {
+          "k": "t",
+          "v": " windows: median ratio "
+        },
+        {
+          "k": "m",
+          "v": "1350"
+        },
+        {
+          "k": "t",
+          "v": ", growing "
+        },
+        {
+          "k": "m",
+          "v": "h^{1.08}"
+        },
+        {
+          "k": "t",
+          "v": " — the depth of the lock is the primes; the one-mode geometry is density-level (coarse lock "
+        },
+        {
+          "k": "m",
+          "v": "10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": " without primes); density layer "
+        },
+        {
+          "k": "m",
+          "v": "h^{-1.43}"
+        },
+        {
+          "k": "t",
+          "v": " always positive (scatter "
+        },
+        {
+          "k": "m",
+          "v": "0.70"
+        },
+        {
+          "k": "t",
+          "v": "), real "
+        },
+        {
+          "k": "m",
+          "v": "h^{-2.51}"
+        },
+        {
+          "k": "t",
+          "v": "; real sign overshoots exactly at "
+        },
+        {
+          "k": "m",
+          "v": "h=1219,1445"
+        },
+        {
+          "k": "t",
+          "v": " (+ the typed "
+        },
+        {
+          "k": "m",
+          "v": "1292"
+        },
+        {
+          "k": "t",
+          "v": " anomaly), deterministically never. Budget: density "
+        },
+        {
+          "k": "m",
+          "v": "\\sim-1.4"
+        },
+        {
+          "k": "t",
+          "v": " classical, primes "
+        },
+        {
+          "k": "m",
+          "v": "\\sim-1.1"
+        },
+        {
+          "k": "t",
+          "v": " zero-oscillation."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PNTMODEL.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PENCIL.ONEMODE.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "38\\to39"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v585"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t189"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "189"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4891"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“twenty modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "578\\to579"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · XVII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the interacting RP route of the alignment bit, executed: EXT-SOURCE COUPLING SEPARATES THE 81-TWINS DIRECTIONALLY IN THE UNIT BOX ("
+      },
+      {
+        "k": "c",
+        "v": "v584"
+      },
+      {
+        "k": "t",
+        "v": " promoted) — exact rational flip thresholds with the v572 pencil factors as numerators; positive coupling "
+      },
+      {
+        "k": "m",
+        "v": "J\\le15/16<1"
+      },
+      {
+        "k": "t",
+        "v": " heals exactly the compiler twin, the alt twin is rigid; response pole on the golden polynomial"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v584_ext_source_response.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DIAMOND.BIT.EXTSOURCE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "8"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 8/8, UNIT-BOX-SEPARATED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The interacting kernel "
+        },
+        {
+          "k": "m",
+          "v": "K(s,J)=K_0+sK_\\Pi+J\\,vv^T"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "v"
+        },
+        {
+          "k": "t",
+          "v": " from the shared Ext arrows "
+        },
+        {
+          "k": "m",
+          "v": "E_{31}/E_{32}"
+        },
+        {
+          "k": "t",
+          "v": ") has exact thresholds "
+        },
+        {
+          "k": "m",
+          "v": "J_c(s)=-1/(v^TK(s)^{-1}v)"
+        },
+        {
+          "k": "t",
+          "v": ": compiler "
+        },
+        {
+          "k": "m",
+          "v": "(15s^2{-}16s{-}16)/(16(s^2{-}s{-}1))"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "(15s^2{-}16s{-}16)/16"
+        },
+        {
+          "k": "t",
+          "v": ", alt "
+        },
+        {
+          "k": "m",
+          "v": "(s^2{+}16s{+}16)/(16(s{+}1))"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "-(s^2{+}16s{+}16)/16"
+        },
+        {
+          "k": "t",
+          "v": " — numerators exactly the v572 pencil factors; verified numerically ("
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " flip events). In the crossed phase the compiler is healed by positive "
+        },
+        {
+          "k": "m",
+          "v": "J\\le15/16<1"
+        },
+        {
+          "k": "t",
+          "v": " (either arrow); the alt twin cannot be flipped by any positive coupling in "
+        },
+        {
+          "k": "m",
+          "v": "|J|<1"
+        },
+        {
+          "k": "t",
+          "v": " (E31 threshold "
+        },
+        {
+          "k": "m",
+          "v": "\\ge1"
+        },
+        {
+          "k": "t",
+          "v": ", equality exactly at "
+        },
+        {
+          "k": "m",
+          "v": "s=0"
+        },
+        {
+          "k": "t",
+          "v": "; E32 negative). Negative coupling never heals (direction consistent with v534's toy RP selection). Exact anchors "
+        },
+        {
+          "k": "m",
+          "v": "15/16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "-1"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "J_c(s^*)=0"
+        },
+        {
+          "k": "t",
+          "v": " via Ext-visibility of the critical mode; response pole on "
+        },
+        {
+          "k": "m",
+          "v": "s^2{-}s{-}1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "-1/\\varphi"
+        },
+        {
+          "k": "t",
+          "v": ", next to "
+        },
+        {
+          "k": "m",
+          "v": "s^*"
+        },
+        {
+          "k": "t",
+          "v": ") — observed. Honest: response-level, no PSD anywhere, the alignment-bit contract stays open."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + note on "
+        },
+        {
+          "k": "c",
+          "v": "DIAMOND.BIT.RPFORM.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " (follow-up passage extended), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " (new interacting-route paragraph), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "577\\to578"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · XVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the named next step executed the same day: THE SMOOTH FUNCTIONAL IS IN CLOSED, PRIME-FREE FORM ("
+      },
+      {
+        "k": "c",
+        "v": "v583"
+      },
+      {
+        "k": "t",
+        "v": " promoted, T188) — the two-term classical law "
+      },
+      {
+        "k": "m",
+        "v": "4e^{u/2}-2(\\zeta'/\\zeta)(1/2)"
+      },
+      {
+        "k": "t",
+        "v": " (no zeros) reproduces "
+      },
+      {
+        "k": "m",
+        "v": "\\det S"
+      },
+      {
+        "k": "t",
+        "v": " on all "
+      },
+      {
+        "k": "m",
+        "v": "69"
+      },
+      {
+        "k": "t",
+        "v": " regular windows parameter-free to "
+      },
+      {
+        "k": "m",
+        "v": "1.016"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "1.143"
+      },
+      {
+        "k": "t",
+        "v": "; the "
+      },
+      {
+        "k": "m",
+        "v": "h=1292"
+      },
+      {
+        "k": "t",
+        "v": " sign flip is genuine prime-fluctuation content"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v583_pnt_model.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.PNTMODEL.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "8"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T188 "
+            },
+            {
+              "k": "m",
+              "v": "8/8"
+            },
+            {
+              "k": "t",
+              "v": ", PRIME-FREE-CLOSED-FORM)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The two-term law holds on the atom table (oscillation band "
+        },
+        {
+          "k": "m",
+          "v": "<1.5"
+        },
+        {
+          "k": "t",
+          "v": " around the parameter-free constant "
+        },
+        {
+          "k": "m",
+          "v": "-2(\\zeta'/\\zeta)(1/2)\\approx-5.372"
+        },
+        {
+          "k": "t",
+          "v": "); the prime-free grid model (density "
+        },
+        {
+          "k": "m",
+          "v": "2e^{u/2}"
+        },
+        {
+          "k": "t",
+          "v": ", hard cutoff, theoretical constant) reproduces "
+        },
+        {
+          "k": "m",
+          "v": "\\det S"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "69"
+        },
+        {
+          "k": "t",
+          "v": " regular windows to "
+        },
+        {
+          "k": "m",
+          "v": "1.016"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.143"
+        },
+        {
+          "k": "t",
+          "v": " (mean "
+        },
+        {
+          "k": "m",
+          "v": "1.039"
+        },
+        {
+          "k": "t",
+          "v": "), the "
+        },
+        {
+          "k": "m",
+          "v": "S"
+        },
+        {
+          "k": "t",
+          "v": " entries to "
+        },
+        {
+          "k": "m",
+          "v": "0.995"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.001"
+        },
+        {
+          "k": "t",
+          "v": ", the dominance growth with correlation "
+        },
+        {
+          "k": "m",
+          "v": "0.998"
+        },
+        {
+          "k": "t",
+          "v": "; honesty: constant sensitivity "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.38"
+        },
+        {
+          "k": "t",
+          "v": "/unit — the residual band is the zero-oscillation; the anomalous "
+        },
+        {
+          "k": "m",
+          "v": "h=1292"
+        },
+        {
+          "k": "t",
+          "v": " window typed (prime-free "
+        },
+        {
+          "k": "m",
+          "v": "+1844"
+        },
+        {
+          "k": "t",
+          "v": " vs real "
+        },
+        {
+          "k": "m",
+          "v": "-1465"
+        },
+        {
+          "k": "t",
+          "v": ": the sieve-horizon sign flip IS prime-fluctuation content). FINAL RELOCATION: "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-uniform dominance "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " prime-free two-integral inequality "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " zero-oscillation bound."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.DENSITYDOM.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PENCIL.SEPFLOOR.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "37\\to38"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v583"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t188"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "188"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4885"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“nineteen modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "576\\to577"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · XV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the quantitative occupation question answered at its first level: THE DOMINANCE IS DENSITY-DRIVEN ("
+      },
+      {
+        "k": "c",
+        "v": "v582"
+      },
+      {
+        "k": "t",
+        "v": " promoted, T187) — the smoothed comb carries "
+      },
+      {
+        "k": "m",
+        "v": "99.8"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "99.9\\%"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "\\det S"
+      },
+      {
+        "k": "t",
+        "v": " on every regular window, the scrambled control only "
+      },
+      {
+        "k": "m",
+        "v": "70\\%"
+      },
+      {
+        "k": "t",
+        "v": ": the real comb is anomalously smooth, and the "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "-uniform dominance question relocates to PNT-level regularity of the smooth density functional"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v582_density_dominance.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.DENSITYDOM.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "5"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T187 "
+            },
+            {
+              "k": "m",
+              "v": "5/5"
+            },
+            {
+              "k": "t",
+              "v": ", DENSITY-DRIVEN)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Replacing the atom lag coefficients by their moving average (declared windows "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "20\\%"
+        },
+        {
+          "k": "t",
+          "v": ") and recomputing "
+        },
+        {
+          "k": "m",
+          "v": "\\det S"
+        },
+        {
+          "k": "t",
+          "v": " through the exact lag-side identity: "
+        },
+        {
+          "k": "m",
+          "v": "0.998"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.999"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "2\\%"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "0.987"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.993"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "5\\%"
+        },
+        {
+          "k": "t",
+          "v": ", degrading smoothly to "
+        },
+        {
+          "k": "m",
+          "v": "0.81"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.89"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "20\\%"
+        },
+        {
+          "k": "t",
+          "v": " on every regular window — the dominance is carried by the deterministic density profile, fluctuations contribute "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}1\\%"
+        },
+        {
+          "k": "t",
+          "v": "; the scrambled control captures only "
+        },
+        {
+          "k": "m",
+          "v": "0.70"
+        },
+        {
+          "k": "t",
+          "v": " (random placement has real fluctuation content — the actual comb is anomalously smooth at these scales); the anomalous "
+        },
+        {
+          "k": "m",
+          "v": "h=1292"
+        },
+        {
+          "k": "t",
+          "v": " window deviates ("
+        },
+        {
+          "k": "m",
+          "v": "1.24"
+        },
+        {
+          "k": "t",
+          "v": "), boundary named. THE RELOCATION: the "
+        },
+        {
+          "k": "c",
+          "v": "v570"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-uniform dominance reduces — up to a measured "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}1\\%"
+        },
+        {
+          "k": "t",
+          "v": " correction needing only a crude bound — to a positivity/growth statement about the smooth density functional (PNT-level regularity); the named next step is a closed-form bound on that functional."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PENCIL.SEPFLOOR.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.OCCUPATION.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "36\\to37"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v582"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t187"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "187"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4877"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“eighteen modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "575\\to576"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · XIV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "Regime B's arithmetic half gets its measured object ("
+      },
+      {
+        "k": "c",
+        "v": "v580"
+      },
+      {
+        "k": "t",
+        "v": ": the lag-side identity is exact and the primes POPULATE the geometric sign map — every significant occupation cell matches "
+      },
+      {
+        "k": "m",
+        "v": "K_\\infty"
+      },
+      {
+        "k": "t",
+        "v": "), and the review's multilevel transport lemma is measured and killed ("
+      },
+      {
+        "k": "c",
+        "v": "v581"
+      },
+      {
+        "k": "t",
+        "v": ": drift small but growing "
+      },
+      {
+        "k": "m",
+        "v": "h^{+0.36}"
+      },
+      {
+        "k": "t",
+        "v": " against the "
+      },
+      {
+        "k": "m",
+        "v": "h^{-1-\\delta}"
+      },
+      {
+        "k": "t",
+        "v": " bar) + backflow parts T185/T186 + full sync"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v580_occupation_map.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.OCCUPATION.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "5"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T185 "
+            },
+            {
+              "k": "m",
+              "v": "5/5"
+            },
+            {
+              "k": "t",
+              "v": ", OCCUPATION-FOLLOWS-KERNEL)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The lag-side polarization identity — "
+        },
+        {
+          "k": "m",
+          "v": "\\det S"
+        },
+        {
+          "k": "t",
+          "v": " as the atom-lag double sum "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12\\sum c_{\\mathrm{at}}c_{\\mathrm{at}}\\,D(W,W)"
+        },
+        {
+          "k": "t",
+          "v": " — is exact (the T163 correlation theorem, "
+        },
+        {
+          "k": "m",
+          "v": "10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": " on four windows); every significant cell of the binned occupation map sign-matches "
+        },
+        {
+          "k": "m",
+          "v": "K_\\infty(\\sigma_1,\\sigma_2)"
+        },
+        {
+          "k": "t",
+          "v": " on every tested window ("
+        },
+        {
+          "k": "m",
+          "v": "50/50"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "67/67"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "65/65"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "65/65"
+        },
+        {
+          "k": "t",
+          "v": "): the arithmetic does not fight the kernel, it populates it — the open Regime-B content is the AMOUNTS; mid-diagonal negative, cross-scale positive; scramble control clean."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v581_locking_transport.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.TRANSPORT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "4"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T186 "
+            },
+            {
+              "k": "m",
+              "v": "4/4"
+            },
+            {
+              "k": "t",
+              "v": ", TRANSPORT-KILLED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The Priority-4 lemma measured on "
+        },
+        {
+          "k": "m",
+          "v": "40"
+        },
+        {
+          "k": "t",
+          "v": " doubling pairs: the locking-direction drift is small ("
+        },
+        {
+          "k": "m",
+          "v": "0.3"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "6.7^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " per octave, median "
+        },
+        {
+          "k": "m",
+          "v": "2.35^\\circ"
+        },
+        {
+          "k": "t",
+          "v": ") but GROWS ("
+        },
+        {
+          "k": "m",
+          "v": "h^{+0.36}"
+        },
+        {
+          "k": "t",
+          "v": ") against the proposed summability bar — the review's own kill criterion fires; no fixed-direction scalar transport; future transports must carry the window-dependent macro direction."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Two ledger rows + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.MACROKERNEL.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.NULLRAY.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "34\\to36"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v580"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:v581"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t185"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t186"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "186"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4872"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (“seventeen modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "573\\to575"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · XIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the review's remaining strands executed: the jet contract natively ("
+      },
+      {
+        "k": "c",
+        "v": "v578"
+      },
+      {
+        "k": "t",
+        "v": ", MOEBIUS-IN-OWN-CLOCK — no shared wall-time Schwarzian, each flow projective in its own clock), the two-scale kernel signs verified globally ("
+      },
+      {
+        "k": "c",
+        "v": "v579"
+      },
+      {
+        "k": "t",
+        "v": ", SIGNS-MATCH "
+      },
+      {
+        "k": "m",
+        "v": "332/332"
+      },
+      {
+        "k": "t",
+        "v": " — the geometric half of Regime B closes), and the Ext-resolvent marking honestly killed (sandbox: "
+      },
+      {
+        "k": "m",
+        "v": "\\chi_{\\mathrm{Ext}}\\equiv0"
+      },
+      {
+        "k": "t",
+        "v": " for both twins, the radical sublattices are identical)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v578_native_jets.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FTR.JETS.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe "
+            },
+            {
+              "k": "m",
+              "v": "6/6"
+            },
+            {
+              "k": "t",
+              "v": ", MOEBIUS-IN-OWN-CLOCK)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact v99 trajectory has "
+        },
+        {
+          "k": "m",
+          "v": "\\{q,t\\}=-\\Delta^2/2"
+        },
+        {
+          "k": "t",
+          "v": " in wall time and Schwarzian "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " in its own exponential clock; the "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "-loop QCD flow has Schwarzian "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " in its own RG time; the native quadruple shares no wall-time jet invariant — each instance is projective in its own clock, the obstruction is the clock (anchored by the external data); a future joint jet test needs external anchor-level jets, as "
+        },
+        {
+          "k": "c",
+          "v": "v575"
+        },
+        {
+          "k": "t",
+          "v": " fenced."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v579_macro_kernel_signs.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.MACROKERNEL.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T184 "
+            },
+            {
+              "k": "m",
+              "v": "6/6"
+            },
+            {
+              "k": "t",
+              "v": ", SIGNS-MATCH)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{sign}K_\\infty(\\sigma,\\tau)"
+        },
+        {
+          "k": "t",
+          "v": " matches the real two-lag kernel on every resolved cell ("
+        },
+        {
+          "k": "m",
+          "v": "332/332"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "h=300"
+        },
+        {
+          "k": "t",
+          "v": "); the diagonal "
+        },
+        {
+          "k": "m",
+          "v": "\\det W^\\infty(\\sigma)"
+        },
+        {
+          "k": "t",
+          "v": " is negative on "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}72\\%"
+        },
+        {
+          "k": "t",
+          "v": " (same-scale coupling negative, analytically); the geometric half of Regime B closes, the "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "-weighted arithmetic occupation stays open."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sandbox honest negative."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The review's Ext-sensitive marked resolvent "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{\\mathrm{Ext}}(z)"
+        },
+        {
+          "k": "t",
+          "v": " vanishes identically for both twins with the natural markings, and the radical sublattices of the two integral orders are IDENTICAL (span"
+        },
+        {
+          "k": "m",
+          "v": "\\{3E_{31},3E_{32}\\}"
+        },
+        {
+          "k": "t",
+          "v": "): the review's own kill criteria fire; the Gibbs pencil ("
+        },
+        {
+          "k": "c",
+          "v": "v572"
+        },
+        {
+          "k": "t",
+          "v": ") remains the one working marked object. Diary record, no module."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Two ledger rows + notes; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (jet block), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "33\\to34"
+        },
+        {
+          "k": "t",
+          "v": " modules, "
+        },
+        {
+          "k": "c",
+          "v": "sec:v579"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t184"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "184"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4863"
+        },
+        {
+          "k": "t",
+          "v": " checks), Paper II (“fifteen modules”), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "571\\to573"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateLabel": "2026-07-31 · XII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the second review's Toeplitz strand audited – everything EXACT ("
+      },
+      {
+        "k": "c",
+        "v": "v576"
+      },
+      {
+        "k": "t",
+        "v": ": the cross-weight formula, the Chebyshev–Loewner edge theorem with the rank-one first read, the Pythagorean null bridge "
+      },
+      {
+        "k": "m",
+        "v": "(5,-3,4)"
+      },
+      {
+        "k": "t",
+        "v": " typed compression, the exact "
+      },
+      {
+        "k": "m",
+        "v": "N^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " defect coefficient, the pair-kernel sign polynomial) and the null-ray census executed ("
+      },
+      {
+        "k": "c",
+        "v": "v577"
+      },
+      {
+        "k": "t",
+        "v": ": correlated on all "
+      },
+      {
+        "k": "m",
+        "v": "70"
+      },
+      {
+        "k": "t",
+        "v": " windows, honestly partial) + backflow parts T182/T183 + full sync"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v576_cheb_loewner_edge.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.CHEBLOEWNER.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "9"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T182 "
+            },
+            {
+              "k": "m",
+              "v": "9/9"
+            },
+            {
+              "k": "t",
+              "v": ", FORMULAS-EXACT)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The polarized cross-weight formula "
+        },
+        {
+          "k": "m",
+          "v": "w^{(ij)}_d=(2/N)[\\sin\\omega_j\\sin(d\\omega_i)-\\sin\\omega_i\\sin(d\\omega_j)]/(\\cos\\omega_i-\\cos\\omega_j)"
+        },
+        {
+          "k": "t",
+          "v": " is exact against the corpus definition (symbolic "
+        },
+        {
+          "k": "m",
+          "v": "N\\le11"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": " surface) — the "
+        },
+        {
+          "k": "m",
+          "v": "K=2"
+        },
+        {
+          "k": "t",
+          "v": " read block closes analytically; the reflection edge is a scaled Loewner matrix of "
+        },
+        {
+          "k": "m",
+          "v": "U_{s-1}"
+        },
+        {
+          "k": "t",
+          "v": " (exact; rank "
+        },
+        {
+          "k": "m",
+          "v": "\\le s-1"
+        },
+        {
+          "k": "t",
+          "v": ", the first read rank ONE); the leading profile's Lorentz image is the null triple "
+        },
+        {
+          "k": "m",
+          "v": "(5,-3,4)"
+        },
+        {
+          "k": "t",
+          "v": " — the same as "
+        },
+        {
+          "k": "m",
+          "v": "(g_{\\mathrm{car}},N_{\\mathrm{fam}},|\\mu_4|)"
+        },
+        {
+          "k": "t",
+          "v": " via Euclid, typed COMPRESSION; the edge defect is the exact coefficient "
+        },
+        {
+          "k": "m",
+          "v": "-\\tfrac{3\\pi^4}{175}(s^2-4)(11s^2+6)N^{-4}"
+        },
+        {
+          "k": "t",
+          "v": " (locally better than the "
+        },
+        {
+          "k": "m",
+          "v": "h^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " demand); the pair polynomial "
+        },
+        {
+          "k": "m",
+          "v": "P(s,z)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "P(2,3)=0"
+        },
+        {
+          "k": "t",
+          "v": " exact, transition "
+        },
+        {
+          "k": "m",
+          "v": "s/z\\approx0.503/1.987"
+        },
+        {
+          "k": "t",
+          "v": ") is the analytic prototype of the v573 pattern; macro kernels verified. Three-regime split: edge CLOSED at "
+        },
+        {
+          "k": "m",
+          "v": "N^{-4}"
+        },
+        {
+          "k": "t",
+          "v": ", macro and transition OPEN; Problem 7.1's quantifier untouched."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v577_nullray_census.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.NULLRAY.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "5"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe T183 "
+            },
+            {
+              "k": "m",
+              "v": "5/5"
+            },
+            {
+              "k": "t",
+              "v": ", NULL-RAY-CORRELATED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The locking mode aligns with the exact null ray "
+        },
+        {
+          "k": "m",
+          "v": "(2,-1)"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "23.5"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "33.8^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "70"
+        },
+        {
+          "k": "t",
+          "v": " windows (below random; scramble destroys it, "
+        },
+        {
+          "k": "m",
+          "v": "+21^\\circ"
+        },
+        {
+          "k": "t",
+          "v": "), declining slowly ("
+        },
+        {
+          "k": "m",
+          "v": "h^{-0.10}"
+        },
+        {
+          "k": "t",
+          "v": "): the clean success bar is honestly NOT met — a real partial carrier; the macro regime bends the direction; follow-up: "
+        },
+        {
+          "k": "m",
+          "v": "K_\\infty(\\sigma,\\tau)"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Two ledger rows + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PAIRBAND.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PENCIL.SEPFLOOR.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " (verified layer "
+        },
+        {
+          "k": "m",
+          "v": "31\\to33"
+        },
+        {
+          "k": "t",
+          "v": ", subsections "
+        },
+        {
+          "k": "c",
+          "v": "sec:v576"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:v577"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t182"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "sec:t183"
+        },
+        {
+          "k": "t",
+          "v": ", counters "
+        },
+        {
+          "k": "m",
+          "v": "183"
+        },
+        {
+          "k": "t",
+          "v": " probes / "
+        },
+        {
+          "k": "m",
+          "v": "4857"
+        },
+        {
+          "k": "t",
+          "v": " checks); Paper II (cross-reference rows, “fourteen modules”); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " audit blocks; diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "569\\to571"
+        },
+        {
+          "k": "t",
+          "v": " scripts; README/zenodo/website counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-31",
     "dateLabel": "2026-07-31 · XI",
     "heading": [

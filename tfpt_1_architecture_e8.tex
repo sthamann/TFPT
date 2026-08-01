@@ -235,7 +235,7 @@ $(1,2,4)=(2^0,2^1,2^2)$, the binary AnchorLadder) selects the compiler
 $Q$ uniquely on all $28$ members; the split geometry ($q_{32}=1$) is
 excluded by the demands already imposed; \emph{why} the ladder
 self-consistency should hold physically stays open (the RP-selection
-slot) \mO.  Two follow-ups since executed: the \emph{kinematic RP form}
+slot) \mO.  Three follow-ups since executed: the \emph{kinematic RP form}
 on the twins (\veri{v572\_rp\_bit\_form.py}) is spectrally blind
 (identical inertia for every declared corpus state; never PSD --- no
 kinematic positivity selection exists) but \emph{integrally
@@ -250,7 +250,25 @@ selects one member for every $N\le3$ (higher $N$ die on the exponent
 demand), and $\mathrm{sat}=N^4$ holds only at $N=3$ ($81=3^4$; $N=1,2$
 give $32\neq1$, $512\neq16$): two of the five declared geometric inputs
 relocate to consistency-forced; \texttt{GATE.QGEO.01} is narrowed, not
-closed \mE/\mC.  The honest decomposition (spectrum ablation): freeing
+closed \mE/\mC.  The involution-\emph{existence} input is since
+\emph{derived} (\veri{v590\_involution\_existence.py}): the integral
+$V$-commuting involutions are exactly the spectral sign group
+$(\mathbb{Z}/2)^3$ (rigidity, both twins), and the v574 type theorem
+plus two named demands (seam reversal, zero-mode fixing) single out the
+explicit $S_0$ with exact $\Sigma$-signature uniquely --- existence is
+unconditional; the two demands' continuum derivation stays the named
+open \mE/\mC.  The \emph{interacting} follow-up
+(\veri{v584\_ext\_source\_response.py}) then separates the twins
+\emph{directionally}: rank-one Ext-source coupling on the Gibbs pencil
+has exact rational flip thresholds $J_c(s)=-1/(v^{T}K(s)^{-1}v)$ whose
+numerators are exactly the twins' pencil factors; in the crossed phase
+positive coupling $J_c\le 15/16<1$ heals exactly the compiler twin
+(through either Ext arrow), while the alt twin cannot be flipped by any
+positive coupling in the open unit box --- the healing direction is
+strictly positive, consistent with the v534 toy RP selection; the
+response pole sits on the golden polynomial $s^2-s-1$ (observed).
+Honest: a response-level selection, not an OS/RP positivity theorem ---
+the alignment-bit contract stays open \mE/\mC.  The honest decomposition (spectrum ablation): freeing
 the exponent spectrum too, the one surviving double-selfconsistent
 family is exactly $\{1,2,N\}$ with the compiler shape --- the
 self-consistency forces the \emph{sheet} spectrum $\{1,2\}$ (the binary

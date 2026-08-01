@@ -154,7 +154,25 @@ export type PrimeFrontVerdict =
   | "FIBER-PINNED"
   | "ONE-MODE"
   | "FLOOR-CERTIFIED"
-  | "LONG-RANGE";
+  | "LONG-RANGE"
+  | "FORMULAS-EXACT"
+  | "NULL-RAY-CORRELATED"
+  | "SIGNS-MATCH"
+  | "OCCUPATION-FOLLOWS-KERNEL"
+  | "TRANSPORT-KILLED"
+  | "DENSITY-DRIVEN"
+  | "PRIME-FREE-CLOSED-FORM"
+  | "UNIT-BOX-SEPARATED"
+  | "TWO-LAYER-SPLIT"
+  | "DIRECTION-DENSITY-FIXED"
+  | "CLOSED-FORM-EXACT"
+  | "CLOSED-DELTA-EXACT"
+  | "ZERO-COMB-IDENTIFIED"
+  | "EXISTENCE-UNCONDITIONAL"
+  | "POLE-RANK-ONE"
+  | "DET-LAW-DERIVED"
+  | "CUTOFF-CLOSES"
+  | "UNCONDITIONAL-ENTRY-CERT";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -178,6 +196,193 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-01",
+    part: 197,
+    title:
+      "The first unconditional statement — and the density layer closes end-to-end. Two parts finish the follow-up slate. T196: the finite-N determinant gap that v592 typed (the continuum captured only 0.19–0.50) turns out to be nothing but the integration cutoff — with the σ₀-corrected closed integrals (still elementary functions) the closed forms match the model determinant to 0.2–1% across the ladder, residual O(1/N²) and shrinking. The density layer of Problem 7.1 is now analytically closed end-to-end: exact weights → one-function assembly → rank-one structure and the two laws → cutoff completion. T197: partial summation (machine-verified on the atom table) plus ONE published unconditional bound — |ψ(x)−x| < 0.94√x, Büthe 2018, valid to 10¹⁹ via verified zeros, our surface sits sixteen orders inside — gives the unconditional oscillation sup 17.4, and the entry certificate holds with margin 565×. The entry-level arithmetic layer needs no conjecture and no runtime zero input: the program's first unconditional statement. Also landed: a consolidated seven-theorem section in the prime-front paper, and a Lean-4 formalization of the round's algebraic cores (branch merge, rank-one determinant, direction law, sheet involution) — full lake build green against Mathlib.",
+    verdict: "UNCONDITIONAL-ENTRY-CERT",
+    summary:
+      "T196 (CUTOFF-CLOSES, 4/4) — contract PRIME.CUTOFF: σ₀-corrected closed entries match the grid model to 0.7–1%, det to 0.2–1%; residual second-order, shrinking; density layer closed end-to-end; promoted as v593. T197 (UNCONDITIONAL-ENTRY-CERT, 5/5) — contract PRIME.UNCONDCERT: partial-summation identity verified (<1e-6); Büthe 2018 checked in range (worst ratio 0.708); unconditional sup 17.4 vs measured 1.474; certificate margin 565×; determinant level stays with the zero-oscillation theorem; promoted as v594 (external data: Büthe 2018). Plus: sec:theory in tfpt_prime_front (seven statements, Theorems 1–7), and TfptCarrier/ParityWeightLaws.lean (branch_merge, pole_rank_one, direction_law + approach, S₀ involution) — lake build green, 3374 jobs. Suite 586 → 588 scripts.",
+    badge: "sandbox",
+    script: "unconditional_cert_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 195,
+    title:
+      "The continuum determinant law — and the dominance growth is derived. The correction theory of the rank-one pole term takes its first step: det S(a) comes out in closed form, its e^(2a) coefficient is identically zero (the rank-one cancellation doing its work), and the exact leading law is det S ~ 640π²·eᵃ/a³ — the determinant is one full exponential order suppressed, derived rather than measured. The real dominance P = det S/det B tracks the closed formula at log-log correlation 0.9985 across the ladder: the v570 growth measurement now has a closed-form origin (P ~ eᵃ/a³, i.e. ~h up to polylog). Two certificates round out the picture: the finite-N gap is typed (the continuum captures 0.19 → 0.50 of the finite-N determinant — the Euler–Maclaurin/edge layer is the one remaining expansion step), and the entry-level arithmetic deviation is rigorously bounded by sup|Osc| × TV with a 47.6× margin, conditional on the measured oscillation sup — whose unconditional version is exactly the zero-oscillation theorem. Also this round: Paper II gets a consolidation section presenting the whole v582–v592 dissection as one narrative.",
+    verdict: "DET-LAW-DERIVED",
+    summary:
+      "T195 (DET-LAW-DERIVED — the correction theory begins; 6/6, 2.0 s; twenty-second backflow probe) — contract PRIME.DETLAW: det S(a) closed, e^(2a) coefficient ≡ 0, exact leading law 640π²eᵃ/a³ (e^a term with exact coefficient carries the determinant at window scales: 0.995–1.0002 at a = 3–10; leading law converges monotonically 2.03 → 1.01 at a = 20 → 160); real dominance correlation 0.9985 (v570 growth derived at continuum level); finite-N gap typed (0.19 → 0.50, growing as D shrinks); entry certificate sup|Osc| × TV, margin 47.6×, conditional on measured sup 1.47. Paper-II consolidation section added (the deterministic–arithmetic dissection as one narrative before the cross-reference table). Follow-ups 2/3/4 stay honestly open with documented reasons. Promoted as v592 (PRIME.DETLAW.01). Suite 585 → 586 scripts.",
+    badge: "sandbox",
+    script: "continuum_det_law_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 194,
+    title:
+      "The pole term is exactly rank-one — and the locking-direction law falls out in closed form. The formal expansion of the T192 closed entries begins, and the first identity is theorem-grade: the Laplace denominators factor completely (D₁₁ = (a²+4π²)², D₂₂ = (a²+16π²)², D₁₂ = their product — so D₁₁D₂₂ = D₁₂² exactly), which means the pole part of the deterministic model is an EXACTLY separable rank-one matrix, S^pole = −32π²·a·eᵃ·ggᵀ with g_k = k/(a²+4π²k²), det ≡ 0 symbolically. Its null direction is a closed law: v₂/v₁ = −(a²+16π²)/(2(a²+4π²)), with the a → ∞ limit EXACTLY −1/2 — the Pythagorean null ray (2,−1). The v577 conjecture is thereby derived, the v586 drift explained as the explicit −6π²/(a²+4π²) approach, and the law matches the measured locking directions to 0.04–1.4% across the ladder (h = 1445: −1.2248 measured vs −1.2253 law). The density layer of Problem 7.1 is now the correction theory of a rank-one matrix. Also this round, honest: deeper zero sums plateau (structural — finite sums cannot replace the bound), and the grading shortcut for the involution demands is falsified.",
+    verdict: "POLE-RANK-ONE",
+    summary:
+      "T194 (POLE-RANK-ONE — the formal expansion begins; 5/5, 2.0 s; twenty-first backflow probe) — contract PRIME.POLERANKONE: denominators factor completely, pole part exactly separable rank-one (det ≡ 0 symbolically, residuals exponential-free); direction law v₂/v₁ = −(a²+16π²)/(2(a²+4π²)) with limit −1/2 and approach −6π²/(a²+4π²); ladder match 0.04–1.4%, four decimals at h = 1445; via v586 the law describes the real corpus locking direction. B-round: 500/1000 zeros do NOT improve the depth recovery (plateau ~31–37 at h = 184) — the bottleneck is sub-cell placement reconstruction, exponentially beyond finite sums (note on v589). C-round: no V-commuting involution implements the μ₄ grading — the two v590 demands stay independent (note on v590). D (OS/RP positivity) remains open. Promoted as v591 (PRIME.POLERANKONE.01). Suite 584 → 585 scripts.",
+    badge: "sandbox",
+    script: "pole_rank_one_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The sheet involution exists unconditionally — GATE.QGEO.01 narrows again. One of the five declared geometric inputs of the Stage-B audit was the existence of the sheet involution. v590 derives it. The rigidity fact first: the integral involutions commuting with the sheet flow V are EXACTLY the spectral sign group (ℤ/2)³ — all eight sign choices on V's eigenspaces {0,1,2} give integer matrices that stabilize the integral order, on both twins (generic integral operators do not have integral spectral projectors — this one does). Then the narrowing chain: the v574 rank theorem kills the trace +1 half (6 → 3, all remaining with exact Σ-signature (1,−1,−1)); demanding seam reversal (Se₃ = −e₃) narrows 3 → 2; and demanding the involution fix the inert direction (+1 on ker V, flipping exactly the dynamical sheet pair) singles out S₀ = [[1,−1,0],[0,−1,0],[0,0,−1]] uniquely. Existence is unconditional; the residual freedom is a finite, explicit two-demand selection. Honest scope: the corpus RP reflection is a different structure (it does not commute with V), and the alt twin admits the same classification — the involution is not a bit selector. Deriving the two demands from the continuum geometry stays the named open of the gate.",
+    verdict: "EXISTENCE-UNCONDITIONAL",
+    summary:
+      "v590_involution_existence.py promoted (QGEO.INVOL.01, 7 checks; probe involution_existence_probe.py 7/7, EXISTENCE-UNCONDITIONAL): rigidity — all eight spectral sign choices integral, involutive, order-stabilizing on both twins; narrowing 6 → 3 (v574 type theorem) → 2 (seam reversal) → 1 (zero-mode fixing): S₀ explicit with exact Σ-signature; the corpus RP reflection (anti-automorphism) does not commute with V — different structure, different role; the alt twin has the same classification (not a bit selector, consistent with v567/v572). GATE.QGEO.01's involution-existence input relocates to DERIVED; the two demands' continuum derivation (μ₄/D₄/H¹) is the remaining named open. Suite 583 → 584 scripts.",
+    badge: "sandbox",
+    script: "involution_existence_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 193,
+    title:
+      "The zeta zeros enter the instrument. After T192 closed the deterministic layer (pole vs the trivial zeros), one object remained unidentified: the arithmetic depth layer — the extra factor ~1350 of lock cancellation that only the real primes deliver. T193 identifies it: it is the zeta-zero comb of the explicit formula. The residual mass oscillation of the atom table, mass(u) − 4e^(u/2) − C, matches −4Σ sin(γu)/γ built from the first 200 nontrivial zeros at correlation 0.82 (regression slope 1.28 — exactly the truncation deficit), pointwise at low u. And the comb acts where it should: adding it to the density model recovers a factor 5.7 of the lock depth at the smallest window (ratio 176 → 31) — while the deep windows demonstrate honestly that the 10⁻⁵-level cancellation demands oscillation amplitudes far beyond a 200-zero sum (non-monotone truncation behavior included). Problem 7.1 is now fully dissected: a closed-form deterministic skeleton (elementary asymptotics away from a theorem) plus one quantified arithmetic target — control the zero comb at window resolution π/D with amplitude accuracy set by the lock depth. No bound claimed, no RH statement — but the problem has never been this cleanly cut.",
+    verdict: "ZERO-COMB-IDENTIFIED",
+    summary:
+      "T193 (ZERO-COMB-IDENTIFIED — follow-up 3 gets its object; 4/4, 15.5 s; twentieth backflow probe) — contract PRIME.ZEROCOMB: dense-grid correlation 0.82 (slope 1.28) between the atom table's residual oscillation and the 200-zero damped comb; pointwise 1.00 at u = 3; depth recovery at h = 184 (π/D = 208): lock ratio 176 → 31 with 200 zeros (factor 5.7), non-monotone in truncation (50 zeros: 13) — honest; deep windows out of reach (h = 540: 2646×). The zero-oscillation bound is now a quantified explicit-formula target (resolution π/D, amplitude = lock depth); the first 200 zeros buy a factor ~6 at the smallest window. NO bound claimed, NO RH statement. Promoted as v589 (PRIME.ZEROCOMB.01). Suite 582 → 583 scripts.",
+    badge: "sandbox",
+    script: "zero_comb_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 192,
+    title:
+      "The deterministic layer closes in one function — pole versus the trivial zeros. T191 left two named steps: close the archimedean B-side and assemble the deterministic defect. T192 does both, and the structure that emerges is the explicit formula itself. Define one exact function, G(β) = Σ e^(−βd)·W(d), built from the T191 weight formulas as finite geometric-trig series. Then the comb side of the prime-free model is G at the POLE exponent (β = −D/2, the e^(u/2) density), and the archimedean side is G summed over the TRIVIAL-ZERO LADDER (β_n = (2n+½)D — because the Weil kernel e^(−w/2)/(1−e^(−2w)) is exactly the geometric sum over trivial zeros). The census: closed B reproduces the corpus to 2·10⁻⁵ (det to 6·10⁻⁵), and the closed defect matches the v585 density layer to 0.2% on ALL 70 windows, decaying h^−1.40 — the measured −1.43 layer, now an explicit closed function. The deterministic half of Problem 7.1 is literally the explicit formula's skeleton — pole against Γ-factor — in closed form. What separates it from a theorem is elementary asymptotics; what belongs to the primes is exactly the depth layer.",
+    verdict: "CLOSED-DELTA-EXACT",
+    summary:
+      "T192 (CLOSED-DELTA-EXACT — the two remaining T191 steps in one part; 6/6, 4.7 s; nineteenth backflow probe) — contract PRIME.CLOSEDDELTA: G_ij(β) machine-exact against direct sums (h = 50/300, β = 0.005–5); c_ar(d) = −D·f(dD) with f(w) = Σₙ e^(−(2n+½)w) verified 1.000002 at d = 100 (near field d ≤ 32 as explicit quadrature constants); closed B on all 70 windows: entries 2e−5, det 6e−5; closed defect vs the v585 deterministic layer: 0.9999–1.0023 on all 70 windows including deep/anomalous; census decay h^−1.40 (v585: −1.43). Remaining for a theorem: elementary asymptotics of G and the ladder; the arithmetic layer (the extra h^−1.1 from the real primes) untouched. NO RH statement. Promoted as v588 (PRIME.CLOSEDDELTA.01). Suite 581 → 582 scripts.",
+    badge: "sandbox",
+    script: "closed_delta_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 191,
+    title:
+      "A new exact formula closes the deterministic layer's entries. The classical program that T189/T190 named — put the density layer in closed form — takes its first executed step, and it lands on a formula that did not exist in the corpus: the diagonal lag weight of the parity read block is the SINGLE closed expression W_kk(d) = (2/N)[(N−1−d)cos(ω_k d) + sin(ω_k(d+1))/sin(ω_k)], machine-exact to 10⁻¹⁵ for every lag, every tested window and every mode — the diagonal companion of the v576 cross formula. Three structural surprises fall out exactly: the apparent piecewise break at d = m (where the autocorrelation dies and only the reflection convolution survives) cancels on assembly; the reflection-edge suppression is an exact two-term cancellation; and the v579 macro kernel is the edge-anchored version of the limit, identically. The payoff: the exact cell-sum reproduces the prime-free model's entries to 0.4% and its determinant to 0.03% — the S-side of the deterministic layer is now a finite, exactly summable geometric-trig expression, and the h^−1.43 density layer becomes an expansion of explicit elementary functions.",
+    verdict: "CLOSED-FORM-EXACT",
+    summary:
+      "T191 (CLOSED-FORM-EXACT — the first executed step of the classical program; 6/6, 1.7 s; eighteenth backflow probe) — contract PRIME.WCLOSED: W_kk(d) = (2/N)[(N−1−d)cos(ω_k d) + sin(ω_k(d+1))/sin(ω_k)] machine-exact (1.9e−15) against v563 lag_weights_from_v for h = 7–1000, k = 1–3, all lags; building blocks are closed Dirichlet sums (ac and both convolution branches machine-exact); the exact cell-sum S_ij = Σ λ(cell)·W_ij(d) reproduces the v583 entries (1.0011–1.0036) and det (0.9999–1.0003); macro limit g_k(σ) = 2(1−σ)cos(2πkσ) + sin(2πkσ)/(πk) with W∞(σ) = g(1−σ) — the v579 dictionary exact. Named next: the arch/B-side closed form, then the δ_PNT(α) expansion and the locking-direction drift as explicit expansions. Promoted as v587 (PRIME.WCLOSED.01). Suite 580 → 581 scripts.",
+    badge: "sandbox",
+    script: "w_closed_form_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 190,
+    title:
+      "The locking direction is density-fixed — the day's pencil arc ends as a theorem pair. T189 split the defect into density × arithmetic; T190 asks which layer owns the locking DIRECTION, and the answer is total: the real locking eigenvector agrees with the prime-free model's to a median 0.030 degrees across all 69 regular windows (max 0.331°, decaying h^−1.16) — while the depth stays a factor 1350 apart. The primes are a pure depth amplifier along a direction the density already fixes. Bonus resolutions: (1) the deterministic direction certifies the real defect as a witness vector within a factor ≤ 2.9 — the arithmetic content of Problem 7.1 is literally one quadratic form along one deterministic vector; (2) the v577 puzzle (slow angle decay toward the null ray) dissolves as a comparator artifact — the null ray is the h = ∞ limit, the finite-h deterministic direction drifts, and the real direction tracks IT to fractions of a degree. Day's balance on the pencil line: everything geometric is density (classically provable in principle); the primes deliver exactly one scalar.",
+    verdict: "DIRECTION-DENSITY-FIXED",
+    summary:
+      "T190 (DIRECTION-DENSITY-FIXED — the direction side of the T189 split; 7/7, 2.4 s; seventeenth backflow probe) — contract PRIME.LOCKDIR: real vs prime-free locking eigenvector of B⁻¹S on all 69 regular windows: max 0.331°, median 0.030°, decay h^−1.16; witness certificate: the quadratic form of the real B−S along the deterministic direction reproduces the minimal eigenvalue within [0.976, 2.881] (median 1.42); the deterministic direction drifts (v₂/v₁ from −1.73 to −1.19; 1/log h limit −0.551, consistent with the null-ray −0.5, typed consistent NOT settled) — resolving v577's comparator artifact; scramble must-break fires (6.1–25.1° vs 0.026° real). Honest kill along the way: the pointwise pole-vs-arch cancellation hypothesis is dead (the PNT comb is 15–18× the arch sequence — the deterministic lock is a directional alignment, not a pointwise cancellation). Promoted as v586 (PRIME.LOCKDIR.01). Suite 579 → 580 scripts.",
+    badge: "sandbox",
+    script: "pnt_lock_direction_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 189,
+    title:
+      "The two-layer split closes the loop: the dominance is density, the locking is arithmetic. The natural complementary question to T188 — does the prime-free model also reproduce the LOCKING cancellation det(B−S), the actual Problem-7.1 object? — gets a decisive NO, and the no is the result. The same model that reproduces det S to 1.02–1.14 misses the normalised defect by 2–4 orders of magnitude (median ratio 1350, growing like h^1.08). So the Paper-II defect splits into two multiplicative layers: a deterministic density layer (h^−1.43, always positive, a coarse lock at the 1e-2..1e-4 level — even the one-mode geometry with its eigenvalue near 1 needs no primes) and an arithmetic layer (an extra h^−1.08 of cancellation that only the real primes deliver, capable of pushing the defect through zero at the deep windows h = 1219 and 1445). Together: h^−2.51 measured. The Problem-7.1 budget of h^−3+ε now reads: ~−1.4 comes from classical analysis of a closed two-term model, ~−1.1 is genuine zero-oscillation content. The true arithmetic core of the problem is isolated as a single layer.",
+    verdict: "TWO-LAYER-SPLIT",
+    summary:
+      "T189 (TWO-LAYER-SPLIT — the complementary side of v583; 6/6, 2.4 s; sixteenth backflow probe) — contract PRIME.LOCKSPLIT: the v583 prime-free model through the Paper-II defect δ = det(B−S)/((B−S)₁₁(B−S)₂₂) on all 70 declared windows: median ratio δ_PNT/δ_real = 1350, growing h^1.08 — the density model misses the lock by 2–4 orders while reproducing det S; the prime-free pencil also locks its eigenvalue near 1 (coarse lock 1e-2..1e-4: the v569 one-mode geometry is density-level); decay layers h^−1.43 (density, positive, scatter 0.70) × h^−1.08 (arithmetic) = h^−2.51 (real); real sign overshoots exactly at h = 1219, 1445 plus the typed 1292 anomaly — the deterministic model never goes negative. Budget relocation: −1.4 classical + −1.1 zero-oscillation. Honest kill along the way: the 'saddle pinned at the sign boundary' hypothesis was falsified in exploration (K∞ at the cell maximizer +0.50, well inside the positive region) and not promoted. Promoted as v585 (PRIME.LOCKSPLIT.01). Suite 578 → 579 scripts.",
+    badge: "sandbox",
+    script: "pnt_locking_split_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 0,
+    title:
+      "The interacting route of the alignment bit, executed: Ext-source coupling separates the 81-twins directionally in the unit box. v572 ended with 'the genuinely interacting construction is the one remaining route' — v584 runs it. Coupling a rank-one Ext source to the Gibbs pencil gives EXACT rational flip thresholds J_c(s) = −1/(vᵀK(s)⁻¹v), and their numerators are exactly the v572 pencil factors — the response theory reproduces the pencil factorization. The result: in the crossed phase, positive coupling J ≤ 15/16 < 1 heals exactly the compiler twin (through either Ext arrow), while the alt twin cannot be flipped by ANY positive coupling in the open unit box. Negative coupling never heals — the direction is strictly positive, matching the v534 toy where the RP cone also selected positive seam coupling. Bonus: the compiler's response pole sits exactly on the golden polynomial s² − s − 1 (s = −1/φ = −0.618, right next to the critical temperature s* = −0.629). Honest typing: a response-level selection in a declared coupling box, not an OS/RP positivity theorem — no kernel is ever PSD, and the alignment-bit contract stays open.",
+    verdict: "UNIT-BOX-SEPARATED",
+    summary:
+      "v584_ext_source_response.py promoted (DIAMOND.BIT.EXTSOURCE.01, 8 checks; probe ext_source_response_probe.py 8/8, UNIT-BOX-SEPARATED): exact thresholds — compiler (15s²−16s−16)/(16(s²−s−1)) and (15s²−16s−16)/16, alt (s²+16s+16)/(16(s+1)) and −(s²+16s+16)/16 — verified numerically (16 flip events, one eigenvalue negative → positive each); unit-box separation: compiler healed at J_c ≤ 15/16 in the crossed phase, alt rigid (E31 threshold ≥ 1 with equality exactly at s = 0, E32 threshold negative throughout); exact anchors 15/16, 1, −1; J_c(s*) = 0 exactly via Ext-visibility of the v572 critical mode (pairings 1/4 and 1/2 + √19/4); golden-polynomial response pole observed, no claim built on it. Response-level, no marker moves, contract CONTRACT.SEAM.BIT stays open. Suite 577 → 578 scripts.",
+    badge: "sandbox",
+    script: "ext_source_response_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 188,
+    title:
+      "The prime-free closed form lands the same day. T187 named its next step — a closed-form bound on the smooth density functional — and T188 executes it: the smooth functional IS in closed form, and it contains no primes at all. The two-term classical law mass(u) = 4e^(u/2) − 2(ζ'/ζ)(½) — the pole term plus the s = ½ constant, NO zeros — defines a prime-free grid model that, run through the untouched v563 pipeline with the parameter-free theoretical constant, reproduces det S on all 69 regular windows to 1.016–1.143 (mean 1.039), the S entries to 0.995–1.001, and the dominance growth with correlation 0.998. No fit anywhere. And the boundary is finally typed: at the anomalous h = 1292 window the prime-free model gives +1844 where reality gives −1465 — the sign flip at the sieve horizon IS genuine prime-fluctuation content, invisible to any density model. The dominance question now splits cleanly: a deterministic prime-free two-integral inequality, plus a bound on the zero-oscillation of the constant term. From 'mysterious prime-comb cancellation' to 'prove a prime-free integral inequality and bound a classical oscillation' — the sharpest typing Problem 7.1 has ever had.",
+    verdict: "PRIME-FREE-CLOSED-FORM",
+    summary:
+      "T188 (PRIME-FREE-CLOSED-FORM — the named next step of T187, executed same-day; 8/8, 4.0 s; fifteenth backflow probe) — contract PRIME.PNTMODEL: the two-term law holds on the atom table (oscillation band < 1.5 around the parameter-free constant −2(ζ'/ζ)(½) ≈ −5.372); the prime-free grid model (density 2e^(u/2), hard cutoff, theoretical constant) reproduces det S on all 69 regular windows to 1.016–1.143, entries 0.995–1.001, dominance correlation 0.998 (h = 184/540/997: real 4.5/31.2/70.3, prime-free 5.0/32.1/71.7); honesty: det is a fine cancellation — constant sensitivity ~0.38/unit, the 2–14% residual band is the zero-oscillation of the constant term; the h = 1292 anomaly typed: prime-free +1844 vs real −1465 — the sieve-horizon sign flip is genuine prime-fluctuation content. FINAL RELOCATION: h-uniform dominance = prime-free two-integral inequality + zero-oscillation bound (explicit-formula territory). No uniformity, no rate, NO RH statement. Promoted as v583 (PRIME.PNTMODEL.01). Suite 576 → 577 scripts.",
+    badge: "sandbox",
+    script: "pnt_model_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 187,
+    title:
+      "The dominance is DENSITY-DRIVEN — the distilled question gets its first-level answer. After T185 showed the primes populate the geometric sign map, the remaining question was purely quantitative: why do the cross-scale cells win by exactly det S? T187 answers it at the first level: replace the comb by its moving average (no fluctuations) and det S survives — 99.8–99.9% at 2% smoothing on every regular window, 98.7–99.3% at 5%, degrading smoothly at coarser resolutions. The dominance is carried by the deterministic density PROFILE of the comb; the prime fluctuations contribute ~1%. The decisive control: on the scrambled window the smooth model captures only 70% — random placement has genuine fluctuation content, the REAL comb is anomalously smooth at these scales. So the 'arithmetic placement' content (det S suppressed ~50× below random) is the profile, not fine noise. The v570 h-uniform dominance question relocates to PNT-level regularity of the smooth density functional — plus a ~1% fluctuation correction needing only a crude bound. The open Problem 7.1 has never been this precisely typed.",
+    verdict: "DENSITY-DRIVEN",
+    summary:
+      "T187 (DENSITY-DRIVEN — the quantitative occupation question, first level; 5/5, 1.9 s; fourteenth backflow probe) — contract PRIME.DENSITYDOM: smoothing the atom lag coefficients (declared windows 2%/5%/10%/20% of the lag range) and recomputing det S through the exact lag-side identity (v580): 0.998–0.999 at 2%, 0.987–0.993 at 5%, 0.81–0.89 at 20% on every regular window — the dominance is density-profile-driven, fluctuations ~1%; scrambled control captures only 0.70 (the real comb is anomalously SMOOTH at these scales); the anomalous h = 1292 window (the P ≤ 0 boundary of v570) deviates (1.24), named honestly. THE RELOCATION: the h-uniform dominance det S ≥ (1+c)² det B reduces to a positivity/growth statement about the smooth density functional (PNT-level regularity) plus a crude ~1% fluctuation bound; the named next step is a closed-form bound on the smooth functional. No uniformity, no rate, NO RH statement. The exact core is promoted as v582 (PRIME.DENSITYDOM.01). Suite 575 → 576 scripts.",
+    badge: "sandbox",
+    script: "density_dominance_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 186,
+    title:
+      "The multilevel transport lemma, measured and killed. The second review's Priority 4 proposed transporting the locking direction along the Galerkin ladder via summable angle increments (sin ∠(v_h, v_2h) ≤ C h^(−1−δ)). T186 measures it on 40 doubling pairs from the declared surface: the drift IS small (0.3–6.7° per octave, median 2.35°) — but it GROWS (h^+0.36) instead of decaying: the increments are not summable, no convergent locking direction is demonstrated, and the review's own kill criterion fires. Per its own discipline, the route is ended without romantic extension. Consistent with T183/T184: the macro regime re-bends the locking direction per window — any future transport must carry the window-dependent macro direction with it.",
+    verdict: "TRANSPORT-KILLED",
+    summary:
+      "T186 (TRANSPORT-KILLED — the review's Priority 4, measured honestly; 4/4, 1.7 s; thirteenth backflow probe) — contract PRIME.TRANSPORT: 40 doubling pairs (h′ within 15% of 2h); per-octave drift of the pencil locking direction sin ∠(v_lock(h), v_lock(2h)) in [0.006, 0.12] (0.3–6.7°, median 2.35°) — small, BUT the fit gives sin ~ h^+0.36 against the proposed bar h^(−1−δ): not summable, the kill fires. No fixed-direction scalar-defect transport is available on this surface. An honest negative is a result. The exact core is promoted as v581 (PRIME.TRANSPORT.01). Suite 573 → 575 scripts.",
+    badge: "sandbox",
+    script: "locking_transport_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 185,
+    title:
+      "The primes populate the sign map — Regime B's arithmetic half gets its measured object. T185 makes the two-scale question fully concrete: det S is EXACTLY a double lag sum over the (σ,τ) surface (the lag-side polarization identity, from the T163 correlation theorem), and its binned occupation map shows a clean picture — the sign of EVERY significant cell follows sign K∞(σ₁,σ₂) on every tested window (50/50, 67/67, 65/65, 65/65). The arithmetic does not fight the geometric kernel; it populates it: the mid-range same-scale block drags negative, the cross-scale cells carry the positive excess, and the net is det S. What remains open in Regime B is now purely QUANTITATIVE: why the cross-scale cells win by exactly det S — the 8:9 cancellation, distilled to an occupation-weight question.",
+    verdict: "OCCUPATION-FOLLOWS-KERNEL",
+    summary:
+      "T185 (OCCUPATION-FOLLOWS-KERNEL — the arithmetic occupation map; 5/5, 3.3 s; twelfth backflow probe) — contract PRIME.OCCUPATION: [E] det S = (1/2)ΣΣ c_at(d₁)c_at(d₂)D(W(d₁),W(d₂)) exact (1e−9 on 4 windows incl. h = 540; binned map resums exactly); [MEASURED] every significant occupation cell (2% floor) sign-matches K∞ on every tested window; mid-diagonal block (σ ∈ [0.3,0.6]²) net negative, cross-scale cells net positive — the T181 anatomy on the lag side; [E] scramble control: the identity resums exactly while det S explodes ×49 (signs are kernel geometry, amounts are arithmetic). The open Regime-B content is the AMOUNTS, not the signs. The exact core is promoted as v580 (PRIME.OCCUPATION.01).",
+    badge: "sandbox",
+    script: "occupation_map_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 184,
+    title:
+      "The two-scale kernel signs match everywhere — the geometric half of Regime B closes. T184 puts the macroscopic kernel K∞(σ,τ) from T182 to its global test: its SIGN predicts the sign of the real two-lag pair kernel on EVERY resolved grid cell at h = 300 (332/332; 330/332 at h = 150, two finite-size cells). The diagonal det W∞(σ) is negative on ~72% of the range — same-scale pairs couple negative, analytically: the macro origin of T181's near-diagonal drag — with positive islands only toward the window edge (σ ≥ 0.66). The wrong polarisation breaks the match loudly. What closes here is the GEOMETRIC half of the two-scale question; what remains open is the arithmetic half: which (σ,τ) cells the primes actually occupy, with which Λ-weights — exactly the weighted summation that must beat the 8:9 cancellation.",
+    verdict: "SIGNS-MATCH",
+    summary:
+      "T184 (SIGNS-MATCH — the geometric half of Regime B closes; 6/6, <1 s; eleventh backflow probe) — contract PRIME.MACROKERNEL: sign K∞(σ,τ) matches sign D(W(d1),W(d2)) on every resolved cell (332/332 at h = 300); the diagonal det W∞(σ) < 0 on ~72% of (0,1) (same-scale coupling negative analytically; positive islands at σ ≥ 0.66); near/far asymmetry geometric (mean −0.18 near vs −0.01 far); must-break: the wrong polarisation destroys the match. The Λ-weighted arithmetic occupation stays open; no uniformity, NO RH statement; Problem 7.1 untouched. The exact core is promoted as v579 (PRIME.MACROKERNEL.01). Same round, physics side: v578 (FTR.JETS.01) executes the jet/Schwarzian contract natively — the seam flows have {q,t} = −Δ²/2 in wall time and Schwarzian 0 in their own exponential clock, the 1-loop QCD flow has Schwarzian 0 in its own RG time: each instance is projective in its own clock, no shared wall-time jet invariant (MOEBIUS-IN-OWN-CLOCK); and the Ext-resolvent marking is honestly killed in the sandbox (χ_Ext ≡ 0 for both twins; the radical sublattices are identical). Suite 571 → 573 scripts.",
+    badge: "sandbox",
+    script: "macro_kernel_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 183,
+    title:
+      "The null-ray census: correlated, partial, honest. A second external review predicted that the pencil locking direction should align with the Pythagorean null ray (2,−1) of the rank-one edge read. T183 runs the preregistered test on all 70 declared windows: the alignment is REAL — 23.5–33.8° everywhere (below the 45° isotropic mean), and the scramble destroys it (+21°) — but the decline is slow (h^−0.10), so the review's clean success bar (uniform convergence to zero) is honestly NOT met. The ray is a real partial carrier: the edge regime it comes from is closed, and the macro regime bends the locking direction, exactly as the three-regime split predicts. Follow-up: the macro-regime direction from K∞(σ,τ), not more angle fits.",
+    verdict: "NULL-RAY-CORRELATED",
+    summary:
+      "T183 (NULL-RAY-CORRELATED — the review's Priority-2 test executed verbatim; 5/5, 1.7 s; tenth backflow probe) — contract PRIME.NULLRAY: v_lock = near-null eigenvector of Â = B−S per window vs v0 = (2,−1), the exact null direction of the v576 rank-one edge profile [[1,2],[2,4]]. Raw angle [23.5, 33.8]° (median 28.1°), B-metric [23.0, 35.0]° on all 70 windows — everywhere below random; decline real but slow (h^−0.10 raw / h^−0.12 B-metric): the clean success bar NOT met, said honestly; must-break: the position scramble destroys the alignment (28.1 → 49.4° raw) — arithmetic structure, the scramble-blind kill excluded. Verdict: a real PARTIAL carrier consistent with the three-regime split. The exact core is promoted as v577 (PRIME.NULLRAY.01).",
+    badge: "sandbox",
+    script: "nullray_census_probe.py",
+  },
+  {
+    date: "2026-07-31",
+    part: 182,
+    title:
+      "The second review's Toeplitz strand, audited: everything EXACT. A new external review proposed a closed formula for the polarized parity cross weights, an exact structure theorem at the reflection edge, a Pythagorean null bridge, and two asymptotic coefficients. T182 audits all of it against the corpus definitions — and everything holds exactly: the cross formula closes the whole K = 2 read block analytically (no more Hankel reconstruction); the edge read is a scaled Loewner matrix of the Chebyshev polynomial U_{s−1} (rank ≤ s−1 — the FIRST edge read is rank one BY THEOREM); the leading profile's Lorentz image is the null triple (5,−3,4) — the same Pythagorean triple as (g_car, N_fam, |μ₄|) via Euclid's parametrisation, typed compression per the no-free-pattern discipline; the normalized edge defect is the exact series coefficient −(3π⁴/175)(s²−4)(11s²+6)N⁻⁴ — locally one order BETTER than the h⁻³ demand of Problem 7.1; and the pair-kernel sign polynomial P(s,z) (with P(2,3) = 0 exactly and sign transition s/z ≈ 0.503/1.987) is the analytic prototype of T181's measured near-negative/far-positive anatomy. The three-regime split refines Problem 7.1 without touching its quantifier: edge CLOSED at N⁻⁴, macro OPEN, transition OPEN.",
+    verdict: "FORMULAS-EXACT",
+    summary:
+      "T182 (FORMULAS-EXACT — the second review's Toeplitz strand audited; 9/9, 5.9 s; ninth backflow probe) — contract PRIME.CHEBLOEWNER: (1) the cross formula w_d^(ij) = (2/N)[sin ωj sin(dωi) − sin ωi sin(dωj)]/(cos ωi − cos ωj) EXACT against v563's lag_weights (symbolic N = 7/9/11 all pairs all lags; 1e−11 at h = 300/800); (2) the edge theorem exact: sin((N−s)ω) = −sin(sω) makes the edge block a scaled Loewner matrix of U_{s−1} — rank 1/2/3 verified at s = 2/3/4 (sv-ratio ≤ 1e−12); (3) the null bridge: [[1,2],[2,4]] → (5,−3,4), null exactly, Euclid's (i²+j², i²−j², 2ij) — typed COMPRESSION with (g_car, N_fam, |μ₄|); (4) the defect coefficient −(3π⁴/175)(s²−4)(11s²+6)N⁻⁴ exact by sympy series (vanishing at the rank-one read); (5) P(s,z) = 5s⁴−21s²z²+19s²+5z⁴+19z²+24 verified at 2e−3 with P(2,3) = 0 exact ~7 orders below scale — near scales couple negative, far positive (crossover ~2): the analytic prototype of the T181 anatomy; (6) macro kernels W∞(σ) verified at 5%. No uniformity, Regime B open, NO RH statement. The exact core is promoted as v576 (PRIME.CHEBLOEWNER.01). Suite 569 → 571 scripts.",
+    badge: "sandbox",
+    script: "cheb_loewner_probe.py",
+  },
   {
     date: "2026-07-31",
     part: 181,

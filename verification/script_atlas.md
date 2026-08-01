@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`569` registered scripts · `640` ledger claims · `10` clusters.
+`588` registered scripts · `659` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (92 scripts)
+### `core` — Compiler core & the E₈ glue  (110 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -195,6 +195,42 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v569_lambda_pencil_onemode, v563_paper2_readouts, v563, v566, v569 · cited: 3 e8 audit bootstrap
 - **v573_pair_band_structure** [E] `PRIME.PAIRBAND.01` — on the declared surface every near band (< 16 lag cells) and the diagonal of the Cauchy–Binet pair kernel drag NEGATIVE, the whole positive excess of det S lives beyond 16 lag cell
   - deps: v570_separation_floor, v569_lambda_pencil_onemode, v563_paper2_readouts, v563, v570 · cited: 3 e8 audit bootstrap
+- **v576_cheb_loewner_edge** [E/C/O] `PRIME.CHEBLOEWNER.01` — the polarized cross-weight formula is EXACT against the corpus definition (symbolic N ≤ 11, 1e−11 on the surface: the whole K = 2 read block analytically closed); the reflection-ed
+  - deps: v563_paper2_readouts, v573_pair_band_structure, v570_separation_floor, v563, v573 · cited: 3 e8 audit bootstrap
+- **v577_nullray_census** [E] `PRIME.NULLRAY.01` — the pencil locking mode is CORRELATED with the Pythagorean null ray (2,−1) on all 70 declared windows (raw angle 23.5–33.8°, median 28.1°, B-metric similar — all below the 45° isot
+  - deps: v576_cheb_loewner_edge, v569_lambda_pencil_onemode, v563, v569, v576 · cited: 3 e8 audit bootstrap
+- **v579_macro_kernel_signs** [E/C/O] `PRIME.MACROKERNEL.01` — sign K∞(σ,τ) matches the real two-lag kernel on every resolved grid cell (332/332 at h = 300); the diagonal det W∞(σ) is negative on ~72% of (0,1) (same-scale pairs couple negative
+  - deps: v576_cheb_loewner_edge, v573_pair_band_structure, v570_separation_floor, v563, v573, v576 · cited: 3 e8 audit bootstrap
+- **v580_occupation_map** [E/O] `PRIME.OCCUPATION.01` — det S = (1/2)ΣΣ c_at(d₁)c_at(d₂) D(W(d₁),W(d₂)) EXAKT (Lag-Seiten-Polarisationsidentität, 1e−9 auf 4 Fenstern); das Vorzeichen JEDER signifikanten Besetzungszelle folgt sign K∞ auf
+  - deps: v579_macro_kernel_signs, v573_pair_band_structure, v576_cheb_loewner_edge, v563, v573, v579 · cited: 3 e8 audit bootstrap
+- **v581_locking_transport** [X] `PRIME.TRANSPORT.01` — 40 Verdopplungspaare auf der deklarierten Fläche: der Drift der Locking-Richtung ist klein (0.3–6.7° pro Oktave, Median 2.35°), fällt aber NICHT (Fit h^{+0.36} gegen die Schranke h
+  - deps: v577_nullray_census, v579_macro_kernel_signs, v563, v577, v579 · cited: 3 e8 audit bootstrap
+- **v582_density_dominance** [E/C] `PRIME.DENSITYDOM.01` — der geglättete Comb (gleitendes Mittel, 2%-Fenster) reproduziert det S zu 99.8–99.9% auf jedem regulären Fenster (98.7–99.3% bei 5%; glatt abfallend auf 81–89% bei 20%): der Träger
+  - deps: v580_occupation_map, v570_separation_floor, v573_pair_band_structure, v563, v570, v580 · cited: 3 e8 audit bootstrap
+- **v583_pnt_model** [C] `PRIME.PNTMODEL.01` — das klassische Zwei-Term-Gesetz mass(u) = 4e^{u/2} − 2(ζ'/ζ)(1/2) (Pol-Term + s=1/2-Konstante, KEINE Nullstellen) als Gitter-Modell durch die unveränderte v563-Pipeline reproduzier
+  - deps: v582_density_dominance, v570_separation_floor, v563, v570, v580, v582 · cited: 3 e8 audit bootstrap
+- **v584_ext_source_response** [E/C/O] `DIAMOND.BIT.EXTSOURCE.01` — Rang-1-Ext-Source-Kopplung auf dem Gibbs-Pencil trennt die 81-Twins RICHTUNGSABHÄNGIG im Einheits-Kopplungsfenster: exakte rationale Flip-Schwellen J_c(s) = -1/(v^T K(s)^{-1} v), d
+  - deps: v572_rp_bit_form, v568_bit_selector_ladder, v567_carrier_free_q_reconstruction, v534, v568, v572 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
+- **v585_pnt_locking_split** [C] `PRIME.LOCKSPLIT.01` — DIE DOMINANZ IST DICHTE, DAS LOCKING IST ARITHMETIK: das primzahlfreie v583-Modell durch den Paper-II-Defekt δ = det(B−S)/((B−S)_11(B−S)_22) gejagt verfehlt den echten Lock um 2–4 
+  - deps: v583_pnt_model, v569_lambda_pencil_onemode, v570_separation_floor, v563, v569, v583 · cited: 3 e8 audit bootstrap
+- **v586_pnt_lock_direction** [C/O] `PRIME.LOCKDIR.01` — der echte Locking-Eigenvektor des Pencils B⁻¹S stimmt mit dem primzahlfreien v583-Modell auf max 0.331° (Median 0.030°, zerfallend ~h^−1.16) auf allen 69 regulären Fenstern überein
+  - deps: v585_pnt_locking_split, v583_pnt_model, v577_nullray_census, v569_lambda_pencil_onemode, v563, v569, v577, v583 · cited: 3 e8 audit bootstrap
+- **v587_w_closed_form** [E] `PRIME.WCLOSED.01` — NEUE EXAKTE FORMEL: das diagonale Lag-Gewicht des Korpus ist der EINE geschlossene Ausdruck W_kk(d) = (2/N)[(N−1−d)cos(w_k d) + sin(w_k(d+1))/sin(w_k)] (maschinen-exakt 1.9e−15 geg
+  - deps: v576_cheb_loewner_edge, v583_pnt_model, v579_macro_kernel_signs, v563, v576, v579, v583 · cited: 3 e8 audit bootstrap
+- **v588_closed_delta** [E] `PRIME.CLOSEDDELTA.01` — BEIDE SEITEN DES DEFEKTS SIND EINE FUNKTION: G_ij(β) = Σ e^{−βd}W_ij(d) (exakte geometrisch-trigonometrische Summen über die v587-Formeln); die S-Seite ist der POL-Exponent β = −D/
+  - deps: v587_w_closed_form, v583_pnt_model, v585_pnt_locking_split, v563, v583, v585, v587 · cited: 3 e8 audit bootstrap
+- **v589_zero_comb** [C] `PRIME.ZEROCOMB.01` — die Rest-Massen-Oszillation der Atomtafel ist der Explizite-Formel-Comb −4Σ sin(γu)/γ (Korrelation 0.82, Slope 1.28 = Trunkierungsdefizit mit 200 gedämpften Nullstellen; punktweise
+  - deps: v588_closed_delta, v585_pnt_locking_split, v583_pnt_model, v563, v583, v585, v588 · cited: 3 e8 audit bootstrap
+- **v590_involution_existence** [E/C/O] `QGEO.INVOL.01` — EXISTENZ UNCONDITIONAL, Auswahl auf zwei explizite Forderungen verengt: die integralen V-kommutierenden Involutionen sind EXAKT die Spektral-Vorzeichengruppe (Z/2)³ (alle acht inte
+  - deps: v574_stageb_winding, v567_carrier_free_q_reconstruction, v566_parabolic_anchor_selfcode, v566, v567, v574 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
+- **v591_pole_rank_one** [E] `PRIME.POLERANKONE.01` — die Laplace-Nenner faktorisieren vollständig (D11 = (a²+4π²)², D22 = (a²+16π²)², D12 = deren Produkt), der Pol-Teil ist exakt separabel S^pole = −32π²ae^a·ggᵀ mit g_k = k/(a²+4π²k²
+  - deps: v588_closed_delta, v586_pnt_lock_direction, v577_nullray_census, v577, v586, v588 · cited: 3 e8 audit bootstrap
+- **v592_continuum_det_law** [E/C] `PRIME.DETLAW.01` — det S(a) geschlossen, der e^{2a}-Koeffizient IDENTISCH null (v591-Rang-1-Cancellation), führendes Gesetz det S ~ 640π²e^a/a³ exakt (der e^a-Term mit exaktem Koeffizienten trägt die
+  - deps: v591_pole_rank_one, v588_closed_delta, v570_separation_floor, v589_zero_comb, v570, v588, v591 · cited: 3 e8 audit bootstrap
+- **v593_cutoff_completion** [E] `PRIME.CUTOFF.01` — der Finite-N-Gap der Kontinuums-Determinante (v592: 0.19–0.50) war der Integrations-CUTOFF: mit S_ij(a,σ₀) = −2a∫_{σ₀}^1 e^{aσ}g_ij dσ (weiterhin elementar geschlossen) treffen die
+  - deps: v592_continuum_det_law, v587_w_closed_form, v583_pnt_model, v583, v587, v592 · cited: 3 e8 audit bootstrap
+- **v594_unconditional_cert** [E/C/O] `PRIME.UNCONDCERT.01` — partielle Summation (maschinen-verifiziert) + die publizierte unbedingte Schranke |ψ(x)−x| < 0.94√x (Büthe 2018, bis 10¹⁹, via verifizierte Nullstellen; die Fläche liegt 16 Größeno
+  - deps: v592_continuum_det_law, v589_zero_comb, v583_pnt_model, v583, v589, v592 · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -420,7 +456,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (196 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (197 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -815,6 +851,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v213_ftransfer_functor, v224_diamond_ftransfer_path, v566_parabolic_anchor_selfcode, v183, v224, v533, v566 · cited: research contracts
 - **v575_cr_continuous_uniflow** [E/C/O] `FTR.CRCONT.01` — UNIFLOW-DEGENERATE: the frozen protocol exports (fixed-point multipliers of the native contractions, v425) give the quadruple {(2/3)⁶, (2/3)⁶, 1, −7} — the repetition is FORCED by 
   - deps: v571_cr_discrete_corners, v213_ftransfer_functor, v425_dyn_transfer_universal, v99, v159, v320, v425, v571 · cited: research contracts
+- **v578_native_jets** [E/C] `FTR.JETS.01` — the exact v99 Koide trajectory has wall-time Schwarzian {q,t} = −Δ²/2 = −18 log(3/2)² (constant, trajectory-independent; F_Boltzmann identical by the single-flow theorem) and is Mo
+  - deps: v575_cr_continuous_uniflow, v571_cr_discrete_corners, v425_dyn_transfer_universal, v99, v159, v425, v575 · cited: research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (183 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1209,16 +1247,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v564_cp_fiber_pin** — `CP.FIBER.PIN.01`
-- **v565_woit_beta3_pt_duality** — `WOIT.BETA3.DUALITY.01`
-- **v566_parabolic_anchor_selfcode** — `DIAMOND.PARA.SELFCODE.01`
-- **v567_carrier_free_q_reconstruction** — `QGEO.QRECON.01`
-- **v568_bit_selector_ladder** — `DIAMOND.BIT.SELECT.01`
-- **v569_lambda_pencil_onemode** — `PRIME.PENCIL.ONEMODE.01`
-- **v570_separation_floor** — `PRIME.PENCIL.SEPFLOOR.01`
-- **v571_cr_discrete_corners** — `FTR.CRDISC.01`
-- **v572_rp_bit_form** — `DIAMOND.BIT.RPFORM.01`
-- **v573_pair_band_structure** — `PRIME.PAIRBAND.01`
-- **v574_stageb_winding** — `QGEO.WINDING.SELF.01`
-- **v575_cr_continuous_uniflow** — `FTR.CRCONT.01`
+- **v583_pnt_model** — `PRIME.PNTMODEL.01`
+- **v584_ext_source_response** — `DIAMOND.BIT.EXTSOURCE.01`
+- **v585_pnt_locking_split** — `PRIME.LOCKSPLIT.01`
+- **v586_pnt_lock_direction** — `PRIME.LOCKDIR.01`
+- **v587_w_closed_form** — `PRIME.WCLOSED.01`
+- **v588_closed_delta** — `PRIME.CLOSEDDELTA.01`
+- **v589_zero_comb** — `PRIME.ZEROCOMB.01`
+- **v590_involution_existence** — `QGEO.INVOL.01`
+- **v591_pole_rank_one** — `PRIME.POLERANKONE.01`
+- **v592_continuum_det_law** — `PRIME.DETLAW.01`
+- **v593_cutoff_completion** — `PRIME.CUTOFF.01`
+- **v594_unconditional_cert** — `PRIME.UNCONDCERT.01`
 

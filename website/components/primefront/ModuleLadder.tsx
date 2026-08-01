@@ -197,12 +197,108 @@ const MODULES = [
     title: "Pair-band anatomy: long-range · T181 backflow",
     checks: 10,
   },
+  {
+    id: "v576",
+    claim: "PRIME.CHEBLOEWNER.01",
+    title: "Chebyshev-Loewner edge structure · T182 backflow",
+    checks: 9,
+  },
+  {
+    id: "v577",
+    claim: "PRIME.NULLRAY.01",
+    title: "Null-ray locking census · T183 backflow",
+    checks: 5,
+  },
+  {
+    id: "v579",
+    claim: "PRIME.MACROKERNEL.01",
+    title: "Two-scale kernel signs · T184 backflow",
+    checks: 6,
+  },
+  {
+    id: "v580",
+    claim: "PRIME.OCCUPATION.01",
+    title: "Arithmetic occupation map · T185 backflow",
+    checks: 5,
+  },
+  {
+    id: "v581",
+    claim: "PRIME.TRANSPORT.01",
+    title: "Multilevel transport census · T186 backflow",
+    checks: 4,
+  },
+  {
+    id: "v582",
+    claim: "PRIME.DENSITYDOM.01",
+    title: "Density-dominance reduction · T187 backflow",
+    checks: 5,
+  },
+  {
+    id: "v583",
+    claim: "PRIME.PNTMODEL.01",
+    title: "Prime-free closed form · T188 backflow",
+    checks: 8,
+  },
+  {
+    id: "v585",
+    claim: "PRIME.LOCKSPLIT.01",
+    title: "Two-layer locking split · T189 backflow",
+    checks: 6,
+  },
+  {
+    id: "v586",
+    claim: "PRIME.LOCKDIR.01",
+    title: "Density-fixed locking direction · T190 backflow",
+    checks: 7,
+  },
+  {
+    id: "v587",
+    claim: "PRIME.WCLOSED.01",
+    title: "Exact diagonal weight formula · T191 backflow",
+    checks: 6,
+  },
+  {
+    id: "v588",
+    claim: "PRIME.CLOSEDDELTA.01",
+    title: "Closed deterministic defect · T192 backflow",
+    checks: 6,
+  },
+  {
+    id: "v589",
+    claim: "PRIME.ZEROCOMB.01",
+    title: "Zero-comb identification · T193 backflow",
+    checks: 4,
+  },
+  {
+    id: "v591",
+    claim: "PRIME.POLERANKONE.01",
+    title: "Rank-one pole term · T194 backflow",
+    checks: 5,
+  },
+  {
+    id: "v592",
+    claim: "PRIME.DETLAW.01",
+    title: "Continuum determinant law · T195 backflow",
+    checks: 6,
+  },
+  {
+    id: "v593",
+    claim: "PRIME.CUTOFF.01",
+    title: "Cutoff completion · T196 backflow",
+    checks: 4,
+  },
+  {
+    id: "v594",
+    claim: "PRIME.UNCONDCERT.01",
+    title: "Unconditional entry certificate · T197 backflow",
+    checks: 5,
+  },
 ] as const;
 
 const TOTAL_CHECKS = MODULES.reduce((s, m) => s + m.checks, 0);
 const MAX_CHECKS = Math.max(...MODULES.map((m) => m.checks));
-const SANDBOX_PROBES = 181;
-const SANDBOX_CHECKS = 4843;
+const SANDBOX_PROBES = 197;
+const SANDBOX_CHECKS = 4934;
 
 export function ModuleLadder() {
   return (
