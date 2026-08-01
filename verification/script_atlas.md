@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`606` registered scripts · `677` ledger claims · `10` clusters.
+`607` registered scripts · `678` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (128 scripts)
+### `core` — Compiler core & the E₈ glue  (129 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -267,6 +267,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v610_curve_landscape, v597_mu4_cover_model, v597, v610 · cited: 3 e8 audit bootstrap
 - **v612_polarization_frame** [E/C] `QGEO.POLFRAME.01` — J DIAGONALISIERT EXAKT IN DER ROTATIONS-EIGENBASIS: die Braid-Rotation r hat drei EINFACHE Eigenwerte ζ₁₂·{1,−1,−i} (det r = −1); in der Links-Eigenbasis wird J exakt diagonal, dia
   - deps: v611_periods, v610_curve_landscape, v599_real_structure, v597, v599, v610, v611 · cited: 3 e8 audit bootstrap
+- **v613_canonical_periods** [E/C] `QGEO.PERNORM.01` — DIE ANALYTISCHE BRÜCKE SCHLIESST: die Viertel-Rotation x→ix wirkt DECK-FREI auf den vier Verzweigungs-Segmenten (alle 12 Wrap-Faktoren exakt 1; Homologie-Relation seg₁+seg₂+seg₃+se
+  - deps: v612_polarization_frame, v611_periods, v610_curve_landscape, v599_real_structure, v597, v599, v610, v611 · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1283,7 +1285,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v601_equivariant_dual** — `QGEO.CANON.01`
 - **v602_duality_forms** — `QGEO.DUALFORMS.01`
 - **v603_seam_marks** — `QGEO.SEAMMARKS.01`
 - **v604_equivariant_order** — `QGEO.EQORDER.01`
@@ -1295,4 +1296,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v610_curve_landscape** — `QGEO.LANDSCAPE.01`
 - **v611_periods** — `QGEO.PERIODS.01`
 - **v612_polarization_frame** — `QGEO.POLFRAME.01`
+- **v613_canonical_periods** — `QGEO.PERNORM.01`
 

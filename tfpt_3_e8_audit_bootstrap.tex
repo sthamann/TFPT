@@ -2293,6 +2293,43 @@ Machine-checked: \veri{v612\_polarization\_frame.py}.
 typed; no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The canonical period normalization
+(\texttt{QGEO.PERNORM.01}).}
+The analytic bridge \emph{closes} ($19$ checks, ${\sim}6$\,s;
+executes v612's named step).  Geometry first: the quarter rotation
+$x\mapsto ix$ maps the four branch-point segments of $y^3=x^4-1$
+cyclically with \emph{no} deck correction (all $12$ wrap factors
+exactly $1$; $40$-digit certificates), the single $\omega$-sheet
+homology relation is $\mathrm{seg}_1+\mathrm{seg}_2+\mathrm{seg}_3
++\mathrm{seg}_4=0$, and a must-fail control documents that the
+\emph{raw} period rows are \emph{not} $r$-eigenvectors (the naive
+ansatz falsified, residual $0.42$).  The exact dictionary:
+$\mathrm{char}(r)=\mathrm{char}(\omega M)$ \emph{exactly} for the
+induced companion rotation $M$ ($M^4=1$) --- the reduced Burau
+rotation at $t=\omega$ is $\mathrm{GL}_3$-conjugate (explicit
+conjugator $G$) to the geometric quarter rotation composed with
+\emph{exactly one} deck step, explaining $r^4=\omega$ structurally;
+the deck power is unique among the four scalar twists with
+$(cM)^4=\omega$.  The period rows (hol $dx/y^2$, hol $x\,dx/y^2$,
+antihol $\overline{dx/y}$) are $M$-eigenvectors with characters
+$(i,-1,-i)$ and transport through $G$ to $r$-eigenvectors with
+$\omega\cdot(i,-1,-i)=\mathrm{spec}(r)$; character match: antihol
+$\leftrightarrow\zeta_{12}$.  The Hodge weights are explicit Gamma
+monomials (complex Beta formula, verified to $10^{-25}$):
+$h_1=(3\sqrt3/16\pi)\,\Gamma(1/3)^2\Gamma(1/6)^2$ and the two
+$\Gamma$-quotient companions; $\omega$-sheet signature $(2,1)$ with
+the unique \emph{negative} on the antiholomorphic line.  The sign
+bridge: all three character-matched sign products are negative ---
+$J=-h$ \emph{per character}: the compiler polarization is minus the
+analytic Hodge form up to per-line positive scales, and $J$'s unique
+positive line ($\zeta_{12}$, v612) is $h$'s unique negative line ---
+Riemann--Hodge positivity realized.  Residue named: the canonical
+fork-basis identification (basepoint bookkeeping for $G$).
+Machine-checked: \veri{v613\_canonical\_periods.py}.
+\mE\ (exact dictionary/uniqueness; certificates; Gamma monomials;
+sign bridge; no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

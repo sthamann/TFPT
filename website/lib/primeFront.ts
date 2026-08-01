@@ -190,7 +190,8 @@ export type PrimeFrontVerdict =
   | "C-FACTORIZATION-LANDED"
   | "LANDSCAPE-MAPPED"
   | "PERIODS-CLASSICAL"
-  | "POLARIZATION-FRAMED";
+  | "POLARIZATION-FRAMED"
+  | "PERIOD-NORMALIZED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -214,6 +215,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The canonical period normalization — the analytic bridge closes. The session v612 named, executed. First the honest falsification: the naive ansatz (period rows over plain branch segments as Burau eigenvectors) FAILS, and the failure is kept as a must-fail control (residual 0.42). The honest construction then lands everything. The quarter rotation x → ix acts on the four branch-point segments of y³ = x⁴ − 1 with NO deck correction — all twelve wrap factors are exactly 1 — and the single homology relation is seg₁+seg₂+seg₃+seg₄ = 0. That makes the induced rotation a companion matrix M with M⁴ = 1, and the exact dictionary drops out: char(r) = char(ω·M) EXACTLY — the reduced Burau rotation at t = ω is the geometric quarter rotation composed with EXACTLY ONE deck step (explicit conjugator; the deck power unique among all four scalar twists). This explains v597's r⁴ = ω structurally. The period rows — two holomorphic differentials and one ANTIholomorphic (the conjugate of dx/y) — realize the rotation eigenframe with characters (i, −1, −i) and transport to the exact r-spectrum. The Hodge weights are explicit Gamma monomials via the complex Beta formula (h₁ = (3√3/16π)Γ(1/3)²Γ(1/6)², verified to 1e−25), signature (2,1). And the sign bridge: J = −h PER CHARACTER — the compiler polarization is MINUS the analytic Hodge form, and J's unique positive line (ζ₁₂, v612) is exactly h's unique negative line (the antiholomorphic direction). Riemann–Hodge positivity is realized by the compiler polarization. Residue named: the canonical fork-basis identification.",
+    verdict: "PERIOD-NORMALIZED",
+    summary:
+      "v613_canonical_periods.py promoted (QGEO.PERNORM.01, 19 checks; probe canonical_periods_probe.py 19/19, PERIOD-NORMALIZED): 12 wrap factors = 1 exactly (deck-free rotation); char(r) = char(ωM) exact, deck power unique; period rows (hol dx/y², hol x dx/y², antihol conj(dx/y)) realize the eigenframe, antihol ↔ ζ₁₂; Hodge weights = Gamma monomials (complex Beta, ≤ 1e−25); J = −h per character — Riemann–Hodge positivity realized. GATE.QGEO does not move. Suite 606 → 607 scripts.",
+    badge: "sandbox",
+    script: "canonical_periods_probe.py",
+  },
   {
     date: "2026-08-01",
     part: 0,

@@ -43,6 +43,260 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the canonical period normalization lands ("
+      },
+      {
+        "k": "c",
+        "v": "v613"
+      },
+      {
+        "k": "t",
+        "v": " promoted) — THE ANALYTIC BRIDGE CLOSES: the quarter rotation acts DECK-FREE on the four branch segments (all "
+      },
+      {
+        "k": "m",
+        "v": "12"
+      },
+      {
+        "k": "t",
+        "v": " wrap factors exactly "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": "), and the exact dictionary is "
+      },
+      {
+        "k": "m",
+        "v": "r=\\mathrm{deck}\\circ\\mathrm{rotation}"
+      },
+      {
+        "k": "t",
+        "v": " — "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{char}(r)=\\mathrm{char}(\\omega M)"
+      },
+      {
+        "k": "t",
+        "v": " EXACTLY, explaining "
+      },
+      {
+        "k": "m",
+        "v": "r^4=\\omega"
+      },
+      {
+        "k": "t",
+        "v": " structurally, with the deck power unique; the period rows (hol "
+      },
+      {
+        "k": "m",
+        "v": "dx/y^2"
+      },
+      {
+        "k": "t",
+        "v": ", hol "
+      },
+      {
+        "k": "m",
+        "v": "x\\,dx/y^2"
+      },
+      {
+        "k": "t",
+        "v": ", antihol "
+      },
+      {
+        "k": "m",
+        "v": "\\overline{dx/y}"
+      },
+      {
+        "k": "t",
+        "v": ") realize the rotation eigenframe; the Hodge weights are explicit Gamma monomials ("
+      },
+      {
+        "k": "m",
+        "v": "h_1=(3\\sqrt3/16\\pi)\\Gamma(1/3)^2\\Gamma(1/6)^2"
+      },
+      {
+        "k": "t",
+        "v": ", complex Beta formula); and "
+      },
+      {
+        "k": "m",
+        "v": "J=-h"
+      },
+      {
+        "k": "t",
+        "v": " PER CHARACTER: the compiler polarization is MINUS the analytic Hodge form — Riemann–Hodge positivity realized, v612's named step B5 executed"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v613_canonical_periods.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.PERNORM.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "19"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 19/19, PERIOD-NORMALIZED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Deck-free rotation on segments (40-digit certificates) with the must-fail control (raw period rows are NOT "
+        },
+        {
+          "k": "m",
+          "v": "r"
+        },
+        {
+          "k": "t",
+          "v": "-eigenvectors, residual "
+        },
+        {
+          "k": "m",
+          "v": "0.42"
+        },
+        {
+          "k": "t",
+          "v": " — the naive ansatz falsified before the honest construction); "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{char}(r)=\n\\mathrm{char}(\\omega M)"
+        },
+        {
+          "k": "t",
+          "v": " exact with explicit conjugator "
+        },
+        {
+          "k": "m",
+          "v": "G"
+        },
+        {
+          "k": "t",
+          "v": "; character match antihol "
+        },
+        {
+          "k": "m",
+          "v": "\\leftrightarrow\\zeta_{12}"
+        },
+        {
+          "k": "t",
+          "v": "; omega-sheet signature "
+        },
+        {
+          "k": "m",
+          "v": "(2,1)"
+        },
+        {
+          "k": "t",
+          "v": " with the unique negative on the antiholomorphic line "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "J"
+        },
+        {
+          "k": "t",
+          "v": "'s unique positive line (v612): all three character-matched sign products negative. Residue named: the canonical fork-basis identification (basepoint bookkeeping for "
+        },
+        {
+          "k": "m",
+          "v": "G"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.POLFRAME.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.PERIODS.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "606\\to607"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XXIX",
     "heading": [
       {
