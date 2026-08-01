@@ -336,6 +336,25 @@ relabeling. \textbf{This is bedrock:} the chain
 \texttt{REALIZE}\,$\to$\,theorem\,$\to$\,\textsc{Marks{+}Kernel}\,$\to$\,\texttt{CONF}\,$\to$\,%
 \texttt{ISO}\,$\to$\,\texttt{SYM} (\vref{v175}--\vref{v181}) ends at a single definitional premise, left
 honestly \mO; everything above it is a theorem or an established citation.
+\par\smallskip\noindent\textbf{A concrete geometric model for the bedrock premise: the $\mu_3$-cover
+program (\veri{v597\_mu4\_cover\_model.py}--\veri{v601\_equivariant\_dual.py}).} The bedrock premise now
+has its first explicit \emph{candidate realisation}: the cyclic cover $y^3=x^4-1$ of $\PP$ branched at
+$\mu_4$ (order-$3$ cusp monodromies, exactly the contract's cusp structure).  Machine-exact, in five
+rounds: the cover carries the rank-$3$ Eisenstein $H_1$, the projective $D_4$ via the deck, the
+cusp-class torsion $(\Z/3)^4$ of order $81$, and the unique invariant hermitian form of Lorentz
+signature $(1,2)$ with $\det J=8$ (v597/v599); the anti-holomorphic reflection (the real structure $R$,
+$R^2{=}1$, unique up to scale) exists and closes the operator dictionary (v599); the compiler pair
+$(U,V)$ itself is \emph{realised} --- $\mathbb{Z}[\omega]$-integral, GL$_3$-conjugate to the compiler
+pair, integer on the saturated $\mathrm{Fix}(R)$ lattice, with saturation index $81=3^4$ in the exact
+v566 divisor pattern $(1,1,1,3,3,3,3)$ (v600, Lean-certified as \texttt{FORM.QGEO.04} in
+\texttt{TfptCarrier/CoverEmbedding.lean}: determinant-free Smith certificates, kernel \texttt{decide});
+and the presentation is canonical --- the J-adapted cusp projectors give a manifestly $D_4$-equivariant
+pair family (mark choice $=$ winding choice) realising the \emph{dual} parabolic, with the two parabolic
+types exchanged by the J-adjoint, and the v590 Klein four-group living integrally on the curve
+(v601/\veri{v602\_duality\_forms.py}).  Honest status: this is a \emph{model}, not yet the seam --- the
+identification of the raw RP seam with the cover (the Weil-twisted positivity comparison against the
+v572 Gram data, and the geometric identity of the seam line) stays \mO; \texttt{QGEO.SYM.01} does not
+move.
 \par\smallskip\noindent\textbf{A sharper, operator-checkable restatement: \texttt{QGEO.ENERGY.01}
 (\veri{v192\_qgeo\_energy\_clock.py}).} The bedrock can be re-expressed as an energy identity rather than a
 conformal-class statement: \emph{the carrier clock $\rho$ preserves the Calder\'on / Dirichlet-to-Neumann

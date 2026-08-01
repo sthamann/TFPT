@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`591` registered scripts · `662` ledger claims · `10` clusters.
+`597` registered scripts · `668` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (113 scripts)
+### `core` — Compiler core & the E₈ glue  (119 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -236,7 +236,19 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v596_lock_projection** [E/C] `PRIME.LOCKPROJ.01` — entlang der GESCHLOSSENEN Locking-Richtung (v591-Gesetz, parameterfrei) cancelt das Nullstellen-Funktional den geschlossenen Dichte-Wert in einer FAST-IDENTITÄT: |q_real/q_model| M
   - deps: v591_pole_rank_one, v586_pnt_lock_direction, v589_zero_comb, v595_mapping_completion, v583, v589, v591, v595 · cited: 3 e8 audit bootstrap
 - **v597_mu4_cover_model** [E/C/O] `QGEO.COVER.01` — der μ₃-Cover y³ = x⁴−1 (verzweigt an μ₄ + ∞) trägt VIER unabhängige Compiler-Fingerprints: (1) Genus 3, H₁ = Rang-3-Modul über den Eisenstein-Zahlen (Chevalley-Weil H^{1,0} = (1,2)
-  - deps: v590_involution_existence, v574_stageb_winding, v566_parabolic_anchor_selfcode, v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v566, v574, v590 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
+  - deps: v590_involution_existence, v574_stageb_winding, v566_parabolic_anchor_selfcode, v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v566, v574, v590 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v598_cover_dictionary** [E/X] `QGEO.DICT.01` — DREI Compiler-Objekte als kanonische Cusp-Gram-Kombinationen lokalisiert: U ~ G₂ (char x²(x−3)); Q₋ ~ G₁−G₃ (char x(x²−3)) — die μ₄-Sheet-Kopplung ist die Differenz der GEGENÜBERLI
+  - deps: v597_mu4_cover_model, v590_involution_existence, v566_parabolic_anchor_selfcode, v566, v568, v597 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
+- **v599_real_structure** [E/C/O/X] `QGEO.REAL.01` — der v598-Verdächtige KONSTRUIERT: die antiholomorphe D₄-Reflexion wirkt semilinear R(v) = M·conj(v), ist EINDEUTIG bis auf Skala (1-dim Lösungsraum), R² = +1 exakt, alle vier Twist
+  - deps: v598_cover_dictionary, v597_mu4_cover_model, v590_involution_existence, v566_parabolic_anchor_selfcode, v566, v597, v598 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
+- **v600_joint_embedding** [E/O] `QGEO.EMBED.01` — DAS COMPILER-PAAR (U, V) IST AUF DEM μ₃-COVER REALISIERT: der Γ-gerade Grad-2-Sektor liefert U* = −2E₁ + (G₁Γ(G₁)+Γ(G₁)G₁) + 3 und V* = −E₃ + ½(G₂Γ(G₂)+Γ(G₂)G₂) + 1 — beide Z[ω]-in
+  - deps: v599_real_structure, v598_cover_dictionary, v597_mu4_cover_model, v590_involution_existence, v566_parabolic_anchor_selfcode, v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v566, v597 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
+- **v601_equivariant_dual** [E/C/O] `QGEO.CANON.01` — die J-adaptierten Cusp-Projektoren GJₖ = (1−Tₖ)J⁻¹(1−Tₖ)†J sind idempotente Rang-1-Projektoren (char x²(x−1)), rotieren EXAKT unter D₄ (r GJₖ r⁻¹ = GJₖ₊₁; gegenüberliegende J-ortho
+  - deps: v600_joint_embedding, v599_real_structure, v590_involution_existence, v566_parabolic_anchor_selfcode, v590, v597, v599, v600 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v602_duality_forms** [E/O] `QGEO.DUALFORMS.01` — die J-Adjungierte VERTAUSCHT die zwei Parabolik-Typen in EINER äquivarianten Struktur (U₁ J-selbstadjungiert; V₁^J = exakte Produktumkehr; (U₁,V₁^J) ~ Compiler-Paar, (U₁,V₁) ~ tran
+  - deps: v601_equivariant_dual, v600_joint_embedding, v599_real_structure, v566_parabolic_anchor_selfcode, v572, v590, v600, v601 · cited: 3 e8 audit bootstrap, research contracts
+- **v603_seam_marks** [E/C/X] `QGEO.SEAMMARKS.01` — DIE SEAM-LINIE IST REELL: das Linien-Stabilisator-Paar hat eine EINDEUTIGE gemeinsame Eigenlinie v (Uv = 0, Vv = v; explizit (0, (√3−i)/(√3+i), 1)); die reelle Struktur FIXIERT sie
+  - deps: v602_duality_forms, v601_equivariant_dual, v600_joint_embedding, v590_involution_existence, v590, v600, v601, v602 · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1253,16 +1265,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v586_pnt_lock_direction** — `PRIME.LOCKDIR.01`
-- **v587_w_closed_form** — `PRIME.WCLOSED.01`
-- **v588_closed_delta** — `PRIME.CLOSEDDELTA.01`
-- **v589_zero_comb** — `PRIME.ZEROCOMB.01`
-- **v590_involution_existence** — `QGEO.INVOL.01`
-- **v591_pole_rank_one** — `PRIME.POLERANKONE.01`
 - **v592_continuum_det_law** — `PRIME.DETLAW.01`
 - **v593_cutoff_completion** — `PRIME.CUTOFF.01`
 - **v594_unconditional_cert** — `PRIME.UNCONDCERT.01`
 - **v595_mapping_completion** — `PRIME.MAPCLOSE.01`
 - **v596_lock_projection** — `PRIME.LOCKPROJ.01`
 - **v597_mu4_cover_model** — `QGEO.COVER.01`
+- **v598_cover_dictionary** — `QGEO.DICT.01`
+- **v599_real_structure** — `QGEO.REAL.01`
+- **v600_joint_embedding** — `QGEO.EMBED.01`
+- **v601_equivariant_dual** — `QGEO.CANON.01`
+- **v602_duality_forms** — `QGEO.DUALFORMS.01`
+- **v603_seam_marks** — `QGEO.SEAMMARKS.01`
 

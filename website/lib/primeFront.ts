@@ -175,7 +175,13 @@ export type PrimeFrontVerdict =
   | "UNCONDITIONAL-ENTRY-CERT"
   | "MAPPING-CLOSES"
   | "NEAR-IDENTITY-1D"
-  | "FINGERPRINTS-HIT";
+  | "FINGERPRINTS-HIT"
+  | "DICT-THREE-ENTRIES"
+  | "REAL-STRUCTURE-LANDED"
+  | "JOINT-EMBEDDING-LANDED"
+  | "EQUIVARIANT-DUAL-LANDED"
+  | "DUALITY-FORMS-LANDED"
+  | "SEAM-REAL-LANDED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -199,6 +205,72 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The seam-and-marks round — the seam line is a REAL line of the cover, and the per-mark ℤ/3 mechanism gets its first exact witness. The compiler has a distinguished direction: the seam line, which the sheet involution must reverse (one of the two v590 demands that remained formal inputs). On the curve, this line is now found and characterized: the realized pair (U, V) has a unique common eigenline (Uv = 0, Vv = v), explicitly (0, (√3−i)/(√3+i), 1) — and the real structure FIXES it. The seam is a real line of the geometry, and the two-demand involution S₀ reverses it exactly: the seam-reversal demand is no longer a postulate but a geometric fact of the cover. Second: the infinity cusp — the natural seam suspect — is canonically separated in the unreduced homology (invariant line, full twist eigenvalues {1, ω,ω,ω}). Third: the number 81 = 3⁴ was supposed to be 'one ℤ/3 per mark' — and the first witness is here: the mark-1 element E₁ restricts to an integer matrix inside the word algebra with coefficient denominators of exactly 3: an order-three class in the order's cokernel. Honest limits: the other marks' classes live in rotated frames (the naive global map fails, quantified), and the corpus-transpose translator for the RP comparison still needs a new canonical object — all typed open.",
+    verdict: "SEAM-REAL-LANDED",
+    summary:
+      "v603_seam_marks.py promoted (QGEO.SEAMMARKS.01, 15 checks; probe seam_marks_probe.py 15/15, SEAM-REAL-LANDED): seam v unique (Uv = 0, Vv = v), v = (0, (√3−i)/(√3+i), 1), Rv ~ v (real), S₀v = −v (v590 demand geometric); unreduced Burau braid relations verified, invariant column (1,1,1,1), invariant row (1, ω, ω̄, 1), full twist {1×1, ω×3}; E₁ integer restriction, word-algebra coefficients with lcm denominator 3 (order-3 cokernel class); E₄ trivial, E₂/E₃ outside; F₂ = gᵀΣg no menu match, B⁻¹F₂ not in algebra. GATE.QGEO does not move. Suite 596 → 597 scripts.",
+    badge: "sandbox",
+    script: "seam_marks_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The duality-and-forms round — one J-self-dual structure carries both parabolics, the anchor formula holds verbatim, and Weil positivity lands. Three questions from the canonicity round, answered at once. First: what connects the two realizations (v600's line-stabilizer and v601's dual)? The J-adjoint. U₁ is J-self-adjoint, the J-adjoint of V₁ is the exact product reversal, and (U₁, V₁^J) is exactly conjugate to the compiler pair — one equivariant structure, both parabolic types, exchanged by the polarization form. Second: the dictionary completes. H = 1 + V(V−1)/2 — the corpus anchor formula — holds VERBATIM on the curve with the anchor spectrum (1,1,2); Q₊ and the binary AnchorLadder are two-term projector formulas. Third: Strategy II's positivity statement is now exact at module level — the Weil operator from J's spectral split (Hodge numbers (1,2)) makes the twisted form positive definite: the Riemann bilinear relations hold on the ω-sheet. Bonus: the canonical bilinear form B = M†J (real structure × polarization) is symmetric with det B = 8. The v600 integer core is now also Lean-certified (FORM.QGEO.04: determinant-free Smith certificates, kernel decide). Honest opens, quantified: the corpus transpose structure is NOT the (R,J)-form; the naive mark-local ℤ/3 map fails; the seam normal is explicit but not a deck eigenvector.",
+    verdict: "DUALITY-FORMS-LANDED",
+    summary:
+      "v602_duality_forms.py promoted (QGEO.DUALFORMS.01, 17 checks; probe duality_forms_probe.py 17/17, DUALITY-FORMS-LANDED): U₁ J-self-adjoint; V₁^J = 1+GJ₄−GJ₂GJ₁ exact; (U₁,V₁^J) ~ compiler pair (conjugation exact); H = 1+V(V−1)/2 char (x−1)²(x−2) verbatim; Q₊ ~ 2−GJ₁+GJ₂GJ₃; ladder ~ 2−GJ₁+2GJ₂GJ₃; JC positive definite {2√2−2, 2, 2+2√2}; B = M†J symmetric, det 8; negatives: gᵀg ≠ λB, mark-local map fails (U₂/U₃ outside algebra), seam normal not deck-eigen. Lean FORM.QGEO.04 (CoverEmbedding.lean) green. GATE.QGEO does not move. Suite 595 → 596 scripts.",
+    badge: "sandbox",
+    script: "duality_forms_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The canonicity round — the equivariant presentation is found, and it is the dual parabolic. Why did the v600 presentation fail to rotate under D₄? Because the standard hermitian dagger is basis-dependent: the Burau representation preserves the invariant form J, not the standard form. Repairing this gives the canonical building blocks — the J-adapted cusp projectors GJ_k, which are genuinely idempotent rank-1 projectors and rotate EXACTLY under the D₄ braid (opposite cusps are J-orthogonal). From them, tiny formulas: U_k = 3·GJ_k and V_k = 1 + GJ_{k−1} − GJ_k·GJ_{k+1} — integral, compiler-exact, and equivariant BY CONSTRUCTION: rotating the curve shifts the mark, so the mark choice is literally the compiler's winding choice. The surprise: this pair is not conjugate to the compiler pair but exactly to its TRANSPOSE — the equivariant presentation realizes the dual (plane-stabilizer) parabolic, while the v600 pair realizes the line-stabilizer. The cover carries both types, exchanged by duality. And the Klein four-group of v590 (formalized in Lean) lives integrally on the curve: all eight sign involutions are integral, S₀ is explicit, A·B = S₀. Honest opens: the naive J-word Gram has inertia (3,2,2), not the v572 RP pattern (4,0,3) — the Hodge comparison needs the Weil twist; and the seam line's geometric identity is still unknown.",
+    verdict: "EQUIVARIANT-DUAL-LANDED",
+    summary:
+      "v601_equivariant_dual.py promoted (QGEO.CANON.01, 14 checks; probe equivariant_dual_probe.py 14/14, EQUIVARIANT-DUAL-LANDED): GJ_k = (1−T_k)J⁻¹(1−T_k)†J idempotent, char x²(x−1), r GJ_k r⁻¹ = GJ_{k+1} exact, tr(GJ₁GJ₃) = 0; pair U_k = 3GJ_k, V_k = 1+GJ_{k−1}−GJ_kGJ_{k+1}: ℤ[ω]-integral, compiler spectra + joint data, word rank 7, full D₄ equivariance verified; duality: intertwiner to (U_c,V_c) identically singular (must-fail), conjugation to (U_c^T,V_c^T) exact; Klein group: 8/8 integral involutions, S₀ trace −1, A·B = S₀; J-word-Gram inertia (3,2,2) typed open vs v572 (4,0,3). GATE.QGEO does not move. Suite 594 → 595 scripts.",
+    badge: "sandbox",
+    script: "equivariant_dual_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The joint embedding lands — the compiler pair (U, V) is realized on the μ₃-cover. The v599 negative had closed the degree-1 sector; the degree-2 Γ-even sector delivers. An explicit pair — U* built from cusp 1's Gram and its mirror image, V* from cusps 2 and 3 — is integral over the Eisenstein numbers, carries the compiler's exact spectra and joint traces (tr(UV) = 3, tr(UV²) = 6, char(U+V) = char Q), spans the full seven-word parabolic algebra (rank 7), and is GL₃-conjugate to the compiler pair by an explicitly solved change of basis. The integral test is the sharpest: on the saturated fixed lattice of the real structure, both operators restrict to INTEGER matrices, and the ℤ-order generated by their seven words has Smith elementary divisors (1,1,1,3,3,3,3) — saturation index 81 = 3⁴, exactly the v566 self-code index with the same divisor pattern. The cover now carries the torsion (v597), the dictionary (v598/v599) and the joint algebra with its integral order structure (v600): Strategy I has landed in the existence sense. Honest limits: canonicity is open (the scan admits many joint pairs — this is existence, not uniqueness), and the gate does not move until the canonicity round and the two-demand continuum derivation land.",
+    verdict: "JOINT-EMBEDDING-LANDED",
+    summary:
+      "v600_joint_embedding.py promoted (QGEO.EMBED.01, 15 checks; probe joint_embedding_probe.py 15/15, JOINT-EMBEDDING-LANDED): U* = −2E₁+(G₁Γ(G₁)+Γ(G₁)G₁)+3, V* = −E₃+½(G₂Γ(G₂)+Γ(G₂)G₂)+1; ℤ[ω]-integral, Γ-even; chars x²(x−3), x(x−1)(x−2), char(U+V) = (x−1)(x²−5x+3); joint traces 3 and 6; word rank 7; conjugation g U* g⁻¹ = U_c, g V* g⁻¹ = V_c solved exactly; R integer on ℤ⁶ (R² = 1), saturated Fix(R) basis explicit (SNF (1,1,1)); integer restrictions; Smith (1,1,1,3,3,3,3), index 81 = 3⁴ = v566. Must-break passes; canonicity typed open. GATE.QGEO does not move. Suite 593 → 594 scripts.",
+    badge: "sandbox",
+    script: "joint_embedding_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The real structure lands — the missing generator is constructed, and it closes the dictionary at spectrum level. The suspect named by round 2 was the anti-holomorphic D₄ reflection, and it exists: complex conjugation on the base fixes {1,−1} and swaps {i,−i}, acts semi-linearly R(v) = M·conj(v), and must send each cusp twist to the INVERSE of its mirror partner. The intertwining system has a one-dimensional solution space — R is unique up to scale — and the canonical normalization satisfies R² = +1 exactly. Its grading functor Γ(A) = M·conj(A)·M⁻¹ closes all three dictionary gaps at char level: V, H with the ANCHOR SPECTRUM (1,1,2), and Q₊. The Γ-decomposition of the cusp Grams carries the compiler constants — one element has spectrum {0,1,5} (the carrier five), another {0,3,9}. Two more exact anchors: the invariant hermitian form has det J = 8 — a member of the sheet-diamond determinant list (3,4,8,14,20,32) — with Lorentz signature (1,2), pinning Strategy II's Hodge prediction at form level. The honest limit, quantified: char-matching is not yet an algebra embedding (4×6 candidates, zero pairs pass the joint compiler relations) — the flag-adapted simultaneous-conjugation search is the named next step.",
+    verdict: "REAL-STRUCTURE-LANDED",
+    summary:
+      "v599_real_structure.py promoted (QGEO.REAL.01, 18 checks; probe real_structure_probe.py 18/18, REAL-STRUCTURE-LANDED): R unique up to scale (1-dim intertwiner space), R² = +1, four twist intertwinings R T_k R⁻¹ = T₅₋ₖ⁻¹ exact; Γ closes V ~ G₂+G₃−Γ(G₃) (x(x−1)(x−2)), H ~ 1+G₂−Γ(G₃) ((x−1)²(x−2), the anchor spectrum), Q₊ ~ 1+G₂+G₃−Γ(G₃) ((x−1)(x−2)(x−3)); constants {0,1,5}/{0,3,9}/±√5/±√27/nilpotent in the Γ-decomposition; joint negative quantified (0 of 4×6 pairs pass tr(UV)=3 ∧ char(U+V)=charQ; kill NOT triggered); invariant J unique, det 8, Lorentz (1,2). GATE.QGEO does not move. Suite 592 → 593 scripts.",
+    badge: "sandbox",
+    script: "real_structure_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The cover dictionary reaches three exact entries — and Strategies I and II interlock. Round 2 of the operator dictionary on the μ₃-cover delivers two new exact hits with compiler-native semantics. The μ₄ sheet coupling Q₋ is the DIFFERENCE OF THE OPPOSITE CUSP GRAMS (char x(x²−3) exactly) — the operator that couples the sheets across the diamond is literally the diamond-diagonal difference. And the binary AnchorLadder (1,2,4) = (2⁰,2¹,2²) of v568 is identity plus the diagonal sum (char (x−1)(x−2)(x−4) exactly). Together with U ~ G₂ from the first round, three compiler objects now live as canonical cusp-Gram combinations. The honest negative is equally sharp: the grading half (Q₊, hence V and Q) is absent from 7296 scanned canonical combinations — the missing generator must come from outside the finite-cusp twist algebra, and the named suspect is the anti-holomorphic D₄ reflection: the REAL STRUCTURE. Which is exactly the object Strategy II needs for Hodge positivity — the two strategies now point at the same missing piece.",
+    verdict: "DICT-THREE-ENTRIES",
+    summary:
+      "v598_cover_dictionary.py promoted (QGEO.DICT.01, 4 checks; probe cover_dictionary_probe.py 4/4, DICT-THREE-ENTRIES): U ~ G₂ (x²(x−3)); Q₋ ~ G₁−G₃ (x(x²−3)); ladder ~ 1+G₁+G₃ ((x−1)(x−2)(x−4)); opposite-twist products nilpotent (cube zero); Q₋² ~ x(x−3)²; negatives quantified: Q₊/V/H/Q absent from 7296 combinations (integer Gram lattice + non-hermitian extension, numeric prefilter + exact confirmation, 0 matches); Strategy-I kill criterion NOT triggered; the real structure named as the missing-generator suspect — interlocking with Strategy II. GATE.QGEO does not move. Suite 591 → 592 scripts.",
+    badge: "sandbox",
+    script: "cover_dictionary_probe.py",
+  },
   {
     date: "2026-08-01",
     part: 0,

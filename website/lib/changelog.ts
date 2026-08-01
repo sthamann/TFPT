@@ -43,6 +43,1589 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the seam-and-marks round lands ("
+      },
+      {
+        "k": "c",
+        "v": "v603"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the seam line is a REAL line of the cover (unique common eigenline, "
+      },
+      {
+        "k": "m",
+        "v": "R"
+      },
+      {
+        "k": "t",
+        "v": "-fixed) and "
+      },
+      {
+        "k": "m",
+        "v": "S_0"
+      },
+      {
+        "k": "t",
+        "v": " reverses it — the v590 seam-reversal demand holds geometrically; the infinity cusp separates in the unreduced Burau module; the first per-mark "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}/3"
+      },
+      {
+        "k": "t",
+        "v": " witness lands ("
+      },
+      {
+        "k": "m",
+        "v": "E_1"
+      },
+      {
+        "k": "t",
+        "v": ", class order "
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": " in the word-order cokernel); the corpus-transpose translator negatives are quantified"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v603_seam_marks.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.SEAMMARKS.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "15"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 15/15, SEAM-REAL-LANDED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Seam: "
+        },
+        {
+          "k": "m",
+          "v": "Uv=0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "Vv=v"
+        },
+        {
+          "k": "t",
+          "v": " unique, "
+        },
+        {
+          "k": "m",
+          "v": "v=(0,(\\sqrt3-i)/(\\sqrt3+i),1)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "Rv\\sim v"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "S_0v=-v"
+        },
+        {
+          "k": "t",
+          "v": "; infinity: unreduced Burau braid relations, invariant column "
+        },
+        {
+          "k": "m",
+          "v": "(1,1,1,1)"
+        },
+        {
+          "k": "t",
+          "v": ", full twist eigenvalues "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,\\omega^{\\times3}\\}"
+        },
+        {
+          "k": "t",
+          "v": "; marks: "
+        },
+        {
+          "k": "m",
+          "v": "E_1"
+        },
+        {
+          "k": "t",
+          "v": " integer restriction, in the word algebra with denominator lcm "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " (order-"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " cokernel class); "
+        },
+        {
+          "k": "m",
+          "v": "E_4"
+        },
+        {
+          "k": "t",
+          "v": " trivial, "
+        },
+        {
+          "k": "m",
+          "v": "E_2/E_3"
+        },
+        {
+          "k": "t",
+          "v": " outside (naive global map fails, equivariant framing typed); translator: "
+        },
+        {
+          "k": "m",
+          "v": "F_2=g^T\\Sigma g"
+        },
+        {
+          "k": "t",
+          "v": " matches no canonical menu form (all typed open)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.DUALFORMS.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.INVOL.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "596\\to597"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the duality-and-forms round lands ("
+      },
+      {
+        "k": "c",
+        "v": "v602"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the J-adjoint exchanges the two parabolic types exactly ("
+      },
+      {
+        "k": "m",
+        "v": "(U_1,V_1^J)\\sim"
+      },
+      {
+        "k": "t",
+        "v": " compiler pair); the dictionary completes in the J-projector language (the corpus anchor formula "
+      },
+      {
+        "k": "m",
+        "v": "H=1+V(V-1)/2"
+      },
+      {
+        "k": "t",
+        "v": " holds verbatim on the curve); Weil positivity holds exactly (the Riemann bilinear relations on the "
+      },
+      {
+        "k": "m",
+        "v": "\\omega"
+      },
+      {
+        "k": "t",
+        "v": "-sheet); the canonical bilinear form "
+      },
+      {
+        "k": "m",
+        "v": "B=M^\\dagger J"
+      },
+      {
+        "k": "t",
+        "v": " is symmetric with "
+      },
+      {
+        "k": "m",
+        "v": "\\det B=8"
+      },
+      {
+        "k": "t",
+        "v": "; the v600 integer core is Lean-certified ("
+      },
+      {
+        "k": "c",
+        "v": "FORM.QGEO.04"
+      },
+      {
+        "k": "t",
+        "v": "); the contracts paper gains the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_3"
+      },
+      {
+        "k": "t",
+        "v": "-cover model paragraph"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v602_duality_forms.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.DUALFORMS.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "17"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 17/17, DUALITY-FORMS-LANDED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "U_1"
+        },
+        {
+          "k": "t",
+          "v": " J-self-adjoint, "
+        },
+        {
+          "k": "m",
+          "v": "V_1^J"
+        },
+        {
+          "k": "t",
+          "v": " the exact product reversal, "
+        },
+        {
+          "k": "m",
+          "v": "(U_1,V_1^J)"
+        },
+        {
+          "k": "t",
+          "v": " conjugate to the compiler pair; "
+        },
+        {
+          "k": "m",
+          "v": "H"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "Q_+"
+        },
+        {
+          "k": "t",
+          "v": ", ladder all exact in the J-projector language; Weil-twisted form positive definite ("
+        },
+        {
+          "k": "m",
+          "v": "\\{2\\sqrt2-2,2,2+2\\sqrt2\\}"
+        },
+        {
+          "k": "t",
+          "v": "); honest negatives: "
+        },
+        {
+          "k": "m",
+          "v": "g^Tg\\ne\\lambda B"
+        },
+        {
+          "k": "t",
+          "v": ", naive mark-local map fails, seam normal not a deck eigenvector (all typed open)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean ("
+            },
+            {
+              "k": "c",
+              "v": "FORM.QGEO.04"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/CoverEmbedding.lean"
+        },
+        {
+          "k": "t",
+          "v": ": the v600 integer core via determinant-free Smith certificates ("
+        },
+        {
+          "k": "m",
+          "v": "W=TS"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "PT=\\mathrm{diag}(1,1,1,3,3,3,3)"
+        },
+        {
+          "k": "t",
+          "v": " with unimodular "
+        },
+        {
+          "k": "m",
+          "v": "P"
+        },
+        {
+          "k": "t",
+          "v": ", S-primitivity via unimodular minor); kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": "; lake build green ("
+        },
+        {
+          "k": "m",
+          "v": "3375"
+        },
+        {
+          "k": "t",
+          "v": " jobs)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.CANON.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.EMBED.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\mu_3"
+        },
+        {
+          "k": "t",
+          "v": "-cover model paragraph after the bedrock chain), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "595\\to596"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XVII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the canonicity round lands ("
+      },
+      {
+        "k": "c",
+        "v": "v601"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the J-adapted cusp projectors give a manifestly "
+      },
+      {
+        "k": "m",
+        "v": "D_4"
+      },
+      {
+        "k": "t",
+        "v": "-equivariant presentation of the pair (mark choice "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " winding choice), which realizes the DUAL parabolic exactly (conjugate to the transposed compiler pair; the direct intertwiner is singular); the v590 Klein four-group lives integrally on the curve; the Weil-twisted RP comparison and the seam identification stay open"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v601_equivariant_dual.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.CANON.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "14"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 14/14, EQUIVARIANT-DUAL-LANDED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "GJ_k=(1-T_k)J^{-1}(1-T_k)^\\dagger J"
+        },
+        {
+          "k": "t",
+          "v": " idempotent rank-1 J-projectors rotating exactly under "
+        },
+        {
+          "k": "m",
+          "v": "D_4"
+        },
+        {
+          "k": "t",
+          "v": "; pair family "
+        },
+        {
+          "k": "m",
+          "v": "U_k=3\\,GJ_k"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "V_k=1+GJ_{k-1}-GJ_kGJ_{k+1}"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}[\\omega]"
+        },
+        {
+          "k": "t",
+          "v": "-integral, compiler-exact, equivariant by construction; duality: conjugate to "
+        },
+        {
+          "k": "m",
+          "v": "(U_c^T,V_c^T)"
+        },
+        {
+          "k": "t",
+          "v": " exactly (must-fail to "
+        },
+        {
+          "k": "m",
+          "v": "(U_c,V_c)"
+        },
+        {
+          "k": "t",
+          "v": " documented); Klein group: all eight spectral-sign involutions integral, "
+        },
+        {
+          "k": "m",
+          "v": "S_0"
+        },
+        {
+          "k": "t",
+          "v": " explicit, "
+        },
+        {
+          "k": "m",
+          "v": "AB=S_0"
+        },
+        {
+          "k": "t",
+          "v": "; honest: naive J-word-Gram inertia "
+        },
+        {
+          "k": "m",
+          "v": "(3,2,2)\\ne(4,0,3)"
+        },
+        {
+          "k": "t",
+          "v": " (Weil twist named open)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + note on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.EMBED.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " (canonicity clauses), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "594\\to595"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the joint embedding lands ("
+      },
+      {
+        "k": "c",
+        "v": "v600"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the compiler pair "
+      },
+      {
+        "k": "m",
+        "v": "(U,V)"
+      },
+      {
+        "k": "t",
+        "v": " is REALIZED on the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_3"
+      },
+      {
+        "k": "t",
+        "v": "-cover — a "
+      },
+      {
+        "k": "m",
+        "v": "\\Gamma"
+      },
+      {
+        "k": "t",
+        "v": "-even degree-2 pair, "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}[\\omega]"
+      },
+      {
+        "k": "t",
+        "v": "-integral, seven-word rank "
+      },
+      {
+        "k": "m",
+        "v": "7"
+      },
+      {
+        "k": "t",
+        "v": ", simultaneous conjugation to the compiler pair solved exactly, integer restrictions on the saturated "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Fix}(R)"
+      },
+      {
+        "k": "t",
+        "v": " lattice, and saturation index "
+      },
+      {
+        "k": "m",
+        "v": "81=3^4"
+      },
+      {
+        "k": "t",
+        "v": " with the exact v566 divisor pattern; canonicity typed open, the gate does not move"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v600_joint_embedding.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.EMBED.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "15"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 15/15, JOINT-EMBEDDING-LANDED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The pair "
+        },
+        {
+          "k": "m",
+          "v": "U^*=-2E_1+(G_1\\Gamma(G_1)+\\Gamma(G_1)G_1)+3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "V^*=-E_3+\\tfrac12(G_2\\Gamma(G_2)+\\Gamma(G_2)G_2)+1"
+        },
+        {
+          "k": "t",
+          "v": ": chars and joint traces compiler-exact ("
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}(UV)=3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}(UV^2)=6"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{char}(U{+}V)=\n\\operatorname{char}Q"
+        },
+        {
+          "k": "t",
+          "v": "); seven words independent; explicit invertible "
+        },
+        {
+          "k": "m",
+          "v": "g"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "gU^*g^{-1}=U_c"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "gV^*g^{-1}=V_c"
+        },
+        {
+          "k": "t",
+          "v": "; the real structure integer on "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}^6"
+        },
+        {
+          "k": "t",
+          "v": " with explicit saturated fixed-lattice basis (SNF certificate); integer restrictions; Smith divisors "
+        },
+        {
+          "k": "m",
+          "v": "(1,1,1,3,3,3,3)"
+        },
+        {
+          "k": "t",
+          "v": ", index "
+        },
+        {
+          "k": "m",
+          "v": "81"
+        },
+        {
+          "k": "t",
+          "v": " — the v566 self-code order structure on the curve. Must-break control passes; canonicity open (existence claim only)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.REAL.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.DICT.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.COVER.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "DIAMOND.PARA.SELFCODE.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " (realization sentences), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "593\\to594"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the real structure lands ("
+      },
+      {
+        "k": "c",
+        "v": "v599"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the anti-holomorphic "
+      },
+      {
+        "k": "m",
+        "v": "D_4"
+      },
+      {
+        "k": "t",
+        "v": " reflection on the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_3"
+      },
+      {
+        "k": "t",
+        "v": "-cover exists and is unique up to scale with "
+      },
+      {
+        "k": "m",
+        "v": "R^2=+1"
+      },
+      {
+        "k": "t",
+        "v": "; its grading functor closes all three dictionary gaps at char level ("
+      },
+      {
+        "k": "m",
+        "v": "V"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "H"
+      },
+      {
+        "k": "t",
+        "v": " with the anchor spectrum "
+      },
+      {
+        "k": "m",
+        "v": "(1,1,2)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "Q_+"
+      },
+      {
+        "k": "t",
+        "v": "); the "
+      },
+      {
+        "k": "m",
+        "v": "\\Gamma"
+      },
+      {
+        "k": "t",
+        "v": "-decomposition carries "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "9"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "27"
+      },
+      {
+        "k": "t",
+        "v": "; the joint algebra embedding stays open (quantified negative); and the invariant form has "
+      },
+      {
+        "k": "m",
+        "v": "\\det J=8"
+      },
+      {
+        "k": "t",
+        "v": " — a sheet-diamond determinant-list member — with Lorentz signature "
+      },
+      {
+        "k": "m",
+        "v": "(1,2)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v599_real_structure.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.REAL.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "18"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 18/18, REAL-STRUCTURE-LANDED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Existence and uniqueness of "
+        },
+        {
+          "k": "m",
+          "v": "R(v)=M\\,\\overline{v}"
+        },
+        {
+          "k": "t",
+          "v": " (1-dimensional intertwiner space, "
+        },
+        {
+          "k": "m",
+          "v": "R^2=+1"
+        },
+        {
+          "k": "t",
+          "v": " exact, four twist intertwinings "
+        },
+        {
+          "k": "m",
+          "v": "RT_kR^{-1}=T_{5-k}^{-1}"
+        },
+        {
+          "k": "t",
+          "v": "); the grading functor "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma(A)=M\\overline{A}M^{-1}"
+        },
+        {
+          "k": "t",
+          "v": " locates "
+        },
+        {
+          "k": "m",
+          "v": "V\\sim G_2+G_3-\\Gamma(G_3)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "H\\sim 1+G_2-\\Gamma(G_3)"
+        },
+        {
+          "k": "t",
+          "v": " (the anchor spectrum) and "
+        },
+        {
+          "k": "m",
+          "v": "Q_+\\sim 1+G_2+G_3-\\Gamma(G_3)"
+        },
+        {
+          "k": "t",
+          "v": " exactly at char level; the "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma"
+        },
+        {
+          "k": "t",
+          "v": "-even/odd cusp elements carry "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,1,5\\}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,3,9\\}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\pm\\sqrt5"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\pm\\sqrt{27}"
+        },
+        {
+          "k": "t",
+          "v": " and one nilpotent; the joint negative quantified ("
+        },
+        {
+          "k": "m",
+          "v": "4\\times6"
+        },
+        {
+          "k": "t",
+          "v": " candidates, zero pairs pass "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}(UV)=3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{char}(U+V)=\\operatorname{char}Q"
+        },
+        {
+          "k": "t",
+          "v": "; kill not triggered); the invariant hermitian form is unique with "
+        },
+        {
+          "k": "m",
+          "v": "\\det J=8"
+        },
+        {
+          "k": "t",
+          "v": " and signature "
+        },
+        {
+          "k": "m",
+          "v": "(1,2)"
+        },
+        {
+          "k": "t",
+          "v": " — Strategy II's Hodge prediction at form level, pinned."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.DICT.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.COVER.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "592\\to593"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the cover dictionary reaches THREE exact entries ("
+      },
+      {
+        "k": "c",
+        "v": "v598"
+      },
+      {
+        "k": "t",
+        "v": " promoted): "
+      },
+      {
+        "k": "m",
+        "v": "U\\sim G_2"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "Q_-\\sim G_1-G_3"
+      },
+      {
+        "k": "t",
+        "v": " — the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " sheet coupling is the diamond-diagonal Gram difference — and the binary AnchorLadder "
+      },
+      {
+        "k": "m",
+        "v": "(1,2,4)\\sim1+G_1+G_3"
+      },
+      {
+        "k": "t",
+        "v": "; the grading half is absent from "
+      },
+      {
+        "k": "m",
+        "v": "7296"
+      },
+      {
+        "k": "t",
+        "v": " canonical combinations, with the real structure as the named suspect"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v598_cover_dictionary.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.DICT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "4"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 4/4, DICT-THREE-ENTRIES)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " All three entries exact (numeric prefilter, symbolic confirmation); supporting structure: opposite-twist products nilpotent, "
+        },
+        {
+          "k": "m",
+          "v": "Q_-^2\\sim x(x-3)^2"
+        },
+        {
+          "k": "t",
+          "v": "; negatives quantified ("
+        },
+        {
+          "k": "m",
+          "v": "7296"
+        },
+        {
+          "k": "t",
+          "v": " combinations, "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " matches for "
+        },
+        {
+          "k": "m",
+          "v": "Q_+"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "H"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": "); the Strategy-I kill criterion not triggered; GATE.QGEO does not move."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + note on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.COVER.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " (dictionary sentences updated), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "591\\to592"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XII",
     "heading": [
       {

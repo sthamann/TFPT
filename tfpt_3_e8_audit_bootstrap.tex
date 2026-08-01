@@ -1940,6 +1940,146 @@ move. Machine-checked: \veri{v597\_mu4\_cover\_model.py}.
 \mE\ (exact sympy; convention validated; no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The cover dictionary, round 2
+(\texttt{QGEO.DICT.01}).}
+Three compiler objects located exactly ($4$ checks, $<1$\,s):
+$U\sim G_2$ (single-cusp Gram, char $x^2(x-3)$); $Q_-\sim G_1-G_3$
+(the $\mu_4$ sheet coupling as the \emph{diamond-diagonal} Gram
+difference, char $x(x^2-3)$); the binary AnchorLadder
+$\sim1+G_1+G_3$ (char $(x-1)(x-2)(x-4)$); opposite-twist products
+nilpotent; the grading half ($Q_+$/$V$/$H$/$Q$) absent from $7296$
+scanned canonical combinations --- the real structure is the named
+suspect; the Strategy-I kill criterion is not triggered.
+Machine-checked: \veri{v598\_cover\_dictionary.py}.
+\mE\ (exact entries; quantified negatives; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The real structure
+(\texttt{QGEO.REAL.01}).}
+The v598 suspect constructed ($18$ checks, ${\sim}3$\,s): the
+anti-holomorphic $D_4$ reflection acts semi-linearly,
+$R(v)=M\overline{v}$, with a \emph{one-dimensional} intertwiner space
+($R$ unique up to scale), $R^2=+1$ exactly, and all four twist
+intertwinings $RT_kR^{-1}=T_{5-k}^{-1}$ exact.  Its grading functor
+$\Gamma(A)=M\overline{A}M^{-1}$ closes the three dictionary gaps at
+char level: $V\sim G_2+G_3-\Gamma(G_3)$ (char $x(x-1)(x-2)$),
+$H\sim 1+G_2-\Gamma(G_3)$ (char $(x-1)^2(x-2)$ --- \emph{the anchor
+spectrum}), $Q_+\sim 1+G_2+G_3-\Gamma(G_3)$ (char $(x-1)(x-2)(x-3)$);
+the $\Gamma$-even/odd cusp elements carry $\{0,1,5\}$ ($\gcar=5$),
+$\{0,3,9\}$, $\pm\sqrt5$, $\pm\sqrt{27}$ and one nilpotent.  Honest
+joint negative, quantified: $4\times6$ candidates, zero pairs pass
+$\operatorname{tr}(UV)=3$ and $\operatorname{char}(U{+}V)=
+\operatorname{char}Q$ --- char-matching is not yet an algebra
+embedding (kill not triggered).  The invariant hermitian form is
+unique up to scale with $\det J=8$ --- a sheet-diamond
+determinant-list member --- and Lorentz signature $(1,2)$: Strategy
+II's Hodge prediction pinned at form level.
+Machine-checked: \veri{v599\_real\_structure.py}.
+\mE\ (exact existence/uniqueness; quantified joint negative; no
+marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The joint embedding
+(\texttt{QGEO.EMBED.01}).}
+The compiler pair is \emph{realized} on the $\mu_3$-cover ($15$
+checks, ${\sim}4$\,s): in the $\Gamma$-even degree-2 sector the pair
+$U^*=-2E_1+(G_1\Gamma(G_1)+\Gamma(G_1)G_1)+3$,
+$V^*=-E_3+\tfrac12(G_2\Gamma(G_2)+\Gamma(G_2)G_2)+1$ is
+$\mathbb{Z}[\omega]$-integral with compiler-exact spectra and joint
+traces ($\operatorname{tr}(U^*V^*)=3$,
+$\operatorname{tr}(U^*V^{*2})=6$,
+$\operatorname{char}(U^*{+}V^*)=\operatorname{char}Q$); the seven
+words have rank $7$ (the full $2|1$ parabolic) and an explicit
+invertible $g$ solves $gU^*g^{-1}=U_c$, $gV^*g^{-1}=V_c$ exactly ---
+the v566 self-code algebra lives on the cover.  On the explicit
+saturated $\mathrm{Fix}(R)$ lattice (SNF certificate $(1,1,1)$) the
+restrictions are \emph{integer} matrices whose seven-word
+$\mathbb{Z}$-order has Smith divisors $(1,1,1,3,3,3,3)$ ---
+saturation index $81=3^4$, exactly the v566 self-code index.
+Must-break control passes (the degree-1 pair fails the joint
+criterion); canonicity is open and typed open (existence, not
+uniqueness); the gate does not move.
+Machine-checked: \veri{v600\_joint\_embedding.py}.
+\mE\ (exact realization; canonicity open; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The canonical equivariant realization
+(\texttt{QGEO.CANON.01}).}
+The canonicity question answered ($14$ checks, ${\sim}12$\,s): the
+Burau image preserves $J$, not the standard hermitian form, so the
+canonical building blocks are the J-adapted cusp projectors
+$GJ_k=(1-T_k)J^{-1}(1-T_k)^\dagger J$ --- idempotent rank-1
+J-self-adjoint projectors rotating \emph{exactly} under $D_4$
+($rGJ_kr^{-1}=GJ_{k+1}$; opposite cusps J-orthogonal).  The pair
+family $U_k=3\,GJ_k$, $V_k=1+GJ_{k-1}-GJ_kGJ_{k+1}$ is
+$\mathbb{Z}[\omega]$-integral, compiler-exact (spectra, joint data,
+seven-word rank $7$) and $D_4$-\emph{equivariant by construction}:
+the mark choice is the compiler's winding choice.  The duality
+surprise: the equivariant pair is \emph{not} conjugate to
+$(U_c,V_c)$ (the intertwiner is identically singular --- must-fail
+documented) but exactly conjugate to the \emph{transposed} pair ---
+the equivariant presentation realizes the DUAL (plane-stabilizer)
+parabolic, the v600 pair the line-stabilizer: the cover carries both
+types, exchanged by duality.  And the v590 Klein four-group lives
+\emph{integrally} on the curve: all eight spectral-sign involutions
+of $V_1$ are $\mathbb{Z}[\omega]$-integral, the two demands select
+the explicit $S_0$ (trace $-1$), and $AB=S_0$ closes the group.
+Honest: the naive J-word Gram has inertia $(3,2,2)$, not the v572
+pattern $(4,0,3)$ --- the Hodge/RP comparison needs the Weil-twisted
+polarization (named open); the seam identification stays open.
+Machine-checked: \veri{v601\_equivariant\_dual.py}.
+\mE\ (exact equivariance/duality/Klein; typed opens; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The duality-and-forms round
+(\texttt{QGEO.DUALFORMS.01}).}
+The duality mechanism identified ($17$ checks, ${\sim}8$\,s): $U_1$
+is J-\emph{self-adjoint}, the J-adjoint of $V_1$ is the exact product
+reversal, and $(U_1,V_1^J)$ is exactly conjugate to the compiler
+line-stabilizer pair while $(U_1,V_1)$ realizes the transposed dual
+--- the J-adjoint exchanges the two parabolic types inside one
+equivariant structure.  The dictionary completes in the J-projector
+language: $H=1+V(V-1)/2$ carries char $(x-1)^2(x-2)$ --- \emph{the
+corpus anchor formula holds verbatim on the curve}; $Q_+\sim
+2-GJ_1+GJ_2GJ_3$ and the binary ladder $\sim 2-GJ_1+2\,GJ_2GJ_3$ are
+exact.  Weil positivity holds exactly: the twisted form $JC$ is
+positive definite with eigenvalues $\{2\sqrt2-2,\,2,\,2+2\sqrt2\}$
+--- the Riemann bilinear relations on the $\omega$-sheet; and the
+canonical bilinear form $B=M^\dagger J$ (real structure $\times$
+polarization) is symmetric with $\det B=8$.  Honest negatives, typed:
+$g^Tg\ne\lambda B$ (the corpus transpose is not the $(R,J)$-form);
+the naive mark-local cokernel map fails; the seam normal is explicit
+but not a deck eigenvector.  The v600 integer core is Lean-certified
+(\texttt{FORM.QGEO.04}, \texttt{TfptCarrier/CoverEmbedding.lean}:
+determinant-free Smith certificates, kernel \texttt{decide}).
+Machine-checked: \veri{v602\_duality\_forms.py}.
+\mE\ (exact duality/dictionary/positivity; quantified negatives; no
+marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The seam-and-marks round
+(\texttt{QGEO.SEAMMARKS.01}).}
+The seam line found, and it is \emph{real} ($15$ checks, ${\sim}7$\,s):
+the line-stabilizer pair has a unique common eigenline $v$ ($Uv=0$,
+$Vv=v$ --- the transported compiler seam), explicitly
+$v=(0,(\sqrt3-i)/(\sqrt3+i),1)$; the real structure \emph{fixes} this
+line and the two-demand involution \emph{reverses} it ($S_0v=-v$) ---
+the v590 seam-reversal demand holds geometrically on the curve.  The
+infinity cusp separates in the unreduced Burau module (invariant
+column $(1,1,1,1)$; full twist eigenvalues $\{1,\omega^{\times3}\}$).
+And the first per-mark $\mathbb{Z}/3$ witness lands: $E_1$ restricts
+to an integer matrix lying in the seven-word algebra with
+denominator lcm exactly $3$ --- an order-$3$ class in the word-order
+cokernel (the v566/v597 mechanism's first exact witness); $E_4$'s
+class is trivial and $E_2/E_3$ lie outside the mark-1-anchored
+algebra (equivariant per-mark framing typed).  The corpus-transpose
+translator negatives are quantified ($F_2=g^T\Sigma g$ matches no
+canonical menu form); named open.
+Machine-checked: \veri{v603\_seam\_marks.py}.
+\mE\ (exact seam/infinity/witness; quantified negatives; no marker
+moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

@@ -62,6 +62,100 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-08-01 (XIX) (the seam-and-marks round lands (\texttt{v603} promoted): the seam line is a REAL line of the cover (unique common eigenline, $R$-fixed) and $S_0$ reverses it --- the v590 seam-reversal demand holds geometrically; the infinity cusp separates in the unreduced Burau module; the first per-mark $\mathbb{Z}/3$ witness lands ($E_1$, class order $3$ in the word-order cokernel); the corpus-transpose translator negatives are quantified)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v603\_seam\_marks.py} (\texttt{QGEO.SEAMMARKS.01}, $15$ checks; probe
+15/15, SEAM-REAL-LANDED).} Seam: $Uv=0$, $Vv=v$ unique, $v=(0,(\sqrt3-i)/(\sqrt3+i),1)$,
+$Rv\sim v$, $S_0v=-v$; infinity: unreduced Burau braid relations, invariant column
+$(1,1,1,1)$, full twist eigenvalues $\{1,\omega^{\times3}\}$; marks: $E_1$ integer
+restriction, in the word algebra with denominator lcm $3$ (order-$3$ cokernel class);
+$E_4$ trivial, $E_2/E_3$ outside (naive global map fails, equivariant framing typed);
+translator: $F_2=g^T\Sigma g$ matches no canonical menu form (all typed open).
+\item \textbf{Sync.} Ledger row + notes on
+\texttt{QGEO.DUALFORMS.01}/\texttt{QGEO.INVOL.01}; \texttt{tfpt\_3} (audit block); diary;
+suite $596\to597$ scripts; website/README/zenodo counters; mirrors regenerated.
+\end{itemize}
+
+\subsection*{\interlinepenalty=150\relax 2026-08-01 (XVIII) (the duality-and-forms round lands (\texttt{v602} promoted): the J-adjoint exchanges the two parabolic types exactly ($(U_1,V_1^J)\sim$ compiler pair); the dictionary completes in the J-projector language (the corpus anchor formula $H=1+V(V-1)/2$ holds verbatim on the curve); Weil positivity holds exactly (the Riemann bilinear relations on the $\omega$-sheet); the canonical bilinear form $B=M^\dagger J$ is symmetric with $\det B=8$; the v600 integer core is Lean-certified (\texttt{FORM.QGEO.04}); the contracts paper gains the $\mu_3$-cover model paragraph)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v602\_duality\_forms.py} (\texttt{QGEO.DUALFORMS.01}, $17$ checks; probe
+17/17, DUALITY-FORMS-LANDED).} $U_1$ J-self-adjoint, $V_1^J$ the exact product reversal,
+$(U_1,V_1^J)$ conjugate to the compiler pair; $H$, $Q$, $Q_+$, ladder all exact in the
+J-projector language; Weil-twisted form positive definite ($\{2\sqrt2-2,2,2+2\sqrt2\}$);
+honest negatives: $g^Tg\ne\lambda B$, naive mark-local map fails, seam normal not a deck
+eigenvector (all typed open).
+\item \textbf{Lean (\texttt{FORM.QGEO.04}).} \texttt{TfptCarrier/CoverEmbedding.lean}: the
+v600 integer core via determinant-free Smith certificates ($W=TS$,
+$PT=\mathrm{diag}(1,1,1,3,3,3,3)$ with unimodular $P$, S-primitivity via unimodular minor);
+kernel \texttt{decide}; lake build green ($3375$ jobs).
+\item \textbf{Sync.} Ledger row + notes on \texttt{QGEO.CANON.01}/\texttt{QGEO.EMBED.01};
+\texttt{tfpt\_research\_contracts} ($\mu_3$-cover model paragraph after the bedrock chain),
+\texttt{tfpt\_3} (audit block); diary; suite $595\to596$ scripts; website/README/zenodo
+counters; mirrors regenerated.
+\end{itemize}
+
+\subsection*{\interlinepenalty=150\relax 2026-08-01 (XVII) (the canonicity round lands (\texttt{v601} promoted): the J-adapted cusp projectors give a manifestly $D_4$-equivariant presentation of the pair (mark choice $=$ winding choice), which realizes the DUAL parabolic exactly (conjugate to the transposed compiler pair; the direct intertwiner is singular); the v590 Klein four-group lives integrally on the curve; the Weil-twisted RP comparison and the seam identification stay open)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v601\_equivariant\_dual.py} (\texttt{QGEO.CANON.01}, $14$ checks; probe
+14/14, EQUIVARIANT-DUAL-LANDED).} $GJ_k=(1-T_k)J^{-1}(1-T_k)^\dagger J$ idempotent rank-1
+J-projectors rotating exactly under $D_4$; pair family $U_k=3\,GJ_k$,
+$V_k=1+GJ_{k-1}-GJ_kGJ_{k+1}$: $\mathbb{Z}[\omega]$-integral, compiler-exact, equivariant by
+construction; duality: conjugate to $(U_c^T,V_c^T)$ exactly (must-fail to $(U_c,V_c)$
+documented); Klein group: all eight spectral-sign involutions integral, $S_0$ explicit,
+$AB=S_0$; honest: naive J-word-Gram inertia $(3,2,2)\ne(4,0,3)$ (Weil twist named open).
+\item \textbf{Sync.} Ledger row + note on \texttt{QGEO.EMBED.01}; \texttt{tfpt\_1}/\texttt{tfpt\_2}
+(canonicity clauses), \texttt{tfpt\_3} (audit block); diary; suite $594\to595$ scripts;
+website/README/zenodo counters; mirrors regenerated.
+\end{itemize}
+
+\subsection*{\interlinepenalty=150\relax 2026-08-01 (XVI) (the joint embedding lands (\texttt{v600} promoted): the compiler pair $(U,V)$ is REALIZED on the $\mu_3$-cover --- a $\Gamma$-even degree-2 pair, $\mathbb{Z}[\omega]$-integral, seven-word rank $7$, simultaneous conjugation to the compiler pair solved exactly, integer restrictions on the saturated $\mathrm{Fix}(R)$ lattice, and saturation index $81=3^4$ with the exact v566 divisor pattern; canonicity typed open, the gate does not move)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v600\_joint\_embedding.py} (\texttt{QGEO.EMBED.01}, $15$ checks; probe
+15/15, JOINT-EMBEDDING-LANDED).} The pair $U^*=-2E_1+(G_1\Gamma(G_1)+\Gamma(G_1)G_1)+3$,
+$V^*=-E_3+\tfrac12(G_2\Gamma(G_2)+\Gamma(G_2)G_2)+1$: chars and joint traces compiler-exact
+($\operatorname{tr}(UV)=3$, $\operatorname{tr}(UV^2)=6$, $\operatorname{char}(U{+}V)=
+\operatorname{char}Q$); seven words independent; explicit invertible $g$ with
+$gU^*g^{-1}=U_c$, $gV^*g^{-1}=V_c$; the real structure integer on $\mathbb{Z}^6$ with
+explicit saturated fixed-lattice basis (SNF certificate); integer restrictions; Smith
+divisors $(1,1,1,3,3,3,3)$, index $81$ --- the v566 self-code order structure on the curve.
+Must-break control passes; canonicity open (existence claim only).
+\item \textbf{Sync.} Ledger row + notes on
+\texttt{QGEO.REAL.01}/\texttt{QGEO.DICT.01}/\texttt{QGEO.COVER.01}/\texttt{DIAMOND.PARA.SELFCODE.01};
+\texttt{tfpt\_1}/\texttt{tfpt\_2} (realization sentences), \texttt{tfpt\_3} (audit block);
+diary; suite $593\to594$ scripts; website/README/zenodo counters; mirrors regenerated.
+\end{itemize}
+
+\subsection*{\interlinepenalty=150\relax 2026-08-01 (XV) (the real structure lands (\texttt{v599} promoted): the anti-holomorphic $D_4$ reflection on the $\mu_3$-cover exists and is unique up to scale with $R^2=+1$; its grading functor closes all three dictionary gaps at char level ($V$, $H$ with the anchor spectrum $(1,1,2)$, $Q_+$); the $\Gamma$-decomposition carries $5$, $9$, $27$; the joint algebra embedding stays open (quantified negative); and the invariant form has $\det J=8$ --- a sheet-diamond determinant-list member --- with Lorentz signature $(1,2)$)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v599\_real\_structure.py} (\texttt{QGEO.REAL.01}, $18$ checks; probe
+18/18, REAL-STRUCTURE-LANDED).} Existence and uniqueness of $R(v)=M\,\overline{v}$
+(1-dimensional intertwiner space, $R^2=+1$ exact, four twist intertwinings
+$RT_kR^{-1}=T_{5-k}^{-1}$); the grading functor $\Gamma(A)=M\overline{A}M^{-1}$ locates
+$V\sim G_2+G_3-\Gamma(G_3)$, $H\sim 1+G_2-\Gamma(G_3)$ (the anchor spectrum) and
+$Q_+\sim 1+G_2+G_3-\Gamma(G_3)$ exactly at char level; the $\Gamma$-even/odd cusp elements
+carry $\{0,1,5\}$, $\{0,3,9\}$, $\pm\sqrt5$, $\pm\sqrt{27}$ and one nilpotent; the joint
+negative quantified ($4\times6$ candidates, zero pairs pass $\operatorname{tr}(UV)=3$ and
+$\operatorname{char}(U+V)=\operatorname{char}Q$; kill not triggered); the invariant hermitian
+form is unique with $\det J=8$ and signature $(1,2)$ --- Strategy II's Hodge prediction at
+form level, pinned.
+\item \textbf{Sync.} Ledger row + notes on \texttt{QGEO.DICT.01}/\texttt{QGEO.COVER.01};
+\texttt{tfpt\_3} (audit block); diary; suite $592\to593$ scripts; website/README/zenodo
+counters; mirrors regenerated.
+\end{itemize}
+
+\subsection*{\interlinepenalty=150\relax 2026-08-01 (XIII) (the cover dictionary reaches THREE exact entries (\texttt{v598} promoted): $U\sim G_2$, $Q_-\sim G_1-G_3$ --- the $\mu_4$ sheet coupling is the diamond-diagonal Gram difference --- and the binary AnchorLadder $(1,2,4)\sim1+G_1+G_3$; the grading half is absent from $7296$ canonical combinations, with the real structure as the named suspect)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v598\_cover\_dictionary.py} (\texttt{QGEO.DICT.01}, $4$ checks; probe
+4/4, DICT-THREE-ENTRIES).} All three entries exact (numeric prefilter, symbolic
+confirmation); supporting structure: opposite-twist products nilpotent, $Q_-^2\sim x(x-3)^2$;
+negatives quantified ($7296$ combinations, $0$ matches for $Q_+$/$V$/$H$/$Q$); the
+Strategy-I kill criterion not triggered; GATE.QGEO does not move.
+\item \textbf{Sync.} Ledger row + note on \texttt{QGEO.COVER.01};
+\texttt{tfpt\_1}/\texttt{tfpt\_2} (dictionary sentences updated), \texttt{tfpt\_3} (audit
+block); diary; suite $591\to592$ scripts; website/README/zenodo counters; mirrors
+regenerated.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-08-01 (XII) (dictionary round 2 honest negative (the $Q=U+V$ double criterion over ${\sim}50$ canonical elements: no $Q$/$V$ hit; kill not triggered, the flag-adapted search is the designed next session); the real-structure map documented as blocked on the dictionary; and the self-contained equidistribution problem statement added to \texttt{tfpt\_prime\_front} (\texttt{sec:theory-open}) --- the v596 identity family posed TFPT-free for external consumption)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{No module.} Exploration and editorial only: ledger untouched except mirrors;
