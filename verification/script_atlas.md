@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`616` registered scripts · `687` ledger claims · `10` clusters.
+`617` registered scripts · `688` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (138 scripts)
+### `core` — Compiler core & the E₈ glue  (139 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -287,6 +287,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v615_gamma_toy_interacting, v524_woit_beta2_os_quotient, v534_seam_straddle_cone, v524, v534, v615, v616 · cited: 3 e8 audit bootstrap
 - **v622_seam_identification** [E/C] `QGEO.SEAMID.01` — **DER PHYSISCHE SEAM IST DER KONFORME SEAM** (der zweite v617-Bedrock-Rest, auf Kernel+Wörterbuch-Ebene geschlossen): **DIE KERNEL-IDENTITÄT — der v519-Seam-Kernel c(d) = (2/N)/sin
   - deps: v617_seam_cover_forcing, v620_cyclic_n_census, v519_woit_theta_rp_free, v534_seam_straddle_cone, v519, v534, v617, v620 · cited: 3 e8 audit bootstrap
+- **v623_covered_seam** [E/C/X] `QGEO.COVERSEAM.01` — **DAS GITTER-SKELETT DER COVERING-EBENE** (der benannte v622-Rest, erste ausgeführte Scheibe): der auf den μ₃-Cover gehobene Seam ist **EIN 48-Site-NS-Kreis** für die uniformen Gew
+  - deps: v622_seam_identification, v617_seam_cover_forcing, v620_cyclic_n_census, v613_canonical_periods, v597, v613, v614, v617 · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1303,7 +1305,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v611_periods** — `QGEO.PERIODS.01`
 - **v612_polarization_frame** — `QGEO.POLFRAME.01`
 - **v613_canonical_periods** — `QGEO.PERNORM.01`
 - **v614_transport_deck** — `QGEO.TRANSPORT.01`
@@ -1315,4 +1316,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v620_cyclic_n_census** — `QGEO.NCENSUS.01`
 - **v621_interacting_semigroup** — `WOIT.GAMMA.SEMI.01`
 - **v622_seam_identification** — `QGEO.SEAMID.01`
+- **v623_covered_seam** — `QGEO.COVERSEAM.01`
 

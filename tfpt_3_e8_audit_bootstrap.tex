@@ -2590,6 +2590,41 @@ Machine-checked: \veri{v622\_seam\_identification.py}.
 no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The covered seam
+(\texttt{QGEO.COVERSEAM.01}).}
+The lattice skeleton of the covering-level identification ($9$
+checks, ${\sim}4$\,s; the named v622 residue, first slice).
+Lifting the 16-site seam circle to the $\mu_3$-cover (sheet shift
+per mark-bond crossing), the covered seam is \emph{one} 48-site NS
+circle for the uniform weights $j=1,2$ --- and \emph{disconnects}
+into three circles for the trivial and the alternating weights
+$(1,2,1,2)$: a new, independent kill of the alternating pair (seam
+connectivity; total monodromy $6\equiv0$ mod $3$).  The explicit
+walk closes after exactly $48$ steps (three base turns, $12$ mark
+crossings).  The lifted clock: $L^4=$ deck and $L^{12}=$ id on
+\emph{all} $48$ points with proper order $12$ --- v597's
+$r^4=\omega$ and v614's boundary-monodromy transport are
+\emph{lattice combinatorics} on the covered seam, and the
+$\zeta_{12}$ spectrum of the Burau rotation is the lifted clock's
+order.  The v622 kernel identity generalizes verbatim to $N=48$
+(all $d=1..47$).  The 12-grid: the NS modes split under the deck
+into three classes of $16$ modes with offsets $\{1/6,1/2,5/6\}$; the
+offset-$1/2$ class equals the \emph{base} NS frequencies exactly
+(the untwisted sector \emph{is} the base seam, verbatim); the
+fermionic deck lift satisfies $\mathrm{deck}^3=-1$ (the NS full
+rotation --- the spin double, resonating with the v510/v519
+$(-1)^F$ dichotomy), and the \emph{bilinear} deck eigenvalue of the
+twisted pair is exactly $\omega$ --- the $t=\omega/\bar\omega$
+sheets live on the $H^1$/bilinear level.  The $12$ lifted mark
+crossings form a single $12$-cycle under the lifted clock.  The
+remaining residue is the interacting/CFT-level orbifold statement
+(twist-field OPE, the full $\mathbb{Z}_3$ orbifold of the seam CFT),
+named, not claimed.  GATE.QGEO does not move.
+Machine-checked: \veri{v623\_covered\_seam.py}.
+\mE/\mC\ (exact combinatorics and mode-sum identities; orbifold
+residue typed; no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

@@ -43,6 +43,284 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXXVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the covered seam lands ("
+      },
+      {
+        "k": "c",
+        "v": "v623"
+      },
+      {
+        "k": "t",
+        "v": " promoted) — the lattice skeleton of the covering-level identification: the seam lifted to the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_3"
+      },
+      {
+        "k": "t",
+        "v": "-cover is ONE 48-site NS circle for the uniform weights (the alternating pair DISCONNECTS it — a new independent kill), the lifted clock has EXACT ORDER 12 with "
+      },
+      {
+        "k": "m",
+        "v": "L^4="
+      },
+      {
+        "k": "t",
+        "v": " deck ("
+      },
+      {
+        "k": "m",
+        "v": "r^4=\\omega"
+      },
+      {
+        "k": "t",
+        "v": " as lattice combinatorics), the v622 kernel identity generalizes verbatim to "
+      },
+      {
+        "k": "m",
+        "v": "N=48"
+      },
+      {
+        "k": "t",
+        "v": ", and the deck-character mode grid is the 12-grid ("
+      },
+      {
+        "k": "m",
+        "v": "\\{1/6,1/2,5/6\\}"
+      },
+      {
+        "k": "t",
+        "v": ") with the untwisted sector equal to the base seam VERBATIM and the twisted pair carrying "
+      },
+      {
+        "k": "m",
+        "v": "\\omega"
+      },
+      {
+        "k": "t",
+        "v": " on bilinears (the "
+      },
+      {
+        "k": "m",
+        "v": "t=\\omega/\\bar\\omega"
+      },
+      {
+        "k": "t",
+        "v": " sheets); the fermionic deck lift satisfies "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{deck}^3=-1"
+      },
+      {
+        "k": "t",
+        "v": " (the spin double)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v623_covered_seam.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.COVERSEAM.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "9"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 9/9, COVERED-SEAM-SKELETON)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Connectivity census ("
+        },
+        {
+          "k": "m",
+          "v": "j=1,2"
+        },
+        {
+          "k": "t",
+          "v": ": one circle; trivial and alternating: "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " components); the explicit 48-walk (three base turns, "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " crossings); "
+        },
+        {
+          "k": "m",
+          "v": "L^4="
+        },
+        {
+          "k": "t",
+          "v": " deck and "
+        },
+        {
+          "k": "m",
+          "v": "L^{12}="
+        },
+        {
+          "k": "t",
+          "v": " id on all "
+        },
+        {
+          "k": "m",
+          "v": "48"
+        },
+        {
+          "k": "t",
+          "v": " points with proper order "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "N=48"
+        },
+        {
+          "k": "t",
+          "v": " mode-sum identity; three "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-mode deck classes with the offset-"
+        },
+        {
+          "k": "m",
+          "v": "1/2"
+        },
+        {
+          "k": "t",
+          "v": " class "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the base NS frequencies exactly; "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{deck}^3=-1"
+        },
+        {
+          "k": "t",
+          "v": " on modes, bilinear eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "=\\omega"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " lifted marks in a single "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": "-cycle. Residue named: the interacting/CFT orbifold statement (twist-field OPE)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + note on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SEAMID.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "616\\to617"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XXXV",
     "heading": [
       {

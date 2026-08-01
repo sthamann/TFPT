@@ -200,7 +200,8 @@ export type PrimeFrontVerdict =
   | "FLIPS-ARE-TRUNCATION"
   | "N3-PINNED"
   | "CLOCK-SURVIVES-INTERACTING"
-  | "SEAM-IDENTIFIED";
+  | "SEAM-IDENTIFIED"
+  | "COVERED-SEAM-SKELETON";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -224,6 +225,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The covered seam — r⁴ = ω becomes lattice combinatorics, and the 12-grid is the mode grid. The last bedrock residue (the covering-level identification) gets its lattice skeleton. Lift the 16-site seam circle to the μ₃-cover: crossing a mark-bond shifts the sheet. With the uniform weights the covered seam is ONE 48-site NS circle (the walk closes after exactly 48 steps, covering the base three times); with the alternating weights (1,2,1,2) it DISCONNECTS into three circles — a new, fully independent reason the alternating pair dies (v617 killed it by mark equivalence, v620 by the census; connectivity kills it structurally). The centerpiece: the lift L of the base quarter turn satisfies L⁴ = deck and L¹² = id on all 48 points, with proper order 12. The relation r⁴ = ω — established algebraically in v597, derived by Gauss–Manin transport in v614 — is now LATTICE COMBINATORICS: going around the base once (four lifted quarter turns) is exactly one deck step. And the ζ₁₂ spectrum of the Burau rotation is simply the lifted clock's order. The kernel identity of v622 generalizes verbatim to N = 48, and the NS modes split under the deck into three classes of 16 with offsets {1/6, 1/2, 5/6} — the 12-grid, with the offset-1/2 class equal to the BASE seam frequencies exactly (the untwisted sector is the base, verbatim) and the twisted pair carrying ω on bilinears (the t = ω/ω̄ sheets). A bonus structure: the fermionic deck lift satisfies deck³ = −1 — the NS full rotation, the spin double, resonating with the (−1)^F dichotomy of v510/v519. The 12 lifted mark crossings form a single 12-cycle under the clock. What remains: the interacting orbifold statement (twist-field OPE) — the last named piece of the bedrock.",
+    verdict: "COVERED-SEAM-SKELETON",
+    summary:
+      "v623_covered_seam.py promoted (QGEO.COVERSEAM.01, 9 checks; probe covered_seam_probe.py 9/9, COVERED-SEAM-SKELETON): one 48-site covered seam (uniform weights; alternating pair disconnects — independent kill); lifted clock exact order 12 with L⁴ = deck (r⁴ = ω as lattice combinatorics); N = 48 kernel identity; 12-grid mode split, untwisted = base verbatim, twisted pair = ω on bilinears; deck³ = −1 (spin double); 12 marks in a single 12-cycle. GATE.QGEO does not move. Suite 616 → 617 scripts.",
+    badge: "sandbox",
+    script: "covered_seam_probe.py",
+  },
   {
     date: "2026-08-01",
     part: 0,
