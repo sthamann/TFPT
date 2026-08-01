@@ -43,6 +43,248 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the audit-and-measurement close of the day: the gate audit documents the cover program as MODEL-COMPLETE on the operator half (ledger note on "
+      },
+      {
+        "k": "c",
+        "v": "GATE.QGEO.01"
+      },
+      {
+        "k": "t",
+        "v": ", no status move — the residual is the conformal seam identification, the zero-mode selection, and the identity of "
+      },
+      {
+        "k": "m",
+        "v": "c"
+      },
+      {
+        "k": "t",
+        "v": "); honest negatives quantified ("
+      },
+      {
+        "k": "m",
+        "v": "c"
+      },
+      {
+        "k": "t",
+        "v": " without independent geometric identity; the zero-mode line is not "
+      },
+      {
+        "k": "m",
+        "v": "R"
+      },
+      {
+        "k": "t",
+        "v": "-real); "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_1"
+      },
+      {
+        "k": "t",
+        "v": " gains the consolidated “cover program at a glance” paragraph; and the prime-front uniformity sharpens: "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon\\cdot h\\le0.98"
+      },
+      {
+        "k": "t",
+        "v": " on all "
+      },
+      {
+        "k": "m",
+        "v": "68"
+      },
+      {
+        "k": "t",
+        "v": " floor-passed windows — "
+      },
+      {
+        "k": "m",
+        "v": "|q_{\\mathrm{real}}/q_{\\mathrm{model}}|\\le h^{-1}"
+      },
+      {
+        "k": "t",
+        "v": " uniformly on the declared surface (note on "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.LOCKPROJ.01"
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "No new modules."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Sandbox measurements and typed notes only: "
+        },
+        {
+          "k": "m",
+          "v": "c^2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "c\\Gamma(c)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma(c)c"
+        },
+        {
+          "k": "t",
+          "v": " outside the word algebra (curiosities documented: "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{char}(7\\Gamma(c)c)=y^3+3y^2+6y-1"
+        },
+        {
+          "k": "t",
+          "v": " integer monic; "
+        },
+        {
+          "k": "m",
+          "v": "|\\det(14c)|^2=28^3"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\ker V"
+        },
+        {
+          "k": "t",
+          "v": " not "
+        },
+        {
+          "k": "m",
+          "v": "R"
+        },
+        {
+          "k": "t",
+          "v": "-real and no "
+        },
+        {
+          "k": "m",
+          "v": "0\\leftrightarrow2"
+        },
+        {
+          "k": "t",
+          "v": " swap; tercile medians of "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon\\cdot h"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "0.61/0.44/0.39"
+        },
+        {
+          "k": "t",
+          "v": " (stable, slightly decreasing); the single blow-up ("
+        },
+        {
+          "k": "m",
+          "v": "h=1219"
+        },
+        {
+          "k": "t",
+          "v": ") is exactly the declared "
+        },
+        {
+          "k": "m",
+          "v": "q_{\\mathrm{model}}"
+        },
+        {
+          "k": "t",
+          "v": " zero-crossing exclusion."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger notes on "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LOCKPROJ.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " consolidation paragraph; diary; suite unchanged ("
+        },
+        {
+          "k": "m",
+          "v": "599"
+        },
+        {
+          "k": "t",
+          "v": ", green); mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XXI",
     "heading": [
       {
