@@ -43,6 +43,522 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXXIV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the follow-through round ("
+      },
+      {
+        "k": "c",
+        "v": "v619"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v621"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the two "
+      },
+      {
+        "k": "m",
+        "v": "C=1"
+      },
+      {
+        "k": "t",
+        "v": " violators are TRUNCATION ARTIFACTS of the prime-data cap (flip set "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " truncation set exactly, mechanism reproduced by injection at both scales, "
+      },
+      {
+        "k": "m",
+        "v": "C=1"
+      },
+      {
+        "k": "t",
+        "v": " EXCEPTION-FREE on the complete-comb surface); the cyclic-"
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": " census makes the bedrock residue CONDITIONAL (seam-admissible primitive-Lorentz orders "
+      },
+      {
+        "k": "m",
+        "v": "=\\{3,5\\}"
+      },
+      {
+        "k": "t",
+        "v": " exactly, "
+      },
+      {
+        "k": "m",
+        "v": "N=6"
+      },
+      {
+        "k": "t",
+        "v": " reduces to "
+      },
+      {
+        "k": "m",
+        "v": "N=3"
+      },
+      {
+        "k": "t",
+        "v": ", and the compiler's machine-checked "
+      },
+      {
+        "k": "m",
+        "v": "27/81"
+      },
+      {
+        "k": "t",
+        "v": " pin "
+      },
+      {
+        "k": "m",
+        "v": "N=3"
+      },
+      {
+        "k": "t",
+        "v": " uniquely); and the interacting Klein–Landau semigroup CONTRACTS to the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "-commensurate steps with the clock surviving as a positive transfer over the whole coupling grid"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v619_flip_mechanics.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.FLIPMECH.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 6/6, FLIPS-ARE-TRUNCATION)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Atom demand "
+        },
+        {
+          "k": "m",
+          "v": "u\\le2\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " vs data cap "
+        },
+        {
+          "k": "m",
+          "v": "U_{\\max}=12.899"
+        },
+        {
+          "k": "t",
+          "v": ": exactly the two v618 flip windows are truncated ("
+        },
+        {
+          "k": "m",
+          "v": "\\Delta u = 0.677/0.089"
+        },
+        {
+          "k": "t",
+          "v": "); no zero resonance (collective spectrum); injection reproduces both scales ("
+        },
+        {
+          "k": "m",
+          "v": "-5\\mathrm{e}{-5}"
+        },
+        {
+          "k": "t",
+          "v": "/ "
+        },
+        {
+          "k": "m",
+          "v": "-1\\mathrm{e}{-4}"
+        },
+        {
+          "k": "t",
+          "v": " vs observed "
+        },
+        {
+          "k": "m",
+          "v": "-1.0\\mathrm{e}{-4}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "-0.18"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "-0.22"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "-0.29"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "C=1"
+        },
+        {
+          "k": "t",
+          "v": " with ZERO exceptions on the "
+        },
+        {
+          "k": "m",
+          "v": "67"
+        },
+        {
+          "k": "t",
+          "v": " complete windows (max "
+        },
+        {
+          "k": "m",
+          "v": "0.982"
+        },
+        {
+          "k": "t",
+          "v": "). The flip windows are retired as data-boundary artifacts."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v620_cyclic_n_census.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.NCENSUS.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "9"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 9/9, N3-PINNED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Full "
+        },
+        {
+          "k": "m",
+          "v": "\\infty"
+        },
+        {
+          "k": "t",
+          "v": "-ramification iff "
+        },
+        {
+          "k": "m",
+          "v": "\\gcd(N,4)=1"
+        },
+        {
+          "k": "t",
+          "v": "; genus table "
+        },
+        {
+          "k": "m",
+          "v": "1,3,3,6,7"
+        },
+        {
+          "k": "t",
+          "v": "; primitive sheet dims; Chevalley–Weil signatures ("
+        },
+        {
+          "k": "m",
+          "v": "N=3"
+        },
+        {
+          "k": "t",
+          "v": ": both sheets Lorentz; "
+        },
+        {
+          "k": "m",
+          "v": "N=6"
+        },
+        {
+          "k": "t",
+          "v": ": no primitive Lorentz sheet – reduces to "
+        },
+        {
+          "k": "m",
+          "v": "N=3"
+        },
+        {
+          "k": "t",
+          "v": "); the pinning "
+        },
+        {
+          "k": "m",
+          "v": "\\det_{\\mathbb Z}(1-\\mathrm{deck})=N^3"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "27"
+        },
+        {
+          "k": "t",
+          "v": " (the v597 constant) vs "
+        },
+        {
+          "k": "m",
+          "v": "125"
+        },
+        {
+          "k": "t",
+          "v": "; saturation "
+        },
+        {
+          "k": "m",
+          "v": "81"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "625"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "N=3"
+        },
+        {
+          "k": "t",
+          "v": " unique."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v621_interacting_semigroup.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "WOIT.GAMMA.SEMI.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 6/6, CLOCK-SURVIVES-INTERACTING)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Free v524 pattern reproduced at "
+        },
+        {
+          "k": "m",
+          "v": "N=16"
+        },
+        {
+          "k": "t",
+          "v": " (even steps PD, odd steps zero one-particle diagonal); at "
+        },
+        {
+          "k": "m",
+          "v": "g>0"
+        },
+        {
+          "k": "t",
+          "v": " Hermiticity survives exactly on "
+        },
+        {
+          "k": "m",
+          "v": "\\{4,6,7\\}"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-commensurate window; mechanism: the survivor is "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_4"
+        },
+        {
+          "k": "t",
+          "v": "-invariant exactly, breaking translation invariance to the quartet stabilizer); the clock step stays PD over "
+        },
+        {
+          "k": "m",
+          "v": "g\\in\\{1/32..8\\}"
+        },
+        {
+          "k": "t",
+          "v": ": the reconstructed rotation group of the interacting toy is the clock tower."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Three ledger rows + notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.UNIFC.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SEAMFORCE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "WOIT.GAMMA.TOY.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (three audit blocks); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": " (flip-mechanism sentence); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "612\\to615"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XXXIII",
     "heading": [
       {

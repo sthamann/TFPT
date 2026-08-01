@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`612` registered scripts · `683` ledger claims · `10` clusters.
+`615` registered scripts · `686` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (134 scripts)
+### `core` — Compiler core & the E₈ glue  (137 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -279,6 +279,12 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v597_mu4_cover_model, v599_real_structure, v603_seam_marks, v613_canonical_periods, v597, v599, v603, v613 · cited: 3 e8 audit bootstrap
 - **v618_uniform_constant** [E] `PRIME.UNIFC.01` — **C = 1 AUF DER DEKLARIERTEN FLÄCHE EINGEFROREN, MIT DER GESCHÄRFTEN VORZEICHEN-DICHOTOMIE**: die deklarierte Frame-A-Fläche reproduziert (69 Floor-Fenster, h = 142..1445), q_model
   - deps: v596_lock_projection, v586_pnt_lock_direction, v582_density_dominance, v563, v591, v596 · cited: 3 e8 audit bootstrap
+- **v619_flip_mechanics** [E] `PRIME.FLIPMECH.01` — **DIE ZWEI C=1-VERLETZER SIND TRUNKIERUNGS-ARTEFAKTE, UND C = 1 IST AUSNAHMSLOS AUF DER VOLLSTÄNDIGEN KAMM-FLÄCHE**: die Atom-Nachfrage ist u ≤ 2α, die Primpotenz-Datenkappe U_max 
+  - deps: v618_uniform_constant, v596_lock_projection, v563, v596, v618 · cited: 3 e8 audit bootstrap
+- **v620_cyclic_n_census** [E/C] `QGEO.NCENSUS.01` — **DER SEAM LÄSST N ∈ {3,5} ALS PRIMITIVE LORENTZ-ORDNUNGEN ZU, UND DIE COMPILER-KONSTANTEN PINNEN N = 3** (der erste v617-Bedrock-Rest, konditional gemacht): volle ∞-Verzweigung ⟺ 
+  - deps: v617_seam_cover_forcing, v597_mu4_cover_model, v613_canonical_periods, v597, v600, v613, v617 · cited: 3 e8 audit bootstrap
+- **v621_interacting_semigroup** [C] `WOIT.GAMMA.SEMI.01` — **DIE CLOCK ÜBERLEBT DIE WECHSELWIRKUNG ALS POSITIVER TRANSFER, GENAU AUF DEN μ₄-KOMMENSURABLEN SCHRITTEN**: bei g = 0 reproduziert sich das v524-Muster bei N = 16 exakt (7 Schritt
+  - deps: v615_gamma_toy_interacting, v524_woit_beta2_os_quotient, v534_seam_straddle_cone, v524, v534, v615, v616 · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1289,15 +1295,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `REG.FREEZE.01`×17, `v312`×16, `v563`×16, `FLAV.KQ.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `REG.FREEZE.01`×17, `v563`×17, `v312`×16, `FLAV.KQ.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v607_selection_rule** — `QGEO.SELRULE.01`
-- **v608_gamma_free_slice** — `WOIT.GAMMA.FREE.01`
-- **v609_translator_factorization** — `QGEO.CFACTOR.01`
 - **v610_curve_landscape** — `QGEO.LANDSCAPE.01`
 - **v611_periods** — `QGEO.PERIODS.01`
 - **v612_polarization_frame** — `QGEO.POLFRAME.01`
@@ -1307,4 +1310,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v616_su2_internal_kinematic** — `WOIT.SU2.KIN.01`
 - **v617_seam_cover_forcing** — `QGEO.SEAMFORCE.01`
 - **v618_uniform_constant** — `PRIME.UNIFC.01`
+- **v619_flip_mechanics** — `PRIME.FLIPMECH.01`
+- **v620_cyclic_n_census** — `QGEO.NCENSUS.01`
+- **v621_interacting_semigroup** — `WOIT.GAMMA.SEMI.01`
 

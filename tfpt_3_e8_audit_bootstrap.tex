@@ -2485,6 +2485,81 @@ Machine-checked: \veri{v618\_uniform\_constant.py}.
 no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The flip mechanics
+(\texttt{PRIME.FLIPMECH.01}).}
+The v618 dichotomy upgrades to a \emph{mechanism} ($6$ checks,
+${\sim}35$\,s).  The atom demand of a window is $u\le2\alpha$ and the
+prime-power data cap is $U_{\max}=12.899$: \emph{exactly} the two
+flip windows are truncated ($h=1219$ with gap $\Delta u=0.677$,
+$h=1445$ with $0.089$; all $67$ other windows complete) --- the flip
+set \emph{equals} the truncation set.  The coupling spectrum at the
+flips is regular-collective (share $5.8\%$, $N_{50}=57$ --- no zero
+resonance), and truncation \emph{injection} into complete windows
+reproduces the flips with matched sign and magnitude at both scales
+($\Delta u=0.089$ gives $-5\cdot10^{-5}$/$-1\cdot10^{-4}$ vs the
+observed $-1.0\cdot10^{-4}$ at $1445$; $\Delta u=0.677$ gives
+$-0.18$/$-0.22$ vs $-0.29$ at $1219$), monotonically in the depth.
+On the complete-comb surface ($2\alpha\le U_{\max}$: $67$ windows)
+the $C=1$ bound holds with \emph{zero} exceptions (max
+$\varepsilon h=0.982$): the sign-flip windows are \emph{retired} as
+data-boundary artifacts --- extending the surface requires extending
+the prime-power data, not the theory.
+Machine-checked: \veri{v619\_flip\_mechanics.py}.
+(\textsc{measured}) $+$ \mE\ (saturation census; injection mechanism;
+no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The cyclic-$N$ census
+(\texttt{QGEO.NCENSUS.01}).}
+The first v617 bedrock residue made \emph{conditional} ($9$ checks,
+${<}1$\,s).  For uniform-weight cyclic covers $y^N=x^4-1$ over the
+forced $\mu_4$ base: full ramification everywhere iff
+$\gcd(N,4)=1$, i.e.\ $N\in\{3,5\}$ among $N=2..6$; the
+Riemann--Hurwitz genus table is $1,3,3,6,7$; the primitive character
+sheets have the compiler's rank $3$ exactly for $N\in\{3,5,6\}$.
+The Chevalley--Weil signatures decide: $N=3$ has \emph{both}
+primitive sheets Lorentz ($(1,2)$/$(2,1)$ --- the v599/v613
+signature); $N=5$ has a Lorentz pair; $N=6$ has \emph{no} primitive
+Lorentz sheet (its Lorentz content sits on the order-3 characters
+--- $N=6$ reduces to $N=3$): the seam-admissible orders with a
+primitive Lorentz sheet are exactly $\{3,5\}$.  The pinning:
+$\det_{\mathbb Z}(1-\mathrm{deck})=\Phi_N(1)^3=N^3$ for prime $N$
+--- $27$ for $N=3$ (\emph{exactly} the machine-checked v597
+constant) versus $125$ for $N=5$; the saturation analogue $81=3^4$
+versus $625$: among $\{3,5\}$ the compiler's integral constants
+select $N=3$ \emph{uniquely}.  The residue moves one level down: why
+the compiler is 3-adic is $N_{\mathrm{fam}}=3$, anchored in the
+$E_8$ glue ($240=16\times5\times3$).  GATE.QGEO does not move.
+Machine-checked: \veri{v620\_cyclic\_n\_census.py}.
+\mE/\mC\ (exact census/pinning; conditional typing; no marker moves)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The interacting Klein--Landau
+semigroup (\texttt{WOIT.GAMMA.SEMI.01}).}
+The gamma net-dynamics slice ($6$ checks, ${\sim}2$\,s).  At $g=0$
+the v524 Klein--Landau pattern reproduces exactly at $N=16$ on the
+admissible cut: all seven steps $\tau_k$ Hermitian (domain dims
+$29,22,16,11,7,4,2$), even steps PD, odd steps $k=1,3,5$ indefinite
+with \emph{exactly zero} one-particle diagonal (the free chirality
+datum), $k=7$ parity-trivial.  At $g>0$ (the RP survivor) exact
+Hermiticity survives \emph{precisely} on the steps $\{4,6,7\}$ and
+is lost on $\{1,2,3,5\}$ --- the semigroup \emph{contracts} to the
+$\mu_4$-commensurate window; the clock step $k=4$ stays Hermitian
+and PD ($(11,0,0)$) over the whole grid $g\in\{1/32..8\}$: the
+$\mu_4$ clock is a positive transfer operator on the interacting
+net.  The mechanism is exact: the survivor interaction is
+$\alpha_4$-invariant \emph{exactly} and not $\alpha_1/\alpha_2$
+invariant (translation invariance breaks to the quartet stabilizer
+$\{0,4,8,12\}$); $k=5$ shows quartet containment alone does not
+protect (even parity \emph{and} alignment are needed).  The reading:
+the reconstructed rotation group of the interacting toy is the
+\emph{clock tower}, not the full circle.  One toy, one interaction
+class; gamma proper stays open on $\mathcal A_{\mathrm{hol}}$.
+Machine-checked: \veri{v621\_interacting\_semigroup.py}.
+\mE/\mC\ (float certificates; exact combinatorics; toy fence;
+no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

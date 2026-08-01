@@ -196,7 +196,10 @@ export type PrimeFrontVerdict =
   | "GAMMA-TOY-LANDED"
   | "SU2-KINEMATIC-SEPARATED"
   | "SEAM-FORCES-COVER"
-  | "UNIFORM-C1";
+  | "UNIFORM-C1"
+  | "FLIPS-ARE-TRUNCATION"
+  | "N3-PINNED"
+  | "CLOCK-SURVIVES-INTERACTING";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -220,6 +223,39 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The flip mechanics — the two violators were truncation artifacts, and C = 1 is exception-free. The v618 dichotomy (violator set = sign-flip set) demanded a mechanism, and it turned out to be embarrassingly concrete: the atom demand of a window runs to u ≤ 2α, the prime-power data cap sits at U_max = 12.899 — and EXACTLY the two flip windows are the two whose demand exceeds the cap (h = 1219 missing Δu = 0.677 of comb, h = 1445 missing 0.089). The flip set equals the truncation set exactly. Three controls make it airtight: the zero-comb coupling spectrum at the flips is regular-collective (share 5.8%, N50 = 57 — no resonance, so the flip is NOT an arithmetic event); truncation INJECTION into complete windows reproduces the flips with matched sign and magnitude at both scales (removing Δu = 0.089 from healthy windows gives q_real ≈ −5e-5..−1e-4, matching 1445's observed −1.0e-4; removing 0.677 gives −0.18..−0.22, matching 1219's −0.29); and the overshoot is monotone in the truncation depth. Conclusion: on the complete-comb surface (2α ≤ U_max, 67 windows) the C = 1 bound holds with ZERO exceptions (max eps·h = 0.982). The 'sign-flip windows' are retired as data-boundary artifacts — extending the surface requires extending the prime-power data, not the theory.",
+    verdict: "FLIPS-ARE-TRUNCATION",
+    summary:
+      "v619_flip_mechanics.py promoted (PRIME.FLIPMECH.01, 6 checks; probe flip_mechanics_probe.py 6/6, FLIPS-ARE-TRUNCATION): flip set = truncation set exactly (2α > U_max = 12.899); no zero resonance; injection reproduces both scales; C = 1 exception-free on the 67 complete windows (max 0.982). Suite 614 → 615 scripts.",
+    badge: "sandbox",
+    script: "flip_mechanics_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The cyclic-N census — the seam admits {3, 5}, and the compiler's constants pin N = 3. v617 forced the base (μ₄ marks, Möbius-rigid) and the uniform weights, leaving 'why cyclic-3' as the first bedrock residue. The census over N = 2..6 makes it conditional. Full ramification everywhere (the structure the whole cover program uses) holds iff gcd(N,4) = 1 — that is N ∈ {3, 5}. The genus table is 1, 3, 3, 6, 7, and the primitive character sheets have the compiler's rank 3 exactly for N ∈ {3, 5, 6}. Then Chevalley–Weil decides: N = 3 has BOTH primitive sheets Lorentz ((1,2) and (2,1) — precisely the v599/v613 signature); N = 5 has a Lorentz pair among four sheets; and N = 6 has NO primitive Lorentz sheet — its Lorentz content sits entirely on the order-3 characters, i.e. N = 6 reduces to N = 3. So the seam-admissible orders with a primitive Lorentz sheet are exactly {3, 5}. The pinning is then integral: the deck determinant on the rank-3 module is det(1 − deck) = N³ — 27 for N = 3, which is EXACTLY the machine-checked v597 constant, versus 125 for N = 5; and the saturation analogue is 81 = 3⁴ (the v566/v600 compiler self-code index) versus 625. Among {3, 5}, the compiler's integral constants select N = 3 uniquely. The residue moves one level down: why the compiler is 3-adic is N_fam = 3, anchored in the E8 glue (240 = 16·5·3).",
+    verdict: "N3-PINNED",
+    summary:
+      "v620_cyclic_n_census.py promoted (QGEO.NCENSUS.01, 9 checks; probe cyclic_n_census_probe.py 9/9, N3-PINNED): full ∞-ramification iff gcd(N,4)=1; genus table 1,3,3,6,7; primitive Lorentz sheets exactly for N ∈ {3,5} (N=6 reduces to N=3); pinning det(1−deck) = N³: 27 (v597) vs 125; saturation 81 vs 625 — N = 3 unique. GATE.QGEO does not move. Suite 613 → 614 scripts.",
+    badge: "sandbox",
+    script: "cyclic_n_census_probe.py",
+  },
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The interacting semigroup — the clock survives, the circle does not. v524 built the Klein–Landau local symmetric semigroup on the free net: seven transfer steps τ_k, all Hermitian, even steps positive, odd steps indefinite. What happens on the interacting survivor? The free baseline reproduces exactly at N = 16 (even steps PD; odd steps k = 1, 3, 5 indefinite with EXACTLY ZERO one-particle diagonal — the free chirality datum; k = 7 parity-trivial). Then the interaction speaks: at g > 0 exact Hermiticity survives PRECISELY on the steps {4, 6, 7} and is lost on {1, 2, 3, 5} — the semigroup contracts to the μ₄-commensurate window. The mechanism is exact Clifford combinatorics: the survivor interaction is α₄-invariant EXACTLY and not α₁/α₂-invariant — translation invariance breaks to the quartet stabilizer {0, 4, 8, 12}, and the surviving steps are the symmetry-protected ones (k = 5 shows quartet containment alone does not protect: even parity AND alignment are both needed). The gamma-relevant centerpiece: the clock step k = 4 stays Hermitian and positive definite over the whole coupling grid — the μ₄ clock is a positive transfer operator on the interacting net. The reading: the reconstructed rotation group of the interacting toy is the CLOCK TOWER, not the full circle — exactly the structure the TFPT compiler needs, emerging from RP + the alignment bit alone.",
+    verdict: "CLOCK-SURVIVES-INTERACTING",
+    summary:
+      "v621_interacting_semigroup.py promoted (WOIT.GAMMA.SEMI.01, 6 checks; probe interacting_semigroup_probe.py 6/6, CLOCK-SURVIVES-INTERACTING): free v524 pattern at N = 16 reproduced; at g > 0 Hermiticity survives exactly on {4, 6, 7}; clock step PD (11,0,0) over g ∈ {1/32..8}; mechanism: α₄-invariance exact (quartet stabilizer). Gamma proper stays open on A_hol. Suite 612 → 613 scripts.",
+    badge: "sandbox",
+    script: "interacting_semigroup_probe.py",
+  },
   {
     date: "2026-08-01",
     part: 0,
