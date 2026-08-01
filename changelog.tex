@@ -62,6 +62,21 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-08-01 (XXXI) (the Gauss--Manin transport round lands (\texttt{v614} promoted) --- THE DECK STEP IS THE BOUNDARY MONODROMY: transporting the segment cycles along the rigid quarter-rotation loop, the discriminant $\lambda(\tau)=e^{2\pi i\tau}$ winds ONCE around $0$ and the transported periods factorize EXACTLY, $I_m(\tau)=e^{i\pi\tau(m+1)/2}e^{-2\pi i\tau j/3}I_m(0)$; at $\tau=1$ the deck factor is $\omega=t^4$ on EVERY sheet (the exponent $4=|\mu_4|$ forced by the puncture count); the canonical transport matrix in the segment basis is EXACTLY $\omega M$ --- the v613 dictionary $r\sim\omega M$ is CANONICAL, no conjugator freedom left, and $(\omega M)^4=\omega$ re-derives $r^4=\omega$; v613's residue F1 closed at the transport level)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v614\_transport\_deck.py} (\texttt{QGEO.TRANSPORT.01}, $12$ checks;
+probe 12/12, TRANSPORT-CANONICAL).} Exact rotation substitution identity; uniform deck
+$\omega$ across all three omega-sheet rows (must-fail: $t^3\ne\omega$, $t^5\ne\omega$);
+$\mathrm{char}(\mathrm{transport})=\mathrm{char}(r)$ exact; 25-digit branch-tracked
+certificates at $\tau=1/3,1/2,2/3,1$ (dps $80$, max $5{\cdot}10^{-28}$; $\tau=1$ at
+$2.7{\cdot}10^{-81}$).  The reading: the braid fixes the boundary, the rigid rotation
+does not --- their homological difference is one boundary loop of local-system
+monodromy.
+\item \textbf{Sync.} Ledger row + note on \texttt{QGEO.PERNORM.01}; \texttt{tfpt\_3}
+(audit block); diary; suite $607\to608$ scripts; website/README/zenodo counters;
+mirrors regenerated.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-08-01 (XXX) (the canonical period normalization lands (\texttt{v613} promoted) --- THE ANALYTIC BRIDGE CLOSES: the quarter rotation acts DECK-FREE on the four branch segments (all $12$ wrap factors exactly $1$), and the exact dictionary is $r=\mathrm{deck}\circ\mathrm{rotation}$ --- $\mathrm{char}(r)=\mathrm{char}(\omega M)$ EXACTLY, explaining $r^4=\omega$ structurally, with the deck power unique; the period rows (hol $dx/y^2$, hol $x\,dx/y^2$, antihol $\overline{dx/y}$) realize the rotation eigenframe; the Hodge weights are explicit Gamma monomials ($h_1=(3\sqrt3/16\pi)\Gamma(1/3)^2\Gamma(1/6)^2$, complex Beta formula); and $J=-h$ PER CHARACTER: the compiler polarization is MINUS the analytic Hodge form --- Riemann--Hodge positivity realized, v612's named step B5 executed)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v613\_canonical\_periods.py} (\texttt{QGEO.PERNORM.01}, $19$ checks;

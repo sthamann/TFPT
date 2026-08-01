@@ -2330,6 +2330,40 @@ Machine-checked: \veri{v613\_canonical\_periods.py}.
 sign bridge; no marker moves)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The Gauss--Manin transport
+(\texttt{QGEO.TRANSPORT.01}).}
+The deck step is the boundary monodromy ($12$ checks, ${\sim}7$\,s;
+closes v613's residue F1 at the transport level).  Transporting the
+segment cycles along the rigid quarter-rotation loop of the four
+branch points ($p_k(\tau)=e^{i\pi\tau/2}p_k$, the rotation braid),
+the discriminant $\lambda(\tau)=e^{2\pi i\tau}$ winds \emph{once}
+around $0$, and the transported periods factorize \emph{exactly}:
+$I_m(\tau)=e^{i\pi\tau(m+1)/2}\,e^{-2\pi i\tau j/3}\,I_m(0)$
+(rotation substitution identity, symbolic).  At $\tau=1$ the deck
+factor is $\omega=t^4$ on the $t=\omega$ sheet, \emph{uniform}
+across all three rows (the two holomorphic forms and the conjugated
+antiholomorphic row), and $\bar\omega=\bar\omega^4$ on the conjugate
+sheet: the deck step is $t^4$ --- the \emph{boundary monodromy} of
+the local system --- on every sheet; must-fail controls confirm
+$t^3=1\ne\omega$ and $t^5\ne\omega$ (the exponent $4=|\mu_4|$ is
+forced by the puncture count).  Consequence: the canonical transport
+matrix in the segment basis is \emph{exactly} $\omega M$ --- no
+conjugator freedom left: the v613 dictionary $r\sim\omega M$ is
+\emph{canonical}, and $(\omega M)^4=\omega\cdot 1$ re-derives
+v597's $r^4=\omega$.  Certificates: direct branch-tracked
+integration at $\tau=1/3,1/2,2/3,1$ (dps $80$) matches the closed
+factorization to $5\cdot10^{-28}$, and the transported segment at
+$\tau=1$ equals $\omega\times$ the static neighbor to
+$2.7\cdot10^{-81}$.  The reading: the braid fixes the boundary, the
+rigid rotation does not --- their homological difference is one
+boundary loop of local-system monodromy; the rotation-braid
+convention is the typed literature identification, carried by the
+exact char identity.
+Machine-checked: \veri{v614\_transport\_deck.py}.
+\mE\ (exact factorization/deck identities; transport certificates;
+no marker moves)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

@@ -43,6 +43,252 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-01",
+    "dateLabel": "2026-08-01 · XXXI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the Gauss–Manin transport round lands ("
+      },
+      {
+        "k": "c",
+        "v": "v614"
+      },
+      {
+        "k": "t",
+        "v": " promoted) — THE DECK STEP IS THE BOUNDARY MONODROMY: transporting the segment cycles along the rigid quarter-rotation loop, the discriminant "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda(\\tau)=e^{2\\pi i\\tau}"
+      },
+      {
+        "k": "t",
+        "v": " winds ONCE around "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " and the transported periods factorize EXACTLY, "
+      },
+      {
+        "k": "m",
+        "v": "I_m(\\tau)=e^{i\\pi\\tau(m+1)/2}e^{-2\\pi i\\tau j/3}I_m(0)"
+      },
+      {
+        "k": "t",
+        "v": "; at "
+      },
+      {
+        "k": "m",
+        "v": "\\tau=1"
+      },
+      {
+        "k": "t",
+        "v": " the deck factor is "
+      },
+      {
+        "k": "m",
+        "v": "\\omega=t^4"
+      },
+      {
+        "k": "t",
+        "v": " on EVERY sheet (the exponent "
+      },
+      {
+        "k": "m",
+        "v": "4=|\\mu_4|"
+      },
+      {
+        "k": "t",
+        "v": " forced by the puncture count); the canonical transport matrix in the segment basis is EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "\\omega M"
+      },
+      {
+        "k": "t",
+        "v": " — the v613 dictionary "
+      },
+      {
+        "k": "m",
+        "v": "r\\sim\\omega M"
+      },
+      {
+        "k": "t",
+        "v": " is CANONICAL, no conjugator freedom left, and "
+      },
+      {
+        "k": "m",
+        "v": "(\\omega M)^4=\\omega"
+      },
+      {
+        "k": "t",
+        "v": " re-derives "
+      },
+      {
+        "k": "m",
+        "v": "r^4=\\omega"
+      },
+      {
+        "k": "t",
+        "v": "; v613's residue F1 closed at the transport level"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v614_transport_deck.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.TRANSPORT.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "12"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 12/12, TRANSPORT-CANONICAL)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Exact rotation substitution identity; uniform deck "
+        },
+        {
+          "k": "m",
+          "v": "\\omega"
+        },
+        {
+          "k": "t",
+          "v": " across all three omega-sheet rows (must-fail: "
+        },
+        {
+          "k": "m",
+          "v": "t^3\\ne\\omega"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "t^5\\ne\\omega"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{char}(\\mathrm{transport})=\\mathrm{char}(r)"
+        },
+        {
+          "k": "t",
+          "v": " exact; 25-digit branch-tracked certificates at "
+        },
+        {
+          "k": "m",
+          "v": "\\tau=1/3,1/2,2/3,1"
+        },
+        {
+          "k": "t",
+          "v": " (dps "
+        },
+        {
+          "k": "m",
+          "v": "80"
+        },
+        {
+          "k": "t",
+          "v": ", max "
+        },
+        {
+          "k": "m",
+          "v": "5{\\cdot}10^{-28}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\tau=1"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "2.7{\\cdot}10^{-81}"
+        },
+        {
+          "k": "t",
+          "v": "). The reading: the braid fixes the boundary, the rigid rotation does not — their homological difference is one boundary loop of local-system monodromy."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + note on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.PERNORM.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "607\\to608"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XXX",
     "heading": [
       {

@@ -191,7 +191,8 @@ export type PrimeFrontVerdict =
   | "LANDSCAPE-MAPPED"
   | "PERIODS-CLASSICAL"
   | "POLARIZATION-FRAMED"
-  | "PERIOD-NORMALIZED";
+  | "PERIOD-NORMALIZED"
+  | "TRANSPORT-CANONICAL";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -215,6 +216,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-01",
+    part: 0,
+    title:
+      "The Gauss–Manin transport — the deck step IS the boundary monodromy. v613 left one residue: the dictionary r = deck∘rotation was established at the conjugacy level (equal characteristic polynomials, an explicit conjugator) — but WHICH deck step, and why, was carried by a matrix, not by geometry. Now it is geometry. Transport the segment cycles along the rigid quarter-rotation loop of the four branch points (p_k(τ) = e^{iπτ/2}·p_k — the rotation braid): the discriminant λ(τ) = e^{2πiτ} winds ONCE around zero, and the transported periods factorize EXACTLY — I_m(τ) = e^{iπτ(m+1)/2}·e^{−2πiτj/3}·I_m(0). At τ = 1 the second factor is the deck step, and it is ω = t⁴ on EVERY sheet — the BOUNDARY MONODROMY of the local system (four punctures of weight t each). The must-fail controls make the counting sharp: t³ = 1 ≠ ω and t⁵ ≠ ω — the exponent 4 = |μ₄| is forced by the puncture count. Consequence: the canonical transport matrix in the segment basis is EXACTLY ω·M — no conjugator freedom left, the v613 dictionary is CANONICAL, and (ωM)⁴ = ω·1 re-derives v597's r⁴ = ω one more level down. The picture is simple: the braid fixes the boundary of the disk, the rigid rotation does not — their homological difference is exactly one boundary loop's worth of local-system monodromy. Certificates: direct branch-tracked integration at four intermediate τ matches the closed factorization to 5e−28 (dps 80), and the transported segment at τ = 1 lands on ω × its static neighbor to 2.7e−81.",
+    verdict: "TRANSPORT-CANONICAL",
+    summary:
+      "v614_transport_deck.py promoted (QGEO.TRANSPORT.01, 12 checks; probe transport_deck_probe.py 12/12, TRANSPORT-CANONICAL): transported periods factorize exactly (rotation substitution identity); deck factor = ω = t⁴ on every sheet, uniform across all three rows; must-fail t³/t⁵ controls (exponent 4 = |μ₄| forced); canonical transport matrix = ωM (char = char(r) exact); 25-digit certificates (max 5e−28, τ=1 at 2.7e−81). v613 residue F1 closed. GATE.QGEO does not move. Suite 607 → 608 scripts.",
+    badge: "sandbox",
+    script: "transport_deck_probe.py",
+  },
   {
     date: "2026-08-01",
     part: 0,
