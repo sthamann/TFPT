@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 
-/** Twenty-three promoted modules; check counts from verification/script_registry.csv. */
+/** Promoted prime-line modules; check counts from verification/script_registry.csv. */
 const MODULES = [
   { id: "v535", claim: "HECKE.GEOM.01", title: "Hecke from geometry", checks: 25 },
   {
@@ -365,9 +365,9 @@ export function ModuleLadder() {
       </div>
 
       <p className="mt-3 text-xs leading-relaxed text-slate-500">
-        Sandbox probes never move a marker; only the twenty-five modules above
-        are cited in the papers and the ledger. I5 is an equivalence typing (⟺ Weil
-        positivity ⟺ RH), not a proof claim.
+        Sandbox probes never move a marker; only the {MODULES.length} modules
+        above are cited in the papers and the ledger. I5 is an equivalence
+        typing (⟺ Weil positivity ⟺ RH), not a proof claim.
       </p>
     </div>
   );

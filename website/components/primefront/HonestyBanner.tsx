@@ -21,9 +21,38 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v562
+          v535–v642 on this front
         </Link>
-        ). Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
+        , inside a 636-script suite, all green). The sprint T102–T125
+        compressed the remaining arithmetic bound to one sign plus one declared
+        accounting convention; phase 2 (T126–T176) closed its measurement
+        programme as planned and stands as a certified map with one open
+        object (R1, classified as a near-degeneracy, not a size). Since then
+        the diary runs as backflow rounds: the uniform constant C = 1,
+        exception-free on the complete surface (v618/v619); the Lorentz
+        congruence identifying the prime determinant form with the cover
+        polarization lattice, and the Hodge chamber it buys (v624/v627,
+        v635–v637); E₈ as a literal error-correcting code with a
+        compiler-native bit dictionary (v626/v638); the sixty-line reflection
+        group G31 with the order-coincidence numerology killed (v633/v634);
+        and the Suzuki W1 identification — atom layer literal, smooth layer
+        the derived scalar −4D after pole separation, portable and closed at
+        the matrix level (v630/v631, v640–v642). Honest fence: closing W1
+        does not move W3 (uniform positivity, the RH-hard step). No claim of
+        progress toward the Riemann Hypothesis is made.
+      </p>
+      <details className="group mt-4">
+        <summary className="cursor-pointer list-none font-mono text-[11px] uppercase tracking-[0.18em] text-amber-300/80 transition-colors hover:text-amber-200">
+          <span
+            aria-hidden
+            className="mr-1.5 inline-block transition-transform group-open:rotate-90 motion-reduce:transition-none"
+          >
+            ▸
+          </span>
+          The full sprint + phase-2 recap (T102–T176), preserved verbatim
+        </summary>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-amber-50/80">
+        Load-bearing v539 isolates <em>two</em> obstructions; load-bearing
         v540 consolidates the amplitude/linear route with the open boundary{" "}
         <em>inside</em> the claim; load-bearing v541 promotes the
         matching-lemma/transport-ledger package. Sandbox T86–T93 complete the
@@ -536,7 +565,8 @@ export function HonestyBanner() {
         closed ledger equivalent to Weil positivity ⟺ RH, an equivalence typing
         only, not “almost RH.” No claim of progress toward the Riemann
         Hypothesis is made.
-      </p>
+        </p>
+      </details>
     </aside>
   );
 }
