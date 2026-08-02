@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`618` registered scripts · `690` ledger claims · `10` clusters.
+`625` registered scripts · `697` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (140 scripts)
+### `core` — Compiler core & the E₈ glue  (147 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -291,6 +291,20 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v622_seam_identification, v617_seam_cover_forcing, v620_cyclic_n_census, v613_canonical_periods, v597, v613, v614, v617 · cited: 3 e8 audit bootstrap
 - **v624_external_lattice_audit** [E/C/X] `EXTREV.LATTICE.01` — drei behauptete Ableitungen maschinell geprüft, ein Folgetest ehrlich umgetypt: **(A) DER VIERMARKEN-ABSCHLUSS [E, konditional]: unter der D_{d+1}+A_{d−1}-Glue-Architektur erzwinge
   - deps: AX.P2.01, v604_equivariant_order, v602_duality_forms, v618_uniform_constant, v47, v602, v604, v618 · cited: 3 e8 audit bootstrap, research contracts
+- **v625_prime_shadow** [E/C] `PRIME.SHADOW.01` — **DER PRÜFBARE KERN DER „PRIMZAHLEN ALS SCHATTEN DER FERTIGEN GEOMETRIE-LESART IST EXAKT**, verifiziert auf der Compiler-eigenen Glue-Kette (μ₄ → D5⊕A3 → E8; Theta-Ebene E8 = D8 ∪ 
+  - deps: v624_external_lattice_audit, v618_uniform_constant, v1, v47, v624 · cited: 3 e8 audit bootstrap
+- **v626_e8_code** [E/C] `E8.CODE.01` — **E8 IST EIN FEHLERKORRIGIERENDER CODE** (Theorem, nicht Metapher). [E] Der erweiterte Hamming-Code [8,4,4]: 16 Codewörter, Gewichte {0:1, 4:14, 8:1}, selbst-dual; Construction A l
+  - deps: v625_prime_shadow, v624_external_lattice_audit, v1, v625 · cited: 3 e8 audit bootstrap
+- **v627_hodge_chamber** [E/O] `PRIME.HODGECONE.01` — **ALLE 67 VOLLSTÄNDIGEN FENSTER LIEGEN IM POSITIVEN KEGEL DES COVER-POLARISATIONSGITTERS, AUF EINEM BLATT** (die gemessene Hälfte des geometrischen Positivitäts-Pfads aus v624). [E
+  - deps: v624_external_lattice_audit, v618_uniform_constant, v582_density_dominance, v604_equivariant_order, v563, v624 · cited: 3 e8 audit bootstrap, research contracts
+- **v628_orbifold_casimir** [E] `QGEO.ORBCAS.01` — **DIE DREI DECK-MODENKLASSEN DER GEDECKTEN NAHT TRAGEN EXAKT DIE ℤ₃-TWIST-CASIMIR-DATEN** (erste quantitative Scheibe des v623-Orbifold-Rests). [E, exakt] Geschlossene Form E₀(ν,N)
+  - deps: v623_covered_seam, v622_seam_identification, v622, v623 · cited: 3 e8 audit bootstrap
+- **v629_root_incidence** [E/C/X] `E8.INCIDENCE.01` — **DIE NAIVE 48×5-INZIDENZ AUF DIE 240 E8-WURZELN IST GEKILLT, DER POSITIV-REST IST SCHARF** (der Kill-Test des Reviews, erste Hürde ausgeführt). [E, KILL] Das compiler-kanonische O
+  - deps: v624_external_lattice_audit, v623_covered_seam, v623, v624, v626 · cited: 3 e8 audit bootstrap
+- **v630_suzuki_contact** [E/C/O] `PRIME.WEIL.CONTACT.01` — **DIE ATOM-SCHICHT DER TFPT-FENSTERFORM IST WÖRTLICH SUZUKIS PRIM-MASS** (erste ausgeführte Scheibe des PRIME.WEIL.OPERATOR.01-Vertrags, W1). [E, exakt] Positionen U_ALL = log(Prim
+  - deps: v624_external_lattice_audit, v618_uniform_constant, v563, v624 · cited: 3 e8 audit bootstrap, research contracts
+- **v631_w1_dictionary** [E/C] `PRIME.WEIL.DICT.01` — **DER v630-REST IST DER POL-TERM, UND NACH SEINER ABTRENNUNG IST DIE GLATTE KONVERSION DER SKALAR −4D** (die glatte W1-Hälfte schließt auf Mess-Ebene; Konversion HERGELEITET, nicht
+  - deps: v630_suzuki_contact, v591_pole_rank_one, v624_external_lattice_audit, v563, v591, v630 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1301,22 +1315,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `REG.FREEZE.01`×17, `v563`×17, `v312`×16, `FLAV.KQ.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v563`×20, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `REG.FREEZE.01`×17, `v312`×16, `FLAV.KQ.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v613_canonical_periods** — `QGEO.PERNORM.01`
-- **v614_transport_deck** — `QGEO.TRANSPORT.01`
-- **v615_gamma_toy_interacting** — `WOIT.GAMMA.TOY.01`
-- **v616_su2_internal_kinematic** — `WOIT.SU2.KIN.01`
-- **v617_seam_cover_forcing** — `QGEO.SEAMFORCE.01`
-- **v618_uniform_constant** — `PRIME.UNIFC.01`
-- **v619_flip_mechanics** — `PRIME.FLIPMECH.01`
 - **v620_cyclic_n_census** — `QGEO.NCENSUS.01`
 - **v621_interacting_semigroup** — `WOIT.GAMMA.SEMI.01`
 - **v622_seam_identification** — `QGEO.SEAMID.01`
 - **v623_covered_seam** — `QGEO.COVERSEAM.01`
 - **v624_external_lattice_audit** — `EXTREV.LATTICE.01`
+- **v625_prime_shadow** — `PRIME.SHADOW.01`
+- **v626_e8_code** — `E8.CODE.01`
+- **v627_hodge_chamber** — `PRIME.HODGECONE.01`
+- **v628_orbifold_casimir** — `QGEO.ORBCAS.01`
+- **v629_root_incidence** — `E8.INCIDENCE.01`
+- **v630_suzuki_contact** — `PRIME.WEIL.CONTACT.01`
+- **v631_w1_dictionary** — `PRIME.WEIL.DICT.01`
 

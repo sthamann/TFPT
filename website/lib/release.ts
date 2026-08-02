@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 3709728,
+    bytes: 3720732,
     sha256:
-      "ea8d5f19f16e39d7394cdef3dce15077cf815d5836950e274bdf04e268573ff6",
+      "e491aa4df5d4826e28300840640ec04703850a53d7c801dd3a2a4cb42d1adc3c",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -61,9 +61,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
     href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 1299351,
+    bytes: 1312472,
     sha256:
-      "c0548a3b1f97a496e66472b2a3bd7f277d44c9d1cbc1826575b26cef73ae56e6",
+      "f5a0034be805385ae46ed752cbf7250b8086ce3538f02f78462f59a38f7a2f1d",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
@@ -97,9 +97,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 1901547,
+    bytes: 1905440,
     sha256:
-      "d5c9af59092c55e0e7cd5be8e9e7bbf72b9cec2cb35fe297ffe39ea14d6b209a",
+      "8a3006e1af078915f1f5f5f268f59559933671fcaed1aff6ddb5c324129c84c2",
     changelog:
       "Research contracts for the remaining interfaces: v_geo (scale anchor, [O]), G_net (metric inclusion, [C] closed modulo cited theorems), F_transfer (downstream transport, typed runnable solvers [C]).",
   },

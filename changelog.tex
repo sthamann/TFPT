@@ -62,6 +62,34 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-08-02 (XL) (the W1 dictionary lands (\texttt{v631} promoted) --- the v630 non-scalar residual IS the zeta pole term: the Lerch collapse $[e^{-t/2}\Phi(e^{-2t},2,\tfrac14)]''=4e^{-t/2}/(1-e^{-2t})$ (exact) yields the structure theorem $g''=-2\cosh(t/2)-4\times$(the TFPT arch density) --- Suzuki's smooth layer is $-4\times$ the window density MINUS the pole block (TFPT's separate v591 rank-one); the closed per-lag ratio law $-D[4+(e^t{+}1)(1-e^{-2t})]$ verifies, after pole subtraction the smooth conversion is the SCALAR $-4D$ (monotone to $1.0006$), and the atom-layer constant is $D^2$ exactly: \textbf{W1 of \texttt{PRIME.WEIL.OPERATOR.01} closes at the measured level on both halves} --- $\widehat A_{\mathrm{arch}}=-(1/4D)\,\mathrm{Galerkin}_{\mathrm{smooth}}+\text{pole rank-one}$; the theorem-level remainder and the RH-hard steps W2/W3 stay typed open)}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{New module.} \texttt{v631\_w1\_dictionary.py} (7 checks: the exact Lerch collapse, the structure theorem, the route certificate, the closed ratio law, the scalar $-4D$ closure, the $D^2$ atom constant, the typed remainder).
+  \item \textbf{Ledger.} New row \texttt{PRIME.WEIL.DICT.01}; resolution note on \texttt{PRIME.WEIL.CONTACT.01}.
+  \item \textbf{Scope.} The implication map stays explicit: W1 measured-closed $\to$ W2 (open) $\to$ W3 (open, RH-hard) $\to$ W4 (classical given W2$+$W3); closing W1 does not move W3; no positivity claim, no RH statement.
+\end{itemize}
+
+\subsection*{\interlinepenalty=150\relax 2026-08-02 (XXXIX) (the six-front batch lands (\texttt{v626}--\texttt{v630} promoted) --- THE E8 CODE: Construction~A on the self-dual extended Hamming code $[8,4,4]$ yields E8 exactly (shells $240/2160$; every single-bit error exhaustively correctable: ``E8 is an error-correcting code'' is a THEOREM); THE HODGE CHAMBER: all $67$ complete windows land in the POSITIVE cone of the cover polarization lattice on ONE sheet (the measured half of the geometric positivity route; honest typing: chamber membership is density-layer, the fine $C=1$ arithmetic lives inside); THE ORBIFOLD CASIMIR: the covered seam's deck classes $\{1/6,1/2,5/6\}$ carry exactly the $\mathbb{Z}_3$-twist Casimir data (exact closed form, sector table $(1/72,-1/24,1/72)$, twist gap $1/18$); THE INCIDENCE CENSUS: the naive $48\times5$ root incidence is KILLED ($19\times12+3\times4$) with the sharp positive residue $60=D_{\mathrm{start}}$ as the free clock-orbit count on the roots; and THE SUZUKI FIRST CONTACT: the TFPT atom table IS Suzuki's prime measure literally (positions $\log n$, weights $\Lambda(n)/\sqrt n$, exact) --- W1's atomic half CLOSED, the smooth conversion measured non-scalar (the preregistered residual, now with data))}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{New modules.} \texttt{v626\_e8\_code.py} (7 checks: Hamming $[8,4,4]$ self-dual, Construction A even unimodular $=$ E8, shells, exhaustive syndrome decoding, typed compiler ties $8/4/16/14$); \texttt{v627\_hodge\_chamber.py} (5 checks: exact transport $z=P^{-1}y$, $\det S>0$ on 67/67, one sheet, honest scramble typing); \texttt{v628\_orbifold\_casimir.py} (5 checks: exact closed form, exact $1/N$ expansion $\pi(6\nu^2{-}6\nu{+}1)/12$, sector table, twist gap $1/18$); \texttt{v629\_root\_incidence.py} (6 checks: 240-root model, the kill, $60=D_{\mathrm{start}}$ free clock orbits, 12 $\sigma$-fixed roots, controls); \texttt{v630\_suzuki\_contact.py} (4 checks: the literal atom identity, tent structure, the measured non-scalar Galerkin profile, contract typing).
+  \item \textbf{Ledger.} New rows \texttt{E8.CODE.01}, \texttt{PRIME.HODGECONE.01}, \texttt{QGEO.ORBCAS.01}, \texttt{E8.INCIDENCE.01}, \texttt{PRIME.WEIL.CONTACT.01}.
+  \item \textbf{Scope.} No marker moves; no positivity claim beyond the measured surface; no RH statement; the interacting orbifold statement and the W1 normalization dictionary stay the named residues.
+\end{itemize}
+
+\subsection*{\interlinepenalty=150\relax 2026-08-02 (XXXVIII) (the prime-shadow audit lands (\texttt{v625} promoted): the checkable core of ``primes are the shadow of the finished geometry'' is EXACT --- $\Theta_{E_8}=E_4$ with shell counts $240\,\sigma_3(n)$ (multiplicative over coprime addresses: the `address space' reading IS unique factorization), the primes act as COMMUTING Hecke channels ($T_p\Theta=(1{+}p^3)\Theta$ for $p=2,3,5,7$; $[T_2,T_3]=0$) with the compiler's theta as SIMULTANEOUS eigenvector, and $L(E_4,s)=\zeta(s)\zeta(s{-}3)$: the zeta function is the factorized shadow of the $E_8$ counting function --- primes enter AFTER the geometry; the speculative framings (eigenfrequencies, RH as coherence) stay typed hypotheses)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v625\_prime\_shadow.py} (\texttt{PRIME.SHADOW.01}, $6$ checks; probe
+6/6, PRIME-SHADOW-EXACT).} Theta from the glue decomposition $(\theta_2^8 + \theta_3^8
++ \theta_4^8)/2$; shells $240\sigma_3(n)$ exact for $n=1..12$; multiplicativity census
+with the non-coprime must-fail ($\sigma_3(4)=73\ne81$); Hecke eigenvalues $1+p^3$ and
+commuting channels; $L(E_4,6)=\zeta(6)\zeta(3)$ to $5\cdot10^{-8}$.  Honest scope:
+classical Jacobi/Hecke facts realized verbatim by the compiler's own objects --- the
+direction of explanation (geometry first, primes as readout) fixed within the narrative.
+\item \textbf{Sync.} Ledger row + note on \texttt{EXTREV.LATTICE.01}; \texttt{tfpt\_3}
+(audit block); diary; suite $618\to619$ scripts; website/README/zenodo counters;
+mirrors regenerated.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-08-02 (XXXVII) (the external-review lattice audit lands (\texttt{v624} promoted) --- THE FOUR-MARK CLOSURE: under the $D_{d+1}\oplus A_{d-1}$ glue architecture three independent selectors force $d=4$ (disc-group census, the norm equation $(d{+}1)/4+(d{-}1)/d=2$, the Pythagorean $(3,4,5)$ triple of cycles/marks/carrier) --- the two-input presentation reduces to ONE boundary degree $d=4$ plus $\pi$, conditional on the architecture; THE ANCHOR BYTECODE ($\chi=(t{-}1)^2(t{-}2)$, two-state recursion, $240+8=248$); THE LORENTZ CONGRUENCE $P^{\mathsf T}J_{\mathrm{det}}P=J_{\mathrm{fix}}$ EXACTLY (index $6$) --- the prime-front determinant form and the cover polarization lattice are the SAME rational quadratic form; the review's $B$-test retyped ill-posed ($B$ complex symmetric); and the RH architecture preregistered as \texttt{PRIME.WEIL.OPERATOR.01} with verified Suzuki citations)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v624\_external\_lattice\_audit.py} (\texttt{EXTREV.LATTICE.01}, $14$

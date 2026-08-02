@@ -43,6 +43,771 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-02",
+    "dateLabel": "2026-08-02 · XL",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the W1 dictionary lands ("
+      },
+      {
+        "k": "c",
+        "v": "v631"
+      },
+      {
+        "k": "t",
+        "v": " promoted) — the v630 non-scalar residual IS the zeta pole term: the Lerch collapse "
+      },
+      {
+        "k": "m",
+        "v": "[e^{-t/2}\\Phi(e^{-2t},2,\\tfrac14)]''=4e^{-t/2}/(1-e^{-2t})"
+      },
+      {
+        "k": "t",
+        "v": " (exact) yields the structure theorem "
+      },
+      {
+        "k": "m",
+        "v": "g''=-2\\cosh(t/2)-4\\times"
+      },
+      {
+        "k": "t",
+        "v": "(the TFPT arch density) — Suzuki's smooth layer is "
+      },
+      {
+        "k": "m",
+        "v": "-4\\times"
+      },
+      {
+        "k": "t",
+        "v": " the window density MINUS the pole block (TFPT's separate v591 rank-one); the closed per-lag ratio law "
+      },
+      {
+        "k": "m",
+        "v": "-D[4+(e^t{+}1)(1-e^{-2t})]"
+      },
+      {
+        "k": "t",
+        "v": " verifies, after pole subtraction the smooth conversion is the SCALAR "
+      },
+      {
+        "k": "m",
+        "v": "-4D"
+      },
+      {
+        "k": "t",
+        "v": " (monotone to "
+      },
+      {
+        "k": "m",
+        "v": "1.0006"
+      },
+      {
+        "k": "t",
+        "v": "), and the atom-layer constant is "
+      },
+      {
+        "k": "m",
+        "v": "D^2"
+      },
+      {
+        "k": "t",
+        "v": " exactly: "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "W1 of "
+          },
+          {
+            "k": "c",
+            "v": "PRIME.WEIL.OPERATOR.01"
+          },
+          {
+            "k": "t",
+            "v": " closes at the measured level on both halves"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " — "
+      },
+      {
+        "k": "m",
+        "v": "\\widehat A_{\\mathrm{arch}}=-(1/4D)\\,\\mathrm{Galerkin}_{\\mathrm{smooth}}+\\text{pole rank-one}"
+      },
+      {
+        "k": "t",
+        "v": "; the theorem-level remainder and the RH-hard steps W2/W3 stay typed open"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v631_w1_dictionary.py"
+        },
+        {
+          "k": "t",
+          "v": " (7 checks: the exact Lerch collapse, the structure theorem, the route certificate, the closed ratio law, the scalar "
+        },
+        {
+          "k": "m",
+          "v": "-4D"
+        },
+        {
+          "k": "t",
+          "v": " closure, the "
+        },
+        {
+          "k": "m",
+          "v": "D^2"
+        },
+        {
+          "k": "t",
+          "v": " atom constant, the typed remainder)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.DICT.01"
+        },
+        {
+          "k": "t",
+          "v": "; resolution note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.CONTACT.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The implication map stays explicit: W1 measured-closed "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " W2 (open) "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " W3 (open, RH-hard) "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " W4 (classical given W2"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "W3); closing W1 does not move W3; no positivity claim, no RH statement."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-02",
+    "dateLabel": "2026-08-02 · XXXIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the six-front batch lands ("
+      },
+      {
+        "k": "c",
+        "v": "v626"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v630"
+      },
+      {
+        "k": "t",
+        "v": " promoted) — THE E8 CODE: Construction A on the self-dual extended Hamming code "
+      },
+      {
+        "k": "m",
+        "v": "[8,4,4]"
+      },
+      {
+        "k": "t",
+        "v": " yields E8 exactly (shells "
+      },
+      {
+        "k": "m",
+        "v": "240/2160"
+      },
+      {
+        "k": "t",
+        "v": "; every single-bit error exhaustively correctable: “E8 is an error-correcting code” is a THEOREM); THE HODGE CHAMBER: all "
+      },
+      {
+        "k": "m",
+        "v": "67"
+      },
+      {
+        "k": "t",
+        "v": " complete windows land in the POSITIVE cone of the cover polarization lattice on ONE sheet (the measured half of the geometric positivity route; honest typing: chamber membership is density-layer, the fine "
+      },
+      {
+        "k": "m",
+        "v": "C=1"
+      },
+      {
+        "k": "t",
+        "v": " arithmetic lives inside); THE ORBIFOLD CASIMIR: the covered seam's deck classes "
+      },
+      {
+        "k": "m",
+        "v": "\\{1/6,1/2,5/6\\}"
+      },
+      {
+        "k": "t",
+        "v": " carry exactly the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}_3"
+      },
+      {
+        "k": "t",
+        "v": "-twist Casimir data (exact closed form, sector table "
+      },
+      {
+        "k": "m",
+        "v": "(1/72,-1/24,1/72)"
+      },
+      {
+        "k": "t",
+        "v": ", twist gap "
+      },
+      {
+        "k": "m",
+        "v": "1/18"
+      },
+      {
+        "k": "t",
+        "v": "); THE INCIDENCE CENSUS: the naive "
+      },
+      {
+        "k": "m",
+        "v": "48\\times5"
+      },
+      {
+        "k": "t",
+        "v": " root incidence is KILLED ("
+      },
+      {
+        "k": "m",
+        "v": "19\\times12+3\\times4"
+      },
+      {
+        "k": "t",
+        "v": ") with the sharp positive residue "
+      },
+      {
+        "k": "m",
+        "v": "60=D_{\\mathrm{start}}"
+      },
+      {
+        "k": "t",
+        "v": " as the free clock-orbit count on the roots; and THE SUZUKI FIRST CONTACT: the TFPT atom table IS Suzuki's prime measure literally (positions "
+      },
+      {
+        "k": "m",
+        "v": "\\log n"
+      },
+      {
+        "k": "t",
+        "v": ", weights "
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda(n)/\\sqrt n"
+      },
+      {
+        "k": "t",
+        "v": ", exact) — W1's atomic half CLOSED, the smooth conversion measured non-scalar (the preregistered residual, now with data)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v626_e8_code.py"
+        },
+        {
+          "k": "t",
+          "v": " (7 checks: Hamming "
+        },
+        {
+          "k": "m",
+          "v": "[8,4,4]"
+        },
+        {
+          "k": "t",
+          "v": " self-dual, Construction A even unimodular "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " E8, shells, exhaustive syndrome decoding, typed compiler ties "
+        },
+        {
+          "k": "m",
+          "v": "8/4/16/14"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v627_hodge_chamber.py"
+        },
+        {
+          "k": "t",
+          "v": " (5 checks: exact transport "
+        },
+        {
+          "k": "m",
+          "v": "z=P^{-1}y"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det S>0"
+        },
+        {
+          "k": "t",
+          "v": " on 67/67, one sheet, honest scramble typing); "
+        },
+        {
+          "k": "c",
+          "v": "v628_orbifold_casimir.py"
+        },
+        {
+          "k": "t",
+          "v": " (5 checks: exact closed form, exact "
+        },
+        {
+          "k": "m",
+          "v": "1/N"
+        },
+        {
+          "k": "t",
+          "v": " expansion "
+        },
+        {
+          "k": "m",
+          "v": "\\pi(6\\nu^2{-}6\\nu{+}1)/12"
+        },
+        {
+          "k": "t",
+          "v": ", sector table, twist gap "
+        },
+        {
+          "k": "m",
+          "v": "1/18"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v629_root_incidence.py"
+        },
+        {
+          "k": "t",
+          "v": " (6 checks: 240-root model, the kill, "
+        },
+        {
+          "k": "m",
+          "v": "60=D_{\\mathrm{start}}"
+        },
+        {
+          "k": "t",
+          "v": " free clock orbits, 12 "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "-fixed roots, controls); "
+        },
+        {
+          "k": "c",
+          "v": "v630_suzuki_contact.py"
+        },
+        {
+          "k": "t",
+          "v": " (4 checks: the literal atom identity, tent structure, the measured non-scalar Galerkin profile, contract typing)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New rows "
+        },
+        {
+          "k": "c",
+          "v": "E8.CODE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HODGECONE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.ORBCAS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.INCIDENCE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.CONTACT.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves; no positivity claim beyond the measured surface; no RH statement; the interacting orbifold statement and the W1 normalization dictionary stay the named residues."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-02",
+    "dateLabel": "2026-08-02 · XXXVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the prime-shadow audit lands ("
+      },
+      {
+        "k": "c",
+        "v": "v625"
+      },
+      {
+        "k": "t",
+        "v": " promoted): the checkable core of “primes are the shadow of the finished geometry” is EXACT — "
+      },
+      {
+        "k": "m",
+        "v": "\\Theta_{E_8}=E_4"
+      },
+      {
+        "k": "t",
+        "v": " with shell counts "
+      },
+      {
+        "k": "m",
+        "v": "240\\,\\sigma_3(n)"
+      },
+      {
+        "k": "t",
+        "v": " (multiplicative over coprime addresses: the `address space' reading IS unique factorization), the primes act as COMMUTING Hecke channels ("
+      },
+      {
+        "k": "m",
+        "v": "T_p\\Theta=(1{+}p^3)\\Theta"
+      },
+      {
+        "k": "t",
+        "v": " for "
+      },
+      {
+        "k": "m",
+        "v": "p=2,3,5,7"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "[T_2,T_3]=0"
+      },
+      {
+        "k": "t",
+        "v": ") with the compiler's theta as SIMULTANEOUS eigenvector, and "
+      },
+      {
+        "k": "m",
+        "v": "L(E_4,s)=\\zeta(s)\\zeta(s{-}3)"
+      },
+      {
+        "k": "t",
+        "v": ": the zeta function is the factorized shadow of the "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " counting function — primes enter AFTER the geometry; the speculative framings (eigenfrequencies, RH as coherence) stay typed hypotheses"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v625_prime_shadow.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "PRIME.SHADOW.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "6"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 6/6, PRIME-SHADOW-EXACT)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Theta from the glue decomposition "
+        },
+        {
+          "k": "m",
+          "v": "(\\theta_2^8 + \\theta_3^8\n+ \\theta_4^8)/2"
+        },
+        {
+          "k": "t",
+          "v": "; shells "
+        },
+        {
+          "k": "m",
+          "v": "240\\sigma_3(n)"
+        },
+        {
+          "k": "t",
+          "v": " exact for "
+        },
+        {
+          "k": "m",
+          "v": "n=1..12"
+        },
+        {
+          "k": "t",
+          "v": "; multiplicativity census with the non-coprime must-fail ("
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_3(4)=73\\ne81"
+        },
+        {
+          "k": "t",
+          "v": "); Hecke eigenvalues "
+        },
+        {
+          "k": "m",
+          "v": "1+p^3"
+        },
+        {
+          "k": "t",
+          "v": " and commuting channels; "
+        },
+        {
+          "k": "m",
+          "v": "L(E_4,6)=\\zeta(6)\\zeta(3)"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "5\\cdot10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": ". Honest scope: classical Jacobi/Hecke facts realized verbatim by the compiler's own objects — the direction of explanation (geometry first, primes as readout) fixed within the narrative."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger row + note on "
+        },
+        {
+          "k": "c",
+          "v": "EXTREV.LATTICE.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "618\\to619"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-02",
     "dateLabel": "2026-08-02 · XXXVII",
     "heading": [
       {

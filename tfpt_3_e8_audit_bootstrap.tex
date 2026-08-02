@@ -2668,6 +2668,163 @@ Machine-checked: \veri{v624\_external\_lattice\_audit.py}.
 retype; citations verified)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The prime-shadow audit
+(\texttt{PRIME.SHADOW.01}).}
+The checkable core of the external note's ``primes are the shadow of
+the finished geometry'' reading, machine-verified on the compiler's
+own glue chain ($6$ checks, ${<}1$\,s).  The $E_8$ theta from the
+glue decomposition $(\theta_2^8+\theta_3^8+\theta_4^8)/2$ has only
+even norms and shell counts $r(2n)=240\,\sigma_3(n)$ for $n=1..12$
+\emph{exactly} (the first shell is $240=|R(E_8)|$):
+$\Theta_{E_8}=E_4$ --- the finished lattice's counting function is a
+modular form.  The `address space' reading is unique factorization,
+exactly: shell counts factor over \emph{coprime} addresses
+($\sigma_3$ multiplicative; must-fail: $\sigma_3(4)=73\ne81$).  The
+`independent check channels' reading is a theorem at the theta
+level: $T_p\Theta=(1{+}p^3)\Theta$ for $p=2,3,5,7$ and
+$[T_2,T_3]=0$ --- every prime is an independent \emph{commuting}
+channel and the compiler's theta is a \emph{simultaneous}
+eigenvector of all of them.  And the zeta shadow:
+$L(E_4,s)=\zeta(s)\zeta(s{-}3)$ (verified at $s=6$ to
+$5\cdot10^{-8}$) --- the Riemann zeta appears as the
+\emph{factorized shadow} of the $E_8$ counting function: the primes
+enter \emph{after} the geometry, through its Euler decomposition.
+The speculative framings (compiler eigenfrequencies, synchronization
+code, complexity barriers, RH as maximal coherence) stay typed
+hypotheses, not adopted.  Honest scope: classical Jacobi/Hecke
+facts, realized verbatim by the compiler's own objects --- the
+content is the fixed direction of explanation (geometry first,
+primes as readout) within TFPT's narrative.  No marker moves, no RH
+statement.
+Machine-checked: \veri{v625\_prime\_shadow.py}.
+\mE/\mC\ (exact theta/Hecke identities; typed speculation fence)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The $E_8$ code round
+(\texttt{E8.CODE.01}).}
+``$E_8$ is an error-correcting code'' is a \emph{theorem}, not a
+metaphor ($7$ checks, ${\sim}2$\,s).  The extended Hamming code
+$[8,4,4]$ ($16$ codewords, weights $\{0{:}1,4{:}14,8{:}1\}$, self-dual)
+under Construction~A yields an even (weights in $4\mathbb Z$)
+unimodular (covolume $1$) rank-$8$ lattice --- by uniqueness, $E_8$ ---
+with $240$ minimal vectors and $2160$ on the second shell (the
+\texttt{v625} theta identity on the code model).  Error correction is
+literal: every single-bit corruption of every codeword has a unique
+nearest codeword equal to the original ($16\times8$ exhaustive).  The
+compiler ties are typed observations: $8=$ rank, $4=$ min distance
+$=d=|\mu_4|$ (the \texttt{v624} boundary degree), $16=|C|=$ the carrier
+half-spinor $=$ the seam sites, $14=2\times7$ (the parabolic dimension;
+the \texttt{v605} denominator).  No physics claim.
+Machine-checked: \veri{v626\_e8\_code.py}.
+\mE/\mC\ (exact code/lattice identities; typed ties)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Hodge chamber round
+(\texttt{PRIME.HODGECONE.01}).}
+The measured half of the \texttt{v624} geometric positivity route
+($5$ checks, ${\sim}2$\,s).  Transporting every complete window's
+vector $y_h=(S_{11},S_{22},S_{12})$ through the exact Lorentz
+congruence, $z=P^{-1}y$ with $z^{\mathsf T}J_{\mathrm{fix}}z=2\det S$,
+all $67$ windows land in the \emph{positive cone} of the cover
+polarization lattice ($\det S>0$ everywhere, min $11.8$) and on
+\emph{one sheet} (the $J$-inner products with the positive
+eigendirection keep one sign, range $42..1216$).  Honest typing: the
+scramble control does \emph{not} leave the chamber --- membership is a
+density-layer property (\texttt{v582}: $98.7\%$ density-driven), a
+coarse stability statement; the fine $C=1$ arithmetic lives
+\emph{inside} the chamber.  $P$-canonicity and the chamber theorem
+stay open; no RH statement.
+Machine-checked: \veri{v627\_hodge\_chamber.py}.
+\mE\ (exact transport) $+$ (\textsc{measured}) (chamber/sheet)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The orbifold Casimir round
+(\texttt{QGEO.ORBCAS.01}).}
+The first quantitative slice of the \texttt{v623} orbifold residue
+($5$ checks, ${\sim}1$\,s).  The chiral vacuum energy of the
+$\nu$-offset sector on $N$ sites has the exact closed form
+$E_0(\nu,N)=-\cos(\pi(2\nu{-}1)/2N)/(2\sin(\pi/2N))$, whose symbolic
+$1/N$ expansion gives the finite-size coefficient exactly
+$\pi(6\nu^2{-}6\nu{+}1)/12$ --- the fermionic twist formula.  For the
+covered seam's deck classes $\nu=(1/6,1/2,5/6)$ the sector table is
+$(1/72,-1/24,1/72)$: the twisted pair is degenerate (conjugate
+sheets), the twisted/untwisted ratio is exactly $-1/3$, and the
+$\mathbb Z_3$-twist gap is exactly $1/18$ (in $\pi/N$ units) --- the
+covered seam carries the $\mathbb Z_3$-orbifold Casimir data
+verbatim at the kinematic level.  The interacting statement
+(twist-field OPE, crossing, RP) stays the named residue.
+Machine-checked: \veri{v628\_orbifold\_casimir.py}.
+\mE\ (exact closed forms and expansions)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The root incidence census
+(\texttt{E8.INCIDENCE.01}).}
+The review's $48\times5\to240$ kill test, executed at the first hurdle
+($6$ checks, ${\sim}1$\,s).  For the compiler-canonical order-$12$
+element $g=J\circ\sigma$ (the $\mu_4$ quarter-turn times the family
+$3$-cycle) the $240$ roots decompose as $19\times12+3\times4$ ---
+\emph{not} the $20$ free $\zeta_{12}$ orbits a naive
+$48\times5$ incidence needs: the naive construction is
+\emph{killed}; $48\times5=240$ stays an audit fingerprint.  The
+positive residue is sharp: the $\mu_4$ clock alone acts \emph{freely}
+with exactly $60$ orbits --- $60=D_{\mathrm{start}}$ appears as the
+free clock-orbit count on the roots --- and the family $3$-cycle fixes
+exactly $12$ roots (the \texttt{v623} lifted-mark count), which form
+exactly $3$ free clock orbits.
+Machine-checked: \veri{v629\_root\_incidence.py}.
+\mE/\mC\ (exact census; honest kill; typed observations)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Suzuki first contact
+(\texttt{PRIME.WEIL.CONTACT.01}).}
+The first executed slice of the \texttt{PRIME.WEIL.OPERATOR.01}
+contract ($4$ checks, ${\sim}55$\,s).  The \emph{atom layer} of the
+TFPT window form \emph{is} Suzuki's prime measure, literally: the
+screw function $g$ of \texttt{arXiv:2606.09096} (eq.~1.3) carries the
+prime term $\sum_{n\le e^{|t|}}\Lambda(n)/\sqrt n\,(|t|-\log n)$,
+whose distributional second derivative places atoms at $\pm\log n$
+with weights $\Lambda(n)/\sqrt n$ --- exactly the TFPT atom table
+(positions $U=\log$ prime powers, weights $\mathrm{MU}/2=
+\Lambda(n)/\sqrt n$, verified exactly on $40$ atoms), tent-projected
+exactly as in \texttt{v563}.  The first numeric Galerkin comparison
+(hat basis, $D^*GD$) measures a \emph{non-scalar} conversion profile
+against the TFPT symbol ($-0.064..{-0.070}$ over lags $3..9$): the W1
+identification requires a gauge/normalization dictionary beyond a
+scalar --- the preregistered rank-one/normalization freedom, now with
+first data.  W1's atomic half is closed; the smooth half stays open.
+No positivity claim, no RH statement.
+Machine-checked: \veri{v630\_suzuki\_contact.py}.
+\mE\ (literal atom identity) $+$ (\textsc{measured}) (Galerkin profile)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The W1 dictionary round
+(\texttt{PRIME.WEIL.DICT.01}).}
+The v630 non-scalar residual is \emph{resolved}: it IS the zeta pole
+term ($7$ checks, ${\sim}3$\,s).  The Lerch collapse --- term-wise
+$(2n{+}\tfrac12)^2/(n{+}\tfrac14)^2=4$, hence
+$[e^{-t/2}\Phi(e^{-2t},2,\tfrac14)]''=4e^{-t/2}/(1-e^{-2t})$ exactly
+--- turns the Hurwitz--Lerch block of Suzuki's screw function into a
+geometric series, and yields the structure theorem: off the atoms,
+$g''(t)=-2\cosh(t/2)-4\,e^{-t/2}/(1-e^{-2t})$ --- Suzuki's smooth
+layer is $-4\times$ the TFPT archimedean density \emph{minus} the pole
+block $2\cosh(t/2)=e^{t/2}+e^{-t/2}$, the $\zeta$ pole weights at
+$s=0,1$ that TFPT tracks separately as the exact rank-one piece
+(\texttt{v591}).  The closed per-lag ratio law
+$c_{\mathrm{gal}}/c_{\mathrm{arch}}=-D[4+(e^t{+}1)(1-e^{-2t})]$
+verifies with the declared $d^{-2}$ discretization profile; after pole
+subtraction the smooth conversion is the \emph{scalar} $-4D$
+(monotone to $1.0006$), and the atom-layer lattice constant is $D^2$
+exactly (atoms $\log2$, $\log3$ agree to $10^{-3}$).  W1 closes at the
+measured level on both halves:
+$\widehat A_{\mathrm{arch}}=-(1/4D)\,\mathrm{Galerkin}_{\mathrm{smooth}}
++\text{pole rank-one}$; the theorem-level remainder (second-order
+term, $d\le2$ boundary cells, $L^2_0$ projection) is typed.  W2/W3
+stay open; no positivity claim, no RH statement.
+Machine-checked: \veri{v631\_w1\_dictionary.py}.
+\mE\ (exact Lerch/structure identities) $+$ (\textsc{measured})
+(scalar closure)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

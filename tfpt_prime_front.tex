@@ -11324,8 +11324,34 @@ injection into complete windows reproduces the flips with matched
 sign and magnitude at both scales; on the complete-comb surface
 ($2\alpha\le U_{\max}$) the $C=1$ bound holds with \emph{zero}
 exceptions.  The flip windows are data-boundary artifacts, not
-arithmetic phenomena.  Nothing in this paper or its companions
-claims progress on any conjecture beyond this statement.
+arithmetic phenomena.
+
+Two further machine-checked facts frame this statement externally
+(2026-08-02).  \emph{The geometric frame:} through the exact Lorentz
+congruence $P^{\mathsf T}J_{\mathrm{det}}P=J_{\mathrm{fix}}$
+(\veri{v624\_external\_lattice\_audit.py}) every complete window's
+vector $(S_{11},S_{22},S_{12})$ transports to the cover polarization
+lattice, and \emph{all $67$ complete windows land in the positive
+cone, on one sheet} (\veri{v627\_hodge\_chamber.py}; $\det S>0$
+everywhere; honest typing: chamber membership is a density-layer
+property, the fine $C=1$ cancellation lives \emph{inside} the
+chamber).  \emph{The operator frame:} the atom layer of the window
+form \emph{is} the prime measure of Suzuki's screw function,
+literally (positions $\log$ prime powers, weights
+$\Lambda(n)/\sqrt n$, exact; \veri{v630\_suzuki\_contact.py}), and the
+smooth layer converts by a \emph{derived} dictionary
+(\veri{v631\_w1\_dictionary.py}): the Lerch collapse gives
+$g''=-2\cosh(t/2)-4\,e^{-t/2}/(1-e^{-2t})$ off the atoms, so Suzuki's
+smooth layer is $-4\times$ the window's archimedean density minus the
+pole block --- exactly the rank-one pole piece the program tracks
+separately (\vref{v591}); after pole separation the conversion is the
+scalar $-4D$ and the atom-layer constant is $D^2$.  The W1
+identification step of the preregistered
+\texttt{PRIME.WEIL.OPERATOR.01} contract is thereby closed at the
+measured level on both halves; the RH-hard steps (W2 form density, W3
+uniform positivity) are untouched.  Nothing in this paper or its
+companions claims progress on any conjecture beyond these
+statements.
 
 % =====================================================================
 \section{Status and outlook}\label{sec:status}

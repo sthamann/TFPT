@@ -202,7 +202,9 @@ export type PrimeFrontVerdict =
   | "CLOCK-SURVIVES-INTERACTING"
   | "SEAM-IDENTIFIED"
   | "COVERED-SEAM-SKELETON"
-  | "LATTICE-AUDIT-PASSED";
+  | "LATTICE-AUDIT-PASSED"
+  | "PRIME-SHADOW-EXACT"
+  | "SIX-FRONT-BATCH";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -226,6 +228,39 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-02",
+    part: 0,
+    title:
+      "The W1 dictionary \u2014 the mystery residual was the pole term all along, and the conversion is now DERIVED. Hours after v630 measured a non-scalar conversion between the TFPT window symbol and Suzuki's screw-function Galerkin matrix, the residual is resolved exactly. The key is a small exact identity with large consequences: term-wise (2n+\u00bd)\u00b2/(n+\u00bc)\u00b2 = 4, so the second derivative of the Hurwitz\u2013Lerch block of the screw function collapses to a geometric series \u2014 [e^{\u2212t/2}\u03a6(e^{\u22122t},2,\u00bc)]\u2033 = 4e^{\u2212t/2}/(1\u2212e^{\u22122t}). That yields a structure theorem: off the prime atoms, g\u2033(t) = \u22122cosh(t/2) \u2212 4e^{\u2212t/2}/(1\u2212e^{\u22122t}). Read it term by term: the second piece is exactly \u22124 times the TFPT archimedean density (the Weil 1952 kernel v563 has always used), and the first piece \u2014 2cosh(t/2) = e^{t/2} + e^{\u2212t/2} \u2014 is the zeta POLE block, the s = 0, 1 weights of the explicit formula. Suzuki's screw function bundles the pole into g; TFPT has always tracked it separately as an exact rank-one piece (v591). So the v630 drift was never a mystery normalization: it was the pole term sitting inside g. The verification: the closed per-lag ratio law \u2212D[4 + (e^t+1)(1\u2212e^{\u22122t})] matches the measured profile, and after subtracting the pole block from g the conversion becomes the SCALAR \u22124D, converging monotonically (1.0006 at lag 16, residual = the declared d\u207b\u00b2 discretization). The atom layer converts with the constant D\u00b2 exactly \u2014 identical for the atoms at log 2 and log 3. Bottom line: W1 of the PRIME.WEIL.OPERATOR contract \u2014 identify the TFPT window form with the Galerkin matrix of Suzuki's localized Weil operator \u2014 is now closed at the measured level on BOTH halves: atoms literal (v630), smooth layer scalar after pole separation (v631). The RH-hard steps W2/W3 are untouched, and the implication map stays explicit: closing W1 does not move W3.",
+    verdict: "W1-DICTIONARY-DERIVED",
+    summary:
+      "v631_w1_dictionary.py promoted (PRIME.WEIL.DICT.01, 7 checks; probe w1_dictionary_probe.py 7/7, W1-DICTIONARY-DERIVED): Lerch collapse exact; structure theorem g\u2033 = \u22122cosh(t/2) \u2212 4\u00d7(TFPT arch density); closed ratio law verified; pole-subtracted conversion scalar \u22124D (\u2192 1.0006); atom constant D\u00b2. W1 closed at measured level; W2/W3 open. Suite 624 \u2192 625 scripts.",
+    badge: "sandbox",
+    script: "w1_dictionary_probe.py",
+  },
+  {
+    date: "2026-08-02",
+    part: 0,
+    title:
+      "The six-front batch \u2014 E8 is literally a code, the windows sit in one Hodge chamber, and the TFPT atoms ARE Suzuki's prime measure. Five modules land at once. (1) The E8 code: Construction A on the self-dual extended Hamming code [8,4,4] yields E8 exactly \u2014 even, unimodular, shells 240/2160 \u2014 and every single-bit error is exhaustively correctable (16\u00d78 corrupted words, unique nearest codeword every time). 'E8 is an error-correcting code' is now a THEOREM in the suite, giving the robustness narrative its exact anchor next to v625's commuting Hecke channels. (2) The Hodge chamber: transporting every complete window through the exact Lorentz congruence P\u1d40J_det P = J_fix, all 67 windows land in the POSITIVE cone of the cover polarization lattice \u2014 on ONE sheet. The geometric positivity route has its measured half; honest typing: scrambles do NOT leave the chamber (membership is density-layer, per v582), so the fine C = 1 arithmetic lives INSIDE the chamber. (3) The orbifold Casimir: the covered seam's deck classes {1/6, 1/2, 5/6} carry the \u2124\u2083-twist Casimir data EXACTLY \u2014 closed form for the vacuum energy, sector table (1/72, \u22121/24, 1/72), twist gap 1/18. (4) The incidence census: the review's 48\u00d75 \u2192 240 kill test fires \u2014 the compiler-canonical order-12 element gives orbits 19\u00d712 + 3\u00d74, not 20 free \u03b6\u2081\u2082 orbits \u2014 but the positive residue is sharp: the \u03bc\u2084 clock alone acts FREELY with exactly 60 orbits, and 60 = D_start. The cascade start appears as a free orbit count on the E8 roots. (5) The Suzuki first contact: the atom layer of the TFPT window form IS the prime measure of Suzuki's screw function \u2014 positions log n, weights \u039b(n)/\u221an, literally, exactly \u2014 so W1's atomic half of the PRIME.WEIL.OPERATOR contract is CLOSED; the smooth-layer conversion is measured non-scalar, the preregistered residual, now with data.",
+    verdict: "SIX-FRONT-BATCH",
+    summary:
+      "v626\u2013v630 promoted: v626_e8_code.py (E8.CODE.01, 7 checks \u2014 Hamming [8,4,4] \u2192 E8, exhaustive syndrome decoding); v627_hodge_chamber.py (PRIME.HODGECONE.01, 5 checks \u2014 67/67 windows in the positive cone, one sheet); v628_orbifold_casimir.py (QGEO.ORBCAS.01, 5 checks \u2014 exact twist Casimir table, gap 1/18); v629_root_incidence.py (E8.INCIDENCE.01, 6 checks \u2014 naive 48\u00d75 killed, 60 = D_start free clock orbits); v630_suzuki_contact.py (PRIME.WEIL.CONTACT.01, 4 checks \u2014 atom identity literal, Galerkin profile measured). Suite 619 \u2192 624 scripts.",
+    badge: "sandbox",
+    script: "suzuki_contact_probe.py",
+  },
+  {
+    date: "2026-08-02",
+    part: 0,
+    title:
+      "The prime shadow — primes enter AFTER the geometry, exactly. An external note asked: what if primes are not the origin but the readout — the shadow of the finished geometry in discrete arithmetic? The checkable core of that reading turns out to be EXACT, on the compiler's own objects. The E8 theta function, computed from the glue decomposition (θ₂⁸ + θ₃⁸ + θ₄⁸)/2, has shell counts r(2n) = 240·σ₃(n) — the first shell is literally 240, the root count — so Θ_E8 = E₄: the finished lattice's counting function is a modular form. The 'address space' framing is unique factorization, exactly: shell counts factor over coprime addresses (and the must-fail control shows non-coprime does NOT factor: σ₃(4) = 73 ≠ 81). The 'independent check channels' framing is a theorem: the Hecke operators T_p act with eigenvalue 1 + p³ for every prime, they COMMUTE, and the compiler's theta is a simultaneous eigenvector of all of them — each prime reads the same finished object through its own independent channel. And the zeta shadow: L(E₄, s) = ζ(s)·ζ(s−3) — the Riemann zeta function appears as the FACTORIZED SHADOW of the E8 counting function. So the chain μ₄ → D5⊕A3 → E8 → theta → Hecke → ζ → primes is exact at every arrow: within TFPT's narrative, the direction of explanation is fixed — geometry first, primes as readout. Honest scope: these are classical facts (Jacobi, Hecke); the content is that the compiler's own objects realize them verbatim. The bolder framings — primes as compiler eigenfrequencies, RH as maximal coherence — stay typed hypotheses, not adopted.",
+    verdict: "PRIME-SHADOW-EXACT",
+    summary:
+      "v625_prime_shadow.py promoted (PRIME.SHADOW.01, 6 checks; probe prime_shadow_probe.py 6/6, PRIME-SHADOW-EXACT): Θ_E8 = E₄ (shells 240·σ₃(n), n = 1..12 exact); multiplicativity over coprime addresses (must-fail σ₃(4) ≠ σ₃(2)²); Hecke channels T_p with eigenvalue 1+p³ commute, theta simultaneous eigenvector; L(E₄,6) = ζ(6)ζ(3) to 5e−8. Speculative framings typed hypotheses. Suite 618 → 619 scripts.",
+    badge: "sandbox",
+    script: "prime_shadow_probe.py",
+  },
   {
     date: "2026-08-02",
     part: 0,
