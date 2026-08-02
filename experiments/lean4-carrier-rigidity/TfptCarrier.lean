@@ -74,6 +74,9 @@ import TfptCarrier.SpectralGapAttractor
 import TfptCarrier.CoxeterPrime2
 import TfptCarrier.ParityWeightLaws
 import TfptCarrier.CoverEmbedding
+import TfptCarrier.WeilDictionary
+import TfptCarrier.LorentzCongruence
+import TfptCarrier.G31Orders
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck

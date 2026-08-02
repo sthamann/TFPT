@@ -43,6 +43,814 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-02",
+    "dateLabel": "2026-08-02 · XLI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the ten-front batch lands ("
+      },
+      {
+        "k": "c",
+        "v": "v632"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v642"
+      },
+      {
+        "k": "t",
+        "v": " promoted) — THE PGL"
+      },
+      {
+        "k": "m",
+        "v": "_2"
+      },
+      {
+        "k": "t",
+        "v": " CONTRACT EXECUTED: the four transfer solvers share ONE Möbius action on the disc "
+      },
+      {
+        "k": "m",
+        "v": "-7"
+      },
+      {
+        "k": "t",
+        "v": " norm line where they act at all (Koide reading exactly intertwined with the base translation, "
+      },
+      {
+        "k": "m",
+        "v": "g_{\\mathrm{QCD}}"
+      },
+      {
+        "k": "t",
+        "v": " exactly conjugate to it, Boltzmann "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " pole by the single-flow theorem; kill criterion NOT met); THE "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}[i]"
+      },
+      {
+        "k": "t",
+        "v": "-E8 QUOTIENT AND ITS STABILIZER: the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "-quotient of the 240 roots IS the hermitian-unimodular "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}[i]"
+      },
+      {
+        "k": "t",
+        "v": "-E8 with the 60-hyperplane system of ST31, "
+      },
+      {
+        "k": "m",
+        "v": "G_{31}"
+      },
+      {
+        "k": "t",
+        "v": " is the FULL unitary stabilizer with Molien-unique degrees "
+      },
+      {
+        "k": "m",
+        "v": "(8,12,20,24)"
+      },
+      {
+        "k": "t",
+        "v": " and the exact clock identities "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma=c^4"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "J=c^9"
+      },
+      {
+        "k": "t",
+        "v": " — while the numerology "
+      },
+      {
+        "k": "m",
+        "v": "|G_{31}|=|W(D_5)|{\\times}|W(A_3)|"
+      },
+      {
+        "k": "t",
+        "v": " is KILLED three ways (real structure: "
+      },
+      {
+        "k": "m",
+        "v": "(Z_4\\circ2^{1+4}).\\mathrm{Sp}_4(2)"
+      },
+      {
+        "k": "t",
+        "v": "; the compiler clock is NOT the regular 12-element); P CANONICAL AND CONSTRUCTED: the Lorentz congruence matrix is the unique minimal-Frobenius operator-compatible class in the full census AND, mod sign, the Frobenius-minimal integer congruence transporting the "
+      },
+      {
+        "k": "m",
+        "v": "C_V"
+      },
+      {
+        "k": "t",
+        "v": " null frame onto the canonical rank-one rays (finite 16-family); an HONEST NEGATIVE: after "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "-control the fine Hodge invariants carry NO independent information about the "
+      },
+      {
+        "k": "m",
+        "v": "C=1"
+      },
+      {
+        "k": "t",
+        "v": " margin ("
+      },
+      {
+        "k": "m",
+        "v": "\\rho=-0.04"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "p=0.75"
+      },
+      {
+        "k": "t",
+        "v": " — the direct window-level bridge route closes); THE CODE DICTIONARY: the unique equivariant Hamming placement is Reed–Muller "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{RM}(1,3)"
+      },
+      {
+        "k": "t",
+        "v": " on "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{AG}(3,2)"
+      },
+      {
+        "k": "t",
+        "v": " with information bits one per "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " pair, the "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " 3-cycle on the syndrome flag, and decode "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " projection verbatim ("
+      },
+      {
+        "k": "m",
+        "v": "3840/3840"
+      },
+      {
+        "k": "t",
+        "v": "); THE TWIST OPE: the interacting "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}_3"
+      },
+      {
+        "k": "t",
+        "v": " orbifold slice stands at the abelian vertex level ("
+      },
+      {
+        "k": "m",
+        "v": "h_\\sigma=1/36"
+      },
+      {
+        "k": "t",
+        "v": " three ways, exponent "
+      },
+      {
+        "k": "m",
+        "v": "2\\Delta=2/9"
+      },
+      {
+        "k": "t",
+        "v": ", crossing exactly symmetry-protected, closed four-point form; RP validated in the real class, the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}_3"
+      },
+      {
+        "k": "t",
+        "v": " Klein-twist pairing typed open); and THE W1 CLOSURE TRIO: the boundary equation "
+      },
+      {
+        "k": "m",
+        "v": "A_{\\mathrm{arch}}=\\tfrac14 g''_{\\mathrm{smooth}}-\\tfrac54(\\log\\pi-\\psi(\\tfrac14))\\,\\delta_0"
+      },
+      {
+        "k": "t",
+        "v": " EXACT with the derived "
+      },
+      {
+        "k": "m",
+        "v": "1+1/(6d^2)"
+      },
+      {
+        "k": "t",
+        "v": " moment law, the frozen dictionary PORTABLE on three fresh windows (atom constant "
+      },
+      {
+        "k": "m",
+        "v": "D^2"
+      },
+      {
+        "k": "t",
+        "v": " at machine precision), and the full-matrix operator level CLOSED (block norm "
+      },
+      {
+        "k": "m",
+        "v": "2.7\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " derived, "
+      },
+      {
+        "k": "m",
+        "v": "6.3\\times10^{-6}"
+      },
+      {
+        "k": "t",
+        "v": " after measure-level re-binning; pole block rank 1; two typed lattice residuals) — plus Lean certificates for the W1 dictionary identities, the Lorentz congruence, and the "
+      },
+      {
+        "k": "m",
+        "v": "G_{31}"
+      },
+      {
+        "k": "t",
+        "v": " order identities"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v632_ftransfer_pgl2.py"
+        },
+        {
+          "k": "t",
+          "v": " (25 checks: substrate, discrete intertwining, native PGL"
+        },
+        {
+          "k": "m",
+          "v": "_2"
+        },
+        {
+          "k": "t",
+          "v": " classification, five must-fail controls); "
+        },
+        {
+          "k": "c",
+          "v": "v633_orbit60_quotient.py"
+        },
+        {
+          "k": "t",
+          "v": " (17 checks: hermitian-unimodular "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}[i]"
+        },
+        {
+          "k": "t",
+          "v": "-E8, "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " census "
+        },
+        {
+          "k": "m",
+          "v": "19{\\times}3{+}3"
+        },
+        {
+          "k": "t",
+          "v": ", line group "
+        },
+        {
+          "k": "m",
+          "v": "11520"
+        },
+        {
+          "k": "t",
+          "v": ", cascade killed); "
+        },
+        {
+          "k": "c",
+          "v": "v634_st31_structure.py"
+        },
+        {
+          "k": "t",
+          "v": " (56 checks: full stabilizer count, Molien uniqueness, Springer regulars, the numerology kill, "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma=c^4"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "J=c^9"
+        },
+        {
+          "k": "t",
+          "v": ", honest clock typing); "
+        },
+        {
+          "k": "c",
+          "v": "v635_p_canonicity.py"
+        },
+        {
+          "k": "t",
+          "v": " (18 checks: the 40-solution census, minimal-Frobenius class, fine-invariant separation); "
+        },
+        {
+          "k": "c",
+          "v": "v636_p_construction.py"
+        },
+        {
+          "k": "t",
+          "v": " (25 checks: null-cone census, boost normal form, the finite 16-family, must-fail gl"
+        },
+        {
+          "k": "m",
+          "v": "_2"
+        },
+        {
+          "k": "t",
+          "v": " ansatz); "
+        },
+        {
+          "k": "c",
+          "v": "v637_fine_c1_bridge.py"
+        },
+        {
+          "k": "t",
+          "v": " (8 checks: the preregistered honest negative); "
+        },
+        {
+          "k": "c",
+          "v": "v638_code_semantics.py"
+        },
+        {
+          "k": "t",
+          "v": " (27 checks: RM"
+        },
+        {
+          "k": "m",
+          "v": "(1,3)"
+        },
+        {
+          "k": "t",
+          "v": " dictionary, syndrome flag, decode "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " projection, the 30-census kill control); "
+        },
+        {
+          "k": "c",
+          "v": "v639_twist_ope.py"
+        },
+        {
+          "k": "t",
+          "v": " (25 checks: three weight routes, two-point, crossing, closed four-point, OPE data, differentiated RP); "
+        },
+        {
+          "k": "c",
+          "v": "v640_w1_boundary.py"
+        },
+        {
+          "k": "t",
+          "v": " (11 checks: the exact boundary equation, three boundary constants, the derived moment law); "
+        },
+        {
+          "k": "c",
+          "v": "v641_w1_portability.py"
+        },
+        {
+          "k": "t",
+          "v": " (10 checks: the frozen-dictionary kill test on "
+        },
+        {
+          "k": "m",
+          "v": "h=285/540/997"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v642_w1_matrix.py"
+        },
+        {
+          "k": "t",
+          "v": " (8 checks: operator-level closure, pole-block rank 1, the two typed lattice residuals as inverted-expectation checks, numbers unchanged from the probe)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Three new certificate files in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/lean4-carrier-rigidity"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green, no "
+        },
+        {
+          "k": "c",
+          "v": "sorry"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "c",
+          "v": "WeilDictionary.lean"
+        },
+        {
+          "k": "t",
+          "v": " (the exact v631 W1-dictionary identities: Lerch collapse, structure theorem), "
+        },
+        {
+          "k": "c",
+          "v": "LorentzCongruence.lean"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "P^{\\mathsf T}J_{\\mathrm{det}}P=J_{\\mathrm{fix}}"
+        },
+        {
+          "k": "t",
+          "v": " by kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "G31Orders.lean"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "G_{31}"
+        },
+        {
+          "k": "t",
+          "v": "/glue order identities "
+        },
+        {
+          "k": "m",
+          "v": "8{\\cdot}12{\\cdot}20{\\cdot}24=46080=1920{\\cdot}24"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "60=7{+}11{+}19{+}23"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New rows "
+        },
+        {
+          "k": "c",
+          "v": "FTR.PGL2.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.ZIQUOTIENT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.ST31.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PCANON.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PCONSTRUCT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FINEC1.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.CODESEM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.TWISTOPE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.BOUNDARY.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.PORTABLE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.MATRIX.01"
+        },
+        {
+          "k": "t",
+          "v": "; dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.DICT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.INCIDENCE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.CODE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.ORBCAS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HODGECONE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "FTR.DISC7.NORM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "EXTREV.LATTICE.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves; the honest negatives (cascade route, fine-invariant bridge, "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}_3"
+        },
+        {
+          "k": "t",
+          "v": " mirror pairing, gl"
+        },
+        {
+          "k": "m",
+          "v": "_2"
+        },
+        {
+          "k": "t",
+          "v": " ansatz) are typed results that close routes, not gaps; W1 is theorem-capable at the window level with the "
+        },
+        {
+          "k": "m",
+          "v": "L^2_0"
+        },
+        {
+          "k": "t",
+          "v": " projection the last remainder; W2/W3 stay open and unmoved; no positivity claim, no RH statement; "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": " does not move."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-02",
     "dateLabel": "2026-08-02 · XL",
     "heading": [
       {

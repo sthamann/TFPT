@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`625` registered scripts · `697` ledger claims · `10` clusters.
+`636` registered scripts · `708` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (147 scripts)
+### `core` — Compiler core & the E₈ glue  (158 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -305,6 +305,28 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v624_external_lattice_audit, v618_uniform_constant, v563, v624 · cited: 3 e8 audit bootstrap, research contracts
 - **v631_w1_dictionary** [E/C] `PRIME.WEIL.DICT.01` — **DER v630-REST IST DER POL-TERM, UND NACH SEINER ABTRENNUNG IST DIE GLATTE KONVERSION DER SKALAR −4D** (die glatte W1-Hälfte schließt auf Mess-Ebene; Konversion HERGELEITET, nicht
   - deps: v630_suzuki_contact, v591_pole_rank_one, v624_external_lattice_audit, v563, v591, v630 · cited: 3 e8 audit bootstrap, research contracts
+- **v632_ftransfer_pgl2** [E/C/X] `FTR.PGL2.01` — **DIE VIER EXTERNEN TRANSFER-SOLVER TEILEN EINE GEMEINSAME MÖBIUS-AKTION AUF DER DISKRIMINANTE-−7-NORMLINIE, WO SIE ÜBERHAUPT WIRKEN — DAS KILL-KRITERIUM ‚VIER INKOMPATIBLE ARITHME
+  - deps: v213_ftransfer_functor, v533_ftransfer_disc7_norm, v571_cr_discrete_corners, v575_cr_continuous_uniflow, v533, v571, v575, v578 · cited: 3 e8 audit bootstrap, research contracts
+- **v633_orbit60_quotient** [E/X] `E8.ZIQUOTIENT.01` — **DER QUOTIENT DER 240 E8-WURZELN NACH DER FREIEN μ₄-CLOCK IST DAS HERMITESCH-UNIMODULARE ℤ[i]-E8 MIT DEM 60-HYPEREBENEN-SYSTEM VON ST31; DIE 60→6-KASKADEN-ROUTE AUF DEM QUOTIENTEN
+  - deps: v629_root_incidence, v624_external_lattice_audit, v626, v629 · cited: 3 e8 audit bootstrap
+- **v634_st31_structure** [E/X] `E8.ST31.01` — **G31 IST DER VOLLE UNITÄRE STABILISATOR (EXAKT GEZÄHLT: 46080), DIE GRADE (8,12,20,24) SIND MOLIEN-EINDEUTIG, σ = c⁴ UND J = c⁹ EXAKT — UND DIE NUMEROLOGIE |G31| = |W(D5)|·|W(A3)|
+  - deps: v633_orbit60_quotient, v629_root_incidence, v629, v633 · cited: 3 e8 audit bootstrap
+- **v635_p_canonicity** [E] `PRIME.PCANON.01` — **IM VOLLEN [−4,4]-ZENSUS (EXAKT 40 LÖSUNGEN VON QᵀJ_det Q = J_fix) IST P MODULO DER NATÜRLICHEN ORDNUNG-8-SYMMETRIE DIE EINDEUTIGE FROBENIUS-MINIMALE, OPERATOR-KOMPATIBLE KLASSE —
+  - deps: v627_hodge_chamber, v624_external_lattice_audit, v563, v600, v624, v627 · cited: 3 e8 audit bootstrap
+- **v636_p_construction** [E] `PRIME.PCONSTRUCT.01` — **P IST BIS AUFS VORZEICHEN DIE FROBENIUS-MINIMALE GANZZAHLIGE KONGRUENZ, DIE DEN C_V-NULLRAHMEN (KERN + FIXGERADE = DIE ZWEI MINIMALEN ISOTROPEN STRAHLEN VON J_fix) AUF DIE KANONI
+  - deps: v635_p_canonicity, v627_hodge_chamber, v624_external_lattice_audit, v600, v604, v624, v635 · cited: 3 e8 audit bootstrap
+- **v637_fine_c1_bridge** [-] `PRIME.FINEC1.01` — **EIN EHRLICHES NEGATIV ALS GETYPTES ERGEBNIS: NACH h-KONTROLLE TRAGEN DIE FEINEN HODGE-INVARIANTEN KEINE UNABHÄNGIGE INFORMATION ÜBER DIE C=1-MARGE** (partielle Spearman φ/qn: ρ =
+  - deps: v635_p_canonicity, v618_uniform_constant, v627_hodge_chamber, v563, v591, v618, v635 · cited: 3 e8 audit bootstrap
+- **v638_code_semantics** [E/X] `E8.CODESEM.01` — **DIE EINDEUTIGE ÄQUIVARIANTE HAMMING-PLATZIERUNG C* IST REED–MULLER RM(1,3) AUF AG(3,2) UND TRÄGT EIN EXAKTES WÖRTERBUCH**: Informationsbits = 1 pro μ₄-Paar (3 Familien + 1 Anker;
+  - deps: v626_e8_code, v629_root_incidence, v626, v629 · cited: 3 e8 audit bootstrap
+- **v639_twist_ope** [E/O] `QGEO.TWISTOPE.01` — **DIE WECHSELWIRKENDE SCHEIBE DER ℤ₃-ORBIFOLD-AUSSAGE STEHT AUF DEM ABELSCHEN VERTEX-NIVEAU**: h_σ = 1/36 aus DREI exakten Routen (Konventionen versöhnt, η(1−η)/2-Falle exakt aufge
+  - deps: v628_orbifold_casimir, v623_covered_seam, v622_seam_identification, v519, v622, v623, v628 · cited: 3 e8 audit bootstrap
+- **v640_w1_boundary** [E] `PRIME.WEIL.BOUNDARY.01` — **DER v631-D6-REST IST SYMBOLISCH GESCHLOSSEN: DIE EXAKTE RANDGLEICHUNG A_arch = (1/4)g″_glatt − (5/4)(log π − ψ(¼))δ₀** (Residuen < 1e−22 auf den Zelten d = 0,1,2, Punkt- UND Gale
+  - deps: v631_w1_dictionary, v630_suzuki_contact, v591_pole_rank_one, v563, v591, v630, v631 · cited: 3 e8 audit bootstrap, research contracts
+- **v641_w1_portability** [E/X] `PRIME.WEIL.PORTABLE.01` — **DAS EINGEFRORENE WÖRTERBUCH (ALLE FORMELN GESCHLOSSEN IN D, KEIN KNOPF) LÄUFT UNVERÄNDERT AUF DREI FRISCHEN FENSTERN h = 285/540/997: DAS PRÄREGISTRIERTE KILL-KRITERIUM IST NIRGE
+  - deps: v631_w1_dictionary, v640_w1_boundary, v563, v631, v640 · cited: 3 e8 audit bootstrap, research contracts
+- **v642_w1_matrix** [E] `PRIME.WEIL.MATRIX.01` — **AUF OPERATOR-EBENE SCHLIESST DAS WÖRTERBUCH DIE VOLLE QUADRATISCHE FORM (h = 184, M = 368): 16-Moden-Blocknorm-Abstand eingefroren 6.7e−1 → hergeleitet 2.7e−3 → nach Maß-Ebenen-R
+  - deps: v631_w1_dictionary, v640_w1_boundary, v641_w1_portability, v591_pole_rank_one, v563, v631, v640 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1315,22 +1337,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v563`×20, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `REG.FREEZE.01`×17, `v312`×16, `FLAV.KQ.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v563`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `REG.FREEZE.01`×17, `v312`×16, `FLAV.KQ.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v620_cyclic_n_census** — `QGEO.NCENSUS.01`
-- **v621_interacting_semigroup** — `WOIT.GAMMA.SEMI.01`
-- **v622_seam_identification** — `QGEO.SEAMID.01`
-- **v623_covered_seam** — `QGEO.COVERSEAM.01`
-- **v624_external_lattice_audit** — `EXTREV.LATTICE.01`
-- **v625_prime_shadow** — `PRIME.SHADOW.01`
-- **v626_e8_code** — `E8.CODE.01`
-- **v627_hodge_chamber** — `PRIME.HODGECONE.01`
-- **v628_orbifold_casimir** — `QGEO.ORBCAS.01`
-- **v629_root_incidence** — `E8.INCIDENCE.01`
-- **v630_suzuki_contact** — `PRIME.WEIL.CONTACT.01`
 - **v631_w1_dictionary** — `PRIME.WEIL.DICT.01`
+- **v632_ftransfer_pgl2** — `FTR.PGL2.01`
+- **v633_orbit60_quotient** — `E8.ZIQUOTIENT.01`
+- **v634_st31_structure** — `E8.ST31.01`
+- **v635_p_canonicity** — `PRIME.PCANON.01`
+- **v636_p_construction** — `PRIME.PCONSTRUCT.01`
+- **v637_fine_c1_bridge** — `PRIME.FINEC1.01`
+- **v638_code_semantics** — `E8.CODESEM.01`
+- **v639_twist_ope** — `QGEO.TWISTOPE.01`
+- **v640_w1_boundary** — `PRIME.WEIL.BOUNDARY.01`
+- **v641_w1_portability** — `PRIME.WEIL.PORTABLE.01`
+- **v642_w1_matrix** — `PRIME.WEIL.MATRIX.01`
 

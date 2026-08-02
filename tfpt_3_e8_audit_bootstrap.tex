@@ -2825,6 +2825,278 @@ Machine-checked: \veri{v631\_w1\_dictionary.py}.
 (scalar closure)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The $F_{\mathrm{transfer}}$ PGL$_2$ round
+(\texttt{FTR.PGL2.01}).}
+The \texttt{v533} preregistration executed in its \emph{literal} group
+form ($25$ checks, ${\sim}1$\,s).  On the disc-$(-7)$ norm line
+$\alpha_t$ (norms $2/4/14/32$; base action $T:\alpha\mapsto\alpha+2$,
+parabolic) the declared \texttt{v183} Koide reading induces the
+parabolic step $+9=N_{\mathrm{fam}}^2$ and is \emph{exactly}
+intertwined with $T$ (the reading map $\Phi$ is itself M\"obius,
+$\Phi\circ T=g\circ\Phi$); the cross-ratio is $4/3$ exactly and
+M\"obius transport forces the $F$ corner $53$ fit-free.  On the native
+continuous half the time-$1$ maps are explicit PGL$_2$ elements:
+$g_{\mathrm{pole}}$ hyperbolic with multiplier $(2/3)^6$,
+$g_{\mathrm{Boltzmann}}=g_{\mathrm{pole}}$ \emph{identically} (the
+\texttt{v425} single-flow theorem), $g_{\mathrm{QCD}}$ parabolic and
+\emph{explicitly} conjugate to $T$ (translation $+7/2\pi$ in the
+$1/\alpha$ coordinate), $g_{\mathrm{relic}}=\mathrm{id}$ (degenerate);
+the \texttt{v575} uniflow degeneration and the \texttt{v578} own-clock
+equivalence reproduce.  The kill criterion ``four incompatible
+arithmetic actions'' is \emph{not} met; five must-fail controls have
+teeth (the raw determinant reading transports to $-16\ne32$).  The
+residual --- the external anchor clocks/jets --- stays fenced by
+\texttt{CONTRACT.F.01}.
+Machine-checked: \veri{v632\_ftransfer\_pgl2.py}.
+\mE/\mC\ (exact PGL$_2$/intertwining identities; typed reading)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The $\mathbb Z[i]$-$E_8$ quotient round
+(\texttt{E8.ZIQUOTIENT.01}).}
+The \texttt{v629} positive residue, one level deeper ($17$ checks,
+${\sim}3$\,s).  The $\mu_4$-quotient of the $240$ roots (the $60$ free
+clock orbits) \emph{is} the hermitian-unimodular $\mathbb Z[i]$-$E_8$:
+the hermitian form $H(x,y)=\langle x,y\rangle+i\langle x,Jy\rangle$
+has $H(v,v)=2$ on all $60$ line representatives, the
+$\mathbb Z[i]$-span is the full $E_8$ lattice, and a
+hermitian-\emph{unimodular} $\mathbb Z[i]$-basis exists among the reps
+($\det\mathrm{Gram}=1$).  $\sigma$ acts on the $60$ lines with census
+$19\times3+3$ fixed (the fixed lines are exactly the $J$-orbits of the
+$12$ $\sigma$-fixed roots), all $60$ order-$2$ unitary reflections
+preserve the root set, and the line group has order $11520=46080/4$
+--- the ST31 fingerprint ($60=7{+}11{+}19{+}23$ hyperplanes; ST32
+killed by its $40$-hyperplane count).  The $60\to6$ cascade route
+\emph{on the quotient} is killed: the hermitian Gram has rank $4$,
+both $|H|^2$ graphs are regular (any degree rule is ill-defined), and
+pair elimination has no canonical maximum --- a typed negative.
+Machine-checked: \veri{v633\_orbit60\_quotient.py}.
+\mE\ (exact quotient/lattice identities; typed cascade kill)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The ST31 structure round
+(\texttt{E8.ST31.01}).}
+Does the ST31 find carry structural weight?  Yes --- and the
+numerology does not ($56$ checks, ${\sim}10$\,s).  $G_{31}=\langle$the
+$60$ reflections$\rangle$ has order $46080$ and \emph{is} the full
+unitary stabilizer of the $\mu_4$-quotient structure (exact
+backtracking count); the degrees $(8,12,20,24)$ are \emph{unique} via
+Molien among all divisor quadruples with product $46080$; Springer
+regular elements of orders $8/12/20/24$ exist with centralizers
+$192/288/20/24$.  The compiler data embeds canonically: $J$, $\sigma$,
+$c=J\circ\sigma$ all lie in $G_{31}$ with the exact clock identities
+$\sigma=c^4$ and $J=c^9$ (the $\mu_4$ center is a \emph{power} of the
+clock); the root stabilizer is $G(4,2,3)$ (Steinberg), the line
+stabilizer $Z_4\times G(4,2,3)$.  The computed structure is
+$G_{31}=(Z_4\circ2^{1+4}).\mathrm{Sp}_4(2)$.  The numerology kill:
+$|G_{31}|=|W(D_5)|\times|W(A_3)|$ carries \emph{no} structure ---
+not an isomorphism (centers $4$ vs $1$), not a direct or semidirect
+product (all small normal closures join to order $64$), and $W(D_5)$
+does not even \emph{embed} (minimal faithful dimension $5>4$);
+$W(A_3)=S_4$ does embed.  Honest sharpening: the \texttt{v629}
+compiler clock $c$ is \emph{not} the Springer-regular $12$-element
+(census $19\times12+3\times4$, $|C(c)|=72\ne288$) --- the free
+$20=240/12$ comb belongs to the regular $12$-clock of $G_{31}$, a
+different conjugacy class.  The order identities are additionally
+machine-proved in Lean (\texttt{G31Orders.lean}, \texttt{lake build}
+green).
+Machine-checked: \veri{v634\_st31\_structure.py}.
+\mE\ (exact group/Molien/Springer census; numerology kill; honest
+clock typing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The $P$-canonicity census
+(\texttt{PRIME.PCANON.01}).}
+The first open step of \texttt{v627}, executed ($18$ checks,
+${\sim}3$\,s).  The full $[-4,4]$ box census finds \emph{exactly} $40$
+integer solutions $Q$ of $Q^{\mathsf T}J_{\mathrm{det}}Q=
+J_{\mathrm{fix}}$; the minimal-Frobenius class (norm$^2$ $25$, $8$
+solutions) \emph{is} $P$'s class modulo the natural order-$8$
+prime-side symmetry group, and operator compatibility (integral
+transport of both $C_U$, $C_V$) holds on it; $P$ is \emph{not} in the
+$\mathbb Q$-span of the $7$-word algebra of $(C_U,C_V)$ --- the
+word-algebra route stays a typed negative.  And the \emph{finer} ray
+invariants (projective spacelike angle $\varphi$, cone distance
+$q/|z|^2$, timelike angle, spacelike ratio) separate the true
+$67$-window family from scrambled combs in $17$--$18$ of $18$ cases
+per invariant (shifts up to $87$ true-family standard deviations); one
+scramble at $h=142$ even leaves the positive cone --- where the coarse
+\texttt{v627} chamber does not separate, the fine ray geometry does.
+Machine-checked: \veri{v635\_p\_canonicity.py}.
+\mE\ (exact census) $+$ (\textsc{measured}) (fine-invariant
+separation)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The $P$ operator construction
+(\texttt{PRIME.PCONSTRUCT.01}).}
+From ``found matrix'' to ``constructed map'' ($25$ checks, $<1$\,s).
+The two lowest-height primitive isotropic rays of $J_{\mathrm{fix}}$
+are \emph{exactly} the $C_V$-operator null frame $(\mathrm{fix}\,C_V,
+\ker C_V)$, and $P$ transports this frame to the canonical rank-one
+rays of the prime-side determinant form, grading-preservingly.  The
+full solution set of \{congruence $+$ the two ray conditions\} is an
+explicit $1$-parameter boost family (hyperbolic-basis normal form,
+solved exactly); integrality leaves \emph{exactly} $16$ members
+(Pell-type members excluded by an entrywise Galois argument), and
+either Frobenius-minimality or the trace-ray condition selects
+\emph{exactly} $\{+P,-P\}$: $P$ is, up to global sign, the
+Frobenius-minimal integer congruence transporting the $C_V$ null frame
+onto the canonical rank-one rays.  Honest residuals: the orientation
+choice of the target pair inside its symmetry orbit, and the
+gl$_2$-derivation ansatz for the transported $C_V$ fails (documented
+must-fail --- the named missing structure).
+Machine-checked: \veri{v636\_p\_construction.py}.
+\mE\ (exact construction/normal form/census; documented must-fail)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The fine-invariant $C=1$ bridge test
+(\texttt{PRIME.FINEC1.01}).}
+An honest negative, promoted as a typed result ($8$ checks,
+${\sim}7$\,s; gate preregistered before the numbers).  On the
+\texttt{v618} surface (reproduced exactly) the raw correlations of the
+fine Hodge-ray invariants with the $C=1$ load $\varepsilon_h h$
+($\rho=\pm0.40$) are \emph{entirely} the trivial $h$-trend: after
+rank-cubic $h$-control the partial Spearman correlations are
+$\rho=-0.040$ ($p=0.75$, Freedman--Lane permutation) for both primary
+invariants --- the preregistered gate ($|\rho|\ge0.30$, $p<0.01$) is
+missed by an order of magnitude, and the tertile structure vanishes
+after detrending.  The direct fine-geometry$\to$arithmetic bridge
+route at the window level is \emph{closed}: the fine invariants are
+$h$-parametrized geometry, the $C=1$ cancellation is arithmetic beyond
+it.
+Machine-checked: \veri{v637\_fine\_c1\_bridge.py}.
+(\textsc{measured}) (preregistered honest negative)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The code-semantics rounds
+(\texttt{E8.CODESEM.01}).}
+The \texttt{v626} code reading sharpens to an exact dictionary ---
+and the naive placement dies ($27$ checks, ${\sim}3$\,s; stage-$1$
+kill probe $13/13$).  Exactly $2$ of the $30$ $S_8$-placements of the
+extended Hamming code carry both compiler symmetries mod~$2$ (the
+$\mu_4$ in-pair swap and the family pair $3$-cycle), exchanged by the
+anchor transposition; the naive \texttt{v626} placement is \emph{not}
+among them.  The unique equivariant placement $C^*$ \emph{is}
+Reed--Muller $\mathrm{RM}(1,3)$ on $\mathrm{AG}(3,2)$ (the $14$
+weight-$4$ supports are the $14$ planes; $30=|S_8|/|\mathrm{AGL}(3,2)|$).
+The dictionary: no equivariant $4{+}4$ block split exists; the unique
+minimal orbit of information sets is the transversal pair --- one
+information bit per $\mu_4$ pair ($3$ family bits $+$ $1$ anchor bit);
+the syndrome space factors as the flag
+$0<\langle q\rangle<\mathbb F_2^4$ ($q$ the universal in-pair bit)
+with $\sigma$ acting on the pair directions as the $3$-cycle $+$ fixed
+anchor ($P_3=P_0{+}P_1{+}P_2$); and decode $=$ projection
+\emph{verbatim} on the whole single-error class ($3840/3840$, exact
+arithmetic; all $3840$ perturbed vectors sit at squared distance
+exactly $1$ with the mod-$2$-collapsing tie pair).  The $12$
+$\sigma$-fixed roots reduce mod~$2$ to exactly three classes of $4$,
+and the clock-orbit fibration reproduces $60=7\times4+4\times8$.  Kill
+control: the sets \{universal in-pair syndrome\}, \{clean orbit
+structure\}, \{both-invariant\} \emph{coincide} --- the equivariance
+is load-bearing.
+Machine-checked: \veri{v638\_code\_semantics.py}.
+\mE\ (exact dictionary; kill control)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The twist-field/OPE round
+(\texttt{QGEO.TWISTOPE.01}).}
+The interacting slice of the $\mathbb Z_3$ orbifold residue
+(\texttt{v623}/\texttt{v628}), executed at the abelian vertex level
+($25$ checks, ${\sim}1$\,s).  The twist weight $h_\sigma=1/36$ follows
+from three independent exact routes (the \texttt{v628} Casimir
+coefficient read as $2(h_\nu-c/24)$; the $\zeta$-function mode sum;
+the bosonization pair $h(\tfrac12{-}\eta)+h(\tfrac12{+}\eta)=\eta^2/2$),
+with the convention traps resolved exactly.  On the lattice (U(1)
+string determinants on the half-filled NS seam double, whose
+equal-time covariance is half the \texttt{v519} seam kernel): the
+two-point exponent $2\Delta=2/9$ verifies at $0.06\%$
+(Ising control at $0.02\%$); crossing is \emph{exactly}
+symmetry-protected (the gap rotation maps $w\mapsto1{-}w$ while
+$|G_4|$ is invariant at machine precision); the closed four-point form
+$A^2[w(1{-}w)]^{-2\Delta}$ holds at $<0.1\%$ after $N^{-2/3}$
+extrapolation; the leading OPE constant $c_1=2\Delta=2/9$ is
+model-bound at $0.19\%$ (the model-free extraction stays a typed
+$\pm15\%$ band).  Reflection positivity, differentiated: the real
+$\mathbb Z_2$ class is exactly PSD at every $N$ (machinery validated),
+while the naive antiunitary $\mathbb Z_3$ pairing fails positivity by
+an $N$-stable amount --- the positivity-carrying pairing
+(parafermionic Klein twist) is a named open item.  \texttt{GATE.QGEO}
+does not move.
+Machine-checked: \veri{v639\_twist\_ope.py}.
+\mE\ (exact weights/crossing) $+$ (\textsc{measured}) (two-/four-point,
+OPE) $+$ \mO\ (Klein-twist pairing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The W1 boundary closure
+(\texttt{PRIME.WEIL.BOUNDARY.01}).}
+The \texttt{v631} D6 typed remainder closes symbolically ($11$ checks,
+${\sim}30$\,s; certified at $20{+}$ digits).  The duplication identity
+$\psi(\tfrac14)=-\gamma-3\log2-\pi/2$ and the scheme conversion
+$k=\pi/4+\tfrac32\log2$ are sympy-exact, so the two $\delta_0$
+conventions ($\gamma{+}\log\pi$ vs $\psi(\tfrac14)$) are \emph{one}
+object in \emph{one} scheme, and the exact boundary equation
+\[
+A_{\mathrm{arch}}
+ =\tfrac14\,g''_{\mathrm{smooth}}
+ -\tfrac54\bigl(\log\pi-\psi(\tfrac14)\bigr)\,\delta_0
+\]
+verifies against the \texttt{v563} tents $d=0,1,2$ at relative
+residuals $<10^{-22}$ (point route and heavy Galerkin route, with the
+closed pole formula); the $d\le2$ cells become three computable
+constants $B(0..2)$.  The second-order term is exact: tent moments
+($c_2=1/12$) vs B-spline moments ($c_2=1/6$) give the correction
+$1+1/(6d^2)$, \emph{window-independent}, reproducing the measured
+\texttt{v631} profile bit-for-bit and predicting the excess to $0.6\%$
+at every lag --- a derived law, not a fit.  The exact dictionary
+identities are additionally machine-proved in Lean
+(\texttt{WeilDictionary.lean}).
+Machine-checked: \veri{v640\_w1\_boundary.py}.
+\mE\ (exact identities; certified boundary equation; derived moment
+law)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The W1 portability kill test
+(\texttt{PRIME.WEIL.PORTABLE.01}).}
+The preregistered kill test on fresh windows ($10$ checks,
+${\sim}2$\,s).  The \texttt{v631}/\texttt{v640} dictionary is
+\emph{frozen} (all formulas closed in $D$, no knob; bars declared
+before the fresh windows were touched) and executed unchanged on
+$h=285$, $540$, $997$ (the derivation window $h=184$ excluded): the
+pole-subtracted conversion is the scalar $-4D(\text{window})$ with the
+derived discretization law ($|r-1|<6.3\times10^{-4}$, monotone), the
+atom constant is $D^2(\text{window})$ at machine precision (atom
+spread $\le1.5\times10^{-14}$), and the closed per-lag law holds
+within the frozen bars.  The kill criterion --- any window needing a
+conversion beyond the explicit $D$ dependence --- is met
+\emph{nowhere}: W1 is a window-portable operator identification, not a
+single-window fit.
+Machine-checked: \veri{v641\_w1\_portability.py}.
+\mE\ (frozen-bar transport on three fresh windows)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The W1 matrix identity
+(\texttt{PRIME.WEIL.MATRIX.01}).}
+From per-lag dictionary to the full quadratic form on $h=184$,
+$M=368$ ($8$ checks, ${\sim}25$\,s).  At the operator level the
+dictionary closes: the $16$-mode parity block norm distance falls from
+$6.7\times10^{-1}$ (frozen) to $2.7\times10^{-3}$ (fully derived:
+boundary constants $+$ moment law, every stage closed form) to
+$6.3\times10^{-6}$ after re-binning the \emph{same} Suzuki atom
+measure from B-spline to tent reads; the separated pole block is
+numerically rank $1$ after parity projection (the preregistered
+rank-one freedom); the load-bearing $2\times2$ parity block (the
+$\widehat A$ surface of \texttt{v563}) agrees entrywise to
+$6.8\times10^{-5}$.  The literal $<1\%$ per-vector bar fails
+\emph{only} on two typed lattice residuals --- a near-cancellation
+denominator ($|Q_T|=0.031$ at form scale ${\sim}2$: metric, not
+operator) and the tent-vs-B-spline per-cell atom profile (removed
+completely by the measure-level re-binning) --- certified in the
+module as typed-residual checks with inverted expectation, the probe's
+numbers unchanged.  Nothing unexplained remains; the $L^2_0$
+projection stays the last theorem-level W1 remainder.
+Machine-checked: \veri{v642\_w1\_matrix.py}.
+\mE\ (operator-level closure; typed lattice residuals)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

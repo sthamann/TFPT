@@ -90,7 +90,12 @@ discrete data of that geodesic are now arithmetically framed --- $\det M(1,t)=N(
 $\alpha_t=(4t{+}7{+}\sqrt{-7})/2$ integral, the path one translation $\alpha_{t+1}=\alpha_t+2$ of constant
 discriminant $-7$ (\veri{v533\_ftransfer\_disc7\_norm.py}), and the preregistered next test is whether the
 four external solvers share \emph{one} fractional-linear action on $\alpha_t$ (kill: four incompatible
-arithmetic actions).
+arithmetic actions) --- \emph{executed in its literal group form (2026-08-02,
+\veri{v632\_ftransfer\_pgl2.py})}: one common parabolic PGL$_2$ action on the discrete half (the declared
+readings exactly intertwined with the base translation), uniflow degeneration on the native continuous half
+($g_{\mathrm{Boltzmann}}=g_{\mathrm{pole}}$ identically, $g_{\mathrm{QCD}}$ exactly conjugate to the base
+translation, relic degenerate); the kill criterion is \emph{not} met, and the residual --- the external
+anchor clocks/jets --- stays fenced by \texttt{CONTRACT.F.01}.
 \smallskip\\
 \noindent\textbf{The residual is certification, not construction (\veri{v384\_residual\_certification.py}).} A
 ledger-CI audit classifies every remaining item into exactly three \emph{external} kinds, with \emph{zero} open
@@ -3182,6 +3187,32 @@ explicit:} W1 (now measured-closed) $\to$ W2 (form density, OPEN) $\to$
 W3 (uniform discrete positivity, OPEN --- the RH-hard step) $\to$ W4
 (continuum passage, classical given W2+W3).  Closing W1 does not move
 W3; no step is silently upgraded.
+\emph{Third slice (2026-08-02, same day):} the typed W1 remainder
+\emph{closes}, on three fronts.  \textbf{(i) Boundary closure, exact:}
+the duplication identity $\psi(\tfrac14)=-\gamma-3\log2-\pi/2$ and the
+scheme conversion $k=\pi/4+\tfrac32\log2$ are sympy-exact, so the two
+$\delta_0$ conventions are one object in one scheme, and the exact
+boundary equation $A_{\mathrm{arch}}=\tfrac14 g''_{\mathrm{smooth}}
+-\tfrac54(\log\pi-\psi(\tfrac14))\,\delta_0$ verifies at relative
+residuals $<10^{-22}$; the $d\le2$ cells become three computable
+constants and the second-order term is the derived, window-independent
+moment law $1+1/(6d^2)$ (\veri{v640\_w1\_boundary.py}; the exact
+dictionary identities additionally machine-proved in Lean,
+\texttt{WeilDictionary.lean}).  \textbf{(ii) Portability:} the frozen
+dictionary (closed formulas in $D$, no knob) executes unchanged on
+three fresh windows $h=285/540/997$ --- atom constant
+$D^2(\text{window})$ at machine precision --- and the preregistered
+kill criterion is met nowhere (\veri{v641\_w1\_portability.py}).
+\textbf{(iii) Matrix level:} the full quadratic form closes at the
+operator level ($16$-mode block norm distance $2.7\times10^{-3}$ fully
+derived, $6.3\times10^{-6}$ after measure-level atom re-binning; the
+separated pole block numerically rank $1$); the literal per-vector
+$1\%$ bar fails only on two \emph{typed} lattice residuals
+(near-cancellation denominators; tent-vs-B-spline atom profiles),
+certified as typed-residual checks (\veri{v642\_w1\_matrix.py}).
+\textbf{W1 status: theorem-capable at the window level} --- the
+$L^2_0$ projection is the last remainder; \textbf{W2/W3 stay open and
+unmoved}.
 
 \par\smallskip\noindent\textbf{The four fixed-size angle instruments
 (\texttt{PRIME.ANGLE.INSTR.01}).}

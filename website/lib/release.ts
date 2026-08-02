@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 3720732,
+    bytes: 3737822,
     sha256:
-      "e491aa4df5d4826e28300840640ec04703850a53d7c801dd3a2a4cb42d1adc3c",
+      "cd9c78404cb4c0fc3100ddd1f26ad3803a7a0977feea0f2e93f6f196e107322c",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -61,9 +61,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
     href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 1312472,
+    bytes: 1334882,
     sha256:
-      "f5a0034be805385ae46ed752cbf7250b8086ce3538f02f78462f59a38f7a2f1d",
+      "ce34b957dc958da5a57ec8b265a70564a24c21945e04ee2ddcf2b11b39adee90",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
@@ -97,9 +97,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 1905440,
+    bytes: 1907334,
     sha256:
-      "8a3006e1af078915f1f5f5f268f59559933671fcaed1aff6ddb5c324129c84c2",
+      "8a823e3e43ab7a4e385f77775763506167062a4cee21b347a9b24367d9f7c2e3",
     changelog:
       "Research contracts for the remaining interfaces: v_geo (scale anchor, [O]), G_net (metric inclusion, [C] closed modulo cited theorems), F_transfer (downstream transport, typed runnable solvers [C]).",
   },
@@ -124,9 +124,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 2183414,
+    bytes: 2199451,
     sha256:
-      "d5f86cfbd5631e7088ef473adfca560d6a7774d832f121cc8da3de64476740b1",
+      "7e3b3c115bacf7727ea63d65fb833bf2f2f61475b887ee9c3fa5d2b8cfb81ef5",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },

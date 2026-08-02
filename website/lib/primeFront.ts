@@ -204,7 +204,9 @@ export type PrimeFrontVerdict =
   | "COVERED-SEAM-SKELETON"
   | "LATTICE-AUDIT-PASSED"
   | "PRIME-SHADOW-EXACT"
-  | "SIX-FRONT-BATCH";
+  | "SIX-FRONT-BATCH"
+  | "W1-DICTIONARY-DERIVED"
+  | "TEN-FRONT-BATCH";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -228,6 +230,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-02",
+    part: 0,
+    title:
+      "The ten-front batch \u2014 eleven modules land at once, with three Lean certificates and two honest negatives promoted as typed results. (1) The PGL\u2082 contract executed: the four external transfer solvers share ONE M\u00f6bius action on the disc \u22127 norm line where they act at all \u2014 the Koide reading is the parabolic step +9 = N_fam\u00b2, exactly intertwined with the base translation; g_QCD is exactly conjugate to it (a translation by +7/2\u03c0 in the 1/\u03b1 coordinate); Boltzmann = pole identically by the single-flow theorem; the preregistered kill criterion 'four incompatible arithmetic actions' is NOT met. (2\u20133) The \u2124[i]-E8 quotient and its stabilizer: the \u03bc\u2084-quotient of the 240 roots IS the hermitian-unimodular \u2124[i]-E8 with the 60-hyperplane system of ST31; G31 is the FULL unitary stabilizer (order 46080, exactly counted) with Molien-unique degrees (8,12,20,24) and the exact clock identities \u03c3 = c\u2074, J = c\u2079 \u2014 while the numerology |G31| = |W(D5)|\u00d7|W(A3)| is KILLED three ways (the real structure is (Z4\u22182^{1+4}).Sp\u2084(2), and W(D5) does not even embed in a rank-4 group); honest sharpening: the compiler clock is NOT the Springer-regular 12-element. The 60\u21926 cascade route on the quotient is killed too. (4\u20136) P canonical, constructed \u2014 and an honest negative: the Lorentz congruence matrix P is the unique minimal-Frobenius operator-compatible class in the full [\u22124,4] census AND, mod sign, the Frobenius-minimal integer congruence transporting the C_V null frame (= the two minimal isotropic rays of J_fix) onto the canonical rank-one rays (a finite 16-member family); but after h-control the fine Hodge invariants carry NO independent information about the C = 1 margin (\u03c1 = \u22120.04, p = 0.75) \u2014 the direct window-level geometry\u2192arithmetic bridge route closes. (7) The code dictionary: the unique equivariant Hamming placement is Reed\u2013Muller RM(1,3) on AG(3,2) \u2014 information bits one per \u03bc\u2084 pair (3 families + 1 anchor), syndrome flag with the \u03c3 3-cycle, decode = projection verbatim (3840/3840) \u2014 and all of it dies for every non-equivariant placement (2/30). (8) The twist OPE: the interacting \u2124\u2083 orbifold slice stands at the abelian vertex level \u2014 h_\u03c3 = 1/36 from three exact routes, two-point exponent 2\u0394 = 2/9 at 0.06%, crossing exactly symmetry-protected on the lattice, closed four-point form, OPE c\u2081 = 2/9 model-bound at 0.19%; reflection positivity is validated in the real \u2124\u2082 class and honestly OPEN for the complex \u2124\u2083 pairing (parafermionic Klein twist). (9\u201311) The W1 closure trio: the boundary equation A_arch = (1/4)g\u2033_smooth \u2212 (5/4)(log \u03c0 \u2212 \u03c8(\u00bc))\u03b4\u2080 is EXACT (residuals < 1e\u221222; \u03c8(\u00bc) = \u2212\u03b3 \u2212 3log2 \u2212 \u03c0/2 sympy-exact) with the derived window-independent 1 + 1/(6d\u00b2) moment law; the frozen dictionary transports UNCHANGED to three fresh windows (atom constant D\u00b2 at machine precision \u2014 the preregistered kill criterion is met nowhere); and the full quadratic form closes at the operator level (block norm 2.7e\u22123 derived, 6.3e\u22126 after measure-level re-binning; pole block rank 1; the literal per-vector 1% bar fails only on two TYPED lattice residuals, certified as typed-residual checks with the probe's numbers unchanged). W1 is theorem-capable at the window level; the L\u00b2\u2080 projection is the last remainder; W2/W3 stay open and unmoved. Plus: Lean certificates for the W1 dictionary identities, the Lorentz congruence, and the G31 order identities (lake build green, no sorry).",
+    verdict: "TEN-FRONT-BATCH",
+    summary:
+      "v632\u2013v642 promoted: v632_ftransfer_pgl2.py (FTR.PGL2.01, 25 checks), v633_orbit60_quotient.py (E8.ZIQUOTIENT.01, 17), v634_st31_structure.py (E8.ST31.01, 56), v635_p_canonicity.py (PRIME.PCANON.01, 18), v636_p_construction.py (PRIME.PCONSTRUCT.01, 25), v637_fine_c1_bridge.py (PRIME.FINEC1.01, 8 \u2014 honest negative), v638_code_semantics.py (E8.CODESEM.01, 27), v639_twist_ope.py (QGEO.TWISTOPE.01, 25), v640_w1_boundary.py (PRIME.WEIL.BOUNDARY.01, 11), v641_w1_portability.py (PRIME.WEIL.PORTABLE.01, 10), v642_w1_matrix.py (PRIME.WEIL.MATRIX.01, 8). Three Lean certificate files (WeilDictionary, LorentzCongruence, G31Orders). Suite 625 \u2192 636 scripts.",
+    badge: "sandbox",
+    script: "w1_matrix_identity_probe.py",
+  },
   {
     date: "2026-08-02",
     part: 0,
