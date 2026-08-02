@@ -201,7 +201,8 @@ export type PrimeFrontVerdict =
   | "N3-PINNED"
   | "CLOCK-SURVIVES-INTERACTING"
   | "SEAM-IDENTIFIED"
-  | "COVERED-SEAM-SKELETON";
+  | "COVERED-SEAM-SKELETON"
+  | "LATTICE-AUDIT-PASSED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -225,6 +226,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-02",
+    part: 0,
+    title:
+      "The external-review lattice audit — d = 4 forced three ways, and the prime front and the cover share one Lorentz lattice. A third external review proposed three derivations; all three verify exactly, and one follow-up gets an honest retype. The four-mark closure: generalize the compiler's glue to D_{d+1} ⊕ A_{d-1} with d marks. Three INDEPENDENT selectors each force d = 4: the discriminant-group census (a cyclic glue needs the D-side cyclic, i.e. d even, and ℤ_d ≅ ℤ_4 pins d = 4 — negative controls at 3, 5, 8), the even-glue norm equation (d+1)/4 + (d−1)/d = 2 (unique positive solution 4), and a Pythagorean gem: (d−1)² + d² = (d+1)² holds exactly at d = 4 — the (3, 4, 5) triple of cycles, marks and carrier is the unique Pythagorean closure. With (1,1,2) the only 3-part partition of 4 and c₃ = 1/(2e₁π) = 1/(8π), the two-input presentation reduces to ONE boundary degree d = 4 plus π — conditional on the glue architecture, honestly typed. The anchor bytecode: one cubic χ = (t−1)²(t−2) and a two-state recursion p_{n+2} = 3p_{n+1} − 2p_n carry the whole discrete source (240 + 8 = 248). And the surprise: the Lorentz congruence. The prime-front determinant form J_det (det 2) and the cover's integer polarization lattice J_fix (det 72) are the SAME rational quadratic form — an explicit integer matrix P with det −6 gives PᵀJ_det P = J_fix exactly, index 6 = p₂(a). A genuine new bridge between prime analysis and Hodge geometry. Honest negative: the review's follow-up test toward B = M†J is ill-posed as stated (B is complex symmetric, det 8 verified). And the review's RH architecture — identify the window forms with Suzuki's localized Weil operator (arXiv 2606.09096, citations verified), then prove the uniform C = 1 contraction — is preregistered as the contract PRIME.WEIL.OPERATOR.01 with kill tests. No RH statement.",
+    verdict: "LATTICE-AUDIT-PASSED",
+    summary:
+      "v624_external_lattice_audit.py promoted (EXTREV.LATTICE.01, 14 checks; probe external_lattice_audit_probe.py 14/14, LATTICE-AUDIT-PASSED): four-mark closure forces d = 4 three ways (conditional on the glue architecture); anchor bytecode exact (240+8 = 248); Lorentz congruence PᵀJ_det P = J_fix exact (index 6); B-test retyped ill-posed; Suzuki arXiv 2606.09096 + 2607.24830 verified; new contract PRIME.WEIL.OPERATOR.01 (W1–W4 chain, kill tests). Suite 617 → 618 scripts.",
+    badge: "sandbox",
+    script: "external_lattice_audit_probe.py",
+  },
   {
     date: "2026-08-01",
     part: 0,

@@ -3114,6 +3114,43 @@ zero-firewall AST-checked; no marker moves.
 Machine-checked: \veri{v551\_ritz\_ceiling\_certificate.py}.
 \mE\ (per-instance theorems and certified inequalities)
 
+\par\smallskip\noindent\textbf{\texttt{PRIME.WEIL.OPERATOR.01} --- the
+localized-Weil-operator identification (research contract, \mO).}
+The external operator shell for the $C=1$ line (\vref{v618}/\vref{v619}),
+preregistered 2026-08-02 after the third external review.  \emph{Named
+reference frame (verified citations):} Suzuki, \emph{Weil's quadratic
+form via the screw function} (\texttt{arXiv:2606.09096}, June 2026)
+realizes the localized Weil quadratic form on every interval $[-a,a]$
+as a canonical self-adjoint operator $A_a$ via the screw function,
+proves the continuity of the lowest eigenvalue $\lambda_a$ in $a$
+without assuming RH, and presents Yoshida's criterion: $Q_W(v)>0$ for
+all nonzero \emph{odd} $v\in C_c^\infty(\mathbb R)$ already implies RH;
+a first numerical realization is \texttt{arXiv:2607.24830}.  \emph{The
+lemma chain:} \textbf{(W1)} exact operator identification --- the
+frame-A window bilinear form $\widehat A=B-S$ is the Galerkin matrix of
+the odd restriction of $A_a$ on the declared piecewise bases, exactly
+or up to an explicit rank-one transformation and a known normalization
+(no asymptotic ``looks similar''); \textbf{(W2)} form density --- the
+nested window spaces are form-dense in the odd form domain of $A_a$
+with Mosco/norm-resolvent convergence of the Galerkin forms;
+\textbf{(W3)} uniform discrete positivity --- $\widehat A_{a,h}\succeq0$
+for every $a$ and every refinement $h$ (the RH-hard step; the $C=1$
+contraction reading of \vref{v618} --- the normalized arithmetic
+residue as an operator of norm $\le1/h$ --- is the named candidate
+mechanism); \textbf{(W4)} passage to the continuum --- W2 $+$ W3 give
+$Q_W^a(v)\ge0$ on all odd test functions for all $a$, hence RH via the
+localized criterion.  \emph{Kill tests:} (K1) the W1 identification
+fails beyond a window-dependent fit; (K2) a complete, numerically
+stable fresh window stably exceeds the frozen $C=1$ bound (the
+\vref{v619} complete-comb surface is the definitional domain); (K3) the
+odd-sector restriction loses the explicit-formula bookkeeping.
+\emph{Fence:} a research contract, not a claim --- no RH statement, no
+positivity claim beyond the measured surface; the zero-side
+representation stays diagnostic (a proof must run prime-side or through
+the screw function, avoiding the critical-line circularity).  Status:
+\mO\ (preregistered; the audit and the citation verification are
+machine-checked in \veri{v624\_external\_lattice\_audit.py}).
+
 \par\smallskip\noindent\textbf{The four fixed-size angle instruments
 (\texttt{PRIME.ANGLE.INSTR.01}).}
 The instrument cores of the discovery parts T155 and T157, recomputed on

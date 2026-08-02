@@ -42,6 +42,415 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-02",
+    "dateLabel": "2026-08-02 · XXXVII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the external-review lattice audit lands ("
+      },
+      {
+        "k": "c",
+        "v": "v624"
+      },
+      {
+        "k": "t",
+        "v": " promoted) — THE FOUR-MARK CLOSURE: under the "
+      },
+      {
+        "k": "m",
+        "v": "D_{d+1}\\oplus A_{d-1}"
+      },
+      {
+        "k": "t",
+        "v": " glue architecture three independent selectors force "
+      },
+      {
+        "k": "m",
+        "v": "d=4"
+      },
+      {
+        "k": "t",
+        "v": " (disc-group census, the norm equation "
+      },
+      {
+        "k": "m",
+        "v": "(d{+}1)/4+(d{-}1)/d=2"
+      },
+      {
+        "k": "t",
+        "v": ", the Pythagorean "
+      },
+      {
+        "k": "m",
+        "v": "(3,4,5)"
+      },
+      {
+        "k": "t",
+        "v": " triple of cycles/marks/carrier) — the two-input presentation reduces to ONE boundary degree "
+      },
+      {
+        "k": "m",
+        "v": "d=4"
+      },
+      {
+        "k": "t",
+        "v": " plus "
+      },
+      {
+        "k": "m",
+        "v": "\\pi"
+      },
+      {
+        "k": "t",
+        "v": ", conditional on the architecture; THE ANCHOR BYTECODE ("
+      },
+      {
+        "k": "m",
+        "v": "\\chi=(t{-}1)^2(t{-}2)"
+      },
+      {
+        "k": "t",
+        "v": ", two-state recursion, "
+      },
+      {
+        "k": "m",
+        "v": "240+8=248"
+      },
+      {
+        "k": "t",
+        "v": "); THE LORENTZ CONGRUENCE "
+      },
+      {
+        "k": "m",
+        "v": "P^{\\mathsf T}J_{\\mathrm{det}}P=J_{\\mathrm{fix}}"
+      },
+      {
+        "k": "t",
+        "v": " EXACTLY (index "
+      },
+      {
+        "k": "m",
+        "v": "6"
+      },
+      {
+        "k": "t",
+        "v": ") — the prime-front determinant form and the cover polarization lattice are the SAME rational quadratic form; the review's "
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": "-test retyped ill-posed ("
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": " complex symmetric); and the RH architecture preregistered as "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.WEIL.OPERATOR.01"
+      },
+      {
+        "k": "t",
+        "v": " with verified Suzuki citations"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v624_external_lattice_audit.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "EXTREV.LATTICE.01"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "14"
+            },
+            {
+              "k": "t",
+              "v": " checks; probe 14/14, LATTICE-AUDIT-PASSED)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Disc-group census with negative controls "
+        },
+        {
+          "k": "m",
+          "v": "d=3,5,8"
+        },
+        {
+          "k": "t",
+          "v": "; unique norm-equation solution (no other even target "
+        },
+        {
+          "k": "m",
+          "v": "2k"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "k\\le10"
+        },
+        {
+          "k": "t",
+          "v": "); Pythagoras at "
+        },
+        {
+          "k": "m",
+          "v": "d=4"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "(1,1,2)"
+        },
+        {
+          "k": "t",
+          "v": " unique partition; "
+        },
+        {
+          "k": "m",
+          "v": "c_3=1/(8\\pi)"
+        },
+        {
+          "k": "t",
+          "v": "; bytecode identities exact; the congruence with "
+        },
+        {
+          "k": "m",
+          "v": "\\det P=-6"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "36=6^2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "6=p_2(a)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "B=M^\\dagger J"
+        },
+        {
+          "k": "t",
+          "v": " complex symmetric ("
+        },
+        {
+          "k": "m",
+          "v": "\\det 8"
+        },
+        {
+          "k": "t",
+          "v": ") — the literal integer-"
+        },
+        {
+          "k": "m",
+          "v": "R"
+        },
+        {
+          "k": "t",
+          "v": " test cannot be posed; third "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\omega)"
+        },
+        {
+          "k": "t",
+          "v": " ratio an exact square. "
+        },
+        {
+          "k": "c",
+          "v": "AX.P2.01"
+        },
+        {
+          "k": "t",
+          "v": " keeps its typing."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "PRIME.WEIL.OPERATOR.01"
+            },
+            {
+              "k": "t",
+              "v": " (new research contract)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The W1–W4 chain (exact Galerkin identification with Suzuki's localized Weil operator "
+        },
+        {
+          "k": "m",
+          "v": "A_a"
+        },
+        {
+          "k": "t",
+          "v": "; form density; uniform discrete positivity — the RH-hard step, with the "
+        },
+        {
+          "k": "m",
+          "v": "C=1"
+        },
+        {
+          "k": "t",
+          "v": " contraction reading as candidate mechanism; continuum passage via Yoshida's odd criterion), kill tests K1–K3, citations verified by web lookup ("
+        },
+        {
+          "k": "c",
+          "v": "arXiv:2606.09096"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "arXiv:2607.24830"
+        },
+        {
+          "k": "t",
+          "v": "). No RH statement."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "EXTREV.LATTICE.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " notes on "
+        },
+        {
+          "k": "c",
+          "v": "AX.P2.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "QGEO.EQORDER.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (contract block); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (audit block); diary; suite "
+        },
+        {
+          "k": "m",
+          "v": "617\\to618"
+        },
+        {
+          "k": "t",
+          "v": " scripts; website/README/zenodo counters; mirrors regenerated."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-08-01",
     "dateLabel": "2026-08-01 · XXXVI",
     "heading": [

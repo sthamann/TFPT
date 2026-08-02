@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`617` registered scripts · `688` ledger claims · `10` clusters.
+`618` registered scripts · `690` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (139 scripts)
+### `core` — Compiler core & the E₈ glue  (140 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -289,6 +289,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v617_seam_cover_forcing, v620_cyclic_n_census, v519_woit_theta_rp_free, v534_seam_straddle_cone, v519, v534, v617, v620 · cited: 3 e8 audit bootstrap
 - **v623_covered_seam** [E/C/X] `QGEO.COVERSEAM.01` — **DAS GITTER-SKELETT DER COVERING-EBENE** (der benannte v622-Rest, erste ausgeführte Scheibe): der auf den μ₃-Cover gehobene Seam ist **EIN 48-Site-NS-Kreis** für die uniformen Gew
   - deps: v622_seam_identification, v617_seam_cover_forcing, v620_cyclic_n_census, v613_canonical_periods, v597, v613, v614, v617 · cited: 3 e8 audit bootstrap
+- **v624_external_lattice_audit** [E/C/X] `EXTREV.LATTICE.01` — drei behauptete Ableitungen maschinell geprüft, ein Folgetest ehrlich umgetypt: **(A) DER VIERMARKEN-ABSCHLUSS [E, konditional]: unter der D_{d+1}+A_{d−1}-Glue-Architektur erzwinge
+  - deps: AX.P2.01, v604_equivariant_order, v602_duality_forms, v618_uniform_constant, v47, v602, v604, v618 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1305,7 +1307,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v612_polarization_frame** — `QGEO.POLFRAME.01`
 - **v613_canonical_periods** — `QGEO.PERNORM.01`
 - **v614_transport_deck** — `QGEO.TRANSPORT.01`
 - **v615_gamma_toy_interacting** — `WOIT.GAMMA.TOY.01`
@@ -1317,4 +1318,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v621_interacting_semigroup** — `WOIT.GAMMA.SEMI.01`
 - **v622_seam_identification** — `QGEO.SEAMID.01`
 - **v623_covered_seam** — `QGEO.COVERSEAM.01`
+- **v624_external_lattice_audit** — `EXTREV.LATTICE.01`
 
