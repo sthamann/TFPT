@@ -1,7 +1,24 @@
 """v641 -- PRIME.WEIL.PORTABLE.01: the W1 frozen-dictionary transport --
 the KILL test.
 
-The v631 dictionary was DERIVED on the single declared window h = 184:
+CONVENTION ERRATUM (2026-08-02, corrected the same day; machine
+evidence: v643_w1_theorem.py C0.1):
+  The w1 chain read Suzuki's eq. (1.3) with Lerch coefficient -1;
+  the paper's own Sec. 2.2 data lock it to +1/4.  The frozen
+  dictionary tested here is stated on the chain kernel
+  gtil := g - (5/4) Lerch (the -4D smooth scalar, the D^2 atom
+  constant); every identity below is a CORRECT identity of gtil, and
+  via the exact transfer cgal_sm(gtil) = -4 cgal_sm(g) every measured
+  ratio of this module transfers verbatim to Suzuki's TRUE g,
+  ratio(gtil)/(-4D) == ratio(g)/(+D) number for number: the
+  PORTABILITY RESULT (kill criterion not met on any fresh window)
+  holds unchanged for the corrected ONE-scalar dictionary +1/D on
+  both layers.  Only the labels change; no check, no number moves.
+  See the erratum blocks in v631/v640/v642 and the measure-level
+  theorem v643.
+
+The v631 dictionary was DERIVED on the single declared window h = 184
+(gtil-normalization per the erratum above):
   (i)   smooth layer: A_arch = -(1/(4D)) x (Galerkin minus pole block),
         with the closed pole-block formula
         poleK(d) = 2 cosh(dD/2) 16 (e^{D/2}+e^{-D/2}-2)^2 / D^2
@@ -240,12 +257,14 @@ def run():
         ok1 = (mono and diffs1[-1] < TOL_D4_LAST
                and dev_pred < TOL_PRED_EXCESS and dev_route < TOL_ROUTE)
         check("W%d.1 [E-float] h=%d: pole-subtracted conversion is the "
-              "SCALAR -4D(window) with the DERIVED discretization law: "
-              "ratio -> 1 monotonically (last %.4f, |r-1| = %.2e < 3e-3), "
-              "moment prediction explains the excess to %.3f (< 0.02), "
-              "route dev %.1e (< 3e-4) -- same closed formulas, only D "
-              "changed" % (wi + 1, hz, meas[-1], diffs1[-1], dev_pred,
-                           dev_route), ok1)
+              "SCALAR -4D(window) in the gtil-normalization (erratum: "
+              "= +D(window) on Suzuki's true g, v643) with the DERIVED "
+              "discretization law: ratio -> 1 monotonically (last %.4f, "
+              "|r-1| = %.2e < 3e-3), moment prediction explains the "
+              "excess to %.3f (< 0.02), route dev %.1e (< 3e-4) -- same "
+              "closed formulas, only D changed"
+              % (wi + 1, hz, meas[-1], diffs1[-1], dev_pred,
+                 dev_route), ok1)
 
         # (ii) the atom constant D^2(window), atoms log 2 and log 3
         rs = []

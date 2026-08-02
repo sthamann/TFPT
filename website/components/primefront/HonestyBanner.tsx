@@ -21,9 +21,9 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v642 on this front
+          v535–v648 on this front
         </Link>
-        , inside a 636-script suite, all green). The sprint T102–T125
+        , inside a 642-script suite, all green). The sprint T102–T125
         compressed the remaining arithmetic bound to one sign plus one declared
         accounting convention; phase 2 (T126–T176) closed its measurement
         programme as planned and stands as a certified map with one open
@@ -36,9 +36,14 @@ export function HonestyBanner() {
         compiler-native bit dictionary (v626/v638); the sixty-line reflection
         group G31 with the order-coincidence numerology killed (v633/v634);
         and the Suzuki W1 identification — atom layer literal, smooth layer
-        the derived scalar −4D after pole separation, portable and closed at
-        the matrix level (v630/v631, v640–v642). Honest fence: closing W1
-        does not move W3 (uniform positivity, the RH-hard step). No claim of
+        derived, portable and closed at the matrix level (v630/v631,
+        v640–v642), then corrected by a same-day erratum and proved as a
+        measure-level theorem (v643: Suzuki&apos;s eq. (1.3) carries Lerch
+        +1/4, not −1; every measured number transfers verbatim, the true
+        dictionary is the single scalar +1/D with κ = 0), with W2 started
+        (v644) and the W3 sign-uncertainty toolbox typed as not
+        transferring at d = 1 (v648). Honest fence: closing W1 does not
+        move W3 (uniform positivity, the RH-hard step). No claim of
         progress toward the Riemann Hypothesis is made.
       </p>
       <details className="group mt-4">

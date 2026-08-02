@@ -43,6 +43,1051 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-02",
+    "dateLabel": "2026-08-02 · XLIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the second round of the day: THE LERCH ERRATUM (honest, corrected the same day) plus six promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v643"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v648"
+      },
+      {
+        "k": "t",
+        "v": ") — the W1 chain ("
+      },
+      {
+        "k": "c",
+        "v": "v631"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v640"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v642"
+      },
+      {
+        "k": "t",
+        "v": ") had read Suzuki's eq. (1.3) with Lerch coefficient "
+      },
+      {
+        "k": "m",
+        "v": "-1"
+      },
+      {
+        "k": "t",
+        "v": "; the paper's own 2.2 data lock "
+      },
+      {
+        "k": "m",
+        "v": "+1/4"
+      },
+      {
+        "k": "t",
+        "v": " (machine evidence "
+      },
+      {
+        "k": "c",
+        "v": "v643"
+      },
+      {
+        "k": "t",
+        "v": " C0.1), every measured number transfers VERBATIM via the exact identity "
+      },
+      {
+        "k": "m",
+        "v": "c^{\\mathrm{sm}}_{\\mathrm{gal}}(\\tilde g)=-4\\,c^{\\mathrm{sm}}_{\\mathrm{gal}}(g)"
+      },
+      {
+        "k": "t",
+        "v": ", and only the labels change: Suzuki's smooth layer is "
+      },
+      {
+        "k": "m",
+        "v": "+\\rho"
+      },
+      {
+        "k": "t",
+        "v": ", the true dictionary is the SINGLE scalar "
+      },
+      {
+        "k": "m",
+        "v": "+1/D"
+      },
+      {
+        "k": "t",
+        "v": " on both layers (sign-compatible with positivity), and the origin constant vanishes, "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa=0"
+      },
+      {
+        "k": "t",
+        "v": " exactly; ON THE CORRECTED READING: W1 becomes a MEASURE-LEVEL THEOREM (the projection lemma closes the "
+      },
+      {
+        "k": "m",
+        "v": "L^2_0"
+      },
+      {
+        "k": "t",
+        "v": " remainder — Suzuki's mean-zero condition is automatic on the "
+      },
+      {
+        "k": "m",
+        "v": "u"
+      },
+      {
+        "k": "t",
+        "v": "-side; "
+      },
+      {
+        "k": "m",
+        "v": "A_{\\mathrm{arch}}=-g''_{\\mathrm{smooth}}"
+      },
+      {
+        "k": "t",
+        "v": " exactly at every lag, "
+      },
+      {
+        "k": "m",
+        "v": "3.4\\times10^{-52}"
+      },
+      {
+        "k": "t",
+        "v": "; form equality "
+      },
+      {
+        "k": "m",
+        "v": "1.28\\times10^{-10}"
+      },
+      {
+        "k": "t",
+        "v": "), W2 STARTS in honest slices (classical FEM density at rate; Rayleigh–Ritz monotone from above on all six nested sequences; "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_a=0^+"
+      },
+      {
+        "k": "t",
+        "v": " within "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}10^{-9}"
+      },
+      {
+        "k": "t",
+        "v": ", consistent with Thm 1.3, no sign statement; Mosco remainder typed), the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}_3"
+      },
+      {
+        "k": "t",
+        "v": " TWIST SECTOR IS REFLECTION POSITIVE under the parafermionic Klein-twist pairing (mirror "
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " charge conjugation, "
+      },
+      {
+        "k": "m",
+        "v": "\\omega^{kq}"
+      },
+      {
+        "k": "t",
+        "v": " phases, "
+      },
+      {
+        "k": "m",
+        "v": "\\eta=(1,1)"
+      },
+      {
+        "k": "t",
+        "v": " unique among "
+      },
+      {
+        "k": "m",
+        "v": "36"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": "-stable "
+      },
+      {
+        "k": "m",
+        "v": "48..384"
+      },
+      {
+        "k": "t",
+        "v": "; full mixed OS Gram PSD — the named "
+      },
+      {
+        "k": "c",
+        "v": "v639"
+      },
+      {
+        "k": "t",
+        "v": " open item resolved at the lattice OS level), the RM"
+      },
+      {
+        "k": "m",
+        "v": "(1,3)"
+      },
+      {
+        "k": "t",
+        "v": " REVERSE READING is honestly two-part (anchor decomposition "
+      },
+      {
+        "k": "m",
+        "v": "(0,1,1,2)"
+      },
+      {
+        "k": "t",
+        "v": "/norm "
+      },
+      {
+        "k": "m",
+        "v": "6"
+      },
+      {
+        "k": "t",
+        "v": " exact with the "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " action selecting the anchor sector; the bytecode "
+      },
+      {
+        "k": "m",
+        "v": "p"
+      },
+      {
+        "k": "t",
+        "v": "-sequence has NO code reading — the bingo is buried), the ST31 DEGREE ROUND anchors the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " center as a POWER of both regular clocks ("
+      },
+      {
+        "k": "m",
+        "v": "w^6=\\pm J"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\chi_w=x^4+ix^2-1"
+      },
+      {
+        "k": "t",
+        "v": " exactly primitive "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta_{24}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "u^5=\\pm J"
+      },
+      {
+        "k": "t",
+        "v": " central; "
+      },
+      {
+        "k": "m",
+        "v": "u^4"
+      },
+      {
+        "k": "t",
+        "v": " free with census "
+      },
+      {
+        "k": "m",
+        "v": "\\{5{:}48\\}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "48=240/5"
+      },
+      {
+        "k": "t",
+        "v": ") and KILLS "
+      },
+      {
+        "k": "m",
+        "v": "c=w^2"
+      },
+      {
+        "k": "t",
+        "v": " by a parity theorem, and the W3 SIGN-UNCERTAINTY TOOLBOX is typed: a real "
+      },
+      {
+        "k": "m",
+        "v": "25"
+      },
+      {
+        "k": "t",
+        "v": "-digit dictionary to the critical strip (phase slope "
+      },
+      {
+        "k": "m",
+        "v": "=L=\\log\\pi-\\psi(\\tfrac14)"
+      },
+      {
+        "k": "t",
+        "v": ", the W1 "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_0"
+      },
+      {
+        "k": "t",
+        "v": " weight) whose mass lever dies at "
+      },
+      {
+        "k": "m",
+        "v": "d=1"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "e^{-E^*}=0.967"
+      },
+      {
+        "k": "t",
+        "v": " where "
+      },
+      {
+        "k": "m",
+        "v": "<\\tfrac12"
+      },
+      {
+        "k": "t",
+        "v": " is needed; "
+      },
+      {
+        "k": "m",
+        "v": "d\\ge21"
+      },
+      {
+        "k": "t",
+        "v": " required) — while the W3 surface itself is empirically positive on all "
+      },
+      {
+        "k": "m",
+        "v": "67"
+      },
+      {
+        "k": "t",
+        "v": " complete windows ("
+      },
+      {
+        "k": "m",
+        "v": "\\min\\lambda_{\\min}=+8.26\\times10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": "; the incomplete combs are exactly the "
+      },
+      {
+        "k": "c",
+        "v": "v618"
+      },
+      {
+        "k": "t",
+        "v": " flip set "
+      },
+      {
+        "k": "m",
+        "v": "\\{1219,1292,1445\\}"
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The erratum (first, honest, dated)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "c",
+          "v": "v631"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v640"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v642"
+        },
+        {
+          "k": "t",
+          "v": " chain read the Hurwitz–Lerch block of Suzuki's screw function (eq. 1.3) with coefficient "
+        },
+        {
+          "k": "m",
+          "v": "-1"
+        },
+        {
+          "k": "t",
+          "v": "; the correct coefficient is "
+        },
+        {
+          "k": "m",
+          "v": "+1/4"
+        },
+        {
+          "k": "t",
+          "v": ", locked by the paper's own 2.2 data ("
+        },
+        {
+          "k": "m",
+          "v": "A=\\tfrac12(\\log2\\pi-\\psi(2))=0.70754637"
+        },
+        {
+          "k": "t",
+          "v": " reproduced only with "
+        },
+        {
+          "k": "m",
+          "v": "+1/4"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "g(0)=0"
+        },
+        {
+          "k": "t",
+          "v": "; machine evidence "
+        },
+        {
+          "k": "c",
+          "v": "v643"
+        },
+        {
+          "k": "t",
+          "v": " C0.1). All chain identities are correct identities of the kernel "
+        },
+        {
+          "k": "m",
+          "v": "\\tilde g=g-\\tfrac54\\,"
+        },
+        {
+          "k": "t",
+          "v": "Lerch, and all measured numbers transfer verbatim via "
+        },
+        {
+          "k": "m",
+          "v": "c^{\\mathrm{sm}}_{\\mathrm{gal}}(\\tilde g)=-4\\,c^{\\mathrm{sm}}_{\\mathrm{gal}}(g)"
+        },
+        {
+          "k": "t",
+          "v": " — no check flips. Corrected labels: Suzuki's smooth layer "
+        },
+        {
+          "k": "m",
+          "v": "=+\\rho"
+        },
+        {
+          "k": "t",
+          "v": "; the two-layer dictionary ("
+        },
+        {
+          "k": "m",
+          "v": "-4D"
+        },
+        {
+          "k": "t",
+          "v": " smooth, "
+        },
+        {
+          "k": "m",
+          "v": "D^2"
+        },
+        {
+          "k": "t",
+          "v": " atomic) collapses to the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " scalar "
+        },
+        {
+          "k": "m",
+          "v": "+1/D"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa=0"
+        },
+        {
+          "k": "t",
+          "v": " exactly (the "
+        },
+        {
+          "k": "m",
+          "v": "-\\tfrac54 L\\,\\delta_0"
+        },
+        {
+          "k": "t",
+          "v": " term of "
+        },
+        {
+          "k": "c",
+          "v": "v640"
+        },
+        {
+          "k": "t",
+          "v": " was an artifact of the misreading). Documented as dated "
+        },
+        {
+          "k": "t",
+          "v": "convention erratum"
+        },
+        {
+          "k": "t",
+          "v": " blocks in the four modules (all re-run green, numbers unchanged), erratum notes on the five "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.*"
+        },
+        {
+          "k": "t",
+          "v": " ledger rows ("
+        },
+        {
+          "k": "c",
+          "v": "CONTACT"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "DICT"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "BOUNDARY"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "PORTABLE"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "MATRIX"
+        },
+        {
+          "k": "t",
+          "v": "), erratum sentences in the "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " audit blocks, the contracts paragraph and the prime-front theory-open section, and the website mirrors (feed, W1 dictionary map, honesty banner)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v643_w1_theorem.py"
+        },
+        {
+          "k": "t",
+          "v": " (11 checks: convention lock/erratum evidence, projection lemma, "
+        },
+        {
+          "k": "m",
+          "v": "A_{\\mathrm{arch}}=-g''_{\\mathrm{smooth}}"
+        },
+        {
+          "k": "t",
+          "v": " exact, "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa=0"
+        },
+        {
+          "k": "t",
+          "v": ", derived "
+        },
+        {
+          "k": "m",
+          "v": "D^8"
+        },
+        {
+          "k": "t",
+          "v": " moment brackets, form equality "
+        },
+        {
+          "k": "m",
+          "v": "1.28\\times10^{-10}"
+        },
+        {
+          "k": "t",
+          "v": ", pole rank "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v644_w2_form_density.py"
+        },
+        {
+          "k": "t",
+          "v": " (7 checks: classical FEM density at rate, Rayleigh–Ritz monotone on nested spaces, "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_a"
+        },
+        {
+          "k": "t",
+          "v": " scan, typed Mosco/norm-resolvent remainder); "
+        },
+        {
+          "k": "c",
+          "v": "v645_klein_rp.py"
+        },
+        {
+          "k": "t",
+          "v": " (17 checks: dressed-string reality, charged Klein blocks PSD "
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": "-stable, "
+        },
+        {
+          "k": "m",
+          "v": "\\eta=(1,1)"
+        },
+        {
+          "k": "t",
+          "v": " unique of "
+        },
+        {
+          "k": "m",
+          "v": "36"
+        },
+        {
+          "k": "t",
+          "v": ", must-fail controls, full mixed OS Gram); "
+        },
+        {
+          "k": "c",
+          "v": "v646_rm13_reverse.py"
+        },
+        {
+          "k": "t",
+          "v": " (20 checks: exact anchor identity, generic/specific split, bytecode negative, selective kill control); "
+        },
+        {
+          "k": "c",
+          "v": "v647_st31_degree24.py"
+        },
+        {
+          "k": "t",
+          "v": " (25 checks: regular "
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "20"
+        },
+        {
+          "k": "t",
+          "v": " clocks with central powers, the parity-theorem kill of "
+        },
+        {
+          "k": "m",
+          "v": "c=w^2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "u^4"
+        },
+        {
+          "k": "t",
+          "v": " census "
+        },
+        {
+          "k": "m",
+          "v": "\\{5{:}48\\}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v648_sign_uncertainty.py"
+        },
+        {
+          "k": "t",
+          "v": " (12 checks: "
+        },
+        {
+          "k": "m",
+          "v": "25"
+        },
+        {
+          "k": "t",
+          "v": "-digit dictionary anchors, the "
+        },
+        {
+          "k": "m",
+          "v": "d=1"
+        },
+        {
+          "k": "t",
+          "v": " mass-budget death, surface positivity "
+        },
+        {
+          "k": "m",
+          "v": "67/67"
+        },
+        {
+          "k": "t",
+          "v": ", flip-set reproduction, typed verdict)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New rows "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.THEOREM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.W2.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.KLEINRP.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.RM13REV.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.ST31DEG.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.SIGNUNC.01"
+        },
+        {
+          "k": "t",
+          "v": "; dated erratum notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.CONTACT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.DICT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.BOUNDARY.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.PORTABLE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.MATRIX.01"
+        },
+        {
+          "k": "t",
+          "v": "; dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " (contract state: W1 theorem-closed, W2 started, W3 open with tool diagnosis, W4 unchanged), "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.TWISTOPE.01"
+        },
+        {
+          "k": "t",
+          "v": " (open item resolved), "
+        },
+        {
+          "k": "c",
+          "v": "E8.CODESEM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.ST31.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.UNIFC.01"
+        },
+        {
+          "k": "t",
+          "v": " (independent flip-set confirmation, "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{corr}=+0.704"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves; the erratum changes labels, not numbers (the transfer identity is exact and machine-checked); W1 closes as a theorem at the window level, W2 is started (not closed), W3 stays open (the sign-uncertainty route is closed as a typed negative — the toolbox needs a large parameter the "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": " strip does not have), W4 unchanged; "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": " does not move; no positivity claim beyond the measured surface, no RH statement."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-02",
     "dateLabel": "2026-08-02 · XLII",
     "heading": [
       {
@@ -135,7 +1180,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -143,7 +1188,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -151,7 +1196,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -159,7 +1204,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -167,7 +1212,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -175,7 +1220,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -183,7 +1228,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -191,7 +1236,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -215,7 +1260,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -223,7 +1268,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -239,7 +1284,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -247,7 +1292,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",

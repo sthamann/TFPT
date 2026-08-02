@@ -46,8 +46,8 @@ const STEPS: Step[] = [
   {
     marker: "[E]/[C]",
     title: "The covered seam and its ℤ₃ orbifold",
-    body: "Lifted to the cover, the seam is one 48-site NS circle; the lifted clock has exact order 12 with L⁴ = deck — the relation r⁴ = ω becomes lattice combinatorics. The deck classes carry the ℤ₃-twist Casimir data exactly, and the interacting orbifold slice now stands at the abelian vertex level: twist weight 1/36 from three exact routes, crossing symmetry-protected.",
-    refs: "v623 · v628 · v639",
+    body: "Lifted to the cover, the seam is one 48-site NS circle; the lifted clock has exact order 12 with L⁴ = deck — the relation r⁴ = ω becomes lattice combinatorics. The deck classes carry the ℤ₃-twist Casimir data exactly, the interacting orbifold slice stands at the abelian vertex level (twist weight 1/36 from three exact routes, crossing symmetry-protected), and the twist sector is reflection positive under the parafermionic Klein pairing (η = (1,1) unique, N-stable).",
+    refs: "v623 · v628 · v639 · v645",
   },
 ];
 
@@ -236,8 +236,10 @@ export function GeometryArc() {
             </span>
             <span className="font-semibold text-slate-200">Not claimed closed:</span>{" "}
             the seam-realization bedrock (GATE.QGEO / QGEO.SYM.01) is still open. The
-            named residues — the parafermionic RP twist of the ℤ₃ orbifold (v639) and
-            the N_fam = 3 anchor — are tracked in the ledger, not hidden.
+            parafermionic RP twist of the ℤ₃ orbifold (v639) is since resolved at the
+            lattice OS level (v645: mirror × charge conjugation, η = (1,1) unique); the
+            named residues — the continuum orbifold statement and the N_fam = 3 anchor —
+            are tracked in the ledger, not hidden.
           </p>
           <Link
             href="/verification#open-gates"

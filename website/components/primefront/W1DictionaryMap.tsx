@@ -5,7 +5,9 @@ import { motion, useReducedMotion } from "motion/react";
 /**
  * The W1 dictionary: the three layers on which the TFPT window form and
  * Suzuki's screw-function Galerkin matrix are the same object
- * (v630/v631, transported v641, matrix-level v642), plus the honest
+ * (v630/v631, transported v641, matrix-level v642, theorem-level v643
+ * with the same-day convention erratum: eq. (1.3) carries Lerch +1/4,
+ * the dictionary is the single scalar +1/D), plus the honest
  * implication map W1 -> W4.
  */
 
@@ -16,16 +18,17 @@ const ROWS = [
     suzuki: "Prime measure of the screw function",
     suzukiSub: "second derivative of the Λ-term (eq. 1.3)",
     arrow: "literal — identical, atom by atom",
-    detail: "constant D² exactly · 40 atoms (v630)",
+    detail: "one scalar +1/D · 40 atoms (v630, corrected v643)",
     tone: "emerald" as const,
   },
   {
     tfpt: "Archimedean density",
     tfptSub: "e^{−t/2}/(1−e^{−2t}) — the Weil 1952 kernel",
-    suzuki: "Smooth layer g″, pole subtracted",
-    suzukiSub: "Lerch block collapses to a geometric series",
-    arrow: "one scalar: −4D — derived, not fitted",
-    detail: "monotone → 1.0006 at lag 16 (v631)",
+    suzuki: "Smooth layer g″ = +ρ, pole subtracted",
+    suzukiSub: "Lerch block (+1/4) collapses to a geometric series",
+    arrow: "one scalar: +1/D — derived, not fitted",
+    detail:
+      "A_arch = −g″_smooth exactly, κ = 0 (v643; the earlier −4D was the g̃-normalization — erratum, numbers transfer verbatim)",
     tone: "sky" as const,
   },
   {
@@ -64,19 +67,19 @@ const CHAIN = [
   {
     id: "W1",
     label: "Identify the window form with Suzuki's operator",
-    status: "closed at the measured level",
+    status: "theorem-closed (v643)",
     open: false,
   },
   {
     id: "W2",
     label: "Form density",
-    status: "open",
+    status: "started, not closed (v644)",
     open: true,
   },
   {
     id: "W3",
     label: "Uniform positivity — the RH-hard step",
-    status: "open",
+    status: "open (tool diagnosis v648)",
     open: true,
   },
   {
@@ -96,7 +99,7 @@ export function W1DictionaryMap() {
           The W1 dictionary · TFPT ↔ Suzuki
         </p>
         <span className="font-mono text-[10px] text-slate-500">
-          v630 · v631 · v640–v642
+          v630 · v631 · v640–v643
         </span>
       </div>
 

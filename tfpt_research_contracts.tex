@@ -3171,7 +3171,9 @@ theorem stay open.
 \emph{resolved} --- it IS the zeta pole term.  The Lerch collapse
 $[e^{-t/2}\Phi(e^{-2t},2,\tfrac14)]''=4e^{-t/2}/(1-e^{-2t})$ (exact)
 gives the structure theorem $g''(t)=-2\cosh(t/2)-4\,e^{-t/2}/(1-e^{-2t})$
-off the atoms: Suzuki's smooth layer is $-4\times$ the TFPT arch
+off the atoms (in the $\tilde g$-normalization of this chain; see the
+fourth-slice erratum below --- Suzuki's own smooth layer is $+\rho$):
+the chain-kernel smooth layer is $-4\times$ the TFPT arch
 density \emph{minus} the pole block $2\cosh(t/2)$ (the $s=0,1$ pole
 weights --- TFPT's separate rank-one, \vref{v591}).  The closed
 per-lag ratio law $-D[4+(e^t{+}1)(1-e^{-2t})]$ is verified, and after
@@ -3210,9 +3212,49 @@ separated pole block numerically rank $1$); the literal per-vector
 $1\%$ bar fails only on two \emph{typed} lattice residuals
 (near-cancellation denominators; tent-vs-B-spline atom profiles),
 certified as typed-residual checks (\veri{v642\_w1\_matrix.py}).
-\textbf{W1 status: theorem-capable at the window level} --- the
-$L^2_0$ projection is the last remainder; \textbf{W2/W3 stay open and
-unmoved}.
+\emph{Fourth slice (2026-08-02, second round of the day):
+erratum $+$ theorem $+$ W2 start $+$ W3 tool diagnosis.}
+\textbf{Convention erratum (corrected the same day):} the second and
+third slices read Suzuki's eq.~(1.3) with Lerch coefficient $-1$; the
+paper's own \S2.2 data lock $+1/4$ (\veri{v643\_w1\_theorem.py},
+C0.1).  All slice-two/-three identities are correct identities of the
+chain kernel $\tilde g=g-\tfrac54\,$Lerch, and every measured number
+transfers \emph{verbatim} via the exact identity
+$c^{\mathrm{sm}}_{\mathrm{gal}}(\tilde g)=-4\,c^{\mathrm{sm}}_{\mathrm{gal}}(g)$
+--- only the labels change: Suzuki's own smooth layer is $+\rho$, the
+two-layer dictionary collapses to the \emph{single} scalar $+1/D$ on
+both layers (sign-compatible with positivity), and the origin constant
+vanishes, $\kappa=0$ exactly (the $-\tfrac54 L\,\delta_0$ term was an
+artifact of the misreading; the \texttt{v563} near-cell scheme
+\emph{is} Suzuki's origin bookkeeping).  \textbf{W1 is
+THEOREM-closed at the measure level} (\veri{v643\_w1\_theorem.py}):
+the projection lemma closes the last remainder --- Suzuki's $L^2_0$
+mean-zero condition is \emph{automatic} on the $u$-side
+($D:H^1_0\to L^2_0$ a bijection), the window parity sector is a
+subspace of the form domain, $A_{\mathrm{arch}}=-g''_{\mathrm{smooth}}$
+exactly at every lag ($3.4\times10^{-52}$), and the full form equality
+holds at $1.28\times10^{-10}$ on the common odd sector.
+\textbf{W2 is started} (\veri{v644\_w2\_form\_density.py}): the
+classical FEM-density slice is verified at rate (with $Q_W$
+$H^1$-bounded and $H^1_0$ a form core the density chain is classical,
+cited); Rayleigh--Ritz on the nested window spaces is monotone from
+above on all six sequences, and the $\lambda_a$ scan is consistent
+with Suzuki Thm~1.3 ($\lambda_a=0^+$ within ${\sim}10^{-9}$, no sign
+statement); the Mosco/norm-resolvent remainder is \emph{named}, not
+claimed.  \textbf{W3 stays open, now with a tool diagnosis}
+(\veri{v648\_sign\_uncertainty.py}): the sign-uncertainty /
+LP-ceiling toolbox has a real, $25$-digit-anchored dictionary to the
+critical strip (the $d=1$ strip multiplier's phase slope is exactly
+$L=\log\pi-\psi(\tfrac14)$, the W1 $\delta_0$ weight), but its
+quantitative mechanism is powered by the strip half-width and dies at
+$d=1$ ($e^{-E^*}=0.967$ where $<\tfrac12$ is needed; $d\ge21$ would be
+required; the window family's negative structure sits $5.2\times$
+outside the maximal BCK ball): a BCK-type mass obstruction cannot
+certify $\widehat A_{a,h}\succeq0$ --- any W3 route through this
+toolbox must replace the dimension lever by a different large
+parameter; empirically the W3 surface is positive on all $67$
+complete windows ($\min\lambda_{\min}=+8.26\times10^{-4}$, float-floor
+certified).  \textbf{W4 unchanged}; no RH statement.
 
 \par\smallskip\noindent\textbf{The four fixed-size angle instruments
 (\texttt{PRIME.ANGLE.INSTR.01}).}

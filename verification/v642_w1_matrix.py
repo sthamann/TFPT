@@ -2,6 +2,22 @@
 dictionary to
 the FULL quadratic form on the declared window h = 184 (M = 368).
 
+CONVENTION ERRATUM (2026-08-02, corrected the same day; machine
+evidence: v643_w1_theorem.py C0.1):
+  The w1 chain read Suzuki's eq. (1.3) with Lerch coefficient -1;
+  the paper's own Sec. 2.2 data lock it to +1/4.  The screw function
+  g_vec below is the chain kernel gtil := g - (5/4) Lerch, and the
+  "frozen two-layer dictionary" (-1/(4D) smooth, 1/D atomic) is its
+  gtil-normalization form.  Every matrix identity below is a CORRECT
+  identity of gtil; via the exact transfer cgal_sm(gtil) =
+  -4 cgal_sm(g), every stage, every norm ratio and every residual
+  transfers verbatim to Suzuki's TRUE g, where the dictionary
+  collapses to the ONE scalar +1/D on BOTH layers (sign-compatible
+  with positivity) and the boundary constants become the Btil(0..2)
+  of v643 P2.3.  No check and no number below changes; the full
+  form equality on the true g at the 1e-4 bar is v643 P3.1
+  (max 1.28e-10).  See the erratum blocks in v631/v640/v641.
+
 Both quadratic forms are assembled on the SAME test vectors:
   (i)  TFPT: v563's parity-projected window form, verbatim --
        A_T = odd_toeplitz(c_ar + c_at, M) (the exact A_full construction
@@ -62,8 +78,9 @@ W1-MATRIX-GAP (operator level > 1%), MIXED.
 FIREWALL: v563/v630/v631 read-only; no marker moves; no positivity
 claim, no RH statement; the two literal-bar residuals are TYPED
 LATTICE RESIDUALS (near-cancellation denominators; tent-vs-B-spline
-atom profiles), not open operator gaps -- the L^2_0 projection stays
-the named last theorem-level W1 remainder.
+atom profiles), not open operator gaps -- the L^2_0 projection was
+the named last theorem-level W1 remainder at promotion time (since
+closed by the v643 projection lemma; see the erratum block above).
 
 PROVENANCE: discovery probe w1_matrix_identity_probe.py (2026-08-02,
 8 checks: 6 PASS + 2 honest FAILs M4.2/M5.1 = the two typed residuals,

@@ -11340,27 +11340,45 @@ form \emph{is} the prime measure of Suzuki's screw function,
 literally (positions $\log$ prime powers, weights
 $\Lambda(n)/\sqrt n$, exact; \veri{v630\_suzuki\_contact.py}), and the
 smooth layer converts by a \emph{derived} dictionary
-(\veri{v631\_w1\_dictionary.py}): the Lerch collapse gives
-$g''=-2\cosh(t/2)-4\,e^{-t/2}/(1-e^{-2t})$ off the atoms, so Suzuki's
-smooth layer is $-4\times$ the window's archimedean density minus the
-pole block --- exactly the rank-one pole piece the program tracks
-separately (\vref{v591}); after pole separation the conversion is the
-scalar $-4D$ and the atom-layer constant is $D^2$.  The W1
-identification step of the preregistered
-\texttt{PRIME.WEIL.OPERATOR.01} contract is thereby closed at the
-measured level on both halves; the RH-hard steps (W2 form density, W3
-uniform positivity) are untouched.  The typed W1 remainder has since
-closed: the boundary cells obey the \emph{exact} $\delta_0$ equation
-$A_{\mathrm{arch}}=\tfrac14 g''_{\mathrm{smooth}}-\tfrac54(\log\pi-
-\psi(\tfrac14))\,\delta_0$ with the derived, window-independent
-$1+1/(6d^2)$ moment law (\veri{v640\_w1\_boundary.py}), and the frozen
+(\veri{v631\_w1\_dictionary.py}).  \emph{Convention erratum
+(2026-08-02, corrected the same day):} the first W1 rounds read
+Suzuki's eq.~(1.3) with Lerch coefficient $-1$; the paper's own \S2.2
+data lock $+1/4$ (\veri{v643\_w1\_theorem.py}, C0.1).  All their
+identities hold for the chain kernel $\tilde g=g-\tfrac54\,$Lerch and
+every measured number transfers verbatim via
+$c^{\mathrm{sm}}_{\mathrm{gal}}(\tilde g)=-4\,c^{\mathrm{sm}}_{\mathrm{gal}}(g)$;
+on Suzuki's \emph{true} $g$ the smooth layer is $+\rho$ (the pole
+block --- the rank-one piece the program tracks separately,
+\vref{v591} --- unchanged), the dictionary is the \emph{single}
+scalar $+1/D$ on both layers, and the origin constant vanishes,
+$\kappa=0$ exactly.  The boundary cells obey exact closed constants
+with the derived, window-independent $1+1/(6d^2)$ moment law
+(\veri{v640\_w1\_boundary.py}, $\tilde g$-normalization), the frozen
 dictionary transports \emph{unchanged} to three fresh windows
 ($h=285/540/997$; atom constant $D^2$ at machine precision;
 preregistered kill criterion met nowhere,
-\veri{v641\_w1\_portability.py}) --- W1 is a window-portable operator
-identification, theorem-capable up to the $L^2_0$ projection
-(\veri{v642\_w1\_matrix.py}: operator-level closure of the full
-quadratic form, pole block rank $1$, two typed lattice residuals).
+\veri{v641\_w1\_portability.py}), and the full quadratic form closes
+at the operator level (\veri{v642\_w1\_matrix.py}: pole block rank
+$1$, two typed lattice residuals).  \textbf{W1 is now THEOREM-closed
+at the measure level} (\veri{v643\_w1\_theorem.py}): the projection
+lemma shows Suzuki's $L^2_0$ condition is automatic on the $u$-side
+and the window parity sector is a subspace of the form domain;
+$A_{\mathrm{arch}}=-g''_{\mathrm{smooth}}$ exactly at every lag
+($3.4\times10^{-52}$), full form equality $1.28\times10^{-10}$.
+W2 (form density) is \emph{started}
+(\veri{v644\_w2\_form\_density.py}: classical FEM-density slice at
+rate, Rayleigh--Ritz monotone from above on nested spaces,
+$\lambda_a=0^+$ within ${\sim}10^{-9}$ consistent with Suzuki
+Thm~1.3, no sign statement; Mosco/norm-resolvent remainder typed).
+W3 (uniform positivity) stays \emph{open}, now with a tool diagnosis
+(\veri{v648\_sign\_uncertainty.py}): the sign-uncertainty/LP-ceiling
+toolbox carries a real $25$-digit dictionary to the critical strip
+(phase slope $=L=\log\pi-\psi(\tfrac14)$, the W1 $\delta_0$ weight)
+but its mass lever dies at $d=1$ ($e^{-E^*}=0.967$ where $<\tfrac12$
+is needed; $d\ge21$ required) --- empirically the surface is positive
+on all $67$ complete windows ($\min\lambda_{\min}=+8.26\times10^{-4}$;
+the incomplete combs are exactly the flip set $\{1219,1292,1445\}$;
+$\mathrm{corr}(\log\lambda_{\min},\log\varepsilon h)=+0.704$).
 On the geometric side the congruence matrix $P$ itself is now
 canonical and constructed: the unique minimal-Frobenius
 operator-compatible class in the full census

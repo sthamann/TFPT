@@ -34,7 +34,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta investigation: the signed E8 census, Hecke from geometry, the relative-trace identity and Weil structure (v535–v541), the T102–T125 induction sprint and the phase-2 certified map (one open object, R1), the uniform constant C = 1, the Lorentz congruence between the prime form and the cover lattice, E8 as a literal error-correcting code, the sixty-line reflection group G31, and the Suzuki W1 identification — closed at the measured level, with the honest implication map kept explicit: closing W1 does not move W3. Machine-verified modules v535–v642 inside a 636-script suite. No claim of progress toward the Riemann Hypothesis.",
+    "A plain-language research diary of TFPT's prime / zeta investigation: the signed E8 census, Hecke from geometry, the relative-trace identity and Weil structure (v535–v541), the T102–T125 induction sprint and the phase-2 certified map (one open object, R1), the uniform constant C = 1, the Lorentz congruence between the prime form and the cover lattice, E8 as a literal error-correcting code, the sixty-line reflection group G31, and the Suzuki W1 identification — theorem-closed after a same-day convention erratum (one scalar +1/D, κ = 0), with the honest implication map kept explicit: closing W1 does not move W3. Machine-verified modules v535–v648 inside a 642-script suite. No claim of progress toward the Riemann Hypothesis.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "The Prime Front — TFPT research diary",
     description:
-      "Primes, the E8 census, and the load-bearing modules v535–v642: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification closed at the measured level. Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
+      "Primes, the E8 census, and the load-bearing modules v535–v648: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
     url: `${SITE_URL}/prime-front`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified v535–v642: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 dictionary — with the RH-hard steps W2/W3 explicitly open. Not RH evidence.",
+      "Research diary of the prime / zeta line. Machine-verified v535–v648: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
   },
 };
 
@@ -96,7 +96,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · 240 agent runs · 5360 sandbox checks · suite 636
+            Research diary · 241 agent runs · 5452 sandbox checks · suite 642
             scripts
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
@@ -2892,8 +2892,8 @@ export default function PrimeFrontPage() {
       {/* 29 — Suzuki W1 */}
       <DiarySection
         id="suzuki-w1"
-        eyebrow="29 · The Suzuki identification · v630 / v631 / v640–v642"
-        title="W1 closes: the window form is Suzuki's operator, at the measured level"
+        eyebrow="29 · The Suzuki identification · v630 / v631 / v640–v644 / v648"
+        title="W1 closes as a theorem — after an honest erratum"
         badge="machine-verified"
         visual={<W1DictionaryMap />}
       >
@@ -2912,40 +2912,53 @@ export default function PrimeFrontPage() {
         </p>
         <p>
           Hours later, v631 resolved it: the residual{" "}
-          <em>is the zeta pole term</em>. A small exact identity collapses
-          the Hurwitz–Lerch block of the screw function to a geometric
-          series, giving the structure theorem{" "}
-          <span className="font-mono text-slate-200">
-            g″(t) = −2cosh(t/2) − 4×(TFPT arch density)
-          </span>
-          . Suzuki bundles the pole into g; TFPT has always carried it
-          separately as an exact rank-one piece (v591). Pole subtracted, the
-          conversion is the <em>scalar</em> −4D (monotone → 1.0006), and the
-          atom constant is D² exactly — derived, not fitted.
+          <em>is the zeta pole term</em>, and the follow-up rounds made the
+          dictionary sturdy — v640 closed the boundary cells symbolically,
+          v641 froze the dictionary and ran it unchanged on three fresh
+          windows (a preregistered kill test:{" "}
+          <strong className="font-medium text-slate-200">portable</strong>),
+          v642 lifted it to the full quadratic form at operator level.
         </p>
         <p>
-          The follow-up rounds made it sturdy: v640 closed the typed boundary
-          remainder symbolically (the two δ₀ conventions are one object in
-          one scheme — a single duplication identity); v641 froze the
-          dictionary and ran it unchanged on three fresh windows as a
-          preregistered kill test — only D changes, as the dictionary itself
-          declares:{" "}
-          <strong className="font-medium text-slate-200">portable</strong>;
-          and v642 lifted it from per-lag to the full quadratic form — the
-          two matrices agree at operator level with nothing unexplained, the
-          two literal-bar residuals typed and certified as lattice effects.
-          W1 is closed at the measured level and{" "}
+          <strong className="font-medium text-amber-200">
+            Erratum (2026-08-02, corrected the same day):
+          </strong>{" "}
+          that chain read Suzuki&apos;s eq. (1.3) with Lerch coefficient −1;
+          the paper&apos;s own §2.2 data lock +1/4 (v643, check C0.1). All
+          the chain&apos;s identities are correct identities of its kernel
+          g̃ = g − (5/4)·Lerch, and every measured number transfers verbatim
+          via the exact identity cgal(g̃) = −4·cgal(g) — only the labels
+          change: Suzuki&apos;s own smooth layer is{" "}
+          <span className="font-mono text-slate-200">+ρ</span> (not −4ρ),
+          the dictionary is the{" "}
           <strong className="font-medium text-slate-200">
-            theorem-shaped
+            single scalar +1/D on both layers
+          </strong>{" "}
+          (sign-compatible with positivity), and the origin constant
+          vanishes, κ = 0 exactly.
+        </p>
+        <p>
+          On the corrected reading, v643 proves the{" "}
+          <strong className="font-medium text-emerald-200">
+            measure-level W1 theorem
           </strong>
-          : the L²₀ projection is the one named theorem-level remainder.
+          : Suzuki&apos;s L²₀ mean-zero condition is automatic on the u-side
+          (the projection lemma — the last named remainder closes), A_arch =
+          −g″_smooth exactly at every lag (3.4e−52), and the full form
+          equality holds at 1.28e−10 on the common odd sector. v644 starts
+          W2 honestly (classical FEM density at rate; Rayleigh–Ritz monotone
+          from above on nested spaces; λ_a = 0⁺ within ~1e−9, no sign
+          statement; the Mosco remainder named). And v648 types the W3 tool
+          diagnosis: the sign-uncertainty toolbox has a real 25-digit
+          dictionary to the critical strip, but its mass lever dies at
+          d = 1 — while the W3 surface itself is empirically positive on all
+          67 complete windows (min λ_min = +8.26e−4).
         </p>
         <p className="text-slate-400">
-          The honest map, unchanged: W1 → W2 (form density, open) → W3
-          (uniform positivity — the RH-hard step, open) → W4 (classical given
-          W2+W3). Closing W1 does not move W3. No RH claim; the C = 1
-          contraction of section 24 is the typed candidate mechanism for W3,
-          nothing more.
+          The honest map: W1 (theorem-closed) → W2 (started, not closed) →
+          W3 (uniform positivity — the RH-hard step, open; the toolbox
+          diagnosis closes one candidate route) → W4 (classical given
+          W2+W3). Closing W1 does not move W3. No RH claim.
         </p>
       </DiarySection>
 
@@ -2984,7 +2997,7 @@ export default function PrimeFrontPage() {
             verification/v535_*.py
           </code>{" "}
           …{" "}
-          <code className="font-mono text-slate-400">v642_w1_matrix.py</code>.
+          <code className="font-mono text-slate-400">v648_sign_uncertainty.py</code>.
           Exploratory probes live under{" "}
           <code className="font-mono text-slate-400">
             experiments/tfpt-discovery/
@@ -3171,7 +3184,7 @@ function BigPictureSection() {
                 href="/verification"
                 className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
               >
-                v535–v642 (this front)
+                v535–v648 (this front)
               </Link>{" "}
               are machine-verified and cited in the papers. Sandbox probes never
               move a status marker.
@@ -3199,13 +3212,13 @@ function BigPictureSection() {
               tone="sky"
             />
             <BigPictureStat
-              term="5360"
-              desc="sandbox checks across 230 probes, all passing"
+              term="5452"
+              desc="sandbox checks across 236 probes, all passing"
               tone="amber"
             />
             <BigPictureStat
-              term="v535–v642"
-              desc="machine-verified modules of this front, inside the 636-script suite (all green)"
+              term="v535–v648"
+              desc="machine-verified modules of this front, inside the 642-script suite (all green)"
               tone="emerald"
             />
             <BigPictureStat

@@ -3,7 +3,29 @@ residual IS the zeta pole term, and after separating it the smooth
 conversion is the SCALAR -4D: the smooth half of the W1 identification
 closes at the measured level, with the conversion DERIVED, not fitted.
 
-The chain (Suzuki arXiv:2606.09096, eq. 1.3):
+CONVENTION ERRATUM (2026-08-02, corrected the same day; machine
+evidence: v643_w1_theorem.py C0.1):
+  This chain read Suzuki's eq. (1.3) with Lerch coefficient -1; the
+  paper's own Sec. 2.2 data (the printed origin constant
+  A = (1/2)(log 2 pi - psi(2)), g(0) = 0, r_1'' = rho - 1/(2|t|)) LOCK
+  the coefficient to +1/4.  Everything below is therefore stated for
+  the kernel gtil := g - (5/4) e^{-|t|/2} Phi(e^{-2|t|}, 2, 1/4) (the
+  module's g_vec), whose identities are all CORRECT identities of
+  gtil.  The exact transfer identity cgal_sm(gtil) = -4 cgal_sm(g)
+  makes every measured ratio transfer verbatim,
+  ratio(gtil)/(-4D) == ratio(g)/(+D) number for number, so NO check
+  and NO number below changes.  Only the labels do: Suzuki's own
+  smooth layer is +rho (not -4 rho), the true dictionary is the ONE
+  scalar +1/D on BOTH layers (sign-compatible with positivity -- the
+  TFPT window form and Suzuki's Q_W^a sit on the same side), and the
+  origin constant vanishes, kappa = 0 exactly (v643): the v563
+  near-cell scheme IS Suzuki's origin bookkeeping.  Where the text
+  below says "Suzuki's smooth layer = -4 x arch density", read: "in
+  the gtil-normalization used by this chain"; see v643 for the
+  measure-level theorem on the true g.
+
+The chain (Suzuki arXiv:2606.09096, eq. 1.3; gtil-normalization per
+the erratum above):
 
   (D1) THE LERCH COLLAPSE [E, exact]: term-wise
        (2n + 1/2)^2 / (n + 1/4)^2 = 4 EXACTLY, so
@@ -15,11 +37,13 @@ The chain (Suzuki arXiv:2606.09096, eq. 1.3):
 
   (D2) THE STRUCTURE THEOREM OF THE SMOOTH LAYER [E]: hence for t > 0
        off the atoms,
-         g''(t) = -2 cosh(t/2) - 4 e^{-t/2}/(1 - e^{-2t}),
-       i.e. SUZUKI'S SMOOTH LAYER = -4 x (THE TFPT ARCH DENSITY)
-       MINUS THE POLE BLOCK 2 cosh(t/2) = e^{t/2} + e^{-t/2} -- the
-       zeta pole weights at s = 0, 1, which TFPT tracks SEPARATELY as
-       the exact rank-one pole piece (v591).
+         gtil''(t) = -2 cosh(t/2) - 4 e^{-t/2}/(1 - e^{-2t}),
+       i.e. the smooth layer OF THE CHAIN'S gtil-KERNEL = -4 x (THE
+       TFPT ARCH DENSITY) MINUS THE POLE BLOCK 2 cosh(t/2) = e^{t/2}
+       + e^{-t/2} -- the zeta pole weights at s = 0, 1, which TFPT
+       tracks SEPARATELY as the exact rank-one pole piece (v591).
+       (Erratum: Suzuki's OWN eq. (1.3) carries +1/4, so his smooth
+       layer is +rho; see the erratum block and v643.)
 
   (D3) THE CLOSED RATIO LAW [E-float]: per lag,
          c_gal(d)/c_arch(d) = -D [4 + (e^t + 1)(1 - e^{-2t})] + O(disc),
@@ -132,11 +156,13 @@ def run():
     lerch_dd = 4 * sp.exp(-t / 2) / (1 - sp.exp(-2 * t))
     g_dd = sp.diff(g_pole, t, 2) - lerch_dd
     target = -2 * sp.cosh(t / 2) - 4 * sp.exp(-t / 2) / (1 - sp.exp(-2 * t))
-    check("D2.1 [E] the structure theorem: g''(t) = -2 cosh(t/2) "
-          "- 4 e^{-t/2}/(1-e^{-2t}) off the atoms -- Suzuki's smooth "
-          "layer = -4 x (the TFPT arch density e^{-t/2}/(1-e^{-2t})) "
-          "MINUS the pole block 2 cosh(t/2) = e^{t/2}+e^{-t/2} (the zeta "
-          "pole weights at s = 0, 1; TFPT's separate v591 rank-one)",
+    check("D2.1 [E] the structure theorem (gtil-normalization, see "
+          "erratum): gtil''(t) = -2 cosh(t/2) - 4 e^{-t/2}/(1-e^{-2t}) "
+          "off the atoms -- the chain-kernel smooth layer = -4 x (the "
+          "TFPT arch density e^{-t/2}/(1-e^{-2t})) MINUS the pole block "
+          "2 cosh(t/2) = e^{t/2}+e^{-t/2} (the zeta pole weights at "
+          "s = 0, 1; TFPT's separate v591 rank-one); Suzuki's own "
+          "(1.3) carries +1/4, smooth layer +rho (v643 C0.1)",
           sp.simplify(g_dd - target) == 0)
 
     # ------------------------------------------------ window and kernels
@@ -233,9 +259,12 @@ def run():
     diffs = [abs(v - 1.0) for v in vals]
     mono = all(diffs[i + 1] < diffs[i] for i in range(len(diffs) - 1))
     check("D4.1 [E-float, central] pole-subtracted, the conversion is the "
-          "SCALAR -4D: ratio/(-4D) = %s -> 1 monotonically (last %.4f; "
-          "residual ~ d^-2 discretization): the smooth half of W1 closes "
-          "as A_arch = -(1/4D) Galerkin-smooth + pole rank-one"
+          "SCALAR -4D in the gtil-normalization: ratio/(-4D) = %s -> 1 "
+          "monotonically (last %.4f; residual ~ d^-2 discretization): "
+          "the smooth half of W1 closes as A_arch = -(1/4D) "
+          "Galerkin-smooth(gtil) + pole rank-one == +(1/D) "
+          "Galerkin-smooth(g) via the exact transfer identity "
+          "cgal_sm(gtil) = -4 cgal_sm(g) (erratum; v643 P2.4)"
           % (["%.4f" % v for v in vals], vals[-1]),
           mono and diffs[-1] < 3e-3)
 
@@ -276,7 +305,9 @@ def run():
 
     VERDICT = "W1-DICTIONARY-DERIVED" if not FAILS else "MIXED"
     print("\nVERDICT: %s -- the v630 residual IS the pole term; after "
-          "separation the smooth conversion is the scalar -4D" % VERDICT)
+          "separation the smooth conversion is the scalar -4D in the "
+          "gtil-normalization (erratum: = +1/D on Suzuki's true g, "
+          "one scalar for both layers; v643)" % VERDICT)
     print("checks: %d, failures: %d %s" % (N_CHK, len(FAILS), FAILS or ""))
     print("elapsed: %.1f s" % (time.time() - T0))
     return len(FAILS)

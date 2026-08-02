@@ -2820,6 +2820,15 @@ $\widehat A_{\mathrm{arch}}=-(1/4D)\,\mathrm{Galerkin}_{\mathrm{smooth}}
 +\text{pole rank-one}$; the theorem-level remainder (second-order
 term, $d\le2$ boundary cells, $L^2_0$ projection) is typed.  W2/W3
 stay open; no positivity claim, no RH statement.
+\emph{Erratum (2026-08-02, corrected the same day):} this round read
+eq.~(1.3) with Lerch coefficient $-1$; Suzuki's own \S2.2 data lock
+$+1/4$ (\veri{v643\_w1\_theorem.py}, C0.1).  All identities above are
+correct identities of the chain kernel
+$\tilde g=g-\tfrac54\,$Lerch, and every number transfers verbatim via
+$c^{\mathrm{sm}}_{\mathrm{gal}}(\tilde g)=-4\,c^{\mathrm{sm}}_{\mathrm{gal}}(g)$
+--- on Suzuki's true $g$ the smooth layer is $+\rho$ (not $-4\rho$)
+and the dictionary is the \emph{single} scalar $+1/D$ on both layers,
+sign-compatible with positivity.
 Machine-checked: \veri{v631\_w1\_dictionary.py}.
 \mE\ (exact Lerch/structure identities) $+$ (\textsc{measured})
 (scalar closure)
@@ -3049,6 +3058,14 @@ $1+1/(6d^2)$, \emph{window-independent}, reproducing the measured
 at every lag --- a derived law, not a fit.  The exact dictionary
 identities are additionally machine-proved in Lean
 (\texttt{WeilDictionary.lean}).
+\emph{Erratum (2026-08-02, corrected the same day):} the boundary
+equation is stated in the chain's $\tilde g$-normalization (Lerch
+misread $-1$; correct $+1/4$, \veri{v643\_w1\_theorem.py} C0.1).  On
+Suzuki's \emph{true} $g$ the same tents read
+$A_{\mathrm{arch}}=-g''_{\mathrm{smooth}}$ exactly with \emph{no}
+constant --- $\kappa=0$ exactly, the $-\tfrac54 L\,\delta_0$ term was
+an artifact of the misreading; all numbers remain valid as $\tilde g$
+identities.
 Machine-checked: \veri{v640\_w1\_boundary.py}.
 \mE\ (exact identities; certified boundary equation; derived moment
 law)
@@ -3069,6 +3086,11 @@ within the frozen bars.  The kill criterion --- any window needing a
 conversion beyond the explicit $D$ dependence --- is met
 \emph{nowhere}: W1 is a window-portable operator identification, not a
 single-window fit.
+\emph{Erratum (2026-08-02, corrected the same day):} the $-4D$ scalar
+is the $\tilde g$-normalization of the chain
+(\veri{v643\_w1\_theorem.py} C0.1); the portability transfers verbatim
+to the corrected one-scalar dictionary $+1/D(\text{window})$ on
+Suzuki's true $g$.
 Machine-checked: \veri{v641\_w1\_portability.py}.
 \mE\ (frozen-bar transport on three fresh windows)
 \par\smallskip
@@ -3092,9 +3114,205 @@ operator) and the tent-vs-B-spline per-cell atom profile (removed
 completely by the measure-level re-binning) --- certified in the
 module as typed-residual checks with inverted expectation, the probe's
 numbers unchanged.  Nothing unexplained remains; the $L^2_0$
-projection stays the last theorem-level W1 remainder.
+projection was, at this round, the last theorem-level W1 remainder.
+\emph{Erratum (2026-08-02, corrected the same day):} the two-layer
+dictionary is the $\tilde g$-normalization
+(\veri{v643\_w1\_theorem.py} C0.1); on Suzuki's true $g$ it collapses
+to the one scalar $+1/D$, all norm ratios transfer verbatim, and the
+$L^2_0$ remainder is closed by the v643 projection lemma.
 Machine-checked: \veri{v642\_w1\_matrix.py}.
 \mE\ (operator-level closure; typed lattice residuals)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The W1 measure-level theorem
+(\texttt{PRIME.WEIL.THEOREM.01}).}
+The precise W1 statement on Suzuki's \emph{true} screw function ---
+and the machine evidence for the convention erratum of the
+v631/v640--v642 chain ($11$ checks, ${\sim}65$\,s).  \emph{The
+convention lock (C0.1):} eq.~(1.3) carries the Lerch coefficient
+$+1/4$, not $-1$ --- locked by the paper's own \S2.2 data (the printed
+origin constant $A=\tfrac12(\log2\pi-\psi(2))=0.70754637$ reproduces
+to $1.2\times10^{-9}$ with $+1/4$; the $-1$ reading is log-divergent
+with $g(0)\ne0$); every measured number of the earlier chain transfers
+verbatim via the exact identity
+$c^{\mathrm{sm}}_{\mathrm{gal}}(\tilde g)=-4\,c^{\mathrm{sm}}_{\mathrm{gal}}(g)$
+(rel $3.7\times10^{-12}$).  \emph{The projection lemma:} Suzuki's
+$L^2_0$ mean-zero condition is \emph{automatic} on the $u$-side
+($D:H^1_0\to L^2_0$ is a bijection; $\int Dv=0$ for every $H^1_0$
+test function, sympy exact), so $P_a$ imposes no condition on Galerkin
+coefficients and generates no dictionary term; the \texttt{v563}
+parity sector \emph{is} the odd subspace of
+$H^1_0(-\tilde a,\tilde a)$ (worst $2.2\times10^{-16}$) --- a subspace
+of the form domain; the Krein-kernel correction is annihilated on the
+derived objects ($3.9\times10^{-20}$; must-break $2.84$ on $u=1$):
+the last theorem-level W1 remainder closes.  \emph{The theorem:}
+$g''=-2\cosh(t/2)+W$ with smooth density $+\rho$ (sympy exact);
+$A_{\mathrm{arch}}=-g''_{\mathrm{smooth}}$ \emph{exactly} at every lag
+(worst rel $3.4\times10^{-52}$, no constant, no scalar) and the origin
+constant \emph{vanishes}, $\kappa=0$ exactly (residual of the closed
+identity $6.1\times10^{-55}$): the \texttt{v563} near-cell scheme
+\emph{is} Suzuki's origin bookkeeping; the B-spline reads close with
+exact boundary constants $\tilde B(0..2)$, and the moment law is
+derived to $D^8$ ($m_8=D^9/45$, $31D^{10}/45$, sympy exact).
+\emph{The bar:} full form equality on the common odd sector with the
+\emph{one-scalar} dictionary $+1/D$: max
+$|Q_T-Q_S|/|Q_T|=1.28\times10^{-10}<10^{-4}$ on $10$ odd $16$-mode
+vectors (median $3.0\times10^{-11}$); pole block rank $1$.  No
+positivity claim, no RH statement; W2/W3 untouched.
+Machine-checked: \veri{v643\_w1\_theorem.py}.
+\mE\ (projection lemma, measure-level identities, erratum evidence)
+$+$ (\textsc{measured}) (form equality)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The W2 start: form density in slices
+(\texttt{PRIME.WEIL.W2.01}).}
+The next rung of the contract, honestly sliced ($7$ checks,
+${\sim}240$\,s).  \emph{Classical slice:} the $H^1_0$-seminorm
+projection onto the hat space \emph{is} nodal interpolation (1-D exact
+fact), and FEM density holds at the classical rate on smooth odd test
+functions ($H^1$ rates $1.000$, $L^2$ rates $2.000$ over
+$M=92/184/368/736$); with $Q_W$ $H^1$-bounded (Suzuki \S8.4) and
+$H^1_0$ a form core (Thm~1.1) this is the classical density chain ---
+cited, not re-proved.  \emph{Measured slices:} Rayleigh--Ritz on the
+\emph{nested} window spaces at fixed $a=\log16$ --- the lowest three
+eigenvalues decrease monotonically from above under dyadic refinement
+(full and odd sector, all six sequences), the Cauchy gaps shrink at
+every step, and the parity identity
+$\lambda_{\mathrm{full}}=\min(\lambda_{\mathrm{even}},
+\lambda_{\mathrm{odd}})$ holds per refinement ($10^{-15}$); the
+$\lambda_a$ scan across five frame-A windows ($a=2.77..6.01$) gives
+values $+10^{-12}..+2\times10^{-10}$ with discretization gaps
+${\sim}10^{-9}$ --- consistent with Suzuki Thm~1.3 (the paper claims
+\emph{only} continuity; the honest reading is $\lambda_a=0^+$ within
+${\sim}10^{-9}$, \emph{not} a sign statement), ground state
+\emph{even} at every $a$ (reported; Thm~1.4 covers only small $a$).
+\emph{Typed remainder:} Mosco/$\Gamma$-convergence of the lattice
+forms (the liminf needs the compact embedding
+$H_{\log}\to L^2$, Prop.~4.1, transferred uniformly), norm-resolvent
+convergence, rigorous lag-route enclosures; the $a\to\infty$ limit is
+W3/W4 territory.  W2 is \emph{started}, not closed; no positivity
+claim, no RH statement.
+Machine-checked: \veri{v644\_w2\_form\_density.py}.
+\mC\ (classical chain, cited) $+$ (\textsc{measured}) (Rayleigh--Ritz
+and $\lambda_a$ slices) $+$ \mC\ (typed Mosco remainder)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The parafermionic Klein twist
+(\texttt{QGEO.KLEINRP.01}).}
+The named RP open item of \texttt{v639} is \emph{resolved} at the
+lattice OS level ($17$ checks, ${\sim}30$\,s).  The
+positivity-carrying pairing composes the mirror with \emph{charge
+conjugation}: $\Theta_K(\sigma_k(x))=\eta_k\,\sigma_{3-k}(r(x))$ with
+$\omega^{kq}$ zero-mode phases.  The dressed-string reality identity
+(particle-hole $I-C=DCD$ at half filling) makes every Klein Gram entry
+exactly real ($1.4\times10^{-15}$); every charged Klein block is real
+symmetric \emph{and} PSD (worst min/max $2.9\times10^{-12}$), for
+$k=1,2$, on both diameter axes, at $N=48/96/192/384$ ($N$-stable, no
+drift); over the $36$ pairs $(\eta_1,\eta_2)\in\{\pm1,\pm\omega,
+\pm\omega^2\}^2$ \emph{exactly one} satisfies consistency,
+Hermiticity and PSD: $\eta=(1,1)$; no phase rescues the naive pairing
+(the fix is structural), which reproduces its $N$-stable
+$-4.5\times10^{-3}$ violation as the must-fail control; and the
+\emph{full mixed} Gram over $\{1,\sigma_1,\sigma_2,
+\text{dipoles}\}$ with no sector projection is PSD at $N=48/96$
+(stable at $192$) --- the lattice Osterwalder--Schrader statement of
+the orbifold twist sector.  Honest typing: continuum OS
+reconstruction, R/fermion-parity sectors, modular invariance and
+non-abelian content stay named, not claimed; \texttt{GATE.QGEO} does
+not move.
+Machine-checked: \veri{v645\_klein\_rp.py}.
+\mE\ (reality/uniqueness/must-fail) $+$ (\textsc{measured}) (PSD
+Grams) $+$ \mC\ (typed continuum remainder)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The RM$(1,3)$ reverse reading
+(\texttt{E8.RM13REV.01}).}
+Are compiler numbers \emph{code operations}?  An honestly two-part
+answer ($20$ checks, ${\sim}1$\,s, exact arithmetic).  \emph{The
+anchor identity:} the $\sigma$-fixed syndromes of the equivariant
+placement $C^*$ are exactly $\{0,s(e_6),s(e_7),q\}$ with coset-leader
+weights $(0,1,1,2)$ and norm-square sum $6=(1,1,2)\cdot(1,1,2)$; the
+anchor is the family sum in the quotient ($P_3=P_0{+}P_1{+}P_2$); all
+four pair sectors carry $(1,1,2)$/norm $6$, but \emph{only} the anchor
+pair is $\sigma$-stable --- the $\sigma$ action \emph{selects} the
+anchor copy.  \emph{The honest split:} the $(1,1,2)$/norm-$6$ weights
+are \emph{generic} for any $[8,4,4]$ placement (the kill control keeps
+them); equivariance-specific are only $q$-universality, the
+$\sigma$-fixing of the anchor sector, and anchor $=$ family sum (all
+die for the naive placement).  \emph{The bytecode negative:} the
+$42$-entry invariant battery lands the structural anchors exactly
+($240$, $8$, $248$, $60$, $12$, $6$, $4$) --- but the $p$-sequence
+$(4,6,10,18)$ of $p_n=2+2^n$ has \emph{no} code reading ($0/11$
+natural families; $27$ and $81$ no hit at all): the bingo is buried.
+The kill control fires selectively, including the honest correction
+that the $\sigma$-fixed-root \emph{count} $12$ is not
+equivariance-specific (only its mod-$2$ fibration is).  No marker
+moves.
+Machine-checked: \veri{v646\_rm13\_reverse.py}.
+\mE\ (exact anchor identity; honest negatives; selective kill)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The ST31 degree-$24$/$20$ round
+(\texttt{E8.ST31DEG.01}).}
+The regular clocks of $G_{31}$ against the compiler clock ($25$
+checks, ${\sim}4$\,s, exact arithmetic).  \emph{The regular
+$24$-clock:} an explicit $w$ with free census $\{24{:}10\}$ and
+$|C_{G_{31}}(w)|=24$ (Springer); exact center relations $w^{12}=-1$
+and $w^6=J^3$ --- the $\mu_4$ center is a \emph{power} of the regular
+$24$-clock, and $\langle w\rangle/\mu_4=Z_6$ is exactly its free
+$6$-clock on the $60$ lines ($\{6{:}10\}$); the characteristic
+polynomial is $\chi_w=x^4+ix^2-1$ \emph{exactly} (a Gaussian-integral
+quartic factor of $\Phi_{24}$; all four eigenvalues primitive
+$\zeta_{24}$); the half-clock $w^2$ is the \emph{regular} $12$-element,
+not the compiler clock.  \emph{The clock kill (a parity theorem):}
+$c=w^2$ is impossible for \emph{any} order-$24$ $w$, even in
+$S_{240}$ --- the $12$-cycles of a square come in pairs from
+$24$-cycles ($4$-cycles in pairs from $8$-cycles), and
+$\mathrm{census}(c)=19{\times}12+3{\times}4$ has \emph{odd} counts;
+the full power-census scan confirms it.  \emph{The $20$-degree:} a
+regular $u$ with census $\{20{:}12\}$, $u^5=J^3$ \emph{central}
+(stronger than $J$-class), and $u^4$ acting \emph{freely} with census
+$\{5{:}48\}$, $48=240/5$ exactly (lines $\{5{:}12\}$).  Honest typing:
+$48=$ seam sites stays an \emph{observation} (no structural bridge
+here); $\gcar=5$ has only the census side; no marker moves.
+Machine-checked: \veri{v647\_st31\_degree24.py}.
+\mE\ (structural clock relations; parity-theorem kill) $+$ \mC\
+(typed observations)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The sign-uncertainty toolbox at $d=1$
+(\texttt{PRIME.SIGNUNC.01}).}
+The Bourgain--Clozel--Kahane / Cohn--Elkies sign-uncertainty toolbox
+read against the W3 window cone ($12$ checks, ${\sim}16$\,s; AST
+zero-firewall: no Riemann zero is read).  \emph{The dictionary is
+real:} the $d=1$ Mellin strip \emph{is} the critical strip --- the
+strip multiplier
+$m_{1/2}(t)=\pi^{it}\,\Gamma(\tfrac14-\tfrac{it}2)/\Gamma(\tfrac14+\tfrac{it}2)$
+is unimodular with phase slope at $t=0$ \emph{exactly}
+$L=\log\pi-\psi(\tfrac14)$ --- the same archimedean constant the W1
+dictionary froze as the $\delta_0$ weight ($25$ digits, dev $0$); the
+certificate constant reproduces ($J\to\log(\pi/2)$ within
+$5\times10^{-9}$) and the $d=1$ Mellin--Hankel functional equation
+locks the conventions ($10^{-22}$).  \emph{The typed negative:} the
+quantitative mechanism --- exponential interior-mass smallness
+$e^{-\gamma d}$ --- is powered by the strip \emph{half-width} and dies
+at $d=1$: the paper's own budget gives $e^{-E^*}=0.9665$ at
+$c=0.9/\pi$ where $<\tfrac12$ is needed (the machinery would need
+$d\ge21$), and the window family's negative structure sits
+$5.2\times$ outside the maximal BCK ball $1/\pi$ --- a BCK-type mass
+obstruction cannot certify $\widehat A_{a,h}\succeq0$; any W3 route
+through this toolbox must replace the dimension lever by a different
+large parameter (the window length acts as the \emph{ball radius},
+not the strip width).  \emph{Side findings (measured):}
+$\lambda_{\min}>0$ on all $67$ complete-comb windows (min
+$+8.26\times10^{-4}$, float-floor certified); the three truncated
+windows are precisely the \texttt{v618} set $\{1219,1292,1445\}$; and
+the positivity margin correlates with the $C=1$ contraction margin
+($\mathrm{corr}(\log\lambda_{\min},\log\varepsilon h)=+0.704$).  W3
+stays open; no marker move, no RH statement.
+Machine-checked: \veri{v648\_sign\_uncertainty.py}.
+\mE\ (dictionary anchors, $25$ digits) $+$ (\textsc{measured}) (typed
+negative; surface positivity) $+$ \mC\ (typed verdict)
 \par\smallskip
 
 % =====================================================================

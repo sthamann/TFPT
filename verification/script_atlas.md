@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`636` registered scripts · `708` ledger claims · `10` clusters.
+`642` registered scripts · `714` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (158 scripts)
+### `core` — Compiler core & the E₈ glue  (164 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -327,6 +327,18 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v631_w1_dictionary, v640_w1_boundary, v563, v631, v640 · cited: 3 e8 audit bootstrap, research contracts
 - **v642_w1_matrix** [E] `PRIME.WEIL.MATRIX.01` — **AUF OPERATOR-EBENE SCHLIESST DAS WÖRTERBUCH DIE VOLLE QUADRATISCHE FORM (h = 184, M = 368): 16-Moden-Blocknorm-Abstand eingefroren 6.7e−1 → hergeleitet 2.7e−3 → nach Maß-Ebenen-R
   - deps: v631_w1_dictionary, v640_w1_boundary, v641_w1_portability, v591_pole_rank_one, v563, v631, v640 · cited: 3 e8 audit bootstrap, research contracts
+- **v643_w1_theorem** [E] `PRIME.WEIL.THEOREM.01` — **DAS PROJEKTIONS-LEMMA SCHLIESST DEN LETZTEN W1-REST, DAS WÖRTERBUCH KOLLABIERT AUF EINEN SKALAR +1/D FÜR BEIDE SCHICHTEN (vorzeichen-positivitätskompatibel), DIE URSPRUNGSKONSTAN
+  - deps: v631_w1_dictionary, v640_w1_boundary, v641_w1_portability, v642_w1_matrix, v591_pole_rank_one, v563, v631, v640 · cited: 3 e8 audit bootstrap, research contracts
+- **v644_w2_form_density** [C] `PRIME.WEIL.W2.01` — Form-Dichte der geschachtelten Fenster-Räume im ungeraden Formsektor von Suzukis A_a, in ehrlichen Scheiben — **FEM-Dichte KLASSISCH verifiziert (H¹-Raten 1.000, L²-Raten 2.000 übe
+  - deps: v643_w1_theorem, PRIME.WEIL.OPERATOR.01, v563, v643 · cited: 3 e8 audit bootstrap, research contracts
+- **v645_klein_rp** [E/C/O] `QGEO.KLEINRP.01` — **DER ℤ₃-TWIST-SEKTOR IST REFLEXIONSPOSITIV auf dem Naht-Doppel-Gitter unter der Klein-Paarung (Spiegelung ∘ LADUNGSKONJUGATION, ω^{k·q}-Nullmoden-Phasen, η = (1,1) EINDEUTIG aus 3
+  - deps: v639_twist_ope, v628_orbifold_casimir, v623_covered_seam, v519, v622, v623, v628, v639 · cited: 3 e8 audit bootstrap
+- **v646_rm13_reverse** [E/X] `E8.RM13REV.01` — sind Compiler-Zahlen CODE-Operationen? **EHRLICH ZWEIGETEILT: die σ-fixierten Syndrome tragen EXAKT die Anker-Zerlegung (Leader-Gewichte (0,1,1,2), Norm 6, Anker = Familiensumme P3
+  - deps: v638_code_semantics, v626_e8_code, v624_external_lattice_audit, v624, v626, v638 · cited: 3 e8 audit bootstrap
+- **v647_st31_degree24** [E/C/X] `E8.ST31DEG.01` — **DAS μ₄-ZENTRUM IST EINE POTENZ BEIDER REGULÄRER UHREN (w⁶ = ±J mit χ_w = x⁴+ix²−1 exakt, primitive ζ₂₄; u⁵ = ±J zentral), UND DIE UHR-FRAGE c = w² IST PER PARITÄTSSATZ GETÖTET** 
+  - deps: v634_st31_structure, v633_orbit60_quotient, v629_root_incidence, v629, v633, v634 · cited: 3 e8 audit bootstrap
+- **v648_sign_uncertainty** [E/C/O] `PRIME.SIGNUNC.01` — **DAS WÖRTERBUCH IST ECHT UND 25-STELLIG VERANKERT (der d = 1-Mellin-Streifen IST der kritische Streifen; Phasensteigung = L = log π − ψ(¼) = das W1-δ₀-Gewicht), ABER DER QUANTITAT
+  - deps: PRIME.WEIL.OPERATOR.01, v618_uniform_constant, v619_flip_mechanics, v643_w1_theorem, v563, v591, v618, v631 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1337,22 +1349,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v563`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `REG.FREEZE.01`×17, `v312`×16, `FLAV.KQ.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `v563`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `REG.FREEZE.01`×17, `v312`×16, `FLAV.KQ.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v631_w1_dictionary** — `PRIME.WEIL.DICT.01`
-- **v632_ftransfer_pgl2** — `FTR.PGL2.01`
-- **v633_orbit60_quotient** — `E8.ZIQUOTIENT.01`
-- **v634_st31_structure** — `E8.ST31.01`
-- **v635_p_canonicity** — `PRIME.PCANON.01`
-- **v636_p_construction** — `PRIME.PCONSTRUCT.01`
 - **v637_fine_c1_bridge** — `PRIME.FINEC1.01`
 - **v638_code_semantics** — `E8.CODESEM.01`
 - **v639_twist_ope** — `QGEO.TWISTOPE.01`
 - **v640_w1_boundary** — `PRIME.WEIL.BOUNDARY.01`
 - **v641_w1_portability** — `PRIME.WEIL.PORTABLE.01`
 - **v642_w1_matrix** — `PRIME.WEIL.MATRIX.01`
+- **v643_w1_theorem** — `PRIME.WEIL.THEOREM.01`
+- **v644_w2_form_density** — `PRIME.WEIL.W2.01`
+- **v645_klein_rp** — `QGEO.KLEINRP.01`
+- **v646_rm13_reverse** — `E8.RM13REV.01`
+- **v647_st31_degree24** — `E8.ST31DEG.01`
+- **v648_sign_uncertainty** — `PRIME.SIGNUNC.01`
 

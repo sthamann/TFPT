@@ -3,7 +3,29 @@ remainder of v631
 (D6: the d <= 2 boundary cells and the second-order discretization term)
 is CLOSED SYMBOLICALLY, and the closure is certified at 20+ digits.
 
-The chain (Suzuki arXiv:2606.09096, eq. 1.3; v563/v630/v631 read-only):
+CONVENTION ERRATUM (2026-08-02, corrected the same day; machine
+evidence: v643_w1_theorem.py C0.1):
+  The w1 chain read Suzuki's eq. (1.3) with Lerch coefficient -1;
+  Suzuki's own Sec. 2.2 data (A = (1/2)(log 2 pi - psi(2)), g(0) = 0,
+  r_1'' = rho - 1/(2|t|)) LOCK it to +1/4.  The g_sm below is the
+  smooth layer of the chain kernel gtil := g - (5/4) Lerch, and every
+  identity below is a CORRECT, certified identity of gtil -- via the
+  exact transfer cgal_sm(gtil) = -4 cgal_sm(g) all numbers transfer
+  verbatim, so NO check changes.  Only the labels do: on Suzuki's TRUE
+  g the boundary equation is simply A_arch = -g''_smooth EXACTLY at
+  every lag, with NO constant and NO scalar -- the candidate origin
+  constant vanishes, kappa = 0 exactly (v643 P2.2), and the
+  "-(5/4)(log pi - psi(1/4)) delta_0" term below is the artifact of
+  the -1 misreading (it is the delta_0 weight OF THE MISREAD KERNEL,
+  not of Suzuki's g): the v563 near-cell scheme IS Suzuki's origin
+  bookkeeping.  The boundary constants B(0..2) remain exact
+  gtil-normalization data; their true-g counterparts Btil(0..2) are
+  computed in v643 P2.3.  Where the text below writes "Suzuki
+  delta_0 weight" or "g''_smooth", read the gtil-normalization used
+  by this chain; see the erratum and v643.
+
+The chain (Suzuki arXiv:2606.09096, eq. 1.3; v563/v630/v631 read-only;
+gtil-normalization per the erratum above):
 
   (B1) [E, sympy] the duplication identity psi(1/4) = -gamma - 3 log 2
        - pi/2 (the "one Gauss/duplication identity" typed in v631 D6).
@@ -77,8 +99,9 @@ Verdict enums (frozen): W1-BOUNDARY-CLOSED (all pass), BOUNDARY-OPEN,
 MIXED.
 
 FIREWALL: v563/v630/v631 read-only; no marker moves; no positivity
-claim, no RH statement; the L^2_0 projection stays the named last
-theorem-level W1 remainder.
+claim, no RH statement; the L^2_0 projection was the named last
+theorem-level W1 remainder at promotion time (since closed by the
+v643 projection lemma; see the erratum block above).
 
 PROVENANCE: discovery probe w1_boundary_closure_probe.py (2026-08-02,
 11/11, verdict W1-BOUNDARY-CLOSED; Suzuki arXiv:2606.09096 eq. 1.3).
@@ -356,11 +379,14 @@ def run():
         rhs = gsm_tent_point(dd) / 4 - (mp.mpf(5) / 4) * LL * (dd == 0)
         res6.append(abs(lhs - rhs) / abs(lhs))
         vals6.append((lhs, rhs))
-    check("B6.1 [E, 20+ digits] THE EXACT BOUNDARY EQUATION "
-          "A_arch = (1/4) g''_smooth - (5/4)(log pi - psi(1/4)) delta_0: "
-          "TFPT delta_0 weight = (1/4) Suzuki delta_0 weight + pole share"
-          " (= 0) - (5/4) L, verified against the tents d = 0,1,2 (worst "
-          "relative residual %s < 1e-22); L = %s, (5/4)L = %s"
+    check("B6.1 [E, 20+ digits] THE EXACT BOUNDARY EQUATION (gtil-"
+          "normalization, see erratum) A_arch = (1/4) gtil''_smooth "
+          "- (5/4)(log pi - psi(1/4)) delta_0: TFPT delta_0 weight = "
+          "(1/4) gtil delta_0 weight + pole share (= 0) - (5/4) L, "
+          "verified against the tents d = 0,1,2 (worst relative "
+          "residual %s < 1e-22); L = %s, (5/4)L = %s.  On Suzuki's "
+          "TRUE g the same tents read A_arch = -g''_smooth with NO "
+          "constant: kappa = 0 exactly (v643 P2.2)"
           % (mp.nstr(max(res6), 3), mp.nstr(LL, 25),
              mp.nstr(mp.mpf(5) / 4 * LL, 25)),
           max(res6) < mp.mpf(10) ** -22)
