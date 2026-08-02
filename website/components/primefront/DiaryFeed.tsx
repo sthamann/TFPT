@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  useCallback,
   useEffect,
   useMemo,
   useRef,
@@ -9,6 +10,7 @@ import {
 } from "react";
 import {
   PRIME_FRONT_UPDATES,
+  PRIME_FRONT_ARCHIVE_COUNT,
   type PrimeFrontUpdate,
 } from "@/lib/primeFront";
 import { StatusBadge } from "./StatusBadge";
@@ -120,20 +122,63 @@ type FeedEntry = PrimeFrontUpdate & { cls: VerdictClass; idx: number };
 export function DiaryFeed() {
   const [filter, setFilter] = useState<"all" | VerdictClass>("all");
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
-
-  const entries = useMemo<FeedEntry[]>(
-    () =>
-      PRIME_FRONT_UPDATES.map((u, idx) => ({
-        ...u,
-        cls: classify(u.verdict),
-        idx,
-      })),
-    [],
+  const [archive, setArchive] = useState<readonly PrimeFrontUpdate[] | null>(
+    null,
   );
+  const archiveRequested = useRef(false);
+  const rootRef = useRef<HTMLDivElement | null>(null);
+
+  /* The ~225 older entries live in a separate chunk (lib/primeFrontArchive)
+     so they stay out of the route's first-load JS. Fetch them once the
+     reader approaches the feed — or on first interaction, whichever
+     happens first. */
+  const loadArchive = useCallback(() => {
+    if (archiveRequested.current) return;
+    archiveRequested.current = true;
+    import("@/lib/primeFrontArchive")
+      .then((m) => setArchive(m.PRIME_FRONT_ARCHIVE))
+      .catch(() => {
+        archiveRequested.current = false;
+      });
+  }, []);
+
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el) return;
+    if (typeof IntersectionObserver === "undefined") {
+      loadArchive();
+      return;
+    }
+    const obs = new IntersectionObserver(
+      (obsEntries) => {
+        if (obsEntries[0]?.isIntersecting) {
+          loadArchive();
+          obs.disconnect();
+        }
+      },
+      { rootMargin: "1600px 0px" },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [loadArchive]);
+
+  const entries = useMemo<FeedEntry[]>(() => {
+    const all = archive
+      ? [...PRIME_FRONT_UPDATES, ...archive]
+      : PRIME_FRONT_UPDATES;
+    return all.map((u, idx) => ({
+      ...u,
+      cls: classify(u.verdict),
+      idx,
+    }));
+  }, [archive]);
+
+  /* Entries not yet downloaded (0 once the archive chunk has arrived). */
+  const pendingArchive = archive === null ? PRIME_FRONT_ARCHIVE_COUNT : 0;
 
   const counts = useMemo(() => {
     const c: Record<"all" | VerdictClass, number> = {
-      all: entries.length,
+      all: entries.length + pendingArchive,
       win: 0,
       promoted: 0,
       negative: 0,
@@ -141,7 +186,7 @@ export function DiaryFeed() {
     };
     for (const e of entries) c[e.cls] += 1;
     return c;
-  }, [entries]);
+  }, [entries, pendingArchive]);
 
   const filtered =
     filter === "all" ? entries : entries.filter((e) => e.cls === filter);
@@ -157,10 +202,13 @@ export function DiaryFeed() {
     return out;
   }, [visible]);
 
-  const remaining = filtered.length - visible.length;
+  const remaining =
+    filtered.length -
+    visible.length +
+    (filter === "all" ? pendingArchive : 0);
 
   return (
-    <div>
+    <div ref={rootRef}>
       <div className="flex flex-wrap items-center gap-2">
         {FILTERS.map((f) => {
           const active = filter === f;
@@ -170,6 +218,7 @@ export function DiaryFeed() {
               key={f}
               type="button"
               onClick={() => {
+                loadArchive();
                 setFilter(f);
                 setVisibleCount(INITIAL_VISIBLE);
               }}
@@ -185,6 +234,7 @@ export function DiaryFeed() {
               {meta ? meta.label : "All runs"}
               <span className="ml-1.5 text-[10px] opacity-70">
                 {counts[f]}
+                {pendingArchive > 0 && f !== "all" ? "+" : ""}
               </span>
             </button>
           );
@@ -235,17 +285,23 @@ export function DiaryFeed() {
             <>
               <button
                 type="button"
-                onClick={() => setVisibleCount((c) => c + STEP)}
+                onClick={() => {
+                  loadArchive();
+                  setVisibleCount((c) => c + STEP);
+                }}
                 className="rounded-full border border-slate-600/60 bg-slate-900/60 px-4 py-1.5 font-mono text-xs text-slate-200 transition hover:border-sky-400/50 hover:text-sky-200 motion-reduce:transition-none"
               >
                 Show {Math.min(STEP, remaining)} more
               </button>
               <button
                 type="button"
-                onClick={() => setVisibleCount(filtered.length)}
+                onClick={() => {
+                  loadArchive();
+                  setVisibleCount(filtered.length + pendingArchive);
+                }}
                 className="rounded-full border border-slate-700/50 bg-slate-900/40 px-4 py-1.5 font-mono text-xs text-slate-400 transition hover:border-slate-500 hover:text-slate-200 motion-reduce:transition-none"
               >
-                Show all {filtered.length}
+                Show all {filtered.length + (filter === "all" ? pendingArchive : 0)}
               </button>
             </>
           )}
@@ -259,7 +315,9 @@ export function DiaryFeed() {
             </button>
           )}
           <span className="font-mono text-[11px] text-slate-600">
-            {visible.length} of {filtered.length} shown
+            {visible.length} of{" "}
+            {filtered.length + (filter === "all" ? pendingArchive : 0)} shown
+            {pendingArchive > 0 && " · older runs load automatically"}
           </span>
         </div>
       )}

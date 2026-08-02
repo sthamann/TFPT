@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { SITE_URL } from "@/lib/utils";
-import { PRIME_FRONT_SECTIONS } from "@/lib/primeFront";
+import { PRIME_FRONT_SECTION_GROUPS } from "@/lib/primeFront";
 import { HonestyBanner } from "@/components/primefront/HonestyBanner";
+import { StorySixty } from "@/components/primefront/StorySixty";
+import { WhereWeAre } from "@/components/primefront/WhereWeAre";
 import { DiarySection } from "@/components/primefront/DiarySection";
 import { CompilerSchematic } from "@/components/primefront/CompilerSchematic";
 import { ShellCensus } from "@/components/primefront/ShellCensus";
@@ -34,7 +36,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta investigation: the signed E8 census, Hecke from geometry, the relative-trace identity and Weil structure (v535–v541), the T102–T125 induction sprint and the phase-2 certified map (one open object, R1), the uniform constant C = 1, the Lorentz congruence between the prime form and the cover lattice, E8 as a literal error-correcting code, the sixty-line reflection group G31, and the Suzuki W1 identification — theorem-closed after a same-day convention erratum (one scalar +1/D, κ = 0), with the honest implication map kept explicit: closing W1 does not move W3. Machine-verified modules v535–v648 inside a 643-script suite. No claim of progress toward the Riemann Hypothesis.",
+    "A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v648 inside a 643-script suite. No claim of progress toward the Riemann Hypothesis.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -93,9 +95,7 @@ export default function PrimeFrontPage() {
             </Link>
           </nav>
 
-          <HonestyBanner />
-
-          <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
+          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
             Research diary · 241 agent runs · 5452 sandbox checks · suite 643
             scripts
           </p>
@@ -103,26 +103,44 @@ export default function PrimeFrontPage() {
             The Prime Front
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
-            Primes are the simplest objects with the most complex behaviour.
-            This page tells — in ordinary language — how a discrete physics
-            compiler&apos;s bookkeeping kept speaking number theory, what
-            survived preregistered kills, and what is still honestly open.
+            The Prime Front is TFPT&apos;s number-theory line: a research
+            diary of how the compiler&apos;s E₈ bookkeeping kept producing
+            the classical machinery of primes. One identification is now a
+            machine-verified theorem; the RH-hard step is honestly open.
+            This page tells the whole story in ordinary language.
           </p>
+
+          <StorySixty />
+
+          <WhereWeAre />
+
+          <div className="mt-6">
+            <HonestyBanner />
+          </div>
 
           <BlindPrimeCallout />
 
-          <nav
-            aria-label="On this page"
-            className="mt-8 flex flex-wrap gap-2"
-          >
-            {PRIME_FRONT_SECTIONS.map((s) => (
-              <a
-                key={s.id}
-                href={`#${s.id}`}
-                className="rounded-full border border-slate-700/50 bg-slate-900/40 px-3 py-1 font-mono text-[11px] text-slate-400 transition hover:border-slate-500 hover:text-slate-200"
+          <nav aria-label="On this page" className="mt-8 space-y-3">
+            {PRIME_FRONT_SECTION_GROUPS.map((g) => (
+              <div
+                key={g.label}
+                className="flex flex-wrap items-baseline gap-2"
               >
-                {s.label}
-              </a>
+                <span className="w-full font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500 sm:w-44 sm:shrink-0">
+                  {g.label}
+                </span>
+                <span className="flex min-w-0 flex-wrap gap-2">
+                  {g.sections.map((s) => (
+                    <a
+                      key={s.id}
+                      href={`#${s.id}`}
+                      className="rounded-full border border-slate-700/50 bg-slate-900/40 px-3 py-1 font-mono text-[11px] text-slate-400 transition hover:border-slate-500 hover:text-slate-200"
+                    >
+                      {s.label}
+                    </a>
+                  ))}
+                </span>
+              </div>
             ))}
           </nav>
         </div>
@@ -130,10 +148,132 @@ export default function PrimeFrontPage() {
 
       <BigPictureSection />
 
-      {/* 1 — Hook */}
+      {/* 01 — Suzuki W1 */}
+      <DiarySection
+        id="suzuki-w1"
+        plain="The matrix this diary builds from primes turned out to be, exactly, the matrix of an operator the number theorist Suzuki had defined independently — and that identification is now a proved, machine-checked theorem."
+        eyebrow="01 · The Suzuki identification · v630 / v631 / v640–v644 / v648"
+        title="W1 closes as a theorem — after an honest erratum"
+        badge="machine-verified"
+        visual={<W1DictionaryMap />}
+      >
+        <p>
+          The RH architecture preregistered in v624 (contract
+          PRIME.WEIL.OPERATOR.01, citations web-verified: Suzuki
+          arXiv:2606.09096 and 2607.24830) starts with W1: identify the TFPT
+          window form with the Galerkin matrix of Suzuki&apos;s localized
+          Weil operator. First contact (v630):{" "}
+          <strong className="font-medium text-emerald-200">
+            the atom layers are the same object, literally
+          </strong>{" "}
+          — positions log n, weights Λ(n)/√n, exact on all 40 atoms — while
+          the smooth-layer comparison measured a non-scalar conversion: the
+          preregistered residual, with data.
+        </p>
+        <p>
+          Hours later, v631 resolved it: the residual{" "}
+          <em>is the zeta pole term</em>, and the follow-up rounds made the
+          dictionary sturdy — v640 closed the boundary cells symbolically,
+          v641 froze the dictionary and ran it unchanged on three fresh
+          windows (a preregistered kill test:{" "}
+          <strong className="font-medium text-slate-200">portable</strong>),
+          v642 lifted it to the full quadratic form at operator level.
+        </p>
+        <p>
+          <strong className="font-medium text-amber-200">
+            Erratum (2026-08-02, corrected the same day):
+          </strong>{" "}
+          that chain read Suzuki&apos;s eq. (1.3) with Lerch coefficient −1;
+          the paper&apos;s own §2.2 data lock +1/4 (v643, check C0.1). All
+          the chain&apos;s identities are correct identities of its kernel
+          g̃ = g − (5/4)·Lerch, and every measured number transfers verbatim
+          via the exact identity cgal(g̃) = −4·cgal(g) — only the labels
+          change: Suzuki&apos;s own smooth layer is{" "}
+          <span className="font-mono text-slate-200">+ρ</span> (not −4ρ),
+          the dictionary is the{" "}
+          <strong className="font-medium text-slate-200">
+            single scalar +1/D on both layers
+          </strong>{" "}
+          (sign-compatible with positivity), and the origin constant
+          vanishes, κ = 0 exactly.
+        </p>
+        <p>
+          On the corrected reading, v643 proves the{" "}
+          <strong className="font-medium text-emerald-200">
+            measure-level W1 theorem
+          </strong>
+          : Suzuki&apos;s L²₀ mean-zero condition is automatic on the u-side
+          (the projection lemma — the last named remainder closes), A_arch =
+          −g″_smooth exactly at every lag (3.4e−52), and the full form
+          equality holds at 1.28e−10 on the common odd sector. v644 starts
+          W2 honestly (classical FEM density at rate; Rayleigh–Ritz monotone
+          from above on nested spaces; λ_a = 0⁺ within ~1e−9, no sign
+          statement; the Mosco remainder named). And v648 types the W3 tool
+          diagnosis: the sign-uncertainty toolbox has a real 25-digit
+          dictionary to the critical strip, but its mass lever dies at
+          d = 1 — while the W3 surface itself is empirically positive on all
+          67 complete windows (min λ_min = +8.26e−4).
+        </p>
+        <p className="text-slate-400">
+          The honest map: W1 (theorem-closed) → W2 (started, not closed) →
+          W3 (uniform positivity — the RH-hard step, open; the toolbox
+          diagnosis closes one candidate route) → W4 (classical given
+          W2+W3). Closing W1 does not move W3. No RH claim.
+        </p>
+      </DiarySection>
+
+      {/* 02 — C = 1 */}
+      <DiarySection
+        id="uniform-constant"
+        plain="One measured constant controls every window with complete data — and the only two exceptions turned out to be missing data, not broken mathematics."
+        eyebrow="02 · The uniform constant · v618 / v619"
+        title="C = 1, exception-free — and the two violators were the data's edge"
+        badge="machine-verified"
+      >
+        <p>
+          The equidistribution conjecture of the theory-open section asks for{" "}
+          <span className="font-mono text-slate-200">
+            |q_real/q_model| ≤ C·h⁻¹
+          </span>{" "}
+          uniformly. The measured constant is now frozen:{" "}
+          <strong className="font-medium text-emerald-200">C = 1</strong>. On
+          the declared surface (69 floor-passed windows, h = 142…1445) the
+          model value keeps <em>one</em> sign on the whole ladder — no model
+          zero crossing anywhere — and on every lock-sign window{" "}
+          <span className="font-mono text-slate-200">eps·h ≤ 0.982</span>,
+          with tertile medians 0.61 / 0.45 / 0.39 falling with depth (v618).
+        </p>
+        <p>
+          Exactly two windows violated the bound, and both carried a{" "}
+          <span className="font-mono text-slate-200">q_real</span> sign flip.
+          v619 found the mechanism, and it is disarmingly concrete: a
+          window&apos;s atom demand runs to{" "}
+          <span className="font-mono text-slate-200">u ≤ 2α</span>, the
+          prime-power data cap sits at{" "}
+          <span className="font-mono text-slate-200">U_max = 12.899</span> —
+          and the two flip windows are exactly the two whose demand exceeds
+          the cap. Injecting the same truncation into healthy windows
+          reproduces the flips in sign <em>and</em> magnitude at both scales.
+        </p>
+        <p>
+          On the complete-comb surface — 67 windows — the C = 1 bound holds
+          with{" "}
+          <strong className="font-medium text-slate-200">
+            zero exceptions
+          </strong>
+          . The “sign-flip windows” are retired as data-boundary artifacts:
+          extending the surface needs more prime-power data, not new theory.
+          Scrambled combs break the bound by four orders of magnitude — the
+          constant is genuine arithmetic placement. No uniformity proof, no
+          RH statement.
+        </p>
+      </DiarySection>
+
+      {/* 03 — Hook */}
       <DiarySection
         id="hook"
-        eyebrow="01 · Hook"
+        plain="While checking its own bookkeeping, the project kept finding classical prime-number objects; this page asks which of those finds are mechanism and which are coincidence."
+        eyebrow="03 · Hook"
         title="What if the bookkeeping secretly speaks number theory?"
         badge="sandbox"
       >
@@ -197,10 +337,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 2 — Compiler */}
+      {/* 04 — Compiler */}
       <DiarySection
         id="compiler"
-        eyebrow="02 · The compiler in one picture"
+        plain="The whole theory starts from two fixed numbers, which force one specific eight-dimensional lattice — everything on this page is read off that lattice."
+        eyebrow="04 · The compiler in one picture"
         title="Two axioms, one lattice completion"
         badge="sandbox"
         visual={<CompilerSchematic />}
@@ -226,10 +367,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 3 — Signed census */}
+      {/* 05 — Signed census */}
       <DiarySection
         id="census"
-        eyebrow="03 · First discovery · Teil 11"
+        plain="Counting lattice points with signs produces, unexpectedly, a classical formula tied to the Gaussian integers and to pi."
+        eyebrow="05 · First discovery · Teil 11"
         title="The signed census: θ₃² · θ₄⁶ as a tensor factor"
         badge="sandbox"
         visual={<ShellCensus />}
@@ -265,10 +407,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 4 — Bridges */}
+      {/* 06 — Bridges */}
       <DiarySection
         id="bridges"
-        eyebrow="04 · Surprise bridges · Teil 12"
+        plain="The same counting reproduces a famous congruence from the proof that zeta(3) is irrational — and look-alike controls fail it."
+        eyebrow="06 · Surprise bridges · Teil 12"
         title="The census “knows” the Apéry numbers"
         badge="sandbox"
         visual={<AperyBridge />}
@@ -293,10 +436,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 5 — Kill chain */}
+      {/* 07 — Kill chain */}
       <DiarySection
         id="kill-chain"
-        eyebrow="05 · Honesty as a method · Teile 14, 19–25"
+        plain="The project deliberately tests its own favourite explanations to destruction — and publishes the failures as first-class results."
+        eyebrow="07 · Honesty as a method · Teile 14, 19–25"
         title="The kill chain — presented as a feature"
         badge="sandbox"
         visual={<KillChainTimeline />}
@@ -322,10 +466,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 6 — Predict */}
+      {/* 08 — Predict */}
       <DiarySection
         id="predict"
-        eyebrow="06 · Can it predict primes? · Teil 21"
+        plain="The lattice can say exactly whether a number is prime and what kind of prime it is — but not where the next prime lies; that limit is stated, not hidden."
+        eyebrow="08 · Can it predict primes? · Teil 21"
         title="Three honest channels — and one missing operator"
         badge="sandbox"
         visual={<PrimeDetector />}
@@ -355,10 +500,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 7 — Hecke */}
+      {/* 09 — Hecke */}
       <DiarySection
         id="hecke"
-        eyebrow="07 · The mechanism · Teile 27–32 · v535"
+        plain="The standard machinery of modular forms emerges from stepping between lattice neighbours — the first machine-verified module of this arc."
+        eyebrow="09 · The mechanism · Teile 27–32 · v535"
         title="Hecke from geometry — first load-bearing result"
         badge="machine-verified"
         visual={<NeighborStepping />}
@@ -394,10 +540,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 8 — Eichler */}
+      {/* 10 — Eichler */}
       <DiarySection
         id="eichler"
-        eyebrow="08 · The Eichler layer · Teile 33, 36 · v536"
+        plain="The lattice count splits into a smooth background plus an interference term, and the interference is exactly the square of a modular coefficient."
+        eyebrow="10 · The Eichler layer · Teile 33, 36 · v536"
         title="Smooth background + coherent interference"
         badge="machine-verified"
         visual={<TwoMelodies />}
@@ -417,10 +564,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 9 — Weight drop */}
+      {/* 11 — Weight drop */}
       <DiarySection
         id="weight-drop"
-        eyebrow="09 · Two-channel weight drop · Teile 35, 39"
+        plain="The easy half of the connection to zeta closes with classical tools; the hard half — the actual zeros — is untouched, and the page says so."
+        eyebrow="11 · Two-channel weight drop · Teile 35, 39"
         title="Abelian channel closed; cuspidal channel remains"
         badge="sandbox"
         visual={<CenterAtlas />}
@@ -445,10 +593,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 10 — Stage 4 */}
+      {/* 12 — Stage 4 */}
       <DiarySection
         id="stage-4"
-        eyebrow="10 · Stage-4 map · Teil 40"
+        plain="A map of the terrain shows the finite machine has only a two-point spectrum — far too small for the operator RH would need."
+        eyebrow="12 · Stage-4 map · Teil 40"
         title="Two-point spectrum; infinitely many still missing"
         badge="sandbox"
         visual={<SpectrumLadder />}
@@ -475,10 +624,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 11 — July 25 arc */}
+      {/* 13 — July 25 arc */}
       <DiarySection
         id="july-25-arc"
-        eyebrow="11 · The July 25 arc · Teile 51–64 · v538 / v539"
+        plain="Instead of hunting one infinite operator, the diary switched to a family of values inside a classical trace-formula frame — and isolated exactly two named obstructions."
+        eyebrow="13 · The July 25 arc · Teile 51–64 · v538 / v539"
         title="From finite machine to a Weil structure with two named obstructions"
         badge="sandbox"
         visual={<WeilArcMap />}
@@ -591,10 +741,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 12 — Program status (consolidated) */}
+      {/* 14 — Program status (consolidated) */}
       <DiarySection
         id="program-status"
-        eyebrow="12 · Where the program stands"
+        plain="Everything TFPT-specific has been compressed into one remaining object, I5 — provably equivalent to what RH needs, and honestly not proved."
+        eyebrow="14 · Where the program stands"
         title="Prime and Riemann Front: From Finite Hecke Structure to an Infinite Stabilized Trace Space"
         badge="sandbox"
         visual={
@@ -765,7 +916,7 @@ export default function PrimeFrontPage() {
               href="#compression"
               className="text-sky-300 underline decoration-sky-400/30 underline-offset-2 hover:text-sky-200"
             >
-              sections 20–22
+              sections 22–24
             </a>
             . Series complete: 3139/3139 sandbox checks at T125.
           </li>
@@ -788,10 +939,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 13 — Amplitude / transport route */}
+      {/* 15 — Amplitude / transport route */}
       <DiarySection
         id="amplitude-route"
-        eyebrow="13 · The amplitude route · Teile 67–72 · v540"
+        plain="A promising route through squared quantities hits a measured wall, and the wall's exact size is named inside the verified claim."
+        eyebrow="15 · The amplitude route · Teile 67–72 · v540"
         title="From the Dirac square root to a positive linear carrier — and the measured wall"
         badge="machine-verified"
         visual={
@@ -862,10 +1014,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 14 — Doors furnished */}
+      {/* 16 — Doors furnished */}
       <DiarySection
         id="doors-furnished"
-        eyebrow="14 · The doors get furnished · Teile 73–81"
+        plain="The remaining gap gets doors: no-go theorems for what cannot work, a calculus for the gap functional, and one named inequality that would close it."
+        eyebrow="16 · The doors get furnished · Teile 73–81"
         title="Two no-go theorems, a λ* calculus, a window proof — and one named inequality"
         badge="sandbox"
         visual={
@@ -993,10 +1146,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 15 — Three perspectives */}
+      {/* 17 — Three perspectives */}
       <DiarySection
         id="three-perspectives"
-        eyebrow="15 · Three new perspectives · Teile 82–84"
+        plain="Three reframes land at once — a term thought external is internal, the wall cuts across the symmetry rather than along it, and the hardest class lives exactly where the compiler is most at home."
+        eyebrow="17 · Three new perspectives · Teile 82–84"
         title="The arch term was internal, the wall is transversal, and the last class is the compiler's home"
         badge="sandbox"
         visual={
@@ -1071,10 +1225,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 16 — I5 geography */}
+      {/* 18 — I5 geography */}
       <DiarySection
         id="i5-geography"
-        eyebrow="16 · I5 geography · Teile 87–101"
+        plain="The remaining object I5 sits precisely between two decades-old research programmes, which frame the same gap from opposite sides."
+        eyebrow="18 · I5 geography · Teile 87–101"
         title="The I5 geography: two decades-old programs frame the same gap"
         badge="sandbox"
         visual={
@@ -1369,10 +1524,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 17 — The mechanism (T102) */}
+      {/* 19 — The mechanism (T102) */}
       <DiarySection
         id="mechanism"
-        eyebrow="17 · The mechanism · Teil 102"
+        plain="The moment where positivity gets hard is not a mystery: it is an exact crossing of two finite quantities, manufactured by a known coupling."
+        eyebrow="19 · The mechanism · Teil 102"
         title="The onset is manufactured — an anchored crossing, not a singularity"
         badge="sandbox"
         visual={<HandoverCrossing />}
@@ -1428,10 +1584,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 18 — The instrument rebuilt (T101 → T103) */}
+      {/* 20 — The instrument rebuilt (T101 → T103) */}
       <DiarySection
         id="instrument-race"
-        eyebrow="18 · The instrument rebuilt · Teile 101 → 103"
+        plain="What looked like a mathematical failure was a blunt tool — rebuilding the tool closed most of the map without changing the mathematics."
+        eyebrow="20 · The instrument rebuilt · Teile 101 → 103"
         title="The race, rerun: the slope halves and the map jumps to 44/64"
         badge="sandbox"
         visual={
@@ -1484,10 +1641,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 19 — Two doors converge (T102 + T103 → T104) */}
+      {/* 21 — Two doors converge (T102 + T103 → T104) */}
       <DiarySection
         id="two-doors"
-        eyebrow="19 · Convergence · Teile 102–104"
+        plain="Two independent attacks ended up pointing at the same single object, so the remaining hardness is one scalar per zone, not many."
+        eyebrow="21 · Convergence · Teile 102–104"
         title="Two doors, one object: the wing near-null direction"
         badge="sandbox"
         visual={<TwoDoorsConvergence />}
@@ -1535,10 +1693,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 20 — The compression (T105–T112) */}
+      {/* 22 — The compression (T105–T112) */}
       <DiarySection
         id="compression"
-        eyebrow="20 · The compression · Teile 105–112"
+        plain="Twenty diary parts squeeze one big matrix inequality down to a single boundary value — and a supposed wall turns out to be the measuring grid itself."
+        eyebrow="22 · The compression · Teile 105–112"
         title="From one matrix inequality down to one boundary value — then a wall that turned out to be a ruler"
         badge="sandbox"
       >
@@ -1639,10 +1798,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 21 — The certification sprint (T113–T119) */}
+      {/* 23 — The certification sprint (T113–T119) */}
       <DiarySection
         id="certification-sprint"
-        eyebrow="21 · The certification sprint · Teile 113–119"
+        plain="The compressed claim is then certified step by step, down to extreme depths, with the computer checking every rung."
+        eyebrow="23 · The certification sprint · Teile 113–119"
         title="The wall dissolves, the depth explodes, and the last inequality gets a textbook address"
         badge="sandbox"
         visual={<DepthReachCallout />}
@@ -1791,10 +1951,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 22 — The Harnack pair, the telescope, and the assembly (T120–T125) */}
+      {/* 24 — The Harnack pair, the telescope, and the assembly (T120–T125) */}
       <DiarySection
         id="harnack-telescope"
-        eyebrow="22 · The Harnack pair, the telescope, the assembly · Teile 120–125"
+        plain="The final assembly runs the whole chain end to end on 52 zones; what is still missing is uniformity — one sign plus one declared convention."
+        eyebrow="24 · The Harnack pair, the telescope, the assembly · Teile 120–125"
         title="Why the last constant is one, why the coupling resists, the direction flip that made the recursion carry — and the finale that composed the whole chain"
         badge="sandbox"
         visual={<TelescopeRungs />}
@@ -2639,10 +2800,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 23 — Meaning */}
+      {/* 25 — Meaning */}
       <DiarySection
         id="meaning"
-        eyebrow="23 · What would it mean"
+        plain="Four honestly calibrated levels of what this could mean — from done-and-verified to dream-not-claimed."
+        eyebrow="25 · What would it mean"
         title="Four calibrated levels — with caveats"
         badge="sandbox"
       >
@@ -2674,56 +2836,11 @@ export default function PrimeFrontPage() {
         </ol>
       </DiarySection>
 
-      {/* 24 — C = 1 */}
-      <DiarySection
-        id="uniform-constant"
-        eyebrow="24 · The uniform constant · v618 / v619"
-        title="C = 1, exception-free — and the two violators were the data's edge"
-        badge="machine-verified"
-      >
-        <p>
-          The equidistribution conjecture of the theory-open section asks for{" "}
-          <span className="font-mono text-slate-200">
-            |q_real/q_model| ≤ C·h⁻¹
-          </span>{" "}
-          uniformly. The measured constant is now frozen:{" "}
-          <strong className="font-medium text-emerald-200">C = 1</strong>. On
-          the declared surface (69 floor-passed windows, h = 142…1445) the
-          model value keeps <em>one</em> sign on the whole ladder — no model
-          zero crossing anywhere — and on every lock-sign window{" "}
-          <span className="font-mono text-slate-200">eps·h ≤ 0.982</span>,
-          with tertile medians 0.61 / 0.45 / 0.39 falling with depth (v618).
-        </p>
-        <p>
-          Exactly two windows violated the bound, and both carried a{" "}
-          <span className="font-mono text-slate-200">q_real</span> sign flip.
-          v619 found the mechanism, and it is disarmingly concrete: a
-          window&apos;s atom demand runs to{" "}
-          <span className="font-mono text-slate-200">u ≤ 2α</span>, the
-          prime-power data cap sits at{" "}
-          <span className="font-mono text-slate-200">U_max = 12.899</span> —
-          and the two flip windows are exactly the two whose demand exceeds
-          the cap. Injecting the same truncation into healthy windows
-          reproduces the flips in sign <em>and</em> magnitude at both scales.
-        </p>
-        <p>
-          On the complete-comb surface — 67 windows — the C = 1 bound holds
-          with{" "}
-          <strong className="font-medium text-slate-200">
-            zero exceptions
-          </strong>
-          . The “sign-flip windows” are retired as data-boundary artifacts:
-          extending the surface needs more prime-power data, not new theory.
-          Scrambled combs break the bound by four orders of magnitude — the
-          constant is genuine arithmetic placement. No uniformity proof, no
-          RH statement.
-        </p>
-      </DiarySection>
-
-      {/* 25 — Prime shadow */}
+      {/* 26 — Prime shadow */}
       <DiarySection
         id="prime-shadow"
-        eyebrow="25 · The prime shadow · v625"
+        plain="Within TFPT's narrative the direction of explanation is fixed: the geometry comes first, and primes read it out — even zeta appears as the shadow of a counting function."
+        eyebrow="26 · The prime shadow · v625"
         title="Primes enter after the geometry — exactly"
         badge="machine-verified"
       >
@@ -2764,10 +2881,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 26 — E8 code */}
+      {/* 27 — E8 code */}
       <DiarySection
         id="e8-code"
-        eyebrow="26 · The error-correcting code · v626 / v638"
+        plain="The E8 lattice literally is an error-correcting code, and the compiler's own symmetries pick out its bits."
+        eyebrow="27 · The error-correcting code · v626 / v638"
         title="E8 is literally a code — and the compiler reads its bits"
         badge="machine-verified"
       >
@@ -2805,10 +2923,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 27 — Lorentz congruence / Hodge chamber */}
+      {/* 28 — Lorentz congruence / Hodge chamber */}
       <DiarySection
         id="hodge-chamber"
-        eyebrow="27 · One Lorentz lattice · v624 / v627 / v635–v637"
+        plain="Two programmes that seemed unrelated were computing on the same lattice all along — and every data window lands in one chamber of it."
+        eyebrow="28 · One Lorentz lattice · v624 / v627 / v635–v637"
         title="The prime form and the cover lattice are the same geometry"
         badge="machine-verified"
         visual={<HodgeConeMap />}
@@ -2847,10 +2966,11 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 28 — ST31 */}
+      {/* 29 — ST31 */}
       <DiarySection
         id="sixty-lines"
-        eyebrow="28 · The sixty lines · v633 / v634"
+        plain="The quotient of the lattice is a classical sixty-line reflection group — and a tempting numerical coincidence about its size is killed, not celebrated."
+        eyebrow="29 · The sixty lines · v633 / v634"
         title="The μ₄ quotient is a classical reflection group — and a numerology is buried"
         badge="machine-verified"
       >
@@ -2886,79 +3006,6 @@ export default function PrimeFrontPage() {
           coincidence carries no subgroup structure. Also reproduced one
           level deeper: the compiler clock is <em>not</em> the ζ₁₂-regular
           element of G31 (census 19×12 + 3×4) — the v629 kill stands.
-        </p>
-      </DiarySection>
-
-      {/* 29 — Suzuki W1 */}
-      <DiarySection
-        id="suzuki-w1"
-        eyebrow="29 · The Suzuki identification · v630 / v631 / v640–v644 / v648"
-        title="W1 closes as a theorem — after an honest erratum"
-        badge="machine-verified"
-        visual={<W1DictionaryMap />}
-      >
-        <p>
-          The RH architecture preregistered in v624 (contract
-          PRIME.WEIL.OPERATOR.01, citations web-verified: Suzuki
-          arXiv:2606.09096 and 2607.24830) starts with W1: identify the TFPT
-          window form with the Galerkin matrix of Suzuki&apos;s localized
-          Weil operator. First contact (v630):{" "}
-          <strong className="font-medium text-emerald-200">
-            the atom layers are the same object, literally
-          </strong>{" "}
-          — positions log n, weights Λ(n)/√n, exact on all 40 atoms — while
-          the smooth-layer comparison measured a non-scalar conversion: the
-          preregistered residual, with data.
-        </p>
-        <p>
-          Hours later, v631 resolved it: the residual{" "}
-          <em>is the zeta pole term</em>, and the follow-up rounds made the
-          dictionary sturdy — v640 closed the boundary cells symbolically,
-          v641 froze the dictionary and ran it unchanged on three fresh
-          windows (a preregistered kill test:{" "}
-          <strong className="font-medium text-slate-200">portable</strong>),
-          v642 lifted it to the full quadratic form at operator level.
-        </p>
-        <p>
-          <strong className="font-medium text-amber-200">
-            Erratum (2026-08-02, corrected the same day):
-          </strong>{" "}
-          that chain read Suzuki&apos;s eq. (1.3) with Lerch coefficient −1;
-          the paper&apos;s own §2.2 data lock +1/4 (v643, check C0.1). All
-          the chain&apos;s identities are correct identities of its kernel
-          g̃ = g − (5/4)·Lerch, and every measured number transfers verbatim
-          via the exact identity cgal(g̃) = −4·cgal(g) — only the labels
-          change: Suzuki&apos;s own smooth layer is{" "}
-          <span className="font-mono text-slate-200">+ρ</span> (not −4ρ),
-          the dictionary is the{" "}
-          <strong className="font-medium text-slate-200">
-            single scalar +1/D on both layers
-          </strong>{" "}
-          (sign-compatible with positivity), and the origin constant
-          vanishes, κ = 0 exactly.
-        </p>
-        <p>
-          On the corrected reading, v643 proves the{" "}
-          <strong className="font-medium text-emerald-200">
-            measure-level W1 theorem
-          </strong>
-          : Suzuki&apos;s L²₀ mean-zero condition is automatic on the u-side
-          (the projection lemma — the last named remainder closes), A_arch =
-          −g″_smooth exactly at every lag (3.4e−52), and the full form
-          equality holds at 1.28e−10 on the common odd sector. v644 starts
-          W2 honestly (classical FEM density at rate; Rayleigh–Ritz monotone
-          from above on nested spaces; λ_a = 0⁺ within ~1e−9, no sign
-          statement; the Mosco remainder named). And v648 types the W3 tool
-          diagnosis: the sign-uncertainty toolbox has a real 25-digit
-          dictionary to the critical strip, but its mass lever dies at
-          d = 1 — while the W3 surface itself is empirically positive on all
-          67 complete windows (min λ_min = +8.26e−4).
-        </p>
-        <p className="text-slate-400">
-          The honest map: W1 (theorem-closed) → W2 (started, not closed) →
-          W3 (uniform positivity — the RH-hard step, open; the toolbox
-          diagnosis closes one candidate route) → W4 (classical given
-          W2+W3). Closing W1 does not move W3. No RH claim.
         </p>
       </DiarySection>
 
@@ -3383,7 +3430,7 @@ function ProgramStatusCallout() {
             href="#compression"
             className="text-sky-300 underline decoration-sky-400/30 underline-offset-2 hover:text-sky-200"
           >
-            sections 20–22
+            sections 22–24
           </a>
           . Not almost-RH. This is not RH evidence.
         </li>

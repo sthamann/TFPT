@@ -23,28 +23,13 @@ export function HonestyBanner() {
         >
           v535–v648 on this front
         </Link>
-        , inside a 643-script suite, all green). The sprint T102–T125
-        compressed the remaining arithmetic bound to one sign plus one declared
-        accounting convention; phase 2 (T126–T176) closed its measurement
-        programme as planned and stands as a certified map with one open
-        object (R1, classified as a near-degeneracy, not a size). Since then
-        the diary runs as backflow rounds: the uniform constant C = 1,
-        exception-free on the complete surface (v618/v619); the Lorentz
-        congruence identifying the prime determinant form with the cover
-        polarization lattice, and the Hodge chamber it buys (v624/v627,
-        v635–v637); E₈ as a literal error-correcting code with a
-        compiler-native bit dictionary (v626/v638); the sixty-line reflection
-        group G31 with the order-coincidence numerology killed (v633/v634);
-        and the Suzuki W1 identification — atom layer literal, smooth layer
-        derived, portable and closed at the matrix level (v630/v631,
-        v640–v642), then corrected by a same-day erratum and proved as a
-        measure-level theorem (v643: Suzuki&apos;s eq. (1.3) carries Lerch
-        +1/4, not −1; every measured number transfers verbatim, the true
-        dictionary is the single scalar +1/D with κ = 0), with W2 started
-        (v644) and the W3 sign-uncertainty toolbox typed as not
-        transferring at d = 1 (v648). Honest fence: closing W1 does not
-        move W3 (uniform positivity, the RH-hard step). No claim of
-        progress toward the Riemann Hypothesis is made.
+        , inside a 643-script suite, all green). One identification theorem
+        is closed on this front (W1, after a same-day erratum); the RH-hard
+        step (W3, uniform positivity) is open, and closing W1 does not move
+        it.{" "}
+        <strong className="font-semibold">
+          No claim of progress toward the Riemann Hypothesis is made.
+        </strong>
       </p>
       <p className="mt-3 max-w-3xl text-sm leading-relaxed text-amber-50/80">
         How this discipline works — the sandbox firewall, the kill criteria
@@ -59,6 +44,41 @@ export function HonestyBanner() {
         .
       </p>
       <details className="group mt-4">
+        <summary className="cursor-pointer list-none font-mono text-[11px] uppercase tracking-[0.18em] text-amber-300/80 transition-colors hover:text-amber-200">
+          <span
+            aria-hidden
+            className="mr-1.5 inline-block transition-transform group-open:rotate-90 motion-reduce:transition-none"
+          >
+            ▸
+          </span>
+          The full status paragraph (v535–v648), preserved verbatim
+        </summary>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-amber-50/80">
+          The sprint T102–T125
+          compressed the remaining arithmetic bound to one sign plus one declared
+          accounting convention; phase 2 (T126–T176) closed its measurement
+          programme as planned and stands as a certified map with one open
+          object (R1, classified as a near-degeneracy, not a size). Since then
+          the diary runs as backflow rounds: the uniform constant C = 1,
+          exception-free on the complete surface (v618/v619); the Lorentz
+          congruence identifying the prime determinant form with the cover
+          polarization lattice, and the Hodge chamber it buys (v624/v627,
+          v635–v637); E₈ as a literal error-correcting code with a
+          compiler-native bit dictionary (v626/v638); the sixty-line reflection
+          group G31 with the order-coincidence numerology killed (v633/v634);
+          and the Suzuki W1 identification — atom layer literal, smooth layer
+          derived, portable and closed at the matrix level (v630/v631,
+          v640–v642), then corrected by a same-day erratum and proved as a
+          measure-level theorem (v643: Suzuki&apos;s eq. (1.3) carries Lerch
+          +1/4, not −1; every measured number transfers verbatim, the true
+          dictionary is the single scalar +1/D with κ = 0), with W2 started
+          (v644) and the W3 sign-uncertainty toolbox typed as not
+          transferring at d = 1 (v648). Honest fence: closing W1 does not
+          move W3 (uniform positivity, the RH-hard step). No claim of
+          progress toward the Riemann Hypothesis is made.
+        </p>
+      </details>
+      <details className="group mt-2">
         <summary className="cursor-pointer list-none font-mono text-[11px] uppercase tracking-[0.18em] text-amber-300/80 transition-colors hover:text-amber-200">
           <span
             aria-hidden

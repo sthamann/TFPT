@@ -7,6 +7,7 @@ export function DiarySection({
   eyebrow,
   title,
   badge,
+  plain,
   children,
   visual,
 }: {
@@ -14,6 +15,8 @@ export function DiarySection({
   eyebrow: string;
   title: string;
   badge: PrimeFrontBadge;
+  /** One-sentence plain-language summary shown under the title. */
+  plain?: string;
   children: ReactNode;
   visual?: ReactNode;
 }) {
@@ -36,6 +39,14 @@ export function DiarySection({
         >
           {title}
         </h2>
+        {plain && (
+          <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
+            <span className="font-medium text-sky-300/90">
+              In plain words:{" "}
+            </span>
+            {plain}
+          </p>
+        )}
         <div className="mt-6 grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="min-w-0 space-y-4 break-words text-base leading-relaxed text-slate-300">
             {children}
