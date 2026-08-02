@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`643` registered scripts · `715` ledger claims · `10` clusters.
+`662` registered scripts · `734` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (164 scripts)
+### `core` — Compiler core & the E₈ glue  (182 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -339,6 +339,42 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v634_st31_structure, v633_orbit60_quotient, v629_root_incidence, v629, v633, v634 · cited: 3 e8 audit bootstrap
 - **v648_sign_uncertainty** [E/C/O] `PRIME.SIGNUNC.01` — **DAS WÖRTERBUCH IST ECHT UND 25-STELLIG VERANKERT (der d = 1-Mellin-Streifen IST der kritische Streifen; Phasensteigung = L = log π − ψ(¼) = das W1-δ₀-Gewicht), ABER DER QUANTITAT
   - deps: PRIME.WEIL.OPERATOR.01, v618_uniform_constant, v619_flip_mechanics, v643_w1_theorem, v563, v591, v618, v631 · cited: 3 e8 audit bootstrap, research contracts
+- **v650_orbifold_modular** [E/C/O] `QGEO.ORBMOD.01` — **ALLE NEUN Z[g,h] TREFFEN |θ[g/3,h/3]/η|² AUF < 1 %, DIE MODULARE S-KOVARIANZ IST GEMESSEN MIT SAUBERER N⁻⁴-RATE (das N⁻²-Gitterartefakt ist selbst S-kovariant und KÜRZT SICH), T 
+  - deps: v639_twist_ope, v645_klein_rp, v628_orbifold_casimir, v622, v623, v628, v639, v645 · cited: 3 e8 audit bootstrap
+- **v651_orbifold_assembly** [E/C/X] `QGEO.ORBASM.01` — **H²(ℤ₃, U(1)) = 0 PER MASCHINEN-ENUMERATION (27 Kozykel, alle symmetrisch: KEINE diskrete Torsion), UND VON SECHS KANDIDATEN ÜBERLEBEN {ganzzahliges Spektrum, eindeutiges Vakuum, 
+  - deps: v650_orbifold_modular, v645_klein_rp, v639_twist_ope, v622, v623, v628, v639, v645 · cited: 3 e8 audit bootstrap
+- **v652_orbifold_arf** [E/C] `QGEO.ORBARF.01` — **DIE 6⁶-KLASSIFIKATION ALLER SEKTOR-CHARAKTER-VERDRAHTUNGEN LÄSST GENAU {B, C3} ÜBRIG, DER EIN-FOCKRAUM-PIN ERZWINGT B, UND DIE μ₆-DEFEKT-LEITER MISST DIE VON C3 EXZIDIERTEN ZUSTÄ
+  - deps: v651_orbifold_assembly, v650_orbifold_modular, v645_klein_rp, v639_twist_ope, v622, v623, v628, v639 · cited: 3 e8 audit bootstrap
+- **v653_bond_defect** [E/C] `QGEO.BONDDEF.01` — **TWIST-SEKTOR = DECK-RANDBEDINGUNG = BOND-DEFEKT, KANONISCH UND EXAKT (unitäre Äquivalenz A_r = √3·R·P_r auf allen Moden, in ℚ(ζ₆) exakt, bei 16/48 UND 48/144), MIT D_can = L⁴ UND
+  - deps: v652_orbifold_arf, v651_orbifold_assembly, v639_twist_ope, v622, v623, v628, v639 · cited: 3 e8 audit bootstrap
+- **v654_st31_degree8** [E/X] `E8.ST31D8.01` — **JEDE Springer-reguläre d-Uhr von G31 erfüllt x^{d/4} = ±i·Id, einen ERZEUGER von μ₄ (nie ±1; eine Formel aus der Exponenten-Systematik: alle Exponenten ≡ 3 mod 4); DIE UMKEHRUNG 
+  - deps: v634_st31_structure, v647_st31_degree24, v633_orbit60_quotient, v629, v633, v634, v647 · cited: 3 e8 audit bootstrap
+- **v655_w2_mosco** [C/O] `PRIME.WEIL.MOSCO.01` — **DIE RESOLVENTEN-FAMILIE (A_M + 1)⁻¹ IST CAUCHY ENTLANG DER VERFEINERUNG (Raten ~ 1.0 auf allen 5 Testvektoren) UND IHRE H_log-NORMEN BLEIBEN UNIFORM BESCHRÄNKT** — die zwei messb
+  - deps: v644_w2_form_density, PRIME.WEIL.OPERATOR.01, v563, v643, v644 · cited: 3 e8 audit bootstrap, research contracts
+- **v656_margin_link** [E/C] `PRIME.MARGINLINK.01` — **DAS PRÄREGISTRIERTE TOR BESTEHT (rank-kubische h-Kontrolle: ρ_partial = +0.477, p = 1e−4; (h,α)-Robustheit ρ = +0.701), ABER DER MECHANISMUS IST EINE IDENTIFIKATION, KEIN UNABHÄN
+  - deps: v618_uniform_constant, v648_sign_uncertainty, v586_pnt_lock_direction, v563, v591, v596, v618, v637 · cited: 3 e8 audit bootstrap, research contracts
+- **v657_rid_alignment** [E/C] `PRIME.RIDGEOM.01` — **DIE EXAKTE 2D-FORMEL r_id = (1 − q·tan²θ)/(1 − tan²θ) (max dev 3.4e−10 auf allen 67 Fenstern) MIT STRUKTUR-VORZEICHEN AUF JEDEM FENSTER (θ < 45°, B < 0, q > 1) — DAS DEFIZIT IST 
+  - deps: v656_margin_link, v618_uniform_constant, v563, v591, v618, v637 · cited: 3 e8 audit bootstrap, research contracts
+- **v658_w3_uniform_bound** [E/C] `PRIME.W3BOUND.01` — Risiko-Survey — **DER TREND IST q-GETRAGEN (Slope-Anteile q +0.64 / tan² +0.36; Identität β_P = β_q + β_t exakt), DIE KREUZUNGSRISIKO-MODELLE SETZEN h* ~ 3.4e3 (POW) / 9.1e3 (LOG) 
+  - deps: v657_rid_alignment, v656_margin_link, v563, v591, v618 · cited: 3 e8 audit bootstrap, research contracts
+- **v659_w3_landscape** [C] `PRIME.W3LAND.01` — **λ_min > 0 AUF ALLEN 635 LANDSCHAFTS-PUNKTEN (Positivität geht NIRGENDS verloren, auch in keiner Nadel!), ALLE P > 1-EXKURSIONEN SIND θ → 90°-ROTATIONS-ARTEFAKTE DER 2D-REDUKTION,
+  - deps: v658_w3_uniform_bound, v657_rid_alignment, v668_ground_truth, v563, v591, v618 · cited: 3 e8 audit bootstrap, research contracts
+- **v660_theta_predicate** [E/C] `PRIME.THETAPRED.01` — **EHRLICHES PRÄREGISTRIERTES ERGEBNIS: THETA-PRED-FAIL — 47/52 NADELN SIND DIAGONAL-CROSSINGS DER DEFLATIERTEN 2×2 (Leak ≈ 1.0: KEIN 2-LEVEL-PARTNER), DAS PRÄDIKAT f = λ_lock − μ₁ 
+  - deps: v659_w3_landscape, v657_rid_alignment, v563, v591, v618 · cited: 3 e8 audit bootstrap, research contracts
+- **v661_garding** [C] `PRIME.GARDING.01` — der benannte fehlende W2-Baustein, VERMESSEN — **c > 0 AUF JEDER STUFE (c(736, 1) = 0.180, c(736, 4) = 0.676) UND a-UNIFORM BEI FESTEM M-VERHÄLTNIS (die eigentliche W2-Anforderung,
+  - deps: v655_w2_mosco, v644_w2_form_density, v563, v643, v644 · cited: 3 e8 audit bootstrap, research contracts
+- **v662_garding_edgeband** [C] `PRIME.GARDEDGE.01` — **BEIDE WIDERLEGT: die gefaltete H_log-Norm heilt den Drift NICHT (c_fold(736,1) = 0.18151 ≈ ungefaltet), der Kanten-Cutoff ist VERLUSTFREI (C_edge ≤ C-Budget: der Drift ist keine 
+  - deps: v661_garding, v655_w2_mosco, v563, v643 · cited: 3 e8 audit bootstrap, research contracts
+- **v663_garding_envelope** [E/C] `PRIME.GARDENV.01` — **DAS TOTAL-SYMBOL WÄCHST, SUB-LOG, GEMESSEN a-UNIFORM: s_tot ≥ c₀·w*(t) − C₀ MIT (c₀, C₀) ≈ (0.021, 0.055) AUF DER GANZEN FAMILIE — „FLACH“ WAR EIN t-BEREICHS-ARTEFAKT** (der v662
+  - deps: v662_garding_edgeband, v661_garding, v655_w2_mosco, v563, v643 · cited: 3 e8 audit bootstrap, research contracts
+- **v665_keiper_li** [E] `PRIME.KEIPERLI.01` — **KAMM (2000 Nullstellen, γ_max = 2515.3) vs NULLSTELLENFREIE ARITHMETIK (Kontur-Extraktion; λ₁ = 1 + γ/2 − log(4π)/2 EXAKT, dev 0.0; Binomial = Kontur auf 7.8e−92) — KONSISTENT FÜ
+  - deps: v666_turing_cert, v643_w1_theorem, v563, v589, v591, v643 · cited: 3 e8 audit bootstrap
+- **v666_turing_cert** [E] `PRIME.TURINGCERT.01` — **DER KAMM IST VOLLSTÄNDIG UNTERHALB γ_max = 2515.3: alle 1999 Mittelpunkt-Sprossen im S-Band (max |S_est| = 0.5151 < 2.5), TURING-INTEGRALE BEI 5 % DER LEHMAN-SCHRANKE (persistent
+  - deps: v665_keiper_li, v589 · cited: 3 e8 audit bootstrap
+- **v667_baez_duarte** [C] `PRIME.BAEZDUARTE.01` — ein EXTERNES Vergleichs-Galerkin für die Suzuki-Route — **VASYUNIN-GRAM AUF 1.7e−31 GEGEN DIREKTE INTEGRATION, C_BD = 2 + γ − log 4π UNABHÄNGIG AUS DEM NULLSTELLEN-KAMM + RvM-TAIL 
+  - deps: v661_garding, v659_w3_landscape, v666_turing_cert, v563, v589 · cited: 3 e8 audit bootstrap, research contracts
+- **v668_ground_truth** [E/C] `PRIME.GROUNDTRUTH.01` — die positive UND die negative Kontrolle der Weil-Positivitäts-Maschinerie, EIN Modul aus BEIDEN Probes — **IHARA-GT-CONFIRMED: auf drei BEWIESENEN Ramanujan-Graphen ist die Toeplit
+  - deps: v659_w3_landscape, v658_w3_uniform_bound, v667_baez_duarte, v563, v618 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -564,7 +600,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (198 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (199 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -963,6 +999,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v575_cr_continuous_uniflow, v571_cr_discrete_corners, v425_dyn_transfer_universal, v99, v159, v425, v575 · cited: research contracts
 - **v649_discipline_audit** [E/C/O/X] `META.DISCIPLINE.01` — die Suite parst SICH SELBST und zertifiziert ihre Prozess-Disziplin als eingefrorene Mindestwerte: **214 Ledger-Zeilen dokumentieren Kills/ehrliche Negative/Retypes, 1469 Must-fail
   - deps: v84_frozen_registry, v632_ftransfer_pgl2, PRIME.WEIL.OPERATOR.01, v100_numerology_null_mc, v84, v100 · cited: 3 e8 audit bootstrap
+- **v664_look_elsewhere** [E/X] `META.LOOKELSEWHERE.01` — das Bingo-Budget der getypten [C]-Koinzidenzen, quantifiziert — **N = 42 STRUKTUR-SLOTS, K = 19 TREFFER, 6 KILLS ALS 0-TREFFER-TRIALS IM BUDGET; GLOBAL p = 5.08e−3 IM KONSERVATIVST
+  - deps: v649_discipline_audit, v624_external_lattice_audit, v626_e8_code, v638_code_semantics, v629_root_incidence, v634_st31_structure, v100, v624 · cited: 3 e8 audit bootstrap
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (183 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1351,22 +1389,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `v563`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v312`×16, `FLAV.KQ.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×40, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v312`×16, `FLAV.KQ.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v638_code_semantics** — `E8.CODESEM.01`
-- **v639_twist_ope** — `QGEO.TWISTOPE.01`
-- **v640_w1_boundary** — `PRIME.WEIL.BOUNDARY.01`
-- **v641_w1_portability** — `PRIME.WEIL.PORTABLE.01`
-- **v642_w1_matrix** — `PRIME.WEIL.MATRIX.01`
-- **v643_w1_theorem** — `PRIME.WEIL.THEOREM.01`
-- **v644_w2_form_density** — `PRIME.WEIL.W2.01`
-- **v645_klein_rp** — `QGEO.KLEINRP.01`
-- **v646_rm13_reverse** — `E8.RM13REV.01`
-- **v647_st31_degree24** — `E8.ST31DEG.01`
-- **v648_sign_uncertainty** — `PRIME.SIGNUNC.01`
-- **v649_discipline_audit** — `META.DISCIPLINE.01`
+- **v657_rid_alignment** — `PRIME.RIDGEOM.01`
+- **v658_w3_uniform_bound** — `PRIME.W3BOUND.01`
+- **v659_w3_landscape** — `PRIME.W3LAND.01`
+- **v660_theta_predicate** — `PRIME.THETAPRED.01`
+- **v661_garding** — `PRIME.GARDING.01`
+- **v662_garding_edgeband** — `PRIME.GARDEDGE.01`
+- **v663_garding_envelope** — `PRIME.GARDENV.01`
+- **v664_look_elsewhere** — `META.LOOKELSEWHERE.01`
+- **v665_keiper_li** — `PRIME.KEIPERLI.01`
+- **v666_turing_cert** — `PRIME.TURINGCERT.01`
+- **v667_baez_duarte** — `PRIME.BAEZDUARTE.01`
+- **v668_ground_truth** — `PRIME.GROUNDTRUTH.01`
 

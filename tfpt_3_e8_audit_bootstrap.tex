@@ -3355,6 +3355,434 @@ Machine-checked: \veri{v649\_discipline\_audit.py}.
 \mE\ (censuses, replay, anchor recomputes) $+$ \mC\ (the typed limit)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The orbifold modular data
+(\texttt{QGEO.ORBMOD.01}).}
+The modular level of the $\mathbb{Z}_3$ orbifold of the seam, on the
+lattice ($17$ checks, ${\sim}25$\,s).  All nine twisted-sector
+partition functions $Z[g,h]$ of the seam double are real positive
+with exact conjugation degeneracies and match the continuum
+$|\theta[g/3,h/3]/\eta|^2$ at $<1\%$ on $\ln Z$ ($N=48$; three
+$\tau$); the Casimir slopes reproduce the \texttt{v628} coefficients
+per deck class.  \emph{S is measured:} the modular S-covariance
+converges with a clean common $N^{-4}$ rate ($4.06$--$4.32$ over
+$N=24/48/96$) while the single-lattice deviation from the continuum
+falls only at $N^{-2}$ --- the leading lattice artifact is itself
+S-covariant and \emph{cancels} in the S-relation.  \emph{T is exact:}
+the discrete Dehn twist realizes T as the $\mathbb{Z}_6$ sector map
+$(g,h)\to(g,g{+}h)\times(-1)^F$ at machine precision
+($3.6\times10^{-13}$; continuum T-phases are not resolvable in the
+real-positive trace convention --- honest scope).  The twisted
+characters carry $h_\sigma=1/36$ (rel $5.6\times10^{-4}$) with the
+parafermionic $1/6$ gap, and $\mathrm{deck}^3=(-1)^F$ closes exactly
+as $\mathbb{Z}_6$ trace arithmetic including the cover factorization;
+chiral phases, continuum T-phases and continuum OS stay typed open;
+\texttt{GATE.QGEO} does not move.
+Machine-checked: \veri{v650\_orbifold\_modular.py}.
+\mE\ (sectors, characters, spin structure) $+$ (\textsc{measured})
+(S-covariance) $+$ \mC\ (typed continuum remainder)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The orbifold assembly
+(\texttt{QGEO.ORBASM.01}).}
+The projection sum, settled by machine cohomology and a candidate
+census ($17$ checks, ${\sim}35$\,s).  $H^2(\mathbb{Z}_3,U(1))=0$ by
+enumeration ($27$ cocycles, all symmetric): there is \emph{no}
+discrete torsion for a pure $\mathbb{Z}_3$ orbifold.  Of six assembly
+candidates, the survivors of \{integer spectrum, unique vacuum, S
+measured clean, T exact\} are exactly $\{B, C3\}$: the naive
+$\mathbb{Z}_3$ dies by an \emph{exact} T violation $3.5\times10^{-3}$
+(its charge-$3$ content --- T kills the naive $\mathbb{Z}_3$
+exactly), $C1$ by S stalling, $C2$ has no vacuum at all, $A'$
+additionally by the wrong first twisted exponent ($5/18$, not
+$1/9$).  The seam data then discriminate: $B$ keeps every measured
+$c=0$ sector ground and matches the Klein phase $\eta=(1,1)$ of
+\texttt{v645}, while $C3$ (the Arf/GSO twin) excises all odd-sector
+grounds --- \emph{the seam assembly is $B$}, the $\mathbb{Z}_6$ deck
+quotient with uniform charge-$0$ projection (data-backed at this
+round; hardened structurally by \texttt{v652}).  The chiral phase
+$e^{-2\pi i\tilde a b}$ is measured.  \texttt{GATE.QGEO} does not
+move.
+Machine-checked: \veri{v651\_orbifold\_assembly.py}.
+\mE\ (cohomology, census, exact T) $+$ \mC\ (data-backed B-vs-C3
+pick)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Arf structure of the assembly
+(\texttt{QGEO.ORBARF.01}).}
+The B-vs-C3 kill, decided structurally ($15$ checks, ${\sim}30$\,s).
+The $\mu_6$ defect ladder measures the C3-excised states
+\emph{directly}: ladder exponents $2\Delta=(1/18, 2/9, 1/2)$ at rel
+devs $<8\times10^{-4}$, the half-twist Klein Gram exactly PSD, and
+the exact charge-resolved minima $(0,1,4,9,4,1)/36$ are the measured
+sector grounds; $C3$'s odd-sector predictions $85/18$ and $81/18$
+exceed the measurements by factors $85.0$ and $9.0$ (the defect
+string is exactly charge-neutral: $C3$ excises states that exist on
+the lattice seam with positive Klein norm).  The classification pin:
+among \emph{all} $6^6=46656$ sector-character wirings exactly
+$\{B, C3\}$ survive the exact lattice degeneracies, and the
+single-Fock-space requirement forces $B$.  Honest: the earlier
+\texttt{v639} $2/9$ read alone is B-vs-C3-\emph{blind} (both coincide
+exactly on the even sectors); the new $\tau$ datum is the OPE
+exponent $1/18$.  \texttt{GATE.QGEO} does not move.
+Machine-checked: \veri{v652\_orbifold\_arf.py}.
+\mE\ (classification, pin, excision data) $+$ \mC\ (typed premise
+remainder)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The bond-defect theorem
+(\texttt{QGEO.BONDDEF.01}).}
+The last orbifold premise upgraded to a lattice theorem ($18$ checks,
+${\sim}40$\,s).  \emph{The theorem:} the deck-character blocks of the
+covered seam \emph{are} the one-bond-defect chains, unitarily and
+exactly ($A_r=\sqrt3\,R P_r$ on all modes, exact in
+$\mathbb{Q}(\zeta_6)$, at $16/48$ and $48/144$; defect phase $=$ deck
+character): twist sector $=$ deck boundary condition $=$ bond defect,
+canonically; $D_{\mathrm{can}}=L^4$ and $D_{\mathrm{can}}^3=-1$ hold
+as exact operator identities (the quarter clock fixes the canonical
+section lift).  \emph{Gauge and pin:} the defect position is pure
+gauge (a symbolic telescoping theorem in all $16$ free bond phases),
+and the geometry pins the gauge class --- one uniform twist unit per
+mark (cocycle support $=$ the \texttt{v622} mark set), window
+boundary at a crossing $\Leftrightarrow$ defect at a mark.  \emph{The
+exclusion census:} the base chain has no other $\mathbb{Z}_3$; site
+potentials, amplitude defects, sign defects and alternating weights
+are killed exactly; an isospectral real NN chain \emph{exists}
+($7.8\times10^{-16}$) --- honestly documented: purely spectral data
+cannot exclude it, but it is no $\mathbb{Z}_3$-twist realization and
+the measured string data discriminate it.  The continuum CFT
+statement and the seam identification stay typed; \texttt{GATE.QGEO}
+does not move.
+Machine-checked: \veri{v653\_bond\_defect.py}.
+\mE\ (lattice theorem, gauge pin, exclusion census) $+$ \mC\ (typed
+continuum remainder)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The ST31 degree-$8$ round and the
+$d/4$ theorem (\texttt{E8.ST31D8.01}).}
+The last clock census, unified ($30$ checks, ${\sim}10$\,s, exact
+arithmetic).  \emph{The $d/4$ theorem:} for every degree
+$d\in\{8,12,20,24\}$ the Springer-regular $d$-clocks of $G_{31}$
+satisfy $x^{d/4}=\pm i\,\mathrm{Id}$ --- a \emph{generator} of
+$\mu_4$, never $\pm1$ (one formula from the exponent systematics:
+all exponents of $G_{31}$ are $3\bmod4$).  The converse is exact at
+$d\in\{8,20,24\}$, and the unique exception at $d=12$ is the
+\emph{compiler-clock class}: exactly $1280$ extra elements $=$ the
+classes of $c$ and its Galois twin, with
+$\chi_c=(x-i)^2(x^2+ix-1)$ half the regular-$12$ Springer block ---
+all eigenvalues satisfy $\lambda^3=-i$, which is exactly why
+$c^3=J^3$ is central; the compiler-clock classes are the \emph{only}
+non-regular clocks in all of $G_{31}$ whose $d/4$-th power generates
+the center.  The order-$8$ landscape is complete ($10560$ elements,
+$480$ regular $=2$ Galois classes, $\chi=(x^2+i)^2$ exact) with the
+honest kill that ``free $\Rightarrow$ regular'' is \emph{false} at
+$d=8$ (and already at order $4$); degrees $=$ free orders divisible
+by $4$ above $4$.  No marker moves.
+Machine-checked: \veri{v654\_st31\_degree8.py}.
+\mE\ (census, theorem, controls; honest kill)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The W2 Mosco preparation
+(\texttt{PRIME.WEIL.MOSCO.01}).}
+Measurable surrogates for the typed \texttt{v644} remainder ($7$
+checks, ${\sim}80$\,s).  The instability finding, typed:
+$\lambda_a(\log 16)=0^+$ within the discretization error and the
+ground-mode $L^2$ distances do \emph{not} converge ---
+eigen-\emph{direction} observables are not float-certifiable at this
+$a$; any W2 route must run through resolvent/form observables (which
+is what norm-resolvent convergence asserts).  The preparation: the
+discrete resolvents $(A_M+1)^{-1}$ are Cauchy along the refinement
+(rates ${\sim}1.0$ on all five test vectors) and the $H_{\log}$
+norms of the normalized resolvent family stay \emph{uniformly
+bounded} --- the two measurable prerequisites of the Mosco theorem;
+recovery sequences converge and the liminf direction survives the
+wiggle test.  The named remainder is the discrete G\aa rding
+inequality (below); W2 stays open, no positivity claim, no RH
+statement.
+Machine-checked: \veri{v655\_w2\_mosco.py}.
+(\textsc{measured}) (resolvent Cauchy, uniform $H_{\log}$) $+$ \mC\
+(typed eigen-scale collapse and remainder)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The margin bridge, typed
+(\texttt{PRIME.MARGINLINK.01}).}
+Does the positivity margin $\lambda_{\min}$ carry information about
+the $C=1$ load $\varepsilon h$ beyond the depth trend? ($11$ checks,
+${\sim}10$\,s.)  The preregistered gate \emph{passes} (rank-cubic
+$h$-control $\rho_{\mathrm{partial}}=+0.477$, $p=10^{-4}$;
+$(h,\alpha)$ robustness $+0.701$) --- but the mechanism is an
+\emph{identification}, not an independent link:
+$q_r=w_{\mathrm{lock}}^{\mathsf T}\widehat A\,w_{\mathrm{lock}}$
+exactly ($1.5\times10^{-7}$), so
+$\lambda_{\min}\approx r_{\mathrm{id}}\cdot
+q_r/\|w_{\mathrm{lock}}\|^2_G$ and the window form reads its
+\emph{own} $C=1$ defect along the lock direction (minimal mode
+lock-enriched, median angle $9.1°$).  The killer test is typed
+accordingly; no positivity claim, no RH statement.
+Machine-checked: \veri{v656\_margin\_link.py}.
+\mE\ (surface reproduction) $+$ (\textsc{measured}) (gate,
+mechanism) $+$ \mC\ (typed identification)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The $r_{\mathrm{id}}$ geometry
+(\texttt{PRIME.RIDGEOM.01}).}
+What drives the alignment factor ($15$ checks, ${\sim}10$\,s).  The
+closed formula: in the deflated 2D frame
+$r_{\mathrm{id}}=(1-q\tan^2\theta)/(1-\tan^2\theta)$ \emph{exactly}
+(max dev $3.4\times10^{-10}$ on all $67$ windows), with structural
+signs on every window ($\theta<45°$, $B<0$, $q>1$).  The deficit is
+\emph{angle-driven} (share ${\sim}0.79$), not arithmetic: after
+$h$-control no arithmetic carrier passes the Bonferroni-honest gate.
+The last atom sits at the window edge identically (the frame-A edge
+$e^{2\alpha}=N^2$ is itself a prime power).  $r_{\mathrm{id}}$ is
+\emph{informative} (cubic-in-$\log h$ $R^2=0.618<0.80$; the depth
+trend honestly documented).  On this surface W3 reduces to
+\emph{lock sign plus the uniform bound} $q\tan^2\theta\le1-\delta$.
+Machine-checked: \veri{v657\_rid\_alignment.py}.
+\mE\ (closed 2D formula) $+$ (\textsc{measured}) (drivers, honest
+controls) $+$ \mC\ (typed W3 reduction)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The W3 uniform bound, surveyed
+(\texttt{PRIME.W3BOUND.01}).}
+Risk survey of $P:=q\tan^2\theta\le1-\delta$ ($11$ checks,
+${\sim}20$\,s).  The slope identity $\beta_P=\beta_q+\beta_t$ is
+exact; the $h$-trend of $P$ is carried by $q$ (shares $+0.64$ vs
+$+0.36$); the crossing-risk models put the point crossing at
+$h^*\sim3.4\times10^3$ (POW) / $9.1\times10^3$ (LOG) /
+$1.8\times10^4$ (SAT) --- the family margin
+$\delta_{\mathrm{family}}=0.036$ (max $P=0.9636$ at $h=859$) is
+\emph{not} safe to extrapolate; and the construction is
+$\alpha$-\emph{fragile}: $\max|dP|/P=0.59$ over
+$\pm2.5\%/\pm5\%$ shifts (bar $0.15$) --- $P$ sits on a thin
+resonance of the frame-A coupling.  Verdict
+\textsc{w3ub-fragile}, honestly typed; no RH statement.
+Machine-checked: \veri{v658\_w3\_uniform\_bound.py}.
+\mE\ (slope identity) $+$ (\textsc{measured}) (risk numbers,
+fragility) $+$ \mC\ (typed verdict)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The W3 resonance landscape
+(\texttt{PRIME.W3LAND.01}).}
+Mapping $P(\alpha)$ around the frame-A points ($14$ checks,
+${\sim}240$\,s).  The landscape is \emph{peaked}: $52$ needles
+across $8$ slices (fine FWHM median $2.5\times10^{-4}$ in $\alpha$);
+frame-A points are \emph{not} preferentially on peaks (quantile rank
+$0.24$ vs null $0.5$); $P>0.95$ lives on ${\sim}5\%$ of the surveyed
+space and on $0.0\%$ of the MARGIN regime.  The positive surprise:
+$\lambda_{\min}>0$ on \emph{all} $635$ landscape grid points ---
+positivity is never lost anywhere, including every needle; every
+$P>1$ excursion is a $\theta\to90°$ \emph{rotation artifact} of the
+2D reduction.  Honest negative: no arithmetic resonance-condition
+candidate passes the frozen gate --- the peaks are real but
+arithmetically unexplained.  The W3 alarm signal is only
+$\lambda_{\min}<-\mathrm{floor}$, never observed (calibrated by
+\texttt{v668} below).
+Machine-checked: \veri{v659\_w3\_landscape.py}.
+(\textsc{measured}) (landscape map; honest negative) $+$ \mC\ (typed
+reading)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The rotation predicate, honest
+(\texttt{PRIME.THETAPRED.01}).}
+The preregistered predicate test, failed honestly ($20$ checks,
+${\sim}340$\,s; verdict \textsc{theta-pred-fail}).  Mechanism:
+$47/52$ needles are \emph{diagonal crossings} of the deflated
+$2\times2$ (exactness $1.6\times10^{-10}$ on $702$ pooled points;
+interlacing exact); the two-level leak is ${\sim}1.0$ --- there is
+no single 2-level partner.  The predicate
+$f=\lambda_{\mathrm{lock}}-\mu_1\ge0$ is \emph{fully necessary}
+(pointwise recall $1.0$) but not sharp (precision $0.18$ pointwise,
+$0.255$ at the event level: $65$ crossings vs $212$ $f$-zeros).
+$h=859$ sits $\ge100$ needle widths from $45°$ at $s=0$; $63/67$
+windows carry a confirmed needle within $\pm2.5\%$.  The named
+successor is \emph{block deflation}; no marker move, no RH
+statement.
+Machine-checked: \veri{v660\_theta\_predicate.py}.
+\mE\ ($2\times2$ machinery) $+$ (\textsc{measured}) (mechanism;
+honest predicate FAIL) $+$ \mC\ (typed successor)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The discrete G\aa rding constant
+(\texttt{PRIME.GARDING.01}).}
+The named missing W2 building block, measured ($12$ checks,
+${\sim}320$\,s).  The constant ladder at $a_0=\log16$: $c>0$ at
+every stage ($c(736,1)=0.180$, $c(736,4)=0.676$) and
+\emph{$a$-uniform at fixed $M$-ratio} (the actual W2 requirement,
+five windows $h=184..1433$) --- but whether $c(M)$ stabilizes or
+drifts like $1/\log M$ is \emph{undecidable} on four dyadic stages
+(the honest typed state, \textsc{garding-drift-unresolved}).  The
+diagnosis: the tight direction reads the symbol minimum near the
+lattice edge (edge-band read, symbol tightness $0.81..0.97$) --- the
+question moves to the symbol level (next two blocks).
+Machine-checked: \veri{v661\_garding.py}.
+(\textsc{measured}) (constant ladder, $a$-uniformity, diagnosis)
+$+$ \mC\ (typed undecidability)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The two G\aa rding remedies, refuted
+(\texttt{PRIME.GARDEDGE.01}).}
+Both named remedies fail, and the failure is the finding ($16$
+checks, ${\sim}160$\,s).  The folded $H_{\log}$ norm does \emph{not}
+heal the drift ($c_{\mathrm{fold}}(736,1)=0.18151\approx$ unfolded),
+and the edge cutoff is \emph{lossless} ($C_{\mathrm{edge}}\le$ the
+$C$ budget: the drift is not edge-band mass) --- the drift lives in
+the \emph{total symbol} ($\min_{t\ge20}s_{\mathrm{tot}}$ near-flat
+across the ladder while $\log(2+t)$ grows).  The probe's declared
+FAIL at the literal symbol-stability bar is promoted as a
+typed-residual check with inverted expectation (the \texttt{v642}
+pattern, numbers unchanged): the per-$M$ symbol slopes stay positive
+but their $M$-spread $0.260$ \emph{must} exceed the $0.10$ bar ---
+the per-mode symbol read is not $M$-stable.  What a proof needs is
+the lower-envelope growth of the total symbol (next block).
+Machine-checked: \veri{v662\_garding\_edgeband.py}.
+(\textsc{measured}) (remedy refutations; typed residual) $+$ \mC\
+(mechanism reading)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The G\aa rding envelope
+(\texttt{PRIME.GARDENV.01}).}
+The total symbol \emph{does} grow --- sub-log, measured
+$a$-uniformly ($18$ checks, ${\sim}200$\,s).  ``Flat'' was a
+$t$-range artifact (the previous read stopped at the first dip): the
+band-minima envelope grows with a log model ($c_0>0$ on all five
+windows), and the strongest monotone weight certified $a$-uniformly
+by the family gives $s_{\mathrm{tot}}\ge c_0\,w^*(t)-C_0$ with
+$(c_0,C_0)\approx(0.021,0.055)$.  The B4(iii) breaking point is
+quantified: the derived partial-summation bound is valid but
+exponential in $a$ ($e^a/a$), while the \emph{measured} atom
+envelope grows only ${\sim}3.55\,a$ linearly ($A(a)=6.2..18.5$ over
+$a=2.77..6.24$); Chebyshev validity $\psi(n)/n\le B_\Psi$ holds on
+the full atom table.  The remaining W2 step is \emph{named}: a
+Fej\'er spectral-density bound replacing the per-mode symbol read;
+Suzuki Prop.~4.1 does not block the route (full-text read).
+Measured, not proved; no marker move, no RH statement.
+Machine-checked: \veri{v663\_garding\_envelope.py}.
+\mE\ (derived bound validity) $+$ (\textsc{measured}) ($a$-uniform
+envelope; quantified breaking point) $+$ \mC\ (named Fej\'er
+remainder)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The look-elsewhere audit
+(\texttt{META.LOOKELSEWHERE.01}).}
+The bingo budget of the typed \mC\ numeric coincidences, quantified
+($14$ checks, ${\sim}2$\,s; seed $20260802$, $100$k MC, exact
+Poisson-binomial tails).  The budget: $N=42$ structure slots, $K=19$
+hits against the compiler target list \emph{frozen before the
+computation}; the six killed readings enter as $0$-hit trials.
+Global: the family-corrected $p=5.1\times10^{-3}$ in the most
+conservative of three null models --- the \emph{ensemble} survives
+the honest correction (empirical control: $0.2\%/0.3\%$ of $2000$
+size-matched pseudo-target lists reach the real hit count / the real
+$p$).  The triage, and the point: \emph{no single observation is
+significant on its own} --- suggestive only ($0.01..0.1$):
+$60=D_{\mathrm{start}}$, the $12$ $\sigma$-fixed roots, the G31
+degrees, $48=\Omega_{\mathrm{adm}}$; unremarkable ($p>0.1$): $6=$
+Lorentz-congruence index $=p_2(a)$ ($p=0.169$) and the CODESEM
+number battery ($p=0.593$ --- the \texttt{v646} finding quantified);
+forced: $14$ and $16$ (their value is the theorem, not the number).
+The re-typings are executed as dated ledger notes
+(\texttt{EXTREV.LATTICE.01}, \texttt{E8.CODESEM.01},
+\texttt{E8.CODE.01}); the substance of the rounds lies in the \mE\
+structure theorems, not in the number bingos.
+Machine-checked: \veri{v664\_look\_elsewhere.py}.
+\mE\ (budget census, MC quantification, executed re-types)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Keiper--Li consistency
+(\texttt{PRIME.KEIPERLI.01}).}
+The sequence $\lambda_n$ on two independent routes ($13$ checks,
+${\sim}25$\,s).  Route 1: the zero comb ($2000$ zeros,
+$\gamma_{\max}=2515.3$, committed cache) with an honest tail budget
+--- the prescribed raw criterion window is \emph{empty}
+(documented); the corrected budget $B_{\mathrm{fl}}(n)\sim
+7.9\times10^{-7}n^2$ stays below $1\%$ of the GUE trend for
+$n\le64$.  Route 2: zero-free arithmetic --- contour extraction with
+$\lambda_1=1+\gamma/2-\log(4\pi)/2$ \emph{exact} (dev $0.0$) and the
+binomial assembly equal to the direct extraction at
+$7.8\times10^{-92}$; the atom table reproduces the prime-block
+constant ($-\gamma_E$ at $2.9\times10^{-4}$).  The central check:
+the two routes agree within the budget for \emph{all} $n=1..64$
+(max usage $0.124$), and $\lambda_n>0$ on both routes --- a
+\emph{finite} verified statement, not Li's criterion.  The must-fail
+has teeth: an injected off-line zero ($\mathrm{Re}=0.6$) explodes
+$\lambda_n$ negatively (min $-4.9\times10^{43}$ at
+$n\sim199921$) and is detected already at $n=1$ inside the budget.
+No RH claim.
+Machine-checked: \veri{v665\_keiper\_li.py}.
+\mE\ (two-route consistency, closed forms, must-fail injection) $+$
+\mC\ (atom-table tie-in)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Turing certificate
+(\texttt{PRIME.TURINGCERT.01}).}
+The completeness of the zero comb, certified ($6$ checks,
+${\sim}2$\,s).  All $1999$ midpoint rungs sit inside the cited
+S-band (max $|S_{\mathrm{est}}|=0.5151<2.5$), the endpoint check
+makes the comb the complete initial segment up to
+$\gamma_{\max}=2515.3$, and Turing's integral refinement holds at
+$5\%$ of the Lehman bound --- a persistent miscount is excluded, not
+just a local one.  Must-break: a removed zero blows the Turing
+integral to $167\times$ the bound, a doubled one to $174\times$.
+The certificate says exactly that the loaded list is the first
+$2000$ zeros --- it certifies the \emph{data premise} of all
+comb-reading modules; no RH statement.
+Machine-checked: \veri{v666\_turing\_cert.py}.
+\mE\ (band $+$ Turing certificate; must-break controls)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Baez--Duarte control frame
+(\texttt{PRIME.BAEZDUARTE.01}).}
+An \emph{external} comparison Galerkin for the Suzuki route ($12$
+checks, ${\sim}110$\,s).  The Vasyunin closed form for the
+Nyman--Beurling Gram is anchored at $1.7\times10^{-31}$ against
+direct integration; the constant $C_{\mathrm{BD}}=2+\gamma-\log4\pi$
+is computed \emph{independently} from the zero comb plus the
+Riemann--von Mangoldt tail at $6.4\times10^{-8}$ (the second comb
+anchor); and the theorem-level drift $d_N^2\log N\to
+C_{\mathrm{BD}}$ is reproduced at the percent level (max dev
+$0.042$; the honest corridor recalibration is documented in the
+module).  The frame comparison, and the point: the log-slow
+\emph{drift} is \emph{shared} with the Suzuki route --- intrinsic to
+the positivity problem --- while the resonance \emph{needles} are
+not shared: frame-side.  No positivity claim, no RH statement.
+Machine-checked: \veri{v667\_baez\_duarte.py}.
+\mE\ (Vasyunin/$C_{\mathrm{BD}}$ anchors) $+$ (\textsc{measured})
+(ladder, corridor, frame comparison) $+$ \mC\ (typed reading)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Ground truth and firewall
+(\texttt{PRIME.GROUNDTRUTH.01}).}
+The positive \emph{and} the negative control of the window
+machinery, one module from both probes ($22+13=35$ checks,
+${\sim}30$\,s).  \emph{Ground truth (Ihara):} on three \emph{proven}
+Ramanujan graphs the Toeplitz window forms are PSD for every window
+size with exact rank saturation --- true positivity has \emph{no
+uniform margin}: $\delta(K)>0$ only below the support-resolution
+depth and \emph{identically zero} beyond ($\delta(K)\to0$ exactly);
+the proven violators break at $K^*=15/11$ with detection reach
+$K^*\times s\approx2..3$, and Fej\'er/tent reads are \emph{blind} to
+the violation.  \emph{Firewall (Epstein):} for
+$Q(x,y)=x^2+5y^2$ (disc $-20$, $h=2$; Davenport--Heilbronn 1936) the
+genus identity is exact to $10^5$, the von Mangoldt analogue
+$\Lambda_E$ has $1351$ negative sites and $4849$ composite support
+points, and the \emph{identical} \texttt{v563} tent machinery breaks
+by ${\sim}13$ orders of magnitude on the Epstein rung
+($\lambda_{\min}<-\mathrm{floor}$ on $3/3$ windows), with the exact
+Rayleigh attribution locating the break in the \emph{composite}
+support --- the load-bearing structure is the Euler product; $12$
+off-line zeros are found by argument-principle winding.
+\emph{Together, the central W3 recalibration:} shrinking margins on
+deeper windows are the \emph{expected} behavior of a true
+positivity; the alarm signal is only $\lambda_{\min}<-\mathrm{floor}$
+(never observed on the $\zeta$ surface); the needles are frame-side
+(\texttt{v667}).  No claim about $\zeta$, no RH statement, no marker
+move.
+Machine-checked: \veri{v668\_ground\_truth.py}.
+\mE\ (exact ground-truth laboratory, both controls) $+$
+(\textsc{measured}) (calibration profile) $+$ \mC\ (typed W3
+recalibration)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

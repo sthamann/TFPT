@@ -77,6 +77,9 @@ import TfptCarrier.CoverEmbedding
 import TfptCarrier.WeilDictionary
 import TfptCarrier.LorentzCongruence
 import TfptCarrier.G31Orders
+import TfptCarrier.G31WordOrders
+import TfptCarrier.HammingCode
+import TfptCarrier.SquareParity
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck

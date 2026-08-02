@@ -43,6 +43,1513 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-02",
+    "dateLabel": "2026-08-02 · XLV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the closing bundle of the day: NINETEEN promotions in one pass ("
+      },
+      {
+        "k": "c",
+        "v": "v650"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v668"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "301"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green) — the ORBIFOLD FRONT COMPLETES AT THE LATTICE LEVEL (modular data "
+      },
+      {
+        "k": "c",
+        "v": "v650"
+      },
+      {
+        "k": "t",
+        "v": ": nine "
+      },
+      {
+        "k": "m",
+        "v": "Z[g,h]"
+      },
+      {
+        "k": "t",
+        "v": " match "
+      },
+      {
+        "k": "m",
+        "v": "|\\theta/\\eta|^2"
+      },
+      {
+        "k": "t",
+        "v": ", S-covariance measured at a clean "
+      },
+      {
+        "k": "m",
+        "v": "N^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " rate, T exact as the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}_6"
+      },
+      {
+        "k": "t",
+        "v": " Dehn shift, "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{deck}^3=(-1)^F"
+      },
+      {
+        "k": "t",
+        "v": " as exact "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}_6"
+      },
+      {
+        "k": "t",
+        "v": " trace arithmetic; assembly "
+      },
+      {
+        "k": "c",
+        "v": "v651"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "H^2(\\mathbb{Z}_3,U(1))=0"
+      },
+      {
+        "k": "t",
+        "v": " enumerated, of six candidates exactly "
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": " survives, T kills the naive "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}_3"
+      },
+      {
+        "k": "t",
+        "v": " exactly; Arf hardening "
+      },
+      {
+        "k": "c",
+        "v": "v652"
+      },
+      {
+        "k": "t",
+        "v": ": the "
+      },
+      {
+        "k": "m",
+        "v": "6^6"
+      },
+      {
+        "k": "t",
+        "v": " classification leaves "
+      },
+      {
+        "k": "m",
+        "v": "\\{B,C3\\}"
+      },
+      {
+        "k": "t",
+        "v": ", the one-Fock-space pin forces "
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": ", the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_6"
+      },
+      {
+        "k": "t",
+        "v": " ladder measures the C3-excised states directly; bond-defect theorem "
+      },
+      {
+        "k": "c",
+        "v": "v653"
+      },
+      {
+        "k": "t",
+        "v": ": twist "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " deck "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " bond defect as a lattice theorem in "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Q}(\\zeta_6)"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "D_{\\mathrm{can}}=L^4"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "D_{\\mathrm{can}}^3=-1"
+      },
+      {
+        "k": "t",
+        "v": "); the ST31 "
+      },
+      {
+        "k": "m",
+        "v": "d/4"
+      },
+      {
+        "k": "t",
+        "v": "-THEOREM ("
+      },
+      {
+        "k": "c",
+        "v": "v654"
+      },
+      {
+        "k": "t",
+        "v": ": every Springer-regular "
+      },
+      {
+        "k": "m",
+        "v": "d"
+      },
+      {
+        "k": "t",
+        "v": "-clock has "
+      },
+      {
+        "k": "m",
+        "v": "x^{d/4}=\\pm i\\,\\mathrm{Id}"
+      },
+      {
+        "k": "t",
+        "v": ", converse exact at "
+      },
+      {
+        "k": "m",
+        "v": "d\\in\\{8,20,24\\}"
+      },
+      {
+        "k": "t",
+        "v": ", the unique "
+      },
+      {
+        "k": "m",
+        "v": "d=12"
+      },
+      {
+        "k": "t",
+        "v": " exception is the compiler-clock class; “free "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " regular” killed); the W2/W3 SERIES ("
+      },
+      {
+        "k": "c",
+        "v": "v655"
+      },
+      {
+        "k": "t",
+        "v": " Mosco preparation: resolvent Cauchy "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " uniform "
+      },
+      {
+        "k": "m",
+        "v": "H_{\\log}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "v656"
+      },
+      {
+        "k": "t",
+        "v": " margin bridge typed as lock identification; "
+      },
+      {
+        "k": "c",
+        "v": "v657"
+      },
+      {
+        "k": "t",
+        "v": " the exact 2D formula "
+      },
+      {
+        "k": "m",
+        "v": "r_{\\mathrm{id}}=(1-q\\tan^2\\theta)/(1-\\tan^2\\theta)"
+      },
+      {
+        "k": "t",
+        "v": ", the deficit angle-driven; "
+      },
+      {
+        "k": "c",
+        "v": "v658"
+      },
+      {
+        "k": "t",
+        "v": " the uniform bound typed FRAGILE ("
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": "-fragility "
+      },
+      {
+        "k": "m",
+        "v": "\\pm60\\%"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "c",
+        "v": "v659"
+      },
+      {
+        "k": "t",
+        "v": " the landscape: "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}>0"
+      },
+      {
+        "k": "t",
+        "v": " on ALL "
+      },
+      {
+        "k": "m",
+        "v": "635"
+      },
+      {
+        "k": "t",
+        "v": " points, every peak a rotation artifact, MARGIN-regime share "
+      },
+      {
+        "k": "m",
+        "v": "0.0\\%"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "v660"
+      },
+      {
+        "k": "t",
+        "v": " the rotation predicate honestly FAILED (necessary, not sharp; "
+      },
+      {
+        "k": "m",
+        "v": "47/52"
+      },
+      {
+        "k": "t",
+        "v": " needles are diagonal crossings; successor block deflation); "
+      },
+      {
+        "k": "c",
+        "v": "v661"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v663"
+      },
+      {
+        "k": "t",
+        "v": " the G rding arc: drift undecidable on 4 stages "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " both remedies refuted, the drift lives in the total symbol "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " THE ENVELOPE HOLDS measured "
+      },
+      {
+        "k": "m",
+        "v": "a"
+      },
+      {
+        "k": "t",
+        "v": "-uniformly, "
+      },
+      {
+        "k": "m",
+        "v": "(c_0,C_0)\\approx(0.021,0.055)"
+      },
+      {
+        "k": "t",
+        "v": ", “flat” was a "
+      },
+      {
+        "k": "m",
+        "v": "t"
+      },
+      {
+        "k": "t",
+        "v": "-range artifact, remaining task "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " a Fejér spectral-density bound); DISCIPLINE AND CONTROLS ("
+      },
+      {
+        "k": "c",
+        "v": "v664"
+      },
+      {
+        "k": "t",
+        "v": " look-elsewhere: "
+      },
+      {
+        "k": "m",
+        "v": "42"
+      },
+      {
+        "k": "t",
+        "v": " slots / "
+      },
+      {
+        "k": "m",
+        "v": "19"
+      },
+      {
+        "k": "t",
+        "v": " hits / "
+      },
+      {
+        "k": "m",
+        "v": "6"
+      },
+      {
+        "k": "t",
+        "v": " kills, global "
+      },
+      {
+        "k": "m",
+        "v": "p=5.1\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " conservative, NO single observation significant — re-types executed; "
+      },
+      {
+        "k": "c",
+        "v": "v665"
+      },
+      {
+        "k": "t",
+        "v": " Keiper–Li on two independent routes, consistent at budget usage "
+      },
+      {
+        "k": "m",
+        "v": "0.124"
+      },
+      {
+        "k": "t",
+        "v": ", injection detected from "
+      },
+      {
+        "k": "m",
+        "v": "n=1"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "v666"
+      },
+      {
+        "k": "t",
+        "v": " Turing certificate: the comb complete below "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_{\\max}"
+      },
+      {
+        "k": "t",
+        "v": ", integrals at "
+      },
+      {
+        "k": "m",
+        "v": "5\\%"
+      },
+      {
+        "k": "t",
+        "v": " of the Lehman bound; "
+      },
+      {
+        "k": "c",
+        "v": "v667"
+      },
+      {
+        "k": "t",
+        "v": " Baez–Duarte control frame: Vasyunin "
+      },
+      {
+        "k": "m",
+        "v": "1.7\\times10^{-31}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "C_{\\mathrm{BD}}"
+      },
+      {
+        "k": "t",
+        "v": " cross-anchor "
+      },
+      {
+        "k": "m",
+        "v": "6.4\\times10^{-8}"
+      },
+      {
+        "k": "t",
+        "v": ", drift SHARED "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " intrinsic, needles NOT shared "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " frame-side; "
+      },
+      {
+        "k": "c",
+        "v": "v668"
+      },
+      {
+        "k": "t",
+        "v": " ground truth "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " firewall, one module from both probes: true positivity has NO uniform margin, "
+      },
+      {
+        "k": "m",
+        "v": "\\delta(K)\\to0"
+      },
+      {
+        "k": "t",
+        "v": " exactly, detection reach "
+      },
+      {
+        "k": "m",
+        "v": "K^*\\!\\times s\\approx2"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": ", Fejér reads blind — and without the Euler product the machinery breaks by "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}13"
+      },
+      {
+        "k": "t",
+        "v": " orders of magnitude: THE central W3 recalibration); plus LEAN ROUND 3 (three new certificate files, "
+      },
+      {
+        "k": "c",
+        "v": "lake build"
+      },
+      {
+        "k": "t",
+        "v": " green, "
+      },
+      {
+        "k": "m",
+        "v": "3383"
+      },
+      {
+        "k": "t",
+        "v": " jobs, no sorry) and the Nature-Comms primon-gas reference typed honestly in the prime-front paper"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (19)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v650_orbifold_modular.py"
+        },
+        {
+          "k": "t",
+          "v": " (17), "
+        },
+        {
+          "k": "c",
+          "v": "v651_orbifold_assembly.py"
+        },
+        {
+          "k": "t",
+          "v": " (17), "
+        },
+        {
+          "k": "c",
+          "v": "v652_orbifold_arf.py"
+        },
+        {
+          "k": "t",
+          "v": " (15), "
+        },
+        {
+          "k": "c",
+          "v": "v653_bond_defect.py"
+        },
+        {
+          "k": "t",
+          "v": " (18), "
+        },
+        {
+          "k": "c",
+          "v": "v654_st31_degree8.py"
+        },
+        {
+          "k": "t",
+          "v": " (30), "
+        },
+        {
+          "k": "c",
+          "v": "v655_w2_mosco.py"
+        },
+        {
+          "k": "t",
+          "v": " (7), "
+        },
+        {
+          "k": "c",
+          "v": "v656_margin_link.py"
+        },
+        {
+          "k": "t",
+          "v": " (11), "
+        },
+        {
+          "k": "c",
+          "v": "v657_rid_alignment.py"
+        },
+        {
+          "k": "t",
+          "v": " (15), "
+        },
+        {
+          "k": "c",
+          "v": "v658_w3_uniform_bound.py"
+        },
+        {
+          "k": "t",
+          "v": " (11), "
+        },
+        {
+          "k": "c",
+          "v": "v659_w3_landscape.py"
+        },
+        {
+          "k": "t",
+          "v": " (14), "
+        },
+        {
+          "k": "c",
+          "v": "v660_theta_predicate.py"
+        },
+        {
+          "k": "t",
+          "v": " (20), "
+        },
+        {
+          "k": "c",
+          "v": "v661_garding.py"
+        },
+        {
+          "k": "t",
+          "v": " (12), "
+        },
+        {
+          "k": "c",
+          "v": "v662_garding_edgeband.py"
+        },
+        {
+          "k": "t",
+          "v": " (16; the probe's declared FAIL at the literal symbol-stability bar promoted as a typed-residual check with inverted expectation, "
+        },
+        {
+          "k": "c",
+          "v": "v642"
+        },
+        {
+          "k": "t",
+          "v": " pattern, numbers unchanged), "
+        },
+        {
+          "k": "c",
+          "v": "v663_garding_envelope.py"
+        },
+        {
+          "k": "t",
+          "v": " (18), "
+        },
+        {
+          "k": "c",
+          "v": "v664_look_elsewhere.py"
+        },
+        {
+          "k": "t",
+          "v": " (14), "
+        },
+        {
+          "k": "c",
+          "v": "v665_keiper_li.py"
+        },
+        {
+          "k": "t",
+          "v": " (13; shared zero cache "
+        },
+        {
+          "k": "c",
+          "v": "zero_comb_cache_n2000.json"
+        },
+        {
+          "k": "t",
+          "v": " committed), "
+        },
+        {
+          "k": "c",
+          "v": "v666_turing_cert.py"
+        },
+        {
+          "k": "t",
+          "v": " (6), "
+        },
+        {
+          "k": "c",
+          "v": "v667_baez_duarte.py"
+        },
+        {
+          "k": "t",
+          "v": " (12), "
+        },
+        {
+          "k": "c",
+          "v": "v668_ground_truth.py"
+        },
+        {
+          "k": "t",
+          "v": " (35 "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " 22 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " 13; ONE module merged verbatim from the two probes "
+        },
+        {
+          "k": "c",
+          "v": "ihara_ground_truth_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "epstein_firewall_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "). All discovery probes committed alongside."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 19 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "QGEO.ORBMOD.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.ORBASM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.ORBARF.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.BONDDEF.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.ST31D8.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.MOSCO.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.MARGINLINK.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RIDGEOM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.W3BOUND.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.W3LAND.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.THETAPRED.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GARDING.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GARDEDGE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GARDENV.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "META.LOOKELSEWHERE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KEIPERLI.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.TURINGCERT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.BAEZDUARTE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GROUNDTRUTH.01"
+        },
+        {
+          "k": "t",
+          "v": "); dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.TWISTOPE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.KLEINRP.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO.01"
+        },
+        {
+          "k": "t",
+          "v": " (the orbifold front is complete at the lattice level; the [C] remainder is the continuum CFT statement "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the seam identification — "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no marker moves"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "), on "
+        },
+        {
+          "k": "c",
+          "v": "E8.ST31.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "E8.ST31DEG.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v654"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Lean round 3), on "
+        },
+        {
+          "k": "c",
+          "v": "EXTREV.LATTICE.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "6=p_2(a)"
+        },
+        {
+          "k": "t",
+          "v": ": observation without statistical weight, "
+        },
+        {
+          "k": "m",
+          "v": "p=0.169"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "E8.CODESEM.01"
+        },
+        {
+          "k": "t",
+          "v": " (number battery "
+        },
+        {
+          "k": "m",
+          "v": "p=0.593"
+        },
+        {
+          "k": "t",
+          "v": " — the "
+        },
+        {
+          "k": "c",
+          "v": "v646"
+        },
+        {
+          "k": "t",
+          "v": " finding quantified) and "
+        },
+        {
+          "k": "c",
+          "v": "E8.CODE.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "14/16"
+        },
+        {
+          "k": "t",
+          "v": " typed FORCED "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the Lean code certificate), and the consolidated W2/W3 note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean round 3."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Three new committed proof modules, "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green ("
+        },
+        {
+          "k": "m",
+          "v": "3383"
+        },
+        {
+          "k": "t",
+          "v": " jobs, no sorry): "
+        },
+        {
+          "k": "c",
+          "v": "G31WordOrders.lean"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\chi_w \\mid X^{24}-1"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_u \\mid X^{20}-1"
+        },
+        {
+          "k": "t",
+          "v": " via conjugate-quartic witnesses "
+        },
+        {
+          "k": "m",
+          "v": "\\chi\\bar\\chi=\\Phi_{24}/\\Phi_{20}"
+        },
+        {
+          "k": "t",
+          "v": ", no proper divisor by companion-matrix kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": " — all eigenvalues primitive), "
+        },
+        {
+          "k": "c",
+          "v": "HammingCode.lean"
+        },
+        {
+          "k": "t",
+          "v": " (self-duality, weight distribution "
+        },
+        {
+          "k": "m",
+          "v": "\\{0{:}1,4{:}14,8{:}1\\}"
+        },
+        {
+          "k": "t",
+          "v": ", coset-leader distribution "
+        },
+        {
+          "k": "m",
+          "v": "\\{0{:}1,1{:}8,2{:}7\\}"
+        },
+        {
+          "k": "t",
+          "v": ", covering radius "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "SquareParity.lean"
+        },
+        {
+          "k": "t",
+          "v": " (the combinatorial kernel of the "
+        },
+        {
+          "k": "m",
+          "v": "c=w^2"
+        },
+        {
+          "k": "t",
+          "v": " parity kill at the multiset level, the permutation-level bridge honestly typed as not formalized)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 19 new audit blocks. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the fifth slice of "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " — the consolidated W2/W3 state (W2: envelope measured valid, Mosco prepared, drift intrinsic, remainder "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Fejér spectral-density bound "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " symbol proof; W3: reduced to lock sign "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "q\\tan^2\\theta\\le1-\\delta"
+        },
+        {
+          "k": "t",
+          "v": ", landscape mapped without positivity loss, ground-truth recalibrated — shrinking margins are the expected behavior of true positivity, the alarm signal is only "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}<-\\mathrm{floor}"
+        },
+        {
+          "k": "t",
+          "v": "; kill criteria unchanged). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the closing-bundle recalibration paragraph "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the external-context note on Wei/Zhai/Lu et al., “The Riemann Hypothesis manifested in dynamical quantum phase transitions” (Nat. Commun. 2026, DOI 10.1038/s41467-026-74935-8) — their primon-gas energies "
+        },
+        {
+          "k": "m",
+          "v": "\\log n"
+        },
+        {
+          "k": "t",
+          "v": " with weights "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda(n)/\\sqrt n"
+        },
+        {
+          "k": "t",
+          "v": " are literally the TFPT atom table and the DQPT times are the zero comb; typed honestly as complementary verification, not RH progress."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed entry (the closing bundle); suite counters "
+        },
+        {
+          "k": "m",
+          "v": "643\\to662"
+        },
+        {
+          "k": "t",
+          "v": "; sandbox counters "
+        },
+        {
+          "k": "m",
+          "v": "236\\to256"
+        },
+        {
+          "k": "t",
+          "v": " probes and "
+        },
+        {
+          "k": "m",
+          "v": "5452\\to5753"
+        },
+        {
+          "k": "t",
+          "v": " checks; README and Zenodo description updated."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves anywhere; "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": " does not move (the continuum statement stays open); W2/W3 stay open (measured/typed progress only); the two honest FAIL verdicts ("
+        },
+        {
+          "k": "t",
+          "v": "theta-pred-fail"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "edgeband-unhealed"
+        },
+        {
+          "k": "t",
+          "v": ") are promoted as findings, not hidden; no positivity claim beyond the measured surfaces, no RH statement."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-02",
     "dateLabel": "2026-08-02 · XLIV",
     "heading": [
       {
