@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`667` registered scripts · `739` ledger claims · `10` clusters.
+`671` registered scripts · `743` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (187 scripts)
+### `core` — Compiler core & the E₈ glue  (191 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -385,6 +385,14 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v665_keiper_li, v643_w1_theorem, v563, v589, v591, v643, v648 · cited: 3 e8 audit bootstrap, research contracts
 - **v673_li_e4** [E] `PRIME.LIE4.01` — der exakte E8-↔-Kamm-Konsistenztest — **Λ(E₄, s) = (2π)^{−s}Γ(s)ζ(s)ζ(s−3) VERVOLLSTÄNDIGT (FE s ↔ 4−s exakt auf 2.4e−41), RESIDUEN ±1/240 EXAKT: die E8-240 IST der Residuen-Normie
   - deps: v625_prime_shadow, v665_keiper_li, v672_li_corollary, v563, v589, v625 · cited: 3 e8 audit bootstrap, research contracts
+- **v674_packet_garding** [E/C] `PRIME.PACKETGARD.01` — die Paket-zu-Punkt-Lücke der W2-Route, gebaut und vermessen — **DIE PROJEKTIONS-PAKETNORM ENTKOMMT DER 1/log-DRIFT NICHT (typed-residual-Check mit invertierter Erwartung, v642/v662
+  - deps: v669_fejer_density, v663_garding_envelope, v661_garding, v655_w2_mosco, v563, v643 · cited: 3 e8 audit bootstrap, research contracts
+- **v675_needle_mechanism** [E/C/X] `PRIME.NEEDLEMECH.01` — nach dem dreifachen Negativ (v670 nicht low-rank, v671 nicht nullstellen-getrieben, v667 nicht im BD-Frame) die letzte offene W3-Mechanismus-Frage — **ALLE VIER ASSEMBLY-KANDIDATEN
+  - deps: v670_w3_block_deflation, v671_lehmer_resonance, v667_baez_duarte, v659_w3_landscape, v668_ground_truth, v563, v591, v596 · cited: 3 e8 audit bootstrap, research contracts
+- **v676_c1_mechanism** [E/C/X] `PRIME.C1MECH.01` — **C = 1 IST AUF DER DEKLARIERTEN FLÄCHE EIN DISKRETISIERUNGSSATZ: q_r = EXAKTE NULLSTELLEN-SEITEN-LESUNG DES LOCK-PROFILS (Weil-Formel auf dem kompletten Kamm; Median-Residuum 1.1e
+  - deps: v618_uniform_constant, v596_lock_projection, v669_fejer_density, PRIME.WEIL.OPERATOR.01, v563, v591, v596, v618 · cited: 3 e8 audit bootstrap, research contracts
+- **v677_w3_structure_theorem** [E/C] `PRIME.W3STRUCT.01` — die Äquivalenzkette als SATZ — **S1: odd-Toeplitz = Cantoni–Butler-Kompression (eigenwertweise 1.5e−15), der SANDWICH-SATZ statt naiver DST-Diagonalität (Paritätsdefekt gemessen 0.
+  - deps: v669_fejer_density, v668_ground_truth, v659_w3_landscape, v618_uniform_constant, v563, v589, v669 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1399,16 +1407,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×45, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v312`×16, `FLAV.KQ.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×49, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v312`×16
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v662_garding_edgeband** — `PRIME.GARDEDGE.01`
-- **v663_garding_envelope** — `PRIME.GARDENV.01`
-- **v664_look_elsewhere** — `META.LOOKELSEWHERE.01`
-- **v665_keiper_li** — `PRIME.KEIPERLI.01`
 - **v666_turing_cert** — `PRIME.TURINGCERT.01`
 - **v667_baez_duarte** — `PRIME.BAEZDUARTE.01`
 - **v668_ground_truth** — `PRIME.GROUNDTRUTH.01`
@@ -1417,4 +1421,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v671_lehmer_resonance** — `PRIME.LEHMERNULL.01`
 - **v672_li_corollary** — `PRIME.LICOROLLARY.01`
 - **v673_li_e4** — `PRIME.LIE4.01`
+- **v674_packet_garding** — `PRIME.PACKETGARD.01`
+- **v675_needle_mechanism** — `PRIME.NEEDLEMECH.01`
+- **v676_c1_mechanism** — `PRIME.C1MECH.01`
+- **v677_w3_structure_theorem** — `PRIME.W3STRUCT.01`
 

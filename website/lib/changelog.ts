@@ -43,6 +43,861 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-02",
+    "dateLabel": "2026-08-02 · XLVII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the fifth and final promotion round of the day: FOUR promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v674"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v677"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "76"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green) — THE WALL IS SURVEYED: two theorems, one frame-G rding, and the honest typing “uniform W3 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the conjecture”. HIGHLIGHT 1 ("
+      },
+      {
+        "k": "c",
+        "v": "v676"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "c1-quadrature-mechanism"
+      },
+      {
+        "k": "t",
+        "v": "): "
+      },
+      {
+        "k": "m",
+        "v": "C=1"
+      },
+      {
+        "k": "t",
+        "v": " is a DISCRETIZATION THEOREM on the declared surface — "
+      },
+      {
+        "k": "m",
+        "v": "q_r"
+      },
+      {
+        "k": "t",
+        "v": " is the exact zero-side reading of the lock profile (Weil explicit formula on the complete comb, median residual "
+      },
+      {
+        "k": "m",
+        "v": "1.1\\times10^{-2}"
+      },
+      {
+        "k": "t",
+        "v": " on "
+      },
+      {
+        "k": "m",
+        "v": "67"
+      },
+      {
+        "k": "t",
+        "v": " windows, "
+      },
+      {
+        "k": "m",
+        "v": "q_{\\mathrm{pred}}>0"
+      },
+      {
+        "k": "t",
+        "v": " on "
+      },
+      {
+        "k": "m",
+        "v": "67/67"
+      },
+      {
+        "k": "t",
+        "v": "), the "
+      },
+      {
+        "k": "m",
+        "v": "h^{-1}"
+      },
+      {
+        "k": "t",
+        "v": " is the DST normalization ("
+      },
+      {
+        "k": "m",
+        "v": "q_r(N/2)/F_\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "-flat at slope "
+      },
+      {
+        "k": "m",
+        "v": "+0.04"
+      },
+      {
+        "k": "t",
+        "v": "), the constant is the zero-free RvM density integral (ratio "
+      },
+      {
+        "k": "m",
+        "v": "1.005"
+      },
+      {
+        "k": "t",
+        "v": "; tertiles "
+      },
+      {
+        "k": "m",
+        "v": "0.66/0.43/0.37"
+      },
+      {
+        "k": "t",
+        "v": " predicted vs "
+      },
+      {
+        "k": "m",
+        "v": "0.61/0.45/0.39"
+      },
+      {
+        "k": "t",
+        "v": " measured), the lock sign via the v591 pole killer; honest: the v596 exponent "
+      },
+      {
+        "k": "m",
+        "v": "-1.01"
+      },
+      {
+        "k": "t",
+        "v": " was flip-contaminated (clean "
+      },
+      {
+        "k": "m",
+        "v": "-1.28"
+      },
+      {
+        "k": "t",
+        "v": "; dated note on "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.LOCKPROJ.01"
+      },
+      {
+        "k": "t",
+        "v": "), “norm "
+      },
+      {
+        "k": "m",
+        "v": "\\le1/h"
+      },
+      {
+        "k": "t",
+        "v": "” is a direction statement, and "
+      },
+      {
+        "k": "m",
+        "v": "\\sup\\le1"
+      },
+      {
+        "k": "t",
+        "v": " does NOT follow from the mean (the "
+      },
+      {
+        "k": "m",
+        "v": "\\sin^2"
+      },
+      {
+        "k": "t",
+        "v": " sampling budget is the precise remainder, factor-2 headroom). HIGHLIGHT 2 ("
+      },
+      {
+        "k": "c",
+        "v": "v677"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "w3st-structure-theorem"
+      },
+      {
+        "k": "t",
+        "v": "): the equivalence chain as a THEOREM — odd-Toeplitz "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " Cantoni–Butler compression ("
+      },
+      {
+        "k": "m",
+        "v": "1.5\\times10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": "), the sandwich theorem instead of naive DST diagonality (parity defect measured "
+      },
+      {
+        "k": "m",
+        "v": "0.92..1.55"
+      },
+      {
+        "k": "t",
+        "v": "), the per-lag Weil dictionary unconditional with the master identity "
+      },
+      {
+        "k": "m",
+        "v": "x^{\\mathsf T}Ax=\\sum T_x(\\gamma)+P(x)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "T_x\\ge0"
+      },
+      {
+        "k": "t",
+        "v": " on-line (alias comb) and cosh-amplified off-line terms ("
+      },
+      {
+        "k": "m",
+        "v": "5.8\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": "); the own Epstein winding census (exactly "
+      },
+      {
+        "k": "m",
+        "v": "12"
+      },
+      {
+        "k": "t",
+        "v": " off-line zeros, "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta_K"
+      },
+      {
+        "k": "t",
+        "v": " control "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": ") predicts the form break quantitatively ("
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}"
+      },
+      {
+        "k": "t",
+        "v": " ratio "
+      },
+      {
+        "k": "m",
+        "v": "0.803"
+      },
+      {
+        "k": "t",
+        "v": ", factor-2 gate); the threshold map "
+      },
+      {
+        "k": "m",
+        "v": "2\\alpha\\,s_{\\min}\\approx1.4..2.6"
+      },
+      {
+        "k": "t",
+        "v": " over "
+      },
+      {
+        "k": "m",
+        "v": "67"
+      },
+      {
+        "k": "t",
+        "v": " windows (the Ihara echo) — W3-on-the-family "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " theorem "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " detector certificate, UNIFORM W3 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the conjecture (Weil/Yoshida), typed as such. PLUS the frame-G rding ("
+      },
+      {
+        "k": "c",
+        "v": "v674"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "packet-average-only"
+      },
+      {
+        "k": "t",
+        "v": ": the projection packet norm does NOT escape the "
+      },
+      {
+        "k": "m",
+        "v": "1/\\log"
+      },
+      {
+        "k": "t",
+        "v": " drift — the central honest negative promoted as a typed-residual check with inverted expectation, v642/v662 pattern, minimizer single-mode tight "
+      },
+      {
+        "k": "m",
+        "v": "0.90"
+      },
+      {
+        "k": "t",
+        "v": " — BUT the frame inequality "
+      },
+      {
+        "k": "m",
+        "v": "Q+C_0G\\succeq c_0Y"
+      },
+      {
+        "k": "t",
+        "v": " holds at every "
+      },
+      {
+        "k": "m",
+        "v": "M"
+      },
+      {
+        "k": "t",
+        "v": " with the v669 theorem constants, "
+      },
+      {
+        "k": "m",
+        "v": "c_0=0.3058"
+      },
+      {
+        "k": "t",
+        "v": ", margins "
+      },
+      {
+        "k": "m",
+        "v": "+1.52..+2.29"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "a"
+      },
+      {
+        "k": "t",
+        "v": "-uniform, and the Mosco mechanism is numerically complete, "
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": "; named remainder: within-packet equidistribution, "
+      },
+      {
+        "k": "m",
+        "v": "\\theta\\to0.20"
+      },
+      {
+        "k": "t",
+        "v": ") and the needle saturation ("
+      },
+      {
+        "k": "c",
+        "v": "v675"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "needle-emergent-bulk"
+      },
+      {
+        "k": "t",
+        "v": ": all four assembly candidates miss — jump set too dense "
+      },
+      {
+        "k": "m",
+        "v": "p=0.007"
+      },
+      {
+        "k": "t",
+        "v": ", phase gradient wrong sign, lock rotation cleanly killed, pole weight significant but INVERTED — the needles are an emergent bulk property; W3 recommendation: MARGIN-regime form "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Ihara calibration instead of a needle predicate)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (4)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v674_packet_garding.py"
+        },
+        {
+          "k": "t",
+          "v": " (21; the probe's declared FAIL at the literal P2.1 stabilization bar promoted as a typed-residual check with inverted expectation, "
+        },
+        {
+          "k": "c",
+          "v": "v642"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v662"
+        },
+        {
+          "k": "t",
+          "v": " pattern, numbers unchanged), "
+        },
+        {
+          "k": "c",
+          "v": "v675_needle_mechanism.py"
+        },
+        {
+          "k": "t",
+          "v": " (21), "
+        },
+        {
+          "k": "c",
+          "v": "v676_c1_mechanism.py"
+        },
+        {
+          "k": "t",
+          "v": " (12), "
+        },
+        {
+          "k": "c",
+          "v": "v677_w3_structure_theorem.py"
+        },
+        {
+          "k": "t",
+          "v": " (22). All four discovery probes committed alongside ("
+        },
+        {
+          "k": "c",
+          "v": "packet_garding_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "needle_mechanism_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "c1_mechanism_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " with the committed "
+        },
+        {
+          "k": "c",
+          "v": "c1_zero_ext_n2500.json"
+        },
+        {
+          "k": "t",
+          "v": " extension cache, "
+        },
+        {
+          "k": "c",
+          "v": "w3_structure_theorem_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 4 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PACKETGARD.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.NEEDLEMECH.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.C1MECH.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.W3STRUCT.01"
+        },
+        {
+          "k": "t",
+          "v": "); dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LOCKPROJ.01"
+        },
+        {
+          "k": "t",
+          "v": " (the exponent correction: "
+        },
+        {
+          "k": "m",
+          "v": "-1.01"
+        },
+        {
+          "k": "t",
+          "v": " was flip-contaminated, clean "
+        },
+        {
+          "k": "m",
+          "v": "-1.28"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.UNIFC.01"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "C=1"
+        },
+        {
+          "k": "t",
+          "v": " mechanism grounded), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GROUNDTRUTH.01"
+        },
+        {
+          "k": "t",
+          "v": " (the Ihara detection law echoed in the threshold map), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FEJERDENS.01"
+        },
+        {
+          "k": "t",
+          "v": " (the frame-G rding connection) and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.W3LAND.01"
+        },
+        {
+          "k": "t",
+          "v": " (the mechanism search saturates); the seventh consolidated slice on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 4 new audit blocks. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the seventh slice of "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " (W2 end-state: density plane closed, G rding in frame form with theorem constants, Mosco complete, remainder "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " within-packet equidistribution; W3 contracted to “MARGIN-regime generic bound "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " needle risk map”, "
+        },
+        {
+          "k": "m",
+          "v": "C=1"
+        },
+        {
+          "k": "t",
+          "v": " demystified-and-grounded as a quadrature theorem, the structure theorem types W3-on-the-family as theorem "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " certificate and uniform W3 as the conjecture; kill criteria unchanged)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed entry (the structure-theorem round); suite counters "
+        },
+        {
+          "k": "m",
+          "v": "667\\to671"
+        },
+        {
+          "k": "t",
+          "v": "; sandbox counters "
+        },
+        {
+          "k": "m",
+          "v": "261\\to265"
+        },
+        {
+          "k": "t",
+          "v": " probes and "
+        },
+        {
+          "k": "m",
+          "v": "5818\\to5894"
+        },
+        {
+          "k": "t",
+          "v": " checks; README and Zenodo description updated."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves; W2/W3 stay open (the frame form holds with theorem constants, the pointwise A5(a) statement stays open; W3-on-the-family is a theorem "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " certificate, uniform W3 IS the conjecture — typed, no RH statement); the honest typed-residual FAIL ("
+        },
+        {
+          "k": "t",
+          "v": "packet-average-only"
+        },
+        {
+          "k": "t",
+          "v": ") and the fourfold needle miss ("
+        },
+        {
+          "k": "t",
+          "v": "needle-emergent-bulk"
+        },
+        {
+          "k": "t",
+          "v": ") are promoted as findings, not hidden; the "
+        },
+        {
+          "k": "m",
+          "v": "C=1"
+        },
+        {
+          "k": "t",
+          "v": " statement carries no RH lever beyond the density and is typed as such."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-02",
     "dateLabel": "2026-08-02 · XLVI",
     "heading": [
       {

@@ -62,27 +62,27 @@ export interface DisciplineStats {
 export const DISCIPLINE: DisciplineStats =
 {
   "ledger": {
-    "rows": 739,
-    "active": 734,
+    "rows": 743,
+    "active": 738,
     "retired": 5,
     "dist": {
       "E": 174,
-      "C": 241,
+      "C": 245,
       "O": 282,
       "X": 37,
       "AXIOM": 2,
       "OTHER": 3
     },
-    "killRows": 223
+    "killRows": 226
   },
   "suite": {
-    "modules": 667,
-    "checkSites": 6395,
-    "mustfailOccurrences": 1566,
-    "mustfailModules": 244,
-    "eMarks": 3738,
-    "cMarks": 1391,
-    "seededModules": 87,
+    "modules": 671,
+    "checkSites": 6473,
+    "mustfailOccurrences": 1592,
+    "mustfailModules": 247,
+    "eMarks": 3805,
+    "cMarks": 1411,
+    "seededModules": 91,
     "sympyModules": 400
   },
   "contracts": {
@@ -114,11 +114,11 @@ export const DISCIPLINE: DisciplineStats =
       "Jacobi": 18,
       "Hecke": 8,
       "Construction A": 2,
-      "Suzuki": 21,
-      "Weil": 44,
+      "Suzuki": 22,
+      "Weil": 46,
       "Eisenstein": 23
     },
-    "arxivModules": 45
+    "arxivModules": 46
   },
   "lean": {
     "modules": 57
