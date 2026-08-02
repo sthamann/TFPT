@@ -4,6 +4,8 @@ import { InOneBreath } from "@/components/InOneBreath";
 import { WhyThisMatters } from "@/components/WhyThisMatters";
 import { TrustContract } from "@/components/TrustContract";
 import { ClaimStack } from "@/components/ClaimStack";
+import { GeometryArc } from "@/components/GeometryArc";
+import { CodePrimesBand } from "@/components/CodePrimesBand";
 import { HonestyBand } from "@/components/HonestyBand";
 import { Safeguards } from "@/components/Safeguards";
 import { Overview } from "@/components/Overview";
@@ -14,9 +16,9 @@ import { LegacyAnchorRedirect } from "@/components/LegacyAnchorRedirect";
 export default function HomePage() {
   return (
     <>
-      {/* Narrative: Hook → Claim → How → Evidence → Honesty → Join in.
-          Archive sections live on dedicated routes (/papers, /predictions,
-          /architecture, /verification, /orientation). */}
+      {/* Narrative: Hook → Claim → How → New frontier → Evidence → Honesty →
+          Join in. Archive sections live on dedicated routes (/papers,
+          /predictions, /architecture, /verification, /orientation). */}
       <LegacyAnchorRedirect />
       <Hero />
       <IntroVideo />
@@ -24,6 +26,8 @@ export default function HomePage() {
       <WhyThisMatters />
       <TrustContract />
       <ClaimStack />
+      <GeometryArc />
+      <CodePrimesBand />
       <HonestyBand />
       <Safeguards compact />
       <Overview />

@@ -43,6 +43,311 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-02",
+    "dateLabel": "2026-08-02 · XLII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "website: the home page catches up with the 2026-08 arcs — a new “geometric realization” section (the seam axioms force the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_3"
+      },
+      {
+        "k": "t",
+        "v": "-cover "
+      },
+      {
+        "k": "m",
+        "v": "y^3=x^4-1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "N=3"
+      },
+      {
+        "k": "t",
+        "v": " pinned, the physical seam is the conformal seam, the covered seam and its "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}_3"
+      },
+      {
+        "k": "t",
+        "v": " orbifold; static SVG map seam "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " curve "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " E8 with the 60-line/ST31 quotient) and a new “code and primes” section (E8 as an error-correcting code with the RM"
+      },
+      {
+        "k": "m",
+        "v": "(1,3)"
+      },
+      {
+        "k": "t",
+        "v": " bit dictionary; primes as the shadow of the finished geometry; the W1 Weil-operator contact with its honest W2/W3 scope — no RH claim); claim-stack honesty updates"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website only, no theory change."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New home sections "
+        },
+        {
+          "k": "c",
+          "v": "GeometryArc"
+        },
+        {
+          "k": "t",
+          "v": " (mirrors "
+        },
+        {
+          "k": "c",
+          "v": "v617"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v620"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v622"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v623"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v628"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v629"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v633"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v634"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v639"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "CodePrimesBand"
+        },
+        {
+          "k": "t",
+          "v": " (mirrors "
+        },
+        {
+          "k": "c",
+          "v": "v625"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v626"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v638"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "v630"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v631"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v640"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v642"
+        },
+        {
+          "k": "t",
+          "v": "), placed between the claim stack and the honesty band; every card carries its display marker and the open items are stated in place."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Claim stack."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The declared-inputs layer records the conditional "
+        },
+        {
+          "k": "c",
+          "v": "v624"
+        },
+        {
+          "k": "t",
+          "v": " reduction (three selectors force "
+        },
+        {
+          "k": "m",
+          "v": "d=4"
+        },
+        {
+          "k": "t",
+          "v": ", so the two inputs reduce to "
+        },
+        {
+          "k": "m",
+          "v": "d=4"
+        },
+        {
+          "k": "t",
+          "v": " plus "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": " under the named architecture); the numerical layer now names the honest "
+        },
+        {
+          "k": "m",
+          "v": "\\sin^2\\theta_{13}"
+        },
+        {
+          "k": "t",
+          "v": " stress ("
+        },
+        {
+          "k": "m",
+          "v": "\\approx2.0\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ", the largest single pull) instead of leaving it to the predictions page."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "No marker moves; no new claims."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " All content mirrors existing ledger rows; the bedrock (GATE.QGEO) and the RH-hard steps W2/W3 are stated open where the new sections mention them."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-02",
     "dateLabel": "2026-08-02 · XLI",
     "heading": [
       {
