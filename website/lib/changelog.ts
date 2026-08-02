@@ -5780,7 +5780,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -5788,7 +5788,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": ", "
         },
         {
           "k": "c",
@@ -5796,7 +5796,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "/"
+          "v": " and "
         },
         {
           "k": "c",
