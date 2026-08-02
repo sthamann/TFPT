@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`642` registered scripts · `714` ledger claims · `10` clusters.
+`643` registered scripts · `715` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -564,7 +564,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (197 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (198 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -961,6 +961,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v571_cr_discrete_corners, v213_ftransfer_functor, v425_dyn_transfer_universal, v99, v159, v320, v425, v571 · cited: research contracts
 - **v578_native_jets** [E/C] `FTR.JETS.01` — the exact v99 Koide trajectory has wall-time Schwarzian {q,t} = −Δ²/2 = −18 log(3/2)² (constant, trajectory-independent; F_Boltzmann identical by the single-flow theorem) and is Mo
   - deps: v575_cr_continuous_uniflow, v571_cr_discrete_corners, v425_dyn_transfer_universal, v99, v159, v425, v575 · cited: research contracts
+- **v649_discipline_audit** [E/C/O/X] `META.DISCIPLINE.01` — die Suite parst SICH SELBST und zertifiziert ihre Prozess-Disziplin als eingefrorene Mindestwerte: **214 Ledger-Zeilen dokumentieren Kills/ehrliche Negative/Retypes, 1469 Must-fail
+  - deps: v84_frozen_registry, v632_ftransfer_pgl2, PRIME.WEIL.OPERATOR.01, v100_numerology_null_mc, v84, v100 · cited: 3 e8 audit bootstrap
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (183 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1349,13 +1351,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `v563`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `REG.FREEZE.01`×17, `v312`×16, `FLAV.KQ.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `v563`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v312`×16, `FLAV.KQ.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v637_fine_c1_bridge** — `PRIME.FINEC1.01`
 - **v638_code_semantics** — `E8.CODESEM.01`
 - **v639_twist_ope** — `QGEO.TWISTOPE.01`
 - **v640_w1_boundary** — `PRIME.WEIL.BOUNDARY.01`
@@ -1367,4 +1368,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v646_rm13_reverse** — `E8.RM13REV.01`
 - **v647_st31_degree24** — `E8.ST31DEG.01`
 - **v648_sign_uncertainty** — `PRIME.SIGNUNC.01`
+- **v649_discipline_audit** — `META.DISCIPLINE.01`
 

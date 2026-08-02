@@ -7,6 +7,7 @@ import { ClaimStack } from "@/components/ClaimStack";
 import { GeometryArc } from "@/components/GeometryArc";
 import { CodePrimesBand } from "@/components/CodePrimesBand";
 import { HonestyBand } from "@/components/HonestyBand";
+import { MethodBand } from "@/components/MethodBand";
 import { Safeguards } from "@/components/Safeguards";
 import { Overview } from "@/components/Overview";
 import { PathChooser } from "@/components/PathChooser";
@@ -29,6 +30,7 @@ export default function HomePage() {
       <GeometryArc />
       <CodePrimesBand />
       <HonestyBand />
+      <MethodBand />
       <Safeguards compact />
       <Overview />
       <PathChooser />

@@ -3315,6 +3315,46 @@ Machine-checked: \veri{v648\_sign\_uncertainty.py}.
 negative; surface positivity) $+$ \mC\ (typed verdict)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The discipline audit --- the suite measures
+itself (\texttt{META.DISCIPLINE.01}).}
+The suspicion to be defused is ``numerology'': a large corpus of
+machine-checked claims could in principle be a confirmation-bias
+generator.  This meta-module parses the suite's own files and freezes
+the measured process-discipline metrics as minimum bars ($18$ checks,
+${\sim}200$\,s).  \emph{Ledger census:} $715$ rows, $710$ active;
+$214$ rows document kills, honest negatives, ill-posed retirements and
+retypes --- a project that documents its own buried hypotheses is not a
+confirmation-bias generator.  \emph{Must-fail census:} $643$ modules
+(every one carries checks), $6040$ static \texttt{check()} call sites,
+$1469$ must-fail\,/\,kill\,/\,scramble keyword occurrences across
+$233$ modules; typing marks \mE~$\times\,3579$ vs \mC~$\times\,1323$
+--- conditional readings are typed, not upgraded.
+\emph{Preregistration:} $47$ contract rows, $29$ naming kill criteria
+\emph{before} execution; executed chains verified in the ledger
+(\texttt{FTR.PGL2.01}: preregistered \texttt{v533} $\to$ executed
+\texttt{v632}; \texttt{PRIME.WEIL.OPERATOR.01}: kill tests K1--K3
+$\to$ W1 theorem-closed \texttt{v643}; \texttt{REG.FREEZE.01}: registry
+frozen 2026-06-09).  \emph{Reproducibility:} deterministic replay
+$12/12$ on a declared sample spanning \texttt{v55}--\texttt{v648}
+(two fresh subprocess runs each, identical output up to timing lines);
+$396$ modules sympy-exact, $77$ with explicit seeds.  \emph{External
+anchors:} five classical results recomputed here against the
+literature --- Jacobi 1834 four-square counts (exact, $n=1..40$),
+Construction~A $[8,4,4]\to E_8$ with $240$ minimal vectors, the
+Shephard--Todd G31 degrees $(8,12,20,24)$, the Suzuki archimedean
+constants to $25$+ digits, and the completed-zeta functional equation
+($3\times10^{-31}$).  \emph{Lean layer:} $54$ committed proof modules
+(\texttt{git ls-files}; \texttt{lake build} honestly \emph{not} re-run
+in-suite).  \emph{The limit, honest:} this module measures
+\emph{process} discipline, not the truth of the physics; typed \mC\
+observations stay observations, and the open gates stay open ($278$
+class-O rows incl.\ \texttt{SEAM.THEOREM.01} and
+\texttt{PRIME.WEIL.OPERATOR.01} W2--W4) --- a discipline certificate is
+a necessary, not a sufficient, condition against numerology.
+Machine-checked: \veri{v649\_discipline\_audit.py}.
+\mE\ (censuses, replay, anchor recomputes) $+$ \mC\ (the typed limit)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

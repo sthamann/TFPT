@@ -34,7 +34,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta investigation: the signed E8 census, Hecke from geometry, the relative-trace identity and Weil structure (v535–v541), the T102–T125 induction sprint and the phase-2 certified map (one open object, R1), the uniform constant C = 1, the Lorentz congruence between the prime form and the cover lattice, E8 as a literal error-correcting code, the sixty-line reflection group G31, and the Suzuki W1 identification — theorem-closed after a same-day convention erratum (one scalar +1/D, κ = 0), with the honest implication map kept explicit: closing W1 does not move W3. Machine-verified modules v535–v648 inside a 642-script suite. No claim of progress toward the Riemann Hypothesis.",
+    "A plain-language research diary of TFPT's prime / zeta investigation: the signed E8 census, Hecke from geometry, the relative-trace identity and Weil structure (v535–v541), the T102–T125 induction sprint and the phase-2 certified map (one open object, R1), the uniform constant C = 1, the Lorentz congruence between the prime form and the cover lattice, E8 as a literal error-correcting code, the sixty-line reflection group G31, and the Suzuki W1 identification — theorem-closed after a same-day convention erratum (one scalar +1/D, κ = 0), with the honest implication map kept explicit: closing W1 does not move W3. Machine-verified modules v535–v648 inside a 643-script suite. No claim of progress toward the Riemann Hypothesis.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -96,7 +96,7 @@ export default function PrimeFrontPage() {
           <HonestyBanner />
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · 241 agent runs · 5452 sandbox checks · suite 642
+            Research diary · 241 agent runs · 5452 sandbox checks · suite 643
             scripts
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
@@ -3218,7 +3218,7 @@ function BigPictureSection() {
             />
             <BigPictureStat
               term="v535–v648"
-              desc="machine-verified modules of this front, inside the 642-script suite (all green)"
+              desc="machine-verified modules of this front, inside the 643-script suite (all green)"
               tone="emerald"
             />
             <BigPictureStat

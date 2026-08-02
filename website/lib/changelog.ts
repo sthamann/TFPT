@@ -43,6 +43,1020 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-02",
+    "dateLabel": "2026-08-02 · XLIV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the discipline audit: the suite measures its OWN scientific process discipline and freezes it as checks ("
+      },
+      {
+        "k": "c",
+        "v": "v649"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "META.DISCIPLINE.01"
+      },
+      {
+        "k": "t",
+        "v": ") — ledger census "
+      },
+      {
+        "k": "m",
+        "v": "715"
+      },
+      {
+        "k": "t",
+        "v": " rows / "
+      },
+      {
+        "k": "m",
+        "v": "710"
+      },
+      {
+        "k": "t",
+        "v": " active with "
+      },
+      {
+        "k": "m",
+        "v": "214"
+      },
+      {
+        "k": "t",
+        "v": " documented kills / honest negatives / retypes, must-fail census "
+      },
+      {
+        "k": "m",
+        "v": "643"
+      },
+      {
+        "k": "t",
+        "v": " modules / "
+      },
+      {
+        "k": "m",
+        "v": "6040"
+      },
+      {
+        "k": "t",
+        "v": " static "
+      },
+      {
+        "k": "c",
+        "v": "check()"
+      },
+      {
+        "k": "t",
+        "v": " sites / "
+      },
+      {
+        "k": "m",
+        "v": "1469"
+      },
+      {
+        "k": "t",
+        "v": " negative-control keyword occurrences across "
+      },
+      {
+        "k": "m",
+        "v": "233"
+      },
+      {
+        "k": "t",
+        "v": " modules, preregistration census "
+      },
+      {
+        "k": "m",
+        "v": "47"
+      },
+      {
+        "k": "t",
+        "v": " contract rows ("
+      },
+      {
+        "k": "m",
+        "v": "29"
+      },
+      {
+        "k": "t",
+        "v": " naming kill criteria before execution; executed chains "
+      },
+      {
+        "k": "c",
+        "v": "FTR.PGL2.01"
+      },
+      {
+        "k": "t",
+        "v": " v533"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "v632 and "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.WEIL.OPERATOR.01"
+      },
+      {
+        "k": "t",
+        "v": " K1–K3"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "v643 verified in the ledger), deterministic replay "
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": " on a declared sample spanning "
+      },
+      {
+        "k": "c",
+        "v": "v55"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v648"
+      },
+      {
+        "k": "t",
+        "v": ", five classical anchors recomputed against the literature (Jacobi "
+      },
+      {
+        "k": "m",
+        "v": "r_4"
+      },
+      {
+        "k": "t",
+        "v": ", Construction A "
+      },
+      {
+        "k": "m",
+        "v": "\\to E_8"
+      },
+      {
+        "k": "t",
+        "v": ", Shephard–Todd G31 degrees, Suzuki archimedean constants, completed-zeta functional equation), "
+      },
+      {
+        "k": "m",
+        "v": "54"
+      },
+      {
+        "k": "t",
+        "v": " committed Lean proof modules — and the honest limit typed "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": ": process discipline, not physics truth, the open gates stay open; PLUS the public mirror: a new "
+      },
+      {
+        "k": "c",
+        "v": "/method"
+      },
+      {
+        "k": "t",
+        "v": " page (“the verification framework”) built from a new generated data surface "
+      },
+      {
+        "k": "c",
+        "v": "website/lib/discipline.ts"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v649_discipline_audit.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "18"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}200"
+        },
+        {
+          "k": "t",
+          "v": " s; discovery probe "
+        },
+        {
+          "k": "c",
+          "v": "discipline_ audit_ probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "17/17"
+        },
+        {
+          "k": "t",
+          "v": ", verdict "
+        },
+        {
+          "k": "t",
+          "v": "discipline-measured"
+        },
+        {
+          "k": "t",
+          "v": "): a read-only meta-module that parses the suite's own files — ledger, module sources, contracts paper, Lean tree — and certifies the measured discipline metrics as frozen minimum bars. D1 ledger census ("
+        },
+        {
+          "k": "m",
+          "v": "715"
+        },
+        {
+          "k": "t",
+          "v": " rows, "
+        },
+        {
+          "k": "m",
+          "v": "710"
+        },
+        {
+          "k": "t",
+          "v": " active, display classes E/C/O/X/Axiom/other "
+        },
+        {
+          "k": "m",
+          "v": "=169/222/282/37/2/3"
+        },
+        {
+          "k": "t",
+          "v": " at freeze; "
+        },
+        {
+          "k": "m",
+          "v": "214"
+        },
+        {
+          "k": "t",
+          "v": " rows with negative-evidence keywords: kill, ill-posed, honest negative, must-fail, retyped, superseded, dead, bingo, numerology); D2 must-fail census ("
+        },
+        {
+          "k": "m",
+          "v": "643"
+        },
+        {
+          "k": "t",
+          "v": " modules, every one with checks; "
+        },
+        {
+          "k": "m",
+          "v": "6040"
+        },
+        {
+          "k": "t",
+          "v": " static "
+        },
+        {
+          "k": "c",
+          "v": "check()"
+        },
+        {
+          "k": "t",
+          "v": " call sites, clearing the published "
+        },
+        {
+          "k": "m",
+          "v": "5452"
+        },
+        {
+          "k": "t",
+          "v": " counter; "
+        },
+        {
+          "k": "m",
+          "v": "1469"
+        },
+        {
+          "k": "t",
+          "v": " must-fail/kill/scramble occurrences in "
+        },
+        {
+          "k": "m",
+          "v": "233"
+        },
+        {
+          "k": "t",
+          "v": " modules; typing marks "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\times\\,3579"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\times\\,1323"
+        },
+        {
+          "k": "t",
+          "v": "); D3 preregistration census ("
+        },
+        {
+          "k": "m",
+          "v": "47"
+        },
+        {
+          "k": "t",
+          "v": " contract rows, "
+        },
+        {
+          "k": "m",
+          "v": "29"
+        },
+        {
+          "k": "t",
+          "v": " naming kill criteria; executed chains machine-verified: "
+        },
+        {
+          "k": "c",
+          "v": "FTR.PGL2.01"
+        },
+        {
+          "k": "t",
+          "v": " preregistered "
+        },
+        {
+          "k": "c",
+          "v": "v533"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " executed "
+        },
+        {
+          "k": "c",
+          "v": "v632"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " kill tests K1–K3 "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " W1 theorem-closed "
+        },
+        {
+          "k": "c",
+          "v": "v643"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "REG.FREEZE.01"
+        },
+        {
+          "k": "t",
+          "v": " frozen 2026-06-09); D4 reproducibility (deterministic replay "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": " on the declared sample "
+        },
+        {
+          "k": "c",
+          "v": "v55"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v91"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v108"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v205"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v305"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v405"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v505"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v555"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v600"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v634"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v643"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v648"
+        },
+        {
+          "k": "t",
+          "v": " — two fresh subprocess runs each, identical up to timing lines; "
+        },
+        {
+          "k": "m",
+          "v": "396"
+        },
+        {
+          "k": "t",
+          "v": " sympy-exact modules, "
+        },
+        {
+          "k": "m",
+          "v": "77"
+        },
+        {
+          "k": "t",
+          "v": " with explicit seeds); D5 external anchors (five classical recomputes against the literature: Jacobi 1834 four-square counts exact "
+        },
+        {
+          "k": "m",
+          "v": "n=1..40"
+        },
+        {
+          "k": "t",
+          "v": ", Construction A "
+        },
+        {
+          "k": "m",
+          "v": "[8,4,4]\\to E_8"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " minimal vectors, Shephard–Todd G31 degrees "
+        },
+        {
+          "k": "m",
+          "v": "(8,12,20,24)"
+        },
+        {
+          "k": "t",
+          "v": ", Suzuki "
+        },
+        {
+          "k": "m",
+          "v": "\\psi(\\tfrac14)/L/A"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "25"
+        },
+        {
+          "k": "t",
+          "v": "+ digits, completed-zeta functional equation at "
+        },
+        {
+          "k": "m",
+          "v": "3\\times10^{-31}"
+        },
+        {
+          "k": "t",
+          "v": "); D6 Lean layer ("
+        },
+        {
+          "k": "m",
+          "v": "54"
+        },
+        {
+          "k": "t",
+          "v": " committed "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier"
+        },
+        {
+          "k": "t",
+          "v": " modules via "
+        },
+        {
+          "k": "c",
+          "v": "git ls-files"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " honestly "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " re-run in-suite); D7 the limit, typed "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "(process discipline, not physics truth; "
+        },
+        {
+          "k": "m",
+          "v": "278"
+        },
+        {
+          "k": "t",
+          "v": " class-O rows stay open incl. "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.THEOREM.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " W2–W4). Freeze discipline: every bar is the value measured at freeze time; a future census regression fails the module and forces an honest dated re-freeze."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New row "
+        },
+        {
+          "k": "c",
+          "v": "META.DISCIPLINE.01"
+        },
+        {
+          "k": "t",
+          "v": " (canonical status "
+        },
+        {
+          "k": "t",
+          "v": "discipline-certified"
+        },
+        {
+          "k": "t",
+          "v": "); no other row changes, no marker moves anywhere."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New generated data surface "
+        },
+        {
+          "k": "c",
+          "v": "website/lib/discipline.ts"
+        },
+        {
+          "k": "t",
+          "v": " written by the new "
+        },
+        {
+          "k": "c",
+          "v": "verification/make_discipline_stats.py"
+        },
+        {
+          "k": "t",
+          "v": " (stdlib-only, hooked into "
+        },
+        {
+          "k": "c",
+          "v": "bash build.sh gen"
+        },
+        {
+          "k": "t",
+          "v": "; freshness enforced by "
+        },
+        {
+          "k": "c",
+          "v": "audit_sync.py"
+        },
+        {
+          "k": "t",
+          "v": " section A.generated). New page "
+        },
+        {
+          "k": "c",
+          "v": "/method"
+        },
+        {
+          "k": "t",
+          "v": " (“The verification framework”): the sandbox "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " probe-with-kill-criteria "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " suite "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " ledger "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " generated-mirrors pipeline as a static SVG; the measured D1–D6 numbers rendered from "
+        },
+        {
+          "k": "c",
+          "v": "discipline.ts"
+        },
+        {
+          "k": "t",
+          "v": "; the “buried coincidences” graveyard ("
+        },
+        {
+          "k": "m",
+          "v": "|G31|=|W(D_5)|\\cdot|W(A_3)|"
+        },
+        {
+          "k": "t",
+          "v": " killed three ways "
+        },
+        {
+          "k": "c",
+          "v": "v634"
+        },
+        {
+          "k": "t",
+          "v": "; the bytecode "
+        },
+        {
+          "k": "m",
+          "v": "p_n"
+        },
+        {
+          "k": "t",
+          "v": " reading "
+        },
+        {
+          "k": "m",
+          "v": "0/11"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v646"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "c=w^2"
+        },
+        {
+          "k": "t",
+          "v": " dead by parity theorem "
+        },
+        {
+          "k": "c",
+          "v": "v647"
+        },
+        {
+          "k": "t",
+          "v": "; the fine-invariant "
+        },
+        {
+          "k": "m",
+          "v": "\\leftrightarrow C=1"
+        },
+        {
+          "k": "t",
+          "v": " bridge dead after "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-control "
+        },
+        {
+          "k": "c",
+          "v": "v637"
+        },
+        {
+          "k": "t",
+          "v": "; the naive "
+        },
+        {
+          "k": "m",
+          "v": "48\\times5"
+        },
+        {
+          "k": "t",
+          "v": " incidence "
+        },
+        {
+          "k": "c",
+          "v": "v629"
+        },
+        {
+          "k": "t",
+          "v": "; the ill-posed B-test "
+        },
+        {
+          "k": "c",
+          "v": "v624"
+        },
+        {
+          "k": "t",
+          "v": "; the same-day Lerch erratum "
+        },
+        {
+          "k": "c",
+          "v": "v643"
+        },
+        {
+          "k": "t",
+          "v": "); “what would falsify this” (the open contracts' kill criteria); the E/C/O/X status typology with the measured distribution; and a sober AI-transparency paragraph (agents execute, the deterministic suite decides — "
+        },
+        {
+          "k": "c",
+          "v": "python3 verification/run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " replays everything). Navigation entry, a compact “how we keep ourselves honest” band on the home page, and the "
+        },
+        {
+          "k": "c",
+          "v": "/method"
+        },
+        {
+          "k": "t",
+          "v": " link added to the prime-front honesty banner; suite counters "
+        },
+        {
+          "k": "m",
+          "v": "642\\to643"
+        },
+        {
+          "k": "t",
+          "v": " on the affected pages, README and Zenodo description."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The meta-module measures "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "process"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " discipline, not the truth of any physics claim; it is read-only and moves no marker; the "
+        },
+        {
+          "k": "c",
+          "v": "/method"
+        },
+        {
+          "k": "t",
+          "v": " page renders only generated or machine-checked numbers — no new claims anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-02",
     "dateLabel": "2026-08-02 · XLIII",
     "heading": [
       {

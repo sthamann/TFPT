@@ -48,6 +48,7 @@ import sys
 from pathlib import Path
 
 import make_changelog_web
+import make_discipline_stats
 import make_docs_map
 import make_script_index
 
@@ -134,6 +135,15 @@ def check_suite(registered: list[str]) -> None:
             continue
         if not target.exists() or target.read_text() != content:
             err("A.generated", f"{target.relative_to(ROOT)} stale -- run make_changelog_web.py")
+
+    # website discipline-stats mirror fresh? (generated from the suite's own
+    # files by make_discipline_stats.py; keeps /method from drifting)
+    for target, content in make_discipline_stats.build().items():
+        if make_discipline_stats.WEBSITE_DIR in target.parents \
+                and not make_discipline_stats.WEBSITE_DIR.exists():
+            continue
+        if not target.exists() or target.read_text() != content:
+            err("A.generated", f"{target.relative_to(ROOT)} stale -- run make_discipline_stats.py")
 
 
 # -------------------------------------------------------------- B: papers

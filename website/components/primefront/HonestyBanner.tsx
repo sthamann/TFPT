@@ -23,7 +23,7 @@ export function HonestyBanner() {
         >
           v535–v648 on this front
         </Link>
-        , inside a 642-script suite, all green). The sprint T102–T125
+        , inside a 643-script suite, all green). The sprint T102–T125
         compressed the remaining arithmetic bound to one sign plus one declared
         accounting convention; phase 2 (T126–T176) closed its measurement
         programme as planned and stands as a certified map with one open
@@ -45,6 +45,18 @@ export function HonestyBanner() {
         transferring at d = 1 (v648). Honest fence: closing W1 does not
         move W3 (uniform positivity, the RH-hard step). No claim of
         progress toward the Riemann Hypothesis is made.
+      </p>
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-amber-50/80">
+        How this discipline works — the sandbox firewall, the kill criteria
+        declared before execution, the graveyard of buried coincidences, and
+        the suite module that measures all of it (v649) — is documented on{" "}
+        <Link
+          href="/method"
+          className="font-semibold text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
+        >
+          The verification framework
+        </Link>
+        .
       </p>
       <details className="group mt-4">
         <summary className="cursor-pointer list-none font-mono text-[11px] uppercase tracking-[0.18em] text-amber-300/80 transition-colors hover:text-amber-200">

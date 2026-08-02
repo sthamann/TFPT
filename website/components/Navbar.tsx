@@ -17,6 +17,7 @@ const TOUR_IN_NAV = true;
 const primaryLinks = [
   { href: "/", label: "Start" },
   ...(TOUR_IN_NAV ? [{ href: "/tour", label: "Tour" }] : []),
+  { href: "/method", label: "Method" },
   { href: "/verification", label: "Verification" },
   { href: "/falsification", label: "Kill board" },
   { href: "/replication", label: "Replication" },
