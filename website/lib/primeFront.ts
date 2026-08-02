@@ -219,7 +219,8 @@ export type PrimeFrontVerdict =
   | "W1-DICTIONARY-DERIVED"
   | "TEN-FRONT-BATCH"
   | "ERRATUM-PLUS-SIX-BATCH"
-  | "CLOSING-BUNDLE-NINETEEN";
+  | "CLOSING-BUNDLE-NINETEEN"
+  | "FEJER-DENSITY-ROUND-FIVE";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -248,6 +249,26 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-02",
+    part: 0,
+    title:
+      "The fourth promotion round of the day — five promotions (v669–v673, 65 new checks, all green), and the W2 density plane closes as the day's keystone. (1) THE HIGHLIGHT — v669 (PRIME.FEJERDENS.01, FEJER-DENSITY-THEOREM): the exact identity s_tot = 2π(F_a ⋆ dN) — the Weil explicit formula applied to the tent test pair makes the total window symbol literally the Fejér-smoothed zero-counting density (verified 2.9e−6 pointwise / 7.2e−8 t-averaged against the Turing-certified comb; the envelope peaks ARE the zeros, γ₁–γ₄ matched to 0.0002; the dips ARE the zero gaps, forensics residual 1.5e−6, Fejér power 0.974 = predicted) — plus the UNCONDITIONAL theorem chain: RvM counting + Trudgian's |S| bound + the Fejér box minorant give ρ_{a,δ}(t) ≥ 0.306·log(2+t) − C₀ a-uniformly at δ ∈ {4π, πa}, with 10/10 finite certificates machine-checked on the ZERO-FREE ρ grid (margins ≥ 1.36; no zero enters the certificate). The honest floor: the literal 1/a and the plane-wave π/a widths sit BELOW the RvM certifiability threshold 4πA₁ = 1.4074 — pointwise single-mode control is not certifiable this way at ANY height, which is the structural explanation of the Garding 1/log drift; the theorem controls wave packets of spectral width ≥ δ, and the remaining W2 piece is the packet-to-point translation below the floor. (2) The needle search narrows THREEFOLD: v670 (BLOCK-DEFL-FAIL, honest) — the named successor of the rank-1 rotation predicate fails at the declared bars: fidelity p90 only 50.53 → 49.35° for K = 1 → 8 (the 5° bar is never reached), leak median 1.000 at EVERY K — the pencil action on the lock direction is not captured by the 8 lowest deflated modes: the coupling is BULK-spectral, not low-rank; needle predicate precision 0.635 at recall 1.000 → miss; the frame-A rebuild is skipped by the frozen rule. v671 (LEHMER-NULL) — the needles are NOT zero-comb-driven: the top-10 Lehmer-like pair table and the resolution correspondence D ↔ t_max = π/D ∈ [118, 868] are documented, but the raw ±0.7 correlations are pure h-ladder — the h³-partials collapse to +0.195/−0.123/−0.125 with all p > 0.1, and the pseudo-pair placement control (B = 2000) is unremarkable; the teeth detect a planted signal (ρ = +0.847, p = 5e−5). Together with v667 (not in the Baez–Duarte frame): the mechanism search moves frame-/assembly-side. (3) The Li double: v672 (LI-COROLLARY-FINITE) — g_n = ½e^{−|u|/2}L⁽¹⁾_{n−1}(|u|) derived exactly (generalized Laguerre; the Li coefficient IS a quadratic-form value of the Weil form at the generator G_n), and the h = 1433 window contains 30/32 finite Li coefficients at < 10% form error (band 2..4 ∪ 6..32; n = 1 honestly misses at 24% — a jump artifact at pitch D; n = 5 hair-thin at 10.03%); pole cancellation to six digits (the rank-2 pole block is exactly the piece the positivity certificate must exclude); odd sector certified by λ_min = +1.516e−3 > 0 (share 75–99.8%). v673 (LI-E4-ADDITIVE-CONSISTENT) — Λ(E₄, s) = (2π)^{−s}Γ(s)ζ(s)ζ(s−3) completed with residues ±1/240 EXACTLY — the E8 shell normalizer 240 IS the residue — Λ_L(n) = Λ(n)(1+n³) from the 240σ₃ recursion, the shift rule λₙᴸ = 2λₙᶻ exact (Lagarias additivity), and the E8-arithmetic route agrees with the comb route in ONE Li sequence (budget usage 0.124 for all n ≤ 32); the naive single-map Li explodes negatively (non-tempered) — the exact E8 ↔ comb consistency test. Contract state after the round (sixth slice of PRIME.WEIL.OPERATOR.01): W2 density plane closed, remainder = the packet-to-point translation below the RvM floor; W3 narrowed threefold; the Li corollary and the E4 lock are new; kill criteria unchanged. All statements finite; no marker moves; W2/W3 stay open; no RH statement.",
+    headline:
+      "The Fejér-density round — five promotions (v669–v673): the W2 density plane closes (exact identity + unconditional theorem + finite certificates), the needle search narrows threefold, and the Li double connects W1 positivity to finite Li coefficients and E8 arithmetic.",
+    keyFacts: [
+      "v669–v673 promoted (65 new checks, all green). Suite 662 → 667 scripts",
+      "v669: s_tot = 2π(F_a ⋆ dN) exact (2.9e−6 pointwise / 7.2e−8 averaged; peaks = zeros, dips = gaps); unconditional RvM + Trudgian chain ρ_{a,δ} ≥ 0.306·log(2+t) − C₀ with 10/10 zero-free finite certificates; honest floor: 1/a and π/a sit below the RvM threshold 1.4074 — the Garding drift explained",
+      "W3 narrowed threefold: not low-rank (v670 block deflation fails honestly, leak median 1.000 at every K ≤ 8), not zero-comb-driven (v671 LEHMER-NULL, h³-partials all p > 0.1), not in the BD frame (v667) — the mechanism search moves frame-/assembly-side",
+      "v672: the W1 window positivity CONTAINS 30/32 finite Li coefficients (g_n = ½e^{−|u|/2}L⁽¹⁾_{n−1}(|u|), Laguerre; pole cancellation to 6 digits; odd sector certified by λ_min = +1.516e−3 > 0) — finite, not Li's criterion",
+      "v673: Λ(E₄,s) completed, residues ±1/240 — the E8 240 IS the residue normalizer; λₙᴸ = 2λₙᶻ exact; E8-arithmetic vs comb at budget usage 0.124; the naive single-map Li refused (non-tempered)",
+    ],
+    verdict: "FEJER-DENSITY-ROUND-FIVE",
+    summary:
+      "v669–v673 promoted: v669_fejer_density.py (PRIME.FEJERDENS.01, 14), v670_w3_block_deflation.py (PRIME.BLOCKDEFL.01, 18), v671_lehmer_resonance.py (PRIME.LEHMERNULL.01, 10), v672_li_corollary.py (PRIME.LICOROLLARY.01, 11), v673_li_e4.py (PRIME.LIE4.01, 12). Ledger 739 rows; the sixth consolidated slice on PRIME.WEIL.OPERATOR.01. Suite 662 → 667 scripts.",
+    badge: "sandbox",
+    script: "fejer_density_bound_probe.py",
+  },
   {
     date: "2026-08-02",
     part: 0,

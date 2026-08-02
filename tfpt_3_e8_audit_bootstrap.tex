@@ -3783,6 +3783,150 @@ Machine-checked: \veri{v668\_ground\_truth.py}.
 recalibration)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The Fej\'er density theorem
+(\texttt{PRIME.FEJERDENS.01}).}
+The renamed W2 residual task, structured and closed at the density
+level ($14$ checks, ${\sim}65$\,s; verdict
+\textsc{fejer-density-theorem}).  \emph{The identity (exact):} the
+Weil explicit formula on the tent test pair
+$g_t(u)=(1/2a)(2a-|u|)_+e^{-itu}$ gives
+$s_{\mathrm{tot}}(\cdot;a)=2\pi(F_a\star dN)$ --- the total window
+symbol \emph{is} ($2\pi$ times) the Fej\'er-smoothed zero-counting
+density; verified pointwise to $2.9\times10^{-6}$ and $t$-averaged
+to $7.2\times10^{-8}$ against the Turing-certified comb; the
+envelope peaks \emph{are} the zeros ($\gamma_{1..4}$ matched to
+$0.0002$), the dips \emph{are} the zero gaps (forensics residual
+$1.5\times10^{-6}$; Fej\'er power
+$p_{\mathrm{meas}}=p_{\mathrm{pred}}=0.974$); hypothetical off-line
+zeros above $3\times10^{12}$ are budgeted at $2.4\times10^{-10}$.
+\emph{The unconditional chain (cited constants):} windowed RvM
+counting $+$ Trudgian $|S|$ $+$ Fej\'er box minorant $+$ $F_a$ mass
+transfer give
+$\rho_{a,\delta}(t)\ge c_0^{\mathrm{thm}}\log(2+t)-C_0$ for
+$t\ge t_0(a,\delta)$ at $\delta\in\{4\pi,\pi a\}$: $10/10$
+$(a,\delta)$ pairs close with $t_0\le6000$, min
+$c_0^{\mathrm{thm}}=0.3058$ ($15.1\times$ the raw measured hull),
+and the finite remainder $[10,t_0]$ is machine-checked on the
+\emph{zero-free} $\rho$ grid ($10/10$ margins, min cert margin
+$+1.36$).  \emph{The honest floor:} the chain closes only for
+smoothing widths $\delta>4\pi A_1=1.4074$; the literal $1/a$ and the
+plane-wave $\pi/a$ sit \emph{below} the floor for every frame-A
+window --- per-mode symbol control (the G\aa rding $1/\log$ drift)
+is not certifiable this way at \emph{any} height; the theorem
+controls wave packets of spectral width $\ge\delta$, and the
+remaining W2 piece is the packet-to-point translation below the
+floor.  W2 stays open; no marker move, no RH statement.
+Machine-checked: \veri{v669\_fejer\_density.py}.
+\mE\ (exact identity; zero-free finite certificates) $+$
+(\textsc{analytic, cited}) (unconditional chain) $+$ \mC\ (typed
+floor)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The block deflation, honest
+(\texttt{PRIME.BLOCKDEFL.01}).}
+The named successor of the rank-1 predicate, failed honestly ($18$
+checks, ${\sim}95$\,s; verdict \textsc{block-defl-fail}).  The
+$(1{+}K)$-block Rayleigh--Ritz compression onto
+$\{\hat w_{\mathrm{lock}},\,K\ \text{lowest deflated eigenvectors}\}$
+reads no minimal mode (wiring exact on $702$ pooled points; the
+$K=1$ rung reproduces the rank-1 quotes).  The fidelity ladder:
+$p_{90}=50.53/49.49/49.44/49.35°$ for $K=1/2/4/8$ --- no $K$ reaches
+the declared $5°$ bar; the needle predicate at $K=8$ fires on all
+$52$ classified needles (precision $0.635$ at recall $1.000$, bar
+$0.80$: miss); the frame-A rebuild is skipped by the frozen rule.
+The failure record \emph{is} the finding: the leak median is $1.000$
+at every $K$ --- the pencil action on the lock direction is not
+captured by the $8$ lowest deflated modes; the multi-mode coupling
+is \emph{bulk-spectral}, not low-rank.  No positivity claim, no RH
+statement; W3 stays open.
+Machine-checked: \veri{v670\_w3\_block\_deflation.py}.
+\mE\ (block wiring, anchors) $+$ (\textsc{measured}) (honest double
+miss; leak ladder) $+$ \mC\ (typed reading)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Lehmer null
+(\texttt{PRIME.LEHMERNULL.01}).}
+Are the W3 needles the window analogue of the Lehmer-pair
+phenomenology?  A clean no ($10$ checks, ${\sim}12$\,s; verdict
+\textsc{lehmer-null}).  Pair statistics on the certified comb: the
+top-10 Lehmer-like pair table (comb minimum $\delta_k=0.089$ at
+$\gamma\approx1977$; the classical Lehmer pair at
+$\gamma\approx7005$ lies outside the comb, documented); the
+resolution correspondence is documented: lattice spacing $D$
+$\leftrightarrow$ Nyquist reach $t_{\max}=\pi/D\in[118,868]$, lag
+support $2\alpha$ $\leftrightarrow$ resolution $\pi/(2\alpha)$.  The
+null: the raw $\pm0.7$ correlations of $P=q\tan^2\theta$ with Lehmer
+presence are pure $h$-ladder; the $h^3$-partials collapse to
+$+0.195/-0.123/-0.125$ with all $p>0.1$, and the pseudo-pair
+placement control ($B=2000$) is unremarkable ($p=0.086/0.299/0.231$)
+--- the needles are \emph{not} zero-comb-driven at the window
+resolution, consistent with the frame-side reading (\texttt{v667}).
+The teeth: a planted signal is detected at $\rho=+0.847$,
+$p=5\times10^{-5}$.  Zeros enter only as the correlation target; no
+RH statement.
+Machine-checked: \veri{v671\_lehmer\_resonance.py}.
+(\textsc{measured}) (pair statistics; clean $h$-controlled null;
+placement control) $+$ \mE\ (must-detect teeth) $+$ \mC\ (typed
+reading)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Li corollary, finite
+(\texttt{PRIME.LICOROLLARY.01}).}
+The W1 $\Rightarrow$ Li corollary spelled out ($11$ checks,
+${\sim}4$\,s; verdict \textsc{li-corollary-finite}).  The generator
+is derived exactly:
+$g_n(u)=\tfrac12e^{-|u|/2}L^{(1)}_{n-1}(|u|)$ (generalized Laguerre;
+sympy-exact), and
+$\hat g_n=\tfrac12|\hat G_n|^2=2\sin^2(n\theta/2)\ge0$ --- the Li
+coefficient is a \emph{quadratic-form value} of the Weil form at the
+generator $G_n$.  The explicit formula is locked on the $h=1433$
+window (worst rel.\ dev $5.5\times10^{-3}$, the typed
+$(\gamma D)^2/12$ discretization scale), with the pole-cancellation
+exhibit: for a low-mode odd vector the window form cancels the pole
+term to six digits ($4.0\times10^{-7}$) --- the rank-2 pole block
+(\texttt{v591}) is exactly the piece the certificate must exclude.
+The central table: the $L^2$ projection plus pole-free correction
+reproduces $\lambda_n$ with form error $<10\%$ on the band
+$2..4\cup6..32$ ($30$ of $32$; $n=1$ honestly misses at $0.24$ ---
+a jump artifact at pitch $D$; $n=5$ hair-thin at $0.1003$), and
+every band read sits above the certified floor: the
+\texttt{v648}-type datum $\lambda_{\min}=+1.516\times10^{-3}>0$
+\emph{contains} these $30$ finite Li coefficients (odd sector share
+$0.753..0.998$; the new even-sector measurement is documented:
+unconstrained indefinite, pole-free $+7.67\times10^{-4}$).  A finite
+statement --- not Li's criterion, no RH statement.
+Machine-checked: \veri{v672\_li\_corollary.py}.
+\mE\ (Laguerre derivation; window lock; pole cancellation) $+$
+(\textsc{measured}) ($30/32$ band table) $+$ \mC\ (finite typing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The $E_4$ Li lock
+(\texttt{PRIME.LIE4.01}).}
+Li additivity for $L(E_4,s)=\zeta(s)\zeta(s-3)$ as the exact
+$E_8\leftrightarrow$ comb consistency test ($12$ checks,
+${\sim}11$\,s; verdict \textsc{li-e4-additive-consistent}).  The
+completed form
+$\Lambda(E_4,s)=(2\pi)^{-s}\Gamma(s)\zeta(s)\zeta(s-3)$ satisfies
+the functional equation $s\leftrightarrow4-s$ exactly
+($2.4\times10^{-41}$), with residues $\pm1/240$ at $s=4,0$
+\emph{exactly} (sympy) --- the $E_8$ shell normalizer $240$
+\emph{is} the residue.  The prime shadow is exact:
+$\Lambda_L(n)=\Lambda(n)(1+n^3)$ from the $240\,\sigma_3$ recursion
+($30$ digits to $n=512$; Dirichlet lock at $s=6$ to
+$1.8\times10^{-11}$).  The shift rule
+$\lambda_n^L=2\lambda_n^\zeta$ holds exactly (Lagarias additivity;
+unimodularity at $9.9\times10^{-32}$), and the cross-check closes:
+$|\lambda_n^{L,\mathrm{arith}}-\lambda_n^{L,\mathrm{comb}}|
+\le2B_{\mathrm{fl}}(n)$ for all $n\le32$ (max budget usage $0.124$)
+--- the $E_8$ counting function and the $\zeta$ comb agree in
+\emph{one} Li sequence.  The teeth: the naive single-map Li at $s=2$
+explodes negatively (first negative at $n=269$) --- $L(E_4)$ is
+non-tempered in that normalization; the additive per-factor
+definition is the correct reading.  A finite statement, no RH claim.
+Machine-checked: \veri{v673\_li\_e4.py}.
+\mE\ (completed form, residues, shift rule, cross-check, teeth)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

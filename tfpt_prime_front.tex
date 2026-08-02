@@ -11399,6 +11399,27 @@ moment the Euler product is removed (the Epstein firewall,
 \veri{v668\_ground\_truth.py}), and the external Baez--Duarte frame
 shows the log-slow drift is intrinsic while the resonance needles
 are frame-side (\veri{v667\_baez\_duarte.py}).
+The fourth round of the same day closes the W2 \emph{density plane}:
+the total window symbol is identified \emph{exactly} as the
+Fej\'er-smoothed zero-counting density,
+$s_{\mathrm{tot}}=2\pi(F_a\star dN)$ (Weil explicit formula on the
+tent test pair, verified $2.9\times10^{-6}$ pointwise), and an
+unconditional Riemann--von Mangoldt $+$ Trudgian chain certifies
+$\rho_{a,\delta}(t)\ge0.306\,\log(2+t)-C_0$ $a$-uniformly with
+finite zero-free certificates (\veri{v669\_fejer\_density.py}); the
+honest floor $4\pi A_1=1.4074$ explains the G\aa rding drift
+(per-mode control below the floor is not certifiable this way), so
+the remaining W2 piece is the packet-to-point translation.  The
+needle search narrows threefold: not low-rank
+(\veri{v670\_w3\_block\_deflation.py}, an honest FAIL of the block
+deflation), not zero-comb-driven
+(\veri{v671\_lehmer\_resonance.py}, a clean Lehmer null), not in the
+Baez--Duarte frame (\veri{v667\_baez\_duarte.py}) --- the mechanism
+search moves frame-/assembly-side.  And the Li strand connects: the
+W1 window positivity \emph{contains} $30/32$ finite Li coefficients
+(\veri{v672\_li\_corollary.py}), and the $E_8$ shell data and the
+$\zeta$ comb agree in one Li sequence with residues $\pm1/240$
+(\veri{v673\_li\_e4.py}) --- finite statements, not Li's criterion.
 
 \emph{External context (verification-side, complementary).}  A
 recent Nature Communications paper --- Wei, Zhai, Lu et al., ``The

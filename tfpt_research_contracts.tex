@@ -3298,6 +3298,42 @@ the family positivity read does carry arithmetic information; the
 needles are frame-side (\veri{v667\_baez\_duarte.py}).  \emph{Kill
 criteria K1--K3 unchanged; no step silently upgraded; no RH
 statement.}
+\emph{Sixth slice (2026-08-02, the Fej\'er-density round): the
+density plane closes; the needle search narrows threefold; the Li
+corollary.}  \textbf{W2 --- the density plane is closed}
+(\veri{v669\_fejer\_density.py}): the total window symbol \emph{is}
+the Fej\'er-smoothed zero-counting density --- the exact identity
+$s_{\mathrm{tot}}(\cdot;a)=2\pi(F_a\star dN)$ (Weil explicit formula
+on the tent test pair, verified $2.9\times10^{-6}$ pointwise /
+$7.2\times10^{-8}$ $t$-averaged against the Turing-certified comb)
+--- and the \emph{unconditional} chain RvM $+$ Trudgian yields
+$\rho_{a,\delta}(t)\ge0.306\,\log(2+t)-C_0$ $a$-uniformly at
+$\delta\in\{4\pi,\pi a\}$ with $10/10$ finite certificates on the
+zero-free grid (min margin $+1.36$).  The honest floor: the literal
+$1/a$ and the plane-wave $\pi/a$ widths sit \emph{below} the RvM
+threshold $4\pi A_1=1.4074$ --- per-mode symbol control is not
+certifiable this way at any height (the structural explanation of
+the G\aa rding drift), so the remaining W2 piece is the
+packet-to-point translation below the floor.  \textbf{W3 --- the
+needle search is narrowed threefold:} the needles are \emph{not
+low-rank} (the $(1{+}K)$-block deflation fails honestly: leak median
+$1.000$ at every $K\le8$, fidelity $p_{90}\approx49°$;
+\veri{v670\_w3\_block\_deflation.py}), \emph{not zero-comb-driven}
+(the Lehmer-pair link is a clean null: $h^3$-partials all $p>0.1$,
+placement control unremarkable;
+\veri{v671\_lehmer\_resonance.py}), and \emph{not in the BD frame}
+(\veri{v667\_baez\_duarte.py}) --- the mechanism search moves
+frame-/assembly-side.  \textbf{New --- the Li corollary and the
+$E_4$ lock:} the W1 window positivity \emph{contains} $30/32$ finite
+Li coefficients ($g_n=\tfrac12e^{-|u|/2}L^{(1)}_{n-1}(|u|)$ derived
+exactly; band $2..4\cup6..32$ on $h=1433$, pole-free hyperplane, odd
+sector certified by $\lambda_{\min}=+1.516\times10^{-3}>0$;
+\veri{v672\_li\_corollary.py}), and the $E_8$ shell data and the
+$\zeta$ comb agree in \emph{one} Li sequence ($\Lambda(E_4,s)$
+completed with residues $\pm1/240$ --- the $E_8$ $240$ is the
+residue normalizer; $\lambda_n^L=2\lambda_n^\zeta$ exact; budget
+usage $0.124$; \veri{v673\_li\_e4.py}).  \emph{Kill criteria K1--K3
+unchanged; no step silently upgraded; no RH statement.}
 
 \par\smallskip\noindent\textbf{The four fixed-size angle instruments
 (\texttt{PRIME.ANGLE.INSTR.01}).}

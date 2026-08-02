@@ -43,6 +43,821 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-02",
+    "dateLabel": "2026-08-02 · XLVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the fourth promotion round of the day: FIVE promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v669"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v673"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "65"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green) — THE W2 DENSITY PLANE CLOSES ("
+      },
+      {
+        "k": "c",
+        "v": "v669"
+      },
+      {
+        "k": "t",
+        "v": ", the highlight of the round: the exact identity "
+      },
+      {
+        "k": "m",
+        "v": "s_{\\mathrm{tot}}=2\\pi(F_a\\star dN)"
+      },
+      {
+        "k": "t",
+        "v": " via the Weil explicit formula on the tent test pair, verified "
+      },
+      {
+        "k": "m",
+        "v": "2.9\\times10^{-6}"
+      },
+      {
+        "k": "t",
+        "v": " pointwise / "
+      },
+      {
+        "k": "m",
+        "v": "7.2\\times10^{-8}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "t"
+      },
+      {
+        "k": "t",
+        "v": "-averaged against the Turing-certified comb — the envelope peaks ARE the zeros ("
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_{1..4}"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "0.0002"
+      },
+      {
+        "k": "t",
+        "v": "), the dips ARE the zero gaps — plus the UNCONDITIONAL chain RvM "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Trudgian "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow\\rho_{a,\\delta}\\ge0.306\\,\\log(2+t)-C_0"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "a"
+      },
+      {
+        "k": "t",
+        "v": "-uniformly with "
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": " finite certificates on the zero-free grid, margins "
+      },
+      {
+        "k": "m",
+        "v": "\\ge1.36"
+      },
+      {
+        "k": "t",
+        "v": "; the honest floor: the literal "
+      },
+      {
+        "k": "m",
+        "v": "1/a"
+      },
+      {
+        "k": "t",
+        "v": " and the plane-wave "
+      },
+      {
+        "k": "m",
+        "v": "\\pi/a"
+      },
+      {
+        "k": "t",
+        "v": " widths sit BELOW the RvM threshold "
+      },
+      {
+        "k": "m",
+        "v": "4\\pi A_1=1.4074"
+      },
+      {
+        "k": "t",
+        "v": ", the structural explanation of the G rding drift — the remaining W2 piece is the packet-to-point translation below the floor); THE NEEDLE SEARCH NARROWS THREEFOLD ("
+      },
+      {
+        "k": "c",
+        "v": "v670"
+      },
+      {
+        "k": "t",
+        "v": " block deflation honestly FAILED: fidelity "
+      },
+      {
+        "k": "m",
+        "v": "p_{90}"
+      },
+      {
+        "k": "t",
+        "v": " only "
+      },
+      {
+        "k": "m",
+        "v": "50.53\\to49.35°"
+      },
+      {
+        "k": "t",
+        "v": " for "
+      },
+      {
+        "k": "m",
+        "v": "K=1\\to8"
+      },
+      {
+        "k": "t",
+        "v": ", leak median "
+      },
+      {
+        "k": "m",
+        "v": "1.000"
+      },
+      {
+        "k": "t",
+        "v": " everywhere — the coupling is bulk-spectral, not low-rank; "
+      },
+      {
+        "k": "c",
+        "v": "v671"
+      },
+      {
+        "k": "t",
+        "v": " the Lehmer link is a clean NULL: "
+      },
+      {
+        "k": "m",
+        "v": "h^3"
+      },
+      {
+        "k": "t",
+        "v": "-partials all "
+      },
+      {
+        "k": "m",
+        "v": "p>0.1"
+      },
+      {
+        "k": "t",
+        "v": ", placement control unremarkable — the needles are NOT zero-comb-driven; together with "
+      },
+      {
+        "k": "c",
+        "v": "v667"
+      },
+      {
+        "k": "t",
+        "v": " not-in-the-BD-frame: the mechanism search moves frame-/assembly-side); and THE LI DOUBLE ("
+      },
+      {
+        "k": "c",
+        "v": "v672"
+      },
+      {
+        "k": "t",
+        "v": " the W1 "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " Li corollary: "
+      },
+      {
+        "k": "m",
+        "v": "g_n=\\tfrac12e^{-|u|/2}L^{(1)}_{n-1}(|u|)"
+      },
+      {
+        "k": "t",
+        "v": " derived exactly (Laguerre), the "
+      },
+      {
+        "k": "m",
+        "v": "h=1433"
+      },
+      {
+        "k": "t",
+        "v": " window contains "
+      },
+      {
+        "k": "m",
+        "v": "30/32"
+      },
+      {
+        "k": "t",
+        "v": " finite Li coefficients at "
+      },
+      {
+        "k": "m",
+        "v": "<10\\%"
+      },
+      {
+        "k": "t",
+        "v": " form error ("
+      },
+      {
+        "k": "m",
+        "v": "n=1"
+      },
+      {
+        "k": "t",
+        "v": " honestly "
+      },
+      {
+        "k": "m",
+        "v": "24\\%"
+      },
+      {
+        "k": "t",
+        "v": ", a jump artifact; "
+      },
+      {
+        "k": "m",
+        "v": "n=5"
+      },
+      {
+        "k": "t",
+        "v": " hair-thin "
+      },
+      {
+        "k": "m",
+        "v": "10.03\\%"
+      },
+      {
+        "k": "t",
+        "v": "), pole cancellation to six digits, odd sector certified by "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}=+1.516\\times10^{-3}>0"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "v673"
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "E_8\\leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": " comb Li lock: "
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda(E_4,s)=(2\\pi)^{-s}\\Gamma(s)\\zeta(s)\\zeta(s-3)"
+      },
+      {
+        "k": "t",
+        "v": " completed with residues "
+      },
+      {
+        "k": "m",
+        "v": "\\pm1/240"
+      },
+      {
+        "k": "t",
+        "v": " — the "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "240"
+      },
+      {
+        "k": "t",
+        "v": " IS the residue normalizer — "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_n^L=2\\lambda_n^\\zeta"
+      },
+      {
+        "k": "t",
+        "v": " exact, "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": "-arithmetic vs comb at budget usage "
+      },
+      {
+        "k": "m",
+        "v": "0.124"
+      },
+      {
+        "k": "t",
+        "v": ", the naive single-map Li refused as non-tempered)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (5)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v669_fejer_density.py"
+        },
+        {
+          "k": "t",
+          "v": " (14), "
+        },
+        {
+          "k": "c",
+          "v": "v670_w3_block_deflation.py"
+        },
+        {
+          "k": "t",
+          "v": " (18; verdict "
+        },
+        {
+          "k": "t",
+          "v": "block-defl-fail"
+        },
+        {
+          "k": "t",
+          "v": " promoted as the honest preregistered result), "
+        },
+        {
+          "k": "c",
+          "v": "v671_lehmer_resonance.py"
+        },
+        {
+          "k": "t",
+          "v": " (10; verdict "
+        },
+        {
+          "k": "t",
+          "v": "lehmer-null"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "v672_li_corollary.py"
+        },
+        {
+          "k": "t",
+          "v": " (11), "
+        },
+        {
+          "k": "c",
+          "v": "v673_li_e4.py"
+        },
+        {
+          "k": "t",
+          "v": " (12). All five discovery probes committed alongside ("
+        },
+        {
+          "k": "c",
+          "v": "fejer_density_bound_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "w3_block_deflation_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "lehmer_resonance_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "li_corollary_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "li_e4_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 5 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FEJERDENS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.BLOCKDEFL.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LEHMERNULL.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LICOROLLARY.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LIE4.01"
+        },
+        {
+          "k": "t",
+          "v": "); dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GARDING.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GARDENV.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v669"
+        },
+        {
+          "k": "t",
+          "v": " explains the drift: per-mode control below the RvM floor is not certifiable at any height), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.W3LAND.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "PRIME.THETAPRED.01"
+        },
+        {
+          "k": "t",
+          "v": " (the threefold narrowing "
+        },
+        {
+          "k": "c",
+          "v": "v670"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v671"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KEIPERLI.01"
+        },
+        {
+          "k": "t",
+          "v": " (the Li strand connects, "
+        },
+        {
+          "k": "c",
+          "v": "v672"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v673"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.SHADOW.01"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": "-residue identity "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the Li lock); the sixth consolidated slice on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 5 new audit blocks. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the sixth slice of "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " (W2: the density plane closed, remainder "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the packet-to-point translation below the RvM floor; W3: narrowed threefold — not low-rank, not zero-comb-driven, not in the BD frame "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " frame-/assembly-side; new: the Li corollary and the "
+        },
+        {
+          "k": "m",
+          "v": "E_4"
+        },
+        {
+          "k": "t",
+          "v": " Li lock; kill criteria unchanged)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed entry (the Fejér-density round); suite counters "
+        },
+        {
+          "k": "m",
+          "v": "662\\to667"
+        },
+        {
+          "k": "t",
+          "v": "; sandbox counters "
+        },
+        {
+          "k": "m",
+          "v": "256\\to261"
+        },
+        {
+          "k": "t",
+          "v": " probes and "
+        },
+        {
+          "k": "m",
+          "v": "5753\\to5818"
+        },
+        {
+          "k": "t",
+          "v": " checks; README and Zenodo description updated."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves; W2/W3 stay open (the density plane closes at the wave-packet level only — the pointwise A5(a) G rding inequality stays open); the honest FAIL verdict ("
+        },
+        {
+          "k": "t",
+          "v": "block-defl-fail"
+        },
+        {
+          "k": "t",
+          "v": ") and the clean null ("
+        },
+        {
+          "k": "t",
+          "v": "lehmer-null"
+        },
+        {
+          "k": "t",
+          "v": ") are promoted as findings, not hidden; positivity statements remain finite ("
+        },
+        {
+          "k": "m",
+          "v": "30/32"
+        },
+        {
+          "k": "t",
+          "v": " Li coefficients, "
+        },
+        {
+          "k": "m",
+          "v": "n\\le32"
+        },
+        {
+          "k": "t",
+          "v": "), NOT Li's criterion; no RH statement."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-02",
     "dateLabel": "2026-08-02 · XLV",
     "heading": [
       {

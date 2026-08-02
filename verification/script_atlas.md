@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`662` registered scripts · `734` ledger claims · `10` clusters.
+`667` registered scripts · `739` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (182 scripts)
+### `core` — Compiler core & the E₈ glue  (187 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -375,6 +375,16 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v661_garding, v659_w3_landscape, v666_turing_cert, v563, v589 · cited: 3 e8 audit bootstrap, research contracts
 - **v668_ground_truth** [E/C] `PRIME.GROUNDTRUTH.01` — die positive UND die negative Kontrolle der Weil-Positivitäts-Maschinerie, EIN Modul aus BEIDEN Probes — **IHARA-GT-CONFIRMED: auf drei BEWIESENEN Ramanujan-Graphen ist die Toeplit
   - deps: v659_w3_landscape, v658_w3_uniform_bound, v667_baez_duarte, v563, v618 · cited: 3 e8 audit bootstrap, research contracts
+- **v669_fejer_density** [E/C] `PRIME.FEJERDENS.01` — der W2-Dichte-Abschluss — **DIE EXAKTE IDENTITÄT s_tot = 2π(F_a ⋆ dN) (Weil-Formel auf das Zelt-Testpaar; punktweise 2.9e−6, t-gemittelt 7.2e−8 gegen den Turing-zertifizierten Kamm
+  - deps: v663_garding_envelope, v661_garding, v666_turing_cert, v655_w2_mosco, v563, v589, v643 · cited: 3 e8 audit bootstrap, research contracts
+- **v670_w3_block_deflation** [E/C] `PRIME.BLOCKDEFL.01` — der benannte Nachfolger des Rank-1-Rotations-Prädikats, EHRLICH GESCHEITERT — **FIDELITY-LADDER p90 = 50.53/49.49/49.44/49.35° FÜR K = 1/2/4/8 (die 5°-Bar wird NIE erreicht), LEAK-
+  - deps: v660_theta_predicate, v659_w3_landscape, v657_rid_alignment, v563, v591, v618 · cited: 3 e8 audit bootstrap, research contracts
+- **v671_lehmer_resonance** [C] `PRIME.LEHMERNULL.01` — sind die W3-Nadeln das Fenster-Analogon der Lehmer-Paar-Phänomenologie? **EIN SAUBERES NEIN: roh ±0.7 ist reine h-Leiter, die h3-Partials kollabieren auf +0.195/−0.123/−0.125 mit A
+  - deps: v659_w3_landscape, v667_baez_duarte, v666_turing_cert, v563, v589, v618 · cited: 3 e8 audit bootstrap, research contracts
+- **v672_li_corollary** [E/C] `PRIME.LICOROLLARY.01` — **gₙ(u) = ½·e^{−|u|/2}·L⁽¹⁾ₙ₋₁(|u|) EXAKT hergeleitet (Laguerre!; ĝₙ = 2sin²(nθ/2) ≥ 0: der Li-Koeffizient IST ein quadratischer Formwert der Weil-Form am Generator Gₙ), und das h 
+  - deps: v665_keiper_li, v643_w1_theorem, v563, v589, v591, v643, v648 · cited: 3 e8 audit bootstrap, research contracts
+- **v673_li_e4** [E] `PRIME.LIE4.01` — der exakte E8-↔-Kamm-Konsistenztest — **Λ(E₄, s) = (2π)^{−s}Γ(s)ζ(s)ζ(s−3) VERVOLLSTÄNDIGT (FE s ↔ 4−s exakt auf 2.4e−41), RESIDUEN ±1/240 EXAKT: die E8-240 IST der Residuen-Normie
+  - deps: v625_prime_shadow, v665_keiper_li, v672_li_corollary, v563, v589, v625 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1389,17 +1399,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×40, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v312`×16, `FLAV.KQ.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×45, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v312`×16, `FLAV.KQ.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v657_rid_alignment** — `PRIME.RIDGEOM.01`
-- **v658_w3_uniform_bound** — `PRIME.W3BOUND.01`
-- **v659_w3_landscape** — `PRIME.W3LAND.01`
-- **v660_theta_predicate** — `PRIME.THETAPRED.01`
-- **v661_garding** — `PRIME.GARDING.01`
 - **v662_garding_edgeband** — `PRIME.GARDEDGE.01`
 - **v663_garding_envelope** — `PRIME.GARDENV.01`
 - **v664_look_elsewhere** — `META.LOOKELSEWHERE.01`
@@ -1407,4 +1412,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v666_turing_cert** — `PRIME.TURINGCERT.01`
 - **v667_baez_duarte** — `PRIME.BAEZDUARTE.01`
 - **v668_ground_truth** — `PRIME.GROUNDTRUTH.01`
+- **v669_fejer_density** — `PRIME.FEJERDENS.01`
+- **v670_w3_block_deflation** — `PRIME.BLOCKDEFL.01`
+- **v671_lehmer_resonance** — `PRIME.LEHMERNULL.01`
+- **v672_li_corollary** — `PRIME.LICOROLLARY.01`
+- **v673_li_e4** — `PRIME.LIE4.01`
 
