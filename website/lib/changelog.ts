@@ -43,6 +43,900 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-02",
+    "dateLabel": "2026-08-02 · XLVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the sixth and final promotion round of the day: TWO promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v678"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v679"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "29"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green) — THE DAY ENDS AT THE WALL WITH A DOOR HANDLE: the last W2 gap now carries a concrete number ("
+      },
+      {
+        "k": "m",
+        "v": "11.7\\%"
+      },
+      {
+        "k": "t",
+        "v": " in one explicit constant), and the orbifold front reaches the continuum-convergence level. HIGHLIGHT 1 ("
+      },
+      {
+        "k": "c",
+        "v": "v678"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "zerogap-floor-only"
+      },
+      {
+        "k": "t",
+        "v": "): the best explicit UNCONDITIONAL zero-gap theorem, documented and machine-verified — the "
+      },
+      {
+        "k": "m",
+        "v": "S"
+      },
+      {
+        "k": "t",
+        "v": "-difference route with "
+      },
+      {
+        "k": "m",
+        "v": "S_{\\mathrm{bound}}=\\min\\{"
+      },
+      {
+        "k": "t",
+        "v": "Platt "
+      },
+      {
+        "k": "m",
+        "v": "|S|\\le2.5167"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "3.06\\times10^{10}"
+      },
+      {
+        "k": "t",
+        "v": "; Trudgian 2014; Bellotti 2025 Cor. 1.5, asymptotic floor "
+      },
+      {
+        "k": "m",
+        "v": "4\\pi\\,0.10076=1.26619\\}"
+      },
+      {
+        "k": "t",
+        "v": ", verified on ALL "
+      },
+      {
+        "k": "m",
+        "v": "1999"
+      },
+      {
+        "k": "t",
+        "v": " Turing-certified comb gaps ("
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " violations on each chain separately, min air "
+      },
+      {
+        "k": "m",
+        "v": "2.05\\times"
+      },
+      {
+        "k": "t",
+        "v": ", median "
+      },
+      {
+        "k": "m",
+        "v": "5.24\\times"
+      },
+      {
+        "k": "t",
+        "v": "); adaptive bands "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_p=\\kappa H_{\\min}"
+      },
+      {
+        "k": "t",
+        "v": " unconditionally hold "
+      },
+      {
+        "k": "m",
+        "v": "\\ge\\kappa"
+      },
+      {
+        "k": "t",
+        "v": " ordinates ("
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " misses) "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " the v674 FRAME packet floor is now UNCONDITIONALLY positive ("
+      },
+      {
+        "k": "m",
+        "v": "0<B_p\\le V_p"
+      },
+      {
+        "k": "t",
+        "v": " everywhere, median discount "
+      },
+      {
+        "k": "m",
+        "v": "0.037"
+      },
+      {
+        "k": "t",
+        "v": ") — the frame-G rding chain is fully grounded in cited unconditional inputs; the projection form does NOT stabilize adaptively either (typed residual with inverted expectation, v642/v662/v674 pattern: "
+      },
+      {
+        "k": "m",
+        "v": "6/6"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "(\\kappa,C)"
+      },
+      {
+        "k": "t",
+        "v": " cells miss, "
+      },
+      {
+        "k": "m",
+        "v": "1/\\log"
+      },
+      {
+        "k": "t",
+        "v": " competitive, minimizer single-mode "
+      },
+      {
+        "k": "m",
+        "v": "0.898"
+      },
+      {
+        "k": "t",
+        "v": " — the pointwise obstruction is re-partition-invariant); THE QUANTIFIED PINCH: pointwise capture of a guaranteed zero needs the explicit "
+      },
+      {
+        "k": "m",
+        "v": "S(t)"
+      },
+      {
+        "k": "t",
+        "v": " constant "
+      },
+      {
+        "k": "m",
+        "v": "A_1<1/(4a_0)=0.09017"
+      },
+      {
+        "k": "t",
+        "v": " — the best cited constant "
+      },
+      {
+        "k": "m",
+        "v": "0.10076"
+      },
+      {
+        "k": "t",
+        "v": " (Bellotti 2025) misses by "
+      },
+      {
+        "k": "m",
+        "v": "11.7\\%"
+      },
+      {
+        "k": "t",
+        "v": " at every height: the last W2 gap as a concrete named target inequality at the frontier of explicit analytic number theory, independent of RH. HIGHLIGHT 2 ("
+      },
+      {
+        "k": "c",
+        "v": "v679"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "orb-os-continuum-slice"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "19/19"
+      },
+      {
+        "k": "t",
+        "v": "): the first continuum-OS slice of the seam orbifold B — correlator convergence with UNDERSTOOD rates (all six "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-channel observables at the uniform raw rate "
+      },
+      {
+        "k": "m",
+        "v": "0.659"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the Fisher–Hartwig "
+      },
+      {
+        "k": "m",
+        "v": "2/3"
+      },
+      {
+        "k": "t",
+        "v": " branch; "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-channel contrast "
+      },
+      {
+        "k": "m",
+        "v": "1.298"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "4/3"
+      },
+      {
+        "k": "t",
+        "v": ", the channel law "
+      },
+      {
+        "k": "m",
+        "v": "\\rho=2(1-\\beta)^2-2\\beta^2"
+      },
+      {
+        "k": "t",
+        "v": "; after one FH term the limits sit "
+      },
+      {
+        "k": "m",
+        "v": "<0.05\\%"
+      },
+      {
+        "k": "t",
+        "v": " at the CFT values; the "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": " channel exact); RP SURVIVES THE LIMIT ("
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}"
+      },
+      {
+        "k": "t",
+        "v": " extrapolations bounded away from zero: "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "1.36\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " margin "
+      },
+      {
+        "k": "m",
+        "v": "7\\times"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "2.80\\times10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " margin "
+      },
+      {
+        "k": "m",
+        "v": "358\\times"
+      },
+      {
+        "k": "t",
+        "v": ", mixed "
+      },
+      {
+        "k": "m",
+        "v": "1.34\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " margin "
+      },
+      {
+        "k": "m",
+        "v": "31\\times"
+      },
+      {
+        "k": "t",
+        "v": "; must-fail "
+      },
+      {
+        "k": "m",
+        "v": "\\eta=-1"
+      },
+      {
+        "k": "t",
+        "v": " flips); cluster exact in space AND Euclidean time ("
+      },
+      {
+        "k": "m",
+        "v": "2\\Delta=0.222220"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "2/9"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "8\\times10^{-6}"
+      },
+      {
+        "k": "t",
+        "v": "; time gap "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": " level, cosh form, new time machinery); characters "
+      },
+      {
+        "k": "m",
+        "v": "1/36"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "1/9"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "5/18"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "4/9"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "10^{-12}"
+      },
+      {
+        "k": "t",
+        "v": " with the measured "
+      },
+      {
+        "k": "m",
+        "v": "N^{-2}"
+      },
+      {
+        "k": "t",
+        "v": " rate — E0/E2/E3/E4 measured at the convergence level, E1 discrete, the formal-limit remainder named (GNS, uniform bounds); "
+      },
+      {
+        "k": "c",
+        "v": "GATE.QGEO"
+      },
+      {
+        "k": "t",
+        "v": " does not move"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (2)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v678_zero_gap_theorem.py"
+        },
+        {
+          "k": "t",
+          "v": " (10; the probe's declared FAIL at the literal Z3.3 adaptive stabilization bar promoted as a typed-residual check with inverted expectation, "
+        },
+        {
+          "k": "c",
+          "v": "v642"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v662"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v674"
+        },
+        {
+          "k": "t",
+          "v": " pattern, numbers unchanged), "
+        },
+        {
+          "k": "c",
+          "v": "v679_orbifold_continuum_os.py"
+        },
+        {
+          "k": "t",
+          "v": " (19). Both discovery probes committed alongside ("
+        },
+        {
+          "k": "c",
+          "v": "zero_gap_theorem_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "orbifold_continuum_os_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 2 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.ZEROGAP.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.ORBOS.01"
+        },
+        {
+          "k": "t",
+          "v": "); dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PACKETGARD.01"
+        },
+        {
+          "k": "t",
+          "v": " (the typed OPEN residue supplied: the frame floor is now unconditional), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FEJERDENS.01"
+        },
+        {
+          "k": "t",
+          "v": " (the theorem family extended by the sharper Bellotti floor "
+        },
+        {
+          "k": "m",
+          "v": "1.26619"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.TURINGCERT.01"
+        },
+        {
+          "k": "t",
+          "v": " (all "
+        },
+        {
+          "k": "m",
+          "v": "1999"
+        },
+        {
+          "k": "t",
+          "v": " certified gaps verified against the explicit theorem) and "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO.01"
+        },
+        {
+          "k": "t",
+          "v": " (the continuum-OS data measured at the convergence level; the gate residual is now the formal limit construction "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the v622/v623 seam identification — NO marker move); the eighth consolidated slice on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 2 new audit blocks. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the eighth slice of "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the W2 end-state: frame-G rding fully unconditionally grounded — zero-gap theorem "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Fejér chain; the last gap carries a concrete number: the pointwise/projection form closes iff the explicit "
+        },
+        {
+          "k": "m",
+          "v": "S(t)"
+        },
+        {
+          "k": "t",
+          "v": " constant "
+        },
+        {
+          "k": "m",
+          "v": "A_1"
+        },
+        {
+          "k": "t",
+          "v": " improves from "
+        },
+        {
+          "k": "m",
+          "v": "0.10076"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "<0.09017"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "11.7\\%"
+        },
+        {
+          "k": "t",
+          "v": ") — a named target at the frontier of explicit analytic number theory, independent of RH; kill criteria unchanged; no RH statement)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Companion note (no module)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The second citable short note "
+        },
+        {
+          "k": "c",
+          "v": "note_w3_detector_structure.pdf"
+        },
+        {
+          "k": "t",
+          "v": " (8 pages) stands ready uncommitted for the user: the W3 structure theorem (v677) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the two-lab validation (Epstein census, Ihara threshold map) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "C=1"
+        },
+        {
+          "k": "t",
+          "v": " quadrature mechanism (v676) as paper #2 of the prime-front line."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed entry (the zero-gap round); suite counters "
+        },
+        {
+          "k": "m",
+          "v": "671\\to673"
+        },
+        {
+          "k": "t",
+          "v": "; sandbox counters "
+        },
+        {
+          "k": "m",
+          "v": "265\\to267"
+        },
+        {
+          "k": "t",
+          "v": " probes and "
+        },
+        {
+          "k": "m",
+          "v": "5894\\to5923"
+        },
+        {
+          "k": "t",
+          "v": " checks; README and Zenodo description updated."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves; W2/W3 stay open (the frame form is now unconditionally grounded, the pointwise A5(a) statement stays open with a quantified external target; uniform W3 remains the conjecture); "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": " stays open (convergence-level data, the formal limit named); the honest typed-residual FAIL ("
+        },
+        {
+          "k": "t",
+          "v": "zerogap-floor-only"
+        },
+        {
+          "k": "t",
+          "v": ") is promoted as the finding, not hidden; no RH statement anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-02",
     "dateLabel": "2026-08-02 · XLVII",
     "heading": [
       {

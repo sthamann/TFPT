@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`671` registered scripts · `743` ledger claims · `10` clusters.
+`673` registered scripts · `745` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (191 scripts)
+### `core` — Compiler core & the E₈ glue  (193 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -393,6 +393,10 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v618_uniform_constant, v596_lock_projection, v669_fejer_density, PRIME.WEIL.OPERATOR.01, v563, v591, v596, v618 · cited: 3 e8 audit bootstrap, research contracts
 - **v677_w3_structure_theorem** [E/C] `PRIME.W3STRUCT.01` — die Äquivalenzkette als SATZ — **S1: odd-Toeplitz = Cantoni–Butler-Kompression (eigenwertweise 1.5e−15), der SANDWICH-SATZ statt naiver DST-Diagonalität (Paritätsdefekt gemessen 0.
   - deps: v669_fejer_density, v668_ground_truth, v659_w3_landscape, v618_uniform_constant, v563, v589, v669 · cited: 3 e8 audit bootstrap, research contracts
+- **v678_zero_gap_theorem** [E/C] `PRIME.ZEROGAP.01` — der beste explizite UNBEDINGTE Lücken-Satz „jedes Intervall (t, t + H_min(t)] enthält eine Nullstellen-Ordinate“ dokumentiert und maschinell verifiziert — **S-DIFFERENZEN-ROUTE mit
+  - deps: v674_packet_garding, v669_fejer_density, v666_turing_cert, v563, v589 · cited: 3 e8 audit bootstrap, research contracts
+- **v679_orbifold_continuum_os** [E/C] `QGEO.ORBOS.01` — **KORRELATOR-KONVERGENZ MIT VERSTANDENEN RATEN: alle sechs σ-Kanal-Observablen teilen die uniforme Roh-Rate 0.659 = die vorhergesagte Fisher-Hartwig-2/3-Branche, der τ-Kanal-Kontra
+  - deps: v650_orbifold_modular, v651_orbifold_assembly, v652_orbifold_arf, v653_bond_defect, v645_klein_rp, v639_twist_ope, v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v622 · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1407,14 +1411,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×49, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v312`×16
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×50, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v312`×16
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v666_turing_cert** — `PRIME.TURINGCERT.01`
-- **v667_baez_duarte** — `PRIME.BAEZDUARTE.01`
 - **v668_ground_truth** — `PRIME.GROUNDTRUTH.01`
 - **v669_fejer_density** — `PRIME.FEJERDENS.01`
 - **v670_w3_block_deflation** — `PRIME.BLOCKDEFL.01`
@@ -1425,4 +1427,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v675_needle_mechanism** — `PRIME.NEEDLEMECH.01`
 - **v676_c1_mechanism** — `PRIME.C1MECH.01`
 - **v677_w3_structure_theorem** — `PRIME.W3STRUCT.01`
+- **v678_zero_gap_theorem** — `PRIME.ZEROGAP.01`
+- **v679_orbifold_continuum_os** — `QGEO.ORBOS.01`
 
