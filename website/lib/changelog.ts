@@ -42,6 +42,685 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-03",
+    "dateLabel": "2026-08-03 · XLIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(the Monday-morning promotion round: TWO promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v680"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v681"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "24"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green) — THE PINCH BREAKS AND THE HOLE CLOSES: the pointwise W2 density map at the anchor window is now GAPLESS. HIGHLIGHT 1 ("
+      },
+      {
+        "k": "c",
+        "v": "v680"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "pinch-broken-split"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": "): the v678 "
+      },
+      {
+        "k": "m",
+        "v": "11.7\\%"
+      },
+      {
+        "k": "t",
+        "v": " pinch was a BOOKKEEPING ARTIFACT of one-sided capture — centered capture (the same zero-gap theorem spent two-sided, "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{dist}(t,Z)\\le H_{\\min}(t-26)/2"
+      },
+      {
+        "k": "t",
+        "v": ", machine-checked on "
+      },
+      {
+        "k": "m",
+        "v": "6595"
+      },
+      {
+        "k": "t",
+        "v": " comb grid points with "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " violations) DOUBLES the threshold to "
+      },
+      {
+        "k": "m",
+        "v": "A_1<1/(2a_0)=0.18034"
+      },
+      {
+        "k": "t",
+        "v": ": the existing Bellotti–Wong constant "
+      },
+      {
+        "k": "m",
+        "v": "0.10076"
+      },
+      {
+        "k": "t",
+        "v": " passes with "
+      },
+      {
+        "k": "m",
+        "v": "79\\%"
+      },
+      {
+        "k": "t",
+        "v": " headroom; and the Beurling–Selberg minorant ELIMINATES "
+      },
+      {
+        "k": "m",
+        "v": "A_1"
+      },
+      {
+        "k": "t",
+        "v": " from the counting chain entirely (mass loss exactly "
+      },
+      {
+        "k": "m",
+        "v": "\\pi/a_0"
+      },
+      {
+        "k": "t",
+        "v": ", extremal per Logan/Littmann; explicit prime term "
+      },
+      {
+        "k": "m",
+        "v": "P=2.534"
+      },
+      {
+        "k": "t",
+        "v": ", positive from "
+      },
+      {
+        "k": "m",
+        "v": "t^*=1.11\\times10^{7}"
+      },
+      {
+        "k": "t",
+        "v": "; no Platt cap, every window incl. "
+      },
+      {
+        "k": "m",
+        "v": "a\\to\\infty"
+      },
+      {
+        "k": "t",
+        "v": "; Weil identity on the comb at "
+      },
+      {
+        "k": "m",
+        "v": "9.0\\times10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": "); the family reach "
+      },
+      {
+        "k": "m",
+        "v": "[10,870]"
+      },
+      {
+        "k": "t",
+        "v": " is closed verification-backed ("
+      },
+      {
+        "k": "m",
+        "v": "\\min s_{\\mathrm{tot}}=0.0063"
+      },
+      {
+        "k": "t",
+        "v": " over all "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " windows "
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " lattice modes); the honest residue at that point: the "
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": " coverage hole "
+      },
+      {
+        "k": "m",
+        "v": "(2500,\\,7.27\\times10^{6})"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "3.46"
+      },
+      {
+        "k": "t",
+        "v": " decades. HIGHLIGHT 2 ("
+      },
+      {
+        "k": "c",
+        "v": "v681"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "hole-closed-split-type"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": "): the hole attacked on the three named paths and CLOSED with split typing — H3 as the main lever (the exact almost-periodic prime term with a hierarchical Lipschitz certificate moves the abstract entry from "
+      },
+      {
+        "k": "m",
+        "v": "t^*=1.11\\times10^{7}"
+      },
+      {
+        "k": "t",
+        "v": " down to "
+      },
+      {
+        "k": "m",
+        "v": "t_x=1.53\\times10^{5}"
+      },
+      {
+        "k": "t",
+        "v": ", a factor "
+      },
+      {
+        "k": "m",
+        "v": "72.5"
+      },
+      {
+        "k": "t",
+        "v": "); the vectorized Riemann–Siegel scan with "
+      },
+      {
+        "k": "m",
+        "v": "223\\,949"
+      },
+      {
+        "k": "t",
+        "v": " budget-certified zeros (Gabcke remainder, correctness "
+      },
+      {
+        "k": "m",
+        "v": "603/603"
+      },
+      {
+        "k": "t",
+        "v": " against the certified strip, mpmath "
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": ", found/expected "
+      },
+      {
+        "k": "m",
+        "v": "0.99774"
+      },
+      {
+        "k": "t",
+        "v": ") carries "
+      },
+      {
+        "k": "m",
+        "v": "(2515,\\,1.56\\times10^{5}]"
+      },
+      {
+        "k": "t",
+        "v": " with floor "
+      },
+      {
+        "k": "m",
+        "v": "0.01664"
+      },
+      {
+        "k": "t",
+        "v": "; H1 honestly adjudicated (the Platt constant reproduces the hole boundary exactly — it cannot enter); THE GAPLESS MAP: "
+      },
+      {
+        "k": "m",
+        "v": "s_{\\mathrm{tot}}(t;a_0)\\ge0.02259\\,\\log(2+t)-0.5185"
+      },
+      {
+        "k": "t",
+        "v": " for ALL "
+      },
+      {
+        "k": "m",
+        "v": "t\\ge10"
+      },
+      {
+        "k": "t",
+        "v": ", every region with named support and type (comb "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "/ RS scan "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "-verification-consistent / exact-prime Weil chain abstract / Selberg uniform / Trudgian-2S unconditional from "
+      },
+      {
+        "k": "m",
+        "v": "1.74\\times10^{25}"
+      },
+      {
+        "k": "t",
+        "v": "); THE W2 CHAIN AT THE ANCHOR COMPLETE: density (v669) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " frame-G rding (v674/v678) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " pointwise (v681); the calibration history documented with the pinned stage-1 duplicate bug)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (2)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v680_pinch_attack.py"
+        },
+        {
+          "k": "t",
+          "v": " (13), "
+        },
+        {
+          "k": "c",
+          "v": "v681_coverage_hole.py"
+        },
+        {
+          "k": "t",
+          "v": " (11). Both discovery probes committed alongside ("
+        },
+        {
+          "k": "c",
+          "v": "pinch_attack_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "coverage_hole_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ") together with the committed stage-1 scan cache "
+        },
+        {
+          "k": "c",
+          "v": "coverage_hole_zscan_cache.npz"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}1.2"
+        },
+        {
+          "k": "t",
+          "v": " MB; regenerated from scratch on a cache miss — a speed-up, not an input)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 2 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PINCHBREAK.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HOLECLOSED.01"
+        },
+        {
+          "k": "t",
+          "v": "); dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.ZEROGAP.01"
+        },
+        {
+          "k": "t",
+          "v": " (the pinch is broken — the quantified target was a one-sided bookkeeping artifact; the residue moved to the coverage hole and was closed the same day), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FEJERDENS.01"
+        },
+        {
+          "k": "t",
+          "v": " (the pointwise map at the anchor is gapless: the F3 obstruction resolved by two-sided bookkeeping "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " minorant replacement) and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PACKETGARD.01"
+        },
+        {
+          "k": "t",
+          "v": " (the W2 chain at the anchor is complete: density "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " frame "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " pointwise, each with split typing); the ninth consolidated slice on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 2 new audit blocks. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the ninth slice of "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the W2 end-state after the pinch break and the hole closure: the pointwise density floor at the anchor window is a gapless split-type map — comb-certified / scan-certified / abstract-Weil / unconditional-asymptotic; remaining: deep family windows "
+        },
+        {
+          "k": "m",
+          "v": "a>4.43"
+        },
+        {
+          "k": "t",
+          "v": " (Selberg-only entry), the formal Mosco writeup, the projection-norm form, "
+        },
+        {
+          "k": "m",
+          "v": "a\\to\\infty"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " W3/W4 territory); kill criteria unchanged; no RH statement)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed entry (the pinch-break round); suite counters "
+        },
+        {
+          "k": "m",
+          "v": "673\\to675"
+        },
+        {
+          "k": "t",
+          "v": "; sandbox counters "
+        },
+        {
+          "k": "m",
+          "v": "267\\to269"
+        },
+        {
+          "k": "t",
+          "v": " probes and "
+        },
+        {
+          "k": "m",
+          "v": "5923\\to5947"
+        },
+        {
+          "k": "t",
+          "v": " checks; README and Zenodo description updated."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves; W2/W3 stay open (the pointwise map at the anchor is closed with MIXED typing — the abstract region is modulo the off-line window above "
+        },
+        {
+          "k": "m",
+          "v": "3\\times10^{12}"
+        },
+        {
+          "k": "t",
+          "v": " until the unconditional Trudgian-2S entry; the deep family windows "
+        },
+        {
+          "k": "m",
+          "v": "a>4.43"
+        },
+        {
+          "k": "t",
+          "v": ", A5("
+        },
+        {
+          "k": "m",
+          "v": "a"
+        },
+        {
+          "k": "t",
+          "v": "), the formal Mosco writeup and "
+        },
+        {
+          "k": "m",
+          "v": "a\\to\\infty"
+        },
+        {
+          "k": "t",
+          "v": " stay open; uniform W3 remains the conjecture); both verdicts are split-type by construction, the typing ledger is explicit; no RH statement anywhere."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-08-02",
     "dateLabel": "2026-08-02 · XLVIII",
     "heading": [

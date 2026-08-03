@@ -4167,6 +4167,97 @@ Machine-checked: \veri{v679\_orbifold\_continuum\_os.py}.
 remainder, named)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The pinch attack
+(\texttt{PRIME.PINCHBREAK.01}).}
+The v678 quantified pinch (pointwise capture needs
+$A_1<1/(4a_0)=0.09017$; the best cited constant $0.10076$ misses by
+$11.75\%$) attacked on both flanks and \emph{broken as stated}: the
+$11.7\%$ gap was a \emph{bookkeeping artifact} of one-sided capture
+($13$ checks, ${\sim}13$\,s; verdict \textsc{pinch-broken-split}).
+\emph{Centered capture (the same theorem, spent two-sided):} every
+gap satisfies $\mathrm{gap}\le H_{\min}(\text{left edge})$, so
+$\mathrm{dist}(t,Z)\le H_{\min}(t-26)/2$ (machine-checked on $6595$
+comb grid points, $0$ violations) --- the threshold \emph{doubles} to
+$A_1<1/(2a_0)=0.18034$: the existing Bellotti constant passes with
+$79.0\%$ headroom (Trudgian $0.112$ passes too).  \emph{The Selberg
+minorant eliminates $A_1$ entirely:} the Beurling--Selberg minorant
+of the counting box (type $2a_0$, Vaaler closed form,
+machine-checked: minorant property, mass loss exactly $\pi/a_0$,
+band-limitation) certifies $N[t\pm\delta/2]\ge(\delta-\pi/a_0)L/2\pi
+-P-\text{budgets}$ with the prime term $P$ explicit and uniform ---
+no $A_1$, no Platt cap, every window including $a\to\infty$ (best
+$\delta=2.24$: $P=2.5340$, positive from $t^*=1.109\times10^{7}$;
+Weil identity on the comb at $9.0\times10^{-5}$); the LP stack lifts
+the asymptotic slope to $0.409$ per $\log t$; the Fej\'er layer cake
+recovers $2.27\times$ of the $2.467\times$ single-box loss.
+\emph{The literature (search 2026-08-03):} Bellotti--Wong Math.\
+Comp.\ 2025 ($0.10076$, ``nearly-optimal'') is current, no successor
+$<0.1$; the new Amberger $S^1$ constants tighten the Turing route to
+$H^*=1.5249$ --- still dominated, consistency confirmed.  \emph{The
+reach:} the verification-backed diagonal floor over all $5$ family
+windows $\times$ lattice modes to $t=870$ is positive ($\min
+s_{\mathrm{tot}}=0.0063$; dense $a_0$ grid $0.0173$) --- the
+W2-family statement at reach heights is closed verification-backed.
+\emph{The honest residue:} not an $A_1$ threshold but the
+$O(1)$-constant coverage hole $(2500,\,7.27\times10^{6})$ ---
+$3.46$ decades --- with the three closure paths named; no marker
+move, no RH statement.
+Machine-checked: \veri{v680\_pinch\_attack.py}.
+\mE\ (Beurling--Selberg machinery, comb checks, reach floors) $+$
+(\textsc{analytic}) (threshold table, machine-checked) $+$
+(\textsc{e/measured}) (Selberg chain, identity-verified) $+$
+(\textsc{cited}) (literature block) $+$ \mC\ (typed residue)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Closing the coverage hole
+(\texttt{PRIME.HOLECLOSED.01}).}
+The last gap of the pointwise W2 chain --- the hole
+$(2500,\,7.27\times10^{6})=3.46$ decades from the pinch attack ---
+attacked on the three named paths and \emph{closed with split
+typing} ($11$ checks, ${\sim}45$\,s with the committed scan cache;
+verdict \textsc{hole-closed-split-type}).  \emph{H1 adjudicated:}
+the centered-capture chain with the Platt constant $|S|\le2.5167$
+reproduces the hole boundary \emph{exactly}
+($t_{\mathrm{on}}=7.268\times10^{6}$, closed form) --- the constant
+chain \emph{is} the hole boundary, it cannot enter; the packet-scale
+count ($+3.26$ at $t=2500$) is real but not capture.  \emph{The
+scan (the decisive path):} the honest \texttt{zetazero} budget
+(${\sim}1440$\,h to the hole top) forced the declared pivot to a
+vectorized Riemann--Siegel scan (Gabcke $C_0$ remainder
+$0.127\,(t/2\pi)^{-3/4}$ cited; a sign change with $|Z|$ above the
+budget at both bracket ends is a genuine ordinate --- phantoms are
+impossible by the cited bound): $223\,949$ budget-certified zeros on
+$(2400,\,1.56\times10^{5}]$, correctness $603/603$ against the
+certified strip, mpmath spots $12/12$, found/expected $0.99774$;
+missed zeros only \emph{lower} the floor --- the certified pointwise
+floor on the hole is $\min=0.01664$ (capture $+$ $19$ dip
+evaluations).  \emph{The exact prime term (the main lever):} the
+Selberg mass deficit $\pi/a_0$ is extremal (Logan/Littmann) --- not
+the lever; replacing the uniform $P=2.534$ by the exact
+almost-periodic $\mathrm{prime}(t)$ ($70$ atoms, hierarchical
+Lipschitz certificate) moves the abstract entry from
+$t^*=1.108\times10^{7}$ down to $t_x=1.529\times10^{5}$ --- a factor
+$72.5$.  \emph{The gapless map:}
+$s_{\mathrm{tot}}(t;a_0)\ge0.02259\,\log(2+t)-0.5185$ for all
+$t\ge10$ --- comb \mE\ / RS scan (\mE, verification-consistent) /
+exact-prime Weil chain (abstract; window zeros on-line below
+$3\times10^{12}$ by Platt--Trudgian 2021) / unconditional
+Trudgian-2S capture from $1.74\times10^{25}$; the calibration
+history is documented with the pinned stage-1 duplicate bug
+(bracket-overlap dedupe, conservative for floors).  \emph{The W2
+end-state at the anchor:} density (v669) $+$ frame-G\aa rding
+(v674/v678) $+$ pointwise (this map) --- complete with the mixed
+typing ledger explicit; typed open: family windows $a>4.43$
+(Selberg-only entry), A5($a$), the formal Mosco writeup,
+$a\to\infty$; no marker move, no RH statement.
+Machine-checked: \veri{v681\_coverage\_hole.py}.
+\mE\ (budget-certified scan, hole floor, machinery guards) $+$
+(\textsc{analytic}) (H1 adjudication) $+$ (\textsc{e/abstract})
+(exact-prime Weil chain, identity-verified) $+$
+(\textsc{synthesis}) (gapless split-type map) $+$ \mC\ (typed W2
+end-state)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================
