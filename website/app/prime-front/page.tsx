@@ -32,6 +32,7 @@ import { DiaryFeed } from "@/components/primefront/DiaryFeed";
 import { W1DictionaryMap } from "@/components/primefront/W1DictionaryMap";
 import { HodgeConeMap } from "@/components/primefront/HodgeConeMap";
 import { IharaBlueprintViz } from "@/components/primefront/IharaBlueprintViz";
+import { PrimeFrontVideo } from "@/components/primefront/PrimeFrontVideo";
 import { TBWindowMap } from "@/components/primefront/TBWindowMap";
 import { KorridorViz } from "@/components/primefront/KorridorViz";
 import { DeckSectorViz } from "@/components/primefront/DeckSectorViz";
@@ -149,6 +150,8 @@ export default function PrimeFrontPage() {
           </nav>
         </div>
       </section>
+
+      <PrimeFrontVideo />
 
       <BigPictureSection />
 

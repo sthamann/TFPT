@@ -1,0 +1,1954 @@
+{
+  "bgm": null,
+  "bgm_pending": false,
+  "voices": [
+    {
+      "frame": 1,
+      "path": "assets/voice/01.wav",
+      "duration_s": 16.872,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Die",
+          "start": 0.1,
+          "end": 0.237
+        },
+        {
+          "id": "w1",
+          "text": "Primzahlen",
+          "start": 0.3,
+          "end": 0.812
+        },
+        {
+          "id": "w2",
+          "text": "wirken",
+          "start": 0.838,
+          "end": 1.087
+        },
+        {
+          "id": "w3",
+          "text": "wie",
+          "start": 1.125,
+          "end": 1.2
+        },
+        {
+          "id": "w4",
+          "text": "Zufall",
+          "start": 1.262,
+          "end": 1.725
+        },
+        {
+          "id": "w5",
+          "text": "Doch",
+          "start": 2.7,
+          "end": 2.913
+        },
+        {
+          "id": "w6",
+          "text": "ihre",
+          "start": 2.975,
+          "end": 3.188
+        },
+        {
+          "id": "w7",
+          "text": "Verteilung",
+          "start": 3.2,
+          "end": 3.763
+        },
+        {
+          "id": "w8",
+          "text": "folgt",
+          "start": 3.775,
+          "end": 4.112
+        },
+        {
+          "id": "w9",
+          "text": "einem",
+          "start": 4.175,
+          "end": 4.375
+        },
+        {
+          "id": "w10",
+          "text": "verborgenen",
+          "start": 4.388,
+          "end": 4.9
+        },
+        {
+          "id": "w11",
+          "text": "Orchester",
+          "start": 4.938,
+          "end": 5.513
+        },
+        {
+          "id": "w12",
+          "text": "den",
+          "start": 5.763,
+          "end": 5.938
+        },
+        {
+          "id": "w13",
+          "text": "Nullstellen",
+          "start": 5.95,
+          "end": 6.5
+        },
+        {
+          "id": "w14",
+          "text": "der",
+          "start": 6.525,
+          "end": 6.662
+        },
+        {
+          "id": "w15",
+          "text": "Zetafunktion",
+          "start": 6.725,
+          "end": 7.625
+        },
+        {
+          "id": "w16",
+          "text": "Die",
+          "start": 8.625,
+          "end": 8.762
+        },
+        {
+          "id": "w17",
+          "text": "Riemannsche",
+          "start": 8.825,
+          "end": 9.312
+        },
+        {
+          "id": "w18",
+          "text": "Vermutung",
+          "start": 9.325,
+          "end": 9.812
+        },
+        {
+          "id": "w19",
+          "text": "sagt",
+          "start": 9.838,
+          "end": 10.137
+        },
+        {
+          "id": "w20",
+          "text": "Alle",
+          "start": 10.375,
+          "end": 10.55
+        },
+        {
+          "id": "w21",
+          "text": "liegen",
+          "start": 10.575,
+          "end": 10.825
+        },
+        {
+          "id": "w22",
+          "text": "auf",
+          "start": 10.875,
+          "end": 11.025
+        },
+        {
+          "id": "w23",
+          "text": "einer",
+          "start": 11.088,
+          "end": 11.262
+        },
+        {
+          "id": "w24",
+          "text": "einzigen",
+          "start": 11.338,
+          "end": 11.738
+        },
+        {
+          "id": "w25",
+          "text": "Linie",
+          "start": 11.762,
+          "end": 12.137
+        },
+        {
+          "id": "w26",
+          "text": "Unbewiesen",
+          "start": 13.137,
+          "end": 13.787
+        },
+        {
+          "id": "w27",
+          "text": "seit",
+          "start": 13.875,
+          "end": 14.15
+        },
+        {
+          "id": "w28",
+          "text": "über",
+          "start": 14.225,
+          "end": 14.35
+        },
+        {
+          "id": "w29",
+          "text": "hundertfünfundsechzig",
+          "start": 14.4,
+          "end": 15.438
+        },
+        {
+          "id": "w30",
+          "text": "Jahren",
+          "start": 15.488,
+          "end": 15.863
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "path": "assets/voice/02.wav",
+      "duration_s": 13.848,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Die",
+          "start": 0.1,
+          "end": 0.25
+        },
+        {
+          "id": "w1",
+          "text": "TFPT",
+          "start": 0.325,
+          "end": 1.012
+        },
+        {
+          "id": "w2",
+          "text": "baut",
+          "start": 1.075,
+          "end": 1.262
+        },
+        {
+          "id": "w3",
+          "text": "aus",
+          "start": 1.325,
+          "end": 1.512
+        },
+        {
+          "id": "w4",
+          "text": "zwei",
+          "start": 1.587,
+          "end": 1.812
+        },
+        {
+          "id": "w5",
+          "text": "Axiomen",
+          "start": 1.875,
+          "end": 2.375
+        },
+        {
+          "id": "w6",
+          "text": "das",
+          "start": 2.388,
+          "end": 2.538
+        },
+        {
+          "id": "w7",
+          "text": "E-acht-Gitter",
+          "start": 2.6,
+          "end": 3.188
+        },
+        {
+          "id": "w8",
+          "text": "Seine",
+          "start": 4.188,
+          "end": 4.525
+        },
+        {
+          "id": "w9",
+          "text": "Zählfunktion",
+          "start": 4.575,
+          "end": 5.388
+        },
+        {
+          "id": "w10",
+          "text": "kennt",
+          "start": 5.45,
+          "end": 5.638
+        },
+        {
+          "id": "w11",
+          "text": "die",
+          "start": 5.65,
+          "end": 5.713
+        },
+        {
+          "id": "w12",
+          "text": "Primzahlen",
+          "start": 5.787,
+          "end": 6.312
+        },
+        {
+          "id": "w13",
+          "text": "bereits",
+          "start": 6.35,
+          "end": 6.763
+        },
+        {
+          "id": "w14",
+          "text": "Jede",
+          "start": 6.9,
+          "end": 7.213
+        },
+        {
+          "id": "w15",
+          "text": "wirkt",
+          "start": 7.237,
+          "end": 7.5
+        },
+        {
+          "id": "w16",
+          "text": "als",
+          "start": 7.575,
+          "end": 7.775
+        },
+        {
+          "id": "w17",
+          "text": "eigener",
+          "start": 7.85,
+          "end": 8.162
+        },
+        {
+          "id": "w18",
+          "text": "Prüfkanal",
+          "start": 8.225,
+          "end": 8.838
+        },
+        {
+          "id": "w19",
+          "text": "Und",
+          "start": 9.8,
+          "end": 10.0
+        },
+        {
+          "id": "w20",
+          "text": "die",
+          "start": 10.0,
+          "end": 10.088
+        },
+        {
+          "id": "w21",
+          "text": "Zetafunktion",
+          "start": 10.15,
+          "end": 11.0
+        },
+        {
+          "id": "w22",
+          "text": "erscheint",
+          "start": 11.037,
+          "end": 11.425
+        },
+        {
+          "id": "w23",
+          "text": "als",
+          "start": 11.488,
+          "end": 11.688
+        },
+        {
+          "id": "w24",
+          "text": "Schatten",
+          "start": 11.688,
+          "end": 12.012
+        },
+        {
+          "id": "w25",
+          "text": "dieser",
+          "start": 12.037,
+          "end": 12.275
+        },
+        {
+          "id": "w26",
+          "text": "Geometrie",
+          "start": 12.325,
+          "end": 12.85
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "path": "assets/voice/03.wav",
+      "duration_s": 15.288,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Aus",
+          "start": 0.1,
+          "end": 0.35
+        },
+        {
+          "id": "w1",
+          "text": "dieser",
+          "start": 0.4,
+          "end": 0.625
+        },
+        {
+          "id": "w2",
+          "text": "Buchführung",
+          "start": 0.688,
+          "end": 1.225
+        },
+        {
+          "id": "w3",
+          "text": "entstand",
+          "start": 1.25,
+          "end": 1.688
+        },
+        {
+          "id": "w4",
+          "text": "eine",
+          "start": 1.75,
+          "end": 1.925
+        },
+        {
+          "id": "w5",
+          "text": "Fenstermatrix",
+          "start": 1.938,
+          "end": 2.837
+        },
+        {
+          "id": "w6",
+          "text": "Und",
+          "start": 3.775,
+          "end": 3.95
+        },
+        {
+          "id": "w7",
+          "text": "sie",
+          "start": 3.975,
+          "end": 4.088
+        },
+        {
+          "id": "w8",
+          "text": "entpuppte",
+          "start": 4.15,
+          "end": 4.562
+        },
+        {
+          "id": "w9",
+          "text": "sich",
+          "start": 4.588,
+          "end": 4.787
+        },
+        {
+          "id": "w10",
+          "text": "als",
+          "start": 4.838,
+          "end": 5.05
+        },
+        {
+          "id": "w11",
+          "text": "etwas",
+          "start": 5.1,
+          "end": 5.4
+        },
+        {
+          "id": "w12",
+          "text": "Klassisches",
+          "start": 5.45,
+          "end": 6.125
+        },
+        {
+          "id": "w13",
+          "text": "Wort",
+          "start": 6.237,
+          "end": 6.475
+        },
+        {
+          "id": "w14",
+          "text": "für",
+          "start": 6.513,
+          "end": 6.662
+        },
+        {
+          "id": "w15",
+          "text": "Wort",
+          "start": 6.688,
+          "end": 6.9
+        },
+        {
+          "id": "w16",
+          "text": "Suzukis",
+          "start": 6.938,
+          "end": 7.45
+        },
+        {
+          "id": "w17",
+          "text": "Weil-Operator",
+          "start": 7.475,
+          "end": 8.25
+        },
+        {
+          "id": "w18",
+          "text": "Das",
+          "start": 9.238,
+          "end": 9.45
+        },
+        {
+          "id": "w19",
+          "text": "ist",
+          "start": 9.45,
+          "end": 9.575
+        },
+        {
+          "id": "w20",
+          "text": "das",
+          "start": 9.588,
+          "end": 9.762
+        },
+        {
+          "id": "w21",
+          "text": "W-eins-Theorem",
+          "start": 9.787,
+          "end": 10.613
+        },
+        {
+          "id": "w22",
+          "text": "maschinell",
+          "start": 10.713,
+          "end": 11.2
+        },
+        {
+          "id": "w23",
+          "text": "verifiziert",
+          "start": 11.225,
+          "end": 12.025
+        },
+        {
+          "id": "w24",
+          "text": "mit",
+          "start": 12.2,
+          "end": 12.375
+        },
+        {
+          "id": "w25",
+          "text": "einem",
+          "start": 12.438,
+          "end": 12.675
+        },
+        {
+          "id": "w26",
+          "text": "ehrlich",
+          "start": 12.713,
+          "end": 12.988
+        },
+        {
+          "id": "w27",
+          "text": "dokumentierten",
+          "start": 13.05,
+          "end": 13.75
+        },
+        {
+          "id": "w28",
+          "text": "Erratum",
+          "start": 13.787,
+          "end": 14.312
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "path": "assets/voice/04.wav",
+      "duration_s": 24.36,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Dieselbe",
+          "start": 0.1,
+          "end": 0.562
+        },
+        {
+          "id": "w1",
+          "text": "Form",
+          "start": 0.575,
+          "end": 0.863
+        },
+        {
+          "id": "w2",
+          "text": "ist",
+          "start": 0.9,
+          "end": 1.038
+        },
+        {
+          "id": "w3",
+          "text": "ein",
+          "start": 1.1,
+          "end": 1.225
+        },
+        {
+          "id": "w4",
+          "text": "Detektor",
+          "start": 1.25,
+          "end": 1.837
+        },
+        {
+          "id": "w5",
+          "text": "Kalibriert",
+          "start": 2.825,
+          "end": 3.375
+        },
+        {
+          "id": "w6",
+          "text": "an",
+          "start": 3.438,
+          "end": 3.562
+        },
+        {
+          "id": "w7",
+          "text": "gelösten",
+          "start": 3.6,
+          "end": 3.975
+        },
+        {
+          "id": "w8",
+          "text": "Welten",
+          "start": 4.0,
+          "end": 4.463
+        },
+        {
+          "id": "w9",
+          "text": "Ramanujan-Graphen",
+          "start": 4.588,
+          "end": 5.662
+        },
+        {
+          "id": "w10",
+          "text": "dort",
+          "start": 5.8,
+          "end": 6.013
+        },
+        {
+          "id": "w11",
+          "text": "ist",
+          "start": 6.075,
+          "end": 6.225
+        },
+        {
+          "id": "w12",
+          "text": "das",
+          "start": 6.225,
+          "end": 6.4
+        },
+        {
+          "id": "w13",
+          "text": "Analogon",
+          "start": 6.463,
+          "end": 6.95
+        },
+        {
+          "id": "w14",
+          "text": "bewiesen",
+          "start": 7.0,
+          "end": 7.425
+        },
+        {
+          "id": "w15",
+          "text": "bestehen",
+          "start": 7.575,
+          "end": 7.925
+        },
+        {
+          "id": "w16",
+          "text": "den",
+          "start": 7.95,
+          "end": 8.088
+        },
+        {
+          "id": "w17",
+          "text": "Test",
+          "start": 8.1,
+          "end": 8.412
+        },
+        {
+          "id": "w18",
+          "text": "Epstein",
+          "start": 9.363,
+          "end": 9.9
+        },
+        {
+          "id": "w19",
+          "text": "mit",
+          "start": 9.988,
+          "end": 10.125
+        },
+        {
+          "id": "w20",
+          "text": "echten",
+          "start": 10.175,
+          "end": 10.463
+        },
+        {
+          "id": "w21",
+          "text": "Nullstellen",
+          "start": 10.463,
+          "end": 10.975
+        },
+        {
+          "id": "w22",
+          "text": "neben",
+          "start": 10.988,
+          "end": 11.25
+        },
+        {
+          "id": "w23",
+          "text": "der",
+          "start": 11.275,
+          "end": 11.363
+        },
+        {
+          "id": "w24",
+          "text": "Linie",
+          "start": 11.387,
+          "end": 11.738
+        },
+        {
+          "id": "w25",
+          "text": "bricht",
+          "start": 11.912,
+          "end": 12.2
+        },
+        {
+          "id": "w26",
+          "text": "exakt",
+          "start": 12.425,
+          "end": 12.812
+        },
+        {
+          "id": "w27",
+          "text": "wie",
+          "start": 12.85,
+          "end": 12.938
+        },
+        {
+          "id": "w28",
+          "text": "vorhergesagt",
+          "start": 12.975,
+          "end": 13.725
+        },
+        {
+          "id": "w29",
+          "text": "Und",
+          "start": 14.7,
+          "end": 14.9
+        },
+        {
+          "id": "w30",
+          "text": "der",
+          "start": 14.912,
+          "end": 15.012
+        },
+        {
+          "id": "w31",
+          "text": "Matched",
+          "start": 15.037,
+          "end": 15.325
+        },
+        {
+          "id": "w32",
+          "text": "Filter",
+          "start": 15.35,
+          "end": 15.675
+        },
+        {
+          "id": "w33",
+          "text": "macht",
+          "start": 15.713,
+          "end": 15.925
+        },
+        {
+          "id": "w34",
+          "text": "es",
+          "start": 15.95,
+          "end": 16.062
+        },
+        {
+          "id": "w35",
+          "text": "konstruktiv",
+          "start": 16.125,
+          "end": 16.863
+        },
+        {
+          "id": "w36",
+          "text": "Jede",
+          "start": 16.975,
+          "end": 17.25
+        },
+        {
+          "id": "w37",
+          "text": "Off-Line-Nullstelle",
+          "start": 17.325,
+          "end": 18.238
+        },
+        {
+          "id": "w38",
+          "text": "würde",
+          "start": 18.262,
+          "end": 18.525
+        },
+        {
+          "id": "w39",
+          "text": "einen",
+          "start": 18.6,
+          "end": 18.812
+        },
+        {
+          "id": "w40",
+          "text": "nachrechenbaren",
+          "start": 18.837,
+          "end": 19.587
+        },
+        {
+          "id": "w41",
+          "text": "Zeugen",
+          "start": 19.587,
+          "end": 19.938
+        },
+        {
+          "id": "w42",
+          "text": "erzeugen",
+          "start": 19.975,
+          "end": 20.512
+        },
+        {
+          "id": "w43",
+          "text": "Das",
+          "start": 21.512,
+          "end": 21.738
+        },
+        {
+          "id": "w44",
+          "text": "Objekt",
+          "start": 21.788,
+          "end": 22.163
+        },
+        {
+          "id": "w45",
+          "text": "ist",
+          "start": 22.225,
+          "end": 22.363
+        },
+        {
+          "id": "w46",
+          "text": "falsifizierbar",
+          "start": 22.4,
+          "end": 23.363
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "path": "assets/voice/05.wav",
+      "duration_s": 18.144,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Zwei",
+          "start": 0.1,
+          "end": 0.388
+        },
+        {
+          "id": "w1",
+          "text": "Sätze",
+          "start": 0.438,
+          "end": 0.825
+        },
+        {
+          "id": "w2",
+          "text": "stehen",
+          "start": 0.838,
+          "end": 1.113
+        },
+        {
+          "id": "w3",
+          "text": "auf",
+          "start": 1.15,
+          "end": 1.275
+        },
+        {
+          "id": "w4",
+          "text": "der",
+          "start": 1.312,
+          "end": 1.4
+        },
+        {
+          "id": "w5",
+          "text": "ganzen",
+          "start": 1.438,
+          "end": 1.75
+        },
+        {
+          "id": "w6",
+          "text": "Fläche",
+          "start": 1.762,
+          "end": 2.163
+        },
+        {
+          "id": "w7",
+          "text": "Das",
+          "start": 3.15,
+          "end": 3.375
+        },
+        {
+          "id": "w8",
+          "text": "Vorzeichen",
+          "start": 3.4,
+          "end": 3.975
+        },
+        {
+          "id": "w9",
+          "text": "der",
+          "start": 4.0,
+          "end": 4.1
+        },
+        {
+          "id": "w10",
+          "text": "Determinante",
+          "start": 4.15,
+          "end": 4.912
+        },
+        {
+          "id": "w11",
+          "text": "unbedingt",
+          "start": 5.062,
+          "end": 5.5
+        },
+        {
+          "id": "w12",
+          "text": "bewiesen",
+          "start": 5.562,
+          "end": 6.075
+        },
+        {
+          "id": "w13",
+          "text": "auf",
+          "start": 6.213,
+          "end": 6.425
+        },
+        {
+          "id": "w14",
+          "text": "allen",
+          "start": 6.487,
+          "end": 6.7
+        },
+        {
+          "id": "w15",
+          "text": "siebenundsechzig",
+          "start": 6.7,
+          "end": 7.475
+        },
+        {
+          "id": "w16",
+          "text": "Fenstern",
+          "start": 7.5,
+          "end": 8.088
+        },
+        {
+          "id": "w17",
+          "text": "die",
+          "start": 8.25,
+          "end": 8.312
+        },
+        {
+          "id": "w18",
+          "text": "hundertjährige",
+          "start": 8.387,
+          "end": 9.012
+        },
+        {
+          "id": "w19",
+          "text": "nullstellenfreie",
+          "start": 9.037,
+          "end": 9.8
+        },
+        {
+          "id": "w20",
+          "text": "Zone",
+          "start": 9.85,
+          "end": 10.175
+        },
+        {
+          "id": "w21",
+          "text": "versperrt",
+          "start": 10.188,
+          "end": 10.637
+        },
+        {
+          "id": "w22",
+          "text": "den",
+          "start": 10.662,
+          "end": 10.825
+        },
+        {
+          "id": "w23",
+          "text": "einzigen",
+          "start": 10.875,
+          "end": 11.262
+        },
+        {
+          "id": "w24",
+          "text": "Fluchtweg",
+          "start": 11.287,
+          "end": 11.838
+        },
+        {
+          "id": "w25",
+          "text": "Und",
+          "start": 12.762,
+          "end": 12.963
+        },
+        {
+          "id": "w26",
+          "text": "die",
+          "start": 12.975,
+          "end": 13.05
+        },
+        {
+          "id": "w27",
+          "text": "Marge",
+          "start": 13.088,
+          "end": 13.488
+        },
+        {
+          "id": "w28",
+          "text": "sechzig",
+          "start": 13.675,
+          "end": 14.137
+        },
+        {
+          "id": "w29",
+          "text": "von",
+          "start": 14.175,
+          "end": 14.387
+        },
+        {
+          "id": "w30",
+          "text": "siebzig",
+          "start": 14.4,
+          "end": 14.787
+        },
+        {
+          "id": "w31",
+          "text": "Fenstern",
+          "start": 14.812,
+          "end": 15.387
+        },
+        {
+          "id": "w32",
+          "text": "geschlossen",
+          "start": 15.562,
+          "end": 16.05
+        },
+        {
+          "id": "w33",
+          "text": "mit",
+          "start": 16.062,
+          "end": 16.188
+        },
+        {
+          "id": "w34",
+          "text": "zitierter",
+          "start": 16.2,
+          "end": 16.65
+        },
+        {
+          "id": "w35",
+          "text": "Klassik",
+          "start": 16.712,
+          "end": 17.175
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "path": "assets/voice/06.wav",
+      "duration_s": 19.344,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Dann",
+          "start": 0.1,
+          "end": 0.338
+        },
+        {
+          "id": "w1",
+          "text": "der",
+          "start": 0.362,
+          "end": 0.475
+        },
+        {
+          "id": "w2",
+          "text": "Befund",
+          "start": 0.525,
+          "end": 0.812
+        },
+        {
+          "id": "w3",
+          "text": "vom",
+          "start": 0.838,
+          "end": 1.062
+        },
+        {
+          "id": "w4",
+          "text": "dritten",
+          "start": 1.087,
+          "end": 1.375
+        },
+        {
+          "id": "w5",
+          "text": "August",
+          "start": 1.425,
+          "end": 1.875
+        },
+        {
+          "id": "w6",
+          "text": "Im",
+          "start": 2.075,
+          "end": 2.225
+        },
+        {
+          "id": "w7",
+          "text": "Graphen-Labor",
+          "start": 2.263,
+          "end": 3.062
+        },
+        {
+          "id": "w8",
+          "text": "wo",
+          "start": 3.237,
+          "end": 3.388
+        },
+        {
+          "id": "w9",
+          "text": "das",
+          "start": 3.438,
+          "end": 3.612
+        },
+        {
+          "id": "w10",
+          "text": "Analogon",
+          "start": 3.675,
+          "end": 4.162
+        },
+        {
+          "id": "w11",
+          "text": "bewiesen",
+          "start": 4.213,
+          "end": 4.6
+        },
+        {
+          "id": "w12",
+          "text": "ist",
+          "start": 4.65,
+          "end": 4.862
+        },
+        {
+          "id": "w13",
+          "text": "existiert",
+          "start": 5.1,
+          "end": 5.65
+        },
+        {
+          "id": "w14",
+          "text": "die",
+          "start": 5.675,
+          "end": 5.763
+        },
+        {
+          "id": "w15",
+          "text": "Ziel-Zerlegung",
+          "start": 5.825,
+          "end": 6.588
+        },
+        {
+          "id": "w16",
+          "text": "exakt",
+          "start": 6.612,
+          "end": 7.013
+        },
+        {
+          "id": "w17",
+          "text": "Quadratsumme",
+          "start": 7.275,
+          "end": 7.95
+        },
+        {
+          "id": "w18",
+          "text": "plus",
+          "start": 8.012,
+          "end": 8.225
+        },
+        {
+          "id": "w19",
+          "text": "Defekt",
+          "start": 8.275,
+          "end": 8.65
+        },
+        {
+          "id": "w20",
+          "text": "Unsere",
+          "start": 9.637,
+          "end": 10.012
+        },
+        {
+          "id": "w21",
+          "text": "Fensterform",
+          "start": 10.025,
+          "end": 10.675
+        },
+        {
+          "id": "w22",
+          "text": "ist",
+          "start": 10.713,
+          "end": 10.838
+        },
+        {
+          "id": "w23",
+          "text": "baugleich",
+          "start": 10.912,
+          "end": 11.463
+        },
+        {
+          "id": "w24",
+          "text": "Es",
+          "start": 12.4,
+          "end": 12.562
+        },
+        {
+          "id": "w25",
+          "text": "fehlt",
+          "start": 12.575,
+          "end": 12.812
+        },
+        {
+          "id": "w26",
+          "text": "genau",
+          "start": 12.863,
+          "end": 13.125
+        },
+        {
+          "id": "w27",
+          "text": "ein",
+          "start": 13.188,
+          "end": 13.325
+        },
+        {
+          "id": "w28",
+          "text": "Bauteil",
+          "start": 13.375,
+          "end": 13.912
+        },
+        {
+          "id": "w29",
+          "text": "der",
+          "start": 14.125,
+          "end": 14.25
+        },
+        {
+          "id": "w30",
+          "text": "Motor",
+          "start": 14.275,
+          "end": 14.75
+        },
+        {
+          "id": "w31",
+          "text": "Hilbert",
+          "start": 15.738,
+          "end": 16.2
+        },
+        {
+          "id": "w32",
+          "text": "Pólya",
+          "start": 16.363,
+          "end": 16.825
+        },
+        {
+          "id": "w33",
+          "text": "in",
+          "start": 17.05,
+          "end": 17.175
+        },
+        {
+          "id": "w34",
+          "text": "Fensterkoordinaten",
+          "start": 17.2,
+          "end": 18.325
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "path": "assets/voice/07.wav",
+      "duration_s": 16.176,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Und",
+          "start": 0.1,
+          "end": 0.3
+        },
+        {
+          "id": "w1",
+          "text": "die",
+          "start": 0.312,
+          "end": 0.375
+        },
+        {
+          "id": "w2",
+          "text": "Geometrie",
+          "start": 0.475,
+          "end": 0.95
+        },
+        {
+          "id": "w3",
+          "text": "liefert",
+          "start": 0.988,
+          "end": 1.3
+        },
+        {
+          "id": "w4",
+          "text": "schon",
+          "start": 1.312,
+          "end": 1.525
+        },
+        {
+          "id": "w5",
+          "text": "das",
+          "start": 1.55,
+          "end": 1.725
+        },
+        {
+          "id": "w6",
+          "text": "Maß",
+          "start": 1.75,
+          "end": 2.1
+        },
+        {
+          "id": "w7",
+          "text": "Die",
+          "start": 2.312,
+          "end": 2.425
+        },
+        {
+          "id": "w8",
+          "text": "Primzahl-Atome",
+          "start": 2.5,
+          "end": 3.312
+        },
+        {
+          "id": "w9",
+          "text": "lassen",
+          "start": 3.325,
+          "end": 3.638
+        },
+        {
+          "id": "w10",
+          "text": "sich",
+          "start": 3.65,
+          "end": 3.837
+        },
+        {
+          "id": "w11",
+          "text": "zirkelfrei",
+          "start": 3.9,
+          "end": 4.513
+        },
+        {
+          "id": "w12",
+          "text": "aus",
+          "start": 4.588,
+          "end": 4.787
+        },
+        {
+          "id": "w13",
+          "text": "reiner",
+          "start": 4.812,
+          "end": 5.1
+        },
+        {
+          "id": "w14",
+          "text": "Gitterzählung",
+          "start": 5.162,
+          "end": 5.75
+        },
+        {
+          "id": "w15",
+          "text": "ablesen",
+          "start": 5.787,
+          "end": 6.263
+        },
+        {
+          "id": "w16",
+          "text": "Der",
+          "start": 7.25,
+          "end": 7.4
+        },
+        {
+          "id": "w17",
+          "text": "Gamma-Fluss",
+          "start": 7.45,
+          "end": 7.975
+        },
+        {
+          "id": "w18",
+          "text": "erzwingt",
+          "start": 8.025,
+          "end": 8.425
+        },
+        {
+          "id": "w19",
+          "text": "ihre",
+          "start": 8.488,
+          "end": 8.65
+        },
+        {
+          "id": "w20",
+          "text": "Massen",
+          "start": 8.675,
+          "end": 8.975
+        },
+        {
+          "id": "w21",
+          "text": "auf",
+          "start": 9.025,
+          "end": 9.175
+        },
+        {
+          "id": "w22",
+          "text": "Promille",
+          "start": 9.225,
+          "end": 9.662
+        },
+        {
+          "id": "w23",
+          "text": "und",
+          "start": 9.838,
+          "end": 10.025
+        },
+        {
+          "id": "w24",
+          "text": "ihre",
+          "start": 10.075,
+          "end": 10.25
+        },
+        {
+          "id": "w25",
+          "text": "Positionen",
+          "start": 10.3,
+          "end": 11.025
+        },
+        {
+          "id": "w26",
+          "text": "Aber",
+          "start": 12.0,
+          "end": 12.262
+        },
+        {
+          "id": "w27",
+          "text": "ehrlich",
+          "start": 12.325,
+          "end": 12.738
+        },
+        {
+          "id": "w28",
+          "text": "als",
+          "start": 12.912,
+          "end": 13.15
+        },
+        {
+          "id": "w29",
+          "text": "Prüfstand",
+          "start": 13.213,
+          "end": 13.825
+        },
+        {
+          "id": "w30",
+          "text": "nicht",
+          "start": 14.0,
+          "end": 14.238
+        },
+        {
+          "id": "w31",
+          "text": "als",
+          "start": 14.3,
+          "end": 14.488
+        },
+        {
+          "id": "w32",
+          "text": "Generator",
+          "start": 14.537,
+          "end": 15.175
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "path": "assets/voice/08.wav",
+      "duration_s": 19.584,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Der",
+          "start": 0.1,
+          "end": 0.287
+        },
+        {
+          "id": "w1",
+          "text": "Stand",
+          "start": 0.287,
+          "end": 0.588
+        },
+        {
+          "id": "w2",
+          "text": "heute",
+          "start": 0.637,
+          "end": 1.012
+        },
+        {
+          "id": "w3",
+          "text": "Jede",
+          "start": 1.188,
+          "end": 1.462
+        },
+        {
+          "id": "w4",
+          "text": "Masse",
+          "start": 1.5,
+          "end": 1.775
+        },
+        {
+          "id": "w5",
+          "text": "lebt",
+          "start": 1.812,
+          "end": 2.025
+        },
+        {
+          "id": "w6",
+          "text": "in",
+          "start": 2.1,
+          "end": 2.2
+        },
+        {
+          "id": "w7",
+          "text": "einem",
+          "start": 2.25,
+          "end": 2.45
+        },
+        {
+          "id": "w8",
+          "text": "Korridor",
+          "start": 2.5,
+          "end": 2.95
+        },
+        {
+          "id": "w9",
+          "text": "mit",
+          "start": 2.987,
+          "end": 3.125
+        },
+        {
+          "id": "w10",
+          "text": "exakt",
+          "start": 3.175,
+          "end": 3.538
+        },
+        {
+          "id": "w11",
+          "text": "berechenbaren",
+          "start": 3.612,
+          "end": 4.225
+        },
+        {
+          "id": "w12",
+          "text": "Rändern",
+          "start": 4.263,
+          "end": 4.688
+        },
+        {
+          "id": "w13",
+          "text": "Die",
+          "start": 5.65,
+          "end": 5.838
+        },
+        {
+          "id": "w14",
+          "text": "Arithmetik",
+          "start": 5.9,
+          "end": 6.5
+        },
+        {
+          "id": "w15",
+          "text": "wählt",
+          "start": 6.537,
+          "end": 6.8
+        },
+        {
+          "id": "w16",
+          "text": "nicht",
+          "start": 6.812,
+          "end": 7.013
+        },
+        {
+          "id": "w17",
+          "text": "den",
+          "start": 7.013,
+          "end": 7.15
+        },
+        {
+          "id": "w18",
+          "text": "Rand",
+          "start": 7.188,
+          "end": 7.513
+        },
+        {
+          "id": "w19",
+          "text": "sie",
+          "start": 7.638,
+          "end": 7.787
+        },
+        {
+          "id": "w20",
+          "text": "wählt",
+          "start": 7.825,
+          "end": 8.075
+        },
+        {
+          "id": "w21",
+          "text": "einen",
+          "start": 8.137,
+          "end": 8.387
+        },
+        {
+          "id": "w22",
+          "text": "inneren",
+          "start": 8.438,
+          "end": 8.762
+        },
+        {
+          "id": "w23",
+          "text": "Punkt",
+          "start": 8.8,
+          "end": 9.125
+        },
+        {
+          "id": "w24",
+          "text": "bei",
+          "start": 9.375,
+          "end": 9.512
+        },
+        {
+          "id": "w25",
+          "text": "null",
+          "start": 9.55,
+          "end": 9.75
+        },
+        {
+          "id": "w26",
+          "text": "Komma",
+          "start": 9.8,
+          "end": 10.037
+        },
+        {
+          "id": "w27",
+          "text": "dreiundfünfzig",
+          "start": 10.088,
+          "end": 10.975
+        },
+        {
+          "id": "w28",
+          "text": "Ein",
+          "start": 11.912,
+          "end": 12.15
+        },
+        {
+          "id": "w29",
+          "text": "Energie-Extremum",
+          "start": 12.2,
+          "end": 13.15
+        },
+        {
+          "id": "w30",
+          "text": "trifft",
+          "start": 13.162,
+          "end": 13.45
+        },
+        {
+          "id": "w31",
+          "text": "ihn",
+          "start": 13.512,
+          "end": 13.613
+        },
+        {
+          "id": "w32",
+          "text": "bis",
+          "start": 13.662,
+          "end": 13.8
+        },
+        {
+          "id": "w33",
+          "text": "auf",
+          "start": 13.863,
+          "end": 13.988
+        },
+        {
+          "id": "w34",
+          "text": "Promille",
+          "start": 14.037,
+          "end": 14.463
+        },
+        {
+          "id": "w35",
+          "text": "Die",
+          "start": 15.463,
+          "end": 15.562
+        },
+        {
+          "id": "w36",
+          "text": "offene",
+          "start": 15.625,
+          "end": 15.9
+        },
+        {
+          "id": "w37",
+          "text": "Frage",
+          "start": 15.912,
+          "end": 16.387
+        },
+        {
+          "id": "w38",
+          "text": "Erkläre",
+          "start": 16.587,
+          "end": 17.038
+        },
+        {
+          "id": "w39",
+          "text": "die",
+          "start": 17.087,
+          "end": 17.163
+        },
+        {
+          "id": "w40",
+          "text": "Selektion",
+          "start": 17.2,
+          "end": 17.825
+        },
+        {
+          "id": "w41",
+          "text": "im",
+          "start": 17.875,
+          "end": 17.988
+        },
+        {
+          "id": "w42",
+          "text": "Korridor",
+          "start": 18.038,
+          "end": 18.562
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "path": "assets/voice/09.wav",
+      "duration_s": 15.504,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Kein",
+          "start": 0.1,
+          "end": 0.388
+        },
+        {
+          "id": "w1",
+          "text": "Beweis",
+          "start": 0.438,
+          "end": 0.875
+        },
+        {
+          "id": "w2",
+          "text": "Das",
+          "start": 1.788,
+          "end": 1.962
+        },
+        {
+          "id": "w3",
+          "text": "sagt",
+          "start": 1.962,
+          "end": 2.237
+        },
+        {
+          "id": "w4",
+          "text": "dieses",
+          "start": 2.237,
+          "end": 2.513
+        },
+        {
+          "id": "w5",
+          "text": "Programm",
+          "start": 2.575,
+          "end": 2.938
+        },
+        {
+          "id": "w6",
+          "text": "selbst",
+          "start": 2.962,
+          "end": 3.375
+        },
+        {
+          "id": "w7",
+          "text": "an",
+          "start": 3.587,
+          "end": 3.737
+        },
+        {
+          "id": "w8",
+          "text": "jeder",
+          "start": 3.763,
+          "end": 4.025
+        },
+        {
+          "id": "w9",
+          "text": "Stelle",
+          "start": 4.037,
+          "end": 4.438
+        },
+        {
+          "id": "w10",
+          "text": "Aber",
+          "start": 5.425,
+          "end": 5.65
+        },
+        {
+          "id": "w11",
+          "text": "die",
+          "start": 5.688,
+          "end": 5.763
+        },
+        {
+          "id": "w12",
+          "text": "Frage",
+          "start": 5.787,
+          "end": 6.162
+        },
+        {
+          "id": "w13",
+          "text": "war",
+          "start": 6.188,
+          "end": 6.35
+        },
+        {
+          "id": "w14",
+          "text": "nie",
+          "start": 6.375,
+          "end": 6.475
+        },
+        {
+          "id": "w15",
+          "text": "so",
+          "start": 6.513,
+          "end": 6.662
+        },
+        {
+          "id": "w16",
+          "text": "klein",
+          "start": 6.713,
+          "end": 7.075
+        },
+        {
+          "id": "w17",
+          "text": "und",
+          "start": 7.213,
+          "end": 7.375
+        },
+        {
+          "id": "w18",
+          "text": "nie",
+          "start": 7.388,
+          "end": 7.513
+        },
+        {
+          "id": "w19",
+          "text": "so",
+          "start": 7.55,
+          "end": 7.675
+        },
+        {
+          "id": "w20",
+          "text": "präzise",
+          "start": 7.737,
+          "end": 8.325
+        },
+        {
+          "id": "w21",
+          "text": "Rund",
+          "start": 9.325,
+          "end": 9.662
+        },
+        {
+          "id": "w22",
+          "text": "siebenhundert",
+          "start": 9.688,
+          "end": 10.213
+        },
+        {
+          "id": "w23",
+          "text": "Module",
+          "start": 10.238,
+          "end": 10.738
+        },
+        {
+          "id": "w24",
+          "text": "jede",
+          "start": 10.925,
+          "end": 11.225
+        },
+        {
+          "id": "w25",
+          "text": "Zahl",
+          "start": 11.275,
+          "end": 11.55
+        },
+        {
+          "id": "w26",
+          "text": "maschinell",
+          "start": 11.575,
+          "end": 12.012
+        },
+        {
+          "id": "w27",
+          "text": "geprüft",
+          "start": 12.05,
+          "end": 12.5
+        },
+        {
+          "id": "w28",
+          "text": "Das",
+          "start": 13.475,
+          "end": 13.7
+        },
+        {
+          "id": "w29",
+          "text": "ist",
+          "start": 13.7,
+          "end": 13.838
+        },
+        {
+          "id": "w30",
+          "text": "die",
+          "start": 13.85,
+          "end": 13.912
+        },
+        {
+          "id": "w31",
+          "text": "Prime",
+          "start": 13.975,
+          "end": 14.238
+        },
+        {
+          "id": "w32",
+          "text": "Front",
+          "start": 14.262,
+          "end": 14.562
+        }
+      ]
+    }
+  ],
+  "sfx": []
+}
