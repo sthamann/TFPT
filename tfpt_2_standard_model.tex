@@ -688,9 +688,15 @@ code page carries a Hecke tower whose primitive degrees are exactly
 the Gaussian prime norms and whose $\sigma$-descended traces
 reproduce the atom layer of the Weil measure at deviation $0.00$
 (\veri{v714\_moonshot\_hecke\_groupoid.py}, \textsc{moonshot-go};
-fenced honestly: the finite counting facts are E8-unspecific ---
-specificity is stage 2 of the registered contract
-\texttt{PRIME.Z1.MOONSHOT.01}).
+fenced honestly: the finite counting facts are E8-unspecific on that
+slice --- the stage-2 specificity question has since been
+\emph{measured}: the arch sector of the same tower glues with one
+normalization and E8 becomes forced \emph{at the gluing}
+(\veri{v716\_moonshot\_arch\_glue.py}, $18/18$,
+\textsc{moonshot-stage2-glued}; the $\{\mathbb{Z}^8,E_8\}$ census of
+\veri{v719\_moonshot\_traceformula.py}: only the Gaussian E8 glues);
+the uniqueness theorem stays open under
+\texttt{PRIME.Z1.MOONSHOT.01}, no marker moves).
 \smallskip\\
 \noindent\textbf{The No-Carrier-Reconstruction audit, Stage A.}
 \veri{v567\_carrier\_free\_q\_reconstruction.py}\ The self-code's circularity question is
@@ -1810,7 +1816,12 @@ $|J|\to0.028849$ ($-1.21\sigma$ today), so the two candidates \emph{cross-discri
 \par\smallskip\noindent\textbf{The absolute $\nu$-mass scale is one seesaw ratio (\veri{v272\_nu\_mass\_scale.py}).}
 The one PMNS residual left is the overall scale, and it is typed honestly --- not fabricated. The type-I seesaw
 makes the absolute scale a \emph{single} ratio, $m_3=(y_\nu v_{\mathrm{EW}})^2/M_R$ (\mE), exactly the same kind of
-one irreducible input as $v_{\mathrm{geo}}$ (the No-Unit theorem, \vref{v153}); the dimensionless angles and ordering
+one irreducible input as $v_{\mathrm{geo}}$ (the No-Unit theorem, \vref{v153}; the whole $v_{\mathrm{geo}}$
+interface is now structurally closed as an $\mathbb R_+$ scale torsor in calibration form ---
+export table, dimension-matrix rank $1$, $\lambda$-homogeneity, two-anchor consistency $0.11\%$ ---
+\veri{v725\_phys\_vgeo\_torsor\_audit.py}, $21/21$, with the one remaining dimensionless ratio
+\emph{named}: $H_{\mathrm{EW}}=\ln(\Mbar/v_{\mathrm{EW}})=37.1776$; no scale derivation, typing
+unchanged); the dimensionless angles and ordering
 are pinned, and the ratio $m_2/m_3$ now carries the \mO\ candidate comparator $\sqrt{|J|}$ (\vref{v468}). \mC\ the observed $m_3=\sqrt{\Delta m^2_{\mathrm{atm}}}
 =0.050$ eV together with the TFPT PS$\to$GUT scale window $M_R\in[M_{\mathrm{PS}}{=}4.2{\times}10^{13},
 M_{\mathrm{GUT}}{=}2.4{\times}10^{15}]$ GeV (\vref{v249}) requires a third-generation Dirac Yukawa
@@ -3687,6 +3698,15 @@ candidate itself is fixed) are deliberately \emph{not} pressed into the compiler
 targets, now runnable solvers with kill tests (\vref{v371}--\vref{v375}). Full quantum gravity beyond the $R^2$
 scalaron is likewise sharpened --- perturbative graviton unitarity is established (the Stelle ghost a truncation
 artefact, \vref{v304}/\vref{v370}/\vref{v380}) and the ambient measure is a \mC\ redundancy (\vref{v369}).
+\emph{Follow-up (2026-08-03):} the ``external clock'' typing of these transfer targets is now
+\emph{confirmed from the inside} --- both thermal-time routes for internalizing the four clocks are
+machine-killed (\veri{v723\_phys\_modular\_clock.py}, $11/11$, \textsc{stt-killed}: the QCD $1$-loop
+clock is parabolic and unreachable by any constant-rescaled modular flow, while the pole/Boltzmann
+pair is confirmed internal with multiplier exactly $(2/3)^6$; and
+\veri{v724\_phys\_t3b\_modular\_flows.py}, $12/12$, \textsc{t3b-dead}: conditioned modular flows of
+one internal mother state give loxodromic classes, not the frozen solver classes).  The external
+anchor census sharpens to $\{$one unit ($v_{\mathrm{geo}}$-class), one angle $\theta_i$, one lattice
+$O(1)$ $C_p\}$; markers unchanged.
 \end{gapbox}
 
 \noindent\textbf{Net.} The previously ``conditional'' steps are now written out: gap/clustering, APS

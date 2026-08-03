@@ -100,7 +100,7 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::How to read this document::1": {
-  "hash": "14bb870ad64e",
+  "hash": "1683c7935da8",
   "date": "2026-08-03"
  },
  "tfpt_1_architecture_e8::section::Headline: the Pascal compiler on five carrier slots::1": {
@@ -120,8 +120,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::The $D_5\\times A_3$ compiler: $E_8$ as a closure, not an input::1": {
-  "hash": "59e213d384aa",
-  "date": "2026-07-22"
+  "hash": "5ef928f82a62",
+  "date": "2026-08-03"
  },
  "tfpt_1_architecture_e8::subsection::Carrier $=D_5=\\mathfrak{so}_{10}$ (proved)::1": {
   "hash": "291366279c88",
@@ -348,7 +348,7 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The Sheet Diamond and the Winding Line: masses and transport from one surface::1": {
-  "hash": "7448ba55dbb3",
+  "hash": "d48d9feba222",
   "date": "2026-08-03"
  },
  "tfpt_2_standard_model::subsection::Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?::1": {
@@ -364,8 +364,8 @@
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "80fd28065a89",
-  "date": "2026-07-15"
+  "hash": "d64e13a62527",
+  "date": "2026-08-03"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
   "hash": "f76d4592f628",
@@ -496,8 +496,8 @@
   "date": "2026-07-21"
  },
  "tfpt_2_standard_model::section::Status: what is now written out, and what is honestly left::1": {
-  "hash": "ebe59b0770f0",
-  "date": "2026-06-24"
+  "hash": "851f00cc4cc6",
+  "date": "2026-08-03"
  },
  "tfpt_2_standard_model::section::Appendix: computational verification::1": {
   "hash": "d8bd87e41596",
@@ -524,7 +524,7 @@
   "date": "2026-06-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
-  "hash": "3f176a3f51ee",
+  "hash": "8906cd2630ca",
   "date": "2026-08-03"
  },
  "tfpt_3_e8_audit_bootstrap::section::Further audit lemmas (machine-verified this round)::1": {
@@ -604,8 +604,8 @@
   "date": "2026-06-17"
  },
  "tfpt_4_frontier::section::Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio::1": {
-  "hash": "388138957dfb",
-  "date": "2026-06-22"
+  "hash": "5dde4c1784cd",
+  "date": "2026-08-03"
  },
  "tfpt_4_frontier::section::The Higgs quartic --- near-criticality from the free seam::1": {
   "hash": "7f638e3bebef",
@@ -708,8 +708,8 @@
   "date": "2026-06-14"
  },
  "tfpt_horizon_readouts::section::Search targets (not claims)::1": {
-  "hash": "8945dc960221",
-  "date": "2026-07-20"
+  "hash": "daefb1c47453",
+  "date": "2026-08-03"
  },
  "tfpt_horizon_readouts::section::Appendix: computational verification::1": {
   "hash": "abf9b76e25f0",
@@ -724,7 +724,7 @@
   "date": "2026-08-01"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "f779108c224c",
+  "hash": "b793c5fea6b8",
   "date": "2026-08-03"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {
@@ -736,8 +736,8 @@
   "date": "2026-08-01"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
-  "hash": "e20165d1a07d",
-  "date": "2026-07-31"
+  "hash": "96d5765a0c55",
+  "date": "2026-08-03"
  },
  "origin_theory::front::(front matter)::1": {
   "hash": "1806669dfa1e",

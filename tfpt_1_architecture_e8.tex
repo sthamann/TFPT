@@ -394,8 +394,17 @@ whose $\sigma$-descended traces reproduce the atom layer of the Weil
 measure at deviation $0.00$
 (\veri{v714\_moonshot\_hecke\_groupoid.py}, $19/19$,
 \textsc{moonshot-go}; honestly fenced: the finite counting facts are
-E8-unspecific, the specificity question is stage 2 of
-\texttt{PRIME.Z1.MOONSHOT.01}).
+E8-unspecific on that slice --- the specificity question belonged to
+stage 2 of \texttt{PRIME.Z1.MOONSHOT.01} and has since been
+\emph{measured}: the archimedean place of the same tower glues with
+\emph{one} normalization ($\kappa=(1,1,1)$ to $<10^{-12}$;
+\veri{v716\_moonshot\_arch\_glue.py}, $18/18$,
+\textsc{moonshot-stage2-glued}), and among the dimension-$8$
+unimodular lattices $\{\mathbb{Z}^8,E_8\}$ (Mordell 1938) \emph{only}
+the Gaussian E8 glues (\veri{v719\_moonshot\_traceformula.py},
+$24/24$) --- E8 becomes forced \emph{at the gluing}, not at the
+finite places; the uniqueness \emph{theorem} stays open, no marker
+moves).
 \end{keybox}
 
 \begin{keybox}[The current reduction state of P2 (2026-07-22) --- text consolidation, markers unchanged]
@@ -801,6 +810,24 @@ $J(A,B,C)=(\pi/3)c_-$, evaluated on the exact BdG ground state of the collar mod
 for the $16$-layer carrier (per layer $0.500000$ at $L{=}48$; trivial and orientation-flip controls pass) ---
 independent of both the Chern route (\vref{v367}) and the KLM count (\vref{v378}).
 \texttt{SEAM.EQUIV.01} stays \mO.
+\emph{Follow-up (2026-08-03, the $G_{\mathrm{net}}$ witnesses):} the
+index-$4$ statement now carries two \emph{exact} arithmetic/index
+witnesses.  The NS/R grading \emph{is} the parity character of
+$E_8(\Z[i])/(1{+}i)=\mathbb F_2^4$ --- $(1{+}i)L$ lies in the even
+sublattice (proved on a $\Z$-basis), all $15\times16$ root classes
+are parity-pure ($7$ NS $+$ $8$ R), so the Ramond projection is
+$(1{+}i)$-\emph{adic} at the one ramified edge of the
+$\Z[i]$-E8 Hecke tower (\veri{v722\_phys\_ramified\_ns\_r.py},
+$9/9$, \textsc{ramified-sees-nsr}); and on the CAR ladder the
+$\mu_4$-average expectation has optimal Pimsner--Popa constant
+exactly $1/4$ and Watatani index exactly $4$ via an explicit
+quasi-basis with \emph{forced} weights, with $\mu_4$ \emph{derived}
+from the clock and the Ramond sector healed state-preservingly by
+the Klein zero-mode dressing (\veri{v726\_phys\_car\_pp\_index.py},
+$57/57$, \textsc{t2-slice-go}).  The remaining half is the
+\emph{identification} of the ladder Q-system with the constructed
+$\mathbb C[\Z_4]$ object (\texttt{GNET.RAMIFIED.01}, kills
+registered); \texttt{GATE.METRIC.08}/\texttt{.10} typing unchanged.
 
 \TFPTdoublepushout
 

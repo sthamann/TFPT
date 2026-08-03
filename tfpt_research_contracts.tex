@@ -2353,6 +2353,24 @@ $\mathbb C[\Z_2]$ $=$ the $SO(16)_1$ tower step, with index factorisation $4=2\t
 seam--Calder\'on inclusion of the $16$-Majorana net (\vref{v113}) realises \emph{this} Q-system'' --- matching
 two constructed objects, not a search; the three loads (metric $+$ carrier $+$ QBL, \vref{v123}) hang on this
 one identification.
+\emph{[2026-08-03 update, the index side measured on the ladder:}
+\veri{v726\_phys\_car\_pp\_index.py} ($57/57$,
+\texttt{T2-SLICE-GO}) measures the inclusion on the CAR ladder
+$N=48$--$384$: the $\mu_4$-average conditional expectation has
+optimal Pimsner--Popa constant \emph{exactly} $1/4$ (explicit
+rank-one minimizer $+$ pinching theorem) and Watatani index
+\emph{exactly} $4$ via an explicit quasi-basis with \emph{forced}
+weights (uniform weights break scalarness; the $\Z_2$-only average
+gives index $2$ --- $\mu_4$ distinguished from $\mu_2$), with
+$\mu_4$ \emph{derived} from the clock $L=S^{N/12}$ (order $4$
+forced by the NS spin structure) and the Ramond sector healed
+\emph{state-preservingly} by the Klein zero-mode dressing
+($[\rho,U']=0$ exactly).  The remaining half is unchanged in type
+--- the \emph{identification} of this ladder Q-system with the
+constructed $\mathbb C[\Z_4]$ object --- now registered with kill
+criteria as the open half of \texttt{GNET.RAMIFIED.01} (Frobenius
+mismatch; index $\ne4$ on the state-preserving ladder; dressing
+incompatible with the $\sigma$ descent); no marker move.]
 \smallskip\\
 \noindent\textbf{The hull is the graded module of the Q-system (\veri{v128\_graded\_hull.py}).} The
 Q-system is not merely an abstract companion of $E_8$ --- $E_8$ \emph{realises} it \mE: the $240$
@@ -2394,6 +2412,22 @@ $248=120_{\mathrm{NS}}+128_{\mathrm R}$. \emph{Consequence \mC:} the index-$4$ e
 \emph{stated} on the untwisted module alone; R2's one remaining statement is irreducibly about the
 twisted-sector structure of the seam--Calder\'on net, with the sheet choice realised as the R-projection;
 the finite shadow is exhausted (\vref{v113}/\vref{v125}/\vref{v143} $+$ this census).
+\emph{[2026-08-03 update, the NS/R grading acquires an arithmetic
+home:} \veri{v722\_phys\_ramified\_ns\_r.py} ($9/9$,
+\texttt{RAMIFIED-SEES-NSR}) shows the NS/R grading \emph{is} the
+parity character of $E_8(\Z[i])/(1{+}i)=\mathbb F_2^4$: $(1{+}i)L$
+lies in the even/NS sublattice (proved on a $\Z$-basis), the $240$
+roots fall into $15\times16$ classes of \emph{pure} parity ($7$ NS
+$+$ $8$ R), and parity is a homomorphism $\mathbb
+F_2^4\to\mathbb F_2$ --- the Ramond projection is
+$(1{+}i)$-\emph{adic}, at the one ramified edge of the
+$\Z[i]$-E8 Hecke tower (both controls fire: the $\Z[i]^4$ census is
+not $15\times16$, scrambled labels break purity).  Together with
+the ladder index measurement (\veri{v726\_phys\_car\_pp\_index.py};
+$\chi=1\leftrightarrow$ half-integer labels on both sides, the
+ramified defect in $\ker\chi$) this gives the groupoid reading of
+$G_{\mathrm{net}}$ its first \emph{exact} witnesses; the gate
+typing is unchanged.]
 
 \par\smallskip\noindent\textbf{Hecke from geometry on the glue census
 (\texttt{HECKE.GEOM.01}).}
@@ -3665,6 +3699,23 @@ positivity) are \emph{named}.  (iv) The atom layer is
 $19/19$, \texttt{MOONSHOT-GO}; see
 \texttt{PRIME.Z1.MOONSHOT.01} below).  What is missing is exactly
 the continuum \emph{S\"ATZE}: until they exist, no marker moves.]}
+\emph{[2026-08-03 update III, the evening round: the moonshot
+stages 2--4 plus the Satz-1 slice and the K collapse are \emph{done
+and machine-checked} (see \texttt{PRIME.Z1.MOONSHOT.01} below for
+the six modules \veri{v716\_moonshot\_arch\_glue.py} through
+\veri{v721\_k1\_node\_capture.py}).  The Hilbert--P\'olya candidate
+is now structurally complete \emph{at measurement level} --- an
+operator family, a state, an exact finite trace formula with a
+closed term dictionary to Weil 1952, and a measured spectral limit
+onto the zeros ($100\%$ of $377$ at tol $0.25$, rate $-1.61$,
+SHA256 prediction firewall).  The contract stays \emph{formally
+OPEN}: the remaining hard substance is (L1) the identification of
+the vague limit \emph{at} the line $s=1/2$ (no mass loss --- the
+single place the zero fluctuation enters) and (L2) the node
+convergence as a theorem (the capture half is proof-near,
+\veri{v721\_k1\_node\_capture.py}; the ${\sim}900\times$
+super-resolution is the open K1b question); no marker moves, no RH
+statement.]}
 \emph{\texttt{PRIME.Z1.MOONSHOT.01}} --- \emph{OPEN} (registered
 2026-08-03, the groupoid program): derive the \emph{full} Weil
 measure (atoms $+$ arch $+$ pole) as the trace layer of \emph{one}
@@ -3682,19 +3733,57 @@ and $368$ moments at deviation $0.00$; declared ingredients (named
 as inputs, not derived): the $\sqrt{n}$ half-density and the
 $\sigma$ descent.  \emph{The honest fence (typed):} the finite
 counting facts of stage 1 are \emph{E8-unspecific} --- the
-specificity question is stage 2.  \emph{Stage 2 (the next gate,
-running separately):} (i) glue the arch --- the deck-sector trace
-(\veri{v705\_chain\_deck\_sector.py}) and the tower must come from
-one groupoid, not a direct sum; (ii) specificity --- show the tower
-singles out E8 among lattices; (iii) derive the declared ingredients
-internally.  \emph{Kill criteria (from the strategy council):} (K1)
-the gluing needs zeros or an RH-equivalent input $=$ renaming; (K2)
-the $\sqrt{n}$ half-density cannot be derived groupoid-internally
-$=$ the construction is a repackaging of the explicit formula; (K3)
-the specificity census shows other lattices work equally well $=$
-the E8 anchor is decorative; (K4) the glued object fails positivity
-on a deployed window $=$ dead.  A research contract, \emph{not} a
-claim; no marker move; no RH statement.
+specificity question belonged to stage 2, which has since been
+executed.  \emph{Stage 2 (done, 2026-08-03):}
+\veri{v716\_moonshot\_arch\_glue.py} ($18/18$,
+\texttt{MOONSHOT-STAGE2-GLUED}) --- the arch \emph{glues}: one
+object, \emph{one} normalization (the free 3-scalar LSQ returns
+$\kappa=(1,1,1)$ to $<10^{-12}$ on all five windows); the $1/4$ in
+$\mathrm{Re}\,\psi(1/4+i\tau/2)$ is \emph{derived} as the $\mu_4$
+fixed-sector offset; $\log\pi$ enters only through the declared
+self-dual (Tate) UV cell --- the exact arch mirror of the declared
+$\sqrt{n}$ half-density; and E8 becomes forced \emph{at the gluing}
+(the $\mu_2$ tower, the wrong $\mu_4$ class and the wrong deck
+twists all rip).  \emph{Stage 3 (done):}
+\veri{v717\_moonshot\_state.py} ($21/21$,
+\texttt{STATE-ON-TRUNCATIONS}) --- the Weil functional is
+\emph{constructively} a GNS vector state on every truncation
+(Levinson PD); the naive tower reading misses by
+$|\Delta|/\mathrm{W3}$-margin $=104$--$1563$ --- the trace-formula
+boundary \emph{is} the localized RH substance; KMS $\beta=1$
+(Bost--Connes critical) measured.  \emph{Stage 4 (done):}
+\veri{v718\_moonshot\_spectral.py} ($10/10$,
+\texttt{SPECTRUM-CONVERGES-MEASURED}) --- the truncation spectra
+converge \emph{measurably} onto the zeros: $100\%$ of $377$ frozen
+targets at tol $0.25$ ($h=1433$), rate $-1.61$, monotone GNS
+$K$-ladder, SHA256 prediction firewall; the scramble control dies
+as a state.  \emph{The Satz-1 slice (done):}
+\veri{v719\_moonshot\_traceformula.py} ($24/24$,
+\texttt{SATZ1-LEDGER-EXACT}) --- the finite trace formula is exact
+Gauss quadrature and the term dictionary to the classical Weil
+formula \emph{closes} (pole/atoms/arch/UV); the E8 census over
+$\{\mathbb{Z}^8, E8\}$ (Mordell 1938): only the Gaussian E8 glues.
+\emph{The K collapse (done):} \veri{v720\_moonshot\_k2k3.py}
+($14/14$, \texttt{K2K3-COLLAPSED-CLASSICAL}) --- the convergence
+items collapse onto classical analysis (tightness measured,
+unconditional tail majorant on $s>1/2$, the boundary exactly
+$s=1/2$); and \veri{v721\_k1\_node\_capture.py} ($14/14$,
+\texttt{K1-LEMMA-CAPTURE-ONLY}) makes the capture half of the node
+question proof-near.  \emph{Kill audit (criteria from the strategy
+council, adjudicated):} (K1) does \emph{not} fire --- the gluing
+needs no zeros (SHA256-typed diagnostics); (K2) half-standing ---
+the $\sqrt{n}$ half-density stays \emph{declared}, its arch mirror
+$\log\pi$ is now typed as the self-dual normalization; (K3) does
+\emph{not} fire at measurement level --- the counterfactual census
+rips (the uniqueness \emph{theorem} stays open); (K4) does not fire
+--- positivity holds on every deployed window.  \emph{The remaining
+substance, ordered:} (L1) identification of the vague limit
+\emph{at} the line $s=1/2$ (no mass loss); (L2) node convergence as
+a theorem (the ${\sim}900\times$ super-resolution --- the K1b
+question, exploration running); (L3) routine lemmas (tent/Jackson
+discretization, PNT tail majorant --- both exhibited with
+constants).  A research contract, \emph{not} a claim; the contract
+stays OPEN; no marker move; no RH statement.
 
 \par\smallskip\noindent\textbf{The four fixed-size angle instruments
 (\texttt{PRIME.ANGLE.INSTR.01}).}
@@ -5017,6 +5106,28 @@ to $v_{\mathrm{geo}}$ times atoms. Hence $v_{\mathrm{geo}}$ is the \emph{single}
 dimensionless dials --- a ${\sim}26\to1$ reduction against the Standard Model. ($1/G$ stays UV-sensitive (Sakharov,
 \vref{v68}), so it is a metrology readout, not a clean prediction --- consistent with $v_{\mathrm{geo}}$ being the
 anchor.)
+\par\smallskip\noindent\textbf{The torsor closure of the interface
+(\veri{v725\_phys\_vgeo\_torsor\_audit.py}, \texttt{VGEO.TORSOR.01},
+$21/21$).} The $v_{\mathrm{geo}}$ interface is now \emph{structurally
+closed} as an $\mathbb R_+$ scale torsor, machine-audited on the
+corpus: (1) the complete export table $O_i=r_i\,
+v_{\mathrm{geo}}^{d_i}$ with machine-derived dimensionless $r_i$
+($\Mpl$, $1/G$, $\Lambda$, $U_{\mathrm{point}}$, $m/\mu$ at
+$d=1,2,4,1,0$); (2) the dimension matrix has \emph{rank $1$} ---
+exactly one independent scale (conditional [A] on the flavor block
+via the declared seam$=$Planck identification, named, not hidden);
+(3) \emph{all} consistency conditions are homogeneous under
+$L\mapsto\lambda L$ --- the machine form of this theorem; (4) the
+leave-one-anchor-out cross-calibrations are compatible ($G$ vs
+$\rho_\Lambda$: the same $\Mpl$ to $0.11\%$, \vref{v274}); (5) the
+\emph{calibration theorem} in torsor language: one external
+reference selects the point in the torsor, everything else is
+prediction.  The closure is the \emph{calibration form} --- no
+absolute-scale derivation (impossible per this theorem; that is the
+content, not the defect); the one remaining dimensionless scale
+ratio is \emph{named}, $H_{\mathrm{EW}}=\ln(\Mpl/v_{\mathrm{EW}})
+=37.1776$ (naive $\cthree$/$\phiz$ ladders honestly excluded); the
+\mE/\mO\ typing of this keybox is unchanged.
 \end{keybox}
 
 \begin{keybox}[Theorem G --- the closure statement \mO\ (target)]
@@ -6724,6 +6835,37 @@ $b_3{=}-7$. So the transfer \emph{dynamics} is native; only the \emph{anchors} s
 pole scale and $M_R$ are $v_{\mathrm{geo}}$-class, $C_p$ is the lattice $O(1)$, and $F_{\mathrm{relic}}$'s
 cosmological initial condition $\theta_i$ is the one genuine wall. A reduction, \emph{not} internalisation:
 no new premise, and the firewall (\vref{v187}) holds --- the observable stays \mC.
+\par\smallskip\noindent\textbf{Both thermal-time routes are dead: the
+external clock contract stands (\texttt{FTRANSFER.STT.01} /
+\texttt{FTRANSFER.COCYCLE.01}).}  The radical counter-idea to the
+external-clock wall --- Connes-style thermal time, ``the four clocks
+$=$ four modular flows of one state'' --- is now machine-killed on
+\emph{both} checkable routes.  \mX\ \emph{Strong thermal time}
+(\veri{v723\_phys\_modular\_clock.py}, $11/11$,
+\textsc{stt-killed} $+$ \textsc{internal-pair-confirmed}): a modular
+generator is self-adjoint, hence diagonalizable --- but the F\_QCD
+$1$-loop clock map $u\mapsto u+2b_0$ is \emph{parabolic} and not
+diagonalizable (single Jordan block), and the symbolic lemma
+``$\exp$ of a real-diagonalizable matrix is diagonalizable'' closes
+the door: no constant-rescaled modular flow produces the QCD clock;
+the pole multiplier is confirmed \emph{exactly} $(2/3)^6=64/729$
+(hyperbolic, dimensionless $\Rightarrow$ internal; F\_Boltzmann the
+same element by \vref{v425}).  \mX\ \emph{Conditioned modular flows}
+(\veri{v724\_phys\_t3b\_modular\_flows.py}, $12/12$,
+\textsc{t3b-dead}): with target-free graph projectors, \emph{one}
+global KMS scale $\Delta=6\log(3/2)$ and the Connes cocycle
+composition exact to $1.6\times10^{-15}$ along J--K--C--F, the four
+conditioned flows come out \emph{loxodromic/complex} --- the frozen
+\vref{v578}/\vref{v632} solver classes (hyperbolic / parabolic /
+degenerate) do \emph{not} arise from conditioned modular flows of
+one internal mother state (the \textsc{needs-lindblad} escape is
+honestly refused).  \emph{Typed consequence:} the external clock
+contract is \emph{confirmed} and sharpens to the anchor census
+$\{$one unit $=\Lambda_{\mathrm{QCD}}$
+($v_{\mathrm{geo}}$-class by No-Unit \vref{v153}), one angle
+$\theta_i$, one lattice $O(1)$ $C_p\}$ --- T3's clock wall and T1's
+unit wall are \emph{the same wall}, counted once.  No marker moves;
+the functor typing above is unchanged.
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/ftransfer_dynamics.pdf}

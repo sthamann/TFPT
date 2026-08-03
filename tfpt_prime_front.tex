@@ -11688,9 +11688,9 @@ normalizer de-divisorize the traces at $4\times10^{-13}$, and the
 $\sigma$ descent matches $100$ positions, $100$ masses and $368$
 moments at deviation $0.00$.  The fence is typed: the finite
 counting facts of this slice are \emph{E8-unspecific}; the
-specificity question and the arch gluing (still a direct sum here)
-are stage 2 of the registered contract
-\texttt{PRIME.Z1.MOONSHOT.01}.  On the adjacent geometry gate, the
+specificity question and the arch gluing belonged to stage 2 of the
+registered contract \texttt{PRIME.Z1.MOONSHOT.01} --- executed the
+same day (Section~\ref{sec:moonshot-arc}).  On the adjacent geometry gate, the
 quasi-free CAR route makes the continuum limit quantitative
 (\veri{v715\_qgeo\_car\_continuum.py}, $22/22$,
 \texttt{QGEO-CAR-RATES-SUMMABLE}: all $6{+}1$ channels Schatten-norm
@@ -11699,6 +11699,124 @@ via Barnes~$G$ at $8.8\times10^{-7}$, the RP cone stable) --- the
 majorant lemma (L1)--(L3) is named with constants;
 \texttt{GATE.QGEO} does not move.  \texttt{PRIME.Z1.OPERATOR.01}
 stays formally \emph{open}: the continuum theorems are missing.
+
+\subsection{The moonshot arc: the Hilbert--P\'olya candidate,
+measured}\label{sec:moonshot-arc}
+
+The evening round of the same day executes the moonshot program
+end-to-end and turns ``candidate'' into a four-stage
+\emph{measurement} --- with the explicit fence, stated up front and
+repeated at the end: no theorem is claimed, no marker moves, and
+\textbf{no statement about the Riemann Hypothesis is made}.
+
+\emph{Stage 2, the gluing}
+(\veri{v716\_moonshot\_arch\_glue.py}, $18/18$,
+\texttt{MOONSHOT-STAGE2-GLUED}): the archimedean place of the
+\emph{same} $\mathbb{Z}[i]$-E8 commensurability groupoid delivers
+the arch tower of the Weil measure --- one object, \emph{one}
+normalization: the unified trace functional $T(t)=2\cosh(t/2)\,dt
+-\rho(t)\,dt-\sum\Lambda$-orbit atoms is built with \emph{no}
+per-sector scalar, and the free 3-scalar least-squares returns
+$\kappa=(1,1,1)$ to $<10^{-12}$ on all five windows.  Two
+normalizations stop being mysteries: the $1/4$ in
+$\mathrm{Re}\,\psi(1/4+i\tau/2)$ is \emph{derived} as the $\mu_4$
+fixed-sector offset of the $48$-site NS lift (modes $m\equiv1\bmod
+4$), and $\log\pi$ enters only through the \emph{declared} self-dual
+(Tate) UV cell --- the exact arch mirror of the declared $\sqrt{n}$
+half-density at the finite places.  E8 becomes forced \emph{at the
+gluing}: the $\mu_2$ tower (residual $0.326$), the wrong $\mu_4$
+class ($1.000$) and the wrong deck twists ($0.474$) all rip.
+
+\emph{Stage 3, the state}
+(\veri{v717\_moonshot\_state.py}, $21/21$,
+\texttt{STATE-ON-TRUNCATIONS}): on every truncation the Weil
+functional \emph{is} a state, constructively --- Levinson positive
+definiteness exhibits $T$ as the GNS/CMV vector state of the
+truncated translation flow (min headroom $0.76$), and the
+convolution binding identity $T(f*\tilde f)=2V^{\mathsf T}
+\mathrm{odd\_toeplitz}(c)V$ holds at $10^{-12}$ over the battery.
+The naive tower reading $\varphi_{\mathrm{pole}}+
+\varphi_{\mathrm{orb}}$ does \emph{not} give $T$: the difference
+$\Delta$ carries $|\Delta|/\mathrm{W3}$-margin $=104$--$1563$ ---
+the trace-formula boundary is exactly where the conspiracy sits,
+now \emph{localized and measured}.  The degree grading satisfies
+detailed balance at KMS $\beta=1$ (the Bost--Connes critical
+temperature; half-density exponent $-1/2$ sharp), with $s=1/2$ as
+the symmetric GNS splitting.  Both control labs calibrate: the
+Ihara/Petersen world is an exact state; Epstein $x^2+5y^2$ is not
+(Levinson breakdown at depth $49/62$).
+
+\emph{Stage 4, the spectrum}
+(\veri{v718\_moonshot\_spectral.py}, $10/10$,
+\texttt{SPECTRUM-CONVERGES-MEASURED}): the eigenvalues of the GNS
+truncations converge \emph{measurably} onto the zero sequence.  The
+diagnostics are hard-typed: the operator is zeta-free, and the node
+predictions of every window are SHA256-frozen \emph{before} the
+$379$ target zeros are loaded in the one declared function.  The
+largest window ($h=1433$) hits $100.0\%$ of $377$ zeros at
+tolerance $0.25$ ($97.1\%$ at $0.10$, $84.1\%$ at $0.05$); the
+$h$-ladder rate is $-1.61$ and the pure GNS $K$-ladder is monotone
+($0.4678\to0.0003$) --- the truncation eigenvalues move \emph{onto}
+the zeros; the unpartnered nodes are exactly the expected Gauss
+quadrature filling.  The scramble control (positions redrawn,
+masses kept) dies as a state (Levinson breakdown at depth $61$);
+GUE light, as an observation only: matched-node $\langle
+r\rangle=0.6178$ vs the zeros' $0.6189$.
+
+\emph{The Satz-1 slice, the trace formula}
+(\veri{v719\_moonshot\_traceformula.py}, $24/24$,
+\texttt{SATZ1-LEDGER-EXACT}): on every truncation the finite trace
+formula is \emph{exact} Gauss quadrature (max rel dev
+$1.7\times10^{-11}$), and the term dictionary to the classical Weil
+formula (1952) \emph{closes}: the pole block is
+$\int\tilde a\,2\cosh(u/2)\,du$ ($1.7\times10^{-13}$), the atom
+block is the classical prime term ($1.8\times10^{-15}$), the arch
+block is $-\int\rho\,\tilde a$ ($3.4\times10^{-16}$), the UV cell is
+the stage-2 regularization ($2.2\times10^{-16}$).  The stage-3
+difference term $\Delta$ is \emph{classical}: it converges to the
+$\Gamma'/\Gamma$ term plus the full prime term ($\sigma=1.000161$,
+$c=-10^{-4}$; the one-sided sum honestly has no limit --- UV drift
+exactly $\log(2)/2$ per $D$-halving).  As a bonus census: among the
+dimension-$8$ unimodular $\mathbb{Z}$-lattices --- classically
+$\{\mathbb{Z}^8, E_8\}$ (Mordell 1938, a declared classical input)
+--- \emph{only} the Gaussian E8 glues ($\kappa=1$, residual
+$8.5\times10^{-17}$).
+
+\emph{The K collapse and the capture lemma}
+(\veri{v720\_moonshot\_k2k3.py}, $14/14$,
+\texttt{K2K3-COLLAPSED-CLASSICAL};
+\veri{v721\_k1\_node\_capture.py}, $14/14$,
+\texttt{K1-LEMMA-CAPTURE-ONLY}): of the named convergence theorems,
+K3 collapses onto \emph{measured} tightness (compacta Cauchy; the
+normalization grows exactly like the smooth band density,
+$p_0=0.981\log(1/D)-1.306$ --- a sigma-finite limit in the vague
+topology) and K2 is \emph{classical analysis on $s>1/2$}
+(unconditional Chebyshev/PNT majorant with $c_{\mathrm{RS}}=1.03883$
+machine-verified in range; tail law $\mathrm{slope}=-(s-1/2)$
+exact; discretization $\sim CD^2$), with the boundary \emph{exactly}
+at $s=1/2$ (Mertens slope $1.9994$).  The node-capture half of K1
+is proof-near from classical quadrature theory (Markov--Stieltjes
+sandwich, symmetrized Christoffel bound, a closed capture
+condition, all machine-verified behind the same SHA256 typing) ---
+but the certified radii sit ${\sim}900\times$ above the measured
+node errors: the classical lemma carries the \emph{capture}, not
+the super-resolution; that precision is trace-formula content (the
+open K1b question).
+
+\emph{The end ledger, stated honestly.}  What now exists at
+\emph{measurement} level is structurally everything a
+Hilbert--P\'olya candidate needs: a zeta-free glued object, a state
+on every truncation, an exact finite trace formula with a closed
+dictionary to the Weil formula, and a measured spectral limit onto
+the zeros.  What does \emph{not} exist is any continuum theorem.
+The remaining hard substance, ordered by
+\texttt{PRIME.Z1.MOONSHOT.01}: (L1) identification of the vague
+limit \emph{at} the line $s=1/2$ --- no mass loss; the single place
+the zero fluctuation enters; (L2) node convergence as a theorem
+(capture is classical; the super-resolution is open); (L3) routine
+lemmas, exhibited with constants.  \texttt{PRIME.Z1.OPERATOR.01}
+and \texttt{PRIME.Z1.MOONSHOT.01} stay \emph{open}; positivity ---
+the Weil criterion --- is untouched; \textbf{no RH claim}.
 
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 

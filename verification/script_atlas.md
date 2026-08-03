@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`709` registered scripts · `787` ledger claims · `10` clusters.
+`720` registered scripts · `798` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (229 scripts)
+### `core` — Compiler core & the E₈ glue  (240 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -469,6 +469,28 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v713_l1_montage, v695_z1_trace_operator, PRIME.Z1.MOONSHOT.01, v563 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v715_qgeo_car_continuum** [E/X] `QGEO.CARLIMIT.01` — die quasifreie CAR-Route zum formalen Orbifold-Kontinuumslimes (GATE.QGEO), erste Scheibe — **QGEO-CAR-RATES-SUMMABLE: alle 6+1 Deck/Twist-Kanäle sind Schatten-Norm-Cauchy auf ε-se
   - deps: v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v699_cone_dynamics · cited: 3 e8 audit bootstrap, research contracts
+- **v716_moonshot_arch_glue** [E] `PRIME.MOONSHOT.02` — der gemeinsame Arch-Sektor-Test: liefert die archimedische Stelle DESSELBEN Z[i]-E8-Kommensurabilitäts-Gruppoids den Arch-Turm des Weil-Maßes? — **MOONSHOT-STAGE2-GLUED: ein Objekt
+  - deps: v714_moonshot_hecke_groupoid, PRIME.Z1.MOONSHOT.01, v705_chain_deck_sector, v695_z1_trace_operator, v563 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v717_moonshot_state** [E] `PRIME.MOONSHOT.03` — die Positivitäts-STRUKTUR des verklebten Objekts: ist das Weil-Funktional ein ZUSTAND auf der Gruppoid-Algebra? — **STATE-ON-TRUNCATIONS: auf jeder Trunkierung KONSTRUKTIV ein GNS-
+  - deps: v716_moonshot_arch_glue, v701_big_picture_hunt, v696_z1_jacobi, v668, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v718_moonshot_spectral** [-] `PRIME.MOONSHOT.04` — die Spektral-Identifikation: konvergieren die Eigenwerte der Trunkierungen des verklebten Objekts auf die ζ-Nullstellen? — **SPECTRUM-CONVERGES-MEASURED: h = 1433 trifft 100% der 3
+  - deps: v716_moonshot_arch_glue, v717_moonshot_state, v696_z1_jacobi, v668, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v719_moonshot_traceformula** [E] `PRIME.MOONSHOT.05` — die Spurformel des verklebten Objekts, Glied für Glied gegen die klassische Weil-Formel — **SATZ1-LEDGER-EXACT: die endliche Spurformel ist EXAKTE Gauß-Quadratur auf jeder Trunkier
+  - deps: v716_moonshot_arch_glue, v717_moonshot_state, v718_moonshot_spectral, v563 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v720_moonshot_k2k3** [E/C] `PRIME.MOONSHOT.06` — die zwei Konvergenz-Sätze der Ledger-Liste, gemessen und auf klassische Analysis kollabiert — **K2K3-COLLAPSED-CLASSICAL: K3 kollabiert auf gemessene Tightness (Kompakta Cauchy, Ba
+  - deps: v716_moonshot_arch_glue, v717_moonshot_state, v718_moonshot_spectral, v719_moonshot_traceformula, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v721_k1_node_capture** [E] `PRIME.K1CAPTURE.01` — das Knoten-Einfang-Lemma hinter der Etappe-4-Spektralmessung, aus klassischer Quadratur-Theorie gebaut und ehrlich adjudiziert — **K1-LEMMA-CAPTURE-ONLY: Markov-Stieltjes-Sandwich 
+  - deps: v718_moonshot_spectral, v696_z1_jacobi, PRIME.FALSIFIER.01, v668, v678 · cited: 3 e8 audit bootstrap, research contracts
+- **v722_phys_ramified_ns_r** [E/O/X] `GNET.RAMIFIED.01` — ist die Ramond-Projektion (1+i)-adisch? — **RAMIFIED-SEES-NSR: (1+i)L liegt im geraden/NS-Untergitter (Z-Basis-Beweis), die 240 Wurzeln fallen in 15 × 16 Klassen mit REINER Parität
+  - deps: v148_fock_census, v125_glue_qsystem, v689_gaussian_code_bridge, v714_moonshot_hecke_groupoid · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v723_phys_modular_clock** [E/X] `FTRANSFER.STT.01` — kann Thermal-Time den externen Uhren-Vertrag ersetzen? Der Konjugationsklassen-KILL-Test — **STT-KILLED + INTERNAL-PAIR-CONFIRMED: die F_QCD-1-Loop-Uhr ist PARABOLISCH und nicht di
+  - deps: v371_ftransfer_pole, v339_firstprinciples_boundary, v153_no_unit_theorem, v425, v153, v632 · cited: 2 standard model, 3 e8 audit bootstrap, 4 frontier, research contracts
+- **v724_phys_t3b_modular_flows** [E/X] `FTRANSFER.COCYCLE.01` — konditionierte Modularflüsse aus EINEM internen Mutterzustand, der zweite Thermal-Time-KILL — **T3B-DEAD: mit target-freien Graph-Projektoren, EINEM globalen KMS-Maßstab Δ = 6·log(
+  - deps: v723_phys_modular_clock, v339_firstprinciples_boundary, v258, v578, v632 · cited: 2 standard model, 3 e8 audit bootstrap, 4 frontier, research contracts
+- **v725_phys_vgeo_torsor_audit** [E/C] `VGEO.TORSOR.01` — der Kalibrations-/Skalen-Torsor-Audit der v_geo-Schnittstelle — **TORSOR-SCHLIESSUNG: die v_geo-Schnittstelle ist als R₊-Skalen-Torsor STRUKTURELL GESCHLOSSEN — (1) vollständige Ex
+  - deps: v78_vgeo_floor, v153_no_unit_theorem, v364_vgeo_sharpen, v274_scale_overdetermination, v401_metrology_closure, v339_firstprinciples_boundary · cited: 2 standard model, 3 e8 audit bootstrap, 4 frontier, research contracts
+- **v726_phys_car_pp_index** [E/O] `GNET.PPINDEX.01` — Pimsner-Popa/Watatani-Index 4 auf der CAR-Leiter, mit HERGELEITETER μ₄-Wirkung und Ramond-Nullmoden-Test — **T2-SLICE-GO: die optimale PP-Konstante ist EXAKT ¼ (expliziter Rang-1-M
+  - deps: v125_glue_qsystem, v148_fock_census, v722_phys_ramified_ns_r, v679 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1483,22 +1505,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×80, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×85, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v704_chain_mass_law** — `PRIME.CHAINMASS.01`
-- **v705_chain_deck_sector** — `QGEO.DECKSECTOR.01`
-- **v706_chain_weyl_mass** — `PRIME.WEYLMASS.01`
-- **v707_chain_section_edge** — `PRIME.SECTIONEDGE.01`
-- **v708_chain_position_functional** — `PRIME.POSFUNC.01`
-- **v709_chain_zero_layer** — `PRIME.ZEROLAYER.01`
-- **v710_chain_two_stage_hecke** — `PRIME.TWOSTAGE.01`
-- **v711_chain_firstbirth_scaling** — `PRIME.FIRSTBIRTH.01`
-- **v712_rank3_transverse_deck** — `PRIME.RANK3TRANSV.01`
-- **v713_l1_montage** — `PRIME.L1MONTAGE.01`
-- **v714_moonshot_hecke_groupoid** — `PRIME.MOONSHOT.01`
 - **v715_qgeo_car_continuum** — `QGEO.CARLIMIT.01`
+- **v716_moonshot_arch_glue** — `PRIME.MOONSHOT.02`
+- **v717_moonshot_state** — `PRIME.MOONSHOT.03`
+- **v718_moonshot_spectral** — `PRIME.MOONSHOT.04`
+- **v719_moonshot_traceformula** — `PRIME.MOONSHOT.05`
+- **v720_moonshot_k2k3** — `PRIME.MOONSHOT.06`
+- **v721_k1_node_capture** — `PRIME.K1CAPTURE.01`
+- **v722_phys_ramified_ns_r** — `GNET.RAMIFIED.01`
+- **v723_phys_modular_clock** — `FTRANSFER.STT.01`
+- **v724_phys_t3b_modular_flows** — `FTRANSFER.COCYCLE.01`
+- **v725_phys_vgeo_torsor_audit** — `VGEO.TORSOR.01`
+- **v726_phys_car_pp_index** — `GNET.PPINDEX.01`
 

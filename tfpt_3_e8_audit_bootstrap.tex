@@ -4712,7 +4712,14 @@ fixpoint numerology dead (PSLQ empty).  No zeros read.  No marker
 move, no RH claim.
 Machine-checked: \veri{v701\_big\_picture\_hunt.py}.
 \mE\ (keystone, triplication) $+$ (\mE, \textsc{kill}) (V5
-numerology)
+numerology).
+\emph{Lean round 5:} the finite algebraic kernel of the sine-Gram
+lemma (S1.1) is formally verified
+(\texttt{SineGramKeystone.lean}, kernel-checked, no sorry): the
+product-to-sum identity over an arbitrary commutative ring, the
+half-integer sine-moment form as an exact Gram matrix (PSD for
+nonnegative weights), with explicit Pythagorean certificates; the
+FFT limit and the deployed wiring stay numeric.
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The lookahead decision
@@ -4891,7 +4898,9 @@ $6.2\times10^{-8}$, point masses at the $D^2$ rate, one UV slot.
 \emph{The boundary}: divergence exactly at $s\le1/2$ --- the
 critical line as the boundary of the construction, a consistency
 signature, \emph{not} positivity.  The missing theorems
-(self-adjointness, trace identification, positivity) are named.
+(self-adjointness, trace identification, positivity) are named ---
+the trace/state/spectrum side has since been \emph{measured}
+(v717--v719 below); the continuum S\"atze stay open.
 \texttt{PRIME.Z1.OPERATOR.01} stays \emph{open}.  AST zero-firewall.
 No marker move, no RH claim.
 Machine-checked: \veri{v713\_l1\_montage.py}.
@@ -4910,11 +4919,13 @@ the $\sigma$ descent matches $100$ positions, $100$ masses, $368$
 moments at $0.00$.  \emph{Declared ingredients}: $\sqrt n$
 half-density, $\sigma$ descent.  \emph{The fence (typed)}: the
 finite counting facts are \emph{E8-unspecific} --- specificity and
-the arch gluing are stage 2 (\texttt{PRIME.Z1.MOONSHOT.01}).  No
+the arch gluing were stage 2 (\texttt{PRIME.Z1.MOONSHOT.01}),
+executed the same day (v716--v721 below).  No
 marker move, no RH claim.
 Machine-checked: \veri{v714\_moonshot\_hecke\_groupoid.py}.
-\mE\ (tower facts, descent) $+$ \mO\ (stage 2: gluing, specificity,
-ingredient derivation)
+\mE\ (tower facts, descent) $+$ \mE/\textsc{measured} (stage 2 glue,
+v716) $+$ \mO\ (specificity census as a theorem, ingredient
+derivation, continuum S\"atze)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The CAR continuum route
@@ -4933,6 +4944,211 @@ move.
 Machine-checked: \veri{v715\_qgeo\_car\_continuum.py}.
 (\textsc{measured}) (summable rates, stable RP cone) $+$ \mE\
 (lattice-derived renormalization) $+$ \mO\ (majorant lemma)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The moonshot, stage 2: the arch glues
+(\texttt{PRIME.MOONSHOT.02}).}
+Does the archimedean place of the \emph{same} groupoid deliver the
+arch tower? ($18$ checks, ${\sim}3$\,s; verdict
+\textsc{moonshot-stage2-glued}).  One object, \emph{one}
+normalization: the free 3-scalar LSQ returns $\kappa=(1,1,1)$ to
+$<10^{-12}$ on all five windows.  \emph{Derived}: the $1/4$ in
+$\mathrm{Re}\,\psi(1/4+i\tau/2)$ is the $\mu_4$ fixed-sector offset
+(exact trace identity, $1.4\times10^{-10}$); $\log\pi$ enters only
+through the declared self-dual UV cell ($2.2\times10^{-16}$).  Lift
+ladder $s^*\to1$ at ${\sim}N^{-2}$ ($|s^*_\infty-1|=2.4\times
+10^{-7}$).  \emph{Must-fails}: $\mu_2$ tower $0.326$, wrong $\mu_4$
+class $1.000$, wrong deck twists $0.474$ --- E8 forced \emph{at the
+gluing}.  Missing theorems named.  No marker move, no RH claim.
+Machine-checked: \veri{v716\_moonshot\_arch\_glue.py}.
+\mE\ (identities, gluing) $+$ (\textsc{measured}) (ladder rate) $+$
+\mO\ (groupoid trace formula, product formula, uniqueness theorem)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The moonshot, stage 3: the state
+(\texttt{PRIME.MOONSHOT.03}).}
+Is the Weil functional a state on the groupoid algebra? ($21$
+checks, ${\sim}3$\,s; verdict \textsc{state-on-truncations}).
+\emph{Constructive}: Levinson PD on every truncation exhibits $T$ as
+the GNS/CMV vector state (min headroom $0.76$); binding identity at
+$10^{-12}$.  \emph{The localized RH substance}: the naive tower
+reading misses by $|\Delta|/\mathrm{W3}$-margin $=104$--$1563$.
+\emph{KMS}: detailed balance at $\beta=1$ (Bost--Connes critical;
+half-density exponent $-1/2$ sharp).  \emph{Controls}: Ihara an
+exact state; Epstein breaks (Levinson depth $49/62$).  No marker
+move, no RH claim.
+Machine-checked: \veri{v717\_moonshot\_state.py}.
+\mE\ (state exhibition, identities) $+$ (\textsc{measured})
+($\Delta$, KMS) $+$ \mO\ (uniform symbol positivity $=$ RH level)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The moonshot, stage 4: the spectrum
+(\texttt{PRIME.MOONSHOT.04}).}
+Do the truncation eigenvalues converge to the zeros? ($10$ checks,
+${\sim}33$\,s; verdict \textsc{spectrum-converges-measured}).
+Predictions SHA256-frozen \emph{before} the declared target load;
+the operator stays zeta-free.  $h=1433$: $100.0\%$ of $377$ zeros at
+tol $0.25$ ($97.1\%$ at $0.10$, $84.1\%$ at $0.05$); rate $-1.61$;
+GNS $K$-ladder monotone $0.4678\to0.0003$.  \emph{Controls}: Ihara
+exact at finite $K$; scramble dies as a state (depth $61$); GUE
+light $\langle r\rangle=0.6178$ vs $0.6189$ (observation only).  A
+measurement, not a theorem.  No marker move, no RH claim.
+Machine-checked: \veri{v718\_moonshot\_spectral.py}.
+(\textsc{measured}) (spectral convergence, firewalled) $+$ \mE\
+(control identities)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The moonshot, Satz-1 slice: the trace
+formula (\texttt{PRIME.MOONSHOT.05}).}
+The trace formula of the glued object, term by term against Weil
+1952 ($24$ checks, ${\sim}130$\,s; verdict
+\textsc{satz1-ledger-exact}).  The finite trace formula is exact
+Gauss quadrature ($1.7\times10^{-11}$); the term dictionary
+\emph{closes}: pole $=\int\tilde a\,2\cosh(u/2)$
+($1.7\times10^{-13}$), atoms $=$ the classical prime term
+($1.8\times10^{-15}$), arch $=-\int\rho\,\tilde a$
+($3.4\times10^{-16}$).  $\Delta\to\Gamma'/\Gamma$ term $+$ prime
+term classically ($\sigma=1.000161$, $c=-10^{-4}$; the one-sided sum
+honestly has no limit).  \emph{Census}: of $\{\mathbb{Z}^8,E_8\}$
+(Mordell 1938) only the Gaussian E8 glues ($8.5\times10^{-17}$).
+The new content sits exclusively in the convergence statements.  No
+marker move, no RH claim.
+Machine-checked: \veri{v719\_moonshot\_traceformula.py}.
+\mE\ (finite trace formula, dictionary, census) $+$
+(\textsc{measured}) ($\Delta$ rates) $+$ \mO\ (convergence S\"atze)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The moonshot, K2+K3 slice
+(\texttt{PRIME.MOONSHOT.06}).}
+The two convergence theorems, measured and collapsed ($14$ checks,
+${\sim}3$\,s; verdict \textsc{k2k3-collapsed-classical}).  K3
+$\to$ measured tightness (compacta Cauchy; band edge under the
+smooth $\omega$ density; $p_0=0.981\log(1/D)-1.306$: sigma-finite,
+vague topology).  K2 $\to$ classical analysis on $s>1/2$
+(unconditional majorant, $c_{\mathrm{RS}}=1.03883$ verified in
+range; slowdown law $\mathrm{slope}=-(s-1/2)$ exact; discretization
+$\sim CD^2$).  The boundary \emph{exactly} $s=1/2$ (Mertens slope
+$1.9994$).  Remaining hard substance: (L1) line identification $+$
+(L2) K1 node convergence.  No marker move, no RH claim.
+Machine-checked: \veri{v720\_moonshot\_k2k3.py}.
+(\textsc{measured}) (tightness) $+$ \mE\ (majorant, slowdown law) $+$
+\mO\ (L1/L2)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The K1 capture lemma
+(\texttt{PRIME.K1CAPTURE.01}).}
+The node-capture lemma behind stage 4, honestly adjudicated ($14$
+checks, ${\sim}33$\,s; verdict \textsc{k1-lemma-capture-only}).
+Markov--Stieltjes sandwich ($0$ violations), \emph{symmetrized}
+Christoffel bound everywhere (run-1 honesty: unsymmetrized
+$w/\lambda=1.9993$, fixed to the theorem), closed capture condition
+with certified radii; every synthetic peak (incl.\ a merged pair)
+captures; SHA256-frozen zeta-free.  \emph{The adjudication}: the
+certified radii sit ${\sim}900\times$ above the measured errors ---
+the lemma carries the \emph{capture}, not the super-resolution; the
+precision is trace-formula content (K1b, exploration).  Off-line
+honesty: the lemma presupposes $\mu\ge0$ --- capture lemma and v688
+falsifier are two sides of the same positivity premise.  No marker
+move, no RH claim.
+Machine-checked: \veri{v721\_k1\_node\_capture.py}.
+\mE\ (capture chain) $+$ (\textsc{measured}) (adjudication) $+$ \mO\
+(super-resolution)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The ramified place sees NS/R
+(\texttt{GNET.RAMIFIED.01}).}
+Is the Ramond projection $(1{+}i)$-adic? ($9$ checks, ${\sim}1$\,s;
+verdict \textsc{ramified-sees-nsr}).  On the explicit
+even-coordinate E8 with integral $J$: $(1{+}i)L$ lies in the even/NS
+sublattice (proved on a $\Z$-basis); the $240$ roots fall into
+$15\times16$ classes of \emph{pure} parity ($7$ NS $+$ $8$ R);
+parity is a homomorphism $\mathbb F_2^4\to\mathbb F_2$ --- the NS/R
+grading \emph{is} the parity character of $E_8(\Z[i])/(1{+}i)$.
+\emph{Controls fire}: $\Z[i]^4$ census not $15\times16$; scrambled
+labels break purity.  First exact witness for the groupoid reading
+of $G_{\mathrm{net}}$; gate typing unchanged.
+Machine-checked: \veri{v722\_phys\_ramified\_ns\_r.py}.
+\mE\ (integer-exact slice, controls) $+$ \mO\ (Q-system
+identification)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Strong thermal time is dead
+(\texttt{FTRANSFER.STT.01}).}
+Can thermal time replace the external clock contract? ($11$ checks,
+${\sim}1$\,s; verdict \textsc{stt-killed} $+$
+\textsc{internal-pair-confirmed}).  \emph{The kill}: the F\_QCD
+$1$-loop clock map is \emph{parabolic} and not diagonalizable
+(single Jordan block); the symbolic lemma ``$\exp$ of a
+real-diagonalizable matrix is diagonalizable'' closes the door.
+\emph{The confirmation}: the pole multiplier is exactly
+$(2/3)^6=64/729$ (hyperbolic $\Rightarrow$ internal; Boltzmann the
+same element per v425).  \emph{Typed consequence}: the external
+clock contract confirmed, sharpened to $\{$one unit, $\theta_i$,
+$C_p\}$ --- T3's clock wall $=$ T1's unit wall, counted once.  No
+marker move.
+Machine-checked: \veri{v723\_phys\_modular\_clock.py}.
+\mE\ (symbolic lemma, multiplier) $+$ \mX\ (STT kill)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Conditioned modular flows are dead
+(\texttt{FTRANSFER.COCYCLE.01}).}
+The second thermal-time kill ($12$ mechanical checks, ${\sim}1$\,s;
+verdict \textsc{t3b-dead}).  Target-free graph projectors, \emph{one}
+global KMS scale $\Delta=6\log(3/2)$, Connes cocycle composition
+exact ($1.6\times10^{-15}$) --- and all four conditioned flows come
+out \emph{loxodromic/complex}: the frozen v578/v632 solver classes
+do \emph{not} arise; the \textsc{needs-lindblad} escape honestly
+refused (GKSL variant also all-loxodromic).  With v723 both
+thermal-time routes are closed: the external clock contract stands.
+No marker move.
+Machine-checked: \veri{v724\_phys\_t3b\_modular\_flows.py}.
+\mE\ (cocycle composition, one KMS scale) $+$ \mX\ (class-gate kill)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The $v_{\mathrm{geo}}$ torsor closure
+(\texttt{VGEO.TORSOR.01}).}
+The calibration/scale-torsor audit of the $v_{\mathrm{geo}}$
+interface ($21$ checks, ${\sim}1$\,s; verdict \textsc{torsor closure
+pass}).  The interface is a well-defined $\mathbb R_+$ scale torsor:
+complete export table $O_i=r_i\,v_{\mathrm{geo}}^{d_i}$; dimension
+matrix rank $1$ (conditional [A] on the flavor block, named); all
+consistency conditions $\lambda$-homogeneous (the machine form of
+No-Unit); leave-one-anchor-out compatible ($G$ vs $\rho_\Lambda$:
+$0.11\%$); calibration theorem stated.  \emph{Fence}: structure
+closure, \emph{no} scale derivation (impossible per No-Unit).
+Moonshot \emph{named}, not executed:
+$H_{\mathrm{EW}}=\ln(\Mbar/v_{\mathrm{EW}})=37.1776$.  Typing
+unchanged.
+Machine-checked: \veri{v725\_phys\_vgeo\_torsor\_audit.py}.
+\mE\ (torsor structure, homogeneity, cross-calibration) $+$ \mO\
+(the unit itself, per No-Unit)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Pimsner--Popa / Watatani index 4 on
+the CAR ladder (\texttt{GNET.PPINDEX.01}).}
+The T2 main slice ($57$ checks, ${\sim}7$\,s; verdict
+\textsc{t2-slice-go}).  $\mu_4$ \emph{derived} from the clock
+$L=S^{N/12}$ (order $4$ forced by the NS spin structure, not
+inserted).  Optimal Pimsner--Popa constant \emph{exactly} $1/4$
+(explicit rank-one minimizer $+$ pinching; the homogeneous-element
+subtlety documented); Watatani index \emph{exactly} $4$ via an
+explicit quasi-basis with \emph{forced} weights (uniform weights
+break scalarness; $\Z_2$-only average gives index $2$).
+\emph{Ramond}: undressed degenerates (index $2$); the Klein
+zero-mode dressing restores index $4$ \emph{state-preservingly}
+($[\rho,U']=0$ exactly).  The $(1{+}i)$ dictionary closes with
+v722.  Outerness witnesses typed as witnesses.  Gate typing
+unchanged.
+Machine-checked: \veri{v726\_phys\_car\_pp\_index.py}.
+\mE\ (index results, derivation, healing) $+$ (\textsc{measured})
+(outerness witnesses) $+$ \mO\ (Q-system identification).
+\emph{Lean round 5:} the exact algebraic index-4 core is formally
+verified (\texttt{WatataniIndexFour.lean}, kernel-checked, no
+sorry): the clock-order shadow ($S^{12}=-1 \Rightarrow H^4=1$), the
+explicit quasi-basis with $\sum v v^* = 4\cdot 1$ exactly
+$= N(1{+}i)^2$, the sharp Pimsner--Popa constant $\lambda^*=1/4$
+(SOS certificate), and the $\mu_2$/three-sector controls; the
+CAR/Fock layer and the Ramond dressing stay numeric.
 \par\smallskip
 
 % =====================================================================

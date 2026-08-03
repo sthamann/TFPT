@@ -28,7 +28,7 @@ export function ProofOffensivesTeaser() {
               New · August 3 · the Prime Front
             </span>
             <span className="font-mono text-[10px] text-slate-500">
-              v682–v700 · 19 modules in one day
+              v682–v726 · 45 modules in one day
             </span>
           </div>
 
@@ -41,11 +41,12 @@ export function ProofOffensivesTeaser() {
 
           <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-400">
             The Hecke-SOS blueprint with its one named gap (Z1), the T-B
-            closure map (60 of 70 windows closed
-            unconditionally-modulo-citations), and two sandbox explorations —
-            the positivity corridor of the primes and the deck-sector split of
-            the arch density. Promoted results and exploration clearly
-            badged; no RH claim.
+            closure map (now 69 of 70 windows closed
+            unconditionally-modulo-citations), two sandbox explorations — the
+            positivity corridor and the deck-sector split — and, by evening,
+            the moonshot arc measured end to end (glue, state, spectrum,
+            trace formula; v716–v721). Promoted results and exploration
+            clearly badged; no RH claim.
           </p>
 
           <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-300 transition-colors group-hover:text-sky-200">

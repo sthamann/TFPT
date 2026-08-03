@@ -95,7 +95,7 @@ problems**, not a diffuse list:
 
 | Interface | Question | Status |
 |---|---|---|
-| `v_geo` | the one metrology unit (`= 1/√G`); No-Unit Thm: a scale-invariant seam has no compiler scale | primitive `[O]` |
+| `v_geo` | the one metrology unit (`= 1/√G`); No-Unit Thm: a scale-invariant seam has no compiler scale; interface structurally closed as an R+ scale torsor in calibration form (v725) | primitive `[O]` |
 | `SEAM.EQUIV.01` | the raw seam *is* the holomorphic `(E8)₁` net (parent target; closed if either route closes) | `[O]` as an unconditional claim |
 | `SEAM.EQUIV.MMST.01` | the MMST route: lattice + S3 stack + Lean, scaling limit cited | `[C]` — closed modulo cited theorems |
 | `SEAM.EQUIV.TWISTOR.01` | the twistor route: the open Costello–Li construction (prepared by `CELEST.SEAM.01`) | `[O]` |
@@ -153,7 +153,7 @@ just an archive.
 ├── README.md              # you are here
 ├── docs/                  # THEORY · CLAIMS · OPEN_PROBLEMS · FALSIFICATION
 │                          # VERIFICATION · FOR_PHYSICISTS · FOR_MATHEMATICIANS
-├── verification/          # 709 machine-checked modules, run_all.py, the status ledger,
+├── verification/          # 720 machine-checked modules, run_all.py, the status ledger,
 │                          # the Wolfram second path, the red-team layer
 ├── experiments/           # research explorations + the Lean 4 proofs (not claims until promoted)
 ├── website/               # the public mirror (fixpoint-theory.com), kept byte-identical by the audit

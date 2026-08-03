@@ -43,6 +43,1651 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-03",
+    "dateLabel": "2026-08-03 · LIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the evening bundling: ELEVEN promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v716"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v726"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "211"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green) — THE MOONSHOT ARC COMPLETES AT MEASUREMENT LEVEL (“the Hilbert–Pólya candidate, measured” — with the explicit no-proof fence), and the three physics interfaces move: the "
+      },
+      {
+        "k": "m",
+        "v": "v_{\\mathrm{geo}}"
+      },
+      {
+        "k": "t",
+        "v": " torsor closes in calibration form, "
+      },
+      {
+        "k": "m",
+        "v": "G_{\\mathrm{net}}"
+      },
+      {
+        "k": "t",
+        "v": " gets its first exact witnesses, and both thermal-time routes for "
+      },
+      {
+        "k": "m",
+        "v": "F_{\\mathrm{transfer}}"
+      },
+      {
+        "k": "t",
+        "v": " die. THE MOONSHOT ("
+      },
+      {
+        "k": "c",
+        "v": "v716"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v721"
+      },
+      {
+        "k": "t",
+        "v": "): stage 2 GLUES ("
+      },
+      {
+        "k": "c",
+        "v": "v716"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "18/18"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "moonshot-stage2-glued"
+      },
+      {
+        "k": "t",
+        "v": ": one object, ONE normalization — the free 3-scalar LSQ returns "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa=(1,1,1)"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "<10^{-12}"
+      },
+      {
+        "k": "t",
+        "v": " on all five windows; the "
+      },
+      {
+        "k": "m",
+        "v": "1/4"
+      },
+      {
+        "k": "t",
+        "v": " in "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Re}\\,\\psi(1/4+i\\tau/2)"
+      },
+      {
+        "k": "t",
+        "v": " DERIVED as the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " fixed-sector offset; "
+      },
+      {
+        "k": "m",
+        "v": "\\log\\pi"
+      },
+      {
+        "k": "t",
+        "v": " only through the declared self-dual UV cell; E8 forced AT THE GLUING — "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_2"
+      },
+      {
+        "k": "t",
+        "v": " tower "
+      },
+      {
+        "k": "m",
+        "v": "0.326"
+      },
+      {
+        "k": "t",
+        "v": " / wrong "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " class "
+      },
+      {
+        "k": "m",
+        "v": "1.000"
+      },
+      {
+        "k": "t",
+        "v": " / wrong twists "
+      },
+      {
+        "k": "m",
+        "v": "0.474"
+      },
+      {
+        "k": "t",
+        "v": " all rip); stage 3 is a STATE ("
+      },
+      {
+        "k": "c",
+        "v": "v717"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "21/21"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "state-on-truncations"
+      },
+      {
+        "k": "t",
+        "v": ": constructive GNS vector state on every truncation via Levinson PD; the naive tower reading misses by "
+      },
+      {
+        "k": "m",
+        "v": "|\\Delta|/\\mathrm{W3}"
+      },
+      {
+        "k": "t",
+        "v": "-margin "
+      },
+      {
+        "k": "m",
+        "v": "=104"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "1563"
+      },
+      {
+        "k": "t",
+        "v": " — the trace-formula boundary IS the localized RH substance; KMS "
+      },
+      {
+        "k": "m",
+        "v": "\\beta=1"
+      },
+      {
+        "k": "t",
+        "v": " detailed balance measured; Ihara an exact state, Epstein breaks); stage 4 CONVERGES MEASURED ("
+      },
+      {
+        "k": "c",
+        "v": "v718"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "100\\%"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "377"
+      },
+      {
+        "k": "t",
+        "v": " frozen zero targets at tol "
+      },
+      {
+        "k": "m",
+        "v": "0.25"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "h=1433"
+      },
+      {
+        "k": "t",
+        "v": ", rate "
+      },
+      {
+        "k": "m",
+        "v": "-1.61"
+      },
+      {
+        "k": "t",
+        "v": ", monotone GNS "
+      },
+      {
+        "k": "m",
+        "v": "K"
+      },
+      {
+        "k": "t",
+        "v": "-ladder "
+      },
+      {
+        "k": "m",
+        "v": "0.4678\\to0.0003"
+      },
+      {
+        "k": "t",
+        "v": ", SHA256 prediction firewall, GUE light "
+      },
+      {
+        "k": "m",
+        "v": "\\langle r\\rangle=0.6178"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "0.6189"
+      },
+      {
+        "k": "t",
+        "v": ", scramble dies as a state at depth "
+      },
+      {
+        "k": "m",
+        "v": "61"
+      },
+      {
+        "k": "t",
+        "v": "); the Satz-1 slice is EXACT ("
+      },
+      {
+        "k": "c",
+        "v": "v719"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "24/24"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "satz1-ledger-exact"
+      },
+      {
+        "k": "t",
+        "v": ": the finite trace formula is exact Gauss quadrature at "
+      },
+      {
+        "k": "m",
+        "v": "1.7\\times10^{-11}"
+      },
+      {
+        "k": "t",
+        "v": " and the term dictionary to the classical Weil formula CLOSES — pole "
+      },
+      {
+        "k": "m",
+        "v": "1.7\\times10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": " / atoms "
+      },
+      {
+        "k": "m",
+        "v": "1.8\\times10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": " / arch "
+      },
+      {
+        "k": "m",
+        "v": "3.4\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta\\to\\Gamma'/\\Gamma"
+      },
+      {
+        "k": "t",
+        "v": " term "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " prime term classically, "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma=1.000161"
+      },
+      {
+        "k": "t",
+        "v": "; E8 census over "
+      },
+      {
+        "k": "m",
+        "v": "\\{\\mathbb{Z}^8,E8\\}"
+      },
+      {
+        "k": "t",
+        "v": " (Mordell 1938): ONLY the Gaussian E8 glues); the K collapse ("
+      },
+      {
+        "k": "c",
+        "v": "v720"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "k2k3-collapsed-classical"
+      },
+      {
+        "k": "t",
+        "v": ": K3 "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " measured tightness (sigma-finite, vague topology forced), K2 "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " classical analysis on "
+      },
+      {
+        "k": "m",
+        "v": "s>1/2"
+      },
+      {
+        "k": "t",
+        "v": " (unconditional Chebyshev majorant, exact slowdown law), the boundary EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "s=1/2"
+      },
+      {
+        "k": "t",
+        "v": " — Mertens slope "
+      },
+      {
+        "k": "m",
+        "v": "1.9994"
+      },
+      {
+        "k": "t",
+        "v": "); and the K1 capture lemma ("
+      },
+      {
+        "k": "c",
+        "v": "v721"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "k1-lemma-capture-only"
+      },
+      {
+        "k": "t",
+        "v": ": capture proof-near from Markov–Stieltjes "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " symmetrized Christoffel "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " a closed capture condition; the certified radii sit "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}900\\times"
+      },
+      {
+        "k": "t",
+        "v": " above the measured errors — the super-resolution is trace-formula content, the open K1b question). NET: everything a Hilbert–Pólya candidate needs exists at MEASUREMENT level; the remaining hard substance is (L1) identification at the line "
+      },
+      {
+        "k": "m",
+        "v": "s=1/2"
+      },
+      {
+        "k": "t",
+        "v": " (no mass loss) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " (L2) node convergence as a theorem; the contracts stay OPEN; NO RH claim. THE PHYSICS INTERFACES: "
+      },
+      {
+        "k": "m",
+        "v": "G_{\\mathrm{net}}"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "c",
+        "v": "v722"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "ramified-sees-nsr"
+      },
+      {
+        "k": "t",
+        "v": ": the NS/R grading IS the parity character of "
+      },
+      {
+        "k": "m",
+        "v": "E8(\\mathbb{Z}[i])/(1{+}i)=\\mathbb{F}_2^4"
+      },
+      {
+        "k": "t",
+        "v": " — the Ramond projection is "
+      },
+      {
+        "k": "m",
+        "v": "(1{+}i)"
+      },
+      {
+        "k": "t",
+        "v": "-ADIC at the one ramified edge of the Hecke tower; "
+      },
+      {
+        "k": "m",
+        "v": "15\\times16"
+      },
+      {
+        "k": "t",
+        "v": " classes parity-PURE, both controls fire; and "
+      },
+      {
+        "k": "c",
+        "v": "v726"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "57/57"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "t2-slice-go"
+      },
+      {
+        "k": "t",
+        "v": ": optimal Pimsner–Popa constant EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "1/4"
+      },
+      {
+        "k": "t",
+        "v": " and Watatani index EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " on the CAR ladder via an explicit quasi-basis with FORCED weights, "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " DERIVED from the clock, the Ramond sector healed STATE-PRESERVINGLY by the Klein dressing — "
+      },
+      {
+        "k": "c",
+        "v": "GNET.RAMIFIED.01"
+      },
+      {
+        "k": "t",
+        "v": " registered with kills; "
+      },
+      {
+        "k": "c",
+        "v": "GATE.METRIC.08/10"
+      },
+      {
+        "k": "t",
+        "v": " typing unchanged); "
+      },
+      {
+        "k": "m",
+        "v": "F_{\\mathrm{transfer}}"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "c",
+        "v": "v723"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "stt-killed"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "t",
+        "v": "internal-pair-confirmed"
+      },
+      {
+        "k": "t",
+        "v": ": the QCD "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": "-loop clock is PARABOLIC and not diagonalizable — no constant-rescaled modular flow reaches it; the pole multiplier exactly "
+      },
+      {
+        "k": "m",
+        "v": "(2/3)^6"
+      },
+      {
+        "k": "t",
+        "v": "; and "
+      },
+      {
+        "k": "c",
+        "v": "v724"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "t3b-dead"
+      },
+      {
+        "k": "t",
+        "v": ": conditioned modular flows of one internal mother state come out loxodromic/complex, the frozen solver classes do NOT arise — BOTH thermal-time routes closed, the external clock contract CONFIRMED and sharpened to "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "one unit, "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_i"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "C_p\\}"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "m",
+        "v": "v_{\\mathrm{geo}}"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "c",
+        "v": "v725"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "21/21"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "torsor closure pass"
+      },
+      {
+        "k": "t",
+        "v": ": the interface is structurally CLOSED as an "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{R}_+"
+      },
+      {
+        "k": "t",
+        "v": " scale torsor — complete export table, dimension-matrix rank "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": ", all conditions "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": "-homogeneous, two-anchor consistency "
+      },
+      {
+        "k": "m",
+        "v": "0.11\\%"
+      },
+      {
+        "k": "t",
+        "v": ", the calibration theorem stated; FENCE: no scale derivation (No-Unit); the one remaining dimensionless ratio NAMED: "
+      },
+      {
+        "k": "m",
+        "v": "H_{\\mathrm{EW}}=\\ln(\\bar M_{\\mathrm{Pl}}/v_{\\mathrm{EW}})=37.1776"
+      },
+      {
+        "k": "t",
+        "v": "). PLUS LEAN ROUND 5: "
+      },
+      {
+        "k": "c",
+        "v": "SineGramKeystone.lean"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "WatataniIndexFour.lean"
+      },
+      {
+        "k": "t",
+        "v": " committed ("
+      },
+      {
+        "k": "c",
+        "v": "lake build"
+      },
+      {
+        "k": "t",
+        "v": " green, "
+      },
+      {
+        "k": "m",
+        "v": "3387"
+      },
+      {
+        "k": "t",
+        "v": " jobs, kernel-checked, no sorry/native_decide) — the v701 sine-Gram keystone kernel and the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " index-4 certificate in exact arithmetic"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (11)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v716_moonshot_arch_glue.py"
+        },
+        {
+          "k": "t",
+          "v": " (18), "
+        },
+        {
+          "k": "c",
+          "v": "v717_moonshot_state.py"
+        },
+        {
+          "k": "t",
+          "v": " (21), "
+        },
+        {
+          "k": "c",
+          "v": "v718_moonshot_spectral.py"
+        },
+        {
+          "k": "t",
+          "v": " (10), "
+        },
+        {
+          "k": "c",
+          "v": "v719_moonshot_traceformula.py"
+        },
+        {
+          "k": "t",
+          "v": " (24), "
+        },
+        {
+          "k": "c",
+          "v": "v720_moonshot_k2k3.py"
+        },
+        {
+          "k": "t",
+          "v": " (14), "
+        },
+        {
+          "k": "c",
+          "v": "v721_k1_node_capture.py"
+        },
+        {
+          "k": "t",
+          "v": " (14), "
+        },
+        {
+          "k": "c",
+          "v": "v722_phys_ramified_ns_r.py"
+        },
+        {
+          "k": "t",
+          "v": " (9), "
+        },
+        {
+          "k": "c",
+          "v": "v723_phys_modular_clock.py"
+        },
+        {
+          "k": "t",
+          "v": " (11), "
+        },
+        {
+          "k": "c",
+          "v": "v724_phys_t3b_modular_flows.py"
+        },
+        {
+          "k": "t",
+          "v": " (12), "
+        },
+        {
+          "k": "c",
+          "v": "v725_phys_vgeo_torsor_audit.py"
+        },
+        {
+          "k": "t",
+          "v": " (21), "
+        },
+        {
+          "k": "c",
+          "v": "v726_phys_car_pp_index.py"
+        },
+        {
+          "k": "t",
+          "v": " (57) — "
+        },
+        {
+          "k": "m",
+          "v": "211"
+        },
+        {
+          "k": "t",
+          "v": " checks, each module promoted verbatim from its discovery probe with numbers frozen from the promotion run (all eleven probes re-run before promotion; outputs byte-identical modulo runtimes)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 11 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.MOONSHOT.02"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": ".06"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.K1CAPTURE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "GNET.RAMIFIED.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "FTRANSFER.STT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "FTRANSFER.COCYCLE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "VGEO.TORSOR.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "GNET.PPINDEX.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " dated LIII notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.MOONSHOT.01"
+        },
+        {
+          "k": "t",
+          "v": " (the big update: stages 2–4, Satz-1 slice and K collapse done; kill audit K1/K3/K4 do not fire, K2 half-standing; remaining substance (L1)"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "(L2)"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "(L3); stays OPEN), "
+        },
+        {
+          "k": "c",
+          "v": "ANCHOR.VGEO.02"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "METROLOGY.CLOSURE.01"
+        },
+        {
+          "k": "t",
+          "v": " (torsor closure in calibration form; typing unchanged), "
+        },
+        {
+          "k": "c",
+          "v": "FIRSTPRINCIPLES.BOUNDARY.01"
+        },
+        {
+          "k": "t",
+          "v": " (both thermal-time kills; anchor census "
+        },
+        {
+          "k": "m",
+          "v": "\\{"
+        },
+        {
+          "k": "t",
+          "v": "unit, "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_i"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "C_p\\}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "GATE.METRIC.08"
+        },
+        {
+          "k": "t",
+          "v": " (index measured on the ladder; the identification half registered under "
+        },
+        {
+          "k": "c",
+          "v": "GNET.RAMIFIED.01"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "GATE.METRIC.10"
+        },
+        {
+          "k": "t",
+          "v": " (the NS/R grading's arithmetic home); "
+        },
+        {
+          "k": "m",
+          "v": "787\\to798"
+        },
+        {
+          "k": "t",
+          "v": " rows."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new section “The moonshot arc: the Hilbert–Pólya candidate, measured” (the four-stage narrative "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the end ledger, no-RH fence stated twice) and the stage-2 fence in the L1/moonshot section updated. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.MOONSHOT.01"
+        },
+        {
+          "k": "t",
+          "v": " rewritten to the post-run state (stages done, kill audit, remainders), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " update III, the "
+        },
+        {
+          "k": "c",
+          "v": "GATE.METRIC.08/10"
+        },
+        {
+          "k": "t",
+          "v": " follow-ups (v726/v722), the No-Unit keybox torsor paragraph (v725), and the F_transfer thermal-time kill paragraph (v723/v724). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 11 new audit blocks "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the stage-1/montage fences updated. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the code-section follow-ups extended (E8 forced at the gluing; census) and the "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{net}}"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": "/F_transfer interface pointers added. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": ": the first-principles boundary follow-up (clock kills "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " torsor)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " a separate moonshot highlight (“the Hilbert–Pólya candidate, measured” with the explicit no-proof fence); counters "
+        },
+        {
+          "k": "m",
+          "v": "709\\to720"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v726"
+        },
+        {
+          "k": "t",
+          "v": "; the open-gates, status and glossary surfaces absorb the torsor/"
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{net}}"
+        },
+        {
+          "k": "t",
+          "v": "/thermal-time state; README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "720"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v726"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean round 5."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "SineGramKeystone.lean"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "WatataniIndexFour.lean"
+        },
+        {
+          "k": "t",
+          "v": " committed ("
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green, "
+        },
+        {
+          "k": "m",
+          "v": "3387"
+        },
+        {
+          "k": "t",
+          "v": " jobs, kernel-checked, no sorry/native_decide): the finite algebraic kernel of the v701 keystone (the product-to-sum identity "
+        },
+        {
+          "k": "m",
+          "v": "2\\sin A\\sin B = \\cos(A{-}B) - \\cos(A{+}B)"
+        },
+        {
+          "k": "t",
+          "v": " over an arbitrary commutative ring via Chebyshev recursion — the half-integer sine-moment form IS a Gram matrix, "
+        },
+        {
+          "k": "m",
+          "v": "S = \\sum_i 2w_i\\, s_i s_i^{\\mathsf T}"
+        },
+        {
+          "k": "t",
+          "v": ", hence PSD for nonnegative weights, with explicit Pythagorean-triple certificates; the FFT limit and the deployed window wiring honestly NOT formalized) and the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " index-4 certificate of the v726 slice in its smallest faithful matrix model ("
+        },
+        {
+          "k": "m",
+          "v": "M_4(\\mathbb{Z}[i])"
+        },
+        {
+          "k": "t",
+          "v": ": the clock-order shadow "
+        },
+        {
+          "k": "m",
+          "v": "S^{12}=-1 \\Rightarrow H^4=1"
+        },
+        {
+          "k": "t",
+          "v": " forced by the NS spin structure, the explicit 13-element quasi-basis with "
+        },
+        {
+          "k": "m",
+          "v": "\\sum v v^* = 4\\cdot 1"
+        },
+        {
+          "k": "t",
+          "v": " EXACTLY "
+        },
+        {
+          "k": "m",
+          "v": "= N(1{+}i)^2"
+        },
+        {
+          "k": "t",
+          "v": ", the Pimsner–Popa constant "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda^* = 1/4"
+        },
+        {
+          "k": "t",
+          "v": " sharp via an SOS certificate at the mixing minimizer, "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_2"
+        },
+        {
+          "k": "t",
+          "v": "/three-sector controls give index "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": "; the CAR/Fock layer and the Ramond dressing honestly NOT formalized); "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": " imports added; "
+        },
+        {
+          "k": "c",
+          "v": "lean_manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " regenerated with the new files."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Exploration (firewalled)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "experiments/p9-forecast/"
+        },
+        {
+          "k": "t",
+          "v": " committed as a standalone preregistered forecast workspace (FRB/GW/PSR/UHECR detector kernels "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " hypothesis YAMLs; no ledger row, no paper claim, no website surface — experiments firewall). The K1b super-resolution probe and the L1 determinization probe are NOT in this round (workers still running; next round)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves anywhere: the moonshot results are MEASUREMENTS (diagnostic SHA256 typing; the operator family stays zeta-free); "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.MOONSHOT.01"
+        },
+        {
+          "k": "t",
+          "v": " stay OPEN; the "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " closure is the calibration form, not a scale derivation (No-Unit stands); "
+        },
+        {
+          "k": "c",
+          "v": "GATE.METRIC.08/10"
+        },
+        {
+          "k": "t",
+          "v": " typing unchanged (the Q-system identification is the registered open half); the external clock contract of F_transfer is CONFIRMED, not internalized; no RH statement anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-03",
     "dateLabel": "2026-08-03 · LII",
     "heading": [
       {

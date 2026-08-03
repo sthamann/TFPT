@@ -82,6 +82,8 @@ import TfptCarrier.HammingCode
 import TfptCarrier.SquareParity
 import TfptCarrier.GaussianCodeBridge
 import TfptCarrier.QuarticHalf
+import TfptCarrier.SineGramKeystone
+import TfptCarrier.WatataniIndexFour
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck

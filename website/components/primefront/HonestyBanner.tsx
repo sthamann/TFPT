@@ -21,9 +21,9 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v715 on this front
+          v535–v726 on this front
         </Link>
-        , inside a 709-script suite, all green). One identification theorem
+        , inside a 720-script suite, all green). One identification theorem
         is closed on this front (W1, after a same-day erratum); the RH-hard
         step (W3, uniform positivity) is open, and closing W1 does not move
         it.{" "}

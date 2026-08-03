@@ -168,7 +168,10 @@ export function IharaBlueprintViz() {
         What the ζ column is missing is <em>named</em>, not hidden: the
         operator Z1 (Hilbert–Pólya type) — registered OPEN as
         PRIME.Z1.OPERATOR.01. The v695–v698 series records its ground
-        (measure, canonical operator, masses, positions); the contract stays
+        (measure, canonical operator, masses, positions); the v713–v721
+        montage and moonshot arc now record a <em>measured</em> truncation
+        candidate (glue, state, spectrum, trace formula) — measurements, not
+        theorems; the continuum Sätze stay named open and the contract stays
         open. No RH statement.
       </p>
     </div>

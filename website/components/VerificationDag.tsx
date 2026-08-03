@@ -381,6 +381,7 @@ const NODES: DagNode[] = [
       "v510_seam_bit_freedom.py",
       "v512_seam_tau_flag.py",
       "v364_vgeo_sharpen.py",
+      "v725_phys_vgeo_torsor_audit.py",
       "v371_ftransfer_pole.py",
       "v372_ftransfer_boltzmann.py",
       "v373_ftransfer_relic.py",
@@ -581,6 +582,10 @@ const NODES: DagNode[] = [
       "v528_seam_bit_twist_class_definition.py",
       "v529_seam_interacting_toy_fk.py",
       "v534_seam_straddle_cone.py",
+      "v722_phys_ramified_ns_r.py",
+      "v723_phys_modular_clock.py",
+      "v724_phys_t3b_modular_flows.py",
+      "v726_phys_car_pp_index.py",
     ],
   },
   {
