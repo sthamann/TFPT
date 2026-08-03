@@ -6,6 +6,7 @@ import { TrustContract } from "@/components/TrustContract";
 import { ClaimStack } from "@/components/ClaimStack";
 import { GeometryArc } from "@/components/GeometryArc";
 import { CodePrimesBand } from "@/components/CodePrimesBand";
+import { ProofOffensivesTeaser } from "@/components/ProofOffensivesTeaser";
 import { HonestyBand } from "@/components/HonestyBand";
 import { MethodBand } from "@/components/MethodBand";
 import { Safeguards } from "@/components/Safeguards";
@@ -29,6 +30,7 @@ export default function HomePage() {
       <ClaimStack />
       <GeometryArc />
       <CodePrimesBand />
+      <ProofOffensivesTeaser />
       <HonestyBand />
       <MethodBand />
       <Safeguards compact />

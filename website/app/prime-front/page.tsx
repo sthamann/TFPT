@@ -31,6 +31,10 @@ import { TelescopeRungs } from "@/components/primefront/TelescopeRungs";
 import { DiaryFeed } from "@/components/primefront/DiaryFeed";
 import { W1DictionaryMap } from "@/components/primefront/W1DictionaryMap";
 import { HodgeConeMap } from "@/components/primefront/HodgeConeMap";
+import { IharaBlueprintViz } from "@/components/primefront/IharaBlueprintViz";
+import { TBWindowMap } from "@/components/primefront/TBWindowMap";
+import { KorridorViz } from "@/components/primefront/KorridorViz";
+import { DeckSectorViz } from "@/components/primefront/DeckSectorViz";
 import { StatusBadge } from "@/components/primefront/StatusBadge";
 
 export const metadata: Metadata = {
@@ -3009,7 +3013,9 @@ export default function PrimeFrontPage() {
         </p>
       </DiarySection>
 
-      {/* 30 — Live updates */}
+      <AugustOffensivesSection />
+
+      {/* 31 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -3018,7 +3024,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              30 · Live updates
+              31 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -3053,6 +3059,82 @@ export default function PrimeFrontPage() {
         </div>
       </footer>
     </>
+  );
+}
+
+function AugustOffensivesSection() {
+  return (
+    <section
+      id="august-offensives"
+      aria-labelledby="august-offensives-heading"
+      className="scroll-mt-24 border-t border-slate-800/60 py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            30 · The proof offensives of August 3 · v682–v700 + sandbox probes
+          </span>
+          <StatusBadge badge="machine-verified" />
+          <StatusBadge badge="sandbox" />
+        </div>
+        <h2
+          id="august-offensives-heading"
+          className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
+        >
+          One day, five offensives — four pictures
+        </h2>
+        <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
+          <span className="font-medium text-sky-300/90">In plain words: </span>
+          on August 3 the diary ran five parallel proof offensives against the
+          open positivity step. Nineteen modules were promoted in two rounds
+          (v682–v700), and the sandbox probes found a new geometric picture of
+          how the primes fit into their windows. These four schematics show
+          the day&apos;s load-bearing shapes — with the promoted results and
+          the still-exploratory ones clearly separated.
+        </p>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
+          <p>
+            <strong className="font-medium text-emerald-200">
+              Promoted (machine-verified):
+            </strong>{" "}
+            v691 extracted the target factorisation A = B*B + P from the
+            Ihara lab — the RH analogue as <em>one operator inequality</em>,
+            with the missing ζ-side part named and registered open (Z1). The
+            T-B chain (v692 + v693) typed the razor-thin absorption margin as
+            a sum of squares and closed it on 60 of 70 complete windows
+            unconditionally-modulo-citations, with the exact remainder
+            listed window by window.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              Sandbox (exploration, not promoted):
+            </strong>{" "}
+            the chain probes measured a <em>just-in-time positivity
+            corridor</em> for every prime-power slot — the true mass sits
+            inside every corridor at a stable relative position ≈ 0.53 — and
+            found the three digamma channels of the arch density realized
+            exactly as the deck sectors of the cover lift. Both are search
+            surfaces: no claim moves until they are promoted.
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-4 lg:grid-cols-2 lg:items-start">
+          <IharaBlueprintViz />
+          <TBWindowMap />
+          <KorridorViz />
+          <DeckSectorViz />
+        </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
+          Honest fence, as everywhere on this page: the promoted results are
+          statements about the declared finite window family and the Ihara
+          laboratory — full W3 positivity (the RH-hard step) remains the
+          conjecture, PRIME.Z1.OPERATOR.01 remains open, and nothing here is
+          a claim of progress toward the Riemann Hypothesis.
+        </p>
+      </div>
+    </section>
   );
 }
 
