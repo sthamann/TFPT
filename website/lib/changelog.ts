@@ -43,6 +43,498 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-03",
+    "dateLabel": "2026-08-03 · LV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the closing slice: ONE promotion ("
+      },
+      {
+        "k": "c",
+        "v": "v735"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "10"
+      },
+      {
+        "k": "t",
+        "v": " construction checks, green) — the L1 route portfolio completed honestly, plus one number-fidelity fix on the website. THE STATE-TRANSPORT ROUTE STAGNATES ("
+      },
+      {
+        "k": "c",
+        "v": "v735"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "ucp-stagnates"
+      },
+      {
+        "k": "t",
+        "v": "): for each window the simple-spectrum GNS shift generates the commutative spectral algebra "
+      },
+      {
+        "k": "m",
+        "v": "C^*(J_h,\\mathbf 1)=\\mathbb C^h"
+      },
+      {
+        "k": "t",
+        "v": ", so a UCP map is exactly a row-stochastic transport kernel and the Choi SDP reduces to a finite transport LP — all eight adjacent maps along the nine-window ladder exist CANONICALLY as monotone quantile couplings (unitality"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "state preservation to "
+      },
+      {
+        "k": "m",
+        "v": "3.1\\times10^{-12}/1.2\\times10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": ", Choi minimum "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": "), every Choi rank inside the sharp transport bound "
+      },
+      {
+        "k": "m",
+        "v": "h+h'-1"
+      },
+      {
+        "k": "t",
+        "v": " (ranks "
+      },
+      {
+        "k": "m",
+        "v": "344..2688"
+      },
+      {
+        "k": "t",
+        "v": ", log-log slope "
+      },
+      {
+        "k": "m",
+        "v": "0.991"
+      },
+      {
+        "k": "t",
+        "v": " vs bar "
+      },
+      {
+        "k": "m",
+        "v": "1.25"
+      },
+      {
+        "k": "t",
+        "v": ": LINEARLY controlled sparse-transport ranks) — but the preregistered covariance gate S2.3 FAILS HONESTLY (aggregate shift"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "grade"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "phase defects "
+      },
+      {
+        "k": "m",
+        "v": "0.797..1.227..0.058"
+      },
+      {
+        "k": "t",
+        "v": ": slope "
+      },
+      {
+        "k": "m",
+        "v": "-0.487"
+      },
+      {
+        "k": "t",
+        "v": ", tail not monotonically decreasing): mere state transport is NOT the missing L1 mechanism; the optimal maps are quantile Markov"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "conditional-expectation couplings, NOT "
+      },
+      {
+        "k": "m",
+        "v": "*"
+      },
+      {
+        "k": "t",
+        "v": "-homomorphisms (multiplicativity defects "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}5"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "8\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " quantify the operator-system-vs-"
+      },
+      {
+        "k": "m",
+        "v": "C^*"
+      },
+      {
+        "k": "t",
+        "v": " obstruction); the full noncommutative groupoid algebra was not tested. THE PORTFOLIO, complete: Sonin transfer dead ("
+      },
+      {
+        "k": "c",
+        "v": "v732"
+      },
+      {
+        "k": "t",
+        "v": "), UCP stagnates ("
+      },
+      {
+        "k": "c",
+        "v": "v735"
+      },
+      {
+        "k": "t",
+        "v": "), Gate 0 weak functor ("
+      },
+      {
+        "k": "c",
+        "v": "v733"
+      },
+      {
+        "k": "t",
+        "v": "), Suzuki bridge a measurement ("
+      },
+      {
+        "k": "c",
+        "v": "v734"
+      },
+      {
+        "k": "t",
+        "v": ") — what remains for L1 is atomicity"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "identification substance, not transport machinery. QUALITY FIX (website only): the prime-front feed entry for "
+      },
+      {
+        "k": "c",
+        "v": "v727"
+      },
+      {
+        "k": "t",
+        "v": " misquoted the Carleman evidence as “band "
+      },
+      {
+        "k": "m",
+        "v": "0.34"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.41"
+      },
+      {
+        "k": "t",
+        "v": " vs the "
+      },
+      {
+        "k": "m",
+        "v": "0.5"
+      },
+      {
+        "k": "t",
+        "v": " threshold”; corrected to the docstring values — the measured Gauss"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "Freud growth band "
+      },
+      {
+        "k": "m",
+        "v": "[0.638,1.117]"
+      },
+      {
+        "k": "t",
+        "v": " makes the Carleman sum diverge (all repository surfaces — ledger, registry, "
+      },
+      {
+        "k": "c",
+        "v": "run_all"
+      },
+      {
+        "k": "t",
+        "v": ", papers — already carried the correct band; the remaining "
+      },
+      {
+        "k": "c",
+        "v": "v727"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v734"
+      },
+      {
+        "k": "t",
+        "v": " feed numbers spot-checked against the docstrings, no further discrepancy). NO RH claim, NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module (1)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v735_strat3_ucp_inductive.py"
+        },
+        {
+          "k": "t",
+          "v": " (10 construction checks) — promoted verbatim from "
+        },
+        {
+          "k": "c",
+          "v": "strat3_ucp_inductive_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " (probe re-run before promotion; output identical modulo runtime; the sibling import rewired to the promoted "
+        },
+        {
+          "k": "c",
+          "v": "v718"
+        },
+        {
+          "k": "t",
+          "v": " module)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 1 new row ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.UCPLIMIT.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated LV closing-slice note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.MOONSHOT.01"
+        },
+        {
+          "k": "t",
+          "v": " (the L1 route portfolio complete; stays OPEN); "
+        },
+        {
+          "k": "m",
+          "v": "806\\to807"
+        },
+        {
+          "k": "t",
+          "v": " rows."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": one closing-slice passage in the keystone section (the portfolio sentence); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.MOONSHOT.01"
+        },
+        {
+          "k": "t",
+          "v": " update V; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 1 new audit block."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Counters "
+        },
+        {
+          "k": "m",
+          "v": "728\\to729"
+        },
+        {
+          "k": "t",
+          "v": " modules"
+        },
+        {
+          "k": "m",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v735"
+        },
+        {
+          "k": "t",
+          "v": "; the Carleman number-fidelity fix in the keystone feed entry; README "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Zenodo "
+        },
+        {
+          "k": "m",
+          "v": "729/\\texttt{v735}"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-03",
     "dateLabel": "2026-08-03 · LIV",
     "heading": [
       {

@@ -5303,6 +5303,31 @@ Machine-checked: \veri{v734\_s1\_canonical.py}.
 boundary phase) $+$ \mO\ (the $h$-quantifier)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{L1 state transport: the UCP route,
+honestly closed (\texttt{PRIME.UCPLIMIT.01}).}
+Covariant UCP maps along the nine-window GNS ladder ($10$
+construction checks, ${\sim}1$\,s; verdict \textsc{ucp-stagnates}).
+The construction is \emph{exact}: each simple-spectrum GNS shift
+generates $C^*(J_h,\mathbf 1)=\mathbb C^h$, so a UCP map is a
+row-stochastic transport kernel and the Choi SDP reduces to a finite
+transport LP --- all eight adjacent maps exist canonically as
+monotone quantile couplings (unitality/state preservation
+$\le3.1\times10^{-12}$\,/\,$1.2\times10^{-15}$, Choi minimum $0$),
+every Choi rank inside the sharp bound $h+h'-1$ (ranks $344..2688$,
+log-log slope $0.991$ vs bar $1.25$: linearly controlled).  The
+preregistered covariance gate \emph{fails honestly} (error tail not
+monotonically decreasing): mere state transport is \emph{not} the
+missing L1 mechanism.  The optimal maps are quantile Markov
+couplings, not $*$-homomorphisms (multiplicativity defects
+${\sim}5$--$8\times10^{-3}$); the full noncommutative groupoid
+algebra was not tested.  This closes the L1 route portfolio: Sonin
+dead (v732), UCP stagnates (v735), Gate~0 weak functor (v733),
+Suzuki bridge a measurement (v734).  No marker move, no RH claim.
+Machine-checked: \veri{v735\_strat3\_ucp\_inductive.py}.
+\mE\ (exact UCP/transport construction) $+$ (\textsc{measured},
+honest negative) (covariance gate)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

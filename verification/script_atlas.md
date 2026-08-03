@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`728` registered scripts · `806` ledger claims · `10` clusters.
+`729` registered scripts · `807` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (248 scripts)
+### `core` — Compiler core & the E₈ glue  (249 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -507,6 +507,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v714_moonshot_hecke_groupoid, v714 · cited: 3 e8 audit bootstrap, research contracts
 - **v734_s1_canonical** [E] `PRIME.S1CANON.01` — das kanonische System des Limes-Objekts mit dem Suzuki-Anker: die Mauer in der VIERTEN Sprache — **S1-CANONICAL-SUZUKI-BRIDGED: Krein-Korrespondenz EXAKT (Weyl-Identität 1.6e-15 üb
   - deps: v727_l1_identification, v716_moonshot_arch_glue, v696 · cited: 3 e8 audit bootstrap, research contracts
+- **v735_strat3_ucp_inductive** [E] `PRIME.UCPLIMIT.01` — kovariante UCP-Abbildungen entlang der Neun-Fenster-GNS-Leiter: die Zustands-Transport-Route, ehrlich geschlossen — **UCP-STAGNATES: alle acht benachbarten Abbildungen existieren E
+  - deps: PRIME.Z1.MOONSHOT.01, v718_moonshot_spectral, v718 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1527,7 +1529,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v723_phys_modular_clock** — `FTRANSFER.STT.01`
 - **v724_phys_t3b_modular_flows** — `FTRANSFER.COCYCLE.01`
 - **v725_phys_vgeo_torsor_audit** — `VGEO.TORSOR.01`
 - **v726_phys_car_pp_index** — `GNET.PPINDEX.01`
@@ -1539,4 +1540,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v732_strat3_sonin_prolate** — `PRIME.SONIN.01`
 - **v733_strat3_gate0_census** — `PRIME.GATE0.01`
 - **v734_s1_canonical** — `PRIME.S1CANON.01`
+- **v735_strat3_ucp_inductive** — `PRIME.UCPLIMIT.01`
 
