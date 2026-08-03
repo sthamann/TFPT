@@ -43,6 +43,1373 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-03",
+    "dateLabel": "2026-08-03 · LII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the third daily bundling: FIFTEEN promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v701"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v715"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "158"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green) — the T-B census reaches "
+      },
+      {
+        "k": "m",
+        "v": "69/70"
+      },
+      {
+        "k": "t",
+        "v": ", the Z1 continuum candidate is ASSEMBLED, and the moonshot's atom layer is groupoid-internal. HIGHLIGHT 1 ("
+      },
+      {
+        "k": "c",
+        "v": "v712"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "5/5"
+      },
+      {
+        "k": "t",
+        "v": " — the P4 strike): the v692 margin identity SCALARIZED along the transverse direction (the penalty pays only the transverse zero mass; median gain "
+      },
+      {
+        "k": "m",
+        "v": "\\times4.23"
+      },
+      {
+        "k": "t",
+        "v": " on the open ten) closes nine of the ten remaining windows: "
+      },
+      {
+        "k": "m",
+        "v": "69/70"
+      },
+      {
+        "k": "t",
+        "v": " COMPLETE FAMILY WINDOWS CLOSE at the cited "
+      },
+      {
+        "k": "m",
+        "v": "3\\times10^{12}"
+      },
+      {
+        "k": "t",
+        "v": " (unconditional-modulo-citations); the single remainder is "
+      },
+      {
+        "k": "m",
+        "v": "h=5690"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "T^*=1.6\\times10^{14}"
+      },
+      {
+        "k": "t",
+        "v": " (down from "
+      },
+      {
+        "k": "m",
+        "v": "8.5\\times10^{14}"
+      },
+      {
+        "k": "t",
+        "v": "); the deck lever honestly dead (triangle inequality). HIGHLIGHT 2 ("
+      },
+      {
+        "k": "c",
+        "v": "v713"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "c",
+        "v": "v714"
+      },
+      {
+        "k": "t",
+        "v": "): the L1 MONTAGE ("
+      },
+      {
+        "k": "c",
+        "v": "v713"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "16/16"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "l1-assembled-measured"
+      },
+      {
+        "k": "t",
+        "v": ") assembles the Z1 continuum candidate explicitly — cover limit "
+      },
+      {
+        "k": "m",
+        "v": "6.2\\times10^{-8}"
+      },
+      {
+        "k": "t",
+        "v": ", point masses at the "
+      },
+      {
+        "k": "m",
+        "v": "D^2"
+      },
+      {
+        "k": "t",
+        "v": " rate, one UV slot, the 5b negative exposed as a normalization artifact, divergence exactly at "
+      },
+      {
+        "k": "m",
+        "v": "s\\le1/2"
+      },
+      {
+        "k": "t",
+        "v": " (the critical line as the boundary of the construction, a consistency signature, not positivity), the missing theorems NAMED; and the MOONSHOT stage 1 ("
+      },
+      {
+        "k": "c",
+        "v": "v714"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "19/19"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "moonshot-go"
+      },
+      {
+        "k": "t",
+        "v": ") shows the atom layer is GROUPOID-INTERNAL from the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}[i]"
+      },
+      {
+        "k": "t",
+        "v": "-E8 Hecke tower — primitive degrees "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " Gaussian prime norms exactly (no prime projector anywhere), de-divisorization at "
+      },
+      {
+        "k": "m",
+        "v": "4\\times10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " descent "
+      },
+      {
+        "k": "m",
+        "v": "100"
+      },
+      {
+        "k": "t",
+        "v": " positions/"
+      },
+      {
+        "k": "m",
+        "v": "100"
+      },
+      {
+        "k": "t",
+        "v": " masses/"
+      },
+      {
+        "k": "m",
+        "v": "368"
+      },
+      {
+        "k": "t",
+        "v": " moments at "
+      },
+      {
+        "k": "m",
+        "v": "0.00"
+      },
+      {
+        "k": "t",
+        "v": "; honestly fenced: the finite counting facts are E8-UNSPECIFIC, specificity is stage 2 of the newly registered contract "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.Z1.MOONSHOT.01"
+      },
+      {
+        "k": "t",
+        "v": ". HIGHLIGHT 3 (the chain arc S-A–S-G, "
+      },
+      {
+        "k": "c",
+        "v": "v702"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v711"
+      },
+      {
+        "k": "t",
+        "v": "): the lookahead question DECIDED ("
+      },
+      {
+        "k": "c",
+        "v": "v702"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "flow-verifier-not-generator"
+      },
+      {
+        "k": "t",
+        "v": ": full comb verified "
+      },
+      {
+        "k": "m",
+        "v": "913\\ge898"
+      },
+      {
+        "k": "t",
+        "v": ", autonomous reach "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " slots, "
+      },
+      {
+        "k": "m",
+        "v": "g\\sim5"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "12"
+      },
+      {
+        "k": "t",
+        "v": " bits/slot information-theoretic); tolerance induction DEAD at RH grade ("
+      },
+      {
+        "k": "c",
+        "v": "v703"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": "); G1 open as a closed form ("
+      },
+      {
+        "k": "c",
+        "v": "v704"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "5/5"
+      },
+      {
+        "k": "t",
+        "v": ": best law C2 median "
+      },
+      {
+        "k": "m",
+        "v": "0.9947"
+      },
+      {
+        "k": "t",
+        "v": ", max "
+      },
+      {
+        "k": "m",
+        "v": "0.3130"
+      },
+      {
+        "k": "t",
+        "v": "); the arch IS a deck-sector trace ("
+      },
+      {
+        "k": "c",
+        "v": "v705"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "7/7"
+      },
+      {
+        "k": "t",
+        "v": ": exact tower traces "
+      },
+      {
+        "k": "m",
+        "v": "3.4\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": ", scalar forced "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": ", must-fail "
+      },
+      {
+        "k": "m",
+        "v": "\\times82"
+      },
+      {
+        "k": "t",
+        "v": " — the geometry anchor); WEYL-NULL with the Schur-parameter identity ("
+      },
+      {
+        "k": "m",
+        "v": "10^{-40}"
+      },
+      {
+        "k": "t",
+        "v": ") and the "
+      },
+      {
+        "k": "m",
+        "v": "\\log 2"
+      },
+      {
+        "k": "t",
+        "v": " find ("
+      },
+      {
+        "k": "c",
+        "v": "v706"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": "); the section edge is an exact resolvent identity ("
+      },
+      {
+        "k": "m",
+        "v": "3\\times10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": ") with the corridor position "
+      },
+      {
+        "k": "m",
+        "v": "\\sim0.53"
+      },
+      {
+        "k": "t",
+        "v": " open ("
+      },
+      {
+        "k": "c",
+        "v": "v707"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": "); the best position functional transports scalar-free (Levinson energy extremum, median "
+      },
+      {
+        "k": "m",
+        "v": "0.9986"
+      },
+      {
+        "k": "t",
+        "v": "; outliers exactly on "
+      },
+      {
+        "k": "m",
+        "v": "16/64/81"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "v708"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "7/7"
+      },
+      {
+        "k": "t",
+        "v": "); the residual carries NO zero signature behind a temporal SHA256 firewall ("
+      },
+      {
+        "k": "c",
+        "v": "v709"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "layering-rejected"
+      },
+      {
+        "k": "t",
+        "v": "); the two-stage law dies by its own bar but its Hecke stage heals the prime powers "
+      },
+      {
+        "k": "m",
+        "v": "11.7\\%\\to0.53\\%"
+      },
+      {
+        "k": "t",
+        "v": " circle-free from E8 counting ("
+      },
+      {
+        "k": "c",
+        "v": "v710"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "7/7"
+      },
+      {
+        "k": "t",
+        "v": "); the first-birth error CONVERGES (promotion run "
+      },
+      {
+        "k": "m",
+        "v": "\\theta=1.851"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "R^2=0.692"
+      },
+      {
+        "k": "t",
+        "v": ", bars "
+      },
+      {
+        "k": "m",
+        "v": "0.5/0.6"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "v711"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "7/7"
+      },
+      {
+        "k": "t",
+        "v": ") — net: "
+      },
+      {
+        "k": "m",
+        "v": "G1=[\\mathrm{E}"
+      },
+      {
+        "k": "t",
+        "v": "-edge"
+      },
+      {
+        "k": "m",
+        "v": "]+[\\mathrm{E}"
+      },
+      {
+        "k": "t",
+        "v": "-Hecke"
+      },
+      {
+        "k": "m",
+        "v": "]+[\\mathrm{M}"
+      },
+      {
+        "k": "t",
+        "v": "-rate"
+      },
+      {
+        "k": "m",
+        "v": "]"
+      },
+      {
+        "k": "t",
+        "v": ". THE REST: the keystone identity ("
+      },
+      {
+        "k": "c",
+        "v": "v701"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "B="
+      },
+      {
+        "k": "t",
+        "v": " sine-moment form"
+      },
+      {
+        "k": "m",
+        "v": "(c+\\mathrm{pole})"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " rank-1 pole square exact; the three gaps collapse onto ONE; triplication "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_3"
+      },
+      {
+        "k": "t",
+        "v": "-unique; V5 numerology dead) and the QGEO CAR route ("
+      },
+      {
+        "k": "c",
+        "v": "v715"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "22/22"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "qgeo-car-rates-summable"
+      },
+      {
+        "k": "t",
+        "v": ": all "
+      },
+      {
+        "k": "m",
+        "v": "6{+}1"
+      },
+      {
+        "k": "t",
+        "v": " channels Schatten-Cauchy with summable rates, FH renormalization lattice-derived via Barnes "
+      },
+      {
+        "k": "m",
+        "v": "G"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "8.8\\times10^{-7}"
+      },
+      {
+        "k": "t",
+        "v": ", RP cone stable; the majorant lemma (L1)–(L3) named — "
+      },
+      {
+        "k": "c",
+        "v": "GATE.QGEO"
+      },
+      {
+        "k": "t",
+        "v": " does not move). Between the bundlings, two website-side rounds landed separately: the visualization round (commit "
+      },
+      {
+        "k": "c",
+        "v": "52bcf00c"
+      },
+      {
+        "k": "t",
+        "v": ": four animated schematics of the August-3 offensives on /prime-front, promoted and sandbox clearly separated, no new claims) and the prime-front explainer film (commit "
+      },
+      {
+        "k": "c",
+        "v": "76b092a0"
+      },
+      {
+        "k": "t",
+        "v": ": a 2:39 German faceless-explainer video with burned-in captions, embedded on /prime-front; states “kein RH-Beweis” explicitly)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (15)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v701_big_picture_hunt.py"
+        },
+        {
+          "k": "t",
+          "v": " (11), "
+        },
+        {
+          "k": "c",
+          "v": "v702_z1_lookahead.py"
+        },
+        {
+          "k": "t",
+          "v": " (13), "
+        },
+        {
+          "k": "c",
+          "v": "v703_chain_tolerance_scaling.py"
+        },
+        {
+          "k": "t",
+          "v": " (10), "
+        },
+        {
+          "k": "c",
+          "v": "v704_chain_mass_law.py"
+        },
+        {
+          "k": "t",
+          "v": " (5), "
+        },
+        {
+          "k": "c",
+          "v": "v705_chain_deck_sector.py"
+        },
+        {
+          "k": "t",
+          "v": " (7), "
+        },
+        {
+          "k": "c",
+          "v": "v706_chain_weyl_mass.py"
+        },
+        {
+          "k": "t",
+          "v": " (10), "
+        },
+        {
+          "k": "c",
+          "v": "v707_chain_section_edge.py"
+        },
+        {
+          "k": "t",
+          "v": " (9), "
+        },
+        {
+          "k": "c",
+          "v": "v708_chain_position_functional.py"
+        },
+        {
+          "k": "t",
+          "v": " (7), "
+        },
+        {
+          "k": "c",
+          "v": "v709_chain_zero_layer.py"
+        },
+        {
+          "k": "t",
+          "v": " (10), "
+        },
+        {
+          "k": "c",
+          "v": "v710_chain_two_stage_hecke.py"
+        },
+        {
+          "k": "t",
+          "v": " (7), "
+        },
+        {
+          "k": "c",
+          "v": "v711_chain_firstbirth_scaling.py"
+        },
+        {
+          "k": "t",
+          "v": " (7), "
+        },
+        {
+          "k": "c",
+          "v": "v712_rank3_transverse_deck.py"
+        },
+        {
+          "k": "t",
+          "v": " (5), "
+        },
+        {
+          "k": "c",
+          "v": "v713_l1_montage.py"
+        },
+        {
+          "k": "t",
+          "v": " (16), "
+        },
+        {
+          "k": "c",
+          "v": "v714_moonshot_hecke_groupoid.py"
+        },
+        {
+          "k": "t",
+          "v": " (19), "
+        },
+        {
+          "k": "c",
+          "v": "v715_qgeo_car_continuum.py"
+        },
+        {
+          "k": "t",
+          "v": " (22) — "
+        },
+        {
+          "k": "m",
+          "v": "158"
+        },
+        {
+          "k": "t",
+          "v": " checks, each module promoted verbatim from its discovery probe with numbers frozen from the promotion run ("
+        },
+        {
+          "k": "c",
+          "v": "v711"
+        },
+        {
+          "k": "t",
+          "v": ": the worker-run point estimate "
+        },
+        {
+          "k": "m",
+          "v": "\\theta\\sim1.25/R^2\\sim0.90"
+        },
+        {
+          "k": "t",
+          "v": " vs the promotion run "
+        },
+        {
+          "k": "m",
+          "v": "1.851/0.692"
+        },
+        {
+          "k": "t",
+          "v": " documented; both far inside the preregistered bars)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 16 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KEYSTONE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1LOOKAHEAD.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CHAINTOL.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CHAINMASS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.DECKSECTOR.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEYLMASS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.SECTIONEDGE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.POSFUNC.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.ZEROLAYER.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.TWOSTAGE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FIRSTBIRTH.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RANK3TRANSV.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.L1MONTAGE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.MOONSHOT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.CARLIMIT.01"
+        },
+        {
+          "k": "t",
+          "v": ", plus the new contract "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.MOONSHOT.01"
+        },
+        {
+          "k": "t",
+          "v": "); dated LII notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " (montage "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " moonshot; stays OPEN — the continuum theorems are missing), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RANK3DENSITY.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "69/70"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "T^*=1.6\\times10^{14}"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO.01"
+        },
+        {
+          "k": "t",
+          "v": " (rates summable, lemma named — the gate does not move); "
+        },
+        {
+          "k": "m",
+          "v": "772\\to788"
+        },
+        {
+          "k": "t",
+          "v": " rows."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 15 new audit blocks. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " update II (montage, moonshot, chain arc; formally OPEN), the new contract "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.MOONSHOT.01"
+        },
+        {
+          "k": "t",
+          "v": " (groupoid program; stage-2 gluing as the next gate; kill criteria K1–K4), the "
+        },
+        {
+          "k": "c",
+          "v": "prob:R1"
+        },
+        {
+          "k": "t",
+          "v": " update II ("
+        },
+        {
+          "k": "m",
+          "v": "69/70"
+        },
+        {
+          "k": "t",
+          "v": "), and the "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": " note. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": three new subsections (the chain arc S-A–S-G as an honest section narrative; the L1 montage and the moonshot; the T-B census at "
+        },
+        {
+          "k": "m",
+          "v": "69/70"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "c",
+          "v": "parity_toeplitz_classification"
+        },
+        {
+          "k": "t",
+          "v": ": the transverse-strike paragraph ("
+        },
+        {
+          "k": "m",
+          "v": "69/70"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the Hecke-tower follow-up in the code sections (E8-unspecificity fence stated)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed entry (the third daily bundling); suite counters "
+        },
+        {
+          "k": "m",
+          "v": "694\\to709"
+        },
+        {
+          "k": "t",
+          "v": "; README and Zenodo description updated to "
+        },
+        {
+          "k": "m",
+          "v": "709"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v715"
+        },
+        {
+          "k": "t",
+          "v": ". (The two separate website rounds referenced above: "
+        },
+        {
+          "k": "c",
+          "v": "52bcf00c"
+        },
+        {
+          "k": "t",
+          "v": " visualization, "
+        },
+        {
+          "k": "c",
+          "v": "76b092a0"
+        },
+        {
+          "k": "t",
+          "v": " explainer film.)"
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves; the "
+        },
+        {
+          "k": "m",
+          "v": "69/70"
+        },
+        {
+          "k": "t",
+          "v": " closure is unconditional-MODULO-CITATIONS on the declared finite family (T-B itself stays the conjecture); "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " stays OPEN (continuum theorems missing); "
+        },
+        {
+          "k": "c",
+          "v": "v714"
+        },
+        {
+          "k": "t",
+          "v": " is honestly fenced (E8-unspecific finite counting facts — specificity is stage 2); "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": " does not move; no RH statement anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-03",
     "dateLabel": "2026-08-03 · LI",
     "heading": [
       {

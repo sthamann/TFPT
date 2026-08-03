@@ -11586,6 +11586,140 @@ line group of order $11520$, Coxeter does not descend, no $A_5$
 signature; parked per the review protocol,
 \veri{v700\_orbit60\_census.py}).
 
+\subsection{The chain arc S-A--S-G: an honest section
+narrative}\label{sec:chain-arc}
+
+The third daily bundling (2026-08-03) runs the question left by the
+Z1 series --- \emph{can the flow generate the comb, and if not, what
+exactly selects the masses?} --- through a preregistered chain of
+seven sections plus two kill tests, each with its own bars.  The
+narrative is deliberately honest: most sections return
+\emph{typed} negatives, and the arc is reported as such.
+\emph{The lookahead decision} (\veri{v702\_z1\_lookahead.py},
+$13/13$, \texttt{FLOW-VERIFIER-NOT-GENERATOR}): the $\Gamma$ flow
+\emph{verifies} the full comb ($913\ge898$; every fake dies
+$\ge184$ lags earlier) but does not generate it --- both prescribed
+lookahead routes (depth-2 beam search with horizon-3 deepening, and
+a global DP) reach $2$--$4$ slots, and the per-slot information
+demand $g\sim5$--$12$ bits is information-theoretic and
+parameter-robust.  \emph{S-A, the circularity decider}
+(\veri{v703\_chain\_tolerance\_scaling.py}, $10/10$): the tolerance
+an autonomous induction would need is RH-grade (over-RH on fine
+windows) --- the induction route is dead; positively, the Levinson
+recursion is an unstable \emph{shooting} problem whose unique
+bounded trajectory is the true comb.  \emph{S-B}
+(\veri{v704\_chain\_mass\_law.py}, $5/5$, \texttt{G1-OPEN}): the
+best closed mass law is C2 (the next Levinson order), median
+$0.9947$ but max $0.3130$ on soft slots --- no closed formula
+reaches the bar.  \emph{S-C, the geometry anchor}
+(\veri{v705\_chain\_deck\_sector.py}, $7/7$): the three digamma
+channels of the arch density \emph{are} the three deck sectors of
+the 48-site NS lift --- exact tower traces with the v628 twists
+$\{1/6,1/2,5/6\}$, deviation $3.4\times10^{-16}$, the scalar forced
+to $1$, must-fail off by $\times82$.  \emph{S-D}
+(\veri{v706\_chain\_weyl\_mass.py}, $10/10$, \texttt{WEYL-NULL}):
+the point-evaluation reading is falsified, but the flow $\alpha$
+\emph{are} the Schur parameters of the background operator
+($10^{-40}$), the background breakdown sits exactly between the
+$n=2$ and $n=3$ cell, and the bare flow knows $\log 2$ to
+$0.1$--$0.6\%$.  \emph{S-E}
+(\veri{v707\_chain\_section\_edge.py}, $9/9$): the
+section-positivity edge is an exact resolvent identity
+($3\times10^{-13}$); the true mass sits at corridor position median
+$0.534$, IQR $[0.511,0.559]$ --- neither edge nor midpoint:
+``explain the $\sim0.53$'' is the named open question.  \emph{S-F}
+(\veri{v708\_chain\_position\_functional.py}, $7/7$): the best
+selection functional is the Levinson energy extremum (median
+$0.9986$, max $11.7\%$, scalar-free transport); the outliers sit
+exactly on the prime powers $16/64/81$.  \emph{S-G, the diagnostic}
+(\veri{v709\_chain\_zero\_layer.py}, $10/10$,
+\texttt{LAYERING-REJECTED}): behind a \emph{temporal} SHA256
+firewall (the residual is hashed before any zero is read), the S-F
+residual carries no zero signature (best corr $0.042$, the scramble
+level); ${\sim}64\%$ is window geometry.  \emph{The two kill tests}:
+the composite two-stage law dies by its own bar
+(\veri{v710\_chain\_two\_stage\_hecke.py}, $7/7$; max $6.15\%>2\%$)
+--- but its Hecke stage heals exactly the prime-power cells
+$11.7\%\to0.53\%$ with circle-free channel detection from the E8
+counting; and the first-birth remainder \emph{converges} under
+refinement (\veri{v711\_chain\_firstbirth\_scaling.py}, $7/7$,
+promotion-run $\theta=1.851$, $R^2=0.692$, bars $\theta\ge0.5$ /
+$R^2\ge0.6$; a one-decade law, extrapolation typed [M]).  The net
+result is the typed decomposition
+$G1=[\mathrm{E\mbox{-}edge}]+[\mathrm{E\mbox{-}Hecke}]+
+[\mathrm{M\mbox{-}rate}]$ --- exact edges, exact Hecke healing, a
+measured rate --- with the selection principle ($\sim0.53$) as the
+one named open piece.
+
+\subsection{The L1 montage and the moonshot: the continuum candidate
+assembled, the atom layer groupoid-internal}\label{sec:l1-moonshot}
+
+Three modules of the same bundling move the Z1 program from
+``pieces'' to ``candidate''.  \emph{The keystone}
+(\veri{v701\_big\_picture\_hunt.py}, $11/11$): the deployed window
+form $B$ is \emph{exactly} the sine-moment form of $(c+\mathrm{pole})$
+plus a rank-1 pole square --- one identity that glues the v695
+measure route to the v677 master identity; with it the three named
+gaps of the program collapse onto \emph{one} (defect positivity
+modulo the operator question), and the triplication identity (the
+arch as the mean of three digamma channels on the $\zeta_{12}$ grid,
+$\mu_3$-unique) gives the first exact bridge from the arch layer to
+the deck-sector geometry --- closed \emph{into} the geometry by
+\veri{v705\_chain\_deck\_sector.py}; the V5 fixpoint numerology is
+dead (PSLQ empty).  \emph{The montage}
+(\veri{v713\_l1\_montage.py}, $16/16$,
+\texttt{L1-ASSEMBLED-MEASURED}): the continuum candidate of the Z1
+operator is explicitly \emph{assembled} from the corpus pieces
+(deck-sector arch $+$ lag-insertion atoms $+$ pole subtraction) ---
+the cover limit converges at $6.2\times10^{-8}$, the point masses at
+the $D^2$ rate, exactly one UV slot remains, and the earlier 5b
+negative turns out to be a normalization artifact; the montage
+diverges exactly at $s\le1/2$, so the critical line appears as the
+natural \emph{boundary} of the construction --- typed honestly as a
+consistency signature, not a positivity statement; the missing
+theorems (self-adjointness, trace identification, positivity) are
+named, not claimed.  \emph{The moonshot, stage 1}
+(\veri{v714\_moonshot\_hecke\_groupoid.py}, $19/19$,
+\texttt{MOONSHOT-GO}): the atom layer is \emph{groupoid-internal}
+from the $\mathbb{Z}[i]$-E8 Hecke tower --- the primitive degrees
+are exactly the Gaussian prime norms (no prime projector anywhere:
+the primes come \emph{out} of the tower), the log generator and cell
+normalizer de-divisorize the traces at $4\times10^{-13}$, and the
+$\sigma$ descent matches $100$ positions, $100$ masses and $368$
+moments at deviation $0.00$.  The fence is typed: the finite
+counting facts of this slice are \emph{E8-unspecific}; the
+specificity question and the arch gluing (still a direct sum here)
+are stage 2 of the registered contract
+\texttt{PRIME.Z1.MOONSHOT.01}.  On the adjacent geometry gate, the
+quasi-free CAR route makes the continuum limit quantitative
+(\veri{v715\_qgeo\_car\_continuum.py}, $22/22$,
+\texttt{QGEO-CAR-RATES-SUMMABLE}: all $6{+}1$ channels Schatten-norm
+Cauchy with summable rates, the FH renormalization lattice-derived
+via Barnes~$G$ at $8.8\times10^{-7}$, the RP cone stable) --- the
+majorant lemma (L1)--(L3) is named with constants;
+\texttt{GATE.QGEO} does not move.  \texttt{PRIME.Z1.OPERATOR.01}
+stays formally \emph{open}: the continuum theorems are missing.
+
+\subsection{The T-B census at 69/70}\label{sec:tb-6970}
+
+The P4 main strike (\veri{v712\_rank3\_transverse\_deck.py}, $5/5$)
+finishes what the density round started
+(\vref{sec:tb-chain}): the v692 margin identity is
+\emph{scalarized along the transverse direction} --- the penalty
+pays only the transverse zero mass, not the full matrix norm ---
+which improves the ten open windows by $\times4.23$ median and
+closes nine of them at the cited height $3\times10^{12}$.
+\textbf{The census now stands at $69/70$ complete family windows
+closed unconditionally-modulo-citations}; the single remainder is
+$h=5690$ with certificate height $T^*=1.6\times10^{14}$ (down from
+$8.5\times10^{14}$).  The deck-triplication lever, by contrast, is
+honestly dead for T-B (triangle inequality: channel sups can only
+lose) --- the deck geometry helps the arch reading
+(\veri{v705\_chain\_deck\_sector.py}), not the margin.  The zeros
+$\le2\times10^{4}$ enter the \emph{margin} only (RvM-checked); the
+penalty uses no zero data.  T-B itself --- full W3 positivity ---
+remains the conjecture; no RH statement is made.
+
 % =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================

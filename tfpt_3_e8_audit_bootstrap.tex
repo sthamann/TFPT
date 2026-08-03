@@ -4698,6 +4698,243 @@ Machine-checked: \veri{v700\_orbit60\_census.py}.
 numerology must-fail)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The keystone identity
+(\texttt{PRIME.KEYSTONE.01}).}
+Cheap machine reads for ``does the missing rest already sit in the
+corpus?'' ($11$ checks, ${<}1$\,s).  \emph{The keystone} \mE: the
+deployed window form $B$ is exactly the sine-moment form of
+$(c+\mathrm{pole})$ plus a rank-1 pole square --- the v695 measure
+route and the v677 master identity are one object; the three named
+gaps collapse onto \emph{one} (defect positivity modulo operator).
+\emph{Triplication} \mE: the arch is the mean of three digamma
+channels on the $\zeta_{12}$ grid, $\mu_3$-unique.  \emph{Kill}: V5
+fixpoint numerology dead (PSLQ empty).  No zeros read.  No marker
+move, no RH claim.
+Machine-checked: \veri{v701\_big\_picture\_hunt.py}.
+\mE\ (keystone, triplication) $+$ (\mE, \textsc{kill}) (V5
+numerology)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The lookahead decision
+(\texttt{PRIME.Z1LOOKAHEAD.01}).}
+Offensive 5e: autonomous zeta-free comb reconstruction ($13$ checks,
+${\sim}30$\,s; verdict \textsc{flow-verifier-not-generator}).
+\emph{Verification} (\textsc{measured}): the full comb is
+flow-verified ($913\ge898$), every fake dies $\ge184$ lags earlier.
+\emph{Generation limit} (\textsc{measured}): beam search and global
+DP reach $2$--$4$ slots; the per-slot demand $g\sim5$--$12$ bits is
+information-theoretic and parameter-robust.
+\texttt{PRIME.Z1.OPERATOR.01} stays \emph{open}.  AST zero-firewall.
+No marker move, no RH claim.
+Machine-checked: \veri{v702\_z1\_lookahead.py}.
+(\textsc{measured}) (verification, information limit) $+$ \mO\
+(continuum reading)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{S-A: the circularity decider
+(\texttt{PRIME.CHAINTOL.01}).}
+How sharply does the flow-induction constrain the masses? ($10$
+checks, ${\sim}60$\,s; verdict \textsc{tolerance-rh-grade}).
+\emph{The kill}: the required per-step tolerance is RH-grade
+(over-RH on fine windows) --- the tolerance induction is dead as a
+proof route.  \emph{The structure}: the Levinson recursion is an
+unstable shooting problem; the true comb is the unique bounded
+trajectory.  AST zero-firewall.  No marker move, no RH claim.
+Machine-checked: \veri{v703\_chain\_tolerance\_scaling.py}.
+(\mE, \textsc{kill}) (tolerance induction) $+$ (\textsc{measured})
+(shooting instability)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{S-B: the G1 exactness hunt
+(\texttt{PRIME.CHAINMASS.01}).}
+Does a closed formula predict the counting masses? ($5$ checks,
+${<}1$\,s; verdict \textsc{g1-open}).  Seven closed laws censused;
+the best is C2 (next Levinson order): median $0.9947$, IQR
+$[0.9853,1.0086]$, but max $0.3130$ on soft slots --- no closed law
+reaches the $0.1\%$ bar; the residual strata are declared
+(soft/mid/tight $0.049/0.010/0.006$).  AST zero-firewall.  No marker
+move, no RH claim.
+Machine-checked: \veri{v704\_chain\_mass\_law.py}.
+(\textsc{measured}) (closed-law census, declared strata) $+$ \mO\
+(G1 closed form)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{S-C: the deck-sector anchor
+(\texttt{QGEO.DECKSECTOR.01}).}
+The three digamma channels of the arch density \emph{are} the three
+deck sectors of the 48-site NS lift ($7$ checks, ${<}1$\,s).
+\emph{The identity} \mE: exact tower traces of the v623 deck sectors
+with the v628 twists $\{1/6,1/2,5/6\}$ reproduce the arch channel by
+channel at $3.4\times10^{-16}$; the relative scalar is \emph{forced}
+to $1$; the must-fail control (wrong twists) is off by $\times82$.
+The v701 triplication identity is closed \emph{into} the geometry.
+\texttt{GATE.QGEO} untouched.  No marker move, no RH claim.
+Machine-checked: \veri{v705\_chain\_deck\_sector.py}.
+\mE\ (deck-sector trace identity, forced scalar, must-fail)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{S-D: the Weyl characterization
+(\texttt{PRIME.WEYLMASS.01}).}
+Is the mass law an m-/Schur-function evaluation? ($10$ checks,
+${\sim}10$\,s; verdict \textsc{weyl-null}).  \emph{The null}: point
+evaluation falsified (K2 median $0.3993$, scramble-level corr).
+\emph{The finds}: the flow $\alpha$ \emph{are} the Schur parameters
+\mE\ ($10^{-40}$); the background breakdown sits exactly between the
+$n=2$/$n=3$ cell; the bare $\Gamma$ flow knows $\log 2$ to
+$0.1$--$0.6\%$.  AST zero-firewall.  No marker move, no RH claim.
+Machine-checked: \veri{v706\_chain\_weyl\_mass.py}.
+(\textsc{measured}, \textsc{null}) (point evaluation) $+$ \mE\
+(Schur identity) $+$ (\textsc{measured}) ($\log 2$ find)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{S-E: the section edge
+(\texttt{PRIME.SECTIONEDGE.01}).}
+The closed form of the section-positivity edge ($9$ checks,
+${\sim}10$\,s; verdict \textsc{edge-exact-selection-open}).
+\emph{The identity} \mE: the edge is a resolvent
+(Christoffel--Darboux) identity, exact to $3\times10^{-13}$; the
+full-ladder edge pins the mass to $2.6\times10^{-4}$.  \emph{The
+open piece} (\textsc{measured}): the true mass sits at corridor
+position median $0.534$, IQR $[0.511,0.559]$ --- neither edge nor
+midpoint.  AST zero-firewall.  No marker move, no RH claim.
+Machine-checked: \veri{v707\_chain\_section\_edge.py}.
+\mE\ (resolvent edge identity) $+$ (\textsc{measured}) (corridor
+census) $+$ \mO\ (selection principle)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{S-F: the position functional
+(\texttt{PRIME.POSFUNC.01}).}
+Which functional fixes the $\sim0.53$? ($7$ checks, ${\sim}110$\,s;
+verdict \textsc{functional-open}).  The best of the preregistered
+families is the Levinson energy extremum $E_{N-1}$: median $0.9986$,
+max $11.7\%$, and it \emph{transports} across windows without a
+scalar; none reaches the $1\%$ uniform bar.  The outliers sit
+exactly on the prime powers $16/64/81$ --- the cells the v710 Hecke
+stage heals.  AST zero-firewall.  No marker move, no RH claim.
+Machine-checked: \veri{v708\_chain\_position\_functional.py}.
+(\textsc{measured}) (functional census, scalar-free transport) $+$
+\mO\ (uniform selection)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{S-G: the layering diagnostic
+(\texttt{PRIME.ZEROLAYER.01}).}
+Is the selection residual a zero layer? ($10$ checks, ${\sim}70$\,s;
+verdict \textsc{layering-rejected}).  Behind a \emph{temporal}
+SHA256 firewall (residual hashed before any zero read), no tested
+projection finds a zero signature: best corr $0.042$ = the scramble
+level; the von-Mangoldt-defect read is equally empty ($-0.059$);
+${\sim}64\%$ of the residual is window geometry.  An honest
+diagnostic null for the record.  No marker move, no RH claim.
+Machine-checked: \veri{v709\_chain\_zero\_layer.py}.
+(\textsc{measured}, \textsc{null}) (layering rejection, temporal
+firewall)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{P1: the two-stage kill test
+(\texttt{PRIME.TWOSTAGE.01}).}
+The two-stage Hecke selector for the G1 residual ($7$ checks,
+${\sim}55$\,s; verdict \textsc{p1-two-stage-dead}).  \emph{The
+kill}: the memo bar fires (max $6.15\%>2\%$) --- the composite
+closed law is dead as declared.  \emph{The surviving mechanism} \mE:
+the Hecke stage heals exactly the prime-power cells
+$11.7\%\to0.53\%$, with circle-free channel detection from the E8
+counting (Satake from shell counts).  The remainder --- first
+births on coarse windows --- is measured in v711.  AST
+zero-firewall.  No marker move, no RH claim.
+Machine-checked: \veri{v710\_chain\_two\_stage\_hecke.py}.
+(\mE, \textsc{kill}) (memo bar) $+$ \mE\ (Hecke healing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{P1b: the first-birth scaling
+(\texttt{PRIME.FIRSTBIRTH.01}).}
+Fit-free measurement of the first-birth error under window
+refinement ($7$ checks, ${\sim}160$\,s; verdict
+\textsc{continuum-selector-measured}).  Promotion-run power law
+$\theta=1.851$ ($R^2=0.692$; bars $\theta\ge0.5$, $R^2\ge0.6$;
+worker-run point estimate $\theta\sim1.25$/$R^2\sim0.90$ --- spread
+far inside the bars), ladder halves $2.736/1.520$ both positive,
+$0/30$ non-converging primes, the finest $6$ windows carry $0$
+degenerate-horizon slots.  A one-decade law; extrapolation typed
+(\textsc{measured}).  $G1=[\mathrm{E\mbox{-}edge}]+
+[\mathrm{E\mbox{-}Hecke}]+[\mathrm{M\mbox{-}rate}]$ complete.  AST
+zero-firewall.  No marker move, no RH claim.
+Machine-checked: \veri{v711\_chain\_firstbirth\_scaling.py}.
+(\textsc{measured}) (one-decade convergence law, typed
+extrapolation)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{P4: the transverse strike
+(\texttt{PRIME.RANK3TRANSV.01}).}
+Transverse scalarization $\times$ deck triplication for the ten open
+T-B windows ($5$ checks, ${\sim}65$\,s).  \emph{The move} \mE: the
+v692 margin identity scalarized along the transverse direction (the
+penalty pays only the transverse zero mass) --- median gain
+$\times4.23$ on the open ten; \textbf{$69/70$ complete family
+windows close at the cited $3\times10^{12}$}; the single remainder
+is $h=5690$ with $T^*=1.6\times10^{14}$ (down from
+$8.5\times10^{14}$).  \emph{The honest negative}: the deck lever is
+dead (triangle inequality).  Zeros $\le2\times10^4$ in the margin
+only.  T-B stays the conjecture.  No marker move, no RH claim.
+Machine-checked: \veri{v712\_rank3\_transverse\_deck.py}.
+\mE\ (transverse scalarization) $+$ [A-cited] (explicit bounds via
+v693) $+$ (\mE, \textsc{kill}) (deck lever)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The L1 montage
+(\texttt{PRIME.L1MONTAGE.01}).}
+The first explicit assembly of the Z1 continuum candidate ($16$
+checks, ${\sim}1$\,s; verdict \textsc{l1-assembled-measured}).
+\emph{The assembly} (\textsc{measured}): deck-sector arch $+$
+lag-insertion atoms $+$ pole subtraction --- cover limit
+$6.2\times10^{-8}$, point masses at the $D^2$ rate, one UV slot.
+\emph{The repair} \mE: the 5b negative was a normalization artifact.
+\emph{The boundary}: divergence exactly at $s\le1/2$ --- the
+critical line as the boundary of the construction, a consistency
+signature, \emph{not} positivity.  The missing theorems
+(self-adjointness, trace identification, positivity) are named.
+\texttt{PRIME.Z1.OPERATOR.01} stays \emph{open}.  AST zero-firewall.
+No marker move, no RH claim.
+Machine-checked: \veri{v713\_l1\_montage.py}.
+(\textsc{measured}) (assembled candidate) $+$ \mE\ (normalization
+repair) $+$ \mO\ (continuum theorems)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The moonshot, stage 1
+(\texttt{PRIME.MOONSHOT.01}).}
+Is the atom layer groupoid-internal? ($19$ checks, ${\sim}10$\,s;
+verdict \textsc{moonshot-go}).  \emph{The go} \mE: the primitive
+degrees of the $\mathbb{Z}[i]$-E8 Hecke tower are \emph{exactly} the
+Gaussian prime norms (maximality census, no prime projector); log
+generator $+$ cell normalizer de-divisorize at $4\times10^{-13}$;
+the $\sigma$ descent matches $100$ positions, $100$ masses, $368$
+moments at $0.00$.  \emph{Declared ingredients}: $\sqrt n$
+half-density, $\sigma$ descent.  \emph{The fence (typed)}: the
+finite counting facts are \emph{E8-unspecific} --- specificity and
+the arch gluing are stage 2 (\texttt{PRIME.Z1.MOONSHOT.01}).  No
+marker move, no RH claim.
+Machine-checked: \veri{v714\_moonshot\_hecke\_groupoid.py}.
+\mE\ (tower facts, descent) $+$ \mO\ (stage 2: gluing, specificity,
+ingredient derivation)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The CAR continuum route
+(\texttt{QGEO.CARLIMIT.01}).}
+The quasi-free CAR route to the formal orbifold continuum limit
+($22$ checks, ${\sim}10$\,s; verdict
+\textsc{qgeo-car-rates-summable}).  All $6{+}1$ deck/twist channels
+are Schatten-norm Cauchy on $\varepsilon$-separated configurations
+($N$ up to $3072/6144$) with geometrically summable rates; the FH
+renormalization is fit-free lattice-derived (Barnes~$G$,
+$8.8\times10^{-7}$); the RP cone is stable; all four kill criteria
+clear.  The majorant lemma (L1)--(L3) is \emph{named} with constants
+and a classical proof route --- named, not proven:
+\texttt{GATE.QGEO} does \emph{not} move.  Deterministic.  No marker
+move.
+Machine-checked: \veri{v715\_qgeo\_car\_continuum.py}.
+(\textsc{measured}) (summable rates, stable RP cone) $+$ \mE\
+(lattice-derived renormalization) $+$ \mO\ (majorant lemma)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

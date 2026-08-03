@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`694` registered scripts · `771` ledger claims · `10` clusters.
+`709` registered scripts · `787` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (214 scripts)
+### `core` — Compiler core & the E₈ glue  (229 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -439,6 +439,36 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v683_rank3_functionals, v563, v624, v627 · cited: 3 e8 audit bootstrap
 - **v700_orbit60_census** [-] `E8.ORBIT60.01` — die 60 μ4-Linien von E8 als kombinatorisches Objekt: Quotientengraph, σ/Uhr/Coxeter-Dynamik auf dem ORBIT-RAUM und ein STRIKTER Park-Test für die Kaskade 60 → 6 — **alle fünf Route
   - deps: v634_st31_structure, v629, v633, v634 · cited: 3 e8 audit bootstrap
+- **v701_big_picture_hunt** [E/X] `PRIME.KEYSTONE.01` — billige Maschinen-Reads für die Frage „liegt der fehlende Rest des RH-Programms schon im Korpus?“ — **der KEYSTONE [E]: die deployte Fensterform B ist EXAKT die Sinusmomentform von
+  - deps: v695_z1_trace_operator, v677_w3_structure_theorem, v691_hecke_sos, v563 · cited: 3 e8 audit bootstrap
+- **v702_z1_lookahead** [O] `PRIME.Z1LOOKAHEAD.01` — das Lookahead-Problem: autonome zeta-freie Rekonstruktion des Primkamms aus dem Γ-Fluss — **FLOW-VERIFIER-NOT-GENERATOR: der volle wahre Kamm ist fluss-VERIFIZIERT (913 ≥ 898, jede
+  - deps: v698_z1_flow_recursion, v697_z1_uvarov, PRIME.Z1.OPERATOR.01, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v703_chain_tolerance_scaling** [X] `PRIME.CHAINTOL.01` — wie scharf beschränkt die Z1-Fluss-Induktion die Zählmassen? — **TOLERANCE-RH-GRADE: die pro Schritt nötige Massentoleranz schrumpft auf RH-Niveau (OVER-RH auf den feinen Fenstern)
+  - deps: v698_z1_flow_recursion, v702_z1_lookahead, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v704_chain_mass_law** [O] `PRIME.CHAINMASS.01` — sagt eine GESCHLOSSENE Formel (kein Slot-Fit, kein Fenster-Skalar) die Zählmassen aus dem Fluss vorher? — **G1-OPEN: das beste geschlossene Gesetz ist C2 (Null-Reflexionskoeffizien
+  - deps: v703_chain_tolerance_scaling, v697_z1_uvarov, v563 · cited: 3 e8 audit bootstrap
+- **v705_chain_deck_sector** [E] `QGEO.DECKSECTOR.01` — **die drei Digamma-Kanäle der ζ-Arch-Dichte SIND die drei Deck-Sektoren des 48-Site-NS-Lifts: exakte Turmspuren der v623-Deck-Sektoren mit den v628-Twists {1/6, 1/2, 5/6}, Kanal fü
+  - deps: v701_big_picture_hunt, QGEO.ORBIFOLD.01, v623, v628 · cited: 3 e8 audit bootstrap, research contracts
+- **v706_chain_weyl_mass** [E] `PRIME.WEYLMASS.01` — ist das exakte Massengesetz eine Auswertung der m-/Schur-Funktion des Hintergrund-Operators? — **WEYL-NULL: die Punktauswertungs-Lesart ist FALSIFIZIERT (K2-Median 0.3993)** — MIT 
+  - deps: v704_chain_mass_law, v696_z1_jacobi, v563 · cited: 3 e8 audit bootstrap
+- **v707_chain_section_edge** [E/O] `PRIME.SECTIONEDGE.01` — **EDGE-EXACT-SELECTION-OPEN: die Kantenformel ist eine RESOLVENT-IDENTITÄT (Christoffel–Darboux-Form), exakt auf 3e-13 [E]; die Voll-Leiter-Kante pinnt die Masse auf 2.6e-04**; die
+  - deps: v697_z1_uvarov, v704_chain_mass_law, v563 · cited: 3 e8 audit bootstrap
+- **v708_chain_position_functional** [O] `PRIME.POSFUNC.01` — welches Funktional fixiert die Korridorposition ~0.53? — **FUNCTIONAL-OPEN: das beste ist das LEVINSON-ENERGIE-EXTREMUM E_{N−1}: Median 0.9986, max. Abweichung 11.7% — und es TRANS
+  - deps: v707_chain_section_edge, v563 · cited: 3 e8 audit bootstrap
+- **v709_chain_zero_layer** [-] `PRIME.ZEROLAYER.01` — ist das S-F-Selektionsresiduum eine Nullstellen-Schicht? — **LAYERING-REJECTED: in allen getesteten Projektionen trägt das Residuum KEINE Nullstellen-Signatur (beste corr 0.042 = S
+  - deps: v708_chain_position_functional, v563, v589 · cited: 3 e8 audit bootstrap, research contracts
+- **v710_chain_two_stage_hecke** [E/X] `PRIME.TWOSTAGE.01` — der zweistufige Hecke-Selektor fürs G1-Residuum — **der Memo-Kill FEUERTE (max. Gesamtabweichung 6.15% > 2%-Bar) — das zusammengesetzte geschlossene Gesetz ist tot wie deklariert; 
+  - deps: v708_chain_position_functional, v686_geometric_sos, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v711_chain_firstbirth_scaling** [-] `PRIME.FIRSTBIRTH.01` — fit-freie Messung der Erstgeburts-Selektionsfehler-Skalierung mit der Fensterauflösung — **CONTINUUM-SELECTOR-MEASURED: der Erstgeburtsfehler KONVERGIERT unter Verfeinerung — Promo
+  - deps: v710_chain_two_stage_hecke, v707_chain_section_edge, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v712_rank3_transverse_deck** [E/C/O/X] `PRIME.RANK3TRANSV.01` — Transversal-Skalarisierung × Deck-Triplikation für die zehn offenen T-B-Fenster bei Zitationshöhe 3e12 — **der P4-Satz: die v692-Margen-Identität wird transversal SKALARISIERT (die
+  - deps: v692_rank3_lockgram, v693_rank3_density_close, v684_rank3_zeroside, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v713_l1_montage** [E/O] `PRIME.L1MONTAGE.01` — die erste explizite Montage des KONTINUUMS-Kandidaten des Z1-Operators und der Maschinentest seiner deklarierten Limes-Gates — **L1-ASSEMBLED-MEASURED: der Kandidat ist MONTIERT (S
+  - deps: v705_chain_deck_sector, v697_z1_uvarov, v695_z1_trace_operator, PRIME.Z1.OPERATOR.01, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v714_moonshot_hecke_groupoid** [E] `PRIME.MOONSHOT.01` — der E8-Hecke-Gruppoid-Turm: ist die ATOM-SCHICHT des Weil-Maßes gruppoid-intern? — **MOONSHOT-GO: (i) die primitiven Grade des Z[i]-E8-Hecke-Turms sind EXAKT die Gauß-Primnormen (M
+  - deps: v713_l1_montage, v695_z1_trace_operator, PRIME.Z1.MOONSHOT.01, v563 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v715_qgeo_car_continuum** [E/X] `QGEO.CARLIMIT.01` — die quasifreie CAR-Route zum formalen Orbifold-Kontinuumslimes (GATE.QGEO), erste Scheibe — **QGEO-CAR-RATES-SUMMABLE: alle 6+1 Deck/Twist-Kanäle sind Schatten-Norm-Cauchy auf ε-se
+  - deps: v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v699_cone_dynamics · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1453,22 +1483,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×67, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v312`×16
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×80, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v689_gaussian_code_bridge** — `E8.GAUSSCODE.01`
-- **v690_quartic_half** — `E8.QUARTICHALF.01`
-- **v691_hecke_sos** — `PRIME.HECKESOS.01`
-- **v692_rank3_lockgram** — `PRIME.RANK3LOCKGRAM.01`
-- **v693_rank3_density_close** — `PRIME.RANK3DENSITY.01`
-- **v694_interpolation_lemma_closure** — `PRIME.INTERPCLOSURE.01`
-- **v695_z1_trace_operator** — `PRIME.Z1MEASURE.01`
-- **v696_z1_jacobi** — `PRIME.Z1JACOBI.01`
-- **v697_z1_uvarov** — `PRIME.Z1UVAROV.01`
-- **v698_z1_flow_recursion** — `PRIME.Z1FLOWREC.01`
-- **v699_cone_dynamics** — `QGEO.CONEDYN.01`
-- **v700_orbit60_census** — `E8.ORBIT60.01`
+- **v704_chain_mass_law** — `PRIME.CHAINMASS.01`
+- **v705_chain_deck_sector** — `QGEO.DECKSECTOR.01`
+- **v706_chain_weyl_mass** — `PRIME.WEYLMASS.01`
+- **v707_chain_section_edge** — `PRIME.SECTIONEDGE.01`
+- **v708_chain_position_functional** — `PRIME.POSFUNC.01`
+- **v709_chain_zero_layer** — `PRIME.ZEROLAYER.01`
+- **v710_chain_two_stage_hecke** — `PRIME.TWOSTAGE.01`
+- **v711_chain_firstbirth_scaling** — `PRIME.FIRSTBIRTH.01`
+- **v712_rank3_transverse_deck** — `PRIME.RANK3TRANSV.01`
+- **v713_l1_montage** — `PRIME.L1MONTAGE.01`
+- **v714_moonshot_hecke_groupoid** — `PRIME.MOONSHOT.01`
+- **v715_qgeo_car_continuum** — `QGEO.CARLIMIT.01`
 

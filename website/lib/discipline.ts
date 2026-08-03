@@ -62,33 +62,33 @@ export interface DisciplineStats {
 export const DISCIPLINE: DisciplineStats =
 {
   "ledger": {
-    "rows": 771,
-    "active": 766,
+    "rows": 787,
+    "active": 782,
     "retired": 5,
     "dist": {
-      "E": 181,
+      "E": 192,
       "C": 259,
-      "O": 289,
+      "O": 290,
       "X": 37,
       "AXIOM": 2,
-      "OTHER": 3
+      "OTHER": 7
     },
-    "killRows": 243
+    "killRows": 250
   },
   "suite": {
-    "modules": 694,
-    "checkSites": 6847,
-    "mustfailOccurrences": 1698,
-    "mustfailModules": 263,
-    "eMarks": 4015,
-    "cMarks": 1438,
-    "seededModules": 102,
+    "modules": 709,
+    "checkSites": 7005,
+    "mustfailOccurrences": 1766,
+    "mustfailModules": 274,
+    "eMarks": 4089,
+    "cMarks": 1440,
+    "seededModules": 106,
     "sympyModules": 406
   },
   "contracts": {
-    "ledgerRows": 54,
-    "withKillCriteria": 34,
-    "texMentions": 20
+    "ledgerRows": 58,
+    "withKillCriteria": 36,
+    "texMentions": 21
   },
   "replay": {
     "sample": [
@@ -111,20 +111,20 @@ export const DISCIPLINE: DisciplineStats =
   "anchors": {
     "recomputed": 5,
     "citations": {
-      "Jacobi": 22,
-      "Hecke": 11,
+      "Jacobi": 24,
+      "Hecke": 14,
       "Construction A": 3,
       "Suzuki": 24,
-      "Weil": 55,
+      "Weil": 56,
       "Eisenstein": 23
     },
-    "arxivModules": 51
+    "arxivModules": 52
   },
   "lean": {
-    "modules": 57
+    "modules": 59
   },
   "openGates": {
-    "count": 285
+    "count": 286
   }
 };
 
