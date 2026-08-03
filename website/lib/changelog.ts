@@ -43,6 +43,1093 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-03",
+    "dateLabel": "2026-08-03 · LIV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the keystone round: EIGHT promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v727"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v734"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "90"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green) — THE WALL IN FOUR EQUIVALENT LANGUAGES, the K1 diagram closed classically, and honest graves for two strategy routes. THE WALL, MAXIMALLY PRECISE ("
+      },
+      {
+        "k": "c",
+        "v": "v727"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "l1-determined-wall-typed"
+      },
+      {
+        "k": "t",
+        "v": "): determinacy of the limit moment problem is CLASSICAL (the raw "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-measure does not carry the limit; Gauss-damped Weil moments identify against the closed geometric side at "
+      },
+      {
+        "k": "m",
+        "v": "1.4\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " over "
+      },
+      {
+        "k": "m",
+        "v": "m_0..m_{16}"
+      },
+      {
+        "k": "t",
+        "v": "; the measured Gauss/Freud band "
+      },
+      {
+        "k": "m",
+        "v": "[0.638,1.117]"
+      },
+      {
+        "k": "t",
+        "v": " makes Carleman diverge) and the identification chain (a)–(d) contains RH NOWHERE (Weil 1952 unconditional); the seeming paradox resolves honestly — “"
+      },
+      {
+        "k": "m",
+        "v": "T_h"
+      },
+      {
+        "k": "t",
+        "v": " is PD” is a MEASUREMENT per "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": ", not a theorem (scramble: Levinson death at depth "
+      },
+      {
+        "k": "m",
+        "v": "61"
+      },
+      {
+        "k": "t",
+        "v": "); the one remaining statement is PD PERSISTENCE: infinitely many PD windows suffice for RH, each window a FINITE Levinson decision, measured "
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": " (min headroom "
+      },
+      {
+        "k": "m",
+        "v": "0.718"
+      },
+      {
+        "k": "t",
+        "v": "); the converse is NOT shown; equivalently (Riesz–Haviland): the geometric side defines a positive measure on "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{R}"
+      },
+      {
+        "k": "t",
+        "v": ". THE FOURTH LANGUAGE ("
+      },
+      {
+        "k": "c",
+        "v": "v734"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "s1-canonical-suzuki-bridged"
+      },
+      {
+        "k": "t",
+        "v": "): the Jacobi/Wheeler data define via an EXACT Krein correspondence (Weyl identity "
+      },
+      {
+        "k": "m",
+        "v": "1.6\\times10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": ", nilpotency "
+      },
+      {
+        "k": "m",
+        "v": "3.1\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": ") a canonical-system Hamiltonian per window with "
+      },
+      {
+        "k": "m",
+        "v": "H_h\\ge0"
+      },
+      {
+        "k": "t",
+        "v": " MEASURED on all nine (min "
+      },
+      {
+        "k": "m",
+        "v": "l_k=0.033..0.377"
+      },
+      {
+        "k": "t",
+        "v": "); the boundary phase carries the "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma"
+      },
+      {
+        "k": "t",
+        "v": "-side at scale EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": "; scramble breaks the Wheeler/Krein chain at depth "
+      },
+      {
+        "k": "m",
+        "v": "31"
+      },
+      {
+        "k": "t",
+        "v": "; Suzuki (JFA 2021, GRH "
+      },
+      {
+        "k": "m",
+        "v": "\\equiv"
+      },
+      {
+        "k": "t",
+        "v": " positivity of the canonical family, unconditional only "
+      },
+      {
+        "k": "m",
+        "v": "\\omega>1"
+      },
+      {
+        "k": "t",
+        "v": ") becomes the fourth anchor — so the wall now reads: moments (Hankel-PD) "
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": " state (Levinson-PD) "
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": " symbol (Fejér "
+      },
+      {
+        "k": "m",
+        "v": "\\ge0"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": " Hamiltonian (Krein "
+      },
+      {
+        "k": "m",
+        "v": "l_k>0"
+      },
+      {
+        "k": "t",
+        "v": "), each finitely decidable per window, the "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "-quantifier IS the RH substance. THE K1 DIAGRAM CLOSES CLASSICALLY: the memo's locality/symmetry mechanism for the "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}900\\times"
+      },
+      {
+        "k": "t",
+        "v": " super-resolution is DEAD on two preregistered bars that die honestly ("
+      },
+      {
+        "k": "c",
+        "v": "v728"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "11/13"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "k1b-atom-pinning"
+      },
+      {
+        "k": "t",
+        "v": ") — what carries the scale is ATOM PINNING of the raw measure (Nevai-type; lab rate "
+      },
+      {
+        "k": "m",
+        "v": "K^{-1.84}"
+      },
+      {
+        "k": "t",
+        "v": ", weight ratio "
+      },
+      {
+        "k": "m",
+        "v": "\\to1.03"
+      },
+      {
+        "k": "t",
+        "v": ", real correlate "
+      },
+      {
+        "k": "m",
+        "v": "0.64"
+      },
+      {
+        "k": "t",
+        "v": "; off-line pairs break POSITIVITY instead of mislocating nodes); behind it the explicit PINNING LEMMA is certified ("
+      },
+      {
+        "k": "c",
+        "v": "v730"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": ": residual bound "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Kato–Temple, one-line proofs, "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " violations at "
+      },
+      {
+        "k": "m",
+        "v": "598"
+      },
+      {
+        "k": "t",
+        "v": " peaks"
+      },
+      {
+        "k": "m",
+        "v": "/535"
+      },
+      {
+        "k": "t",
+        "v": " matched zeros incl. ALL "
+      },
+      {
+        "k": "m",
+        "v": "377"
+      },
+      {
+        "k": "t",
+        "v": " of the largest window, SHA256-frozen; the certificate SATURATES at window width — sub-width precision needs atomicity beyond every window depth "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " L1, the sharpest localization); the gap layer: strong measured universality KILLED on the preregistered bar ("
+      },
+      {
+        "k": "c",
+        "v": "v731"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "5/5"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "gap-univ-killed"
+      },
+      {
+        "k": "t",
+        "v": ": deviation plateaus "
+      },
+      {
+        "k": "m",
+        "v": "0.33"
+      },
+      {
+        "k": "t",
+        "v": "; the uniform-in-"
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " Szeg"
+      },
+      {
+        "k": "t",
+        "v": "o"
+      },
+      {
+        "k": "t",
+        "v": " condition breaks like "
+      },
+      {
+        "k": "m",
+        "v": "h^{-0.64}"
+      },
+      {
+        "k": "t",
+        "v": "; a fixed-window CONDITIONAL candidate remains via Lubinsky 2009"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "Levin–Lubinsky 2008"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "Avila–Last–Simon 2010"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "Totik 2009) — so: capture theorem (v721) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " pinning lemma (v730) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " conditional gap rigidity (v731) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " atom structure ("
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " L1) "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " K1. TWO HONEST GRAVES: naive reflection positivity is DEAD on the truncations ("
+      },
+      {
+        "k": "c",
+        "v": "v729"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "5/5"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "rp-dead-on-truncations"
+      },
+      {
+        "k": "t",
+        "v": ": the total window fails plain AND KMS-twisted RP at full scale; the FE symmetry buys exactly the atom-free Connes–Consani 2021 regime "
+      },
+      {
+        "k": "m",
+        "v": "|u|<\\log 2"
+      },
+      {
+        "k": "t",
+        "v": " and no more; bulk universality EMERGING at gap points, "
+      },
+      {
+        "k": "m",
+        "v": "0.304\\to0.150"
+      },
+      {
+        "k": "t",
+        "v": "; the pinning lab reproduces the super-resolution scale, spacing/error up to "
+      },
+      {
+        "k": "m",
+        "v": "211\\times"
+      },
+      {
+        "k": "t",
+        "v": "); and the DIRECT transfer of the Connes–Consani Sonin compression is DEAD ("
+      },
+      {
+        "k": "c",
+        "v": "v732"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "21/21"
+      },
+      {
+        "k": "t",
+        "v": " construction checks, "
+      },
+      {
+        "k": "t",
+        "v": "sonin-rank-grows"
+      },
+      {
+        "k": "t",
+        "v": ": bad rank "
+      },
+      {
+        "k": "m",
+        "v": "19\\to86"
+      },
+      {
+        "k": "t",
+        "v": "; fenced — not the CC mechanism itself, retuning forbidden). PLUS THE FIRST EXACT BRIDGE INTO CONNES' FRAMEWORK ("
+      },
+      {
+        "k": "c",
+        "v": "v733"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "gate0-weak-functor"
+      },
+      {
+        "k": "t",
+        "v": ": the "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-descended groupoid maps by an exact coefficient-one graded "
+      },
+      {
+        "k": "m",
+        "v": "*"
+      },
+      {
+        "k": "t",
+        "v": "-algebra functor candidate into the "
+      },
+      {
+        "k": "m",
+        "v": "S"
+      },
+      {
+        "k": "t",
+        "v": "-local periodic-orbit subalgebra, "
+      },
+      {
+        "k": "m",
+        "v": "S=\\{\\infty,2,3,5\\}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "6859"
+      },
+      {
+        "k": "t",
+        "v": " convolutions at deviation "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa\\equiv1"
+      },
+      {
+        "k": "t",
+        "v": " at all three places; full-algebra extension typed OPEN). THE LITERATURE ANCHOR, as the dual council reads it: the wall has three names — Weil 1952 (explicit-formula positivity), Connes 1999"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "Connes–Consani 2021 (trace formula"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "atom-free regime), Suzuki 2021 (canonical-system positivity) — with Meyer 2005 the proven boundary line (unconditional spectral realization WITHOUT positivity); TFPT adds the computable zeta-free truncation framework with emergent prime places and per-window decidability. NO RH claim, NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (8)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v727_l1_identification.py"
+        },
+        {
+          "k": "t",
+          "v": " (11), "
+        },
+        {
+          "k": "c",
+          "v": "v728_k1b_superresolution.py"
+        },
+        {
+          "k": "t",
+          "v": " (13; the two preregistered memo-bar deaths B1.1/B2.2 encoded as the expected promoted outcome), "
+        },
+        {
+          "k": "c",
+          "v": "v729_strat2_rp_universality.py"
+        },
+        {
+          "k": "t",
+          "v": " (5), "
+        },
+        {
+          "k": "c",
+          "v": "v730_strat2_pinning_lemma.py"
+        },
+        {
+          "k": "t",
+          "v": " (12), "
+        },
+        {
+          "k": "c",
+          "v": "v731_strat2_gap_universality.py"
+        },
+        {
+          "k": "t",
+          "v": " (5), "
+        },
+        {
+          "k": "c",
+          "v": "v732_strat3_sonin_prolate.py"
+        },
+        {
+          "k": "t",
+          "v": " (21), "
+        },
+        {
+          "k": "c",
+          "v": "v733_strat3_gate0_census.py"
+        },
+        {
+          "k": "t",
+          "v": " (13), "
+        },
+        {
+          "k": "c",
+          "v": "v734_s1_canonical.py"
+        },
+        {
+          "k": "t",
+          "v": " (10) — "
+        },
+        {
+          "k": "m",
+          "v": "90"
+        },
+        {
+          "k": "t",
+          "v": " checks, each module promoted verbatim from its discovery probe with numbers frozen from the promotion run (all eight probes re-run before promotion; outputs identical modulo runtimes; sibling imports rewired to the promoted "
+        },
+        {
+          "k": "c",
+          "v": "v696"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v714"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v716"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v721"
+        },
+        {
+          "k": "t",
+          "v": " modules)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 8 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.L1IDENT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.K1BPIN.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RPUNIV.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PINLEMMA.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GAPUNIV.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.SONIN.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GATE0.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.S1CANON.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated LIV keystone note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.MOONSHOT.01"
+        },
+        {
+          "k": "t",
+          "v": " (L2 resolved classically as atom pinning "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " pinning lemma; L1 typed in four equivalent languages; the two strategy kills and the weak functor recorded; the literature anchor; stays OPEN); "
+        },
+        {
+          "k": "m",
+          "v": "798\\to806"
+        },
+        {
+          "k": "t",
+          "v": " rows."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new section “The keystone round: the wall in four equivalent languages” (the maximally precise wall statement, the four languages, the literature-anchor paragraph with Weil 1952"
+        },
+        {
+          "k": "m",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": "Connes 1999"
+        },
+        {
+          "k": "m",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": "Meyer 2005"
+        },
+        {
+          "k": "m",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": "Connes–Consani 2021"
+        },
+        {
+          "k": "m",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": "Suzuki 2021, the closed K1 diagram, the two graves, the weak functor); the two stale “open K1b question” spots in the moonshot-arc section now point forward. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.MOONSHOT.01"
+        },
+        {
+          "k": "t",
+          "v": " update IV — the contract at its final state of the day. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 8 new audit blocks."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “the wall in four languages” (with the explicit no-proof fence); counters "
+        },
+        {
+          "k": "m",
+          "v": "720\\to728"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v734"
+        },
+        {
+          "k": "t",
+          "v": "; README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "728"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v734"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves anywhere: PD persistence remains a MEASUREMENT per window ("
+        },
+        {
+          "k": "m",
+          "v": "9/9"
+        },
+        {
+          "k": "t",
+          "v": " is not a universal quantifier); the two kills are honest deaths of strategy routes, cleanly fenced (the CC mechanism itself untouched); the weak functor is a finite-basis statement, the full-algebra extension open; no RH statement anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-03",
     "dateLabel": "2026-08-03 · LIII",
     "heading": [
       {

@@ -5151,6 +5151,158 @@ $= N(1{+}i)^2$, the sharp Pimsner--Popa constant $\lambda^*=1/4$
 CAR/Fock layer and the Ramond dressing stay numeric.
 \par\smallskip
 
+\par\smallskip\noindent\textbf{L1: determinacy classical, the wall
+typed (\texttt{PRIME.L1IDENT.01}).}
+Identification of the vague limit via moment-problem determinacy
+($11$ checks, ${\sim}2$\,s; verdict
+\textsc{l1-determined-wall-typed}).  The raw $\tau$-measure does not
+carry the limit (naive moment slopes $2.254/4.245$); in the
+Gauss-damped Weil frame the ladder moments identify against the
+closed geometric side ($1.4\times10^{-3}$ over $m_0..m_{16}$);
+Gauss/Freud band $[0.638,1.117]$ $\Rightarrow$ Carleman:
+\emph{determined}, RH-free.  The chain (a)--(d) closes with Weil
+1952 (unconditional); the paradox resolves: ``$T_h$ PD'' is a
+\emph{measurement} per $h$ (scramble: Levinson death at depth
+$61$).  \emph{The wall}: PD persistence --- infinitely many PD
+windows suffice for RH; finitely decidable per window, measured
+$9/9$; converse not shown.  Equivalent (Riesz--Haviland): the
+geometric side defines a positive measure on $\mathbb R$.  No
+marker move, no RH claim.
+Machine-checked: \veri{v727\_l1\_identification.py}.
+\mE\ (determinacy chain, identification) $+$ (\textsc{measured})
+(PD $9/9$) $+$ \mO\ (the $h$-quantifier $=$ the wall)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{K1b: the super-resolution is atom
+pinning (\texttt{PRIME.K1BPIN.01}).}
+Why do the nodes sit ${\sim}900\times$ below the certified capture
+radius? ($13$ checks, ${\sim}31$\,s; verdict
+\textsc{k1b-atom-pinning}; the two \emph{preregistered} memo bars
+B1.1/B2.2 die honestly --- the expected promoted outcome).  The
+memo's Christoffel-locality/asymmetry mechanism is \emph{dead}
+(corr ${\sim}0$, direct first-order test included); the carrying
+mechanism is \emph{atom pinning} of the raw measure (Nevai-type):
+lab rate $K^{-1.84}$, node-weight ratio $\to1.03$, real-data
+correlate $0.64$.  Off-line pairs break \emph{positivity} (Levinson
+death) instead of mislocating nodes --- consistent with the v688
+falsifier.  SHA256-frozen zeta-free.  No marker move, no RH claim.
+Machine-checked: \veri{v728\_k1b\_superresolution.py}.
+(\textsc{measured}) (mechanism adjudication) $+$ \mX\ (memo
+mechanism) $+$ \mO\ (raw atom structure $=$ L1)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{RP dead, bulk emerging, pinning
+supported (\texttt{PRIME.RPUNIV.01}).}
+Three strategy-council measurements ($5$ checks, ${\sim}2$\,s;
+verdicts \textsc{rp-dead-on-truncations} $/$
+\textsc{univ-bulk-emerging} $/$ \textsc{pin-mechanism-supported}).
+Sector anatomy exact (pole Hankel-PSD, arch Hankel-NSD); the total
+fails plain \emph{and} KMS-twisted reflection positivity
+(mineig/scale $=-1.0$): the naive OS route is dead --- FE symmetry
+buys exactly the atom-free CC-2021 regime $|u|<\log2$, no more.
+Gap-point sinc deviation halves along the $K$-ladder
+($0.304\to0.150$); peak points not in the bulk class.  One inserted
+Fej\'er peak reproduces the super-resolution scale (spacing/error up
+to $211\times$).  Zeta-free.  No marker move, no RH claim.
+Machine-checked: \veri{v729\_strat2\_rp\_universality.py}.
+\mE\ (sector anatomy) $+$ \mX\ (naive RP) $+$ (\textsc{measured})
+(bulk emergence, pinning lab)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The pinning lemma, certified
+(\texttt{PRIME.PINLEMMA.01}).}
+The explicit lemma behind K1b ($12$ checks, ${\sim}29$\,s).
+L-PIN-1 (residual bound, Wilkinson-type) and L-PIN-2 (Kato--Temple;
+Parlett 11.7.1), one-line proofs; at an atom $K_K(x^*,x^*)\le1/m$
+for all $K$ $\Rightarrow$ bound $\sim\sqrt{\varepsilon/m}/K$ ---
+exactly the measured K1b correlate.  $0$ violations: synthetic scan
+($54$ configs) \emph{and} real windows --- $598$ peaks, $535$
+matched band zeros incl.\ \emph{all} $377$ of the largest window
+(SHA256 freeze before the target load).  Comb coherence is not the
+mechanism (flatness $1.05$).  \emph{Saturation}: the certificate
+stops at the window resolution at every $K$ (certified
+$5.3\times10^{-1}\,\tau$ vs measured $2.2\times10^{-4}\,\tau$) ---
+sub-width certification needs atomicity beyond every window depth
+$=$ L1, sharply localized.  No marker move, no RH claim.
+Machine-checked: \veri{v730\_strat2\_pinning\_lemma.py}.
+\mE\ (lemma pair, $0$ violations) $+$ (\textsc{measured})
+(exponents, saturation) $+$ \mO\ (L1 atomicity)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Gap universality: strong form killed
+(\texttt{PRIME.GAPUNIV.01}).}
+The gap layer on the finer $K$-ladder, zeta-free ($5$ checks,
+${\sim}1$\,s; verdict \textsc{gap-univ-killed}).  The median
+sinc-shape deviation plateaus at $0.33$ ($0.568\to0.389\to0.284\to
+0.332$; best point $0.15$) --- the preregistered kill bar fires.
+Regularity proxy monotone to cap $=1$ ($0.9995$); fixed-$h$ gap
+floor positive on all $9$ windows; but the uniform-in-$h$
+Szeg\H{o} condition breaks like $h^{-0.64}$: the $h$-limit gap
+layer runs through the atomic limit ($=$ L1).  Remains: a
+fixed-window \emph{conditional} candidate (Lubinsky 2009;
+Levin--Lubinsky 2008; Avila--Last--Simon 2010; Totik 2009).  No
+marker move, no RH claim.
+Machine-checked: \veri{v731\_strat2\_gap\_universality.py}.
+\mX\ (strong measured form) $+$ (\textsc{measured}) (condition
+ladder) $+$ \mO\ (conditional fixed-window theorem)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Sonin compression: the direct
+transfer dies (\texttt{PRIME.SONIN.01}).}
+Finite Sonin--prolate compression on the windows ($21$ construction
+checks, ${\sim}17$\,s; verdict \textsc{sonin-rank-grows}, the
+preregistered kill).  One-cell self-dual projections
+($2U_0T_0/\pi=1$ exactly), odd sector, whitened defect analysis
+(rank bound verified, reconstruction $2\times10^{-10}$).  Bad rank
+grows $19\to86$ (bar $\le4$); defect excess $\to1.3\times10^{5}$;
+one E8/pole condition neither stable nor sufficient.  \emph{Fence}:
+kills the chosen cutoff on \emph{these} truncations, not the
+Connes--Consani mechanism (atom-free adelic regime); retuning
+forbidden.  No marker move, no RH claim.
+Machine-checked: \veri{v732\_strat3\_sonin\_prolate.py}.
+\mE\ (construction) $+$ \mX\ (direct CC transfer)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Gate 0: the weak functor into
+Connes' algebra (\texttt{PRIME.GATE0.01}).}
+The $S=\{\infty,2,3,5\}$ orbit-algebra census ($13$ checks,
+${\sim}1$\,s; verdict \textsc{gate0-weak-functor}).  Non-tautological
+input from the Gaussian HNF tower (place $2$ ramified $/$ $3$ inert
+$/$ $5$ split); HNF-cell division $+$ $\sigma$-orbit quotient leave
+$\kappa\equiv1$ at all three places.  On the finite Laurent basis
+all $6859$ convolution coefficients agree with deviation $0$
+(integer/Fraction exact); involution, grading/time action, regular
+\emph{and} closed-orbit traces preserved.  \emph{Not proved}:
+extension to the full $S$-local convolution algebra (topology,
+adeles, isotropy, KMS).  No marker move, no RH claim.
+Machine-checked: \veri{v733\_strat3\_gate0\_census.py}.
+\mE\ (exact census, $\kappa\equiv1$) $+$ \mO\ (full-algebra
+extension)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{S1: the canonical system and the
+Suzuki bridge (\texttt{PRIME.S1CANON.01}).}
+The wall in the fourth language ($10$ checks, ${\sim}1$\,s; verdict
+\textsc{s1-canonical-suzuki-bridged}).  Krein correspondence
+\emph{exact}: rank-one canonical steps from the Jacobi/Wheeler data
+(nilpotency $3.1\times10^{-16}$), Weyl identity to
+$1.6\times10^{-15}$ ($4$ complex $z\times9$ windows).  $H_h\ge0$
+\emph{measured}: min $l_k=0.033..0.377$, all positive.
+Gauge-invariant data Cauchy (disks collapse with rate); bulk node
+density is equilibrium ($c_1=0$, honest negative partial finding);
+the \emph{boundary phase} carries the $\gamma$-side at scale
+exactly $1$ ($1.9$--$2.5\times10^{-2}$).  Scramble breaks the
+Wheeler/Krein chain at depth $31$.  \emph{Suzuki bridge} (JFA 281
+(2021)): GRH $\equiv$ positivity of the canonical family,
+unconditional only $\omega>1$; our truncations are the first
+computable zeta-free family with measurable $H\ge0$ --- the fourth
+language of the PD-persistence wall (with v727).  No marker move,
+no RH claim.
+Machine-checked: \veri{v734\_s1\_canonical.py}.
+\mE\ (Krein correspondence) $+$ (\textsc{measured}) ($H_h\ge0$,
+boundary phase) $+$ \mO\ (the $h$-quantifier)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

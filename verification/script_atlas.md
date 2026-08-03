@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`720` registered scripts · `798` ledger claims · `10` clusters.
+`728` registered scripts · `806` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (240 scripts)
+### `core` — Compiler core & the E₈ glue  (248 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -491,6 +491,22 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v78_vgeo_floor, v153_no_unit_theorem, v364_vgeo_sharpen, v274_scale_overdetermination, v401_metrology_closure, v339_firstprinciples_boundary · cited: 2 standard model, 3 e8 audit bootstrap, 4 frontier, research contracts
 - **v726_phys_car_pp_index** [E/O] `GNET.PPINDEX.01` — Pimsner-Popa/Watatani-Index 4 auf der CAR-Leiter, mit HERGELEITETER μ₄-Wirkung und Ramond-Nullmoden-Test — **T2-SLICE-GO: die optimale PP-Konstante ist EXAKT ¼ (expliziter Rang-1-M
   - deps: v125_glue_qsystem, v148_fock_census, v722_phys_ramified_ns_r, v679 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v727_l1_identification** [E] `PRIME.L1IDENT.01` — Identifikation des vagen Limes via Momentenproblem-Determiniertheit und die maximale Präzisierung der Mauer — **L1-DETERMINED-WALL-TYPED: Determiniertheit ist KLASSISCH (Gauß-gedäm
+  - deps: PRIME.Z1.MOONSHOT.01, v720_moonshot_k2k3, v717_moonshot_state, v720, v717 · cited: 3 e8 audit bootstrap, research contracts
+- **v728_k1b_superresolution** [-] `PRIME.K1BPIN.01` — WARUM sitzen die Gauß-Knoten ~900× unter dem klassischen Einfang-Radius? — **K1B-ATOM-PINNING: der Memo-Mechanismus (Christoffel-Lokalität + Asymmetrie-Störung) ist TOT — die zwei 
+  - deps: v721_k1_node_capture, v718_moonshot_spectral, PRIME.FALSIFIER.01, v696 · cited: 3 e8 audit bootstrap, research contracts
+- **v729_strat2_rp_universality** [X] `PRIME.RPUNIV.01` — Reflexions-Positivität, Bulk-Universalität, Pinning-Labor — **A: RP-DEAD-ON-TRUNCATIONS — die naive Osterwalder–Schrader-Route ist auf Messniveau tot (Total-Fenster bricht plain UN
+  - deps: v717_moonshot_state, v728_k1b_superresolution, v696 · cited: 3 e8 audit bootstrap, research contracts
+- **v730_strat2_pinning_lemma** [E] `PRIME.PINLEMMA.01` — das explizite PINNING-LEMMA hinter der K1b-Super-Auflösung — **L-PIN-1 (Residuum-Schranke, Wilkinson-Typ) + L-PIN-2 (Kato–Temple), einzeilige Beweise: 0 Verletzungen im synthetisch
+  - deps: v728_k1b_superresolution, v721_k1_node_capture, v696 · cited: 3 e8 audit bootstrap, research contracts
+- **v731_strat2_gap_universality** [C/X] `PRIME.GAPUNIV.01` — Lücken-Schicht-Universalität mit feinerer K-Leiter und lokalen Szegő/Totik-Bedingungen, nullstellenfrei — **GAP-UNIV-KILLED: die starke Messform der Lücken-Universalität ist TOT — 
+  - deps: v729_strat2_rp_universality, v730_strat2_pinning_lemma, v696 · cited: 3 e8 audit bootstrap, research contracts
+- **v732_strat3_sonin_prolate** [X] `PRIME.SONIN.01` — endliche Sonin-Prolate-Kompression auf TFPT-Fenstern, der direkte Connes–Consani-Transfer-Test — **SONIN-RANK-GROWS (präregistrierter KILL feuert): bad_rank wächst 19 → 86 über die
+  - deps: v716_moonshot_arch_glue, v718_moonshot_spectral, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v733_strat3_gate0_census** [E/O] `PRIME.GATE0.01` — der S = {∞,2,3,5}-lokale Orbit-Algebra-Zensus — **GATE0-WEAK-FUNCTOR: exakter Funktor-Kandidat vom σ-abgestiegenen TFPT-Gruppoid in Connes' S-lokale periodische Orbit-Unteralgebra 
+  - deps: v714_moonshot_hecke_groupoid, v714 · cited: 3 e8 audit bootstrap, research contracts
+- **v734_s1_canonical** [E] `PRIME.S1CANON.01` — das kanonische System des Limes-Objekts mit dem Suzuki-Anker: die Mauer in der VIERTEN Sprache — **S1-CANONICAL-SUZUKI-BRIDGED: Krein-Korrespondenz EXAKT (Weyl-Identität 1.6e-15 üb
+  - deps: v727_l1_identification, v716_moonshot_arch_glue, v696 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1505,22 +1521,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×85, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v715_qgeo_car_continuum** — `QGEO.CARLIMIT.01`
-- **v716_moonshot_arch_glue** — `PRIME.MOONSHOT.02`
-- **v717_moonshot_state** — `PRIME.MOONSHOT.03`
-- **v718_moonshot_spectral** — `PRIME.MOONSHOT.04`
-- **v719_moonshot_traceformula** — `PRIME.MOONSHOT.05`
-- **v720_moonshot_k2k3** — `PRIME.MOONSHOT.06`
-- **v721_k1_node_capture** — `PRIME.K1CAPTURE.01`
-- **v722_phys_ramified_ns_r** — `GNET.RAMIFIED.01`
 - **v723_phys_modular_clock** — `FTRANSFER.STT.01`
 - **v724_phys_t3b_modular_flows** — `FTRANSFER.COCYCLE.01`
 - **v725_phys_vgeo_torsor_audit** — `VGEO.TORSOR.01`
 - **v726_phys_car_pp_index** — `GNET.PPINDEX.01`
+- **v727_l1_identification** — `PRIME.L1IDENT.01`
+- **v728_k1b_superresolution** — `PRIME.K1BPIN.01`
+- **v729_strat2_rp_universality** — `PRIME.RPUNIV.01`
+- **v730_strat2_pinning_lemma** — `PRIME.PINLEMMA.01`
+- **v731_strat2_gap_universality** — `PRIME.GAPUNIV.01`
+- **v732_strat3_sonin_prolate** — `PRIME.SONIN.01`
+- **v733_strat3_gate0_census** — `PRIME.GATE0.01`
+- **v734_s1_canonical** — `PRIME.S1CANON.01`
 

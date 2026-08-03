@@ -228,7 +228,8 @@ export type PrimeFrontVerdict =
   | "AFTERNOON-BUNDLING-ROUND-TEN"
   | "THIRD-DAILY-BUNDLING-ROUND-ELEVEN"
   | "MOONSHOT-MEASURED-NO-PROOF"
-  | "EVENING-BUNDLING-ROUND-TWELVE";
+  | "EVENING-BUNDLING-ROUND-TWELVE"
+  | "WALL-IN-FOUR-LANGUAGES";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -257,6 +258,26 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-03",
+    part: 0,
+    title:
+      "The keystone round — the wall in four equivalent languages (v727–v734, 90 new checks, all green; suite 720 → 728 scripts; NO RH claim, no marker moves). THE CENTRAL RESULT: the single open wall of this program — Weil positivity — is now machine-verified to be THE SAME statement in four classical languages, each finitely decidable per window, with the universal quantifier over the window depth h as the entire RH substance. (1) MOMENTS (v727, 11/11, L1-DETERMINED-WALL-TYPED): the moment problem of the truncation state is determinate CLASSICALLY (Carleman band 0.34–0.41 vs the 0.5 threshold), the identification chain for the vague limit at s = 1/2 contains RH nowhere, and the wall is EXACTLY Hankel-PD persistence of the window ladder — equivalently 'the geometric side is a positive measure on R', finitely decidable per window (9/9). (2) STATE (v730, 12/12, the pinning LEMMA): residual bound + Kato–Temple, one-line proofs from Levinson PD — 0 violations at 598 peaks / 535 zeros including ALL 377 frozen targets; the certificate saturates at window width, so sub-width precision NEEDS atomicity beyond every window depth — that is L1, the sharpest localization of what is missing. (3) SYMBOL (v729 + v731, honest kills): naive reflection positivity is DEAD on the truncations (5/5, RP-DEAD-ON-TRUNCATIONS — the FE symmetry buys exactly the Connes–Consani 2021 atom-free regime |u| < log 2 and nothing more), and the strong measured form of gap universality is KILLED (5/5, deviation plateaus at 0.33; the Szegő proxy is monotone toward 1 but the uniform condition breaks like h^−0.64; a conditional fixed-window theorem candidate remains, cited to Lubinsky / Levin–Lubinsky / ALS / Totik). (4) HAMILTONIAN (v734, 10/10, S1-CANONICAL-SUZUKI-BRIDGED): the Krein string correspondence is exact (1.6e-15), H_h ≥ 0 is MEASURED on all 9 windows (min l_k 0.033–0.377, the scramble control breaks at depth 31), and the boundary phase equals 2θ′_RS with scale exactly 1 — Suzuki's GRH criterion (2021) as the finite witness, the wall in the fourth language. THE K1 DIAGRAM CLOSES (v728, 13 checks, K1B-ATOM-PINNING; two preregistered memo bars die honestly): the symmetry mechanism for super-resolution is dead, atom pinning is measured (lab rate K^−1.84, weight ratio → 1.03, real correlate 0.64), and off-line mass shows up as PD BREAK, not mislocalization — so capture theorem + pinning lemma + conditional gap rigidity + atom structure = L1, the one remaining identification question. THE CONNES INTERFACE, honestly fenced: the direct transfer of the Connes–Consani Sonin compression onto the window discretization is DEAD (v732, 21/21 construction checks, kill fired: bad rank grows 19 → 86 — the CC mechanism itself is NOT touched), while Gate 0 delivers an EXACT weak functor from the σ-descended TFPT groupoid into Connes' S-local periodic-orbit subalgebra (v733, 13/13: S = {∞, 2, 3, 5}, 6859 convolutions at deviation 0, κ ≡ 1; extension to the full algebra open). LITERATURE ANCHORING, now explicit in the papers: Weil 1952 (positivity criterion), Connes 1999 (global trace formula), Meyer 2005 (unconditional spectral realization WITHOUT positivity — the proved boundary line), Connes–Consani 2021 (atom-free regime), Suzuki 2021 (canonical system, ω > 1) — the honest dual-council classification: the wall has three names in the literature; TFPT adds the computable, zeta-free truncation scaffold with emergent primes. PRIME.Z1.MOONSHOT.01 is updated to this final state and stays OPEN; positivity is untouched; NO statement about the Riemann Hypothesis is made.",
+    headline:
+      "The keystone round — the wall in four equivalent languages (v727–v734): moments (Hankel PD, determinacy classical), state (the pinning lemma, 0 violations on all 377 zeros), symbol (Fejér — with naive RP and strong gap universality honestly killed), Hamiltonian (Krein l_k > 0, Suzuki's criterion as finite witness) — each finitely decidable per window; the h-quantifier IS the RH substance. The K1 diagram closes onto L1. No RH claim.",
+    keyFacts: [
+      "Eight promotions v727–v734 (90 new checks, all green); suite 720 → 728 scripts; ledger +8 rows + the final PRIME.Z1.MOONSHOT.01 note — the contract stays OPEN",
+      "The wall in four languages, each finitely decidable per window: Hankel PD (moments, Carleman determinacy classical), Levinson PD (state), Fejér ≥ 0 (symbol), Krein l_k > 0 (Hamiltonian, Suzuki 2021 bridge exact at 1.6e-15)",
+      "The pinning lemma (v730): residual + Kato–Temple one-liners, 0 violations at 598 peaks / 535 zeros incl. all 377; the certificate saturates at window width — sub-width precision needs atomicity beyond every depth (= L1)",
+      "Honest kills: naive RP dead on truncations (FE buys exactly |u| < log 2, CC 2021), strong gap universality killed (h^−0.64), Sonin transfer dead (bad rank 19 → 86, CC mechanism itself not touched), K1b symmetry mechanism dead — atom pinning measured instead (K^−1.84)",
+      "Literature anchored: Weil 1952 / Connes 1999 / Meyer 2005 (the proved boundary: spectral realization without positivity) / Connes–Consani 2021 / Suzuki 2021 — the wall has three names; TFPT adds the computable zeta-free truncation scaffold with emergent primes",
+    ],
+    verdict: "WALL-IN-FOUR-LANGUAGES",
+    summary:
+      "v727–v734 promoted: the one open wall (Weil positivity) is machine-verified to be the same statement in four classical languages — moments, state, symbol, Hamiltonian — each finitely decidable per window, with the quantifier over all window depths as the entire RH substance. The K1 diagram closes onto the single identification question L1; naive RP, strong gap universality and the direct Sonin transfer are honestly killed. No RH claim, no marker moves.",
+    badge: "sandbox",
+    script: "v734_s1_canonical.py",
+  },
   {
     date: "2026-08-03",
     part: 0,
