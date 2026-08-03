@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`675` registered scripts · `747` ledger claims · `10` clusters.
+`685` registered scripts · `762` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (195 scripts)
+### `core` — Compiler core & the E₈ glue  (205 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -401,6 +401,26 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v678_zero_gap_theorem, v669_fejer_density, v666_turing_cert, v563, v589 · cited: 3 e8 audit bootstrap, research contracts
 - **v681_coverage_hole** [E/C/O] `PRIME.HOLECLOSED.01` — die letzte Lücke der punktweisen W2-Kette, (2500, 7.27e6) = 3.46 Dekaden, auf den drei benannten Pfaden attackiert und mit Split-Typisierung GESCHLOSSEN — **H3 ALS HAUPTHEBEL: der 
   - deps: v680_pinch_attack, v678_zero_gap_theorem, v669_fejer_density, v666_turing_cert, v563, v589 · cited: 3 e8 audit bootstrap, research contracts
+- **v682_lk_split_theta** [E/C] `PRIME.LKSPLIT.01` — OFFENSIVE 1 des Uniform-Positivitäts-Programms (PRIME.UNIFPOS.01): der nicht-zirkuläre Split B = L + K der deployten Fensterform konstruiert und auf der 5-Fenster-Familie × M-Leite
+  - deps: PRIME.UNIFPOS.01, PRIME.WEIL.OPERATOR.01, v677_w3_structure_theorem, v680_pinch_attack, v681_coverage_hole, v563, v643 · cited: 3 e8 audit bootstrap, research contracts
+- **v683_rank3_functionals** [E/C] `PRIME.RANK3FUNC.01` — der arithmetische Flaschenhals EXAKT gehoben: der Primeinfluss auf den tragenden 2×2-Gram-Block sind DREI lineare Funktionale S_j(a) der Comb-Gewichte (exakt: Assembly vs. unabhäng
+  - deps: v563_paper2_readouts, v587_w_closed_form, v576_cheb_loewner_edge, v563, v576, v587 · cited: 3 e8 audit bootstrap, research contracts
+- **v684_rank3_zeroside** [E/C] `PRIME.RANK3ZERO.01` — das K_M-Funktional durch die explizite Formel: **die exakte Nullstellen-Identität D = BND − RTERM + Σ z(γ) (Residuum ≤ 6.9e-06 am Referenzfenster, 22 491 Nullstellen bis T = 2e4 bu
+  - deps: v683_rank3_functionals, v589_zero_comb, v680_pinch_attack, v681_coverage_hole, v563, v589 · cited: 3 e8 audit bootstrap, research contracts
+- **v685_rank3_uniformity** [E/C/O] `PRIME.RANK3UNIF.01` — der Uniformitäts-Quantor GESCHLOSSEN (das Satz-Resultat der Rang-3-Kette): **die symbolische Envelope K_env(a,h) ≤ 0.9798 < 1 für ALLE vollständigen Fenster a ≥ 3.434 (62 von 67; k
+  - deps: v684_rank3_zeroside, v683_rank3_functionals, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v686_geometric_sos** [E/C/O/X] `PRIME.GEOMSOS.01` — der erste Machbarkeits-Schlag an der geometrischen Positivitätsquelle ('Q = Σ|l_j(v)|² aus TFPT-Geometrie, ohne ζ, ohne Nullstellen'): **die ZIRKELFREIE SPUR: Λ_geo(n) = Λ_L(n)/(1+
+  - deps: v625_prime_shadow, v613, v624, v625, v627, v643, v673 · cited: 3 e8 audit bootstrap, research contracts
+- **v687_extremal_kernel** [C] `PRIME.KERNELCLASS.01` — kann ein optimierter positiver bandbegrenzter Kern gleichen Typs die W2-Capture-Schwelle über A1 = 0.10076 heben? **STRUKTURSATZ: NEIN — das Pinning-Zertifikat 2πF_a₀(mπ/a₀) = 0 EX
+  - deps: v678_zero_gap_theorem, v669_fejer_density, v680_pinch_attack, v681_coverage_hole, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v688_interpolation_detector** [E/C] `PRIME.INTERP.01` — der kalibrierte Off-Line-Detektor von v677 S3 zum VOLLSTÄNDIGEN, explizit konstruktiven Falsifikator gemacht: **der Im-Kernel-Matched-Filter detektiert JEDES Off-Line-Quadrupel ab 
+  - deps: v677_w3_structure_theorem, v678_zero_gap_theorem, v680_pinch_attack, v681_coverage_hole, v563, v589 · cited: 3 e8 audit bootstrap, research contracts
+- **v689_gaussian_code_bridge** [E/X] `E8.GAUSSCODE.01` — **E8(Z[i])/(1+i) ≅ F₂⁴ EXAKT (Smith-Normalform; Standardmodell: |det| = 256 = 2⁸, SNF [1⁴,2⁴] — präsentationsunabhängig): der 240 = 15×16-Census (Nullklasse BEWEISBAR leer, jede Kl
+  - deps: v626_e8_code, v638_code_semantics, v634_st31_structure, v633_orbit60_quotient, v626, v634, v638 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v690_quartic_half** [E/X] `E8.QUARTICHALF.01` — ist G31 der holomorphe μ4-Schatten des E8-Compilers? AM LEBEN, mit dem ehrlichen Split: **die Verschwinde-Hälfte {2,14,18,30} ist WAHR aber TRIVIAL (μ4-Orbitfaktor, symbolisch bewi
+  - deps: v634_st31_structure, v647_st31_degree24, v634, v647, v654 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v691_hecke_sos** [E/C/X] `PRIME.HECKESOS.01` — OFFENSIVE 4 (Vertrag PRIME.W3.HECKE.SOS.01): Suche nach der prim-lokalen Faktorisierung A = B*B + P (P ⪰ 0) ohne Nullstellen-Input; sechs wörtliche Akzeptanzkriterien adjudiziert —
+  - deps: v677_w3_structure_theorem, v682_lk_split_theta, v683_rank3_functionals, v686_geometric_sos, PRIME.Z1.OPERATOR.01, v563 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1415,22 +1435,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×52, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v312`×16
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×59, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v312`×16
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v670_w3_block_deflation** — `PRIME.BLOCKDEFL.01`
-- **v671_lehmer_resonance** — `PRIME.LEHMERNULL.01`
-- **v672_li_corollary** — `PRIME.LICOROLLARY.01`
-- **v673_li_e4** — `PRIME.LIE4.01`
-- **v674_packet_garding** — `PRIME.PACKETGARD.01`
-- **v675_needle_mechanism** — `PRIME.NEEDLEMECH.01`
-- **v676_c1_mechanism** — `PRIME.C1MECH.01`
-- **v677_w3_structure_theorem** — `PRIME.W3STRUCT.01`
-- **v678_zero_gap_theorem** — `PRIME.ZEROGAP.01`
-- **v679_orbifold_continuum_os** — `QGEO.ORBOS.01`
 - **v680_pinch_attack** — `PRIME.PINCHBREAK.01`
 - **v681_coverage_hole** — `PRIME.HOLECLOSED.01`
+- **v682_lk_split_theta** — `PRIME.LKSPLIT.01`
+- **v683_rank3_functionals** — `PRIME.RANK3FUNC.01`
+- **v684_rank3_zeroside** — `PRIME.RANK3ZERO.01`
+- **v685_rank3_uniformity** — `PRIME.RANK3UNIF.01`
+- **v686_geometric_sos** — `PRIME.GEOMSOS.01`
+- **v687_extremal_kernel** — `PRIME.KERNELCLASS.01`
+- **v688_interpolation_detector** — `PRIME.INTERP.01`
+- **v689_gaussian_code_bridge** — `E8.GAUSSCODE.01`
+- **v690_quartic_half** — `E8.QUARTICHALF.01`
+- **v691_hecke_sos** — `PRIME.HECKESOS.01`
 

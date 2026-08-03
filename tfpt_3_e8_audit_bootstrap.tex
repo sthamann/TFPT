@@ -4258,6 +4258,253 @@ Machine-checked: \veri{v681\_coverage\_hole.py}.
 end-state)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The $L+K$ split and the relative form
+bound (\texttt{PRIME.LKSPLIT.01}).}
+Offensive 1 of the uniform-positivity program
+(\texttt{PRIME.UNIFPOS.01}): the non-circular split $B=L+K$ of the
+deployed odd-sector window form, constructed and measured on the
+5-window family $\times$ $M$-ladder ($20$ checks, ${\sim}14$\,s;
+verdict \textsc{lk-split-dies}).  \emph{Sign structure} \mE: the arch
+density is positive-definite with PSD tent-Toeplitz assembly; the
+deployed arch layer is its Pf-renormalized negative (frequency
+density $\Omega(t)$, sign change at $t^*=6.29$), indefinite on the
+odd sector.  \emph{Theta} (\textsc{measured}): per-split
+$\sup\theta=11.3$--$58.0$, every smooth $L$ indefinite; the trivial
+spectral split $\theta=0.998$ marks the pure-renaming floor.
+\emph{The death mechanism} (\textsc{measured}, the positive find):
+the extremal pencil direction sits at $t=\gamma_1=14.13$ ---
+\emph{found from primes $+$ digamma alone} --- with the spike law
+$\mu_{\max}\approx1+2\alpha/\Omega(t_{\mathrm{peak}})$ (median dev
+$0.127$) and $\theta\sim2.47\,\alpha$: the deployed windows
+\emph{resolve individual zeros}, so no smooth zero-free $L$
+satisfies $B\le(1+\theta)L$ with $\theta<1$; surviving directions:
+one-sided or multi-resolution.  No marker move, no RH claim.
+Machine-checked: \veri{v682\_lk\_split\_theta.py}.
+\mE\ (sign structure, assembly, AST zero-firewall) $+$
+(\textsc{measured}) (theta tables, death mechanism) $+$ \mC\
+(circularity typing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The rank-3 functionals, lifted exactly
+(\texttt{PRIME.RANK3FUNC.01}).}
+Offensive 2: the prime influence on the load-bearing $2\times2$ block
+of the parity-Toeplitz rank-3 theorem is three linear functionals
+$S_j(a)$ of the comb weights, extracted exactly (assembly vs
+independent sieve $4.9\times10^{-16}$; $19$ checks, ${\sim}2$\,s).
+\emph{The circularity verdict} (\textsc{measured}): all entrywise
+routes are class (c) --- the load-bearing absorption target T-B has
+min margin/budget $4.7\times10^{-7}$: the razor-thin margin demands
+$\sim10^{6}\times$ more than any per-entry input delivers (measured
+collective-cancellation gain $378$--$712$); T-ENTRY is class (a); the
+surviving det-level form has $\kappa_{\max}=0.0895\ll1$.  \emph{No
+five-line win}: $99.7\%$ of atoms violate the pointwise
+Cauchy--Schwarz structure; \emph{pret-breaks}: even a nonnegative
+pretentious measure drives $\det S<0$ --- the needed input is a
+pretentious-distance statement at the dual points.  No marker move,
+no RH claim.
+Machine-checked: \veri{v683\_rank3\_functionals.py}.
+\mE\ (exact functionals, sieve cross-check) $+$ (\textsc{measured})
+(circularity classes, CS/pretentious soundings) $+$ \mC\ (typing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The zero side of the rank-3 chain
+(\texttt{PRIME.RANK3ZERO.01}).}
+Offensive 2b: the one determinant functional treated by the explicit
+formula --- $D=\mathrm{BND}-\mathrm{RTERM}+\sum_\gamma z(\gamma)$,
+residuum $\le6.9\times10^{-6}$ on the reference window ($22\,491$
+budget-certified zeros to $T=2\times10^{4}$, RvM checkpoints, the
+Lehmer pair resolved), with the exact per-zero envelope
+$|z(\gamma)|\le2C_G/\gamma^2$ ($8$ checks, ${\sim}15$\,s; verdict
+\textsc{zone-pass} class (a)).  \emph{The unconditional kappa}:
+$\kappa_{\mathrm{unc}}=0.039$--$0.190<1$ on all five declared
+windows --- $\det S>0$ from the identity $+$ computed zeros $+$
+nothing else.  \emph{The zone mechanism quantified}: a zero
+\emph{at} the dual points would couple at $3.2\times\det M$; the
+largest real coupling is damped $\times634$ by the classical
+zero-free strip $\gamma\ge14.134$ (Gram/Hutchinson, unconditional)
+--- the strip \emph{is} the anti-pretentious input.  Honest: T-B
+(absorption, $\sim2\times10^{-5}\det M$) untouched; the missing
+uniformity quantifier named ($\to$ v685).  No marker move, no RH
+claim.
+Machine-checked: \veri{v684\_rank3\_zeroside.py}.
+\mE\ (explicit-formula identity, budget-certified zero list;
+inverted firewall, declared input) $+$ (\textsc{measured})
+(unconditional kappa, zone mechanism) $+$ \mC\ (typing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Closing the uniformity quantifier
+(\texttt{PRIME.RANK3UNIF.01}).}
+Offensive 2c, the theorem-level result of the chain: $\det S>0$
+\emph{unconditionally on the entire declared window surface} ($8$
+checks, ${\sim}18$\,s; verdict \textsc{surface-closed}).  \emph{The
+statement}: for every complete window with $a\ge3.434$ the symbolic
+envelope gives $K_{\mathrm{env}}(a,h)\le0.9798<1$ (tightest at
+$h=142$; $62$ of the $67$ complete family windows), hence $\det
+S\ge(1-K_{\mathrm{env}})\,m'>0$; the five windows below carry finite
+numeric certificates $\kappa'=0.072$--$0.108<1$.  \emph{The
+architecture}: exact $U_0$ rebooking $M'=M+\Delta$ (kills the 34:1
+cancellation by definition shift), term-algebra-exact weights
+(sympy), mean-value envelopes (give-away $\le\times2.28$),
+det-minorant $m'/\det M'\ge0.949$; inputs typed \mE\ $+$
+(\textsc{a-cited}: $\gamma_1=14.1347$ Gram/Hutchinson; $\beta=1/2$
+to $3\times10^{12}$ Platt--Trudgian 2021).  \emph{Honest scope}: a
+\emph{surface} theorem on the declared family, \emph{not} uniform in
+all $a$; T-B (the absorption margin, \texttt{prob:R1}) stays open;
+no RH statement.
+Machine-checked: \veri{v685\_rank3\_uniformity.py}.
+\mE\ (symbolic envelope, rebooking identities, finite certificates)
+$+$ (\textsc{a-cited}) (zero-free strip, verification height) $+$
+\mC\ (honest scope)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The geometric SOS source
+(\texttt{PRIME.GEOMSOS.01}).}
+Offensive 3, the first feasibility strike at the contract
+``$Q^W_a(v)=\sum_j|l_{a,j}(v)|^2$ from TFPT geometry, without zeta,
+without zeros'' ($19$ checks, ${\sim}19$\,s; verdict
+\textsc{geomsos-trace-exact-transport-open}).  \emph{The circle-free
+trace} \mE: $\Lambda_{\mathrm{geo}}(n):=\Lambda_L(n)/(1+n^3)\equiv
+\Lambda(n)$ exactly for $n=2..512$ (worst rel dev
+$7.1\times10^{-31}$) --- the von Mangoldt data reconstructed from E8
+shell counting alone (Satake roots $\{1,p^3\}$ from the count
+$a(p)=r(2p)/240$; the Hecke recursion holds on raw counts; K1
+passes).  Cover-SOS on dim $3$ canonical; the miniature window form
+is comb-validated ($1.6\times10^{-6}$) and positive-definite there;
+K4 fires honestly (the certificate is window $+$ comb, nothing
+more).  \emph{The gap}: top-3 eigenvalue mass $=91.4\%$ --- a
+pointwise rank-3 transport cannot suffice; missing $H$ (bundle) and
+$\Phi$ (transport), registered as milestones M1--M4 of the contract
+with kill criteria K1--K5.  No marker move, no RH claim.
+Machine-checked: \veri{v686\_geometric\_sos.py}.
+\mE\ (circle-free trace, canonical SOS) $+$ (\textsc{measured})
+(miniature validation, eigenmass) $+$ \mC\ (contract milestones,
+kill criteria)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The extremal kernel class collapses
+(\texttt{PRIME.KERNELCLASS.01}).}
+Can an optimized positive band-limited kernel of the same exponential
+type lift the W2 capture threshold above $A_1=0.10076$?
+\emph{Structure theorem: no} ($18$ checks, ${\sim}5$\,s; verdict
+\textsc{kernel-class-too-narrow}).  \emph{The pinning certificate}
+(\textsc{exact}): $2\pi F_{a_0}(m\pi/a_0)=0$ exactly (sympy) forces
+the Fej\'er nodes on every admissible $K$, so
+$\theta_{\mathrm{req}}(K)\le1/(4a_0)=0.0901684<0.10076$ (strict
+interval certificate); \emph{the collapse}:
+$\varphi_k(m\pi/a_0)=\delta_{km}a_0/2\pi$ exactly kills every free
+coefficient, and Shannon sampling (cited, typed \textsc{analytic})
+extends to the full class: feasible set
+$=\{\lambda\,\mathrm{Fej\acute er}\}$ --- zero free directions.  The
+LP ladder confirms ($z^*(N)\to\pi/a_0$ within $5\times10^{-4}$); the
+false-PASS trap is documented.  W2 \emph{stays closed} via the
+v680/v681 route --- this negative shuts the kernel-optimization
+escape.  No marker move, no RH claim.
+Machine-checked: \veri{v687\_extremal\_kernel.py}.
+(\textsc{exact}) (pinning $+$ collapse, sympy) $+$
+(\textsc{analytic, cited}) (Shannon closure) $+$
+(\textsc{measured}) (LP ladder) $+$ \mC\ (false-PASS typing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The alias-interpolation falsifier
+(\texttt{PRIME.INTERP.01}).}
+The calibrated off-line detector (v677 S3) turned into a complete,
+explicitly constructive falsifier ($15$ checks, ${\sim}9$\,s;
+verdict \textsc{interp-falsifier-constructive}).  \emph{The
+guarantee}: the in-kernel matched filter detects every off-line
+quadruple from $2\alpha\delta\ge\Xi_{\mathrm{up}}=1.974$
+($C_{\mathrm{up}}=0.987$) on all mapped cells --- efficiency median
+$0.500$ vs the v677 mode map, a $\times2$ improvement.
+\emph{Masking fully adjudicated}: $46$ broken $+$ $2$ provably
+sub-resolution $=48/48$ masked configs (construction-open: $0$) via
+the multi-construction menu.  \emph{The lemma}: formulated with
+measured constants ($C$ median $0.499$) and named building blocks
+(v678 node separation; Beurling--Selberg/Vaaler majorants via
+v680/v681).  Inverted firewall (zeros $=$ the declared hypothesis of
+every statement); no RH statement, no marker move.
+Machine-checked: \veri{v688\_interpolation\_detector.py}.
+\mE\ (master identity, sine form) $+$ (\textsc{e/measured})
+(detection guarantee, masking adjudication) $+$ \mC\ (lemma with
+measured constants)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Gaussian code bridge
+(\texttt{E8.GAUSSCODE.01}).}
+$E_8(\mathbb{Z}[i])/(1+i)$ \emph{is} the information space of
+$\mathrm{RM}(1,3)$ ($26$ checks, ${\sim}3$\,s, exact arithmetic;
+verdict \textsc{gaussian-code-bridge-exact}).  The $\mu_4$ complex
+structure $J$ makes E8 a rank-4 $\mathbb{Z}[i]$-lattice; the
+$(1+i)$-quotient is $\mathbb{F}_2^4$ (SNF exact; standard model:
+$|\det|=256=2^8$, SNF $[1^4,2^4]$ --- presentation-independent);
+the $240$ roots fall $15\times16$ over the nontrivial classes (zero
+class provably empty; each class $=4$ of the $60$ G31 lines);
+$\sigma=c^4$ acts as the RM(1,3) family permutation (3-cycle $+$
+fixed anchor, the v638 info-bit action) with residual gauge of order
+$18$; the coordinate block is the sum-of-families label.  All
+must-fail controls fire (naive placement: $\sigma$-semantics
+undefined; non-$\pi J$ placement: no $\mathbb{Z}[i]$-module;
+$\mathbb{Z}[i]^4$: census trivializes).  No marker move.
+Machine-checked: \veri{v689\_gaussian\_code\_bridge.py}.
+\mE\ (SNF, census, semantics; exact arithmetic) $+$ (\mE,
+\textsc{kill}) (three must-fail controls)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The quartic half
+(\texttt{E8.QUARTICHALF.01}).}
+Is G31 the holomorphic $\mu_4$ shadow of the E8 compiler?
+\emph{Alive, with the honest split} ($22$ checks, ${\sim}1$\,s, no
+floats; verdict \textsc{quartic-half-alive}).  \emph{The vanishing
+half} $\{2,14,18,30\}$ is proven symbolically but \emph{trivial}:
+$W(J\alpha)=-i\,W(\alpha)$ makes every $J$-orbit contribution vanish
+for all $d\not\equiv0\bmod4$ (holds for $6,10,22,26$ too --- honest
+typing).  \emph{The substance}: $F_8|,F_{12}|,F_{20}|,F_{24}|$ are
+G31-invariant ($60/60$ mirrors exact), algebraically independent
+(exact Jacobian), degrees Molien-unique with product
+$46080=|G31|$ --- by Chevalley (cited) a system of \emph{basic}
+invariants: the holomorphic restriction of the $W(E_8)$ ring
+generates the \emph{full} G31 invariant ring; the Jacobian carries
+the $60$ mirror lines ($60/60$ point-verified; full factorization
+$=$ cited theorem, named residual).  Controls: the non-root-preserving
+$J'$ breaks the informative half, the root-preserving $J''$ keeps it
+(the theorem is about the compiler-compatible conjugacy class).  No
+marker move.
+Machine-checked: \veri{v690\_quartic\_half.py}.
+(\textsc{proof}) ($\mu_4$-orbit vanishing, symbolic) $+$ \mE\ (G31
+invariance/independence/mirror census) $+$ (\mE, \textsc{kill})
+(complex-structure controls) $+$ (\textsc{cited}) (Chevalley)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Hecke-SOS mechanism
+(\texttt{PRIME.HECKESOS.01}).}
+Offensive 4: the prime-local, Hecke-equivariant factorisation
+$A=B^*B+P$ ($P\succeq0$) with no zero input; six verbatim acceptance
+criteria adjudicated ($27$ checks, ${\sim}12$\,s; verdict
+\textsc{hecke-sos-ihara-mechanism-extracted}).  \emph{The Ihara lab}
+\mE: the target factorisation exists \emph{exactly} there ---
+$A_{\mathrm{IH}}=G_C+G_S$ with $B$ the Chebyshev columns of the
+Hecke operator (recursion, no Cholesky, no spectrum) and $P=G_S$ the
+closed defect Gram; $P\succeq0\iff$ Ramanujan --- the RH analogue
+sits in \emph{one} operator inequality.  \emph{The index lemma}: the
+deployed $\zeta$ window form is exactly the sine/defect \emph{half}
+of the canonical cos/sin split --- the part whose lab positivity
+\emph{is} the RH analogue (the cos half is unconditionally SOS).
+\emph{The Euler mechanism measurable}: commensurable fake primes
+break exactly on the resonance lattice $2\pi j/\log2$ (median dev
+$0.0000$, $12/12$) and deeper than matched jitter ($\times1.98$;
+honest calibration (c): the razor-thin W3 margin dies under any
+$O(0.1)$ position damage).  Controls: Epstein fails as demanded,
+the Ihara trio passes, scramble breaks.  \emph{The named gap}:
+\texttt{Z1} --- a self-adjoint geometric operator whose polynomial
+traces are the window moments (Hilbert--P\'olya); \texttt{Z2} would
+be RH itself: the factorisation \emph{localizes} RH
+($\to$ \texttt{PRIME.Z1.OPERATOR.01}, Offensive 5 running).  No
+marker move, no RH claim.
+Machine-checked: \veri{v691\_hecke\_sos.py}.
+\mE\ (Ihara factorisation, index lemma; AST zero-firewall) $+$
+(\textsc{measured}) (Euler resonance, Bochner sounding) $+$ (\mE,
+\textsc{kill}) (Epstein/Ihara/scramble controls) $+$ \mC\ (the named
+Z1 gap)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

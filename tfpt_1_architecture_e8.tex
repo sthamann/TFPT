@@ -352,6 +352,43 @@ rank-drop marker, not yet a positivity selection, but the resonance
 with the alignment bit now has a shared carrier \mE.
 \end{keybox}
 
+\begin{keybox}[The Gaussian code bridge and the quartic half (2026-08-03) --- the code section closes two loops]
+Two exact-arithmetic results tie the binary code layer directly to
+the $E_8$ lattice and its complex $\mu_4$ structure.  \emph{The
+Gaussian code bridge} (\veri{v689\_gaussian\_code\_bridge.py}, $26$
+checks, exact): the $\mu_4$ complex structure $J$ makes $E_8$ a
+rank-4 module over the Gaussian integers $\mathbb{Z}[i]$, and the
+quotient $E_8(\mathbb{Z}[i])/(1+i)$ \emph{is} $\mathbb{F}_2^4$ ---
+the information space of the Reed--Muller code $\mathrm{RM}(1,3)$
+(Smith normal form exact; standard model $|\det|=256=2^8$, SNF
+$[1^4,2^4]$, presentation-independent).  The $240$ roots fall
+$15\times16$ over the fifteen nontrivial classes (the zero class
+provably empty), each class is $4$ of the $60$ G31 lines
+($60=15\cdot4$), the compiler clock $\sigma=c^4$ acts as the
+$\mathrm{RM}(1,3)$ \emph{family permutation} (3-cycle plus fixed
+anchor --- the v638 info-bit action) with a residual gauge group of
+order $18$, and the coordinate block is the sum-of-families label
+$F_1{+}F_2{+}F_3$.  Three must-fail controls fire (naive placement,
+non-$\pi J$ placement, plain $\mathbb{Z}[i]^4$) \mE.  \emph{The
+quartic half} (\veri{v690\_quartic\_half.py}, $22$ checks, no
+floats): the vanishing of the $W(E_8)$ invariants of degrees
+$\{2,14,18,30\}$ under holomorphic $\mu_4$ restriction is proven
+symbolically but \emph{trivial} --- $W(J\alpha)=-i\,W(\alpha)$ kills
+every $J$-orbit contribution for all $d\not\equiv0\bmod4$ (honest
+typing); the substance is the surviving half: the restrictions
+$F_8|,F_{12}|,F_{20}|,F_{24}|$ are G31-invariant ($60/60$ mirrors),
+algebraically independent (exact Jacobian), with Molien-unique
+degrees of product $46080=|G31|$ --- by Chevalley (cited) a system
+of \emph{basic} invariants, i.e.\ the holomorphic restriction of
+the $W(E_8)$ ring generates the full G31 invariant ring; the
+Jacobian carries the $60$ mirror lines point-verified.  Controls: a
+non-root-preserving complex structure breaks the informative half,
+a root-preserving one keeps it --- the statement is about the
+compiler-compatible conjugacy class \mE.  No marker moves; both are
+structure statements of the code layer, registered as
+\texttt{E8.GAUSSCODE.01} and \texttt{E8.QUARTICHALF.01}.
+\end{keybox}
+
 \begin{keybox}[The current reduction state of P2 (2026-07-22) --- text consolidation, markers unchanged]
 The axiom P2 stays \emph{declared} (\texttt{AX.P2.01}); what has changed is how much of it is now
 carried by theorems. The honest ledger state: P1 ($\cthree=1/(8\pi)$) and the \emph{four marks} are

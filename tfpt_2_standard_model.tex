@@ -661,6 +661,29 @@ algebra \emph{carrier} \mE, while its \emph{selection} stays with geometry and r
 \operatorname{tr}(V^n)$ ($240$ and $\operatorname{rank}E_8$ as trace readouts) --- a re-encoding of
 the Lean AnchorLadder, typed as hardening, not as new content.
 \smallskip\\
+\noindent\textbf{The Gaussian code bridge, and the quartic half (2026-08-03).}
+Two exact results extend this code page to the lattice itself.
+\emph{The bridge} (\veri{v689\_gaussian\_code\_bridge.py}, $26$ checks,
+exact arithmetic): the $\mu_4$ complex structure makes $E_8$ a rank-4
+$\Z[i]$-lattice whose $(1+i)$-quotient is $\mathbb F_2^4$ --- the
+information space of $\mathrm{RM}(1,3)$ (SNF exact,
+presentation-independent); the $240$ roots fall $15\times16$ over the
+nontrivial classes (zero class provably empty, each class $=4$ of the
+$60$ G31 lines), the clock $\sigma=c^4$ acts as the RM(1,3)
+\emph{family permutation} (3-cycle $+$ fixed anchor, the v638
+info-bit action; residual gauge of order $18$), and the coordinate
+block is the sum-of-families label $F_1{+}F_2{+}F_3$; three
+must-fail controls fire \mE\ (\texttt{E8.GAUSSCODE.01}).  \emph{The
+quartic half} (\veri{v690\_quartic\_half.py}, $22$ checks, no
+floats): the degree-$\{2,14,18,30\}$ vanishing under holomorphic
+$\mu_4$ restriction is proven but \emph{trivial} ($\mu_4$-orbit
+factor, honest typing); the substance: $F_8|,F_{12}|,F_{20}|,F_{24}|$
+are algebraically independent G31 \emph{basic} invariants (Molien-unique
+degrees, product $46080=|G31|$, Chevalley cited) --- the holomorphic
+restriction of the $W(E_8)$ ring generates the full G31 invariant
+ring, and the Jacobian carries the $60$ mirror lines $60/60$
+(\texttt{E8.QUARTICHALF.01}) \mE.  No marker moves.
+\smallskip\\
 \noindent\textbf{The No-Carrier-Reconstruction audit, Stage A.}
 \veri{v567\_carrier\_free\_q\_reconstruction.py}\ The self-code's circularity question is
 executed as an enumeration with the carrier certificates \emph{forbidden} (the \vref{v11} budgets:

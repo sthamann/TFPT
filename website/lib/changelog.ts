@@ -43,6 +43,1177 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-03",
+    "dateLabel": "2026-08-03 · L",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the great bundling: TEN promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v682"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v691"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "182"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green) — the five proof offensives of the day land in one round, and the master contract "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.UNIFPOS.01"
+      },
+      {
+        "k": "t",
+        "v": " is registered. HIGHLIGHT 1 ("
+      },
+      {
+        "k": "c",
+        "v": "v685"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "surface-closed"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": " — the theorem-level result): "
+      },
+      {
+        "k": "m",
+        "v": "\\det S>0"
+      },
+      {
+        "k": "t",
+        "v": " UNCONDITIONALLY on the entire declared window surface — the symbolic envelope "
+      },
+      {
+        "k": "m",
+        "v": "K_{\\mathrm{env}}(a,h)\\le0.9798<1"
+      },
+      {
+        "k": "t",
+        "v": " for all "
+      },
+      {
+        "k": "m",
+        "v": "62"
+      },
+      {
+        "k": "t",
+        "v": " complete windows "
+      },
+      {
+        "k": "m",
+        "v": "a\\ge3.434"
+      },
+      {
+        "k": "t",
+        "v": ", the five below by finite certificates "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa'\\le0.108"
+      },
+      {
+        "k": "t",
+        "v": "; exact "
+      },
+      {
+        "k": "m",
+        "v": "U_0"
+      },
+      {
+        "k": "t",
+        "v": " rebooking "
+      },
+      {
+        "k": "m",
+        "v": "M'=M+\\Delta"
+      },
+      {
+        "k": "t",
+        "v": ", inputs typed "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "a-cited"
+      },
+      {
+        "k": "t",
+        "v": " (Gram/Hutchinson "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1"
+      },
+      {
+        "k": "t",
+        "v": "; Platt–Trudgian "
+      },
+      {
+        "k": "m",
+        "v": "3\\times10^{12}"
+      },
+      {
+        "k": "t",
+        "v": "); a SURFACE theorem on the declared family, NOT uniform in all "
+      },
+      {
+        "k": "m",
+        "v": "a"
+      },
+      {
+        "k": "t",
+        "v": " — T-B (the absorption margin) stays open, no RH statement. The chain below it: "
+      },
+      {
+        "k": "c",
+        "v": "v683"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "19/19"
+      },
+      {
+        "k": "t",
+        "v": ", three functionals exact "
+      },
+      {
+        "k": "m",
+        "v": "4.9\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": ", all entrywise routes typed circular, "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa_{\\max}=0.0895"
+      },
+      {
+        "k": "t",
+        "v": ") and "
+      },
+      {
+        "k": "c",
+        "v": "v684"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": ", the zero side by the explicit formula — residuum "
+      },
+      {
+        "k": "m",
+        "v": "\\le6.9\\times10^{-6}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "22\\,491"
+      },
+      {
+        "k": "t",
+        "v": " budget-certified zeros, unconditional "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa_{\\mathrm{unc}}=0.039"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.190<1"
+      },
+      {
+        "k": "t",
+        "v": " class (a), the pretentious escape blocked "
+      },
+      {
+        "k": "m",
+        "v": "\\times634"
+      },
+      {
+        "k": "t",
+        "v": " by the classical zero-free strip). HIGHLIGHT 2 ("
+      },
+      {
+        "k": "c",
+        "v": "v691"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "hecke-sos-ihara-mechanism-extracted"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "27/27"
+      },
+      {
+        "k": "t",
+        "v": "): the target factorisation "
+      },
+      {
+        "k": "m",
+        "v": "A=B^*B+P"
+      },
+      {
+        "k": "t",
+        "v": " EXISTS EXACTLY in the Ihara lab ("
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": " by Chebyshev recursion, "
+      },
+      {
+        "k": "m",
+        "v": "P\\succeq0\\iff"
+      },
+      {
+        "k": "t",
+        "v": " Ramanujan), the deployed "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta"
+      },
+      {
+        "k": "t",
+        "v": " form is exactly the sine/defect HALF of the canonical split (index lemma), the Euler mechanism is measurable (resonance lattice exact "
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": ", depth "
+      },
+      {
+        "k": "m",
+        "v": "\\times1.98"
+      },
+      {
+        "k": "t",
+        "v": "), and the missing piece is named exactly: Z1, a Hilbert–Pólya-type operator ("
+      },
+      {
+        "k": "c",
+        "v": "PRIME.Z1.OPERATOR.01"
+      },
+      {
+        "k": "t",
+        "v": ", registered OPEN — offensive 5 running). THE REST OF THE BUNDLE: "
+      },
+      {
+        "k": "c",
+        "v": "v682"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "t",
+        "v": "lk-split-dies"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": ": the naive smooth "
+      },
+      {
+        "k": "m",
+        "v": "L+K"
+      },
+      {
+        "k": "t",
+        "v": " split is structurally dead — the pencil maximizer sits at "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1=14.13"
+      },
+      {
+        "k": "t",
+        "v": " found from primes alone, spike law "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_{\\max}\\approx1+2a/\\Omega"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\theta\\sim2.47a"
+      },
+      {
+        "k": "t",
+        "v": ": the windows resolve individual zeros; one-sided/multi-resolution survive), "
+      },
+      {
+        "k": "c",
+        "v": "v686"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "t",
+        "v": "geomsos-trace-exact-transport-open"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "19/19"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda(n)"
+      },
+      {
+        "k": "t",
+        "v": " circle-free from "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " shell counting at "
+      },
+      {
+        "k": "m",
+        "v": "7.1\\times10^{-31}"
+      },
+      {
+        "k": "t",
+        "v": ", cover-SOS canonical on dim 3, transport open at "
+      },
+      {
+        "k": "m",
+        "v": "91.4\\%"
+      },
+      {
+        "k": "t",
+        "v": " top-3 mass; contract "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.GEOMSOS.01"
+      },
+      {
+        "k": "t",
+        "v": " with K1–K5), "
+      },
+      {
+        "k": "c",
+        "v": "v687"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "t",
+        "v": "kernel-class-too-narrow"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "18/18"
+      },
+      {
+        "k": "t",
+        "v": ": the band-limited positive kernel class collapses exactly onto "
+      },
+      {
+        "k": "m",
+        "v": "\\{\\lambda\\,\\mathrm{Fej\\acute er}\\}"
+      },
+      {
+        "k": "t",
+        "v": ", class supremum "
+      },
+      {
+        "k": "m",
+        "v": "0.0901684<0.10076"
+      },
+      {
+        "k": "t",
+        "v": " — W2 stays closed via the v680/v681 route), "
+      },
+      {
+        "k": "c",
+        "v": "v688"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "t",
+        "v": "interp-falsifier-constructive"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "15/15"
+      },
+      {
+        "k": "t",
+        "v": ": the in-kernel matched filter detects every off-line quadruple from "
+      },
+      {
+        "k": "m",
+        "v": "2\\alpha\\delta\\ge1.974"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\times2"
+      },
+      {
+        "k": "t",
+        "v": " over the v677 mode map, masking adjudicated "
+      },
+      {
+        "k": "m",
+        "v": "48/48"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "c",
+        "v": "v689"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "t",
+        "v": "gaussian-code-bridge-exact"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "E_8(\\mathbb{Z}[i])/(1+i)\\cong\\mathbb{F}_2^4"
+      },
+      {
+        "k": "t",
+        "v": " by exact SNF, the "
+      },
+      {
+        "k": "m",
+        "v": "240=15\\times16"
+      },
+      {
+        "k": "t",
+        "v": " census, "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " as the RM(1,3) family permutation, must-fails fire), "
+      },
+      {
+        "k": "c",
+        "v": "v690"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "t",
+        "v": "quartic-half-alive"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "22/22"
+      },
+      {
+        "k": "t",
+        "v": ": the vanishing half "
+      },
+      {
+        "k": "m",
+        "v": "\\{2,14,18,30\\}"
+      },
+      {
+        "k": "t",
+        "v": " proven but honestly typed trivial ("
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "-orbit factor); the substance: "
+      },
+      {
+        "k": "m",
+        "v": "F_8/F_{12}/F_{20}/F_{24}"
+      },
+      {
+        "k": "t",
+        "v": " algebraically independent G31 BASIC invariants, Chevalley cited, Jacobi carries "
+      },
+      {
+        "k": "m",
+        "v": "60/60"
+      },
+      {
+        "k": "t",
+        "v": " mirrors). THE MASTER CONTRACT: "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.UNIFPOS.01"
+      },
+      {
+        "k": "t",
+        "v": " (the Uniform Positivity Theorem — Suzuki's localized Weil operator positive semidefinite for every "
+      },
+      {
+        "k": "m",
+        "v": "a>0"
+      },
+      {
+        "k": "t",
+        "v": " from an operator/geometric representation defined without zeros and without RH-equivalent input; the machine-checkable intermediate form "
+      },
+      {
+        "k": "m",
+        "v": "B_a=L_a+K_a"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "|\\langle K_av,v\\rangle|\\le\\theta\\langle L_av,v\\rangle"
+      },
+      {
+        "k": "t",
+        "v": ", annotated with the v682 verdict; kill criteria: zero-defined "
+      },
+      {
+        "k": "m",
+        "v": "C_a"
+      },
+      {
+        "k": "t",
+        "v": " or RH-equivalent contractivity "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " renaming) as the tenth slice, plus the review contracts "
+      },
+      {
+        "k": "c",
+        "v": "E8.GAUSSIAN.CODE.01"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "E8.QUARTIC.HALF.01"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "PRIME.W3.INTERPOLATION.01"
+      },
+      {
+        "k": "t",
+        "v": " and the OPEN "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.Z1.OPERATOR.01"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (10)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v682_lk_split_theta.py"
+        },
+        {
+          "k": "t",
+          "v": " (20), "
+        },
+        {
+          "k": "c",
+          "v": "v683_rank3_functionals.py"
+        },
+        {
+          "k": "t",
+          "v": " (19), "
+        },
+        {
+          "k": "c",
+          "v": "v684_rank3_zeroside.py"
+        },
+        {
+          "k": "t",
+          "v": " (8), "
+        },
+        {
+          "k": "c",
+          "v": "v685_rank3_uniformity.py"
+        },
+        {
+          "k": "t",
+          "v": " (8), "
+        },
+        {
+          "k": "c",
+          "v": "v686_geometric_sos.py"
+        },
+        {
+          "k": "t",
+          "v": " (19), "
+        },
+        {
+          "k": "c",
+          "v": "v687_extremal_kernel.py"
+        },
+        {
+          "k": "t",
+          "v": " (18), "
+        },
+        {
+          "k": "c",
+          "v": "v688_interpolation_detector.py"
+        },
+        {
+          "k": "t",
+          "v": " (15), "
+        },
+        {
+          "k": "c",
+          "v": "v689_gaussian_code_bridge.py"
+        },
+        {
+          "k": "t",
+          "v": " (26), "
+        },
+        {
+          "k": "c",
+          "v": "v690_quartic_half.py"
+        },
+        {
+          "k": "t",
+          "v": " (22), "
+        },
+        {
+          "k": "c",
+          "v": "v691_hecke_sos.py"
+        },
+        {
+          "k": "t",
+          "v": " (27). All ten discovery probes committed alongside; the zero-comb caches ("
+        },
+        {
+          "k": "c",
+          "v": "zero_comb_cache_n2000.json"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "c1_zero_ext_n2500.json"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "coverage_hole_zscan_cache.npz"
+        },
+        {
+          "k": "t",
+          "v": ") were already committed and are reused repo-relative with local fallbacks."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 15 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LKSPLIT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RANK3FUNC.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RANK3ZERO.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RANK3UNIF.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GEOMSOS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KERNELCLASS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.INTERP.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.GAUSSCODE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.QUARTICHALF.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HECKESOS.01"
+        },
+        {
+          "k": "t",
+          "v": "; contracts "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.UNIFPOS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.GAUSSIAN.CODE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.QUARTIC.HALF.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.W3.INTERPOLATION.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": "); dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEIL.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.W3STRUCT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.ZEROGAP.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.CODESEM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.ST31.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 10 new audit blocks. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the tenth slice (the master contract "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.UNIFPOS.01"
+        },
+        {
+          "k": "t",
+          "v": " with target statement, intermediate form, v682 annotation and kill criteria; the four review contracts registered). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the great-bundling paragraph (rank-3 surface theorem, kernel collapse, falsifier, Hecke-SOS mechanism). "
+        },
+        {
+          "k": "c",
+          "v": "parity_toeplitz_classification"
+        },
+        {
+          "k": "t",
+          "v": ": the rank-3 chain paragraph (v683–v685). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the Gaussian code bridge and the quartic half in the code sections."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed entry (the great bundling); suite counters "
+        },
+        {
+          "k": "m",
+          "v": "675\\to685"
+        },
+        {
+          "k": "t",
+          "v": "; README and Zenodo description updated to "
+        },
+        {
+          "k": "m",
+          "v": "685"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v691"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves; "
+        },
+        {
+          "k": "c",
+          "v": "v685"
+        },
+        {
+          "k": "t",
+          "v": " is a SURFACE theorem on the declared window family, NOT a uniform-in-"
+        },
+        {
+          "k": "m",
+          "v": "a"
+        },
+        {
+          "k": "t",
+          "v": " statement; T-B (the absorption margin, "
+        },
+        {
+          "k": "c",
+          "v": "prob:R1"
+        },
+        {
+          "k": "t",
+          "v": ") stays open; "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " is registered OPEN (offensive 5 running); no RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-03",
     "dateLabel": "2026-08-03 · XLIX",
     "heading": [
       {
