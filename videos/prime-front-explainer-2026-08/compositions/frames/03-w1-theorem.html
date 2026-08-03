@@ -279,21 +279,21 @@
   </div>
 
   <div class="f03-stage clip" data-start="0" data-duration="15.788" data-track-index="1">
-    <div class="f03-kicker" id="f03-kicker">Zwei Seiten &middot; ein Objekt</div>
+    <div class="f03-kicker" id="f03-kicker">Two sides &middot; one object</div>
     <div class="f03-framenum" id="f03-framenum">No. 03</div>
 
     <div class="f03-camera" id="f03-camera">
       <div class="f03-scene">
         <div class="f03-pair">
           <div class="f03-card" id="f03-card-left">
-            <div class="f03-card-title" id="f03-title-left">TFPT — Fenstermatrix</div>
+            <div class="f03-card-title" id="f03-title-left">TFPT — window matrix</div>
             <div class="f03-card-visual">
               <div class="f03-heatmap" id="f03-heatmap"></div>
             </div>
-            <div class="f03-card-tag" id="f03-tag-left">aus der E<sub>8</sub>-Buchf&uuml;hrung</div>
+            <div class="f03-card-tag" id="f03-tag-left">from the E<sub>8</sub> bookkeeping</div>
           </div>
           <div class="f03-card" id="f03-card-right">
-            <div class="f03-card-title" id="f03-title-right">Suzuki — Weil-Operator</div>
+            <div class="f03-card-title" id="f03-title-right">Suzuki — Weil operator</div>
             <div class="f03-card-visual">
               <svg class="f03-kernel" id="f03-kernel" viewBox="0 0 564 296" fill="none">
                 <line x1="10" y1="148" x2="554" y2="148" stroke="#1e293b" stroke-width="1" />
@@ -304,7 +304,7 @@
               </svg>
               <div class="f03-kernel-label" id="f03-kernel-label">g&Prime;(t)</div>
             </div>
-            <div class="f03-card-tag" id="f03-tag-right">klassische Zahlentheorie &middot; 2026</div>
+            <div class="f03-card-tag" id="f03-tag-right">classical number theory &middot; 2026</div>
           </div>
         </div>
 
@@ -444,15 +444,15 @@
       /* ── Scene 4 (12.2–15.3s): erratum chip, discrete text sequence (13.8s) ── */
       tl.fromTo("#f03-chip", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 13.62);
 
-      const FULL = "Erratum: selbst gefunden, am selben Tag korrigiert — dokumentiert";
+      const FULL = "Erratum: self-found, corrected the same day — documented";
       const SEQ = [
         { t: 0, text: "" },
         { t: 13.82, text: "Err" },
         { t: 13.94, text: "Erratum:" },
-        { t: 14.08, text: "Erratum: selbst gefunden," },
-        { t: 14.26, text: "Erratum: selbst gefunden, am selben" },
-        { t: 14.4, text: "Erratum: selbst gefunden, am selben Tag" },
-        { t: 14.58, text: "Erratum: selbst gefunden, am selben Tag korrigiert" },
+        { t: 14.08, text: "Erratum: self-found," },
+        { t: 14.26, text: "Erratum: self-found, corrected" },
+        { t: 14.4, text: "Erratum: self-found, corrected the same" },
+        { t: 14.58, text: "Erratum: self-found, corrected the same day" },
         { t: 14.82, text: FULL },
       ];
       const textAt = (time) => {

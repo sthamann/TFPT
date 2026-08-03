@@ -324,7 +324,7 @@
       <div class="f04-zero-ambient"></div>
       <div class="f04-chrome" id="f04-chrome">
         <div class="f04-chrome-bar"></div>
-        <div class="f04-mono f04-chrome-label">Prüfstand — Detektor</div>
+        <div class="f04-mono f04-chrome-label">Test bench — Detector</div>
         <div class="f04-mono f04-chrome-num">No. 04</div>
       </div>
     </div>
@@ -335,8 +335,8 @@
       <div class="f04-stage" id="f04-stage">
         <!-- instrument card: needle over the zero hairline (focal) -->
         <div class="f04-inst" id="f04-inst">
-          <div class="f04-kicker">Detektor</div>
-          <div class="f04-inst-label" id="f04-inst-label">λ_min — Positivitäts-Marge</div>
+          <div class="f04-kicker">Detector</div>
+          <div class="f04-inst-label" id="f04-inst-label">λ_min — positivity margin</div>
           <svg class="f04-gauge" viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
             <!-- zero hairline -->
             <line x1="90" y1="200" x2="640" y2="200" stroke="#334155" stroke-width="1" />
@@ -370,9 +370,9 @@
           <div class="f04-row" id="f04-row1">
             <div class="f04-row-head">
               <div>
-                <div class="f04-row-idx">Prüfung 01</div>
-                <div class="f04-row-title">Ramanujan-Trio</div>
-                <div class="f04-row-sub">RH-Analogon bewiesen</div>
+                <div class="f04-row-idx">Check 01</div>
+                <div class="f04-row-title">Ramanujan trio</div>
+                <div class="f04-row-sub">RH analogue proven</div>
               </div>
               <div class="f04-badge" id="f04-badge1">
                 <span class="f04-badge-pending" id="f04-badge1-pending">·</span>
@@ -385,9 +385,9 @@
           <div class="f04-row" id="f04-row2">
             <div class="f04-row-head">
               <div>
-                <div class="f04-row-idx">Prüfung 02</div>
-                <div class="f04-row-title">Epstein-ζ</div>
-                <div class="f04-row-sub">Echte Off-Line-Nullstellen</div>
+                <div class="f04-row-idx">Check 02</div>
+                <div class="f04-row-title">Epstein ζ</div>
+                <div class="f04-row-sub">Genuine off-line zeros</div>
               </div>
               <div class="f04-badge" id="f04-badge2">
                 <span class="f04-badge-pending" id="f04-badge2-pending">·</span>
@@ -412,21 +412,22 @@
         </div>
         <div class="f04-mf-hairline"></div>
         <div class="f04-witness" id="f04-witness">
-          <span class="f04-w">jede</span>
-          <span class="f04-w">Off-Line-Nullstelle</span>
+          <span class="f04-w">any</span>
+          <span class="f04-w">off-line</span>
+          <span class="f04-w">zero</span>
           <span class="f04-w">⇒</span>
-          <span class="f04-w">konstruierbarer</span>
-          <span class="f04-w">negativer</span>
-          <span class="f04-w">Testvektor</span>
+          <span class="f04-w">constructible</span>
+          <span class="f04-w">negative</span>
+          <span class="f04-w">test vector</span>
           <span class="f04-w">·</span>
-          <span class="f04-w">ab</span>
-          <span class="f04-w f04-w-accent">2αδ ≥ 1,97</span>
+          <span class="f04-w">from</span>
+          <span class="f04-w f04-w-accent">2αδ ≥ 1.97</span>
         </div>
       </div>
 
       <!-- Scene 5: closing statement -->
       <div class="f04-statement" id="f04-statement">
-        Das Objekt ist <span class="f04-statement-key" id="f04-statement-key">falsifizierbar</span>.
+        The object is <span class="f04-statement-key" id="f04-statement-key">falsifiable</span>.
       </div>
     </div>
   </div>
@@ -467,8 +468,8 @@
       /* ---------- global clock driver: callout chip discrete states ---------- */
       const CALLOUT_SEQ = [
         { t: 0.0, text: "" },
-        { t: 13.0, text: "Zensus: 12 Off-Line-Nullstellen" },
-        { t: 13.7, text: "Zensus: 12 Off-Line-Nullstellen · λ-Ratio 0,803 vorhergesagt" },
+        { t: 13.0, text: "Census: 12 off-line zeros" },
+        { t: 13.7, text: "Census: 12 off-line zeros · λ ratio 0.803 predicted" },
       ];
       const calloutEl = document.getElementById("f04-callout-text");
       let lastCallout = null;

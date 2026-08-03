@@ -1,70 +1,70 @@
-# SCRIPT — prime-front-explainer (deutsch)
+# SCRIPT — prime-front-explainer (English)
 
-**Voice:** de-DE-ConradNeural (edge-tts, Microsoft Neural — deutscher Fallback, da HeyGen offline und Kokoro ohne Deutsch)
-**Voice settings:** rate +0% · pitch +0Hz
-**Voice direction:** Ruhig, nüchtern, präzise — ein Forscher erklärt seinem zukünftigen Ich den Stand. Keine Werbestimme. Kurze Pausen an den Gedankenstrichen.
+**Voice:** en-US-AndrewNeural (edge-tts, Microsoft Neural — sober, clear documentary register)
+**Voice settings:** per-line rate fitted to the frame windows (see audio_engine_meta.json) · pitch +0Hz
+**Voice direction:** Calm, sober, precise — a researcher explaining the state of the program to his future self. No advertising voice. Short pauses at the dashes.
 
 ---
 
-## Line 1 — Die Musik der Primzahlen (Frame 1)
+## Line 1 — The music of the primes (Frame 1)
 
-**Time:** 0.0 – 15.0s
-**Delivery:** Leise beginnen, beim Wort "Linie" Gewicht, das "unbewiesen" trocken landen lassen.
+**Time:** 0.0 – 16.9s
+**Delivery:** Start quiet, weight on the word "line", let "unproven" land dry.
 
-    Die Primzahlen wirken wie Zufall. Doch ihre Verteilung folgt einem verborgenen Orchester: den Nullstellen der Zetafunktion. Die Riemannsche Vermutung sagt: Alle liegen auf einer einzigen Linie. Unbewiesen — seit über hundertfünfundsechzig Jahren.
+    The prime numbers look like randomness. But their distribution follows a hidden orchestra: the zeros of the Riemann zeta function. The Riemann Hypothesis says: all of them lie on one single line. Unproven — for more than one hundred and sixty-five years.
 
-## Line 2 — Geometrie zuerst (Frame 2)
+## Line 2 — Geometry first (Frame 2)
 
-**Time:** 15.0 – 29.0s
-**Delivery:** Aufzählend, jede Station ein Schritt; "Schatten" mit leichtem Nachdruck.
+**Time:** 16.9 – 30.7s
+**Delivery:** Enumerating, each station one step; slight emphasis on "shadow".
 
-    Die TFPT baut aus zwei Axiomen das E-acht-Gitter. Seine Zählfunktion kennt die Primzahlen bereits: Jede wirkt als eigener Prüfkanal. Und die Zetafunktion erscheint als Schatten dieser Geometrie.
+    The TFPT builds the E8 lattice from two axioms. Its counting function already knows the primes: each one acts as its own Hecke check channel. And the zeta function appears as a shadow of this geometry.
 
-## Line 3 — Das W1-Theorem (Frame 3)
+## Line 3 — The W1 theorem (Frame 3)
 
-**Time:** 29.0 – 44.0s
-**Delivery:** Die Überraschung tragen: "etwas Klassisches" gedehnt, "Theorem" fest, das Erratum beiläufig-ehrlich.
+**Time:** 30.7 – 46.0s
+**Delivery:** Carry the surprise: stretch "something classical", "theorem" firm, the erratum offhand and honest.
 
-    Aus dieser Buchführung entstand eine Fenstermatrix. Und sie entpuppte sich als etwas Klassisches: Wort für Wort Suzukis Weil-Operator. Das ist das W-eins-Theorem — maschinell verifiziert, mit einem ehrlich dokumentierten Erratum.
+    From this bookkeeping came a window matrix. And it turned out to be something classical: word for word, Suzuki's localized Weil operator. That is the W1 theorem — machine-verified, with one honestly documented erratum.
 
-## Line 4 — Detektor und Falsifikator (Frame 4)
+## Line 4 — Detector and falsifier (Frame 4)
 
-**Time:** 44.0 – 68.0s
-**Delivery:** Prüfstand-Rhythmus: "bestehen den Test" ruhig-grün, "bricht" scharf, den Schlusssatz als These setzen.
+**Time:** 46.0 – 70.4s
+**Delivery:** Test-bench rhythm: "pass the test" calm and green, "breaks" sharp, set the closing sentence as a thesis.
 
-    Dieselbe Form ist ein Detektor. Kalibriert an gelösten Welten: Ramanujan-Graphen — dort ist das Analogon bewiesen — bestehen den Test. Epstein — mit echten Nullstellen neben der Linie — bricht, exakt wie vorhergesagt. Und der Matched Filter macht es konstruktiv: Jede Off-Line-Nullstelle würde einen nachrechenbaren Zeugen erzeugen. Das Objekt ist falsifizierbar.
+    The same window form is a detector. Calibrated on solved worlds: Ramanujan graphs — where the analogue is proven — pass the test. Epstein zeta functions — with genuine zeros off the line — break it, exactly as predicted. And the matched filter makes this constructive: any off-line zero would produce a computable witness. The object is falsifiable.
 
-## Line 5 — Zwei Sätze auf der Fläche (Frame 5)
+## Line 5 — Two theorems on the surface (Frame 5)
 
-**Time:** 68.0 – 87.0s
-**Delivery:** Zahlen klar artikulieren; "unbedingt bewiesen" ist der Kern der Zeile.
+**Time:** 70.4 – 88.5s
+**Delivery:** Articulate the numbers clearly; "unconditionally proven" is the core of the line.
 
-    Zwei Sätze stehen auf der ganzen Fläche. Das Vorzeichen der Determinante: unbedingt bewiesen, auf allen siebenundsechzig Fenstern — die hundertjährige nullstellenfreie Zone versperrt den einzigen Fluchtweg. Und die Marge: sechzig von siebzig Fenstern, geschlossen mit zitierter Klassik.
+    Two theorems stand on the whole surface. The sign of the determinant: unconditionally proven, on all sixty-seven windows — the century-old zero-free region blocks the only escape route. And the margin: sixty of seventy windows, closed with cited classical results.
 
-## Line 6 — Die Ihara-Blaupause (Frame 6)
+## Line 6 — The Ihara blueprint (Frame 6)
 
-**Time:** 87.0 – 105.0s
-**Delivery:** Wie eine technische Zeichnung vorlesen; nach "der Motor" eine kleine Pause, dann "Hilbert–Pólya" ehrfürchtig-nüchtern.
+**Time:** 88.5 – 107.9s
+**Delivery:** Read like a technical drawing; small pause after "the engine", then "Hilbert–Pólya" reverent but sober.
 
-    Dann der Befund vom dritten August: Im Graphen-Labor, wo das Analogon bewiesen ist, existiert die Ziel-Zerlegung exakt — Quadratsumme plus Defekt. Unsere Fensterform ist baugleich. Es fehlt genau ein Bauteil: der Motor. Hilbert–Pólya, in Fensterkoordinaten.
+    Then, August third: in the graph laboratory, where the analogue is proven, the target decomposition exists exactly — a sum of squares plus a defect. Our window form is built identically. One part is missing: the engine, Z1. Hilbert–Pólya, in window coordinates.
 
-## Line 7 — Das Maß aus der Geometrie (Frame 7)
+## Line 7 — The measure from the geometry (Frame 7)
 
-**Time:** 105.0 – 122.0s
-**Delivery:** "zirkelfrei" und "erzwingt" betonen; der ehrliche Nachsatz trocken.
+**Time:** 107.9 – 124.0s
+**Delivery:** Stress "without circularity" and "forces"; the honest coda dry.
 
-    Und die Geometrie liefert schon das Maß: Die Primzahl-Atome lassen sich zirkelfrei aus reiner Gitterzählung ablesen. Der Gamma-Fluss erzwingt ihre Massen auf Promille — und ihre Positionen. Aber ehrlich: als Prüfstand, nicht als Generator.
+    And the geometry supplies the measure: the prime atoms can be read off, without circularity, from lattice counting alone. The gamma flow forces their masses to per mille — and their positions. But honestly: as a test bench, not as a generator.
 
-## Line 8 — Der Korridor (Frame 8)
+## Line 8 — The corridor (Frame 8)
 
-**Time:** 122.0 – 142.0s
-**Delivery:** Ruhig fokussiert; "null Komma dreiundfünfzig" langsam; die offene Frage als echte Frage sprechen.
+**Time:** 124.0 – 143.6s
+**Delivery:** Calm and focused; "zero point five three" slow; speak the open question as a real question.
 
-    Der Stand heute: Jede Masse lebt in einem Korridor mit exakt berechenbaren Rändern. Die Arithmetik wählt nicht den Rand — sie wählt einen inneren Punkt, bei null Komma dreiundfünfzig. Ein Energie-Extremum trifft ihn bis auf Promille. Die offene Frage: Erkläre die Selektion im Korridor.
+    The state today: every mass lives in a corridor with exactly computable edges. The arithmetic does not choose the edge — it chooses an interior point, at zero point five three. An energy extremum hits it to within per mille. The open question: explain the selection inside the corridor.
 
-## Line 9 — Ehrlicher Stand (Frame 9)
+## Line 9 — Honest state (Frame 9)
 
-**Time:** 142.0 – 158.0s
-**Delivery:** "Kein Beweis." als eigener Satz, Pause. Das Ende warm, aber nüchtern.
+**Time:** 143.6 – 159.1s
+**Delivery:** "No proof of RH." as its own sentence, pause. The ending warm but sober.
 
-    Kein Beweis. Das sagt dieses Programm selbst, an jeder Stelle. Aber die Frage war nie so klein — und nie so präzise. Rund siebenhundert Module, jede Zahl maschinell geprüft. Das ist die Prime Front.
+    No proof of RH. This program says so itself, at every step. But the question has never been this small — and never this precise. Around seven hundred modules, every number machine-checked. This is the Prime Front.

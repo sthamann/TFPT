@@ -359,14 +359,14 @@
 
       <!-- chrome bar -->
       <div class="f07mg-chromebar" id="f07mg-chrome">
-        <span class="f07mg-mono">Die Geometrie liefert das Mass</span>
+        <span class="f07mg-mono">The geometry supplies the measure</span>
         <span class="f07mg-mono">No. 07</span>
       </div>
 
       <!-- act 1: pure lattice counting -->
       <div class="f07mg-kicker" id="f07mg-kicker1" style="top: 84px;">
         <span class="f07mg-rulestub"></span>
-        <span class="f07mg-mono">Reine Gitterz&auml;hlung &middot; E8-Schalen</span>
+        <span class="f07mg-mono">Pure lattice counting &middot; E8 shells</span>
       </div>
       <div id="f07mg-chipstrip">
         <div class="f07mg-chip" id="f07mg-chip0">
@@ -390,8 +390,8 @@
       <!-- act 2: von-Mangoldt ladder -->
       <div class="f07mg-kicker" id="f07mg-kicker2" style="top: 230px;">
         <span class="f07mg-rulestub"></span>
-        <span class="f07mg-mono">Von-Mangoldt-Leiter</span>
-        <span class="f07mg-tagchip" id="f07mg-zirkelfrei">zirkelfrei</span>
+        <span class="f07mg-mono">Von Mangoldt ladder</span>
+        <span class="f07mg-tagchip" id="f07mg-zirkelfrei">non-circular</span>
       </div>
       <div id="f07mg-ladder">
         <div id="f07mg-ladderbase"></div>
@@ -399,13 +399,13 @@
       </div>
       <div id="f07mg-formulachip">
         <span class="f07mg-formula">&Lambda;<sub>geo</sub> = &Lambda;</span>
-        <span class="f07mg-mono">exakt &middot; bis n = 20&thinsp;000</span>
+        <span class="f07mg-mono">exact &middot; up to n = 20&thinsp;000</span>
       </div>
 
       <!-- act 3: gamma flow -->
       <div class="f07mg-kicker" id="f07mg-kicker3" style="top: 490px;">
         <span class="f07mg-rulestub"></span>
-        <span class="f07mg-mono">&Gamma;-Fluss &middot; Primpotenz-Slots</span>
+        <span class="f07mg-mono">&Gamma; flow &middot; prime-power slots</span>
       </div>
       <div id="f07mg-curvewrap">
         <svg id="f07mg-curve" viewBox="0 0 1240 300" xmlns="http://www.w3.org/2000/svg">
@@ -432,22 +432,22 @@
         <div class="f07mg-lock" id="f07mg-lock2" style="left: 1020px; top: 240px;">
           <svg viewBox="0 0 24 26"><path class="f07mg-shackle" d="M 6 11 V 7 a 6 6 0 0 1 12 0 V 11" /><rect class="f07mg-lockbody" x="2" y="11" width="20" height="14" /></svg>
         </div>
-        <span id="f07mg-postag">Positionen</span>
+        <span id="f07mg-postag">Positions</span>
       </div>
 
       <!-- act 3: hero metric (dataviz-countup landing) -->
       <div id="f07mg-metric">
-        <div id="f07mg-metriclabel">Masse erzwungen</div>
+        <div id="f07mg-metriclabel">Masses forced</div>
         <div id="f07mg-metricrow">
-          <span id="f07mg-metricvalue">0,00</span><span id="f07mg-metricsuffix">%</span>
+          <span id="f07mg-metricvalue">0.00</span><span id="f07mg-metricsuffix">%</span>
         </div>
         <div id="f07mg-metricsub">Median</div>
       </div>
 
       <!-- act 4: honest-limit landing -->
       <div id="f07mg-landing">
-        <div id="f07mg-landingline"><span id="f07mg-keyword">Pr&uuml;fstand</span>, nicht Generator</div>
-        <div id="f07mg-landingsub">Flow-Verifier-Not-Generator &middot; autonom nur 2&ndash;4 Slots</div>
+        <div id="f07mg-landingline"><span id="f07mg-keyword">Test bench</span>, not generator</div>
+        <div id="f07mg-landingsub">Flow verifier, not generator &middot; autonomous only on slots 2&ndash;4</div>
       </div>
 
     </div>
@@ -593,7 +593,7 @@
     tl.fromTo("#f07mg-metricvalue", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power1.out" }, 9.2);
     tl.to(metricState, {
       v: 0.11, duration: METRIC_DUR, ease: "power3.out",
-      onUpdate: () => { metricEl.textContent = metricState.v.toFixed(2).replace(".", ","); },
+      onUpdate: () => { metricEl.textContent = metricState.v.toFixed(2); },
     }, 9.2);
     tl.fromTo(metricEl, { scale: 0.55 }, { scale: 1, duration: METRIC_DUR, ease: "power3.out" }, 9.2);
     tl.fromTo("#f07mg-metricsuffix", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.6)" }, 9.2 + METRIC_DUR);

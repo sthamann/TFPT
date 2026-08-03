@@ -1,10 +1,10 @@
 ---
 format: 1920x1080
 duration: 160s
-message: "Die Prime Front: Die Primzahl-Linie der TFPT — vom E8-Gitter zum Weil-Operator, zum Detektor, zur kleinsten Form der offenen Frage. Ehrlich: kein RH-Beweis."
+message: "The Prime Front: the TFPT prime line — from the E8 lattice to the Weil operator, to the detector, to the smallest form of the open question. Honest: no proof of RH."
 arc: concept-explainer
-audience: der Autor selbst und mathe-affine Laien (deutsch)
-language: de-DE
+audience: the author himself and math-curious lay readers (English)
+language: en-US
 mode: autonomous
 music: none
 ---
@@ -21,7 +21,7 @@ music: none
 ## Frame 1 — Die Musik der Primzahlen
 
 - scene: Ein Zahlenstrahl baut sich auf, Primzahlen ticken herein; darüber erscheint die kritische Linie, auf der Nullstellen-Punkte einrasten
-- voiceover: "Die Primzahlen wirken wie Zufall. Doch ihre Verteilung folgt einem verborgenen Orchester: den Nullstellen der Zetafunktion. Die Riemannsche Vermutung sagt: Alle liegen auf einer einzigen Linie. Unbewiesen — seit über hundertfünfundsechzig Jahren."
+- voiceover: "The prime numbers look like randomness. But their distribution follows a hidden orchestra: the zeros of the Riemann zeta function. The Riemann Hypothesis says: all of them lie on one single line. Unproven — for more than one hundred and sixty-five years."
 - duration: 16.872s
 - transition_in: cut
 - status: animated
@@ -45,7 +45,7 @@ keyMessage: Die Riemannsche Vermutung behauptet: Alle Nullstellen der Zetafunkti
 ## Frame 2 — Der TFPT-Zugang: Geometrie zuerst
 
 - scene: Stationen-Kette auf einer Leinwand: E8-Gitter (Punktrosette) → Zählfunktion Θ = E4 → Hecke-Prüfkanäle (2, 3, 5, 7 …) → ζ als Schatten
-- voiceover: "Die TFPT baut aus zwei Axiomen das E-acht-Gitter. Seine Zählfunktion kennt die Primzahlen bereits: Jede wirkt als eigener Prüfkanal. Und die Zetafunktion erscheint als Schatten dieser Geometrie."
+- voiceover: "The TFPT builds the E8 lattice from two axioms. Its counting function already knows the primes: each one acts as its own Hecke check channel. And the zeta function appears as a shadow of this geometry."
 - duration: 13.848s
 - transition_in: push-slide LEFT
 - status: animated
@@ -69,7 +69,7 @@ keyMessage: Aus dem E8-Gitter der TFPT entsteht die klassische Primzahl-Maschine
 ## Frame 3 — Die Fenstermatrix ist ein Weil-Operator
 
 - scene: Zwei Panels klappen auf: links die TFPT-Fenstermatrix (Gitter-Heatmap), rechts Suzukis Weil-Operator (Integral-Kern); ein "="-Badge rastet ein, darunter der Stempel "W1 — Theorem (v643)"
-- voiceover: "Aus dieser Buchführung entstand eine Fenstermatrix. Und sie entpuppte sich als etwas Klassisches: Wort für Wort Suzukis Weil-Operator. Das ist das W-eins-Theorem — maschinell verifiziert, mit einem ehrlich dokumentierten Erratum."
+- voiceover: "From this bookkeeping came a window matrix. And it turned out to be something classical: word for word, Suzuki's localized Weil operator. That is the W1 theorem — machine-verified, with one honestly documented erratum."
 - duration: 15.288s
 - transition_in: push-slide LEFT
 - status: animated
@@ -93,7 +93,7 @@ keyMessage: Die Fenstermatrix der TFPT IST eine Galerkin-Diskretisierung von Suz
 ## Frame 4 — Der Detektor und der Falsifikator
 
 - scene: Ein Prüfstand-Panel: Zeile "Ramanujan-Graphen" läuft durch und bekommt ein Häkchen (bewiesene Welt, besteht); Zeile "Epstein" schlägt aus — Detektor-Nadel kippt ins Negative, Callout "12 Off-Line-Nullstellen · Bruch vorhergesagt: 0,803"; dann Matched-Filter-Formelkarte
-- voiceover: "Dieselbe Form ist ein Detektor. Kalibriert an gelösten Welten: Ramanujan-Graphen — dort ist das Analogon bewiesen — bestehen den Test. Epstein — mit echten Nullstellen neben der Linie — bricht, exakt wie vorhergesagt. Und der Matched Filter macht es konstruktiv: Jede Off-Line-Nullstelle würde einen nachrechenbaren Zeugen erzeugen. Das Objekt ist falsifizierbar."
+- voiceover: "The same window form is a detector. Calibrated on solved worlds: Ramanujan graphs — where the analogue is proven — pass the test. Epstein zeta functions — with genuine zeros off the line — break it, exactly as predicted. And the matched filter makes this constructive: any off-line zero would produce a computable witness. The object is falsifiable."
 - duration: 24.36s
 - transition_in: crossfade
 - status: animated
@@ -118,7 +118,7 @@ keyMessage: Die Fensterform ist ein kalibrierter Detektor: Ramanujan besteht, Ep
 ## Frame 5 — Zwei Sätze auf der ganzen Fläche
 
 - scene: Stat-Karten bauen sich auf: "det S > 0 — unbedingt, 67/67 Fenster" mit Mini-Zahlenstrahl (Trägerfrequenzen 0,6–1,3 weit unter der ersten Nullstelle 14,13; Dämpfung ×634); daneben Fenster-Karte 60/70 gefüllt, Restliste mit T*-Höhen
-- voiceover: "Zwei Sätze stehen auf der ganzen Fläche. Das Vorzeichen der Determinante: unbedingt bewiesen, auf allen siebenundsechzig Fenstern — die hundertjährige nullstellenfreie Zone versperrt den einzigen Fluchtweg. Und die Marge: sechzig von siebzig Fenstern, geschlossen mit zitierter Klassik."
+- voiceover: "Two theorems stand on the whole surface. The sign of the determinant: unconditionally proven, on all sixty-seven windows — the century-old zero-free region blocks the only escape route. And the margin: sixty of seventy windows, closed with cited classical results."
 - duration: 18.144s
 - transition_in: push-slide LEFT
 - status: animated
@@ -142,7 +142,7 @@ keyMessage: Vorzeichen unbedingt bewiesen auf 67/67 Fenstern; die Marge auf 60 v
 ## Frame 6 — Die Ihara-Blaupause: der fehlende Motor
 
 - scene: Blaupausen-Schema (technische Zeichnung): eine Maschine "A = G_C + G_S" — Bauteil 1 "Chebyshev-Quadratsumme" (immer positiv, montiert), Bauteil 2 "Defekt ⪰ 0 ⟺ Ramanujan" (montiert); daneben dieselbe Maschine auf der ζ-Seite — ein Bauteil-Umriss gestrichelt leer, Label "Z1 — der Motor (Hilbert–Pólya)"
-- voiceover: "Dann der Befund vom dritten August: Im Graphen-Labor, wo das Analogon bewiesen ist, existiert die Ziel-Zerlegung exakt — Quadratsumme plus Defekt. Unsere Fensterform ist baugleich. Es fehlt genau ein Bauteil: der Motor. Hilbert–Pólya, in Fensterkoordinaten."
+- voiceover: "Then, August third: in the graph laboratory, where the analogue is proven, the target decomposition exists exactly — a sum of squares plus a defect. Our window form is built identically. One part is missing: the engine, Z1. Hilbert–Pólya, in window coordinates."
 - duration: 19.344s
 - transition_in: crossfade
 - status: animated
@@ -166,7 +166,7 @@ keyMessage: Die Maschine ist baugleich zum bewiesenen Labor — es fehlt genau e
 ## Frame 7 — Die Geometrie liefert das Maß
 
 - scene: Aus dem E8-Schalen-Zähler tickt die von-Mangoldt-Leiter heraus (Λ_geo = Λ, exakt); darunter läuft der Γ-Fluss als Kurve, die an jedem Primpotenz-Slot in eine Singularität liefe — das Atom mit erzwungener Masse fängt sie ab; Zähler "Masse erzwungen: 0,11 % Median"
-- voiceover: "Und die Geometrie liefert schon das Maß: Die Primzahl-Atome lassen sich zirkelfrei aus reiner Gitterzählung ablesen. Der Gamma-Fluss erzwingt ihre Massen auf Promille — und ihre Positionen. Aber ehrlich: als Prüfstand, nicht als Generator."
+- voiceover: "And the geometry supplies the measure: the prime atoms can be read off, without circularity, from lattice counting alone. The gamma flow forces their masses to per mille — and their positions. But honestly: as a test bench, not as a generator."
 - duration: 16.176s
 - transition_in: push-slide LEFT
 - status: animated
@@ -190,7 +190,7 @@ keyMessage: Die Geometrie kennt Maß, Massen und Positionen der Primzahlen — a
 ## Frame 8 — Der Korridor und die 0,53
 
 - scene: Ein horizontaler Korridor (Band) mit exakten Rändern; ein Punkt sitzt nicht am Rand, sondern innen — Positions-Skala rastet bei 0,53 ein; kleine Drift-Pfeile Richtung Mitte (log n); Callout "Levinson-Extremum: 0,14 % Median"
-- voiceover: "Der Stand heute: Jede Masse lebt in einem Korridor mit exakt berechenbaren Rändern. Die Arithmetik wählt nicht den Rand — sie wählt einen inneren Punkt, bei null Komma dreiundfünfzig. Ein Energie-Extremum trifft ihn bis auf Promille. Die offene Frage: Erkläre die Selektion im Korridor."
+- voiceover: "The state today: every mass lives in a corridor with exactly computable edges. The arithmetic does not choose the edge — it chooses an interior point, at zero point five three. An energy extremum hits it to within per mille. The open question: explain the selection inside the corridor."
 - duration: 19.584s
 - transition_in: crossfade
 - status: animated
@@ -215,7 +215,7 @@ keyMessage: RH ist im Fluss-Bild zu einer Selektionsfrage in einem expliziten, e
 ## Frame 9 — Ehrlich: kein Beweis. Aber die Frage war nie so klein
 
 - scene: Ruhige Statement-Beats: "Kein Beweis." → "Aber die Frage war nie so klein." → Abschlusskarte "Die Prime Front" mit Zeile "≈700 Module · maschinell geprüft · 43 Lean-Theoreme"
-- voiceover: "Kein Beweis. Das sagt dieses Programm selbst, an jeder Stelle. Aber die Frage war nie so klein — und nie so präzise. Rund siebenhundert Module, jede Zahl maschinell geprüft. Das ist die Prime Front."
+- voiceover: "No proof of RH. This program says so itself, at every step. But the question has never been this small — and never this precise. Around seven hundred modules, every number machine-checked. This is the Prime Front."
 - duration: 15.504s
 - transition_in: crossfade
 - status: animated

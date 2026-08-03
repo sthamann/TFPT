@@ -5,65 +5,66 @@ import { Play } from "lucide-react";
 import { SectionHeader } from "../SectionHeader";
 import { cn, SITE_URL } from "@/lib/utils";
 
-const VIDEO_SRC = "/prime-front/prime-front-erklaert.mp4";
-const POSTER_SRC = "/prime-front/prime-front-erklaert-poster.jpg";
-const CAPTIONS_SRC = "/prime-front/prime-front-erklaert.de.vtt";
+const VIDEO_SRC = "/prime-front/prime-front-explained.mp4";
+const POSTER_SRC = "/prime-front/prime-front-explained-poster.jpg";
+const CAPTIONS_EN_SRC = "/prime-front/prime-front-explained.en.vtt";
+const CAPTIONS_DE_SRC = "/prime-front/prime-front-explained.de.vtt";
 
 /** Chapter markers — seconds match the film's nine frames (STORYBOARD.md). */
 const CHAPTERS: { t: number; label: string }[] = [
-  { t: 0, label: "Die Musik der Primzahlen" },
-  { t: 17, label: "Geometrie zuerst (E₈ → ζ)" },
-  { t: 31, label: "Das W1-Theorem" },
-  { t: 46, label: "Detektor & Falsifikator" },
-  { t: 70, label: "Zwei Flächen-Sätze" },
-  { t: 89, label: "Die Ihara-Blaupause (Z1)" },
-  { t: 108, label: "Das Maß aus der Geometrie" },
-  { t: 124, label: "Der Korridor & die 0,53" },
-  { t: 144, label: "Ehrlich: kein Beweis" },
+  { t: 0, label: "The music of the primes" },
+  { t: 17, label: "Geometry first (E₈ → ζ)" },
+  { t: 31, label: "The W1 theorem" },
+  { t: 46, label: "Detector & falsifier" },
+  { t: 70, label: "Two surface theorems" },
+  { t: 89, label: "The Ihara blueprint (Z1)" },
+  { t: 108, label: "The measure from the geometry" },
+  { t: 124, label: "The corridor & the 0.53" },
+  { t: 144, label: "Honest: no proof" },
 ];
 
 /**
- * The German narration, grouped by chapter. Mirrored from the film's caption
+ * The English narration, grouped by chapter. Mirrored from the film's caption
  * track — rendered as visible (collapsible) text so it is accessible to screen
  * readers and indexable (the video pixels are not). Keep in sync with
- * /prime-front/prime-front-erklaert.de.vtt.
+ * /prime-front/prime-front-explained.en.vtt.
  */
 const TRANSCRIPT: { heading: string; body: string }[] = [
   {
-    heading: "Die Musik der Primzahlen (0:00)",
-    body: "Die Primzahlen wirken wie Zufall. Doch ihre Verteilung folgt einem verborgenen Orchester: den Nullstellen der Zetafunktion. Die Riemannsche Vermutung sagt: Alle liegen auf einer einzigen Linie. Unbewiesen — seit über hundertfünfundsechzig Jahren.",
+    heading: "The music of the primes (0:00)",
+    body: "The prime numbers look like randomness. But their distribution follows a hidden orchestra: the zeros of the Riemann zeta function. The Riemann Hypothesis says: all of them lie on one single line. Unproven — for more than one hundred and sixty-five years.",
   },
   {
-    heading: "Geometrie zuerst (0:17)",
-    body: "Die TFPT baut aus zwei Axiomen das E-acht-Gitter. Seine Zählfunktion kennt die Primzahlen bereits: Jede wirkt als eigener Prüfkanal. Und die Zetafunktion erscheint als Schatten dieser Geometrie.",
+    heading: "Geometry first (0:17)",
+    body: "The TFPT builds the E8 lattice from two axioms. Its counting function already knows the primes: each one acts as its own Hecke check channel. And the zeta function appears as a shadow of this geometry.",
   },
   {
-    heading: "Das W1-Theorem (0:31)",
-    body: "Aus dieser Buchführung entstand eine Fenstermatrix. Und sie entpuppte sich als etwas Klassisches: Wort für Wort Suzukis Weil-Operator. Das ist das W-eins-Theorem — maschinell verifiziert, mit einem ehrlich dokumentierten Erratum.",
+    heading: "The W1 theorem (0:31)",
+    body: "From this bookkeeping came a window matrix. And it turned out to be something classical: word for word, Suzuki's localized Weil operator. That is the W1 theorem — machine-verified, with one honestly documented erratum.",
   },
   {
-    heading: "Detektor & Falsifikator (0:46)",
-    body: "Dieselbe Form ist ein Detektor. Kalibriert an gelösten Welten: Ramanujan-Graphen — dort ist das Analogon bewiesen — bestehen den Test. Epstein — mit echten Nullstellen neben der Linie — bricht, exakt wie vorhergesagt. Und der Matched Filter macht es konstruktiv: Jede Off-Line-Nullstelle würde einen nachrechenbaren Zeugen erzeugen. Das Objekt ist falsifizierbar.",
+    heading: "Detector & falsifier (0:46)",
+    body: "The same window form is a detector. Calibrated on solved worlds: Ramanujan graphs — where the analogue is proven — pass the test. Epstein zeta functions — with genuine zeros off the line — break it, exactly as predicted. And the matched filter makes this constructive: any off-line zero would produce a computable witness. The object is falsifiable.",
   },
   {
-    heading: "Zwei Flächen-Sätze (1:10)",
-    body: "Zwei Sätze stehen auf der ganzen Fläche. Das Vorzeichen der Determinante: unbedingt bewiesen, auf allen siebenundsechzig Fenstern — die hundertjährige nullstellenfreie Zone versperrt den einzigen Fluchtweg. Und die Marge: sechzig von siebzig Fenstern, geschlossen mit zitierter Klassik.",
+    heading: "Two surface theorems (1:10)",
+    body: "Two theorems stand on the whole surface. The sign of the determinant: unconditionally proven, on all sixty-seven windows — the century-old zero-free region blocks the only escape route. And the margin: sixty of seventy windows, closed with cited classical results.",
   },
   {
-    heading: "Die Ihara-Blaupause (1:29)",
-    body: "Dann der Befund vom dritten August: Im Graphen-Labor, wo das Analogon bewiesen ist, existiert die Ziel-Zerlegung exakt — Quadratsumme plus Defekt. Unsere Fensterform ist baugleich. Es fehlt genau ein Bauteil: der Motor. Hilbert–Pólya, in Fensterkoordinaten.",
+    heading: "The Ihara blueprint (1:29)",
+    body: "Then, August third: in the graph laboratory, where the analogue is proven, the target decomposition exists exactly — a sum of squares plus a defect. Our window form is built identically. One part is missing: the engine, Z1. Hilbert–Pólya, in window coordinates.",
   },
   {
-    heading: "Das Maß aus der Geometrie (1:48)",
-    body: "Und die Geometrie liefert schon das Maß: Die Primzahl-Atome lassen sich zirkelfrei aus reiner Gitterzählung ablesen. Der Gamma-Fluss erzwingt ihre Massen auf Promille — und ihre Positionen. Aber ehrlich: als Prüfstand, nicht als Generator.",
+    heading: "The measure from the geometry (1:48)",
+    body: "And the geometry supplies the measure: the prime atoms can be read off, without circularity, from lattice counting alone. The gamma flow forces their masses to per mille — and their positions. But honestly: as a test bench, not as a generator.",
   },
   {
-    heading: "Der Korridor und die 0,53 (2:04)",
-    body: "Der Stand heute: Jede Masse lebt in einem Korridor mit exakt berechenbaren Rändern. Die Arithmetik wählt nicht den Rand — sie wählt einen inneren Punkt, bei null Komma dreiundfünfzig. Ein Energie-Extremum trifft ihn bis auf Promille. Die offene Frage: Erkläre die Selektion im Korridor.",
+    heading: "The corridor and the 0.53 (2:04)",
+    body: "The state today: every mass lives in a corridor with exactly computable edges. The arithmetic does not choose the edge — it chooses an interior point, at zero point five three. An energy extremum hits it to within per mille. The open question: explain the selection inside the corridor.",
   },
   {
-    heading: "Ehrlich: kein Beweis (2:24)",
-    body: "Kein Beweis. Das sagt dieses Programm selbst, an jeder Stelle. Aber die Frage war nie so klein — und nie so präzise. Rund siebenhundert Module, jede Zahl maschinell geprüft. Das ist die Prime Front.",
+    heading: "Honest: no proof (2:24)",
+    body: "No proof of RH. This program says so itself, at every step. But the question has never been this small — and never this precise. Around seven hundred modules, every number machine-checked. This is the Prime Front.",
   },
 ];
 
@@ -72,14 +73,14 @@ const fmt = (t: number) => `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "
 const videoJsonLd = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  name: "Die Prime Front — komplett erklärt (deutsch)",
+  name: "The Prime Front — explained in 2½ minutes",
   description:
-    "A ~2.5 minute German-language explainer of TFPT's prime / zeta line, end to end: the Riemann Hypothesis in one image (all zeros on one line), the window matrix born from the E8 bookkeeping and proved identical to Suzuki's Weil operator (the W1 theorem, v643), the calibrated detector / falsifier (Ramanujan passes, Epstein breaks at the predicted 0.803; matched-filter witness for any off-line zero), the two surface theorems (det S > 0 unconditionally on 67/67 windows; the T-B margin closed on 60/70 with cited classics), the Ihara blueprint with the one missing part Z1 (Hilbert–Pólya in window coordinates), the measure and masses forced from pure lattice counting, and the corridor with the selection point at 0.53. Honest fence throughout: no claim of progress toward RH — roughly 700 machine-checked modules.",
+    "A ~2.5 minute explainer of TFPT's prime / zeta line, end to end: the Riemann Hypothesis in one image (all zeros on one line), the window matrix born from the E8 bookkeeping and proved identical to Suzuki's Weil operator (the W1 theorem, v643), the calibrated detector / falsifier (Ramanujan passes, Epstein breaks at the predicted 0.803; matched-filter witness for any off-line zero), the two surface theorems (det S > 0 unconditionally on 67/67 windows; the T-B margin closed on 60/70 with cited classics), the Ihara blueprint with the one missing part Z1 (Hilbert–Pólya in window coordinates), the measure and masses forced from pure lattice counting, and the corridor with the selection point at 0.53. Honest fence throughout: no claim of progress toward RH — roughly 700 machine-checked modules.",
   thumbnailUrl: [`${SITE_URL}${POSTER_SRC}`],
   uploadDate: "2026-08-03",
   duration: "PT2M39S",
   contentUrl: `${SITE_URL}${VIDEO_SRC}`,
-  inLanguage: "de",
+  inLanguage: "en",
   isFamilyFriendly: true,
   transcript: TRANSCRIPT.map((s) => `${s.heading}\n${s.body}`).join("\n\n"),
   publisher: {
@@ -93,10 +94,10 @@ export function PrimeFrontVideo() {
   const ref = useRef<HTMLVideoElement>(null);
   const [started, setStarted] = useState(false);
 
-  // Captions are burned into the video (open captions, German). Browsers
+  // Captions are burned into the video (open captions, English). Browsers
   // remember a user's prior "captions on" preference and would auto-show the
-  // <track>, doubling the captions — so default the selectable track off;
-  // users can still enable it from the native captions menu.
+  // <track>, doubling the captions — so default the selectable tracks off;
+  // users can still enable one from the native captions menu.
   const disableTracks = () => {
     const v = ref.current;
     if (!v) return;
@@ -133,9 +134,9 @@ export function PrimeFrontVideo() {
         <SectionHeader
           id="prime-front-video-heading"
           align="center"
-          eyebrow="Watch first · auf Deutsch"
-          title="Die Prime Front — in 2½ Minuten"
-          description="The whole prime line as a short German-language film: RH in one image, the window matrix that turned out to be Suzuki's Weil operator, the calibrated detector, the two surface theorems, the Ihara blueprint with its one missing part — and the honest state: no proof, but the question has never been this small. German captions are burned in; the full transcript is below."
+          eyebrow="Watch first"
+          title="The Prime Front — in 2½ minutes"
+          description="The whole prime line as a short film: RH in one image, the window matrix that turned out to be Suzuki's Weil operator, the calibrated detector, the two surface theorems, the Ihara blueprint with its one missing part — and the honest state: no proof, but the question has never been this small. English captions are burned in; the full transcript is below."
         />
 
         <figure className="mt-10">
@@ -147,16 +148,23 @@ export function PrimeFrontVideo() {
               playsInline
               preload="none"
               poster={POSTER_SRC}
-              aria-label="Die Prime Front — komplett erklärt (deutsch, mit Untertiteln)"
+              aria-label="The Prime Front — explained (English, captioned)"
               onLoadedMetadata={disableTracks}
             >
               <source src={VIDEO_SRC} type="video/mp4" />
-              {/* Captions are burned in (open captions); this selectable track
-                  stays available for users who prefer browser-styled subtitles
-                  and for indexing — not `default`, to avoid double captions. */}
+              {/* Captions are burned in (open captions); these selectable
+                  tracks stay available for users who prefer browser-styled
+                  subtitles (or the German translation) and for indexing —
+                  not `default`, to avoid double captions. */}
               <track
                 kind="subtitles"
-                src={CAPTIONS_SRC}
+                src={CAPTIONS_EN_SRC}
+                srcLang="en"
+                label="English"
+              />
+              <track
+                kind="subtitles"
+                src={CAPTIONS_DE_SRC}
                 srcLang="de"
                 label="Deutsch"
               />
@@ -168,7 +176,7 @@ export function PrimeFrontVideo() {
               <button
                 type="button"
                 onClick={play}
-                aria-label="Film abspielen — Die Prime Front, komplett erklärt"
+                aria-label="Play the film — The Prime Front, explained"
                 className="group absolute inset-0 flex items-center justify-center bg-slate-950/30 transition-colors hover:bg-slate-950/15 focus-visible:outline-none"
               >
                 <span className="flex h-20 w-20 items-center justify-center rounded-full border border-sky-400/40 bg-sky-500/20 text-sky-100 ring-1 ring-white/10 transition-transform group-hover:scale-105 group-focus-visible:scale-105">
@@ -199,18 +207,18 @@ export function PrimeFrontVideo() {
           </nav>
 
           <figcaption className="mt-3 text-center text-xs text-slate-500">
-            German narration with German captions burned into the picture; a
-            selectable subtitle track and the full transcript below are
-            generated from the same source. Every number in the film traces to
-            a named, machine-checked module — and the film claims no progress
-            toward RH.
+            English narration with English captions burned into the picture;
+            selectable English and German subtitle tracks and the full
+            transcript below are generated from the same source. Every number
+            in the film traces to a named, machine-checked module — and the
+            film claims no progress toward RH.
           </figcaption>
         </figure>
 
         {/* transcript — accessible + indexable */}
         <details className="group mt-8 rounded-2xl border border-slate-700/40 bg-slate-950/40 p-5 sm:p-6">
           <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-slate-200 transition-colors hover:text-white">
-            <span>Transkript lesen (deutsch)</span>
+            <span>Read the transcript</span>
             <span className="text-slate-500 transition-transform group-open:rotate-180">
               ⌄
             </span>
