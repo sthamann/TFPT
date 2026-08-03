@@ -3496,7 +3496,24 @@ complete windows with $a\ge3.434$ plus five finite certificates
 $\kappa'\le0.11$ --- $\det S>0$ \emph{unconditionally on the entire
 declared surface} (\texttt{SURFACE-CLOSED}; a surface theorem on the
 declared family, \emph{not} uniform in all $a$; T-B stays
-\texttt{prob:R1}).  \textbf{The kernel class collapses}
+\texttt{prob:R1}).  \emph{[2026-08-03 \texttt{prob:R1} update: T-B is
+now typed and largely closed.  \veri{v692\_rank3\_lockgram.py}
+($7/7$) types T-B(block) exactly: $\hat A_2=$ positive zero-Gram $+$
+psd rank-1 pole layer, the margin \emph{is} the transverse zero mass
+(a sum of squares), on-line zeros only help (psd superadditivity) ---
+``$E$ kippt nicht'' is a \emph{quantified partial-RH tail} statement,
+neither a 2c-envelope question nor a W3 renaming.
+\veri{v693\_rank3\_density\_close.py} ($5/5$) builds the cited
+explicit bounds (Platt--Trudgian $3\times10^{12}$;
+Hasanalizade--Shen--Wong count; functional-equation halving; the
+explicit Ingham-form zero density, arXiv:2507.15184) into a sharpened
+safe-side envelope (sinh difference pairing, $V(0)=0$, on-line
+subtraction; PEN down $\times6.5$--$14.4$): \textbf{$60/70$ complete
+windows close unconditionally-modulo-citations}; the exact open
+remainder is $h\in\{1359,1721,1868,2018,2093,2472,2475,2630,2656\}$
+with $T^*\in[1.0\times10^{13},3.0\times10^{13}]$ plus $h=5690$ at
+$T^*=8.5\times10^{14}$; extension beyond the declared family grows
+$\sim e^{3.74a}$.]}  \textbf{The kernel class collapses}
 (\veri{v687\_extremal\_kernel.py}, \texttt{KERNEL-CLASS-TOO-NARROW}):
 the pinning certificate $2\pi F_{a_0}(m\pi/a_0)=0$ (sympy-exact) plus
 Shannon sampling collapse the entire admissible band-limited positive
@@ -3539,6 +3556,14 @@ $\mathbb{F}_2^4$, $240=15\times16$ census with the zero class
 provably empty, $\sigma=$ the RM(1,3) family permutation with
 residual gauge of order $18$, coordinate block $=F_1{+}F_2{+}F_3$;
 all must-fail controls fire); remaining: the theorem writeup.
+\emph{[2026-08-03 addendum: the algebraic core is now formally
+verified --- kernel-checked in Lean~4
+(\texttt{TfptCarrier/GaussianCodeBridge.lean}, \texttt{lake build}
+green, no \texttt{sorry}/\texttt{native\_decide}): the
+$\mathbb{Z}[i]$-module with the SNF certificate (unimodular $P,Q$
+both directions), the $240$-root census $15\times16$ with the zero
+class provably empty, $\mu_4$ stability, and the $\sigma$ family
+action with coordinate block $=F_1{+}F_2{+}F_3$.]}
 \emph{\texttt{E8.QUARTIC.HALF.01}} --- G31 as the holomorphic $\mu_4$
 shadow of the E8 compiler: first slice \emph{executed} by
 \veri{v690\_quartic\_half.py} ($22/22$, \texttt{QUARTIC-HALF-ALIVE})
@@ -3547,18 +3572,59 @@ $\{2,14,18,30\}$ is true but trivially $\mu_4$; the substance is
 $F_8|,F_{12}|,F_{20}|,F_{24}|$ as a system of \emph{basic} G31
 invariants (Chevalley cited; the holomorphic restriction generates
 the full G31 ring); remaining: the symbolic degree-60 Jacobian
-factorization and the writeup.
+factorization and the writeup.  \emph{[2026-08-03 addendum: the
+$\mu_4$-orbit vanishing mechanism and the quartic power sum
+$\sum_\alpha\langle\alpha,x\rangle^4=576\,(\sum_ix_i^2)^2$ over the
+explicit $240$ roots are now kernel-checked in Lean~4
+(\texttt{TfptCarrier/QuarticHalf.lean}, \texttt{lake build} green, no
+\texttt{sorry}/\texttt{native\_decide}); the Chevalley
+basic-invariant step remains cited, not formalized.]}
 \emph{\texttt{PRIME.W3.INTERPOLATION.01}} --- the alias-interpolation
 falsifier: first slice \emph{executed} by
 \veri{v688\_interpolation\_detector.py} (constants above); remaining:
-the lemma as a paper lemma.  \emph{\texttt{PRIME.Z1.OPERATOR.01}} ---
+the lemma as a paper lemma.  \emph{[2026-08-03 addendum: the two
+named building blocks are closed near-proof by
+\veri{v694\_interpolation\_lemma\_closure.py} ($20/20$,
+\texttt{CLOSURE-BOTH-NEAR-PROOF}): retention via an exact projection
+identity plus a closed-form $O(k^2)$ certificate ($r_f\ge0.548$ on
+the family surface; straddle boundary case discovered, $k=0$ branch
+secured), and the separation law \emph{form-corrected} to the
+additive $\alpha^*=C_{\mathrm{cell}}/\delta+C''/\Delta\gamma$
+($C''\le0.59$, zero exceptions in $97$ tests); the two open parent
+configurations detect at $\alpha^*=7.90$; declared residues: the
+explicit Ingham constant chain, the Dirichlet-kernel overlap bound,
+the $C''(n)$ induction.]}  \emph{\texttt{PRIME.Z1.OPERATOR.01}} ---
 \emph{OPEN} (Offensive 5 running): construct the self-adjoint
 geometric operator whose polynomial traces are the deployed window
 moments (the Hilbert--P\'olya step of the extracted Ihara mechanism),
 without zeros as input; an operator defined through zeros or an
 RH-equivalent norm assumption $=$ renaming; \texttt{Z2} (the norm
 bound) would be RH itself --- the factorisation \emph{localizes} RH,
-it does not bypass it.
+it does not bypass it.  \emph{[2026-08-03 update, the 5--5d series
+(\veri{v695\_z1\_trace\_operator.py} /
+\veri{v696\_z1\_jacobi.py} / \veri{v697\_z1\_uvarov.py} /
+\veri{v698\_z1\_flow\_recursion.py}): the contract stays OPEN, with
+the ground taken recorded honestly --- (5) the \emph{measure} comes
+from counting [E]: seam and orbifold are dead as Z1 spectrum
+(null-calibrated), while the E8 counting route delivers the Weil
+measure exactly (atoms $0.0$, arch/pole via the closed $\Gamma$
+duplication split, $7/8$ target spikes at $q=0.000$); the comb
+sequence $c+\mathrm{pole}$ is positive-feasible --- the signedness of
+the deployed sequence \emph{is} the pole subtraction.  (5b) the
+canonical operator \emph{exists} (CMV/Jacobi, all moments reproduced
+at $2\times10^{-13}$); no closed coefficient law yet, but the
+renaming clause is explicitly refuted: features on prime-power slots
+($q=0.000$), amplitude--mass link $r_{\log}=+0.76$, positivity
+load-bearing ($170/171$ vs $2865$).  (5c) masses: atoms are
+lag insertions (duality proven), exact transfer identity
+$\Delta\alpha=w_1/E$ ($5.6\times10^{-17}$), and the \emph{inverted}
+stabilization law --- the $\Gamma$ flow predicts the counting masses
+to ${\sim}10\%$ (median ratio $1.026$, corr $0.86$).  (5d) positions
+\emph{forced} (windows $0.5$--$2$ cells, jitter null $30/30$,
+adversary $-516$ lags); shooting recovers the masses at the true
+positions to $0.11\%$ median.  \emph{Remaining:} lookahead autonomy
+(the greedy-saturation failure of autonomous reconstruction) and the
+continuum reading of the operator.]}
 
 \par\smallskip\noindent\textbf{The four fixed-size angle instruments
 (\texttt{PRIME.ANGLE.INSTR.01}).}

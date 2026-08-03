@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`685` registered scripts · `762` ledger claims · `10` clusters.
+`694` registered scripts · `771` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (205 scripts)
+### `core` — Compiler core & the E₈ glue  (214 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -421,6 +421,24 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v634_st31_structure, v647_st31_degree24, v634, v647, v654 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v691_hecke_sos** [E/C/X] `PRIME.HECKESOS.01` — OFFENSIVE 4 (Vertrag PRIME.W3.HECKE.SOS.01): Suche nach der prim-lokalen Faktorisierung A = B*B + P (P ⪰ 0) ohne Nullstellen-Input; sechs wörtliche Akzeptanzkriterien adjudiziert —
   - deps: v677_w3_structure_theorem, v682_lk_split_theta, v683_rank3_functionals, v686_geometric_sos, PRIME.Z1.OPERATOR.01, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v692_rank3_lockgram** [E/C] `PRIME.RANK3LOCKGRAM.01` — OFFENSIVE 2d: der deployte 2×2-Lock-Block als fast-kollineare Gram-Matrix — **Â₂ = positives Nullstellen-Gram G_Z (pro Nullstelle psd, Cauchy–Schwarz manifest) + psd Rang-1-Pol-Lay
+  - deps: v685_rank3_uniformity, v684_rank3_zeroside, v677_w3_structure_theorem, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v693_rank3_density_close** [E/C] `PRIME.RANK3DENSITY.01` — OFFENSIVE 2e — **Zitat-Ledger exakt: [A1] Platt–Trudgian 2021 (RH bis 3e12), [A2] Hasanalizade–Shen–Wong 2022 (expliziter RvM-Count), [A3] Funktionalgleichungs-Halbierung, [A4] exp
+  - deps: v692_rank3_lockgram, v684_rank3_zeroside, v685_rank3_uniformity, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v694_interpolation_lemma_closure** [E/C/O] `PRIME.INTERPCLOSURE.01` — **(iii) RETENTION: exakte Projektions-Identität Im Φ_x(z0) = ||(I−Π)m||², geschlossenes O(k²)-Zertifikat, r_f ≥ 0.548 auf der Familienfläche (≥ 0.266 adversarial); GRENZFALL entdec
+  - deps: v688_interpolation_detector, v677_w3_structure_theorem, v678_zero_gap_theorem, v563, v589 · cited: 3 e8 audit bootstrap, research contracts
+- **v695_z1_trace_operator** [E/O/X] `PRIME.Z1MEASURE.01` — existiert ein selbstadjungierter, GEOMETRISCH konstruierter Operator (zeta-frei, nullstellenfrei, AST-erzwungen), dessen Polynomspuren die Weil-Fenstermomente erzeugen? — **Kandida
+  - deps: PRIME.Z1.OPERATOR.01, v691_hecke_sos, v563, v621, v622, v623, v625, v643 · cited: 3 e8 audit bootstrap, research contracts
+- **v696_z1_jacobi** [E/X] `PRIME.Z1JACOBI.01` — Verblunsky/CMV/Jacobi aus der positiven Kamm-Folge c + Pol — **der kanonische Operator EXISTIERT: CMV-Unitär (367×367) + Jacobi-selbstadjungiert (Wheeler auf Chebyshev-Momenten), R
+  - deps: v695_z1_trace_operator, PRIME.Z1.OPERATOR.01, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v697_z1_uvarov** [E] `PRIME.Z1UVAROV.01` — exakte Punktmassen-/Einzel-Lag-Einfüge-Maschinerie für die Z1-Koeffizienten-Antwort — **DUALITÄT BEWIESEN: die Atome sind LAG-Einfügungen, NICHT Orthogonalitätsmaß-Punktmassen (die
+  - deps: v696_z1_jacobi, v695_z1_trace_operator, PRIME.Z1.OPERATOR.01, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v698_z1_flow_recursion** [E/O] `PRIME.Z1FLOWREC.01` — ist der ganze Primkamm vom Arch+Pol-Fluss erzwungen? — **POSITIONEN ERZWUNGEN: Slot-Fenster 0.5–2 Zellen (6/6 scharf), Jitter-Null 30/30, Adversary-Defizit −516 Lags — die Primpote
+  - deps: v697_z1_uvarov, v696_z1_jacobi, v695_z1_trace_operator, PRIME.Z1.OPERATOR.01, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v699_cone_dynamics** [X] `QGEO.CONEDYN.01` — die Review-7.3-Frage („die Lorentz-Form DYNAMISCH statt statisch nutzen“) auf den Prime-Front-Determinanten-Koordinaten y(a) = (S11, S22, S12)(a) mit J_det der Signatur (1,2) ausge
+  - deps: v683_rank3_functionals, v563, v624, v627 · cited: 3 e8 audit bootstrap
+- **v700_orbit60_census** [-] `E8.ORBIT60.01` — die 60 μ4-Linien von E8 als kombinatorisches Objekt: Quotientengraph, σ/Uhr/Coxeter-Dynamik auf dem ORBIT-RAUM und ein STRIKTER Park-Test für die Kaskade 60 → 6 — **alle fünf Route
+  - deps: v634_st31_structure, v629, v633, v634 · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1435,22 +1453,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×59, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v312`×16
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×67, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v312`×16
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v680_pinch_attack** — `PRIME.PINCHBREAK.01`
-- **v681_coverage_hole** — `PRIME.HOLECLOSED.01`
-- **v682_lk_split_theta** — `PRIME.LKSPLIT.01`
-- **v683_rank3_functionals** — `PRIME.RANK3FUNC.01`
-- **v684_rank3_zeroside** — `PRIME.RANK3ZERO.01`
-- **v685_rank3_uniformity** — `PRIME.RANK3UNIF.01`
-- **v686_geometric_sos** — `PRIME.GEOMSOS.01`
-- **v687_extremal_kernel** — `PRIME.KERNELCLASS.01`
-- **v688_interpolation_detector** — `PRIME.INTERP.01`
 - **v689_gaussian_code_bridge** — `E8.GAUSSCODE.01`
 - **v690_quartic_half** — `E8.QUARTICHALF.01`
 - **v691_hecke_sos** — `PRIME.HECKESOS.01`
+- **v692_rank3_lockgram** — `PRIME.RANK3LOCKGRAM.01`
+- **v693_rank3_density_close** — `PRIME.RANK3DENSITY.01`
+- **v694_interpolation_lemma_closure** — `PRIME.INTERPCLOSURE.01`
+- **v695_z1_trace_operator** — `PRIME.Z1MEASURE.01`
+- **v696_z1_jacobi** — `PRIME.Z1JACOBI.01`
+- **v697_z1_uvarov** — `PRIME.Z1UVAROV.01`
+- **v698_z1_flow_recursion** — `PRIME.Z1FLOWREC.01`
+- **v699_cone_dynamics** — `QGEO.CONEDYN.01`
+- **v700_orbit60_census** — `E8.ORBIT60.01`
 

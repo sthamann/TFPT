@@ -43,6 +43,1356 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-03",
+    "dateLabel": "2026-08-03 · LI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the afternoon bundling: NINE promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v692"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v700"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "140"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green) plus the TWO Lean modules committed — the T-B chain closes "
+      },
+      {
+        "k": "m",
+        "v": "60/70"
+      },
+      {
+        "k": "t",
+        "v": " windows and the Z1 series records its ground. HIGHLIGHT 1 (the T-B chain, "
+      },
+      {
+        "k": "c",
+        "v": "v692"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "c",
+        "v": "v693"
+      },
+      {
+        "k": "t",
+        "v": "): T-B(block) is TYPED ("
+      },
+      {
+        "k": "c",
+        "v": "v692"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "7/7"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\hat A_2="
+      },
+      {
+        "k": "t",
+        "v": " positive zero-Gram "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " psd rank-1 pole layer, exact per entry; the margin identity "
+      },
+      {
+        "k": "m",
+        "v": "\\det(G_Z+P)=\\det G_Z+c_P(s_\\perp^{\\mathsf T}G_Zs_\\perp)"
+      },
+      {
+        "k": "t",
+        "v": " — the razor-thin margin IS the transverse zero mass, a SUM OF SQUARES; on-line zeros only help by "
+      },
+      {
+        "k": "m",
+        "v": "2\\times2"
+      },
+      {
+        "k": "t",
+        "v": " psd superadditivity; “"
+      },
+      {
+        "k": "m",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": " kippt nicht” "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " a QUANTIFIED PARTIAL-RH TAIL statement, neither a 2c-envelope question nor a W3 renaming) and then LARGELY CLOSED ("
+      },
+      {
+        "k": "c",
+        "v": "v693"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "5/5"
+      },
+      {
+        "k": "t",
+        "v": ": the explicit Ingham-form zero density arXiv:2507.15184 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Hasanalizade–Shen–Wong "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " halving "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Platt–Trudgian built into a sharpened safe-side envelope — sinh difference pairing, "
+      },
+      {
+        "k": "m",
+        "v": "V(0)=0"
+      },
+      {
+        "k": "t",
+        "v": ", on-line subtraction, PEN down "
+      },
+      {
+        "k": "m",
+        "v": "\\times6.5"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "14.4"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "60/70"
+      },
+      {
+        "k": "t",
+        "v": " complete windows close UNCONDITIONALLY-MODULO-CITATIONS; exact remainder "
+      },
+      {
+        "k": "m",
+        "v": "9\\times T^*\\approx1"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "3\\times10^{13}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "h=5690"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "8.5\\times10^{14}"
+      },
+      {
+        "k": "t",
+        "v": "; extension grows "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}e^{3.74a}"
+      },
+      {
+        "k": "t",
+        "v": "; Simoni"
+      },
+      {
+        "k": "t",
+        "v": "c"
+      },
+      {
+        "k": "t",
+        "v": " honestly listed trivial-in-range). HIGHLIGHT 2 (the Z1 series 5–5d, "
+      },
+      {
+        "k": "c",
+        "v": "v695"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v698"
+      },
+      {
+        "k": "t",
+        "v": ", contract stays OPEN): the MEASURE comes from counting ("
+      },
+      {
+        "k": "c",
+        "v": "v695"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "25/25"
+      },
+      {
+        "k": "t",
+        "v": ": seam"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "orbifold dead null-calibrated; the E8 counting route delivers the Weil measure EXACTLY — atoms "
+      },
+      {
+        "k": "m",
+        "v": "0.0"
+      },
+      {
+        "k": "t",
+        "v": ", arch/pole via "
+      },
+      {
+        "k": "m",
+        "v": "\\Gamma"
+      },
+      {
+        "k": "t",
+        "v": " duplication, "
+      },
+      {
+        "k": "m",
+        "v": "7/8"
+      },
+      {
+        "k": "t",
+        "v": " target spikes "
+      },
+      {
+        "k": "m",
+        "v": "q=0.000"
+      },
+      {
+        "k": "t",
+        "v": "; comb"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "pole positive-feasible, signedness "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " pole subtraction); the CANONICAL OPERATOR exists ("
+      },
+      {
+        "k": "c",
+        "v": "v696"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "18/18"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "z1-jacobi-opaque"
+      },
+      {
+        "k": "t",
+        "v": " with the renaming clause REFUTED: CMV/Jacobi moments "
+      },
+      {
+        "k": "m",
+        "v": "2\\times10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": "; features on prime-power slots "
+      },
+      {
+        "k": "m",
+        "v": "q=0.000"
+      },
+      {
+        "k": "t",
+        "v": ", amplitude–mass link "
+      },
+      {
+        "k": "m",
+        "v": "r=+0.76"
+      },
+      {
+        "k": "t",
+        "v": ", positivity load-bearing "
+      },
+      {
+        "k": "m",
+        "v": "170/171"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "2865"
+      },
+      {
+        "k": "t",
+        "v": "); the MASSES transfer exactly ("
+      },
+      {
+        "k": "c",
+        "v": "v697"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "z1-uvarov-sequential-closed"
+      },
+      {
+        "k": "t",
+        "v": ": atoms are lag insertions, duality proven; "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta\\alpha=w_1/E"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "5.6\\times10^{-17}"
+      },
+      {
+        "k": "t",
+        "v": "; the INVERTED stabilization law — the "
+      },
+      {
+        "k": "m",
+        "v": "\\Gamma"
+      },
+      {
+        "k": "t",
+        "v": " flow predicts the counting masses to "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}10\\%"
+      },
+      {
+        "k": "t",
+        "v": "); the POSITIONS are forced ("
+      },
+      {
+        "k": "c",
+        "v": "v698"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "15/15"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "z1-recursion-semi"
+      },
+      {
+        "k": "t",
+        "v": ": windows "
+      },
+      {
+        "k": "m",
+        "v": "0.5"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " cells, jitter null "
+      },
+      {
+        "k": "m",
+        "v": "30/30"
+      },
+      {
+        "k": "t",
+        "v": ", adversary "
+      },
+      {
+        "k": "m",
+        "v": "-516"
+      },
+      {
+        "k": "t",
+        "v": "; shooting recovers masses to "
+      },
+      {
+        "k": "m",
+        "v": "0.11\\%"
+      },
+      {
+        "k": "t",
+        "v": " median; honest negatives: greedy saturation needs lookahead, residual noise-like, E-transport recursive — the continuum reading is the remainder). THE REST: "
+      },
+      {
+        "k": "c",
+        "v": "v694"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "closure-both-near-proof"
+      },
+      {
+        "k": "t",
+        "v": ": retention closed with an "
+      },
+      {
+        "k": "m",
+        "v": "O(k^2)"
+      },
+      {
+        "k": "t",
+        "v": " certificate "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " straddle boundary case, separation law FORM-CORRECTED additive "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha^*=C_{\\mathrm{cell}}/\\delta+C''/\\Delta\\gamma"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "C''\\le0.59"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " exceptions in "
+      },
+      {
+        "k": "m",
+        "v": "97"
+      },
+      {
+        "k": "t",
+        "v": " tests; the two open parent configs detect at "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha^*=7.90"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "c",
+        "v": "v699"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "18/18"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "cone-dynamics-dead"
+      },
+      {
+        "k": "t",
+        "v": ": prime updates are translations, "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}99\\%"
+      },
+      {
+        "k": "t",
+        "v": " increments spacelike, no semigroup — the review-7.3 dynamic-cone route killed honestly; the leaf functional separates scramble/Epstein where det is blind), "
+      },
+      {
+        "k": "c",
+        "v": "v700"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "18/18"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "orbit60-parked"
+      },
+      {
+        "k": "t",
+        "v": ": all cascade routes dead, no involution of type "
+      },
+      {
+        "k": "m",
+        "v": "2^{27}1^6"
+      },
+      {
+        "k": "t",
+        "v": " in the line group of order "
+      },
+      {
+        "k": "m",
+        "v": "11520"
+      },
+      {
+        "k": "t",
+        "v": ", Coxeter does not descend, no "
+      },
+      {
+        "k": "m",
+        "v": "A_5"
+      },
+      {
+        "k": "t",
+        "v": " signature). PLUS LEAN ROUND 4: "
+      },
+      {
+        "k": "c",
+        "v": "GaussianCodeBridge.lean"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "QuarticHalf.lean"
+      },
+      {
+        "k": "t",
+        "v": " committed ("
+      },
+      {
+        "k": "c",
+        "v": "lake build"
+      },
+      {
+        "k": "t",
+        "v": " green, "
+      },
+      {
+        "k": "m",
+        "v": "3385"
+      },
+      {
+        "k": "t",
+        "v": " jobs, kernel-checked, no sorry/native_decide): the Gaussian-code-bridge algebraic core (SNF certificate, "
+      },
+      {
+        "k": "m",
+        "v": "15\\times16"
+      },
+      {
+        "k": "t",
+        "v": " census with the zero class provably empty, "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " semantics) and the quartic-half mechanism ("
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "-orbit vanishing, "
+      },
+      {
+        "k": "m",
+        "v": "\\sum\\langle\\alpha,x\\rangle^4=576q^2"
+      },
+      {
+        "k": "t",
+        "v": " over the explicit "
+      },
+      {
+        "k": "m",
+        "v": "240"
+      },
+      {
+        "k": "t",
+        "v": " roots); Chevalley stays cited-not-formalized"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (9)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v692_rank3_lockgram.py"
+        },
+        {
+          "k": "t",
+          "v": " (7), "
+        },
+        {
+          "k": "c",
+          "v": "v693_rank3_density_close.py"
+        },
+        {
+          "k": "t",
+          "v": " (5), "
+        },
+        {
+          "k": "c",
+          "v": "v694_interpolation_lemma_closure.py"
+        },
+        {
+          "k": "t",
+          "v": " (20), "
+        },
+        {
+          "k": "c",
+          "v": "v695_z1_trace_operator.py"
+        },
+        {
+          "k": "t",
+          "v": " (25), "
+        },
+        {
+          "k": "c",
+          "v": "v696_z1_jacobi.py"
+        },
+        {
+          "k": "t",
+          "v": " (18), "
+        },
+        {
+          "k": "c",
+          "v": "v697_z1_uvarov.py"
+        },
+        {
+          "k": "t",
+          "v": " (14), "
+        },
+        {
+          "k": "c",
+          "v": "v698_z1_flow_recursion.py"
+        },
+        {
+          "k": "t",
+          "v": " (15), "
+        },
+        {
+          "k": "c",
+          "v": "v699_cone_dynamics.py"
+        },
+        {
+          "k": "t",
+          "v": " (18), "
+        },
+        {
+          "k": "c",
+          "v": "v700_orbit60_census.py"
+        },
+        {
+          "k": "t",
+          "v": " (18). All nine discovery probes committed alongside; the zero-comb caches reused repo-relative with local fallbacks."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean round 4."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Two new committed proof modules (imports added to "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green, "
+        },
+        {
+          "k": "m",
+          "v": "3385"
+        },
+        {
+          "k": "t",
+          "v": " jobs, no "
+        },
+        {
+          "k": "c",
+          "v": "sorry"
+        },
+        {
+          "k": "t",
+          "v": ", no "
+        },
+        {
+          "k": "c",
+          "v": "native_decide"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lean_manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " regenerated WITH the new files): "
+        },
+        {
+          "k": "c",
+          "v": "GaussianCodeBridge.lean"
+        },
+        {
+          "k": "t",
+          "v": " (the v689 algebraic core: "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{Z}[i]"
+        },
+        {
+          "k": "t",
+          "v": "-module and SNF certificate with unimodular "
+        },
+        {
+          "k": "m",
+          "v": "P,Q"
+        },
+        {
+          "k": "t",
+          "v": " in both directions, the "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": "-root census "
+        },
+        {
+          "k": "m",
+          "v": "15\\times16"
+        },
+        {
+          "k": "t",
+          "v": " with the zero class provably empty, "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " stability, "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " as the order-3 family action with coordinate block "
+        },
+        {
+          "k": "m",
+          "v": "=F_1{+}F_2{+}F_3"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "QuarticHalf.lean"
+        },
+        {
+          "k": "t",
+          "v": " (the v690 provable part: the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-orbit factor "
+        },
+        {
+          "k": "m",
+          "v": "1+(-i)^d+(-1)^d+i^d=0\\iff d\\not\\equiv0\\bmod4"
+        },
+        {
+          "k": "t",
+          "v": ", the per-pair weight law, the full vanishing half incl. the trivial extras, and the quartic power sum "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_\\alpha\\langle\\alpha,x\\rangle^4=576\\,(\\sum_ix_i^2)^2"
+        },
+        {
+          "k": "t",
+          "v": " over the explicit "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " roots with holomorphic isotropy; the Chevalley basic-invariant step cited, not formalized)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 9 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RANK3LOCKGRAM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RANK3DENSITY.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.INTERPCLOSURE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1MEASURE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1JACOBI.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1UVAROV.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1FLOWREC.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.CONEDYN.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.ORBIT60.01"
+        },
+        {
+          "k": "t",
+          "v": "); dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RANK3UNIF.01"
+        },
+        {
+          "k": "t",
+          "v": " (T-B typed and largely closed), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.INTERP.01"
+        },
+        {
+          "k": "t",
+          "v": " (both blocks near-proof), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the 5–5d series status; stays OPEN), "
+        },
+        {
+          "k": "c",
+          "v": "E8.GAUSSCODE.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "E8.QUARTICHALF.01"
+        },
+        {
+          "k": "t",
+          "v": " (formally verified in Lean; Chevalley cited-not-formalized)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 9 new audit blocks. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "prob:R1"
+        },
+        {
+          "k": "t",
+          "v": " update inside the tenth slice (T-B typed "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "60/70"
+        },
+        {
+          "k": "t",
+          "v": " closed with the exact "
+        },
+        {
+          "k": "m",
+          "v": "T^*"
+        },
+        {
+          "k": "t",
+          "v": " remainder list) and the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " series-5–5d update (measure from counting [E], canonical operator, masses"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "positions forced (measured); remaining: lookahead autonomy "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " continuum reading); Lean addenda on the two review contracts. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": two new subsections (the T-B chain; the Z1 series). "
+        },
+        {
+          "k": "c",
+          "v": "parity_toeplitz_classification"
+        },
+        {
+          "k": "t",
+          "v": ": the T-B closure paragraph (v692–v693)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed entry (the afternoon bundling); suite counters "
+        },
+        {
+          "k": "m",
+          "v": "685\\to694"
+        },
+        {
+          "k": "t",
+          "v": "; README and Zenodo description updated to "
+        },
+        {
+          "k": "m",
+          "v": "694"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v700"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves; the T-B closure is unconditional-MODULO-CITATIONS on "
+        },
+        {
+          "k": "m",
+          "v": "60/70"
+        },
+        {
+          "k": "t",
+          "v": " windows of the declared finite family (the remainder carries exact "
+        },
+        {
+          "k": "m",
+          "v": "T^*"
+        },
+        {
+          "k": "t",
+          "v": "; extension beyond the family typed); "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " stays OPEN (lookahead autonomy "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " continuum reading); the two kills ("
+        },
+        {
+          "k": "t",
+          "v": "cone-dynamics-dead"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "orbit60-parked"
+        },
+        {
+          "k": "t",
+          "v": ") are honest closures of review routes; no RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-03",
     "dateLabel": "2026-08-03 · L",
     "heading": [
       {

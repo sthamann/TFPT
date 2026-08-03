@@ -4505,6 +4505,199 @@ Machine-checked: \veri{v691\_hecke\_sos.py}.
 Z1 gap)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{Typing T-B through the zero side
+(\texttt{PRIME.RANK3LOCKGRAM.01}).}
+Offensive 2d: the deployed $2\times2$ lock block as an
+almost-collinear Gram matrix ($7$ checks, ${\sim}20$\,s).  \emph{The
+decomposition} \mE: via the v677 master identity, polarized,
+$\hat A_2=G_Z+P+\mathrm{tail}$ per entry --- a positive zero-Gram
+(per-zero psd rank $\le2$, Cauchy--Schwarz manifest per $\gamma$)
+plus a psd rank-1 pole layer $P=c_Ps\,s^{\mathsf T}$ (closed form).
+\emph{The margin identity} \mE:
+$\det(G_Z+P)=\det G_Z+c_P(s_\perp^{\mathsf T}G_Zs_\perp)$ --- the
+razor-thin T-B margin \emph{is} the transverse zero mass, a sum of
+squares ($\gamma_1$ carries $3$--$61\%$).  \emph{Superadditivity}
+\mE: on-line zeros only increase $\det$ ($2\times2$ psd; zeros to
+$3\times10^{12}$ on-line by citation) --- the truncation is
+safe-side.  \emph{The typing} \mC: ``$E$ kippt nicht'' is a
+quantified partial-RH tail statement --- neither a 2c-envelope
+question nor a W3 renaming; census: $8/15$ windows close at
+$3\times10^{12}$ alone, $13/15$ with the density route, remainder
+with exact factors and $T^*$ up to $1.1\times10^{16}$.  No marker
+move, no RH claim.
+Machine-checked: \veri{v692\_rank3\_lockgram.py}.
+\mE\ (decomposition, margin identity, superadditivity) $+$
+(\textsc{a-cited}) (verification height) $+$ \mC\ (partial-RH-tail
+typing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Closing T-B(block) with cited density
+bounds (\texttt{PRIME.RANK3DENSITY.01}).}
+Offensive 2e ($5$ checks, ${\sim}100$\,s).  \emph{The citation
+ledger} (\textsc{a-cited}, exact forms): Platt--Trudgian 2021 (RH to
+$3\times10^{12}$), Hasanalizade--Shen--Wong 2022 (explicit RvM
+count), functional-equation halving, and the explicit Ingham-form
+zero density (arXiv:2507.15184, valid from exactly
+$3\times10^{12}$); Simoni\v{c} honestly listed as trivial in range.
+\emph{The refined envelope} \mE: sinh difference pairing, $V(0)=0$
+(near-line zeros harmless), on-line subtraction, Abel $+$ Stieltjes
+tail --- the penalty drops $\times6.5$--$14.4$ vs the 2d worst case.
+\emph{The census}: $60/70$ complete windows close
+\emph{unconditionally-modulo-citations}; the exact remainder is nine
+windows with $T^*\in[1.0\times10^{13},3.0\times10^{13}]$ plus
+$h=5690$ at $8.5\times10^{14}$; extension beyond the family grows
+${\sim}e^{3.74a}$.  Honest scope: the lock-block determinant, not
+full W3.  No marker move, no RH claim.
+Machine-checked: \veri{v693\_rank3\_density\_close.py}.
+\mE\ (refined envelope) $+$ (\textsc{a-cited}) (four explicit
+citations) $+$ (\textsc{measured}) (growth law) $+$ \mC\ (honest
+scope)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Closing the interpolation-lemma
+blocks (\texttt{PRIME.INTERPCLOSURE.01}).}
+The two named building blocks of the alias-interpolation lemma made
+near-proof ($20$ checks, ${\sim}19$\,s; verdict
+\textsc{closure-both-near-proof}).  \emph{(iii) Retention} \mE:
+exact projection identity $\mathrm{Im}\,\Phi_x(z_0)=\|(I-\Pi)m\|^2$
+plus a closed-form $O(k^2)$ certificate; measured floor
+$r_f\ge0.548$ on the family surface; the straddle boundary case
+discovered (a sub-resolution real pair collapses the pinned filter;
+the detector still fires via the barred $k=0$ branch); Ingham 1936
+covers the Gram at $q>1$.  \emph{(v) Separation, form-corrected}
+(\textsc{measured}): the pure law $\alpha^*=C'/\Delta\gamma$ is
+rejected; the additive law
+$\alpha^*=C_{\mathrm{cell}}/\delta+C''/\Delta\gamma$ stands
+($C''_{\mathrm{up}}=0.590$, zero exceptions in $97$ tests,
+adjudication-tight); the two open parent configs detect at
+$\alpha^*=7.90$; $C''(n{=}3)\approx2\times$ pair value $=$ declared
+residue.  An off-line zero is the hypothesis of every statement; no
+RH claim.
+Machine-checked: \veri{v694\_interpolation\_lemma\_closure.py}.
+\mE\ (retention certificate) $+$ (\textsc{measured}) (additive
+separation law) $+$ \mC\ (near-proof typing, named residues)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Z1 measure from counting
+(\texttt{PRIME.Z1MEASURE.01}).}
+Offensive 5, round 1 of the contract \texttt{PRIME.Z1.OPERATOR.01}
+($25$ checks, ${\sim}3$\,s; verdict
+\textsc{z1-measure-from-counting-operator-open}).  \emph{The
+candidate census}: seam (v621--v623) dead as Z1 spectrum (residuals
+${\sim}1$, AP phases, $1/D$ drift); orbifold (v679) dead
+(null-calibrated); the E8 counting route delivers the Weil measure
+\emph{exactly} --- atoms from the shell recursion at deviation
+$0.0$, arch/pole via the closed $\Gamma$-duplication split, $7/8$
+target spikes at $q=0.000$; must-fail: without the Satake projection
+the form breaks.  \emph{The precision} \mE: the deployed symbol is
+signed, but the comb sequence $c+\mathrm{pole}$ is
+positive-feasible --- the signedness \emph{is} the pole subtraction.
+Kill criteria K-A..K-D preregistered (zeta/zero loading $=$
+renaming, AST-enforced).  No marker move, no RH claim.
+Machine-checked: \veri{v695\_z1\_trace\_operator.py}.
+\mE\ (measure identities, positive feasibility) $+$
+(\textsc{measured}) (spikes, null calibrations) $+$ (\mE,
+\textsc{kill}) (Satake must-fail) $+$ \mO\ (operator missing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Z1 canonical operator
+(\texttt{PRIME.Z1JACOBI.01}).}
+Offensive 5b: Verblunsky/CMV/Jacobi from the positive comb sequence
+($18$ checks, ${\sim}1$\,s; verdict \textsc{z1-jacobi-opaque}, with
+the strong renaming clause explicitly \emph{not} confirmed).
+\emph{Existence} \mE: the canonical CMV/Jacobi pair is built
+explicitly and reproduces all moments (worst rel dev
+$2\times10^{-13}$) --- Z1 is now purely the closed-form question for
+the coefficients.  \emph{No closed law} (\textsc{measured}): the two
+named first-order laws and the $h$-ladder fail.  \emph{But the
+counting signature is present}: features on prime-power slots
+($q=0.000$), amplitude--mass link $r_{\log}=+0.76$, positivity
+load-bearing (smooth/scramble lose PD at $k\approx170$, true masses
+PD to $2865$).  Ihara anchor: Kesten--McKay exact.  No marker move,
+no RH claim.
+Machine-checked: \veri{v696\_z1\_jacobi.py}.
+\mE\ (canonical existence, moment back-verification) $+$
+(\textsc{measured}) (law failures, counting signature) $+$ (\mE,
+\textsc{kill}) (positivity collapse controls)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Z1 transfer law
+(\texttt{PRIME.Z1UVAROV.01}).}
+Offensive 5c: the slot-amplitude transfer machinery ($14$ checks,
+${\sim}1$\,s; verdict \textsc{z1-uvarov-sequential-closed}).
+\emph{Duality proven} \mE: the atoms are lag insertions, not
+orthogonality-measure point masses (those sit at the zeros $=$ the
+renaming direction, firewalled).  \emph{The exact identity} \mE:
+$\Delta\alpha_{m_0-1}=w_1/E_{m_0-1}$ ($5.6\times10^{-17}$; $E$ the
+position-free Christoffel object), zero response below the slot.
+\emph{The inverted stabilization law} (\textsc{measured}): the
+$\Gamma$ flow predicts the counting masses to ${\sim}10\%$ (median
+ratio $1.026$, corr $0.86$) --- the flow knows the masses.
+\emph{Composition} \mE: sequential-exact with just-in-time
+positivity; every prime power individually load-bearing.  No marker
+move, no RH claim.
+Machine-checked: \veri{v697\_z1\_uvarov.py}.
+\mE\ (duality, transfer identity, composition) $+$
+(\textsc{measured}) (inverted stabilization law)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Z1 flow recursion
+(\texttt{PRIME.Z1FLOWREC.01}).}
+Offensive 5d: positions, residual, E-transport ($15$ checks,
+${\sim}20$\,s; verdict \textsc{z1-recursion-semi}).  \emph{Positions
+forced} (\textsc{measured}): slot windows $0.5$--$2$ cells ($6/6$
+sharp), jitter null $30/30$, adversary deficit $-516$ lags.
+\emph{Shooting} (\textsc{measured}): opposite divergence channels
+($k\to\pm1$) bracket the counting mass --- recovery at the true
+position to $0.11\%$ median; slot identity re-verified
+($9.4\times10^{-14}$).  \emph{Honest negatives}: autonomous
+reconstruction fails at greedy saturation (lookahead missing),
+residual noise-like, E-transport recursive ---
+\texttt{PRIME.Z1.OPERATOR.01} stays \emph{open} (continuum reading
+missing).  Zero-side read: firewalled correlation diagnostic only
+(AST-confined).  No marker move, no RH claim.
+Machine-checked: \veri{v698\_z1\_flow\_recursion.py}.
+\mE\ (slot identity) $+$ (\textsc{measured}) (forced positions,
+shooting) $+$ \mO\ (lookahead autonomy, continuum reading)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Cone dynamics, killed honestly
+(\texttt{QGEO.CONEDYN.01}).}
+The review-7.3 question --- use the Lorentz form \emph{dynamically}
+--- executed on the prime-front determinant coordinates ($18$
+checks, ${<}1$\,s; verdict \textsc{cone-dynamics-dead}).  \emph{The
+kill}: prime updates are \emph{translations} in $y$-space (linearity
+exact), so no multiplicative cone-preserving semigroup;
+${\sim}99\%$ of increments are spacelike, $\ell$ not monotone on the
+true path --- no Perron--Frobenius/Lorentz-boost reading survives.
+\emph{Side finding}: the leaf functional separates scramble/Epstein
+where $\det$ is blind.  The static cone results (v624/v627) stand
+untouched.  AST zero-firewall; deterministic.  No marker move, no RH
+claim.
+Machine-checked: \veri{v699\_cone\_dynamics.py}.
+(\mE, \textsc{kill}) (translations, spacelike census) $+$
+(\textsc{measured}) (leaf-functional separation)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The orbit-60 census, parked
+(\texttt{E8.ORBIT60.01}).}
+The $60$ $\mu_4$-lines as a combinatorial object and a strict park
+test for the cascade $60\to6$ ($18$ checks, ${\sim}1$\,s; verdict
+\textsc{orbit60-parked}).  All five routes adjudicated: degree rules
+dead (quotient graphs regular); $\sigma$ structure dead (orbit sizes
+$\{3,1\}$); the involution witness \emph{does not exist} (full
+census of the line group, order $11520$: $375$ involutions, $21$
+classes, none of cycle type $2^{27}1^6$); W(E8) Coxeter does not
+descend; the must-fail numerology control fires (rule-free pair
+removal reproduces $60-2n$ in $27$ steps; $>10^{70}$ equally
+successful sequences --- the counting carries no structure).  $A_5$
+one-liner: order-5 elements exist ($2304$) but nothing natural.
+Parked per the review protocol.
+Machine-checked: \veri{v700\_orbit60\_census.py}.
+(\mE, \textsc{park}) (five-route adjudication, involution census,
+numerology must-fail)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

@@ -80,6 +80,8 @@ import TfptCarrier.G31Orders
 import TfptCarrier.G31WordOrders
 import TfptCarrier.HammingCode
 import TfptCarrier.SquareParity
+import TfptCarrier.GaussianCodeBridge
+import TfptCarrier.QuarticHalf
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck
