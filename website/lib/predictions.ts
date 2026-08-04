@@ -138,12 +138,22 @@ export interface AuditRound {
     | "watchdogs armed"
     | "pattern candidate"
     | "preregistered kill test"
-    | "forward band";
+    | "forward band"
+    | "mixed";
   summary: string;
   detail: string;
 }
 
 const AUDIT_ROUNDS: AuditRound[] = [
+  {
+    date: "2026-08-04",
+    title: "News round — JUNO moves onto the prediction, n_s crosses the band edge, the g−2 bridge dissolves",
+    verdict: "mixed",
+    summary:
+      "A pure data-refresh round against the August-2026 literature, honest in both directions: JUNO's 207-day update lands at +0.49σ on sin²θ₁₂ (central value moving TOWARD the prediction) and ICARUS adds another sterile null — but the CMB-SPA combination puts n_s = 0.9679 ± 0.0033 ABOVE the 0.967 band edge for the first time (watch-flagged mild weakening), the DESI Σm_ν squeeze keeps pressing on the 0.0588 eV floor, and the g−2 seam-vertex bridge is DISSOLVED: its dated kill condition fired (WP25 + BMW lattice-HVP consensus, experiment − SM = 0.5σ).",
+    detail:
+      "The 2026-08-04 news round updates the scorecard against the current literature with no new analysis of our own — radical honesty in both directions. CONFIRMING SIDE: JUNO's Neutrino-2026 update (207 days) reports sin²θ₁₂ = 0.3036 ± 0.0064, the sharpest single measurement of the solar angle ever — +0.49σ from the frozen prediction 0.306747, with the central value moving toward it from the first 59.1-day run (0.3092); ICARUS's first standalone result (no ν_μ disappearance, new 3+1 exclusions at 90% CL) adds another null leg exactly as N_fam = 3 requires; the sequentially-valid DESI reanalysis localises the evolving-dark-energy signal almost entirely in one redshift bin (LRG2 — without it the evidence collapses, mildly pro-ΛCDM), continuing the dissolution trend the w = −1 watchdog predicts; two new independent birefringence analyses (Planck scale-dependence β = 0.30° ± 0.05° with the constant model Bayes-preferred; PR4 field-level 0.32° ± 0.12°) stay consistent with the 0.2424° seed; and the CMB-SPA H₀ = 67.19 ± 0.38 lands +0.11σ from the parameter-free budget value 67.15 (correlated legs, never a new independent hit). WEAKENING SIDE, equally prominent: the CMB-SPA combination (SPT-3G D1 + ACT + Planck) gives n_s = 0.9679 ± 0.0033 — the central value sits ABOVE the TFPT band edge 0.967 for the first time (edge at −0.27σ, preferred branch 0.9611 at −2.06σ); this is not yet the dated kill ('robustly ≥ 0.967') but is typed an honest mild weakening and watch-flagged; the DESI DR2 effective-mass posterior keeps the Σm_ν = 0.0588 eV floor under +3.1σ model-dependent pressure (unchanged, on record). AND ONE BRIDGE DIES: the muon g−2 seam-vertex bridge's dated kill condition (2026-07-02) has fired — WP25 (Phys. Rep. 2025) adopts the lattice HVP as the SM baseline and the BMW hybrid evaluation (Nature 2026) confirms it, experiment − SM = 0.5σ, so the converged Δa_μ lies outside 2.879×10⁻⁹ ± 0.5×10⁻⁹: the vertex identification is excluded in its present form, the bridge row is typed kill_channel, and the exact compiler number δ₂/(2π) plus the compiler core are untouched — the watchdog delivered exactly what it was built for. Operationally the round also froze the Vela GO-programme preregistration (p9_go_programmes_v1.yaml) ahead of the expected 2026/27 giant-glitch window and recorded the CHIME/FRB Catalog-2 + RepCat4 data availability in the FRB experiment folders.",
+  },
   {
     date: "2026-07-07",
     title: "New beds — UHECR spectrum + primordial power spectrum",
@@ -261,12 +271,13 @@ const AUDIT_ROUNDS: AuditRound[] = [
  * without coupling the static build to the experiments tree.
  */
 export const EXPERIMENTS_AUDIT = {
-  rows: 120,
-  consistent: 49,
+  rows: 121,
+  consistent: 47,
   tension: 9,
-  null: 26,
+  null: 27,
   dataLimited: 33,
-  parked: 3,
+  parked: 4,
+  killChannel: 1,
   repoPath: "experiments",
   readmePath: "experiments/README.md",
   scorecardPath: "experiments/evidence_scorecard.json",
@@ -463,20 +474,20 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_2_standard_model.pdf",
     description:
-      "Previously the only open SM angle. Tri-bimaximal 1/3 plus the seam misalignment ε = (3/4)φ₀ = c₃ + 36 c₃⁴ (leading term c₃, fourth-order puncture correction exact) gives the prediction of record sin²θ₁₂_seed = 0.306747. This single seed value is the frozen prediction (blind registry predictions_frozen.json, 2026-06-09, machine-enforced by v84); the seam-corrected 0.306808 and non-linear 0.307020 are scheme diagnostics of the same texture along the F_transfer orbit, not rescue branches. Live status: JUNO's first 59.1-day run reports sin²θ₁₂ = 0.3092 ± 0.0087 — compatible, precision phase pending; NuFIT 6.0 (0.307) is the pre-JUNO global-fit baseline.",
+      "Previously the only open SM angle. Tri-bimaximal 1/3 plus the seam misalignment ε = (3/4)φ₀ = c₃ + 36 c₃⁴ (leading term c₃, fourth-order puncture correction exact) gives the prediction of record sin²θ₁₂_seed = 0.306747. This single seed value is the frozen prediction (blind registry predictions_frozen.json, 2026-06-09, machine-enforced by v84); the seam-corrected 0.306808 and non-linear 0.307020 are scheme diagnostics of the same texture along the F_transfer orbit, not rescue branches. Live status: JUNO's 207-day update (Neutrino 2026) reports sin²θ₁₂ = 0.3036 ± 0.0064 — the sharpest single measurement, +0.49σ from the prediction, with the central value moving TOWARD 0.30675 from the first 59.1-day run (0.3092 ± 0.0087); precision phase running. NuFIT 6.0 (0.307) is the pre-JUNO global-fit baseline.",
     category: "Neutrino",
     confrontation: {
       derivation: "\\sin^2\\theta_{12} = \\tfrac{1}{3} - \\tfrac{\\varphi_0}{2}",
       tfptValue: "0.30675",
-      measured: "0.307 ± 0.012 (NuFIT) · 0.3092 ± 0.0087 (JUNO)",
-      deviation: "−0.02σ (NuFIT) · −0.28σ (JUNO)",
-      source: "NuFIT 6.0 (2024) · JUNO (2025)",
-      decisive: "JUNO ~2026–2028 (the fastest falsifier)",
+      measured: "0.307 ± 0.012 (NuFIT) · 0.3036 ± 0.0064 (JUNO 207 d)",
+      deviation: "−0.02σ (NuFIT) · +0.49σ (JUNO 207 d)",
+      source: "NuFIT 6.0 (2024) · JUNO, Neutrino 2026 (207-day dataset)",
+      decisive: "JUNO ~2026–2028 (the fastest falsifier; precision phase running)",
     },
     experiment: {
       summary:
-        "experiments/neutrino-mixing confronts sin²θ₁₂ = 1/3 − φ₀/2 with NuFIT 6.0 and JUNO's first 59.1-day run.",
-      result: "−0.02σ vs NuFIT, −0.28σ vs JUNO — the sharpest hit in the program.",
+        "experiments/neutrino-mixing confronts sin²θ₁₂ = 1/3 − φ₀/2 with NuFIT 6.0 and JUNO (59.1-day run, updated to the 207-day Neutrino-2026 dataset).",
+      result: "−0.02σ vs NuFIT, +0.49σ vs JUNO 207 d (central value moved toward the prediction) — the sharpest hit in the program.",
       finding: "consistent",
       repoPath: "experiments/neutrino-mixing",
     },
@@ -700,22 +711,22 @@ export const predictions: Prediction[] = [
     ],
     pdf: "/papers/tfpt_1_architecture_e8.pdf",
     description:
-      "The scalar tilt comes from the same R² (Starobinsky) attractor that fixes the scalaron mass. The frozen registry keeps n_s as a band over N★ ∈ [50,60]; the scalaron-reheating chain (v86, Higgs channel) sharpens it conditionally to N★ = 51.4 ⇒ n_s = 0.9611 — recorded with its tensions (+0.9σ below Planck; the same chain underpredicts A_s, so the point is conditional on the decay channel).",
+      "The scalar tilt comes from the same R² (Starobinsky) attractor that fixes the scalaron mass. The frozen registry keeps n_s as a band over N★ ∈ [50,60]; the scalaron-reheating chain (v86, Higgs channel) sharpens it conditionally to N★ = 51.4 ⇒ n_s = 0.9611 — recorded with its tensions (+0.9σ below Planck; the same chain underpredicts A_s, so the point is conditional on the decay channel). Watch-flag (2026-08-04): the CMB-SPA combination (SPT-3G D1 + ACT + Planck) gives n_s = 0.9679 ± 0.0033 — the central value sits ABOVE the 0.967 band edge for the first time (edge at −0.27σ; not yet the dated kill 'robustly ≥ 0.967', but an honest mild weakening).",
     category: "Cosmology",
     confrontation: {
       derivation: "n_s = 1 - \\tfrac{2}{N_\\star},\\ N_\\star \\in [50,60]",
       tfptValue: "0.960–0.967 (0.9611 at N★=51.4)",
-      measured: "0.9649 ± 0.0042",
-      deviation: "−0.91σ (band consistent)",
-      source: "Planck 2018",
-      decisive: "CMB-S4 ~2028–2032",
+      measured: "0.9649 ± 0.0042 (Planck) · 0.9679 ± 0.0033 (CMB-SPA)",
+      deviation: "−0.91σ (Planck, band consistent) · band edge −0.27σ, branch −2.06σ (CMB-SPA — watch)",
+      source: "Planck 2018 · CMB-SPA: SPT-3G D1+ACT+Planck (2025/26)",
+      decisive: "CMB-S4 ~2028–2032 (kill: robust n_s ≥ 0.967)",
     },
     experiment: {
       summary:
-        "experiments/cmb-inflation-scalaron compares n_s = 1 − 2/N⋆ to Planck and the ACT+DESI combination; the branch resolver decides the N⋆ typing.",
+        "experiments/cmb-inflation-scalaron compares n_s = 1 − 2/N⋆ to Planck, the ACT+DESI combination and (news round 2026-08-04) the CMB-SPA combination; the branch resolver decides the N⋆ typing.",
       result:
-        "n_s = 0.9611 (N⋆ = 51.4): −0.91σ vs Planck, but −3.9σ vs the P-ACT-LB+DESI value. Decision FINALIZED: the band [50,60] is the prediction of record, 51.4 the preferred branch.",
-      finding: "consistent",
+        "n_s = 0.9611 (N⋆ = 51.4): −0.91σ vs Planck, −2.06σ vs CMB-SPA (0.9679 ± 0.0033), whose central value crossed the 0.967 band edge — watch-flagged mild weakening; the band [50,60] stays the prediction of record.",
+      finding: "tension",
       repoPath: "experiments/cmb-inflation-scalaron",
     },
   },

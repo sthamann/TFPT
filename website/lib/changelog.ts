@@ -43,6 +43,823 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-04",
+    "dateLabel": "2026-08-04 · LVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the news round: a pure data-refresh against the August-2026 literature — no new analysis of our own, honest in both directions. CONFIRMING: JUNO's Neutrino-2026 update ("
+      },
+      {
+        "k": "m",
+        "v": "207"
+      },
+      {
+        "k": "t",
+        "v": " days) lands at "
+      },
+      {
+        "k": "m",
+        "v": "\\sin^2\\theta_{12}=0.3036\\pm0.0064"
+      },
+      {
+        "k": "t",
+        "v": " — the sharpest single measurement of the solar angle, "
+      },
+      {
+        "k": "m",
+        "v": "+0.49\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " from the frozen prediction "
+      },
+      {
+        "k": "m",
+        "v": "0.306747"
+      },
+      {
+        "k": "t",
+        "v": ", central value moving "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "toward"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " it from the "
+      },
+      {
+        "k": "m",
+        "v": "59.1"
+      },
+      {
+        "k": "t",
+        "v": "-day run; ICARUS's first standalone result (no "
+      },
+      {
+        "k": "m",
+        "v": "\\nu_\\mu"
+      },
+      {
+        "k": "t",
+        "v": " disappearance, new "
+      },
+      {
+        "k": "m",
+        "v": "3{+}1"
+      },
+      {
+        "k": "t",
+        "v": " exclusions at "
+      },
+      {
+        "k": "m",
+        "v": "90\\%"
+      },
+      {
+        "k": "t",
+        "v": " CL) adds another sterile null exactly as "
+      },
+      {
+        "k": "m",
+        "v": "N_{\\mathrm{fam}}=3"
+      },
+      {
+        "k": "t",
+        "v": " requires; the sequentially-valid DESI reanalysis localises the evolving-dark-energy signal almost entirely in the LRG2 bin (without it the evidence collapses, mildly pro-"
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda"
+      },
+      {
+        "k": "t",
+        "v": "CDM — the dissolution trend the "
+      },
+      {
+        "k": "m",
+        "v": "w=-1"
+      },
+      {
+        "k": "t",
+        "v": " watchdog predicts); two new independent birefringence analyses ("
+      },
+      {
+        "k": "m",
+        "v": "\\beta=0.30^\\circ\\pm0.05^\\circ"
+      },
+      {
+        "k": "t",
+        "v": " constant-model-preferred; PR4 field-level "
+      },
+      {
+        "k": "m",
+        "v": "0.32^\\circ\\pm0.12^\\circ"
+      },
+      {
+        "k": "t",
+        "v": ") stay consistent with the "
+      },
+      {
+        "k": "m",
+        "v": "0.2424^\\circ"
+      },
+      {
+        "k": "t",
+        "v": " seed; CMB-SPA "
+      },
+      {
+        "k": "m",
+        "v": "H_0=67.19\\pm0.38"
+      },
+      {
+        "k": "t",
+        "v": " lands "
+      },
+      {
+        "k": "m",
+        "v": "+0.11\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " from the parameter-free budget "
+      },
+      {
+        "k": "m",
+        "v": "67.15"
+      },
+      {
+        "k": "t",
+        "v": " (correlated legs, never a new independent hit). WEAKENING, equally prominent: CMB-SPA (SPT-3G D1"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "ACT"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "Planck) gives "
+      },
+      {
+        "k": "m",
+        "v": "n_s=0.9679\\pm0.0033"
+      },
+      {
+        "k": "t",
+        "v": " — the central value sits "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "above"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " the TFPT band edge "
+      },
+      {
+        "k": "m",
+        "v": "0.967"
+      },
+      {
+        "k": "t",
+        "v": " for the first time (edge at "
+      },
+      {
+        "k": "m",
+        "v": "-0.27\\sigma"
+      },
+      {
+        "k": "t",
+        "v": ", preferred branch "
+      },
+      {
+        "k": "m",
+        "v": "0.9611"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "-2.06\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "; not yet the dated kill “robustly "
+      },
+      {
+        "k": "m",
+        "v": "\\ge0.967"
+      },
+      {
+        "k": "t",
+        "v": "”, typed an honest mild weakening, scorecard row "
+      },
+      {
+        "k": "t",
+        "v": "tension"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " watch-flag); the DESI DR2 effective-mass posterior keeps the "
+      },
+      {
+        "k": "m",
+        "v": "\\Sigma m_\\nu=0.0588"
+      },
+      {
+        "k": "t",
+        "v": " eV floor under "
+      },
+      {
+        "k": "m",
+        "v": "+3.1\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " model-dependent pressure (unchanged, on record). ONE BRIDGE DIES: the muon "
+      },
+      {
+        "k": "m",
+        "v": "g{-}2"
+      },
+      {
+        "k": "t",
+        "v": " seam-vertex bridge's dated kill condition (2026-07-02) has FIRED — WP25 (Phys. Rep. 2025) adopts the lattice HVP as the SM baseline and the BMW hybrid evaluation (Nature 2026) confirms it, experiment"
+      },
+      {
+        "k": "m",
+        "v": "-"
+      },
+      {
+        "k": "t",
+        "v": "SM "
+      },
+      {
+        "k": "m",
+        "v": "=0.5\\sigma"
+      },
+      {
+        "k": "t",
+        "v": ", so the converged "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta a_\\mu"
+      },
+      {
+        "k": "t",
+        "v": " lies outside "
+      },
+      {
+        "k": "m",
+        "v": "2.879\\times10^{-9}\\pm0.5\\times10^{-9}"
+      },
+      {
+        "k": "t",
+        "v": ": the vertex identification is excluded in its present form, the scorecard row is typed "
+      },
+      {
+        "k": "t",
+        "v": "kill_channel"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "c",
+        "v": "FR.MUONG2.01"
+      },
+      {
+        "k": "t",
+        "v": " carries the dated kill note, and "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " gets the dated update paragraph "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " summary-table move "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "s",
+        "v": "X"
+      },
+      {
+        "k": "t",
+        "v": "on the bridge — the exact compiler number "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_2/(2\\pi)"
+      },
+      {
+        "k": "t",
+        "v": " and the compiler core are untouched (no core marker moves): the watchdog delivered exactly what it was built for. OPERATIONAL: the Vela GO-programme preregistration is FROZEN as "
+      },
+      {
+        "k": "c",
+        "v": "experiments/p9-forecast/hypotheses/p9_go_programmes_v1.yaml"
+      },
+      {
+        "k": "t",
+        "v": " ahead of the expected 2026/27 giant-glitch window (no glitch since 2024-04-29; long-component decision rule and the "
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": "-TOAs/day cadence requirement inside; draft SHA recorded as provenance); CHIME/FRB Catalog-2 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " RepCat4 data-availability notes recorded in "
+      },
+      {
+        "k": "c",
+        "v": "repeater-cascade"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "frb-ontology"
+      },
+      {
+        "k": "t",
+        "v": ". Scorecard "
+      },
+      {
+        "k": "m",
+        "v": "120\\to121"
+      },
+      {
+        "k": "t",
+        "v": " typed rows (consistent "
+      },
+      {
+        "k": "m",
+        "v": "49\\to47"
+      },
+      {
+        "k": "t",
+        "v": ", null "
+      },
+      {
+        "k": "m",
+        "v": "27"
+      },
+      {
+        "k": "t",
+        "v": ", parked "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": ", kill_channel "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "c",
+        "v": "predictions.ts"
+      },
+      {
+        "k": "t",
+        "v": " mirrors the JUNO/"
+      },
+      {
+        "k": "m",
+        "v": "n_s"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "m",
+        "v": "g{-}2"
+      },
+      {
+        "k": "t",
+        "v": " status; no verification module touched, no core marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scorecard (regenerated)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_{12}"
+        },
+        {
+          "k": "t",
+          "v": " row: JUNO "
+        },
+        {
+          "k": "m",
+          "v": "207"
+        },
+        {
+          "k": "t",
+          "v": "-day value "
+        },
+        {
+          "k": "m",
+          "v": "0.3036\\pm0.0064"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "+0.49\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "; supersedes the "
+        },
+        {
+          "k": "m",
+          "v": "59.1"
+        },
+        {
+          "k": "t",
+          "v": "-day "
+        },
+        {
+          "k": "m",
+          "v": "0.3092"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "m",
+          "v": "n_s"
+        },
+        {
+          "k": "t",
+          "v": " row: CMB-SPA "
+        },
+        {
+          "k": "m",
+          "v": "0.9679\\pm0.0033"
+        },
+        {
+          "k": "t",
+          "v": " added, status "
+        },
+        {
+          "k": "t",
+          "v": "consistent"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "tension"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " watch-flag (central value above the "
+        },
+        {
+          "k": "m",
+          "v": "0.967"
+        },
+        {
+          "k": "t",
+          "v": " band edge). Flat-budget row: CMB-SPA "
+        },
+        {
+          "k": "m",
+          "v": "H_0"
+        },
+        {
+          "k": "t",
+          "v": " leg "
+        },
+        {
+          "k": "m",
+          "v": "+0.11\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " (correlated). Sterile watchdog: ICARUS null leg. "
+        },
+        {
+          "k": "m",
+          "v": "w"
+        },
+        {
+          "k": "t",
+          "v": " watchdog: LRG2-localisation note. Birefringence row: two new supporting legs. "
+        },
+        {
+          "k": "m",
+          "v": "g{-}2"
+        },
+        {
+          "k": "t",
+          "v": ": WP2025-lattice row "
+        },
+        {
+          "k": "t",
+          "v": "tension"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "kill_channel"
+        },
+        {
+          "k": "t",
+          "v": " (kill condition fired), WP2020-dispersive row "
+        },
+        {
+          "k": "t",
+          "v": "parked"
+        },
+        {
+          "k": "t",
+          "v": " (baseline withdrawn by WP25)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "FR.MUONG2.01"
+        },
+        {
+          "k": "t",
+          "v": ": dated kill note “(6) KILL FIRED 2026-08-04” — bridge dissolved, exact value stays "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ", core untouched. No other row touched."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": ": dated update paragraph in the muon section "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " summary-table bridge move "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "s",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": "(core untouched); no other paper touched."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Experiments."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Vela/Auger GO-prereg frozen ("
+        },
+        {
+          "k": "c",
+          "v": "p9_go_programmes_v1.yaml"
+        },
+        {
+          "k": "t",
+          "v": "); CHIME Cat2/RepCat4 data notes; news-check note "
+        },
+        {
+          "k": "c",
+          "v": "experiments/news_check_2026-08-04.md"
+        },
+        {
+          "k": "t",
+          "v": " on record."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "predictions.ts"
+        },
+        {
+          "k": "t",
+          "v": ": JUNO "
+        },
+        {
+          "k": "m",
+          "v": "207"
+        },
+        {
+          "k": "t",
+          "v": "-day confrontation, "
+        },
+        {
+          "k": "m",
+          "v": "n_s"
+        },
+        {
+          "k": "t",
+          "v": " watch-flag ("
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " CMB-SPA numbers), the dated news-round entry (verdict "
+        },
+        {
+          "k": "t",
+          "v": "mixed"
+        },
+        {
+          "k": "t",
+          "v": "), audit counters "
+        },
+        {
+          "k": "m",
+          "v": "121"
+        },
+        {
+          "k": "t",
+          "v": " rows; "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": ": muon section mirror updated (bridge dissolved)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-04",
     "dateLabel": "2026-08-04 · LVII",
     "heading": [
       {

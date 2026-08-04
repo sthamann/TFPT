@@ -62,8 +62,14 @@ ROWS = [
      "search_target", "FAST 1652 + Blinkverse", "cascade wall + accelerating gaps replicated", "null"],
     # ---- CMB (experiments/cmb-birefringence-seed) ----
     ["CMB", "cosmic birefringence beta", "0.2424 deg",
-     "ACT DR6 0.215+/-0.074 deg", 0.37, "prediction", "CMB EB/TB calibration",
-     "prediction_of_record", "ACT DR6 (arXiv:2509.13654)",
+     "ACT DR6 0.215+/-0.074 deg (record leg, +0.37 sigma); 2026-08-04 news round: two new "
+     "independent supporting analyses -- Planck scale-dependence study (JCAP 09 (2025) 075): "
+     "beta = 0.30+/-0.05 deg with the CONSTANT-in-ell model Bayes-preferred, and PR4 "
+     "field-level inference (arXiv:2606.02897): beta = 0.32+/-0.12 deg -- constant + nonzero, "
+     "consistent with 0.2424 deg (within ~1.2 sigma of the sharpest new leg); the polarisation "
+     "calibration systematic remains the shared open caveat of every leg",
+     0.37, "prediction", "CMB EB/TB calibration",
+     "prediction_of_record", "ACT DR6 (arXiv:2509.13654); JCAP 09 (2025) 075; arXiv:2606.02897",
      "systematics-controlled beta excludes 0.2424 deg at >=3 sigma", "consistent"],
     ["CMB", "baryon fraction Omega_b", "0.04894",
      "BBN D/H 0.0489+/-0.0014 (CMB-independent)", 0.04, "prediction", "BBN / CMB Omega_b h2",
@@ -738,15 +744,26 @@ ROWS = [
      "data_limited"],
     # ---- lab (experiments/lab-residuals) ----
     ["lab", "muon g-2 Delta a_mu (WP2020 dispersive)", "2.879e-9",
-     "residual 2.62e-9+/-0.45", 0.58, "bridge", "HVP (dispersive)",
-     "downstream_bridge", "Fermilab 2025 + WP2020", "residual incompatible with 2.879e-9", "consistent"],
+     "residual 2.62e-9+/-0.45 (0.58 sigma) -- HISTORICAL reading: the WP2020 data-driven HVP "
+     "baseline is withdrawn (WP25 adopts the lattice HVP as the SM baseline); kept on record "
+     "as the alternative-group leg the bridge was originally scored against",
+     0.58, "bridge", "HVP (dispersive)",
+     "downstream_bridge", "Fermilab 2025 + WP2020 (superseded by WP25)",
+     "residual incompatible with 2.879e-9", "parked"],
     ["lab", "muon g-2 Delta a_mu (WP2025 lattice)", "2.879e-9",
-     "residual 0.39e-9+/-0.64 (WP2025 sigma corrected to 62)", 3.92, "bridge", "HVP (lattice)",
-     "downstream_bridge", "Fermilab 2025 + arXiv:2505.21476",
-     "lattice HVP consolidates and residual stays ~0; dated 2026-07-02: a data-driven HVP "
-     "consensus consistent with lattice/WP25 (CMD-3-side) kills the bridge (+3.9 sigma "
-     "today); a KLOE-side dispersive consensus restores <1 sigma. Watch: MUonE (Phase-1 2025 "
-     "analysed), BaBar 2026 pipi (stays KLOE-side), TI WP-3 ~2027-28", "tension"],
+     "residual 0.39e-9+/-0.64 (WP2025 sigma corrected to 62) -> the fixed TFPT bridge value "
+     "sits +3.9 sigma high; 2026-08-04 news round: the dated kill condition HAS FIRED -- WP25 "
+     "(Phys. Rep., 2025) adopts the lattice HVP as the SM baseline and the BMW hybrid "
+     "evaluation (Nature, 2026) confirms it: Experiment - SM = 0.5 sigma, i.e. Delta a_mu "
+     "converged OUTSIDE 2.879e-9 +/- 0.5e-9. The seam-vertex identification is excluded in "
+     "its present form; the exact compiler number delta_2/(2 pi) and the core are untouched "
+     "-- the watchdog delivered exactly what it was built for",
+     3.92, "bridge", "HVP (lattice)",
+     "downstream_bridge", "Fermilab 2025 + arXiv:2505.21476 + WP25 (Phys. Rep. 2025) + BMW "
+     "hybrid (Nature 2026)",
+     "FIRED 2026-08-04 (dated 2026-07-02): the lattice-side HVP consensus consolidated "
+     "(WP25 + BMW 2026) with residual ~0 -- bridge dissolved; a future KLOE-side dispersive "
+     "consensus reversal would reopen it (not expected)", "kill_channel"],
     ["lab", "rare kaon BR(K+ -> pi+ nu nu)", "9.45e-11",
      "NA62 2016-2024 (9.6 +1.9 -1.8)e-11", -0.08, "bridge", "short-distance QCD",
      "downstream_bridge", "NA62 arXiv:2604.12649", "BR(K+) outside [7,12]e-11", "consistent"],
@@ -881,9 +898,15 @@ ROWS = [
      "PMNS theta13 as transfer-corrected; v4: >2 neighbour decoders beating the TFPT links "
      "or placebo percentile >10% would void the architecture reading", "consistent"],
     # ---- inflation (cmb-inflation-scalaron) ----
-    ["CMB", "inflation n_s (Starobinsky/scalaron)", "1-2/N_star = 0.9611 (N=51.4)",
-     "Planck 0.9649+/-0.0042", -0.91, "prediction", "N_star reheating input",
-     "prediction_of_record", "Planck 2018 / DESI", "n_s >= 0.967 robustly", "consistent"],
+    ["CMB", "inflation n_s (Starobinsky/scalaron)", "1-2/N_star = 0.9611 (N=51.4); record band [0.960, 0.967]",
+     "Planck 0.9649+/-0.0042 (-0.91 sigma vs the 51.4 branch); 2026-08-04 news round: CMB-SPA "
+     "(SPT-3G D1 + ACT + Planck, arXiv:2506.20707) 0.9679+/-0.0033 -- the sharpest combination; "
+     "central value ABOVE the 0.967 band edge for the FIRST time (edge at -0.27 sigma, branch "
+     "0.9611 at -2.06 sigma; profiled branch 0.9644 at -1.06 sigma). Not yet 'robustly >= 0.967' "
+     "(the dated kill), but an honest mild weakening -- watch-flagged", -2.06,
+     "prediction", "N_star reheating input",
+     "prediction_of_record", "Planck 2018 / DESI / CMB-SPA (SPT-3G D1, arXiv:2506.20707)",
+     "n_s >= 0.967 robustly", "tension"],
     ["CMB", "inflation r (tensor ratio)", "12/N_star^2 = 0.0045",
      "BICEP/Keck < 0.036; CMB-S4 sigma 5e-4", None, "prediction", "N_star reheating input",
      "prediction_of_record", "BICEP/Keck BK18; CMB-S4", "r excluded at CMB-S4 (>5 sigma)", "consistent"],
@@ -931,8 +954,13 @@ ROWS = [
      "experiments/tfpt-discovery/mu_distortion_probe.py + COBE/FIRAS",
      "robust mu < 0.9e-8 or > 4e-8", "data_limited"],
     # ---- neutrino mixing (neutrino-mixing) ----
-    ["neutrino", "sin^2 theta12", "1/3 - phi0/2 = 0.306747", "NuFIT 6.0 0.307+/-0.012", -0.02,
-     "prediction", "PMNS (TBM+seam)", "prediction_of_record", "NuFIT 6.0 / JUNO",
+    ["neutrino", "sin^2 theta12", "1/3 - phi0/2 = 0.306747",
+     "NuFIT 6.0 0.307+/-0.012 (-0.02 sigma); JUNO Neutrino-2026 update (207 days): "
+     "0.3036+/-0.0064 -> +0.49 sigma, the sharpest single measurement (supersedes the 59.1-day "
+     "0.3092+/-0.0087 / -0.28 sigma; the central value moved TOWARD the prediction); "
+     "Delta m^2_21 = 7.388+/-0.078e-5 eV^2; precision phase running", 0.49,
+     "prediction", "PMNS (TBM+seam)", "prediction_of_record",
+     "NuFIT 6.0 / JUNO (Neutrino 2026, 207-day dataset)",
      "theta12 off 0.3067 at >3 sigma", "consistent"],
     ["neutrino", "sin^2 theta13", "phi0 e^(-5/6) = 0.0231", "NuFIT 6.0 0.02195+/-0.00058", 2.0,
      "prediction", "PMNS (seed x carrier-trace)", "prediction_of_record", "NuFIT 6.0 / Daya Bay",
@@ -975,7 +1003,11 @@ ROWS = [
      "candidate], rho_L/Mbar^4=(3/4pi^2)e^-2ainv [frozen], Sigma m_nu=0.0588 eV [v468 "
      "route]} + flatness -> H0=67.15 km/s/Mpc, Omega_m=0.3133, Omega_L=0.6866, t0=13.86 Gyr",
      "H0: Planck18 -0.39 sigma, SH0ES22 -5.67 sigma (the parameter-free PLANCK side of the "
-     "Hubble tension), DESI DR2 BAO+CMB -2.16 sigma; Omega_m -0.27, Omega_L +0.26, "
+     "Hubble tension), DESI DR2 BAO+CMB -2.16 sigma; 2026-08-04 news round: CMB-SPA "
+     "(SPT-3G D1+ACT+Planck) 67.19+/-0.38 -> +0.11 sigma from the budget 67.15 -- the sharpest "
+     "CMB-side leg lands ON the parameter-free value, but it is CORRELATED with the "
+     "already-counted phi0/alpha legs (same phi0_seed group), never a new independent hit; "
+     "Omega_m -0.27, Omega_L +0.26, "
      "Omega_c/Omega_b +0.14; honest stress: omega_b -2.02 (BBN-only D/H -0.73 -- the "
      "stress is CMB-side), omega_c -1.19, derived t0 +2.9 -- one correlated low-h "
      "direction, not additive", None, "pattern_candidate",
@@ -1012,7 +1044,10 @@ ROWS = [
      "cuts 4.2->3.2 sigma (calibration error in DES-SN5YR); Bayesian reanalysis "
      "(arXiv:2603.05472) eliminates the DESI+CMB-only preference (ln B=-0.57) -- the "
      "preference is dissolving as w=-1 requires; Union3 frequentist 3.8 sigma (2.23 Bayesian) "
-     "remains",
+     "remains; 2026-08-04 news round: sequentially-valid reanalysis (arXiv:2607.28918) "
+     "localises the DESI DR2 evolving-DE signal almost entirely in the LRG2 redshift bin -- "
+     "without LRG2 the evidence collapses (M=0.49, mildly pro-LCDM); the dissolution trend "
+     "continues",
      None, "prediction", "Lambda = constant vacuum", "prediction_of_record",
      "dark-energy-w-watchdog (DESI DR2, overlap-aware)",
      "w != -1 at >=5 sigma in a single systematics-controlled overlap-aware combination",
@@ -1057,10 +1092,14 @@ ROWS = [
      "N_fam = 3 exactly (no 4th light state)",
      "MicroBooNE two-beam (Nature 648, 64-69 (2025)) excludes single-sterile LSND/MiniBooNE "
      "at 95% CL and cuts into gallium/BEST space; gallium deficit persists unexplained (no "
-     "oscillation signature); JSNS2 running (no excess); SBND+ICARUS decide this decade",
+     "oscillation signature); JSNS2 running (no excess); 2026-08-04 news round: ICARUS first "
+     "standalone result (arXiv:2603.22557, 2026): NO nu_mu disappearance, new 3+1 exclusions "
+     "at 90% CL -- another null leg exactly as N_fam=3 requires; SBND+ICARUS joint pending, "
+     "decides this decade",
      None, "prediction", "E8 family counting (D5+A3+mu4; no spare slot)",
      "prediction_of_record",
-     "fixed-point-watchdog axis D (Nature 648 (2025); arXiv:2512.07159, 2602.06274; SBN 2026)",
+     "fixed-point-watchdog axis D (Nature 648 (2025); arXiv:2512.07159, 2602.06274; "
+     "ICARUS arXiv:2603.22557; SBN 2026)",
      "any confirmed sterile oscillation signal at >= 5 sigma (systematics-controlled; "
      "e.g. joint SBND+ICARUS or JSNS2-II)", "consistent"],
     # ---- fixed-point-watchdog axis E (2026-07-03): Cabibbo dissolution + the NEW
@@ -1488,6 +1527,9 @@ OVERRIDES: dict[str, dict] = {
                         "coincidence-based coverage, preregistered before data"},
     "muon g-2 Delta a_mu (WP2020 dispersive)": {"alternative_group": "HVP_baseline"},
     "muon g-2 Delta a_mu (WP2025 lattice)": {"alternative_group": "HVP_baseline"},
+    # 2026-08-04 news round: CMB-SPA central value crossed the 0.967 band edge -> the
+    # sharpest mild weakening among the non-red channels; dated kill stays "robustly >= 0.967".
+    "inflation n_s": {"watch_flag": True, "watch_level": "medium"},
     "axion haloscope marker": {"alternative_group": "axion_branch"},
     "AXION.HILLTOP": {"alternative_group": "axion_branch"},
     "AXION.SPINE": {"alternative_group": "axion_branch"},

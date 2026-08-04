@@ -15,8 +15,9 @@ Daten-Kanal analysiert wird — welcher Kanal könnte das gemeinsame TFPT-Signal
 
 Prereg (eingefroren **vor** jedem Monte-Carlo-Lauf):
 [`hypotheses/p9_forecast_v1.yaml`](hypotheses/p9_forecast_v1.yaml).
-GO-Empfehlung als Prereg-Entwurf:
-[`hypotheses/p9_go_programmes_prereg_draft.yaml`](hypotheses/p9_go_programmes_prereg_draft.yaml).
+GO-Empfehlung als **eingefrorene Prereg v1** (2026-08-04, vor dem erwarteten
+Vela-Glitch-Fenster 2026/27 — kein Riesen-Glitch seit 2024-04-29, Rate ~1/2,5 a):
+[`hypotheses/p9_go_programmes_v1.yaml`](hypotheses/p9_go_programmes_v1.yaml).
 
 ## Run
 

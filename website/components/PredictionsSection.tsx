@@ -33,6 +33,7 @@ const AUDIT_COUNTS: { label: string; value: number; tone: string }[] = [
   { label: "null", value: EXPERIMENTS_AUDIT.null, tone: "text-slate-300" },
   { label: "data-limited", value: EXPERIMENTS_AUDIT.dataLimited, tone: "text-sky-300" },
   { label: "parked", value: EXPERIMENTS_AUDIT.parked, tone: "text-slate-400" },
+  { label: "kill-channel", value: EXPERIMENTS_AUDIT.killChannel, tone: "text-rose-300" },
 ];
 
 const VERDICT_TONE: Record<AuditRound["verdict"], string> = {
@@ -44,6 +45,7 @@ const VERDICT_TONE: Record<AuditRound["verdict"], string> = {
   "pattern candidate": "text-violet-200 bg-violet-500/15 ring-violet-400/30",
   "preregistered kill test": "text-blue-200 bg-blue-500/15 ring-blue-400/30",
   "forward band": "text-teal-200 bg-teal-500/15 ring-teal-400/30",
+  mixed: "text-rose-200 bg-rose-500/15 ring-rose-400/30",
 };
 
 /** One dated audit round as a compact, expandable row. */

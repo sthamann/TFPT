@@ -86,8 +86,8 @@ export const DISCIPLINE: DisciplineStats =
     "sympyModules": 411
   },
   "contracts": {
-    "ledgerRows": 70,
-    "withKillCriteria": 45,
+    "ledgerRows": 71,
+    "withKillCriteria": 46,
     "texMentions": 22
   },
   "replay": {
@@ -121,7 +121,7 @@ export const DISCIPLINE: DisciplineStats =
     "arxivModules": 53
   },
   "lean": {
-    "modules": 62
+    "modules": 64
   },
   "openGates": {
     "count": 291
