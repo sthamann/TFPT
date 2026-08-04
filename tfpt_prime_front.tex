@@ -8,6 +8,32 @@
 %  what is exploratory sandbox work, and it claims NO progress on the
 %  Riemann Hypothesis.
 % ---------------------------------------------------------------------
+%  EDITORIAL NOTE (2026-08-04): part structure + reader's guide added;
+%  no content changes.  Redundancy audit --- DOCUMENTED ONLY, nothing
+%  deleted or merged (consolidation is a user decision):
+%   R1  The abstract and the long roadmap paragraph of Section 1 ("How
+%       to read this document", after the scope box) both narrate the
+%       full chronological arc; together ~6 pages telling the same
+%       story at two resolutions.
+%   R2  The moonshot narrative is told twice: inside "The L1 montage
+%       and the moonshot" (sec:l1-moonshot) and again as the four-stage
+%       story in "The moonshot arc" (sec:moonshot-arc).
+%   R3  The T-B absorption-margin story appears in sec:tb-chain and is
+%       re-told, with the census update, in sec:tb-6970.
+%   R4  The "honest RH distance" bookkeeping of sec:balance overlaps
+%       with the "asymptotic mountain" subsection of sec:status (both
+%       state the distance-to-any-infinite-statement inventory).
+%   R5  The W1 Lerch-convention erratum (+1/4 vs -1) is narrated in
+%       sec:theory-open and re-mentioned in module subsections and the
+%       symbols appendix (11 "Lerch" mentions in total).
+%   R6  The per-module fence sentence ("finite Lambda-sums are allowed
+%       and used, no RH input") is boilerplate repeated across the
+%       phase-2 module subsections of sec:verified (5x) --- deliberate,
+%       but a single shared fence box would shorten the section.
+%   R7  The no-RH disclaimer appears 13x across the document (abstract,
+%       scope box, fences) --- deliberate redundancy, listed only for
+%       completeness.
+% ---------------------------------------------------------------------
 \documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -243,6 +269,23 @@ a program of this shape the kill list is the more reliable output.
 
 \TFPTbadges
 
+% table of contents: parts and sections only (tocdepth 1); the
+% subsection titles, which carry the diary verdicts, remain available
+% through the PDF bookmarks
+{\setcounter{tocdepth}{1}\tableofcontents}
+
+% =====================================================================
+\part{Orientation}\label{part:orientation}
+% =====================================================================
+\noindent This part carries orientation, not results. It states the
+reading rules of the document (the scope box below is the contract),
+gives three routes through the document for three kinds of readers,
+explains why a discrete compiler meets the primes at all
+(Section~\ref{sec:motivation}), and states the framework picture --- a
+self-dual lattice and its own mirror --- that motivated the whole line
+(Section~\ref{sec:bigpicture}). Everything said here is said again,
+precisely and with provenance, in the parts that follow.
+
 % =====================================================================
 \section{How to read this document}
 % =====================================================================
@@ -273,6 +316,33 @@ from literal data are marked \emph{schematic} in their caption, and the caption 
 quantities in the figure are literal.
 \end{enumerate}
 \end{gapboxnb}
+
+\begin{keybox}[Reader's guide: three routes through this document]
+\textbf{The mathematician.} Enter at Part~\ref{part:theory}: the seven
+closed-form theorems of the parity read block, with derivation sketches
+(Section~\ref{sec:theory}), and the one remaining arithmetic statement,
+posed self-contained and without TFPT vocabulary
+(Section~\ref{sec:theory-open}). Then read the keystone --- the wall in
+four equivalent languages, each finitely decidable per window
+(Section~\ref{sec:wall-four-languages}) --- and, for the machine-checked
+backing of any single claim, the matching module subsection in
+Part~\ref{part:verified}.
+
+\textbf{The skeptic.} Read the scope box above, then
+Part~\ref{part:kills}: the kill list (Section~\ref{sec:kills}) and the
+honest RH distance in six checkable statements
+(Section~\ref{sec:balance}). Continue with the status section
+(Section~\ref{sec:status}) --- what is certified, what is measured,
+what is hypothesis input --- and its final fence. The off-line-zero
+detector line (Section~\ref{sec:theory-open}) is where the program
+exposes itself to falsification.
+
+\textbf{The reader in a hurry.} Read the motivation and the big picture
+(Sections~\ref{sec:motivation} and~\ref{sec:bigpicture}), then the
+keystone round (Section~\ref{sec:wall-four-languages}), then the status
+section (Section~\ref{sec:status}). Everything else is reachable from
+those four places through the cross-references.
+\end{keybox}
 
 \noindent The diary parts are cited as \textbf{T$n$} (part $n$ of the research diary, chronological,
 $n=11\ldots177$). The probe file, the contract name, the verdict and the check count of every part are
@@ -777,6 +847,17 @@ $ss^{\mathsf T}-tt^{\mathsf T}$ at $10^{-18}$ (T106). \emph{Schematic:} the geom
 the reading of the axis as ``order'' with the lattice's arithmetic content beside it. The bottom line is
 an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
+
+% =====================================================================
+\part{The verified layer}\label{part:verified}
+% =====================================================================
+\noindent The single section of this part is the only place in the
+document that is entirely load-bearing: every claim has a module in
+\texttt{verification/}, a row in the status ledger, and an explicit
+script citation at the point of use. The subsections follow the module
+numbers and can be read independently; each states what its module
+checks and what it deliberately does not. Nothing in the sandbox parts
+that follow upgrades anything here.
 
 % =====================================================================
 \section{The verified layer: forty-nine modules}\label{sec:verified}
@@ -3075,6 +3156,22 @@ arithmetic content of Problem~7.1 is \emph{one approximate identity
 per window} with explicit couplings.
 
 % =====================================================================
+\part{The localization program and the certification arc
+(T79--T125)}\label{part:sandbox}
+% =====================================================================
+\noindent From here through Part~\ref{part:phase2} the document is a
+research diary: preregistered sandbox probes, chronological, none of
+them load-bearing (promoted cores are cited where they landed in
+Part~\ref{part:verified}). This part contains the first three acts:
+the localization of the residual difficulty into one coupled
+inequality, I5, equivalent by identity to Weil positivity
+(Section~\ref{sec:i5}); the reorganization of that inequality as a
+per-zone handover induction (Section~\ref{sec:handover}); and the
+certification arc T102--T125, which converts the ingredients of the
+induction into identities and certificates until the remaining hardness
+sits in named, checkable statements (Section~\ref{sec:certification}).
+
+% =====================================================================
 \section{The localization program (sandbox)}\label{sec:i5}
 % =====================================================================
 \begin{gapboxnb}[Provenance]
@@ -5244,6 +5341,22 @@ this is a statement about a given quadratic form at a given resolution.
 \end{keybox}
 
 % =====================================================================
+\part{Honest negatives: the kill list and the series balance}\label{part:kills}
+% =====================================================================
+\noindent This part is the collection point for the negative output,
+which the program treats as its more transferable product.
+Section~\ref{sec:kills} is the kill list of the first series: the
+readings and routes refuted by the program's own probes, each with the
+measurement that killed it. Section~\ref{sec:balance} is the
+bookkeeping of the certification arc --- the reduction cascade, the
+certification degree, and the honest RH distance in six checkable
+statements. Later phases record their kills in place: the phase-2
+breaks stay inside Section~\ref{sec:phase2}, and the frontier kills
+(reflection positivity on truncations, measured gap universality, the
+Sonin transfer, the UCP transport route) are collected in
+Section~\ref{sec:wall-four-languages}.
+
+% =====================================================================
 \section{The kill list}\label{sec:kills}
 % =====================================================================
 \noindent A program that only reports what survived is not reporting. These are the readings and routes
@@ -5412,6 +5525,18 @@ statement in numerical analysis. It is not a statement about zeros.
 \noindent The defect counter closes accordingly: (F1)/(F2) window-certified and now \emph{outside}
 the spine, (F3) closed in T123, (F4) collapsed to a sign in T124, (F5) declared as (C-F5) --- and one
 new entry, \textbf{(F6) uniformity}, the only thing between V-final and an infinite statement.
+
+% =====================================================================
+\part{Toward uniformity: the second phase (T126--T199)}\label{part:phase2}
+% =====================================================================
+\noindent Section~\ref{sec:phase2} is the longest section of the
+document and is deliberately chronological: the diary parts T126--T199
+convert the one remaining inequality of the first series into
+theorem-shaped pieces, refute what breaks, and hand the exact cores to
+the verified layer as they stabilize (\vref{v542}--\vref{v562} trace
+back to this arc). The subsection titles carry the findings, so the
+part can be skimmed by title alone. The consolidated end state --- the
+closed-form theory --- follows in Part~\ref{part:theory}.
 
 % =====================================================================
 \section{Phase 2: toward uniformity (T126--T199)}\label{sec:phase2}
@@ -11160,6 +11285,21 @@ $A\cdot B=S_0$. The exact core is load-bearing:
 \veri{v596\_lock\_projection.py} (Section~\ref{sec:v596}).
 
 % =====================================================================
+\part{The closed-form theory, the surface theorems, and the
+detector}\label{part:theory}
+% =====================================================================
+\noindent This part consolidates what the diary produced in closed
+form. Section~\ref{sec:theory} states the seven exact theorems of the
+parity read block with derivation sketches, and
+Section~\ref{sec:theory-open} poses the one remaining arithmetic
+statement self-contained, without TFPT vocabulary --- together with the
+frame that accumulated around it: the W1 window form and its
+theorem-level closure at the measure level, the rank-3 surface theorems
+with the unconditional determinant positivity on the declared family,
+and the off-line-zero detector line. A mathematician can enter the
+document here.
+
+% =====================================================================
 \section{The closed-form theory of the parity read block: statements}\label{sec:theory}
 % =====================================================================
 
@@ -11488,6 +11628,32 @@ as an independent physical reading of the same arithmetic objects.
 Nothing in this paper or its
 companions claims progress on any conjecture beyond these
 statements.
+
+% =====================================================================
+\part{The Hilbert--P\'olya candidate: the operator program and the
+keystone}\label{part:frontier}
+% =====================================================================
+\noindent This part is the frontier of the document, in diary order.
+The T-B absorption margin is typed and largely closed on the surface
+(Sections~\ref{sec:tb-chain} and~\ref{sec:tb-6970}); the Z1 series
+constructs measure, canonical operator, and forced masses and positions
+(Section~\ref{sec:z1-series}); the chain arc and the L1 montage
+assemble the continuum candidate (Sections~\ref{sec:chain-arc}
+and~\ref{sec:l1-moonshot}); the moonshot arc records the
+Hilbert--P\'olya candidate at measurement level, with its explicit
+no-proof fence (Section~\ref{sec:moonshot-arc}); and the keystone round
+states the wall in four equivalent languages
+(Section~\ref{sec:wall-four-languages}), followed by the review strikes
+of the morning after (Section~\ref{sec:review-strikes}). No marker
+moves anywhere in this part, and no RH claim is made.
+
+% =====================================================================
+\section{The operator program and the keystone}\label{sec:frontier}
+% =====================================================================
+\noindent The subsections follow the diary order of the frontier
+rounds; provenance is stated in place, exactly as in the rest of the
+document (ledger-carried modules are cited by their
+\texttt{verification/} tags, everything else is sandbox).
 
 \subsection{The T-B chain: the absorption margin typed and largely
 closed on the surface}\label{sec:tb-chain}
@@ -12103,6 +12269,19 @@ penalty uses no zero data.  T-B itself --- full W3 positivity ---
 remains the conjecture; no RH statement is made.
 
 % =====================================================================
+\part{Status, contracts, and open problems}\label{part:status}
+% =====================================================================
+\noindent The closing part. Section~\ref{sec:status} separates what is
+certified from what is measured and what is hypothesis input, states the
+asymptotic mountain that stands between all of it and any infinite
+statement, and names the extraction candidates --- the
+community-checkable pieces. The open research contracts of the prime
+line (\texttt{PRIME.Z1.OPERATOR.01}, \texttt{PRIME.Z1.MOONSHOT.01})
+stay open, exactly as stated in place. The final fence at the end of
+the section governs the entire document: no claim of progress on the
+Riemann Hypothesis is made anywhere.
+
+% =====================================================================
 \section{Status and outlook}\label{sec:status}
 % =====================================================================
 \subsection{What is certified, what is measured, what is hypothesis input}
@@ -12584,6 +12763,9 @@ in Sections~\ref{sec:i5}--\ref{sec:certification}, and no marker moves anywhere 
 document.
 \end{gapboxnb}
 
+% =====================================================================
+\phantomsection\addcontentsline{toc}{part}{Appendices}
+\part*{Appendices}
 % =====================================================================
 \appendix
 \section{Probe index, diary parts T11--T199}\label{app:index}
