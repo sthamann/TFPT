@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`729` registered scripts · `807` ledger claims · `10` clusters.
+`733` registered scripts · `813` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (249 scripts)
+### `core` — Compiler core & the E₈ glue  (253 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -509,6 +509,14 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v727_l1_identification, v716_moonshot_arch_glue, v696 · cited: 3 e8 audit bootstrap, research contracts
 - **v735_strat3_ucp_inductive** [E] `PRIME.UCPLIMIT.01` — kovariante UCP-Abbildungen entlang der Neun-Fenster-GNS-Leiter: die Zustands-Transport-Route, ehrlich geschlossen — **UCP-STAGNATES: alle acht benachbarten Abbildungen existieren E
   - deps: PRIME.Z1.MOONSHOT.01, v718_moonshot_spectral, v718 · cited: 3 e8 audit bootstrap, research contracts
+- **v736_orbit_packet** [E] `E8.ORBITPACKET.01` — **ORBIT-PACKET-EXACT: Burnside 7 = (15+3+3)/3; die kanonische 5×48-Partition (Fixblock + 4 bewegte Blöcke à 12 Gaussian Lines, label-frei kanonisch — Packete = 1+4 = 5 = g_car, 240
+  - deps: v689_gaussian_code_bridge, E8.GAUSSIAN.CODE.01, v638, v623 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
+- **v737_seam48_intertwiner** [E/X] `E8.SEAM48.01` — der schärfste Struktur-Kill des Review-Morgens — **SEAM48-DEAD: die 48×5-Inzidenzmatrix ist NICHT identisch 1 (Eintrags-Verteilung 0:96 / 1:64 / 2:64 / 3:16), repräsentanten-unabhä
+  - deps: v689_gaussian_code_bridge, v736_orbit_packet, v623, v736 · cited: 1 architecture e8, 3 e8 audit bootstrap
+- **v738_hecke_mod_ramified** [E/C/X] `PRIME.HECKEMODRAM.01` — **HECKE-MOD-RAMIFIED-CHANNELS: der Transport ist über ALLE 5907 Untermoduln des v714-Turms exakt wohldefiniert UND σ-funktoriell (kein Kill); ungerade Schichten wirken als Grad·id 
+  - deps: v714_moonshot_hecke_groupoid, PRIME.Z1.MOONSHOT.01, v722_phys_ramified_ns_r, v714, v722 · cited: 3 e8 audit bootstrap
+- **v739_rank3_jet** [E/X] `PRIME.RANK3JET.01` — **RANK3-JET-DEAD: der Jet-Read ist exakt (der Lock-Block als Erster-Jet EINER Funktion, 4.6e-16; Loewner-Koordinaten; Schwarzian-Form [1−r₁₂²]_odd = (3/8)·S[g̃](1)·ε⁴ im Odd-Sektor
+  - deps: v683_rank3_functionals, v683, v684, v692, v696 · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1529,10 +1537,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v724_phys_t3b_modular_flows** — `FTRANSFER.COCYCLE.01`
-- **v725_phys_vgeo_torsor_audit** — `VGEO.TORSOR.01`
-- **v726_phys_car_pp_index** — `GNET.PPINDEX.01`
-- **v727_l1_identification** — `PRIME.L1IDENT.01`
 - **v728_k1b_superresolution** — `PRIME.K1BPIN.01`
 - **v729_strat2_rp_universality** — `PRIME.RPUNIV.01`
 - **v730_strat2_pinning_lemma** — `PRIME.PINLEMMA.01`
@@ -1541,4 +1545,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v733_strat3_gate0_census** — `PRIME.GATE0.01`
 - **v734_s1_canonical** — `PRIME.S1CANON.01`
 - **v735_strat3_ucp_inductive** — `PRIME.UCPLIMIT.01`
+- **v736_orbit_packet** — `E8.ORBITPACKET.01`
+- **v737_seam48_intertwiner** — `E8.SEAM48.01`
+- **v738_hecke_mod_ramified** — `PRIME.HECKEMODRAM.01`
+- **v739_rank3_jet** — `PRIME.RANK3JET.01`
 

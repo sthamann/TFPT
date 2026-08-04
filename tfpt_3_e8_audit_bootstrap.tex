@@ -5328,6 +5328,89 @@ Machine-checked: \veri{v735\_strat3\_ucp\_inductive.py}.
 honest negative) (covariance gate)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The orbit packet lemma
+(\texttt{E8.ORBITPACKET.01}).}
+The Gaussian code bridge's number family in one normal form ($26$
+checks, ${\sim}1$\,s; verdict \textsc{orbit-packet-exact}).
+Burnside \emph{exact}: the $\sigma$ census on the $15$ nonzero
+classes gives $7=(15+3+3)/3$.  The canonical packet split:
+$240=5\times48$ --- one fixed block $+$ four moved blocks of $12$
+Gaussian lines each, pairwise disjoint, label-free canonical (the
+$15$-class partition agrees with the intrinsic equivalence
+$x\sim y\iff(1-J)(x-y)/2\in L$); packets $=1+4=5=g_{\mathrm{car}}$.
+Anchor: leader weights $(0,1,1,2)\to(1,1,2)$, leader pair $e_6/e_7$
+$=$ the v638 anchor pair.  $q=16$ normal form: $240=16\cdot15$,
+$248=240+8$.  \emph{Circularity fence:} P1/P2 come back as
+\textsc{exact-internal-reconstruction}, not derivation;
+$\sigma$-class specificity: $160$ free order-$3$ elements give
+Burnside $5$.  Companion Lean module \texttt{OrbitPacket.lean}
+($34$ theorems, kernel \texttt{decide}/\texttt{norm\_num} only).
+No marker move.
+Machine-checked: \veri{v736\_orbit\_packet.py}.
+\mE\ (integer/finite-group census; reconstruction typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The seam-48 intertwiner: dead
+(\texttt{E8.SEAM48.01}).}
+The sharpest structural sharpening of the review morning, killed on
+its preregistered criterion ($24$ machinery checks, ${\sim}4$\,s;
+verdict \textsc{seam48-dead}).  The $48\times5$ incidence matrix
+between the five canonical $48$-blocks and the $48$ regular
+five-cycles is \emph{not} identically $1$: entry distribution
+$0{:}96/1{:}64/2{:}64/3{:}16$, representative-independent ($0$ of
+$2304$ order-$5$ elements of G31), must-fail control fires ($0$ of
+$25$ random operators).  Valuable residues: the four moved blocks
+carry the v623 character table \emph{exactly}, the fixed block
+deviates exactly by the $12$ lifted marks, and the five-period
+lemma $u^5=\pm J$ holds exactly.  $240=48\cdot5$ remains a
+factorization \emph{without} coordinatization.  No marker move.
+Machine-checked: \veri{v737\_seam48\_intertwiner.py}.
+\mE\ (exact machinery; preregistered kill fired --- honest
+negative)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The ramified Hecke fiber and the
+seven channels (\texttt{PRIME.HECKEMODRAM.01}).}
+The Gaussian--E8 Hecke tower projected onto $V=L/(1+i)L$ ($34$
+checks, ${\sim}2$\,s; verdict
+\textsc{hecke-mod-ramified-channels}).  The projection is
+exhaustively well-defined and $\sigma$-functorial over all $5907$
+submodules (no kill); odd layers act as
+$\mathrm{degree}\cdot\mathrm{id}$ ($156/156/820/2380/2380$ --- the
+fiber is Hecke-rigid); the ramified layer \emph{is} the $15$
+hyperplanes of $V$ with the $2{:}1$ deck.  Channels: $3$ fixed $+$
+$4$ moved $=7$ $\sigma$-orbit channels $+1$ trivial (resolving
+$7$-vs-$8$); NS/R $=$ the $\sigma$-fixed parity character (v722
+re-derived; $7$ NS $+$ $8$ R); ram-odd ($n=2,8,32,\ldots$) is the
+unique negative-pressure channel.  Honest boundary: the W3 margin
+is cross-channel cancellation --- no transfer-matrix reduction from
+the projection alone.  No marker move, no RH claim.
+Machine-checked: \veri{v738\_hecke\_mod\_ramified.py}.
+\mE\ (exact finite Hecke/submodule census) $+$ \mC\ (the W3
+boundary typing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The rank-3 jet simplification: dead
+(\texttt{PRIME.RANK3JET.01}).}
+The review's first-jet reading of the rank-3 wall, tested exactly
+($20$ checks, ${\sim}3$\,s; verdict \textsc{rank3-jet-dead}).  The
+jet read \emph{is} exact: the lock block is the first jet of one
+function to $4.6\times10^{-16}$ (Loewner coordinates), and on the
+odd sector
+$[1-r_{12}^2]_{\mathrm{odd}}=\tfrac38\,S[\tilde g](1)\,
+\varepsilon^4$ (the Schwarzian form).  But the review kill fires:
+the $\varepsilon^0$ coefficient is identically $1$ (not $0$), the
+even sector exceeds the net entry ($1.15$--$6\times$), the pure jet
+block carries no collinearity (factor $\ge1.9\times10^3$) --- the
+third power is even/odd \emph{compensation} (T-B substance), not a
+jet identity; class (c) for the envelope route;
+\textsc{krein-link-weak} (correlation $0.678$ vs control $0.946$).
+No marker move, no RH claim.
+Machine-checked: \veri{v739\_rank3\_jet.py}.
+\mE\ (exact jet algebra) $+$ (\textsc{measured}) (even-sector kill,
+honest negative)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

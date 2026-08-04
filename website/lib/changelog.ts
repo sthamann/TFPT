@@ -42,6 +42,1100 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-04",
+    "dateLabel": "2026-08-04 · LVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the morning after: FOUR review strikes ("
+      },
+      {
+        "k": "c",
+        "v": "v736"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v739"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "104"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green) — two exact structural lemmas, two honest kills, and two new research contracts. STRIKE 1, EXACT ("
+      },
+      {
+        "k": "c",
+        "v": "v736"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "orbit-packet-exact"
+      },
+      {
+        "k": "t",
+        "v": "): the Gaussian ORBIT PACKET lemma — Burnside "
+      },
+      {
+        "k": "m",
+        "v": "7=(15+3+3)/3"
+      },
+      {
+        "k": "t",
+        "v": " on the "
+      },
+      {
+        "k": "m",
+        "v": "15"
+      },
+      {
+        "k": "t",
+        "v": " nonzero classes; the canonical packet split "
+      },
+      {
+        "k": "m",
+        "v": "240=5\\times48"
+      },
+      {
+        "k": "t",
+        "v": " (one fixed block "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " four moved blocks of "
+      },
+      {
+        "k": "m",
+        "v": "12"
+      },
+      {
+        "k": "t",
+        "v": " Gaussian lines each, label-free canonical; packets "
+      },
+      {
+        "k": "m",
+        "v": "=1+4=5=g_{\\mathrm{car}}"
+      },
+      {
+        "k": "t",
+        "v": "); the "
+      },
+      {
+        "k": "m",
+        "v": "(1,1,2)"
+      },
+      {
+        "k": "t",
+        "v": " anchor from the fixed-syndrome leader weights "
+      },
+      {
+        "k": "m",
+        "v": "(0,1,1,2)"
+      },
+      {
+        "k": "t",
+        "v": " with leader pair "
+      },
+      {
+        "k": "m",
+        "v": "e_6/e_7"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the v638 anchor pair; the "
+      },
+      {
+        "k": "m",
+        "v": "q=16"
+      },
+      {
+        "k": "t",
+        "v": " normal form "
+      },
+      {
+        "k": "m",
+        "v": "240=16\\cdot15"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "248=240+8"
+      },
+      {
+        "k": "t",
+        "v": "; the CIRCULARITY FENCE is part of the lemma — P1/P2 come back as EXACT-INTERNAL-RECONSTRUCTION (reconstruction, NOT derivation), and the packet law is "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-CLASS-specific ("
+      },
+      {
+        "k": "m",
+        "v": "160"
+      },
+      {
+        "k": "t",
+        "v": " free order-"
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": " elements of G31 give Burnside "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": "); companion Lean module "
+      },
+      {
+        "k": "c",
+        "v": "OrbitPacket.lean"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "34"
+      },
+      {
+        "k": "t",
+        "v": " theorems, kernel-checked, "
+      },
+      {
+        "k": "c",
+        "v": "lake build"
+      },
+      {
+        "k": "t",
+        "v": " green at "
+      },
+      {
+        "k": "m",
+        "v": "3388"
+      },
+      {
+        "k": "t",
+        "v": " jobs). STRIKE 2, DEAD ("
+      },
+      {
+        "k": "c",
+        "v": "v737"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "24/24"
+      },
+      {
+        "k": "t",
+        "v": " machinery, "
+      },
+      {
+        "k": "t",
+        "v": "seam48-dead"
+      },
+      {
+        "k": "t",
+        "v": "): the seam-48 intertwiner — the sharpest structural sharpening — dies on its preregistered criterion: the "
+      },
+      {
+        "k": "m",
+        "v": "48\\times5"
+      },
+      {
+        "k": "t",
+        "v": " incidence matrix is NOT identically "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " (entry distribution "
+      },
+      {
+        "k": "m",
+        "v": "0{:}96/1{:}64/2{:}64/3{:}16"
+      },
+      {
+        "k": "t",
+        "v": "), representative-independent ("
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "2304"
+      },
+      {
+        "k": "t",
+        "v": " order-"
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " elements) with the must-fail control firing ("
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "25"
+      },
+      {
+        "k": "t",
+        "v": " random operators); valuable residues: the four moved blocks carry the v623 character table EXACTLY, the fixed block deviates exactly by the "
+      },
+      {
+        "k": "m",
+        "v": "12"
+      },
+      {
+        "k": "t",
+        "v": " lifted marks, "
+      },
+      {
+        "k": "m",
+        "v": "u^5=\\pm J"
+      },
+      {
+        "k": "t",
+        "v": " exact — "
+      },
+      {
+        "k": "m",
+        "v": "240=48\\cdot5"
+      },
+      {
+        "k": "t",
+        "v": " remains a factorization WITHOUT coordinatization. STRIKE 3, EXACT ("
+      },
+      {
+        "k": "c",
+        "v": "v738"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "34/34"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "hecke-mod-ramified-channels"
+      },
+      {
+        "k": "t",
+        "v": "): the Gaussian–E8 Hecke tower projects onto "
+      },
+      {
+        "k": "m",
+        "v": "V=L/(1+i)L"
+      },
+      {
+        "k": "t",
+        "v": " exactly and "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-functorially over ALL "
+      },
+      {
+        "k": "m",
+        "v": "5907"
+      },
+      {
+        "k": "t",
+        "v": " submodules (no kill); odd layers act as degree"
+      },
+      {
+        "k": "m",
+        "v": "{}\\cdot{}"
+      },
+      {
+        "k": "t",
+        "v": "id (the fiber is Hecke-rigid); the ramified layer IS the "
+      },
+      {
+        "k": "m",
+        "v": "15"
+      },
+      {
+        "k": "t",
+        "v": " hyperplanes with the "
+      },
+      {
+        "k": "m",
+        "v": "2{:}1"
+      },
+      {
+        "k": "t",
+        "v": " deck; channels "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "7"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-orbit channels "
+      },
+      {
+        "k": "m",
+        "v": "+1"
+      },
+      {
+        "k": "t",
+        "v": " trivial (resolving "
+      },
+      {
+        "k": "m",
+        "v": "7"
+      },
+      {
+        "k": "t",
+        "v": "-vs-"
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": "); NS/R "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-fixed parity character (v722 re-derived); ram-odd ("
+      },
+      {
+        "k": "m",
+        "v": "n=2,8,32,\\ldots"
+      },
+      {
+        "k": "t",
+        "v": ") is the unique negative-pressure channel; honest boundary: the W3 margin is CROSS-CHANNEL CANCELLATION — no transfer-matrix reduction from the projection alone. STRIKE 4, DEAD ("
+      },
+      {
+        "k": "c",
+        "v": "v739"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "rank3-jet-dead"
+      },
+      {
+        "k": "t",
+        "v": "): the review's first-jet reading of the rank-3 wall is killed by its own "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon^0"
+      },
+      {
+        "k": "t",
+        "v": " test — the jet read itself is EXACT (the lock block as the first jet of ONE function to "
+      },
+      {
+        "k": "m",
+        "v": "4.6\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": ", Loewner coordinates, odd-sector Schwarzian form "
+      },
+      {
+        "k": "m",
+        "v": "[1-r_{12}^2]_{\\mathrm{odd}}=(3/8)\\,S[\\tilde g](1)\\,\\varepsilon^4"
+      },
+      {
+        "k": "t",
+        "v": "), but the "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon^0"
+      },
+      {
+        "k": "t",
+        "v": " coefficient is identically "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " (not "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": "), the even sector exceeds the net entry ("
+      },
+      {
+        "k": "m",
+        "v": "1.15"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "6\\times"
+      },
+      {
+        "k": "t",
+        "v": "), and the pure jet block carries no collinearity (factor "
+      },
+      {
+        "k": "m",
+        "v": "\\ge1.9\\times10^3"
+      },
+      {
+        "k": "t",
+        "v": "): the third power is even/odd COMPENSATION (T-B substance), not a jet identity; class (c) for the envelope route; "
+      },
+      {
+        "k": "t",
+        "v": "krein-link-weak"
+      },
+      {
+        "k": "t",
+        "v": " (correlation "
+      },
+      {
+        "k": "m",
+        "v": "0.678"
+      },
+      {
+        "k": "t",
+        "v": " vs control "
+      },
+      {
+        "k": "m",
+        "v": "0.946"
+      },
+      {
+        "k": "t",
+        "v": "). TWO NEW CONTRACTS: "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.KMS.INDUCTIVE_STATE.01"
+      },
+      {
+        "k": "t",
+        "v": " (the review master contract — extend the v733 Gate-0 functor to a positive global KMS state at "
+      },
+      {
+        "k": "m",
+        "v": "\\beta=1"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "T_h=\\omega\\circ\\iota_h"
+      },
+      {
+        "k": "t",
+        "v": "; five separation steps individually named; kill "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " complete positivity failing already on a finite extension) and "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PD.PERSISTENCE.01"
+      },
+      {
+        "k": "t",
+        "v": " (the universal-theorem form of the wall with the important correction "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}\\ge0"
+      },
+      {
+        "k": "t",
+        "v": " instead of "
+      },
+      {
+        "k": "m",
+        "v": "\\ge\\delta"
+      },
+      {
+        "k": "t",
+        "v": " — the Ihara lesson: exact zero modes after rank saturation are admissible; target "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " cofinally infinitely many PD windows via state"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "Gram"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "cone-preserving recursion, NOT eigenvalue bounds; the review blocklist confirmed as permanent kills). NO RH claim, NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (4)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v736_orbit_packet.py"
+        },
+        {
+          "k": "t",
+          "v": " (26), "
+        },
+        {
+          "k": "c",
+          "v": "v737_seam48_intertwiner.py"
+        },
+        {
+          "k": "t",
+          "v": " (24 machinery), "
+        },
+        {
+          "k": "c",
+          "v": "v738_hecke_mod_ramified.py"
+        },
+        {
+          "k": "t",
+          "v": " (34), "
+        },
+        {
+          "k": "c",
+          "v": "v739_rank3_jet.py"
+        },
+        {
+          "k": "t",
+          "v": " (20) — "
+        },
+        {
+          "k": "m",
+          "v": "104"
+        },
+        {
+          "k": "t",
+          "v": " checks, each module promoted verbatim from its discovery probe with numbers frozen from the promotion run (all four probes re-run before promotion; outputs identical modulo runtimes; sibling imports resolve against the promoted "
+        },
+        {
+          "k": "c",
+          "v": "v563"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v683"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v696"
+        },
+        {
+          "k": "t",
+          "v": " modules)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/OrbitPacket.lean"
+        },
+        {
+          "k": "t",
+          "v": " committed ("
+        },
+        {
+          "k": "m",
+          "v": "34"
+        },
+        {
+          "k": "t",
+          "v": " theorems, kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "norm_num"
+        },
+        {
+          "k": "t",
+          "v": " only, no sorry"
+        },
+        {
+          "k": "m",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": "native_decide; "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green, "
+        },
+        {
+          "k": "m",
+          "v": "3388"
+        },
+        {
+          "k": "t",
+          "v": " jobs); import added to "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lean_manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " regenerated with the new file."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 4 new module rows ("
+        },
+        {
+          "k": "c",
+          "v": "E8.ORBITPACKET.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.SEAM48.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HECKEMODRAM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RANK3JET.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " 2 new contract rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KMS.INDUCTIVE_STATE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PD.PERSISTENCE.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "E8.GAUSSIAN.CODE.01"
+        },
+        {
+          "k": "t",
+          "v": " (orbit packet closed, seam-48 dead), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.MOONSHOT.01"
+        },
+        {
+          "k": "t",
+          "v": " (the ramified fiber typed exactly) and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RANK3FUNC.01"
+        },
+        {
+          "k": "t",
+          "v": " (the jet simplification dead); "
+        },
+        {
+          "k": "m",
+          "v": "807\\to813"
+        },
+        {
+          "k": "t",
+          "v": " rows."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new section “The morning after: four review strikes” (the two exact structures, the two graves, the 7-channel structure, the documented exact jet/Loewner/Schwarzian forms, the two new contracts). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the two new contracts "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the review blocklist confirmed as permanent kills. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the orbit packet lemma in the code sections (the compact number-family table with the circularity fence; the seam-48 kill recorded). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 4 new audit blocks."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “the morning after: four review strikes”; counters "
+        },
+        {
+          "k": "m",
+          "v": "729\\to733"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v739"
+        },
+        {
+          "k": "t",
+          "v": "; README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "733"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v739"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Two honest kills promoted as encoded expected outcomes (preregistered criteria fire inside green machinery); the exact lemmas are census/reconstruction statements behind explicit fences (no P1/P2 derivation claim); no marker moves; no RH statement anywhere."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-08-03",
     "dateLabel": "2026-08-03 · LV",
     "heading": [

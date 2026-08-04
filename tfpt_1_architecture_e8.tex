@@ -405,6 +405,31 @@ the Gaussian E8 glues (\veri{v719\_moonshot\_traceformula.py},
 $24/24$) --- E8 becomes forced \emph{at the gluing}, not at the
 finite places; the uniqueness \emph{theorem} stays open, no marker
 moves).
+\emph{The orbit packet lemma (2026-08-04):} the code bridge's number
+family closes as one lemma (\veri{v736\_orbit\_packet.py}, $26/26$,
+\textsc{orbit-packet-exact}; companion Lean module
+\texttt{OrbitPacket.lean}, $34$ theorems, kernel-checked):
+\begin{center}
+\begin{tabular}{ll}
+$\sigma$ orbit census (Burnside) & $7=(15+3+3)/3$ \\
+canonical packet split & $240=5\times48$ ($1$ fixed $+$ $4$ moved, \\
+ & \quad $12$ Gaussian lines each, label-free) \\
+carrier reading & packets $=1+4=5=\gcar$, $240=\gcar\times48$ \\
+anchor & leader weights $(0,1,1,2)\to(1,1,2)$, pair $e_6/e_7$ \\
+$q=16$ normal form & $240=16\cdot15$, \quad $248=240+8$ \\
+\end{tabular}
+\end{center}
+\emph{The circularity fence is part of the lemma:} P1
+($\cthree=1/(8\pi)$) and P2 ($\gcar=5$) come back from the code as
+\emph{exact internal reconstruction} --- the packet law reconstructs
+the axioms, it does \emph{not} derive them; and the $1+4$ law is
+$\sigma$-\emph{class}-specific (the $160$ free order-$3$ elements of
+G31 give Burnside $5$, not $7$).  The sharpening to a canonical
+intertwiner with the $48$ regular five-cycles is \emph{dead} on its
+preregistered criterion (\veri{v737\_seam48\_intertwiner.py},
+$24/24$ machinery, \textsc{seam48-dead}: incidence distribution
+$0{:}96/1{:}64/2{:}64/3{:}16$ instead of $\equiv1$) --- $240=48\cdot5$
+remains a factorization \emph{without} coordinatization \mE.
 \end{keybox}
 
 \begin{keybox}[The current reduction state of P2 (2026-07-22) --- text consolidation, markers unchanged]

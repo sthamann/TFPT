@@ -11995,6 +11995,93 @@ everything around it, and honest graves for the routes that died.
 The $h$-quantifier remains unproven; \textbf{no statement about
 the Riemann Hypothesis is made}.
 
+\subsection{The morning after: four review strikes}
+\label{sec:review-strikes}
+
+The external review of the keystone round proposed four
+simplifications and sharpenings; all four were machine-tested the
+next morning, and the results split cleanly into two exact
+structures and two honest kills.
+
+\emph{Strike 1 --- the orbit packet lemma (exact).}  On the E8 side
+the review's compact number family closes as a lemma
+(\veri{v736\_orbit\_packet.py}, $26/26$,
+\texttt{ORBIT-PACKET-EXACT}): the $\sigma$ orbit census on the $15$
+nonzero Gaussian classes gives Burnside $7=(15+3+3)/3$; the $240$
+roots split canonically as $240=5\times48$ (one fixed block $+$ four
+moved blocks of $12$ Gaussian lines each, label-free canonical);
+the fixed-syndrome leader weights $(0,1,1,2)$ reproduce the
+$(1,1,2)$ anchor with leader pair $e_6/e_7$; and the $q=16$ normal
+form reads $240=16\cdot15$, $248=240+8$.  The circularity fence is
+part of the lemma: P1 and P2 come back as \emph{exact internal
+reconstruction}, not derivation, and the packet law is
+$\sigma$-class-specific (free order-$3$ elements give Burnside $5$).
+
+\emph{Strike 2 --- the seam-48 intertwiner (dead).}  The sharpest
+structural sharpening --- a canonical intertwiner between the five
+$48$-blocks and the $48$ regular five-cycles --- dies on its
+preregistered criterion (\veri{v737\_seam48\_intertwiner.py},
+$24/24$ machinery, \texttt{SEAM48-DEAD}): the $48\times5$ incidence
+matrix is not identically $1$ (entry distribution
+$0{:}96/1{:}64/2{:}64/3{:}16$), representative-independent over all
+$2304$ order-$5$ elements, with the must-fail control firing.  The
+residues are themselves structure: the four moved blocks carry the
+v623 character table \emph{exactly}, the fixed block deviates
+exactly by the $12$ lifted marks, and $u^5=\pm J$ holds exactly ---
+but $240=48\cdot5$ remains a factorization \emph{without}
+coordinatization.
+
+\emph{Strike 3 --- the ramified fiber and the seven channels
+(exact).}  The review's ``local fiber at the ramified place''
+thesis holds at the level it was stated
+(\veri{v738\_hecke\_mod\_ramified.py}, $34/34$,
+\texttt{HECKE-MOD-RAMIFIED-CHANNELS}): the Gaussian--E8 Hecke tower
+projects onto $V=L/(1+i)L$ exactly and $\sigma$-functorially over
+all $5907$ submodules; every odd layer acts as
+$\mathrm{degree}\cdot\mathrm{id}$ (the fiber is Hecke-rigid), while
+the ramified layer \emph{is} the $15$ hyperplanes of $V$ with the
+$2{:}1$ deck.  The channel structure resolves the review's
+$7$-vs-$8$: the $\sigma$-orbits give $3$ fixed $+$ $4$ moved $=7$
+nontrivial channels $+1$ trivial; NS/R is the $\sigma$-fixed parity
+character (the v722 grading re-derived), and ram-odd
+($n=2,8,32,\ldots$) is the unique negative-pressure channel.  The
+honest boundary stands: the W3 margin is \emph{cross-channel
+cancellation} --- the projection alone yields no transfer-matrix
+reduction.
+
+\emph{Strike 4 --- the rank-3 jet simplification (dead).}  The
+review's reading of the rank-3 wall as a first-jet identity is
+killed by its own $\varepsilon^0$ test
+(\veri{v739\_rank3\_jet.py}, $20/20$, \texttt{RANK3-JET-DEAD}).
+What survives is documented as exact coordinates: the load-bearing
+$2\times2$ lock block \emph{is} the first jet of one function
+$F(\gamma)=\sum_{n\le X}\Lambda(n)n^{i\gamma}/\sqrt{n}$ (to
+$4.6\times10^{-16}$, exact Loewner coordinates), and on the odd
+sector the strengthened claim holds with first survivor
+$[1-r_{12}^2]_{\mathrm{odd}}=\tfrac{3}{8}\,S[\tilde
+g](1)\,\varepsilon^4$ (the Schwarzian form).  But the
+$\varepsilon^0$ coefficient of $1-r_{12}^2$ is identically $1$ (not
+$0$), the measured even sector exceeds the net entry
+($1.15$--$6\times$), and the pure jet block carries no collinearity
+(factor $\ge1.9\times10^3$): the third power is even/odd
+\emph{compensation} --- T-B substance, not a jet identity; class
+(c) for the envelope route, and the section-8 Krein link is
+weakened (\texttt{KREIN-LINK-WEAK}, correlation $0.678$ vs control
+$0.946$).
+
+\emph{Where this leaves the program.}  The morning's net effect is
+two exact structural lemmas (orbit packet, ramified channels), two
+graves with named residues (seam-48, rank-3 jet), and two new
+contracts registered in the contracts paper: the review master
+contract \texttt{PRIME.KMS.INDUCTIVE\_STATE.01} (extend the Gate-0
+functor to a positive global KMS state at $\beta=1$; five
+separation steps; kill $=$ complete positivity failing on a finite
+extension) and \texttt{PRIME.PD.PERSISTENCE.01} (the
+universal-theorem form of the wall with $\lambda_{\min}\ge0$
+instead of $\ge\delta$ --- the Ihara lesson; cofinal PD windows via
+state/Gram/cone recursion, not eigenvalue bounds).  No marker
+moves; \textbf{no statement about the Riemann Hypothesis is made}.
+
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
 The P4 main strike (\veri{v712\_rank3\_transverse\_deck.py}, $5/5$)

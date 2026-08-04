@@ -81,6 +81,7 @@ import TfptCarrier.G31WordOrders
 import TfptCarrier.HammingCode
 import TfptCarrier.SquareParity
 import TfptCarrier.GaussianCodeBridge
+import TfptCarrier.OrbitPacket
 import TfptCarrier.QuarticHalf
 import TfptCarrier.SineGramKeystone
 import TfptCarrier.WatataniIndexFour

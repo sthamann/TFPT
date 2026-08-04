@@ -229,7 +229,8 @@ export type PrimeFrontVerdict =
   | "THIRD-DAILY-BUNDLING-ROUND-ELEVEN"
   | "MOONSHOT-MEASURED-NO-PROOF"
   | "EVENING-BUNDLING-ROUND-TWELVE"
-  | "WALL-IN-FOUR-LANGUAGES";
+  | "WALL-IN-FOUR-LANGUAGES"
+  | "FOUR-REVIEW-STRIKES";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -258,6 +259,26 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-08-04",
+    part: 0,
+    title:
+      "The morning after: four review strikes (v736–v739, 104 new checks, all green; suite 729 → 733 scripts; NO RH claim, no marker moves). The external review of the keystone round proposed four simplifications and sharpenings; all four were machine-tested the next morning — two exact structural lemmas, two honest kills. STRIKE 1, EXACT (v736, 26/26, ORBIT-PACKET-EXACT): the Gaussian ORBIT PACKET lemma — the σ orbit census on the 15 nonzero classes gives Burnside 7 = (15+3+3)/3; the 240 roots split canonically as 240 = 5×48 (one fixed block + four moved blocks of 12 Gaussian lines each, label-free canonical; packets = 1+4 = 5 = g_car); the (1,1,2) anchor comes from the fixed-syndrome leader weights (0,1,1,2) with leader pair e6/e7 = the v638 anchor pair; the q = 16 normal form reads 240 = 16·15, 248 = 240+8. The CIRCULARITY FENCE is part of the lemma: P1 and P2 come back as EXACT INTERNAL RECONSTRUCTION — the packet law reconstructs the axioms, it does NOT derive them — and the law is σ-class-specific (the 160 free order-3 elements of G31 give Burnside 5, not 7). Companion Lean module OrbitPacket.lean (34 theorems, kernel-checked, lake build green at 3388 jobs). STRIKE 2, DEAD (v737, 24/24 machinery, SEAM48-DEAD): the sharpest structural sharpening — a canonical intertwiner between the five 48-blocks and the 48 regular five-cycles — dies on its preregistered criterion: the 48×5 incidence matrix is NOT identically 1 (entry distribution 0:96 / 1:64 / 2:64 / 3:16), representative-independent (0 of 2304 order-5 elements of G31), with the must-fail control firing (0 of 25 random operators pass). The residues are themselves structure: the four moved blocks carry the v623 character table EXACTLY, the fixed block deviates exactly by the 12 lifted marks, and u^5 = ±J holds exactly — but 240 = 48·5 remains a factorization WITHOUT coordinatization. STRIKE 3, EXACT (v738, 34/34, HECKE-MOD-RAMIFIED-CHANNELS): the review's 'local fiber at the ramified place' thesis holds at the level it was stated — the Gaussian–E8 Hecke tower projects onto V = L/(1+i)L exactly and σ-functorially over ALL 5907 submodules (no kill); every odd layer acts as degree·id (the fiber is Hecke-rigid), while the ramified layer IS the 15 hyperplanes of V with the 2:1 deck; the channel structure resolves the review's 7-vs-8: 3 fixed + 4 moved = 7 σ-orbit channels + 1 trivial; NS/R is the σ-fixed parity character (the v722 grading re-derived), and ram-odd (n = 2, 8, 32, …) is the unique negative-pressure channel. The honest boundary stands: the W3 margin is CROSS-CHANNEL CANCELLATION — the projection alone yields no transfer-matrix reduction. STRIKE 4, DEAD (v739, 20/20, RANK3-JET-DEAD): the review's reading of the rank-3 wall as a first-jet identity is killed by its own ε⁰ test. What survives is documented as exact coordinates: the load-bearing 2×2 lock block IS the first jet of one function F(γ) = Σ_{n≤X} Λ(n)/√n · n^{iγ} (to 4.6e-16, exact Loewner coordinates), and on the odd sector the strengthened claim holds with first survivor [1−r12²]_odd = (3/8)·S[g̃](1)·ε⁴ (the Schwarzian form). But the ε⁰ coefficient of 1−r12² is identically 1 (not 0), the measured even sector exceeds the net entry (1.15–6×), and the pure jet block carries no collinearity (factor ≥ 1.9e3): the third power is even/odd COMPENSATION — T-B substance, not a jet identity; class (c) for the envelope route, and the section-8 Krein link is weakened (KREIN-LINK-WEAK, correlation 0.678 vs control 0.946). TWO NEW CONTRACTS registered: PRIME.KMS.INDUCTIVE_STATE.01 (the review master contract — extend the v733 Gate-0 functor to a positive global KMS state at β = 1; five separation steps individually named; kill = complete positivity failing already on a finite extension) and PRIME.PD.PERSISTENCE.01 (the universal-theorem form of the wall with λ_min ≥ 0 instead of ≥ δ — the Ihara lesson: exact zero modes after rank saturation are admissible; target: cofinally infinitely many PD windows via state/Gram/cone-preserving recursion, not eigenvalue bounds; the review blocklist confirmed as permanent kills). NO statement about the Riemann Hypothesis is made.",
+    headline:
+      "The morning after: four review strikes (v736–v739) — the orbit packet lemma exact (Burnside 7, 240 = 5×48, the (1,1,2) anchor, P1/P2 as reconstruction behind the circularity fence, with a kernel-checked Lean companion), the seam-48 intertwiner dead, the ramified Hecke fiber exact with 7 σ-orbit channels + 1 trivial, and the rank-3 jet simplification dead — plus two new research contracts. No RH claim.",
+    keyFacts: [
+      "Four promotions v736–v739 (104 new checks, all green); suite 729 → 733 scripts; ledger +4 module rows + 2 contract rows + 3 dated notes (807 → 813)",
+      "Orbit packet lemma EXACT (v736): Burnside 7 = (15+3+3)/3, canonical 240 = 5×48 split (1 fixed + 4 moved = g_car), anchor (1,1,2) from leader weights (0,1,1,2), q = 16 normal form; P1/P2 typed as exact internal reconstruction — NOT derivation; Lean companion OrbitPacket.lean (34 theorems)",
+      "Seam-48 intertwiner DEAD (v737): incidence distribution 0:96/1:64/2:64/3:16 instead of ≡ 1, representative-independent over all 2304 order-5 elements; residues: the 4 moved blocks carry the v623 character table exactly, u⁵ = ±J exact — 240 = 48·5 stays a factorization without coordinatization",
+      "Ramified Hecke fiber EXACT (v738): σ-functorial over all 5907 submodules, odd layers = degree·id, ramified layer = the 15 hyperplanes with 2:1 deck, 7 σ-orbit channels + 1 trivial, NS/R = the σ-fixed parity character; honest boundary: the W3 margin is cross-channel cancellation",
+      "Rank-3 jet simplification DEAD (v739): the jet read is exact (Loewner coordinates, odd-sector Schwarzian (3/8)·S[g̃](1)·ε⁴) but the ε⁰ coefficient is identically 1, the even sector exceeds the net entry, and the pure jet block carries no collinearity — even/odd compensation, not a jet identity; KREIN-LINK-WEAK",
+    ],
+    verdict: "FOUR-REVIEW-STRIKES",
+    summary:
+      "v736–v739 promoted: the four review proposals of the morning are machine-adjudicated — the orbit packet lemma and the ramified Hecke channel structure are exact (with a kernel-checked Lean companion for the packet lemma), while the seam-48 intertwiner and the rank-3 jet simplification die on their preregistered criteria with documented residues. Two new research contracts (KMS inductive state; PD persistence with λ_min ≥ 0) name the remaining gap. No RH claim, no marker moves.",
+    badge: "sandbox",
+    script: "v738_hecke_mod_ramified.py",
+  },
   {
     date: "2026-08-03",
     part: 0,
