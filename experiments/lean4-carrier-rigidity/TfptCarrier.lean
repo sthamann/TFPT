@@ -85,6 +85,8 @@ import TfptCarrier.OrbitPacket
 import TfptCarrier.QuarticHalf
 import TfptCarrier.SineGramKeystone
 import TfptCarrier.WatataniIndexFour
+import TfptCarrier.TraceLedger
+import TfptCarrier.PinningLemma
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck

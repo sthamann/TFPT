@@ -3877,6 +3877,50 @@ condition at $\beta=1$; (5)~the Weil-limit identification.
 finite extension} --- one finite counterexample retires the route.
 The contract names the gap; it does not close it.  A research
 contract, \emph{not} a claim; no marker move; no RH statement.
+\emph{[2026-08-04 update: the strong form is DEAD and the contract is
+refined.  \veri{v740\_kms\_extension\_switch.py} ($8/8$,
+\textsc{kms-extension-dead}): $\beta=1$ KMS is algebraically
+impossible on Gate-0's nonzero-grade Laurent unitaries ---
+$T(u_pu_p^*)=1$ versus $T(u_p^*\sigma_i(u_p))=1/p$, exact defects
+$1/2,2/3,4/5$ at $p=2,3,5$ --- and exact covariant
+$*$-restrictions do not exist ($0$ of $141..1255$ required
+boundaries); local extended Gram positivity survives
+($55{,}296$ monomials/window).
+\veri{v741\_kms\_toeplitz\_semigroup.py} ($9/9$,
+\textsc{kms-toeplitz-dead}): the Bost--Connes semigroup Toeplitz
+correction repairs the algebraic KMS step \emph{completely}
+(boundary-corrected identities exact; normalized bare error
+$10^{-2}\to10^{-9}$ along the directed system), but the covariant
+inductive step stays dead (the preregistered UCP window covariance
+is nonmonotone).  Separation steps (1) and (4) are thereby settled
+at the finite level; the surviving demand is restated below as
+\texttt{PRIME.KMS.INDUCTIVE\_STATE.02}.]}
+
+\par\smallskip\noindent\textbf{The refined master contract:
+operator-system compactness
+(\texttt{PRIME.KMS.INDUCTIVE\_STATE.02}).}
+{\sloppy
+\emph{OPEN} (registered 2026-08-04, refined from
+\texttt{INDUCTIVE\_STATE.01} after
+\veri{v740\_kms\_extension\_switch.py} and
+\veri{v741\_kms\_toeplitz\_semigroup.py}): keep the \emph{proven}
+local blocks --- the BC semigroup Toeplitz algebra per window
+(nonunitary isometries with boundary projections), the
+boundary-corrected $\beta=1$ KMS identities (exact), extended Gram
+positivity on the factorized slices, and UCP state transport
+(\veri{v735\_strat3\_ucp\_inductive.py}) --- and state the single
+remaining global step purely as an \emph{operator-system
+compactness/subsequence problem}: does the net of window states
+have a weak-$*$ cluster point that is a positive KMS functional on
+the closed algebra, \emph{without} demanding a covariant inductive
+system?  \emph{Kill criterion:} a finite obstruction to any cluster
+point (a uniform positivity violation along a subnet).  Do
+\emph{not} claim a covariant inductive system until a new canonical
+window map is found.  \emph{Literature anchor:} $\beta=1$ KMS for
+the genuine Bost--Connes algebra is classical (Bost--Connes 1995);
+the TFPT burden is the compatibility of the glued window states
+with one global limit, not local KMS existence.  A research
+contract, \emph{not} a claim; no marker move; no RH statement.\par}
 
 \par\smallskip\noindent\textbf{The PD-persistence universal form
 (\texttt{PRIME.PD.PERSISTENCE.01}).}
@@ -3897,6 +3941,45 @@ reflection positivity (\veri{v729\_strat2\_rp\_universality.py})
 stay retired; further zero-matching records do \emph{not} change the
 quantifier.  A research contract, \emph{not} a claim; no marker
 move; no RH statement.
+
+\par\smallskip\noindent\textbf{The structural upgrade: the canonical
+nested tower replaces the historical window family
+(\texttt{PRIME.TOWERNEST.01}).}
+The window quantifier of the PD-persistence formulation reduces
+\emph{exactly} to the canonical nested $(D,X)$ tower
+(\veri{v749\_simpler\_tower.py}, $8/8$,
+\textsc{tower-nested-reduces}): in $X$ an ascending chain ---
+X-nesting exact to $6.7\times10^{-18}$, so limit positivity is
+\emph{one} limit object per chain --- and in $D$ dyadic downward
+inheritance, exact: PD fine \emph{forces} PD coarse; every deployed
+window is a tower member at deviation $0.0$.  The window quantifier
+was an \emph{artifact} of the historical selection: box step
+functions are dense, so tower-PD for $D\to0$, $X\to\infty$ is
+equivalent to the Weil criterion (classical density step).
+\texttt{PRIME.PD.PERSISTENCE.01} is therefore restated with the
+canonical truncation in place of the historical window family.
+\emph{Honest limits:} incommensurable root-$D$ chains connect only
+by approximate interpolation (the residual does not close the PD
+transfer), and the margins \emph{fall} along the tower --- the wall
+stands, in canonical nested form.  \emph{Companion diagnostics of
+the simplification trilogy:} the gluing identity is an
+identity-level \emph{off-line detector} --- it sees $\delta=0.01$,
+sharper than the PD break at $\delta^*=0.02$, and the envelope slope
+measures $\delta$ --- while the rigidity thesis is honestly false
+(the identity holds unconditionally;
+\veri{v750\_simpler\_gluing.py}, $5/5$, \textsc{gluing-detector});
+and the component running is deterministic in direction with the
+exact $\mp u/2$ drift anatomy from $p^2\equiv1\bmod4$ and a
+slope-Ward cancellation at $4\times10^{-4}$ --- the margin inherits
+\emph{zero} deterministic drift --- but the balance \emph{sign} is
+zero content (budget $2.9\times10^4\times$ the margin): the
+induction route is RH-circular at the balance level
+(\veri{v751\_ward\_monotone.py}, $15/15$,
+\textsc{ward-monotone-mixed}).  The cone-preserving layer recursion
+is retired by a one-liner: cone-preserving iff layer-positive, and
+no prime layer is ($c_0=0$;
+\veri{v743\_schur\_cone\_recursion.py}, $7/7$,
+\textsc{schur-cone-dead}).  No marker move; no RH statement.
 
 \par\smallskip\noindent\textbf{The four fixed-size angle instruments
 (\texttt{PRIME.ANGLE.INSTR.01}).}
@@ -5172,6 +5255,15 @@ deck/twist channels are Schatten-norm Cauchy with geometrically summable rates (
 FH renormalization is fit-free lattice-derived (Barnes~$G$, $8.8\times10^{-7}$), the RP cone is stable, and
 the majorant lemma (L1)--(L3) is \emph{named} with constants and a classical proof route --- named, not
 proven: the gate itself does \emph{not} move.]}
+\emph{[2026-08-04 \texttt{GATE.QGEO} note: the first proof block of the majorant lemma lands
+(\veri{v745\_qgeo\_car\_l1\_sector\_lemma.py}, $11/11$, \texttt{L1-SECTOR-PROVEN-MODULO-ELEMENTARY}):
+(L1) is proven modulo elementary steps for all $6$ undressed sectors on the fixed grid --- the
+occupied-arc mode sums are \emph{exact} geometric sums (exact summation replaces Euler--Maclaurin), the
+entire $1/N$ structure is the sublattice embedding offset, the leading term is the exact matrix
+$(iu/2MN)f_q'(s)$ (ratio $\to1$ at $6\times10^{-4}$), $\gamma=2$ is \emph{derived}, the Taylor--Lagrange
+envelope holds with $39744{+}108$ inequalities at $0$ violations, and $r_1=1$ is sharp.  The residues stay
+typed: (a) grid-sup [elementary], (b) L2 uniform FH/RH [hard-technical], (c) L3 uniformity [medium] ---
+named, not claimed: the gate itself still does \emph{not} move.]}
 By the No-Unit Theorem (\vref{v153}) the irreducibles stay exactly $\{\pi,v_{\mathrm{geo}}\}$ --- closing
 (A) adds none. \textbf{Final accounting:} premise~(A) $=$ ($A_2$ assembly, \mC) $+$ ($R_1{=}$%
 \texttt{GATE.QGEO}, already open) $+$ the $\{\pi,v_{\mathrm{geo}}\}$ irreducible core (a theorem) --- it
@@ -6979,6 +7071,54 @@ $\{$one unit $=\Lambda_{\mathrm{QCD}}$
 $\theta_i$, one lattice $O(1)$ $C_p\}$ --- T3's clock wall and T1's
 unit wall are \emph{the same wall}, counted once.  No marker moves;
 the functor typing above is unchanged.
+\par\smallskip\noindent\textbf{The frozen external-clock contract
+(\texttt{FTRANSFER.CLOCKS.01}) --- preregistered, executor pending.}
+Since both thermal-time routes are dead, the clocks \emph{must} be
+external --- and without clocks fixed in advance every jet statement
+is arbitrarily reparametrizable.  The contract therefore freezes
+them (design byte-frozen 2026-08-04 in
+\texttt{experiments/ftransfer-clocks/}\allowbreak
+\texttt{hypotheses/ftransfer\_clocks\_v1.yaml};
+typed \mX, a search-target design, \emph{not} a claim).  \emph{The
+four frozen clocks, exactly one physical clock per solver:}
+F\_pole $=$ proper time $\tau$ (the on-shell/pole-mass phase clock;
+frozen gauge: one \vref{v99} seam unit $=$ one proper-phase e-fold);
+F\_Boltzmann $=$ inverse temperature $\beta$ (FIRAS-anchored
+adiabatic chart; one washout seam unit $=$ one $\beta$ e-fold; the
+$z$-linear alternative is recorded as \emph{excluded});
+F\_QCD $=$ RG time $t=\ln(\mu/M_Z)$ ($\overline{\mathrm{MS}}$,
+$1$-loop $b_0=7$ on the
+frozen window $[m_t,1\,\mathrm{TeV}]$; identity gauge);
+F\_relic $=$ cosmological e-folds $\ln a$ (Planck 2018 background;
+the flow is frozen, the jets \emph{degenerate} --- the channel is
+scored only on kills and dictionary validity).  \emph{The
+preregistered prediction} (FTC.P1): under the frozen affine
+dictionaries (slopes $-1,-1,+1,-1$ into the common chart
+$\sigma=\ln(\mu/M_Z)$) \emph{one} constant-coefficient Riccati
+equation carries all non-degenerate transported jets ---
+equivalently, the transported Schwarzians of
+F\_pole/F\_Boltzmann/F\_QCD are \emph{equal}; the seam channels
+transport to $-\Delta^2/2=-2.959235170076978$ exactly, so the
+prediction forces the transported QCD Schwarzian onto that value.
+\emph{Three kills:} K1 \textsc{no-common-connection} (symbolic
+inequality of the transported Schwarzians; on kill the executor must
+exhibit the forbidden reparametrization per failing pair); K2
+\textsc{free-reparam-needed} (any post-freeze change of a gauge or
+dictionary; the YAML sha256 is recorded by the executor); K3
+\textsc{second-clock-needed} (any channel export needing two time
+variables).  \emph{The honest prior, preregistered:} the
+\emph{expected} outcome is the K1 kill --- affine transport scales a
+Schwarzian by $\mathrm{slope}^2$ and cannot move $0$ (the QCD value)
+onto $-\Delta^2/2$ (the seam value); a K1 kill would finalize the
+\vref{v578} diagnosis at the \emph{physical}-clock level and close
+the jet route of \texttt{CONTRACT.F.01}; \textsc{one-class} would be
+the surprise.  \emph{Executor: pending} --- a future
+\texttt{v752\_ftransfer\_clock\_jets.py}-pattern module (sympy-exact
+kernel; the FTC.01 data interfaces need the frozen $g_{*s}$
+tabulation and the PDG $\alpha_s(Q)$ overlay data curated first).
+Nothing here upgrades \texttt{CONTRACT.F.01}: the four observables
+stay \mC/\mO; no marker move; no RH statement (unrelated surface;
+discipline note).
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/ftransfer_dynamics.pdf}

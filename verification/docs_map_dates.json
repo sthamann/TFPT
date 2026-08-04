@@ -76,8 +76,8 @@
   "date": "2026-07-14"
  },
  "introduction::subsection::Three deliberate divergences::1": {
-  "hash": "739b95c8e428",
-  "date": "2026-07-14"
+  "hash": "4a0da3ba31ce",
+  "date": "2026-08-04"
  },
  "introduction::section::Does this make the theory more probable?::1": {
   "hash": "540397fd6436",
@@ -464,8 +464,8 @@
   "date": "2026-06-23"
  },
  "tfpt_2_standard_model::section::The explicit mass gap closes dynamics and clustering::1": {
-  "hash": "9cacf6d78782",
-  "date": "2026-06-13"
+  "hash": "7d578d2a9f6c",
+  "date": "2026-08-04"
  },
  "tfpt_2_standard_model::section::The seam elliptic complex is Fredholm (APS)::1": {
   "hash": "0b980ed498f3",
@@ -524,7 +524,7 @@
   "date": "2026-06-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
-  "hash": "4cc1ab3736dc",
+  "hash": "4ca1744a197c",
   "date": "2026-08-04"
  },
  "tfpt_3_e8_audit_bootstrap::section::Further audit lemmas (machine-verified this round)::1": {
@@ -724,7 +724,7 @@
   "date": "2026-08-01"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "f8fa506920b0",
+  "hash": "07c1a68207f2",
   "date": "2026-08-04"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {
@@ -736,8 +736,8 @@
   "date": "2026-08-01"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
-  "hash": "96d5765a0c55",
-  "date": "2026-08-03"
+  "hash": "b91b184b8d74",
+  "date": "2026-08-04"
  },
  "origin_theory::front::(front matter)::1": {
   "hash": "1806669dfa1e",

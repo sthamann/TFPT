@@ -5411,6 +5411,235 @@ Machine-checked: \veri{v739\_rank3\_jet.py}.
 honest negative)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The KMS extension switch: the strong
+form is dead (\texttt{PRIME.KMSEXT.01}).}
+The strongest literal reading of the review master contract, tested
+before any global construction ($8$ construction/control checks,
+${\sim}1$\,s; verdict \textsc{kms-extension-dead}).  The strong form
+dies twice, algebraically: $\beta=1$ KMS is impossible on Gate-0's
+nonzero-grade Laurent unitaries --- $T(u_pu_p^*)=1$ versus
+$T(u_p^*\sigma_i(u_p))=1/p$, exact defects $1/2,2/3,4/5$ at
+$p=2,3,5$ --- and adjacent normalized GNS states are \emph{not}
+restrictions along covariant unital $*$-embeddings ($0$ of
+$141..1255$ required exact boundaries).  What survives: local
+extended Gram positivity on the $55{,}296$-monomial factorized
+slice per window ($\lambda_{\min}$
+$5.0\times10^{-11}..7.3\times10^{-9}$ vs random ${\sim}8\times
+10^{-2}$).  Controls fire (Epstein $17$ negative sites; scramble).
+The weaker contract is named: BC semigroup Toeplitz algebra $+$
+operator-system maps.  The two \texttt{[FAIL]} lines are the
+preregistered kills.  No marker move, no RH claim.
+Machine-checked: \veri{v740\_kms\_extension\_switch.py}.
+\mE\ (exact algebraic kill $+$ local positivity construction)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The BC Toeplitz correction and the
+covariance kill (\texttt{PRIME.KMSTOEPLITZ.01}).}
+The Bost--Connes semigroup slice of the master contract ($9$
+construction/control checks, ${\sim}1$\,s; verdict
+\textsc{kms-toeplitz-dead}).  The BC isometry correction repairs
+the algebraic KMS obstruction \emph{completely}: the
+boundary-corrected KMS identities are exact (normalized bare error
+$10^{-2}\to10^{-9}$ along the directed Toeplitz system);
+arch/isotropy KMS passes; window Grams stay positive; UCP state
+transport exists ($3.1\times10^{-12}$).  But the covariant
+inductive contract stays dead (preregistered): the UCP
+window-covariance errors are nonmonotone ($0.797..1.558..0.058$).
+Final form: keep the proven BC-Toeplitz local KMS blocks; state the
+global handoff as operator-system compactness
+(\texttt{PRIME.KMS.INDUCTIVE\_STATE.02}).  Literature anchor:
+$\beta=1$ KMS for the genuine BC algebra is classical
+(Bost--Connes 1995).  No marker move, no RH claim.
+Machine-checked: \veri{v741\_kms\_toeplitz\_semigroup.py}.
+\mE\ (exact BC-Toeplitz KMS repair) $+$ (\textsc{measured})
+(covariance kill, honest negative)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The channel interference anatomy
+(\texttt{PRIME.CHANNELINT.01}).}
+The cross-channel dissection of the thin W3 margin ($14$ checks,
+${\sim}5$\,s; verdict \textsc{interference-collective}).  The
+margin is \emph{one} collective scalar balance --- arch $+$ ram-odd
+against split $+$ inert --- strictly monotone over all $35$
+deployed windows (consecutive cosine $\ge0.9961$; all five balance
+components monotone).  Two exact Ward identities: the cross
+components cancel exactly on every window ($\sum c=0$ to
+$1.8\times10^{-15}$); the $8\times8$ rigid block equals
+$\dim_C\dim_{C'}m_0$.  No pair reduction ($k_{95}\in[4,5]$,
+$k_{\mathrm{pair}90}\in[6,8]$); scramble fires
+($\times2\times10^3$--$3.9\times10^6$).  The channel basis is
+diagnostic, not reductive.  No marker move, no RH claim.
+Machine-checked: \veri{v742\_channel\_interference.py}.
+\mE\ (exact Ward identities) $+$ (\textsc{measured}) (collective
+balance anatomy)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The cone-preserving Schur recursion:
+dead (\texttt{PRIME.SCHURCONE.01}).}
+The review's layer-recursion thesis, killed by a one-liner ($7$
+checks, ${\sim}1$\,s; verdict \textsc{schur-cone-dead}).  The
+machinery is exact --- Moebius/Schur update at $2.9\times10^{-41}$
+(Fraction arithmetic), $T^*JT$ identity exact --- and then: a layer
+map is cone-preserving \emph{iff} the layer is positive
+($c_0\ge0$), and no prime layer is ($c_0=0$ exactly, with genuinely
+negative dips).  ``$T^*JT\le J$ per layer'' cannot carry in
+principle; the escape --- a canonical positive re-bundling --- is
+itself an RH-class statement and the precisely named missing piece.
+No marker move, no RH claim.
+Machine-checked: \veri{v743\_schur\_cone\_recursion.py}.
+\mE\ (exact machinery; one-liner kill --- honest negative)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Channel columns for the Hecke SOS
+(\texttt{PRIME.CHANNELSOS.01}).}
+The follow-up strike of the SOS offensive with the ramified-fiber
+channels ($15$ checks $/$ $0$ failures, ${\sim}7$\,s; verdict
+\textsc{hecke-sos-channels-partial}).  No canonical column choice
+factorizes the window Gram: the cos-half candidate is indefinite,
+and the PSD-$B^*B$ completion consumes $5$--$6$ orders of magnitude
+beyond the W3 margin.  The coherent failure is the structural
+finding: the Ihara \emph{channel} route fails exactly as for
+$\zeta$ (the operator route passes: trio PSD, prisms break) ---
+channels grade \emph{positions}, positivity lives in
+\emph{frequencies}.  Finiteness measured: $\dim V=16$ carries
+$\le16$ spectral frequencies, the windows need $168$--$862$.
+Epstein fails doubly; scramble breaks.  No marker move, no RH
+claim.
+Machine-checked: \veri{v744\_hecke\_channel\_columns.py}.
+(\textsc{measured}) (factorization negatives; coherence controls
+exact)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The (L1) sector lemma of the CAR
+majorant (\texttt{QGEO.CARL1.01}).}
+The first proof block of the majorant lemma named by the continuum
+probe ($11$ checks, ${\sim}1$\,s; verdict
+\textsc{l1-sector-proven-modulo-elementary}).  For all $6$
+undressed sectors on the fixed grid:
+$\|K_{2N}^{(q)}-K_N^{(q)}\|_{S_1(\Lambda_\varepsilon)}\le
+B_q(\varepsilon)/N$ --- the occupied-arc mode sums are \emph{exact}
+geometric sums (exact summation replaces Euler--Maclaurin), the
+entire $1/N$ structure is the sublattice embedding offset, the
+leading term is the exact matrix $(iu/2MN)f_q'(s)$ (ratio $\to1$ at
+$6\times10^{-4}$), $\gamma=2$ is \emph{derived}, $39744{+}108$
+inequalities hold at $0$ violations, and $r_1=1$ is sharp.  Status
+typed: proven modulo elementary steps, explicit constants; residues
+(a) grid-sup [elementary], (b) L2 uniform FH/RH [hard-technical],
+(c) L3 uniformity [medium] --- named, not claimed.
+\texttt{GATE.QGEO} does not move.  No marker move.
+Machine-checked: \veri{v745\_qgeo\_car\_l1\_sector\_lemma.py}.
+\mE\ (proof-near sector lemma with explicit constants)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The $G_{\mathrm{net}}$ local net
+functor (\texttt{GNET.LOCALNET.01}).}
+The local-net reading of the quotient circle, finite layer exact
+($16$ checks, ${\sim}2$\,s; verdict
+\textsc{gnet-local-functor-alive}).  Net axioms exact: isotony,
+graded locality, clock covariance.  The Watatani index of the local
+fixed-point inclusion is exactly $4$ for \emph{every} interval
+$\ell\ge2$ --- the $[D,A]$ index statement is interval-local.
+Ramond is a half-line/bond defect (solitonic; leakage
+$\sqrt{2/N}$) --- the DHR structure the seam--Calder\'on
+identification needs.  Four must-fail controls fire.  Missing
+continuum theorems named, not claimed (GNS limit net, index
+continuity, Longo Q-system identification, twisted DHR sectors,
+Haag duality/split).  No marker move.
+Machine-checked: \veri{v746\_phys\_gnet\_local\_functor.py}.
+\mE\ (finite net axioms $+$ local index $4$) $+$ \mC\ (named
+continuum theorems)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The tower as a confluent multiway
+system (\texttt{E8.MULTIWAY.01}).}
+The Zuse/Wolfram reading of the Hecke tower, measured ($24$ checks,
+${\sim}5$\,s; adjudication \textsc{mixed}).  The diamond is exact:
+multiway confluence $=$ Hecke commutativity $=$ CRT (a theorem).
+The one new fingerprint: the branchial graph at the prime places
+has spectrum $\{1,q{+}1\}$ with the $[4,2]_q$ Grassmann cell count.
+$\Lambda$ recursion $=$ causal path statistics (v714 renamed).
+Adjudication: A1 tower$=$multiway and A3 irreducibility
+($\lambda=\ln g\in[1.70,2.48]$ nats/slot; testable log-scaling
+$N^*$) \emph{equivalently useful}; A2 lift$=$CA and A4 code$=$DFA
+\emph{renamings}.  Not a standalone research program, not a pure
+narrative layer.  No marker move.
+Machine-checked: \veri{v747\_automaton\_multiway\_tower.py}.
+\mE\ (exact confluence/branchial census; typed adjudication)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Sigma-orbifold confluence
+(\texttt{E8.ORBIFOLDCONF.01}).}
+The orbifold sequel ($15$ checks, ${\sim}42$\,s; adjudication
+\textsc{equivalently-useful}).  Two-line lemma: $\sigma$ is a
+multiway \emph{automorphism}, so the $\sigma$-quotient is confluent
+\emph{everywhere} --- including the ramified place.  What actually
+breaks is only the half-orbit \emph{weighting} (the mass convention
+on half orbits) --- exactly at the ramified place, same
+\emph{location} as $[D,A]$, not the same object.  The multiway
+reading falls back exactly onto the known structure (confluence $=$
+CRT; branchial $=$ Grassmann cells; irreducibility $=$ v702) and
+rests as documented exploration, with one reference sentence in the
+introduction's Zuse positioning.  No marker move.
+Machine-checked:
+\veri{v748\_automaton\_sigma\_orbifold\_confluence.py}.
+\mE\ (exact confluence lemma; typed adjudication)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The nested tower reduction
+(\texttt{PRIME.TOWERNEST.01}).}
+The structural upgrade of the PD-persistence formulation ($8$
+checks, ${\sim}1$\,s; verdict \textsc{tower-nested-reduces}).  The
+window quantifier reduces \emph{exactly} to the canonical nested
+$(D,X)$ tower: X-nesting exact to $6.7\times10^{-18}$ (limit
+positivity $=$ one limit object per chain); dyadic $D$-refinement
+exact (PD fine \emph{forces} PD coarse); every deployed window a
+tower member at deviation $0.0$.  Box step functions are dense, so
+tower-PD for $D\to0$, $X\to\infty$ is equivalent to the Weil
+criterion (classical density step) --- the canonical truncation
+replaces the historical window family in
+\texttt{PRIME.PD.PERSISTENCE.01}.  Honest limits: incommensurable
+root-$D$ chains connect only approximately; the margins fall along
+the tower.  No marker move, no RH claim.
+Machine-checked: \veri{v749\_simpler\_tower.py}.
+\mE\ (exact nesting/inheritance reduction; honest limits typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The gluing detector
+(\texttt{PRIME.GLUEDETECT.01}).}
+The gluing-rigidity hope, honestly resolved ($5$ checks,
+${\sim}1$\,s; verdict \textsc{gluing-detector}).  The gluing
+identity is an identity-level \emph{off-line detector}: it sees
+$\delta=0.01$ --- sharper than the PD break at $\delta^*=0.02$ ---
+and the envelope slope measures $\delta$.  The rigidity thesis is
+honestly \emph{false}: the identity holds unconditionally (both
+sides are constructed); what a proof lacks is that the true lags
+can only be carried by an on-line spectrum --- that \emph{is}
+positivity itself.  As diagnostic, superior to the PD channel; no
+new RH access.  No marker move, no RH claim.
+Machine-checked: \veri{v750\_simpler\_gluing.py}.
+\mE\ (exact detector construction; rigidity thesis falsified ---
+honest negative)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Monotone Ward running
+(\texttt{PRIME.WARDMONO.01}).}
+The Ward-monotonicity hope, dissected ($15$ checks, ${\sim}3$\,s;
+verdict \textsc{ward-monotone-mixed}).  The deterministic part
+carries $100\%$: component running deterministic in direction with
+parameter-free $\zeta$/$L$ constants; the $\mp u/2$ drift anatomy
+exact (from $p^2\equiv1\bmod4$); slope-Ward cancellation at
+$4\times10^{-4}$ --- the margin inherits \emph{zero} deterministic
+drift.  The honest kill: the balance \emph{sign} is zero content
+--- the deterministic budget is $2.9\times10^4\times$ the margin;
+a provable sign would need the local zero fluctuation of $\psi$ to
+${\sim}10^{-6}$ relative accuracy --- the induction route for
+$\lambda_1>0$ is RH-circular at the balance level.  Shape provable,
+sign not.  No marker move, no RH claim.
+Machine-checked: \veri{v751\_ward\_monotone.py}.
+\mE\ (exact drift anatomy) $+$ (\textsc{measured}) (deterministic
+running; circularity typing)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

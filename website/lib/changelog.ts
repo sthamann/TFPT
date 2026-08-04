@@ -43,6 +43,1587 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-04",
+    "dateLabel": "2026-08-04 · LVII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the full day wave: TWELVE promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v740"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v751"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "157"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green; suite "
+      },
+      {
+        "k": "m",
+        "v": "733\\to745"
+      },
+      {
+        "k": "t",
+        "v": " modules), the frozen external-clock preregistration, Lean round 6 ("
+      },
+      {
+        "k": "m",
+        "v": "47"
+      },
+      {
+        "k": "t",
+        "v": " new theorems), and the retroactive record of the editorial commit. THE KMS END-FORM: "
+      },
+      {
+        "k": "c",
+        "v": "v740"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "kms-extension-dead"
+      },
+      {
+        "k": "t",
+        "v": ") — the strong master contract form is algebraically dead twice: "
+      },
+      {
+        "k": "m",
+        "v": "\\beta=1"
+      },
+      {
+        "k": "t",
+        "v": " KMS is impossible on Gate-0's nonzero-grade Laurent unitaries ("
+      },
+      {
+        "k": "m",
+        "v": "T(u_pu_p^*)=1"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "T(u_p^*\\sigma_i(u_p))=1/p"
+      },
+      {
+        "k": "t",
+        "v": ", exact defects "
+      },
+      {
+        "k": "m",
+        "v": "1/2,2/3,4/5"
+      },
+      {
+        "k": "t",
+        "v": "), and exact covariant "
+      },
+      {
+        "k": "m",
+        "v": "*"
+      },
+      {
+        "k": "t",
+        "v": "-restrictions do not exist; local extended Gram positivity survives ("
+      },
+      {
+        "k": "m",
+        "v": "55{,}296"
+      },
+      {
+        "k": "t",
+        "v": " monomials/window); "
+      },
+      {
+        "k": "c",
+        "v": "v741"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "kms-toeplitz-dead"
+      },
+      {
+        "k": "t",
+        "v": ") — the Bost–Connes semigroup Toeplitz correction repairs the algebraic KMS step COMPLETELY (boundary error "
+      },
+      {
+        "k": "m",
+        "v": "10^{-2}\\to10^{-9}"
+      },
+      {
+        "k": "t",
+        "v": ", directed system), but the covariant inductive step stays dead (UCP covariance nonmonotone, preregistered); the master contract is refined to "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.KMS.INDUCTIVE_STATE.02"
+      },
+      {
+        "k": "t",
+        "v": " (operator-system compactness; keep the proven local blocks, ask only for a weak-"
+      },
+      {
+        "k": "m",
+        "v": "*"
+      },
+      {
+        "k": "t",
+        "v": " cluster state). THE CHANNEL ANATOMY: "
+      },
+      {
+        "k": "c",
+        "v": "v742"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "interference-collective"
+      },
+      {
+        "k": "t",
+        "v": ") — the W3 margin is ONE collective scalar balance (arch "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " ram-odd vs split "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " inert), strictly monotone over "
+      },
+      {
+        "k": "m",
+        "v": "35"
+      },
+      {
+        "k": "t",
+        "v": " windows, with TWO exact Ward identities ("
+      },
+      {
+        "k": "m",
+        "v": "\\sum c=0"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "1.8\\times10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": "; rigid block "
+      },
+      {
+        "k": "m",
+        "v": "=\\dim\\cdot\\dim\\cdot m_0"
+      },
+      {
+        "k": "t",
+        "v": "); no pair reduction; scramble "
+      },
+      {
+        "k": "m",
+        "v": "\\times2\\times10^3"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "3.9\\times10^6"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "v743"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "7/7"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "schur-cone-dead"
+      },
+      {
+        "k": "t",
+        "v": ") — exact Moebius update ("
+      },
+      {
+        "k": "m",
+        "v": "2.9\\times10^{-41}"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " exact "
+      },
+      {
+        "k": "m",
+        "v": "T^*JT"
+      },
+      {
+        "k": "t",
+        "v": " identity, then the one-liner kill: cone-preserving iff layer-positive, and no prime layer is ("
+      },
+      {
+        "k": "m",
+        "v": "c_0=0"
+      },
+      {
+        "k": "t",
+        "v": ") — layer-wise recursion is the wrong granularity level; "
+      },
+      {
+        "k": "c",
+        "v": "v744"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "15"
+      },
+      {
+        "k": "t",
+        "v": " checks, "
+      },
+      {
+        "k": "t",
+        "v": "hecke-sos-channels-partial"
+      },
+      {
+        "k": "t",
+        "v": ") — no canonical column choice factorizes (cos-half indefinite; PSD-"
+      },
+      {
+        "k": "m",
+        "v": "B^*B"
+      },
+      {
+        "k": "t",
+        "v": " consumes "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "6"
+      },
+      {
+        "k": "t",
+        "v": " orders beyond the margin); the Ihara channel route fails coherently (channels grade positions, positivity lives in frequencies — structural, not "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta"
+      },
+      {
+        "k": "t",
+        "v": "-specific); finiteness measured: "
+      },
+      {
+        "k": "m",
+        "v": "\\dim 16"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "168"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "862"
+      },
+      {
+        "k": "t",
+        "v": " required frequencies. THE PROOF BLOCK: "
+      },
+      {
+        "k": "c",
+        "v": "v745"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "l1-sector-proven-modulo-elementary"
+      },
+      {
+        "k": "t",
+        "v": ") — (L1) of the CAR majorant lemma proven modulo elementary steps for all "
+      },
+      {
+        "k": "m",
+        "v": "6"
+      },
+      {
+        "k": "t",
+        "v": " sectors (exact geometric sums instead of Euler–Maclaurin, leading term at "
+      },
+      {
+        "k": "m",
+        "v": "6\\times10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma=2"
+      },
+      {
+        "k": "t",
+        "v": " derived, "
+      },
+      {
+        "k": "m",
+        "v": "39744{+}108"
+      },
+      {
+        "k": "t",
+        "v": " inequalities "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " violations, "
+      },
+      {
+        "k": "m",
+        "v": "r_1=1"
+      },
+      {
+        "k": "t",
+        "v": " sharp); "
+      },
+      {
+        "k": "c",
+        "v": "GATE.QGEO"
+      },
+      {
+        "k": "t",
+        "v": " does not move (L2 hard-technical, L3 medium remain). THE NET THEOREM: "
+      },
+      {
+        "k": "c",
+        "v": "v746"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "16/16"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "gnet-local-functor-alive"
+      },
+      {
+        "k": "t",
+        "v": ") — net axioms exact (isotony/graded locality/clock covariance), Watatani index LOCALLY exactly "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " for every interval "
+      },
+      {
+        "k": "m",
+        "v": "\\ell\\ge2"
+      },
+      {
+        "k": "t",
+        "v": ", Ramond "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " half-line/bond defect (solitonic; leakage "
+      },
+      {
+        "k": "m",
+        "v": "\\sqrt{2/N}"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " must-fails fire. THE ZUSE/WOLFRAM ADJUDICATION: "
+      },
+      {
+        "k": "c",
+        "v": "v747"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "24/24"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "mixed"
+      },
+      {
+        "k": "t",
+        "v": ") — the tower as a confluent multiway system: diamond exact (CRT theorem), branchial "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " Grassmann "
+      },
+      {
+        "k": "m",
+        "v": "[4,2]_q"
+      },
+      {
+        "k": "t",
+        "v": " at the prime places (the one new fingerprint), "
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda"
+      },
+      {
+        "k": "t",
+        "v": " recursion "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " causal path statistics; A2/A4 renamings, A1/A3 useful typings; "
+      },
+      {
+        "k": "c",
+        "v": "v748"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "15/15"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "equivalently-useful"
+      },
+      {
+        "k": "t",
+        "v": ") — the "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-quotient is confluent everywhere (two-line lemma: "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " is a multiway automorphism); only the half-orbit WEIGHTING breaks, exactly at the ramified place, same location as "
+      },
+      {
+        "k": "m",
+        "v": "[D,A]"
+      },
+      {
+        "k": "t",
+        "v": ", not the same object; rests as exploration "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the one reference sentence in the introduction's Zuse positioning. THE SIMPLIFICATION TRILOGY: "
+      },
+      {
+        "k": "c",
+        "v": "v749"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "tower-nested-reduces"
+      },
+      {
+        "k": "t",
+        "v": ") — THE structural upgrade: the window quantifier reduces exactly to the nested "
+      },
+      {
+        "k": "m",
+        "v": "(D,X)"
+      },
+      {
+        "k": "t",
+        "v": " tower (X-nesting "
+      },
+      {
+        "k": "m",
+        "v": "6.7\\times10^{-18}"
+      },
+      {
+        "k": "t",
+        "v": ", dyadic "
+      },
+      {
+        "k": "m",
+        "v": "D"
+      },
+      {
+        "k": "t",
+        "v": "-refinement exact — PD fine forces PD coarse; every deployed window a tower member at dev "
+      },
+      {
+        "k": "m",
+        "v": "0.0"
+      },
+      {
+        "k": "t",
+        "v": "); the canonical truncation replaces the historical window family in "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PD.PERSISTENCE.01"
+      },
+      {
+        "k": "t",
+        "v": "; honest limits: incommensurable chains, falling margins; "
+      },
+      {
+        "k": "c",
+        "v": "v750"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "5/5"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "gluing-detector"
+      },
+      {
+        "k": "t",
+        "v": ") — the gluing identity is an off-line detector at identity level (sees "
+      },
+      {
+        "k": "m",
+        "v": "\\delta=0.01"
+      },
+      {
+        "k": "t",
+        "v": ", sharper than the PD break "
+      },
+      {
+        "k": "m",
+        "v": "\\delta^*=0.02"
+      },
+      {
+        "k": "t",
+        "v": "; envelope slope measures "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": "); the rigidity thesis honestly false (the identity holds unconditionally); "
+      },
+      {
+        "k": "c",
+        "v": "v751"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "15/15"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "ward-monotone-mixed"
+      },
+      {
+        "k": "t",
+        "v": ") — running deterministic in direction ("
+      },
+      {
+        "k": "m",
+        "v": "100\\%"
+      },
+      {
+        "k": "t",
+        "v": ", parameter-free "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "m",
+        "v": "L"
+      },
+      {
+        "k": "t",
+        "v": " constants, "
+      },
+      {
+        "k": "m",
+        "v": "\\mp u/2"
+      },
+      {
+        "k": "t",
+        "v": " drifts from "
+      },
+      {
+        "k": "m",
+        "v": "p^2\\equiv1\\bmod4"
+      },
+      {
+        "k": "t",
+        "v": ", slope-Ward cancellation "
+      },
+      {
+        "k": "m",
+        "v": "4\\times10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " — the margin inherits ZERO deterministic drift), but the balance sign is zero content (budget "
+      },
+      {
+        "k": "m",
+        "v": "2.9\\times10^4\\times"
+      },
+      {
+        "k": "t",
+        "v": " margin) — the induction route is RH-circular. THE CLOCK PREREGISTRATION: "
+      },
+      {
+        "k": "c",
+        "v": "experiments/ftransfer-clocks/"
+      },
+      {
+        "k": "t",
+        "v": " committed (design YAML byte-frozen "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " contract note) and "
+      },
+      {
+        "k": "c",
+        "v": "FTRANSFER.CLOCKS.01"
+      },
+      {
+        "k": "t",
+        "v": " registered in the contracts paper — four frozen external clocks (proper time "
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": " inverse temperature "
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": " RG time "
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": " e-folds), the one-class Riccati/Schwarzian prediction (the seam channels transport to "
+      },
+      {
+        "k": "m",
+        "v": "-\\Delta^2/2"
+      },
+      {
+        "k": "t",
+        "v": " exactly), three kills (K1/K2/K3), honest prior “expected: K1 kill”; executor PENDING (the FTC.01 data interfaces need curated "
+      },
+      {
+        "k": "m",
+        "v": "g_{*s}"
+      },
+      {
+        "k": "t",
+        "v": "/PDG overlay tables first). LEAN ROUND 6: "
+      },
+      {
+        "k": "c",
+        "v": "TraceLedger.lean"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "28"
+      },
+      {
+        "k": "t",
+        "v": " theorems — the finite Gauss-quadrature trace formula as an exact ledger kernel, monic-Jacobi intertwining certificate, sharp must-fail at "
+      },
+      {
+        "k": "m",
+        "v": "m_6"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "PinningLemma.lean"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "19"
+      },
+      {
+        "k": "t",
+        "v": " theorems — L-PIN-1 Wilkinson "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " L-PIN-2 Kato–Temple/Temple positivity in sqrt-free rational form); "
+      },
+      {
+        "k": "c",
+        "v": "lake build"
+      },
+      {
+        "k": "t",
+        "v": " green ("
+      },
+      {
+        "k": "m",
+        "v": "3390"
+      },
+      {
+        "k": "t",
+        "v": " jobs), no sorry"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "native_decide. RETROACTIVE RECORD: commit "
+      },
+      {
+        "k": "c",
+        "v": "414471b2"
+      },
+      {
+        "k": "t",
+        "v": " (2026-08-04, between LVI and this round) was the pure editorial restructuring of "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " — no content changes, the "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}248"
+      },
+      {
+        "k": "t",
+        "v": "-page paper reorganized into parts with part intros; recorded here for the dated trail. NO RH claim, NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (12)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v740_kms_extension_switch.py"
+        },
+        {
+          "k": "t",
+          "v": " (8), "
+        },
+        {
+          "k": "c",
+          "v": "v741_kms_toeplitz_semigroup.py"
+        },
+        {
+          "k": "t",
+          "v": " (9), "
+        },
+        {
+          "k": "c",
+          "v": "v742_channel_interference.py"
+        },
+        {
+          "k": "t",
+          "v": " (14), "
+        },
+        {
+          "k": "c",
+          "v": "v743_schur_cone_recursion.py"
+        },
+        {
+          "k": "t",
+          "v": " (7), "
+        },
+        {
+          "k": "c",
+          "v": "v744_hecke_channel_columns.py"
+        },
+        {
+          "k": "t",
+          "v": " (15), "
+        },
+        {
+          "k": "c",
+          "v": "v745_qgeo_car_l1_sector_lemma.py"
+        },
+        {
+          "k": "t",
+          "v": " (11), "
+        },
+        {
+          "k": "c",
+          "v": "v746_phys_gnet_local_functor.py"
+        },
+        {
+          "k": "t",
+          "v": " (16), "
+        },
+        {
+          "k": "c",
+          "v": "v747_automaton_multiway_tower.py"
+        },
+        {
+          "k": "t",
+          "v": " (24), "
+        },
+        {
+          "k": "c",
+          "v": "v748_automaton_sigma_orbifold_confluence.py"
+        },
+        {
+          "k": "t",
+          "v": " (15), "
+        },
+        {
+          "k": "c",
+          "v": "v749_simpler_tower.py"
+        },
+        {
+          "k": "t",
+          "v": " (8), "
+        },
+        {
+          "k": "c",
+          "v": "v750_simpler_gluing.py"
+        },
+        {
+          "k": "t",
+          "v": " (5), "
+        },
+        {
+          "k": "c",
+          "v": "v751_ward_monotone.py"
+        },
+        {
+          "k": "t",
+          "v": " (15) — "
+        },
+        {
+          "k": "m",
+          "v": "157"
+        },
+        {
+          "k": "t",
+          "v": " checks, each promoted verbatim from its discovery probe with numbers frozen from the promotion run (all twelve probes re-run before promotion; outputs identical modulo runtimes; sibling imports resolve against the promoted "
+        },
+        {
+          "k": "c",
+          "v": "v696"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v716"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v718"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v735"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v740"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v747"
+        },
+        {
+          "k": "t",
+          "v": " modules). The three "
+        },
+        {
+          "k": "c",
+          "v": "[FAIL]"
+        },
+        {
+          "k": "t",
+          "v": " lines in the green run ("
+        },
+        {
+          "k": "c",
+          "v": "v740"
+        },
+        {
+          "k": "t",
+          "v": " K1.ii/K1.iii, "
+        },
+        {
+          "k": "c",
+          "v": "v741"
+        },
+        {
+          "k": "t",
+          "v": " T2.ii) are exactly the preregistered honest kills."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/TraceLedger.lean"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "28"
+        },
+        {
+          "k": "t",
+          "v": " theorems) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/PinningLemma.lean"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "19"
+        },
+        {
+          "k": "t",
+          "v": " theorems) committed (kernel-checked, no sorry"
+        },
+        {
+          "k": "m",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": "native_decide; "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green, "
+        },
+        {
+          "k": "m",
+          "v": "3390"
+        },
+        {
+          "k": "t",
+          "v": " jobs); imports added to "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lean_manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " regenerated."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contracts."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KMS.INDUCTIVE_STATE.02"
+        },
+        {
+          "k": "t",
+          "v": " registered (operator-system compactness end-form; "
+        },
+        {
+          "k": "c",
+          "v": ".01"
+        },
+        {
+          "k": "t",
+          "v": " annotated as settled at the finite level); "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PD.PERSISTENCE.01"
+        },
+        {
+          "k": "t",
+          "v": " restated on the canonical nested tower ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.TOWERNEST.01"
+        },
+        {
+          "k": "t",
+          "v": " paragraph); "
+        },
+        {
+          "k": "c",
+          "v": "FTRANSFER.CLOCKS.01"
+        },
+        {
+          "k": "t",
+          "v": " registered (executor pending); dated "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": " note (the (L1) proof block)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 12 new module rows "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " 2 new contract rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KMS.INDUCTIVE_STATE.02"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "FTRANSFER.CLOCKS.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KMS.INDUCTIVE_STATE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PD.PERSISTENCE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO.01"
+        },
+        {
+          "k": "t",
+          "v": " and Lean notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.MOONSHOT.05"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "PRIME.K1CAPTURE.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "813\\to827"
+        },
+        {
+          "k": "t",
+          "v": " rows."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new section “The simplification wave” (the tower upgrade, the two closed hopes, the KMS end-form, the channel anatomy). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{net}}"
+        },
+        {
+          "k": "t",
+          "v": " local-net paragraph (the algebraic-QFT counterpart of the OS package). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": 12 new audit blocks. "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": ": the one Zuse-positioning reference sentence (the multiway reading measured out, equivalently useful)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “the full day wave”; counters "
+        },
+        {
+          "k": "m",
+          "v": "733\\to745"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v751"
+        },
+        {
+          "k": "t",
+          "v": "; README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "745"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v751"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Five honest kills promoted as encoded expected outcomes (preregistered criteria fire inside green machinery); the exact lemmas are finite/census statements behind explicit fences; the clock contract is a preregistered search-target design typed [X] with the honest prior “expected: K1 kill”; no marker moves; no RH statement anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-04",
     "dateLabel": "2026-08-04 · LVI",
     "heading": [
       {

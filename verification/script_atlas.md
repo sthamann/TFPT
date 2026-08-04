@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`733` registered scripts · `813` ledger claims · `10` clusters.
+`745` registered scripts · `827` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (253 scripts)
+### `core` — Compiler core & the E₈ glue  (265 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -517,6 +517,30 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v714_moonshot_hecke_groupoid, PRIME.Z1.MOONSHOT.01, v722_phys_ramified_ns_r, v714, v722 · cited: 3 e8 audit bootstrap
 - **v739_rank3_jet** [E/X] `PRIME.RANK3JET.01` — **RANK3-JET-DEAD: der Jet-Read ist exakt (der Lock-Block als Erster-Jet EINER Funktion, 4.6e-16; Loewner-Koordinaten; Schwarzian-Form [1−r₁₂²]_odd = (3/8)·S[g̃](1)·ε⁴ im Odd-Sektor
   - deps: v683_rank3_functionals, v683, v684, v692, v696 · cited: 3 e8 audit bootstrap
+- **v740_kms_extension_switch** [E/X] `PRIME.KMSEXT.01` — **KMS-EXTENSION-DEAD: β=1-KMS ist auf Gate-0s Laurent-Unitären mit Grad ≠ 0 algebraisch unmöglich — T(u_p u_p*) = 1 vs T(u_p* σ_i(u_p)) = 1/p, exakte Defekte 1/2, 2/3, 4/5 (p = 2, 
+  - deps: PRIME.KMS.INDUCTIVE_STATE.01, v733_strat3_gate0_census, v716, v718 · cited: 3 e8 audit bootstrap, research contracts
+- **v741_kms_toeplitz_semigroup** [E/X] `PRIME.KMSTOEPLITZ.01` — **KMS-TOEPLITZ-DEAD: die BC-Isometrie-Korrektur repariert die algebraische KMS-Obstruktion VOLLSTÄNDIG (randkorrigierte KMS-Identitäten exakt; normierter Randfehler 1e-2 → 1e-9 im 
+  - deps: v740_kms_extension_switch, v735_strat3_ucp_inductive, PRIME.KMS.INDUCTIVE_STATE.01, v740, v718, v735 · cited: 3 e8 audit bootstrap, research contracts
+- **v742_channel_interference** [E] `PRIME.CHANNELINT.01` — **INTERFERENCE-COLLECTIVE: die W3-Marge ist EINE kollektive Skalar-Bilanz (arch + ram-odd gegen split + inert), streng monoton über alle 35 deployten Fenster (glattes Running, kons
+  - deps: v738_hecke_mod_ramified, v738, v563 · cited: 3 e8 audit bootstrap
+- **v743_schur_cone_recursion** [E/X] `PRIME.SCHURCONE.01` — **SCHUR-CONE-DEAD: der Möbius/Schur-Update ist exakt (Residuum 2.9e-41) und die T*JT-Identität hält exakt [E]; der Einzeiler-Kill: eine Schicht-Karte ist kegelbewahrend ⟺ die Schic
+  - deps: PRIME.PD.PERSISTENCE.01, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v744_hecke_channel_columns** [-] `PRIME.CHANNELSOS.01` — **HECKE-SOS-CHANNELS-PARTIAL: keine kanonische Spalten-Wahl faktorisiert das Fenster-Gram (cos-Hälfte indefinit; PSD-B*B-Vervollständigung verbraucht 5–6 Größenordnungen über der W
+  - deps: v738_hecke_mod_ramified, v742_channel_interference, FTR.IHARA.01, v738, v742, v563 · cited: 3 e8 audit bootstrap
+- **v745_qgeo_car_l1_sector_lemma** [E] `QGEO.CARL1.01` — **L1-SECTOR-PROVEN-MODULO-ELEMENTARY: ‖K_2N − K_N‖_{S1} ≤ B_q(ε)/N für alle 6 undressed Sektoren auf dem festen Gitter beweisnah — die Besetzungs-Bogen-Modensummen sind EXAKTE geom
+  - deps: v715_qgeo_car_continuum, v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v715 · cited: 3 e8 audit bootstrap, research contracts
+- **v746_phys_gnet_local_functor** [E/C/O] `GNET.LOCALNET.01` — **GNET-LOCAL-FUNCTOR-ALIVE: die Netz-Axiome sind EXAKT (Isotonie, graduierte Lokalität, Uhr-Kovarianz auf dem Quotienten-Kreis); der Watatani-Index der lokalen Fixpunkt-Inklusion i
+  - deps: v653_bond_defect, v154_simple_current_theorem, v705_chain_deck_sector, v722 · cited: 2 standard model, 3 e8 audit bootstrap
+- **v747_automaton_multiway_tower** [E] `E8.MULTIWAY.01` — die Zuse/Wolfram-Lesart ausgemessen, nicht erzählt — **Diamant EXAKT (Multiway-Konfluenz = Hecke-Kommutativität = CRT, ein Theorem); der EINE neue Fingerabdruck: Branchial-Spektrum
+  - deps: v714_moonshot_hecke_groupoid, v702_z1_lookahead, v736_orbit_packet, v714, v702, v736 · cited: introduction, 3 e8 audit bootstrap
+- **v748_automaton_sigma_orbifold_confluence** [E] `E8.ORBIFOLDCONF.01` — **der σ-Quotient ist ÜBERALL konfluent (Zwei-Zeilen-Lemma: σ ist Multiway-Automorphismus — es gibt KEINE Orbifold-Nicht-Konfluenz auf Rewrite-Niveau, auch nicht an der verzweigten 
+  - deps: v747_automaton_multiway_tower, v747, v702 · cited: introduction, 3 e8 audit bootstrap
+- **v749_simpler_tower** [E] `PRIME.TOWERNEST.01` — DAS Struktur-Upgrade der PD-Persistenz-Formulierung — **TOWER-NESTED-REDUCES: in X eine aufsteigende Kette (X-Nestung exakt auf 6.7e-18 — Limes-Positivität = EIN Grenzobjekt pro Ke
+  - deps: PRIME.PD.PERSISTENCE.01, v727_l1_identification, v716, v718, v696, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v750_simpler_gluing** [E/C] `PRIME.GLUEDETECT.01` — **GLUING-DETECTOR: die Verklebungs-Identität sieht δ = 0.01 (jedes δ > 0 detektierbar) — SCHÄRFER als der PD-Bruch bei δ* = 0.02; die Hüllkurven-Steigung MISST δ; die Starrheits-Th
+  - deps: PRIME.PD.PERSISTENCE.01, PRIME.FALSIFIER.01, v718, v696 · cited: 3 e8 audit bootstrap, research contracts
+- **v751_ward_monotone** [E] `PRIME.WARDMONO.01` — **WARD-MONOTONE-MIXED: das Komponenten-Running ist deterministisch in RICHTUNG (100%, parameterfreie ζ/L-Konstanten); die Drift-Anatomie EXAKT — die ∓u/2-Drifts kommen aus p² ≡ 1 m
+  - deps: v742_channel_interference, PRIME.PD.PERSISTENCE.01, v742, v563, v692 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1531,22 +1555,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v563`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
+**Most-depended-on claims** (the load-bearing roots): `v563`×91, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v728_k1b_superresolution** — `PRIME.K1BPIN.01`
-- **v729_strat2_rp_universality** — `PRIME.RPUNIV.01`
-- **v730_strat2_pinning_lemma** — `PRIME.PINLEMMA.01`
-- **v731_strat2_gap_universality** — `PRIME.GAPUNIV.01`
-- **v732_strat3_sonin_prolate** — `PRIME.SONIN.01`
-- **v733_strat3_gate0_census** — `PRIME.GATE0.01`
-- **v734_s1_canonical** — `PRIME.S1CANON.01`
-- **v735_strat3_ucp_inductive** — `PRIME.UCPLIMIT.01`
-- **v736_orbit_packet** — `E8.ORBITPACKET.01`
-- **v737_seam48_intertwiner** — `E8.SEAM48.01`
-- **v738_hecke_mod_ramified** — `PRIME.HECKEMODRAM.01`
-- **v739_rank3_jet** — `PRIME.RANK3JET.01`
+- **v740_kms_extension_switch** — `PRIME.KMSEXT.01`
+- **v741_kms_toeplitz_semigroup** — `PRIME.KMSTOEPLITZ.01`
+- **v742_channel_interference** — `PRIME.CHANNELINT.01`
+- **v743_schur_cone_recursion** — `PRIME.SCHURCONE.01`
+- **v744_hecke_channel_columns** — `PRIME.CHANNELSOS.01`
+- **v745_qgeo_car_l1_sector_lemma** — `QGEO.CARL1.01`
+- **v746_phys_gnet_local_functor** — `GNET.LOCALNET.01`
+- **v747_automaton_multiway_tower** — `E8.MULTIWAY.01`
+- **v748_automaton_sigma_orbifold_confluence** — `E8.ORBIFOLDCONF.01`
+- **v749_simpler_tower** — `PRIME.TOWERNEST.01`
+- **v750_simpler_gluing** — `PRIME.GLUEDETECT.01`
+- **v751_ward_monotone** — `PRIME.WARDMONO.01`
 
