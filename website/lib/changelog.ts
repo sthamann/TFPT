@@ -43,6 +43,1475 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-05",
+    "dateLabel": "2026-08-05 · LXII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round nineteen: SEVEN promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v774"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v780"
+      },
+      {
+        "k": "t",
+        "v": ", from twelve frozen preregistered probes, all first-run adjudications reproduced identically at promotion; suite "
+      },
+      {
+        "k": "m",
+        "v": "766\\to773"
+      },
+      {
+        "k": "t",
+        "v": " modules) — the Arf compiler lands with its fired matter fence and the boundary-code uniqueness chain, the external-clock contract is EXECUTED on its expected K1 kill, remainder (a) of the (L1) majorant closes in the corrected "
+      },
+      {
+        "k": "m",
+        "v": "(1+\\ln M)"
+      },
+      {
+        "k": "t",
+        "v": " form, the "
+      },
+      {
+        "k": "m",
+        "v": "G_{\\mathrm{net}}"
+      },
+      {
+        "k": "t",
+        "v": " GNS precursors cohere, and the sharpened-Z1 trilogy measures the "
+      },
+      {
+        "k": "t",
+        "v": "z1-compactness"
+      },
+      {
+        "k": "t",
+        "v": " unification"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (7)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v774_arf_spinor_compiler.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "46/46"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "arf-spinor-exact"
+        },
+        {
+          "k": "t",
+          "v": ": the Arf/spinor compiler on "
+        },
+        {
+          "k": "m",
+          "v": "V=L/(1{+}i)L"
+        },
+        {
+          "k": "t",
+          "v": " — parity lift "
+        },
+        {
+          "k": "m",
+          "v": "\\iota\\cong C_{\\rm even}(5)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\beta=\\bar h"
+        },
+        {
+          "k": "t",
+          "v": " exact, unique "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "-selected "
+        },
+        {
+          "k": "m",
+          "v": "q^{*}"
+        },
+        {
+          "k": "t",
+          "v": " (census "
+        },
+        {
+          "k": "m",
+          "v": "4\\to2\\to1"
+        },
+        {
+          "k": "t",
+          "v": "; the weight form IS "
+        },
+        {
+          "k": "m",
+          "v": "q^{*}"
+        },
+        {
+          "k": "t",
+          "v": "), Arf census "
+        },
+        {
+          "k": "m",
+          "v": "6{+}10"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "Sp(4,2)\\cong S_6"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "16=1{+}\\bar5{+}10"
+        },
+        {
+          "k": "t",
+          "v": " as "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Stab}(q^{*})\\cong S_5"
+        },
+        {
+          "k": "t",
+          "v": " orbits, "
+        },
+        {
+          "k": "m",
+          "v": "K_6"
+        },
+        {
+          "k": "t",
+          "v": " duads, "
+        },
+        {
+          "k": "m",
+          "v": "B=I{+}A_{KG(6,2)}"
+        },
+        {
+          "k": "t",
+          "v": " with exact ovoid eigenvectors, hypercharge table "
+        },
+        {
+          "k": "m",
+          "v": "X=(-2,-2,-2,3,3)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "c",
+          "v": "v310"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v14"
+        },
+        {
+          "k": "t",
+          "v": " dictionary, moments "
+        },
+        {
+          "k": "m",
+          "v": "(16,0,120,0)"
+        },
+        {
+          "k": "t",
+          "v": " with the chain "
+        },
+        {
+          "k": "m",
+          "v": "40/41/240/248"
+        },
+        {
+          "k": "t",
+          "v": ", Pati–Salam "
+        },
+        {
+          "k": "m",
+          "v": "8{+}8"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "B{-}L"
+        },
+        {
+          "k": "t",
+          "v": " exact, "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{\\rm NSR}="
+        },
+        {
+          "k": "t",
+          "v": " anchor bit; "
+        },
+        {
+          "k": "m",
+          "v": "A_3^{\\rm Fam}\\neq A_3^{\\rm PS}"
+        },
+        {
+          "k": "t",
+          "v": " naming discipline); "
+        },
+        {
+          "k": "c",
+          "v": "v775_gaussian_class_d5_purity.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "18/18"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "rootclass-mixed"
+        },
+        {
+          "k": "t",
+          "v": " — THE FIRED PHYSICAL KILL: no "
+        },
+        {
+          "k": "m",
+          "v": "D_5{\\oplus}A_3"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "SU(5)"
+        },
+        {
+          "k": "t",
+          "v": " convention makes even one class set pure, "
+        },
+        {
+          "k": "m",
+          "v": "\\ge7"
+        },
+        {
+          "k": "t",
+          "v": " adjoint-side classes for EVERY embedding by the "
+        },
+        {
+          "k": "m",
+          "v": "128"
+        },
+        {
+          "k": "t",
+          "v": "-spinor-root bound, "
+        },
+        {
+          "k": "m",
+          "v": "0/56"
+        },
+        {
+          "k": "t",
+          "v": " splits; the code"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "matter reading incl. the “empty mailbox "
+        },
+        {
+          "k": "m",
+          "v": "=\\nu_R"
+        },
+        {
+          "k": "t",
+          "v": "” reading is fenced out of all main claims); "
+        },
+        {
+          "k": "c",
+          "v": "v776_boundary_hamming_uniqueness.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "31/31"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "boundary-code-unique"
+        },
+        {
+          "k": "t",
+          "v": ": census "
+        },
+        {
+          "k": "m",
+          "v": "135\\to30\\to14\\to2\\to1"
+        },
+        {
+          "k": "t",
+          "v": " without Hamming/"
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " input, ONE deck-invariant "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " flag bit, Construction A "
+        },
+        {
+          "k": "m",
+          "v": "\\to E_8"
+        },
+        {
+          "k": "t",
+          "v": " exact, "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar=1{+}4=5"
+        },
+        {
+          "k": "t",
+          "v": " as OUTPUT; residuals R1–R3 typed, NO P2-removal claim); "
+        },
+        {
+          "k": "c",
+          "v": "v777_ftransfer_clock_jets.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "24{+}14"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " failures: "
+        },
+        {
+          "k": "c",
+          "v": "FTRANSFER.CLOCKS.01"
+        },
+        {
+          "k": "t",
+          "v": " EXECUTED — the K1 kill fired exactly as the frozen prior expected, "
+        },
+        {
+          "k": "t",
+          "v": "no-common-connection"
+        },
+        {
+          "k": "t",
+          "v": ", transported Schwarzians sympy-exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\{-\\Delta^2/2,-\\Delta^2/2,0\\}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the fibered "
+        },
+        {
+          "k": "c",
+          "v": "CONTRACT.F.01"
+        },
+        {
+          "k": "t",
+          "v": " refinement "
+        },
+        {
+          "k": "t",
+          "v": "ftransfer-fibered-carries"
+        },
+        {
+          "k": "t",
+          "v": ": discrete PGL"
+        },
+        {
+          "k": "m",
+          "v": "_2"
+        },
+        {
+          "k": "t",
+          "v": " base with CR "
+        },
+        {
+          "k": "m",
+          "v": "=4/3"
+        },
+        {
+          "k": "t",
+          "v": " exact, constant seam cocycle "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,\\pm\\Delta^2/2\\}"
+        },
+        {
+          "k": "t",
+          "v": ", thermal-vs-RG coset split); "
+        },
+        {
+          "k": "c",
+          "v": "v778_qgeo_gridsup_logsum.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "19/19{+}19/19"
+        },
+        {
+          "k": "t",
+          "v": ": remainder (a) of the "
+        },
+        {
+          "k": "c",
+          "v": "v745"
+        },
+        {
+          "k": "t",
+          "v": " (L1) majorant FULLY closed in the corrected "
+        },
+        {
+          "k": "m",
+          "v": "(1+\\ln M)"
+        },
+        {
+          "k": "t",
+          "v": " form; the literal "
+        },
+        {
+          "k": "c",
+          "v": "v715"
+        },
+        {
+          "k": "t",
+          "v": " all-refinements clause is FALSE at "
+        },
+        {
+          "k": "m",
+          "v": "r_1=1"
+        },
+        {
+          "k": "t",
+          "v": " and repaired; certified grid Fourier log-sum theorem with explicit constants; "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": " does not move); "
+        },
+        {
+          "k": "c",
+          "v": "v779_gnet_gns_arf.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "27/27{+}27/27"
+        },
+        {
+          "k": "t",
+          "v": ": GNS precursors COHERENT — exact Haar tower, commuting index-4 expectations, duality defect "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " with ratio "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "; the exact dim law "
+        },
+        {
+          "k": "m",
+          "v": "d_c(\\ell)=4^{\\ell-1}{+}2^{\\ell-1}\\cos(\\pi c/2)"
+        },
+        {
+          "k": "t",
+          "v": " makes the "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb C[\\Z_4]"
+        },
+        {
+          "k": "t",
+          "v": " obstruction exactly "
+        },
+        {
+          "k": "m",
+          "v": "2^{-\\ell}"
+        },
+        {
+          "k": "t",
+          "v": " and explains the "
+        },
+        {
+          "k": "m",
+          "v": "\\ell=1"
+        },
+        {
+          "k": "t",
+          "v": " anomaly; the honest negative: the "
+        },
+        {
+          "k": "m",
+          "v": "1{+}5{+}10"
+        },
+        {
+          "k": "t",
+          "v": " echo is non-geometric, "
+        },
+        {
+          "k": "m",
+          "v": "K_{\\rm matter}"
+        },
+        {
+          "k": "t",
+          "v": " does not govern transport); "
+        },
+        {
+          "k": "c",
+          "v": "v780_z1_compactness_trilogy.py"
+        },
+        {
+          "k": "t",
+          "v": " (gates "
+        },
+        {
+          "k": "m",
+          "v": "3/4{+}1/4{+}"
+        },
+        {
+          "k": "t",
+          "v": " legs "
+        },
+        {
+          "k": "m",
+          "v": "3/6"
+        },
+        {
+          "k": "t",
+          "v": " with exactly the preregistered fails: the N2 family carries contact/collision/coupling natively but not the widening cadence; the finite boundary triple is exactly Herglotz and dies as a whitened "
+        },
+        {
+          "k": "m",
+          "v": "K{=}M/2"
+        },
+        {
+          "k": "t",
+          "v": " import, cell-mass exactly "
+        },
+        {
+          "k": "m",
+          "v": "0.500"
+        },
+        {
+          "k": "t",
+          "v": " beyond the half-window; the raw variable-edge family is bounded ("
+        },
+        {
+          "k": "m",
+          "v": "0.936"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " equicontinuous ("
+        },
+        {
+          "k": "m",
+          "v": "0.807"
+        },
+        {
+          "k": "t",
+          "v": ") with summable "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}"
+        },
+        {
+          "k": "t",
+          "v": "rank-one entry poles, "
+        },
+        {
+          "k": "m",
+          "v": "c_{\\rm mass}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "0.032\\ll1"
+        },
+        {
+          "k": "t",
+          "v": "). Suite "
+        },
+        {
+          "k": "m",
+          "v": "766\\to773"
+        },
+        {
+          "k": "t",
+          "v": "; all seven run standalone green and encode their preregistered patterns per the "
+        },
+        {
+          "k": "c",
+          "v": "v757"
+        },
+        {
+          "k": "t",
+          "v": " precedent."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/ArfSpinorCompiler.lean"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "23"
+        },
+        {
+          "k": "t",
+          "v": " kernel theorems: parity lift, "
+        },
+        {
+          "k": "m",
+          "v": "\\beta="
+        },
+        {
+          "k": "t",
+          "v": " symplectic form, selector uniqueness, Arf census, orbit partition, traceless/primitive "
+        },
+        {
+          "k": "m",
+          "v": "X"
+        },
+        {
+          "k": "t",
+          "v": ", moments "
+        },
+        {
+          "k": "m",
+          "v": "16/0/120/0"
+        },
+        {
+          "k": "t",
+          "v": " with the chain, "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{\\rm NSR}="
+        },
+        {
+          "k": "t",
+          "v": " anchor bit, PS split, must-fail dot-form control) and "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/CellCocycle.lean"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "18"
+        },
+        {
+          "k": "t",
+          "v": " declarations: exact Banachiewicz/bordered-Schur update, PD cell "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " PSD correction "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " monotone Loewner flow, bounded-monotone entrywise convergence naming the missing uniform Loewner bound, Redheffer/linear-fractional composition over arbitrary rings), both kernel-checked, "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green; dated Lean notes added to the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.QFCOCYCLE.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GRAM.DIAGONAL.01"
+        },
+        {
+          "k": "t",
+          "v": " ledger rows."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contracts."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "FTRANSFER.CLOCKS.01"
+        },
+        {
+          "k": "t",
+          "v": " moves PENDING "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " EXECUTED (K1 kill as the frozen prior expected; freeze guards byte-verified; the four dictionary legs pass at "
+        },
+        {
+          "k": "m",
+          "v": "571\\times"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "1.15\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "0.83\\%"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "0.0602"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "CONTRACT.F.01"
+        },
+        {
+          "k": "t",
+          "v": " carries the dated jet-route-closure "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " fibered-refinement note (next named step: coset assignment from KMS/modular clock typing); "
+        },
+        {
+          "k": "c",
+          "v": "ARF.BOUNDARY.CODE.01"
+        },
+        {
+          "k": "t",
+          "v": " registered OPEN [O] (derive evenness/self-duality from the seam axioms; residuals R1–R3; kills named); "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": " dated note (residue (a) closed in "
+        },
+        {
+          "k": "m",
+          "v": "(1+\\ln M)"
+        },
+        {
+          "k": "t",
+          "v": " form, the literal "
+        },
+        {
+          "k": "c",
+          "v": "v715"
+        },
+        {
+          "k": "t",
+          "v": " clause corrected, (b)/(c) open, gate does not move); "
+        },
+        {
+          "k": "c",
+          "v": "GATE.METRIC.08"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": ".11"
+        },
+        {
+          "k": "t",
+          "v": " dated notes (the "
+        },
+        {
+          "k": "m",
+          "v": "2^{-\\ell}"
+        },
+        {
+          "k": "t",
+          "v": " obstruction law as the finite precursor of the identification); "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KMS.INDUCTIVE_STATE.02"
+        },
+        {
+          "k": "t",
+          "v": " carry the measured unification (compactness carried, selection "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " import-faithful coupling as the single shared open object; merged target "
+        },
+        {
+          "k": "t",
+          "v": "z1-compactness"
+        },
+        {
+          "k": "t",
+          "v": ", cross-referenced, no row deletion)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 6 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "ARF.SPINORCOMPILER.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ARF.ROOTCLASS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ARF.BOUNDARY.CODE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.GRIDSUP.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "GNET.GNSLIMIT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.COMPACTNESS.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " dated updates on "
+        },
+        {
+          "k": "c",
+          "v": "FTRANSFER.CLOCKS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "CONTRACT.F.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.CARL1.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "GNET.LOCALNET.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "GNET.PPINDEX.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "GATE.METRIC.08"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": ".11"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.OPERATOR.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KMS.INDUCTIVE_STATE.02"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.QFCOCYCLE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GRAM.DIAGONAL.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "849\\to855"
+        },
+        {
+          "k": "t",
+          "v": " rows; all measured/typed, NO marker moves anywhere."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the Arf compiler, the fired matter fence and the boundary-code uniqueness join the code sections (after the symplectic code lemma), and the "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\mathrm{net}}"
+        },
+        {
+          "k": "t",
+          "v": " follow-ups gain the "
+        },
+        {
+          "k": "c",
+          "v": "v779"
+        },
+        {
+          "k": "t",
+          "v": " continuum-strand paragraphs; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": seven new audit blocks "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " dated notes on the "
+        },
+        {
+          "k": "c",
+          "v": "v715"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v745"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v746"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v773"
+        },
+        {
+          "k": "t",
+          "v": " blocks; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the Arf-compiler round in the incidence programme, the QGEO "
+        },
+        {
+          "k": "m",
+          "v": "(1+\\ln M)"
+        },
+        {
+          "k": "t",
+          "v": " note, and the new section “The sharpened-Z1 trilogy: compactness carried, selection open”; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the executed clock contract, the fibered "
+        },
+        {
+          "k": "c",
+          "v": "CONTRACT.F.01"
+        },
+        {
+          "k": "t",
+          "v": " note, the "
+        },
+        {
+          "k": "c",
+          "v": "ARF.BOUNDARY.CODE.01"
+        },
+        {
+          "k": "t",
+          "v": " registration, the "
+        },
+        {
+          "k": "c",
+          "v": "GATE.QGEO"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "GATE.METRIC"
+        },
+        {
+          "k": "t",
+          "v": " notes, the Z1/KMS unification notes and the "
+        },
+        {
+          "k": "c",
+          "v": "CellCocycle.lean"
+        },
+        {
+          "k": "t",
+          "v": " legacy; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": ": the jet-route-closure note."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round nineteen”; counters "
+        },
+        {
+          "k": "m",
+          "v": "766\\to773"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v780"
+        },
+        {
+          "k": "t",
+          "v": "; research-contracts and F_transfer mirrors updated ("
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": ", glossary, OpenGates, DAG nodes); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "773"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v780"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact results (Arf finite algebra "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Lean, boundary-code census, sympy-exact clock kill and cocycle, the grid Fourier log-sum theorem, the dim law) sit behind explicit fences; the fired matter kill and the preregistered partials are criteria firing inside green machinery and stay on record; the honest residuals (R1–R3, residues (b)/(c), the import-faithful coupling) are named, not claimed; no marker moves; no RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-05",
     "dateLabel": "2026-08-05 · LXI",
     "heading": [
       {

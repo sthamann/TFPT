@@ -37,7 +37,7 @@ const GATES: Gate[] = [
     tag: "Interface 3",
     marker: "[C]",
     title: "F_transfer — one typed runnable solver suite",
-    body: "One typed, runnable solver suite — Koide (v371), η_B (v372), axion relic (v373), m_p/m_e (v374) — each with a kill test, folded into a prediction-observatory CI (v375). A guard (v187) keeps them [C] bridges, never compiler outputs. The external-clock typing is now confirmed from the inside: both thermal-time routes for internalizing the four clocks are machine-killed (v723 STT-KILLED, v724 T3B-DEAD) — the anchor census sharpens to {one unit (v_geo-class), one angle θᵢ, one lattice O(1) C_p}.",
+    body: "One typed, runnable solver suite — Koide (v371), η_B (v372), axion relic (v373), m_p/m_e (v374) — each with a kill test, folded into a prediction-observatory CI (v375). A guard (v187) keeps them [C] bridges, never compiler outputs. The external-clock typing is now confirmed from the inside: both thermal-time routes for internalizing the four clocks are machine-killed (v723 STT-KILLED, v724 T3B-DEAD) — the anchor census sharpens to {one unit (v_geo-class), one angle θᵢ, one lattice O(1) C_p} — and the frozen external-clock contract is now EXECUTED on its expected K1 kill (v777, NO-COMMON-CONNECTION: no common continuous clock exists; the fibered functor with the constant seam cocycle {0, ±Δ²/2} survives).",
     tone: "border-slate-500/30 bg-slate-500/5",
   },
 ];

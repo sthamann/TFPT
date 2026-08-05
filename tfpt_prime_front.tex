@@ -11871,7 +11871,17 @@ quasi-free CAR route makes the continuum limit quantitative
 Cauchy with summable rates, the FH renormalization lattice-derived
 via Barnes~$G$ at $8.8\times10^{-7}$, the RP cone stable) --- the
 majorant lemma (L1)--(L3) is named with constants;
-\texttt{GATE.QGEO} does not move.  \texttt{PRIME.Z1.OPERATOR.01}
+\texttt{GATE.QGEO} does not move.  [Dated note (2026-08-05): after
+the (L1) sector lemma
+(\veri{v745\_qgeo\_car\_l1\_sector\_lemma.py}), its residue (a) is
+now \emph{fully closed} in the corrected $(1+\ln M)$ form
+(\veri{v778\_qgeo\_gridsup\_logsum.py}, $19/19+19/19$): the
+literal \texttt{v715} clause ``one $B(\varepsilon)$ for all grid
+refinements'' is false at $r_1=1$ and repaired to
+$\|D_N^{(M)}\|_1\le[B_0+(J/2)\ln(M{+}3)]/N$, certified by the grid
+Fourier log-sum theorem with explicit constants; residues (b) and
+(c) stay open, and \texttt{GATE.QGEO} still does not move.]
+\texttt{PRIME.Z1.OPERATOR.01}
 stays formally \emph{open}: the continuum theorems are missing.
 
 \subsection{The moonshot arc: the Hilbert--P\'olya candidate,
@@ -12396,6 +12406,31 @@ $\bar u$-invariant spread of the $56$ (incidence identically $1$ on
 the root level): the v737 kill is explained, not revised --- the
 $\sigma$ packets remain a non-spread.
 
+\emph{The Arf compiler round (2026-08-05, three modules).}  The
+code layer now carries its canonical quadratic refinement: of the
+exactly $16$ refinements of $\bar h$ the frozen selector picks a
+unique $q^{*}$, the parity lift $\iota\colon V\cong C_{\rm even}(5)$
+carries $\beta=\bar h$ exactly, and $\mathrm{Stab}(q^{*})\cong S_5$
+makes $16=1+\bar 5+10$ an \emph{Arf geometry} --- $K_6$ duads,
+$B=I+A_{KG(6,2)}$ with exact ovoid eigenvectors, the hypercharge
+table $X=(-2,-2,-2,3,3)$ and the master-moment chain
+$120/40/41/240/248$
+(\veri{v774\_arf\_spinor\_compiler.py}, $46/46$,
+\textsc{arf-spinor-exact}; Lean companion
+\texttt{ArfSpinorCompiler.lean}, $23$ theorems).  The preregistered
+physical kill \emph{fired}: no $D_5{\oplus}A_3$/$SU(5)$ convention
+makes even one full set of $15$ classes pure --- the
+code$\to$matter reading, including the ``empty mailbox $=$
+right-handed neutrino'' reading, must not enter any main claim
+(\veri{v775\_gaussian\_class\_d5\_purity.py}, $18/18$,
+\textsc{rootclass-mixed}).  And the non-circular selection chain
+exists: boundary $\to$ code $\to E_8\to\mathbb F_2^4\to$ five
+slots with $\gcar=5$ as \emph{output} (census
+$135\to30\to14\to2\to1$; one deck-invariant $\Z_2$ flag bit;
+residuals R1--R3 typed; no P2-removal claim)
+(\veri{v776\_boundary\_hamming\_uniqueness.py}, $31/31$,
+\textsc{boundary-code-unique}).
+
 \emph{The polarity, the two-step, the recursion, the extension
 (four more wins).}  The $15$ ramified Hecke hyperplanes are
 \emph{exactly} the $\bar h$-orthogonal spaces, via the canonical
@@ -12745,6 +12780,58 @@ the domain-preserving cell transport (the dated sharpening note in
 the contracts document).  No marker moves; \textbf{no statement
 about the Riemann Hypothesis is made}.
 
+\subsection{The sharpened-Z1 trilogy: compactness carried,
+selection open}\label{sec:z1-trilogy}
+
+The handover is executed the next day as one module from three
+preregistered probes
+(\veri{v780\_z1\_compactness\_trilogy.py}; gates $3/4+1/4+$ legs
+$3/6$ with \emph{exactly} the preregistered fails;
+guards$+$controls $20/20+23/23+23/23$).  \emph{The gate}: the N2
+GNS/Jacobi truncation family --- whose source identification is
+now explicit: the closed Gram route's window operator \emph{is}
+the Toeplitz Gram of the N2 unified Weil measure --- carries three
+of the four measured handover signatures natively in its
+self-adjoint frame: edge collisions at the source depth (min
+boundary-pair gap $0.0032$ vs the source's $0.0039$), the ram-odd
+contact direction in its threshold band ($\cos$ up to $0.9971$,
+$5/5$ on the last five rungs), and settled positive couplings
+($14/14$ type P) --- but \emph{not} the widening cadence: its edge
+census is regular quadrature filling ($\Delta X\approx0.4485$, the
+free-Jacobi type), so the cell structure must be \emph{imported}
+as boundary data.  \emph{The import}: the finite boundary triple
+($A=2-J_K$ bulk, imported Gram near-kernel band) is \emph{exactly}
+Herglotz through all typed transitions ($\min\operatorname{eig}
+\operatorname{Im}H=+0.216$) --- the frame survives --- but the
+whitened $K=M/2$ import dies with the root cause measured: the
+Gram near-kernel packets are delocalized, cell-mass exactly
+$0.500$ beyond the half-window on every gate rung, so the polar
+whitening turns truncation loss into quasi-generic boundary noise
+(delivery $5.88$; still arithmetic-specific: $5.9$ vs GOE $13.0$
+vs random boundary $132.5$; the full-depth GNS frame is provably
+out of reach by deepening --- $e^{27.75}$ atoms).  \emph{The
+yield}: with the \emph{raw} $\mu$-weighted import (no whitening)
+the variable-edge Herglotz family is \emph{bounded} (grid-sup
+ratio $0.936$, falling) and \emph{equicontinuous} (derivative
+ratio $0.807$) through all three typed transitions; the entry mass
+is \emph{summable} ($c_{\rm mass}$ max $0.032\ll1$ --- the kill
+criterion is far away), and the entry residues are predominantly
+\emph{rank-one} (ratios $0.796/0.869/0.804$ --- the $0.997$
+contact prediction confirmed in the raw metric); the delivery
+metric loses its discriminating power in this form (typed
+\textsc{unresolved-by-this-metric}, disclosed), and the moment
+functionals do not settle (median tail oscillation $22.1$).
+\emph{The measured unification}: the weak-$*$ cluster demand of
+\texttt{PRIME.KMS.INDUCTIVE\_STATE.02} and the operator demand of
+\texttt{PRIME.Z1.OPERATOR.01} split \emph{exactly} along the
+measured line --- the cluster-\emph{existence} half is carried
+(Helly/Montel at finite level), and the \emph{selection} half is
+the one shared open object: state selection \emph{equals}
+import-faithful boundary coupling.  The merged target is named
+\textsc{z1-compactness} (both contract rows carry the dated
+cross-referenced note); nothing beyond $X=20.3125$ is claimed, and
+\textbf{no statement about the Riemann Hypothesis is made}.
+
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
 The P4 main strike (\veri{v712\_rank3\_transverse\_deck.py}, $5/5$)
@@ -12775,7 +12862,12 @@ statement, and names the extraction candidates --- the
 community-checkable pieces. The open research contracts of the prime
 line (\texttt{PRIME.Z1.OPERATOR.01} --- sharpened 2026-08-05 with the
 measured qf handover constraints after the closure of
-\texttt{PRIME.GRAM.DIAGONAL.01} (Section~\ref{sec:qf-offensive}) ---
+\texttt{PRIME.GRAM.DIAGONAL.01} (Section~\ref{sec:qf-offensive}),
+and executed the same day as the \texttt{v780} trilogy
+(Section~\ref{sec:z1-trilogy}): the compactness half is measured
+carried, the selection half is the one shared open object with
+\texttt{PRIME.KMS.INDUCTIVE\_STATE.02}, merged target
+\textsc{z1-compactness} ---
 and \texttt{PRIME.Z1.MOONSHOT.01})
 stay open, exactly as stated in place. The final fence at the end of
 the section governs the entire document: no claim of progress on the

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`766` registered scripts · `849` ledger claims · `10` clusters.
+`773` registered scripts · `855` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (286 scripts)
+### `core` — Compiler core & the E₈ glue  (293 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -527,7 +527,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: PRIME.PD.PERSISTENCE.01, v563 · cited: 3 e8 audit bootstrap, research contracts
 - **v744_hecke_channel_columns** [-] `PRIME.CHANNELSOS.01` — **HECKE-SOS-CHANNELS-PARTIAL: keine kanonische Spalten-Wahl faktorisiert das Fenster-Gram (cos-Hälfte indefinit; PSD-B*B-Vervollständigung verbraucht 5–6 Größenordnungen über der W
   - deps: v738_hecke_mod_ramified, v742_channel_interference, FTR.IHARA.01, v738, v742, v563 · cited: 3 e8 audit bootstrap
-- **v745_qgeo_car_l1_sector_lemma** [E] `QGEO.CARL1.01` — **L1-SECTOR-PROVEN-MODULO-ELEMENTARY: ‖K_2N − K_N‖_{S1} ≤ B_q(ε)/N für alle 6 undressed Sektoren auf dem festen Gitter beweisnah — die Besetzungs-Bogen-Modensummen sind EXAKTE geom
+- **v745_qgeo_car_l1_sector_lemma** [E/O] `QGEO.CARL1.01` — **L1-SECTOR-PROVEN-MODULO-ELEMENTARY: ‖K_2N − K_N‖_{S1} ≤ B_q(ε)/N für alle 6 undressed Sektoren auf dem festen Gitter beweisnah — die Besetzungs-Bogen-Modensummen sind EXAKTE geom
   - deps: v715_qgeo_car_continuum, v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v715 · cited: 3 e8 audit bootstrap, research contracts
 - **v746_phys_gnet_local_functor** [E/C/O] `GNET.LOCALNET.01` — **GNET-LOCAL-FUNCTOR-ALIVE: die Netz-Axiome sind EXAKT (Isotonie, graduierte Lokalität, Uhr-Kovarianz auf dem Quotienten-Kreis); der Watatani-Index der lokalen Fixpunkt-Inklusion i
   - deps: v653_bond_defect, v154_simple_current_theorem, v705_chain_deck_sector, v722 · cited: 2 standard model, 3 e8 audit bootstrap
@@ -583,6 +583,20 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v770_qf_spectral_bundle, v563, v755, v766, v770 · cited: 3 e8 audit bootstrap, research contracts
 - **v773_qf_cell_cocycle** [E] `PRIME.QFCOCYCLE.01` — der geordnete Möbius/Redheffer-Zell-Kozykel auf dem tiefenabhängigen Band d(X), unter den eingefrorenen STAKES (stirbt dieses Modul, schließt die Gram-Route ohne weitere Varianten)
   - deps: v772_qf_feshbach_effective, v770_qf_spectral_bundle, PRIME.GRAM.DIAGONAL.01, PRIME.Z1.OPERATOR.01, v563, v755, v758, v766 · cited: 3 e8 audit bootstrap, research contracts
+- **v774_arf_spinor_compiler** [E/C/X] `ARF.SPINORCOMPILER.01` — **ARF-SPINOR-EXACT (46/46, ~2 s, null Kills, beide Must-fail-Kontrollen feuern): der Paritäts-Lift iota: V ≅ C_even(5) trägt beta = hbar EXAKT in allen 256 Zellen (Crosslink 1); Br
+  - deps: v752_projective_hamming_incidence, v753_ramified_polarity, v2_carrier_pascal, AX.P2.01, v752, v753, v2, v310 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
+- **v775_gaussian_class_d5_purity** [E/C/X] `ARF.ROOTCLASS.01` — **ROOTCLASS-MIXED (18/18, alle 3 Kontrollen feuern; FROZEN_SPEC SHA-256 58d9be9b… gehasht VOR allen Wurzeldaten): KEINE D5⊕A3/SU(5)-Konvention macht auch nur EINEN vollen Satz von 
+  - deps: v774_arf_spinor_compiler, v752_projective_hamming_incidence, v753_ramified_polarity, v752, v1, v47, v310 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
+- **v776_boundary_hamming_uniqueness** [E/O] `ARF.BOUNDARY.CODE.01` — **BOUNDARY-CODE-UNIQUE (31/31): die nicht-zirkuläre Kette Rand -> Code -> E8 -> F2^4 -> 5 Slots SCHLIESST mit g_car = 5 als OUTPUT — Zensus 135 -> 30 -> 14 -> 2 -> 1 ohne Hamming/E
+  - deps: v774_arf_spinor_compiler, AX.P2.01, v689_gaussian_code_bridge, v752_projective_hamming_incidence, v689, v736, v638, v752 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v777_ftransfer_clock_jets** [C/O/X] `FTRANSFER.CLOCKS.01` — **NO-COMMON-CONNECTION + FTRANSFER-FIBERED-CARRIES (24 + 14 Checks, 0 Fails): der präregistrierte K1-Kill EXAKT wie der eingefrorene Prior erwartet (Prereg-YAML 880224f7… byte-veri
+  - deps: v213_ftransfer_functor, v578_native_jets, v632_ftransfer_pgl2, v723_phys_modular_clock, v724_phys_t3b_modular_flows, v578, v632, v723 · cited: 3 e8 audit bootstrap, 4 frontier, research contracts
+- **v778_qgeo_gridsup_logsum** [E/O] `QGEO.GRIDSUP.01` — **GRIDSUP-SPLIT-CLOSED-LOG-LAW + FOURIER-LOGSUM-CLOSED (19/19 + 19/19): der v745-Rest (a) spaltet vierfach — (a1) das Kontinuums-Supremum GESCHLOSSEN (Taylor 5/8 symbolisch + Hüllk
+  - deps: v745_qgeo_car_l1_sector_lemma, v715_qgeo_car_continuum, v745, v715 · cited: 3 e8 audit bootstrap, research contracts
+- **v779_gnet_gns_arf** [E] `GNET.GNSLIMIT.01` — **GNS-PRECURSORS-COHERENT + GNET-ARF-NO-CORRESPONDENCE (27/27 + 27/27): die Haar-Skalierungs-Isometrie intertwinet EXAKT (<= 2.2e-16), die kommutierenden Index-4-Erwartungs-Quadrat
+  - deps: v746_phys_gnet_local_functor, v726_phys_car_pp_index, v125_glue_qsystem, v154_simple_current_theorem, v774_arf_spinor_compiler, v746, v726, v754 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v780_z1_compactness_trilogy** [O] `PRIME.Z1.COMPACTNESS.01` — **Z1-SIGNATURE-PARTIAL + Z1-TRIPLE-PARTIAL + Z1-VAREDGE-PARTIAL (Gates 3/4 + 1/4 + Legs 3/6 mit EXAKT den präregistrierten Fails; Guards+Controls 20/20 + 23/23 + 23/23; ~270 s): di
+  - deps: PRIME.Z1.OPERATOR.01, PRIME.KMS.INDUCTIVE_STATE.02, v773_qf_cell_cocycle, v772_qf_feshbach_effective, v771_qf_representation_census, v770_qf_spectral_bundle, v696, v718 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -873,7 +887,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: FR.DM.01, v25_frontier_conjectures, v185_axion_relic_solver, v185_axion_relic_solver · cited: 4 frontier
 - **v212_leptogenesis_decuple** [C/X] `FR.ETAB.04` — M₁=M_scal φ₀²/A_Λ≈8.65×10⁹ GeV and m̃₁=m₃/A_Λ≈5 meV. A cleaner [C] route than v184's M₁=M_R φ₀⁴ (which only relocated the free input to the un-pinned seesaw M_R). [I] shared decupl
   - deps: FR.ETAB.01, v169_etaB_boltzmann_interface, v184_etaB_anchored_boltzmann, v169_etaB_boltzmann_interface · cited: 4 frontier
-- **v213_ftransfer_functor** [E/C/O] `CONTRACT.F.01` — the F_transfer FUNCTOR CONTRACT (CONTRACT.F.01): the four frontier transfers are ONE typed functor F_transfer = F_observable∘F_threshold∘F_RG with four structural axioms, each inst
+- **v213_ftransfer_functor** [E/C/O/X] `CONTRACT.F.01` — the F_transfer FUNCTOR CONTRACT (CONTRACT.F.01): the four frontier transfers are ONE typed functor F_transfer = F_observable∘F_threshold∘F_RG with four structural axioms, each inst
   - deps: v82_koide_attractor_splitting, v212_leptogenesis_decuple, v211_axion_spine_angle, FR.MPME.01, v187_ftransfer_laws · cited: 4 frontier, research contracts, safeguards
 - **v234_seam_holomorphy_selection** [E/O] `GATE.HOLO.01` — The Seam-Holomorphy selection certificate: the entire structural residual is ONE condition with THREE equivalent faces, all forcing E8. THE CONDITION: 'the seam carries no nontrivi
   - deps: v1_e8_glue, v219_icosahedral_mckay, v232_e8_kleinian_seam, v89_carrier_index_lemma · cited: introduction, research contracts
@@ -1603,16 +1617,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v761_atom_pole_abel** — `PRIME.ABELPAIR.01`
-- **v762_dense_weil_core** — `PRIME.DENSECORE.01`
-- **v763_yosida_handoff** — `PRIME.YOSIDAQF.01`
-- **v765_handoff_redteam** — `PRIME.HANDOFFREDTEAM.01`
-- **v766_handoff_bulk** — `PRIME.HANDOFFBULK.01`
-- **v767_handoff_frequency_gram** — `PRIME.HANDOFFGRAM.01`
-- **v768_handoff_tail_weil** — `PRIME.HANDOFFTAIL.01`
 - **v769_qf_contract_necessity** — `PRIME.QFGAUGE.01`
 - **v770_qf_spectral_bundle** — `PRIME.QFBUNDLE.01`
 - **v771_qf_representation_census** — `PRIME.QFCENSUS.01`
 - **v772_qf_feshbach_effective** — `PRIME.QFFESHBACH.01`
 - **v773_qf_cell_cocycle** — `PRIME.QFCOCYCLE.01`
+- **v774_arf_spinor_compiler** — `ARF.SPINORCOMPILER.01`
+- **v775_gaussian_class_d5_purity** — `ARF.ROOTCLASS.01`
+- **v776_boundary_hamming_uniqueness** — `ARF.BOUNDARY.CODE.01`
+- **v777_ftransfer_clock_jets** — `FTRANSFER.CLOCKS.01`
+- **v778_qgeo_gridsup_logsum** — `QGEO.GRIDSUP.01`
+- **v779_gnet_gns_arf** — `GNET.GNSLIMIT.01`
+- **v780_z1_compactness_trilogy** — `PRIME.Z1.COMPACTNESS.01`
 
