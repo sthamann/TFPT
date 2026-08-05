@@ -172,7 +172,9 @@ export function IharaBlueprintViz() {
         montage and moonshot arc now record a <em>measured</em> truncation
         candidate (glue, state, spectrum, trace formula) — measurements, not
         theorems; the continuum Sätze stay named open and the contract stays
-        open. No RH statement.
+        open (sharpened 2026-08-05 after the diagonal-Gram closure: the
+        bulk + boundary/threshold form with the measured qf handover
+        constraints). No RH statement.
       </p>
     </div>
   );

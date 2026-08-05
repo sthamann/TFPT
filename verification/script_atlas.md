@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`745` registered scripts · `827` ledger claims · `10` clusters.
+`766` registered scripts · `849` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (265 scripts)
+### `core` — Compiler core & the E₈ glue  (286 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -541,6 +541,48 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: PRIME.PD.PERSISTENCE.01, PRIME.FALSIFIER.01, v718, v696 · cited: 3 e8 audit bootstrap, research contracts
 - **v751_ward_monotone** [E] `PRIME.WARDMONO.01` — **WARD-MONOTONE-MIXED: das Komponenten-Running ist deterministisch in RICHTUNG (100%, parameterfreie ζ/L-Konstanten); die Drift-Anatomie EXAKT — die ∓u/2-Drifts kommen aus p² ≡ 1 m
   - deps: v742_channel_interference, PRIME.PD.PERSISTENCE.01, v742, v563, v692 · cited: 3 e8 audit bootstrap, research contracts
+- **v752_projective_hamming_incidence** [E/X] `E8.PROJHAMMING.01` — der symplektische F2^4 des unimodularen hermiteschen E8-Gitters, und die v737-Auflösung — **PROJ-HAMMING-EXACT: h = H/4 ist Z[i]-wertig mit hermitescher Gram-Determinante 1 (Z[i]-U
+  - deps: v689_gaussian_code_bridge, v736_orbit_packet, v737_seam48_intertwiner, v738_hecke_mod_ramified, v689, v634, v722, v736 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v753_ramified_polarity** [E] `PRIME.HECKEPOLARITY.01` — die 15 ramifizierten Hecke-Hyperebenen sind EXAKT die h̄-Orthogonalräume — **POLARITY-MATCH: die 15 Norm-2-Hecke-Untermoduln (v738) = exakt die y-Orthogonalräume der v752-Geometrie
+  - deps: v752_projective_hamming_incidence, v738_hecke_mod_ramified, v738, v752 · cited: 3 e8 audit bootstrap, research contracts
+- **v754_ramodd_twostep** [E] `PRIME.HECKETWOSTEP.01` — der n→4n-Down-Up-Pass IST exakt K² — **TWOSTEP-EXACT: der normalisierte Zwei-Schritt-Transport der realen ramifizierten ungeraden Schichten (n = 2, 8, 32, 128, …) = EXAKT K² = (4/4
+  - deps: v752_projective_hamming_incidence, v738_hecke_mod_ramified, v753_ramified_polarity, v738, v752, v753 · cited: 3 e8 audit bootstrap, research contracts
+- **v755_simpler_schur_recursion** [E] `PRIME.SCHURREC.01` — der erste RH-Angriff, der exakt zur korrekt formulierten Wand passt — **SCHUR-RECURSION-ALIVE: S_k ⪰ 0 GEMESSEN auf allen 8 ram-odd-Stufen der Turm-Nestung (n_k = 2^{2k+1}; λ_min f
+  - deps: PRIME.PD.PERSISTENCE.01, v749_simpler_tower, v754_ramodd_twostep, v749, v754, v563, v716 · cited: 3 e8 audit bootstrap, research contracts
+- **v756_kms_incidence_stinespring** [E] `PRIME.KMSSTINESPRING.01` — Schritt 3 des Mastervertrags auf der ramifizierten Schicht GELÖST — **KMS-INCIDENCE-CP-COVARIANT: 105 explizite Kraus-Terme realisieren K = B/7 als vollständig positive unitale Abb
+  - deps: PRIME.KMS.INDUCTIVE_STATE.02, v752_projective_hamming_incidence, v754_ramodd_twostep, v738, v752, v754 · cited: 3 e8 audit bootstrap, research contracts
+- **v757_fano_disc7_bridge** [E] `QGEO.FANODISC7.01` — die Dreizyklus-Hälfte real, die Paritäts-Hälfte stirbt arithmetisch — **FANO-DISC7-DECORATIVE (Bruch exakt bei Bedingung 2): das NS/R-Paritäts-Bit hat KEINEN arithmetischen Träger 
+  - deps: v752_projective_hamming_incidence, v738_hecke_mod_ramified, QGEO.CAR.01, v533, v571, v632, v722, v738 · cited: 3 e8 audit bootstrap
+- **v758_simpler_certificate** [E] `PRIME.CERTROOT.01` — das montierte Zertifikat [Kontinuums-Wurzel ⊕ Kraus] ist NICHT montierbar: die Mauer IST der fehlende linke Faktor — **CERT-CONTINUUM-ROOT-DEAD: der arch+pol-Block ist auf KEINER S
+  - deps: v755_simpler_schur_recursion, v754_ramodd_twostep, v756_kms_incidence_stinespring, PRIME.PD.PERSISTENCE.01, v755, v754, v756, v706 · cited: 3 e8 audit bootstrap, research contracts
+- **v759_handoff_fixed_window_resolution** [E] `PRIME.HANDOFFRES.01` — festes Fenster, wachsende Frequenzauflösung — **RESOLUTION-BOUNDARY (Fall B auf allen drei Fenstern): E_total ist q-INVARIANT unter Nf = q(2M+1), q ∈ {1,2,4,8}, auf ~1e-13 (max |dE
+  - deps: v767_handoff_frequency_gram, v768_handoff_tail_weil, v716, v767 · cited: 3 e8 audit bootstrap, research contracts
+- **v760_antialias_exact** [E] `PRIME.ANTIALIAS.01` — **ANTIALIAS-CORRECTED: exakte Identitäten für BELIEBIGE M-Zell-Koeffizienten (Parseval ≤ 2.0e-14, alle 2M−1 Momente ≤ 3.5e-13, Gram-Identität ≤ 5.9e-13, Gram-Invarianz über {2M−1, 
+  - deps: v767_handoff_frequency_gram, v759_handoff_fixed_window_resolution, v716, v767 · cited: 3 e8 audit bootstrap, research contracts
+- **v761_atom_pole_abel** [E/C] `PRIME.ABELPAIR.01` — die gepaarte Atom-Pol-Abel/Stieltjes-Transformation mit UNBEDINGTER eta-Schranke, EIN Modul aus zwei Probes — **ABEL-PAIRED-BOUND (kombinierte Adjudikation): Stieltjes/Abel-Split e
+  - deps: v759_handoff_fixed_window_resolution, v767_handoff_frequency_gram, W1.SUZUKI (v630, v631, v640, v642, v643), v716 · cited: 3 e8 audit bootstrap, research contracts
+- **v762_dense_weil_core** [E] `PRIME.DENSECORE.01` — **DENSE-CORE-CANONICAL: Zulässigkeit pro Klasse VERORTET (v677 S2(i)/IK Thm 5.12: Hüte direkt zulässig, Steigung −1.854; die nackte Box VERFEHLT das r^−2-Kriterium (−0.942, benannt
+  - deps: PRIME.W3.STRUCTURE (v677), PRIME.TOWERNEST.01 (v749), v563, v767 · cited: 3 e8 audit bootstrap, research contracts
+- **v763_yosida_handoff** [E/O] `PRIME.YOSIDAQF.01` — **YOSIDA-PARTIAL / QF-DEAD: Q1 — die beschränkte Yosida-Formulierung trägt die Handoff-Raten (|b_Y − b_G| ≤ 1e-13, Sandwich 0 ≤ diag ≤ 1 auf allen 360 Auswertungen, NIRGENDS eine 1
+  - deps: v766_handoff_bulk, v768_handoff_tail_weil, PRIME.PD.PERSISTENCE.01, v563, v755, v766, v768 · cited: 3 e8 audit bootstrap, research contracts
+- **v765_handoff_redteam** [E] `PRIME.HANDOFFREDTEAM.01` — **REDTEAM-GREEN-COMBINED: Firewall SAUBER (null Blacklist-Treffer über alle 21 Quellpfad-Funktionen — kein Eigen/Cholesky/Nullstellen/Prim-Kanal vom Target in die Quelle); Baseline
+  - deps: v767_handoff_frequency_gram, v768_handoff_tail_weil, v716, v767 · cited: 3 e8 audit bootstrap, research contracts
+- **v766_handoff_bulk** [E] `PRIME.HANDOFFBULK.01` — der lokale Bulk-Kovarianz-Entscheider — **HANDOFF-BULK-CONVERGES: die eps-regulierte Resolvente G^eps = (A_X + eps I)^{-1} ist die zulässige Operator-System-Auswertung; zirkelfreie
+  - deps: PRIME.PD.PERSISTENCE.01, v749_simpler_tower, v755_simpler_schur_recursion, v563, v749, v755 · cited: 3 e8 audit bootstrap, research contracts
+- **v767_handoff_frequency_gram** [E] `PRIME.HANDOFFGRAM.01` — das wachsende Frequenz-PSD-Quell-Gram — **HANDOFF-GRAM-CONVERGES: Kandidat A (Review-Zähler) verfehlte EHRLICH das eingefrorene Raten-Gate (Zellzahl unter dem Anti-Alias-Grad, Stei
+  - deps: PRIME.KMS.INDUCTIVE_STATE.02, E8.MOONSHOT.GLUE (v716), v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v768_handoff_tail_weil** [E] `PRIME.HANDOFFTAIL.01` — **TAIL-WEIL-PARTIAL + COMPAT-EPS3-CONVERGES: der Quadratur-Tail TERMINIERT ALGEBRAISCH (Alias-Zensus (M−1)+Spread ≤ 2M auf allen 5 Fenstern; max Tail 2.4e-13 — es gibt KEINEN Quadr
+  - deps: v766_handoff_bulk, v767_handoff_frequency_gram, v749_simpler_tower, v563, v716, v749, v755, v766 · cited: 3 e8 audit bootstrap, research contracts
+- **v769_qf_contract_necessity** [-] `PRIME.QFGAUGE.01` — **QF-GAUGE + GATE3PRIME-DEAD: Gate 3s Voll-Leiter-Cauchy-Forderung an q_f war beweisbar STÄRKER als der Diagonal-Vertrag braucht (Epsilon-Netz-Teilfolge, Dichte 0.144, macht alle 1
+  - deps: PRIME.GRAM.DIAGONAL.01, v763_yosida_handoff, PRIME.KMS.INDUCTIVE_STATE.02, v563, v755, v763, v766 · cited: 3 e8 audit bootstrap, research contracts
+- **v770_qf_spectral_bundle** [-] `PRIME.QFBUNDLE.01` — **QF-BUNDLE-PARTIAL + QF-SETTLES-POSITIVE: der Kato/Polar-Transport des Rang-6-Fastkerns ist WOHLDEFINIERT mit breiten Margen (Rang 6 stabil auf 888..972, Lücke 6/7 = 0.34..0.56, W
+  - deps: v769_qf_contract_necessity, v763_yosida_handoff, v563, v755, v766 · cited: 3 e8 audit bootstrap, research contracts
+- **v771_qf_representation_census** [E/O] `PRIME.QFCENSUS.01` — ist E_qf der kanonische E8-Defektraum E_7 (+) E_{-2} (6 = 1 + 5)? — **QF-REPRESENTATION-OPEN: die Label-Seite ist SCHARF (B B^T = 4I + 3J exakt, Spektrum (1, 9, 5); von 64 alternie
+  - deps: v752_projective_hamming_incidence, v753_ramified_polarity, v738_hecke_mod_ramified, v756_kms_incidence_stinespring, v763_yosida_handoff, v563, v716, v738 · cited: 3 e8 audit bootstrap, research contracts
+- **v772_qf_feshbach_effective** [E] `PRIME.QFFESHBACH.01` — **FESHBACH-PARTIAL + EDGE-KEEPS-MOVING: die d = 6-Reduktion ist EXAKT (Rekonstruktion 8.8e-13 gegen unabhängige dichte Löser; Matrix-Herglotz zertifiziert; Band separiert 0.1008) —
+  - deps: v770_qf_spectral_bundle, v563, v755, v766, v770 · cited: 3 e8 audit bootstrap, research contracts
+- **v773_qf_cell_cocycle** [E] `PRIME.QFCOCYCLE.01` — der geordnete Möbius/Redheffer-Zell-Kozykel auf dem tiefenabhängigen Band d(X), unter den eingefrorenen STAKES (stirbt dieses Modul, schließt die Gram-Route ohne weitere Varianten)
+  - deps: v772_qf_feshbach_effective, v770_qf_spectral_bundle, PRIME.GRAM.DIAGONAL.01, PRIME.Z1.OPERATOR.01, v563, v755, v758, v766 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1555,22 +1597,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×91, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
+**Most-depended-on claims** (the load-bearing roots): `v563`×102, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v740_kms_extension_switch** — `PRIME.KMSEXT.01`
-- **v741_kms_toeplitz_semigroup** — `PRIME.KMSTOEPLITZ.01`
-- **v742_channel_interference** — `PRIME.CHANNELINT.01`
-- **v743_schur_cone_recursion** — `PRIME.SCHURCONE.01`
-- **v744_hecke_channel_columns** — `PRIME.CHANNELSOS.01`
-- **v745_qgeo_car_l1_sector_lemma** — `QGEO.CARL1.01`
-- **v746_phys_gnet_local_functor** — `GNET.LOCALNET.01`
-- **v747_automaton_multiway_tower** — `E8.MULTIWAY.01`
-- **v748_automaton_sigma_orbifold_confluence** — `E8.ORBIFOLDCONF.01`
-- **v749_simpler_tower** — `PRIME.TOWERNEST.01`
-- **v750_simpler_gluing** — `PRIME.GLUEDETECT.01`
-- **v751_ward_monotone** — `PRIME.WARDMONO.01`
+- **v761_atom_pole_abel** — `PRIME.ABELPAIR.01`
+- **v762_dense_weil_core** — `PRIME.DENSECORE.01`
+- **v763_yosida_handoff** — `PRIME.YOSIDAQF.01`
+- **v765_handoff_redteam** — `PRIME.HANDOFFREDTEAM.01`
+- **v766_handoff_bulk** — `PRIME.HANDOFFBULK.01`
+- **v767_handoff_frequency_gram** — `PRIME.HANDOFFGRAM.01`
+- **v768_handoff_tail_weil** — `PRIME.HANDOFFTAIL.01`
+- **v769_qf_contract_necessity** — `PRIME.QFGAUGE.01`
+- **v770_qf_spectral_bundle** — `PRIME.QFBUNDLE.01`
+- **v771_qf_representation_census** — `PRIME.QFCENSUS.01`
+- **v772_qf_feshbach_effective** — `PRIME.QFFESHBACH.01`
+- **v773_qf_cell_cocycle** — `PRIME.QFCOCYCLE.01`
 

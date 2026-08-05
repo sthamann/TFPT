@@ -9,7 +9,8 @@ export type PaperStatus =
   | "redteam"
   | "horizon"
   | "contracts"
-  | "safeguards";
+  | "safeguards"
+  | "note";
 
 export interface Paper {
   id: string;
@@ -117,6 +118,13 @@ export const STATUS_META: Record<
     bg: "bg-emerald-500/10",
     ring: "ring-emerald-500/30",
     gradient: "from-emerald-500 to-teal-500",
+  },
+  note: {
+    label: "Working note",
+    color: "text-sky-300",
+    bg: "bg-sky-500/10",
+    ring: "ring-sky-500/30",
+    gradient: "from-sky-500 to-indigo-500",
   },
 };
 
@@ -1223,6 +1231,10 @@ export const papers: Paper[] = [
           "\\lambda_2 = (2/3)^6 = 64/729 \\ (\\mu_4\\text{-deck transfer eigenvalue})",
         ],
       },
+      {
+        title: "The prime-line contracts: the diagonal-Gram closure and the sharpened Z1 target",
+        body: "The prime/zeta line of the contracts document carries its own dated contract chain. 2026-08-05: the diagonal Gram closure theorem PRIME.GRAM.DIAGONAL.01 (registered 2026-08-04) is CLOSED per its own frozen stakes — an honest negative adjudication, not a marker upgrade. The final cascade: Gates 1/2/4 positive from the diagonal gram round (v759–v762, v765); Gate 3 dead at the corner level (v769: q_f is representation gauge, but the corner increments of the contract's own objects rise beyond X ~ 13 at every gated eps below 1e-1 on the 1.6e7 comb); Gate 5/v764 never executed; the qf offensive's own line — settled-positive levels (v770), no rank-6 representation lift (v771), no fixed-d object at a moving spectral edge (v772: avoided crossing 0.0039, widening entry cadence), cell cocycle domain-only (v773: structure without limit). What survives is typed as theorem-shaped facts: the exact anti-alias theorem (v760), the unconditional paired Abel bound (v761), the canonical dense family (v762), the Kato bundle frame and the settled coupling levels (v770), the Herglotz-certified exact Feshbach reduction (v772), and the domain-preserving Möbius/Redheffer cell cocycle through mode entries (v773). No new variants; the ten-item stop-list stays binding. The handover: PRIME.Z1.OPERATOR.01 stays OPEN [O] and is SHARPENED — construct a self-adjoint geometric bulk operator with a canonical finite-dimensional boundary/threshold structure whose Weyl M-function delivers the qf block and whose relative trace formula reproduces the full Weil formula, constrained by the measured mode-entry cadence (888/992/1108/1276, ΔX widening 1.625 → 2.625, avoided crossing 0.0039), the ram-odd contact direction (cos 0.997), the settled coupling levels (R2 0.225–0.358, R1 0.008–0.079), and the cell-ordered domain-preserving prime transport. Kill criteria stay active (zeros or an RH-equivalent norm assumption = renaming; cadence/level contradictions = dead on arrival). No RH claim.",
+      },
     ],
     keyFormulas: [
       {
@@ -1345,6 +1357,178 @@ export const papers: Paper[] = [
       { label: "Counting floor", value: "≈4.40σ", description: "Assumption-minimal, no subjective probability: 1 of 94,500 complexity-matched α variants hits CODATA (v436); a monotone concession ladder holds the verdict at the most adversarial rung" },
       { label: "Independent paths", value: "2", description: "Wolfram (116+470) + Lean 4 kernel proof re-derive the exact core" },
       { label: "Worst case shown", value: "θ₁₃ +2.0σ", description: "The most-tensioned prediction is pre-registered, not hidden (FLAV.TH13.PRESSURE.01)" },
+    ],
+  },
+  {
+    id: "10",
+    number: 10,
+    label: "Note N1",
+    slug: "e8-gaussian-code",
+    title: "The Gaussian Code Bridge: E₈ over ℤ[i], the Extended Hamming Code, and a Four-Bit Information Layer",
+    subtitle: "Construction A, the μ₄ complex structure, and the code that builds the lattice returning as its message space — exact algebra, machine-certified",
+    abstract:
+      "Build the E₈ lattice by Construction A over the extended Hamming code [8,4,4], placed equivariantly with respect to four fixed coordinate pairs, and let J be the complex structure that rotates each pair (J² = −1, μ₄ = ⟨J⟩). Then L becomes a unimodular Hermitian ℤ[i]-lattice of rank 4, and reduction modulo the ramified Gaussian prime 1+i produces a canonical four-bit quotient L/(1+i)L ≅ F₂⁴. The note proves: the 240 roots avoid the zero class — by the two-line norm argument |(1+J)x|² = 2|x|² against the doubly-even minimum 4 — and distribute exactly 15×16 over the fifteen nonzero classes, each class a union of exactly 4 of the 60 Gaussian root lines. On this quotient the pair 3-cycle σ acts as a family 3-cycle with a fixed anchor bit — the information-bit action of the Reed–Muller code RM(1,3) — with residual identification gauge of order exactly 18, and the sixteen coordinate roots ±2eᵢ form precisely one class, the σ-fixed label F₁+F₂+F₃. The classes cut across the Construction-A codeword fibers: the code that builds the lattice returns, after Gaussian reduction, as its message space. A quartic companion theorem types the invariant-theoretic shadow: the restrictions of the Weyl-invariant root power sums F₈, F₁₂, F₂₀, F₂₄ to ker(J−i) are a system of basic invariants of the complex reflection group G₃₁ (Chevalley), while the vanishing of the complementary degrees {2,14,18,30} is proved but honestly typed as the trivial μ₄-orbit factor, with no G₃₁ content. Every statement is certified by two exact-arithmetic probes (26/26 and 22/22 checks, no floats) and 65 kernel-checked Lean 4 theorems, with must-fail controls. No claim beyond the stated algebra is made.",
+    status: "note",
+    statusLabel: "Working note",
+    pdf: "/papers/note_e8_gaussian_code.pdf",
+    inputs: [
+      "The extended Hamming code [8,4,4], the four μ₄ coordinate pairs, and the Construction-A lattice L = A(C*) ⊂ ℤ⁸ — pure exact algebra, no physical anchor.",
+    ],
+    contribution: [
+      "The equivariant placement census: of the 30 placements of the [8,4,4] code in F₂⁸, exactly two are invariant under both the in-pair swap π_J and the pair 3-cycle π_σ (machine census, probe check I0.1).",
+      "The four-bit quotient: L/(1+i)L ≅ F₂⁴ with the 240 roots avoiding the zero class and distributing exactly 15×16 over the fifteen nonzero classes (each class = 4 of the 60 Gaussian root lines).",
+      "The information layer: σ acts on the quotient as the information-bit action of RM(1,3) — a family 3-cycle with a fixed anchor bit, residual identification gauge of order exactly 18; the sixteen coordinate roots form the one σ-fixed class F₁+F₂+F₃.",
+      "The quartic companion: F₈, F₁₂, F₂₀, F₂₄ restricted to ker(J−i) are basic invariants of G₃₁; the vanishing of degrees {2,14,18,30} is the trivial μ₄-orbit factor 1+(−i)^d+(−1)^d+i^d = 0 — proved AND honestly typed as carrying no G₃₁ content.",
+      "Machine certification: gaussian_code_bridge_probe.py (26/26) and quartic_half_probe.py (22/22, exact arithmetic, no floats), promoted as v689/v690, plus TfptCarrier/GaussianCodeBridge.lean and TfptCarrier/QuarticHalf.lean (44+21 = 65 kernel-checked theorems, no sorry, no native_decide).",
+    ],
+    notClaimed: [
+      "No claim beyond the stated algebra is made: this is an exact lattice/coding-theory statement about E₈ over ℤ[i], not a new physical readout, and it moves no status marker.",
+    ],
+    falsification: [
+      "Must-fail controls are part of the result: non-equivariant placements, non-integral complex structures, and ℤ[i]⁴ each kill or trivialize the structure exactly as demanded; any of the 65 Lean theorems failing to kernel-check falsifies the note.",
+    ],
+    sections: [
+      {
+        title: "The three objects",
+        body: "The code: the extended Hamming code [8,4,4] — the unique doubly-even self-dual binary code of length 8, permutation equivalent to RM(1,3) — admits 8!/1344 = 30 placements in F₂⁸, of which exactly two are invariant under both the in-pair swap π_J = (01)(23)(45)(67) and the pair 3-cycle π_σ. The lattice: L = A(C*) = {x ∈ ℤ⁸ : x mod 2 ∈ C*} with [ℤ⁸:L] = 16 and minimum 4 (doubly even), attained by exactly 240 vectors — E₈. The complex structure: J rotates each pair, J² = −1, making L a unimodular Hermitian ℤ[i]-lattice of rank 4.",
+        formulas: [
+          "L = A(C^*) = \\{x \\in \\mathbb{Z}^8 : x \\bmod 2 \\in C^*\\}, \\qquad [\\mathbb{Z}^8 : L] = 2^4 = 16",
+          "\\langle x,x\\rangle \\equiv \\mathrm{wt}(c) \\equiv 0 \\pmod 4",
+        ],
+      },
+      {
+        title: "The four-bit quotient",
+        body: "Reduction modulo the ramified Gaussian prime 1+i gives L/(1+i)L ≅ F₂⁴. The 240 roots avoid the zero class by the two-line norm argument |(1+J)x|² = 2|x|² against the doubly-even minimum 4, and distribute exactly 15×16 over the fifteen nonzero classes — each class a union of exactly 4 of the 60 Gaussian root lines.",
+        formulas: [
+          "L/(1+i)L \\cong \\mathbb{F}_2^4, \\qquad |(1+J)x|^2 = 2|x|^2",
+          "240 = 15 \\times 16, \\qquad 60 = 240/4 \\ \\text{Gaussian root lines}",
+        ],
+      },
+      {
+        title: "The information layer",
+        body: "On the quotient the pair 3-cycle σ (order 3, commuting with J) acts as a family 3-cycle with a fixed anchor bit — the information-bit action of the Reed–Muller code RM(1,3) — with residual identification gauge of order exactly 18. The sixteen coordinate roots ±2eᵢ form precisely one class, the σ-fixed label F₁+F₂+F₃. The classes cut across the Construction-A codeword fibers: the code that builds the lattice returns, after Gaussian reduction, as its message space.",
+      },
+      {
+        title: "The quartic companion — G₃₁ and the honest typing",
+        body: "The restrictions of the Weyl-invariant root power sums F₈, F₁₂, F₂₀, F₂₄ to the holomorphic eigenspace ker(J−i) are algebraically independent invariants of the complex reflection group G₃₁ and hence, by Chevalley's theorem, a system of basic invariants. The vanishing of the complementary degrees {2,14,18,30} is proved but honestly typed as the trivial μ₄-orbit factor 1+(−i)^d+(−1)^d+i^d = 0 (d ≢ 0 mod 4) — no G₃₁ content.",
+        formulas: [
+          "\\{F_8, F_{12}, F_{20}, F_{24}\\}\\big|_{\\ker(J-i)} \\ \\text{basic invariants of } G_{31}",
+          "1 + (-i)^d + (-1)^d + i^d = 0 \\quad (d \\not\\equiv 0 \\bmod 4)",
+        ],
+      },
+      {
+        title: "Machine verification",
+        body: "Two exact-arithmetic discovery probes (gaussian_code_bridge_probe.py, 26/26 checks; quartic_half_probe.py, 22/22 checks — no floats anywhere) are promoted to the permanent suite as v689/v690, and the Lean 4 modules GaussianCodeBridge.lean and QuarticHalf.lean carry 65 kernel-checked theorems (no sorry, no native_decide). Must-fail controls — non-equivariant placements, non-integral complex structures, ℤ[i]⁴ — kill or trivialize the structure exactly as demanded.",
+      },
+    ],
+    keyFormulas: [
+      {
+        label: "The four-bit quotient",
+        latex: "L/(1+i)L \\cong \\mathbb{F}_2^4",
+        description: "Reduction of the Hermitian ℤ[i]-E₈ at the ramified prime 1+i. [E]",
+      },
+      {
+        label: "Roots avoid zero",
+        latex: "|(1+J)x|^2 = 2|x|^2 \\ \\Rightarrow\\ 240 = 15 \\times 16",
+        description: "Two-line norm argument against the doubly-even minimum 4. [E]",
+      },
+      {
+        label: "Basic invariants",
+        latex: "\\{F_8, F_{12}, F_{20}, F_{24}\\} \\ \\text{basic for } G_{31}",
+        description: "Chevalley on the holomorphic eigenspace; degrees {2,14,18,30} vanish trivially (μ₄-orbit factor). [E]",
+      },
+    ],
+    highlights: [
+      { label: "Probe checks", value: "26/26 + 22/22", description: "Exact arithmetic, no floats — promoted as v689/v690" },
+      { label: "Lean theorems", value: "65", description: "GaussianCodeBridge.lean + QuarticHalf.lean, kernel-checked, no sorry" },
+      { label: "Root distribution", value: "15 × 16", description: "The 240 roots over the fifteen nonzero classes of F₂⁴" },
+      { label: "Message space", value: "RM(1,3)", description: "The code that builds the lattice returns as its message space" },
+      { label: "Equivariant placements", value: "2 of 30", description: "Machine census: exactly two placements invariant under π_J and π_σ" },
+    ],
+  },
+  {
+    id: "11",
+    number: 11,
+    label: "Note N2",
+    slug: "hilbert-polya-truncations",
+    title: "A Computable, Zeta-Free Truncation Family for the Weil Measure: Measurements on a Hilbert–Pólya Candidate",
+    subtitle: "Finite operators from the Gaussian-E₈ Hecke tower that measurably reproduce the Weil measure — with a prediction freeze and an explicit no-proof fence",
+    abstract:
+      "A family of finite, explicitly computable operators — truncations of one glued geometric object built from the Gaussian E₈ lattice — whose spectral data measurably reproduce the Weil measure of prime number theory without ever loading a prime table or a zeta zero. The finite places are the Hecke–commensurability tower of the rank-4 Hermitian unimodular ℤ[i]-lattice: its primitive degrees ARE the Gaussian prime norms, and a circle-free logarithm generator plus conjugation descent produce the atom comb of the Weil measure at deviation 0.0. The archimedean place is a 48-site spin cover lift whose μ₄-fixed heat trace is exactly the density behind Re ψ(1/4 + iτ/2) — the 1/4 is derived, not declared — and the two sides glue with ONE normalization: a free three-scalar fit returns (1,1,1) to below 10⁻¹², and among the dimension-8 unimodular lattices {ℤ⁸, E₈} only the Gaussian E₈ glues. On every truncation the Weil functional is a state (GNS vector state at KMS β = 1); the truncation eigenvalues, frozen by SHA-256 BEFORE any zero is loaded, hit 100% of the first 377 zeta zeros at tolerance 0.25 with ladder rate −1.61, and the matched-node nearest-neighbour statistic is 0.6178 against the zeros' own 0.6189. The finite trace formula is exact Gauss quadrature, and its term dictionary to the classical Weil explicit formula closes block by block at 10⁻¹³–10⁻¹⁶. The note then decomposes what remains: two of the three convergence steps are classical or measured, the node-capture half of the third is proof-near, and the one remaining statement — Weil positivity in the limit — is localized in four machine-verified equivalent languages (Hankel, Levinson, Fejér, Krein–Suzuki), each finitely decidable per window. No-proof fence: this note claims no theorem about the Riemann zeta function and no progress on the Riemann Hypothesis at theorem level.",
+    status: "note",
+    statusLabel: "Working note",
+    pdf: "/papers/note_hilbert_polya_truncations.pdf",
+    inputs: [
+      "The Gaussian E₈ lattice (the rank-4 Hermitian unimodular ℤ[i]-lattice of Note N1) and its Hecke–commensurability tower; the construction path is AST-firewalled against prime tables and zero data.",
+    ],
+    contribution: [
+      "The zeta-free scaffold: finite matrices built from lattice counting and a cover-lift heat trace — the primitive Hecke degrees ARE the Gaussian prime norms, producing the atom comb of the Weil measure at deviation 0.0 [measured].",
+      "The archimedean glue: the 48-site spin cover lift's μ₄-fixed heat trace is exactly the density behind Re ψ(1/4 + iτ/2) — the 1/4 derived, not declared; the free three-scalar fit returns (1,1,1) below 10⁻¹², and among {ℤ⁸, E₈} only the Gaussian E₈ glues [measured].",
+      "The prediction-freeze methodology: truncation eigenvalues frozen by SHA-256 BEFORE any zero is loaded hit 100% of the first 377 zeta zeros at tolerance 0.25 (ladder rate −1.61); matched-node nearest-neighbour statistic 0.6178 vs the zeros' own 0.6189 [measured].",
+      "The exact finite trace formula: Gauss quadrature, with a term dictionary to the classical Weil explicit formula closing block by block at 10⁻¹³–10⁻¹⁶.",
+      "The four-language localization of the remaining statement (Weil positivity in the limit): Hankel, Levinson, Fejér, Krein–Suzuki — machine-verified equivalent, each finitely decidable per window; documented negatives included.",
+    ],
+    notClaimed: [
+      "No-proof fence (stated in the abstract itself): no theorem about the Riemann zeta function and no progress on the Riemann Hypothesis at theorem level — the contributions are the computable zeta-free scaffold, the freeze methodology, the documented negatives, and the localization of the remaining statement.",
+      "Zeta zeros enter the verification modules only as declared comparison targets loaded AFTER the printed SHA-256 freeze; every load-bearing statement carries exactly one claim tag ([proved]/[measured]/[killed]/[declared]/[cited]).",
+    ],
+    falsification: [
+      "The freeze discipline is the kill switch: any construction-path access to prime tables or zero data (AST firewall), any retuning after the SHA-256 freeze, or a frozen truncation missing its declared capture rate falsifies the measurement claims.",
+    ],
+    sections: [
+      {
+        title: "Introduction and claim typing",
+        body: "The Hilbert–Pólya heuristic asks for a self-adjoint operator whose spectrum is the zeta zeros; the obstruction map is classical (Weil, Connes, Meyer, Connes–Consani, Suzuki — positivity carries the full content). This note reports a different kind of object inside that map: a computable, zeta-free truncation family, with systematic measurements of how much of the Hilbert–Pólya picture the family already exhibits at finite size, and machine-checked bookkeeping of exactly what would remain to be proved. Every load-bearing statement carries exactly one tag: [proved], [measured], [killed], [declared], or [cited].",
+      },
+      {
+        title: "The glued object",
+        body: "Finite places: the Hecke–commensurability tower of the rank-4 Hermitian unimodular ℤ[i]-lattice — its primitive degrees are the Gaussian prime norms; a circle-free logarithm generator plus conjugation descent produce the atom comb of the Weil measure at deviation 0.0. Archimedean place: a 48-site spin cover lift whose μ₄-fixed heat trace is exactly the density behind Re ψ(1/4 + iτ/2), the 1/4 derived. The glue: one normalization — the free three-scalar fit returns (1,1,1) to below 10⁻¹², and only the Gaussian E₈ glues among the dimension-8 unimodular lattices.",
+        formulas: [
+          "\\mathrm{Re}\\,\\psi\\!\\left(\\tfrac14 + i\\tau/2\\right) \\ \\text{— the } \\tfrac14 \\text{ derived, not declared}",
+          "(c_1, c_2, c_3)_{\\mathrm{fit}} = (1,1,1) \\ \\text{to} < 10^{-12}",
+        ],
+      },
+      {
+        title: "Measurements under the freeze",
+        body: "On every truncation the Weil functional is a state (GNS vector state at KMS β = 1). The truncation eigenvalues are frozen by SHA-256 before any zero is loaded; they hit 100% of the first 377 zeta zeros at tolerance 0.25 with ladder rate −1.61, and the matched-node nearest-neighbour statistic is 0.6178 against the zeros' own 0.6189. The finite trace formula is exact Gauss quadrature; its term dictionary to the classical Weil explicit formula closes block by block at 10⁻¹³–10⁻¹⁶.",
+        formulas: [
+          "\\text{capture: } 377/377 \\ \\text{at tol } 0.25, \\quad \\text{ladder rate } -1.61",
+          "\\text{NN statistic: } 0.6178 \\ \\text{vs} \\ 0.6189",
+        ],
+      },
+      {
+        title: "The decomposition and the wall in four languages",
+        body: "Two of the three convergence steps are classical or measured (half-plane convergence with an unconditional Chebyshev majorant, boundary exactly at s = 1/2; tightness); the node-capture half of the third is proof-near. The one remaining statement — Weil positivity in the limit — is localized in four machine-verified equivalent languages: Hankel, Levinson, Fejér, and Krein–Suzuki, each finitely decidable per window. The documented negatives and the position in the literature (Connes–Consani's atom-free regime, Suzuki's ω > 1 range, Meyer's positivity-free spectral realization) mark the proved boundary line.",
+      },
+      {
+        title: "Verification and reproducibility",
+        body: "Every number is printed by a machine-checked module of the permanent suite: the moonshot arc v714, v716–v721 and the keystone round v727–v734 (90 checks), promoted verbatim from exact-arithmetic discovery probes. Zeta zeros enter only as declared comparison targets loaded after the printed SHA-256 freeze; the construction path is AST-firewalled against prime tables and zero data.",
+      },
+    ],
+    keyFormulas: [
+      {
+        label: "Zeta-free capture",
+        latex: "377/377 \\ \\text{zeros at tol } 0.25 \\ \\text{(SHA-256 frozen first)}",
+        description: "Frozen before any zero is loaded; ladder rate −1.61. [measured]",
+      },
+      {
+        label: "The archimedean density",
+        latex: "\\mathrm{Re}\\,\\psi\\!\\left(\\tfrac14 + \\tfrac{i\\tau}{2}\\right)",
+        description: "The μ₄-fixed heat trace of the 48-site spin cover lift — the 1/4 derived. [measured]",
+      },
+      {
+        label: "The remaining wall",
+        latex: "\\text{Weil positivity in the limit (Hankel / Levinson / Fej\\'er / Krein--Suzuki)}",
+        description: "Localized in four machine-verified equivalent languages, finitely decidable per window. [O]",
+      },
+    ],
+    highlights: [
+      { label: "Zero capture", value: "100% of 377", description: "At tolerance 0.25, SHA-256-frozen before any zero is loaded" },
+      { label: "Atom comb", value: "dev 0.0", description: "Gaussian prime norms from the Hecke tower — no prime table anywhere" },
+      { label: "Glue fit", value: "(1,1,1)", description: "Free three-scalar fit below 10⁻¹²; only the Gaussian E₈ glues" },
+      { label: "Dictionary", value: "10⁻¹³–10⁻¹⁶", description: "Exact Gauss quadrature vs the classical Weil explicit formula, block by block" },
+      { label: "Modules", value: "v714–v734", description: "The moonshot arc + keystone round (90 checks), AST-firewalled" },
+      { label: "RH claim", value: "none", description: "The explicit no-proof fence: no theorem about ζ, no RH progress at theorem level" },
     ],
   },
 ];

@@ -42,6 +42,4780 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-05",
+    "dateLabel": "2026-08-05 · LXI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the qf offensive: FIVE promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v769"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v773"
+      },
+      {
+        "k": "t",
+        "v": ", from eight frozen preregistered probes, all first-run adjudications; suite "
+      },
+      {
+        "k": "m",
+        "v": "761\\to766"
+      },
+      {
+        "k": "t",
+        "v": " modules) — the diagonal Gram route CLOSES at a moving spectral edge, "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.GRAM.DIAGONAL.01"
+      },
+      {
+        "k": "t",
+        "v": " is closed per its own frozen stakes, and the sharpened "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.Z1.OPERATOR.01"
+      },
+      {
+        "k": "t",
+        "v": " takes over. THE GATE-3 AUDIT PAIR: "
+      },
+      {
+        "k": "c",
+        "v": "v769"
+      },
+      {
+        "k": "t",
+        "v": " (merged, "
+      },
+      {
+        "k": "m",
+        "v": "5/5"
+      },
+      {
+        "k": "t",
+        "v": " gates "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "34/168"
+      },
+      {
+        "k": "t",
+        "v": " cells, "
+      },
+      {
+        "k": "m",
+        "v": "14/14+14/14"
+      },
+      {
+        "k": "t",
+        "v": " guards"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "controls, "
+      },
+      {
+        "k": "t",
+        "v": "qf-gauge"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "gate3prime-dead"
+      },
+      {
+        "k": "t",
+        "v": ") — Gate 3's full-ladder Cauchy demand on "
+      },
+      {
+        "k": "m",
+        "v": "q_f"
+      },
+      {
+        "k": "t",
+        "v": " was provably STRONGER than the diagonal contract needs: a deterministic "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": "-net subsequence (density "
+      },
+      {
+        "k": "m",
+        "v": "0.144"
+      },
+      {
+        "k": "t",
+        "v": ") makes all "
+      },
+      {
+        "k": "m",
+        "v": "14"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "q_f"
+      },
+      {
+        "k": "t",
+        "v": " profiles Cauchy at the exact parent bars the full ladder failed, and the contract's own "
+      },
+      {
+        "k": "m",
+        "v": "E_Y"
+      },
+      {
+        "k": "t",
+        "v": " corner objects are BLIND to "
+      },
+      {
+        "k": "m",
+        "v": "q_f"
+      },
+      {
+        "k": "t",
+        "v": " motion (corr "
+      },
+      {
+        "k": "m",
+        "v": "+0.038"
+      },
+      {
+        "k": "t",
+        "v": "; the "
+      },
+      {
+        "k": "m",
+        "v": "0.34"
+      },
+      {
+        "k": "t",
+        "v": " mode-entry jump at "
+      },
+      {
+        "k": "m",
+        "v": "M=888"
+      },
+      {
+        "k": "t",
+        "v": " leaves the corners at routine level; "
+      },
+      {
+        "k": "m",
+        "v": "370"
+      },
+      {
+        "k": "t",
+        "v": " cross-cluster pairs, median "
+      },
+      {
+        "k": "m",
+        "v": "\\rho=1.13"
+      },
+      {
+        "k": "t",
+        "v": ") — "
+      },
+      {
+        "k": "m",
+        "v": "q_f"
+      },
+      {
+        "k": "t",
+        "v": " is REPRESENTATION GAUGE, owning the "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": "-scale distribution of the Yosida deficit, not the value (VAR_RATIO "
+      },
+      {
+        "k": "m",
+        "v": "0.021"
+      },
+      {
+        "k": "t",
+        "v": "); the double limit is non-uniform (deficit "
+      },
+      {
+        "k": "m",
+        "v": "X"
+      },
+      {
+        "k": "t",
+        "v": "-slope grows "
+      },
+      {
+        "k": "m",
+        "v": "88\\times"
+      },
+      {
+        "k": "t",
+        "v": " over four decades) but not certified singular; yet the corner-native weakened Gate "
+      },
+      {
+        "k": "m",
+        "v": "3'"
+      },
+      {
+        "k": "t",
+        "v": " DIES on its own predeclared "
+      },
+      {
+        "k": "m",
+        "v": "1.6\\times10^{7}"
+      },
+      {
+        "k": "t",
+        "v": " comb ("
+      },
+      {
+        "k": "m",
+        "v": "X=16.5625"
+      },
+      {
+        "k": "t",
+        "v": "): the corner increments fall to "
+      },
+      {
+        "k": "m",
+        "v": "X\\sim12.9"
+      },
+      {
+        "k": "t",
+        "v": " and then RISE sustained ("
+      },
+      {
+        "k": "m",
+        "v": "+0.10"
+      },
+      {
+        "k": "t",
+        "v": ".."
+      },
+      {
+        "k": "m",
+        "v": "+0.34"
+      },
+      {
+        "k": "t",
+        "v": " per "
+      },
+      {
+        "k": "m",
+        "v": "X"
+      },
+      {
+        "k": "t",
+        "v": " unit at "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon=10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "0/56"
+      },
+      {
+        "k": "t",
+        "v": " cells, broad-spectrum) — the "
+      },
+      {
+        "k": "c",
+        "v": "v764"
+      },
+      {
+        "k": "t",
+        "v": " precondition is REFUTED at the corner level. THE TRANSPORT PAIR: "
+      },
+      {
+        "k": "c",
+        "v": "v770"
+      },
+      {
+        "k": "t",
+        "v": " (merged, gates "
+      },
+      {
+        "k": "m",
+        "v": "4/5+4/5"
+      },
+      {
+        "k": "t",
+        "v": " with exactly the preregistered decider/Z fails, "
+      },
+      {
+        "k": "m",
+        "v": "19/19+14/14"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "qf-bundle-partial"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "qf-settles-positive"
+      },
+      {
+        "k": "t",
+        "v": ") — the Kato/polar transport of the rank-6 near-kernel is well-defined with wide margins (rank stable on "
+      },
+      {
+        "k": "m",
+        "v": "888"
+      },
+      {
+        "k": "t",
+        "v": ".."
+      },
+      {
+        "k": "m",
+        "v": "972"
+      },
+      {
+        "k": "t",
+        "v": ", gap "
+      },
+      {
+        "k": "m",
+        "v": "6/7=0.34"
+      },
+      {
+        "k": "t",
+        "v": ".."
+      },
+      {
+        "k": "m",
+        "v": "0.56"
+      },
+      {
+        "k": "t",
+        "v": ", angles "
+      },
+      {
+        "k": "m",
+        "v": "\\le2.72^{\\circ}"
+      },
+      {
+        "k": "t",
+        "v": ", TV flattening) and repairs the rigid frame for "
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": " functions (median med5 ratio "
+      },
+      {
+        "k": "m",
+        "v": "26.7\\to1.004"
+      },
+      {
+        "k": "t",
+        "v": "); the residual non-Cauchy part is the frame-independent band-weight drainage (radial share "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}0.64"
+      },
+      {
+        "k": "t",
+        "v": ") — and the drainage was a TRANSIENT: on the "
+      },
+      {
+        "k": "m",
+        "v": "10^{8}"
+      },
+      {
+        "k": "t",
+        "v": " comb ("
+      },
+      {
+        "k": "m",
+        "v": "X=18.375"
+      },
+      {
+        "k": "t",
+        "v": ") the band weights plateau at positive per-function constants ("
+      },
+      {
+        "k": "m",
+        "v": "R2"
+      },
+      {
+        "k": "t",
+        "v": " family "
+      },
+      {
+        "k": "m",
+        "v": "0.2249"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.3583"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "R1"
+      },
+      {
+        "k": "t",
+        "v": " family "
+      },
+      {
+        "k": "m",
+        "v": "0.0082"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.0793"
+      },
+      {
+        "k": "t",
+        "v": "; zero-bar depth "
+      },
+      {
+        "k": "m",
+        "v": "X^{*}\\sim227"
+      },
+      {
+        "k": "t",
+        "v": ", i.e. never), the "
+      },
+      {
+        "k": "m",
+        "v": "6/7"
+      },
+      {
+        "k": "t",
+        "v": " gap bottoms at "
+      },
+      {
+        "k": "m",
+        "v": "0.1008"
+      },
+      {
+        "k": "t",
+        "v": " then recovers to "
+      },
+      {
+        "k": "m",
+        "v": "0.1397"
+      },
+      {
+        "k": "t",
+        "v": ", the 7th/8th threshold crossings ("
+      },
+      {
+        "k": "m",
+        "v": "992/{\\sim}1108"
+      },
+      {
+        "k": "t",
+        "v": ") are typed, the holonomy exponent is "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}1"
+      },
+      {
+        "k": "t",
+        "v": " (step refinement closed) — the Feshbach"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "boundary-triple treatment becomes MANDATORY. THE CENSUS: "
+      },
+      {
+        "k": "c",
+        "v": "v771"
+      },
+      {
+        "k": "t",
+        "v": " (gates "
+      },
+      {
+        "k": "m",
+        "v": "6/12"
+      },
+      {
+        "k": "t",
+        "v": " with exactly the preregistered fails, "
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": " guards"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "controls, "
+      },
+      {
+        "k": "t",
+        "v": "qf-representation-open"
+      },
+      {
+        "k": "t",
+        "v": ") — the "
+      },
+      {
+        "k": "m",
+        "v": "6=1{+}5"
+      },
+      {
+        "k": "t",
+        "v": " hypothesis "
+      },
+      {
+        "k": "m",
+        "v": "E_{qf}\\cong E_7\\oplus E_{-2}"
+      },
+      {
+        "k": "t",
+        "v": " FAILS the frozen census (the deployed scalar comb realizes only two characters of "
+      },
+      {
+        "k": "m",
+        "v": "V"
+      },
+      {
+        "k": "t",
+        "v": "; no rank-6 lift exists; the near-kernel is a continuum-vs-odd-places balance, ro-dominant count "
+      },
+      {
+        "k": "m",
+        "v": "0/6"
+      },
+      {
+        "k": "t",
+        "v": " vs predicted "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": ") while the label side is exact and uniquely canonical ("
+      },
+      {
+        "k": "m",
+        "v": "BB^{\\mathsf T}=4I+3J"
+      },
+      {
+        "k": "t",
+        "v": ", spectrum "
+      },
+      {
+        "k": "m",
+        "v": "(1,9,5)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "27/27"
+      },
+      {
+        "k": "t",
+        "v": " wrong forms "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "5/5"
+      },
+      {
+        "k": "t",
+        "v": " wrong labelings die on "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-sharpness); the honest residue: ONE rung-stable ram-odd contact direction ("
+      },
+      {
+        "k": "m",
+        "v": "\\cos=0.997"
+      },
+      {
+        "k": "t",
+        "v": ") plus a second contact at "
+      },
+      {
+        "k": "m",
+        "v": "\\cos\\sim0.64"
+      },
+      {
+        "k": "t",
+        "v": "; the dimension match stays typed DECORATIVE. THE FIXED-"
+      },
+      {
+        "k": "m",
+        "v": "d"
+      },
+      {
+        "k": "t",
+        "v": " PAIR: "
+      },
+      {
+        "k": "c",
+        "v": "v772"
+      },
+      {
+        "k": "t",
+        "v": " (merged, gates "
+      },
+      {
+        "k": "m",
+        "v": "9/12"
+      },
+      {
+        "k": "t",
+        "v": " with exactly "
+      },
+      {
+        "k": "t",
+        "v": "cauchy-6"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "gap-7"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "gap-8"
+      },
+      {
+        "k": "t",
+        "v": " failing "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "t",
+        "v": "edge-a"
+      },
+      {
+        "k": "t",
+        "v": " fail"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "edge-b"
+      },
+      {
+        "k": "t",
+        "v": " pass"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "KM2 quiet, "
+      },
+      {
+        "k": "m",
+        "v": "28/28+20/20"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}180"
+      },
+      {
+        "k": "t",
+        "v": " s at full frozen ladders per the "
+      },
+      {
+        "k": "c",
+        "v": "v677"
+      },
+      {
+        "k": "t",
+        "v": " suite precedent, "
+      },
+      {
+        "k": "t",
+        "v": "feshbach-partial"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "edge-keeps-moving"
+      },
+      {
+        "k": "t",
+        "v": "; one declared guard-normalization correction of the G1.9 "
+      },
+      {
+        "k": "m",
+        "v": "z"
+      },
+      {
+        "k": "t",
+        "v": "-independence Ward, no gate bar touched, repeat run identical) — the "
+      },
+      {
+        "k": "m",
+        "v": "d=6"
+      },
+      {
+        "k": "t",
+        "v": " reduction is EXACT (reconstruction "
+      },
+      {
+        "k": "m",
+        "v": "8.8\\times10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": " against independent complex dense solves, "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " rungs "
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "z"
+      },
+      {
+        "k": "t",
+        "v": ") and matrix-Herglotz certified, but its Cauchy tail flattens where mode 7 grazes the band; "
+      },
+      {
+        "k": "m",
+        "v": "d=7"
+      },
+      {
+        "k": "t",
+        "v": " converges strongly ("
+      },
+      {
+        "k": "m",
+        "v": "b_2=+0.502"
+      },
+      {
+        "k": "t",
+        "v": ") but loses separation at the top rung; "
+      },
+      {
+        "k": "m",
+        "v": "d=8"
+      },
+      {
+        "k": "t",
+        "v": " has an internal "
+      },
+      {
+        "k": "m",
+        "v": "8/9"
+      },
+      {
+        "k": "t",
+        "v": " crossing ("
+      },
+      {
+        "k": "m",
+        "v": "87^{\\circ}"
+      },
+      {
+        "k": "t",
+        "v": "); on the "
+      },
+      {
+        "k": "m",
+        "v": "10^{9}"
+      },
+      {
+        "k": "t",
+        "v": " comb ("
+      },
+      {
+        "k": "m",
+        "v": "X=20.6875"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "160"
+      },
+      {
+        "k": "t",
+        "v": " s) the "
+      },
+      {
+        "k": "m",
+        "v": "7/8"
+      },
+      {
+        "k": "t",
+        "v": " edge closes into an AVOIDED CROSSING (gap "
+      },
+      {
+        "k": "m",
+        "v": "0.0039"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "M=1240"
+      },
+      {
+        "k": "t",
+        "v": ", tail "
+      },
+      {
+        "k": "m",
+        "v": "0.0074"
+      },
+      {
+        "k": "t",
+        "v": " vs bar "
+      },
+      {
+        "k": "m",
+        "v": "0.10"
+      },
+      {
+        "k": "t",
+        "v": ") while the transported "
+      },
+      {
+        "k": "m",
+        "v": "d=7"
+      },
+      {
+        "k": "t",
+        "v": " block stays Cauchy straight through; the 9th mode enters at "
+      },
+      {
+        "k": "m",
+        "v": "M=1276"
+      },
+      {
+        "k": "t",
+        "v": "; the entry cadence WIDENS ("
+      },
+      {
+        "k": "m",
+        "v": "\\Delta X=1.625/1.8125/2.625"
+      },
+      {
+        "k": "t",
+        "v": ", mean "
+      },
+      {
+        "k": "m",
+        "v": "2.02"
+      },
+      {
+        "k": "t",
+        "v": ", spread "
+      },
+      {
+        "k": "m",
+        "v": "0.381"
+      },
+      {
+        "k": "t",
+        "v": " — not regular at the frozen "
+      },
+      {
+        "k": "m",
+        "v": "0.25"
+      },
+      {
+        "k": "t",
+        "v": " bar) — fixed-"
+      },
+      {
+        "k": "m",
+        "v": "d"
+      },
+      {
+        "k": "t",
+        "v": " Feshbach is closed PERMANENTLY: convergence was never the problem, band ownership is. THE CLOSURE DECIDER: "
+      },
+      {
+        "k": "c",
+        "v": "v773"
+      },
+      {
+        "k": "t",
+        "v": " (gates "
+      },
+      {
+        "k": "m",
+        "v": "2/8"
+      },
+      {
+        "k": "t",
+        "v": " with exactly the six convergence-cell fails, "
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": " guards"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "controls, "
+      },
+      {
+        "k": "t",
+        "v": "cocycle-domain-only"
+      },
+      {
+        "k": "t",
+        "v": "; one declared implementation correction: Hotelling refinement of the carried cocycle state after a numerically destroyed first execution, coefficients"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "algebra"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "gates untouched, the eigh-based layer reproduced identically) — STRUCTURE WITHOUT LIMIT: the exact Möbius/Redheffer cell identity holds at "
+      },
+      {
+        "k": "m",
+        "v": "9.7\\times10^{-12}"
+      },
+      {
+        "k": "t",
+        "v": " over "
+      },
+      {
+        "k": "m",
+        "v": "73"
+      },
+      {
+        "k": "t",
+        "v": " rungs "
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "z"
+      },
+      {
+        "k": "t",
+        "v": " (coefficients "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the added source rows/columns; independent dense-solve Ward "
+      },
+      {
+        "k": "m",
+        "v": "1.3\\times10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": "), every cell Schur block is PD (min eig "
+      },
+      {
+        "k": "m",
+        "v": "D_k\\in[0.0605,0.0668]"
+      },
+      {
+        "k": "t",
+        "v": " — a monotone Loewner flow), and the Nevanlinna/Stieltjes domain is preserved with ZERO breaches in all "
+      },
+      {
+        "k": "m",
+        "v": "730"
+      },
+      {
+        "k": "t",
+        "v": " rung"
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": "cell tests INCLUDING both typed mode-entry transitions ("
+      },
+      {
+        "k": "m",
+        "v": "M=992"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "M=1108"
+      },
+      {
+        "k": "t",
+        "v": "; transition increments unremarkable) — but no renormalized object converges at reachable depth ("
+      },
+      {
+        "k": "m",
+        "v": "0/6"
+      },
+      {
+        "k": "t",
+        "v": " cells: the corner absorbs a flat "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}0.1\\%"
+      },
+      {
+        "k": "t",
+        "v": " per rung, the band increments rise with the moving edge). THE CONTRACT MOVES: "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.GRAM.DIAGONAL.01"
+      },
+      {
+        "k": "t",
+        "v": " CLOSED per its own frozen stakes (dated closure note with the full decision cascade: Gates 1/2/4 positive from round LX, Gate 3 dead at the corner level via "
+      },
+      {
+        "k": "c",
+        "v": "v769"
+      },
+      {
+        "k": "t",
+        "v": ", Gate 5"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v764"
+      },
+      {
+        "k": "t",
+        "v": " never executed, cocycle domain-only; survivors typed: the exact anti-alias theorem "
+      },
+      {
+        "k": "c",
+        "v": "v760"
+      },
+      {
+        "k": "t",
+        "v": ", the unconditional paired Abel bound "
+      },
+      {
+        "k": "c",
+        "v": "v761"
+      },
+      {
+        "k": "t",
+        "v": ", the canonical dense family "
+      },
+      {
+        "k": "c",
+        "v": "v762"
+      },
+      {
+        "k": "t",
+        "v": ", the Kato bundle frame and settled levels "
+      },
+      {
+        "k": "c",
+        "v": "v770"
+      },
+      {
+        "k": "t",
+        "v": ", the Herglotz-certified exact Feshbach reduction "
+      },
+      {
+        "k": "c",
+        "v": "v772"
+      },
+      {
+        "k": "t",
+        "v": ", the domain-preserving cell cocycle "
+      },
+      {
+        "k": "c",
+        "v": "v773"
+      },
+      {
+        "k": "t",
+        "v": "; NO new variants, the ten-item stop-list stays binding); "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.Z1.OPERATOR.01"
+      },
+      {
+        "k": "t",
+        "v": " stays OPEN [O] and is SHARPENED (dated note: a self-adjoint geometric bulk operator with a canonical finite-dimensional boundary/threshold structure whose Weyl "
+      },
+      {
+        "k": "m",
+        "v": "M"
+      },
+      {
+        "k": "t",
+        "v": "-function delivers the qf block and whose relative trace formula reproduces the full Weil formula; mandatory measured constraints: the Hecke/E8 bulk "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " archimedean lift, the moving-edge cadence (entries "
+      },
+      {
+        "k": "m",
+        "v": "888/992/1108/1276"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta X"
+      },
+      {
+        "k": "t",
+        "v": " widening "
+      },
+      {
+        "k": "m",
+        "v": "1.625\\to2.625"
+      },
+      {
+        "k": "t",
+        "v": ", avoided crossing "
+      },
+      {
+        "k": "m",
+        "v": "0.0039"
+      },
+      {
+        "k": "t",
+        "v": "), the ram-odd contact direction ("
+      },
+      {
+        "k": "m",
+        "v": "\\cos=0.997"
+      },
+      {
+        "k": "t",
+        "v": "), the settled coupling levels ("
+      },
+      {
+        "k": "m",
+        "v": "R2"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "0.225"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.358"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "R1"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "0.008"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.079"
+      },
+      {
+        "k": "t",
+        "v": "), the cell-ordered domain-preserving prime transport; additional kills: cadence"
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "level contradictions "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " dead on arrival); the "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.KMS.INDUCTIVE_STATE.02"
+      },
+      {
+        "k": "t",
+        "v": " compactness note carries the dated follow-up (the "
+      },
+      {
+        "k": "m",
+        "v": "q_f"
+      },
+      {
+        "k": "t",
+        "v": " pointer is adjudicated; handover to the sharpened Z1). Papers: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " gains the closure section “The qf offensive: the route closes at a moving spectral edge, and what survives”; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " carries the closure cascade "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the Z1 sharpening; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " gains the five audit blocks. Both declared implementation corrections are carried verbatim in the module PROVENANCE blocks. No marker moves on evidence lines; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-05",
+    "dateLabel": "2026-08-05",
+    "heading": [
+      {
+        "k": "t",
+        "v": "Two working notes join the published document set"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "note_e8_gaussian_code"
+            },
+            {
+              "k": "t",
+              "v": " (working note N1) published."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The Gaussian code bridge: "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " over "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Z[i]"
+        },
+        {
+          "k": "t",
+          "v": " via Construction A over the extended Hamming code "
+        },
+        {
+          "k": "m",
+          "v": "[8,4,4]"
+        },
+        {
+          "k": "t",
+          "v": " placed "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-equivariantly, the canonical four-bit quotient "
+        },
+        {
+          "k": "m",
+          "v": "L/(1{+}i)L\\cong\\mathbb F_2^4"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " roots distribute exactly "
+        },
+        {
+          "k": "m",
+          "v": "15\\times16"
+        },
+        {
+          "k": "t",
+          "v": "; the code returns as the message space), and the "
+        },
+        {
+          "k": "m",
+          "v": "G_{31}"
+        },
+        {
+          "k": "t",
+          "v": " quartic companion — exact-arithmetic probes "
+        },
+        {
+          "k": "m",
+          "v": "26/26"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "22/22"
+        },
+        {
+          "k": "t",
+          "v": " (promoted as "
+        },
+        {
+          "k": "c",
+          "v": "v689"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v690"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "m",
+          "v": "65"
+        },
+        {
+          "k": "t",
+          "v": " kernel-checked Lean 4 theorems. No claim beyond the stated algebra."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "note_hilbert_polya_truncations"
+            },
+            {
+              "k": "t",
+              "v": " (working note N2) published."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " A computable, zeta-free truncation family for the Weil measure: measurements on a Hilbert–Pólya candidate ("
+        },
+        {
+          "k": "c",
+          "v": "v714"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v716"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v721"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v727"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v734"
+        },
+        {
+          "k": "t",
+          "v": "); SHA-256-frozen truncation spectra hit "
+        },
+        {
+          "k": "m",
+          "v": "100\\%"
+        },
+        {
+          "k": "t",
+          "v": " of the first "
+        },
+        {
+          "k": "m",
+          "v": "377"
+        },
+        {
+          "k": "t",
+          "v": " zeta zeros at tolerance "
+        },
+        {
+          "k": "m",
+          "v": "0.25"
+        },
+        {
+          "k": "t",
+          "v": " with no prime table and no zero data in the construction path; the remaining statement (Weil positivity in the limit) localized in four machine-verified equivalent languages. Explicit no-proof fence: no theorem about "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": ", no RH claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Structure sync."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Both notes registered in "
+        },
+        {
+          "k": "c",
+          "v": "build.sh"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "make_docs_map"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "make_manifest"
+        },
+        {
+          "k": "t",
+          "v": " / the document-set box, mirrored to the website ("
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "release.ts"
+        },
+        {
+          "k": "t",
+          "v": ", new “working note” class) and added to the Zenodo deposit (description "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " upload list). The German-language big-picture overview ("
+        },
+        {
+          "k": "c",
+          "v": "big_picture_2026-08-02_de"
+        },
+        {
+          "k": "t",
+          "v": ") stays repo-only: the published set and website are English by house rule and no supplement pattern exists."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "dateLabel": "2026-08-04 · LX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the diagonal gram round: NINE promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v759"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v763"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v765"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v768"
+      },
+      {
+        "k": "t",
+        "v": "; no "
+      },
+      {
+        "k": "c",
+        "v": "v764"
+      },
+      {
+        "k": "t",
+        "v": " — the named unexecuted gate; suite "
+      },
+      {
+        "k": "m",
+        "v": "752\\to761"
+      },
+      {
+        "k": "t",
+        "v": " modules) — the frequency front closes exactly, the paired tail is unconditional, and the wall moves into "
+      },
+      {
+        "k": "m",
+        "v": "q_f"
+      },
+      {
+        "k": "t",
+        "v": ". THE OFFENSIVE FOUNDATION: "
+      },
+      {
+        "k": "c",
+        "v": "v766"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "17/17"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "handoff-bulk-converges"
+      },
+      {
+        "k": "t",
+        "v": ") — the "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": "-regulated resolvent "
+      },
+      {
+        "k": "m",
+        "v": "G^\\varepsilon=(A_X+\\varepsilon I)^{-1}"
+      },
+      {
+        "k": "t",
+        "v": " is the ADMISSIBLE operator-system evaluation; local Cauchy defects fall at "
+      },
+      {
+        "k": "m",
+        "v": "b=0.174"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.310"
+      },
+      {
+        "k": "t",
+        "v": " per "
+      },
+      {
+        "k": "m",
+        "v": "X"
+      },
+      {
+        "k": "t",
+        "v": " unit, "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": "-robust over three decades; the bare "
+      },
+      {
+        "k": "m",
+        "v": "A^{-1}"
+      },
+      {
+        "k": "t",
+        "v": " does NOT stabilize ("
+      },
+      {
+        "k": "m",
+        "v": "+45\\%"
+      },
+      {
+        "k": "t",
+        "v": ", named negative block); the layer decomposition is a CANCELLATION BALANCE (leading channel up to "
+      },
+      {
+        "k": "m",
+        "v": "1.9\\times10^{12}\\times"
+      },
+      {
+        "k": "t",
+        "v": " the total defect); "
+      },
+      {
+        "k": "c",
+        "v": "v767"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "6/6"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "handoff-gram-converges"
+      },
+      {
+        "k": "t",
+        "v": ") — the growing-frequency PSD source Gram: Candidate A missed honestly (slope "
+      },
+      {
+        "k": "m",
+        "v": "+0.471"
+      },
+      {
+        "k": "t",
+        "v": " territory), the predeclared Candidate B (anti-alias "
+      },
+      {
+        "k": "m",
+        "v": "N_f=2M{+}1"
+      },
+      {
+        "k": "t",
+        "v": ") converges (errors "
+      },
+      {
+        "k": "m",
+        "v": "0.0855\\to0.0377"
+      },
+      {
+        "k": "t",
+        "v": " over "
+      },
+      {
+        "k": "m",
+        "v": "\\dim Q"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "738\\to5734"
+      },
+      {
+        "k": "t",
+        "v": ", slope "
+      },
+      {
+        "k": "m",
+        "v": "-0.369"
+      },
+      {
+        "k": "t",
+        "v": "; PSD by construction, min symbol "
+      },
+      {
+        "k": "m",
+        "v": "+7.4\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "c",
+        "v": "v768"
+      },
+      {
+        "k": "t",
+        "v": " (merged from two probes, gates "
+      },
+      {
+        "k": "m",
+        "v": "11/13+4/4"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "tail-weil-partial"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "compat-eps3-converges"
+      },
+      {
+        "k": "t",
+        "v": ") — the quadrature tail TERMINATES ALGEBRAICALLY ("
+      },
+      {
+        "k": "m",
+        "v": "2.4\\times10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": " uniform: no quadrature tail exists, every layer error is structural), Weil identification on the frozen battery "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa=0.97768\\to0.99028"
+      },
+      {
+        "k": "t",
+        "v": " (agreement "
+      },
+      {
+        "k": "m",
+        "v": "0.0485"
+      },
+      {
+        "k": "t",
+        "v": "), all layer slopes "
+      },
+      {
+        "k": "m",
+        "v": "-0.365"
+      },
+      {
+        "k": "t",
+        "v": " with atom"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "pole a "
+      },
+      {
+        "k": "m",
+        "v": "10.5\\times"
+      },
+      {
+        "k": "t",
+        "v": " cancellation pair, and the two frozen "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon=10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " endpoint fails of part 1 are DECIDED POSITIVELY by the part-2 preregistration on the deepest 36-rung ladder ("
+      },
+      {
+        "k": "m",
+        "v": "b=0.178/0.186"
+      },
+      {
+        "k": "t",
+        "v": ", med5 "
+      },
+      {
+        "k": "m",
+        "v": "0.343/0.467"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "b_2=0.069/0.096"
+      },
+      {
+        "k": "t",
+        "v": "; first wall sign at "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon=3\\times10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "b_2=-0.011"
+      },
+      {
+        "k": "t",
+        "v": ", reported never gated). THE SIX-STRAND DECISION LINE: "
+      },
+      {
+        "k": "c",
+        "v": "v759"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "resolution-boundary"
+      },
+      {
+        "k": "t",
+        "v": ") — "
+      },
+      {
+        "k": "m",
+        "v": "E_{\\mathrm{total}}"
+      },
+      {
+        "k": "t",
+        "v": " is "
+      },
+      {
+        "k": "m",
+        "v": "q"
+      },
+      {
+        "k": "t",
+        "v": "-invariant under "
+      },
+      {
+        "k": "m",
+        "v": "N_f=q(2M{+}1)"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": " on all three fixed windows: the remaining handoff error is boundary/cutoff/object-gluing, NOT quadrature; "
+      },
+      {
+        "k": "c",
+        "v": "v760"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "antialias-corrected"
+      },
+      {
+        "k": "t",
+        "v": ") — the anti-alias claim becomes an EXACT theorem of the "
+      },
+      {
+        "k": "m",
+        "v": "M"
+      },
+      {
+        "k": "t",
+        "v": "-cell space (Parseval "
+      },
+      {
+        "k": "m",
+        "v": "2\\times10^{-14}"
+      },
+      {
+        "k": "t",
+        "v": ", moments "
+      },
+      {
+        "k": "m",
+        "v": "3.5\\times10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": ", Gram "
+      },
+      {
+        "k": "m",
+        "v": "5.9\\times10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": "; exact alias formula matched at every count; must-fail witness error exactly "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "2M{-}2"
+      },
+      {
+        "k": "t",
+        "v": "); the sharp minimal count is CORRECTED to "
+      },
+      {
+        "k": "m",
+        "v": "N_{f,\\min}=2M{-}1"
+      },
+      {
+        "k": "t",
+        "v": " (spread-"
+      },
+      {
+        "k": "m",
+        "v": "S"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "M{+}S"
+      },
+      {
+        "k": "t",
+        "v": "), the deployed "
+      },
+      {
+        "k": "m",
+        "v": "2M{+}1"
+      },
+      {
+        "k": "t",
+        "v": " stays exact, nothing patched; "
+      },
+      {
+        "k": "c",
+        "v": "v761"
+      },
+      {
+        "k": "t",
+        "v": " (merged, "
+      },
+      {
+        "k": "m",
+        "v": "24+10"
+      },
+      {
+        "k": "t",
+        "v": " checks, combined "
+      },
+      {
+        "k": "t",
+        "v": "abel-paired-bound"
+      },
+      {
+        "k": "t",
+        "v": ") — the Stieltjes/Abel split is exact (6/6 sympy certificates), the matrix identity holds to "
+      },
+      {
+        "k": "m",
+        "v": "1.45\\times10^{-11}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "E_{\\mathrm{origin}}"
+      },
+      {
+        "k": "t",
+        "v": " closes via the W1/Suzuki bookkeeping (comb-independent, verified on the controls), and the UNCONDITIONAL bound "
+      },
+      {
+        "k": "m",
+        "v": "\\eta_K=|\\det_K|+|\\Theta_K(0)E(1)|+B_1I_K"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "B_1=3.734"
+      },
+      {
+        "k": "t",
+        "v": " frozen on the finite range holds for all "
+      },
+      {
+        "k": "m",
+        "v": "24"
+      },
+      {
+        "k": "t",
+        "v": " kernels on all "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " rungs with pure "
+      },
+      {
+        "k": "m",
+        "v": "1/\\log X"
+      },
+      {
+        "k": "t",
+        "v": " decay — NO RH-strength input; the companion DERIVES the correct breaker standard (symmetric zero-violation gate "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " envelope hypothesis): Epstein breaks at "
+      },
+      {
+        "k": "m",
+        "v": "B_1^E=2.95\\times"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "7/24"
+      },
+      {
+        "k": "t",
+        "v": "), scramble "
+      },
+      {
+        "k": "m",
+        "v": "262\\times"
+      },
+      {
+        "k": "t",
+        "v": ", truth passes "
+      },
+      {
+        "k": "m",
+        "v": "24/24"
+      },
+      {
+        "k": "t",
+        "v": "; the parent's frozen "
+      },
+      {
+        "k": "t",
+        "v": "abel-dead"
+      },
+      {
+        "k": "t",
+        "v": " stays on record as the calibration lesson; honest typing: identity and slope-1 normalization are measure-generic, the certified "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta"
+      },
+      {
+        "k": "t",
+        "v": "-specificity is envelope quality "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " measure positivity; "
+      },
+      {
+        "k": "c",
+        "v": "v762"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "dense-core-canonical"
+      },
+      {
+        "k": "t",
+        "v": ") — the canonical countable dense test family of the "
+      },
+      {
+        "k": "m",
+        "v": "(D,X)"
+      },
+      {
+        "k": "t",
+        "v": " tower: admissibility LOCATED per class (hats direct; the bare box fails the "
+      },
+      {
+        "k": "m",
+        "v": "r^{-2}"
+      },
+      {
+        "k": "t",
+        "v": " criterion and enters only correlated/tent-read — named caveat), density rates hat "
+      },
+      {
+        "k": "m",
+        "v": "-1.566"
+      },
+      {
+        "k": "t",
+        "v": " / box "
+      },
+      {
+        "k": "m",
+        "v": "-0.503"
+      },
+      {
+        "k": "t",
+        "v": " per level, exact "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Q}"
+      },
+      {
+        "k": "t",
+        "v": " correlation closure on "
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": " type pairs, explicit stage map with "
+      },
+      {
+        "k": "m",
+        "v": "I_{64}"
+      },
+      {
+        "k": "t",
+        "v": " exact, and the 24 battery typed an initial diagnostic package (hat 8 IS family member hat(2,3), rank 35); "
+      },
+      {
+        "k": "c",
+        "v": "v763"
+      },
+      {
+        "k": "t",
+        "v": " (merged, gates "
+      },
+      {
+        "k": "m",
+        "v": "9/10+7/12"
+      },
+      {
+        "k": "t",
+        "v": " preregistered, "
+      },
+      {
+        "k": "t",
+        "v": "yosida-partial"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": "qf-dead"
+      },
+      {
+        "k": "t",
+        "v": ") — the bounded Yosida transform carries the handoff rates with NO "
+      },
+      {
+        "k": "m",
+        "v": "1/\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": " bound and NO PD-margin assumption anywhere ("
+      },
+      {
+        "k": "m",
+        "v": "|b_Y-b_G|\\le10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": ", sandwich verified; the circularity kill did NOT fire), the near-kernel converges as an identified stable OBJECT, every fixed "
+      },
+      {
+        "k": "m",
+        "v": "f"
+      },
+      {
+        "k": "t",
+        "v": " has a monotone contraction-certified "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": "-limit — but "
+      },
+      {
+        "k": "m",
+        "v": "q_f"
+      },
+      {
+        "k": "t",
+        "v": " (the battery near-kernel pairing) is NON-CAUCHY at honest maximal depth ("
+      },
+      {
+        "k": "m",
+        "v": "X=15.1875"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "279849"
+      },
+      {
+        "k": "t",
+        "v": " atoms, "
+      },
+      {
+        "k": "m",
+        "v": "4\\times"
+      },
+      {
+        "k": "t",
+        "v": " rung density) and SURVIVES orthogonalization by structural subordination ("
+      },
+      {
+        "k": "m",
+        "v": "89"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "99.9\\%"
+      },
+      {
+        "k": "t",
+        "v": " of every battery function lies in the 6-mode near-kernel span): Q3 closes NEGATIVELY — THE "
+      },
+      {
+        "k": "m",
+        "v": "q_f"
+      },
+      {
+        "k": "t",
+        "v": " WALL is the round's named wall object (density and near-kernel avoidance collide on the same function class); "
+      },
+      {
+        "k": "c",
+        "v": "v764"
+      },
+      {
+        "k": "t",
+        "v": " NOT EXECUTED — its precondition (theorem-capable bounds from v761 AND v763) failed via Gate 3; documented as the named open gate inside the new contract, no module fabricated; "
+      },
+      {
+        "k": "c",
+        "v": "v765"
+      },
+      {
+        "k": "t",
+        "v": " (merged, "
+      },
+      {
+        "k": "m",
+        "v": "16+8"
+      },
+      {
+        "k": "t",
+        "v": " checks, "
+      },
+      {
+        "k": "t",
+        "v": "redteam-green-combined"
+      },
+      {
+        "k": "t",
+        "v": ") — firewall CLEAN (zero blacklist hits across all "
+      },
+      {
+        "k": "m",
+        "v": "21"
+      },
+      {
+        "k": "t",
+        "v": " source-path functions), baseline reproduced exactly, "
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": " controls break; RT6 decided: the symbol gate is the ONLY detector for excess-mode deck corruption (min symbol "
+      },
+      {
+        "k": "m",
+        "v": "-0.45"
+      },
+      {
+        "k": "t",
+        "v": ".."
+      },
+      {
+        "k": "m",
+        "v": "-1.72"
+      },
+      {
+        "k": "t",
+        "v": ", all other gates measurably blind), the deficit mode is caught by rate/ratio/"
+      },
+      {
+        "k": "m",
+        "v": "\\kappa"
+      },
+      {
+        "k": "t",
+        "v": " — BINDING: certificates must always carry BOTH gate families (symbol/PSD and rate/ratio/identification). THE NEW CONTRACT: "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.GRAM.DIAGONAL.01"
+      },
+      {
+        "k": "t",
+        "v": " registered OPEN — PSD source matrices "
+      },
+      {
+        "k": "m",
+        "v": "G_n"
+      },
+      {
+        "k": "t",
+        "v": " (no target decomposition, no zeros, no positivity tests) with corner error "
+      },
+      {
+        "k": "m",
+        "v": "\\le2^{-n}"
+      },
+      {
+        "k": "t",
+        "v": " against "
+      },
+      {
+        "k": "m",
+        "v": "W"
+      },
+      {
+        "k": "t",
+        "v": " on the canonical dense family "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " Weil positivity on the rational span by PSD limits "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " density; decision state recorded (Gates 1/2/4 positive, Gate 3 negative on the canonical class "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "q_f"
+      },
+      {
+        "k": "t",
+        "v": " wall, Gate 5 not executed, redteam green; kills that did NOT fire: no RH-strength input, no spectral gap; the 10-item stop-list binding). LEAN ROUND 7: "
+      },
+      {
+        "k": "c",
+        "v": "GramCompactness.lean"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": " theorems), "
+      },
+      {
+        "k": "c",
+        "v": "AntiAliasExact.lean"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "19"
+      },
+      {
+        "k": "t",
+        "v": " general-"
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": " theorems), "
+      },
+      {
+        "k": "c",
+        "v": "DenseWeilCore.lean"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "42"
+      },
+      {
+        "k": "t",
+        "v": " theorems); "
+      },
+      {
+        "k": "c",
+        "v": "lake build"
+      },
+      {
+        "k": "t",
+        "v": " green ("
+      },
+      {
+        "k": "m",
+        "v": "3402"
+      },
+      {
+        "k": "t",
+        "v": " jobs), manifest at "
+      },
+      {
+        "k": "m",
+        "v": "76"
+      },
+      {
+        "k": "t",
+        "v": " files. No marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (9)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v759_handoff_fixed_window_resolution.py"
+        },
+        {
+          "k": "t",
+          "v": " (8), "
+        },
+        {
+          "k": "c",
+          "v": "v760_antialias_exact.py"
+        },
+        {
+          "k": "t",
+          "v": " (14), "
+        },
+        {
+          "k": "c",
+          "v": "v761_atom_pole_abel.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "24{+}10"
+        },
+        {
+          "k": "t",
+          "v": ", one module from two probes per the v518/v668 precedent, the preregistered C.EPSTEIN miss encoded per the v757 pattern), "
+        },
+        {
+          "k": "c",
+          "v": "v762_dense_weil_core.py"
+        },
+        {
+          "k": "t",
+          "v": " (26), "
+        },
+        {
+          "k": "c",
+          "v": "v763_yosida_handoff.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "12{+}14"
+        },
+        {
+          "k": "t",
+          "v": " guards/controls, gates "
+        },
+        {
+          "k": "m",
+          "v": "9/10+7/12"
+        },
+        {
+          "k": "t",
+          "v": " preregistered), "
+        },
+        {
+          "k": "c",
+          "v": "v765_handoff_redteam.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "16{+}8"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "v766_handoff_bulk.py"
+        },
+        {
+          "k": "t",
+          "v": " (17), "
+        },
+        {
+          "k": "c",
+          "v": "v767_handoff_frequency_gram.py"
+        },
+        {
+          "k": "t",
+          "v": " (6), "
+        },
+        {
+          "k": "c",
+          "v": "v768_handoff_tail_weil.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "12{+}8"
+        },
+        {
+          "k": "t",
+          "v": " guards/controls, gates "
+        },
+        {
+          "k": "m",
+          "v": "11/13+4/4"
+        },
+        {
+          "k": "t",
+          "v": ") — all wired into "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " (suite "
+        },
+        {
+          "k": "m",
+          "v": "752\\to761"
+        },
+        {
+          "k": "t",
+          "v": ", ALL CHECKS PASSED); discovery probes remain in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery/"
+        },
+        {
+          "k": "t",
+          "v": " with frozen results."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/GramCompactness.lean"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " theorems — the abstract finite-stage Gram compactness/diagonal-extraction closure for the contract's compactness step), "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/AntiAliasExact.lean"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "19"
+        },
+        {
+          "k": "t",
+          "v": " general-"
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": " theorems: discrete orthogonality, offset-invariant exact quadrature, Parseval, moment reconstruction, threshold witness, midpoint alias sign; axioms only propext/choice/Quot.sound), "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/DenseWeilCore.lean"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "42"
+        },
+        {
+          "k": "t",
+          "v": " theorems: enumeration bijection, stage bounds, grid module closure; honest analytic remainder in the header); imports added to "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green ("
+        },
+        {
+          "k": "m",
+          "v": "3402"
+        },
+        {
+          "k": "t",
+          "v": " jobs); "
+        },
+        {
+          "k": "c",
+          "v": "lean_manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "76"
+        },
+        {
+          "k": "t",
+          "v": " files."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contracts."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GRAM.DIAGONAL.01"
+        },
+        {
+          "k": "t",
+          "v": " registered OPEN [O] in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " ledger (target form, the round's measured decision state, the not-fired kill criteria, the 10-item stop-list, and the unexecuted Gate 5 "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the planned "
+        },
+        {
+          "k": "c",
+          "v": "v764"
+        },
+        {
+          "k": "t",
+          "v": " documented as the named open gate); "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KMS.INDUCTIVE_STATE.02"
+        },
+        {
+          "k": "t",
+          "v": " gets the dated note: the compactness step now has MEASURED handoff evidence ("
+        },
+        {
+          "k": "c",
+          "v": "v766"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v767"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v768"
+        },
+        {
+          "k": "t",
+          "v": ") and the abstract Lean closure ("
+        },
+        {
+          "k": "c",
+          "v": "GramCompactness.lean"
+        },
+        {
+          "k": "t",
+          "v": "); the surviving open object is the "
+        },
+        {
+          "k": "m",
+          "v": "q_f"
+        },
+        {
+          "k": "t",
+          "v": " wall of "
+        },
+        {
+          "k": "c",
+          "v": "v763"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 9 new module rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HANDOFFRES.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.ANTIALIAS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.ABELPAIR.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.DENSECORE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.YOSIDAQF.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HANDOFFREDTEAM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HANDOFFBULK.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HANDOFFGRAM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HANDOFFTAIL.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the contract row "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated KMS note; finite convergences typed measured, exact results typed [E]; the honest deaths/PARTIALs (tail-weil "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " first pass, QF-DEAD, parent ABEL-DEAD) documented as such; NO marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The diagonal gram round: the frequency front closes exactly, the paired tail is unconditional, and the wall moves into "
+        },
+        {
+          "k": "m",
+          "v": "q_f"
+        },
+        {
+          "k": "t",
+          "v": "” (all nine "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": " citations); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.GRAM.DIAGONAL.01"
+        },
+        {
+          "k": "t",
+          "v": " contract block "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the KMS dated note; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": the round's audit block."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “the diagonal gram round”; counters "
+        },
+        {
+          "k": "m",
+          "v": "752\\to761"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v768"
+        },
+        {
+          "k": "t",
+          "v": "; README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "761"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v768"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact results (anti-alias identities, Abel identity "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " unconditional "
+        },
+        {
+          "k": "m",
+          "v": "\\eta_K"
+        },
+        {
+          "k": "t",
+          "v": ", dense-core algebra, three Lean modules) sit behind explicit fences; the PARTIALs and deaths are preregistered criteria firing inside green machinery and stay on record; no RH claim, no marker moves; the "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon\\to0"
+        },
+        {
+          "k": "t",
+          "v": " wall (PD persistence) and the battery-limited identification remain open exactly as quantified."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "dateLabel": "2026-08-04 · LIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the incidence programme: SEVEN promotions ("
+      },
+      {
+        "k": "c",
+        "v": "v752"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v758"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "134"
+      },
+      {
+        "k": "t",
+        "v": " new checks, all green; suite "
+      },
+      {
+        "k": "m",
+        "v": "745\\to752"
+      },
+      {
+        "k": "t",
+        "v": " modules) — the second external review, fully adjudicated: five exact wins, one decorative seven, and the keystone negative that names the wall as the missing factor. THE CENTERPIECE: "
+      },
+      {
+        "k": "c",
+        "v": "v752"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "36/36"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "proj-hamming-exact"
+      },
+      {
+        "k": "t",
+        "v": ") — the projective Hamming incidence lemma on "
+      },
+      {
+        "k": "m",
+        "v": "V=L/(1{+}i)L"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "h=H/4"
+      },
+      {
+        "k": "t",
+        "v": " is "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}[i]"
+      },
+      {
+        "k": "t",
+        "v": "-valued with hermitian Gram determinant "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " (the UNIMODULAR hermitian E8 lattice over "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}[i]"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "m",
+        "v": "\\bar h"
+      },
+      {
+        "k": "t",
+        "v": " alternating and nondegenerate, so "
+      },
+      {
+        "k": "m",
+        "v": "(V,\\bar h)"
+      },
+      {
+        "k": "t",
+        "v": " is symplectic over "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{F}_2"
+      },
+      {
+        "k": "t",
+        "v": "; on the "
+      },
+      {
+        "k": "m",
+        "v": "15"
+      },
+      {
+        "k": "t",
+        "v": " points "
+      },
+      {
+        "k": "m",
+        "v": "BB^{\\mathsf T}=4I+3J"
+      },
+      {
+        "k": "t",
+        "v": " EXACT with the design parameter set "
+      },
+      {
+        "k": "m",
+        "v": "2/3/4/7/15/16"
+      },
+      {
+        "k": "t",
+        "v": " and eigenvalues "
+      },
+      {
+        "k": "m",
+        "v": "7^1(+2)^9(-2)^5"
+      },
+      {
+        "k": "t",
+        "v": " (the multiplicities "
+      },
+      {
+        "k": "m",
+        "v": "(1,9,5)"
+      },
+      {
+        "k": "t",
+        "v": " are the symplectic signature); "
+      },
+      {
+        "k": "m",
+        "v": "K^2=(4/49)I+(45/49)\\Pi_0"
+      },
+      {
+        "k": "t",
+        "v": "; NS/R is a POINT of the geometry ("
+      },
+      {
+        "k": "m",
+        "v": "\\chi_{\\mathrm{NSR}}=\\bar h(\\cdot,\\mathrm{FSUM})"
+      },
+      {
+        "k": "t",
+        "v": ", the anchor bit; "
+      },
+      {
+        "k": "m",
+        "v": "248=120+128"
+      },
+      {
+        "k": "t",
+        "v": "); THE v737 RESOLUTION: the seam-48 distribution "
+      },
+      {
+        "k": "m",
+        "v": "0{:}96/1{:}64/2{:}64/3{:}16"
+      },
+      {
+        "k": "t",
+        "v": " derived exactly ("
+      },
+      {
+        "k": "m",
+        "v": "16\\times"
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "3\\times5"
+      },
+      {
+        "k": "t",
+        "v": " label table) AND the "
+      },
+      {
+        "k": "m",
+        "v": "5\\times48"
+      },
+      {
+        "k": "t",
+        "v": " coordinatization exists via exactly ONE "
+      },
+      {
+        "k": "m",
+        "v": "\\bar u"
+      },
+      {
+        "k": "t",
+        "v": "-invariant spread (kill explained, not revised); two honest corrections to the review derivation documented; companion Lean module "
+      },
+      {
+        "k": "c",
+        "v": "ProjectiveHamming.lean"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "32"
+      },
+      {
+        "k": "t",
+        "v": " theorems, kernel-checked, "
+      },
+      {
+        "k": "c",
+        "v": "lake build"
+      },
+      {
+        "k": "t",
+        "v": " green "
+      },
+      {
+        "k": "m",
+        "v": "3391"
+      },
+      {
+        "k": "t",
+        "v": " jobs). FOUR MORE WINS: "
+      },
+      {
+        "k": "c",
+        "v": "v753"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "25/25"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "polarity-match"
+      },
+      {
+        "k": "t",
+        "v": ") — the "
+      },
+      {
+        "k": "m",
+        "v": "15"
+      },
+      {
+        "k": "t",
+        "v": " ramified Hecke hyperplanes ARE the "
+      },
+      {
+        "k": "m",
+        "v": "\\bar h"
+      },
+      {
+        "k": "t",
+        "v": "-orthogonal spaces, canonical bijection "
+      },
+      {
+        "k": "m",
+        "v": "y(\\varphi)=\\bar G^{-1}\\varphi"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-functorial, deck and parity commute; canonicity census: exactly "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "28"
+      },
+      {
+        "k": "t",
+        "v": " nondegenerate alternating forms is "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-invariant "
+      },
+      {
+        "k": "m",
+        "v": "=\\bar h"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "v754"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "19/19"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "twostep-exact"
+      },
+      {
+        "k": "t",
+        "v": ") — the real "
+      },
+      {
+        "k": "m",
+        "v": "n\\to4n"
+      },
+      {
+        "k": "t",
+        "v": " down-up pass IS exactly "
+      },
+      {
+        "k": "m",
+        "v": "K^2"
+      },
+      {
+        "k": "t",
+        "v": ", degree factor "
+      },
+      {
+        "k": "m",
+        "v": "196=(2\\cdot7)^2"
+      },
+      {
+        "k": "t",
+        "v": " closed, KMS half-weight exponent-exact, identical integer matrix on all "
+      },
+      {
+        "k": "m",
+        "v": "9"
+      },
+      {
+        "k": "t",
+        "v": " contexts, "
+      },
+      {
+        "k": "m",
+        "v": "T=4B^2"
+      },
+      {
+        "k": "t",
+        "v": ", cone-preserving; honest boundary: naive label chains do not carry "
+      },
+      {
+        "k": "m",
+        "v": "K^2"
+      },
+      {
+        "k": "t",
+        "v": " (correspondence composition mandatory); "
+      },
+      {
+        "k": "c",
+        "v": "v755"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "schur-recursion-alive"
+      },
+      {
+        "k": "t",
+        "v": ") — "
+      },
+      {
+        "k": "m",
+        "v": "S_k\\succeq0"
+      },
+      {
+        "k": "t",
+        "v": " on all "
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": " ram-odd stages of the tower nesting ("
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}"
+      },
+      {
+        "k": "t",
+        "v": " flat, long-double-hardened), Douglas trivial, controls break immediately; the Albert/Haynsworth induction frame stands; honestly: for "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta"
+      },
+      {
+        "k": "t",
+        "v": " data equivalent to tower PD — the remainder is the structural Gram certificate; "
+      },
+      {
+        "k": "c",
+        "v": "v756"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "7/7"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "kms-incidence-cp-covariant"
+      },
+      {
+        "k": "t",
+        "v": ") — "
+      },
+      {
+        "k": "m",
+        "v": "105"
+      },
+      {
+        "k": "t",
+        "v": " explicit Kraus terms, all four compatibilities exact ("
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": ", half-weight "
+      },
+      {
+        "k": "m",
+        "v": "10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\beta{=}1"
+      },
+      {
+        "k": "t",
+        "v": " balance "
+      },
+      {
+        "k": "m",
+        "v": "7\\times10^{-18}"
+      },
+      {
+        "k": "t",
+        "v": ", Gate-0) — step 3 of the master contract SOLVED on the ramified layer; local candidate state "
+      },
+      {
+        "k": "m",
+        "v": "\\tau_{\\mathrm{inc}}\\otimes\\tau_{\\mathrm{Toeplitz}}"
+      },
+      {
+        "k": "t",
+        "v": ". THE DECORATIVE SEVEN: "
+      },
+      {
+        "k": "c",
+        "v": "v757"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "26"
+      },
+      {
+        "k": "t",
+        "v": " checks, one preregistered break, "
+      },
+      {
+        "k": "t",
+        "v": "fano-disc7-decorative"
+      },
+      {
+        "k": "t",
+        "v": ") — the preregistered four-condition Fano"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "discriminant"
+      },
+      {
+        "k": "m",
+        "v": "(-7)"
+      },
+      {
+        "k": "t",
+        "v": " test breaks exactly at condition 2: "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " splits in "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Q}(\\sqrt{-7})"
+      },
+      {
+        "k": "t",
+        "v": " so the "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": "-rank is "
+      },
+      {
+        "k": "m",
+        "v": "\\le2<3"
+      },
+      {
+        "k": "t",
+        "v": ", the code "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{F}_2"
+      },
+      {
+        "k": "t",
+        "v": "-structures are arithmetically unrealizable; the three-cycle half is real (Fano "
+      },
+      {
+        "k": "m",
+        "v": "\\bar\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "\\times2"
+      },
+      {
+        "k": "t",
+        "v": " multiplier, C corner "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " fixed point, norm "
+      },
+      {
+        "k": "m",
+        "v": "14=\\dim G_2"
+      },
+      {
+        "k": "t",
+        "v": "); the seven-correlation is permanently typed decorative. THE KEYSTONE: "
+      },
+      {
+        "k": "c",
+        "v": "v758"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "cert-continuum-root-dead"
+      },
+      {
+        "k": "t",
+        "v": ") — the review certificate [continuum root "
+      },
+      {
+        "k": "m",
+        "v": "\\oplus"
+      },
+      {
+        "k": "t",
+        "v": " Kraus] is NOT mountable, the wall IS the missing left factor (arch"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "pol PSD at no stage, Levinson break exactly between the "
+      },
+      {
+        "k": "m",
+        "v": "n{=}2"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "m",
+        "v": "n{=}3"
+      },
+      {
+        "k": "t",
+        "v": " cells ladder-wide, already "
+      },
+      {
+        "k": "m",
+        "v": "W_0"
+      },
+      {
+        "k": "t",
+        "v": " indefinite); real remain the [E] building blocks "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the corrected target shape: cell-wise cascade factorization, rescue strictly cell-ordered. CONTRACTS: "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PD.PERSISTENCE.01"
+      },
+      {
+        "k": "t",
+        "v": " gets the big dated update (induction form registered / assembled certificate closed / cell-wise factorization the named open object); "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.KMS.INDUCTIVE_STATE.02"
+      },
+      {
+        "k": "t",
+        "v": " carries the step-3-solved note. No marker moves; no RH statement anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (7)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v752_projective_hamming_incidence.py"
+        },
+        {
+          "k": "t",
+          "v": " (36), "
+        },
+        {
+          "k": "c",
+          "v": "v753_ramified_polarity.py"
+        },
+        {
+          "k": "t",
+          "v": " (25), "
+        },
+        {
+          "k": "c",
+          "v": "v754_ramodd_twostep.py"
+        },
+        {
+          "k": "t",
+          "v": " (19), "
+        },
+        {
+          "k": "c",
+          "v": "v755_simpler_schur_recursion.py"
+        },
+        {
+          "k": "t",
+          "v": " (13), "
+        },
+        {
+          "k": "c",
+          "v": "v756_kms_incidence_stinespring.py"
+        },
+        {
+          "k": "t",
+          "v": " (7), "
+        },
+        {
+          "k": "c",
+          "v": "v757_fano_disc7_bridge.py"
+        },
+        {
+          "k": "t",
+          "v": " (26, one preregistered break), "
+        },
+        {
+          "k": "c",
+          "v": "v758_simpler_certificate.py"
+        },
+        {
+          "k": "t",
+          "v": " (8). Suite "
+        },
+        {
+          "k": "m",
+          "v": "745\\to752"
+        },
+        {
+          "k": "t",
+          "v": " modules, ALL CHECKS PASSED; the one [FAIL] line in the green run (v757 C2.d) is exactly the preregistered honest break. All seven probes re-run before promotion (outputs identical modulo runtimes)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/ProjectiveHamming.lean"
+        },
+        {
+          "k": "t",
+          "v": " committed ("
+        },
+        {
+          "k": "m",
+          "v": "32"
+        },
+        {
+          "k": "t",
+          "v": " theorems, kernel "
+        },
+        {
+          "k": "c",
+          "v": "decide"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "norm_num"
+        },
+        {
+          "k": "t",
+          "v": " only, no sorry"
+        },
+        {
+          "k": "m",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": "native_decide; "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green, "
+        },
+        {
+          "k": "m",
+          "v": "3391"
+        },
+        {
+          "k": "t",
+          "v": " jobs); import added to "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lean_manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " regenerated ("
+        },
+        {
+          "k": "m",
+          "v": "73"
+        },
+        {
+          "k": "t",
+          "v": " files)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contracts."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PD.PERSISTENCE.01"
+        },
+        {
+          "k": "t",
+          "v": ": the big dated update — (i) the induction form registered (the Schur ladder on the canonical tower, v755; open need "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the structural Gram certificate per step, measured boundary data recorded), (ii) the assembled certificate a CLOSED route (the v758 keystone negative: the wall is the missing left factor), (iii) the corrected target shape (cell-wise cascade factorization) the named open object. "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KMS.INDUCTIVE_STATE.02"
+        },
+        {
+          "k": "t",
+          "v": ": dated note — step 3 (complete positivity) solved on the factorized ramified "
+        },
+        {
+          "k": "m",
+          "v": "15"
+        },
+        {
+          "k": "t",
+          "v": "-label Toeplitz layer (v756); the remainder stays exactly the compactness step."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 7 new module rows ("
+        },
+        {
+          "k": "c",
+          "v": "E8.PROJHAMMING.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HECKEPOLARITY.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HECKETWOSTEP.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.SCHURREC.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KMSSTINESPRING.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.FANODISC7.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CERTROOT.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PD.PERSISTENCE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KMS.INDUCTIVE_STATE.02"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "E8.SEAM48.01"
+        },
+        {
+          "k": "t",
+          "v": " (the v737 resolution); "
+        },
+        {
+          "k": "m",
+          "v": "828\\to835"
+        },
+        {
+          "k": "t",
+          "v": " rows."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new section “The incidence programme: five wins, one decorative seven, and the wall as the missing factor” (the "
+        },
+        {
+          "k": "m",
+          "v": "BB^{\\mathsf T}=4I+3J"
+        },
+        {
+          "k": "t",
+          "v": " formula prominent with the "
+        },
+        {
+          "k": "m",
+          "v": "2/3/4/7/15/16"
+        },
+        {
+          "k": "t",
+          "v": " design set, the v737 resolution, the keystone negative). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the symplectic code lemma added to the code sections. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": seven audit blocks."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “the incidence programme”; counters "
+        },
+        {
+          "k": "m",
+          "v": "745\\to752"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v758"
+        },
+        {
+          "k": "t",
+          "v": "; README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "752"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v758"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact lemmas are finite census/incidence statements behind explicit fences; the two honest negatives (v757, v758) are preregistered criteria firing inside green machinery; excluded on purpose: "
+        },
+        {
+          "k": "c",
+          "v": "big_picture_*"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "note_*"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "articles/"
+        },
+        {
+          "k": "t",
+          "v": ", the news-checker note and the other worker files; no marker moves; no RH statement anywhere."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-08-04",
     "dateLabel": "2026-08-04 · LVIII",
     "heading": [

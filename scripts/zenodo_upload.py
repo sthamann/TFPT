@@ -51,6 +51,8 @@ PDF_FILES = (
     "tfpt_horizon_readouts.pdf",
     "tfpt_research_contracts.pdf",
     "tfpt_safeguards.pdf",
+    "note_e8_gaussian_code.pdf",
+    "note_hilbert_polya_truncations.pdf",
     "changelog.pdf",
 )
 

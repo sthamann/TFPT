@@ -71,6 +71,8 @@ NOTES=(
   tfpt_research_contracts
   origin_theory
   tfpt_safeguards
+  note_e8_gaussian_code
+  note_hilbert_polya_truncations
   changelog
 )
 PAPERS=(

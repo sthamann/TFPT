@@ -62,32 +62,32 @@ export interface DisciplineStats {
 export const DISCIPLINE: DisciplineStats =
 {
   "ledger": {
-    "rows": 827,
-    "active": 822,
+    "rows": 849,
+    "active": 844,
     "retired": 5,
     "dist": {
-      "E": 221,
+      "E": 241,
       "C": 261,
-      "O": 295,
+      "O": 297,
       "X": 39,
       "AXIOM": 2,
       "OTHER": 9
     },
-    "killRows": 278
+    "killRows": 286
   },
   "suite": {
-    "modules": 745,
-    "checkSites": 7492,
-    "mustfailOccurrences": 2002,
-    "mustfailModules": 302,
-    "eMarks": 4133,
+    "modules": 766,
+    "checkSites": 7922,
+    "mustfailOccurrences": 2311,
+    "mustfailModules": 321,
+    "eMarks": 4141,
     "cMarks": 1449,
-    "seededModules": 119,
-    "sympyModules": 411
+    "seededModules": 132,
+    "sympyModules": 414
   },
   "contracts": {
-    "ledgerRows": 71,
-    "withKillCriteria": 46,
+    "ledgerRows": 83,
+    "withKillCriteria": 49,
     "texMentions": 22
   },
   "replay": {
@@ -111,20 +111,20 @@ export const DISCIPLINE: DisciplineStats =
   "anchors": {
     "recomputed": 5,
     "citations": {
-      "Jacobi": 30,
-      "Hecke": 23,
+      "Jacobi": 31,
+      "Hecke": 26,
       "Construction A": 3,
-      "Suzuki": 26,
-      "Weil": 68,
+      "Suzuki": 27,
+      "Weil": 76,
       "Eisenstein": 24
     },
-    "arxivModules": 53
+    "arxivModules": 54
   },
   "lean": {
     "modules": 64
   },
   "openGates": {
-    "count": 291
+    "count": 293
   }
 };
 

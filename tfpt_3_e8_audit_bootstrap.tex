@@ -4496,7 +4496,9 @@ the Ihara trio passes, scramble breaks.  \emph{The named gap}:
 \texttt{Z1} --- a self-adjoint geometric operator whose polynomial
 traces are the window moments (Hilbert--P\'olya); \texttt{Z2} would
 be RH itself: the factorisation \emph{localizes} RH
-($\to$ \texttt{PRIME.Z1.OPERATOR.01}, Offensive 5 running).  No
+($\to$ \texttt{PRIME.Z1.OPERATOR.01}, Offensive 5 running;
+sharpened 2026-08-05 with the measured qf handover constraints
+after the diagonal-Gram closure).  No
 marker move, no RH claim.
 Machine-checked: \veri{v691\_hecke\_sos.py}.
 \mE\ (Ihara factorisation, index lemma; AST zero-firewall) $+$
@@ -5638,6 +5640,459 @@ sign not.  No marker move, no RH claim.
 Machine-checked: \veri{v751\_ward\_monotone.py}.
 \mE\ (exact drift anatomy) $+$ (\textsc{measured}) (deterministic
 running; circularity typing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The projective Hamming incidence lemma
+(\texttt{E8.PROJHAMMING.01}).}
+The centerpiece of the incidence programme ($36$ checks,
+${\sim}5$\,s; verdict \textsc{proj-hamming-exact}).  From the
+concrete lattice: $h=H/4$ is $\Z[i]$-valued with hermitian Gram
+determinant $1$ (the \emph{unimodular} hermitian E8 lattice over
+$\Z[i]$); $\bar h$ alternating (doubly-even), nondegenerate ---
+$(V,\bar h)$ symplectic over $\mathbb{F}_2$ with explicit Darboux
+basis.  Core identity: $|H_y|=7$, pair intersections $3$;
+$BB^{\mathsf T}=4I+3J$ exact, characteristic polynomial
+$(x-7)(x-2)^9(x+2)^5$ --- the multiplicities $(1,9,5)$ are the
+symplectic signature (honest control: $BB^{\mathsf T}=4I+3J$ alone
+holds for any nondegenerate form).  Channel:
+$K^2=(4/49)I+(45/49)\Pi_0$ exactly ($K$ itself not psd).  NS/R as
+geometry: $\chi_{\mathrm{NSR}}=\bar h(\cdot,y_0)$ for the unique
+$\sigma$-fixed $y_0=\mathrm{FSUM}$; $248=120+128$.  The v737
+resolution: the seam-48 distribution derived exactly ($16\times$
+the $3\times5$ label table), and the $5\times48$ coordinatization
+exists via exactly one $\bar u$-invariant spread (kill explained,
+not revised).  Companion Lean module
+\texttt{ProjectiveHamming.lean} ($32$ theorems).  No marker move.
+Machine-checked: \veri{v752\_projective\_hamming\_incidence.py}.
+\mE\ (exact finite lemma; Lean companion)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The polarity match
+(\texttt{PRIME.HECKEPOLARITY.01}).}
+The Hecke layer \emph{is} the geometry ($25$ checks, ${\sim}1$\,s;
+verdict \textsc{polarity-match}).  The $15$ ramified Hecke
+hyperplanes (v738) are exactly the $\bar h$-orthogonal spaces;
+canonical bijection $y(\varphi)=\bar G^{-1}\varphi$
+(canonical-linear, not the identity); $\sigma$-functorial; deck and
+parity bit commute ($\chi$ descends to every fiber).  Canonicity
+census: of $64$ alternating forms, $28$ nondegenerate, exactly
+\emph{one} $\sigma$-invariant $=\bar h$ --- the hermitian
+derivation fixes one form without choice.  Controls fire.  No
+marker move.
+Machine-checked: \veri{v753\_ramified\_polarity.py}.
+\mE\ (exact census/bijection)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The real two-step channel
+(\texttt{PRIME.HECKETWOSTEP.01}).}
+The down-up pass is the depolarizer ($19$ checks, ${\sim}1$\,s;
+verdict \textsc{twostep-exact}).  The normalized $n\to4n$ two-step
+transport of the real ramified odd layers is \emph{exactly}
+$K^2=(4/49)I+(45/49)\Pi_0$; degree factor $196=(2\cdot7)^2$ closed
+(deck factor $4=(1+i)^2$-$\Z/2$ of both legs); $T=4B^2$; KMS
+half-weight the closed factor $1/2$ per pair, exponent-exact, no
+free scalar; the same integer matrix on all $9$ contexts; spectrum
+of $T/196$: $1$, $4/49$ ($\times14$), contraction gap $45/49$;
+$\sigma$-covariant, cone-preserving (strict Perron--Frobenius).
+Honest boundary: naive edge-label chains do \emph{not} carry $K^2$
+--- the correspondence composition is mandatory.  Controls fire.
+No marker move, no RH claim.
+Machine-checked: \veri{v754\_ramodd\_twostep.py}.
+\mE\ (exact integer transport identity)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The ramified Schur recursion
+(\texttt{PRIME.SCHURREC.01}).}
+The induction frame that fits the wall ($13$ checks, ${\sim}1$\,s;
+verdict \textsc{schur-recursion-alive}).  $S_k\succeq0$
+\emph{measured} on all $8$ ram-odd stages of the tower nesting
+($n_k=2^{2k+1}$; $\lambda_{\min}$ flat, long-double-hardened);
+Douglas trivial; the frame stands: basis $+$ Douglas $+$
+Albert/Haynsworth $+$ cofinality all exact --- the open proof need
+is exactly the structural Gram certificate $S_k=R_k^TR_k$ per step.
+Measured boundary data: the label part enters \emph{inverted}
+($\rho_k<0$, $|\rho_7|$ near $49/4$ within factor $1.34$ ---
+cross-term structure), continuum vs atoms order-$1$ comparable.
+Honest: for $\zeta$ data equivalent to tower PD.  Controls break
+immediately (scramble $-4.7\times10^3$, Epstein
+$-5.0\times10^2$ at $k=0$).  No marker move, no RH claim.
+Machine-checked: \veri{v755\_simpler\_schur\_recursion.py}.
+\mE\ (exact frame) $+$ (\textsc{measured}) (ladder positivity;
+equivalence typing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The covariant Stinespring extension
+(\texttt{PRIME.KMSSTINESPRING.01}).}
+Step 3 solved on the ramified layer ($7$ checks, ${\sim}1$\,s;
+verdict \textsc{kms-incidence-cp-covariant}).  $105$ explicit Kraus
+terms realize $K=B/7$ as a CP unital map ($\sum V^*V$ dev
+$3.3\times10^{-16}$, $K$ to $2.8\times10^{-17}$, Choi PSD); all
+four compatibilities exact: $\sigma$-covariance $0$, half-weight
+$DU=2^{-1/2}UD$ to $1.1\times10^{-16}$, $\beta=1$ detailed balance
+to $6.9\times10^{-18}$, Gate-0 to $3.3\times10^{-16}$.  Local
+candidate state
+$\tau_{\mathrm{inc}}\otimes\tau_{\mathrm{Toeplitz}}$; the remainder
+to a global state named (places/levels, arch lift, canonical UCP
+window map, compactness, Weil identification) --- exactly the
+compactness step of \texttt{PRIME.KMS.INDUCTIVE\_STATE.02}.
+[2026-08-04, the diagonal gram round: that compactness step now
+carries measured handoff evidence and an abstract Lean closure ---
+see the handoff blocks below
+(\veri{v766\_handoff\_bulk.py},
+\veri{v767\_handoff\_frequency\_gram.py},
+\veri{v768\_handoff\_tail\_weil.py};
+\texttt{GramCompactness.lean}); the surviving open object is the
+$q_f$ wall of \veri{v763\_yosida\_handoff.py}.]
+[2026-08-05, the qf offensive: the $q_f$ object is adjudicated ---
+representation gauge with a dead corner-native Gate~$3'$
+(\texttt{v769}), settled-positive levels (\texttt{v770}), a moving
+spectral edge (\texttt{v772}), and a domain-only cell cocycle
+(\texttt{v773}) --- see the five audit blocks below;
+\texttt{PRIME.GRAM.DIAGONAL.01} is closed per its own frozen
+stakes and the compactness remainder hands over to the sharpened
+\texttt{PRIME.Z1.OPERATOR.01}.]
+Control fires.  No marker move, no RH claim.
+Machine-checked: \veri{v756\_kms\_incidence\_stinespring.py}.
+\mE\ (exact Kraus construction with exact covariances)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Fano--discriminant bridge
+(\texttt{QGEO.FANODISC7.01}).}
+The seven-correlation, permanently typed ($26$ checks, ${\sim}1$\,s,
+one preregistered break; verdict \textsc{fano-disc7-decorative}).
+The preregistered four-condition test breaks exactly at condition 2:
+$2$ \emph{splits} in $\Q(\sqrt{-7})$ ($-7\equiv1\bmod8$), so every
+$2$-adic ideal quotient of $\mathcal O_{-7}$ has $2$-rank
+$\le2<3$ (complete norm-$8/16$ census) --- the code
+$\mathbb{F}_2$-structures are arithmetically unrealizable, the
+NS/R parity bit has no arithmetic carrier.  The three-cycle half is
+real and exact: equivariant lifts exist for both canonical
+difference-set Fano models, the canonical order-$3$ action is
+$x\to2x$ (the difference-set multiplier), every lift sends the
+$\bar\sigma$ fixed point to the C corner (norm $14=\dim G_2$).
+Controls fire ($x\to3x$: zero lifts; broken incidence: zero lifts).
+The seven-correlation is decorative for good.  No marker move.
+Machine-checked: \veri{v757\_fano\_disc7\_bridge.py}.
+\mE\ (exact machinery; preregistered break --- honest negative)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The certificate keystone
+(\texttt{PRIME.CERTROOT.01}).}
+The assembled certificate is not mountable ($8$ checks,
+${\sim}1$\,s; verdict \textsc{cert-continuum-root-dead}).  The
+review shape $[\text{continuum root}\oplus\text{Kraus}]$ fails on
+every stage: the arch$+$pol block is PSD \emph{nowhere}
+($\lambda_{\min}$ $-4.9\times10^{-3}$..$-3.6\times10^{2}$,
+Levinson break at cell $47$, exactly between the $n=2$ and $n=3$
+cells, ladder-wide --- v706 reproduced and sharpened); the
+continuum Schur complement is no Haynsworth object; the additive
+split fails (the order-$1$ balance sits in the cross-term); the
+rescue cascade is strictly cell-ordered (only the full family is
+PD).  The wall \emph{is} the missing left factor.  What remains:
+the exact building blocks (v752--v756) and the corrected target
+shape --- cell-wise cascade factorization, rescue order
+$n=2,3,4,5,\dots$ across the channels --- named in
+\texttt{PRIME.PD.PERSISTENCE.01}.  No marker move, no RH claim.
+Machine-checked: \veri{v758\_simpler\_certificate.py}.
+\mE\ (exact anchors) $+$ (\textsc{measured}) (ladder-wide
+negatives; keystone typing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The local bulk covariance decider
+(\texttt{PRIME.HANDOFFBULK.01}).}
+Modul 1 of the global-handoff offensive ($17$ checks, ${\sim}1$\,s;
+verdict \textsc{handoff-bulk-converges}).  The
+$\varepsilon$-regulated resolvent
+$G^\varepsilon=(A_X+\varepsilon I)^{-1}$ is the admissible
+operator-system evaluation; circle-free weak-$*$ form (rung Cauchy
+increments on the SHA-frozen battery, no $X{=}\infty$ reference, no
+zeros): all $9$ $(\varepsilon,R)$ cells pass --- rates
+$b=0.174$--$0.310$ per $X$ unit, $\varepsilon$-robust over three
+decades.  The bare $A^{-1}$ does \emph{not} stabilize ($+45\%$; the
+named negative block --- an unbounded observable); the layer
+decomposition is a cancellation balance (leading channel up to
+$1.9\times10^{12}\times$ the total defect).  Controls break on all
+rungs; PD-enforced scramble has $b=-0.927$.  The
+$\varepsilon\to0$ wall stays at the spectral edge, quantified.  No
+marker move, no RH claim.
+Machine-checked: \veri{v766\_handoff\_bulk.py}.
+\mE\ (exact Ward/freeze machinery) $+$ (\textsc{measured})
+($\varepsilon$-robust rates; wall quantified)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The growing-frequency source Gram
+(\texttt{PRIME.HANDOFFGRAM.01}).}
+Modules 2$+$3 of the offensive ($6$ checks, ${\sim}4$\,s; verdict
+\textsc{handoff-gram-converges}).  The PSD-by-construction
+frequency source Gram ($Q$ byte-hashed before any target):
+Candidate A missed the frozen rate gate honestly (cell count below
+the anti-alias degree, slope $+0.471$ territory); the predeclared
+Candidate B ($N_f=2M{+}1$) converges --- spectral errors
+$0.0855\to0.0377$ over $\dim Q$ $738\to5734$, slope $-0.369$; min
+symbol $+7.4\times10^{-3}$; final layer errors arch $0.0141$ /
+atom $0.3946$ / pole $0.4144$ (the paired-cancellation anatomy).
+Both controls fire.  No marker move, no RH claim.
+Machine-checked: \veri{v767\_handoff\_frequency\_gram.py}.
+\mE\ (frozen construction) $+$ (\textsc{measured}) (convergence
+profile)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The tail, the compatibility, the
+Weil identification (\texttt{PRIME.HANDOFFTAIL.01}).}
+One module from two probes (gates $11/13+4/4$; verdicts
+\textsc{tail-weil-partial}$+$\textsc{compat-eps3-converges}).  The
+quadrature tail \emph{terminates algebraically} (alias census
+$(M{-}1)+\mathrm{spread}\le2M$ on all $5$ windows, max tail
+$2.4\times10^{-13}$: no quadrature tail exists); all layer slopes
+$-0.365$, atom$+$pole a $10.5\times$ cancellation pair; Weil
+identification on the frozen battery
+$\kappa=0.97768\to0.99028$ within $0.0485$ (battery-limited).  The
+two frozen $\varepsilon=10^{-3}$ endpoint fails of part 1 pass the
+fresh preregistration on the deepest $36$-rung ladder under the
+oscillation-aware statistic ($b=0.178/0.186$, med5 $0.343/0.467$,
+$b_2=0.069/0.096$); first wall sign at $\varepsilon=3\times10^{-4}$
+($b_2=-0.011$, reported never gated).  Controls fire.  No marker
+move, no RH claim.
+Machine-checked: \veri{v768\_handoff\_tail\_weil.py}.
+\mE\ (algebraic tail termination) $+$ (\textsc{measured})
+(identification/compatibility; part-1 \textsc{partial} on record)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The fixed-window resolution
+classifier (\texttt{PRIME.HANDOFFRES.01}).}
+Gate 1 of the diagonal Gram round ($8$ guards, ${\sim}8$\,s;
+verdict \textsc{resolution-boundary}, Fall B on all three windows).
+$E_{\mathrm{total}}$ is constant in $q$ to $15$ digits under
+$N_f=q(2M{+}1)$, $q\in\{1,2,4,8\}$ (max drift $7.0\times10^{-14}$
+vs the frozen $10^{-7}$); alias increments pure rounding.  The
+remaining handoff error is boundary/cutoff/object-gluing, carried
+by the paired atom$+$pole channel.  No marker move, no RH claim.
+Machine-checked: \veri{v759\_handoff\_fixed\_window\_resolution.py}.
+\mE\ ($q$-invariance at rounding level) $+$ (\textsc{measured})
+(classifier)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The anti-alias exactness theorem
+(\texttt{PRIME.ANTIALIAS.01}).}
+The corrected sharp count ($14$ guards, ${\sim}7$\,s; verdict
+\textsc{antialias-corrected}).  Exact identities for
+\emph{arbitrary} $M$-cell coefficients (Parseval
+$2.0\times10^{-14}$, moments $3.5\times10^{-13}$, Gram
+$5.9\times10^{-13}$); the exact alias formula
+$t_d=\sum_r(-1)^r\hat s(rN_f-d)$ at every ladder count; the
+designed must-fail witness at $N_f=2M{-}2$ fires with error exactly
+$1$.  The sharp minimal count is $N_{f,\min}=2M{-}1$ (spread-$S$:
+$M{+}S$) --- corrected \emph{downward}; the deployed $2M{+}1$ stays
+exact, nothing patched.  Companion Lean module
+\texttt{AntiAliasExact.lean} ($19$ general-$N$ theorems).  No
+marker move, no RH claim.
+Machine-checked: \veri{v760\_antialias\_exact.py}.
+\mE\ (exact quadrature identities; Lean companion)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The paired Abel transformation
+(\texttt{PRIME.ABELPAIR.01}).}
+Gate 2, one module from two probes ($24{+}10$ checks; combined
+adjudication \textsc{abel-paired-bound}).  Stieltjes/Abel split
+exact ($6/6$ sympy certificates); matrix identity to
+$1.45\times10^{-11}$ on all $5$ windows; $E_{\mathrm{origin}}$
+closes via the W1/Suzuki bookkeeping (comb-independent).  The
+unconditional bound
+$\eta_K=|\det_K|+|\Theta_K(0)E(1)|+B_1I_K$, $B_1=3.734$ on the
+finite range $[1,24.29]$, holds for all $24$ kernels on all $5$
+rungs with pure $1/\log X$ decay --- no RH-strength input (the
+circularity flag is machine-checked).  The companion derives the
+correct breaker standard: Epstein breaks at $2.95\times$ the
+envelope ($7/24$), scramble at $262\times$, the truth passes
+$24/24$; the parent's frozen \textsc{abel-dead} stays on record as
+the calibration lesson.  Honest typing: identity and slope-$1$
+normalization are measure-generic; the certified
+$\zeta$-specificity is envelope quality $+$ measure positivity.  No
+marker move, no RH claim.
+Machine-checked: \veri{v761\_atom\_pole\_abel.py}.
+\mE\ (exact identities) $+$ (\textsc{measured}) (unconditional
+finite-range bound; derived control standard)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The canonical dense core
+(\texttt{PRIME.DENSECORE.01}).}
+The test space, certified ($26$ checks, ${\sim}2$\,s; verdict
+\textsc{dense-core-canonical}).  The countable dense family of
+dyadic boxes/hats of the $(D,X)$ tower: frozen enumeration
+(bijection certified on $n<10^5$), explicit stage map, $I_{64}$
+exact in $\Q$; admissibility located per class (hats direct, slope
+$-1.854$; the bare box fails the $r^{-2}$ criterion --- named
+caveat --- and enters only correlated/tent-read); density rates hat
+$-1.566$ / box $-0.503$ per level; exact $\Q$ correlation closure
+on $8/8$ type pairs; the $24$ battery an initial diagnostic package
+(hat 8 \emph{is} $\mathrm{hat}(2,3)$, rank $35$).  Companion Lean
+module \texttt{DenseWeilCore.lean} ($42$ theorems; honest analytic
+remainder stated).  No marker move, no RH claim.
+Machine-checked: \veri{v762\_dense\_weil\_core.py}.
+\mE\ (exact $\Q$ certificates; Lean companion) $+$
+(\textsc{measured}) (density rates)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The kernel-safe route and the $q_f$
+wall (\texttt{PRIME.YOSIDAQF.01}).}
+One module from two probes (gates $9/10+7/12$ preregistered;
+verdicts \textsc{yosida-partial}/\textsc{qf-dead}).  The bounded
+Yosida transform $Y_\varepsilon=A(A+\varepsilon I)^{-1}$ carries
+the handoff rates ($|b_Y-b_G|\le10^{-13}$; sandwich verified) with
+no $1/\varepsilon$ bound and no PD-margin assumption --- the
+circularity kill did not fire; the near-kernel converges as a
+stable object; fixed-$f$ $\varepsilon$-limits are monotone and
+contraction-certified.  The honest negative: $q_f$ (the battery
+near-kernel pairing) is non-Cauchy at honest maximal depth
+($X=15.1875$, $279849$ atoms) and survives orthogonalization by
+structural subordination ($89$--$99.9\%$ of every battery function
+in the six-mode near-kernel span) --- Gate 3 of the diagonal Gram
+round closes negatively: \emph{the $q_f$ wall} is the round's
+named wall object.  [2026-08-05: adjudicated by the qf offensive
+--- $q_f$ is representation gauge and the route closes; see the
+five blocks below.]  Controls fire.  No marker move, no RH claim.
+Machine-checked: \veri{v763\_yosida\_handoff.py}.
+\mE\ (exact operator identities) $+$ (\textsc{measured})
+(convergence profiles; honest preregistered negative)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The handoff red team
+(\texttt{PRIME.HANDOFFREDTEAM.01}).}
+One module from two probes ($16{+}8$ checks; combined verdict
+\textsc{redteam-green-combined}).  Static firewall clean (zero
+blacklist hits over all $21$ source-path functions; whitelist and
+target-field quarantine hold; source strictly before target);
+baseline reproduced exactly; $8/8$ controls break (the forbidden
+separate atom/pole accounting is destroyed at $21.5\times E^*$ ---
+the pairing is real structure).  RT6 decided: excess-mode deck
+corruptions break \emph{only} the symbol gate (min symbol
+$-0.45$..$-1.72$; the six other gates measurably blind); the
+deficit mode is caught by rate/ratio/$\kappa$ --- complementary
+gate families.  Binding note: certificates must always carry
+\emph{both} gate families.  No marker move, no RH claim.
+Machine-checked: \veri{v765\_handoff\_redteam.py}.
+\mE\ (static audit) $+$ (\textsc{measured}) (control battery; RT6
+decision)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Gate-3 audit pair
+(\texttt{PRIME.QFGAUGE.01}).}
+One module from two probes ($5/5$ gates $+$ $34/168$ cells;
+$14/14+14/14$ guards$+$controls, ${\sim}18$\,s; verdicts
+\textsc{qf-gauge}/\textsc{gate3prime-dead}).  Gate 3's full-ladder
+Cauchy demand on $q_f$ was provably \emph{stronger} than the
+diagonal contract needs: a deterministic $\varepsilon$-net
+subsequence (density $0.144$) makes all $14$ profiles Cauchy at
+the parent bars, and the contract's $E_Y$ corner objects are blind
+to $q_f$ jumps (corr $+0.038$; the $0.34$ mode-entry jump at
+routine corner level; median $\rho=1.13$) --- $q_f$ is
+representation gauge, owning the $\varepsilon$-scale distribution
+of the deficit, not the value.  But the corner-native weakened
+Gate~$3'$ dies on its own predeclared $1.6\times10^{7}$ comb
+($X=16.5625$): the corner increments fall to $X\sim12.9$ and then
+rise sustained ($+0.10$..$+0.34$ per $X$ unit at
+$\varepsilon=10^{-3}$, $0/56$ cells) --- the \texttt{v764}
+precondition is refuted at the corner level.  Controls fire.
+No marker move, no RH claim.
+Machine-checked: \veri{v769\_qf\_contract\_necessity.py}.
+(\textsc{measured}) (gauge finding; honest preregistered
+corner-level death)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The transport pair
+(\texttt{PRIME.QFBUNDLE.01}).}
+One module from two probes (gates $4/5+4/5$ with exactly the
+preregistered decider/Z fails; $19/19+14/14$ guards$+$controls,
+${\sim}28$\,s; verdicts
+\textsc{qf-bundle-partial}/\textsc{qf-settles-positive}).  The
+Kato/polar transport of the rank-6 near-kernel is well-defined
+with wide margins (rank stable, gap $6/7 = 0.34$..$0.56$, angles
+$\le2.72^{\circ}$, TV flattening) and repairs the rigid frame for
+$14/14$ functions (median med5 ratio $26.7\to1.004$); the residual
+non-Cauchy part is the frame-independent band-weight drainage
+(radial share ${\sim}0.64$) --- and that drainage was a transient:
+on the $10^{8}$ comb ($X=18.375$) the band weights plateau at
+positive per-function constants ($R2$ $0.225$--$0.358$, $R1$
+$0.008$--$0.079$; zero-bar depth $X^{*}\sim227$ = never); the
+$6/7$ gap bottoms at $0.1008$ and recovers; the holonomy exponent
+is ${\sim}1$ (step refinement closed).  The Feshbach /
+boundary-triple treatment becomes mandatory.  Controls fire.
+No marker move, no RH claim.
+Machine-checked: \veri{v770\_qf\_spectral\_bundle.py}.
+\mE\ (transport Wards at machine scale) $+$ (\textsc{measured})
+(settled levels; honest preregistered decider fail)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The representation census
+(\texttt{PRIME.QFCENSUS.01}).}
+Gates $6/12$ with exactly the preregistered fails; $26/26$
+guards$+$controls, ${\sim}12$\,s; verdict
+\textsc{qf-representation-open}.  The $6=1{+}5$ hypothesis
+$E_{qf}\cong E_{7}\oplus E_{-2}$ fails the frozen census: the
+label side is sharp ($BB^{\mathsf T}=4I+3J$ exact, spectrum
+$(1,9,5)$; of $64$ alternating forms exactly one is
+$\sigma$-invariant $=$ the canonical $\bar h$) and all $27$ wrong
+forms $+$ $5$ wrong labelings die on $\sigma$-sharpness --- but
+the deployed scalar comb realizes only two characters of $V$, no
+rank-6 lift exists, and the near-kernel is a
+continuum-vs-odd-places balance (ro-dominant count $0/6$ vs
+predicted $5$).  Honest residue: one rung-stable ram-odd contact
+direction ($\cos=0.997$) plus a second contact at $\cos\sim0.64$;
+the dimension match stays typed decorative.  Controls fire.
+No marker move, no RH claim.
+Machine-checked: \veri{v771\_qf\_representation\_census.py}.
+\mE\ (exact incidence/canonicity/character identities) $+$
+(\textsc{measured}) (angle structure; honest preregistered OPEN)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The fixed-$d$ pair
+(\texttt{PRIME.QFFESHBACH.01}).}
+One module from two probes (gates $9/12$ with exactly
+\textsc{cauchy-6}/\textsc{gap-7}/\textsc{gap-8} failing $+$
+\textsc{edge-a} fail/\textsc{edge-b} pass/KM2 quiet;
+$28/28+20/20$ guards$+$controls, ${\sim}180$\,s at full frozen
+ladders; verdicts \textsc{feshbach-partial}/%
+\textsc{edge-keeps-moving}; one declared guard-normalization
+correction, gates identical).  The $d=6$ Feshbach reduction is
+exact (reconstruction $8.8\times10^{-13}$ against independent
+dense solves) and matrix-Herglotz certified, but its Cauchy tail
+flattens where mode 7 grazes the band; $d=7$ converges strongly
+($b_2=+0.502$) but loses separation at the top rung; $d=8$ has an
+internal $8/9$ crossing.  On the $10^{9}$ comb ($X=20.6875$) the
+$7/8$ edge closes into an avoided crossing ($0.0039$ at $M=1240$,
+tail $0.0074$ vs bar $0.10$) while the transported $d=7$ block
+stays Cauchy straight through; the 9th mode enters at $M=1276$;
+the entry cadence widens ($\Delta X = 1.625/1.8125/2.625$, spread
+$0.381$).  Fixed-$d$ Feshbach is closed permanently --- band
+ownership, not convergence, is the obstruction.  Controls fire.
+No marker move, no RH claim.
+Machine-checked: \veri{v772\_qf\_feshbach\_effective.py}.
+\mE\ (exact Feshbach reconstruction; Herglotz certificates) $+$
+(\textsc{measured}) (moving edge; cadence)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The closure decider
+(\texttt{PRIME.QFCOCYCLE.01}).}
+Gates $2/8$ with exactly the six convergence-cell fails; $14/14$
+guards$+$controls, ${\sim}28$\,s; verdict
+\textsc{cocycle-domain-only}; one declared implementation
+correction (Hotelling refinement of the carried state; algebra,
+gates and bars untouched).  Structure without limit: the exact
+M\"obius/Redheffer cell identity holds at $9.7\times10^{-12}$ over
+$73$ rungs $\times$ $5$ $z$ (coefficients $=$ the added source
+rows/columns; independent dense-solve Ward $1.3\times10^{-13}$);
+every cell Schur block is PD (a monotone Loewner flow); the
+Nevanlinna/Stieltjes domain is preserved with zero breaches
+through both typed mode-entry transitions ($M=992$, $M=1108$) ---
+but no renormalized object converges at reachable depth ($0/6$
+cells).  Per the frozen stakes the diagonal Gram route closes
+(\texttt{PRIME.GRAM.DIAGONAL.01} carries the dated closure note)
+and the sharpened \texttt{PRIME.Z1.OPERATOR.01} takes over.
+Controls fire.  No marker move on evidence lines, no RH claim.
+Machine-checked: \veri{v773\_qf\_cell\_cocycle.py}.
+\mE\ (exact cell identity; domain-preservation census) $+$
+(\textsc{measured}) (convergence adjudication; closure per the
+frozen stakes)
 \par\smallskip
 
 % =====================================================================
