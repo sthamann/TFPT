@@ -93,6 +93,7 @@ import TfptCarrier.DenseWeilCore
 import TfptCarrier.AntiAliasExact
 import TfptCarrier.CellCocycle
 import TfptCarrier.ArfSpinorCompiler
+import TfptCarrier.Check32
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck

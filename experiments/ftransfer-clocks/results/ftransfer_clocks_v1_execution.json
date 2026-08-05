@@ -1,6 +1,6 @@
 {
   "contract": "FTRANSFER.CLOCKS.01",
-  "executed": "2026-08-05 11:03:34",
+  "executed": "2026-08-05 12:22:03",
   "execution_surface": "experiments-only (typed [X]; no vN module, no marker move)",
   "prereg_yaml_sha256": "880224f76380c77dce2c1e3d7651bccc9e1619e74c60b7e15326ee0ee2bbf4d0",
   "data_tables": {
