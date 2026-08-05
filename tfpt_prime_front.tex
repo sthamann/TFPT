@@ -12832,6 +12832,157 @@ import-faithful boundary coupling.  The merged target is named
 cross-referenced note); nothing beyond $X=20.3125$ is claimed, and
 \textbf{no statement about the Riemann Hypothesis is made}.
 
+\subsection{The positive protocol: the prime channel as a positive
+routing code, and what the descent still needs}
+\label{sec:positive-protocol}
+
+The next promotion wave lands the 2-adic skeleton of the cusp
+channel at theorem grade, decides two preregistered structure
+questions negatively, and delivers the first finite-level version
+of the completely positive descent --- seven modules, every claim
+behind an explicit fence, no marker moves, \textbf{no statement
+about the Riemann Hypothesis}.
+
+\emph{The check32 theorem}
+(\veri{v785\_hecke\_check32.py}, $20/20$,
+\textsc{check32-theorem}): $f_8=\eta(2\tau)^4\eta(4\tau)^4\equiv
+E_{\rm odd}=\sum_{n\ \rm odd}\sigma_3(n)\,q^n\pmod{32}$, verified
+coefficientwise to $q^{100000}$ --- $25000\times$ the Sturm bound
+$(4/12)\,[\mathrm{SL}_2(\Z):\Gamma_0(8)]=4$, so the theorem-grade
+reading needs exactly \emph{one} cited classical ingredient (Sturm
+1987); the corollary $a_p\equiv1+p^3\pmod{32}$ holds on all $9591$
+odd primes $p<10^5$ with the explicit decoder
+$p\equiv(a_p-1)^3\pmod{32}$ (the cube map is a bijection on the
+$16$ odd residues), mod $64$ fails at $q^3$ (maximality), and the
+controls quantify the checksum reading (mutant failure fraction
+$91.7\%$; random growth-matched detection ${\sim}31/32$).  The
+finite kernel is Lean-checked
+(\texttt{TfptCarrier/Check32.lean}, $13$ kernel theorems).
+$32=2^{\gcar}$ stays a typed \emph{observation}.
+
+\emph{The positive $C_2$ lift}
+(\veri{v788\_positive\_c2\_lift.py}, $42/42$,
+\textsc{c2lift-theorem}): the signed congruence is upgraded to a
+\emph{positive} decomposition ---
+$A=(E_{\rm odd}+f_8)/2=\tfrac1{16}\theta_2(2\tau)^4
+\theta_3(4\tau)^4$ and
+$B=(E_{\rm odd}-f_8)/2=\tfrac1{16}\theta_2(2\tau)^4
+\theta_2(4\tau)^4$ are theta series with nonnegative integer
+coefficients, $B=16R$ with the closed convolution
+$R(2m{+}3)=\sum_j\sigma_1(2m{-}4j{+}1)\,\sigma_1(2j{+}1)$ and the
+$\mathbb N^8$ microstate count over triangular numbers
+(degeneracies $1,4,10,24,43$), and the eta-free generator
+$a_n=\sigma_3(n)-32R(n)$ reproduces \emph{every} odd $f_8$
+coefficient: check32 becomes a kernel \emph{corollary} of the
+lift (Lean: \texttt{PositiveC2Lift.lean}, build green).  On top
+sits the $C_2$ packet automaton
+($M_n=\bigl(\begin{smallmatrix}A&B\\B&A\end{smallmatrix}\bigr)$,
+Hadamard-diagonalized to $2\,\mathrm{diag}(\sigma_3,a_n)$, XOR
+composition censused on $41053$ coprime pairs $+$ $70$ prime
+powers) and the five-condition packet validator: joint detection
+$1.000000$ against growth-matched random packets, and the
+consistent-tamper blind spot is \emph{exactly} the $16\Z$ lattice
+($15/16$ detection) --- the honest scope of the mod-16/mod-32
+screens.
+
+\emph{The multirate ladder and its proof}
+(\veri{v789\_multirate\_constdepth.py}, $23/23+24/24$,
+\textsc{multirate-theorem}/\textsc{spinlift-verified} $+$
+\textsc{constdepth-theorem}): the full 2-adic depth law
+$v_2(1{+}p^3{-}a_p)\ge5+2[\chi_{-4}(p){=}1]+[\chi_8(p){=}1]$ is
+census-clean on all $78497$ odd primes $p<10^6$ with sharpness
+attained per class (witnesses $3/7/5/17$; depths $5/6/7/8$); the
+character sifts I0--I3 are Sturm-certified at level $\le512$, the
+predeclared mod-512 must-fail fires at $n=9$, and the constant
+depths of classes $3$ and $5\bmod8$ are \emph{proven}: the
+multirate weights $(1,-3,2)$ telescope to the both-odd convolution,
+class $3$ is pinned by the essentially unique $x^2+2y^2$
+representation and class $5$ by the ternary bridge
+$R_3(p)/8\equiv\#\{x^2+4w^2=p\}=1\pmod2$ --- elementary except two
+named class-number-one ingredients (disc $-8$ and $-4$, both
+$h=1$), whose instances are machine-verified.  The Shimura lift of
+the \texttt{v537} witness acquires its ladder form
+$\mathrm{Sh}_{t=2}(g)=-8E_{\rm odd}+256H$ (exact to $160$), and
+the lift's Kronecker factor $(2/d)$ \emph{is} $\chi_8$ --- the
+same character that rules the ladder's third rung.  The
+$32\to256\to128$ semantics stays a [C~neu] observation.
+
+\emph{The arrow ledger and the broadcast}
+(\veri{v787\_hecke\_arrow\_broadcast.py}, $48/48+21/21$,
+\textsc{arrow-ledger-structured}/\textsc{broadcast-exact}): kept
+at arrow resolution instead of trace resolution, the ramified
+layer \emph{is} the $15$ polar labels ($\sigma$-equivariant, $7$
+NS $+8$ R), every ramified arrow meets the certified spread in
+census $(3,1,1,1,1)$ at its own polar label, the label-resolved
+two-step collapses to $T/196=(4/49)I+(45/49)\Pi_0$ exactly with
+the $105$ leg classes equal to the \texttt{v756} Kraus index set
+(weight $(7^{-1/2})^4$), and the trace collapse now derives
+$a_7=+24$ \emph{with sign} from the full $137600$-line Kneser
+census.  On the odd shells the joint (class $\times$ glue) census
+factorizes exactly as $\bar T_n=M_n\otimes I_{16}$ --- place $2$
+as control plane, odd primes broadcasting $\sigma_3(n)$ full
+16-state copies of the root packet, $B_n=16R(n)$ arrow-exactly,
+with the new identities $b=2A_p$ and $n_B=A_pB_p/2$; the
+``routing code'' wording stays a [C~neu] reading of an exact
+finite factorization, the entropy numbers are distribution
+measurements (no decoded message), and the honest negative is on
+record ($R(p)$ is \emph{not} the type-B Weyl orbit count at
+$p=7$).
+
+\emph{Two preregistered adjudications}: the packet-480 header
+(\veri{v786\_prime\_packet480.py}, $28/28$,
+\textsc{packet480-address-only}) is exact 7-bit address
+arithmetic --- $\mathrm{Header}(p)=(p\bmod30,\,a_p\bmod32)$,
+CRT-equivalent to $p\bmod480$ with all $\varphi(480)=128$ classes
+hit --- but the sharp intertwiner question dies as preregistered:
+$(\Z/480)^\times$ has exponent $8$, the canonical spinor torsor
+group $\mathbb F_2^7$ has exponent $2$, only $3$ of $7$ bits are
+realizable, and the $128$ \emph{stays a fingerprint}.  The SNF
+fingerprint and the $\mu_4$ packet
+(\veri{v790\_snf\_mu4\_theta.py}, $18/18+17/17$,
+\textsc{snf-fingerprint}/\textsc{mu4-partial}): the correction
+theta's quadratic form has $256R(n)$ as its odd-vector
+representation numbers and its SNF $(1^4,2^4)$ matches the
+ramified inclusion $(1{+}i)L\subset L$ exactly, but the isometry
+census is \emph{empty} at every admissible level (kissing $240$ vs
+$8$; $0/20160$ on the quotient, alternating vs odd form; the naive
+$4{+}4$ split inadmissible by the replicated \texttt{v638}
+theorem) --- a fingerprint, honestly typed; and the new exact
+identity $c_{\rm sig}=\tfrac1{15}E_4(q^2)-\tfrac65E_4(q^4)
++\tfrac{32}{15}E_4(q^8)-8f_8$ places the cusp packet in the
+\emph{quartic} $\mu_4$ character with the exact normalization
+$-8=52-60=-\mathrm{rank}(E_8)$, while the quadratic ($C_2$)
+channel is pure Eisenstein and the all-shell quartic vanishing is
+decidably false (closed series $\prod(1{+}q^{2n})^{-4}$).
+
+\emph{The positive descent, and what it still needs}
+(\veri{v791\_positive\_descent.py}, $30/30$,
+\textsc{descent-partial}): work in the positive algebra
+$\mathbb N[C_2]\otimes\mathbb N[\mathbb F_2^4]\otimes
+\mathbb N[\mu_4]$, build the state there, apply the sign
+characters only after.  The packet GNS state is \emph{manifestly}
+positive at every depth (verified in exact rationals; the naive
+linear pushforward is \emph{not} a state --- finding F1,
+quantified: signedness is observer projection); the GL1 sign
+sector of the packet correspondence operator is \emph{bit-identical}
+to the deployed Weil window and is its \emph{unique} PSD sector of
+all $24$ (finding F2): every damped or twisted sector breaks
+because the register-trivial continuum cannot follow the atom leg
+--- the breaking tensor factor is the \emph{continuum/pole leg},
+not $C_2$, $\mathbb F_2^4$ or $\mu_4$.  The contract
+\texttt{PRIME.POSITIVE\_DESCENT.01} is registered \emph{open} [O]
+with three demanded objects: (1) \emph{sector-adapted continua}
+(the twisted-channel explicit formulas; the $f_8$-sector
+continuum is the finite-level falsifier), (2) \emph{GL1-sector PSD
+persistence} in the \textsc{z1-compactness} frame of
+\vref{sec:z1-trilogy} --- Weil positivity retyped as ``the sign
+sector of a manifestly positive packet object stays PSD'' --- and
+(3) \emph{the carrier intertwiner} (population $\leftrightarrow$
+carrier register, the one non-CP-trivial step).  Stop conditions
+and finite-level falsifiers are named in the contract row;
+demands (1) and (3) without (2) are decorative.  \textbf{No
+statement about the Riemann Hypothesis is made.}
+
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
 The P4 main strike (\veri{v712\_rank3\_transverse\_deck.py}, $5/5$)

@@ -100,7 +100,7 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::How to read this document::1": {
-  "hash": "13992fee6737",
+  "hash": "dcbddf59b728",
   "date": "2026-08-05"
  },
  "tfpt_1_architecture_e8::section::Headline: the Pascal compiler on five carrier slots::1": {
@@ -464,7 +464,7 @@
   "date": "2026-06-23"
  },
  "tfpt_2_standard_model::section::The explicit mass gap closes dynamics and clustering::1": {
-  "hash": "239953864e32",
+  "hash": "3a43b43fd750",
   "date": "2026-08-05"
  },
  "tfpt_2_standard_model::section::The seam elliptic complex is Fredholm (APS)::1": {
@@ -524,7 +524,7 @@
   "date": "2026-06-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
-  "hash": "8dfb8f5de657",
+  "hash": "ef6d949b9344",
   "date": "2026-08-05"
  },
  "tfpt_3_e8_audit_bootstrap::section::Further audit lemmas (machine-verified this round)::1": {
@@ -724,7 +724,7 @@
   "date": "2026-08-01"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "d0ada4596415",
+  "hash": "2ee8c3dccfce",
   "date": "2026-08-05"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {

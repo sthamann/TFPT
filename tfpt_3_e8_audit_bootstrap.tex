@@ -6296,6 +6296,252 @@ Machine-checked: \veri{v780\_z1\_compactness\_trilogy.py}.
 (compactness carried; selection open)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The $d=4$ forcing census and the
+clock kill (\texttt{E8.ONEOBJECT.01}).}
+One module from two probes ($21/21+23/23$; verdicts
+\textsc{one-object-partial}/\textsc{clock-fiber-dead}).  The TFPT
+glue pattern (cyclic isotropic glue, evenness $q\equiv0$ mod $2\Z$,
+unimodularity $|H|^2=4d$) admits an even unimodular \emph{diagonal}
+glue of $A_{d-1}\oplus D_{d+1}$ iff $d=4$ (exact Fraction census,
+$d=2..12$): at $d=4$ exactly the two \texttt{v92} Lagrangians
+($k\mapsto k$, $k\mapsto 3k$) with the explicit $E_8$ certificate
+($\det=1$, $240$ norm-2 vectors); $d=9$ dies at isotropy; both
+relaxation controls fire.  Corollaries at the forced $d$:
+$\gcar=d{+}1=5$, $\Nfam=d{-}1=3$, rank $2d=8$, index
+$4=d=|\mu_4|$.  Honesty gate: $c_3=1/(2\pi d)|_{d=4}=1/(8\pi)$ is a
+corpus-legitimate rewriting (\texttt{v23} anchor), \emph{not} a new
+derivation of P1.  The clock kill: the fiber product
+$\Z_{12}\times_{\Z_6}\Z_{30}$ cannot act on the $60$ Gaussian lines
+--- the full line-compatible group has order $23040$ with maximal
+element order $12$ (orders $15/30/60$ absent for every
+realization); the fiber product is cyclic $\Z_{60}$ (exact SNF).
+No marker move, no RH claim.
+Machine-checked: \veri{v781\_one\_object\_clock\_census.py}.
+\mE\ (exact census $+$ exact kill; $c_3$ link typed interpretation)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The transition-bus torsor
+(\texttt{E8.TRANSITIONBUS.01}).}
+One probe ($35/35$; verdict \textsc{transition-bus-torsor}).  The
+$240$ roots are $15$ disjoint coordinate $8$-frames over
+$V=L/(1{+}i)L$; on $L/2L$ the $120$ root pairs are exactly the
+$120$ $q=1$ points of the plus-type quadratic space, and each class
+fiber is a canonical torsor under $v^\perp$ (affine $\mathbb F_2^3$,
+no distinguished origin); $J$ acts as translation by $v$.  The
+obstruction census is proof-grade: no deck-equivariant root-level
+labeling $R(E_8)=V\times(V\setminus0)$ exists.  The frozen
+symplectic predicate reproduces all $57600$ ordered inner products
+(sign law included; $h$-refinement); spread layer
+$240=5\times3\times16$ with the $q^{*}$ selector; the $A_{15}$
+comparison is quantified (a strict bus \emph{with} a start state;
+$E_8$ provably has none; cross-class non-orthogonality exactly
+doubled).  Controls fire (the C3 control-design correction
+disclosed).  No marker move, no RH claim.
+Machine-checked: \veri{v782\_e8\_transition\_bus.py}.
+\mE\ (exact structure theorem; bus language stays interpretation)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The two-qubit Clifford identification
+(\texttt{E8.CLIFFORD2Q.01}).}
+One probe ($32/32$; verdict \textsc{clifford-partial(h4)}).  Under
+the single predeclared chart the $60$ Gaussian lines \emph{are} the
+$60$ pure two-qubit stabilizer rays, entry-exactly over $\Z[i]$
+($60/60$; support census $4+24+32$); $UG_{31}U^{-1}$ is an index-2
+subgroup of the Clifford matrix group ($92160=2\times46080$, coset
+$\zeta_8G_{31}$; projectively equal); $46080=4\times16\times720$
+carries the semantics $\mu_4\times\mathrm{Pauli}_{16}\times
+Sp(4,2)$, classes $=$ Pauli contexts, spreads $=$ MUB pentads.  H4
+fails as predeclared: the index bit is the Galois
+$\sqrt2$/Hadamard bit, not $J\leftrightarrow-J$ (that is the
+separate antiunitary outer $\Z_2$).  All controls fire (T-gate
+twist exactly the predeclared $16/60$).  Carrier mathematics only;
+the fired \textsc{rootclass-mixed} kill is unaffected.  No marker
+move, no RH claim.
+Machine-checked: \veri{v783\_two\_qubit\_clifford.py}.
+\mE\ (H1--H3 exact) $+$ (\textsc{measured}) (H4 honest partial)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The curve/code 2-torsion decider
+(\texttt{CURVE.CODE.2TORSION.01}).}
+One probe ($33/33$; verdict \textsc{curve-code-partial}).  The
+frozen CM route through $y^3=x^4-1$: every generator period
+certified as an integral $\Z[\zeta_{12}]$ recognition (dps $120$,
+HNF index $1$); $\tau=\zeta^4$ derived as the only order-3 class;
+minimal odd $\tau$-invariant polarization type $(1,3)$ (no
+principal form; unit-sign obstruction); $q_\Theta$ the unique
+$\tau$-fixed refinement.  The correspondence dies at two exact
+layers: $\tau$ acts freely (cycle type $[3,3]$ on the six odd theta
+characteristics, syntheme side) vs $\bar\sigma$ fixing a 2-plane
+($[3,1,1,1]$, duad side) --- exchanged only by the outer $S_6$
+automorphism; and $q_\Theta$ is even (Arf $0$, $1{+}6{+}9$) while
+$q^{*}$ is odd (Arf $1$, $1{+}5{+}10$).  Joint census $0$ with
+positive control $6$; all controls fire.  No marker move, no RH
+claim.
+Machine-checked: \veri{v784\_curve\_code\_2torsion.py}.
+\mE\ (exact finite algebra; certified periods; both kill layers
+named)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The check32 theorem
+(\texttt{HECKE.CARRIER\_CHECK32.01}).}
+One probe ($20/20$, ${\sim}40$\,s; verdict
+\textsc{check32-theorem}).  $f_8=\eta(2\tau)^4\eta(4\tau)^4\equiv
+E_{\rm odd}=\sum_{n\ \rm odd}\sigma_3(n)q^n\pmod{32}$, verified to
+$q^{100000}=25000\times$ the Sturm bound $4$ (Sturm 1987 the one
+cited classical ingredient); corollary $a_p\equiv1+p^3\pmod{32}$
+on all $9591$ odd primes $p<10^5$ with the decoder
+$p\equiv(a_p-1)^3\pmod{32}$ (cube bijection on the $16$ odd
+residues); maximality: mod $64$ fails at $q^3$ ($252/1000$
+census); $32=2^{\gcar}$ typed observation; Hecke grammar clean
+(ramified $U_2$ law; harness amendment disclosed); controls fire
+(mutant $91.7\%$; random detection ${\sim}31/32$).  Lean kernel
+companion \texttt{Check32.lean} ($13$ theorems).  No marker move,
+no RH claim.
+Machine-checked: \veri{v785\_hecke\_check32.py}.
+\mE\ (theorem modulo the one cited Sturm ingredient; Lean
+companion)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The packet-480 adjudication
+(\texttt{PRIME.PACKET480.01}).}
+One probe ($28/28$; verdict \textsc{packet480-address-only}; the
+kill fired as preregistered).  $\mathrm{Header}(p)=(p\bmod30,\,
+a_p\bmod32)$ is exact 7-bit address arithmetic (CRT to $p\bmod
+480$; $\varphi(480)=128=8\times16$ classes, all hit; decoder via
+the check32 congruence recomputed independently) --- but
+$(\Z/480)^\times$ (type $2.2.4.8$, exponent $8$) admits no faithful
+canonical action on the $128$ $E_8$ spinor roots (canonical torsor
+group $\mathbb F_2^7$, exponent $2$); $3$ of $7$ bits realizable;
+maximal canonical action $=$ the order-8 graded image
+$\langle\mu_4,\varepsilon_{67}\rangle$; the $128$ stays a
+fingerprint.  Controls fire; \textsc{rootclass-mixed} fences every
+matter-adjacent reading.  No marker move, no RH claim.
+Machine-checked: \veri{v786\_prime\_packet480.py}.
+\mE\ (exact address arithmetic) $+$ \mX\ (preregistered kill fired)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The arrow ledger and the broadcast
+(\texttt{HECKE.ARROW\_MESSAGE.01}).}
+One module from two probes ($48/48+21/21$; verdicts
+\textsc{arrow-ledger-structured}/\textsc{broadcast-exact}).  The
+$15$ ramified arrows are the $15$ polar labels
+$\sigma$-equivariantly ($7$ NS $+8$ R); spread census
+$(3,1,1,1,1)$ with the 3-block at the polar label; the two-step
+ledger collapses label-resolved to $T/196=(4/49)I+(45/49)\Pi_0$
+exact, $T=4B^2$, the $105$ leg classes $=$ the \texttt{v756} Kraus
+index set with weight $(7^{-1/2})^4$; the trace collapse is exact
+with $a_7=+24$ now sign-derived (full $137600$-line census);
+$n_B=(\sigma_3^2-a_p^2)/8$; the entropy accounting is a typed
+distribution measurement (no decoded message).  The broadcast: on
+every odd shell $n\in\{3,\dots,13\}$ the joint census factorizes
+exactly as $\bar T_n=M_n\otimes I_{16}$ with $B_n=16R(n)$
+arrow-exactly; new identities $b=2A_p$ and $n_B=A_pB_p/2$; honest
+negative: $R(p)\neq$ the type-B Weyl orbit count at $p=7$
+($13\neq10$).  All controls fire.  No marker move, no RH claim.
+Machine-checked: \veri{v787\_hecke\_arrow\_broadcast.py}.
+\mE\ (exact ledger/factorization identities) $+$ [C~neu] (channel
+reading fenced)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The positive $C_2$ lift
+(\texttt{HECKE.POSITIVE\_C2\_LIFT.01}).}
+One probe ($42/42$, ${\sim}200$\,s; verdict
+\textsc{c2lift-theorem}).  $A=(E_{\rm odd}+f_8)/2$ and
+$B=(E_{\rm odd}-f_8)/2$ are positive theta series
+($\tfrac1{16}\theta_2(2\tau)^4\theta_3(4\tau)^4$ and
+$\tfrac1{16}\theta_2(2\tau)^4\theta_2(4\tau)^4$; verified to
+$q^{50000}$); $B=16R$ with the closed convolution and the
+$\mathbb N^8$ microstate count (degeneracies $1,4,10,24,43$); the
+eta-free generator $a_n=\sigma_3(n)-32R(n)$ reproduces every odd
+$f_8$ coefficient --- check32 becomes a kernel corollary; symbolic
+layer sympy-exact, classical citations typed and machine-verified;
+the packet automaton composition laws censused on $41053$ coprime
+pairs $+$ $70$ prime powers; the five-condition validator passes
+all odd primes $<10^5$ with joint detection $1.000000$ and the
+tamper blind spot exactly the $16\Z$ lattice ($15/16$); controls
+fire (wrong factors $16/64$ fail at $q^3$); two harness amendments
+disclosed; sheet-parity readings [C~neu] fenced.  Lean kernel
+companion \texttt{PositiveC2Lift.lean} (build green, $3406$ jobs).
+No marker move, no RH claim.
+Machine-checked: \veri{v788\_positive\_c2\_lift.py}.
+\mE\ (theorem-grade decomposition $+$ automaton) $+$
+(\textsc{measured}) (detection power)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The multirate ladder and its proof
+(\texttt{HECKE.MULTIRATE2ADIC.01} $+$
+\texttt{HECKE.CONSTDEPTH.01}).}
+One module from two probes ($23/23+24/24$, ${\sim}200$\,s; verdicts
+\textsc{multirate-theorem}/\textsc{spinlift-verified} and
+\textsc{constdepth-theorem}).  The ladder
+$v_2(1{+}p^3{-}a_p)\ge5+2[\chi_{-4}(p){=}1]+[\chi_8(p){=}1]$ holds
+for all $78497$ odd primes $p<10^6$ with sharpness attained per
+class (witnesses $3/7/5/17$; depths $5/6/7/8$); character sifts
+I0--I3 Sturm-certified at level $\le512$; the predeclared mod-512
+must-fail fires at $n=9$; the Shimura lift
+$\mathrm{Sh}(g)=-8E_{\rm odd}+256H$ is exact to $160$ with
+Kronecker factor $\chi_8$ (the ladder's third rung); the
+$32\to256\to128$ semantics stays [C~neu] observation.  The proof:
+the weights $(1,-3,2)$ telescope to the both-odd convolution;
+class $3\bmod8$ pinned by the unique $x^2+2y^2$ ($h=1$)
+$\Rightarrow v_2=5$ exactly; class $5\bmod8$ by the ternary bridge
+$R_3(p)/8\equiv\#\{x^2+4w^2=p\}=1\pmod2$ ($h=1$)
+$\Rightarrow v_2=7$ exactly; two named classical ingredients
+[N1]/[N2], instances machine-verified; $10^6$ census with zero
+exceptions; composites violate as required.  No marker move, no RH
+claim.
+Machine-checked: \veri{v789\_multirate\_constdepth.py}.
+\mE\ (ladder modulo two cited ingredients; constant depths proven)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The SNF fingerprint and the $\mu_4$
+packet (\texttt{HECKE.SNF\_THETA.01} $+$
+\texttt{HECKE.MU4\_PACKET.01}).}
+One module from two probes ($18/18+17/17$; verdicts
+\textsc{snf-fingerprint}/\textsc{mu4-partial}).  The correction
+theta has the representation identity
+$256R(n)=\#\{\text{odd }(u,v):Q=4n\}$ and its SNF $(1^4,2^4)$
+matches the ramified inclusion $(1{+}i)L\subset L$ exactly --- but
+the isometry census is empty at every admissible level (kissing
+$240$ vs $8$, proof-grade; $0/20160$ $GL(4,\mathbb F_2)$,
+alternating vs odd form; the naive $4{+}4$ split inadmissible by
+the replicated \texttt{v638} theorem): a fingerprint, not an
+isometry.  The adjudication: the new exact identity
+$c_{\rm sig}=\tfrac1{15}E_4(q^2)-\tfrac65E_4(q^4)
++\tfrac{32}{15}E_4(q^8)-8f_8$ --- the cusp part of the quartic
+$\mu_4$ character is exactly $-8f_8$ with $-8=52-60=
+-\mathrm{rank}(E_8)$; the quadratic ($C_2$) channel is pure
+Eisenstein; the all-shell quartic vanishing is false (closed
+series $\prod(1{+}q^{2n})^{-4}$, fails from grade $2$).  Controls
+fire.  No marker move, no RH claim.
+Machine-checked: \veri{v790\_snf\_mu4\_theta.py}.
+\mE\ (exact identities; census honestly empty) $+$ [C~neu]
+(readings fenced)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The positive descent
+(\texttt{PRIME.POSITIVE\_DESCENT.01}).}
+One probe ($30/30$ incl.\ the $5$ must-fire controls; verdict
+\textsc{descent-partial}; the declared run-1 $\to$ run-2
+calibration carried verbatim).  The packet GNS state on
+$\mathbb N[C_2]\otimes\mathbb N[\mathbb F_2^4]\otimes
+\mathbb N[\mu_4]$ is manifestly positive at every depth (all $128$
+character values $\ge0$ exactly on the Fraction leg); the naive
+linear pushforward is \emph{not} a state (F1: $-6.6\times10^{-2}$,
+depth-flat --- signedness is observer projection); the GL1 descent
+is bit-identical to the deployed Weil window (rel
+$6\times10^{-16}$) and is its unique PSD sector of $24$ (F2: the
+breaking tensor factor is the continuum/pole leg, not the
+registers; arch-only flat vs arch$+$pole falling).  The three-object
+contract is registered open [O]: sector-adapted continua /
+GL1-sector PSD persistence in the \textsc{z1-compactness} frame /
+the carrier intertwiner.  All controls fire.  No marker move, no
+RH claim.
+Machine-checked: \veri{v791\_positive\_descent.py}.
+(\textsc{measured}) (exact-rational positivity; unique PSD sector)
+$+$ \mO\ (three-object contract registered)
+\par\smallskip
+
 % =====================================================================
 \section{Further audit lemmas (machine-verified this round)}
 % =====================================================================

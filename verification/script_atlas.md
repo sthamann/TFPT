@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`773` registered scripts · `855` ledger claims · `10` clusters.
+`784` registered scripts · `866` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (293 scripts)
+### `core` — Compiler core & the E₈ glue  (304 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -597,6 +597,28 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v746_phys_gnet_local_functor, v726_phys_car_pp_index, v125_glue_qsystem, v154_simple_current_theorem, v774_arf_spinor_compiler, v746, v726, v754 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v780_z1_compactness_trilogy** [O] `PRIME.Z1.COMPACTNESS.01` — **Z1-SIGNATURE-PARTIAL + Z1-TRIPLE-PARTIAL + Z1-VAREDGE-PARTIAL (Gates 3/4 + 1/4 + Legs 3/6 mit EXAKT den präregistrierten Fails; Guards+Controls 20/20 + 23/23 + 23/23; ~270 s): di
   - deps: PRIME.Z1.OPERATOR.01, PRIME.KMS.INDUCTIVE_STATE.02, v773_qf_cell_cocycle, v772_qf_feshbach_effective, v771_qf_representation_census, v770_qf_spectral_bundle, v696, v718 · cited: 3 e8 audit bootstrap, research contracts
+- **v781_one_object_clock_census** [E/X] `E8.ONEOBJECT.01` — **ONE-OBJECT-PARTIAL + CLOCK-FIBER-DEAD (21/21 + 23/23): das TFPT-Glue-Muster (zyklische isotrope Verklebung, Geradheit q = 0 mod 2Z, Unimodularität |H|² = 4d) lässt eine gerade un
+  - deps: v1, v23, v53, v92, v623, v629, v633, v634 · cited: 1 architecture e8, 3 e8 audit bootstrap
+- **v782_e8_transition_bus** [E] `E8.TRANSITIONBUS.01` — **TRANSITION-BUS-TORSOR (35/35): die 240 Wurzeln des unimodularen hermiteschen Gauß-E8 sind 15 disjunkte Koordinaten-8-Rahmen über der Klassenabbildung V = L/(1+i)L; auf L/2L sind 
+  - deps: v752, v689, v774_arf_spinor_compiler, v775_gaussian_class_d5_purity · cited: 1 architecture e8, 3 e8 audit bootstrap
+- **v783_two_qubit_clifford** [E] `E8.CLIFFORD2Q.01` — **CLIFFORD-PARTIAL(H4) (32/32): unter der EINEN vordeklarierten Karte U (Koordinaten-Klassen-Rahmen -> Rechenbasis, z_k = r_{2k} + i r_{2k+1}) SIND die 60 Gauß-E8-Linien die 60 rei
+  - deps: v689, v752, v634, E8.GAUSSIAN.CODE.01, v775_gaussian_class_d5_purity · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
+- **v784_curve_code_2torsion** [E] `CURVE.CODE.2TORSION.01` — **CURVE-CODE-PARTIAL (33/33): die eingefrorene CM-Modell-Route durch die Naht-Kurve y³ = x⁴ − 1 (exakte Differentialcharaktere zeta^11, zeta^7 = v610; JEDE Generator-Periode als ga
+  - deps: v610, v611, v752, v753, v774_arf_spinor_compiler, v775_gaussian_class_d5_purity · cited: 1 architecture e8, 3 e8 audit bootstrap
+- **v785_hecke_check32** [E] `HECKE.CARRIER_CHECK32.01` — **CHECK32-THEOREM (20/20, ~40 s): f8 = eta(2t)⁴ eta(4t)⁴ ≡ E_odd = Σ_{n ungerade} sigma3(n) qⁿ (mod 32), koeffizientenweise bis q^100000 = 25000× die Sturm-Schranke 4 — Sturm 1987 
+  - deps: v535_hecke_from_geometry, v535, v774_arf_spinor_compiler · cited: 3 e8 audit bootstrap
+- **v786_prime_packet480** [E/X] `PRIME.PACKET480.01` — **PACKET480-ADDRESS-ONLY (28/28; FROZEN_SPEC vor allen Daten gehasht; der Kill feuert wie präregistriert): Header(p) = (p mod 30, a_p mod 32) ist EXAKTE 7-Bit-Adress-Arithmetik — C
+  - deps: v785_hecke_check32, v223, v774, v775, v702, v702_z1_lookahead · cited: 3 e8 audit bootstrap
+- **v787_hecke_arrow_broadcast** [E] `HECKE.ARROW_MESSAGE.01` — **ARROW-LEDGER-STRUCTURED + BROADCAST-EXACT (48/48 + 21/21): jeder einzelne Hecke-Pfeil unter den Korpus-Spuren trägt sein volles Label-Tupel, exakt — die 15 ramifizierten Pfeile S
+  - deps: v738, v754, v756, v752, v535, v535_hecke_from_geometry, v775_gaussian_class_d5_purity · cited: 3 e8 audit bootstrap
+- **v788_positive_c2_lift** [-] `HECKE.POSITIVE_C2_LIFT.01` — **C2LIFT-THEOREM (42/42, ~200 s): A = (E_odd + f8)/2 = (1/16) theta2(2t)⁴ theta3(4t)⁴ und B = (E_odd − f8)/2 = (1/16) theta2(2t)⁴ theta2(4t)⁴ sind POSITIVE Theta-Reihen (nichtnegat
+  - deps: v785_hecke_check32, v535, v535_hecke_from_geometry · cited: 3 e8 audit bootstrap
+- **v789_multirate_constdepth** [E] `HECKE.MULTIRATE2ADIC.01` — **MULTIRATE-THEOREM / SPINLIFT-VERIFIED + CONSTDEPTH-THEOREM (23/23 + 24/24, ~200 s): v_2(1 + p³ − a_p) ≥ 5 + 2[chi_{−4}(p) = 1] + [chi_8(p) = 1] für ALLE 78497 ungeraden Primzahle
+  - deps: v785_hecke_check32, v537_halfintegral_bridge, v535, v537, v541_matching_lemma_ledger · cited: 3 e8 audit bootstrap
+- **v790_snf_mu4_theta** [E] `HECKE.SNF_THETA.01` — **SNF-FINGERPRINT + MU4-PARTIAL (18/18 + 17/17): die Korrektur-Theta H(q) = q³ psi(q²)⁴ psi(q⁴)⁴ hat die Darstellungs-Identität 256 R(n) = #{ungerade (u,v) ∈ Z⁸ : Q = 4n} (direkte 
+  - deps: v689, v752, v638, v535, v536, v537, v775_gaussian_class_d5_purity · cited: 3 e8 audit bootstrap
+- **v791_positive_descent** [O] `PRIME.POSITIVE_DESCENT.01` — **DESCENT-PARTIAL (30/30 inkl. 5 Muss-Kontrollen; die deklarierte Lauf-1 -> Lauf-2-Kalibrierung wörtlich getragen): der Paket-GNS-Zustand auf N[C2] ⊗ N[F2⁴] ⊗ N[mu4] ist MANIFEST p
+  - deps: v788_positive_c2_lift, v780_z1_compactness_trilogy, v738, v742, v752, v755, v756, v563 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1611,22 +1633,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×102, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
+**Most-depended-on claims** (the load-bearing roots): `v563`×103, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v769_qf_contract_necessity** — `PRIME.QFGAUGE.01`
-- **v770_qf_spectral_bundle** — `PRIME.QFBUNDLE.01`
-- **v771_qf_representation_census** — `PRIME.QFCENSUS.01`
-- **v772_qf_feshbach_effective** — `PRIME.QFFESHBACH.01`
-- **v773_qf_cell_cocycle** — `PRIME.QFCOCYCLE.01`
-- **v774_arf_spinor_compiler** — `ARF.SPINORCOMPILER.01`
-- **v775_gaussian_class_d5_purity** — `ARF.ROOTCLASS.01`
-- **v776_boundary_hamming_uniqueness** — `ARF.BOUNDARY.CODE.01`
-- **v777_ftransfer_clock_jets** — `FTRANSFER.CLOCKS.01`
-- **v778_qgeo_gridsup_logsum** — `QGEO.GRIDSUP.01`
-- **v779_gnet_gns_arf** — `GNET.GNSLIMIT.01`
 - **v780_z1_compactness_trilogy** — `PRIME.Z1.COMPACTNESS.01`
+- **v781_one_object_clock_census** — `E8.ONEOBJECT.01`
+- **v782_e8_transition_bus** — `E8.TRANSITIONBUS.01`
+- **v783_two_qubit_clifford** — `E8.CLIFFORD2Q.01`
+- **v784_curve_code_2torsion** — `CURVE.CODE.2TORSION.01`
+- **v785_hecke_check32** — `HECKE.CARRIER_CHECK32.01`
+- **v786_prime_packet480** — `PRIME.PACKET480.01`
+- **v787_hecke_arrow_broadcast** — `HECKE.ARROW_MESSAGE.01`
+- **v788_positive_c2_lift** — `HECKE.POSITIVE_C2_LIFT.01`
+- **v789_multirate_constdepth** — `HECKE.MULTIRATE2ADIC.01`
+- **v790_snf_mu4_theta** — `HECKE.SNF_THETA.01`
+- **v791_positive_descent** — `PRIME.POSITIVE_DESCENT.01`
 

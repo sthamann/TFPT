@@ -43,6 +43,1543 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-05",
+    "dateLabel": "2026-08-05 · LXIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round twenty — the largest promotion of the day: ELEVEN modules ("
+      },
+      {
+        "k": "c",
+        "v": "v781"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v791"
+      },
+      {
+        "k": "t",
+        "v": ", from sixteen frozen probes; suite "
+      },
+      {
+        "k": "m",
+        "v": "773\\to784"
+      },
+      {
+        "k": "t",
+        "v": ") — the strategic round lands the "
+      },
+      {
+        "k": "m",
+        "v": "d=4"
+      },
+      {
+        "k": "t",
+        "v": " forcing census with its honest clock kill, the transition-bus torsor, the two-qubit Clifford identification and the curve/code 2-torsion partial; the prime channel lands the check32 theorem, the packet-480 kill and the arrow-ledger/broadcast pair; and the positive protocol lands the positive "
+      },
+      {
+        "k": "m",
+        "v": "C_2"
+      },
+      {
+        "k": "t",
+        "v": " lift, the multirate ladder with its constant-depth proof, the SNF/"
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " adjudication and the positive-descent decider with the new open contract "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.POSITIVE_DESCENT.01"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (11)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v781_one_object_clock_census.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "21/21+23/23"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "one-object-partial"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "clock-fiber-dead"
+        },
+        {
+          "k": "t",
+          "v": ": the TFPT glue pattern admits an even unimodular DIAGONAL glue of "
+        },
+        {
+          "k": "m",
+          "v": "A_{d-1}\\oplus D_{d+1}"
+        },
+        {
+          "k": "t",
+          "v": " iff "
+        },
+        {
+          "k": "m",
+          "v": "d=4"
+        },
+        {
+          "k": "t",
+          "v": " (exact census "
+        },
+        {
+          "k": "m",
+          "v": "d=2..12"
+        },
+        {
+          "k": "t",
+          "v": "; the two "
+        },
+        {
+          "k": "c",
+          "v": "v92"
+        },
+        {
+          "k": "t",
+          "v": " Lagrangians reproduced; explicit "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " certificate; "
+        },
+        {
+          "k": "m",
+          "v": "d=9"
+        },
+        {
+          "k": "t",
+          "v": " dies at isotropy; controls fire) with the corollaries "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar=d{+}1=5"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Nfam=d{-}1=3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|\\mu_4|=4=d"
+        },
+        {
+          "k": "t",
+          "v": "; honesty gate: "
+        },
+        {
+          "k": "m",
+          "v": "c_3=1/(2\\pi d)|_{d=4}=1/(8\\pi)"
+        },
+        {
+          "k": "t",
+          "v": " is a corpus-legitimate REWRITING, NOT a new derivation of P1; the "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_{12}\\times_{\\Z_6}\\Z_{30}"
+        },
+        {
+          "k": "t",
+          "v": " clock action on the 60 Gaussian lines is DEAD at three levels — full line-compatible group order "
+        },
+        {
+          "k": "m",
+          "v": "23040"
+        },
+        {
+          "k": "t",
+          "v": ", max element order "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v782_e8_transition_bus.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "35/35"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "transition-bus-torsor"
+        },
+        {
+          "k": "t",
+          "v": ": the 240 roots are 15 coordinate 8-frames whose pair fibers are canonical "
+        },
+        {
+          "k": "m",
+          "v": "v^{\\perp}"
+        },
+        {
+          "k": "t",
+          "v": "-torsors; NO deck-equivariant "
+        },
+        {
+          "k": "m",
+          "v": "V\\times(V\\setminus0)"
+        },
+        {
+          "k": "t",
+          "v": " labeling exists (proof-grade obstruction); the frozen symplectic predicate reproduces all 57600 inner products; "
+        },
+        {
+          "k": "m",
+          "v": "240=5\\times3\\times16"
+        },
+        {
+          "k": "t",
+          "v": " spread layer; the "
+        },
+        {
+          "k": "m",
+          "v": "A_{15}"
+        },
+        {
+          "k": "t",
+          "v": " comparison quantified); "
+        },
+        {
+          "k": "c",
+          "v": "v783_two_qubit_clifford.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "32/32"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "clifford-partial(h4)"
+        },
+        {
+          "k": "t",
+          "v": ": the 60 Gaussian lines ARE the 60 two-qubit stabilizer rays entry-exactly over "
+        },
+        {
+          "k": "m",
+          "v": "\\Z[i]"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "60/60"
+        },
+        {
+          "k": "t",
+          "v": ", support census "
+        },
+        {
+          "k": "m",
+          "v": "4+24+32"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "G_{31}="
+        },
+        {
+          "k": "t",
+          "v": " index-2 Clifford subgroup with "
+        },
+        {
+          "k": "m",
+          "v": "46080=\\mu_4\\times\\mathrm{Pauli}_{16}\\times Sp(4,2)"
+        },
+        {
+          "k": "t",
+          "v": ", classes "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Pauli contexts, spreads "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " MUB pentads; the index bit is the Galois "
+        },
+        {
+          "k": "m",
+          "v": "\\sqrt2"
+        },
+        {
+          "k": "t",
+          "v": "/Hadamard bit, not "
+        },
+        {
+          "k": "m",
+          "v": "J\\leftrightarrow-J"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v784_curve_code_2torsion.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "33/33"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "curve-code-partial"
+        },
+        {
+          "k": "t",
+          "v": ": every CM generator period certified as an integral "
+        },
+        {
+          "k": "m",
+          "v": "\\Z[\\zeta_{12}]"
+        },
+        {
+          "k": "t",
+          "v": " recognition; the correspondence dies at two exact layers — deck syntheme-side "
+        },
+        {
+          "k": "m",
+          "v": "[3,3]"
+        },
+        {
+          "k": "t",
+          "v": "-free vs code duad-side, and curve theta even/Arf-0 ("
+        },
+        {
+          "k": "m",
+          "v": "1{+}6{+}9"
+        },
+        {
+          "k": "t",
+          "v": ") vs "
+        },
+        {
+          "k": "m",
+          "v": "q^{*}"
+        },
+        {
+          "k": "t",
+          "v": " odd/Arf-1 ("
+        },
+        {
+          "k": "m",
+          "v": "1{+}5{+}10"
+        },
+        {
+          "k": "t",
+          "v": "); joint census 0 with positive control 6); "
+        },
+        {
+          "k": "c",
+          "v": "v785_hecke_check32.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "20/20"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "check32-theorem"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "f_8\\equiv E_{\\rm odd}\\pmod{32}"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "q^{100000}=25000\\times"
+        },
+        {
+          "k": "t",
+          "v": " the Sturm bound 4 (one cited classical ingredient); "
+        },
+        {
+          "k": "m",
+          "v": "a_p\\equiv1+p^3\\pmod{32}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "9591/9591"
+        },
+        {
+          "k": "t",
+          "v": " odd primes with the cube-map decoder; mod-64 fails at "
+        },
+        {
+          "k": "m",
+          "v": "q^3"
+        },
+        {
+          "k": "t",
+          "v": "; controls "
+        },
+        {
+          "k": "m",
+          "v": "91.7\\%"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}31/32"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v786_prime_packet480.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "28/28"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "packet480-address-only"
+        },
+        {
+          "k": "t",
+          "v": ": the header "
+        },
+        {
+          "k": "m",
+          "v": "(p\\bmod30,\\,a_p\\bmod32)"
+        },
+        {
+          "k": "t",
+          "v": " is exact 7-bit address arithmetic but the canonical intertwiner to the 128 spinor roots is IMPOSSIBLE — exponent 8 vs 2; 3 of 7 bits realizable; the 128 stays a fingerprint; kill fired as preregistered); "
+        },
+        {
+          "k": "c",
+          "v": "v787_hecke_arrow_broadcast.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "48/48+21/21"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "arrow-ledger-structured"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "broadcast-exact"
+        },
+        {
+          "k": "t",
+          "v": ": the 15 ramified arrows ARE the 15 polar labels ("
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " NS "
+        },
+        {
+          "k": "m",
+          "v": "+8"
+        },
+        {
+          "k": "t",
+          "v": " R), spread census "
+        },
+        {
+          "k": "m",
+          "v": "(3,1,1,1,1)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "T/196=(4/49)I+(45/49)\\Pi_0"
+        },
+        {
+          "k": "t",
+          "v": " exact with the 105 leg classes "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "c",
+          "v": "v756"
+        },
+        {
+          "k": "t",
+          "v": " Kraus set, "
+        },
+        {
+          "k": "m",
+          "v": "a_7=+24"
+        },
+        {
+          "k": "t",
+          "v": " sign-derived from the full "
+        },
+        {
+          "k": "m",
+          "v": "137600"
+        },
+        {
+          "k": "t",
+          "v": "-line census; "
+        },
+        {
+          "k": "m",
+          "v": "\\bar T_n=M_n\\otimes I_{16}"
+        },
+        {
+          "k": "t",
+          "v": " on all odd shells "
+        },
+        {
+          "k": "m",
+          "v": "3..13"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "B_n=16R(n)"
+        },
+        {
+          "k": "t",
+          "v": " arrow-exactly, new identities "
+        },
+        {
+          "k": "m",
+          "v": "b=2A_p"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "n_B=A_pB_p/2"
+        },
+        {
+          "k": "t",
+          "v": "; honest negative at "
+        },
+        {
+          "k": "m",
+          "v": "p=7"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v788_positive_c2_lift.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "42/42"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "c2lift-theorem"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "E_{\\rm odd}\\pm f_8=2A/2B"
+        },
+        {
+          "k": "t",
+          "v": " are POSITIVE theta series with "
+        },
+        {
+          "k": "m",
+          "v": "B=16R"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "a_n=\\sigma_3(n)-32R(n)"
+        },
+        {
+          "k": "t",
+          "v": " — check32 becomes a kernel corollary; microstates "
+        },
+        {
+          "k": "m",
+          "v": "1,4,10,24,43"
+        },
+        {
+          "k": "t",
+          "v": "; automaton censused on 41053 pairs "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " 70 prime powers; five-condition validator with joint detection "
+        },
+        {
+          "k": "m",
+          "v": "1.000000"
+        },
+        {
+          "k": "t",
+          "v": " and the tamper blind spot exactly the "
+        },
+        {
+          "k": "m",
+          "v": "16\\Z"
+        },
+        {
+          "k": "t",
+          "v": " lattice); "
+        },
+        {
+          "k": "c",
+          "v": "v789_multirate_constdepth.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "23/23+24/24"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "multirate-theorem"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": "spinlift-verified"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "constdepth-theorem"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "v_2(1{+}p^3{-}a_p)\\ge5+2[\\chi_{-4}]+[\\chi_8]"
+        },
+        {
+          "k": "t",
+          "v": " on all 78497 primes "
+        },
+        {
+          "k": "m",
+          "v": "<10^6"
+        },
+        {
+          "k": "t",
+          "v": " with sharp witnesses "
+        },
+        {
+          "k": "m",
+          "v": "3/7/5/17"
+        },
+        {
+          "k": "t",
+          "v": "; sifts Sturm-certified at level "
+        },
+        {
+          "k": "m",
+          "v": "\\le512"
+        },
+        {
+          "k": "t",
+          "v": "; mod-512 breaks at "
+        },
+        {
+          "k": "m",
+          "v": "n=9"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Sh}(g)=-8E_{\\rm odd}+256H"
+        },
+        {
+          "k": "t",
+          "v": " exact with Kronecker factor "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_8"
+        },
+        {
+          "k": "t",
+          "v": "; the constant depths PROVEN via the two named "
+        },
+        {
+          "k": "m",
+          "v": "h=1"
+        },
+        {
+          "k": "t",
+          "v": " ingredients); "
+        },
+        {
+          "k": "c",
+          "v": "v790_snf_mu4_theta.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "18/18+17/17"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "snf-fingerprint"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "mu4-partial"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "256R(n)"
+        },
+        {
+          "k": "t",
+          "v": " representation identity and the SNF "
+        },
+        {
+          "k": "m",
+          "v": "(1^4,2^4)"
+        },
+        {
+          "k": "t",
+          "v": " match are exact but the isometry census is EMPTY at every admissible level (kissing 240 vs 8; "
+        },
+        {
+          "k": "m",
+          "v": "0/20160"
+        },
+        {
+          "k": "t",
+          "v": "; the naive "
+        },
+        {
+          "k": "m",
+          "v": "4{+}4"
+        },
+        {
+          "k": "t",
+          "v": " split inadmissible by theorem); the NEW exact identity "
+        },
+        {
+          "k": "m",
+          "v": "c_{\\rm sig}=\\tfrac1{15}E_4(q^2)-\\tfrac65E_4(q^4)+\\tfrac{32}{15}E_4(q^8)-8f_8"
+        },
+        {
+          "k": "t",
+          "v": " — the cusp part of the quartic "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " character is exactly "
+        },
+        {
+          "k": "m",
+          "v": "-8f_8"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "-8=52-60=-\\mathrm{rank}(E_8)"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "C_2"
+        },
+        {
+          "k": "t",
+          "v": " channel is pure Eisenstein; the all-shell quartic vanishing is FALSE); "
+        },
+        {
+          "k": "c",
+          "v": "v791_positive_descent.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "30/30"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "descent-partial"
+        },
+        {
+          "k": "t",
+          "v": ": the packet GNS state on "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb N[C_2]\\otimes\\mathbb N[\\mathbb F_2^4]\\otimes\\mathbb N[\\mu_4]"
+        },
+        {
+          "k": "t",
+          "v": " is manifestly positive in exact rationals; the naive linear pushforward is NOT a state (F1); the GL1 descent is bit-identical to the deployed Weil window and its UNIQUE PSD sector of 24 (F2: the breaking tensor factor is the continuum/pole leg)). Suite "
+        },
+        {
+          "k": "m",
+          "v": "773\\to784"
+        },
+        {
+          "k": "t",
+          "v": "; all eleven run standalone green and encode their frozen patterns per the "
+        },
+        {
+          "k": "c",
+          "v": "v757"
+        },
+        {
+          "k": "t",
+          "v": " precedent; all sixteen probes re-run identically at promotion."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/Check32.lean"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "13"
+        },
+        {
+          "k": "t",
+          "v": " kernel theorems: the cube bijection on the 16 odd residues, the first-coefficient congruences as exact integer statements, the mod-64 failure witness) and "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/PositiveC2Lift.lean"
+        },
+        {
+          "k": "t",
+          "v": " (the positive-lift kernel with check32 as a corollary), both kernel-checked, "
+        },
+        {
+          "k": "c",
+          "v": "lake build"
+        },
+        {
+          "k": "t",
+          "v": " green ("
+        },
+        {
+          "k": "m",
+          "v": "3406"
+        },
+        {
+          "k": "t",
+          "v": " jobs), Lean tree "
+        },
+        {
+          "k": "m",
+          "v": "80"
+        },
+        {
+          "k": "t",
+          "v": " modules; dated Lean notes carried in the "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.CARRIER_CHECK32.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.POSITIVE_C2_LIFT.01"
+        },
+        {
+          "k": "t",
+          "v": " ledger rows."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contracts."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.POSITIVE_DESCENT.01"
+        },
+        {
+          "k": "t",
+          "v": " registered OPEN [O] with the three demanded objects — (1) sector-adapted continua (the "
+        },
+        {
+          "k": "m",
+          "v": "f_8"
+        },
+        {
+          "k": "t",
+          "v": "-sector continuum as the finite-level falsifier), (2) GL1-sector PSD persistence in the "
+        },
+        {
+          "k": "t",
+          "v": "z1-compactness"
+        },
+        {
+          "k": "t",
+          "v": " frame (Weil positivity retyped as sector compression of a manifestly positive object), (3) the carrier intertwiner — plus stop conditions and inherited falsifiers; cross-referenced both ways with "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.COMPACTNESS.01"
+        },
+        {
+          "k": "t",
+          "v": " (dated add-on note). Dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.01"
+        },
+        {
+          "k": "t",
+          "v": " (the 2-adic skeleton now load-bearing), "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.HALFINT.01"
+        },
+        {
+          "k": "t",
+          "v": " (the ladder form of the Shimura lift; Kronecker factor "
+        },
+        {
+          "k": "m",
+          "v": "=\\chi_8"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "RTF.GNS.LEDGER.01"
+        },
+        {
+          "k": "t",
+          "v": " (the four-character envelope closed multiplicatively), "
+        },
+        {
+          "k": "c",
+          "v": "E8.GAUSSIAN.CODE.01"
+        },
+        {
+          "k": "t",
+          "v": " (the Clifford identification and the bus torsor), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1LOOKAHEAD.01"
+        },
+        {
+          "k": "t",
+          "v": " (the packet-480 impossibility), "
+        },
+        {
+          "k": "c",
+          "v": "ARF.SPINORCOMPILER.01"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "q^{*}"
+        },
+        {
+          "k": "t",
+          "v": " spread deployment and its Arf-parity boundary) and "
+        },
+        {
+          "k": "c",
+          "v": "ARF.ROOTCLASS.01"
+        },
+        {
+          "k": "t",
+          "v": " (the fence held through the round)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 11 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "E8.ONEOBJECT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.TRANSITIONBUS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.CLIFFORD2Q.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "CURVE.CODE.2TORSION.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.CARRIER_CHECK32.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PACKET480.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.ARROW_MESSAGE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.POSITIVE_C2_LIFT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.MULTIRATE2ADIC.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.SNF_THETA.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.POSITIVE_DESCENT.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " 8 dated updates; "
+        },
+        {
+          "k": "m",
+          "v": "855\\to866"
+        },
+        {
+          "k": "t",
+          "v": " rows; measured/typed throughout, honest kills recorded as preregistered adjudications, the [C neu]/[E neu] typing carried, NO marker moves anywhere."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ": the four strategic entries join the code keybox (the "
+        },
+        {
+          "k": "m",
+          "v": "d=4"
+        },
+        {
+          "k": "t",
+          "v": " forcing census with the P1 honesty gate, the transition-bus torsor, the Clifford identification, the curve/code partial); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the stabilizer-identification follow-up joins the "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\rm net}"
+        },
+        {
+          "k": "t",
+          "v": " page; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": eleven new audit blocks; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new section “The positive protocol: the prime channel as a positive routing code, and what the descent still needs” (check32 theorem, positive lift, multirate ladder "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " proof, arrow ledger "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " broadcast, the two preregistered adjudications, the descent and its three-object contract); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.POSITIVE_DESCENT.01"
+        },
+        {
+          "k": "t",
+          "v": " registration and the "
+        },
+        {
+          "k": "t",
+          "v": "z1-compactness"
+        },
+        {
+          "k": "t",
+          "v": " add-on note."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round twenty”; counters "
+        },
+        {
+          "k": "m",
+          "v": "773\\to784"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v791"
+        },
+        {
+          "k": "t",
+          "v": "; papers.ts narrative mirrors updated; README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "784"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v791"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact results (the forcing census, the torsor structure theorem, the stabilizer identification, the check32/positive-lift/multirate theorems modulo their named classical ingredients, the broadcast factorization, the "
+        },
+        {
+          "k": "m",
+          "v": "c_{\\rm sig}"
+        },
+        {
+          "k": "t",
+          "v": " identity) sit behind explicit fences; the three fired kills (clock fiber, packet-480, all-shell quartic vanishing) are preregistered adjudications firing inside green machinery; the "
+        },
+        {
+          "k": "m",
+          "v": "c_3"
+        },
+        {
+          "k": "t",
+          "v": " link stays typed INTERPRETATION (P1 is not derived); ROOTCLASS-MIXED stays binding (no code"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "matter reading anywhere); the descent contract names what is still missing; no marker moves; no RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-05",
     "dateLabel": "2026-08-05 · LXII",
     "heading": [
       {
