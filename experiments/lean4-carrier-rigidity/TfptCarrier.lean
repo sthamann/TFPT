@@ -87,6 +87,12 @@ import TfptCarrier.SineGramKeystone
 import TfptCarrier.WatataniIndexFour
 import TfptCarrier.TraceLedger
 import TfptCarrier.PinningLemma
+import TfptCarrier.ProjectiveHamming
+import TfptCarrier.GramCompactness
+import TfptCarrier.DenseWeilCore
+import TfptCarrier.AntiAliasExact
+import TfptCarrier.CellCocycle
+import TfptCarrier.ArfSpinorCompiler
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck
