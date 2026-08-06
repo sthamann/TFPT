@@ -100,8 +100,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::How to read this document::1": {
-  "hash": "dcbddf59b728",
-  "date": "2026-08-05"
+  "hash": "2df0c715a8c3",
+  "date": "2026-08-06"
  },
  "tfpt_1_architecture_e8::section::Headline: the Pascal compiler on five carrier slots::1": {
   "hash": "32b8525a612e",
@@ -120,8 +120,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::The $D_5\\times A_3$ compiler: $E_8$ as a closure, not an input::1": {
-  "hash": "5b601b148e33",
-  "date": "2026-08-05"
+  "hash": "62776c05ef8b",
+  "date": "2026-08-06"
  },
  "tfpt_1_architecture_e8::subsection::Carrier $=D_5=\\mathfrak{so}_{10}$ (proved)::1": {
   "hash": "291366279c88",
@@ -348,8 +348,8 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The Sheet Diamond and the Winding Line: masses and transport from one surface::1": {
-  "hash": "53e45acecb18",
-  "date": "2026-08-05"
+  "hash": "383cde36ea71",
+  "date": "2026-08-06"
  },
  "tfpt_2_standard_model::subsection::Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?::1": {
   "hash": "784125cbc405",
@@ -464,8 +464,8 @@
   "date": "2026-06-23"
  },
  "tfpt_2_standard_model::section::The explicit mass gap closes dynamics and clustering::1": {
-  "hash": "3a43b43fd750",
-  "date": "2026-08-05"
+  "hash": "df8035165453",
+  "date": "2026-08-06"
  },
  "tfpt_2_standard_model::section::The seam elliptic complex is Fredholm (APS)::1": {
   "hash": "0b980ed498f3",
@@ -524,8 +524,8 @@
   "date": "2026-06-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
-  "hash": "ef6d949b9344",
-  "date": "2026-08-05"
+  "hash": "5bd371d5629f",
+  "date": "2026-08-06"
  },
  "tfpt_3_e8_audit_bootstrap::section::Further audit lemmas (machine-verified this round)::1": {
   "hash": "f779e820e593",
@@ -596,8 +596,8 @@
   "date": "2026-06-12"
  },
  "tfpt_4_frontier::front::(front matter)::1": {
-  "hash": "ceeacdc4dceb",
-  "date": "2026-08-05"
+  "hash": "25b82f2a298f",
+  "date": "2026-08-06"
  },
  "tfpt_4_frontier::section::Baryon asymmetry $\\eta_B$ --- a downstream readout from the closed $\\Omega_b h^2$::1": {
   "hash": "9496ae6a9fea",
@@ -724,8 +724,8 @@
   "date": "2026-08-01"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "2ee8c3dccfce",
-  "date": "2026-08-05"
+  "hash": "7140f51d2597",
+  "date": "2026-08-06"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {
   "hash": "62902eaaa0d2",
@@ -736,8 +736,8 @@
   "date": "2026-08-01"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
-  "hash": "9ae3353087e7",
-  "date": "2026-08-05"
+  "hash": "19eea8a277b0",
+  "date": "2026-08-06"
  },
  "origin_theory::front::(front matter)::1": {
   "hash": "1806669dfa1e",

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`784` registered scripts · `866` ledger claims · `10` clusters.
+`795` registered scripts · `877` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (304 scripts)
+### `core` — Compiler core & the E₈ glue  (315 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -619,6 +619,28 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v689, v752, v638, v535, v536, v537, v775_gaussian_class_d5_purity · cited: 3 e8 audit bootstrap
 - **v791_positive_descent** [O] `PRIME.POSITIVE_DESCENT.01` — **DESCENT-PARTIAL (30/30 inkl. 5 Muss-Kontrollen; die deklarierte Lauf-1 -> Lauf-2-Kalibrierung wörtlich getragen): der Paket-GNS-Zustand auf N[C2] ⊗ N[F2⁴] ⊗ N[mu4] ist MANIFEST p
   - deps: v788_positive_c2_lift, v780_z1_compactness_trilogy, v738, v742, v752, v755, v756, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v792_ftransfer_kms_coset** [E] `FTRANSFER.KMSCOSET.01` — **KMS-COSET-THEOREM (18/18): S = −(ln λ)²/2 mit λ = dem PGL2-Multiplikator der Zeit-1-Holonomie pro Uhren-e-Fold; der Klassifikator nutzt KEINE Schwarzian und KEINE Ableitungen (Ni
+  - deps: v213_ftransfer_functor, v777_ftransfer_clock_jets, v777, v578, v99, v425 · cited: 3 e8 audit bootstrap, 4 frontier, research contracts
+- **v793_f8sector_conductor** [E] `PRIME.SECTOR_CONTINUA.01` — **F8SECTOR-PSD + CONDUCTOR-FUNCTORIAL (15/15 + 16/16): der f8-Sektor, unter dem register-trivialen GL1-Kontinuum bei −132..−151 gebrochen (v791 F2), ist mit seinem EIGENEN Kontinuu
+  - deps: v791_positive_descent, v791, v563, v716, v755, v766, v535_hecke_from_geometry · cited: 3 e8 audit bootstrap, research contracts
+- **v794_cp_extension_gate** [-] `PRIME.CP.EXTENSION.01` — Netz-Formalisierung + tiefe Margen-Trend-Entscheidung — **CPGATE-UNDECIDED-FALLING (17/17, adjudizierender Lauf 2 mit zwei deklarierten Reparaturen): N1 Restriktions-Exaktheit (tie
+  - deps: v791_positive_descent, v780_z1_compactness_trilogy, v793_f8sector_conductor, v791, v793, v780, v770, v563 · cited: 3 e8 audit bootstrap, research contracts
+- **v795_halving_tails_k5** [E/O] `HECKE.HALVINGTAILS.01` — **TAILS-IDENTIFIED + K5-MECHANISM-FOUND (20/20 + 17/17): EXAKTE Identitäten v_2(D_p) = 6 + v_2(X7) bzw. 8 + v_2(X1) mit termweise-ganzzahligen Divisorsummen (Komposita eingeschloss
+  - deps: v789_multirate_constdepth, v785_hecke_check32, v789, v785 · cited: 3 e8 audit bootstrap
+- **v796_duad_syntheme_bridge** [E] `CURVE.CODE.OUTERSPIN.01` — **BRIDGE-CANONICAL (24/24): die Sylvester-Dualität β: Code-ungerade-Formen → Kurven-Spreads mit β σ = τ β und β(q*) = S* (der EINDEUTIGE ⟨τ, ρ⟩-fixierte Spread) existiert und ist e
+  - deps: v784_curve_code_2torsion, v774_arf_spinor_compiler, v784, v774, v752, v610, v611, v775_gaussian_class_d5_purity · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v797_r_microstate_identification** [E/X] `HECKE.R_MICROSTATE.01` — das ehrliche Negativ — **R-NO-ARROW-REALIZATION (14/14; gefrorenes Wörterbuch, der offengelegte Pilot produzierte nur Kills): R(p) = 1, 4, 10, 24, 43, 68 (der Sheet-Switch-Paketzäh
+  - deps: v787_hecke_arrow_broadcast, v790_snf_mu4_theta, v788_positive_c2_lift, v787, v790, v788, v738, v535 · cited: 3 e8 audit bootstrap
+- **v798_seam_clifford_modular_s** [E] `SEAM.CLIFFORD.MODULAR_S.01` — **MODULAR-S-PARTIAL (27/27): COSET POSITIV — der Pro-Binärfaktor-Hadamard K1 = H ⊗ I IST der Weil-Lift von S bei τ = i und landet exakt in der fehlenden Nebenklasse ζ₈ G31 (exakte 
+  - deps: v783_two_qubit_clifford, v776_boundary_hamming_uniqueness, v774_arf_spinor_compiler, v783, v774, v752, v689, v775_gaussian_class_d5_purity · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v799_seam_code_typeii** [E/C/O] `SEAM.CODE.TYPEII.01` — der direkte Angriff auf Residual R1 von ARF.BOUNDARY.CODE.01 — **TYPEII-FORCED (19/19): erschöpfend über ALLE 308.993 Unterräume von F2⁸ (dim 0..4, Gauß-Binomiale; dim > 4 per Rang
+  - deps: v776_boundary_hamming_uniqueness, AX.P2.01, v774_arf_spinor_compiler, v776, v752, v689_gaussian_code_bridge · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v800_e8_torsor_fourier** [E] `E8.TORSOR.FOURIER.01` — Träger-Reinheit auf CHARAKTER-Niveau mit der wechselseitig-unverzerrten Kappe — **TORSOR-FOURIER-PARTIAL (30/30): 120 kanonische projektive Strahlen (Phasengesetz exakt auf 960 Urs
+  - deps: v782_e8_transition_bus, v783_two_qubit_clifford, v775_gaussian_class_d5_purity, v791_positive_descent, v782, v783, v775, v752 · cited: 1 architecture e8, 3 e8 audit bootstrap
+- **v801_prime_cp_intertwiner** [E/O] `PRIME.CP.INTERTWINER.01` — Forderung (3) von PRIME.POSITIVE_DESCENT.01 endlich-Niveau GELÖST — **CP-INTERTWINER-EXISTS (29/29): Φ(a) = V* π(a) V aus den 105 Kraus-Beinen (Unitalität Σ E_{x_e x_e} = 7 I exakt
+  - deps: v791_positive_descent, v793_f8sector_conductor, v780_z1_compactness_trilogy, v794_cp_extension_gate, v787_hecke_arrow_broadcast, v791, v793, v756 · cited: 3 e8 audit bootstrap, research contracts
+- **v802_gnet_martingale** [O] `GNET.MARTINGALE.LIMIT.01` — endliche Hypothesen GEMESSEN, alle erfüllt — **MARTINGALE-HYPOTHESES-MET (15/15): Filtration EXAKT (Haar-Isometrie mit Träger-Kohärenz Leak 0; Watatani-Quasibasis 185/3041 bei l = 
+  - deps: v779_gnet_gns_arf, v154_simple_current_theorem, v778_qgeo_gridsup_logsum, v779, v746 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1633,22 +1655,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×103, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
+**Most-depended-on claims** (the load-bearing roots): `v563`×106, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v780_z1_compactness_trilogy** — `PRIME.Z1.COMPACTNESS.01`
-- **v781_one_object_clock_census** — `E8.ONEOBJECT.01`
-- **v782_e8_transition_bus** — `E8.TRANSITIONBUS.01`
-- **v783_two_qubit_clifford** — `E8.CLIFFORD2Q.01`
-- **v784_curve_code_2torsion** — `CURVE.CODE.2TORSION.01`
-- **v785_hecke_check32** — `HECKE.CARRIER_CHECK32.01`
-- **v786_prime_packet480** — `PRIME.PACKET480.01`
-- **v787_hecke_arrow_broadcast** — `HECKE.ARROW_MESSAGE.01`
-- **v788_positive_c2_lift** — `HECKE.POSITIVE_C2_LIFT.01`
-- **v789_multirate_constdepth** — `HECKE.MULTIRATE2ADIC.01`
-- **v790_snf_mu4_theta** — `HECKE.SNF_THETA.01`
 - **v791_positive_descent** — `PRIME.POSITIVE_DESCENT.01`
+- **v792_ftransfer_kms_coset** — `FTRANSFER.KMSCOSET.01`
+- **v793_f8sector_conductor** — `PRIME.SECTOR_CONTINUA.01`
+- **v794_cp_extension_gate** — `PRIME.CP.EXTENSION.01`
+- **v795_halving_tails_k5** — `HECKE.HALVINGTAILS.01`
+- **v796_duad_syntheme_bridge** — `CURVE.CODE.OUTERSPIN.01`
+- **v797_r_microstate_identification** — `HECKE.R_MICROSTATE.01`
+- **v798_seam_clifford_modular_s** — `SEAM.CLIFFORD.MODULAR_S.01`
+- **v799_seam_code_typeii** — `SEAM.CODE.TYPEII.01`
+- **v800_e8_torsor_fourier** — `E8.TORSOR.FOURIER.01`
+- **v801_prime_cp_intertwiner** — `PRIME.CP.INTERTWINER.01`
+- **v802_gnet_martingale** — `GNET.MARTINGALE.LIMIT.01`
 

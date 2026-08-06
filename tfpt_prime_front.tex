@@ -11880,7 +11880,10 @@ literal \texttt{v715} clause ``one $B(\varepsilon)$ for all grid
 refinements'' is false at $r_1=1$ and repaired to
 $\|D_N^{(M)}\|_1\le[B_0+(J/2)\ln(M{+}3)]/N$, certified by the grid
 Fourier log-sum theorem with explicit constants; residues (b) and
-(c) stay open, and \texttt{GATE.QGEO} still does not move.]
+(c) stay open, and \texttt{GATE.QGEO} still does not move --- the
+round-21 martingale route (\veri{v802\_gnet\_martingale.py})
+bypasses them for the limit-\emph{existence} step and relocates
+them into the typed normality step, a reallocation, not a proof.]
 \texttt{PRIME.Z1.OPERATOR.01}
 stays formally \emph{open}: the continuum theorems are missing.
 
@@ -12427,7 +12430,10 @@ right-handed neutrino'' reading, must not enter any main claim
 exists: boundary $\to$ code $\to E_8\to\mathbb F_2^4\to$ five
 slots with $\gcar=5$ as \emph{output} (census
 $135\to30\to14\to2\to1$; one deck-invariant $\Z_2$ flag bit;
-residuals R1--R3 typed; no P2-removal claim)
+residuals R1--R3 typed then, all three moved in round 21: R1
+$\to$ R1$'$ = three physical axioms via
+\veri{v799\_seam\_code\_typeii.py}, R2 placed and R3 named via
+\veri{v798\_seam\_clifford\_modular\_s.py}; no P2-removal claim)
 (\veri{v776\_boundary\_hamming\_uniqueness.py}, $31/31$,
 \textsc{boundary-code-unique}).
 
@@ -12462,7 +12468,9 @@ $\tau_{\mathrm{inc}}\otimes\tau_{\mathrm{Toeplitz}}$
 \texttt{KMS-INCIDENCE-CP-COVARIANT}).  [The compactness remainder
 named here acquires measured handoff evidence and an abstract Lean
 closure one round later --- see
-Section~\ref{sec:diagonal-gram-round}.]
+Section~\ref{sec:diagonal-gram-round}; the $105$-leg Kraus set
+later carries the full Stinespring carrier intertwiner
+(\vref{sec:descent-functor}).]
 
 \emph{The decorative seven.}  The preregistered
 Fano~$\to$~discriminant$(-7)$ bridge breaks exactly at its second
@@ -12900,7 +12908,10 @@ class $3$ is pinned by the essentially unique $x^2+2y^2$
 representation and class $5$ by the ternary bridge
 $R_3(p)/8\equiv\#\{x^2+4w^2=p\}=1\pmod2$ --- elementary except two
 named class-number-one ingredients (disc $-8$ and $-4$, both
-$h=1$), whose instances are machine-verified.  The Shimura lift of
+$h=1$), whose instances are machine-verified (the exact-depth
+mechanism of the remaining classes $7$ and $1$ follows in
+\vref{sec:descent-functor}; per-class infinitude stays open).  The
+Shimura lift of
 the \texttt{v537} witness acquires its ladder form
 $\mathrm{Sh}_{t=2}(g)=-8E_{\rm odd}+256H$ (exact to $160$), and
 the lift's Kronecker factor $(2/d)$ \emph{is} $\chi_8$ --- the
@@ -12927,7 +12938,8 @@ with the new identities $b=2A_p$ and $n_B=A_pB_p/2$; the
 finite factorization, the entropy numbers are distribution
 measurements (no decoded message), and the honest negative is on
 record ($R(p)$ is \emph{not} the type-B Weyl orbit count at
-$p=7$).
+$p=7$; completed by the full no-arrow-realization adjudication in
+\vref{sec:descent-functor}).
 
 \emph{Two preregistered adjudications}: the packet-480 header
 (\veri{v786\_prime\_packet480.py}, $28/28$,
@@ -12978,10 +12990,136 @@ persistence} in the \textsc{z1-compactness} frame of
 \vref{sec:z1-trilogy} --- Weil positivity retyped as ``the sign
 sector of a manifestly positive packet object stays PSD'' --- and
 (3) \emph{the carrier intertwiner} (population $\leftrightarrow$
-carrier register, the one non-CP-trivial step).  Stop conditions
-and finite-level falsifiers are named in the contract row;
-demands (1) and (3) without (2) are decorative.  \textbf{No
-statement about the Riemann Hypothesis is made.}
+carrier register, at registration the one non-CP-trivial step).
+Stop conditions and finite-level falsifiers are named in the
+contract row.  All three demands were delivered at finite level
+one round later (\vref{sec:descent-functor}); the contract stays
+open for the infinite-level floor.  \textbf{No statement about the
+Riemann Hypothesis is made.}
+
+\subsection{The descent functor completes at finite level, and the
+boundary code becomes three physical axioms}
+\label{sec:descent-functor}
+
+Round 21 (2026-08-06) executes the three demands of
+\texttt{PRIME.POSITIVE\_DESCENT.01} at finite level, mechanizes the
+remaining 2-adic depth classes, and adjudicates two identification
+questions honestly.  No marker moves; no RH/GRH claim anywhere.
+
+\emph{Demand (1): the sector continua exist and are one functor}
+(\veri{v793\_f8sector\_conductor.py}, $15/15+16/16$,
+\textsc{f8sector-psd}/\textsc{conductor-functorial}): the $f_8$
+sector --- broken at $-132..{-151}$ under the register-trivial GL1
+continuum (finding F2 of \veri{v791\_positive\_descent.py}) --- is
+PSD on the entire frozen ladder once the functor transports its
+\emph{own} explicit-formula continuum (weight-4 archimedean kernel,
+conductor $8$, no pole, Satake atoms):
+$\lambda_{\min}=+1.52\times10^{-4}\to+3.20\times10^{-5}$ over
+$X=4..10$; the $\chi_4$ sector likewise; the wrong continuum
+reproduces the parent breakage at $-140.8$.  The continuum
+assignment is \emph{one closed structure map}
+$\chi\mapsto q^{s/2}\prod_j\Gamma_{\mathbb R}(s+\mu_j)\,L_{\rm an}$
+--- one universal per-factor kernel plus $\ln q$ at lag $0$, pole
+iff trivial --- whose instances reproduce every deployed kernel
+(the weight-4 kernel through the duplication identity
+$\Gamma_{\mathbb R}(z)\Gamma_{\mathbb R}(z{+}1)=\Gamma_{\mathbb C}(z)$,
+two independent quadrature structures agreeing to
+$2.7\times10^{-15}$); the register-internal twist
+$f_8\otimes\chi_{-4}$ receives conductor $16$ from Atkin--Li plus
+the Fricke ward ($6.7\times10^{-16}$; wrong $N$ fail at
+${\sim}0.5$) and lands PSD with the rule continuum, nothing
+hand-tuned; the conductor datum is \emph{load-bearing}: the $q=8$
+swap shifts $\lambda_{\min}$ by exactly $-\ln2$, four orders of
+magnitude above the margins, while the PSD margins pin $q\ge15.9996$
+from below.  The register mirror sector is typed structurally
+non-automorphic --- the functor's domain is the automorphic
+register characters.  Sector PSD stays finite-level
+\emph{evidence}; the GRH-type statements are unproven.
+
+\emph{Demand (2): the exact limit object, and the first measured
+sector floor} (\veri{v794\_cp\_extension\_gate.py}, $17/17$,
+\textsc{cpgate-undecided-falling}; two declared repairs carried):
+the finite windows form a restriction-\emph{exact} net --- an atom
+at $u$ touches only nearby lags, so the sector Weil functional
+$W_{\chi}$ is well-defined on the union space $V_{\infty}$
+\emph{without any limit} --- with Cauchy interlacing and uniform
+bounds measured (the frozen $e^{X/2}$ pole-growth prediction was
+wrong: the comb cancels the pole lag by lag, the whole four-sector
+family is near-uniformly bounded).  The demanded object is
+therefore \emph{not a new state}: it is the positivity floor
+$\inf_X\lambda_{\min}(T_{\chi,X})\ge0$ per automorphic character
+--- the \textsc{z1-compactness} demand of \vref{sec:z1-trilogy}
+\emph{sector-decorated} (the $\chi=$ GL1 instance reproduces the
+\texttt{v780} anchor $3.882\times10^{-6}$ at $M=1176$ on the same
+$10^8$ comb).  The deep trend decides at reachable depth: no sector
+crosses zero anywhere; GL1 falls power-law to $3.9\times10^{-6}$ at
+$X=18.375$ ($\beta=-1.69$), $f_8$ at the same rate
+($\beta=-1.63$, certified-exact CRT coefficients to $X=13$), the
+twist slightly faster ($\beta=-2.10$) --- and $\chi_4$
+\emph{saturates} at ${\sim}1.5\times10^{-6}$, the first measured
+sector floor.
+
+\emph{Demand (3): the carrier intertwiner exists in Stinespring
+form} (\veri{v801\_prime\_cp\_intertwiner.py}, $29/29$,
+\textsc{cp-intertwiner-exists}): positive states must be
+transported by completely positive maps, and the probe constructs
+exactly that transport from the certified corpus machinery ---
+$\Phi(a)=V^{*}\pi(a)V$ with $V$ the $105$-leg Kraus stack
+(unitality $\sum_eE_{x_ex_e}=7I$ as an exact integer identity,
+re-deriving the \texttt{v756} anchor) and $\pi$ the arrow
+representation of the \emph{full} arrow $*$-algebra $M_{15}$
+(exact matrix-unit closure --- the algebra, not its trace
+collapse); the Choi matrix is exact-rational with $105$ eigenvalues
+each $1/7$; all covariances are exact.  Its four automorphic
+character channels, applied to the one packet event stream, land on
+the four sector windows: the GL1 channel \emph{is} the deployed
+Weil window (rel $6.0\times10^{-16}$) and $\chi_4/f_8$/twist land
+on their $\Gamma_{\mathbb R}$-rule objects (${\sim}10^{-15}$), all
+PSD --- four positive sector outputs of \emph{one} CP map, with the
+ramified conductor emptiness structural ($a(2^k)=0$; glue-uniform
+$\mu_4$ slot) and the $(E,f_8)$ pair exhibited as one primitive
+element read by two characters.  Finding F1 of the descent is
+retyped: the naive linear pushforward fails \emph{as a negative
+Choi eigenvalue} ($-6.6\times10^{-2}$; exact leg $-4.50$).  What
+remains is typed as demands D1--D3 of
+\texttt{PRIME.CP.INTERTWINER.01}: the $X$-compatible dilation
+family, normality on the \textsc{z1-compactness} limit object, and
+the limit identification with the critical-line Weil functional ---
+which contains RH and is not claimed.
+
+\emph{The depth classes mechanized, and the $k=5$ anomaly solved}
+(\veri{v795\_halving\_tails\_k5.py}, $20/20+17/17$,
+\textsc{tails-identified}/\textsc{k5-mechanism-found}): the two
+classes the constant-depth theorem left census-level acquire exact
+identities --- $v_2(D_p)=6+v_2(X_7(p))$ for $p\equiv7$ and
+$8+v_2(X_1(p))$ for $p\equiv1\pmod8$, with termwise-integral
+divisor sums (composites included; $10^6$ census, zero exceptions);
+the class-7 base closes on the $h=1$ ternary form,
+$v_2(D_p)=6\iff R_3(p)\equiv16\pmod{32}$; the class-1 two-shape
+criterion is exact while its single-character bridge stays typed
+open.  The measured $k=5$ half-mass dip is then \emph{derived}: $k$
+is deterministic on the residue-tower cells
+$(m,t)=(v_2(p{-}1),\text{depth of }2)$ with zero exceptions at
+$10^6$, and $k=5$ lives only in cell $(5,3)$ of density $1/64$, so
+$P(k{=}5)=1/128$ --- exactly the observed suppression; the class-7
+mirror law $v_2(D_p)=3+v_2(p{+}1)$ through $k=4$ explains the
+class-3 constancy from the other side.  The governing-field
+derivation (Cohn--Lagarias frame) stays typed open; per-class
+infinitude is not claimed.
+
+\emph{Two honest adjudications}: the $R$-microstate identification
+dies (\veri{v797\_r\_microstate\_identification.py}, $14/14$,
+\textsc{r-no-arrow-realization}): $R(p)$ is an analytic packet
+count without an arrow-level realization at the tested places ---
+the frozen dictionary is killed at $(1,4,13)$ vs $(1,4,10)$, the
+deployed extensions are ill-defined on the type-B set, and the
+exact count identity $16B_n=256R(n)$ stays count-level only (SNF
+fingerprint shared, isometry excluded at $8$ vs $240$ minimum
+vectors); the packet and arrow layers share totals, not the
+$R$-grading.  And the incidence programme's Kraus set becomes
+load-bearing: the \texttt{v756} $105$-leg structure carries the
+Stinespring intertwiner above.  \textbf{No statement about the
+Riemann Hypothesis is made.}
 
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 

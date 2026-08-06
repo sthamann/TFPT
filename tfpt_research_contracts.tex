@@ -2383,6 +2383,29 @@ exactly $2^{-\ell}$ at every finite level ($d_0-d_2=2^\ell>0$),
 restored only asymptotically --- the crossed-product structure is
 \emph{exactly asymptotic}, and $d_2(1)=0$ \emph{is} the $\ell=1$
 index-3 anomaly.  Typing unchanged; no marker move.]
+\emph{[2026-08-06 registration ---
+\texttt{GNET.MARTINGALE.LIMIT.01}, \mO\ (the analytic remainder),
+finite hypotheses measured in \veri{v802\_gnet\_martingale.py}
+($15/15$, \textsc{martingale-hypotheses-met}): the Haar ladder is
+an exact filtration with \emph{one} index-4 Watatani expectation
+for the whole tower (quasi-basis explicit, $185/3041$ elements at
+$\ell=2/3$); the local-state defects are summable at measured rate
+${\sim}0.25$ per doubling (one power better than the $2^{-\ell}$
+dim-law envelope; reported, not forced); the unique limit state
+follows by elementary telescoping and is verified on every rung;
+the split/normality precursors are uniform (determinant witness
+$\ge0.985$, stabilizing at $0.9928$); the decimation control
+converges to the \emph{wrong} degenerate limit --- the coherent
+Haar bond is load-bearing.  \emph{The registered remainder (steps
+5--7, typed, not executed):} GNS reconstruction of
+$\omega_\infty$; local normality on each $A(W)$ (the uniform S4
+witnesses as the finite input); split property and the $\mu_4$
+simple-current extension (\texttt{GATE.METRIC.11}) on the limit
+net.  The open QGEO majorant residues (b)/(c) are bypassed for
+limit existence and relocated into the normality step --- a
+reallocation, not a proof.  Kill: non-summable defects at a deeper
+reachable rung, or a determinant-witness collapse.  No marker
+move.]}
 \smallskip\\
 \noindent\textbf{The hull is the graded module of the Q-system (\veri{v128\_graded\_hull.py}).} The
 Q-system is not merely an abstract companion of $E_8$ --- $E_8$ \emph{realises} it \mE: the $240$
@@ -3628,17 +3651,87 @@ boundary $\to$ code $\to E_8\to\mathbb F_2^4\to$ five slots
 without Hamming/$E_8$ input; the flag datum is \emph{one}
 deck-invariant $\Z_2$, the product of the four side orientations;
 Construction~A of the selected code \emph{is} $E_8$; the Arf
-selector is unique; packets $1+4$).  \emph{The open contract form:}
-derive evenness/self-duality of the mark bookkeeping from the seam
-axioms --- the R1 \emph{universe premise} (``the boundary realizes
-a doubly-even self-dual binary code on its 8 sides'') is the
-relocated and shrunk circularity, joined by the typed residuals R2
-(deck placement is semantic, not selective) and R3 (the anchor
-naming $\bar b(F_\Sigma,A)=1$ is part of the frozen selector, not
-a theorem).  \emph{No P2-removal claim}; kills: a second
-boundary-legal code surviving the flagged selection, or a
-seam-axiom derivation forcing a non-doubly-even universe.  No
-marker move.
+selector is unique; packets $1+4$).  \emph{The open contract form
+as registered:} derive evenness/self-duality of the mark
+bookkeeping from the seam axioms --- the R1 \emph{universe premise}
+(``the boundary realizes a doubly-even self-dual binary code on
+its 8 sides'') was the relocated and shrunk circularity, joined by
+the typed residuals R2 (deck placement is semantic, not selective)
+and R3 (the anchor naming $\bar b(F_\Sigma,A)=1$ is part of the
+frozen selector, not a theorem).  \emph{[2026-08-06 note, markers
+unchanged: all three residuals moved --- R1 is replaced by R1$'$
+(the three physical axioms of \texttt{SEAM.CODE.TYPEII.01} below,
+\veri{v799\_seam\_code\_typeii.py}); R2 is placed and R3 is named
+by the metaplectic $S$-lift
+(\texttt{SEAM.CLIFFORD.MODULAR\_S.01} below,
+\veri{v798\_seam\_clifford\_modular\_s.py}).]}  \emph{No
+P2-removal claim}; kills: a second boundary-legal code surviving
+the flagged selection, or a seam-axiom derivation forcing a
+non-doubly-even universe.  No marker move.
+\emph{\texttt{SEAM.CODE.TYPEII.01}} (registered 2026-08-06, \mC)
+--- Type II from the seam axioms: at length $8$ (four $J$-paired
+marks $\times$ two sides) the finite chain is exhaustively
+machine-verified over all $308{,}993$ subspaces of
+$\mathbb F_2^8$ of dim $\le4$
+(\veri{v799\_seam\_code\_typeii.py}, $19/19$,
+\textsc{typeii-forced}): mutual locality of the Construction-A
+boundary vertex words $\iff$ $C$ self-orthogonal; integer
+conformal spin (trivial $T$ sector phases) $\iff$ $C$ doubly even;
+holomorphy/index one ($|{\rm disc}|=1$, $S$-closure of the single
+character) $\iff$ $C$ self-dual --- the survivor set is exactly
+the $30$ $\hat e_8$ copies and no boundary-legal non-Type-II code
+exists.  Chained to \texttt{ARF.BOUNDARY.CODE.01}, the full route
+seam axioms A1--A3 $+$ deck $+$ orientation bit $\to$ unique code
+$\to E_8\to\mathbb F_2^4\to\gcar=5$ stands with the single \mC\
+residual R1$'$: \emph{the physical seam satisfies} A1 mutual
+locality (bose statistics / trivial monodromy), A2 integer
+conformal spin (modular $T$-alignment), A3 holomorphy/index one
+(a single modular-closed sector) --- each a standard physical
+demand, not a coding-theory premise.  Imported lattice-VOA/theta
+ingredients are classical, cited and machine-verified in every
+instance used; the OPE-linearity scope note is typed.  Kill: a
+seam construction violating A1--A3 while staying boundary-legal.
+No P2 marker move.
+\emph{\texttt{SEAM.CLIFFORD.MODULAR\_S.01}} (registered
+2026-08-06, partial state) --- the missing Clifford bit as the
+metaplectic lift of modular $S$ at $\tau=i$
+(\veri{v798\_seam\_clifford\_modular\_s.py}, $27/27$,
+\textsc{modular-s-partial}): \emph{coset decision positive} ---
+the per-binary-factor Hadamard lands exactly in the missing coset
+$\zeta_8G_{31}$ with the exact fixed-point relations ($S^2=I$,
+$T^2=$ Pauli parity, $(TK)^3=\zeta_8I$); the deck $J=iI$ \emph{is}
+the metaplectic anomaly of the total symplectic Fourier (R2
+placed) and $\zeta_8=(1{+}J)/\sqrt2$ the real half-deck swapping
+the seam pair; the strict uniqueness census over all $46080$ coset
+elements is \emph{empty} --- no $\Theta$-real metaplectic
+involution fixes $q^{*}$, the Arf defect
+$q^{*}\mapsto q^{*}+\bar h(\cdot,c)$ is unavoidable --- with
+exactly one $G_{31}$-conjugacy class of retyped survivors, and the
+$\sigma$-orbit Arf defects are exactly $\{A+F_\Sigma+F_i\}$ with
+XOR $=$ the anchor $A$ (R3 \emph{named}, not fixed).  \emph{What
+remains:} derive the physical selection of the defect class (the
+anchor naming from seam data) or type the two-variant/defect
+residue as intrinsic gauge.  Kill: a $\Theta$-real metaplectic
+coset element fixing $q^{*}$ (excluded here exhaustively) would
+falsify the defect law.  No marker move.
+\emph{\texttt{CURVE.CODE.OUTERSPIN.01}} (registered 2026-08-06,
+\emph{decided} \textsc{canonical}) --- the outer bridge between
+the code duad side and the curve syntheme side
+(\veri{v796\_duad\_syntheme\_bridge.py}, $24/24$,
+\textsc{bridge-canonical}): the Sylvester duality $\beta$ with
+$\beta\sigma=\tau\beta$ and $\beta(q^{*})=S^{*}$ (the unique
+$\langle\tau,\rho\rangle$-fixed spread) exists and is unique up to
+the order-6 code joint stabilizer (one orbit including the
+$\tau/\tau^2$ swap); it resolves the \texttt{v784} Arf mismatch
+canonically ($q_{\Theta}$ pulls back constantly to
+$q^{*}_{\rm even}=q^{*}+\bar h(\cdot,A)$, the anchor shift),
+transports $\bar5/10$ and $3{+}2$ exactly, and sends $t_A$ to
+$\rho=J$; $\chi_{\rm NSR}$ transports as an honest exact
+two-variant torsor pinned by the \texttt{v752} NS/R parity ---
+that two-fold ambiguity is intrinsic and typed, not open work.
+The \texttt{CURVE.CODE.2TORSION.01} inner-identification kill
+stands unchanged; no matter semantics
+(\textsc{rootclass-mixed}).  No marker move.
 \emph{\texttt{E8.QUARTIC.HALF.01}} --- G31 as the holomorphic $\mu_4$
 shadow of the E8 compiler: first slice \emph{executed} by
 \veri{v690\_quartic\_half.py} ($22/22$, \texttt{QUARTIC-HALF-ALIVE})
@@ -4098,7 +4191,17 @@ cross-referenced.  No marker move; no RH statement.]}
 also the named limit frame of demand~(2) of the new
 \texttt{PRIME.POSITIVE\_DESCENT.01} contract below --- the
 GL1-sector PSD persistence of the manifestly positive packet
-object is to be decided in exactly this weak-$*$ cluster frame.]}\par}
+object is to be decided in exactly this weak-$*$ cluster frame.]}
+\emph{[2026-08-06 add-on: the CP extension gate
+(\veri{v794\_cp\_extension\_gate.py},
+\textsc{cpgate-undecided-falling}) measures this demand
+\emph{sector-decorated}: the $\chi=$ GL1 instance of the
+four-sector window net \emph{is} this contract's object (anchor
+$3.882\times10^{-6}$ at $M=1176$ reproduced on the same $10^8$
+comb), ``state selection must settle'' $=$ ``the sector margins
+never cross''; measured: GL1 falls power-law ($\beta=-1.69$),
+$\chi_4$ saturates at ${\sim}1.5\times10^{-6}$ --- the first
+measured sector floor.]}\par}
 
 \par\smallskip\noindent\textbf{The positive descent
 (\texttt{PRIME.POSITIVE\_DESCENT.01}).}
@@ -4163,7 +4266,69 @@ claim; demand~(2) failing at any finite depth $=$
 rung where a non-GL1 carrier sector becomes PSD-binding while GL1
 stays positive breaks the ``GL1 is the unique carrier edge''
 reading measured here.  A research contract, \emph{not} a claim;
-no marker move; no RH statement.\par}
+no marker move; no RH statement.
+\emph{[2026-08-06 update, markers unchanged --- the contract stays
+open for the floor: all three demanded objects are now delivered
+at finite level.  (1-F)~The demand sharpens to the \emph{continuum
+functor}: $\chi\mapsto\Lambda_\chi=q(\chi)^{s/2}\prod_j
+\Gamma_{\mathbb R}(s+\mu_j(\chi))\,L_{\rm an}$ with
+$(\mu,q,\text{pole})$ given by one closed rule; verified instances
+GL1 ($q{=}1$, pole), $\chi_4$ ($q{=}4$), $f_8$ ($q{=}8$),
+$f_8\otimes\chi_{-4}$ ($q{=}16$, Atkin--Li $+$ Fricke), the
+conductor datum load-bearing at exactly $\ln2$ and pinned from
+below by the PSD margins; the mirror-type sectors are structurally
+non-automorphic and carry no positivity demand
+(\veri{v793\_f8sector\_conductor.py}, $15/15+16/16$).
+(2-L/2-Z)~The limit object acquires its exact form: per
+automorphic character the positivity of the sector Weil functional
+$W_\chi$ on the union test space $V_\infty$ ---
+$\inf_X\lambda_{\min}(T_{\chi,X})\ge0$ --- with the net data a
+CP-extension theorem consumes \emph{measured} (restriction
+exactness, interlacing, uniform bounds), and demand~(2) at
+$\chi=$ GL1 identified with the \textsc{z1-compactness}
+obstruction, sector-decorated; measured trend: no crossing,
+GL1/$f_8$/twist power-law falling, $\chi_4$ saturating at the
+first measured sector floor
+(\veri{v794\_cp\_extension\_gate.py}, $17/17$).  (3)~The carrier
+intertwiner \emph{exists} at finite level in Stinespring form with
+exact Choi and all covariances, its four automorphic channels
+landing on the four sector windows from one CP map, and the F1
+failure retyped as a negative Choi eigenvalue
+(\veri{v801\_prime\_cp\_intertwiner.py}, $29/29$; the
+infinite-level demands live in
+\texttt{PRIME.CP.INTERTWINER.01} below).  \emph{The remaining
+analytic core, restated:} the per-sector positivity floor
+(GRH-type, unproven) plus the intertwiner demands D1--D3.  No RH
+statement.]}\par}
+
+\par\smallskip\noindent\textbf{The carrier intertwiner
+(\texttt{PRIME.CP.INTERTWINER.01}).}
+{\sloppy
+\emph{OPEN} (registered 2026-08-06; demand~(3) of
+\texttt{PRIME.POSITIVE\_DESCENT.01} solved at finite level in
+\veri{v801\_prime\_cp\_intertwiner.py}, $29/29$,
+\textsc{cp-intertwiner-exists}).  \emph{Object:} the finite-level
+carrier intertwiner $\Phi(a)=V^{*}\pi(a)V$ on the arrow
+$*$-algebra $M_{15}\otimes\mathbb C[\text{tower}]\otimes
+(\text{packet slots at the odd places})$, $V$ the $105$-leg Kraus
+stack (unitality $\sum_eE_{x_ex_e}=7I$ exact), involution $=$
+arrow reversal, KMS half-weights $7^{-1/2}$ per leg / $n^{-1/2}$
+universal.  \emph{Certified at finite level:} CP/unitality (exact
+Choi, rank $105$, eigenvalue $1/7$); $\sigma$/deck/half-weight/
+$\beta=1$ covariances exact; the Choi census on the generating
+family exact (integer Gram factorization); the four automorphic
+channels of the one map land on the deployed GL1 Weil window
+(machine precision) and the $\chi_4/f_8$/twist
+$\Gamma_{\mathbb R}$-rule windows (PSD on $X=4..10$); the ramified
+conductor emptiness structural.  \emph{Demands (open):} D1 the
+$X$-compatible dilation family and its inductive limit (with the
+\texttt{v794} margin trends as the honest obstruction data); D2
+normal extension on the \textsc{z1-compactness} limit object
+(\texttt{v780}); D3 the limit identification of the GL1 channel
+with the critical-line Weil functional --- \emph{which contains RH
+and is not claimed}.  \emph{Kill:} a finite positive packet whose
+required GL1 intertwiner fails the exact Choi census structurally.
+No marker move; no RH statement.\par}
 
 \par\smallskip\noindent\textbf{The PD-persistence universal form
 (\texttt{PRIME.PD.PERSISTENCE.01}).}
@@ -5676,7 +5841,11 @@ $\|F_q^{(M)}(\varepsilon)\|_1\le c_0(q,\varepsilon)+(J(\varepsilon)/4)\ln(M{+}3)
 $J=2|f_q'(\varepsilon)|$, with all constants exact ($162$-case census to $M=6144$, zero violations;
 all $252$ transfer cases verified; Araki/Powers--St\o rmer summability explicit).  Honest: the
 measured slope is $J/\pi^2$ --- the bound is valid, not sharp.  Residues (b) and (c) stay open: the
-gate itself still does \emph{not} move.]}
+gate itself still does \emph{not} move.  2026-08-06 architectural note
+(\veri{v802\_gnet\_martingale.py}): the martingale route bypasses (b)/(c) for the
+limit-\emph{existence} step of the $G_{\rm net}$ continuum strand (summable state-norm defects
+suffice) and relocates them into the typed normality step --- a reallocation, not a proof of
+(b)/(c).]}
 By the No-Unit Theorem (\vref{v153}) the irreducibles stay exactly $\{\pi,v_{\mathrm{geo}}\}$ --- closing
 (A) adds none. \textbf{Final accounting:} premise~(A) $=$ ($A_2$ assembly, \mC) $+$ ($R_1{=}$%
 \texttt{GATE.QGEO}, already open) $+$ the $\{\pi,v_{\mathrm{geo}}\}$ irreducible core (a theorem) --- it
@@ -7386,8 +7555,16 @@ the classification matches the predeclared marker --- thermal/proper-time clocks
 the $-\Delta^2/2$ coset, the RG clock $\{\log\mu\}$ on the $0$ coset, the relic channel degenerate and
 honestly unclassified.  The functor axioms above stand; the jet/continuous-clock unification demand is
 \emph{replaced} by the fibered form, with the Schwarzian differences stored as the obstruction cocycle,
-not fitted away.  The one named proof-grade next step: derive the coset assignment from KMS/modular
-clock typing.  The four observables stay \mC/\mO; no marker move.]}
+not fitted away.  The one named proof-grade next step --- derive the coset assignment from KMS/modular
+clock typing --- is executed one round later and is a \emph{theorem}
+(\veri{v792\_ftransfer\_kms\_coset.py}, $18$ checks, \textsc{kms-coset-theorem}, registered as
+\texttt{FTRANSFER.KMSCOSET.01}): $S=-(\ln\lambda)^2/2$ with $\lambda$ the PGL$_2$ multiplier of the
+flow's time-1 holonomy per clock e-fold; the classifier uses no Schwarzian and no derivatives
+(non-circularity gated on its own source), the blind assignment classifies the four deployed charts
+exactly as the fibered functor carries them, the unblinding is sympy-exact, and the controls fire
+(fake KMS caught; affine invariance; the \texttt{v578} M\"obius clock as the positive case) --- the
+fiber classification is derived, not case-inspected.  The four observables stay \mC/\mO; no marker
+move.]}
 \par\smallskip\noindent\textbf{A preregistered cross-ratio check for the four solvers ---
 designed, and since executed on its discrete half.}
 The design is machine-checked in \veri{v566\_parabolic\_anchor\_selfcode.py}, the discrete-half
@@ -7561,7 +7738,18 @@ $h=\text{M\"obius}(e^{\pm\Delta\sigma})$ is exhibited and is
 non-affine, exactly the freedom the freeze forbids; K2/K3 stay
 quiet.  The same module carries the surviving architecture (the
 fibered refinement --- see the \texttt{CONTRACT.F.01} dated note
-above).  Nothing here upgrades \texttt{CONTRACT.F.01}: the four
+above).  \emph{[2026-08-06 completion
+(\texttt{FTRANSFER.KMSCOSET.01},
+\veri{v792\_ftransfer\_kms\_coset.py}, $18$ checks,
+\textsc{kms-coset-theorem}): the coset assignment of these clock
+charts is now a theorem from KMS/modular typing ---
+$S=-(\ln\lambda)^2/2$ from the time-1 PGL$_2$ holonomy multiplier
+per clock e-fold, with a Schwarzian-free, derivative-free
+classifier (the detailed-balance multiplier cross-ratio as the
+discrete KMS signature), blind assignment and exact unblinding;
+the three-probe chain executor $\to$ fibered groupoid $\to$ coset
+theorem is whole.]}  Nothing here upgrades
+\texttt{CONTRACT.F.01}: the four
 observables stay \mC/\mO; no marker move; no RH statement
 (unrelated surface; discipline note).
 \begin{figure}[t]

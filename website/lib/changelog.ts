@@ -42,6 +42,1556 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-06",
+    "dateLabel": "2026-08-06 · LXIV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round twenty-one — the descent functor completes at finite level and the boundary code becomes three physical axioms: ELEVEN modules ("
+      },
+      {
+        "k": "c",
+        "v": "v792"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v802"
+      },
+      {
+        "k": "t",
+        "v": ", from thirteen frozen probes; suite "
+      },
+      {
+        "k": "m",
+        "v": "784\\to795"
+      },
+      {
+        "k": "t",
+        "v": ") — the prime channel delivers all three demands of "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.POSITIVE_DESCENT.01"
+      },
+      {
+        "k": "t",
+        "v": " at finite level (sector continua as one "
+      },
+      {
+        "k": "m",
+        "v": "\\Gamma_{\\mathbb R}"
+      },
+      {
+        "k": "t",
+        "v": " functor, the exact limit object with the first measured sector floor, the Stinespring carrier intertwiner) plus the halving-tails/"
+      },
+      {
+        "k": "m",
+        "v": "k{=}5"
+      },
+      {
+        "k": "t",
+        "v": " tower mechanism and the "
+      },
+      {
+        "k": "m",
+        "v": "R"
+      },
+      {
+        "k": "t",
+        "v": "-microstate honest negative; the seam/code strand forces Type II from three physical axioms, identifies the missing Clifford bit as the metaplectic "
+      },
+      {
+        "k": "m",
+        "v": "S"
+      },
+      {
+        "k": "t",
+        "v": "-lift at "
+      },
+      {
+        "k": "m",
+        "v": "\\tau=i"
+      },
+      {
+        "k": "t",
+        "v": ", decides the canonical outer bridge and reads the carrier Pascal at character level; the clock strand turns the coset assignment into a theorem; and the "
+      },
+      {
+        "k": "m",
+        "v": "G_{\\rm net}"
+      },
+      {
+        "k": "t",
+        "v": " strand measures the martingale limit hypotheses as met"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (11)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v792_ftransfer_kms_coset.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "18"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "t",
+          "v": "kms-coset-theorem"
+        },
+        {
+          "k": "t",
+          "v": ": the coset carried by a clock chart is a FUNCTION of its KMS/modular typing datum — "
+        },
+        {
+          "k": "m",
+          "v": "S=-(\\ln\\lambda)^2/2"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda"
+        },
+        {
+          "k": "t",
+          "v": " the time-1 PGL"
+        },
+        {
+          "k": "m",
+          "v": "_2"
+        },
+        {
+          "k": "t",
+          "v": " holonomy multiplier per clock e-fold; Schwarzian-free, derivative-free classifier (non-circularity gated on its own source), blind assignment ("
+        },
+        {
+          "k": "m",
+          "v": "F_{\\rm pole}/F_{\\rm Boltzmann}"
+        },
+        {
+          "k": "t",
+          "v": " modular with "
+        },
+        {
+          "k": "m",
+          "v": "|\\ln\\lambda|=\\Delta=6\\log(3/2)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\rm QCD}"
+        },
+        {
+          "k": "t",
+          "v": " autonomous, "
+        },
+        {
+          "k": "m",
+          "v": "F_{\\rm relic}"
+        },
+        {
+          "k": "t",
+          "v": " degenerate) and sympy-exact unblinding; controls incl. the "
+        },
+        {
+          "k": "c",
+          "v": "v578"
+        },
+        {
+          "k": "t",
+          "v": " Möbius clock as the positive case — the executor "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " groupoid "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " coset chain of the "
+        },
+        {
+          "k": "c",
+          "v": "CONTRACT.F.01"
+        },
+        {
+          "k": "t",
+          "v": " refinement is whole); "
+        },
+        {
+          "k": "c",
+          "v": "v793_f8sector_conductor.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "15/15+16/16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "f8sector-psd"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "conductor-functorial"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "f_8"
+        },
+        {
+          "k": "t",
+          "v": " sector, broken at "
+        },
+        {
+          "k": "m",
+          "v": "-132..{-151}"
+        },
+        {
+          "k": "t",
+          "v": " under the register-trivial GL1 continuum, is PSD on the entire frozen ladder with its OWN weight-4/conductor-8/no-pole continuum ("
+        },
+        {
+          "k": "m",
+          "v": "+1.52\\times10^{-4}\\to+3.20\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": "); the continuum assignment is ONE closed rule "
+        },
+        {
+          "k": "m",
+          "v": "\\chi\\mapsto q^{s/2}\\prod_j\\Gamma_{\\mathbb R}(s+\\mu_j)"
+        },
+        {
+          "k": "t",
+          "v": " (duplication ward "
+        },
+        {
+          "k": "m",
+          "v": "2.7\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "); the twist "
+        },
+        {
+          "k": "m",
+          "v": "f_8\\otimes\\chi_{-4}"
+        },
+        {
+          "k": "t",
+          "v": " has conductor 16 by Atkin–Li "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the Fricke ward ("
+        },
+        {
+          "k": "m",
+          "v": "6.7\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") and lands PSD with the rule continuum; four-sector coherence; the conductor datum load-bearing at exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\ln2"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v794_cp_extension_gate.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "17/17"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "cpgate-undecided-falling"
+        },
+        {
+          "k": "t",
+          "v": ": restriction exactness/interlacing/uniform bounds measured (the frozen "
+        },
+        {
+          "k": "m",
+          "v": "e^{X/2}"
+        },
+        {
+          "k": "t",
+          "v": " pole prediction recalibrated, declared); the limit object "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the per-sector positivity floor on "
+        },
+        {
+          "k": "m",
+          "v": "V_{\\infty}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "z1-compactness"
+        },
+        {
+          "k": "t",
+          "v": " sector-decorated (anchor "
+        },
+        {
+          "k": "m",
+          "v": "3.882\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " reproduced); deep trend: no crossing, GL1 power-law to "
+        },
+        {
+          "k": "m",
+          "v": "3.9\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "X=18.375"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_4"
+        },
+        {
+          "k": "t",
+          "v": " SATURATES at "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}1.5\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " — the first measured sector floor); "
+        },
+        {
+          "k": "c",
+          "v": "v795_halving_tails_k5.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "20/20+17/17"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "tails-identified"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "k5-mechanism-found"
+        },
+        {
+          "k": "t",
+          "v": ": exact identities "
+        },
+        {
+          "k": "m",
+          "v": "v_2(D_p)=6+v_2(X_7)"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "8+v_2(X_1)"
+        },
+        {
+          "k": "t",
+          "v": " with termwise-integral divisor sums; class-7 base "
+        },
+        {
+          "k": "m",
+          "v": "\\iff R_3(p)\\equiv16\\pmod{32}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": " deterministic on the 2-power residue-tower cells with zero exceptions at "
+        },
+        {
+          "k": "m",
+          "v": "10^6"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "k=5"
+        },
+        {
+          "k": "t",
+          "v": " only in cell "
+        },
+        {
+          "k": "m",
+          "v": "(5,3)"
+        },
+        {
+          "k": "t",
+          "v": " of density "
+        },
+        {
+          "k": "m",
+          "v": "1/64"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow P=1/128"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the observed half mass; the class-7 mirror law "
+        },
+        {
+          "k": "m",
+          "v": "v_2(D_p)=3+v_2(p{+}1)"
+        },
+        {
+          "k": "t",
+          "v": "; the governing-field derivation typed open); "
+        },
+        {
+          "k": "c",
+          "v": "v796_duad_syntheme_bridge.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "24/24"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "bridge-canonical"
+        },
+        {
+          "k": "t",
+          "v": ": the Sylvester outer bridge "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\beta\\sigma=\\tau\\beta"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\beta(q^{*})=S^{*}"
+        },
+        {
+          "k": "t",
+          "v": " unique up to the order-6 joint stabilizer; "
+        },
+        {
+          "k": "m",
+          "v": "q_{\\Theta}"
+        },
+        {
+          "k": "t",
+          "v": " pulls back constantly to "
+        },
+        {
+          "k": "m",
+          "v": "q^{*}_{\\rm even}=q^{*}+\\bar h(\\cdot,A)"
+        },
+        {
+          "k": "t",
+          "v": " — the anchor shift resolves the "
+        },
+        {
+          "k": "c",
+          "v": "v784"
+        },
+        {
+          "k": "t",
+          "v": " Arf mismatch; "
+        },
+        {
+          "k": "m",
+          "v": "t_A\\mapsto\\rho=J"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{\\rm NSR}"
+        },
+        {
+          "k": "t",
+          "v": " an exact two-variant torsor); "
+        },
+        {
+          "k": "c",
+          "v": "v797_r_microstate_identification.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "14/14"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "r-no-arrow-realization"
+        },
+        {
+          "k": "t",
+          "v": ": the honest negative — no arrow-level realization of the "
+        },
+        {
+          "k": "m",
+          "v": "R"
+        },
+        {
+          "k": "t",
+          "v": "-grading; the count identity "
+        },
+        {
+          "k": "m",
+          "v": "16B_n=256R(n)"
+        },
+        {
+          "k": "t",
+          "v": " exact but count-level only); "
+        },
+        {
+          "k": "c",
+          "v": "v798_seam_clifford_modular_s.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "27/27"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "modular-s-partial"
+        },
+        {
+          "k": "t",
+          "v": ": the per-factor Hadamard IS the metaplectic "
+        },
+        {
+          "k": "m",
+          "v": "S"
+        },
+        {
+          "k": "t",
+          "v": "-lift at "
+        },
+        {
+          "k": "m",
+          "v": "\\tau=i"
+        },
+        {
+          "k": "t",
+          "v": ", landing exactly in the missing coset "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_8G_{31}"
+        },
+        {
+          "k": "t",
+          "v": "; the deck "
+        },
+        {
+          "k": "m",
+          "v": "J"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the metaplectic anomaly of the total Fourier (R2 placed); the strict "
+        },
+        {
+          "k": "m",
+          "v": "q^{*}"
+        },
+        {
+          "k": "t",
+          "v": " census EMPTY ("
+        },
+        {
+          "k": "m",
+          "v": "0/46080"
+        },
+        {
+          "k": "t",
+          "v": "), one "
+        },
+        {
+          "k": "m",
+          "v": "G_{31}"
+        },
+        {
+          "k": "t",
+          "v": "-conjugacy class of survivors, the "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "-orbit Arf defects XOR to the anchor "
+        },
+        {
+          "k": "m",
+          "v": "A"
+        },
+        {
+          "k": "t",
+          "v": " (R3 named)); "
+        },
+        {
+          "k": "c",
+          "v": "v799_seam_code_typeii.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "19/19"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "typeii-forced"
+        },
+        {
+          "k": "t",
+          "v": ": exhaustively over all "
+        },
+        {
+          "k": "m",
+          "v": "308{,}993"
+        },
+        {
+          "k": "t",
+          "v": " subspaces of "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb F_2^8"
+        },
+        {
+          "k": "t",
+          "v": ", locality "
+        },
+        {
+          "k": "m",
+          "v": "\\iff"
+        },
+        {
+          "k": "t",
+          "v": " self-orthogonal, integer spin "
+        },
+        {
+          "k": "m",
+          "v": "\\iff"
+        },
+        {
+          "k": "t",
+          "v": " doubly even, "
+        },
+        {
+          "k": "m",
+          "v": "S"
+        },
+        {
+          "k": "t",
+          "v": "-closure/"
+        },
+        {
+          "k": "m",
+          "v": "|{\\rm disc}|=1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\iff"
+        },
+        {
+          "k": "t",
+          "v": " self-dual "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the 30 "
+        },
+        {
+          "k": "m",
+          "v": "\\hat e_8"
+        },
+        {
+          "k": "t",
+          "v": " copies; residual R1 "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " R1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the three physical axioms A1–A3); "
+        },
+        {
+          "k": "c",
+          "v": "v800_e8_torsor_fourier.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "30/30"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "torsor-fourier-partial"
+        },
+        {
+          "k": "t",
+          "v": ": 120 canonical projective Fourier rays; the carrier block "
+        },
+        {
+          "k": "m",
+          "v": "=(1{+}5{+}10)\\boxtimes(1{+}3)"
+        },
+        {
+          "k": "t",
+          "v": " under "
+        },
+        {
+          "k": "m",
+          "v": "W(D_5)\\times W(A_3)"
+        },
+        {
+          "k": "t",
+          "v": " at character level — impossible at point level; the weight/character bases exactly mutually unbiased, "
+        },
+        {
+          "k": "t",
+          "v": "rootclass-mixed"
+        },
+        {
+          "k": "t",
+          "v": " intact; the 45 deck-even modes "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the 45 context Pauli observables); "
+        },
+        {
+          "k": "c",
+          "v": "v801_prime_cp_intertwiner.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "29/29"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "cp-intertwiner-exists"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\Phi=V^{*}\\pi V"
+        },
+        {
+          "k": "t",
+          "v": " from the 105 Kraus legs, arrow algebra "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the full "
+        },
+        {
+          "k": "m",
+          "v": "M_{15}"
+        },
+        {
+          "k": "t",
+          "v": ", Choi exact-rational ("
+        },
+        {
+          "k": "m",
+          "v": "105\\times1/7"
+        },
+        {
+          "k": "t",
+          "v": "); the four automorphic channels of ONE map land on the deployed GL1 Weil window ("
+        },
+        {
+          "k": "m",
+          "v": "6.0\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ") and the "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma_{\\mathbb R}"
+        },
+        {
+          "k": "t",
+          "v": "-rule windows, all PSD; F1 retyped as a negative Choi eigenvalue); "
+        },
+        {
+          "k": "c",
+          "v": "v802_gnet_martingale.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "15/15"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "martingale-hypotheses-met"
+        },
+        {
+          "k": "t",
+          "v": ": exact Haar filtration, defects summable at "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.25"
+        },
+        {
+          "k": "t",
+          "v": " per doubling, unique limit by telescoping, determinant witness "
+        },
+        {
+          "k": "m",
+          "v": "\\ge0.99"
+        },
+        {
+          "k": "t",
+          "v": "; decimation converges to the WRONG degenerate limit — the coherent bond load-bearing). Suite "
+        },
+        {
+          "k": "m",
+          "v": "784\\to795"
+        },
+        {
+          "k": "t",
+          "v": "; all eleven run standalone green and encode their frozen patterns per the "
+        },
+        {
+          "k": "c",
+          "v": "v757"
+        },
+        {
+          "k": "t",
+          "v": " precedent; all thirteen probes re-run identically at promotion."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contracts."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " NEW: "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.CODE.TYPEII.01"
+        },
+        {
+          "k": "t",
+          "v": " (R1 "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " R1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": ": the seam satisfies A1 mutual locality, A2 integer conformal spin, A3 holomorphy/index one — the three-axiom equivalence certified exhaustively), "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.CLIFFORD.MODULAR_S.01"
+        },
+        {
+          "k": "t",
+          "v": " (partial: coset positive, R2 solved as the metaplectic anomaly, R3 named through the Arf defects), "
+        },
+        {
+          "k": "c",
+          "v": "CURVE.CODE.OUTERSPIN.01"
+        },
+        {
+          "k": "t",
+          "v": " (decided "
+        },
+        {
+          "k": "t",
+          "v": "canonical"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "c",
+          "v": "v784"
+        },
+        {
+          "k": "t",
+          "v": " inner kill stands), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CP.INTERTWINER.01"
+        },
+        {
+          "k": "t",
+          "v": " (D1–D3 registered: dilation family, normality on the "
+        },
+        {
+          "k": "t",
+          "v": "z1-compactness"
+        },
+        {
+          "k": "t",
+          "v": " object, the limit identification — contains RH, fenced), "
+        },
+        {
+          "k": "c",
+          "v": "GNET.MARTINGALE.LIMIT.01"
+        },
+        {
+          "k": "t",
+          "v": " (hypotheses measured; steps 5–7 the typed analytic remainder). UPDATED with dated notes: "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.POSITIVE_DESCENT.01"
+        },
+        {
+          "k": "t",
+          "v": " (all three demands now finite-level; the remaining analytic core restated as the per-sector positivity floor "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " D1–D3), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.COMPACTNESS.01"
+        },
+        {
+          "k": "t",
+          "v": " (the sector-decoration cross-reference), "
+        },
+        {
+          "k": "c",
+          "v": "CONTRACT.F.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "FTRANSFER.CLOCKS.01"
+        },
+        {
+          "k": "t",
+          "v": " (the coset theorem completes the fibered refinement), "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.MULTIRATE2ADIC.01"
+        },
+        {
+          "k": "t",
+          "v": " (the tails identities, the residue tower, the mirror law; governing field typed open), "
+        },
+        {
+          "k": "c",
+          "v": "ARF.BOUNDARY.CODE.01"
+        },
+        {
+          "k": "t",
+          "v": " (all three residuals moved), "
+        },
+        {
+          "k": "c",
+          "v": "CURVE.CODE.2TORSION.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.TRANSITIONBUS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.CLIFFORD2Q.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.ARROW_MESSAGE.01"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 11 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "FTRANSFER.KMSCOSET.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.SECTOR_CONTINUA.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CP.EXTENSION.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.HALVINGTAILS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "CURVE.CODE.OUTERSPIN.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.R_MICROSTATE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.CLIFFORD.MODULAR_S.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.CODE.TYPEII.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.TORSOR.FOURIER.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CP.INTERTWINER.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "GNET.MARTINGALE.LIMIT.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " 10 dated notes; "
+        },
+        {
+          "k": "m",
+          "v": "866\\to877"
+        },
+        {
+          "k": "t",
+          "v": " rows; honest deaths and declared repairs carried in the module provenance blocks ([C]/[E]/measured typing per the probes); NO marker moves anywhere."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The descent functor completes at finite level, and the boundary code becomes three physical axioms” (demands (1)–(3), the depth-class mechanization, the two honest adjudications) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the positive-protocol close retyped; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ": five round-21 keybox entries (outer bridge, Type II, metaplectic "
+        },
+        {
+          "k": "m",
+          "v": "S"
+        },
+        {
+          "k": "t",
+          "v": "-lift, torsor Fourier; the R1–R3 residual prose retyped); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the Type-II forcing, the martingale follow-up and the Clifford completion join their sections; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": eleven new audit blocks "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the stale next-step/residual prose retyped; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": ": the coset-theorem note; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the five registrations and the dated updates above."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round twenty-one”; counters "
+        },
+        {
+          "k": "m",
+          "v": "784\\to795"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v802"
+        },
+        {
+          "k": "t",
+          "v": "; papers.ts, VerificationDag, OpenGates, HonestyBanner and prime-front counters updated; generated surfaces regenerated (ScriptIndex, changelog.ts, version.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "795"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v802"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact results (the coset theorem, the "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma_{\\mathbb R}"
+        },
+        {
+          "k": "t",
+          "v": " rule instances, the tails/tower identities, the outer-bridge census, the Type-II equivalence chain, the metaplectic coset identities, the character-level carrier block, the Stinespring/Choi certificates) sit behind explicit fences; the honest caps and negatives (the empty strict census, the mutually-unbiased cap, the no-arrow-realization, the undecided-falling trend) are preregistered adjudications on record; sector PSD stays finite-level evidence — GRH-type statements unproven; the limit identification contains RH and is NOT claimed; no marker moves; no RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-08-05",
     "dateLabel": "2026-08-05 · LXIII",
     "heading": [
