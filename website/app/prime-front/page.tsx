@@ -41,7 +41,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v813 inside an 806-script suite. No claim of progress toward the Riemann Hypothesis.",
+    "A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v824 inside an 817-script suite. No claim of progress toward the Riemann Hypothesis.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "The Prime Front — TFPT research diary",
     description:
-      "Primes, the E8 census, and the load-bearing modules v535–v813: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
+      "Primes, the E8 census, and the load-bearing modules v535–v824: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
     url: `${SITE_URL}/prime-front`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified v535–v813: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
+      "Research diary of the prime / zeta line. Machine-verified v535–v824: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
   },
 };
 
@@ -101,7 +101,7 @@ export default function PrimeFrontPage() {
           </nav>
 
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · 250 agent runs · 6638 sandbox checks · suite 806
+            Research diary · 250 agent runs · 6638 sandbox checks · suite 817
             scripts
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
@@ -3146,11 +3146,21 @@ function AugustOffensivesSection() {
           conjecture, PRIME.Z1.OPERATOR.01 remains open (sharpened 2026-08-05
           with the measured qf handover constraints after the closure of
           PRIME.GRAM.DIAGONAL.01, and executed the same day as the v780
-          trilogy: the compactness half is measured carried, the selection
-          half — the import-faithful boundary coupling — is the one shared
-          open object with PRIME.KMS.INDUCTIVE_STATE.02, merged target
-          Z1-COMPACTNESS), and nothing here is
-          a claim of progress toward the Riemann Hypothesis.
+          trilogy: the compactness half is measured carried, and the
+          selection half — once the one shared open object with
+          PRIME.KMS.INDUCTIVE_STATE.02, merged target Z1-COMPACTNESS — was
+          finite-level solved in round 23 by Mosco + Friedrichs (v816),
+          leaving the sector floor as the single analytic remainder,
+          registered as the fenced open contract PRIME.FLOOR.RATIO.01:
+          one ratio inequality ρ = τ/τ_pnt &gt; 0 with a measured h^-3/2
+          envelope — narrowed in round 24 by the certified floor
+          skeleton (v823 Lagrange sum-of-squares + certified fixed pair;
+          v824 analytic fixed-pair bound, 0.93–0.97 family exhaustion,
+          and the deep tail closed at citation grade for all h at
+          T_ver = 3e12, validity horizon α* ≈ 11) — battery-relative,
+          α-bounded, and still no positivity theorem on V_∞), and
+          nothing here is a claim of progress toward the Riemann
+          Hypothesis.
         </p>
       </div>
     </section>
@@ -3332,7 +3342,7 @@ function BigPictureSection() {
                 href="/verification"
                 className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
               >
-                v535–v813 (this front)
+                v535–v824 (this front)
               </Link>{" "}
               are machine-verified and cited in the papers. Sandbox probes never
               move a status marker.
@@ -3365,8 +3375,8 @@ function BigPictureSection() {
               tone="amber"
             />
             <BigPictureStat
-              term="v535–v813"
-              desc="machine-verified modules of this front, inside the 806-script suite (all green)"
+              term="v535–v824"
+              desc="machine-verified modules of this front, inside the 817-script suite (all green)"
               tone="emerald"
             />
             <BigPictureStat

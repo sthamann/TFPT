@@ -43,6 +43,3275 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-06",
+    "dateLabel": "2026-08-06 · LXVII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round twenty-four — the floor-theorem skeleton: TWO modules ("
+      },
+      {
+        "k": "c",
+        "v": "v823"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v824"
+      },
+      {
+        "k": "t",
+        "v": ", from four frozen probes; suite "
+      },
+      {
+        "k": "m",
+        "v": "815\\to817"
+      },
+      {
+        "k": "t",
+        "v": ") — the sector floor "
+      },
+      {
+        "k": "m",
+        "v": "\\det\\hat A_2 = \\lambda\\tau"
+      },
+      {
+        "k": "t",
+        "v": " becomes an EXACT machine-verified sum of squares over zero"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "pole rank-one carriers (Lagrange identity), the fixed pair (pole "
+      },
+      {
+        "k": "m",
+        "v": "\\times\\gamma_1"
+      },
+      {
+        "k": "t",
+        "v": ") is certified strictly positive on all 14 rungs with the budget tightened "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}10"
+      },
+      {
+        "k": "t",
+        "v": " orders by the psd-remainder monotonicity chain, and the three-piece uniform certified lower-bound skeleton closes at CITATION grade for all "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " at the deployed "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " up to the validity horizon "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha^*\\approx11"
+      },
+      {
+        "k": "t",
+        "v": " — "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.FLOOR.RATIO.01"
+      },
+      {
+        "k": "t",
+        "v": " stays [O], NARROWED: the floor bound is battery-relative and "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": "-bounded, necessary-side only, NO RH claim"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (2)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v823_prime_lagrange_floor.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "7/8"
+        },
+        {
+          "k": "t",
+          "v": " with the ONE preregistered-honest old-budget FAIL "
+        },
+        {
+          "k": "t",
+          "v": "s3.cert"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "9/9"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "lagrange-concentrated"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "pair-certified"
+        },
+        {
+          "k": "t",
+          "v": ": every per-zero layer of the v692 master identity is EXACTLY rank-one — the odd-extension symmetry factors the common phase, "
+        },
+        {
+          "k": "m",
+          "v": "v_\\gamma = 2\\sqrt{w(\\gamma)}\\,(S_1, S_2)"
+        },
+        {
+          "k": "t",
+          "v": " with the real closed form "
+        },
+        {
+          "k": "m",
+          "v": "S_i(\\phi) = \\sum_j t_{ij}\\sin((h-j-\\tfrac12)\\phi)"
+        },
+        {
+          "k": "t",
+          "v": " and the alias weight "
+        },
+        {
+          "k": "m",
+          "v": "w(\\gamma) = D\\,\\mathrm{csinc}^2(\\gamma D/2) \\ge 0"
+        },
+        {
+          "k": "t",
+          "v": " (layer dev "
+        },
+        {
+          "k": "m",
+          "v": "\\le 1.2{\\times}10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": ", pole rank-one "
+        },
+        {
+          "k": "m",
+          "v": "\\le 4.8{\\times}10^{-17}"
+        },
+        {
+          "k": "t",
+          "v": "); the LAGRANGE IDENTITY "
+        },
+        {
+          "k": "m",
+          "v": "\\det(G_Z + P) = \\sum_{\\rm pairs} w_i w_j (a_i b_j - a_j b_i)^2"
+        },
+        {
+          "k": "t",
+          "v": " holds at machine precision on all 14 rungs (ward "
+        },
+        {
+          "k": "m",
+          "v": "\\le 1.4{\\times}10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": "); the POLE is the universal non-collinear leg (the pole family carries "
+        },
+        {
+          "k": "m",
+          "v": "1.0000"
+        },
+        {
+          "k": "t",
+          "v": " of the pair total, every top-100 pair is pole "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " zero) and the moving zero leg obeys the ALIAS-COMB LAW (median comb distance "
+        },
+        {
+          "k": "m",
+          "v": "0.0007"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.0061"
+        },
+        {
+          "k": "t",
+          "v": " vs uniform "
+        },
+        {
+          "k": "m",
+          "v": "0.25"
+        },
+        {
+          "k": "t",
+          "v": "); A0 typed honestly: the atom-side rank-one framing FAILS as frozen ("
+        },
+        {
+          "k": "m",
+          "v": "0.10"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.23 < 0.5"
+        },
+        {
+          "k": "t",
+          "v": ") — the exact SOS realization lives on the zero"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "pole side; THE ROUTE CHANGE: "
+        },
+        {
+          "k": "m",
+          "v": "R = \\hat A_2 - G_Z - P"
+        },
+        {
+          "k": "t",
+          "v": " is an exact float "
+        },
+        {
+          "k": "m",
+          "v": "2{\\times}2"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(R) = 1.6{\\times}10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.8{\\times}10^{-6} \\ge"
+        },
+        {
+          "k": "t",
+          "v": " margin verified per rung, and the "
+        },
+        {
+          "k": "m",
+          "v": "2{\\times}2"
+        },
+        {
+          "k": "t",
+          "v": " psd fact "
+        },
+        {
+          "k": "m",
+          "v": "\\det(B{+}R) \\ge \\det B"
+        },
+        {
+          "k": "t",
+          "v": " ELIMINATES the tail estimate from the chain — BUD "
+        },
+        {
+          "k": "m",
+          "v": "0.14"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "7.1 \\to 2.4{\\times}10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.7{\\times}10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": ", median "
+        },
+        {
+          "k": "m",
+          "v": "9.8"
+        },
+        {
+          "k": "t",
+          "v": " ORDERS tightened; the certified interval "
+        },
+        {
+          "k": "m",
+          "v": "X^2({\\rm pole}, \\gamma_1) - {\\rm BUD}"
+        },
+        {
+          "k": "t",
+          "v": " is strictly positive on "
+        },
+        {
+          "k": "m",
+          "v": "14/14"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\gamma_1"
+        },
+        {
+          "k": "t",
+          "v": " pinned to "
+        },
+        {
+          "k": "c",
+          "v": "zetazero(1)"
+        },
+        {
+          "k": "t",
+          "v": " within "
+        },
+        {
+          "k": "m",
+          "v": "10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": "; dps-40 mpmath ward inside the interval); the fixed pair carries "
+        },
+        {
+          "k": "m",
+          "v": "0.0063"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.5832"
+        },
+        {
+          "k": "t",
+          "v": " of the floor with slope "
+        },
+        {
+          "k": "m",
+          "v": "h^{+1.06}"
+        },
+        {
+          "k": "t",
+          "v": " — a GROWING brick; controls fire (scramble "
+        },
+        {
+          "k": "m",
+          "v": "\\times45.8"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "49.0"
+        },
+        {
+          "k": "t",
+          "v": ", Epstein "
+        },
+        {
+          "k": "m",
+          "v": "\\times1784"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "50029"
+        },
+        {
+          "k": "t",
+          "v": " at det scale, collinear "
+        },
+        {
+          "k": "m",
+          "v": "\\det = 9.2{\\times}10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": " with interval containing 0)); "
+        },
+        {
+          "k": "c",
+          "v": "v824_prime_floor_skeleton.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "12/12 + 9/9"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "floor-partial"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "tail-closed-all-h"
+        },
+        {
+          "k": "t",
+          "v": ": PIECE 2 UNIFORM-VERIFIED — the ANALYTIC "
+        },
+        {
+          "k": "m",
+          "v": "h \\to \\infty"
+        },
+        {
+          "k": "t",
+          "v": " limit "
+        },
+        {
+          "k": "m",
+          "v": "X_\\infty(\\alpha) = 16\\alpha\\pi^2\\sin(\\alpha\\gamma_1)\\sinh(\\alpha/2)\\,[\\text{bracket}]"
+        },
+        {
+          "k": "t",
+          "v": " (Dirichlet closed form "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " direct sum at "
+        },
+        {
+          "k": "m",
+          "v": "5.7{\\times}10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": ", pipeline "
+        },
+        {
+          "k": "m",
+          "v": "8.5{\\times}10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": ", ZERO sign flips over 14 "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " 10 synthetic "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "; the explicit bound "
+        },
+        {
+          "k": "m",
+          "v": "L(h) = X_\\infty^2(\\alpha)(1 - C(\\alpha)/h)"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "h > h_0(\\alpha) = C(\\alpha) \\le 499.6"
+        },
+        {
+          "k": "t",
+          "v": "; honest limitation: 25 "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-NODES of "
+        },
+        {
+          "k": "m",
+          "v": "\\sin(\\alpha\\gamma_1)"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "[2, 12]"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-uniform per "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": ", NOT ladder-uniform in "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "); PIECE 3 UNIFORM-VERIFIED — FAMILY EXHAUSTION: the certified top-100 (pole "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " zero) family carries median "
+        },
+        {
+          "k": "m",
+          "v": "0.952"
+        },
+        {
+          "k": "t",
+          "v": " (min "
+        },
+        {
+          "k": "m",
+          "v": "0.931"
+        },
+        {
+          "k": "t",
+          "v": ", max "
+        },
+        {
+          "k": "m",
+          "v": "0.974"
+        },
+        {
+          "k": "t",
+          "v": ") of the floor, all carriers on-line by verified computation ("
+        },
+        {
+          "k": "m",
+          "v": "\\le 2{\\times}10^4"
+        },
+        {
+          "k": "t",
+          "v": "); the residue "
+        },
+        {
+          "k": "m",
+          "v": "0.015"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.049"
+        },
+        {
+          "k": "t",
+          "v": " with trend slope "
+        },
+        {
+          "k": "m",
+          "v": "+0.010"
+        },
+        {
+          "k": "t",
+          "v": " (truncation depth, not a structural carrier); the analytic family limit stays positive across ALL fixed-pair nodes (min "
+        },
+        {
+          "k": "m",
+          "v": "1.62{\\times}10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha = 2.68"
+        },
+        {
+          "k": "t",
+          "v": ") — the family never dies simultaneously; PIECE 1 CLOSED BY THE TAIL REPAIR: the crude coherence-discarding envelope closes only "
+        },
+        {
+          "k": "m",
+          "v": "4/14"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "h \\le 434"
+        },
+        {
+          "k": "t",
+          "v": "; the autopsy names the coherence discard — measured band slack "
+        },
+        {
+          "k": "m",
+          "v": "\\times2.7{\\times}10^3"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.4{\\times}10^5"
+        },
+        {
+          "k": "t",
+          "v": "); the PRODUCT-SUP envelope (exact Dirichlet closed form, grid-converged with doubling ward; the rigorous Lipschitz certificate of the sup is a NAMED elementary step, typed not claimed) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Abel summation against RvM counting with EXPLICIT unconditional Trudgian-grade constants (factor "
+        },
+        {
+          "k": "m",
+          "v": "2.13"
+        },
+        {
+          "k": "t",
+          "v": "; the Vinogradov–Korobov region typed honestly USELESS, "
+        },
+        {
+          "k": "m",
+          "v": "0.985"
+        },
+        {
+          "k": "t",
+          "v": ") closes ALL 14 rungs at the FIXED verified horizon "
+        },
+        {
+          "k": "m",
+          "v": "T_{\\rm ver} = 3{\\times}10^{12}"
+        },
+        {
+          "k": "t",
+          "v": " with margins "
+        },
+        {
+          "k": "m",
+          "v": "10^3"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "10^6"
+        },
+        {
+          "k": "t",
+          "v": " (the secondary top-100 family gate closes "
+        },
+        {
+          "k": "m",
+          "v": "14/14"
+        },
+        {
+          "k": "t",
+          "v": " too); THE LAW CHANGE: "
+        },
+        {
+          "k": "m",
+          "v": "\\log h"
+        },
+        {
+          "k": "t",
+          "v": " coefficient "
+        },
+        {
+          "k": "m",
+          "v": "+1.98 \\to +0.13"
+        },
+        {
+          "k": "t",
+          "v": " — the "
+        },
+        {
+          "k": "m",
+          "v": "h\\,e^\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " growth was an ARTIFACT of the coherence discard, the sharpened law is "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-FREE at fixed "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "; remaining growth "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-only ("
+        },
+        {
+          "k": "m",
+          "v": "q = +1.79"
+        },
+        {
+          "k": "t",
+          "v": ", the off-line allowance "
+        },
+        {
+          "k": "m",
+          "v": "e^{2\\alpha\\delta}"
+        },
+        {
+          "k": "t",
+          "v": " of the critical strip), re-crossing "
+        },
+        {
+          "k": "m",
+          "v": "X_\\infty^2"
+        },
+        {
+          "k": "t",
+          "v": " near "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^* \\approx 11.2"
+        },
+        {
+          "k": "t",
+          "v": " — far beyond the deployed battery ("
+        },
+        {
+          "k": "m",
+          "v": "\\alpha \\le 6.146"
+        },
+        {
+          "k": "t",
+          "v": ") but finite and honestly typed; controls fire (synthetic off-line pairs break the psd chain "
+        },
+        {
+          "k": "m",
+          "v": "4/4"
+        },
+        {
+          "k": "t",
+          "v": " exactly at the off-line locus AND stay inside both envelopes; the scramble kills the family structure; the regression ward reproduces the old "
+        },
+        {
+          "k": "m",
+          "v": "\\{184, 210, 218, 434\\}"
+        },
+        {
+          "k": "t",
+          "v": " closure boundary)). Suite "
+        },
+        {
+          "k": "m",
+          "v": "815\\to817"
+        },
+        {
+          "k": "t",
+          "v": "; both run standalone green and encode their frozen patterns per the "
+        },
+        {
+          "k": "c",
+          "v": "v757"
+        },
+        {
+          "k": "t",
+          "v": " precedent; all four probes re-run identically at promotion."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The net floor statement (the round's deliverable, verbatim honesty)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " On every rung of the deployed 14-rung battery, "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda\\tau = \\det\\hat A_2 \\ge X^2({\\rm pole}, \\gamma_1) - {\\rm pert}(h) > 0"
+        },
+        {
+          "k": "t",
+          "v": " at CITATION grade — no per-rung eigencheck, no zero-location input beyond the critical strip; inputs: the strip, verified on-line zeros to "
+        },
+        {
+          "k": "m",
+          "v": "T_{\\rm ver} = 3{\\times}10^{12}"
+        },
+        {
+          "k": "t",
+          "v": " (Platt–Trudgian, cited), RvM counting with explicit unconditional constants (cited), the analytic pair limit, the product-sup per-zero envelope. The complete three-piece skeleton: exact SOS identity [E-grade wards] "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " analytic fixed-pair bound ("
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-uniform per deployed "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " certified "
+        },
+        {
+          "k": "m",
+          "v": "0.93"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.97"
+        },
+        {
+          "k": "t",
+          "v": " family exhaustion "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " psd remainder closed for all "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " up to "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^* \\approx 11"
+        },
+        {
+          "k": "t",
+          "v": ". This is NECESSARY-side evidence on a frozen battery — NOT RH; the floor bound is battery-relative and "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-bounded."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contracts."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " NEW: "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.LAGRANGE.01"
+        },
+        {
+          "k": "t",
+          "v": " (the exact Lagrange SOS identity "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the pair certification) and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " (the three-piece skeleton "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the all-"
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " tail closure). "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "PRIME.FLOOR.RATIO.01"
+            },
+            {
+              "k": "t",
+              "v": " [O] NARROWED"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (dated contract-text update): WHAT IS NOW CLOSED — the deployed-battery skeleton at citation grade (exact SOS, analytic fixed-pair bound with explicit "
+        },
+        {
+          "k": "m",
+          "v": "h_0(\\alpha) \\le 500"
+        },
+        {
+          "k": "t",
+          "v": ", certified family exhaustion, "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-free psd closure at "
+        },
+        {
+          "k": "m",
+          "v": "T_{\\rm ver}"
+        },
+        {
+          "k": "t",
+          "v": "); WHAT REMAINS — (i) "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha > \\alpha^* \\approx 11.2"
+        },
+        {
+          "k": "t",
+          "v": " needs verified on-line DEPTH beyond "
+        },
+        {
+          "k": "m",
+          "v": "T_{\\rm ver}"
+        },
+        {
+          "k": "t",
+          "v": " (never location), (ii) the family version of the analytic bound at the "
+        },
+        {
+          "k": "m",
+          "v": "\\sin(\\alpha\\gamma_1)"
+        },
+        {
+          "k": "t",
+          "v": " nodes, (iii) the product-sup Lipschitz certificate (named elementary step), (iv) the "
+        },
+        {
+          "k": "m",
+          "v": "V_\\infty"
+        },
+        {
+          "k": "t",
+          "v": " positivity itself — the "
+        },
+        {
+          "k": "m",
+          "v": "O(1)"
+        },
+        {
+          "k": "t",
+          "v": " capture and the "
+        },
+        {
+          "k": "m",
+          "v": "\\rho > 0"
+        },
+        {
+          "k": "t",
+          "v": " demand at infinity remain the contract; kill criteria unchanged; promotion of any "
+        },
+        {
+          "k": "m",
+          "v": "\\rho"
+        },
+        {
+          "k": "t",
+          "v": " bound stays FENCED."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 2 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.LAGRANGE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated narrowing update on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "898\\to900"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves ([O] stays [O]; exact identities [E]-grade wards, certified intervals and shares measured/[C] per the ledger fine-typing)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The floor-theorem skeleton: the floor as an exact sum of squares, and the tail closed for all "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "” (both "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": " citations); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the two registrations "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": " narrowing note."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round twenty-four”; counters "
+        },
+        {
+          "k": "m",
+          "v": "815\\to817"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v824"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated (ScriptIndex, changelog.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "817"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v824"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact identity layer (rank-one factorization, Lagrange SOS) carries identity-grade machine wards at float precision; the certified intervals, shares and closure margins are measured finite-level evidence; the citation-grade chain uses ONLY the critical strip "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " cited verified depth "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " cited explicit RvM constants — no zero-location input, no RH-strength assumption; the honest boundaries (battery-relative, "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-bounded, the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-nodes, the named sup certificate) are typed in the modules and the contract; NO marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-06",
+    "dateLabel": "2026-08-06 · LXVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round twenty-three — one inequality: the floor reduces to the prime comb against its own density: NINE modules ("
+      },
+      {
+        "k": "c",
+        "v": "v814"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v822"
+      },
+      {
+        "k": "t",
+        "v": ", from thirteen frozen probes; suite "
+      },
+      {
+        "k": "m",
+        "v": "806\\to815"
+      },
+      {
+        "k": "t",
+        "v": ") — the selection problem of the unified compactness contract is finite-level SOLVED by Mosco form convergence "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Friedrichs minimality, the positive-descent master theorem applies to BOTH instances with the new prime summability number (kernel-checked Lean core), and the sector floor reduces to the SINGLE ratio inequality "
+      },
+      {
+        "k": "m",
+        "v": "\\rho = \\tau/\\tau_{\\rm pnt} > 0"
+      },
+      {
+        "k": "t",
+        "v": " with a measured "
+      },
+      {
+        "k": "m",
+        "v": "h^{-3/2}"
+      },
+      {
+        "k": "t",
+        "v": " envelope (the new contract "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.FLOOR.RATIO.01"
+      },
+      {
+        "k": "t",
+        "v": " [O]); the K5 follow-up locates the deployed transport bit-exactly ("
+      },
+      {
+        "k": "m",
+        "v": "T_{v221} = B^6"
+      },
+      {
+        "k": "t",
+        "v": ", the dated SIXTHROOT correction) and types the six-step composition clock-only with the canonical "
+      },
+      {
+        "k": "m",
+        "v": "T_{10}"
+      },
+      {
+        "k": "t",
+        "v": " proposal; the Kraus tower gains the spread/commutant deciders and its 39-dim nonabelian commutant closure; the RM cascade lands (the 15-label channel "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " punctured RM"
+      },
+      {
+        "k": "m",
+        "v": "(1,4)^*"
+      },
+      {
+        "k": "t",
+        "v": " with the "
+      },
+      {
+        "k": "m",
+        "v": "[[15,1,3]]"
+      },
+      {
+        "k": "t",
+        "v": " CSS code and the closing self-reproduction cycle, the rule-A protocol set "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the 105 minimal dual checks, the "
+      },
+      {
+        "k": "m",
+        "v": "E_7"
+      },
+      {
+        "k": "t",
+        "v": " vacuum completion "
+      },
+      {
+        "k": "m",
+        "v": "112+21=133"
+      },
+      {
+        "k": "t",
+        "v": " as a matrix identity); and the vacuum-completion reading of the continuum dies honestly in both transcriptions with the "
+      },
+      {
+        "k": "m",
+        "v": "c^*"
+      },
+      {
+        "k": "t",
+        "v": " pencil bound as the frozen fence"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (9)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v814_k5_sixstep_transport.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "23/23"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "sixstep-clock-only"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "transport10-proposed"
+        },
+        {
+          "k": "t",
+          "v": ": the rate "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " arises canonically on THREE spatial routes (doily alternation, hexagon compression, hexagon circulation), each blocked by a typed obstruction (no unit mode — the norm obstruction [E neu]; the bipartite sign "
+        },
+        {
+          "k": "m",
+          "v": "-2/3"
+        },
+        {
+          "k": "t",
+          "v": "; the wrong space "
+        },
+        {
+          "k": "m",
+          "v": "\\times 9"
+        },
+        {
+          "k": "t",
+          "v": ") — the deployed six is the CLOCK exponent (v124 "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_n = (1-n/3)^6"
+        },
+        {
+          "k": "t",
+          "v": ", v486 hand, fixed eigenbasis); sixth-power blindness [E neu]: "
+        },
+        {
+          "k": "m",
+          "v": "C_6"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "2K_3"
+        },
+        {
+          "k": "t",
+          "v": " have identical sixth powers, only per-step data distinguish walk from clock; THE CORRECTION (dated note on the v808 row): "
+        },
+        {
+          "k": "m",
+          "v": "T_{v221}"
+        },
+        {
+          "k": "t",
+          "v": " (the exact spectral sum of v221's transfer "
+        },
+        {
+          "k": "m",
+          "v": "(1-w)^6"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "= B^6"
+        },
+        {
+          "k": "t",
+          "v": " BIT-EXACTLY — the sixth-root verdict upgrades from "
+        },
+        {
+          "k": "t",
+          "v": "spectral-only"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "t",
+          "v": "bitexact"
+        },
+        {
+          "k": "t",
+          "v": "-vs-v221; the canonical proposal "
+        },
+        {
+          "k": "m",
+          "v": "T_{10} = P_{10}^6"
+        },
+        {
+          "k": "t",
+          "v": " in the "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda^2"
+        },
+        {
+          "k": "t",
+          "v": " basis passes ALL gates (spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{1, (1/3)^6{\\times}5, (2/3)^6{\\times}4\\}"
+        },
+        {
+          "k": "t",
+          "v": " with multiplicities "
+        },
+        {
+          "k": "m",
+          "v": "(5,4) = (\\gcar, |\\mu_4|)"
+        },
+        {
+          "k": "t",
+          "v": ", equitable v774 quotient "
+        },
+        {
+          "k": "m",
+          "v": "= (Q_{\\rm Pet}/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " bit-exact) — a promotion-ready proposal, NO deploy claim); "
+        },
+        {
+          "k": "c",
+          "v": "v815_kraus_spread_commutant.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "21/21 + 24/24"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "spread-sigma-broken"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "commutant-extends"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "aorb-not-maximal"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " acts on the 6 spreads as two 3-cycles, ZERO fixed (outer-class forced), no invariant coarsening — but the direct-sum protocol is "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "-stable as a FAMILY with invariant witnesses "
+        },
+        {
+          "k": "m",
+          "v": "\\sum B_{45}(s) = 4I + 2B"
+        },
+        {
+          "k": "t",
+          "v": " and per-orbit "
+        },
+        {
+          "k": "m",
+          "v": "A_{\\rm orb}"
+        },
+        {
+          "k": "t",
+          "v": " (integer spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{0^5,1^2,4^5,7^2,9^1\\}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "[E,K] = 0"
+        },
+        {
+          "k": "t",
+          "v": " lifts EXACTLY to channel / KMS tower / odd places (the "
+        },
+        {
+          "k": "m",
+          "v": "C_2"
+        },
+        {
+          "k": "t",
+          "v": "-character expectation unique per place) and the 600-dim register; the "
+        },
+        {
+          "k": "m",
+          "v": "\\{K,\\sigma\\}"
+        },
+        {
+          "k": "t",
+          "v": " commutant is 39-dim nonabelian "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb R \\oplus M_3(\\mathbb R) \\oplus M_3(\\mathbb C) \\oplus M_3(\\mathbb R) \\oplus M_1(\\mathbb C)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "A_{\\rm orb}"
+        },
+        {
+          "k": "t",
+          "v": " the canonical abelian 5-dim subalgebra, window-silent beyond the "
+        },
+        {
+          "k": "m",
+          "v": "K"
+        },
+        {
+          "k": "t",
+          "v": "-spectrum); "
+        },
+        {
+          "k": "c",
+          "v": "v816_prime_mosco_selection.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "23/23"
+        },
+        {
+          "k": "t",
+          "v": " guards"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "controls, "
+        },
+        {
+          "k": "m",
+          "v": "6/6"
+        },
+        {
+          "k": "t",
+          "v": " legs, "
+        },
+        {
+          "k": "t",
+          "v": "mosco-selects"
+        },
+        {
+          "k": "t",
+          "v": ": the decider table on identical rungs — moment oscillation "
+        },
+        {
+          "k": "m",
+          "v": "22.0829"
+        },
+        {
+          "k": "t",
+          "v": " (the failed selector, reproduced exactly) vs Friedrichs resolvents "
+        },
+        {
+          "k": "m",
+          "v": "0.0004"
+        },
+        {
+          "k": "t",
+          "v": " / ledger-adjusted Weyl "
+        },
+        {
+          "k": "m",
+          "v": "0.0843"
+        },
+        {
+          "k": "t",
+          "v": " / raw "
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": "-face "
+        },
+        {
+          "k": "m",
+          "v": "0.0000"
+        },
+        {
+          "k": "t",
+          "v": "; cofinal-unique "
+        },
+        {
+          "k": "m",
+          "v": "2.5{\\times}10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": "; M2 recovery exact "
+        },
+        {
+          "k": "m",
+          "v": "1.2{\\times}10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "; M1 margins "
+        },
+        {
+          "k": "m",
+          "v": "+2.63"
+        },
+        {
+          "k": "t",
+          "v": " with the EDGE family typed a genuine boundary channel; the import diagnosis completed at form level — nothing whitened at the core, the whitened control reproduces "
+        },
+        {
+          "k": "m",
+          "v": "5.8772"
+        },
+        {
+          "k": "t",
+          "v": " exactly); "
+        },
+        {
+          "k": "c",
+          "v": "v817_positive_descent_master.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "14/14"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "master-both-instances"
+        },
+        {
+          "k": "t",
+          "v": ": the 7-hypothesis master theorem with the kernel-checked Lean core ("
+        },
+        {
+          "k": "c",
+          "v": "PositiveDescentMaster.lean"
+        },
+        {
+          "k": "t",
+          "v": ": telescoping "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Cauchy tail, positivity closure, sector commutation); "
+        },
+        {
+          "k": "m",
+          "v": "G_{\\rm net}"
+        },
+        {
+          "k": "t",
+          "v": " re-verified (Choi PSD, rate "
+        },
+        {
+          "k": "m",
+          "v": "0.267"
+        },
+        {
+          "k": "t",
+          "v": "/doubling); THE NEW NUMBER: the prime packet state defects are summable at "
+        },
+        {
+          "k": "m",
+          "v": "0.701"
+        },
+        {
+          "k": "t",
+          "v": "/doubling "
+        },
+        {
+          "k": "m",
+          "v": "\\approx 2^{-1/2}"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\hat m_2(p) = -1/15"
+        },
+        {
+          "k": "t",
+          "v": " exactly for every odd prime; control K4: positivity is a SEPARATE hypothesis); "
+        },
+        {
+          "k": "c",
+          "v": "v818_sector_floor_attack.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "9/13 + 13/15"
+        },
+        {
+          "k": "t",
+          "v": " with exactly the preregistered FAILs, "
+        },
+        {
+          "k": "t",
+          "v": "floor-mechanism-partial"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "capture-bounded"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "t",
+          "v": "theorem-shape"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "t",
+          "v": "amplifier-mechanism"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "{\\rm onem} = F(r)\\,\\varepsilon\\,K"
+        },
+        {
+          "k": "t",
+          "v": " symbolically exact with the sign entirely in the vanishing weight; interlacing capture "
+        },
+        {
+          "k": "m",
+          "v": "\\tau/\\lambda_{\\min}(A_h)"
+        },
+        {
+          "k": "t",
+          "v": " median "
+        },
+        {
+          "k": "m",
+          "v": "1.53"
+        },
+        {
+          "k": "t",
+          "v": " (range "
+        },
+        {
+          "k": "m",
+          "v": "1.04"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.36"
+        },
+        {
+          "k": "t",
+          "v": ") — the 2-mode lock block is an "
+        },
+        {
+          "k": "m",
+          "v": "O(1)"
+        },
+        {
+          "k": "t",
+          "v": "-faithful witness of the full floor; capture angle "
+        },
+        {
+          "k": "m",
+          "v": "\\cos\\theta"
+        },
+        {
+          "k": "t",
+          "v": " median "
+        },
+        {
+          "k": "m",
+          "v": "0.990"
+        },
+        {
+          "k": "t",
+          "v": ", scramble-robust (frame content); the rotation law closes symbolically with "
+        },
+        {
+          "k": "m",
+          "v": "100\\%"
+        },
+        {
+          "k": "t",
+          "v": " staircase sign-match — "
+        },
+        {
+          "k": "m",
+          "v": "r"
+        },
+        {
+          "k": "t",
+          "v": "-monotonicity is now a calculus statement; the amplifier is carried by the smallest prime powers, envelope "
+        },
+        {
+          "k": "m",
+          "v": "\\rho h^{3/2} \\in [4.85, 24.2]"
+        },
+        {
+          "k": "t",
+          "v": " non-decaying; the contraction constant is density-level (Epstein "
+        },
+        {
+          "k": "m",
+          "v": "s_E = 0.241"
+        },
+        {
+          "k": "t",
+          "v": ")); "
+        },
+        {
+          "k": "c",
+          "v": "v819_prime_packet_rm14.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "21/21"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "rm14-exact"
+        },
+        {
+          "k": "t",
+          "v": ", Lean companion "
+        },
+        {
+          "k": "c",
+          "v": "PacketRM14.lean"
+        },
+        {
+          "k": "t",
+          "v": ": the 15-label channel row hull "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " punctured RM"
+        },
+        {
+          "k": "m",
+          "v": "(1,4)^* = [15,5,7]"
+        },
+        {
+          "k": "t",
+          "v": ", enumerator exact; "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{\\rm NSR}"
+        },
+        {
+          "k": "t",
+          "v": " is ONE codeword ("
+        },
+        {
+          "k": "m",
+          "v": "7{+}8"
+        },
+        {
+          "k": "t",
+          "v": " its two sides, "
+        },
+        {
+          "k": "m",
+          "v": "C_2"
+        },
+        {
+          "k": "t",
+          "v": " the affine bit); the cycle RM"
+        },
+        {
+          "k": "m",
+          "v": "(1,3) \\to E_8 \\to V \\to {\\rm RM}(1,4)^* \\to {\\rm RM}(1,3)"
+        },
+        {
+          "k": "t",
+          "v": " closes with exactly "
+        },
+        {
+          "k": "m",
+          "v": "1344"
+        },
+        {
+          "k": "t",
+          "v": " equivalences; CSS "
+        },
+        {
+          "k": "m",
+          "v": "[[15,1,3]]"
+        },
+        {
+          "k": "t",
+          "v": " with dual "
+        },
+        {
+          "k": "m",
+          "v": "[15,10,4]"
+        },
+        {
+          "k": "t",
+          "v": ", logical distances "
+        },
+        {
+          "k": "m",
+          "v": "(7,3)"
+        },
+        {
+          "k": "t",
+          "v": ", triorthogonality "
+        },
+        {
+          "k": "m",
+          "v": "8/4/2"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_8"
+        },
+        {
+          "k": "t",
+          "v": " typed [H]); "
+        },
+        {
+          "k": "c",
+          "v": "v820_prime_kraus_rm24.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "16/16 + 14/14"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "kraus-rm24-rule-canonical"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "planeframes-exact"
+        },
+        {
+          "k": "t",
+          "v": ": the literal leg-support claim dead twice (weights "
+        },
+        {
+          "k": "m",
+          "v": "1/2/3 <"
+        },
+        {
+          "k": "t",
+          "v": " distance 4; Sp orbits "
+        },
+        {
+          "k": "m",
+          "v": "15{+}90"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "45{+}60"
+        },
+        {
+          "k": "t",
+          "v": "); the canonical "
+        },
+        {
+          "k": "m",
+          "v": "\\omega"
+        },
+        {
+          "k": "t",
+          "v": "-built rule identifies the rule-A protocol set with the 105 weight-4 checks of "
+        },
+        {
+          "k": "m",
+          "v": "[15,10,4]"
+        },
+        {
+          "k": "t",
+          "v": " exactly, Sp"
+        },
+        {
+          "k": "m",
+          "v": "/\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "/deck/KMS-covariant; "
+        },
+        {
+          "k": "m",
+          "v": "A_3 = 12"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "B_3 = 16"
+        },
+        {
+          "k": "t",
+          "v": " certified as PLANE-COUNT statements ("
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_3(3) = 28"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "a_3 = -4"
+        },
+        {
+          "k": "t",
+          "v": "); the graded frame intertwiner "
+        },
+        {
+          "k": "m",
+          "v": "V^*V = \\sigma_3(n) I"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "V^*\\Gamma V = a_n I"
+        },
+        {
+          "k": "t",
+          "v": " exact for "
+        },
+        {
+          "k": "m",
+          "v": "n = 3,5,7"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v821_prime_vacuum35.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "22/22"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "vacuum35-exact"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "140 = 105 + 35"
+        },
+        {
+          "k": "t",
+          "v": "; Grams "
+        },
+        {
+          "k": "m",
+          "v": "22I{+}6J"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "6I{+}J"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "28I{+}7J"
+        },
+        {
+          "k": "t",
+          "v": " entrywise; the "
+        },
+        {
+          "k": "m",
+          "v": "E_7"
+        },
+        {
+          "k": "t",
+          "v": " completion "
+        },
+        {
+          "k": "m",
+          "v": "112 + 21 = 133"
+        },
+        {
+          "k": "t",
+          "v": " as a matrix identity (v170 anchor [C]); Weitzenböck "
+        },
+        {
+          "k": "m",
+          "v": "H_{105}^T H_{105} = 2B^2 + 14I"
+        },
+        {
+          "k": "t",
+          "v": " as the canonical label-side left factor with the honest v758 scope; the "
+        },
+        {
+          "k": "m",
+          "v": "\\pm B"
+        },
+        {
+          "k": "t",
+          "v": " cancellation inside one Gram; tight frame constant 28 on mean-zero; RM"
+        },
+        {
+          "k": "m",
+          "v": "(2,4)"
+        },
+        {
+          "k": "t",
+          "v": " dual-containing); "
+        },
+        {
+          "k": "c",
+          "v": "v822_prime_vacuum_dilation.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "17/19 + 12/14"
+        },
+        {
+          "k": "t",
+          "v": " with the four FAILs being the preregistered PSD deciders, "
+        },
+        {
+          "k": "t",
+          "v": "unshorten-dead"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "dilation-dead"
+        },
+        {
+          "k": "t",
+          "v": ": the 35-row Stinespring form fixes the shape exactly ("
+        },
+        {
+          "k": "m",
+          "v": "6I{+}J"
+        },
+        {
+          "k": "t",
+          "v": " ward, Weitzenböck bookkeeping integer) and buys "
+        },
+        {
+          "k": "m",
+          "v": "\\times 13.1"
+        },
+        {
+          "k": "t",
+          "v": " — and both sectors STILL fail under both normalizations; THE GENERAL OBSTRUCTION QUANTIFIED: PSD "
+        },
+        {
+          "k": "m",
+          "v": "\\iff"
+        },
+        {
+          "k": "t",
+          "v": " coupling "
+        },
+        {
+          "k": "m",
+          "v": "\\le c^* = (2/21)\\lambda_{\\rm pencil}(T_{\\rm dep}, T_{\\rm cont}^2)"
+        },
+        {
+          "k": "t",
+          "v": ", measured deficits "
+        },
+        {
+          "k": "m",
+          "v": "\\times 3{\\times}10^7"
+        },
+        {
+          "k": "t",
+          "v": " (GL1) / "
+        },
+        {
+          "k": "m",
+          "v": "\\times 2{\\times}10^2"
+        },
+        {
+          "k": "t",
+          "v": " (f8) — the reading dies with the calibration, not the geometry; the continuum's completion role is already exhausted inside "
+        },
+        {
+          "k": "m",
+          "v": "T_{\\rm dep}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "c^*"
+        },
+        {
+          "k": "t",
+          "v": " is the frozen fence; module 7 / path-state NOT buildable)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contracts."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " NEW: "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.MOSCO.SELECTION.01"
+        },
+        {
+          "k": "t",
+          "v": " (selection solved finite-level; the three infinite-level ingredients typed), "
+        },
+        {
+          "k": "c",
+          "v": "TFPT.POSITIVE_DESCENT.MASTER.01"
+        },
+        {
+          "k": "t",
+          "v": " (both instances; the Lean core; positivity a separate hypothesis), "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "PRIME.FLOOR.RATIO.01"
+            },
+            {
+              "k": "t",
+              "v": " [O] — the new main contract candidate"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the sector floor reduces to the single ratio inequality "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(X) = \\tau/\\tau_{\\rm pnt} > 0"
+        },
+        {
+          "k": "t",
+          "v": " with the measured "
+        },
+        {
+          "k": "m",
+          "v": "h^{-3/2}"
+        },
+        {
+          "k": "t",
+          "v": " envelope (constant "
+        },
+        {
+          "k": "m",
+          "v": "\\approx 4.85"
+        },
+        {
+          "k": "t",
+          "v": ", non-decaying), direction owned by the density rotation law (calculus statement, hypotheses verified), capture angle-certified frame geometry ("
+        },
+        {
+          "k": "m",
+          "v": "\\cos\\theta"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "0.990"
+        },
+        {
+          "k": "t",
+          "v": ", scramble-robust), the amplifier carried by the smallest prime powers; KILL "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the envelope failing at depth or the capture angle collapsing; NO RH claim, PROMOTION FENCED. Also registered: "
+        },
+        {
+          "k": "c",
+          "v": "K5.SIXSTEP.TRANSPORT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.AORB.REFINEMENT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PACKET.RM14.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KRAUS.RM24.01"
+        },
+        {
+          "k": "t",
+          "v": " (carrying "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.C2.PLANEFRAMES.01"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.VACUUM35.01"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CONTINUUM.UNSHORTEN.01"
+        },
+        {
+          "k": "t",
+          "v": " as the vacuum-route CLOSURE row (both transcriptions dead, the "
+        },
+        {
+          "k": "m",
+          "v": "c^*"
+        },
+        {
+          "k": "t",
+          "v": " pencil bound the frozen fence, the exhaustion insight). Dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "CARRIER.PETERSEN.RADIAL.01"
+        },
+        {
+          "k": "t",
+          "v": " (the SIXTHROOT "
+        },
+        {
+          "k": "t",
+          "v": "bitexact"
+        },
+        {
+          "k": "t",
+          "v": " upgrade with the v221 evidence — the frozen "
+        },
+        {
+          "k": "t",
+          "v": "spectral-only"
+        },
+        {
+          "k": "t",
+          "v": " stands as that probe's adjudication, ABEL-DEAD precedent — and the "
+        },
+        {
+          "k": "m",
+          "v": "T_{10}"
+        },
+        {
+          "k": "t",
+          "v": " proposal), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KRAUS.DOILY.01"
+        },
+        {
+          "k": "t",
+          "v": " (spread/commutant/aorb addenda), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.Z1.COMPACTNESS.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.POSITIVE_DESCENT.01"
+        },
+        {
+          "k": "t",
+          "v": " (selection solved via Mosco, unique limit via the master theorem, the floor the single remaining object "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " cross-ref "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": "). NO marker moves; the honest deaths recorded as preregistered adjudications; all declared repairs carried verbatim in PROVENANCE."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 10 new rows (the nine module rows "
+        },
+        {
+          "k": "c",
+          "v": "K5.SIXSTEP.TRANSPORT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.AORB.REFINEMENT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.MOSCO.SELECTION.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "TFPT.POSITIVE_DESCENT.MASTER.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "SECTOR.FLOORATTACK.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PACKET.RM14.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KRAUS.RM24.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.VACUUM35.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CONTINUUM.UNSHORTEN.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the contract row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " 4 dated updates; "
+        },
+        {
+          "k": "m",
+          "v": "888\\to898"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves anywhere."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “One inequality: the floor reduces to the prime comb against its own density” (the Mosco selection, the master theorem, the floor mechanism and the new contract, the Kraus commutant tower, the vacuum-route closure); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ": the round-23 keybox entries (the clock-only six-step with the "
+        },
+        {
+          "k": "m",
+          "v": "T_{10}"
+        },
+        {
+          "k": "t",
+          "v": " proposal and the SIXTHROOT correction, the RM cascade with the "
+        },
+        {
+          "k": "m",
+          "v": "[[15,1,3]]"
+        },
+        {
+          "k": "t",
+          "v": " CSS code, the "
+        },
+        {
+          "k": "m",
+          "v": "E_7"
+        },
+        {
+          "k": "t",
+          "v": " vacuum completion); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the plane-frame Hecke match ("
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_3(3) = 28"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "a_3 = -4"
+        },
+        {
+          "k": "t",
+          "v": " as plane counts) and the RM-code reading of the 15-label channel join their sections; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": nine new audit blocks; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the registrations and dated updates above."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round twenty-three”; counters "
+        },
+        {
+          "k": "m",
+          "v": "806\\to815"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v822"
+        },
+        {
+          "k": "t",
+          "v": "; papers.ts and VerificationDag updated; generated surfaces regenerated (ScriptIndex, changelog.ts, version.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "815"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v822"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact results (the bit-exact transport location, the commutant tower, the RM enumerators and Gram identities, the "
+        },
+        {
+          "k": "m",
+          "v": "E_7"
+        },
+        {
+          "k": "t",
+          "v": " completion) sit behind the standing fences ("
+        },
+        {
+          "k": "t",
+          "v": "rootclass-mixed"
+        },
+        {
+          "k": "t",
+          "v": " intact; no matter semantics; the "
+        },
+        {
+          "k": "m",
+          "v": "E_7"
+        },
+        {
+          "k": "t",
+          "v": "/fingerprint readings [C]; the "
+        },
+        {
+          "k": "m",
+          "v": "T_{10}"
+        },
+        {
+          "k": "t",
+          "v": " and vacuum readings proposals/[H], not deployments); the analytic strand is measured finite-level evidence only — "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": " carries its kill criteria and its promotion fence, the honest kills (the vacuum route in both transcriptions, the four preregistered floor FAILs) are on record as adjudications; no marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-06",
     "dateLabel": "2026-08-06 · LXV",
     "heading": [
       {

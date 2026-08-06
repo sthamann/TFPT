@@ -100,7 +100,7 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::How to read this document::1": {
-  "hash": "74e608e78507",
+  "hash": "ac0686f3843e",
   "date": "2026-08-06"
  },
  "tfpt_1_architecture_e8::section::Headline: the Pascal compiler on five carrier slots::1": {
@@ -348,7 +348,7 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The Sheet Diamond and the Winding Line: masses and transport from one surface::1": {
-  "hash": "383cde36ea71",
+  "hash": "0afa5bb2f2e2",
   "date": "2026-08-06"
  },
  "tfpt_2_standard_model::subsection::Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?::1": {
@@ -488,7 +488,7 @@
   "date": "2026-06-24"
  },
  "tfpt_2_standard_model::section::Quark $c$-rationals: best values at current precision::1": {
-  "hash": "ea1585b11e8a",
+  "hash": "5e0822627eee",
   "date": "2026-08-06"
  },
  "tfpt_2_standard_model::section::H2: the moduli computation, set up explicitly::1": {
@@ -524,7 +524,7 @@
   "date": "2026-06-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
-  "hash": "c6ce499af60a",
+  "hash": "1bfede748463",
   "date": "2026-08-06"
  },
  "tfpt_3_e8_audit_bootstrap::section::Further audit lemmas (machine-verified this round)::1": {
@@ -724,8 +724,8 @@
   "date": "2026-08-01"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "1ea1fcf9a63d",
-  "date": "2026-08-06"
+  "hash": "b78c6a9296b4",
+  "date": "2026-08-07"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {
   "hash": "62902eaaa0d2",

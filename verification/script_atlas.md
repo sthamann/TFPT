@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`806` registered scripts · `888` ledger claims · `10` clusters.
+`817` registered scripts · `900` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (326 scripts)
+### `core` — Compiler core & the E₈ glue  (337 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -663,6 +663,28 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v37_plucker_anchor, v11, v12, v37, v4, v752 · cited: 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v813_p1_index_kms** [E/O/X] `P1.INDEX.KMS.01` — **P1-IDENTITY-CLOSED (13/13): I·β·c3 = 4 · 2π · 1/(8π) = 1 EXAKT (formale Fraction × π^k-Arithmetik, keine Floats); Abhängigkeits-Audit: der Index I = 4 = |μ₄| ist ein UNABHÄNGIGES
   - deps: AX.P1.01, v154_simple_current_theorem, v155_quasifree_boundary, v23_anchor_generator, v154, v726, v746, v779 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v814_k5_sixstep_transport** [E] `K5.SIXSTEP.TRANSPORT.01` — **SIXSTEP-CLOCK-ONLY + TRANSPORT10-PROPOSED (23/23): die Rate (2/3)⁶ entsteht KANONISCH auf drei räumlichen Routen (Doily-Alternation, Hexagon-Kompression, Hexagon-Zirkulation), ab
+  - deps: v808_petersen_sixthroot, TRANSPORT.SIXTHROOT.01, v809_curve_code_doily, v221, v124, v486, v37, v774 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v815_kraus_spread_commutant** [E] `PRIME.AORB.REFINEMENT.01` — **SPREAD-SIGMA-BROKEN + COMMUTANT-EXTENDS + AORB-NOT-MAXIMAL (21/21 + 24/24): σ wirkt auf die 6 Spreads als ZWEI 3-Zyklen, null fix (outer-S6-erzwungen); keine invariante Vergröber
+  - deps: v811_prime_kraus_doily, v801_prime_cp_intertwiner, v738, v756, v783, v801, v563, v755 · cited: 3 e8 audit bootstrap, research contracts
+- **v816_prime_mosco_selection** [-] `PRIME.MOSCO.SELECTION.01` — Mosco-Formkonvergenz + Friedrichs-Minimalität liefern den eindeutigen Limes-Kandidaten genau dort, wo die Moment-Selektion bei 22 oszillierte — **MOSCO-SELECTS (6/6 Beine, 23/23 Gu
+  - deps: v780_z1_compactness_trilogy, v762_dense_weil_core, v791_positive_descent, v762, v563, v696, v755, v766 · cited: 3 e8 audit bootstrap, research contracts
+- **v817_positive_descent_master** [O] `TFPT.POSITIVE_DESCENT.MASTER.01` — **MASTER-BOTH-INSTANCES (14/14): das Theorem (7 eingefrorene Hypothesen) mit kernel-geprüftem Kern (a) Teleskopieren + Cauchy-Schwanz, (b) Positivität limes-abgeschlossen, (c) Sekt
+  - deps: v791_positive_descent, v802_gnet_martingale, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton, v791, v802, v793 · cited: 3 e8 audit bootstrap, research contracts
+- **v818_sector_floor_attack** [E/O] `SECTOR.FLOORATTACK.01` — exakte Margen-Faktorisierung, O(1)-treue Interlacing-Erfassung, symbolisches Rotationsgesetz, h^{−3/2}-Verstärker-Hüllkurve: der Boden reduziert sich auf EINE Verhältnis-Ungleichun
+  - deps: v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton, v780_z1_compactness_trilogy, v794_cp_extension_gate, v807_lorentz_nullselector, v563, v583, v586, v773 · cited: 3 e8 audit bootstrap, research contracts
+- **v819_prime_packet_rm14** [-] `PRIME.PACKET.RM14.01` — **RM14-EXACT (21/21, Lean-Begleiter PacketRM14.lean kernel-geprüft, 30 Theoreme): die Zeilenhülle von B = das punktierte RM(1,4)* = [15,5,7], Enumerator EXAKT 1 + 15z⁷ + 15z⁸ + z¹⁵
+  - deps: v776_boundary_hamming_uniqueness, v799_seam_code_typeii, v803_e8_jetcode_affine_nsr, v752, v753, v774, v798 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v820_prime_kraus_rm24** [E/C/X] `PRIME.KRAUS.RM24.01` — **KRAUS-RM24-RULE-CANONICAL + PLANEFRAMES-EXACT (16/16 + 14/14): der wörtliche Anspruch stirbt ZWEIMAL (Träger-Gewichte 1/2/3 < Distanz 4; Sp(4,2)-Orbits 15+90 vs 45+60 — keine äqu
+  - deps: v811_prime_kraus_doily, v819_prime_packet_rm14, v815_kraus_spread_commutant, v738, v756, v801 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v821_prime_vacuum35** [E/C] `PRIME.VACUUM35.01` — 140 = 105 + 35, die E7-Spektral-Vervollständigung 112 + 21 = 133 als Matrix-Identität, der Weitzenböck-Linksfaktor und die exakte ±B-Kürzung — **VACUUM35-EXACT (22/22): RM(2,4) = [
+  - deps: v819_prime_packet_rm14, v758_simpler_certificate, v752, v758, v774, v170, v79, v463 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v822_prime_vacuum_dilation** [E/X] `PRIME.CONTINUUM.UNSHORTEN.01` — die Vakuum-Vervollständigungs-Lesart des Kontinuums ist in BEIDEN Transkriptionen TOT, mit der c*-Pencil-Schranke als eingefrorenem Zaun — **UNSHORTEN-DEAD + DILATION-DEAD (17/19 +
+  - deps: v821_prime_vacuum35, v758_simpler_certificate, v793_f8sector_conductor, v758, v563, v716, v755 · cited: 3 e8 audit bootstrap, research contracts
+- **v823_prime_lagrange_floor** [E] `PRIME.FLOOR.LAGRANGE.01` — **LAGRANGE-CONCENTRATED + PAIR-CERTIFIED (7/8 mit dem EINEN präregistrierten Alt-Budget-FAIL S3.CERT + 9/9): jede Nullstellen-Schicht der v692-Master-Identität ist EXAKT Rang-1 (ge
+  - deps: v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton, v818_sector_floor_attack, v563, v684, v692, v818 · cited: 3 e8 audit bootstrap, research contracts
+- **v824_prime_floor_skeleton** [E] `PRIME.FLOOR.SKELETON.01` — **FLOOR-PARTIAL + TAIL-CLOSED-ALL-H (12/12 + 9/9): STÜCK 2 UNIFORM-VERIFIED — der ANALYTISCHE h→∞-Limes des Fixpaars X_∞(α) = 16απ² sin(αγ₁) sinh(α/2)[Klammer] (Dirichlet-geschloss
+  - deps: v823_prime_lagrange_floor, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton, v818_sector_floor_attack, v563, v684, v692, v818, v823 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1677,22 +1699,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×109, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×22, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17
+**Most-depended-on claims** (the load-bearing roots): `v563`×115, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×24, `v76`×19, `v56`×19, `v492`×19, `v755`×19, `QG.AMB.01`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v802_gnet_martingale** — `GNET.MARTINGALE.LIMIT.01`
-- **v803_e8_jetcode_affine_nsr** — `E8.RAMIFIED.JETCODE.01`
-- **v804_prime_carrier_gray** — `PRIME.CARRIER.GRAY.01`
-- **v805_e8_syndrome_algebra** — `E8.SYNDROME.ALGEBRA.01`
-- **v806_hecke_local_clifford** — `HECKE.LOCAL.CLIFFORD.01`
-- **v807_lorentz_nullselector** — `PRIME.LORENTZ.SPINOR.01`
-- **v808_petersen_sixthroot** — `CARRIER.PETERSEN.RADIAL.01`
-- **v809_curve_code_doily** — `CURVE.CODE.DOILY.01`
-- **v810_cutcode_moment** — `CARRIER.CUTCODE.01`
-- **v811_prime_kraus_doily** — `PRIME.KRAUS.DOILY.01`
-- **v812_flavor_graph_filtration** — `FLAVOR.GRAPH.FILTRATION.01`
 - **v813_p1_index_kms** — `P1.INDEX.KMS.01`
+- **v814_k5_sixstep_transport** — `K5.SIXSTEP.TRANSPORT.01`
+- **v815_kraus_spread_commutant** — `PRIME.AORB.REFINEMENT.01`
+- **v816_prime_mosco_selection** — `PRIME.MOSCO.SELECTION.01`
+- **v817_positive_descent_master** — `TFPT.POSITIVE_DESCENT.MASTER.01`
+- **v818_sector_floor_attack** — `SECTOR.FLOORATTACK.01`
+- **v819_prime_packet_rm14** — `PRIME.PACKET.RM14.01`
+- **v820_prime_kraus_rm24** — `PRIME.KRAUS.RM24.01`
+- **v821_prime_vacuum35** — `PRIME.VACUUM35.01`
+- **v822_prime_vacuum_dilation** — `PRIME.CONTINUUM.UNSHORTEN.01`
+- **v823_prime_lagrange_floor** — `PRIME.FLOOR.LAGRANGE.01`
+- **v824_prime_floor_skeleton** — `PRIME.FLOOR.SKELETON.01`
 

@@ -6311,10 +6311,19 @@ oscillate ($22.1$).  Measured unification:
 (carried) and share one remaining obstruction --- the
 import-faithful boundary coupling; the merged target is named
 \textsc{z1-compactness}.  No marker move, no RH claim, nothing
-beyond $X=20.3125$.
+beyond $X=20.3125$.  \emph{[2026-08-06 round-23: the selection
+half is finite-level SOLVED --- Mosco form convergence $+$
+Friedrichs minimality replace the failed moment selector on
+identical rungs (moment osc $22.08$ vs Friedrichs resolvents
+$0.0004$, cofinal-unique $2.5\times10^{-5}$; nothing whitened at
+the core), \veri{v816\_prime\_mosco\_selection.py},
+\textsc{mosco-selects}; the historical $22.1$ oscillation above
+stays on record as the measurement that motivated the
+replacement.]}
 Machine-checked: \veri{v780\_z1\_compactness\_trilogy.py}.
 \mE\ (Herglotz/Ward exactness) $+$ (\textsc{measured})
-(compactness carried; selection open)
+(compactness carried; selection open --- since solved
+finite-level, see the Mosco block below)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The $d=4$ forcing census and the
@@ -6585,7 +6594,22 @@ now delivered at finite level --- the continua functorially
 and the trend measured (\veri{v794\_cp\_extension\_gate.py}), the
 intertwiner in Stinespring form
 (\veri{v801\_prime\_cp\_intertwiner.py}); the remaining analytic
-core is the per-sector positivity floor.  No marker move, no
+core is the per-sector positivity floor.  Round-23 follow-up
+(markers unchanged): selection and uniqueness both finite-level
+delivered --- Mosco selection
+(\veri{v816\_prime\_mosco\_selection.py}) and the master theorem
+(\veri{v817\_positive\_descent\_master.py}, prime state defects
+summable at $0.701$/doubling); the floor reduces to the single
+ratio inequality $\rho=\tau/\tau_{\rm pnt}>0$
+(\veri{v818\_sector\_floor\_attack.py},
+\texttt{PRIME.FLOOR.RATIO.01} [O]).  Round-24 follow-up (markers
+unchanged): the floor contract is \emph{narrowed} --- the
+lock-block floor $\lambda\tau$ carries a certified three-piece
+lower-bound skeleton on the deployed battery, closed at citation
+grade for all $h$ up to $\alpha^*\approx11$
+(\veri{v823\_prime\_lagrange\_floor.py},
+\veri{v824\_prime\_floor\_skeleton.py}); battery-relative,
+$\alpha$-bounded, still open.  No marker move, no
 RH claim.
 Machine-checked: \veri{v791\_positive\_descent.py}.
 (\textsc{measured}) (exact-rational positivity; unique PSD sector)
@@ -6657,6 +6681,14 @@ no sector crosses zero; GL1 falls power-law to $3.9\times10^{-6}$ at
 $X=18.375$ ($\beta=-1.69$), $f_8$ $\beta=-1.63$, twist
 $\beta=-2.10$, and $\chi_4$ \emph{saturates} at
 ${\sim}1.5\times10^{-6}$ --- the first measured sector floor.
+\emph{[2026-08-06 round-23: the floor demand is now reduced to the
+single ratio inequality $\rho=\tau/\tau_{\rm pnt}>0$ with a
+measured $h^{-3/2}$ envelope
+(\veri{v818\_sector\_floor\_attack.py},
+\texttt{PRIME.FLOOR.RATIO.01} [O]); round-24: narrowed by the
+certified floor skeleton (\veri{v823\_prime\_lagrange\_floor.py},
+\veri{v824\_prime\_floor\_skeleton.py}) --- battery-relative,
+$\alpha$-bounded, still open.]}
 Controls fire (conductor swap $=$ margin $-\ln2$ at
 $2.2\times10^{-16}$).  No marker move, no RH claim.
 Machine-checked: \veri{v794\_cp\_extension\_gate.py}.
@@ -6991,10 +7023,19 @@ symmetric doubly stochastic PSD sixth root in the corpus basis, and
 $B^6$ is $GL(3,\Q)$-conjugate to \texttt{v486}'s $M^6$ and to the
 cusp-diagonal form but bit-equal to \emph{neither} --- the corpus
 freezes the spectrum, not the basis (the basis-freeze question
-named).  Controls fire.  No marker move.
+named).  \emph{[2026-08-06 round-23 dated correction: the census
+had missed the deployed \texttt{v221} evaluation --- $T_{v221}$
+$=B^6$ \emph{bit-exactly}, so the verdict upgrades to
+\textsc{bitexact}-vs-v221 and the basis-freeze question is
+answered on the deployed route; the [H~neu] 10-dim reading gains
+the canonical proposal $T_{10}$ (\textsc{transport10-proposed},
+no deploy claim); see the six-step block below
+(\veri{v814\_k5\_sixstep\_transport.py}).]}
+Controls fire.  No marker move.
 Machine-checked: \veri{v808\_petersen\_sixthroot.py}.
 \mE\ (census identities; spectrum equality) $+$ [H~neu]
-(multiplicity reading) $+$ \mO\ (basis freeze)
+(multiplicity reading) $+$ \mO\ (basis freeze --- answered
+bit-exactly in round 23, dated correction above)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The doily incidence identity
@@ -7008,13 +7049,17 @@ $\mathrm{spec}=\{9,4^9,0^5\}$, and $N/3$ has singular values
 $\{1,2/3,0\}$ --- the recovery base rate $2/3$ is the unique
 nontrivial singular value of the canonical duad-to-syntheme
 incidence (the $(2/3)^6$ identification typed \emph{pending the
-six-step composition}).  Petersen edges $=$ synthemes $15/15$;
+six-step composition} --- decided in round 23:
+\textsc{sixstep-clock-only}, the deployed six is the clock
+exponent, \veri{v814\_k5\_sixstep\_transport.py}, see the
+six-step block below).  Petersen edges $=$ synthemes $15/15$;
 every census bridge factors exactly
 $N_{\rm code}=P_\Delta^{T}N_{\rm curve}^{T}P_\Gamma$ --- a
 transpose duality, not an isomorphism; the Arf switch set $T_6$
 $=$ the six within-block duads.  Controls fire.  No marker move.
 Machine-checked: \veri{v809\_curve\_code\_doily.py}.
-\mE\ (incidence identities) $+$ \mO\ (the six-step target)
+\mE\ (incidence identities) $+$ \mO\ (the six-step target ---
+decided clock-only in round 23, dated note above)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The cut code and the master moment
@@ -7056,7 +7101,12 @@ the ledger T3 census; the $45$ transports are quadratic
 $16$.  The surprise: $[B_{45},B_{60}]=0$ exactly ---
 $K=\tfrac37E+\tfrac47R$ is a direct-sum protocol with $E$ a
 conditional expectation.  Measured: the certified spread is
-\emph{not} $\sigma$-invariant --- the named next falsifier.
+\emph{not} $\sigma$-invariant --- the named next falsifier
+\emph{[decided in round 23: $\sigma$ has zero fixed spreads
+(outer-class forced) but the protocol is $\sigma$-stable as a
+family, and $[E,K]=0$ extends to the full tower ---
+\veri{v815\_kraus\_spread\_commutant.py}, see the commutant-tower
+block below]}.
 Controls fire.  No marker move, no RH claim.
 Machine-checked: \veri{v811\_prime\_kraus\_doily.py}.
 \mE\ (protocol identities; exact commutant) $+$ (\textsc{measured})
@@ -7102,6 +7152,238 @@ stays a declared input.
 Machine-checked: \veri{v813\_p1\_index\_kms.py}.
 \mE\ (the identity; the convention audit) $+$ \mO\ (the even
 modular-response bridge)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The six-step composition and the
+$T_{10}$ proposal (\texttt{K5.SIXSTEP.TRANSPORT.01}).}
+One probe ($23/23$ incl.\ the $3$ must-fire controls; verdicts
+\textsc{sixstep-clock-only} $+$ \textsc{transport10-proposed}).
+The rate $(2/3)^6$ arises canonically on three spatial routes
+(doily alternation, hexagon compression, hexagon circulation), but
+each carries a typed obstruction (no unit mode --- the norm
+obstruction; the bipartite sign $-2/3$; the wrong space), and
+sixth-power blindness ($C_6$ vs $2K_3$: identical sixth powers)
+makes per-step data mandatory --- the deployed six is the
+\emph{clock} exponent.  The dated correction: $T_{v221}$ (the
+exact spectral sum of \texttt{v221}'s transfer $(1-w)^6$) $=B^6$
+\emph{bit-exactly} --- the \texttt{v808} sixth-root verdict
+upgrades from \textsc{spectral-only} to \textsc{bitexact}-vs-v221.
+The canonical proposal $T_{10}=P_{10}^6$ in the $\Lambda^2$ basis
+passes all gates (spectrum $\{1,(1/3)^6{\times}5,
+(2/3)^6{\times}4\}$, equitable \texttt{v774} quotient
+$=(Q_{\rm Pet}/3)^6$ bit-exact) --- a proposal, no deploy claim.
+Controls fire.  No marker move, no RH claim.
+Machine-checked: \veri{v814\_k5\_sixstep\_transport.py}.
+\mE\ (operator identities; the bit-exact location) $+$ \mC\
+(the $T_{10}$ reading, proposal)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Kraus commutant tower
+(\texttt{PRIME.AORB.REFINEMENT.01}).}
+Two probes ($21/21+24/24$; verdicts \textsc{spread-sigma-broken}
+$+$ \textsc{commutant-extends} $+$ \textsc{aorb-not-maximal}; one
+declared gate-implementation repair carried verbatim).  $\sigma$
+acts on the six spreads as two 3-cycles, zero fixed (outer-class
+forced); no invariant coarsening survives, but the direct-sum
+protocol is $\sigma$-stable as a family ($\sum_s B_{45}(s)=4I+2B$;
+per-orbit $A_{\rm orb}$ spectrum $\{0^5,1^2,4^5,7^2,9^1\}$);
+$[E,K]=0$ lifts exactly to channel/KMS-tower/odd places (the
+unique $C_2$-character expectation per place) and the $600$-dim
+register; the $\{K,\sigma\}$ commutant is $39$-dim nonabelian with
+$A_{\rm orb}$ its canonical abelian $5$-dim subalgebra ---
+window-silent beyond the $K$-spectrum.  Controls fire.  No marker
+move, no RH claim.
+Machine-checked: \veri{v815\_kraus\_spread\_commutant.py}.
+\mE\ (censuses; integer-exact commutation) $+$ (\textsc{measured})
+(protocol-internal windows)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Mosco selection
+(\texttt{PRIME.MOSCO.SELECTION.01}).}
+One probe ($23/23$ guards$+$controls, $6/6$ legs; verdict
+\textsc{mosco-selects}).  The selection problem of the unified
+compactness contract is finite-level solved: on identical rungs
+the moment selector oscillates at $22.08$ while Friedrichs
+resolvents ($0.0004$), ledger-adjusted Weyl tracks ($0.0843$) and
+raw-coupling $\mu$-face resolvents ($0.0000$) are Cauchy;
+cofinal-unique to $2.5\times10^{-5}$; recovery exact
+($1.2\times10^{-12}$); the import diagnosis completed at form
+level (nothing whitened at the core; the whitened control
+reproduces $5.8772$ exactly).  The three infinite-level
+ingredients typed; positivity untouched.  Controls fire.  No
+marker move, no RH claim.
+Machine-checked: \veri{v816\_prime\_mosco\_selection.py}.
+(\textsc{measured}) (the finite-level decider) $+$ \mO\ (the three
+typed infinite-level ingredients)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The positive-descent master theorem
+(\texttt{TFPT.POSITIVE\_DESCENT.MASTER.01}).}
+One probe ($14/14$ incl.\ the $4$ must-fire controls; verdict
+\textsc{master-both-instances}; kernel-checked Lean core
+\texttt{PositiveDescentMaster.lean}).  Summable state defects over
+character sectors force a unique positive limit state (telescoping
+$+$ Cauchy tail; positivity closed; sectors commute) --- and both
+instances measure their hypotheses: $G_{\rm net}$ at
+$0.267$/doubling, and the prime packet state at $0.701$/doubling
+$\approx2^{-1/2}$ with $\hat m_2(p)=-\tfrac1{15}$ exact for every
+odd prime.  Control K4: positivity is a separate hypothesis.
+No marker move, no RH claim.
+Machine-checked: \veri{v817\_positive\_descent\_master.py}.
+\mE\ (the Lean core) $+$ (\textsc{measured}) (both instances)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The sector-floor mechanism
+(\texttt{SECTOR.FLOORATTACK.01}).}
+Two probes ($9/13+13/15$ with exactly the preregistered FAILs;
+verdicts \textsc{floor-mechanism-partial} $+$
+\textsc{capture-bounded} / \textsc{theorem-shape} /
+\textsc{amplifier-mechanism}).  The margin factorizes symbolically
+(${\rm onem}=F(r)\,\varepsilon\,K$, sign in the vanishing weight);
+the 2-mode lock block is an $O(1)$-faithful witness of the full
+floor (capture median $1.53$); the capture angle is
+scramble-robust frame geometry ($\cos\theta$ $0.990$); the
+rotation law closes symbolically ($100\%$ staircase sign-match);
+the amplifier envelope $\rho h^{3/2}\in[4.85,24.2]$ is
+non-decaying.  The floor reduces to one ratio inequality
+$\rho=\tau/\tau_{\rm pnt}>0$ --- registered as
+\texttt{PRIME.FLOOR.RATIO.01} [O] with named kill criteria; no
+positivity theorem; promotion fenced.  Round-24 follow-up: the
+contract is \emph{narrowed} by the certified floor skeleton
+(the two blocks below); still [O].  No marker move, no RH
+claim.
+Machine-checked: \veri{v818\_sector\_floor\_attack.py}.
+\mE\ (factorization; interlacing; rotation law) $+$ \mO\ (the
+ratio inequality)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The floor as an exact sum of
+squares (\texttt{PRIME.FLOOR.LAGRANGE.01}).}
+One module from two probes ($7/8$ with the one
+preregistered-honest old-budget FAIL $+$ $9/9$; verdicts
+\textsc{lagrange-concentrated} $+$ \textsc{pair-certified}).
+Every per-zero layer of the \texttt{v692} master identity is
+exactly rank-one ($v_\gamma=2\sqrt{w(\gamma)}(S_1,S_2)$, closed
+trigonometric reads; layer deviation $\le1.2\times10^{-16}$), and
+$\det(G_Z+P)=\sum_{\rm pairs}(a_ib_j-a_jb_i)^2$ holds at machine
+precision on all 14 rungs (ward $\le1.4\times10^{-9}$) --- the
+floor $\det\hat A_2=\lambda\tau$ is an exact sum of squares over
+zero$+$pole rank-one carriers; the pole is the universal
+non-collinear leg and the moving zero leg sits on the alias comb.
+The psd-remainder route change ($\lambda_{\min}(\hat
+A_2-G_Z-P)\ge$ margin per rung) tightens the budget a median
+$9.8$ orders and certifies the fixed pair (pole
+$\times\gamma_1$) strictly positive on $14/14$ rungs, share
+growing $h^{+1.06}$.  The atom-side rank-one framing fails as
+frozen (typed).  Controls fire (scramble, Epstein at det scale,
+collinear family).  No marker move, no RH claim.
+Machine-checked: \veri{v823\_prime\_lagrange\_floor.py}.
+\mE\ (rank-one layers; the Lagrange identity, wards) $+$
+(\textsc{measured}) (per-rung certified intervals, shares)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The floor-theorem skeleton
+(\texttt{PRIME.FLOOR.SKELETON.01}).}
+One module from two probes ($12/12+9/9$; verdicts
+\textsc{floor-partial} $+$ \textsc{tail-closed-all-h}).  The
+three-piece uniform certified lower-bound skeleton of the floor
+on the deployed battery: the analytic fixed-pair limit
+$X_\infty(\alpha)=16\alpha\pi^2\sin(\alpha\gamma_1)
+\sinh(\alpha/2)[\text{bracket}]$ with explicit $h_0(\alpha)\le
+500$ ($h$-uniform per deployed $\alpha$; 25 $\alpha$-nodes
+typed); the certified top-100 family exhaustion (median $0.952$
+of the floor, carriers on-line $\le2\times10^4$; the analytic
+family limit positive across all nodes); and the deep tail
+closed at citation grade for \emph{all} $h$ at the fixed
+verified horizon $T_{\rm ver}=3\times10^{12}$ (product-sup
+envelope $+$ Abel/RvM explicit constants; margins
+$10^3$--$10^6$; growth law $h$-free, $+1.98\to+0.13$; validity
+horizon $\alpha^*\approx11.2$).  Net: $\lambda\tau\ge X^2({\rm
+pole},\gamma_1)-{\rm pert}(h)>0$ at citation grade --- no
+per-rung eigencheck, no zero-location input beyond the strip.
+Battery-relative, $\alpha$-bounded, necessary-side;
+\texttt{PRIME.FLOOR.RATIO.01} narrowed, not closed.  Controls
+fire (off-line pairs break the psd chain at the off-line locus;
+regression ward reproduces the old closure boundary).  No marker
+move, no RH claim.
+Machine-checked: \veri{v824\_prime\_floor\_skeleton.py}.
+\mE\ (closed forms, wards) $+$ (\textsc{measured}) (closure
+margins, exhaustion) $+$ \mO\ (the ratio contract, narrowed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Reed--Muller identification
+(\texttt{PRIME.PACKET.RM14.01}).}
+One probe ($21/21$ incl.\ the $3$ must-fire controls; verdict
+\textsc{rm14-exact}; Lean companion \texttt{PacketRM14.lean}, $30$
+theorems).  The 15-label channel row hull is the punctured
+RM$(1,4)^*=[15,5,7]$ (enumerator $1+15z^7+15z^8+z^{15}$ exact);
+$\chi_{\rm NSR}$ is one codeword (the $7{+}8$ split its two sides,
+$C_2$ the affine bit); the self-reproduction cycle
+RM$(1,3)\to E_8\to V\to$RM$(1,4)^*\to$RM$(1,3)$ closes with
+exactly $1344$ equivalences; the CSS code $[[15,1,3]]$ with dual
+$[15,10,4]$, logical distances $(7,3)$ and triorthogonality
+$8/4/2$; $\zeta_8$ typed [H].  Controls fire.  No marker move, no
+RH claim.
+Machine-checked: \veri{v819\_prime\_packet\_rm14.py}.
+\mE\ (code censuses; the cycle) $+$ \mC\ (fingerprints)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The canonical check rule and the
+plane frames (\texttt{PRIME.KRAUS.RM24.01}).}
+Two probes ($16/16+14/14$; verdicts
+\textsc{kraus-rm24-rule-canonical} $+$ \textsc{planeframes-exact}).
+The literal leg-support claim is dead twice (weights $1/2/3<$
+distance $4$; $Sp(4,2)$ orbits $15{+}90$ vs $45{+}60$); the
+canonical $\omega$-built rule identifies the rule-A protocol set
+with the $105$ weight-4 checks of $[15,10,4]$ exactly,
+$Sp/\sigma$/deck/KMS-covariant; all six Gram identities hold
+entrywise; $A_3=12$ / $B_3=16$ are the per-point plane completion
+counts --- $\sigma_3(3)=28$ and $a_3=-4$ as plane-count
+statements; the graded frame intertwiner $V^*V=\sigma_3(n)I$,
+$V^*\Gamma V=a_nI$ exact for $n=3,5,7$.  Controls fire.  No
+marker move, no RH claim.
+Machine-checked: \veri{v820\_prime\_kraus\_rm24.py}.
+\mE\ (censuses; Gram identities; the intertwiner) $+$ honest
+negative (the literal bijection)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The vacuum completion of the checks
+(\texttt{PRIME.VACUUM35.01}).}
+One probe ($22/22$ incl.\ the $3$ must-fire controls; verdict
+\textsc{vacuum35-exact}).  $140=105+35$; the Grams $22I+6J$ /
+$6I+J$ / $28I+7J$ entrywise with spectra $\{112,22^{14}\}$ /
+$\{21,6^{14}\}$ / $\{133,28^{14}\}$; the $E_7$ completion
+$112+21=133$ as a matrix identity (the $E_7\times A_1$ corpus
+reading a [C] fingerprint, anchor \texttt{v170}); Weitzenb\"ock
+$H_{105}^TH_{105}=2B^2+14I$ as the canonical label-side left
+factor with the honest \texttt{v758} scope; the $\pm B$
+anisotropy cancels inside one Gram; tight frame constant $28$ on
+mean-zero; RM$(2,4)$ dual-containing.  Controls fire.  No marker
+move, no RH claim.
+Machine-checked: \veri{v821\_prime\_vacuum35.py}.
+\mE\ (matrix identities) $+$ \mC\ (the $E_7$ fingerprint)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The vacuum route closes
+(\texttt{PRIME.CONTINUUM.UNSHORTEN.01}).}
+Two probes ($17/19+12/14$ with the four FAILs being the
+preregistered PSD deciders themselves; controls $3/3+3/3$;
+verdicts \textsc{unshorten-dead} $+$ \textsc{dilation-dead}).  The
+vacuum-completion reading of the continuum dies in both
+transcriptions: the one-slot bordering by the \texttt{v758}
+mechanism verbatim and on scale (with the shape theorem: one slot
+induces only a rank-one pure-$J$ coupling), and the 35-row
+Stinespring dilation --- shape fixed exactly, $\times13.1$ gain
+--- still fails both sectors under both normalizations.  The
+frozen fence: PSD $\iff$ coupling $\le
+c^*=(2/21)\lambda_{\rm pencil}(T_{\rm dep},T_{\rm cont}^2)$,
+measured deficits $\times3\times10^7$ (GL1) /
+$\times2\times10^2$ (f8); the continuum's completion role is
+exhausted inside $T_{\rm dep}$.  The RM integer layer stays
+certified.  Controls fire.  No marker move, no RH claim.
+Machine-checked: \veri{v822\_prime\_vacuum\_dilation.py}.
+\mE\ (the RM layer) $+$ honest kill (both transcriptions; the
+$c^*$ fence)
 \par\smallskip
 
 % =====================================================================

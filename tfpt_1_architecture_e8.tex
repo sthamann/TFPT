@@ -654,6 +654,13 @@ $\mathrm{spec}(P^6)=\{1,64/729,1/729\}$ \emph{is} the deployed
 transport spectrum exactly --- a graph-geometric origin for the
 $\{1,(2/3)^6,(1/3)^6\}$ triple; the sixth root is spectral-only
 (the corpus freezes the spectrum, not the basis) \mE.
+\emph{[Dated correction, 2026-08-06 round 23: the sixth-root
+census had missed the deployed \texttt{v221} evaluation ---
+$T_{v221}$, the exact spectral sum of \texttt{v221}'s transfer
+$(1-w)^6$, equals $B^6$ \emph{bit-exactly}, so the verdict
+upgrades to \textsc{bitexact}-vs-v221
+(\veri{v814\_k5\_sixstep\_transport.py}); the frozen
+\textsc{spectral-only} stands as that probe's adjudication.]}
 \emph{The doily incidence identity (2026-08-06):} the outer
 bridge sharpens
 (\veri{v809\_curve\_code\_doily.py}, $21/21$,
@@ -663,7 +670,9 @@ the recovery base rate $2/3$ as the unique nontrivial singular
 value; every census bridge factors exactly
 $N_{\rm code}=P_\Delta^{T}N_{\rm curve}^{T}P_\Gamma$ (a transpose
 duality, not an isomorphism); the $(2/3)^6$ identification stays
-typed pending the six-step composition \mE.
+typed pending the six-step composition \mE\ \emph{[decided
+2026-08-06 round 23: clock-only --- see the six-step entry
+below]}.
 \emph{The cut code (2026-08-06):} the Arf split is the cut
 classification of $K_5$
 (\veri{v810\_cutcode\_moment.py}, $17/17+16/16$,
@@ -674,6 +683,54 @@ $40=5+20+15$ over the Arf shells with within-$10$ $=$ Petersen;
 the $210=\binom{10}{4}$ map is decorative per the frozen rule
 (the equivariant bijection killed exhaustively); Arf/cut grading,
 not matter semantics \mE.
+\emph{The six-step composition and the $T_{10}$ proposal
+(2026-08-06):} the $(2/3)^6$ question of the doily entry is
+decided
+(\veri{v814\_k5\_sixstep\_transport.py}, $23/23$,
+\textsc{sixstep-clock-only}$+$\textsc{transport10-proposed}): the
+rate arises canonically on \emph{three} spatial routes (doily
+alternation, hexagon compression, hexagon circulation) but each
+carries a typed obstruction (no unit mode; the bipartite sign
+$-2/3$; the wrong space), and sixth-power blindness ($C_6$ vs
+$2K_3$) makes per-step data mandatory --- the deployed six is the
+\emph{clock} exponent (\texttt{v124}/\texttt{v486}, fixed
+eigenbasis); the canonical proposal $T_{10}=P_{10}^6$ in the
+$\Lambda^2$ basis passes all gates with the equitable
+\texttt{v774} quotient $=(Q_{\rm Pet}/3)^6$ bit-exact --- a
+proposal, no deploy claim \mE.
+\emph{The Reed--Muller cascade (2026-08-06):} the 15-label
+channel is a code
+(\veri{v819\_prime\_packet\_rm14.py}, $21/21$,
+\textsc{rm14-exact}; Lean \texttt{PacketRM14.lean}): the row hull
+of $B$ is the punctured $\mathrm{RM}(1,4)^*=[15,5,7]$ (enumerator
+$1+15z^7+15z^8+z^{15}$ exact), $C_0$ the $[15,4,8]$ simplex,
+$\chi_{\rm NSR}$ \emph{one} codeword (the $7{+}8$ split its two
+sides, $C_2$ the affine bit), and the self-reproduction cycle
+$\mathrm{RM}(1,3)\to E_8\to V\to\mathrm{RM}(1,4)^*\to
+\mathrm{RM}(1,3)$ closes with exactly $1344$ equivalences; the
+CSS code $[[15,1,3]]$ with dual $[15,10,4]$, logical distances
+$(7,3)$ and triorthogonality $8/4/2$; $\zeta_8$ typed [H] \mE.
+\emph{The canonical check rule (2026-08-06):} the Kraus protocol
+set meets the dual code
+(\veri{v820\_prime\_kraus\_rm24.py}, $16/16+14/14$,
+\textsc{kraus-rm24-rule-canonical}$+$\textsc{planeframes-exact}):
+the literal leg-support claim is dead twice (weights $1/2/3<$
+distance $4$; $Sp(4,2)$ orbits $15{+}90$ vs $45{+}60$), but the
+canonical $\omega$-built rule identifies the rule-A protocol set
+($45$ reversal pairs $+$ the $15\times4$ fiber) with the $105$
+weight-4 checks of $[15,10,4]$ exactly,
+$Sp/\sigma$/deck/KMS-covariant \mE.
+\emph{The $E_7$ vacuum completion (2026-08-06):} the check system
+completes
+(\veri{v821\_prime\_vacuum35.py}, $22/22$,
+\textsc{vacuum35-exact}): $140=105+35$, Grams $22I{+}6J$ /
+$6I{+}J$ / $28I{+}7J$ entrywise, and the spectral completion
+$112+21=133=\dim E_7$ is a \emph{matrix identity} (the
+$E_7\times A_1$ corpus reading a [C] fingerprint, anchor
+\texttt{v170}); Weitzenb\"ock $H_{105}^TH_{105}=2B^2+14I$ as the
+canonical label-side left factor (the \texttt{v758} continuum
+wall untouched); the $\pm B$ anisotropy cancels inside one Gram;
+$\mathrm{RM}(2,4)$ dual-containing \mE.
 \end{keybox}
 
 \begin{keybox}[The current reduction state of P2 (2026-07-22) --- text consolidation, markers unchanged]
