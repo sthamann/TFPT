@@ -100,7 +100,7 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::How to read this document::1": {
-  "hash": "2df0c715a8c3",
+  "hash": "74e608e78507",
   "date": "2026-08-06"
  },
  "tfpt_1_architecture_e8::section::Headline: the Pascal compiler on five carrier slots::1": {
@@ -112,8 +112,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::subsection::One master moment generates $40$, $41$, $240$, $\\dtwo$::1": {
-  "hash": "99ef816b2bf1",
-  "date": "2026-06-12"
+  "hash": "fc82c8b159de",
+  "date": "2026-08-06"
  },
  "tfpt_1_architecture_e8::subsection::Compact $E_8$ compression and the role of $\\nu^c$::1": {
   "hash": "40fd97454046",
@@ -124,8 +124,8 @@
   "date": "2026-08-06"
  },
  "tfpt_1_architecture_e8::subsection::Carrier $=D_5=\\mathfrak{so}_{10}$ (proved)::1": {
-  "hash": "291366279c88",
-  "date": "2026-06-12"
+  "hash": "48d82e70dedc",
+  "date": "2026-08-06"
  },
  "tfpt_1_architecture_e8::subsection::Family $=A_3=\\mathfrak{su}_4$ from $\\mathbb P^1\\setminus\\mu_4$ (proved, with the metric settled)::1": {
   "hash": "e4de3541bbe3",
@@ -336,8 +336,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::The flavor residue matrix is the compiler signature::1": {
-  "hash": "aa0373556563",
-  "date": "2026-06-12"
+  "hash": "1e178ed66f1f",
+  "date": "2026-08-06"
  },
  "tfpt_2_standard_model::section::Charged leptons: completely closed in $\\phiz$::1": {
   "hash": "4a92e6055cb6",
@@ -488,8 +488,8 @@
   "date": "2026-06-24"
  },
  "tfpt_2_standard_model::section::Quark $c$-rationals: best values at current precision::1": {
-  "hash": "8868ee5c77eb",
-  "date": "2026-06-12"
+  "hash": "ea1585b11e8a",
+  "date": "2026-08-06"
  },
  "tfpt_2_standard_model::section::H2: the moduli computation, set up explicitly::1": {
   "hash": "6561ef8ed75b",
@@ -524,7 +524,7 @@
   "date": "2026-06-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
-  "hash": "5bd371d5629f",
+  "hash": "c6ce499af60a",
   "date": "2026-08-06"
  },
  "tfpt_3_e8_audit_bootstrap::section::Further audit lemmas (machine-verified this round)::1": {
@@ -724,7 +724,7 @@
   "date": "2026-08-01"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "7140f51d2597",
+  "hash": "1ea1fcf9a63d",
   "date": "2026-08-06"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {

@@ -166,7 +166,12 @@ are honestly flagged as the theory's axioms:
 \begin{description}[leftmargin=2.2em,style=nextline]
   \item[\textnormal{(P1) Boundary kernel.}] A single oriented seam $\Sigma$ carries a primitive,
   reflection-positive boundary kernel with unit winding $[u_\Sigma]=1$; its self-linking normalisation
-  fixes $\cthree=1/(8\pi)$. \emph{Status:} primitive postulate. \emph{Hardenable by:} the Calder\'on
+  fixes $\cthree=1/(8\pi)$. \emph{Status:} primitive postulate. \emph{Organizing identity (2026-08-06,
+  markers unchanged):} the closed normalization $I\cdot\beta_{\rm angle}\cdot\cthree=4\cdot2\pi\cdot
+  \tfrac1{8\pi}=1$ holds exactly with the Jones index $I=4=|\mu_4|$ a $\cthree$-free theorem and
+  $\beta_{\rm angle}=2\pi$ independently measured --- the identity \emph{explains} the value, it does
+  not derive it; the open bridge is the even modular-response normalization
+  (\texttt{P1.INDEX.KMS.01} \mO, \veri{v813\_p1\_index\_kms.py}). \emph{Hardenable by:} the Calder\'on
   projector / determinant-character chain (the P1 hardening) and the Lean carrier-rigidity development
   (\texttt{TfptCarrier.*}, boundary-polarization and Calder\'on interfaces).
   \item[\textnormal{(P2) Carrier interface.}] This splits into an \emph{axiom} and a \emph{theorem},
@@ -610,6 +615,65 @@ level; the honest cap: the weight and character bases are mutually
 unbiased ($1/8$ exactly), so the fired matter fence stands
 unmoved; the $45$ deck-even modes are the $45$ context Pauli
 observables under the certified chart \mE.
+\emph{The jet-code normal form (2026-08-06):} the no-origin
+torsor becomes a ring-theoretic theorem
+(\veri{v803\_e8\_jetcode\_affine\_nsr.py}, $18/18+15/15$,
+\textsc{jetcode-exact}$+$\textsc{affine-nsr-exact}): because $2$
+ramifies in $\Z[i]$,
+$\Z[i]/(2)\cong\mathbb F_2[\epsilon]/(\epsilon^2)$ (unique iso)
+and $W=L/2L$ is \emph{free} of rank $4$ over the dual numbers ---
+the mod-2 root system is a first-order jet space, the deck is the
+jet unit $J=1{+}\epsilon$, and among all $65536$ sections of
+$0\to\epsilon W\to W\to V\to0$ there are \emph{zero}
+$\mu_4$-equivariant splittings: non-splitness \emph{is} the
+no-canonical-origin obstruction; $240=15\times8\times2$ (address
+$\times$ error jet $\times$ orientation).  The affine companion:
+$\mathrm{Stab}(\chi_{\rm NSR})=\mathrm{AGL}(3,2)$ of order
+$1344=|\mathrm{Aut}(H_8)|$ in the same natural 8-point action,
+and affine functions on the NS/R torsor reconstruct
+$\mathrm{RM}(1,3)=H_8$ --- a typed internal reconstruction, not a
+P2 removal \mE.
+\emph{The null selector (2026-08-06):} a second, independent
+$d=4$ mechanism
+(\veri{v807\_lorentz\_nullselector.py}, $14/14$ on this part,
+\textsc{nullselector-algebraic}): $|v_d|^2=\det M_d=d(4-d)$
+vanishes iff $d=4$ on the RR/Serre functor vector, with anchor
+identities $i{+}j=\Nfam$, $ij=|\Z_2|$, $i^2{+}j^2=\gcar$,
+$2ij=|\mu_4|$ and the bridge $g^2-N^2=4d=|H|^2$ tying null to
+glue index on the same invariant $4d$ as the census above (the
+honest downgrade --- no $d$-dependence in the seam family to vary
+--- is typed) \mE.
+\emph{The Petersen carrier machine (2026-08-06):} the $K_5$ edge
+geometry is certified
+(\veri{v808\_petersen\_sixthroot.py}, $19/19+16/16$,
+\textsc{petersen-radial-exact}$+$\textsc{sixthroot-spectral-only}):
+edge charges $(-4,+1,+6)$ $=$ the certified $SU(5)$ decuple, the
+edge graph is Petersen $\mathrm{SRG}(10,3,0,1)$, the flavor
+hexagon \emph{is} its distance-2 shell edge-by-edge, and
+$\mathrm{spec}(P^6)=\{1,64/729,1/729\}$ \emph{is} the deployed
+transport spectrum exactly --- a graph-geometric origin for the
+$\{1,(2/3)^6,(1/3)^6\}$ triple; the sixth root is spectral-only
+(the corpus freezes the spectrum, not the basis) \mE.
+\emph{The doily incidence identity (2026-08-06):} the outer
+bridge sharpens
+(\veri{v809\_curve\_code\_doily.py}, $21/21$,
+\textsc{doily-exact}): $NN^{T}=B+2I$ on the $15\times15$
+duad--syntheme doily, $N/3$ with singular values $\{1,2/3,0\}$ ---
+the recovery base rate $2/3$ as the unique nontrivial singular
+value; every census bridge factors exactly
+$N_{\rm code}=P_\Delta^{T}N_{\rm curve}^{T}P_\Gamma$ (a transpose
+duality, not an isomorphism); the $(2/3)^6$ identification stays
+typed pending the six-step composition \mE.
+\emph{The cut code (2026-08-06):} the Arf split is the cut
+classification of $K_5$
+(\veri{v810\_cutcode\_moment.py}, $17/17+16/16$,
+\textsc{cutcode-exact}$+$\textsc{moment-incidence-partial}): the
+cut map is injective-isometric on all $256$ cells,
+$16=1+\bar5+10$ \emph{is} $(0|5)+(1|4)+(2|3)$, Clebsch
+$40=5+20+15$ over the Arf shells with within-$10$ $=$ Petersen;
+the $210=\binom{10}{4}$ map is decorative per the frozen rule
+(the equivariant bijection killed exhaustively); Arf/cut grading,
+not matter semantics \mE.
 \end{keybox}
 
 \begin{keybox}[The current reduction state of P2 (2026-07-22) --- text consolidation, markers unchanged]
@@ -937,7 +1001,9 @@ and it generates the whole integer chain:
 \end{gathered}
 \end{equation}
 The flavor budget, the $U(1)$ budget, the $E_8$ count and the second seam defect all hang on the
-second hypercharge moment $5!$. \mE
+second hypercharge moment $5!$. \mE\ \emph{Round-22 sharpening:} the moment itself is one symbolic
+identity, $\operatorname{Tr}_{S^+}X^2=4|X|^2=4h(E_8)=120$ --- the Coxeter number carries the whole
+chain (\veri{v810\_cutcode\_moment.py}) \mE.
 
 \subsection{Compact $E_8$ compression and the role of $\nu^c$}
 \begin{equation}
@@ -1064,6 +1130,11 @@ relation is its complement $\mathrm{SRG}(16,10,6,6)$; the \emph{affine} automorp
 \end{equation}
 (the linear code automorphism group alone is only $S_5$; the order-$1920$ group is the affine/scheme one)
 and the Clebsch edge count is the flavor budget $|E(R_4)|=\tfrac{16\cdot5}{2}=40=|R(D_5)|=\sum_{f,j}L_{f,j}$.
+\emph{Round-22 grading (2026-08-06):} the Arf split $16=1+\bar5+10$ \emph{is} the cut
+classification $(0|5)+(1|4)+(2|3)$ of $K_5$ (the cut map injective-isometric on all $256$ cells),
+and the Clebsch edges grade as $40=5+20+15$ over the Arf shells with the within-$10$ block equal to
+the Petersen graph --- an Arf/cut geometry, exact but carrying no matter semantics
+(\veri{v810\_cutcode\_moment.py}) \mE.
 
 \subsection{Family $=A_3=\mathfrak{su}_4$ from $\mathbb P^1\setminus\mu_4$ (proved, with the metric settled)}
 The carrier geometry fixes $X_f^\circ\cong\mathbb P^1\setminus\mu_4$, $H_1=\mathbb Z^3$, rigid $D_4$ generated by

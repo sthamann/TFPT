@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`795` registered scripts · `877` ledger claims · `10` clusters.
+`806` registered scripts · `888` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (315 scripts)
+### `core` — Compiler core & the E₈ glue  (326 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -641,6 +641,28 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v791_positive_descent, v793_f8sector_conductor, v780_z1_compactness_trilogy, v794_cp_extension_gate, v787_hecke_arrow_broadcast, v791, v793, v756 · cited: 3 e8 audit bootstrap, research contracts
 - **v802_gnet_martingale** [O] `GNET.MARTINGALE.LIMIT.01` — endliche Hypothesen GEMESSEN, alle erfüllt — **MARTINGALE-HYPOTHESES-MET (15/15): Filtration EXAKT (Haar-Isometrie mit Träger-Kohärenz Leak 0; Watatani-Quasibasis 185/3041 bei l = 
   - deps: v779_gnet_gns_arf, v154_simple_current_theorem, v778_qgeo_gridsup_logsum, v779, v746 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v803_e8_jetcode_affine_nsr** [E] `E8.RAMIFIED.JETCODE.01` — **JETCODE-EXACT + AFFINE-NSR-EXACT (18/18 + 15/15): Z[i]/(2) = F2[eps]/(eps²) mit eps = 1+i (2 VERZWEIGT; Iso eindeutig, der falsche Split-Ring F2×F2 scheitert an allen 24 Bijektio
+  - deps: v782_e8_transition_bus, v776_boundary_hamming_uniqueness, v752, v689, v782, v776, v646, v148 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v804_prime_carrier_gray** [E/O/X] `PRIME.CARRIER.GRAY.01` — **GRAY-INTERTWINER-EXISTS (23/23): die Gray-Karte kodiert C2 × μ₄ affin in den R-Klassen-Torsor (reguläre Z4×Z2-Wirkung; ein Gruppen-Iso ist UNMÖGLICH — Exponent 4 vs 2, alle 64 Ho
+  - deps: v801_prime_cp_intertwiner, v786_prime_packet480, v775_gaussian_class_d5_purity, v738, v786, v775, v563, v755 · cited: 3 e8 audit bootstrap, research contracts
+- **v805_e8_syndrome_algebra** [X] `E8.SYNDROME.ALGEBRA.01` — E8 ist KEIN Fehlerkorrektur-Hull im schärfsten Sinn — **SYNDROME-DEAD (13/13, der Kill feuert wie vorregistriert): die μ₄-linear-Lift-Realisierungsfamilie erreicht max Rang 222/256
+  - deps: v752_projective_hamming_incidence, v775_gaussian_class_d5_purity, v752, v111, v112, v775 · cited: 3 e8 audit bootstrap, research contracts
+- **v806_hecke_local_clifford** [E] `HECKE.LOCAL.CLIFFORD.01` — **LOCAL-CLIFFORD-BREAKS (16/18, die zwei FAILs sind die vorregistrierten Entscheider-Gates selbst; Kontrollen 4/4): die vier p mod 8-Klassen-Kämme zerlegen sich EXAKT ins mod-8-Cha
+  - deps: v789_multirate_constdepth, v793_f8sector_conductor, v563, v716, v755, v766, v789, v793 · cited: 3 e8 audit bootstrap, research contracts
+- **v807_lorentz_nullselector** [E/O] `PRIME.LORENTZ.SPINOR.01` — **LORENTZ-COORDS-REVEAL + NULLSELECTOR-ALGEBRAIC (22 Checks / 3 vorregistriert-ehrliche FAILs + 14/14): M(5,−3,4) = 2(1,2)ᵀ(1,2) EXAKT (sympy) — das Compiler-Tripel ist ein Rang-1-
+  - deps: v781_one_object_clock_census, v683_rank3_functionals, v576, v586, v563, v781, v23, v499 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v808_petersen_sixthroot** [-] `CARRIER.PETERSEN.RADIAL.01` — **PETERSEN-RADIAL-EXACT + SIXTHROOT-SPECTRAL-ONLY (19/19 + 16/16): X = (−2,−2,−2,3,3) eindeutig primitiv spurfrei blockkonstant; E(K5)-Ladungszensus {−4: 3, +1: 6, +6: 1} = das SU(
+  - deps: v774_arf_spinor_compiler, v774, v54, v56, v124, v486, v327, v212 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v809_curve_code_doily** [E] `CURVE.CODE.DOILY.01` — **DOILY-EXACT (21/21): NN^T = B + 2I EINTRAGSWEISE (N = die K6-Doily-Inzidenz 15 Duaden × 15 Synthemen; B = die zertifizierte v752/v774-symplektische Inzidenz); spec {9, 4⁹, 0⁵} ex
+  - deps: v796_duad_syntheme_bridge, v784_curve_code_2torsion, v752, v774, v796, v221, v240, v425 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v810_cutcode_moment** [E/C/X] `CARRIER.CUTCODE.01` — **CUTCODE-EXACT + MOMENT-INCIDENCE-PARTIAL (17/17 + 16/16): die Schnittkarte δ injektiv-isometrisch auf allen 256 Zellen (Kern = Repetitionscode; Isometrie bricht exakt auf den 256
+  - deps: v774_arf_spinor_compiler, v775_gaussian_class_d5_purity, v774, v2, v55, v109, v111, v700 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v811_prime_kraus_doily** [E/C] `PRIME.KRAUS.DOILY.01` — **KRAUS-DOILY-PROTOCOL (21/21): 105 = 15 diagonal + 90 ausserdiagonal; die kanonische 45+60 = Umkehr-Quotient (die 90 Beine doppelt-überdecken die 45 Flaggen 2:1, Deck = die *-Invo
+  - deps: v801_prime_cp_intertwiner, E8.GAUSSIAN.CODE.01, v756, v801, v783, v752, v738, v111 · cited: 3 e8 audit bootstrap, research contracts
+- **v812_flavor_graph_filtration** [E] `FLAVOR.GRAPH.FILTRATION.01` — **FILTRATION-FINGERPRINT-ONLY (16/16): die Zeilen-Budgets sind EXAKTE, ordnungs-exakte Zählungen der K_{3,2}/Prisma/K5/H8-Inzidenzkette — Q (4,5,6), K (6,9,10) (Liniengraph ≅ Dreie
+  - deps: v37_plucker_anchor, v11, v12, v37, v4, v752 · cited: 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v813_p1_index_kms** [E/O/X] `P1.INDEX.KMS.01` — **P1-IDENTITY-CLOSED (13/13): I·β·c3 = 4 · 2π · 1/(8π) = 1 EXAKT (formale Fraction × π^k-Arithmetik, keine Floats); Abhängigkeits-Audit: der Index I = 4 = |μ₄| ist ein UNABHÄNGIGES
+  - deps: AX.P1.01, v154_simple_current_theorem, v155_quasifree_boundary, v23_anchor_generator, v154, v726, v746, v779 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1655,22 +1677,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×106, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `v492`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17, `v589`×17
+**Most-depended-on claims** (the load-bearing roots): `v563`×109, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×22, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17, `v591`×17
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v791_positive_descent** — `PRIME.POSITIVE_DESCENT.01`
-- **v792_ftransfer_kms_coset** — `FTRANSFER.KMSCOSET.01`
-- **v793_f8sector_conductor** — `PRIME.SECTOR_CONTINUA.01`
-- **v794_cp_extension_gate** — `PRIME.CP.EXTENSION.01`
-- **v795_halving_tails_k5** — `HECKE.HALVINGTAILS.01`
-- **v796_duad_syntheme_bridge** — `CURVE.CODE.OUTERSPIN.01`
-- **v797_r_microstate_identification** — `HECKE.R_MICROSTATE.01`
-- **v798_seam_clifford_modular_s** — `SEAM.CLIFFORD.MODULAR_S.01`
-- **v799_seam_code_typeii** — `SEAM.CODE.TYPEII.01`
-- **v800_e8_torsor_fourier** — `E8.TORSOR.FOURIER.01`
-- **v801_prime_cp_intertwiner** — `PRIME.CP.INTERTWINER.01`
 - **v802_gnet_martingale** — `GNET.MARTINGALE.LIMIT.01`
+- **v803_e8_jetcode_affine_nsr** — `E8.RAMIFIED.JETCODE.01`
+- **v804_prime_carrier_gray** — `PRIME.CARRIER.GRAY.01`
+- **v805_e8_syndrome_algebra** — `E8.SYNDROME.ALGEBRA.01`
+- **v806_hecke_local_clifford** — `HECKE.LOCAL.CLIFFORD.01`
+- **v807_lorentz_nullselector** — `PRIME.LORENTZ.SPINOR.01`
+- **v808_petersen_sixthroot** — `CARRIER.PETERSEN.RADIAL.01`
+- **v809_curve_code_doily** — `CURVE.CODE.DOILY.01`
+- **v810_cutcode_moment** — `CARRIER.CUTCODE.01`
+- **v811_prime_kraus_doily** — `PRIME.KRAUS.DOILY.01`
+- **v812_flavor_graph_filtration** — `FLAVOR.GRAPH.FILTRATION.01`
+- **v813_p1_index_kms** — `P1.INDEX.KMS.01`
 

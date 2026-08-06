@@ -2874,6 +2874,14 @@ romantic extension.
 \item \textbf{Typing}: consistent with \vref{v577} and \vref{v579} ---
 the macro regime re-bends the direction per window; a scalar-defect
 transport along a \emph{fixed} direction is not available.
+\item \textbf{Round-22 sharpening (2026-08-06)}: in the spinor
+coordinates of \veri{v807\_lorentz\_nullselector.py} the apparent
+$h$-oscillation of the locking direction is revealed as
+$\alpha$-jitter (window-width order, not height order): the spinor
+slope is \emph{strictly monotone} in $\alpha$ ($66/66$ pairs,
+Kendall $1.000$); the kill above stands --- the $h$-order bars
+remain failed --- but the drift is a coordinate artifact, not
+noise (see \vref{sec:k5-edge-machine}).
 \end{itemize}
 
 \subsection{The density-dominance reduction (\texorpdfstring{\vref{v582}}{v582})}\label{sec:v582}
@@ -2981,7 +2989,12 @@ along one deterministic vector.
 direction itself drifts ($v_2/v_1$ from $-1.73$ to $-1.19$) --- the
 slow angle decay against the fixed null ray $(2,-1)$ was a comparator
 artifact; the drift limit under $1/\log h$ is $-0.551$ ($R^2$ $0.67$),
-consistent with $-0.5$, \emph{not settled}.
+consistent with $-0.5$, \emph{not settled}.  \emph{Round-22 update
+(2026-08-06): in spinor coordinates the drift is strictly monotone in
+the window width $\alpha$ ($66/66$, Kendall $1.000$) --- ordered
+approach, not oscillation; the limit identification stays open (the
+approach $2-r\sim\alpha^{-0.23}$ is glacial)
+(\veri{v807\_lorentz\_nullselector.py}).}
 \item \textbf{Must-break}: scrambled combs misalign by
 $6$--$25^\circ$ (vs $0.026^\circ$ real).
 \end{itemize}
@@ -12917,6 +12930,13 @@ $\mathrm{Sh}_{t=2}(g)=-8E_{\rm odd}+256H$ (exact to $160$), and
 the lift's Kronecker factor $(2/d)$ \emph{is} $\chi_8$ --- the
 same character that rules the ladder's third rung.  The
 $32\to256\to128$ semantics stays a [C~neu] observation.
+\emph{Round-22 fence (2026-08-06): the arithmetic theorem stands
+untouched, but the analytic Clifford-activation reading of the
+depth classes is dead --- the class-sector positivity ordering
+does not track the proven depths
+(\veri{v806\_hecke\_local\_clifford.py},
+\textsc{local-clifford-breaks}; see
+\vref{sec:k5-edge-machine}).}
 
 \emph{The arrow ledger and the broadcast}
 (\veri{v787\_hecke\_arrow\_broadcast.py}, $48/48+21/21$,
@@ -13120,6 +13140,121 @@ $R$-grading.  And the incidence programme's Kraus set becomes
 load-bearing: the \texttt{v756} $105$-leg structure carries the
 Stinespring intertwiner above.  \textbf{No statement about the
 Riemann Hypothesis is made.}
+
+\subsection{The K5 edge machine: five exact structures, two
+precise middles, and the honest kills}
+\label{sec:k5-edge-machine}
+
+Round 22 (2026-08-06) promotes eleven modules from fifteen frozen
+probes (\texttt{v803}--\texttt{v813}, suite $795\to806$).  On this
+front it delivers the Kraus context protocol, the Gray register
+chart of the intertwiner, one analytic honest kill with a positive
+mod-8 side-result, the Lorentz spinor reveal, and the P1 index-KMS
+identity.  No marker moves; no RH/GRH claim anywhere.
+
+\emph{The Kraus context protocol}
+(\veri{v811\_prime\_kraus\_doily.py}, $21/21$,
+\textsc{kraus-doily-protocol}; one declared report-text repair
+carried): the $105$ Kraus legs of the \vref{sec:descent-functor}
+intertwiner are a \emph{complete context protocol} over the doily
+$W(3,2)$ --- $15$ diagonal legs $+$ $90$ off-diagonal, with the
+canonical $45+60$ split identified structurally: the $90$ legs
+double-cover the $45$ flags $2{:}1$ (reversal quotient) and the
+$15\times4=60$ fiber expansion is exactly the \texttt{v783}
+stabilizer-ray census.  The $Sp(4,2)$ obstruction certifies that
+\emph{no} leg-subset partition exists --- the literal partition is
+spread-relative, matching the ledger T3 census --- and the $45$
+transports are quadratic ($P_xP_y=\pm P_{x+y}$), spanning
+$\mathrm{End}(\mathbb C^4)$ at rank $16$.  The surprise is exact:
+$[B_{45},B_{60}]=0$, so $K=\tfrac37E+\tfrac47R$ is a
+\emph{direct-sum protocol} with $E$ a conditional expectation.
+The measured caveat is on record: the certified spread is
+\emph{not} $\sigma$-invariant --- the named next falsifier.
+
+\emph{The Gray register chart}
+(\veri{v804\_prime\_carrier\_gray.py}, $23/23$,
+\textsc{gray-intertwiner-exists}; one declared control repair
+carried): the affine Gray map encodes $C_2\times\mu_4$ into the
+R-class torsor \emph{exactly respecting} the \texttt{v786}
+Packet480 kill --- a group isomorphism is impossible (exponent $4$
+vs $2$) and is not demanded; the sharp intertwiner question died,
+the affine chart survives.  The fiber family is deck-covariant
+exactly with \emph{trivial} measured $\mu_4$-cocycle (the residual
+is a pure $\Z_3$ line twist on the $\sigma$-fixed classes), and
+the extended Stinespring map's GL1 channel re-lands on the
+deployed Weil window at rel $6.0\times10^{-16}$.  The $128$ stays
+a fingerprint; the intertwiner gains its register chart at the
+odd places.
+
+\emph{The local-Clifford kill, and the mod-8 completion of the
+rule map} (\veri{v806\_hecke\_local\_clifford.py}, $16/18$ with
+the two FAILs the preregistered decider gates themselves, controls
+$4/4$, \textsc{local-clifford-breaks}; one declared bar re-freeze
+carried): the analytic activation-ordering hypothesis dies --- all
+four $p\bmod8$ class sectors fail PSD, because signed
+class-indicator combinations carry no completed $L$-function (the
+trivial mod-8 component is imprimitive); the margin ordering does
+\emph{not} track the proven activation depths (Spearman $+0.40$);
+class $1$ is the unique positivity-completable class (Euler repair
+exact, $+1.4\times10^{-5}$).  The arithmetic multirate theorem
+(constant depths of classes $3$ and $5\bmod8$,
+\vref{sec:descent-functor}) is untouched --- what dies is the
+\emph{analytic} Clifford-activation reading, now decorative.  The
+positive side-result: $\chi_8$ and $\chi_{-8}$ are two \emph{new}
+PSD instances of the $\Gamma_{\mathbb R}$ conductor rule (exact
+parities: $\chi_8$ even, $\chi_{-8}$ odd) --- the rule map of
+demand (1) now covers the \emph{full} mod-8 dual group.
+
+\emph{The Lorentz spinor reveal}
+(\veri{v807\_lorentz\_nullselector.py}, $22$ checks with the three
+honest $h$-order FAILs encoded $+14/14$,
+\textsc{lorentz-coords-reveal}$+$\textsc{nullselector-algebraic}):
+the compiler triple is a rank-one spinor square ---
+$M(5,-3,4)=2\,(1,2)^{T}(1,2)$ exact, Euclid
+$(2,-1)\mapsto(5,-3,4)$ --- and in spinor coordinates the locking
+slope is \emph{strictly monotone} in the window width $\alpha$
+($66/66$ pairs, Kendall $1.000$, cross-ratio contraction CV
+$0.004$): the long-standing $h$-oscillation was $\alpha$-jitter, a
+coordinate artifact.  The approach $2-r\sim\alpha^{-0.23}$ stays
+glacial and the three $h$-order gates FAIL honestly --- the 1D
+monotonicity candidate is named, not claimed.  The companion null
+selector forces $d=4$ algebraically ($|v_d|^2=\det M_d=d(4-d)$;
+bridge $g^2-N^2=4d=|H|^2$) --- a second, independent mechanism on
+the same invariant as the \texttt{v781} census.
+
+\emph{The P1 index-KMS identity}
+(\veri{v813\_p1\_index\_kms.py}, $13/13$,
+\textsc{p1-identity-closed}): the closed normalization identity
+$I\cdot\beta_{\rm angle}\cdot c_3=4\cdot2\pi\cdot\tfrac1{8\pi}=1$
+is exact in formal arithmetic, with each factor independently
+sourced --- the Jones index $I=4=|\mu_4|$ is a $c_3$-free theorem
+(zero occurrences gated in all four sources), the KMS angle
+$\beta_{\rm angle}=2\pi$ is independently measured
+(\texttt{v526}; the radian pin is the one shared convention and
+cancels), and $c_3$ \emph{stays the P1 axiom that the identity
+explains} --- it does not derive it.  The finite evenness
+precursor is measured ($w_1=w_3=\tfrac14$ exactly at every level,
+symmetric zero-sum offset $\pm2^{-(l+1)}$ --- the no-anomaly
+shape); the sea state does \emph{not} equidistribute (dev
+$0.188$), so the one open bridge of \texttt{P1.INDEX.KMS.01} [O]
+is the \emph{even modular-response normalization} over the $I$
+deck sectors (kill: any asymmetric sector offset; control: index
+$2$ gives $1/(4\pi)$, booked elsewhere by the corpus).
+
+\emph{The carrier-side exact structures of the round} --- the
+jet-code normal form (non-splitness $=$ the no-origin obstruction,
+\veri{v803\_e8\_jetcode\_affine\_nsr.py}), the Petersen carrier
+machine whose radial sixth power \emph{is} the deployed transport
+spectrum (\veri{v808\_petersen\_sixthroot.py}), the doily
+incidence identity behind the recovery base rate $2/3$
+(\veri{v809\_curve\_code\_doily.py}), the cut-code reading of the
+Arf split (\veri{v810\_cutcode\_moment.py}), and the syndrome
+honest kill (\veri{v805\_e8\_syndrome\_algebra.py}) --- are
+reported in the architecture and audit papers; the
+flavor-filtration fingerprint
+(\veri{v812\_flavor\_graph\_filtration.py}) in the Standard-Model
+paper.  \textbf{No statement about the Riemann Hypothesis is
+made.}
 
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 

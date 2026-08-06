@@ -1695,7 +1695,11 @@ killed honestly: the locking-direction drift is small
 ($0.3$--$6.7^\circ$ per octave) but grows ($h^{+0.36}$) against the
 proposed summability bar $h^{-1-\delta}$ --- the review's own kill
 criterion fires; any future transport must carry the window-dependent
-macro direction. Machine-checked: \veri{v581\_locking\_transport.py}.
+macro direction.  Round-22 sharpening: in spinor coordinates the
+drift is strictly monotone in the window width $\alpha$ ($66/66$,
+Kendall $1.000$) --- ordered approach, not noise; the $h$-order kill
+above stands (\veri{v807\_lorentz\_nullselector.py}).
+Machine-checked: \veri{v581\_locking\_transport.py}.
 \mE\ (census exact; drift measured; an honest negative; no marker moves)
 \par\smallskip
 
@@ -2714,7 +2718,12 @@ nearest codeword equal to the original ($16\times8$ exhaustive).  The
 compiler ties are typed observations: $8=$ rank, $4=$ min distance
 $=d=|\mu_4|$ (the \texttt{v624} boundary degree), $16=|C|=$ the carrier
 half-spinor $=$ the seam sites, $14=2\times7$ (the parabolic dimension;
-the \texttt{v605} denominator).  No physics claim.
+the \texttt{v605} denominator).  No physics claim.  Round-22 fence:
+the \emph{stronger} error-correction-hull reading --- the $240$ root
+operators plus the $16$ neutral kernels as a twisted group-algebra
+basis of $\mathrm{End}(S_+)$ --- is \textsc{syndrome-dead} as
+preregistered (\veri{v805\_e8\_syndrome\_algebra.py}); the
+Construction-A theorem here is untouched.
 Machine-checked: \veri{v626\_e8\_code.py}.
 \mE/\mC\ (exact code/lattice identities; typed ties)
 \par\smallskip
@@ -6327,6 +6336,11 @@ $\Z_{12}\times_{\Z_6}\Z_{30}$ cannot act on the $60$ Gaussian lines
 --- the full line-compatible group has order $23040$ with maximal
 element order $12$ (orders $15/30/60$ absent for every
 realization); the fiber product is cyclic $\Z_{60}$ (exact SNF).
+Round-22 addendum: a second, independent $d=4$ mechanism ---
+the null selector $|v_d|^2=\det M_d=d(4-d)$ on the RR/Serre
+functor vector, with the bridge $g^2-N^2=4d=|H|^2$ tying null to
+glue index on the same invariant $4d$
+(\veri{v807\_lorentz\_nullselector.py}).
 No marker move, no RH claim.
 Machine-checked: \veri{v781\_one\_object\_clock\_census.py}.
 \mE\ (exact census $+$ exact kill; $c_3$ link typed interpretation)
@@ -6348,7 +6362,13 @@ $240=5\times3\times16$ with the $q^{*}$ selector; the $A_{15}$
 comparison is quantified (a strict bus \emph{with} a start state;
 $E_8$ provably has none; cross-class non-orthogonality exactly
 doubled).  Controls fire (the C3 control-design correction
-disclosed).  No marker move, no RH claim.
+disclosed).  Round-22 follow-up: the no-origin obstruction is now
+an algebraic theorem --- $W=L/2L$ is free over the dual numbers
+$\mathbb F_2[\epsilon]$, the deck is the jet unit $J=1{+}\epsilon$,
+and the exhaustive splitting census is empty
+(\veri{v803\_e8\_jetcode\_affine\_nsr.py}); the torsor is the
+non-split self-extension, not merely a census fact.  No marker
+move, no RH claim.
 Machine-checked: \veri{v782\_e8\_transition\_bus.py}.
 \mE\ (exact structure theorem; bus language stays interpretation)
 \par\smallskip
@@ -6611,6 +6631,9 @@ conductor $16$ decided inside the Atkin--Li bound by the Fricke ward
 four-sector coherence; the conductor datum is load-bearing at
 exactly $\ln 2$ and pinned from below by the PSD margins.  Sector
 PSD stays finite-level evidence (GRH-type statements unproven).
+Round-22 follow-up: $\chi_8/\chi_{-8}$ land PSD under the same
+rule (exact parities), so the rule map now covers the full mod-8
+dual group (\veri{v806\_hecke\_local\_clifford.py}).
 Controls fire.  No marker move, no RH claim.
 Machine-checked: \veri{v793\_f8sector\_conductor.py}.
 (\textsc{measured}) (PSD ladders under frozen gates) $+$ \mE\
@@ -6820,6 +6843,265 @@ the wrong degenerate limit: the coherent bond is load-bearing).  No
 marker move, no RH claim.
 Machine-checked: \veri{v802\_gnet\_martingale.py}.
 (\textsc{measured}) (hypotheses met) $+$ \mO\ (steps 5--7 typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The jet-code normal form and the
+affine NS/R geometry (\texttt{E8.RAMIFIED.JETCODE.01} $+$
+\texttt{E8.AFFINE.NSR.01}).}
+One module from two probes ($18/18+15/15$; verdicts
+\textsc{jetcode-exact}/\textsc{affine-nsr-exact}).  Because $2$
+ramifies in $\Z[i]$, $\Z[i]/(2)\cong\mathbb F_2[\epsilon]/(\epsilon^2)$
+with $\epsilon=1{+}i$ (unique iso; the split ring
+$\mathbb F_2\times\mathbb F_2$ fails all $24$ bijections), and
+$W=L/2L$ is \emph{free} of rank $4$ over the dual numbers
+(Hermite-certified $\Z[i]$-basis): the mod-2 root system is a
+first-order jet space, the exact self-extension
+$0\to\epsilon W\to W\to V\to0$ with
+$\ker\epsilon=\mathrm{im}\,\epsilon$.  The deck \emph{is} the jet
+unit $J=1{+}\epsilon$ --- translation by the error part re-derives
+the \texttt{v782} transition-bus torsor on all $240$ roots --- and
+among all $65536$ sections there are \emph{zero} $\mu_4$-equivariant
+splittings: non-splitness is the no-canonical-origin obstruction,
+now an algebraic theorem rather than a census fact.  The $120$ root
+pairs are the $q{=}1$ unit shell ($240=15\times8\times2$: root $=$
+address $\times$ error jet $\times$ orientation).  Part 2:
+$\mathrm{Stab}(\chi_{\rm NSR})=\mathrm{AGL}(3,2)$ of order
+$1344=|\mathrm{Aut}(H_8)|$ with the \emph{same} natural 8-point action, and
+affine functions on the NS/R torsor reconstruct
+$\mathrm{RM}(1,3)=H_8$ with exactly $1344$ equivalences --- a typed
+internal reconstruction that sharpens the
+\texttt{ARF.BOUNDARY.CODE.01} attack surface, \emph{not} a P2
+removal.  Controls fire.  No marker move.
+Machine-checked: \veri{v803\_e8\_jetcode\_affine\_nsr.py}.
+\mE\ (ring-theoretic normal form; exhaustive splitting census;
+reconstruction fenced)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Gray register chart
+(\texttt{PRIME.CARRIER.GRAY.01}).}
+One probe ($23/23$; verdict \textsc{gray-intertwiner-exists}; one
+declared run-1 $\to$ run-2 control repair carried verbatim).  The
+affine Gray map encodes $C_2\times\mu_4$ into the R-class torsor
+exactly respecting the \texttt{v786} Packet480 kill (a group
+isomorphism is impossible --- exponent $4$ vs $2$ --- and not
+demanded); the fiber family is deck-covariant exactly with
+\emph{trivial} measured $\mu_4$-cocycle, the residual being a pure
+$\Z_3$ line twist on the $\sigma$-fixed classes; the extended
+Stinespring map's GL1 channel re-lands on the deployed Weil window
+at rel $6.0\times10^{-16}$.  The \texttt{v801} intertwiner thereby
+gains its register chart at the odd places.  Controls fire.  No
+marker move, no RH claim.
+Machine-checked: \veri{v804\_prime\_carrier\_gray.py}.
+\mE\ (exact covariance, trivial cocycle) $+$ \mO\ (D1--D3 typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The syndrome-algebra kill
+(\texttt{E8.SYNDROME.ALGEBRA.01}).}
+One probe ($13/13$ incl.\ the $3$ must-fire controls; verdict
+\textsc{syndrome-dead}; the kill fired exactly as preregistered).
+The sharpest error-correction-hull hypothesis --- that the $240$
+root operators $U_r$ plus the $16$ neutral kernels generate a
+twisted group algebra presenting $E_8$ as the syndrome hull of
+$H_8$ inside $\mathrm{End}(S_+)$ --- is \emph{dead}: max rank
+$222/256$ over all four frozen phase conventions, the $\pm r$
+proportionality obstruction is structural for the whole
+diagonal-phase family, and both post-hoc escape directions score
+worse ($215/160$).  What survives is exact: $16+240=256$ at
+dimension level, the $16$ \texttt{v112} neutral kernels $=$ the
+diagonal MASA, and same-class products are $A_0$-valued with
+$\mu_4$ coefficients.  The successor criterion is named
+(root-individual operator data beyond diagonal phases).  The
+Construction-A Hamming theorem is untouched.  Controls fire.  No
+marker move.
+Machine-checked: \veri{v805\_e8\_syndrome\_algebra.py}.
+Honest negative on record $+$ \mE\ (the surviving identities)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The local-Clifford kill and the
+mod-8 rule completion (\texttt{HECKE.LOCAL.CLIFFORD.01}).}
+One probe ($16/18$ with the two FAILs being the preregistered
+decider gates themselves; controls $4/4$; verdict
+\textsc{local-clifford-breaks}; one declared bar re-freeze
+carried).  The analytic activation-ordering hypothesis dies: all
+four $p\bmod8$ class sectors fail PSD --- signed class-indicator
+combinations carry no completed $L$-function (the trivial mod-8
+component is imprimitive) --- and the margin ordering does
+\emph{not} track the proven activation depths (Spearman $+0.40$).
+Class $1$ is the unique positivity-completable class (Euler repair
+exact, $+1.4\times10^{-5}$).  The arithmetic multirate theorem
+(constant depths of classes $3$ and $5\bmod8$) is untouched; the
+Clifford-activation reading stays decorative analytically.
+Positive side-result: $\chi_8/\chi_{-8}$ are two \emph{new} PSD
+instances of the $\Gamma_{\mathbb R}$ conductor rule (exact
+parities: $\chi_8$ even, $\chi_{-8}$ odd) --- the rule map now
+covers the full mod-8 dual group.  Controls fire.  No marker move,
+no RH claim.
+Machine-checked: \veri{v806\_hecke\_local\_clifford.py}.
+Honest negative on record $+$ (\textsc{measured}) (the two new rule
+instances)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Lorentz spinor coordinates and
+the null selector (\texttt{PRIME.LORENTZ.SPINOR.01} $+$ the
+\texttt{E8.ONEOBJECT.01} addendum).}
+One module from two probes ($22$ checks with the three honest
+$h$-order FAILs encoded $+14/14$; verdicts
+\textsc{lorentz-coords-reveal}/\textsc{nullselector-algebraic}).
+The compiler triple is a rank-one spinor square:
+$M(5,-3,4)=2\,(1,2)^{T}(1,2)$ exact, Euclid
+$(2,-1)\mapsto(5,-3,4)$.  The reveal: in spinor coordinates the
+locking slope is \emph{strictly monotone} in the window width
+$\alpha$ ($66/66$ pairs, Kendall $1.000$, cross-ratio contraction
+CV $0.004$) --- the long-standing $h$-oscillation was $\alpha$-jitter,
+i.e.\ a coordinate artifact; the approach $2-r\sim\alpha^{-0.23}$
+stays glacial and the three $h$-order gates FAIL honestly (the 1D
+monotonicity candidate is named, not claimed).  Part 2: the null
+selector $|v_d|^2=\det M_d=d(4-d)$ forces $d=4$ on the RR/Serre
+functor vector with anchor identities $i{+}j=\Nfam$, $ij=|\Z_2|$,
+$i^2{+}j^2=\gcar$, $2ij=|\mu_4|$; the bridge $g^2-N^2=4d=|H|^2$
+makes null $\iff$ glue index $=d$ --- a second, independent $d=4$
+mechanism on the same invariant $4d$ as the \texttt{v781} census
+(honest downgrade recorded: the seam family has no $d$-dependence
+to vary; the missing theorem typed).  Controls fire.  No marker
+move.
+Machine-checked: \veri{v807\_lorentz\_nullselector.py}.
+\mE\ (spinor identities; algebraic selector) $+$
+(\textsc{measured}) (monotonicity; glacial approach) $+$ \mO\
+($h$-order gates)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Petersen carrier geometry and
+the sixth root (\texttt{CARRIER.PETERSEN.RADIAL.01} $+$
+\texttt{TRANSPORT.SIXTHROOT.01}).}
+One module from two probes ($19/19+16/16$; verdicts
+\textsc{petersen-radial-exact}/\textsc{sixthroot-spectral-only}).
+The $K_5$ edge machine: charges $(-4,+1,+6)$ match the certified
+\texttt{v774} $SU(5)$ decuple; the edge graph is Petersen
+$\mathrm{SRG}(10,3,0,1)$ with $|\mathrm{Aut}|=120$ by census; the distance
+shells $(1,3,6)$ are charge-pure; the flavor hexagon \emph{is} the
+distance-2 shell edge-by-edge; the equitable quotient carries the
+hypercharge eigenvector $(6,-4,1)\to-2$; and
+$\mathrm{spec}(P^6)=\{1,64/729,1/729\}$ \emph{is} the deployed
+transport spectrum exactly --- the $\{1,(2/3)^6,(1/3)^6\}$ triple
+acquires a graph-geometric origin.  The 10-dim multiplicity
+prediction ($\times5=\gcar$ fast, $\times4=|\mu_4|$ slow) is typed
+[H~neu].  Part 2, the honest middle:
+$B=\tfrac1{18}[[13,1,4],[1,13,4],[4,4,10]]$ is the \emph{unique}
+symmetric doubly stochastic PSD sixth root in the corpus basis, and
+$B^6$ is $GL(3,\Q)$-conjugate to \texttt{v486}'s $M^6$ and to the
+cusp-diagonal form but bit-equal to \emph{neither} --- the corpus
+freezes the spectrum, not the basis (the basis-freeze question
+named).  Controls fire.  No marker move.
+Machine-checked: \veri{v808\_petersen\_sixthroot.py}.
+\mE\ (census identities; spectrum equality) $+$ [H~neu]
+(multiplicity reading) $+$ \mO\ (basis freeze)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The doily incidence identity
+(\texttt{CURVE.CODE.DOILY.01}).}
+One probe ($21/21$ incl.\ the $3$ must-fire controls; verdict
+\textsc{doily-exact}).  The certified outer bridge sharpens into an
+incidence-operator statement with a spectral payoff: the $K_6$
+doily incidence $N$ ($15$ duads $\times$ $15$ synthemes on the six
+odd Arf refinements) satisfies $NN^{T}=B+2I$ entrywise with
+$\mathrm{spec}=\{9,4^9,0^5\}$, and $N/3$ has singular values
+$\{1,2/3,0\}$ --- the recovery base rate $2/3$ is the unique
+nontrivial singular value of the canonical duad-to-syntheme
+incidence (the $(2/3)^6$ identification typed \emph{pending the
+six-step composition}).  Petersen edges $=$ synthemes $15/15$;
+every census bridge factors exactly
+$N_{\rm code}=P_\Delta^{T}N_{\rm curve}^{T}P_\Gamma$ --- a
+transpose duality, not an isomorphism; the Arf switch set $T_6$
+$=$ the six within-block duads.  Controls fire.  No marker move.
+Machine-checked: \veri{v809\_curve\_code\_doily.py}.
+\mE\ (incidence identities) $+$ \mO\ (the six-step target)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The cut code and the master moment
+(\texttt{CARRIER.CUTCODE.01} $+$
+\texttt{CARRIER.MOMENT.INCIDENCE.01}).}
+One module from two probes ($17/17+16/16$; verdicts
+\textsc{cutcode-exact}/\textsc{moment-incidence-partial}).  The cut
+map is injective-isometric on all $256$ cells and the Arf split
+$16=1+\bar5+10$ \emph{is} the cut classification $(0|5)+(1|4)+(2|3)$
+of $K_5$ --- an Arf geometry, exact but non-matter; Clebsch
+$40=5+20+15$ over the Arf shells with within-$10$ $=$ Petersen
+(census $120$); roots/lines grade $80+160$ / $20+40$ --- Arf/cut
+grading, \emph{not} matter semantics.  The master moment is one
+symbolic identity: $\mathrm{Tr}_{S^{+}}X^2=4|X|^2=4h(E_8)=120$.
+The frozen $210$ decision: the $210=\binom{10}{4}$ map is
+\emph{decorative} per the frozen rule --- the equivariant bijection
+is killed by the exhaustive fixed-point obstruction; the partial
+$80\to5\times16$ miss-slot map and the Newton tie survive as
+audit.  Controls fire.  No marker move.
+Machine-checked: \veri{v810\_cutcode\_moment.py}.
+\mE\ (cut classification; master moment) $+$ honest negative
+(the $210$ bijection)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Kraus context protocol
+(\texttt{PRIME.KRAUS.DOILY.01}).}
+One probe ($21/21$ incl.\ the $3$ must-fire controls; verdict
+\textsc{kraus-doily-protocol}; one declared run-1 $\to$ run-2
+report-text repair carried verbatim).  The $105$ Kraus legs of the
+\texttt{v801} intertwiner are a complete context protocol over the
+doily $W(3,2)$: $15$ diagonal $+90$ off-diagonal; the canonical
+$45+60$ split is the reversal quotient (the $90$ legs double-cover
+the $45$ flags $2{:}1$) plus fiber expansion
+($15\times4=60=$ the \texttt{v783} stabilizer rays); the
+$Sp(4,2)$ obstruction certifies that \emph{no} leg-subset
+partition exists --- the literal partition is spread-relative $=$
+the ledger T3 census; the $45$ transports are quadratic
+($P_xP_y=\pm P_{x+y}$) spanning $\mathrm{End}(\mathbb C^4)$ at rank
+$16$.  The surprise: $[B_{45},B_{60}]=0$ exactly ---
+$K=\tfrac37E+\tfrac47R$ is a direct-sum protocol with $E$ a
+conditional expectation.  Measured: the certified spread is
+\emph{not} $\sigma$-invariant --- the named next falsifier.
+Controls fire.  No marker move, no RH claim.
+Machine-checked: \veri{v811\_prime\_kraus\_doily.py}.
+\mE\ (protocol identities; exact commutant) $+$ (\textsc{measured})
+(spread non-invariance)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The flavor-filtration fingerprint
+(\texttt{FLAVOR.GRAPH.FILTRATION.01}).}
+One probe ($16/16$ incl.\ the $4$ must-fire controls; verdict
+\textsc{filtration-fingerprint-only}).  The flavor-matrix
+filtration $Q\to K\to L$ is an incidence-compiler fingerprint: the
+row budgets are exact, order-exact counts of the
+$K_{3,2}$/prism/$K_5$/$H_8$ incidence chain with level-wise
+additivity mirroring $L=K+Q$; \emph{no} entry-level reconstruction
+succeeds from any frozen candidate; the exhaustive false-positive
+rates ($0.005$--$0.75\%$) make the misses informative.  Typed
+audit fingerprint --- kept beside the audit identities, not in any
+derivation.  Controls fire.  No marker move.
+Machine-checked: \veri{v812\_flavor\_graph\_filtration.py}.
+\mE\ (budget identities) $+$ honest negative (entry
+reconstruction)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The P1 index-KMS identity
+(\texttt{P1.INDEX.KMS.01}).}
+One probe ($13/13$ incl.\ the $2$ must-fire controls; verdict
+\textsc{p1-identity-closed}).  The closed normalization identity
+$I\cdot\beta\cdot\cthree=4\cdot2\pi\cdot\tfrac1{8\pi}=1$ is exact
+in formal arithmetic, with each factor independently sourced: the
+Jones index $I=4=|\mu_4|$ is a $\cthree$-free theorem (zero
+occurrences of $\cthree$ in all four sources, gated), the KMS angle
+$\beta_{\rm angle}=2\pi$ independently measured (\texttt{v526}; the
+radian pin is the one shared convention and cancels), and
+$\cthree$ stays the P1 axiom that the identity \emph{explains} ---
+it does not derive it.  The finite evenness precursor is measured
+($w_1=w_3=\tfrac14$ exactly at every level, symmetric zero-sum
+offset $\pm2^{-(l+1)}$ --- the no-anomaly shape); the sea state
+does \emph{not} equidistribute (dev $0.188$), so the open bridge
+must normalize the modular response over the $I$ deck sectors
+(kill: any asymmetric sector offset).  Control: index $2$ gives
+$1/(4\pi)$, booked elsewhere by the corpus.  No marker move; P1
+stays a declared input.
+Machine-checked: \veri{v813\_p1\_index\_kms.py}.
+\mE\ (the identity; the convention audit) $+$ \mO\ (the even
+modular-response bridge)
 \par\smallskip
 
 % =====================================================================

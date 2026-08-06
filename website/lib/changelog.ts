@@ -43,6 +43,1940 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-06",
+    "dateLabel": "2026-08-06 · LXV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round twenty-two — the K5 edge machine: five exact structures, two precise middles, and the honest kills: ELEVEN modules ("
+      },
+      {
+        "k": "c",
+        "v": "v803"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v813"
+      },
+      {
+        "k": "t",
+        "v": ", from fifteen frozen probes; suite "
+      },
+      {
+        "k": "m",
+        "v": "795\\to806"
+      },
+      {
+        "k": "t",
+        "v": ") — the jet-code wave gives the Gaussian compiler its ring-theoretic normal form ("
+      },
+      {
+        "k": "m",
+        "v": "W=L/2L"
+      },
+      {
+        "k": "t",
+        "v": " free over the dual numbers, non-splitness "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the no-origin obstruction), reconstructs the Hamming code from the NS/R bit alone (AGL"
+      },
+      {
+        "k": "m",
+        "v": "(3,2)=\\Aut(H_8)"
+      },
+      {
+        "k": "t",
+        "v": "), extends the CP intertwiner by the affine Gray register chart, and records two preregistered honest kills (the syndrome algebra and the analytic Clifford-activation ordering); the K5 wave certifies the Petersen carrier geometry whose radial sixth power IS the deployed transport spectrum, the doily incidence identity behind the recovery base rate, the cut-code reading of the Arf split, the Kraus context protocol with its exact commutant surprise, the flavor-filtration fingerprint — and closes the round with the P1 index-KMS identity "
+      },
+      {
+        "k": "m",
+        "v": "c_3=1/(I\\cdot\\beta)"
+      },
+      {
+        "k": "t",
+        "v": " and its convention audit"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (11)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v803_e8_jetcode_affine_nsr.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "18/18+15/15"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "jetcode-exact"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "affine-nsr-exact"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\Z[i]/(2)\\cong\\mathbb F_2[\\epsilon]/(\\epsilon^2)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\epsilon=1{+}i"
+        },
+        {
+          "k": "t",
+          "v": " (2 ramifies; unique iso; the split ring "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb F_2{\\times}\\mathbb F_2"
+        },
+        {
+          "k": "t",
+          "v": " fails all 24 bijections); "
+        },
+        {
+          "k": "m",
+          "v": "W=L/2L"
+        },
+        {
+          "k": "t",
+          "v": " FREE of rank 4 over the dual numbers (Hermite-certified "
+        },
+        {
+          "k": "m",
+          "v": "\\Z[i]"
+        },
+        {
+          "k": "t",
+          "v": "-basis); the exact self-extension "
+        },
+        {
+          "k": "m",
+          "v": "0\\to\\epsilon W\\to W\\to V\\to0"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\ker\\epsilon=\\mathrm{im}\\,\\epsilon"
+        },
+        {
+          "k": "t",
+          "v": "; the deck IS the jet unit "
+        },
+        {
+          "k": "m",
+          "v": "J=1{+}\\epsilon"
+        },
+        {
+          "k": "t",
+          "v": ", re-deriving the "
+        },
+        {
+          "k": "c",
+          "v": "v782"
+        },
+        {
+          "k": "t",
+          "v": " transition-bus torsor on all 240 roots; ZERO "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-equivariant splittings among all "
+        },
+        {
+          "k": "m",
+          "v": "65536"
+        },
+        {
+          "k": "t",
+          "v": " sections — non-splitness IS the no-canonical-origin obstruction; the 120 root pairs "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "q{=}1"
+        },
+        {
+          "k": "t",
+          "v": " unit shell ("
+        },
+        {
+          "k": "m",
+          "v": "240=15\\times8\\times2"
+        },
+        {
+          "k": "t",
+          "v": ": root "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " (address, error jet, orientation)); "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Stab}(\\chi_{\\rm NSR})=AGL(3,2)"
+        },
+        {
+          "k": "t",
+          "v": " of order "
+        },
+        {
+          "k": "m",
+          "v": "1344=\\Aut(H_8)"
+        },
+        {
+          "k": "t",
+          "v": " with the SAME natural 8-point action, and affine functions on the NS/R torsor reconstruct "
+        },
+        {
+          "k": "m",
+          "v": "RM(1,3)=H_8"
+        },
+        {
+          "k": "t",
+          "v": " with exactly 1344 equivalences — typed internal reconstruction, NOT a P2 removal); "
+        },
+        {
+          "k": "c",
+          "v": "v804_prime_carrier_gray.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "23/23"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "gray-intertwiner-exists"
+        },
+        {
+          "k": "t",
+          "v": ": the affine Gray map encodes "
+        },
+        {
+          "k": "m",
+          "v": "C_2\\times\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " into the R-class torsor respecting the "
+        },
+        {
+          "k": "c",
+          "v": "v786"
+        },
+        {
+          "k": "t",
+          "v": " kill (a group iso is impossible — exponent 4 vs 2 — and not demanded); the fiber family deck-covariant EXACTLY with TRIVIAL measured "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-cocycle (residual "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " a pure "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_3"
+        },
+        {
+          "k": "t",
+          "v": " line twist on the "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "-fixed classes); the extended Stinespring map's GL1 channel re-lands on the deployed Weil window at "
+        },
+        {
+          "k": "m",
+          "v": "6.0\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "; one declared control repair); "
+        },
+        {
+          "k": "c",
+          "v": "v805_e8_syndrome_algebra.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "13/13"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "syndrome-dead"
+        },
+        {
+          "k": "t",
+          "v": ", the preregistered kill fires: max rank "
+        },
+        {
+          "k": "m",
+          "v": "222/256"
+        },
+        {
+          "k": "t",
+          "v": " over all four frozen phase conventions, the "
+        },
+        {
+          "k": "m",
+          "v": "\\pm r"
+        },
+        {
+          "k": "t",
+          "v": " proportionality obstruction structural for the whole diagonal-phase family, both post-hoc escape directions score worse ("
+        },
+        {
+          "k": "m",
+          "v": "215/160"
+        },
+        {
+          "k": "t",
+          "v": "); survives: "
+        },
+        {
+          "k": "m",
+          "v": "16+240=256"
+        },
+        {
+          "k": "t",
+          "v": ", the 16 "
+        },
+        {
+          "k": "c",
+          "v": "v112"
+        },
+        {
+          "k": "t",
+          "v": " neutral kernels "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the diagonal MASA, same-class products "
+        },
+        {
+          "k": "m",
+          "v": "A_0"
+        },
+        {
+          "k": "t",
+          "v": "-valued with "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " coefficients exactly); "
+        },
+        {
+          "k": "c",
+          "v": "v806_hecke_local_clifford.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "16/18"
+        },
+        {
+          "k": "t",
+          "v": " with the two FAILs the preregistered decider gates themselves, controls "
+        },
+        {
+          "k": "m",
+          "v": "4/4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "local-clifford-breaks"
+        },
+        {
+          "k": "t",
+          "v": ": all four "
+        },
+        {
+          "k": "m",
+          "v": "p\\bmod8"
+        },
+        {
+          "k": "t",
+          "v": " class sectors fail PSD — signed character combinations carry no completed "
+        },
+        {
+          "k": "m",
+          "v": "L"
+        },
+        {
+          "k": "t",
+          "v": "-function, the trivial mod-8 component is imprimitive; class 1 is the UNIQUE positivity-completable class (Euler repair exact, "
+        },
+        {
+          "k": "m",
+          "v": "+1.4\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": "); the margin ordering does NOT track the proven activation depths (Spearman "
+        },
+        {
+          "k": "m",
+          "v": "+0.40"
+        },
+        {
+          "k": "t",
+          "v": ") — the Clifford activation reading stays decorative analytically, the arithmetic multirate theorem untouched; POSITIVE side-result: "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_8/\\chi_{-8}"
+        },
+        {
+          "k": "t",
+          "v": " are two NEW PSD instances of the "
+        },
+        {
+          "k": "m",
+          "v": "\\Gamma_{\\mathbb R}"
+        },
+        {
+          "k": "t",
+          "v": " conductor rule (exact parities: "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_8"
+        },
+        {
+          "k": "t",
+          "v": " even, "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{-8}"
+        },
+        {
+          "k": "t",
+          "v": " odd) — the rule map now covers the full mod-8 dual group; one declared bar re-freeze); "
+        },
+        {
+          "k": "c",
+          "v": "v807_lorentz_nullselector.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "22"
+        },
+        {
+          "k": "t",
+          "v": " checks with the three honest "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-order FAILs encoded "
+        },
+        {
+          "k": "m",
+          "v": "+14/14"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "lorentz-coords-reveal"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "nullselector-algebraic"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "M(5,-3,4)=2\\,(1,2)^{T}(1,2)"
+        },
+        {
+          "k": "t",
+          "v": " exact — the compiler triple is a rank-one spinor square, Euclid "
+        },
+        {
+          "k": "m",
+          "v": "(2,-1)\\mapsto(5,-3,4)"
+        },
+        {
+          "k": "t",
+          "v": "; THE REVEAL: the spinor slope is strictly monotone in the window width "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "66/66"
+        },
+        {
+          "k": "t",
+          "v": ", Kendall "
+        },
+        {
+          "k": "m",
+          "v": "1.000"
+        },
+        {
+          "k": "t",
+          "v": ", cross-ratio contraction CV "
+        },
+        {
+          "k": "m",
+          "v": "0.004"
+        },
+        {
+          "k": "t",
+          "v": ") — the "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-oscillation was "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-jitter; the approach "
+        },
+        {
+          "k": "m",
+          "v": "2-r\\sim\\alpha^{-0.23}"
+        },
+        {
+          "k": "t",
+          "v": " stays glacial; the null selector "
+        },
+        {
+          "k": "m",
+          "v": "|v_d|^2=\\det M_d=d(4-d)"
+        },
+        {
+          "k": "t",
+          "v": " forces "
+        },
+        {
+          "k": "m",
+          "v": "d=4"
+        },
+        {
+          "k": "t",
+          "v": " on the RR/Serre functor vector with the anchor identities "
+        },
+        {
+          "k": "m",
+          "v": "i{+}j=\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "ij=|\\Z_2|"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "i^2{+}j^2=\\gcar"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "2ij=|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": "; THE BRIDGE: "
+        },
+        {
+          "k": "m",
+          "v": "g^2-N^2=4d=|H|^2"
+        },
+        {
+          "k": "t",
+          "v": ", so null "
+        },
+        {
+          "k": "m",
+          "v": "\\iff"
+        },
+        {
+          "k": "t",
+          "v": " glue index "
+        },
+        {
+          "k": "m",
+          "v": "=d"
+        },
+        {
+          "k": "t",
+          "v": " — independent of the "
+        },
+        {
+          "k": "c",
+          "v": "v781"
+        },
+        {
+          "k": "t",
+          "v": " census, same output "
+        },
+        {
+          "k": "m",
+          "v": "\\{4\\}"
+        },
+        {
+          "k": "t",
+          "v": "; honest downgrade: the seam family has no "
+        },
+        {
+          "k": "m",
+          "v": "d"
+        },
+        {
+          "k": "t",
+          "v": "-dependence to vary, the missing theorem typed); "
+        },
+        {
+          "k": "c",
+          "v": "v808_petersen_sixthroot.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "19/19+16/16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "petersen-radial-exact"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "sixthroot-spectral-only"
+        },
+        {
+          "k": "t",
+          "v": ": the K5 edge machine — charges "
+        },
+        {
+          "k": "m",
+          "v": "(-4,+1,+6)="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "SU(5)"
+        },
+        {
+          "k": "t",
+          "v": " decuple against the certified "
+        },
+        {
+          "k": "c",
+          "v": "v774"
+        },
+        {
+          "k": "t",
+          "v": " table; Petersen "
+        },
+        {
+          "k": "m",
+          "v": "SRG(10,3,0,1)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "|\\Aut|=120"
+        },
+        {
+          "k": "t",
+          "v": " census; distance shells "
+        },
+        {
+          "k": "m",
+          "v": "(1,3,6)"
+        },
+        {
+          "k": "t",
+          "v": " charge-pure; the flavor hexagon "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the distance-2 shell edge-by-edge; equitable quotient with hypercharge eigenvector "
+        },
+        {
+          "k": "m",
+          "v": "(6,-4,1)\\to-2"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{spec}(P^6)=\\{1,64/729,1/729\\}="
+        },
+        {
+          "k": "t",
+          "v": " the deployed transport spectrum EXACTLY; the 10-dim multiplicity prediction ("
+        },
+        {
+          "k": "m",
+          "v": "\\times5=\\gcar"
+        },
+        {
+          "k": "t",
+          "v": " fast, "
+        },
+        {
+          "k": "m",
+          "v": "\\times4=|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": " slow) typed [H neu]; "
+        },
+        {
+          "k": "m",
+          "v": "B=\\tfrac1{18}[[13,1,4],[1,13,4],[4,4,10]]"
+        },
+        {
+          "k": "t",
+          "v": " is the unique symmetric doubly stochastic PSD sixth root in the corpus basis, "
+        },
+        {
+          "k": "m",
+          "v": "B^6"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "GL(3,\\Q)"
+        },
+        {
+          "k": "t",
+          "v": "-conjugate to "
+        },
+        {
+          "k": "c",
+          "v": "v486"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "M^6"
+        },
+        {
+          "k": "t",
+          "v": " and the cusp-diagonal form but bit-equal to NEITHER — the corpus freezes the spectrum, not the basis); "
+        },
+        {
+          "k": "c",
+          "v": "v809_curve_code_doily.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "21/21"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "doily-exact"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "NN^{T}=B+2I"
+        },
+        {
+          "k": "t",
+          "v": " entrywise, "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{spec}=\\{9,4^9,0^5\\}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "N/3"
+        },
+        {
+          "k": "t",
+          "v": " has singular values "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,2/3,0\\}"
+        },
+        {
+          "k": "t",
+          "v": " — the recovery base rate "
+        },
+        {
+          "k": "m",
+          "v": "2/3"
+        },
+        {
+          "k": "t",
+          "v": " as the unique nontrivial singular value of the canonical duad-to-syntheme incidence, the "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " identification typed pending the six-step composition; Petersen edges "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " synthemes "
+        },
+        {
+          "k": "m",
+          "v": "15/15"
+        },
+        {
+          "k": "t",
+          "v": "; every census bridge factors exactly "
+        },
+        {
+          "k": "m",
+          "v": "N_{\\rm code}=P_\\Delta^{T}N_{\\rm curve}^{T}P_\\Gamma"
+        },
+        {
+          "k": "t",
+          "v": " — a duality, not an isomorphism; the Arf switch set "
+        },
+        {
+          "k": "m",
+          "v": "T_6="
+        },
+        {
+          "k": "t",
+          "v": " the six within-block duads); "
+        },
+        {
+          "k": "c",
+          "v": "v810_cutcode_moment.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "17/17+16/16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "cutcode-exact"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "moment-incidence-partial"
+        },
+        {
+          "k": "t",
+          "v": ": the cut map is injective-isometric on all 256 cells and the Arf split "
+        },
+        {
+          "k": "m",
+          "v": "16=1+\\bar5+10"
+        },
+        {
+          "k": "t",
+          "v": " IS the cut classification "
+        },
+        {
+          "k": "m",
+          "v": "(0|5)+(1|4)+(2|3)"
+        },
+        {
+          "k": "t",
+          "v": "; Clebsch "
+        },
+        {
+          "k": "m",
+          "v": "40=5+20+15"
+        },
+        {
+          "k": "t",
+          "v": " over the Arf shells with within-10 "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Petersen (census 120); roots/lines grade "
+        },
+        {
+          "k": "m",
+          "v": "80+160"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "20+40"
+        },
+        {
+          "k": "t",
+          "v": " — Arf/cut grading, NOT matter; the master moment "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Tr}_{S^{+}}X^2=4|X|^2=4h(E_8)=120"
+        },
+        {
+          "k": "t",
+          "v": " from one symbolic identity; the "
+        },
+        {
+          "k": "m",
+          "v": "210=\\binom{10}{4}"
+        },
+        {
+          "k": "t",
+          "v": " map DECORATIVE per the frozen rule — the equivariant bijection killed by the exhaustive fixed-point obstruction, the partial "
+        },
+        {
+          "k": "m",
+          "v": "80\\to5\\times16"
+        },
+        {
+          "k": "t",
+          "v": " miss-slot map and the Newton tie survive as audit); "
+        },
+        {
+          "k": "c",
+          "v": "v811_prime_kraus_doily.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "21/21"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "kraus-doily-protocol"
+        },
+        {
+          "k": "t",
+          "v": ": the 105 Kraus legs "
+        },
+        {
+          "k": "m",
+          "v": "=15"
+        },
+        {
+          "k": "t",
+          "v": " diagonal "
+        },
+        {
+          "k": "m",
+          "v": "+90"
+        },
+        {
+          "k": "t",
+          "v": " off-diagonal; the canonical "
+        },
+        {
+          "k": "m",
+          "v": "45+60="
+        },
+        {
+          "k": "t",
+          "v": " reversal-quotient (the 90 legs double-cover the 45 flags "
+        },
+        {
+          "k": "m",
+          "v": "2{:}1"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " fiber expansion ("
+        },
+        {
+          "k": "m",
+          "v": "15\\times4=60="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "c",
+          "v": "v783"
+        },
+        {
+          "k": "t",
+          "v": " stabilizer rays); the "
+        },
+        {
+          "k": "m",
+          "v": "Sp(4,2)"
+        },
+        {
+          "k": "t",
+          "v": " obstruction certifies no leg-subset partition — the literal partition is spread-relative "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the ledger T3 census; the 45 transports quadratic ("
+        },
+        {
+          "k": "m",
+          "v": "P_xP_y=\\pm P_{x+y}"
+        },
+        {
+          "k": "t",
+          "v": ") spanning "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{End}(\\mathbb C^4)"
+        },
+        {
+          "k": "t",
+          "v": " at rank 16; THE SURPRISE: "
+        },
+        {
+          "k": "m",
+          "v": "[B_{45},B_{60}]=0"
+        },
+        {
+          "k": "t",
+          "v": " exactly — "
+        },
+        {
+          "k": "m",
+          "v": "K=\\tfrac37E+\\tfrac47R"
+        },
+        {
+          "k": "t",
+          "v": " is a direct-sum protocol with "
+        },
+        {
+          "k": "m",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " a conditional expectation; measured: the certified spread is NOT "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "-invariant — the named next falsifier); "
+        },
+        {
+          "k": "c",
+          "v": "v812_flavor_graph_filtration.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "16/16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "filtration-fingerprint-only"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "Q/K/L"
+        },
+        {
+          "k": "t",
+          "v": " row budgets are exact, order-exact counts of the "
+        },
+        {
+          "k": "m",
+          "v": "K_{3,2}"
+        },
+        {
+          "k": "t",
+          "v": "/prism/"
+        },
+        {
+          "k": "m",
+          "v": "K_5"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "H_8"
+        },
+        {
+          "k": "t",
+          "v": " incidence chain with level-wise additivity mirroring "
+        },
+        {
+          "k": "m",
+          "v": "L=K+Q"
+        },
+        {
+          "k": "t",
+          "v": "; NO entry-level reconstruction from any frozen candidate; the exhaustive false-positive rates "
+        },
+        {
+          "k": "m",
+          "v": "0.005"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.75\\%"
+        },
+        {
+          "k": "t",
+          "v": " make the misses informative — typed audit fingerprint); "
+        },
+        {
+          "k": "c",
+          "v": "v813_p1_index_kms.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "13/13"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "p1-identity-closed"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "I\\cdot\\beta\\cdot\\cthree=4\\cdot2\\pi\\cdot\\tfrac1{8\\pi}=1"
+        },
+        {
+          "k": "t",
+          "v": " EXACT in formal arithmetic; the index is an independent "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": "-free theorem (zero occurrences in all four sources, gated), "
+        },
+        {
+          "k": "m",
+          "v": "\\beta=2\\pi"
+        },
+        {
+          "k": "t",
+          "v": " independently measured ("
+        },
+        {
+          "k": "c",
+          "v": "v526"
+        },
+        {
+          "k": "t",
+          "v": "; the radian pin is the one shared convention and cancels), "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": " stays the P1 axiom the identity EXPLAINS; the finite evenness precursor measured ("
+        },
+        {
+          "k": "m",
+          "v": "w_1=w_3=\\tfrac14"
+        },
+        {
+          "k": "t",
+          "v": " exactly at every level, symmetric zero-sum offset "
+        },
+        {
+          "k": "m",
+          "v": "\\pm2^{-(l+1)}"
+        },
+        {
+          "k": "t",
+          "v": " — the no-anomaly shape); the sea state does NOT equidistribute (dev "
+        },
+        {
+          "k": "m",
+          "v": "0.188"
+        },
+        {
+          "k": "t",
+          "v": ") — the bridge must normalize the modular response; controls: index 2 "
+        },
+        {
+          "k": "m",
+          "v": "\\to1/(4\\pi)"
+        },
+        {
+          "k": "t",
+          "v": ", booked elsewhere by the corpus). Suite "
+        },
+        {
+          "k": "m",
+          "v": "795\\to806"
+        },
+        {
+          "k": "t",
+          "v": "; all eleven run standalone green and encode their frozen patterns per the "
+        },
+        {
+          "k": "c",
+          "v": "v757"
+        },
+        {
+          "k": "t",
+          "v": " precedent (the two honest kills encode their expected-FAIL patterns explicitly); all fifteen probes re-run identically at promotion."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contracts."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " NEW: "
+        },
+        {
+          "k": "c",
+          "v": "E8.RAMIFIED.JETCODE.01"
+        },
+        {
+          "k": "t",
+          "v": " [E] (carrying "
+        },
+        {
+          "k": "c",
+          "v": "E8.AFFINE.NSR.01"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CARRIER.GRAY.01"
+        },
+        {
+          "k": "t",
+          "v": " (demands D1–D3: odd-place fiber charts, the "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_3"
+        },
+        {
+          "k": "t",
+          "v": " line twist as crossed-product structure, the infinite-level CP extension), "
+        },
+        {
+          "k": "c",
+          "v": "E8.SYNDROME.ALGEBRA.01"
+        },
+        {
+          "k": "t",
+          "v": " (DEAD as frozen, successor criterion named: root-individual operator data), "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.LOCAL.CLIFFORD.01"
+        },
+        {
+          "k": "t",
+          "v": " (analytic ordering DEAD; next falsifier: primitive sector data, not class indicators), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LORENTZ.SPINOR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the reveal "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the named 1D monotonicity candidate), "
+        },
+        {
+          "k": "c",
+          "v": "CARRIER.PETERSEN.RADIAL.01"
+        },
+        {
+          "k": "t",
+          "v": " [E/H] (carrying "
+        },
+        {
+          "k": "c",
+          "v": "TRANSPORT.SIXTHROOT.01"
+        },
+        {
+          "k": "t",
+          "v": ", the basis-freeze question named), "
+        },
+        {
+          "k": "c",
+          "v": "CURVE.CODE.DOILY.01"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " six-step target named), "
+        },
+        {
+          "k": "c",
+          "v": "CARRIER.CUTCODE.01"
+        },
+        {
+          "k": "t",
+          "v": " [E] (carrying "
+        },
+        {
+          "k": "c",
+          "v": "CARRIER.MOMENT.INCIDENCE.01"
+        },
+        {
+          "k": "t",
+          "v": ", the 210 decorative), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KRAUS.DOILY.01"
+        },
+        {
+          "k": "t",
+          "v": " (protocol-grade; the commutant/spread falsifier named), "
+        },
+        {
+          "k": "c",
+          "v": "FLAVOR.GRAPH.FILTRATION.01"
+        },
+        {
+          "k": "t",
+          "v": " (fingerprint), "
+        },
+        {
+          "k": "c",
+          "v": "P1.INDEX.KMS.01"
+        },
+        {
+          "k": "t",
+          "v": " registered OPEN [O] (the one open bridge: even modular-response normalization over the "
+        },
+        {
+          "k": "m",
+          "v": "I"
+        },
+        {
+          "k": "t",
+          "v": " deck sectors; kill "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " any asymmetric sector offset). Dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "ARF.BOUNDARY.CODE.01"
+        },
+        {
+          "k": "t",
+          "v": " (the affine NS/R reconstruction sharpens the attack surface; R1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " unchanged), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CP.INTERTWINER.01"
+        },
+        {
+          "k": "t",
+          "v": " (the Gray extension; D1–D3 unchanged), "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.SECTOR_CONTINUA.01"
+        },
+        {
+          "k": "t",
+          "v": " (the rule map covers the full mod-8 dual group) and "
+        },
+        {
+          "k": "c",
+          "v": "E8.ONEOBJECT.01"
+        },
+        {
+          "k": "t",
+          "v": " (the null-selector addendum: a second independent "
+        },
+        {
+          "k": "m",
+          "v": "d=4"
+        },
+        {
+          "k": "t",
+          "v": " mechanism on the same invariant "
+        },
+        {
+          "k": "m",
+          "v": "4d"
+        },
+        {
+          "k": "t",
+          "v": "). NO marker moves; both kills recorded as preregistered adjudications; the declared repairs (Gray C2 scramble, local-Clifford C1b bar, Kraus report text) carried verbatim in PROVENANCE."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 11 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "E8.RAMIFIED.JETCODE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CARRIER.GRAY.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.SYNDROME.ALGEBRA.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.LOCAL.CLIFFORD.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.LORENTZ.SPINOR.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "CARRIER.PETERSEN.RADIAL.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "CURVE.CODE.DOILY.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "CARRIER.CUTCODE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KRAUS.DOILY.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "FLAVOR.GRAPH.FILTRATION.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "P1.INDEX.KMS.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " 4 dated updates; "
+        },
+        {
+          "k": "m",
+          "v": "877\\to888"
+        },
+        {
+          "k": "t",
+          "v": " rows; measured/typed throughout; NO marker moves anywhere."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The K5 edge machine: five exact structures, two precise middles, and the honest kills” (the Kraus protocol, the Gray intertwiner, the local-Clifford negative, the doily and Lorentz strands, the P1 index identity); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ": the jet-code normal form and the affine NS/R reconstruction join the architecture narrative (keybox entries; the cut-code grading of Theorem 2's Clebsch geometry); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the Petersen carrier geometry of the transport spectrum and the flavor-filtration fingerprint join their sections; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": eleven new audit blocks; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the registrations and dated updates above."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round twenty-two”; counters "
+        },
+        {
+          "k": "m",
+          "v": "795\\to806"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v813"
+        },
+        {
+          "k": "t",
+          "v": "; papers.ts and VerificationDag updated; generated surfaces regenerated (ScriptIndex, changelog.ts, version.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "806"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v813"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The exact results (the jet-code normal form, the affine NS/R reconstruction, the Petersen/doily/cut-code incidence identities, the Kraus protocol identities, the index-KMS identity) sit behind explicit fences ("
+        },
+        {
+          "k": "t",
+          "v": "rootclass-mixed"
+        },
+        {
+          "k": "t",
+          "v": " intact everywhere; no matter semantics; the Hamming reconstruction is internal, not a P2 removal; "
+        },
+        {
+          "k": "m",
+          "v": "\\cthree"
+        },
+        {
+          "k": "t",
+          "v": " stays the P1 axiom — the identity explains, it does not derive); the honest kills (syndrome algebra, analytic Clifford ordering) and the precise middles (the 210 decorative, the filtration fingerprint, the spectral-only sixth root, the glacial "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-approach) are preregistered adjudications on record; no marker moves; no RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-06",
     "dateLabel": "2026-08-06 · LXIV",
     "heading": [
       {

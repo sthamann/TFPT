@@ -13,7 +13,7 @@ interface Row {
 const ROWS: Row[] = [
   {
     layer: "Two axioms {c₃, g_car}",
-    status: "Declared inputs — c₃ Gauss–Bonnet-hardenable (temperature since measured as its third leg, T_seam = 4c₃, v526), P2 algebra Lean-formalised; reduction state: four marks + one discrete symmetry-lift bit — the twist-class choice (flag transitivity ⟺ τ = i; 10 side-blind tests survived, gauge-robust order parameter, in principle interferometrically readable, since RP-selected dynamically at toy level: the unique surviving interacting member δ = π/2, v534 — stays input) + π (v491/v499/v510/v512/v528/v529/v534)",
+    status: "Declared inputs — c₃ Gauss–Bonnet-hardenable (temperature since measured as its third leg, T_seam = 4c₃, v526; the closed index-KMS identity I·β·c₃ = 4·2π·1/(8π) = 1 now EXPLAINS the value — Jones index c₃-free, β = 2π independently measured — without deriving it: c₃ stays the axiom, the open bridge is the even modular-response normalization, P1.INDEX.KMS.01 [O], v813), P2 algebra Lean-formalised; reduction state: four marks + one discrete symmetry-lift bit — the twist-class choice (flag transitivity ⟺ τ = i; 10 side-blind tests survived, gauge-robust order parameter, in principle interferometrically readable, since RP-selected dynamically at toy level: the unique surviving interacting member δ = π/2, v534 — stays input) + π (v491/v499/v510/v512/v528/v529/v534)",
     paper: "Doc 1",
     tone: "downstream",
   },
