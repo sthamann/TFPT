@@ -34,72 +34,72 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 4305211,
+    bytes: 4316170,
     sha256:
-      "d6ef40dd716d8095c37b321a0f306e98fe2d5ef8d4c6a48940c4599340ea80bc",
+      "58f87349af78815f65f8d12192f2fbf9136da719df4f20e1750efe34edd4601a",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 1420463,
+    bytes: 1420464,
     sha256:
-      "ec5220fe11cce5e839298aaf8872e0108da5534866a79de1f22b5882cf67b380",
+      "3e7b2735117cd478a8c3c345e03c568efe61f2eb320761255b96e24e203a2779",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 1323551,
+    bytes: 1323555,
     sha256:
-      "35f268a6d6869801c3cd270f18695e5729c3316fea11605c6ec191d87d291f7a",
+      "8e230e8a4621fe6ed4f6d7c3f0139d6b78d6b6dfeb73ccb69a9d70f838184aa2",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
   "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
     href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 1741904,
+    bytes: 1745168,
     sha256:
-      "a9e0812e07c013e513d3bc342cfdf17ee683bf3e7b3cc8b74021b5924813ccd3",
+      "7ea62680942a88a4cb7f26d62b7d2699f1e4d29617e7de562aeea6800aad0aad",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
   "/papers/tfpt_4_frontier.pdf": {
     href: "/papers/tfpt_4_frontier.pdf",
     ...COMMON,
-    bytes: 825808,
+    bytes: 825815,
     sha256:
-      "80ff7ce3c5cc9f529436ffafb5775eeb6a66e1d0941dc391b3859f714c2d340b",
+      "953683886dcfb790bb73c39e963d25b789a0c3adef298080d07a96de88a08658",
     changelog:
       "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },
   "/papers/tfpt_horizon_readouts.pdf": {
     href: "/papers/tfpt_horizon_readouts.pdf",
     ...COMMON,
-    bytes: 932406,
+    bytes: 932411,
     sha256:
-      "f088a414ad568a900ecb09b7a3738ebc033f66433f001329a786f7b94ae4d1fa",
+      "d5d2dd1fb1eb5d6c455957bb652de05dde666464b14a842b3ec78664c6ea2097",
     changelog:
       "Appendix H — the horizon unit system: c₃ = 1/(8π) as the universal horizon thermal code.",
   },
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 1136180,
+    bytes: 1136182,
     sha256:
-      "19f0a039e525fe654a429e7f9dfcb5e96965a47d404461d069c169de46800c6a",
+      "2ac4eca7d9af5a1863dafa93d7da18b5911b656f85e1cdc6c430176183582261",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 2121736,
+    bytes: 2127157,
     sha256:
-      "8e929872ac4d5cf32d27d81806681b9c480625fa43d40c923676ffe1311c0ac1",
+      "db17e879eb371da03dfd884cb91b33beca6f4613da779ea9c9a5242b57c70c50",
     changelog:
       "Research contracts for the remaining interfaces: v_geo (scale anchor, [O]), G_net (metric inclusion, [C] closed modulo cited theorems), F_transfer (downstream transport, typed runnable solvers [C]).",
   },
@@ -108,16 +108,16 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     ...COMMON,
     bytes: 618292,
     sha256:
-      "50ccffa6e8e441b4eee4b3e056f9ce9543b7903a7edcc2f6cb0e2968128cb79d",
+      "8ce7a3dd155f37fa9d7fc1c30ec15793aee42efb87a319fa1d092d905c33a251",
     changelog:
       "Safeguards: the verification discipline — the status calculus, no-free-pattern + reverse audit (and v431: the 5/8 'overhead' degrees are the forced two-family ladder 6·spine ⊔ det-ladder, not diffuse slack), the over-determination map (v427) with its honest self-correction (v428: the seven arithmetic witnesses compress one (2,3,5)/E₈ object; the genuine multiplication is the input forced four ways + the foreign α⁻¹) and its unconditional floor (v432: ~10⁻¹⁰ from disjoint pieces only, ~20 orders above the v100 conditional; hardened by v436 to an assumption-minimal 1/94,500 ≈ 4.40σ counting floor with a monotone concession ladder), the firewall + No-Unit theorem, frozen predictions + null model, the independent Wolfram and Lean paths, and the red team.",
   },
   "/papers/tfpt_5_redteam.pdf": {
     href: "/papers/tfpt_5_redteam.pdf",
     ...COMMON,
-    bytes: 864004,
+    bytes: 864003,
     sha256:
-      "1d8ee231a068759088fc32aeb57228d888bb957facb53d3bdc0af4b0668e3968",
+      "a660a5f128882d1b5b7a15b5760462fedeaa09000d4fdffc409539a64084ca47",
     changelog:
       "The adversarial audit: Targets A–E, what survives, what each target reduces to, and the kill tests.",
   },
@@ -126,7 +126,7 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     ...COMMON,
     bytes: 347652,
     sha256:
-      "c5532df4cc76e548c0e1be58cdf3b76829c214016175da635fd5e92e58837c8a",
+      "128be54f8b073258a963aaf986a3236b2912acedca28b1c4421a75be6aa0776a",
     changelog:
       "Working note N1 — the Gaussian code bridge: E₈ over ℤ[i] via Construction A over the extended Hamming code, the canonical four-bit quotient L/(1+i)L ≅ F₂⁴, and the G₃₁ quartic companion (v689/v690 + 65 Lean theorems).",
   },
@@ -135,16 +135,16 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
     ...COMMON,
     bytes: 470497,
     sha256:
-      "c49bc953aa64f3eaa9976792267aca6da139802587fe1e0c2c8efd58b0d69101",
+      "e0e2b884b96c59161fca6920319d53aa26c0bdbb813bc6b392a51960869492f5",
     changelog:
       "Working note N2 — a computable, zeta-free truncation family for the Weil measure: measurements on a Hilbert–Pólya candidate (v714, v716–v721, v727–v734; prediction freeze; no RH claim).",
   },
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 2523115,
+    bytes: 2531563,
     sha256:
-      "516977f33d35347071b7e59e7e5549f7d151421977f15b6ded99dec5578c9fb6",
+      "153ff894d9b966f21eb6a891fb54f72be70fba0c1e539cd820c16eb802b0285f",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },

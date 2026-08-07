@@ -14169,6 +14169,108 @@ sharpened demand; the closed corner-era surfaces are stop-listed
 \texttt{PRIME.CARRIER.POSITION.01}).
 \textbf{No statement about the Riemann Hypothesis is made.}
 
+\subsection{The margin as a doubly-derived law, and the wall
+kernel-checked}\label{sec:margin-law}
+
+Round 29 (2026-08-07) is the compact closing round: the margin
+itself --- the certified series $\tau_X$ of
+Section~\ref{sec:relation-skeleton} --- becomes a typed
+mathematical object, and the wall's logical geography moves into
+the Lean kernel
+(\veri{v843\_margin\_law\_excess\_lean.py}, $10$ checks with the
+\emph{one} preregistered-honest FAIL kept and pattern-gated,
+verdict \textsc{margin-recurses-the-wall}, plus four mirror
+checks; Lean core \texttt{TfptCarrier/ExcessSkeleton.lean}, lake
+build green, no \texttt{sorry}; suite $835\to836$).
+
+\emph{The law, doubly derived.}  Recomputed in the
+identified-corner coordinates ($\tau = \lambda_{\min}(S + C)$,
+agreeing with the deployed $\lambda_{\min}(A_h)$ at
+$2.1\times10^{-12}$), the margin series reproduces the
+floor-strand envelope of Section~\ref{sec:exclusion-detector}
+\emph{exactly}: $e_1 = (\tau/\tau_{\rm pnt})\, h^{3/2} \in
+[4.855, 24.209]$ on all $67$ rungs, $\min \ge 4.335$ --- the
+certified envelope constant, reproduced in a coordinate system
+derived independently of the one that certified it.  Two laws,
+one object; the consistency itself is a nontrivial ward.  The
+typed relationship is
+\[
+  \tau(\alpha, h) \;=\; e_1(\alpha)\, h^{-3/2}\,
+  \tau_{\rm pnt}(\alpha),
+\]
+with $\tau_{\rm pnt}$ --- the explicit zero-free PNT-density
+transversal --- carrying the \emph{entire} $\alpha$-decay
+(segment slopes $-0.23$ to $-0.30$) and $e_1$ carrying the
+arithmetic.  The honest miss is kept: the fit-free internal
+$h$-exponent ($21$ near-equal-alpha rung pairs, no global fit)
+measures median $-1.341$ against the frozen bar edge $-1.35$ ---
+the $h^{-3/2}$ law confirmed at the ${\sim}1\%$ grade by an
+instrument whose preregistered bar was drawn $0.7\%$ too tight;
+the $0.009$ miss is typed and pattern-gated, not refit.
+
+\emph{The negatives, typed.}  The tower gives \emph{scale}, not
+recursion: the Hjelmslev reductions act as the identity on the
+GL1 corner reads, so the induced recursion lives on the dyadic
+mass subsequence $4^m$ ($m = 4..9$, exact at four levels) --- and
+the ratio-defect series ($0.6749$, $0.5159$, $0.0305$, $0.3635$)
+is non-decaying: no quantifier reduction from the tower at this
+depth.  The excess is a \emph{growing} cancellation: its
+per-event prime-power cells (ward
+$\sum_j \mathrm{cell}_j = v^{\mathsf T}(A - B)v$ at $10^{-8}$ on
+every rung) carry a cancellation index rising $5.65 \to 29.46$
+along the ladder (median $15.6$), with \emph{no} per-prime
+positive control ($22\,287$ of $351\,122$ (prime, rung)
+aggregates nonpositive; the deep $p = 2$ aggregate $-0.623$) ---
+the excess is not a positive sum over primes: the wall is
+\emph{self-similar at cell level}, and same-class margin-law
+re-attacks are stop-listed.  The predeclared compiler-connection
+table is null ($0/96$ at $10^{-3}$, Bonferroni-honest).  The
+controls carry the arithmetic: the scramble turns the margin
+negative on every rung, and the $h = 2$ Epstein routed margin is
+negative \emph{and} below its own unrouted baseline at all
+anchors ($-0.786$/$-1.100$/$-1.228$) --- the Euler-product
+violation carries its sign through the exact rational
+$\Lambda_F$ routing.
+
+\emph{The wall, kernel-checked.}  The logical geography of the
+certified skeleton is now a Lean~4 module
+(\texttt{TfptCarrier/ExcessSkeleton.lean}, $18$ declarations, no
+\texttt{sorry}, no \texttt{native\_decide}): the two-giants
+decomposition (the excess carried \emph{exactly} by the comb
+block --- \texttt{formAt\_add}, \texttt{excessAt\_eq\_comb}),
+the interval-certificate lemma (\texttt{pos\_of\_certified}: an
+enclosure clearing its own budget forces strict positivity ---
+the exact formal shape of every \texttt{v842} certificate), the
+certified-negative discriminator
+(\texttt{certified\_negative\_excludes} --- the Epstein
+rejection logic), the finite-ladder quantifier
+(\texttt{ladder\_pos\_on\_finset} --- what the $67$ certificates
+formally yield), and the bridge theorem \texttt{excess\_floor},
+which consumes \texttt{UniformMarginBound} as the \emph{single
+named hypothesis} and returns the floor statement for all rungs
+together with the per-rung \texttt{IdentificationPositivity}
+instances of \texttt{SectorPositiveDescent}
+(\texttt{uniform\_to\_identification}, proven).  The converse
+direction is the round's sharpest deliverable:
+\texttt{pointwise\_pos\_not\_uniform} is a \emph{kernel-checked
+counterexample} --- margin sequences strictly positive at every
+rung with \emph{no} uniform lower bound exist (witness
+$1/(m+1)$) --- so no finite certificate table, certified or not,
+discharges the uniform statement.  The finite-table limit, until
+now a typing discipline, is a theorem.
+
+\emph{The honest statement.}  The infinite quantifier now sits on
+\emph{one} scalar series: $e_1(m)$, certified $\ge 4.335$ on
+every reachable rung, doubly derived, self-similar at cell
+level, with no tower recursion and no compiler-constant
+shortcut.  What any future route must supply is a \emph{uniform}
+lower bound on $e_1$ --- by the GUE-side findings a
+finer-than-statistical datum --- with its arithmetic entry point
+declared (\texttt{PRIME.FLOOR.PAIRCORR.01} discipline binding).
+Registered \texttt{PRIME.MARGIN.LAW.01}; the Lean layer
+\texttt{FORM.PRIME.EXCESS.SKELETON.01}.
+\textbf{No statement about the Riemann Hypothesis is made.}
+
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
 The P4 main strike (\veri{v712\_rank3\_transverse\_deck.py}, $5/5$)
@@ -14236,7 +14338,16 @@ input: the identification carrier exists
 excess is positive on all 67 rungs, and the certified skeleton
 (\texttt{PRIME.RELATION.SKELETON.01} [O]) types the wall as the
 infinite quantifier over strictly-positive certified enclosures ---
-the sharpened demand: a uniform lower bound on the excess margin)
+the sharpened demand: a uniform lower bound on the excess margin;
+round 29 (Section~\ref{sec:margin-law}) closes the arc: the margin
+becomes the doubly-derived typed law
+$\tau = e_1\, h^{-3/2}\, \tau_{\rm pnt}$ (the envelope constant
+reproduced exactly across both coordinate systems), the tower
+gives scale not recursion, the excess is a growing cancellation
+(the wall self-similar at cell level), and the finite-table limit
+is kernel-checked in Lean (\texttt{PRIME.MARGIN.LAW.01},
+\texttt{FORM.PRIME.EXCESS.SKELETON.01}) --- the quantifier now
+sits on the one scalar series $e_1 \ge 4.335$)
 ---
 \texttt{PRIME.DETECTOR.WINDOW.01} (registered in round 25: the
 comb-native window detector, validated out-of-sample) ---

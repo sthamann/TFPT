@@ -41,7 +41,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v842 inside an 835-script suite. No claim of progress toward the Riemann Hypothesis.",
+    "A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v843 inside an 836-script suite. No claim of progress toward the Riemann Hypothesis.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "The Prime Front — TFPT research diary",
     description:
-      "Primes, the E8 census, and the load-bearing modules v535–v842: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
+      "Primes, the E8 census, and the load-bearing modules v535–v843: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
     url: `${SITE_URL}/prime-front`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified v535–v842: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
+      "Research diary of the prime / zeta line. Machine-verified v535–v843: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
   },
 };
 
@@ -3190,7 +3190,17 @@ function AugustOffensivesSection() {
           τ_X strictly positively: the wall = the infinite
           quantifier over strictly-positive certified enclosures,
           sharpened demand a uniform lower bound on the excess
-          margin) —
+          margin), and closed out in round 29 (v843: the margin
+          becomes the doubly-derived typed law
+          τ = e₁·h^(−3/2)·τ_pnt with the envelope constant
+          reproduced exactly across both coordinate systems, the
+          tower giving scale not recursion, the excess a growing
+          cancellation — the wall self-similar at cell level —
+          and the finite-table limit kernel-checked in Lean:
+          ExcessSkeleton.lean proves pointwise_pos_not_uniform
+          and carries UniformMarginBound as the single named
+          hypothesis; the quantifier now sits on the one scalar
+          series e₁ ≥ 4.335) —
           battery-relative, and
           still no positivity theorem on V_∞), and
           nothing here is a claim of progress toward the Riemann
@@ -3376,7 +3386,7 @@ function BigPictureSection() {
                 href="/verification"
                 className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
               >
-                v535–v842 (this front)
+                v535–v843 (this front)
               </Link>{" "}
               are machine-verified and cited in the papers. Sandbox probes never
               move a status marker.
@@ -3409,8 +3419,8 @@ function BigPictureSection() {
               tone="amber"
             />
             <BigPictureStat
-              term="v535–v842"
-              desc="machine-verified modules of this front, inside the 835-script suite (all green)"
+              term="v535–v843"
+              desc="machine-verified modules of this front, inside the 836-script suite (all green)"
               tone="emerald"
             />
             <BigPictureStat

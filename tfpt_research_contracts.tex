@@ -4789,6 +4789,27 @@ variants} (stop-list entry per house discipline); the envelope's
 constant is arithmetic substance equivalent to the target; the
 demand moves to \texttt{PRIME.FLOOR.PAIRCORR.01} below.  Kill
 criteria unchanged; still [O].]
+\emph{[2026-08-07 round-29 margin-law note:} the envelope
+constant is now \emph{doubly derived}
+(\veri{v843\_margin\_law\_excess\_lean.py},
+\textsc{margin-recurses-the-wall}): the identified-corner
+(relational) coordinates reproduce this contract's floor-strand
+law exactly --- $e_1 = (\tau/\tau_{\rm pnt})\,h^{3/2} \in
+[4.855, 24.209]$ on all $67$ rungs, $\min \ge 4.335 =
+c_{\rm cert}$, with $\tau$ agreeing with $\lambda_{\min}(A_h)$
+at $2.1\times10^{-12}$ --- two independently derived laws, one
+object: the consistency itself is a nontrivial ward.  The typed
+law $\tau(\alpha, h) = e_1(\alpha)\, h^{-3/2}\,
+\tau_{\rm pnt}(\alpha)$ puts the entire $\alpha$-decay in
+$\tau_{\rm pnt}$ and the arithmetic in $e_1$; the fit-free
+internal $h$-exponent measures median $-1.341$ against the
+frozen bar edge $-1.35$ --- the $h^{-3/2}$ law confirmed at
+$\sim1\%$ grade, the $0.009$ miss kept as the one
+preregistered-honest FAIL (not refit).  The margin-law attack
+class (tower recursion / per-prime factorization of the excess)
+is measured dead and stop-listed per the cell-level
+self-similarity typed in \texttt{PRIME.RELATION.SKELETON.01}.
+Kill criteria unchanged; still [O].]
 No marker move; NO RH claim.\par}
 
 \par\smallskip\noindent\textbf{The floor as an exact sum of
@@ -5226,8 +5247,70 @@ reachable rung whose certified enclosure at the true comb loses
 strict positivity under the frozen budget discipline, or a
 certified-positive enclosure for the $h = 2$ fake.  \emph{Close:}
 the uniform excess bound delivered with its entry point declared.
-Explicitly \emph{not} promised: an unconditional proof.  No
-marker move; no RH statement.\par}
+Explicitly \emph{not} promised: an unconditional proof.
+\emph{[2026-08-07 round-29 closing note:} the quantifier is in
+its final coordinates
+(\veri{v843\_margin\_law\_excess\_lean.py}): the demanded object
+sits on the one scalar series $e_1(m) =
+(\tau/\tau_{\rm pnt})\,h^{3/2}$, certified $\ge 4.335$ on every
+reachable rung and doubly derived (the consistency ward); the
+wall is \emph{self-similar at cell level} --- the excess is
+itself a growing cancellation (CI median $15.6$, rising
+$5.65 \to 29.46$; $22\,287$ of $351\,122$ per-prime aggregates
+nonpositive --- no per-prime positive control); the tower gives
+scale, not recursion; the compiler connection is null ($0/96$).
+The finite-table limit is now \emph{kernel-checked}:
+\texttt{TfptCarrier/ExcessSkeleton.lean} proves
+\texttt{pointwise\_pos\_not\_uniform} (per-rung positivity at
+every rung does not yield a uniform bound) and the bridge
+theorem \texttt{excess\_floor} consumes
+\texttt{UniformMarginBound} as the single named hypothesis ---
+this registration's ``no finite table settles it'' is a theorem,
+not a typing.  Same-class margin-law re-attacks are stop-listed
+per the measured self-similarity.  Demand, kill and close
+conditions unchanged; still [O].]
+No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The margin law and the
+kernel-checked wall (\texttt{PRIME.MARGIN.LAW.01} $+$
+\texttt{FORM.PRIME.\allowbreak EXCESS.\allowbreak SKELETON.01}).}
+{\sloppy
+\emph{Registered} 2026-08-07
+(\veri{v843\_margin\_law\_excess\_lean.py}, $10$ checks with the
+one preregistered-honest S2.2 FAIL kept and pattern-gated, $+4$
+Lean-mirror checks, \textsc{margin-recurses-the-wall}; Lean core
+\texttt{TfptCarrier/ExcessSkeleton.lean}, lake build green, no
+\texttt{sorry}, carried in the shipped Lean manifest).
+\emph{Measured (the law):} $\tau = e_1(\alpha)\, h^{-3/2}\,
+\tau_{\rm pnt}(\alpha)$ with the envelope constant doubly
+derived ($e_1 \in [4.855, 24.209]$ on all $67$ rungs,
+$\min \ge 4.335$); $\tau_{\rm pnt}$ carries the entire
+$\alpha$-decay, $e_1$ the arithmetic; the fit-free $h$-exponent
+median $-1.341$ vs bar edge $-1.35$ (the one honest FAIL, not
+refit).  \emph{Measured (the negatives, typed):} the tower gives
+scale, not recursion (dyadic-level ratio defects non-decaying);
+the excess is a growing cancellation --- the wall self-similar
+at cell level (no per-prime positive control, no
+Euler-factorized positivity); the compiler connection is null
+($0/96$, Bonferroni-honest).  \emph{Kernel-checked [F]:} the
+two-giants decomposition, the interval-certificate and
+certified-negative discriminator lemmas, the finite-ladder
+quantifier, \texttt{excess\_floor} with
+\texttt{UniformMarginBound} the single named hypothesis
+(implying the per-rung \texttt{IdentificationPositivity}
+instances; the converse fails), and
+\texttt{pointwise\_pos\_not\_uniform} --- no finite certificate
+table discharges the uniform bound.  \emph{Stop list:}
+same-class margin-law re-attacks (tower-recursion /
+cell-factorization of the excess).  \emph{Demand (unchanged,
+final coordinates):} a \emph{uniform} lower bound on $e_1$, with
+its arithmetic entry point declared
+(\texttt{PRIME.FLOOR.PAIRCORR.01} discipline binding).
+\emph{Kill:} a reachable rung with $e_1 < 4.335 \times 0.999$,
+or a kernel-checked discharge of \texttt{UniformMarginBound}
+from structural input alone (which would contradict the typed
+boundary and force a re-audit).  No marker move; no RH
+statement.\par}
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}

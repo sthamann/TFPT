@@ -230,6 +230,7 @@ const NODES: DagNode[] = [
       "v840_gue_ablation_loopgain.py",
       "v841_relation_carrier_ladder.py",
       "v842_excess_certified_skeleton.py",
+      "v843_margin_law_excess_lean.py",
       "v536_eichler_trace_layer.py",
       "v537_halfintegral_bridge.py",
       "v538_relative_trace_identity.py",

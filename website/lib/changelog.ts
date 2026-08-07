@@ -43,6 +43,987 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-07",
+    "dateLabel": "2026-08-07 · LXXII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round twenty-nine — the margin as a doubly-derived law, and the wall kernel-checked: ONE module ("
+      },
+      {
+        "k": "c",
+        "v": "v843"
+      },
+      {
+        "k": "t",
+        "v": ", from one frozen probe plus one Lean module; suite "
+      },
+      {
+        "k": "m",
+        "v": "835\\to836"
+      },
+      {
+        "k": "t",
+        "v": ") — the certified margin series becomes a typed mathematical object: "
+      },
+      {
+        "k": "m",
+        "v": "\\tau = e_1(\\alpha)\\, h^{-3/2}\\, \\tau_{\\rm pnt}(\\alpha)"
+      },
+      {
+        "k": "t",
+        "v": " with the certified envelope constant reproduced EXACTLY across two independent coordinate systems ("
+      },
+      {
+        "k": "m",
+        "v": "e_1 \\in [4.855, 24.209]"
+      },
+      {
+        "k": "t",
+        "v": " on all 67 rungs, "
+      },
+      {
+        "k": "m",
+        "v": "\\min \\ge 4.335"
+      },
+      {
+        "k": "t",
+        "v": " — the double-derivation ward; "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}(A_h)"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "2.1\\times10^{-12}"
+      },
+      {
+        "k": "t",
+        "v": "), the ONE preregistered-honest FAIL kept and pattern-gated (fit-free "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "-exponent median "
+      },
+      {
+        "k": "m",
+        "v": "-1.341"
+      },
+      {
+        "k": "t",
+        "v": " vs the frozen bar edge "
+      },
+      {
+        "k": "m",
+        "v": "-1.35"
+      },
+      {
+        "k": "t",
+        "v": ", NOT refit), the tower gives SCALE not recursion (ratio defects non-decaying), the excess is a GROWING cancellation (CI median "
+      },
+      {
+        "k": "m",
+        "v": "15.6"
+      },
+      {
+        "k": "t",
+        "v": ", rising "
+      },
+      {
+        "k": "m",
+        "v": "5.65 \\to 29.46"
+      },
+      {
+        "k": "t",
+        "v": " — the wall self-similar at cell level; no per-prime positive control: "
+      },
+      {
+        "k": "m",
+        "v": "22\\,287"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "351\\,122"
+      },
+      {
+        "k": "t",
+        "v": " aggregates nonpositive), the compiler connection is NULL ("
+      },
+      {
+        "k": "m",
+        "v": "0/96"
+      },
+      {
+        "k": "t",
+        "v": ", Bonferroni-honest) — and the finite-table limit becomes a KERNEL-CHECKED THEOREM: "
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/ExcessSkeleton.lean"
+      },
+      {
+        "k": "t",
+        "v": " proves "
+      },
+      {
+        "k": "c",
+        "v": "pointwise_pos_not_uniform"
+      },
+      {
+        "k": "t",
+        "v": " (per-rung positivity at every rung does not yield a uniform bound) and the bridge theorem "
+      },
+      {
+        "k": "c",
+        "v": "excess_floor"
+      },
+      {
+        "k": "t",
+        "v": " consumes "
+      },
+      {
+        "k": "c",
+        "v": "UniformMarginBound"
+      },
+      {
+        "k": "t",
+        "v": " as the SINGLE NAMED HYPOTHESIS; the quantifier now sits on the ONE scalar series "
+      },
+      {
+        "k": "m",
+        "v": "e_1 \\ge 4.335"
+      },
+      {
+        "k": "t",
+        "v": "; same-class margin-law re-attacks stop-listed; NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module (1)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v843_margin_law_excess_lean.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "10"
+        },
+        {
+          "k": "t",
+          "v": " checks with the ONE preregistered-honest S2.2 FAIL pattern-gated "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " Lean-mirror checks, verdict "
+        },
+        {
+          "k": "t",
+          "v": "margin-recurses-the-wall"
+        },
+        {
+          "k": "t",
+          "v": "; discovery probe "
+        },
+        {
+          "k": "c",
+          "v": "margin_law_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", 2026-08-07, re-run identically at promotion, promoted VERBATIM with no downscoping, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim6"
+        },
+        {
+          "k": "t",
+          "v": " s): Q1 THE LAW — the margin series recomputed in identified-corner coordinates ("
+        },
+        {
+          "k": "m",
+          "v": "\\tau = \\lambda_{\\min}(S + C) = \\lambda_{\\min}(A_h)"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "2.1\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "; cell ward "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_j \\mathrm{cell}_j = v^{\\mathsf T}(A-B)v"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": " on all rungs) reproduces the floor-strand envelope EXACTLY: "
+        },
+        {
+          "k": "m",
+          "v": "e_1 = (\\tau/\\tau_{\\rm pnt})h^{3/2} \\in [4.855, 24.209]"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\min \\ge 4.335"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "67"
+        },
+        {
+          "k": "t",
+          "v": " rungs — two independently derived laws, one object; "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_{\\rm pnt}"
+        },
+        {
+          "k": "t",
+          "v": " carries the entire "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-decay (segment slopes "
+        },
+        {
+          "k": "m",
+          "v": "-0.23..{-0.30}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "e_1"
+        },
+        {
+          "k": "t",
+          "v": " the arithmetic; the fit-free "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-exponent ("
+        },
+        {
+          "k": "m",
+          "v": "21"
+        },
+        {
+          "k": "t",
+          "v": " near-equal-alpha rung pairs) measures median "
+        },
+        {
+          "k": "m",
+          "v": "-1.341"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "0.009"
+        },
+        {
+          "k": "t",
+          "v": " outside the frozen bar "
+        },
+        {
+          "k": "m",
+          "v": "[-1.65, -1.35]"
+        },
+        {
+          "k": "t",
+          "v": " — the honest miss kept, NOT refit (v829/v831 precedent); Q2 THE TOWER — the induced recursion on the dyadic mass subsequence "
+        },
+        {
+          "k": "m",
+          "v": "4^m"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "m = 4..9"
+        },
+        {
+          "k": "t",
+          "v": "): ratio defects ("
+        },
+        {
+          "k": "m",
+          "v": "0.6749, 0.5159, 0.0305, 0.3635"
+        },
+        {
+          "k": "t",
+          "v": ") non-decaying — scale, not recursion; no quantifier reduction (the "
+        },
+        {
+          "k": "m",
+          "v": "m = 12"
+        },
+        {
+          "k": "t",
+          "v": " extrapolation typed HEURISTIC); Q3 THE CELLS — CI median "
+        },
+        {
+          "k": "m",
+          "v": "15.6"
+        },
+        {
+          "k": "t",
+          "v": " rising "
+        },
+        {
+          "k": "m",
+          "v": "5.65 \\to 29.46"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "22\\,287/351\\,122"
+        },
+        {
+          "k": "t",
+          "v": " per-prime aggregates nonpositive (deep "
+        },
+        {
+          "k": "m",
+          "v": "C_2 = -0.623"
+        },
+        {
+          "k": "t",
+          "v": ") — the excess is NOT a positive sum over primes: the wall RECURSES into the cells; Q4 — compiler connection NULL ("
+        },
+        {
+          "k": "m",
+          "v": "0/96"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": "); CONTROLS — the scramble turns the margin negative on every rung; the "
+        },
+        {
+          "k": "m",
+          "v": "h = 2"
+        },
+        {
+          "k": "t",
+          "v": " Epstein routed margin negative AND below its own unrouted baseline at all anchors ("
+        },
+        {
+          "k": "m",
+          "v": "-0.786/-1.100/-1.228"
+        },
+        {
+          "k": "t",
+          "v": ", exact rational "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda_F"
+        },
+        {
+          "k": "t",
+          "v": " routing). Suite "
+        },
+        {
+          "k": "m",
+          "v": "835\\to836"
+        },
+        {
+          "k": "t",
+          "v": "; standalone green with the pattern gate encoding the expected-FAIL signature."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean (1 module promoted)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/ExcessSkeleton.lean"
+        },
+        {
+          "k": "t",
+          "v": " — the excess-skeleton logical geography, kernel-checked ("
+        },
+        {
+          "k": "m",
+          "v": "18"
+        },
+        {
+          "k": "t",
+          "v": " declarations; lake build green, "
+        },
+        {
+          "k": "m",
+          "v": "3410"
+        },
+        {
+          "k": "t",
+          "v": " jobs, no "
+        },
+        {
+          "k": "c",
+          "v": "sorry"
+        },
+        {
+          "k": "t",
+          "v": ", no "
+        },
+        {
+          "k": "c",
+          "v": "native_decide"
+        },
+        {
+          "k": "t",
+          "v": "; imported in "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lean_manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " regenerated with this round, "
+        },
+        {
+          "k": "m",
+          "v": "84"
+        },
+        {
+          "k": "t",
+          "v": " files): the two-giants decomposition ("
+        },
+        {
+          "k": "c",
+          "v": "formAt_add"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "excessAt_eq_comb"
+        },
+        {
+          "k": "t",
+          "v": " — the excess carried EXACTLY by the comb block; the deployed structural block NOT assumed PSD), the interval-certificate lemma ("
+        },
+        {
+          "k": "c",
+          "v": "pos_of_certified"
+        },
+        {
+          "k": "t",
+          "v": " — the exact formal shape of every "
+        },
+        {
+          "k": "c",
+          "v": "v842"
+        },
+        {
+          "k": "t",
+          "v": " certificate), the certified-negative discriminator ("
+        },
+        {
+          "k": "c",
+          "v": "certified_negative_excludes"
+        },
+        {
+          "k": "t",
+          "v": " — the Epstein rejection logic), the finite-ladder quantifier ("
+        },
+        {
+          "k": "c",
+          "v": "ladder_pos_on_finset"
+        },
+        {
+          "k": "t",
+          "v": "), the bridge theorem "
+        },
+        {
+          "k": "c",
+          "v": "excess_floor"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "c",
+          "v": "UniformMarginBound"
+        },
+        {
+          "k": "t",
+          "v": " the SINGLE NAMED HYPOTHESIS (implying the per-rung "
+        },
+        {
+          "k": "c",
+          "v": "IdentificationPositivity"
+        },
+        {
+          "k": "t",
+          "v": " instances of "
+        },
+        {
+          "k": "c",
+          "v": "SectorPositiveDescent"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "uniform_to_identification"
+        },
+        {
+          "k": "t",
+          "v": " proven), and THE KERNEL-CHECKED GAP "
+        },
+        {
+          "k": "c",
+          "v": "pointwise_pos_not_uniform"
+        },
+        {
+          "k": "t",
+          "v": ": margin sequences strictly positive at EVERY rung with NO uniform lower bound exist (witness "
+        },
+        {
+          "k": "m",
+          "v": "1/(m+1)"
+        },
+        {
+          "k": "t",
+          "v": ") — no finite certificate table, certified or not, discharges the uniform statement: the finite-table limit, until now a typing discipline, is a theorem. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "v843"
+        },
+        {
+          "k": "t",
+          "v": "'s part B (numeric witness mirror, v837/v817 precedent)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The wall statement (the round's deliverable)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The infinite quantifier sits on ONE scalar series: "
+        },
+        {
+          "k": "m",
+          "v": "e_1(m)"
+        },
+        {
+          "k": "t",
+          "v": ", certified "
+        },
+        {
+          "k": "m",
+          "v": "\\ge 4.335"
+        },
+        {
+          "k": "t",
+          "v": " on every reachable rung, DOUBLY DERIVED (the consistency ward), self-similar at cell level, with no tower recursion and no compiler-constant shortcut; what any future route must supply is a UNIFORM lower bound on "
+        },
+        {
+          "k": "m",
+          "v": "e_1"
+        },
+        {
+          "k": "t",
+          "v": " — by the GUE-side findings a finer-than-statistical datum — with its arithmetic entry point declared. The bridge contract "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " [O] unchanged; same-class margin-law re-attacks (tower-recursion / cell-factorization of the excess) stop-listed per the measured self-similarity. NO RH claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 2 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.MARGIN.LAW.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "FORM.PRIME.EXCESS.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " [F]) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-29 closing note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " (the quantifier in its final coordinates; the self-similarity; the kernel-checked finite-table limit; the stop-list) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-29 margin-law note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": " (the envelope constant doubly derived — the consistency ward); "
+        },
+        {
+          "k": "m",
+          "v": "920\\to922"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The margin as a doubly-derived law, and the wall kernel-checked” ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v843}"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the part-intro chain extended; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": one new audit card "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the round-29 follow-up notes on the floor-contract prose; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.MARGIN.LAW.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "FORM.PRIME.EXCESS.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " registration block "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-29 notes on the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " blocks."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round twenty-nine”; counters "
+        },
+        {
+          "k": "m",
+          "v": "835\\to836"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v843"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated (ScriptIndex, changelog.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "836"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v843"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The envelope ward, the regressions and the cell ward are [E]-grade machine checks on the frozen protocol; the law, the tower defects, the cell census and the compiler null are measured finite-level evidence; the one FAIL is a preregistered-honest adjudication on record (the bar NOT refit); the Lean statements are kernel-checked with "
+        },
+        {
+          "k": "c",
+          "v": "UniformMarginBound"
+        },
+        {
+          "k": "t",
+          "v": " deliberately NOT a theorem — the wall itself; NO marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-07",
     "dateLabel": "2026-08-07 · LXXI",
     "heading": [
       {

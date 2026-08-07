@@ -6643,7 +6643,17 @@ wall as the infinite quantifier over strictly-positive certified
 enclosures --- sharpened demand: a uniform lower bound on the
 excess margin
 (\veri{v837\_corner\_closure\_quantifier.py} --
-\veri{v842\_excess\_certified\_skeleton.py}); still open.  No
+\veri{v842\_excess\_certified\_skeleton.py}); still open.
+Round-29 follow-up (markers unchanged): the margin becomes a
+\emph{doubly-derived typed law} ---
+$\tau = e_1(\alpha)\, h^{-3/2}\, \tau_{\rm pnt}(\alpha)$ with the
+certified envelope constant reproduced exactly across both
+coordinate systems ($\min e_1 \ge 4.335$ on all $67$ rungs), the
+tower gives scale not recursion, the excess is a growing
+cancellation (the wall self-similar at cell level), and the
+finite-table limit is kernel-checked in Lean~4
+(\veri{v843\_margin\_law\_excess\_lean.py},
+\texttt{TfptCarrier/ExcessSkeleton.lean}); still open.  No
 marker move, no RH claim.
 Machine-checked: \veri{v791\_positive\_descent.py}.
 (\textsc{measured}) (exact-rational positivity; unique PSD sector)
@@ -6741,7 +6751,13 @@ excess positive on all $67$ rungs, the certified skeleton
 strictly positive
 (\veri{v841\_relation\_carrier\_ladder.py},
 \veri{v842\_excess\_certified\_skeleton.py}), the wall $=$ the
-infinite quantifier over certified enclosures, still open.]}
+infinite quantifier over certified enclosures, still open;
+round-29: the margin typed as the doubly-derived law
+$\tau = e_1\, h^{-3/2}\, \tau_{\rm pnt}$ ($\min e_1 \ge 4.335$ on
+all $67$ rungs, both coordinate systems), the tower scale-only,
+the excess a growing cancellation, the finite-table limit
+kernel-checked in Lean
+(\veri{v843\_margin\_law\_excess\_lean.py}), still open.]}
 Controls fire (conductor swap $=$ margin $-\ln2$ at
 $2.2\times10^{-16}$).  No marker move, no RH claim.
 Machine-checked: \veri{v794\_cp\_extension\_gate.py}.
@@ -7777,6 +7793,39 @@ the excess margin.  Registered [O].  No marker move, no RH claim.
 Machine-checked: \veri{v842\_excess\_certified\_skeleton.py}.
 \mE\ (certified-interval enclosures above the deployed float
 data) $+$ \mO\ (the infinite quantifier)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The margin law and the
+kernel-checked wall (\texttt{PRIME.MARGIN.LAW.01} $+$
+\texttt{FORM.PRIME.\allowbreak EXCESS.\allowbreak SKELETON.01}).}
+One probe plus the Lean mirror ($10$ checks with the \emph{one}
+preregistered-honest S2.2 FAIL, kept and pattern-gated ---
+pairwise $h$-exponent median $-1.341$ vs the frozen bar edge
+$-1.35$, not refit --- verdict
+\textsc{margin-recurses-the-wall}; $+4$ mirror checks,
+$\sim6$ s).  The margin is a doubly-derived typed law:
+$\tau = e_1(\alpha)\, h^{-3/2}\, \tau_{\rm pnt}(\alpha)$ with the
+certified envelope constant reproduced \emph{exactly} in the
+identified-corner coordinates ($e_1 \in [4.855, 24.209]$ on all
+$67$ rungs, $\min \ge 4.335$; $\tau$ vs $\lambda_{\min}(A_h)$ at
+$2.1\times10^{-12}$) --- two independently derived laws, one
+object; the tower gives scale, not recursion (defect series
+non-decaying); the excess is a \emph{growing} cancellation (CI
+median $15.6$, rising $5.65 \to 29.46$ --- the wall self-similar
+at cell level; no per-prime positive control); the compiler
+connection is null ($0/96$, Bonferroni-honest).  The Lean mirror
+(\texttt{TfptCarrier/ExcessSkeleton.lean}, lake build green, no
+\texttt{sorry}) kernel-checks the two-giants decomposition, the
+interval-certificate and certified-negative discriminator lemmas,
+the finite-ladder quantifier, the bridge theorem
+\texttt{excess\_floor} with \texttt{UniformMarginBound} the
+single named hypothesis, and the gap
+\texttt{pointwise\_pos\_not\_uniform} --- no finite certificate
+table discharges the uniform bound.  No marker move, no RH claim.
+Machine-checked: \veri{v843\_margin\_law\_excess\_lean.py}.
+(\textsc{measured}) (the law, the cells, the null) $+$ \mE\ (the
+envelope ward; the kernel-checked mirror statements) $+$ \mO\
+(the uniform bound)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification
