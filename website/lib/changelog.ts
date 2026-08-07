@@ -43,6 +43,1660 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-07",
+    "dateLabel": "2026-08-07 · LXXIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round thirty — the three-architecture decision, the extraction chain complete, and the finite-compiler compressions: FIVE modules ("
+      },
+      {
+        "k": "c",
+        "v": "v844"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v848"
+      },
+      {
+        "k": "t",
+        "v": ", from eight frozen probes; suite "
+      },
+      {
+        "k": "m",
+        "v": "836\\to841"
+      },
+      {
+        "k": "t",
+        "v": ") — the v5.4 strategy campaign consolidates: the three candidate proof architectures are DECIDED, all honest negatives with typed positive cores — (i) the relational Schur–Gram route dies STRUCTURALLY (three of four gates green incl. the exact "
+      },
+      {
+        "k": "m",
+        "v": "\\mu\\log"
+      },
+      {
+        "k": "t",
+        "v": " descent with the "
+      },
+      {
+        "k": "m",
+        "v": "h{=}2"
+      },
+      {
+        "k": "t",
+        "v": " Epstein refusal at construction grade; the corner identity fails in trace AND form by exactly the forced Cauchy–Schwarz diagonal price, price"
+      },
+      {
+        "k": "m",
+        "v": "/\\tau \\sim 3.1\\times10^4"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "4.5\\times10^4"
+      },
+      {
+        "k": "t",
+        "v": " at the density-anchored floor) and the price is GEOMETRY-INDEPENDENT: the unitary spectral mother ("
+      },
+      {
+        "k": "m",
+        "v": "J^2 = I"
+      },
+      {
+        "k": "t",
+        "v": " exact; the deployed form IS the "
+      },
+      {
+        "k": "m",
+        "v": "J"
+      },
+      {
+        "k": "t",
+        "v": "-odd Toeplitz compression; the Euler product the exact operator algebra "
+      },
+      {
+        "k": "m",
+        "v": "U_dU_m = U_{dm}"
+      },
+      {
+        "k": "t",
+        "v": ") gains "
+      },
+      {
+        "k": "m",
+        "v": "20"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "33\\times"
+      },
+      {
+        "k": "t",
+        "v": " at symbol grade but never at Gram grade — harvesting interference is Fejér–Riesz of the total symbol "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the positivity itself; (ii) the sign-register wedge lift EXISTS as exact algebra (nonneg wedge weights per frame where the naive signed Lagrange provably cannot) but the frame-uniform law fails at "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}15\\%"
+      },
+      {
+        "k": "t",
+        "v": " vs the "
+      },
+      {
+        "k": "m",
+        "v": "4.4\\times10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": " floor need — the commutant uniformity wall transported; (iii) the completed-cell Lorentz transport BREAKS the cone at the "
+      },
+      {
+        "k": "m",
+        "v": "n{=}2"
+      },
+      {
+        "k": "t",
+        "v": " cell on "
+      },
+      {
+        "k": "m",
+        "v": "67/67"
+      },
+      {
+        "k": "t",
+        "v": " rungs under both predeclared groupings (endpoint back in-cone "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the certified "
+      },
+      {
+        "k": "m",
+        "v": "\\tau > 0"
+      },
+      {
+        "k": "t",
+        "v": "; ray cascade to "
+      },
+      {
+        "k": "m",
+        "v": "(5,-3,4)"
+      },
+      {
+        "k": "t",
+        "v": " CONFIRMED, Kendall "
+      },
+      {
+        "k": "m",
+        "v": "\\pm1.000"
+      },
+      {
+        "k": "t",
+        "v": "; INVERTED Epstein signature: the fake stays in-cone, the arithmetic sits IN the violations) — all three die on the SAME finer-than-statistical substance; AND the continuum extraction is separated from all RH semantics and CLOSED: the implication chain cofinal finite positivity (H) "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " Weil positivity "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " (Weil's criterion) the target is theorem-grade modulo named citations with a QUANTIFIER REDUCTION (no Mosco compactness, no uniform "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": ", no diagonal argument; the pure-box class carries the EXACT Weil value at every finite level) — the wall is EXACTLY hypothesis (H) and nothing else ("
+      },
+      {
+        "k": "c",
+        "v": "PRIME.EXTRACTION.CHAIN.01"
+      },
+      {
+        "k": "t",
+        "v": " [O] registered); plus two exact finite-compiler compressions: the message ladder "
+      },
+      {
+        "k": "m",
+        "v": "M_n = 15\\cdot2^n"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "h(E_8) = 30"
+      },
+      {
+        "k": "t",
+        "v": " derived from the rebuilt root system, the Doily–Pascal rank theorem (the P2 integers as the singular-value data of the Cremona–Richmond incidence), and the finite compiler normal form "
+      },
+      {
+        "k": "m",
+        "v": "C_{\\rm fin} = (V, \\hbar, q^*, \\sigma, \\iota)"
+      },
+      {
+        "k": "t",
+        "v": " as ONE object with the code-to-matter kill built in; NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (5)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v844_message_doily_rank.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "23/23 + 16/16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "message-ladder-exact"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "doily-pascal-rank-exact"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "binary_message_ladder_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "doily_pascal_rank_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", promoted verbatim: "
+        },
+        {
+          "k": "m",
+          "v": "M_n = 15\\cdot\\Delta p_n = 15\\cdot2^n = (15, 30, 60, 120, 240)"
+        },
+        {
+          "k": "t",
+          "v": " against the ACTUAL rebuilt objects, one named structure per rung — "
+        },
+        {
+          "k": "m",
+          "v": "M_1 = 30 = h(E_8)"
+        },
+        {
+          "k": "t",
+          "v": " derived here from the rebuilt root system (8 simple roots, Cartan det 1, E8 degree sequence, highest root unique at height 29 with marks "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,2,3,3,4,4,5,6\\}"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "M_2 = 60"
+        },
+        {
+          "k": "t",
+          "v": " Gaussian lines, "
+        },
+        {
+          "k": "m",
+          "v": "M_3 = 120 = |R^+|"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "M_4 = 240 = 15\\times16"
+        },
+        {
+          "k": "t",
+          "v": " census, coda "
+        },
+        {
+          "k": "m",
+          "v": "248 = 15\\cdot16 + 8"
+        },
+        {
+          "k": "t",
+          "v": "; wrong anchor "
+        },
+        {
+          "k": "m",
+          "v": "(1,2,2)"
+        },
+        {
+          "k": "t",
+          "v": " and wrong multipliers 14/16 miss all targets; AND the rank theorem: "
+        },
+        {
+          "k": "m",
+          "v": "NN^{\\mathsf T} = B + 2I"
+        },
+        {
+          "k": "t",
+          "v": " entrywise under the "
+        },
+        {
+          "k": "m",
+          "v": "K_6"
+        },
+        {
+          "k": "t",
+          "v": " duad model (all 225 cells), "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{charpoly}(NN^{\\mathsf T}) = (x-9)(x-4)^9x^5"
+        },
+        {
+          "k": "t",
+          "v": " exact — rank "
+        },
+        {
+          "k": "m",
+          "v": "N = 10 = A_\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\dim\\ker N = 5 = g_{\\rm car}"
+        },
+        {
+          "k": "t",
+          "v": " (the six ovoid indicators SPAN it), multiplicity "
+        },
+        {
+          "k": "m",
+          "v": "9 = N_{\\rm fam}^2"
+        },
+        {
+          "k": "t",
+          "v": ", top "
+        },
+        {
+          "k": "m",
+          "v": "3 = N_{\\rm fam}"
+        },
+        {
+          "k": "t",
+          "v": ", recovery "
+        },
+        {
+          "k": "m",
+          "v": "2/3 = (N_{\\rm fam}{-}1)/N_{\\rm fam}"
+        },
+        {
+          "k": "t",
+          "v": ", six-step "
+        },
+        {
+          "k": "m",
+          "v": "(2/3)^6 = 64/729"
+        },
+        {
+          "k": "t",
+          "v": " exact; NO "
+        },
+        {
+          "k": "m",
+          "v": "(1/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " doily mode (v814 typed, no upgrade); wrong-pairing controls fire); "
+        },
+        {
+          "k": "c",
+          "v": "v845_cfin_normal_form.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "28/28"
+        },
+        {
+          "k": "t",
+          "v": ", SPEC v2 declared, "
+        },
+        {
+          "k": "t",
+          "v": "normal-form-assembled"
+        },
+        {
+          "k": "t",
+          "v": "; probe "
+        },
+        {
+          "k": "c",
+          "v": "finite_compiler_normal_form_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "C_{\\rm fin} = (V, \\hbar, q^*, \\sigma, \\iota)"
+        },
+        {
+          "k": "t",
+          "v": " READ OFF the Gaussian quotient — the unique selector-picked refinement (16 refinements, Arf "
+        },
+        {
+          "k": "m",
+          "v": "6+10"
+        },
+        {
+          "k": "t",
+          "v": "), the order-3 family cycle, the parity lift onto "
+        },
+        {
+          "k": "m",
+          "v": "C_{\\rm even}(5)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\beta \\equiv \\hbar"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "q_{\\rm wt} \\equiv q^*"
+        },
+        {
+          "k": "t",
+          "v": "; derived: "
+        },
+        {
+          "k": "m",
+          "v": "|Sp(4,2)| = 720"
+        },
+        {
+          "k": "t",
+          "v": " full census, "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Stab}(q^*) = 120"
+        },
+        {
+          "k": "t",
+          "v": " faithful "
+        },
+        {
+          "k": "m",
+          "v": "S_5"
+        },
+        {
+          "k": "t",
+          "v": ", orbits "
+        },
+        {
+          "k": "m",
+          "v": "[1,5,10]"
+        },
+        {
+          "k": "t",
+          "v": ", Pascal "
+        },
+        {
+          "k": "m",
+          "v": "(1,10,5) = (\\binom50, \\binom52, \\binom54)"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "m",
+          "v": "\\bar5"
+        },
+        {
+          "k": "t",
+          "v": " an OVOID of the doily, budget "
+        },
+        {
+          "k": "m",
+          "v": "240 = 16\\cdot15"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "248 = 16\\cdot15 + 8"
+        },
+        {
+          "k": "t",
+          "v": " against the actual census; the kill built in: the 128-spinor counting bound ("
+        },
+        {
+          "k": "m",
+          "v": "\\ge 7"
+        },
+        {
+          "k": "t",
+          "v": " of 15 classes always adjoint-side; saturated "
+        },
+        {
+          "k": "m",
+          "v": "8+7"
+        },
+        {
+          "k": "t",
+          "v": ", zero mixed) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the weight-level kill (8 pairs, never 1) — "
+        },
+        {
+          "k": "t",
+          "v": "rootclass-mixed"
+        },
+        {
+          "k": "t",
+          "v": " re-verified, NOT overturned; P2 narrowed to the v799 residual R1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " ([C]), not eliminated; controls fire); "
+        },
+        {
+          "k": "c",
+          "v": "v846_schur_spectral_mother.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "19 + 16"
+        },
+        {
+          "k": "t",
+          "v": " checks, zero fails, "
+        },
+        {
+          "k": "t",
+          "v": "schur-indefinite"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "spectral-tv-universal"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "relational_schur_gram_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "spectral_mother_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the Schur program closed as a typed structural negative — G1/G3/G4 green (manifest positivity; exact "
+        },
+        {
+          "k": "m",
+          "v": "\\mu\\log"
+        },
+        {
+          "k": "t",
+          "v": " routing, Epstein bookkeeping defect "
+        },
+        {
+          "k": "m",
+          "v": "0.73"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.83"
+        },
+        {
+          "k": "t",
+          "v": " vs TRUE 0; Selberg safety), the G2 form gate fails structurally (the P0 deviation IS diag(price) at "
+        },
+        {
+          "k": "m",
+          "v": "\\le 10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": "; price"
+        },
+        {
+          "k": "m",
+          "v": "/\\tau \\sim 3.1"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.5\\times10^4"
+        },
+        {
+          "k": "t",
+          "v": "; trace fails by the same object); the spectral mother built as typed ("
+        },
+        {
+          "k": "m",
+          "v": "J^2 = I"
+        },
+        {
+          "k": "t",
+          "v": " dev 0; "
+        },
+        {
+          "k": "m",
+          "v": "K"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "J"
+        },
+        {
+          "k": "t",
+          "v": "-odd Toeplitz compression rel 0; "
+        },
+        {
+          "k": "m",
+          "v": "U_dU_m = U_{dm}"
+        },
+        {
+          "k": "t",
+          "v": " exact at integer commensurability): symbol-grade gain 20–33"
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": ", Gram-grade best legal overhead "
+        },
+        {
+          "k": "m",
+          "v": "34"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "55"
+        },
+        {
+          "k": "t",
+          "v": " = "
+        },
+        {
+          "k": "m",
+          "v": "5.7\\times10^4"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.2\\times10^5 \\times \\tau"
+        },
+        {
+          "k": "t",
+          "v": " — THE TV PRICE IS GEOMETRY-INDEPENDENT); "
+        },
+        {
+          "k": "c",
+          "v": "v847_wedge_cellcone_transport.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "13 + 9"
+        },
+        {
+          "k": "t",
+          "v": " checks with the TWO frozen-honest FAILS S5.SCR "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " S5.C3 kept and pattern-gated, NOT refit; "
+        },
+        {
+          "k": "t",
+          "v": "wedge-partial"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "cone-broken"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "ray-edge-confirmed"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "relational_lagrange_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "cell_cone_transport_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the naive signed Lagrange no-go EXACT (forced weights; "
+        },
+        {
+          "k": "m",
+          "v": "P^-/\\det \\sim 2.0"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.2\\times10^4"
+        },
+        {
+          "k": "t",
+          "v": "; the arch block NEGATIVE definite, eigen "
+        },
+        {
+          "k": "m",
+          "v": "-2.285/-1.139"
+        },
+        {
+          "k": "t",
+          "v": "); the "
+        },
+        {
+          "k": "m",
+          "v": "C_2"
+        },
+        {
+          "k": "t",
+          "v": " register lift feasible on every anchor (LP resid "
+        },
+        {
+          "k": "m",
+          "v": "\\le 8.9\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "); level C fails (design "
+        },
+        {
+          "k": "m",
+          "v": "0.170/0.151"
+        },
+        {
+          "k": "t",
+          "v": ", held-out "
+        },
+        {
+          "k": "m",
+          "v": "0.153"
+        },
+        {
+          "k": "t",
+          "v": " vs floor "
+        },
+        {
+          "k": "m",
+          "v": "4.4\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": "; scramble "
+        },
+        {
+          "k": "m",
+          "v": "\\times7.5"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "\\times10"
+        },
+        {
+          "k": "t",
+          "v": " bar — typed, not excused); the completed cells telescope exactly ("
+        },
+        {
+          "k": "m",
+          "v": "3.4\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\Phi^{\\mathsf T}J\\Phi = cJ"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "2.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "; min "
+        },
+        {
+          "k": "m",
+          "v": "e_1 = 4.8546"
+        },
+        {
+          "k": "t",
+          "v": " reproduces the envelope); both groupings exit on 67/67 rungs at "
+        },
+        {
+          "k": "m",
+          "v": "n = 2"
+        },
+        {
+          "k": "t",
+          "v": " (first-exit median cell 1–2; endpoint back in-cone 67/67); ray cascade "
+        },
+        {
+          "k": "m",
+          "v": "r_{\\rm end}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "0.5700 \\to 0.8018"
+        },
+        {
+          "k": "t",
+          "v": " / angle "
+        },
+        {
+          "k": "m",
+          "v": "46.26^\\circ \\to 34.39^\\circ"
+        },
+        {
+          "k": "t",
+          "v": " (Kendall "
+        },
+        {
+          "k": "m",
+          "v": "\\pm1.000"
+        },
+        {
+          "k": "t",
+          "v": "); incomplete contrast 67/67; equal-weight and wrong-norm controls fire 14/14; the Epstein comb does NOT fire ("
+        },
+        {
+          "k": "m",
+          "v": "0/14"
+        },
+        {
+          "k": "t",
+          "v": ") — the inverted signature kept); "
+        },
+        {
+          "k": "c",
+          "v": "v848_extraction_chain.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "19/19"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "extraction-chain-complete"
+        },
+        {
+          "k": "t",
+          "v": "; probe "
+        },
+        {
+          "k": "c",
+          "v": "continuum_extraction_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", run-1"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "run-2 declared calibration (P2.0 exact-class certificate, v762 D2.0 precedent): the "
+        },
+        {
+          "k": "m",
+          "v": "(D,X)"
+        },
+        {
+          "k": "t",
+          "v": " ladder "
+        },
+        {
+          "k": "m",
+          "v": "j = 4..11"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "D_j = 2^{-j}"
+        },
+        {
+          "k": "t",
+          "v": ", 68–8704 lags, ka "
+        },
+        {
+          "k": "m",
+          "v": "= 28"
+        },
+        {
+          "k": "t",
+          "v": " pinned); the pure-box class EXACT at every level (max err "
+        },
+        {
+          "k": "m",
+          "v": "5.3\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "); identification rates "
+        },
+        {
+          "k": "m",
+          "v": "-1.58..{-1.84}"
+        },
+        {
+          "k": "t",
+          "v": " (median "
+        },
+        {
+          "k": "m",
+          "v": "-1.818"
+        },
+        {
+          "k": "t",
+          "v": ", dyadic prediction "
+        },
+        {
+          "k": "m",
+          "v": "-2"
+        },
+        {
+          "k": "t",
+          "v": "); ledger geometric (med3 "
+        },
+        {
+          "k": "m",
+          "v": "0.302"
+        },
+        {
+          "k": "t",
+          "v": ", law "
+        },
+        {
+          "k": "m",
+          "v": "-1.752"
+        },
+        {
+          "k": "t",
+          "v": "); X-direction EXACTLY stable (44 cutoff pairs at float zero); recovery constructive "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Cauchy (exact strong-"
+        },
+        {
+          "k": "m",
+          "v": "L^2"
+        },
+        {
+          "k": "t",
+          "v": " law in "
+        },
+        {
+          "k": "m",
+          "v": "\\Q"
+        },
+        {
+          "k": "t",
+          "v": "); F2/F3 band margins TYPED never gated; W1 regression wards ("
+        },
+        {
+          "k": "m",
+          "v": "5.2\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "2.1\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "8.0\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": "); controls fire (wrong-limit stall "
+        },
+        {
+          "k": "m",
+          "v": "1.6\\times10^6"
+        },
+        {
+          "k": "t",
+          "v": "; scrambled tower "
+        },
+        {
+          "k": "m",
+          "v": "5.5\\times10^5"
+        },
+        {
+          "k": "t",
+          "v": ")). Suite "
+        },
+        {
+          "k": "m",
+          "v": "836\\to841"
+        },
+        {
+          "k": "t",
+          "v": "; all five run standalone green with pattern gates encoding the frozen verdicts (incl. the two expected-FAIL signatures); all eight probes re-run identically at promotion (2026-08-07); promoted VERBATIM with no downscoping (spec/rule SHA-256 values reproduce byte-exactly)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The wall statement (the round's deliverable)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The three v5.4 architectures die on the SAME substance — the total-variation price (geometry-independent by the unitary mother), the frame-uniformity failure (the commutant wall transported) and the unrenormalized "
+        },
+        {
+          "k": "m",
+          "v": "n = 2"
+        },
+        {
+          "k": "t",
+          "v": " cell (the arithmetic IN the violations) are three coordinate presentations of the one finer-than-statistical datum the GUE-side rounds typed; the stop list extends (diagonal relational mothers; constant wedge laws; unrenormalized small-"
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": " cell transports). On the other side the extraction is COMPLETE: cofinal finite positivity (H) "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " Weil positivity "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " the target, theorem-grade modulo named citations (Weil 1952, Bombieri 2000, Suzuki arXiv:2606.09096, Iwaniec–Kowalski Thm 5.12), with the quantifier reduction — the arithmetic wall is EXACTLY hypothesis (H), equivalently the uniform demand of "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " restricted to the cofinal ladder, AND NOTHING ELSE. NO RH claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 5 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "MESSAGE.LADDER.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "NORMALFORM.CFIN.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.SCHUR.GRAM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEDGE.LAGRANGE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.EXTRACTION.CHAIN.01"
+        },
+        {
+          "k": "t",
+          "v": " [O]) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-30 closing note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " (the three-architecture decision; the extended stop list; the extraction separation) with its dependencies/evidence extended to "
+        },
+        {
+          "k": "c",
+          "v": "v846"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v848"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "922\\to927"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves (the compressions are normal forms; the architecture modules are typed route decisions; the extraction registration is OPEN [O] with hypothesis (H) the isolated wall)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ": the message-ladder and Doily–Pascal rank entries in the Gaussian code keybox "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the new "
+        },
+        {
+          "k": "m",
+          "v": "C_{\\rm fin}"
+        },
+        {
+          "k": "t",
+          "v": " normal-form keybox "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated addendum in the P2 reduction-state keybox ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v844}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v845}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The three-architecture decision, and the extraction chain complete” ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v846/v847/v848}"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the part-intro chain extended; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": five new audit cards "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the round-30 follow-up notes on the floor-contract prose; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.EXTRACTION.CHAIN.01"
+        },
+        {
+          "k": "t",
+          "v": " registration block, the finite-compiler compressions record, and the dated round-30 closing note on the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " block."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round thirty”; counters "
+        },
+        {
+          "k": "m",
+          "v": "836\\to841"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v848"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated (ScriptIndex, changelog.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "841"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v848"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The compressions ("
+        },
+        {
+          "k": "c",
+          "v": "v844"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v845"
+        },
+        {
+          "k": "t",
+          "v": ") are exact-arithmetic normal forms of existing corpus surfaces — compressions, not new claims (the "
+        },
+        {
+          "k": "m",
+          "v": "(1/3)^6"
+        },
+        {
+          "k": "t",
+          "v": " gap and the P2 residual stay typed, no upgrades); the architecture modules ("
+        },
+        {
+          "k": "c",
+          "v": "v846"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v847"
+        },
+        {
+          "k": "t",
+          "v": ") are typed route decisions under frozen preregistered protocols (exact wards [E]-grade; the two control FAILS preregistered-honest adjudications on record, bars NOT refit); the extraction module ("
+        },
+        {
+          "k": "c",
+          "v": "v848"
+        },
+        {
+          "k": "t",
+          "v": ") never evaluates hypothesis (H) — the implication is measured/cited, the classical legs carry named citations, and the wall stays OPEN [O]; NO marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-07",
     "dateLabel": "2026-08-07 · LXXII",
     "heading": [
       {

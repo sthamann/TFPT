@@ -6653,7 +6653,18 @@ tower gives scale not recursion, the excess is a growing
 cancellation (the wall self-similar at cell level), and the
 finite-table limit is kernel-checked in Lean~4
 (\veri{v843\_margin\_law\_excess\_lean.py},
-\texttt{TfptCarrier/ExcessSkeleton.lean}); still open.  No
+\texttt{TfptCarrier/ExcessSkeleton.lean}); still open.
+Round-30 follow-up (markers unchanged): the three candidate
+proof architectures are decided --- the relational Schur--Gram
+structurally (the forced Cauchy--Schwarz price,
+geometry-independent), the sign-register wedge at the uniformity
+wall, the completed-cell cone transport at the $n = 2$ cell
+(\veri{v846\_schur\_spectral\_mother.py},
+\veri{v847\_wedge\_cellcone\_transport.py}) --- and the continuum
+extraction is complete: the wall is exactly hypothesis (H),
+cofinal finite positivity
+(\veri{v848\_extraction\_chain.py},
+\texttt{PRIME.EXTRACTION.CHAIN.01}); still open.  No
 marker move, no RH claim.
 Machine-checked: \veri{v791\_positive\_descent.py}.
 (\textsc{measured}) (exact-rational positivity; unique PSD sector)
@@ -6757,7 +6768,13 @@ $\tau = e_1\, h^{-3/2}\, \tau_{\rm pnt}$ ($\min e_1 \ge 4.335$ on
 all $67$ rungs, both coordinate systems), the tower scale-only,
 the excess a growing cancellation, the finite-table limit
 kernel-checked in Lean
-(\veri{v843\_margin\_law\_excess\_lean.py}), still open.]}
+(\veri{v843\_margin\_law\_excess\_lean.py}), still open;
+round-30: the three architectures decided (Schur/spectral price
+geometry-independent, wedge uniformity, cone broken at $n = 2$)
+and the extraction chain complete --- the wall is exactly
+hypothesis (H)
+(\veri{v846\_schur\_spectral\_mother.py}--%
+\veri{v848\_extraction\_chain.py}), still open.]}
 Controls fire (conductor swap $=$ margin $-\ln2$ at
 $2.2\times10^{-16}$).  No marker move, no RH claim.
 Machine-checked: \veri{v794\_cp\_extension\_gate.py}.
@@ -7826,6 +7843,132 @@ Machine-checked: \veri{v843\_margin\_law\_excess\_lean.py}.
 (\textsc{measured}) (the law, the cells, the null) $+$ \mE\ (the
 envelope ward; the kernel-checked mirror statements) $+$ \mO\
 (the uniform bound)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The message ladder and the
+Doily--Pascal rank theorem (\texttt{MESSAGE.LADDER.01} $+$
+\texttt{DOILY.PASCAL.RANK.01}).}
+One module from two probes ($23/23 + 16/16$, verdicts
+\textsc{message-ladder-exact} and
+\textsc{doily-pascal-rank-exact}, ${\sim}2$ s, exact
+integer/Fraction/sympy).  The budget lines are one formula:
+$M_n = 15\cdot2^n = (15, 30, 60, 120, 240)$ with one named
+structure per rung --- $h(E_8) = 30$ derived from the rebuilt
+root system itself (highest root height $29$, marks
+$\{2,2,3,3,4,4,5,6\}$), $60$ Gaussian lines, $120 = \lvert
+R^+\rvert$, the $240 = 15\times16$ census, coda $248 = 15\cdot16
++ 8$; wrong anchor/multiplier controls fire.  And the doily
+incidence is a rank theorem: $NN^{\mathsf T} = B + 2I$ entrywise
+under the $K_6$ duad model, $\operatorname{charpoly} =
+(x-9)(x-4)^9x^5$ exact --- rank $10 = A_\Lambda$, kernel
+$5 = \gcar$ (spanned by the six ovoid indicators), multiplicity
+$9 = \Nfam^2$, recovery $2/3 = (\Nfam-1)/\Nfam$, six-step
+$(2/3)^6 = 64/729$ exact; no $(1/3)^6$ doily mode (typed, no
+upgrade); wrong-pairing controls fire.  No marker move.
+Machine-checked: \veri{v844\_message\_doily\_rank.py}.
+\mE\ (exact identities against the rebuilt objects)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The finite compiler normal form
+(\texttt{NORMALFORM.CFIN.01}).}
+One probe ($28/28$, SPEC v2 declared, verdict
+\textsc{normal-form-assembled}, ${\sim}4$ s, exact
+integer/sympy).  $C_{\rm fin} = (V, \hbar, q^{*}, \sigma, \iota)$
+read off the Gaussian quotient as \emph{one} object: the unique
+selector-picked refinement ($16$ refinements, Arf $6 + 10$), the
+order-$3$ family cycle, the parity lift onto $C_{\rm even}(5)$;
+derived counting $16 = 1 + 5 + 10$ with $\lvert Sp(4,2)\rvert =
+720$ and $\mathrm{Stab}(q^{*}) = 120$ faithful $S_5$, the Pascal
+reading $(1, 10, 5)$, the ovoid projective reading, the budget
+$240 = 16\cdot15$ / $248 = 16\cdot15 + 8$ against the actual
+census.  The kill is built in: the $128$-spinor counting bound
+($\ge 7$ of $15$ classes always adjoint-side; saturated $8 + 7$,
+zero mixed classes) and the weight-level kill re-verify
+\textsc{rootclass-mixed} --- not overturned.  P2 narrowed to the
+\texttt{v799} residual R1$'$ (\mC), not eliminated.  Controls
+fire.  No marker move.
+Machine-checked: \veri{v845\_cfin\_normal\_form.py}.
+\mE\ (the assembled object and its counting corollaries) $+$
+\mC\ (the typed P2 residual, per \texttt{v799})
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Schur program closure
+(\texttt{PRIME.SCHUR.GRAM.01} $+$
+\texttt{PRIME.SPECTRAL.MOTHER.01}).}
+One module from two probes ($19 + 16$ checks, zero fails,
+verdicts \textsc{schur-indefinite} and
+\textsc{spectral-tv-universal}, ${\sim}1$ s).  The manifestly
+positive relational Gram exists --- manifest positivity, exact
+$\mu\log$ descent routing with the $h = 2$ Epstein refusal at
+construction grade, Selberg safety all green --- but the corner
+identity fails in trace \emph{and} form by exactly the forced
+Cauchy--Schwarz diagonal price
+(price$/\tau \sim 3.1\times10^4$--$4.5\times10^4$ at the
+density-anchored floor; the untouched-projection deviation
+\emph{is} the price).  The typed missing input was then built:
+the unitary spectral mother ($J^2 = I$, the deployed form the
+$J$-odd Toeplitz compression at relative deviation $0$, the
+Euler product the exact operator algebra $U_dU_m = U_{dm}$)
+gains $20$--$33\times$ at symbol grade but never at Gram grade
+--- the TV price is geometry-independent (the modulus bound);
+harvesting interference is Fej\'er--Riesz of the total symbol =
+the positivity itself.  No marker move, no RH claim.
+Machine-checked: \veri{v846\_schur\_spectral\_mother.py}.
+(\textsc{measured}) (the price, the gains) $+$ \mE\ (the exact
+routing wards; the operator-algebra identities) $+$ \mO\ (the
+wall unchanged)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The wedge and the cell cone
+(\texttt{PRIME.WEDGE.LAGRANGE.01} $+$
+\texttt{PRIME.CELLCONE.TRANSPORT.01}).}
+One module from two probes ($13 + 9$ checks with the \emph{two}
+frozen-honest FAILS kept and pattern-gated, not refit; verdicts
+\textsc{wedge-partial} and \textsc{cone-broken} $+$
+\textsc{ray-edge-confirmed}, ${\sim}6$ s).  The sign-register
+lift works as exact algebra --- nonnegative wedge weights exist
+on every anchor (LP residual $\le 8.9\times10^{-16}$) where the
+naive signed Lagrange provably cannot (forced weights,
+symbolic) --- but the frame-uniform law fails at ${\sim}15\%$
+against the $4.4\times10^{-5}$ floor need: the commutant
+uniformity wall transported (the scramble miss $\times7.5$ vs
+$\times10$, typed).  The completed cells telescope exactly
+($3.4\times10^{-15}$; $\Phi^{\mathsf T}J\Phi = cJ$ at
+$2.2\times10^{-16}$), yet both groupings exit the Lorentz cone
+on $67/67$ rungs at the $n = 2$ cell (endpoint back in-cone $=$
+the certified $\tau > 0$); the ray cascade to $(5,-3,4)$ is
+confirmed (Kendall $\pm1.000$); the inverted Epstein signature
+is kept as its frozen FAIL: the fake stays in-cone --- the
+arithmetic sits \emph{in} the violations.  No marker move, no RH
+claim.
+Machine-checked: \veri{v847\_wedge\_cellcone\_transport.py}.
+(\textsc{measured}) (the law failure, the cone census, the ray
+cascade) $+$ \mE\ (the exact no-go lemma; the telescoping and
+congruence wards) $+$ \mO\ (the wall unchanged)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The continuum extraction chain
+(\texttt{PRIME.EXTRACTION.CHAIN.01}).}
+One probe ($19/19$, verdict
+\textsc{extraction-chain-complete}, ${\sim}1$ s; hypothesis (H)
+never evaluated).  The $(D, X)$-tower extraction with measured
+rates: the pure-box class carries the \emph{exact} Weil value at
+every finite level (maximal error $5.3\times10^{-14}$);
+identification ${\sim}4^{-j}$ (median $-1.818$); geometric
+ledger ($0.302$); the $X$-direction exactly stable ($44$ cutoff
+pairs at float zero); both controls fire (stall ratio
+$1.6\times10^6$; ledger inflation $5.5\times10^5$).  The
+implication chain \emph{cofinal finite positivity} $\Rightarrow$
+\emph{Weil positivity} $\Rightarrow$ (via Weil's criterion)
+\emph{the target} is theorem-grade modulo named citations, with
+the quantifier reduction: no Mosco compactness, no uniform
+$\delta$, no diagonal argument --- per-element convergence is
+the only analytic input.  The wall is exactly hypothesis (H),
+and nothing else.  No marker move, no RH claim.
+Machine-checked: \veri{v848\_extraction\_chain.py}.
+(\textsc{measured}) (rates, ledger, exact box class) $+$ \mE\
+(the exact-$\Q$ machinery wards) $+$ \mO\ (hypothesis (H) ---
+the registered contract)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification

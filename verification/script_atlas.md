@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`836` registered scripts · `922` ledger claims · `10` clusters.
+`841` registered scripts · `927` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (356 scripts)
+### `core` — Compiler core & the E₈ glue  (361 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -718,11 +718,21 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v840_gue_ablation_loopgain** [-] `PRIME.FLOOR.GUEABLATION.01` — die Selbsterhaltung der Wand IST die Sättigung — **SATURATION-STRUCTURAL + LOOP-SHORT (10/10 + 8/8): TEIL A (Falsifikationsversuch auf v839): ALLE 6 quell-nativen Guinand-zulässige
   - deps: v831_prime_alias_second_moment, v839_paircorr_bridge_saturation, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment.py;v843_margin_law_excess_lean, v563, v684, v823, v829, v830 · cited: 3 e8 audit bootstrap, research contracts
 - **v841_relation_carrier_ladder** [O/X] `PRIME.RELATION.MULT.01` — die Ecken-Route ÖFFNET WIEDER mit der richtigen Input-Klasse (die multiplikativen Relationen zwischen Ereignissen) — **RELATION-CARRIER-EXISTS + EXCESS-NONNEGATIVE (18/18 + 13/13):
-  - deps: v831_prime_alias_second_moment, v837_corner_closure_quantifier, v838_corner_expectation_position, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean, v563, v738 · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v831_prime_alias_second_moment, v837_corner_closure_quantifier, v838_corner_expectation_position, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v563, v738 · cited: 3 e8 audit bootstrap, research contracts
 - **v842_excess_certified_skeleton** [-] `(no ledger claim)` — strikt positive Intervall-Einschließungen von τ_X auf ALLEN 67 erreichbaren Sprossen, der zertifizierte Diskriminator, und das Skalengesetz, das die Wand als den unendlichen Quanto
   - cited: 3 e8 audit bootstrap, research contracts
 - **v843_margin_law_excess_lean** [-] `PRIME.MARGIN.LAW.01` — τ = e1(α)·h^(−3/2)·τ_pnt(α) mit der Hüllkurven-Konstante EXAKT reproduziert über zwei unabhängige Koordinatensysteme, und die logische Geographie der Wand kernel-geprüft — **MARGIN
-  - deps: v842_excess_certified_skeleton.py;v843_margin_law_excess_lean, v841_relation_carrier_ladder, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment.py;v843_margin_law_excess_lean, v831_prime_alias_second_moment, FORM.PRIME.EXCESS.SKELETON.01, v563, v818, v829 · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v841_relation_carrier_ladder, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment.py;v843_margin_law_excess_lean, v831_prime_alias_second_moment, FORM.PRIME.EXCESS.SKELETON.01, v563, v818, v829 · cited: 3 e8 audit bootstrap, research contracts
+- **v844_message_doily_rank** [E] `MESSAGE.LADDER.01` — zwei exakte Korpus-Kompressionen, EIN Modul aus zwei Probes — **MESSAGE-LADDER-EXACT + DOILY-PASCAL-RANK-EXACT (23/23 + 16/16): TEIL A: M_n = 15·Δp_n = 15·2^n gegen die TATSÄCHLICH
+  - deps: v832, v833, v774, v814, v330, v486, v327, v775 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v845_cfin_normal_form** [E/C/X] `NORMALFORM.CFIN.01` — **NORMAL-FORM-ASSEMBLED (28/28, SPEC v2): V = L/(1+i)L (Zensus 240 = 15×16, Nullklasse LEER); ħ = die Bit-Form (GEFUNDENE Familien/Anker-Basis (F1,F2,F3,A) mit Gram J − I, auf alle
+  - deps: AX.P2.01, v752, v774, v775, v799, v776, v833, v844_message_doily_rank · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v846_schur_spectral_mother** [E] `PRIME.SCHUR.GRAM.01` — die manifest positive relationale Gram existiert, aber die Ecken-Identität scheitert in Spur UND Form an exakt dem erzwungenen Cauchy-Schwarz-Diagonalpreis, und der Preis ist GEOME
+  - deps: v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v843_margin_law_excess_lean, v841_relation_carrier_ladder, v831_prime_alias_second_moment, v563, v583, v841, v842 · cited: 3 e8 audit bootstrap, research contracts
+- **v847_wedge_cellcone_transport** [-] `PRIME.WEDGE.LAGRANGE.01` — **WEDGE-PARTIAL + CONE-BROKEN + RAY-EDGE-CONFIRMED (13 + 9 Checks; die ZWEI eingefrorenen ehrlichen FAILS S5.SCR und S5.C3 BEHALTEN und pattern-gated, NICHT nachjustiert): TEIL A (
+  - deps: v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v843_margin_law_excess_lean, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment.py;v843_margin_law_excess_lean, v563, v758, v773, v807, v818 · cited: 3 e8 audit bootstrap, research contracts
+- **v848_extraction_chain** [O] `PRIME.EXTRACTION.CHAIN.01` — die Implikationskette 'kofinale endliche Positivität (H) ⇒ Weil-Positivität ⇒ (Weil-Kriterium) das Ziel' ist gemessen/zitiert theorem-fähig mit QUANTOR-REDUKTION, und die arithmeti
+  - deps: v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment.py;v843_margin_law_excess_lean, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v841_relation_carrier_ladder, v563, v630, v643, v655, v716 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1737,17 +1747,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×131, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v755`×25, `v752`×24, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18, `REG.FREEZE.01`×18
+**Most-depended-on claims** (the load-bearing roots): `v563`×134, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18, `REG.FREEZE.01`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v832_anchor_flavor_checksum** — `ANCHOR.AFFINE.01`
-- **v833_gaussian_ramification_ladder** — `GAUSSIAN.RAMLADDER.01`
-- **v834_pg32_flag_completion** — `PG32.FLAGS.01`
-- **v835_corner_hjelmslev_tower** — `PRIME.CORNER.CHARACTER.01`
-- **v836_commutant_sos_closure** — `PRIME.COMMUTANT.SOS.01`
 - **v837_corner_closure_quantifier** — `PRIME.CORNER.OPENDOORS.01`
 - **v838_corner_expectation_position** — `PRIME.CORNER.EXPECTATION.01`
 - **v839_paircorr_bridge_saturation** — `PRIME.FLOOR.BRIDGEMAP.01`
@@ -1755,4 +1760,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v841_relation_carrier_ladder** — `PRIME.RELATION.MULT.01`
 - **v842_excess_certified_skeleton** — `(no claim)`
 - **v843_margin_law_excess_lean** — `PRIME.MARGIN.LAW.01`
+- **v844_message_doily_rank** — `MESSAGE.LADDER.01`
+- **v845_cfin_normal_form** — `NORMALFORM.CFIN.01`
+- **v846_schur_spectral_mother** — `PRIME.SCHUR.GRAM.01`
+- **v847_wedge_cellcone_transport** — `PRIME.WEDGE.LAGRANGE.01`
+- **v848_extraction_chain** — `PRIME.EXTRACTION.CHAIN.01`
 

@@ -768,6 +768,115 @@ self-extension admits $65536/65536$ equivariant sections
 prime read at $(\pi_2)$, $(\pi_2^2)$ and $\pi_2/\sqrt2$; a
 compression of \texttt{v689}/\texttt{v803}/\texttt{v783}/%
 \texttt{v798}/\texttt{v819}, no marker moves \mE.
+\emph{The message ladder (2026-08-07):} the budget lines of this
+paper are \emph{one formula}
+(\veri{v844\_message\_doily\_rank.py}, $23/23$,
+\textsc{message-ladder-exact}): $M_n = 15\cdot\Delta p_n =
+15\cdot2^n = (15, 30, 60, 120, 240)$ --- the anchor's binary
+shift (\texttt{v832}) times the $15$ nonzero classes of
+$V = L/(1{+}i)L$ (\texttt{v833}) --- with each rung realized by a
+\emph{named structure of the same rebuilt object}: $M_0 = 15$ the
+address space; $M_1 = 30 = h(E_8)$, derived here \emph{from the
+rebuilt root system} (exactly $8$ simple roots, connected
+simply-laced Cartan matrix with $\det = 1$ and the $E_8$ degree
+sequence, exact nonnegative integer simple-root coordinates, the
+highest root unique at height $29$ with marks
+$\{2,2,3,3,4,4,5,6\}$, $h = 1 + 29 = 30 = \lvert R\rvert/8$);
+$M_2 = 60$ the Gaussian root lines ($\mu_4$ orbits, $4$ per
+class); $M_3 = 120 = \lvert R^+\rvert$ (the sign pairs);
+$M_4 = 240 = \lvert R\rvert$ with the census $240 = 15\times16$
+(zero class empty); and the coda $248 = 15\cdot16 + 8 = M_4 +
+\mathrm{rank}$ against the actual census and the actual HNF rank.
+The structural doubling $60 \to 120 \to 240$ (each line exactly
+two sign pairs, each pair two roots) and the halving $60 \to 30 =
+\lvert\mu_4\rvert$ vs.\ rank are typed.  Controls fire: the wrong
+anchor $(1,2,2)$ gives $(45, 105, 225, 465)$ --- all four targets
+missed --- and the wrong multipliers $14$ (the weight-$4$
+codeword count) and $16$ (the class size) miss all four targets
+and break the coda \mE.
+\emph{The Doily--Pascal rank theorem (2026-08-07):} the doily
+incidence identity above sharpens into a \emph{rank theorem}
+(\veri{v844\_message\_doily\_rank.py}, $16/16$,
+\textsc{doily-pascal-rank-exact}): under the $K_6$ duad model of
+the $16$ quadratic refinements (Arf census $6 + 10$, rebuilt by
+brute force over $2^{16}$), the duad--syntheme incidence $N$ of
+the Cremona--Richmond doily carries $NN^{\mathsf T} = B + 2I$
+\emph{entrywise} (all $225$ cells) --- duad collinearity
+\emph{is} symplectic orthogonality, and the spectrum shift
+$7/2/{-2} \to 9/4/0$ identifies the ovoid $(-2)$-eigenspace of
+\texttt{v774} with the kernel: $\operatorname{charpoly}
+(NN^{\mathsf T}) = (x-9)(x-4)^9x^5$ exactly, so
+$\operatorname{rank} N = 10 = A_\Lambda = \binom{\gcar}{2}$ (the
+decuple sector), $\dim\ker N = 5 = \gcar$ (the five-slot
+carrier; the six ovoid indicators $3\cdot\mathbf 1_{O_q} - 1$
+\emph{span} it), multiplicity $9 = \Nfam^2$, top singular value
+$3 = \Nfam$ --- \emph{the P2 integers are the singular-value
+data of the Cremona--Richmond incidence}.  The recovery value:
+$\operatorname{sing}(N/3) = \{1,\, 2/3^{\times9},\,
+0^{\times5}\}$ exactly, $2/3 = (\Nfam - 1)/\Nfam$; the six-step
+exponentiation identity gives exactly $(2/3)^6 = 64/729$ as the
+deployed $\lambda_2$, and the typed gap is re-affirmed with no
+upgrade: $1/729$ is \emph{not} a root of the six-step charpoly
+--- the deployed $(1/3)^6$ stays on the clock side
+(\textsc{sixstep-clock-only}, cited).  Both wrong-pairing
+controls (circulant, frozen-seed LCG; same row sums $3$) fire
+with rank $13 \ne 10$ \mE.
+\end{keybox}
+
+\begin{keybox}[The finite compiler normal form $C_{\rm fin}=(V,\hbar,q^{*},\sigma,\iota)$ (2026-08-07) --- one object, the kill built in \mE\ (\veri{v845\_cfin\_normal\_form.py})]
+The four-bit symplectic compiler that this paper assembles
+piecewise --- quotient census, Arf refinements, selector, parity
+lift, $S_5$ geometry, Pascal counting --- is now \emph{one}
+machine-checked object, read off the Gaussian quotient and not
+postulated ($28/28$, \textsc{normal-form-assembled}, SPEC v2
+declared): $V = L/(1{+}i)L$ (census $240 = 15\times16$, zero
+class empty); $\hbar$ the descended symplectic form with a
+\emph{found} family/anchor basis $(F_1, F_2, F_3, A)$ of Gram
+$J - I$, equal to the bit form on all $256$ label pairs;
+$\sigma$ the descended order-$3$ deck ($\sigma^3 = \mathrm{id}$,
+symplectic, exactly three fixed nonzero classes
+$\{A, F_\Sigma, F_\Sigma{+}A\}$ and four free $3$-orbits --- the
+family cycle); $q^{*}$ the \emph{unique} selector-picked
+quadratic refinement (exactly $16$ refinements by brute force
+over $2^{16}$, Arf census $6 + 10$; $\sigma$-invariant: $4 \to
+q(A){=}1$: $2 \to q(F_\Sigma){=}0$: $1$; Arf type $1$,
+$\sigma$-preserved); $\iota$ the parity lift, bijective onto the
+even five-slot code $C_{\rm even}(5)$ with $\beta = \hbar$ on all
+$256$ cells, $q_{\rm wt} = q^{*}$, and $\sigma$ acting on the
+five carrier slots as the $3{+}2$ split --- message register and
+carrier register intertwined.  \emph{Derived from the one
+object:} $\lvert Sp(4,2)\rvert = 720$ by full census,
+$\mathrm{Stab}(q^{*}) = 120$ acting \emph{faithfully} as $S_5$ on
+the five, orbits $[1, 5, 10]$; $16 = 1 + 5 + 10$ and
+$15 = 5 + 10$; the Pascal reading (the $\iota$-weight census
+$(1, 10, 5) = (\binom50, \binom52, \binom54)$); the projective
+reading (the $\bar5$ is an \emph{ovoid} of the doily in
+$PG(3,2)$: it meets every isotropic line exactly once); and the
+budget against the actual lattice objects: $240 = 16\cdot15$,
+$60$ lines $= 4\cdot15$, $30 = 2\cdot15 = h(E_8)$ (rung 1 of the
+message ladder), rank $8$, $248 = 16\cdot15 + 8$.  \emph{The kill
+built in} (mandatory negative, \texttt{v775} re-anchored): the
+exact counting bound --- every $D_5{\oplus}A_3 \subset E_8$ has
+$128$ spinor-side roots, so at most $\lfloor128/16\rfloor = 8$
+all-spinor classes and at least $7$ of the $15$ classes
+\emph{always} contain adjoint-side roots; the concrete
+doubled-model census \emph{saturates} both bounds ($8 + 7$, zero
+mixed classes --- the $J$-quotient respects the $D_8$ grading),
+and the weight-level kill at the canonical split shows each
+spinor-pure class restricting to $8$ distinct half-spinor weight
+pairs, never one --- the $15$ mailboxes are \emph{not} $15$
+matter multiplets; \textsc{rootclass-mixed} re-verified, not
+overturned.  \emph{What the normal form does not remove:} all
+$30$ placements are Type II $[8,4]$ codes (the \texttt{v799}
+echo), and $C_{\rm fin}$ does \emph{not} derive the three seam
+axioms, the OPE-linearity scope note, or the \texttt{v776}
+selection of one copy --- P2 ($\gcar = 5$, entering as the
+$\iota$ slot count) is \emph{narrowed} to the \texttt{v799}
+residual R1$'$ (\mC\ class), not eliminated.  Controls fire (the
+non-alternating dot form admits zero refinements; the trivial
+deck leaves four selector candidates; the wrong lift breaks
+$\beta = \hbar$).  A normal form, not a new claim; no marker
+moves \mE.
 \end{keybox}
 
 \begin{keybox}[The current reduction state of P2 (2026-07-22) --- text consolidation, markers unchanged]
@@ -806,6 +915,13 @@ of \vref{v499}. In one sentence: \textbf{the compiler's dimensionless inputs red
 transitivity $\iff\tau=i$) --- and $\pi$.} This is a reduction \emph{state}, not an abolition of
 the axiom: \texttt{AX.P2.01} remains the declared interface input, and its dynamical realisation
 (\texttt{QGEO.REALIZE.01}) stays \mC/\mO.
+\emph{[2026-08-07 addendum:} the finite normal form of the interface is now assembled as
+\emph{one} object --- $C_{\rm fin}=(V,\hbar,q^{*},\sigma,\iota)$, the keybox above
+(\veri{v845\_cfin\_normal\_form.py}) --- with the code-to-matter kill built in as a checked
+negative; its honesty section types exactly what the assembly does \emph{not} remove: P2's
+remaining content is the \texttt{v799} residual R1$'$ (the three seam axioms, the OPE-linearity
+scope, the \texttt{v776} uniqueness selection).  The assembly narrows; it does not eliminate.
+Markers unchanged.]
 \end{keybox}
 
 \begin{keybox}[Seed normal form, the factorial spine, and the degree-$2$ pattern \mE/\mC\ (\veri{v106\_review\_validation.py})]

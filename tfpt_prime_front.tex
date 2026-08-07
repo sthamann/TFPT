@@ -14271,6 +14271,164 @@ Registered \texttt{PRIME.MARGIN.LAW.01}; the Lean layer
 \texttt{FORM.PRIME.EXCESS.SKELETON.01}.
 \textbf{No statement about the Riemann Hypothesis is made.}
 
+\subsection{The three-architecture decision, and the extraction
+chain complete}\label{sec:architecture-extraction}
+
+Round 30 (2026-08-07) consolidates the v5.4 strategy campaign: the
+three candidate \emph{proof architectures} aimed at the wall of
+Section~\ref{sec:relation-skeleton} are decided --- all three
+honest negatives with typed positive cores --- and the
+\emph{continuum extraction} is separated from all arithmetic and
+closed as an implication chain
+(\veri{v846\_schur\_spectral\_mother.py}, $19 + 16$ checks, zero
+fails, verdicts \textsc{schur-indefinite} and
+\textsc{spectral-tv-universal};
+\veri{v847\_wedge\_cellcone\_transport.py}, $13 + 9$ checks with
+the two frozen-honest FAILS kept and pattern-gated, verdicts
+\textsc{wedge-partial} and \textsc{cone-broken} $+$
+\textsc{ray-edge-confirmed};
+\veri{v848\_extraction\_chain.py}, $19/19$, verdict
+\textsc{extraction-chain-complete}; suite $836\to841$ with the
+two compiler compressions of the same round,
+\veri{v844\_message\_doily\_rank.py} and
+\veri{v845\_cfin\_normal\_form.py}, cited in place in Paper~1).
+
+\emph{Architecture (i): the relational Schur--Gram.}  The target
+was positivity by construction --- a manifestly positive block
+operator whose GL1 Schur complement \emph{is} the deployed window
+form.  Three of its four gates pass: the construction is
+manifestly positive; the $\mu\log$ descent routes every
+prime-power mass \emph{exactly} (ward $10^{-16}$) and refuses the
+$h = 2$ Epstein comb at construction grade (bookkeeping defect
+$0.73$--$0.83$ against a true-comb defect of $0$ --- the
+Euler-product gate fires before any spectrum is computed); and
+the multiplicative sectors ($\zeta_{\Q(i)}$, the $\chi_4$
+$L$-sector) pass through undamaged.  What fails is the corner
+identity itself, and \emph{structurally}: every relational cell
+that carries a cross term deposits its Cauchy--Schwarz diagonal
+alongside, so the constructed block is \emph{forced} to
+$K + \mathrm{diag(price)}$ with the price the row total variation
+of the deposits --- measured at $3.1\times10^{4}$ to
+$4.5\times10^{4}$ times the margin even at the density-anchored
+fluctuation floor; the untouched-projection deviation \emph{is}
+the price ($0 \le 10^{-9}$), no predeclared projection removes
+it, and the trace fails by the same strictly positive diagonal
+object.  The typed missing input --- a non-diagonal spectral
+mother in which dilation acts unitarily and the mirror is an
+operator --- was then \emph{built}: on the deployed log-grid the
+mirror is the operator $J$ with $J^2 = I$ (the deployed window
+form is verified to be the $J$-odd compression of a plain
+Toeplitz form at relative deviation $0$), and the Euler product
+lives as the exact operator algebra $U_d U_m = U_{dm}$.  The
+interference is real: at \emph{symbol} grade the phase
+cancellation compresses the cross-term transport by measured
+gains of $20$--$33\times$.  But the \emph{Gram}-grade price does
+not move: every event-local manifest Gram pays the event-local
+total-variation floor (the modulus bound
+$a^2 + b^2 \ge 2\lvert ab\rvert$; best legal overhead
+$5.7\times10^{4}$ to $1.2\times10^{5}$ times the margin) --- the
+TV price is \emph{geometry-independent}.  The closure typing of
+the whole Schur program, in its cleanest form: harvesting
+cross-event interference inside a manifest Gram is the
+Fej\'er--Riesz factorization of the \emph{total} symbol, and the
+symbol's nonnegativity is the positivity being sought --- the
+manifest-positivity route closes on itself.
+
+\emph{Architecture (ii): the sign-register wedge.}  The exact
+part works: the naive signed Lagrange expansion is provably
+unrescuable (the wedge squares are linearly independent, so the
+pair weights are forced --- symbolic), with $P^-/\det \sim
+2$--$3\times10^{4}$ and the arch/pole block \emph{negative
+definite} in this compression; yet the $C_2$ sign register turns
+the M\"obius sign into difference geometry as \emph{exact
+algebra}, and nonnegative wedge weights \emph{exist} on every
+anchor (exact LP, residual $\le 8.9\times10^{-16}$) --- where the
+naive family provably cannot.  What fails is the \emph{law}: one
+frozen weight rule across frames reaches only ${\sim}15\%$
+relative (design $0.170/0.151$, held-out $0.153$) against a floor
+need of $4.4\times10^{-5}$ --- four and a half orders --- and
+even the per-frame class granularity cannot reach floor grade.
+This is the commutant no-go \emph{transported}: in both routes
+the wall is uniformity in the window, not the sign.  The one
+honest control miss is kept and pattern-gated (the scramble blows
+the residual $\times7.5$ against a frozen $\times10$ bar --- a
+law that itself reaches only $15\%$ has bounded structure to
+break; typed, not excused).
+
+\emph{Architecture (iii): the completed-cell cone transport.}
+The completed cells --- each prime-power atom kick paired with
+its own continuum increment under two predeclared grouping rules
+--- telescope \emph{exactly} from the density transversal to the
+certified margin object (worst relative deviation
+$3.4\times10^{-15}$), and the congruence calculus is exact:
+$\Phi^{\mathsf T} J \Phi = c\,J$ with $c$ the determinant ratio,
+at $2.2\times10^{-16}$.  The measurement: \emph{both} groupings
+exit the Lorentz cone on $67/67$ rungs --- at the $n = 2$ cell
+--- and return only at the horizon end (the endpoint back inside
+the cone on $67/67$ rungs \emph{is} the certified $\tau > 0$).
+The monotone ray cascade is confirmed: the locking ratio rises
+$0.5700 \to 0.8018$ (Kendall $+1.000$) and the angle to the
+compiler null ray $(5, -3, 4) = (g_{\rm car}, -N_{\rm fam},
+\lvert\mu_4\rvert)$ falls $46.26^\circ \to 34.39^\circ$ (Kendall
+$-1.000$) on both groupings.  And the control surprise is kept as
+its frozen FAIL: the mass-matched Epstein comb does \emph{not}
+break the transport ($0/14$) while the true von Mangoldt comb
+does --- the cone dips are the true comb's own small-$x$
+fluctuation $\psi(x) - x$, which the smoother Epstein
+representation numbers do not reproduce.  \emph{The arithmetic
+sits in the violations.}
+
+\emph{The extraction chain, complete.}  Work package E separates
+the continuum side from all RH semantics and closes it
+(\veri{v848\_extraction\_chain.py}): on the canonical cofinal
+$(D, X)$ ladder ($D_j = 2^{-j}$, $j = 4..11$, $68$--$8704$ lags,
+the full pinned prime-power table) every element of the canonical
+dense family identifies its independently computed Weil value
+$Q_W = \mathrm{POLE} + \mathrm{ARCH} + \mathrm{ATOM}$ (exact
+piecewise-cubic autocorrelations in $\Q$ with fifth-point
+certificates), with measured rates ${\sim}4^{-j}$ (median
+$-1.818$ per level against the dyadic prediction $-2$), a
+geometric ledger (median ratio $0.302$), and the $X$-direction
+\emph{exactly} stable once the window covers the element ($44$
+cutoff pairs at float zero).  The structural finding: the
+pure-box class carries the \emph{exact} Weil value at every
+finite level (maximal error $5.3\times10^{-14}$, the float floor)
+--- the sharpest dyadic-inheritance statement.  The deliverable
+is the implication theorem with a \emph{quantifier reduction}:
+under the named hypothesis (H) --- cofinal finite positivity of
+the tower forms, \emph{never evaluated here} --- every ladder
+value is nonnegative, and a pointwise-convergent sequence of
+nonnegative reals has a nonnegative limit; \emph{no} Mosco
+compactness, \emph{no} uniform $\delta > 0$, \emph{no} diagonal
+argument enters the implication --- per-element convergence is
+the only analytic input, and the three infinite-level ingredients
+of round 23 migrate to the operator-level selection programme,
+where they stay typed.  With the two classical legs cited (the
+density of the dyadic family and the $C^0$-continuity of the Weil
+functional at fixed support; Weil 1952, Bombieri 2000, Suzuki
+arXiv:2606.09096, Iwaniec--Kowalski Thm~5.12), the chain
+\emph{cofinal finite positivity} $\Rightarrow$ \emph{Weil
+positivity} $\Rightarrow$ (via Weil's criterion) \emph{the
+target} is theorem-grade modulo the named citations.  Both
+controls fire (the density-only wrong limit stalls at ratio
+$1.6\times10^{6}$; the scrambled tower inflates the ledger by
+$5.5\times10^{5}$).  Registered
+\texttt{PRIME.EXTRACTION.CHAIN.01} [O].
+
+\emph{The honest statement.}  All three architectures die on the
+same substance: the total-variation price, the frame-uniformity
+failure and the unrenormalized $n = 2$ cell are three coordinate
+presentations of the one finer-than-statistical datum that the
+GUE-side rounds typed --- and the stop list extends accordingly
+(diagonal relational mothers; constant wedge laws; unrenormalized
+small-$n$ cell transports).  On the other side the extraction is
+now \emph{complete}: the arithmetic wall is exactly hypothesis
+(H) --- cofinal finite positivity, equivalently the uniform lower
+bound on the excess margin of
+\texttt{PRIME.RELATION.SKELETON.01} restricted to the cofinal
+ladder --- \emph{and nothing else}.  No marker moves.
+\textbf{No statement about the Riemann Hypothesis is made.}
+
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
 The P4 main strike (\veri{v712\_rank3\_transverse\_deck.py}, $5/5$)
@@ -14347,7 +14505,18 @@ gives scale not recursion, the excess is a growing cancellation
 (the wall self-similar at cell level), and the finite-table limit
 is kernel-checked in Lean (\texttt{PRIME.MARGIN.LAW.01},
 \texttt{FORM.PRIME.EXCESS.SKELETON.01}) --- the quantifier now
-sits on the one scalar series $e_1 \ge 4.335$)
+sits on the one scalar series $e_1 \ge 4.335$; and round 30
+(Section~\ref{sec:architecture-extraction}) decides the three
+candidate proof architectures --- the relational Schur--Gram
+(structural: the forced Cauchy--Schwarz price, geometry-independent
+by the unitary spectral mother), the sign-register wedge (exact
+lift, uniformity failure), the completed-cell cone transport
+(broken at the $n = 2$ cell, the arithmetic in the violations) ---
+and completes the continuum extraction: the implication chain
+\emph{cofinal finite positivity} $\Rightarrow$ \emph{Weil
+positivity} $\Rightarrow$ \emph{the target} is theorem-grade
+modulo named citations (\texttt{PRIME.EXTRACTION.CHAIN.01} [O]),
+so the wall is exactly hypothesis (H) and nothing else)
 ---
 \texttt{PRIME.DETECTOR.WINDOW.01} (registered in round 25: the
 comb-native window detector, validated out-of-sample) ---
