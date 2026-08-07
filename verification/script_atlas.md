@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`841` registered scripts · `927` ledger claims · `10` clusters.
+`848` registered scripts · `936` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (361 scripts)
+### `core` — Compiler core & the E₈ glue  (368 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -733,6 +733,20 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v843_margin_law_excess_lean, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment.py;v843_margin_law_excess_lean, v563, v758, v773, v807, v818 · cited: 3 e8 audit bootstrap, research contracts
 - **v848_extraction_chain** [O] `PRIME.EXTRACTION.CHAIN.01` — die Implikationskette 'kofinale endliche Positivität (H) ⇒ Weil-Positivität ⇒ (Weil-Kriterium) das Ziel' ist gemessen/zitiert theorem-fähig mit QUANTOR-REDUKTION, und die arithmeti
   - deps: v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment.py;v843_margin_law_excess_lean, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v841_relation_carrier_ladder, v563, v630, v643, v655, v716 · cited: 3 e8 audit bootstrap, research contracts
+- **v849_cfin_unique_cofinal_lean** [E] `CFIN.UNIQUE.01` — jedes zulässige Compiler-Objekt ist isomorph zu C_fin; Aut(C_fin) ≅ C₆ (Ordnungen [1,2,3,3,6,6], treu in Sp(4,2), die S₅-Slot-Permutation durch den symplektischen Teil bestimmt); d
+  - deps: AX.P2.01, v845_cfin_normal_form, v844_message_doily_rank, v774, v833, v844, v845 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v850_completion_tax_flow** [E] `PRIME.PSD.COMPLETION.TAX.01` — die zwei No-Go-Schließungen auf KLASSEN-Ebene: JEDE positive 2-Sektor-Dilatation, die die Arithmetik durch den fixierten Kamm-Kopplungsblock routet, zahlt Diagonalsteuer tr P + tr 
+  - deps: v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v846_schur_spectral_mother, v843_margin_law_excess_lean, v831_prime_alias_second_moment, v563, v818, v843, v846 · cited: 3 e8 audit bootstrap, research contracts
+- **v851_cluster_kernel_field** [O] `PRIME.CELLCONE.KERNELFIELD.01, PRIME.CELLCONE.GRADEDKERNEL.01` — die Cluster-Entwicklung existiert und resummiert EXAKT (sympy-Teleskopierung auf dem Booleschen Verband; Möbius-Elimination: getrennte Paare tragen identisch Null; 2^16-Subset-Ward
+  - deps: v847_wedge_cellcone_transport, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v843_margin_law_excess_lean, v563, v818, v847, v851_cluster_kernel_field, v848_extraction_chain · cited: 3 e8 audit bootstrap, research contracts
+- **v852_arf_vacuum_ovoid** [E/O] `ARF.VACUUM.SYNDROME.01` — der Arf-Bit-Satz: a(t+U) = h̄(u,v) für ALLE 140 affinen Flats (positions-unabhängig; alle 4 Nebenklassen stimmen überein); die Zwei-Bit-Syndromtafel (s_vac, s_Arf) zerlegt die 140 
+  - deps: v845_cfin_normal_form, v844_message_doily_rank, v774, v819, v820, v821, v834, v844 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v853_bent_css_mangoldt** [E] `ARF.BENT.CSS.01` — q* ist BENT: Walsh-Eigenvektor ŝ_q = −4·s_q auf ALLEN 16 Charakteren (W² = 16I; perfekte Autokorrelation 16δ auf allen 256 Paaren); die Nullmenge D_q = {0} ∪ 5̄ ist eine (16,6,2)-H
+  - deps: v852_arf_vacuum_ovoid, v841_relation_carrier_ladder, v535, v774, v785, v800, v819, v820 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v854_relation_hodge_pfaffian** [-] `PRIME.RELATION.HODGE.01` — der Faktorisierungs-Komplex ist real und exakt (d₁d₂ = 0 mit max |Eintrag| = 0; b₀ = 1 zusammenhängend; b₁ = 16/21/22 getragen von den Gleich-Primzahl-Exponenten-Chords; b₂ = 158/4
+  - deps: v841_relation_carrier_ladder, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v853_bent_css_mangoldt, v563, v841, v853 · cited: 3 e8 audit bootstrap
+- **v855_invariance_atlas** [E] `PRIME.CRITERIA.ATLAS.01` — DER INVARIANZ-ATLAS: die Nachfrage EXAKT in Selberg-Hierarchie-Koordinaten umgeschrieben (D0 = dHead2 − dChain2, null Buchhaltungsverlust, 1e-9) und gegen on-range-VERIFIZIERTE ele
+  - deps: v831_prime_alias_second_moment, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v843_margin_law_excess_lean, v848_extraction_chain, v563, v818, v843, v848 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1747,22 +1761,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×134, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18, `REG.FREEZE.01`×18
+**Most-depended-on claims** (the load-bearing roots): `v563`×138, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v837_corner_closure_quantifier** — `PRIME.CORNER.OPENDOORS.01`
-- **v838_corner_expectation_position** — `PRIME.CORNER.EXPECTATION.01`
-- **v839_paircorr_bridge_saturation** — `PRIME.FLOOR.BRIDGEMAP.01`
-- **v840_gue_ablation_loopgain** — `PRIME.FLOOR.GUEABLATION.01`
-- **v841_relation_carrier_ladder** — `PRIME.RELATION.MULT.01`
-- **v842_excess_certified_skeleton** — `(no claim)`
-- **v843_margin_law_excess_lean** — `PRIME.MARGIN.LAW.01`
 - **v844_message_doily_rank** — `MESSAGE.LADDER.01`
 - **v845_cfin_normal_form** — `NORMALFORM.CFIN.01`
 - **v846_schur_spectral_mother** — `PRIME.SCHUR.GRAM.01`
 - **v847_wedge_cellcone_transport** — `PRIME.WEDGE.LAGRANGE.01`
 - **v848_extraction_chain** — `PRIME.EXTRACTION.CHAIN.01`
+- **v849_cfin_unique_cofinal_lean** — `CFIN.UNIQUE.01`
+- **v850_completion_tax_flow** — `PRIME.PSD.COMPLETION.TAX.01`
+- **v851_cluster_kernel_field** — `PRIME.CELLCONE.KERNELFIELD.01, PRIME.CELLCONE.GRADEDKERNEL.01`
+- **v852_arf_vacuum_ovoid** — `ARF.VACUUM.SYNDROME.01`
+- **v853_bent_css_mangoldt** — `ARF.BENT.CSS.01`
+- **v854_relation_hodge_pfaffian** — `PRIME.RELATION.HODGE.01`
+- **v855_invariance_atlas** — `PRIME.CRITERIA.ATLAS.01`
 

@@ -99,6 +99,7 @@ import TfptCarrier.Check32
 import TfptCarrier.PositiveC2Lift
 import TfptCarrier.SectorPositiveDescent
 import TfptCarrier.ExcessSkeleton
+import TfptCarrier.CofinalWeil
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck

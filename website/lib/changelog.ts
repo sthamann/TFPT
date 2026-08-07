@@ -43,6 +43,2859 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-07",
+    "dateLabel": "2026-08-07 · LXXIV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round thirty-one — the invariance atlas, the graded kernel, the code complex, and the minimal hypothesis kernel-checked: SEVEN modules ("
+      },
+      {
+        "k": "c",
+        "v": "v849"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v855"
+      },
+      {
+        "k": "t",
+        "v": ", from fifteen frozen probes plus one Lean module; suite "
+      },
+      {
+        "k": "m",
+        "v": "841\\to848"
+      },
+      {
+        "k": "t",
+        "v": ") — the consolidation of the 2026-08-07 evening harvest in three waves: (1) THE F-PLAN — the compiler object is UNIQUE (all "
+      },
+      {
+        "k": "m",
+        "v": "14400"
+      },
+      {
+        "k": "t",
+        "v": " admissible tuples ONE "
+      },
+      {
+        "k": "m",
+        "v": "Sp(4,2)\\times S_5"
+      },
+      {
+        "k": "t",
+        "v": " orbit, "
+      },
+      {
+        "k": "m",
+        "v": "\\Aut(C_{\\rm fin}) \\cong C_6"
+      },
+      {
+        "k": "t",
+        "v": ", unique up to NON-unique isomorphism) and the minimal H theorem is kernel-checked ("
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/CofinalWeil.lean"
+      },
+      {
+        "k": "t",
+        "v": ": the "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon/2"
+      },
+      {
+        "k": "t",
+        "v": " implication proven with NO diagonal argument, the strict hierarchy uniform "
+      },
+      {
+        "k": "m",
+        "v": "\\subsetneq"
+      },
+      {
+        "k": "t",
+        "v": " pointwise "
+      },
+      {
+        "k": "m",
+        "v": "\\subsetneq"
+      },
+      {
+        "k": "t",
+        "v": " cofinal — "
+      },
+      {
+        "k": "c",
+        "v": "UniformMarginBound"
+      },
+      {
+        "k": "t",
+        "v": " formally DEMOTED to an over-strong sufficient lemma; the load-bearing chain consumes EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "(H_{\\rm cof})"
+      },
+      {
+        "k": "t",
+        "v": "); the TAX THEOREM closes the positive-dilation completion class at CLASS level (tr"
+      },
+      {
+        "k": "m",
+        "v": "\\,P +"
+      },
+      {
+        "k": "t",
+        "v": " tr"
+      },
+      {
+        "k": "m",
+        "v": "\\,Q \\ge 2\\|R\\|_*"
+      },
+      {
+        "k": "t",
+        "v": " exact with zero-gap dual certificates, BASIS-INVARIANT — the v846 geometry-independence now a corollary; the exact optimum already "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 4057.6\\times\\tau"
+      },
+      {
+        "k": "t",
+        "v": " on every rung, diverging "
+      },
+      {
+        "k": "m",
+        "v": "\\sim h^{0.24}"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "h^{-3/2}"
+      },
+      {
+        "k": "t",
+        "v": "; the measured Schur designs only "
+      },
+      {
+        "k": "m",
+        "v": "13.7"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "20.4\\times"
+      },
+      {
+        "k": "t",
+        "v": " above it — optimality could not have saved them); the index route closes by measurement (the density endpoint NOT PSD, "
+      },
+      {
+        "k": "m",
+        "v": "n_- = 5..12"
+      },
+      {
+        "k": "t",
+        "v": " — premise corrected; all "
+      },
+      {
+        "k": "m",
+        "v": "634"
+      },
+      {
+        "k": "t",
+        "v": " crossings upward, endpoint-determined; the velocity test at ratio "
+      },
+      {
+        "k": "m",
+        "v": "1.00"
+      },
+      {
+        "k": "t",
+        "v": ": distance-to-crossing "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " metric margin "
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": " flow velocity); the corner cluster expansion is exact but its weights are POSITION-GEOMETRIC (route closed, two frozen-honest FAILS kept); the cone violations resolve into the GRADED KERNEL LAW: the strict census wanders ("
+      },
+      {
+        "k": "m",
+        "v": "P_0 \\sim X^{1.03}"
+      },
+      {
+        "k": "t",
+        "v": ", max "
+      },
+      {
+        "k": "m",
+        "v": "244333"
+      },
+      {
+        "k": "t",
+        "v": " vs cap "
+      },
+      {
+        "k": "m",
+        "v": "100"
+      },
+      {
+        "k": "t",
+        "v": ") but the depth-"
+      },
+      {
+        "k": "m",
+        "v": "10^{-2}"
+      },
+      {
+        "k": "t",
+        "v": " G1 kernel is "
+      },
+      {
+        "k": "m",
+        "v": "n \\le 73"
+      },
+      {
+        "k": "t",
+        "v": " on ALL 67 rungs and the skin depth obeys "
+      },
+      {
+        "k": "m",
+        "v": "D(X) = 0.754\\,X^{-0.548}"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "R^2"
+      },
+      {
+        "k": "t",
+        "v": " 0.99) — vanishing-depth skin, not kernel growth ("
+      },
+      {
+        "k": "c",
+        "v": "PRIME.CELLCONE.GRADEDKERNEL.01"
+      },
+      {
+        "k": "t",
+        "v": " [O] registered; the tube field transports clean "
+      },
+      {
+        "k": "m",
+        "v": "0/355199"
+      },
+      {
+        "k": "t",
+        "v": " but is self-calibrating, four must-break controls kept as FAILS); (2) THE CODE COMPLEX — the Arf-vacuum syndrome theorem ("
+      },
+      {
+        "k": "m",
+        "v": "a(t{+}U) = \\hbar(u,v)"
+      },
+      {
+        "k": "t",
+        "v": " on all 140 flats; the two-bit table "
+      },
+      {
+        "k": "m",
+        "v": "15/20/45/60"
+      },
+      {
+        "k": "t",
+        "v": "; the LOCAL Hecke theorem "
+      },
+      {
+        "k": "m",
+        "v": "12/16 \\to 28/{-4}"
+      },
+      {
+        "k": "t",
+        "v": " at all 15 points; the code pencil "
+      },
+      {
+        "k": "m",
+        "v": "[15,11,3] \\supset \\{[15,10,4], 2{\\times}[15,10,3]\\} \\supset [15,9,4]"
+      },
+      {
+        "k": "t",
+        "v": " with the canonicity lemma; the vacuum bit "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the RM"
+      },
+      {
+        "k": "m",
+        "v": "(2,4)"
+      },
+      {
+        "k": "t",
+        "v": " parity bit), the ovoid decoder (SNF"
+      },
+      {
+        "k": "m",
+        "v": "(N) = \\mathrm{diag}(1^{10},0^5)"
+      },
+      {
+        "k": "t",
+        "v": " torsion-free; "
+      },
+      {
+        "k": "m",
+        "v": "N^+ = N^{\\mathsf T}/4 - J/36"
+      },
+      {
+        "k": "t",
+        "v": " exact; "
+      },
+      {
+        "k": "m",
+        "v": "P_5 = I/2 - B/4 + J/12"
+      },
+      {
+        "k": "t",
+        "v": "; ker "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "S_6"
+      },
+      {
+        "k": "t",
+        "v": " standard rep "
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": "; three rings: "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{R}"
+      },
+      {
+        "k": "t",
+        "v": " ovoid span "
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\Z"
+      },
+      {
+        "k": "t",
+        "v": " torsion-free "
+      },
+      {
+        "k": "m",
+        "v": "/"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{F}_2"
+      },
+      {
+        "k": "t",
+        "v": " code "
+      },
+      {
+        "k": "m",
+        "v": "A_q = [15,5,6]"
+      },
+      {
+        "k": "t",
+        "v": "), the bent CSS pair ("
+      },
+      {
+        "k": "m",
+        "v": "\\hat s_q = -4 s_q"
+      },
+      {
+        "k": "t",
+        "v": " on all 16; the "
+      },
+      {
+        "k": "m",
+        "v": "(16,6,2)"
+      },
+      {
+        "k": "t",
+        "v": " difference set; "
+      },
+      {
+        "k": "m",
+        "v": "[[15,5,3]] \\to [[16,4,4]]"
+      },
+      {
+        "k": "t",
+        "v": " with the vacuum transformation typed; THE "
+      },
+      {
+        "k": "m",
+        "v": "-4"
+      },
+      {
+        "k": "t",
+        "v": " TRIPLE POINT: Hecke "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " Gauss "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " Walsh "
+      },
+      {
+        "k": "m",
+        "v": "= a_3"
+      },
+      {
+        "k": "t",
+        "v": " as ONE machine-checked integer; the 16 bent translates the MUB partner of the v800 rays, no upgrade), and the von Mangoldt commutator theorem ("
+      },
+      {
+        "k": "m",
+        "v": "\\mathcal{L} = -M[D,Z] = -[D,\\log Z] = T(\\Lambda)"
+      },
+      {
+        "k": "t",
+        "v": " EXACT three ways; "
+      },
+      {
+        "k": "m",
+        "v": "\\log Z"
+      },
+      {
+        "k": "t",
+        "v": " RATIONAL, BCH truncates; the four-comb discipline at operator level with the Epstein leak "
+      },
+      {
+        "k": "m",
+        "v": "[6,14,21,\\dots]"
+      },
+      {
+        "k": "t",
+        "v": " exact and repaired by "
+      },
+      {
+        "k": "m",
+        "v": "a_A + a_B = 1 * \\chi_{-20}"
+      },
+      {
+        "k": "t",
+        "v": "; the deployed carrier IS the first row — typed honestly as classical incidence algebra); the factorization complex (multiplicativity IS flatness at machine zero; Epstein curvature localized at class-group products with the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{F}_2"
+      },
+      {
+        "k": "t",
+        "v": " Arf-lift obstruction PROVEN; gate 4 fails typed — the form is "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": "-chain-supported; the Pfaffian has no anchor-independent normalizer); (3) THE STRATEGIC ATTACKS — THE INVARIANCE ATLAS: the demand rewritten EXACTLY in Selberg-hierarchy coordinates and audited against on-range-verified elementary constants (the sieve reaches the "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha \\in 1..2"
+      },
+      {
+        "k": "t",
+        "v": " band in SCOPE but ZERO coverage in GRADE, best factor "
+      },
+      {
+        "k": "m",
+        "v": "205\\times"
+      },
+      {
+        "k": "t",
+        "v": "; the demand at "
+      },
+      {
+        "k": "m",
+        "v": "0.99"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "1.00\\,\\tau_{\\rm pnt}"
+      },
+      {
+        "k": "t",
+        "v": ", the factor-2 gate unclosable at truth — INPUT-CLASS-INVARIANT; the named sieve object "
+      },
+      {
+        "k": "m",
+        "v": "d\\mathrm{Chain}_2"
+      },
+      {
+        "k": "t",
+        "v": "); the criteria align (the Li coefficients "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_n > 0"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "n = 20"
+      },
+      {
+        "k": "t",
+        "v": " computed with NO zeros; "
+      },
+      {
+        "k": "m",
+        "v": "d_N^2"
+      },
+      {
+        "k": "t",
+        "v": " exact to "
+      },
+      {
+        "k": "m",
+        "v": "N = 64"
+      },
+      {
+        "k": "t",
+        "v": "; BD-constant "
+      },
+      {
+        "k": "m",
+        "v": "= 2\\lambda_1"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "4.9\\times10^{-17}"
+      },
+      {
+        "k": "t",
+        "v": "; the NB span IS the spectral-mother geometry term by term; the Li transfer fails by CONE GEOMETRY) — no coordinate system holds hidden supply; the minimizer census (no frozen closed-form limit; the internal direction exists at "
+      },
+      {
+        "k": "m",
+        "v": "0.0217"
+      },
+      {
+        "k": "t",
+        "v": " rad and IS the comb block's soft direction at "
+      },
+      {
+        "k": "m",
+        "v": "0.0056"
+      },
+      {
+        "k": "t",
+        "v": " rad; the drift real, no identification claimed, "
+      },
+      {
+        "k": "m",
+        "v": "-4/\\pi"
+      },
+      {
+        "k": "t",
+        "v": " a coincidence) — THE WALL IS INVARIANT ACROSS COMPRESSIONS, GEOMETRIES, CRITERIA AND INPUT CLASSES; the one object in four languages: "
+      },
+      {
+        "k": "m",
+        "v": "e_1"
+      },
+      {
+        "k": "t",
+        "v": " bound "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " form-factor band "
+      },
+      {
+        "k": "m",
+        "v": "= d\\mathrm{Chain}_2 ="
+      },
+      {
+        "k": "t",
+        "v": " comb-soft direction; NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (7)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v849_cfin_unique_cofinal_lean.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "22/22"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "cfin-unique"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "+4"
+        },
+        {
+          "k": "t",
+          "v": " Lean-mirror checks; probe "
+        },
+        {
+          "k": "c",
+          "v": "cfin_uniqueness_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the WLOG ladder exact (28 alternating forms one "
+        },
+        {
+          "k": "m",
+          "v": "GL(4,2)"
+        },
+        {
+          "k": "t",
+          "v": " orbit; "
+        },
+        {
+          "k": "m",
+          "v": "Sp(4,2)"
+        },
+        {
+          "k": "t",
+          "v": " transitive on the 6 Arf-1 refinements; 20 admissible "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " per refinement, one orbit; 120 admissible equivariant "
+        },
+        {
+          "k": "m",
+          "v": "\\iota"
+        },
+        {
+          "k": "t",
+          "v": ", one orbit); the census "
+        },
+        {
+          "k": "m",
+          "v": "14400"
+        },
+        {
+          "k": "t",
+          "v": ", ONE orbit (orbit–stabilizer "
+        },
+        {
+          "k": "m",
+          "v": "14400 \\times 6 = 86400"
+        },
+        {
+          "k": "t",
+          "v": " exact); "
+        },
+        {
+          "k": "m",
+          "v": "\\Aut(C_{\\rm fin}) \\cong C_6"
+        },
+        {
+          "k": "t",
+          "v": " (orders "
+        },
+        {
+          "k": "m",
+          "v": "[1,2,3,3,6,6]"
+        },
+        {
+          "k": "t",
+          "v": ", faithful into "
+        },
+        {
+          "k": "m",
+          "v": "Sp(4,2)"
+        },
+        {
+          "k": "t",
+          "v": ", slot permutation determined); the Gaussian diagram typed (18-element centralizer torsor; the strict terminal reading FAILS honestly); controls fire (dot form 0 refinements; wrong Arf class: empty "
+        },
+        {
+          "k": "m",
+          "v": "\\iota"
+        },
+        {
+          "k": "t",
+          "v": " set; no-"
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": ": canonicity dies "
+        },
+        {
+          "k": "m",
+          "v": "16 \\to 8 \\to 4 \\ne 1"
+        },
+        {
+          "k": "t",
+          "v": ")); "
+        },
+        {
+          "k": "c",
+          "v": "v850_completion_tax_flow.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "15 + 11"
+        },
+        {
+          "k": "t",
+          "v": ", zero fails, "
+        },
+        {
+          "k": "t",
+          "v": "tax-gap"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "flow-crossings"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "psd_completion_tax_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "spectral_flow_pivot_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the nuclear-norm identity with zero-duality-gap certificate pairs on every anchor ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min} \\ge -8.9\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\|W\\|_{\\rm op} = 1.000000000000"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\langle W,R\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " rel "
+        },
+        {
+          "k": "m",
+          "v": "\\le 1.6\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "; symbolic "
+        },
+        {
+          "k": "m",
+          "v": "2\\times2"
+        },
+        {
+          "k": "t",
+          "v": " at 50 dps, gap "
+        },
+        {
+          "k": "m",
+          "v": "2.7\\times10^{-51}"
+        },
+        {
+          "k": "t",
+          "v": "), basis-invariant ("
+        },
+        {
+          "k": "m",
+          "v": "\\le 1.1\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "); tax"
+        },
+        {
+          "k": "m",
+          "v": "/\\tau \\ge 4057.6"
+        },
+        {
+          "k": "t",
+          "v": " on all 67 rungs (max "
+        },
+        {
+          "k": "m",
+          "v": "7.5\\times10^5"
+        },
+        {
+          "k": "t",
+          "v": ", slopes "
+        },
+        {
+          "k": "m",
+          "v": "1.99/1.86/0.46"
+        },
+        {
+          "k": "t",
+          "v": "); scramble/Epstein fingerprints move the norm ("
+        },
+        {
+          "k": "m",
+          "v": "0.54"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.96"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "0.12"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.22"
+        },
+        {
+          "k": "t",
+          "v": "); the flow: 634 upward crossings, SF "
+        },
+        {
+          "k": "m",
+          "v": "= n_-(0) - n_-(1)"
+        },
+        {
+          "k": "t",
+          "v": " verified "
+        },
+        {
+          "k": "m",
+          "v": "67/67"
+        },
+        {
+          "k": "t",
+          "v": ", last crossing hugs the deployed point (median gap "
+        },
+        {
+          "k": "m",
+          "v": "1.6\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": ", slope "
+        },
+        {
+          "k": "m",
+          "v": "-2.11"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "\\tau"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "-1.65"
+        },
+        {
+          "k": "t",
+          "v": "), velocity ratio "
+        },
+        {
+          "k": "m",
+          "v": "1.00"
+        },
+        {
+          "k": "t",
+          "v": " (IQR "
+        },
+        {
+          "k": "m",
+          "v": "0.99..1.00"
+        },
+        {
+          "k": "t",
+          "v": "); Jacobi pivot certification eigenproblem-free; scramble/Epstein/density controls typed); "
+        },
+        {
+          "k": "c",
+          "v": "v851_cluster_kernel_field.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "15 + 10 + 7"
+        },
+        {
+          "k": "t",
+          "v": " with the SIX frozen-honest FAILS S3.2/S4.1/S2.C1/S2.C2/S4.C1/S4.C2 kept and pattern-gated, NOT refit; "
+        },
+        {
+          "k": "t",
+          "v": "clusters-diffuse"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "both-partial"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "kernel-graded"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "multiplicative_cluster_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "cone_kernel_field_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "graded_kernel_field_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " over the read-only "
+        },
+        {
+          "k": "c",
+          "v": "cell_cone_transport_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " parent: the expansion exact (sympy telescoping; Möbius elimination; "
+        },
+        {
+          "k": "m",
+          "v": "2^{16}"
+        },
+        {
+          "k": "t",
+          "v": "-subset ward "
+        },
+        {
+          "k": "m",
+          "v": "0.0"
+        },
+        {
+          "k": "t",
+          "v": "; weights "
+        },
+        {
+          "k": "m",
+          "v": "= -\\mathrm{tr}(B^{-1}E_iB^{-1}E_j)"
+        },
+        {
+          "k": "t",
+          "v": ") but "
+        },
+        {
+          "k": "m",
+          "v": "E_2 = 0.883"
+        },
+        {
+          "k": "t",
+          "v": " vs bar "
+        },
+        {
+          "k": "m",
+          "v": "3.0"
+        },
+        {
+          "k": "t",
+          "v": " and the scramble does not collapse it — position-geometric; strict censuses wander ("
+        },
+        {
+          "k": "m",
+          "v": "P_0 \\sim X^{1.03}/X^{1.02}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "R^2"
+        },
+        {
+          "k": "t",
+          "v": " 1.00, max "
+        },
+        {
+          "k": "m",
+          "v": "244333/283607"
+        },
+        {
+          "k": "t",
+          "v": ") while the G1 depth-"
+        },
+        {
+          "k": "m",
+          "v": "10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " kernel is "
+        },
+        {
+          "k": "m",
+          "v": "n \\le 73"
+        },
+        {
+          "k": "t",
+          "v": " on all rungs; the causal tube field clean on all four rule"
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": "grouping combos ("
+        },
+        {
+          "k": "m",
+          "v": "0/355199"
+        },
+        {
+          "k": "t",
+          "v": ", cond "
+        },
+        {
+          "k": "m",
+          "v": "\\le 57.3"
+        },
+        {
+          "k": "t",
+          "v": ") but self-calibrating; the skin law "
+        },
+        {
+          "k": "m",
+          "v": "D(X) = 0.754\\,X^{-0.548}"
+        },
+        {
+          "k": "t",
+          "v": " with verified "
+        },
+        {
+          "k": "m",
+          "v": "X_0(\\varepsilon)"
+        },
+        {
+          "k": "t",
+          "v": "; the G2 mechanism typed ("
+        },
+        {
+          "k": "m",
+          "v": "1653\\times"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "39\\times"
+        },
+        {
+          "k": "t",
+          "v": "); scramble depth control fires, Epstein anchor holds); "
+        },
+        {
+          "k": "c",
+          "v": "v852_arf_vacuum_ovoid.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "24/24 + 23/23"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "arf-vacuum-syndrome-exact"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "ovoid-decoder-exact"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "affine_arf_vacuum_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "doily_ovoid_decoder_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the syndrome table, the local Hecke theorem, the code pencil with the canonicity lemma, RM"
+        },
+        {
+          "k": "m",
+          "v": "(2,4)"
+        },
+        {
+          "k": "t",
+          "v": " restored with the vacuum bit as parity bit; "
+        },
+        {
+          "k": "m",
+          "v": "N^{\\mathsf T}v_a = 0"
+        },
+        {
+          "k": "t",
+          "v": ", Gram "
+        },
+        {
+          "k": "m",
+          "v": "36I - 6J"
+        },
+        {
+          "k": "t",
+          "v": ", SNF torsion-free with a "
+        },
+        {
+          "k": "m",
+          "v": "\\det \\pm 1"
+        },
+        {
+          "k": "t",
+          "v": " minor, Penrose exact in "
+        },
+        {
+          "k": "m",
+          "v": "\\Q"
+        },
+        {
+          "k": "t",
+          "v": ", the decoder exact on the predeclared set, the "
+        },
+        {
+          "k": "m",
+          "v": "S_6"
+        },
+        {
+          "k": "t",
+          "v": " standard rep, the three-ring correspondence; five controls fire); "
+        },
+        {
+          "k": "c",
+          "v": "v853_bent_css_mangoldt.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "22/22 + 30/30"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "arf-bent-css-exact"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "mangoldt-commutator-exact"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "arf_bent_css_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "mangoldt_incidence_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the Walsh eigenvector at "
+        },
+        {
+          "k": "m",
+          "v": "-4"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "m",
+          "v": "(16,6,2)"
+        },
+        {
+          "k": "t",
+          "v": " set, the 31-word census, the two CSS codes with the 60 minimal words "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the 60 isotropic planes, the "
+        },
+        {
+          "k": "m",
+          "v": "-4"
+        },
+        {
+          "k": "t",
+          "v": " triple point, the MUB partner (no upgrade); "
+        },
+        {
+          "k": "m",
+          "v": "\\mathcal{L} = -M[D,Z] = T(\\Lambda)"
+        },
+        {
+          "k": "t",
+          "v": " exact at "
+        },
+        {
+          "k": "m",
+          "v": "N = 60"
+        },
+        {
+          "k": "t",
+          "v": " (sympy) / "
+        },
+        {
+          "k": "m",
+          "v": "N = 360"
+        },
+        {
+          "k": "t",
+          "v": " (integer) / "
+        },
+        {
+          "k": "m",
+          "v": "N = 10^4"
+        },
+        {
+          "k": "t",
+          "v": " (float ward "
+        },
+        {
+          "k": "m",
+          "v": "5.3\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "), the one-line proof termwise, powers "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " chains with nilpotency "
+        },
+        {
+          "k": "m",
+          "v": "\\lfloor\\log_2 N\\rfloor + 1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\log Z"
+        },
+        {
+          "k": "t",
+          "v": " rational with BCH truncation, the four-comb operator table with the Epstein leak exact and class-average repaired, the ideal-level Dedekind "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda_K"
+        },
+        {
+          "k": "t",
+          "v": " with norm aggregation, the carrier bridge per-divisor exact, "
+        },
+        {
+          "k": "m",
+          "v": "L^2 - [D,L] = T(\\mu * \\log^2)"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v854_relation_hodge_pfaffian.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "18/18"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "curvature-discriminates-only"
+        },
+        {
+          "k": "t",
+          "v": "; probe "
+        },
+        {
+          "k": "c",
+          "v": "relation_hodge_pfaffian_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "d_1d_2 = 0"
+        },
+        {
+          "k": "t",
+          "v": " exact, "
+        },
+        {
+          "k": "m",
+          "v": "b_0 = 1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "b_1 = 16/21/22"
+        },
+        {
+          "k": "t",
+          "v": " on the same-prime chords; the true comb exactly flat on ALL squares ("
+        },
+        {
+          "k": "m",
+          "v": "\\le 1.8\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "); Epstein curvature "
+        },
+        {
+          "k": "m",
+          "v": "321/756/905"
+        },
+        {
+          "k": "t",
+          "v": " squares at the class-group products; the Arf lift PROVEN obstructed (GF(2) rank vs augmented); gate 4 fails typed ("
+        },
+        {
+          "k": "m",
+          "v": "S_{\\rm cob} \\sim 2.9"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3.9\\times10^4"
+        },
+        {
+          "k": "t",
+          "v": "); the Pfaffian log-spread infinite); "
+        },
+        {
+          "k": "c",
+          "v": "v855_invariance_atlas.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "19 + 8 + 7 + 3"
+        },
+        {
+          "k": "t",
+          "v": ", zero fails, "
+        },
+        {
+          "k": "t",
+          "v": "sieve-same-gap"
+        },
+        {
+          "k": "t",
+          "v": " (spec v2, the S5.1 bar recalibration "
+        },
+        {
+          "k": "m",
+          "v": "5.0 \\to 2.0"
+        },
+        {
+          "k": "t",
+          "v": " declared, measured "
+        },
+        {
+          "k": "m",
+          "v": "3.9"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "atlas-same-wall"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "profile-diverges"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "direction-transient"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "selberg_supply_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "criteria_atlas_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "minimizer_profile_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "minimizer_direction_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " over the read-only "
+        },
+        {
+          "k": "c",
+          "v": "spectral_flow_pivot_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " frame: the hierarchy decomposition exact ("
+        },
+        {
+          "k": "m",
+          "v": "D_0 = d\\mathrm{Head}_2 - d\\mathrm{Chain}_2"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": "; levels 2/3 exact in Fractions); the envelopes verified on range and dominating (Chebyshev "
+        },
+        {
+          "k": "m",
+          "v": "0.111x"
+        },
+        {
+          "k": "t",
+          "v": " measured "
+        },
+        {
+          "k": "m",
+          "v": "0.0956"
+        },
+        {
+          "k": "t",
+          "v": "); the ledger (best factor "
+        },
+        {
+          "k": "m",
+          "v": "2.05\\times10^2"
+        },
+        {
+          "k": "t",
+          "v": ", route 2 up to "
+        },
+        {
+          "k": "m",
+          "v": "1.1\\times10^4"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "|D_0|/\\tau_{\\rm pnt} = 0.99..1.00"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\min |dS|_F/\\mathrm{GATE}_W = 2.28 > 1"
+        },
+        {
+          "k": "t",
+          "v": "); Brun–Titchmarsh typed UNCOVERED, the large sieve NOT-APPLICABLE per rung; "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_1 = 1 + \\gamma/2 - \\log(4\\pi)/2"
+        },
+        {
+          "k": "t",
+          "v": " at dev "
+        },
+        {
+          "k": "m",
+          "v": "0.0"
+        },
+        {
+          "k": "t",
+          "v": ", literature wards "
+        },
+        {
+          "k": "m",
+          "v": "3\\times10^{-10}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "d_N^2"
+        },
+        {
+          "k": "t",
+          "v": " exact to "
+        },
+        {
+          "k": "m",
+          "v": "N = 64"
+        },
+        {
+          "k": "t",
+          "v": "; BD "
+        },
+        {
+          "k": "m",
+          "v": "= 2\\lambda_1"
+        },
+        {
+          "k": "t",
+          "v": "; the NB span "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the spectral-mother geometry (the exact "
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": " floor identity; the "
+        },
+        {
+          "k": "m",
+          "v": "1/x"
+        },
+        {
+          "k": "t",
+          "v": " mirror "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " J); the Li cone residual "
+        },
+        {
+          "k": "m",
+          "v": "60.6\\%"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "5\\%"
+        },
+        {
+          "k": "t",
+          "v": "; the minimizer census (RAY "
+        },
+        {
+          "k": "m",
+          "v": "0.4530"
+        },
+        {
+          "k": "t",
+          "v": " / ARCH "
+        },
+        {
+          "k": "m",
+          "v": "1.0976"
+        },
+        {
+          "k": "t",
+          "v": " rad; dispersion "
+        },
+        {
+          "k": "m",
+          "v": "0.0217"
+        },
+        {
+          "k": "t",
+          "v": "; C03 tracking "
+        },
+        {
+          "k": "m",
+          "v": "0.0056"
+        },
+        {
+          "k": "t",
+          "v": "; the Bonferroni demonstration 8 of 15 with the golden-ratio control rejected)). Suite "
+        },
+        {
+          "k": "m",
+          "v": "841\\to848"
+        },
+        {
+          "k": "t",
+          "v": "; all seven standalone green with pattern gates encoding the frozen censuses (check counts, FAIL ids, verdicts, exit codes) and the byte-exact provenance ward vs the embedded sources; all fifteen probes re-run identically at promotion (2026-08-07); promoted VERBATIM with no downscoping (the round-31 embedding convention: the frozen probe sources embedded byte-exact and executed verbatim in isolated namespaces — every printed spec SHA-256 reproduces)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean (1 module promoted)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/CofinalWeil.lean"
+        },
+        {
+          "k": "t",
+          "v": " — the minimal H theorem, kernel-checked ("
+        },
+        {
+          "k": "m",
+          "v": "11"
+        },
+        {
+          "k": "t",
+          "v": " declarations; lake build green, "
+        },
+        {
+          "k": "m",
+          "v": "3411"
+        },
+        {
+          "k": "t",
+          "v": " jobs, no "
+        },
+        {
+          "k": "c",
+          "v": "sorry"
+        },
+        {
+          "k": "t",
+          "v": ", no "
+        },
+        {
+          "k": "c",
+          "v": "native_decide"
+        },
+        {
+          "k": "t",
+          "v": ", axioms propext/Classical.choice/Quot.sound only, verified by "
+        },
+        {
+          "k": "c",
+          "v": "#print axioms"
+        },
+        {
+          "k": "t",
+          "v": " on all eight theorems; imported in "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lean_manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " regenerated with this round, "
+        },
+        {
+          "k": "m",
+          "v": "84\\to85"
+        },
+        {
+          "k": "t",
+          "v": " files): "
+        },
+        {
+          "k": "c",
+          "v": "CofinalHypothesis"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(H_{\\rm cof})"
+        },
+        {
+          "k": "t",
+          "v": " — the PRE-FIXED strictly monotone PSD ladder, preregistration-shaped (the ladder is DATA, never mined from measured signs); "
+        },
+        {
+          "k": "c",
+          "v": "limit_nonneg_of_cofinal_seq"
+        },
+        {
+          "k": "t",
+          "v": " — THE MINIMAL IMPLICATION, the "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon/2"
+        },
+        {
+          "k": "t",
+          "v": " argument proven; "
+        },
+        {
+          "k": "c",
+          "v": "ladderForm_nonneg"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "weil_nonneg_of_cofinal"
+        },
+        {
+          "k": "t",
+          "v": " — the dense-family form with NO diagonal argument (one PSD certificate per rung covers every element simultaneously); the STRICT HIERARCHY "
+        },
+        {
+          "k": "c",
+          "v": "uniformMarginBound_to_cofinal"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "pointwise_to_cofinal"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "cofinal_not_uniform"
+        },
+        {
+          "k": "t",
+          "v": " (witness "
+        },
+        {
+          "k": "m",
+          "v": "1/(m{+}1)"
+        },
+        {
+          "k": "t",
+          "v": ", reusing the v843 kernel gap) / "
+        },
+        {
+          "k": "c",
+          "v": "cofinal_not_pointwise"
+        },
+        {
+          "k": "t",
+          "v": " (witness "
+        },
+        {
+          "k": "m",
+          "v": "\\pm1"
+        },
+        {
+          "k": "t",
+          "v": " on the even ladder); the assembly "
+        },
+        {
+          "k": "c",
+          "v": "cofinal_weil"
+        },
+        {
+          "k": "t",
+          "v": ". THE FORMAL DEMOTION: the load-bearing chain of "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.EXTRACTION.CHAIN.01"
+        },
+        {
+          "k": "t",
+          "v": " consumes EXACTLY "
+        },
+        {
+          "k": "m",
+          "v": "(H_{\\rm cof})"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "UniformMarginBound"
+        },
+        {
+          "k": "t",
+          "v": " implies it and the converse fails kernel-checked — from this round an over-strong SUFFICIENT lemma, no longer the named wall. "
+        },
+        {
+          "k": "m",
+          "v": "(H_{\\rm cof})"
+        },
+        {
+          "k": "t",
+          "v": " stays a hypothesis everywhere. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "v849"
+        },
+        {
+          "k": "t",
+          "v": "'s part B (numeric witness mirror, v843/v837/v817 precedent)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The wall statement (the round's deliverable)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " THE INVARIANCE ATLAS: the wall is proven invariant across COMPRESSIONS (the diverging nuclear-norm tax closes the positive-dilation class — in any basis; the index is endpoint-determined; the corner cluster expansion is position-geometric), GEOMETRIES (basis invariance — the v846 TV-price geometry-independence now a corollary), CRITERIA (Weil "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Li "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Nyman–Beurling; BD-constant "
+        },
+        {
+          "k": "m",
+          "v": "= 2\\lambda_1"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "4.9\\times10^{-17}"
+        },
+        {
+          "k": "t",
+          "v": "; the NB span IS the spectral-mother geometry; the Li transfer fails by cone geometry — certified partial data everywhere, one uniform statement missing everywhere) and INPUT CLASSES (statistics "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " sieve: the demand at truth exceeds the factor-2 gate on every rung — unclosable by ANY upper-bound class). The one object in four languages: the uniform "
+        },
+        {
+          "k": "m",
+          "v": "e_1"
+        },
+        {
+          "k": "t",
+          "v": " bound "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the form-factor band "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha \\in 1..2"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the bilinear chain fluctuation "
+        },
+        {
+          "k": "m",
+          "v": "d\\mathrm{Chain}_2"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the comb block's soft direction ("
+        },
+        {
+          "k": "m",
+          "v": "0.0056"
+        },
+        {
+          "k": "t",
+          "v": " rad). The positive cores: the graded kernel law (depth, not sign) and the minimal kernel-checked hypothesis "
+        },
+        {
+          "k": "m",
+          "v": "(H_{\\rm cof})"
+        },
+        {
+          "k": "t",
+          "v": ". Stop list extended (positive-dilation completions with fixed comb coupling in any basis; finite-dimensional index reformulations; corner cluster expansions; elementary upper-bound supply rows against the factor-2 gate). NO RH claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 9 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "CFIN.UNIQUE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "FORM.PRIME.COFINAL.WEIL.01"
+        },
+        {
+          "k": "t",
+          "v": " [F], "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PSD.COMPLETION.TAX.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CELLCONE.KERNELFIELD.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CELLCONE.GRADEDKERNEL.01"
+        },
+        {
+          "k": "t",
+          "v": " [O], "
+        },
+        {
+          "k": "c",
+          "v": "ARF.VACUUM.SYNDROME.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ARF.BENT.CSS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.HODGE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CRITERIA.ATLAS.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " four dated round-31 notes: the invariance-atlas closing note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " (the four-axis invariance; the one object in four languages; the extended stop list), the transport note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the pair-type object "
+        },
+        {
+          "k": "m",
+          "v": "= d\\mathrm{Chain}_2 ="
+        },
+        {
+          "k": "t",
+          "v": " the comb-soft direction), the demotion note on "
+        },
+        {
+          "k": "c",
+          "v": "FORM.PRIME.EXCESS.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "UniformMarginBound"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " over-strong sufficient lemma), and the kernel-check note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.EXTRACTION.CHAIN.01"
+        },
+        {
+          "k": "t",
+          "v": " (step 2 kernel-checked; (H) formalized as "
+        },
+        {
+          "k": "m",
+          "v": "(H_{\\rm cof})"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "927\\to936"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ": the Arf–vacuum syndrome "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " code pencil, the bent CSS pair "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "-4"
+        },
+        {
+          "k": "t",
+          "v": " triple point, and the ovoid decoder entries in the Gaussian code keybox "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the new "
+        },
+        {
+          "k": "m",
+          "v": "C_{\\rm fin}"
+        },
+        {
+          "k": "t",
+          "v": " uniqueness keybox ("
+        },
+        {
+          "k": "m",
+          "v": "\\Aut \\cong C_6"
+        },
+        {
+          "k": "t",
+          "v": ") after the normal-form keybox ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v849/v852/v853}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The invariance atlas: the wall is the same across compressions, geometries, criteria and input classes; the minimal hypothesis kernel-checked” ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v849/v850/v851/v853/v854/v855}"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the part-intro chain extended; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": seven new audit cards "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the round-31 follow-up notes on the floor-contract prose; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "FORM.PRIME.COFINAL.WEIL.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CELLCONE.GRADEDKERNEL.01"
+        },
+        {
+          "k": "t",
+          "v": " registration blocks, the round-31 code-layer compressions record, and the dated round-31 notes on the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.MARGIN.LAW.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "FORM.PRIME.EXCESS.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.EXTRACTION.CHAIN.01"
+        },
+        {
+          "k": "t",
+          "v": " blocks."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round thirty-one”; counters "
+        },
+        {
+          "k": "m",
+          "v": "841\\to848"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v855"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated (ScriptIndex, changelog.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "848"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v855"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The code-layer modules ("
+        },
+        {
+          "k": "c",
+          "v": "v849"
+        },
+        {
+          "k": "t",
+          "v": " part A, "
+        },
+        {
+          "k": "c",
+          "v": "v852"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v853"
+        },
+        {
+          "k": "t",
+          "v": " part A) are exact-arithmetic compressions and a uniqueness theorem — normal forms and set equalities, not new claims (the P2 residual R1"
+        },
+        {
+          "k": "m",
+          "v": "'"
+        },
+        {
+          "k": "t",
+          "v": " and the MUB reading stay typed, no upgrades); the no-go modules ("
+        },
+        {
+          "k": "c",
+          "v": "v850"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v851"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v854"
+        },
+        {
+          "k": "t",
+          "v": ") are typed route decisions under frozen preregistered protocols (exact identities [E]-grade; the six control FAILS preregistered-honest adjudications on record, bars NOT refit); the atlas module ("
+        },
+        {
+          "k": "c",
+          "v": "v855"
+        },
+        {
+          "k": "t",
+          "v": ") is an honest invariance mapping (the one bar recalibration declared in the frozen spec; no number invented for inapplicable supply rows); the Lean module consumes and formalizes, never evaluates, positivity — "
+        },
+        {
+          "k": "m",
+          "v": "(H_{\\rm cof})"
+        },
+        {
+          "k": "t",
+          "v": " stays a hypothesis; NO marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-07",
     "dateLabel": "2026-08-07 · LXXIII",
     "heading": [
       {

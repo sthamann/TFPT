@@ -6664,7 +6664,21 @@ wall, the completed-cell cone transport at the $n = 2$ cell
 extraction is complete: the wall is exactly hypothesis (H),
 cofinal finite positivity
 (\veri{v848\_extraction\_chain.py},
-\texttt{PRIME.EXTRACTION.CHAIN.01}); still open.  No
+\texttt{PRIME.EXTRACTION.CHAIN.01}); still open.
+Round-31 follow-up (markers unchanged): the invariance atlas ---
+the nuclear-norm tax theorem closes the positive-dilation class
+in any basis and the index route by measurement
+(\veri{v850\_completion\_tax\_flow.py}), the cone violations
+resolve into the graded kernel law
+(\veri{v851\_cluster\_kernel\_field.py},
+\texttt{PRIME.CELLCONE.GRADEDKERNEL.01} [O]), the wall is
+invariant across criteria and input classes
+(\veri{v855\_invariance\_atlas.py}), and the minimal hypothesis
+is kernel-checked: $(H_{\rm cof})$, with
+\texttt{UniformMarginBound} formally demoted to an over-strong
+sufficient lemma (\veri{v849\_cfin\_unique\_cofinal\_lean.py},
+\texttt{TfptCarrier/CofinalWeil.lean},
+\texttt{FORM.PRIME.COFINAL.WEIL.01}); still open.  No
 marker move, no RH claim.
 Machine-checked: \veri{v791\_positive\_descent.py}.
 (\textsc{measured}) (exact-rational positivity; unique PSD sector)
@@ -6774,7 +6788,15 @@ geometry-independent, wedge uniformity, cone broken at $n = 2$)
 and the extraction chain complete --- the wall is exactly
 hypothesis (H)
 (\veri{v846\_schur\_spectral\_mother.py}--%
-\veri{v848\_extraction\_chain.py}), still open.]}
+\veri{v848\_extraction\_chain.py}), still open;
+round-31: the invariance atlas --- the wall the same across
+compressions (the diverging nuclear-norm tax, basis-invariant),
+geometries, criteria (BD $= 2\lambda_1$) and input classes
+(statistics $=$ sieve), the violations graded
+(\texttt{PRIME.CELLCONE.GRADEDKERNEL.01} [O]), and the minimal
+hypothesis kernel-checked as $(H_{\rm cof})$
+(\veri{v850\_completion\_tax\_flow.py}--%
+\veri{v855\_invariance\_atlas.py}), still open.]}
 Controls fire (conductor swap $=$ margin $-\ln2$ at
 $2.2\times10^{-16}$).  No marker move, no RH claim.
 Machine-checked: \veri{v794\_cp\_extension\_gate.py}.
@@ -7969,6 +7991,202 @@ Machine-checked: \veri{v848\_extraction\_chain.py}.
 (\textsc{measured}) (rates, ledger, exact box class) $+$ \mE\
 (the exact-$\Q$ machinery wards) $+$ \mO\ (hypothesis (H) ---
 the registered contract)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The uniqueness of $C_{\rm fin}$
+and the minimal H theorem (\texttt{CFIN.\allowbreak UNIQUE.01}
+$+$ \texttt{FORM.\allowbreak PRIME.\allowbreak
+COFINAL.\allowbreak WEIL.01}).}
+One module from one probe plus the Lean mirror ($22/22$, verdict
+\textsc{cfin-unique}; $+ 4$ mirror checks, ${\sim}7$ s; exact
+finite algebra, no floats).  Every admissible compiler tuple at
+$\omega = \hbar$ is isomorphic to $C_{\rm fin}$: census $14400$,
+\emph{one} $Sp(4,2)\times S_5$ orbit (orbit--stabilizer $14400
+\times 6 = 86400$ exact); $\mathrm{Aut}(C_{\rm fin}) \cong C_6$
+(faithful into $Sp(4,2)$, slot permutation determined); the
+strict terminal-object reading fails honestly (unique up to
+\emph{non}-unique isomorphism); controls fire (dot form, wrong
+Arf class, no-$\sigma$ canonicity death $16 \to 8 \to 4 \ne 1$).
+And the minimal H theorem is kernel-checked
+(\texttt{TfptCarrier/CofinalWeil.lean}, $11$ declarations, $3411$
+jobs, axioms clean): the $\varepsilon/2$ implication and the
+no-diagonal dense-family form proven; the hierarchy uniform
+$\subsetneq$ pointwise $\subsetneq$ cofinal strict both ways
+(witnesses $1/(m{+}1)$, $\pm1$ on the even ladder) ---
+\texttt{UniformMarginBound} formally demoted to an over-strong
+sufficient lemma; the load-bearing chain consumes exactly
+$(H_{\rm cof})$, which stays a hypothesis everywhere.  No marker
+move, no RH claim.
+Machine-checked: \veri{v849\_cfin\_unique\_cofinal\_lean.py}.
+\mE\ (the uniqueness census and its exact controls; the
+kernel-checked mirror statements) $+$ \mO\ ($(H_{\rm cof})$ ---
+the named hypothesis)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The completion tax and the flow
+decision (\texttt{PRIME.PSD.COMPLETION.TAX.01}).}
+One module from two probes ($15 + 11$ checks, zero fails,
+verdicts \textsc{tax-gap} and \textsc{flow-crossings},
+${\sim}35$ s).  Every positive $2$-sector dilation through the
+fixed comb coupling pays $\operatorname{tr}P + \operatorname{tr}Q
+\ge 2\lVert R_X\rVert_{*}$ with equality at the SVD pair ---
+zero-duality-gap certificates on every anchor ($\lVert
+W\rVert_{\rm op} = 1.000000000000$; symbolic $2\times2$ gap
+$2.7\times10^{-51}$), basis-invariant ($\le 1.1\times10^{-15}$;
+the v846 geometry-independence now a corollary) --- and the tax
+diverges: $\ge 4057.6\times\tau$ on all $67$ rungs, growing
+$\sim h^{0.24}$ against $h^{-3/2}$; the measured Schur prices
+were only $13.7$--$20.4\times$ above the exact optimum ---
+optimality could not have saved them.  The flow: the density
+endpoint is \emph{not} PSD ($n_- = 5..12$; premise corrected by
+measurement), all $634$ crossings upward and endpoint-determined,
+velocity-test ratio $1.00$ --- the amplitude gap \emph{is} the
+metric margin rescaled; the index route closed with the typed
+residue (eigenproblem-free pivot certification, the
+crossing-location law).  The one unclosed door typed:
+Fej\'er--Riesz of the total symbol $=$ the positivity itself.
+No marker move, no RH claim.
+Machine-checked: \veri{v850\_completion\_tax\_flow.py}.
+\mE\ (the exact identity and its certificates) $+$
+(\textsc{measured}) (the divergence, the crossing census) $+$
+\mO\ (the wall unchanged)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The cluster decision and the
+graded kernel (\texttt{PRIME.CELLCONE.KERNELFIELD.01} $+$
+\texttt{PRIME.CLUSTER.MULT.01} $+$
+\texttt{PRIME.CELLCONE.GRADEDKERNEL.01}).}
+One module from three probes over the read-only v847 parent
+($15 + 10 + 7$ checks with the \emph{six} frozen-honest FAILS
+kept and pattern-gated, not refit; verdicts
+\textsc{clusters-diffuse}, \textsc{both-partial},
+\textsc{kernel-graded}, ${\sim}9$ s).  The cluster expansion is
+exact (sympy telescoping, M\"obius elimination, $2^{16}$-subset
+ward $0.0$) but its weights are position-geometric (enrichment
+$0.883$ vs bar $3.0$; the scramble does not collapse it) --- the
+corner route closes.  The strict violation census wanders ($P_0
+\sim X^{1.03}$, max $244333$ vs cap $100$) while the G1
+depth-$10^{-2}$ kernel is bounded by $n \le 73$ on all $67$
+rungs; the causal tube field transports clean ($0/355199$ on all
+four combos) but is self-calibrating (all four must-break
+controls do \emph{not} fire; \textsc{field-structural-only}).
+The skin-depth law $D(X) = 0.754\,X^{-0.548}$ ($R^2 = 0.99$,
+Kendall $-1.00$) with verified $X_0(\varepsilon)$ turns the
+wandering into vanishing-depth skin --- the graded kernel$+$tail
+candidate registered [O] (bounds depth, not sign).  No marker
+move, no RH claim.
+Machine-checked: \veri{v851\_cluster\_kernel\_field.py}.
+(\textsc{measured}) (the censuses, the skin law) $+$ \mE\ (the
+exact resummation and congruence wards) $+$ \mO\ (the registered
+graded candidate; the wall unchanged)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Arf--vacuum syndrome and the
+ovoid decoder (\texttt{ARF.VACUUM.SYNDROME.01} $+$
+\texttt{OVOID.DECODER.01}).}
+One module from two probes ($24/24 + 23/23$, verdicts
+\textsc{arf-vacuum-syndrome-exact} and
+\textsc{ovoid-decoder-exact}, ${<}1$ s, exact
+$\mathbb{F}_2/\Z/\Q$ algebra).  The Arf bit is position-independent
+($a(t{+}U) = \hbar(u,v)$ on all $140$ flats); the two-bit
+syndrome table splits the flats exactly into $15/20/45/60$; the
+local Hecke theorem holds at all $15$ points ($12 + 16 = 28 =
+\sigma_3(3)$, $12 - 16 = -4 = a_3$, with $x^{\perp}/\langle
+x\rangle$ semantics); the code pencil $[15,11,3] \supset
+\{[15,10,4], 2\times[15,10,3]\} \supset [15,9,4]$ carries the
+canonicity lemma (one Arf functional on $H$) and the vacuum bit
+is the $\mathrm{RM}(2,4)$ parity bit.  The doily kernel gains
+its integral inverse: $\mathrm{SNF}(N) = \mathrm{diag}(1^{10},
+0^5)$ torsion-free, $N^{+} = N^{\mathsf T}/4 - J/36$ (Penrose
+exact in $\Q$), $P_5 = I/2 - B/4 + J/12$, the decoder exact, the
+kernel the $S_6$ standard representation ($11/11$ classes), and
+the three-ring correspondence ($\mathbb{R}$ ovoid span $/$ $\Z$
+torsion-free $/$ $\mathbb{F}_2$ code $A_q = [15,5,6]$).  Controls fire.
+No marker move.
+Machine-checked: \veri{v852\_arf\_vacuum\_ovoid.py}.
+\mE\ (exact identities and set equalities throughout)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The bent CSS pair and the von
+Mangoldt commutator (\texttt{ARF.BENT.CSS.01} $+$
+\texttt{PRIME.RELATION.MANGOLDT.01}).}
+One module from two probes ($22/22 + 30/30$, verdicts
+\textsc{arf-bent-css-exact} and
+\textsc{mangoldt-commutator-exact}, ${<}1$ s).  The canonical
+$q^{*}$ is bent ($\hat s_q = -4\,s_q$ on all $16$; $W^2 = 16I$),
+its zero set the $(16,6,2)$ difference set; $A_q = [15,5,6]$
+with the $31$-word census; the CSS pair $[[15,5,3]] \to
+[[16,4,4]]$ with the vacuum transformation typed (the $60$
+minimal words $=$ the $60$ isotropic planes); the $-4$ triple
+point (Hecke $=$ Gauss $=$ Walsh $= a_3$) is one machine-checked
+integer; the $16$ bent translates are the mutually unbiased
+partner of the \texttt{v800} rays (reported, no upgrade).  And
+the commutator theorem, typed honestly as classical incidence
+algebra: $\mathcal L = -M[D,Z] = -[D, \log Z] = T(\Lambda)$
+exact three ways; powers $=$ ordered factorization chains
+(nilpotency $\lfloor\log_2 N\rfloor + 1$); the four-comb
+discipline at operator level (the Epstein leak at $[6,14,21,
+\dots]$ exact and repaired by the class average $a_A + a_B =
+1 * \chi_{-20}$; ideal-level Dedekind $\Lambda_K$); the carrier
+bridge --- the deployed $\mu$-pairing \emph{is} the first row of
+$\mathcal L$.  Controls fire.  No marker move, no RH claim.
+Machine-checked: \veri{v853\_bent\_css\_mangoldt.py}.
+\mE\ (exact identities; the operator algebra) $+$
+(\textsc{typed}) (classical content --- the value is the
+packaging and the discipline transport)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Factorization cohomology
+(\texttt{PRIME.RELATION.HODGE.01}).}
+One probe ($18/18$, verdict
+\textsc{curvature-discriminates-only}, ${\sim}7$ s).  The
+factorization complex is exact ($d_1 d_2 = 0$ at entry level,
+$b_0 = 1$, $b_1 = 16/21/22$ on the same-prime exponent chords);
+the Euler connection from comb data alone gives multiplicativity
+\emph{as} flatness at machine zero (true comb: $\le
+1.8\times10^{-15}$ on all squares); the Epstein curvature
+localizes at the class-group products ($321/756/905$ squares)
+with the $\mathbb{F}_2$ Arf-lift obstruction \emph{proven} (exact
+GF($2$) rank vs augmented); gate 4 fails typed --- the window
+form is $0$-chain-supported (coboundary sensitivity $\sim
+3\times10^{4}$), not a function of the cohomology class; the
+Pfaffian moonshot has no anchor-independent normalizer.  No
+marker move, no RH claim.
+Machine-checked: \veri{v854\_relation\_hodge\_pfaffian.py}.
+\mE\ (the exact complex and flatness wards) $+$
+(\textsc{measured}) (the curvature census, the typed gate-4
+failure) $+$ \mO\ (the wall unchanged)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The invariance atlas
+(\texttt{PRIME.CRITERIA.ATLAS.01} $+$
+\texttt{PRIME.SUPPLY.SELBERG.01}).}
+One module from four probes over the read-only v850 frame
+library ($19 + 8 + 7 + 3$ checks, zero fails; spec v2 of the
+sieve probe declares its one bar recalibration in the frozen
+docstring; verdicts \textsc{sieve-same-gap},
+\textsc{atlas-same-wall}, \textsc{profile-diverges},
+\textsc{direction-transient}, ${\sim}9$ s).  The demand
+rewritten exactly in Selberg-hierarchy coordinates and audited
+against on-range-verified elementary constants: the sieve
+reaches the $\alpha \in 1..2$ band in scope but zero coverage in
+grade (best factor $205\times$; the demand at $0.99$--$1.00$ of
+$\tau_{\rm pnt}$; the factor-$2$ gate unclosable at truth ---
+input-class-invariant); the named sieve object:
+$d\mathrm{Chain}_2$.  The criteria align: $\lambda_n > 0$ to
+$n = 20$ unconditionally, $d_N^2$ exact to $N = 64$, BD $=
+2\lambda_1$ ($4.9\times10^{-17}$), the NB span \emph{is} the
+spectral-mother geometry --- yet the Li transfer fails by cone
+geometry ($60.6\%$ vs $5\%$): no coordinate system holds hidden
+supply.  The minimizer: no frozen closed-form limit, but an
+internal direction exists ($0.0217$ rad) tracking the comb
+block's own soft direction ($0.0056$ rad); the drift is real, no
+identification claimed, $-4/\pi$ typed a coincidence.  No marker
+move, no RH claim.
+Machine-checked: \veri{v855\_invariance\_atlas.py}.
+(\textsc{measured}) (the ledger, the atlas, the tracking law)
+$+$ \mE\ (the exact hierarchy decomposition and identity wards)
+$+$ \mO\ (the wall unchanged, now invariance-typed)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification
