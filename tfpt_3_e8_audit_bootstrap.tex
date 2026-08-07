@@ -6609,8 +6609,21 @@ lower-bound skeleton on the deployed battery, closed at citation
 grade for all $h$ up to $\alpha^*\approx11$
 (\veri{v823\_prime\_lagrange\_floor.py},
 \veri{v824\_prime\_floor\_skeleton.py}); battery-relative,
-$\alpha$-bounded, still open.  No marker move, no
-RH claim.
+$\alpha$-bounded, still open.  Round-25 follow-up (markers
+unchanged): the kill gates survived at full sieve depth
+$X = 25.5$ with growing margins, the certified family replaced
+the collapsing single pair, and the $\alpha^*$ horizon fell as a
+float-convention artifact --- citation grade to $\alpha = 12.75$,
+the envelope certified-explicit at $c_{\rm cert} = 4.335$
+(\veri{v829\_prime\_floor\_depth.py},
+\veri{v830\_prime\_float\_budget.py}); the alias-phase proof
+blocker named, still open.  Round-26 follow-up (markers
+unchanged): the blocker resolves into a \emph{typed
+pair-correlation circularity boundary} --- the analytic-envelope
+route is closed honestly and the bridge contract
+\texttt{PRIME.FLOOR.PAIRCORR.01} [O] registered
+(\veri{v831\_prime\_alias\_second\_moment.py}); still open.  No
+marker move, no RH claim.
 Machine-checked: \veri{v791\_positive\_descent.py}.
 (\textsc{measured}) (exact-rational positivity; unique PSD sector)
 $+$ \mO\ (three-object contract registered)
@@ -6688,7 +6701,14 @@ measured $h^{-3/2}$ envelope
 \texttt{PRIME.FLOOR.RATIO.01} [O]); round-24: narrowed by the
 certified floor skeleton (\veri{v823\_prime\_lagrange\_floor.py},
 \veri{v824\_prime\_floor\_skeleton.py}) --- battery-relative,
-$\alpha$-bounded, still open.]}
+$\alpha$-bounded; round-25: the kill gates survived at full sieve
+depth and the $\alpha$-bound fell at citation grade
+(\veri{v829\_prime\_floor\_depth.py},
+\veri{v830\_prime\_float\_budget.py}), the envelope
+certified-explicit ($c_{\rm cert} = 4.335$); round-26: the
+analytic-envelope route closed at its typed pair-correlation
+boundary (\veri{v831\_prime\_alias\_second\_moment.py},
+\texttt{PRIME.FLOOR.PAIRCORR.01} [O]), still open.]}
 Controls fire (conductor swap $=$ margin $-\ln2$ at
 $2.2\times10^{-16}$).  No marker move, no RH claim.
 Machine-checked: \veri{v794\_cp\_extension\_gate.py}.
@@ -7309,6 +7329,157 @@ move, no RH claim.
 Machine-checked: \veri{v824\_prime\_floor\_skeleton.py}.
 \mE\ (closed forms, wards) $+$ (\textsc{measured}) (closure
 margins, exhaustion) $+$ \mO\ (the ratio contract, narrowed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The certified exclusion ladder
+(\texttt{PRIME.EXCLUSION.LADDER.01}).}
+One module from two probes ($26/26 + 21/21$; verdicts
+\textsc{ladder-extended} $+$ \textsc{saturation-typed}).  Each
+verified PSD rung of the GL1 tower carries a rigorous
+$\lambda_{\min} > 0$ certificate (Cholesky/Higham backward-error
+bound $+$ Rayleigh-residual enclosure) and is inverted into
+quadruple-exclusion regions on the frozen rank-4 battery, every
+boundary point witness-Rayleigh re-proved; the ladder reaches
+$X = 24.81$ and the census threshold $\Xi_{\rm eff}$ falls
+$0.639 \to 0.218$, then plateaus at $0.218 \pm 3\%$
+(support-active-but-$X$-stalled, typed).  The region lies inside
+the Platt--Trudgian strip: consistency re-derivation, not new
+territory; depth-to-width bridge, not a record claim.  Controls
+fire.  No marker move, no RH claim.
+Machine-checked: \veri{v825\_prime\_exclusion\_ladder.py}.
+\mE\ (certificates, wards) $+$ (\textsc{measured}) (exclusion
+maps, the $\Xi$ census)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{Battery v2 and the range extension
+(\texttt{PRIME.EXCLUSION.BATTERY2.01}).}
+One module from two probes ($16/16 + 13/13$; verdicts
+\textsc{floor-lowered} $+$ \textsc{range-decides-decline}).  The
+preregistered battery v2 (SHA-256 \texttt{fd39fb42..} hashed
+before any evaluation; no zero datum in the design) cuts the
+exclusion floor $0.2187 \to$ the uncensored declining series
+$0.1066 \to 0.0816$ (slope $-1.39$): the v825 plateau was
+instrument-relative; benchmark $\delta \ge 10^{-3}$ at
+$X^* \approx 81.6$ (extrapolation, typed); the $-0.872$
+zero-distance rank correlation typed as the hash-verified
+non-circular side-finding.  Controls fire.  No marker move, no
+RH claim.
+Machine-checked: \veri{v826\_prime\_exclusion\_battery2.py}.
+\mE\ (hash wards, subset ward) $+$ (\textsc{measured}) (the
+uncensored series, the decline)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The zero locator
+(\texttt{PRIME.EXCLUSION.LOCATOR.01}).}
+One module from two probes (the one preregistered-honest C3 FAIL
+$+$ $13/13$; verdicts \textsc{locator-null} $+$
+\textsc{locator-v2-resolves}).  The width profile of the
+certified tower peaks at true zeta ordinates
+(explicit-formula redundancy); the v1 rule honestly failed its
+frozen gates ($61\%$ false peaks) --- on record --- and the
+preregistered v2 rule (prominence $\ge \ln 2.2$, hash
+\texttt{f57a2e7f..}) passes out-of-sample on the disjoint window
+$[60, 120]$: $20/24 = 83\%$ detection, $0\%$ false positives,
+precision $0.086$, all four controls; depth law
+$54 \to 62 \to 83\%$.  Location to $\pm 0.25$ is strictly weaker
+than classical verification.  No marker move, no RH claim.
+Machine-checked: \veri{v827\_prime\_zero\_locator.py}.
+\mE\ (preregistration hashes) $+$ (\textsc{measured})
+(out-of-sample scores)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The comb-native window
+verification (\texttt{PRIME.EXCLUSION.WINDOW.01}).}
+One probe ($12/12$; verdict \textsc{comb-verifies-window};
+contract \texttt{PRIME.DETECTOR.WINDOW.01} [O]).  On
+$\gamma \in (60, 120]$ at $X = 24.8125$ the same certified
+positivity object yields location ($21/25$ ordinates to
+$\pm 0.25$, zero unmatched peaks), exclusion ($\delta \ge
+\delta_{\rm mb}(\gamma)$, uniform $0.0496$, witness-certified)
+and the census ($21 + 4$ typed misses $= 25 =$ cache $=$ rounded
+RvM main term); new deepest certified rung $X = 25.5$ (cap
+$1.2\times10^{11}$).  Mandatory typing: strictly weaker than
+classical (Turing) verification on every axis --- a
+necessary-side consistency demonstration; does not bear on RH.
+Controls fire (the scramble fails all three axes).  No marker
+move.
+Machine-checked: \veri{v828\_prime\_comb\_window.py}.
+\mE\ (census arithmetic, certificates) $+$ (\textsc{measured})
+(location/exclusion legs) $+$ \mO\ (the detector contract)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The depth kill survived
+(\texttt{PRIME.FLOOR.DEPTHKILL.01}).}
+One module from two probes ($16/17$ with the one
+preregistered-honest S5.HLAW FAIL $+$ $12/12$; verdicts
+\textsc{envelope-holds-deep} $+$ \textsc{family-scales}).  The
+\texttt{PRIME.FLOOR.RATIO.01} kill gates (envelope $c = 4.85$ no
+refit; capture $\cos^2\theta \ge 1/2$) played at
+$X = 18.375$--$25.5$ and survived with margins
+$\times5.76$--$\times8.92$ growing (the deep frames decouple
+depth from dimension --- the $h$-law wins); the single pair
+collapses (gap $40\times \to 673\times$, typed) while the
+certified family carries $0.977$--$0.981$ of the floor
+($\rho_{\rm certfam}$ within $2\%$ of measured);
+$\alpha$-coverage typed (citation grade to $\alpha^* \sim 11$
+only --- the v830 blocker).  Controls fire.  [O] stays.  No
+marker move, no RH claim.
+Machine-checked: \veri{v829\_prime\_floor\_depth.py}.
+\mE\ (identity wards, mpmath anchors) $+$ (\textsc{measured})
+(margins, shares, gaps)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The linear budget and the explicit
+envelope (\texttt{PRIME.FLOOR.BUDGET.01}).}
+One module from two probes ($10/10$ $+$ $19$ checks with the five
+preregistered-honest asymptotic FAILs; verdicts
+\textsc{budget-linear-closes-all} $+$
+\textsc{envelope-asymptotic-partial}).  The Higham-linear float
+budget ($7\times$--$171\times$ tighter, explicit constants,
+dps-40 anchors) closes the citation-grade family gate $6/6$ at
+full sieve depth --- $\alpha^* \approx 11$ was a float-convention
+artifact, citation grade extends to $\alpha = 12.75$; the
+deployed v818 convention stays frozen, the linear budget is
+convention for new modules only.  The family closed form is
+exact on $73/73$ frames ($3.6\times10^{-11}$), the limit algebra
+sympy-proven, phases cannot conspire ($0.170$), and the envelope
+is certified-explicit ($\rho \ge 4.335\,h^{-3/2}$ on $73/73$);
+the proof blocker named: alias phase correlations (random-phase
+$h^{-1}$ vs the $h^{-2.5}$ tower).  Controls fire.  No marker
+move, no RH claim.
+Machine-checked: \veri{v830\_prime\_float\_budget.py}.
+\mE\ (sympy algebra, closed forms, budget wards) $+$
+(\textsc{measured}) (closures, the envelope constant)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The typed circularity boundary and
+the pair-correlation bridge (\texttt{PRIME.FLOOR.ALIASMOMENT.01}).}
+One probe ($15$ checks with the seven preregistered-honest
+premise-overturning FAILs, pattern-gated; verdict
+\textsc{alias-correlation-paircorr}; verbatim promotion, no
+downscoping).  The correlation-corrected alias second moment is
+exact (sympy-proven bilinear form: $\tau = (S_2 - S_c)/2 -
+S_s^2/(4P_0) + O(P_0^{-2})$, rotation ward on all $73$ frames);
+the round-25 premise ``the phases carry the gap'' is
+\emph{overturned} --- the amplitudes carry it, decomposing the
+tower exactly as $-2.505 = -3.172$ (amplitude law) $+ 0.668$
+(fading alignment), with $q = S_c/S_2$ sign-changing and the deep
+suppression only $\times1.1$; the exact Guinand split puts the
+coherent sum in the prime-comb fluctuation at $0.01\times$ the
+Poisson square-root scale (shares $-994$/$+995$, cancelling; the
+comb scramble explodes it $10^6\times$ --- the cancellation is
+the arithmetic).  The typed circularity boundary: the required
+control is pair-correlation-equivalent substance, and by Guinand
+the comb's self-cancellation \emph{is} the zero-side floor
+statement --- the analytic-envelope route is closed honestly
+(stop-list entry); the bridge contract
+\texttt{PRIME.FLOOR.PAIRCORR.01} [O] is registered.  Controls:
+comb-side fingerprints fire comb-specifically; C1/C2 restate the
+overturned premise (typed FAILs).  No marker move, no RH claim.
+Machine-checked: \veri{v831\_prime\_alias\_second\_moment.py}.
+\mE\ (the sympy bilinear form, the exact split) $+$
+(\textsc{measured}) (the overturned premise, the sqrt-scale
+cancellation) $+$ \mO\ (the bridge contract)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification

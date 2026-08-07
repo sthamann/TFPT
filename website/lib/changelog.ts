@@ -42,6 +42,2387 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-07",
+    "dateLabel": "2026-08-07 · LXIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round twenty-six — the typed circularity boundary: ONE module ("
+      },
+      {
+        "k": "c",
+        "v": "v831"
+      },
+      {
+        "k": "t",
+        "v": ", from one frozen probe; suite "
+      },
+      {
+        "k": "m",
+        "v": "823\\to824"
+      },
+      {
+        "k": "t",
+        "v": ") — the correlation-corrected alias second moment is EXACT (sympy-proven bilinear form "
+      },
+      {
+        "k": "m",
+        "v": "\\tau = (S_2-S_c)/2 - S_s^2/(4P_0) + O(P_0^{-2})"
+      },
+      {
+        "k": "t",
+        "v": ", identity-warded on all 73 battery frames), the round-25 premise “the phases carry the gap” is OVERTURNED (the AMPLITUDES carry it: the tower law decomposes exactly as "
+      },
+      {
+        "k": "m",
+        "v": "-2.505 = -3.172"
+      },
+      {
+        "k": "t",
+        "v": " amplitude law "
+      },
+      {
+        "k": "m",
+        "v": "+\\,0.668"
+      },
+      {
+        "k": "t",
+        "v": " fading alignment), the exact Guinand split puts the coherent sum in the prime-comb fluctuation at "
+      },
+      {
+        "k": "m",
+        "v": "0.01\\times"
+      },
+      {
+        "k": "t",
+        "v": " the Poisson square-root scale (smooth "
+      },
+      {
+        "k": "m",
+        "v": "-994"
+      },
+      {
+        "k": "t",
+        "v": " / fluctuation "
+      },
+      {
+        "k": "m",
+        "v": "+995"
+      },
+      {
+        "k": "t",
+        "v": ", each "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}1000\\times"
+      },
+      {
+        "k": "t",
+        "v": " the residual, cancelling; the comb scramble explodes it "
+      },
+      {
+        "k": "m",
+        "v": "10^6\\times"
+      },
+      {
+        "k": "t",
+        "v": " — THE CANCELLATION IS THE ARITHMETIC) — and the analytic-envelope route of "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.FLOOR.RATIO.01"
+      },
+      {
+        "k": "t",
+        "v": " is CLOSED HONESTLY at its typed circularity boundary: by Guinand the comb's self-cancellation IS the zero-side floor statement itself, the required control is even deeper than Montgomery-type pair-correlation input, the envelope's constant is arithmetic substance equivalent to the target — stop-list entry, no further analytic-envelope variants; the demand moves to the NEW bridge contract "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.FLOOR.PAIRCORR.01"
+      },
+      {
+        "k": "t",
+        "v": " [O]; NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module (1)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v831_prime_alias_second_moment.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "15"
+        },
+        {
+          "k": "t",
+          "v": " checks with the SEVEN preregistered-honest premise-overturning FAILs "
+        },
+        {
+          "k": "t",
+          "v": "s1.sign/w2b/w2c/w2d/s4.geom/c1/c2"
+        },
+        {
+          "k": "t",
+          "v": " pattern-gated — the FAIL pattern IS the finding; verdict "
+        },
+        {
+          "k": "t",
+          "v": "alias-correlation-paircorr"
+        },
+        {
+          "k": "t",
+          "v": "; discovery probe "
+        },
+        {
+          "k": "c",
+          "v": "prime_alias_second_moment_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", 2026-08-07, re-run identically at promotion; promoted VERBATIM with NO downscoping — measured runtime "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.1"
+        },
+        {
+          "k": "t",
+          "v": " min in-tree, the zero list is the v823 cache "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " vectorized RS scan): the EXACT BILINEAR FORM (sympy-proven, S0 "
+        },
+        {
+          "k": "m",
+          "v": "3/3"
+        },
+        {
+          "k": "t",
+          "v": "): in the pole frame the zeros"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "pole gram is exactly "
+        },
+        {
+          "k": "m",
+          "v": "M_2 = [[P_0 + (S_2+S_c)/2,\\ S_s/2], [S_s/2,\\ (S_2-S_c)/2]]"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\tau = (S_2 - S_c)/2 - S_s^2/(4P_0) + O(P_0^{-2})"
+        },
+        {
+          "k": "t",
+          "v": " — the correlation combination at the leading term is the coherent phase sum "
+        },
+        {
+          "k": "m",
+          "v": "S_c"
+        },
+        {
+          "k": "t",
+          "v": " (rotation-invariance ward at the conditioning-aware machine bar on all 73 frames, truncated-series dev "
+        },
+        {
+          "k": "m",
+          "v": "3.8\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": "); THE PREMISE OVERTURNED: the diagonal (random-phase) part "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_{\\rm diag} = S_2/2"
+        },
+        {
+          "k": "t",
+          "v": " slopes "
+        },
+        {
+          "k": "m",
+          "v": "-3.172"
+        },
+        {
+          "k": "t",
+          "v": " not "
+        },
+        {
+          "k": "m",
+          "v": "-1"
+        },
+        {
+          "k": "t",
+          "v": " (W2B), phase scramble "
+        },
+        {
+          "k": "m",
+          "v": "-3.054"
+        },
+        {
+          "k": "t",
+          "v": " (W2C), Poissonized zeros "
+        },
+        {
+          "k": "m",
+          "v": "-3.654"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "q_{\\rm poiss}"
+        },
+        {
+          "k": "t",
+          "v": " median "
+        },
+        {
+          "k": "m",
+          "v": "0.34 > 0.5\\,q_{\\rm true}"
+        },
+        {
+          "k": "t",
+          "v": " (W2D), and "
+        },
+        {
+          "k": "m",
+          "v": "q = S_c/S_2"
+        },
+        {
+          "k": "t",
+          "v": " changes sign across the battery ("
+        },
+        {
+          "k": "m",
+          "v": "[-0.324, 0.552]"
+        },
+        {
+          "k": "t",
+          "v": ", median "
+        },
+        {
+          "k": "m",
+          "v": "0.19"
+        },
+        {
+          "k": "t",
+          "v": "; deep "
+        },
+        {
+          "k": "m",
+          "v": "M = 1632"
+        },
+        {
+          "k": "t",
+          "v": " suppression only "
+        },
+        {
+          "k": "m",
+          "v": "\\times1.1"
+        },
+        {
+          "k": "t",
+          "v": ") — the full tower "
+        },
+        {
+          "k": "m",
+          "v": "-2.505"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "R^2"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "0.98"
+        },
+        {
+          "k": "t",
+          "v": ", W2A PASS) decomposes EXACTLY as amplitude law "
+        },
+        {
+          "k": "m",
+          "v": "-3.172"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " fading alignment "
+        },
+        {
+          "k": "m",
+          "v": "+0.668"
+        },
+        {
+          "k": "t",
+          "v": "; THE GUINAND SPLIT (exact, identity-route residue "
+        },
+        {
+          "k": "m",
+          "v": "0.019"
+        },
+        {
+          "k": "t",
+          "v": ", soft bar met): "
+        },
+        {
+          "k": "m",
+          "v": "G_Z = (B - S_p - P) + (S_p - S)"
+        },
+        {
+          "k": "t",
+          "v": " gives smooth share "
+        },
+        {
+          "k": "m",
+          "v": "-994.15"
+        },
+        {
+          "k": "t",
+          "v": " / prime-fluctuation share "
+        },
+        {
+          "k": "m",
+          "v": "+995.15"
+        },
+        {
+          "k": "t",
+          "v": ", cancelling to "
+        },
+        {
+          "k": "m",
+          "v": "|S_c^{\\rm fluc}|/\\sigma_{\\rm sqrt} = 0.01"
+        },
+        {
+          "k": "t",
+          "v": " (SQRT-CANCELLATION REGIME); the smooth surrogate does NOT carry it (S4.GEOM "
+        },
+        {
+          "k": "m",
+          "v": "0.868"
+        },
+        {
+          "k": "t",
+          "v": ", deficit-slope dev "
+        },
+        {
+          "k": "m",
+          "v": "2.274"
+        },
+        {
+          "k": "t",
+          "v": "); comb scramble explodes the coherent sum "
+        },
+        {
+          "k": "m",
+          "v": "\\times2.0\\times10^6"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.7\\times10^7"
+        },
+        {
+          "k": "t",
+          "v": ", the Epstein "
+        },
+        {
+          "k": "m",
+          "v": "x^2{+}5y^2"
+        },
+        {
+          "k": "t",
+          "v": " comb "
+        },
+        {
+          "k": "m",
+          "v": "\\times5.1\\times10^3"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.3\\times10^4"
+        },
+        {
+          "k": "t",
+          "v": " — comb-specific arithmetic; THE TYPED CIRCULARITY BOUNDARY: proving the tower "
+        },
+        {
+          "k": "m",
+          "v": "\\tau"
+        },
+        {
+          "k": "t",
+          "v": "-law requires bounding an oscillatory prime sum AT its square-root scale "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " variance-type, pair-correlation-equivalent substance (Montgomery-type on the zero side by the explicit formula), and by Guinand the comb's self-cancellation IS the zero-side floor statement itself. Suite "
+        },
+        {
+          "k": "m",
+          "v": "823\\to824"
+        },
+        {
+          "k": "t",
+          "v": "; standalone green with the v757-precedent pattern gate."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contracts."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " NEW: "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "PRIME.FLOOR.PAIRCORR.01"
+            },
+            {
+              "k": "t",
+              "v": " [O]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — the floor "
+        },
+        {
+          "k": "m",
+          "v": "\\leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " pair-correlation bridge: the floor's envelope constant is Guinand-EQUIVALENT to the zero-side floor statement; demands typed in both directions (FORWARD: an unconditional variance-type bound "
+        },
+        {
+          "k": "m",
+          "v": "|{\\rm aniso}(S_p - S)| \\le C\\sigma_{\\rm sqrt}"
+        },
+        {
+          "k": "t",
+          "v": " uniform in "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " with the pair-correlation-grade entry point DECLARED — no hidden circularity; BACKWARD: instrument calibration of floor margins into effective pair-correlation statements, never a theorem about zeros); KILL: fluctuation share collapsing below "
+        },
+        {
+          "k": "m",
+          "v": "0.6"
+        },
+        {
+          "k": "t",
+          "v": " while the suppression persists, or the scale ratio rising systematically above "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " (one-point regime — the boundary mis-typed, the route reopens on PNT-grade input); CLOSE: the forward demand delivered with its entry point named; explicitly does NOT promise an unconditional proof (the proving direction contains pair-correlation-grade arithmetic, fenced). "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "PRIME.FLOOR.RATIO.01"
+            },
+            {
+              "k": "t",
+              "v": " [O] ANALYTIC-ENVELOPE ROUTE CLOSED"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (dated closure note): the round-25 alias-phase blocker resolves INTO the typed boundary; NO further analytic-envelope variants (STOP-LIST entry per house discipline); kill criteria unchanged, still [O], promotion fenced."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 2 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.ALIASMOMENT.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the contract row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-26 closure note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "907\\to909"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves (the bilinear form and its expansion sympy-proven [E]-grade wards; the overturned premise and the sqrt-scale cancellation measured; the contracts [O])."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The typed circularity boundary: the analytic-envelope route closes, and the floor–pair-correlation bridge is named” ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v831}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": one new audit block "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the round-26 follow-up notes on the floor-contract prose; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " registration block, the dated closure note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": ", and the typed-blocker note on the depth-kill/budget block."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round twenty-six”; counters "
+        },
+        {
+          "k": "m",
+          "v": "823\\to824"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v831"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated (ScriptIndex, changelog.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "824"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v831"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The bilinear form, its "
+        },
+        {
+          "k": "m",
+          "v": "1/P_0"
+        },
+        {
+          "k": "t",
+          "v": " expansion and the det identity are sympy-proven [E]-grade wards; the overturned premise, the exact Guinand split shares, the sqrt-scale ratio and the comb-scramble/Epstein fingerprints are measured finite-level evidence on the frozen battery; the seven FAILs are preregistered-honest adjudications on record (the FAIL pattern IS the finding, pattern-gated); the boundary is a TYPED BOUNDARY, not a theorem — the route closure is a discipline statement, not a positivity result; NO marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-07",
+    "dateLabel": "2026-08-07 · LXVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round twenty-five — the exclusion detector and the depth kill: SIX modules ("
+      },
+      {
+        "k": "c",
+        "v": "v825"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v830"
+      },
+      {
+        "k": "t",
+        "v": ", from eleven frozen probes; suite "
+      },
+      {
+        "k": "m",
+        "v": "817\\to823"
+      },
+      {
+        "k": "t",
+        "v": ") — the verified PSD rungs of the GL1 prime-comb tower become a hash-preregistered "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "window detector"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ": certified exclusion regions with rigorous Cholesky/Higham "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " witness-Rayleigh certificates to "
+      },
+      {
+        "k": "m",
+        "v": "X=24.81"
+      },
+      {
+        "k": "t",
+        "v": ", a zero locator validated OUT-OF-SAMPLE on a disjoint untouched window ("
+      },
+      {
+        "k": "m",
+        "v": "83\\%"
+      },
+      {
+        "k": "t",
+        "v": " detection, "
+      },
+      {
+        "k": "m",
+        "v": "0\\%"
+      },
+      {
+        "k": "t",
+        "v": " false positives, precision "
+      },
+      {
+        "k": "m",
+        "v": "0.086"
+      },
+      {
+        "k": "t",
+        "v": "), and the capstone comb-native window verification whose census reconciles against the Riemann–von Mangoldt count ("
+      },
+      {
+        "k": "m",
+        "v": "21+4"
+      },
+      {
+        "k": "t",
+        "v": " typed misses "
+      },
+      {
+        "k": "m",
+        "v": "=25="
+      },
+      {
+        "k": "t",
+        "v": " cache "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " RvM; new deepest certified rung "
+      },
+      {
+        "k": "m",
+        "v": "X=25.5"
+      },
+      {
+        "k": "t",
+        "v": ", comb cap "
+      },
+      {
+        "k": "m",
+        "v": "1.2\\times10^{11}"
+      },
+      {
+        "k": "t",
+        "v": ") — registered as the new contract "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.DETECTOR.WINDOW.01"
+      },
+      {
+        "k": "t",
+        "v": " [O]; and the "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.FLOOR.RATIO.01"
+      },
+      {
+        "k": "t",
+        "v": " kill gates, played at full sieve depth, SURVIVE with growing margins while the "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha^*\\approx11"
+      },
+      {
+        "k": "t",
+        "v": " horizon falls as a float-convention artifact (citation grade to "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha=12.75"
+      },
+      {
+        "k": "t",
+        "v": "; envelope certified-explicit "
+      },
+      {
+        "k": "m",
+        "v": "\\rho\\ge4.335\\,h^{-3/2}"
+      },
+      {
+        "k": "t",
+        "v": " on "
+      },
+      {
+        "k": "m",
+        "v": "73/73"
+      },
+      {
+        "k": "t",
+        "v": "; the alias-phase proof blocker named) — every statement typed strictly weaker than classical verification; NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (6)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v825_prime_exclusion_ladder.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "26/26 + 21/21"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "ladder-extended"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "saturation-typed"
+        },
+        {
+          "k": "t",
+          "v": ": every verified PSD rung of the GL1 tower ("
+        },
+        {
+          "k": "m",
+          "v": "D=1/64"
+        },
+        {
+          "k": "t",
+          "v": ") carries a rigorous "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}>0"
+        },
+        {
+          "k": "t",
+          "v": " certificate — Cholesky PD verification with the Higham backward-error bound plus a Rayleigh-residual enclosure, e.g. "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(X{=}24.81)=1.078\\times10^{-6}\\ge9.70\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": " CERTIFIED — and is inverted through the tent-read Guinand identity into quadruple-exclusion regions "
+        },
+        {
+          "k": "m",
+          "v": "\\{1/2\\pm\\delta\\pm i\\gamma\\}"
+        },
+        {
+          "k": "t",
+          "v": " on the frozen rank-4 battery, every published boundary point re-proved by a witness-Rayleigh certificate; the census threshold "
+        },
+        {
+          "k": "m",
+          "v": "\\Xi_{\\rm eff}=X\\,\\delta_{\\rm mb}"
+        },
+        {
+          "k": "t",
+          "v": " falls "
+        },
+        {
+          "k": "m",
+          "v": "0.639\\to0.457\\to0.274\\to0.218"
+        },
+        {
+          "k": "t",
+          "v": " and PLATEAUS at "
+        },
+        {
+          "k": "m",
+          "v": "0.218\\pm3\\%"
+        },
+        {
+          "k": "t",
+          "v": " (gates recomputed from the frozen deep series; mechanism "
+        },
+        {
+          "k": "t",
+          "v": "support-active-but-X-stalled"
+        },
+        {
+          "k": "t",
+          "v": ": support slope "
+        },
+        {
+          "k": "m",
+          "v": "-0.68"
+        },
+        {
+          "k": "t",
+          "v": ", rank-12 gain growing "
+        },
+        {
+          "k": "m",
+          "v": "19.3\\to25.0\\%"
+        },
+        {
+          "k": "t",
+          "v": " below the "
+        },
+        {
+          "k": "m",
+          "v": "30\\%"
+        },
+        {
+          "k": "t",
+          "v": " bar); multi-zero double injection breaks without interference rescue; honest reach typed: Nyquist "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/D=201"
+        },
+        {
+          "k": "t",
+          "v": ", region INSIDE the Platt–Trudgian strip — consistency re-derivation, not new territory); "
+        },
+        {
+          "k": "c",
+          "v": "v826_prime_exclusion_battery2.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "16/16 + 13/13"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "floor-lowered"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "range-decides-decline"
+        },
+        {
+          "k": "t",
+          "v": ": battery v2 designed a priori from instrument diagnostics only and SHA-256-hashed "
+        },
+        {
+          "k": "c",
+          "v": "fd39fb42.."
+        },
+        {
+          "k": "t",
+          "v": " BEFORE any evaluation (no zero datum; v1 "
+        },
+        {
+          "k": "m",
+          "v": "\\subset"
+        },
+        {
+          "k": "t",
+          "v": " v2, pointwise dominance live-verified); old-grid floor "
+        },
+        {
+          "k": "m",
+          "v": "\\le0.0979"
+        },
+        {
+          "k": "t",
+          "v": " with the grid-censoring caveat typed; the measurement-range extension (exact-subset grid, bit-for-bit ward) UNCENSORS the series "
+        },
+        {
+          "k": "m",
+          "v": "0.1066/0.0982/0.0960/0.0913/0.0816"
+        },
+        {
+          "k": "t",
+          "v": " at slope "
+        },
+        {
+          "k": "m",
+          "v": "-1.39"
+        },
+        {
+          "k": "t",
+          "v": " — the v825 plateau was the instrument, not the tower; benchmark "
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\ge10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "X^*=81.6"
+        },
+        {
+          "k": "t",
+          "v": " (extrapolation, typed); side-finding: rank correlation "
+        },
+        {
+          "k": "m",
+          "v": "-0.872"
+        },
+        {
+          "k": "t",
+          "v": " of the uncensored boundaries with the distance to the nearest true ordinate, hash-verified non-circular); "
+        },
+        {
+          "k": "c",
+          "v": "v827_prime_zero_locator.py"
+        },
+        {
+          "k": "t",
+          "v": " (the ONE preregistered-honest C3 FAIL "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "13/13"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "locator-null"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "locator-v2-resolves"
+        },
+        {
+          "k": "t",
+          "v": ": the width profile "
+        },
+        {
+          "k": "m",
+          "v": "W(\\gamma)"
+        },
+        {
+          "k": "t",
+          "v": " PEAKS at true ordinates (explicit-formula redundancy: a real zero makes the injected quadruple redundant, the boundary rises); v1 honestly failed its frozen gates ("
+        },
+        {
+          "k": "m",
+          "v": "12/13"
+        },
+        {
+          "k": "t",
+          "v": " peaks but "
+        },
+        {
+          "k": "m",
+          "v": "61\\%"
+        },
+        {
+          "k": "t",
+          "v": " false peaks at "
+        },
+        {
+          "k": "m",
+          "v": "\\ln1.5"
+        },
+        {
+          "k": "t",
+          "v": ") — on record; the post-hoc separation (matched "
+        },
+        {
+          "k": "m",
+          "v": "\\ge0.82"
+        },
+        {
+          "k": "t",
+          "v": ", false "
+        },
+        {
+          "k": "m",
+          "v": "\\le0.73"
+        },
+        {
+          "k": "t",
+          "v": ") froze "
+        },
+        {
+          "k": "m",
+          "v": "\\ln2.2"
+        },
+        {
+          "k": "t",
+          "v": " for v2, preregistered "
+        },
+        {
+          "k": "c",
+          "v": "f57a2e7f.."
+        },
+        {
+          "k": "t",
+          "v": " BEFORE any test evaluation; out-of-sample on the disjoint window "
+        },
+        {
+          "k": "m",
+          "v": "[60,120]"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "20/24=83\\%"
+        },
+        {
+          "k": "t",
+          "v": " detection, "
+        },
+        {
+          "k": "m",
+          "v": "0\\%"
+        },
+        {
+          "k": "t",
+          "v": " false positives, precision "
+        },
+        {
+          "k": "m",
+          "v": "0.086"
+        },
+        {
+          "k": "t",
+          "v": ", all four controls (scramble/Epstein no peaks, shifted null below the structural re-lock ceiling, grid refinement "
+        },
+        {
+          "k": "m",
+          "v": "7/7"
+        },
+        {
+          "k": "t",
+          "v": " stable); depth law "
+        },
+        {
+          "k": "m",
+          "v": "54\\to62\\to83\\%"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v828_prime_comb_window.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "comb-verifies-window"
+        },
+        {
+          "k": "t",
+          "v": ", the capstone: on "
+        },
+        {
+          "k": "m",
+          "v": "\\gamma\\in(60,120]"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "X=24.8125"
+        },
+        {
+          "k": "t",
+          "v": " ONE certified positivity object yields location ("
+        },
+        {
+          "k": "m",
+          "v": "21/25"
+        },
+        {
+          "k": "t",
+          "v": " ordinates to "
+        },
+        {
+          "k": "m",
+          "v": "\\pm0.25"
+        },
+        {
+          "k": "t",
+          "v": ", max error "
+        },
+        {
+          "k": "m",
+          "v": "0.242"
+        },
+        {
+          "k": "t",
+          "v": ", ZERO unmatched peaks), exclusion ("
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\ge\\delta_{\\rm mb}(\\gamma)"
+        },
+        {
+          "k": "t",
+          "v": " pointwise, uniform bound "
+        },
+        {
+          "k": "m",
+          "v": "0.0496"
+        },
+        {
+          "k": "t",
+          "v": ", witness-certified at six frozen samples) and the census ("
+        },
+        {
+          "k": "m",
+          "v": "21+4"
+        },
+        {
+          "k": "t",
+          "v": " typed misses "
+        },
+        {
+          "k": "m",
+          "v": "=25="
+        },
+        {
+          "k": "t",
+          "v": " cached verified count "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " rounded RvM main term "
+        },
+        {
+          "k": "m",
+          "v": "25.237\\to25"
+        },
+        {
+          "k": "t",
+          "v": "); miss autopsy complete ("
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " pair-merge below the grid resolution "
+        },
+        {
+          "k": "m",
+          "v": "+3"
+        },
+        {
+          "k": "t",
+          "v": " prominence-limited; the depth-recovery prediction at the NEW deepest certified rung "
+        },
+        {
+          "k": "m",
+          "v": "X=25.5"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}=8.07\\times10^{-7}\\ge7.26\\times10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": " CERTIFIED, verified as typed: "
+        },
+        {
+          "k": "m",
+          "v": "0/3+0/1"
+        },
+        {
+          "k": "t",
+          "v": "); the scramble fails ALL THREE axes; WEAKER-THAN-CLASSICAL typing mandatory and carried verbatim: Turing proves "
+        },
+        {
+          "k": "m",
+          "v": "N(T)"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\delta=0"
+        },
+        {
+          "k": "t",
+          "v": " exactly, the comb leaves a "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_{\\rm mb}"
+        },
+        {
+          "k": "t",
+          "v": "-strip unresolved and can never close it at exponential comb cost — a necessary-side consistency demonstration; does NOT bear on RH); "
+        },
+        {
+          "k": "c",
+          "v": "v829_prime_floor_depth.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "16/17"
+        },
+        {
+          "k": "t",
+          "v": " with the ONE preregistered-honest S5.HLAW FAIL "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "12/12"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "envelope-holds-deep"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "family-scales"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": " kill gates K1 ("
+        },
+        {
+          "k": "m",
+          "v": "\\rho h^{3/2}\\ge c=4.85"
+        },
+        {
+          "k": "t",
+          "v": ", NO refit) and K2 ("
+        },
+        {
+          "k": "m",
+          "v": "\\cos^2\\theta\\ge1/2"
+        },
+        {
+          "k": "t",
+          "v": ") played at "
+        },
+        {
+          "k": "m",
+          "v": "X=18.375"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "25.5"
+        },
+        {
+          "k": "t",
+          "v": " on uniform-grid tower frames whose "
+        },
+        {
+          "k": "m",
+          "v": "h=588"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "816"
+        },
+        {
+          "k": "t",
+          "v": " sit INSIDE the deployed "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-range while the depth doubles — the test decouples depth from dimension — and SURVIVED: margins "
+        },
+        {
+          "k": "m",
+          "v": "\\times5.76/6.24/6.53/7.16/8.17/8.92"
+        },
+        {
+          "k": "t",
+          "v": " growing monotonically, min "
+        },
+        {
+          "k": "m",
+          "v": "\\cos^2\\theta=0.849"
+        },
+        {
+          "k": "t",
+          "v": ", non-decay "
+        },
+        {
+          "k": "m",
+          "v": "+0.060"
+        },
+        {
+          "k": "t",
+          "v": " per log-unit (the "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-law wins); the typed miss: the single pair collapses (gap "
+        },
+        {
+          "k": "m",
+          "v": "40\\times\\to673\\times"
+        },
+        {
+          "k": "t",
+          "v": ") and the certified top-100 family takes over ("
+        },
+        {
+          "k": "m",
+          "v": "0.977"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.981"
+        },
+        {
+          "k": "t",
+          "v": " of the floor, "
+        },
+        {
+          "k": "m",
+          "v": "\\rho_{\\rm certfam}"
+        },
+        {
+          "k": "t",
+          "v": " within "
+        },
+        {
+          "k": "m",
+          "v": "2\\%"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-coverage typed: citation grade only "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha\\in\\{9.19,10.36,11.05\\}"
+        },
+        {
+          "k": "t",
+          "v": " — exactly the v830 blocker); "
+        },
+        {
+          "k": "c",
+          "v": "v830_prime_float_budget.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "10/10"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "19"
+        },
+        {
+          "k": "t",
+          "v": " checks with the FIVE preregistered-honest asymptotic FAILs "
+        },
+        {
+          "k": "t",
+          "v": "a7/a8/a9/a10/s2.exp"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "budget-linear-closes-all"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "envelope-asymptotic-partial"
+        },
+        {
+          "k": "t",
+          "v": ": the deployed quadratic float convention "
+        },
+        {
+          "k": "m",
+          "v": "100\\,\\varepsilon\\|A_2\\|_F^2"
+        },
+        {
+          "k": "t",
+          "v": " was four orders above the true tail term at depth; the explicit Higham-linear chain (compensated banded accumulation with TwoSum, "
+        },
+        {
+          "k": "m",
+          "v": "N_{\\rm SUB}=2^{16}"
+        },
+        {
+          "k": "t",
+          "v": "; the irreducible atom-position term "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon X/D"
+        },
+        {
+          "k": "t",
+          "v": "; exact fsum dots; dps-40 spot anchors with "
+        },
+        {
+          "k": "m",
+          "v": "\\times10"
+        },
+        {
+          "k": "t",
+          "v": " caps) is "
+        },
+        {
+          "k": "m",
+          "v": "7\\times"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "171\\times"
+        },
+        {
+          "k": "t",
+          "v": " tighter and closes the citation-grade family gate "
+        },
+        {
+          "k": "m",
+          "v": "6/6"
+        },
+        {
+          "k": "t",
+          "v": " (old: "
+        },
+        {
+          "k": "m",
+          "v": "3/6"
+        },
+        {
+          "k": "t",
+          "v": ") — citation grade extends to "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha=12.75"
+        },
+        {
+          "k": "t",
+          "v": ", FULL SIEVE DEPTH; CONVENTION NOTE: the deployed v818 convention stays FROZEN in the existing suite, the linear budget is registered as convention for NEW modules only; the analytic part runs near-verbatim: family closed form exact on ALL 73 battery frames ("
+        },
+        {
+          "k": "m",
+          "v": "3.6\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": "), sympy-proven limit algebra, phase conspiracy excluded (dip floor "
+        },
+        {
+          "k": "m",
+          "v": "0.170"
+        },
+        {
+          "k": "t",
+          "v": "), and THE EXPLICIT CERTIFIED ENVELOPE "
+        },
+        {
+          "k": "m",
+          "v": "\\rho\\ge\\rho_{\\rm certfam}\\ge4.335\\,h^{-3/2}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "73/73"
+        },
+        {
+          "k": "t",
+          "v": ", non-decaying; the proof blocker typed: alias phase correlations — random-phase predicts "
+        },
+        {
+          "k": "m",
+          "v": "\\tau\\sim h^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ", the tower measures "
+        },
+        {
+          "k": "m",
+          "v": "h^{-2.5}"
+        },
+        {
+          "k": "t",
+          "v": " — the envelope stands certified-explicit, not proven). Suite "
+        },
+        {
+          "k": "m",
+          "v": "817\\to823"
+        },
+        {
+          "k": "t",
+          "v": "; all six run standalone green and encode their frozen patterns (incl. the expected-FAIL patterns) per the "
+        },
+        {
+          "k": "c",
+          "v": "v757"
+        },
+        {
+          "k": "t",
+          "v": " precedent; all eleven probes re-run identically at promotion (2026-08-07); the deep sieves (to "
+        },
+        {
+          "k": "m",
+          "v": "1.2\\times10^{11}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sim"
+        },
+        {
+          "k": "t",
+          "v": "17–25 min per probe) are downscoped in the suite modules to fast live sub-ladders at "
+        },
+        {
+          "k": "m",
+          "v": "X\\le18.375"
+        },
+        {
+          "k": "t",
+          "v": " with the full-depth numbers recorded as frozen reference constants and every decision gate RECOMPUTED from them — predeclared in each module's PROVENANCE."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contracts."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " NEW: "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "PRIME.DETECTOR.WINDOW.01"
+            },
+            {
+              "k": "t",
+              "v": " [O]"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — the comb-native window detector (location "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " exclusion "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " census, hash-warded end to end, validated out-of-sample); OPEN: the depth-to-width law as theorem, the completeness mechanism, window extension beyond Nyquist (explicitly NOT promised); KILL: out-of-sample detection "
+        },
+        {
+          "k": "m",
+          "v": "<40\\%"
+        },
+        {
+          "k": "t",
+          "v": " on a deeper certified rung, a census contradiction on any PD-certified window, or a false positive surviving the grid-refinement ward; mandatory weaker-than-classical typing carried by every module of the strand. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "PRIME.FLOOR.RATIO.01"
+            },
+            {
+              "k": "t",
+              "v": " [O] DEPTH-HARDENED"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (dated contract-text update): kill gates played at the contract's own preregistration and survived at "
+        },
+        {
+          "k": "m",
+          "v": "X=25.5"
+        },
+        {
+          "k": "t",
+          "v": "; the round-24 "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^*\\approx11"
+        },
+        {
+          "k": "t",
+          "v": " horizon REMOVED as a float-convention artifact (citation grade to "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha=12.75"
+        },
+        {
+          "k": "t",
+          "v": "; deployed v818 budget convention unchanged, the Higham-linear budget is convention for NEW modules only); the envelope now certified-explicit ("
+        },
+        {
+          "k": "m",
+          "v": "c_{\\rm cert}=4.335\\,h^{-3/2}"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "73/73"
+        },
+        {
+          "k": "t",
+          "v": "); the remaining proof blocker NAMED (alias phase correlations, random-phase "
+        },
+        {
+          "k": "m",
+          "v": "h^{-1}"
+        },
+        {
+          "k": "t",
+          "v": " vs tower "
+        },
+        {
+          "k": "m",
+          "v": "h^{-2.5}"
+        },
+        {
+          "k": "t",
+          "v": "); kill criteria unchanged, still [O], promotion fenced."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 7 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.EXCLUSION.LADDER.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.EXCLUSION.BATTERY2.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.EXCLUSION.LOCATOR.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.EXCLUSION.WINDOW.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.DEPTHKILL.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.BUDGET.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the contract row "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.DETECTOR.WINDOW.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated depth-hardening update on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "900\\to907"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves anywhere (certificates and preregistration hashes [E]-grade wards; exclusion maps, locator scores, envelope constants measured; the contracts [O])."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The exclusion detector: the certified ladder becomes a window-verification instrument, and the floor survives its kill gates at full sieve depth” (all six "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": " citations; the weaker-than-classical typing carried in the body); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": six new audit blocks "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the two round-25 follow-up notes on the floor-contract prose; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.DETECTOR.WINDOW.01"
+        },
+        {
+          "k": "t",
+          "v": " registration, the depth-kill/budget registration block, and the dated "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.RATIO.01"
+        },
+        {
+          "k": "t",
+          "v": " note."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round twenty-five”; counters "
+        },
+        {
+          "k": "m",
+          "v": "817\\to823"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v830"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated (ScriptIndex, changelog.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "823"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v830"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The certificates (Cholesky/Higham, witness-Rayleigh, preregistration hashes, sympy algebra, dps-40 anchors) are [E]-grade machine wards at float precision; the exclusion maps, locator scores, envelope margins and closure constants are measured finite-level evidence on frozen instruments; the honest negatives (LOCATOR-NULL, the S5.HLAW single-pair collapse, the five asymptotic FAILs of the analytic envelope) are preregistered adjudications on record; the mandatory typing is everywhere: locations to "
+        },
+        {
+          "k": "m",
+          "v": "\\pm0.25"
+        },
+        {
+          "k": "t",
+          "v": " and exclusions to "
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\ge\\delta_{\\rm mb}"
+        },
+        {
+          "k": "t",
+          "v": " are strictly weaker than classical verification, every verified window lies inside the Platt–Trudgian strip, and the strand is necessary-side evidence — NO marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-08-06",
     "dateLabel": "2026-08-06 · LXVII",
     "heading": [

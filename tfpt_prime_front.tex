@@ -13597,6 +13597,266 @@ RH-compatibility demands of these windows, and its value is that
 it is now certified rather than merely observed.
 \textbf{No statement about the Riemann Hypothesis is made.}
 
+\subsection{The exclusion detector: the certified ladder becomes a
+window-verification instrument, and the floor survives its kill
+gates at full sieve depth}
+\label{sec:exclusion-detector}
+
+Round 25 (2026-08-07) promotes six modules from eleven frozen
+probes (\texttt{v825}--\texttt{v830}, suite $817\to823$), in two
+coherent strands.  \emph{Strand A} turns the verified PSD rungs of
+the GL1 prime-comb tower into a hash-preregistered
+\emph{detector}: certified exclusion regions, an out-of-sample
+validated zero locator, and the capstone --- a comb-native window
+verification whose census reconciles against the Riemann--von
+Mangoldt count (the new contract
+\texttt{PRIME.DETECTOR.WINDOW.01} [O]).  \emph{Strand B} plays the
+\texttt{PRIME.FLOOR.RATIO.01} kill gates at the certified
+exclusion-tower depths --- they \emph{survive}, growing --- and
+removes the $\alpha^* \approx 11$ citation horizon of round 24 as
+a float-convention artifact.  Every statement below carries the
+mandatory typing: the strand is \emph{necessary-side} evidence,
+strictly weaker than classical verification on every axis; no
+marker moves; \textbf{no RH/GRH claim anywhere}.
+
+\emph{The certified exclusion ladder}
+(\veri{v825\_prime\_exclusion\_ladder.py}, $26/26 + 21/21$,
+\textsc{ladder-extended} $+$ \textsc{saturation-typed}): each
+verified PSD rung $T_X$ of the tower ($D = 1/64$, $X = MD$)
+carries a rigorous floating-point certificate ---
+$\lambda_{\min}(T_X) \ge L_X > 0$ by Cholesky PD verification with
+the Higham backward-error bound plus a Rayleigh-residual enclosure
+--- and is inverted, through the tent-read Guinand identity on the
+frozen rank-4 battery, into a quadruple-\emph{exclusion} region:
+hypotheses $\tfrac12 \pm \delta \pm i\gamma$ are excluded where
+the subspace $\lambda_{\min}(T_X \pm Q) < -{\rm EXC}_{\rm BUD}$,
+every published boundary point re-proved by a rigorous
+witness-Rayleigh certificate.  The ladder now stands at $X = 4$ /
+$10$ / $18.375$ / $20.72$ / $22.09$ / $23.48$ / $24.81$ (deep
+sieves to $6\times10^{10}$), and the census threshold
+$\Xi_{\rm eff} = X\,\delta_{\rm mb}$ falls
+$0.639 \to 0.457 \to 0.274 \to 0.218$ --- then \emph{plateaus} at
+$0.218 \pm 3\%$: saturation, typed
+support-active-but-$X$-stalled (the battery still converts
+$u$-support into width inside a rung, but added depth stopped
+helping; the rank-12 enrichment gain grows $19.3 \to 25.0\%$,
+below the $30\%$ battery-limited bar).  Honest reach: the
+$\gamma$-window is Nyquist-limited to $\pi/D = 201$ and every
+visible ordinate lies \emph{inside} the Platt--Trudgian-verified
+strip --- the region is an independent TFPT-data-only
+re-derivation, \emph{not} new territory.
+
+\emph{The preregistration discipline, and the plateau falls}
+(\veri{v826\_prime\_exclusion\_battery2.py}, $16/16 + 13/13$,
+\textsc{floor-lowered} $+$ \textsc{range-decides-decline}):
+battery v2 was designed \emph{a priori} from instrument
+diagnostics only and SHA-256-hashed (\texttt{fd39fb42..})
+\emph{before} any exclusion evaluation --- no measured boundary,
+no exclusion map, and no zeta-zero datum entered the design; v1
+is a subset of v2, so the decision content is slope and floor
+level, not the sign of the gain.  On the same certified rungs the
+v2 floor drops to $\Xi_{v2} \le 0.0979$ (old grid; the two deepest
+medians sat \emph{exactly} on the grid floor $1/240$ ---
+censoring caveat, typed), and the measurement-range extension
+(one decade down at the frozen grid ratio, old grid an exact
+subset) \emph{uncensors} the series:
+$\Xi_{v2} = 0.1066 / 0.0982 / 0.0960 / 0.0913 / 0.0816$, log-log
+slope $-1.39$ over the deepest three rungs --- the v825 plateau
+was the \emph{instrument}, not the tower.  Side-finding (typed,
+hash-verified non-circular): the uncensored boundaries
+rank-correlate $-0.872$ with the distance to the nearest true
+ordinate.
+
+\emph{The zero locator: the honest null, then the out-of-sample
+resolution} (\veri{v827\_prime\_zero\_locator.py}, the one
+preregistered-honest C3 FAIL $+$ $13/13$, \textsc{locator-null}
+$+$ \textsc{locator-v2-resolves}): near-ordinate rows have
+\emph{larger} $\delta_{\rm mb}$ --- a real zero at $\gamma$ makes
+the injected synthetic quadruple \emph{redundant}, so the
+breakable margin shrinks and the boundary rises: the width
+profile $W(\gamma)$ peaks at true ordinates.  The v1 locator
+honestly failed its frozen gates (the $\ln 1.5$ prominence bar
+admitted a $61\%$ false-peak background) --- on record.  The
+post-hoc separation (matched prominence $\ge 0.82$, false
+$\le 0.73$) froze the threshold $\ln 2.2$ for v2, preregistered
+and hashed (\texttt{f57a2e7f..}) \emph{before} any test-window
+evaluation; on the disjoint, previously untouched window
+$\gamma \in [60, 120]$ the frozen rule scores $20/24 = 83\%$
+detection, $0\%$ false positives, precision $0.086$, with all
+four controls (scramble and Epstein combs show no peaks; the
+shifted null collapses below the structural re-lock ceiling;
+grid refinement leaves every matched peak in place).  The depth
+law is measured: detection $54 \to 62 \to 83\%$ at
+$X = 18.4 / 22.1 / 24.8$.
+
+\emph{The capstone: a comb-native window verification}
+(\veri{v828\_prime\_comb\_window.py}, $12/12$,
+\textsc{comb-verifies-window}; contract
+\texttt{PRIME.DETECTOR.WINDOW.01} [O]): on the window
+$\gamma \in (60, 120]$ at the certified rung $X = 24.8125$, the
+\emph{same} certified positivity object yields both legs ---
+\emph{location}: 21 of the 25 zeta ordinates, each within
+$\pm 0.25$ (measured max error $0.242$), zero unmatched peaks;
+\emph{exclusion}: every quadruple hypothesis with
+$\delta \ge \delta_{\rm mb}(\gamma)$ excluded pointwise (uniform
+window bound $0.0496$), witness-certified at the six frozen
+samples; \emph{census}: $21 + 4$ typed misses $= 25 =$ the cached
+verified count $=$ the rounded RvM main term.  The miss autopsy
+is complete (one pair-merge below the $0.25$-grid resolution,
+three prominence-limited), and the depth-recovery prediction at
+the \emph{new deepest certified rung} $X = 25.5$ (comb cap
+$1.2\times10^{11}$, $\lambda_{\min} = 8.07\times10^{-7}$,
+certificate $\ge 7.26\times10^{-7}$) was verified as typed.
+\textbf{Weaker than classical verification} (mandatory typing):
+Turing's method \emph{proves} the count and $\delta = 0$ exactly;
+the comb reaches $21/25$, leaves a strip of half-width
+$\delta_{\rm mb}$ unresolved, and its measured depth law can
+never close the gap to $\delta = 0$ at exponential comb cost.
+The architectural reading, stated precisely: a tower assembled
+from the discrete compiler side with \emph{no zero input}
+(hash-verified end to end) \emph{carries} the low-lying zero
+positions --- a necessary-side consistency demonstration of the
+explicit-formula reading; it does not constrain zeros beyond the
+certified exclusion regions and does not bear on RH.
+
+\emph{Strand B: the kill gates survive at depth}
+(\veri{v829\_prime\_floor\_depth.py}, $16/17$ with the one
+preregistered-honest S5.HLAW FAIL $+$ $12/12$,
+\textsc{envelope-holds-deep} $+$ \textsc{family-scales}): the
+\texttt{PRIME.FLOOR.RATIO.01} gates --- K1 envelope
+$\rho h^{3/2} \ge c = 4.85$ (no refit) and K2 capture
+$\cos^2\theta \ge \tfrac12$ --- were played at
+$X = 18.375$--$25.5$ on the uniform-grid tower frames, whose
+half-dimensions $h = 588$--$816$ sit \emph{inside} the deployed
+$h$-range while the depth doubles: the test decouples depth from
+dimension, and if $\rho$ were secretly a depth law the kill would
+fire.  It does not: margins
+$\times 5.76 / 6.24 / 6.53 / 7.16 / 8.17 / 8.92$, growing
+monotonically, minimum $\cos^2\theta = 0.849$, non-decay trend
+$+0.060$ per log-unit --- the $h$-law wins.  The typed miss: the
+single fixed pair collapses at depth (gap $40\times \to
+673\times$), and the certified top-100 pole $\times$ alias family
+takes over --- $0.977$--$0.981$ of the floor at every deep rung,
+the certified family bound within $2\%$ of the measured $\rho$.
+The remaining caveat was the $\alpha$-coverage: citation grade
+reached only $\alpha \in \{9.19, 10.36, 11.05\}$.
+
+\emph{The budget, and the explicit envelope}
+(\veri{v830\_prime\_float\_budget.py}, $10/10$ $+$ $19$ checks
+with the five preregistered-honest asymptotic FAILs,
+\textsc{budget-linear-closes-all} $+$
+\textsc{envelope-asymptotic-partial}): the $\alpha^* \approx 11$
+horizon was an \emph{artifact of the frozen quadratic float
+convention} ($100\,\varepsilon\,\|A_2\|_F^2$, calibrated at
+$\|A_2\| \sim 300$, four orders above the true tail term at
+depth).  The replacement is a fully explicit Higham-grade
+norm-\emph{linear} chain (compensated banded accumulation with
+TwoSum folding, $N_{\rm SUB} = 2^{16}$; the irreducible
+atom-position term $\varepsilon X/D$; exact \texttt{fsum} dots;
+dps-40 spot anchors with $\times10$ caps): budgets
+$7\times$--$171\times$ tighter, the citation-grade family gate
+closes $6/6$ (old convention $3/6$) --- \emph{citation grade now
+extends to $\alpha = 12.75$, full sieve depth}.  Convention note:
+the deployed v818 convention stays frozen in the existing suite;
+the linear budget is registered for \emph{new} modules only.  On
+the analytic side the certified family sum acquires its exact
+closed form (reproducing the component sums on all 73 battery
+frames at $3.6\times10^{-11}$), the limit algebra is
+sympy-proven, phases cannot conspire (dip floor $0.170$), and the
+envelope constant becomes \emph{certified-explicit}:
+\[
+  \rho \;\ge\; \rho_{\rm certfam} \;\ge\; 4.335\,h^{-3/2}
+  \quad\text{on } 73/73 \text{ points, non-decaying.}
+\]
+The proof blocker is named honestly (the five expected FAILs):
+the alias \emph{phase correlations} --- the random-phase model
+predicts $\tau \sim h^{-1}$ where the $D = 1/64$ tower measures
+$h^{-2.5}$ --- block the analytic uniformity; the envelope stands
+certified-explicit, not proven.  \texttt{PRIME.FLOOR.RATIO.01}
+stays [O], depth-hardened.  \textbf{No statement about the
+Riemann Hypothesis is made.}
+
+\subsection{The typed circularity boundary: the analytic-envelope
+route closes, and the floor--pair-correlation bridge is named}
+\label{sec:paircorr-boundary}
+
+Round 26 (2026-08-07) promotes one module
+(\veri{v831\_prime\_alias\_second\_moment.py}, suite $823\to824$;
+verdict \textsc{alias-correlation-paircorr}, $15$ checks with the
+\emph{seven} preregistered-honest premise-overturning FAILs,
+pattern-gated) --- the honest typed closure of the
+analytic-envelope route that round 25 left open as ``the
+alias-phase proof blocker.''
+
+\emph{The exact bilinear form} (sympy-proven, identity-warded):
+rotate each zero's component vector into the pole frame, with
+amplitude $A^2$ and alias phase $\psi$ per zero; with
+$S_2 = \sum A^2$, $S_c = \sum A^2\cos 2\psi$,
+$S_s = \sum A^2\sin 2\psi$ the zeros$+$pole gram is
+\emph{exactly}
+$M_2 = \bigl[\begin{smallmatrix} P_0 + (S_2+S_c)/2 & S_s/2 \\
+S_s/2 & (S_2-S_c)/2 \end{smallmatrix}\bigr]$, and the floor obeys
+\[
+  \tau \;=\; \frac{S_2 - S_c}{2} \;-\; \frac{S_s^2}{4 P_0}
+  \;+\; O(P_0^{-2}),
+\]
+so the correlation combination multiplying the leading term is
+the coherent phase sum $S_c$ (rotation-invariance ward at the
+conditioning-aware machine bar on all 73 battery frames;
+truncated-series deviation $3.8\times10^{-7}$).
+
+\emph{The premise overturned.}  The round-25 blocker was typed
+``alias \emph{phase} correlations'' --- random phases predict
+$\tau \sim h^{-1}$, the tower measures $h^{-2.5}$.  The frozen
+wards encoding that premise \emph{fail}, and the failure is the
+finding: the diagonal (random-phase) part
+$\tau_{\rm diag} = S_2/2$ does not slope $-1$ but $-3.172$ --- the
+\emph{amplitudes}, not the phases, carry the gap; the phase
+scramble and the Poissonized zeros land at $-3.05$/$-3.65$; and
+$q = S_c/S_2$ changes sign across the battery
+($q \in [-0.324, 0.552]$, median $0.19$; deep suppression only
+$\times1.1$).  The tower law decomposes \emph{exactly}:
+\[
+  -2.505 \;=\; \underbrace{-3.172}_{\text{amplitude law}}
+  \;+\; \underbrace{+0.668}_{\text{fading alignment}}.
+\]
+
+\emph{The Guinand split, and where the correlation lives.}  By
+the deployed identity the zero-side gram splits exactly as
+$G_Z = (B - S_p - P) + (S_p - S)$ --- a geometric/smooth part and
+the prime-comb fluctuation.  Per-frame medians: smooth share
+$-994.15$, fluctuation share $+995.15$ --- each about a
+\emph{thousand times larger} than their sum, cancelling to
+$|S_c^{\rm fluc}|/\sigma_{\rm sqrt} = 0.01$ of the Poisson-comb
+square-root scale (identity-route residue $0.019$); the smooth
+surrogate does \emph{not} carry it (residue $0.868$); the comb
+scramble \emph{explodes} the coherent sum by
+$2\times10^6$--$1.7\times10^7$ and the Epstein $x^2+5y^2$ comb by
+$5\times10^3$--$1.3\times10^4$.  \textbf{The cancellation is the
+arithmetic}: the suppression exists because the prime-comb
+fluctuations cancel exactly as far as square-root cancellation
+allows.
+
+\emph{The typed circularity boundary, and the closure.}  Proving
+the tower $\tau$-law therefore requires bounding an oscillatory
+prime sum \emph{at} its square-root scale --- variance-type
+control, which by the explicit formula is
+pair-correlation-equivalent substance on the zero side
+(Montgomery-type, conjectural).  And by Guinand the comb's
+self-cancellation \emph{is} the zero-side floor statement itself:
+the required control is even deeper than pair-correlation input.
+The analytic-envelope route of \texttt{PRIME.FLOOR.RATIO.01} is
+therefore \emph{closed honestly at this boundary} --- its
+envelope constant is arithmetic substance equivalent to the
+target; no further analytic-envelope variants (a stop-list entry
+per house discipline).  What survives is the named bridge, now a
+contract: \texttt{PRIME.FLOOR.PAIRCORR.01} [O] --- the floor's
+envelope constant is Guinand-equivalent to the zero-side floor
+statement, with forward (unconditional variance bound, entry
+point declared) and backward (instrument calibration) demands and
+kill conditions typed.  A boundary, not a theorem.
+\textbf{No statement about the Riemann Hypothesis is made.}
+
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
 The P4 main strike (\veri{v712\_rank3\_transverse\_deck.py}, $5/5$)
@@ -13636,8 +13896,19 @@ object with \texttt{PRIME.KMS.INDUCTIVE\_STATE.02}, merged target
 Mosco$+$Friedrichs (Section~\ref{sec:floor-ratio}), leaving the
 sector floor as the single analytic remainder
 (\texttt{PRIME.FLOOR.RATIO.01}, narrowed in round 24 by the
-certified floor skeleton of Section~\ref{sec:floor-skeleton}:
-battery-relative and $\alpha$-bounded, still open) ---
+certified floor skeleton of Section~\ref{sec:floor-skeleton} and
+depth-hardened in round 25
+(Section~\ref{sec:exclusion-detector}): the kill gates survived
+at full sieve depth, the $\alpha$-bound fell at citation grade,
+the envelope is certified-explicit at $c_{\rm cert} = 4.335$,
+and the alias-phase proof blocker is named --- and closed on its
+analytic-envelope flank in round 26
+(Section~\ref{sec:paircorr-boundary}): the blocker resolves into
+a typed pair-correlation circularity boundary, the route is
+stop-listed, and the demand moves to the bridge contract
+\texttt{PRIME.FLOOR.PAIRCORR.01} [O] --- still open) ---
+\texttt{PRIME.DETECTOR.WINDOW.01} (registered in round 25: the
+comb-native window detector, validated out-of-sample) ---
 and \texttt{PRIME.Z1.MOONSHOT.01})
 stay open, exactly as stated in place. The final fence at the end of
 the section governs the entire document: no claim of progress on the

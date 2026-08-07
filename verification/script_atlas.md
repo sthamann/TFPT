@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`817` registered scripts · `900` ledger claims · `10` clusters.
+`824` registered scripts · `909` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (337 scripts)
+### `core` — Compiler core & the E₈ glue  (344 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -670,9 +670,9 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v816_prime_mosco_selection** [-] `PRIME.MOSCO.SELECTION.01` — Mosco-Formkonvergenz + Friedrichs-Minimalität liefern den eindeutigen Limes-Kandidaten genau dort, wo die Moment-Selektion bei 22 oszillierte — **MOSCO-SELECTS (6/6 Beine, 23/23 Gu
   - deps: v780_z1_compactness_trilogy, v762_dense_weil_core, v791_positive_descent, v762, v563, v696, v755, v766 · cited: 3 e8 audit bootstrap, research contracts
 - **v817_positive_descent_master** [O] `TFPT.POSITIVE_DESCENT.MASTER.01` — **MASTER-BOTH-INSTANCES (14/14): das Theorem (7 eingefrorene Hypothesen) mit kernel-geprüftem Kern (a) Teleskopieren + Cauchy-Schwanz, (b) Positivität limes-abgeschlossen, (c) Sekt
-  - deps: v791_positive_descent, v802_gnet_martingale, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton, v791, v802, v793 · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v791_positive_descent, v802_gnet_martingale, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v791, v802, v793 · cited: 3 e8 audit bootstrap, research contracts
 - **v818_sector_floor_attack** [E/O] `SECTOR.FLOORATTACK.01` — exakte Margen-Faktorisierung, O(1)-treue Interlacing-Erfassung, symbolisches Rotationsgesetz, h^{−3/2}-Verstärker-Hüllkurve: der Boden reduziert sich auf EINE Verhältnis-Ungleichun
-  - deps: v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton, v780_z1_compactness_trilogy, v794_cp_extension_gate, v807_lorentz_nullselector, v563, v583, v586, v773 · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v780_z1_compactness_trilogy, v794_cp_extension_gate, v807_lorentz_nullselector, v563, v583, v586, v773 · cited: 3 e8 audit bootstrap, research contracts
 - **v819_prime_packet_rm14** [-] `PRIME.PACKET.RM14.01` — **RM14-EXACT (21/21, Lean-Begleiter PacketRM14.lean kernel-geprüft, 30 Theoreme): die Zeilenhülle von B = das punktierte RM(1,4)* = [15,5,7], Enumerator EXAKT 1 + 15z⁷ + 15z⁸ + z¹⁵
   - deps: v776_boundary_hamming_uniqueness, v799_seam_code_typeii, v803_e8_jetcode_affine_nsr, v752, v753, v774, v798 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v820_prime_kraus_rm24** [E/C/X] `PRIME.KRAUS.RM24.01` — **KRAUS-RM24-RULE-CANONICAL + PLANEFRAMES-EXACT (16/16 + 14/14): der wörtliche Anspruch stirbt ZWEIMAL (Träger-Gewichte 1/2/3 < Distanz 4; Sp(4,2)-Orbits 15+90 vs 45+60 — keine äqu
@@ -682,9 +682,23 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v822_prime_vacuum_dilation** [E/X] `PRIME.CONTINUUM.UNSHORTEN.01` — die Vakuum-Vervollständigungs-Lesart des Kontinuums ist in BEIDEN Transkriptionen TOT, mit der c*-Pencil-Schranke als eingefrorenem Zaun — **UNSHORTEN-DEAD + DILATION-DEAD (17/19 +
   - deps: v821_prime_vacuum35, v758_simpler_certificate, v793_f8sector_conductor, v758, v563, v716, v755 · cited: 3 e8 audit bootstrap, research contracts
 - **v823_prime_lagrange_floor** [E] `PRIME.FLOOR.LAGRANGE.01` — **LAGRANGE-CONCENTRATED + PAIR-CERTIFIED (7/8 mit dem EINEN präregistrierten Alt-Budget-FAIL S3.CERT + 9/9): jede Nullstellen-Schicht der v692-Master-Identität ist EXAKT Rang-1 (ge
-  - deps: v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton, v818_sector_floor_attack, v563, v684, v692, v818 · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v818_sector_floor_attack, v563, v684, v692, v818 · cited: 3 e8 audit bootstrap, research contracts
 - **v824_prime_floor_skeleton** [E] `PRIME.FLOOR.SKELETON.01` — **FLOOR-PARTIAL + TAIL-CLOSED-ALL-H (12/12 + 9/9): STÜCK 2 UNIFORM-VERIFIED — der ANALYTISCHE h→∞-Limes des Fixpaars X_∞(α) = 16απ² sin(αγ₁) sinh(α/2)[Klammer] (Dirichlet-geschloss
-  - deps: v823_prime_lagrange_floor, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton, v818_sector_floor_attack, v563, v684, v692, v818, v823 · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v823_prime_lagrange_floor, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v818_sector_floor_attack, v563, v684, v692, v818, v823 · cited: 3 e8 audit bootstrap, research contracts
+- **v825_prime_exclusion_ladder** [-] `PRIME.EXCLUSION.LADDER.01` — verifizierte PSD-Sprossen via Tent-Read-Guinand-Identität in rigorose Quadrupel-Ausschlussregionen invertiert, bis X = 24.81 verlängert und die Sättigung des rank-4-Instruments typ
+  - deps: v825_prime_exclusion_ladder.py;v826_prime_exclusion_battery2.py;v827_prime_zero_locator.py;v828_prime_comb_window, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v563, v755, v780 · cited: 3 e8 audit bootstrap, research contracts
+- **v826_prime_exclusion_battery2** [-] `PRIME.EXCLUSION.BATTERY2.01` — der Ausschluss-Boden der zertifizierten Leiter fällt von Ξ ~ 0.2187 auf die unzensierte fallende Ξ_v2-Serie (tiefste 0.0816, Steigung −1.39): das v825-Plateau war INSTRUMENT-relati
+  - deps: v825_prime_exclusion_ladder, v825_prime_exclusion_ladder.py;v826_prime_exclusion_battery2.py;v827_prime_zero_locator.py;v828_prime_comb_window, v825, v563, v755 · cited: 3 e8 audit bootstrap, research contracts
+- **v827_prime_zero_locator** [-] `PRIME.EXCLUSION.LOCATOR.01` — das Breitenprofil W(γ) = δ_mb(γ) des zertifizierten Turms PEAKT an wahren ζ-Ordinaten, und die präregistrierte v2-Regel besteht den Out-of-Sample-Test auf einem disjunkten unberühr
+  - deps: v826_prime_exclusion_battery2, v825_prime_exclusion_ladder.py;v826_prime_exclusion_battery2.py;v827_prime_zero_locator.py;v828_prime_comb_window, v825, v826, v563, v755 · cited: 3 e8 audit bootstrap, research contracts
+- **v828_prime_comb_window** [-] `PRIME.EXCLUSION.WINDOW.01` — der Schlussstein des Detektor-Strangs: auf dem disjunkten Fenster γ ∈ (60, 120] liefert DASSELBE zertifizierte Positivitätsobjekt beide Beine — Lokator ORTET 21 der 25 ζ-Ordinaten 
+  - deps: v827_prime_zero_locator, v826_prime_exclusion_battery2, v825_prime_exclusion_ladder.py;v826_prime_exclusion_battery2.py;v827_prime_zero_locator.py;v828_prime_comb_window, v825, v826, v827, v563, v755 · cited: 3 e8 audit bootstrap, research contracts
+- **v829_prime_floor_depth** [O/X] `PRIME.FLOOR.DEPTHKILL.01` — **ENVELOPE-HOLDS-DEEP + FAMILY-SCALES (16/17 mit dem EINEN präregistrierten S5.HLAW-FAIL + 12/12): die Kill-Gates K1 (ρ h^{3/2} ≥ c = 4.85, KEIN Refit) und K2 (cos²θ ≥ 1/2) bei X =
+  - deps: v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v824_prime_floor_skeleton, v823_prime_lagrange_floor, v563, v692, v755, v818, v823 · cited: 3 e8 audit bootstrap, research contracts
+- **v830_prime_float_budget** [-] `PRIME.FLOOR.BUDGET.01` — der verbleibende Beweis-Blocker ehrlich typisiert — **BUDGET-LINEAR-CLOSES-ALL + ENVELOPE-ASYMPTOTIC-PARTIAL (10/10 + 19 Checks mit den FÜNF präregistrierten asymptotischen FAILs A
+  - deps: v829_prime_floor_depth, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v824_prime_floor_skeleton, v563, v823, v824, v825, v829 · cited: 3 e8 audit bootstrap, research contracts
+- **v831_prime_alias_second_moment** [E/C/O/X] `PRIME.FLOOR.ALIASMOMENT.01, PRIME.FLOOR.PAIRCORR.01` — **ALIAS-CORRELATION-PAIRCORR (15 Checks mit den SIEBEN präregistriert-ehrlichen Prämissen-Umsturz-FAILs S1.SIGN/W2B/W2C/W2D/S4.GEOM/C1/C2 — das FAIL-Muster IST der Befund; wörtlich
+  - deps: v831_prime_alias_second_moment, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v830_prime_float_budget, v829_prime_floor_depth, v563, v684, v823, v829 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1699,22 +1713,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×115, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×24, `v76`×19, `v56`×19, `v492`×19, `v755`×19, `QG.AMB.01`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17
+**Most-depended-on claims** (the load-bearing roots): `v563`×122, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×24, `v755`×24, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v813_p1_index_kms** — `P1.INDEX.KMS.01`
-- **v814_k5_sixstep_transport** — `K5.SIXSTEP.TRANSPORT.01`
-- **v815_kraus_spread_commutant** — `PRIME.AORB.REFINEMENT.01`
-- **v816_prime_mosco_selection** — `PRIME.MOSCO.SELECTION.01`
-- **v817_positive_descent_master** — `TFPT.POSITIVE_DESCENT.MASTER.01`
-- **v818_sector_floor_attack** — `SECTOR.FLOORATTACK.01`
-- **v819_prime_packet_rm14** — `PRIME.PACKET.RM14.01`
 - **v820_prime_kraus_rm24** — `PRIME.KRAUS.RM24.01`
 - **v821_prime_vacuum35** — `PRIME.VACUUM35.01`
 - **v822_prime_vacuum_dilation** — `PRIME.CONTINUUM.UNSHORTEN.01`
 - **v823_prime_lagrange_floor** — `PRIME.FLOOR.LAGRANGE.01`
 - **v824_prime_floor_skeleton** — `PRIME.FLOOR.SKELETON.01`
+- **v825_prime_exclusion_ladder** — `PRIME.EXCLUSION.LADDER.01`
+- **v826_prime_exclusion_battery2** — `PRIME.EXCLUSION.BATTERY2.01`
+- **v827_prime_zero_locator** — `PRIME.EXCLUSION.LOCATOR.01`
+- **v828_prime_comb_window** — `PRIME.EXCLUSION.WINDOW.01`
+- **v829_prime_floor_depth** — `PRIME.FLOOR.DEPTHKILL.01`
+- **v830_prime_float_budget** — `PRIME.FLOOR.BUDGET.01`
+- **v831_prime_alias_second_moment** — `PRIME.FLOOR.ALIASMOMENT.01, PRIME.FLOOR.PAIRCORR.01`
 

@@ -41,7 +41,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v824 inside an 817-script suite. No claim of progress toward the Riemann Hypothesis.",
+    "A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v831 inside an 824-script suite. No claim of progress toward the Riemann Hypothesis.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "The Prime Front — TFPT research diary",
     description:
-      "Primes, the E8 census, and the load-bearing modules v535–v824: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
+      "Primes, the E8 census, and the load-bearing modules v535–v831: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
     url: `${SITE_URL}/prime-front`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified v535–v824: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
+      "Research diary of the prime / zeta line. Machine-verified v535–v831: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
   },
 };
 
@@ -3157,8 +3157,21 @@ function AugustOffensivesSection() {
           skeleton (v823 Lagrange sum-of-squares + certified fixed pair;
           v824 analytic fixed-pair bound, 0.93–0.97 family exhaustion,
           and the deep tail closed at citation grade for all h at
-          T_ver = 3e12, validity horizon α* ≈ 11) — battery-relative,
-          α-bounded, and still no positivity theorem on V_∞), and
+          T_ver = 3e12, validity horizon α* ≈ 11), depth-hardened
+          in round 25 (v829 kill gates survived at full sieve depth
+          X = 25.5 with growing margins; v830 Higham-linear budget:
+          the α* horizon falls as a float-convention artifact, the
+          envelope certified-explicit at 4.335·h^-3/2 on 73/73, the
+          alias-phase proof blocker named), and closed on its
+          analytic-envelope flank in round 26 (v831: the blocker
+          resolves into a typed pair-correlation circularity
+          boundary — the amplitudes, not the phases, carry the
+          tower gap, and by Guinand the comb&apos;s sqrt-scale
+          self-cancellation IS the zero-side floor statement; the
+          route is stop-listed and the bridge contract
+          PRIME.FLOOR.PAIRCORR.01 [O] registered) —
+          battery-relative, and
+          still no positivity theorem on V_∞), and
           nothing here is a claim of progress toward the Riemann
           Hypothesis.
         </p>
@@ -3342,7 +3355,7 @@ function BigPictureSection() {
                 href="/verification"
                 className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
               >
-                v535–v824 (this front)
+                v535–v831 (this front)
               </Link>{" "}
               are machine-verified and cited in the papers. Sandbox probes never
               move a status marker.
@@ -3375,8 +3388,8 @@ function BigPictureSection() {
               tone="amber"
             />
             <BigPictureStat
-              term="v535–v824"
-              desc="machine-verified modules of this front, inside the 817-script suite (all green)"
+              term="v535–v831"
+              desc="machine-verified modules of this front, inside the 824-script suite (all green)"
               tone="emerald"
             />
             <BigPictureStat
