@@ -557,6 +557,19 @@ permanent verification suite of the repository \cite{TFPT} as the
 modules \texttt{v689\_gaussian\_code\_bridge} and
 \texttt{v690\_quartic\_half}.
 
+\emph{Dated pointer (2026-08-07).}  The four roles of the ramified
+prime $\pi_2=1+i$ documented across the program --- the norm-doubling
+/ empty-zero-class census of this note (Theorem~\ref{thm:census}),
+the $4$-bit address $L/(1+i)L\cong\mathbb F_2^4$, the non-split jet
+$L/2L$ over $\Z[i]/(2)\cong\mathbb F_2[\epsilon]/(\epsilon^2)$ with
+deck $=1+\epsilon$ (repository module \texttt{v803}), and the
+metaplectic lift $\zeta_8=(1+i)/\sqrt2$ with the two-qubit Clifford
+coset (\texttt{v783}/\texttt{v798}) --- have since been re-certified
+from scratch as \emph{one} machine-checked ladder in the suite module
+\texttt{v833\_gaussian\_ramification\_ladder} ($33/33$ exact,
+verdict \textsc{ramification-ladder-exact}); this note's census is
+rebuilt there unchanged.
+
 \subsection{The Lean layer}
 The algebraic cores are formalized in two Lean~4 modules over
 Mathlib \cite{Moura21,mathlib}, committed to the repository's Lean

@@ -2940,6 +2940,29 @@ $R^{-1}\mathbf 1=\tfrac14(1,1,-1)^{\!\top}$, i.e.\ $e_1^{\!\top}R^{-1}\mathbf 1=
 $\det L=\det R\,(1+6/|\mu_4|)=8\cdot\tfrac52=20$. The wrong sibling $\{1,3,4\}$ fails \emph{every} one of
 these (it gives $\operatorname{tr}R'=8$, $\det R'=6$, minors $(-3,1,3)$, $\|R'\|_F^2=74$, $\det L'=-12$).
 
+\begin{keybox}[The bidirectional anchor checksum (2026-08-07) --- one anchor decodes both sides, $1$ of $12$ \mE\ (\veri{v832\_anchor\_flavor\_checksum.py})]
+The spectral-selector block and the bilinear table compress to \emph{one} statement: $R$ decodes the
+\emph{same} anchor $a=(1,1,2)$ on both sides,
+\[
+  \boxed{\ Ra=(4,10,13)=(p_1,\,p_3,\,N(3{+}2i)),\qquad
+  R^{\mathsf T}a=(6,18,8)=(p_2,\,p_4,\,p_3{-}2)\ }\qquad\mE ,
+\]
+rows reading the odd power sums plus the Gaussian norm $13=N(3{+}2i)=\Delta_Q$ (\vref{v222},
+\vref{v230}, \vref{v415}) and columns reading the even power sums plus $8=h(D_5)$ --- the union covers
+$p_1..p_4$ exactly.  \emph{The kill test is selective:} of the $12$ down-row candidates (all orderings
+of the accepted $\{1,2,5\}$ and of the sibling $\{1,3,4\}$) exactly \emph{one} --- the accepted
+$(1,5,2)$ --- satisfies the full identity set $\{\operatorname{tr},\det,\text{minors},\chi_R,Ra,
+R^{\mathsf T}a\}$; no sibling ordering and no re-ordering of $\{1,2,5\}$ survives.  The new
+one-number discriminator is the anchor contraction
+\[
+  (Ra)_2=\text{row}\cdot a=1{+}5{+}4=10=p_3=\AL,\qquad\text{siblings: }11\ \text{and}\ 12 ,
+\]
+so the down branch is killed by a single inner product against the anchor.  Controls: the scrambled
+accepted ordering $(5,1,2)$ fails, and the sibling $(1,4,3)$ reproduces the failure numbers of the
+block above verbatim.  A compression of the selector and bilinear tables ($15/15$ exact, verdict
+\textsc{flavor-bidir-checksum} (selective)); no marker moves.
+\end{keybox}
+
 \smallskip
 \noindent\textbf{More fingerprints (all verified).} The char-polynomials differ by an $A_3^+$ winding,
 $\chi_L(t)-\chi_R(t)=-6(t^2-5t+2)=-|R^+(A_3)|\,(t^2-\gcar t+\mathbb Z_2)$. The inverse responses read the

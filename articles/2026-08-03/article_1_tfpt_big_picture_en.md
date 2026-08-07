@@ -123,3 +123,12 @@ One pattern, three fields: the continuum forces the discrete datum.
 Equally important: what does NOT hold. No RH proof. No confirmed physical prediction. Three named open gate problems. In exchange: 694 verification modules, >6,800 checks, 27 frozen falsifiable predictions, 243 documented dead hypotheses — all openly reproducible.
 
 Details, figures and test protocols: fixpoint-theory.com
+
+---
+
+## Update, August 7, 2026
+
+Four days after this article, the suite turned five more rounds (modules v814–v836; now 829 modules, nearly 9,700 checks). Two new articles document the state — no marker was moved, no RH claim was added:
+
+- **[The Floor and the Detector](../2026-08-07/article_3_floor_and_detector_en.md):** the open positivity question of the prime front has shrunk to a single inequality, its skeleton is certified — and as a by-product there now exists a preregistered instrument that locates zeta zeros with not a single zero position built in (83% detection, 0% false positives). The wall behind it was surveyed three independent ways and is now called the pair-correlation bridge.
+- **[One Register, One Clock](../2026-08-07/article_4_one_register_compiler_en.md):** the dimensionless core of the compiler — including the 240 and four-bit structures told here — compresses exactly to one affine rule T(x) = 2x − 2 plus a readout layer. The Gaussian code bridge from this article turns out to be one of four roles of the same Gaussian prime (1+i).

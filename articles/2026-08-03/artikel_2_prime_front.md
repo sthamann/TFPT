@@ -115,3 +115,11 @@ Der Stand nach dem 3. August 2026:
 Ehrlich bleibt ehrlich: Kein RH-Beweis. Die uniforme Frage IST die Vermutung. Aber sie ist dreimal kleiner geworden — zuletzt: „Erkläre, warum die Arithmetik im zulässigen Korridor den Punkt 0,53 wählt.“
 
 Alles maschinell nachrechenbar: fixpoint-theory.com
+
+---
+
+## Stand 7. August 2026
+
+Die Frage hat sich seit diesem Artikel erneut verwandelt — und ist noch einmal kleiner geworden. In fünf Runden (Module v814–v836) schrumpfte der Sektor-Boden auf **eine** Verhältnis-Ungleichung ρ = τ/τ_pnt > 0, ihr Skelett wurde als exakte Quadratsumme mit zertifizierter Hüllkurve freigelegt, und die zertifizierte Ausschluss-Leiter wurde zu einem Nullstellen-Ortungsgerät invertiert (out-of-sample: 83 % Detektion, 0 % Falschpositive, ohne eingebaute Nullstellen-Kenntnis). Drei Beweis-Routen — die analytische, die strukturelle, die algebraische — wurden ehrlich geschlossen und dokumentiert; die Wand trägt jetzt einen registrierten Namen: die Boden-↔-Paarkorrelations-Brücke. Nach wie vor: kein RH-Beweis, nirgends.
+
+Das vollständige Protokoll: **[Der Boden und der Detektor](../2026-08-07/artikel_3_boden_und_detektor.md)** (7. August 2026).

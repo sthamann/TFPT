@@ -196,7 +196,9 @@ polynomials of the single parabolic anchor $a=(1,1,2)$ (the exponents-at-infinit
 $\mathcal O(-2)\oplus\mathcal O(-1)^2$): $e_1(a)=4=|\mu_4|$, $e_2(a)=5=\gcar$, $e_3(a)=2=|\Z_2|$, with
 $\cthree=1/(2e_1(a)\pi)=1/(8\pi)$. The power sums $p_n(a)=2+2^n$ then give $|R(E_8)|=p_1p_2p_3=240$,
 $\dim E_8=240+(p_4{-}p_3)=248$ and the binary ladder $p_{n+1}{-}p_n=2^n$. So the input set reduces to
-$\{a=(1,1,2),\,\pi\}$. \veri{v23\_anchor\_generator.py}
+$\{a=(1,1,2),\,\pi\}$. \veri{v23\_anchor\_generator.py}  The whole ladder is one affine map: $p_{n+1}=2p_n-2$
+identically, with unique fixed point $2=|\Z_2|$ and the compiler quintet $(4,6,10,18,34)$ as the $T$-orbit
+of $4$ --- the affine normal form of Theorem~8 (\veri{v832\_anchor\_flavor\_checksum.py}).
 \par\smallskip\noindent\textbf{The parabolic self-code of the anchor
 (\veri{v566\_parabolic\_anchor\_selfcode.py}).} The anchor is not only
 generated --- it is \emph{coded twice} by one operator structure that
@@ -731,6 +733,41 @@ $E_7\times A_1$ corpus reading a [C] fingerprint, anchor
 canonical label-side left factor (the \texttt{v758} continuum
 wall untouched); the $\pm B$ anisotropy cancels inside one Gram;
 $\mathrm{RM}(2,4)$ dual-containing \mE.
+\emph{The $(1{+}i)$ ramification ladder (2026-08-07):} the four
+documented roles of the ramified Gaussian prime $\pi_2=1{+}i$ are
+\emph{one} machine-checked object with four rungs, each
+re-certified from scratch
+(\veri{v833\_gaussian\_ramification\_ladder.py}, $33/33$,
+\textsc{ramification-ladder-exact}).  \emph{Rung 1, norm
+doubling:} $N(\pi_2)=2$, $(\pi_2^2)=(2)$; on the rebuilt Gaussian
+lattice $(1{+}J)^{\mathsf T}(1{+}J)=2I_8$ exactly, $\min L=4$ by
+census, so the zero class of $L/(1{+}i)L$ carries \emph{no} root
+($0/240$ directly), $240=15\times16$, each class $4$ of the $60$
+Gaussian lines, elementary divisors $(1^4,2^4)$, index
+$16=N(\pi_2)^4$.  \emph{Rung 2:} $L/(1{+}i)L\cong\mathbb F_2^4$
+with the deck acting \emph{trivially} --- the 4-bit address.
+\emph{Rung 3, the non-split jet:}
+$\Z[i]/(2)\cong\mathbb F_2[\epsilon]/(\epsilon^2)$ is the unique
+ring iso among all $24$ bijections, $W=L/2L$ is free of rank $4$,
+the deck is the jet unit $1{+}\epsilon$, and exactly $0$ of the
+$65536$ sections are deck-equivariant (the \texttt{v803}
+obstruction re-proved); the $120$ root pairs are exactly the
+$q=1$ shell of the plus-type form ($136/120$, Arf $0$).
+\emph{Rung 4, the metaplectic lift:} $\zeta_8=(1{+}i)/\sqrt2$,
+$(1{+}J)^2=2J$, $(SH)^3=\zeta_8I$ per binary factor and
+$(T_3K_3)^3=iI=$ the deck (\texttt{v798}); the exact
+$\Z[\zeta_8]$ BFS census gives $|C_2/\mu_8|=11520=16\times720$
+with \emph{zero} Galois-mixed classes, hence $|C_2|=92160$ and
+$C_2=K\sqcup\zeta_8K$ (the \texttt{v783} chart theorem cited),
+with witness parities $\chi(H{\otimes}I)=1$ (the RM--CSS
+$\zeta_8$ phase bit) and $\chi(H{\otimes}H)=\chi(CZ)=0$.
+Controls: the split ring $\mathbb F_2\times\mathbb F_2$ admits
+$0$ ring isos ($2$ \emph{must} ramify) and the split
+self-extension admits $65536/65536$ equivariant sections
+(non-splitness is contentful).  One ladder --- the same ramified
+prime read at $(\pi_2)$, $(\pi_2^2)$ and $\pi_2/\sqrt2$; a
+compression of \texttt{v689}/\texttt{v803}/\texttt{v783}/%
+\texttt{v798}/\texttt{v819}, no marker moves \mE.
 \end{keybox}
 
 \begin{keybox}[The current reduction state of P2 (2026-07-22) --- text consolidation, markers unchanged]
@@ -4635,6 +4672,25 @@ has splitting type $a=(1,1,2)$, whose power sums $p_n(a)=2+2^n$ generate the who
 The elementary symmetric data $\chi_a(t)=(t-1)^2(t-2)$ give $(e_1,e_2,e_3)=(4,5,2)=(|\mu_4|,\gcar,|\mathbb Z_2|)$,
 so the anchor reconstructs the carrier rank, and $10b_1=e_1^2+e_2^2=4^2+5^2=41$. The seed itself is the
 two-term anchor form $\phiz=\tfrac{2p_1}{p_2}\cthree+2p_1p_2\,\cthree^4=\tfrac43\cthree+48\cthree^4$.
+
+\begin{keybox}[The anchor affine normal form (2026-08-07) --- all budgets from ONE recursion \mE\ (\veri{v832\_anchor\_flavor\_checksum.py})]
+The anchor power compiler above is one affine map.  The power sums $p_n(a)=2+2^n$ satisfy
+\[
+  \boxed{\ p_{n+1}=T(p_n),\qquad T(x)=2x-2\ }\qquad\text{identically in $n$ (sympy),}
+\]
+with the shift $q_n=p_n-2=2^n$ pure binary doubling.  $T$ has the \emph{unique} fixed point
+$2=|\Z_2|$ (the sheet), and the $T$-orbit of $4$ is exactly the compiler quintet
+$(4,6,10,18,34)=(|\mu_4|,\,|R^+(A_3)|,\,\AL,\,\Nfam|R^+(A_3)|,\,\text{$\Z_6$ lift})$, with
+$p_0=3=\Nfam$ prepended by $T(3)=4$.  Every budget line is then a word in the orbit and the fixed
+point: $|R(E_8)|=p_1p_2p_3=240$; $\dim E_8=240+q_3=248$, where the ladder identity
+$p_4-p_3=p_3-2=8=h(D_5)=\operatorname{rank}E_8$ makes the corpus form $240+(p_4{-}p_3)$ the
+\emph{same} formula; $h(E_8)=p_2p_3/2=30$ (so $D_{\mathrm{start}}=p_2p_3=60$); $|R(D_5)|=p_1p_3=40$;
+$\Oadm=2p_1p_2=48$; and the elementary layer $(e_1,e_2,e_3)=(4,5,2)$ has the fixed point of $T$ as
+$e_3$, with $10b_1=e_1^2+e_2^2=41$.  Controls: the wrong map $T'(x)=2x-1$ (fixed point $1$, orbit
+misses the quintet) and the wrong anchor $a'=(1,2,2)$ (recursion offset $-1$, budget misses
+$(240,48)$) both fire.  A normal form of the existing compiler tables --- a compression, not a new
+claim; $18/18$ exact, verdict \textsc{anchor-affine-exact}.
+\end{keybox}
 
 \noindent\textbf{The $\varphi_0$-ladder.} With $\lambda_Y=\sqrt{\phiz(1-\phiz)}$, every fermion mass is the
 single closed form $\hat m_{f,j}=\tfrac{v_{\mathrm{geo}}}{\sqrt2}\lambda_Y^{L_{f,j}}\Lambda_{f,j}$ with

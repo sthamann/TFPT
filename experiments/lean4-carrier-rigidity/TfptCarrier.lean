@@ -97,6 +97,7 @@ import TfptCarrier.ArfSpinorCompiler
 import TfptCarrier.PacketRM14
 import TfptCarrier.Check32
 import TfptCarrier.PositiveC2Lift
+import TfptCarrier.SectorPositiveDescent
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck

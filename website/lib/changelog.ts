@@ -43,6 +43,3129 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-07",
+    "dateLabel": "2026-08-07 · LXXI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round twenty-eight — the wall gets coordinates: the corner-closure theorems, the GUE saturation, the relation carrier, and the certified skeleton: SIX modules ("
+      },
+      {
+        "k": "c",
+        "v": "v837"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v842"
+      },
+      {
+        "k": "t",
+        "v": ", from eleven frozen probes plus one Lean module; suite "
+      },
+      {
+        "k": "m",
+        "v": "829\\to835"
+      },
+      {
+        "k": "t",
+        "v": ") — the corner route's perimeter CLOSES as measured compression-class theorems (the 90-cell class map has no identity"
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": "visibility"
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": "placement cell; the quantifier extends to tower levels "
+      },
+      {
+        "k": "m",
+        "v": "m \\le 3"
+      },
+      {
+        "k": "t",
+        "v": "; all 5276 subgroup expectations, the full pinching and Stinespring compressions obey the dichotomy; position-dependent carriers are EXTREMALLY PINNED — "
+      },
+      {
+        "k": "m",
+        "v": "\\hat c_{\\rm GL1} = -1"
+      },
+      {
+        "k": "t",
+        "v": " locks the entire "
+      },
+      {
+        "k": "m",
+        "v": "C_2"
+      },
+      {
+        "k": "t",
+        "v": " mass, so identity-true carriers read zero on EVERY self-consistent comb), the zero side is QUANTIFIED (the bridge demand in Montgomery "
+      },
+      {
+        "k": "m",
+        "v": "F(\\alpha)"
+      },
+      {
+        "k": "t",
+        "v": "-form with the named minimal missing input; the demand/GUE ratio saturates STRUCTURALLY at "
+      },
+      {
+        "k": "m",
+        "v": "R_\\infty = 1.11"
+      },
+      {
+        "k": "t",
+        "v": " with the tight band pinned at unfolded "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha \\in 1..2"
+      },
+      {
+        "k": "t",
+        "v": "; the bootstrap loop is SHORT — "
+      },
+      {
+        "k": "m",
+        "v": "g = 1/(k^2R^2c_{\\rm sup})"
+      },
+      {
+        "k": "t",
+        "v": ", even ideal supply gives "
+      },
+      {
+        "k": "m",
+        "v": "0.655 < 1"
+      },
+      {
+        "k": "t",
+        "v": ": the wall's self-conservation IS the saturation), and the route REOPENS with the relational input: the identification carrier EXISTS ("
+      },
+      {
+        "k": "c",
+        "v": "PRIME.RELATION.MULT.01"
+      },
+      {
+        "k": "t",
+        "v": " [O]; all four gates incl. the self-consistency null; the "
+      },
+      {
+        "k": "m",
+        "v": "h = 2"
+      },
+      {
+        "k": "t",
+        "v": " Epstein "
+      },
+      {
+        "k": "m",
+        "v": "x^2 + 5y^2"
+      },
+      {
+        "k": "t",
+        "v": " separates at "
+      },
+      {
+        "k": "m",
+        "v": "200.0"
+      },
+      {
+        "k": "t",
+        "v": ", Selberg-class-correct blindness), the identified corner's excess is POSITIVE on all 67 rungs ("
+      },
+      {
+        "k": "m",
+        "v": "\\tau_X = \\lambda_{\\min}(\\text{structural}) + \\text{EXCESS}"
+      },
+      {
+        "k": "t",
+        "v": "), and the certified skeleton ("
+      },
+      {
+        "k": "c",
+        "v": "PRIME.RELATION.SKELETON.01"
+      },
+      {
+        "k": "t",
+        "v": " [O]) encloses "
+      },
+      {
+        "k": "m",
+        "v": "\\tau_X"
+      },
+      {
+        "k": "t",
+        "v": " STRICTLY POSITIVELY on all 67 rungs — the wall "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the infinite quantifier over strictly-positive certified enclosures, sharpened demand: a UNIFORM lower bound on the excess margin; the corner/descent core kernel-checked in Lean ("
+      },
+      {
+        "k": "c",
+        "v": "SectorPositiveDescent.lean"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "IdentificationPositivity"
+      },
+      {
+        "k": "t",
+        "v": " the single named hypothesis); NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (6)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v837_corner_closure_quantifier.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "19/19 + 17/17 + 3"
+        },
+        {
+          "k": "t",
+          "v": " Lean-mirror checks, "
+        },
+        {
+          "k": "t",
+          "v": "doors-closed"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "level2-closed"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "hjelmslev_open_doors_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "hjelmslev_level2_corner_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", promoted verbatim: Door 1 — the GL1 corner reads the full lock-pair COMPRESSION, not a trace, so factor dressings are generically visible, but every visible dressing breaks the deployed-form identity by exactly its action on the lock pair (mass multiplier "
+        },
+        {
+          "k": "m",
+          "v": "1.215\\times10^{-1}"
+        },
+        {
+          "k": "t",
+          "v": ", unital phase "
+        },
+        {
+          "k": "m",
+          "v": "5.849\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": "; the commutant invisible at "
+        },
+        {
+          "k": "m",
+          "v": "2.7\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "; sweep dichotomy on all 24 draws: visibility "
+        },
+        {
+          "k": "m",
+          "v": "\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " identity defect); Door 2 — the product law "
+        },
+        {
+          "k": "m",
+          "v": "\\hat c(\\chi) = (-1)^\\epsilon V_{\\rm fac}(w) M_{\\rm fac}(j; n)"
+        },
+        {
+          "k": "t",
+          "v": " verified on the full 128-dim carrier Fourier for ALL "
+        },
+        {
+          "k": "m",
+          "v": "128 \\times 136"
+        },
+        {
+          "k": "t",
+          "v": " character–event pairs (exact Fractions; 18-class collapse exact; the mass ward GENERALIZED: one position-blind V-mode "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " one "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-mode per event, bit-identical under position scramble); THE CLASS MAP (90 cells): identity "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " NOT visible everywhere, carrier cells NONE; the quantifier extends to "
+        },
+        {
+          "k": "m",
+          "v": "m \\le 3"
+        },
+        {
+          "k": "t",
+          "v": " (rings "
+        },
+        {
+          "k": "m",
+          "v": "\\Z[i]/(1{+}i)^m"
+        },
+        {
+          "k": "t",
+          "v": ", complete duals 16/256/4096; identity characters exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Ann}(\\langle S_m\\rangle)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|S_m| = 7\\cdot8^{m-1}"
+        },
+        {
+          "k": "t",
+          "v": "; Vfac spectra "
+        },
+        {
+          "k": "m",
+          "v": "\\{1, 0, -1/7\\}"
+        },
+        {
+          "k": "t",
+          "v": " — the jet refines position-blind data only); PART C: the Lean mirror of "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/SectorPositiveDescent.lean"
+        },
+        {
+          "k": "t",
+          "v": " (corner CP "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " trace split, descent transport, PSD limits, "
+        },
+        {
+          "k": "c",
+          "v": "sector_floor"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "c",
+          "v": "IdentificationPositivity"
+        },
+        {
+          "k": "t",
+          "v": " the single named hypothesis; lake build green, no sorry, imported in "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": ", v817 precedent)); "
+        },
+        {
+          "k": "c",
+          "v": "v838_corner_expectation_position.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "13/13 + 13/13"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "expectation-closed"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "position-carrier-tradeoff"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "conditional_expectation_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "position_carrier_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": ALL 5276 subgroups (74259 components) — identity("
+        },
+        {
+          "k": "m",
+          "v": "E_H"
+        },
+        {
+          "k": "t",
+          "v": ") for EXACTLY 2 subgroups "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the predicted criterion "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Ann}(H) \\subseteq \\{1, \\psi_0\\}"
+        },
+        {
+          "k": "t",
+          "v": ", 0 dichotomy violations, the full average reads ZERO; the pinching complete with the two pinned sectors as the ONLY PSD summands (the joint-use kill); Stinespring: the position data IS in the dilation yet the identity pins the read to the constant 1; the four position-carrier designs all fail the DECISIVE NULL (the self-consistent Epstein comb reads excess 0.0 identical to truth) — the fourth wall coordinate named EXTREMAL PINNING); "
+        },
+        {
+          "k": "c",
+          "v": "v839_paircorr_bridge_saturation.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "9/9 + 7/7"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "bridge-fully-beyond"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "gue-saturating"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "paircorr_bridge_map_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "gue_saturation_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", promoted verbatim with no downscoping ("
+        },
+        {
+          "k": "m",
+          "v": "\\sim"
+        },
+        {
+          "k": "t",
+          "v": "0.8 min per part, v830/v831 precedent; import remap to v823/v829/v830/v831 per the v831 precedent, shim symbols declared): the demand in Montgomery "
+        },
+        {
+          "k": "m",
+          "v": "F(\\alpha)"
+        },
+        {
+          "k": "t",
+          "v": "-form on all 73 frames with the SCHOLARSHIP CORRECTION (Montgomery RH-conditional) carried in every supply row; the two-tier gap (unconditional misses by "
+        },
+        {
+          "k": "m",
+          "v": "52\\times"
+        },
+        {
+          "k": "t",
+          "v": "; the conditional window covers 43–86%; full-GUE rms closes 39/73); the NAMED OBJECT: unconditional "
+        },
+        {
+          "k": "m",
+          "v": "F(\\alpha, T) \\le C_F"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "0.33"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.7"
+        },
+        {
+          "k": "t",
+          "v": ") out to "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha \\approx 3"
+        },
+        {
+          "k": "t",
+          "v": "; the saturation: "
+        },
+        {
+          "k": "m",
+          "v": "R"
+        },
+        {
+          "k": "t",
+          "v": " rises "
+        },
+        {
+          "k": "m",
+          "v": "0.61 \\to R_\\infty = 1.114"
+        },
+        {
+          "k": "t",
+          "v": " (deepest 20) inside "
+        },
+        {
+          "k": "m",
+          "v": "[0.5, 1.5]"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{rms}(z) = 0.72"
+        },
+        {
+          "k": "t",
+          "v": ", tight band unfolded "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha \\in 1..2"
+        },
+        {
+          "k": "t",
+          "v": " (64% of the tower budget); the F-INSTRUMENT: "
+        },
+        {
+          "k": "m",
+          "v": "\\hat F(\\mathrm{win}) = 0.44 \\pm 0.14"
+        },
+        {
+          "k": "t",
+          "v": ", Poisson control "
+        },
+        {
+          "k": "m",
+          "v": "0.94 \\pm 0.46"
+        },
+        {
+          "k": "t",
+          "v": " calibrates to 1, scramble fires); "
+        },
+        {
+          "k": "c",
+          "v": "v840_gue_ablation_loopgain.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "10/10 + 8/8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "saturation-structural"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "loop-short"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "gue_ablation_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "bootstrap_loop_gain_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": all 6 source-native Guinand-admissible variants LAND at the plateau ("
+        },
+        {
+          "k": "m",
+          "v": "1.058"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.199"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "1.154"
+        },
+        {
+          "k": "t",
+          "v": ", tol "
+        },
+        {
+          "k": "m",
+          "v": "0.35"
+        },
+        {
+          "k": "t",
+          "v": "; 0 broke positivity), the tight band pinned in the UNFOLDED coordinate under "
+        },
+        {
+          "k": "m",
+          "v": "D = 1/48, 1/64, 1/96"
+        },
+        {
+          "k": "t",
+          "v": " and geometric-"
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " — a property of the tower class and the unfolded zeros, not the grid; the thinned comb breaks positivity ("
+        },
+        {
+          "k": "m",
+          "v": "-0.105"
+        },
+        {
+          "k": "t",
+          "v": "), the scramble explodes ("
+        },
+        {
+          "k": "m",
+          "v": "\\times{-}954770"
+        },
+        {
+          "k": "t",
+          "v": "), Epstein positive-trivial ("
+        },
+        {
+          "k": "m",
+          "v": "\\times9461"
+        },
+        {
+          "k": "t",
+          "v": "); the loop: supply "
+        },
+        {
+          "k": "m",
+          "v": "c_{\\rm hat} = 0.88"
+        },
+        {
+          "k": "t",
+          "v": " GUE-consistent, demand "
+        },
+        {
+          "k": "m",
+          "v": "R"
+        },
+        {
+          "k": "t",
+          "v": " climbing to "
+        },
+        {
+          "k": "m",
+          "v": "1.24"
+        },
+        {
+          "k": "t",
+          "v": ", headline "
+        },
+        {
+          "k": "m",
+          "v": "g(k{=}1) = 0.529"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "g(k{=}2) = 0.132"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "N_{\\max} = 0"
+        },
+        {
+          "k": "t",
+          "v": " induction steps, IDEAL supply gives "
+        },
+        {
+          "k": "m",
+          "v": "1/R^2 = 0.655 < 1"
+        },
+        {
+          "k": "t",
+          "v": "; the Poisson circularity ward passes ("
+        },
+        {
+          "k": "m",
+          "v": "g_P = 0.296"
+        },
+        {
+          "k": "t",
+          "v": "; base case breaks 17.6%)); "
+        },
+        {
+          "k": "c",
+          "v": "v841_relation_carrier_ladder.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "18/18 + 13/13"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "relation-carrier-exists"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "excess-nonnegative"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "multiplicative_relation_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "relation_corner_ladder_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": THE BREAKTHROUGH — the identification carrier EXISTS with the relational input: "
+        },
+        {
+          "k": "m",
+          "v": "\\mu * 1 = \\delta"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda = \\mu * \\log"
+        },
+        {
+          "k": "t",
+          "v": " EXACT in the truncated convolution frame; the four-comb discriminator exact (TRUE 0; s2s/"
+        },
+        {
+          "k": "m",
+          "v": "\\chi_4"
+        },
+        {
+          "k": "t",
+          "v": " 0 — Selberg-class-correct blindness; the "
+        },
+        {
+          "k": "m",
+          "v": "h = 2"
+        },
+        {
+          "k": "t",
+          "v": " Epstein "
+        },
+        {
+          "k": "m",
+          "v": "x^2 + 5y^2"
+        },
+        {
+          "k": "t",
+          "v": " reads "
+        },
+        {
+          "k": "m",
+          "v": "200.0"
+        },
+        {
+          "k": "t",
+          "v": " on 24 class-group-obstruction sites, "
+        },
+        {
+          "k": "m",
+          "v": "21 = 3\\times7"
+        },
+        {
+          "k": "t",
+          "v": " first); ALL FOUR GATES pass incl. the self-consistency null (14/70 missing product relations, excess "
+        },
+        {
+          "k": "m",
+          "v": "-0.297"
+        },
+        {
+          "k": "t",
+          "v": " vs 0 at truth); the amplitude wiring fixes L-safety AUTOMATICALLY (H2 reads 196/392/496 exact on the anchors); the EXCESS positive on all 67 rungs (min "
+        },
+        {
+          "k": "m",
+          "v": "+2.285"
+        },
+        {
+          "k": "t",
+          "v": ", max "
+        },
+        {
+          "k": "m",
+          "v": "+3.704"
+        },
+        {
+          "k": "t",
+          "v": "; scramble "
+        },
+        {
+          "k": "m",
+          "v": "-1.224"
+        },
+        {
+          "k": "t",
+          "v": ") while "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_X"
+        },
+        {
+          "k": "t",
+          "v": " decays "
+        },
+        {
+          "k": "m",
+          "v": "5.98\\times10^{-4} \\to 1.71\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v842_excess_certified_skeleton.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "9/9"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "skeleton-certified"
+        },
+        {
+          "k": "t",
+          "v": "; probe "
+        },
+        {
+          "k": "c",
+          "v": "excess_certified_skeleton_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": strictly positive certified interval enclosures of "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_X"
+        },
+        {
+          "k": "t",
+          "v": " on ALL 67/67 rungs (widths "
+        },
+        {
+          "k": "m",
+          "v": "5.4\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "6.6\\times10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": ", three to five orders below the margin; chol_cert discipline; midpoints reproduce the float ladder at "
+        },
+        {
+          "k": "m",
+          "v": "4.9\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "); the "
+        },
+        {
+          "k": "m",
+          "v": "h = 2"
+        },
+        {
+          "k": "t",
+          "v": " fake certified-NEGATIVE on every anchor ("
+        },
+        {
+          "k": "m",
+          "v": "-0.786/-1.100/-1.228"
+        },
+        {
+          "k": "t",
+          "v": ", exact rational "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda_F"
+        },
+        {
+          "k": "t",
+          "v": " routing); the scaling law typed: width slope "
+        },
+        {
+          "k": "m",
+          "v": "+0.62"
+        },
+        {
+          "k": "t",
+          "v": " vs margin slope "
+        },
+        {
+          "k": "m",
+          "v": "-0.52"
+        },
+        {
+          "k": "t",
+          "v": " per "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": ", horizon "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha^* \\approx 9.1"
+        },
+        {
+          "k": "t",
+          "v": " (mass "
+        },
+        {
+          "k": "m",
+          "v": "\\sim 7.5\\times10^7"
+        },
+        {
+          "k": "t",
+          "v": ") far beyond the ladder end "
+        },
+        {
+          "k": "m",
+          "v": "6.304"
+        },
+        {
+          "k": "t",
+          "v": " — certifiability not binding). Suite "
+        },
+        {
+          "k": "m",
+          "v": "829\\to835"
+        },
+        {
+          "k": "t",
+          "v": "; all six run standalone green with v757-precedent pattern gates; all eleven probes re-run identically at promotion (2026-08-07); the two zero-side modules promoted VERBATIM with no downscoping (measured "
+        },
+        {
+          "k": "m",
+          "v": "\\sim"
+        },
+        {
+          "k": "t",
+          "v": "1.5 min each, v830/v831 runtime precedent)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean (1 module promoted)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/SectorPositiveDescent.lean"
+        },
+        {
+          "k": "t",
+          "v": " — the corner/descent core of the two hardest fronts, kernel-checked (lake build green, 3409 jobs, no "
+        },
+        {
+          "k": "c",
+          "v": "sorry"
+        },
+        {
+          "k": "t",
+          "v": ", no "
+        },
+        {
+          "k": "c",
+          "v": "native_decide"
+        },
+        {
+          "k": "t",
+          "v": "; imported in "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lean_manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " regenerated with this round): corner compression by a hermitian idempotent is linear/idempotent/CP with the corner-trace split; descent towers with the measured-zero compatibility defect transport compatible positive families; entrywise limits of corner states are PSD (via "
+        },
+        {
+          "k": "c",
+          "v": "GramCompactness"
+        },
+        {
+          "k": "t",
+          "v": "); and the final theorem "
+        },
+        {
+          "k": "c",
+          "v": "sector_floor"
+        },
+        {
+          "k": "t",
+          "v": " passes "
+        },
+        {
+          "k": "c",
+          "v": "IdentificationPositivity"
+        },
+        {
+          "k": "t",
+          "v": " through as the SINGLE NAMED HYPOTHESIS — the kernel-checked logical geography of the wall: structural positivity proven, the identification datum deliberately NOT a theorem. Cited in "
+        },
+        {
+          "k": "c",
+          "v": "v837"
+        },
+        {
+          "k": "t",
+          "v": "'s part C (numeric witness mirror, v817 precedent)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The wall statement (the round's deliverable)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The corner route's perimeter is fully surveyed and CLOSED (register, tower levels, compressions, position carriers — four stop-list entries), the zero side is quantified (the demand SATURATES the GUE boundary structurally; the loop is SHORT: the wall conserves itself through the saturation), and the route REOPENS with the relational input: the identification carrier exists, the identified corner's excess is positive on all 67 rungs, and the certified skeleton is strictly positive — the wall takes its sharpest form, "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_X = \\lambda_{\\min}(\\text{structural}) + \\text{EXCESS}"
+        },
+        {
+          "k": "t",
+          "v": ", and what remains is the INFINITE QUANTIFIER over strictly-positive certified enclosures: any future route must supply a UNIFORM lower bound on the excess margin, by the GUE-side findings a finer-than-statistical datum that no finite table settles. The bridge contract "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " [O] unchanged. NO RH claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 6 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CORNER.OPENDOORS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CORNER.EXPECTATION.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.BRIDGEMAP.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.GUEABLATION.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.MULT.01"
+        },
+        {
+          "k": "t",
+          "v": " [O], "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " [O]) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-28 note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the four closure coordinates complete; the saturation structural; the loop short; the relation route registered with the sharpened demand); "
+        },
+        {
+          "k": "m",
+          "v": "914\\to920"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves (the closures are typed route decisions, the registrations OPEN [O], the zero-side modules necessary-side consistency)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The wall gets coordinates: the corner closure theorems, the GUE saturation, the relation carrier, and the certified skeleton” (all six "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the part-intro chain extended; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": six new audit cards "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the round-28 follow-up notes on the floor-contract prose; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the round-28 note on the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " block "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " four new blocks (the corner-closure quantifier closed at registration, the bridge/saturation/loop evidence block, and the two OPEN registrations "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.MULT.01"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round twenty-eight”; counters "
+        },
+        {
+          "k": "m",
+          "v": "829\\to835"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v842"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated (ScriptIndex, changelog.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "835"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v842"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The closure modules ("
+        },
+        {
+          "k": "c",
+          "v": "v837"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v838"
+        },
+        {
+          "k": "t",
+          "v": ") are typed route decisions under frozen preregistered protocols (exact wards [E]-grade, float window legs typed); the zero-side modules ("
+        },
+        {
+          "k": "c",
+          "v": "v839"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v840"
+        },
+        {
+          "k": "t",
+          "v": ") are necessary-side demand/supply mappings and instrument calibrations with every supply row carrying its conditionality tag (Montgomery RH-conditional — the scholarship correction is part of the frozen protocol); the relation modules ("
+        },
+        {
+          "k": "c",
+          "v": "v841"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v842"
+        },
+        {
+          "k": "t",
+          "v": ") register an OPEN route — the carrier exists and the skeleton is certified, the positivity along the ladder remains UNPROVEN and is exactly the wall; NO marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-07",
+    "dateLabel": "2026-08-07 · LXX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round twenty-seven — the two-route decision at the wall, and three exact corpus compressions: FIVE modules ("
+      },
+      {
+        "k": "c",
+        "v": "v832"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v836"
+      },
+      {
+        "k": "t",
+        "v": ", from seven frozen probes; suite "
+      },
+      {
+        "k": "m",
+        "v": "824\\to829"
+      },
+      {
+        "k": "t",
+        "v": ") — the corner route's STRUCTURAL half closes weight-generically (the character-corner identity "
+      },
+      {
+        "k": "m",
+        "v": "T_{\\rm GL1,X} = V^* e_{\\rm GL1}\\pi(P_X) e_{\\rm GL1} V"
+      },
+      {
+        "k": "t",
+        "v": " holds as polynomial algebra in free event weights with "
+      },
+      {
+        "k": "m",
+        "v": "\\hat c_j = -1"
+      },
+      {
+        "k": "t",
+        "v": " exact for all events; the Gaussian Hjelmslev CP tower "
+      },
+      {
+        "k": "m",
+        "v": "\\Z[i]/(1{+}i)^m"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "m=1..5"
+      },
+      {
+        "k": "t",
+        "v": ", is strictly projective at certified cb defect ZERO and carries the identity verbatim) — BUT identity and state corner are COMB-BLIND and the level-"
+      },
+      {
+        "k": "m",
+        "v": "m"
+      },
+      {
+        "k": "t",
+        "v": " motion is the pure register-dilution law "
+      },
+      {
+        "k": "m",
+        "v": "16^{1-m}"
+      },
+      {
+        "k": "t",
+        "v": ": the arithmetic wall RELOCATES into the identification step and stays "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.FLOOR.PAIRCORR.01"
+      },
+      {
+        "k": "t",
+        "v": "; the commutant SOS route is CLOSED DEFINITIVELY by exact rational certificates (unique trivial feasible point; forced "
+      },
+      {
+        "k": "m",
+        "v": "G = \\mathrm{diag}(1,-1,-1)"
+      },
+      {
+        "k": "t",
+        "v": " with dual point "
+      },
+      {
+        "k": "m",
+        "v": "q(0,1,0) = -1"
+      },
+      {
+        "k": "t",
+        "v": ") — both routes stop-listed; plus the anchor affine normal form ("
+      },
+      {
+        "k": "m",
+        "v": "T(x) = 2x-2"
+      },
+      {
+        "k": "t",
+        "v": ", the whole budget from ONE recursion), the flavor bidirectional checksum ("
+      },
+      {
+        "k": "m",
+        "v": "Ra = (4,10,13)"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "m",
+        "v": "R^{\\mathsf T}a = (6,18,8)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "12"
+      },
+      {
+        "k": "t",
+        "v": "), the "
+      },
+      {
+        "k": "m",
+        "v": "(1{+}i)"
+      },
+      {
+        "k": "t",
+        "v": " ramification ladder (four corpus roles "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " ONE object) and the PG"
+      },
+      {
+        "k": "m",
+        "v": "(3,2)"
+      },
+      {
+        "k": "t",
+        "v": " flag normal form ("
+      },
+      {
+        "k": "m",
+        "v": "105 = 45 + 60"
+      },
+      {
+        "k": "t",
+        "v": " as the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Sp}(4,2)"
+      },
+      {
+        "k": "t",
+        "v": "-orbit split, the doily obstruction typed); NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (5)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v832_anchor_flavor_checksum.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "18/18 + 15/15"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "anchor-affine-exact"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "flavor-bidir-checksum"
+        },
+        {
+          "k": "t",
+          "v": " (selective); probes "
+        },
+        {
+          "k": "c",
+          "v": "anchor_affine_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "flavor_bidir_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", promoted verbatim: the anchor power sums "
+        },
+        {
+          "k": "m",
+          "v": "p_n = 2 + 2^n"
+        },
+        {
+          "k": "t",
+          "v": " obey "
+        },
+        {
+          "k": "m",
+          "v": "p_{n+1} = 2p_n - 2"
+        },
+        {
+          "k": "t",
+          "v": " identically (sympy); "
+        },
+        {
+          "k": "m",
+          "v": "T(x) = 2x - 2"
+        },
+        {
+          "k": "t",
+          "v": " has the UNIQUE fixed point "
+        },
+        {
+          "k": "m",
+          "v": "2 = |\\Z_2|"
+        },
+        {
+          "k": "t",
+          "v": " and the "
+        },
+        {
+          "k": "m",
+          "v": "T"
+        },
+        {
+          "k": "t",
+          "v": "-orbit of "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " is the compiler quintet "
+        },
+        {
+          "k": "m",
+          "v": "(4, 6, 10, 18, 34)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "p_0 = 3 = N_{\\rm fam}"
+        },
+        {
+          "k": "t",
+          "v": " prepended — the whole budget from one recursion: "
+        },
+        {
+          "k": "m",
+          "v": "|R(E_8)| = p_1p_2p_3 = 240"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\dim E_8 = 240 + q_3 = 248"
+        },
+        {
+          "k": "t",
+          "v": " (ladder identity "
+        },
+        {
+          "k": "m",
+          "v": "p_4 - p_3 = p_3 - 2 = 8"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "h(E_8) = p_2p_3/2 = 30"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "|R(D_5)| = 40"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega_{\\rm adm} = 48"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "10b_1 = 41"
+        },
+        {
+          "k": "t",
+          "v": "; the flavor matrix decodes the SAME anchor bidirectionally — "
+        },
+        {
+          "k": "m",
+          "v": "Ra = (4, 10, 13) = (p_1, p_3, N(3{+}2i))"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "R^{\\mathsf T}a = (6, 18, 8) = (p_2, p_4, p_3{-}2)"
+        },
+        {
+          "k": "t",
+          "v": "; of the 12 down-row candidates exactly ONE (the accepted "
+        },
+        {
+          "k": "m",
+          "v": "(1,5,2)"
+        },
+        {
+          "k": "t",
+          "v": ") passes the full identity set, the new one-number kill being the anchor contraction "
+        },
+        {
+          "k": "m",
+          "v": "(Ra)_2 = 10 = p_3"
+        },
+        {
+          "k": "t",
+          "v": " (siblings: 11, 12); controls fire incl. the sibling reproducing tfpt_2's failure numbers verbatim); "
+        },
+        {
+          "k": "c",
+          "v": "v833_gaussian_ramification_ladder.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "33/33"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "ramification-ladder-exact"
+        },
+        {
+          "k": "t",
+          "v": "; probe "
+        },
+        {
+          "k": "c",
+          "v": "gaussian_ramification_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the four documented roles of "
+        },
+        {
+          "k": "m",
+          "v": "\\pi_2 = 1{+}i"
+        },
+        {
+          "k": "t",
+          "v": " re-certified from scratch as ONE ladder — norm doubling ("
+        },
+        {
+          "k": "m",
+          "v": "(1{+}J)^{\\mathsf T}(1{+}J) = 2I_8"
+        },
+        {
+          "k": "t",
+          "v": " exact, zero class empty "
+        },
+        {
+          "k": "m",
+          "v": "0/240"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "240 = 15\\times16"
+        },
+        {
+          "k": "t",
+          "v": ", elementary divisors "
+        },
+        {
+          "k": "m",
+          "v": "(1^4, 2^4)"
+        },
+        {
+          "k": "t",
+          "v": "), the 4-bit address (deck trivial), the non-split jet ("
+        },
+        {
+          "k": "m",
+          "v": "\\Z[i]/(2) \\cong \\mathbb F_2[\\epsilon]/(\\epsilon^2)"
+        },
+        {
+          "k": "t",
+          "v": " unique among 24 bijections, deck "
+        },
+        {
+          "k": "m",
+          "v": "= 1{+}\\epsilon"
+        },
+        {
+          "k": "t",
+          "v": ", exactly "
+        },
+        {
+          "k": "m",
+          "v": "0/65536"
+        },
+        {
+          "k": "t",
+          "v": " deck-equivariant sections, the 120 root pairs the "
+        },
+        {
+          "k": "m",
+          "v": "q{=}1"
+        },
+        {
+          "k": "t",
+          "v": " shell), and the metaplectic lift ("
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_8 = (1{+}i)/\\sqrt2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "(SH)^3 = \\zeta_8I"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "(T_3K_3)^3 = iI ="
+        },
+        {
+          "k": "t",
+          "v": " the deck; exact "
+        },
+        {
+          "k": "m",
+          "v": "\\Z[\\zeta_8]"
+        },
+        {
+          "k": "t",
+          "v": " BFS census "
+        },
+        {
+          "k": "m",
+          "v": "|C_2/\\mu_8| = 11520"
+        },
+        {
+          "k": "t",
+          "v": ", ZERO Galois-mixed classes, "
+        },
+        {
+          "k": "m",
+          "v": "C_2 = K \\sqcup \\zeta_8K"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\chi(H{\\otimes}I) = 1"
+        },
+        {
+          "k": "t",
+          "v": " the RM–CSS phase bit); controls: the split ring admits 0 isos, the split extension splits "
+        },
+        {
+          "k": "m",
+          "v": "65536/65536"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v834_pg32_flag_completion.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "26/26"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "pg32-flags-exact"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "incidence-split"
+        },
+        {
+          "k": "t",
+          "v": "; probe "
+        },
+        {
+          "k": "c",
+          "v": "pg32_flag_completion_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\binom{4}{2}_2 = 35"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "140 = 35 + 105"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "105 = 35\\times3"
+        },
+        {
+          "k": "t",
+          "v": " flags "
+        },
+        {
+          "k": "m",
+          "v": "\\cong"
+        },
+        {
+          "k": "t",
+          "v": " point pairs; the RM layer rebuilt as set equalities ("
+        },
+        {
+          "k": "m",
+          "v": "[15,10,4]"
+        },
+        {
+          "k": "t",
+          "v": " enumerator exact, Grams "
+        },
+        {
+          "k": "m",
+          "v": "22I{+}6J"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "6I{+}J"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "m",
+          "v": "28I{+}7J"
+        },
+        {
+          "k": "t",
+          "v": "); the vacuum coordinate is ORIGIN RESTORATION; the kill typed as a split: "
+        },
+        {
+          "k": "m",
+          "v": "105 = 45 + 60"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Sp}(4,2)"
+        },
+        {
+          "k": "t",
+          "v": "-ORBIT decomposition on both sides ("
+        },
+        {
+          "k": "m",
+          "v": "720"
+        },
+        {
+          "k": "t",
+          "v": " brute force), the polarity dictionary on the 60 non-isotropic rungs is bijective/equivariant/incidence-preserving, the 45 doily rungs are obstructed ("
+        },
+        {
+          "k": "m",
+          "v": "(t{+}U)\\cap U = \\emptyset"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "45/45"
+        },
+        {
+          "k": "t",
+          "v": ", flag Gram "
+        },
+        {
+          "k": "m",
+          "v": "18I{+}3J \\ne 22I{+}6J"
+        },
+        {
+          "k": "t",
+          "v": ") — “105 checks "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " 105 flags” is a deck-equivariant bijection, NOT an incidence isomorphism (the typed reason the "
+        },
+        {
+          "k": "c",
+          "v": "v822"
+        },
+        {
+          "k": "t",
+          "v": " dilation died)); "
+        },
+        {
+          "k": "c",
+          "v": "v835_corner_hjelmslev_tower.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "21/21 + 20/20"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "corner-identity-symbolic"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "hjelmslev-structure-only"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "character_corner_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "hjelmslev_cp_tower_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the corner identity holds as POLYNOMIAL ALGEBRA in free event weights (symbolic toy leg exact; all 3 deployed windows on two independent code paths); the entire equality step consumes ONE piece of arithmetic — the glue identity "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_m\\Theta_m = 240\\sigma_3"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the uniform "
+        },
+        {
+          "k": "m",
+          "v": "H^*"
+        },
+        {
+          "k": "t",
+          "v": " mass — forcing "
+        },
+        {
+          "k": "m",
+          "v": "\\hat c_j = -1"
+        },
+        {
+          "k": "t",
+          "v": " EXACTLY for all 136 events (exact group-algebra Fourier, 128-dim register); honest scope: the identity-carrying object is NOT positive (1 of 12 sectors PSD), the positive GNS corner is NOT "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_X"
+        },
+        {
+          "k": "t",
+          "v": ", and the scramble proves identity "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " state corner COMB-BLIND while the lock data moves ("
+        },
+        {
+          "k": "m",
+          "v": "\\tau = +5.98\\times10^{-4} \\to -3.51"
+        },
+        {
+          "k": "t",
+          "v": "); the Hjelmslev ladder "
+        },
+        {
+          "k": "m",
+          "v": "m = 1..5"
+        },
+        {
+          "k": "t",
+          "v": " carries exact counts "
+        },
+        {
+          "k": "m",
+          "v": "15\\cdot8^{m-1}/35\\cdot16^{m-1}/105\\cdot32^{m-1}"
+        },
+        {
+          "k": "t",
+          "v": ", strictly projective CP channels (certified cb defect identically ZERO), level-exact "
+        },
+        {
+          "k": "m",
+          "v": "\\hat c^{(m)} = -1"
+        },
+        {
+          "k": "t",
+          "v": ", fence silent — but H5 decides AGAINST identification: the level-"
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": " corner is comb-blind with pure dilution "
+        },
+        {
+          "k": "m",
+          "v": "16^{1-m}"
+        },
+        {
+          "k": "t",
+          "v": " (ratio "
+        },
+        {
+          "k": "m",
+          "v": "0.0625"
+        },
+        {
+          "k": "t",
+          "v": " exactly); the one live door: position-dependent Kraus data on the level-"
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": " flags — register-side dressings provably cannot carry it ("
+        },
+        {
+          "k": "c",
+          "v": "hjelmslev_position_kraus_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "position-kraus-tradeoff"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "13/13"
+        },
+        {
+          "k": "t",
+          "v": ", probe-level, cited in the provenance)); "
+        },
+        {
+          "k": "c",
+          "v": "v836_commutant_sos_closure.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "29/29"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "commutant-sos-infeasible"
+        },
+        {
+          "k": "t",
+          "v": "; probe "
+        },
+        {
+          "k": "c",
+          "v": "commutant_sos_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", the declared SPEC v1"
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": "v2 witness-triple repair documented: the degree-2 SOS ansatz over the canonical five-dim abelian subalgebra "
+        },
+        {
+          "k": "m",
+          "v": "\\{\\Pi_A(0), \\Pi_A(1), \\Pi_A(4), \\Pi_A(7), \\Pi_A(9)\\}"
+        },
+        {
+          "k": "t",
+          "v": " of the 39-dim commutant is closed DEFINITIVELY — (a) the exact reduction lemma collapses the SDP (4 blocks "
+        },
+        {
+          "k": "m",
+          "v": "S^5_+"
+        },
+        {
+          "k": "t",
+          "v": ", 60 unknowns, 85 constraints) to a rational LP with the TRIVIAL diagonal rewriting as unique feasible point (Vandermonde kernel "
+        },
+        {
+          "k": "m",
+          "v": "\\{0\\}"
+        },
+        {
+          "k": "t",
+          "v": "): no cross-sector positive transfer; (b) the rank-3 det form has signature "
+        },
+        {
+          "k": "m",
+          "v": "(1,2)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\det S = t^2 - x^2 - y^2"
+        },
+        {
+          "k": "t",
+          "v": ", compiler null vector "
+        },
+        {
+          "k": "m",
+          "v": "q(5,-3,4) = 0"
+        },
+        {
+          "k": "t",
+          "v": "), coefficient matching FORCES "
+        },
+        {
+          "k": "m",
+          "v": "G = \\mathrm{diag}(1,-1,-1)"
+        },
+        {
+          "k": "t",
+          "v": " (not PSD) with the rational dual certificate "
+        },
+        {
+          "k": "m",
+          "v": "q(0,1,0) = -1 < 0"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "q"
+        },
+        {
+          "k": "t",
+          "v": "-negative directions are achievable even on the nonneg cone ("
+        },
+        {
+          "k": "m",
+          "v": "832/2799"
+        },
+        {
+          "k": "t",
+          "v": " truncation cuts); "
+        },
+        {
+          "k": "t",
+          "v": "fence-clean"
+        },
+        {
+          "k": "t",
+          "v": " on the algebra layer, "
+        },
+        {
+          "k": "t",
+          "v": "fence-hit"
+        },
+        {
+          "k": "t",
+          "v": " on the positivity branch — the nontrivial version is pair-correlation substance; controls fire (comb-specific identification, the v815 sector pattern, wrong-ratio inconsistency)). Suite "
+        },
+        {
+          "k": "m",
+          "v": "824\\to829"
+        },
+        {
+          "k": "t",
+          "v": "; all five run standalone green and encode their frozen patterns per the "
+        },
+        {
+          "k": "c",
+          "v": "v757"
+        },
+        {
+          "k": "t",
+          "v": " precedent; all seven probes (plus the position-Kraus companion) re-run identically at promotion (2026-08-07)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The wall statement (the round's deliverable)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Both corner-era routes are DECIDED: the corner route delivers everything structural (identity, projector, strictly projective CP tower, level-exactness) and shows the structure is placement-blind — the arithmetic lives entirely in the IDENTIFICATION step (a positive "
+        },
+        {
+          "k": "m",
+          "v": "P_{\\rm lock}"
+        },
+        {
+          "k": "t",
+          "v": " whose corner IS the deployed window form); the SOS route shows no positive algebraic rearrangement can manufacture the floor. The wall stays exactly "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " [O], relocated into identification, with both routes stop-listed per house discipline. NO RH claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 5 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "ANCHOR.AFFINE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "GAUSSIAN.RAMLADDER.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PG32.FLAGS.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CORNER.CHARACTER.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.COMMUTANT.SOS.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-27 two-route note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " (corner structural half closed / wall relocated; SOS closed with the rational dual certificate; both stop-list entries; the position-Kraus trade-off finding); "
+        },
+        {
+          "k": "m",
+          "v": "909\\to914"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves (the compressions are normal forms of existing corpus surfaces; the corner/SOS results are typed route decisions)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ": the anchor affine normal form keybox (Theorem 8) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the affine pointer in the anchor-first refinement "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "(1{+}i)"
+        },
+        {
+          "k": "t",
+          "v": " ramification-ladder entry in the Gaussian code keybox ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v832}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v833}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the bidirectional anchor checksum keybox after the spectral-selector block ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v832}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The two-route decision at the wall” ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v834/v835/v836}"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the part-intro chain extended; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": five new audit blocks "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the round-27 follow-up notes on the floor-contract prose; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CORNER.CHARACTER.01"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "PRIME.HJELMSLEV.CPTOWER.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.COMMUTANT.SOS.01"
+        },
+        {
+          "k": "t",
+          "v": " registration blocks "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-27 note on the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " block; "
+        },
+        {
+          "k": "c",
+          "v": "note_e8_gaussian_code"
+        },
+        {
+          "k": "t",
+          "v": ": a dated pointer to the ramification ladder in the machine-verification section."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round twenty-seven”; counters "
+        },
+        {
+          "k": "m",
+          "v": "824\\to829"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v836"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated (ScriptIndex, changelog.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "829"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v836"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The three compressions ("
+        },
+        {
+          "k": "c",
+          "v": "v832"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v834"
+        },
+        {
+          "k": "t",
+          "v": ") are exact-arithmetic normal forms of existing corpus tables — compressions, not new claims; the corner/Hjelmslev/SOS results are typed route decisions under frozen preregistered protocols (exact wards [E]-grade, float window legs typed, the honest scope measured); the queued Lean follow-up ("
+        },
+        {
+          "k": "c",
+          "v": "SectorPositiveDescent.lean"
+        },
+        {
+          "k": "t",
+          "v": ") stays queued; NO marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-07",
     "dateLabel": "2026-08-07 · LXIX",
     "heading": [
       {

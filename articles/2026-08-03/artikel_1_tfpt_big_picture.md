@@ -123,3 +123,12 @@ Ein Muster, drei Felder: Das Kontinuum erzwingt das diskrete Datum.
 Genauso wichtig: was NICHT gilt. Kein RH-Beweis. Keine bestätigte physikalische Vorhersage. Drei benannte offene Tor-Probleme. Dafür: 694 Verifikationsmodule, >6.800 Checks, 27 eingefrorene falsifizierbare Vorhersagen, 243 dokumentierte tote Hypothesen — alles offen reproduzierbar.
 
 Details, Figuren und Prüfprotokolle: fixpoint-theory.com
+
+---
+
+## Stand 7. August 2026
+
+Vier Tage nach diesem Artikel hat die Suite fünf weitere Runden gedreht (Module v814–v836; jetzt 829 Module, fast 9.700 Checks). Zwei neue Artikel dokumentieren den Stand — kein Marker wurde bewegt, kein RH-Anspruch ist hinzugekommen:
+
+- **[Der Boden und der Detektor](../2026-08-07/artikel_3_boden_und_detektor.md):** Die offene Positivitäts-Frage der Primzahl-Front ist auf eine einzige Ungleichung geschrumpft, ihr Skelett ist zertifiziert — und als Nebenprodukt existiert ein präregistriertes Instrument, das Zeta-Nullstellen ortet, ohne eine einzige eingebaute Nullstellen-Position (83 % Detektion, 0 % Falschpositive). Die Wand dahinter wurde dreimal unabhängig vermessen und heißt jetzt Paarkorrelations-Brücke.
+- **[Ein Register, ein Takt](../2026-08-07/artikel_4_ein_register_compiler.md):** Der dimensionslose Kern des Compilers — inklusive der hier erzählten 240er- und Vier-Bit-Strukturen — komprimiert exakt auf eine affine Regel T(x) = 2x − 2 plus eine Ablese-Schicht. Die Gauß-Codebrücke aus diesem Artikel ist darin eine von vier Rollen derselben Gauß-Primzahl (1+i).

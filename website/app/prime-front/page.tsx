@@ -41,7 +41,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v831 inside an 824-script suite. No claim of progress toward the Riemann Hypothesis.",
+    "A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v842 inside an 835-script suite. No claim of progress toward the Riemann Hypothesis.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "The Prime Front — TFPT research diary",
     description:
-      "Primes, the E8 census, and the load-bearing modules v535–v831: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
+      "Primes, the E8 census, and the load-bearing modules v535–v842: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
     url: `${SITE_URL}/prime-front`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified v535–v831: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
+      "Research diary of the prime / zeta line. Machine-verified v535–v842: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
   },
 };
 
@@ -3169,7 +3169,28 @@ function AugustOffensivesSection() {
           tower gap, and by Guinand the comb&apos;s sqrt-scale
           self-cancellation IS the zero-side floor statement; the
           route is stop-listed and the bridge contract
-          PRIME.FLOOR.PAIRCORR.01 [O] registered) —
+          PRIME.FLOOR.PAIRCORR.01 [O] registered), with both
+          corner-era routes at that wall decided in round 27
+          (v835: the character-corner identity is weight-generic
+          and the Hjelmslev CP tower strictly projective — but
+          comb-blind, so the wall relocates into the
+          identification step; v836: the commutant SOS route
+          closed definitively by exact certificates; both
+          stop-listed), and the wall given its full coordinate
+          system in round 28 (v837/v838: the closure quantifier
+          measured — no register, compression or state-preserving
+          position-dependent carrier identifies, because the
+          identity is an EXTREMAL state condition; v839/v840: the
+          demand saturates the GUE boundary structurally and the
+          bootstrap loop is short — the wall conserves itself
+          through the saturation; v841/v842: the route REOPENS
+          with the relational input — the identification carrier
+          exists, the identified corner&apos;s excess is positive
+          on all 67 rungs, and the certified skeleton encloses
+          τ_X strictly positively: the wall = the infinite
+          quantifier over strictly-positive certified enclosures,
+          sharpened demand a uniform lower bound on the excess
+          margin) —
           battery-relative, and
           still no positivity theorem on V_∞), and
           nothing here is a claim of progress toward the Riemann
@@ -3355,7 +3376,7 @@ function BigPictureSection() {
                 href="/verification"
                 className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
               >
-                v535–v831 (this front)
+                v535–v842 (this front)
               </Link>{" "}
               are machine-verified and cited in the papers. Sandbox probes never
               move a status marker.
@@ -3388,8 +3409,8 @@ function BigPictureSection() {
               tone="amber"
             />
             <BigPictureStat
-              term="v535–v831"
-              desc="machine-verified modules of this front, inside the 824-script suite (all green)"
+              term="v535–v842"
+              desc="machine-verified modules of this front, inside the 835-script suite (all green)"
               tone="emerald"
             />
             <BigPictureStat

@@ -115,3 +115,11 @@ The state of play after August 3, 2026:
 Honest stays honest: no RH proof. The uniform question IS the conjecture. But it has become three sizes smaller — most recently: "explain why arithmetic picks the point 0.53 inside the admissible corridor."
 
 All machine-verifiable: fixpoint-theory.com
+
+---
+
+## Update, August 7, 2026
+
+The question has transformed again since this article — and has gotten smaller once more. Across five rounds (modules v814–v836), the sector floor shrank to **one** ratio inequality ρ = τ/τ_pnt > 0, its skeleton was laid bare as an exact sum of squares with a certified envelope, and the certified exclusion ladder was inverted into a zero-locating instrument (out of sample: 83% detection, 0% false positives, with no zero knowledge built in). Three proof routes — the analytic, the structural, the algebraic — were honestly closed and documented; the wall now carries a registered name: the floor–pair-correlation bridge. As before: no RH proof, anywhere.
+
+The full protocol: **[The Floor and the Detector](../2026-08-07/article_3_floor_and_detector_en.md)** (August 7, 2026).

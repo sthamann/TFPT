@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`824` registered scripts · `909` ledger claims · `10` clusters.
+`835` registered scripts · `920` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (344 scripts)
+### `core` — Compiler core & the E₈ glue  (355 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -699,6 +699,28 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v829_prime_floor_depth, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v824_prime_floor_skeleton, v563, v823, v824, v825, v829 · cited: 3 e8 audit bootstrap, research contracts
 - **v831_prime_alias_second_moment** [E/C/O/X] `PRIME.FLOOR.ALIASMOMENT.01, PRIME.FLOOR.PAIRCORR.01` — **ALIAS-CORRELATION-PAIRCORR (15 Checks mit den SIEBEN präregistriert-ehrlichen Prämissen-Umsturz-FAILs S1.SIGN/W2B/W2C/W2D/S4.GEOM/C1/C2 — das FAIL-Muster IST der Befund; wörtlich
   - deps: v831_prime_alias_second_moment, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v830_prime_float_budget, v829_prime_floor_depth, v563, v684, v823, v829 · cited: 3 e8 audit bootstrap, research contracts
+- **v832_anchor_flavor_checksum** [E/X] `ANCHOR.AFFINE.01` — zwei exakte Korpus-Kompressionen — **ANCHOR-AFFINE-EXACT + FLAVOR-BIDIR-CHECKSUM (selektiv) (18/18 + 15/15): der Anker a = (1,1,2) hat Potenzsummen p_n = 2 + 2^n mit der affinen Re
+  - deps: v1, v2, v6, v222, v230, v415 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
+- **v833_gaussian_ramification_ladder** [E] `GAUSSIAN.RAMLADDER.01` — die vier dokumentierten Rollen des verzweigten Gaußschen Primelements π₂ = 1+i sind EIN maschinell geprüftes Objekt mit vier Sprossen, jede von Grund auf re-zertifiziert — **RAMIFI
+  - deps: v689, v783, v798, v803, v819 · cited: 1 architecture e8, 3 e8 audit bootstrap
+- **v834_pg32_flag_completion** [E/X] `PG32.FLAGS.01` — **PG32-FLAGS-EXACT + INCIDENCE-SPLIT (26/26): die Zähl-Normalform [4 über 2]₂ = 35, 140 affine 2-Flats = 35 durch den Ursprung + 105 nicht; PG(3,2): 15 Punkte, 35 Geraden, 105 = 35
+  - deps: v689, v774, v819, v821, v822 · cited: 3 e8 audit bootstrap
+- **v835_corner_hjelmslev_tower** [E] `PRIME.CORNER.CHARACTER.01` — aber kein Register-Lift baut die Identifikation: die strukturelle Hälfte der Ecken-Route SCHLIESST auf endlicher Ebene, die arithmetische Wand VERLAGERT sich in den Identifikations
+  - deps: v831_prime_alias_second_moment, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v563, v738, v756, v791, v798, v803 · cited: 3 e8 audit bootstrap, research contracts
+- **v836_commutant_sos_closure** [E] `PRIME.COMMUTANT.SOS.01` — die zweite unabhängige Route der Ecken-Ära DEFINITIV GESCHLOSSEN durch exakte Zertifikate — **COMMUTANT-SOS-INFEASIBLE (29/29): das Ziel T_GL1 = Σ V_j* T_χj V_j + Σ C_k* C_k mit ni
+  - deps: v831_prime_alias_second_moment, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v563, v619, v738, v755, v756, v815 · cited: 3 e8 audit bootstrap, research contracts
+- **v837_corner_closure_quantifier** [E] `PRIME.CORNER.OPENDOORS.01` — die zwei offenen Türen der Charakter-Ecken-Kanalklasse schließen durch entgegengesetzte Mechanismen, und der Quantor erweitert sich ebenen-exakt durch den Hjelmslev-Turm bis m ≤ 3 
+  - deps: v831_prime_alias_second_moment, v835_corner_hjelmslev_tower, v563, v738, v835, v836 · cited: 3 e8 audit bootstrap, research contracts
+- **v838_corner_expectation_position** [E/X] `PRIME.CORNER.EXPECTATION.01` — die vierte Wand-Koordinate typisiert — **EXPECTATION-CLOSED + POSITION-CARRIER-TRADEOFF (13/13 + 13/13): (i) ALLE 5276 Untergruppen von G = C2 × F2⁴ × Z4 enumeriert, alle 74259 Erw
+  - deps: v831_prime_alias_second_moment, v837_corner_closure_quantifier, v563, v738, v835 · cited: 3 e8 audit bootstrap, research contracts
+- **v839_paircorr_bridge_saturation** [C] `PRIME.FLOOR.BRIDGEMAP.01` — **BRIDGE-FULLY-BEYOND + GUE-SATURATING (9/9 + 7/7; Scholarship-Korrektur überall: Montgomerys F(α) auf |α| < 1 ist RH-KONDITIONAL): TEIL A: die Forderung von PRIME.FLOOR.PAIRCORR.0
+  - deps: v831_prime_alias_second_moment, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v830_prime_float_budget, v563, v684, v823, v829, v830 · cited: 3 e8 audit bootstrap, research contracts
+- **v840_gue_ablation_loopgain** [-] `PRIME.FLOOR.GUEABLATION.01` — die Selbsterhaltung der Wand IST die Sättigung — **SATURATION-STRUCTURAL + LOOP-SHORT (10/10 + 8/8): TEIL A (Falsifikationsversuch auf v839): ALLE 6 quell-nativen Guinand-zulässige
+  - deps: v831_prime_alias_second_moment, v839_paircorr_bridge_saturation, v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment, v563, v684, v823, v829, v830 · cited: 3 e8 audit bootstrap, research contracts
+- **v841_relation_carrier_ladder** [O/X] `PRIME.RELATION.MULT.01` — die Ecken-Route ÖFFNET WIEDER mit der richtigen Input-Klasse (die multiplikativen Relationen zwischen Ereignissen) — **RELATION-CARRIER-EXISTS + EXCESS-NONNEGATIVE (18/18 + 13/13):
+  - deps: v831_prime_alias_second_moment, v837_corner_closure_quantifier, v838_corner_expectation_position, v842_excess_certified_skeleton, v563, v738 · cited: 3 e8 audit bootstrap, research contracts
+- **v842_excess_certified_skeleton** [O/X] `PRIME.RELATION.SKELETON.01` — strikt positive Intervall-Einschließungen von τ_X auf ALLEN 67 erreichbaren Sprossen, der zertifizierte Diskriminator, und das Skalengesetz, das die Wand als den unendlichen Quanto
+  - deps: v841_relation_carrier_ladder, v831_prime_alias_second_moment, v839_paircorr_bridge_saturation, v840_gue_ablation_loopgain, v563 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1713,22 +1735,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×122, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×24, `v755`×24, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18, `REG.FREEZE.01`×18, `E8.GLU.01`×17
+**Most-depended-on claims** (the load-bearing roots): `v563`×130, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v755`×25, `v752`×24, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18, `REG.FREEZE.01`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v820_prime_kraus_rm24** — `PRIME.KRAUS.RM24.01`
-- **v821_prime_vacuum35** — `PRIME.VACUUM35.01`
-- **v822_prime_vacuum_dilation** — `PRIME.CONTINUUM.UNSHORTEN.01`
-- **v823_prime_lagrange_floor** — `PRIME.FLOOR.LAGRANGE.01`
-- **v824_prime_floor_skeleton** — `PRIME.FLOOR.SKELETON.01`
-- **v825_prime_exclusion_ladder** — `PRIME.EXCLUSION.LADDER.01`
-- **v826_prime_exclusion_battery2** — `PRIME.EXCLUSION.BATTERY2.01`
-- **v827_prime_zero_locator** — `PRIME.EXCLUSION.LOCATOR.01`
-- **v828_prime_comb_window** — `PRIME.EXCLUSION.WINDOW.01`
-- **v829_prime_floor_depth** — `PRIME.FLOOR.DEPTHKILL.01`
-- **v830_prime_float_budget** — `PRIME.FLOOR.BUDGET.01`
 - **v831_prime_alias_second_moment** — `PRIME.FLOOR.ALIASMOMENT.01, PRIME.FLOOR.PAIRCORR.01`
+- **v832_anchor_flavor_checksum** — `ANCHOR.AFFINE.01`
+- **v833_gaussian_ramification_ladder** — `GAUSSIAN.RAMLADDER.01`
+- **v834_pg32_flag_completion** — `PG32.FLAGS.01`
+- **v835_corner_hjelmslev_tower** — `PRIME.CORNER.CHARACTER.01`
+- **v836_commutant_sos_closure** — `PRIME.COMMUTANT.SOS.01`
+- **v837_corner_closure_quantifier** — `PRIME.CORNER.OPENDOORS.01`
+- **v838_corner_expectation_position** — `PRIME.CORNER.EXPECTATION.01`
+- **v839_paircorr_bridge_saturation** — `PRIME.FLOOR.BRIDGEMAP.01`
+- **v840_gue_ablation_loopgain** — `PRIME.FLOOR.GUEABLATION.01`
+- **v841_relation_carrier_ladder** — `PRIME.RELATION.MULT.01`
+- **v842_excess_certified_skeleton** — `PRIME.RELATION.SKELETON.01`
 
