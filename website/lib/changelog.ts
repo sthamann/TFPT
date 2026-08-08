@@ -42,6 +42,1939 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-08",
+    "dateLabel": "2026-08-08 · LXXV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round thirty-two — the grade law, the connected current, and the E8 audits: FIVE modules ("
+      },
+      {
+        "k": "c",
+        "v": "v856"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v860"
+      },
+      {
+        "k": "t",
+        "v": ", from seven frozen probes plus two Lean modules; suite "
+      },
+      {
+        "k": "m",
+        "v": "848\\to853"
+      },
+      {
+        "k": "t",
+        "v": ") — the consolidation of the 2026-08-08 morning campaign in three waves: (1) THE CONNECTED-CURRENT ARCHITECTURE — the global-centering KMS covariance of the Möbius commutator current "
+      },
+      {
+        "k": "m",
+        "v": "\\mathcal{L} = -[D,\\log Z] = T(\\Lambda)"
+      },
+      {
+        "k": "t",
+        "v": " (exact at "
+      },
+      {
+        "k": "m",
+        "v": "7.2\\times10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": "; Epstein "
+      },
+      {
+        "k": "m",
+        "v": "h{=}2"
+      },
+      {
+        "k": "t",
+        "v": " leaks "
+      },
+      {
+        "k": "m",
+        "v": "76\\%"
+      },
+      {
+        "k": "t",
+        "v": " off the prime powers at RELATION level, before any state) is the FIRST design that EVADES the nuclear tax (the relapse kill does not fire: ratio "
+      },
+      {
+        "k": "m",
+        "v": "\\approx 0.3"
+      },
+      {
+        "k": "t",
+        "v": " against the frozen band, geometry similarity "
+      },
+      {
+        "k": "m",
+        "v": "0.3"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.4"
+      },
+      {
+        "k": "t",
+        "v": " — genuinely different bookkeeping from the event-local Schur completions) and dies on the typed GRADE GAP instead: the covariance is the pair-correlation form (pair weights "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_m^2 = \\Lambda(m)^2/m"
+      },
+      {
+        "k": "t",
+        "v": ", QUADRATIC in the comb, sim "
+      },
+      {
+        "k": "m",
+        "v": "0.56"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.63"
+      },
+      {
+        "k": "t",
+        "v": "; the centered main term IS the deployed smooth half-line subtraction at corr "
+      },
+      {
+        "k": "m",
+        "v": "0.99"
+      },
+      {
+        "k": "t",
+        "v": "), the deployed window form is LINEAR, and routing the linear read through the correlator costs the variance itself: "
+      },
+      {
+        "k": "m",
+        "v": "2.5"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "4.1\\times10^5\\,\\tau"
+      },
+      {
+        "k": "t",
+        "v": " — an instrument, not a floor certificate; the phase-cell census is EMPTY on the entire deployed torus ("
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " positive cells of "
+      },
+      {
+        "k": "m",
+        "v": "220"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "1760"
+      },
+      {
+        "k": "t",
+        "v": " per anchor incl. "
+      },
+      {
+        "k": "m",
+        "v": "\\{2,3,5\\}"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "\\{2,3,5,7\\}"
+      },
+      {
+        "k": "t",
+        "v": "; grid "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}"
+      },
+      {
+        "k": "t",
+        "v": " down to "
+      },
+      {
+        "k": "m",
+        "v": "-3.48"
+      },
+      {
+        "k": "t",
+        "v": "; the phases control "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}1\\%"
+      },
+      {
+        "k": "t",
+        "v": " of the demand; the independent tail kill: "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}(\\mathrm{tail})/\\tau = -3.4\\times10^3..{-4.8\\times10^3}"
+      },
+      {
+        "k": "t",
+        "v": " — the split moves the demand onto an object FARTHER from PSD); and the conditional frame is kernel-checked: "
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/CofinalCurrent.lean"
+      },
+      {
+        "k": "t",
+        "v": " — ConnectedTail "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " PositiveHeadCell "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " PhaseRecurrence "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow (H_{\\rm cof})"
+      },
+      {
+        "k": "t",
+        "v": ", composed through CofinalWeil to Weil nonnegativity on the whole dense family, with the "
+      },
+      {
+        "k": "m",
+        "v": "\\delta = 0"
+      },
+      {
+        "k": "t",
+        "v": " relaxation typed and the counterexample "
+      },
+      {
+        "k": "c",
+        "v": "connectedTail_not_sufficient"
+      },
+      {
+        "k": "t",
+        "v": " proven — hypothesis 2 measured EMPTY at the deployed frame: a named continuation contract, not a discharge ("
+      },
+      {
+        "k": "c",
+        "v": "FORM.PRIME.COFINAL_CURRENT.01"
+      },
+      {
+        "k": "t",
+        "v": " [F]); (2) THE E8 AUDITS — the simplex-Fourier character theorem: the Gaussian census "
+      },
+      {
+        "k": "m",
+        "v": "240 = 15\\times16"
+      },
+      {
+        "k": "t",
+        "v": " IS the spectral statement "
+      },
+      {
+        "k": "m",
+        "v": "\\hat r = (240, -16^{15})"
+      },
+      {
+        "k": "t",
+        "v": " (the uniform-nonzero channel "
+      },
+      {
+        "k": "m",
+        "v": "P = (J-I)/15"
+      },
+      {
+        "k": "t",
+        "v": " with spectrum "
+      },
+      {
+        "k": "m",
+        "v": "\\{1, (-1/15)^{15}\\}"
+      },
+      {
+        "k": "t",
+        "v": " and two-step contraction "
+      },
+      {
+        "k": "m",
+        "v": "1/225"
+      },
+      {
+        "k": "t",
+        "v": ", exact in Fractions), the "
+      },
+      {
+        "k": "c",
+        "v": "v817"
+      },
+      {
+        "k": "t",
+        "v": " packet numerator EQUALS the code Walsh transform at every level "
+      },
+      {
+        "k": "m",
+        "v": "\\le 16"
+      },
+      {
+        "k": "t",
+        "v": " (Eisenstein normal form "
+      },
+      {
+        "k": "m",
+        "v": "15\\,\\Theta_{D8} = 7\\,\\Theta_L + 8\\,\\Theta_0"
+      },
+      {
+        "k": "t",
+        "v": "), and "
+      },
+      {
+        "k": "m",
+        "v": "\\hat m_2(n) = -1/15"
+      },
+      {
+        "k": "t",
+        "v": " holds as an INTEGER IDENTITY at every odd "
+      },
+      {
+        "k": "m",
+        "v": "n \\le 16500"
+      },
+      {
+        "k": "t",
+        "v": " (all 1911 odd primes) — v817's per-prime measurement is the prime restriction of a CHARACTER THEOREM of the code, typed honestly spectral-only (the gradings do not refine each other); the G31 clock alphabet: "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Deg}(G_{31})/4 = \\{2,3,5,6\\} = \\{|Z_2|, N_{\\rm fam}, g_{\\rm car}, |R^+(A_3)|\\}"
+      },
+      {
+        "k": "t",
+        "v": " as a NORMAL FORM (gcd "
+      },
+      {
+        "k": "m",
+        "v": "4 = |\\mu_4|"
+      },
+      {
+        "k": "t",
+        "v": ", lcm "
+      },
+      {
+        "k": "m",
+        "v": "120 = |R^+(E_8)|"
+      },
+      {
+        "k": "t",
+        "v": ", lcm/gcd "
+      },
+      {
+        "k": "m",
+        "v": "30 = h(E_8)"
+      },
+      {
+        "k": "t",
+        "v": ", audit identity "
+      },
+      {
+        "k": "m",
+        "v": "16\\times15 = 240"
+      },
+      {
+        "k": "t",
+        "v": " REALIZED on the roots), "
+      },
+      {
+        "k": "m",
+        "v": "(8,12,20,24)"
+      },
+      {
+        "k": "t",
+        "v": " the unique product-"
+      },
+      {
+        "k": "m",
+        "v": "46080"
+      },
+      {
+        "k": "t",
+        "v": "/sum-"
+      },
+      {
+        "k": "m",
+        "v": "64"
+      },
+      {
+        "k": "t",
+        "v": " quadruple, the "
+      },
+      {
+        "k": "m",
+        "v": "607"
+      },
+      {
+        "k": "t",
+        "v": "-group rank-4 kill scan ("
+      },
+      {
+        "k": "m",
+        "v": "G_{31}"
+      },
+      {
+        "k": "t",
+        "v": " the SOLE full-battery passer; impostors typed by name; honesty line: degree-only audits cannot see the reducible torus), the "
+      },
+      {
+        "k": "m",
+        "v": "W(D_5)\\times W(A_3)"
+      },
+      {
+        "k": "t",
+        "v": " fence re-killed by COMPUTED centers "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": "; the winding quadratic: the whole "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_2"
+      },
+      {
+        "k": "t",
+        "v": " winding line is ONE adjugate quadratic "
+      },
+      {
+        "k": "m",
+        "v": "q_{\\rm wind} = e_1^{\\mathsf T}\\mathrm{adj}(tI-R)\\mathbf{1} = t^2 - g_{\\rm car}t + |Z_2|"
+      },
+      {
+        "k": "t",
+        "v": " (irreducible, disc "
+      },
+      {
+        "k": "m",
+        "v": "17"
+      },
+      {
+        "k": "t",
+        "v": ") with the triple lock "
+      },
+      {
+        "k": "m",
+        "v": "s = 6"
+      },
+      {
+        "k": "t",
+        "v": " (trace/det/Coxeter each alone), "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta(6) = 39200 = 2\\cdot140^2"
+      },
+      {
+        "k": "t",
+        "v": " NOT a collision point (the sole "
+      },
+      {
+        "k": "m",
+        "v": "2\\times"
+      },
+      {
+        "k": "t",
+        "v": "square hit in the window) and the reality threshold "
+      },
+      {
+        "k": "m",
+        "v": "s^* \\approx 2.8250"
+      },
+      {
+        "k": "t",
+        "v": " the unique "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta"
+      },
+      {
+        "k": "t",
+        "v": "-root in "
+      },
+      {
+        "k": "m",
+        "v": "(2,3)"
+      },
+      {
+        "k": "t",
+        "v": " (deployed "
+      },
+      {
+        "k": "m",
+        "v": "\\approx 2.83"
+      },
+      {
+        "k": "t",
+        "v": "); (3) ROUND 33, THE GRADE THEORY (the day's conceptual core) — "
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/GradeNoGo.lean"
+      },
+      {
+        "k": "t",
+        "v": ": THE GRADE LAW kernel-checked — the entire direct-positivity graveyard reduces to ONE homogeneity no-go (a 1-homogeneous target can never be matched exactly by a 2-homogeneous Gram square: evaluate on a scaling ray at "
+      },
+      {
+        "k": "m",
+        "v": "t = 1, 2"
+      },
+      {
+        "k": "t",
+        "v": " — two lines, CLASS closure), the affine trilemma with the exact PSD tax (error "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " constantPrice "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " quadraticPrice) and the sharpened "
+      },
+      {
+        "k": "c",
+        "v": "affine_grade_no_go"
+      },
+      {
+        "k": "t",
+        "v": " (the background killed too), and the elevator lemma "
+      },
+      {
+        "k": "c",
+        "v": "tangent_psd_on_kernel_null"
+      },
+      {
+        "k": "t",
+        "v": " (derivatives of PSD families at kernel-null directions are positively signed — RATES, not amplitudes: the ONLY licensed grade-1 mechanism) — measured exchange rate "
+      },
+      {
+        "k": "m",
+        "v": "10^4"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "10^5"
+      },
+      {
+        "k": "t",
+        "v": " across the four graveyard instances ("
+      },
+      {
+        "k": "c",
+        "v": "FORM.PRIME.GRADE.NO_GO.01"
+      },
+      {
+        "k": "t",
+        "v": " [F]); the instantiated elevator is REAL (PSD compound-Poisson Euler factors with no eigenvalue input, exact tangent within the certified Taylor bound, free null-sum positivity "
+      },
+      {
+        "k": "m",
+        "v": "x^{\\mathsf T}\\Psi x = w|X(\\theta_q)|^2"
+      },
+      {
+        "k": "t",
+        "v": ", rates Euler-indexed at rel dev "
+      },
+      {
+        "k": "m",
+        "v": "0.0"
+      },
+      {
+        "k": "t",
+        "v": ") and dies honestly on SIGNED spectral densities on BOTH deployed sides: the comb Lévy density at exactly "
+      },
+      {
+        "k": "m",
+        "v": "50\\%"
+      },
+      {
+        "k": "t",
+        "v": " negative mass (first flip "
+      },
+      {
+        "k": "m",
+        "v": "\\theta^* = \\pi D/(2u_q)"
+      },
+      {
+        "k": "t",
+        "v": ", prediction matched to "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}1\\%"
+      },
+      {
+        "k": "t",
+        "v": ") and the arch source on the DIGAMMA BAND ending at "
+      },
+      {
+        "k": "m",
+        "v": "\\tau^* = 6.27"
+      },
+      {
+        "k": "t",
+        "v": " where "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Re}\\,\\psi(\\tfrac14 + i\\tau/2) = \\log\\pi"
+      },
+      {
+        "k": "t",
+        "v": " (the closure's sharpest new number) — the Lévy/conditional-positivity elevator class CLOSED on the deployed sides (Epstein "
+      },
+      {
+        "k": "m",
+        "v": "h{=}2"
+      },
+      {
+        "k": "t",
+        "v": " refuses the Euler indexing at construction grade, "
+      },
+      {
+        "k": "m",
+        "v": "82\\%"
+      },
+      {
+        "k": "t",
+        "v": " off-pp); and the phase-lever theorem closes the finite-head phase-rescue FAMILY with certificates: granting every window atom a PRIVATE best phase, the budget never pays the arch deficit on any of the 67 rungs ("
+      },
+      {
+        "k": "m",
+        "v": "d_0 - \\mathrm{budget}(\\{2,3\\}) \\ge 1.3894"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "d_0 - \\mathrm{budget}(\\{2,3,5,7\\}) \\ge 0.6296"
+      },
+      {
+        "k": "t",
+        "v": " — uniformly negative at every phase, no Kronecker rescue), three certified scope tiers (exact census / budget inequality / greedy sharp control), the D-frontier saturating at "
+      },
+      {
+        "k": "m",
+        "v": "0.73 < 1"
+      },
+      {
+        "k": "t",
+        "v": " (structural, not a boundary effect), the anti-vacuity ward firing; NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (5)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v856_connected_current_lean.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "14/14 + 5/5"
+        },
+        {
+          "k": "t",
+          "v": ", zero fails, "
+        },
+        {
+          "k": "t",
+          "v": "connected-covariance-partial"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "phase-cells-empty"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "+4"
+        },
+        {
+          "k": "t",
+          "v": " Lean-mirror checks; probes "
+        },
+        {
+          "k": "c",
+          "v": "connected_covariance_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "cofinal_phase_cell_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the current exact ("
+        },
+        {
+          "k": "m",
+          "v": "-[D, \\log Z] = T(\\Lambda)"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "7.2\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_4"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_{\\Q(i)}"
+        },
+        {
+          "k": "t",
+          "v": " pass in their own completions; Epstein "
+        },
+        {
+          "k": "m",
+          "v": "h{=}2"
+        },
+        {
+          "k": "t",
+          "v": " leaks "
+        },
+        {
+          "k": "m",
+          "v": "75.8\\%"
+        },
+        {
+          "k": "t",
+          "v": " off-pp at relation level), states PSD with exact centering bookkeeping, the main subtraction "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the deployed smooth subtraction (corr "
+        },
+        {
+          "k": "m",
+          "v": "0.991"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.995"
+        },
+        {
+          "k": "t",
+          "v": "; the wrong half-weight loses the pair-weight carrier), the relapse kill does NOT fire (ratio2 "
+        },
+        {
+          "k": "m",
+          "v": "0.29"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.31"
+        },
+        {
+          "k": "t",
+          "v": " outside "
+        },
+        {
+          "k": "m",
+          "v": "[0.5, 20]"
+        },
+        {
+          "k": "t",
+          "v": "), the grade gap carries the identity residual ("
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "45"
+        },
+        {
+          "k": "t",
+          "v": " Ah units; variance price "
+        },
+        {
+          "k": "m",
+          "v": "2.49"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "4.06\\times10^5\\,\\tau"
+        },
+        {
+          "k": "t",
+          "v": "); the torus census "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " positive cells with per-cell affineness exact, the Kronecker UFD lemma warded, the tail kill "
+        },
+        {
+          "k": "m",
+          "v": "-3.4/-4.8/-3.7\\times10^3\\,\\tau"
+        },
+        {
+          "k": "t",
+          "v": ", scramble "
+        },
+        {
+          "k": "m",
+          "v": "0/200"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v857_simplex_fourier_winding.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "26/26 + 20/20"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "simplex-fourier-exact"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "intertwiner-identified"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "winding-quadratic-exact"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "simplex_fourier_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "flavor_winding_quadratic_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the Walsh law with ramification/equidistribution at every level, the packet-code intertwiner identity (both ladders "
+        },
+        {
+          "k": "m",
+          "v": "[-16, 112, -448, 1136, \\dots]"
+        },
+        {
+          "k": "t",
+          "v": "), the value theorem to "
+        },
+        {
+          "k": "m",
+          "v": "16500"
+        },
+        {
+          "k": "t",
+          "v": "; the adjugate quadratic with the triple lock, the locus census and four firing controls); "
+        },
+        {
+          "k": "c",
+          "v": "v858_g31_clock_alphabet.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "19/19"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "clock-alphabet-selective"
+        },
+        {
+          "k": "t",
+          "v": "; probe "
+        },
+        {
+          "k": "c",
+          "v": "g31_clock_alphabet_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": BFS closure "
+        },
+        {
+          "k": "m",
+          "v": "46080"
+        },
+        {
+          "k": "t",
+          "v": " exact, the "
+        },
+        {
+          "k": "m",
+          "v": "60"
+        },
+        {
+          "k": "t",
+          "v": "-reflection census with zero quasi-reflections (v634 reproduced), the unique quadruple, the seven-gate battery over the "
+        },
+        {
+          "k": "m",
+          "v": "607"
+        },
+        {
+          "k": "t",
+          "v": "-entry catalog, the family boundary to "
+        },
+        {
+          "k": "m",
+          "v": "m = 120"
+        },
+        {
+          "k": "t",
+          "v": ", X1/X2 controls, the computed-center fence kill); "
+        },
+        {
+          "k": "c",
+          "v": "v859_grade_no_go_elevator.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "11/11"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "local-sign-fails"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "+4"
+        },
+        {
+          "k": "t",
+          "v": " Lean-mirror checks; probe "
+        },
+        {
+          "k": "c",
+          "v": "euler_schur_semigroup_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the mechanism real (Schoenberg PSD at all tested "
+        },
+        {
+          "k": "m",
+          "v": "t"
+        },
+        {
+          "k": "t",
+          "v": ", exact tangent, free null-sum positivity at "
+        },
+        {
+          "k": "m",
+          "v": "10^{-10}"
+        },
+        {
+          "k": "t",
+          "v": ", rates warded exact, constructor fence passed), the lag-form kill (cos-sim "
+        },
+        {
+          "k": "m",
+          "v": "0.004"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "0.099"
+        },
+        {
+          "k": "t",
+          "v": "), the signed-density measurements (comb "
+        },
+        {
+          "k": "m",
+          "v": "0.500"
+        },
+        {
+          "k": "t",
+          "v": " exactly; arch flip bands ending "
+        },
+        {
+          "k": "m",
+          "v": "6.26"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "6.27"
+        },
+        {
+          "k": "t",
+          "v": " with the analytic "
+        },
+        {
+          "k": "m",
+          "v": "\\tau^* = 6.27"
+        },
+        {
+          "k": "t",
+          "v": "), scramble and Epstein controls); "
+        },
+        {
+          "k": "c",
+          "v": "v860_phase_lever_closure.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "7/7"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "phase-lever-theorem"
+        },
+        {
+          "k": "t",
+          "v": "; probe "
+        },
+        {
+          "k": "c",
+          "v": "phase_lever_theorem_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the warded fast route, the census regression, the analytic lever bound dominating the exact sup ("
+        },
+        {
+          "k": "m",
+          "v": "10.3\\times"
+        },
+        {
+          "k": "t",
+          "v": "), the budget margins on all 67 rungs, the break-even census, the greedy exact-landscape control (S5b: still zero cells), the D-frontier saturation and the recalibrated anti-vacuity ward (v1.1, declared in the frozen spec)). Suite "
+        },
+        {
+          "k": "m",
+          "v": "848\\to853"
+        },
+        {
+          "k": "t",
+          "v": "; all five standalone green with pattern gates encoding the frozen censuses (check counts, FAIL ids, verdicts, exit codes) and the byte-exact provenance ward vs the embedded sources; all seven probes re-run identically at promotion (2026-08-08); promoted VERBATIM with no downscoping (the round-31 embedding convention)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean (2 modules promoted)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/GradeNoGo.lean"
+        },
+        {
+          "k": "t",
+          "v": " — the grade barrier as a class-closure theorem ("
+        },
+        {
+          "k": "m",
+          "v": "13"
+        },
+        {
+          "k": "t",
+          "v": " declarations, "
+        },
+        {
+          "k": "m",
+          "v": "10"
+        },
+        {
+          "k": "t",
+          "v": " theorems; lake build green, "
+        },
+        {
+          "k": "m",
+          "v": "3415"
+        },
+        {
+          "k": "t",
+          "v": " jobs, no "
+        },
+        {
+          "k": "c",
+          "v": "sorry"
+        },
+        {
+          "k": "t",
+          "v": ", no "
+        },
+        {
+          "k": "c",
+          "v": "native_decide"
+        },
+        {
+          "k": "t",
+          "v": ", axioms propext/Classical.choice/Quot.sound only, verified by "
+        },
+        {
+          "k": "c",
+          "v": "#print axioms"
+        },
+        {
+          "k": "t",
+          "v": " on all ten): "
+        },
+        {
+          "k": "c",
+          "v": "grade_no_go"
+        },
+        {
+          "k": "t",
+          "v": " (the two-scalar core), "
+        },
+        {
+          "k": "c",
+          "v": "gram_two_homogeneous"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "grade_no_go_gram"
+        },
+        {
+          "k": "t",
+          "v": ", the affine trilemma ("
+        },
+        {
+          "k": "c",
+          "v": "affine_gram_expansion"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "affine_gram_tax"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "affine_grade_no_go"
+        },
+        {
+          "k": "t",
+          "v": ") and the elevator lemma "
+        },
+        {
+          "k": "c",
+          "v": "tangent_psd_on_kernel_null"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/CofinalCurrent.lean"
+        },
+        {
+          "k": "t",
+          "v": " — the conditional route to "
+        },
+        {
+          "k": "m",
+          "v": "(H_{\\rm cof})"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "13"
+        },
+        {
+          "k": "t",
+          "v": " declarations, "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " theorems, axioms clean): "
+        },
+        {
+          "k": "c",
+          "v": "HeadTailSplit"
+        },
+        {
+          "k": "t",
+          "v": ", the three NAMED hypotheses with provenance typed, "
+        },
+        {
+          "k": "c",
+          "v": "cofinal_current"
+        },
+        {
+          "k": "t",
+          "v": " (extraction from the recurrence), "
+        },
+        {
+          "k": "c",
+          "v": "cofinal_current_weil"
+        },
+        {
+          "k": "t",
+          "v": " (composition through the minimal H theorem), the "
+        },
+        {
+          "k": "m",
+          "v": "\\delta = 0"
+        },
+        {
+          "k": "t",
+          "v": " relaxation, the Rayleigh reading, and "
+        },
+        {
+          "k": "c",
+          "v": "connectedTail_not_sufficient"
+        },
+        {
+          "k": "t",
+          "v": ". Both imported in "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lean_manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " regenerated with this round, "
+        },
+        {
+          "k": "m",
+          "v": "85\\to87"
+        },
+        {
+          "k": "t",
+          "v": " files. Mirrored in "
+        },
+        {
+          "k": "c",
+          "v": "v859"
+        },
+        {
+          "k": "t",
+          "v": " part A and "
+        },
+        {
+          "k": "c",
+          "v": "v856"
+        },
+        {
+          "k": "t",
+          "v": " part C (numeric witnesses, v849/v843 precedent)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The grade law (the round's deliverable)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Free positivity lives at QUADRATIC grade, the deployed target at LINEAR grade, and no exact match exists on any scaling ray — the four graveyard instances (Schur–Gram tax, covariance grade gap, wedge uniformity failure, phase-lever closure) are instances of ONE kernel-checked homogeneity law with measured exchange rate "
+        },
+        {
+          "k": "m",
+          "v": "10^4"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "10^5"
+        },
+        {
+          "k": "t",
+          "v": "; the affine escape is priced exactly; the only licensed grade-1 mechanism (rates) is proven abstractly, instantiated, and its deployed instantiation honestly killed by signed densities on both sides ("
+        },
+        {
+          "k": "m",
+          "v": "\\tau^* = 6.27"
+        },
+        {
+          "k": "t",
+          "v": " typed analytically); the phase-rescue family is closed by theorem; and the two typed positive cores enter the record: the tax-evading zero-free pair-correlation instrument and the conditional kernel-checked frame three hypotheses "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow (H_{\\rm cof})"
+        },
+        {
+          "k": "t",
+          "v": ". Stop list extended (finite-head phase rescues; amplitude-Gram constructions without grade accounting; Lévy/conditional-positivity elevators on the deployed sides). NO RH claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 7 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.CONNECTED_COVARIANCE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "FORM.PRIME.COFINAL_CURRENT.01"
+        },
+        {
+          "k": "t",
+          "v": " [F], "
+        },
+        {
+          "k": "c",
+          "v": "E8.SIMPLEX.FOURIER.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.G31.CLOCK_ALPHABET.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "FORM.PRIME.GRADE.NO_GO.01"
+        },
+        {
+          "k": "t",
+          "v": " [F], "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.EULER.SCHUR.SEMIGROUP.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PHASE.LEVER.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-32 GRADE-LAW note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " (the unifying diagnosis, the elevator closure, the extended stop list) and the dated round-32 instrument note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the pair-type object constructed zero-free; the round-31 transport note also restored to the contract block, mirroring the ledger); "
+        },
+        {
+          "k": "m",
+          "v": "936\\to943"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The grade law: the graveyard unified by one homogeneity theorem; the licensed elevator and its honest death; the phase-rescue family closed” ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v856/v859/v860}"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the part-intro chain extended "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the Lean jobs count refreshed; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ": the simplex-Fourier character theorem and G31 clock alphabet entries in the Gaussian code keybox ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v857/v858}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the winding-quadratic addendum in the Winding Line block ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v857}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": five new audit cards "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the round-32 follow-up notes on the floor-contract prose; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "FORM.PRIME.GRADE.NO_GO.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "FORM.PRIME.COFINAL_CURRENT.01"
+        },
+        {
+          "k": "t",
+          "v": " registration blocks, the round-32 E8 audit compressions record, and the dated round-32 notes on the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " blocks (Lean counts refreshed to "
+        },
+        {
+          "k": "m",
+          "v": "3415"
+        },
+        {
+          "k": "t",
+          "v": " jobs / "
+        },
+        {
+          "k": "m",
+          "v": "87"
+        },
+        {
+          "k": "t",
+          "v": " files)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round thirty-two”; counters "
+        },
+        {
+          "k": "m",
+          "v": "848\\to853"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v860"
+        },
+        {
+          "k": "t",
+          "v": " (the prime-front page metadata refreshed from its stale "
+        },
+        {
+          "k": "m",
+          "v": "841"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v848"
+        },
+        {
+          "k": "t",
+          "v": "); DAG nodes extended with "
+        },
+        {
+          "k": "c",
+          "v": "v856"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v860"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated (ScriptIndex, changelog.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "853"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v860"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The E8 audit modules ("
+        },
+        {
+          "k": "c",
+          "v": "v857"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v858"
+        },
+        {
+          "k": "t",
+          "v": ") are exact-arithmetic corpus compressions and audits of deployed claims — normal forms, character identities and armed kill rules, no new physical claim; the architecture modules ("
+        },
+        {
+          "k": "c",
+          "v": "v856"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v859"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v860"
+        },
+        {
+          "k": "t",
+          "v": ") are typed route decisions under frozen preregistered protocols (the relapse expectation and the sign expectation both REFUTED BY MEASUREMENT and typed either way in the frozen specs — the kills moved to where the numbers put them); the Lean modules consume and formalize, never evaluate, positivity — all named hypotheses stay hypotheses; NO marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-08-07",
     "dateLabel": "2026-08-07 · LXXIV",
     "heading": [

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`848` registered scripts · `936` ledger claims · `10` clusters.
+`853` registered scripts · `943` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (368 scripts)
+### `core` — Compiler core & the E₈ glue  (373 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -747,6 +747,16 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v841_relation_carrier_ladder, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v853_bent_css_mangoldt, v563, v841, v853 · cited: 3 e8 audit bootstrap
 - **v855_invariance_atlas** [E] `PRIME.CRITERIA.ATLAS.01` — DER INVARIANZ-ATLAS: die Nachfrage EXAKT in Selberg-Hierarchie-Koordinaten umgeschrieben (D0 = dHead2 − dChain2, null Buchhaltungsverlust, 1e-9) und gegen on-range-VERIFIZIERTE ele
   - deps: v831_prime_alias_second_moment, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v843_margin_law_excess_lean, v848_extraction_chain, v563, v818, v843, v848 · cited: 3 e8 audit bootstrap, research contracts
+- **v856_connected_current_lean** [E/C/X] `PRIME.RELATION.CONNECTED_COVARIANCE.01` — die Connected-Current-Architektur ENTSCHIEDEN: die global zentrierte KMS-Kovarianz ist das ERSTE Design, das der Nuklear-Steuer entgeht (der Rückfall-Kill feuert NICHT: ratio ≈ 0.3
+  - deps: v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, PRIME.RELATION.MANGOLDT.01, v850_completion_tax_flow, v848_extraction_chain, FORM.PRIME.COFINAL.WEIL.01, v563, v850, v853 · cited: 3 e8 audit bootstrap, research contracts
+- **v857_simplex_fourier_winding** [E/C] `E8.SIMPLEX.FOURIER.01` — die E8-Audits I: der Gauß-Zensus IST ein Fourier-Gesetz — r̂ = (240, −16¹⁵), Kanal P = (J−I)/15 mit Spektrum {1, (−1/15)¹⁵} und Zwei-Schritt-Kontraktion 1/225 (exakt in Brüchen); R
+  - deps: v849_cfin_unique_cofinal_lean, v844_message_doily_rank, v853_bent_css_mangoldt, v4, v94, v817, v833, v844 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v858_g31_clock_alphabet** [X] `E8.G31.CLOCK_ALPHABET.01` — Deg(G31)/4 = {2, 3, 5, 6} = {|Z2|, N_fam, g_car, |R+(A3)|} = das Compiler-Uhren-Alphabet als NORMALFORM: gcd = 4 = |μ4|, lcm = 120 = |R+(E8)|, lcm/gcd = 30 = h(E8), Audit-Identität
+  - deps: v634, v654, v849_cfin_unique_cofinal_lean · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v859_grade_no_go_elevator** [X] `PRIME.EULER.SCHUR.SEMIGROUP.01` — DAS GRADUS-GESETZ (der konzeptionelle Kern des Tages): der gesamte Friedhof direkter Positivitäts-Architekturen an der Primzahl-Front reduziert sich auf EIN kernel-geprüftes Homoge
+  - deps: FORM.PRIME.GRADE.NO_GO.01, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, PRIME.RELATION.MANGOLDT.01, v856_connected_current_lean, v563, v853, v856 · cited: 3 e8 audit bootstrap, research contracts
+- **v860_phase_lever_closure** [-] `PRIME.PHASE.LEVER.01` — die zertifizierte Familien-Schließung der endlichen Phasen-Rettungen: auf ALLEN 67 Rungen der deployten kanonischen Frame-Familie zahlt das Privat-Best-Phasen-Budget das Arch-Defiz
+  - deps: v856_connected_current_lean, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v563, v850, v856 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1761,17 +1771,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×138, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
+**Most-depended-on claims** (the load-bearing roots): `v563`×141, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v844_message_doily_rank** — `MESSAGE.LADDER.01`
-- **v845_cfin_normal_form** — `NORMALFORM.CFIN.01`
-- **v846_schur_spectral_mother** — `PRIME.SCHUR.GRAM.01`
-- **v847_wedge_cellcone_transport** — `PRIME.WEDGE.LAGRANGE.01`
-- **v848_extraction_chain** — `PRIME.EXTRACTION.CHAIN.01`
 - **v849_cfin_unique_cofinal_lean** — `CFIN.UNIQUE.01`
 - **v850_completion_tax_flow** — `PRIME.PSD.COMPLETION.TAX.01`
 - **v851_cluster_kernel_field** — `PRIME.CELLCONE.KERNELFIELD.01, PRIME.CELLCONE.GRADEDKERNEL.01`
@@ -1779,4 +1784,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v853_bent_css_mangoldt** — `ARF.BENT.CSS.01`
 - **v854_relation_hodge_pfaffian** — `PRIME.RELATION.HODGE.01`
 - **v855_invariance_atlas** — `PRIME.CRITERIA.ATLAS.01`
+- **v856_connected_current_lean** — `PRIME.RELATION.CONNECTED_COVARIANCE.01`
+- **v857_simplex_fourier_winding** — `E8.SIMPLEX.FOURIER.01`
+- **v858_g31_clock_alphabet** — `E8.G31.CLOCK_ALPHABET.01`
+- **v859_grade_no_go_elevator** — `PRIME.EULER.SCHUR.SEMIGROUP.01`
+- **v860_phase_lever_closure** — `PRIME.PHASE.LEVER.01`
 

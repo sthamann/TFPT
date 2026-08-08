@@ -1015,6 +1015,19 @@ the $+6$ winding is not sorted by hand. \emph{Honest scope:} the winding line cr
 physical point --- $\operatorname{disc}\chi_L=39200=2(10\cdot14)^2$, spectrum real positive --- not its
 selector; and the corner $F=R{+}Q$ is an \emph{audit} operator (the $F_4{\times}G_2$ shadow:
 $\det B_F=52=\dim F_4$, $\sum B_F=196=(\dim G_2)^2$), not a physical transport.
+\emph{The winding quadratic (2026-08-08):} the whole line above is \emph{one} rank-one determinant lemma
+(\veri{v857\_simplex\_fourier\_winding.py}, $20/20$, \textsc{winding-quadratic-exact}):
+$\chi_{R_s} - \chi_R = -s\,q_{\rm wind}$ with
+$q_{\rm wind} = e_1^{\!\top}\mathrm{adj}(tI - R)\,\mathbf 1 = t^2 - \gcar\,t + |\Z_2|$
+exact and irreducible over $\Q$ ($\operatorname{disc} 17$) --- the keybox coefficients
+$(9{+}s,\, 10{+}5s,\, 8{+}2s)$, the per-winding det increment $2 = |\Z_2|$ and the minor law
+$(5,\, 3(s{+}1),\, 2(s{+}1))$ (the carrier minor $5$ $s$-invariant) are all readouts of this single
+quadratic; the triple lock re-verified (trace/det/Coxeter each solve to $s = 6$ alone, intersection
+$\{6\} = \{|R^+(A_3)|\}$); the locus typed exactly: $\Delta(6) = 39200 = 2\cdot140^2 > 0$ is \emph{not} a
+collision point and the sole $2{\times}$square hit in the integer window, and the reality threshold is
+the unique $\Delta$-root in $(2,3)$, $s^* \approx 2.8250$ (Sturm-exact --- the deployed $\approx 2.83$
+above); every sibling direction breaks the lock \emph{and} changes the quadratic --- $(1, -5, 2)$ is
+direction-specific \mE.
 \smallskip\\
 \noindent\textbf{The dual anchor (\veri{v134\_dual\_anchor.py}).} The anchor's \emph{inverse} response is the
 same on both ends of the winding line, and it is the Nariai root of the horizon paper:

@@ -915,6 +915,50 @@ rings, one kernel}: the $\mathbb{R}$ ovoid span, the torsion-free $\Z$
 kernel, and the $\mathbb{F}_2$ code of the bent layer.  The wrong-pairing
 control fires (torsion appears, the $\mathbb{F}_2$ kernel collapses to
 $4$) \mE.
+\emph{The simplex-Fourier character theorem (2026-08-08):} the
+census $240 = 15 \times 16$ (zero class empty) \emph{is} a
+Fourier law
+(\veri{v857\_simplex\_fourier\_winding.py}, $26/26$,
+\textsc{simplex-fourier-exact} $+$
+\textsc{intertwiner-identified}): the Walsh transform of the
+root multiplicity is $\hat r = (240, -16^{15})$, i.e.\ the
+uniform-nonzero channel $P = (J - I)/15$ with spectrum
+$\{1, (-1/15)^{15}\}$ and two-step contraction $1/225$ (exact
+in Fractions).  Ramification (the zero class is empty at
+\emph{every} odd theta level --- one-line proof) and
+equidistribution (one value over the $15$ nonzero classes at
+every level $\le 16$) force the character theorem, and the
+cross-machinery identity lands: the \texttt{v817} prime-packet
+numerator \emph{equals} the code Walsh transform at every level
+$\le 16$ (Eisenstein normal form $15\,\Theta_{D8} = 7\,\Theta_L
++ 8\,\Theta_0$), so $\hat m_2(n) = -1/15$ holds as an
+\emph{integer identity at every odd $n \le 16500$} (all $1911$
+odd primes covered) --- the per-prime measurement was the prime
+restriction of a character theorem of this code.  Typed
+honestly: the identification is \emph{spectral} (the packet
+grading $(52, 60, 128)$ and the code grading $15 \times 16$ do
+not refine each other); controls fire, and the law is invariant
+under the $24$ explicit isometries and the other invariant
+placement $C^{**}$ \mE.
+\emph{The G31 clock alphabet (2026-08-08):} the compiler clock
+alphabet is a \emph{normal form} of $G_{31}$
+(\veri{v858\_g31\_clock\_alphabet.py}, $19/19$,
+\textsc{clock-alphabet-selective}):
+$\mathrm{Deg}(G_{31})/4 = \{2, 3, 5, 6\} = \{|Z_2|,
+\Nfam, \gcar, |R^{+}(A_3)|\}$ with $\gcd = 4 = |\mu_4|$,
+$\mathrm{lcm} = 120 = |R^{+}(E_8)|$, $\mathrm{lcm}/\gcd = 30 =
+h(E_8)$, and the audit identity $(\sum d/4)(\sum(d{-}1)/4) = 16
+\times 15 = 240$ \emph{realized} on the roots (the $60$
+reflections are the $60$ Gaussian lines, $4$ per class --- the
+same $15 \times 16$ census as the code side); $(8, 12, 20, 24)$
+is the \emph{unique} integer quadruple with product $46080$ and
+sum $64$; the kill scan over all $607$ rank-4 Shephard--Todd
+groups leaves $G_{31}$ the sole full-battery passer (weak-triple
+impostors and raw-sum-$64$ coincidences typed by name; honesty
+line: degree-only audits cannot see the reducible torus), and
+the $W(D_5) \times W(A_3)$ order coincidence is re-killed by
+computed centers, $|Z(G_{31})| = 4 = \langle J\rangle$ vs $1$
+(the structural refutation cited) \mE.
 \end{keybox}
 
 \begin{keybox}[The finite compiler normal form $C_{\rm fin}=(V,\hbar,q^{*},\sigma,\iota)$ (2026-08-07) --- one object, the kill built in \mE\ (\veri{v845\_cfin\_normal\_form.py})]
