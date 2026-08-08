@@ -43,6 +43,1675 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-08",
+    "dateLabel": "2026-08-08 · LXXVII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round thirty-four — the Christoffel–Darboux wave: the kernel NAMED, the compensation identity EXACT, the measure-relation closure, and the preregistered next test: FOUR modules ("
+      },
+      {
+        "k": "c",
+        "v": "v869"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v872"
+      },
+      {
+        "k": "t",
+        "v": ", from seven frozen probes; suite "
+      },
+      {
+        "k": "m",
+        "v": "861\\to865"
+      },
+      {
+        "k": "t",
+        "v": ") plus the FROZEN preregistration "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PRUEFER.COMPENSATION.01"
+      },
+      {
+        "k": "t",
+        "v": " committed byte-exact and NOT run — the consolidation of the 2026-08-08 evening CD/Uvarov campaign in three waves plus one commit-time contract: (1) THE CD WAVE (the kernel identification) — the reproducing kernel "
+      },
+      {
+        "k": "m",
+        "v": "K_+"
+      },
+      {
+        "k": "t",
+        "v": " of the closed-form SourceContractor (v866) is EXACTLY the Christoffel–Darboux kernel of an explicit source measure "
+      },
+      {
+        "k": "m",
+        "v": "\\mu = \\sum [2\\sin^2(\\varphi/2)\\,d_+(\\varphi)/L]\\,\\delta_{2\\cos(D\\tau)}"
+      },
+      {
+        "k": "t",
+        "v": ": the displacement rank collapses from the growing "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-coordinate budget ("
+      },
+      {
+        "k": "m",
+        "v": "12"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "14"
+      },
+      {
+        "k": "t",
+        "v": ", the "
+      },
+      {
+        "k": "m",
+        "v": "\\sqrt L"
+      },
+      {
+        "k": "t",
+        "v": " law) to EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " in the multiplication coordinate "
+      },
+      {
+        "k": "m",
+        "v": "x = 2\\cos(D\\tau)"
+      },
+      {
+        "k": "t",
+        "v": " with a hard "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma_2/\\sigma_3"
+      },
+      {
+        "k": "t",
+        "v": " gap of "
+      },
+      {
+        "k": "m",
+        "v": "6.6\\times10^{12}"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "4.8\\times10^{13}"
+      },
+      {
+        "k": "t",
+        "v": " on ALL 7 rungs including the blind holdouts kz "
+      },
+      {
+        "k": "m",
+        "v": "40/49/60"
+      },
+      {
+        "k": "t",
+        "v": ", and the FIREWALLED chain-only reconstruction (Stieltjes–Lanczos source Jacobi chain "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " node/geometry data ONLY, enforced by the reconstruction signature) rebuilds "
+      },
+      {
+        "k": "m",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": " entrywise at "
+      },
+      {
+        "k": "m",
+        "v": "8.1\\times10^{-14}"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "5.3\\times10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": " — the whole contractor is three named objects: the arm weights, the phase/geometry factors, and ONE source Jacobi chain, with the honest boundary typed PRE-RUN and confirmed (the rank-2 collapse is WINDOW GEOMETRY — the controls collapse too, exactly as the derivation forces for any even density; the arithmetic lives in the MEASURE: control chains "
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": " off at "
+      },
+      {
+        "k": "m",
+        "v": "0.038/0.062"
+      },
+      {
+        "k": "t",
+        "v": " vs the "
+      },
+      {
+        "k": "m",
+        "v": "10^{-2}"
+      },
+      {
+        "k": "t",
+        "v": " bar); the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " quarter-turn Clark-phase hypothesis is falsified SHARPLY (the coupled pairs obey the EQUAL-PHASE law: offset "
+      },
+      {
+        "k": "m",
+        "v": "-0.5..{+0.6}^\\circ"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "\\bar R"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "0.97"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.99"
+      },
+      {
+        "k": "t",
+        "v": ", NOT "
+      },
+      {
+        "k": "m",
+        "v": "90^\\circ"
+      },
+      {
+        "k": "t",
+        "v": "; the Clark rank leg dies at "
+      },
+      {
+        "k": "m",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "-rank "
+      },
+      {
+        "k": "m",
+        "v": "85"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "99"
+      },
+      {
+        "k": "t",
+        "v": "; the phase coordinate itself source-only clean, circularity fence exact); the factorization "
+      },
+      {
+        "k": "m",
+        "v": "C = D_-UD_+"
+      },
+      {
+        "k": "t",
+        "v": " assembles EXACTLY ("
+      },
+      {
+        "k": "m",
+        "v": "1.3\\times10^{-14}"
+      },
+      {
+        "k": "t",
+        "v": ") with "
+      },
+      {
+        "k": "m",
+        "v": "\\|D_+\\| \\le 0.9654"
+      },
+      {
+        "k": "t",
+        "v": " by the Christoffel variational theorem, "
+      },
+      {
+        "k": "m",
+        "v": "\\|D_-\\| \\le 0.8655"
+      },
+      {
+        "k": "t",
+        "v": " measured, and "
+      },
+      {
+        "k": "m",
+        "v": "U"
+      },
+      {
+        "k": "t",
+        "v": " non-unitary BY THEOREM (the deployed grid "
+      },
+      {
+        "k": "m",
+        "v": "2\\times"
+      },
+      {
+        "k": "t",
+        "v": "-oversamples the folded pairs: rows "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 1.158"
+      },
+      {
+        "k": "t",
+        "v": " — the "
+      },
+      {
+        "k": "m",
+        "v": "\\sqrt2"
+      },
+      {
+        "k": "t",
+        "v": " over-normalization is structural); and the Gauss-node frame DECIDES the repair: exact where algebra promises ("
+      },
+      {
+        "k": "m",
+        "v": "D_+^G = I"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "4.7\\times10^{-11}"
+      },
+      {
+        "k": "t",
+        "v": ", lossless bridge, frame-invariant port share — theorem P5) yet the unitary core does NOT exist (co-isometry defect "
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "0.93"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "1.30"
+      },
+      {
+        "k": "t",
+        "v": ", cross-measure node misalignment at near-pole pairs), the surviving asset being the LADDER-WIDE damping bound "
+      },
+      {
+        "k": "m",
+        "v": "D_-^G \\le 0.997041"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "34\\times"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "m",
+        "v": "2900\\times"
+      },
+      {
+        "k": "t",
+        "v": " discrimination and the named hypotheses (H-D)/(H-U)/(H-PORT) registered; (2) THE UVAROV WAVE (the measure-relation decision, two honest kills with typed residues) — NONE of the three classical spectral transformations (Uvarov/Christoffel/Geronimus) relates the two channel measures exactly or at fixed small rank at the source pole "
+      },
+      {
+        "k": "m",
+        "v": "x_{\\rm pole} = 2\\cosh(D/2)"
+      },
+      {
+        "k": "t",
+        "v": " (machinery warded exact on synthetics at "
+      },
+      {
+        "k": "m",
+        "v": "9.2\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": "; typed residue: Geronimus with SMALL NEGATIVE MASS uniformly closest at "
+      },
+      {
+        "k": "m",
+        "v": "3.5"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "8.1\\%"
+      },
+      {
+        "k": "t",
+        "v": " Weyl residual, non-growing, discriminating — misses the "
+      },
+      {
+        "k": "m",
+        "v": "5\\%"
+      },
+      {
+        "k": "t",
+        "v": " bar, no "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda(D)"
+      },
+      {
+        "k": "t",
+        "v": " law), and the co-isometry defect is DIFFUSE: full-rank, growing LINEARLY with "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " (Pearson "
+      },
+      {
+        "k": "m",
+        "v": "+0.996"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\times3.39"
+      },
+      {
+        "k": "t",
+        "v": " first-to-last third), pole removal changes nothing, the closest-co-isometry bracket "
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": " at near-full rank — NO finite-matrix compensation exists at this ingredient list (both closures stop-listed); (3) THE HEADLINE (the compensation identity) — the defect splits EXACTLY into two source-built terms, "
+      },
+      {
+        "k": "m",
+        "v": "I - C^*C = T_1 + T_2"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "T_1 = I - U^*U"
+      },
+      {
+        "k": "t",
+        "v": " (the INDEFINITE cross-measure Jacobi geometry) and "
+      },
+      {
+        "k": "m",
+        "v": "T_2 = U^*(I - D_-^2)U"
+      },
+      {
+        "k": "t",
+        "v": " (the PSD arithmetic Christoffel damping), warded at "
+      },
+      {
+        "k": "m",
+        "v": "10^{-12}"
+      },
+      {
+        "k": "t",
+        "v": " on all 42 rungs and transported losslessly into the Gauss frame; the EXACT global minimizer of the directional compensation ratio IS the soft direction (overlap "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 0.9991"
+      },
+      {
+        "k": "t",
+        "v": "; min ratio "
+      },
+      {
+        "k": "m",
+        "v": "= 1 + \\tau/|v^*T_1v|"
+      },
+      {
+        "k": "t",
+        "v": " to all printed digits), the rank-one pole deflation gives "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta = \\Delta_{\\rm bulk} + s\\,pp^*"
+      },
+      {
+        "k": "t",
+        "v": " with the certified bulk floor at "
+      },
+      {
+        "k": "m",
+        "v": "98"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "100\\%"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_2"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "s = \\kappa\\tau"
+      },
+      {
+        "k": "t",
+        "v": " reproducing the v864 "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa"
+      },
+      {
+        "k": "t",
+        "v": " law — THE WALL AS TWO EXPLICIT SOURCE NUMBERS (kz 9 at the soft direction: "
+      },
+      {
+        "k": "m",
+        "v": "-0.0328 + 0.0330 = 1.68\\times10^{-4} = \\tau"
+      },
+      {
+        "k": "t",
+        "v": "), with the honesty line typed (the truth-side ratio "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 1"
+      },
+      {
+        "k": "t",
+        "v": " is implied by upstream certified positivity on these finite rungs — the identity buys the FORM: one two-term inequality at one named direction) and the discrimination anatomy measured (Epstein/scramble BREAK the damping's sign, "
+      },
+      {
+        "k": "m",
+        "v": "\\max D_- = 34.2/2917 > 1"
+      },
+      {
+        "k": "t",
+        "v": ", and under-compensate on their OWN soft directions at worst ratios "
+      },
+      {
+        "k": "m",
+        "v": "-175/{-446513}"
+      },
+      {
+        "k": "t",
+        "v": "); (4) THE PREREGISTRATION (committed, NOT run) — "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PRUEFER.COMPENSATION.01"
+      },
+      {
+        "k": "t",
+        "v": ": source-only Prüfer phases of the two arm chains, EXACTLY 16 fixed phase cells (boundaries "
+      },
+      {
+        "k": "m",
+        "v": "k\\pi/8"
+      },
+      {
+        "k": "t",
+        "v": ", entrywise pairing primary, danger families predeclared), Cotlar–Stein decision rules and all success/kill criteria frozen BEFORE any deployed-data run, deep holdouts kz "
+      },
+      {
+        "k": "m",
+        "v": "90/116/142/177/243"
+      },
+      {
+        "k": "t",
+        "v": " never used by the CD wave, the decisive analysis locked behind an operational unfreeze flag, "
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": " synthetic freeze wards green; SPEC SHA-256 "
+      },
+      {
+        "k": "c",
+        "v": "4621b899\\ldots7440811"
+      },
+      {
+        "k": "t",
+        "v": ", FILE SHA-256 "
+      },
+      {
+        "k": "c",
+        "v": "93208a1b\\ldots4825d9fd"
+      },
+      {
+        "k": "t",
+        "v": ", committed byte-exact (any modification invalidates the preregistration); NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (4)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v869_cdcore_clarkphase.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "10 + 8"
+        },
+        {
+          "k": "t",
+          "v": " checks, zero fails, "
+        },
+        {
+          "k": "t",
+          "v": "cdcore-identified"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "clarkphase-dead"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "cdcore_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "clarkphase_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the frame factorization "
+        },
+        {
+          "k": "m",
+          "v": "F = \\mathrm{diag}(\\gamma)\\,\\mathrm{diag}(s)\\,V_{\\rm poly}"
+        },
+        {
+          "k": "t",
+          "v": " machine-exact ("
+        },
+        {
+          "k": "m",
+          "v": "3.0\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": ", Chebyshev 4th kind), the reproducing/projection wards ("
+        },
+        {
+          "k": "m",
+          "v": "P^2 = P"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "PF = F"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "), the decisive displacement test (x-rank "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " with the "
+        },
+        {
+          "k": "m",
+          "v": "10^{13}"
+        },
+        {
+          "k": "t",
+          "v": " gap vs "
+        },
+        {
+          "k": "m",
+          "v": "\\tau"
+        },
+        {
+          "k": "t",
+          "v": "-rank "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "14"
+        },
+        {
+          "k": "t",
+          "v": ", Spearman "
+        },
+        {
+          "k": "m",
+          "v": "+0.96"
+        },
+        {
+          "k": "t",
+          "v": ", slope "
+        },
+        {
+          "k": "m",
+          "v": "+0.17"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "\\sqrt L"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "+0.50"
+        },
+        {
+          "k": "t",
+          "v": "), the firewalled CD reconstruction within certified budgets on construction AND holdouts, the entrywise weighted transport ("
+        },
+        {
+          "k": "m",
+          "v": "6.8\\times10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "), the leverage trace ward ("
+        },
+        {
+          "k": "m",
+          "v": "\\sum l_j = h"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "9.3\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "), the structural control collapse typed pre-run with the "
+        },
+        {
+          "k": "m",
+          "v": "O(1)"
+        },
+        {
+          "k": "t",
+          "v": " chain discrimination; the Clark falsification: passivity and spread wards, the E-rank leg ("
+        },
+        {
+          "k": "m",
+          "v": "85"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "99"
+        },
+        {
+          "k": "t",
+          "v": " vs the "
+        },
+        {
+          "k": "m",
+          "v": "\\le 8"
+        },
+        {
+          "k": "t",
+          "v": " bar), the equal-phase offset law ("
+        },
+        {
+          "k": "m",
+          "v": "\\bar R \\ge 0.97"
+        },
+        {
+          "k": "t",
+          "v": "), the exact circularity fence ("
+        },
+        {
+          "k": "m",
+          "v": "\\max|dz| = 0.0"
+        },
+        {
+          "k": "t",
+          "v": " under comb perturbation), Epstein/scramble discriminate in E-rank/offset); "
+        },
+        {
+          "k": "c",
+          "v": "v870_christoffel_gauss_frame.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "17/17 + 9/9"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "christoffel-partial"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "gauss-still-defective"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "christoffel_transition_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "gauss_node_unitary_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the classical wards W1–W6 (trace, variational, Golub–Welsch, bridge, assembly, frame transfer), the row theorem P3, the payoff census (product bound "
+        },
+        {
+          "k": "m",
+          "v": "\\le 1"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "0/42"
+        },
+        {
+          "k": "t",
+          "v": " rungs — honest), the softport regression "
+        },
+        {
+          "k": "m",
+          "v": "\\beta(kz9) = 0.6057"
+        },
+        {
+          "k": "t",
+          "v": " / ladder max "
+        },
+        {
+          "k": "m",
+          "v": "0.8591"
+        },
+        {
+          "k": "t",
+          "v": " with the sharpening question answered (pole share "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}0.86"
+        },
+        {
+          "k": "t",
+          "v": " in all three coordinate systems); the Gauss frame: tightness/Gauss–Christoffel/unit-rows exact, "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "-spectra match the grid contractor, "
+        },
+        {
+          "k": "m",
+          "v": "\\tau"
+        },
+        {
+          "k": "t",
+          "v": " lossless, port share frame-invariant, the co-isometry certificate "
+        },
+        {
+          "k": "m",
+          "v": "0.93"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "1.30"
+        },
+        {
+          "k": "t",
+          "v": " BREACHED (the measured content), "
+        },
+        {
+          "k": "m",
+          "v": "D_-^G \\le 0.997041"
+        },
+        {
+          "k": "t",
+          "v": " ladder-wide, the named hypotheses registered); "
+        },
+        {
+          "k": "c",
+          "v": "v871_pole_uvarov_crossdefect.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "7 + 11"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "pole-transform-dead"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "crossdefect-diffuse"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "jacobi_pole_uvarov_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "gauss_crossdefect_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the machinery ward on synthetics ("
+        },
+        {
+          "k": "m",
+          "v": "9.2\\times10^{-16}"
+        },
+        {
+          "k": "t",
+          "v": "), the two-measure wards with the cdcore regression, the three-transformation census (all FULL/PARTIAL False), the Geronimus residue with the blind holdout transfer (ratio "
+        },
+        {
+          "k": "m",
+          "v": "0.97"
+        },
+        {
+          "k": "t",
+          "v": ") and the "
+        },
+        {
+          "k": "m",
+          "v": "2.58\\times"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "2.14"
+        },
+        {
+          "k": "t",
+          "v": " discrimination; the defect anatomy: traceless ward ("
+        },
+        {
+          "k": "m",
+          "v": "10^{-13}"
+        },
+        {
+          "k": "t",
+          "v": "), the rank-growth law ("
+        },
+        {
+          "k": "m",
+          "v": "\\times3.39"
+        },
+        {
+          "k": "t",
+          "v": ", Pearson "
+        },
+        {
+          "k": "m",
+          "v": "+0.996"
+        },
+        {
+          "k": "t",
+          "v": "), mode stability ("
+        },
+        {
+          "k": "m",
+          "v": "0.123 \\le 0.15"
+        },
+        {
+          "k": "t",
+          "v": "), the "
+        },
+        {
+          "k": "m",
+          "v": "U_0 + R"
+        },
+        {
+          "k": "t",
+          "v": " split with the PSD base theorem and the "
+        },
+        {
+          "k": "m",
+          "v": "\\tau"
+        },
+        {
+          "k": "t",
+          "v": " ward ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(\\Delta_{\\rm pos}) = \\tau"
+        },
+        {
+          "k": "t",
+          "v": " to all digits)); "
+        },
+        {
+          "k": "c",
+          "v": "v872_damping_compensation.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "10"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "compensation-exact"
+        },
+        {
+          "k": "t",
+          "v": "; probe "
+        },
+        {
+          "k": "c",
+          "v": "cd_damping_compensation_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", spec v2 with the basis-free exact-minimizer amendment: the split ward ("
+        },
+        {
+          "k": "m",
+          "v": "10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "), the unitary transport ("
+        },
+        {
+          "k": "m",
+          "v": "7.7\\times10^{-11}"
+        },
+        {
+          "k": "t",
+          "v": "), the exact Feshbach deflation ("
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\min}(\\Delta_{\\rm bulk}) = 0"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "2.6\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "), the "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa"
+        },
+        {
+          "k": "t",
+          "v": " regressions, the T2 sign theorem (zero negative entries), the exact global compensation census (min ratio "
+        },
+        {
+          "k": "m",
+          "v": "1.000008"
+        },
+        {
+          "k": "t",
+          "v": ", implied by upstream positivity — the anatomy, not new evidence), the bulk floor ("
+        },
+        {
+          "k": "m",
+          "v": "c/\\lambda_2 \\ge 0.98"
+        },
+        {
+          "k": "t",
+          "v": "), the four-way alignment table, the isolated scalar, and the discrimination anatomy). Suite "
+        },
+        {
+          "k": "m",
+          "v": "861\\to865"
+        },
+        {
+          "k": "t",
+          "v": "; all four standalone green with pattern gates encoding the frozen censuses (check counts, FAIL ids, verdicts, exit codes) and the byte-exact provenance ward vs the embedded sources; all seven probes re-run identically at promotion (2026-08-08); promoted VERBATIM with no downscoping (the round-31 embedding convention)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The preregistration (committed, NOT run)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "experiments/ tfpt-discovery/ pruefer_compensation_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " — the FROZEN contract "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PRUEFER.COMPENSATION.01"
+        },
+        {
+          "k": "t",
+          "v": ": source-only Prüfer phases (structural AST firewall on the construction functions), EXACTLY 16 fixed phase cells with the entrywise pairing primary and the danger families DGR1/DGR2 predeclared, RUN 1/2/3 protocols (anatomy / Cotlar–Stein decision / uniformity candidate) with all bars, verdict rules and kills frozen BEFORE any deployed-data run, deep holdouts kz "
+        },
+        {
+          "k": "m",
+          "v": "90/116/142/177/243"
+        },
+        {
+          "k": "t",
+          "v": " (never used by the CD wave), the decisive analysis locked behind the operational flag file "
+        },
+        {
+          "k": "c",
+          "v": "pruefer_unfreeze.flag"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "8/8"
+        },
+        {
+          "k": "t",
+          "v": " synthetic freeze wards green at freeze time. Committed BYTE-EXACT with this round: SPEC SHA-256 "
+        },
+        {
+          "k": "c",
+          "v": "4621b89958531d6d 3baae9fe762dbd10 d23dc22eed77a57a a1c6b179a7440811"
+        },
+        {
+          "k": "t",
+          "v": ", FILE SHA-256 "
+        },
+        {
+          "k": "c",
+          "v": "93208a1b2edebde3 1388a87192055c9b f3e5a3de29af9fb3 e34ddc904825d9fd"
+        },
+        {
+          "k": "t",
+          "v": "; any modification invalidates the preregistration. Booked as a dated PREREGISTRATION note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KREIN.CONTRACTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the contract's next test); NO vN module, NO analysis run, NO result claimed."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The compensation statement (the round's deliverable)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The wall's operator coordinates gain their classical names: the contractor's kernel IS the Christoffel–Darboux kernel of one explicit source measure (the “non-monomial band-spreading letter” of rounds 32–33 is NAMED at kernel level — with the honest boundary that the naming is geometry, the arithmetic is the chain and the weights), the defect is the EXACT sum of an indefinite Jacobi cross-geometry and a PSD Christoffel damping, and the floor demand is ONE two-term inequality at ONE named direction with both terms explicit source objects ("
+        },
+        {
+          "k": "m",
+          "v": "s = \\kappa\\tau > 0"
+        },
+        {
+          "k": "t",
+          "v": "). The classical escapes are closed with certificates and stop-listed: classical pole transformations at "
+        },
+        {
+          "k": "m",
+          "v": "x_{\\rm pole}"
+        },
+        {
+          "k": "t",
+          "v": " (typed Geronimus residue), finite-rank cross-defect corrections (linear rank growth), "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-offset Clark kernels (the equal-phase law). The next test is PREREGISTERED, not run. NO RH claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 4 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CONTRACTOR.CDCORE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CONTRACTOR.CHRISTOFFEL.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.JACOBI.POLE.UVAROV.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CD.DAMPING.COMPENSATION.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-34 note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KREIN.CONTRACTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the kernel NAMED; the compensation identity; the Uvarov/finite-rank/Clark closures with the stop-list entries; the Prüfer preregistration with BOTH SHAs recorded verbatim) and the dated round-34 note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the wall as the two-term inequality at the soft direction, both terms source-built); "
+        },
+        {
+          "k": "m",
+          "v": "953\\to957"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The Christoffel–Darboux wave: the kernel named, the compensation exact, the anatomy of discrimination, and the preregistered next test” ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v869..v872}"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the part-intro chain extended; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": four new audit cards; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the round-34 dated notes on the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KREIN.CONTRACTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " blocks including the preregistration record with both SHAs."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round thirty-four”; counters "
+        },
+        {
+          "k": "m",
+          "v": "861\\to865"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v872"
+        },
+        {
+          "k": "t",
+          "v": "; DAG nodes extended with "
+        },
+        {
+          "k": "c",
+          "v": "v869"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v872"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated (ScriptIndex, changelog.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "865"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v872"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The CD-wave modules are exact structural namings and typed route decisions under frozen preregistered protocols (the derivations typed BEFORE running; the structural non-discrimination of the rank collapse typed PRE-RUN — window geometry, not a kill; the non-unitarity of "
+        },
+        {
+          "k": "m",
+          "v": "U"
+        },
+        {
+          "k": "t",
+          "v": " a THEOREM, not a miss; the compensation census implied by upstream positivity and typed as anatomy); the Uvarov/crossdefect modules are honest kills with typed residues (machinery warded on synthetics first); the preregistration is a COMMIT-TIME contract — no analysis mode was executed, the file hash is the proof of freezing; NO marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-08",
     "dateLabel": "2026-08-08 · LXXVI",
     "heading": [
       {

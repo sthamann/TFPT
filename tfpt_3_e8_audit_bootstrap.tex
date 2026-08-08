@@ -8517,6 +8517,97 @@ Machine-checked: \veri{v868\_divisor210\_audits.py}.
 upgraded)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The Christoffel--Darboux
+identification and the Clark falsification
+(\texttt{PRIME.CONTRACTOR.\allowbreak CDCORE.01} $+$
+\texttt{PRIME.CONTRACTOR.\allowbreak CLARKPHASE.01}).}
+One module from two probes ($10 + 8$, zero fails, verdicts
+\textsc{cdcore-identified} $+$ \textsc{clarkphase-dead}).  The
+kernel is \emph{named}: $K_+$ is exactly the CD kernel of an
+explicit source measure in $x = 2\cos(D\tau)$ --- displacement
+rank exactly $2$ (gap $\ge 6.6\times10^{12}$) on all seven rungs
+incl.\ blind holdouts; the firewalled chain-only reconstruction
+rebuilds $C$ at ${\sim}10^{-13}$; the contractor $=$ arm weights
+$+$ phase/geometry factors $+$ one source Jacobi chain.  Honest
+boundary typed pre-run: the collapse is window geometry (the
+controls collapse too) --- the arithmetic is the chain and the
+weights ($O(1)$ off for the fakes).  The $\mu_4$ quarter-turn
+Clark phase dies sharply: the equal-phase coupling law (offset
+${\sim}0^\circ$ at $\bar R \ge 0.97$), the rank leg at
+$85$--$99$, the phase coordinate itself source-only clean.  No
+marker move, no RH claim.
+Machine-checked: \veri{v869\_cdcore\_clarkphase.py}.
+\mE\ (the frame factorization, the reconstruction wards, the
+circularity fence) $+$ (\textsc{measured}) (the collapse tables,
+the offset law) $+$ \mO\ (the chain/weight control missing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The factorization and the frame
+decision (\texttt{PRIME.CONTRACTOR.\allowbreak CHRISTOFFEL.01}
+$+$ \texttt{PRIME.CONTRACTOR.\allowbreak GAUSSNODE.01}).}
+One module from two probes ($17/17 + 9/9$, zero fails, verdicts
+\textsc{christoffel-partial} $+$
+\textsc{gauss-still-defective}).  $C = D_-UD_+$ exactly
+($10^{-14}$); $\|D_+\| \le 0.9654$ by the Christoffel
+variational theorem, $\|D_-\| \le 0.8655$ measured; $U$
+non-unitary \emph{by theorem} ($2\times$-oversampled folded
+pairs: rows $\ge 1.158$, the $\sqrt2$ over-normalization).  The
+Gauss frame: $D_+^G = I$ exact, bridge lossless, port share
+frame-invariant --- yet the co-isometry defect stays $O(1)$
+($0.93$--$1.30$, near-pole misalignment); the surviving asset
+$D_-^G \le 0.997041$ ladder-wide with $34\times$/$2900\times$
+discrimination; hypotheses (H-D)/(H-U)/(H-PORT) registered.  No
+marker move, no RH claim.
+Machine-checked: \veri{v870\_christoffel\_gauss\_frame.py}.
+\mE\ (the assembly, the variational and row theorems, the
+quadrature-exact frame) $+$ (\textsc{measured}) (the defect
+census, the damping bound) $+$ \mO\ ((H-U) open)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The measure-relation closure
+(\texttt{PRIME.JACOBI.\allowbreak POLE.UVAROV.01} $+$
+\texttt{PRIME.GAUSS.\allowbreak CROSSDEFECT.01}).}
+One module from two probes ($7 + 11$, zero fails, verdicts
+\textsc{pole-transform-dead} $+$ \textsc{crossdefect-diffuse}).
+None of Uvarov/Christoffel/Geronimus is exact or
+fixed-small-rank at $x_{\rm pole} = 2\cosh(D/2)$ (machinery
+warded on synthetics at $9.2\times10^{-16}$); typed residue:
+small-negative-mass Geronimus uniformly closest ($3.5$--$8.1\%$
+Weyl, non-growing, discriminating) --- misses the bar, no
+$\lambda(D)$ law.  The co-isometry defect is diffuse: full-rank,
+linear in $h$ (Pearson $+0.996$), pole removal changes nothing,
+the $U_0 + R$ bracket $O(1)$ near-full rank --- no finite-matrix
+compensation.  Stop-listed both ways; the Pr\"ufer route
+preregistered as plan B.  No marker move, no RH claim.
+Machine-checked: \veri{v871\_pole\_uvarov\_crossdefect.py}.
+\mE\ (the machinery wards, the traceless/$\tau$ wards, the PSD
+base theorem) $+$ (\textsc{measured}) (the residue tables, the
+rank growth) $+$ \mO\ (nothing upgraded --- two escapes closed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The compensation identity
+(\texttt{PRIME.CD.\allowbreak DAMPING.COMPENSATION.01}).}
+One module from one probe ($10$, zero fails, verdict
+\textsc{compensation-exact}).  $I - C^*C = T_1 + T_2$ exactly
+($10^{-12}$ on all $42$ rungs): $T_1 = I - U^*U$ the indefinite
+Jacobi cross-geometry, $T_2 = U^*(I - D_-^2)U$ the PSD
+Christoffel damping; the exact global minimizer \emph{is} the
+soft direction (overlap $\ge 0.9991$; min ratio $= 1 +
+\tau/|v^*T_1v|$ to all digits); $\Delta = \Delta_{\rm bulk} +
+s\,pp^*$ with the certified bulk floor ($98$--$100\%$ of
+$\lambda_2$) and $s = \kappa\tau$; the wall as two source
+numbers ($-0.0328 + 0.0330 = 1.68\times10^{-4} = \tau$ at kz 9).
+Honesty line typed: the truth-side ratio $\ge 1$ is implied by
+upstream positivity --- the identity buys the form.
+Epstein/scramble break the damping's sign and under-compensate
+on their own soft directions.  No marker move, no RH claim.
+Machine-checked: \veri{v872\_damping\_compensation.py}.
+\mE\ (the split/transport/deflation wards, the T2 sign theorem)
+$+$ (\textsc{measured}) (the alignment anatomy, the
+discrimination) $+$ \mO\ (the two-term inequality at the soft
+direction --- the open cofinal content)
+\par\smallskip
+
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}
 One probe ($21/21$ incl.\ the $3$ must-fire controls; verdict

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`861` registered scripts · `953` ledger claims · `10` clusters.
+`865` registered scripts · `957` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (381 scripts)
+### `core` — Compiler core & the E₈ glue  (385 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -773,6 +773,14 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v864_softport_kappa_law, v866_source_contractor_formula, v563, v864 · cited: 3 e8 audit bootstrap, research contracts
 - **v868_divisor210_audits** [C] `E8.DIVISOR210.CANONICITY.01` — der harte Kanonizitäts-Guard für die 210-Entdeckung von v863: die Boolesche/Walsh/μ-Schicht ist GEMESSEN GENERISCH, exakt wie gewarnt (210/210 Quadrupel von Primzahlen < 30 bestehe
   - deps: v863_redheffer_colligation, v845_cfin_normal_form, v849_cfin_unique_cofinal_lean, v845, v849, v863 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v869_cdcore_clarkphase** [X] `PRIME.CONTRACTOR.CDCORE.01` — der Kern ist BENANNT: K₊ ist EXAKT der Christoffel-Darboux-Kern eines expliziten Quellmaßes in x = 2cos(Dτ) — der Verschiebungsrang kollabiert vom wachsenden τ-Budget (12–14, das √
+  - deps: v866_source_contractor_formula, FORM.PRIME.KREIN.DEFECT.01, v563, v861, v866 · cited: 3 e8 audit bootstrap, research contracts
+- **v870_christoffel_gauss_frame** [-] `PRIME.CONTRACTOR.CHRISTOFFEL.01` — die Faktorisierung und die Frame-Entscheidung: C = D₋UD₊ assembliert EXAKT (≤ 1.3e-14 auf allen schweren Sprossen) mit D± stabil kontraktiv (‖D₊‖ ≤ 0.9654 per Variationstheorem P2 
+  - deps: v869_cdcore_clarkphase, v864_softport_kappa_law, v866_source_contractor_formula, v563, v864, v866, v869 · cited: 3 e8 audit bootstrap, research contracts
+- **v871_pole_uvarov_crossdefect** [X] `PRIME.JACOBI.POLE.UVAROV.01` — der Maß-Relations-Abschluss (zwei ehrliche Kills mit typisierten Residuen): KEINE der drei klassischen Spektral-Transformationen (Uvarov-Masse, Christoffel-Multiplikation, Geronimu
+  - deps: v869_cdcore_clarkphase, v870_christoffel_gauss_frame, v866_source_contractor_formula, v563, v869, v870 · cited: 3 e8 audit bootstrap, research contracts
+- **v872_damping_compensation** [E] `PRIME.CD.DAMPING.COMPENSATION.01` — die Schlagzeile der Runde: der Defekt spaltet EXAKT in zwei quellgebaute Terme, I − C*C = T₁ + T₂ (max rel 1.0e-12 auf ALLEN 42 Sprossen; T₁ = I − U*U die INDEFINITE Kreuzmaß-Jacob
+  - deps: v870_christoffel_gauss_frame, v871_pole_uvarov_crossdefect, v864_softport_kappa_law, v866_source_contractor_formula, v831_prime_alias_second_moment, v563, v864, v869 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1787,16 +1795,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×148, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
+**Most-depended-on claims** (the load-bearing roots): `v563`×152, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v857_simplex_fourier_winding** — `E8.SIMPLEX.FOURIER.01`
-- **v858_g31_clock_alphabet** — `E8.G31.CLOCK_ALPHABET.01`
-- **v859_grade_no_go_elevator** — `PRIME.EULER.SCHUR.SEMIGROUP.01`
-- **v860_phase_lever_closure** — `PRIME.PHASE.LEVER.01`
 - **v861_krein_normalform_lean** — `PRIME.KREIN.NORMALFORM.01`
 - **v862_defect_polar_weld** — `PRIME.KREIN.DEFECT_ONE.01`
 - **v863_redheffer_colligation** — `PRIME.REDHEFFER.COLLIGATION.01`
@@ -1805,4 +1809,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v866_source_contractor_formula** — `PRIME.SOURCECONTRACTOR.NORM.01, PRIME.KREIN.CONTRACTOR.01`
 - **v867_radau_conditioning** — `PRIME.SOFTPORT.RADAU.01`
 - **v868_divisor210_audits** — `E8.DIVISOR210.CANONICITY.01`
+- **v869_cdcore_clarkphase** — `PRIME.CONTRACTOR.CDCORE.01`
+- **v870_christoffel_gauss_frame** — `PRIME.CONTRACTOR.CHRISTOFFEL.01`
+- **v871_pole_uvarov_crossdefect** — `PRIME.JACOBI.POLE.UVAROV.01`
+- **v872_damping_compensation** — `PRIME.CD.DAMPING.COMPENSATION.01`
 
