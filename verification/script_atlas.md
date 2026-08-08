@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`853` registered scripts · `943` ledger claims · `10` clusters.
+`861` registered scripts · `953` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (373 scripts)
+### `core` — Compiler core & the E₈ glue  (381 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -757,6 +757,22 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: FORM.PRIME.GRADE.NO_GO.01, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, PRIME.RELATION.MANGOLDT.01, v856_connected_current_lean, v563, v853, v856 · cited: 3 e8 audit bootstrap, research contracts
 - **v860_phase_lever_closure** [-] `PRIME.PHASE.LEVER.01` — die zertifizierte Familien-Schließung der endlichen Phasen-Rettungen: auf ALLEN 67 Rungen der deployten kanonischen Frame-Familie zahlt das Privat-Best-Phasen-Budget das Arch-Defiz
   - deps: v856_connected_current_lean, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v563, v850, v856 · cited: 3 e8 audit bootstrap, research contracts
+- **v861_krein_normalform_lean** [E] `PRIME.KREIN.NORMALFORM.01` — die Operator-Form der Wand: die deployte Fensterform bekommt eine EXAKTE Krein-Normalform Q_h(t) = ||B₊t||² − ||B₋t||² (Ward ≤ 1e-15 auf jedem Rung, BEIDE Schnitte; B trägt √|Λ| — 
+  - deps: v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, PRIME.RELATION.MANGOLDT.01, FORM.PRIME.KREIN.DEFECT.01, v563, v853, v856 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v862_defect_polar_weld** [X] `PRIME.KREIN.DEFECT_ONE.01` — der Rang der Wand ist EINS: der Defekt-Operator Δ = I − C*C hat auf jedem erreichbaren Rung GENAU EINE weiche Mode (λ₁ == τ-Marge per exakter Pencil-Identität, rel ≤ 3e-8; Separati
+  - deps: v861_krein_normalform_lean, FORM.PRIME.KREIN.DEFECT.01, v563, v861 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v863_redheffer_colligation** [E] `PRIME.REDHEFFER.COLLIGATION.01` — die Kolligations-Architektur: beide quell-gebauten 16-Slot-Maschinen sind EXAKT unitär (Defekt ≤ 1e-12), die Vakuum-Port-Redheffer-Schließung wohlgestellt (||D|| = 1/4 exakt) und j
+  - deps: v861_krein_normalform_lean, PRIME.RELATION.MANGOLDT.01, v563, v861 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v864_softport_kappa_law** [E] `PRIME.SOFTPORT.FESHBACH.01` — die Skalar-Reduktion der Wand: die exakte Feshbach/Schur-Reduktion macht aus der Matrix-Positivität EINE Port-Impedanz (τ > 0 ⇔ s > 0, sobald ein Port einen stabilen Anteil der wei
+  - deps: v862_defect_polar_weld, v861_krein_normalform_lean, v563, v861, v862 · cited: 3 e8 audit bootstrap, research contracts
+- **v865_weyl_port_readout** [-] `PRIME.WEYL.PORT.01` — die arithmetische Impedanz: die Teiler-Turm-Weyl-Last trägt den Kamm bei O(1) (Massen-Verdopplung bewegt die Weyl-Funktionen bei Median |dm|/|m| = 0.757/0.456 — die Kamm-Blindheit 
+  - deps: v863_redheffer_colligation, v861_krein_normalform_lean, v563, v861, v863 · cited: 3 e8 audit bootstrap
+- **v866_source_contractor_formula** [O/X] `PRIME.SOURCECONTRACTOR.NORM.01, PRIME.KREIN.CONTRACTOR.01` — DIE FORMEL (die Schlagzeile der Kampagne): der Douglas-Kontraktor faktorisiert EXAKT als ziel-freier geschlossener Quell-Ausdruck C = W₋·F·G₊⁻¹·Fᴴ·W₊ (max rel 1.4e-14 auf Konstrukt
+  - deps: FORM.PRIME.KREIN.DEFECT.01, v862_defect_polar_weld, v864_softport_kappa_law, v563, v861, v862, v864, v866_source_contractor_formula · cited: 3 e8 audit bootstrap, research contracts
+- **v867_radau_conditioning** [X] `PRIME.SOFTPORT.RADAU.01` — die Quadratur-Reichweite: Gauss-Radau-Zertifikate für s > 0 EXISTIEREN auf JEDEM Rung (die Golub-Meurant-Einschließung L_m ≤ r'G⁻¹r ≤ U_m gewardet auf jedem Rung und jeder Tiefe, m
+  - deps: v864_softport_kappa_law, v866_source_contractor_formula, v563, v864 · cited: 3 e8 audit bootstrap, research contracts
+- **v868_divisor210_audits** [C] `E8.DIVISOR210.CANONICITY.01` — der harte Kanonizitäts-Guard für die 210-Entdeckung von v863: die Boolesche/Walsh/μ-Schicht ist GEMESSEN GENERISCH, exakt wie gewarnt (210/210 Quadrupel von Primzahlen < 30 bestehe
+  - deps: v863_redheffer_colligation, v845_cfin_normal_form, v849_cfin_unique_cofinal_lean, v845, v849, v863 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1771,22 +1787,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×141, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
+**Most-depended-on claims** (the load-bearing roots): `v563`×148, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v849_cfin_unique_cofinal_lean** — `CFIN.UNIQUE.01`
-- **v850_completion_tax_flow** — `PRIME.PSD.COMPLETION.TAX.01`
-- **v851_cluster_kernel_field** — `PRIME.CELLCONE.KERNELFIELD.01, PRIME.CELLCONE.GRADEDKERNEL.01`
-- **v852_arf_vacuum_ovoid** — `ARF.VACUUM.SYNDROME.01`
-- **v853_bent_css_mangoldt** — `ARF.BENT.CSS.01`
-- **v854_relation_hodge_pfaffian** — `PRIME.RELATION.HODGE.01`
-- **v855_invariance_atlas** — `PRIME.CRITERIA.ATLAS.01`
-- **v856_connected_current_lean** — `PRIME.RELATION.CONNECTED_COVARIANCE.01`
 - **v857_simplex_fourier_winding** — `E8.SIMPLEX.FOURIER.01`
 - **v858_g31_clock_alphabet** — `E8.G31.CLOCK_ALPHABET.01`
 - **v859_grade_no_go_elevator** — `PRIME.EULER.SCHUR.SEMIGROUP.01`
 - **v860_phase_lever_closure** — `PRIME.PHASE.LEVER.01`
+- **v861_krein_normalform_lean** — `PRIME.KREIN.NORMALFORM.01`
+- **v862_defect_polar_weld** — `PRIME.KREIN.DEFECT_ONE.01`
+- **v863_redheffer_colligation** — `PRIME.REDHEFFER.COLLIGATION.01`
+- **v864_softport_kappa_law** — `PRIME.SOFTPORT.FESHBACH.01`
+- **v865_weyl_port_readout** — `PRIME.WEYL.PORT.01`
+- **v866_source_contractor_formula** — `PRIME.SOURCECONTRACTOR.NORM.01, PRIME.KREIN.CONTRACTOR.01`
+- **v867_radau_conditioning** — `PRIME.SOFTPORT.RADAU.01`
+- **v868_divisor210_audits** — `E8.DIVISOR210.CANONICITY.01`
 

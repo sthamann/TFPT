@@ -959,6 +959,75 @@ line: degree-only audits cannot see the reducible torus), and
 the $W(D_5) \times W(A_3)$ order coincidence is re-killed by
 computed centers, $|Z(G_{31})| = 4 = \langle J\rangle$ vs $1$
 (the structural refutation cited) \mE.
+\emph{The divisor lattice of $210$, with its canonicity guard
+(2026-08-08):} the label register $\mathbb{F}_2^4$ \emph{is} the
+divisor lattice of $210 = 2\cdot3\cdot5\cdot7$ --- the
+Walsh--Hadamard transform carries the lattice M\"obius function
+($4\,\mathrm{WH}[1111, v] = \mu(d(v)) = (-1)^{\mathrm{wt}(v)}$ on
+all $16$ labels), and the vacuum column is the rank-one Redheffer
+closure on the register's own lattice, with the
+matrix-determinant lemma giving the Euler products \emph{exactly}
+(half-weighted $\det = \prod_p(1 - 1/p) = 8/35$; unweighted
+$= \prod_p(1 - p^{-1/2})$, exact radical maps)
+(\veri{v863\_redheffer\_colligation.py}, sympy-exact).  The hard
+canonicity guard then quantifies what selects the primes
+(\veri{v868\_divisor210\_audits.py}, $36/36$,
+\textsc{divisor210-gauge-family(2)}): the Boolean/Walsh/$\mu$
+layer is \emph{measured generic} ($210/210$ quadruples of primes
+$< 30$ pass it --- layer one carries no selection content, exactly
+as warned), the two deployed Euler determinants pin
+$\{2,3,5,7\}$ \emph{uniquely} in the predeclared field ($1$ match
+each; non-matches separated by $\ge 5.2\times10^{-3}$ at $50$
+digits; the tautological $\prod p = 210$ test excluded from the
+verdict), the anchor prime $2$ is \emph{forced} by ramification
+(the unique $\Z[i]$-ramified prime onto the unique
+$\sigma$-fixed $q^{*}{=}1$ class --- the very prime at which $V =
+L/(1{+}i)L$ is cut), the $\mu_4$ weld grade cuts the gauge $C_6
+\to C_3$, and after the ramification crossref exactly \emph{two}
+gauge classes remain --- the family-cycle chirality $(3,5,7)$ vs
+$(3,7,5)$, which is then \emph{proven gauge} by two exact no-go
+wards ($15/15$, \textsc{chirality-degenerate}: the register
+orientation functional vanishes identically --- the M\"obius
+complement $d \mapsto 210/d$ pairs the orbits with reversed
+orientation --- and quadratic readouts are provably
+chirality-blind by transposition).  The Gram-only baseline is a
+simply transitive $720$-torsor cut to $6$ ordered bases by the
+deployed pins --- the semantics, not the lattice shape, carry the
+selection; the $6$-vs-$7$ honesty note stands untouched (the
+clock alphabet $\{2,3,5,6\}$ and the quadruple $\{2,3,5,7\}$ are
+different objects: $6 = 2\cdot3$ sits \emph{inside} the lattice
+as the unique weight-2 divisor from two alphabet primes, $7$ is
+prime and not in the alphabet); and the $17 = 12{+}3{+}1{+}1$
+moving-sector identification is honestly \emph{buried at space
+level} ($12/12$, \textsc{moving12-dimension-only}: the count is
+exact, the principal angles against the only deployed bridge are
+${\sim}90^\circ$) \mE.
+\emph{The Redheffer/Mertens Smith echo (2026-08-08):} the
+register's vacuum-completion pattern has an exact arithmetic
+instantiation (\veri{v861\_krein\_normalform\_lean.py}, $37/37$,
+\textsc{redheffer-echo-exact}): $\det R_n = M(n)$ (Bareiss
+integer determinants on $62$ sizes; the matrix-determinant lemma
+extends the identity along all $n \le 2\times10^6$), the witness
+minor is $1$ exactly, so $\mathrm{SNF}(R_n) = (1, \dots, 1,
+|M(n)|)$ --- vacuum completion is a rank-one origin update whose
+\emph{entire} Smith deviation is one new invariant factor; the
+mod-$2$ shadow is the squarefree-count parity; and the code-side
+instantiation is the vacuum transformation $[[15,5,3]] \to
+[[16,4,4]]$ above, typed at parameter grade (pattern-grade
+cross-domain identification --- no functor claimed).  The same
+module types the register wiring: the $\mu$-sign and the deck
+are \emph{two separate} $C_2$s (the deployed reading character
+separates them; the identification is one faithful-$\mu_4$
+character away, three candidate constructions machine-verified
+--- diagonal characters, the Galois bookkeeping $\mu_K((p)) =
+\chi_4(p)$ on $609 + 619$ primes, the Hall chain parity), and
+the 2-torsion weld law explains the refusal structurally
+(\veri{v862\_defect\_polar\_weld.py}, $22/22$,
+\textsc{weld-without-contractor}: the deck's anticommutant is
+entirely faithful-$\mu_4$ --- the deck enters a Clifford weld
+only as the quarter turn $J = MD$, never as a second involution;
+all four weld candidates close exactly on their forced domains,
+the unwelded control refuses exactly) \mE.
 \end{keybox}
 
 \begin{keybox}[The finite compiler normal form $C_{\rm fin}=(V,\hbar,q^{*},\sigma,\iota)$ (2026-08-07) --- one object, the kill built in \mE\ (\veri{v845\_cfin\_normal\_form.py})]

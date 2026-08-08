@@ -8331,6 +8331,192 @@ Machine-checked: \veri{v860\_phase\_lever\_closure.py}.
 $+$ \mO\ (the wall unchanged)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The Krein normal form and the
+defect theorem
+(\texttt{PRIME.KREIN.\allowbreak NORMALFORM.01} $+$
+\texttt{FORM.PRIME.\allowbreak KREIN.\allowbreak DEFECT.01}).}
+One module from two probes plus the Lean frame ($37/37 + 8/8$,
+zero fails, verdicts \textsc{deck-mu-parallel} $+$
+\textsc{redheffer-echo-exact} and
+\textsc{krein-contractor-stable-no-word}; $+4$ mirror checks).
+The deployed window form gets the exact Krein normal form
+$Q = \|B_+t\|^2 - \|B_-t\|^2$ (entrywise $\le 10^{-15}$, both
+cuts; linear in $\Lambda$) with the Douglas pencil identity
+$1 - \|C_2\|^2 = $ the $\tau$-margin ($3.9\times10^{-9}$);
+truth contracts on every rung, Epstein $h{=}2$ explodes to
+$\|C_E\| = 46.8$, the scramble to $3693$; the $155$-word census
+is empty.  Two separate $C_2$s (the identification one
+faithful-$\mu_4$ character away, three candidates verified);
+$\det R_n = M(n)$ with SNF $(1,\dots,1,|M(n)|)$; no
+floor--Mertens correlation (min $4p = 0.378$).  The defect
+theorem kernel-checked
+(\texttt{TfptCarrier/KreinDefect.lean}, $10$ theorems, axioms
+clean): contraction $\Leftrightarrow$ PSD (full-rank converse),
+\texttt{SourceContractor} the named hypothesis, composed to
+Weil nonnegativity.  No marker move, no RH claim.
+Machine-checked: \veri{v861\_krein\_normalform\_lean.py}.
+\mE\ (the exact wards, the pencil identity, the kernel-checked
+frame) $+$ (\textsc{measured}) (the censuses, the
+discriminators) $+$ \mO\ (the wall unchanged)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The rank-one defect, the monomial
+closure, and the weld law
+(\texttt{PRIME.KREIN.\allowbreak DEFECT\_ONE.01} $+$
+\texttt{PRIME.MU4.\allowbreak WELD.01}).}
+One module from two probes ($8/8 + 22/22$, zero fails, verdicts
+\textsc{defect-one} $+$ \textsc{monomial-closure-theorem} and
+\textsc{weld-without-contractor}).  $\Delta = I - C^*C$ has
+exactly one soft mode on every rung ($\lambda_1 = $ the
+$\tau$-margin exactly; separation $3.9$--$14.1\times$); every
+source letter is monomial and the contractor's monomial mass is
+$0.23$--$0.24$, so \emph{every word of any length} misses by
+$\ge 0.874$ (the $408$ sign flips kill the corridor form, typed
+v2); the deck's anticommutant is entirely faithful-$\mu_4$ ---
+the deck welds only as $J = MD$; all four candidates weld
+exactly, the unwelded control refuses exactly, the contractor
+connection is null ($\sqrt2$).  No marker move, no RH claim.
+Machine-checked: \veri{v862\_defect\_polar\_weld.py}.
+\mE\ (the pencil ward, the exact weld censuses, the closure
+theorem) $+$ (\textsc{measured}) (the polar microscopes) $+$
+\mO\ (the missing letter specified, not found)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Redheffer colligation
+(\texttt{PRIME.REDHEFFER.\allowbreak COLLIGATION.01}).}
+One module from one probe ($7/7$, zero fails, verdict
+\textsc{colligation-contracts-not-identifies}).  Both
+source-built 16-slot machines exactly unitary ($10^{-12}$); the
+vacuum-port closure well-posed ($\|D\| = 1/4$); every closed
+block \emph{automatically} contractive; the scalar limit is the
+weighted lattice Redheffer determinant exactly
+($\mathbb{F}_2^4 = $ the divisor lattice of $210$,
+Walsh--Hadamard carries lattice $\mu$, $\det = 8/35$); the
+machine provably comb-blind.  The identification gate fails
+honestly (residual $1.38$ vs bar $10^{-8}$) with the gap typed:
+the contractor couples \emph{different} $|\tau|$ bands, the $J$
+flip couples equal $|\tau|$ --- the missing object is the
+grid-side band intertwiner.  No marker move, no RH claim.
+Machine-checked: \veri{v863\_redheffer\_colligation.py}.
+\mE\ (unitarity, closure, the exact scalar determinant) $+$
+(\textsc{measured}) (the identification gate, the band census)
+$+$ \mO\ (the intertwiner missing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The soft port and the kappa law
+(\texttt{PRIME.SOFTPORT.\allowbreak FESHBACH.01} $+$
+\texttt{PRIME.POLEPORT.\allowbreak KAPPA\_LAW.01}).}
+One module from two probes ($5/5 + 6/6$, zero fails, verdicts
+\textsc{softport-found} $+$ \textsc{cauchy-rank-small} and
+\textsc{kappa-law-partial}).  The exact Feshbach reduction:
+$\tau > 0 \Leftrightarrow s > 0$; four source ports pass
+(cheating-port ceiling $\kappa \equiv 1$ exact); the pole port
+carries $84\%$ of the soft mode with $\kappa^{-1} = \beta^2 +
+\lambda_1\rho$ exact and the closed-form $a$-term (Poisson
+kernel at $s = 1/2$); $\kappa - 1 \approx 6e^{-\alpha/2} \to 1$
+(Pearson $-0.99$); the backflow concentrates on $\le 17$ bulk
+modes cancelling $99.9\%$; displacement rank ${\sim}12$ fixed
+over $3.9\times$ dimension, generators $=$ arm weights, pure
+rank-$\le2$ Cauchy excluded.  Both discriminators break at the
+premise.  No marker move, no RH claim.
+Machine-checked: \veri{v864\_softport\_kappa\_law.py}.
+\mE\ (the Feshbach wards, the exact skeleton) $+$
+(\textsc{measured}) (the kappa law, the rank tables) $+$ \mO\
+(the coupling bound missing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Weyl port and the repaired
+readout (\texttt{PRIME.WEYL.\allowbreak PORT.01} $+$
+\texttt{PRIME.WEYL.\allowbreak READOUT.01}).}
+One module from two probes ($9$ checks with the two
+frozen-honest FAILs \texttt{S1.SPR} $+$ \texttt{S4.RSP} kept
+and pattern-gated $+$ $5/5$, verdicts \textsc{weyl-port-blind}
+and \textsc{readout-repaired}).  The divisor-tower Weyl load
+carries the comb at $O(1)$ (the hull's comb-blindness repaired
+at load level); the v1 extremal readout dies by a diagnosed
+mechanism (doubling $=$ near-reparametrization, exactness ward
+$10^{-10}$); the repaired phase readout discriminates: Epstein
+$\kappa = 42.7$ / scramble $77.6$ outside the $1.5\times$ truth
+window --- 1--2 orders where every earlier functional had both
+inside; typed caveat carried: Spearman$(s,\tau) = -0.8$, the
+discrimination is the load-bearing content.  No marker move, no
+RH claim.
+Machine-checked: \veri{v865\_weyl\_port\_readout.py}.
+\mE\ (Herglotz/passivity wards, the exactness ward) $+$
+(\textsc{measured}) (the discrimination, the kappa band) $+$
+\mO\ (the kappa law underived)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The SourceContractor formula and
+the Perron closure
+(\texttt{PRIME.SOURCECONTRACTOR.\allowbreak NORM.01} $+$
+\texttt{PRIME.KREIN.\allowbreak CONTRACTOR.01}).}
+One module from two probes ($10$ checks with the frozen-honest
+FAIL \texttt{S2.2} at exit code $1$ $+$ $8/8$, verdicts
+\textsc{sylvester12-angles-fail} and
+\textsc{norm-reformulation}).  The headline: $C =
+W_-FG_+^{-1}F^{\mathsf H}W_+$ exactly ($1.4\times10^{-14}$,
+blind holdouts; no zeros, no $\tau$, no fit) with certified
+defect transfer on all seven rungs; the rank-12 reading
+corrected to $\sqrt{L}$ growth ($k^* = 24..48$); $\|C\| \le 1
+\Leftrightarrow G_- \preceq G_+$ exactly; the Perron closure:
+$\rho(|C|) = 2.4$--$3.1 > 1$ everywhere --- no absolute
+Schur/Hilbert test can ever certify; Epstein/scramble through
+the same formula match their direct norms.  The named demand
+registered: one phase-aware kernel bound.  No marker move, no
+RH claim.
+Machine-checked: \veri{v866\_source\_contractor\_formula.py}.
+\mE\ (the factorization, the Loewner equivalence, the Perron
+proof) $+$ (\textsc{measured}) (the transfer, the bands) $+$
+\mO\ (the certificate itself --- the registered demand)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The quadrature reach and the
+intrinsic conditioning
+(\texttt{PRIME.SOFTPORT.\allowbreak RADAU.01} $+$
+\texttt{PRIME.PORT.\allowbreak CONDITIONING.01}).}
+One module from two probes ($7 + 8$ checks with the two
+frozen-honest FAILs \texttt{S2.G2} $+$ \texttt{S3.G} kept and
+pattern-gated, verdicts \textsc{radau-depth-grows} and
+\textsc{conditioning-intrinsic} $+$
+\textsc{j-infinity-named}).  Gauss--Radau certificates for $s >
+0$ exist on \emph{every} rung ($m^* \le 426$; the Neumann
+frontier killed) but the depth grows as $m^* \sim
+\sqrt{\mathrm{cond}(G)}$ (Spearman $+0.99$); the $m \approx 17$
+prediction honestly failed ($0/7$); all three source
+preconditioners fail informatively (no healing; Sylvester
+control passed): the conditioning is intrinsic --- the
+certificate depth is the price of the cancellation.  $J_\infty$
+named: the free Chebyshev chain on the bulk support
+(Rakhmanov-generic typed).  No marker move, no RH claim.
+Machine-checked: \veri{v867\_radau\_conditioning.py}.
+\mE\ (the enclosure and monotonicity wards, congruence
+invariance) $+$ (\textsc{measured}) (the depth law, the
+conditioning trends) $+$ \mO\ (the uniform certificate missing)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The 210 canonicity guard and the
+two burials
+(\texttt{E8.DIVISOR210.\allowbreak CANONICITY.01}).}
+One module from three probes ($36/36 + 12/12 + 15/15$, zero
+fails, verdicts \textsc{divisor210-gauge-family(2)},
+\textsc{moving12-dimension-only},
+\textsc{chirality-degenerate}).  The Boolean layer is measured
+generic ($210/210$, as warned); the Euler determinants pin
+$\{2,3,5,7\}$ uniquely; the anchor prime $2$ forced by
+ramification; the gauge cut $C_6 \to C_3$; two classes remain
+--- the chirality pair, then \emph{proven gauge} by two exact
+no-go wards (the orientation functional vanishes identically
+via the M\"obius complement; quadratic readouts provably blind
+by transposition); the $17 = 12{+}3{+}1{+}1$ identification
+buried at space level (principal angles ${\sim}90^\circ$); the
+$6$-vs-$7$ note stands.  No marker move, no RH claim.
+Machine-checked: \veri{v868\_divisor210\_audits.py}.
+\mE\ (exact censuses, the no-go wards) $+$
+(\textsc{measured}) (the burial angles) $+$ \mO\ (nothing
+upgraded)
+\par\smallskip
+
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}
 One probe ($21/21$ incl.\ the $3$ must-fire controls; verdict

@@ -5077,7 +5077,23 @@ comb and routing it through the correlator costs the variance,
 $2.5$--$4.1\times10^5\,\tau$ --- the alias second moment is
 reachable by construction, the floor demand is not payable from
 it.  The instrument (zero-free, state-anchored, exact main
-subtraction) is typed for measurement use; still [O].]\par}
+subtraction) is typed for measurement use; still [O].]
+\emph{[2026-08-08 round-33 note
+(\veri{v861\_krein\_normalform\_lean.py} --
+\veri{v866\_source\_contractor\_formula.py}):} the floor demand
+of this contract now reads, in Krein coordinates, $\|C\| \le 1$
+for the \emph{explicit} closed-form source contractor $C =
+W_-FG_+^{-1}F^{\mathsf H}W_+$ (Loewner form $G_- \preceq G_+$;
+the $\tau$-margin is the \emph{single} soft defect mode's
+contraction margin --- \textsc{defect-one}), the scalar shadow
+is the pole-port impedance with the closed-form Poisson/Cauchy
+$a$-term at $s = 1/2$ and $\kappa - 1 \approx 6e^{-\alpha/2}
+\to 1$, and the absolute-bound route is \emph{provably} closed
+(Perron $\rho(|C|) > 1$ everywhere): the bridge input this
+contract demands must control the \emph{phases} of the pair
+kernel, not its magnitudes --- the pair-correlation substance
+in its sharpest operator clothing
+(\texttt{PRIME.KREIN.CONTRACTOR.01}); still [O].]\par}
 
 \par\smallskip\noindent\textbf{The character corner and the
 Hjelmslev tower (\texttt{PRIME.CORNER.CHARACTER.01} /
@@ -5417,6 +5433,41 @@ affine backgrounds included); L\'evy/conditional-positivity
 elevators on the deployed sides.  The rates door itself stays
 licensed and typed; demand, kill and close conditions
 unchanged; still [O].]
+\emph{[2026-08-08 round-33 note (the wall's operator form):}
+the demand now has exact operator coordinates
+(\veri{v861\_krein\_normalform\_lean.py} --
+\veri{v868\_divisor210\_audits.py}): the deployed window form
+is the Krein normal form $Q = \|B_+t\|^2 - \|B_-t\|^2$ with the
+Douglas pencil identity $1 - \|C\|^2 = $ the $\tau$-margin, the
+defect has rank \emph{one} ($\lambda_1 = $ the $\tau$-margin
+exactly --- one arithmetic-carrying soft mode), the contractor
+factors \emph{exactly} as the target-free closed-form source
+expression $C = W_-FG_+^{-1}F^{\mathsf H}W_+$ (blind holdouts,
+certified defect transfer), the norm statement is the exact
+reformulation $\|C\| \le 1 \Leftrightarrow G_- \preceq G_+
+\Leftrightarrow K \succeq 0$, and the theorem frame is
+kernel-checked (\texttt{FORM.PRIME.KREIN.DEFECT.01} [F]:
+\texttt{SourceContractor} the named hypothesis, composed to
+Weil nonnegativity).  What the campaign \emph{proves} about the
+tool space: the absolute half of the classical toolbox is
+closed (the Perron value $\rho(|C|) = 2.4$--$3.1 > 1$
+everywhere --- no absolute-value inequality can ever certify:
+the certification must be \emph{phase-aware}); quadrature does
+certify $s > 0$ on every reachable rung (the Neumann frontier
+killed) but the depth law $m^* \sim \sqrt{\mathrm{cond}(G)}$ is
+\emph{intrinsic} (no source preconditioner waives it --- the
+soft end is a continuum edge of distributed arithmetic
+structure); the scalar shadow is the pole-port impedance with
+the closed-form $a$-term and $\kappa \to 1$; the register is
+canonical up to \emph{proven} gauge.  \emph{Stop list
+(extended):} source-word searches at all lengths (the monomial
+closure theorem: every word of any length misses by
+$\ge 0.87$); absolute-value bounds on the weighted frame kernel
+(the Perron closure); fixed-depth quadrature certificate
+families without a conditioning bound; chirality deciders
+through quadratic readouts.  The named demand is sharpened to
+\texttt{PRIME.KREIN.CONTRACTOR.01} [O] (below): one phase-aware
+bound on the closed-form kernel; still [O].]
 No marker move; no RH statement.\par}
 
 \par\smallskip\noindent\textbf{The margin law and the
@@ -5789,6 +5840,126 @@ computed centers $4$ vs $1$
 (\veri{v858\_g31\_clock\_alphabet.py}, $19/19$).  Full
 statements and keyboxes in Papers~1 and~2; audit cards in
 Paper~3.\par}
+
+\par\smallskip\noindent\textbf{The Krein-defect theorem frame
+(\texttt{FORM.PRIME.\allowbreak KREIN.\allowbreak DEFECT.01}
+[F]).}
+{\sloppy
+\emph{Registered} 2026-08-08, FORMAL
+(\texttt{TfptCarrier/KreinDefect.lean}, $14$ declarations ($10$
+theorems), kernel-checked --- lake build green at $3416$ jobs,
+no \texttt{sorry}, no \texttt{native\_decide}, axioms
+propext/Classical.choice/Quot.sound only, verified by
+\texttt{\#print axioms} on all ten theorems; numeric mirror
+\veri{v861\_krein\_normalform\_lean.py} part C; carried in the
+shipped Lean manifest at $88$ files).  \emph{Proven:} the
+defect representation \texttt{defect} / \texttt{formAt\_defect}
+--- the quadratic form of $B_+^{\mathsf H}B_+ -
+B_-^{\mathsf H}B_-$ \emph{is} $\|B_+f\|^2 - \|B_-f\|^2$
+exactly; the main theorem \texttt{defect\_psd\_of\_contraction}
+--- $B_- = CB_+$ with the Loewner certificate $(1 -
+C^{\mathsf H}C) \succeq 0$ forces the defect PSD, via the exact
+factorization $B_+^{\mathsf H}(1 - C^{\mathsf H}C)B_+$ and
+congruence; the converse
+\texttt{douglas\_contraction\_of\_defect\_psd} (full-rank case
+proven, $C := B_-B_+^{-1}$; the singular case deliberately the
+classical Douglas 1966 citation --- the range bookkeeping not
+formalized, typed); \texttt{SourceContractor} --- the
+\emph{named hypothesis}: contractor $+$ factorization $+$
+\emph{independent} norm certificate as data a consumer must
+supply from the source side, with the circularity warning typed
+(a target-computed $C$ --- eigendata or the converse's
+pseudoinverse --- is a reformulation of the positivity, not a
+proof); and the cofinal composition \texttt{krein\_cofinal} /
+\texttt{krein\_cofinal\_weil} --- contractors on a cofinal
+ladder yield $(H_{\rm cof})$ (index extraction from the
+recurrence) and compose through the minimal H theorem to Weil
+nonnegativity on the whole dense family: no hidden wall behind
+the contractor certificates.  \emph{Provenance typed, not
+proven:} the contractor hypothesis is exactly what the Krein
+source-algebra search must deliver;
+\veri{v866\_source\_contractor\_formula.py} delivers its closed
+\emph{formula} and proves the absolute half of the toolbox
+cannot certify it --- the certificate demand is the
+registration below.  \emph{The honest boundary:} nothing here
+proves the contractor exists; no continuum theorem, no RH
+statement, no arithmetic identification.\par}
+
+\par\smallskip\noindent\textbf{The phase-aware contractor
+certificate (\texttt{PRIME.KREIN.\allowbreak CONTRACTOR.01}
+[O]).}
+{\sloppy
+\emph{Registered} 2026-08-08, OPEN
+(\veri{v866\_source\_contractor\_formula.py}, $10 + 8/8$ with
+the one frozen-honest FAIL kept and pattern-gated,
+\textsc{sylvester12-angles-fail} $+$
+\textsc{norm-reformulation}; with
+\veri{v861\_krein\_normalform\_lean.py},
+\veri{v862\_defect\_polar\_weld.py},
+\veri{v864\_softport\_kappa\_law.py},
+\veri{v867\_radau\_conditioning.py}).  \emph{The demand,
+verbatim:} supply a \emph{target-free} certificate that the
+explicit closed-form source contractor
+$C = W_-\,F\,G_+^{-1}F^{\mathsf H}\,W_+$ (the factorization
+warded at $1.4\times10^{-14}$ incl.\ blind holdouts; density
+roots and window geometry only) is a contraction, $\|C\| \le
+1$, uniformly along the deployed cofinal ladder ---
+equivalently the Loewner comparison $G_- \preceq G_+$ of the
+two weighted frame Grams, equivalently $K \succeq 0$ (the
+Douglas equivalence, machine-verified) --- with the
+certificate's constants independent of the measured target
+signs.  \emph{What is proven about the tool space (the
+registration's teeth):} (i) \emph{no absolute-value bound can
+succeed} --- the Perron value $\rho(|C|)$ is the infimum over
+all absolute Schur/Hilbert-type tests and it exceeds $1$ on
+every heavy rung ($2.363 \to 3.103$, growing with depth): any
+valid certificate must use the \emph{phases} of the kernel;
+(ii) quadrature certifies $s > 0$ pointwise on every reachable
+rung but the depth grows as $m^* \sim \sqrt{\mathrm{cond}(G)}$
+and the conditioning is \emph{intrinsic} --- a uniform
+certificate cannot be a fixed-depth quadrature family; (iii) no
+source word of \emph{any} length reaches $C$ (the monomial
+closure theorem) --- the certificate cannot be a word bound;
+(iv) the discharge target is kernel-checked: per-rung
+\texttt{SourceContractor} instances on a cofinal ladder compose
+through \texttt{krein\_cofinal\_weil} to Weil nonnegativity.
+\emph{The named candidate shape:} an oscillatory-integral /
+stationary-phase bound on the entries of the weighted frame
+kernel, strong enough to beat $1$ by the measured
+$e^{\mathrm{slope}\,\alpha}$ margin (fit-free defect law, slope
+$-2.40$).  \emph{Kill:} a rung with $\rho(|C|) \le 1$; a proof
+that every phase-aware bound of the named shape degrades to an
+absolute bound on the deployed kernel class; a measured break
+of the factorization on any new rung.  \emph{Close:} the
+certificate itself --- it would discharge the
+\texttt{SourceContractor} hypothesis and with it
+$(H_{\rm cof})$ for the defect ladder.  Existence is \emph{not}
+claimed; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The 210 canonicity audits of
+round 33 (\texttt{E8.DIVISOR210.\allowbreak CANONICITY.01}).}
+{\sloppy
+\emph{Recorded} 2026-08-08 (evidence lines, not contracts; no
+marker moves).  The label register $\mathbb{F}_2^4$ \emph{is}
+the divisor lattice of $210 = 2\cdot3\cdot5\cdot7$
+(Walsh--Hadamard carries the lattice M\"obius function; the
+vacuum column is the rank-one Redheffer closure with
+$\det = \prod_p(1 - 1/p) = 8/35$ exact,
+\veri{v863\_redheffer\_colligation.py}); the canonicity guard
+quantifies the selection
+(\veri{v868\_divisor210\_audits.py}, $36/36 + 12/12 + 15/15$):
+the Boolean layer is measured generic ($210/210$), the two
+Euler determinants pin $\{2,3,5,7\}$ uniquely, the anchor prime
+$2$ is forced by ramification, and after the crossref exactly
+two gauge classes remain --- the family-cycle chirality, then
+\emph{proven gauge} by two exact no-go wards (the orientation
+functional vanishes identically via the M\"obius complement
+$d \mapsto 210/d$; quadratic readouts provably blind by
+transposition); the $17 = 12{+}3{+}1{+}1$ moving-sector
+identification honestly buried at space level (principal angles
+${\sim}90^\circ$); the $6$-vs-$7$ honesty note stands
+untouched.  Full statements and keyboxes in Paper~1; audit
+cards in Paper~3.\par}
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}

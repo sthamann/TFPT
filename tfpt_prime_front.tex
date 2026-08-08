@@ -14822,6 +14822,216 @@ L\'evy/conditional-positivity elevators on the deployed sides);
 the demand is unchanged.  No marker moves.  \textbf{No
 statement about the Riemann Hypothesis is made.}
 
+\subsection{The wall's operator form: the Krein coordinates, the
+SourceContractor formula, the Perron closure, and the quadrature
+reach}\label{sec:krein-formula}
+
+Round 33 (2026-08-08) consolidates the day's Krein/port/formula
+campaign --- sixteen frozen probes in five strands --- into the
+wall's \emph{operator form}
+(\veri{v861\_krein\_normalform\_lean.py}, $37/37 + 8/8$ plus four
+Lean-mirror checks; \veri{v862\_defect\_polar\_weld.py}, $8/8 +
+22/22$; \veri{v863\_redheffer\_colligation.py}, $7/7$;
+\veri{v864\_softport\_kappa\_law.py}, $5/5 + 6/6$;
+\veri{v865\_weyl\_port\_readout.py}, $9 + 5/5$ with two
+frozen-honest FAILs; \veri{v866\_source\_contractor\_formula.py},
+$10 + 8/8$ with one frozen-honest FAIL;
+\veri{v867\_radau\_conditioning.py}, $7 + 8$ with two
+frozen-honest FAILs; suite $853\to861$, with the register-side
+canonicity audits of the same round
+(\veri{v868\_divisor210\_audits.py}, $36/36 + 12/12 + 15/15$)
+cited in place in Papers~1 and~3).
+
+\emph{The Krein coordinates.}  The deployed window form now has
+an \emph{exact} Krein normal form, $Q_h(t) = \|B_+t\|^2 -
+\|B_-t\|^2$, machine-warded entrywise on every reachable rung for
+both canonical cuts, with the weights entering as
+$\sqrt{|\Lambda|}$ so the form is \emph{linear} in $\Lambda$ ---
+the grade barrier of round 32 is passed by construction --- and
+the Douglas pencil identity holds exactly: $1 - \|C_2\|^2$ equals
+the $\tau$-margin in the positive-side metric (rel $\le
+3.9\times10^{-9}$).  ``Which self-consistent comb is real'' has
+become ``which rate measure makes $B_-\,\mathrm{pinv}(B_+)$ a
+contraction'', and the discriminator is the Douglas equivalence
+itself: truth contracts on every rung ($\|C\| \le 1$, razor-thin
+at depth) while the Epstein $h{=}2$ comb explodes to $\|C_E\| =
+46.8$ and the scrambled comb to $3693$
+(\veri{v861\_krein\_normalform\_lean.py},
+\textsc{krein-contractor-stable-no-word}).  The register wiring
+behind the coordinates is typed in the same module: the
+$\mu$-sign and the geometric deck are \emph{two separate} $C_2$s
+(the deployed reading character separates them; the
+identification is one \emph{faithful}-$\mu_4$ character away,
+with three candidate constructions machine-verified --- the
+diagonal characters, the Galois bookkeeping $\mu_K((p)) =
+\chi_4(p)$ exact on $609 + 619$ primes, and the Hall chain parity
+row $1 = \mu$), and the Redheffer/Mertens echo is exact: $\det
+R_n = M(n)$ with the vacuum column's \emph{entire} Smith
+deviation concentrated in the single invariant factor $|M(n)|$
+--- vacuum completion as a rank-one origin update, with the
+fit-free census finding \emph{no} resolvable floor--Mertens
+correlation (Bonferroni $\times4$: min $4p = 0.378$).  The defect
+theorem is kernel-checked
+(\texttt{TfptCarrier/KreinDefect.lean}, $14$ declarations, $10$
+theorems, axioms propext/Classical.choice/Quot.sound only;
+numeric mirror in \veri{v861\_krein\_normalform\_lean.py} part
+C): the defect representation, contraction $\Rightarrow$ PSD via
+the exact factorization $B_+^{\mathsf H}(1 - C^{\mathsf H}C)B_+$,
+the full-rank Douglas converse, \texttt{SourceContractor} as the
+\emph{named hypothesis} (contractor $+$ factorization $+$
+independent certificate, with the circularity warning typed), and
+the composition \texttt{krein\_cofinal\_weil}: contractors on a
+cofinal ladder force Weil nonnegativity on the whole dense family
+--- no hidden wall behind the contractor certificates
+(\texttt{FORM.PRIME.KREIN.DEFECT.01} [F]).
+
+\emph{The rank of the wall is one; the class closure is a
+theorem.}  The defect operator $\Delta = I - C^*C$ has exactly
+\emph{one} soft mode on every reachable rung, and $\lambda_1$
+\emph{is} the $\tau$-margin by the exact pencil identity
+(separation $3.9$--$14.1\times$; Epstein carries $55$ negative
+defect eigenvalues, the scramble $37$) --- the Redheffer single
+Smith invariant, the vacuum code's one-logical-qubit price and
+the Krein soft port are one rank-one structure
+(\veri{v862\_defect\_polar\_weld.py}, \textsc{defect-one}).  The
+word-census emptiness of the normal form becomes a theorem for
+\emph{all} word lengths: every deployed source letter is a
+monomial matrix, the monomial class is product-closed, and the
+contractor's monomial mass fraction is $0.23$--$0.24$, so every
+word of any length misses by residual $\ge 0.874$ --- typed with
+the honest surprise first: the clean two-band corridor picture is
+wrong at fine scale (the density's $408$ sign flips interleave
+the bands), and the surviving closure is stronger
+(\textsc{monomial-closure-theorem}).  The 2-torsion weld law
+supplies the missing operator's \emph{type}: the deck's
+anticommutant on the deployed register is entirely
+faithful-$\mu_4$ --- the deck can enter a Clifford weld only as
+the quarter turn $J = MD$, never as a second involution; all four
+weld candidates close exactly on their forced domains, the
+unwelded control refuses exactly, and the contractor connection
+is null at the random-null value $\sqrt2$
+(\textsc{weld-without-contractor}).
+
+\emph{The machine: contraction becomes a consequence.}  The
+16-slot colligation architecture delivers what every earlier
+design had to assume: both source-built machines are exactly
+unitary, the vacuum-port Redheffer closure is well-posed ($\|D\|
+= 1/4$), and every closed transfer block is \emph{automatically}
+contractive --- never tuned
+(\veri{v863\_redheffer\_colligation.py},
+\textsc{colligation-contracts-not-identifies}).  The scalar limit
+reproduces the weighted lattice Redheffer determinant exactly ---
+$\mathbb{F}_2^4$ \emph{is} the divisor lattice of $210 =
+2\cdot3\cdot5\cdot7$ with Walsh--Hadamard carrying the lattice
+M\"obius function and $\det = \prod_p(1 - 1/p) = 8/35$ (the
+compiler-side discovery, booked with its canonicity guard in
+Paper~1) --- and the machine is provably comb-blind
+(anti-circularity ward).  The identification gate fails honestly
+and \emph{localizes} the missing object: the Douglas contractor
+couples \emph{different} $|\tau|$ density bands while the
+machine's only band mover (the $J$ flip) couples $\pm j$ at equal
+$|\tau|$ --- the label-side machinery is complete, what is
+missing is the grid-side band intertwiner: the explicit-formula
+kernel itself.
+
+\emph{The scalar reduction: the port wave.}  The exact
+Feshbach/Schur reduction turns the matrix floor into one port
+impedance --- $\tau > 0 \Leftrightarrow s > 0$ at any port
+carrying a stable share of the soft mode over a uniformly
+positive bulk --- and four \emph{source} ports pass, with the
+pole port carrying $84\%$ of the soft mode at depth, the exact
+skeleton $\kappa^{-1} = \beta^2 + \lambda_1\rho$, the
+\emph{closed-form} leading term $a = 1 - E_-/E_+$ (the
+Poisson/Cauchy average of the signed density at the pole point $s
+= 1/2$) and the measured law $\kappa - 1 \approx 6e^{-\alpha/2}
+\to 1$ (Pearson $-0.99$): the classical ``main term minus
+boundable term'' shape exists structurally, and the boundable
+term --- $\le 17$ bulk-mode couplings cancelling $99.9\%$ of the
+$a$-term --- is exactly the arithmetic
+(\veri{v864\_softport\_kappa\_law.py},
+\textsc{kappa-law-partial}).  The arithmetic survives into the
+machine at \emph{load} level: the divisor-tower Weyl load
+responds at $O(1)$ to mass doubling --- the hull's comb-blindness
+is repaired --- and the v1 extremal readout dies by a diagnosed
+mechanism (doubling is a near-reparametrization of the
+$r$-curve; extremal functionals read the curve as a set), which
+the repaired phase readout then removes: Epstein $\kappa = 42.7$
+and scramble $77.6$ land \emph{outside} the $1.5\times$ truth
+window --- one to two orders of discrimination where every
+earlier functional of this chain had both inside --- with the
+typed caveat carried verbatim: the load-bearing content is the
+discrimination, not the narrow-battery $\kappa$ band
+(\veri{v865\_weyl\_port\_readout.py}, \textsc{weyl-port-blind} +
+\textsc{readout-repaired}).
+
+\emph{The formula (the campaign's headline), and the Perron
+closure.}  The Douglas contractor factors \emph{exactly} as a
+target-free closed-form source expression,
+\[
+C \;=\; W_-\,F\,G_+^{-1}F^{\mathsf H}\,W_+
+\]
+(max rel $1.4\times10^{-14}$ on construction rungs \emph{and}
+blind holdouts; density roots and window geometry only --- no
+zeros, no $\tau$, no fit), with \emph{certified defect transfer}:
+at the measured budget $k^*$ the reconstruction's contraction
+defect matches $\tau$ within the certified Weyl budget on all
+seven rungs --- the \texttt{SourceContractor} of the Lean frame
+\emph{exists as a formula}
+(\veri{v866\_source\_contractor\_formula.py}; the frozen
+Sylvester-12 kill fires as designed and corrects the rank-12
+reading to a $\sqrt{L}$ growth law, $k^* = 24..48$).  Its norm
+statement is relocated, not reduced: $\|C\| \le 1
+\Leftrightarrow G_- \preceq G_+$ exactly --- better coordinates,
+the same wall (\textsc{norm-reformulation}).  What the
+coordinates buy is a \emph{proof about the tool space}: the
+Perron value $\rho(|C|)$ --- the infimum over all absolute Schur
+tests --- exceeds $1$ everywhere ($2.36 \to 3.10$, growing with
+depth), so \emph{no absolute-value Schur/Hilbert-type inequality
+can ever certify the bound}: the certification must use the
+phases of the kernel --- cancellation provably carries the
+arithmetic.  The named demand is registered
+(\texttt{PRIME.KREIN.CONTRACTOR.01} [O]): one \emph{phase-aware}
+bound on the weighted frame kernel (oscillatory-integral /
+stationary-phase grade), strong enough to beat $1$ by the
+measured $e^{\mathrm{slope}\,\alpha}$ margin --- the single
+object that would discharge the \texttt{SourceContractor}
+hypothesis and, through \texttt{krein\_cofinal\_weil}, hypothesis
+$(H_{\rm cof})$.
+
+\emph{The quadrature reach, and the final typed wall.}
+Gauss--Radau certificates for $s > 0$ \emph{exist on every rung}
+--- positivity is provable pointwise by quadrature alone on the
+whole reachable ladder, killing the Neumann frontier --- but the
+needed depth grows with the certified law $m^* \sim
+\sqrt{\mathrm{cond}(G)}$ (Spearman $+0.99$; the $m \approx 17$
+prediction honestly failed), and the preconditioned retry closes
+the escape: none of the three source preconditioners bounds the
+effective condition number --- the conditioning is
+\emph{intrinsic}: the soft end of the bulk is neither the smooth
+geometry nor the Krylov head but distributed arithmetic structure
+that any certificate must resolve mode by mode
+(\veri{v867\_radau\_conditioning.py}, \textsc{radau-depth-grows}
+$+$ \textsc{conditioning-intrinsic}; the limiting Jacobi chain is
+named --- the free Chebyshev chain on the bulk support,
+Rakhmanov-generic typed).  In quadrature coordinates the wall
+reads: \emph{the certificate depth is the price of the
+cancellation, and no source-side change of metric waives it}.
+
+\emph{The honest statement.}  Round 33 gives the wall exact
+operator coordinates (normal form, rank one, closed-form
+contractor, scalar port shadow), proves the absolute half of the
+classical toolbox closed (the Perron closure), proves the
+quadrature route reaches every rung at an intrinsic depth price,
+types the register canonical up to proven gauge, and registers
+the sharpest demand so far: one phase-aware kernel bound
+(\texttt{PRIME.KREIN.CONTRACTOR.01} [O]).  The stop list extends
+accordingly (source-word searches at all lengths;
+absolute-value bounds on the frame kernel; fixed-depth
+quadrature families without a conditioning bound; chirality
+deciders through quadratic readouts); the demand is unchanged
+in substance.  No marker moves.  \textbf{No statement about the
+Riemann Hypothesis is made.}
+
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
 The P4 main strike (\veri{v712\_rank3\_transverse\_deck.py}, $5/5$)
@@ -14940,7 +15150,20 @@ tax-evading pair-correlation instrument
 conditional kernel-checked frame \emph{three hypotheses
 $\Rightarrow (H_{\rm cof})$}
 (\texttt{FORM.PRIME.COFINAL\_CURRENT.01} [F], its second
-hypothesis measured empty at the deployed frame))
+hypothesis measured empty at the deployed frame); and round 33
+(Section~\ref{sec:krein-formula}) gives the wall its operator
+form --- the exact Krein normal form with the Douglas pencil
+identity, the rank-one defect ($\lambda_1 = $ the $\tau$-margin
+exactly), the kernel-checked defect theorem with
+\texttt{SourceContractor} the named hypothesis
+(\texttt{FORM.PRIME.KREIN.DEFECT.01} [F]), the closed-form
+target-free contractor formula $C = W_-FG_+^{-1}F^{\mathsf H}W_+$
+with certified defect transfer, the \emph{Perron closure}
+($\rho(|C|) > 1$ everywhere: no absolute bound can ever certify
+--- the certificate must be phase-aware), the quadrature reach
+with its intrinsic depth price, and the register canonical up to
+proven gauge --- the sharpest demand registered as
+\texttt{PRIME.KREIN.CONTRACTOR.01} [O])
 ---
 \texttt{PRIME.DETECTOR.WINDOW.01} (registered in round 25: the
 comb-native window detector, validated out-of-sample) ---

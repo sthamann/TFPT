@@ -43,6 +43,2019 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-08",
+    "dateLabel": "2026-08-08 · LXXVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round thirty-three — the wall's operator form: the Krein coordinates, the SourceContractor formula, the Perron closure, and the quadrature reach: EIGHT modules ("
+      },
+      {
+        "k": "c",
+        "v": "v861"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v868"
+      },
+      {
+        "k": "t",
+        "v": ", from sixteen frozen probes plus one Lean module; suite "
+      },
+      {
+        "k": "m",
+        "v": "853\\to861"
+      },
+      {
+        "k": "t",
+        "v": ") — the consolidation of the 2026-08-08 Krein/port/formula campaign in five strands: (1) THE KREIN CHAIN — the deployed window form gets an EXACT Krein normal form "
+      },
+      {
+        "k": "m",
+        "v": "Q_h(t) = \\|B_+t\\|^2 - \\|B_-t\\|^2"
+      },
+      {
+        "k": "t",
+        "v": " (entrywise ward "
+      },
+      {
+        "k": "m",
+        "v": "\\le 10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": ", both canonical cuts; "
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": " carries "
+      },
+      {
+        "k": "m",
+        "v": "\\sqrt{|\\Lambda|}"
+      },
+      {
+        "k": "t",
+        "v": " — linear in "
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda"
+      },
+      {
+        "k": "t",
+        "v": ", the round-32 grade barrier passed by construction) with the Douglas pencil identity "
+      },
+      {
+        "k": "m",
+        "v": "1 - \\|C_2\\|^2 ="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-margin in the positive-side metric (rel "
+      },
+      {
+        "k": "m",
+        "v": "\\le 3.9\\times10^{-9}"
+      },
+      {
+        "k": "t",
+        "v": "): truth contracts on every rung, Epstein "
+      },
+      {
+        "k": "m",
+        "v": "h{=}2"
+      },
+      {
+        "k": "t",
+        "v": " explodes to "
+      },
+      {
+        "k": "m",
+        "v": "\\|C_E\\| = 46.8"
+      },
+      {
+        "k": "t",
+        "v": ", the scramble to "
+      },
+      {
+        "k": "m",
+        "v": "3693"
+      },
+      {
+        "k": "t",
+        "v": " — the discriminator IS the Douglas equivalence; the register wiring typed (the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu"
+      },
+      {
+        "k": "t",
+        "v": "-sign and the deck are TWO separate "
+      },
+      {
+        "k": "m",
+        "v": "C_2"
+      },
+      {
+        "k": "t",
+        "v": "s, the identification one faithful-"
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " character away with three candidate constructions machine-verified; the Redheffer/Mertens echo exact: "
+      },
+      {
+        "k": "m",
+        "v": "\\det R_n = M(n)"
+      },
+      {
+        "k": "t",
+        "v": " with the vacuum column's ENTIRE Smith deviation in the single invariant factor "
+      },
+      {
+        "k": "m",
+        "v": "|M(n)|"
+      },
+      {
+        "k": "t",
+        "v": "; no resolvable floor–Mertens correlation, min "
+      },
+      {
+        "k": "m",
+        "v": "4p = 0.378"
+      },
+      {
+        "k": "t",
+        "v": "); the defect theorem kernel-checked ("
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/KreinDefect.lean"
+      },
+      {
+        "k": "t",
+        "v": ": contraction "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": " PSD with the full-rank Douglas converse, "
+      },
+      {
+        "k": "c",
+        "v": "SourceContractor"
+      },
+      {
+        "k": "t",
+        "v": " the NAMED hypothesis with the circularity warning typed, "
+      },
+      {
+        "k": "c",
+        "v": "krein_cofinal_weil"
+      },
+      {
+        "k": "t",
+        "v": " composing contractors on a cofinal ladder to Weil nonnegativity — "
+      },
+      {
+        "k": "c",
+        "v": "FORM.PRIME.KREIN.DEFECT.01"
+      },
+      {
+        "k": "t",
+        "v": " [F]); the defect has rank ONE ("
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_1 ="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-margin exactly, separation "
+      },
+      {
+        "k": "m",
+        "v": "3.9"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "14.1\\times"
+      },
+      {
+        "k": "t",
+        "v": " — the Redheffer Smith invariant, the vacuum code's one-qubit price and the Krein soft port are ONE rank-one structure), the MONOMIAL CLOSURE THEOREM extends the word-census emptiness to EVERY word of ANY length (all source letters monomial, contractor monomial mass "
+      },
+      {
+        "k": "m",
+        "v": "0.23"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.24"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " miss "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 0.874"
+      },
+      {
+        "k": "t",
+        "v": "; the "
+      },
+      {
+        "k": "m",
+        "v": "408"
+      },
+      {
+        "k": "t",
+        "v": " sign flips kill the corridor form, typed v2), and the 2-torsion weld law supplies the missing operator's TYPE (the deck's anticommutant is entirely faithful-"
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " — the deck welds only as "
+      },
+      {
+        "k": "m",
+        "v": "J = MD"
+      },
+      {
+        "k": "t",
+        "v": "; all four candidates weld exactly, the control refuses exactly, the contractor connection null at "
+      },
+      {
+        "k": "m",
+        "v": "\\sqrt2"
+      },
+      {
+        "k": "t",
+        "v": "); (2) THE MACHINE — the 16-slot colligation architecture makes contraction a CONSEQUENCE (exactly unitary, "
+      },
+      {
+        "k": "m",
+        "v": "\\|D\\| = 1/4"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma_{\\max} \\le 1 + 10^{-9}"
+      },
+      {
+        "k": "t",
+        "v": " automatic, provably comb-blind) with the compiler-side discovery booked in Paper 1: "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{F}_2^4"
+      },
+      {
+        "k": "t",
+        "v": " IS the divisor lattice of "
+      },
+      {
+        "k": "m",
+        "v": "210"
+      },
+      {
+        "k": "t",
+        "v": " with Walsh–Hadamard carrying the lattice Möbius function and the scalar-limit determinant "
+      },
+      {
+        "k": "m",
+        "v": "\\prod_p(1-1/p) = 8/35"
+      },
+      {
+        "k": "t",
+        "v": " EXACT; the identification gate fails honestly and localizes the gap — the contractor couples DIFFERENT "
+      },
+      {
+        "k": "m",
+        "v": "|\\tau|"
+      },
+      {
+        "k": "t",
+        "v": " bands, the "
+      },
+      {
+        "k": "m",
+        "v": "J"
+      },
+      {
+        "k": "t",
+        "v": " flip couples equal "
+      },
+      {
+        "k": "m",
+        "v": "|\\tau|"
+      },
+      {
+        "k": "t",
+        "v": ": the missing object is the grid-side band intertwiner, the explicit-formula kernel itself; (3) THE SCALAR REDUCTION — the exact Feshbach reduction turns the floor into ONE port impedance ("
+      },
+      {
+        "k": "m",
+        "v": "\\tau > 0 \\Leftrightarrow s > 0"
+      },
+      {
+        "k": "t",
+        "v": "; four source ports pass; the pole port carries "
+      },
+      {
+        "k": "m",
+        "v": "84\\%"
+      },
+      {
+        "k": "t",
+        "v": " of the soft mode with the exact skeleton "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa^{-1} = \\beta^2 + \\lambda_1\\rho"
+      },
+      {
+        "k": "t",
+        "v": ", the closed-form "
+      },
+      {
+        "k": "m",
+        "v": "a"
+      },
+      {
+        "k": "t",
+        "v": "-term — the Poisson/Cauchy average of the signed density at "
+      },
+      {
+        "k": "m",
+        "v": "s = 1/2"
+      },
+      {
+        "k": "t",
+        "v": " — and "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa - 1 \\approx 6e^{-\\alpha/2} \\to 1"
+      },
+      {
+        "k": "t",
+        "v": " at Pearson "
+      },
+      {
+        "k": "m",
+        "v": "-0.99"
+      },
+      {
+        "k": "t",
+        "v": "; the backflow "
+      },
+      {
+        "k": "m",
+        "v": "\\le 17"
+      },
+      {
+        "k": "t",
+        "v": " bulk modes cancelling "
+      },
+      {
+        "k": "m",
+        "v": "99.9\\%"
+      },
+      {
+        "k": "t",
+        "v": ": the classical shape EXISTS, the boundable term is exactly the arithmetic); the divisor-tower Weyl load repairs the hull's comb-blindness at LOAD level ("
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": " response) and the repaired phase readout discriminates at 1–2 orders (Epstein "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa = 42.7"
+      },
+      {
+        "k": "t",
+        "v": " / scramble "
+      },
+      {
+        "k": "m",
+        "v": "77.6"
+      },
+      {
+        "k": "t",
+        "v": " outside the "
+      },
+      {
+        "k": "m",
+        "v": "1.5\\times"
+      },
+      {
+        "k": "t",
+        "v": " truth window; the typed caveat carried: Spearman"
+      },
+      {
+        "k": "m",
+        "v": "(s,\\tau) = -0.8"
+      },
+      {
+        "k": "t",
+        "v": ", the discrimination is the load-bearing content); (4) THE FORMULA (the campaign's headline) — the Douglas contractor factors EXACTLY as the target-free closed-form source expression "
+      },
+      {
+        "k": "m",
+        "v": "C = W_-FG_+^{-1}F^{\\mathsf H}W_+"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "1.4\\times10^{-14}"
+      },
+      {
+        "k": "t",
+        "v": " on construction rungs AND blind holdouts; no zeros, no "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": ", no fit) with CERTIFIED defect transfer on all seven rungs (the frozen Sylvester-12 kill fires as designed, correcting rank-12 to "
+      },
+      {
+        "k": "m",
+        "v": "\\sqrt{L}"
+      },
+      {
+        "k": "t",
+        "v": " growth, "
+      },
+      {
+        "k": "m",
+        "v": "k^* = 24..48"
+      },
+      {
+        "k": "t",
+        "v": "); the norm statement is the exact reformulation "
+      },
+      {
+        "k": "m",
+        "v": "\\|C\\| \\le 1 \\Leftrightarrow G_- \\preceq G_+ \\Leftrightarrow K \\succeq 0"
+      },
+      {
+        "k": "t",
+        "v": " — and the PERRON CLOSURE is proven: "
+      },
+      {
+        "k": "m",
+        "v": "\\rho(|C|) = 2.4"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "3.1 > 1"
+      },
+      {
+        "k": "t",
+        "v": " everywhere, so NO absolute Schur/Hilbert-type inequality can ever certify — cancellation provably carries the arithmetic, the certificate must be PHASE-AWARE (the sharpest demand registered: "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.KREIN.CONTRACTOR.01"
+      },
+      {
+        "k": "t",
+        "v": " [O], one oscillatory-integral-grade bound beating "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " by the measured "
+      },
+      {
+        "k": "m",
+        "v": "e^{\\mathrm{slope}\\,\\alpha}"
+      },
+      {
+        "k": "t",
+        "v": " margin — it would discharge "
+      },
+      {
+        "k": "c",
+        "v": "SourceContractor"
+      },
+      {
+        "k": "t",
+        "v": " and with it "
+      },
+      {
+        "k": "m",
+        "v": "(H_{\\rm cof})"
+      },
+      {
+        "k": "t",
+        "v": "); quadrature certificates for "
+      },
+      {
+        "k": "m",
+        "v": "s > 0"
+      },
+      {
+        "k": "t",
+        "v": " EXIST on every rung ("
+      },
+      {
+        "k": "m",
+        "v": "m^* \\le 426"
+      },
+      {
+        "k": "t",
+        "v": ", the Neumann frontier killed) but the depth law "
+      },
+      {
+        "k": "m",
+        "v": "m^* \\sim \\sqrt{\\mathrm{cond}(G)}"
+      },
+      {
+        "k": "t",
+        "v": " (Spearman "
+      },
+      {
+        "k": "m",
+        "v": "+0.99"
+      },
+      {
+        "k": "t",
+        "v": ") is INTRINSIC — all three source preconditioners fail informatively, the "
+      },
+      {
+        "k": "m",
+        "v": "m \\approx 17"
+      },
+      {
+        "k": "t",
+        "v": " prediction honestly failed, "
+      },
+      {
+        "k": "m",
+        "v": "J_\\infty"
+      },
+      {
+        "k": "t",
+        "v": " named the free Chebyshev chain (Rakhmanov-generic typed): the certificate depth is the price of the cancellation; (5) THE AUDITS — the 210 register is canonical up to PROVEN gauge (Boolean layer generic "
+      },
+      {
+        "k": "m",
+        "v": "210/210"
+      },
+      {
+        "k": "t",
+        "v": " as warned; the Euler determinants pin "
+      },
+      {
+        "k": "m",
+        "v": "\\{2,3,5,7\\}"
+      },
+      {
+        "k": "t",
+        "v": " uniquely; the anchor prime "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " forced by ramification; two gauge classes = the chirality pair, then proven gauge by two exact no-go wards — the orientation functional vanishes identically via the Möbius complement, quadratic readouts provably blind by transposition; the "
+      },
+      {
+        "k": "m",
+        "v": "6"
+      },
+      {
+        "k": "t",
+        "v": "-vs-"
+      },
+      {
+        "k": "m",
+        "v": "7"
+      },
+      {
+        "k": "t",
+        "v": " note stands), and the "
+      },
+      {
+        "k": "m",
+        "v": "17 = 12{+}3{+}1{+}1"
+      },
+      {
+        "k": "t",
+        "v": " moving-sector identification is honestly buried at space level (principal angles "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}90^\\circ"
+      },
+      {
+        "k": "t",
+        "v": "); NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (8)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v861_krein_normalform_lean.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "37/37 + 8/8"
+        },
+        {
+          "k": "t",
+          "v": ", zero fails, "
+        },
+        {
+          "k": "t",
+          "v": "deck-mu-parallel"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "redheffer-echo-exact"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "krein-contractor-stable-no-word"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "+4"
+        },
+        {
+          "k": "t",
+          "v": " Lean-mirror checks; probes "
+        },
+        {
+          "k": "c",
+          "v": "mobius_deck_redheffer_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "krein_normalform_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": the two-"
+        },
+        {
+          "k": "m",
+          "v": "C_2"
+        },
+        {
+          "k": "t",
+          "v": " wiring census with the three candidate constructions (diagonal characters "
+        },
+        {
+          "k": "m",
+          "v": "j \\in \\{1,3\\}"
+        },
+        {
+          "k": "t",
+          "v": "; Galois "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_K((p)) = \\chi_4(p)"
+        },
+        {
+          "k": "t",
+          "v": " exact on "
+        },
+        {
+          "k": "m",
+          "v": "609 + 619"
+        },
+        {
+          "k": "t",
+          "v": " primes; Hall chain parity row "
+        },
+        {
+          "k": "m",
+          "v": "1 = \\mu"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\det R_n = M(n)"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "62"
+        },
+        {
+          "k": "t",
+          "v": " sizes with SNF "
+        },
+        {
+          "k": "m",
+          "v": "(1,\\dots,1,|M(n)|)"
+        },
+        {
+          "k": "t",
+          "v": " and the mod-2 shadow to "
+        },
+        {
+          "k": "m",
+          "v": "2\\times10^6"
+        },
+        {
+          "k": "t",
+          "v": ", the Krein Gram ward entrywise on both cuts, the pencil identity, the Epstein/scramble discriminators, the 155-word census); "
+        },
+        {
+          "k": "c",
+          "v": "v862_defect_polar_weld.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "8/8 + 22/22"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "defect-one"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "monomial-closure-theorem"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "weld-without-contractor"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "krein_defect_polar_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "mu4_clifford_weld_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v863_redheffer_colligation.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "7/7"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "colligation-contracts-not-identifies"
+        },
+        {
+          "k": "t",
+          "v": "; probe "
+        },
+        {
+          "k": "c",
+          "v": "redheffer_colligation_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ": unitarity "
+        },
+        {
+          "k": "m",
+          "v": "10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": ", automatic contraction, the exact "
+        },
+        {
+          "k": "m",
+          "v": "8/35"
+        },
+        {
+          "k": "t",
+          "v": " scalar limit, the band-transfer census); "
+        },
+        {
+          "k": "c",
+          "v": "v864_softport_kappa_law.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "5/5 + 6/6"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "softport-found"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "cauchy-rank-small"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "kappa-law-partial"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "softport_cauchy_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "pole_port_kappa_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v865_weyl_port_readout.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "9 + 5/5"
+        },
+        {
+          "k": "t",
+          "v": " with the TWO frozen-honest FAILs "
+        },
+        {
+          "k": "c",
+          "v": "S1.SPR"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "S4.RSP"
+        },
+        {
+          "k": "t",
+          "v": " kept and pattern-gated, NOT refit, "
+        },
+        {
+          "k": "t",
+          "v": "weyl-port-blind"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "readout-repaired"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "divisor_weyl_port_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "weyl_readout_repair_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v866_source_contractor_formula.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "10 + 8/8"
+        },
+        {
+          "k": "t",
+          "v": " with the ONE frozen-honest FAIL "
+        },
+        {
+          "k": "c",
+          "v": "S2.2"
+        },
+        {
+          "k": "t",
+          "v": " at exit code "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " per the frozen kill design, "
+        },
+        {
+          "k": "t",
+          "v": "sylvester12-angles-fail"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "norm-reformulation"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "displacement_sylvester12_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "source_contractor_norm_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v867_radau_conditioning.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "7 + 8"
+        },
+        {
+          "k": "t",
+          "v": " with the TWO frozen-honest FAILs "
+        },
+        {
+          "k": "c",
+          "v": "S2.G2"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "S3.G"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "radau-depth-grows"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "conditioning-intrinsic"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "j-infinity-named"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "softport_radau17_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "preconditioned_port_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v868_divisor210_audits.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "36/36 + 12/12 + 15/15"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "divisor210-gauge-family(2)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "moving12-dimension-only"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "chirality-degenerate"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "divisor210_canonicity_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "moving12_soft17_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "chiral_phase_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "). Suite "
+        },
+        {
+          "k": "m",
+          "v": "853\\to861"
+        },
+        {
+          "k": "t",
+          "v": "; all eight standalone green with pattern gates encoding the frozen censuses (check counts, FAIL ids, verdicts, exit codes) and the byte-exact provenance ward vs the embedded sources; all sixteen probes re-run identically at promotion (2026-08-08); promoted VERBATIM with no downscoping (the round-31 embedding convention)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Lean (1 module promoted)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/KreinDefect.lean"
+        },
+        {
+          "k": "t",
+          "v": " — the Krein-defect theorem frame ("
+        },
+        {
+          "k": "m",
+          "v": "14"
+        },
+        {
+          "k": "t",
+          "v": " declarations, "
+        },
+        {
+          "k": "m",
+          "v": "10"
+        },
+        {
+          "k": "t",
+          "v": " theorems; lake build green, "
+        },
+        {
+          "k": "m",
+          "v": "3416"
+        },
+        {
+          "k": "t",
+          "v": " jobs, no "
+        },
+        {
+          "k": "c",
+          "v": "sorry"
+        },
+        {
+          "k": "t",
+          "v": ", no "
+        },
+        {
+          "k": "c",
+          "v": "native_decide"
+        },
+        {
+          "k": "t",
+          "v": ", axioms propext/Classical.choice/Quot.sound only, verified by "
+        },
+        {
+          "k": "c",
+          "v": "#print axioms"
+        },
+        {
+          "k": "t",
+          "v": " on all ten): the defect representation ("
+        },
+        {
+          "k": "c",
+          "v": "defect"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "formAt_defect"
+        },
+        {
+          "k": "t",
+          "v": "), the main theorem "
+        },
+        {
+          "k": "c",
+          "v": "defect_psd_of_contraction"
+        },
+        {
+          "k": "t",
+          "v": " (via the exact factorization "
+        },
+        {
+          "k": "m",
+          "v": "B_+^{\\mathsf H}(1 - C^{\\mathsf H}C)B_+"
+        },
+        {
+          "k": "t",
+          "v": "), the full-rank Douglas converse (the singular case a typed classical citation), the named-hypothesis structure "
+        },
+        {
+          "k": "c",
+          "v": "SourceContractor"
+        },
+        {
+          "k": "t",
+          "v": " (contractor "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " factorization "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " INDEPENDENT certificate; the circularity warning typed), and the cofinal composition "
+        },
+        {
+          "k": "c",
+          "v": "krein_cofinal"
+        },
+        {
+          "k": "t",
+          "v": " / "
+        },
+        {
+          "k": "c",
+          "v": "krein_cofinal_weil"
+        },
+        {
+          "k": "t",
+          "v": ". Imported in "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier.lean"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "lean_manifest.sha256"
+        },
+        {
+          "k": "t",
+          "v": " regenerated with this round, "
+        },
+        {
+          "k": "m",
+          "v": "87\\to88"
+        },
+        {
+          "k": "t",
+          "v": " files. Mirrored in "
+        },
+        {
+          "k": "c",
+          "v": "v861"
+        },
+        {
+          "k": "t",
+          "v": " part C (numeric witnesses, v856/v849 precedent)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The operator form (the round's deliverable)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The wall now has exact operator coordinates: the Krein normal form with the Douglas pencil identity; the rank-one defect; the closed-form target-free contractor "
+        },
+        {
+          "k": "m",
+          "v": "C = W_-FG_+^{-1}F^{\\mathsf H}W_+"
+        },
+        {
+          "k": "t",
+          "v": " with certified defect transfer; the scalar pole-port shadow with the closed-form leading term. And three PROOFS about the tool space: no absolute-value bound can ever certify (the Perron closure "
+        },
+        {
+          "k": "m",
+          "v": "\\rho(|C|) > 1"
+        },
+        {
+          "k": "t",
+          "v": " everywhere); no source word of any length reaches the contractor (the monomial closure theorem); no fixed-depth quadrature family certifies uniformly (the intrinsic conditioning law). The sharpest demand is registered: ONE phase-aware bound on the closed-form kernel ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KREIN.CONTRACTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " [O]) — it would discharge "
+        },
+        {
+          "k": "c",
+          "v": "SourceContractor"
+        },
+        {
+          "k": "t",
+          "v": " and, through "
+        },
+        {
+          "k": "c",
+          "v": "krein_cofinal_weil"
+        },
+        {
+          "k": "t",
+          "v": ", hypothesis "
+        },
+        {
+          "k": "m",
+          "v": "(H_{\\rm cof})"
+        },
+        {
+          "k": "t",
+          "v": ". Stop list extended (source-word searches at all lengths; absolute-value kernel bounds; fixed-depth quadrature without conditioning control; chirality deciders via quadratic readouts). NO RH claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 10 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KREIN.NORMALFORM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "FORM.PRIME.KREIN.DEFECT.01"
+        },
+        {
+          "k": "t",
+          "v": " [F], "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KREIN.DEFECT_ONE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.REDHEFFER.COLLIGATION.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.SOFTPORT.FESHBACH.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.WEYL.PORT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.SOURCECONTRACTOR.NORM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KREIN.CONTRACTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " [O], "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.SOFTPORT.RADAU.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.DIVISOR210.CANONICITY.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-33 operator-form note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " (the Krein coordinates; the three tool-space proofs; the extended stop list; the sharpened demand) and the dated round-33 note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the floor demand in Krein coordinates: the phases of the pair kernel, not its magnitudes); "
+        },
+        {
+          "k": "m",
+          "v": "943\\to953"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The wall's operator form: the Krein coordinates, the SourceContractor formula, the Perron closure, and the quadrature reach” ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v861..v867}"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the part-intro chain extended; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ": the divisor-lattice-of-210 entry with its canonicity guard and the Redheffer/Mertens Smith-echo entry in the Gaussian code keybox ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v861/v862/v863/v868}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": eight new audit cards; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "FORM.PRIME.KREIN.DEFECT.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KREIN.CONTRACTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " registration blocks, the round-33 canonicity record, and the dated round-33 notes on the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RELATION.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.PAIRCORR.01"
+        },
+        {
+          "k": "t",
+          "v": " blocks."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round thirty-three”; counters "
+        },
+        {
+          "k": "m",
+          "v": "853\\to861"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v868"
+        },
+        {
+          "k": "t",
+          "v": "; DAG nodes extended with "
+        },
+        {
+          "k": "c",
+          "v": "v861"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v868"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated (ScriptIndex, changelog.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "861"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v868"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The Krein/port/formula modules are typed route decisions and reformulations under frozen preregistered protocols (the five frozen-honest FAILs are preregistered adjudications on record, bars NOT refit; the Perron closure and the monomial theorem are proofs about the TOOL SPACE, not bounds on the target; the formula is a REFORMULATION — the Loewner note typed); the canonicity module audits a deployed discovery (selection census, burial, proven-gauge wards — no new physical claim); the Lean module consumes and formalizes, never evaluates, positivity — "
+        },
+        {
+          "k": "c",
+          "v": "SourceContractor"
+        },
+        {
+          "k": "t",
+          "v": " stays a hypothesis; NO marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-08",
     "dateLabel": "2026-08-08 · LXXV",
     "heading": [
       {

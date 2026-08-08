@@ -62,32 +62,32 @@ export interface DisciplineStats {
 export const DISCIPLINE: DisciplineStats =
 {
   "ledger": {
-    "rows": 943,
-    "active": 938,
+    "rows": 953,
+    "active": 948,
     "retired": 5,
     "dist": {
       "E": 293,
       "C": 270,
-      "O": 314,
+      "O": 319,
       "X": 39,
       "AXIOM": 2,
-      "OTHER": 25
+      "OTHER": 30
     },
-    "killRows": 345
+    "killRows": 352
   },
   "suite": {
-    "modules": 853,
-    "checkSites": 10271,
-    "mustfailOccurrences": 4000,
-    "mustfailModules": 407,
+    "modules": 861,
+    "checkSites": 10474,
+    "mustfailOccurrences": 4208,
+    "mustfailModules": 415,
     "eMarks": 4194,
     "cMarks": 1487,
-    "seededModules": 165,
-    "sympyModules": 444
+    "seededModules": 167,
+    "sympyModules": 447
   },
   "contracts": {
-    "ledgerRows": 120,
-    "withKillCriteria": 70,
+    "ledgerRows": 128,
+    "withKillCriteria": 75,
     "texMentions": 23
   },
   "replay": {
@@ -111,20 +111,20 @@ export const DISCIPLINE: DisciplineStats =
   "anchors": {
     "recomputed": 5,
     "citations": {
-      "Jacobi": 37,
+      "Jacobi": 38,
       "Hecke": 37,
       "Construction A": 11,
       "Suzuki": 28,
-      "Weil": 96,
+      "Weil": 97,
       "Eisenstein": 31
     },
     "arxivModules": 57
   },
   "lean": {
-    "modules": 77
+    "modules": 79
   },
   "openGates": {
-    "count": 310
+    "count": 315
   }
 };
 
