@@ -41,7 +41,7 @@ import { StatusBadge } from "@/components/primefront/StatusBadge";
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
   description:
-    "A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v872 inside an 865-script suite. No claim of progress toward the Riemann Hypothesis.",
+    "A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v873 inside an 866-script suite. No claim of progress toward the Riemann Hypothesis.",
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "The Prime Front — TFPT research diary",
     description:
-      "Primes, the E8 census, and the load-bearing modules v535–v872: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
+      "Primes, the E8 census, and the load-bearing modules v535–v873: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
     url: `${SITE_URL}/prime-front`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified v535–v872: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
+      "Research diary of the prime / zeta line. Machine-verified v535–v873: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
   },
 };
 
@@ -101,8 +101,8 @@ export default function PrimeFrontPage() {
           </nav>
 
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-sky-300/90">
-            Research diary · 250 agent runs · 6638 sandbox checks · suite 817
-            scripts
+            Research diary · 250+ agent runs · 6638+ sandbox checks · suite
+            866 scripts
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
             The Prime Front
@@ -3403,7 +3403,7 @@ function BigPictureSection() {
                 href="/verification"
                 className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
               >
-                v535–v872 (this front)
+                v535–v873 (this front)
               </Link>{" "}
               are machine-verified and cited in the papers. Sandbox probes never
               move a status marker.
@@ -3436,7 +3436,7 @@ function BigPictureSection() {
               tone="amber"
             />
             <BigPictureStat
-              term="v535–v872"
+              term="v535–v873"
               desc="machine-verified modules of this front, inside the 865-script suite (all green)"
               tone="emerald"
             />

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`865` registered scripts · `957` ledger claims · `10` clusters.
+`866` registered scripts · `958` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (385 scripts)
+### `core` — Compiler core & the E₈ glue  (386 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -781,6 +781,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v869_cdcore_clarkphase, v870_christoffel_gauss_frame, v866_source_contractor_formula, v563, v869, v870 · cited: 3 e8 audit bootstrap, research contracts
 - **v872_damping_compensation** [E] `PRIME.CD.DAMPING.COMPENSATION.01` — die Schlagzeile der Runde: der Defekt spaltet EXAKT in zwei quellgebaute Terme, I − C*C = T₁ + T₂ (max rel 1.0e-12 auf ALLEN 42 Sprossen; T₁ = I − U*U die INDEFINITE Kreuzmaß-Jacob
   - deps: v870_christoffel_gauss_frame, v871_pole_uvarov_crossdefect, v864_softport_kappa_law, v866_source_contractor_formula, v831_prime_alias_second_moment, v563, v864, v869 · cited: 3 e8 audit bootstrap, research contracts
+- **v873_pruefer_cotlar_decision** [X] `PRIME.PRUEFER.COMPENSATION.01` — der eingefrorene Prüfer/Cotlar-Vertrag der Runde 34 (16 fixe Phasenzellen bei kπ/8 aus NUR-QUELLE-Prüfer-Phasen der beiden Arm-Jacobi-Ketten, entrywise Paarung, Gefahrenfamilien {0
+  - deps: v866_source_contractor_formula, v872_damping_compensation, v869_cdcore_clarkphase, v870_christoffel_gauss_frame, v563, v869, v870, v872 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1795,13 +1797,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×152, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
+**Most-depended-on claims** (the load-bearing roots): `v563`×153, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v861_krein_normalform_lean** — `PRIME.KREIN.NORMALFORM.01`
 - **v862_defect_polar_weld** — `PRIME.KREIN.DEFECT_ONE.01`
 - **v863_redheffer_colligation** — `PRIME.REDHEFFER.COLLIGATION.01`
 - **v864_softport_kappa_law** — `PRIME.SOFTPORT.FESHBACH.01`
@@ -1813,4 +1814,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v870_christoffel_gauss_frame** — `PRIME.CONTRACTOR.CHRISTOFFEL.01`
 - **v871_pole_uvarov_crossdefect** — `PRIME.JACOBI.POLE.UVAROV.01`
 - **v872_damping_compensation** — `PRIME.CD.DAMPING.COMPENSATION.01`
+- **v873_pruefer_cotlar_decision** — `PRIME.PRUEFER.COMPENSATION.01`
 

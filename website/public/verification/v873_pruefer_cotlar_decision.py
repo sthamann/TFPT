@@ -1,5 +1,92 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+r"""v873 -- PRIME.PRUEFER.COMPENSATION.01: THE COTLAR DECISION (the first fully preregistered uniformity test of the program, EXECUTED) -- the frozen Pruefer/Cotlar contract of round 34 is executed post-unfreeze and returns the composite verdict COTLAR-GROWING / route dead BY ITS OWN FROZEN RULES: RUN 1 (anatomy, anchors kz {9, 12, 13, 26, 40}) -- the predeclared danger geometry is REAL (the frozen cells DGR1 u DGR2 = {0, 15} u {7, 8} capture 0.98/0.61/0.94/0.85/0.81 of lam_min(T_1): source-only phase cells localize the negativity, kill 3 does NOT fire) but the LOCAL compensation fails (Sum_r eps_r = 6.88-10.08 vs the small-defect expectation) and the cross-block envelope does NOT decay (Spearman(env, d) = -0.17..0.00 vs the frozen bar <= -0.8; the envelope is BIMODAL with the second peak exactly at the predeclared pi-resonance cells d = 7-8); RUN 2 (the Cotlar decision, the 42-rung battery h <= 900 + the frozen deep holdouts kz 90/116/142/177/243 never used by the CD wave) -- the battery is FLAT (S_U 5.55-6.30, S_C 3.97-4.78) and the deep holdouts EXPLODE (kz 142: S_U 32.07 / S_C 58.78; kz 177: 14.29/30.76; kz 243: 13.94/44.85), both channels GROWING per the frozen rule (log-log slopes 0.209/0.408 >= the 0.20 power-law bar), with the measured carry-forward law typed: the growth tracks kz-DEPTH (alpha), NOT window size h (kz 90/116 at h = 1430/1433 stay INSIDE the battery band while kz 177 at SMALLER h = 1219 explodes) -- and the contrast bars PASS (Epstein max rel 3927 percent / eps ratio 224; scramble 314462 percent / 1.26e6: truth, Epstein and scramble do NOT share the block geometry, kill 4 does not fire); RUN 3 correctly NOT executed (the contract runs it only on BOUNDED).  THE KILL-CRITERIA TABLE (frozen in the spec, all five evaluated): kill 2 FIRES (the Cotlar sum grows as a power of h along battery + holdouts) and kill 5 FIRES (the compensation stays global: the RUN 1(b) local defect is large AND RUN 2 is unbounded); kills 1 (the relevant-cell count is structurally FIXED at 16), 3 (the danger family is findable WITHOUT the soft eigenvector) and 4 (the contrast bars pass) do NOT fire.  CONSEQUENCE (booked, no marker move): the blockwise Cotlar-Stein / phase-cell class on Pruefer phases is CLOSED (stop-listed); the surviving demand is a NON-STATIONARY phase bound on the explicit kernel with the pi-resonance as the known critical structure and the alpha-not-h growth law as the typed constraint; the danger-geometry positive and the truth/Epstein/scramble discrimination are the carry-forward assets.  ONE module from one probe (RUN 1 + RUN 2 re-executed verbatim at promotion, embedded BYTE-EXACT, ~20-25 min).  NO RH claim.  Python-only per GATE.WOLFRAM.02.
+
+PROVENANCE (the full preregistration chain, machine-warded where possible):
+(1) FROZEN + HASHED: the contract (16 fixed phase cells at k pi/8, entrywise
+pairing, danger families DGR1/DGR2, Cotlar decision bars, success/kill
+criteria, deep-holdout set) was frozen in the FROZEN_SPEC literal, SPEC
+SHA-256 4621b89958531d6d3baae9fe762dbd10d23dc22eed77a57aa1c6b179a7440811,
+with 8/8 synthetic freeze wards green and the decisive analysis locked
+behind the operational flag file pruefer_unfreeze.flag (absent at freeze).
+(2) COMMITTED PRE-EXECUTION: the probe file was committed byte-exact in the
+round-34 commit 526ca3eb, FILE SHA-256
+93208a1b2edebde31388a87192055c9bf3e5a3de29af9fb3e34ddc904825d9fd -- the
+hash is the proof of precedence; NO deployed-data mode had run.
+(3) UNFROZEN + EXECUTED: the parent created pruefer_unfreeze.flag AFTER the
+round-34 commit (audit line "unfrozen after round-34 commit 526ca3eb... at
+2026-08-08T16:16:59Z", committed with this round) and executed RUN 1 and
+RUN 2 with TWO documented MECHANICAL fixes, both typed in the probe's
+docstrings verbatim: (a) battery_rungs gained the h <= 900 filter that the
+FROZEN_SPEC battery definition itself mandates ("all frame_a_zones with
+h <= 900" -- the committed code omitted the spec's own text); (b)
+pruefer_phase gained a per-step joint positive renormalization of
+(p_prev, p_cur) against float overflow at near-breakdown chain tails (deep
+minus arms reach |p| ~ 1e250..inf); a joint positive rescaling leaves
+atan2(v, u) and the wrapped increments unchanged in exact arithmetic, and
+the fixed phases were validated at <= 6.6e-4 against a 60-digit mpmath
+reference.  The FROZEN_SPEC literal is byte-identical throughout (spec SHA
+re-verified at every stage); the EXECUTED file SHA-256 is
+15d35b26c652ef4144df713cafba7e049e2dcb9bb7a168462cd65735f5ffb4cc.
+(4) THIS PROMOTION: the executed probe source is embedded BYTE-EXACT below
+(byte-equality ward vs experiments/tfpt-discovery/ inside the gate) and
+RUN 1 + RUN 2 are re-executed verbatim in an isolated namespace; the
+pattern gate encodes the frozen census INCLUDING the honest FAILs (local
+dominance, envelope decay) -- nothing is refit.  RUN 3 is NOT executed
+(the contract gates it on BOUNDED; the decision is GROWING).  The probe
+imports v563_paper2_readouts, gauss_node_unitary_probe (gated in v870) and
+cdcore_probe (gated in v869) READ-ONLY -- not re-gated here.
+
+FIREWALL: source-only Pruefer phases (structural AST firewall inside the
+probe: the construction functions contain no eigen/SVD/pinv/soft-vector
+identifiers); no zeros, no prime-table oracles; the deep holdouts were
+never used by the CD wave.  OPERATIONAL LOCK: the committed unfreeze flag
+is required next to the probe source; if the probe file is absent
+(sandboxed replay), the harness recreates the source + the flag audit line
+in a temporary directory -- the historical lock semantics live in the git
+chain, not in the sandbox.  NO RH claim.
+"""
+
+import contextlib
+import hashlib
+import io
+import os
+import re
+import sys
+import tempfile
+import time
+import types
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+if _HERE not in sys.path:
+    sys.path.insert(0, _HERE)
+
+EXPECT_SPEC_SHA = ("4621b89958531d6d3baae9fe762dbd10d23dc22eed"
+                   "77a57aa1c6b179a7440811")
+EXPECT_FILE_SHA = ("15d35b26c652ef4144df713cafba7e049e2dcb9bb7"
+                   "a168462cd65735f5ffb4cc")
+PREREG_FILE_SHA = ("93208a1b2edebde31388a87192055c9bf3e5a3de29"
+                   "af9fb3e34ddc904825d9fd")
+PREREG_COMMIT = "526ca3eb"
+FLAG_LINE = ("unfrozen after round-34 commit "
+             "526ca3ebca8ba22e08b18def266e42ca8875fc68 "
+             "at 2026-08-08T16:16:59Z\n")
+
+# frozen census (the executed run, 2026-08-08; tolerances typed per check)
+ANCHORS = (9, 12, 13, 26, 40)
+FROZEN_CAPTURE = (0.98, 0.61, 0.94, 0.85, 0.81)
+FROZEN_EPS = (6.881, 7.866, 7.095, 10.08, 9.741)
+HOLDOUTS = (90, 116, 142, 177, 243)
+FROZEN_HOLDOUT_S = {142: (32.0678, 58.7773), 177: (14.2870, 30.7609),
+                    243: (13.9367, 44.8543)}
+FROZEN_SLOPES = (0.209, 0.408)
+FROZEN_EPSTEIN = (3927.0, 224.3)
+FROZEN_SCRAMBLE = (314462.0, 1258584.6)
+
+# ------------- frozen probe source pruefer_compensation_probe (embedded BYTE-EXACT, executed form, raw string)
+_SRC_0 = r'''
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 r"""pruefer_compensation_probe -- PRIME.PRUEFER.COMPENSATION.01
 (EXPLORATION ONLY, experiments/; round-34 PREREGISTRATION,
 2026-08-08).
@@ -769,3 +856,284 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
+'''
+
+CHECKS = []
+
+
+def check(name, ok, detail=""):
+    CHECKS.append(bool(ok))
+    print("  [%s] %s%s" % ("PASS" if ok else "FAIL", name,
+                           ("  -- " + detail) if detail else ""),
+          flush=True)
+    return bool(ok)
+
+
+def _probe_paths():
+    """Locate the committed probe + flag; if absent (sandboxed replay),
+    materialize the embedded source + the flag audit line in a temp dir."""
+    src = _SRC_0[1:] if _SRC_0[:1] == "\n" else _SRC_0
+    disc = os.path.abspath(os.path.join(
+        _HERE, os.pardir, "experiments", "tfpt-discovery"))
+    path = os.path.join(disc, "pruefer_compensation_probe.py")
+    if os.path.isfile(path):
+        with open(path, encoding="utf-8") as fh:
+            same = (fh.read() == src)
+        flag = os.path.join(disc, "pruefer_unfreeze.flag")
+        return src, path, same, (open(flag, encoding="utf-8").read()
+                                 if os.path.isfile(flag) else None)
+    tmp = tempfile.mkdtemp(prefix="v873_pruefer_")
+    path = os.path.join(tmp, "pruefer_compensation_probe.py")
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(src)
+    with open(os.path.join(tmp, "pruefer_unfreeze.flag"), "w",
+              encoding="utf-8") as fh:
+        fh.write(FLAG_LINE)
+    return src, path, None, FLAG_LINE
+
+
+def _exec_embedded(src, fname):
+    """Execute the embedded frozen probe source BYTE-EXACT in an isolated
+    namespace (top level only: imports + defs; the __main__ guard does not
+    fire).  Returns the module object."""
+    mod = types.ModuleType("pruefer_compensation_probe")
+    mod.__file__ = fname
+    sys.modules["pruefer_compensation_probe"] = mod
+    exec(compile(src, fname, "exec"), mod.__dict__)
+    return mod
+
+
+def _capture(fn):
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        rc = fn()
+    out = buf.getvalue()
+    sys.stdout.write(out)
+    sys.stdout.flush()
+    return out, (0 if rc is None else int(rc))
+
+
+_R1_RE = re.compile(
+    r"kz (\d+)\s+h (\d+)\s*: node ward ([\d.e+-]+), partition "
+    r"([\d.e+-]+) \| danger share ([\d.]+) \| lam_min\(T1\) "
+    r"([+-][\d.]+) vs danger-trunc ([+-][\d.]+) \(capture "
+    r"([\d.]+|nan)\) \| sum eps_r ([\d.e+-]+) \| env Spearman U/C "
+    r"([+-]?[\d.]+)/([+-]?[\d.]+)")
+_ENVU_RE = re.compile(r"env_U\(d\): \[([^\]]+)\]")
+_R2_RE = re.compile(
+    r"kz (\d+)\s+h (\d+)\s+\[(battery|HOLDOUT)\]: S_U ([\d.]+)\s+"
+    r"S_C ([\d.]+)")
+_DEC_RE = re.compile(
+    r"S_([UC]): battery max ([\d.]+), holdout max ([\d.]+), "
+    r"log-log slope ([+-]?[\d.]+) -> (\w+)")
+_CTR_RE = re.compile(
+    r"(Epstein|scramble)\s*: \(S_U, S_C, danger\) = \(([\d.]+), "
+    r"([\d.]+), ([\d.]+)\) vs truth \(([\d.]+), ([\d.]+), "
+    r"([\d.]+)\): max rel (\d+)%; eps ratio ([\d.]+); env "
+    r"Spearman U ([+-]?[\d.]+)")
+
+
+def _rel(x, ref):
+    return abs(x - ref) / abs(ref)
+
+
+def run():
+    t0 = time.time()
+    print("=" * 74)
+    print("v873 -- PRIME.PRUEFER.COMPENSATION.01: THE COTLAR DECISION")
+    print("(the first fully preregistered uniformity test of the program,")
+    print("EXECUTED: frozen contract -> round-34 commit -> unfreeze flag ->")
+    print("RUN 1 + RUN 2 verbatim; composite verdict COTLAR-GROWING / route")
+    print("dead by the contract's own frozen rules; the honest FAILs kept;")
+    print("NO RH claim)")
+    print("=" * 74, flush=True)
+
+    src, fname, same, flagtxt = _probe_paths()
+
+    print("\nP -- provenance (the preregistration chain)")
+    sha_file = hashlib.sha256(src.encode("utf-8")).hexdigest()
+    check("P1 embedded source byte-exact vs experiments/tfpt-discovery "
+          "(%s)" % ("verified" if same is True else
+                    "source file not present -- sandboxed replay"
+                    if same is None else "MISMATCH"),
+          same is not False)
+    check("P2 EXECUTED file SHA-256 == %s..." % EXPECT_FILE_SHA[:16],
+          sha_file == EXPECT_FILE_SHA, sha_file)
+    check("P3 unfreeze flag present with the round-34 audit line "
+          "(commit %s)" % PREREG_COMMIT,
+          flagtxt is not None and PREREG_COMMIT in flagtxt,
+          (flagtxt or "").strip())
+    print("    preregistration: committed pre-execution as FILE SHA-256 "
+          "%s... in commit %s (git chain)" % (PREREG_FILE_SHA[:16],
+                                              PREREG_COMMIT))
+
+    print("\n" + "-" * 74)
+    print("EMBEDDED FROZEN PROBE: pruefer_compensation_probe "
+          "(executed form; RUN 1 + RUN 2)")
+    print("-" * 74, flush=True)
+    mod = _exec_embedded(src, fname)
+    sha_spec = hashlib.sha256(
+        mod.FROZEN_SPEC.encode("utf-8")).hexdigest()
+
+    out1, rc1 = _capture(mod.run1)
+    out2, rc2 = _capture(mod.run2)
+
+    print("\nG -- the pattern gate (the frozen census incl. the FAILs)")
+    check("G0 FROZEN_SPEC SHA-256 unchanged through both mechanical "
+          "fixes == %s..." % EXPECT_SPEC_SHA[:16],
+          sha_spec == EXPECT_SPEC_SHA, sha_spec)
+
+    # ---- RUN 1
+    r1 = {int(m.group(1)): m for m in _R1_RE.finditer(out1)}
+    envs = [[float(x) for x in g.split()]
+            for g in _ENVU_RE.findall(out1)]
+    ok = (rc1 == 0 and tuple(sorted(r1)) == tuple(sorted(ANCHORS))
+          and len(envs) == len(ANCHORS))
+    if ok:
+        ok &= all(float(r1[k].group(4)) == 0.0 for k in ANCHORS)
+        ok &= all(float(r1[k].group(3)) <= 1e-13 for k in ANCHORS)
+    check("G1 RUN 1 executed post-unfreeze: exit 0, all 5 anchors, "
+          "partition ward EXACT 0.0, node ward <= 1e-13", ok)
+    if not ok:
+        return _fail(t0)
+    caps = [float(r1[k].group(8)) for k in ANCHORS]
+    check("G2 [DANGER GEOMETRY -- the positive] the predeclared cells "
+          "{0,15}u{7,8} capture %s of lam_min(T1) (frozen 0.98/0.61/"
+          "0.94/0.85/0.81, tol 0.03; all >= the 0.5 bar -- kill 3 "
+          "does NOT fire)" % "/".join("%.2f" % c for c in caps),
+          all(abs(c - f) <= 0.03 for c, f in zip(caps, FROZEN_CAPTURE))
+          and all(c >= 0.5 for c in caps))
+    eps = [float(r1[k].group(9)) for k in ANCHORS]
+    check("G3 [LOCAL DOMINANCE -- frozen-honest FAIL] Sum_r eps_r = %s "
+          "(frozen 6.88..10.08, rel tol 0.10): the cell-local "
+          "compensation defect is LARGE, not small"
+          % "/".join("%.2f" % e for e in eps),
+          all(_rel(e, f) <= 0.10 for e, f in zip(eps, FROZEN_EPS))
+          and all(e >= 1.0 for e in eps))
+    sp = [float(r1[k].group(10)) for k in ANCHORS]
+    bimod = all(min(e[7], e[8]) > max(e[2:7]) for e in envs)
+    check("G4 [ENVELOPE DECAY -- frozen-honest FAIL] Spearman(env_U, d) "
+          "= %s, ALL fail the frozen <= -0.8 bar; the envelope is "
+          "BIMODAL with the second peak at the predeclared "
+          "pi-resonance cells d = 7-8 (env_U(7), env_U(8) > "
+          "max env_U(2..6) on every anchor)"
+          % "/".join("%.2f" % s for s in sp),
+          all(s >= -0.5 for s in sp) and bimod)
+
+    # ---- RUN 2
+    rows = [(int(m.group(1)), int(m.group(2)), m.group(3),
+             float(m.group(4)), float(m.group(5)))
+            for m in _R2_RE.finditer(out2)]
+    bat = [r for r in rows if r[2] == "battery"]
+    hol = {r[0]: r for r in rows if r[2] == "HOLDOUT"}
+    check("G5 RUN 2 executed post-unfreeze: exit 0, the 42-rung battery "
+          "(frame_a_zones, h <= 900) + the 5 frozen deep holdouts all "
+          "reached (%d + %d)" % (len(bat), len(hol)),
+          rc2 == 0 and len(bat) == 42
+          and tuple(sorted(hol)) == tuple(sorted(HOLDOUTS)))
+    if not (len(bat) == 42 and len(hol) == 5):
+        return _fail(t0)
+    check("G6 [BATTERY FLAT] all 42 battery rungs: S_U in [5.3, 6.5] "
+          "(measured %.2f..%.2f), S_C in [3.8, 4.9] (measured "
+          "%.2f..%.2f)" % (min(r[3] for r in bat),
+                           max(r[3] for r in bat),
+                           min(r[4] for r in bat),
+                           max(r[4] for r in bat)),
+          all(5.3 <= r[3] <= 6.5 and 3.8 <= r[4] <= 4.9 for r in bat))
+    ok = True
+    for kz, (fsu, fsc) in FROZEN_HOLDOUT_S.items():
+        su, sc = hol[kz][3], hol[kz][4]
+        ok &= _rel(su, fsu) <= 0.10 and _rel(sc, fsc) <= 0.10
+    check("G7 [DEEP HOLDOUTS EXPLODE] kz 142: S_U %.2f / S_C %.2f; "
+          "kz 177: %.2f/%.2f; kz 243: %.2f/%.2f (frozen 32.07/58.78, "
+          "14.29/30.76, 13.94/44.85; rel tol 0.10)"
+          % (hol[142][3], hol[142][4], hol[177][3], hol[177][4],
+             hol[243][3], hol[243][4]),
+          ok and hol[142][3] >= 20 and hol[142][4] >= 40
+          and hol[177][3] >= 10 and hol[243][3] >= 10)
+    inband = max(hol[90][3], hol[116][3])
+    check("G8 [ALPHA-NOT-h -- the carry-forward law] the growth tracks "
+          "kz-DEPTH, not window size: kz 90/116 at h = 1430/1433 stay "
+          "INSIDE the battery band (S_U %.2f/%.2f <= 6.5) while kz 177 "
+          "at SMALLER h = 1219 explodes (S_U %.2f >= 2x)"
+          % (hol[90][3], hol[116][3], hol[177][3]),
+          inband <= 6.5 and hol[90][1] == 1430 and hol[116][1] == 1433
+          and hol[177][1] == 1219 and hol[177][3] >= 2.0 * inband)
+    dec = {m.group(1): m for m in _DEC_RE.finditer(out2)}
+    slopes = tuple(float(dec[c].group(4)) for c in ("U", "C")) \
+        if len(dec) == 2 else (float("nan"),) * 2
+    check("G9 [THE FROZEN DECISION] both channels GROWING by the "
+          "frozen rule: log-log slopes %.3f (S_U) / %.3f (S_C) >= "
+          "0.20 (frozen 0.209/0.408, tol 0.02)" % slopes,
+          len(dec) == 2
+          and all(dec[c].group(5) == "GROWING" for c in ("U", "C"))
+          and all(s >= 0.20 and abs(s - f) <= 0.02
+                  for s, f in zip(slopes, FROZEN_SLOPES)))
+    ctr = {m.group(1): m for m in _CTR_RE.finditer(out2)}
+    ok = len(ctr) == 2
+    if ok:
+        er, ee = float(ctr["Epstein"].group(8)), \
+            float(ctr["Epstein"].group(9))
+        sr, se = float(ctr["scramble"].group(8)), \
+            float(ctr["scramble"].group(9))
+        ok &= (er >= 25 and ee >= 5 and sr >= 25 and se >= 5
+               and _rel(er, FROZEN_EPSTEIN[0]) <= 0.10
+               and _rel(ee, FROZEN_EPSTEIN[1]) <= 0.10
+               and _rel(sr, FROZEN_SCRAMBLE[0]) <= 0.15
+               and _rel(se, FROZEN_SCRAMBLE[1]) <= 0.15)
+    check("G10 [CONTRAST PASS -- kill 4 does NOT fire] Epstein max rel "
+          "%s%% / eps ratio %s, scramble %s%% / %s (bars: rel >= 25%%, "
+          "eps >= 5x; frozen 3927/224.3 and 314462/1258584.6)"
+          % ((ctr["Epstein"].group(8), ctr["Epstein"].group(9),
+              ctr["scramble"].group(8), ctr["scramble"].group(9))
+             if len(ctr) == 2 else ("?",) * 4), ok)
+
+    # ---- the kill table + the composite verdict
+    k2 = all(s >= 0.20 for s in slopes)
+    k5 = all(e >= 1.0 for e in eps) and k2
+    k1 = False   # the cell count is structurally FIXED at 16 (spec)
+    k3 = not all(c >= 0.5 for c in caps)
+    k4 = not ok
+    check("G11 [THE KILL TABLE] kills 2 (Cotlar sum grows as a power "
+          "of h) and 5 (the compensation stays global) FIRE; kills 1 "
+          "(cell count fixed at 16), 3 (danger family found without "
+          "the soft eigenvector) and 4 (contrast) do NOT "
+          "(fired: %s)" % [i + 1 for i, k in
+                           enumerate((k1, k2, k3, k4, k5)) if k],
+          k2 and k5 and not k1 and not k3 and not k4)
+    check("G12 [RUN 3 WITHHELD] the contract gates RUN 3 on BOUNDED; "
+          "the decision is GROWING in both channels -- RUN 3 was "
+          "correctly NOT executed",
+          "RUN 3" not in out1 + out2
+          and all(dec[c].group(5) != "BOUNDED" for c in ("U", "C")))
+
+    ok_all = all(CHECKS)
+    print("\n" + "=" * 74)
+    print("v873: %d/%d gate checks passed | runtime %.1f s"
+          % (sum(CHECKS), len(CHECKS), time.time() - t0))
+    print("The first fully preregistered uniformity test of the program")
+    print("returns its own frozen verdict: the danger geometry is real and")
+    print("source-only (the positive), but the Cotlar sums GROW as a power")
+    print("law along the frozen deep holdouts (slopes 0.209/0.408 >= 0.20)")
+    print("and the growth tracks kz-DEPTH, not window size -- the blockwise")
+    print("Cotlar-Stein route on Pruefer phase cells is DEAD by the")
+    print("contract's own rules (kills 2 + 5).  What survives: a")
+    print("NON-STATIONARY phase bound on the explicit kernel, with the")
+    print("pi-resonance as the known critical structure and the alpha-not-h")
+    print("law as the typed constraint.  NO RH claim.")
+    print("[%s] v873 VERDICT GATE: COTLAR-GROWING (route dead per the "
+          "frozen preregistered rules)" % ("PASS" if ok_all else "FAIL"))
+    return 0 if ok_all else 1
+
+
+def _fail(t0):
+    print("\n" + "=" * 74)
+    print("v873: %d/%d gate checks passed | runtime %.1f s"
+          % (sum(CHECKS), len(CHECKS), time.time() - t0))
+    print("[FAIL] v873 VERDICT GATE: COTLAR-GROWING (route dead per the "
+          "frozen preregistered rules)")
+    return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(run())

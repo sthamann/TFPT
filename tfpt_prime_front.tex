@@ -15185,8 +15185,10 @@ synthetic freeze wards green at freeze time).  The frozen
 contract is committed byte-exact --- SPEC SHA-256
 \texttt{4621b899\ldots7440811}, FILE SHA-256
 \texttt{93208a1b\ldots4825d9fd}; any modification invalidates the
-preregistration.  No analysis mode was executed and no result is
-claimed.
+preregistration.  No analysis mode was executed and no result was
+claimed at commit time.  (The contract was executed in round 35
+--- Section~\ref{sec:pruefer-decision} --- and returned its own
+frozen verdict.)
 
 \emph{The honest statement.}  Round 34 names the contractor's
 kernel (with the naming's own limit typed: the collapse is
@@ -15201,6 +15203,94 @@ in substance --- now readable as: control one source Jacobi chain
 and its Christoffel weights against their free counterparts at
 the soft direction.  No marker moves.  \textbf{No statement about
 the Riemann Hypothesis is made.}
+
+\subsection{The Cotlar decision: the first fully preregistered
+uniformity test, executed}\label{sec:pruefer-decision}
+
+Round 35 (2026-08-08) executes the round-34 contract
+(\veri{v873\_pruefer\_cotlar\_decision.py}; suite $865\to866$).
+This is the first test of the program run under \emph{full}
+preregistration discipline, and the discipline is the point:
+every cell boundary, pairing rule, danger family, decision bar,
+success criterion, kill criterion and holdout was frozen and
+hashed \emph{before} the first deployed-data run, and the frozen
+file was committed pre-execution --- the hash chain, not the
+narrative, is the proof of precedence.
+
+\emph{The contract and its execution discipline.}  The provenance
+chain is machine-warded inside the module's gate: the contract
+frozen and hashed (SPEC SHA-256 \texttt{4621b899\ldots7440811};
+$8/8$ synthetic freeze wards; the decisive analysis locked behind
+an operational unfreeze flag, absent at freeze) $\to$ committed
+byte-exact \emph{pre-execution} in the round-34 commit
+\texttt{526ca3eb} (FILE SHA-256 \texttt{93208a1b\ldots4825d9fd})
+$\to$ the unfreeze flag created \emph{after} that commit, with
+its audit line committed $\to$ executed with exactly two
+documented \emph{mechanical} fixes, both typed verbatim in the
+probe: the $h \le 900$ battery filter that the frozen spec's own
+battery definition mandates (the committed code omitted the
+spec's own text), and a per-step joint positive renormalization
+against float overflow at near-breakdown chain tails --- invariant
+for $\operatorname{atan2}$ and the wrapped increments in exact
+arithmetic, validated at $\le 6.6\times10^{-4}$ against a
+$60$-digit \texttt{mpmath} reference.  The \texttt{FROZEN\_SPEC}
+literal is byte-identical throughout (SHA re-verified at every
+stage; executed FILE SHA-256 \texttt{15d35b26\ldots5ffb4cc}), and
+the promotion module re-executes RUN 1 and RUN 2 verbatim from
+the embedded byte-exact source, pattern-gating the frozen census
+\emph{including the failures} --- nothing is refit.
+
+\emph{The verdict (the contract's own rules).}  RUN 1, the
+anatomy: the predeclared danger geometry is \emph{real} --- the
+frozen cells $\{0,15\}\cup\{7,8\}$ capture
+$0.98/0.61/0.94/0.85/0.81$ of $\lambda_{\min}(T_1)$ on the five
+anchors, so source-only Pr\"ufer phase cells localize the
+negativity \emph{without} the computed soft eigenvector (the
+would-be kill 3 does not fire).  But the local compensation
+\emph{fails} ($\sum_r \varepsilon_r = 6.88$--$10.08$ against the
+small-defect expectation), and the cross-block envelope does
+\emph{not} decay: Spearman$(\mathrm{env}, d) = -0.17..0.00$
+against the frozen $\le -0.8$ bar, with the envelope
+\emph{bimodal} --- the second peak sits exactly at the
+predeclared $\pi$-resonance cells $d = 7$--$8$.  RUN 2, the
+Cotlar decision: the $42$-rung battery is \emph{flat} ($S_U$
+$5.55$--$6.30$, $S_C$ $3.97$--$4.78$) and the frozen deep
+holdouts \emph{explode} (kz 142: $S_U\,32.07$/$S_C\,58.78$; kz
+177: $14.29/30.76$; kz 243: $13.94/44.85$); the frozen rule
+declares both channels \textsc{growing} (log--log slopes
+$0.209/0.408 \ge 0.20$).  The contrast bars pass --- Epstein max
+rel $3927\%$ with local-defect ratio $224\times$, scramble
+$314462\%$ with $1.26\times10^{6}$: truth, Epstein and scramble
+do \emph{not} share the block geometry.  RUN 3 was correctly
+\emph{not} executed (the contract gates it on \textsc{bounded}).
+Of the five frozen kill criteria, kills 2 (the Cotlar sum grows
+as a power of $h$) and 5 (the compensation stays global) fire;
+kills 1, 3 and 4 do not.  Composite verdict:
+\textsc{cotlar-growing} --- the blockwise Cotlar--Stein route on
+Pr\"ufer phase cells is \emph{dead by its own preregistered
+rules}, and is stop-listed.
+
+\emph{The measured carry-forward law.}  The growth tracks
+kz-\emph{depth} ($\alpha$), \emph{not} window size $h$: the
+holdouts kz $90/116$ at $h = 1430/1433$ stay \emph{inside} the
+battery band, while kz 177 at the \emph{smaller} $h = 1219$
+explodes.  Any uniform certificate must therefore be
+$\alpha$-aware, not $h$-aware --- a typed constraint on every
+future candidate.
+
+\emph{What survives.}  The danger-geometry positive (source-only
+phase cells find the dangerous blocks) and the discrimination
+stand as carry-forward assets; the surviving demand of
+\texttt{PRIME.KREIN.CONTRACTOR.01} [O] is narrowed to a
+\emph{non-stationary} phase bound on the explicit kernel, with
+the $\pi$-resonance as the known critical structure such a bound
+must handle.  And the honest note that is this section's real
+content: preregistration, frozen bars and committed hashes ---
+the contract's verdict was not negotiable after the fact, and the
+program records the negative exactly as it would have recorded
+the positive.  This is the standard the program now holds itself
+to.  No marker moves.  \textbf{No statement about the Riemann
+Hypothesis is made.}
 
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
@@ -15349,7 +15439,17 @@ transformations and finite-rank compensations are closed with
 typed residues (\texttt{PRIME.CD.DAMPING.COMPENSATION.01}), and
 the Pr\"ufer/Cotlar route is committed as the frozen
 preregistration \texttt{PRIME.PRUEFER.COMPENSATION.01} ---
-committed byte-exact, not run)
+committed byte-exact, not run; and round 35
+(Section~\ref{sec:pruefer-decision}) executes that contract ---
+the program's first fully preregistered uniformity test returns
+\textsc{cotlar-growing} by its own frozen rules (the battery
+flat, the frozen deep holdouts exploding at slopes
+$0.209/0.408$; the growth tracking kz-depth, not window size),
+the blockwise Cotlar--Stein phase-cell class is closed and
+stop-listed, and the surviving demand is narrowed to a
+non-stationary phase bound on the explicit kernel with the
+$\pi$-resonance as the known critical structure
+(\texttt{PRIME.PRUEFER.COMPENSATION.01}, executed))
 ---
 \texttt{PRIME.DETECTOR.WINDOW.01} (registered in round 25: the
 comb-native window detector, validated out-of-sample) ---

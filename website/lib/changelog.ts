@@ -43,6 +43,852 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-08",
+    "dateLabel": "2026-08-08 · LXXVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round thirty-five — the Cotlar decision: the first fully preregistered uniformity test of the program, EXECUTED: ONE module ("
+      },
+      {
+        "k": "c",
+        "v": "v873"
+      },
+      {
+        "k": "t",
+        "v": ", the executed round-34 preregistration "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PRUEFER.COMPENSATION.01"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "865\\to866"
+      },
+      {
+        "k": "t",
+        "v": ") — the composite verdict "
+      },
+      {
+        "k": "t",
+        "v": "cotlar-growing"
+      },
+      {
+        "k": "t",
+        "v": " / route dead BY THE CONTRACT'S OWN FROZEN RULES, booked exactly as frozen: (1) THE PROVENANCE CHAIN (machine-warded in the module's gate) — contract frozen "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " hashed (SPEC SHA-256 "
+      },
+      {
+        "k": "c",
+        "v": "4621b899\\ldots7440811"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": " synthetic freeze wards; the decisive analysis locked behind the operational flag "
+      },
+      {
+        "k": "c",
+        "v": "pruefer_unfreeze.flag"
+      },
+      {
+        "k": "t",
+        "v": ", ABSENT at freeze) "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " committed byte-exact PRE-EXECUTION in the round-34 commit "
+      },
+      {
+        "k": "c",
+        "v": "526ca3eb"
+      },
+      {
+        "k": "t",
+        "v": " (FILE SHA-256 "
+      },
+      {
+        "k": "c",
+        "v": "93208a1b\\ldots4825d9fd"
+      },
+      {
+        "k": "t",
+        "v": " — the proof of precedence) "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " the unfreeze flag created AFTER that commit with its audit line committed "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " executed with exactly TWO documented MECHANICAL fixes, both typed verbatim in the probe (the "
+      },
+      {
+        "k": "m",
+        "v": "h \\le 900"
+      },
+      {
+        "k": "t",
+        "v": " battery filter that the frozen spec's own battery definition mandates — the committed code omitted the spec's own text; the per-step joint positive renormalization against float overflow at near-breakdown chain tails — invariant for "
+      },
+      {
+        "k": "m",
+        "v": "\\operatorname{atan2}"
+      },
+      {
+        "k": "t",
+        "v": " and the wrapped increments in exact arithmetic, validated at "
+      },
+      {
+        "k": "m",
+        "v": "\\le 6.6\\times10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " against a "
+      },
+      {
+        "k": "m",
+        "v": "60"
+      },
+      {
+        "k": "t",
+        "v": "-digit "
+      },
+      {
+        "k": "c",
+        "v": "mpmath"
+      },
+      {
+        "k": "t",
+        "v": " reference), the "
+      },
+      {
+        "k": "c",
+        "v": "FROZEN_SPEC"
+      },
+      {
+        "k": "t",
+        "v": " literal byte-identical throughout (SHA re-verified at every stage; executed FILE SHA-256 "
+      },
+      {
+        "k": "c",
+        "v": "15d35b26\\ldots5ffb4cc"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " re-executed verbatim at promotion (embedded BYTE-EXACT, RUN 1 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " RUN 2, "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}22"
+      },
+      {
+        "k": "t",
+        "v": " min); (2) RUN 1 (the anatomy, anchors kz "
+      },
+      {
+        "k": "m",
+        "v": "9/12/13/26/40"
+      },
+      {
+        "k": "t",
+        "v": ") — the predeclared danger geometry is REAL: the frozen cells "
+      },
+      {
+        "k": "m",
+        "v": "\\{0,15\\}\\cup\\{7,8\\}"
+      },
+      {
+        "k": "t",
+        "v": " capture "
+      },
+      {
+        "k": "m",
+        "v": "0.98/0.61/0.94/0.85/0.81"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}(T_1)"
+      },
+      {
+        "k": "t",
+        "v": " — source-only Prüfer phase cells localize the negativity WITHOUT the computed soft eigenvector (kill 3 silent); but the LOCAL compensation fails ("
+      },
+      {
+        "k": "m",
+        "v": "\\sum_r\\varepsilon_r = 6.88"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "10.08"
+      },
+      {
+        "k": "t",
+        "v": ") and the cross-block envelope does NOT decay (Spearman "
+      },
+      {
+        "k": "m",
+        "v": "-0.17..0.00"
+      },
+      {
+        "k": "t",
+        "v": " vs the frozen "
+      },
+      {
+        "k": "m",
+        "v": "\\le -0.8"
+      },
+      {
+        "k": "t",
+        "v": " bar, BIMODAL with the second peak exactly at the predeclared "
+      },
+      {
+        "k": "m",
+        "v": "\\pi"
+      },
+      {
+        "k": "t",
+        "v": "-resonance cells "
+      },
+      {
+        "k": "m",
+        "v": "d = 7"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": "); (3) RUN 2 (the Cotlar decision, the 42-rung battery "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the frozen deep holdouts kz "
+      },
+      {
+        "k": "m",
+        "v": "90/116/142/177/243"
+      },
+      {
+        "k": "t",
+        "v": ") — the battery is FLAT ("
+      },
+      {
+        "k": "m",
+        "v": "S_U"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "5.55"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "6.30"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "S_C"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "3.97"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "4.78"
+      },
+      {
+        "k": "t",
+        "v": ") and the deep holdouts EXPLODE (kz 142: "
+      },
+      {
+        "k": "m",
+        "v": "S_U\\,32.07"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "m",
+        "v": "S_C\\,58.78"
+      },
+      {
+        "k": "t",
+        "v": "; kz 177: "
+      },
+      {
+        "k": "m",
+        "v": "14.29/30.76"
+      },
+      {
+        "k": "t",
+        "v": "; kz 243: "
+      },
+      {
+        "k": "m",
+        "v": "13.94/44.85"
+      },
+      {
+        "k": "t",
+        "v": "), both channels GROWING per the frozen rule (log–log slopes "
+      },
+      {
+        "k": "m",
+        "v": "0.209/0.408 \\ge 0.20"
+      },
+      {
+        "k": "t",
+        "v": "), the contrast bars PASS (Epstein max rel "
+      },
+      {
+        "k": "m",
+        "v": "3927\\%"
+      },
+      {
+        "k": "t",
+        "v": " / local-defect ratio "
+      },
+      {
+        "k": "m",
+        "v": "224\\times"
+      },
+      {
+        "k": "t",
+        "v": "; scramble "
+      },
+      {
+        "k": "m",
+        "v": "314462\\%"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "m",
+        "v": "1.26\\times10^6"
+      },
+      {
+        "k": "t",
+        "v": " — kill 4 silent), and the measured carry-forward law is typed: THE GROWTH TRACKS kz-DEPTH ("
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": "), NOT WINDOW SIZE "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " (kz "
+      },
+      {
+        "k": "m",
+        "v": "90/116"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "h = 1430/1433"
+      },
+      {
+        "k": "t",
+        "v": " stay INSIDE the battery band while kz 177 at SMALLER "
+      },
+      {
+        "k": "m",
+        "v": "h = 1219"
+      },
+      {
+        "k": "t",
+        "v": " explodes) — any uniform certificate must be "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": "-aware; RUN 3 correctly NOT executed (gated on BOUNDED); (4) THE KILL TABLE — kills 2 (power-law Cotlar growth) and 5 (the compensation stays global) FIRE, kills 1/3/4 do NOT; the blockwise Cotlar–Stein / phase-cell class on Prüfer phases is CLOSED and stop-listed; the surviving demand narrowed: a NON-STATIONARY phase bound on the explicit kernel with the "
+      },
+      {
+        "k": "m",
+        "v": "\\pi"
+      },
+      {
+        "k": "t",
+        "v": "-resonance as the known critical structure; the honest FAILs pattern-gated, nothing refit — preregistration "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " frozen bars "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " committed hashes is the standard the program now holds itself to; NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module (1)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v873_pruefer_cotlar_decision.py"
+        },
+        {
+          "k": "t",
+          "v": " (the executed preregistration: the probe "
+        },
+        {
+          "k": "c",
+          "v": "pruefer_compensation_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " embedded BYTE-EXACT in its EXECUTED form and re-run verbatim in an isolated namespace — RUN 1 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " RUN 2, "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}22"
+        },
+        {
+          "k": "t",
+          "v": " min; the pattern gate encodes the frozen census INCLUDING the honest FAILs: the provenance wards P1–P3 (byte-equality vs the experiments source, the executed file SHA, the committed unfreeze-flag audit line), the spec-SHA ward G0, the danger-geometry capture bands, the local-dominance and envelope-decay FAILs, the battery/holdout Cotlar censuses, the frozen GROWING decision with slope bands, the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-not-"
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " law, the contrast bars, the kill table, and the RUN-3-withheld ward). Suite "
+        },
+        {
+          "k": "m",
+          "v": "865\\to866"
+        },
+        {
+          "k": "t",
+          "v": "; standalone green; the two mechanical fixes documented verbatim in the probe's own docstrings with the spec literal SHA unchanged."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The verdict (the round's deliverable)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The program's first fully preregistered uniformity test returns its own frozen verdict, and the negative is booked with the same machinery as a positive would have been: the blockwise Cotlar–Stein route on source-only Prüfer phase cells is DEAD — the Cotlar sums are "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-stable on the battery but explode on the frozen deep holdouts as a power law in depth. What survives, typed: the danger-geometry positive (source-only cells find the dangerous blocks without the soft eigenvector), the truth/Epstein/scramble discrimination, the "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": "-resonance as the named critical structure, and the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-not-"
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " growth law as a constraint on every future candidate. NO RH claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 1 new row ("
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PRUEFER.COMPENSATION.01"
+        },
+        {
+          "k": "t",
+          "v": ", the executed contract with the full provenance chain and the frozen census) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-35 closing note on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KREIN.CONTRACTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the blockwise Cotlar/phase-cell class CLOSED by the preregistered test's own rules; the STOP-LIST entry: blockwise Cotlar–Stein on Prüfer phase cells; the demand narrowed to a non-stationary phase bound with the "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": "-resonance critical structure and the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-not-"
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " constraint; the danger-geometry positive and the discrimination recorded as carry-forward assets); "
+        },
+        {
+          "k": "m",
+          "v": "957\\to958"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round section “The Cotlar decision: the first fully preregistered uniformity test, executed” ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v873}"
+        },
+        {
+          "k": "t",
+          "v": "; the contract, the execution discipline, the verdict, what survives, and the honest note that preregistration "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " frozen bars "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " committed hashes is the program's standard) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the round-34 section's “not run” prose given its forward pointer "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the open-fronts chain extended with round 35; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": the audit card; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the round-35 dated notes on the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KREIN.CONTRACTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " block and the contractor registration block (the execution record with the executed file SHA verbatim)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed: the round entry “reflux round thirty-five”; counters "
+        },
+        {
+          "k": "m",
+          "v": "865\\to866"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v873"
+        },
+        {
+          "k": "t",
+          "v": "; DAG extended with "
+        },
+        {
+          "k": "c",
+          "v": "v873"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces regenerated (ScriptIndex, changelog.ts, maps); README and Zenodo updated to "
+        },
+        {
+          "k": "m",
+          "v": "866"
+        },
+        {
+          "k": "t",
+          "v": " modules / "
+        },
+        {
+          "k": "c",
+          "v": "v873"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Scope."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " One module, one executed contract: the verdict is a route decision under the strictest protocol the program has used — every bar, kill and holdout frozen and hashed BEFORE execution, the frozen file committed pre-execution, the two mechanical fixes documented verbatim with the spec literal SHA unchanged, the honest FAILs pattern-gated and NOT refit, RUN 3 correctly withheld by the contract's own gating; the unfreeze flag with its audit trail is committed with this round; NO marker moves; NO RH claim anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-08",
     "dateLabel": "2026-08-08 · LXXVII",
     "heading": [
       {

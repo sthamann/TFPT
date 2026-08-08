@@ -260,6 +260,7 @@ const NODES: DagNode[] = [
       "v870_christoffel_gauss_frame.py",
       "v871_pole_uvarov_crossdefect.py",
       "v872_damping_compensation.py",
+      "v873_pruefer_cotlar_decision.py",
       "v536_eichler_trace_layer.py",
       "v537_halfintegral_bridge.py",
       "v538_relative_trace_identity.py",
