@@ -43,6 +43,1696 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-08",
+    "dateLabel": "2026-08-08 · LXXIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round thirty-six — the complete-comb reversal: the deep-alpha negatives were ARTIFACTS, the preregistered Cotlar route REOPENS under its own frozen bars, the Prime Carleson chain is machine-exact, three exact compiler theorems land with kernel-checked mirrors, and the ledger gets its first QA fix plus a CI guard: FIVE modules ("
+      },
+      {
+        "k": "c",
+        "v": "v874"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v878"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "866\\to871"
+      },
+      {
+        "k": "t",
+        "v": ") — (1) THE ARTIFACT ("
+      },
+      {
+        "k": "c",
+        "v": "v877"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "deep-alpha-artifact"
+      },
+      {
+        "k": "t",
+        "v": "): the negative Krein floors at kz "
+      },
+      {
+        "k": "m",
+        "v": "142/177/243"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_1 = -331/-135/-215"
+      },
+      {
+        "k": "t",
+        "v": ", two independent probes) were COMB-TRUNCATION artifacts — "
+      },
+      {
+        "k": "c",
+        "v": "core.build_window"
+      },
+      {
+        "k": "t",
+        "v": " silently caps its atom table at "
+      },
+      {
+        "k": "m",
+        "v": "\\texttt{ATOM\\_MAX} = 4\\times10^5"
+      },
+      {
+        "k": "t",
+        "v": " while those windows demand support to "
+      },
+      {
+        "k": "m",
+        "v": "4.4\\times10^5/8.0\\times10^5/1.8\\times10^6"
+      },
+      {
+        "k": "t",
+        "v": "; with the COMPLETE canonical comb the certified corner enclosures are strictly positive ("
+      },
+      {
+        "k": "m",
+        "v": "+1.06\\times10^{-5}/+1.52\\times10^{-5}/+1.20\\times10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": ") and the Cholesky-certified full and Krein floors positive on all three rungs (extended builder = the IDENTITY on the controls, bit-equal atoms); NO negative canonical window exists; the certified ladder's end at kz 121 was the atom-table DATA boundary, not a structural "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": "-wall; "
+      },
+      {
+        "k": "m",
+        "v": "(H_{\\rm cof})"
+      },
+      {
+        "k": "t",
+        "v": " unaffected; the silent truncation typed an infrastructure BUG with the registered follow-up (the builder must fail loudly beyond its table); (2) THE REVERSAL ("
+      },
+      {
+        "k": "c",
+        "v": "v877"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "cotlar-bounded-v2"
+      },
+      {
+        "k": "t",
+        "v": ", the round's headline): v2 re-executes the round-35 contract with cells, pairing, danger geometry and decision bars frozen IDENTICALLY (v1 spec SHA "
+      },
+      {
+        "k": "c",
+        "v": "4621b899\\ldots"
+      },
+      {
+        "k": "t",
+        "v": " re-verified at run time; v2 spec SHA "
+      },
+      {
+        "k": "c",
+        "v": "5fd6bf61\\ldots"
+      },
+      {
+        "k": "t",
+        "v": "; the single substantive change — complete combs at the deep holdouts — warded bit-identical elsewhere): the deep sums COLLAPSE INTO THE BATTERY BAND (kz 142: "
+      },
+      {
+        "k": "m",
+        "v": "S_U\\,32.07 \\to 5.65"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "S_C\\,58.78 \\to 4.10"
+      },
+      {
+        "k": "t",
+        "v": "; kz 177: "
+      },
+      {
+        "k": "m",
+        "v": "14.29 \\to 5.97"
+      },
+      {
+        "k": "t",
+        "v": "; kz 243: "
+      },
+      {
+        "k": "m",
+        "v": "13.94 \\to 5.87"
+      },
+      {
+        "k": "t",
+        "v": "), both channels BOUNDED by the frozen v1 rule (ratios "
+      },
+      {
+        "k": "m",
+        "v": "0.95/0.94 \\le 1.2"
+      },
+      {
+        "k": "t",
+        "v": ", log–log slopes "
+      },
+      {
+        "k": "m",
+        "v": "0.006/0.007 \\le 0.10"
+      },
+      {
+        "k": "t",
+        "v": ") — the v1 kill was ENTIRELY the artifact; RUN 3 (gated on "
+      },
+      {
+        "k": "t",
+        "v": "bounded"
+      },
+      {
+        "k": "t",
+        "v": ", correctly withheld in round 35) unlocks and PASSES ("
+      },
+      {
+        "k": "m",
+        "v": "K_1/K_2"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "-stable on all five complete-comb holdouts: "
+      },
+      {
+        "k": "m",
+        "v": "8.36/8.14"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "40.35/40.47"
+      },
+      {
+        "k": "t",
+        "v": ", bar "
+      },
+      {
+        "k": "m",
+        "v": "1.2\\times"
+      },
+      {
+        "k": "t",
+        "v": "); Epstein/scramble still break the contrast bars; the truncation audit re-types every affected finding DATED (pruefer v1 "
+      },
+      {
+        "k": "t",
+        "v": "confounded"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " re-decided; residual_quadrature STRENGTHENED — its stalls detected the truncation correctly, a validated sign detector; the resonance "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": "-law addendum void; the polygon holdout rows "
+      },
+      {
+        "k": "t",
+        "v": "numeric-void"
+      },
+      {
+        "k": "t",
+        "v": "; radau/preconditioner/cdcore/uvarov/skeleton unaffected); THE DATED CORRECTION on "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.KREIN.CONTRACTOR.01"
+      },
+      {
+        "k": "t",
+        "v": ": the round-35 closing note is corrected — the v1 verdict was correct ON THE DATA AS MEASURED and "
+      },
+      {
+        "k": "c",
+        "v": "v873"
+      },
+      {
+        "k": "t",
+        "v": "'s booking stands as the record of the preregistered v1 execution, but the stop-list entry is AMENDED (the class is NOT closed), the "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": "-not-"
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " law is retired (the truncation's signature), and the route reopens as "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PRUEFER.COMPENSATION.02"
+      },
+      {
+        "k": "t",
+        "v": " with the remaining gap typed ("
+      },
+      {
+        "k": "m",
+        "v": "B_C \\sim 4"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": "; local defects "
+      },
+      {
+        "k": "m",
+        "v": "7"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "10"
+      },
+      {
+        "k": "t",
+        "v": "); (3) THE CARLESON WAVE ("
+      },
+      {
+        "k": "c",
+        "v": "v876"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "6/8 + 7/8 + 5/5"
+      },
+      {
+        "k": "t",
+        "v": " with the three frozen-honest FAILs S3.1/S3.2/S2.1 pattern-gated at exit 1, NOT refit): the Carleson ward "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\max}(M_-) = \\|C\\|^2 = 1 - \\tau"
+      },
+      {
+        "k": "t",
+        "v": " at rel "
+      },
+      {
+        "k": "m",
+        "v": "1.5\\times10^{-13}/1.3\\times10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": " makes arrows (i)–(iii) of the Prime Carleson chain MACHINE-EXACT (embedding constant "
+      },
+      {
+        "k": "m",
+        "v": "\\|C_h\\|^2 = 1 - \\tau_h"
+      },
+      {
+        "k": "t",
+        "v": "), the surviving analytic target registered as "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.CARLESON.PRIME.01"
+      },
+      {
+        "k": "t",
+        "v": " [O]; the polygon "
+      },
+      {
+        "k": "m",
+        "v": "S_0 \\ge |S_2|"
+      },
+      {
+        "k": "t",
+        "v": " BREAKS on all 47 rungs at "
+      },
+      {
+        "k": "m",
+        "v": "2\\theta \\approx 1.5\\pi"
+      },
+      {
+        "k": "t",
+        "v": " (typed: the WRONG compression of the Loewner order) and the holonomy is null with inverted contrast; the residual quadrature realizes "
+      },
+      {
+        "k": "m",
+        "v": "\\rho_h"
+      },
+      {
+        "k": "t",
+        "v": " at FULL degree on all 44 floor-positive rungs ("
+      },
+      {
+        "k": "m",
+        "v": "k^*/h"
+      },
+      {
+        "k": "t",
+        "v": " median "
+      },
+      {
+        "k": "m",
+        "v": "1.000"
+      },
+      {
+        "k": "t",
+        "v": ", slope "
+      },
+      {
+        "k": "m",
+        "v": "0.974"
+      },
+      {
+        "k": "t",
+        "v": "; mp escalation past the 53-bit wall; a single atom just beyond the pole port; discrimination "
+      },
+      {
+        "k": "m",
+        "v": "7"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "9\\times"
+      },
+      {
+        "k": "t",
+        "v": "); the resonance is THICK ("
+      },
+      {
+        "k": "m",
+        "v": "\\sim1/5"
+      },
+      {
+        "k": "t",
+        "v": " constant, excision gains nothing, soft direction disjoint — the wall is phase-distributed); (4) THE THEOREMS ("
+      },
+      {
+        "k": "c",
+        "v": "v874"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "14/14 + 11/11"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v875"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "15/15"
+      },
+      {
+        "k": "t",
+        "v": ", with the Lean mirrors "
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/FlavorFeedback.lean"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/GaussianShells.lean"
+      },
+      {
+        "k": "t",
+        "v": ", 18 theorems, lake build green 3418 jobs, axioms propext/Classical.choice/Quot.sound, Lean manifest "
+      },
+      {
+        "k": "m",
+        "v": "88\\to90"
+      },
+      {
+        "k": "t",
+        "v": " files): the FEEDBACK NORMAL FORM ("
+      },
+      {
+        "k": "m",
+        "v": "P^{-1}R_sP = [[s{+}4,0,3],[0,0,-2],[4,1,5]]"
+      },
+      {
+        "k": "t",
+        "v": " exact symbolic in "
+      },
+      {
+        "k": "m",
+        "v": "s"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\chi_{R_s} = (t - s - |\\mu_4|)\\,q_{\\rm wind} - 12t"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "12 = \\Nfam|\\mu_4| = \\dim g_{\\rm SM}"
+      },
+      {
+        "k": "t",
+        "v": "; the honest "
+      },
+      {
+        "k": "m",
+        "v": "\\Z_2^2"
+      },
+      {
+        "k": "t",
+        "v": "-not-"
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " typing kernel-checked); the WINDING DECODER ("
+      },
+      {
+        "k": "m",
+        "v": "q(\\{2,3,5,6\\}) = (-4,-4,2,8)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "D(y) = (y{+}4)^2(y{-}2)(y{-}8)"
+      },
+      {
+        "k": "t",
+        "v": " with budget coefficients "
+      },
+      {
+        "k": "m",
+        "v": "(2,48,32,256)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "|\\mu_4|\\,q(|Z_2|)/|R(E_8)| = -1/15 ="
+      },
+      {
+        "k": "t",
+        "v": " the Walsh message eigenvalue — typed AUDIT theorem, not a functor); and the GLOBAL SHELL THEOREM ("
+      },
+      {
+        "k": "m",
+        "v": "\\hat\\Theta_u/\\Theta_L = -1/15"
+      },
+      {
+        "k": "t",
+        "v": " for ALL odd shells from "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Sp}(4,2)"
+      },
+      {
+        "k": "t",
+        "v": " transitivity "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "(1{+}i)"
+      },
+      {
+        "k": "t",
+        "v": " doubling "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\Theta_L = 240\\,\\sigma_3"
+      },
+      {
+        "k": "t",
+        "v": " — the "
+      },
+      {
+        "k": "m",
+        "v": "n \\le 16500"
+      },
+      {
+        "k": "t",
+        "v": " census REPLACED as argument, retained as ward); (5) THE LEDGER QA FIX "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " THE GUARD ("
+      },
+      {
+        "k": "c",
+        "v": "v878"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "GATE.LEDGER.01"
+      },
+      {
+        "k": "t",
+        "v": "): the first PRIMARY-KEY violation found and fixed — "
+      },
+      {
+        "k": "c",
+        "v": "FORM.QGEO.03"
+      },
+      {
+        "k": "t",
+        "v": " was double-booked (2026-06-15 CohomologyGrading; 2026-06-18 SeamDeckClosure flat closure); the SeamDeckClosure row RENAMED "
+      },
+      {
+        "k": "c",
+        "v": "FORM.QGEO.04"
+      },
+      {
+        "k": "t",
+        "v": " with a dated QA note and every flat-closure reference updated INCLUDING the two 2026-06-18 mentions in this changelog (corrected in place, documented here); the guard enforces unique claim ids, acyclic supersession, unique active supersession targets modulo a frozen 2-pair allowlist, and the dependency cross-reference cycle census frozen remove-only; NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New modules (5)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v874_feedback_decoder_lean.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "14/14 + 11/11"
+        },
+        {
+          "k": "t",
+          "v": " probe gates "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "4/4"
+        },
+        {
+          "k": "t",
+          "v": " Lean mirror checks, "
+        },
+        {
+          "k": "t",
+          "v": "feedback-normalform-exact"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "t",
+          "v": "winding-decoder-exact"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "flavor_feedback_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "g31_winding_decoder_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " embedded BYTE-EXACT and re-run verbatim; the Lean mirror "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/FlavorFeedback.lean"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "11"
+        },
+        {
+          "k": "t",
+          "v": " theorems); "
+        },
+        {
+          "k": "c",
+          "v": "v875_shell_global_lean.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "15/15"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "4/4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "t",
+          "v": "shell-global-theorem"
+        },
+        {
+          "k": "t",
+          "v": "; probe "
+        },
+        {
+          "k": "c",
+          "v": "gaussian_shell_global_probe.py"
+        },
+        {
+          "k": "t",
+          "v": "; the Lean skeleton "
+        },
+        {
+          "k": "c",
+          "v": "TfptCarrier/GaussianShells.lean"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "c",
+          "v": "ShellSystem"
+        },
+        {
+          "k": "t",
+          "v": " hypothesis bundle "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": " consequence theorems); "
+        },
+        {
+          "k": "c",
+          "v": "v876_carleson_polygon_wave.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "6/8 + 7/8 + 5/5"
+        },
+        {
+          "k": "t",
+          "v": " with the three frozen-honest FAILs pattern-gated at exit 1; probes "
+        },
+        {
+          "k": "c",
+          "v": "phase_polygon_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "residual_quadrature_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "pi_resonance_anatomy_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}9"
+        },
+        {
+          "k": "t",
+          "v": " min); "
+        },
+        {
+          "k": "c",
+          "v": "v877_complete_comb_reversal.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "8/8 + 9/9"
+        },
+        {
+          "k": "t",
+          "v": "; probes "
+        },
+        {
+          "k": "c",
+          "v": "deep_alpha_sign_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "cotlar_v2_complete_comb_probe.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "{\\sim}17"
+        },
+        {
+          "k": "t",
+          "v": " min; the v1/v2 spec-SHA chain machine-warded); "
+        },
+        {
+          "k": "c",
+          "v": "v878_ledger_integrity.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "10/10"
+        },
+        {
+          "k": "t",
+          "v": ", the CI guard). Suite "
+        },
+        {
+          "k": "m",
+          "v": "866\\to871"
+        },
+        {
+          "k": "t",
+          "v": "; all five standalone green; run_all ALL CHECKS PASSED."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The reversal (the round's deliverable)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The discipline machinery worked end to end on its own freshest negative: the residual horizon flagged the deep stalls, "
+        },
+        {
+          "k": "c",
+          "v": "deep_alpha_sign"
+        },
+        {
+          "k": "t",
+          "v": " typed the silent comb truncation at certificate grade ("
+        },
+        {
+          "k": "m",
+          "v": "\\texttt{ATOM\\_MAX} = 4\\times10^5"
+        },
+        {
+          "k": "t",
+          "v": "; complete-comb floors strictly positive — NO negative canonical window), and the IDENTICALLY frozen round-35 bars re-ran on complete data and REVERSED the closure: "
+        },
+        {
+          "k": "t",
+          "v": "cotlar-bounded-v2"
+        },
+        {
+          "k": "t",
+          "v": ", run 3 unlocked and passed, the route reopened as "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PRUEFER.COMPENSATION.02"
+        },
+        {
+          "k": "t",
+          "v": ". The correction is booked DATED on every surface (ledger, papers, website) while "
+        },
+        {
+          "k": "c",
+          "v": "v873"
+        },
+        {
+          "k": "t",
+          "v": " and the round-35 records stand as what was measured; the remaining gap is typed, not hidden ("
+        },
+        {
+          "k": "m",
+          "v": "B_C \\sim 4"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "; local defects "
+        },
+        {
+          "k": "m",
+          "v": "7"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "10"
+        },
+        {
+          "k": "t",
+          "v": "). NO RH claim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " 13 new rows ("
+        },
+        {
+          "k": "c",
+          "v": "FLAVOR.FEEDBACK.NORMALFORM.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "E8.WINDING.DECODER.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "FORM.FLAVOR.FEEDBACK.01"
+        },
+        {
+          "k": "t",
+          "v": " [F], "
+        },
+        {
+          "k": "c",
+          "v": "E8.SHELL.GLOBAL.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "FORM.E8.SHELL.GLOBAL.01"
+        },
+        {
+          "k": "t",
+          "v": " [F], "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PHASE.POLYGON.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.RESIDUAL.QUADRATURE.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PI.RESONANCE.ANATOMY.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CARLESON.PRIME.01"
+        },
+        {
+          "k": "t",
+          "v": " [O], "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.DEEPALPHA.SIGN.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PRUEFER.COMPENSATION.02"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.TRUNCATION.AUDIT.01"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "GATE.LEDGER.01"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the dated round-36 CORRECTION notes on "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.KREIN.CONTRACTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " (the stop-list entry amended, the route reopened, the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "-not-"
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " law retired) and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.PRUEFER.COMPENSATION.01"
+        },
+        {
+          "k": "t",
+          "v": " (the v1 record stands as-measured) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " dated notes on "
+        },
+        {
+          "k": "c",
+          "v": "E8.SIMPLEX.FOURIER.01"
+        },
+        {
+          "k": "t",
+          "v": " (census "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " theorem), "
+        },
+        {
+          "k": "c",
+          "v": "E8.G31.CLOCK_ALPHABET.01"
+        },
+        {
+          "k": "t",
+          "v": " (the decoder) and "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.FLOOR.SKELETON.01"
+        },
+        {
+          "k": "t",
+          "v": " (the ladder end was a data boundary) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " THE QA FIX: "
+        },
+        {
+          "k": "c",
+          "v": "FORM.QGEO.03"
+        },
+        {
+          "k": "t",
+          "v": " was double-booked since 2026-06-18 (a primary-key violation); the SeamDeckClosure flat-closure row is RENAMED "
+        },
+        {
+          "k": "c",
+          "v": "FORM.QGEO.04"
+        },
+        {
+          "k": "t",
+          "v": " with a dated QA note, all references updated (papers, scripts, registry, website, and the two 2026-06-18 entries of this changelog corrected in place — documented here); "
+        },
+        {
+          "k": "m",
+          "v": "958\\to971"
+        },
+        {
+          "k": "t",
+          "v": " rows; NO marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_prime_front"
+        },
+        {
+          "k": "t",
+          "v": ": the new round-36 section “The complete-comb reversal” ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v876/v877/v878}"
+        },
+        {
+          "k": "t",
+          "v": "; the artifact, the reversal, the Carleson chain, the theorems crossref) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the DATED CORRECTION paragraph appended to the round-35 section "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the open-fronts chain extended with round 36 and its round-35 clause corrected; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ": two new Gaussian-code keybox entries (the global shell theorem "
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v875}"
+        },
+        {
+          "k": "t",
+          "v": "; the winding decoder "
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v874}"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the census sentence upgraded; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": ": the feedback normal form added to the winding keybox ("
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v874}"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": five new audit cards "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " dated corrections on the v857/v873 cards; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "c",
+          "v": "PRIME.CARLESON.PRIME.01"
+        },
+        {
+          "k": "t",
+          "v": " [O] registration, three round-36 recorded blocks, the round-36 correction notes on the contractor and paircorr blocks, and the "
+        },
+        {
+          "k": "c",
+          "v": "GATE.LEDGER.01"
+        },
+        {
+          "k": "t",
+          "v": " QA record."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Prime-front feed round 36 ("
+        },
+        {
+          "k": "c",
+          "v": "primeFront.ts"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the verdict enum); counters "
+        },
+        {
+          "k": "m",
+          "v": "871"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v878"
+        },
+        {
+          "k": "t",
+          "v": " (HonestyBanner, prime-front page metadata and hero); DAG "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "c",
+          "v": "v874"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v878"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " (the research-contracts round-36 correction, the architecture "
+        },
+        {
+          "k": "m",
+          "v": "-1/15"
+        },
+        {
+          "k": "t",
+          "v": " upgrade); "
+        },
+        {
+          "k": "c",
+          "v": "ResidualChain.tsx"
+        },
+        {
+          "k": "t",
+          "v": " carries the renamed "
+        },
+        {
+          "k": "c",
+          "v": "FORM.QGEO.04"
+        },
+        {
+          "k": "t",
+          "v": "; generated surfaces ("
+        },
+        {
+          "k": "c",
+          "v": "ScriptIndex"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "changelog.ts"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "suite.ts"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "discipline.ts"
+        },
+        {
+          "k": "t",
+          "v": ", maps) regenerated; README "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Zenodo synced to "
+        },
+        {
+          "k": "m",
+          "v": "871"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v878"
+        },
+        {
+          "k": "t",
+          "v": "; manifests regenerated last (Lean manifest "
+        },
+        {
+          "k": "m",
+          "v": "88\\to90"
+        },
+        {
+          "k": "t",
+          "v": " files)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Infrastructure note (typed as a bug, follow-up registered)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "core.build_window"
+        },
+        {
+          "k": "t",
+          "v": " silently truncates the canonical comb at its atom-table cap; until the loud guard lands, every deep-window readout must check the demand "
+        },
+        {
+          "k": "m",
+          "v": "e^{2\\alpha} \\le \\texttt{ATOM\\_MAX}"
+        },
+        {
+          "k": "t",
+          "v": " explicitly (the round-36 modules do)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-08",
     "dateLabel": "2026-08-08 · LXXVIII",
     "heading": [
       {
@@ -235383,7 +237073,7 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "c",
-        "v": "FORM.QGEO.03"
+        "v": "FORM.QGEO.04"
       }
     ],
     "items": [
@@ -235518,7 +237208,7 @@ export const CHANGELOG: ChangelogEntry[] = [
           "c": [
             {
               "k": "c",
-              "v": "FORM.QGEO.03"
+              "v": "FORM.QGEO.04"
             },
             {
               "k": "t",

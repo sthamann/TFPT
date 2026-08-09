@@ -735,7 +735,7 @@ the flat $\tau{=}i$ orbifold, or Troyanov $+$ OS reconstruction. \mE\ the all-or
 \emph{Lean theorem}: \texttt{TfptCarrier/SeamDeckClosure.lean} (\texttt{flat\_all\_orders\_clock}) proves that any
 spectral function $g(\Delta_{\mathrm{flat}})$ of the Fourier-diagonal flat Laplacian commutes with the carrier
 clock $\rho=\mathrm{diag}(i^n)$ --- upgrading \vref{v198}/\vref{v201} to the full operator with only the standard
-axioms, no \texttt{sorry} (\texttt{FORM.QGEO.03}). \mO\ the one premise stays the honest axiom
+axioms, no \texttt{sorry} (\texttt{FORM.QGEO.04}). \mO\ the one premise stays the honest axiom
 (\texttt{QGEO.OBLIG.01}).
 \par\smallskip\noindent\textbf{Self-investigation: the experiment and the simplification
 (\veri{v280\_pillowcase\_steklov.py}, \veri{v282\_e8\_tau\_i\_unification.py}).} Two things can be done
@@ -5140,7 +5140,20 @@ certificate must be $\alpha$-aware.  The carry-forward assets:
 the danger geometry is real (source-only cells capture
 $0.98$--$0.61$ of $\lambda_{\min}(T_1)$ without the soft
 eigenvector) and the discrimination stands (Epstein $3927\%$,
-scramble $314462\%$); still [O].]\par}
+scramble $314462\%$); still [O].]
+\emph{[2026-08-08 round-36 correction note
+(\veri{v877\_complete\_comb\_reversal.py}):} the round-35 note's
+holdout data was comb-truncated ($\texttt{ATOM\_MAX}$ artifact;
+complete-comb floors strictly positive) --- on complete combs
+the identically frozen rule returns \textsc{bounded}, the class
+closure and stop-list entry are amended, the $\alpha$-not-$h$
+law is retired, and the route reopens
+(\texttt{PRIME.PRUEFER.COMPENSATION.02}); the floor demand in
+embedding coordinates is now the registered target
+\texttt{PRIME.CARLESON.PRIME.01} [O] (the Carleson embedding of
+$\tilde\nu_-$ into $\tilde\mu_+$ at degree $h{-}1$ with constant
+$1 - \tau_h$, machine-exact reduction
+\veri{v876\_carleson\_polygon\_wave.py}); still [O].]\par}
 
 \par\smallskip\noindent\textbf{The character corner and the
 Hjelmslev tower (\texttt{PRIME.CORNER.CHARACTER.01} /
@@ -5873,7 +5886,9 @@ code Walsh transform at every level $\le 16$, and
 $\hat m_2(n) = -1/15$ holds as an integer identity at every odd
 $n \le 16500$ --- the per-prime measurement is the prime
 restriction of a character theorem, typed spectral-only
-(\veri{v857\_simplex\_fourier\_winding.py}, $26/26$).  The
+(\veri{v857\_simplex\_fourier\_winding.py}, $26/26$; upgraded in
+round 36 to \emph{all} odd shells, \texttt{E8.SHELL.GLOBAL.01}
+--- see the round-36 record below).  The
 winding quadratic: the whole \texttt{tfpt\_2} winding line is
 one adjugate quadratic $q_{\rm wind} = t^2 - \gcar t + |\Z_2|$
 with the triple lock $s = 6$, $\Delta(6) = 39200 = 2\cdot140^2$
@@ -6054,6 +6069,36 @@ known critical structure and the $\alpha$-not-$h$ growth law as
 the typed constraint (the explosion tracks kz-depth, not window
 size).  The first fully preregistered uniformity test of the
 program, executed and booked exactly as frozen; still [O].]
+\emph{[2026-08-08 round-36 CORRECTION note
+(\veri{v877\_complete\_comb\_reversal.py}, the complete-comb
+re-decision):} the round-35 note above is corrected, dated ---
+the RUN-2 deep-holdout data was \emph{comb-truncated}
+(\texttt{core.build\_window} silently caps the atom table at
+$\texttt{ATOM\_MAX} = 4\times10^{5}$; kz $142/177/243$ demand
+support to $4.4\times10^{5}/8.0\times10^{5}/1.8\times10^{6}$;
+\texttt{PRIME.DEEPALPHA.SIGN.01} certifies the complete-comb
+floors strictly positive).  The v1 verdict was correct \emph{on
+the data as measured} and \texttt{v873}'s booking stands as the
+record of the preregistered v1 execution (spec SHA
+\texttt{4621b899\ldots}, executed file SHA
+\texttt{15d35b26\ldots}); but on complete combs the
+\emph{identically} frozen v1 rule returns \textsc{bounded} in
+both channels (v2 spec SHA \texttt{5fd6bf61\ldots}; kz 142:
+$S_U\,32.07 \to 5.65$, $S_C\,58.78 \to 4.10$; slopes
+$0.006/0.007$) and RUN 3 passes ($K_1/K_2$ $h$-stable on all
+five holdouts).  \emph{The stop-list entry is amended:}
+``blockwise Cotlar--Stein on Pr\"ufer phase cells'' is removed
+--- the class is \emph{not} closed; the route reopens as
+\texttt{PRIME.PRUEFER.COMPENSATION.02} with the remaining gap
+typed (the Cotlar constant $B_C \sim 3.9$--$4.3$ vs the needed
+$1$; the cell-local defects $\sum_r\varepsilon_r \sim 7$--$10$
+--- the RUN-1 anatomy was in-cap and stands); the
+$\alpha$-not-$h$ law is retired (it was the truncation's
+signature).  The $\pi$-resonance critical structure and the
+discrimination stand; the surviving demand is now carried in
+embedding coordinates by \texttt{PRIME.CARLESON.PRIME.01} [O]
+(registered below).  Demand, kill and close conditions
+otherwise unchanged; still [O].]
 Existence is \emph{not}
 claimed; no RH statement.\par}
 
@@ -6081,6 +6126,181 @@ identification honestly buried at space level (principal angles
 ${\sim}90^\circ$); the $6$-vs-$7$ honesty note stands
 untouched.  Full statements and keyboxes in Paper~1; audit
 cards in Paper~3.\par}
+
+\par\smallskip\noindent\textbf{The Prime Carleson embedding
+contract (\texttt{PRIME.CARLESON.PRIME.01} [O]).}
+{\sloppy
+\emph{Registered} 2026-08-08, round 36
+(\veri{v876\_carleson\_polygon\_wave.py}; the ward making the
+reduction machine-exact at rel
+$1.5\times10^{-13}/1.3\times10^{-15}$ on kz $9/13$).
+\emph{The chain:} for the canonical window family, the Krein
+floor $\tau_h > 0$ is \emph{equivalent} to the Carleson
+embedding of the negative arm measure into the positive arm
+measure at polynomial degree $h - 1$ --- $\|C_h\| \le 1
+\Leftrightarrow G_- \le G_+$ (exact,
+\texttt{PRIME.SOURCECONTRACTOR.NORM.01}) $\Leftrightarrow
+\int|P|^2\,d\tilde\nu_- \le \int|P|^2\,d\tilde\mu_+$ for all
+$P \in \mathcal P_{h-1}$ $\Leftrightarrow M(\tilde\mu_+ -
+\tilde\nu_-) \ge 0$, with the embedding constant
+$\lambda_{\max}(M_-) = \|C_h\|^2 = 1 - \tau_h$.  \emph{The
+demand:} a proof of the embedding uniformly along a cofinal
+window subfamily would discharge \texttt{SourceContractor}
+(\texttt{FORM.PRIME.KREIN.DEFECT.01}) and, through
+\texttt{krein\_cofinal\_weil}, hypothesis $(H_{\rm cof})$.
+\emph{The typed constraints a candidate must respect:} the
+certificate must be phase-aware (the Perron closure of
+\texttt{v866}); the $\pi$-resonance is the known critical
+structure and it is \emph{thick} --- not removable by excision
+(\texttt{PRIME.PI.RESONANCE.ANATOMY.01}); the polygon/two-gauge
+compression is the \emph{wrong} compression of the Loewner
+order (\texttt{PRIME.PHASE.POLYGON.01}); the constructive side
+is the residual quadrature at full degree
+(\texttt{PRIME.RESIDUAL.QUADRATURE.01}) under the complete-comb
+constraint (\texttt{PRIME.TRUNCATION.AUDIT.01}).  Arrow (iv)
+(a prefix-local scalar reduction) is typed \textsc{needs
+proof}.  \emph{Kill/close:} closes if the embedding is proven
+on a cofinal family, or if a certified negative canonical
+window family is exhibited (none exists:
+\texttt{PRIME.DEEPALPHA.SIGN.01}).  Existence is \emph{not}
+claimed; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The Carleson wave of round 36
+(\texttt{PRIME.PHASE.POLYGON.01},
+\texttt{PRIME.RESIDUAL.\allowbreak QUADRATURE.01},
+\texttt{PRIME.PI.RESONANCE.\allowbreak ANATOMY.01}).}
+{\sloppy
+\emph{Recorded} 2026-08-08 (evidence lines with typed honest
+FAILs; no marker moves;
+\veri{v876\_carleson\_polygon\_wave.py}, $6/8 + 7/8 + 5/5$, the
+three frozen-honest FAILs pattern-gated).  The polygon: Lemma A
+exact (the difference of the two source canonical systems
+\emph{is} a signed rank-one phase sum; round-trip
+$2.4\times10^{-12}$), but $S_0(m) \ge |S_2(m)|$ breaks on all
+$47$ rungs at $2\theta \approx 1.5\pi$ --- the two-gauge
+compression is the \emph{wrong} compression of the Loewner
+order, typed with both readings; holonomy null with inverted
+contrast; the deep-holdout rows retype \textsc{numeric-void}
+per the round-36 truncation audit (battery verdict unaffected).
+The residual horizon law: the difference Jacobi chain
+(row-scaled Wheeler $+$ mp escalation past the $53$-bit noise
+wall) realizes the positive representing measure $\rho_h$ at
+\emph{full degree} $h$ on all $44$ floor-positive rungs
+($k^*/h$ median $1.000$, slope $0.974$, $r_h = 0.998$); a
+single atom sits just beyond the pole port (mass beyond the
+fold is \emph{required}: the Radau-anchored functional breaks
+early, genuine); discrimination $7$--$9\times$; the three
+sub-$h$ stalls were exactly the truncated windows --- a
+validated sign detector.  The resonance anatomy: the resonant
+set is \emph{thick} (a constant ${\sim}1/5$ of the minus nodes;
+excision gains nothing; the soft direction disjoint) --- the
+wall is phase-distributed at this partition resolution; the
+$\alpha$-law addendum confounded by truncation, typed.  Full
+narrative in the prime-front paper; audit card in
+Paper~3.\par}
+
+\par\smallskip\noindent\textbf{The artifact resolution and the
+Cotlar reversal of round 36
+(\texttt{PRIME.DEEPALPHA.SIGN.01},
+\texttt{PRIME.PRUEFER.\allowbreak COMPENSATION.02},
+\texttt{PRIME.TRUNCATION.\allowbreak AUDIT.01}).}
+{\sloppy
+\emph{Recorded} 2026-08-08 (the round's headline;
+\veri{v877\_complete\_comb\_reversal.py}, $8/8 + 9/9$).  The
+deep-alpha negative floors at kz $142/177/243$ were
+\emph{comb-truncation artifacts} of the deployed atom table
+($\texttt{ATOM\_MAX} = 4\times10^{5}$, silent cap;
+the windows demand support to $1.8\times10^{6}$): with the
+complete canonical comb the certified corner enclosures are
+strictly positive
+($+1.06\times10^{-5}/+1.52\times10^{-5}/+1.20\times10^{-5}$),
+no negative canonical window exists, the certified ladder's end
+at kz 121 was the atom-table \emph{data} boundary, and
+$(H_{\rm cof})$ is unaffected; the silent truncation is typed
+an infrastructure bug with the registered follow-up (the
+builder must fail loudly beyond its table).  Under the
+\emph{identically} frozen v1 bars the complete-comb deep sums
+collapse into the battery band and both channels return
+\textsc{bounded} (slopes $0.006/0.007$); RUN 3 unlocks and
+passes ($K_1/K_2$ $h$-stable on all five holdouts) --- the
+route reopens, with the remaining gap typed ($B_C \sim 4$ vs
+$1$; local defects $7$--$10$).  The truncation audit re-types
+every affected finding, dated (pruefer v1 confounded $\to$
+re-decided; residual strengthened; resonance $\alpha$-law void;
+polygon holdouts numeric-void; the other waves unaffected).
+The dated corrections live on the
+\texttt{PRIME.KREIN.CONTRACTOR.01} and
+\texttt{PRIME.FLOOR.PAIRCORR.01} blocks above; \texttt{v873}'s
+booking stands as the record of the preregistered v1
+execution.  No RH statement.\par}
+
+\par\smallskip\noindent\textbf{The round-36 compiler theorems
+(\texttt{FLAVOR.FEEDBACK.\allowbreak NORMALFORM.01},
+\texttt{E8.WINDING.\allowbreak DECODER.01},
+\texttt{E8.SHELL.GLOBAL.01}; Lean:
+\texttt{FORM.FLAVOR.\allowbreak FEEDBACK.01} [F],
+\texttt{FORM.E8.SHELL.\allowbreak GLOBAL.01} [F]).}
+{\sloppy
+\emph{Recorded/Registered} 2026-08-08 (exact identity grade; no
+marker moves; \veri{v874\_feedback\_decoder\_lean.py} $14/14 +
+11/11$, \veri{v875\_shell\_global\_lean.py} $15/15$).  The
+feedback normal form: $P = [\,2\cdot\mathbf 1 \mid e_3 \mid
+R e_3\,]$ conjugates the whole winding line, symbolic in $s$,
+to the gain-plus-companion form with $\chi_{R_s} = (t - s -
+|\mu_4|)\,q_{\rm wind} - 12t$ and the honest $\Z_2^2$-not-$\mu_4$
+typing load-bearing (keybox in Paper~2).  The winding decoder:
+$q_{\rm wind}$ maps the clock alphabet to
+$(-|\mu_4|,-|\mu_4|,|Z_2|,h(D_5))$, the decoder polynomial
+$(y{+}4)^2(y{-}2)(y{-}8)$ carries budget coefficients
+$(2,48,32,256)$, and $|\mu_4|\,q(|Z_2|)/|R(E_8)| = -1/15$ is
+exactly the Walsh message eigenvalue --- typed \emph{audit}
+theorem, not a functor (keybox in Paper~1).  The global shell
+theorem: $\hat\Theta_u/\Theta_L = -1/15$ for \emph{all} odd
+shells from $\mathrm{Sp}(4,2)$ transitivity $+$ $(1{+}i)$
+doubling $+$ $\Theta_L = 240\,\sigma_3$; the $16500$ census
+retained as the exact ward (keybox in Paper~1).  \emph{The Lean
+records:} \texttt{TfptCarrier/FlavorFeedback.lean} ($16$
+declarations, $11$ theorems --- the action identities, the
+inverse-free conjugation $PF_s = R_sP$ over $\Z$ symbolic in
+$s$, $\chi_{R_s}$ in $\Z[X]$, the SNF determinantal divisors)
+and \texttt{TfptCarrier/GaussianShells.lean} (the
+\texttt{ShellSystem} hypothesis bundle with provenance typed on
+each field, named \emph{not} proven, $+$ $7$ consequence
+theorems, every statement an exact integer identity, no
+division) --- both kernel-checked: lake build green at $3418$
+jobs, no \texttt{sorry}, no \texttt{native\_decide}, axioms
+propext/Classical.choice/Quot.sound on all $18$ theorems
+(\texttt{\#print axioms}), carried in the shipped Lean manifest
+at $90$ files.  \emph{The honest boundaries:} no $\mu_4$
+identification from the $\Z_2^2$ quotient; the decoder needs an
+intertwiner to be causal; the shell theorem's three inputs stay
+named hypotheses.  No RH statement.\par}
+
+\par\smallskip\noindent\textbf{The ledger integrity guard and
+the \texttt{FORM.QGEO.04} QA fix (\texttt{GATE.LEDGER.01}).}
+{\sloppy
+\emph{Recorded} 2026-08-08 (a QA/CI note, no new physics;
+\veri{v878\_ledger\_integrity.py}, $10/10$).  The round-36
+ledger audit found the first \emph{primary-key violation} in
+\texttt{status\_ledger.csv}: the claim id \texttt{FORM.QGEO.03}
+was double-booked (2026-06-15 the CohomologyGrading
+formalisation; 2026-06-18 the SeamDeckClosure flat all-orders
+closure).  The fix, dated: the SeamDeckClosure row is renamed
+\texttt{FORM.QGEO.04} with a QA note in its claim text, and
+every flat-closure reference is updated (this document, the two
+2026-06-18 changelog mentions, \texttt{v279}/\texttt{v284}/%
+\texttt{v286} $+$ \texttt{seam\_equivalence.json},
+\texttt{make\_figures}, the website residual chain, registry
+and \texttt{run\_all}); the CohomologyGrading row keeps
+\texttt{FORM.QGEO.03}; claim contents unchanged.  The guard
+enforces from this round: globally unique claim ids (the fix
+pinned), existing supersession targets with an acyclic
+supersession graph, unique \emph{active} supersession targets
+modulo a frozen remove-only allowlist (the two legitimate
+2026-06 joint closures), and the dependency cross-reference
+census frozen remove-only ($13$ SCCs / $265$ ids ---
+acyclicity enforced as \emph{no new cycles}; the
+\texttt{audit\_baseline} precedent).\par}
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}

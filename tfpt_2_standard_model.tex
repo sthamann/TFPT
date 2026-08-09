@@ -1028,6 +1028,24 @@ collision point and the sole $2{\times}$square hit in the integer window, and th
 the unique $\Delta$-root in $(2,3)$, $s^* \approx 2.8250$ (Sturm-exact --- the deployed $\approx 2.83$
 above); every sibling direction breaks the lock \emph{and} changes the quadratic --- $(1, -5, 2)$ is
 direction-specific \mE.
+\emph{The feedback normal form (2026-08-08, round 36):} the winding line has an exact
+\emph{gain-plus-companion} normal form (\veri{v874\_feedback\_decoder\_lean.py}, $14/14$,
+\textsc{feedback-normalform-exact}): with the integral basis $P = [\,2\cdot\mathbf 1 \mid e_3 \mid
+R e_3\,]$ ($\det P = -4$, $\mathrm{SNF} = \mathrm{diag}(1,2,2)$), the \emph{whole} line conjugates
+symbolically in $s$ to $P^{-1} R_s P = \bigl[\begin{smallmatrix} s+4 & 0 & 3\\ 0 & 0 & -2\\ 4 & 1 & 5
+\end{smallmatrix}\bigr]$ --- a gain channel $s + |\mu_4|$, the \emph{companion block} of $q_{\rm wind}$,
+and the coupling pair $(3,4)$ with loop product $\Nfam \times |\mu_4| = 12 = \dim g_{\rm SM}$ --- so
+$\chi_{R_s} = (t - s - |\mu_4|)\,q_{\rm wind} - 12\,t$ identically (the remainder identity
+$\chi_R - (t{-}4)\,q_{\rm wind} = -12\,t$: a pure $t$-tap at gain offset $|\mu_4|$), and at $s = 6$ the
+$(15, 40, 20)$ coefficients are the three gain-$10$ readouts $10{+}5$, $50{+}2{-}12$, $10\times2$.  The
+direction $\mathbf 1 e_1^{\!\top}$ is the \emph{only} one (against $\mathbf 1 e_2^{\!\top}$,
+$\mathbf 1 e_3^{\!\top}$, $e_1\mathbf 1^{\!\top}$ --- all three controls fire) whose conjugated
+deformation is the pure gain $E_{11}$ and whose remainder is a pure $t$-tap.  \emph{The honest typing
+(load-bearing):} the quotient $\Z^3/P\Z^3 = \Z_2\times\Z_2$ has \emph{cardinality} $4 = |\mu_4|$ but
+exponent $2$ --- not the group $\mu_4$; no identification is claimed.  Kernel-checked in
+\texttt{TfptCarrier/FlavorFeedback.lean} ($11$ theorems: the action identities, the inverse-free
+conjugation $P F_s = R_s P$ over $\Z$ symbolic in $s$, $\chi_{R_s}$ in $\Z[X]$, and the SNF
+determinantal divisors --- standard axioms, no \texttt{sorry}) \mE.
 \smallskip\\
 \noindent\textbf{The dual anchor (\veri{v134\_dual\_anchor.py}).} The anchor's \emph{inverse} response is the
 same on both ends of the winding line, and it is the Nariai root of the horizon paper:

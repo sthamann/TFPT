@@ -103,6 +103,8 @@ import TfptCarrier.CofinalWeil
 import TfptCarrier.CofinalCurrent
 import TfptCarrier.GradeNoGo
 import TfptCarrier.KreinDefect
+import TfptCarrier.FlavorFeedback
+import TfptCarrier.GaussianShells
 import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck

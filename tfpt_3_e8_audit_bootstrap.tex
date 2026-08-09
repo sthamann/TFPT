@@ -8254,7 +8254,8 @@ the code Walsh transform at every level $\le 16$, and
 $\hat m_2(n) = -1/15$ at \emph{every} odd $n \le 16500$ ---
 \texttt{v817}'s per-prime measurement is the prime restriction
 of a character theorem; typed spectral-only (the gradings do
-not refine each other).  The winding line is one adjugate
+not refine each other); upgraded in round 36 to \emph{all} odd
+shells (\texttt{E8.SHELL.GLOBAL.01}, see the v875 card).  The winding line is one adjugate
 quadratic $q_{\rm wind} = t^2 - \gcar t + |\Z_2|$; triple lock
 $s = 6$; $\Delta(6) = 39200 = 2\cdot140^2$; threshold
 $s^* \approx 2.8250$.  Seven controls fire, two invariances
@@ -8636,13 +8637,146 @@ kills 2 $+$ 5 fire; RUN 3 correctly withheld.  Carry-forward:
 the growth tracks kz-depth ($\alpha$), \emph{not} $h$; the
 surviving demand is a non-stationary phase bound.  The honest
 FAILs pattern-gated, nothing refit.  No marker move, no RH
-claim.
+claim.  \emph{Dated correction (round 36):} the deep-holdout
+data was comb-truncated ($\texttt{ATOM\_MAX}$ artifact); the
+verdict stands as-measured, but on complete combs the
+identically frozen rule returns \textsc{bounded} and the route
+reopens --- the $\alpha$-not-$h$ law is retired (see the v877
+card below).
 Machine-checked: \veri{v873\_pruefer\_cotlar\_decision.py}.
 \mE\ (the provenance wards, the partition/node wards, the
 frozen decision rules applied verbatim) $+$
 (\textsc{measured}) (the anatomy and Cotlar censuses) $+$
 \mO\ (nothing upgraded --- one route closed by its own
 contract)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The feedback normal form and the
+winding decoder
+(\texttt{FLAVOR.FEEDBACK.\allowbreak NORMALFORM.01} $+$
+\texttt{E8.WINDING.\allowbreak DECODER.01}).}
+Two exact compiler theorems from one probe pair ($14/14$,
+\textsc{feedback-normalform-exact}; $11/11$,
+\textsc{winding-decoder-exact}; all decisions exact
+sympy/integer).  The basis $P = [\,2\cdot\mathbf 1 \mid e_3 \mid
+R e_3\,]$ ($\det -4$, SNF $\mathrm{diag}(1,2,2)$) conjugates the
+whole winding line, symbolic in $s$, to the gain-plus-companion
+form $[[s{+}4,0,3],[0,0,-2],[4,1,5]]$: gain channel $s +
+|\mu_4|$, companion block of $q_{\rm wind}$, coupling pair
+$(3,4)$ with loop product $12 = \dim g_{\rm SM}$; $\chi_{R_s} =
+(t - s - |\mu_4|)\,q_{\rm wind} - 12t$; the $(15,40,20)$
+coefficients at $s = 6$ are the gain-$10$ readouts.  All three
+sibling-direction controls fire.  The honest typing
+load-bearing: $\Z^3/P\Z^3 = \Z_2^2$ --- the cardinality of
+$\mu_4$, \emph{not} the group.  The decoder: $q_{\rm
+wind}(\{2,3,5,6\}) = (-4,-4,2,8)$ with $q(2) = q(3)$ forced by
+the palindrome axis; $D(y) = (y{+}4)^2(y{-}2)(y{-}8)$ with
+budget coefficients $(2, 48, 32, 256)$; the bridge
+$|\mu_4|\,q(|Z_2|)/|R(E_8)| = -1/15$ hits the Walsh message
+eigenvalue exactly.  Typed: exact \emph{audit} theorem, not a
+functor.  Lean mirror \texttt{FlavorFeedback.lean} ($11$
+theorems, standard axioms).  No marker move, no RH claim.
+Machine-checked: \veri{v874\_feedback\_decoder\_lean.py}.
+\mE\ (both theorems, the controls, the Lean mirror) --- the
+$\mu_4$ reading \emph{not} claimed (typed honestly)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The global Gaussian shell theorem
+(\texttt{E8.SHELL.GLOBAL.01}).}
+One probe ($15/15$, \textsc{shell-global-theorem}): the $-1/15$
+census law is a theorem for \emph{all} shells --- $\Theta_v(n) =
+(\Theta_L(n) - \Theta_0(n))/15$ for $v \ne 0$ at every $n$,
+$\hat\Theta_u(2m{+}1) = -16\,\sigma_3(2m{+}1)$, ratio $-1/15$
+exactly at every odd $n$.  Inputs warded: $\mathrm{Sp}(4,2)$
+transitivity (the $60$ transvections; identical to the
+shell-module action), $(1{+}i)$ doubling, $\Theta_L =
+240\,\sigma_3$ (Eisenstein $E_4$; the $16500$ census retained as
+ward).  Controls: a non-transitive subgroup breaks the law
+(Walsh multiset $\{-48^4, -16^7, 16^4\}$); the even-shell
+formula differs correctly ($7/135$ at $n = 2$).  Consequence
+chain kernel-checked from the named hypothesis bundle
+(\texttt{GaussianShells.lean}, $7$ theorems, no division
+anywhere).  No marker move, no RH claim.
+Machine-checked: \veri{v875\_shell\_global\_lean.py}.
+\mE\ (the theorem, the wards, the controls, the Lean skeleton
+--- inputs named with typed provenance)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The Carleson wave
+(\texttt{PRIME.PHASE.POLYGON.01} $+$
+\texttt{PRIME.RESIDUAL.\allowbreak QUADRATURE.01} $+$
+\texttt{PRIME.PI.RESONANCE.\allowbreak ANATOMY.01}).}
+Three probes ($6/8 + 7/8 + 5/5$ with the three frozen-honest
+FAILs pattern-gated at exit 1, nothing refit).  The Carleson
+ward: $\lambda_{\max}(M_-) = \|C\|^2 = 1 - \tau$ at rel
+$1.5\times10^{-13}$ --- arrows (i)--(iii) of the embedding chain
+machine-exact, the target registered
+(\texttt{PRIME.CARLESON.PRIME.01} [O]).  The polygon $S_0 \ge
+|S_2|$ breaks on all $47$ rungs at $2\theta \approx 1.5\pi$
+(typed: the wrong compression of the Loewner order); holonomy
+null with inverted contrast.  The residual quadrature realizes
+$\rho_h$ at \emph{full degree} on all $44$ floor-positive rungs
+($k^*/h$ median $1.000$, slope $0.974$; mp escalation past the
+$53$-bit wall; single atom just beyond the pole port;
+discrimination $7$--$9\times$); its three stalls were exactly
+the truncated combs (validated detector, v877).  The resonance
+is \emph{thick} ($\sim 1/5$ constant, excision gains nothing,
+soft direction disjoint): the wall is phase-distributed.  No
+marker move, no RH claim.
+Machine-checked: \veri{v876\_carleson\_polygon\_wave.py}.
+\mE\ (Lemma A, the Carleson ward, the horizon law) $+$
+(\textsc{measured}) (the polygon/holonomy/resonance censuses)
+$+$ \mO\ (the embedding contract --- the surviving target)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The artifact resolution and the
+Cotlar reversal (\texttt{PRIME.DEEPALPHA.SIGN.01} $+$
+\texttt{PRIME.PRUEFER.\allowbreak COMPENSATION.02} $+$
+\texttt{PRIME.TRUNCATION.\allowbreak AUDIT.01}).}
+Two probes ($8/8$, \textsc{deep-alpha-artifact}; $9/9$,
+\textsc{cotlar-bounded-v2}).  The negative floors at kz
+$142/177/243$ were \emph{comb-truncation artifacts}
+(\texttt{build\_window} silently caps at $\texttt{ATOM\_MAX} =
+4\times10^5$; those windows demand up to $1.8\times10^6$):
+complete-comb certified enclosures strictly positive
+($+1.06/+1.52/+1.20 \times 10^{-5}$), no negative canonical
+window, the kz-121 ladder end a \emph{data} boundary, $(H_{\rm
+cof})$ unaffected; the silent truncation typed as an
+infrastructure bug (loud-guard follow-up registered).  The
+reversal: under the \emph{identically} frozen v1 bars (v1 spec
+SHA re-verified; single change warded) the complete-comb deep
+sums collapse into the battery band ($32.07 \to 5.65$ etc.),
+both channels \textsc{bounded} (slopes $0.006/0.007$), RUN 3
+unlocks and passes ($K_1/K_2$ $h$-stable on all five holdouts)
+--- the v1 kill was entirely the artifact; the route
+\emph{reopens}; remaining gap typed ($B_C \sim 4$ vs $1$; local
+defects $7$--$10$).  The audit table re-types every affected
+finding (pruefer v1 confounded $\to$ re-decided; residual
+strengthened; resonance $\alpha$-law void; polygon holdouts
+numeric-void; the other waves unaffected).  v873's booking
+stands as-measured.  No marker move, no RH claim.
+Machine-checked: \veri{v877\_complete\_comb\_reversal.py}.
+\mE\ (the certificates, the frozen-bar re-decision, the wards)
+$+$ (\textsc{measured}) (the audit table) $+$ \mO\ (bounded is
+not contracted --- the gap typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The ledger integrity guard
+(\texttt{GATE.LEDGER.01}).}
+A CI sentinel, no new physics ($10/10$): round 36 found and
+fixed the ledger's first primary-key violation
+(\texttt{FORM.QGEO.03} double-booked 2026-06-15/18; the
+SeamDeckClosure row renamed \texttt{FORM.QGEO.04} with a dated
+QA note, every flat-closure reference updated).  The guard
+enforces: the $10$-column schema; globally unique claim ids
+(the fix pinned); existing supersession targets with an acyclic
+supersession graph; unique active supersession targets modulo a
+frozen remove-only allowlist (two legitimate 2026-06 joint
+closures); and the dependency cross-reference census frozen
+remove-only ($13$ SCCs / $265$ ids --- acyclicity enforced as
+\emph{no new cycles}).
+Machine-checked: \veri{v878\_ledger\_integrity.py}.
+\mE\ (CSV integrity, frozen baselines remove-only)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification

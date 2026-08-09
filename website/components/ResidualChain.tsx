@@ -69,7 +69,7 @@ const STEPS: Step[] = [
   {
     tag: "v276",
     head: "Flat all-orders closure (Lean)",
-    sub: "flat τ=i ⇒ [ρ,H] = 0 to ALL orders (FORM.QGEO.03)",
+    sub: "flat τ=i ⇒ [ρ,H] = 0 to ALL orders (FORM.QGEO.04)",
     tone: "green",
     scripts: ["v276_qgeo_flat_closes_commutator.py"],
   },

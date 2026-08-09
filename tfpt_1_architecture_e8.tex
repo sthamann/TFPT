@@ -933,7 +933,9 @@ numerator \emph{equals} the code Walsh transform at every level
 $\le 16$ (Eisenstein normal form $15\,\Theta_{D8} = 7\,\Theta_L
 + 8\,\Theta_0$), so $\hat m_2(n) = -1/15$ holds as an
 \emph{integer identity at every odd $n \le 16500$} (all $1911$
-odd primes covered) --- the per-prime measurement was the prime
+odd primes covered; upgraded to \emph{all} odd shells in round
+36 --- see the global shell theorem below) --- the per-prime
+measurement was the prime
 restriction of a character theorem of this code.  Typed
 honestly: the identification is \emph{spectral} (the packet
 grading $(52, 60, 128)$ and the code grading $15 \times 16$ do
@@ -959,6 +961,50 @@ line: degree-only audits cannot see the reducible torus), and
 the $W(D_5) \times W(A_3)$ order coincidence is re-killed by
 computed centers, $|Z(G_{31})| = 4 = \langle J\rangle$ vs $1$
 (the structural refutation cited) \mE.
+\emph{The global Gaussian shell theorem (2026-08-08, round 36):}
+the $-1/15$ census law above is now a \emph{theorem for all
+shells} (\veri{v875\_shell\_global\_lean.py}, $15/15$,
+\textsc{shell-global-theorem}): on $V = L/(1{+}i)L$, for every
+$n \ge 1$, $\Theta_v(n) = (\Theta_L(n) - \Theta_0(n))/15$ for all
+$v \ne 0$ (the division exact), $\hat\Theta_u(n) =
+16\,(16\cdot\mathbf 1_{2\mid n}\,\sigma_3(n/2) - \sigma_3(n))$,
+and at every \emph{odd} $n$: $\hat\Theta_u(n)/\Theta_L(n) =
+-1/15$ \emph{exactly} --- no census cap.  The three inputs, each
+warded: the $G_{31}$ class action is the $60$ symplectic
+transvections generating $\mathrm{Sp}(4,2)$ (order $720$),
+\emph{transitive} on the $15$ nonzero classes and identical to
+the shell-module action; norm doubling by $(1{+}i)$
+($\Theta_0(2m) = \Theta_L(m)$, $\Theta_0(\text{odd}) = 0$, exact
+from $2 = -i(1{+}i)^2$); and $\Theta_L = 240\,\sigma_3$
+(classical Eisenstein $E_4$; the $n \le 16500$ census retained
+as the exact ward).  A non-transitive control subgroup admits an
+invariant \emph{non}-uniform census (the law breaks ---
+transitivity is load-bearing), and the even-shell formula
+differs correctly ($7/135$ at $n = 2$).  The consequence chain
+is kernel-checked from the named hypothesis bundle in
+\texttt{TfptCarrier/GaussianShells.lean} ($7$ theorems, exact
+integer identities, standard axioms, no \texttt{sorry}) \mE.
+\emph{The winding decoder of the clock alphabet (2026-08-08,
+round 36):} the Paper-2 winding quadratic $q_{\rm wind}(t) = t^2
+- \gcar t + |Z_2|$ \emph{decodes} the clock alphabet
+(\veri{v874\_feedback\_decoder\_lean.py}, $11/11$,
+\textsc{winding-decoder-exact}): $q(\{2,3,5,6\}) =
+(-|\mu_4|, -|\mu_4|, |Z_2|, h(D_5)) = (-4,-4,2,8)$, with $q(2) =
+q(3)$ \emph{forced} by the palindrome axis $\gcar/2$ and $2 + 3
+= 5 = \gcar$; the decoder polynomial $D(y) = (y{+}4)^2(y{-}2)
+(y{-}8) = y^4 - 2y^3 - 48y^2 - 32y + 256$ carries the budget
+coefficients $(|Z_2|,\ \Oadm = 48,\ 2^{\gcar} = 32,\
+2^{\mathrm{rank}(E_8)} = 256)$; and the Fourier bridge lands:
+$|\mu_4|\,q(|Z_2|)/|R(E_8)| = 4\times(-4)/240 = -1/15$ is
+\emph{exactly} the nonzero-character Walsh eigenvalue of the
+census above ($-16 = |\mu_4|\,q(|Z_2|) = \hat r(u \ne 0)$).
+Sibling deformation directions collapse the bridge and
+alternative alphabets change the decoder; honest lines typed:
+the $-32$ coefficient alone is not selective (the selective
+object is the full vector), and the $6$-vs-$7$ tension carries
+over verbatim.  Type: exact \emph{audit} theorem, not a physical
+functor --- an explicit intertwiner would be needed to make it
+causal \mE.
 \emph{The divisor lattice of $210$, with its canonicity guard
 (2026-08-08):} the label register $\mathbb{F}_2^4$ \emph{is} the
 divisor lattice of $210 = 2\cdot3\cdot5\cdot7$ --- the

@@ -277,7 +277,10 @@ def check_website(registered: list[str]) -> None:
     reg_files = {f"{s}.py" for s in registered} | {"tfpt_constants.py"}
     for sub in ("app", "components", "lib"):
         for f in sorted((WEB / sub).rglob("*.ts*")):
-            for name in set(re.findall(r"v\d+_[A-Za-z0-9_]+\.py", f.read_text())):
+            # left word boundary: probe filenames like cotlar_v2_complete_comb_probe.py
+            # must not false-match as a vN script reference
+            for name in set(re.findall(r"(?<![A-Za-z0-9_])v\d+_[A-Za-z0-9_]+\.py",
+                                       f.read_text())):
                 if name not in reg_files:
                     err("D.code", f"{f.relative_to(ROOT)} references unknown script {name}")
 

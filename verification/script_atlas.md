@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`866` registered scripts · `958` ledger claims · `10` clusters.
+`871` registered scripts · `971` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (386 scripts)
+### `core` — Compiler core & the E₈ glue  (390 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -783,6 +783,14 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v870_christoffel_gauss_frame, v871_pole_uvarov_crossdefect, v864_softport_kappa_law, v866_source_contractor_formula, v831_prime_alias_second_moment, v563, v864, v869 · cited: 3 e8 audit bootstrap, research contracts
 - **v873_pruefer_cotlar_decision** [X] `PRIME.PRUEFER.COMPENSATION.01` — der eingefrorene Prüfer/Cotlar-Vertrag der Runde 34 (16 fixe Phasenzellen bei kπ/8 aus NUR-QUELLE-Prüfer-Phasen der beiden Arm-Jacobi-Ketten, entrywise Paarung, Gefahrenfamilien {0
   - deps: v866_source_contractor_formula, v872_damping_compensation, v869_cdcore_clarkphase, v870_christoffel_gauss_frame, v563, v869, v870, v872 · cited: 3 e8 audit bootstrap, research contracts
+- **v874_feedback_decoder_lean** [-] `FLAVOR.FEEDBACK.NORMALFORM.01, E8.WINDING.DECODER.01` — zwei exakte Compiler-Theoreme: EINE ganzzahlige Basis P = [2·𝟙 | e₃ | R e₃] (det −4, SNF diag(1,2,2)) konjugiert die GESAMTE Windungslinie R_s = R + s 𝟙 e₁ᵀ exakt (symbolisch in s)
+  - deps: v857_simplex_fourier_winding, v858_g31_clock_alphabet, v4, v857, v858, v875_shell_global_lean, v874_feedback_decoder_lean · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v875_shell_global_lean** [-] `E8.SHELL.GLOBAL.01` — das Zensus→Theorem-Upgrade: Θ̂ᵤ/Θ_L = −1/15 auf ALLEN ungeraden Schalen (nicht mehr nur n ≤ 16500). Die drei Inputs, jeder gewardet: (i) die G31-Klassenwirkung = die 60 symplektisc
+  - deps: v857_simplex_fourier_winding, v858_g31_clock_alphabet, v857, v858, v868 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v876_carleson_polygon_wave** [O] `PRIME.PHASE.POLYGON.01, PRIME.RESIDUAL.QUADRATURE.01, PRIME.PI.RESONANCE.ANATOMY.01, PRIME.CARLESON.PRIME.01` — die Carleson-Welle: der CARLESON-WARD macht die Pfeile (i)–(iii) der Prime-Carleson-Kette MASCHINEN-EXAKT (λ_max(M₋) == ‖C‖² = 1 − τ bei rel 1.5e-13/1.3e-15: ‖C_h‖ ≤ 1 ⇔ G₋ ≤ G₊ ⇔ 
+  - deps: v866_source_contractor_formula, v873_pruefer_cotlar_decision, v563, v866, v873, v867_radau_conditioning, v867, v876_carleson_polygon_wave · cited: 3 e8 audit bootstrap, research contracts
+- **v877_complete_comb_reversal** [-] `PRIME.DEEPALPHA.SIGN.01, PRIME.PRUEFER.COMPENSATION.02, PRIME.TRUNCATION.AUDIT.01` — die Schlagzeile der Runde: die UMKEHRUNG** — die negativen Krein-Böden bei kz 142/177/243 (−331/−135/−215) waren KAMM-TRUNKIERUNGS-Artefakte (core.build_window kappt STILL bei ATOM
+  - deps: v824_prime_floor_skeleton, v873_pruefer_cotlar_decision, v876_carleson_polygon_wave, v563, v842, v873, v877_complete_comb_reversal, v866_source_contractor_formula · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1100,9 +1108,9 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v287_free_rp_bulk_to_holomorphic_boundary** [E/O] `SEAM.EQUIV.A01` — Route A (AQFT) theorem-dependency checker for the open Gral arrow 'free Gaussian RP bulk ⇒ holomorphic single-sector boundary net': types the 5-lemma chain and isolates the ONE mis
   - deps: v286_seam_equivalence_contract, v175_net_existence_full_cone, v234_seam_holomorphy_selection, v277_seam_calderon_e8_match, v285_route_ii_seam_condensation · cited: research contracts
 - **v288_full_l2_subprincipal_z4** [E/O] `SEAM.EQUIV.B01` — Route B (DtN): the full-L² lift of the sub-principal Z4 block-diagonality, proving (numerically, on the full Toeplitz operator) the 'probably provable' step and lifting v201/v284 f
-  - deps: v286_seam_equivalence_contract, v201_seam_subprincipal_marks, v284_route_i_rp_uniqueness, FORM.QGEO.03, v198_modular_commutator_reduction · cited: research contracts
+  - deps: v286_seam_equivalence_contract, v201_seam_subprincipal_marks, v284_route_i_rp_uniqueness, FORM.QGEO.04, v198_modular_commutator_reduction · cited: research contracts
 - **v289_marklocal_raw** [E/C/O] `MARKLOCAL.RAW.01` — decompose the ONE remaining Route-B residual ('why is the raw seam sub-principal term mark-local?') into a 5-lemma chain and isolate the single open analytic lemma. [C] L1 conic pa
-  - deps: v288_full_l2_subprincipal_z4, v286_seam_equivalence_contract, v264_raw_seam_marklocal, v201_seam_subprincipal_marks, FORM.QGEO.03 · cited: research contracts
+  - deps: v288_full_l2_subprincipal_z4, v286_seam_equivalence_contract, v264_raw_seam_marklocal, v201_seam_subprincipal_marks, FORM.QGEO.04 · cited: research contracts
 - **v290_z4_smooth_curvature_adversary** [E/O] `SEAM.ADVERSARY.01` — the Route-B red-team that Z4 block-diagonality is NOT mark-locality. Constructs the strongest adversary, a SMOOTH Z4-symmetric off-mark curvature f=ε·cos(4θ), and shows honestly: [
   - deps: v288_full_l2_subprincipal_z4, v289_marklocal_raw, v291_flataway_contract, v201_seam_subprincipal_marks · cited: research contracts
 - **v291_flataway_contract** [E/C/O] `FLATAWAY.RP.01` — the Flat-Away lemma as its own named mini-theorem with three proof routes opened by v290. LEMMA [O]: given RawRPSeam with gap, chirality and the four μ4 marks, the smooth curvature
@@ -1114,7 +1122,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v294_flataway_rp_energy** [E/C/O] `FLATAWAY.ENERGY.01` — the RP-energy / Troyanov route: the flat pillowcase is the unique constant-curvature minimiser at the fixed mark divisor. [E] prescribed divisor + Gauss-Bonnet: S² with 4 cone angl
   - deps: v291_flataway_contract, v292_flataway_heat_reduction, v293_flataway_spectral_hessian, v284_route_i_rp_uniqueness · cited: research contracts
 - **v295_flataway_a2_exact** [E/O] `FLATAWAY.A2.01, FORM.FLATAWAY.01` — the EXACT analytic a₂ coefficient, upgrading the v292 positive-definiteness from numerical to a proof. [E] first variation vanishes: d/dε Tr e^{−tΛ(ε)}|₀ = −t f̂(0) Σe^{−t|n|} = 0 
-  - deps: v292_flataway_heat_reduction, v291_flataway_contract, v295_flataway_a2_exact, v290_z4_smooth_curvature_adversary, FORM.QGEO.03 · cited: research contracts
+  - deps: v292_flataway_heat_reduction, v291_flataway_contract, v295_flataway_a2_exact, v290_z4_smooth_curvature_adversary, FORM.QGEO.04 · cited: research contracts
 - **v296_flataway_a2_closed** [E] `FLATAWAY.A2.CLOSED.01` — the exact a₂ coefficient in CLOSED FORM (replacing v295's validated-numeric sum). [E] the operator tails telescope to a geometric series (Φ(n,n+4k)=e^{−nt}C_k/(16k²), C_k+D_k e^{−4
   - deps: v295_flataway_a2_exact, v292_flataway_heat_reduction · cited: research contracts
 - **v297_route_a_literature_stack** [E/O] `SEAM.EQUIV.A.LIT.01` — Route A's 'one standard import' written out as a precise CITABLE theorem stack. [E] LIT-A invertible/SRE bulk ⇒ trivial bulk topological order (Kitaev, Ann.Phys.321 2006; Freed-Hop
@@ -1410,7 +1418,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v664_look_elsewhere** [E/X] `META.LOOKELSEWHERE.01` — das Bingo-Budget der getypten [C]-Koinzidenzen, quantifiziert — **N = 42 STRUKTUR-SLOTS, K = 19 TREFFER, 6 KILLS ALS 0-TREFFER-TRIALS IM BUDGET; GLOBAL p = 5.08e−3 IM KONSERVATIVST
   - deps: v649_discipline_audit, v624_external_lattice_audit, v626_e8_code, v638_code_semantics, v629_root_incidence, v634_st31_structure, v100, v624 · cited: 3 e8 audit bootstrap
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (183 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (184 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -1728,7 +1736,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v278_lsz_bridge_unitarity** [E/C/O] `QFT4D.SPERT.04` — the S_pert → S_phys LSZ bridge + one-loop unitarity: connects the EG perturbative S-matrix (v269/v271/v273) to the physical asymptotic S-matrix (S_phys = LSZ on the OS Wightman fun
   - deps: v269_spert_paqft_skeleton, v271_eg_oneloop_quartic, v240_gns_os_reconstruction, v243_haag_ruelle_braiding, redteam/rt_F_qft4d · cited: research contracts
 - **v279_qgeo_obligation_lemma** [E/C/O] `QGEO.OBLIG.01` — the QGEO.SYM.01 bedrock written as ONE precise constructive-QFT lemma with a proof-tree completeness check (the formal obligation write-up; does NOT close it). Lemma: given the pre
-  - deps: v181_clock_is_conformal_symmetry, v267_qgeo_rigidity_minimal_axiom, v276_qgeo_flat_closes_commutator, FORM.QGEO.03, v210_mark_local_dtn, v214_seam_pillowcase · cited: research contracts
+  - deps: v181_clock_is_conformal_symmetry, v267_qgeo_rigidity_minimal_axiom, v276_qgeo_flat_closes_commutator, FORM.QGEO.04, v210_mark_local_dtn, v214_seam_pillowcase · cited: research contracts
 - **v280_pillowcase_steklov** [E/C/O] `QGEO.STEKLOV.01` — a direct numerical experiment on the flat τ=i pillowcase orbifold (the seam geometry): the self-investigable test of the QGEO.SYM.01 obligation (does NOT prove the premise). [E] pi
   - deps: v181_clock_is_conformal_symmetry, v276_qgeo_flat_closes_commutator, v279_qgeo_obligation_lemma, v214_seam_pillowcase, v216_marks_gauss_bonnet · cited: research contracts
 - **v284_route_i_rp_uniqueness** [E/C/O] `QGEO.ROUTEI.01` — Route (i) (RP-state uniqueness) decomposed into a 6-lemma chain with every dischargeable lemma discharged and the one irreducible lemma isolated (does NOT prove the open premise). 
@@ -1779,6 +1787,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v306_seed_crossval, v465_seed_crosssector_joint, v84_frozen_registry, v393_corrections_numeric · cited: 5 redteam
 - **v530_center_quotient_compiler** [E/C/O] `DIAMOND.CENTER.QUOTIENT.01` — Center quotient: Cv=v, Z³/Zv = [[8,2],[5,3]] atom matrix; row sums (7,11,13) self-code; CP code (1,7,11,13); det(C+kI)=(k+1)det(A+kI)
   - deps: DIAMOND.CENTER.01, v414_center_resolvent_portal, v223_coxeter_totative_clock, v95, v223, v414 · cited: 2 standard model
+- **v878_ledger_integrity** [E] `GATE.LEDGER.01` — Runde 36 fand und behob die erste PRIMÄRSCHLÜSSEL-Verletzung im status_ledger.csv: claim_id FORM.QGEO.03 war doppelt vergeben (2026-06-15 CohomologyGrading; 2026-06-18 SeamDeckClos
+  - deps: FORM.QGEO.01, FORM.QGEO.02, FORM.QGEO.04 · cited: 3 e8 audit bootstrap, research contracts
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -1797,17 +1807,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×153, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
+**Most-depended-on claims** (the load-bearing roots): `v563`×158, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v862_defect_polar_weld** — `PRIME.KREIN.DEFECT_ONE.01`
-- **v863_redheffer_colligation** — `PRIME.REDHEFFER.COLLIGATION.01`
-- **v864_softport_kappa_law** — `PRIME.SOFTPORT.FESHBACH.01`
-- **v865_weyl_port_readout** — `PRIME.WEYL.PORT.01`
-- **v866_source_contractor_formula** — `PRIME.SOURCECONTRACTOR.NORM.01, PRIME.KREIN.CONTRACTOR.01`
 - **v867_radau_conditioning** — `PRIME.SOFTPORT.RADAU.01`
 - **v868_divisor210_audits** — `E8.DIVISOR210.CANONICITY.01`
 - **v869_cdcore_clarkphase** — `PRIME.CONTRACTOR.CDCORE.01`
@@ -1815,4 +1820,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v871_pole_uvarov_crossdefect** — `PRIME.JACOBI.POLE.UVAROV.01`
 - **v872_damping_compensation** — `PRIME.CD.DAMPING.COMPENSATION.01`
 - **v873_pruefer_cotlar_decision** — `PRIME.PRUEFER.COMPENSATION.01`
+- **v874_feedback_decoder_lean** — `FLAVOR.FEEDBACK.NORMALFORM.01, E8.WINDING.DECODER.01`
+- **v875_shell_global_lean** — `E8.SHELL.GLOBAL.01`
+- **v876_carleson_polygon_wave** — `PRIME.PHASE.POLYGON.01, PRIME.RESIDUAL.QUADRATURE.01, PRIME.PI.RESONANCE.ANATOMY.01, PRIME.CARLESON.PRIME.01`
+- **v877_complete_comb_reversal** — `PRIME.DEEPALPHA.SIGN.01, PRIME.PRUEFER.COMPENSATION.02, PRIME.TRUNCATION.AUDIT.01`
+- **v878_ledger_integrity** — `GATE.LEDGER.01`
 

@@ -925,7 +925,7 @@ def fig_residual_chain():
         ("v176-v181", "One geometric premise", "QGEO.SYM.01: carrier mu4 clock = seam conformal deck", C["green"]),
         ("v194-v201", "Non-circular form", "state-invariance w o rho = w; DtN mark-local (Z4)", C["green"]),
         ("v234-v235", "ONE condition: holomorphy", "no abelian sector <=> det K=1 (the Kitaev E8 tower)", C["green"]),
-        ("v276", "Flat all-orders closure (Lean)", "flat tau=i => [rho,H]=0 to ALL orders (FORM.QGEO.03)", C["green"]),
+        ("v276", "Flat all-orders closure (Lean)", "flat tau=i => [rho,H]=0 to ALL orders (FORM.QGEO.04)", C["green"]),
         ("v282", "Two faces, ONE object", "chi_E8(i)=12: flat tau=i geometry = (E8)_1 holomorphy", C["green"]),
         ("v284-v285", "Two routes, one open lemma", "RP-uniqueness 5/6 + condensation 3/4; open lemmas coincide", C["green"]),
         ("v286-v288", "SEAM.EQUIV.01 named + attacked", "import firewall (v286); Route A 4/5 (v287); Route B proves full-L2 Z4 lift (v288)", C["green"]),

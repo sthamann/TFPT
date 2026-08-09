@@ -15276,7 +15276,8 @@ holdouts kz $90/116$ at $h = 1430/1433$ stay \emph{inside} the
 battery band, while kz 177 at the \emph{smaller} $h = 1219$
 explodes.  Any uniform certificate must therefore be
 $\alpha$-aware, not $h$-aware --- a typed constraint on every
-future candidate.
+future candidate.  (Retired in round 36: the law was the
+truncation's signature --- see the dated correction below.)
 
 \emph{What survives.}  The danger-geometry positive (source-only
 phase cells find the dangerous blocks) and the discrimination
@@ -15284,13 +15285,147 @@ stand as carry-forward assets; the surviving demand of
 \texttt{PRIME.KREIN.CONTRACTOR.01} [O] is narrowed to a
 \emph{non-stationary} phase bound on the explicit kernel, with
 the $\pi$-resonance as the known critical structure such a bound
-must handle.  And the honest note that is this section's real
+must handle (superseded in round 36: the demand now lives in
+embedding coordinates, \texttt{PRIME.CARLESON.PRIME.01} [O], and
+the phase-cell route itself reopens --- see the dated correction
+below).  And the honest note that is this section's real
 content: preregistration, frozen bars and committed hashes ---
 the contract's verdict was not negotiable after the fact, and the
 program records the negative exactly as it would have recorded
 the positive.  This is the standard the program now holds itself
 to.  No marker moves.  \textbf{No statement about the Riemann
 Hypothesis is made.}
+
+\emph{Dated correction (2026-08-08, round 36).}  The RUN-2
+deep-holdout data behind the verdict above was
+\emph{comb-truncated}: the deployed atom table caps silently at
+$\texttt{ATOM\_MAX} = 4\times10^{5}$ while the windows kz
+$142/177/243$ demand comb support up to $e^{2\alpha} =
+4.4\times10^{5}/8.0\times10^{5}/1.8\times10^{6}$
+(\veri{v877\_complete\_comb\_reversal.py}).  The verdict stands as
+the record of the preregistered execution \emph{on the data as
+measured} --- the frozen rules were correctly applied --- but the
+scientific conclusion reverses on complete combs: the identically
+frozen rule returns \textsc{bounded} in both channels, the
+stop-list entry is amended (the class is \emph{not} closed), and
+the $\alpha$-not-$h$ law is retired (it was the truncation's
+signature).  See Section~\ref{sec:comb-reversal}.
+
+\subsection{The complete-comb reversal: the artifact resolved, the
+Cotlar route reopened, and the Carleson chain made
+machine-exact}\label{sec:comb-reversal}
+
+Round 36 (2026-08-08) is the consolidation of the evening campaign
+that followed the Cotlar decision --- and it is the round in which
+the program's discipline machinery caught, typed and reversed its
+own freshest negative (\veri{v876\_carleson\_polygon\_wave.py},
+\veri{v877\_complete\_comb\_reversal.py},
+\veri{v878\_ledger\_integrity.py}; suite $866\to871$).
+
+\emph{The artifact (\veri{v877\_complete\_comb\_reversal.py},
+$8/8$, \textsc{deep-alpha-artifact}).}  Two independent probes had
+reported \emph{negative} Krein floors at the deep holdouts kz
+$142/177/243$ ($\lambda_1 = -331/-135/-215$).  The convention
+audit found the mechanism before any physics reading:
+\texttt{core.build\_window} draws its atoms from a von Mangoldt
+table capped at $\texttt{ATOM\_MAX} = 4\times10^{5}$ and
+\emph{silently truncates} the tent assembly for windows demanding
+support beyond it --- exactly those three rungs, whose demand
+reaches $1.8\times10^{6}$.  With the \emph{complete} canonical
+comb (extended sieve, machinery verbatim) the certified corner
+enclosures are strictly positive
+($+1.06\times10^{-5}/+1.52\times10^{-5}/+1.20\times10^{-5}$) and
+the Cholesky-certified full and Krein floors are positive on all
+three rungs: \emph{no negative canonical window exists}; the
+certified skeleton ladder's end at kz 121 was the atom-table
+\emph{data} boundary, not a structural $\alpha$-wall; $(H_{\rm
+cof})$ is unaffected.  The silent truncation itself is typed as an
+infrastructure bug with a registered follow-up: the builder must
+fail loudly beyond its table.
+
+\emph{The reversal (\veri{v877\_complete\_comb\_reversal.py},
+$9/9$, \textsc{cotlar-bounded-v2}).}  The v2 protocol re-executes
+the round-35 contract with cells, pairing, danger geometry and
+decision bars frozen \emph{identically} (the committed v1 spec SHA
+\texttt{4621b899\ldots} re-verified at run time; v2 spec SHA
+\texttt{5fd6bf61\ldots}); the single substantive change --- the
+complete comb at the deep holdouts --- is warded bit-identical
+everywhere else.  The deep sums collapse into the battery band
+(kz 142: $S_U\,32.07 \to 5.65$, $S_C\,58.78 \to 4.10$; kz 177:
+$14.29 \to 5.97$; kz 243: $13.94 \to 5.87$), both channels are
+\textsc{bounded} by the frozen v1 rule (holdout/battery ratios
+$0.95/0.94 \le 1.2$, log--log slopes $0.006/0.007 \le 0.10$) ---
+\emph{the v1 kill was entirely the artifact} --- and RUN 3, gated
+on \textsc{bounded} and correctly withheld in round 35, unlocks
+and \emph{passes}: the analytic envelope candidates $K_1 =
+\max_d \mathrm{env}_U(d)(1+d)$ and $K_2 = \max_d
+\mathrm{env}_C(d)(1+d)^2$ are $h$-stable on all five complete-comb
+holdouts ($8.36/8.14$ and $40.35/40.47$ against the $1.2\times$
+bar).  Epstein and scramble still break the contrast bars.  The
+truncation audit re-types every affected finding, dated: the v1
+decision \textsc{confounded} and re-decided; the residual horizon
+\emph{strengthened} (its stalls detected the truncation correctly
+--- a validated sign detector); the resonance $\alpha$-law
+addendum void; the polygon holdout rows \textsc{numeric-void}; the
+Radau, preconditioner, cdcore and Uvarov waves unaffected.  The
+remaining gap is typed, not hidden: the Cotlar constant $B_C \sim
+4$ against the needed $1$, and the cell-local dominance defects
+$\sum_r \varepsilon_r \sim 7$--$10$.  The route \emph{reopens}
+(\texttt{PRIME.PRUEFER.COMPENSATION.02}); nothing about
+positivity is claimed.
+
+\emph{The Carleson chain, machine-exact
+(\veri{v876\_carleson\_polygon\_wave.py}, $6/8 + 7/8 + 5/5$ with
+the three frozen-honest FAILs pattern-gated).}  The wave that ran
+alongside the audit gives the wall its embedding coordinates.
+The ward: $\lambda_{\max}(M_-) = \|C\|^2 = 1 - \tau$ at relative
+$1.5\times10^{-13}/1.3\times10^{-15}$ --- arrows (i)--(iii) of the
+chain $\|C_h\| \le 1 \Leftrightarrow G_- \le G_+ \Leftrightarrow$
+\emph{the Carleson embedding} $\int|P|^2\,d\tilde\nu_- \le
+\int|P|^2\,d\tilde\mu_+$ on $\mathcal P_{h-1} \Leftrightarrow
+M(\tilde\mu_+ - \tilde\nu_-) \ge 0$ are machine-exact, with
+embedding constant $\|C_h\|^2 = 1 - \tau_h$; the surviving
+analytic target is registered as
+\texttt{PRIME.CARLESON.PRIME.01} [O].  The polygon compression
+$S_0(m) \ge |S_2(m)|$ \emph{breaks} on all 47 rungs (critical
+prefixes at $2\theta \approx 1.5\pi$ --- the $\pi$-resonance) and
+is typed the \emph{wrong} compression of the Loewner order;
+the holonomy census is null with inverted contrast.  The
+constructive side works at full strength: the residual quadrature
+realizes the positive representing measure $\rho_h$ at \emph{full
+degree} $h$ on all 44 floor-positive rungs ($k^*/h$ median
+$1.000$, slope $0.974$; mp escalation past the 53-bit noise
+wall), with a single atom just beyond the pole port and $7$--$9\times$
+truth/fake discrimination --- and its three sub-$h$ stalls were
+exactly the truncated windows.  The resonance anatomy types the
+critical set \emph{thick}: a constant ${\sim}1/5$ of the minus
+nodes, excision gains nothing, and the soft direction is disjoint
+from the resonant set --- the wall is phase-distributed at this
+partition resolution.
+
+\emph{The theorems next door.}  The same evening produced two
+exact compiler theorems and one census-to-theorem upgrade, booked
+in Papers 1 and 2 with kernel-checked mirrors: the feedback normal
+form of the winding line and the winding decoder of the clock
+alphabet (\veri{v874\_feedback\_decoder\_lean.py};
+\texttt{TfptCarrier/FlavorFeedback.lean}), and the global Gaussian
+shell theorem --- $\hat\Theta_u/\Theta_L = -1/15$ for \emph{all}
+odd shells, no census cap
+(\veri{v875\_shell\_global\_lean.py};
+\texttt{TfptCarrier/GaussianShells.lean}).
+
+\emph{The honest statement.}  This round is the discipline working
+end to end: the residual horizon flagged the stalls, the artifact
+probe typed the silent truncation at certificate grade, the frozen
+v1 bars re-ran unchanged on complete data and reversed the
+closure, and the correction is booked \emph{dated} on every
+surface while the round-35 record stands as what was measured.
+The same sweep found and fixed the ledger's first primary-key
+violation (a double-booked claim id, renamed with a dated QA note)
+and installed the integrity guard
+(\veri{v878\_ledger\_integrity.py}) that makes the whole class of
+bookkeeping errors impossible to reintroduce.  No marker moves.
+\textbf{No statement about the Riemann Hypothesis is made.}
 
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
@@ -15442,14 +15577,25 @@ preregistration \texttt{PRIME.PRUEFER.COMPENSATION.01} ---
 committed byte-exact, not run; and round 35
 (Section~\ref{sec:pruefer-decision}) executes that contract ---
 the program's first fully preregistered uniformity test returns
-\textsc{cotlar-growing} by its own frozen rules (the battery
-flat, the frozen deep holdouts exploding at slopes
-$0.209/0.408$; the growth tracking kz-depth, not window size),
-the blockwise Cotlar--Stein phase-cell class is closed and
-stop-listed, and the surviving demand is narrowed to a
-non-stationary phase bound on the explicit kernel with the
-$\pi$-resonance as the known critical structure
-(\texttt{PRIME.PRUEFER.COMPENSATION.01}, executed))
+\textsc{cotlar-growing} by its own frozen rules on the data as
+measured (\texttt{PRIME.PRUEFER.COMPENSATION.01}, executed); and
+round 36 (Section~\ref{sec:comb-reversal}) resolves and
+\emph{reverses} it --- the deep-holdout explosion was a silent
+comb-truncation artifact of the deployed atom table
+(\textsc{deep-alpha-artifact}: complete-comb floors strictly
+positive, no negative canonical window), the identically frozen
+v1 rule returns \textsc{bounded} on complete combs and the route
+\emph{reopens} with $h$-stable envelope constants
+(\texttt{PRIME.PRUEFER.COMPENSATION.02}; the remaining gap typed:
+$B_C \sim 4$ vs $1$, local defects $7$--$10$), the Carleson chain
+is made machine-exact with embedding constant $1 - \tau_h$ and the
+surviving analytic target is registered in embedding coordinates
+(\texttt{PRIME.CARLESON.PRIME.01} [O]), the polygon and holonomy
+compressions are closed with typed reasons, the residual
+quadrature certifies the floor constructively at full degree on
+all 44 floor-positive rungs, and the $\pi$-resonance is measured
+\emph{thick} --- the wall is phase-distributed
+(\texttt{PRIME.TRUNCATION.AUDIT.01}))
 ---
 \texttt{PRIME.DETECTOR.WINDOW.01} (registered in round 25: the
 comb-native window detector, validated out-of-sample) ---
