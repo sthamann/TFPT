@@ -524,8 +524,8 @@
   "date": "2026-06-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
-  "hash": "940d73b8d25a",
-  "date": "2026-08-08"
+  "hash": "d7e71cb5dfba",
+  "date": "2026-08-09"
  },
  "tfpt_3_e8_audit_bootstrap::section::Further audit lemmas (machine-verified this round)::1": {
   "hash": "f779e820e593",
@@ -724,8 +724,8 @@
   "date": "2026-08-08"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "4f53b64f53b2",
-  "date": "2026-08-08"
+  "hash": "dfc075579e7e",
+  "date": "2026-08-09"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {
   "hash": "62902eaaa0d2",

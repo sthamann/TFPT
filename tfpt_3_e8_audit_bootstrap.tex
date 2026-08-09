@@ -8779,6 +8779,42 @@ Machine-checked: \veri{v878\_ledger\_integrity.py}.
 \mE\ (CSV integrity, frozen baselines remove-only)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The partition closure
+(\texttt{PRIME.PARTITION.\allowbreak CLOSURE.01}).}
+Two probes ($7$ checks with the two frozen-honest FAILs
+T1.4/C.1 pattern-gated at exit 1,
+\textsc{envelope-empirical-only}; $6/6$,
+\textsc{partition-class-closed}; the round-34$\to$37 contract
+chain machine-verified at run time).  The analytic core:
+multiplication by $\cos\theta$ is \emph{exactly} tridiagonal on
+the odd frame (mirror-closed boundary, rank-2 defect at $k = 0$;
+CD telescoping at $1.3\times10^{-13}$ on every rung incl.\ all
+five complete-comb holdouts), and the derived pointwise bound
+carries $h$-uniform source constants ($C_{\rm int} \in [1.232,
+2.328]$, $h = 168$ to $1445$, slope $+0.106$) --- the route's
+first analytic uniformity statement, entrywise grade; $C_{\rm
+int}$ discriminates ($1.41/3.59/12.8$).  The closure: the
+cell-envelope decay is cancellation-carried (provably not
+entrywise-derivable; the honest FAILs kept); no predeclared cell
+accounting below $3.568$ (bar $1$); $\sum_r \varepsilon_r =
+6.9$--$12.9$ $\alpha$-uniform on clean data; and honest tight
+wave-packet frames on both natural phase spaces ($\|B\| =
+\|C^G\|$ exact; the Gabor envelope decays --- the first
+partition to show decay; discrimination $4.985$ vs $128.7$ vs
+$9006.6$) leave diagonal mass $\le 18\%$ under any pairing with
+a growing Schur constant ($4.985 \to 9.222$, slope $+0.295$).
+The cancellation is \emph{atomically global}: no partition-based
+accounting (cells, packets, frames) can certify; the certificate
+demand retyped \emph{non-decompositional}; wave-packet
+partitions and entrywise envelope bounds stop-listed.  No marker
+move, no RH claim.
+Machine-checked: \veri{v879\_envelope\_partition\_closure.py}.
+\mE\ (the CD identity, the derived bound, the tight-frame and
+contract-chain wards) $+$ (\textsc{measured}) (the gap anatomy,
+the packet censuses) $+$ \mO\ (the non-decompositional demand
+--- the surviving target)
+\par\smallskip
+
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}
 One probe ($21/21$ incl.\ the $3$ must-fire controls; verdict

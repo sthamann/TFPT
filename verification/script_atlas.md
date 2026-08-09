@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`871` registered scripts · `971` ledger claims · `10` clusters.
+`872` registered scripts · `972` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (390 scripts)
+### `core` — Compiler core & the E₈ glue  (391 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -791,6 +791,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v866_source_contractor_formula, v873_pruefer_cotlar_decision, v563, v866, v873, v867_radau_conditioning, v867, v876_carleson_polygon_wave · cited: 3 e8 audit bootstrap, research contracts
 - **v877_complete_comb_reversal** [-] `PRIME.DEEPALPHA.SIGN.01, PRIME.PRUEFER.COMPENSATION.02, PRIME.TRUNCATION.AUDIT.01` — die Schlagzeile der Runde: die UMKEHRUNG** — die negativen Krein-Böden bei kz 142/177/243 (−331/−135/−215) waren KAMM-TRUNKIERUNGS-Artefakte (core.build_window kappt STILL bei ATOM
   - deps: v824_prime_floor_skeleton, v873_pruefer_cotlar_decision, v876_carleson_polygon_wave, v563, v842, v873, v877_complete_comb_reversal, v866_source_contractor_formula · cited: 3 e8 audit bootstrap, research contracts
+- **v879_envelope_partition_closure** [-] `PRIME.PARTITION.CLOSURE.01` — der analytische Kern der Route gerettet, der Dekompositions-Weg VOLLSTÄNDIG geschlossen. DER KERN: Multiplikation mit cos θ wirkt EXAKT tridiagonal auf dem ungeraden Frame (der Spi
+  - deps: v866_source_contractor_formula, v877_complete_comb_reversal, v876_carleson_polygon_wave, v563, v873, v877 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1807,13 +1809,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×158, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
+**Most-depended-on claims** (the load-bearing roots): `v563`×159, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `v76`×19, `v56`×19, `v492`×19, `AX.P2.01`×18, `QG.AMB.01`×18, `v367`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v867_radau_conditioning** — `PRIME.SOFTPORT.RADAU.01`
 - **v868_divisor210_audits** — `E8.DIVISOR210.CANONICITY.01`
 - **v869_cdcore_clarkphase** — `PRIME.CONTRACTOR.CDCORE.01`
 - **v870_christoffel_gauss_frame** — `PRIME.CONTRACTOR.CHRISTOFFEL.01`
@@ -1825,4 +1826,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v876_carleson_polygon_wave** — `PRIME.PHASE.POLYGON.01, PRIME.RESIDUAL.QUADRATURE.01, PRIME.PI.RESONANCE.ANATOMY.01, PRIME.CARLESON.PRIME.01`
 - **v877_complete_comb_reversal** — `PRIME.DEEPALPHA.SIGN.01, PRIME.PRUEFER.COMPENSATION.02, PRIME.TRUNCATION.AUDIT.01`
 - **v878_ledger_integrity** — `GATE.LEDGER.01`
+- **v879_envelope_partition_closure** — `PRIME.PARTITION.CLOSURE.01`
 

@@ -42,6 +42,633 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-09",
+    "dateLabel": "2026-08-09 · LXXX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux round thirty-seven — the partition closure: the compact closing round of the reopened Cotlar route — the analytic core is SAVED (the exact tridiagonal CD identity with the route's FIRST h-uniform derived constants) and the decomposition chapter is CLOSED ENTIRELY (cells, packets, all frames): the cancellation is ATOMICALLY GLOBAL and the certificate demand is retyped NON-DECOMPOSITIONAL: ONE module ("
+      },
+      {
+        "k": "c",
+        "v": "v879_envelope_partition_closure.py"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "871\\to872"
+      },
+      {
+        "k": "t",
+        "v": "; two probes embedded byte-exact, the contract chain "
+      },
+      {
+        "k": "c",
+        "v": "4621b899\\ldots"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "5fd6bf61\\ldots"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "27d9f0a3\\ldots"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "2199e9b1\\ldots"
+      },
+      {
+        "k": "t",
+        "v": " machine-verified at run time) — (1) THE ANALYTIC CORE ("
+      },
+      {
+        "k": "c",
+        "v": "envelope_derivation_gap_probe"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "7"
+      },
+      {
+        "k": "t",
+        "v": " checks with the TWO frozen-honest FAILs T1.4/C.1 pattern-gated at exit 1, verdict "
+      },
+      {
+        "k": "t",
+        "v": "envelope-empirical-only"
+      },
+      {
+        "k": "t",
+        "v": "): multiplication by "
+      },
+      {
+        "k": "m",
+        "v": "\\cos\\theta"
+      },
+      {
+        "k": "t",
+        "v": " acts EXACTLY tridiagonally on the odd frame (the mirror symmetry closes the top boundary inside the space, "
+      },
+      {
+        "k": "m",
+        "v": "A_{h-1,h-1} = -\\tfrac12"
+      },
+      {
+        "k": "t",
+        "v": "; the single rank-2 commutator defect at "
+      },
+      {
+        "k": "m",
+        "v": "k = 0"
+      },
+      {
+        "k": "t",
+        "v": "; the Christoffel–Darboux telescoping identity at max residual "
+      },
+      {
+        "k": "m",
+        "v": "1.3\\times10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": " on every rung, battery "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " all five complete-comb holdouts), and the DERIVED pointwise bound "
+      },
+      {
+        "k": "m",
+        "v": "|U_{ij}| \\le [C_{\\rm int} + \\sqrt{(G_+^{-1})_{00}}(K_{-,i}^{-1/2} + K_{+,j}^{-1/2})]/|\\cos\\theta^-_i - \\cos\\theta^+_j|"
+      },
+      {
+        "k": "t",
+        "v": " holds with ZERO entrywise violation and "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "-UNIFORM source constants — "
+      },
+      {
+        "k": "m",
+        "v": "C_{\\rm int} \\in [1.232, 2.328]"
+      },
+      {
+        "k": "t",
+        "v": " (max/min "
+      },
+      {
+        "k": "m",
+        "v": "1.89 \\le 2.0"
+      },
+      {
+        "k": "t",
+        "v": ", log–log slope "
+      },
+      {
+        "k": "m",
+        "v": "+0.106 \\le 0.15"
+      },
+      {
+        "k": "t",
+        "v": ") and "
+      },
+      {
+        "k": "m",
+        "v": "\\sqrt{(G_+^{-1})_{00}} \\in [0.661, 0.899]"
+      },
+      {
+        "k": "t",
+        "v": " from "
+      },
+      {
+        "k": "m",
+        "v": "h = 168"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "1445"
+      },
+      {
+        "k": "t",
+        "v": ": THE FIRST ANALYTIC UNIFORMITY STATEMENT OF THE ROUTE, at entrywise grade; the two honest FAILs ARE the finding — the analytic envelope certifies NO cell decay (every Prüfer cell contains near-diagonal geometric pairs; "
+      },
+      {
+        "k": "m",
+        "v": "K_1^{\\rm an}/K_2^{\\rm an}"
+      },
+      {
+        "k": "t",
+        "v": " blow up as "
+      },
+      {
+        "k": "m",
+        "v": "h^2"
+      },
+      {
+        "k": "t",
+        "v": "): the measured cell-envelope decay is CANCELLATION-CARRIED, provably not entrywise-derivable; and the frozen discrimination bar was pointed at the wrong constant ("
+      },
+      {
+        "k": "m",
+        "v": "C_{\\rm int}"
+      },
+      {
+        "k": "t",
+        "v": " itself discriminates: "
+      },
+      {
+        "k": "m",
+        "v": "1.41"
+      },
+      {
+        "k": "t",
+        "v": " truth / "
+      },
+      {
+        "k": "m",
+        "v": "3.59"
+      },
+      {
+        "k": "t",
+        "v": " Epstein / "
+      },
+      {
+        "k": "m",
+        "v": "12.8"
+      },
+      {
+        "k": "t",
+        "v": " scramble); the gap decomposition: no predeclared accounting below "
+      },
+      {
+        "k": "m",
+        "v": "3.568"
+      },
+      {
+        "k": "t",
+        "v": " (bar "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "C_1"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "C_4"
+      },
+      {
+        "k": "t",
+        "v": " damped censuses "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " cell variants "
+      },
+      {
+        "k": "m",
+        "v": "n = 8/16/32"
+      },
+      {
+        "k": "t",
+        "v": "), diagonal share "
+      },
+      {
+        "k": "m",
+        "v": "15"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "24\\%"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\sum_r \\varepsilon_r = 6.9"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "12.9"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": "-uniform on clean complete-comb data (deep holdouts IN/ABOVE the battery band, slope "
+      },
+      {
+        "k": "m",
+        "v": "+0.237"
+      },
+      {
+        "k": "t",
+        "v": ") — the round-36 gap ("
+      },
+      {
+        "k": "m",
+        "v": "B_C \\sim 4"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": ", local defects "
+      },
+      {
+        "k": "m",
+        "v": "O(10)"
+      },
+      {
+        "k": "t",
+        "v": ") is STRUCTURAL to every cell frame: NO cell-partition Cotlar accounting of this family can certify; (2) THE TERMINAL STATEMENT ("
+      },
+      {
+        "k": "c",
+        "v": "wave_packet_partition_probe"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "6/6"
+      },
+      {
+        "k": "t",
+        "v": ", verdict "
+      },
+      {
+        "k": "t",
+        "v": "partition-class-closed"
+      },
+      {
+        "k": "t",
+        "v": "): the typed next object — a non-cell partition where the diagonal carries the mass — is built honestly and KILLED BY MEASUREMENT: both coherent-state designs (rank-Gabor on the node-rank phase space; chain packets through the exact discrete OP transform) are honest TIGHT frames on every rung ("
+      },
+      {
+        "k": "m",
+        "v": "\\|B\\|_2 = \\|C^G\\|_2"
+      },
+      {
+        "k": "t",
+        "v": " exact at "
+      },
+      {
+        "k": "m",
+        "v": "10^{-8}"
+      },
+      {
+        "k": "t",
+        "v": " rel; the gauge identity "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma_{\\max}(C^G)^2 = 1 - \\lambda_1(\\Delta)"
+      },
+      {
+        "k": "t",
+        "v": " exact); the Gabor envelope DECAYS in phase space ("
+      },
+      {
+        "k": "m",
+        "v": "0.529 \\to 0.007"
+      },
+      {
+        "k": "t",
+        "v": " at kz 243 — the first partition of the program to show decay) and the discrimination is massive (truth "
+      },
+      {
+        "k": "m",
+        "v": "E_{\\rm Schur}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "4.985"
+      },
+      {
+        "k": "t",
+        "v": " vs Epstein "
+      },
+      {
+        "k": "m",
+        "v": "128.7"
+      },
+      {
+        "k": "t",
+        "v": " vs scramble "
+      },
+      {
+        "k": "m",
+        "v": "9006.6"
+      },
+      {
+        "k": "t",
+        "v": "); BUT the diagonal does NOT carry under ANY pairing (nearest-packet share "
+      },
+      {
+        "k": "m",
+        "v": "\\le 0.070"
+      },
+      {
+        "k": "t",
+        "v": ", empirical-partner share "
+      },
+      {
+        "k": "m",
+        "v": "\\le 0.183"
+      },
+      {
+        "k": "t",
+        "v": " at injectivity "
+      },
+      {
+        "k": "m",
+        "v": "\\le 0.77"
+      },
+      {
+        "k": "t",
+        "v": " — diagonal mass "
+      },
+      {
+        "k": "m",
+        "v": "\\le 18\\%"
+      },
+      {
+        "k": "t",
+        "v": ") and the Schur constant GROWS ("
+      },
+      {
+        "k": "m",
+        "v": "4.985 \\to 9.222"
+      },
+      {
+        "k": "t",
+        "v": ", slope "
+      },
+      {
+        "k": "m",
+        "v": "+0.295"
+      },
+      {
+        "k": "t",
+        "v": "; every functioning design "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 3.5"
+      },
+      {
+        "k": "t",
+        "v": " on every rung) — the cancellation that holds "
+      },
+      {
+        "k": "m",
+        "v": "\\|C\\| \\le 1"
+      },
+      {
+        "k": "t",
+        "v": " is ATOMICALLY GLOBAL, it lives in NO partition of this family; (3) THE BOOKING: ledger "
+      },
+      {
+        "k": "m",
+        "v": "971 \\to 972"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PARTITION.CLOSURE.01"
+      },
+      {
+        "k": "t",
+        "v": ") with the dated round-37 notes on "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.CARLESON.PRIME.01"
+      },
+      {
+        "k": "t",
+        "v": " (the constraint set extended: the embedding certificate must be NON-DECOMPOSITIONAL — eigen-enclosure / Loewner-order / passivity, all three measured territory; the new carried assets typed: the tridiagonal identity, the "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "-uniform derived constants, their source-law persistence as "
+      },
+      {
+        "k": "m",
+        "v": "h \\to \\infty"
+      },
+      {
+        "k": "t",
+        "v": " as the named open object) and "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PRUEFER.COMPENSATION.02"
+      },
+      {
+        "k": "t",
+        "v": " (from BOUNDED to CLOSED-AS-A-CLASS, with the stop-list entries: wave-packet / coherent-state partitions of the contractor family; entrywise bounds on the cell envelope); papers: the prime-front round-37 section “the partition closure” "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the open-fronts chain extended, "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " audit card, "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " recorded block "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the dated Carleson note; website mirrors and generated surfaces synced ("
+      },
+      {
+        "k": "m",
+        "v": "872"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v879"
+      },
+      {
+        "k": "t",
+        "v": "); NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-08",
     "dateLabel": "2026-08-08 · LXXIX",
     "heading": [

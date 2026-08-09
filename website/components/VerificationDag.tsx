@@ -266,6 +266,7 @@ const NODES: DagNode[] = [
       "v876_carleson_polygon_wave.py",
       "v877_complete_comb_reversal.py",
       "v878_ledger_integrity.py",
+      "v879_envelope_partition_closure.py",
       "v536_eichler_trace_layer.py",
       "v537_halfintegral_bridge.py",
       "v538_relative_trace_identity.py",
