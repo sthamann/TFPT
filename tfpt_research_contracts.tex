@@ -6370,6 +6370,1116 @@ constants, their source-law persistence (the named open object).
 Full narrative in the prime-front paper; audit card in
 Paper~3.  No RH statement.\par}
 
+\par\smallskip\noindent\textbf{The rounds-38/39 sandbox campaign
+(the operator geometry and the source law of the wall).}
+{\sloppy
+\emph{Recorded} 2026-08-09 (a campaign note; $25$ frozen sandbox
+probes, every spec amendment fail-first on record; the promoted
+verification modules
+\veri{v880\_finite\_anchor\_theorems.py},
+\veri{v881\_carleson\_port\_geometry.py} and
+\veri{v882\_port\_source\_mellin.py} embed their discovery probes
+byte-exact).  The campaign gives the Carleson wall its exact
+operator geometry (rank-2 Jacobi displacement, gauge-exact
+Carleson Gram with the classical testing diagonal, exact port
+Schur reduction --- the port \emph{is} the wall --- and the
+preserved IIKS integrable class), its universal source law (the
+$\sqrt{n/X}$-uniformized prime measure, the PNT edge law $1 -
+e^{-1/2}$ as the ${\sim}39\%$ port mass, the Mellin--Cauchy port
+symbol, the closed criticality budget), and the hardness decision
+(\texttt{PRIME.ERRORTERM.SCALE.01} below); the six ledger-only
+items of the campaign are registered as the blocks that follow.
+Full narrative in the prime-front paper; audit cards in Paper~3.
+No marker moves; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The error-term scale decision
+(\texttt{PRIME.ERRORTERM.\allowbreak SCALE.01}, decided).}
+{\sloppy
+\emph{Recorded} 2026-08-09, DECIDED (sandbox probe
+\texttt{errorterm\_demand\_curve\_probe.py}; the demand-curve
+measurement behind the round-39 hardness statement).  \emph{The
+finding:} the wall margin equals injected off-critical
+perturbation \emph{energy} on the $\tau$ law exactly (ratios
+$1.00$--$1.10$ across the tested grid); the perturbation
+amplitude scales as $A^{*} \sim \sqrt{\tau}/\delta^{2}$ under the
+frozen convention $\Delta\lambda = O(A^{2}\delta^{4})$; and the
+kill localizes through the port block.  \emph{The decision:} the
+reduction chain of the wall is an \emph{exact reformulation at RH
+strength} --- there is no unconditional slack anywhere in it; the
+identities are exact, and the one-sidedness is open at exactly
+that strength.  Recorded as a hardness decision, not a contract
+demand.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The port limit contract
+(\texttt{PRIME.PORT.\allowbreak LIMIT.01} [O]).}
+{\sloppy
+\emph{Registered} 2026-08-09, OPEN (sandbox probes
+\texttt{port\_limit\_operator\_probe.py},
+\texttt{port\_cocycle\_window\_probe.py},
+\texttt{weyl\_m\_criticality\_probe.py}).  \emph{Measured:} the
+compressed operator-norm convergence has slope $-2.80$ carrying
+the wall exactly; $\lambda_{\max}$ increases to $1$ from below;
+the atom-at-edge Weyl-$m$ class has $\sigma \to -1$ and $w_1 \to
+0.72$.  \emph{The demand:} the fixed-space limit theorem --- the
+existence and identification of the limiting port operator on a
+fixed space, with the wall carried through the limit.
+\emph{Kill:} a measured break of the convergence slope or a rung
+family on which the compressed operator fails to carry the wall.
+No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The scalar port inequality
+(\texttt{PRIME.PORT.\allowbreak SCALAR.01} [O]).}
+{\sloppy
+\emph{Registered} 2026-08-09, OPEN (sandbox probe
+\texttt{port\_scalar\_schur\_probe.py}).  \emph{Measured:} the
+wall is \emph{one} scalar inequality,
+\[
+\sigma_h \;=\; \big[\,1 - \tilde\nu_{m^{*}}K_h(y^{*},
+y^{*})\,\big] - b^{\mathsf T}(I - E_{\rm rest})^{-1}b \;\ge\; 0,
+\]
+exactness $6.2\times10^{-11}$ on $42$ rungs, with $\sigma_h$
+tracking $\tau_h$.  \emph{The demand:} one-sidedness --- a proof
+that $\sigma_h \ge 0$ along a cofinal window family.  \emph{Kill:}
+a rung on which the scalar reduction fails at certificate grade.
+No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The port cocycle window
+(\texttt{PRIME.PORT.\allowbreak COCYCLE.01} [O]).}
+{\sloppy
+\emph{Registered} 2026-08-09, OPEN (sandbox probe
+\texttt{port\_cocycle\_window\_probe.py}).  \emph{Measured:} a
+fixed $12\times12$ window carries the wall exactly, with
+compressed convergence slope $-2.80$.  \emph{The demand:} the
+closed-form limit of the window cocycle.  \emph{Kill:} a depth at
+which the fixed window stops carrying the wall.  No marker move;
+no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The Case sum-rule contract
+(\texttt{PRIME.CASE.\allowbreak SUMRULE.01} [O]).}
+{\sloppy
+\emph{Registered} 2026-08-09, OPEN (sandbox probes
+\texttt{case\_sum\_rule\_probe.py},
+\texttt{testing\_mnt\_law\_probe.py}).  \emph{Measured:} the
+deployed Jacobi chains are measured Killip--Simon class.
+\emph{The demand:} prove a Case C0/C1 sum rule implying the
+unconditional testing bound $T_h \le 1$; the target is exactly
+the closed criticality budget of round 39 (PNT growth compensated
+by window geometry plus Christoffel).  \emph{Kill:} a measured
+departure of the deployed chains from the Killip--Simon class.
+\emph{Route update (2026-08-09, round CVIII) --- retyped
+conditional:} the free-tail bridge is numerically delivered
+(sandbox \texttt{freetail\_case\_bridge\_probe.py}, $8/8$: the
+finite Killip--Simon P2 identity exact at $5\times10^{-11}$; the
+P2 energy $h$-uniformly bounded $0.63$--$0.75$ over all $42$
+rungs), \emph{but} the route is retyped conditional by
+\veri{v889\_route\_decisions.py}: \textsc{pnt-insufficient} (the
+smooth reference violates the port margin on every rung) and
+\textsc{homotopy-indefinite-arithmetic} (the required input is
+the signed pair-correlation functional).  The demand becomes:
+state and prove the weighted prime-pair correlation inequality,
+or accept conditionality.  No marker move; no RH
+statement.\par}
+
+\par\smallskip\noindent\textbf{The port Riemann--Hilbert contract
+(\texttt{PRIME.PORT.\allowbreak RIEMANNHILBERT.01} [O]).}
+{\sloppy
+\emph{Registered} 2026-08-09, OPEN (sandbox probes
+\texttt{port\_riemann\_hilbert\_setup\_probe.py},
+\texttt{mellin\_model\_operator\_probe.py}).  \emph{Measured:}
+the discrete $2\times2$ IIKS Riemann--Hilbert problem of the
+dressed port operator is \emph{well-posed} --- the two generators
+are explicit and the resolvent closure holds at
+$1.2\times10^{-12}$.  \emph{The demand:} nonlinear steepest
+descent for $h \to \infty$.  \emph{The calibration constraint
+(load-bearing):} the smooth PNT continuum model \emph{violates}
+the floor at finite depth ($\tau_{\rm model}$ $-1.26 \to -0.11$)
+--- the prime discreteness is load-bearing, and the unperturbed
+problem must keep the lattice.  \emph{Kill:} a failure of the
+IIKS well-posedness on a deployed rung.  No marker move; no RH
+statement.\par}
+
+\par\smallskip\noindent\textbf{The rounds-40/41 flow corridor
+(the determinant chain, the parametrix decision, the certified
+head, and the complete-comb anatomy).}
+{\sloppy
+\emph{Recorded} 2026-08-09 (a campaign note; nine frozen sandbox
+probes, every spec amendment fail-first on record; the promoted
+verification modules
+\veri{v883\_tau\_chain\_parametrix.py},
+\veri{v884\_certified\_head\_positivity.py},
+\veri{v885\_ladder\_flow\_anatomy.py} and
+\veri{v886\_register\_gapcode\_null.py} embed their discovery
+probes byte-exact).  The campaign gives the wall's sign an exact
+finite determinant chain ending in a candidate tau function, the
+decided parametrix constraint (the Euler-product comb is
+globally rigid --- every smoothing-based parametrix is dead),
+the first rigorous positivity statement of the program (exact
+integer Sylvester certificates on the three head rungs), the
+complete flow/induction anatomy of the ladder (degree-2 Lax
+closure; no monotone one-prime induction in any insertion order
+--- positivity is a property of the complete comb), and the
+register-gapcode disenchantment.  The registrations and updates
+follow as the blocks below.  Full narrative in the prime-front
+paper; audit cards in Paper~3.  No marker moves; no RH
+statement.\par}
+
+\par\smallskip\noindent\textbf{The tau contract
+(\texttt{PRIME.PORT.\allowbreak TAU.01} [O]).}
+{\sloppy
+\emph{Registered} 2026-08-09, OPEN --- the finite-$h$
+determinant chain delivered
+(\veri{v883\_tau\_chain\_parametrix.py}, $5/5$,
+\textsc{tau-chain-exact}).  \emph{Exact:} the Schur determinant
+identities $\sigma_h = \det(I - E)/\det(B)$ and $\det(I - E) =
+\det(I - R)\det(I - D_P)$ are machine-exact
+($4.8\times10^{-13}$ in log space) with positive bulk factors,
+hence $\operatorname{sign}\tau_h = \operatorname{sign}\sigma_h$
+= the sign of the wall with $\tau_h := \det(I - D_P)$; the
+Jacobi variational identity $\frac{d}{ds}\log\det(I - sD_P) =
+-\operatorname{tr}[(I - sD_P)^{-1}D_P]$ holds on the true family
+($10^{-6}$); the determinant wall indicator is false on Epstein
+and scramble.  \emph{Measured:} the $\kappa/\rho$ readout ---
+$\operatorname{slope}(\log\sigma) = -2.93$ vs $2\times$ the
+Mellin fluctuation slope $-2.53$ ($\sigma \sim$ fluctuation$^2$
+within $16\%$).  \emph{The demand (the symbolic half):} $\tau_h$
+= the tau function of the discrete $2\times2$ IIKS
+Riemann--Hilbert problem of the \texttt{v881} generators, for
+arbitrary $h$ without numerics.  \emph{Kill:} a heavy rung on
+which the determinant chain fails at certificate grade.  No
+marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The parametrix decision
+(\texttt{PRIME.PORT.LATTICE.\allowbreak PARAMETRIX.01},
+decided).}
+{\sloppy
+\emph{Registered and decided} 2026-08-09
+(\veri{v883\_tau\_chain\_parametrix.py}, $3/3 + 3/3$,
+\textsc{parametrix-measured (fluctuations-required)} $+$
+\textsc{zones-measured (both-required)}).  \emph{Measured:}
+four worlds through the identical pencil pipeline on every heavy
+rung --- true comb $\tau = +1.7\times10^{-4}$ to
+$+6.7\times10^{-7}$ (ward); lattice with fully smooth quadrature
+masses $-78$ to $-1706$; lattice with exact local
+$\pm\tfrac12$-log-unit mass sums $-78$ to $-5537$; plain
+continuum $-0.11$ to $-1.26$ (ward) --- and the zone refinement
+kills both ways (edge-only smoothing $-3.7$ to $-22.1$;
+interior-only $-77$ to $-7551$).  \emph{The decision (a design
+constraint for every RH analysis of the wall):} the exact
+$\Lambda$-mass-position pairing --- the multiplicative
+Euler-product structure --- is load-bearing in both zones; the
+main/unperturbed object must carry the full von Mangoldt comb;
+every smoothing-based parametrix is dead; the small parameters
+live exclusively in the flow/deformation direction (ladder
+order, isomonodromy/tau, $s$-deformation).  No marker move; no
+RH statement.\par}
+
+\par\smallskip\noindent\textbf{The certified head
+(\texttt{PRIME.PORT.CERTIFIED.\allowbreak HEAD.01},
+delivered).}
+{\sloppy
+\emph{Registered and delivered} 2026-08-09
+(\veri{v884\_certified\_head\_positivity.py}, $5/5$,
+\textsc{certified-head}; SPEC v2 amendments on record).
+\emph{Proven:} $\sigma_h > 0$ on kz 9 ($h = 184$), kz 12 ($151$)
+and kz 13 ($168$) --- the first rigorous positivity statement of
+the program: independent \texttt{mpmath} rebuild of the window
+lags (dps $60/100$; conservative per-entry error $\varepsilon_c
+= 10\times$ dps-disagreement; cross-ward at $1.1\times10^{-14}$,
+which caught a sign bug in the rebuilt Arch near-branch), matrix
+shift by the total error budget (${\sim}2\times10^{-18}$,
+${\sim}14$ orders below the margins), then exact integer
+Bareiss/LDL on the $Q = 10^{20}$ grid: all pivots positive
+(Sylvester) $\Rightarrow K \succ 0 \Rightarrow \sigma_h > 0$ via
+the exact \texttt{v866} equivalence; certified floors
+$\lambda_{\min} \ge 3.633/3.327/3.842\times10^{-4}$; the Epstein
+control through the identical machinery refused at pivot index
+$10$.  \emph{Typed honestly:} proven modulo the declared
+conservative transcendental-evaluation error model
+(validated-numerics standard); the ball-arithmetic closure and
+the $42$-rung rollout were the named follow-ups --- both since
+delivered (\veri{v887\_certified\_ladder\_complete.py},
+\veri{v897\_certified\_interval\_ladder.py}: the informal error
+model is retired from the ladder).  \emph{Kill:} a certified
+pivot failure on a head rung under the frozen error
+model.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The leading-sign contract
+(\texttt{PRIME.PORT.LEADING.\allowbreak SIGN.01} [O]).}
+{\sloppy
+\emph{Registered} 2026-08-09, OPEN (the moonshot of the
+round-40 review).  \emph{The demand:} $\sigma_h = \kappa\rho_h +
+o(\rho_h)$ with a closed-form $\kappa > 0$ via a relative
+Case/Killip--Simon identity --- the one-sidedness of the scalar
+wall as an asymptotic law.  \emph{Measured seeds:} the $\rho$
+candidate is the squared lattice fluctuation scale ---
+$\operatorname{slope}(\log\sigma) = -2.93$ vs $2\times$ the
+Mellin fluctuation slope $-2.53$ (within $16\%$;
+\veri{v883\_tau\_chain\_parametrix.py}); the parametrix decision
+forces the $h$-ladder direction --- $D_P(h)$ as sections of one
+arithmetic limit object, $\kappa$ from the cocycle increment
+structure, not from comb deformations.  \emph{Kill:} a measured
+break of the $\sigma \sim$ fluctuation$^2$ law on the deep
+ladder.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The tail contract
+(\texttt{PRIME.PORT.\allowbreak TAIL.01} [O]).}
+{\sloppy
+\emph{Registered} 2026-08-09, OPEN (the final composition
+contract of the port route).  \emph{The demand:} $|\sigma_h -
+\kappa\rho_h| \le (\kappa/2)\rho_h$ for all $h \ge H$ explicit
+(the tail half), plus the finite head by certified numerics,
+plus the Lean composition through
+\texttt{krein\_cofinal\_weil}.  \emph{Head status:} delivered
+for kz 9/12/13 (\texttt{PRIME.PORT.CERTIFIED.HEAD.01},
+\veri{v884\_certified\_head\_positivity.py}); the rollout to all
+$42$ head rungs and the ball-arithmetic closure are the named
+next steps; the tail half waits on
+\texttt{PRIME.PORT.LEADING.SIGN.01}.  \emph{Promotion note
+(2026-08-09, round CVIII):} the rollout is \emph{complete} ---
+$\sigma_h > 0$ proven on all $42$ reachable rungs, promoted in
+\veri{v887\_certified\_ladder\_complete.py}
+(\texttt{PRIME.PORT.CERTIFIED.LADDER.01}; the $40$-rung parent
+rollout stays sandbox, runtime-excluded); the remaining named
+steps are the ball-arithmetic closure and the Lean composition.
+\emph{Interval note (2026-08-09, round CXV):} the
+ball-arithmetic closure is \emph{delivered} ---
+\veri{v897\_certified\_interval\_ladder.py}
+(\texttt{PRIME.PORT.BALLLADDER.01}) re-proves all $42$ reachable
+rungs with rigorous interval-arithmetic shifts ($15$
+exact-rational $+$ $27$ validated-precision) and retires the
+informal lag-evaluation error model; the remaining named steps
+are the Lean composition and the asymptotic tail.
+\emph{Kill:} a certified
+negative $\sigma_h$ on any head rung.  No marker move; no RH
+statement.\par}
+
+\par\smallskip\noindent\textbf{The isomonodromy-flow measurement
+(\texttt{PRIME.PORT.\allowbreak ISOFLOW.01}).}
+{\sloppy
+\emph{Registered} 2026-08-09, measured
+(\veri{v885\_ladder\_flow\_anatomy.py}, $8/8$,
+\textsc{isoflow-measured (flow-open)}).  \emph{Measured:} the
+gauge-fixed IIKS generator flow over $41$ consecutive ladder
+pairs closes in degree 2 (residual medians $0.244/0.248$ with
+$\{Y^2 f, Y^2 g\}$; degree 1 fails at $0.498/0.457$) ---
+isomonodromy-compatible, gauge stable (consecutive cos median
+$0.943$), $\log\tau$ monotone $-58.6 \to -396.6$.  \emph{Typed
+honestly:} the controls close similarly --- degree-2 closure is
+a structural precondition, not a discriminator; the arithmetic
+stays in the value.  \emph{The demand:} the closed-form degree-2
+deformation polynomial in a well-conditioned coordinate (the
+\texttt{LAX2} block below).  No marker move; no RH
+statement.\par}
+
+\par\smallskip\noindent\textbf{The window-ladder transfer
+(\texttt{PRIME.PORT.LADDER.\allowbreak TRANSFER.01}).}
+{\sloppy
+\emph{Registered} 2026-08-09, measured
+(\veri{v885\_ladder\_flow\_anatomy.py}, $5/5$,
+\textsc{ladder-measured (perturbative $+$ non-monotone)}).
+\emph{Measured:} over $40$ consecutive steps the first-order
+transfer is marginally accurate (median $0.458$ at bar $0.5$)
+--- the step is first-order graspable --- but raw $h$ order is
+not a natural flow (only $52\%$ of steps increase $\lambda$;
+$\|\Delta\|/\mathrm{gap} = 594$--$2026$: the accuracy comes from
+port concentration, not step smallness).  \emph{The typed
+lesson:} the induction needs a better order than $h$; the nested
+one-prime ladder was the named candidate and is decided in the
+block below.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The one-prime ladder decision
+(\texttt{PRIME.PORT.\allowbreak PRIMELADDER.01}, decided).}
+{\sloppy
+\emph{Registered and decided} 2026-08-09
+(\veri{v885\_ladder\_flow\_anatomy.py}, $13/13$,
+\textsc{primeladder-measured}).  \emph{Measured (exact per-atom
+lag rows; linearity warded at $0$; endpoint warded vs the true
+floor at $2.5\times10^{-9}$):} the pure-Arch start is
+catastrophically subcritical ($\tau(0) = -9.9\times10^{13}$ at
+kz 9; $G_+$ not even PD at kz 13/26/40); insertion crosses into
+positivity only at $u^{*}/U = 0.991$--$0.999$ in every insertion
+order; the edge-first ordering reaches stable positivity only at
+$100\%$ of the atoms (the ${\sim}39\%$ edge mass alone does not
+carry the wall); per-atom increments $54$--$64\%$ positive; the
+deterministic mass scramble drops the endpoint to $-474.7$
+(control fires).  \emph{The decision:} positivity is a property
+of the complete comb --- \texttt{v877}'s truncation reversal
+sharpened to atom resolution; no monotone one-prime induction
+exists in any order; induction must run in a flow coordinate,
+not in comb content.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The degree-2 Lax coefficient flow
+(\texttt{PRIME.PORT.\allowbreak LAX2.01}).}
+{\sloppy
+\emph{Registered} 2026-08-09, measured
+(\veri{v885\_ladder\_flow\_anatomy.py}, $11/11$,
+\textsc{lax2-measured (flow-noisy / lax2-partial)}).
+\emph{Measured:} the twelve deformation-polynomial coefficients
+are extracted on all $41$ ladder steps, but normalized by the
+$\alpha$ step the coefficient series behave as noise (median
+roughness $1.365$ vs lawful bar $0.7$); the operator-level IIKS
+prediction misses the bar narrowly ($0.350$ vs $0.3$); the
+\emph{integrated} tau-transfer identity $\log\det(I + (I -
+D_k)^{-1}\Delta D)$ holds exactly (warded at
+$5.6\times10^{-11}$).  \emph{The named lead:} the dictionary
+columns $f, Yf, Y^2 f$ are nearly collinear --- the raw
+coefficient basis is ill-conditioned; a well-conditioned
+reparametrization may expose a lawful flow the raw basis masks.
+\emph{The demand:} the flow in a conditioned coordinate; then
+couple to the \texttt{PRIME.PORT.TAU.01} variational identity.
+\emph{Kill:} a conditioned basis in which the flow remains noise
+at the frozen bars.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The gapcode disenchantment
+(\texttt{PRIME.DIVISOR210.\allowbreak GAPCODE.01}).}
+{\sloppy
+\emph{Registered} 2026-08-09, an honest negative/limit row
+(\veri{v886\_register\_gapcode\_null.py}, $24/24$,
+\textsc{gapcode-measured}; five honest SPEC amendments on
+record, none loosening a criterion).  \emph{Measured:} the
+error-code reading of the $210$-register is literally true on
+the prime side --- the register bits $\{2,3,5,7\}$ are the first
+four parity checks of the sieve (rate $48/210$; $16$ syndrome
+labels; $0$ bits of message capacity); the hard floor $g_k \ge
+w(p_k \bmod 210)$ holds with zero violations in
+$5.76\times10^{6}$ consecutive pairs;
+$I(\text{state};\text{gap}) = 1.14$ bits --- and the code is the
+sieve: a zero-parameter wheel--Cram\'er null explains $R^2 =
+0.99839$ of the state profile, the arithmetic excess is $4.02\%$
+and shrinking ($21.81 \to 4.02\%$ over $X = 10^5$--$10^8$), no
+knee at four checks, $210$ on the foreign-wheel trend ($z =
+-0.61\sigma$), all eight anchor Walsh seats below $2.5\sigma$
+exactly as CRT predicts.  \emph{The bound:} everything the
+register knows about prime gaps, every $4$-prime wheel knows;
+nothing moves with $c_3$ or $\varphi_0$; the register's
+uniqueness remains the arithmetic forcing $\prod(p-1) = 48$
+(\texttt{v868}).  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The rounds-42--49 consolidation
+(the complete certified ladder, the finite Pfaffian/$K_6$
+signature, the four route decisions, the surviving positivity
+architecture, and the M\"obius kills).}
+{\sloppy
+\emph{Recorded} 2026-08-09 (a campaign note, round CVIII;
+fourteen frozen sandbox probes, every spec amendment fail-first
+on record; the promoted verification modules
+\veri{v887\_certified\_ladder\_complete.py},
+\veri{v888\_finite\_pfaffian\_signature.py},
+\veri{v889\_route\_decisions.py},
+\veri{v890\_total\_positivity\_flow.py} and
+\veri{v891\_moebius\_firewall\_kills.py} embed their discovery
+probes byte-exact).  The campaign completes the certificate
+rollout ($\sigma_h > 0$ proven on all $42$ reachable rungs),
+closes the finite Pfaffian/$K_6$ signature of the compiler (the
+canonical sign character; the self-hosting counting theorem;
+the flavor hexagon as the automorphism orbit), decides the four
+routes of the sum-rule program (the wall dies off-diagonally;
+PNT is insufficient; the diagonal input is pair-correlation
+class --- the sum-rule contract retyped conditional), measures
+the surviving positivity architecture (flag positivity -- all leading principal minors, Sylvester; typing corrected per the round-51 review, classical total positivity is not claimed; the
+wall margin as the pole distance of the $s$-flow; multi-factor
+inheritance), and honestly kills the
+M\"obius/carrier-invariance route with mechanisms.  The
+registrations and updates follow as the blocks below (plus the
+dated retypes on the sum-rule and tail contracts above).  Full
+narrative in the prime-front paper and Paper~1; audit cards in
+Paper~3.  No marker moves; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The complete certified ladder
+(\texttt{PRIME.PORT.CERTIFIED.\allowbreak LADDER.01},
+delivered).}
+{\sloppy
+\emph{Registered and delivered} 2026-08-09
+(\veri{v887\_certified\_ladder\_complete.py}, $7/7$,
+\textsc{certified-ladder-complete}).  \emph{Proven:} $\sigma_h >
+0$ on \emph{all} $42$ reachable rungs of the deployed window
+ladder --- $12$ rungs ($h \le 300$) by exact-rational integer
+Bareiss/LDL certificates, $30$ rungs by validated-precision
+\texttt{mpmath} Cholesky at dps $120/200$ (precision doubling;
+every pivot $> 10^{6}\times$ the accumulated per-pivot rounding
+bound at both precisions); $0$ refusals, $0$ out-of-reach; the
+module closes the two deepest rungs $h = 859/878$ with floors
+$\ge 8.352/9.187\times10^{-6}$ and pivot-to-bound ratios
+${\sim}10^{115}/10^{195}$; the Epstein control refused at pivot
+index $10$ by the identical machinery; the $40$-rung parent
+rollout stays sandbox evidence, runtime-excluded.  \emph{Typed
+honestly:} the validated-precision tier is never labeled
+exact-rational; proven modulo the declared conservative
+lag-evaluation error model (validated-numerics standard); the
+ball-arithmetic closure and the Lean composition through
+\texttt{krein\_cofinal\_weil} remain the named steps of
+\texttt{PRIME.PORT.TAIL.01}; the asymptotic tail is untouched.
+\emph{Interval note (2026-08-09, round CXV):} the error model is
+upgraded --- \veri{v897\_certified\_interval\_ladder.py}
+(\texttt{PRIME.PORT.BALLLADDER.01}, below) re-proves all $42$
+rungs with \emph{rigorous} interval-arithmetic shifts ($15$
+exact-rational $+$ $27$ validated-precision; Epstein refused at
+pivot $10$ by the identical interval machinery); the informal
+conservative $\varepsilon_c$ model is retired from the ladder,
+and only the Lean composition remains named.
+\emph{Kill:} a certified pivot failure on any rung under the
+frozen error model.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The $Gr(2,5)$ Pl\"ucker reading,
+the Specht channels, the Hadamard anchor and the vacuum
+selection (\texttt{DOILY.PLUCKER.\allowbreak GR25.01},
+closed).}
+{\sloppy
+\emph{Registered and closed} 2026-08-09
+(\veri{v888\_finite\_pfaffian\_signature.py}, $27/27$,
+\textsc{s6plucker-closed}; exact integer/sympy).  \emph{Exact:}
+the $15$ doily lines are the $15$ monomials of the five
+Pl\"ucker quadrics of $Gr(2,5)$ --- bijection $15/15$ with
+perfect sign match (every quadric reads $(+,-,+)$, the
+\texttt{v880} Hodge table); the $S_6$ duad representation
+decomposes $15 = 1 + 5 + 9$ with the doily operator acting by
+the exact scalars $(1, 0, 2/3)$, $2/3 = e_3/(e_2 - e_3)$ at the
+anchor $(4, 5, 2)$; the $q^{*}$ zero set is a $(16, 6, 2)$
+Hadamard difference set with anchor signature $(2^{e_1}, p_2,
+e_3, \binom{e_2}{2}) = (16, 6, 2, 10)$; and the
+vacuum-selection theorem: $\mathrm{Stab}(q^{*})$ of order $120$
+acts faithfully and surjectively as $S_5$ on the remaining five
+Arf-$1$ refinements, orbits $[1, 5, 10] = (\Lambda^0,
+\Lambda^4, \Lambda^2)$.  \emph{Controls:} Arf-$0$ census
+$(16,10,6)$; a secant breaks the bijection; the wrong scalar
+breaks the channel law.  The physical vacuum-selection
+mechanism stays [O].  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The flavor-hexagon automorphism
+orbit (\texttt{CFIN.AUT.\allowbreak FLAVOR.C6.01}, closed).}
+{\sloppy
+\emph{Registered and closed} 2026-08-09
+(\veri{v888\_finite\_pfaffian\_signature.py}, $19/19$,
+\textsc{c6flavor-measured} $+$ \textsc{intertwined}).
+\emph{Exact:} $\mathrm{Aut}(C_{\rm fin}) \cong C_6$ by
+exhaustive enumeration; the pinned generator satisfies $g^2 =
+\sigma$ (the deployed family $3$-cycle) exactly and $g^3 =$ the
+$W$-edge sheet swap; the action on $\Lambda^2 E$ has cycle type
+$1 + 3 + 6$ with orbits equal to the charge shells; the
+$g$-orbit of $\{f_1, w_1\}$ is the deployed hexagon transport
+edge for edge ($D_6$-equivalent); and $(|Z_2|/\Nfam)^{|
+\mathrm{Aut}(C_{\rm fin})|} = (2/3)^6 = 64/729$ equals the
+frozen recovery value as an exact Fraction.  \emph{Typed
+honestly:} the exponent reading is a consistent \emph{new
+reading}, not the unique derivation (the corpus route via $p_2
+= |R_+(A_3)|$ stands).  \emph{Control:} $0$ of $600$ symplectic
+non-automorphisms factor; scrambled transport fails the $D_6$
+match.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The fermionic Pfaffian signature
+(\texttt{DOILY.PFAFFIAN.\allowbreak WICK.01}, closed --- the
+$K_6$ motif, the sign theorem, the self-hosting counting
+theorem, and the mod-30 clock).}
+{\sloppy
+\emph{Registered and closed} 2026-08-09
+(\veri{v888\_finite\_pfaffian\_signature.py}, $42/42$,
+\textsc{k6pfaffian-closed}; exact integer/sympy, first frozen
+run).  \emph{Exact:} the $K_6$ motif theorem --- the $35$ lines
+of $PG(3,2)$ are exactly $15$ perfect matchings (the doily) $+$
+$10$ triangles through the vacuum vertex (the secants) $+$ $10$
+avoiding it (the externals), with $q^{*}(e) = 0$ iff $e$
+touches the vacuum; the sign theorem --- the Pfaffian signs
+match the Hodge table under the canonical character $\chi(i) =
+(-1)^{i+1}$, triple-identified (vacuum-row Laplace,
+$\Lambda^4/\Lambda^5$ volume form, $C_6$ crossing character; a
+global gauge, not a line-dependent fudge --- the flipped-$\chi$
+control produces exactly the $3$ expected mismatches); the
+self-hosting counting theorem --- $\binom{g+1}{2} = g!!$ has $g
+= 5$ as its only nontrivial solution, $(g-2)!! = 3 = \Nfam$;
+and the mod-$30$ anchor clock, period exactly $4 = |\mu_4|$,
+\textsc{clock-distinguished} (period-$4$ moduli exactly $\{5,
+10, 15, 30\}$).  \emph{Typed honestly:} the counting theorem is
+[E]; the Wick-compiler premise stays [O] --- P2 narrowed to one
+premise, not eliminated; the operative-Coxeter-$30$ reading is
+separately dead (sandbox); no canonical
+vertex--one-factorization bijection exists (outer-automorphism
+obstruction, report only).  No marker move; no RH
+statement.\par}
+
+\par\smallskip\noindent\textbf{The diagonal separation
+measurement (\texttt{PRIME.PORT.\allowbreak DIAGSEP.01}).}
+{\sloppy
+\emph{Registered} 2026-08-09, measured
+(\veri{v889\_route\_decisions.py}, $8/8$,
+\textsc{diagsep-measured (diag-intermediate)}).
+\emph{Measured:} under the exact off-critical injection family
+the wall dies $100\%$ through off-diagonal coherence --- at the
+kill point the diagonal testing profile is statistically frozen
+(max $T_m = 0.94$--$0.99$; the coherence share equals the
+entire baseline diagonal margin); the separation ratio is
+$2.0$--$2.7$ on the head rungs and $> 10$ deep (no diagonal
+crossing up to $10\times$ the wall's kill amplitude).
+\emph{The typed reading:} the $O(1)$ diagonal margin does not
+track the exponentially collapsing wall margin --- $T_h \le 1$
+is a genuinely weaker finite statement; the RH-scale content
+stays in the coherence share.  \emph{Kill:} a rung on which the
+diagonal crosses before the wall.  No marker move; no RH
+statement.\par}
+
+\par\smallskip\noindent\textbf{The zone split
+(\texttt{PRIME.CASE.\allowbreak ZONESPLIT.01}, frozen).}
+{\sloppy
+\emph{Registered and frozen} 2026-08-09
+(\veri{v889\_route\_decisions.py}, $12/12$ under SPEC v2,
+\textsc{zonesplit-measured (zone-frozen($\theta^{*} = 0.700$))}).
+\emph{Measured:} outside the critical zone $a > h^{2\theta^*}$
+the testing margin $1 - T$ is uniformly positive on all $42$
+rungs (deep-half infimum $+0.0214 \ge$ the $0.02$ bar;
+cut-stable; $\theta = 2/3$ fails at $+0.0191$); inside, the
+margin law is ${\sim}0.87/\log^{2} h$ --- the bar the
+arithmetic input must beat.  \emph{Typed honestly:}
+\textsc{outliers-dangerous} (on kz 13 the margin minimizer
+coincides with a top-3 oscillation node --- the density defects
+are not provably measure-zero for the margin).  \emph{Control:}
+scramble drives the outside margin to $-1.4\times10^{4}$.
+\emph{Kill:} a rung with negative outside margin at the frozen
+$\theta^{*}$.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The PNT decider
+(\texttt{PRIME.CASE.\allowbreak PNTGAMMA.01}, decided).}
+{\sloppy
+\emph{Registered and decided} 2026-08-09
+(\veri{v889\_route\_decisions.py}, $10/10$ under SPEC v2,
+\textsc{pntgamma-measured (pnt-insufficient)}).
+\emph{Measured:} the four matched worlds (mass $\times$ mask in
+$\{$actual, PNT-smooth$\}$, identical pipeline, exact
+tent-integral construction self-tested at $6\times10^{-12}$)
+show the truth's port correction $\gamma > 0$ at every alias on
+every rung, \emph{but} the PNT-smooth reference itself has
+$\min\gamma < 0$ on every rung ($-0.96$ to
+$-7.8\times10^{-3}$) --- the smooth reference violates the very
+inequality the diagonal theorem needs; the dominant rescue
+piece is the mask--mass \emph{interaction} (positive on $4/4$
+deep rungs); the measured arithmetic deviation $\varepsilon_A =
+0.23$--$6.2$ is $6$--$970\times$ larger than every gap.
+\emph{The decision:} the diagonal theorem's arithmetic input is
+genuinely stronger than PNT on this family --- no classical
+zero-free-region-strength input closes it by smooth comparison.
+\emph{Control:} scramble flips $6/6$ port gammas.  No marker
+move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The signed-homotopy
+classification
+(\texttt{PRIME.CASE.\allowbreak SIGNEDHOMOTOPY.01}, decided).}
+{\sloppy
+\emph{Registered and decided} 2026-08-09
+(\veri{v889\_route\_decisions.py}, $12/12$ under SPEC v2,
+\textsc{homotopy-measured (homotopy-indefinite-arithmetic)};
+ward metrology only --- run 1 ended honestly
+\textsc{pipeline-broken} on an over-sharp deep ward).
+\emph{Measured:} the signed homotopy identity along the exact
+PNT-to-truth interpolation is exact calculus
+($4.3\times10^{-14}$ with exact rational mask-crossing times);
+$66.3\%$ of the $14047$ samples have $J < 0$ (pointwise
+positivity dead); the fixed-chamber quadratic kernel is
+concavity-locked negative-semidefinite on both frozen rungs;
+the polynomial response drains the gain ($-17$ to $-231\%$,
+worsening with $h$).  \emph{The classification:} the truth
+endpoint wins only through the signed \emph{first-order}
+alignment of the arithmetic residual with the
+extremal-polynomial weights --- the diagonal route's required
+input is \emph{pair-correlation class}, not any PSD kernel
+positivity; \texttt{PRIME.CASE.SUMRULE.01} is retyped from
+unconditional candidate to conditional reduction theorem (the
+dated update above).  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{Flag positivity (Sylvester) and the
+pole-free $s$-corridor
+(\texttt{PRIME.PORT.\allowbreak HIROTA.01} [O]).}
+{\sloppy
+\emph{Registered} 2026-08-09, OPEN --- the finite architecture
+measured (\veri{v890\_total\_positivity\_flow.py}, $10/10 +
+7/7$, \textsc{hirota-measured (minors-positive)} $+$
+\textsc{sflow-measured (corridor-clear)}).  \emph{Measured:}
+every nested leading principal minor $\tau^{(k)}_h$ of $I -
+C_h$ ($k = 1, \dots, 12$) is strictly positive on all $37$
+full-window rungs --- the section family is \emph{flag-positive}
+(Sylvester: all leading principal minors positive; classical
+total positivity of all minors is not claimed), a strictly
+stronger finite statement than the wall
+scalar; the Desnanot--Jacobi identity is warded exact; the
+$s$-corridor $s \in [0, 1]$ is pole-free on every rung (the
+controls pull their pole inside), and by Cauchy interlacing
+$s^{*}_h = 1/\lambda_{\max}(C_h)$, so $s^{*}_h - 1 =
+\tau_h/(1 - \tau_h)$ --- the wall margin \emph{is} the pole
+distance of the integrable $s$-flow (ladder slope $-2.90$).
+\emph{Typed honestly:} no naive rung-to-rung bilinear closure
+in raw $h$ (median residual $0.655$); the Toda form holds
+pointwise ($0.001$) but with drifting coefficients ---
+\textsc{toda-varying}.  \emph{The demand:} the multi-factor
+inheritance question as a total-positivity propagation
+statement, derived from the IIKS generators.  \emph{Kill:} a
+full-window rung with a non-positive section minor.
+\emph{Skeleton update} (2026-08-09, round CXI): the
+propagation question is answered in \emph{bounded-margin} form
+by \veri{v892\_closure\_architecture.py} and
+\veri{v893\_relative\_margins.py} (the hermitian congruence
+margin $\eta$ and the flag chain; the soft flag is the $\tau$
+scale after the kz-21 coordinate artifact) --- the demand
+narrows to the $O(1)$ ratio bound
+(\texttt{PRIME.PORT.ETASOURCE.01}).  No marker
+move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The multi-factor determinant
+anatomy (\texttt{PRIME.PORT.TAU.\allowbreak MOEBIUS.01},
+decided).}
+{\sloppy
+\emph{Registered and decided} 2026-08-09
+(\veri{v890\_total\_positivity\_flow.py}, $14/14$ under SPEC
+v2, \textsc{taumoebius-measured (bridge-diffuse)}).
+\emph{Measured (the reviewer's key run):} the exact
+factorization $Q_h = \det(W_{h+1})/\det(W_h) = \prod_i (1 +
+\mu_i)$ is warded at $9.2\times10^{-12}$; the truth keeps every
+factor off $-1$ on all $31$ full-window steps over $24$ orders
+of magnitude, while the frame-surviving smooth-mass world
+crosses factors on $22$ of its $28$ steps (first at $h\,210 \to
+218$) and flips $Q$ thirteen times --- the arithmetic detector
+fires.  \emph{The decision:} the one-scalar M\"obius bridge is
+closed --- \textsc{bridge-diffuse} (bulk factor margin $0.005$
+vs the frozen $0.5$ bar; the fitted M\"obius datum $|\alpha|
+\sim 10^{-3}$ is determinant-inert); positivity inheritance, if
+it exists, is a multi-factor/total-positivity statement, not a
+scalar cocycle inequality.  No marker move; no RH
+statement.\par}
+
+\par\smallskip\noindent\textbf{The M\"obius kill battery
+(\texttt{PRIME.PORT.MOEBIUS.\allowbreak KILLS.01}, decided).}
+{\sloppy
+\emph{Registered and decided} 2026-08-09
+(\veri{v891\_moebius\_firewall\_kills.py}, $10/10 + 13/13 +
+7/7$, \textsc{crfirewall-measured (cr-dead)} $+$
+\textsc{gaugefw-measured (gauge-made)} $+$
+\textsc{moebiuscensus-measured (undecided)} --- the verdicts
+are kills and are recorded as such).  \emph{Measured:} the
+earlier carrier-invariance finding was a normalization artifact
+--- fit-free gauge-free cross-ratios over $8126$
+well-conditioned quadruples: pooled median defect $0.128$
+(bars $10^{-3}/10^{-2}$), anchor triples disagree, the steps do
+not compose; none of the three source-frozen gauges is
+raw-invariant (two contrast-degenerate --- invariance vacuous;
+the determinant-phase frame shows real motion); the scalar
+cocycle does not track the wall ($\operatorname{corr} =
+0.13$); the Jacobi-transfer identification is dead ($d_P =
+0.997$); and the six-world census shows the arithmetic
+separating \emph{at the frame} --- every control world
+including the smooth-mass ones loses window subcriticality
+(truth $41/41$ alive, all controls $0$), and scramble beats
+truth on the bare M\"obius bars ($0.0060/0.0011$ vs
+$0.0218/0.0446$): rank-2 window kinematics, not arithmetic
+dynamics.  \emph{The surviving remnant (the named object):} the
+deep-core $8$-node cross-ratio coherence ($4.3\times10^{-4}$ on
+truth vs $2.7\times10^{-2}$ smooth --- prime-mass-driven);
+related sandbox kills recorded (the static Cauchy
+identification dead; $\mathrm{dev}/\tau$ grows at slope
+$+1.46$ --- the Cauchy route can never certify the wall).  No
+marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The rounds-50--53 campaign (the
+closure architecture of the wall, the bounded-margin skeleton,
+the diagonal refinement, the collectivity, and the Wick
+functor arc).}
+{\sloppy
+\emph{Recorded} 2026-08-09 (a campaign note, round CXI;
+fourteen frozen sandbox probes, every spec amendment
+fail-first on record; the promoted verification modules
+\veri{v892\_closure\_architecture.py},
+\veri{v893\_relative\_margins.py},
+\veri{v894\_diagonal\_refinement.py},
+\veri{v895\_collective\_comb.py} and
+\veri{v896\_wick\_block\_functor.py} embed their discovery
+probes byte-exact).  The campaign gives the wall its closure
+architecture (the exact hermitian congruence with a
+non-decaying inheritance margin; the flag/pivot chain positive
+by pure algebra; the honest two-sided Rouch\'e kill; the wall
+as one fixed $8\times8$ Schur core), sources both bounded
+margins and prints the theorem skeleton whose \emph{one}
+unconditionally open statement is the $\tau$-sign inheritance
+in bounded-margin form, makes the conditional diagonal
+contract concrete (the exact band-limited prime kernel, frozen
+in-probe), measures the collectivity of the arithmetic (the
+one-sided law; the deep core as the entire multiplicative von
+Mangoldt comb), and closes the Wick functor arc of the finite
+compiler at the structure level (the proved scalar
+obstruction; the block resolution; the seam-diagonal demand).
+The registrations follow as the blocks below (plus the dated
+skeleton update on \texttt{PRIME.PORT.HIROTA.01} above).  Full
+narrative in the prime-front paper and Paper~1; audit cards in
+Paper~3.  No marker moves; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The hermitian congruence
+inheritance form
+(\texttt{PRIME.PORT.\allowbreak RELCONG.01}).}
+{\sloppy
+\emph{Registered} 2026-08-09, measured
+(\veri{v892\_closure\_architecture.py}, $16/16$,
+\textsc{relcong-measured}).  \emph{Measured:} $A_{h+1} =
+A_h^{1/2}(I + H_h)A_h^{1/2}$ exact ($6.5\times10^{-14}$; $H_h
+= A_h^{-1/2}\Delta_h A_h^{-1/2}$ exactly hermitian); the
+margin $\eta_h = 1 + \lambda_{\min}(H_h)$ is
+\emph{non-decaying} (min $0.0050$, median $0.29$, power slope
+$+0.108$ while $\tau$ collapses at $-2.74$) --- the
+inheritance inequality is bounded-margin-shaped, not
+collapsing; $\rho(W^{-1}\Delta C)$ was a misleading statistic
+(strongly non-normal: $\|M\|/\rho$ up to $26$, $\kappa(V)$ up
+to $134$); the smooth-mass world is \textsc{cone-exited} on
+all $28$ pairs.  \emph{Mini-theorem (verified):} base PD $+$
+$\eta_h > 0$ for all $h$ $\Rightarrow$ the whole ladder
+(Sylvester congruence).  \emph{Source:} the $\eta$ scale is
+explained by \texttt{PRIME.PORT.ETASOURCE.01}; the $O(1)$
+ratio is the open piece.  \emph{Kill:} a truth step with
+$\eta \le 0$.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The flag-chain induction
+(\texttt{PRIME.PORT.\allowbreak PIVOTFACTOR.01}).}
+{\sloppy
+\emph{Registered} 2026-08-09, measured
+(\veri{v892\_closure\_architecture.py}, $15/15$ under SPEC v2,
+\textsc{pivotfactor-measured}).  \emph{Measured:} the $12$
+LDL$^{\mathsf T}$ pivots of $A_h = I - C_h$ factor
+rung-to-rung as $d_{k,h+1} = d_{k,h}(1 + \mu_{k,h})$ with
+\emph{every} factor positive --- all $12$ flag quotients $Q_k
+> 0$ on all $31$ truth steps (pivot $=$ minor quotient warded
+$8.3\times10^{-14}$); the ladder minimum sits at the soft flag
+$k = 12$ at $2.06\times10^{-14}$, sign-decidable at
+$6.4\times10^{9}\times$ the eigenvalue noise floor
+(Cauchy-interlacing guard); the smooth world violates at the
+\emph{bulk} flags first ($k = 1$ on $10$ steps, $k = 3$ on
+$9$; zero steps violate the soft flag alone); per-prime
+non-decompositional (leverage to $987\times$).  \emph{The
+shape:} the shortest induction of the program --- base
+(\texttt{v884}/\texttt{v887}) $+$ $\min_k Q_{k,h} > 0$
+$\Rightarrow$ the whole ladder by pure algebra; the soft-flag
+scale is $\tau$ itself (\texttt{PRIME.PORT.RELFLAG.01}).
+\emph{Kill:} a truth step with a non-positive flag quotient.
+No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The Rouch\'e route
+(\texttt{PRIME.PORT.EULER.\allowbreak ROUCHE.01}, dead).}
+{\sloppy
+\emph{Registered and closed} 2026-08-09
+(\veri{v892\_closure\_architecture.py}, $14/14$ under SPEC v2,
+\textsc{rouche-measured} --- an honest kill with the mechanism
+documented).  \emph{Measured:} on complex contours enclosing
+the corridor $s \in [0, 1]$, $\sup_\Gamma
+\|A_h(s)^{-1}\Delta_h(s)\| \ge 1$ on $22/31$ truth steps (max
+$63.4$) \emph{including} off-cap --- not merely
+contour-limited: a two-sided contour norm bound is the wrong
+theorem shape for inheritance on this ladder (consistent with
+the one-sided avoidance law of
+\texttt{PRIME.PORT.FACTORAVOID.01}); the argument-principle
+machinery itself verifies exactly (integer zero counts at
+$5\times10^{-15}$); the smooth world is corridor-broken on
+$28/28$ but the mechanism is non-discriminating since truth
+fails the bound too.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The $8\times8$ Schur-core
+reduction (\texttt{PRIME.PORT.DEEPCORE.\allowbreak SCHUR.01}).}
+{\sloppy
+\emph{Registered} 2026-08-09, measured
+(\veri{v892\_closure\_architecture.py}, $16/16$ under SPEC v2,
+\textsc{deepcoreschur-measured}).  \emph{Measured:} on the
+full wall operator, the block split at the fixed deep-core
+aliases $\{2, \dots, 16\}$ gives Haynsworth-exact inertia and
+the wall \emph{is} the fixed $8\times8$ Schur core:
+$\lambda_{\min}(S_h)\,w_{\rm core}/\tau_h = 1 \pm
+8.4\times10^{-8}$ with core mass $w_{\rm core} \ge 0.999937$
+on all $41$ full-core rungs --- the RH-critical object is a
+fixed $8\times8$ family, not a growing operator; the absolute
+exterior margin shrinks ($\lambda_{\min}(R) \sim h^{-2.865}$)
+but $\lambda_{\min}(R)/\tau$ is trendless at $210$--$2200$ ---
+the reduction is conditional on a \emph{$\tau$-relative}
+exterior bound only ($c_R = 210$ measured,
+\texttt{PRIME.PORT.RELFLAG.01}); core inheritance holds ($0$
+crossings, $\eta_{\rm core}$ min $0.0315$); the per-prime
+grain is dead at fixed dimension too.  \emph{Kill:} a
+full-core rung breaking the seven-digit identity.  No marker
+move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The $\eta$-margin source
+(\texttt{PRIME.PORT.\allowbreak ETASOURCE.01}).}
+{\sloppy
+\emph{Registered} 2026-08-09, explained
+(\veri{v893\_relative\_margins.py}, $20/20$ under SPEC v2,
+\textsc{etasource-measured (scale-matched)}).
+\emph{Measured:} in the dangerous direction the increment
+$d_h = |v^{\mathsf T}\Delta v|$ and the operator $a_h =
+v^{\mathsf T}Av$ collapse \emph{together} (slopes $-3.716$ vs
+$-3.456$, residual correlation $0.974$, $94\%$ shared
+variance): the non-decay of the inheritance margin $\eta$ is
+\emph{explained} --- $\eta$ is scale-free because numerator
+and denominator are sections of one arithmetic object.
+\emph{Open:} only the $O(1)$ scatter of the ratio (the fitted
+$\tau$-laws predict none of it); seat anatomy: the minimizer
+sits in the core while the binding restricted block is the
+$4$-alias exterior ($0.0056$ vs core $0.0319$).  The round-53
+sandbox continues with the mechanism decomposition.  No marker
+move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The relative margin laws and
+the theorem skeleton
+(\texttt{PRIME.PORT.\allowbreak RELFLAG.01}).}
+{\sloppy
+\emph{Registered} 2026-08-09, measured
+(\veri{v893\_relative\_margins.py}, $18/18$ under SPEC v2,
+\textsc{relflag-measured}).  \emph{Measured:} $d_{12} =
+1/(A^{-1})_{12,12}$ exact with the factorization $r_{12} =
+(\tau'/\tau)(c'/c)$ at $2.1\times10^{-16}$; the $c =
+d_{12}/\tau$ ladder is trendless with one outlier (kz 21)
+diagnosed in the round-53 sandbox as a \emph{coordinate
+artifact} (the kz-19 mechanism repeats; corrected spread $124
+\to 15.0$ --- the soft flag is $\tau$-tied);
+$\lambda_{\min}(R)/\tau$ trendless with ladder min $c_R =
+210$; \textsc{compressions-distinct} (honest: the port bulk
+margin is an \emph{absolute} floor while the core exterior is
+$\tau$-tied --- different statements at two compressions).
+\emph{The printed skeleton:} (i) base certified
+(\texttt{v884}/\texttt{v887}; interval-rigorous since
+\texttt{v897}); (ii) $\lambda_{\min}(R) \ge
+210\,\tau$ trendless; (iii) core $\leftrightarrow$ $\tau$ at
+seven digits; (iv) $\eta > 0$ non-decaying --- the \emph{one}
+unconditionally open statement is the $\tau$-sign inheritance,
+reorganized from collapsing-margin form into
+\emph{bounded-margin} form ($c$, $c'/c$, $c_R$, $\eta$ --- all
+$O(1)$; round-55 sharpening: $c'/c$ sensitivity range
+$[0.223, 5.258]$ and the exact Christoffel identification of
+$c$, \veri{v899\_christoffel\_normsquare.py}).  No marker move;
+no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The extracted conditional
+contract
+(\texttt{PRIME.CASE.PAIRCORR.\allowbreak CONTRACT.01} [O]).}
+{\sloppy
+\emph{Registered} 2026-08-09, OPEN --- the conditional
+reduction extracted with every object machine-defined
+(\veri{v894\_diagonal\_refinement.py}, $11/11 + 13/13 +
+12/12$, \textsc{paircontract-extracted (kernel-bandlimited)}
+$+$ \textsc{endpoint-measured (endpoint-partial)} $+$
+\textsc{innerlinear-measured (inner-empty)}; the route stays
+conditional per \texttt{v889}).  \emph{Measured:} the
+first-order homotopy gain regroups exactly
+($4.5\times10^{-15}$) into the prime-side form with the
+explicit node kernel $K_{h,m}$; the kernel is band-limited
+(compact spectral support --- the contract hypothesis is
+one-sided band-limited explicit-formula positivity at the port
+frequencies, pair-correlation class); the full LaTeX contract
+statement is frozen in-probe; all $79$ (rung, alias) finite
+margins positive; the endpoint refinement: the global linear
+collapse fails ($142/227$) but deep small-$a$ cells pass
+monotonically; the inner-zone accounting localizes the
+irreducibly-hard part to a \emph{non-shrinking} band
+(${\sim}20\%$ of aliases, $38$--$56\%$ of the mass).
+\emph{Demand:} state-and-prove the band's weighted pair
+inequality, or accept conditionality.  \emph{Norm-square note
+(2026-08-09, round CXV):} the kernel's frequency weights are
+$W_{f,m} \ge 0$ \emph{exactly} and the single top-edge tent
+defect is an extension-convention artifact killed by the
+periodic full-weight fold (negative index $0$; $79/79$ modified
+margins positive; the boundary term $\beta$ carried closed-form,
+max $\beta/\mathrm{margin}$ $0.21$) --- the contract is now a
+\emph{norm square} in the frequency weights
+(\veri{v899\_christoffel\_normsquare.py},
+\texttt{PRIME.CASE.KERNEL.SOS.01} $+$
+\texttt{PRIME.CASE.EDGEDEFECT.01} below); the arithmetic
+hypothesis itself stays conditional.  \emph{Kill:} a negative
+finite margin on the frozen census.  No marker move; no RH
+statement.\par}
+
+\par\smallskip\noindent\textbf{The one-sided collective law
+(\texttt{PRIME.PORT.\allowbreak FACTORAVOID.01}, decided).}
+{\sloppy
+\emph{Registered and decided} 2026-08-09
+(\veri{v895\_collective\_comb.py}, $18/18$ under SPEC v2/v3,
+\textsc{factoravoid-measured (avoidance-structural)}).
+\emph{Measured:} the norm-bound theorem shape does not exist
+--- $\rho(W^{-1}\Delta C) \ge 1$ on $17/31$ truth steps (max
+$57.3$) but always via the harmless $\mu > +1$ side; the true
+law is \emph{one-sided}: $\max(-\min\mu) = 0.9950 < 1$ on all
+$31$ steps, which \emph{is} PD inheritance itself; the
+geometry/atom split is exactly degenerate (the atom cutoff is
+slaved to the tent-support edge; every leaving step is
+atom-nil bitwise) --- no separable atom channel: the increment
+is the collective window re-test of the full comb; per-prime
+leave-one-out is non-decompositional (a leverage census, not a
+decomposition).  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The deep core is the port core
+(\texttt{PRIME.PORT.\allowbreak DEEPCORE.01}).}
+{\sloppy
+\emph{Registered} 2026-08-09, measured
+(\veri{v895\_collective\_comb.py}, $12/12$,
+\textsc{deepcore-measured}).  \emph{Measured:} the $8$ deepest
+common nodes of the carrier ladder are the fixed even aliases
+$\{2, \dots, 16\}$ $=$ the Bessel coordinates $a_m = \pi^2
+m^2$ ($0.1\%$ at depth; census $39/41$ steps; coherence knee
+$k^{*} = 10$); the certificate-level cross-ratio coherence
+(truth $4.3\times10^{-4}$ vs smooth $2.7\times10^{-2}$) is
+killed by \emph{all four} surgical modifications --- edge-only
+smoothing, interior-only smoothing, prime-power echoes
+removed, and the wrong-$\Lambda$ world: \textbf{the signal is
+the entire multiplicative von Mangoldt comb} --- positions,
+powers, and exact $\log p$ values all load-bearing; no smaller
+frozen object exists --- the global rigidity of \texttt{v883}
+at the finest coordinate.  \emph{Kill:} a surgery that
+preserves the coherence.  No marker move; no RH
+statement.\par}
+
+\par\smallskip\noindent\textbf{The Wick functor arc
+(\texttt{SEAM.CFIN.\allowbreak WICKFUNCTOR.01} [O]).}
+{\sloppy
+\emph{Registered} 2026-08-09, OPEN --- structure exact,
+obstruction proved, block candidate constructed
+(\veri{v896\_wick\_block\_functor.py}, $27/27 + 33/33 +
+26/26$, \textsc{wickfunctor-partial} $+$
+\textsc{wickmix-measured (wickmix-obstructed)} $+$
+\textsc{wickblock-measured (blockfunctor-constructed /
+seam-diagonal)}).  \emph{Exact:} the six compiler roles exist
+in the deployed seam ($D_5$ slot pairs $+$ the $A_3$ boundary
+block; $\mathfrak{so}(16)$ sector law, $q^{*}$ edge grading,
+$C_6$ intertwining all exact) but the deployed vacuum kernel
+is channel-diagonal; \emph{the proved scalar obstruction:} the
+pinned $C_6$ generator's $2$-cycle $\{4, 5\}$ forces a duad
+zero --- every $C_6$-covariant antisymmetric scalar covariance
+reaches at most $14/15$ duads (a theorem of the deployed
+action); \emph{the block resolution:} the $C_6$-covariant
+cross-block space has dimension $33$; the canonical block
+covariance is exactly covariant, strictly CAR-positive,
+carries $15/15$ blocks and $15/15$ block Wick monomials with
+the canonical $\chi$ sign law; \emph{the decisive fact:} the
+deployed seam covariance has \emph{zero} cross-blocks
+everywhere (\textsc{seam-diagonal}).  \emph{Demand:} a
+physical channel-mixing mechanism (a
+boundary/transport-twisted state, not the vacuum) realizing
+the block functor's value level --- then the $K_6$/Pfaffian
+grammar of \texttt{v888} would be the measured correlation
+grammar of the seam.  \emph{Candidate note (2026-08-09, round
+CXV):} the demanded state now has a \emph{constructed
+candidate} (\texttt{SEAM.CFIN.KMSMIX.01} below,
+\veri{v898\_kms\_schur\_mixing.py}); whether the \emph{actual}
+seam realizes it is untouched.  The [O] premise is unmoved.  No
+marker move; no RH statement.\par}
+
+\par\smallskip\noindent The rounds 54--56 block (2026-08-09;
+promoted in \veri{v897\_certified\_interval\_ladder.py},
+\veri{v898\_kms\_schur\_mixing.py},
+\veri{v899\_christoffel\_normsquare.py} and
+\veri{v900\_core\_update\_anatomy.py}) delivers the reviewer's
+``immediate'' list: the interval-rigorous certificate base, the
+channel-mixing candidate state, the Christoffel/norm-square
+anatomy of the diagonal contract, and the exact core-update
+coordinates with their honest negatives.
+
+\par\smallskip\noindent\textbf{The certified interval ladder
+(\texttt{PRIME.PORT.\allowbreak BALLLADDER.01}, delivered).}
+{\sloppy
+\emph{Registered and delivered} 2026-08-09
+(\veri{v897\_certified\_interval\_ladder.py}; probe verdicts
+\textsc{ballhead-proven} and \textsc{ballladder-complete},
+$10/10$, $3960$~s).  \emph{Proven:} $\sigma_h > 0$ with
+\emph{rigorous} \texttt{mpmath.iv} interval-arithmetic shifts on
+all $42$ reachable rungs $h = 142$--$878$ --- $15$
+exact-rational integer Bareiss/Sylvester certificates ($h \le
+300$, floors $4.5\times10^{-5}$--$2.1\times10^{-4}$) $+$ $27$
+validated-precision Cholesky certificates (dps $120/200$, floors
+$5.2\times10^{-6}$--$8.4\times10^{-5}$, pivot-to-bound ratios
+${\sim}10^{115}$); the node-enclosure lemma, native
+outward-rounded interval transcendentals, exact midpoint/radius
+extraction and the rigorous shift $2h\,\mathrm{rad}_{\max}$;
+\textbf{the informal $\varepsilon_c$ lag-evaluation error model
+of \texttt{v884}/\texttt{v887} is retired from the ladder}; the
+Epstein control refused at pivot index $10$ by the identical
+interval machinery.  Suite economy declared: the promoted module
+re-certifies all $15$ tier-1 $+$ $3$ tier-2 rungs verbatim and
+freezes the full census with both probe SHAs.  \emph{Remaining
+named step:} the Lean composition through
+\texttt{krein\_cofinal\_weil}; the asymptotic tail stays with
+\texttt{PRIME.PORT.TAIL.01} / \texttt{PRIME.PORT.LEADING.%
+SIGN.01}.  \emph{Kill:} a refused pivot on any rung under the
+interval shifts.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The channel-mixing candidate
+state (\texttt{SEAM.CFIN.\allowbreak KMSMIX.01} $+$
+\texttt{SEAM.CFIN.\allowbreak SCHURMIX.01}).}
+{\sloppy
+\emph{Registered and constructed} 2026-08-09
+(\veri{v898\_kms\_schur\_mixing.py}, $30/30$,
+\textsc{kmsmix-measured [kmsmix-found(u=1, t=1/8, beta=1),
+schurmix-generates(10/10), rp-theta-open]}).  \emph{Constructed:}
+the $C_6$-covariant channel-mixing KMS state exists --- the
+first point of the frozen grid passes all block-functor gates
+(strict CAR, exact covariance with the forced zeros, all $15$
+blocks at the floor, grading $5/5 + 10/10$, all $15$ block Wick
+monomials with the canonical Pf$_4$ signs; robust at $\beta =
+2$); \emph{exact (sympy):} Schur/Feshbach elimination of the
+boundary gives $A_{\rm eff} = \kappa A_{CC} +
+\tfrac{t^2 m}{1 - m^2} V J_3 V^{\mathsf T}$ and generates all
+$10$ carrier duads from the bare diagonal state --- on both
+fronts (RH port, Wick functor) the real correlation lives in
+the \emph{eliminated boundary}; the frozen $15$-signature table
+is the registered prediction.  \emph{Named open check:}
+\textsc{rp-theta-open} (no spatial reflection is deployed on the
+$16$-dim space).  \emph{Demand:} the physical realization ---
+the [O] premise of \texttt{SEAM.CFIN.WICKFUNCTOR.01} is
+unmoved.  \emph{Kill:} a physical seam state that violates the
+frozen signature pattern.  No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The Christoffel pivot identity
+and the norm-square contract
+(\texttt{PRIME.PORT.CHRISTOFFEL.\allowbreak RATIO.01} $+$
+\texttt{PRIME.CASE.KERNEL.\allowbreak SOS.01} $+$
+\texttt{PRIME.CASE.\allowbreak EDGEDEFECT.01}).}
+{\sloppy
+\emph{Registered and measured} 2026-08-09
+(\veri{v899\_christoffel\_normsquare.py}, $19/19 + 15/15 +
+19/19$, \textsc{christratio-measured (winner-christoffel /
+extsource-decoupled)} $+$ \textsc{kernelsos-measured
+(index-large; rmin=1; not-absorbed)} $+$
+\textsc{edgedefect-measured (normsquare-achieved;
+kill=periodic; chain=carried)}).  \emph{Exact:} $1/d_{12} = 1 +
+v_{*} K_\sigma(y_{*})$ --- the soft pivot is a
+deflated-Christoffel evaluation (independent route at
+$2.0\times10^{-11}$), winning the boundedness exposure by two
+orders of magnitude; \emph{the honesty fence, warded exactly:}
+$\lambda_{\min}(I - G) = \tau$ --- the positivity premise is
+the wall's own PD premise in Christoffel coordinates, a
+coordinate change, not an independent source; $c'/c$
+sensitivity range $[0.223, 5.258]$, $r_{12} > 0$ on $31/31$,
+exterior reserve decoupled (corr $0.454$).  \emph{The
+norm-square form:} the pair kernel's frequency weights are
+$W_{f,m} \ge 0$ exactly; the entire negative content is one
+top-edge tent (an extension-convention artifact), killed
+exactly by the periodic full-weight fold (negative index $0$;
+$79/79$ modified margins positive; the boundary term carried
+closed-form, max $0.21$) --- the conditional contract of
+\texttt{PRIME.CASE.PAIRCORR.CONTRACT.01} is a norm square in
+the frequency weights; \textbf{the arithmetic hypothesis itself
+stays conditional} (pair-correlation class per \texttt{v889}).
+\emph{Kill:} a negative modified margin on the frozen census.
+No marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The normalized core update
+anatomy (\texttt{PRIME.PORT.NORMALIZED.\allowbreak CORE.01} $+$
+\texttt{PRIME.PORT.GRAPH.\allowbreak REGION.01}).}
+{\sloppy
+\emph{Registered and measured} 2026-08-09
+(\veri{v900\_core\_update\_anatomy.py}, $20/20 + 23/23$,
+\textsc{normcore-measured (family-bounded / update-exact /
+region-open)} $+$ \textsc{graphregion-measured (coupling-free /
+graph-region-open / shadow-lawless)}).  \emph{Exact:} the
+normalized deep core $X_h = S_h/\tau_h$ obeys $X' = c\,(X + U)$
+at $8.3\times10^{-16}$ with $c = \tau/\tau'$; the family is
+bounded (diameter $2533$) and the input effectively
+two-dimensional ($c$ $+$ one matrix mode at $97.5\%$ energy).
+\emph{The registered honest negatives (boundary conditions for
+any invariant-region theorem):} no linear coupling law $u \sim
+F(X)$ (both $R^{2}$ below the $200$-shuffle null $q_{95}$); the
+rank-1 truncation fails --- the positivity is carried by the
+$2.5\%$-energy off-mode; the naive product and graph-tube
+invariant sets are refused.  \emph{The registered direction:}
+keep the exact $X + U$ with its sign-dependent off-mode
+structure --- no mode may be truncated.  \emph{Kill:} an update
+defect above the ward, or a coupling law beating the null.  No
+marker move; no RH statement.\par}
+
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}
 {\sloppy
