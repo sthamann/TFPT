@@ -214,8 +214,8 @@ keyMessage: RH ist im Fluss-Bild zu einer Selektionsfrage in einem expliziten, e
 
 ## Frame 9 — Ehrlich: kein Beweis. Aber die Frage war nie so klein
 
-- scene: Ruhige Statement-Beats: "Kein Beweis." → "Aber die Frage war nie so klein." → Abschlusskarte "Die Prime Front" mit Zeile "≈700 Module · maschinell geprüft · 43 Lean-Theoreme"
-- voiceover: "No proof of RH. This program says so itself, at every step. But the question has never been this small — and never this precise. Around seven hundred modules, every number machine-checked. This is the Prime Front."
+- scene: Ruhige Statement-Beats: "Kein Beweis." → "Aber die Frage war nie so klein." → Abschlusskarte "Die Prime Front" mit Zeile "893 Module · maschinell geprüft · 84 Lean-Dateien"
+- voiceover: "No proof of RH. This program says so itself, at every step. But the question has never been this small — and never this precise. Almost nine hundred modules, every number machine-checked. This is the Prime Front."
 - duration: 15.504s
 - transition_in: crossfade
 - status: animated
@@ -225,14 +225,14 @@ keyMessage: RH ist im Fluss-Bild zu einer Selektionsfrage in einem expliziten, e
 - beat: Nüchterne Zuversicht
 - blueprint: kinetic-type-beats (Adapt)
 - focal: die Statement-Zeilen, zuletzt die Marken-Karte "Die Prime Front"
-- roles: Statement-Beats (Serif, zentriert) = foreground subject · Stat-Zeile (≈700 Module · 43 Lean-Theoreme) = supporting · dünne Akzent-Linie (Callback auf die kritische Linie aus Frame 1) = supporting-Motiv · Grund = background, leer und ruhig
+- roles: Statement-Beats (Serif, zentriert) = foreground subject · Stat-Zeile (893 Module · 84 Lean-Dateien) = supporting · dünne Akzent-Linie (Callback auf die kritische Linie aus Frame 1) = supporting-Motiv · Grund = background, leer und ruhig
 
 Adapt: kinetic-type-beats — Statement-Beats bauen über Full-Screen-Beats zu einem Payoff; Signature (die Bewegung IST der Text-Wechsel; Beats landen einzeln) bleibt; geändert: langsames, ernstes Tempo statt Punch — jeder Beat hält, bevor der nächste kommt (velocity-matched Waterfall-Seams statt Slams).
 Scene 1 (0.0–1.8s): Leerer dunkler Grund; auf "Kein Beweis." (0.1–0.8s) landet die Serif-Zeile "Kein Beweis." zentriert (Centered, ~50 %), allein. Kurzer Hold — die Leere gehört zur Aussage.
 Scene 2 (1.8–5.4s): Auf "sagt dieses Programm selbst" (2.0–3.0s) reveals darunter die kleinere Zeile "— sagt dieses Programm selbst, an jeder Stelle." per-word (`dynamic-content-sequencing`, Inter).
 Scene 3 (5.4–9.3s): Waterfall-Seam (Text-zu-Text, cut-catalog): Beat 2 — "Aber die Frage war nie so klein." mit "klein" im Akzent (keyword glow auf 6.7s); auf "präzise" (7.7s) hängt sich " — und nie so präzise." an (hard-cut Wort-Reveal).
-Scene 4 (9.3–13.5s): Beat 3: die Statements weichen nach oben (scale-swap), eine Stat-Zeile cascadet ein: "≈700 Module" (Zähler tickt auf "siebenhundert" bei 9.7s) "· maschinell geprüft · 43 Lean-Theoreme"; darunter zeichnet sich die dünne Akzent-Linie aus Frame 1 als Callback-Motiv (`svg-path-draw`), Nullstellen-Punkte rasten lautlos ein.
+Scene 4 (9.3–13.5s): Beat 3: die Statements weichen nach oben (scale-swap), eine Stat-Zeile cascadet ein: "893 Module" (Zähler tickt auf "nine hundred" bei ~9.7s) "· maschinell geprüft · 84 Lean-Dateien"; darunter zeichnet sich die dünne Akzent-Linie aus Frame 1 als Callback-Motiv (`svg-path-draw`), Nullstellen-Punkte rasten lautlos ein.
 Scene 5 (13.5–15.5s): Auf "Prime Front" (14.0s) lockt die End-Karte: "Die Prime Front" (Serif, groß) über der Akzent-Linie, Mono-Subzeile "fixpoint-theory.com/prime-front". Hold bis zum Schluss — echter Exit gehört diesem letzten Frame: sanftes Settle, dann Stillstand.
 
 narrativeRole: Die ehrliche Landung: kein RH-Claim (Programm-Disziplin), aber die dreifach verkleinerte Frage und die maschinelle Prüfbarkeit als Substanz. Endet auf der Marken-Karte der Prime Front.
-keyMessage: Kein Beweis — aber eine präzise, kleine, falsifizierbare Frage, getragen von ~700 maschinell geprüften Modulen.
+keyMessage: Kein Beweis — aber eine präzise, kleine, falsifizierbare Frage, getragen von 893 maschinell geprüften Modulen (84 Lean-Dateien).

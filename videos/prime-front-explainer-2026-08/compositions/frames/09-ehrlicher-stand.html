@@ -232,11 +232,13 @@
 
       <!-- Scenes 1–3: the statement beats -->
       <div id="ehrlicher-stand-09-statement">
-        <div id="ehrlicher-stand-09-beat1">
+        <!-- beat 1 deliberately layers over the faint beat-2 palimpsest
+             (shipped design since 2026-08-03) -->
+        <div id="ehrlicher-stand-09-beat1" data-layout-allow-overlap>
           <div id="ehrlicher-stand-09-kb"><span class="ehrlicher-stand-09-word">No proof</span><span class="ehrlicher-stand-09-word">of RH.</span></div>
           <div id="ehrlicher-stand-09-sub"><span class="ehrlicher-stand-09-word">&mdash;&nbsp;says</span><span class="ehrlicher-stand-09-word">this</span><span class="ehrlicher-stand-09-word">program</span><span class="ehrlicher-stand-09-word">itself,</span><span class="ehrlicher-stand-09-word">at</span><span class="ehrlicher-stand-09-word">every</span><span class="ehrlicher-stand-09-word">step.</span></div>
         </div>
-        <div id="ehrlicher-stand-09-beat2">
+        <div id="ehrlicher-stand-09-beat2" data-layout-allow-overlap>
           <div class="ehrlicher-stand-09-b2line" id="ehrlicher-stand-09-b2l1"><span class="ehrlicher-stand-09-word">But</span><span class="ehrlicher-stand-09-word">the</span><span class="ehrlicher-stand-09-word">question</span><span class="ehrlicher-stand-09-word">was</span><span class="ehrlicher-stand-09-word">never</span><span class="ehrlicher-stand-09-word">this</span><span class="ehrlicher-stand-09-word" id="ehrlicher-stand-09-klein">small.</span></div>
           <div class="ehrlicher-stand-09-b2line" id="ehrlicher-stand-09-b2l2"><span class="ehrlicher-stand-09-word">&mdash;&nbsp;and</span><span class="ehrlicher-stand-09-word">never</span><span class="ehrlicher-stand-09-word">this</span><span class="ehrlicher-stand-09-word" id="ehrlicher-stand-09-praezise">precise.</span></div>
         </div>
@@ -244,7 +246,7 @@
 
       <!-- Scene 4: stat line -->
       <div id="ehrlicher-stand-09-statrow">
-        <span class="ehrlicher-stand-09-seg" id="ehrlicher-stand-09-seg1"><span class="ehrlicher-stand-09-statnum" id="ehrlicher-stand-09-count">&asymp;700</span>&nbsp;modules</span><span class="ehrlicher-stand-09-seg" id="ehrlicher-stand-09-seg2"><span class="ehrlicher-stand-09-sep">&middot;</span>&nbsp;machine-checked</span><span class="ehrlicher-stand-09-seg" id="ehrlicher-stand-09-seg3"><span class="ehrlicher-stand-09-sep">&middot;</span>&nbsp;<span class="ehrlicher-stand-09-statnum">43</span>&nbsp;Lean&nbsp;theorems</span>
+        <span class="ehrlicher-stand-09-seg" id="ehrlicher-stand-09-seg1"><span class="ehrlicher-stand-09-statnum" id="ehrlicher-stand-09-count">893</span>&nbsp;modules</span><span class="ehrlicher-stand-09-seg" id="ehrlicher-stand-09-seg2"><span class="ehrlicher-stand-09-sep">&middot;</span>&nbsp;machine-checked</span><span class="ehrlicher-stand-09-seg" id="ehrlicher-stand-09-seg3"><span class="ehrlicher-stand-09-sep">&middot;</span>&nbsp;<span class="ehrlicher-stand-09-statnum">84</span>&nbsp;Lean&nbsp;files</span>
       </div>
 
       <!-- callback motif: the critical line from frame 1, zeros locking onto it -->
@@ -339,14 +341,14 @@
         { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, segAt[i]);
     });
 
-    // counter ticks up to 700 on "siebenhundert" (VO 9.69s) — swap only on change
+    // counter ticks up to 893 on "nine hundred" — swap only on change
     var countEl = $("count");
     var counter = { v: 0 }, lastShown = -1;
     tl.to(counter, {
-      v: 700, duration: 0.75, ease: "power2.out",
+      v: 893, duration: 0.75, ease: "power2.out",
       onUpdate: function () {
         var v = Math.round(counter.v);
-        if (v !== lastShown) { lastShown = v; countEl.textContent = "\u2248" + v; }
+        if (v !== lastShown) { lastShown = v; countEl.textContent = "" + v; }
       }
     }, 9.50);
 

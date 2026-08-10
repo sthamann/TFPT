@@ -67,4 +67,4 @@
 **Time:** 142.0 – 158.0s
 **Delivery:** "Kein Beweis." als eigener Satz, Pause. Das Ende warm, aber nüchtern.
 
-    Kein Beweis. Das sagt dieses Programm selbst, an jeder Stelle. Aber die Frage war nie so klein — und nie so präzise. Rund siebenhundert Module, jede Zahl maschinell geprüft. Das ist die Prime Front.
+    Kein Beweis. Das sagt dieses Programm selbst, an jeder Stelle. Aber die Frage war nie so klein — und nie so präzise. Fast neunhundert Module, jede Zahl maschinell geprüft. Das ist die Prime Front.

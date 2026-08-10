@@ -67,4 +67,4 @@
 **Time:** 143.6 – 159.1s
 **Delivery:** "No proof of RH." as its own sentence, pause. The ending warm but sober.
 
-    No proof of RH. This program says so itself, at every step. But the question has never been this small — and never this precise. Around seven hundred modules, every number machine-checked. This is the Prime Front.
+    No proof of RH. This program says so itself, at every step. But the question has never been this small — and never this precise. Almost nine hundred modules, every number machine-checked. This is the Prime Front.

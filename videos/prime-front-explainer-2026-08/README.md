@@ -11,6 +11,14 @@ the same windows, so all frame timings, transitions and shot sequences are
 unchanged. `SCRIPT.de.md` keeps the German script (source of the `de.vtt`
 translation track).
 
+Refreshed 2026-08-10: the stale module-count line of frame 9 updated to the
+current suite state ("Almost nine hundred modules"; on-screen stat
+"893 modules · machine-checked · 84 Lean files"), full TTS + captions + render
+re-run through the frozen frame windows (still 2:39.1); the pre-existing
+beat-1/beat-2 palimpsest layering in frame 9 is now annotated
+`data-layout-allow-overlap` so `hyperframes check` passes clean (0 errors).
+All other narration, timings and visuals unchanged.
+
 ## Content (9 frames, ~159 s)
 
 1. The music of the primes (RH, critical line) — 0:00
@@ -21,7 +29,7 @@ translation track).
 6. Ihara blueprint: the missing engine Z1 (Hilbert–Pólya) — 1:29
 7. The measure from the geometry (Λ_geo = Λ; Γ flow forces masses 0.11%) — 1:48
 8. The corridor and the 0.53 (Levinson 0.14%; "Explain the selection") — 2:04
-9. Honest: no proof of RH — ≈700 modules, 43 Lean theorems — 2:24
+9. Honest: no proof of RH — 893 modules, 84 Lean files — 2:24
 
 Source: `big_picture_2026-08-02_de.tex` (arcs D–G, erratum/theorem, climbing
 round, door handle, the two August-3 chapters); terminology checked against

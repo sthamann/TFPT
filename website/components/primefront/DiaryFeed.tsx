@@ -128,7 +128,7 @@ export function DiaryFeed() {
   const archiveRequested = useRef(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
 
-  /* The ~225 older entries live in a separate chunk (lib/primeFrontArchive)
+  /* The older entries live in a separate chunk (lib/primeFrontArchive)
      so they stay out of the route's first-load JS. Fetch them once the
      reader approaches the feed — or on first interaction, whichever
      happens first. */
@@ -329,6 +329,7 @@ export function DiaryFeed() {
 
 function FeedCard({ entry }: { entry: FeedEntry }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { ref, inView } = useInView<HTMLLIElement>();
   const meta = CLASS_META[entry.cls];
   const headline = entry.headline ?? fallbackHeadline(entry.title);
@@ -387,28 +388,36 @@ function FeedCard({ entry }: { entry: FeedEntry }) {
 
       {hasBody && (
         <>
+          {/* The full diary text is mounted only after the first expand, so
+              the collapsed bodies stay out of the server-rendered HTML
+              (the text itself still ships in this route's JS data). */}
           <div
             id={bodyId}
             className="grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none"
             style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
           >
             <div className="overflow-hidden">
-              <div className="mt-3 space-y-3 border-t border-slate-800/60 pt-3">
-                <p className="whitespace-pre-line text-sm leading-relaxed text-slate-300/90">
-                  {entry.title}
-                </p>
-                {entry.keyFacts && entry.keyFacts.length > 0 && (
-                  <p className="text-[12px] leading-relaxed text-slate-500">
-                    {entry.summary}
+              {mounted && (
+                <div className="mt-3 space-y-3 border-t border-slate-800/60 pt-3">
+                  <p className="whitespace-pre-line text-sm leading-relaxed text-slate-300/90">
+                    {entry.title}
                   </p>
-                )}
-              </div>
+                  {entry.keyFacts && entry.keyFacts.length > 0 && (
+                    <p className="text-[12px] leading-relaxed text-slate-500">
+                      {entry.summary}
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
           </div>
           <div className="mt-2.5 flex flex-wrap items-center gap-3">
             <button
               type="button"
-              onClick={() => setOpen((o) => !o)}
+              onClick={() => {
+                setMounted(true);
+                setOpen((o) => !o);
+              }}
               aria-expanded={open}
               aria-controls={bodyId}
               className="inline-flex items-center gap-1.5 font-mono text-[11px] text-sky-300/90 transition hover:text-sky-200 motion-reduce:transition-none"

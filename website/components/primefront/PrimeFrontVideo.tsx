@@ -64,7 +64,7 @@ const TRANSCRIPT: { heading: string; body: string }[] = [
   },
   {
     heading: "Honest: no proof (2:24)",
-    body: "No proof of RH. This program says so itself, at every step. But the question has never been this small — and never this precise. Around seven hundred modules, every number machine-checked. This is the Prime Front.",
+    body: "No proof of RH. This program says so itself, at every step. But the question has never been this small — and never this precise. Almost nine hundred modules, every number machine-checked. This is the Prime Front.",
   },
 ];
 
@@ -75,9 +75,9 @@ const videoJsonLd = {
   "@type": "VideoObject",
   name: "The Prime Front — explained in 2½ minutes",
   description:
-    "A ~2.5 minute explainer of TFPT's prime / zeta line, end to end: the Riemann Hypothesis in one image (all zeros on one line), the window matrix born from the E8 bookkeeping and proved identical to Suzuki's Weil operator (the W1 theorem, v643), the calibrated detector / falsifier (Ramanujan passes, Epstein breaks at the predicted 0.803; matched-filter witness for any off-line zero), the two surface theorems (det S > 0 unconditionally on 67/67 windows; the T-B margin closed on 60/70 with cited classics), the Ihara blueprint with the one missing part Z1 (Hilbert–Pólya in window coordinates), the measure and masses forced from pure lattice counting, and the corridor with the selection point at 0.53. Honest fence throughout: no claim of progress toward RH — roughly 700 machine-checked modules.",
+    "A ~2.5 minute explainer of TFPT's prime / zeta line, end to end: the Riemann Hypothesis in one image (all zeros on one line), the window matrix born from the E8 bookkeeping and proved identical to Suzuki's Weil operator (the W1 theorem, v643), the calibrated detector / falsifier (Ramanujan passes, Epstein breaks at the predicted 0.803; matched-filter witness for any off-line zero), the two surface theorems (det S > 0 unconditionally on 67/67 windows; the T-B margin closed on 60/70 with cited classics), the Ihara blueprint with the one missing part Z1 (Hilbert–Pólya in window coordinates), the measure and masses forced from pure lattice counting, and the corridor with the selection point at 0.53. Honest fence throughout: no claim of progress toward RH — 893 machine-checked modules.",
   thumbnailUrl: [`${SITE_URL}${POSTER_SRC}`],
-  uploadDate: "2026-08-03",
+  uploadDate: "2026-08-10",
   duration: "PT2M39S",
   contentUrl: `${SITE_URL}${VIDEO_SRC}`,
   inLanguage: "en",
