@@ -48,6 +48,7 @@ import TfptCarrier.SeamRigidityForcing
 import TfptCarrier.SeamEdgeChern
 import TfptCarrier.SeamScalingLimit
 import TfptCarrier.SeamResidualAxiom
+import TfptCarrier.WallCertifiedHead
 
 -- Layer 1: Polarization (algebraic core)
 #print axioms TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -250,3 +251,15 @@ import TfptCarrier.SeamResidualAxiom
 #print axioms TfptCarrier.SeamResidualAxiom.residual_arithmetic
 #print axioms TfptCarrier.SeamResidualAxiom.two_sided_nonchiral
 #print axioms TfptCarrier.SeamResidualAxiom.seamResidualClosed
+
+-- Certified wall finite head (PRIME.PORT.BALLLADDER.01 Lean seam; v897)
+-- The 18 per-rung PD certificates are kernel `decide` runs on exported exact
+-- integer data (NO axioms declared); the composition into cofinal Weil carries
+-- its two NAMED hypotheses (HeadEnclosure, TailPositivity) as explicit
+-- arguments of the theorem — hypotheses, never axioms.
+#print axioms TfptCarrier.WallLadder.posSemidef_of_diagDominant
+#print axioms TfptCarrier.WallLadder.posDef_of_rungOk
+#print axioms TfptCarrier.WallLadder.checked_is_census_prefix
+#print axioms TfptCarrier.WallLadder.certified_head
+#print axioms TfptCarrier.WallLadder.wall_cofinal_weil
+#print axioms TfptCarrier.WallLadder.wall_certified_head_cofinal_weil
