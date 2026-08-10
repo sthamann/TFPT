@@ -43,6 +43,257 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-10",
+    "dateLabel": "2026-08-10 · LXXXVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "numerical-robustness amendment to "
+      },
+      {
+        "k": "c",
+        "v": "v772"
+      },
+      {
+        "k": "t",
+        "v": " against an upstream scipy 1.17.0 wrong-result bug "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the runner-side version guard; NO gate/bar/semantics change, NO status change: the single failure of the 2026-08-10 full-suite run was root-caused to an UPSTREAM ENVIRONMENT BUG, not to the module or the theory — scipy "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 1.15"
+      },
+      {
+        "k": "t",
+        "v": " auto-detects matrix structure in "
+      },
+      {
+        "k": "c",
+        "v": "scipy.linalg.solve"
+      },
+      {
+        "k": "t",
+        "v": " and dispatches the complex-symmetric shift "
+      },
+      {
+        "k": "m",
+        "v": "A - zI"
+      },
+      {
+        "k": "t",
+        "v": " (real symmetric "
+      },
+      {
+        "k": "m",
+        "v": "A"
+      },
+      {
+        "k": "t",
+        "v": ", complex "
+      },
+      {
+        "k": "m",
+        "v": "z"
+      },
+      {
+        "k": "t",
+        "v": ") of the "
+      },
+      {
+        "k": "c",
+        "v": "v772"
+      },
+      {
+        "k": "t",
+        "v": " REC-d reconstruction Ward to the LAPACK "
+      },
+      {
+        "k": "c",
+        "v": "?sysv"
+      },
+      {
+        "k": "t",
+        "v": " diagonal-pivoting driver, and scipy 1.17.0's "
+      },
+      {
+        "k": "c",
+        "v": "sysv"
+      },
+      {
+        "k": "t",
+        "v": " path returns a WRONG solution on this matrix family (backward residual "
+      },
+      {
+        "k": "m",
+        "v": "\\|(A - zI)G - V\\|"
+      },
+      {
+        "k": "t",
+        "v": " up to "
+      },
+      {
+        "k": "m",
+        "v": "9.6\\times10^{1}"
+      },
+      {
+        "k": "t",
+        "v": " at the two complex-"
+      },
+      {
+        "k": "m",
+        "v": "z"
+      },
+      {
+        "k": "t",
+        "v": " cells, inflating the REC-d relative residual to "
+      },
+      {
+        "k": "m",
+        "v": "2.6\\times10^{3}"
+      },
+      {
+        "k": "t",
+        "v": "; real-"
+      },
+      {
+        "k": "m",
+        "v": "z"
+      },
+      {
+        "k": "t",
+        "v": " cells unaffected; fixed upstream in scipy 1.17.1); the amendment is ONE LINE: the Ward's independent dense solve now passes "
+      },
+      {
+        "k": "c",
+        "v": "assume_a=\"gen\""
+      },
+      {
+        "k": "t",
+        "v": ", explicitly pinning the LU ("
+      },
+      {
+        "k": "c",
+        "v": "gesv"
+      },
+      {
+        "k": "t",
+        "v": ") driver that WAS the unconditional default when the module was frozen (identical semantics, available on every scipy "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 1.0"
+      },
+      {
+        "k": "t",
+        "v": "; under numpy 1.26/scipy 1.13 the identical call already used LU and the gate read "
+      },
+      {
+        "k": "m",
+        "v": "5.2\\times10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": ") — all frozen bars, ladders, "
+      },
+      {
+        "k": "m",
+        "v": "z"
+      },
+      {
+        "k": "t",
+        "v": " points, preregistered fails (CAUCHY-6/GAP-7/GAP-8 part 1; EDGE-A part 2) and both pattern gates are byte-identically unchanged, REC-d stays a genuine two-path Ward (eigh route vs independent LU solve), and the amendment is fully disclosed in the module docstring; verified green under BOTH python 3.9.6/numpy 1.26.4/scipy 1.13.1 and python 3.14.3/numpy 2.4.2/scipy 1.17.0; the runner-side guard "
+      },
+      {
+        "k": "c",
+        "v": "scipy>=1.10,!=1.17.0"
+      },
+      {
+        "k": "t",
+        "v": " added to "
+      },
+      {
+        "k": "c",
+        "v": "requirements.txt"
+      },
+      {
+        "k": "t",
+        "v": " (the affected release excluded for anyone installing the suite; the firewalled "
+      },
+      {
+        "k": "c",
+        "v": "experiments/*"
+      },
+      {
+        "k": "t",
+        "v": " sandbox pins are separate environments and untouched); website mirror byte-synced ("
+      },
+      {
+        "k": "c",
+        "v": "website/public/verification/v772_qf_feshbach_effective.py"
+      },
+      {
+        "k": "t",
+        "v": ") and "
+      },
+      {
+        "k": "c",
+        "v": "website/lib/discipline.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated; "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK after the change; WITH THIS the full-suite run of 2026-08-10 stands at "
+      },
+      {
+        "k": "m",
+        "v": "897/897"
+      },
+      {
+        "k": "t",
+        "v": " modulo the documented environment bug — the raw run under scipy 1.17.0 was "
+      },
+      {
+        "k": "m",
+        "v": "896/897"
+      },
+      {
+        "k": "t",
+        "v": " with the "
+      },
+      {
+        "k": "c",
+        "v": "v772"
+      },
+      {
+        "k": "t",
+        "v": " REC gates as the SOLE casualty, every GAP value bit-identical to the preregistration — no other module touched, no ledger row moved"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-10",
     "dateLabel": "2026-08-10 · LXXXVII",
     "heading": [
       {

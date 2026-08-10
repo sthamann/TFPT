@@ -121,7 +121,7 @@ export const DISCIPLINE: DisciplineStats =
     "arxivModules": 57
   },
   "lean": {
-    "modules": 82
+    "modules": 103
   },
   "openGates": {
     "count": 333

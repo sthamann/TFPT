@@ -536,6 +536,27 @@ verdict EDGE-KEEPS-MOVING, carried by the EDGE-A failure alone):
 Run:
     experiments/tfpt-discovery/.venv/bin/python \
         experiments/tfpt-discovery/qf_edge_separation_probe.py
+
+NUMERICAL-ROBUSTNESS AMENDMENT (2026-08-10; no semantic change, no
+gate/bar/expectation touched):
+  *  The REC-d reconstruction Ward's independent dense solve now
+     calls scipy.linalg.solve(..., assume_a="gen"), pinning the
+     LU (gesv) driver that WAS the unconditional default when this
+     module was frozen.  Reason: scipy >= 1.15 auto-detects matrix
+     structure and dispatches the complex-symmetric shift A - zI
+     (real symmetric A, complex z) to the ?sysv diagonal-pivoting
+     driver; scipy 1.17.0's sysv path returns a WRONG solution on
+     this matrix family (backward residual ||(A-z)G - V|| up to
+     9.6e+01 at the two complex z cells, turning the REC-d rel
+     residual into 2.6e+03; real z cells unaffected; fixed upstream
+     in scipy 1.17.1).  Under numpy 1.26/scipy 1.13 the identical
+     call already used LU and the gate read 5.2e-13.  All frozen
+     bars, ladders, z points, preregistered fails (CAUCHY-6/GAP-7/
+     GAP-8 part 1; EDGE-A part 2) and both pattern gates are
+     byte-identically unchanged; REC-d stays a genuine two-path Ward
+     (eigh route vs independent LU solve).  Verified green after the
+     amendment under BOTH python 3.9.6/numpy 1.26.4/scipy 1.13.1 and
+     python 3.14.3/numpy 2.4.2/scipy 1.17.0.
 """
 
 # ==========================================================================
@@ -944,7 +965,15 @@ def reconstruction(T, spec, results):
         V8 = spec[M]["V8"]
         i_r = GLAD.index(M)
         for z in Z_ALL:
-            G = sla.solve(A - z * np.eye(M), V8.astype(complex))
+            # assume_a="gen": pin the LU (gesv) path explicitly.
+            # scipy >= 1.15 auto-detects structure and dispatches the
+            # complex-symmetric A - zI to ?sysv; scipy 1.17.0's sysv
+            # path returns a wrong solution here (backward residual
+            # O(1e2) at the complex z cells; fixed upstream in
+            # 1.17.1).  "gen" is the pre-1.15 default -- identical
+            # semantics (independent dense solve), every scipy >= 1.0.
+            G = sla.solve(A - z * np.eye(M), V8.astype(complex),
+                          assume_a="gen")
             Mfull = V8.T @ G                # (8, 8) compressed res
             for d in D_SET:
                 Finv = np.linalg.inv(f_frame(spec[M], d, z))
