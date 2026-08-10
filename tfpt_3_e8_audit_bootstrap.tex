@@ -9385,7 +9385,10 @@ m}{1-m^2} V J_3 V^{\mathsf T}$ generates all $10$ carrier duads
 from the bare diagonal state --- on both fronts the real
 correlation lives in the eliminated boundary; the frozen
 $15$-signature table is the registered prediction;
-\textsc{rp-theta-open} is the named open check.  No marker move,
+\textsc{rp-theta-open} is the named open check (dated note
+2026-08-10: measured exclusionary at family level --- see the
+seam RP/modular exclusion card below,
+\veri{v903\_seam\_rp\_exclusion.py}).  No marker move,
 no RH claim.
 Machine-checked: \veri{v898\_kms\_schur\_mixing.py}.
 \mE\ (the commutant walks and the Schur generation identity ---
@@ -9440,6 +9443,110 @@ Machine-checked: \veri{v900\_core\_update\_anatomy.py}.
 \mE\ (the update and telescoping identities --- exact) $+$
 (\textsc{measured}) (the coupling nulls and region sweeps ---
 the honest negatives)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The wall in tangent-Schur
+coordinates (\texttt{PRIME.PORT.TANGENT.\allowbreak SCHUR.01};
+\texttt{PRIME.PORT.\allowbreak BFLOOR.01};
+\texttt{PRIME.PORT.SIGNFREE.\allowbreak NORMALIZATION.01}).}
+Three probes ($26/26 + 24/24 + 18/18$;
+\textsc{tangentschur-measured (safeblock(minB=0.679))},
+\textsc{bfloor-measured (bfloor-screen-pass(slope=-0.247) /
+certfloor-dead)}, \textsc{signfree-measured (decirc-achieved)};
+embedded byte-exact).  The exact source-only split: with the
+co-block $B$ PD, the wall update is PD $\iff n - q > 0$ (two
+scalars, no $\tau_{h+1}$, no forward sign); the co-block floor
+$0.679$ is $O(1)$ ladder-wide while $\tau$ falls by factor $552$
+(the first substantive $\tau$-screen pass, slope $-0.247$; the
+raw co-block scales like $\tau$, said honestly); all four
+classical certified bounds stay negative everywhere
+(\textsc{certfloor-dead} --- the floor is measured, never
+certified); $\ell = \det(S)^{1/8}$ de-circularizes the update
+coefficient --- circularity removed, positivity \emph{not}
+gained.  No marker move, no RH claim.
+Machine-checked: \veri{v901\_tangent\_schur\_bfloor.py}.
+\mE\ (the split, determinant and source-side identities ---
+exact) $+$ (\textsc{measured}) (the floor, the screen and the
+honest certification negative)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The wall relocation map
+(\texttt{PRIME.CASE.EDGE.\allowbreak CHRISTOFFEL.01};
+\texttt{PRIME.PORT.GRAM.\allowbreak COMPLETION.01};
+\texttt{PRIME.PORT.RADAU.\allowbreak WEIGHT.01}).}
+Two probes ($22/22 + 23/23$; \textsc{edgechristoffel-measured
+(rewrite-exact / ratio-below-one)}, \textsc{gramradau-measured
+(m0-identity-exact / gram-completion-fails / radau-exact)};
+embedded byte-exact; typed explicitly a relocation/mechanism
+map, \emph{not} progress).  The pivot splits exactly into
+$1/d_{12} = 1 + \sum W Q^2 - \beta$ with $W > 0$ and $\beta \ge
+0$; the ratio $r < 1$ on every rung but $1 - r$ tracks $\tau$
+(slope $+1.008$) --- the uniform $q < 1$ target is the wall's
+own PD premise quantified; $M_0 = I - H$ \emph{is} the moment
+matrix of the signed comb measure, and the $W \succeq 0$ Gram
+completion fails on every rung at the $x = +1$ edge; the Radau
+weight at the classical node is the Christoffel function (a pure
+$\mu_+$ object) and the P2 pivot is \emph{not} a Radau weight.
+No marker move, no RH claim.
+Machine-checked: \veri{v902\_wall\_relocation\_map.py}.
+\mE\ (the rewrite, moment-matrix and Radau identities --- exact)
+$+$ (\textsc{measured}) (the relocation slopes and the edge
+obstruction census)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The seam RP/modular exclusion and
+the two dead readings (\texttt{SEAM.STATE.\allowbreak
+DERIVATION.01}; \texttt{SEAM.CFIN.TWISTED.\allowbreak RP.01};
+\texttt{SEAM.CFIN.RP.\allowbreak DILATION.01};
+\texttt{SEAM.CFIN.GAP.\allowbreak PENCIL.01};
+\texttt{SEAM.CFIN.MIXING.\allowbreak NORMALIZATION.01};
+\texttt{SEAM.CFIN.MINIMAL.\allowbreak MEDIATOR.01}).}
+Six probes ($25/25 + 23/23 + 20/20 + 20/20 + 23/23 + 18/18$;
+\textsc{seamstate-measured}, \textsc{seamnorm-measured},
+\textsc{mediator-measured}, \textsc{twistedrp-measured},
+\textsc{dilation-split}, \textsc{gappencil-measured}; embedded
+byte-exact).  Strict reflection positivity forces $t = 0$ under
+both deployable spatial reflections (OS positivity $\iff$ the
+\texttt{v898} mixing floor falls: mutually exclusive on this
+family); $u \ge t$ forced; the $2\pi$-KMS locus is the point
+$(t{=}0, \beta{=}2\pi)$; the complete twisted census is
+exclusionary ($0/6$); the dilation route splits (marginal
+cone-boundary witness with the exact identity $t^2 \cdot
+3m/(1-m^2) = 1/200$; strict collar obstructed by an exact linear
+$2t$ law); the gap pencil is exact
+($\operatorname{Pf} = -(t-1)(3t^2-1)(9t^3+21t^2-t-1)$, Sturm
+uniqueness on $(0, 1/4]$, kernel dimension exactly $2$; no root
+is $1/8$).  The two dead readings booked as first-class
+negatives: `$t = 1/8$ is a compiler value' is a decoration
+(\textsc{pin-absent}; allowed set unbounded); `$N_{\rm fam} = 3$
+as minimal mediation rank' is refuted (rank $1$ suffices;
+deployed rank exactly $2$; purity $=$ dimension bookkeeping).
+No marker move, no RH claim.
+Machine-checked: \veri{v903\_seam\_rp\_exclusion.py}.
+\mE\ (the $\pm|a_J|$, Schur, Pfaffian and Sturm identities ---
+exact) $+$ (\textsc{measured}) (the censuses, the exclusion and
+the two registered negatives) $+$ \mO\ (the physical realization
+--- the premise unmoved)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The 12-bit pivot health word
+(\texttt{PRIME.ARITH.\allowbreak HEALTHCODE12.01}).}
+One probe ($18/18$; \textsc{healthcode12-measured /
+diagnostic-only / trueword-allplus / softpivot-12(0/37) /
+v897-pivot10-reproduced / smoothclaim-refuted}; embedded
+byte-exact).  The sign word of the $12$ leading LDL pivots of
+the \texttt{v899} $12$-window compression, typed a pure
+\emph{diagnostic} with zero RH content in either direction: the
+true word is all-$(+)$ on $37/37$ (the certified Sylvester
+census repackaged --- no new content); three plan claims
+corrected (attribution, softness seat, smooth signature); the
+\texttt{v897} Epstein pivot-10 refusal reproduced byte-exact;
+the seeded syndrome table distinguishes four adversarial
+fingerprints --- a classifier of manipulated combs, a tool, not
+a target.  No marker move, no RH claim.
+Machine-checked: \veri{v904\_healthcode12\_diagnostic.py}.
+(\textsc{measured}) (a diagnostic census and syndrome table ---
+zero RH content by construction)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification

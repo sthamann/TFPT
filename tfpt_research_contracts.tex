@@ -7420,7 +7420,14 @@ is the registered prediction.  \emph{Named open check:}
 $16$-dim space).  \emph{Demand:} the physical realization ---
 the [O] premise of \texttt{SEAM.CFIN.WICKFUNCTOR.01} is
 unmoved.  \emph{Kill:} a physical seam state that violates the
-frozen signature pattern.  No marker move; no RH statement.\par}
+frozen signature pattern.  No marker move; no RH statement.
+\emph{Dated note (2026-08-10, rounds 57--59):}
+\textsc{rp-theta-open} is now \emph{measured} at family level and
+the answer is an exclusion --- strict reflection positivity and
+the mixing floor are mutually exclusive on this family (see the
+seam RP/modular exclusion block below,
+\veri{v903\_seam\_rp\_exclusion.py}); the [O] premise stays
+unmoved.\par}
 
 \par\smallskip\noindent\textbf{The Christoffel pivot identity
 and the norm-square contract
@@ -7479,6 +7486,90 @@ keep the exact $X + U$ with its sign-dependent off-mode
 structure --- no mode may be truncated.  \emph{Kill:} an update
 defect above the ward, or a coupling law beating the null.  No
 marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The seam RP/modular exclusion
+(\texttt{SEAM.STATE.\allowbreak DERIVATION.01} $+$
+\texttt{SEAM.CFIN.TWISTED.\allowbreak RP.01} $+$
+\texttt{SEAM.CFIN.RP.\allowbreak DILATION.01} $+$
+\texttt{SEAM.CFIN.GAP.\allowbreak PENCIL.01}).}
+{\sloppy
+\emph{Registered and measured} 2026-08-10, rounds 57--59
+(\veri{v903\_seam\_rp\_exclusion.py}, $25/25 + 20/20 + 23/23 +
+18/18$ on these four claims, \textsc{seamstate-measured} $+$
+\textsc{twistedrp-measured} $+$ \textsc{dilation-split} $+$
+\textsc{gappencil-measured}; six frozen probes embedded
+byte-exact, all fail-first spec amendments on record).
+\emph{The exclusion:} the odd-sector Gram eigenvalues under both
+deployable spatial reflections are \emph{exactly} $\pm|a_J|$ of
+the $\{4,5\}$ duad (identity $2.2\times10^{-16}$), so OS
+positivity $\iff a_J = 0 \iff$ the \texttt{v898} mixing floor
+falls: \textbf{reflection positivity and the block-functor mixing
+floor are mutually exclusive on this family}; strict RP forces
+$t = 0$; $u \ge t$ is forced (the first non-decorative
+normalization demand; $u = 0$ is RP-excluded, correcting the
+round-57 reading); the $2\pi$-KMS locus of the boundary reduction
+is exactly the point $(t{=}0, \beta{=}2\pi)$ --- the geometric
+temperature kills the mixing instead of pinning it.  \emph{The
+complete twisted census:} $48$ candidates $\to$ $16$ involutive
+$\to$ $6$ admissible $\to$ $0/6$ admit strict RP at any $t > 0$
+(\textsc{twisted-rp-exclusionary}; a measurement on the complete
+finite candidate set, not a universal no-go).  \emph{The dilation
+split:} the \texttt{v898} M2 parent is a $\theta_{abT}$-marginal
+witness \emph{on} the RP cone boundary whose Schur compression
+carries the full Pfaffian mixing with the exact rational identity
+$t^2 \cdot 3m/(1-m^2) = 1/200$; the strict collar route is
+family-wide obstructed by an exact linear law ($30$ defect
+entries, all of magnitude $2t$).  \emph{The gap pencil (exact):}
+$\operatorname{Pf}(A_{\rm dep} + t A_{\rm int}) =
+-(t-1)(3t^2-1)\,q(t)$ with $q = 9t^3 + 21t^2 - t - 1$
+irreducible; $t_{\rm gap} = 0.2309488708\ldots$ is the unique
+root in $(0, 1/4]$ (exact Sturm), a generalized eigenvalue of the
+fixed integer pencil with kernel dimension exactly $2$; the three
+critical surfaces ($1p$-gap closure, modular rank-2 ground-state
+flip $\|\Delta\|_F = 2\sqrt2$, hermitized RP boundary
+$t_c(\beta) \to t_{\rm gap}$) are projections of one variety; the
+coupling is load-bearing for the root; \emph{no root is} $1/8$.
+\emph{Demand (sharpened):} a state construction that carries the
+mixing \emph{and} a positivity structure must leave this family
+--- the named parent route is non-equilibrium
+(\textsc{ness-parent}, named, not built).  \emph{Kill:} a strict
+RP point with $a_J \ne 0$ inside the family.  The [O] premise of
+\texttt{SEAM.CFIN.WICKFUNCTOR.01} is unmoved; no marker move; no
+RH statement.\par}
+
+\par\smallskip\noindent\textbf{The two dead readings
+(\texttt{SEAM.CFIN.MIXING.\allowbreak NORMALIZATION.01} $+$
+\texttt{SEAM.CFIN.MINIMAL.\allowbreak MEDIATOR.01}) ---
+registered negatives.}
+{\sloppy
+\emph{Registered as first-class negatives} 2026-08-10, rounds
+57--58 (\veri{v903\_seam\_rp\_exclusion.py}, $23/23 + 20/20$ on
+these two claims, \textsc{seamnorm-measured} $+$
+\textsc{mediator-measured}).  \emph{Dead reading 1:} `$t = 1/8 =
+2\pi c_3/|Z_2|$ is a compiler value' is a \emph{decoration} ---
+the three factors are individually deployed but the combination
+is free: all $55$ scanned $t$ pass all frozen \texttt{v898} gates
+(the allowed set is mathematically $(0, \infty)$; $u \in \{0,
+\ldots, 2\}$ and $\beta \in \{1/2, \ldots, 4\}$ pass too), no
+frozen functional distinguishes $1/8$ (\textsc{pin-absent}), and
+the anti-numerology census finds four equally cheap
+deployed-constant readings; the kept structure fact: the channel
+mixing is \emph{thermal} (it dies to the ground state, $0/15$
+cross-blocks at $\beta = 100$).  \emph{Dead reading 2:}
+`$N_{\rm fam} = 3$ is the minimal boundary-mediation rank' is
+\emph{refuted} at theorem grade for this finite size --- one
+boundary pair suffices ($\det B_x = \gamma_{ab}\gamma_{cde}$
+symbolically for every symplectic-rank-1 mediator; the explicit
+integer witness passes the full requirement $10/10$; seeded
+census $2000/2000$), the deployed mediator has rank $2$
+\emph{exactly} ($S = 1_5 \otimes 3J$), and what $3$ really pins
+is boundary \emph{purity} = dimension bookkeeping
+($\dim(A_3) = 6 = |Z_2| N_{\rm fam}$), not a mediation theorem.
+Negative results carry their own ledger rows, not footnotes.
+\emph{Kill (for the deadness itself):} a frozen v898-gate
+functional that pins $t = 1/8$, or a physical demand that
+excludes the rank-1 witness.  No marker move; no RH
+statement.\par}
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}

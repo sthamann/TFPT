@@ -16467,6 +16467,147 @@ measured; the diagonal route stays conditional; the
 one-sidedness \mO\ at RH strength.  No marker moves.
 \textbf{No statement about the Riemann Hypothesis is made.}
 
+\subsection{The tangent-Schur coordinates and the relocation
+map}\label{sec:tangent-schur}
+
+Rounds 57--59 (2026-08-10) are a \emph{cartography} round: eleven
+further frozen probes, every spec amendment fail-first on record,
+embedded byte-exact in four promoted modules (suite $893\to897$)
+--- the wall rewritten in tangent-Schur coordinates with the first
+substantive $\tau$-screen pass and its honest certification
+negative (\veri{v901\_tangent\_schur\_bfloor.py}), the pivot and
+moment-matrix relocation map typed explicitly as \emph{mechanism,
+not progress} (\veri{v902\_wall\_relocation\_map.py}), and the
+12-bit pivot health word typed a pure diagnostic with zero RH
+content (\veri{v904\_healthcode12\_diagnostic.py}).  (The seam
+RP/modular exclusion of the same rounds --- strict reflection
+positivity and the \texttt{v898} mixing floor are mutually
+exclusive on the deployed family, plus two registered dead
+readings --- is a compiler statement and lives in the
+research-contracts companion,
+\veri{v903\_seam\_rp\_exclusion.py}.)
+
+\emph{The tangent-Schur split
+(\veri{v901\_tangent\_schur\_bfloor.py}; probe verdicts
+\textsc{tangentschur-measured}, \textsc{bfloor-measured},
+\textsc{signfree-measured}, $26/26 + 24/24 + 18/18$).}  Along the
+soft direction $v_h$ of $S_h$ (backward spectral data only) the
+normalized update $M_h = X_h + U_h$ splits \emph{exactly}: with
+the co-block $B > 0$,
+\[
+  M_h > 0 \iff n_h - q_h > 0, \qquad
+  n = v^{\mathsf T} M v, \quad q = b^{\mathsf T} B^{-1} b,
+\]
+all identities warded ($\det M = (n-q)\det B$ at
+$2.8\times10^{-14}$; the PD equivalence boolean-exact on $39/39$
+steps), and both scalars are \emph{source-only} --- no
+$\tau_{h+1}$, no forward sign anywhere: the gap sign is output,
+never input.  The co-block floor is the round's headline
+measurement: $\min\operatorname{eig}(B_h) = 0.679$ ladder-wide,
+the family $O(1)$ in $[0.679, 84.0]$ while $\tau$ falls by a
+factor $552$; the $\tau$-screen (frozen bands, pass
+$|s| \le 0.30$, relocation $s \ge 0.70$) reads slope $-0.247$ ---
+the \emph{first} screen pass with wall content: $B$-uniformity is
+a genuinely easier subgoal, and after the split the entire
+residual difficulty of the wall sits in the two scalars $n, q$.
+Coordinate honesty printed a priori: the unnormalized co-block
+tracks $\tau$ with slope $+0.753$ --- the $O(1)$ floor \emph{is}
+the statement that the raw co-block scales exactly like $\tau$;
+the pass is substantive because the coordinate is purely
+backward-normalized and the PD question coordinate-invariant.
+The honest negative: \textsc{certfloor-dead} --- all four
+classical certified bounds (Gershgorin raw/scaled,
+Brauer--Cassini, Weyl) are negative on all $39$ steps (best
+maximum $-88$ against the true floor $+0.679$): the floor is
+\emph{measured}, never certified; a certifiable floor needs a
+damping congruence, not better classical inequalities.  The
+failure-seat anatomy refutes the plan diagnosis: at all $12$
+\texttt{v900} rank-1 failure points the co-block $B_s$
+\emph{itself} dies, the $2.5\%$-energy off-mode restores it
+linearly, and the frame-invariant failure seat is orthogonal to
+the critical direction.  The sign-free normalization
+$\ell = \det(S)^{1/8}$ de-circularizes the \texttt{v900}
+coefficient ($Y' = g\,(Y+V)$ with $g = \ell/\ell'$ source-only;
+the positivity margin coordinate-invariant at $0.0315$) ---
+\emph{circularity removed, positivity not gained}, both said
+explicitly (\texttt{PRIME.PORT.TANGENT.SCHUR.01},
+\texttt{PRIME.PORT.BFLOOR.01},
+\texttt{PRIME.PORT.SIGNFREE.NORMALIZATION.01}).
+
+\emph{The relocation map
+(\veri{v902\_wall\_relocation\_map.py}; probe verdicts
+\textsc{edgechristoffel-measured}, \textsc{gramradau-measured},
+$22/22 + 23/23$).}  Typed explicitly as a relocation/mechanism
+map, \emph{not} progress: every identity is a coordinate change
+of the wall's own PD premise.  The pivot identity splits into the
+exact positive-weight form
+$1/d_{12} = 1 + \sum_m W_{h,m}\,Q(x_m)^2 - \beta$ with
+$W > 0$ exactly (min $9.7\times10^{-14}$, no tolerance) and
+$\beta \ge 0$ termwise --- and the decisive ratio
+$r = \beta/(1 + S_{\mathrm{pos}})$ stays below $1$ on every
+deployed rung while $1 - r$ \emph{tracks} $\tau$ (slope
+$+1.008$): the open uniform $q < 1$ target is the wall's PD
+premise \emph{quantified}, not an independent positivity source
+(\texttt{PRIME.CASE.EDGE.CHRISTOFFEL.01}).  On the operator side,
+$M_0 = I - H$ \emph{is} the moment matrix of the signed comb
+measure $\nu = \mu_+ - \mu_-$ (two-route ward
+$4.9\times10^{-13}$; $\lambda_{\min}(M_0) = \tau$) --- the wall
+statement is `$\nu \ge 0$ on squares of degree $\le 2h-2$' ---
+but the Luk\'acs/Gram completion with $W \succeq 0$ fails on
+every rung at the $x = +1$ edge where the comb nodes accumulate,
+with violation magnitude outrunning the wall margin
+($|{\rm floor}|/\tau$ to $-152$): no source-only Gram
+representation exists at matched degree
+(\texttt{PRIME.PORT.GRAM.COMPLETION.01}).  The honest positive:
+the Gauss--Radau construction at the classical node is exact
+algebra and its anchored weight \emph{is} the Christoffel
+function (med ratio $0.9978$) --- a pure $\mu_+$ object; the P2
+pivot is \emph{not} a Radau weight
+(\texttt{PRIME.PORT.RADAU.WEIGHT.01}).  Where the difficulty
+lives (the NEG support, the $x = +1$ edge, the $\tau$-tracking
+ratio) is now registered; nothing here narrows it.
+
+\emph{The health word
+(\veri{v904\_healthcode12\_diagnostic.py}; probe verdict
+\textsc{healthcode12-measured / diagnostic-only}, $18/18$).}  The
+sign word of the $12$ leading LDL pivots of the \texttt{v899}
+$12$-window compression is a per-rung \emph{diagnostic}: the true
+word is all-$(+)$ on $37/37$ (the certified Sylvester census
+repackaged --- no new content); three plan claims are corrected
+(the $12$ factors live in the \texttt{v899} compression, not in
+\texttt{v897}; the softest raw pivot is $k = 2$, not $k = 12$;
+smooth tips flags $\{2, 1\}$ first and never flag~$3$); the one
+surviving claim is reproduced byte-exact (the \texttt{v897}
+Epstein control refused at pivot index $10$); and the seeded
+syndrome table distinguishes four adversarial fingerprints
+(coherent cosh injection, scramble, mass rescaling both ways) ---
+a classifier of manipulated combs, a tool, not a target;
+ledger-typed \emph{diagnostic, zero RH content in either
+direction} (\texttt{PRIME.ARITH.HEALTHCODE12.01}).
+
+\emph{The open fronts after rounds 57--59.}  Unchanged in kind,
+sharpened in place: the one unconditionally open RH-side
+statement remains the $\tau$-sign inheritance in bounded-margin
+form, now localized to the two tangent-Schur scalars $n, q$ over
+the measured (uncertified) $O(1)$ co-block floor; the named
+demands are a \emph{certifiable} $B$-floor (a damping congruence
+--- the classical route is dead by measurement), the band
+inequality of \texttt{PRIME.CASE.PAIRCORR.CONTRACT.01} [O], and
+the invariant-region construction under the \texttt{v900}
+boundary conditions.  All registered in the research-contracts
+companion.
+
+\emph{The honest state after rounds 57--59.}  The wall now has a
+mechanism map: an exact two-scalar split over a measured $O(1)$
+co-block, a pivot rewrite and a moment-matrix identity that
+relocate --- provably never remove --- the difficulty, one pure
+diagnostic, and (in the companion) a seam exclusion theorem with
+two registered dead readings.  The split, rewrite, moment and
+Radau identities \mE; the floors, screens, censuses and negatives
+measured; nothing gained positivity anywhere, and every
+relocation is typed as such.  No marker moves.
+\textbf{No statement about the Riemann Hypothesis is made.}
+
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
 The P4 main strike (\veri{v712\_rank3\_transverse\_deck.py}, $5/5$)
@@ -16732,7 +16873,19 @@ finite band with the boundary term carried exactly
 stays conditional), and the core update anatomy is exact and
 two-dimensional with the region program's boundary conditions
 registered (\texttt{PRIME.PORT.NORMALIZED.CORE.01},
-\texttt{PRIME.PORT.GRAPH.REGION.01}))
+\texttt{PRIME.PORT.GRAPH.REGION.01}); and rounds 57--59
+(Section~\ref{sec:tangent-schur}) draw the mechanism map --- the
+wall splits exactly into two source-only scalars over a measured
+$O(1)$ co-block floor with the first substantive $\tau$-screen
+pass and a dead classical certification route
+(\texttt{PRIME.PORT.TANGENT.SCHUR.01},
+\texttt{PRIME.PORT.BFLOOR.01}), the pivot rewrite and the
+moment-matrix identity relocate --- never remove --- the
+difficulty (\texttt{PRIME.CASE.EDGE.CHRISTOFFEL.01},
+\texttt{PRIME.PORT.GRAM.COMPLETION.01},
+\texttt{PRIME.PORT.RADAU.WEIGHT.01}), and the 12-bit health word
+is typed a pure diagnostic with zero RH content
+(\texttt{PRIME.ARITH.HEALTHCODE12.01}))
 ---
 \texttt{PRIME.DETECTOR.WINDOW.01} (registered in round 25: the
 comb-native window detector, validated out-of-sample) ---
