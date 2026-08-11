@@ -7532,7 +7532,15 @@ coupling is load-bearing for the root; \emph{no root is} $1/8$.
 \emph{Demand (sharpened):} a state construction that carries the
 mixing \emph{and} a positivity structure must leave this family
 --- the named parent route is non-equilibrium
-(\textsc{ness-parent}, named, not built).  \emph{Kill:} a strict
+(\textsc{ness-parent}, named, not built).  \emph{Dated note
+(2026-08-10/11, round 60; promoted rounds 60--63):} the
+\textsc{ness-parent} route is now \emph{built and closed as
+not-needed} --- at finite size stationarity forces zero entropy
+production exactly, drive buys no reflection positivity, and
+\emph{equilibrium} witnesses on the $\{J, Z\}$ coupling kernel
+carry the full $1/200$ mixing (see the seam equilibrium wiring
+block below, \veri{v908\_seam\_equilibrium\_wiring.py}); the [O]
+premise stays unmoved.  \emph{Kill:} a strict
 RP point with $a_J \ne 0$ inside the family.  The [O] premise of
 \texttt{SEAM.CFIN.WICKFUNCTOR.01} is unmoved; no marker move; no
 RH statement.\par}
@@ -7570,6 +7578,94 @@ Negative results carry their own ledger rows, not footnotes.
 functional that pins $t = 1/8$, or a physical demand that
 excludes the rank-1 witness.  No marker move; no RH
 statement.\par}
+
+\par\smallskip\noindent The rounds 60--63 block (2026-08-10/11;
+promoted in \veri{v905\_bfloor\_ideal\_certificate.py},
+\veri{v906\_tail\_cartography.py},
+\veri{v907\_halfgap\_registered\_target.py} and
+\veri{v908\_seam\_equilibrium\_wiring.py}) closes the round-60
+seam questions on the compiler side and delivers, on the RH
+side, the certified $B$-half surface floor, the tail mechanism
+map and the registered half-gap target with its first blind
+holdout (the three RH-side items live in the prime-front
+document; the seam wiring is registered here).
+
+\par\smallskip\noindent\textbf{The seam equilibrium wiring
+(\texttt{SEAM.CFIN.MARGINAL.\allowbreak STABILITY.01} $+$
+\texttt{SEAM.CFIN.NESS.\allowbreak PARENT.01}, closed
+not-needed).}
+{\sloppy
+\emph{Registered and measured} 2026-08-10, round 60 (promoted
+rounds 60--63; \veri{v908\_seam\_equilibrium\_wiring.py},
+$22/22 + 25/25$, \textsc{margstab-measured (interior-empty /
+stratum-not-isolated / not-a-closure-point /
+escape-noncovariant / floor-exchange)} $+$
+\textsc{nessparent-measured (price-zero / two-seat-law /
+finite-ness-nogo / drive-rp-neutral / ness-not-forced)}; both
+probes exact-arithmetic, embedded byte-exact).
+\emph{The 2-cycle side:} the closure-vs-isolated dilemma of the
+\texttt{v903} marginal witness is refuted \emph{as a dilemma}
+--- covariance reduces the $\theta_{abT}$ seat law exactly to
+$M_1 = \operatorname{diag}(a_J, -a_J)$ with
+$\det M_2 = -a_J^2$: strict 2-cycle reflection positivity is
+\textbf{impossible on the whole $C_6$-covariant class}
+(interior empty); the witness is neither a limit of covariant
+strict equilibria (there are none) nor isolated (the whole
+$s = 0$ family is a marginal stratum;
+$\sup(\text{RP-margin} \times \text{mixing}) = 0$ exactly); the
+only strict-enabling escape is the covariance-\emph{breaking}
+$X$ coordinate at exact linear price $2\varepsilon$; and the
+sharpest exact object, the floor exchange:
+$\operatorname{Pf}_4(\varepsilon) = (\varepsilon -
+\tfrac1{200})(\varepsilon + \tfrac1{200})$ --- the canonical
+sign gate \emph{is} the negative effective RP margin, with the
+crossover exactly at the $1/200$ floor.  \emph{The collar side,
+no NESS needed:} strict $\theta_S$ hermiticity is a
+\emph{two-seat linear law} of the coupling (exact rank $12$,
+kernel $12$ $=$ the $\{J, Z\}$ coordinates of the $24$-dim
+covariant coupling space); the deployed seam wiring is
+\textsc{pure-i} (every $2\times2$ subblock exactly $-I_2$) $=$
+a \emph{maximally obstructed} covariant direction, explaining
+the \texttt{v903} strict-collar law (`$30$ entries, magnitude
+$2t$') exactly; the kernel contains \emph{equilibrium}
+witnesses --- $V_J$ (and $V_Z$) pass strict collar RP in exact
+arithmetic while their Schur compressions carry the full
+canonical Pfaffian mixing with the $J$ coordinate exactly
+$t^2 \cdot 3m/(1-m^2) = 1/200$; at finite size every exactly
+stationary quasi-free state has $\sigma \equiv 0$ exactly
+(`NESS with positive entropy production' is
+category-inapplicable) and drive buys \emph{no} reflection
+positivity --- the minimal entropy production at which the
+mixing gates open is exactly zero:
+\texttt{SEAM.CFIN.NESS.PARENT.01} \textbf{closes as
+not-needed}.  \emph{Demand (the registered successor):} the
+wiring selector below.  \emph{Kill:} a covariant strict
+2-cycle RP point, or an equilibrium collar witness whose
+compression breaks the canonical census.  The witnesses live on
+a different covariant coupling direction than the deployed
+$A_{\rm int}$ wiring --- whether the actual seam allows them is
+untouched; the [O] premise of
+\texttt{SEAM.CFIN.WICKFUNCTOR.01} / \texttt{v898} is unmoved;
+no marker move; no RH statement.\par}
+
+\par\smallskip\noindent\textbf{The wiring selector
+(\texttt{SEAM.STATE.WIRING.\allowbreak SELECTOR.01}).}
+\emph{OPEN} (registered 2026-08-11, rounds 60--63): is the
+deployed \textsc{pure-i} seam wiring \emph{compiler-forced}?
+The deployed IOTA wiring comes from the vacuum-orbit
+construction of $A_{\rm int}$; the demand is an exact answer to
+whether the orbit/edge rules (IOTA/$I_2$/$J_2$ units,
+orientation propagation) admit a $\{J, Z\}$-kernel alternative
+at equal $C_6$ covariance and equal Pfaffian pencil, or pin the
+$I$ direction.  Only then is it decidable whether the
+strict-collar obstruction of \texttt{v903}/\texttt{v908} is a
+\emph{compiler theorem} or a \emph{deployment choice}.
+\emph{Evidence base:} \veri{v908\_seam\_equilibrium\_wiring.py}
+(the two-seat law, the \textsc{pure-i} identification and the
+equilibrium witnesses).  \emph{Kill (either way is a result):}
+an orbit-rule derivation pinning \textsc{pure-i} (compiler
+theorem), or an explicit compiler-legal $\{J, Z\}$ wiring
+(deployment choice).  No marker move; no RH statement.
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}

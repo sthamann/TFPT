@@ -16595,7 +16595,11 @@ demands are a \emph{certifiable} $B$-floor (a damping congruence
 inequality of \texttt{PRIME.CASE.PAIRCORR.CONTRACT.01} [O], and
 the invariant-region construction under the \texttt{v900}
 boundary conditions.  All registered in the research-contracts
-companion.
+companion.  \emph{Dated note (2026-08-10/11, rounds 60--63):}
+the certifiable-$B$-floor demand is \emph{delivered} --- the
+missing piece was the certificate class, not a damping
+congruence (\vref{sec:bhalf-halfgap},
+\veri{v905\_bfloor\_ideal\_certificate.py}).
 
 \emph{The honest state after rounds 57--59.}  The wall now has a
 mechanism map: an exact two-scalar split over a measured $O(1)$
@@ -16607,6 +16611,220 @@ Radau identities \mE; the floors, screens, censuses and negatives
 measured; nothing gained positivity anywhere, and every
 relocation is typed as such.  No marker moves.
 \textbf{No statement about the Riemann Hypothesis is made.}
+
+\subsection{The certified B-half surface floor, the tail
+cartography and the registered half-gap
+target}\label{sec:bhalf-halfgap}
+
+Rounds 60--63 (2026-08-10/11) deliver the continuation of the
+cartography: fourteen further frozen probes, every spec
+amendment fail-first on record, twelve embedded byte-exact (two
+more cited as frame) in four promoted modules (suite
+$897\to901$) --- the certified ideal-object surface floor of the
+$B$-half (\veri{v905\_bfloor\_ideal\_certificate.py}), the tail
+mechanism map typed explicitly as \emph{negative cartography,
+not progress} (\veri{v906\_tail\_cartography.py}), and the
+registered half-gap target with its first blind holdout passed
+(\veri{v907\_halfgap\_registered\_target.py}).  (The seam
+equilibrium wiring of round 60 --- strict 2-cycle reflection
+positivity impossible on the whole covariant class, the
+strict-collar obstruction a two-seat linear law whose
+equilibrium kernel witnesses carry the full $1/200$ mixing at
+zero entropy production --- is a compiler statement and lives in
+the research-contracts companion,
+\veri{v908\_seam\_equilibrium\_wiring.py}.)
+
+\emph{The certified surface floor
+(\veri{v905\_bfloor\_ideal\_certificate.py}; probe verdicts
+\textsc{bfloorpg-measured
+(certified-surface-floor-achieved(min $c_B$=0.5914))},
+\textsc{bfloorpgival-measured
+(ival-surface-floor-achieved(min $c_B$=0.5523))}, $21/21 +
+25/25$).}  The round 57--59 demand --- a \emph{certifiable}
+$B$-floor --- is delivered, and the delivery mechanism is
+itself the lesson: after three dead certificate rounds (raw
+Gershgorin $-88$, Christoffel congruences $-140$..$-154$, the
+moving-node congruence unbuildable) the missing piece was not a
+damping congruence but the \emph{certificate class}.  The chain
+\[
+  B \succeq \tfrac12 P_G + c_{\mathrm{dom}} I,
+  \qquad P_G \succeq c_G I,
+  \qquad\Longrightarrow\qquad B \succeq c_B I,
+\]
+with $P_G$ the source-only CD-Gram co-block of the wall's own
+positive chain, is decided inequality-by-inequality by
+\emph{exact-rational} LDL (Fraction arithmetic on the float64
+entries, which \emph{are} exact rationals --- the \texttt{v897}
+certificate class) on all $39/39$ reachable steps: $c_B$
+min/med $0.5914/5.92$, efficiency
+$c_B/\lambda_{\min}(B) \ge 0.871$ (the chain pays at most
+$13\%$ for its structure), $\tau$-screen pass (slope $-0.256$).
+The honest surprise: $P_G$ is Gershgorin-\emph{positive} on its
+own (min $+0.33$, $39/39$) --- unlike $B$, the positive chain
+is classically certifiable; the single non-classical link is
+the dominance decision.  The interval rollout (SPEC v3) then
+lifts the statement from the computed to the \emph{ideal}
+source objects: the full pipeline (lags $\to$ FFT density $\to$
+Lanczos chain $\to$ frame $\to$ Schur complements $\to$ $B$)
+carried as rigorous outward enclosures, fail-closed at every
+step (an interval too wide to decide \emph{refuses} rather than
+passes), with an Ogita--Rump high-accuracy tier (error-free
+TwoSum block accumulation, radius factor ${\sim}150$--$300$)
+certifying exactly the six former width-refusals:
+$\min c_B = 0.5523$ on $39/39$ ideal-object steps ($93.4\%$ of
+the float reference), $0$ refused $/$ $0$ failed $/$ $0$
+skipped, and the smooth world \emph{refused} by the identical
+exact machine ($0/35$).  Honest scope, said everywhere: this is
+a \emph{surface} statement --- certified on the reachable
+$39$-step ladder over the ideal source objects with the frozen
+frame convention ($Q$, $\tau_1$, $s = \tfrac12$ exact-rational
+constants of the statement); the $h$-uniformity beyond
+$h \sim 900$ is open, every $h$ beyond the surface is open, and
+the $n > q$ half of the end-form is untouched and RH-hard
+(\texttt{PRIME.PORT.BFLOOR.PG.01},
+\texttt{PRIME.PORT.BFLOOR.PG.IVAL.01}).
+
+\emph{The tail mechanism map
+(\veri{v906\_tail\_cartography.py}; probe verdicts
+\textsc{tailsign-measured}, \textsc{tailrepair-measured},
+\textsc{pgschur-measured}, \textsc{tailabel-measured},
+\textsc{segsplit-measured}, \textsc{oscpair-measured}, $14/14 +
+10/10 + 20/20 + 22/22 + 24/24 + 22/22$).}  Typed explicitly as
+mechanism/negative cartography, \emph{not} progress: five dead
+routes on the $n > q$ half, each with a named seat, and two
+structural positives.  The positives first.
+\textsc{headfloor-o1}: the \emph{entire} $h$-decay of the wall
+margin lives in the sign-measured atom tail --- the head at the
+$B$-cover cut is $O(1)$ ($\tau$-screen slope $+0.113$, med
+$0.388$) while $\mathrm{tail}_B \le 0$ holds net on $67/67$: the
+open arithmetic statement collapses to the \emph{one-sided}
+bound $\mathrm{tail}_B > -\mathrm{head}_B$ between two $O(1)$
+objects whose gap is the margin itself.  And the $12$-bin
+reduction: the tail pairing decomposes over the half-range
+cosine frame with a \emph{tiny} low-frequency window-harmonic
+carrier census ($n_{90}$ med $3$, harmonic index $j^{*} \in
+\{1,2,3\}$ on $67/67$, measurably \emph{not}
+$\gamma$-concentrated at these window depths --- med
+$d_\gamma = 13.17$ against the uniform null ${\sim}1$, all
+carriers below $\gamma_1 = 14.13$; a result, not a
+celebration), and $12$ frozen global bins carry share med
+$+1.006$ on $67/67$ --- the tail bound is now a statement about
+${\sim}12$ windowed $\psi$-fluctuation Fourier coefficients
+$\widehat F(\omega)$, $\omega \lesssim 5$; honestly typed: the
+reduced margin carries the \emph{full} decay (screen $-1.042$)
+--- the reduction changes the \emph{dimension} of the open
+statement, not its difficulty.  The five dead routes: the
+pointwise sign (the net negativity is an arithmetic
+cancellation fact --- $\sup q_v$ beyond \emph{every} cut is
+positive on $67/67$ and the terminal lobe is positive:
+\textsc{mech-net-only}); the pointwise repair (no small named
+exception set --- \textsc{set-diffuse}, $k_{90}$ med $646$; the
+repair support grows as $X^{0.89}$ and the enlarged head is
+anti-$\tau$); the directional L\"owner route (with
+$D = \tfrac12 P_G + c_{\mathrm{dom}} I$ the L\"owner step
+$q \le \bar q$ holds \emph{exactly} on $39/39$, but the
+sufficient form $n > \bar q$ dies on $38/39$ with loss
+$\bar q/q$ med $91.3$, max $408$ --- $D$ is an excellent
+\emph{floor} model of $B$ and a catastrophic \emph{inverse}
+model along $b$: $D^{-1}$ inflates exactly the components
+$B^{-1}$ suppresses); the cumulative/Abel route (the transport
+and the $\psi$/Riesz cumulant identities are exact, but no
+order $r \le 3$ fixes the dual-kernel sign and the honest
+all-integer envelope closes nothing --- gap law
+$e^{+1.744\alpha}$; the measured hole is the \emph{oscillation}:
+the true remainder itself is ${\sim}10^4\,\mu_1$ units); and
+the segment split (the telescoped segment identity is exact at
+$3.5\times10^{-16}$, the per-segment demand is \emph{named} ---
+a one-sided windowed $\psi$ statement at deep anchors --- but
+the segment route is \emph{costlier} than the global one, gain
+$< 1$ on $67/67$: the \emph{anchor price} --- every
+Chebyshev-class envelope $|\psi(x) - x| \le \kappa x$ pays the
+deep anchor at every point of the segment; the deficit carrier
+is the interior segment, not the terminal lobe; the named
+missing object is a \emph{difference} envelope for
+$\psi(y) - \psi(x) - (y - x)$ on short deep windows ---
+Brun--Titchmarsh/Selberg class instead of Chebyshev class)
+(\texttt{PRIME.PORT.TAILSIGN.01/.02},
+\texttt{PRIME.PORT.PG.SCHUR.01},
+\texttt{PRIME.PORT.TAIL.ABEL.01},
+\texttt{PRIME.PORT.TAIL.SEGSPLIT.01},
+\texttt{PRIME.PORT.TAIL.OSCPAIR.01}).
+
+\emph{The registered half-gap target and its first blind
+holdout (\veri{v907\_halfgap\_registered\_target.py}; probe
+verdicts \textsc{halfgap-registered (reg-frozen(1/2,
+no-adjust))}, \textsc{deepholdout-scored
+(halfgap-holdout-pass(28/28))}, $17/17 + 14/14$).}  A
+\emph{falsification instrument}, explicitly \textbf{not
+evidence}: the target inequality
+\[
+  n_h - q_h \;\ge\; \tfrac12\,\mu_1(h),
+  \qquad \mu_1(h) = 4\sin^2\!\Big(\frac{\pi}{2h+1}\Big),
+\]
+is \emph{registered} on the $67$-rung surface with the constant
+\emph{exactly} $\tfrac12$ frozen under an explicit
+\textsc{no-adjust} clause that is part of the registered object
+(a later miss may not be repaired by $0.49$, reweighting or
+rung exclusion --- a fail is a first-class result):
+surface pass $67/67$ with margins
+$+0.0025/+0.5273/+1.6845$ (min at kz~98$/h$~997; the
+second-tightest rung is \emph{shallow} --- the tightness is
+arithmetic scatter, not a depth trend), blind protocol declared
+(registry sha256 \texttt{ae292e55}\ldots, scored verbatim, no
+refits, no constant moves), and the four candidate origins of
+the $\tfrac12$ typed \emph{open} --- the registration demands
+an algebraic derivation of the constant before any claim
+upgrade.  \textsc{reparam-declared} in every print: the
+inequality is the wall margin \emph{reparametrized} (the exact
+pivot collapse $n - q = m$ along $v$; the round-61 frame ---
+the Schur--Ward envelope identities, where the hub is exactly
+the $H$-term and the demand exactly the $-s$-term with $R$ a
+third object, and the $\mu_1$ normalization band $[0.502,
+2.185]$, inf-flat --- is cited at docstring level); its value
+is falsifiability, not novelty.  The first genuine blind
+holdout then \emph{passes}: the $10\times$ deeper table is
+bit-exact against the deployed one and opens $28$ new faithful
+rungs outside the registry ($h = 1219$--$2854$); pass $28/28$
+with margins min/med $+0.2232/+0.6567$ --- the holdout minimum
+sits ${\sim}90\times$ \emph{above} the registered surface
+minimum: no depth erosion; \textsc{headfloor-o1} persists
+(slope $-0.049$) with the honest structural drift disclosed
+(the cut ladders drift: $n_{\min B}$ med $47$ vs the deployed
+$17$); the $B$-floor$/P_G$ chain persists at declared
+\emph{float} level ($\min\lambda_{\min}(B) = 1.6610$, dominance
+$27/27$; no interval rollout in the depth --- said explicitly);
+and the margin law continues ($p = -1.925$ over $95$ rungs).
+Controls discriminate $3/3$ (every control world sits far below
+$\tfrac12$).  A pass is survival of a falsification attempt,
+never evidence (\texttt{PRIME.PORT.HALFGAP.01},
+\texttt{PRIME.PORT.DEEP.HOLDOUT.01}).
+
+\emph{The open fronts after rounds 60--63.}  The
+$B$-half of the end-form is closed as a certified surface
+theorem over the ideal source objects; what remains open is
+exactly what the map says: the $h$-uniformity of the chain
+beyond $h \sim 900$, the $n > q$ half --- now localized to a
+one-sided bound between two $O(1)$ objects, reducible to
+${\sim}12$ low-frequency windowed $\psi$-fluctuation
+coefficients, with every tested certificate language dead by
+measurement and the Selberg-class difference envelope the named
+missing object --- and the algebraic origin of the registered
+$\tfrac12$ (four candidates typed, none derived).  All
+registered in the research-contracts companion.
+
+\emph{The honest state after rounds 60--63.}  The wall now has
+a certified anchor and a sharper map: an exact-rational
+ideal-object floor on the whole reachable surface (fail-closed,
+smooth-refusing), a tail cartography of five dead routes with
+named seats and two structural positives, and a registered,
+blind-holdout-tested falsification target with a frozen
+constant and a no-adjust clause.  The chain, transport, segment
+and floor-exchange identities \mE; the floors, censuses,
+holdout scores and negatives measured; the target inequality is
+an instrument, not a claim; nothing here bounds $\tau$, the two
+scalars $n, q$ for all $h$, or anything at RH strength.  No
+marker moves.  \textbf{No statement about the Riemann
+Hypothesis is made.}
 
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 

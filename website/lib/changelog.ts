@@ -42,6 +42,1009 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-11",
+    "dateLabel": "2026-08-11 · LXXXIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "reflux rounds sixty through sixty-three — the certificate round: the B-half of the wall end-form CLOSES as a certified surface theorem over the IDEAL source objects, the tail gets a mechanism map of five dead routes with named seats and two structural positives, the half-gap target is REGISTERED with a frozen constant and passes its FIRST BLIND HOLDOUT, and the round-60 seam questions close in equilibrium — no NESS needed: FOUR modules ("
+      },
+      {
+        "k": "c",
+        "v": "v905"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v908"
+      },
+      {
+        "k": "t",
+        "v": ": B-floor ideal certificate, tail cartography, half-gap registered target, seam equilibrium wiring; suite "
+      },
+      {
+        "k": "m",
+        "v": "897\\to901"
+      },
+      {
+        "k": "t",
+        "v": "; TWELVE frozen probes with all fail-first spec amendments preserved, embedded byte-exact and executed verbatim, plus two round-61 frame probes cited at docstring level; ledger "
+      },
+      {
+        "k": "m",
+        "v": "1040\\to1052"
+      },
+      {
+        "k": "t",
+        "v": " with 12 promoted rows "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " dated notes on the "
+      },
+      {
+        "k": "c",
+        "v": "v903"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "t",
+        "v": "ness-parent"
+      },
+      {
+        "k": "t",
+        "v": " demand and the rounds-57–59 certifiable-B-floor demand) — (1) THE CERTIFIED IDEAL-OBJECT SURFACE FLOOR ("
+      },
+      {
+        "k": "c",
+        "v": "v905"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "21/21 + 25/25"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "bfloorpg-measured (certified-surface-floor-achieved(min "
+      },
+      {
+        "k": "m",
+        "v": "c_B"
+      },
+      {
+        "k": "t",
+        "v": "=0.5914))"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "t",
+        "v": "bfloorpgival-measured (ival-surface-floor-achieved(min "
+      },
+      {
+        "k": "m",
+        "v": "c_B"
+      },
+      {
+        "k": "t",
+        "v": "=0.5523, 0 refused / 0 failed / 0 skipped))"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PORT.BFLOOR.PG.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PORT.BFLOOR.PG.IVAL.01"
+      },
+      {
+        "k": "t",
+        "v": "): the chain "
+      },
+      {
+        "k": "m",
+        "v": "B \\succeq \\tfrac12 P_G + c_{\\rm dom} I"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "P_G \\succeq c_G I"
+      },
+      {
+        "k": "t",
+        "v": ", every inequality decided by EXACT-RATIONAL LDL (the "
+      },
+      {
+        "k": "c",
+        "v": "v897"
+      },
+      {
+        "k": "t",
+        "v": " certificate class) on all "
+      },
+      {
+        "k": "m",
+        "v": "39/39"
+      },
+      {
+        "k": "t",
+        "v": " reachable steps — "
+      },
+      {
+        "k": "m",
+        "v": "P_G"
+      },
+      {
+        "k": "t",
+        "v": " is Gershgorin-POSITIVE (the positive chain is classically certifiable; the single non-classical link is the dominance decision; after three dead certificate rounds the missing piece was the CERTIFICATE CLASS, not a new congruence) — and, via the SPEC-v3 interval rollout (full pipeline as rigorous outward enclosures, fail-closed with first-class refusals, Ogita–Rump error-free-transformation hi-tier certifying exactly the six former width-refusals), over the IDEAL source objects: min "
+      },
+      {
+        "k": "m",
+        "v": "c_B = 0.5523"
+      },
+      {
+        "k": "t",
+        "v": " on "
+      },
+      {
+        "k": "m",
+        "v": "39/39"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "93.4\\%"
+      },
+      {
+        "k": "t",
+        "v": " of the float reference), "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-screen PASS ("
+      },
+      {
+        "k": "m",
+        "v": "-0.226"
+      },
+      {
+        "k": "t",
+        "v": "), the smooth world REFUSED by the identical exact machine ("
+      },
+      {
+        "k": "m",
+        "v": "0/35"
+      },
+      {
+        "k": "t",
+        "v": "); HONEST SCOPE typed everywhere: a SURFACE statement — "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "-uniformity beyond "
+      },
+      {
+        "k": "m",
+        "v": "h \\sim 900"
+      },
+      {
+        "k": "t",
+        "v": " open, all "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " beyond the surface open, the "
+      },
+      {
+        "k": "m",
+        "v": "n > q"
+      },
+      {
+        "k": "t",
+        "v": " half untouched and RH-hard; (2) THE TAIL MECHANISM MAP ("
+      },
+      {
+        "k": "c",
+        "v": "v906"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "14/14 + 10/10 + 20/20 + 22/22 + 24/24 + 22/22"
+      },
+      {
+        "k": "t",
+        "v": " from SIX frozen probes, "
+      },
+      {
+        "k": "t",
+        "v": "tailsign-measured"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "t",
+        "v": "tailrepair-measured"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "t",
+        "v": "pgschur-measured"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "t",
+        "v": "tailabel-measured"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "t",
+        "v": "segsplit-measured"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "t",
+        "v": "oscpair-measured"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PORT. TAILSIGN.01/.02"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PORT.PG. SCHUR.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PORT.TAIL. ABEL.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PORT.TAIL. SEGSPLIT.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PORT.TAIL. OSCPAIR.01"
+      },
+      {
+        "k": "t",
+        "v": "; typed explicitly mechanism/negative cartography, NOT progress): FIVE dead routes with named seats (the tail sign is NET-ONLY — "
+      },
+      {
+        "k": "m",
+        "v": "\\sup q_v"
+      },
+      {
+        "k": "t",
+        "v": " positive beyond every cut, the terminal lobe positive "
+      },
+      {
+        "k": "m",
+        "v": "67/67"
+      },
+      {
+        "k": "t",
+        "v": "; the pointwise repair is SET-DIFFUSE and grows as "
+      },
+      {
+        "k": "m",
+        "v": "X^{0.89}"
+      },
+      {
+        "k": "t",
+        "v": " with an anti-"
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": " head; the directional Löwner route loses TWO orders of magnitude by the floor-vs-inverse mechanism ("
+      },
+      {
+        "k": "m",
+        "v": "q \\le \\bar q"
+      },
+      {
+        "k": "t",
+        "v": " exact "
+      },
+      {
+        "k": "m",
+        "v": "39/39"
+      },
+      {
+        "k": "t",
+        "v": " but "
+      },
+      {
+        "k": "m",
+        "v": "n > \\bar q"
+      },
+      {
+        "k": "t",
+        "v": " dies "
+      },
+      {
+        "k": "m",
+        "v": "38/39"
+      },
+      {
+        "k": "t",
+        "v": ", loss med "
+      },
+      {
+        "k": "m",
+        "v": "91.3"
+      },
+      {
+        "k": "t",
+        "v": "); the cumulative/Abel route is exact ("
+      },
+      {
+        "k": "m",
+        "v": "\\psi"
+      },
+      {
+        "k": "t",
+        "v": "/Riesz identities warded) but its honest integer envelope leaves the gap law "
+      },
+      {
+        "k": "m",
+        "v": "e^{+1.744\\alpha}"
+      },
+      {
+        "k": "t",
+        "v": " — the measured hole is the OSCILLATION, the true remainder itself "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}10^4 \\mu_1"
+      },
+      {
+        "k": "t",
+        "v": "; the segment split is COSTLIER than global (gain "
+      },
+      {
+        "k": "m",
+        "v": "< 1"
+      },
+      {
+        "k": "t",
+        "v": " on "
+      },
+      {
+        "k": "m",
+        "v": "67/67"
+      },
+      {
+        "k": "t",
+        "v": ", the ANCHOR PRICE; the named missing object: a DIFFERENCE envelope for "
+      },
+      {
+        "k": "m",
+        "v": "\\psi(y)-\\psi(x)-(y-x)"
+      },
+      {
+        "k": "t",
+        "v": " on short deep windows, Brun–Titchmarsh/Selberg class)) and TWO structural positives ("
+      },
+      {
+        "k": "t",
+        "v": "headfloor-o1"
+      },
+      {
+        "k": "t",
+        "v": ": the entire "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "-decay of the wall margin lives in the atom tail, the open statement collapses to the one-sided bound "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{tail}_B > -\\mathrm{head}_B"
+      },
+      {
+        "k": "t",
+        "v": " between two "
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": " objects; the 12-BIN REDUCTION: a tiny low-frequency window-harmonic carrier census, measurably NOT "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma"
+      },
+      {
+        "k": "t",
+        "v": "-concentrated at these depths, reduces the tail bound to "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}12"
+      },
+      {
+        "k": "t",
+        "v": " windowed "
+      },
+      {
+        "k": "m",
+        "v": "\\psi"
+      },
+      {
+        "k": "t",
+        "v": "-fluctuation Fourier coefficients — honestly typed: the reduced margin carries the FULL decay, dimension reduced, difficulty not); (3) THE REGISTERED HALF-GAP TARGET "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " THE FIRST BLIND HOLDOUT ("
+      },
+      {
+        "k": "c",
+        "v": "v907"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "17/17 + 14/14"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "t",
+        "v": "halfgap-registered (reg-frozen(1/2, no-adjust) / surface-pass(67/67, min margin +2.48e-03) / origin-open(4))"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "t",
+        "v": "deepholdout-scored (halfgap-holdout-pass(28/28, min margin +0.2232) / law-continues("
+      },
+      {
+        "k": "m",
+        "v": "-"
+      },
+      {
+        "k": "t",
+        "v": "1.925))"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PORT.HALFGAP.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.PORT.DEEP.HOLDOUT.01"
+      },
+      {
+        "k": "t",
+        "v": "; ledger-typed a FALSIFICATION INSTRUMENT, explicitly NOT evidence for RH): "
+      },
+      {
+        "k": "m",
+        "v": "n_h - q_h \\ge \\tfrac12 \\mu_1(h)"
+      },
+      {
+        "k": "t",
+        "v": " registered on the 67-rung surface with the constant EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "\\tfrac12"
+      },
+      {
+        "k": "t",
+        "v": " frozen under an explicit NO-ADJUST clause that is part of the object (registry sha "
+      },
+      {
+        "k": "c",
+        "v": "ae292e55"
+      },
+      {
+        "k": "t",
+        "v": "; four candidate origins of the "
+      },
+      {
+        "k": "m",
+        "v": "\\tfrac12"
+      },
+      {
+        "k": "t",
+        "v": " typed OPEN — an algebraic derivation is demanded before any claim upgrade; "
+      },
+      {
+        "k": "t",
+        "v": "reparam-declared"
+      },
+      {
+        "k": "t",
+        "v": ": the inequality is the wall margin reparametrized, its value is falsifiability, not novelty); the first genuine blind holdout PASSES on 28 new deeper faithful rungs ("
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " 1219–2854, bit-exact table fidelity, "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}90\\times"
+      },
+      {
+        "k": "t",
+        "v": " margin headroom, NO depth erosion, the honest cut-ladder drift disclosed; B-floor/"
+      },
+      {
+        "k": "m",
+        "v": "P_G"
+      },
+      {
+        "k": "t",
+        "v": " persist at declared float level; the margin law "
+      },
+      {
+        "k": "m",
+        "v": "-1.925"
+      },
+      {
+        "k": "t",
+        "v": " continues over 95 rungs; controls discriminate "
+      },
+      {
+        "k": "m",
+        "v": "3/3"
+      },
+      {
+        "k": "t",
+        "v": ") — a pass is survival of a falsification attempt, never evidence; (4) THE SEAM EQUILIBRIUM WIRING ("
+      },
+      {
+        "k": "c",
+        "v": "v908"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "22/22 + 25/25"
+      },
+      {
+        "k": "t",
+        "v": ", exact arithmetic, "
+      },
+      {
+        "k": "t",
+        "v": "margstab-measured (interior-empty / stratum-not-isolated / escape-noncovariant(price "
+      },
+      {
+        "k": "m",
+        "v": "2\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": ") / floor-exchange)"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "t",
+        "v": "nessparent-measured (price-zero / two-seat-law / finite-ness-nogo / drive-rp-neutral / ness-not-forced)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.CFIN.MARGINAL.STABILITY.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.CFIN.NESS.PARENT.01"
+      },
+      {
+        "k": "t",
+        "v": " closed NOT-NEEDED): strict 2-cycle RP is IMPOSSIBLE on the whole "
+      },
+      {
+        "k": "m",
+        "v": "C_6"
+      },
+      {
+        "k": "t",
+        "v": "-covariant class (the seat law reduces exactly to "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{diag}(a_J, -a_J)"
+      },
+      {
+        "k": "t",
+        "v": ", interior EMPTY; the only escape is covariance-breaking at exact linear price "
+      },
+      {
+        "k": "m",
+        "v": "2\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": ", and the floor exchange "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Pf}_4(\\varepsilon) = (\\varepsilon - \\tfrac1{200})(\\varepsilon + \\tfrac1{200})"
+      },
+      {
+        "k": "t",
+        "v": " puts the crossover exactly at the "
+      },
+      {
+        "k": "m",
+        "v": "1/200"
+      },
+      {
+        "k": "t",
+        "v": " floor); the strict-collar obstruction is a TWO-SEAT LINEAR LAW with kernel "
+      },
+      {
+        "k": "m",
+        "v": "\\{J, Z\\}"
+      },
+      {
+        "k": "t",
+        "v": ", the deployed wiring is "
+      },
+      {
+        "k": "t",
+        "v": "pure-i"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " a maximally obstructed covariant direction (explaining the "
+      },
+      {
+        "k": "c",
+        "v": "v903"
+      },
+      {
+        "k": "t",
+        "v": " `"
+      },
+      {
+        "k": "m",
+        "v": "30"
+      },
+      {
+        "k": "t",
+        "v": " entries, magnitude "
+      },
+      {
+        "k": "m",
+        "v": "2t"
+      },
+      {
+        "k": "t",
+        "v": "' law exactly), and EQUILIBRIUM kernel witnesses "
+      },
+      {
+        "k": "m",
+        "v": "V_J/V_Z"
+      },
+      {
+        "k": "t",
+        "v": " carry the full canonical "
+      },
+      {
+        "k": "m",
+        "v": "1/200"
+      },
+      {
+        "k": "t",
+        "v": " mixing at ZERO entropy production (stationary "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow \\sigma \\equiv 0"
+      },
+      {
+        "k": "t",
+        "v": " exactly; drive buys no RP) — the "
+      },
+      {
+        "k": "t",
+        "v": "ness-parent"
+      },
+      {
+        "k": "t",
+        "v": " demand closes as NOT-NEEDED and the successor contract "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.STATE.WIRING.SELECTOR.01"
+      },
+      {
+        "k": "t",
+        "v": " (is "
+      },
+      {
+        "k": "t",
+        "v": "pure-i"
+      },
+      {
+        "k": "t",
+        "v": " compiler-forced?) is registered; the "
+      },
+      {
+        "k": "c",
+        "v": "v898"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v903"
+      },
+      {
+        "k": "t",
+        "v": " [O] premise unmoved; papers (prime-front continuation section, research-contracts block, Paper 1 keybox addendum, Paper 3 audit cards) and website mirrors synced; NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-10",
     "dateLabel": "2026-08-10 · LXXXVIII",
     "heading": [

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`897` registered scripts · `1040` ledger claims · `10` clusters.
+`901` registered scripts · `1052` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (416 scripts)
+### `core` — Compiler core & the E₈ glue  (420 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -843,6 +843,14 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v898_kms_schur_mixing, v896_wick_block_functor, v898, v440, v519, v526, AX.P1.01, v813 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v904_healthcode12_diagnostic** [E] `PRIME.ARITH.HEALTHCODE12.01` — DIAGNOSTIK, NULL RH-Inhalt in beide Richtungen** — das wahre Wort ist alle-(+) auf 37/37 Voll-Fenster-Sprossen (= der zertifizierte Sylvester-Zensus repackaged, KEIN neuer Inhalt; 
   - deps: v899_christoffel_normsquare, v897_certified_interval_ladder, v563, v897, v899 · cited: 3 e8 audit bootstrap
+- **v905_bfloor_ideal_certificate** [E/O] `PRIME.PORT.BFLOOR.PG.01, PRIME.PORT.BFLOOR.PG.IVAL.01` — die Kette B ⪰ ½P_G + c_dom·I und P_G ⪰ c_G·I, JEDE Ungleichung exakt-rational (LDL, v897-Zertifikatsklasse) entschieden auf allen 39/39 erreichbaren Steps: Float-Kette min c_B = 0.
+  - deps: v901_tangent_schur_bfloor, v563, v897, v901, v905_bfloor_ideal_certificate · cited: 3 e8 audit bootstrap, research contracts
+- **v906_tail_cartography** [E/O] `PRIME.PORT.TAILSIGN.01, PRIME.PORT.TAILSIGN.02, PRIME.PORT.PG.SCHUR.01, PRIME.PORT.TAIL.ABEL.01, PRIME.PORT.TAIL.SEGSPLIT.01, PRIME.PORT.TAIL.OSCPAIR.01` — explizit als Mechanismus-/Negativ-Kartographie getypt, KEIN Fortschritt** — FÜNF tote Routen mit benannten Sitzen: das Tail-Vorzeichen ist NET-ONLY, nicht punktweise (sup q_v posit
+  - deps: v901_tangent_schur_bfloor, v563, v901, v906_tail_cartography, v905_bfloor_ideal_certificate, v905 · cited: 3 e8 audit bootstrap, research contracts
+- **v907_halfgap_registered_target** [E/O] `PRIME.PORT.HALFGAP.01, PRIME.PORT.DEEP.HOLDOUT.01` — ein FALSIFIKATIONS-Instrument, explizit KEINE Evidenz für RH** — die Ziel-Ungleichung n_h − q_h ≥ ½·mu1(h) ist auf der 67-Sprossen-Fläche REGISTRIERT: Konstante EXAKT ½ eingefroren
+  - deps: v901_tangent_schur_bfloor, v905_bfloor_ideal_certificate, v563, v901, v905, v907_halfgap_registered_target, v906_tail_cartography · cited: 3 e8 audit bootstrap, research contracts
+- **v908_seam_equilibrium_wiring** [E] `SEAM.CFIN.MARGINAL.STABILITY.01, SEAM.CFIN.NESS.PARENT.01` — der Physik-Abschluss der Runde-60-Fragen** — strikte 2-Zykel-RP ist auf der GANZEN C6-kovarianten Klasse UNMÖGLICH (das Sitz-Gesetz reduziert kovariant EXAKT auf M1 = diag(a_J, −a_
+  - deps: v903_seam_rp_exclusion, v898_kms_schur_mixing, v898, v903, v908_seam_equilibrium_wiring · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1859,16 +1867,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×196, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `AX.P2.01`×19, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18
+**Most-depended-on claims** (the load-bearing roots): `v563`×206, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `AX.P2.01`×19, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v893_relative_margins** — `PRIME.PORT.ETASOURCE.01, PRIME.PORT.RELFLAG.01`
-- **v894_diagonal_refinement** — `PRIME.CASE.PAIRCORR.CONTRACT.01`
-- **v895_collective_comb** — `PRIME.PORT.FACTORAVOID.01, PRIME.PORT.DEEPCORE.01`
-- **v896_wick_block_functor** — `SEAM.CFIN.WICKFUNCTOR.01`
 - **v897_certified_interval_ladder** — `PRIME.PORT.BALLLADDER.01`
 - **v898_kms_schur_mixing** — `SEAM.CFIN.KMSMIX.01`
 - **v899_christoffel_normsquare** — `PRIME.PORT.CHRISTOFFEL.RATIO.01, PRIME.CASE.KERNEL.SOS.01, PRIME.CASE.EDGEDEFECT.01`
@@ -1877,4 +1881,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v902_wall_relocation_map** — `PRIME.CASE.EDGE.CHRISTOFFEL.01, PRIME.PORT.GRAM.COMPLETION.01, PRIME.PORT.RADAU.WEIGHT.01`
 - **v903_seam_rp_exclusion** — `SEAM.STATE.DERIVATION.01, SEAM.CFIN.MIXING.NORMALIZATION.01, SEAM.CFIN.MINIMAL.MEDIATOR.01, SEAM.CFIN.TWISTED.RP.01, SEAM.CFIN.RP.DILATION.01, SEAM.CFIN.GAP.PENCIL.01`
 - **v904_healthcode12_diagnostic** — `PRIME.ARITH.HEALTHCODE12.01`
+- **v905_bfloor_ideal_certificate** — `PRIME.PORT.BFLOOR.PG.01, PRIME.PORT.BFLOOR.PG.IVAL.01`
+- **v906_tail_cartography** — `PRIME.PORT.TAILSIGN.01, PRIME.PORT.TAILSIGN.02, PRIME.PORT.PG.SCHUR.01, PRIME.PORT.TAIL.ABEL.01, PRIME.PORT.TAIL.SEGSPLIT.01, PRIME.PORT.TAIL.OSCPAIR.01`
+- **v907_halfgap_registered_target** — `PRIME.PORT.HALFGAP.01, PRIME.PORT.DEEP.HOLDOUT.01`
+- **v908_seam_equilibrium_wiring** — `SEAM.CFIN.MARGINAL.STABILITY.01, SEAM.CFIN.NESS.PARENT.01`
 
