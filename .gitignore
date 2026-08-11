@@ -72,6 +72,13 @@ experiments/hfqpo-ladder/extension-nicer-laxpc/results/cache/
 # experiments/tfpt-discovery/macro_quantization_probe.py -- sources documented in the script)
 experiments/tfpt-discovery/data_macro/
 
+# Large zero caches for the tfpt-discovery RH-reduction probes (~160 MB verified-zero
+# npy + ~14 MB Odlyzko zeros6 table; rebuilt on demand by
+# experiments/tfpt-discovery/w2_big_zero_cache_build.py / j16_zero_cache_build.py --
+# the small npy caches and meta JSONs stay tracked)
+experiments/tfpt-discovery/verified_zeros_big.npy
+experiments/tfpt-discovery/odlyzko_zeros6.gz
+
 # Local secrets (Zenodo token, etc.)
 .env
 
