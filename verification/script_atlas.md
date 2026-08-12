@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`901` registered scripts · `1052` ledger claims · `10` clusters.
+`904` registered scripts · `1055` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (420 scripts)
+### `core` — Compiler core & the E₈ glue  (423 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -851,6 +851,12 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v901_tangent_schur_bfloor, v905_bfloor_ideal_certificate, v563, v901, v905, v907_halfgap_registered_target, v906_tail_cartography · cited: 3 e8 audit bootstrap, research contracts
 - **v908_seam_equilibrium_wiring** [E] `SEAM.CFIN.MARGINAL.STABILITY.01, SEAM.CFIN.NESS.PARENT.01` — der Physik-Abschluss der Runde-60-Fragen** — strikte 2-Zykel-RP ist auf der GANZEN C6-kovarianten Klasse UNMÖGLICH (das Sitz-Gesetz reduziert kovariant EXAKT auf M1 = diag(a_J, −a_
   - deps: v903_seam_rp_exclusion, v898_kms_schur_mixing, v898, v903, v908_seam_equilibrium_wiring · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v909_finite_wall_closure** [E/C] `PRIME.WALL.FINITE_CLOSURE.01` — der komponierte Zensus B ∧ W1 ∧ W2 auf 39/39 gematchter Fläche + 8/8 tiefen Sprossen aus zitierten Inputs** — B-Hälfte (P_G-Kette, CLIII/v905 intervall-zertifizierter Klassen-Floor
+  - deps: v905_bfloor_ideal_certificate, v907_halfgap_registered_target, v901_tangent_schur_bfloor, v563, v905, v907 · cited: 3 e8 audit bootstrap, research contracts
+- **v910_finite_zero_transfer** [E] `PRIME.WALL.FINITE_ZERO_TRANSFER.01` — die Nullstellen-Ökonomie der fertigen Wand** — pro deployter Sprosse der minimale Verified-Zero-Cutoff T_req(h), an dem das W2-Zertifikat schließt: eingefrorene Voll-Leiter-Gesetze
+  - deps: v909_finite_wall_closure, v563, v909 · cited: 3 e8 audit bootstrap, research contracts
+- **v911_wiring_freedom** [E/O] `SEAM.STATE.WIRING.SELECTOR.01` — die CXXXIX-Frage geschlossen, der v908-registrierte Kontrakt beantwortet: DEPLOYMENT-WAHL, kein Compiler-Theorem** — der exakte Gröbner-Zensus bestimmt GENAU EINE admissible 3-dim 
+  - deps: v908_seam_equilibrium_wiring, v903_seam_rp_exclusion, v898, v903, v908 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1867,15 +1873,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×206, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `AX.P2.01`×19, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18
+**Most-depended-on claims** (the load-bearing roots): `v563`×208, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `AX.P2.01`×19, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v897_certified_interval_ladder** — `PRIME.PORT.BALLLADDER.01`
-- **v898_kms_schur_mixing** — `SEAM.CFIN.KMSMIX.01`
-- **v899_christoffel_normsquare** — `PRIME.PORT.CHRISTOFFEL.RATIO.01, PRIME.CASE.KERNEL.SOS.01, PRIME.CASE.EDGEDEFECT.01`
 - **v900_core_update_anatomy** — `PRIME.PORT.NORMALIZED.CORE.01, PRIME.PORT.GRAPH.REGION.01`
 - **v901_tangent_schur_bfloor** — `PRIME.PORT.TANGENT.SCHUR.01, PRIME.PORT.BFLOOR.01, PRIME.PORT.SIGNFREE.NORMALIZATION.01`
 - **v902_wall_relocation_map** — `PRIME.CASE.EDGE.CHRISTOFFEL.01, PRIME.PORT.GRAM.COMPLETION.01, PRIME.PORT.RADAU.WEIGHT.01`
@@ -1885,4 +1888,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v906_tail_cartography** — `PRIME.PORT.TAILSIGN.01, PRIME.PORT.TAILSIGN.02, PRIME.PORT.PG.SCHUR.01, PRIME.PORT.TAIL.ABEL.01, PRIME.PORT.TAIL.SEGSPLIT.01, PRIME.PORT.TAIL.OSCPAIR.01`
 - **v907_halfgap_registered_target** — `PRIME.PORT.HALFGAP.01, PRIME.PORT.DEEP.HOLDOUT.01`
 - **v908_seam_equilibrium_wiring** — `SEAM.CFIN.MARGINAL.STABILITY.01, SEAM.CFIN.NESS.PARENT.01`
+- **v909_finite_wall_closure** — `PRIME.WALL.FINITE_CLOSURE.01`
+- **v910_finite_zero_transfer** — `PRIME.WALL.FINITE_ZERO_TRANSFER.01`
+- **v911_wiring_freedom** — `SEAM.STATE.WIRING.SELECTOR.01`
 

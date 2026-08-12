@@ -9651,19 +9651,113 @@ exchange $\operatorname{Pf}_4(\varepsilon) = (\varepsilon -
 \tfrac1{200})(\varepsilon + \tfrac1{200})$ --- crossover
 exactly at the $1/200$ floor); the strict-collar obstruction is
 a two-seat linear law with kernel $\{J, Z\}$, the deployed
-wiring is \textsc{pure-i} (maximally obstructed), and
+wiring is \textsc{pure-i} (maximally obstructed \emph{in the
+deployed $\theta_S$ collar frame} --- the frame qualifier of
+rounds 69--71), and
 \emph{equilibrium} kernel witnesses carry the full $1/200$
 mixing at zero entropy production --- no NESS is needed
 (stationary $\Rightarrow \sigma \equiv 0$ exactly; drive buys
-no RP); the registered successor contract asks whether
-\textsc{pure-i} is compiler-forced
-(\texttt{SEAM.STATE.WIRING.SELECTOR.01}).  The \texttt{v898}
+no RP); the registered successor contract --- is
+\textsc{pure-i} compiler-forced?
+(\texttt{SEAM.STATE.WIRING.SELECTOR.01}) --- is closed in the
+next block.  The \texttt{v898}
 [O] premise unmoved.  No marker move, no RH claim.
 Machine-checked: \veri{v908\_seam\_equilibrium\_wiring.py}.
 \mE\ (the seat laws, witnesses and floor-exchange identities
 --- exact) $+$ (\textsc{measured}) (the stratum and drive
 censuses) $+$ \mO\ (the physical realization --- the premise
 unmoved)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The wiring freedom theorem
+(\texttt{SEAM.STATE.WIRING.\allowbreak SELECTOR.01}, closed:
+deployment choice;
+\texttt{SEAM.STATE.THETA.\allowbreak SELECTOR.01};
+\texttt{SEAM.STATE.WIRING.\allowbreak GAUGE.RP.01}).}
+Three probes ($30/30 + 26/26 + 21/21$;
+\textsc{wiring-degenerate}, \textsc{theta-conventional},
+\textsc{rp-frame-covariant}; exact integer/rational sympy,
+embedded byte-exact).  The v908-registered successor contract
+is answered as a \emph{freedom theorem}: the exact Gr\"obner
+census of the orbit/edge constraint classes leaves exactly
+\emph{one} admissible three-dimensional wiring component modulo
+the rule gauge (the rotation cell); $Z$/$X$ wirings are
+excluded gauge-invariantly by orientation propagation
+($\det u < 0$ identically); \textsc{pure-i} is an
+\emph{interior} point, connected to the pure-$J$ ray by an
+integer rule-gauge element --- a deployment representative,
+\emph{not} a compiler theorem.  No compiler-side demand
+distinguishes the $\theta_S$ sheet-swap frame within the
+$9$-dim rule-gauge algebra (five demand classes, all silent on
+the angle), and the strict-collar RP Grams transform exactly
+covariantly under the rule gauge: RP of a (frame, wiring) pair
+depends only on the relative angle --- the deployed parent
+passes strict collar RP \emph{exactly} in the
+integer-conjugated frame, so the rounds-58/59 obstruction is a
+frame statement, not a wiring no-go.  Canonical sentence
+frozen; ``\textsc{pure-i} is compiler-forced'' is forbidden.
+Honest scope: five enumerated demand classes; a demand outside
+the list is not excluded; the physical collar frame remains
+underived; the \texttt{v898}/\texttt{v903} [O] premise
+unmoved.  No marker move, no RH claim.
+Machine-checked: \veri{v911\_wiring\_freedom.py}.
+\mE\ (the census, gauge and covariance identities --- exact)
+$+$ (\textsc{measured}) (the float wards and spectra) $+$
+\mO\ (the physical collar frame --- underived)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The finite wall closure
+(\texttt{PRIME.WALL.FINITE\_\allowbreak CLOSURE.01}).}
+One module ($28/28$; reduced-subset re-verification with a
+committed $7{,}000$-ordinate verified-zero cache, warded
+in-run; the full census cited with its spec hashes).  On the
+deployed finite ladder the composed census $B \wedge
+\mathrm{W1} \wedge \mathrm{W2}$ holds on $39/39$ matched
+surface $+$ $8/8$ deep rungs from cited inputs: the $B$-half
+interval floor ($\min c_B = 0.5523$, \texttt{v905}), the W1
+monotone composition (the old $+8$..$+9$ dex composition gaps
+dissolved into one exact measure inequality) with the
+verified-zero supply at the $j = 16$ seat ($39/39$ at
+$N_Z = 7000$, composed $67/67$ with the cited deep $28/28$),
+and the W2 recomposed certificate ($67/67 + 8/8$ with the
+$2\times10^{7}$-ordinate certified cache).  Language frozen: W1
+and W2 are \emph{algorithmically independent evaluations of the
+same localized Weil form} --- a strong mutual crosscheck, not
+two independent proofs; positivity is certified on a finite
+family of Galerkin sections along the \emph{measured} critical
+direction (direction-conditional); the zeros are
+\textsc{external-cited} (Odlyzko, LMFDB/Platt, Platt--Trudgian
+2021, Rosser 1941, B\"uthe 2018).  A finite verified-zero sum
+can never prove RH.  No marker move, no RH claim.
+Machine-checked: \veri{v909\_finite\_wall\_closure.py}.
+\mE\ (the split, dual and Loewner identities --- exact) $+$
+(\textsc{measured}) (the censuses, floors and heart wards,
+finite surface, cited inputs) $+$ \mO\ (all $h$ beyond the
+ladder; the all-direction object)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The transfer law
+(\texttt{PRIME.WALL.FINITE\_ZERO\_\allowbreak TRANSFER.01}).}
+One module ($10/10$; shallow end re-verified, full ladder
+cited, SPEC \texttt{40a7b5c3}).  The zero-supply economics of
+the finite closure: $T_{\mathrm{req}}(h) \sim h^{2.8}$
+($\log_{10} T_{\mathrm{req}} = -3.045 + 1.228 \ln h$, $R^2 =
+0.882$) and the ratio to the window's own spectral reach
+$\pi/D_h$ \emph{grows} ($+0.897$ dex$/\ln h$): the verdict is
+\textsc{external-battery} / \textsc{w-unbounded-per-rung} ---
+the finite engine does not scale by buying zeros.  The
+parametrized transfer law:
+$\mathrm{ZerosCertified}(T) \wedge \mathrm{TailEnvelope}(T)
+\Rightarrow M_h \succ 0$ for all deployed $h \le H(T)$, with
+$H(\gamma_{7000}/\gamma_{2\mathrm{M}}/\gamma_{2\cdot10^{7}}) =
+254/1256/2806$; $H(T)$ is the measuring rod any analytic
+per-window bound has to beat.  Per-rung, deployed ladder,
+measured critical direction; $H(T)$ says nothing about
+undeployed $h$; the extrapolation is a fit, not a theorem.  No
+marker move, no RH claim.
+Machine-checked: \veri{v910\_finite\_zero\_transfer.py}.
+(\textsc{measured}) (the supply curves, censuses and laws) $+$
+\mO\ (the analytic per-window bound --- the named demand)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification

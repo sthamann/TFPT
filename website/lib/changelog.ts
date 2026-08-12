@@ -42,6 +42,801 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-12",
+    "dateLabel": "2026-08-12 · XC",
+    "heading": [
+      {
+        "k": "t",
+        "v": "promotion round four — the consolidation of rounds sixty-four through seventy-one: the FINITE wall closure with its transfer law, and the wiring freedom theorem: THREE modules ("
+      },
+      {
+        "k": "c",
+        "v": "v909"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v911"
+      },
+      {
+        "k": "t",
+        "v": ": finite wall closure, finite zero transfer, wiring freedom; suite "
+      },
+      {
+        "k": "m",
+        "v": "901\\to904"
+      },
+      {
+        "k": "t",
+        "v": "; ledger "
+      },
+      {
+        "k": "m",
+        "v": "1052\\to1055"
+      },
+      {
+        "k": "t",
+        "v": " with the rows "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.WALL.FINITE_CLOSURE.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.WALL.FINITE_ZERO_TRANSFER.01"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.STATE.WIRING.SELECTOR.01"
+      },
+      {
+        "k": "t",
+        "v": " closed) — (1) THE FINITE WALL CLOSURE ("
+      },
+      {
+        "k": "c",
+        "v": "v909"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "28/28"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.WALL.FINITE_CLOSURE.01"
+      },
+      {
+        "k": "t",
+        "v": "): on the deployed finite ladder every reachable wall face is certified from cited inputs and the composed census "
+      },
+      {
+        "k": "m",
+        "v": "B \\wedge \\mathrm{W1} \\wedge \\mathrm{W2}"
+      },
+      {
+        "k": "t",
+        "v": " holds on "
+      },
+      {
+        "k": "m",
+        "v": "39/39"
+      },
+      {
+        "k": "t",
+        "v": " matched surface "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": " deep rungs (frozen experiments runs of rounds 64–67, cited with their spec hashes) — the "
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": "-half via the "
+      },
+      {
+        "k": "c",
+        "v": "v905"
+      },
+      {
+        "k": "t",
+        "v": " interval-certified class floor (min "
+      },
+      {
+        "k": "m",
+        "v": "c_B = 0.5523"
+      },
+      {
+        "k": "t",
+        "v": "), the W1 face via the monotone-composition measure inequality (the two "
+      },
+      {
+        "k": "m",
+        "v": "+8"
+      },
+      {
+        "k": "t",
+        "v": ".."
+      },
+      {
+        "k": "m",
+        "v": "+9"
+      },
+      {
+        "k": "t",
+        "v": " dex composition gaps of rounds 55–59 DISSOLVE into one exact Loewner step, composition price "
+      },
+      {
+        "k": "m",
+        "v": "+0.29"
+      },
+      {
+        "k": "t",
+        "v": " dex) plus VERIFIED ZEROS AS EXACT DATA at the named "
+      },
+      {
+        "k": "m",
+        "v": "j = 16"
+      },
+      {
+        "k": "t",
+        "v": " seat (the truncated explicit formula with "
+      },
+      {
+        "k": "m",
+        "v": "7000"
+      },
+      {
+        "k": "t",
+        "v": " mpmath ordinates, every read tested against the independent prime side, the tail bracketed by the unconditional Rosser–Abel envelope: "
+      },
+      {
+        "k": "m",
+        "v": "39/39"
+      },
+      {
+        "k": "t",
+        "v": " surface, composed "
+      },
+      {
+        "k": "m",
+        "v": "67/67"
+      },
+      {
+        "k": "t",
+        "v": " with the cited deep "
+      },
+      {
+        "k": "m",
+        "v": "28/28"
+      },
+      {
+        "k": "t",
+        "v": "), and the W2 face via the recomposed certificate "
+      },
+      {
+        "k": "m",
+        "v": "m_{\\rm cert} = FC + \\widehat{P}_{\\rm arith} - \\mathrm{TAILB} > 0"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "16/67"
+      },
+      {
+        "k": "t",
+        "v": " at the "
+      },
+      {
+        "k": "m",
+        "v": "7000"
+      },
+      {
+        "k": "t",
+        "v": "-ordinate cache, "
+      },
+      {
+        "k": "m",
+        "v": "67/67 + 8/8"
+      },
+      {
+        "k": "t",
+        "v": " once the "
+      },
+      {
+        "k": "m",
+        "v": "2\\times10^{7}"
+      },
+      {
+        "k": "t",
+        "v": "-ordinate certified cache pays the priced tail; Odlyzko "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " LMFDB/Platt, every ordinate below the Platt–Trudgian height "
+      },
+      {
+        "k": "m",
+        "v": "T_0 = 3\\times10^{12}"
+      },
+      {
+        "k": "t",
+        "v": ", EXTERNAL-CITED); the promoted module re-verifies the load-bearing spine SELF-CONTAINED on a reduced frozen subset with its own committed 7000-ordinate cache re-warded in-run (Rosser corridor per index both sides, "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1"
+      },
+      {
+        "k": "t",
+        "v": " identity, independent "
+      },
+      {
+        "k": "m",
+        "v": "|\\zeta|"
+      },
+      {
+        "k": "t",
+        "v": " spot checks "
+      },
+      {
+        "k": "m",
+        "v": "2.1\\times10^{-12}"
+      },
+      {
+        "k": "t",
+        "v": "; heart ward on every read, slack "
+      },
+      {
+        "k": "m",
+        "v": "+2.1"
+      },
+      {
+        "k": "t",
+        "v": ".."
+      },
+      {
+        "k": "m",
+        "v": "+4.8"
+      },
+      {
+        "k": "t",
+        "v": " dex; closure "
+      },
+      {
+        "k": "m",
+        "v": "6/6"
+      },
+      {
+        "k": "t",
+        "v": "; the off-line-impostor control fires at "
+      },
+      {
+        "k": "m",
+        "v": "8.2\\times10^{4}\\times"
+      },
+      {
+        "k": "t",
+        "v": ") and cites the full census rather than recomputing it; LANGUAGE FROZEN: W1/W2 are algorithmically independent evaluations of the SAME localized Weil form — a strong mutual crosscheck, NOT two independent proofs; positivity certified on a finite family of Galerkin sections along the MEASURED critical direction (direction-conditional, UNIF-PATH caveat); a finite verified-zero sum can never prove RH; (2) THE TRANSFER LAW ("
+      },
+      {
+        "k": "c",
+        "v": "v910"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.WALL.FINITE_ZERO_TRANSFER.01"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "40a7b5c3"
+      },
+      {
+        "k": "t",
+        "v": "): the zero-supply economics of the finished wall — "
+      },
+      {
+        "k": "m",
+        "v": "T_{\\rm req}(h) \\sim h^{2.8}"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\log_{10} T_{\\rm req} = -3.045 + 1.228 \\ln h"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "R^2"
+      },
+      {
+        "k": "t",
+        "v": " 0.882) and the ratio to the window's own spectral reach "
+      },
+      {
+        "k": "m",
+        "v": "\\pi/D_h"
+      },
+      {
+        "k": "t",
+        "v": " GROWS ("
+      },
+      {
+        "k": "m",
+        "v": "+0.897"
+      },
+      {
+        "k": "t",
+        "v": " dex"
+      },
+      {
+        "k": "m",
+        "v": "/\\ln h"
+      },
+      {
+        "k": "t",
+        "v": "): verdict RATIO-GROWING "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " EXTERNAL-BATTERY / W-UNBOUNDED-PER-RUNG — the finite engine does NOT scale by buying zeros; the parametrized transfer law "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{ZerosCertified}(T) \\wedge \\mathrm{TailEnvelope}(T) \\Rightarrow M_h \\succ 0"
+      },
+      {
+        "k": "t",
+        "v": " for all deployed "
+      },
+      {
+        "k": "m",
+        "v": "h \\le H(T)"
+      },
+      {
+        "k": "t",
+        "v": " with the measured envelope "
+      },
+      {
+        "k": "m",
+        "v": "H(\\gamma_{7000}/\\gamma_{2\\rm M}/\\gamma_{2\\times10^{7}}) = 254/1256/2806"
+      },
+      {
+        "k": "t",
+        "v": ", W1 cheap (binds "
+      },
+      {
+        "k": "m",
+        "v": "3/75"
+      },
+      {
+        "k": "t",
+        "v": "), the next "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "-decade at "
+      },
+      {
+        "k": "m",
+        "v": "T \\sim 3.4\\times10^{9}"
+      },
+      {
+        "k": "t",
+        "v": ", and "
+      },
+      {
+        "k": "m",
+        "v": "H(T)"
+      },
+      {
+        "k": "t",
+        "v": " the measuring rod any analytic per-window bound must beat; the module re-verifies the shallow end (12 rungs "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " 142–254, anchors "
+      },
+      {
+        "k": "m",
+        "v": "K = 250"
+      },
+      {
+        "k": "t",
+        "v": ".."
+      },
+      {
+        "k": "m",
+        "v": "7000"
+      },
+      {
+        "k": "t",
+        "v": ", closure census "
+      },
+      {
+        "k": "m",
+        "v": "2/3/4/6/8/12"
+      },
+      {
+        "k": "t",
+        "v": ", zero non-monotone, heart ward on all 492 cells, "
+      },
+      {
+        "k": "m",
+        "v": "H"
+      },
+      {
+        "k": "t",
+        "v": "-consistency "
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": "; one disclosed control-rule amendment, fail-first preserved: the jitter bar restored to the upstream frozen "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 5"
+      },
+      {
+        "k": "t",
+        "v": "-reads rule); (3) THE WIRING FREEDOM THEOREM ("
+      },
+      {
+        "k": "c",
+        "v": "v911"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "30/30 + 26/26 + 21/21"
+      },
+      {
+        "k": "t",
+        "v": ", verdicts WIRING-DEGENERATE "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " THETA-CONVENTIONAL "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " RP-FRAME-COVARIANT; three frozen probes of rounds 69–71 embedded byte-exact, exact integer/rational arithmetic; "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.STATE.WIRING.SELECTOR.01"
+      },
+      {
+        "k": "t",
+        "v": " CLOSED — the v908-registered contract answered): the exact Gröbner census of the orbit/edge constraint classes leaves EXACTLY ONE admissible three-dimensional wiring component modulo the rule gauge (the rotation cell "
+      },
+      {
+        "k": "m",
+        "v": "C_{\\rm rot}"
+      },
+      {
+        "k": "t",
+        "v": "); the "
+      },
+      {
+        "k": "m",
+        "v": "Z"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "m",
+        "v": "X"
+      },
+      {
+        "k": "t",
+        "v": " wirings are excluded gauge-invariantly by orientation propagation ("
+      },
+      {
+        "k": "m",
+        "v": "\\det u < 0"
+      },
+      {
+        "k": "t",
+        "v": " identically); the deployed "
+      },
+      {
+        "k": "t",
+        "v": "pure-i"
+      },
+      {
+        "k": "t",
+        "v": " point is an INTERIOR point, connected to the pure-"
+      },
+      {
+        "k": "m",
+        "v": "J"
+      },
+      {
+        "k": "t",
+        "v": " ray by the integer gauge element "
+      },
+      {
+        "k": "m",
+        "v": "(\\oplus_5 J_2) \\oplus I_6"
+      },
+      {
+        "k": "t",
+        "v": " — "
+      },
+      {
+        "k": "t",
+        "v": "pure-i"
+      },
+      {
+        "k": "t",
+        "v": " IS A DEPLOYMENT REPRESENTATIVE, NOT A COMPILER THEOREM; no compiler-side demand distinguishes the "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_S"
+      },
+      {
+        "k": "t",
+        "v": " sheet-swap frame within the 9-dim rule-gauge algebra (five demand classes all silent on the angle), the strict-collar RP Grams transform EXACTLY covariantly under the rule gauge (RP of a (frame, wiring) pair depends only on the relative angle on the "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": "-circle), and the same deployed parent that fails strict collar RP at "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_S"
+      },
+      {
+        "k": "t",
+        "v": " (defect "
+      },
+      {
+        "k": "m",
+        "v": "2t"
+      },
+      {
+        "k": "t",
+        "v": ") PASSES it exactly in the integer-conjugated frame: the rounds-58/59 obstruction is a FRAME statement, not a wiring no-go; the canonical sentence is frozen (sha "
+      },
+      {
+        "k": "c",
+        "v": "79950314"
+      },
+      {
+        "k": "t",
+        "v": ") and “"
+      },
+      {
+        "k": "t",
+        "v": "pure-i"
+      },
+      {
+        "k": "t",
+        "v": " is compiler-forced” is henceforth FORBIDDEN (equivalents without the frame qualifier included); the "
+      },
+      {
+        "k": "c",
+        "v": "v898"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v903"
+      },
+      {
+        "k": "t",
+        "v": " [O] premise unmoved; NEW COMMITTED DATA ARTIFACT: "
+      },
+      {
+        "k": "c",
+        "v": "verification/verified_zeros_n7000.json"
+      },
+      {
+        "k": "t",
+        "v": " (7000 mpmath dps-15 ordinates with disclosed in-module rebuild path and in-run wards); papers ("
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " new subsection “The finite wall closure and the transfer law” "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the rounds-60–63 open-fronts forward link, "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " the wiring-selector block OPEN"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "CLOSED "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the rounds-64–71 bridge "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the frame qualifier on the "
+      },
+      {
+        "k": "c",
+        "v": "v908"
+      },
+      {
+        "k": "t",
+        "v": " block, "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_1"
+      },
+      {
+        "k": "t",
+        "v": " Wick keybox dated addendum rounds 69–71, "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " four audit cards updated/added) and website mirrors synced (prime-front feed round entry, DAG, counters "
+      },
+      {
+        "k": "m",
+        "v": "901\\to904"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "c",
+        "v": "v535"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v911"
+      },
+      {
+        "k": "t",
+        "v": ", papers.ts, README, Zenodo, the reproducer now ships the zero cache); NO marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-11",
     "dateLabel": "2026-08-11 · LXXXIX",
     "heading": [

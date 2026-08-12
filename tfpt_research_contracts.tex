@@ -7588,7 +7588,16 @@ seam questions on the compiler side and delivers, on the RH
 side, the certified $B$-half surface floor, the tail mechanism
 map and the registered half-gap target with its first blind
 holdout (the three RH-side items live in the prime-front
-document; the seam wiring is registered here).
+document; the seam wiring is registered here).  The rounds
+64--71 block (2026-08-11/12; promoted in
+\veri{v909\_finite\_wall\_closure.py},
+\veri{v910\_finite\_zero\_transfer.py} and
+\veri{v911\_wiring\_freedom.py}) closes the \emph{finite}
+composed wall census and its transfer law on the prime front
+(\texttt{PRIME.WALL.FINITE\_CLOSURE.01},
+\texttt{PRIME.WALL.FINITE\_ZERO\_TRANSFER.01}; both in the
+prime-front document) and, on the seam side, answers the wiring
+selector below.
 
 \par\smallskip\noindent\textbf{The seam equilibrium wiring
 (\texttt{SEAM.CFIN.MARGINAL.\allowbreak STABILITY.01} $+$
@@ -7627,7 +7636,10 @@ covariant coupling space); the deployed seam wiring is
 \textsc{pure-i} (every $2\times2$ subblock exactly $-I_2$) $=$
 a \emph{maximally obstructed} covariant direction, explaining
 the \texttt{v903} strict-collar law (`$30$ entries, magnitude
-$2t$') exactly; the kernel contains \emph{equilibrium}
+$2t$') exactly --- rounds 69--71 add the frame qualifier: the
+obstruction is maximal \emph{in the deployed $\theta_S$ collar
+frame}, and frame-relative as such (the wiring selector below);
+the kernel contains \emph{equilibrium}
 witnesses --- $V_J$ (and $V_Z$) pass strict collar RP in exact
 arithmetic while their Schur compressions carry the full
 canonical Pfaffian mixing with the $J$ coordinate exactly
@@ -7639,7 +7651,9 @@ positivity --- the minimal entropy production at which the
 mixing gates open is exactly zero:
 \texttt{SEAM.CFIN.NESS.PARENT.01} \textbf{closes as
 not-needed}.  \emph{Demand (the registered successor):} the
-wiring selector below.  \emph{Kill:} a covariant strict
+wiring selector below --- \textbf{delivered and closed in
+rounds 69--71} (\veri{v911\_wiring\_freedom.py}).
+\emph{Kill:} a covariant strict
 2-cycle RP point, or an equilibrium collar witness whose
 compression breaks the canonical census.  The witnesses live on
 a different covariant coupling direction than the deployed
@@ -7649,23 +7663,64 @@ untouched; the [O] premise of
 no marker move; no RH statement.\par}
 
 \par\smallskip\noindent\textbf{The wiring selector
-(\texttt{SEAM.STATE.WIRING.\allowbreak SELECTOR.01}).}
-\emph{OPEN} (registered 2026-08-11, rounds 60--63): is the
-deployed \textsc{pure-i} seam wiring \emph{compiler-forced}?
-The deployed IOTA wiring comes from the vacuum-orbit
-construction of $A_{\rm int}$; the demand is an exact answer to
-whether the orbit/edge rules (IOTA/$I_2$/$J_2$ units,
-orientation propagation) admit a $\{J, Z\}$-kernel alternative
-at equal $C_6$ covariance and equal Pfaffian pencil, or pin the
-$I$ direction.  Only then is it decidable whether the
-strict-collar obstruction of \texttt{v903}/\texttt{v908} is a
-\emph{compiler theorem} or a \emph{deployment choice}.
-\emph{Evidence base:} \veri{v908\_seam\_equilibrium\_wiring.py}
-(the two-seat law, the \textsc{pure-i} identification and the
-equilibrium witnesses).  \emph{Kill (either way is a result):}
-an orbit-rule derivation pinning \textsc{pure-i} (compiler
-theorem), or an explicit compiler-legal $\{J, Z\}$ wiring
-(deployment choice).  No marker move; no RH statement.
+(\texttt{SEAM.STATE.WIRING.\allowbreak SELECTOR.01}, closed:
+deployment choice).}
+{\sloppy
+\emph{Registered} 2026-08-11 (rounds 60--63) as the question:
+is the deployed \textsc{pure-i} seam wiring
+\emph{compiler-forced}?  \emph{Closed} 2026-08-12, rounds
+69--71 (\veri{v911\_wiring\_freedom.py}, $30/30 + 26/26 +
+21/21$, verdicts \textsc{wiring-degenerate} $+$
+\textsc{theta-conventional} $+$ \textsc{rp-frame-covariant};
+three frozen probes, exact integer/rational arithmetic,
+embedded byte-exact), and the answer is a \emph{freedom
+theorem}: the exact Gr\"obner census of the constraint classes
+(unit law, CAR/KMS, Pfaffian pencil, orientation propagation,
+covariance $+$ seat stack) decomposes the real variety
+certified and leaves exactly \textbf{one admissible
+three-dimensional wiring component modulo the rule gauge} (the
+rotation cell $C_{\rm rot}$); the $Z$/$X$ wirings fall at
+exactly one class --- orientation propagation ($\det u < 0$
+identically) --- and this exclusion is genuinely
+rule-gauge-orbit-invariant; \textsc{pure-i} is an
+\emph{interior} point of $C_{\rm rot}$, not a vertex, and the
+integer gauge element $(\oplus_5 J_2) \oplus I_6$ (preserving
+the vacuum, the $C_6$ action, the rule subspace and the
+constraint ideal) connects it to the pure-$J$ ray:
+\textbf{\textsc{pure-i} is a deployment representative, not a
+compiler theorem}.  The companion probes close the frame side:
+no compiler-side demand distinguishes the $\theta_S$ sheet-swap
+frame within the $9$-dim rule-gauge algebra (five demand
+classes --- $\mu_4$/$C_6$, CAR/state, pencil/orientation, doily
+combinatorics, the round-59 census property --- all
+compatible-not-forcing or silent on the angle;
+\textsc{theta-conventional}), and the strict-collar RP Grams
+transform \emph{exactly covariantly} under the rule gauge
+(symbolic kernel-covariance law on the full torus $+$ exact
+Gram witnesses): reflection positivity of a (frame, wiring)
+pair depends only on their \emph{relative angle} on the
+$\delta$-circle --- the same deployed \textsc{pure-i} parent
+that fails strict collar RP at $\theta_S$ (defect $2t$)
+\emph{passes it exactly} in the integer-conjugated frame, so
+the \texttt{v903}/\texttt{v908} obstruction is a
+\emph{frame statement}, not a wiring no-go
+(\textsc{rp-frame-covariant}).  The frozen canonical sentence:
+the compiler determines the wiring \emph{orbit}; strict
+Hermiticity in the $\theta_S$ frame would select pure-$J$, the
+same demand in the integer-conjugated frame selects
+\textsc{pure-i}; a canonical wiring selection requires an
+additionally \emph{derived} physical frame.  (Forbidden from
+now on: ``\textsc{pure-i} is compiler-forced'' and equivalents
+without the frame qualifier.)  \emph{Honest scope:} the census
+covers the five enumerated demand classes --- a compiler demand
+outside the list is not excluded; whether the actual seam
+physics derives a specific collar frame remains outside the
+formalized rules; the [O] premise of
+\texttt{v898}/\texttt{v903} is unmoved.  \emph{Kill (of the
+closure):} a compiler-side demand outside the censused classes
+that cuts the $\delta$-circle, or a derived physical collar
+frame (which would then \emph{select} a wiring via the exact
+selection map).  No marker move; no RH statement.\par}
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}

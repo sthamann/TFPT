@@ -100,8 +100,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::How to read this document::1": {
-  "hash": "89b9969e2b1a",
-  "date": "2026-08-11"
+  "hash": "03146948e8b7",
+  "date": "2026-08-12"
  },
  "tfpt_1_architecture_e8::section::Headline: the Pascal compiler on five carrier slots::1": {
   "hash": "32b8525a612e",
@@ -524,8 +524,8 @@
   "date": "2026-06-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
-  "hash": "3dba37f020c3",
-  "date": "2026-08-11"
+  "hash": "1a420bed0a6f",
+  "date": "2026-08-12"
  },
  "tfpt_3_e8_audit_bootstrap::section::Further audit lemmas (machine-verified this round)::1": {
   "hash": "f779e820e593",
@@ -724,8 +724,8 @@
   "date": "2026-08-08"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "d568de9d885d",
-  "date": "2026-08-11"
+  "hash": "7e0ea9fe53d7",
+  "date": "2026-08-12"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {
   "hash": "62902eaaa0d2",
