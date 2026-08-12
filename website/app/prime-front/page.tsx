@@ -2398,7 +2398,9 @@ export default function PrimeFrontPage() {
 
       <AugustOffensivesSection />
 
-      {/* 31 — Live updates */}
+      <FiniteClosureSection />
+
+      {/* 32 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -2407,7 +2409,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              31 · Live updates
+              32 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -2596,6 +2598,119 @@ function AugustOffensivesSection() {
           still no positivity theorem on V_∞), and
           nothing here is a claim of progress toward the Riemann
           Hypothesis.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function FiniteClosureSection() {
+  return (
+    <section
+      id="finite-closure"
+      aria-labelledby="finite-closure-heading"
+      className="scroll-mt-24 border-t border-slate-800/60 py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            31 · The finite closure and the phase architecture · v905–v911 +
+            sandbox probes
+          </span>
+          <StatusBadge badge="machine-verified" />
+          <StatusBadge badge="sandbox" />
+        </div>
+        <h2
+          id="finite-closure-heading"
+          className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
+        >
+          The finite wall closes — and gets a price tag
+        </h2>
+        <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
+          <span className="font-medium text-sky-300/90">In plain words: </span>
+          the reflux rounds sixty-four through seventy-one finish the{" "}
+          <em>finite</em> surface of the wall end-form: every reachable wall
+          face on the deployed ladder is now certified from cited inputs, the
+          zero supply that certification consumes is measured and priced, and
+          the sandbox probes map the <em>phase architecture</em> behind the
+          wall — with the promoted results and the still-exploratory ones
+          clearly separated, as always.
+        </p>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
+          <p>
+            <strong className="font-medium text-emerald-200">
+              Promoted (machine-verified):
+            </strong>{" "}
+            <em>the finite wall closure</em> (v909): the composed census B ∧
+            W1 ∧ W2 holds on 39/39 matched surface + 8/8 deep rungs — the
+            B-half via the interval-certified floor min c_B = 0.5523 (v905),
+            the W1 face via one exact measure inequality (the two +8..+9 dex
+            composition gaps of earlier rounds dissolve into a single Loewner
+            step) plus <em>verified zeros as exact data</em> at the named
+            j = 16 seat, and the W2 face via the recomposed certificate paid
+            by a 20,000,000-ordinate certified cache (Odlyzko + LMFDB/Platt,
+            every ordinate below the Platt–Trudgian height 3·10¹² — cited,
+            never assumed). The honest typing is frozen and non-negotiable:
+            W1 and W2 are <em>algorithmically independent evaluations of the
+            same localized Weil form</em> — a strong mutual crosscheck, not
+            two independent proofs; positivity is certified on a finite
+            family of Galerkin sections <em>along the measured critical
+            direction</em>, never uniformly. And <em>the transfer law</em>{" "}
+            (v910): the zero-cutoff height the certificate actually consumes
+            grows as T_req ~ h^2.8, and its ratio to the window&apos;s own
+            spectral reach π/D <em>grows</em> too (+0.897 dex per ln h) —
+            the zero supply is an <em>external battery</em>, not a local
+            sampling law. The whole census compresses into one statement:
+            zeros certified up to T plus the unconditional tail envelope
+            imply the wall for all deployed h ≤ H(T), with H measured at
+            254 / 1256 / 2806 for the three historic cache heights. The
+            finite engine does not scale by buying zeros; H(T) is the
+            measuring rod any future analytic per-window bound has to beat.
+            (The seam-side row of the same promotion, v911, closes the
+            wiring-selector contract as a freedom theorem — pure-I is a
+            deployment representative, not a compiler theorem; it lives in
+            the research-contracts companion.)
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              Sandbox (exploration, not promoted):
+            </strong>{" "}
+            the phase architecture. The <em>Euler phase identity</em>: the
+            wall read is exactly the derivative of a completed unitary Euler
+            phase — warded on three levels, with the honest verdict that the
+            bare identity is a coordinate change (it survives all five
+            falsifying worlds, as predicted); the discriminating content
+            sits in the <em>grouping</em>: of the five Euler grouping axioms
+            G1–G5, G2&apos;s parameter-free weight law is the one measured
+            structure that separates the true prime comb from every control
+            world. The <em>Krein index census</em>: the deployed phase is
+            not a generalized Schur function of finite negative index — the
+            index grows proportionally with resolution (slope +0.997, no
+            saturation), the half-gap shift removes zero negative
+            directions, and the cosh control shares the full index
+            signature: verdict WALLPAPER, the route buried by its own
+            pre-frozen kill criterion. And the <em>Zolotarev compression</em>:
+            one global fixed eight-pole rational filter certifies all 68
+            ladder steps (per-rung optimum three to five poles), compressing
+            the old degree-119 certificate into eight resolvents — the
+            ONEBADMODE certificate becomes finitely many determinant-phase
+            values, with the honest caveat that the filter&apos;s
+            observer-complexity grade sits far above the half-gap class.
+            All three are frozen sandbox probes: no claim moves until they
+            are promoted.
+          </p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
+          Honest fence, as everywhere on this page: the finite closure is a
+          statement about the deployed finite ladder from cited inputs — a
+          finite verified-zero sum can never prove RH, the all-h and
+          all-direction objects (the UNIF-PATH caveat) stay open, the
+          registered ½ stays underived, and the transfer law itself says the
+          finite engine cannot reach deeper rungs by buying more zeros. This
+          page is research documentation, not a claim of progress toward the
+          Riemann Hypothesis.
         </p>
       </div>
     </section>
