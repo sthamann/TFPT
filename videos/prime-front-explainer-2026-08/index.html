@@ -37,7 +37,7 @@
       id="root"
       data-composition-id="main"
       data-start="0"
-      data-duration="159.12"
+      data-duration="185.12"
       data-width="1920"
       data-height="1080"
     >
@@ -191,7 +191,7 @@
         data-composition-id="09-ehrlicher-stand"
         data-composition-src="compositions/frames/09-ehrlicher-stand.html"
         data-start="143.61599999999999"
-        data-duration="15.504"
+        data-duration="16.004"
         data-track-index="0"
       ></div>
       <audio
@@ -203,6 +203,24 @@
         data-volume="1"
       ></audio>
 
+      <div
+        id="el-10-regionales-theorem"
+        class="scene"
+        data-composition-id="10-regionales-theorem"
+        data-composition-src="compositions/frames/10-regionales-theorem.html"
+        data-start="159.11999999999998"
+        data-duration="26"
+        data-track-index="1"
+      ></div>
+      <audio
+        id="el-10-regionales-theorem-voice"
+        src="assets/voice/10.wav"
+        data-start="159.11999999999998"
+        data-duration="26"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+
       <!-- captions -->
       <div
         id="el-captions"
@@ -210,7 +228,7 @@
         data-composition-id="captions"
         data-composition-src="compositions/captions.html"
         data-start="0"
-        data-duration="159.12"
+        data-duration="185.12"
         data-track-index="2"
       ></div>
 
@@ -237,7 +255,9 @@
         tl.fromTo("#el-08-korridor", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 124.032);
         tl.to("#el-08-korridor", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 143.616);
         tl.fromTo("#el-09-ehrlicher-stand", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 143.616);
-        tl.to({}, { duration: 159.12 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
+        tl.to("#el-09-ehrlicher-stand", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 159.12);
+        tl.fromTo("#el-10-regionales-theorem", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 159.12);
+        tl.to({}, { duration: 185.12 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
       })();
     </script>
   </body>

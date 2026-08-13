@@ -68,3 +68,10 @@
 **Delivery:** "Kein Beweis." als eigener Satz, Pause. Das Ende warm, aber nüchtern.
 
     Kein Beweis. Das sagt dieses Programm selbst, an jeder Stelle. Aber die Frage war nie so klein — und nie so präzise. Fast neunhundert Module, jede Zahl maschinell geprüft. Das ist die Prime Front.
+
+## Line 10 — Das regionale Theorem und das kofinale Problem (Frame 10)
+
+**Time:** 159.1 – 185.1s
+**Delivery:** Ruhige Coda nach der Marken-Karte. "regionales Theorem" fest; "kofinal" langsam und bewusst; der letzte Halbsatz trocken, als Tatsache — kein Drama.
+
+    Seither hat die Sigma-Kette die endliche Frage in ein regionales Theorem verwandelt: Jede Matrix, deren Eintragsdaten in der zertifizierten Region liegen, ist positiv definit — ein Beweisobjekt, prüfbar mit einem winzigen Programm, das jeder laufen lassen kann. Ein Konstruktionsproblem bleibt: eine vordefinierte Fensterfolge, kofinal, die in der Region bleibt. Das Beweisobjekt ist bereit fürs Audit — der RH-Quantor ist es nicht.

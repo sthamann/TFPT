@@ -10,7 +10,7 @@ just inside the frame window (target - 1.8s .. target - 0.2s where possible).
              ->  audio_engine_meta.json / audio_meta.json
 
 Usage:
-  python english_tts.py            # full run (all 9 lines, fitted rates)
+  python english_tts.py            # full run (all 10 lines, fitted rates)
   python english_tts.py --sample   # voice comparison sample for line 1
 """
 
@@ -30,8 +30,10 @@ VOICE_DIR = PROJECT / "assets" / "voice"
 HNS = 10_000_000  # 100-ns ticks per second
 
 # Frame windows (s) — frozen from STORYBOARD.md; audio must fit inside.
+# Frame 10 (2026-08-13 closing segment) got its window chosen at authoring
+# time; from now on it is frozen like the rest.
 TARGETS = {1: 16.872, 2: 13.848, 3: 15.288, 4: 24.36, 5: 18.144,
-           6: 19.344, 7: 16.176, 8: 19.584, 9: 15.504}
+           6: 19.344, 7: 16.176, 8: 19.584, 9: 15.504, 10: 26.0}
 FIT_MIN_GAP = 0.2   # leave at least this much air before the frame cut
 FIT_MAX_GAP = 1.8   # do not leave more silence than this (keeps pacing tight)
 RATE_CLAMP = 18     # max |rate| percent — beyond this the voice degrades

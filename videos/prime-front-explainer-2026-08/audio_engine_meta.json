@@ -2295,8 +2295,394 @@
           "end": 13.438
         }
       ]
+    },
+    {
+      "id": "10",
+      "path": "assets/voice/10.wav",
+      "duration_s": 25.224,
+      "rate_pct": 0,
+      "words": [
+        {
+          "id": "w0",
+          "text": "Since",
+          "start": 0.113,
+          "end": 0.4
+        },
+        {
+          "id": "w1",
+          "text": "then",
+          "start": 0.412,
+          "end": 0.713
+        },
+        {
+          "id": "w2",
+          "text": "the",
+          "start": 1.012,
+          "end": 1.1
+        },
+        {
+          "id": "w3",
+          "text": "sigma",
+          "start": 1.113,
+          "end": 1.45
+        },
+        {
+          "id": "w4",
+          "text": "chain",
+          "start": 1.462,
+          "end": 1.75
+        },
+        {
+          "id": "w5",
+          "text": "has",
+          "start": 1.762,
+          "end": 1.925
+        },
+        {
+          "id": "w6",
+          "text": "turned",
+          "start": 1.938,
+          "end": 2.2
+        },
+        {
+          "id": "w7",
+          "text": "the",
+          "start": 2.212,
+          "end": 2.288
+        },
+        {
+          "id": "w8",
+          "text": "finite",
+          "start": 2.3,
+          "end": 2.812
+        },
+        {
+          "id": "w9",
+          "text": "question",
+          "start": 2.825,
+          "end": 3.388
+        },
+        {
+          "id": "w10",
+          "text": "into",
+          "start": 3.4,
+          "end": 3.7
+        },
+        {
+          "id": "w11",
+          "text": "a",
+          "start": 3.712,
+          "end": 3.8
+        },
+        {
+          "id": "w12",
+          "text": "regional",
+          "start": 3.812,
+          "end": 4.263
+        },
+        {
+          "id": "w13",
+          "text": "theorem",
+          "start": 4.275,
+          "end": 4.688
+        },
+        {
+          "id": "w14",
+          "text": "every",
+          "start": 5.088,
+          "end": 5.312
+        },
+        {
+          "id": "w15",
+          "text": "matrix",
+          "start": 5.325,
+          "end": 5.8
+        },
+        {
+          "id": "w16",
+          "text": "whose",
+          "start": 5.812,
+          "end": 6.05
+        },
+        {
+          "id": "w17",
+          "text": "entry",
+          "start": 6.162,
+          "end": 6.487
+        },
+        {
+          "id": "w18",
+          "text": "data",
+          "start": 6.5,
+          "end": 6.787
+        },
+        {
+          "id": "w19",
+          "text": "lie",
+          "start": 6.8,
+          "end": 7.2
+        },
+        {
+          "id": "w20",
+          "text": "in",
+          "start": 7.213,
+          "end": 7.338
+        },
+        {
+          "id": "w21",
+          "text": "the",
+          "start": 7.35,
+          "end": 7.425
+        },
+        {
+          "id": "w22",
+          "text": "certified",
+          "start": 7.438,
+          "end": 8.075
+        },
+        {
+          "id": "w23",
+          "text": "region",
+          "start": 8.088,
+          "end": 8.525
+        },
+        {
+          "id": "w24",
+          "text": "is",
+          "start": 8.625,
+          "end": 8.713
+        },
+        {
+          "id": "w25",
+          "text": "positive",
+          "start": 8.725,
+          "end": 9.275
+        },
+        {
+          "id": "w26",
+          "text": "definite",
+          "start": 9.287,
+          "end": 9.75
+        },
+        {
+          "id": "w27",
+          "text": "a",
+          "start": 10.175,
+          "end": 10.213
+        },
+        {
+          "id": "w28",
+          "text": "proof",
+          "start": 10.225,
+          "end": 10.525
+        },
+        {
+          "id": "w29",
+          "text": "object",
+          "start": 10.537,
+          "end": 11.025
+        },
+        {
+          "id": "w30",
+          "text": "checkable",
+          "start": 11.287,
+          "end": 11.787
+        },
+        {
+          "id": "w31",
+          "text": "by",
+          "start": 11.8,
+          "end": 11.95
+        },
+        {
+          "id": "w32",
+          "text": "a",
+          "start": 11.963,
+          "end": 12.025
+        },
+        {
+          "id": "w33",
+          "text": "tiny",
+          "start": 12.037,
+          "end": 12.412
+        },
+        {
+          "id": "w34",
+          "text": "program",
+          "start": 12.425,
+          "end": 13.05
+        },
+        {
+          "id": "w35",
+          "text": "anyone",
+          "start": 13.213,
+          "end": 13.537
+        },
+        {
+          "id": "w36",
+          "text": "can",
+          "start": 13.55,
+          "end": 13.713
+        },
+        {
+          "id": "w37",
+          "text": "run",
+          "start": 13.725,
+          "end": 14.0
+        },
+        {
+          "id": "w38",
+          "text": "One",
+          "start": 14.425,
+          "end": 14.613
+        },
+        {
+          "id": "w39",
+          "text": "construction",
+          "start": 14.625,
+          "end": 15.262
+        },
+        {
+          "id": "w40",
+          "text": "problem",
+          "start": 15.275,
+          "end": 15.762
+        },
+        {
+          "id": "w41",
+          "text": "remains",
+          "start": 15.775,
+          "end": 16.413
+        },
+        {
+          "id": "w42",
+          "text": "a",
+          "start": 16.613,
+          "end": 16.663
+        },
+        {
+          "id": "w43",
+          "text": "predefined",
+          "start": 16.675,
+          "end": 17.375
+        },
+        {
+          "id": "w44",
+          "text": "window",
+          "start": 17.387,
+          "end": 17.7
+        },
+        {
+          "id": "w45",
+          "text": "sequence",
+          "start": 17.712,
+          "end": 18.363
+        },
+        {
+          "id": "w46",
+          "text": "cofinal",
+          "start": 18.562,
+          "end": 19.175
+        },
+        {
+          "id": "w47",
+          "text": "staying",
+          "start": 19.475,
+          "end": 19.875
+        },
+        {
+          "id": "w48",
+          "text": "inside",
+          "start": 19.887,
+          "end": 20.35
+        },
+        {
+          "id": "w49",
+          "text": "the",
+          "start": 20.363,
+          "end": 20.425
+        },
+        {
+          "id": "w50",
+          "text": "region",
+          "start": 20.438,
+          "end": 20.837
+        },
+        {
+          "id": "w51",
+          "text": "The",
+          "start": 21.262,
+          "end": 21.325
+        },
+        {
+          "id": "w52",
+          "text": "proof",
+          "start": 21.337,
+          "end": 21.613
+        },
+        {
+          "id": "w53",
+          "text": "object",
+          "start": 21.625,
+          "end": 22.075
+        },
+        {
+          "id": "w54",
+          "text": "is",
+          "start": 22.087,
+          "end": 22.212
+        },
+        {
+          "id": "w55",
+          "text": "ready",
+          "start": 22.225,
+          "end": 22.438
+        },
+        {
+          "id": "w56",
+          "text": "for",
+          "start": 22.45,
+          "end": 22.663
+        },
+        {
+          "id": "w57",
+          "text": "audit",
+          "start": 22.675,
+          "end": 23.012
+        },
+        {
+          "id": "w58",
+          "text": "the",
+          "start": 23.312,
+          "end": 23.413
+        },
+        {
+          "id": "w59",
+          "text": "RH",
+          "start": 23.425,
+          "end": 23.762
+        },
+        {
+          "id": "w60",
+          "text": "quantifier",
+          "start": 23.775,
+          "end": 24.35
+        },
+        {
+          "id": "w61",
+          "text": "is",
+          "start": 24.363,
+          "end": 24.462
+        },
+        {
+          "id": "w62",
+          "text": "not",
+          "start": 24.475,
+          "end": 24.85
+        }
+      ]
     }
   ],
   "sfx": [],
-  "total_duration_s": 150.288
+  "total_duration_s": 175.512
 }

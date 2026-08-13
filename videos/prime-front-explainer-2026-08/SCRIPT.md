@@ -68,3 +68,10 @@
 **Delivery:** "No proof of RH." as its own sentence, pause. The ending warm but sober.
 
     No proof of RH. This program says so itself, at every step. But the question has never been this small — and never this precise. Almost nine hundred modules, every number machine-checked. This is the Prime Front.
+
+## Line 10 — The regional theorem and the cofinal problem (Frame 10)
+
+**Time:** 159.1 – 185.1s
+**Delivery:** A quiet coda after the brand card. "regional theorem" firm; "cofinal" slow and deliberate; the last clause dry, as a fact — no drama.
+
+    Since then, the sigma chain has turned the finite question into a regional theorem: every matrix whose entry data lie in the certified region is positive definite — a proof object, checkable by a tiny program anyone can run. One construction problem remains: a predefined window sequence, cofinal, staying inside the region. The proof object is ready for audit — the RH quantifier is not.

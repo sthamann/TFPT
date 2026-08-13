@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 160s
+duration: 186s
 message: "The Prime Front: the TFPT prime line — from the E8 lattice to the Weil operator, to the detector, to the smallest form of the open question. Honest: no proof of RH."
 arc: concept-explainer
 audience: the author himself and math-curious lay readers (English)
@@ -236,3 +236,27 @@ Scene 5 (13.5–15.5s): Auf "Prime Front" (14.0s) lockt die End-Karte: "Die Prim
 
 narrativeRole: Die ehrliche Landung: kein RH-Claim (Programm-Disziplin), aber die dreifach verkleinerte Frage und die maschinelle Prüfbarkeit als Substanz. Endet auf der Marken-Karte der Prime Front.
 keyMessage: Kein Beweis — aber eine präzise, kleine, falsifizierbare Frage, getragen von 893 maschinell geprüften Modulen (84 Lean-Dateien).
+
+## Frame 10 — Das regionale Theorem und das kofinale Problem
+
+- scene: Coda nach der Marken-Karte: die zertifizierte Region K zeichnet sich als umrandete Fläche, zertifizierte Zellen füllen sich Welle für Welle; ein "M ≻ 0"-Statement mit Checker-Chip rastet ein; dann zieht ein gestrichelter Korridor-Pfeil aus der Region in die Tiefe (h → ∞) — Label "kofinal?"; Abschluss als zwei trockene Statement-Zeilen
+- voiceover: "Since then, the sigma chain has turned the finite question into a regional theorem: every matrix whose entry data lie in the certified region is positive definite — a proof object, checkable by a tiny program anyone can run. One construction problem remains: a predefined window sequence, cofinal, staying inside the region. The proof object is ready for audit — the RH quantifier is not."
+- duration: 26.0s
+- transition_in: crossfade
+- status: animated
+- src: compositions/frames/10-regionales-theorem.html
+- type: feature_showcase
+- persuasion: Distillation (der ganze Stand in einem Bild) + ehrliche Grenze (Audit ja, Quantor nein)
+- beat: Ruhige Klarheit — die Coda nach der Landung
+- blueprint: compose
+- focal: die Region K mit den gefüllten zertifizierten Zellen und dem gestrichelten Korridor-Pfeil
+- roles: Region-K-Umriss + Zellen-Füllung = foreground subject (Akt 1–2) · "M ≻ 0"-Statement + Checker-Chip = supporting-Held des Payoffs · Korridor-Pfeil mit "kofinal?"-Label = foreground subject (Akt 3) · Schluss-Statement-Zeilen = foreground subject (Akt 4) · Grund + Hairline-Chrome = background
+
+Compose: die Coda ist ein einziges Bild mit vier Akten — Region zeichnen, Zellen zertifizieren, Korridor-Frage stellen, trocken schließen. Kern-Move: der gestrichelte Pfeil, der die Region verlässt und offen endet — die Konstruktion, nicht die Behauptung, ist das offene Objekt.
+Scene 1 (0.0–6.0s): Mono-Kicker "SEITHER · DIE σ-KETTE" reveals; auf "regional theorem" (~3.5s) zeichnet sich die Region K als geschlossener Umriss (`svg-path-draw`, accent-Hairline), Mono-Label "K — zertifizierte Region".
+Scene 2 (6.0–13.0s): Auf "certified region" (~6.5s) füllen sich die Zellen in K wellenweise mit Akzent (`stat-bars-and-fills`-Stagger); auf "positive definite" (~8.5s) rastet das Serif-Statement "M ≻ 0 — auf ganz K" ein; auf "tiny program" (~11s) reveals der Checker-Chip "SOS-Beweisobjekt · 202-Zeilen-stdlib-Checker · 2 s" (`discrete-text-sequence`).
+Scene 3 (13.0–18.5s): Auf "One construction problem" (~13s) zieht der gestrichelte Korridor-Pfeil aus dem Inneren von K über den Rand hinaus nach rechts (dash-flow, `svg-path-draw`), Achsen-Label "h → ∞"; auf "cofinal" (~15s) keyword glow auf dem Mono-Label "kofinale Fensterfolge — bleibt sie in K?".
+Scene 4 (18.5–26.0s): Auf "ready for audit" (~19s) landet die Serif-Zeile "Das Beweisobjekt ist bereit fürs Audit."; auf "is not" (~21.5s) hängt sich die zweite, trockene Zeile an: "— der RH-Quantor ist es nicht." Hold; nur die Dash-Linie des Pfeils lebt subtil weiter.
+
+narrativeRole: Die Coda vom 13. August: Die σ-Kette hat die endliche Positivitätsfrage in ein regionales Theorem verwandelt (Beweisobjekt + winziger Checker); offen bleibt genau ein Konstruktionsproblem — die vordefinierte kofinale Fensterfolge in der Region. Kein RH-Claim: Audit ja, Quantor nein.
+keyMessage: Ein regionales endliches Positivitätstheorem plus ein einziges offenes kofinales Konstruktionsproblem — das Beweisobjekt ist bereit fürs Audit; der RH-Quantor ist es nicht.

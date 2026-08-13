@@ -10,7 +10,7 @@ const POSTER_SRC = "/prime-front/prime-front-explained-poster.jpg";
 const CAPTIONS_EN_SRC = "/prime-front/prime-front-explained.en.vtt";
 const CAPTIONS_DE_SRC = "/prime-front/prime-front-explained.de.vtt";
 
-/** Chapter markers — seconds match the film's nine frames (STORYBOARD.md). */
+/** Chapter markers — seconds match the film's ten frames (STORYBOARD.md). */
 const CHAPTERS: { t: number; label: string }[] = [
   { t: 0, label: "The music of the primes" },
   { t: 17, label: "Geometry first (E₈ → ζ)" },
@@ -21,6 +21,7 @@ const CHAPTERS: { t: number; label: string }[] = [
   { t: 108, label: "The measure from the geometry" },
   { t: 124, label: "The corridor & the 0.53" },
   { t: 144, label: "Honest: no proof" },
+  { t: 159, label: "Coda: the regional theorem" },
 ];
 
 /**
@@ -66,6 +67,10 @@ const TRANSCRIPT: { heading: string; body: string }[] = [
     heading: "Honest: no proof (2:24)",
     body: "No proof of RH. This program says so itself, at every step. But the question has never been this small — and never this precise. Almost nine hundred modules, every number machine-checked. This is the Prime Front.",
   },
+  {
+    heading: "Coda: the regional theorem and the cofinal problem (2:39)",
+    body: "Since then, the sigma chain has turned the finite question into a regional theorem: every matrix whose entry data lie in the certified region is positive definite — a proof object, checkable by a tiny program anyone can run. One construction problem remains: a predefined window sequence, cofinal, staying inside the region. The proof object is ready for audit — the RH quantifier is not.",
+  },
 ];
 
 const fmt = (t: number) => `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}`;
@@ -73,12 +78,12 @@ const fmt = (t: number) => `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "
 const videoJsonLd = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  name: "The Prime Front — explained in 2½ minutes",
+  name: "The Prime Front — explained in 3 minutes",
   description:
-    "A ~2.5 minute explainer of TFPT's prime / zeta line, end to end: the Riemann Hypothesis in one image (all zeros on one line), the window matrix born from the E8 bookkeeping and proved identical to Suzuki's Weil operator (the W1 theorem, v643), the calibrated detector / falsifier (Ramanujan passes, Epstein breaks at the predicted 0.803; matched-filter witness for any off-line zero), the two surface theorems (det S > 0 unconditionally on 67/67 windows; the T-B margin closed on 60/70 with cited classics), the Ihara blueprint with the one missing part Z1 (Hilbert–Pólya in window coordinates), the measure and masses forced from pure lattice counting, and the corridor with the selection point at 0.53. Honest fence throughout: no claim of progress toward RH — 893 machine-checked modules.",
+    "A ~3 minute explainer of TFPT's prime / zeta line, end to end: the Riemann Hypothesis in one image (all zeros on one line), the window matrix born from the E8 bookkeeping and proved identical to Suzuki's Weil operator (the W1 theorem, v643), the calibrated detector / falsifier (Ramanujan passes, Epstein breaks at the predicted 0.803; matched-filter witness for any off-line zero), the two surface theorems (det S > 0 unconditionally on 67/67 windows; the T-B margin closed on 60/70 with cited classics), the Ihara blueprint with the one missing part Z1 (Hilbert–Pólya in window coordinates), the measure and masses forced from pure lattice counting, the corridor with the selection point at 0.53 — and the coda: the sigma chain's regional theorem (every matrix with entry data in the certified region is positive definite, a proof object with a tiny checker) with the one open cofinal construction problem. Honest fence throughout: no claim of progress toward RH — the proof object is ready for audit; the RH quantifier is not.",
   thumbnailUrl: [`${SITE_URL}${POSTER_SRC}`],
-  uploadDate: "2026-08-10",
-  duration: "PT2M39S",
+  uploadDate: "2026-08-13",
+  duration: "PT3M5S",
   contentUrl: `${SITE_URL}${VIDEO_SRC}`,
   inLanguage: "en",
   isFamilyFriendly: true,
@@ -135,8 +140,8 @@ export function PrimeFrontVideo() {
           id="prime-front-video-heading"
           align="center"
           eyebrow="Watch first"
-          title="The Prime Front — in 2½ minutes"
-          description="The whole prime line as a short film: RH in one image, the window matrix that turned out to be Suzuki's Weil operator, the calibrated detector, the two surface theorems, the Ihara blueprint with its one missing part — and the honest state: no proof, but the question has never been this small. English captions are burned in; the full transcript is below."
+          title="The Prime Front — in 3 minutes"
+          description="The whole prime line as a short film: RH in one image, the window matrix that turned out to be Suzuki's Weil operator, the calibrated detector, the two surface theorems, the Ihara blueprint with its one missing part, the honest state — and the coda: the regional theorem with its one open cofinal construction problem. English captions are burned in; the full transcript is below."
         />
 
         <figure className="mt-10">

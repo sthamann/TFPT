@@ -12,7 +12,8 @@ import re
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parent.parent
-FRAME_STARTS = [0.0, 16.872, 30.72, 46.008, 70.368, 88.512, 107.856, 124.032, 143.616]
+FRAME_STARTS = [0.0, 16.872, 30.72, 46.008, 70.368, 88.512, 107.856, 124.032, 143.616,
+                159.12]
 
 
 def parse_script(md: str):
