@@ -42,6 +42,361 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-13",
+    "dateLabel": "2026-08-13 · XCI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "website/video maintenance — the "
+      },
+      {
+        "k": "c",
+        "v": "/prime-front"
+      },
+      {
+        "k": "t",
+        "v": " page gains the sigma-chain diary chapter and the explainer film its regional-theorem coda; NO theory change, NO marker moves, NO RH claim: (1) THE PAGE — new diary chapter “32 — The sigma chain and the regional theorem (sandbox probes)” covering the experiments freeze rounds 73–75 plus the morning package round, ALL SANDBOX per the page's promoted-vs-sandbox convention ("
+      },
+      {
+        "k": "c",
+        "v": "v911"
+      },
+      {
+        "k": "t",
+        "v": " remains the newest promoted module, every counter untouched): the identity "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma = 1 - s/n"
+      },
+      {
+        "k": "t",
+        "v": " with the two "
+      },
+      {
+        "k": "m",
+        "v": "0.665"
+      },
+      {
+        "k": "t",
+        "v": "s dismantled as a provenance-proven coincidence; the derived per-cell exact-rational chain certifying every built wall-legal cell ("
+      },
+      {
+        "k": "m",
+        "v": "151/151"
+      },
+      {
+        "k": "t",
+        "v": " surface "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "59/59"
+      },
+      {
+        "k": "t",
+        "v": " deep to "
+      },
+      {
+        "k": "m",
+        "v": "h = 6344"
+      },
+      {
+        "k": "t",
+        "v": ", worst bound "
+      },
+      {
+        "k": "m",
+        "v": "0.727"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": " margins); the joint Radau relation lifting definiteness to class level ("
+      },
+      {
+        "k": "m",
+        "v": "\\inf \\lambda_1"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+0.008"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "-574"
+      },
+      {
+        "k": "t",
+        "v": "); the SOS dual certificate ("
+      },
+      {
+        "k": "m",
+        "v": "1111"
+      },
+      {
+        "k": "t",
+        "v": " exact rational certificates, "
+      },
+      {
+        "k": "m",
+        "v": "151/151"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "\\eta = 0.273"
+      },
+      {
+        "k": "t",
+        "v": ") sealed as the three-part theorem package with the 202-line stdlib-only checker (the audit entry point — re-proves the theorem in "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " s, teeth "
+      },
+      {
+        "k": "m",
+        "v": "3/3"
+      },
+      {
+        "k": "t",
+        "v": "); the level-3 endform (legal sub-ladder to "
+      },
+      {
+        "k": "m",
+        "v": "h = 8204"
+      },
+      {
+        "k": "t",
+        "v": " with the first measured termination signal, the sign living in the seat-to-bulk coupling; B3 Lipschitz-certified, B2 proved-conditional, B1 one measured scalar; the razor margin "
+      },
+      {
+        "k": "m",
+        "v": "+0.0104"
+      },
+      {
+        "k": "t",
+        "v": " typed an irreducible measurement); the closed no-gos (Pick DEAD, finite-gap ILLDEFINED, shells JCONTRACT-DEAD); and the honest closing map in its frozen form — a REGIONAL finite positivity theorem plus a single open cofinal construction problem, the quantifier is RH, NOT “almost-RH”; the live-updates section renumbered "
+      },
+      {
+        "k": "m",
+        "v": "32 \\to 33"
+      },
+      {
+        "k": "t",
+        "v": ", one new diary-feed entry (badge sandbox, verdict PACKAGE-SEALED); (2) THE FILM — new closing frame 10 “Das regionale Theorem und das kofinale Problem” extends the explainer "
+      },
+      {
+        "k": "m",
+        "v": "2{:}39.1 \\to 3{:}05.1"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "26.0"
+      },
+      {
+        "k": "t",
+        "v": " s window at "
+      },
+      {
+        "k": "m",
+        "v": "159.12"
+      },
+      {
+        "k": "t",
+        "v": " s, crossfade in): the finite positivity question as a REGIONAL THEOREM (every matrix whose entry data lie in the certified region "
+      },
+      {
+        "k": "m",
+        "v": "K"
+      },
+      {
+        "k": "t",
+        "v": " is positive definite; on-screen chip “"
+      },
+      {
+        "k": "m",
+        "v": "151/151"
+      },
+      {
+        "k": "t",
+        "v": " cells "
+      },
+      {
+        "k": "m",
+        "v": "\\cdot"
+      },
+      {
+        "k": "t",
+        "v": " SOS proof object "
+      },
+      {
+        "k": "m",
+        "v": "\\cdot"
+      },
+      {
+        "k": "t",
+        "v": " 202-line stdlib checker "
+      },
+      {
+        "k": "m",
+        "v": "\\cdot"
+      },
+      {
+        "k": "t",
+        "v": " re-proves in 2 s”), the single remaining CONSTRUCTION problem (a predefined window sequence, cofinal, staying inside the region — keyword glow on “cofinal”) and the honest close as two dry statement beats: “The proof object is ready for audit — the RH quantifier is not”; full manual rebuild per the documented README sequence (EN"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "DE script line 10 — 1:1 for the de subtitle track, TTS re-run with all 10 lines at rate "
+      },
+      {
+        "k": "m",
+        "v": "+0\\%"
+      },
+      {
+        "k": "t",
+        "v": " inside their frozen windows — frames 1–9 unchanged, captions rebuilt from 433 words, 9 transitions verified, render at 5554 frames, en/de subtitle tracks "
+      },
+      {
+        "k": "m",
+        "v": "34 \\to 37"
+      },
+      {
+        "k": "t",
+        "v": " cues, last cue ends "
+      },
+      {
+        "k": "m",
+        "v": "3{:}04.12"
+      },
+      {
+        "k": "t",
+        "v": "); WEBSITE SYNC — the four public assets re-shipped (mp4 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " en/de VTT, poster byte-identical), "
+      },
+      {
+        "k": "c",
+        "v": "PrimeFrontVideo.tsx"
+      },
+      {
+        "k": "t",
+        "v": " chapters "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " coda marker at "
+      },
+      {
+        "k": "m",
+        "v": "2{:}39"
+      },
+      {
+        "k": "t",
+        "v": ", the component transcript verified character-identical to the caption track, JSON-LD duration PT2M39S "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " PT3M5S with uploadDate 2026-08-13, section header “"
+      },
+      {
+        "k": "m",
+        "v": "2\\tfrac12"
+      },
+      {
+        "k": "t",
+        "v": " minutes” "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " “3 minutes”; nothing under "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "verification/"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "articles/"
+      },
+      {
+        "k": "t",
+        "v": " or the papers/ledger touched (the concurrent research lane owns those)"
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-12",
     "dateLabel": "2026-08-12 · XC",
     "heading": [
