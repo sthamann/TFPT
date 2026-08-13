@@ -2400,7 +2400,9 @@ export default function PrimeFrontPage() {
 
       <FiniteClosureSection />
 
-      {/* 32 — Live updates */}
+      <SigmaChainSection />
+
+      {/* 33 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -2409,7 +2411,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              32 · Live updates
+              33 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -2711,6 +2713,152 @@ function FiniteClosureSection() {
           finite engine cannot reach deeper rungs by buying more zeros. This
           page is research documentation, not a claim of progress toward the
           Riemann Hypothesis.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function SigmaChainSection() {
+  return (
+    <section
+      id="sigma-chain"
+      aria-labelledby="sigma-chain-heading"
+      className="scroll-mt-24 border-t border-slate-800/60 py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            32 · The σ chain and the regional theorem · sandbox probes
+          </span>
+          <StatusBadge badge="sandbox" />
+        </div>
+        <h2
+          id="sigma-chain-heading"
+          className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
+        >
+          The last cap becomes a derived chain — and seals as a theorem
+          package
+        </h2>
+        <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
+          <span className="font-medium text-sky-300/90">In plain words: </span>
+          the σ-chain rounds (freeze rounds seventy-three through
+          seventy-five, plus the next morning&apos;s package round) replace
+          the program&apos;s last attractive cap by a <em>derived</em>,
+          exact-rational certificate chain, lift it to class level, compress
+          it into a sealed three-part theorem package with its own tiny
+          independent checker — and measure the third level, the quantifier,
+          to its endform. Everything in this chapter is sandbox: frozen
+          preregistered probes in the experiments tree, no promotion, no
+          marker moves — v911 remains the newest promoted module.
+        </p>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
+          <p>
+            <strong className="font-medium text-amber-200">
+              The σ identity, and the chain (Level 1):
+            </strong>{" "}
+            the wall&apos;s decisive ratio is exactly its own Schur quotient,{" "}
+            <span className="font-mono text-emerald-300">σ = 1 − s/n</span>{" "}
+            (warded at 3.8×10⁻¹⁵) — so <em>any</em> cap on σ is the open half
+            restated, mechanism-importing. The preceding round&apos;s
+            attractive σ ≤ 0.665 closure is dismantled <em>by provenance</em>:
+            its constant is the probe&apos;s own margin convention, and its
+            numerical match with a measure-side 0.665 is a{" "}
+            <em>proven coincidence</em> — two 0.665s with disjoint
+            provenances. The cap is replaced by a derived per-cell chain
+            (n &gt; 0 ∧ certified ordered co-block floors ∧ Gauss–Radau
+            moment bound, every inequality exact-rational): σ ≤ 0.727, hence
+            M ≻ 0, on <strong className="font-medium text-slate-100">151/151
+            built wall-legal cells plus 59/59 deep steps</strong> to h = 6344
+            (worst margin 0.2124) — the first wall-positivity chain with{" "}
+            <em>no member in the cancellation currency</em>: the margins are
+            O(1), not 10⁻⁴-grade near-cancellations, and every relocation
+            screen passes flat.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The class theorem, sealed (Level 2):
+            </strong>{" "}
+            the <em>joint</em> Radau relation lifts definiteness from the
+            cells to the class of all data sharing the certified floors —
+            inf λ₁ = +0.008 over the entire class, against −574 admitted
+            without the relation. The optimization is then compressed into a
+            machine-verifiable <em>SOS proof object</em>: 1111 exact rational
+            sum-of-squares certificates (closed-form Markov–Lukács Grams,
+            PSD by structure, zero numerical error), census 151/151 at
+            η = 0.273. And the morning&apos;s round seals it as a{" "}
+            <strong className="font-medium text-slate-100">three-part
+            theorem package</strong>: a purely symbolic relation certificate
+            (no numeric input anywhere), the positivity certificate
+            re-verified digit-identically against the stored proof object,
+            and an honestly typed coverage certificate — full coverage of
+            the 151 built cell regions with explicit rational moment
+            neighborhoods, with the class box, the h &gt; 1450 flank and the
+            all-h quantifier explicitly <em>not</em> covered. The audit
+            entry point is a 202-line stdlib-only checker (imports exactly
+            json / sys / hashlib / fractions / itertools, AST-gated) that
+            re-proves the whole theorem in two seconds — and it has teeth:
+            all three doctored packages die at exactly the named barrier.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The endform of the quantifier (Level 3):
+            </strong>{" "}
+            the legality frontier is the quantifier&apos;s likely final
+            address. h = 8003 turned out to be a hole, not a wall — the
+            legal sub-ladder extends to{" "}
+            <span className="font-mono text-emerald-300">h = 8204</span> —
+            but every built cell beyond is negative: the frozen enum returns,
+            for the first time, a measured <em>termination signal</em> of
+            the built horizon, with the sign living in the{" "}
+            <em>seat-to-bulk coupling</em> over a stably positive arch
+            baseline (and the seat itself migrating). The smooth, prime-free
+            world is illegal at −10⁴ against ±10⁻¹⁰ of truth: frontier
+            legality is a prime effect. Behind the frontier, the deep rate:
+            the one-atom shape limit is exact (moment-shape collapse at
+            R² 0.9999, the atom identity literal), but the collapse is
+            measured <em>unfinished</em> — its driver is a cancellation of
+            giants (median factor 10⁵), and the direct reading closes
+            razor-thin at{" "}
+            <span className="font-mono text-emerald-300">+0.0104</span>,
+            typed as an <em>irreducible measurement</em> that no certified
+            constant can move. Of the three named missing bounds, B3 is now{" "}
+            <em>Lipschitz-certified</em> (a 400-bit interval proof object),
+            B2 <em>proved-conditional</em> (the deficit growth is
+            self-limiting against an h-stationary cap), and B1 is reduced to
+            one measured scalar t &gt; 4/5 — whose carrier is, once again,
+            the arithmetic AR–OSC cancellation.
+          </p>
+          <p>
+            <strong className="font-medium text-rose-200">
+              The closed no-gos:
+            </strong>{" "}
+            the Pick / one-bad-atom compression is DEAD (a symbolically
+            exact 2ε/y² high-pole blindness lemma — permanent); the
+            finite-gap reference route is ILLDEFINED (the wall&apos;s
+            spectral gap set is scattered, not banded — the class object
+            does not exist for it); and the morning&apos;s fast kill test
+            closes the multiplicative shell architecture, JCONTRACT-DEAD:
+            0/27 shells are J-contractive, all 162 truth points non-PSD,
+            and the full shell grouping produces no new positive defect
+            structure — the elementary route closed early and cheap, before
+            any large program was built on it.
+          </p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
+          Honest fence, and the closing map in its frozen form: the finite
+          theory is complete and machine-verified; the class theorem is a
+          machine-verifiable proof object; <em>the quantifier is RH</em> —
+          whose content now has one name in every coordinate system tested,
+          the arithmetic coupling — and whose next honest move is a
+          construction question, the cofinal corridor (the window
+          family&apos;s deep extension), not another bound. What stands is a
+          regional finite positivity theorem plus a single open cofinal
+          construction problem — not almost-RH. All of it is sandbox: no
+          claim moves until it is promoted, and nothing here is a claim of
+          progress toward the Riemann Hypothesis.
         </p>
       </div>
     </section>
