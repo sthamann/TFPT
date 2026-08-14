@@ -2402,7 +2402,9 @@ export default function PrimeFrontPage() {
 
       <SigmaChainSection />
 
-      {/* 33 — Live updates */}
+      <KillAtlasSection />
+
+      {/* 34 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -2411,7 +2413,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              33 · Live updates
+              34 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -2861,6 +2863,165 @@ function SigmaChainSection() {
           open cofinal construction problem — not almost-RH. All of it is sandbox: no
           claim moves until it is promoted, and nothing here is a claim of
           progress toward the Riemann Hypothesis.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function KillAtlasSection() {
+  return (
+    <section
+      id="kill-atlas"
+      aria-labelledby="kill-atlas-heading"
+      className="scroll-mt-24 border-t border-slate-800/60 py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            33 · The kill atlas and the Obstruction Completeness Theorem ·
+            sandbox probes
+          </span>
+          <StatusBadge badge="sandbox" />
+        </div>
+        <h2
+          id="kill-atlas-heading"
+          className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
+        >
+          The whole campaign becomes one falsifiable object — and one named
+          endpoint
+        </h2>
+        <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
+          <span className="font-medium text-sky-300/90">In plain words: </span>
+          four consolidation rounds (discovery freeze rounds seventy-nine
+          through eighty-two, 2026-08-14) audit the entire RH campaign into
+          one machine-refutable map, adjudicate every remaining candidate
+          sign source, and consolidate the endpoint as a named,
+          finite-rung theorem about the <em>obstruction</em> — not about
+          RH. Everything in this chapter is sandbox: four frozen probes in
+          the experiments tree, no promotion, no marker moves — v913
+          remains the newest promoted module, the suite stays at 906.
+        </p>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
+          <p>
+            <strong className="font-medium text-amber-200">
+              The map as one object (round 79, 43/43):
+            </strong>{" "}
+            the RH implication chain is reconstructed explicitly as an
+            11-node, 10-edge DAG with{" "}
+            <strong className="font-medium text-slate-100">
+              exactly one open edge, E4
+            </strong>{" "}
+            — positivity at every rung of one sign-independently
+            predeclared family, cofinal in the mesh-refinement order — and
+            the honest non-proven list carries the four classical
+            citations as an executable gate, not prose. The 50-route kill
+            atlas assigns every killed route of the campaign to exactly
+            one edge (17 on E4, 21 on the finite scalar edge, 8 past the
+            wall, 2 off-chain), every verdict token grep-verified inside
+            its own artifact. Six coordinate systems — τ &gt; 0, n − q &gt;
+            0, σ &lt; 1, the anti-cancellation scalar, the P_err budget,
+            v913&apos;s (L) — are pinned as <em>one and the same edge</em>:
+            twenty notes of localization work sharpened the edge&apos;s
+            type and closed the second open edge, but{" "}
+            <em>did not move it</em>.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The external proposal is coordinate system #7 (round 80,
+              35/35, SAT-DISGUISE):
+            </strong>{" "}
+            the reviewer-proposed &quot;signed projection alignment&quot;
+            closure of E4 is exact algebra — verified with{" "}
+            <em>zero residual in exact fractions</em> — and empty: the
+            projection is the identity, so the alignment-looking term
+            vanishes identically, the ellipse inequality is s ≥ 0
+            verbatim, and the &quot;optimal signed profile&quot; is
+            B-independent, carrying zero arithmetic. The θ-average is the
+            already-priced mean route; the proposed selection rule is
+            exactly the sign-mined index whose non-noninterference is
+            kernel-checked in Lean; and the small-rank premise is refuted
+            by measurement (stable rank grows 110 → 1595). As candidate
+            #19 it fails the frozen gate: it separates without
+            independently orienting — its readout <em>is</em> the wall
+            scalar.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The candidate map completes (round 81, 33/33):
+            </strong>{" "}
+            the five formerly untested classes all fail with exact killing
+            numbers — the Euler/G2 weight law separates but does not
+            orient; every Krein contractor certificate is the wall sign
+            renamed (margin exactly s/n); the named unconditional
+            ordinate-position types are empty, with the required ordinate
+            precision priced at{" "}
+            <strong className="font-medium text-slate-100">
+              ~1% of the mean zero spacing
+            </strong>{" "}
+            on the 2×10⁷-ordinate certified cache; the minimal alignment
+            statement MIN-U2 is <em>beyond-classical</em> (restricted to
+            the deployed windows it already excludes off-line zeros below
+            every classical zero-free width); and every enumerated global
+            source-profile inequality dies on the downward-closure lemma.
+            Final tally:{" "}
+            <strong className="font-medium text-slate-100">
+              24 candidate sign sources, 0 pass, 19 fail, no
+              blanket-untested class left.
+            </strong>
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The bird&apos;s-eye round (round 82, 35/35):
+            </strong>{" "}
+            the three degrees of freedom every route held fixed are
+            adjudicated. <em>Shape:</em> five structurally different
+            admissible window families decay far shallower than the
+            deployed one (exponents −0.46…−1.09 against −3.379) — the
+            maneuver exists but buys nothing: single-window ladders fail
+            the density leg, mesh-dense families inherit the saturation by
+            an exact Schur bound, and the localization is shape-invariant
+            (square shapes push the whole unconditional content into
+            off-line exclusion below classical widths, 5/5
+            beyond-classical). The hardness is RH&apos;s, not the
+            program&apos;s. <em>Direction:</em> the existence route closes
+            permanently at the border-membership step in exact fractions —
+            a positive extension always exists, and &quot;the arithmetic
+            one is it&quot; is the open edge verbatim.{" "}
+            <em>Bootstrap:</em> still dead — T_req ~ h^4.77, the
+            cache&apos;s τ-coverage ends at h ≈ 36, and height, not
+            precision, is the deficit.
+          </p>
+          <p>
+            <strong className="font-medium text-emerald-200">
+              The Obstruction Completeness Theorem:
+            </strong>{" "}
+            (i) the DAG has exactly one open edge; (ii) the candidate map
+            is complete and fully adjudicated; (iii) the missing input is
+            exactly characterized — signed, alignment-carrying,
+            unconditional, sub-spacing (~1%), minimal form MIN-U2
+            beyond-classical; (iv) the characterization is
+            shape-independent — with the existence direction closed and
+            the bootstrap dead. Finite-rung; atlas completeness is
+            editorial completeness over the named routes, typed as such;
+            the counter-evidence is carried unsmoothed (NO-WITNESS stands:
+            all certified reads positive to h = 12632, deepest
+            2.796×10⁻¹⁵, decay flattening).
+          </p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
+          Honest fence: this theorem turns &quot;why does RH not fall to
+          this program?&quot; into a machine-checked statement with an
+          exact domain of validity. It says nothing about the truth,
+          provability or falsity of the Riemann Hypothesis and is not
+          evidence in either direction — a no-go about the <em>type</em> of
+          the missing input is not evidence about its <em>existence</em>,
+          and it is emphatically not a statement that RH is unprovable.
+          All of it is sandbox: no claim moves until it is promoted, and
+          nothing here is a claim of progress toward the Riemann
+          Hypothesis.
         </p>
       </div>
     </section>

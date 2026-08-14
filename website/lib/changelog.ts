@@ -43,6 +43,881 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-14",
+    "dateLabel": "2026-08-14 · XCVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the kill-atlas consolidation arc — discovery freeze rounds seventy-nine through eighty-two synced into every live surface: the RH implication DAG, the 50-route kill atlas, the SAT adjudication, the untested-five adjudication, the bird's-eye shape/direction/bootstrap round and the OBSTRUCTION COMPLETENESS THEOREM; "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " only — FOUR frozen probes, NO promotion, NO module, NO ledger row, NO marker moved, NO gate closed or narrowed, suite unchanged at "
+      },
+      {
+        "k": "m",
+        "v": "906"
+      },
+      {
+        "k": "t",
+        "v": ", NO RH claim in any direction: (1) ROUND 79 (note CCCLXXVI, "
+      },
+      {
+        "k": "c",
+        "v": "kill_ atlas_ dag_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "43/43"
+      },
+      {
+        "k": "t",
+        "v": " gates after the N12/N13 self-correction of entry XCV, verdict ATLAS-DAG-CONSISTENT "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " ONE-OPEN-EDGE-CONFIRMED "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " FOUR-CLASSICAL-CITATIONS-CARRIED "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " NO-SIGN-SOURCE-PASSES "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " LOCALIZATION-DID-NOT-MOVE-THE-EDGE): the RH implication chain as an explicit "
+      },
+      {
+        "k": "m",
+        "v": "11"
+      },
+      {
+        "k": "t",
+        "v": "-node, "
+      },
+      {
+        "k": "m",
+        "v": "10"
+      },
+      {
+        "k": "t",
+        "v": "-edge DAG, acyclic on the conjunctive hypergraph, typed 3 PROVEN / 2 CERTIFIED-FINITE / 4 CITED-CLASSICAL / 1 OPEN with EXACTLY ONE open edge E4 (the predefined mesh-cofinal ladder positivity); the honest non-PROVEN list E1/E2/E8/E4/E7/E9/E10 carried as an executable gate; the 50-route atlas assigns every killed route to exactly one edge ("
+      },
+      {
+        "k": "m",
+        "v": "17"
+      },
+      {
+        "k": "t",
+        "v": " E4 / "
+      },
+      {
+        "k": "m",
+        "v": "21"
+      },
+      {
+        "k": "t",
+        "v": " E2 / "
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": " E10 / "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " E1 / "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " off-chain), every verdict token grep-verified inside its own artifact; "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-screen "
+      },
+      {
+        "k": "m",
+        "v": "15"
+      },
+      {
+        "k": "t",
+        "v": " DISGUISE / "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " ADVANCE / "
+      },
+      {
+        "k": "m",
+        "v": "34"
+      },
+      {
+        "k": "t",
+        "v": " not-applicable with the single ADVANCE pinned NOT on E4; six coordinate systems ("
+      },
+      {
+        "k": "m",
+        "v": "\\tau_h > 0"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "n_h - q_h > 0"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma_h < 1"
+      },
+      {
+        "k": "t",
+        "v": ", the anti-cancellation scalar, the "
+      },
+      {
+        "k": "m",
+        "v": "P_{\\mathrm{err}}"
+      },
+      {
+        "k": "t",
+        "v": " budget, "
+      },
+      {
+        "k": "c",
+        "v": "v913"
+      },
+      {
+        "k": "t",
+        "v": "'s best-conditioned (L)) pinned as ONE and the same edge — the localization campaign sharpened the edge's type, closed the second open edge ("
+      },
+      {
+        "k": "c",
+        "v": "v912"
+      },
+      {
+        "k": "t",
+        "v": ") and corrected its statement (mesh order), and did NOT move it; (2) ROUND 80 (note CCCLXXVIII, "
+      },
+      {
+        "k": "c",
+        "v": "sat_ projection_ alignment_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "35/35"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "1b8b6f8e"
+      },
+      {
+        "k": "t",
+        "v": ", verdict SAT-DISGUISE "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SAT-LITTLEWOOD-EMPTIED "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SELECTION-SIGN-MINED): the externally proposed signed-projection closure of E4 is adjudicated dead as submitted — the projection identity is EXACT (zero residual in exact Fractions) and EMPTY ("
+      },
+      {
+        "k": "m",
+        "v": "A_2"
+      },
+      {
+        "k": "t",
+        "v": "'s column block unit-triangular with "
+      },
+      {
+        "k": "m",
+        "v": "\\det = 1"
+      },
+      {
+        "k": "t",
+        "v": " as exact integers, so "
+      },
+      {
+        "k": "m",
+        "v": "P = I"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "\\|(I-P)y\\|^2 \\equiv 0"
+      },
+      {
+        "k": "t",
+        "v": " identically; the ellipse inequality is "
+      },
+      {
+        "k": "m",
+        "v": "s \\ge 0"
+      },
+      {
+        "k": "t",
+        "v": " VERBATIM; the “optimal signed profile” "
+      },
+      {
+        "k": "m",
+        "v": "w^*"
+      },
+      {
+        "k": "t",
+        "v": " is "
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": "-independent, zero arithmetic content); the "
+      },
+      {
+        "k": "m",
+        "v": "\\theta"
+      },
+      {
+        "k": "t",
+        "v": "-average is verbatim "
+      },
+      {
+        "k": "c",
+        "v": "v913"
+      },
+      {
+        "k": "t",
+        "v": "'s (L) with its standing kills (HH-CLAIMS-WITHDRAWN, CLASSICAL-GAP "
+      },
+      {
+        "k": "m",
+        "v": "2.470\\times10^{11}"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "m",
+        "v": "1.990\\times10^{14}"
+      },
+      {
+        "k": "t",
+        "v": "); the proposed "
+      },
+      {
+        "k": "m",
+        "v": "\\theta"
+      },
+      {
+        "k": "t",
+        "v": "-selection is the kernel-checked sign-mined index ("
+      },
+      {
+        "k": "c",
+        "v": "signMinedIndex_ not_ familyNoninterfering"
+      },
+      {
+        "k": "t",
+        "v": "); the small-effective-rank premise is REFUTED (stable rank "
+      },
+      {
+        "k": "m",
+        "v": "109.6 \\to 1595.2"
+      },
+      {
+        "k": "t",
+        "v": "); candidate #19 FAILS the frozen gate (separates without independently orienting) — coordinate system number SEVEN for E4, gate tally "
+      },
+      {
+        "k": "m",
+        "v": "18 \\to 19"
+      },
+      {
+        "k": "t",
+        "v": " candidates, "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " PASS / "
+      },
+      {
+        "k": "m",
+        "v": "14"
+      },
+      {
+        "k": "t",
+        "v": " FAIL / "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " UNTESTED; (3) ROUND 81 (note CCCLXXIX, "
+      },
+      {
+        "k": "c",
+        "v": "untested_ sign_ sources_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "33/33"
+      },
+      {
+        "k": "t",
+        "v": ", verdict SIGNSOURCES-ADJUDICATED): all five remaining UNTESTED candidate sign sources adjudicated FAIL with exact killing numbers — #20 G2-SEPARATES-NOT-ORIENTS (law exact at "
+      },
+      {
+        "k": "m",
+        "v": "7.2\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": " on truth, defect energy ZERO on truth, class floors "
+      },
+      {
+        "k": "m",
+        "v": "0.191/-0.509/-0.227"
+      },
+      {
+        "k": "t",
+        "v": " below the need), #21 KREIN-CERT-IS-WALL (Douglas exact over "
+      },
+      {
+        "k": "m",
+        "v": "\\Q"
+      },
+      {
+        "k": "t",
+        "v": ": contraction margin "
+      },
+      {
+        "k": "m",
+        "v": "= 1 - \\|C\\|^2 = s/n"
+      },
+      {
+        "k": "t",
+        "v": " VERBATIM), #22 U1-NAMED-TYPES-EMPTY (honest instrument on the full "
+      },
+      {
+        "k": "m",
+        "v": "2\\times10^7"
+      },
+      {
+        "k": "t",
+        "v": " certified ordinate cache; smooth/jitter/shift surrogates violate by "
+      },
+      {
+        "k": "m",
+        "v": "104"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "636\\times"
+      },
+      {
+        "k": "t",
+        "v": "; the jitter sweep prices the required ordinate precision at "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "1% OF THE MEAN ZERO SPACING; Weyl carries no rate, rate-carrying density is the emptied E2 class, pair correlation conditional), #23 U2-BEYOND-CLASSICAL (MIN-U2 named exactly, "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "-flat; a planted off-line pair violates it at "
+      },
+      {
+        "k": "m",
+        "v": "\\delta = 0.3635/0.2088/0.3533"
+      },
+      {
+        "k": "t",
+        "v": " BELOW the classical zero-free widths "
+      },
+      {
+        "k": "m",
+        "v": "0.4475/0.4443/0.4487"
+      },
+      {
+        "k": "t",
+        "v": " — on the deployed windows it already excludes zeros no classical theorem excludes), #24 U5-ENUMERATED-DEAD (log-convexity violated by truth itself at "
+      },
+      {
+        "k": "m",
+        "v": "-0.182"
+      },
+      {
+        "k": "t",
+        "v": "; downward-closure lemma: the zero comb is admissible in every enumerated class, so no upper-bound-type inequality can supply the required lower bound) — NEW TALLY: "
+      },
+      {
+        "k": "m",
+        "v": "24"
+      },
+      {
+        "k": "t",
+        "v": " candidates, "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " PASS, "
+      },
+      {
+        "k": "m",
+        "v": "19"
+      },
+      {
+        "k": "t",
+        "v": " FAIL, NO blanket UNTESTED left; (4) ROUND 82 (note CCCLXXX, "
+      },
+      {
+        "k": "c",
+        "v": "birdseye_ shape_ freedom_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "35/35"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "54"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "8b78c201"
+      },
+      {
+        "k": "t",
+        "v": ", verdict BIRDSEYE-OCT-CONSOLIDATED): (A) SHAPE-INDEPENDENCE-MEASURED — the deployed family is RH-saturating (margin-decay exponent "
+      },
+      {
+        "k": "m",
+        "v": "-3.379"
+      },
+      {
+        "k": "t",
+        "v": "); five structurally different admissible families (Fejér, Gauss-tent, Hann, "
+      },
+      {
+        "k": "m",
+        "v": "K\\!\\star\\!K"
+      },
+      {
+        "k": "t",
+        "v": " square, T5.2-style perturbation; Beurling–Selberg minorants typed INADMISSIBLE-BY-CAP) priced in the same Weil-square currency with an exact explicit-formula ward decay FAR shallower (exponents "
+      },
+      {
+        "k": "m",
+        "v": "-0.46\\ldots-1.09"
+      },
+      {
+        "k": "t",
+        "v": ", min gap "
+      },
+      {
+        "k": "m",
+        "v": "2.29"
+      },
+      {
+        "k": "t",
+        "v": ") — the maneuver exists but buys nothing: single-window ladders fail E7 density ("
+      },
+      {
+        "k": "m",
+        "v": "54.5"
+      },
+      {
+        "k": "t",
+        "v": "% projection residue), mesh-dense families inherit "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}(\\Omega_{\\mathrm{EF}}) \\le s"
+      },
+      {
+        "k": "t",
+        "v": " by the exact Schur bound ("
+      },
+      {
+        "k": "m",
+        "v": "3.97\\times10^{-7} \\to 4.19\\times10^{-12}"
+      },
+      {
+        "k": "t",
+        "v": "), and the localization is SHAPE-INVARIANT (square shapes degenerate the alignment, "
+      },
+      {
+        "k": "m",
+        "v": "15/15"
+      },
+      {
+        "k": "t",
+        "v": " position-blind worlds positive; off-line exclusion BELOW every classical zero-free width, "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_{\\min} = 0.055"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.26"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "0.42, "
+      },
+      {
+        "k": "m",
+        "v": "5/5"
+      },
+      {
+        "k": "t",
+        "v": " beyond-classical; the deployed linear coordinate reproduces the "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "1% sub-spacing bar at "
+      },
+      {
+        "k": "m",
+        "v": "107.1/4.36/0.21\\times"
+      },
+      {
+        "k": "t",
+        "v": " margin for "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon = 0.5/0.1/0.01"
+      },
+      {
+        "k": "t",
+        "v": "); (B1) EXISTENCE-IS-DISGUISE — the existence direction closed PERMANENTLY at the border-membership step in exact Fractions (a positive extension always exists; "
+      },
+      {
+        "k": "m",
+        "v": "\\det M = s\\det B"
+      },
+      {
+        "k": "t",
+        "v": " with PD "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftrightarrow s \\ge 0"
+      },
+      {
+        "k": "t",
+        "v": " both ways; the Krein ellipsoid contains the arithmetic border with margin EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "s"
+      },
+      {
+        "k": "t",
+        "v": "; the Carathéodory–Toeplitz one-step margin equals the next Schur scalar) — the gap between “an extension exists” and “the arithmetic one is it” IS E4; (B2) BOOTSTRAP-STILL-DEAD — the "
+      },
+      {
+        "k": "m",
+        "v": "2\\times10^7"
+      },
+      {
+        "k": "t",
+        "v": "-ordinate cache certifies MIN-U2 at "
+      },
+      {
+        "k": "m",
+        "v": "2/5"
+      },
+      {
+        "k": "t",
+        "v": " cells and the "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": " coordinate at "
+      },
+      {
+        "k": "m",
+        "v": "0/5"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "T_{\\mathrm{req}} \\sim h^{4.77}"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": ") / "
+      },
+      {
+        "k": "m",
+        "v": "h^{1.23}"
+      },
+      {
+        "k": "t",
+        "v": " (EF), extrapolated "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-coverage ends at "
+      },
+      {
+        "k": "m",
+        "v": "h \\approx 36"
+      },
+      {
+        "k": "t",
+        "v": ", precision NOT binding, HEIGHT is; (C) THE OBSTRUCTION COMPLETENESS THEOREM, every premise machine-asserted: (i) exactly one open edge E4, (ii) the candidate map COMPLETE ("
+      },
+      {
+        "k": "m",
+        "v": "24/0/19"
+      },
+      {
+        "k": "t",
+        "v": ", no blanket UNTESTED), (iii) the missing input exactly characterized (signed, alignment-carrying, unconditional, "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "1% sub-spacing, minimal form MIN-U2 beyond-classical), (iv) shape-independent across the audited admissible families — plus the dual/existence direction closed and the bootstrap dead; SCOPE in the same breath: finite-rung (cells to "
+      },
+      {
+        "k": "m",
+        "v": "h = 2854"
+      },
+      {
+        "k": "t",
+        "v": ", ladder cited to "
+      },
+      {
+        "k": "m",
+        "v": "12632"
+      },
+      {
+        "k": "t",
+        "v": "), atlas completeness EDITORIAL and typed as such, E7–E10 classical citations, NO-WITNESS counter-evidence carried unsmoothed (all certified reads positive to "
+      },
+      {
+        "k": "m",
+        "v": "h = 12632"
+      },
+      {
+        "k": "t",
+        "v": ", deepest "
+      },
+      {
+        "k": "m",
+        "v": "2.79579794131272506\\times10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": ", decay flattening) — a no-go about the TYPE of the missing input is not evidence about its EXISTENCE, and the theorem is NOT a statement that RH is unprovable; (5) SURFACES SYNCED IN THIS ENTRY: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " gains the sandbox diary subsection “The kill atlas, the complete candidate map, and the Obstruction Completeness Theorem”; the end-form article gains 8.9 with the abstract status sentence, limitation 8 and the traceability rounds CCCLXXVI–CCCLXXX; the Anthropic email draft gains one status paragraph; the website prime-front page gains chapter 33 (the live-updates chapter renumbered "
+      },
+      {
+        "k": "m",
+        "v": "33 \\to 34"
+      },
+      {
+        "k": "t",
+        "v": ") and one consolidated sandbox feed entry (verdict BIRDSEYE-OCT-CONSOLIDATED); "
+      },
+      {
+        "k": "c",
+        "v": "website/lib/changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh gen"
+      },
+      {
+        "k": "t",
+        "v": "; the stale "
+      },
+      {
+        "k": "c",
+        "v": "changelog.pdf"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "c",
+        "v": "introduction.pdf"
+      },
+      {
+        "k": "t",
+        "v": " debt of entry XCV is cleared by the same rebuild; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-14",
     "dateLabel": "2026-08-14 · XCV",
     "heading": [
       {
