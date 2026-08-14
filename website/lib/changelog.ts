@@ -43,6 +43,1265 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-14",
+    "dateLabel": "2026-08-14 · XCVII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(the real-root saga and the sign-position endpoint — discovery freeze rounds eighty-three through eighty-eight synced into every live surface: the real-root architecture and its three-lane conflict, the arbiter, the TPL round with the PARITY LEMMA and the counting law, the tested-simplicity round, the adversarial bughunt and the SIGN-POSITION PREDICTOR; "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " only — TEN frozen probes, NO promotion, NO module, NO ledger row, NO marker moved, NO gate closed or narrowed, suite unchanged at "
+      },
+      {
+        "k": "m",
+        "v": "906"
+      },
+      {
+        "k": "t",
+        "v": ", NO RH claim in any direction; standing convention: the round-87 bughunt CORRECTED three MAJOR misstatements in the round-83/84 records, the frozen probes and notes are NOT retro-edited — the correction is the record — and every surface synced by this entry carries only the corrected numbers: (1) ROUND 83 (note CCCLXXXII, three lanes: "
+      },
+      {
+        "k": "c",
+        "v": "semilocal_ realroot_ limit_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "16/16"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "8eff2685"
+      },
+      {
+        "k": "t",
+        "v": ", verdict REALROOT-ARCHITECTURE-OPEN; "
+      },
+      {
+        "k": "c",
+        "v": "stc_ sol_ convergence_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "4/4"
+      },
+      {
+        "k": "t",
+        "v": ", verdict STC-OPEN; "
+      },
+      {
+        "k": "c",
+        "v": "stc_ opus_ convergence_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": ", verdict STC-DISGUISE "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " STC-FALSE for the mesh family): the first route of the campaign to genuinely leave the kill atlas — source-only finite SELF-ADJOINT operators (real spectra by construction, no wall positivity, no zero data consumed), limit identified with "
+      },
+      {
+        "k": "m",
+        "v": "\\Xi"
+      },
+      {
+        "k": "t",
+        "v": " via the full trace formula on a determining even Paley–Wiener class; skeleton audited as executable gates (determination lemma sound in two classical steps with NO convergence rate consumed; two repairable gaps repaired: an origin-exclusion minorant derivable from R3 itself, and the source-only "
+      },
+      {
+        "k": "m",
+        "v": "E''(0)"
+      },
+      {
+        "k": "t",
+        "v": " pin "
+      },
+      {
+        "k": "m",
+        "v": "\\sum_\\rho 1/(\\rho(1-\\rho)) = 2 + \\gamma - \\log 4\\pi"
+      },
+      {
+        "k": "t",
+        "v": "); census fully real "
+      },
+      {
+        "k": "m",
+        "v": "41/41"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "x = 13"
+      },
+      {
+        "k": "t",
+        "v": ", all six trace rows CONVERGE, world controls separate at median "
+      },
+      {
+        "k": "m",
+        "v": "1.26\\times10^6"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "1.40\\times10^6"
+      },
+      {
+        "k": "t",
+        "v": " vs the pre-frozen bar "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": ", honest price "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min} = 2.5\\times10^{-54}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "x = 13"
+      },
+      {
+        "k": "t",
+        "v": " (internal precision "
+      },
+      {
+        "k": "m",
+        "v": "\\sim e^{-4\\pi x}"
+      },
+      {
+        "k": "t",
+        "v": "); CORRECTED zero tracking (F1, stronger than first recorded): first-zero deviation "
+      },
+      {
+        "k": "m",
+        "v": "-8.4\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "x = 8"
+      },
+      {
+        "k": "t",
+        "v": " AND "
+      },
+      {
+        "k": "m",
+        "v": "13"
+      },
+      {
+        "k": "t",
+        "v": " (exactly the cache's own float64 quantization of "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "+8.407\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": " vs the 30-digit literature value), mean displacement over all 15 matched zeros "
+      },
+      {
+        "k": "m",
+        "v": "0.0"
+      },
+      {
+        "k": "t",
+        "v": " at float64 resolution; CORRECTED "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": " finals (F6): up to "
+      },
+      {
+        "k": "m",
+        "v": "117"
+      },
+      {
+        "k": "t",
+        "v": "% under the exact census ("
+      },
+      {
+        "k": "m",
+        "v": "2.071\\times10^{-8} \\to 9.550\\times10^{-9}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "3.708\\times10^{-9} \\to 6.290\\times10^{-9}"
+      },
+      {
+        "k": "t",
+        "v": "; worst decay exponent "
+      },
+      {
+        "k": "m",
+        "v": "-4.47 \\to -4.96"
+      },
+      {
+        "k": "t",
+        "v": "), all six rows staying CONVERGES; lane two hits "
+      },
+      {
+        "k": "m",
+        "v": "14.1347/21.0220/25.0109"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "x = 8"
+      },
+      {
+        "k": "t",
+        "v": " source-only and proves R3 ALONE implies Weil positivity ("
+      },
+      {
+        "k": "m",
+        "v": "h = |\\hat g|^2"
+      },
+      {
+        "k": "t",
+        "v": " on a real spectrum) — full RH strength; lane three PROVES the Nyquist density obstruction (spec density "
+      },
+      {
+        "k": "m",
+        "v": "\\ell/2\\pi"
+      },
+      {
+        "k": "t",
+        "v": " exact and mesh-independent, rel dev "
+      },
+      {
+        "k": "m",
+        "v": "2.22\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": " over a "
+      },
+      {
+        "k": "m",
+        "v": "16\\times"
+      },
+      {
+        "k": "t",
+        "v": " mesh sweep, vs "
+      },
+      {
+        "k": "m",
+        "v": "\\Xi"
+      },
+      {
+        "k": "t",
+        "v": "'s log density — R3 AND R4 fail for every mesh at fixed window), unweighted trace diverges "
+      },
+      {
+        "k": "m",
+        "v": "4/4"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "x = 144"
+      },
+      {
+        "k": "t",
+        "v": ", weighted converges (honest finals "
+      },
+      {
+        "k": "m",
+        "v": "9.3\\times10^{-4}/3.3\\times10^{-6}/2.3\\times10^{-6}/6.2\\times10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": "; F4) but the weights are the Christoffel function of the zero measure — the unknown; honest node-vs-zero pairing at "
+      },
+      {
+        "k": "m",
+        "v": "x = 55"
+      },
+      {
+        "k": "t",
+        "v": ": 18-vs-3 one-sided, 36-vs-6 two-sided (F2); the three-lane conflict deliberately frozen unresolved; (2) ROUND 84 (note CCCLXXXIII, "
+      },
+      {
+        "k": "c",
+        "v": "realroot_ arbiter_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "17/17"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "933"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "fc8a3a2b"
+      },
+      {
+        "k": "t",
+        "v": ", independently re-run bit-identical, verdict REALROOT-DEPTH-UNDECIDED): the conflict resolved BY MECHANISM — different operator family, not different sums, not a bug, not primarily depth; all three lanes summed honest unweighted sums against the identically normalized source side; a new deep rung "
+      },
+      {
+        "k": "m",
+        "v": "x = 21"
+      },
+      {
+        "k": "t",
+        "v": " built at the honest price ("
+      },
+      {
+        "k": "m",
+        "v": "K = 80"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "128"
+      },
+      {
+        "k": "t",
+        "v": " dps "
+      },
+      {
+        "k": "m",
+        "v": "\\ge"
+      },
+      {
+        "k": "t",
+        "v": " the declared floor "
+      },
+      {
+        "k": "m",
+        "v": "119.6"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min} = 1.25\\times10^{-93}"
+      },
+      {
+        "k": "t",
+        "v": "): the mesh-CF "
+      },
+      {
+        "k": "m",
+        "v": "(0,30)"
+      },
+      {
+        "k": "t",
+        "v": " count grows "
+      },
+      {
+        "k": "m",
+        "v": "7 \\to 22"
+      },
+      {
+        "k": "t",
+        "v": " over "
+      },
+      {
+        "k": "m",
+        "v": "x = 5..144"
+      },
+      {
+        "k": "t",
+        "v": " tracking the uniform Nyquist prediction (measured deviations "
+      },
+      {
+        "k": "m",
+        "v": "10.2/10.6/10.9"
+      },
+      {
+        "k": "t",
+        "v": "% at "
+      },
+      {
+        "k": "m",
+        "v": "x = 13/21/34"
+      },
+      {
+        "k": "t",
+        "v": " vs the frozen "
+      },
+      {
+        "k": "m",
+        "v": "30"
+      },
+      {
+        "k": "t",
+        "v": "% tolerance; F3), the extremal/quotient family stays EXACTLY on the "
+      },
+      {
+        "k": "m",
+        "v": "\\Xi"
+      },
+      {
+        "k": "t",
+        "v": " census at every measured depth — "
+      },
+      {
+        "k": "m",
+        "v": "(0,30) = 3"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "(0,60) = 13"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "(0,100) = 29"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "x = 21"
+      },
+      {
+        "k": "t",
+        "v": ", minimum zero "
+      },
+      {
+        "k": "m",
+        "v": "= \\gamma_1"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": ", all 50 Nyquist-excess zeros exiled to "
+      },
+      {
+        "k": "m",
+        "v": "(100, 163]"
+      },
+      {
+        "k": "t",
+        "v": "; one unified table: mesh DIVERGES "
+      },
+      {
+        "k": "m",
+        "v": "4/4"
+      },
+      {
+        "k": "t",
+        "v": ", extremal CONVERGES "
+      },
+      {
+        "k": "m",
+        "v": "4/4"
+      },
+      {
+        "k": "t",
+        "v": " on the same "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "; NOT false-for-family, NOT quotient-escapes (the thinning is MEASURED, not proven; Connes 6.6 open); the Z1-TRANSFER identity names why a proof is the wall itself: the trig-Galerkin matrix IS the Gram matrix of zero evaluations, "
+      },
+      {
+        "k": "m",
+        "v": "M[j,k] = 2\\sum_\\gamma B_j(\\gamma)B_k(\\gamma)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min} = 2\\sum_\\gamma E(\\gamma)^2"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "6.31\\times10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": " after the analytic cache-tail correction, "
+      },
+      {
+        "k": "m",
+        "v": "92"
+      },
+      {
+        "k": "t",
+        "v": "% model share) — source-only in INPUT, zero-measure in CONTENT; falsification rungs priced ("
+      },
+      {
+        "k": "m",
+        "v": "x = 34"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "1.5 h; "
+      },
+      {
+        "k": "m",
+        "v": "x = 55"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "10 h), NO finite rung can verify — the surviving lemma carries full RH strength; (3) ROUND 85 (note CCCLXXXIV, three lanes: "
+      },
+      {
+        "k": "c",
+        "v": "tp_ sol_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "7/7"
+      },
+      {
+        "k": "t",
+        "v": " TPL-OBSTRUCTED, "
+      },
+      {
+        "k": "c",
+        "v": "tp_ opus_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "32/32"
+      },
+      {
+        "k": "t",
+        "v": " TPL-REDUCED "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " TPL-DICHOTOMY-MEASURED "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " TPL-OBSTRUCTED, "
+      },
+      {
+        "k": "c",
+        "v": "tp_ da_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": " TPL-CIRCULAR): energy sign and zero census are LOCALLY INDEPENDENT observables (off-line quartets: "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta Q = -4\\delta^2E'(t)^2 < 0"
+      },
+      {
+        "k": "t",
+        "v": " yet Rouché preserves the count; "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}"
+      },
+      {
+        "k": "t",
+        "v": " flips to "
+      },
+      {
+        "k": "m",
+        "v": "-9.1\\times10^{-17}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "1.25\\,\\delta^*"
+      },
+      {
+        "k": "t",
+        "v": " while the "
+      },
+      {
+        "k": "m",
+        "v": "(0,30)"
+      },
+      {
+        "k": "t",
+        "v": " count stays "
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": "); the ARCH block IS the smooth zero measure exactly ("
+      },
+      {
+        "k": "m",
+        "v": "1.1\\times10^{-6}"
+      },
+      {
+        "k": "t",
+        "v": ") — the entire "
+      },
+      {
+        "k": "m",
+        "v": "e^{-cx}"
+      },
+      {
+        "k": "t",
+        "v": " positivity is supplied by the PRIME BLOCK ALONE, no density-input argument can prove TPL(i); "
+      },
+      {
+        "k": "m",
+        "v": "\\|\\mathrm{PRIME}\\|/\\mathrm{gap} \\sim 10^{4.36x}"
+      },
+      {
+        "k": "t",
+        "v": " — any prolate comparison must be an EXACT cancellation; THE PARITY LEMMA: TPL(i) IS — no analysis, a finite combinatorial rewriting — the statement that the ground eigenvector of one explicit matrix carries a prescribed sign pattern, verified exactly on three rungs; THE COUNTING LAW: the Nyquist surplus peaks at "
+      },
+      {
+        "k": "m",
+        "v": "D_{\\max} = x - 3/8"
+      },
+      {
+        "k": "t",
+        "v": ", the tracking band ends exactly at the peak, marginal cost per forced skip one fixed factor "
+      },
+      {
+        "k": "m",
+        "v": "e^{-11}"
+      },
+      {
+        "k": "t",
+        "v": ", constant to "
+      },
+      {
+        "k": "m",
+        "v": "11"
+      },
+      {
+        "k": "t",
+        "v": "% over 23 DECADES; the measured census support simultaneously CONVICTED CIRCULAR (the recorded counts ARE the smooth RvM values to "
+      },
+      {
+        "k": "m",
+        "v": "< 1"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "29.0023"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "29"
+      },
+      {
+        "k": "t",
+        "v": "; the instrument transcribes any fed measure including the prime-free world; outrunning classical verification needs dps "
+      },
+      {
+        "k": "m",
+        "v": "\\sim 2.1\\times10^{12}"
+      },
+      {
+        "k": "t",
+        "v": "; the only off-line-sensitive channel is the wall scalar, slope "
+      },
+      {
+        "k": "m",
+        "v": "2.03"
+      },
+      {
+        "k": "t",
+        "v": ", independently confirming the "
+      },
+      {
+        "k": "m",
+        "v": "-4\\delta^2E'^2"
+      },
+      {
+        "k": "t",
+        "v": " law); one sentence: the NUMBER of sign changes is forced by counting, the arithmetic substance sits EXCLUSIVELY in the POSITIONS, which the prime block alone must supply; (4) ROUND 86 (note CCCLXXXV, "
+      },
+      {
+        "k": "c",
+        "v": "simple_ principle_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "22/22"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "ef1bc6dd"
+      },
+      {
+        "k": "t",
+        "v": ", verdict SIMPLE-PRINCIPLE-IS-TRANSCRIPTION): four readings tested against pre-registered bars — one-axiom STRONG-REFUTED (five normalizations, zero hits on "
+      },
+      {
+        "k": "m",
+        "v": "\\log\\pi"
+      },
+      {
+        "k": "t",
+        "v": ", gaps "
+      },
+      {
+        "k": "m",
+        "v": "0.226"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "1.341"
+      },
+      {
+        "k": "t",
+        "v": "; the difference dictionary exact: a gauge orbit, empty as a source), transcription CONFIRMED "
+      },
+      {
+        "k": "m",
+        "v": "3/3"
+      },
+      {
+        "k": "t",
+        "v": " (the register's Mertens head is EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "\\prod_{p \\mid 210}(1-1/p) = 48/210"
+      },
+      {
+        "k": "t",
+        "v": ", i.e. "
+      },
+      {
+        "k": "m",
+        "v": "2.1293"
+      },
+      {
+        "k": "t",
+        "v": " bit "
+      },
+      {
+        "k": "m",
+        "v": "= \\log_2(35/8)"
+      },
+      {
+        "k": "t",
+        "v": " — the compiler pair itself; the "
+      },
+      {
+        "k": "m",
+        "v": "E''(0)"
+      },
+      {
+        "k": "t",
+        "v": " pin is the Hadamard identity to "
+      },
+      {
+        "k": "m",
+        "v": "2.4\\times10^{-8}"
+      },
+      {
+        "k": "t",
+        "v": "), fixed-point REFUTED (back-distance exactly "
+      },
+      {
+        "k": "m",
+        "v": "1.0000\\,\\delta"
+      },
+      {
+        "k": "t",
+        "v": " — every admissible measure is a fixed point), Gram-seat square law "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_* = \\sqrt{\\mathrm{margin}/\\mathrm{curvature}}"
+      },
+      {
+        "k": "t",
+        "v": " numerically EXACT on the Gram channel (ratio "
+      },
+      {
+        "k": "m",
+        "v": "0.9997"
+      },
+      {
+        "k": "t",
+        "v": ", slope "
+      },
+      {
+        "k": "m",
+        "v": "2.0000"
+      },
+      {
+        "k": "t",
+        "v": "; order split: position first-order at slope "
+      },
+      {
+        "k": "m",
+        "v": "0.9669"
+      },
+      {
+        "k": "t",
+        "v": ", reality second-order) typed PATTERN-ONLY by the frozen FOLDCOV rule; the surviving principle: TFPT's positivity is always GRAM POSITIVITY OF NODE EVALUATIONS — a theorem exactly where the nodes are compiler data, the arithmetic seam the single place whose nodes are not; two corollaries sharpen the OCT without moving it (the order split mechanically explains all 24 dead sign-source candidates; the "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "1% sub-spacing price is instrument-dependent, "
+      },
+      {
+        "k": "m",
+        "v": "h^{-1.69}"
+      },
+      {
+        "k": "t",
+        "v": " along the deployed ladder); (5) ROUND 87 (note CCCLXXXVI, "
+      },
+      {
+        "k": "c",
+        "v": "bughunt_ r79_ r85_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "24/24"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "230"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "9346a32b"
+      },
+      {
+        "k": "t",
+        "v": ", verdict BUGHUNT-FINDINGS(9, max MAJOR)): adversarial audit of rounds 79–85 — NINE findings, "
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": " MAJOR / "
+      },
+      {
+        "k": "m",
+        "v": "6"
+      },
+      {
+        "k": "t",
+        "v": " MINOR / "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " FATAL, NO round verdict flips, every finding pinned by an executable gate; the three majors are the F1/F2/F6 corrections carried above (the honest zero-tracking claim STRONGER than published); one systemic minor: NINE gates across the corpus hardcoded "
+      },
+      {
+        "k": "c",
+        "v": "check(..., True)"
+      },
+      {
+        "k": "t",
+        "v": " — never able to fail while counted in the "
+      },
+      {
+        "k": "m",
+        "v": "N/N"
+      },
+      {
+        "k": "t",
+        "v": " tallies, including the very line recording the round-80 “candidate #19 gate FAIL” verdict (the verdict right, the gate testing nothing); checked clean: every round-79–82 headline number reproduced on fresh re-runs, all ten probes re-ran green, no firewall violations; (6) ROUND 88 (note CCCLXXXVII, "
+      },
+      {
+        "k": "c",
+        "v": "signpos_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "19/19"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "11.5"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "b0003dcc"
+      },
+      {
+        "k": "t",
+        "v": ", independently re-run bit-identical, verdict SIGNPOS-PREDICTOR-EXACT "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SIGNPOS-TP-DEAD "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SIGNPOS-RIGID "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SIGNPOS-K-STABLE): the campaign's most concrete endpoint — a SOURCE-ONLY predictor of the sign-change positions (the parity of "
+      },
+      {
+        "k": "m",
+        "v": "\\operatorname{round}(\\theta(\\omega_k)/\\pi + 1 + S_x(\\omega_k))"
+      },
+      {
+        "k": "t",
+        "v": " at the Nyquist lattice, "
+      },
+      {
+        "k": "m",
+        "v": "S_x"
+      },
+      {
+        "k": "t",
+        "v": " the band-limited phase built from the prime-node comb) is EXACT at ALL 79 lattice points across "
+      },
+      {
+        "k": "m",
+        "v": "x = 3/5/8/13"
+      },
+      {
+        "k": "t",
+        "v": ", with measured first-order arithmetic content: the density alone fails at exactly FOUR lattice points and the prime-node comb repairs precisely those four — ARITHMETIC LOAD "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": ", the first arithmetically computable first-order-channel object of the campaign; scramble control fails "
+      },
+      {
+        "k": "m",
+        "v": "6/11"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min} = -1.11"
+      },
+      {
+        "k": "t",
+        "v": "; THE CATCH named precisely: exactness for all "
+      },
+      {
+        "k": "m",
+        "v": "x"
+      },
+      {
+        "k": "t",
+        "v": " is half-integer-margin control of the band-limited "
+      },
+      {
+        "k": "m",
+        "v": "S"
+      },
+      {
+        "k": "t",
+        "v": " at the lattice points (measured minimum margin shrinking to "
+      },
+      {
+        "k": "m",
+        "v": "0.0317"
+      },
+      {
+        "k": "t",
+        "v": ") — verbatim TPL(i) itself, the RH hardness relocated for the THIRD time to the same seat, now as a rounding-margin statement about one explicit band-limited function of the primes; Gantmacher–Krein STRUCTURALLY DEAD ("
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}(\\mathrm{ARCH}) = -2.666"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "M"
+      },
+      {
+        "k": "t",
+        "v": " neither totally nonnegative nor Green's/one-pair in any tested ordering; the minor census localizes nothing); the position map RIGID (modulus "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the ordinate-to-lattice distance); the positions K-STABLE in the deployed band (the round-85 caveat discharged for the positions, the joint "
+      },
+      {
+        "k": "m",
+        "v": "(x,K)"
+      },
+      {
+        "k": "t",
+        "v": " declaration remaining for the margins); (7) SURFACES SYNCED IN THIS ENTRY: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " gains the sandbox diary subsection “The real-root architecture, the Parity Lemma, and the sign-position predictor”; the end-form article gains 8.10 with the abstract status sentence, limitation 9 (the bughunt corrections and the hardcoded-gate finding as a methodology limitation) and the traceability rounds CCCLXXXII–CCCLXXXVII; the Anthropic email draft gains one status paragraph; the website prime-front page gains chapter 34 (the live-updates chapter renumbered "
+      },
+      {
+        "k": "m",
+        "v": "34 \\to 35"
+      },
+      {
+        "k": "t",
+        "v": ") and one consolidated sandbox feed entry (verdict SIGNPOS-PREDICTOR-EXACT); "
+      },
+      {
+        "k": "c",
+        "v": "website/lib/changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh gen"
+      },
+      {
+        "k": "t",
+        "v": "; NO RH claim anywhere)"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-14",
     "dateLabel": "2026-08-14 · XCVI",
     "heading": [
       {

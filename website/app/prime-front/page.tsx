@@ -2404,7 +2404,9 @@ export default function PrimeFrontPage() {
 
       <KillAtlasSection />
 
-      {/* 34 — Live updates */}
+      <RealRootSignposSection />
+
+      {/* 35 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -2413,7 +2415,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              34 · Live updates
+              35 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -3022,6 +3024,180 @@ function KillAtlasSection() {
           All of it is sandbox: no claim moves until it is promoted, and
           nothing here is a claim of progress toward the Riemann
           Hypothesis.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function RealRootSignposSection() {
+  return (
+    <section
+      id="realroot-signpos"
+      aria-labelledby="realroot-signpos-heading"
+      className="scroll-mt-24 border-t border-slate-800/60 py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            34 · The real-root architecture, the Parity Lemma, and the
+            sign-position predictor · sandbox probes
+          </span>
+          <StatusBadge badge="sandbox" />
+        </div>
+        <h2
+          id="realroot-signpos-heading"
+          className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
+        >
+          The missing object gets its most concrete form yet — and stays
+          exactly as open
+        </h2>
+        <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
+          <span className="font-medium text-sky-300/90">In plain words: </span>
+          six discovery freeze rounds (rounds eighty-three through
+          eighty-eight, 2026-08-14) attack the one direction the
+          Obstruction Completeness Theorem leaves untyped —{" "}
+          <em>constructing</em> the missing object rather than bounding it.
+          Everything in this chapter is sandbox: ten frozen probes in the
+          experiments tree, no promotion, no marker moves — the suite stays
+          at 906. One convention: an adversarial bughunt round corrected
+          three MAJOR misstatements in the round-83/84 records; the frozen
+          probes and notes are not retro-edited — the correction is the
+          record — and this chapter carries only the corrected numbers.
+        </p>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
+          <p>
+            <strong className="font-medium text-amber-200">
+              The real-root architecture (round 83, three lanes: 16/16 +
+              4/4 + 20/20):
+            </strong>{" "}
+            the first route of the campaign to genuinely leave the kill
+            atlas — source-only <em>self-adjoint</em> operators, real
+            spectra by construction, no wall positivity, no zero data
+            consumed, the limit identified via the trace formula. Lane one
+            reads the census fully real (41/41 at x = 13) with all six
+            trace rows converging, at the honest price that the minimizer
+            exists only at internal precision ~e^(−4πx). The corrected
+            zero-tracking read is <em>stronger</em> than first recorded:
+            first-zero deviation −8.4×10⁻¹⁶ at x = 8 and 13 (exactly the
+            cache&apos;s own float64 quantization of γ₁), mean displacement
+            0.0 at float64 resolution. Lane two proves the structural
+            point:{" "}
+            <strong className="font-medium text-slate-100">
+              the surviving convergence statement alone implies Weil
+              positivity
+            </strong>{" "}
+            — full RH strength. Lane three <em>proves</em> a Nyquist
+            density obstruction for its mesh family (constant density ℓ/2π
+            against Ξ&apos;s log density — a constant cannot equal a
+            non-constant). Three lanes, one recorded conflict, frozen for
+            an arbiter.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The arbiter (round 84, 17/17, REALROOT-DEPTH-UNDECIDED):
+            </strong>{" "}
+            the conflict resolves <em>by mechanism</em> — different
+            operator families, not different sums, not a bug. A new deep
+            rung x = 21 (λ_min = 1.25×10⁻⁹³): the mesh family&apos;s band
+            count grows with the uniform Nyquist density while the
+            extremal family stays <em>exactly</em> on the Ξ census —
+            (0,30) = 3, (0,60) = 13, (0,100) = 29 — with all 50 excess
+            zeros exiled to the band edge. But the{" "}
+            <strong className="font-medium text-slate-100">
+              Z1-transfer identity
+            </strong>{" "}
+            names the catch: the Galerkin matrix <em>is</em> the Gram
+            matrix of zero evaluations — source-only in input,
+            zero-measure in content. No finite rung can verify the
+            architecture, only falsify it; the surviving lemma carries
+            full RH strength.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The TPL round (round 85, three lanes: 7/7 + 32/32 + 9/9):
+            </strong>{" "}
+            energy sign and zero census are locally independent
+            observables (off-line quartets flip λ_min without moving the
+            count — Rouché); the ARCH block <em>is</em> the smooth zero
+            density exactly, so the entire positivity is supplied by the
+            prime block alone;{" "}
+            <strong className="font-medium text-slate-100">
+              the Parity Lemma
+            </strong>
+            : the persistence statement is — with no analysis — a finite
+            combinatorial statement about the sign pattern of one explicit
+            matrix&apos;s ground eigenvector, and the <em>number</em> of
+            sign changes is forced by a counting law (one fixed factor
+            e^(−11) per forced skip, constant over 23 decades) — only the{" "}
+            <em>positions</em> remain open, from the prime block alone.
+            Simultaneously the devil&apos;s advocate convicts the
+            route&apos;s measured support as circular: the recorded counts
+            are the smooth Riemann–von Mangoldt values to &lt; 1, the
+            instrument transcribes any fed measure (including a prime-free
+            world), and outrunning classical verification would need
+            dps ~ 2×10¹².
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The simplicity round (round 86, 22/22) and the bughunt
+              (round 87, 24/24):
+            </strong>{" "}
+            the one principle that threads everything is{" "}
+            <strong className="font-medium text-slate-100">
+              Gram transcription
+            </strong>{" "}
+            — TFPT&apos;s positivity is always Gram positivity of node
+            evaluations, a theorem exactly where the nodes are compiler
+            data; the arithmetic seam is the single place whose nodes are
+            not. One-axiom and fixed-point readings refuted against
+            pre-registered bars; the order split (position first-order,
+            reality second-order) mechanically explains why all 24
+            candidate sign sources died. Tested simplicity adds nothing
+            beyond the OCT — it explains why the OCT looks as it does. The
+            bughunt: nine findings (3 MAJOR / 6 MINOR / 0 FATAL), no
+            verdict flips, the honest zero-tracking claim <em>stronger</em>{" "}
+            than published, and nine hardcoded pass-gates convicted across
+            the corpus — an N/N tally is not, by itself, evidence that N
+            things were tested.
+          </p>
+          <p>
+            <strong className="font-medium text-emerald-200">
+              The sign-position round (round 88, 19/19,
+              SIGNPOS-PREDICTOR-EXACT):
+            </strong>{" "}
+            a source-only predictor of the sign-change positions — the
+            parity of a rounded band-limited prime phase at the Nyquist
+            lattice — is{" "}
+            <strong className="font-medium text-slate-100">
+              exact at all 79 reachable lattice points
+            </strong>{" "}
+            (x = 3/5/8/13), with arithmetic load exactly 4: the density
+            alone fails at exactly four points and the prime-node comb
+            repairs precisely those four; a scramble control fails 6/11.
+            The catch, named precisely: exactness for all x is
+            half-integer rounding-margin control of one explicit
+            band-limited function of the primes (measured minimum margin
+            0.0317) — verbatim the same RH-hard seat, relocated for the
+            third time. Gantmacher–Krein is structurally dead, the
+            position map is rigid, the positions are K-stable in the
+            deployed band.
+          </p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
+          Honest fence: the wall route is closed as a theorem (chapter 33);
+          the only escape architecture is adjudicated DEPTH-UNDECIDED with
+          its measured support convicted circular; and the missing object
+          now has its most concrete form ever — eigenvector sign-change
+          positions, equivalently rounding margins of a band-limited prime
+          function — carrying full RH strength in every coordinate system.
+          The predictor is a finite measurement, not an all-x statement.
+          RH is neither proven nor disproven here; what is documented is
+          the complete map of why. All of it is sandbox: no claim moves
+          until it is promoted, and nothing here is a claim of progress
+          toward the Riemann Hypothesis.
         </p>
       </div>
     </section>

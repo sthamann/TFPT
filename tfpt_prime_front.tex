@@ -17423,6 +17423,290 @@ is not evidence in either direction.  A no-go about the
 \emph{type} of the missing input is not evidence about its
 \emph{existence}.
 
+\subsection{The real-root architecture, the Parity Lemma, and
+the sign-position predictor (sandbox
+probes)}\label{sec:realroot-signpos}
+
+Six further discovery freeze rounds of 2026-08-14 (notes
+CCCLXXXII--CCCLXXXVII) then attacked the one construction
+direction the Obstruction Completeness Theorem of
+Section~\ref{sec:kill-atlas-oct} leaves untyped --- building the
+missing object rather than bounding it --- and ended with the
+missing object in its most concrete form so far.  Everything in
+this subsection is \emph{sandbox}: ten frozen probes in the
+experiments tree, no module, no ledger row, no marker moved, no
+gate closed or narrowed, and no claim about the Riemann
+Hypothesis in any direction.  The suite stays at 906 modules.
+One convention governs the numbers below: an adversarial bughunt
+round (round 87) audited everything produced in rounds 79--85
+and corrected three \textsc{major} misstatements in the
+round-83/84 records; per the standing N12 convention the frozen
+probes and notes are \emph{not} retro-edited --- the correction
+is the record --- and this subsection carries only the corrected
+values.
+
+\emph{The real-root architecture (round 83, three lanes:
+\texttt{semilocal\_realroot\_limit\_probe.py} $16/16$, verdict
+\textsc{realroot-architecture-open};
+\texttt{stc\_sol\_convergence\_probe.py} $4/4$, verdict
+\textsc{stc-open}; \texttt{stc\_opus\_convergence\_probe.py}
+$20/20$, verdict \textsc{stc-disguise} $+$ \textsc{stc-false}
+for the mesh family).}  The first route of the campaign to
+genuinely leave the kill atlas: instead of proving positivity of
+the Weil form (edge E4), build finite \emph{self-adjoint}
+source-only operators --- real spectra by construction, no wall
+positivity, no zero data consumed --- and identify the limit
+with $\Xi$ through the full trace formula on a determining even
+Paley--Wiener class; compactness, Hurwitz, Hadamard and
+determination then give RH.  Lane one audits the skeleton as
+executable gates (Hurwitz sound; the determination lemma sound
+in two classical steps with \emph{no convergence rate consumed};
+two repairable gaps found and repaired, an origin-exclusion
+minorant derivable from R3 itself and the source-only $E''(0)$
+pin $\sum_\rho 1/(\rho(1-\rho)) = 2 + \gamma - \log 4\pi$), and
+measures the Connes extremal family: census fully real ($41/41$
+at $x = 13$), all six trace rows converge, world controls
+separate at median $1.26\times10^6$--$1.40\times10^6$ against
+the pre-frozen bar 5 --- at the honest price that the minimizer
+direction exists only at internal precision $\sim e^{-4\pi x}$
+($\lambda_{\min} = 2.5\times10^{-54}$ at $x = 13$).  The
+corrected zero-tracking read (round 87, finding F1) is
+\emph{stronger} than the one first recorded: the exact-mp census
+puts the first-zero deviation at $-8.4\times10^{-16}$ at $x = 8$
+\emph{and} $x = 13$ --- exactly the cache's own float64
+quantization of $\gamma_1$ --- and the mean displacement over
+all 15 matched zeros at $0.0$ in float64 resolution (the
+minimizer zeros sit on the cached ordinates below the
+comparator's own floor); the corrected $\varepsilon$ finals move
+by up to $117\%$ under the exact census (round 87, finding F6)
+with all six rows still \textsc{converges}.  Lane two builds the
+Connes--van Suijlekom quotient source-only, hits
+$14.1347/21.0220/25.0109$ at $x = 8$ with no zero read, and
+proves the structural point: \textbf{R3 alone implies Weil
+positivity} ($h = |\hat g|^2$ on a real spectrum), so the trace
+convergence carries full RH strength.  Lane three proves the
+\textbf{Nyquist density obstruction} for its mesh-CF family:
+$\operatorname{spec} H_N$ has constant density $\ell/2\pi$
+exactly and mesh-independently (rel.\ deviation
+$2.22\times10^{-16}$ over a $16\times$ mesh sweep) while $\Xi$'s
+zeros have density $\log(\tau/2\pi)/2\pi$ --- so R3 and R4 fail
+for every mesh at fixed window; the unweighted trace diverges on
+all four batteries to $x = 144$ while the weighted trace
+converges (honest finals $9.3\times10^{-4}$ /
+$3.3\times10^{-6}$ / $2.3\times10^{-6}$ / $6.2\times10^{-4}$;
+round 87, finding F4), but the weights are the Christoffel
+function of the zero measure --- the unknown; the honest
+node-vs-zero pairing at $x = 55$ is 18-vs-3 one-sided (36-vs-6
+two-sided; round 87, finding F2).  The three lanes ended in a
+recorded conflict, deliberately frozen unresolved for an arbiter
+round.
+
+\emph{The arbiter (round 84,
+\texttt{realroot\_arbiter\_probe.py}, $17/17$ gates,
+independently re-run bit-identical, verdict
+\textsc{realroot-depth-undecided}).}  The conflict is resolved
+\emph{by mechanism}: different operator family, not different
+sums, not a bug, not primarily depth.  All three lanes computed
+honest unweighted sums against the identically normalized source
+side.  The discriminator is the band census across depth, with a
+new deep rung $x = 21$ built at the honest price ($K = 80$, 128
+dps against the declared floor $4\pi x/\ln 10 + 5 = 119.6$,
+$\lambda_{\min} = 1.25\times10^{-93}$): the mesh-CF family's
+$(0,30)$ count grows $7 \to 22$ from $x = 5$ to $144$, tracking
+the uniform Nyquist prediction (measured deviations
+$10.2/10.6/10.9\%$ at $x = 13/21/34$ against the frozen $30\%$
+tolerance; round 87, finding F3) --- lane three's density
+theorem confirmed for its own family --- while the
+extremal/quotient family stays \emph{exactly} on the $\Xi$
+census at every measured depth: $(0,30) = 3$, $(0,60) = 13$,
+$(0,100) = 29$ at $x = 21$, minimum zero $= \gamma_1$ to
+$10^{-4}$, with all 50 Nyquist-excess zeros exiled to $(100,
+163]$ where fixed test functions are blind.  On one unified
+table (same $h$, same normalization, same unweighted sum) the
+mesh family diverges on all four batteries while the extremal
+family converges on the same four.  The verdict is
+\textsc{realroot-depth-undecided} --- not false-for-family (the
+obstruction reaches the extremal object in no measured band),
+not quotient-escapes (the thinning is \emph{measured}, not
+proven; Connes' section 6.6 remains open) --- and the new
+\textbf{Z1-transfer identity} names why a proof is the wall
+itself: the trig-Galerkin matrix \emph{is} the Gram matrix of
+zero evaluations, $M[j,k] = 2\sum_\gamma
+B_j(\gamma)B_k(\gamma)$ with $\lambda_{\min} = 2\sum_\gamma
+E(\gamma)^2$ (deviation $6.31\times10^{-5}$ after the analytic
+cache-tail correction, $92\%$ model share) --- the minimizer
+minimizes its own transform \emph{on the true ordinates}:
+source-only in input, zero-measure in content.  Since R3 alone
+is RH-hard, no finite rung can verify the architecture ---
+falsification rungs are priced ($x = 34$: $K = 150$ at $\ge 191$
+dps, $\sim$1.5 h; $x = 55$: $K = 276$ at $\ge 305$ dps,
+$\sim$10 h) --- and the surviving lemma carries full RH
+strength.
+
+\emph{The TPL round (round 85, three independent lanes on the
+thinning-persistence lemma: \texttt{tp\_sol\_probe.py} $7/7$,
+verdict \textsc{tpl-obstructed}; \texttt{tp\_opus\_probe.py}
+$32/32$, verdict \textsc{tpl-reduced} $+$
+\textsc{tpl-dichotomy-measured} $+$ \textsc{tpl-obstructed};
+\texttt{tp\_da\_probe.py} $9/9$, verdict
+\textsc{tpl-circular}).}  Lane Sol proves the off-line-quartet
+obstruction: off the line the Z1 sum is an indefinite bilinear
+form ($\Delta Q = -4\delta^2 E'(t)^2 < 0$ at simple real zeros)
+yet Rouch\'e preserves the band count --- \textbf{energy sign
+and zero census are locally independent observables} (measured:
+$\lambda_{\min}$ flips to $-9.1\times10^{-17}$ at $1.25\,
+\delta^*$ while the $(0,30)$ count stays 3 and roots move
+$5.5\times10^{-9}$).  Lane Opus supplies the strongest
+mathematics of the round: the ARCH block \emph{is} the smooth
+zero measure exactly (rel.\ $1.1\times10^{-6}$), the
+density-level ground state is negative and $O(1)$ on every rung
+--- the entire $e^{-cx}$ positivity is supplied by the prime
+block alone, so no density-input argument can prove TPL(i);
+$\|\mathrm{PRIME}\|/\mathrm{gap} \sim 10^{4.36x}$, so any
+prolate comparison must be an exact cancellation, never
+perturbative; \textbf{the Parity Lemma}: the basis collapses to
+one secular function, and TPL(i) \emph{is} --- no analysis, a
+finite combinatorial rewriting --- the statement that the ground
+eigenvector of one explicit matrix carries a prescribed sign
+pattern, verified exactly on three rungs; and \textbf{the
+counting law}: the Nyquist surplus peaks at $D_{\max} = x -
+3/8$, the tracking band ends exactly at the peak, and the
+marginal cost $d(-\log\lambda_{\min})/dD_{\max} =
+10.1\ldots11.3$ is constant to $11\%$ over 23 decades --- the
+$e^{-cx}$ law of the whole architecture is a counting law, each
+forced skip (each sign change) costing one fixed factor
+$e^{-11}$.  Lane Advocate convicts the route's measured support
+as circular: the recorded band counts \emph{are} the smooth
+Riemann--von Mangoldt values to $< 1$ ($29.0023$ against $29$);
+the instrument transcribes whatever measure it is fed (the
+prime-free smooth world gets its own clean census); outrunning
+classical zero verification would need $x \sim 3.8\times10^{11}$,
+i.e.\ dps $\sim 2.1\times10^{12}$; the only off-line-sensitive
+channel is the wall scalar itself (measured slope $2.03$,
+independently confirming Sol's $-4\delta^2E'^2$ law).  The three
+lanes reconcile into one picture, and the round's one-sentence
+status: the \emph{number} of ground-eigenvector sign changes is
+forced by counting --- the arithmetic substance sits exclusively
+in the \emph{positions} of the sign changes, which the prime
+block alone must supply.
+
+\emph{The simplicity round (round 86,
+\texttt{simple\_principle\_probe.py}, $22/22$ gates, verdict
+\textsc{simple-principle-is-transcription}).}  Four readings of
+``the simple principle must thread through everything,'' each
+with pre-registered consequences and frozen bars.  The one-axiom
+reading is refuted in its strong form (five natural
+normalizations, zero hits on the declared constant $\log\pi$,
+gaps $0.226$--$1.341$; the difference-level dictionary is exact,
+so the equality is exact as a gauge orbit and empty as a
+source).  The transcription reading is \emph{confirmed} $3/3$ on
+the sharpest claimed arithmetic outputs: the register's Mertens
+head is exactly $\prod_{p \mid 210}(1 - 1/p) = 48/210$, i.e.\
+$2.1293$ bit $= \log_2(35/8)$ --- the ``arithmetic output'' is
+the compiler pair itself --- and the $E''(0)$ pin is the
+Hadamard identity to $2.4\times10^{-8}$.  The fixed-point
+reading is refuted (the compression transcribes every fed
+measure: back-distance exactly $1.0000\,\delta$ under jitter).
+The Gram-seat square law $\delta_* =
+\sqrt{\mathrm{margin}/\mathrm{curvature}}$ is measured
+numerically exact on the Gram channel (ratio $0.9997$, slope
+$2.0000$) with the order split (position first-order, reality
+second-order; on-line slope $0.9669$) --- and by the frozen
+FOLDCOV rule it is typed \textsc{pattern-only-even-if-confirmed}.
+What survives is one principle: \textbf{TFPT's positivity is
+always Gram positivity of node evaluations --- a theorem exactly
+where the nodes are compiler data --- and the arithmetic seam is
+the single place whose nodes are not.}  Two measured corollaries
+sharpen the OCT without moving it: the order split mechanically
+explains why all 24 candidate sign sources died (they sought
+first-order information in a channel that carries reality only
+at second order), and the $\sim\!1\%$ sub-spacing price is
+instrument-dependent --- $\sqrt{\mathrm{margin}/
+\mathrm{curvature}}$, scaling like $h^{-1.69}$ along the
+deployed ladder.  Tested simplicity adds nothing beyond the OCT;
+it explains why the OCT looks the way it does.
+
+\emph{The bughunt round (round 87,
+\texttt{bughunt\_r79\_r85\_probe.py}, $24/24$ gates, verdict
+\textsc{bughunt-findings}(9, max \textsc{major})).}  An
+adversarial audit of everything produced in rounds 79--85: nine
+findings, 3 \textsc{major} / 6 \textsc{minor} / 0 \textsc{fatal},
+\emph{no round verdict flips}, every finding pinned by an
+executable gate.  The three majors are the corrections carried
+above (the first-zero/mean-displacement conflation, whose honest
+resolution is stronger than the published claim; the 36-vs-3
+pairing, honestly 18-vs-3; the float64-refinement artifact in
+the published $\varepsilon$ finals, with gated survival of every
+verdict).  One systemic minor: nine gates across the corpus are
+hardcoded \texttt{check(..., True)} and can never fail while
+counted in the $N/N$ tallies --- including the very line that
+records the round-80 ``candidate \#19 gate FAIL'' verdict (the
+verdict is right; the gate tests nothing).  Checked clean: every
+round-79--82 headline number reproduces on fresh re-runs, all
+ten probes re-ran green, no firewall violations.
+
+\emph{The sign-position round (round 88,
+\texttt{signpos\_probe.py}, $19/19$ gates, independently re-run
+bit-identical, verdict \textsc{signpos-predictor-exact} $+$
+\textsc{signpos-tp-dead} $+$ \textsc{signpos-rigid} $+$
+\textsc{signpos-k-stable}).}  The campaign's most concrete
+endpoint: the positions of the ground-eigenvector sign changes
+--- the single open object left by the Parity Lemma --- attacked
+with the oscillation/total-positivity/node-duality toolbox.  A
+\textbf{source-only predictor of the sign-change positions
+exists and is exact}: the parity of $\operatorname{round}(
+\theta(\omega_k)/\pi + 1 + S_x(\omega_k))$ at the Nyquist
+lattice, where $S_x$ is the band-limited phase built from the
+prime-node comb, is exact at \emph{all 79 lattice points} across
+$x = 3/5/8/13$, with measured first-order arithmetic content:
+the density alone fails at exactly four lattice points and the
+prime-node comb repairs precisely those four (arithmetic load
+4) --- the first arithmetically computable first-order-channel
+object of the campaign; a scramble control fails $6/11$ with
+$\lambda_{\min} = -1.11$, so the exactness is
+explicit-formula-specific, not a pipeline transcription.  The
+catch is named precisely: proving the predictor's exactness for
+\emph{all} $x$ is half-integer-margin control of the
+band-limited $S$ at the lattice points (measured minimum margin
+shrinking to $0.0317$), which is verbatim TPL(i) itself --- the
+RH hardness relocates for the \emph{third} time to the same
+seat, now as a rounding-margin statement about one explicit
+band-limited function of the primes.  Gantmacher--Krein is
+structurally dead (the density blocks are indefinite,
+$\lambda_{\min}(\mathrm{ARCH}) = -2.666$; $M$ is neither totally
+nonnegative nor a Green's/one-pair matrix in any tested
+ordering; the minor census localizes nothing); the map
+$\{$ordinate positions$\} \to \{$sign pattern$\}$ is
+\emph{rigid} with modulus equal to the ordinate-to-lattice
+distance (TPL(i) is exactly the statement that the prime block
+never carries a node across the lattice); and the sign-change
+positions are stable in $K$ inside the deployed band (the
+round-85 well-posedness caveat is discharged for the positions;
+the joint $(x,K)$ declaration remains for the margins).
+
+\begin{quote}
+\textbf{Where the arc leaves the campaign} (sandbox; no RH
+claim): the wall route is closed as a theorem (the OCT of
+Section~\ref{sec:kill-atlas-oct}); the only architecture that
+genuinely escapes the kill atlas is adjudicated
+\textsc{realroot-depth-undecided} with its measured support
+convicted circular; and the missing object now has its most
+concrete form ever --- the eigenvector sign-change positions,
+equivalently the rounding margins of one explicit band-limited
+prime function --- and carries full RH strength in every
+coordinate system in which it has been written.
+\end{quote}
+
+\emph{Scope, in the same breath.}  All of this is exploration:
+finite measurements on reachable rungs ($x \le 21$ for the deep
+census, $x \le 13$ for the predictor), no all-$x$ statement, no
+positivity claim, no promotion, and per the bughunt's own
+framing its $24/24$ \textsc{pass} means ``the audit is
+consistent,'' not ``no bugs.''  RH is neither proven nor
+disproven here; what is documented is the complete map of why,
+now including the object-construction direction.  \textbf{No
+statement about the Riemann Hypothesis is made.}
+
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
 The P4 main strike (\veri{v712\_rank3\_transverse\_deck.py}, $5/5$)
