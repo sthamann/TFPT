@@ -17707,6 +17707,230 @@ disproven here; what is documented is the complete map of why,
 now including the object-construction direction.  \textbf{No
 statement about the Riemann Hypothesis is made.}
 
+\subsection{The Stieltjes--Vitali pin route and the Krein
+screw-function carrier (sandbox
+probes)}\label{sec:svpin-krein}
+
+Two further discovery freeze rounds of 2026-08-14 (notes
+CCCLXXXIX--CCCXC) then attacked the resolvent direction the arc
+of Section~\ref{sec:realroot-signpos} leaves open: replace the
+full semilocal trace convergence by countably many positive
+scalars, and build the one carrier the corpus did not have.
+Everything in this subsection is \emph{sandbox}: two frozen
+probes in the experiments tree, no module, no ledger row, no
+marker moved, no gate closed or narrowed, and no claim about the
+Riemann Hypothesis in any direction.  The suite stays at 906
+modules.
+
+\emph{The Stieltjes--Vitali pin route (round 89, externally
+proposed, contract \textsc{prime.stieltjes.vitali.pin.01};
+\texttt{stieltjes\_vitali\_pin\_probe.py}, $17/17$ gates,
+$249$\,s, independently re-run bit-identical, verdict
+\textsc{svpin-route-open}).}  The proposal replaces the full
+semilocal trace convergence by countably many positive resolvent
+scalars in the absolutely convergent Euler half-plane: the pins
+$P_x(\sigma) = \sum_k 2\sigma/(\lambda_{x,k}^2 + \sigma^2)$ must
+converge to $\xi'/\xi(1/2 + \sigma)$ at the countable family
+$\sigma_r = 1 + 1/r$, where the right side is source-only
+($\Gamma$, $\pi$, $\Lambda(n)$, $n^{-s}$ --- absolutely
+convergent for $s > 1$); then Herglotz normal-family compactness
+(\emph{one} pin suffices), Vitali on the pins accumulating at
+the interior point $i$, the identity theorem on $\Im z > 1/2$
+(where $\Xi$ is zero-free), analytic continuation on the
+connected $\mathbb{C}_+ \setminus Z(\Xi)$, and the pole
+contradiction give $(\mathrm{SV}) \Rightarrow \mathrm{RH}$, with
+the functional equation closing $\beta < 1/2$.  \textbf{The
+skeleton is sound, gate by gate}: the weight-comparability
+constant $C_D = 65.01$ (bar $2\times10^3$) is executed per rung
+(normal-family ratio $0.033$ on all four); the sign-convention
+ambiguity of earlier rounds is \emph{harmless} for the pins ---
+$\Xi(z) = \xi(1/2 - iz)$ and $\xi(1/2 + iz)$ give the identical
+target via $\xi'/\xi(1-s) = -\xi'/\xi(s)$, with a numeric lock
+at $\sigma = 1$ (dev $2.3\times10^{-8}$); the spectrum honesty
+is measured, not assumed (census $4/10/20/41$ all real, no zero
+mode, min spacing $\ge 1.3$); the degenerate Herglotz limit is
+excluded by the pin bound.  The \emph{one} named condition: the
+all-$x$ realness of the spectra is the CF simplicity-plus-%
+evenness hypothesis, so the skeleton is conditional on it.  The
+named non-gap, stated as bluntly as the probe states it:
+\textbf{the chain moves the entire burden into (SV) itself} ---
+no skeleton step is the wall; the wall is the premise.  The tail
+bookkeeping is computed explicitly and all three tails decrease
+(true zero tail beyond the band $2.85\times10^{-2} \to
+1.18\times10^{-2}$, within $2\%$ of the $\log T/T$ model;
+measured Nyquist-excess edge mass $\le 1.31\times10^{-3}$, the
+window definition corrected in the spec after a smoke caught
+excess zeros spilling past the band edge; exact lattice tail
+$1.35\times10^{-2} \to 8.0\times10^{-3}$).  The finite pre-check
+\textbf{converges on all 16 frozen $\sigma$ values} ($x =
+3/5/8/13$; $x = 21$ skipped and declared by the arbiter cost
+law): $\Delta$ negative everywhere (the missing tail dominates),
+slopes $-0.62\ldots-0.65$, measured drop $2.6$ against the
+a-priori Riemann--von Mangoldt model $2.4$ (bar $1.6$), with
+\emph{no} $\sigma\downarrow 1/2$ rate degradation on this ladder
+(the expected boundary effect lies beyond reachable depth,
+stated honestly), and the full divisor row converges
+\emph{faster} (the lattice comb compensates $\sim\!2/3$ of the
+missing tail).  All four world controls separate --- the mesh-CF
+family is \textbf{mesh-poisoned through the same pins} (median
+overshoot growing $0.94 \to 6.32$ like $\log x$: the wrong
+limit, measured); \textsc{scrpos}/\textsc{epstein}/%
+\textsc{smooth}/\textsc{scrarith} separate at medians
+$2.7\times10^{5}$--$8.8\times10^{5}$ (band metric) and
+$12.4$--$45.9$ (target metric) on $16/16$ rows (\textsc{scrarith}
+throws one imaginary pair --- the world breaks the SV realness
+hypothesis, reported); Christoffel weights are structurally
+excluded by an AST gate; and the $\tau$-screen shows $0/16$
+relocations at max slope $0.009$ over $\sim\!47$ decades ---
+\textbf{no disguise}: the pins measurably live away from the
+wall margin.  And the honest weight, Z1-typed as the actual
+adjudication: on the extremal family the measured pin
+convergence \emph{is} the transcription of cache partial sums
+(band pins against cache rel $7.7\times10^{-12}$ /
+$9.4\times10^{-12}$ / $2.1\times10^{-5}$) --- instrument
+consistency, never source-side content --- and the naive Suzuki
+spectral readout is \emph{dead} (\textsc{suzpin-form-spectrum}:
+the hat-compression eigenvalues are a form-spectrum ladder
+$\sqrt{\mu} = 1.02/2.12/3.17\ldots$, not the ordinates
+($\gamma_1 = 14.13$); $P_{\mathrm{suz}}(1)$ grows $1.85 \to
+2.47$ against the target $0.046$).  The route is the
+\emph{second} architecture of the campaign to survive every
+gate, and its reduction --- countably many safe scalars in place
+of a test-class quantification --- is the corpus's logically
+sharpest open target; its burden of proof is unchanged, only
+sharper localized, and the priced remaining task is exactly one:
+the Krein inverse-spectral realization of Suzuki's screw
+function, which the corpus did not have.
+
+\emph{The Krein screw-function carrier (round 90, contract
+\textsc{prime.suzuki.krein.realization.01};
+\texttt{krein\_screw\_realization\_probe.py}, $22/22$ gates,
+$18$\,s, independently re-run bit-identical, verdict
+\textsc{suzkrein-carrier-open}(lemma: uniform Weyl-disk
+contraction)).}  The priced missing ingredient, built and
+adjudicated.  The screw function $g$ is extracted corpus-exactly
+(Suzuki's eq.~1.3 with the v643 convention lock; the Lerch
+coefficient $+1/4$ is \emph{gated} against the origin expansion
+$g \sim \tfrac12 t\log t + At$ with $A = \tfrac12(\log 2\pi -
+\psi(2)) = 0.707546$ --- a $-1$ misreading would fail by
+$O(1)$); the screw property is verified ($G(t,s) = g(t-s) - g(t)
+- g(-s)$ PSD on all four windows,
+$\lambda_{\min}/\lambda_{\max} \ge -8.1\times10^{-19}$); the
+invoked theorem is named with its hypothesis \emph{certified}:
+Krein's accelerant/continual-Schur correspondence (Krein 1955;
+discrete transcription Verblunsky/Geronimus), whose hypothesis
+--- strict positivity of every Toeplitz section of the
+accelerant $-g''$ --- is certified by the completed Szeg\H{o}
+run ($\max|\alpha| = 0.156$); and the normalization is
+\emph{derived, not fitted} --- the lag reads are exact second
+differences of $g$ (two independent routes agreeing to
+$1.8\times10^{-10}$), a partition of unity gives the pin as
+$\tfrac12\langle -g'', e^{-\sigma|\cdot|}\rangle$, and the Weil
+formula identifies the target $\xi'/\xi(1/2+\sigma)$ layer by
+layer (archimedean, pole and prime layers each gated).  The
+inverse solve is classical: \textbf{the Levinson/Szeg\H{o}
+recursion \emph{is} the Toeplitz-structured discrete
+Krein/Gelfand--Levitan equation}; the Verblunsky coefficients
+are the realized Hamiltonian data and are \emph{causal} (exact
+Toeplitz nesting: deeper windows only append); and \textbf{the
+realized Hamiltonian sees the primes} --- $|\alpha|$-spikes at
+$r = \log q$ for $q = 2, 3, 4, 5, 7$, offset $\le 1$ bin,
+contrast $2.8$--$5.2$.  The conditioning is trivial
+(amplification $\sim\!23$ under $10^{-25}$ perturbations --- the
+feared $e^{cx}$ explosion belongs to the trig-family
+spectral-resolution ladder, not to the screw-kernel Toeplitz
+sections), and the $\delta$-rough pointwise profile is declared
+honestly: the $\delta$-stable objects (pins, disks, spike
+positions) are what is gated.  The decisive measurement: with
+the 16 frozen $\sigma$ values taken verbatim from the SVPIN
+spec, \textbf{all 16 rows converge, 16/16 truth-tight} ($\sigma
+= 0.6$: $\Delta = +7.30\times10^{-5} \to +6.33\times10^{-7}$
+over $L = \log 3\ldots\log 13$), with the Weyl-disk contraction
+\emph{measured} as $R \sim e^{-(\sigma + c)L}$, $c =
+0.85\ldots1.76$, median $1.36$ (limit-point behaviour); and the
+round's surprise: \textbf{the disk center resums the missing
+tail} ($|\hat P - S_{\mathrm{trunc}}|$ against the tail model,
+median ratio $1.000$; at $\sigma = 0.6$ the center beats the
+truncated source sum by a factor $\sim\!600$) --- the residual
+is the arithmetic fluctuation beyond the window.  The controls
+die \emph{at the positivity level itself}, the strongest
+separation of the campaign: the prime-free \textsc{smooth}
+accelerant \textbf{loses screw positivity} at window depth $r =
+0.264$ (the same $r$ at both mesh sizes --- a continuum
+property, not a grid artifact), the golden-scrambled
+\textsc{scrarith} world at $r = 0.744$: \textbf{the true primes
+--- positions and weights --- are necessary for the screw
+positivity of these windows.}  And the screen that every
+previous pin carrier failed is passed for the first time:
+\textbf{no Z1 cache transcription} (the minimum over all $N \le
+7000$ of the max-$\sigma$ relative deviation is
+$8.5\times10^{-3}$ against the bar $10^{-6}$; AST firewall
+zero-free; \textsc{suzkrein-extrapolates}$(1.000)$) --- and the
+carrier is explicitly distinct from the dead de Branges route
+(\textsc{debranges-comb-blind}) in input (screw lag data, not
+wall-block moments), direction (inverse-spectral construction,
+not HB re-coordinatization) and adjudication (quantitative
+convergence plus world controls, not structure existence); the
+dead \textsc{suzpin} form-spectrum readout is never used.  The
+repricing, from measurements: the literal SVPIN trace-class norm
+is \emph{measured flat} ($16/16$ non-decaying; the appended
+Verblunsky blocks grow --- prime atoms arrive forever), so the
+correct currency is not trace-class but Weyl-disk contraction,
+and the minimal missing lemma is stated exactly: \emph{let $g$
+be Suzuki's screw function with every finite section of $-g''$
+positive ($=$ localized Weil positivity); then the Weyl disks
+$D_a(i\sigma)$ of the Krein realization of $-g''$ contract with
+$R_a(\sigma) \le C(\varepsilon)\,e^{-(\sigma + c)\cdot 2a}$
+uniformly on $\sigma \ge 1/2 + \varepsilon$, with limit point
+$\xi'/\xi(1/2 + \sigma)$} --- suppliers: Krein's accelerant
+theorem (existence and identification \emph{given} all-$a$
+positivity) and de Branges chain monotonicity (nesting); open is
+the uniformity as $\sigma \downarrow 1/2$ --- \textbf{and the
+honest price, unchanged: the all-$a$ section-positivity
+hypothesis \emph{is} localized Weil positivity itself.}  The
+carrier localizes the remaining task (one disk-contraction rate
+for one explicit canonical system) and replaces the wrong
+trace-class currency by the right one; it does not remove the
+positivity input.  Disclosures travel with the record:
+pre-freeze float64 calibration, two smokes (six fixes, including
+a normalization slip caught by the $\Delta = -\mathrm{tgt}$
+pattern of the table itself) and a first-full-run abort at a
+circular liveness filter (repaired and disclosed in the spec,
+SPEC-hash change documented) --- no bar, grid, ladder or
+verdict-bearing rule moved in any shakeout.
+
+\begin{quote}
+\textbf{Where the day's arc ends} (sandbox; no RH claim): the
+wall route is closed as a theorem (the OCT of
+Section~\ref{sec:kill-atlas-oct}); the real-root architecture is
+adjudicated with its measured support convicted circular, and
+the missing object reduced to eigenvector sign-change positions
+with an exact source-only predictor
+(Section~\ref{sec:realroot-signpos}); the pin route is the
+sharpest reduction --- countably many safe scalars in the
+absolutely convergent half-plane; and the Krein carrier is the
+first host whose convergence is \emph{not} a transcription of
+cached zeros --- and at the bottom of every route, machine-%
+verified, sits the same single input: Weil positivity, in one
+currency or another.  The program's map of why RH does not fall
+to it is now complete through the object-construction and
+resolvent directions, with the two open lemmata precisely
+stated: uniform Weyl-disk contraction of one explicit canonical
+system, and the sign-change positions of one explicit ground
+eigenvector.
+\end{quote}
+
+\emph{Scope, in the same breath.}  All of this is exploration:
+finite measurements on reachable windows ($x \le 13$; $x \sim
+21$ continuations priced and not claimed), no all-$x$ and no
+all-$a$ statement, no positivity claim, no promotion.  The SV
+skeleton is conditional on the CF realness hypothesis; the
+carrier's convergence is a finite measurement of a lemma, not
+its proof; and the lemma's hypothesis is the very positivity the
+program has not supplied.  RH is neither proven nor disproven
+here.  \textbf{No statement about the Riemann Hypothesis is
+made.}
+
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
 The P4 main strike (\veri{v712\_rank3\_transverse\_deck.py}, $5/5$)

@@ -43,6 +43,1097 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-14",
+    "dateLabel": "2026-08-14 · XCVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the Stieltjes–Vitali pin route and the Krein screw-function carrier — discovery freeze rounds eighty-nine and ninety synced into every live surface: the externally proposed countable-pin reduction of the real-root architecture, and the construction of its one priced missing ingredient — the Krein inverse-spectral realization of Suzuki's screw function, the first pin carrier of the campaign to pass the Z1 screen; "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " only — TWO frozen probes, NO promotion, NO module, NO ledger row, NO marker moved, NO gate closed or narrowed, suite unchanged at "
+      },
+      {
+        "k": "m",
+        "v": "906"
+      },
+      {
+        "k": "t",
+        "v": ", NO RH claim in any direction: (1) ROUND 89 (note CCCLXXXIX, externally proposed contract PRIME.STIELTJES.VITALI.PIN.01, "
+      },
+      {
+        "k": "c",
+        "v": "stieltjes_ vitali_ pin_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "17/17"
+      },
+      {
+        "k": "t",
+        "v": " gates, "
+      },
+      {
+        "k": "m",
+        "v": "249"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "f450832f"
+      },
+      {
+        "k": "t",
+        "v": ", independently re-run bit-identical, verdict SVPIN-ROUTE-OPEN): replace the full semilocal trace convergence by countably many positive resolvent scalars in the absolutely convergent Euler half-plane — the pins "
+      },
+      {
+        "k": "m",
+        "v": "P_x(\\sigma) = \\sum_k 2\\sigma/(\\lambda_{x,k}^2 + \\sigma^2)"
+      },
+      {
+        "k": "t",
+        "v": " must converge to "
+      },
+      {
+        "k": "m",
+        "v": "\\xi'/\\xi(1/2+\\sigma)"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma_r = 1 + 1/r"
+      },
+      {
+        "k": "t",
+        "v": " (source-only right side via "
+      },
+      {
+        "k": "m",
+        "v": "\\Gamma"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\pi"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda(n)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "n^{-s}"
+      },
+      {
+        "k": "t",
+        "v": "); then Herglotz normal-family compactness (ONE pin suffices), Vitali on the pins accumulating at the interior point "
+      },
+      {
+        "k": "m",
+        "v": "i"
+      },
+      {
+        "k": "t",
+        "v": ", the identity theorem on "
+      },
+      {
+        "k": "m",
+        "v": "\\Im z > 1/2"
+      },
+      {
+        "k": "t",
+        "v": ", analytic continuation on the connected "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{C}_+ \\setminus Z(\\Xi)"
+      },
+      {
+        "k": "t",
+        "v": " and the pole contradiction give (SV) "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " RH, the functional equation closing "
+      },
+      {
+        "k": "m",
+        "v": "\\beta < 1/2"
+      },
+      {
+        "k": "t",
+        "v": "; THE SKELETON IS SOUND gate by gate: weight-comparability constant "
+      },
+      {
+        "k": "m",
+        "v": "65.01"
+      },
+      {
+        "k": "t",
+        "v": " (bar "
+      },
+      {
+        "k": "m",
+        "v": "2\\times10^3"
+      },
+      {
+        "k": "t",
+        "v": ") executed per rung (normal-family ratio "
+      },
+      {
+        "k": "m",
+        "v": "0.033"
+      },
+      {
+        "k": "t",
+        "v": " on all four), the sign-convention ambiguity HARMLESS for the pins ("
+      },
+      {
+        "k": "m",
+        "v": "\\Xi(z) = \\xi(1/2 - iz)"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "\\xi(1/2 + iz)"
+      },
+      {
+        "k": "t",
+        "v": " give the identical target via "
+      },
+      {
+        "k": "m",
+        "v": "\\xi'/\\xi(1-s) = -\\xi'/\\xi(s)"
+      },
+      {
+        "k": "t",
+        "v": "; numeric lock at "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma = 1"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "4.61359285\\times10^{-2}"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "4.61359517\\times10^{-2}"
+      },
+      {
+        "k": "t",
+        "v": ", dev "
+      },
+      {
+        "k": "m",
+        "v": "2.3\\times10^{-8}"
+      },
+      {
+        "k": "t",
+        "v": "), spectrum honesty MEASURED not assumed (census "
+      },
+      {
+        "k": "m",
+        "v": "4/10/20/41"
+      },
+      {
+        "k": "t",
+        "v": " all real, no zero mode, min spacing "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 1.3"
+      },
+      {
+        "k": "t",
+        "v": "), the degenerate Herglotz limit excluded by the pin bound; the ONE named condition: all-"
+      },
+      {
+        "k": "m",
+        "v": "x"
+      },
+      {
+        "k": "t",
+        "v": " realness is the CF simplicity-plus-evenness hypothesis; the named non-gap: THE CHAIN MOVES THE ENTIRE BURDEN INTO (SV) ITSELF — no skeleton step is the wall, the wall is the premise; tail bookkeeping explicit, all three tails decreasing (true zero tail "
+      },
+      {
+        "k": "m",
+        "v": "2.85\\times10^{-2} \\to 1.18\\times10^{-2}"
+      },
+      {
+        "k": "t",
+        "v": " within "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": "% of the "
+      },
+      {
+        "k": "m",
+        "v": "\\log T/T"
+      },
+      {
+        "k": "t",
+        "v": " model; measured Nyquist-excess edge mass "
+      },
+      {
+        "k": "m",
+        "v": "\\le 1.31\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": ", the window definition corrected in the spec after a smoke caught band spill; exact lattice tail "
+      },
+      {
+        "k": "m",
+        "v": "1.35\\times10^{-2} \\to 8.0\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": "); THE FINITE PRE-CHECK CONVERGES ON ALL 16 FROZEN "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " VALUES ("
+      },
+      {
+        "k": "m",
+        "v": "x = 3/5/8/13"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "x = 21"
+      },
+      {
+        "k": "t",
+        "v": " skipped and declared by the arbiter cost law): "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta"
+      },
+      {
+        "k": "t",
+        "v": " negative everywhere (missing tail dominates), slopes "
+      },
+      {
+        "k": "m",
+        "v": "-0.62\\ldots-0.65"
+      },
+      {
+        "k": "t",
+        "v": ", measured drop "
+      },
+      {
+        "k": "m",
+        "v": "2.6"
+      },
+      {
+        "k": "t",
+        "v": " vs the a-priori RvM model "
+      },
+      {
+        "k": "m",
+        "v": "2.4"
+      },
+      {
+        "k": "t",
+        "v": " (bar "
+      },
+      {
+        "k": "m",
+        "v": "1.6"
+      },
+      {
+        "k": "t",
+        "v": "), NO "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma\\downarrow1/2"
+      },
+      {
+        "k": "t",
+        "v": " rate degradation on this ladder (the expected boundary effect beyond reachable depth, stated honestly), the FULL divisor row converging FASTER (the lattice comb compensates "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "2/3 of the missing tail); CONTROLS ALL SEPARATE: mesh-CF MESH-POISONED through the same pins (median overshoot "
+      },
+      {
+        "k": "m",
+        "v": "0.94 \\to 6.32"
+      },
+      {
+        "k": "t",
+        "v": " growing like "
+      },
+      {
+        "k": "m",
+        "v": "\\log x"
+      },
+      {
+        "k": "t",
+        "v": " — the wrong limit, measured), SCRPOS/EPSTEIN/SMOOTH/SCRARITH separate at medians "
+      },
+      {
+        "k": "m",
+        "v": "2.7\\times10^5"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "8.8\\times10^5"
+      },
+      {
+        "k": "t",
+        "v": " (band metric) and "
+      },
+      {
+        "k": "m",
+        "v": "12.4"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "45.9"
+      },
+      {
+        "k": "t",
+        "v": " (target metric) on "
+      },
+      {
+        "k": "m",
+        "v": "16/16"
+      },
+      {
+        "k": "t",
+        "v": " rows (SCRARITH throws one imaginary pair — the world breaks the SV realness hypothesis, reported), Christoffel weights structurally excluded by AST, "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-screen "
+      },
+      {
+        "k": "m",
+        "v": "0/16"
+      },
+      {
+        "k": "t",
+        "v": " relocations at max slope "
+      },
+      {
+        "k": "m",
+        "v": "0.009"
+      },
+      {
+        "k": "t",
+        "v": " over "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "47 decades — NO DISGUISE; THE HONEST WEIGHT, Z1-typed: on the extremal family the measured pin convergence IS the transcription of cache partial sums (band pins vs cache rel "
+      },
+      {
+        "k": "m",
+        "v": "7.7\\times10^{-12}"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "m",
+        "v": "9.4\\times10^{-12}"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "m",
+        "v": "2.1\\times10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": ") — instrument consistency, never source-side content; the naive Suzuki spectral readout is DEAD (SUZPIN-FORM-SPECTRUM: hat-compression eigenvalues are a form-spectrum ladder "
+      },
+      {
+        "k": "m",
+        "v": "\\sqrt{\\mu} = 1.02/2.12/3.17\\ldots"
+      },
+      {
+        "k": "t",
+        "v": ", not the ordinates, "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1 = 14.13"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "P_{\\mathrm{suz}}(1)"
+      },
+      {
+        "k": "t",
+        "v": " grows "
+      },
+      {
+        "k": "m",
+        "v": "1.85 \\to 2.47"
+      },
+      {
+        "k": "t",
+        "v": " vs target "
+      },
+      {
+        "k": "m",
+        "v": "0.046"
+      },
+      {
+        "k": "t",
+        "v": ") — the SECOND architecture of the campaign to survive every gate, the corpus's logically sharpest open target, its priced remaining task exactly one: the Krein inverse-spectral realization of Suzuki's screw function; three pre-freeze smoke fixes disclosed, zero post-freeze amendments; (2) ROUND 90 (note CCCXC, contract PRIME.SUZUKI.KREIN.REALIZATION.01, "
+      },
+      {
+        "k": "c",
+        "v": "krein_ screw_ realization_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "22/22"
+      },
+      {
+        "k": "t",
+        "v": " gates, "
+      },
+      {
+        "k": "m",
+        "v": "18"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "bd5fba32"
+      },
+      {
+        "k": "t",
+        "v": ", independently re-run bit-identical, verdict SUZKREIN-CARRIER-OPEN(lemma: uniform Weyl-disk contraction)): the priced missing ingredient BUILT — THE CORRESPONDENCE: "
+      },
+      {
+        "k": "m",
+        "v": "g"
+      },
+      {
+        "k": "t",
+        "v": " extracted corpus-exactly (Suzuki eq. 1.3 with the v643 convention lock; the Lerch coefficient "
+      },
+      {
+        "k": "m",
+        "v": "+1/4"
+      },
+      {
+        "k": "t",
+        "v": " GATED against the origin expansion "
+      },
+      {
+        "k": "m",
+        "v": "g \\sim \\tfrac12 t\\log t + At"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "A = \\tfrac12(\\log 2\\pi - \\psi(2)) = 0.707546"
+      },
+      {
+        "k": "t",
+        "v": " — a "
+      },
+      {
+        "k": "m",
+        "v": "-1"
+      },
+      {
+        "k": "t",
+        "v": " misreading would fail by "
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": "), the screw property verified ("
+      },
+      {
+        "k": "m",
+        "v": "G(t,s)"
+      },
+      {
+        "k": "t",
+        "v": " PSD on all four windows, "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}/\\lambda_{\\max} \\ge -8.1\\times10^{-19}"
+      },
+      {
+        "k": "t",
+        "v": "), Krein's accelerant/continual-Schur correspondence invoked with its hypothesis CERTIFIED (strict positivity of every Toeplitz section of "
+      },
+      {
+        "k": "m",
+        "v": "-g''"
+      },
+      {
+        "k": "t",
+        "v": ", certified by the completed Szeg"
+      },
+      {
+        "k": "t",
+        "v": "o"
+      },
+      {
+        "k": "t",
+        "v": " run, "
+      },
+      {
+        "k": "m",
+        "v": "\\max|\\alpha| = 0.156"
+      },
+      {
+        "k": "t",
+        "v": "), the normalization DERIVED not fitted (lag reads are exact second differences of "
+      },
+      {
+        "k": "m",
+        "v": "g"
+      },
+      {
+        "k": "t",
+        "v": ", two independent routes agreeing to "
+      },
+      {
+        "k": "m",
+        "v": "1.8\\times10^{-10}"
+      },
+      {
+        "k": "t",
+        "v": "; partition of unity gives the pin as "
+      },
+      {
+        "k": "m",
+        "v": "\\tfrac12\\langle -g'', e^{-\\sigma|\\cdot|}\\rangle"
+      },
+      {
+        "k": "t",
+        "v": "; the Weil formula identifies "
+      },
+      {
+        "k": "m",
+        "v": "\\xi'/\\xi(1/2+\\sigma)"
+      },
+      {
+        "k": "t",
+        "v": " layer by layer, archimedean/pole/prime each gated); THE CONSTRUCTION: Levinson/Szeg"
+      },
+      {
+        "k": "t",
+        "v": "o"
+      },
+      {
+        "k": "t",
+        "v": " IS the Toeplitz-structured discrete Krein/Gelfand–Levitan solve, the Verblunsky "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " are the realized Hamiltonian data and CAUSAL (exact Toeplitz nesting — deeper windows only append), and THE REALIZED HAMILTONIAN SEES THE PRIMES: "
+      },
+      {
+        "k": "m",
+        "v": "|\\alpha|"
+      },
+      {
+        "k": "t",
+        "v": "-spikes at "
+      },
+      {
+        "k": "m",
+        "v": "r = \\log q"
+      },
+      {
+        "k": "t",
+        "v": " for "
+      },
+      {
+        "k": "m",
+        "v": "q = 2/3/4/5/7"
+      },
+      {
+        "k": "t",
+        "v": ", offset "
+      },
+      {
+        "k": "m",
+        "v": "\\le 1"
+      },
+      {
+        "k": "t",
+        "v": " bin, contrast "
+      },
+      {
+        "k": "m",
+        "v": "2.8"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "5.2"
+      },
+      {
+        "k": "t",
+        "v": "; conditioning TRIVIAL (amplification "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "23 under "
+      },
+      {
+        "k": "m",
+        "v": "10^{-25}"
+      },
+      {
+        "k": "t",
+        "v": " perturbations — the feared "
+      },
+      {
+        "k": "m",
+        "v": "e^{cx}"
+      },
+      {
+        "k": "t",
+        "v": " explosion belongs to the trig-family spectral-resolution ladder, not the screw-kernel Toeplitz sections); the "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": "-rough pointwise profile declared honestly, the "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": "-stable objects (pins, disks, spike positions) gated; THE CONVERGENCE: all 16 frozen "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " rows (verbatim from the SVPIN spec) CONVERGE, "
+      },
+      {
+        "k": "m",
+        "v": "16/16"
+      },
+      {
+        "k": "t",
+        "v": " truth-tight ("
+      },
+      {
+        "k": "m",
+        "v": "\\sigma = 0.6"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta = +7.30\\times10^{-5} \\to +6.33\\times10^{-7}"
+      },
+      {
+        "k": "t",
+        "v": " over "
+      },
+      {
+        "k": "m",
+        "v": "L = \\log 3\\ldots\\log 13"
+      },
+      {
+        "k": "t",
+        "v": ", factor "
+      },
+      {
+        "k": "m",
+        "v": "115"
+      },
+      {
+        "k": "t",
+        "v": "), Weyl-disk contraction MEASURED "
+      },
+      {
+        "k": "m",
+        "v": "R \\sim e^{-(\\sigma+c)L}"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "c = 0.85\\ldots1.76"
+      },
+      {
+        "k": "t",
+        "v": " median "
+      },
+      {
+        "k": "m",
+        "v": "1.36"
+      },
+      {
+        "k": "t",
+        "v": " (limit-point behaviour), and THE SURPRISE: the disk center RESUMS THE MISSING TAIL ("
+      },
+      {
+        "k": "m",
+        "v": "|\\hat P - S_{\\mathrm{trunc}}|"
+      },
+      {
+        "k": "t",
+        "v": "/tail-model median "
+      },
+      {
+        "k": "m",
+        "v": "1.000"
+      },
+      {
+        "k": "t",
+        "v": "; at "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma = 0.6"
+      },
+      {
+        "k": "t",
+        "v": " the center beats the truncated source sum by a factor "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "600); THE CONTROLS DIE AT THE POSITIVITY LEVEL ITSELF — the strongest separation of the campaign: the prime-free SMOOTH accelerant LOSES SCREW POSITIVITY at window depth "
+      },
+      {
+        "k": "m",
+        "v": "r = 0.264"
+      },
+      {
+        "k": "t",
+        "v": " (same "
+      },
+      {
+        "k": "m",
+        "v": "r"
+      },
+      {
+        "k": "t",
+        "v": " at both mesh sizes — a continuum property), the golden-scrambled SCRARITH world at "
+      },
+      {
+        "k": "m",
+        "v": "r = 0.744"
+      },
+      {
+        "k": "t",
+        "v": " — THE TRUE PRIMES (positions AND weights) ARE NECESSARY FOR SCREW POSITIVITY at these windows; THE Z1 SCREEN PASSED FOR THE FIRST TIME: no cache transcription (min over all "
+      },
+      {
+        "k": "m",
+        "v": "N \\le 7000"
+      },
+      {
+        "k": "t",
+        "v": " of the max-"
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " rel dev "
+      },
+      {
+        "k": "m",
+        "v": "= 8.5\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " vs bar "
+      },
+      {
+        "k": "m",
+        "v": "10^{-6}"
+      },
+      {
+        "k": "t",
+        "v": "; AST firewall zero-free; SUZKREIN-EXTRAPOLATES("
+      },
+      {
+        "k": "m",
+        "v": "1.000"
+      },
+      {
+        "k": "t",
+        "v": ")), explicitly distinct from DEBRANGES-COMB-BLIND in input (screw lag data, not wall-block moments), direction (inverse-spectral construction, not HB re-coordinatization) and adjudication (quantitative convergence "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " world controls, not structure existence), the dead SUZPIN form-spectrum readout never used; THE REPRICED LEMMA AND THE HONEST PRICE: the literal SVPIN trace-class norm is MEASURED FLAT ("
+      },
+      {
+        "k": "m",
+        "v": "16/16"
+      },
+      {
+        "k": "t",
+        "v": " non-decaying; appended Verblunsky blocks grow — prime atoms arrive forever) — the correct currency is WEYL-DISK CONTRACTION, the minimal missing lemma stated exactly (“let "
+      },
+      {
+        "k": "m",
+        "v": "g"
+      },
+      {
+        "k": "t",
+        "v": " be Suzuki's screw function with every finite section of "
+      },
+      {
+        "k": "m",
+        "v": "-g''"
+      },
+      {
+        "k": "t",
+        "v": " positive ("
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " localized Weil positivity); then the Weyl disks "
+      },
+      {
+        "k": "m",
+        "v": "D_a(i\\sigma)"
+      },
+      {
+        "k": "t",
+        "v": " of the Krein realization contract with "
+      },
+      {
+        "k": "m",
+        "v": "R_a(\\sigma) \\le C(\\varepsilon)e^{-(\\sigma+c)\\cdot 2a}"
+      },
+      {
+        "k": "t",
+        "v": " uniformly on "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma \\ge 1/2 + \\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": ", with limit point "
+      },
+      {
+        "k": "m",
+        "v": "\\xi'/\\xi(1/2+\\sigma)"
+      },
+      {
+        "k": "t",
+        "v": "”; suppliers: Krein's accelerant theorem, de Branges chain monotonicity; OPEN: the uniformity as "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma \\downarrow 1/2"
+      },
+      {
+        "k": "t",
+        "v": ") — AND THE ALL-"
+      },
+      {
+        "k": "m",
+        "v": "a"
+      },
+      {
+        "k": "t",
+        "v": " SECTION-POSITIVITY HYPOTHESIS IS LOCALIZED WEIL POSITIVITY ITSELF: the carrier localizes the remaining task and fixes the currency, it does NOT remove the positivity input; disclosures: pre-freeze float64 calibration, two smokes (six fixes incl. a normalization slip caught by the table's own "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta = -\\mathrm{tgt}"
+      },
+      {
+        "k": "t",
+        "v": " pattern), a first-full-run abort at a circular liveness filter (repaired and disclosed in the spec, SPEC-hash change documented "
+      },
+      {
+        "k": "m",
+        "v": "\\texttt{1f898f95} \\to \\texttt{bd5fba32}"
+      },
+      {
+        "k": "t",
+        "v": ") — no bar, grid, ladder or verdict-bearing rule moved; (3) SURFACES SYNCED IN THIS ENTRY: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " gains the sandbox diary subsection “The Stieltjes–Vitali pin route and the Krein screw-function carrier”; the end-form article gains 8.11 with the abstract status sentence and the traceability rounds CCCLXXXIX–CCCXC; the Anthropic email draft gains one status paragraph (the missing input now has TWO precisely stated lemma forms, and the Krein carrier is the first source-only host whose controls die at the positivity level); the website prime-front page gains chapter 35 (the live-updates chapter renumbered "
+      },
+      {
+        "k": "m",
+        "v": "35 \\to 36"
+      },
+      {
+        "k": "t",
+        "v": ") and one consolidated sandbox feed entry (verdict SUZKREIN-CARRIER-OPEN); "
+      },
+      {
+        "k": "c",
+        "v": "website/lib/changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh gen"
+      },
+      {
+        "k": "t",
+        "v": "; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-14",
     "dateLabel": "2026-08-14 · XCVII",
     "heading": [
       {

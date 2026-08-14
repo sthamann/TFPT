@@ -2406,7 +2406,9 @@ export default function PrimeFrontPage() {
 
       <RealRootSignposSection />
 
-      {/* 35 — Live updates */}
+      <SvpinKreinSection />
+
+      {/* 36 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -2415,7 +2417,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              35 · Live updates
+              36 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -3198,6 +3200,150 @@ function RealRootSignposSection() {
           the complete map of why. All of it is sandbox: no claim moves
           until it is promoted, and nothing here is a claim of progress
           toward the Riemann Hypothesis.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function SvpinKreinSection() {
+  return (
+    <section
+      id="svpin-krein"
+      aria-labelledby="svpin-krein-heading"
+      className="scroll-mt-24 border-t border-slate-800/60 py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            35 · The Stieltjes–Vitali pin route and the Krein screw-function
+            carrier · sandbox probes
+          </span>
+          <StatusBadge badge="sandbox" />
+        </div>
+        <h2
+          id="svpin-krein-heading"
+          className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
+        >
+          Countable pins, a carrier that sees the primes — and the same
+          single input at the bottom
+        </h2>
+        <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
+          <span className="font-medium text-sky-300/90">In plain words: </span>
+          two closing discovery freeze rounds (rounds eighty-nine and
+          ninety, 2026-08-14) take the <em>resolvent</em> direction to its
+          endpoint: an externally proposed reduction of the whole trace
+          problem to countably many safe scalars, and the construction of
+          the one carrier the corpus did not have. Everything in this
+          chapter is sandbox: two frozen probes in the experiments tree,
+          no promotion, no marker moves — the suite stays at 906. No RH
+          claim in any direction.
+        </p>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
+          <p>
+            <strong className="font-medium text-amber-200">
+              The Stieltjes–Vitali pin route (round 89, externally
+              proposed, 17/17, SVPIN-ROUTE-OPEN):
+            </strong>{" "}
+            replace the full semilocal trace convergence by countably many
+            positive resolvent scalars in the absolutely convergent Euler
+            half-plane — then Herglotz compactness (one pin suffices),
+            Vitali on the pins accumulating at the interior point i, the
+            identity theorem, and the pole contradiction give (SV) ⟹ RH.
+            The skeleton is{" "}
+            <strong className="font-medium text-slate-100">
+              sound gate by gate
+            </strong>{" "}
+            (the one named condition is the CF realness hypothesis) — and
+            the named non-gap is stated as bluntly as the probe states it:
+            the chain moves the <em>entire</em> burden into (SV) itself.
+            The finite pre-check converges on all 16 frozen σ values
+            (measured drop 2.6 against the a-priori Riemann–von Mangoldt
+            model 2.4); the mesh-CF control is{" "}
+            <em>poisoned through the same pins</em> (overshoot growing
+            like log x — the wrong limit, measured); all four world
+            controls separate; and the τ-screen shows 0/16 relocations —
+            no disguise.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The honest weight (round 89, Z1-typed):
+            </strong>{" "}
+            on the extremal family the measured pin convergence{" "}
+            <em>is</em> the transcription of cache partial sums (rel
+            ~10⁻¹²) — instrument consistency, never source-side content —
+            and the naive Suzuki spectral readout is dead (a form-spectrum
+            ladder, not the ordinates). The route is the{" "}
+            <strong className="font-medium text-slate-100">
+              second architecture of the campaign to survive every gate
+            </strong>
+            , and its reduction — countably many safe scalars in place of
+            a test-class quantification — is the logically sharpest open
+            target of the program. The priced remaining task was exactly
+            one: the Krein inverse-spectral realization of Suzuki&apos;s
+            screw function.
+          </p>
+          <p>
+            <strong className="font-medium text-emerald-200">
+              The Krein carrier (round 90, 22/22, SUZKREIN-CARRIER-OPEN):
+            </strong>{" "}
+            the priced ingredient, built. The screw function is extracted
+            corpus-exactly (the normalization <em>derived</em>, not
+            fitted; the classical Krein accelerant hypothesis{" "}
+            <em>certified</em>, not assumed), the Levinson/Szegő solve{" "}
+            <em>is</em> the discrete Gelfand–Levitan equation, and{" "}
+            <strong className="font-medium text-slate-100">
+              the realized Hamiltonian sees the primes
+            </strong>
+            : coefficient spikes at r = log q for q = 2, 3, 4, 5, 7
+            (contrast 2.8–5.2). All 16 frozen σ rows converge truth-tight
+            under a measured Weyl-disk contraction law R ~ e^(−(σ+1.36)L),
+            and the disk center <em>resums the missing tail</em> (beating
+            the truncated source sum by ×600 at σ = 0.6). It is{" "}
+            <strong className="font-medium text-slate-100">
+              the first pin carrier to pass the Z1 screen
+            </strong>{" "}
+            — no zero-cache transcription (minimum relative deviation
+            8.5×10⁻³ against the bar 10⁻⁶) — and the controls die at the
+            positivity level itself: the prime-free smooth accelerant{" "}
+            <em>loses screw positivity</em> at finite window depth — the
+            true primes are necessary for it.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The repriced lemma, and its honest price:
+            </strong>{" "}
+            the literal trace-class norm of the pin contract is measured
+            flat — the correct currency is Weyl-disk contraction — and the
+            minimal missing lemma is stated exactly: uniform disk
+            contraction of the Krein realization on σ ≥ 1/2 + ε,{" "}
+            <em>given</em> positivity of every finite section of the
+            accelerant. And that hypothesis{" "}
+            <strong className="font-medium text-slate-100">
+              is localized Weil positivity itself
+            </strong>
+            : the carrier localizes the remaining task (one contraction
+            rate for one explicit canonical system) and replaces the wrong
+            currency by the right one — it does not remove the input.
+          </p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
+          Honest fence: the day&apos;s arc is complete — the wall route
+          closed as a theorem (chapter 33), the real-root architecture
+          adjudicated with its support convicted circular (chapter 34),
+          the pin route as the sharpest reduction, and the Krein carrier
+          as the first non-transcribing host — and at the bottom of every
+          route, machine-verified, sits the same single input: Weil
+          positivity, in one currency or another. The two open lemmata are
+          precisely stated (uniform Weyl-disk contraction of one explicit
+          canonical system; the sign-change positions of one explicit
+          ground eigenvector). The carrier&apos;s convergence is a finite
+          measurement of a lemma, not its proof. RH is neither proven nor
+          disproven here. All of it is sandbox: no claim moves until it is
+          promoted, and nothing here is a claim of progress toward the
+          Riemann Hypothesis.
         </p>
       </div>
     </section>
