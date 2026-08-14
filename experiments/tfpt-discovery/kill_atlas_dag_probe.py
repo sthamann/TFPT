@@ -113,8 +113,18 @@ existence on disk for every PROVEN/CERTIFIED-FINITE edge; ledger
 membership of every cited vN module; atlas well-formedness (one edge
 per killed route, declared verdict enum vocabulary, declared
 tau-screen and control-screen vocabulary); the presence of each atlas
-verdict enum in the named artifact on disk; and eleven load-bearing
-numbers re-derived or re-grepped here (N1..N11).
+verdict enum in the named artifact on disk; and thirteen load-bearing
+numbers re-derived or re-grepped here (N1..N13).
+
+A2.2 gates the TOKEN, not the number printed beside it, so the killing
+numbers needed their own ward: N12 exists because this audit first
+wrote the zero-window bootstrap ratio as 0.098 (the real reads are
+8.9e-02 at the lowest anchor and 8.0e-05 at T0; 0.098 occurs NOWHERE in
+that probe) and attributed the -4.083267 flip ward to the wrong probe.
+N13 exists because the research log reuses its numeral space across two
+series -- 45 low numerals belong to an earlier one -- so numeral-only
+citation is globally ambiguous, and even inside the RH campaign CCCLVII
+names two different rounds.
 
 Gate A2.2 -- "every atlas verdict enum literally occurs in its own
 cited artifact" -- is the sharpest gate in this file, and it bit on the
@@ -154,6 +164,7 @@ manifests, no Lean, no .md, no commit.  Stdlib only.  NO RH CLAIM.
 
 import math
 import os
+import re
 import sys
 from collections import namedtuple
 from fractions import Fraction
@@ -513,7 +524,9 @@ ATLAS = (
         "identity, hence COMB-BLIND: the conditioning gain can NEVER "
         "be the missing discriminating lemma.  And the sign-flipped "
         "counter-world (b_c -> -b_c, admissible in I(R)) is certified "
-        "NEGATIVE everywhere, worst certified upper bound -4.083267",
+        "NEGATIVE everywhere, worst certified upper bound -4.083267 "
+        "(that flip ward is WARD_FLIP_WORST in "
+        "signed_only_nogo_probe.py, not in this route's own probe)",
         "SEAT-CONDITIONING", "NOT-APPLICABLE", "WALL-BLIND",
         ("SCRAMBLE-ARITH", "EPSTEIN"),
         "experiments/tfpt-discovery/matrix_stage_conditioning_probe.py"),
@@ -1500,6 +1513,61 @@ def main():
           "(odd under the comb sign flip) AND ALIGNMENT-CARRYING "
           "(ordinates vs the sign pattern of Fhat); ten classes "
           "proven empty, five merely unexplored", ok)
+
+    # N12 the two killing numbers this audit got WRONG on first pass
+    # (a verdict enum can be right while the number beside it is
+    # invented; A2.2 gates the token, so the numbers need their own
+    # ward).  Both re-grepped from the artifact that owns them.
+    zwb = read("experiments/tfpt-discovery/zero_window_bootstrap_probe.py")
+    ok = ("ratio 8.9e-2" in zwb) and ("ratio 8.0e-5" in zwb)
+    ok &= ("0.098" not in zwb)      # the number this audit first wrote
+    ok &= ("WARD_FLIP_WORST" in nogo) and ("-4.083267" in nogo)
+    msc = read("experiments/tfpt-discovery/"
+               "matrix_stage_conditioning_probe.py")
+    ok &= ("-4.083267" not in msc)   # it is NOT in the route's probe
+    check("N12 killing-number provenance: the bootstrap ratio is "
+          "8.9e-02 (lowest anchor) / 8.0e-05 (T0) and 0.098 appears "
+          "NOWHERE in that probe; the -4.083267 flip ward belongs to "
+          "signed_only_nogo_probe.py, not to "
+          "matrix_stage_conditioning_probe.py", ok)
+
+    # N13 the note file carries a DUPLICATE Roman numeral.  Each note
+    # is ONE long line, so the numeral must be read from the heading
+    # prefix only -- matching anywhere in the line also catches every
+    # in-body cross-reference.
+    heads = re.findall(r"^# \d{4}-\d{2}-\d{2} \(([IVXLCDM]+)\)",
+                       notes, re.M)
+    dups = sorted({r for r in heads if heads.count(r) > 1})
+
+    def rom(s):
+        vals = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100,
+                "D": 500, "M": 1000}
+        tot = 0
+        for i, ch in enumerate(s):
+            v = vals[ch]
+            tot += -v if i + 1 < len(s) and v < vals[s[i + 1]] else v
+        return tot
+
+    # the log reuses the low numeral space across TWO series, so a
+    # global uniqueness claim is false; scope to the RH campaign
+    campaign = [r for r in heads if rom(r) >= 261]
+    cdups = sorted({r for r in campaign if campaign.count(r) > 1})
+    low = [r for r in dups if rom(r) < 261]
+    ok = (cdups == ["CCCLVII"]) and campaign.count("CCCLVII") == 2
+    ok &= len(low) >= 40          # the earlier series overlaps broadly
+    # this audit's own note exists exactly once (a "newest heading"
+    # pin would break on the very next research round -- the log grows)
+    ok &= heads.count("CCCLXXVI") == 1
+    check("N13 corpus defect carried, not smoothed: across %d note "
+          "headings the numeral space is REUSED -- %d low numerals "
+          "(I..CII) belong to an earlier series, so numeral-only "
+          "citation is globally ambiguous; WITHIN the RH campaign "
+          "(>= CCLXI, %d headings) the only duplicate is CCCLVII, "
+          "used twice (COFINAL.WEIL formal hardening AND "
+          "XI.RESOLVENT.NORMALIZATION)"
+          % (len(heads), len(low), len(campaign)),
+          ok, "campaign duplicates %s; newest heading %s"
+          % (cdups or "none", heads[0] if heads else "NONE"))
 
     # ==================================================== verdict
     section("VERDICT")

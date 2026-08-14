@@ -43,6 +43,137 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-14",
+    "dateLabel": "2026-08-14 · XCV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "editorial honesty correction, wording only — no number changed, no module touched, no status marker moved, no gate closed or narrowed, NO RH claim: the corpus-wide synthesis audit of note CCCLXXVI (discovery probe "
+      },
+      {
+        "k": "c",
+        "v": "kill_ atlas_ dag_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "41/41"
+      },
+      {
+        "k": "t",
+        "v": ", verdicts ATLAS-DAG-CONSISTENT "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " ONE-OPEN-EDGE-CONFIRMED "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " FOUR-CLASSICAL-CITATIONS-CARRIED, "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " only) reconstructed the RH implication chain as an explicit "
+      },
+      {
+        "k": "m",
+        "v": "11"
+      },
+      {
+        "k": "t",
+        "v": "-node, "
+      },
+      {
+        "k": "m",
+        "v": "10"
+      },
+      {
+        "k": "t",
+        "v": "-edge DAG and recorded that the corpus headline “the chain is reduced to exactly one unproven inequality” counts INEQUALITIES correctly, and counts correctly what the programme itself must supply, but drops four classical citations: the honest non-PROVEN list is E1/E2/E8/E4/E7/E9/E10 — two CERTIFIED-FINITE heads whose SCOPE is finite, the ONE OPEN inequality E4, and FOUR CITED-CLASSICAL edges (E8 the Suzuki/W1 identification, E7 density plus the equi-Lipschitz/Dini continuity modulus, E9 the faithful cap, E10 Weil's criterion) — (1) WHERE THE QUALIFIER WAS ALREADY CARRIED, hence untouched: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " states “theorem-grade modulo the named citations” at both extraction-chain sites and names Weil 1952, Bombieri 2000, Suzuki and Iwaniec–Kowalski Thm 5.12; the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.FORM. CONVERGENCE. THEOREM.01"
+      },
+      {
+        "k": "t",
+        "v": " types the W1 dictionary, Weil's explicit formula and criterion, the admissible BV class and the DENSITY leg as CITED and adds that (H_cof) is untouched and RH-hard; changelog XCIII carries the same pinning disclosure; the "
+      },
+      {
+        "k": "c",
+        "v": "v912"
+      },
+      {
+        "k": "t",
+        "v": " docstring says verbatim that edge 6 is NARROWED, not closed; and the website mirror repeats the qualifier in the prime-front feed and the papers index; (2) WHAT IS CORRECTED: the two article surfaces that stated the reduction without it — "
+      },
+      {
+        "k": "c",
+        "v": "articles/ 2026-08-11/ paper_ endform_ and_ inertia_ bridge_ en.md"
+      },
+      {
+        "k": "t",
+        "v": " (abstract, 8.6, 8.7, 9) and "
+      },
+      {
+        "k": "c",
+        "v": "articles/ 2026-08-11/ email_ anthropic_ draft_ en.md"
+      },
+      {
+        "k": "t",
+        "v": " (status paragraph and ask 3) — each gain ONE clause naming the four classical legs beside the one open inequality; (3) THE AUDIT'S FOUR OTHER FLAGGED ITEMS, CHECKED AGAINST EVERY LIVE SURFACE AND NOT LIVE, hence no edit: NOGO-COMPOSITE-VERIFIED occurs only as the stated provenance of the promoted NOGO-CORE-VERIFIED core, in a ledger row titled verbatim “A NO-GO / TYPING ROW AND EXPLICITLY NOT PROGRESS” and in a module docstring that says it is NOT progress toward a proof; WIRING-DEGENERATE and THETA-CONVENTIONAL occur only in the seam/compiler lane ("
+      },
+      {
+        "k": "c",
+        "v": "SEAM.STATE. WIRING. SELECTOR.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v911"
+      },
+      {
+        "k": "t",
+        "v": ") and are listed among no RH-chain route kills; the superseded matrix-stage conditioning exponents and the withdrawn Li–Keiper Vinogradov–Korobov envelope exist only in "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " and never entered a paper body, a ledger row or the public mirror; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-14",
     "dateLabel": "2026-08-14 · XCIV",
     "heading": [
       {
