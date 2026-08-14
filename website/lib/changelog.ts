@@ -42,6 +42,1439 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-14",
+    "dateLabel": "2026-08-14 · XCIV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "promotion round six — THE SIGNED-AND-ALIGNMENT LOCALIZATION, a NO-GO/TYPING module that is explicitly NOT progress, plus the mesh-order wording debt closed at its last two sites: ONE module ("
+      },
+      {
+        "k": "c",
+        "v": "v913_ signed_ alignment_ localization.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "24/24"
+      },
+      {
+        "k": "t",
+        "v": ", verdict NOGO-CORE-VERIFIED, "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "28 s; suite "
+      },
+      {
+        "k": "m",
+        "v": "905 \\to 906"
+      },
+      {
+        "k": "t",
+        "v": "; ledger "
+      },
+      {
+        "k": "m",
+        "v": "1056 \\to 1057"
+      },
+      {
+        "k": "t",
+        "v": " with the new row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.NOGO. SIGNED. ONLY.01"
+      },
+      {
+        "k": "t",
+        "v": " typed "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "no_go_typing"
+      },
+      {
+        "k": "t",
+        "v": "; discovery probe "
+      },
+      {
+        "k": "c",
+        "v": "signed_ only_ nogo_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", note CCCLXXIII, "
+      },
+      {
+        "k": "m",
+        "v": "87/87"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "49530809"
+      },
+      {
+        "k": "t",
+        "v": ", PROBE_SHA "
+      },
+      {
+        "k": "c",
+        "v": "d1c42a05"
+      },
+      {
+        "k": "t",
+        "v": ") — (1) ITEM ONE, THE MESH-ORDER DEBT (wording only, no number changes, no marker move): note CCCLXX had logged two sites skipped during the CCCLXIX correction pass; "
+      },
+      {
+        "k": "c",
+        "v": "v848_ extraction_ chain.py"
+      },
+      {
+        "k": "t",
+        "v": " stated the chain as “the canonical cofinal ladder” and “CONCLUSION: cofinal finite positivity (H) on the canonical ladder” in BOTH its docstring and the text it PRINTS at runtime, and "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " carried the same wording in its registry line — all of them now say cofinal IN THE MESH-REFINEMENT ORDER "
+      },
+      {
+        "k": "m",
+        "v": "D_j = 2^{-j}"
+      },
+      {
+        "k": "t",
+        "v": ", because at a FIXED mesh "
+      },
+      {
+        "k": "m",
+        "v": "D_0"
+      },
+      {
+        "k": "t",
+        "v": " the read is exactly cap-independent, so a ladder cofinal only in the window/cap parameter is eventually constant and converges to "
+      },
+      {
+        "k": "m",
+        "v": "W_C[K] + W_C[e_{D_0}]"
+      },
+      {
+        "k": "t",
+        "v": ", giving the FALSE FLOOR "
+      },
+      {
+        "k": "m",
+        "v": "Q_W \\ge -|W_C[e_{D_0}]|"
+      },
+      {
+        "k": "t",
+        "v": " (measured "
+      },
+      {
+        "k": "m",
+        "v": "-2.114\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "D_0 = 1/32"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "-2.128\\times10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "D_0 = 1/128"
+      },
+      {
+        "k": "t",
+        "v": "); where the module explains why cofinality suffices it now carries the one-line reason in its proven form — were the limit negative, the per-element convergence of "
+      },
+      {
+        "k": "c",
+        "v": "v912"
+      },
+      {
+        "k": "t",
+        "v": " would make the catch set "
+      },
+      {
+        "k": "m",
+        "v": "\\{j : Q_j(f) < 0\\}"
+      },
+      {
+        "k": "t",
+        "v": " a TAIL of the mesh order, and a cofinal set meets every tail; module re-run unchanged at "
+      },
+      {
+        "k": "m",
+        "v": "19/19"
+      },
+      {
+        "k": "t",
+        "v": " and re-mirrored byte-identically into "
+      },
+      {
+        "k": "c",
+        "v": "website/public/verification"
+      },
+      {
+        "k": "t",
+        "v": " by the build step; (2) ITEM TWO, WHAT THE NEW MODULE SAYS: any argument that closes the deployed budget inequality for the DEPLOYED BUDGET SHAPE must be (a) SIGNED — it must orient a quantity that is ODD under the comb sign flip — and (b) ALIGNMENT-CARRYING — it must relate the position of the prime atoms to the spectral directions of "
+      },
+      {
+        "k": "m",
+        "v": "K"
+      },
+      {
+        "k": "t",
+        "v": "; in particular it can be NEITHER a magnitude bound on "
+      },
+      {
+        "k": "m",
+        "v": "\\psi(x) - x"
+      },
+      {
+        "k": "t",
+        "v": " NOR a natural-grammar identity valid in every arithmetic world and therefore comb-blind; (3) THE PROMOTED CORE, exact and self-contained: the six kernel identities in exact arithmetic ("
+      },
+      {
+        "k": "m",
+        "v": "\\int K_D = 0"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\|K_D\\|_\\infty = 1"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\|K_D\\|_1 = 4D/3"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "D^{-1}\\int K_D^2 = 2/3"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\int K_D e^{-t/2} = -(D/8)T_D^2"
+      },
+      {
+        "k": "t",
+        "v": "; and the load-bearing "
+      },
+      {
+        "k": "m",
+        "v": "\\|K_D'\\|_1 = 4"
+      },
+      {
+        "k": "t",
+        "v": " INDEPENDENT of "
+      },
+      {
+        "k": "m",
+        "v": "D"
+      },
+      {
+        "k": "t",
+        "v": " — the conversion constant of a magnitude hypothesis does not get cheap as the mesh refines), the geometric supply recomputed by TWO independent routes (closed form vs. direct quadrature, deviation "
+      },
+      {
+        "k": "m",
+        "v": "1.6\\times10^{-50}"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "m",
+        "v": "2.5\\times10^{-49}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "B = -1.2648057425013541016"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "h = 184"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "-1.3147508968858830811"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "h = 388"
+      },
+      {
+        "k": "t",
+        "v": ", negative and "
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": "), the Littlewood floor "
+      },
+      {
+        "k": "m",
+        "v": "4\\log\\log\\log N_h"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "2.1654551"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "N = 263"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "4.1231791"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "N = 14634429"
+      },
+      {
+        "k": "t",
+        "v": ") against a slack that shrinks with depth — ratio "
+      },
+      {
+        "k": "m",
+        "v": "214.7"
+      },
+      {
+        "k": "t",
+        "v": " on the module's OWN conservative slack and "
+      },
+      {
+        "k": "m",
+        "v": "1527.1"
+      },
+      {
+        "k": "t",
+        "v": " on the deployed one, so the ENTIRE MAGNITUDE CLASS IS EMPTY; the provable neutrality of Selberg's symmetry formula ("
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda = \\mu * \\log"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "\\mu * \\log^2 = \\Lambda\\!\\cdot\\!\\log + \\Lambda * \\Lambda"
+      },
+      {
+        "k": "t",
+        "v": " are formal identities in the free module on "
+      },
+      {
+        "k": "m",
+        "v": "\\{\\log p\\}"
+      },
+      {
+        "k": "t",
+        "v": ", information gain exactly "
+      },
+      {
+        "k": "m",
+        "v": "1.000"
+      },
+      {
+        "k": "t",
+        "v": "); the exact three-term split with its congruence invariance and comb-flip parity (all three terms invariant under EVERY "
+      },
+      {
+        "k": "m",
+        "v": "\\operatorname{diag}(1, M)"
+      },
+      {
+        "k": "t",
+        "v": ", outer terms EVEN and the carrying term ODD, the "
+      },
+      {
+        "k": "m",
+        "v": "F_4"
+      },
+      {
+        "k": "t",
+        "v": " kernel "
+      },
+      {
+        "k": "m",
+        "v": "A_2^{\\mathsf T}B^{-1}A_2"
+      },
+      {
+        "k": "t",
+        "v": " itself a congruence invariant — so no unsigned, flip-invariant hull can bound the carrier below); and the Beurling–Nyman/Baez-Duarte target exactly in "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Q}"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}(G_N) \\le (\\log 2\\pi - \\gamma)/N"
+      },
+      {
+        "k": "t",
+        "v": ": cap "
+      },
+      {
+        "k": "m",
+        "v": "0.420220"
+      },
+      {
+        "k": "t",
+        "v": " against the needed "
+      },
+      {
+        "k": "m",
+        "v": "c_B = 0.5523"
+      },
+      {
+        "k": "t",
+        "v": ", so there is NO "
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": "-uniform Gram floor and the deployed hypothesis is FALSE for "
+      },
+      {
+        "k": "m",
+        "v": "N \\ge 3"
+      },
+      {
+        "k": "t",
+        "v": ", plus the explicit non-implying family "
+      },
+      {
+        "k": "m",
+        "v": "\\widetilde G = AA^{\\mathsf T} + (4/5)^2 I"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\widetilde d^{\\,2} \\ge 1/2"
+      },
+      {
+        "k": "t",
+        "v": " forever); (4) THE BOUNDARY, RESPECTED EXACTLY: the deployed matrix-stage reads (S3.5–S3.12, S4, S5) STAY in "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " because they inherit the float64 entry-slack premise and the cited ladder; PINNING DISCLOSURE — PINNED here are the identities, the split algebra, Selberg neutrality, the Beurling–Nyman witnesses, the supply recomputation, the module's own prime-power sieve, the frame rebuild with "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " PREDICTED ("
+      },
+      {
+        "k": "m",
+        "v": "184"
+      },
+      {
+        "k": "t",
+        "v": ".."
+      },
+      {
+        "k": "m",
+        "v": "12632"
+      },
+      {
+        "k": "t",
+        "v": "), the square-root-barrier placement and the frozen probe SPEC-SHA reproduced BEFORE any evaluation; CITED and NOT pinned are the deployed ladder and its certified reads (X1), the deployed entry slack (X2), the classical constants and Littlewood's "
+      },
+      {
+        "k": "m",
+        "v": "\\Omega"
+      },
+      {
+        "k": "t",
+        "v": "-theorem itself (X3), the float64 entry slack of the wall generators (X4), the CCCLXVIII demand sums (X5), the CCCLXII/CCCLXIII chain measurements and deployed constants (X6) and the "
+      },
+      {
+        "k": "m",
+        "v": "n_0"
+      },
+      {
+        "k": "t",
+        "v": "-normalised margin exponents (X7); (5) SCOPE, STATED IN THE SAME BREATH: TEN classes are proven empty for this budget shape (E1–E10), FIVE are merely unexplored with NO emptiness claimed (U1–U5) and FIVE clauses are named open (O1–O5, among them that nothing is said against arguments legitimately consuming zero positions and that the reverse implication rests on four unestablished premises); the theorem is FINITE-RUNG ("
+      },
+      {
+        "k": "m",
+        "v": "h = 184/388/839"
+      },
+      {
+        "k": "t",
+        "v": " with the ladder to "
+      },
+      {
+        "k": "m",
+        "v": "h = 12632"
+      },
+      {
+        "k": "t",
+        "v": ") and makes NO all-"
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " claim; it does NOT say that the Riemann Hypothesis is unprovable, that the wall route fails, or that no proof exists; (6) COUNTER-EVIDENCE CARRIED, NOT SMOOTHED: NO-WITNESS STANDS — the certified reads are POSITIVE at all NINE depths ("
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " negatives, "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " straddles) with deepest certified read "
+      },
+      {
+        "k": "m",
+        "v": "2.79579794131272506\\times10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "h = 12632"
+      },
+      {
+        "k": "t",
+        "v": "; the "
+      },
+      {
+        "k": "m",
+        "v": "n_0"
+      },
+      {
+        "k": "t",
+        "v": "-normalised decay FLATTENS with depth ("
+      },
+      {
+        "k": "m",
+        "v": "-3.21092511"
+      },
+      {
+        "k": "t",
+        "v": " globally against "
+      },
+      {
+        "k": "m",
+        "v": "-2.67942161"
+      },
+      {
+        "k": "t",
+        "v": " on the deepest step "
+      },
+      {
+        "k": "m",
+        "v": "5746 \\to 12632"
+      },
+      {
+        "k": "t",
+        "v": ") and the re-derived "
+      },
+      {
+        "k": "m",
+        "v": "s/D^2"
+      },
+      {
+        "k": "t",
+        "v": " step "
+      },
+      {
+        "k": "m",
+        "v": "1393 \\to 2015"
+      },
+      {
+        "k": "t",
+        "v": " is POSITIVE ("
+      },
+      {
+        "k": "m",
+        "v": "+0.50302892"
+      },
+      {
+        "k": "t",
+        "v": "), so the normalised drift is NOT monotone, and no re-derivable exponent comes near the frozen collapse bar "
+      },
+      {
+        "k": "m",
+        "v": "-8.0"
+      },
+      {
+        "k": "t",
+        "v": "; a no-go about the TYPE of the missing input is not evidence about its EXISTENCE; (7) SURFACES: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " gains the residual-obstruction subsection “The remaining obstruction is signed and alignment-carrying (localization)” with the probe's own S9 wording, Paper 3 a new audit card with the "
+      },
+      {
+        "k": "c",
+        "v": "\\veri"
+      },
+      {
+        "k": "t",
+        "v": " citation, the end-form article and the Anthropic email draft one honest paragraph each, and the website mirror is synced; the row supplies no positivity, no interval and no certificate, closes no gate, narrows no gate and moves NO marker anywhere — it must not be counted as progress nor as evidence for or against the Riemann Hypothesis; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-13",
+    "dateLabel": "2026-08-13 · XCIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "promotion round five — THE FORM-CONVERGENCE THEOREM: the extraction chain's per-element convergence premise stops being a measurement and becomes an unconditional theorem, and a false cited premise it uncovered is corrected across the corpus: ONE module ("
+      },
+      {
+        "k": "c",
+        "v": "v912_ form_ convergence_ theorem.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "35/35"
+      },
+      {
+        "k": "t",
+        "v": ", verdict FORMCONV-PROVEN, "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "12 s; suite "
+      },
+      {
+        "k": "m",
+        "v": "904 \\to 905"
+      },
+      {
+        "k": "t",
+        "v": "; ledger "
+      },
+      {
+        "k": "m",
+        "v": "1055 \\to 1056"
+      },
+      {
+        "k": "t",
+        "v": " with the new row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.FORM. CONVERGENCE. THEOREM.01"
+      },
+      {
+        "k": "t",
+        "v": "; discovery probe "
+      },
+      {
+        "k": "c",
+        "v": "form_ convergence_ theorem_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", note CCCLXV, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "d911226f"
+      },
+      {
+        "k": "t",
+        "v": ", promoted VERBATIM with no downscoping) — (1) THE THEOREM: for "
+      },
+      {
+        "k": "m",
+        "v": "f"
+      },
+      {
+        "k": "t",
+        "v": " real, supported in the deployed window and AFFINE ON EVERY GRID CELL, the finite Galerkin form converges to the Weil functional, "
+      },
+      {
+        "k": "m",
+        "v": "Q_D(f) \\to Q_W(f)"
+      },
+      {
+        "k": "t",
+        "v": ", UNCONDITIONALLY and with the explicit envelope "
+      },
+      {
+        "k": "m",
+        "v": "|Q_D(f) - Q_W(f)| \\le D^2[(8\\sinh(B/2) + \\mathfrak{m}(B))A_2 + \\Theta_0 A_0 + (A_0 + A_2)(\\log(1/D) + \\log B + 4) + 2A_0 e^{-B/2}(1/B + 2) + A_1(1 + D)] + (1 + D)(D^3/12)\\kappa_3"
+      },
+      {
+        "k": "t",
+        "v": ", i.e. rate "
+      },
+      {
+        "k": "m",
+        "v": "O(D^2\\log(1/D)) = O(2^{-2j}j)"
+      },
+      {
+        "k": "t",
+        "v": ", with "
+      },
+      {
+        "k": "m",
+        "v": "\\Theta_0 = 3\\log 2 + \\pi/2 + \\gamma + \\log\\pi = 5.372183419225665"
+      },
+      {
+        "k": "t",
+        "v": " and, for continuous "
+      },
+      {
+        "k": "m",
+        "v": "f"
+      },
+      {
+        "k": "t",
+        "v": ", log coefficient exactly "
+      },
+      {
+        "k": "m",
+        "v": "7/24"
+      },
+      {
+        "k": "t",
+        "v": " (sup "
+      },
+      {
+        "k": "m",
+        "v": "5/24"
+      },
+      {
+        "k": "t",
+        "v": ") — replacing the corpus typing MEASURED (rates "
+      },
+      {
+        "k": "m",
+        "v": "-1.58"
+      },
+      {
+        "k": "t",
+        "v": ".."
+      },
+      {
+        "k": "m",
+        "v": "-1.84"
+      },
+      {
+        "k": "t",
+        "v": " per level, "
+      },
+      {
+        "k": "c",
+        "v": "v848"
+      },
+      {
+        "k": "t",
+        "v": ") that meta-audit CCCXXXVII Q-2 had flagged as a measured premise read as settled; (2) THE MECHANISM, three exact steps: the deployed lag vector IS the capped Weil functional on the even tent ("
+      },
+      {
+        "k": "m",
+        "v": "c_d = W_C[S_{dD,D}]"
+      },
+      {
+        "k": "t",
+        "v": "), so the finite form equals "
+      },
+      {
+        "k": "m",
+        "v": "W_C[\\widetilde{K}_D]"
+      },
+      {
+        "k": "t",
+        "v": " EXACTLY on the piecewise-linear interpolant of "
+      },
+      {
+        "k": "m",
+        "v": "k_d = D a_d"
+      },
+      {
+        "k": "t",
+        "v": "; the EXACT DEFECT LEMMA "
+      },
+      {
+        "k": "m",
+        "v": "k_d - K(dD) = -(D^2/12)G(dD)"
+      },
+      {
+        "k": "t",
+        "v": " holds for every lag because "
+      },
+      {
+        "k": "m",
+        "v": "u \\mapsto f(u)f(u + dD)"
+      },
+      {
+        "k": "t",
+        "v": " is QUADRATIC on each cell and the midpoint error of a quadratic is exactly "
+      },
+      {
+        "k": "m",
+        "v": "-(D^3/24)q''"
+      },
+      {
+        "k": "t",
+        "v": " — ZERO deviation in exact rationals over "
+      },
+      {
+        "k": "m",
+        "v": "1474"
+      },
+      {
+        "k": "t",
+        "v": " lag identities and "
+      },
+      {
+        "k": "m",
+        "v": "780"
+      },
+      {
+        "k": "t",
+        "v": " strictly interior points; and the faithful cap "
+      },
+      {
+        "k": "m",
+        "v": "C \\ge b_K + D"
+      },
+      {
+        "k": "t",
+        "v": " turns the error into "
+      },
+      {
+        "k": "m",
+        "v": "W_C"
+      },
+      {
+        "k": "t",
+        "v": " applied to ONE explicit function, bounded layer by layer with elementary majorants; the interpolation constant is the interior sup of "
+      },
+      {
+        "k": "m",
+        "v": "|K''|"
+      },
+      {
+        "k": "t",
+        "v": ", NOT "
+      },
+      {
+        "k": "m",
+        "v": "\\|f'\\|_2^2"
+      },
+      {
+        "k": "t",
+        "v": " (equal for continuous "
+      },
+      {
+        "k": "m",
+        "v": "f"
+      },
+      {
+        "k": "t",
+        "v": ", different for jump elements: E09 "
+      },
+      {
+        "k": "m",
+        "v": "3 > 2"
+      },
+      {
+        "k": "t",
+        "v": ", E10 "
+      },
+      {
+        "k": "m",
+        "v": "5/3 < 2"
+      },
+      {
+        "k": "t",
+        "v": "); sharpness is measured against a CLOSED-FORM leading term (ratio "
+      },
+      {
+        "k": "m",
+        "v": "0.575"
+      },
+      {
+        "k": "t",
+        "v": ".."
+      },
+      {
+        "k": "m",
+        "v": "1.066"
+      },
+      {
+        "k": "t",
+        "v": ", drifting to "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " through "
+      },
+      {
+        "k": "m",
+        "v": "j = 18"
+      },
+      {
+        "k": "t",
+        "v": " — the law is genuine, not a loose envelope), and uniformity (V) holds on every TWO-SIDED support window, not on an "
+      },
+      {
+        "k": "m",
+        "v": "L^2"
+      },
+      {
+        "k": "t",
+        "v": " ball; (3) THE CORRECTED PREMISE (a correction of a wrong cited statement, NOT a downgrade of a result): the chain's cited “"
+      },
+      {
+        "k": "m",
+        "v": "C^0"
+      },
+      {
+        "k": "t",
+        "v": "-continuity of "
+      },
+      {
+        "k": "m",
+        "v": "Q_W"
+      },
+      {
+        "k": "t",
+        "v": " at fixed support” is FALSE in the pure sup norm — must-fire control C5 exhibits the explicit even Lipschitz family "
+      },
+      {
+        "k": "m",
+        "v": "e_n(w) = (1/n)\\min(1, w/e^{-n^2})(1 - w/2)_+"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "e_n(0) = 0"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "\\|e_n\\|_\\infty = 1/n \\to 0"
+      },
+      {
+        "k": "t",
+        "v": " while "
+      },
+      {
+        "k": "m",
+        "v": "|A[e_n]| = 2.57, 4.28, 6.19, 8.14, 10.11, 12.09"
+      },
+      {
+        "k": "t",
+        "v": " grows linearly — and the true hypothesis is uniform convergence PLUS an equi-Lipschitz (Dini) condition at the origin, which the admissible even compactly supported BV class supplies automatically (T5.2 verifies the corrected modulus of "
+      },
+      {
+        "k": "m",
+        "v": "W_C"
+      },
+      {
+        "k": "t",
+        "v": " on a declared 12-perturbation battery, worst true/bound "
+      },
+      {
+        "k": "m",
+        "v": "0.0226"
+      },
+      {
+        "k": "t",
+        "v": "); the false premise is corrected wherever it was cited: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": ", the "
+      },
+      {
+        "k": "c",
+        "v": "v848"
+      },
+      {
+        "k": "t",
+        "v": " module docstring and its website mirror, "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": ", the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.EXTRACTION.CHAIN.01"
+      },
+      {
+        "k": "t",
+        "v": " and the Lean prose of "
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/CofinalWeil.lean"
+      },
+      {
+        "k": "t",
+        "v": "; (4) CLASSICAL INPUTS, all 11 typed (T4.3): NO zero-free region, NO PNT, NO zeta zeros, NO fit — the only cited arithmetic input is Rosser–Schoenfeld 1962 Thm 12, "
+      },
+      {
+        "k": "m",
+        "v": "\\psi(x) < 1.03883x"
+      },
+      {
+        "k": "t",
+        "v": " for all "
+      },
+      {
+        "k": "m",
+        "v": "x > 0"
+      },
+      {
+        "k": "t",
+        "v": ", consumed ONLY for the support-uniform constant and independently sieve-verified in-run to "
+      },
+      {
+        "k": "m",
+        "v": "10^7"
+      },
+      {
+        "k": "t",
+        "v": " (worst ratio "
+      },
+      {
+        "k": "m",
+        "v": "1.038821"
+      },
+      {
+        "k": "t",
+        "v": "); PINNING DISCLOSURE (the CCCXXXVI lesson applied a priori): the W1 measure dictionary, Weil's explicit formula and criterion, the admissible class with its DENSITY leg, the all-"
+      },
+      {
+        "k": "m",
+        "v": "x"
+      },
+      {
+        "k": "t",
+        "v": " Rosser–Schoenfeld statement and the UNIVERSAL QUANTIFIER itself are CITED, not pinned by these gates; (5) LEAN (DELTA-A, honestly partial): the new kernel-checked module "
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/CofinalEnvelope.lean"
+      },
+      {
+        "k": "t",
+        "v": " states the envelope premise as a named structure "
+      },
+      {
+        "k": "c",
+        "v": "FormEnvelope"
+      },
+      {
+        "k": "t",
+        "v": " (per-element constants, a DELTA-B window level, the explicit bound), DERIVES the convergence hypothesis from it ("
+      },
+      {
+        "k": "c",
+        "v": "tendsto_of_formEnvelope"
+      },
+      {
+        "k": "t",
+        "v": "), and restates "
+      },
+      {
+        "k": "c",
+        "v": "cofinal_weil"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "cofinal_weil_for_fixed_idx"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "cofinal_weil_predefined"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "c",
+        "v": "hconv"
+      },
+      {
+        "k": "t",
+        "v": " REPLACED by the instantiated envelope — plus a non-vacuity lock proving the envelope STRICTLY STRONGER than bare "
+      },
+      {
+        "k": "c",
+        "v": "Tendsto"
+      },
+      {
+        "k": "t",
+        "v": " and an inhabited witness with nonzero error at the envelope rate; axioms "
+      },
+      {
+        "k": "c",
+        "v": "propext"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "Classical.choice"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "Quot.sound"
+      },
+      {
+        "k": "t",
+        "v": " only, no "
+      },
+      {
+        "k": "c",
+        "v": "sorry"
+      },
+      {
+        "k": "t",
+        "v": ", no "
+      },
+      {
+        "k": "c",
+        "v": "native_decide"
+      },
+      {
+        "k": "t",
+        "v": "; the envelope itself is NOT discharged inside the kernel, so DELTA-A is REDUCED, not closed; DELTA-B (stated, not a gap): (H-grid), (H-cap) and (H-align) hold for fixed "
+      },
+      {
+        "k": "m",
+        "v": "f"
+      },
+      {
+        "k": "t",
+        "v": " and all large "
+      },
+      {
+        "k": "m",
+        "v": "j"
+      },
+      {
+        "k": "t",
+        "v": ", which is exactly what "
+      },
+      {
+        "k": "c",
+        "v": "Tendsto atTop"
+      },
+      {
+        "k": "t",
+        "v": " needs; papers ("
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " new audit card, "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " the extraction-chain premise corrected and the theorem cited, "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " the contract's cited hypothesis corrected) and the website mirror synced; the chain's genuinely open item is UNCHANGED — (H_cof), the PREDEFINED cofinal positivity inequality, is untouched and RH-hard; no marker moves; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-13",
+    "dateLabel": "2026-08-13 · XCII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "cofinal-index noninterference hardening — the PREDEFINED requirement is moved from an overclaim in prose into an explicit, honestly external Lean contract; no marker move, no RH claim: "
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/CofinalPredefinition.lean"
+      },
+      {
+        "k": "t",
+        "v": " adds (1) "
+      },
+      {
+        "k": "c",
+        "v": "cofinal_weil_for_fixed_idx"
+      },
+      {
+        "k": "t",
+        "v": ", the extraction implication for an arbitrary explicit index with "
+      },
+      {
+        "k": "c",
+        "v": "StrictMono"
+      },
+      {
+        "k": "t",
+        "v": ", PSD and form-convergence hypotheses — binder order prevents the theorem body from selecting the index but does not prove caller provenance; (2) the negative theorem "
+      },
+      {
+        "k": "c",
+        "v": "old_api_accepts_sign_mined_idx"
+      },
+      {
+        "k": "t",
+        "v": ", exhibiting that the former mathematical payload accepts a selector branching on measured signs; (3) "
+      },
+      {
+        "k": "c",
+        "v": "signMinedIndex_not_familyNoninterfering"
+      },
+      {
+        "k": "t",
+        "v": ", which rejects that exposed selector under extensional family-noninterference; (4) the hardened "
+      },
+      {
+        "k": "c",
+        "v": "PredefinedCofinalHypothesis"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "cofinal_weil_predefined"
+      },
+      {
+        "k": "t",
+        "v": " API, requiring an explicit abstract "
+      },
+      {
+        "k": "c",
+        "v": "NoninterferenceContract.Predefined(A,idx)"
+      },
+      {
+        "k": "t",
+        "v": " certificate; and (5) the constantization pair, proving the exact residual limitation — after construction, a selected value can be represented by a constant selector with the same output, so extensional dependent types cannot recover algorithmic history. The concrete source boundary excluding the matrix family and its sign outputs therefore remains the named external audit premise unless the construction language or an equivalent effect/provenance system is formalized. The old "
+      },
+      {
+        "k": "c",
+        "v": "CofinalWeil.lean"
+      },
+      {
+        "k": "t",
+        "v": " core is relabelled as mathematical payload only; dependent Lean-module comments, audit locks, the Lean/verification READMEs, "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": ", Paper 3's audit card, the end-form article, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "FORM.PRIME.COFINAL.WEIL.01"
+      },
+      {
+        "k": "t",
+        "v": ", registry text and the public prime-front feed are synchronized. No verification result, status marker, finite positivity claim or RH claim changes."
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-13",
     "dateLabel": "2026-08-13 · XCI",
     "heading": [
@@ -18143,7 +19576,7 @@ export const CHANGELOG: ChangelogEntry[] = [
           "c": [
             {
               "k": "t",
-              "v": "Lean (1 module promoted)."
+              "v": "Lean (1 module promoted; wording corrected by 2026-08-13 XCII)."
             }
           ]
         },
@@ -18237,7 +19670,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": " — the PRE-FIXED strictly monotone PSD ladder, preregistration-shaped (the ladder is DATA, never mined from measured signs); "
+          "v": " stores the MATHEMATICAL CORE — a strictly monotone selected ladder with PSD rungs; it does not by field order enforce that the ladder was predefined or sign-independent. "
         },
         {
           "k": "c",
@@ -18333,7 +19766,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": " consumes EXACTLY "
+          "v": " consumes EXACTLY the mathematical "
         },
         {
           "k": "m",
@@ -18341,7 +19774,7 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": "; "
+          "v": " payload; "
         },
         {
           "k": "c",
@@ -18349,7 +19782,15 @@ export const CHANGELOG: ChangelogEntry[] = [
         },
         {
           "k": "t",
-          "v": " implies it and the converse fails kernel-checked — from this round an over-strong SUFFICIENT lemma, no longer the named wall. "
+          "v": " implies it and the converse fails kernel-checked — from this round an over-strong SUFFICIENT lemma, no longer the named wall. PREDEFINED/noninterference is the separate explicit external contract added by "
+        },
+        {
+          "k": "c",
+          "v": "CofinalPredefinition.lean"
+        },
+        {
+          "k": "t",
+          "v": " in XCII. "
         },
         {
           "k": "m",

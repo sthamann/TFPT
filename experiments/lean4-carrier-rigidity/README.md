@@ -173,6 +173,77 @@ Boundary Polarization*).
 > normalisation, remain the axiom-side inputs.
 > Formally verified: `TFPT.Carrier.AnchorLadder.rankgap_uniqueness`.
 
+> **Cofinal-index noninterference hardening (added 2026-08-13).**
+> `TfptCarrier/CofinalPredefinition.lean` separates the mathematical
+> extraction theorem from the provenance premise that had previously
+> appeared only in prose:
+>
+> * `cofinal_weil_for_fixed_idx` proves the extraction implication for an
+>   arbitrary explicit `idx` with `StrictMono`, PSD, and form-convergence
+>   hypotheses. Binder order prevents the theorem body from choosing
+>   `idx`; it does **not** prove how the caller computed it.
+> * `old_api_accepts_sign_mined_idx` is a kernel-checked negative example:
+>   the former mathematical payload accepts a selector that branches on
+>   measured signs.
+> * `signMinedIndex_not_familyNoninterfering` rejects that exposed
+>   selector under the natural extensional noninterference predicate.
+> * `PredefinedCofinalHypothesis` and `cofinal_weil_predefined` require an
+>   explicit `NoninterferenceContract.Predefined A idx` certificate.
+> * `constantizedSelector_familyNoninterfering` proves the residual
+>   limitation: after construction, any selected value can be presented
+>   by a constant selector with the same output. Lean therefore cannot
+>   recover algorithmic provenance from the extensional value `idx`.
+>
+> Exact residual external premise: a concrete application must define
+> and audit the `Predefined` relation/source boundary so it excludes
+> `A` and its sign outputs. Full kernel enforcement of historical
+> information flow would require formalizing the construction language
+> (or an equivalent trusted effect/provenance system). No RH statement
+> is made.
+
+> **The convergence hypothesis becomes the instantiated envelope
+> (`CofinalEnvelope.lean`, added 2026-08-13).** `cofinal_weil` consumed
+> `hconv : ∀ v, Tendsto (fun m => ladderForm A sample m v) atTop
+> (𝓝 (QW v))` as an opaque assumption. That premise is now a theorem on
+> the paper side — per-element Galerkin form convergence at the explicit
+> rate `O(D² log(1/D)) = O(2^{-2j} j)`, machine-checked in
+> `verification/v912_form_convergence_theorem.py` (35/35,
+> `FORMCONV-PROVEN`) — and this module carries the change into Lean:
+>
+> * `formErrorEnvelope` is the explicit level-`j` envelope
+>   `(c_log · j + c_const) · D_j²` with `D_j = 2^{-j}`, and
+>   `formErrorEnvelope_tendsto_zero` proves it vanishes (`n · rⁿ → 0`).
+> * `mesh j = 2^{-j}` also fixes the **order** meant by "cofinal"
+>   throughout: `(H_cof)` demands a ladder cofinal in the
+>   *mesh-refinement* order in which this envelope holds, never one
+>   cofinal only in the window/cap parameter. At fixed mesh `D₀` the
+>   deployed read is already exactly cap-independent, so a
+>   window-only-cofinal ladder is eventually constant and converges to
+>   `QW + W_C[e_{D₀}]`, and positivity along it yields only
+>   `QW ≥ −|W_C[e_{D₀}]|`.
+> * `FormEnvelope` is the premise as a named structure: per-element
+>   constants, a per-element window level (the DELTA-B threshold for
+>   (H-grid)/(H-cap)/(H-align)), and the explicit error bound beyond it.
+> * `tendsto_of_formEnvelope` **derives** `hconv` from the envelope, so
+>   `cofinal_weil_of_envelope`, `cofinal_weil_for_fixed_idx_of_envelope`
+>   and `cofinal_weil_predefined_of_envelope` state the extraction
+>   theorem with the convergence hypothesis replaced by the instantiated
+>   envelope.
+> * `envelope_strictly_stronger_than_convergence` is the non-vacuity
+>   lock: the convergent ladder `q m = 1/(m+1)` admits no envelope of
+>   this shape, so the premise is a strict strengthening of `Tendsto`,
+>   not a renaming of it; `witnessEnvelope`/`witness_cofinal_weil`
+>   supply an inhabited instance with genuinely nonzero error at the
+>   envelope rate and run the full assembly end to end.
+>
+> Axiom footprint `[propext, Classical.choice, Quot.sound]` only, no
+> `sorry`, no `native_decide`. **Honest boundary:** the envelope itself
+> is *not* discharged inside the kernel — it is a hypothesis of every
+> theorem in the module, proved on paper plus the v912 gates. The
+> formalisation gap is reduced (the assumption now has an explicit,
+> checkable shape), not closed. The cofinal positivity hypothesis
+> `(H_cof)` is untouched. No RH statement is made.
+
 ## Why this is interesting
 
 * The carrier polynomial `6 Y² − Y − 1 = 0` is in earlier TFPT drafts
@@ -243,6 +314,71 @@ Build completed successfully (1231 jobs).
 plus the `#eval` outputs from `Sanity.lean` and the axiom listings
 from `AxiomCheck.lean`. Any `sorry`, `admit`, kernel error, or
 non-standard axiom dependency will be flagged.
+
+### 4. Rebuild the generated wall-ladder rungs (high memory)
+
+`TfptCarrier/WallLadder/RungKz*.lean` are **generated** certificate
+modules: each one drives a single kernel `decide` over a packed
+Cholesky witness, so each is a multi-GB-to-multi-tens-of-GB elaboration
+in its own right. `lakefile.lean` therefore pins a deliberately low
+default per-process ceiling (`leanMemoryMb = 12288`, handed to Lean as
+`-M`): with an uncapped Lake fan-out on a many-core machine, a plain
+`lake build` would otherwise start every rung at once and exhaust
+physical RAM. The default is a safety valve, not a build recipe — the
+rungs **fail at 12 GB by design**, which is why a fresh clone cannot
+pass `scripts/audit.sh` until the rung `.olean` files exist.
+
+Build them with a raised ceiling and bounded concurrency:
+
+```bash
+./scripts/build_wall_ladder.sh                       # all missing rungs
+BATCH=2 MEM_MB=163840 ./scripts/build_wall_ladder.sh # 2 at a time, 160 GB each
+./scripts/build_wall_ladder.sh RungKz25 RungKz59     # named rungs only
+```
+
+`BATCH` bounds how many rungs are handed to one `lake build`
+invocation (Lake 5 has no `-j`, so the number of targets *is* the
+concurrency once the rest of the library is built), `MEM_MB` sets the
+per-process `-M` ceiling, and `ONLY_MISSING=1` (the default) skips
+rungs whose `.olean` is already present, so an interrupted run can
+simply be restarted. Each batch reports its wall time and the peak
+summed RSS of all live `lean` processes, so the cost is measured
+rather than guessed.
+
+Measured cost on this repository's 18 rungs (512 GB Apple-silicon
+machine, Lean v4.29.1). Both time and memory grow steeply with the size
+of the generated rung source — time roughly as its square, memory
+faster than linearly:
+
+| rung | source | wall time | peak RSS |
+| --- | --- | --- | --- |
+| `RungKz12` | 0.12 MB | 189 s | — |
+| `RungKz20` | 0.15 MB | 253 s | ≤ 46 GB (pair peak 92.8 GB) |
+| `RungKz14` | 0.17 MB | 363 s | > 48 GB |
+| `RungKz32` | 0.32 MB | 1011 s | ~93 GB (pair peak 185.1 GB) |
+| `RungKz39`+`RungKz46` | 0.37 + 0.39 MB | 1598 s | 360.3 GB for the pair |
+| `RungKz27` | 0.41 MB | 1700 s | 200.4 GB, single process |
+
+`RungKz14` is the cautionary entry: at a 48 GB ceiling it does not warn,
+it **fails** after 987 s with `(kernel) excessive memory consumption
+detected`. Budget accordingly — `BATCH=2` at `MEM_MB=163840` is
+comfortable up to ~0.35 MB rungs on 512 GB, and from ~0.4 MB upward one
+rung alone wants 200 GB or more, so use `BATCH=1` with a
+several-hundred-GB ceiling there. Do not raise `BATCH` blindly: an
+uncapped fan-out on this project has already exhausted 512 GB of RAM and
+tripped the WindowServer watchdog, which is why the low default ceiling
+exists. On a machine that cannot host the largest rungs, build what fits
+and report the rungs you could not build; a partial rung set means
+`scripts/audit.sh` check (1) is *not* satisfied.
+
+`-M` is passed via `weakLeanArgs`, i.e. it is not part of Lake's build
+trace: an `.olean` produced with a raised ceiling is accepted unchanged
+by a later default-ceiling `lake build`, which is what makes this a
+legitimate audit path rather than a different build. One caveat the
+script handles for you: Lake caches the *elaborated* lakefile, so
+`-K leanMemoryMb=…` is silently ignored unless the invocation also
+passes `--reconfigure` — without it a build can fail at a ceiling it
+never requested.
 
 ## Map to TFPT Paper 2
 

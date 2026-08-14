@@ -5411,7 +5411,8 @@ unrenormalized small-$n$ completed-cell transports (the named
 next object is a renormalized cell map absorbing the $n = 2$
 fluctuation).  The extraction side is now separated and complete
 (\texttt{PRIME.EXTRACTION.CHAIN.01} below): the wall is exactly
-hypothesis (H) on the cofinal ladder.  Demand, kill and close
+hypothesis (H) on a ladder cofinal in the mesh-refinement
+order.  Demand, kill and close
 conditions unchanged; still [O].]
 \emph{[2026-08-07 round-31 closing note (the invariance
 atlas):} the wall this registration names is now proven
@@ -5594,7 +5595,8 @@ statement.\par}
 \textsc{extraction-chain-complete}; hypothesis (H) is \emph{never
 evaluated} --- no positivity statement about any actual tower
 form or the actual Weil functional is made).  \emph{Measured:} on
-the canonical cofinal $(D, X)$ ladder ($D_j = 2^{-j}$,
+the canonical $(D, X)$ ladder, cofinal in the
+\emph{mesh-refinement} order ($D_j = 2^{-j}$,
 $j = 4..11$, $68$--$8704$ lags, the full pinned prime-power
 table) every element of the canonical dense family identifies its
 independently computed Weil value $Q_W = \mathrm{POLE} +
@@ -5614,7 +5616,8 @@ wall content under (H), refused by design.  Both controls fire
 (the density-only wrong limit stalls at ratio $1.6\times10^6$;
 the scrambled tower inflates the ledger by $5.5\times10^5$).
 \emph{The deliverable (the quantifier reduction):} under (H) ---
-cofinal finite positivity of the tower forms --- every ladder
+finite positivity of the tower forms along a ladder cofinal in
+that same mesh-refinement order --- every ladder
 value is nonnegative and the limit passage is arithmetic-free:
 \emph{no} Mosco compactness, \emph{no} uniform $\delta > 0$,
 \emph{no} diagonal argument enters the implication; per-element
@@ -5622,15 +5625,18 @@ convergence is the only analytic input, and the three
 infinite-level ingredients of \texttt{PRIME.MOSCO.SELECTION.01}
 migrate to the operator-level selection programme, where they
 stay typed.  With the classical legs cited (density; the
-$C^0$-continuity of $Q_W$ at fixed support; Weil 1952, Bombieri
+continuity of $Q_W$ at fixed support --- \emph{corrected} in the
+round-CCCLXV note below, the pure sup-norm $C^0$ form of this
+leg being false; Weil 1952, Bombieri
 2000, Suzuki arXiv:2606.09096, Iwaniec--Kowalski Thm~5.12), the
 chain \emph{cofinal finite positivity} $\Rightarrow$ \emph{Weil
 positivity} $\Rightarrow$ (via Weil's criterion) \emph{the
 target} is theorem-grade modulo the named citations.  \emph{What
 stays open (by design, the whole wall):} hypothesis (H) ---
 equivalently the uniform demand of
-\texttt{PRIME.RELATION.SKELETON.01} restricted to the cofinal
-ladder --- and \emph{nothing else}.  \emph{Kill:} an element of
+\texttt{PRIME.RELATION.SKELETON.01} restricted to a ladder
+cofinal in the mesh-refinement order --- and \emph{nothing
+else}.  \emph{Kill:} an element of
 the dense family whose ladder values converge to a value
 different from the independently computed $Q_W$, a non-summable
 ledger on the true tower, or a failure of the $X$-stabilization
@@ -5649,6 +5655,32 @@ measured signs) and proven strictly weaker than
 \texttt{UniformMarginBound}
 (\texttt{FORM.PRIME.COFINAL.WEIL.01} below).  The genuinely open
 item is unchanged: $(H_{\rm cof})$ itself; still [O].]
+\emph{[2026-08-13 round-CCCLXV note}
+(\veri{v912\_form\_convergence\_theorem.py}, $35/35$,
+\texttt{PRIME.FORM.CONVERGENCE.THEOREM.01}): \emph{two of the
+inputs above change type.}  (i) Per-element form convergence ---
+the ``only analytic input'' of the quantifier reduction --- is no
+longer measured but \emph{proven unconditionally} on the
+deployed dyadic cellwise-affine family, with the explicit rate
+$O(D^2\log(1/D)) = O(2^{-2j}j)$ and explicit constants
+($\Theta_0 = 3\log 2 + \pi/2 + \gamma + \log\pi$; log
+coefficient exactly $7/24$ for continuous $f$); the load-bearing
+step is the exact defect lemma
+$k_d - K(dD) = -(D^2/12)G(dD)$, verified with zero deviation in
+exact rationals, and the only cited arithmetic input is
+Rosser--Schoenfeld $\psi(x) < 1.03883x$ for support uniformity.
+(ii) The continuity leg as cited above is \emph{false} in the
+pure sup norm: the explicit even Lipschitz family
+$e_n(w) = \tfrac1n\min(1, we^{n^2})(1 - w/2)_+$ has
+$\|e_n\|_\infty \to 0$ while $|A[e_n]|$ grows linearly
+($2.57 \to 12.09$).  The correct hypothesis --- uniform
+convergence plus an equi-Lipschitz (Dini) condition at the
+origin, supplied by the admissible even compactly supported BV
+class --- replaces it here and wherever the contract cited it;
+the \emph{density} leg in that topology stays cited.  This is a
+correction of a wrong cited statement, not a downgrade.  What
+stays open is unchanged: $(H_{\rm cof})$, still [O], still of RH
+strength.]
 No marker move; no RH statement.\par}
 
 \par\smallskip\noindent\textbf{The finite-compiler compressions
@@ -5685,7 +5717,12 @@ propext/Classical.choice/Quot.sound only, verified by
 \veri{v849\_cfin\_unique\_cofinal\_lean.py} part B; carried in
 the shipped Lean manifest at $87$ files).  \emph{Proven:} the
 cofinal hypothesis $(H_{\rm cof})$ --- a \emph{pre-fixed}
-strictly monotone ladder along which the tower matrices are PSD;
+strictly monotone ladder, cofinal in the \emph{mesh-refinement}
+order in which the form convergence holds and not in the window
+or cap parameter alone (at a fixed mesh the read is
+cap-independent, hence eventually constant, and its limit
+carries the frozen quadrature defect of that mesh), along which
+the tower matrices are PSD;
 preregistration-shaped: the ladder is \emph{data} of the
 structure, supplied before any certificate, never mined from
 measured signs --- and the minimal implication:
@@ -5710,7 +5747,8 @@ $(H_{\rm cof})$ and the converse fails kernel-checked ---
 \texttt{UniformMarginBound} is from this round an over-strong
 \emph{sufficient lemma}, no longer the named wall; the wall
 content has strictly decreased to cofinal PSD on one pre-fixed
-ladder.  \emph{The honest boundary:} $(H_{\rm cof})$ stays a
+mesh-refining ladder.  \emph{The honest boundary:}
+$(H_{\rm cof})$ stays a
 hypothesis everywhere; nothing proves, gates or evaluates
 positivity of any actual tower form; no continuum theorem, no
 RH statement, no arithmetic identification is formalized or
@@ -6144,8 +6182,9 @@ measure at polynomial degree $h - 1$ --- $\|C_h\| \le 1
 $P \in \mathcal P_{h-1}$ $\Leftrightarrow M(\tilde\mu_+ -
 \tilde\nu_-) \ge 0$, with the embedding constant
 $\lambda_{\max}(M_-) = \|C_h\|^2 = 1 - \tau_h$.  \emph{The
-demand:} a proof of the embedding uniformly along a cofinal
-window subfamily would discharge \texttt{SourceContractor}
+demand:} a proof of the embedding uniformly along a window
+subfamily cofinal in the mesh-refinement order would discharge
+\texttt{SourceContractor}
 (\texttt{FORM.PRIME.KREIN.DEFECT.01}) and, through
 \texttt{krein\_cofinal\_weil}, hypothesis $(H_{\rm cof})$.
 \emph{The typed constraints a candidate must respect:} the

@@ -127,7 +127,8 @@ variable {κ : ℕ → Type*} [∀ m, Fintype (κ m)]
 /-- **THE COMPOSED FINITE-HEAD THEOREM** — the certified 18-rung head
 plugged into the cofinal Weil implication.  Hypotheses, exhaustively:
 
-  * `hmono` — the pre-fixed ladder (preregistration data);
+  * `idx`, `hmono` — an explicit strictly monotone ladder; binder
+    order does not prove its computational provenance;
   * `hbridge` — NAMED: the v897 E1–E4 interval-enclosure
     identification for the 18 checked rungs (external, Python side);
   * `htail` — NAMED: positivity of every rung beyond position 18 —
@@ -137,7 +138,9 @@ plugged into the cofinal Weil implication.  Hypotheses, exhaustively:
     extraction chain).
 
 Everything else — the 18 per-rung positivity facts and the whole
-composition logic — is kernel-checked.  NO RH claim. -/
+composition logic — is kernel-checked.  PREDEFINED/noninterference is
+the separate external contract of `CofinalPredefinition`.  NO RH
+claim. -/
 theorem wall_certified_head_cofinal_weil {V : Type*}
     (A : ∀ m, Matrix (κ m) (κ m) ℝ) (idx : ℕ → ℕ)
     (hmono : StrictMono idx)

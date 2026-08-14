@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-r"""v848 -- PRIME.EXTRACTION.CHAIN.01: the continuum extraction chain COMPLETE -- the implication 'cofinal finite positivity (H) ==> Weil positivity ==> (via Weil's criterion) the target' is measured/cited theorem-grade with a QUANTIFIER REDUCTION (no Mosco compactness, no uniform delta, no diagonal argument enters the implication), the pure-box class carries the EXACT Weil value at every finite level, and the arithmetic wall is isolated as hypothesis (H) AND NOTHING ELSE, ONE module from one probe (19/19 checks, verdict EXTRACTION-CHAIN-COMPLETE; discovery probe continuum_extraction_probe.py, work package E of the 2026-08-07 v5.4 round, re-run identically at promotion, promoted VERBATIM with no downscoping, ~1 s; hypothesis (H) is NEVER evaluated -- no positivity statement about any actual tower form or the actual Weil functional is made anywhere).  THE LADDER: the canonical cofinal (D, X) tower, j = 4..11, D_j = 2^-j, M_j = 17 * 2^{j-2} (68..8704 lags), atoms = the full pinned v563 prime-power table (ka = 28), tower forms = arch + closed pole + atom layers (the W1-certified convention); Q_j(f) = D_j (S_j f)^T T_j (S_j f) via the exact correlation pairing; the continuum target Q_W = POLE + ARCH + ATOM computed INDEPENDENTLY per element from the exact pw-cubic autocorrelation K = f * f~ reconstructed in Q with 5th-point certificates (v762 machinery; Suzuki normalization, v643 convention lock).  PIECE 2, IDENTIFICATION (measured): P2.0 THE EXACT BOX CLASS -- the three pure-box elements are extracted EXACTLY at every ladder level (max err 5.3e-14, float floor): K is pw-linear with dyadic breakpoints, so the tent-read tower pairing IS the continuum Weil value -- on the box-correlation class the finite forms carry the exact Weil functional at EVERY finite stage (the sharpest dyadic-inheritance statement); P2.1 all 10 elements identify (inexact err_11 rel 2.8e-6..2.6e-5); P2.2 rates log2 -1.58..-1.84 per level, median -1.818 (~4^-j; dyadic prediction -2); P2.4 the X-direction stabilizes EXACTLY once the window covers the element (44 cutoff pairs at float zero -- the variable-grid shadow of v816 M2).  PIECE 3, LEDGER (measured): geometric, med3 ratios 0.277..0.352 (median 0.302 <= 0.6), decay law median -1.752 per level, per-element geometric tail bounds CONSISTENT with the measured remainders; X-ledger tail exactly zero.  PIECE 1, MOSCO LEGS (measured, positivity-independent): recovery constructive (the midpoint samples themselves; the strong-L2 law ||f - S_j f||^2 = D^2 int(f')^2/12 EXACT in Q at j = 5, boxes exactly 0) + per-element Cauchy; the gated F1 far-spike liminf family has strictly positive margins (min +1.46); F2/F3 band margins TYPED and never gated -- they probe the moving band symbol, wall content under (H); gating them would smuggle positivity into the extraction module (refused by design).  W1 regression wards: pairing == direct form 5.2e-13; arch lag == -D rho(dD) rel 2.1e-6; pole lag == 2D cosh(dD/2) rel 8.0e-8.  CONTROLS FIRE: C1 the density-only wrong limit (atoms dropped) stalls on 7/7 atom-carrying elements (median stall ratio 1.6e6 vs bar 20) -- the discriminating ward; C2 the per-level scrambled tower breaks the ledger (median defect inflation 5.5e5).  THE IMPLICATION THEOREM (printed verbatim by the run, with the citation list W52/B00/S26/IK04/FEM/M69-A84 each in its exact role): STEP 1 measured here (per-element convergence + summable ledger + exact X-stabilization); STEP 2 the arithmetic-free limit passage -- under (H) every Q_j(f) >= 0 and a pointwise-convergent sequence of nonnegative reals has a nonnegative limit, so Q_W >= 0 on the dense family: NO Mosco compactness, NO uniform delta > 0, NO diagonal argument -- per-element convergence is the ONLY analytic input (the quantifier reduction; v816's three infinite-level ingredients migrate to the operator-level selection programme and stay typed there); STEP 3 classical cited (density of the dyadic family + C^0-continuity of Q_W at fixed support, Weil 1952 / Bombieri 2000 / Suzuki arXiv:2606.09096); STEP 4 Weil's criterion.  THE HONEST GAP LIST: measured / cited / GENUINELY OPEN = hypothesis (H) -- cofinal finite positivity of T_{X_j, D_j}, the arithmetic wall (PRIME.FLOOR.RATIO.01 / PRIME.RELATION.SKELETON.01 territory) -- and nothing else.  Registers PRIME.EXTRACTION.CHAIN.01 [O] with the isolated wall.  NO RH claim.  Python-only per GATE.WOLFRAM.02.
+r"""v848 -- PRIME.EXTRACTION.CHAIN.01: the continuum extraction chain COMPLETE -- the implication 'cofinal finite positivity (H) ==> Weil positivity ==> (via Weil's criterion) the target' -- with 'cofinal' meaning cofinal IN THE MESH-REFINEMENT ORDER D_j = 2^-j in which the form convergence holds (v912), never in the window or cap parameter alone -- is measured/cited theorem-grade with a QUANTIFIER REDUCTION (no Mosco compactness, no uniform delta, no diagonal argument enters the implication), the pure-box class carries the EXACT Weil value at every finite level, and the arithmetic wall is isolated as hypothesis (H) AND NOTHING ELSE, ONE module from one probe (19/19 checks, verdict EXTRACTION-CHAIN-COMPLETE; discovery probe continuum_extraction_probe.py, work package E of the 2026-08-07 v5.4 round, re-run identically at promotion, promoted VERBATIM with no downscoping, ~1 s; hypothesis (H) is NEVER evaluated -- no positivity statement about any actual tower form or the actual Weil functional is made anywhere).  THE LADDER: the canonical (D, X) tower, cofinal IN THE MESH-REFINEMENT ORDER, j = 4..11, D_j = 2^-j, M_j = 17 * 2^{j-2} (68..8704 lags), atoms = the full pinned v563 prime-power table (ka = 28), tower forms = arch + closed pole + atom layers (the W1-certified convention); Q_j(f) = D_j (S_j f)^T T_j (S_j f) via the exact correlation pairing; the continuum target Q_W = POLE + ARCH + ATOM computed INDEPENDENTLY per element from the exact pw-cubic autocorrelation K = f * f~ reconstructed in Q with 5th-point certificates (v762 machinery; Suzuki normalization, v643 convention lock).  PIECE 2, IDENTIFICATION (measured): P2.0 THE EXACT BOX CLASS -- the three pure-box elements are extracted EXACTLY at every ladder level (max err 5.3e-14, float floor): K is pw-linear with dyadic breakpoints, so the tent-read tower pairing IS the continuum Weil value -- on the box-correlation class the finite forms carry the exact Weil functional at EVERY finite stage (the sharpest dyadic-inheritance statement); P2.1 all 10 elements identify (inexact err_11 rel 2.8e-6..2.6e-5); P2.2 rates log2 -1.58..-1.84 per level, median -1.818 (~4^-j; dyadic prediction -2); P2.4 the X-direction stabilizes EXACTLY once the window covers the element (44 cutoff pairs at float zero -- the variable-grid shadow of v816 M2).  PIECE 3, LEDGER (measured): geometric, med3 ratios 0.277..0.352 (median 0.302 <= 0.6), decay law median -1.752 per level, per-element geometric tail bounds CONSISTENT with the measured remainders; X-ledger tail exactly zero.  PIECE 1, MOSCO LEGS (measured, positivity-independent): recovery constructive (the midpoint samples themselves; the strong-L2 law ||f - S_j f||^2 = D^2 int(f')^2/12 EXACT in Q at j = 5, boxes exactly 0) + per-element Cauchy; the gated F1 far-spike liminf family has strictly positive margins (min +1.46); F2/F3 band margins TYPED and never gated -- they probe the moving band symbol, wall content under (H); gating them would smuggle positivity into the extraction module (refused by design).  W1 regression wards: pairing == direct form 5.2e-13; arch lag == -D rho(dD) rel 2.1e-6; pole lag == 2D cosh(dD/2) rel 8.0e-8.  CONTROLS FIRE: C1 the density-only wrong limit (atoms dropped) stalls on 7/7 atom-carrying elements (median stall ratio 1.6e6 vs bar 20) -- the discriminating ward; C2 the per-level scrambled tower breaks the ledger (median defect inflation 5.5e5).  THE IMPLICATION THEOREM (printed verbatim by the run, with the citation list W52/B00/S26/IK04/FEM/M69-A84 each in its exact role): STEP 1 measured here (per-element convergence + summable ledger + exact X-stabilization); STEP 2 the arithmetic-free limit passage -- under (H) every Q_j(f) >= 0 and a pointwise-convergent sequence of nonnegative reals has a nonnegative limit, so Q_W >= 0 on the dense family: NO Mosco compactness, NO uniform delta > 0, NO diagonal argument -- per-element convergence is the ONLY analytic input (the quantifier reduction; v816's three infinite-level ingredients migrate to the operator-level selection programme and stay typed there); STEP 3 classical cited (density of the dyadic family + continuity of Q_W at fixed support in the CORRECTED topology -- uniform convergence PLUS equi-Lipschitz/Dini at the origin, supplied by the admissible even compact BV class; the pure sup-norm C^0 version is FALSE, refuted by v912 control C5 -- Weil 1952 / Bombieri 2000 / Suzuki arXiv:2606.09096); STEP 4 Weil's criterion.  THE HONEST GAP LIST: measured / cited / GENUINELY OPEN = hypothesis (H) -- finite positivity of T_{X_j, D_j} along a ladder cofinal in the mesh-refinement order, the arithmetic wall (PRIME.FLOOR.RATIO.01 / PRIME.RELATION.SKELETON.01 territory) -- and nothing else.  Registers PRIME.EXTRACTION.CHAIN.01 [O] with the isolated wall.  NO RH claim.  Python-only per GATE.WOLFRAM.02.
 
 PROVENANCE: discovery probe continuum_extraction_probe.py (19/19,
 verdict EXTRACTION-CHAIN-COMPLETE; the run-1 -> run-2 declared
@@ -590,7 +590,8 @@ def part():
           " ".join("%+.6f" % v for v in qx["E10 hat(0,0)+1/3 box(0,2)"]))
 
     # ------------------------------------------------ PIECE 3: ledger
-    section("PIECE 3 -- ledger summability along the cofinal ladder")
+    section("PIECE 3 -- ledger summability along the mesh-cofinal "
+            "ladder")
     ok_p31_meds, ok_p32, led_slopes = [], True, []
     ok_cauchy = True
     for e in elems:
@@ -742,11 +743,17 @@ def part():
     # --------------------------------------------------------- synthesis
     section("THE IMPLICATION THEOREM (verbatim; the deliverable)")
     print("""\
-Let (D_j, X_j) be the canonical cofinal ladder of the (D, X) tower
-(D_j = 2^-j, X_j -> inf, dyadic-nested, chosen positivity-
-independently) and T_j = T_{X_j, D_j} the tower window forms (arch +
-pole + atom layers, deployed convention).  Let D be the Q-span of the
-v762 canonical dense family.
+Let (D_j, X_j) be the canonical ladder of the (D, X) tower, cofinal
+IN THE MESH-REFINEMENT ORDER (D_j = 2^-j, X_j -> inf, dyadic-nested,
+chosen positivity-independently; cofinality in the window or cap
+parameter ALONE would not do -- at a fixed mesh D_0 the deployed
+read is exactly cap-independent, so such a ladder is eventually
+constant and converges to W_C[K] + W_C[e_{D_0}], which buys only
+Q_W >= -|W_C[e_{D_0}]|: measured false floors -2.114e-03 at
+D_0 = 1/32 and -2.128e-04 at D_0 = 1/128, hcof_dodging_audit_probe
+S6.8) and T_j = T_{X_j, D_j} the tower window forms (arch + pole +
+atom layers, deployed convention).  Let D be the Q-span of the v762
+canonical dense family.
 
   HYPOTHESIS (H)  [NOT evaluated here -- the arithmetic wall]:
       T_j >= 0 for every j on the ladder.
@@ -761,6 +768,9 @@ v762 canonical dense family.
       under (H), every Q_j(f) is a value of a PSD form, hence >= 0;
       a pointwise-convergent sequence of nonnegative reals has a
       nonnegative limit; therefore Q_W(f) >= 0 for every f in D.
+      WHY COFINALITY SUFFICES, in one line: were the limit
+      negative, STEP 1 would make the catch set {j : Q_j(f) < 0} a
+      TAIL of the mesh order, and a cofinal set meets every tail.
       NO Mosco compactness, NO uniform delta > 0, NO diagonal
       argument enters this step -- per-element convergence (Step 1)
       is the ONLY analytic input.
@@ -769,19 +779,29 @@ v762 canonical dense family.
       in the admissible even test class [v762 D2 quantitative +
       simple-function density]; L2 convergence at fixed support
       forces uniform convergence of the autocorrelations K
-      [Cauchy-Schwarz]; Q_W is continuous under uniform convergence
-      of K at fixed support [the Weil measure has locally finite
-      total variation away from 0 plus the (gamma + log pi) delta_0
-      and Pf origin block -- Weil 1952 / Bombieri 2000 / Suzuki
-      2606.09096].  Hence Q_W >= 0 on the full admissible class:
+      [Cauchy-Schwarz]; Q_W is continuous along sequences that
+      converge UNIFORMLY at fixed support AND are equi-Lipschitz
+      (Dini) at the origin -- the topology supplied automatically by
+      the admissible even compactly supported BV class [the Weil
+      measure has locally finite total variation away from 0 plus
+      the (gamma + log pi) delta_0 and Pf origin block -- Weil 1952
+      / Bombieri 2000 / Suzuki 2606.09096].  CORRECTION 2026-08-13
+      (v912 control C5): the PURE SUP-NORM C^0 version of this
+      premise, as cited before that round, is FALSE -- the even
+      Lipschitz family e_n(w) = (1/n) min(1, w/e^{-n^2})(1 - w/2)_+
+      has e_n(0) = 0 and ||e_n||_inf -> 0 while |A[e_n]| = 2.57,
+      4.28, 6.19, 8.14, 10.11, 12.09 grows linearly; the Dini leg is
+      what the origin block needs and what the admissible class
+      supplies.  Hence Q_W >= 0 on the full admissible class:
       WEIL POSITIVITY.
 
   STEP 4  [CITATION]: Weil's criterion (Weil 1952; Bombieri 2000)
       converts Step 3 into the target statement.
 
-  CONCLUSION: cofinal finite positivity (H) on the canonical ladder
-  implies Weil positivity implies (via the criterion) the target;
-  the arithmetic wall is EXACTLY (H) and nothing else.""")
+  CONCLUSION: finite positivity (H) along the canonical ladder,
+  cofinal in the mesh-refinement order, implies Weil positivity
+  implies (via the criterion) the target; the arithmetic wall is
+  EXACTLY (H) and nothing else.""")
 
     section("CITATIONS (each with its exact role)")
     print("""\
@@ -814,13 +834,19 @@ v762 canonical dense family.
       W1 regression wards (G0.5/G0.6), discriminating controls
       (C1 wrong candidate, C2 scrambled tower).
   CITED (classical, named, not machine-verified): the per-element
-      [FEM] convergence lemma beyond the measured range j <= 11; the
-      C^0-continuity of Q_W at fixed support [B00]; density of the
-      dyadic family [v762 D2 + simple functions]; the criterion
-      [W52/B00].
+      [FEM] convergence lemma beyond the measured range j <= 11
+      (SUPERSEDED 2026-08-13: v912 proves it unconditionally at all
+      depths with rate O(D^2 log(1/D)) on the cellwise-affine family);
+      continuity of Q_W at fixed support [B00] -- in the CORRECTED
+      topology, uniform convergence PLUS equi-Lipschitz (Dini) at the
+      origin, supplied by the admissible even compact BV class; the
+      pure sup-norm C^0 form of this premise is FALSE and is refuted
+      by v912 control C5; density of the dyadic family [v762 D2 +
+      simple functions]; the criterion [W52/B00].
   GENUINELY OPEN (by design, NOT this module): hypothesis (H) --
-      cofinal finite positivity of T_{X_j, D_j} -- the arithmetic
-      wall (PRIME.FLOOR.RATIO.01 / PRIME.RELATION.SKELETON.01
+      finite positivity of T_{X_j, D_j} along a ladder cofinal in
+      the MESH-REFINEMENT order -- the arithmetic wall
+      (PRIME.FLOOR.RATIO.01 / PRIME.RELATION.SKELETON.01
       territory).  NOTHING ELSE: no Mosco-precompactness gap, no
       limit-domain gap, no uniform-delta gap remains IN THE
       IMPLICATION -- v816's three infinite-level ingredients migrate
@@ -855,10 +881,11 @@ def run():
           % (n_run - len(fails), n_run, _VERDICTS.get("v"),
              time.time() - t_all))
     print("NO RH claim; the genuinely open item is hypothesis (H) -- "
-          "cofinal finite")
-    print("positivity, the arithmetic wall (PRIME.FLOOR.RATIO.01 / "
-          "PRIME.RELATION.")
-    print("SKELETON.01 territory) -- and nothing else.")
+          "finite positivity")
+    print("along a ladder cofinal in the MESH-REFINEMENT order, the "
+          "arithmetic wall")
+    print("(PRIME.FLOOR.RATIO.01 / PRIME.RELATION.SKELETON.01 "
+          "territory) -- and nothing else.")
     print("[%s] PATTERN GATE: expected %d checks, zero fails, verdict "
           "%s (got %d, fails %s, verdict %s)"
           % ("PASS" if ok else "FAIL", N_CHECKS, EXPECTED, n_run,

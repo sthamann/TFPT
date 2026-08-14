@@ -247,18 +247,22 @@ def defectLadder (Bp : ∀ m, Matrix (ρ' m) (κ m) ℝ)
 
 /-- **Contractors on a cofinal ladder**: past every rung there is a
 later rung carrying a source contractor.  The recurrence shape
-mirrors `CofinalCurrent.PhaseRecurrence` — the ladder is extracted,
-not chosen from measured signs. -/
+mirrors `CofinalCurrent.PhaseRecurrence`.  The ladder is extracted
+from contractor existence; this mathematical recurrence does NOT by
+itself certify sign-independent construction.  PREDEFINED remains the
+external contract of `CofinalPredefinition`. -/
 def ContractorRecurrence (Bp : ∀ m, Matrix (ρ' m) (κ m) ℝ)
     (Bm : ∀ m, Matrix (σ' m) (κ m) ℝ) : Prop :=
   ∀ m₀ : ℕ, ∃ m, m₀ < m ∧ Nonempty (SourceContractor (Bp m) (Bm m))
 
 /-- **THE COFINAL COMPOSITION** — `krein_cofinal`: source
-contractors on a cofinal ladder produce the CofinalHypothesis
-(H_cof) for the defect ladder — the index sequence is extracted
-from the recurrence (`Filter.extraction_of_frequently_atTop`), and
-PSD at every extracted rung is the main theorem applied to that
-rung's contractor. -/
+contractors on a cofinal ladder produce the mathematical core
+`CofinalHypothesis` for the defect ladder — the index sequence is
+extracted from the recurrence
+(`Filter.extraction_of_frequently_atTop`), and PSD at every extracted
+rung is the main theorem applied to that rung's contractor.  Upgrading
+this result to `PredefinedCofinalHypothesis` requires the separate
+external noninterference certificate. -/
 theorem krein_cofinal (Bp : ∀ m, Matrix (ρ' m) (κ m) ℝ)
     (Bm : ∀ m, Matrix (σ' m) (κ m) ℝ)
     (h : ContractorRecurrence Bp Bm) :

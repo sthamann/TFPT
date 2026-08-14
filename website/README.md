@@ -108,6 +108,12 @@ The site is fully static after build (`○ (Static) prerendered as static conten
 
 All document and prediction content is read from `lib/papers.ts` and `lib/predictions.ts`. To update text, formulas, target values, or add a new prediction, edit those files — no other change is required.
 
+The `/prime-front` research diary is sourced from `lib/primeFront.ts`
+(newest entries) plus `lib/primeFrontArchive.ts` (lazy archive). The
+2026-08-13 PREDEFINED/noninterference hardening entry records that Lean
+now separates the fixed-index cofinal implication from the explicit
+external provenance contract; it makes no RH claim and moves no marker.
+
 PDFs in `public/papers/` are mirrors of the eight active root documents (`introduction.tex`, `tfpt_1`–`tfpt_4`, `tfpt_horizon_readouts`, `origin_theory`, `tfpt_research_contracts`). Replace them in place and run `npm run release:write` to refresh the size + SHA-256 metadata in `lib/release.ts`.
 
 The `/changelog` page is a **generated mirror** of the canonical `../changelog.tex`: `lib/changelog.ts` is produced by `../verification/make_changelog_web.py` (run by `bash ../build.sh gen`) and its freshness is enforced by `../verification/audit_sync.py`. Never edit `lib/changelog.ts` (or the changelog page text) by hand — edit `changelog.tex` and regenerate.

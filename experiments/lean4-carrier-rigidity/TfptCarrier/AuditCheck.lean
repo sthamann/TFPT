@@ -42,6 +42,7 @@ import TfptCarrier.Hypercharge
 import TfptCarrier.GlueUniqueness
 import TfptCarrier.CoxeterPrime2
 import TfptCarrier.WallCertifiedHead
+import TfptCarrier.CofinalPredefinition
 
 -- Layer 1: Polarization (algebraic core)
 #check @TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -213,3 +214,13 @@ import TfptCarrier.WallCertifiedHead
 #check @TfptCarrier.WallLadder.checked_is_census_prefix
 #check @TfptCarrier.WallLadder.certified_head
 #check @TfptCarrier.WallLadder.wall_certified_head_cofinal_weil
+
+-- Cofinal PREDEFINED/noninterference hardening
+#check @TfptCarrier.CofinalPredefinition.NoninterferenceContract
+#check @TfptCarrier.CofinalPredefinition.PredefinedCofinalHypothesis
+#check @TfptCarrier.CofinalPredefinition.cofinal_weil_for_fixed_idx
+#check @TfptCarrier.CofinalPredefinition.cofinal_weil_predefined
+#check @TfptCarrier.CofinalPredefinition.old_api_accepts_sign_mined_idx
+#check @TfptCarrier.CofinalPredefinition.signMinedIndex_not_familyNoninterfering
+#check @TfptCarrier.CofinalPredefinition.constantizedSelector_familyNoninterfering
+#check @TfptCarrier.CofinalPredefinition.constantizedSelector_agrees

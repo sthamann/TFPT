@@ -49,6 +49,7 @@ import TfptCarrier.SeamEdgeChern
 import TfptCarrier.SeamScalingLimit
 import TfptCarrier.SeamResidualAxiom
 import TfptCarrier.WallCertifiedHead
+import TfptCarrier.CofinalPredefinition
 
 -- Layer 1: Polarization (algebraic core)
 #print axioms TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -263,3 +264,15 @@ import TfptCarrier.WallCertifiedHead
 #print axioms TfptCarrier.WallLadder.certified_head
 #print axioms TfptCarrier.WallLadder.wall_cofinal_weil
 #print axioms TfptCarrier.WallLadder.wall_certified_head_cofinal_weil
+
+-- Cofinal PREDEFINED/noninterference hardening (2026-08-13)
+-- The mathematical theorem has an explicit fixed `idx`; the hardened
+-- wrapper additionally requires the named external contract certificate.
+-- The negative and constantization theorems expose exactly why ordinary
+-- extensional types do not recover construction provenance.
+#print axioms TfptCarrier.CofinalPredefinition.cofinal_weil_for_fixed_idx
+#print axioms TfptCarrier.CofinalPredefinition.cofinal_weil_predefined
+#print axioms TfptCarrier.CofinalPredefinition.old_api_accepts_sign_mined_idx
+#print axioms TfptCarrier.CofinalPredefinition.signMinedIndex_not_familyNoninterfering
+#print axioms TfptCarrier.CofinalPredefinition.constantizedSelector_familyNoninterfering
+#print axioms TfptCarrier.CofinalPredefinition.constantizedSelector_agrees

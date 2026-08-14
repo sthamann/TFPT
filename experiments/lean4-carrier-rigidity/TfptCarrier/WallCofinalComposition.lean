@@ -28,6 +28,10 @@
     (3) `cofinalHypothesis_of_head_tail` — finite head + named tail
         assemble into exactly `CofinalWeil.CofinalHypothesis` (H_cof),
         the one positivity input of the cofinal Weil implication.
+        The supplied `idx` must be cofinal in the MESH-REFINEMENT
+        order in which `hconv` holds, not merely in the window depth:
+        at fixed mesh the read is eventually constant and converges
+        to the wrong limit.
 
     (4) `wall_cofinal_weil` — the end-to-end composition: certified
         head + `HeadEnclosure` + `TailPositivity` + per-element form
@@ -58,7 +62,10 @@
 
   NO RH claim.  `cofinal_weil` is an implication with (H_cof) as
   input; this module shrinks the unproven part of (H_cof) by the
-  kernel-checked head and NAMES what remains.
+  kernel-checked head and NAMES what remains.  For the preregistered
+  reading, PREDEFINED/noninterference is an additional external
+  premise made explicit by `CofinalPredefinition.lean`; this module's
+  binder order alone does not prove it.
 -/
 import TfptCarrier.CofinalWeil
 import TfptCarrier.WallLadderChecker
@@ -131,8 +138,10 @@ theorem head_psd_of_enclosure {A : ∀ m, Matrix (κ m) (κ m) ℝ}
 
 /-- **HEAD + TAIL = (H_cof)**: the certified finite head and the named
 tail hypothesis assemble into exactly the `CofinalHypothesis` that
-`CofinalWeil.cofinal_weil` consumes.  The ladder `idx` is pre-fixed
-data (the preregistration demand of H_cof). -/
+`CofinalWeil.cofinal_weil` consumes.  The ladder `idx` is an explicit
+parameter, but this theorem does not infer its computational provenance;
+the hardened API requires the separate external noninterference
+certificate. -/
 def cofinalHypothesis_of_head_tail (A : ∀ m, Matrix (κ m) (κ m) ℝ)
     (idx : ℕ → ℕ) (hmono : StrictMono idx) (J : ℕ)
     (head : ∀ j, j < J → (A (idx j)).PosSemidef)
@@ -156,11 +165,13 @@ composition chain:
   checked head)  +  per-element form convergence
 
   ⇒  the conclusion of `CofinalWeil.cofinal_weil`: nonnegative ladder
-  values on all rungs of the pre-fixed ladder, convergence along it,
+  values on all rungs of the supplied ladder, convergence along it,
   and nonnegativity of the limit functional on the dense family.
 
 Only the two NAMED hypotheses and form convergence remain unproven —
-the finite head itself is closed by the kernel. -/
+the finite head itself is closed by the kernel.  PREDEFINED is not among
+the mathematical premises used by this implication; it remains the
+external audit premise of `CofinalPredefinition`. -/
 theorem wall_cofinal_weil {V : Type*}
     (A : ∀ m, Matrix (κ m) (κ m) ℝ) (idx : ℕ → ℕ)
     (hmono : StrictMono idx) (ds : List RungData)

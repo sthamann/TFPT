@@ -110,7 +110,11 @@ def collect_lean():
         return []
     keep_ext = (".lean",)
     keep_name = {"lakefile.lean", "lake-manifest.json", "lean-toolchain",
-                 "AUDIT_TRANSCRIPT.txt", "README.md", "REVIEWER_USAGE.md", "audit.sh"}
+                 "AUDIT_TRANSCRIPT.txt", "README.md", "REVIEWER_USAGE.md", "audit.sh",
+                 # the audit's build prerequisite: the generated wall-ladder rungs
+                 # exceed the lakefile's default memory ceiling by design, so
+                 # REVIEWER_USAGE.md sends reviewers through this builder first
+                 "build_wall_ladder.sh"}
     out = []
     for dirpath, dirnames, filenames in os.walk(base):
         dirnames[:] = [d for d in dirnames if d != ".lake"]   # skip build cache

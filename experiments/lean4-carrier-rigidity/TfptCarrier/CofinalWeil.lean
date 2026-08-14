@@ -10,18 +10,20 @@
   19/19 PASS, verdict EXTRACTION-CHAIN-COMPLETE): the implication
   chain needs NO Mosco compactness, NO uniform delta, NO diagonal
   argument — per-element convergence of the ladder forms plus
-  positivity along ONE pre-fixed cofinal ladder already forces the
-  limit functional to be nonnegative on the dense family.
+  positivity along ONE supplied ladder, cofinal IN THE
+  MESH-REFINEMENT ORDER in which that convergence holds, already
+  forces the limit functional to be nonnegative on the dense family.
 
   WHAT THIS MODULE PROVES (kernel-checked, no `sorry`, no
   `native_decide`).
 
-    (1) `CofinalHypothesis` — THE COFINAL HYPOTHESIS (H_cof): a
-        PRE-FIXED strictly monotone index sequence m_j → ∞ along
-        which the ladder matrices are PSD.  The index sequence is a
-        FIELD of the structure — it enters as data fixed in advance,
-        never mined from measured signs (the preregistration
-        demand; see the doc comment on `idx`).
+    (1) `CofinalHypothesis` — THE MATHEMATICAL CORE of the cofinal
+        hypothesis (H_cof): a strictly monotone index sequence
+        m_j → ∞ along which the ladder matrices are PSD.  This
+        structure records the resulting index and certificates; it
+        does NOT track how a producer computed the index.  The
+        PREDEFINED/sign-independent audit premise is made explicit
+        by `CofinalPredefinition.PredefinedCofinalHypothesis`.
 
     (2) `limit_nonneg_of_cofinal_seq` — THE MINIMAL IMPLICATION at
         sequence level: q_m(v) → L and q_{m_j}(v) ≥ 0 on the ladder
@@ -66,12 +68,22 @@
     * NO diagonal argument — the quantifier order is
       ∀ element ∃ limit, with ONE ladder for all elements.
   Only three inputs remain: the dense family (as an abstract index
-  type — density itself and the C⁰-continuity extension to all test
-  functions are the two elementary classical lemmas of the probe's
-  synthesis, typed there as citations, deliberately NOT formalized
-  here), per-element form convergence (Piece 2, measured rates
-  −1.58..−1.84 per level), and cofinal positivity (H_cof — the
-  arithmetic wall, and nothing else).
+  type — density itself and the continuity extension to all test
+  functions are the two classical lemmas of the probe's synthesis,
+  typed there as citations, deliberately NOT formalized here; NOTE
+  the 2026-08-13 correction: the extension hypothesis is NOT
+  C⁰-continuity of Q_W in the pure sup norm, which is FALSE — the
+  even Lipschitz family e_n(w) = (1/n) min(1, w/e^{-n²}) (1 − w/2)_+
+  has ‖e_n‖_∞ → 0 while |A[e_n]| grows linearly, v912 control C5 —
+  but uniform convergence PLUS an equi-Lipschitz/Dini condition at
+  the origin, supplied by the admissible even compactly supported BV
+  class; the DENSITY leg in that topology remains the citation),
+  per-element form convergence (Piece 2, no longer a measurement:
+  PROVEN unconditionally at rate O(D² log(1/D)) = O(2^{-2j} j) with
+  explicit constants — verification/v912_form_convergence_theorem.py;
+  see `CofinalEnvelope.lean`, which states that envelope as a named
+  premise and DERIVES the `hconv` below from it), and cofinal
+  positivity (H_cof — the arithmetic wall, and nothing else).
 
   THE HONEST BOUNDARY.  (H_cof) is the named hypothesis this module
   is ABOUT — it stays a hypothesis everywhere; nothing here proves,
@@ -95,21 +107,35 @@ section Hypothesis
 
 variable {κ : ℕ → Type*} [∀ m, Fintype (κ m)]
 
-/-- **THE COFINAL HYPOTHESIS (H_cof)** — the minimal positivity
-input of the extraction chain: a pre-fixed strictly monotone index
-sequence m_j → ∞ along which the ladder matrices are PSD.
+/-- **THE MATHEMATICAL CORE OF THE COFINAL HYPOTHESIS (H_cof)** —
+the minimal positivity input used by the limit proof: a strictly
+monotone index sequence m_j → ∞ along which the ladder matrices are
+PSD.
+
+THE ORDER IS THE MESH-REFINEMENT ORDER.  `idx` is cofinal in the
+index `m` of `A`, and in the deployed instantiation that index is the
+MESH level (`CofinalEnvelope.mesh m = 2^(-m)`) — the order in which
+`hconv` holds.  Cofinality in the WINDOW/cap parameter at a FIXED
+mesh D₀ is NOT admissible: past the faithful cap the deployed read is
+already exactly cap-independent, so such a ladder is eventually
+CONSTANT and converges to QW + W_C[e_{D₀}], not to QW; positivity
+along it yields only QW ≥ -|W_C[e_{D₀}]| (measured false floors
+-2.114e-03 at D₀ = 1/32 and -2.128e-04 at D₀ = 1/128,
+`experiments/tfpt-discovery/hcof_dodging_audit_probe.py` S6.8).
 
 PREREGISTRATION DEMAND: the sequence `idx` must be chosen
-INDEPENDENTLY of any measured signs — it is a field of this
-structure, fixed before any form value is evaluated, never mined
-from the data.  (Formally `idx` is data, not an existential: a
-consumer must exhibit the ladder first and the positivity
-certificates second.)  This replaces the over-strong
+INDEPENDENTLY of any measured signs.  This structure does NOT enforce
+that algorithmic demand: a caller can inspect `A` before constructing
+the value, and ordinary field/binder order is not an information-flow
+theorem.  `CofinalPredefinition.lean` supplies the hardened API with an
+explicit abstract `NoninterferenceContract`, a negative sign-mining
+example, and the formal provenance-erasure limitation.  This
+mathematical core replaces the over-strong
 `ExcessSkeleton.UniformMarginBound`: no uniform margin δ > 0 is
 demanded, only PSD at the ladder rungs. -/
 structure CofinalHypothesis (A : ∀ m, Matrix (κ m) (κ m) ℝ) where
-  /-- The pre-fixed ladder: chosen independently of measured signs
-  (the preregistration demand — see the structure doc comment). -/
+  /-- The selected ladder.  This field stores a value, not its
+  computational provenance; see the structure doc comment. -/
   idx : ℕ → ℕ
   /-- The ladder is strictly monotone (hence tends to ∞). -/
   mono : StrictMono idx
@@ -127,7 +153,13 @@ proven: if the form values converge, q_m(v) → L, and are
 nonnegative along a strictly monotone ladder, q_{m_j}(v) ≥ 0, then
 the limit is nonnegative: L = lim_j q_{m_j}(v) ≥ 0.  No uniform
 margin, no rate, no monotonicity of the values — cofinal
-nonnegativity plus convergence alone. -/
+nonnegativity plus convergence alone.
+
+WHY COFINALITY SUFFICES, in one line: if L < 0 then convergence makes
+the catch set {m : q_m < 0} a TAIL of the mesh order, and a cofinal
+set meets every tail.  This is the entire immunity of the hypothesis,
+and it is exactly what an index criterion whose catch set is merely
+almost-periodic (unbounded complement) does not have. -/
 theorem limit_nonneg_of_cofinal_seq {q : ℕ → ℝ} {L : ℝ}
     (idx : ℕ → ℕ) (hmono : StrictMono idx)
     (hpos : ∀ j, 0 ≤ q (idx j))
@@ -172,9 +204,9 @@ end Implication
 
 section Relations
 
-/-- A pre-fixed ladder `idx` witnesses cofinal nonnegativity of a
-margin sequence.  The ladder is a PARAMETER (preregistration shape:
-`idx` is supplied first, the sign condition is checked second). -/
+/-- A supplied ladder `idx` witnesses cofinal nonnegativity of a
+margin sequence.  The binder order matches the intended
+preregistration API but does not prove computational independence. -/
 def IsCofinalWitness (margin : ℕ → ℝ) (idx : ℕ → ℕ) : Prop :=
   StrictMono idx ∧ ∀ j, 0 ≤ margin (idx j)
 
@@ -240,7 +272,10 @@ on the dense family, and the ONE named hypothesis (H_cof):
 
 Only density, form convergence, and cofinal positivity enter — the
 measured quantifier reduction of EXTRACTION-CHAIN-COMPLETE, as a
-kernel-checked implication. -/
+kernel-checked implication.  This core theorem does not certify the
+provenance of `H.idx`; the hardened wrapper
+`CofinalPredefinition.cofinal_weil_predefined` adds the named external
+noninterference premise. -/
 theorem cofinal_weil {A : ∀ m, Matrix (κ m) (κ m) ℝ}
     (H : CofinalHypothesis A) (sample : ∀ m, V → κ m → ℝ)
     (QW : V → ℝ)

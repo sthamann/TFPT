@@ -6662,7 +6662,8 @@ wall, the completed-cell cone transport at the $n = 2$ cell
 (\veri{v846\_schur\_spectral\_mother.py},
 \veri{v847\_wedge\_cellcone\_transport.py}) --- and the continuum
 extraction is complete: the wall is exactly hypothesis (H),
-cofinal finite positivity
+finite positivity along a ladder cofinal in the
+mesh-refinement order
 (\veri{v848\_extraction\_chain.py},
 \texttt{PRIME.EXTRACTION.CHAIN.01}); still open.
 Round-31 follow-up (markers unchanged): the invariance atlas ---
@@ -6678,7 +6679,10 @@ is kernel-checked: $(H_{\rm cof})$, with
 \texttt{UniformMarginBound} formally demoted to an over-strong
 sufficient lemma (\veri{v849\_cfin\_unique\_cofinal\_lean.py},
 \texttt{TfptCarrier/CofinalWeil.lean},
-\texttt{FORM.PRIME.COFINAL.WEIL.01}); still open.
+\texttt{FORM.PRIME.COFINAL.WEIL.01}); the later
+\texttt{CofinalPredefinition.lean} hardening makes PREDEFINED an
+explicit external contract rather than a field-order claim; still
+open.
 Round-32 follow-up (markers unchanged): the grade law ---
 the graveyard unified by the kernel-checked homogeneity no-go
 (\veri{v859\_grade\_no\_go\_elevator.py},
@@ -8000,7 +8004,8 @@ identification ${\sim}4^{-j}$ (median $-1.818$); geometric
 ledger ($0.302$); the $X$-direction exactly stable ($44$ cutoff
 pairs at float zero); both controls fire (stall ratio
 $1.6\times10^6$; ledger inflation $5.5\times10^5$).  The
-implication chain \emph{cofinal finite positivity} $\Rightarrow$
+implication chain \emph{cofinal finite positivity} (cofinal in
+the mesh-refinement order) $\Rightarrow$
 \emph{Weil positivity} $\Rightarrow$ (via Weil's criterion)
 \emph{the target} is theorem-grade modulo named citations, with
 the quantifier reduction: no Mosco compactness, no uniform
@@ -8035,8 +8040,17 @@ $\subsetneq$ pointwise $\subsetneq$ cofinal strict both ways
 (witnesses $1/(m{+}1)$, $\pm1$ on the even ladder) ---
 \texttt{UniformMarginBound} formally demoted to an over-strong
 sufficient lemma; the load-bearing chain consumes exactly
-$(H_{\rm cof})$, which stays a hypothesis everywhere.  No marker
-move, no RH claim.
+$(H_{\rm cof})$ --- PSD along a ladder cofinal in the
+mesh-refinement order in which the form convergence holds ---
+which stays a hypothesis everywhere.  The
+noninterference follow-up
+(\texttt{TfptCarrier/CofinalPredefinition.lean}) kernel-checks the
+explicit-fixed-\texttt{idx} API and a sign-mined old-API
+counterexample, and requires a named
+\texttt{Predefined(A,idx)} certificate in the hardened wrapper.
+Its concrete source/provenance interpretation remains external;
+quantifier order alone does not enforce it.  No marker move, no RH
+claim.
 Machine-checked: \veri{v849\_cfin\_unique\_cofinal\_lean.py}.
 \mE\ (the uniqueness census and its exact controls; the
 kernel-checked mirror statements) $+$ \mO\ ($(H_{\rm cof})$ ---
@@ -9720,7 +9734,11 @@ dissolved into one exact measure inequality) with the
 verified-zero supply at the $j = 16$ seat ($39/39$ at
 $N_Z = 7000$, composed $67/67$ with the cited deep $28/28$),
 and the W2 recomposed certificate ($67/67 + 8/8$ with the
-$2\times10^{7}$-ordinate certified cache).  Language frozen: W1
+$2\times10^{7}$-ordinate certified cache).  The promoted gate
+pins only the reduced subset (meta-audit CCCXXXVI): a false
+cited full census would not fail the module --- the $39/39 +
+8/8$ census rests on the frozen experiments runs and their spec
+hashes, not on the \texttt{v909} gate.  Language frozen: W1
 and W2 are \emph{algorithmically independent evaluations of the
 same localized Weil form} --- a strong mutual crosscheck, not
 two independent proofs; positivity is certified on a finite
@@ -9751,13 +9769,125 @@ $\mathrm{ZerosCertified}(T) \wedge \mathrm{TailEnvelope}(T)
 \Rightarrow M_h \succ 0$ for all deployed $h \le H(T)$, with
 $H(\gamma_{7000}/\gamma_{2\mathrm{M}}/\gamma_{2\cdot10^{7}}) =
 254/1256/2806$; $H(T)$ is the measuring rod any analytic
-per-window bound has to beat.  Per-rung, deployed ladder,
+per-window bound has to beat.  The promoted gate pins only the
+shallow subset (meta-audit CCCXXXVI):
+$H(\gamma_{2\mathrm{M}}/\gamma_{2\cdot10^{7}})$ and the
+full-ladder fits are cited, not pinned by the \texttt{v910}
+gate.  Per-rung, deployed ladder,
 measured critical direction; $H(T)$ says nothing about
 undeployed $h$; the extrapolation is a fit, not a theorem.  No
 marker move, no RH claim.
 Machine-checked: \veri{v910\_finite\_zero\_transfer.py}.
 (\textsc{measured}) (the supply curves, censuses and laws) $+$
 \mO\ (the analytic per-window bound --- the named demand)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The form-convergence theorem
+(\texttt{PRIME.FORM.\allowbreak CONVERGENCE.\allowbreak
+THEOREM.01}).}
+One module ($35/35$, verdict \textsc{formconv-proven}).  The
+extraction chain's per-element convergence premise --- until now
+typed \textsc{measured} (the corpus rates $-1.58$..$-1.84$ per
+level of \texttt{v848}) --- is proven \emph{unconditionally} for
+the deployed dyadic cellwise-affine family, with an explicit
+rate and explicit constants:
+$|Q_D(f) - Q_W(f)| = O(D^2 \log(1/D)) = O(2^{-2j} j)$, with
+$\Theta_0 = 3\log 2 + \pi/2 + \gamma + \log \pi$ and, for
+continuous $f$, log coefficient exactly $7/24$.  Three exact
+steps carry it: the deployed lag vector \emph{is} the capped
+Weil functional on the even tent, so the finite form equals
+$W_C[\widetilde{K}_D]$ exactly; midpoint exactness on cellwise
+quadratics makes the nodal defect exactly $-(D^2/12)\,G(dD)$
+(zero deviation in exact rationals over $1474$ lag identities
+and $780$ interior points); the faithful cap $C \ge b_K + D$
+turns the error into $W_C$ of \emph{one} explicit function,
+bounded by elementary majorants per layer.  Sharpness is
+measured against a closed-form leading term (ratio
+$0.575$..$1.066$, drifting to $1$ through $j = 18$), so the law
+is genuine and not a loose envelope.  The only cited arithmetic
+input is Rosser--Schoenfeld $\psi(x) < 1.03883\,x$, consumed
+\emph{only} for support uniformity and independently
+sieve-verified to $10^7$; no zero-free region, no PNT, no zeta
+zeros enter.  \emph{Audit correction} (a correction of a wrong
+cited statement, not a downgrade): the chain's cited
+$C^0$-continuity of $Q_W$ at fixed support is \emph{false} in
+the pure sup norm --- control C5 exhibits an explicit even
+Lipschitz family with $\|e_n\|_\infty \to 0$ and $|A[e_n]|$
+growing linearly --- and the true hypothesis is uniform
+convergence \emph{plus} an equi-Lipschitz (Dini) condition at
+the origin, supplied by the admissible even compactly supported
+BV class.  Pinning (meta-audit CCCXXXVI): the W1 measure
+dictionary, Weil's explicit formula and criterion, the
+admissible class with its density leg, the all-$x$
+Rosser--Schoenfeld statement and the universal quantifier
+itself are \emph{cited}, not pinned by these gates.  DELTA-A:
+\texttt{CofinalEnvelope.lean} states the envelope premise and
+derives the Lean convergence hypothesis from it, so that
+hypothesis is the instantiated envelope rather than an opaque
+assumption --- but the envelope is not discharged inside the
+kernel.  This closes the convergence edge only: the cofinal
+positivity inequality is untouched and RH-hard.  No marker
+move, no RH claim.
+Machine-checked: \veri{v912\_form\_convergence\_theorem.py}.
+\mE\ (the defect lemma, the tent and master identities, the
+class constants --- exact in $\mathbb{Q}$) $+$
+(\textsc{measured}) (the envelope, sharpness and uniformity
+readings on the declared grid) $+$ \mC\ (the W1 dictionary,
+Weil's formula and criterion, the admissible class and the
+density leg, Rosser--Schoenfeld for all $x$) $+$ \mO\ (the
+cofinal positivity inequality --- untouched)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The signed-and-alignment
+localization --- a no-go/typing row, not progress
+(\texttt{PRIME.NOGO.\allowbreak SIGNED.\allowbreak ONLY.01}).}
+One module ($24/24$, verdict \textsc{nogo-core-verified}).  It
+supplies no positivity, no interval and no certificate: it
+prices \emph{argument classes}.  Any argument closing the
+deployed budget inequality must be \emph{signed} --- it must
+orient a quantity that is odd under the comb sign flip --- and
+\emph{alignment-carrying} --- it must relate the position of the
+prime atoms to the spectral directions of $K$; in particular it
+can be neither a magnitude bound on $\psi(x) - x$ nor a
+natural-grammar identity valid in every arithmetic world.  The
+exact core: $\|K_D'\|_1 = 4$ independent of $D$ (the conversion
+constant of a magnitude hypothesis does not get cheap as the
+mesh refines) against an $O(1)$ negative supply recomputed by
+two independent routes, so Littlewood's $\Omega$-theorem empties
+the magnitude class (floor/slack $214.7$ on the module's own
+conservative slack, $1527.1$ on the deployed one); the exact
+three-term split is invariant under every congruence with an
+\emph{odd} carrying term, so no unsigned hull can bound it
+below; Selberg's symmetry formula is a formal identity, hence
+neutral; and the Beurling--Nyman/Baez-Duarte target has no
+$N$-uniform Gram floor (cap $0.420220$ against the needed
+$c_B = 0.5523$) with an explicit non-implying family.  Ten
+classes are proven empty (E1--E10), five are merely unexplored
+(U1--U5) and five clauses are named open (O1--O5); the statement
+is finite-rung ($h = 184/388/839$ with the ladder to $12632$)
+and makes no all-$h$ claim.  It does \emph{not} say that the
+Riemann Hypothesis is unprovable, that the wall route fails, or
+that no proof exists, and the counter-evidence is carried
+unsmoothed: the certified reads are positive at all nine depths
+(deepest $2.79579794131272506\times10^{-15}$ at $h = 12632$),
+the normalised decay flattens with depth and one re-derived step
+is positive, so the drift is not monotone.  Pinning: the
+identities, split algebra, Selberg neutrality,
+Beurling--Nyman witnesses, supply recomputation, own sieve,
+frame rebuild with predicted $h$ and the reproduced probe
+SPEC-SHA are pinned; the deployed ladder and its certified
+reads, the deployed entry slack, Littlewood's theorem itself,
+the float64 slack premise of the matrix stage, the deployed
+budget shape, the four premises of the reverse implication and
+the counter-evidence corpus are cited.  Closes no gate, narrows
+no gate, moves no marker, and must not be counted as progress or
+as evidence for or against RH.
+Machine-checked: \veri{v913\_signed\_alignment\_localization.py}.
+\mE\ (the kernel identities, the split algebra and its parity,
+Selberg neutrality, the Beurling--Nyman witnesses --- exact in
+$\mathbb{Q}$) $+$ \mC\ (Littlewood's $\Omega$-theorem, the
+deployed ladder and entry slack, the budget shape) $+$ \mO\ (the
+residual requirement itself --- localized, not closed)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The Reed--Muller identification

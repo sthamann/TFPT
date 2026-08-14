@@ -94,8 +94,60 @@ section "axiom / constant declarations"
 # check (5): every headline theorem's `#print axioms` must still reduce to the
 # three standard kernel axioms only. So we permit axiom declarations ONLY in
 # those named modules and still fail on an axiom anywhere else.
+#
+# As in check (2), the scan runs on comment-stripped sources: a doc comment
+# whose text happens to begin a line with "axiom"/"constant" (e.g. "...the
+# optimal PP constant of the model expectation is ...") is prose, not a
+# declaration, and a grep over raw source reports it as a violation. Comments
+# are blanked line-preservingly, so reported line numbers stay exact and a real
+# `axiom Foo : ...` in code is still caught.
 AXIOM_ALLOWLIST='TfptCarrier/(BWKeystone|SeamApplicabilityLedger|SeamEquivChain|SeamResidualAxiom|SeamRigidityForcing|SeamScalingLimit|SeamStandardPair)\.lean:'
-ALL_AXIOMS=$(grep -rnE '^(axiom|constant)[[:space:]]+[A-Za-z_]' TfptCarrier/ TfptCarrier.lean 2>/dev/null || true)
+ALL_AXIOMS=$(python3 - <<'PY' 2>/dev/null
+import re, pathlib
+
+
+def strip_comments(src: str) -> str:
+    """Blank out Lean comments, preserving every newline (and thus line numbers).
+
+    Handles nested `/- ... -/` blocks (which subsumes `/-- ... -/` docstrings)
+    and `-- ...` line comments.
+    """
+    out, i, n, depth = [], 0, len(src), 0
+    while i < n:
+        if src.startswith("/-", i):
+            depth += 1
+            out.append("  ")
+            i += 2
+        elif depth and src.startswith("-/", i):
+            depth -= 1
+            out.append("  ")
+            i += 2
+        elif depth:
+            out.append("\n" if src[i] == "\n" else " ")
+            i += 1
+        elif src.startswith("--", i):
+            j = src.find("\n", i)
+            j = n if j < 0 else j
+            out.append(" " * (j - i))
+            i = j
+        else:
+            out.append(src[i])
+            i += 1
+    return "".join(out)
+
+
+files = sorted(pathlib.Path("TfptCarrier").rglob("*.lean")) + [pathlib.Path("TfptCarrier.lean")]
+hits = []
+for f in files:
+    if not f.exists():
+        continue
+    src = strip_comments(f.read_text(errors="replace"))
+    for i, line in enumerate(src.splitlines(), 1):
+        if re.match(r"(axiom|constant)[ \t]+[A-Za-z_]", line):
+            hits.append(f"{f}:{i}:{line.strip()}")
+print("\n".join(hits))
+PY
+)
 ALLOWED_COUNT=$(printf '%s\n' "$ALL_AXIOMS" | grep -cE "$AXIOM_ALLOWLIST" || true)
 UNEXPECTED=$(printf '%s\n' "$ALL_AXIOMS" | grep -E '.' | grep -vE "$AXIOM_ALLOWLIST" || true)
 if [[ -z "$UNEXPECTED" ]]; then

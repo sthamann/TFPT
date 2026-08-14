@@ -24,6 +24,7 @@ The important files are:
 - `TfptCarrier.lean`: top-level import file;
 - `TfptCarrier/*.lean`: Lean source modules;
 - `scripts/audit.sh`: the hard audit script;
+- `scripts/build_wall_ladder.sh`: the bounded-memory builder for the generated wall-ladder rungs (see §6.1);
 - `README.md`: project overview and theorem map.
 
 The archive intentionally excludes `.lake/`, compiled `.olean` files, local build caches, and generated LaTeX artifacts. These are recreated locally.
@@ -109,6 +110,24 @@ The audit script checks:
 5. `#print axioms` reports only Lean's standard axioms `propext`, `Classical.choice`, and `Quot.sound`.
 6. `AuditCheck.lean` elaborates all headline theorem names.
 7. `AuditContract.lean` elaborates exact theorem signature locks.
+
+### 6.1 Prerequisite for check (1): the generated wall-ladder rungs
+
+`TfptCarrier/WallLadder/RungKz*.lean` are generated certificate modules, each a single kernel `decide` over a packed Cholesky witness. They are the expensive part of check (1), and `lakefile.lean` pins a low default per-process memory ceiling (`leanMemoryMb = 12288`, passed to Lean as `-M`) so that an uncapped Lake fan-out cannot exhaust physical RAM. Consequence: on a fresh checkout the rungs **fail at the default ceiling by design**, and `./scripts/audit.sh` cannot report `AUDIT: PASS` until their `.olean` files exist.
+
+Build them first, with a raised ceiling and bounded concurrency:
+
+```bash
+BATCH=2 MEM_MB=163840 ./scripts/build_wall_ladder.sh
+```
+
+`BATCH` is how many rungs one `lake build` invocation may run at once, `MEM_MB` is the per-process `-M` ceiling in MB, and already-built rungs are skipped, so an interrupted run can be restarted. Each batch prints its wall time and the peak summed RSS of all live `lean` processes.
+
+Budget honestly. Cost rises steeply with the size of the generated rung source — time roughly quadratically, memory faster than linearly. Measured on a 512 GB Apple-silicon machine: `RungKz12` (0.12 MB source) 189 s, `RungKz20` (0.15 MB) 253 s, `RungKz14` (0.17 MB) 363 s, `RungKz32` (0.32 MB) 1011 s at ~93 GB, the pair `RungKz39`+`RungKz46` (0.37 + 0.39 MB) 1598 s at 360.3 GB summed, and `RungKz27` (0.41 MB) 1700 s at **200.4 GB in a single process**. `RungKz14` fails outright at a 48 GB ceiling (`(kernel) excessive memory consumption detected` after 987 s), so a too-small ceiling looks like a build error rather than a resource warning.
+
+Size the run to your machine: `BATCH=2` with `MEM_MB=163840` is comfortable up to ~0.35 MB rungs on 512 GB, while from ~0.4 MB upward a single rung wants 200 GB or more and must be built with `BATCH=1` and a several-hundred-GB ceiling. On a workstation with 64 GB or less only the smaller rungs are reachable at all — in that case report the rungs you could not build rather than treating the audit as passed, since check (1) is then not satisfied.
+
+Because `-M` is passed through `weakLeanArgs`, it is not part of Lake's build trace: an `.olean` produced under a raised ceiling is accepted unchanged by the subsequent default-ceiling `lake build` inside `./scripts/audit.sh`. Building the rungs this way is a memory-scheduling decision, not a change to what is checked.
 
 ## 7. Useful Focused Commands
 

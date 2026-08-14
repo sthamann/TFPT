@@ -39,12 +39,16 @@
                                 (the Kronecker/Weyl input; stays a
                                 hypothesis at this level).
 
-    (3) `cofinal_current` — THE CONDITIONAL THEOREM: the three
-        hypotheses produce a `CofinalWeil.CofinalHypothesis` for the
-        ladder — the index sequence is EXTRACTED from the recurrence
+    (3) `cofinal_current` — THE CONDITIONAL MATHEMATICAL THEOREM: the
+        three hypotheses produce the core
+        `CofinalWeil.CofinalHypothesis` for the ladder — the index
+        sequence is EXTRACTED from the recurrence
         (`Filter.extraction_of_frequently_atTop`), and PSD at every
         extracted rung is head-PSD (cell floor, δ ≥ 0 relaxation)
-        plus tail-PSD (`Matrix.PosSemidef.add`).
+        plus tail-PSD (`Matrix.PosSemidef.add`).  This does not prove
+        that the recurrence/cell was constructed independently of
+        measured signs; the PREDEFINED certificate of
+        `CofinalPredefinition` remains an additional external premise.
         `cofinal_current_weil` — THE COMPOSED COROLLARY: the three
         hypotheses + per-element form convergence force the limit
         functional to be nonnegative on the whole dense family
@@ -218,7 +222,9 @@ The index sequence of the cofinal hypothesis is built from the
 recurrence; PSD at every extracted rung is the cell floor (relaxed
 to PSD) plus the connected tail.  All three inputs are NAMED
 hypotheses — nothing about them is proven here; the implication is
-what is kernel-checked. -/
+what is kernel-checked.  This returns the mathematical core, not a
+`PredefinedCofinalHypothesis`: noninterference of the recurrence/cell
+construction is not inferred from quantifier order. -/
 theorem cofinal_current {U : Set Φ} {δ : ℝ} (S : HeadTailSplit κ Φ)
     (connected_tail : ConnectedTail S)
     (positive_head_cell : PositiveHeadCell S U δ)

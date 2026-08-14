@@ -100,6 +100,8 @@ import TfptCarrier.PositiveC2Lift
 import TfptCarrier.SectorPositiveDescent
 import TfptCarrier.ExcessSkeleton
 import TfptCarrier.CofinalWeil
+import TfptCarrier.CofinalPredefinition
+import TfptCarrier.CofinalEnvelope
 import TfptCarrier.CofinalCurrent
 import TfptCarrier.WallLadderChecker
 import TfptCarrier.WallCofinalComposition

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`904` registered scripts · `1055` ledger claims · `10` clusters.
+`906` registered scripts · `1057` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (423 scripts)
+### `core` — Compiler core & the E₈ glue  (425 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -857,6 +857,10 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v909_finite_wall_closure, v563, v909 · cited: 3 e8 audit bootstrap, research contracts
 - **v911_wiring_freedom** [E/O] `SEAM.STATE.WIRING.SELECTOR.01` — die CXXXIX-Frage geschlossen, der v908-registrierte Kontrakt beantwortet: DEPLOYMENT-WAHL, kein Compiler-Theorem** — der exakte Gröbner-Zensus bestimmt GENAU EINE admissible 3-dim 
   - deps: v908_seam_equilibrium_wiring, v903_seam_rp_exclusion, v898, v903, v908 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v912_form_convergence_theorem** [E/C] `PRIME.FORM.CONVERGENCE.THEOREM.01` — die per-Element-Konvergenz-Prämisse der Extraktionskette ist UNBEDINGT BEWIESEN, mit expliziter Rate O(D² log(1/D)) = O(2^{-2j} j) und expliziten Konstanten**: bisher als GEMESSEN 
+  - deps: v848_extraction_chain, FORM.PRIME.COFINAL.WEIL.01, v563, v630, v643, v716, v762, v848 · cited: 3 e8 audit bootstrap, research contracts
+- **v913_signed_alignment_localization** [E/O] `PRIME.NOGO.SIGNED.ONLY.01` — ein NO-GO-/TYPISIERUNGS-Modul: keine Positivität, kein Intervall, kein Zertifikat, KEIN Marker bewegt**. DIE LOKALISIERUNG: jedes Argument, das die deployte Budget-Ungleichung (L) 
+  - deps: v848_extraction_chain, v909_finite_wall_closure, v912_form_convergence_theorem, v563, v848, v909, v912, note chain CCCLIX/CCCLXVI/CCCLXVIII/CCCLXXI/CCCLXXII · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1873,14 +1877,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×208, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `AX.P2.01`×19, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18
+**Most-depended-on claims** (the load-bearing roots): `v563`×210, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `AX.P2.01`×19, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v900_core_update_anatomy** — `PRIME.PORT.NORMALIZED.CORE.01, PRIME.PORT.GRAPH.REGION.01`
-- **v901_tangent_schur_bfloor** — `PRIME.PORT.TANGENT.SCHUR.01, PRIME.PORT.BFLOOR.01, PRIME.PORT.SIGNFREE.NORMALIZATION.01`
 - **v902_wall_relocation_map** — `PRIME.CASE.EDGE.CHRISTOFFEL.01, PRIME.PORT.GRAM.COMPLETION.01, PRIME.PORT.RADAU.WEIGHT.01`
 - **v903_seam_rp_exclusion** — `SEAM.STATE.DERIVATION.01, SEAM.CFIN.MIXING.NORMALIZATION.01, SEAM.CFIN.MINIMAL.MEDIATOR.01, SEAM.CFIN.TWISTED.RP.01, SEAM.CFIN.RP.DILATION.01, SEAM.CFIN.GAP.PENCIL.01`
 - **v904_healthcode12_diagnostic** — `PRIME.ARITH.HEALTHCODE12.01`
@@ -1891,4 +1893,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v909_finite_wall_closure** — `PRIME.WALL.FINITE_CLOSURE.01`
 - **v910_finite_zero_transfer** — `PRIME.WALL.FINITE_ZERO_TRANSFER.01`
 - **v911_wiring_freedom** — `SEAM.STATE.WIRING.SELECTOR.01`
+- **v912_form_convergence_theorem** — `PRIME.FORM.CONVERGENCE.THEOREM.01`
+- **v913_signed_alignment_localization** — `PRIME.NOGO.SIGNED.ONLY.01`
 

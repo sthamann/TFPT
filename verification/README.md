@@ -252,6 +252,18 @@ Lean source, `lakefile.lean`, `lake-manifest.json`, `lean-toolchain`, the audit
 script and transcript) so the Lean layer has a stable content identity of its
 own, separate from the TeX/Python `manifest.sha256`.
 
+**Cofinal PREDEFINED hardening (2026-08-13).**
+`TfptCarrier/CofinalPredefinition.lean` corrects the earlier claim that
+`CofinalHypothesis` field order itself enforced sign-independent construction.
+The mathematical theorem is now also exposed with explicit fixed `idx`; a
+kernel-checked counterexample shows the old payload accepts sign mining; and
+the hardened wrapper requires a named abstract
+`NoninterferenceContract.Predefined A idx` certificate. Lean checks the
+certificate's presence and type, but the actual source boundary/provenance is
+an external audit premise unless the construction language is formalized.
+Ordinary quantifier order alone is not computational noninterference. No RH
+claim or status-marker move follows.
+
 A *future* hardening target (not a blocker for the present script-certified
 status): formalise the E8 lattice/glue certificate of `v1_e8_glue.py` in Lean.
 Today the E8 glue is **script-certified** (240 roots, Gram evenness,

@@ -87,6 +87,14 @@ content sits in the supply soundness and the v-floor, which is why
 the controls attack exactly those.  RNG: none except the declared
 scramble control (seed 1).
 
+PINNING DISCLOSURE (meta-audit CCCXXXVI, 2026-08-13): the executed
+gates of this module pin ONLY the reduced frozen subset (X1 demands
+len(matched) >= 4 on the SUB_GRAM = 10 / N_STEPS = 7 / SUB_W2 = 6
+subset); the FULL census 39/39 + 8/8 enters as a CITED premise and
+is NOT pinned by any executed predicate -- a false cited full census
+would not fail this module.  The full-census statement rests on the
+frozen experiments runs and their SPEC SHAs, not on this gate.
+
 CACHE REBUILD (disclosed builder): python v909_finite_wall_closure.py
 --rebuild-cache recomputes the 7000 ordinates with mpmath.zetazero at
 dps 15 (~2 min) and rewrites verification/verified_zeros_n7000.json;
@@ -1159,7 +1167,8 @@ def run():
     matched = sorted(step_kz & pay_kz & w2_kz)
     check("X1 composed census on the matched subset: %d rungs with "
           "all three faces certified (kz %s); FULL frozen census "
-          "CITED: 39/39 matched surface + 8/8 deep (CXCV V4 / CCV)"
+          "CITED, not pinned by this gate: 39/39 matched surface "
+          "+ 8/8 deep (CXCV V4 / CCV)"
           % (len(matched), matched), len(matched) >= 4)
 
     # ------------------------------------------------------------ M

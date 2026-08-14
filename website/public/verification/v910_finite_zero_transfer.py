@@ -54,6 +54,16 @@ anchor (the heart ward); measured m appears only as truth column,
 soundness bar and denominator; T_req is read off the certificate
 inequality only.  RNG: none except the declared jitter control
 (seed 1).  Python-only per GATE.WOLFRAM.02.  NO marker moves.
+
+PINNING DISCLOSURE (meta-audit CCCXXXVI, 2026-08-13): H2 and F1 are
+statement-recording gates (check(..., True)); the executed
+predicates pin only the reduced 12-rung / 7000-ordinate shallow end
+(heart ward, soundness, anchor closure census, the one-sided
+H-consistency ward against the cited boundary 254, and the subset
+ratio growth F2).  H(gamma_2M) = 1256, H(gamma_2e7) = 2806 and the
+full-ladder fits +1.228 / +0.897 are CITED premises NOT pinned by
+this module -- a false cited envelope or law would not fail the
+gate; they rest on the frozen experiments run (SPEC 40a7b5c3).
 """
 
 import math
@@ -281,8 +291,9 @@ def run():
              H_CITED[1], H_CITED[2]))
     check("H2 transfer-law statement recorded: ZerosCertified(T) "
           "AND TailEnvelope(T) => M_h > 0 for all deployed h <= "
-          "H(T); H(gamma_7000/2M/2e7) = %d/%d/%d (cited); "
-          "hypotheses H1-H4 as in the frozen run" % H_CITED, True)
+          "H(T); H(gamma_7000/2M/2e7) = %d/%d/%d (cited, not "
+          "pinned by this gate); hypotheses H1-H4 as in the "
+          "frozen run" % H_CITED, True)
 
     # ------------------------------------------------------------ F
     section("F -- the subset trend (typed) vs the frozen-run laws")
@@ -305,7 +316,8 @@ def run():
           % (b_r, r2_r, LAW_CITED[1]))
     check("F1 typed: subset trend recorded (slopes %+.2f / %+.2f "
           "dex/ln h; the citable laws are the full-ladder frozen "
-          "fits)" % (b_t, b_r), True)
+          "fits -- cited, not pinned by this gate)"
+          % (b_t, b_r), True)
     check("F2 the ratio grows on the subset (slope > 0): the "
           "local-sampling world (constant ratio) is refuted on "
           "the deployed ladder", b_r > 0.0)
