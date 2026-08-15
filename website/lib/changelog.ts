@@ -43,6 +43,977 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-15",
+    "dateLabel": "2026-08-15 · CIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the boundary-and-resolvent sync — discovery freeze rounds one-hundred-eleven and one-hundred-twelve synced into every live surface; "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " only — TWO frozen probes, NO promotion, NO module, NO ledger row, NO marker moved, NO gate closed or narrowed, suite unchanged at "
+      },
+      {
+        "k": "m",
+        "v": "906"
+      },
+      {
+        "k": "t",
+        "v": ", NO RH claim in any direction; both source probes re-run green before any edit ("
+      },
+      {
+        "k": "c",
+        "v": "unpriced_ classes_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "88"
+      },
+      {
+        "k": "t",
+        "v": " s; "
+      },
+      {
+        "k": "c",
+        "v": "resolvent_ closure_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "36/36"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "266"
+      },
+      {
+        "k": "t",
+        "v": " s): (1) ROUND 111 (note CDXI, contract PRIME.UNPRICED.CLASSES.01, "
+      },
+      {
+        "k": "c",
+        "v": "unpriced_ classes_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": " gates, "
+      },
+      {
+        "k": "m",
+        "v": "88"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "ec787fc5"
+      },
+      {
+        "k": "t",
+        "v": ", deterministic re-run bit-identical, verdict UNPRICED-ADJUDICATED — tally "
+      },
+      {
+        "k": "m",
+        "v": "25 \\to 30"
+      },
+      {
+        "k": "t",
+        "v": " candidates, "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " PASS): the five argument classes the round-108 audit named as genuinely OUTSIDE the atlas enumeration are all adjudicated and killed, none surviving as an open lever; (U-A, THE HEADLINE — UA-RATE-IS-ZERO-CURRENCY) Zagier's published horocycle RH-equivalence (Zagier 1979/81: "
+      },
+      {
+        "k": "m",
+        "v": "m_y(f) = m(f) + o(y^{1/2})"
+      },
+      {
+        "k": "t",
+        "v": " unconditional, RH "
+      },
+      {
+        "k": "m",
+        "v": "\\iff"
+      },
+      {
+        "k": "t",
+        "v": " error "
+      },
+      {
+        "k": "m",
+        "v": "O(y^{3/4-\\varepsilon})"
+      },
+      {
+        "k": "t",
+        "v": "; Sarnak CPAM 34 (1981); Verjovsky 1994) — a published RH-equivalence NEVER ADJUDICATED UNTIL NOW, confirmed absent from every atlas artifact; the instrument built (incomplete Eisenstein series "
+      },
+      {
+        "k": "m",
+        "v": "\\psi(t) = t^2 e^{-t}"
+      },
+      {
+        "k": "t",
+        "v": ", horocycle integral "
+      },
+      {
+        "k": "m",
+        "v": "= 3/\\pi"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " scattering contour, warded two-route: dev "
+      },
+      {
+        "k": "m",
+        "v": "\\le 1.5\\times10^{-8}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "|\\varphi(1/2+it)| = 1"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "9.9\\times10^{-32}"
+      },
+      {
+        "k": "t",
+        "v": " — the unconditional "
+      },
+      {
+        "k": "m",
+        "v": "1/2"
+      },
+      {
+        "k": "t",
+        "v": " exponent is UNITARY, no spectral gap) measures the deep-window exponent "
+      },
+      {
+        "k": "m",
+        "v": "0.7451"
+      },
+      {
+        "k": "t",
+        "v": " (the RH-range "
+      },
+      {
+        "k": "m",
+        "v": "3/4"
+      },
+      {
+        "k": "t",
+        "v": " in the classically verified region) and, on planted-zero synthetic scattering worlds at "
+      },
+      {
+        "k": "m",
+        "v": "\\beta = 0.6/0.75/0.9"
+      },
+      {
+        "k": "t",
+        "v": ", the exponents "
+      },
+      {
+        "k": "m",
+        "v": "0.6971/0.6222/0.5473"
+      },
+      {
+        "k": "t",
+        "v": " against the law "
+      },
+      {
+        "k": "m",
+        "v": "1 - \\beta/2"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "|"
+      },
+      {
+        "k": "t",
+        "v": "dev"
+      },
+      {
+        "k": "m",
+        "v": "| \\le 0.0029"
+      },
+      {
+        "k": "t",
+        "v": ") — THE HOROCYCLE RATE IS EXACTLY THE AFFINE REPARAMETRIZATION "
+      },
+      {
+        "k": "m",
+        "v": "\\theta = 1 - \\Theta/2"
+      },
+      {
+        "k": "t",
+        "v": " OF "
+      },
+      {
+        "k": "m",
+        "v": "\\sup\\operatorname{Re}\\rho"
+      },
+      {
+        "k": "t",
+        "v": ": the emptied E2 zero-free/density currency, alignment content linear "
+      },
+      {
+        "k": "m",
+        "v": "\\log y"
+      },
+      {
+        "k": "t",
+        "v": " phases (the round-97 class, "
+      },
+      {
+        "k": "m",
+        "v": "\\times8.2"
+      },
+      {
+        "k": "t",
+        "v": "); rigidity technology rate-free (Ratner) or non-horospherical (Lindenstrauss–Mohammadi–Wang CRAS 361 (2023): unspecified exponents, explicitly beyond the horospherical case — the modular horocycle IS horospherical, where the classical spectral "
+      },
+      {
+        "k": "m",
+        "v": "1/2"
+      },
+      {
+        "k": "t",
+        "v": " has stood since 1981); DISGUISE by rule R1; (U-B — UB-INAPPLICABLE-BY-TYPE) the zero set of Hardy "
+      },
+      {
+        "k": "m",
+        "v": "Z"
+      },
+      {
+        "k": "t",
+        "v": " is infinite ("
+      },
+      {
+        "k": "m",
+        "v": "29"
+      },
+      {
+        "k": "t",
+        "v": " sign changes on "
+      },
+      {
+        "k": "m",
+        "v": "[0,100]"
+      },
+      {
+        "k": "t",
+        "v": " measured "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the RvM count) while o-minimal definable sets have finitely many connected components — "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta"
+      },
+      {
+        "k": "t",
+        "v": " on the line is definable in NO o-minimal structure; the serious adjacent result verified and typed (Masser JNT 131 (2011): rational points on the GRAPH, "
+      },
+      {
+        "k": "m",
+        "v": "\\le C(\\log D/\\log\\log D)^2"
+      },
+      {
+        "k": "t",
+        "v": " — count currency, position-free, unsigned); (U-C — UC-HOST-GAP-CONFIRMED) "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda \\ge 1/4"
+      },
+      {
+        "k": "t",
+        "v": " with positive multiplicity forces the line (the Selberg-zeta precedent) but "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda = 1/5"
+      },
+      {
+        "k": "t",
+        "v": " with positive multiplicity yields the real pair "
+      },
+      {
+        "k": "m",
+        "v": "1/2 \\pm \\sqrt{5}/10"
+      },
+      {
+        "k": "t",
+        "v": " exactly — positivity alone does not force the line, it needs identity AND the "
+      },
+      {
+        "k": "m",
+        "v": "1/4"
+      },
+      {
+        "k": "t",
+        "v": " gap, which at the arithmetic quotients is Selberg's own OPEN conjecture (Kim–Sarnak floor "
+      },
+      {
+        "k": "m",
+        "v": "975/4096"
+      },
+      {
+        "k": "t",
+        "v": ", deficit "
+      },
+      {
+        "k": "m",
+        "v": "49/4096"
+      },
+      {
+        "k": "t",
+        "v": " exact); for "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta"
+      },
+      {
+        "k": "t",
+        "v": " the host identity is the mountain (Connes' trace formula "
+      },
+      {
+        "k": "m",
+        "v": "\\iff"
+      },
+      {
+        "k": "t",
+        "v": " RH) — Stage 1 of the roadmap in another language, no new lever; (U-D — UD-MAGNITUDE-LAW-ONLY) every proven FHK-type deliverable (ABBRS 2019, FHK I"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "II, AOR moments; Harper RH-conditional) is a "
+      },
+      {
+        "k": "m",
+        "v": "|\\zeta|"
+      },
+      {
+        "k": "t",
+        "v": "-magnitude statement IN LAW "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " the emptied E1 class; the exception check closed exactly: iid uniform phases have ZERO signed expectation and a flip-invariant law — the randomized Euler product carries NO signed alignment observable; (U-E — UE-CANCELLATION-ONLY-INEFFECTIVE) Green–Tao "
+      },
+      {
+        "k": "m",
+        "v": "\\log^{-A}"
+      },
+      {
+        "k": "t",
+        "v": " savings long-interval with Siegel–Walfisz-ineffective constants, MRTTZ 2023 qualitative "
+      },
+      {
+        "k": "m",
+        "v": "o(1)"
+      },
+      {
+        "k": "t",
+        "v": " on average, the charitable "
+      },
+      {
+        "k": "m",
+        "v": "C = 1"
+      },
+      {
+        "k": "t",
+        "v": " envelope table showing the ENTIRE content in the constant, NO effective constant for "
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda"
+      },
+      {
+        "k": "t",
+        "v": "-nilsequence correlations, and the sharpest signed corollary of "
+      },
+      {
+        "k": "m",
+        "v": "|X| \\le \\mathrm{env}"
+      },
+      {
+        "k": "t",
+        "v": " being "
+      },
+      {
+        "k": "m",
+        "v": "X \\ge -\\mathrm{env}"
+      },
+      {
+        "k": "t",
+        "v": " — orientation exactly at envelope strength, "
+      },
+      {
+        "k": "m",
+        "v": "\\times8.2"
+      },
+      {
+        "k": "t",
+        "v": " short; THE CLOSING SENTENCE: the atlas stands at "
+      },
+      {
+        "k": "m",
+        "v": "30"
+      },
+      {
+        "k": "t",
+        "v": " candidates, "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " PASS, with the vocabulary boundary itself now adjudicated — every named argument class inside AND outside the original enumeration is formally priced; (2) ROUND 112 (note CDXII, contracts PRIME.SAFEPOINT.RESOLVENT.CLOSURE.01 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " PRIME.CONNES.GROUNDSPACE.BLOCK.01, "
+      },
+      {
+        "k": "c",
+        "v": "resolvent_ closure_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "36/36"
+      },
+      {
+        "k": "t",
+        "v": " gates, "
+      },
+      {
+        "k": "m",
+        "v": "262"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "ea7863f2"
+      },
+      {
+        "k": "t",
+        "v": ", deterministic re-run identical, two disclosed X1 tail-cut amendments; composite RESOLVENT-TRANSCRIPTION "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " CROSSCARRIER-BOUNDS "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " JENSEN-NO-DICTIONARY): THE IDENTIFICATION — arXiv:2511.22755's operator (CCM's rank-one "
+      },
+      {
+        "k": "m",
+        "v": "D_{\\log}^{(\\lambda,N)} = D_{\\log} - |D_{\\log}\\xi\\rangle\\langle\\delta_N|"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\xi"
+      },
+      {
+        "k": "t",
+        "v": " the lowest eigenvector of the Weil form, and its "
+      },
+      {
+        "k": "m",
+        "v": "\\det_{\\mathrm{reg}}"
+      },
+      {
+        "k": "t",
+        "v": " construction) is, MODE FOR MODE, the corpus's own round-89 record extremal family (lattice "
+      },
+      {
+        "k": "m",
+        "v": "\\pi k/a"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "a = \\tfrac12\\log x"
+      },
+      {
+        "k": "t",
+        "v": "; the round-89 arbiter quotient IS the literal CCM operator); built explicitly at "
+      },
+      {
+        "k": "m",
+        "v": "x = 3, 5"
+      },
+      {
+        "k": "t",
+        "v": " and certified: kernel "
+      },
+      {
+        "k": "m",
+        "v": "M\\xi = 0"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "10^{-68}"
+      },
+      {
+        "k": "t",
+        "v": ", spectrum "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " record zeros ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "x = 5"
+      },
+      {
+        "k": "t",
+        "v": ", rel "
+      },
+      {
+        "k": "m",
+        "v": "2.7\\times10^{-8}"
+      },
+      {
+        "k": "t",
+        "v": "), their "
+      },
+      {
+        "k": "m",
+        "v": "\\det_{\\mathrm{reg}}"
+      },
+      {
+        "k": "t",
+        "v": " formula executable as a rank-one determinant identity to "
+      },
+      {
+        "k": "m",
+        "v": "10^{-75}"
+      },
+      {
+        "k": "t",
+        "v": " — THE CORPUS HAD INDEPENDENTLY BUILT CCM'S OPERATOR BEFORE THEIR PAPER; THE GROUNDSPACE-BLOCK VARIANT ELIMINATES CCM'S SIMPLICITY AND EVENNESS HYPOTHESES AT CONSTRUCTION LEVEL ("
+      },
+      {
+        "k": "m",
+        "v": "M_{\\mathrm{blk}} = D(I - P)"
+      },
+      {
+        "k": "t",
+        "v": " via the biorthogonal block projector, basis-rotation-invariant to "
+      },
+      {
+        "k": "m",
+        "v": "1.5\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": ", STABLE where the simple selection swings "
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": " under "
+      },
+      {
+        "k": "m",
+        "v": "10^{-10}"
+      },
+      {
+        "k": "t",
+        "v": " perturbations, the exterior/matrix-Wronskian identity "
+      },
+      {
+        "k": "m",
+        "v": "\\det(M_{\\mathrm{blk}} - z) = \\det(D - z)\\det(I_2 - W(z))"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "5.2\\times10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": ", PD quotient metric; the remaining realness step on "
+      },
+      {
+        "k": "m",
+        "v": "E/K"
+      },
+      {
+        "k": "t",
+        "v": " is the named unproven block-CCM lemma, finite-dimensional and zeta-free); THE KILL: the pins converge "
+      },
+      {
+        "k": "m",
+        "v": "16/16"
+      },
+      {
+        "k": "t",
+        "v": " (slope "
+      },
+      {
+        "k": "m",
+        "v": "-0.65"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-screen "
+      },
+      {
+        "k": "m",
+        "v": "0/16"
+      },
+      {
+        "k": "t",
+        "v": ") BUT THE Z1 SCREEN FIRES — band pins equal cache partial sums to rel "
+      },
+      {
+        "k": "m",
+        "v": "7.7\\times10^{-12}/9.4\\times10^{-12}"
+      },
+      {
+        "k": "t",
+        "v": ", the exact round-89 conviction INHERITED BY THE LITERAL CCM CARRIER; side-by-side at matched depth the Krein benchmark extrapolates genuinely (max dev "
+      },
+      {
+        "k": "m",
+        "v": "2.9\\times10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": ") while the CCM carrier band-transcribes ("
+      },
+      {
+        "k": "m",
+        "v": "1.3\\times10^{-1}"
+      },
+      {
+        "k": "t",
+        "v": ") — THE KREIN CARRIER REMAINS THE ONLY NON-TRANSCRIBING ATTACK SURFACE IN THE CORPUS; CROSSCARRIER-BOUNDS: "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta_m = \\operatorname{Tr}[A_x^{m+1}]"
+      },
+      {
+        "k": "t",
+        "v": " vs the round-102 Hausdorff "
+      },
+      {
+        "k": "m",
+        "v": "b_m(256)"
+      },
+      {
+        "k": "t",
+        "v": " — "
+      },
+      {
+        "k": "m",
+        "v": "17/17"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "m"
+      },
+      {
+        "k": "t",
+        "v": "-rows MONOTONE LOWER BOUNDS FROM BELOW, deficit "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the RvM tail beyond the band edge (median ratio "
+      },
+      {
+        "k": "m",
+        "v": "0.786"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "11/41"
+      },
+      {
+        "k": "t",
+        "v": " roots beyond the band kept in all sums — the operator mirror of the Nyquist excess): the Hausdorff field and the CCM operator are ONE OBJECT ONLY IN THE LIMIT — at finite depth the operator is a band-truncated basis of the field from below (all "
+      },
+      {
+        "k": "m",
+        "v": "45"
+      },
+      {
+        "k": "t",
+        "v": " operator cells "
+      },
+      {
+        "k": "m",
+        "v": "n + k \\le 8"
+      },
+      {
+        "k": "t",
+        "v": " nonnegative; a third carrier confirms via Krein "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-derivative moments to "
+      },
+      {
+        "k": "m",
+        "v": "8.7\\times10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "2.7\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " within the bias model); THE JENSEN WEDGE (arXiv:2608.08682: "
+      },
+      {
+        "k": "m",
+        "v": "n^3\\log^2(n+2) \\ge K d^5 \\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " hyperbolic, polynomially improving GORTW) verified verbatim but typed NO-DICTIONARY — the only corpus bridge (the Li transform at "
+      },
+      {
+        "k": "m",
+        "v": "a = 1/4"
+      },
+      {
+        "k": "t",
+        "v": ") is alternating-signed, so by round-108 form-locality the wedge adds NO unconditional Hausdorff cells; THE FORM-LOGIC GATES verify the architecture's selling point exactly (F1: one Stieltjes representation would generate all three positivity families simultaneously; F2: finite certificates are form-local — Pick fires at "
+      },
+      {
+        "k": "m",
+        "v": "N = 5"
+      },
+      {
+        "k": "t",
+        "v": " where Hausdorff stays positive to depth "
+      },
+      {
+        "k": "m",
+        "v": "40"
+      },
+      {
+        "k": "t",
+        "v": ") — the logic is correct, AND PRECISELY THEREFORE WORTHLESS WITHOUT A NON-TRANSCRIBING CARRIER; the remaining analytic theorem is DOUBLY NAMED: CCM's own 7–8 prolate approximation "
+      },
+      {
+        "k": "m",
+        "v": "\\iff"
+      },
+      {
+        "k": "t",
+        "v": " the corpus's round-90 Weyl-disk contraction, pointwise at the pins; (3) SURFACES SYNCED IN THIS ENTRY: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " gains the sandbox diary subsection “The vocabulary boundary priced, and the resolvent closure adjudicated: the CCM operator is the corpus's own record family”; the end-form article gains 8.16 with the abstract status sentences and the traceability rounds 111–112 (with the Zagier 1979/81, Sarnak CPAM 34 (1981), Verjovsky Kodai 17 (1994), Lindenstrauss–Mohammadi–Wang CRAS 361 (2023), Masser JNT 131 (2011), Kim–Sarnak, arXiv:2511.22755 and arXiv:2608.08682 citations); the Anthropic email draft gains one status paragraph (the tally-30 close "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the CCM identification as the collaborator hook: their operator is the corpus's record family, and the corpus's machine eliminates their simplicity hypothesis); the website prime-front page gains chapter 40 (the live-updates chapter renumbered "
+      },
+      {
+        "k": "m",
+        "v": "40 \\to 41"
+      },
+      {
+        "k": "t",
+        "v": ") and one consolidated sandbox feed entry (verdict RESOLVENT-TRANSCRIPTION, new enum, script "
+      },
+      {
+        "k": "c",
+        "v": "resolvent_closure_probe.py"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "c",
+        "v": "website/lib/changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh gen"
+      },
+      {
+        "k": "t",
+        "v": "; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-15",
     "dateLabel": "2026-08-15 · CII",
     "heading": [
       {

@@ -2416,7 +2416,9 @@ export default function PrimeFrontPage() {
 
       <FrontierAuditsSection />
 
-      {/* 40 — Live updates */}
+      <UnpricedResolventSection />
+
+      {/* 41 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -2425,7 +2427,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              40 · Live updates
+              41 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -4048,6 +4050,166 @@ function FrontierAuditsSection() {
           reading is structure, not progress. RH is neither proven nor
           disproven; all of it is sandbox — no claim moves until it is
           promoted.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function UnpricedResolventSection() {
+  return (
+    <section
+      id="unpriced-resolvent"
+      aria-labelledby="unpriced-resolvent-heading"
+      className="scroll-mt-24 border-t border-slate-800/60 py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            40 · The vocabulary boundary priced, and the resolvent closure ·
+            sandbox probes
+          </span>
+          <StatusBadge badge="sandbox" />
+        </div>
+        <h2
+          id="unpriced-resolvent-heading"
+          className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
+        >
+          The atlas at 30 candidates, 0 pass — and the CCM operator is the
+          corpus&apos;s own record family
+        </h2>
+        <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
+          <span className="font-medium text-sky-300/90">In plain words: </span>
+          two discovery freeze rounds (rounds one-hundred-eleven and
+          one-hundred-twelve, 2026-08-15, concurrent lanes) close the two
+          flanks the audits left open: the five argument classes named as
+          genuinely outside the atlas enumeration are all adjudicated and
+          killed, and the constructive resolvent-closure architecture is
+          built and adjudicated — with the striking identification that the
+          operator of the new Connes–Consani–Moscovici paper
+          (arXiv:2511.22755) is, mode for mode, an object this diary had
+          already built and frozen as its round-89 record. Everything here
+          is sandbox: two frozen probes, no promotion, no marker moves —
+          the suite stays at 906. No RH claim in any direction.
+        </p>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
+          <p>
+            <strong className="font-medium text-amber-200">
+              The unpriced classes adjudicated (round 111,
+              unpriced_classes_probe.py, 26/26, UNPRICED-ADJUDICATED —
+              tally 25 → 30, 0 PASS):
+            </strong>{" "}
+            all five classes outside the original enumeration are priced
+            and killed; none survives as an open lever. The headline is{" "}
+            <strong className="font-medium text-slate-100">
+              Zagier&apos;s published horocycle RH-equivalence
+            </strong>{" "}
+            (Zagier 1979/81; Sarnak 1981; Verjovsky 1994) — a published
+            RH-equivalence never adjudicated until now: the instrument
+            measures the deep-window error exponent at{" "}
+            <strong className="font-medium text-slate-100">0.7451</strong>{" "}
+            (the RH-range 3/4 in the classically verified region), and
+            planted-zero synthetic worlds recover the exact affine law{" "}
+            <strong className="font-medium text-slate-100">
+              θ = 1 − Θ/2 to sup Re ρ
+            </strong>{" "}
+            (|dev| ≤ 0.0029) — the horocycle rate <em>is</em> the emptied
+            zero-free/density currency, and the rigidity technology that
+            would improve it is rate-free (Ratner) or non-horospherical
+            (the 2023 effective results explicitly exclude the
+            horospherical case, which the modular horocycle is; the
+            classical spectral 1/2 has stood since 1981). The other four:
+            o-minimal counting is{" "}
+            <em>inapplicable by type</em> (ζ&apos;s zero set is infinite,
+            o-minimal sets have finitely many components; Masser 2011
+            counts rational points on the graph — count currency,
+            position-free, unsigned); bigger-group representation
+            positivity has its <em>host gap confirmed</em> (λ ≥ 1/4 with
+            positive multiplicity forces the line — the Selberg-zeta
+            precedent — but λ = 1/5 yields a real pair exactly, and at the
+            arithmetic quotients the 1/4 gap is Selberg&apos;s own open
+            conjecture, Kim–Sarnak deficit 49/4096 exact);
+            GMC/Fyodorov–Hiary–Keating is <em>magnitude-law-only</em> (the
+            randomized Euler product carries zero signed alignment
+            observable — iid phases have zero signed expectation and a
+            flip-invariant law); and higher-order Fourier uniformity is{" "}
+            <em>cancellation-only and ineffective</em> (the entire content
+            sits in Siegel–Walfisz-ineffective constants; the sharpest
+            signed corollary of |X| ≤ env is X ≥ −env).{" "}
+            <strong className="font-medium text-slate-100">
+              The atlas stands at 30 candidates, 0 pass, with the
+              vocabulary boundary itself now adjudicated — every named
+              argument class inside and outside the original enumeration is
+              formally priced.
+            </strong>
+          </p>
+          <p>
+            <strong className="font-medium text-emerald-200">
+              The resolvent closure adjudicated (round 112,
+              resolvent_closure_probe.py, 36/36, RESOLVENT-TRANSCRIPTION +
+              CROSSCARRIER-BOUNDS + JENSEN-NO-DICTIONARY):
+            </strong>{" "}
+            the identification first —{" "}
+            <strong className="font-medium text-slate-100">
+              arXiv:2511.22755&apos;s operator (CCM&apos;s det_reg
+              construction) is, mode for mode, the corpus&apos;s own
+              round-89 record extremal family
+            </strong>
+            : kernel to 10⁻⁶⁸, spectrum equal to the record zeros (10/10,
+            rel 2.7×10⁻⁸), their det_reg formula executable as a rank-one
+            determinant identity to 10⁻⁷⁵ — the corpus had independently
+            built CCM&apos;s operator before their paper. The
+            groundspace-block variant{" "}
+            <strong className="font-medium text-slate-100">
+              eliminates CCM&apos;s simplicity and evenness hypotheses at
+              construction level
+            </strong>{" "}
+            (basis-rotation-invariant to 1.5×10⁻¹⁶, stable where the
+            simple selection swings O(1); the exterior-determinant
+            identity to 5.2×10⁻¹⁵; the remaining realness step is the
+            named block-CCM lemma, finite-dimensional and ζ-free). The
+            pins converge 16/16 —{" "}
+            <strong className="font-medium text-slate-100">
+              but the Z1 screen fires
+            </strong>
+            : band pins equal cache partial sums to rel 7.7×10⁻¹² — the
+            round-89 transcription conviction, inherited by the literal
+            CCM carrier; side by side, the Krein benchmark extrapolates
+            genuinely (2.9×10⁻⁴) while the CCM carrier band-transcribes
+            (1.3×10⁻¹) —{" "}
+            <strong className="font-medium text-slate-100">
+              the Krein carrier remains the only non-transcribing attack
+              surface in the corpus
+            </strong>
+            . The cross-carrier test: 17/17 operator moments are monotone
+            lower bounds of the Hausdorff moments, the deficit exactly the
+            RvM band tail (median ratio 0.786) — one object only in the
+            limit. The Jensen hyperbolicity wedge (arXiv:2608.08682) is
+            verified verbatim but typed NO-DICTIONARY — its only corpus
+            bridge is alternating-signed, so by form-locality it adds no
+            unconditional Hausdorff cells. The architecture&apos;s selling
+            point is verified as logic and priced: one Stieltjes
+            representation would generate all three positivity families at
+            once, while finite certificates are form-local — correct, and
+            precisely therefore worthless without a non-transcribing
+            carrier. The remaining theorem is doubly named:{" "}
+            <strong className="font-medium text-slate-100">
+              CCM&apos;s own §7–8 prolate approximation — equivalently the
+              round-90 Weyl-disk contraction, pointwise at the pins
+            </strong>
+            .
+          </p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
+          Honest fence: the identification is a finite mode-for-mode
+          certification at the built rungs, never a claim about the limit;
+          the transcription conviction types the finite ladder, not
+          CCM&apos;s theorem; and the killed classes are priced against
+          the corpus&apos;s own measured budget, with every citation
+          verified against its source. RH is neither proven nor disproven;
+          all of it is sandbox — no claim moves until it is promoted.
         </p>
       </div>
     </section>
