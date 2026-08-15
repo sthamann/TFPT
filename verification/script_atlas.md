@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`906` registered scripts · `1057` ledger claims · `10` clusters.
+`908` registered scripts · `1059` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (425 scripts)
+### `core` — Compiler core & the E₈ glue  (427 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -861,6 +861,10 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v848_extraction_chain, FORM.PRIME.COFINAL.WEIL.01, v563, v630, v643, v716, v762, v848 · cited: 3 e8 audit bootstrap, research contracts
 - **v913_signed_alignment_localization** [E/O] `PRIME.NOGO.SIGNED.ONLY.01` — ein NO-GO-/TYPISIERUNGS-Modul: keine Positivität, kein Intervall, kein Zertifikat, KEIN Marker bewegt**. DIE LOKALISIERUNG: jedes Argument, das die deployte Budget-Ungleichung (L) 
   - deps: v848_extraction_chain, v909_finite_wall_closure, v912_form_convergence_theorem, v563, v848, v909, v912, note chain CCCLIX/CCCLXVI/CCCLXVIII/CCCLXXI/CCCLXXII · cited: 3 e8 audit bootstrap
+- **v914_pascal_region_theorem** [E] `PRIME.PASCAL.REGION.THEOREM.01` — die größte BEWIESENE Positivitätsregion der Primfront-Kampagne, als zertifiziert-endliches Resultat promoviert**. DIE AUSSAGE, bewiesen allein aus zitierten externen Inputs: mit a 
+  - deps: PRIME.BUGHUNT2.R86.R105.01 note CDIX, rounds 103/106/108/109 (notes CI/CII), v594 (pinning style) · cited: 3 e8 audit bootstrap
+- **v915_eulerpick_certified_floors** [E/O] `PRIME.EULERPICK.CERTIFIED.FLOORS.01` — auswärts gerundete Intervall-Positivitätszertifikate für die ersten vier Sprossen der Falsifikationsleiter, mit offengelegtem Recompute/Pin-Split**. DAS OBJEKT (V0c, Runde 92 audit
+  - deps: PRIME.EULERPICK.CERTIFIED.LADDER.01 note CCCXCVI, PRIME.EULERPICK.N4.SIEVE.01 note CDI, PRIME.SCREW.VERBLUNSKY.INVARIANT.01 note CCCXCIII (V0c), round 108 (note CDX reach cap), v563 (B_PSI pin), v594 (Buethe pin) · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1883,8 +1887,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v902_wall_relocation_map** — `PRIME.CASE.EDGE.CHRISTOFFEL.01, PRIME.PORT.GRAM.COMPLETION.01, PRIME.PORT.RADAU.WEIGHT.01`
-- **v903_seam_rp_exclusion** — `SEAM.STATE.DERIVATION.01, SEAM.CFIN.MIXING.NORMALIZATION.01, SEAM.CFIN.MINIMAL.MEDIATOR.01, SEAM.CFIN.TWISTED.RP.01, SEAM.CFIN.RP.DILATION.01, SEAM.CFIN.GAP.PENCIL.01`
 - **v904_healthcode12_diagnostic** — `PRIME.ARITH.HEALTHCODE12.01`
 - **v905_bfloor_ideal_certificate** — `PRIME.PORT.BFLOOR.PG.01, PRIME.PORT.BFLOOR.PG.IVAL.01`
 - **v906_tail_cartography** — `PRIME.PORT.TAILSIGN.01, PRIME.PORT.TAILSIGN.02, PRIME.PORT.PG.SCHUR.01, PRIME.PORT.TAIL.ABEL.01, PRIME.PORT.TAIL.SEGSPLIT.01, PRIME.PORT.TAIL.OSCPAIR.01`
@@ -1895,4 +1897,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v911_wiring_freedom** — `SEAM.STATE.WIRING.SELECTOR.01`
 - **v912_form_convergence_theorem** — `PRIME.FORM.CONVERGENCE.THEOREM.01`
 - **v913_signed_alignment_localization** — `PRIME.NOGO.SIGNED.ONLY.01`
+- **v914_pascal_region_theorem** — `PRIME.PASCAL.REGION.THEOREM.01`
+- **v915_eulerpick_certified_floors** — `PRIME.EULERPICK.CERTIFIED.FLOORS.01`
 

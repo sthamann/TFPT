@@ -43,6 +43,769 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-15",
+    "dateLabel": "2026-08-15 · CIV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the weekend promotion — the two durable proven results of the discovery weekend graduate from "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " into the load-bearing suite as "
+      },
+      {
+        "k": "c",
+        "v": "v914_pascal_region_theorem.py"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "v915_eulerpick_certified_floors.py"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "906 \\to 908"
+      },
+      {
+        "k": "t",
+        "v": ", both modules green standalone ("
+      },
+      {
+        "k": "m",
+        "v": "18/18"
+      },
+      {
+        "k": "t",
+        "v": " in "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}20"
+      },
+      {
+        "k": "t",
+        "v": " s; "
+      },
+      {
+        "k": "m",
+        "v": "15/15"
+      },
+      {
+        "k": "t",
+        "v": " in "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}40"
+      },
+      {
+        "k": "t",
+        "v": " s) and registered in "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": ", the script registry and the status ledger (new rows PRIME.PASCAL.REGION.THEOREM.01 [E] and PRIME.EULERPICK.CERTIFIED.FLOORS.01 [E], both typed as certified-finite results with their citations disclosed and explicitly NOT as RH-evidence rows); all four source probes re-run green before any edit ("
+      },
+      {
+        "k": "c",
+        "v": "moonshot_ sol_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "0.4"
+      },
+      {
+        "k": "t",
+        "v": " s; "
+      },
+      {
+        "k": "c",
+        "v": "moonshot_ o3_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "16/16"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "100.8"
+      },
+      {
+        "k": "t",
+        "v": " s, frontier verbatim; "
+      },
+      {
+        "k": "c",
+        "v": "eulerpick_ ladder_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "31/31"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "102.8"
+      },
+      {
+        "k": "t",
+        "v": " s; the round-100 "
+      },
+      {
+        "k": "m",
+        "v": "10^{13}"
+      },
+      {
+        "k": "t",
+        "v": " compiled sieve NOT re-run — its "
+      },
+      {
+        "k": "c",
+        "v": "sieve4_run1.log"
+      },
+      {
+        "k": "t",
+        "v": " run-of-record is pinned per the PINNING DISCLOSURE convention); NO RH claim in any direction, no other marker moved, no gate closed or narrowed: (1) "
+      },
+      {
+        "k": "c",
+        "v": "v914"
+      },
+      {
+        "k": "t",
+        "v": " THE PASCAL-REGION THEOREM (rounds 103 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " 106): "
+      },
+      {
+        "k": "m",
+        "v": "C_{n,k}(256) > 0"
+      },
+      {
+        "k": "t",
+        "v": " for EVERY "
+      },
+      {
+        "k": "m",
+        "v": "n \\ge 0"
+      },
+      {
+        "k": "t",
+        "v": " and every integer "
+      },
+      {
+        "k": "m",
+        "v": "0 \\le k \\le 7{,}444{,}682{,}106{,}464{,}286{,}365{,}865"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\sim 7.44\\times10^{21}"
+      },
+      {
+        "k": "t",
+        "v": "), proven from cited external inputs alone — Platt–Trudgian 2021 Thm 1 ("
+      },
+      {
+        "k": "m",
+        "v": "T = 3{,}000{,}175{,}332{,}800"
+      },
+      {
+        "k": "t",
+        "v": "), Hasanalizade–Shen–Wong JNT 235 (2022) Corollary 1.2 ("
+      },
+      {
+        "k": "m",
+        "v": "|N(t) - M(t)| \\le 0.1038\\log t + 0.2573\\log\\log t + 9.3675"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "t \\ge e"
+      },
+      {
+        "k": "t",
+        "v": "), Rosser 1941 Thm 19, the classical "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1"
+      },
+      {
+        "k": "t",
+        "v": " isolation; the module recomputes the COMPLETE round-103 four-region partition at every suite run ("
+      },
+      {
+        "k": "m",
+        "v": "B_0(T) = 7.57565571105606088\\times10^{-10}"
+      },
+      {
+        "k": "t",
+        "v": " anchored; decisive ratios "
+      },
+      {
+        "k": "m",
+        "v": "1.876981097339/1.176577026464/335.835/1416.754"
+      },
+      {
+        "k": "t",
+        "v": "; mechanism root "
+      },
+      {
+        "k": "m",
+        "v": "k^* = 1.405443828790708\\times10^{19}"
+      },
+      {
+        "k": "t",
+        "v": "), recomputes the quadratic verification-height law "
+      },
+      {
+        "k": "m",
+        "v": "k_{\\mathrm{front}}(T) = (\\lambda_\\infty + O(1/\\log T))\\,T^2/(a - 1/2)"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_\\infty = 0.226987054723979955"
+      },
+      {
+        "k": "t",
+        "v": " (residual "
+      },
+      {
+        "k": "m",
+        "v": "< 10^{-60}"
+      },
+      {
+        "k": "t",
+        "v": "), pins the 33-cell run-of-record frontier partition and re-proves a frozen 6-of-33 subsample with full "
+      },
+      {
+        "k": "m",
+        "v": "16384"
+      },
+      {
+        "k": "t",
+        "v": "-packet endpoint inequalities INCLUDING the worst cell (endpoint ratio "
+      },
+      {
+        "k": "m",
+        "v": "1.000001535385559"
+      },
+      {
+        "k": "t",
+        "v": "; the next "
+      },
+      {
+        "k": "m",
+        "v": "2\\times10^{-6}"
+      },
+      {
+        "k": "t",
+        "v": " relative step fails — mechanism-exact); THE ROUND-110 HSW ATTRIBUTION FLAG RESOLVED FROM THE PAPER ITSELF: Cor. 1.2 IS the "
+      },
+      {
+        "k": "m",
+        "v": "N(t)"
+      },
+      {
+        "k": "t",
+        "v": " bound with exactly the constants consumed, Cor. 1.4 is the companion "
+      },
+      {
+        "k": "m",
+        "v": "S(t)"
+      },
+      {
+        "k": "t",
+        "v": " bound ("
+      },
+      {
+        "k": "m",
+        "v": "\\min\\{\\ldots + 8.3675,\\; 0.1095\\log t + 0.2042\\log\\log t + 3.0305\\}"
+      },
+      {
+        "k": "t",
+        "v": ") and is NOT used — the probe docstring's “Cor. 1.4 is the corrected replacement” was the slip, the numbers were always right; the old "
+      },
+      {
+        "k": "m",
+        "v": "(0.110, 0.290, 2.290)"
+      },
+      {
+        "k": "t",
+        "v": " constants are the earlier Platt–Trudgian "
+      },
+      {
+        "k": "m",
+        "v": "S(t)"
+      },
+      {
+        "k": "t",
+        "v": " bound whose proof consumed the invalid Cheng–Graham estimate; HONEST TYPING carried in module, ledger and papers: verification-powered, FORM-LOCAL (zero-location content below "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1 = 14.13"
+      },
+      {
+        "k": "t",
+        "v": "; says nothing about screw sections or Weyl disks), the "
+      },
+      {
+        "k": "m",
+        "v": "k \\to \\infty"
+      },
+      {
+        "k": "t",
+        "v": " quantifier untouched, no wall positivity, no zero table, no zeta evaluator — NOT evidence for or against RH; (2) "
+      },
+      {
+        "k": "c",
+        "v": "v915"
+      },
+      {
+        "k": "t",
+        "v": " THE CERTIFIED EULER–PICK FLOORS "
+      },
+      {
+        "k": "m",
+        "v": "N = 1..4"
+      },
+      {
+        "k": "t",
+        "v": " (rounds 95 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " 100): outward-rounded interval positivity certificates with the recomputed/pinned split disclosed exactly — RECOMPUTED in-run: the certificate self-tests, the certified digamma, the own sieve to "
+      },
+      {
+        "k": "m",
+        "v": "1.6\\times10^{7}"
+      },
+      {
+        "k": "t",
+        "v": " with all three cited "
+      },
+      {
+        "k": "m",
+        "v": "\\psi"
+      },
+      {
+        "k": "t",
+        "v": "-bounds warded against own data (Büthe 2018; Rosser–Schoenfeld 1962 Thm 12; Nair 1982), the cap-"
+      },
+      {
+        "k": "m",
+        "v": "4\\times10^{6}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "N \\le 2"
+      },
+      {
+        "k": "t",
+        "v": " and cap-"
+      },
+      {
+        "k": "m",
+        "v": "1.6\\times10^{7}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "N \\le 3"
+      },
+      {
+        "k": "t",
+        "v": " floors reproducing the round-95 record ("
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{lo}_3 = 2.3643695\\times10^{-10}"
+      },
+      {
+        "k": "t",
+        "v": "), the summation-error model of the compiled run re-derived rigorously from the pinned "
+      },
+      {
+        "k": "m",
+        "v": "\\pi(10^{13})"
+      },
+      {
+        "k": "t",
+        "v": " plus an RS–Abel upper bound (no sieve needed), the Nair far-floor necessity (the crude "
+      },
+      {
+        "k": "m",
+        "v": "\\psi \\ge 0"
+      },
+      {
+        "k": "t",
+        "v": " floor blocks "
+      },
+      {
+        "k": "m",
+        "v": "N = 4"
+      },
+      {
+        "k": "t",
+        "v": " at ANY cap) with the corrected budget "
+      },
+      {
+        "k": "m",
+        "v": "X_{\\mathrm{req}}(4) = 10^{11.52}"
+      },
+      {
+        "k": "t",
+        "v": ", the "
+      },
+      {
+        "k": "m",
+        "v": "N = 5"
+      },
+      {
+        "k": "t",
+        "v": " knowledge wall, and a recomputed detection subset ("
+      },
+      {
+        "k": "m",
+        "v": "N^*(5; 0.1) = 3"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "N^*(8; 0.1) = 4"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "N^*(8; 0.4) = 3"
+      },
+      {
+        "k": "t",
+        "v": "); PINNED from run-of-record: the cap-"
+      },
+      {
+        "k": "m",
+        "v": "10^{13}"
+      },
+      {
+        "k": "t",
+        "v": " intervals "
+      },
+      {
+        "k": "m",
+        "v": "N{=}1"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "[4.5917135\\times10^{-2}, 4.5917136\\times10^{-2}]"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "N{=}2"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "[9.0288887\\times10^{-6}, 9.0288888\\times10^{-6}]"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "N{=}3"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "[6.9310239\\times10^{-10}, 6.9310252\\times10^{-10}]"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "N{=}4"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "[8.278338\\times10^{-15}, 1.3840906\\times10^{-14}]"
+      },
+      {
+        "k": "t",
+        "v": " (margin "
+      },
+      {
+        "k": "m",
+        "v": "0.749"
+      },
+      {
+        "k": "t",
+        "v": ") with "
+      },
+      {
+        "k": "m",
+        "v": "\\pi(10^{13}) = 346{,}065{,}536{,}839"
+      },
+      {
+        "k": "t",
+        "v": " reproduced exactly by the recorded instrument; HONEST TYPING (round-108 F3 carried verbatim, no overselling): the falsification channel is DISPROOF-SOUND but REACH-CAPPED at "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma \\sim 5"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": ", far below Platt–Trudgian "
+      },
+      {
+        "k": "m",
+        "v": "3.0\\times10^{12}"
+      },
+      {
+        "k": "t",
+        "v": " — zero live falsification power in the classically certified range; “open and empty” is a theorem given the cited inputs; the channel stays open and EMPTY; (3) SURFACES: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " gains the promotion-of-record notes and "
+      },
+      {
+        "k": "c",
+        "v": "\\veri{}"
+      },
+      {
+        "k": "t",
+        "v": " citations in the owning sandbox-diary subsections (instrument tier; roadmap; frontier audits) with the freeze-time suite counts rephrased honestly ("
+      },
+      {
+        "k": "m",
+        "v": "906"
+      },
+      {
+        "k": "t",
+        "v": " at freeze "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "908"
+      },
+      {
+        "k": "t",
+        "v": " today); the end-form article and the Anthropic email draft gain matching promotion-of-record paragraphs; the website prime-front page and feed gain the promotion entry and tier upgrades (Euler–Pick floors and Form-A frontier now named as modules, reach caps kept verbatim), the DAG E8 node gains both scripts, README and Zenodo counts move to "
+      },
+      {
+        "k": "m",
+        "v": "908"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v1--v915"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "ScriptIndex.tsx"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "suite.ts"
+      },
+      {
+        "k": "t",
+        "v": " and the maps regenerated via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh gen"
+      },
+      {
+        "k": "t",
+        "v": "; full suite re-run "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " ALL CHECKS PASSED at "
+      },
+      {
+        "k": "m",
+        "v": "908"
+      },
+      {
+        "k": "t",
+        "v": " modules; "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests regenerated LAST. NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-15",
     "dateLabel": "2026-08-15 · CIII",
     "heading": [
       {

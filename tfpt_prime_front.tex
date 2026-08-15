@@ -17256,8 +17256,10 @@ object and one named endpoint.  Everything in this subsection is
 \emph{sandbox}: four frozen probes in the experiments tree, no
 module, no ledger row, no marker moved, no gate closed or
 narrowed, and no claim about the Riemann Hypothesis in any
-direction.  The suite stays at 906 modules; \texttt{v913}
-remains the newest promoted one.
+direction.  The suite stood at 906 modules at the freeze,
+\texttt{v913} then the newest promoted module (908 today, after
+the \texttt{v914}/\texttt{v915} promotion of
+Sections~\ref{sec:roadmap}--\ref{sec:frontier-audits}).
 
 \emph{The map as one machine-refutable object (round 79,
 \texttt{kill\_atlas\_dag\_probe.py}, $43/43$ gates, verdict
@@ -17443,7 +17445,8 @@ missing object in its most concrete form so far.  Everything in
 this subsection is \emph{sandbox}: ten frozen probes in the
 experiments tree, no module, no ledger row, no marker moved, no
 gate closed or narrowed, and no claim about the Riemann
-Hypothesis in any direction.  The suite stays at 906 modules.
+Hypothesis in any direction.  The suite stood at 906 modules at
+the freeze (908 today).
 One convention governs the numbers below: an adversarial bughunt
 round (round 87) audited everything produced in rounds 79--85
 and corrected three \textsc{major} misstatements in the
@@ -17755,8 +17758,8 @@ scalars, and build the one carrier the corpus did not have.
 Everything in this subsection is \emph{sandbox}: two frozen
 probes in the experiments tree, no module, no ledger row, no
 marker moved, no gate closed or narrowed, and no claim about the
-Riemann Hypothesis in any direction.  The suite stays at 906
-modules.
+Riemann Hypothesis in any direction.  The suite stood at 906
+modules at the freeze (908 today).
 
 \emph{The Stieltjes--Vitali pin route (round 89, externally
 proposed, contract \textsc{prime.stieltjes.vitali.pin.01};
@@ -17981,8 +17984,8 @@ characterization of the missing input into a literature-facing
 deliverable.  Everything in this subsection is \emph{sandbox}:
 four frozen probes in the experiments tree, no module, no ledger
 row, no marker moved, no gate closed or narrowed, and no claim
-about the Riemann Hypothesis in any direction.  The suite stays
-at 906 modules.
+about the Riemann Hypothesis in any direction.  The suite stood
+at 906 modules at the freeze (908 today).
 
 \emph{The patterns round (round 91, two probes, both verdicts
 honest negatives, both informative).}  On the mandate ``find new
@@ -18206,11 +18209,24 @@ Nine further discovery freeze rounds of 2026-08-15 (notes
 CCCXCIV and CCCXCVI--CDIII; several run as concurrent lanes)
 then finished the campaign's instrument tier and, in one case,
 corrected its own published record.  Everything in this
-subsection is \emph{sandbox}: eight frozen probes plus a Lean
-formalization round in the experiments tree, no module, no
+subsection was frozen as \emph{sandbox}: eight frozen probes plus
+a Lean formalization round in the experiments tree, no module, no
 ledger row, no marker moved, no gate closed or narrowed, and no
-claim about the Riemann Hypothesis in any direction.  The suite
-stays at 906 modules.  One correction of record travels with
+claim about the Riemann Hypothesis in any direction; the suite
+stood at 906 modules at the freeze.  \textbf{Promotion of record
+(2026-08-15):} the certified Euler--Pick floors of rounds 95 and
+100 have since been promoted to the load-bearing suite as
+\veri{v915\_eulerpick\_certified\_floors.py} ($15/15$; the
+$N \le 3$ floors and every cited-bound ward recomputed in-run,
+the cap-$10^{13}$ $N = 4$ intervals pinned from the run-of-record
+with the split disclosed, and the reach cap of
+Section~\ref{sec:frontier-audits} carried verbatim: the channel
+is disproof-sound but reach-capped at $\gamma \sim 5$--$8$, with
+zero live falsification power in the classically certified
+range).  Everything else in this subsection remains sandbox; the
+suite stands at 908 modules after this and the companion
+\veri{v914\_pascal\_region\_theorem.py} promotion.  One
+correction of record travels with
 this subsection and is carried where the corrected claim lives
 (Section~\ref{sec:realroot-signpos}): round 97, below.
 
@@ -18273,9 +18289,14 @@ planted off-line quadruples reads $N^*(\delta) = 6.1 +
 1.95\log_{10}(1/\delta)$ (rms $0.46$), with measured
 $\gamma$-blindness: $N^*(0.1) = 8/12/22$ at $\gamma = 14/20/30$,
 $\gamma = 50$ undetected through $N = 36$ --- reach costs
-$O(\gamma)$ rungs.  Promotion honestly declined: the certified
-slice sees off-line zeros only at $\gamma \sim 5$--$8$,
-territory classical verification closed decades ago.
+$O(\gamma)$ rungs.  Promotion was honestly declined at the
+freeze --- the certified slice sees off-line zeros only at
+$\gamma \sim 5$--$8$, territory classical verification closed
+decades ago --- and later executed with exactly that reach cap
+typed into the module and the ledger row:
+\veri{v915\_eulerpick\_certified\_floors.py} recomputes the
+cap-$1.6\times10^{7}$ floors, all three cited $\psi$-bound wards
+and the detection subset at every suite run.
 
 \emph{The rigidity round (round 96,
 \texttt{rigidity\_inverse\_probe.py}, $9/9$ wards, deterministic
@@ -18420,7 +18441,14 @@ instrument).}  \textbf{$\lambda_{\min}(\mathcal P_4) \in
 positive} (margin $0.749$), the $N \le 3$ floors tightened
 massively ($\mathrm{lo}_3$ width $9.1\times10^{-10} \to
 1.3\times10^{-16}$), and the falsification channel stays open
-and empty.  The round also corrects round 95's upgrade-path
+and empty.  These four certified intervals are now load-bearing:
+\veri{v915\_eulerpick\_certified\_floors.py} pins them from this
+round's run-of-record (the 45-minute compiled sieve is not
+re-runnable in-suite; the split is disclosed in the module and
+the ledger row), recomputes the $N \le 3$ floors at cap
+$1.6\times10^{7}$, re-derives the summation-error model from the
+pinned $\pi(10^{13})$ without the sieve, and re-proves the Nair
+floor necessity and the corrected budget at every suite run.  The round also corrects round 95's upgrade-path
 model, load-bearingly: its $X_{\mathrm{req}}$ model omitted the
 tail floor beyond the B\"uthe range $x > 10^{19}$ --- with $\psi
 \ge 0$ alone that floor exceeds $\lambda_4$ \emph{at any cap},
@@ -18564,7 +18592,9 @@ cell positive at $n + k \le 50$ while the Euler--Pick section
 fires at $N = 12$), and \textbf{certified regions are
 form-local}.  Around them: three agreeing source-only carriers,
 two certified falsification instruments (the Euler--Pick ladder
-at $N \le 4$; the Hausdorff field at depth 86 --- both
+at $N \le 4$, since promoted as
+\veri{v915\_eulerpick\_certified\_floors.py}; the Hausdorff
+field at depth 86, still sandbox --- both
 disproof-sound but reach-capped,
 Section~\ref{sec:frontier-audits}), the rigidity law explaining
 quantitatively why every control had to die, and 27
@@ -18574,7 +18604,10 @@ bottom, unchanged: localized Weil positivity.
 
 \emph{Scope, in the same breath.}  All of this is exploration:
 finite measurements and finite certificates on reachable rungs,
-no all-depth statement, no positivity claim, no promotion; the
+no all-depth statement, no positivity claim; the certified
+Euler--Pick floors were subsequently promoted
+(\veri{v915\_eulerpick\_certified\_floors.py}) as
+certified-finite results with the reach cap typed in --- the
 certified instruments are falsification channels, not evidence
 --- their certified slices sit in territory classical zero
 verification closed long ago, and both instruments' blindness
@@ -18594,11 +18627,18 @@ notes CDV--CDVI) then produced the one artifact the campaign
 never had: a staged, milestone-gated research roadmap from
 today's frozen state to a complete RH proof, in which every
 stage is falsifiable against the corpus's own instruments.
-Everything in this subsection is \emph{sandbox}: three frozen
-probes in the experiments tree, no module, no ledger row, no
-marker moved, no gate closed or narrowed, and no claim about the
-Riemann Hypothesis in any direction.  The suite stays at 906
-modules.  The honesty fences travel first: \textbf{a roadmap is
+Everything in this subsection was frozen as \emph{sandbox}:
+three frozen probes in the experiments tree, no module, no
+ledger row, no marker moved, no gate closed or narrowed, and no
+claim about the Riemann Hypothesis in any direction; the suite
+stood at 906 modules at the freeze.  \textbf{Promotion of record
+(2026-08-15):} the round-103 Form-A theorem (extended by
+round 106) has since been promoted as
+\veri{v914\_pascal\_region\_theorem.py}, and the certified
+Euler--Pick floors it consumes as Stage-0/1b acceptance values
+as \veri{v915\_eulerpick\_certified\_floors.py}; the suite
+stands at 908 modules.  The roadmap itself remains sandbox.
+The honesty fences travel first: \textbf{a roadmap is
 not progress on RH; no stage is claimed started; the mathematics
 of Stages 1--2 does not yet exist} --- the artifact's value is
 that every step is now falsifiable and interface-defined, so any
@@ -18620,7 +18660,11 @@ Section~\ref{sec:frontier-audits}) --- an infinite half-strip in
 $n$ and ten quintillion complete
 $k$-columns --- with the scope stated inside the theorem: it
 touches the $k \to \infty$ quantifier nowhere and proves nothing
-about RH.  The same round killed its three suggested proof
+about RH.  The theorem is now load-bearing:
+\veri{v914\_pascal\_region\_theorem.py} recomputes the complete
+four-region partition (all decisive ratios anchored to the
+run-of-record) at every suite run, together with the round-106
+extension per the disclosed pinning split.  The same round killed its three suggested proof
 routes with named mechanisms: the exact prime-side transmutation
 turns the positive Beta spectral window into a sign-changing
 generalized-Laguerre source window (the classical Laguerre zero
@@ -18671,11 +18715,14 @@ channels
 (Euler--Pick floors $N = 1$:
 $[4.5917135\times10^{-2}, 4.5917136\times10^{-2}]$ down to
 $N = 4$: $[8.278338\times10^{-15}, 1.3840906\times10^{-14}]$ at
-cap $10^{13}$; Hausdorff certified depth 86, $5290$ cells,
+cap $10^{13}$, now carried load-bearing by
+\veri{v915\_eulerpick\_certified\_floors.py}; Hausdorff
+certified depth 86, $5290$ cells,
 $\gamma^*$ 189/563), the $k \le 10^{19}$ theorem (re-derived
 inside the probe: decisive ratios $1.176577/335.8/1416.8$, the
 $n = 0$ mechanism wall re-located between $1.40\times10^{19}$
-and $1.41\times10^{19}$), the rigidity law
+and $1.41\times10^{19}$; now carried load-bearing by
+\veri{v914\_pascal\_region\_theorem.py}), the rigidity law
 ($\ln\eta^*(r) = -1.073r - 7.08$), the seven-property
 specification sheet, and 27 kernel-checked theorems.
 \textbf{Stage 1 (open; new mathematics):} structural positivity
@@ -18733,7 +18780,9 @@ RH-disproof candidate) --- with the round-108 reach cap
 disproof-sound (the disproof direction consumes only the proven
 forward implication) but reach-capped far below
 Platt--Trudgian's $3.0\times10^{12}$ (Euler--Pick's certified
-$N \le 4$ sees off-line zeros only at $\gamma \approx 5$--$8$;
+$N \le 4$ --- now \veri{v915\_eulerpick\_certified\_floors.py},
+with the reach cap typed into the module --- sees off-line zeros
+only at $\gamma \approx 5$--$8$;
 the Hausdorff field is provably blind above $\gamma_1 = 14.13$
 at the safe point), so ``open and empty'' is a theorem given the
 cited inputs, not an observation --- the certified ranges carry
@@ -18767,10 +18816,18 @@ Four closing discovery freeze rounds of 2026-08-15 (rounds
 extended the roadmap's Stage-0 frontier, adjudicated the
 program's founding intuition under its own name, and turned the
 audit instruments on the campaign's own headlines.  Everything
-in this subsection is \emph{sandbox}: four frozen probes in the
-experiments tree, no module, no ledger row, no marker moved, no
-gate closed or narrowed, and no claim about the Riemann
-Hypothesis in any direction.  The suite stays at 906 modules.
+in this subsection was frozen as \emph{sandbox}: four frozen
+probes in the experiments tree, no module, no ledger row, no
+marker moved, no gate closed or narrowed, and no claim about the
+Riemann Hypothesis in any direction; the suite stood at 906
+modules at the freeze.  \textbf{Promotion of record
+(2026-08-15):} the round-106 frontier extension below --- with
+the round-103 base theorem and the HSW attribution resolved from
+the paper itself --- has since been promoted as
+\veri{v914\_pascal\_region\_theorem.py}, and the certified
+Euler--Pick floors as
+\veri{v915\_eulerpick\_certified\_floors.py}; the suite stands
+at 908 modules.  The audits and the code reading remain sandbox.
 This is, first of all, a \emph{corrections subsection}: the
 round-108 big-picture logic audit
 (\texttt{bigpicture\_logic\_probe.py}, $31/31$ gates, $2.5$\,s,
@@ -18830,7 +18887,8 @@ while the Euler--Pick section \emph{fires} at $N = 12$
 (certified negative pivot at 200 dps); the on-line control world
 is positive in both; a below-$\gamma_1$ quadruple fires the
 Hausdorff $n$-channel at $n = 90$.  Consequence: \textbf{the
-$k \le 10^{19}/7.4\times10^{21}$ Form-A theorems imply nothing
+$k \le 10^{19}/7.4\times10^{21}$ Form-A theorems
+(\veri{v914\_pascal\_region\_theorem.py}) imply nothing
 about screw sections or Weyl disks --- certified regions are
 form-local} --- and their zero-location content sits below
 $\gamma_1 = 14.13$, where Platt--Trudgian is infinitely
@@ -18898,7 +18956,19 @@ bound (J. Number Theory 235 (2022), Cor.~1.2: $|N(t) - M(t)| \le
 correction load-bearing: the commissioned $(0.110, 0.290,
 2.290)$ constants bound $S(T)$, not $N(T)$ directly, and their
 Cheng--Graham input was later identified as invalid ---
-replaced, not patched.  The mechanism retains the previously
+replaced, not patched.  (The attribution flag raised by a later
+audit is resolved from the paper itself, at promotion:
+Cor.~1.2 \emph{is} the $N(t)$ bound with exactly these
+constants; Cor.~1.4 is the companion $S(t)$ bound and is not
+used --- the probe docstring's ``Cor.~1.4'' sentence was the
+slip, the numbers were always right.)  The theorem, with its
+base region and this extension, is now load-bearing as
+\veri{v914\_pascal\_region\_theorem.py}: the complete round-103
+partition and the law constant are recomputed at every suite
+run, the 33-cell frontier partition is pinned from this round's
+run-of-record with a six-cell full-packet recompute including
+the worst cell, and the form-locality typing below travels in
+the module and the ledger row.  The mechanism retains the previously
 discarded $q^k$ factor ($|1-y| \le (\gamma^2 +
 1/4)/(\gamma^2 + a - 1/4)$), counts verified zeros in $16384$
 RvM packets below $T - 1$, encloses the unknown tail by a
@@ -18982,12 +19052,17 @@ as live gates and are empty.
 
 \emph{Scope, in the same breath.}  All of this is exploration:
 finite theorems from cited inputs, measured structure, and
-prose-level corrections; no all-depth statement, no promotion,
-no marker moved.  The corrections change no number and flip no
-verdict --- they grade the record's own language against the
-machine state, per the standing convention.  RH is neither
-proven nor disproven here.  \textbf{No statement about the
-Riemann Hypothesis is made.}
+prose-level corrections; no all-depth statement, no marker
+moved.  The two certified-finite results (the Pascal-region
+theorem; the Euler--Pick floors) were subsequently promoted as
+\veri{v914\_pascal\_region\_theorem.py} and
+\veri{v915\_eulerpick\_certified\_floors.py} --- certified
+finite theorems, explicitly \emph{not} RH evidence, form-local,
+with the reach caps typed in.  The corrections change no number
+and flip no verdict --- they grade the record's own language
+against the machine state, per the standing convention.  RH is
+neither proven nor disproven here.  \textbf{No statement about
+the Riemann Hypothesis is made.}
 
 \subsection{The vocabulary boundary priced, and the resolvent
 closure adjudicated: the CCM operator is the corpus's own
@@ -19002,8 +19077,10 @@ enumeration, and the owner's constructive resolvent-closure
 architecture.  Everything in this subsection is \emph{sandbox}:
 two frozen probes in the experiments tree, no module, no ledger
 row, no marker moved, no gate closed or narrowed, and no claim
-about the Riemann Hypothesis in any direction.  The suite stays
-at 906 modules.
+about the Riemann Hypothesis in any direction.  The suite stood
+at 906 modules at the freeze (908 today, after the
+\texttt{v914}/\texttt{v915} promotion of
+Sections~\ref{sec:roadmap}--\ref{sec:frontier-audits}).
 
 \emph{The unpriced classes adjudicated (round 111, contract
 PRIME.UNPRICED.CLASSES.01,

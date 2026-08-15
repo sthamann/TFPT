@@ -9890,6 +9890,81 @@ deployed ladder and entry slack, the budget shape) $+$ \mO\ (the
 residual requirement itself --- localized, not closed)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The Pascal-region theorem --- a
+certified-finite result, not RH evidence
+(\texttt{PRIME.PASCAL.\allowbreak REGION.\allowbreak THEOREM.01}).}
+One module ($18/18$, verdict \textsc{pascal-region-theorem}).  At
+the safe point $a = 256$, with $y_\rho = a/(a - (\rho - 1/2)^2)$,
+the Pascal field satisfies $C_{n,k}(256) = \sum_{\Im\rho > 0}
+y_\rho^{n+1}(1 - y_\rho)^k > 0$ for \emph{every} $n \ge 0$ and
+every integer $0 \le k \le
+7{,}444{,}682{,}106{,}464{,}286{,}365{,}865$
+($\sim 7.44\times10^{21}$), proven from cited external inputs
+alone: Platt--Trudgian 2021 Thm~1
+($T = 3{,}000{,}175{,}332{,}800$), Hasanalizade--Shen--Wong JNT
+235 (2022) Cor.~1.2 ($|N(t) - M(t)| \le 0.1038\log t +
+0.2573\log\log t + 9.3675$, $t \ge e$; the attribution flag of a
+later audit resolved from the paper --- Cor.~1.2 \emph{is} the
+$N(t)$ bound used, Cor.~1.4 the companion $S(t)$ bound, not
+used), Rosser 1941 Thm~19 and the classical $\gamma_1$
+isolation.  The complete four-region base partition
+($k \le 10^{19}$) and the quadratic verification-height law
+$k_{\mathrm{front}}(T) = (\lambda_\infty +
+O(1/\log T))\,T^2/(a - 1/2)$, $\lambda_\infty =
+0.226987054723979955$, are recomputed at every suite run; the
+33-cell run-of-record frontier partition is pinned with a frozen
+six-cell full-packet recompute including the worst cell
+(endpoint ratio $1.000001535385559$; the next $2\times10^{-6}$
+step fails --- mechanism-exact).  Honest typing:
+verification-powered and \emph{form-local} --- zero-location
+content below $\gamma_1 = 14.13$, nothing about screw sections
+or Weyl disks, the $k \to \infty$ quantifier untouched; no wall
+positivity, no zero table, no zeta evaluator.  Not evidence for
+or against RH.
+Machine-checked: \veri{v914\_pascal\_region\_theorem.py}.
+\mE\ (the certified finite theorem from the cited inputs; the
+recomputed partition and law) $+$ \mC\ (the cited
+Platt--Trudgian/HSW22/Rosser inputs; the pinned run-of-record
+cells) $+$ \mO\ (the $k \to \infty$ quantifier --- untouched)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The certified Euler--Pick floors
+$N = 1..4$ --- a reach-capped falsification channel
+(\texttt{PRIME.EULERPICK.\allowbreak CERTIFIED.\allowbreak
+FLOORS.01}).}
+One module ($15/15$).  Outward-rounded interval positivity
+certificates for the first four rungs of the Euler--Pick ladder
+($P(\sigma) = \xi'/\xi(1/2+\sigma)$, $\sigma_j = 1 + 1/j$; RH iff
+$\mathcal P_N \succeq 0$ for all $N$, forward direction exact):
+the $N \le 3$ floors are recomputed in-run at caps $4\times10^6$
+and $1.6\times10^7$ (own sieve; B\"uthe 2018, Rosser--Schoenfeld
+1962 and Nair 1982 all warded against own data; the round-95
+record reproduced, $\mathrm{lo}_3 = 2.3643695\times10^{-10}$),
+and the cap-$10^{13}$ intervals --- $N = 4$:
+$[8.278338\times10^{-15}, 1.3840906\times10^{-14}]$, margin
+$0.749$, $\pi(10^{13}) = 346{,}065{,}536{,}839$ reproduced
+exactly --- are pinned from the run-of-record 45-minute compiled
+sieve with the split disclosed; the summation-error model is
+re-derived rigorously without the sieve, the Nair far-floor
+necessity and the corrected budget
+$X_{\mathrm{req}}(4) = 10^{11.52}$ are recomputed, and $N = 5$
+is knowledge-walled (the beyond-$10^{19}$ floor exceeds
+$\lambda_5$ by $4.7\times10^{5}$ at any cap).  Honest typing:
+the channel is \emph{disproof-sound} (a certified negative rung
+would falsify RH via the forward direction alone) but
+\emph{reach-capped} at $\gamma \sim 5$--$8$ (recomputed
+detection subset), far below Platt--Trudgian's
+$3.0\times10^{12}$ --- zero live falsification power in the
+classically certified range; ``open and empty'' is a theorem
+given the cited inputs.  The channel stays open and empty.  Not
+evidence for or against RH.
+Machine-checked: \veri{v915\_eulerpick\_certified\_floors.py}.
+\mE\ (the recomputed certified floors and wards; the re-derived
+error model) $+$ \mC\ (the cited B\"uthe/RS/Nair bounds; the
+pinned $10^{13}$ run-of-record) $+$ \mO\ (all-$N$ positivity ---
+the wall itself, untouched)
+\par\smallskip
+
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}
 One probe ($21/21$ incl.\ the $3$ must-fire controls; verdict

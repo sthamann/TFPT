@@ -49,7 +49,7 @@ const DIARY_RUN_COUNT = PRIME_FRONT_UPDATES.length + PRIME_FRONT_ARCHIVE_COUNT;
 
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
-  description: `A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v913 inside a ${SCRIPT_TOTAL}-script suite. No claim of progress toward the Riemann Hypothesis.`,
+  description: `A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v915 inside a ${SCRIPT_TOTAL}-script suite. No claim of progress toward the Riemann Hypothesis.`,
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "The Prime Front — TFPT research diary",
     description:
-      "Primes, the E8 census, and the load-bearing modules v535–v913: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
+      "Primes, the E8 census, and the load-bearing modules v535–v915: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
     url: `${SITE_URL}/prime-front`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified v535–v913: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
+      "Research diary of the prime / zeta line. Machine-verified v535–v915: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
   },
 };
 
@@ -2767,7 +2767,8 @@ function SigmaChainSection() {
           independent checker — and measure the third level, the quantifier,
           to its endform. Everything in this chapter is sandbox: frozen
           preregistered probes in the experiments tree, no promotion, no
-          marker moves — v911 remains the newest promoted module.
+          marker moves — v911 was the newest promoted module at this
+          chapter&apos;s freeze.
         </p>
 
         <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
@@ -2913,8 +2914,9 @@ function KillAtlasSection() {
           sign source, and consolidate the endpoint as a named,
           finite-rung theorem about the <em>obstruction</em> — not about
           RH. Everything in this chapter is sandbox: four frozen probes in
-          the experiments tree, no promotion, no marker moves — v913
-          remains the newest promoted module, the suite stays at 906.
+          the experiments tree, no promotion, no marker moves — v913 was
+          the newest promoted module at the freeze; the suite stood at 906
+          (908 today, after the v914/v915 promotion of chapters 37–39).
         </p>
 
         <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
@@ -3263,7 +3265,7 @@ function SvpinKreinSection() {
           problem to countably many safe scalars, and the construction of
           the one carrier the corpus did not have. Everything in this
           chapter is sandbox: two frozen probes in the experiments tree,
-          no promotion, no marker moves — the suite stays at 906. No RH
+          no promotion, no marker moves — the suite stood at 906 at the freeze (908 today). No RH
           claim in any direction.
         </p>
 
@@ -3410,7 +3412,7 @@ function CohomSpecSection() {
           geometric programs — Deninger&apos;s conjectural cohomology for
           Spec ℤ and the Connes–Consani scaling site. Everything in this
           chapter is sandbox: four frozen probes in the experiments tree,
-          no promotion, no marker moves — the suite stays at 906. No RH
+          no promotion, no marker moves — the suite stood at 906 at the freeze (908 today). No RH
           claim in any direction.
         </p>
 
@@ -3555,10 +3557,17 @@ function ThreeLemmaFormsSection() {
           ninety-five through one-hundred-two, 2026-08-15, several as
           concurrent lanes) finish the campaign&apos;s instrument tier
           and, in one case, correct its own published record. Everything
-          in this chapter is sandbox: eight frozen probes plus a Lean
-          formalization round in the experiments tree, no promotion, no
-          marker moves — the suite stays at 906. No RH claim in any
-          direction.
+          in this chapter was frozen as sandbox: eight frozen probes plus
+          a Lean formalization round in the experiments tree, no promotion
+          at the freeze, no marker moves — the suite stood at 906 at the
+          freeze. Promotion of record (2026-08-15): the certified
+          Euler–Pick floors of rounds 95 and 100 have since been promoted
+          into the load-bearing suite as v915_eulerpick_certified_floors.py
+          (the N ≤ 3 floors and all cited-bound wards recomputed at every
+          suite run, the cap-10¹³ N = 4 intervals pinned from the
+          run-of-record with the split disclosed, and the chapter-39 reach
+          cap typed in verbatim); the suite stands at 908. Everything else
+          in this chapter remains sandbox. No RH claim in any direction.
         </p>
 
         <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
@@ -3605,7 +3614,12 @@ function ThreeLemmaFormsSection() {
             hard external ward, Nair&apos;s ψ(x) ≥ (x−2)·ln 2 unblocking
             the a-priori certificate, and the knowledge wall corrected to
             N = 5 — beyond the verified-zeros range, no sieve of any size
-            helps. And the Hausdorff safe-point round (round 102, 40/40)
+            helps. These four certified floors are now load-bearing:
+            v915_eulerpick_certified_floors.py recomputes the N ≤ 3 floors
+            and every cited-bound ward at each suite run and pins the
+            cap-10¹³ N = 4 intervals from the run-of-record, with the
+            recompute/pin split disclosed in the module and the ledger
+            row. And the Hausdorff safe-point round (round 102, 40/40)
             builds{" "}
             <strong className="font-medium text-slate-100">
               the cheapest certified RH-consequence instrument in the
@@ -3747,8 +3761,14 @@ function RoadmapSection() {
           against the corpus&apos;s own instruments. The fences come first:
           a roadmap is not progress on RH, no stage is claimed started, and
           the mathematics of Stages 1–2 does not yet exist. Everything here
-          is sandbox — three frozen probes, no promotion, no marker moves;
-          the suite stays at 906.
+          was frozen as sandbox — three frozen probes, no promotion at the
+          freeze, no marker moves; the suite stood at 906 at the freeze.
+          Promotion of record (2026-08-15): the round-103 Form-A theorem
+          (extended by round 106, chapter 39) has since been promoted as
+          v914_pascal_region_theorem.py, and the certified Euler–Pick
+          floors it consumes as Stage-0/1b acceptance values as
+          v915_eulerpick_certified_floors.py; the suite stands at 908. The
+          roadmap itself remains sandbox.
         </p>
 
         <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
@@ -3768,7 +3788,9 @@ function RoadmapSection() {
             nothing about RH; its three suggested proof routes die with
             named mechanisms (the Laguerre sign obstruction on the prime
             side; pure-point Szegő entropy −∞; nonuniform asymptotic-a
-            transport). The class round (round 104, 23/23,
+            transport). The theorem is now load-bearing as
+            v914_pascal_region_theorem.py, which recomputes the complete
+            four-region partition at every suite run. The class round (round 104, 23/23,
             LEVINSON-ADJUDICATED) prices the last unexamined classical
             theorem type — positive proportion on the line
             (Selberg/Levinson/Conrey up to PRZZ&apos;s κ &gt; 0.417293) —
@@ -3903,9 +3925,17 @@ function FrontierAuditsSection() {
           published &quot;three equivalent lemma forms&quot; language and
           two related headlines; the corrected wordings are carried in
           chapters 37 and 38. No number was wrong, no verdict flips.
-          Everything here is sandbox: four frozen probes, no promotion, no
-          marker moves — the suite stays at 906. No RH claim in any
-          direction.
+          Everything here was frozen as sandbox: four frozen probes, no
+          promotion at the freeze, no marker moves — the suite stood at
+          906 at the freeze. Promotion of record (2026-08-15): the
+          round-106 frontier extension below — with the round-103 base
+          theorem and the HSW attribution resolved from the paper itself
+          (Cor. 1.2 is the N(t) bound used; Cor. 1.4 is the companion S(t)
+          bound, not used) — has since been promoted as
+          v914_pascal_region_theorem.py, and the certified Euler–Pick
+          floors as v915_eulerpick_certified_floors.py; the suite stands
+          at 908. The audits and the code reading remain sandbox. No RH
+          claim in any direction.
         </p>
 
         <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
@@ -3983,8 +4013,14 @@ function FrontierAuditsSection() {
             </strong>{" "}
             (≈ 7.44×10²¹), from Platt–Trudgian 2021 plus the{" "}
             <em>corrected</em> Hasanalizade–Shen–Wong zero-counting bound
-            (the commissioned S(T) constants honestly replaced — their
-            Cheng–Graham input was later identified as invalid). The
+            (JNT 235 (2022) Cor. 1.2 — the attribution flag resolved from
+            the paper at promotion: Cor. 1.2 is the N(t) bound used,
+            Cor. 1.4 the companion S(t) bound; the commissioned S(T)
+            constants honestly replaced — their Cheng–Graham input was
+            later identified as invalid). The theorem is now load-bearing
+            as v914_pascal_region_theorem.py (the 33-cell frontier pinned
+            from the run-of-record, a six-cell full-packet subsample
+            including the worst cell recomputed at every suite run). The
             general law is derived:{" "}
             <strong className="font-medium text-slate-100">
               k_front(T) = λ·T²/(a − ½) with λ∞ = 0.226987
@@ -4090,7 +4126,9 @@ function UnpricedResolventSection() {
           (arXiv:2511.22755) is, mode for mode, an object this diary had
           already built and frozen as its round-89 record. Everything here
           is sandbox: two frozen probes, no promotion, no marker moves —
-          the suite stays at 906. No RH claim in any direction.
+          the suite stood at 906 at these rounds&apos; freeze (908 today,
+          after the v914/v915 promotion of chapters 37–39). No RH claim in
+          any direction.
         </p>
 
         <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
@@ -4391,7 +4429,7 @@ function BigPictureSection() {
                 href="/verification"
                 className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
               >
-                v535–v913 (this front)
+                v535–v915 (this front)
               </Link>{" "}
               are machine-verified and cited in the papers. Sandbox probes never
               move a status marker.
@@ -4424,7 +4462,7 @@ function BigPictureSection() {
               tone="amber"
             />
             <BigPictureStat
-              term="v535–v913"
+              term="v535–v915"
               desc={`machine-verified modules of this front, inside the ${SCRIPT_TOTAL}-script suite (all green)`}
               tone="emerald"
             />

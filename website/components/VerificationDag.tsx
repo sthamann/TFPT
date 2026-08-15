@@ -300,6 +300,8 @@ const NODES: DagNode[] = [
       "v910_finite_zero_transfer.py",
       "v911_wiring_freedom.py",
       "v912_form_convergence_theorem.py",
+      "v914_pascal_region_theorem.py",
+      "v915_eulerpick_certified_floors.py",
       "v536_eichler_trace_layer.py",
       "v537_halfintegral_bridge.py",
       "v538_relative_trace_identity.py",
