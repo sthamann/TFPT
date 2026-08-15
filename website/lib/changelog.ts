@@ -42,6 +42,785 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-15",
+    "dateLabel": "2026-08-15 · XCIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the cohomological specification sheet — discovery freeze rounds ninety-one, ninety-two and the specification round synced into every live surface: two honest negatives, the Verblunsky-invariance kill with the Euler–Pick criterion and the (AC) identity pinned, and the campaign's machine-checked characterization of the missing RH input compiled into a literature-facing requirements document for the cohomological programs; "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " only — FOUR frozen probes, NO promotion, NO module, NO ledger row, NO marker moved, NO gate closed or narrowed, suite unchanged at "
+      },
+      {
+        "k": "m",
+        "v": "906"
+      },
+      {
+        "k": "t",
+        "v": ", NO RH claim in any direction: (1) ROUND 91 (note CCCXCII, the patterns round, run in a parallel session): the program's first magnetar giant-flare QPO bed (MAG.QPO.LADDER.01, "
+      },
+      {
+        "k": "c",
+        "v": "magnetar_ qpo_ ladder_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": " gates, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "4ee58b0f"
+      },
+      {
+        "k": "t",
+        "v": ") tests SGR 1806"
+      },
+      {
+        "k": "m",
+        "v": "-"
+      },
+      {
+        "k": "t",
+        "v": "20 and SGR 1900"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "14 against the geometric "
+      },
+      {
+        "k": "m",
+        "v": "(3/2)"
+      },
+      {
+        "k": "t",
+        "v": " relaxation ladder with a "
+      },
+      {
+        "k": "m",
+        "v": "20000"
+      },
+      {
+        "k": "t",
+        "v": "-draw log-uniform MC null, a "
+      },
+      {
+        "k": "m",
+        "v": "17"
+      },
+      {
+        "k": "t",
+        "v": "-base look-elsewhere battery, a power gate (planted ladder "
+      },
+      {
+        "k": "m",
+        "v": "p = 5\\times10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": ") and a specificity gate (integer harmonics "
+      },
+      {
+        "k": "m",
+        "v": "p = 0.078"
+      },
+      {
+        "k": "t",
+        "v": "): base "
+      },
+      {
+        "k": "m",
+        "v": "1.5"
+      },
+      {
+        "k": "t",
+        "v": " gives "
+      },
+      {
+        "k": "m",
+        "v": "p = 0.3163/0.3558"
+      },
+      {
+        "k": "t",
+        "v": ", Fisher-joint "
+      },
+      {
+        "k": "m",
+        "v": "p = 0.3584"
+      },
+      {
+        "k": "t",
+        "v": " — VERDICT NULL, S15-typed (placebo base "
+      },
+      {
+        "k": "m",
+        "v": "1.80"
+      },
+      {
+        "k": "t",
+        "v": " best in both sources, documented as an LEE-loaded base-battery artifact candidate, NOT escalated; SGR 0526"
+      },
+      {
+        "k": "m",
+        "v": "-"
+      },
+      {
+        "k": "t",
+        "v": "66 DATA-LIMITED); the LEE-controlled unclaimed-observable scan (PHYS.UNCLAIMED.DECODER.01, "
+      },
+      {
+        "k": "c",
+        "v": "unclaimed_ observable_ scan_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "5/5"
+      },
+      {
+        "k": "t",
+        "v": " after disclosed amendment A1 — gate G02 mis-specified as a minimality bar, amended to a membership bar, no verdict bar moved) returns SCAN-UNDECIDABLE with the structural finding as the content: the frozen compiler vocabulary is SATURATED at "
+      },
+      {
+        "k": "m",
+        "v": "2\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " tolerance (median placebo "
+      },
+      {
+        "k": "m",
+        "v": "C_{\\min}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "3.66 \\le"
+      },
+      {
+        "k": "t",
+        "v": " control "
+      },
+      {
+        "k": "m",
+        "v": "C_{\\max}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "5.46"
+      },
+      {
+        "k": "t",
+        "v": ") — new predictions provably cannot come from numeric scanning and must be derived theory-side; (2) ROUND 92 (note CCCXCIII, contract PRIME.SCREW.VERBLUNSKY.INVARIANT.01, "
+      },
+      {
+        "k": "c",
+        "v": "vbk_ invariant_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "23/23"
+      },
+      {
+        "k": "t",
+        "v": " gates, deterministic "
+      },
+      {
+        "k": "m",
+        "v": "14.1/14.0"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "c730781e"
+      },
+      {
+        "k": "t",
+        "v": ", verdict VERBLUNSKY-NO-INVARIANT(mechanism exhibited)): the "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-correction (pointwise Weyl-disk contraction on "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma_r = 1 + 1/r"
+      },
+      {
+        "k": "t",
+        "v": " accumulating at the interior point "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " suffices; "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma\\downarrow1/2"
+      },
+      {
+        "k": "t",
+        "v": " uniformity NOT load-bearing), the exact "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_1"
+      },
+      {
+        "k": "t",
+        "v": " no-go (pin convergence cannot prove section positivity backwards), THE EULER–PICK CRITERION audited and pinned (RH "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "P_N = [(P(\\sigma_j)+P(\\sigma_k))/(\\sigma_j+\\sigma_k)] \\succeq 0"
+      },
+      {
+        "k": "t",
+        "v": " for all "
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "P(z) = \\xi'/\\xi(1/2+z)"
+      },
+      {
+        "k": "t",
+        "v": "; source-only falsification ladder from "
+      },
+      {
+        "k": "m",
+        "v": "\\Gamma"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\pi"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "n^{-s}"
+      },
+      {
+        "k": "t",
+        "v": " and an own "
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda"
+      },
+      {
+        "k": "t",
+        "v": "-sieve: "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}(P_N) = 4.59\\times10^{-2}"
+      },
+      {
+        "k": "t",
+        "v": " down to "
+      },
+      {
+        "k": "m",
+        "v": "2.44\\times10^{-62}"
+      },
+      {
+        "k": "t",
+        "v": " for "
+      },
+      {
+        "k": "m",
+        "v": "N = 1..12"
+      },
+      {
+        "k": "t",
+        "v": ", all positive, "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa = 2.27\\times10^{61}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "N = 12"
+      },
+      {
+        "k": "t",
+        "v": ") and THE (AC) IDENTITY "
+      },
+      {
+        "k": "m",
+        "v": "c^T P_N c = \\langle -g'', f_c \\star \\tilde f_c\\rangle"
+      },
+      {
+        "k": "t",
+        "v": " gated symbolically exactly and numerically against the corpus-exact screw "
+      },
+      {
+        "k": "m",
+        "v": "g"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8.581810362\\times10^{-2}"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "8.578893345\\times10^{-2}"
+      },
+      {
+        "k": "t",
+        "v": ", rel "
+      },
+      {
+        "k": "m",
+        "v": "3.4\\times10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": ") — Euler–Pick positivity IS Weil positivity on exponential autocorrelations, by identity; the kill: complete prime packets are high-rank INDEFINITE Toeplitz updates of displacement rank two (ranks "
+      },
+      {
+        "k": "m",
+        "v": "26/90/130"
+      },
+      {
+        "k": "t",
+        "v": ", inertias "
+      },
+      {
+        "k": "m",
+        "v": "(13,102,13)/(45,70,45)/(65,50,65)"
+      },
+      {
+        "k": "t",
+        "v": "), the induced "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " step nonlinear and prior-state dependent ("
+      },
+      {
+        "k": "m",
+        "v": "\\times316"
+      },
+      {
+        "k": "t",
+        "v": "), the TRUE packet stream itself EXITS the Schur disk after "
+      },
+      {
+        "k": "m",
+        "v": "p = 2/3/5/7"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "r = 1.122/1.620/1.950/2.400"
+      },
+      {
+        "k": "t",
+        "v": ") and re-enters only collectively (after "
+      },
+      {
+        "k": "m",
+        "v": "p = 11"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "0.313"
+      },
+      {
+        "k": "t",
+        "v": "; full: "
+      },
+      {
+        "k": "m",
+        "v": "0.184"
+      },
+      {
+        "k": "t",
+        "v": "); control wards reproduce SMOOTH "
+      },
+      {
+        "k": "m",
+        "v": "r = 0.264"
+      },
+      {
+        "k": "t",
+        "v": " (diagnosed as a SUPPORT error — zero true prime mass before "
+      },
+      {
+        "k": "m",
+        "v": "\\log 2"
+      },
+      {
+        "k": "t",
+        "v": ", PNT mass "
+      },
+      {
+        "k": "m",
+        "v": "0.282"
+      },
+      {
+        "k": "t",
+        "v": ") and SCRARITH "
+      },
+      {
+        "k": "m",
+        "v": "r = 0.744"
+      },
+      {
+        "k": "t",
+        "v": " (weight "
+      },
+      {
+        "k": "m",
+        "v": "\\times1.451"
+      },
+      {
+        "k": "t",
+        "v": " at kept positions); the only exact survival condition is WALL-EQUIVALENT — clean kill, the remaining all-depth principle is Weil positivity in yet another currency; (3) THE SPECIFICATION ROUND (note CCCXCV; the intervening numeral CCCXCIV belongs to a concurrent discovery lane and is not part of this sync; contract PRIME.COHOMSPEC.SHEET.01, "
+      },
+      {
+        "k": "c",
+        "v": "cohomspec_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": " gates, "
+      },
+      {
+        "k": "m",
+        "v": "8.8"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "423d934e"
+      },
+      {
+        "k": "t",
+        "v": ", independently re-run deterministic, verdict COHOMSPEC-COMPILED(7 properties: 6 machine-grounded, 1 citation-typed)): the campaign's measured characterization of the missing input compiled into a REQUIREMENTS DOCUMENT for any cohomology/intersection theory for "
+      },
+      {
+        "k": "m",
+        "v": "\\operatorname{Spec}\\mathbb{Z}"
+      },
+      {
+        "k": "t",
+        "v": " (Deninger's program; the Connes–Consani scaling site), each property grounded by grep ward or independent recomputation in its owning frozen artifact — (P1) the signed, alignment-carrying, unconditional, sub-spacing ordinate-position input of the one open edge E4 (v913, kill-atlas DAG, the "
+      },
+      {
+        "k": "m",
+        "v": "24/0/19"
+      },
+      {
+        "k": "t",
+        "v": " tally, "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "1% sub-spacing; sharpest corpus forms: "
+      },
+      {
+        "k": "m",
+        "v": "D_{\\max} = x - 3/8"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "e^{-11}"
+      },
+      {
+        "k": "t",
+        "v": " per forced skip, min margin "
+      },
+      {
+        "k": "m",
+        "v": "0.0317"
+      },
+      {
+        "k": "t",
+        "v": " / load "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "); (P2) shape-independence (deployed exponent "
+      },
+      {
+        "k": "m",
+        "v": "-3.379"
+      },
+      {
+        "k": "t",
+        "v": " recomputed by OLS as "
+      },
+      {
+        "k": "m",
+        "v": "-3.3795"
+      },
+      {
+        "k": "t",
+        "v": "; alternatives shallower by "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 2.2"
+      },
+      {
+        "k": "t",
+        "v": "); (P3) not magnitude/density/existence (Littlewood "
+      },
+      {
+        "k": "m",
+        "v": "214.7/1527.1"
+      },
+      {
+        "k": "t",
+        "v": "; zero-density empty for "
+      },
+      {
+        "k": "m",
+        "v": "A > 2"
+      },
+      {
+        "k": "t",
+        "v": "; border membership "
+      },
+      {
+        "k": "m",
+        "v": "\\det M = s\\det B"
+      },
+      {
+        "k": "t",
+        "v": " recomputed in exact Fractions); (P4) the Gram form on exponential autocorrelations must BE the Euler–Pick matrices — the concrete interface any cohomological trace formula must match, recomputed (ladder rel dev "
+      },
+      {
+        "k": "m",
+        "v": "\\le 3.8\\times10^{-9}"
+      },
+      {
+        "k": "t",
+        "v": ", (AC) weld rel devs "
+      },
+      {
+        "k": "m",
+        "v": "\\le 4.3\\times10^{-11}"
+      },
+      {
+        "k": "t",
+        "v": "), testable at any finite "
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": " by machine today; (P5) positivity must fail on the control worlds exactly as measured ("
+      },
+      {
+        "k": "m",
+        "v": "r = 0.264"
+      },
+      {
+        "k": "t",
+        "v": " by support, "
+      },
+      {
+        "k": "m",
+        "v": "r = 0.744"
+      },
+      {
+        "k": "t",
+        "v": " by weights, both recomputed); (P6) survive the "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-screen (bands "
+      },
+      {
+        "k": "m",
+        "v": "0.30/0.70"
+      },
+      {
+        "k": "t",
+        "v": ", fifteen DISGUISE routes); (P7, citation-typed) the function-field precedent mapped to its break points, verified against the live literature — Deninger's dynamical Lefschetz trace formula proved for smooth foliated flows (Álvarez López–Kordyukov, arXiv:2402.06671) with no arithmetic host constructed (Doc. Math. ICM 1998, arXiv:math/0505354); Connes–Consani Riemann–Roch on the scaling-site orbits "
+      },
+      {
+        "k": "m",
+        "v": "C_p"
+      },
+      {
+        "k": "t",
+        "v": " (Selecta Math. 2017) but not on the square; the semilocal/prolate line (arXiv:2006.13771, arXiv:2310.18423) and Connes' 2026 extremal letter (arXiv:2602.04022, zero reality by Connes–van Suijlekom Thm 6.1, convergence open "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the corpus's REALROOT-DEPTH-UNDECIDED); (4) SURFACES SYNCED IN THIS ENTRY: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " gains the sandbox diary subsection “What any cohomology for "
+      },
+      {
+        "k": "m",
+        "v": "\\operatorname{Spec}\\mathbb{Z}"
+      },
+      {
+        "k": "t",
+        "v": " must supply: a machine-grounded specification”; the end-form article gains 8.12 with the abstract status sentence and the traceability rounds CCCXCII, CCCXCIII and CCCXCV with the verified literature list; the Anthropic email draft gains one status paragraph (the collaborator point: a testable interface where there was an analogy); the website prime-front page gains chapter 36 (the live-updates chapter renumbered "
+      },
+      {
+        "k": "m",
+        "v": "36 \\to 37"
+      },
+      {
+        "k": "t",
+        "v": ") and one consolidated sandbox feed entry (verdict COHOMSPEC-COMPILED); "
+      },
+      {
+        "k": "c",
+        "v": "website/lib/changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh gen"
+      },
+      {
+        "k": "t",
+        "v": "; HONESTY FENCE carried on every surface: the sheet is a requirements document derived from machine-checked no-gos — it proves nothing about Deninger's program or Connes–Consani, claims no progress on RH, and whether any theory can meet the specification is OPEN; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-14",
     "dateLabel": "2026-08-14 · XCVIII",
     "heading": [

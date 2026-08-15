@@ -2408,7 +2408,9 @@ export default function PrimeFrontPage() {
 
       <SvpinKreinSection />
 
-      {/* 36 — Live updates */}
+      <CohomSpecSection />
+
+      {/* 37 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -2417,7 +2419,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              36 · Live updates
+              37 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -3344,6 +3346,154 @@ function SvpinKreinSection() {
           disproven here. All of it is sandbox: no claim moves until it is
           promoted, and nothing here is a claim of progress toward the
           Riemann Hypothesis.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function CohomSpecSection() {
+  return (
+    <section
+      id="cohomspec"
+      aria-labelledby="cohomspec-heading"
+      className="scroll-mt-24 border-t border-slate-800/60 py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            36 · What any cohomology for Spec ℤ must supply · sandbox
+            probes
+          </span>
+          <StatusBadge badge="sandbox" />
+        </div>
+        <h2
+          id="cohomspec-heading"
+          className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
+        >
+          The cohomological specification sheet — the missing theorem,
+          stated as a testable interface
+        </h2>
+        <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
+          <span className="font-medium text-sky-300/90">In plain words: </span>
+          three closing discovery freeze rounds (rounds ninety-one,
+          ninety-two and the specification round, 2026-08-15) compile the
+          campaign&apos;s machine-checked characterization of the one
+          missing input into a requirements document aimed at the
+          geometric programs — Deninger&apos;s conjectural cohomology for
+          Spec ℤ and the Connes–Consani scaling site. Everything in this
+          chapter is sandbox: four frozen probes in the experiments tree,
+          no promotion, no marker moves — the suite stays at 906. No RH
+          claim in any direction.
+        </p>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
+          <p>
+            <strong className="font-medium text-amber-200">
+              The patterns round (round 91, two honest negatives):
+            </strong>{" "}
+            the program&apos;s first magnetar giant-flare QPO bed is{" "}
+            <strong className="font-medium text-slate-100">NULL</strong>{" "}
+            (SGR 1806−20 and SGR 1900+14 against the geometric 3/2
+            ladder: Fisher-joint p = 0.3584 under a 20000-draw null with
+            a 17-base look-elsewhere battery), and the LEE-controlled
+            scan for an unclaimed dimensionless observable is{" "}
+            <strong className="font-medium text-slate-100">
+              SCAN-UNDECIDABLE
+            </strong>{" "}
+            with the structural finding as the content: the compiler
+            vocabulary is <em>saturated</em> at today&apos;s tolerances —
+            even the positive controls have cheaper accidental hits than
+            the corpus expressions — so new predictions provably cannot
+            come from numeric scanning; they must be derived theory-side.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The Verblunsky round (round 92, 23/23,
+              VERBLUNSKY-NO-INVARIANT):
+            </strong>{" "}
+            the sought packet-wise invariance mechanism of the screw
+            coordinate is cleanly killed — a complete prime packet is a
+            high-rank <em>indefinite</em> Toeplitz update (displacement
+            rank two), the induced coefficient step is prior-state
+            dependent (×316), and the true packet stream itself exits the
+            Schur disk after p = 2/3/5/7 and only re-enters through later
+            packets: the rescue is collective, not local. What the round
+            pins on the way is load-bearing for the sheet: the{" "}
+            <strong className="font-medium text-slate-100">
+              Euler–Pick criterion
+            </strong>{" "}
+            (RH ⟺ explicit Pick matrices built from ξ′/ξ(1/2+σ) at σ =
+            1+1/r stay positive semidefinite for every N; the source-only
+            falsification ladder reads λ_min = 4.59×10⁻² down to
+            2.44×10⁻⁶² at N = 12, all positive) and the{" "}
+            <strong className="font-medium text-slate-100">
+              (AC) identity
+            </strong>
+            : Euler–Pick positivity <em>is</em> Weil positivity on
+            exponential autocorrelations, by identity.
+          </p>
+          <p>
+            <strong className="font-medium text-emerald-200">
+              The specification sheet (cohomspec_probe.py, 20/20,
+              COHOMSPEC-COMPILED):
+            </strong>{" "}
+            seven numbered properties any candidate &quot;Weil pairing
+            with structural positivity&quot; must have, each grounded by
+            grep ward or recomputation in its owning frozen artifact. It
+            must produce the signed, alignment-carrying, unconditional,
+            sub-spacing ordinate-position input of the one open edge; it
+            must be shape-independent (deployed decay exponent −3.379,
+            recomputed); it cannot be a magnitude, density or existence
+            statement (Littlewood floor 214.7/1527.1; the existence
+            direction closed at border membership, det M = s·det B exact);
+            its Gram form on exponential autocorrelations{" "}
+            <strong className="font-medium text-slate-100">
+              must be the Euler–Pick matrices
+            </strong>{" "}
+            — a proposed cohomological trace formula can be tested against
+            this interface today, at any finite N, by machine; its
+            positivity must die on the control worlds exactly as measured
+            (the prime-free world at window depth r = 0.264 by a support
+            error, the weight-scrambled world at r = 0.744 — the pairing
+            must consume the exact prime support and the exact log
+            p/p^(m/2) weights); and it must not be the wall scalar
+            renamed (the τ-screen that killed fifteen routes).
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The function-field precedent, mapped to where it breaks:
+            </strong>{" "}
+            in Weil&apos;s proof the pairing is the intersection pairing
+            on the surface C × C, the positivity is the
+            Castelnuovo–Severi/Hodge-index inequality, and Frobenius
+            supplies the cycle. For Spec ℤ, verified against the current
+            literature: Deninger&apos;s dynamical Lefschetz trace formula
+            is now <em>proved</em> on the smooth-foliation side
+            (Álvarez López–Kordyukov 2024) but no arithmetic dynamical
+            system realizing Spec ℤ has been constructed; Connes–Consani
+            have Riemann–Roch on the periodic orbits of the scaling site
+            (2017) but not on its <em>square</em> — exactly the surface
+            substitute whose Hodge-index inequality would be the
+            structural positivity — while their semilocal/prolate line
+            (2021–2023) supplies the archimedean-place positivity and
+            reduces RH to an Euler-factor property, and the 2026 extremal
+            construction leaves open precisely the convergence this
+            corpus adjudicated REALROOT-DEPTH-UNDECIDED.
+          </p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
+          Honest fence: the specification sheet is a requirements document
+          derived from machine-checked no-gos. It proves nothing about
+          Deninger&apos;s program or Connes–Consani, asserts no defect and
+          no progress of either, and claims no progress on the Riemann
+          Hypothesis in any direction. Whether any cohomological theory
+          can meet the specification is open, and the standing
+          counter-evidence (NO-WITNESS: all certified reads positive to
+          h = 12632) travels with every property. What it adds is
+          precision: a testable interface where there was an analogy. All
+          of it is sandbox: no claim moves until it is promoted.
         </p>
       </div>
     </section>
