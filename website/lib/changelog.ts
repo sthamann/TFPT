@@ -43,6 +43,681 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-15",
+    "dateLabel": "2026-08-15 · CI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the roadmap — discovery freeze rounds one-hundred-three through one-hundred-five synced into every live surface: the campaign's complete machine-checked map compiled into the one artifact it never produced — a staged, milestone-gated research roadmap from today's frozen state to a complete RH proof, every stage falsifiable against the corpus's own instruments — fed by the largest proven positivity region of the campaign and the final classical pricing; "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " only — THREE frozen probes, NO promotion, NO module, NO ledger row, NO marker moved, NO gate closed or narrowed, suite unchanged at "
+      },
+      {
+        "k": "m",
+        "v": "906"
+      },
+      {
+        "k": "t",
+        "v": ", NO RH claim in any direction; the honesty fences travel first: A ROADMAP IS NOT PROGRESS ON RH, NO STAGE IS CLAIMED STARTED, AND THE MATHEMATICS OF STAGES 1–2 DOES NOT YET EXIST: (1) ROUND 103 ("
+      },
+      {
+        "k": "c",
+        "v": "moonshot_ sol_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", verdict MOONSHOT-PARTIAL(Form A)): from cited external inputs only — Platt–Trudgian 2021 (all zeros to "
+      },
+      {
+        "k": "m",
+        "v": "T = 3{,}000{,}175{,}332{,}800"
+      },
+      {
+        "k": "t",
+        "v": " on the line), Rosser 1941, the classical "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1"
+      },
+      {
+        "k": "t",
+        "v": " isolation; no zero table, no zeta evaluator — THE LARGEST PROVEN POSITIVITY REGION OF THE CAMPAIGN: "
+      },
+      {
+        "k": "m",
+        "v": "C_{n,k}(256) > 0"
+      },
+      {
+        "k": "t",
+        "v": " for EVERY "
+      },
+      {
+        "k": "m",
+        "v": "n \\ge 0"
+      },
+      {
+        "k": "t",
+        "v": " and every "
+      },
+      {
+        "k": "m",
+        "v": "0 \\le k \\le 10^{19}"
+      },
+      {
+        "k": "t",
+        "v": " (an infinite half-strip in "
+      },
+      {
+        "k": "m",
+        "v": "n"
+      },
+      {
+        "k": "t",
+        "v": ", ten quintillion complete "
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": "-columns; the scope inside the theorem: the "
+      },
+      {
+        "k": "m",
+        "v": "k \\to \\infty"
+      },
+      {
+        "k": "t",
+        "v": " quantifier is touched nowhere, nothing about RH is proven); the three suggested proof routes die with named mechanisms — the exact prime-side transmutation turns the positive Beta spectral window into a sign-changing generalized-Laguerre source window (the classical Laguerre zero theorem: no termwise-positive prime comparison exists), the Killip–Simon/Szeg"
+      },
+      {
+        "k": "t",
+        "v": "o"
+      },
+      {
+        "k": "t",
+        "v": " direction dies on pure-point entropy ("
+      },
+      {
+        "k": "m",
+        "v": "w = 0"
+      },
+      {
+        "k": "t",
+        "v": " a.e., entropy "
+      },
+      {
+        "k": "m",
+        "v": "-\\infty"
+      },
+      {
+        "k": "t",
+        "v": ", floor "
+      },
+      {
+        "k": "m",
+        "v": "e \\ge 0"
+      },
+      {
+        "k": "t",
+        "v": " only), the asymptotic-"
+      },
+      {
+        "k": "m",
+        "v": "a"
+      },
+      {
+        "k": "t",
+        "v": " transport is nonuniform in "
+      },
+      {
+        "k": "m",
+        "v": "(n,k)"
+      },
+      {
+        "k": "t",
+        "v": "; (2) ROUND 104 (note CDV, contract PRIME.LEVINSON.CLASS.01, "
+      },
+      {
+        "k": "c",
+        "v": "levinson_ class_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "23/23"
+      },
+      {
+        "k": "t",
+        "v": " gates, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "65ac12a9"
+      },
+      {
+        "k": "t",
+        "v": ", run-of-record "
+      },
+      {
+        "k": "c",
+        "v": "levinson_ class_ probe.run.log"
+      },
+      {
+        "k": "t",
+        "v": ", verdict LEVINSON-ADJUDICATED(LEVINSON-FAIL; tally "
+      },
+      {
+        "k": "m",
+        "v": "24 \\to 25"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " PASS)): the LAST formally unexamined classical theorem type about zero positions — positive proportion on the line (Selberg 1942; Levinson 1974 "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa \\ge 1/3"
+      },
+      {
+        "k": "t",
+        "v": "; Conrey 1989 "
+      },
+      {
+        "k": "m",
+        "v": "> 2/5"
+      },
+      {
+        "k": "t",
+        "v": "; the standing record "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa > 0.417293"
+      },
+      {
+        "k": "t",
+        "v": ", Pratt–Robles–Zaharescu–Zeindler 2020) — priced against the wall budget: the literal (liminf) class constrains NOTHING at any finite height (exact finite-modification argument), the granted-effective reading breaches every deployed cell by 2–3 orders ("
+      },
+      {
+        "k": "m",
+        "v": "382/1149/1059"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "h = 184/388/839"
+      },
+      {
+        "k": "t",
+        "v": "), and a proportion theorem must come within "
+      },
+      {
+        "k": "m",
+        "v": "1 - \\kappa^* < 4.8\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " of ALL zeros ("
+      },
+      {
+        "k": "m",
+        "v": "\\kappa^*_{\\mathrm{ledger}} = 0.9952/0.9983/0.9988"
+      },
+      {
+        "k": "t",
+        "v": ", each a LOWER bound) before it can feed the wall — with this round every named unconditional classical theorem type about zero positions is formally priced (zero-free regions, density, Weyl equidistribution, pair correlation, positive proportion); (3) ROUND 105 (note CDVI, contract PRIME.ROADMAP.01, "
+      },
+      {
+        "k": "c",
+        "v": "roadmap_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "29/29"
+      },
+      {
+        "k": "t",
+        "v": " gates, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "79092ebf"
+      },
+      {
+        "k": "t",
+        "v": ", deterministic re-run identical, run-of-record "
+      },
+      {
+        "k": "c",
+        "v": "roadmap_ probe.run1.log"
+      },
+      {
+        "k": "t",
+        "v": ", verdict ROADMAP-COMPILED(stages: S0 DONE; S1a"
+      },
+      {
+        "k": "m",
+        "v": "|"
+      },
+      {
+        "k": "t",
+        "v": "S1b OPEN; S2 OPEN; S3 CONDITIONAL-KERNEL-CHECKED; gates "
+      },
+      {
+        "k": "m",
+        "v": "29/29"
+      },
+      {
+        "k": "t",
+        "v": ")): every machine-groundable claim asserted — acceptance-gate values re-computed from cited constants or grep-warded verbatim in their owning frozen artifacts, the stage DAG acyclic with exactly the named open stages, the downstream chain's artifacts present with verdicts grep-verified; STAGE 0 (done, frozen): the atlas complete at 25 candidates "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " PASS, exactly one open edge E4, three equivalent lemma forms, two certified falsification instruments with open-and-empty channels (Euler–Pick floors "
+      },
+      {
+        "k": "m",
+        "v": "N = 1"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "[4.5917135\\times10^{-2}, 4.5917136\\times10^{-2}]"
+      },
+      {
+        "k": "t",
+        "v": " down to "
+      },
+      {
+        "k": "m",
+        "v": "N = 4"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "[8.278338\\times10^{-15}, 1.3840906\\times10^{-14}]"
+      },
+      {
+        "k": "t",
+        "v": " at cap "
+      },
+      {
+        "k": "m",
+        "v": "10^{13}"
+      },
+      {
+        "k": "t",
+        "v": "; Hausdorff certified depth 86, "
+      },
+      {
+        "k": "m",
+        "v": "5290"
+      },
+      {
+        "k": "t",
+        "v": " cells, "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma^*"
+      },
+      {
+        "k": "t",
+        "v": " 189/563), the "
+      },
+      {
+        "k": "m",
+        "v": "k \\le 10^{19}"
+      },
+      {
+        "k": "t",
+        "v": " theorem re-derived inside the probe (decisive ratios "
+      },
+      {
+        "k": "m",
+        "v": "1.176577/335.8/1416.8"
+      },
+      {
+        "k": "t",
+        "v": "; the "
+      },
+      {
+        "k": "m",
+        "v": "n = 0"
+      },
+      {
+        "k": "t",
+        "v": " mechanism wall re-located between "
+      },
+      {
+        "k": "m",
+        "v": "1.40\\times10^{19}"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "1.41\\times10^{19}"
+      },
+      {
+        "k": "t",
+        "v": "), the rigidity law "
+      },
+      {
+        "k": "m",
+        "v": "\\ln\\eta^*(r) = -1.073r - 7.08"
+      },
+      {
+        "k": "t",
+        "v": ", the seven-property specification sheet, 27 kernel-checked theorems; STAGE 1 (OPEN — new mathematics): structural positivity of Hodge-index type for "
+      },
+      {
+        "k": "m",
+        "v": "\\operatorname{Spec}\\mathbb{Z}"
+      },
+      {
+        "k": "t",
+        "v": " — verified literature state: Deninger's dynamical Lefschetz trace formula PROVED for smooth foliated flows (Álvarez López–Kordyukov, arXiv:2402.06671) but NO arithmetic host constructed; Connes–Consani Riemann–Roch on the scaling-site orbits and for "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{Z}"
+      },
+      {
+        "k": "t",
+        "v": " but NOT on the square of the scaling site; milestone (1a) an arithmetic dynamical system hosting the proven trace formula (periodic orbits "
+      },
+      {
+        "k": "m",
+        "v": "\\log p"
+      },
+      {
+        "k": "t",
+        "v": ", weights "
+      },
+      {
+        "k": "m",
+        "v": "\\log p/p^{m/2}"
+      },
+      {
+        "k": "t",
+        "v": "), acceptance gate: reproduce the (AC)/Euler–Pick interface "
+      },
+      {
+        "k": "m",
+        "v": "c^T P_N c = \\langle -g'', f_c \\star \\tilde f_c\\rangle"
+      },
+      {
+        "k": "t",
+        "v": " at the 16 frozen "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " of the SVPIN spec (minutes-scale, by machine); milestone (1b) OR Riemann–Roch on the square of the scaling site, acceptance gate: the intersection pairing on exponential autocorrelations must reproduce the certified "
+      },
+      {
+        "k": "m",
+        "v": "\\mathcal P_N"
+      },
+      {
+        "k": "t",
+        "v": " ladder ("
+      },
+      {
+        "k": "m",
+        "v": "N \\le 4"
+      },
+      {
+        "k": "t",
+        "v": " floors as frozen acceptance values); STAGE 2 (OPEN — new mathematics): the Hodge-index/Castelnuovo analog on the Stage-1 substrate, acceptance gates "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the corpus's measured consumption requirements: FAIL the surrogate worlds exactly at the measured depths ("
+      },
+      {
+        "k": "m",
+        "v": "r = 0.264"
+      },
+      {
+        "k": "t",
+        "v": " smooth by support, "
+      },
+      {
+        "k": "m",
+        "v": "r = 0.744"
+      },
+      {
+        "k": "t",
+        "v": " scramble by weights), be SIGNED and ALIGNMENT-CARRYING (the v913 class), SURVIVE the "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-screen (bands "
+      },
+      {
+        "k": "m",
+        "v": "0.30/0.70"
+      },
+      {
+        "k": "t",
+        "v": "), and reproduce the certified Hausdorff cells (depth 86) while STRICTLY EXTENDING the "
+      },
+      {
+        "k": "m",
+        "v": "k \\le 10^{19}"
+      },
+      {
+        "k": "t",
+        "v": " theorem's reach; STAGE 3 (CONDITIONAL-COMPLETE — assembly, already machine-held): from the Stage-2 inequality to localized Weil positivity in ANY ONE of the three lemma forms, then the machine-held extraction — "
+      },
+      {
+        "k": "c",
+        "v": "v848"
+      },
+      {
+        "k": "t",
+        "v": " (EXTRACTION-CHAIN-COMPLETE, hypothesis (H) isolated), "
+      },
+      {
+        "k": "c",
+        "v": "v912"
+      },
+      {
+        "k": "t",
+        "v": " (unconditional rate "
+      },
+      {
+        "k": "m",
+        "v": "O(D^2\\log(1/D))"
+      },
+      {
+        "k": "t",
+        "v": "), the Lean kernel tier ("
+      },
+      {
+        "k": "c",
+        "v": "CofinalWeil"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "CofinalPredefinition"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "pickMatrix_posSemidef"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "sv_implies_rh"
+      },
+      {
+        "k": "t",
+        "v": " with the honesty lock "
+      },
+      {
+        "k": "c",
+        "v": "skeleton_not_unconditional"
+      },
+      {
+        "k": "t",
+        "v": "), the SVPIN skeleton (SVPIN-ROUTE-OPEN), the Hausdorff equivalence (HAUSDORFF-EQUIVALENCE-SOUND), the CCM same-currency interface (CCM-SAME-CURRENCY); THE FALSIFICATION SPINE (parallel, permanent): the two certified instruments keep running as standing disproof channels, both open and EMPTY (a single certified negative would be an RH-disproof candidate); the extension walls are KNOWLEDGE walls, not compute walls (Euler–Pick "
+      },
+      {
+        "k": "m",
+        "v": "N = 5"
+      },
+      {
+        "k": "t",
+        "v": " needs "
+      },
+      {
+        "k": "m",
+        "v": "\\psi"
+      },
+      {
+        "k": "t",
+        "v": "-knowledge beyond "
+      },
+      {
+        "k": "m",
+        "v": "10^{19}"
+      },
+      {
+        "k": "t",
+        "v": ", floor/"
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_5 = 4.7\\times10^{5}"
+      },
+      {
+        "k": "t",
+        "v": " at any cap; the Form-A "
+      },
+      {
+        "k": "m",
+        "v": "n = 0"
+      },
+      {
+        "k": "t",
+        "v": " mechanism exhausts at "
+      },
+      {
+        "k": "m",
+        "v": "k \\approx 1.405\\times10^{19}"
+      },
+      {
+        "k": "t",
+        "v": "); THE HONEST PRICING: Stages 1–2 require mathematics that does not exist today — the roadmap proves interfaces and obstructions, never existence; Stage 3 is assembly; the corpus's contribution to every stage is the same — acceptance gates that turn each milestone into a minutes-scale machine check, so any candidate, from anyone, can be adjudicated immediately; NO timeline promised; (4) SURFACES SYNCED IN THIS ENTRY: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " gains the sandbox diary subsection “The road from here: a machine-gated path to a complete proof”; the end-form article gains 8.14 with the abstract status sentence and the traceability rounds 103–105; the Anthropic email draft gains one status paragraph (the roadmap as the collaboration offer — each milestone has a minutes-scale acceptance test); the website prime-front page gains chapter 38 (the live-updates chapter renumbered "
+      },
+      {
+        "k": "m",
+        "v": "38 \\to 39"
+      },
+      {
+        "k": "t",
+        "v": ") and one consolidated sandbox feed entry (verdict ROADMAP-COMPILED, new enum, script "
+      },
+      {
+        "k": "c",
+        "v": "roadmap_probe.py"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "c",
+        "v": "website/lib/changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh gen"
+      },
+      {
+        "k": "t",
+        "v": "; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-15",
     "dateLabel": "2026-08-15 · C",
     "heading": [
       {

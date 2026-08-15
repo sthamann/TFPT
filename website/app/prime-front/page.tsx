@@ -2412,7 +2412,9 @@ export default function PrimeFrontPage() {
 
       <ThreeLemmaFormsSection />
 
-      {/* 38 — Live updates */}
+      <RoadmapSection />
+
+      {/* 39 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -2421,7 +2423,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              38 · Live updates
+              39 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -3682,6 +3684,140 @@ function ThreeLemmaFormsSection() {
           their blindness laws are measured and carried. RH is neither
           proven nor disproven; all of it is sandbox: no claim moves
           until it is promoted.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function RoadmapSection() {
+  return (
+    <section
+      id="roadmap"
+      aria-labelledby="roadmap-heading"
+      className="scroll-mt-24 border-t border-slate-800/60 py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            38 · The roadmap · sandbox probes
+          </span>
+          <StatusBadge badge="sandbox" />
+        </div>
+        <h2
+          id="roadmap-heading"
+          className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
+        >
+          The road from here — a machine-gated path to a complete proof
+        </h2>
+        <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
+          <span className="font-medium text-sky-300/90">In plain words: </span>
+          three discovery freeze rounds (rounds one-hundred-three through
+          one-hundred-five, 2026-08-15) compile the campaign&apos;s complete
+          machine-checked map into the one artifact it never produced: a
+          staged, milestone-gated research roadmap from today&apos;s frozen
+          state to a complete RH proof, in which every stage is falsifiable
+          against the corpus&apos;s own instruments. The fences come first:
+          a roadmap is not progress on RH, no stage is claimed started, and
+          the mathematics of Stages 1–2 does not yet exist. Everything here
+          is sandbox — three frozen probes, no promotion, no marker moves;
+          the suite stays at 906.
+        </p>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
+          <p>
+            <strong className="font-medium text-emerald-200">
+              The two feeder rounds:
+            </strong>{" "}
+            the Form-A round (round 103, MOONSHOT-PARTIAL) proves, from
+            cited inputs alone (Platt–Trudgian 2021 + Rosser 1941 + the
+            classical γ₁ isolation — no zero table, no zeta evaluator),{" "}
+            <strong className="font-medium text-slate-100">
+              the largest positivity region of the campaign: C_(n,k)(256)
+              &gt; 0 for every n ≥ 0 and every k ≤ 10¹⁹
+            </strong>{" "}
+            — ten quintillion complete k-columns, with the scope inside the
+            theorem: it touches the k → ∞ quantifier nowhere and proves
+            nothing about RH; its three suggested proof routes die with
+            named mechanisms (the Laguerre sign obstruction on the prime
+            side; pure-point Szegő entropy −∞; nonuniform asymptotic-a
+            transport). The class round (round 104, 23/23,
+            LEVINSON-ADJUDICATED) prices the last unexamined classical
+            theorem type — positive proportion on the line
+            (Selberg/Levinson/Conrey up to PRZZ&apos;s κ &gt; 0.417293) —
+            as structurally useless at every published constant: a
+            proportion theorem must come within 1 − κ* &lt; 4.8×10⁻³ of{" "}
+            <em>all</em> zeros (κ*_ledger = 0.9952/0.9983/0.9988, lower
+            bounds) before it can feed the wall.{" "}
+            <strong className="font-medium text-slate-100">
+              The atlas tally moves 24 → 25 candidates, 0 PASS
+            </strong>{" "}
+            — every named unconditional classical theorem type about zero
+            positions is now formally priced.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The roadmap (round 105, roadmap_probe.py, 29/29,
+              ROADMAP-COMPILED):
+            </strong>{" "}
+            <strong className="font-medium text-slate-100">Stage 0</strong>{" "}
+            (done, frozen): the atlas at 25/0, one open edge E4, three
+            equivalent lemma forms, two certified instruments with
+            open-and-empty channels, the k ≤ 10¹⁹ theorem (re-derived
+            inside the probe from the cited constants), the rigidity law,
+            the specification sheet, 27 kernel theorems.{" "}
+            <strong className="font-medium text-slate-100">Stage 1</strong>{" "}
+            (open — new mathematics): structural positivity of Hodge-index
+            type for Spec ℤ; the verified literature state: Deninger&apos;s
+            trace formula is proved for smooth foliated flows
+            (arXiv:2402.06671) but has no arithmetic host, and
+            Connes–Consani have Riemann–Roch on the scaling site and for ℤ
+            but not on its square. Milestone 1a — an arithmetic dynamical
+            system hosting the proven trace formula — acceptance gate: it
+            must reproduce the (AC)/Euler–Pick interface at the 16 frozen
+            σ, checkable by machine in minutes. Milestone 1b — Riemann–Roch
+            on the square of the scaling site — acceptance gate: the
+            intersection pairing on exponential autocorrelations must
+            reproduce the certified 𝒫_N ladder (N ≤ 4 frozen floors).{" "}
+            <strong className="font-medium text-slate-100">Stage 2</strong>{" "}
+            (open — new mathematics): the Hodge-index/Castelnuovo analog on
+            the Stage-1 substrate; gates: fail the surrogates exactly at r
+            = 0.264/0.744, be signed and alignment-carrying (v913 class),
+            survive the τ-screen (bands 0.30/0.70), reproduce the certified
+            Hausdorff cells (depth 86) and strictly extend the k ≤ 10¹⁹
+            reach.{" "}
+            <strong className="font-medium text-slate-100">Stage 3</strong>{" "}
+            (conditional-complete — assembly the machine already holds):
+            from the index inequality to localized Weil positivity in any
+            one lemma form, then v848&apos;s extraction chain, v912&apos;s
+            rate theorem, the Lean kernel tier (sv_implies_rh with its
+            honesty lock), the SVPIN skeleton, the Hausdorff equivalence,
+            and the CCM same-currency interface.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The falsification spine (parallel, permanent):
+            </strong>{" "}
+            the two certified instruments keep running as standing disproof
+            channels — Euler–Pick N ≤ 4 and the Hausdorff field at depth 86,
+            both open and empty; a single certified negative anywhere would
+            be an RH-disproof candidate. The extension walls are knowledge
+            walls, not compute walls: N = 5 needs ψ-knowledge beyond 10¹⁹
+            (the floor exceeds λ₅ by 4.7×10⁵ at any sieve cap), and the
+            Form-A n = 0 mechanism exhausts at k ≈ 1.405×10¹⁹.
+          </p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
+          Honest fence: a roadmap is not progress on RH; no stage is claimed
+          started; Stages 1–2 require mathematics that does not yet exist,
+          and the corpus proves interfaces and obstructions, never
+          existence. No timeline is promised. The roadmap&apos;s value is
+          exactly that every step is falsifiable and interface-defined: any
+          candidate, from anyone, anywhere, can be adjudicated against
+          frozen machine gates in minutes. RH is neither proven nor
+          disproven; all of it is sandbox — no claim moves until it is
+          promoted.
         </p>
       </div>
     </section>
