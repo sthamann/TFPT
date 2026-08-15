@@ -17684,6 +17684,35 @@ positions are stable in $K$ inside the deployed band (the
 round-85 well-posedness caveat is discharged for the positions;
 the joint $(x,K)$ declaration remains for the margins).
 
+\emph{Correction of record (round 97, 2026-08-15,
+\texttt{sp\_expsum\_pricing\_probe.py}, $13/13$ gates, verdict
+\textsc{sp-operative-falsified} --- carried per the round-87
+convention: the frozen probes and notes are not retro-edited,
+the correction is the record).}  The predictor's exactness holds
+at $x \le 13$ only.  Round 97
+(Section~\ref{sec:instrument-tier}) extended the census from the
+79 lattice points ($x \le 13$) to $18798$ points ($x \le 890$,
+the cache edge $\gamma_{7000} = 7264.75$) and measured the
+\emph{operative} form of this predictor ---
+$\operatorname{round}(N_{\mathrm{src}}(\omega_k)) =
+N_{\mathrm{true}}(\omega_k)$, TPL(i)'s finite form ---
+\textbf{false from $x = 21$ onward}, with $567$
+$\tau$-screened counterexamples: the round-88 exactness was a
+small-$x$ accident of the margin budget.  The mechanism is
+arithmetic-free --- the Fej\'er taper's irreducible
+tracking-variance floor ($\mathrm{rms} \to 1/(2\pi) = 0.159$,
+measured $0.26$) against the $0.5$ budget, so no taper in this
+family survives --- and the same round priced the budget as
+classically out of reach (best unconditional miss $\times 8.2$;
+even the RH-conditional bound reads $1.015$ at the deepest
+rung), with the prefix/exceptional-set salvage measured dead
+in-window.  The fence travels with the correction: what died is
+the deployed \emph{source-side approximant}, not TPL(i) itself
+--- the eigenvector truth side is unmeasured beyond $x = 13$ ---
+and the round-88 claim as published (exact at all 79 points, $x
+\le 13$) remains factually true; its operative extension is now
+measured dead.
+
 \begin{quote}
 \textbf{Where the arc leaves the campaign} (sandbox; no RH
 claim): the wall route is closed as a theorem (the OCT of
@@ -18068,7 +18097,13 @@ sub-spacing price), whose sharpest concrete corpus forms travel
 with it (the Parity-Lemma counting law $D_{\max} = x - 3/8$ at
 marginal cost $e^{-11}$ per forced skip; the sign-position
 predictor at minimum half-integer margin $0.0317$, arithmetic
-load $4$).  (P2)~It must be \textbf{shape-independent} in the
+load $4$ --- corrected of record by round 97,
+Section~\ref{sec:instrument-tier}: exact at $x \le 13$ only, the
+operative extension measured false from $x = 21$ onward with
+$567$ $\tau$-screened violations to the cache edge $x = 890$, a
+small-$x$ accident of the margin budget; TPL(i) itself
+untouched, the eigenvector truth side unmeasured beyond
+$x = 13$).  (P2)~It must be \textbf{shape-independent} in the
 measured sense (deployed decay exponent $-3.379$, recomputed by
 OLS from the frozen five-cell ladder as $-3.3795$; the five
 admissible alternatives shallower by a gap $\ge 2.2$ and losing
@@ -18152,6 +18187,371 @@ evidence: the missing theorem's interface is now stated sharply
 enough to be tested against --- at finite $N$, by machine ---
 before anyone proves anything.  \textbf{No statement about the
 Riemann Hypothesis is made.}
+
+\subsection{The three lemma forms, the certified instruments,
+and a correction of record (sandbox
+probes)}\label{sec:instrument-tier}
+
+Nine further discovery freeze rounds of 2026-08-15 (notes
+CCCXCIV and CCCXCVI--CDIII; several run as concurrent lanes)
+then finished the campaign's instrument tier and, in one case,
+corrected its own published record.  Everything in this
+subsection is \emph{sandbox}: eight frozen probes plus a Lean
+formalization round in the experiments tree, no module, no
+ledger row, no marker moved, no gate closed or narrowed, and no
+claim about the Riemann Hypothesis in any direction.  The suite
+stays at 906 modules.  One correction of record travels with
+this subsection and is carried where the corrected claim lives
+(Section~\ref{sec:realroot-signpos}): round 97, below.
+
+\emph{The collective-rescue round (round 93,
+\texttt{collective\_rescue\_probe.py}, $10/10$ wards $+$ $7/7$
+law gates, deterministic $24.0/23.8$\,s, verdict
+\textsc{collective-is-support}).}  Round 92's exit/re-entry
+phenomenon is \emph{fully explained} --- no new structural law,
+no prime conspiracy, no Lyapunov functional.  Half of the law is
+a theorem: the tent moment $c_d$ reads only atoms within one
+mesh of $d\delta$, so truncating the stream above $u_{\mathrm{miss}}$
+leaves the Verblunsky prefix bit-identical (verified spread
+exactly $0$) and the exit can never come before the exact causal
+onset $\lfloor u_{\mathrm{miss}}/\delta\rfloor - 1$; the only
+empirical content is the upper offset, measured at
+\textbf{onset $+$ ${\sim}2$ lags} across all truncations on the
+extended window (the round-92 re-entry demystified: P5 differs
+from the full stream in exactly one coefficient, nothing is
+rescued, the window just gets covered).  The completed stream's
+cumulative $\max|\alpha|$ is \emph{constant} at $0.183932$ from
+$r = 2.568$ to $4.788$ with band maxima falling ($0.184 \to
+0.120$) --- strictly a finite-prefix measurement, never
+quantifier evidence (mesh dependence disclosed:
+$0.207/0.184/0.156$).  All Lyapunov candidates are killed with
+numbers --- by causality the fixed-prefix candidate class is
+\emph{empty} --- and the mass-restored control ($\{2..7\}$ plus
+a density tail) dies at the \emph{identical} lag $400$ as the
+truncation it imitates: \textbf{mass-without-atoms does not
+rescue} --- the exit law is support bookkeeping, but in-window
+survival requires the exact arithmetic weights.
+
+\emph{The Euler--Pick certified ladder (round 95,
+\texttt{eulerpick\_ladder\_probe.py}, $31/31$ gates,
+deterministic $101.3/101.3$\,s, verdict
+\textsc{eulerpick-certified} $+$
+\textsc{eulerpick-generic-decay} $+$
+\textsc{eulerpick-detection-law}).}  The round-92 falsification
+ladder rebuilt to \emph{certified} standard: outward-rounded
+interval floors end to end --- $N = 1$:
+$[4.5917135\times10^{-2},\,4.5917136\times10^{-2}]$; $N = 2$:
+$[9.0288701\times10^{-6},\,9.0289075\times10^{-6}]$; $N = 3$
+certified positive at cap $1.6\times10^{7}$:
+$[2.3643695\times10^{-10},\,1.1497752\times10^{-9}]$ --- the
+falsification channel implemented, self-tested on a planted
+negative family, and \textbf{empty} (a certified $\mathrm{hi} <
+0$ at any $N$ would disprove RH by the exact forward direction
+alone).  The honest wall is the tail, never precision (enclosure
+width scales exactly as $X^{-(1+1/j)}$; the float ladder runs to
+$N = 24$ while certification dies at $N = 3$).  The decay is
+\emph{generic}: a control decomposition on the same nodes
+(Cauchy $\to$ RvM density $\to$ gap $\to$ quantile-atom
+discreteness) lands within $1.2\times$ of the Euler value across
+$N = 4..24$ with the true $\gamma_1$ appearing nowhere --- the
+decay carries no arithmetic information.  The detection law from
+planted off-line quadruples reads $N^*(\delta) = 6.1 +
+1.95\log_{10}(1/\delta)$ (rms $0.46$), with measured
+$\gamma$-blindness: $N^*(0.1) = 8/12/22$ at $\gamma = 14/20/30$,
+$\gamma = 50$ undetected through $N = 36$ --- reach costs
+$O(\gamma)$ rungs.  Promotion honestly declined: the certified
+slice sees off-line zeros only at $\gamma \sim 5$--$8$,
+territory classical verification closed decades ago.
+
+\emph{The rigidity round (round 96,
+\texttt{rigidity\_inverse\_probe.py}, $9/9$ wards, deterministic
+$12.2/12.3$\,s, verdict \textsc{rigidity-tightening}).}  The
+inverse problem answered: screw positivity to depth $r$ pins the
+measure onto the prime comb \emph{exponentially tightly}, and
+the pinning rate is exactly the conditioning price.  Survival
+moduli shrink with depth (median factor $3.78$ over 22
+channels); \textbf{all 17 adversarial impostor candidates die}
+--- the shifted-prime comb $p \to p+2$, the golden quasi-prime
+comb at exact prime density with full power/weight structure,
+equal-spaced crystals, mass-matched crystal tails (atomicity
+plus correct mass is \emph{not} enough), sub-mesh splits at
+every scale (even the sub-mesh tent profile is pinned),
+moment-matched jitters, a single deep weight swap --- and all 15
+single-atom deletions are fatal within $J \le 8$ lags of causal
+onset.  The moduli law $\ln\eta^*(r) = -1.073\,r - 7.08$ gives
+$c_{\mathrm{mod}} = 1.073$ against the $\lambda_{\min}$ ladder
+slope $c_\lambda = 0.814$, within the frozen band and sharper
+via the rigorous eigenvalue survival floor (reached by the
+measured atom-2 modulus to factor $1.1$--$2.8$):
+\textbf{rigidity is the conditioning price up to an $O(1)$
+alignment factor}, not a new arithmetic-free law.  The theorem
+candidate is typed honestly (anchors machine-measured, law
+fitted, all-depth \textsc{open}), and its hypothesis remains
+localized Weil positivity --- unchanged currency.
+
+\emph{The SP-pricing round (round 97,
+\texttt{sp\_expsum\_pricing\_probe.py}, $13/13$ gates,
+deterministic $0.8$\,s twice, verdict
+\textsc{sp-operative-falsified} $+$ \textsc{sp-priced} $+$
+\textsc{sp-classically-out-of-reach}($\times 8.2$) $+$
+\textsc{sp-conditional-ladder} $+$
+\textsc{sp-prefix-dead-in-window} $+$
+\textsc{sp-literal-nonvanishing-in-range} --- the correction of
+record carried in Section~\ref{sec:realroot-signpos}).}  The
+round-88 rounding-margin statement priced against the full
+classical exponential-sum arsenal --- and the measurement
+overtook the pricing.  The pricing first, all constants
+generous, deepest rung $x = 890$ / $t_{\mathrm{top}} = 6990$
+against the need $0.5$: trivial $\ell^1$ $5.53$, van der Corput
+second/third derivative $5.23/5.53$, the Bourgain exponent pair
+$5.53$, the Vaughan$+$Vinogradov ceiling via the explicit $S(t)
+= O(\log t)$ bound $4.11$ --- \textbf{the best unconditional
+miss is $\times 8.2$}, Lindel\"of/density give no pointwise
+constant, and even RH itself (Carneiro--Chandee--Milinovich,
+plus Montgomery's $\Omega$) stays above the budget at $1.015$ on
+the deepest rung: the budget is unreachable \emph{and} measured
+exceeded.  The measurement: the census extended from 79 points
+($x \le 13$) to $18798$ points ($x \le 890$) shows the operative
+predictor form \textbf{false from $x = 21$ onward with $567$
+$\tau$-screened counterexamples} --- the round-88 exactness a
+small-$x$ accident of the margin budget, by an arithmetic-free
+mechanism (the Fej\'er taper's tracking-variance floor,
+$\mathrm{rms} \to 1/(2\pi) = 0.159$, measured $0.26$, against
+budget $0.5$ --- no taper in this family survives); the
+prefix/exceptional-set salvage is dead in-window (the lowest
+violation drops to $k/K = 0.010$ and the prefix depth stalls at
+$\le 131$); the literal non-vanishing form survives trivially
+and is contentless without a repulsion law.  The fence: what
+died is the deployed source-side approximant, not TPL(i) itself
+--- the eigenvector truth side is unmeasured beyond $x = 13$.
+
+\emph{The CCM round (round 98, contract on arXiv:2310.18423;
+\texttt{ccm\_pn\_adjudication\_probe.py}, $22/22$ gates,
+$204$\,s, re-run bit-identical, verdict \textsc{ccm-checked} $+$
+\textsc{ccm-same-currency}).}  The one external \emph{published}
+RH reduction adjudicated: Connes--Consani--Moscovici's $P(n)$
+property ($P(n)$ for all $n \Leftrightarrow$ RH; open for every
+prime-bearing $n > 2$, proven only at the archimedean place, and
+quantifying over an infinite-dimensional cone per fixed $n$ ---
+not finitely checkable in full).  Two results.  First, a
+\textbf{new finite instrument}: Galerkin sections of $Q_n$
+itself (24 tents, both pole constraints projected exactly, the
+prime side exactly finite) --- \textbf{all six prime-bearing
+sections positive} ($\lambda_{\min} = 2.30\times10^{-3}$ at $n =
+2.5$ down to $1.01\times10^{-5}$ at $n = 13$, certified budgets
+$\le 5.8\times10^{-60}$; the pole constraint is load-bearing ---
+the unconstrained form is $-0.093$ at $n = 3$); a certified
+negative anywhere would have refuted RH, and the channel stays
+empty (honest limit: margins for $n \ge 4$ are
+resolution-limited).  Second, the interface test: CCM's
+published local terms reproduce $\xi'/\xi(1/2+\sigma)$ to rel
+$2.3\times10^{-50}$, and their quadratic form on the
+exponential-autocorrelation family \textbf{reproduces the corpus
+Euler--Pick matrices entrywise} --- specification-sheet property
+P4 of Section~\ref{sec:cohomspec} executed on the external
+reduction itself; the $\tau$-screen types it
+\textsc{relocation}: the wall renamed.  The controls die through
+the same construction (\textsc{smooth} between $n = 3$ and $6$,
+\textsc{scrarith} at $n = 6$, \textsc{epstein} at $n = 6/13$,
+separations $2.9\times10^{3}$--$7.6\times10^{3}$ $\times$
+margin) --- $P(n)$ is arithmetic-sensitive at the positivity
+level exactly like the screw carrier, and the honest comparison
+is an identity: \textbf{$P(n)$ \emph{is} localized Weil
+positivity}, $n$-localized but infinite-dimensional per
+instance.  What the corpus adds to CCM's own gap: the (AC)
+interface makes any semilocal prolate candidate finitely
+testable today, the control deaths are consumption requirements
+now reproduced in the $P(n)$ currency, and the certified
+Euler--Pick ladder prices certified $P(n)$-type checks.
+
+\emph{The Lean round (round 99, four new modules under
+\texttt{TfptCarrier/}, full incremental lake build green, audit
+$7/7$; 27 kernel-checked headline theorems with axiom footprint
+exactly $[\texttt{propext}, \texttt{Classical.choice},
+\texttt{Quot.sound}]$, no \texttt{sorry}, no
+\texttt{native\_decide}).}  The reduction chain's best pieces
+are now kernel-checked.  \texttt{EulerPick.lean}: the exact
+per-zero identity, the Gram-sum form, and
+\texttt{pickMatrix\_posSemidef} at the SV nodes $\sigma_j = 1 +
+1/(j+1)$ for every $N$ --- \textbf{the forward direction of the
+Euler--Pick criterion, kernel-checked for finite ordinate
+families} (the identification with $\xi'/\xi$ and the backward
+Pick direction stay cited classical input, docstring-typed).
+\texttt{DeltaOneNoGo.lean}: the $\delta_1$ counterexample
+package --- PSD but never positive definite for $n \ge 2$ while
+the Carath\'eodory value stays positive.
+\texttt{ParityLemma.lean}, the largest piece: blow-up laws,
+existence directions, the combinatorial core, and the
+\textbf{full round-85 law}
+\texttt{zero\_count\_even\_iff\_opposite\_residues} --- under
+\emph{one named simplicity hypothesis} (alternating signs at
+canonical gap midpoints; exactly where zero simplicity enters,
+docstring-typed), with boundary signs and gap-sign constancy
+proven, not assumed.  \texttt{SVSkeleton.lean}, partial by
+design: the pin geometry proven (accumulation at the interior
+point $1$), the hypothesis package with three cited fields, the
+composition \texttt{sv\_implies\_rh} --- and \textbf{the honesty
+lock} \texttt{skeleton\_not\_unconditional}, an instance with
+$\mathrm{RH} = \mathrm{False}$: the packaging alone yields
+nothing.
+
+\emph{The $N = 4$ certification round (round 100,
+\texttt{sieve4\_eulerpick\_n4\_probe.py}, $22/22$ gates,
+$2682$\,s; segmented byte sieve to cap $X = 10^{13}$, the
+compiled helper's source SHA pinned in the probe, run-of-record
+\texttt{sieve4\_run1.log}, and the hard external ward
+$\pi(10^{13}) = 346{,}065{,}536{,}839$ reproduced exactly by the
+instrument).}  \textbf{$\lambda_{\min}(\mathcal P_4) \in
+[8.278338\times10^{-15},\,1.3840906\times10^{-14}]$ is certified
+positive} (margin $0.749$), the $N \le 3$ floors tightened
+massively ($\mathrm{lo}_3$ width $9.1\times10^{-10} \to
+1.3\times10^{-16}$), and the falsification channel stays open
+and empty.  The round also corrects round 95's upgrade-path
+model, load-bearingly: its $X_{\mathrm{req}}$ model omitted the
+tail floor beyond the B\"uthe range $x > 10^{19}$ --- with $\psi
+\ge 0$ alone that floor exceeds $\lambda_4$ \emph{at any cap},
+so the named path was not worst-case executable; one airtight
+elementary input unblocks it --- \textbf{Nair 1982:
+$\operatorname{lcm}(1..n) \ge 2^{n-1}$, hence $\psi(x) \ge
+(x-2)\ln 2$} (warded against the round's own sieve data) ---
+giving the corrected $X_{\mathrm{req}}(4) = 10^{11.52}$ (the
+realized crude assembly also certified at $10^{13}$; Nair makes
+the certificate a-priori guaranteed and triples the margin).
+And the $N = 5$ wall is corrected: it is \emph{not} sieve-walled
+--- the beyond-$10^{19}$ floor exceeds $\lambda_5$ by a factor
+$4.7\times10^{5}$, so no sieve of any size helps ---
+\textbf{the knowledge wall starts at $N = 5$}, not $N = 6$ as
+round 95 estimated.
+
+\emph{The $\alpha$-induction round (round 101, contract
+\textsc{prime.screw.induction.01};
+\texttt{screwind\_induction\_probe.py}, $10/10$ wards $+$ $5/8$
+law gates --- the three fails are findings, typed; companion
+\texttt{screwind\_meshdrift\_check.py}; verdict
+\textsc{screwind-kick-law}(exact) $+$
+\textsc{screwind-step-is-wall} $+$
+\textsc{screwind-dichotomy}(descriptive-only)).}  The one
+inductive attack never attempted, in the best-conditioned
+coordinate --- with a \textbf{depth record}: all sections
+positive to $r = 9.0$ at both meshes (the corpus record was
+$4.788$), $\sup|\rho| = 0.183932$ with margin $0.816$ attained
+at $k = 0$ --- the stream never exceeds its own first
+coefficient.  The flatness is carried by a cancellation of
+giants (band medians $\rho_{\mathrm{arch}} = +288.5$ vs
+$\rho_{\mathrm{prime}} = -288.5$ at $u = 9$ against net RMS
+$0.023$), and \textbf{the exact kick law} holds at every atom
+arrival (affine-exact, deviation $\le 2.8\times10^{-16}$,
+numerator pure arithmetic in $(p, m, \delta)$); the informative
+gate fail: net arrival $\alpha$ is \emph{positive} on $33/39$
+and the atom-bin median $|\rho|$ sits below background
+($0.62\times$) --- \textbf{prime arrivals stabilize}; the naive
+atoms-push-down picture is wrong.  The Szeg\H{o} dichotomy is
+typed \textsc{descriptive-only} (``positivity $+$ Szeg\H{o}
+violation $\Leftrightarrow$ pure point'' is false as a theorem
+candidate).  The sharpest true statement is an induction whose
+side condition is wall-equivalent (literally the round-92
+object) --- \textbf{the wall relocates into the certificate} ---
+and the named open piece is stated exactly: a source-certified
+two-sided energy floor $e(u) \ge C e^{-\kappa_+ u}$ with
+$\kappa_+ < 1/2$ would make the kicks self-improving (kick
+exponent $\kappa - 1/2 = -0.322 < 0$ measured everywhere), but
+that floor \emph{is} localized positivity: the cleanest
+statement yet of where the wall sits in this coordinate.
+
+\emph{The Hausdorff safe-point round (round 102, externally
+proposed, contract \textsc{prime.hausdorff.safepoint.01};
+\texttt{hausdorff\_safepoint\_probe.py}, $40/40$ gates,
+$143.6$\,s, independently re-run green, composite verdict
+\textsc{hausdorff-equivalence-sound} $+$
+\textsc{hausdorff-reproduced} $+$
+\textsc{hausdorff-certified-depth}(86; $\gamma^*$ 189/563) $+$
+\textsc{hausdorff-replication} $+$ \textsc{hausdorff-detector}
+$+$ \textsc{hausdorff-z1-zeromeasure} $+$
+\textsc{not-world-new}).}  An externally proposed moment-field
+criterion built, audited and adjudicated: with $\Phi(z) =
+\xi(1/2 + \sqrt z)$, $F = \Phi'/\Phi$, $b_n(a) =
+a^{n+1}((-1)^n/n!)\,F^{(n)}(a)$ and the Pascal field $C_{n,k} =
+(-1)^k \Delta^k b_n$ at the safe point $a = 256$ in the Euler
+half-plane, the claim is $\mathrm{RH} \Leftrightarrow
+C_{n,k}(a) \ge 0$ for all $n, k$.  \textbf{The equivalence
+skeleton is sound}: the Hausdorff/Widder hypotheses need no
+extra boundedness ($0 \le b_n \le b_0$ follows from $C_{n,0},
+C_{n,1} \ge 0$, executed on the certified range), no-atom-at-$0$
+is gated, and the one sharp continuation step closes (shared
+Taylor data at $a$, the identity theorem on the slit plane minus
+the discrete off-axis pole set, removability at any putative
+off-axis pole --- contradiction), with the companions
+symbolically exact (the Li binomial transform, the M\"obius
+flow, the Hankel--Vandermonde SOS, Pascal conservation).  The
+proposer's spec is numerically faithful in every reproducible
+detail ($561/561$ cells positive, weakest $C_{16,16}$ ratio
+$1.000220$ to claim, pins to $6.452\times10^{-37}$).  The
+headline: \textbf{certified depth 86 ($5290$ cells) with
+$\gamma^*$-reach $189$ at $a = 256$ and $563$ on the $a = 1024$
+arm --- versus Euler--Pick's certified $N = 3$ ($\gamma \sim
+5$--$8$) at $\kappa = 2.3\times10^{61}$: the cheapest certified
+RH-consequence instrument in the corpus by a wide margin}
+($143$\,s total; the min-cell margin decays by the spectral law,
+slope $-0.3099$ vs prediction $-0.304$, not
+Cauchy-catastrophically).  Three-carrier replication: signpos
+($x = 8$, max deviation $0.0829$ over $j \le 5$), the round-90
+Krein carrier (max $|\Delta P| = 2.93\times10^{-4}$, exactly the
+documented bias), and the SV pins ($6.45\times10^{-37}$) agree
+--- \textbf{three source-only carriers with no zero cache
+anywhere in construction}.  The detector, honestly priced: the
+matched-ray phase is $O(\delta^3)$-stationary (derived exactly),
+so detection runs only through the $k = 0$ channel and the
+measured law $d^* \sim 1/\delta$ holds below $\gamma_1$
+($78/104$ vs predictions $79/105$) --- \textbf{above $\gamma_1$
+the Pascal field is provably blind at the safe point}, made
+concrete by the Epstein control: an off-line witness zero
+\emph{located} at $\rho = 0.69692705 + 36.37406369\,i$
+($|\xi_Q| = 1.5\times10^{-40}$, RH-for-$Q$ provably false) while
+the $Q$ Pascal field stays positive to depth $100$ exactly as
+the phase model predicts (the fires-iff-fires gate against a
+planted replica passed); the smooth world dies immediately
+(first negative $C_{7,1} = -2.3\times10^{-3}$ at depth $8$).
+Z1 typing: $b_n =$ cache partial sums $+$ RvM tail ---
+source-only in \emph{input}, zero measure in \emph{content},
+like Krein.  And the honest novelty fence:
+\textsc{not-world-new} --- Zhang (arXiv:2303.09396, Thm~2) is
+the identical criterion at the central point; the novelty is the
+safe-point shift into the Euler half-plane, the source-only
+decoder, and the certified conditioning.  The naked remaining
+task: positivity of \emph{all} $C_{n,k}(a)$ --- Weil positivity
+in Hausdorff currency, \textbf{the third equivalent lemma form}
+beside the standing two (uniform Weyl-disk contraction;
+ground-eigenvector sign positions); the certificate extends the
+finite no-witness region far beyond Euler--Pick but touches the
+all-$(n,k)$ quantifier nowhere.
+
+\begin{quote}
+\textbf{Where the campaign now stands} (sandbox; no RH claim):
+the one open input now holds \textbf{three equivalent lemma
+forms} --- uniform Weyl-disk contraction of one explicit
+canonical system, the sign positions of one explicit ground
+eigenvector, and Hausdorff cell positivity of one explicit
+Pascal field --- three agreeing source-only carriers, two
+certified falsification instruments (the Euler--Pick ladder at
+$N \le 4$; the Hausdorff field at depth 86), the rigidity law
+explaining quantitatively why every control had to die, and 27
+kernel-checked theorems around the reduction chain.  At the
+bottom, unchanged: localized Weil positivity.
+\end{quote}
+
+\emph{Scope, in the same breath.}  All of this is exploration:
+finite measurements and finite certificates on reachable rungs,
+no all-depth statement, no positivity claim, no promotion; the
+certified instruments are falsification channels, not evidence
+--- their certified slices sit in territory classical zero
+verification closed long ago, and both instruments' blindness
+laws are measured and carried.  The round-97 correction of
+record is carried in Section~\ref{sec:realroot-signpos} per the
+round-87 convention (frozen probes and notes are not
+retro-edited --- the correction is the record).  RH is neither
+proven nor disproven here; what is documented is the complete
+map of why, now instrument-grade in three currencies.
+\textbf{No statement about the Riemann Hypothesis is made.}
 
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 

@@ -43,6 +43,1321 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-15",
+    "dateLabel": "2026-08-15 · C",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the instrument tier — discovery freeze rounds ninety-three and ninety-five through one-hundred-two synced into every live surface, INCLUDING one flagged correction of record to already-published text: the collective-rescue explanation, the certified Euler–Pick ladder and its "
+      },
+      {
+        "k": "m",
+        "v": "N = 4"
+      },
+      {
+        "k": "t",
+        "v": " extension, the rigidity law, the SP pricing round that falsified the operative round-88 predictor extension, the CCM adjudication, the Lean kernel round, the "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": "-induction depth record, and the Hausdorff safe-point instrument — the one open input now held in THREE equivalent lemma forms with TWO certified falsification instruments; "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " only — EIGHT frozen probes plus a Lean formalization round, several run as concurrent lanes, NO promotion, NO module, NO ledger row, NO marker moved, NO gate closed or narrowed, suite unchanged at "
+      },
+      {
+        "k": "m",
+        "v": "906"
+      },
+      {
+        "k": "t",
+        "v": ", NO RH claim in any direction: (1) THE CORRECTION OF RECORD (round 97, note CCCXCVIII, "
+      },
+      {
+        "k": "c",
+        "v": "sp_ expsum_ pricing_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": " gates, deterministic "
+      },
+      {
+        "k": "m",
+        "v": "0.8"
+      },
+      {
+        "k": "t",
+        "v": " s twice, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "55207ff7"
+      },
+      {
+        "k": "t",
+        "v": ", verdict SP-OPERATIVE-FALSIFIED "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SP-PRICED "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SP-CLASSICALLY-OUT-OF-REACH("
+      },
+      {
+        "k": "m",
+        "v": "\\times 8.2"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SP-CONDITIONAL-LADDER "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SP-PREFIX-DEAD-IN-WINDOW "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SP-LITERAL-NONVANISHING-IN-RANGE; carried per the round-87 convention — frozen probes and notes are NOT retro-edited, the correction is the record): the round-88 rounding-margin statement priced against the full classical exponential-sum arsenal AND its operative form MEASURED FALSE beyond "
+      },
+      {
+        "k": "m",
+        "v": "x = 13"
+      },
+      {
+        "k": "t",
+        "v": " — census extended from "
+      },
+      {
+        "k": "m",
+        "v": "79"
+      },
+      {
+        "k": "t",
+        "v": " points ("
+      },
+      {
+        "k": "m",
+        "v": "x \\le 13"
+      },
+      {
+        "k": "t",
+        "v": ") to "
+      },
+      {
+        "k": "m",
+        "v": "18798"
+      },
+      {
+        "k": "t",
+        "v": " points ("
+      },
+      {
+        "k": "m",
+        "v": "x \\le 890"
+      },
+      {
+        "k": "t",
+        "v": ", cache edge "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_{7000} = 7264.75"
+      },
+      {
+        "k": "t",
+        "v": "), the operative (SP) FALSE from "
+      },
+      {
+        "k": "m",
+        "v": "x = 21"
+      },
+      {
+        "k": "t",
+        "v": " onward with "
+      },
+      {
+        "k": "m",
+        "v": "567"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-screened counterexamples, THE ROUND-88 EXACTNESS A SMALL-"
+      },
+      {
+        "k": "m",
+        "v": "x"
+      },
+      {
+        "k": "t",
+        "v": " ACCIDENT OF THE MARGIN BUDGET, mechanism ARITHMETIC-FREE (Fejér tracking-variance floor "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{rms} \\to 1/(2\\pi) = 0.159"
+      },
+      {
+        "k": "t",
+        "v": ", measured "
+      },
+      {
+        "k": "m",
+        "v": "0.26"
+      },
+      {
+        "k": "t",
+        "v": ", vs budget "
+      },
+      {
+        "k": "m",
+        "v": "0.5"
+      },
+      {
+        "k": "t",
+        "v": " — no taper in the family survives); pricing (all constants generous, deepest rung "
+      },
+      {
+        "k": "m",
+        "v": "x = 890"
+      },
+      {
+        "k": "t",
+        "v": "): best unconditional miss "
+      },
+      {
+        "k": "m",
+        "v": "\\times 8.2"
+      },
+      {
+        "k": "t",
+        "v": " (Trudgian "
+      },
+      {
+        "k": "m",
+        "v": "S(t)"
+      },
+      {
+        "k": "t",
+        "v": " ceiling "
+      },
+      {
+        "k": "m",
+        "v": "4.11"
+      },
+      {
+        "k": "t",
+        "v": "), even RH itself (Carneiro–Chandee–Milinovich) "
+      },
+      {
+        "k": "m",
+        "v": "1.015"
+      },
+      {
+        "k": "t",
+        "v": " at the deepest rung; prefix/exceptional-set salvage DEAD IN-WINDOW (lowest violation "
+      },
+      {
+        "k": "m",
+        "v": "k/K = 0.010"
+      },
+      {
+        "k": "t",
+        "v": ", prefix depth stalls "
+      },
+      {
+        "k": "m",
+        "v": "\\le 131"
+      },
+      {
+        "k": "t",
+        "v": "); HONEST FENCE: the deployed source-side approximant died, NOT TPL(i) — the eigenvector truth side unmeasured beyond "
+      },
+      {
+        "k": "m",
+        "v": "x = 13"
+      },
+      {
+        "k": "t",
+        "v": ", the published round-88 claim (exact at 79 points, "
+      },
+      {
+        "k": "m",
+        "v": "x \\le 13"
+      },
+      {
+        "k": "t",
+        "v": ") remains factually true; the corrective clause added to the published 8.10 wording, 8.12 property 1, the prime-front round-88 subsection, the website chapter 34 fence, and a new paper limitation 10; (2) ROUND 93 (note CCCXCIV, "
+      },
+      {
+        "k": "c",
+        "v": "collective_ rescue_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": " wards "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "7/7"
+      },
+      {
+        "k": "t",
+        "v": " law gates, verdict COLLECTIVE-IS-SUPPORT): round 92's exit/re-entry FULLY EXPLAINED — exact causal onset bound (bit-identical prefix, spread exactly "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": ") plus measured offset "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "2 lags, completed-stream "
+      },
+      {
+        "k": "m",
+        "v": "\\max|\\alpha|"
+      },
+      {
+        "k": "t",
+        "v": " CONSTANT at "
+      },
+      {
+        "k": "m",
+        "v": "0.183932"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "r = 2.568"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "4.788"
+      },
+      {
+        "k": "t",
+        "v": ", band maxima falling), all Lyapunov candidates killed (the fixed-prefix class EMPTY by causality), mass-restored control dies at the IDENTICAL lag "
+      },
+      {
+        "k": "m",
+        "v": "400"
+      },
+      {
+        "k": "t",
+        "v": " — mass-without-atoms does not rescue, in-window survival requires the exact arithmetic weights; (3) ROUND 95 (note CCCXCVI, "
+      },
+      {
+        "k": "c",
+        "v": "eulerpick_ ladder_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "31/31"
+      },
+      {
+        "k": "t",
+        "v": " gates, verdict EULERPICK-CERTIFIED("
+      },
+      {
+        "k": "m",
+        "v": "N \\le 3"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " EULERPICK-GENERIC-DECAY "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " EULERPICK-DETECTION-LAW): the falsification ladder rebuilt to CERTIFIED standard (outward-rounded intervals end to end, "
+      },
+      {
+        "k": "m",
+        "v": "N = 3"
+      },
+      {
+        "k": "t",
+        "v": " certified positive at cap "
+      },
+      {
+        "k": "m",
+        "v": "1.6\\times10^{7}"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "[2.3643695\\times10^{-10}, 1.1497752\\times10^{-9}]"
+      },
+      {
+        "k": "t",
+        "v": "), the channel self-tested on a planted negative family and EMPTY; decay GENERIC (control decomposition within "
+      },
+      {
+        "k": "m",
+        "v": "1.2\\times"
+      },
+      {
+        "k": "t",
+        "v": " of Euler, the true "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1"
+      },
+      {
+        "k": "t",
+        "v": " appearing nowhere); detection law "
+      },
+      {
+        "k": "m",
+        "v": "N^*(\\delta) = 6.1 + 1.95\\log_{10}(1/\\delta)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma"
+      },
+      {
+        "k": "t",
+        "v": "-BLIND beyond "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma \\approx 50"
+      },
+      {
+        "k": "t",
+        "v": " (undetected through "
+      },
+      {
+        "k": "m",
+        "v": "N = 36"
+      },
+      {
+        "k": "t",
+        "v": "); promotion honestly declined; (4) ROUND 96 (note CCCXCVII, "
+      },
+      {
+        "k": "c",
+        "v": "rigidity_ inverse_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": " wards, verdict RIGIDITY-TIGHTENING): screw positivity to depth "
+      },
+      {
+        "k": "m",
+        "v": "r"
+      },
+      {
+        "k": "t",
+        "v": " pins the measure onto the prime comb exponentially tightly — ALL 17 adversarial impostors die (shifted-prime comb, golden quasi-prime comb at exact prime density, crystals, mass-matched tails, sub-mesh splits at every scale, jitters, a deep weight swap; all 15 single-atom deletions fatal within "
+      },
+      {
+        "k": "m",
+        "v": "J \\le 8"
+      },
+      {
+        "k": "t",
+        "v": " lags), moduli law "
+      },
+      {
+        "k": "m",
+        "v": "\\ln\\eta^*(r) = -1.073r - 7.08"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "c_{\\mathrm{mod}} = 1.073"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "c_\\lambda = 0.814"
+      },
+      {
+        "k": "t",
+        "v": " — CONDITIONING-PRICED up to an "
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": " alignment factor, the theorem candidate typed (anchors measured, law fitted, all-depth OPEN); (5) ROUND 98 (note CCCXCIX, contract on arXiv:2310.18423, "
+      },
+      {
+        "k": "c",
+        "v": "ccm_ pn_ adjudication_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "22/22"
+      },
+      {
+        "k": "t",
+        "v": " gates, verdict CCM-CHECKED "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " CCM-SAME-CURRENCY): the one external published RH reduction adjudicated — CCM's published local terms reproduce "
+      },
+      {
+        "k": "m",
+        "v": "\\xi'/\\xi(1/2+\\sigma)"
+      },
+      {
+        "k": "t",
+        "v": " to rel "
+      },
+      {
+        "k": "m",
+        "v": "2.3\\times10^{-50}"
+      },
+      {
+        "k": "t",
+        "v": " and their quadratic form reproduces the corpus EULER–PICK MATRICES ENTRYWISE ("
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-screen: RELOCATION); NEW FINITE INSTRUMENT: all 6 prime-bearing Galerkin sections of "
+      },
+      {
+        "k": "m",
+        "v": "Q_n"
+      },
+      {
+        "k": "t",
+        "v": " positive ("
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min} = 2.30\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "n = 2.5"
+      },
+      {
+        "k": "t",
+        "v": " down to "
+      },
+      {
+        "k": "m",
+        "v": "1.01\\times10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "n = 13"
+      },
+      {
+        "k": "t",
+        "v": "; pole constraint load-bearing); controls die through the same construction — "
+      },
+      {
+        "k": "m",
+        "v": "P(n)"
+      },
+      {
+        "k": "t",
+        "v": " IS localized Weil positivity, any semilocal prolate candidate finitely testable against the (AC) interface today; (6) ROUND 99 (note CD, the Lean round: "
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/EulerPick.lean"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "DeltaOneNoGo.lean"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "ParityLemma.lean"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "SVSkeleton.lean"
+      },
+      {
+        "k": "t",
+        "v": "; 27 kernel-checked headline theorems, axioms exactly ["
+      },
+      {
+        "k": "c",
+        "v": "propext"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "Classical.choice"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "Quot.sound"
+      },
+      {
+        "k": "t",
+        "v": "], no "
+      },
+      {
+        "k": "c",
+        "v": "sorry"
+      },
+      {
+        "k": "t",
+        "v": ", no "
+      },
+      {
+        "k": "c",
+        "v": "native_decide"
+      },
+      {
+        "k": "t",
+        "v": "): Euler–Pick forward PSD at the SV nodes for every "
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": ", the "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_1"
+      },
+      {
+        "k": "t",
+        "v": " no-go counterexample package, the FULL Parity Lemma under ONE named simplicity hypothesis (alternating signs at canonical gap midpoints — exactly where zero simplicity enters), the SV skeleton with THE HONESTY LOCK "
+      },
+      {
+        "k": "c",
+        "v": "skeleton_not_unconditional"
+      },
+      {
+        "k": "t",
+        "v": " (an instance with RH "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " False — packaging alone yields nothing); (7) ROUND 100 (note CDI, "
+      },
+      {
+        "k": "c",
+        "v": "sieve4_ eulerpick_ n4_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "22/22"
+      },
+      {
+        "k": "t",
+        "v": " gates, "
+      },
+      {
+        "k": "m",
+        "v": "2682"
+      },
+      {
+        "k": "t",
+        "v": " s, cap "
+      },
+      {
+        "k": "m",
+        "v": "X = 10^{13}"
+      },
+      {
+        "k": "t",
+        "v": ", helper source SHA pinned, run-of-record "
+      },
+      {
+        "k": "c",
+        "v": "sieve4_run1.log"
+      },
+      {
+        "k": "t",
+        "v": ", hard external ward "
+      },
+      {
+        "k": "m",
+        "v": "\\pi(10^{13}) = 346{,}065{,}536{,}839"
+      },
+      {
+        "k": "t",
+        "v": " REPRODUCED EXACTLY): "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}(\\mathcal P_4) \\in [8.278338\\times10^{-15}, 1.3840906\\times10^{-14}]"
+      },
+      {
+        "k": "t",
+        "v": " CERTIFIED POSITIVE (margin "
+      },
+      {
+        "k": "m",
+        "v": "0.749"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "m",
+        "v": "N \\le 3"
+      },
+      {
+        "k": "t",
+        "v": " floors tightened massively, the round-95 upgrade-path model CORRECTED (the beyond-"
+      },
+      {
+        "k": "m",
+        "v": "10^{19}"
+      },
+      {
+        "k": "t",
+        "v": " tail floor was omitted; Nair 1982 — "
+      },
+      {
+        "k": "m",
+        "v": "\\psi(x) \\ge (x-2)\\ln 2"
+      },
+      {
+        "k": "t",
+        "v": " — unblocks it, corrected "
+      },
+      {
+        "k": "m",
+        "v": "X_{\\mathrm{req}}(4) = 10^{11.52}"
+      },
+      {
+        "k": "t",
+        "v": "), THE KNOWLEDGE WALL STARTS AT "
+      },
+      {
+        "k": "m",
+        "v": "N = 5"
+      },
+      {
+        "k": "t",
+        "v": " (the floor exceeds "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_5"
+      },
+      {
+        "k": "t",
+        "v": " by "
+      },
+      {
+        "k": "m",
+        "v": "4.7\\times10^{5}"
+      },
+      {
+        "k": "t",
+        "v": " at any cap — no sieve helps); (8) ROUND 101 (note CDII, contract PRIME.SCREW.INDUCTION.01, "
+      },
+      {
+        "k": "c",
+        "v": "screwind_ induction_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": " wards "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "5/8"
+      },
+      {
+        "k": "t",
+        "v": " law gates — the 3 fails are FINDINGS, typed; companion "
+      },
+      {
+        "k": "c",
+        "v": "screwind_ meshdrift_ check.py"
+      },
+      {
+        "k": "t",
+        "v": "; verdict SCREWIND-KICK-LAW(exact) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SCREWIND-STEP-IS-WALL "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SCREWIND-DICHOTOMY(descriptive-only)): DEPTH RECORD — all sections positive to "
+      },
+      {
+        "k": "m",
+        "v": "r = 9.0"
+      },
+      {
+        "k": "t",
+        "v": " at BOTH meshes (corpus record "
+      },
+      {
+        "k": "m",
+        "v": "4.788"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "m",
+        "v": "\\sup|\\rho| = 0.183932"
+      },
+      {
+        "k": "t",
+        "v": " attained at "
+      },
+      {
+        "k": "m",
+        "v": "k = 0"
+      },
+      {
+        "k": "t",
+        "v": ", flatness carried by a cancellation of giants ("
+      },
+      {
+        "k": "m",
+        "v": "\\pm 288.5"
+      },
+      {
+        "k": "t",
+        "v": " vs net RMS "
+      },
+      {
+        "k": "m",
+        "v": "0.023"
+      },
+      {
+        "k": "t",
+        "v": "), THE EXACT KICK LAW at atom arrival (affine-exact, dev "
+      },
+      {
+        "k": "m",
+        "v": "\\le 2.8\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": ", numerator pure arithmetic), G7 fails INFORMATIVELY: PRIME ARRIVALS STABILIZE (net arrival "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " positive "
+      },
+      {
+        "k": "m",
+        "v": "33/39"
+      },
+      {
+        "k": "t",
+        "v": ", atom-bin median "
+      },
+      {
+        "k": "m",
+        "v": "|\\rho|"
+      },
+      {
+        "k": "t",
+        "v": " below background); THE WALL RELOCATES INTO THE CERTIFICATE, the named open piece — a source-certified two-sided energy floor with "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa_+ < 1/2"
+      },
+      {
+        "k": "t",
+        "v": " — IS localized positivity; (9) ROUND 102 (note CDIII, externally proposed contract PRIME.HAUSDORFF.SAFEPOINT.01, "
+      },
+      {
+        "k": "c",
+        "v": "hausdorff_ safepoint_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "40/40"
+      },
+      {
+        "k": "t",
+        "v": " gates, "
+      },
+      {
+        "k": "m",
+        "v": "143.6"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "dacdffe2"
+      },
+      {
+        "k": "t",
+        "v": ", composite verdict HAUSDORFF-EQUIVALENCE-SOUND "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " HAUSDORFF-REPRODUCED "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " HAUSDORFF-CERTIFIED-DEPTH(86; "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma^*"
+      },
+      {
+        "k": "t",
+        "v": " 189/563) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " HAUSDORFF-REPLICATION "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " HAUSDORFF-DETECTOR "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " HAUSDORFF-Z1-ZEROMEASURE "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " NOT-WORLD-NEW): the moment-field criterion (RH "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": " all Pascal cells "
+      },
+      {
+        "k": "m",
+        "v": "C_{n,k}(a) \\ge 0"
+      },
+      {
+        "k": "t",
+        "v": " at the safe point "
+      },
+      {
+        "k": "m",
+        "v": "a = 256"
+      },
+      {
+        "k": "t",
+        "v": ") built, audited, adjudicated — equivalence skeleton SOUND (Hausdorff/Widder needs no extra boundedness, the one sharp continuation step closes, companions symbolically exact), the proposer's spec numerically faithful ("
+      },
+      {
+        "k": "m",
+        "v": "561/561"
+      },
+      {
+        "k": "t",
+        "v": " cells, weakest ratio "
+      },
+      {
+        "k": "m",
+        "v": "1.000220"
+      },
+      {
+        "k": "t",
+        "v": "), THE HEADLINE: CERTIFIED DEPTH 86 ("
+      },
+      {
+        "k": "m",
+        "v": "5290"
+      },
+      {
+        "k": "t",
+        "v": " cells), "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma^*"
+      },
+      {
+        "k": "t",
+        "v": "-reach "
+      },
+      {
+        "k": "m",
+        "v": "189"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "a = 256"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "563"
+      },
+      {
+        "k": "t",
+        "v": " on the "
+      },
+      {
+        "k": "m",
+        "v": "a = 1024"
+      },
+      {
+        "k": "t",
+        "v": " arm vs Euler–Pick's certified "
+      },
+      {
+        "k": "m",
+        "v": "N = 3"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\gamma \\sim 5"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": ") — THE CHEAPEST CERTIFIED RH-CONSEQUENCE INSTRUMENT IN THE CORPUS; three-carrier replication (signpos/Krein/SV pins, no zero cache anywhere in construction); the detector honestly priced ("
+      },
+      {
+        "k": "m",
+        "v": "\\sim 1/\\delta"
+      },
+      {
+        "k": "t",
+        "v": " below "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1"
+      },
+      {
+        "k": "t",
+        "v": ", provably BLIND above — Epstein control concrete: off-line witness LOCATED at "
+      },
+      {
+        "k": "m",
+        "v": "\\rho = 0.69692705 + 36.37406369\\,i"
+      },
+      {
+        "k": "t",
+        "v": ", RH-for-"
+      },
+      {
+        "k": "m",
+        "v": "Q"
+      },
+      {
+        "k": "t",
+        "v": " provably false, the "
+      },
+      {
+        "k": "m",
+        "v": "Q"
+      },
+      {
+        "k": "t",
+        "v": " Pascal field positive to depth 100 exactly as the phase model predicts); Z1 typing source-only in INPUT, zero measure in CONTENT; NOT-WORLD-NEW (Zhang arXiv:2303.09396 Thm 2 is the identical criterion at the central point — the novelty is the safe-point shift, the source-only decoder, the certified conditioning); THE NAKED REMAINING TASK: positivity of ALL "
+      },
+      {
+        "k": "m",
+        "v": "C_{n,k}(a)"
+      },
+      {
+        "k": "t",
+        "v": " — Weil positivity in Hausdorff currency, THE THIRD EQUIVALENT LEMMA FORM beside the standing two; (10) THE CONSOLIDATED CLOSE, carried on every surface: the campaign now holds THREE equivalent lemma forms of the one open input (uniform Weyl-disk contraction; ground-eigenvector sign positions; Hausdorff cell positivity), three agreeing source-only carriers, two certified falsification instruments (Euler–Pick "
+      },
+      {
+        "k": "m",
+        "v": "N \\le 4"
+      },
+      {
+        "k": "t",
+        "v": "; Hausdorff depth 86), the rigidity law, and 27 kernel-checked theorems — and at the bottom, unchanged, localized Weil positivity; (11) SURFACES SYNCED IN THIS ENTRY: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " gains the sandbox diary subsection “The three lemma forms, the certified instruments, and a correction of record” plus the corrective clauses in the round-88 subsection and the specification-sheet P1; the end-form article gains 8.13 with the abstract status sentence, the 8.10/8.12 corrections, limitation 10 and the traceability rounds CCCXCIV and CCCXCVI–CDIII; the Anthropic email draft gains one status paragraph (the three-lemma-form state, the two certified instruments, the CCM interface point); the website prime-front page gains chapter 37 (the live-updates chapter renumbered "
+      },
+      {
+        "k": "m",
+        "v": "37 \\to 38"
+      },
+      {
+        "k": "t",
+        "v": "), the chapter-34 correction pointer, and one consolidated sandbox feed entry (verdict HAUSDORFF-CERTIFIED-DEPTH); "
+      },
+      {
+        "k": "c",
+        "v": "website/lib/changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh gen"
+      },
+      {
+        "k": "t",
+        "v": "; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-15",
     "dateLabel": "2026-08-15 · XCIX",
     "heading": [
       {

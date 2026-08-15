@@ -2410,7 +2410,9 @@ export default function PrimeFrontPage() {
 
       <CohomSpecSection />
 
-      {/* 37 — Live updates */}
+      <ThreeLemmaFormsSection />
+
+      {/* 38 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -2419,7 +2421,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              37 · Live updates
+              38 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -3201,7 +3203,18 @@ function RealRootSignposSection() {
           RH is neither proven nor disproven here; what is documented is
           the complete map of why. All of it is sandbox: no claim moves
           until it is promoted, and nothing here is a claim of progress
-          toward the Riemann Hypothesis.
+          toward the Riemann Hypothesis.{" "}
+          <strong className="font-medium text-amber-200/90">
+            Correction of record (round 97, 2026-08-15, chapter 37):
+          </strong>{" "}
+          the predictor&apos;s exactness holds at x ≤ 13 only — its
+          operative extension is measured false from x = 21 onward (567
+          τ-screened counterexamples to the cache edge x = 890; the
+          round-88 exactness was a small-x accident of the margin budget,
+          by an arithmetic-free mechanism). TPL(i) itself is untouched:
+          the eigenvector truth side is unmeasured beyond x = 13, and the
+          finite claim as published (exact at 79 points, x ≤ 13) remains
+          factually true.
         </p>
       </div>
     </section>
@@ -3494,6 +3507,181 @@ function CohomSpecSection() {
           h = 12632) travels with every property. What it adds is
           precision: a testable interface where there was an analogy. All
           of it is sandbox: no claim moves until it is promoted.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function ThreeLemmaFormsSection() {
+  return (
+    <section
+      id="three-lemma-forms"
+      aria-labelledby="three-lemma-forms-heading"
+      className="scroll-mt-24 border-t border-slate-800/60 py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            37 · The three lemma forms and the certified instruments ·
+            sandbox probes
+          </span>
+          <StatusBadge badge="sandbox" />
+        </div>
+        <h2
+          id="three-lemma-forms-heading"
+          className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
+        >
+          The instrument tier — three equivalent lemma forms, two certified
+          falsification instruments, and a correction of record
+        </h2>
+        <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
+          <span className="font-medium text-sky-300/90">In plain words: </span>
+          nine discovery freeze rounds (rounds ninety-three and
+          ninety-five through one-hundred-two, 2026-08-15, several as
+          concurrent lanes) finish the campaign&apos;s instrument tier
+          and, in one case, correct its own published record. Everything
+          in this chapter is sandbox: eight frozen probes plus a Lean
+          formalization round in the experiments tree, no promotion, no
+          marker moves — the suite stays at 906. No RH claim in any
+          direction.
+        </p>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
+          <p>
+            <strong className="font-medium text-amber-200">
+              The correction of record (round 97, 13/13,
+              SP-OPERATIVE-FALSIFIED):
+            </strong>{" "}
+            the round-88 sign-position predictor (chapter 34) was priced
+            against the full classical exponential-sum arsenal — and the
+            measurement overtook the pricing. Extending the census from
+            79 points (x ≤ 13) to 18798 points (x ≤ 890, the cache edge)
+            shows the <em>operative</em> form{" "}
+            <strong className="font-medium text-slate-100">
+              false from x = 21 onward, with 567 τ-screened
+              counterexamples
+            </strong>
+            : the round-88 exactness was a small-x accident of the margin
+            budget, by an arithmetic-free mechanism (the Fejér
+            taper&apos;s tracking-variance floor, rms → 1/(2π) = 0.159,
+            against the 0.5 budget — no taper in this family survives).
+            The pricing itself: the best unconditional bound misses the
+            budget by ×8.2, and even RH gives only 1.015 at the deepest
+            rung; the prefix/exceptional-set salvage is dead in-window.
+            The fence: what died is the deployed source-side approximant,
+            not TPL(i) itself — the eigenvector truth side is unmeasured
+            beyond x = 13, and the published finite claim remains
+            factually true. Frozen probes and notes are not retro-edited;
+            the correction is the record.
+          </p>
+          <p>
+            <strong className="font-medium text-emerald-200">
+              The two certified falsification instruments:
+            </strong>{" "}
+            the Euler–Pick ladder is rebuilt to certified standard (round
+            95, 31/31: N ≤ 3 with outward-rounded interval floors, decay
+            measured generic, detection law N* = 6.1 + 1.95·log₁₀(1/δ),
+            γ-blind beyond γ ≈ 50) and then extended (round 100, 22/22):{" "}
+            <strong className="font-medium text-slate-100">
+              λ_min(𝒫₄) ∈ [8.28×10⁻¹⁵, 1.38×10⁻¹⁴] certified positive at
+              sieve cap 10¹³
+            </strong>
+            , with π(10¹³) = 346,065,536,839 reproduced exactly as the
+            hard external ward, Nair&apos;s ψ(x) ≥ (x−2)·ln 2 unblocking
+            the a-priori certificate, and the knowledge wall corrected to
+            N = 5 — beyond the verified-zeros range, no sieve of any size
+            helps. And the Hausdorff safe-point round (round 102, 40/40)
+            builds{" "}
+            <strong className="font-medium text-slate-100">
+              the cheapest certified RH-consequence instrument in the
+              corpus
+            </strong>
+            : the equivalence skeleton sound, certified depth 86 (5290
+            cells) with γ*-reach 189 at a = 256 and 563 on the a = 1024
+            arm — versus Euler–Pick&apos;s certified N = 3 at γ ~ 5–8 —
+            replicated across three source-only carriers with no zero
+            cache anywhere in construction. The detector is honestly
+            priced: ~1/δ reach below γ₁, provably blind above — made
+            concrete by a located Epstein witness zero (ρ ≈ 0.697 +
+            36.374i, RH-for-Q provably false, the Q Pascal field
+            positive to depth 100 exactly as the phase model predicts).
+            Honestly NOT-WORLD-NEW: Zhang (arXiv:2303.09396) has the
+            identical criterion at the central point; the novelty is the
+            safe-point shift, the source-only decoder, and the certified
+            conditioning. Both channels are open and empty — a single
+            certified negative would be an RH-disproof candidate.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The interface and the kernel (rounds 98 and 99):
+            </strong>{" "}
+            the one external published RH reduction —
+            Connes–Consani–Moscovici&apos;s P(n) property — is
+            adjudicated: its published local terms reproduce the corpus
+            Euler–Pick matrices{" "}
+            <strong className="font-medium text-slate-100">
+              entrywise
+            </strong>{" "}
+            (ξ′/ξ to rel 2.3×10⁻⁵⁰), all six prime-bearing Galerkin
+            sections are positive (a new finite instrument; a certified
+            negative would have refuted RH), and the honest comparison is
+            an identity: P(n) <em>is</em> localized Weil positivity in
+            the corpus&apos;s measured currency — so any semilocal
+            prolate candidate is finitely testable against this interface
+            today. And 27 theorems of the reduction chain are now
+            kernel-checked in Lean 4 (axioms exactly
+            propext/Classical.choice/Quot.sound): the Euler–Pick forward
+            PSD direction at the SV nodes for every N, the δ₁ no-go, the
+            full Parity Lemma under one named simplicity hypothesis, and
+            the SV skeleton with its honesty lock
+            skeleton_not_unconditional — an instance with RH = False,
+            showing the packaging alone yields nothing.
+          </p>
+          <p>
+            <strong className="font-medium text-amber-200">
+              The mechanism rounds (93, 96, 101):
+            </strong>{" "}
+            round 92&apos;s exit/re-entry is fully explained as support
+            bookkeeping (COLLECTIVE-IS-SUPPORT: an exact causal onset
+            bound plus ~2 measured lags; the completed stream&apos;s
+            max|α| constant at 0.184; mass-without-atoms dies at the
+            identical lag — in-window survival requires the exact
+            arithmetic weights). The rigidity round answers the inverse
+            problem: screw positivity to depth r pins the measure onto
+            the prime comb exponentially tightly —{" "}
+            <strong className="font-medium text-slate-100">
+              all 17 adversarial impostors die
+            </strong>
+            , and the moduli law c_mod = 1.073 is conditioning-priced:
+            rigidity is the conditioning cost up to an O(1) factor, not a
+            new arithmetic-free law. The α-induction round sets a
+            positivity depth record (r = 9.0, both meshes) with an exact
+            kick law (deviation ≤ 2.8×10⁻¹⁶) and the finding that{" "}
+            <strong className="font-medium text-slate-100">
+              prime arrivals stabilize
+            </strong>{" "}
+            — the naive atoms-push-down picture is wrong; the wall
+            relocates into the certificate, and the named open piece (a
+            source-certified energy floor with κ₊ &lt; 1/2) <em>is</em>{" "}
+            localized positivity.
+          </p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
+          Honest fence: the one open input now holds three equivalent
+          lemma forms — uniform Weyl-disk contraction of one explicit
+          canonical system, the sign positions of one explicit ground
+          eigenvector, and Hausdorff cell positivity of one explicit
+          Pascal field — three agreeing source-only carriers, two
+          certified falsification instruments, the rigidity law, and 27
+          kernel-checked theorems. At the bottom, unchanged: localized
+          Weil positivity. The certified instruments are falsification
+          channels, not evidence — their certified slices sit in
+          territory classical zero verification closed long ago, and
+          their blindness laws are measured and carried. RH is neither
+          proven nor disproven; all of it is sandbox: no claim moves
+          until it is promoted.
         </p>
       </div>
     </section>
