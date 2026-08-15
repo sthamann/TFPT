@@ -2414,7 +2414,9 @@ export default function PrimeFrontPage() {
 
       <RoadmapSection />
 
-      {/* 39 — Live updates */}
+      <FrontierAuditsSection />
+
+      {/* 40 — Live updates */}
       <section
         id="updates"
         aria-labelledby="updates-heading"
@@ -2423,7 +2425,7 @@ export default function PrimeFrontPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              39 · Live updates
+              40 · Live updates
             </span>
             <StatusBadge badge="sandbox" />
           </div>
@@ -2979,7 +2981,13 @@ function KillAtlasSection() {
             <strong className="font-medium text-slate-100">
               24 candidate sign sources, 0 pass, 19 fail, no
               blanket-untested class left.
-            </strong>
+            </strong>{" "}
+            (Completeness over the corpus vocabulary — the round-108 audit,
+            chapter 39, names five classes outside it, unpriced:
+            ergodic/measure-rigidity transfer, o-minimal counting,
+            bigger-group representation positivity,
+            GMC/Fyodorov–Hiary–Keating, and higher-order Fourier
+            uniformity of Möbius.)
           </p>
           <p>
             <strong className="font-medium text-amber-200">
@@ -3354,9 +3362,11 @@ function SvpinKreinSection() {
           as the first non-transcribing host — and at the bottom of every
           route, machine-verified, sits the same single input: Weil
           positivity, in one currency or another. The two open lemmata are
-          precisely stated (uniform Weyl-disk contraction of one explicit
-          canonical system; the sign-change positions of one explicit
-          ground eigenvector). The carrier&apos;s convergence is a finite
+          precisely stated (Weyl-disk contraction of one explicit
+          canonical system — round 90 stated it with a σ ↓ 1/2 uniformity
+          that round 92 showed not load-bearing; the adjective is retired
+          of record with round 109, chapter 39 — and the sign-change
+          positions of one explicit ground eigenvector). The carrier&apos;s convergence is a finite
           measurement of a lemma, not its proof. RH is neither proven nor
           disproven here. All of it is sandbox: no claim moves until it is
           promoted, and nothing here is a claim of progress toward the
@@ -3534,8 +3544,8 @@ function ThreeLemmaFormsSection() {
           id="three-lemma-forms-heading"
           className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
         >
-          The instrument tier — three equivalent lemma forms, two certified
-          falsification instruments, and a correction of record
+          The instrument tier — three RH-sufficient lemma forms, two
+          certified falsification instruments, and a correction of record
         </h2>
         <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
           <span className="font-medium text-sky-300/90">In plain words: </span>
@@ -3612,7 +3622,13 @@ function ThreeLemmaFormsSection() {
             identical criterion at the central point; the novelty is the
             safe-point shift, the source-only decoder, and the certified
             conditioning. Both channels are open and empty — a single
-            certified negative would be an RH-disproof candidate.
+            certified negative would be an RH-disproof candidate — with the
+            round-108 reach cap (chapter 39): both instruments are
+            disproof-sound but reach-capped far below Platt–Trudgian&apos;s
+            3.0×10¹² (Euler–Pick sees off-line zeros only at γ ≈ 5–8; the
+            Hausdorff field is provably blind above γ₁ = 14.13), so
+            &quot;open and empty&quot; is a theorem given the cited inputs,
+            not live falsification power.
           </p>
           <p>
             <strong className="font-medium text-amber-200">
@@ -3671,19 +3687,28 @@ function ThreeLemmaFormsSection() {
         </div>
 
         <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
-          Honest fence: the one open input now holds three equivalent
-          lemma forms — uniform Weyl-disk contraction of one explicit
-          canonical system, the sign positions of one explicit ground
-          eigenvector, and Hausdorff cell positivity of one explicit
-          Pascal field — three agreeing source-only carriers, two
-          certified falsification instruments, the rigidity law, and 27
-          kernel-checked theorems. At the bottom, unchanged: localized
-          Weil positivity. The certified instruments are falsification
-          channels, not evidence — their certified slices sit in
-          territory classical zero verification closed long ago, and
-          their blindness laws are measured and carried. RH is neither
-          proven nor disproven; all of it is sandbox: no claim moves
-          until it is promoted.
+          Honest fence (wording corrected of record by the round-108
+          logic audit and the round-109 bughunt, chapter 39): the one
+          open input now holds three RH-sufficient lemma forms —
+          Weyl-disk contraction of one explicit canonical system
+          (pointwise at the pins, per the round-92 correction; the stale
+          adjective &quot;uniform&quot; is retired), the sign positions
+          of one explicit ground eigenvector, and Hausdorff cell
+          positivity of one explicit Pascal field. Of the three, the
+          Hausdorff form is a proven RH-equivalence; the Weyl-disk and
+          sign-position forms are one-sided pendants (their converses
+          are the round-90 open lemma and the
+          CF-realness/Connes-§6.6 hypotheses), every mutual equivalence
+          routes through RH, transfer between forms is none, and
+          certified regions are form-local. Around them: three agreeing
+          source-only carriers, two certified falsification instruments,
+          the rigidity law, and 27 kernel-checked theorems. At the
+          bottom, unchanged: localized Weil positivity. The certified
+          instruments are falsification channels, not evidence — their
+          certified slices sit in territory classical zero verification
+          closed long ago, and their blindness laws are measured and
+          carried. RH is neither proven nor disproven; all of it is
+          sandbox: no claim moves until it is promoted.
         </p>
       </div>
     </section>
@@ -3761,8 +3786,10 @@ function RoadmapSection() {
               ROADMAP-COMPILED):
             </strong>{" "}
             <strong className="font-medium text-slate-100">Stage 0</strong>{" "}
-            (done, frozen): the atlas at 25/0, one open edge E4, three
-            equivalent lemma forms, two certified instruments with
+            (done, frozen): the atlas at 25/0, one open edge E4, the three
+            lemma forms (each RH-sufficient; only the Hausdorff form a
+            proven equivalence — the rounds-108/109 correction of record,
+            chapter 39), two certified instruments with
             open-and-empty channels, the k ≤ 10¹⁹ theorem (re-derived
             inside the probe from the cited constants), the rigidity law,
             the specification sheet, 27 kernel theorems.{" "}
@@ -3792,7 +3819,15 @@ function RoadmapSection() {
             one lemma form, then v848&apos;s extraction chain, v912&apos;s
             rate theorem, the Lean kernel tier (sv_implies_rh with its
             honesty lock), the SVPIN skeleton, the Hausdorff equivalence,
-            and the CCM same-currency interface.
+            and the CCM same-currency interface — with the round-108 fence
+            (chapter 39): the only kernel-checked end-to-end extraction
+            accepts only the wall form H_cof, which none of the three entry
+            forms produces without RH; the per-form descents are
+            probe-gated plus classical, and the weakest link is the
+            Stage-2→3 interface itself — finite acceptance gates (cells
+            n + k ≤ 86) against infinite-quantifier entry forms, a jump no
+            corpus machinery bridges (v912 bridges convergence, not
+            positivity).
           </p>
           <p>
             <strong className="font-medium text-amber-200">
@@ -3801,10 +3836,18 @@ function RoadmapSection() {
             the two certified instruments keep running as standing disproof
             channels — Euler–Pick N ≤ 4 and the Hausdorff field at depth 86,
             both open and empty; a single certified negative anywhere would
-            be an RH-disproof candidate. The extension walls are knowledge
+            be an RH-disproof candidate. The round-108 reach cap travels
+            with the headline (chapter 39): both instruments are
+            disproof-sound but reach-capped far below Platt–Trudgian&apos;s
+            3.0×10¹² (γ ≈ 5–8 and γ₁ = 14.13 respectively), so &quot;open
+            and empty&quot; is a theorem given the cited inputs, not an
+            observation — the certified ranges carry zero live
+            falsification power. The extension walls are knowledge
             walls, not compute walls: N = 5 needs ψ-knowledge beyond 10¹⁹
             (the floor exceeds λ₅ by 4.7×10⁵ at any sieve cap), and the
-            Form-A n = 0 mechanism exhausts at k ≈ 1.405×10¹⁹.
+            Form-A n = 0 mechanism exhausts at k ≈ 1.405×10¹⁹ — relocated
+            by round 106&apos;s stronger mechanism to k ≈ 7.44×10²¹
+            (chapter 39).
           </p>
         </div>
 
@@ -3816,6 +3859,193 @@ function RoadmapSection() {
           exactly that every step is falsifiable and interface-defined: any
           candidate, from anyone, anywhere, can be adjudicated against
           frozen machine gates in minutes. RH is neither proven nor
+          disproven; all of it is sandbox — no claim moves until it is
+          promoted.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function FrontierAuditsSection() {
+  return (
+    <section
+      id="frontier-audits"
+      aria-labelledby="frontier-audits-heading"
+      className="scroll-mt-24 border-t border-slate-800/60 py-12 sm:py-16"
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            39 · The frontier extension, the code reading, and the audits ·
+            sandbox probes
+          </span>
+          <StatusBadge badge="sandbox" />
+        </div>
+        <h2
+          id="frontier-audits-heading"
+          className="mt-3 font-serif text-2xl font-semibold leading-tight text-slate-50 sm:text-3xl md:text-4xl"
+        >
+          The campaign audited — the corrections of record, a 530× frontier
+          extension, and the code reading vindicated
+        </h2>
+        <p className="mt-3 max-w-3xl border-l-2 border-sky-400/40 pl-3 text-[15px] leading-relaxed text-slate-400">
+          <span className="font-medium text-sky-300/90">In plain words: </span>
+          four discovery freeze rounds (rounds one-hundred-six through
+          one-hundred-nine, 2026-08-15, concurrent lanes) extend the
+          roadmap&apos;s frontier, adjudicate the program&apos;s founding
+          intuition under its own name, and then audit the campaign&apos;s
+          own headlines. This is first of all a corrections chapter: the
+          round-108 logic audit and the round-109 bughunt (the first
+          adversarial audit of rounds 86–105) independently convicted the
+          published &quot;three equivalent lemma forms&quot; language and
+          two related headlines; the corrected wordings are carried in
+          chapters 37 and 38. No number was wrong, no verdict flips.
+          Everything here is sandbox: four frozen probes, no promotion, no
+          marker moves — the suite stays at 906. No RH claim in any
+          direction.
+        </p>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
+          <p>
+            <strong className="font-medium text-amber-200">
+              The corrections of record (round 108,
+              bigpicture_logic_probe.py, 31/31, BIGPICTURE-FINDINGS(3);
+              round 109, bughunt2_r86_r105_probe.py, 30/30,
+              BUGHUNT2-FINDINGS(7, max MAJOR): 1 MAJOR / 6 MINOR / 0
+              FATAL):
+            </strong>{" "}
+            &quot;three equivalent lemma forms&quot; overstated the machine
+            record. The honest table: the{" "}
+            <strong className="font-medium text-slate-100">
+              Hausdorff form is a genuine proven RH-equivalence
+            </strong>{" "}
+            (its continuation chain independently re-derived gap-free in
+            round 109), while the Weyl-disk and sign-position forms are{" "}
+            <strong className="font-medium text-slate-100">
+              one-sided pendants
+            </strong>{" "}
+            — form ⇒ RH established, RH ⇒ form open (the round-90 lemma and
+            the CF-realness/Connes-§6.6 hypotheses respectively). Every
+            mutual equivalence that holds routes <em>through</em> RH — no
+            direct form-to-form edge exists — and{" "}
+            <strong className="font-medium text-slate-100">
+              transfer is none
+            </strong>
+            , demonstrated by an explicit counterexample world: an off-line
+            quadruple at γ = 20 keeps <em>every</em> Hausdorff cell
+            positive (n + k ≤ 50) while the Euler–Pick section fires at
+            N = 12 (certified negative pivot at 200 dps).{" "}
+            <strong className="font-medium text-slate-100">
+              Certified regions are form-local
+            </strong>
+            : the k ≤ 10¹⁹/7.4×10²¹ Form-A theorems imply nothing about
+            screw sections or Weyl disks, and their zero-location content
+            sits below γ₁ = 14.13, where Platt–Trudgian is infinitely
+            stronger. Two further headlines gained fences (carried in
+            chapter 38): Stage 3&apos;s &quot;conditional-complete&quot;
+            (the kernel-checked extraction accepts only H_cof, which no
+            entry form produces — the weakest link is the finite-gates
+            versus infinite-quantifier interface itself) and the
+            falsification spine (both instruments disproof-sound but
+            reach-capped — &quot;open and empty&quot; is a theorem given
+            the cited inputs). The audit also names the five classes the
+            atlas leaves unpriced (ergodic/measure-rigidity transfer,
+            o-minimal counting, bigger-group representation positivity,
+            GMC/Fyodorov–Hiary–Keating, higher-order Fourier uniformity of
+            Möbius — chapter 33&apos;s completeness is vocabulary-relative)
+            and the minor fixes now carried on the surfaces: the stale
+            &quot;uniform&quot; adjective in Form B&apos;s name (pointwise
+            at the pins suffices, per round 92) and the screwind mesh
+            ladder misattribution (0.207 was the δ = 0.008 value; the true
+            δ = 0.012 sup is 0.2219; MESH-DAMPED stands). Against all
+            that, the load-bearing re-derivations are clean: the round-103
+            theorem re-proved end to end with an own implementation, the
+            N = 4 certification re-derived, the Hausdorff continuation
+            gap-free, the Lean theorems saying exactly what round 99
+            claims, all 16 in-scope probes re-run green —{" "}
+            <strong className="font-medium text-slate-100">
+              no round verdict flips
+            </strong>
+            .
+          </p>
+          <p>
+            <strong className="font-medium text-emerald-200">
+              The frontier extension (round 106, moonshot_o3_probe.py,
+              16/16, MOONSHOT3-EXTENDED):
+            </strong>{" "}
+            the round-103 theorem extends 530-fold —{" "}
+            <strong className="font-medium text-slate-100">
+              C_(n,k)(256) &gt; 0 for every n ≥ 0 and every k ≤
+              7,444,682,106,464,286,365,865
+            </strong>{" "}
+            (≈ 7.44×10²¹), from Platt–Trudgian 2021 plus the{" "}
+            <em>corrected</em> Hasanalizade–Shen–Wong zero-counting bound
+            (the commissioned S(T) constants honestly replaced — their
+            Cheng–Graham input was later identified as invalid). The
+            general law is derived:{" "}
+            <strong className="font-medium text-slate-100">
+              k_front(T) = λ·T²/(a − ½) with λ∞ = 0.226987
+            </strong>{" "}
+            — verification height buys quadratically many columns — and
+            the frontier is mechanism-exact (the next 2×10⁻⁶ relative step
+            fails). New exact structure travels with it: the two-variable
+            generating function in closed form with a pole-divisor
+            RH-<em>equivalence</em> (not a proof), total sign-regularity
+            in the reversed-k orientation, the fixed-N
+            eventual-positivity theorem — and two measured warnings:{" "}
+            <strong className="font-medium text-slate-100">
+              Hankel positivity alone is not Form A
+            </strong>{" "}
+            (the uniform measure on [2,3] has every Hankel matrix positive
+            definite yet C_(0,1) = −3/2 — the localizers are load-bearing)
+            and the downward transport is not sign-closed (eventual
+            fixed-N positivity cannot be propagated down to a = 256).
+          </p>
+          <p>
+            <strong className="font-medium text-emerald-200">
+              The code reading vindicated (round 107,
+              code_synthesis_probe.py, 18/18,
+              CODE-READING-TRUE-DECODING-DIRECTION):
+            </strong>{" "}
+            the program&apos;s founding intuition — the primes as an
+            error-correcting code — got its first formal adjudication
+            under that name, and it is{" "}
+            <strong className="font-medium text-slate-100">
+              true as measured structure
+            </strong>
+            : the primes are the unique codeword of an error-correcting
+            code in the compiler&apos;s own Gram grammar (minimum distance
+            the round-96 rigidity law, re-measured independently to four
+            digits; decoding radius the exact impostor exits; rate → 0) —
+            the{" "}
+            <strong className="font-medium text-slate-100">
+              same grammar as the compiler&apos;s E8 code layer
+            </strong>{" "}
+            ([8,4,4] self-dual, rebuilt exactly in-probe), but a different
+            dual type. The decisive number:{" "}
+            <strong className="font-medium text-slate-100">
+              the dual rank grows with slope 1.0000
+            </strong>{" "}
+            (the binding check index never stabilizes; a non-codeword
+            passes every bounded-depth check family bit-exactly below its
+            defect), and the adversarial local-testability gap → 0. The
+            honest close: the code runs in the <em>decoding</em> direction
+            (finite checks ⇒ identification) while RH needs the{" "}
+            <em>encoding</em> direction (codeword ⇒ all checks) — the
+            quantifier does not compress, and the reason is now a measured
+            number.
+          </p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
+          Honest fence: the corrections change no number and flip no
+          verdict — they grade the record&apos;s own language against the
+          machine state, per the standing correction-of-record convention
+          (frozen probes and notes are not retro-edited; the correction is
+          the record). The frontier theorem is a finite certificate from
+          cited inputs and touches the k → ∞ quantifier nowhere; the code
+          reading is structure, not progress. RH is neither proven nor
           disproven; all of it is sandbox — no claim moves until it is
           promoted.
         </p>

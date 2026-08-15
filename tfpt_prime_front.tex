@@ -17347,7 +17347,14 @@ no upper-bound-type inequality can supply the required lower
 bound (\textsc{u5-enumerated-dead}).  The candidate map is
 thereby complete over the corpus vocabulary: \textbf{24
 candidate sign sources, 0 \textsc{pass}, 19 \textsc{fail}, no
-blanket-untested class left.}
+blanket-untested class left.}  (The round-108 audit,
+Section~\ref{sec:frontier-audits}, makes the vocabulary fence
+concrete: five classes outside the corpus vocabulary are named
+and \emph{unpriced} --- ergodic/measure-rigidity positivity
+transfer, model-theoretic/o-minimal counting, bigger-group
+representation-theoretic positivity, GMC/Fyodorov--Hiary--Keating
+with an enumeration gap, and higher-order Fourier uniformity of
+M\"obius.)
 
 \emph{The bird's-eye round and the endpoint (round 82,
 \texttt{birdseye\_shape\_freedom\_probe.py}, $35/35$ gates,
@@ -17944,9 +17951,12 @@ verified, sits the same single input: Weil positivity, in one
 currency or another.  The program's map of why RH does not fall
 to it is now complete through the object-construction and
 resolvent directions, with the two open lemmata precisely
-stated: uniform Weyl-disk contraction of one explicit canonical
-system, and the sign-change positions of one explicit ground
-eigenvector.
+stated: Weyl-disk contraction of one explicit canonical
+system (stated by round 90 with a $\sigma \downarrow 1/2$
+uniformity that round 92 later showed not load-bearing ---
+pointwise at the pins suffices; the adjective is retired of
+record with round 109, Section~\ref{sec:frontier-audits}), and
+the sign-change positions of one explicit ground eigenvector.
 \end{quote}
 
 \emph{Scope, in the same breath.}  All of this is exploration:
@@ -18223,8 +18233,12 @@ rescued, the window just gets covered).  The completed stream's
 cumulative $\max|\alpha|$ is \emph{constant} at $0.183932$ from
 $r = 2.568$ to $4.788$ with band maxima falling ($0.184 \to
 0.120$) --- strictly a finite-prefix measurement, never
-quantifier evidence (mesh dependence disclosed:
-$0.207/0.184/0.156$).  All Lyapunov candidates are killed with
+quantifier evidence (mesh dependence disclosed; the ladder
+corrected of record by the round-109 audit
+(Section~\ref{sec:frontier-audits}): $0.222/0.184/0.156$ at
+$\delta = 0.012/0.006/0.003$ --- the earlier $0.207$ was the
+$\delta = 0.008$ value; \textsc{mesh-damped} stands).  All
+Lyapunov candidates are killed with
 numbers --- by causality the fixed-prefix candidate class is
 \emph{empty} --- and the mass-restored control ($\{2..7\}$ plus
 a density tail) dies at the \emph{identical} lag $400$ as the
@@ -18519,22 +18533,41 @@ the identical criterion at the central point; the novelty is the
 safe-point shift into the Euler half-plane, the source-only
 decoder, and the certified conditioning.  The naked remaining
 task: positivity of \emph{all} $C_{n,k}(a)$ --- Weil positivity
-in Hausdorff currency, \textbf{the third equivalent lemma form}
-beside the standing two (uniform Weyl-disk contraction;
-ground-eigenvector sign positions); the certificate extends the
-finite no-witness region far beyond Euler--Pick but touches the
-all-$(n,k)$ quantifier nowhere.
+in Hausdorff currency, \textbf{the third lemma form} beside the
+standing two (Weyl-disk contraction; ground-eigenvector sign
+positions) and, per the rounds-108/109 correction of record
+(Section~\ref{sec:frontier-audits}), the \emph{only} one of the
+three that is a proven RH-equivalence; the certificate extends
+the finite no-witness region far beyond Euler--Pick but touches
+the all-$(n,k)$ quantifier nowhere.
 
 \begin{quote}
-\textbf{Where the campaign now stands} (sandbox; no RH claim):
-the one open input now holds \textbf{three equivalent lemma
-forms} --- uniform Weyl-disk contraction of one explicit
-canonical system, the sign positions of one explicit ground
-eigenvector, and Hausdorff cell positivity of one explicit
-Pascal field --- three agreeing source-only carriers, two
-certified falsification instruments (the Euler--Pick ladder at
-$N \le 4$; the Hausdorff field at depth 86), the rigidity law
-explaining quantitatively why every control had to die, and 27
+\textbf{Where the campaign now stands} (sandbox; no RH claim;
+wording corrected of record by the round-108 logic audit and the
+round-109 bughunt, Section~\ref{sec:frontier-audits}): the one
+open input now holds \textbf{three RH-sufficient lemma forms}
+--- Weyl-disk contraction of one explicit canonical system
+(pointwise at the pins, per the round-92 correction; the stale
+adjective ``uniform'' is retired with round 109), the sign
+positions of one explicit ground eigenvector, and Hausdorff cell
+positivity of one explicit Pascal field.  Of the three,
+\textbf{the Hausdorff form is a proven RH-equivalence}; the
+Weyl-disk and sign-position forms are \textbf{one-sided
+pendants} --- form $\Rightarrow$ RH established, RH
+$\Rightarrow$ form open (their converses are, respectively, the
+round-90 open lemma and the CF-realness/Connes-\S6.6
+hypotheses) --- every mutual equivalence that holds routes
+\emph{through} RH (no direct form-to-form edge exists),
+\textbf{transfer is none} (the round-108 counterexample world:
+an off-line quadruple at $\gamma = 20$ keeps every Hausdorff
+cell positive at $n + k \le 50$ while the Euler--Pick section
+fires at $N = 12$), and \textbf{certified regions are
+form-local}.  Around them: three agreeing source-only carriers,
+two certified falsification instruments (the Euler--Pick ladder
+at $N \le 4$; the Hausdorff field at depth 86 --- both
+disproof-sound but reach-capped,
+Section~\ref{sec:frontier-audits}), the rigidity law explaining
+quantitatively why every control had to die, and 27
 kernel-checked theorems around the reduction chain.  At the
 bottom, unchanged: localized Weil positivity.
 \end{quote}
@@ -18582,7 +18615,9 @@ zero table, no zeta evaluator --- the round proved the
 \textbf{largest positivity region of the campaign}: at the safe
 point $a = 256$ the full Pascal field satisfies $C_{n,k}(256) >
 0$ for \emph{every} $n \ge 0$ and every $0 \le k \le 10^{19}$
---- an infinite half-strip in $n$ and ten quintillion complete
+(extended 530-fold to $k \le 7.4\times10^{21}$ by round 106,
+Section~\ref{sec:frontier-audits}) --- an infinite half-strip in
+$n$ and ten quintillion complete
 $k$-columns --- with the scope stated inside the theorem: it
 touches the $k \to \infty$ quantifier nowhere and proves nothing
 about RH.  The same round killed its three suggested proof
@@ -18628,8 +18663,11 @@ DAG checked acyclic with exactly the named open stages, the
 downstream chain's artifacts present with verdicts
 grep-verified.  \textbf{Stage 0 (done, frozen):} the candidate
 atlas complete (25 candidates, 0 pass), exactly one open edge
-E4, the three equivalent lemma forms, the two certified
-falsification instruments with open-and-empty channels
+E4, the three lemma forms (each RH-sufficient; only the
+Hausdorff form a proven equivalence --- the rounds-108/109
+correction of record, Section~\ref{sec:frontier-audits}), the
+two certified falsification instruments with open-and-empty
+channels
 (Euler--Pick floors $N = 1$:
 $[4.5917135\times10^{-2}, 4.5917136\times10^{-2}]$ down to
 $N = 4$: $[8.278338\times10^{-15}, 1.3840906\times10^{-14}]$ at
@@ -18676,15 +18714,36 @@ $O(D^2\log(1/D))$), the Lean kernel tier
 (\texttt{CofinalWeil}/\texttt{CofinalPredefinition},
 \texttt{pickMatrix\_posSemidef}, \texttt{sv\_implies\_rh} with
 the honesty lock), the SVPIN skeleton, the Hausdorff
-equivalence, and the CCM same-currency interface.  \textbf{The
+equivalence, and the CCM same-currency interface --- with the
+round-108 fence (Section~\ref{sec:frontier-audits}): the only
+kernel-checked end-to-end extraction (\texttt{v848} $+$
+\texttt{CofinalWeil.lean}) accepts \emph{only} the wall form
+$H_{\mathrm{cof}}$, which is not among the three entry forms and
+is not producible from them without RH; the per-form descents
+are probe-gated plus classical, and the weakest link is the
+Stage-2$\to$3 \emph{interface} itself --- finite acceptance
+gates (cells $n + k \le 86$) against infinite-quantifier entry
+forms, a jump no corpus machinery bridges (\texttt{v912} bridges
+convergence, not positivity).  \textbf{The
 falsification spine (parallel, permanent):} the two certified
 instruments keep running as standing disproof channels, both
 open and empty (a single certified negative would be an
-RH-disproof candidate); the extension walls are knowledge walls,
-not compute walls ($N = 5$ needs $\psi$-knowledge beyond
+RH-disproof candidate) --- with the round-108 reach cap
+(Section~\ref{sec:frontier-audits}): both instruments are
+disproof-sound (the disproof direction consumes only the proven
+forward implication) but reach-capped far below
+Platt--Trudgian's $3.0\times10^{12}$ (Euler--Pick's certified
+$N \le 4$ sees off-line zeros only at $\gamma \approx 5$--$8$;
+the Hausdorff field is provably blind above $\gamma_1 = 14.13$
+at the safe point), so ``open and empty'' is a theorem given the
+cited inputs, not an observation --- the certified ranges carry
+zero live falsification power; the extension walls are knowledge
+walls, not compute walls ($N = 5$ needs $\psi$-knowledge beyond
 $10^{19}$, floor/$\lambda_5 = 4.7\times10^{5}$ at any cap; the
 Form-A $n = 0$ mechanism exhausts at $k \approx
-1.405\times10^{19}$).
+1.405\times10^{19}$, relocated by round 106's stronger mechanism
+to $k \approx 7.44\times10^{21}$,
+Section~\ref{sec:frontier-audits}).
 
 \emph{The honest pricing, and the scope.}  Stage 1 and Stage 2
 require mathematics that does not exist today --- the roadmap
@@ -18698,6 +18757,237 @@ be adjudicated immediately.  No timeline is promised, no stage
 is claimed started, and nothing in this subsection is progress
 on RH.  \textbf{No statement about the Riemann Hypothesis is
 made.}
+
+\subsection{The frontier extension, the code reading, and the
+campaign audited: the corrections of record (sandbox
+probes)}\label{sec:frontier-audits}
+
+Four closing discovery freeze rounds of 2026-08-15 (rounds
+106--109; notes CDVII--CDIX; run as concurrent lanes) then
+extended the roadmap's Stage-0 frontier, adjudicated the
+program's founding intuition under its own name, and turned the
+audit instruments on the campaign's own headlines.  Everything
+in this subsection is \emph{sandbox}: four frozen probes in the
+experiments tree, no module, no ledger row, no marker moved, no
+gate closed or narrowed, and no claim about the Riemann
+Hypothesis in any direction.  The suite stays at 906 modules.
+This is, first of all, a \emph{corrections subsection}: the
+round-108 big-picture logic audit
+(\texttt{bigpicture\_logic\_probe.py}, $31/31$ gates, $2.5$\,s,
+SPEC \texttt{889edf4a}, verdict \textsc{bigpicture-findings}(3))
+and the round-109 bughunt --- the first adversarial audit of
+rounds 86--105 (\texttt{bughunt2\_r86\_r105\_probe.py}, $30/30$
+gates, $11.6$\,s, SPEC \texttt{759d0209}, verdict
+\textsc{bughunt2-findings}(7, max \textsc{major}): 1
+\textsc{major} / 6 \textsc{minor} / 0 \textsc{fatal}) ---
+independently convicted the published ``three equivalent lemma
+forms'' language and two related headlines, and the corrected
+wordings are carried in
+Sections~\ref{sec:instrument-tier}--\ref{sec:roadmap} per the
+round-87/97 convention: frozen probes and notes are not
+retro-edited --- the correction is the record.  No number was
+wrong; no round verdict flips.
+
+\emph{The corrections of record, stated once in full.}  The
+honest form $\times$ direction table:
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.30\linewidth}p{0.26\linewidth}p{0.22\linewidth}p{0.14\linewidth}@{}}
+\hline
+Form & form $\Rightarrow$ RH & RH $\Rightarrow$ form & net status\\
+\hline
+A --- Hausdorff cell positivity (all $n,k$ at $a = 256$) &
+audited-sound (H1c chain, independently re-derived gap-free in
+round 109) $+$ literature (Zhang arXiv:2303.09396, Thm~2) &
+elementary $+$ gated & \textbf{proven RH-equivalence}\\
+B --- Weyl-disk contraction (pointwise at the pins; ``uniform''
+retired per rounds 92/109) & skeleton-sound (SVPIN $+$ V0a $+$
+Lean \texttt{sv\_implies\_rh}, citation-typed hypotheses) &
+\textbf{open} --- literally the round-90 lemma (measured $16/16$
+truth-tight, never proven) & RH-sufficient pendant\\
+C --- ground-eigenvector sign positions (TPL(i)) & ladder
+$\Rightarrow$ RH via \texttt{v848} modulo (H); C $\Leftrightarrow$
+ladder under the named simplicity hypothesis & via the Z1
+transfer (measured $6.3\times10^{-5}$), conditional on
+CF-realness/Connes \S6.6 & RH-sufficient pendant\\
+\hline
+\end{tabular}
+\end{center}
+
+The genuine two-sided equivalences of the corpus are Form A,
+screw positivity of \emph{all} sections at \emph{all} depths
+(Suzuki --- cited, never assumed), and Euler--Pick for
+\emph{all} $N$ (Pick cited forward, Lean kernel backward) ---
+and every mutual equivalence that holds routes \emph{through}
+RH: no direct form-to-form edge exists (gate J1.G5); the only
+direct bridge is the (AC) weld, stopping at the
+exponential-autocorrelation cone.  \textbf{Transfer: none},
+demonstrated by an explicit counterexample world --- an off-line
+quadruple at $\gamma = 20$ (above $\gamma_1$) keeps \emph{every}
+Hausdorff cell positive ($n + k \le 50$, $b_n$ to $n = 240$)
+while the Euler--Pick section \emph{fires} at $N = 12$
+(certified negative pivot at 200 dps); the on-line control world
+is positive in both; a below-$\gamma_1$ quadruple fires the
+Hausdorff $n$-channel at $n = 90$.  Consequence: \textbf{the
+$k \le 10^{19}/7.4\times10^{21}$ Form-A theorems imply nothing
+about screw sections or Weyl disks --- certified regions are
+form-local} --- and their zero-location content sits below
+$\gamma_1 = 14.13$, where Platt--Trudgian is infinitely
+stronger.  The two further fundamental findings are carried as
+fences in Section~\ref{sec:roadmap}: the Stage-3 entry-form
+mismatch (the kernel-checked extraction accepts only
+$H_{\mathrm{cof}}$) and the falsifier reach cap (``open and
+empty'' is a theorem given the cited inputs).  The honest OCT
+boundary is made concrete (J2, absence-gated at 0 atlas hits
+each): five classes outside the corpus vocabulary are named and
+\emph{unpriced} --- ergodic/measure-rigidity positivity
+transfer, model-theoretic/o-minimal counting, bigger-group
+representation-theoretic positivity,
+GMC/Fyodorov--Hiary--Keating (reduces-in-spirit to magnitude,
+with an enumeration gap), and higher-order Fourier uniformity of
+M\"obius --- so ``no blanket-untested class left'' is
+vocabulary-relative, exactly as the OCT's own editorial fence
+says.  The localization lattice is typed (J3): ``localized Weil
+positivity'' is a \emph{family} of six inequivalent
+localizations with different quantifier structures, each with
+its own completion leg, and mesh-monotonicity is false in
+general (explicit aliasing counterexample: coarse sections all
+PSD, fine section $\lambda_{\min} = -14.96$) --- the corpus's
+mesh-cofinal correction was load-bearing.  The round-109 minors,
+all on record: one hardcoded-true gate in the round-104 tally
+(the only live one across all 17 probes --- the round-87 F5
+class reproduced after its own warning); two decorative
+tautological conjuncts in the round-92 probe (the countable
+Nevanlinna--Pick step is asserted-with-citation, honestly typed
+everywhere); the screwind docstring's mesh misattribution
+($0.207$ is the $\delta = 0.008$ round-93 value; the true
+$\delta = 0.012$ sup is $0.2219$; \textsc{mesh-damped} stands,
+corrected in Section~\ref{sec:instrument-tier}); the stale
+``uniform'' adjective in Form B's name (contradicting the
+surfaces' own round-92 correction --- retired); the roadmap
+probe's stale r95 $N = 3$ acceptance value ($2.3643695
+\times10^{-10}$, though round 100 tightened $\mathrm{lo}_3$ to
+$6.9310239\times10^{-10}$ --- frozen probe, finding on record);
+and two header slips in \texttt{sieve4\_helper.c} (the
+certificate unaffected: true worst per-term $13.33u \ll
+K_{\mathrm{TERM}} = 32u$).  Against all that, \textbf{the
+load-bearing re-derivations are clean}: the round-103 theorem
+re-proved end to end with an own implementation ($B_0 =
+7.575655711\times10^{-10}$ exact match, all four partition
+ratios to $10^{-9}$, the wall root $k^* = 1.40544\times10^{19}$
+consistent), the $N = 4$ certification re-derived (Nair exact
+for $n \le 60$, far-floor necessity confirmed, the Cholesky
+certificate logic sound), the Hausdorff H1c continuation
+\emph{has no gap}, the Lean theorems say exactly what round 99
+claims (axioms exactly the standard three), all 16 in-scope
+probes re-ran green during the audit, and no round verdict
+flips.
+
+\emph{The frontier extension (round 106,
+\texttt{moonshot\_o3\_probe.py}, $16/16$ gates, ${\sim}104$\,s,
+independently re-run green, verdict \textsc{moonshot3-extended}
+$+$ \textsc{moonshot3-partial} $+$
+\textsc{moonshot3-obstructed}).}  The round-103 theorem extends
+530-fold: \textbf{$C_{n,k}(256) > 0$ for every $n \ge 0$ and
+every $0 \le k \le 7{,}444{,}682{,}106{,}464{,}286{,}365{,}865$}
+($\approx 7.44\times10^{21}$), proven from Platt--Trudgian 2021
+plus the \emph{corrected} Hasanalizade--Shen--Wong zero-counting
+bound (J. Number Theory 235 (2022), Cor.~1.2: $|N(t) - M(t)| \le
+0.1038\log t + 0.2573\log\log t + 9.3675$) --- the honest source
+correction load-bearing: the commissioned $(0.110, 0.290,
+2.290)$ constants bound $S(T)$, not $N(T)$ directly, and their
+Cheng--Graham input was later identified as invalid ---
+replaced, not patched.  The mechanism retains the previously
+discarded $q^k$ factor ($|1-y| \le (\gamma^2 +
+1/4)/(\gamma^2 + a - 1/4)$), counts verified zeros in $16384$
+RvM packets below $T - 1$, encloses the unknown tail by a
+Gaussian series above $T$, and closes a 33-cell endpoint
+partition; the worst gate is the last cell (lower/tail ratio
+$1.000001535$, minimum packet count $25{,}397{,}045.4$), and the
+next $2\times10^{-6}$ relative step fails this mechanism --- the
+frontier is mechanism-exact.  \textbf{The general law:}
+$k_{\mathrm{front}}(T) = (\lambda_\infty + O(1/\log T))\,
+T^2/(a - \tfrac12)$ with $\lambda_\infty =
+0.226987054723979955$, defined by
+$\operatorname{erfc}(\sqrt{a/(a-\tfrac12)}\sqrt{\lambda}) =
+\sqrt{a/(a-\tfrac12)}\operatorname{erf}(\sqrt{\lambda})$ ---
+\emph{verification height $qT$ buys $q^2$ columns} --- and the
+formal geometric ceiling $k_{\mathrm{geo}} = (T^2 +
+1/4)/(a - \tfrac12)$ is intrinsically unreachable by this
+mechanism (the route stops at $0.227\,k_{\mathrm{geo}}$).  New
+exact structure travels with it: the two-variable generating
+function in closed form, $(X + Y - XY)\,G = X\,a\,F(a(1-X)) +
+Y\,\frac{a}{1-Y}\,F\!\left(\frac{a}{1-Y}\right)$, with the
+pole-divisor \emph{equivalence} (all joint pole divisors
+positive-real and $> 1$ iff every $y_\rho \in (0,1)$ iff RH ---
+an equivalence, not an RH proof); under RH the array is totally
+sign-regular in the \emph{reversed}-$k$ orientation (the
+standard P\'olya-frequency orientation is wrong --- the
+$2\times2$ minor is manifestly negative); the important
+correction: \textbf{Hankel positivity alone is not Form A} ---
+the uniform measure on $[2,3]$ has every Hankel matrix positive
+definite yet $C_{0,1} = -3/2$; the localizers $H^+$ and
+$H - H^+$ are load-bearing; the fixed-$N$ partial theorem
+($b_m(a) = (\sqrt a \log a/8)\,(1/2)_m/m! + O_N(\sqrt a)$, so
+every fixed Hankel and localizer determinant is
+\emph{eventually} positive as $a \to \infty$); and the exact
+downward-transport obstruction: the flow is not sign-closed ---
+for two atoms $\frac{d}{dt}\log\det H_2 = 4 - 3(y_1 + y_2)$,
+either sign possible --- so eventual fixed-$N$ positivity cannot
+be propagated down to $a = 256$ without controlling the full
+mixed/localizer hierarchy.
+
+\emph{The code-synthesis adjudication (round 107, contract
+\textsc{prime.code.synthesis.01};
+\texttt{code\_synthesis\_probe.py}, $18/18$ gates $+$ wards,
+$2.2$\,s, deterministic re-run bit-identical, verdict
+\textsc{code-reading-true-decoding-direction}).}  The program
+owner's founding intuition --- \emph{the primes as an
+error-correcting code in TFPT} --- received its first formal
+adjudication under that name, and it is \textbf{vindicated as
+measured structure}: the primes \emph{are} the unique codeword
+of an error-correcting code in the compiler's own Gram grammar
+--- ambient space the nonnegative atomic measures on $(0, r]$ at
+tent mesh $\delta = 0.006$; codeword the prime-power comb; check
+family the nested Toeplitz sections $T_k(-g'')$, one check per
+depth; \textbf{minimum distance the round-96 rigidity law,
+re-measured independently and identical to four digits}
+($\ln\eta^*(r) = -1.0730\,r - 7.0783$); decoding radius the
+exact round-96 impostor exits ($6/6$); rate $\to 0$.  It is the
+\textbf{same grammar as the compiler's literal E8 code layer}
+($[8,4,4]$ self-dual, weight enumerator $\{0{:}1, 4{:}14,
+8{:}1\}$, Construction A $\to$ 240 roots --- rebuilt exactly
+in-probe): both membership tests are nonnegativity of a Gram
+pairing family, so TFPT's one axiom \emph{instantiates} at the
+arithmetic seam as this code --- structure, not progress.  But
+it is a \textbf{different dual type}, and the decisive invariant
+is now a measured number: the E8 layer has dual rank 4 (finite,
+fixed distance), while \textbf{the arithmetic code's dual rank
+grows with slope $1.0000$} (the binding check index always sits
+at the frontier and never stabilizes; the syndrome rank grows
+$5 \to 12$; a non-codeword passes every bounded-depth check
+family bit-exactly below its defect), and the adversarial
+local-testability gap $\to 0$ beyond any bounded family's
+support --- precisely the error class the RH quantifier cares
+about (local errors, by contrast, are locally testable and
+depth-improving).  The honest close: the code runs in the
+\textbf{decoding direction} (finite checks $\Rightarrow$
+identification of the measure) while RH needs the
+\textbf{encoding direction} (codeword $\Rightarrow$ all checks
+pass) --- the quantifier does not compress, and the reason is
+now a measured number; both surprise channels (a stabilizing
+binding set; a depth-independent adversarial gap) were carried
+as live gates and are empty.
+
+\emph{Scope, in the same breath.}  All of this is exploration:
+finite theorems from cited inputs, measured structure, and
+prose-level corrections; no all-depth statement, no promotion,
+no marker moved.  The corrections change no number and flip no
+verdict --- they grade the record's own language against the
+machine state, per the standing convention.  RH is neither
+proven nor disproven here.  \textbf{No statement about the
+Riemann Hypothesis is made.}
 
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 

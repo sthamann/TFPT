@@ -43,6 +43,1009 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-15",
+    "dateLabel": "2026-08-15 · CII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the corrections-and-frontier sync — discovery freeze rounds one-hundred-six through one-hundred-nine synced into every live surface, PRIMARILY A CORRECTIONS ROUND: the round-108 big-picture logic audit and the round-109 Bughunt II independently convicted the published “three equivalent lemma forms” language and two related headlines, and the corrected wordings are now carried on every surface per the round-87/97 correction-of-record convention (frozen probes and notes are NOT retro-edited — the correction is the record); plus the new content: the 530"
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " Form-A frontier extension with its derived quadratic law, and the code-synthesis adjudication of the program's founding intuition; "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " only — FOUR frozen probes, NO promotion, NO module, NO ledger row, NO marker moved, NO gate closed or narrowed, suite unchanged at "
+      },
+      {
+        "k": "m",
+        "v": "906"
+      },
+      {
+        "k": "t",
+        "v": ", NO round verdict flips, NO number wrong, NO RH claim in any direction: (1) THE CORRECTIONS OF RECORD (round 108, "
+      },
+      {
+        "k": "c",
+        "v": "bigpicture_ logic_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "31/31"
+      },
+      {
+        "k": "t",
+        "v": " gates, "
+      },
+      {
+        "k": "m",
+        "v": "2.5"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "889edf4a"
+      },
+      {
+        "k": "t",
+        "v": ", deterministic re-run identical, verdict BIGPICTURE-FINDINGS(3): F1 FORMS-EQUIVALENCE-ONE-SIDED("
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "TRANSFER-NONE), F2 STAGE3-ENTRY-FORM-MISMATCH, F3 FALSIFIER-REACH-CAP; and round 109, note CDIX, contract PRIME.BUGHUNT2.R86.R105.01, "
+      },
+      {
+        "k": "c",
+        "v": "bughunt2_ r86_ r105_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "30/30"
+      },
+      {
+        "k": "t",
+        "v": " gates, "
+      },
+      {
+        "k": "m",
+        "v": "11.6"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "759d0209"
+      },
+      {
+        "k": "t",
+        "v": ", deterministic re-run identical, verdict BUGHUNT2-FINDINGS(7, max MAJOR): "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " MAJOR / "
+      },
+      {
+        "k": "m",
+        "v": "6"
+      },
+      {
+        "k": "t",
+        "v": " MINOR / "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " FATAL — the two audits INDEPENDENTLY CONVERGENT on the same headline finding): (K1) “three equivalent lemma forms” (paper 8.13/8.14, prime-front 12.45/12.46, website chapters 37/38; the changelog C/CI wordings are frozen history and are corrected HERE, not retro-edited) is corrected to “three RH-SUFFICIENT lemma forms” — the honest form "
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " direction table: the HAUSDORFF form is a GENUINE proven RH-equivalence (forward audited-sound via the H1c continuation chain, independently re-derived GAP-FREE in round 109, plus Zhang arXiv:2303.09396 Thm 2; backward elementary "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " gated), the WEYL-DISK and SIGN-POSITION forms are ONE-SIDED PENDANTS (form "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " RH established; RH "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " form OPEN — the round-90 lemma, measured "
+      },
+      {
+        "k": "m",
+        "v": "16/16"
+      },
+      {
+        "k": "t",
+        "v": " truth-tight but never proven, and the CF-realness/Connes-6.6 hypotheses respectively), EVERY mutual equivalence that holds routes THROUGH RH (no direct form-to-form edge, gate J1.G5; the only direct bridge is the (AC) weld stopping at the exponential-autocorrelation cone), TRANSFER IS NONE — demonstrated by an explicit counterexample world: an off-line quadruple at "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma = 20"
+      },
+      {
+        "k": "t",
+        "v": " (above "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1"
+      },
+      {
+        "k": "t",
+        "v": ") keeps EVERY Hausdorff cell positive ("
+      },
+      {
+        "k": "m",
+        "v": "n + k \\le 50"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "b_n"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "n = 240"
+      },
+      {
+        "k": "t",
+        "v": ") while the Euler–Pick section FIRES at "
+      },
+      {
+        "k": "m",
+        "v": "N = 12"
+      },
+      {
+        "k": "t",
+        "v": " (certified negative pivot at 200 dps) — and CERTIFIED REGIONS ARE FORM-LOCAL: the "
+      },
+      {
+        "k": "m",
+        "v": "k \\le 10^{19}/7.4\\times10^{21}"
+      },
+      {
+        "k": "t",
+        "v": " Form-A theorems imply NOTHING about screw sections or Weyl disks, their zero-location content sitting below "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1 = 14.13"
+      },
+      {
+        "k": "t",
+        "v": " where Platt–Trudgian is infinitely stronger; the stale adjective “uniform” in Form B's name is retired on every surface (the round-92 V0a correction: pointwise contraction at the pins suffices); (K2) THE FALSIFIER REACH CAP (round 108 F3) is attached wherever the surfaces said “standing disproof channels / open and empty” (roadmap 8.14, prime-front 12.46, website chapters 37/38): both instruments are DISPROOF-SOUND (the disproof direction consumes only the proven forward implication) but REACH-CAPPED far below Platt–Trudgian's "
+      },
+      {
+        "k": "m",
+        "v": "3.0\\times10^{12}"
+      },
+      {
+        "k": "t",
+        "v": " (Euler–Pick "
+      },
+      {
+        "k": "m",
+        "v": "N \\le 4"
+      },
+      {
+        "k": "t",
+        "v": " sees off-line zeros only at "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma \\sim 5"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": "; the Hausdorff field is provably blind above "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_1 = 14.13"
+      },
+      {
+        "k": "t",
+        "v": " at the safe point) — “open and empty” is a THEOREM GIVEN THE CITED INPUTS, not an observation: zero live falsification power in the certified ranges; (K3) THE STAGE-3 INTERFACE FENCE (round 108 F2) is attached to “Stage 3 conditional-complete”: the only kernel-checked end-to-end extraction ("
+      },
+      {
+        "k": "c",
+        "v": "v848"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "CofinalWeil.lean"
+      },
+      {
+        "k": "t",
+        "v": ") accepts ONLY the wall form "
+      },
+      {
+        "k": "m",
+        "v": "H_{\\mathrm{cof}}"
+      },
+      {
+        "k": "t",
+        "v": ", which is not among the three entry forms and is not producible from them without RH (test-class mismatch, absence-gated); the weakest link is the Stage-2"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "3 interface itself — finite acceptance gates (cells "
+      },
+      {
+        "k": "m",
+        "v": "n + k \\le 86"
+      },
+      {
+        "k": "t",
+        "v": ") against infinite-quantifier entry forms, a jump no corpus machinery bridges ("
+      },
+      {
+        "k": "c",
+        "v": "v912"
+      },
+      {
+        "k": "t",
+        "v": " bridges convergence, not positivity); (K4) THE MINOR PROSE FIXES (round 109): the screwind mesh-ladder misattribution corrected in prime-front 12.45 ("
+      },
+      {
+        "k": "m",
+        "v": "0.222/0.184/0.156"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "\\delta = 0.012/0.006/0.003"
+      },
+      {
+        "k": "t",
+        "v": " — the earlier "
+      },
+      {
+        "k": "m",
+        "v": "0.207"
+      },
+      {
+        "k": "t",
+        "v": " was the "
+      },
+      {
+        "k": "m",
+        "v": "\\delta = 0.008"
+      },
+      {
+        "k": "t",
+        "v": " round-93 value "
+      },
+      {
+        "k": "m",
+        "v": "0.2065"
+      },
+      {
+        "k": "t",
+        "v": "; MESH-DAMPED stands), plus on record without surface impact: one hardcoded-true gate in the round-104 tally (the only live one across all 17 probes), two decorative tautological conjuncts in the round-92 probe (the countable Nevanlinna–Pick step asserted-with-citation, honestly typed everywhere), the roadmap probe's stale r95 "
+      },
+      {
+        "k": "m",
+        "v": "N = 3"
+      },
+      {
+        "k": "t",
+        "v": " acceptance value (r100 tightened "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{lo}_3"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "6.9310239\\times10^{-10}"
+      },
+      {
+        "k": "t",
+        "v": "; frozen probe, finding on record), two "
+      },
+      {
+        "k": "c",
+        "v": "sieve4_helper.c"
+      },
+      {
+        "k": "t",
+        "v": " header slips (certificate UNAFFECTED: true worst per-term "
+      },
+      {
+        "k": "m",
+        "v": "13.33u \\ll K_{\\mathrm{TERM}} = 32u"
+      },
+      {
+        "k": "t",
+        "v": "); (K5) THE OCT BOUNDARY SHARPENED (round 108 J2, absence-gated at "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " atlas hits each): wherever the surfaces state atlas completeness (paper 8.9/limitation 8, prime-front OCT subsection, website chapter 33), the vocabulary-relative fence now names the FIVE UNPRICED classes — ergodic/measure-rigidity positivity transfer, model-theoretic/o-minimal counting, bigger-group representation-theoretic positivity, GMC/Fyodorov–Hiary–Keating (reduces-in-spirit to magnitude, with an enumeration gap), higher-order Fourier uniformity of Möbius; AND THE CLEAN SIDE carried in the same breath (round 109 B1, own implementations): the round-103 theorem re-proved end to end ("
+      },
+      {
+        "k": "m",
+        "v": "B_0 = 7.575655711\\times10^{-10}"
+      },
+      {
+        "k": "t",
+        "v": " exact match, all four partition ratios to "
+      },
+      {
+        "k": "m",
+        "v": "10^{-9}"
+      },
+      {
+        "k": "t",
+        "v": ", wall root "
+      },
+      {
+        "k": "m",
+        "v": "k^* = 1.40544\\times10^{19}"
+      },
+      {
+        "k": "t",
+        "v": " consistent), the "
+      },
+      {
+        "k": "m",
+        "v": "N = 4"
+      },
+      {
+        "k": "t",
+        "v": " certification re-derived (Nair exact for "
+      },
+      {
+        "k": "m",
+        "v": "n \\le 60"
+      },
+      {
+        "k": "t",
+        "v": ", far-floor necessity confirmed, Cholesky logic sound), the Hausdorff H1c continuation GAP-FREE, the Lean theorems saying exactly what round 99 claims (axioms exactly ["
+      },
+      {
+        "k": "c",
+        "v": "propext"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "Classical.choice"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "Quot.sound"
+      },
+      {
+        "k": "t",
+        "v": "]), all 16 in-scope probes re-run green during the audit; (2) ROUND 106 ("
+      },
+      {
+        "k": "c",
+        "v": "moonshot_ o3_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "16/16"
+      },
+      {
+        "k": "t",
+        "v": " gates, "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}104"
+      },
+      {
+        "k": "t",
+        "v": " s, independently re-run green, verdict MOONSHOT3-EXTENDED(frontier "
+      },
+      {
+        "k": "m",
+        "v": "= 7{,}444{,}682{,}106{,}464{,}286{,}365{,}865"
+      },
+      {
+        "k": "t",
+        "v": "; quadratic law) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " MOONSHOT3-PARTIAL(exact "
+      },
+      {
+        "k": "m",
+        "v": "G"
+      },
+      {
+        "k": "t",
+        "v": " / sign-regularity / fixed-"
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": " theorem) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " MOONSHOT3-OBSTRUCTED(PF orientation; downward Hankel transport)): the round-103 theorem EXTENDED 530-FOLD — "
+      },
+      {
+        "k": "m",
+        "v": "C_{n,k}(256) > 0"
+      },
+      {
+        "k": "t",
+        "v": " for ALL "
+      },
+      {
+        "k": "m",
+        "v": "n \\ge 0"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "0 \\le k \\le 7.4447\\times10^{21}"
+      },
+      {
+        "k": "t",
+        "v": ", proven from Platt–Trudgian 2021 plus the CORRECTED Hasanalizade–Shen–Wong bound (JNT 235 (2022), Cor. 1.2: "
+      },
+      {
+        "k": "m",
+        "v": "|N(t) - M(t)| \\le 0.1038\\log t + 0.2573\\log\\log t + 9.3675"
+      },
+      {
+        "k": "t",
+        "v": "; HONEST SOURCE CORRECTION: the commissioned "
+      },
+      {
+        "k": "m",
+        "v": "(0.110, 0.290, 2.290)"
+      },
+      {
+        "k": "t",
+        "v": " constants bound "
+      },
+      {
+        "k": "m",
+        "v": "S(T)"
+      },
+      {
+        "k": "t",
+        "v": ", not "
+      },
+      {
+        "k": "m",
+        "v": "N(T)"
+      },
+      {
+        "k": "t",
+        "v": ", and their Cheng–Graham input was later identified as invalid — replaced, not patched); mechanism: the retained "
+      },
+      {
+        "k": "m",
+        "v": "q^k"
+      },
+      {
+        "k": "t",
+        "v": " factor, a "
+      },
+      {
+        "k": "m",
+        "v": "16384"
+      },
+      {
+        "k": "t",
+        "v": "-packet RvM lower bound below "
+      },
+      {
+        "k": "m",
+        "v": "T - 1"
+      },
+      {
+        "k": "t",
+        "v": ", a Gaussian-series tail enclosure above "
+      },
+      {
+        "k": "m",
+        "v": "T"
+      },
+      {
+        "k": "t",
+        "v": ", a 33-cell endpoint partition; worst gate lower/tail ratio "
+      },
+      {
+        "k": "m",
+        "v": "1.000001535385559"
+      },
+      {
+        "k": "t",
+        "v": ", minimum packet count "
+      },
+      {
+        "k": "m",
+        "v": "25{,}397{,}045.4"
+      },
+      {
+        "k": "t",
+        "v": ", the next "
+      },
+      {
+        "k": "m",
+        "v": "2\\times10^{-6}"
+      },
+      {
+        "k": "t",
+        "v": " relative step FAILS — mechanism-exact; THE LAW: "
+      },
+      {
+        "k": "m",
+        "v": "k_{\\mathrm{front}}(T) = (\\lambda_\\infty + O(1/\\log T))\\,T^2/(a - 1/2)"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_\\infty = 0.226987054723979955"
+      },
+      {
+        "k": "t",
+        "v": " — VERIFICATION HEIGHT "
+      },
+      {
+        "k": "m",
+        "v": "qT"
+      },
+      {
+        "k": "t",
+        "v": " BUYS "
+      },
+      {
+        "k": "m",
+        "v": "q^2"
+      },
+      {
+        "k": "t",
+        "v": " COLUMNS, the geometric ceiling "
+      },
+      {
+        "k": "m",
+        "v": "k_{\\mathrm{geo}} = (T^2 + 1/4)/(a - 1/2)"
+      },
+      {
+        "k": "t",
+        "v": " intrinsically unreachable (the route stops at "
+      },
+      {
+        "k": "m",
+        "v": "0.227\\,k_{\\mathrm{geo}}"
+      },
+      {
+        "k": "t",
+        "v": "); NEW EXACT STRUCTURE: the closed-form two-variable generating function "
+      },
+      {
+        "k": "m",
+        "v": "(X + Y - XY)\\,G = X a F(a(1-X)) + Y \\frac{a}{1-Y} F(\\frac{a}{1-Y})"
+      },
+      {
+        "k": "t",
+        "v": " with the pole-divisor EQUIVALENCE (not an RH proof), total sign-regularity in the REVERSED-"
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": " orientation (the standard Pólya-frequency orientation is WRONG — the "
+      },
+      {
+        "k": "m",
+        "v": "2\\times2"
+      },
+      {
+        "k": "t",
+        "v": " minor manifestly negative), THE IMPORTANT CORRECTION: HANKEL POSITIVITY ALONE IS NOT FORM A (uniform measure on "
+      },
+      {
+        "k": "m",
+        "v": "[2,3]"
+      },
+      {
+        "k": "t",
+        "v": ": every Hankel matrix positive definite yet "
+      },
+      {
+        "k": "m",
+        "v": "C_{0,1} = -3/2"
+      },
+      {
+        "k": "t",
+        "v": " — the localizers "
+      },
+      {
+        "k": "m",
+        "v": "H^+"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "H - H^+"
+      },
+      {
+        "k": "t",
+        "v": " required), the fixed-"
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": " eventual-positivity theorem ("
+      },
+      {
+        "k": "m",
+        "v": "b_m(a) = (\\sqrt a \\log a/8)(1/2)_m/m! + O_N(\\sqrt a)"
+      },
+      {
+        "k": "t",
+        "v": "), and the exact downward-transport obstruction (for two atoms "
+      },
+      {
+        "k": "m",
+        "v": "\\tfrac{d}{dt}\\log\\det H_2 = 4 - 3(y_1 + y_2)"
+      },
+      {
+        "k": "t",
+        "v": ", either sign possible — fixed-"
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": " eventual positivity cannot be propagated down to "
+      },
+      {
+        "k": "m",
+        "v": "a = 256"
+      },
+      {
+        "k": "t",
+        "v": "); (3) ROUND 107 (note CDVII, contract PRIME.CODE.SYNTHESIS.01, "
+      },
+      {
+        "k": "c",
+        "v": "code_ synthesis_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "18/18"
+      },
+      {
+        "k": "t",
+        "v": " gates"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "wards, "
+      },
+      {
+        "k": "m",
+        "v": "2.2"
+      },
+      {
+        "k": "t",
+        "v": " s, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "5a6c3851"
+      },
+      {
+        "k": "t",
+        "v": ", deterministic re-run bit-identical, verdict CODE-READING-TRUE-DECODING-DIRECTION): the program owner's founding intuition “primes as error-correcting code in TFPT” given its first formal adjudication under that name and VINDICATED AS MEASURED STRUCTURE — the primes ARE the unique codeword of an error-correcting code in the compiler's own Gram grammar (ambient: nonnegative atomic measures at tent mesh "
+      },
+      {
+        "k": "m",
+        "v": "\\delta = 0.006"
+      },
+      {
+        "k": "t",
+        "v": "; codeword: the prime-power comb; check family: nested Toeplitz sections, one check per depth; MINIMUM DISTANCE: the round-96 rigidity law RE-MEASURED INDEPENDENTLY, "
+      },
+      {
+        "k": "m",
+        "v": "\\ln\\eta^*(r) = -1.0730r - 7.0783"
+      },
+      {
+        "k": "t",
+        "v": ", identical to four digits; decoding radius: "
+      },
+      {
+        "k": "m",
+        "v": "6/6"
+      },
+      {
+        "k": "t",
+        "v": " impostors die at the exact round-96 exits; rate "
+      },
+      {
+        "k": "m",
+        "v": "\\to 0"
+      },
+      {
+        "k": "t",
+        "v": "); SAME GRAMMAR as the compiler's literal E8 code layer ("
+      },
+      {
+        "k": "m",
+        "v": "[8,4,4]"
+      },
+      {
+        "k": "t",
+        "v": " self-dual, weight enumerator "
+      },
+      {
+        "k": "m",
+        "v": "\\{0{:}1, 4{:}14, 8{:}1\\}"
+      },
+      {
+        "k": "t",
+        "v": ", Construction A "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " 240 roots, rebuilt exactly in-probe) — TFPT's one axiom INSTANTIATES at the arithmetic seam as this code, structure not progress; DIFFERENT DUAL TYPE with the decisive number measured: THE DUAL RANK GROWS WITH SLOPE "
+      },
+      {
+        "k": "m",
+        "v": "1.0000"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "k_{\\mathrm{fail}}/D = 0.9960/0.9975/0.9983/0.9987"
+      },
+      {
+        "k": "t",
+        "v": "; syndrome rank "
+      },
+      {
+        "k": "m",
+        "v": "5 \\to 12"
+      },
+      {
+        "k": "t",
+        "v": "; a non-codeword passes every bounded-depth check family BIT-EXACTLY below its defect), adversarial LTC gap "
+      },
+      {
+        "k": "m",
+        "v": "\\to 0"
+      },
+      {
+        "k": "t",
+        "v": " beyond any bounded family's support (local errors testable and depth-improving, "
+      },
+      {
+        "k": "m",
+        "v": "0.9984 \\to 1.0000"
+      },
+      {
+        "k": "t",
+        "v": ") — the code runs measure "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " identification (DECODING) while RH needs codeword "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " all checks (ENCODING): THE QUANTIFIER DOES NOT COMPRESS, and the reason is now a measured number; both surprise channels carried as live gates and EMPTY; (4) SURFACES SYNCED IN THIS ENTRY: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " gains the sandbox diary subsection “The frontier extension, the code reading, and the campaign audited: the corrections of record” plus the corrected 12.45/12.46 wordings, the 12.45 mesh-ladder correction, and the OCT vocabulary fence with the five unpriced classes; the end-form article gains 8.15 with the form "
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " direction status table, the corrected 8.13 close and 8.14 fences, the abstract status sentence, new limitation 11, the limitation-8 fence, and the traceability rounds 106–109 (with the Hasanalizade–Shen–Wong citation); the Anthropic email draft gains one status paragraph (the corrected three-forms state, the frontier law, the code-reading result); the website prime-front page gains chapter 39 (the live-updates chapter renumbered "
+      },
+      {
+        "k": "m",
+        "v": "39 \\to 40"
+      },
+      {
+        "k": "t",
+        "v": "), the corrected chapters 37/38, the chapter-33 vocabulary fence, and one consolidated sandbox feed entry (verdict BIGPICTURE-FINDINGS, new enum, script "
+      },
+      {
+        "k": "c",
+        "v": "bigpicture_logic_probe.py"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "c",
+        "v": "website/lib/changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh gen"
+      },
+      {
+        "k": "t",
+        "v": "; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-15",
     "dateLabel": "2026-08-15 · CI",
     "heading": [
       {
