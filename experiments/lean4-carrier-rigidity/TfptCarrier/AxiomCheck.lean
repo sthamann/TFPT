@@ -50,6 +50,10 @@ import TfptCarrier.SeamScalingLimit
 import TfptCarrier.SeamResidualAxiom
 import TfptCarrier.WallCertifiedHead
 import TfptCarrier.CofinalPredefinition
+import TfptCarrier.EulerPick
+import TfptCarrier.DeltaOneNoGo
+import TfptCarrier.ParityLemma
+import TfptCarrier.SVSkeleton
 
 -- Layer 1: Polarization (algebraic core)
 #print axioms TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -276,3 +280,49 @@ import TfptCarrier.CofinalPredefinition
 #print axioms TfptCarrier.CofinalPredefinition.signMinedIndex_not_familyNoninterfering
 #print axioms TfptCarrier.CofinalPredefinition.constantizedSelector_familyNoninterfering
 #print axioms TfptCarrier.CofinalPredefinition.constantizedSelector_agrees
+
+-- Euler–Pick forward direction (round 93 V0c, finite-sum core; 2026-08-15)
+-- Real ordinates ⇒ every finite Pick section is PSD: the per-zero rank-two
+-- Gram identity is exact in the kernel, the PSD conclusion holds at every
+-- witness and as Matrix.PosSemidef, and the Stieltjes–Vitali node
+-- instantiation is unconditional.  No hypothesis touches ζ.
+#print axioms TfptCarrier.EulerPick.pick_entry_decomposition
+#print axioms TfptCarrier.EulerPick.pickMatrix_entry_eq_gram_sum
+#print axioms TfptCarrier.EulerPick.pickForm_nonneg
+#print axioms TfptCarrier.EulerPick.pickMatrix_posSemidef
+#print axioms TfptCarrier.EulerPick.pickMatrix_svNodes_posSemidef
+
+-- The δ₁ no-go (round 93 V0b; 2026-08-15)
+-- Pin finiteness/positivity coexists with singular, non-PD moment sections
+-- at every size ≥ 2 — the counterexample package, all components proven.
+#print axioms TfptCarrier.DeltaOneNoGo.toeplitz_deltaOneMoment
+#print axioms TfptCarrier.DeltaOneNoGo.allOnes_posSemidef
+#print axioms TfptCarrier.DeltaOneNoGo.allOnes_det_eq_zero
+#print axioms TfptCarrier.DeltaOneNoGo.allOnes_not_posDef
+#print axioms TfptCarrier.DeltaOneNoGo.caratheodoryDeltaOne_pos
+#print axioms TfptCarrier.DeltaOneNoGo.delta_one_no_go
+
+-- The secular parity lemma (round 85 TPL T4 / S6; 2026-08-15)
+-- Blow-up laws and the same-sign existence direction are proven
+-- unconditionally; the assembled parity theorems carry the named
+-- SIMPLICITY hypothesis (alternating gap-sample signs) explicitly.
+#print axioms TfptCarrier.ParityLemma.tendsto_secular_atTop
+#print axioms TfptCarrier.ParityLemma.tendsto_secular_atBot
+#print axioms TfptCarrier.ParityLemma.sign_constant_of_no_zero
+#print axioms TfptCarrier.ParityLemma.exists_zero_of_pos_pos
+#print axioms TfptCarrier.ParityLemma.exists_zero_of_same_sign
+#print axioms TfptCarrier.ParityLemma.exists_zero_adjacent
+#print axioms TfptCarrier.ParityLemma.parity_of_alternating
+#print axioms TfptCarrier.ParityLemma.zero_count_odd_of_pos_pos
+#print axioms TfptCarrier.ParityLemma.zero_count_even_of_pos_neg
+#print axioms TfptCarrier.ParityLemma.zero_count_even_iff_opposite_residues
+
+-- The (SV) ⇒ RH skeleton (rounds 92–93 V0a/V0c backward chain; 2026-08-15)
+-- The V0a pin geometry is proven; the chain is a typed hypothesis package
+-- whose honesty lock proves no unconditional conclusion can be extracted.
+#print axioms TfptCarrier.SVSkeleton.svNode_mem_Ioc
+#print axioms TfptCarrier.SVSkeleton.svNode_strictAnti
+#print axioms TfptCarrier.SVSkeleton.svNode_tendsto_one
+#print axioms TfptCarrier.SVSkeleton.sv_implies_rh
+#print axioms TfptCarrier.SVSkeleton.skeleton_inhabited
+#print axioms TfptCarrier.SVSkeleton.skeleton_not_unconditional
