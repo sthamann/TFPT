@@ -48,10 +48,18 @@ identical SPEC_SHA and the identical single failing gate):
   m_cert = 32 (the table cap; rounds 120/123 stood at 14/8).
   LOCALIZED from m*_loc = 15: d-diff - Err > B_out (the exact
   outside-window skirt + the unknown-zone bound with vmax = 0.386 at
-  (gamma, delta) = (45, 1.1), rigorous given the Euler-region bound
-  0.650 < 1 + the strip census 4/4 + 0 real zeros), so the violating
-  window CONTAINS a* -- it is the DRIVER.  LB converges to v* to six
-  digits by m = 25.
+  (gamma, delta) = (45, 1.1)).  THE CENSUS PREMISE, STATED EXACTLY
+  (correction of record, bughunt III round 130, note CDXXXII -- NOT
+  "every off-line zero below 45 is located"): delta >= 0.01 census
+  boxes + band-straddle completeness + the window-width argument --
+  max|v(a0)| = 0.646 < 1 on the census-blind strip (delta < 0.01
+  outside the band), any |v| > 1 zero must sit at gamma in
+  (15.645, 15.703) INSIDE the straddle-boxed band, and blind-strip
+  contributions to the depth diffs are negative where |v| >= 0.1
+  and <= 1e-40 otherwise: hidden zeros can only MASK the fire,
+  never fake it.  With that premise plus the Euler-region bound
+  0.650 < 1 and 0 real zeros, the violating window CONTAINS a* --
+  it is the DRIVER.  LB converges to v* to six digits by m = 25.
   THE COST LAW (the quantified instrument theorem, given-audit): the
   peeled rate instrument fires at m* ~ ln(B_band/eps)/ln(1/v_edge)
   with sieve price ln N ~ (m* ln Q + ln(a0/tol))/(sigma_edge -
@@ -164,6 +172,9 @@ PIN_ONL_BAND = (9.2086, 10.5711, 12.4948, 13.0985, 17.5961, 18.9014,
 PIN_OFFLINE = ((0.4330, 15.6682), (0.4377, 29.9834),
                (0.1969, 36.3741), (0.3232, 44.0001))   # (delta, gamma)
 PIN_VMAX_UNK = 0.386           # |4y(1-y)| at (gamma, delta) = (45, 1.1)
+# N = 2e5 truncation + declared Abel-model tail read (driver_cert
+# G26) -- a valid UPPER bound; the true full sum is 0.645728 and
+# v916's 0.664 is the same construction at N = 2e4 (bughunt CDXXXII)
 PIN_EULER_BOUND = 0.650
 # the deep certified depth table (PINNED from run-of-record; m, d'_m
 # peeled read = audit to the printed digits, Err_m, LB_m, B_out(m))
@@ -512,8 +523,10 @@ def part():
     check("B3 LOCALIZED from m*_loc = 15: the window contains a*",
           onset == PIN_MLOC and not loc[14],
           "d-diff - Err > B_out for 3 consecutive m from %s (pinned "
-          "%d; m = 14 still under the skirt %.1e): with the census "
-          "box (all off-line below 45 located, vmax_unk %.3f) the "
+          "%d; m = 14 still under the skirt %.1e): with the gated "
+          "census premise (delta >= 0.01 boxes + band-straddle "
+          "completeness + the window-width argument, note CDXXXII; "
+          "vmax_unk %.3f) the "
           "violating window contains a* = %.2f -- IT IS THE DRIVER"
           % (onset, PIN_MLOC, tab[14][4], PIN_VMAX_UNK, a0f))
 

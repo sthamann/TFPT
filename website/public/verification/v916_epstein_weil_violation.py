@@ -191,7 +191,15 @@ PIN_DRIVER = ("0.4330", "15.6682")
 PIN_DRV_WINDOW = (232.6, 259.7)
 PIN_OFFLINE = ((0.9330, 15.6682), (0.9377, 29.9834),
                (0.6969, 36.3741), (0.8232, 44.0001))
-PIN_EULER_BOUND = 0.664        # sum_{n>=4} r_Q(n) n^-1.6 / r_Q(1)
+# Euler-region bound pin: the N = 20000 truncation of
+# sum_{n>=4} r_Q(n) n^-1.6 / r_Q(1) PLUS the declared Abel-model
+# tail 6 s/(s-1) N^{1-s} (epstein_collapse G21 read) -- NOT the
+# full-table value of the sum: the true full sum is 0.645728
+# (bughunt III, round 130, note CDXXXII: own 4-decade ladder
+# N = 4e3..4e6, spread 8e-7); v917's 0.650 is the same
+# construction at N = 2e5.  Both reads are valid UPPER bounds < 1,
+# so the D1 gate logic stands unchanged.
+PIN_EULER_BOUND = 0.664
 # min-cut record (extension nodes + the four cut edges; no RH path)
 MINCUT_EDGES = (("UNCOND", "EPQ-SIEVE-MEAS"),
                 ("EPQ-SIEVE-MEAS", "EPQ-COLLAPSE-CERT"),
@@ -758,8 +766,11 @@ def part():
         b_tot = float(bsum + tailb / rq[1])
     check("D1 Euler-region bound B(1.6) < 1 (no zeros Re s >= 1.6)",
           0.55 <= float(bsum) <= PIN_EULER_BOUND + 0.01 and b_tot < 1,
-          "sum_{4<=n<=%d} r_Q n^-1.6 / r_Q(1) = %.3f (pinned full-"
-          "table value %.3f) + rigorous Abel tail %.3f: total %.3f < 1 "
+          "sum_{4<=n<=%d} r_Q n^-1.6 / r_Q(1) = %.3f (pin %.3f = "
+          "N=2e4 truncation + declared Abel-model tail, NOT the full-"
+          "table value -- true full sum 0.645728, bughunt CDXXXII; "
+          "v917's 0.650 = same construction at N=2e5) + rigorous "
+          "Abel tail %.3f: total %.3f < 1 "
           "at ALL heights" % (NCUT_WARD, float(bsum), PIN_EULER_BOUND,
                               float(tailb / rq[1]), b_tot))
 

@@ -43,6 +43,401 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-16",
+    "dateLabel": "2026-08-16 · CVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the Bughunt-III corrections of record — the four wording/label corrections that the round-130 adversarial audit (note CDXXXII, "
+      },
+      {
+        "k": "c",
+        "v": "experiments/tfpt-discovery/bughunt3_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": " gates, "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " MAJOR / "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " MINOR / "
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": " NOTE, NO verdict flips, every promoted number of "
+      },
+      {
+        "k": "c",
+        "v": "v916"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v917"
+      },
+      {
+        "k": "t",
+        "v": " independently CONFIRMED) recommended for promoted and frozen surfaces, applied to the LIVE surfaces only (frozen probes and notes are never retro-edited — the correction is the record); NO numeric value changes anywhere, both modules stay green with unchanged gate counts ("
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": ") and unchanged verdicts: (1) "
+      },
+      {
+        "k": "c",
+        "v": "v916_epstein_ weil_ violation.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " website mirror): the pin "
+      },
+      {
+        "k": "c",
+        "v": "PIN_EULER_BOUND"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "= 0.664"
+      },
+      {
+        "k": "t",
+        "v": " relabeled as the "
+      },
+      {
+        "k": "m",
+        "v": "N = 2\\times10^4"
+      },
+      {
+        "k": "t",
+        "v": " TRUNCATION of "
+      },
+      {
+        "k": "m",
+        "v": "\\sum_{n\\ge4} r_Q(n)\\,n^{-1.6}/r_Q(1)"
+      },
+      {
+        "k": "t",
+        "v": " PLUS the declared Abel-model tail — NOT the “full-table value” (its old label); the true full sum is "
+      },
+      {
+        "k": "m",
+        "v": "0.645728"
+      },
+      {
+        "k": "t",
+        "v": " (bughunt 4-decade ladder "
+      },
+      {
+        "k": "m",
+        "v": "N = 4\\times10^3..4\\times10^6"
+      },
+      {
+        "k": "t",
+        "v": ", spread "
+      },
+      {
+        "k": "m",
+        "v": "8\\times10^{-7}"
+      },
+      {
+        "k": "t",
+        "v": ") and "
+      },
+      {
+        "k": "c",
+        "v": "v917"
+      },
+      {
+        "k": "t",
+        "v": "'s "
+      },
+      {
+        "k": "m",
+        "v": "0.650"
+      },
+      {
+        "k": "t",
+        "v": " is the same construction at "
+      },
+      {
+        "k": "m",
+        "v": "N = 2\\times10^5"
+      },
+      {
+        "k": "t",
+        "v": "; the pinned number "
+      },
+      {
+        "k": "m",
+        "v": "0.664"
+      },
+      {
+        "k": "t",
+        "v": " itself is UNCHANGED (a valid upper bound; both reads "
+      },
+      {
+        "k": "m",
+        "v": "< 1"
+      },
+      {
+        "k": "t",
+        "v": ", the D1 gate logic stands); (2) "
+      },
+      {
+        "k": "c",
+        "v": "v917_driver_ rate_ certification.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " website mirror "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.KR4.DRIVER.CERT.01"
+      },
+      {
+        "k": "t",
+        "v": "): the localization census premise restated from the too-strong “every off-line zero below 45 is located” to the gated repair — "
+      },
+      {
+        "k": "m",
+        "v": "\\delta \\ge 0.01"
+      },
+      {
+        "k": "t",
+        "v": " census boxes "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " band-straddle completeness "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the window-width argument: "
+      },
+      {
+        "k": "m",
+        "v": "\\max|v(a_0)| = 0.646 < 1"
+      },
+      {
+        "k": "t",
+        "v": " on the census-blind strip, any "
+      },
+      {
+        "k": "m",
+        "v": "|v| > 1"
+      },
+      {
+        "k": "t",
+        "v": " zero must sit at "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma \\in (15.645, 15.703)"
+      },
+      {
+        "k": "t",
+        "v": " INSIDE the straddle-boxed band, and blind-strip contributions to the depth diffs are negative or "
+      },
+      {
+        "k": "m",
+        "v": "\\le 10^{-40}"
+      },
+      {
+        "k": "t",
+        "v": " — hidden zeros can only MASK the fire, never fake it (the localized verdict SURVIVES; papers and website prose checked: the too-strong sentence appears on no other live surface); the "
+      },
+      {
+        "k": "m",
+        "v": "0.650"
+      },
+      {
+        "k": "t",
+        "v": " Euler-region read carries its truncation label now too; (3) the round-129 “round-124 "
+      },
+      {
+        "k": "m",
+        "v": "t_{\\rm death}"
+      },
+      {
+        "k": "t",
+        "v": "” misattribution (the collapse is ROUND 123): searched "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "articles/"
+      },
+      {
+        "k": "t",
+        "v": ", website — NO live surface carries the wrong round label, nothing to correct (the frozen round-129 probe and note CDXXXI stay as they are per the freeze convention; note CDXXXII documents the error); (4) the note-CDXXVII poly-filter class-label shorthand (the hull normalization "
+      },
+      {
+        "k": "m",
+        "v": "|p| \\le 1"
+      },
+      {
+        "k": "t",
+        "v": " on the spectral hull dropped): searched papers, website, ledger — the shorthand leaked to NO live surface, nothing to correct (the frozen note stays; the probe's own hypothesis-carrying statement was always right). GATES: "
+      },
+      {
+        "k": "c",
+        "v": "v914"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v917"
+      },
+      {
+        "k": "t",
+        "v": " re-run green BEFORE any edit; "
+      },
+      {
+        "k": "c",
+        "v": "v916"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v917"
+      },
+      {
+        "k": "t",
+        "v": " re-run green AFTER ("
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": ", verdicts unchanged); "
+      },
+      {
+        "k": "c",
+        "v": "build.sh gen"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " release; EXIT GATE "
+      },
+      {
+        "k": "c",
+        "v": "build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests last; note CDXXXIV (head numeral re-verified immediately before writing: the concurrent L1-Weyl-law lane had taken CDXXXIII — one collision resolved by re-read). NO RH claim in any direction"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-16",
     "dateLabel": "2026-08-16 · CV",
     "heading": [
       {
