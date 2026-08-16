@@ -302,6 +302,8 @@ const NODES: DagNode[] = [
       "v912_form_convergence_theorem.py",
       "v914_pascal_region_theorem.py",
       "v915_eulerpick_certified_floors.py",
+      "v916_epstein_weil_violation.py",
+      "v917_driver_rate_certification.py",
       "v536_eichler_trace_layer.py",
       "v537_halfintegral_bridge.py",
       "v538_relative_trace_identity.py",

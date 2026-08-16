@@ -42,6 +42,737 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-16",
+    "dateLabel": "2026-08-16 · CV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the Epstein detection-arc promotion — the two durable certified results of discovery rounds 123 and 125 graduate from "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " into the load-bearing suite as "
+      },
+      {
+        "k": "c",
+        "v": "v916_epstein_ weil_ violation.py"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "v917_driver_ rate_ certification.py"
+      },
+      {
+        "k": "t",
+        "v": " (suite "
+      },
+      {
+        "k": "m",
+        "v": "908 \\to 910"
+      },
+      {
+        "k": "t",
+        "v": "); both rows typed NOT-RH-EVIDENCE in either direction — known falsehoods (the off-line zeros of "
+      },
+      {
+        "k": "m",
+        "v": "Q = x^2 + 5y^2"
+      },
+      {
+        "k": "t",
+        "v": " are Potter–Titchmarsh 1935 / Davenport–Heilbronn 1936), new certified instruments; the min-cut is unchanged (flows "
+      },
+      {
+        "k": "m",
+        "v": "4/4"
+      },
+      {
+        "k": "t",
+        "v": "): a detector is a falsifier, not a prover: (1) THE CERTIFIED EPSTEIN WEIL-POSITIVITY VIOLATION ("
+      },
+      {
+        "k": "c",
+        "v": "v916"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": ", ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.KR4.EPSTEIN.COLLAPSE.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probe "
+      },
+      {
+        "k": "c",
+        "v": "epstein_collapse_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " round 123, frozen SPEC "
+      },
+      {
+        "k": "c",
+        "v": "bb51d1a3299f4f62"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "27/30"
+      },
+      {
+        "k": "t",
+        "v": " with exactly the three PRE-DECLARED falsified predictions G18/G19/G21 failing, re-run green-as-typed at promotion, "
+      },
+      {
+        "k": "m",
+        "v": "998.5"
+      },
+      {
+        "k": "t",
+        "v": " s) — an explicit sha-pinned unit test vector (len 1038, sha "
+      },
+      {
+        "k": "c",
+        "v": "b01436d53d2cbbee"
+      },
+      {
+        "k": "t",
+        "v": ", REPRODUCED at every suite run together with the full quadratic form) whose tent-autocorrelation test function pairs NEGATIVELY with the source data "
+      },
+      {
+        "k": "m",
+        "v": "-g_Q''"
+      },
+      {
+        "k": "t",
+        "v": " built purely from "
+      },
+      {
+        "k": "m",
+        "v": "r_Q(n)"
+      },
+      {
+        "k": "t",
+        "v": " lattice counts: "
+      },
+      {
+        "k": "m",
+        "v": "V = x^{\\mathsf T} T x = -1.9697\\times10^{-2}"
+      },
+      {
+        "k": "t",
+        "v": ", error budget "
+      },
+      {
+        "k": "m",
+        "v": "\\le 4.3\\times10^{-68}"
+      },
+      {
+        "k": "t",
+        "v": ", two-precision (dps 80/110) agreement "
+      },
+      {
+        "k": "m",
+        "v": "9.8\\times10^{-79}"
+      },
+      {
+        "k": "t",
+        "v": " — windowed Weil positivity for "
+      },
+      {
+        "k": "m",
+        "v": "\\xi_Q"
+      },
+      {
+        "k": "t",
+        "v": " FAILS at "
+      },
+      {
+        "k": "m",
+        "v": "t \\le 3.114"
+      },
+      {
+        "k": "t",
+        "v": "; the "
+      },
+      {
+        "k": "m",
+        "v": "Q"
+      },
+      {
+        "k": "t",
+        "v": " world dies at "
+      },
+      {
+        "k": "m",
+        "v": "t_{\\rm death} = 2.988"
+      },
+      {
+        "k": "t",
+        "v": " (recomputed eigenvalue crossing "
+      },
+      {
+        "k": "m",
+        "v": "k^\\dagger = 998"
+      },
+      {
+        "k": "t",
+        "v": ", mesh mate stable, Q-scramble dies at 2.73) while TRUE zeta and the conductor-matched null "
+      },
+      {
+        "k": "m",
+        "v": "\\zeta_K = \\zeta L_{-20}"
+      },
+      {
+        "k": "t",
+        "v": " complete positivity through "
+      },
+      {
+        "k": "m",
+        "v": "L = 8.0"
+      },
+      {
+        "k": "t",
+        "v": " (pinned run-of-record; ZK anchor and "
+      },
+      {
+        "k": "m",
+        "v": "L = 4.0"
+      },
+      {
+        "k": "t",
+        "v": " prefix recomputed; the certificate vector reads POSITIVE on the matched null); the value channel is CERT-NUM, the off-line-zero interpretation step COND-CLASSICAL (Weil/Guinand explicit formula, cited); the three pre-declared falsified predictions travel verbatim (attribution COLLECTIVE — witness removal moves the death by only "
+      },
+      {
+        "k": "m",
+        "v": "0.018"
+      },
+      {
+        "k": "t",
+        "v": ", all-located removal survives to "
+      },
+      {
+        "k": "m",
+        "v": "4.428"
+      },
+      {
+        "k": "t",
+        "v": "; the law misses by "
+      },
+      {
+        "k": "m",
+        "v": "0.505 > 0.5"
+      },
+      {
+        "k": "t",
+        "v": "; the census is falsified: FOUR off-line pairs below 45, the round-117 witness never "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma"
+      },
+      {
+        "k": "t",
+        "v": "-minimal, the "
+      },
+      {
+        "k": "m",
+        "v": "15.6682"
+      },
+      {
+        "k": "t",
+        "v": " DRIVER carries "
+      },
+      {
+        "k": "m",
+        "v": "26\\times"
+      },
+      {
+        "k": "t",
+        "v": " its excess); (2) THE CERTIFIED LOCALIZED RATE DETECTION OF THE DRIVER ("
+      },
+      {
+        "k": "c",
+        "v": "v917"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": ", ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.KR4.DRIVER.CERT.01"
+      },
+      {
+        "k": "t",
+        "v": " [C]; source probe "
+      },
+      {
+        "k": "c",
+        "v": "driver_cert_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " round 125, frozen SPEC "
+      },
+      {
+        "k": "c",
+        "v": "bcc64cb371dff9c8"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "32/33"
+      },
+      {
+        "k": "t",
+        "v": " with exactly the single PRE-DECLARED G11 fail, re-run green-as-typed at promotion, "
+      },
+      {
+        "k": "m",
+        "v": "881.1"
+      },
+      {
+        "k": "t",
+        "v": " s) — the driver "
+      },
+      {
+        "k": "m",
+        "v": "\\rho = 0.9329696975 + 15.6682495313\\,i"
+      },
+      {
+        "k": "t",
+        "v": ", source-located from the "
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda_Q"
+      },
+      {
+        "k": "t",
+        "v": " sieve ("
+      },
+      {
+        "k": "m",
+        "v": "\\Delta\\gamma = 6.6\\times10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": "), fires in the band-peeled rate channel at depth "
+      },
+      {
+        "k": "m",
+        "v": "m^* = 14"
+      },
+      {
+        "k": "t",
+        "v": " with certified "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{LB} = 1.000137 > 1"
+      },
+      {
+        "k": "t",
+        "v": ", LOCALIZED from "
+      },
+      {
+        "k": "m",
+        "v": "m^*_{\\rm loc} = 15"
+      },
+      {
+        "k": "t",
+        "v": " (the violating window contains "
+      },
+      {
+        "k": "m",
+        "v": "a^* = 245.6815"
+      },
+      {
+        "k": "t",
+        "v": ": it is the driver); the band peel "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma \\in (7.90, 31.40)"
+      },
+      {
+        "k": "t",
+        "v": " (winding-complete, every peel "
+      },
+      {
+        "k": "m",
+        "v": "|\\xi_Q|"
+      },
+      {
+        "k": "t",
+        "v": "-verified, phantom peel doubly excluded) collapses the unpeeled price "
+      },
+      {
+        "k": "m",
+        "v": "m_2 = 908"
+      },
+      {
+        "k": "t",
+        "v": " by "
+      },
+      {
+        "k": "m",
+        "v": "\\times 65"
+      },
+      {
+        "k": "t",
+        "v": " at sieve cost only "
+      },
+      {
+        "k": "m",
+        "v": "N = 2\\times10^5"
+      },
+      {
+        "k": "t",
+        "v": "; the new exact algebra is recomputed symbolically at every run ("
+      },
+      {
+        "k": "m",
+        "v": "v^* = 1 + \\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": " EXACTLY REAL at the matched pin, weight exactly 1, LB "
+      },
+      {
+        "k": "m",
+        "v": "\\to v^*"
+      },
+      {
+        "k": "t",
+        "v": " to six digits by "
+      },
+      {
+        "k": "m",
+        "v": "m = 25"
+      },
+      {
+        "k": "t",
+        "v": ", certified depth 32, "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Err} \\approx 2.1\\times10^{-12}"
+      },
+      {
+        "k": "t",
+        "v": ", meas "
+      },
+      {
+        "k": "m",
+        "v": "\\le"
+      },
+      {
+        "k": "t",
+        "v": " cond) together with the quantified detection-cost law "
+      },
+      {
+        "k": "m",
+        "v": "m^* \\approx \\ln(B_{\\rm band}/\\varepsilon)/\\ln(1/v_{\\rm edge})"
+      },
+      {
+        "k": "t",
+        "v": ", sieve price polynomial in "
+      },
+      {
+        "k": "m",
+        "v": "1/\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": " via the band, measured "
+      },
+      {
+        "k": "m",
+        "v": "3.19"
+      },
+      {
+        "k": "t",
+        "v": " certified depths per unit "
+      },
+      {
+        "k": "m",
+        "v": "\\ln N"
+      },
+      {
+        "k": "t",
+        "v": "; the grade is carried verbatim and never upgraded — CERT-GIVEN-AUDIT (rigorous Cauchy given the incomplete-gamma audit comparator plus the DECLARED tail/peel models) and DISGUISE-ADJACENT (the deep read is an Euler-computable truncated windowed Weil transform) — and the honest caveat is carried: the pre-declared G11 gate (locator relocates "
+      },
+      {
+        "k": "m",
+        "v": "4/4"
+      },
+      {
+        "k": "t",
+        "v": ") FAILED, the weak round-117 witness (excess "
+      },
+      {
+        "k": "m",
+        "v": "2.9\\times10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": ") sits below the locator's measured threshold at "
+      },
+      {
+        "k": "m",
+        "v": "N = 2\\times10^5"
+      },
+      {
+        "k": "t",
+        "v": ", so the locator is typed a "
+      },
+      {
+        "k": "m",
+        "v": "3/4"
+      },
+      {
+        "k": "t",
+        "v": " MEASURED instrument and no "
+      },
+      {
+        "k": "m",
+        "v": "4/4"
+      },
+      {
+        "k": "t",
+        "v": " claim is promoted; (3) SURFACES: ledger rows "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.KR4.EPSTEIN.COLLAPSE.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.KR4.DRIVER.CERT.01"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "1059 \\to 1061"
+      },
+      {
+        "k": "t",
+        "v": "); veri blocks in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " (audit-counted body) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the new prime-front diary section “The Epstein detection arc” with the promotion of record, the suite-count refreshes ("
+      },
+      {
+        "k": "m",
+        "v": "908 \\to 910"
+      },
+      {
+        "k": "t",
+        "v": " across the live parentheticals) and the correction of record on the round-102 witness sentence (never "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma"
+      },
+      {
+        "k": "t",
+        "v": "-minimal); endform article "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Anthropic email promotion paragraphs; website PROMOTED feed card "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " DAG nodes "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " banner/meta "
+      },
+      {
+        "k": "c",
+        "v": "v535"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v917"
+      },
+      {
+        "k": "t",
+        "v": "; README/Zenodo "
+      },
+      {
+        "k": "m",
+        "v": "910"
+      },
+      {
+        "k": "t",
+        "v": "; note CDXXVIII (head numeral re-verified immediately before writing: the concurrent selection lane had taken CDXXVII — one collision resolved by re-read); (4) GATES: both source probes re-run green-as-typed BEFORE any edits (identical SPEC SHAs, identical failing sets); "
+      },
+      {
+        "k": "c",
+        "v": "v916"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v917"
+      },
+      {
+        "k": "t",
+        "v": " standalone green ("
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": " in "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}12"
+      },
+      {
+        "k": "t",
+        "v": " s, "
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": " in "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}1"
+      },
+      {
+        "k": "t",
+        "v": " s); FULL "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " ALL CHECKS PASSED at 910 modules; "
+      },
+      {
+        "k": "c",
+        "v": "build.sh release"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " EXIT GATE "
+      },
+      {
+        "k": "c",
+        "v": "build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests last. NO RH claim in any direction — both rows are falsifier instruments on a classical known-falsehood world; zeta's omega absorbs every finite certificate"
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-15",
     "dateLabel": "2026-08-15 · CIV",
     "heading": [

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`908` registered scripts · `1059` ledger claims · `10` clusters.
+`910` registered scripts · `1061` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (427 scripts)
+### `core` — Compiler core & the E₈ glue  (429 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -865,6 +865,10 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: PRIME.BUGHUNT2.R86.R105.01 note CDIX, rounds 103/106/108/109 (notes CI/CII), v594 (pinning style) · cited: 3 e8 audit bootstrap
 - **v915_eulerpick_certified_floors** [E/O] `PRIME.EULERPICK.CERTIFIED.FLOORS.01` — auswärts gerundete Intervall-Positivitätszertifikate für die ersten vier Sprossen der Falsifikationsleiter, mit offengelegtem Recompute/Pin-Split**. DAS OBJEKT (V0c, Runde 92 audit
   - deps: PRIME.EULERPICK.CERTIFIED.LADDER.01 note CCCXCVI, PRIME.EULERPICK.N4.SIEVE.01 note CDI, PRIME.SCREW.VERBLUNSKY.INVARIANT.01 note CCCXCIII (V0c), round 108 (note CDX reach cap), v563 (B_PSI pin), v594 (Buethe pin) · cited: 3 e8 audit bootstrap
+- **v916_epstein_weil_violation** [E] `PRIME.KR4.EPSTEIN.COLLAPSE.01` — ein expliziter sha-gepinnter Einheits-Testvektor (Länge 1038, sha b01436d53d2cbbee), dessen Weil-Paarung mit den Quelldaten von Q = x²+5y² ZERTIFIZIERT NEGATIV ist: V = −1.9697e-2 
+  - deps: PRIME.KR4.DEFECTJET.01 note CDXX (round-120 instrument), rounds 90/117/118 (screw dictionary, window formula, depth machinery), round 123 note CDXXIV (the frozen probe), PRIME.KR4.DRIVER.CERT.01 (the round-125 driver certification consuming this census) · cited: 3 e8 audit bootstrap
+- **v917_driver_rate_certification** [E/C] `PRIME.KR4.DRIVER.CERT.01` — die Treiber-Nullstelle ρ = 0.9329696975 + 15.6682495313i von ξ_Q, quellseitig aus dem Λ_Q-Sieb lokalisiert (Δγ = 6.6e-5), FEUERT im gepeelten Raten-Kanal bei Tiefe m* = 14 mit zert
+  - deps: PRIME.KR4.EPSTEIN.COLLAPSE.01 (v916: the round-123 collapse, driver location and census), PRIME.KR4.DEFECTJET.01 note CDXX (round-120 depth instrument), rounds 117/118 (radius-4 algebra, window formula, budget machinery), round 125 note CDXXVI (the frozen probe) · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1887,8 +1891,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v904_healthcode12_diagnostic** — `PRIME.ARITH.HEALTHCODE12.01`
-- **v905_bfloor_ideal_certificate** — `PRIME.PORT.BFLOOR.PG.01, PRIME.PORT.BFLOOR.PG.IVAL.01`
 - **v906_tail_cartography** — `PRIME.PORT.TAILSIGN.01, PRIME.PORT.TAILSIGN.02, PRIME.PORT.PG.SCHUR.01, PRIME.PORT.TAIL.ABEL.01, PRIME.PORT.TAIL.SEGSPLIT.01, PRIME.PORT.TAIL.OSCPAIR.01`
 - **v907_halfgap_registered_target** — `PRIME.PORT.HALFGAP.01, PRIME.PORT.DEEP.HOLDOUT.01`
 - **v908_seam_equilibrium_wiring** — `SEAM.CFIN.MARGINAL.STABILITY.01, SEAM.CFIN.NESS.PARENT.01`
@@ -1899,4 +1901,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v913_signed_alignment_localization** — `PRIME.NOGO.SIGNED.ONLY.01`
 - **v914_pascal_region_theorem** — `PRIME.PASCAL.REGION.THEOREM.01`
 - **v915_eulerpick_certified_floors** — `PRIME.EULERPICK.CERTIFIED.FLOORS.01`
+- **v916_epstein_weil_violation** — `PRIME.KR4.EPSTEIN.COLLAPSE.01`
+- **v917_driver_rate_certification** — `PRIME.KR4.DRIVER.CERT.01`
 

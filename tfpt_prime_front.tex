@@ -17257,9 +17257,10 @@ object and one named endpoint.  Everything in this subsection is
 module, no ledger row, no marker moved, no gate closed or
 narrowed, and no claim about the Riemann Hypothesis in any
 direction.  The suite stood at 906 modules at the freeze,
-\texttt{v913} then the newest promoted module (908 today, after
-the \texttt{v914}/\texttt{v915} promotion of
-Sections~\ref{sec:roadmap}--\ref{sec:frontier-audits}).
+\texttt{v913} then the newest promoted module (910 today, after
+the \texttt{v914}--\texttt{v917} promotions of
+Sections~\ref{sec:roadmap}--\ref{sec:frontier-audits} and
+\ref{sec:epstein-detection-arc}).
 
 \emph{The map as one machine-refutable object (round 79,
 \texttt{kill\_atlas\_dag\_probe.py}, $43/43$ gates, verdict
@@ -17446,7 +17447,7 @@ this subsection is \emph{sandbox}: ten frozen probes in the
 experiments tree, no module, no ledger row, no marker moved, no
 gate closed or narrowed, and no claim about the Riemann
 Hypothesis in any direction.  The suite stood at 906 modules at
-the freeze (908 today).
+the freeze (910 today).
 One convention governs the numbers below: an adversarial bughunt
 round (round 87) audited everything produced in rounds 79--85
 and corrected three \textsc{major} misstatements in the
@@ -17759,7 +17760,7 @@ Everything in this subsection is \emph{sandbox}: two frozen
 probes in the experiments tree, no module, no ledger row, no
 marker moved, no gate closed or narrowed, and no claim about the
 Riemann Hypothesis in any direction.  The suite stood at 906
-modules at the freeze (908 today).
+modules at the freeze (910 today).
 
 \emph{The Stieltjes--Vitali pin route (round 89, externally
 proposed, contract \textsc{prime.stieltjes.vitali.pin.01};
@@ -17985,7 +17986,7 @@ deliverable.  Everything in this subsection is \emph{sandbox}:
 four frozen probes in the experiments tree, no module, no ledger
 row, no marker moved, no gate closed or narrowed, and no claim
 about the Riemann Hypothesis in any direction.  The suite stood
-at 906 modules at the freeze (908 today).
+at 906 modules at the freeze (910 today).
 
 \emph{The patterns round (round 91, two probes, both verdicts
 honest negatives, both informative).}  On the mandate ``find new
@@ -18224,8 +18225,10 @@ Section~\ref{sec:frontier-audits} carried verbatim: the channel
 is disproof-sound but reach-capped at $\gamma \sim 5$--$8$, with
 zero live falsification power in the classically certified
 range).  Everything else in this subsection remains sandbox; the
-suite stands at 908 modules after this and the companion
-\veri{v914\_pascal\_region\_theorem.py} promotion.  One
+suite stands at 910 modules after this, the companion
+\veri{v914\_pascal\_region\_theorem.py} promotion, and the
+later Epstein detection-arc promotions
+(Section~\ref{sec:epstein-detection-arc}).  One
 correction of record travels with
 this subsection and is carried where the corrected claim lives
 (Section~\ref{sec:realroot-signpos}): round 97, below.
@@ -18553,6 +18556,14 @@ the $Q$ Pascal field stays positive to depth $100$ exactly as
 the phase model predicts (the fires-iff-fires gate against a
 planted replica passed); the smooth world dies immediately
 (first negative $C_{7,1} = -2.3\times10^{-3}$ at depth $8$).
+Correction of record (round 123,
+Section~\ref{sec:epstein-detection-arc}): that witness was
+never $\gamma$-minimal --- the located off-line census of
+$\xi_Q$ holds \emph{four} pairs below height 45, and the
+$\gamma$-minimal \emph{driver} $0.9330 + 15.6682i$ carries
+$26\times$ its excess (\veri{v916\_epstein\_weil\_violation.py});
+the blindness demonstration above is unaffected (it consumes
+only that an off-line zero exists at $\gamma \approx 36$).
 Z1 typing: $b_n =$ cache partial sums $+$ RvM tail ---
 source-only in \emph{input}, zero measure in \emph{content},
 like Krein.  And the honest novelty fence:
@@ -18637,7 +18648,9 @@ round 106) has since been promoted as
 \veri{v914\_pascal\_region\_theorem.py}, and the certified
 Euler--Pick floors it consumes as Stage-0/1b acceptance values
 as \veri{v915\_eulerpick\_certified\_floors.py}; the suite
-stands at 908 modules.  The roadmap itself remains sandbox.
+stands at 910 modules (after the later Epstein detection-arc
+promotions, Section~\ref{sec:epstein-detection-arc}).  The
+roadmap itself remains sandbox.
 The honesty fences travel first: \textbf{a roadmap is
 not progress on RH; no stage is claimed started; the mathematics
 of Stages 1--2 does not yet exist} --- the artifact's value is
@@ -18827,7 +18840,7 @@ the paper itself --- has since been promoted as
 \veri{v914\_pascal\_region\_theorem.py}, and the certified
 Euler--Pick floors as
 \veri{v915\_eulerpick\_certified\_floors.py}; the suite stands
-at 908 modules.  The audits and the code reading remain sandbox.
+at 910 modules.  The audits and the code reading remain sandbox.
 This is, first of all, a \emph{corrections subsection}: the
 round-108 big-picture logic audit
 (\texttt{bigpicture\_logic\_probe.py}, $31/31$ gates, $2.5$\,s,
@@ -19078,9 +19091,10 @@ architecture.  Everything in this subsection is \emph{sandbox}:
 two frozen probes in the experiments tree, no module, no ledger
 row, no marker moved, no gate closed or narrowed, and no claim
 about the Riemann Hypothesis in any direction.  The suite stood
-at 906 modules at the freeze (908 today, after the
-\texttt{v914}/\texttt{v915} promotion of
-Sections~\ref{sec:roadmap}--\ref{sec:frontier-audits}).
+at 906 modules at the freeze (910 today, after the
+\texttt{v914}--\texttt{v917} promotions of
+Sections~\ref{sec:roadmap}--\ref{sec:frontier-audits} and
+\ref{sec:epstein-detection-arc}).
 
 \emph{The unpriced classes adjudicated (round 111, contract
 PRIME.UNPRICED.CLASSES.01,
@@ -19246,6 +19260,126 @@ about the limit; the transcription conviction types the finite
 ladder, not CCM's theorem.  RH is neither proven nor disproven
 here.  \textbf{No statement about the Riemann Hypothesis is
 made.}
+
+\subsection{The Epstein detection arc: the certified
+Weil-positivity violation and the certified localized rate
+detection of the driver (rounds 123 and 125, notes CDXXIV and
+CDXXVI, 2026-08-15; promoted 2026-08-16)}
+\label{sec:epstein-detection-arc}
+
+Thirteen further discovery freeze rounds (notes
+CDXIII--CDXXVI, 2026-08-15, several run as concurrent lanes)
+remain sandbox except for the two durable certified results of
+the Epstein detection arc, promoted to the load-bearing suite on
+2026-08-16 as \veri{v916\_epstein\_weil\_violation.py} and
+\veri{v917\_driver\_rate\_certification.py} (suite
+$908 \to 910$).  The honesty fences travel first: \textbf{both
+results concern the Epstein zeta function of
+$Q = x^2 + 5y^2$, whose off-line zeros are classical
+(Potter--Titchmarsh 1935 computed the first ones;
+Davenport--Heilbronn 1936) --- the promoted claims are the
+certified explicit finite certificates from arithmetic source
+data, never the existence; both rows are typed NOT-RH-EVIDENCE
+in either direction; the min-cut is unchanged (flows $4/4$): a
+detector is a falsifier, not a prover, and for zeta the same
+instruments at any finite window or depth prove nothing (the
+all-$m$/dense-$a$/all-$L$ omega absorbs every finite
+certificate).}
+
+\emph{The certified Weil-positivity violation (round 123,
+\texttt{epstein\_collapse\_probe.py}, frozen SPEC
+\texttt{bb51d1a3299f4f62}, $27/30$ with exactly the three
+pre-declared falsified predictions failing, $968.8$~s; re-run
+green-as-typed at promotion; promoted as
+\veri{v916\_epstein\_weil\_violation.py}, $20/20$).}  The
+$Q$-world, built \emph{purely} from the $\Lambda_Q$ sieve
+($r_Q(n)$ exact lattice counts $\to$ log-derivative recursion,
+exactly warded; no Euler product exists, $\Lambda_Q$ lives on
+all $n$; zero cache unused, witness constants firewalled out of
+every builder), dies by in-window Szeg\H{o} collapse at
+$t_{\rm death} = 2.988$ (round-120 log-law point prediction
+$2.81$), while true zeta \emph{and} the conductor-matched null
+$\zeta_K = \zeta L_{-20}$ complete positivity through $L = 8.0$
+--- the round-120 background caveat is resolved: conductor alone
+does not collapse.  The promoted object is the explicit
+certificate: a sha-pinned unit test vector (len 1038, sha
+\texttt{b01436d53d2cbbee}, reproduced at every suite run
+together with the full quadratic form) with
+$V = x^{\mathsf T} T x = -1.9697\times10^{-2} \pm
+4.3\times10^{-68}$ and two-precision agreement
+$9.8\times10^{-79}$: \textbf{windowed Weil positivity for
+$\xi_Q$ fails at $t \le 3.114$}, an upper bound on the true
+violation window, mesh-free.  The value channel is typed
+\textsc{cert-num} (source-side, unconditional-numeric); the step
+``$V < 0 \Rightarrow$ off-line zero'' is \textsc{cond-classical}
+(the Weil/Guinand explicit formula for $\xi_Q$, cited not
+re-proven).  The three pre-declared falsified predictions are
+the record, carried verbatim: the attribution is
+\textsc{collective} (removing the round-117 witness moves the
+death by only $0.018$; removing all four \emph{located} off-line
+pairs survives to $4.428$ --- the located spectrum carries the
+collapse), the transferred death law misses by $0.505 > 0.5$,
+and the frozen census counts are falsified: \textbf{four
+off-line pairs live below height 45} ($0.9330 + 15.6682i$ ---
+the \emph{driver}, with $26\times$ the witness excess and
+violation window $(232.6, 259.7) \ni 256$; $0.9377 + 29.9834i$;
+the round-117 witness $0.6969 + 36.3741i$, never
+$\gamma$-minimal; $0.8232 + 44.0001i$).  What is unconditional:
+a validated falsification instrument with measured cost
+$t_{\rm death} \sim 1.87 + 0.37\,\ln(1/\delta)$ --- any world
+whose sieve data collapse is \emph{certified} non-RH-like.
+
+\emph{The certified localized rate detection (round 125,
+\texttt{driver\_cert\_probe.py}, frozen SPEC
+\texttt{bcc64cb371dff9c8}, $32/33$ with exactly the single
+pre-declared G11 fail, $876.9$~s; re-run green-as-typed at
+promotion; promoted as
+\veri{v917\_driver\_rate\_certification.py}, $13/13$).}  The
+driver, source-located from the $\Lambda_Q$ sieve alone
+($\Delta\gamma = 6.6\times10^{-5}$ against the locator's own
+box, then audit-polished, typed \textsc{ward}), fires in the
+rate channel at depth $m^* = 14$ with certified
+$\mathrm{LB} = 1.000137 > 1$ and is \emph{localized} from
+$m^*_{\rm loc} = 15$ (the violating window provably contains the
+matched pin $a^* = 245.6815$ --- it is the driver).  The
+mechanism is the band peel: subtracting the resonant on-line
+band $\gamma \in (7.90, 31.40)$ (winding-count-complete
+$15{=}15$/$2{=}2$, every peel $|\xi_Q|$-verified --- phantom
+peel, the one false-fire mechanism, doubly excluded) caps the
+bulk at $v_{\rm edge} = 0.639$ and collapses the unpeeled depth
+price $m_2 = 908$ by $\times 65$; the sieve needed only
+$N = 2\times10^5$ atoms.  The new exact algebra is recomputed
+symbolically at every suite run: at the matched pin the driver's
+weight is exactly 1 and its rate $v^* = 1 + \varepsilon$ is
+\emph{exactly real} ($y^* = (\gamma + i\delta)/(2\gamma)$; LB
+converges to $v^*$ to six digits by $m = 25$; certified depth
+32).  What emerges is a \textbf{quantified detection-cost law}
+(given-audit): fire at $m^* \approx
+\ln(B_{\rm band}/\varepsilon)/\ln(1/v_{\rm edge})$ with sieve
+price $\ln N \approx (m^* \ln Q +
+\ln(a_0/\mathrm{tol}))/(\sigma_{\rm edge} - \theta)$ ---
+polynomial in $1/\varepsilon$ via the band, not the naive
+$\ln 2/\varepsilon$ depth; measured $3.19$ certified depths per
+unit $\ln N$.  The grade travels verbatim and is never upgraded:
+\textsc{cert-given-audit} (rigorous Cauchy enclosure given the
+incomplete-gamma audit comparator plus the \emph{declared}
+tail/peel models) and \textsc{disguise-adjacent} (the deep read
+is an Euler-computable truncated windowed Weil transform; the
+Krein carrier cannot exist on $Q$ past the collapse, which is
+exactly why the deep route is direct).  The honest caveat is
+carried: the pre-declared G11 gate (locator relocates $4/4$)
+\emph{failed} --- the weak round-117 witness (excess
+$2.9\times10^{-5}$) sits below the locator's measured threshold
+at $N = 2\times10^5$; the locator is a $3/4$ measured
+instrument, and no $4/4$ claim is promoted.
+
+\emph{Scope, in the same breath.}  Everything else in notes
+CDXIII--CDXXVI remains sandbox: no other module, no marker
+moved, no gate closed or narrowed.  Both promoted rows say
+nothing about zeta's Riemann Hypothesis in either direction ---
+known falsehoods detected by new instruments, orthogonal to
+proving positivity forever.  \textbf{No statement about the
+Riemann Hypothesis is made.}
 
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 
