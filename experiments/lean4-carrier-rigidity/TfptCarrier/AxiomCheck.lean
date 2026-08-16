@@ -54,6 +54,9 @@ import TfptCarrier.EulerPick
 import TfptCarrier.DeltaOneNoGo
 import TfptCarrier.ParityLemma
 import TfptCarrier.SVSkeleton
+import TfptCarrier.Radius4Algebra
+import TfptCarrier.MatchedPin
+import TfptCarrier.NFClosure
 
 -- Layer 1: Polarization (algebraic core)
 #print axioms TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -326,3 +329,49 @@ import TfptCarrier.SVSkeleton
 #print axioms TfptCarrier.SVSkeleton.sv_implies_rh
 #print axioms TfptCarrier.SVSkeleton.skeleton_inhabited
 #print axioms TfptCarrier.SVSkeleton.skeleton_not_unconditional
+
+-- The radius-4 field algebra (round 117 / note CDXVII; 2026-08-16)
+-- The on-line quarter bound, the matched-pin strict violation, the
+-- determinant factor and the 2-to-1 partner rigidity are pure field
+-- identities over ℝ/ℂ, all proven unconditionally.
+#print axioms TfptCarrier.Radius4Algebra.w_eq_y_one_sub_y
+#print axioms TfptCarrier.Radius4Algebra.diagonal_identity
+#print axioms TfptCarrier.Radius4Algebra.det_factor
+#print axioms TfptCarrier.Radius4Algebra.wOnLine_nonneg
+#print axioms TfptCarrier.Radius4Algebra.wOnLine_le_quarter
+#print axioms TfptCarrier.Radius4Algebra.w_onLine_eq
+#print axioms TfptCarrier.Radius4Algebra.matched_w
+#print axioms TfptCarrier.Radius4Algebra.matched_excess_pos
+#print axioms TfptCarrier.Radius4Algebra.partner_w
+#print axioms TfptCarrier.Radius4Algebra.partner_weight_sum
+
+-- The matched-pin algebra (round 125 / note CDXXVI; 2026-08-16)
+-- y* = (γ+iδ)/(2γ), weight exactly 1, v* = 1 + ε exactly real, the
+-- v = 4w dictionary lock and the on-line (0,1] rate contrast — all
+-- exact complex/real field lemmas, proven unconditionally.
+#print axioms TfptCarrier.MatchedPin.vRate_eq_four_w
+#print axioms TfptCarrier.MatchedPin.matched_y
+#print axioms TfptCarrier.MatchedPin.matched_y_conj
+#print axioms TfptCarrier.MatchedPin.matched_weight_sum
+#print axioms TfptCarrier.MatchedPin.matched_y_re
+#print axioms TfptCarrier.MatchedPin.matched_v
+#print axioms TfptCarrier.MatchedPin.matched_v_gt_one
+#print axioms TfptCarrier.MatchedPin.onLine_y_v
+#print axioms TfptCarrier.MatchedPin.onLine_rate_pos
+#print axioms TfptCarrier.MatchedPin.onLine_rate_le_one
+
+-- The NF-closure kernel (round 122 / note CDXXIII; 2026-08-16)
+-- The scalar/eigenvalue contraction into [0,1/4], the determinant
+-- factor, the trace-power inequality and the scalar log chain are
+-- proven; the operator statement and the Vitali/Hurwitz hull are a
+-- typed hypothesis package whose honesty lock proves no
+-- unconditional conclusion can be extracted.
+#print axioms TfptCarrier.NFClosure.contractionKernel_mem_Icc
+#print axioms TfptCarrier.NFClosure.eigenvalues_mem_Icc
+#print axioms TfptCarrier.NFClosure.det_factor_vieta
+#print axioms TfptCarrier.NFClosure.det_factor_kernel
+#print axioms TfptCarrier.NFClosure.sum_pow_le_trace
+#print axioms TfptCarrier.NFClosure.log_inv_one_sub_le
+#print axioms TfptCarrier.NFClosure.nf_implies_rh
+#print axioms TfptCarrier.NFClosure.nfSkeleton_inhabited
+#print axioms TfptCarrier.NFClosure.nfSkeleton_not_unconditional

@@ -112,6 +112,9 @@ import TfptCarrier.EulerPick
 import TfptCarrier.DeltaOneNoGo
 import TfptCarrier.ParityLemma
 import TfptCarrier.SVSkeleton
+import TfptCarrier.Radius4Algebra
+import TfptCarrier.MatchedPin
+import TfptCarrier.NFClosure
 import TfptCarrier.FlavorFeedback
 import TfptCarrier.GaussianShells
 import TfptCarrier.Sanity
