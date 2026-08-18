@@ -57,6 +57,11 @@ import TfptCarrier.SVSkeleton
 import TfptCarrier.Radius4Algebra
 import TfptCarrier.MatchedPin
 import TfptCarrier.NFClosure
+import TfptCarrier.SpacingProduct
+import TfptCarrier.JetSumRules
+import TfptCarrier.PinchIdentity
+import TfptCarrier.SpectralBalance
+import TfptCarrier.MomentLaurent
 
 -- Layer 1: Polarization (algebraic core)
 #print axioms TFPT.Carrier.Polarization.sixY_carrier_polynomial
@@ -375,3 +380,63 @@ import TfptCarrier.NFClosure
 #print axioms TfptCarrier.NFClosure.nf_implies_rh
 #print axioms TfptCarrier.NFClosure.nfSkeleton_inhabited
 #print axioms TfptCarrier.NFClosure.nfSkeleton_not_unconditional
+
+-- The spacing-product identity (round 135 D1; 2026-08-18)
+-- The general-K secular-derivative spacing form F′(y_j) =
+-- A₀·∏(y_j−y_i)/∏(y_j−b_k) at every numerator root off the lattice,
+-- via the per-pole Wronskian collapse — pure polynomial/field
+-- algebra over an arbitrary field, all proven unconditionally.
+#print axioms TfptCarrier.SpacingProduct.nodal_erase_wronskian
+#print axioms TfptCarrier.SpacingProduct.spacing_product_cleared
+#print axioms TfptCarrier.SpacingProduct.spacing_product
+#print axioms TfptCarrier.SpacingProduct.fderivWeight_ne_zero
+
+-- The jet sum rules (rounds 135 D2 / 154 P5; 2026-08-18)
+-- All four reciprocal-derivative sum rules proven EXACTLY at K = 2
+-- (sympy-verified before formalization); the general-K residue
+-- forms are a typed hypothesis package whose honesty lock proves
+-- no unconditional conclusion can be extracted.
+#print axioms TfptCarrier.JetSumRules.spacing_two
+#print axioms TfptCarrier.JetSumRules.sum_rule_first
+#print axioms TfptCarrier.JetSumRules.sum_rule_second
+#print axioms TfptCarrier.JetSumRules.sum_rule_jet
+#print axioms TfptCarrier.JetSumRules.sum_rule_jet_second
+#print axioms TfptCarrier.JetSumRules.jet_sum_rules_conditional
+#print axioms TfptCarrier.JetSumRules.jetSkeleton_inhabited
+#print axioms TfptCarrier.JetSumRules.jetSkeleton_not_unconditional
+
+-- The s×gap pinch (round 142 W1; 2026-08-18)
+-- The defect identity 1 − s·g = (g²/ρ²)Σẽᵢ²/(δᵢ(δᵢ−g)) and the
+-- two-sided pinch 1 − g/δ₁ ≤ s·g ≤ 1 on the abstract finite
+-- eigenstructure — all proven unconditionally.
+#print axioms TfptCarrier.PinchIdentity.defect_identity
+#print axioms TfptCarrier.PinchIdentity.defect_sum_nonneg
+#print axioms TfptCarrier.PinchIdentity.sg_le_one
+#print axioms TfptCarrier.PinchIdentity.one_sub_div_le_sg
+#print axioms TfptCarrier.PinchIdentity.pinch
+
+-- The spectral balance (round 157 SB1/SB2/SB3; 2026-08-18)
+-- The trace-loop tail closure 1 ≤ tf ≤ K−1, the loop identity
+-- τ·TrH = tf/FULLGAP, the χ-cap s·ρ²·δ₁ ≤ 1−ρ², and the secular
+-- enclosure ρ²·δ₁ ≤ g ≤ δ₁ — all proven unconditionally.
+#print axioms TfptCarrier.SpectralBalance.tf_ge_one
+#print axioms TfptCarrier.SpectralBalance.tf_le_card
+#print axioms TfptCarrier.SpectralBalance.trace_loop_identity
+#print axioms TfptCarrier.SpectralBalance.chi_cap
+#print axioms TfptCarrier.SpectralBalance.enclosure_lower
+#print axioms TfptCarrier.SpectralBalance.secular_enclosure
+
+-- The moment-Laurent law (round 156 L1/L2; 2026-08-18)
+-- The jet recursion, the secular dictionary, the finite Laurent
+-- expansion with EXACT partial-geometric remainder, the assembled
+-- moment-Laurent law, the quarter cap z(1−z) ≤ 1/4 and the
+-- top-root cap algebra — all proven unconditionally with explicit
+-- remainders (no limit taken).
+#print axioms TfptCarrier.MomentLaurent.y_mul_S
+#print axioms TfptCarrier.MomentLaurent.secular_dictionary
+#print axioms TfptCarrier.MomentLaurent.geom_remainder
+#print axioms TfptCarrier.MomentLaurent.T_laurent
+#print axioms TfptCarrier.MomentLaurent.moment_laurent_law
+#print axioms TfptCarrier.MomentLaurent.z_mul_one_sub_z_le_quarter
+#print axioms TfptCarrier.MomentLaurent.quarter_cap_algebra
+#print axioms TfptCarrier.MomentLaurent.quarter_cap_bound

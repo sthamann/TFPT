@@ -115,6 +115,11 @@ import TfptCarrier.SVSkeleton
 import TfptCarrier.Radius4Algebra
 import TfptCarrier.MatchedPin
 import TfptCarrier.NFClosure
+import TfptCarrier.SpacingProduct
+import TfptCarrier.JetSumRules
+import TfptCarrier.PinchIdentity
+import TfptCarrier.SpectralBalance
+import TfptCarrier.MomentLaurent
 import TfptCarrier.FlavorFeedback
 import TfptCarrier.GaussianShells
 import TfptCarrier.Sanity
