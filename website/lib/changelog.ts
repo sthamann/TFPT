@@ -42,6 +42,1065 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-18",
+    "dateLabel": "2026-08-18 · CVII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the prime-front theorem-arc promotion — the four durable certified theorem sets of discovery rounds 128–151 graduate from "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " into the load-bearing suite as "
+      },
+      {
+        "k": "c",
+        "v": "v918_doublelimit_ reduction_ theorem.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v919_secular_ gw_ pinning.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v920_loop_ equivalence_ theorems.py"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "v921_counting_ dominance_ closures.py"
+      },
+      {
+        "k": "t",
+        "v": " (suite "
+      },
+      {
+        "k": "m",
+        "v": "910 \\to 914"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1061 \\to 1065"
+      },
+      {
+        "k": "t",
+        "v": "); all four rows typed NOT-RH-EVIDENCE in either direction — reductions, identities and counting closures: they close no omega, narrow no gate, move no other marker; the omega census stays at cardinality 4, the residue at "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "TOPROOT, ONSETCAP("
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": "TLAWCAP), SUSCAP2R"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " DELTA1FLOOR "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "a"
+      },
+      {
+        "k": "t",
+        "v": "-walls; every conditional or measured leg typed and carried verbatim; all candidates survived the adversarial Bughunt III (round 130) and/or Bughunt IV (round 149, note CDLIII, "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " MAJOR): (1) "
+      },
+      {
+        "k": "c",
+        "v": "v918"
+      },
+      {
+        "k": "t",
+        "v": " THEOREM R (round 128, note CDXXX, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.DOUBLELIMIT.REDUCTION.THEOREM.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probe "
+      },
+      {
+        "k": "c",
+        "v": "doublelimit_proof_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "28/28"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "0c77ef7ce43fd62e"
+      },
+      {
+        "k": "t",
+        "v": ", re-run green-as-typed at promotion, "
+      },
+      {
+        "k": "m",
+        "v": "398.5"
+      },
+      {
+        "k": "t",
+        "v": " s; independently re-derived in Bughunt III) — the load-bearing reduction of the arc, proven with elementary inputs: L1 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " WPD "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " (H-conv) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " (H-trace) with the EXPLICIT RATE "
+      },
+      {
+        "k": "m",
+        "v": "\\max(1,C)(-4\\log(1-t/4))\\,d_1"
+      },
+      {
+        "k": "t",
+        "v": " via the exact series identity "
+      },
+      {
+        "k": "m",
+        "v": "\\log(R_{\\rm fin}/R_a)(t) = \\sum_k t^k d_k/k"
+      },
+      {
+        "k": "t",
+        "v": "; with the round-122 NF-closure theorem: RH "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftarrow"
+      },
+      {
+        "k": "t",
+        "v": " [NF-closure] "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " [Theorem R] "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "L1, WPD"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " on dense "
+      },
+      {
+        "k": "m",
+        "v": "a"
+      },
+      {
+        "k": "t",
+        "v": "; Lemmas N/S/X and the exact "
+      },
+      {
+        "k": "m",
+        "v": "C_{0k} \\leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": " jet dictionary travel with it; honest typing carried: WPD's "
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": "-tail IS window positivity (exact witness "
+      },
+      {
+        "k": "m",
+        "v": "k^*(B) = 29959/76013/145094"
+      },
+      {
+        "k": "t",
+        "v": " from "
+      },
+      {
+        "k": "m",
+        "v": "4w^* = 10001/10000"
+      },
+      {
+        "k": "t",
+        "v": ", recomputed in-run), L1 stays obstructed at the node-law wall — proven is the REDUCTION and the COORDINATE, not the convergence; (2) "
+      },
+      {
+        "k": "c",
+        "v": "v919"
+      },
+      {
+        "k": "t",
+        "v": " THE SECULAR IDENTITY "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " THE GUINAND–WEIL PINNING (round 131, note CDXXXIII, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.SECULAR.GW.PINNING.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probe "
+      },
+      {
+        "k": "c",
+        "v": "l1_weyllaw_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "31/31"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "7d8cc2e5ca8108fb"
+      },
+      {
+        "k": "t",
+        "v": ", re-run green-as-typed at promotion, "
+      },
+      {
+        "k": "m",
+        "v": "217.4"
+      },
+      {
+        "k": "t",
+        "v": " s; independently reproduced in Bughunt IV from the classical explicit formula, "
+      },
+      {
+        "k": "m",
+        "v": "|\\Delta\\log_{10}| = 2.7\\times10^{-7}"
+      },
+      {
+        "k": "t",
+        "v": ") — "
+      },
+      {
+        "k": "m",
+        "v": "\\det(M_\\eta - z) = -z\\,C(z^2)/A_0"
+      },
+      {
+        "k": "t",
+        "v": " EXACT (recomputed on an own exact-rational instance, Fractions, dim 11: the operator nodes ARE the census zeros, node count EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "K-1"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "m",
+        "v": "\\tau = 2\\sum_\\rho |E_N(\\gamma_\\rho)|^2"
+      },
+      {
+        "k": "t",
+        "v": " within certified allowances (Guinand–Weil, cited), the certified smallness law, the certified gap law in the resolvability zone ("
+      },
+      {
+        "k": "m",
+        "v": "x = 13"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "21/21"
+      },
+      {
+        "k": "t",
+        "v": " zone zeros pinned, max gap "
+      },
+      {
+        "k": "m",
+        "v": "2.9\\times10^{-17} \\le 5.6\\times10^{-8}"
+      },
+      {
+        "k": "t",
+        "v": "; edge layer MEASURED-ONLY); L1-TAIL closed in closed form (HSW22 Cor. 1.2 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " PT21, recomputed against an own IBP integral); the crossover theorem "
+      },
+      {
+        "k": "m",
+        "v": "T = 2\\pi x"
+      },
+      {
+        "k": "t",
+        "v": " exact — the corpus constant "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{INBAND\\_F} = 1/\\mathrm{KFAC} = 0.8"
+      },
+      {
+        "k": "t",
+        "v": " is a THEOREM; the boundary-jet law; the band half of L1 (H-pin) stays OPEN, Z1 evidence typing stands; (3) "
+      },
+      {
+        "k": "c",
+        "v": "v920"
+      },
+      {
+        "k": "t",
+        "v": " THE LOOP/EQUIVALENCE THEOREMS (rounds 140 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " 142, notes CDXLIV "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " CDXLVI, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.LOOP.EQUIVALENCE.THEOREMS.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probes "
+      },
+      {
+        "k": "c",
+        "v": "jetlock_bandmass_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "33/33"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "85e7ba691b3eef58"
+      },
+      {
+        "k": "t",
+        "v": ", PINNED from run-of-record "
+      },
+      {
+        "k": "m",
+        "v": "3824.7"
+      },
+      {
+        "k": "t",
+        "v": " s "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " deterministic re-run "
+      },
+      {
+        "k": "m",
+        "v": "3783.4"
+      },
+      {
+        "k": "t",
+        "v": " s per the multi-hour convention (both logs kept, loop algebra re-gated in Bughunt IV and recomputed in-run), and "
+      },
+      {
+        "k": "c",
+        "v": "tlawcap_suscap2r_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "85971e173cd910f8"
+      },
+      {
+        "k": "t",
+        "v": ", re-run green-as-typed at promotion, "
+      },
+      {
+        "k": "m",
+        "v": "1904.7"
+      },
+      {
+        "k": "t",
+        "v": " s) — the anti-double-counting layer, all recomputed exactly: BAND-MASS "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": " TLAWCAP "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": " EPS-LOCK modulo "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "JETLOCK, TAILVIS"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " (Theorem B2: band-mass is EPS-LOCK-COMPLETE), the onset IS the jet ratio and the jet ratio IS escaped census-root mass (J2/J3: JET-LOCK(poly) "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": " TOPROOT; J4: the hardness is cancellation ALIGNMENT), the W1 pinch identity ("
+      },
+      {
+        "k": "m",
+        "v": "s \\times \\mathrm{gap} \\equiv 1"
+      },
+      {
+        "k": "t",
+        "v": " is NOT an identity: "
+      },
+      {
+        "k": "m",
+        "v": "1 - g/\\delta_1 \\le sg \\le 1"
+      },
+      {
+        "k": "t",
+        "v": " exactly), QSUBGAP "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": " SUSCAP2R "
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": " DELTA1FLOOR (W2, both directions exact), DELTA1FLOOR "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftarrow"
+      },
+      {
+        "k": "t",
+        "v": " FULLGAP (W3, Cauchy interlacing, source-pure; measured TIGHT "
+      },
+      {
+        "k": "m",
+        "v": "1.0000"
+      },
+      {
+        "k": "t",
+        "v": "), plus the exact DELTA1FLOOR-required witness ("
+      },
+      {
+        "k": "m",
+        "v": "s \\equiv 1"
+      },
+      {
+        "k": "t",
+        "v": " while gap "
+      },
+      {
+        "k": "m",
+        "v": "\\to 0"
+      },
+      {
+        "k": "t",
+        "v": " — the Bughunt-IV F1 correction of record carried in-module); reshape theorems: no omega closes, no future double-counting possible; (4) "
+      },
+      {
+        "k": "c",
+        "v": "v921"
+      },
+      {
+        "k": "t",
+        "v": " THE COUNTING-CLASS CLOSURES (rounds 133 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " 143, notes CDXXXVI "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " CDXLVII, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.COUNTING.DOMINANCE.CLOSURES.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probes "
+      },
+      {
+        "k": "c",
+        "v": "dominance_proof_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "40/40"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "00b98f5eebf9c5fb"
+      },
+      {
+        "k": "t",
+        "v": ", re-run green-as-typed at promotion, "
+      },
+      {
+        "k": "m",
+        "v": "339.3"
+      },
+      {
+        "k": "t",
+        "v": " s, and "
+      },
+      {
+        "k": "c",
+        "v": "toproot_tailvis_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "27/27"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "4fcd70beb7cf4f17"
+      },
+      {
+        "k": "t",
+        "v": ", PINNED from run-of-record "
+      },
+      {
+        "k": "m",
+        "v": "4016.1"
+      },
+      {
+        "k": "t",
+        "v": " s "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " deterministic re-run "
+      },
+      {
+        "k": "m",
+        "v": "3921.4"
+      },
+      {
+        "k": "t",
+        "v": " s per the multi-hour convention (both logs kept, T1 re-derived independently in Bughunt IV)) — Theorems M/E (ball/edge counting, no sign reads), Theorem T UNCONDITIONAL ("
+      },
+      {
+        "k": "m",
+        "v": "N_{\\rm fin}(T) \\le N_{\\rm true}(T)"
+      },
+      {
+        "k": "t",
+        "v": " for all "
+      },
+      {
+        "k": "m",
+        "v": "T \\ge T^*(x)"
+      },
+      {
+        "k": "t",
+        "v": "; ladder "
+      },
+      {
+        "k": "m",
+        "v": "63.55/79.17/102.80/147.13"
+      },
+      {
+        "k": "t",
+        "v": " recomputed vs the classical "
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_{K-1}"
+      },
+      {
+        "k": "t",
+        "v": " anchors), Theorem C exact (MRB strictly weaker than DOM — per-node one-sidedness neither needed nor claimed), Theorem A CONDITIONAL on H-pin (closed forms recomputed: "
+      },
+      {
+        "k": "m",
+        "v": "x_0 = 121"
+      },
+      {
+        "k": "t",
+        "v": ", BW25 "
+      },
+      {
+        "k": "m",
+        "v": "x_0 = 112"
+      },
+      {
+        "k": "t",
+        "v": "; the Q-swamp strip "
+      },
+      {
+        "k": "m",
+        "v": "D < 0"
+      },
+      {
+        "k": "t",
+        "v": " on "
+      },
+      {
+        "k": "m",
+        "v": "x \\in \\{13..89\\}"
+      },
+      {
+        "k": "t",
+        "v": " carried, not smoothed), Theorem T1 (TAILVIS existence is CLASSICAL from HSW22/RvM alone: "
+      },
+      {
+        "k": "m",
+        "v": "L^* = O(20)"
+      },
+      {
+        "k": "t",
+        "v": " falling — TAILVIS eliminated as a standalone arithmetic omega, counting class) and Theorem T3 (the round-140 horizon limitation at "
+      },
+      {
+        "k": "m",
+        "v": "x = 24/28"
+      },
+      {
+        "k": "t",
+        "v": " RESOLVED without new zeros; recomputed from the v919 pins to "
+      },
+      {
+        "k": "m",
+        "v": "< 2\\%"
+      },
+      {
+        "k": "t",
+        "v": "); the window carrier "
+      },
+      {
+        "k": "m",
+        "v": "x \\lesssim 2.3\\times10^5"
+      },
+      {
+        "k": "t",
+        "v": " disclosed (carrier class, not a new omega); (5) NOT PROMOTED, deliberately: the round-147 adjugate elimination (AD1/AD2 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the cell lemma modulo simplicity) and the round-150/151 collapse-rate/multiblock coordinates stay experiments-side — their coordinates are still in active motion and the simplicity leg is open; (6) SURFACES: ledger rows ("
+      },
+      {
+        "k": "m",
+        "v": "1061 \\to 1065"
+      },
+      {
+        "k": "t",
+        "v": "); veri blocks in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " (audit-counted body) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the new prime-front diary section “The prime-front theorem arc” with the promotion of record and the suite-count refreshes ("
+      },
+      {
+        "k": "m",
+        "v": "910 \\to 914"
+      },
+      {
+        "k": "t",
+        "v": " across the live parentheticals); endform article 8.18 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Anthropic email promotion paragraph; website PROMOTED feed card "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " DAG scripts "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " banner/meta "
+      },
+      {
+        "k": "c",
+        "v": "v535"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v921"
+      },
+      {
+        "k": "t",
+        "v": "; README/Zenodo "
+      },
+      {
+        "k": "m",
+        "v": "914"
+      },
+      {
+        "k": "t",
+        "v": "; note CDLVI; (7) GATES: all four affordable source probes re-run green-as-typed BEFORE any edits (identical SPEC SHAs; "
+      },
+      {
+        "k": "m",
+        "v": "28/28"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "31/31"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "40/40"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": "), the two multi-hour probes pinned with disclosure; "
+      },
+      {
+        "k": "c",
+        "v": "v918"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v921"
+      },
+      {
+        "k": "t",
+        "v": " standalone green ("
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "17/17"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ", each "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}1"
+      },
+      {
+        "k": "t",
+        "v": " s); FULL "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " ALL CHECKS PASSED at 914 modules; "
+      },
+      {
+        "k": "c",
+        "v": "build.sh release"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " EXIT GATE "
+      },
+      {
+        "k": "c",
+        "v": "build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests last. NO RH claim in any direction — reductions and identities say nothing about the truth of RH either way"
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-16",
     "dateLabel": "2026-08-16 · CVI",
     "heading": [

@@ -10065,6 +10065,161 @@ formula and Pascal-diagonal dictionary, sympy-exact) $+$ \mO\
 (zeta --- untouched in either direction)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{Theorem R --- the double-limit
+reduction of the prime-front proof arc
+(\texttt{PRIME.\allowbreak DOUBLELIMIT.\allowbreak
+REDUCTION.\allowbreak THEOREM.01}).}
+One module ($13/13$).  The load-bearing reduction of the
+rounds-128--151 arc, proven with elementary inputs: L1 (trace
+convergence to the source-side target, absolutely convergent
+exactly for $a > 1/4$) $+$ WPD ($d_1 > 0$,
+$|d_k| \le C\,4^{1-k} d_1$) $\Rightarrow$ (H-conv) on the full
+Euler interval $+$ (H-trace) with the \emph{explicit rate}
+$\max(1, C)\,(-4\log(1 - t/4))\,d_1$, via the exact series
+identity $\log(R_{\rm fin}/R_a)(t) = \sum_k t^k d_k/k$; with the
+cited round-122 NF-closure theorem the exact reduction reads
+RH $\Leftarrow$ [NF-closure] $+$ [Theorem R] $+$
+$\{$L1, WPD$\}$ on dense $a$.  Lemmas travel with it: N
+(necessity; Vitali $+$ Cauchy, cited), S (sub-multiset defect
+$\Rightarrow$ PD exactly, sharp at the band edge; sandwich
+pinned $0.121737 \le 0.124501 \le 0.289309$), X (moment transfer
+is \emph{not} free: $d_1 = 0$ yet $d_2 = -1/128$ exactly), and
+the exact $C_{0k} \leftrightarrow$ jet dictionary.  The honest
+typing is carried verbatim: WPD's $k$-tail \emph{is} window
+positivity (the exact witness $k^*(B) =
+\lceil\log(2B)/\log(4w^*)\rceil = 29959/76013/145094$ from
+$4w^* = 10001/10000$ exact, recomputed in-run) and L1 stays
+obstructed at the node-law wall --- proven is the
+\emph{reduction} and the \emph{coordinate}, not the convergence.
+Source probe re-run green as typed at promotion ($28/28$,
+SPEC \texttt{0c77ef7c}); independently re-derived in Bughunt III.
+Not evidence for or against RH.
+Machine-checked: \veri{v918\_doublelimit\_reduction\_theorem.py}.
+\mE\ (the exact algebra, dictionary, adversarial instance and
+$k^*$ witness, recomputed in-run) $+$ \mO\ (L1/WPD --- open,
+typed, untouched in either direction)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The secular identity and the
+Guinand--Weil pinning
+(\texttt{PRIME.\allowbreak SECULAR.\allowbreak GW.\allowbreak
+PINNING.01}).}
+One module ($11/11$).  Layer 1, secular-exact, recomputed in-run
+on an own exact-rational instance (Fractions, $K = 6$, dim 11,
+13 interpolation points $>$ degree --- a polynomial identity,
+sympy-free): $\det(M_\eta - z) = -z\,C(z^2)/A_0$ \emph{exactly}
+--- the operator nodes \emph{are} the census-polynomial zeros,
+the node count is \emph{exactly} $K - 1$; the $\eta$-degeneration
+is the boundary decay $A_0 \to 0$ (the nodes, not the matrix,
+are the honest object).  Layer 2, GW-pinning, certified per rung
+and pinned: $\tau = 2\sum_\rho |E_N(\gamma_\rho)|^2$ within
+certified allowances (Guinand--Weil, cited; at $x = 13$:
+$\tau = 2.499\times10^{-54}$ vs zero-side $2.402\times10^{-54}$),
+the smallness law $2|E_N(\gamma_j)|^2 \le \tau + \mathrm{OFF}$
+at every polished band zero, and the certified gap law in the
+resolvability zone $\gamma \le 2\pi x$ ($x = 13$: $21/21$ zone
+zeros pinned to nodes, max gap $2.9\times10^{-17} \le
+5.6\times10^{-8}$ --- exponentially close \emph{by the
+variational mechanism}; edge layer measured-only).  L1's tail
+half closes in closed form (HSW22 Cor.~1.2 $+$ PT21, recomputed
+against an own IBP integral), and the crossover theorem makes
+the corpus constant a theorem: mode density $==$ RvM density
+exactly at $T = 2\pi x$, resolvable band fraction $==
+1/\mathrm{KFAC} = 0.8$.  Independently reproduced in Bughunt IV
+from the classical explicit formula ($|\Delta\log_{10}| =
+2.7\times10^{-7}$).  Source probe re-run green as typed at
+promotion ($31/31$, SPEC \texttt{7d8cc2e5}).  The band half of
+L1 (H-pin) stays open; Z1 evidence typing stands.  Not evidence
+for or against RH.
+Machine-checked: \veri{v919\_secular\_gw\_pinning.py}.
+\mE\ (the secular identity, crossover and tail algebra, exact
+in-run) $+$ \mC\ (the pinned GW/gap/jet tables, certified per
+rung against cited PT21/HSW22 envelopes) $+$ \mO\ (H-pin ---
+open, typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The loop / equivalence theorems
+--- the anti-double-counting layer
+(\texttt{PRIME.\allowbreak LOOP.\allowbreak
+EQUIVALENCE.\allowbreak THEOREMS.01}).}
+One module ($17/17$).  The negative/structural theorems of
+rounds 140 and 142 that prevent double-counting in the proof
+graph forever, all recomputed exactly in-run: the equivalence
+loop (Theorem B2: modulo $\{$JETLOCK, TAILVIS$\}$,
+BAND-MASS $\Leftrightarrow$ TLAWCAP $\Leftrightarrow$ EPS-LOCK
+--- band-mass is EPS-LOCK-\emph{complete}, every band-mass proof
+contains an EPS-LOCK proof), the onset dictionary (J2: the
+JET-LOCK onset \emph{is} the jet ratio, two-sided exact; J3: the
+jet ratio \emph{is} escaped census-root mass, so
+JET-LOCK(poly) $\Leftrightarrow$ TOPROOT; J4: jet numerators are
+unconditionally polynomial --- the hardness is the $A_2/A_0$
+cancellation \emph{alignment}), the pinch identity (W1:
+$1 - sg == (g^2/\rho^2)\sum \tilde e_i^2/(\delta_i(\delta_i-g))$
+exactly --- $s \times \mathrm{gap} \equiv 1$ is \emph{not} an
+identity, it is the pinch $1 - g/\delta_1 \le sg \le 1$), the
+loop (W2, both directions exact:
+QSUBGAP $\Leftrightarrow$ SUSCAP2R $\wedge$ DELTA1FLOOR) and the
+interlacing (W3: DELTA1FLOOR $\Leftarrow$ FULLGAP, a source-pure
+two-eigenvalue statement; measured \emph{tight},
+$\delta_1/\mathrm{FULLGAP} = 1.0000$ at all five rungs), plus
+the exact witness that DELTA1FLOOR is \emph{required} ($s \equiv
+1$ while the gap $\to 0$; the Bughunt-IV F1 correction of
+record).  Pinning split disclosed: the round-142 probe re-run
+green as typed at promotion ($26/26$, SPEC \texttt{85971e17},
+$1904.7$ s); the multi-hour round-140 probe pinned from
+run-of-record ($33/33$, SPEC \texttt{85e7ba69}, both logs kept)
+with its loop algebra re-gated in Bughunt IV and recomputed
+here.  These are \emph{reshape} theorems: they close no omega
+--- the census stays at cardinality 4.  Not evidence for or
+against RH.
+Machine-checked: \veri{v920\_loop\_equivalence\_theorems.py}.
+\mE\ (all nine theorems, exact algebra recomputed in-run) $+$
+\mC\ (the pinned per-rung tables incl.\ the tight
+$\delta_1 = \mathrm{FULLGAP}$ lock, typed measured) $+$ \mO\
+(TOPROOT/ONSETCAP/SUSCAP2R/DELTA1FLOOR --- open, typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The counting-class closures
+(\texttt{PRIME.\allowbreak COUNTING.\allowbreak
+DOMINANCE.\allowbreak CLOSURES.01}).}
+One module ($9/9$).  The pure classical-citation theorems of
+rounds 133 and 143: Theorem M (ball-counting slack dominance,
+pure counting --- no sign reads), Theorem E (edge counting
+bounds, HSW-closed), Theorem T (\emph{unconditional}:
+$N_{\rm fin}(T) \le N_{\rm true}(T)$ for all $T \ge T^*(x)$,
+$T^*$ the closed solve of $M - Q = K - 1$ consuming only the
+exact node count [v919] $+$ HSW22; ladder
+$63.55/79.17/102.80/147.13$ recomputed vs the classical
+$\gamma_{K-1}$ anchors), Theorem C (chain sharpening, exact:
+MRB is \emph{strictly weaker} than per-node one-sidedness ---
+DOM is not needed and not claimed), Theorem A (assemblage,
+\emph{conditional on H-pin}, closed forms recomputed: $x_0 =
+121$, BW25 $x_0 = 112$; the Q-swamp obstruction carried, not
+smoothed: $D < 0$ on the battery strip $x \in \{13..89\}$), and
+Theorem T1 (TAILVIS existence is \emph{classical}: every window
+of length $L^* = (1 + 2\,\mathrm{err})/\rho = O(20)$ carries a
+true zero unconditionally, via the two-sided HSW envelope $+$
+convexity, sympy-gated --- TAILVIS is eliminated as a standalone
+arithmetic omega, counting class) with Theorem T3 resolving the
+round-140 horizon limitation at $x = 24/28$ \emph{without new
+zeros} (recomputed here from the v919 pins to $< 2\%$).  The
+window carrier is disclosed ($x \lesssim 2.3\times10^5$, a
+carrier class like the census carrier, not a new omega).
+Pinning split disclosed: the round-133 probe re-run green as
+typed at promotion ($40/40$, SPEC \texttt{00b98f5e}, $339.3$ s);
+the multi-hour round-143 probe pinned from run-of-record
+($27/27$, SPEC \texttt{4fcd70be}, both logs kept), its T1
+re-derived independently in Bughunt IV.  Controls refuse at the
+named hypothesis H2 inside the verified zero-free gap
+$(0, 14.13)$ --- the mechanism claims WPD nowhere PD is false.
+Not evidence for or against RH.
+Machine-checked: \veri{v921\_counting\_dominance\_closures.py}.
+\mE\ (Theorems M/E/T/C instances, $T^*$ solves, Theorem-A closed
+forms, T1 algebra, $L^*$/$m_W$/T3 recomputed in-run) $+$ \mC\
+(the pinned per-rung certificates; Theorem A conditional on
+H-pin, typed) $+$ \mO\ (H-pin and the open omegas --- untouched)
+\par\smallskip
+
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}
 One probe ($21/21$ incl.\ the $3$ must-fire controls; verdict

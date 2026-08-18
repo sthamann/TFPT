@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`910` registered scripts · `1061` ledger claims · `10` clusters.
+`914` registered scripts · `1065` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (429 scripts)
+### `core` — Compiler core & the E₈ glue  (433 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -869,6 +869,14 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: PRIME.KR4.DEFECTJET.01 note CDXX (round-120 instrument), rounds 90/117/118 (screw dictionary, window formula, depth machinery), round 123 note CDXXIV (the frozen probe), PRIME.KR4.DRIVER.CERT.01 (the round-125 driver certification consuming this census) · cited: 3 e8 audit bootstrap
 - **v917_driver_rate_certification** [E/C] `PRIME.KR4.DRIVER.CERT.01` — die Treiber-Nullstelle ρ = 0.9329696975 + 15.6682495313i von ξ_Q, quellseitig aus dem Λ_Q-Sieb lokalisiert (Δγ = 6.6e-5), FEUERT im gepeelten Raten-Kanal bei Tiefe m* = 14 mit zert
   - deps: PRIME.KR4.EPSTEIN.COLLAPSE.01 (v916: the round-123 collapse, driver location and census), PRIME.KR4.DEFECTJET.01 note CDXX (round-120 depth instrument), rounds 117/118 (radius-4 algebra, window formula, budget machinery), round 125 note CDXXVI (the frozen probe) · cited: 3 e8 audit bootstrap
+- **v918_doublelimit_reduction_theorem** [E/O] `PRIME.DOUBLELIMIT.REDUCTION.THEOREM.01` — die tragende Reduktion des Runden-128–151-Beweisbogens (13/13, DOUBLELIMIT-REDUCTION-THEOREM), als zertifiziert-endlicher Satz promoviert**. DIE AUSSAGE, mit elementaren Inputs bew
+  - deps: round 122 NF-closure (note CDXXIII), round 128 note CDXXX (the frozen probe), round 130 bughunt3 note CDXXXII (independent re-derivation), rounds 103/106 Pascal machinery (v914 class), PRIME.SECULAR.GW.PINNING.01 (v919: the round-131 cross-instrument d_1 bracket) · cited: 3 e8 audit bootstrap
+- **v919_secular_gw_pinning** [E/O] `PRIME.SECULAR.GW.PINNING.01` — die beiden zentralen zertifizierten Objekte der Runde 131, beide in Bughunt IV unabhängig reproduziert, mit offengelegtem Recompute/Pin-Split promoviert**. SCHICHT 1, SECULAR-EXACT
+  - deps: PRIME.DOUBLELIMIT.REDUCTION.THEOREM.01 (v918: the round-128 serial pair {L1, WPD} this round instruments), round 131 note CDXXXIII (the frozen probe), round 149 bughunt4 note CDLIII (independent reproduction), round 123 eta-admissibility law, rounds 112/122 (band typing, INBAND_F) · cited: 3 e8 audit bootstrap
+- **v920_loop_equivalence_theorems** [E/O] `PRIME.LOOP.EQUIVALENCE.THEOREMS.01` — die negativen/strukturellen Resultate, die Doppelzählung im Beweisgraphen für immer verhindern, als zertifiziert-endliche Sätze promoviert**. RUNDE-140-SÄTZE, alle exakt nachgerech
+  - deps: round 137 E1/E2 + OFF identity (cited), round 135 D1-D4 (cited), rounds 138/139/141 Q/U/V machinery (cited), round 140 note CDXLIV + round 142 note CDXLVI (the frozen probes), round 149 bughunt4 note CDLIII (re-gates + the F1 witness), PRIME.COUNTING.DOMINANCE.CLOSURES.01 (v921: the TAILVIS counting resolution) · cited: 3 e8 audit bootstrap
+- **v921_counting_dominance_closures** [E/C] `PRIME.COUNTING.DOMINANCE.CLOSURES.01` — die reinen Klassik-Zitat-Sätze des Bogens, als zertifiziert-endliche Sätze promoviert**. RUNDE-133-SÄTZE: M (Ball-Zähl-Slack-Dominanz, REINE ZÄHLLOGIK: disjunkte geordnete Bälle + 
+  - deps: PRIME.SECULAR.GW.PINNING.01 (v919: the exact node count K-1 Theorem T consumes + the (A_0, tau) pins T3 recomputes from), PRIME.LOOP.EQUIVALENCE.THEOREMS.01 (v920: the B1/TAILVIS machinery this round closes counting-side), round 133 note CDXXXVI + round 143 note CDXLVII (the frozen probes), round 132 W1/P1 + raw census (cited), round 149 bughunt4 note CDLIII (independent closed forms + T1 re-derivation) · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1891,10 +1899,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v906_tail_cartography** — `PRIME.PORT.TAILSIGN.01, PRIME.PORT.TAILSIGN.02, PRIME.PORT.PG.SCHUR.01, PRIME.PORT.TAIL.ABEL.01, PRIME.PORT.TAIL.SEGSPLIT.01, PRIME.PORT.TAIL.OSCPAIR.01`
-- **v907_halfgap_registered_target** — `PRIME.PORT.HALFGAP.01, PRIME.PORT.DEEP.HOLDOUT.01`
-- **v908_seam_equilibrium_wiring** — `SEAM.CFIN.MARGINAL.STABILITY.01, SEAM.CFIN.NESS.PARENT.01`
-- **v909_finite_wall_closure** — `PRIME.WALL.FINITE_CLOSURE.01`
 - **v910_finite_zero_transfer** — `PRIME.WALL.FINITE_ZERO_TRANSFER.01`
 - **v911_wiring_freedom** — `SEAM.STATE.WIRING.SELECTOR.01`
 - **v912_form_convergence_theorem** — `PRIME.FORM.CONVERGENCE.THEOREM.01`
@@ -1903,4 +1907,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v915_eulerpick_certified_floors** — `PRIME.EULERPICK.CERTIFIED.FLOORS.01`
 - **v916_epstein_weil_violation** — `PRIME.KR4.EPSTEIN.COLLAPSE.01`
 - **v917_driver_rate_certification** — `PRIME.KR4.DRIVER.CERT.01`
+- **v918_doublelimit_reduction_theorem** — `PRIME.DOUBLELIMIT.REDUCTION.THEOREM.01`
+- **v919_secular_gw_pinning** — `PRIME.SECULAR.GW.PINNING.01`
+- **v920_loop_equivalence_theorems** — `PRIME.LOOP.EQUIVALENCE.THEOREMS.01`
+- **v921_counting_dominance_closures** — `PRIME.COUNTING.DOMINANCE.CLOSURES.01`
 
