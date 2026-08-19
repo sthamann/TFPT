@@ -10220,6 +10220,200 @@ forms, T1 algebra, $L^*$/$m_W$/T3 recomputed in-run) $+$ \mC\
 H-pin, typed) $+$ \mO\ (H-pin and the open omegas --- untouched)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The HPIN/spacing theorem family
+(\texttt{PRIME.\allowbreak SPACING.\allowbreak
+JETSUMRULES.\allowbreak THEOREMS.01}).}
+One module ($13/13$).  The exact-algebra backbone of rounds 135
+and 154, all recomputed in-run: the derivative identity
+$E_N'(\mu_j) == 4\sin(A\mu_j)\,F'(\mu_j^2)$ at every census node
+--- the H-pin floor is $F'$-currency --- with the
+spacing-product form $F'(y_j) == A_0 \prod_{i \ne j}(y_j -
+y_i)/\prod_k(y_j - b_k)$ (the floor is a \emph{zero-spacing
+product}; D1), the jet sum rules $\sum 1/F' == -A_2/A_0^2$ and
+$\sum y/F' == -A_4/A_0^2 + A_2^2/A_0^3$ (D2: the boundary-jet
+telescope \emph{is} the reciprocal-floor moment data) with the
+round-154 second-order rungs $\sum F''/F'^3 == 2A_2/A_0^3$ and
+$\sum [1/F'^2 - y F''/F'^3] == 3A_2^2/A_0^4 - 2A_4/A_0^3$ (P5,
+residue calculus), the $A_0$-cancellation $g = c/(2|\sin|
+\mathrm{PR})$ (D3: the demand ratio is $A_0$-\emph{free}; the
+floor alone rides $\sqrt{\tau}$, typed, not a disguise), and the
+certified far-lattice tail (D4).  The sign-uniform corollary is
+carried as an \emph{obstruction}: its hypothesis is measured
+FALSE (sign census MIXED at every rung; the zone share of the
+sum-rule mass collapses $1.5\times10^{-4} \to
+3.9\times10^{-13}$ --- the moment/harmonic route cannot see the
+zone floor).  Lean-hardened in round 158: the spacing product
+for \emph{generic finite $K$ over an arbitrary field}
+(SpacingProduct.lean) and all four sum rules at $K = 2$ with the
+general-$K$ skeleton honesty-locked (JetSumRules.lean); the
+module re-checks the theorem names in the shipped sources.
+Pinning split disclosed: the round-154 probe re-run green as
+typed at promotion ($31/31$, SPEC \texttt{f92b3fb5}, $1572.7$
+s); the round-135 probe pinned from run-of-record ($33/33$,
+SPEC \texttt{80366b4e}, three deterministic logs kept), its
+D1/D2 algebra re-gated by round 154 and Lean round 158.  H-pin
+itself stays open (the round-135 omega split EPS-LOCK $+$
+SPACING-REMAINDER).  Not evidence for or against RH.
+Machine-checked: \veri{v922\_spacing\_jet\_sumrule\_theorems.py}.
+\mE\ (D1/D2/P5/D3/D4 $+$ gap-demand, exact algebra recomputed
+in-run; Lean names re-checked) $+$ \mC\ (the pinned ladder
+tables, typed measured; the sign corollary conditional with its
+hypothesis measured false) $+$ \mO\ (H-pin --- open, typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The pinch/enclosure/razor
+theorems --- the spectral-balance end-characterization
+(\texttt{PRIME.\allowbreak SPECTRAL.\allowbreak
+BALANCE.\allowbreak RAZOR.01}).}
+One module ($20/20$).  The complete exact spectral-balance
+algebra of rounds 157 and 161 on the QSUBGAP $g$-floor, all
+recomputed in-run.  Round 157: the trace loop $\tau\,\mathrm{TrH}
+== \mathrm{tf}/\mathrm{FULLGAP}$ \emph{exactly} with $1 \le
+\mathrm{tf} \le K - 1$ \emph{unconditionally} --- the tail is
+closed by the count bound alone, so DELTA1FLOOR
+$\Leftrightarrow$ TRACEFLOOR is a proven two-sided poly
+equivalence (SB1; the round-146 recoordination was a loop); the
+chi-cap $s\rho^2\delta_1 \le 1 - \rho^2$ (SB2, the third
+rate-blind moment instrument, measured vacuous by up to $88.8$
+dex); the enclosure $\rho^2\delta_1 \le g \le \delta_1$ (SB3,
+both ends exact; the one-moment merge refuted measured); the OVG
+identity (SB4: the round-150 OVG-flatness \emph{is} the
+zone-top-gap pinch); the share floor (SB5, true but vacuous: the
+one-modedness is the weight-ladder race).  Round 161: \textbf{the
+razor enclosure} $1/(s + 1/\delta_1) \le g < 1/s$ (GF1, via the
+exact partial-fraction identities $S - \chi_t == g\,T_2$ and the
+spread form; it \emph{dominates} the round-157 lower end via the
+chi-cap, and the exact two-level witness $\rho^2 = 1/(1 +
+P\delta_1)$ realizes $s == P = 10^6$ \emph{and} $g ==$ the lower
+end \emph{exactly}: no algebra-only improvement exists ---
+\textbf{the $g$-floor is the $s$-cap given the $\delta_1$-floor},
+nothing in between; measured width $1.51\times10^{-4} \to
+8.45\times10^{-8}$); the pinch law $1 - sg == g^2 T_2/\rho^2$
+with the defect priced $g/\delta_1$ (GF2); the one-sided share
+pricing (GF3); the Newton value law $N_1 == 1/(H_t + s)$ with
+$B(q_0) == -\rho^2 P_c'(q_0)$ --- the bordered value
+\emph{carries} $\rho^2$, the round-153 self-reference pinned ---
+and the jet-ratio chase $J_g t_g == 1 + g$ (GF4, the zero-jet
+mechanism's third rung); and the S1 absorption $+$ twin squeeze
+(GF5: the round-150 S1-floor is absorbed into the root
+separation --- one decay law --- and both final residue cores
+are \emph{one statement-form at two weightings}; the value-merge
+is refuted at algebra level, the J-family is blind to $g$).
+Lean-hardened in round 158 (PinchIdentity.lean $+$
+SpectralBalance.lean, names re-checked in-run).  W1/W2/W3 are
+cited from \veri{v920\_loop\_equivalence\_theorems.py} --- no
+double count.  Pinning split disclosed: the round-157 probe
+re-run green as typed at promotion ($26/26$, SPEC
+\texttt{3ed38869}, $4077.8$ s, non-timing diff empty); the
+multi-hour round-161 probe pinned from run-of-record ($26/26$,
+SPEC \texttt{cc783713}, both logs kept), its GF algebra
+recomputed in the module.  Recoordination only: no omega closes.
+Not evidence for or against RH.
+Machine-checked:
+\veri{v923\_spectral\_balance\_razor\_theorems.py}.
+\mE\ (SB1--SB5, GF1--GF5, the two-level sharpness witness ---
+exact algebra recomputed in-run; Lean names re-checked) $+$ \mC\
+(the pinned razor/trace/twin-squeeze tables, typed measured) $+$
+\mO\ (the QSUBGAP $g$-floor, TOPROOT, TLAWCAP --- open, typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The moment-Laurent / root-ladder
+theorems (\texttt{PRIME.\allowbreak MOMENT.\allowbreak
+LAURENT.\allowbreak ROOTLADDER.01}).}
+One module ($12/12$).  The round-156 family, all recomputed
+in-run: \textbf{the ladder is moment data} (L1: $y S == \sum v +
+T$ exactly; with $\sum v = a_2 = -y_t$ and $z = y/y_t$,
+$(y/y_t)F/A_0 == \Phi(z) = z - 1 + \sum_m J_{m+1} z^{-m}$ with
+the exact partial-geometric remainder --- the census roots above
+the band are the zeros of the moment-Laurent function:
+self-similarity iff moment flatness); \textbf{the quarter-cap}
+(L2: $z(1-z) \le 1/4$ and $\Phi(z_0) = 0 \Rightarrow J_2 ==
+z_0(1 - z_0) - z_0\rho(z_0) \Rightarrow J_2 \le 1/4 +
+z_0|\rho|$ --- the census-real top root caps its \emph{own}
+leading moment ratio; measured $z|\rho| \le 0.0102$, so the
+saturation $J_2 \to 0.1506$ has \emph{proven} headroom); the
+exact sum rules $a_2 == -P_1$, $P_2 == a_2^2 - 2a_4$, $P_3 ==
+3a_2a_4 - 3a_6 - a_2^3$ (L3: the ladder power sums \emph{are}
+the jets); the sign-pattern law (L4: $n_{\rm esc} \le
+\mathrm{nsc} + 1$ exact; the Laguerre form cited; $V == n_{\rm
+esc}$ measured at $5/6$ blocks, the b28 slack disclosed); the
+cascade (L5: $y F_j == a_{2(j+1)} + F_{j+1}$ exactly, so $T > 0$
+holds \emph{pointwise, source-pure} down to $Y^* =
+1.02$--$2.1\,b_{\rm top}$ with zero cache violations --- the
+escaped-root cap is \emph{certified}, not measured); and the
+two-sided split (L6: the far window is controlled by $J_2$
+alone).  The wall in final form travels in-module on exact
+rationals: the $e_0$-witness deflates $J_m' == J_m
+P^{(1-m)/2}$ while $T'/y_t' == T/y_t$ \emph{exactly} (the shape
+sector is scale-blind), and the 2-mode witness inflates $J_2
+\times 10^6$ with all identities intact ---
+\textbf{J-boundedness is arithmetic-pinned}, refused only by the
+census-minimizer.  Lean-hardened in round 158
+(MomentLaurent.lean incl.\ \texttt{T\_laurent} with the explicit
+exact remainder; names re-checked in-run).  Source probe re-run
+green as typed at promotion ($29/29$, SPEC \texttt{02755d6b},
+$1873.5$ s, zero amendments).  T-WINDOW is rewritten as
+$\{$arithmetic $J_2$-window$\}$ $+$ $\{$band-edge sliver $+$
+separation$\}$; no omega closes.  Not evidence for or against
+RH.
+Machine-checked: \veri{v924\_moment\_laurent\_rootladder.py}.
+\mE\ (L1--L6 $+$ the witnesses, exact algebra recomputed in-run;
+Lean names re-checked) $+$ \mC\ (the pinned ladder/moment/cascade
+tables, typed measured) $+$ \mO\ (the arithmetic $J_2$-window
+and the band-edge legs --- open, typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The edge/cleanup closures ---
+simplicity falls, the Q-swamp closes wholesale
+(\texttt{PRIME.\allowbreak EDGE.\allowbreak
+CLEANUP.\allowbreak CLOSURES.01}).}
+One module ($14/14$).  The round-159 finite/classical closures.
+\textbf{Recomputed in-run at every suite run} from the committed
+PT21-warranted verified-zero cache (re-warded; every read typed
+ward/classical-census-below-horizon, max height consumed
+$7264.75 \ll 3\times10^{12}$): the Q-swamp wholesale closure ---
+$D_{\rm cs}(x, a) := (7/8)\,\mathrm{tail1}_{\rm cs} - (N -
+m)\,w_a(T_z) > 0$ at \emph{all 357} Turing-class local band
+certificates (integer $x = 3..121$ $\times$ battery $a \in \{1,
+4, 16\}$; worst margin $0.346$ at $(12, 1)$, matching the
+run-of-record), the representative tables $x = 30/60/90$ (the
+swamped $D_{\rm hsw} < 0$ flips to $D_{\rm cs} > 0$), the
+$D_{\rm hsw} < 0$ battery strip replicated, and $x_0(\mathrm{HSW})
+== 121$ / $x_0(\mathrm{BW25}) == 112$ on the integer scan ---
+the bridge is gap-free, so \textbf{Theorem A's conditionality
+sharpens to ``H-pin$(x)$ implies $\{d_1 > 0, \mathrm{MRB}\}$ for
+every integer $x \ge 3$''} (H-pin itself untouched; the swamp
+\emph{obstruction} falls, not the omega).  The simplicity kill
+(exact layer recomputed): $\mathrm{disc} == \prod(\lambda_i -
+\lambda_j)^2$ generic, and the round-147 LM split forces
+$\delta_1 \ge 1/(B-1) > 0$ at every selected point --- the
+selected points are \emph{automatically} simple, so census row
+Z8 was double-counted inside Z4 at demand level; with zero-cost
+avoidance (isolated degeneracies, measure-0 cover exact),
+\textbf{Z8 falls} ($10 \to 9$ census rows; the residual
+NONDEGENERATE-CELL is witness-certified for free).  Pinned from
+run-of-record: the sliver closure (two-sided audit-ball
+certificates $0 < T_{\rm lo} \le T_{\rm hi} < 1.5\,y_t$ at every
+sliver $+$ first-zero target, $1/1/1/1/18/51$ at b5..b28; the
+certificate price rides $e^{-\rm depth}$, $\delta = 10^{-8} \to
+10^{-44}$ --- the f64 cache-ball dies from b13 on,
+machine-pinned), the exact implicit separation law gated as an
+identity (residuals $\le 5\times10^{-27}$), and the
+$\lambda$-uniform demand typed (band-edge zero repulsion of
+$0.22$--$0.43$ RvM mean spacings with arithmetic-signed-input
+width, TAILVIS-style horizon typing).  Source probe re-run green
+as typed at promotion ($34/34$, SPEC \texttt{f6c03188},
+$1830.8$ s).  Z8 was never one of the four min-cut omegas ---
+the census stays at cardinality 4.  Not evidence for or against
+RH.
+Machine-checked: \veri{v925\_edge\_cleanup\_closures.py}.
+\mE\ (the E2 subsumption/avoidance algebra, exact; the 357
+census certificates $+$ $x_0$ scans recomputed in-run from the
+committed cache) $+$ \mC\ (the pinned sliver/separation tables;
+Theorem A conditional on H-pin, typed) $+$ \mO\ (H-pin and the
+open omegas --- untouched)
+\par\smallskip
+
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}
 One probe ($21/21$ incl.\ the $3$ must-fire controls; verdict

@@ -42,6 +42,1033 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-19",
+    "dateLabel": "2026-08-19 · CVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the spectral-balance/edge theorem-arc promotion — the four durable certified theorem sets of discovery rounds 152–161 graduate from "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " into the load-bearing suite as "
+      },
+      {
+        "k": "c",
+        "v": "v922_spacing_ jet_ sumrule_ theorems.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v923_spectral_ balance_ razor_ theorems.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v924_moment_ laurent_ rootladder.py"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "v925_edge_ cleanup_ closures.py"
+      },
+      {
+        "k": "t",
+        "v": " (suite "
+      },
+      {
+        "k": "m",
+        "v": "914 \\to 918"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1065 \\to 1069"
+      },
+      {
+        "k": "t",
+        "v": "); all four rows typed NOT-RH-EVIDENCE in either direction — identities, enclosures and finite/classical closures: they close no omega, narrow no gate, move no other marker; the omega census stays at cardinality 4, the residue at "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "TOPROOT, TLAWCAP-block, QSUBGAP-floor("
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the pair "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "SUSCAP2R, DELTA1FLOOR"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": ")"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "a"
+      },
+      {
+        "k": "t",
+        "v": "-walls; every conditional or measured leg typed and carried verbatim; the family-wide exact algebra was Lean-hardened in the second Lean round (round 158, note CDLXII: five new Lean 4 modules, 28 fully proven theorems on the three standard axioms, build green) and each module re-checks the shipped Lean theorem names at every suite run: (1) "
+      },
+      {
+        "k": "c",
+        "v": "v922"
+      },
+      {
+        "k": "t",
+        "v": " THE HPIN/SPACING THEOREM FAMILY (rounds 135 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " 154, notes CDXXXIX "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " CDLVIII, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.SPACING.JETSUMRULES.THEOREMS.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probes "
+      },
+      {
+        "k": "c",
+        "v": "hpin_floor_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "33/33"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "80366b4e62779398"
+      },
+      {
+        "k": "t",
+        "v": ", PINNED from run-of-record "
+      },
+      {
+        "k": "m",
+        "v": "1837.6"
+      },
+      {
+        "k": "t",
+        "v": " s with THREE deterministic logs kept (D1/D2 re-gated by r154-G32 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Lean r158), and "
+      },
+      {
+        "k": "c",
+        "v": "nearalign_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "31/31"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "f92b3fb59b142254"
+      },
+      {
+        "k": "t",
+        "v": ", re-run green-as-typed at promotion, "
+      },
+      {
+        "k": "m",
+        "v": "1572.7"
+      },
+      {
+        "k": "t",
+        "v": " s) — the derivative identity "
+      },
+      {
+        "k": "m",
+        "v": "E_N'(\\mu_j) == 4\\sin(A\\mu_j)F'(\\mu_j^2)"
+      },
+      {
+        "k": "t",
+        "v": " with the spacing-product form (the H-pin floor is a ZERO-SPACING PRODUCT), the jet sum rules of both orders ("
+      },
+      {
+        "k": "m",
+        "v": "\\sum 1/F' == -A_2/A_0^2"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\sum F''/F'^3 == 2A_2/A_0^3"
+      },
+      {
+        "k": "t",
+        "v": "; the boundary-jet telescope IS the reciprocal-floor moment data), the "
+      },
+      {
+        "k": "m",
+        "v": "A_0"
+      },
+      {
+        "k": "t",
+        "v": "-cancellation (the demand ratio is "
+      },
+      {
+        "k": "m",
+        "v": "A_0"
+      },
+      {
+        "k": "t",
+        "v": "-FREE), the certified lattice tail, and the sign-uniform corollary carried as an OBSTRUCTION (census MIXED at every rung); SpacingProduct.lean proves the spacing product for GENERIC FINITE "
+      },
+      {
+        "k": "m",
+        "v": "K"
+      },
+      {
+        "k": "t",
+        "v": " over an arbitrary field; (2) "
+      },
+      {
+        "k": "c",
+        "v": "v923"
+      },
+      {
+        "k": "t",
+        "v": " THE PINCH/ENCLOSURE/RAZOR FAMILY (rounds 157 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " 161, notes CDLXI "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " CDLXV, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.SPECTRAL.BALANCE.RAZOR.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probes "
+      },
+      {
+        "k": "c",
+        "v": "spectral_balance_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "3ed388698a138e31"
+      },
+      {
+        "k": "t",
+        "v": ", re-run green-as-typed at promotion, "
+      },
+      {
+        "k": "m",
+        "v": "4077.8"
+      },
+      {
+        "k": "t",
+        "v": " s, non-timing diff EMPTY, and "
+      },
+      {
+        "k": "c",
+        "v": "gfloor_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "cc7837138d41add7"
+      },
+      {
+        "k": "t",
+        "v": ", PINNED from run-of-record "
+      },
+      {
+        "k": "m",
+        "v": "4068.2"
+      },
+      {
+        "k": "t",
+        "v": " s "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " deterministic re-run identical per the multi-hour convention, both logs kept, its GF algebra recomputed in-module) — SB1–SB5 (the trace loop "
+      },
+      {
+        "k": "m",
+        "v": "\\tau\\,\\mathrm{TrH} == \\mathrm{tf}/\\mathrm{FULLGAP}"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "1 \\le \\mathrm{tf} \\le K-1"
+      },
+      {
+        "k": "t",
+        "v": " UNCONDITIONAL: DELTA1FLOOR "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": " TRACEFLOOR two-sided, tail closed; the chi-cap; the enclosure "
+      },
+      {
+        "k": "m",
+        "v": "\\rho^2\\delta_1 \\le g \\le \\delta_1"
+      },
+      {
+        "k": "t",
+        "v": "; the OVG identity; the share floor) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " GF1–GF5 (THE RAZOR ENCLOSURE "
+      },
+      {
+        "k": "m",
+        "v": "1/(s + 1/\\delta_1) \\le g < 1/s"
+      },
+      {
+        "k": "t",
+        "v": " with TWO-LEVEL EQUALITY at the lower end — the exact witness "
+      },
+      {
+        "k": "m",
+        "v": "\\rho^2 = 1/(1 + P\\delta_1)"
+      },
+      {
+        "k": "t",
+        "v": " realizes "
+      },
+      {
+        "k": "m",
+        "v": "s == P = 10^6"
+      },
+      {
+        "k": "t",
+        "v": " AND "
+      },
+      {
+        "k": "m",
+        "v": "g =="
+      },
+      {
+        "k": "t",
+        "v": " the lower end EXACTLY, no algebra-only improvement exists: THE "
+      },
+      {
+        "k": "m",
+        "v": "g"
+      },
+      {
+        "k": "t",
+        "v": "-FLOOR IS THE "
+      },
+      {
+        "k": "m",
+        "v": "s"
+      },
+      {
+        "k": "t",
+        "v": "-CAP GIVEN THE "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_1"
+      },
+      {
+        "k": "t",
+        "v": "-FLOOR, measured width "
+      },
+      {
+        "k": "m",
+        "v": "1.51\\times10^{-4} \\to 8.45\\times10^{-8}"
+      },
+      {
+        "k": "t",
+        "v": "; the pinch law "
+      },
+      {
+        "k": "m",
+        "v": "1 - sg == g^2T_2/\\rho^2"
+      },
+      {
+        "k": "t",
+        "v": "; the one-sided share pricing; the Newton value law "
+      },
+      {
+        "k": "m",
+        "v": "N_1 == 1/(H_t + s)"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "B(q_0) == -\\rho^2 P_c'(q_0)"
+      },
+      {
+        "k": "t",
+        "v": " and the jet-ratio chase "
+      },
+      {
+        "k": "m",
+        "v": "J_g t_g == 1 + g"
+      },
+      {
+        "k": "t",
+        "v": "; the S1 absorption "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " twin squeeze: both final cores ONE statement-form at two weightings, the value-merge REFUTED — the J-family is BLIND to "
+      },
+      {
+        "k": "m",
+        "v": "g"
+      },
+      {
+        "k": "t",
+        "v": "); W1/W2/W3 cited from "
+      },
+      {
+        "k": "c",
+        "v": "v920"
+      },
+      {
+        "k": "t",
+        "v": ", no double count; (3) "
+      },
+      {
+        "k": "c",
+        "v": "v924"
+      },
+      {
+        "k": "t",
+        "v": " THE MOMENT-LAURENT/ROOT-LADDER FAMILY (round 156, note CDLX, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.MOMENT.LAURENT.ROOTLADDER.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probe "
+      },
+      {
+        "k": "c",
+        "v": "rootladder_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "29/29"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "02755d6b7ad0cfcb"
+      },
+      {
+        "k": "t",
+        "v": ", re-run green-as-typed at promotion, "
+      },
+      {
+        "k": "m",
+        "v": "1873.5"
+      },
+      {
+        "k": "t",
+        "v": " s, zero amendments) — the escaped census-root ladder is the zero set of the moment-Laurent "
+      },
+      {
+        "k": "m",
+        "v": "\\Phi(z) = z - 1 + \\sum_m J_{m+1}z^{-m}"
+      },
+      {
+        "k": "t",
+        "v": " (self-similarity iff moment flatness, exact remainder), the QUARTER-CAP "
+      },
+      {
+        "k": "m",
+        "v": "J_2 \\le 1/4 + z_0|\\rho|"
+      },
+      {
+        "k": "t",
+        "v": " PROVEN (measured "
+      },
+      {
+        "k": "m",
+        "v": "z|\\rho| \\le 0.0102"
+      },
+      {
+        "k": "t",
+        "v": ": proven headroom over the "
+      },
+      {
+        "k": "m",
+        "v": "0.1506"
+      },
+      {
+        "k": "t",
+        "v": " saturation), the exact sum rules, the sign-pattern law, the cascade ("
+      },
+      {
+        "k": "m",
+        "v": "T > 0"
+      },
+      {
+        "k": "t",
+        "v": " pointwise SOURCE-PURE down to "
+      },
+      {
+        "k": "m",
+        "v": "Y^* = 1.02"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "2.1\\,b_{\\rm top}"
+      },
+      {
+        "k": "t",
+        "v": ": the escaped-root cap CERTIFIED), the two-sided split, and the witnesses (shape sector scale-blind; J-BOUNDEDNESS ARITHMETIC-PINNED); (4) "
+      },
+      {
+        "k": "c",
+        "v": "v925"
+      },
+      {
+        "k": "t",
+        "v": " THE EDGE/CLEANUP CLOSURES (round 159, note CDLXIII, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.EDGE.CLEANUP.CLOSURES.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probe "
+      },
+      {
+        "k": "c",
+        "v": "edge_cleanup_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "34/34"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "f6c0318841bb3942"
+      },
+      {
+        "k": "t",
+        "v": ", re-run green-as-typed at promotion, "
+      },
+      {
+        "k": "m",
+        "v": "1830.8"
+      },
+      {
+        "k": "t",
+        "v": " s) — SIMPLICITY FALLS (census row Z8 eliminated "
+      },
+      {
+        "k": "m",
+        "v": "10 \\to 9"
+      },
+      {
+        "k": "t",
+        "v": " by LM-split subsumption "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " zero-cost avoidance; residual NONDEGENERATE-CELL witness-certified free), THE Q-SWAMP CLOSES WHOLESALE with the 357 Turing-class local band certificates RECOMPUTED IN-RUN at every suite run from the committed PT21-warranted "
+      },
+      {
+        "k": "c",
+        "v": "verified_zeros_n7000.json"
+      },
+      {
+        "k": "t",
+        "v": " cache ("
+      },
+      {
+        "k": "m",
+        "v": "D_{\\rm cs} > 0"
+      },
+      {
+        "k": "t",
+        "v": " at all integer "
+      },
+      {
+        "k": "m",
+        "v": "x = 3..121"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " battery "
+      },
+      {
+        "k": "m",
+        "v": "a \\in \\{1,4,16\\}"
+      },
+      {
+        "k": "t",
+        "v": ", worst margin "
+      },
+      {
+        "k": "m",
+        "v": "0.346"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "(12,1)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "x_0(\\mathrm{HSW}) = 121"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "x_0(\\mathrm{BW25}) = 112"
+      },
+      {
+        "k": "t",
+        "v": " recomputed; heights "
+      },
+      {
+        "k": "m",
+        "v": "\\le 7264.75 \\ll 3\\times10^{12}"
+      },
+      {
+        "k": "t",
+        "v": ", ward-typed): THEOREM A's conditionality SHARPENS to every integer "
+      },
+      {
+        "k": "m",
+        "v": "x \\ge 3"
+      },
+      {
+        "k": "t",
+        "v": " (H-pin untouched), and the band-edge sliver closes below horizon per-zero (pinned; the certificate price rides "
+      },
+      {
+        "k": "m",
+        "v": "e^{-\\rm depth}"
+      },
+      {
+        "k": "t",
+        "v": ", machine-pinned); (5) NOT PROMOTED, deliberately: the round-160 J"
+      },
+      {
+        "k": "m",
+        "v": "_2"
+      },
+      {
+        "k": "t",
+        "v": " prime-force adjudication (note CDLXIV, verdict INFORMATIVE-NEGATIVE — the single-lever search closed) stays experiments-side: multi-hour world-builds with no exact-algebra layer a module could recompute, residue reading still in active motion; likewise the round-152/153/155 anchor/census coordinates; (6) SURFACES: ledger rows ("
+      },
+      {
+        "k": "m",
+        "v": "1065 \\to 1069"
+      },
+      {
+        "k": "t",
+        "v": "); veri blocks in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " (audit-counted body) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the new prime-front diary section “The spectral-balance/edge theorem arc” with the suite-count refreshes ("
+      },
+      {
+        "k": "m",
+        "v": "914 \\to 918"
+      },
+      {
+        "k": "t",
+        "v": " across the live parentheticals); endform article 8.19 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Anthropic email promotion paragraph; website PROMOTED feed card "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " DAG scripts "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " banner/meta "
+      },
+      {
+        "k": "c",
+        "v": "v535"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v925"
+      },
+      {
+        "k": "t",
+        "v": "; README/Zenodo "
+      },
+      {
+        "k": "m",
+        "v": "918"
+      },
+      {
+        "k": "t",
+        "v": "; note CDLXVI; (7) GATES: all four affordable source probes re-run green-as-typed BEFORE any edits (identical SPEC SHAs; "
+      },
+      {
+        "k": "m",
+        "v": "31/31"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "29/29"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "34/34"
+      },
+      {
+        "k": "t",
+        "v": "; logs kept as "
+      },
+      {
+        "k": "c",
+        "v": "*.promo_rerun.log"
+      },
+      {
+        "k": "t",
+        "v": "), the two pinned probes disclosed (r135 three logs; r161 both logs); "
+      },
+      {
+        "k": "c",
+        "v": "v922"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v925"
+      },
+      {
+        "k": "t",
+        "v": " standalone green ("
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": ", each "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}1"
+      },
+      {
+        "k": "t",
+        "v": " s); FULL "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " ALL CHECKS PASSED at 918 modules; "
+      },
+      {
+        "k": "c",
+        "v": "build.sh release"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " EXIT GATE "
+      },
+      {
+        "k": "c",
+        "v": "build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests last. NO RH claim in any direction — identities, enclosures and finite/classical closures say nothing about the truth of RH either way"
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-18",
     "dateLabel": "2026-08-18 · CVII",
     "heading": [

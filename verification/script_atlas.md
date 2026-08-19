@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`914` registered scripts · `1065` ledger claims · `10` clusters.
+`918` registered scripts · `1069` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (433 scripts)
+### `core` — Compiler core & the E₈ glue  (437 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -877,6 +877,14 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: round 137 E1/E2 + OFF identity (cited), round 135 D1-D4 (cited), rounds 138/139/141 Q/U/V machinery (cited), round 140 note CDXLIV + round 142 note CDXLVI (the frozen probes), round 149 bughunt4 note CDLIII (re-gates + the F1 witness), PRIME.COUNTING.DOMINANCE.CLOSURES.01 (v921: the TAILVIS counting resolution) · cited: 3 e8 audit bootstrap
 - **v921_counting_dominance_closures** [E/C] `PRIME.COUNTING.DOMINANCE.CLOSURES.01` — die reinen Klassik-Zitat-Sätze des Bogens, als zertifiziert-endliche Sätze promoviert**. RUNDE-133-SÄTZE: M (Ball-Zähl-Slack-Dominanz, REINE ZÄHLLOGIK: disjunkte geordnete Bälle + 
   - deps: PRIME.SECULAR.GW.PINNING.01 (v919: the exact node count K-1 Theorem T consumes + the (A_0, tau) pins T3 recomputes from), PRIME.LOOP.EQUIVALENCE.THEOREMS.01 (v920: the B1/TAILVIS machinery this round closes counting-side), round 133 note CDXXXVI + round 143 note CDXLVII (the frozen probes), round 132 W1/P1 + raw census (cited), round 149 bughunt4 note CDLIII (independent closed forms + T1 re-derivation) · cited: 3 e8 audit bootstrap
+- **v922_spacing_jet_sumrule_theorems** [E/C/O] `PRIME.SPACING.JETSUMRULES.THEOREMS.01` — die Sekulärableitungs-/Spacing-Produkt-Identität, die Jet-Summenregeln beider Ordnungen, die A₀-Kürzung und das Gitterschwanz-Zertifikat, als zertifiziert-endliche Sätze promoviert
+  - deps: round 131 secular identity (v919, cited: F, E_N, census nodes), round 135 note CDXXXIX + round 154 note CDLVIII (the frozen probes), round 149 bughunt4 note CDLIII (family-wide audit, 0 MAJOR), round 158 note CDLXII (Lean hardening: SpacingProduct + JetSumRules), PRIME.LOOP.EQUIVALENCE.THEOREMS.01 (v920: the W/J machinery consuming these identities), PRIME.SPECTRAL.BALANCE.RAZOR.01 (v923: the downstream spectral algebra) · cited: 3 e8 audit bootstrap
+- **v923_spectral_balance_razor_theorems** [E/C/O] `PRIME.SPECTRAL.BALANCE.RAZOR.01` — die vollständige exakte Spektral-Balance-Algebra auf dem QSUBGAP-g-Floor; in Runde 158 Lean-gehärtet**. RUNDE-157-SÄTZE, exakt nachgerechnet: SB1 (Spurschleife τ TrH == tf/FULLGAP 
+  - deps: PRIME.LOOP.EQUIVALENCE.THEOREMS.01 (v920: W1 pinch, W2 QSUBGAP loop, W3 interlacing -- cited, not re-claimed), PRIME.SPACING.JETSUMRULES.THEOREMS.01 (v922: the secular/jet identities), round 146 Y1-Y4 + round 150 R1-R4/S1/betapos strings (cited), round 157 note CDLXI + round 161 note CDLXV (the frozen probes), round 158 note CDLXII (Lean hardening: PinchIdentity + SpectralBalance), round 153 RES1/RES2 (the self-reference class GF4 pins) · cited: 3 e8 audit bootstrap
+- **v924_moment_laurent_rootladder** [E] `PRIME.MOMENT.LAURENT.ROOTLADDER.01` — die entflohene Zensuswurzel-Leiter EXAKT in Momentkoordinaten gelöst; in Runde 158 Lean-gehärtet**. DIE SÄTZE, im Lauf exakt nachgerechnet: L1 (DIE LEITER IST MOMENTENDATEN: y S ==
+  - deps: round 154 P1-P7 + T-WINDOW (cited: the tower certificate L5 extends), round 143 T4 rank-one dictionary (cited: SR1 re-derives its trace identity), PRIME.SPACING.JETSUMRULES.THEOREMS.01 (v922: the jet/secular identities), PRIME.EDGE.CLEANUP.CLOSURES.01 (v925: the sliver residual closed per-zero), round 156 note CDLX (the frozen probe), round 158 note CDLXII (Lean hardening: MomentLaurent), rounds 157/159/160/161 (downstream consumers) · cited: 3 e8 audit bootstrap
+- **v925_edge_cleanup_closures** [E/C] `PRIME.EDGE.CLEANUP.CLOSURES.01` — die SIMPLICITY-Subsumtion + Null-Kosten-Vermeidung (Zensuszeile Z8 eliminiert, 10 → 9), der Q-SWAMP-GESAMTSCHLUSS (357 Turing-Klasse-Lokalband-Zertifikate IM LAUF NACHGERECHNET aus
+  - deps: PRIME.COUNTING.DOMINANCE.CLOSURES.01 (v921: Theorem A whose conditionality this row sharpens, the Q-swamp obstruction it carried), PRIME.MOMENT.LAURENT.ROOTLADDER.01 (v924: the cascade whose sliver residual this row closes), round 147 AD1 + cell lemma + LM split (cited), round 141 V2 (cited), round 159 note CDLXIII (the frozen probe), rounds 133/138/144 (Theorem-A assemblage, Turing-exit naming, BW25 pin) · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1899,10 +1907,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v910_finite_zero_transfer** — `PRIME.WALL.FINITE_ZERO_TRANSFER.01`
-- **v911_wiring_freedom** — `SEAM.STATE.WIRING.SELECTOR.01`
-- **v912_form_convergence_theorem** — `PRIME.FORM.CONVERGENCE.THEOREM.01`
-- **v913_signed_alignment_localization** — `PRIME.NOGO.SIGNED.ONLY.01`
 - **v914_pascal_region_theorem** — `PRIME.PASCAL.REGION.THEOREM.01`
 - **v915_eulerpick_certified_floors** — `PRIME.EULERPICK.CERTIFIED.FLOORS.01`
 - **v916_epstein_weil_violation** — `PRIME.KR4.EPSTEIN.COLLAPSE.01`
@@ -1911,4 +1915,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v919_secular_gw_pinning** — `PRIME.SECULAR.GW.PINNING.01`
 - **v920_loop_equivalence_theorems** — `PRIME.LOOP.EQUIVALENCE.THEOREMS.01`
 - **v921_counting_dominance_closures** — `PRIME.COUNTING.DOMINANCE.CLOSURES.01`
+- **v922_spacing_jet_sumrule_theorems** — `PRIME.SPACING.JETSUMRULES.THEOREMS.01`
+- **v923_spectral_balance_razor_theorems** — `PRIME.SPECTRAL.BALANCE.RAZOR.01`
+- **v924_moment_laurent_rootladder** — `PRIME.MOMENT.LAURENT.ROOTLADDER.01`
+- **v925_edge_cleanup_closures** — `PRIME.EDGE.CLEANUP.CLOSURES.01`
 
