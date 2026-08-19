@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`918` registered scripts · `1069` ledger claims · `10` clusters.
+`923` registered scripts · `1074` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (437 scripts)
+### `core` — Compiler core & the E₈ glue  (442 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -885,6 +885,16 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: round 154 P1-P7 + T-WINDOW (cited: the tower certificate L5 extends), round 143 T4 rank-one dictionary (cited: SR1 re-derives its trace identity), PRIME.SPACING.JETSUMRULES.THEOREMS.01 (v922: the jet/secular identities), PRIME.EDGE.CLEANUP.CLOSURES.01 (v925: the sliver residual closed per-zero), round 156 note CDLX (the frozen probe), round 158 note CDLXII (Lean hardening: MomentLaurent), rounds 157/159/160/161 (downstream consumers) · cited: 3 e8 audit bootstrap
 - **v925_edge_cleanup_closures** [E/C] `PRIME.EDGE.CLEANUP.CLOSURES.01` — die SIMPLICITY-Subsumtion + Null-Kosten-Vermeidung (Zensuszeile Z8 eliminiert, 10 → 9), der Q-SWAMP-GESAMTSCHLUSS (357 Turing-Klasse-Lokalband-Zertifikate IM LAUF NACHGERECHNET aus
   - deps: PRIME.COUNTING.DOMINANCE.CLOSURES.01 (v921: Theorem A whose conditionality this row sharpens, the Q-swamp obstruction it carried), PRIME.MOMENT.LAURENT.ROOTLADDER.01 (v924: the cascade whose sliver residual this row closes), round 147 AD1 + cell lemma + LM split (cited), round 141 V2 (cited), round 159 note CDLXIII (the frozen probe), rounds 133/138/144 (Theorem-A assemblage, Turing-exit naming, BW25 pin) · cited: 3 e8 audit bootstrap
+- **v926_fullgap_growthlaw_theorems** [E/O] `PRIME.FULLGAP.GROWTHLAW.THEOREMS.01` — das exakte Leave-one-out-Instrument (GL1-Pinch + GL2-Arrowhead), die Einzeilen-Preis-Äquivalenz (GL3: D3 kollabiert aufs Rasiermesser), die Raten-Buchführung (GL4) und die Leiter/Q
+  - deps: round 131 secular + crossover T = 2 pi x (v919, cited), round 150 R2 + round 161 GF1-GF5 (v923, cited), round 142 W3 (v920, cited), round 162 note CDLXVII (the frozen probe), round 164 bughunt5 note CDLXIX (the independent free-exponent/AIC attack + GL re-gates, ported in-module with attribution), PRIME.BLOCKAVERAGE.SUBSTRATE.01 (v927: the block ladder consuming these anchors) · cited: 3 e8 audit bootstrap
+- **v927_blockaverage_substrate_theorems** [E/O] `PRIME.BLOCKAVERAGE.SUBSTRATE.01` — die Frozen-Block-Zertifikationsmaschinerie des Endspielbogens: Extraktionssatz (BA1), Wand-Wörterbuch (BA2), Budget-Floor (BA3, bewiesen-mod-zitiert), Weyl-Split-Lemma und die Loop
+  - deps: round 131 secular + OFF recipe (v919, cited), round 162 GL anchors (v926: the FULLGAP/tlaw strings this ladder extends), round 166 note CDLXXV (the frozen probe), PRIME.DEPTHBLOCK.TRANSFER.01 (v928: the step built on BA1/BA3), PRIME.SIGMAFLOOR.FACTORIZATION.01 (v929: the anatomy consuming these enclosures) · cited: 3 e8 audit bootstrap
+- **v928_depthblock_transfer_theorems** [E/O] `PRIME.DEPTHBLOCK.TRANSFER.01` — der Strukturkern des Endspielbogens: DT1 (bewiesen), DT2 (das ABGELEITETE Demand-Gesetz, per-Rezept bewiesen — die Entdeckung der Runde), das Zensus-3/2-Gesetz (sympy-exakt), der P
+  - deps: PRIME.BLOCKAVERAGE.SUBSTRATE.01 (v927: BA1-BA3, the substrate the step stands on), PRIME.WINDOW.INSTRUMENT.MECHANISM.01 (v930: the r167 last-atom mechanism this round generalized), PRIME.SIGMAFLOOR.FACTORIZATION.01 (v929: the named final coordinate factorized), round 131 OFF recipe (v919, cited), round 168 note CDLXXXIII (the frozen probe), round 122 NF-closure + round 128 Theorem R (v918, cited: the SEQ demand the cofinal hits supply) · cited: 3 e8 audit bootstrap
+- **v929_sigmafloor_factorization** [E/C/O] `PRIME.SIGMAFLOOR.FACTORIZATION.01` — der offizielle Record der terminalen Koordinate des Endspiels: SIGMA-FLOOR exakt faktorisiert σ == (1−slop)·δ·DC (SF1, per-Term-Algebra, Identitäts-Devs ≤ 2e-60 an allen 25 Sprosse
+  - deps: PRIME.DEPTHBLOCK.TRANSFER.01 (v928: DT1/DT2 + the factorization target SIGMA-FLOOR), PRIME.BLOCKAVERAGE.SUBSTRATE.01 (v927: BA3 + the enclosures the block floors bridge through), round 131 Layer 1/2 + Landau pin + onsets (v919, cited), round 137 lock onsets (cited, 338/879 replicated), round 169 note CDLXXXIV (the frozen probe), round 162 quartic anchors (v926, cited) · cited: 3 e8 audit bootstrap
+- **v930_window_instrument_mechanism** [E] `PRIME.WINDOW.INSTRUMENT.MECHANISM.01` — die bewiesenen Positivitäts-Transport-Instrumentensätze (WI1–WI6), die Stieltjes-Momenten-Refutation der dyadischen Slot-Leiter (im Lauf aus den gepinnten Slots nachgerechnet) und 
+  - deps: PRIME.SPECTRAL.BALANCE.RAZOR.01 (v923: GF1-GF5 the theta chases compose with), PRIME.MOMENT.LAURENT.ROOTLADDER.01 (v924: the L1/PHI dictionary WI4 consumes), PRIME.DEPTHBLOCK.TRANSFER.01 (v928: the entry law generalized + re-confirmed, PROP assembled), round 160 instrument blocks + G82 typing (cited), round 167 note CDLXXXI (the frozen probe), round 136 minimizer + round 162 ladder (v926, cited) · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1907,11 +1917,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v914_pascal_region_theorem** — `PRIME.PASCAL.REGION.THEOREM.01`
-- **v915_eulerpick_certified_floors** — `PRIME.EULERPICK.CERTIFIED.FLOORS.01`
-- **v916_epstein_weil_violation** — `PRIME.KR4.EPSTEIN.COLLAPSE.01`
-- **v917_driver_rate_certification** — `PRIME.KR4.DRIVER.CERT.01`
-- **v918_doublelimit_reduction_theorem** — `PRIME.DOUBLELIMIT.REDUCTION.THEOREM.01`
 - **v919_secular_gw_pinning** — `PRIME.SECULAR.GW.PINNING.01`
 - **v920_loop_equivalence_theorems** — `PRIME.LOOP.EQUIVALENCE.THEOREMS.01`
 - **v921_counting_dominance_closures** — `PRIME.COUNTING.DOMINANCE.CLOSURES.01`
@@ -1919,4 +1924,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v923_spectral_balance_razor_theorems** — `PRIME.SPECTRAL.BALANCE.RAZOR.01`
 - **v924_moment_laurent_rootladder** — `PRIME.MOMENT.LAURENT.ROOTLADDER.01`
 - **v925_edge_cleanup_closures** — `PRIME.EDGE.CLEANUP.CLOSURES.01`
+- **v926_fullgap_growthlaw_theorems** — `PRIME.FULLGAP.GROWTHLAW.THEOREMS.01`
+- **v927_blockaverage_substrate_theorems** — `PRIME.BLOCKAVERAGE.SUBSTRATE.01`
+- **v928_depthblock_transfer_theorems** — `PRIME.DEPTHBLOCK.TRANSFER.01`
+- **v929_sigmafloor_factorization** — `PRIME.SIGMAFLOOR.FACTORIZATION.01`
+- **v930_window_instrument_mechanism** — `PRIME.WINDOW.INSTRUMENT.MECHANISM.01`
 

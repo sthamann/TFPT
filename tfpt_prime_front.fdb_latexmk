@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1787103677.35448 "tfpt_prime_front.tex" "tfpt_prime_front.pdf" "tfpt_prime_front" 1787103683.76007 0
+["pdflatex"] 1787160818.08675 "tfpt_prime_front.tex" "tfpt_prime_front.pdf" "tfpt_prime_front" 1787160824.35014 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -345,12 +345,12 @@
   "tex-artefacts/tfpt_docset.tex" 1785914916.81673 3989 4dd0e26c0012d3b6b68c355ef8494b19 ""
   "tex-artefacts/tfpt_figures.tex" 1781874853.67351 9695 dba0ade0664c6a63cf19c49a8818858c ""
   "tex-artefacts/tfpt_style.tex" 1784729391.36679 9479 5047b8304281f47edbda36020354129a ""
-  "tex-artefacts/version-auto.tex" 1787103497.43573 70 273f9d0fc72f7fce77f08d66cc5b9b79 ""
+  "tex-artefacts/version-auto.tex" 1787160634.541 70 3e75bf8023916c3d05e4d24129a0bf2a ""
   "tex-artefacts/version.tex" 1782982005.53852 1417 a4406031dcf2e39fd4554ec01a05c6ff ""
-  "tfpt_prime_front.aux" 1787103683.433 75376 ab21a58b7f66091dcf8d69aafeb75cbf "pdflatex"
-  "tfpt_prime_front.out" 1787103683.43908 6082 b201b9c682250e77cb7de9961388099a "pdflatex"
-  "tfpt_prime_front.tex" 1787103152.1649 1521424 b8b0067d89adf519314e651f8128cf8c ""
-  "tfpt_prime_front.toc" 1787103683.43943 36084 2bc691265b56b3e66e3be56294fdbde8 "pdflatex"
+  "tfpt_prime_front.aux" 1787160824.02792 76078 3b403a699c61373a91deca30edee313f "pdflatex"
+  "tfpt_prime_front.out" 1787160824.03376 6082 b201b9c682250e77cb7de9961388099a "pdflatex"
+  "tfpt_prime_front.tex" 1787160523.33772 1532964 a387a2f71f801bc114ef6b0e50a04637 ""
+  "tfpt_prime_front.toc" 1787160824.03404 36419 1e34077d2d25ca0aa042b3be2b04cb67 "pdflatex"
   (generated)
   "tfpt_prime_front.aux"
   "tfpt_prime_front.log"

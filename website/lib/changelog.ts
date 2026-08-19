@@ -43,6 +43,1185 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-19",
+    "dateLabel": "2026-08-19 · CX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the endgame-arc promotion — the five durable certified theorem sets of discovery rounds 162–169 graduate from "
+      },
+      {
+        "k": "c",
+        "v": "experiments/"
+      },
+      {
+        "k": "t",
+        "v": " into the load-bearing suite as "
+      },
+      {
+        "k": "c",
+        "v": "v926_fullgap_ growthlaw_ theorems.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v927_blockaverage_ substrate_ theorems.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v928_depthblock_ transfer_ theorems.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v929_sigmafloor_ factorization.py"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "v930_window_ instrument_ mechanism.py"
+      },
+      {
+        "k": "t",
+        "v": " (suite "
+      },
+      {
+        "k": "m",
+        "v": "918 \\to 923"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1069 \\to 1074"
+      },
+      {
+        "k": "t",
+        "v": "); all five rows typed NOT-RH-EVIDENCE in either direction — identities, recipe-derived laws, finite/classical closures and one honest mechanism record: they close no omega, narrow no gate, move no other marker; the omega census stays at cardinality 4, the residue at "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "TOPROOT, TLAWCAP-block, QSUBGAP-floor"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "a"
+      },
+      {
+        "k": "t",
+        "v": "-walls — now carried WITH the r168/r169 terminal coordinates: the "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": "-uniform budget content factorizes as [census schedule, classical per "
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": ", LOOP if for-all-"
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": "] "
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " [SIGMA-FLOOR "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " DC-leg (classical per census) "
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " JET-MASS-FLOOR (the terminal "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": "-uniform residue, typed OPEN)]; every measured leg typed verbatim, the quartic law NOT claimed proven: (1) "
+      },
+      {
+        "k": "c",
+        "v": "v926"
+      },
+      {
+        "k": "t",
+        "v": " THE QUARTIC/GROWTH-LAW FAMILY (round 162, note CDLXVII, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.FULLGAP.GROWTHLAW.THEOREMS.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probe "
+      },
+      {
+        "k": "c",
+        "v": "fullgap_growthlaw_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "28/28"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "26bdb5a87f63c519"
+      },
+      {
+        "k": "t",
+        "v": ", PINNED from run-of-record "
+      },
+      {
+        "k": "m",
+        "v": "4061.6"
+      },
+      {
+        "k": "t",
+        "v": " s "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " deterministic re-run "
+      },
+      {
+        "k": "m",
+        "v": "4237.5"
+      },
+      {
+        "k": "t",
+        "v": " s with timing-normalized diff EMPTY, both logs kept, per the multi-hour convention — its GL algebra re-gated in Bughunt V G19/G20 and recomputed in-run) — GL1–GL5 exact (the loo pinch: every leave-one-out ground matches "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_1"
+      },
+      {
+        "k": "t",
+        "v": " within the "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon^2"
+      },
+      {
+        "k": "t",
+        "v": " budget; the arrowhead compression with the dual row; the one-row price equivalence "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " razor vacuity: D3 COLLAPSES TO THE RAZOR; the rate bookkeeping "
+      },
+      {
+        "k": "m",
+        "v": "J\\,t_r == 1 + \\mathrm{FULLGAP}"
+      },
+      {
+        "k": "t",
+        "v": "; the ladder/quartic chases "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the razor composition: the QSUBGAP-floor flows from the "
+      },
+      {
+        "k": "m",
+        "v": "\\Theta"
+      },
+      {
+        "k": "t",
+        "v": "-window through the razor); THE QUARTIC LAW "
+      },
+      {
+        "k": "m",
+        "v": "J == \\Theta\\,T_z^4"
+      },
+      {
+        "k": "t",
+        "v": " typed MEASURED with the Bughunt-V free-exponent/AIC adjudication RECOMPUTED IN-RUN ("
+      },
+      {
+        "k": "m",
+        "v": "p = 3.9072 \\pm 0.1136"
+      },
+      {
+        "k": "t",
+        "v": "; AIC prefers FIXED 4 ("
+      },
+      {
+        "k": "m",
+        "v": "-30.87"
+      },
+      {
+        "k": "t",
+        "v": ") over free ("
+      },
+      {
+        "k": "m",
+        "v": "-29.79"
+      },
+      {
+        "k": "t",
+        "v": "), rejects "
+      },
+      {
+        "k": "m",
+        "v": "3.5/4.5"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "3.6/5.2\\,\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "m",
+        "v": "\\rho_j == 1.0000"
+      },
+      {
+        "k": "t",
+        "v": " for ALL 189 left-out zone zeros (jet-COLLECTIVE, per-zero deflation REFUTED-MEASURED); the finite-"
+      },
+      {
+        "k": "m",
+        "v": "P"
+      },
+      {
+        "k": "t",
+        "v": " moment model undershoots by "
+      },
+      {
+        "k": "m",
+        "v": "1.4"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "4.5"
+      },
+      {
+        "k": "t",
+        "v": " dex (the Y3/R4 rate-blind trace-cap vacuity class, one level higher); (2) "
+      },
+      {
+        "k": "c",
+        "v": "v927"
+      },
+      {
+        "k": "t",
+        "v": " THE COFINAL BLOCK-AVERAGE SUBSTRATE (round 166, note CDLXXV, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.BLOCKAVERAGE.SUBSTRATE.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probe "
+      },
+      {
+        "k": "c",
+        "v": "tau_blockaverage_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "27/27"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "d86f42a04c69a4e2"
+      },
+      {
+        "k": "t",
+        "v": ", RE-RUN GREEN-AS-TYPED AT PROMOTION "
+      },
+      {
+        "k": "m",
+        "v": "2372.4"
+      },
+      {
+        "k": "t",
+        "v": " s with identical SPEC and empty timing-normalized diff) — BA1 (a certified block sum "
+      },
+      {
+        "k": "m",
+        "v": "> 0"
+      },
+      {
+        "k": "t",
+        "v": " forces "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 1"
+      },
+      {
+        "k": "t",
+        "v": " positive rung; dyadic hits COFINAL), BA2 (the determinant chain IS the "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": " sign, Jacobi/Sylvester), BA3 ("
+      },
+      {
+        "k": "m",
+        "v": "\\tau \\ge \\mathrm{zsum} - \\mathrm{OFF}"
+      },
+      {
+        "k": "t",
+        "v": " EXACT, proven-mod-cited: PT21 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " HSW22 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the r131 OFF recipe "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " ward-class cache, NO-LOOP), the Weyl split measured VACUOUS by "
+      },
+      {
+        "k": "m",
+        "v": "10.9"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "54.6"
+      },
+      {
+        "k": "t",
+        "v": " dex; the certified block enclosures (all lower ends "
+      },
+      {
+        "k": "m",
+        "v": "> 0"
+      },
+      {
+        "k": "t",
+        "v": " on B2/B3: POSITIVE-RUNG-PER-BLOCK CERTIFIED below the horizon), the wall dictionary "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{sign}(\\tau) == \\mathrm{sign}(\\mathrm{wall}) == +1"
+      },
+      {
+        "k": "t",
+        "v": " at ALL 25 rungs, the tlaw ladder with 19 NEW corpus-depth rungs; the AVG-BUDGET-WINDOW beyond the horizon typed OPEN; (3) "
+      },
+      {
+        "k": "c",
+        "v": "v928"
+      },
+      {
+        "k": "t",
+        "v": " THE DEPTH-BLOCK TRANSFER FAMILY (round 168, note CDLXXXIII, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.DEPTHBLOCK.TRANSFER.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probe "
+      },
+      {
+        "k": "c",
+        "v": "depthblock_transfer_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "36/36"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "a4cd07144e0c5222"
+      },
+      {
+        "k": "t",
+        "v": ", ZERO AMENDMENTS, RE-RUN GREEN-AS-TYPED AT PROMOTION "
+      },
+      {
+        "k": "m",
+        "v": "2371.6"
+      },
+      {
+        "k": "t",
+        "v": " s) — DT1 PROVEN (the step chain is exact algebra on top of BA3); DT2 THE DEMAND LAW PROVEN-BY-RECIPE (the round's discovery: "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon == \\sqrt{h}\\,(1+\\eta)^2\\,G(T_{\\rm PT})/G(2\\pi h)"
+      },
+      {
+        "k": "t",
+        "v": " EXACT, the dyadic factor falls monotonically onto "
+      },
+      {
+        "k": "m",
+        "v": "2^{3/2}"
+      },
+      {
+        "k": "t",
+        "v": "); THE CENSUS 3/2-LAW sympy-exact ("
+      },
+      {
+        "k": "m",
+        "v": "T_{\\rm req}(h) \\to (3\\pi/\\sigma_0)\\,h^{3/2}"
+      },
+      {
+        "k": "t",
+        "v": ": the budget route can NEVER become self-supporting); the budget horizon RECOMPUTED ("
+      },
+      {
+        "k": "m",
+        "v": "h^* = 1.2566\\times10^7"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "k^* = 23.58"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}22"
+      },
+      {
+        "k": "t",
+        "v": " dyadic blocks on PT21); the Bertrand entry interface sieve-verified in-run to "
+      },
+      {
+        "k": "m",
+        "v": "10^6"
+      },
+      {
+        "k": "t",
+        "v": "; UNIVERSALIZING THE CENSUS MACHINE-DETECTED AS THE RH LOOP (the per-"
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": " schedule acyclic); the step instantiated end-to-end (STEP(B2"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "B3) "
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ", STEP(B3"
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": "B4-partial) "
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": ", SUBSTRATE-DIRECT, no self-supporting induction); ENTRY-NEW-CONFIRMED "
+      },
+      {
+        "k": "m",
+        "v": "4/4"
+      },
+      {
+        "k": "t",
+        "v": " (cone entry always at the largest new PRIME-POWER atom of the dyadic gap, excluding trailing 2-powers — the note-CDLXXXIII formulation, per the Bughunt-VI F1 correction of record; fakes die by NO-ENTRY); (4) "
+      },
+      {
+        "k": "c",
+        "v": "v929"
+      },
+      {
+        "k": "t",
+        "v": " THE TERMINAL FACTORIZATION (round 169, note CDLXXXIV, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.SIGMAFLOOR.FACTORIZATION.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probe "
+      },
+      {
+        "k": "c",
+        "v": "sigmafloor_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "35/35"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "a16a4db1055488d2"
+      },
+      {
+        "k": "t",
+        "v": ", RE-RUN GREEN-AS-TYPED AT PROMOTION "
+      },
+      {
+        "k": "m",
+        "v": "2375.2"
+      },
+      {
+        "k": "t",
+        "v": " s; AMENDMENT 1 disclosed: the all-rung onset-rate fit typed CACHE-TOP-LIMITED) — SF1 THE SUPPLY FACTORIZATION "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma == (1 - \\mathrm{slop})\\,\\delta\\,\\mathrm{DC}"
+      },
+      {
+        "k": "t",
+        "v": " EXACT (identity devs "
+      },
+      {
+        "k": "m",
+        "v": "\\le 2\\times10^{-60}"
+      },
+      {
+        "k": "t",
+        "v": " at all 25 rungs, F64-immune): the r168 "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-flatness EXPLAINED AS TWO TRENDS ("
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "O(1)"
+      },
+      {
+        "k": "t",
+        "v": "-flat "
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " DC rising toward "
+      },
+      {
+        "k": "m",
+        "v": "1/2"
+      },
+      {
+        "k": "t",
+        "v": ") — the last unexplained measured law of r168 DECOMPOSED; the DC leg typed DC-CLASSICAL (proven-mod-cited per census; Landau 1912/Gonek 1993 AS FORM, GONEK-CONSTANT-UNPRICED); THE JET-MASS-FLOOR NAMED AND TYPED OPEN (the terminal "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": "-uniform residue, arithmetic-pinned, per-rung classical); the onset-excess cap REFUTED as a floor (SF2); ANY explicit polynomial rate census-absorbable (SF4, sympy-exact); the pinning-supply route machine-flagged as the RH loop's costume (SF5); the anatomy block floor certified on B2/B3 ("
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}11"
+      },
+      {
+        "k": "t",
+        "v": " dyadic blocks PROVEN-MOD-"
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "measured lock, cited Gonek"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": "); the controls finding: the raw floor holds in EVERY fake world while the BA3 bridge is FALSE — the arithmetic content is the "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "floor, bridge"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " PAIR; (5) "
+      },
+      {
+        "k": "c",
+        "v": "v930"
+      },
+      {
+        "k": "t",
+        "v": " THE WINDOW-INSTRUMENT MECHANISM RECORD (round 167, note CDLXXXI, ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.WINDOW.INSTRUMENT.MECHANISM.01"
+      },
+      {
+        "k": "t",
+        "v": " [E]; source probe "
+      },
+      {
+        "k": "c",
+        "v": "window_instrument_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "46/46"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "bfdcf374504006e7"
+      },
+      {
+        "k": "t",
+        "v": ", PINNED from run-of-record "
+      },
+      {
+        "k": "m",
+        "v": "4138.5"
+      },
+      {
+        "k": "t",
+        "v": " s "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " re-run "
+      },
+      {
+        "k": "m",
+        "v": "4047.0"
+      },
+      {
+        "k": "t",
+        "v": " s per the multi-hour convention, both logs kept; the mid-run owner-directive re-freeze disclosed; the entry law re-gated by the r168 batteries re-run green at this promotion) — WI1–WI6 exact (plant transport: the PSD premise survives positive band mass at any strength; the ghost secular threshold "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-priced; the perturbation law first-order symmetric; the budget-moment dictionary "
+      },
+      {
+        "k": "m",
+        "v": "2E^2 == 8 A_0^2 \\sin^2 y_t^2 \\Phi^2/y^3"
+      },
+      {
+        "k": "t",
+        "v": "; the theta chases; BANDPOS(unbounded ladder) "
+      },
+      {
+        "k": "m",
+        "v": "\\iff"
+      },
+      {
+        "k": "t",
+        "v": " RH — the loop identification); the Stieltjes-moment refutation RECOMPUTED from the pinned slots (Hankel NOT PSD, log-convexity break "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 1.5"
+      },
+      {
+        "k": "t",
+        "v": "); THE MECHANISM FINDING pinned at its honest grade: NO PARTIAL COMB IS POSITIVE — cone entry only in the last atom's tail with the tangent criterion from the prime source, all fakes die by NO-ENTRY (typed MEASURED, CHAIN-NOT-ASSEMBLED; the asymmetry law honestly DEMOTED to generic-cone); (6) SURFACES: five ledger rows ("
+      },
+      {
+        "k": "m",
+        "v": "1069 \\to 1074"
+      },
+      {
+        "k": "t",
+        "v": "); veri blocks in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " (audit-counted body) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the new prime-front diary section “The endgame arc” with the suite-count refreshes ("
+      },
+      {
+        "k": "m",
+        "v": "918 \\to 923"
+      },
+      {
+        "k": "t",
+        "v": " across the live parentheticals); endform article 8.20 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Anthropic email promotion paragraph; website PROMOTED feed card "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " DAG scripts "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " banner/meta "
+      },
+      {
+        "k": "c",
+        "v": "v535"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v930"
+      },
+      {
+        "k": "t",
+        "v": "; README/Zenodo "
+      },
+      {
+        "k": "m",
+        "v": "923"
+      },
+      {
+        "k": "t",
+        "v": "; German note CDLXXXVI appended to "
+      },
+      {
+        "k": "c",
+        "v": "next.txt"
+      },
+      {
+        "k": "t",
+        "v": " (head numeral re-verified immediately before writing: the concurrent Bughunt-VI lane had taken CDLXXXV — one collision resolved by re-read); (7) GATES: the endgame chain was independently re-audited mid-promotion by Bughunt VI (round 170, note CDLXXXV, "
+      },
+      {
+        "k": "m",
+        "v": "22/22"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " MAJOR / "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " MINOR / "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " NOTE, NO verdict flips, NO arrow retypes — the arrow table A1–A10 re-verified with own code) and its live-surface recommendations are adopted on these new surfaces (F1: the entry pattern cited only in the note-CDLXXXIII prime-power formulation; F2: “result lines bit-identical / timing-normalized empty” wording; F3: the cofinality legs re-coded against real objects in "
+      },
+      {
+        "k": "c",
+        "v": "v927"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v928"
+      },
+      {
+        "k": "t",
+        "v": "); three of the five affordable source probes re-run green-as-typed BEFORE any edits with identical SPEC SHAs and empty timing-normalized diffs ("
+      },
+      {
+        "k": "m",
+        "v": "27/27"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "2372.4"
+      },
+      {
+        "k": "t",
+        "v": " s, "
+      },
+      {
+        "k": "m",
+        "v": "36/36"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "2371.6"
+      },
+      {
+        "k": "t",
+        "v": " s, "
+      },
+      {
+        "k": "m",
+        "v": "35/35"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "2375.2"
+      },
+      {
+        "k": "t",
+        "v": " s; logs kept as "
+      },
+      {
+        "k": "c",
+        "v": "*.promo_rerun.log"
+      },
+      {
+        "k": "t",
+        "v": "), the two multi-hour probes pinned with disclosure (r162 re-gated in Bughunt V; r167 re-gated by the r168 batteries); "
+      },
+      {
+        "k": "c",
+        "v": "v926"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v930"
+      },
+      {
+        "k": "t",
+        "v": " standalone green ("
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", each "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}1"
+      },
+      {
+        "k": "t",
+        "v": " s); FULL "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " ALL CHECKS PASSED at 923 modules; "
+      },
+      {
+        "k": "c",
+        "v": "build.sh release"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " EXIT GATE "
+      },
+      {
+        "k": "c",
+        "v": "build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests last. NO RH claim in any direction — identities, recipe-derived laws and finite/classical closures say nothing about the truth of RH either way"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-19",
     "dateLabel": "2026-08-19 · CIX",
     "heading": [
       {
