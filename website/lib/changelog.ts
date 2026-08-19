@@ -43,6 +43,465 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-19",
+    "dateLabel": "2026-08-19 · CIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the Bughunt-V corrections of record — the corrections that the round-164 adversarial audit (note CDLXIX, "
+      },
+      {
+        "k": "c",
+        "v": "experiments/ tfpt-discovery/ bughunt5_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "29/29"
+      },
+      {
+        "k": "t",
+        "v": " gates, SPEC "
+      },
+      {
+        "k": "c",
+        "v": "b466fd5e6dcbc640"
+      },
+      {
+        "k": "t",
+        "v": ", record run "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " deterministic re-run bit-identical, "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " MAJOR / "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " MINOR / "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " NOTE, NO round verdict flips, every load-bearing razor/quartic/ladder/census claim of rounds 149–162 and the promotion wave "
+      },
+      {
+        "k": "c",
+        "v": "v922"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v925"
+      },
+      {
+        "k": "t",
+        "v": " independently CONFIRMED) recommended for promoted and live surfaces, applied to the LIVE surfaces only (frozen probes and notes are never retro-edited — the correction is the record); ONE documented count correction and NO other numeric value change anywhere; "
+      },
+      {
+        "k": "c",
+        "v": "v925"
+      },
+      {
+        "k": "t",
+        "v": " stays green with unchanged gate count ("
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": ") and unchanged verdict: (1) BH5-F2, THE COUNT CORRECTION ("
+      },
+      {
+        "k": "m",
+        "v": "72 \\to 73"
+      },
+      {
+        "k": "t",
+        "v": "): "
+      },
+      {
+        "k": "c",
+        "v": "v925_edge_ cleanup_ closures.py"
+      },
+      {
+        "k": "t",
+        "v": " (docstring E1 headline, the D1 check text and the D1 inline comment "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " website mirror, byte-identical) and the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.EDGE.CLEANUP.CLOSURES.01"
+      },
+      {
+        "k": "t",
+        "v": " said “72 sliver "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " first-zero targets” / “72 unique targets” — the record log's own per-block certified counts ("
+      },
+      {
+        "k": "m",
+        "v": "1/1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "1/1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "1/1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "1/1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "18/18"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "51/51"
+      },
+      {
+        "k": "t",
+        "v": ") sum to "
+      },
+      {
+        "k": "m",
+        "v": "73"
+      },
+      {
+        "k": "t",
+        "v": ", and the unique-target arithmetic confirms "
+      },
+      {
+        "k": "m",
+        "v": "73"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "71"
+      },
+      {
+        "k": "t",
+        "v": " sliver zeros "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the first zeros above the band at b8/b18 only (their slivers are EMPTY; at b5/b13/b24/b28 the first zero lies INSIDE the sliver and is already counted); all "
+      },
+      {
+        "k": "m",
+        "v": "73"
+      },
+      {
+        "k": "t",
+        "v": " certificates exist and were always green — only the headline count changes, the gate logic was already correct (the module gated "
+      },
+      {
+        "k": "m",
+        "v": "\\sum == 73"
+      },
+      {
+        "k": "t",
+        "v": " before this correction); the paper/website prose was already count-free (“per-zero”, “at every sliver "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " first-zero target”); (2) BH5-F6, THE ROUND-LABEL DRIFT (live-surface leakage only): the corpus convention fixes "
+      },
+      {
+        "k": "c",
+        "v": "anchor_epslock"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " round 153 (r152 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the CDLVI promotion round, no promotable content) — corrected at the two live sites that had inherited the drift: the "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " scope paragraph (“the round-152/153 anchor coordinates” "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " “the round-153 anchor coordinates”) and the CVIII entry wording (“round-152/153/155” "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " “round-153/155”); the frozen "
+      },
+      {
+        "k": "c",
+        "v": "assembly_walls"
+      },
+      {
+        "k": "t",
+        "v": " docstring and note CDLXVI keep the drift as the record; (3) BH5-F1 CHECKED CLEAN on live surfaces: r150's overstated “betapos "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " S1/jr by exact chase” (exactly: "
+      },
+      {
+        "k": "m",
+        "v": "S1/jr - \\mathrm{betapos} == \\mathrm{betapos}^2/(\\mathrm{FULLGAP} - \\mathrm{betapos}) > 0"
+      },
+      {
+        "k": "t",
+        "v": ", magnitude "
+      },
+      {
+        "k": "m",
+        "v": "2.7\\times10^{-7}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "x = 5"
+      },
+      {
+        "k": "t",
+        "v": " — below r150's 4-digit print) lives ONLY in the frozen r150 probe and note CDLIV; "
+      },
+      {
+        "k": "c",
+        "v": "v923"
+      },
+      {
+        "k": "t",
+        "v": " already promotes the corrected GF5a law with the factor "
+      },
+      {
+        "k": "m",
+        "v": "(\\lambda_1 - \\tau)/(\\lambda_1 - \\beta_0) \\ge 1"
+      },
+      {
+        "k": "t",
+        "v": " — no live edit needed; (4) BH5-F3 CHECKED CLEAN: the r160 rescue-instrument overstatement (“projected nonneg least squares” for a greedy eigenvalue-lifting loop; enum RESCUE-INFEASIBLE-IN-CLASS certifying only THAT trajectory) appears on NO live surface — r160 was never promoted, and the live scope paragraphs carry its verdict only as INFORMATIVE-NEGATIVE (the correct typing, confirmed by the audit); (5) BH5-F4/F5 CHECKED CLEAN: no leakage of “SPEC_SHA moves once” or the b8-SCRARITH "
+      },
+      {
+        "k": "m",
+        "v": "0.2597"
+      },
+      {
+        "k": "t",
+        "v": " misattribution to any live surface (frozen-file wordings stay as the record); (6) GATES: "
+      },
+      {
+        "k": "c",
+        "v": "v922"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v925"
+      },
+      {
+        "k": "t",
+        "v": " re-run green BEFORE any edit ("
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}1"
+      },
+      {
+        "k": "t",
+        "v": " s each); "
+      },
+      {
+        "k": "c",
+        "v": "v925"
+      },
+      {
+        "k": "t",
+        "v": " re-run green AFTER the correction with unchanged gate count "
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "build.sh release"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " EXIT GATE "
+      },
+      {
+        "k": "c",
+        "v": "build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests last; German note appended to "
+      },
+      {
+        "k": "c",
+        "v": "next.txt"
+      },
+      {
+        "k": "t",
+        "v": ". NO RH claim in any direction — a bookkeeping correction says nothing about the truth of RH either way"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-19",
     "dateLabel": "2026-08-19 · CVIII",
     "heading": [
       {
@@ -855,7 +1314,7 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "t",
-        "v": " prime-force adjudication (note CDLXIV, verdict INFORMATIVE-NEGATIVE — the single-lever search closed) stays experiments-side: multi-hour world-builds with no exact-algebra layer a module could recompute, residue reading still in active motion; likewise the round-152/153/155 anchor/census coordinates; (6) SURFACES: ledger rows ("
+        "v": " prime-force adjudication (note CDLXIV, verdict INFORMATIVE-NEGATIVE — the single-lever search closed) stays experiments-side: multi-hour world-builds with no exact-algebra layer a module could recompute, residue reading still in active motion; likewise the round-153/155 anchor/census coordinates; (6) SURFACES: ledger rows ("
       },
       {
         "k": "m",

@@ -39,10 +39,16 @@ THE RESULTS (round 159, note CDLXIII, edge_cleanup_probe.py):
   x >= x_0.  CONSEQUENCE (typed): THEOREM A'S CONDITIONALITY
   SHARPENS TO "H-pin(x) implies {d_1 > 0, MRB} FOR EVERY INTEGER
   x >= 3"; H-pin itself is UNTOUCHED.
-  (E1) THE SLIVER CLOSES BELOW HORIZON: all 72 sliver + first-zero
+  (E1) THE SLIVER CLOSES BELOW HORIZON: all 73 sliver + first-zero
   targets carry two-sided audit-ball certificates 0 < T_lo <= T_hi
   < 1.5 y_t (1/1/1/1/18-of-18/51-of-51 at b5..b28, margins min
-  T_lo/y_t = 0.977..0.626); the exact implicit position law
+  T_lo/y_t = 0.977..0.626; headline count corrected 72 -> 73 per
+  the bughunt-V correction of record, round 164, note CDLXIX: 71
+  sliver zeros + first zeros above the band at b8/b18 only, whose
+  slivers are empty -- at b5/b13/b24/b28 the first zero lies
+  INSIDE the sliver and is already counted; all 73 certificates
+  exist and are green, only the headline changes); the exact
+  implicit position law
   y_C - b_top == R_e/(1.5 y_t - T_rest(y_C)) is gated as an
   identity at the mp-bisected crossings (residuals <= 5e-27); the
   lambda-uniform separation demand is TYPED (a band-edge
@@ -435,13 +441,15 @@ def part():
     section("D. PINNED E1/E2 TABLES (consistency arithmetic)")
     pr = [float(v) for v in PIN_PRICE]
     okp = all(pr[i] >= pr[i + 1] for i in range(5))
-    okn = sum(PIN_SLIVER_N) == 73     # G32 table rows (72 unique
-    # targets per the round-159 freeze: b5/b13 sliver zero == first
-    # zero overlap counted once there)
+    okn = sum(PIN_SLIVER_N) == 73     # G32 table rows == 73 unique
+    # targets (71 sliver zeros + first zeros at b8/b18, whose
+    # slivers are empty; at b5/b13/b24/b28 the first zero lies
+    # inside the sliver; headline corrected 72 -> 73 per bughunt V,
+    # round 164, note CDLXIX)
     mt = [float(v) for v in PIN_MINTLO]
     check("D1 sliver certificates: every target, price rides "
           "e^{-depth}", okp and okn and all(v > 0 for v in mt),
-          "G32 table counts %s (sliver + first zero, b5..b28; 72 "
+          "G32 table counts %s (sliver + first zero, b5..b28; 73 "
           "unique targets); price delta %s -> %s (BALL-CERT-DEPTH-"
           "PRICED: the f64 ball dies from b13 on -- machine-pinned "
           "obstruction); min T_lo/y_t %s..%s > 0 two-sided"
