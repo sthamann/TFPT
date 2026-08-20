@@ -62,28 +62,28 @@ export interface DisciplineStats {
 export const DISCIPLINE: DisciplineStats =
 {
   "ledger": {
-    "rows": 1074,
-    "active": 1069,
+    "rows": 1079,
+    "active": 1074,
     "retired": 5,
     "dist": {
-      "E": 348,
-      "C": 271,
+      "E": 352,
+      "C": 272,
       "O": 341,
       "X": 40,
       "AXIOM": 2,
       "OTHER": 72
     },
-    "killRows": 393
+    "killRows": 397
   },
   "suite": {
-    "modules": 923,
-    "checkSites": 12347,
-    "mustfailOccurrences": 7333,
-    "mustfailModules": 463,
+    "modules": 928,
+    "checkSites": 12394,
+    "mustfailOccurrences": 7341,
+    "mustfailModules": 466,
     "eMarks": 4205,
     "cMarks": 1489,
     "seededModules": 183,
-    "sympyModules": 472
+    "sympyModules": 477
   },
   "contracts": {
     "ledgerRows": 135,

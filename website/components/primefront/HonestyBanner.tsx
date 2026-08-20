@@ -23,7 +23,7 @@ export function HonestyBanner() {
           href="/verification"
           className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
         >
-          v535–v930 on this front
+          v535–v935 on this front
         </Link>
         , inside an {SCRIPT_TOTAL}-script suite, all green). One
         identification theorem

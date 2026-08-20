@@ -43,6 +43,889 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-20",
+    "dateLabel": "2026-08-20 · CXII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the triple-cofinal-arc promotion — the five durable certified theorem sets of discovery rounds 171–175 graduate from the experiments tree into the load-bearing verification suite (suite "
+      },
+      {
+        "k": "m",
+        "v": "923 \\to 928"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1074 \\to 1079"
+      },
+      {
+        "k": "t",
+        "v": "), after the seventh adversarial bughunt (round 176, note CDXCII) covered the arc with "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " verdict flips and its corrections of record (F1–F8, applied to the frozen records as appended CORRECTION-OF-RECORD blocks in round 177) were ADOPTED VERBATIM on every new surface; every qualifying source probe RE-RUN GREEN AS TYPED before the surface edits (logs kept as "
+      },
+      {
+        "k": "c",
+        "v": "*.promo_rerun.log"
+      },
+      {
+        "k": "t",
+        "v": "): MODULE ONE, "
+      },
+      {
+        "k": "c",
+        "v": "v931_jetmass_floor_theorems.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", JETMASS-FLOOR-THEOREMS; probe "
+      },
+      {
+        "k": "c",
+        "v": "jetmass_floor_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r171 note CDLXXXVII, "
+      },
+      {
+        "k": "m",
+        "v": "36/36"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "57de8b2a83677a9c"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "2056"
+      },
+      {
+        "k": "t",
+        "v": " s, two amendments disclosed, re-run green at promotion): THEOREM PF — the product floor "
+      },
+      {
+        "k": "m",
+        "v": "F/A_0 \\ge (1 - c^*/z)^{(1+\\kappa)/c^*}"
+      },
+      {
+        "k": "t",
+        "v": " from the census product identity "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the Vieta trace at coefficient level "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " a concavity lemma, conditional EXACTLY on "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "H1 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " H2 per rung"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": ", THE EXPONENT IS THE TRACE (the r140 far-field law its "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa \\to 0"
+      },
+      {
+        "k": "t",
+        "v": " shadow); H1 source-pure at all 25 rungs, H2 census complete-real incl. degree-116; the certified curve under the truth at "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}100"
+      },
+      {
+        "k": "t",
+        "v": "k tail zeros; the factorization "
+      },
+      {
+        "k": "m",
+        "v": "["
+      },
+      {
+        "k": "t",
+        "v": "PF"
+      },
+      {
+        "k": "m",
+        "v": "] \\times ["
+      },
+      {
+        "k": "t",
+        "v": "WF classical"
+      },
+      {
+        "k": "m",
+        "v": "] \\times ["
+      },
+      {
+        "k": "t",
+        "v": "RATE"
+      },
+      {
+        "k": "m",
+        "v": "]"
+      },
+      {
+        "k": "t",
+        "v": " with JETLOCK-MEAS eliminated; the witness modus-tollens boundary; BH7-F3 definitional legs recomputed honestly; MODULE TWO, "
+      },
+      {
+        "k": "c",
+        "v": "v932_toproot_theta_statement.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", TOPROOT-THETA-STATEMENT; probe "
+      },
+      {
+        "k": "c",
+        "v": "toproot_theta_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r172 note CDLXXXVIII, "
+      },
+      {
+        "k": "m",
+        "v": "33/33"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "cf27df22aa5dffbf"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "2813"
+      },
+      {
+        "k": "t",
+        "v": " s, re-run green at promotion): TOPROOT stated SEQ-cofinal with three locked forms; the exact rate dictionary "
+      },
+      {
+        "k": "m",
+        "v": "a = p/2 - 1"
+      },
+      {
+        "k": "t",
+        "v": " proven at "
+      },
+      {
+        "k": "m",
+        "v": "p = 3, 4, 5"
+      },
+      {
+        "k": "t",
+        "v": "; THEOREM TR-CAP proven and typed circular-for-TOPROOT; the "
+      },
+      {
+        "k": "m",
+        "v": "A_0"
+      },
+      {
+        "k": "t",
+        "v": "-triangle route the FOURTH flagged loop; admissibility recomputed in-run ("
+      },
+      {
+        "k": "m",
+        "v": "p_{\\max} = 10.2695"
+      },
+      {
+        "k": "t",
+        "v": ", six powers of margin); H3 ("
+      },
+      {
+        "k": "m",
+        "v": "y_t \\le 0.155\\,T_z^4"
+      },
+      {
+        "k": "t",
+        "v": ", ancestors "
+      },
+      {
+        "k": "m",
+        "v": "== \\{"
+      },
+      {
+        "k": "t",
+        "v": "SOURCE"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": ") certified "
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": " margin "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 1.99"
+      },
+      {
+        "k": "t",
+        "v": ", REFUTABLE in the inflation witness and not norm-continuous; MODULE THREE, "
+      },
+      {
+        "k": "c",
+        "v": "v933_h3_cofinal_adjudication.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", H3-COFINAL-ADJUDICATION; probe "
+      },
+      {
+        "k": "c",
+        "v": "h3_cofinal_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r173 note CDXC, "
+      },
+      {
+        "k": "m",
+        "v": "36/36"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "876dafc977d3d8fc"
+      },
+      {
+        "k": "t",
+        "v": ", re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "1339.5"
+      },
+      {
+        "k": "t",
+        "v": " s): saturation REAL with "
+      },
+      {
+        "k": "m",
+        "v": "p_{\\rm loc} \\to 4.024"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_\\infty"
+      },
+      {
+        "k": "t",
+        "v": " band "
+      },
+      {
+        "k": "m",
+        "v": "[0.0766, 0.0977]"
+      },
+      {
+        "k": "t",
+        "v": " under the bar (OPEN); pigeonhole exact yet subsidy-empty (quantifier gap "
+      },
+      {
+        "k": "m",
+        "v": "D = 0.004183"
+      },
+      {
+        "k": "t",
+        "v": " — the limsup form only mod "
+      },
+      {
+        "k": "m",
+        "v": "D"
+      },
+      {
+        "k": "t",
+        "v": ", BH7-F2); the witness excluded by the certified manifold "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "ground-state cert "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " two-sided lock "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " BA3 bridge "
+      },
+      {
+        "k": "m",
+        "v": "\\times 3.6\\times10^{8}\\}"
+      },
+      {
+        "k": "t",
+        "v": ", escalation-stable "
+      },
+      {
+        "k": "m",
+        "v": "\\times 10^{5}"
+      },
+      {
+        "k": "t",
+        "v": ", H3 DK-norm-stable at measured residuals — SCOPED to the DK radius (gated "
+      },
+      {
+        "k": "m",
+        "v": "h \\le 13"
+      },
+      {
+        "k": "t",
+        "v": ", measured to "
+      },
+      {
+        "k": "m",
+        "v": "h = 20"
+      },
+      {
+        "k": "t",
+        "v": ", crossover "
+      },
+      {
+        "k": "m",
+        "v": "h = 16"
+      },
+      {
+        "k": "t",
+        "v": ", BH7-F4); all saturation analytics recomputed in-run from the cited ladder; MODULE FOUR, "
+      },
+      {
+        "k": "c",
+        "v": "v934_gonek_pricing_unconditional.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": ", GONEK-PRICING-UNCONDITIONAL; probe "
+      },
+      {
+        "k": "c",
+        "v": "gonek_pricing_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r174 note CDLXXXIX, "
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "3050678b352eaa9a"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "188"
+      },
+      {
+        "k": "t",
+        "v": " s, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "244.2"
+      },
+      {
+        "k": "t",
+        "v": " s): Landau 1912 and Gonek 1985/1993 identified UNCONDITIONAL, Gonek 1984 machine-checked NOT-AN-ANCESTOR (the hidden loop detected, flagged, never consumed; externally re-verified in Bughunt VII); the envelope closed form with finite census-depth-insensitive ceiling; prefactor-insensitive absorption at any finite constant; "
+      },
+      {
+        "k": "m",
+        "v": "\\hat c \\le 0.086"
+      },
+      {
+        "k": "t",
+        "v": " at snr up to "
+      },
+      {
+        "k": "m",
+        "v": "2.7\\times10^{4}"
+      },
+      {
+        "k": "t",
+        "v": ", typed CONSTANT-EMPIRICAL-PER-CENSUS — the Gonek item LEAVES the residue; MODULE FIVE, "
+      },
+      {
+        "k": "c",
+        "v": "v935_thetainf_landau_bridge.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ", THETAINF-LANDAU-BRIDGE; probe "
+      },
+      {
+        "k": "c",
+        "v": "thetainf_pin_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r175 note CDXCI, "
+      },
+      {
+        "k": "m",
+        "v": "28/28"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "3044558e5fa52e01"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "577"
+      },
+      {
+        "k": "t",
+        "v": " s, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "718.1"
+      },
+      {
+        "k": "t",
+        "v": " s): THE MODE-LEVEL LANDAU BRIDGE — the program's first linear per-mode classical identity, residuals "
+      },
+      {
+        "k": "m",
+        "v": "1.4\\times10^{-5} \\to 5.4\\times10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": " at the 20M-zero census; the dictionary a proven bijection (pins nothing); the variational conditioning wall typed MEASURED-LAW extrapolation per BH7-F7 (“gemessene”, not “bewiesene” Verschwendung), "
+      },
+      {
+        "k": "m",
+        "v": "T_{\\rm req} = 3.76\\times10^{14} \\to 1.75\\times10^{77}"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "T_{\\rm PT} = 3.0\\times10^{12}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_\\infty"
+      },
+      {
+        "k": "t",
+        "v": " re-typed OPEN-NONPERTURBATIVE-VARIATIONAL. Ledger rows "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.JETMASS.FLOOR.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.TOPROOT.THETA.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.H3.COFINAL.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.GONEK.PRICING.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.THETAINF.PIN.01"
+      },
+      {
+        "k": "t",
+        "v": ", all [E] NOT-RH-EVIDENCE active; the arc's terminal residue written everywhere in the BH7-F1-corrected form: the TRIPLE "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "H1 "
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": " H2 "
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": " H3"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": "-cofinal (one rung per dyadic block, all three at the same "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " — NOT H3 alone; limsup only mod "
+      },
+      {
+        "k": "m",
+        "v": "D = 0.004183"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "census-forall-"
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " LOOP, flagged"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "L1, WPD"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": "; surfaces: five veri blocks in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": ", the new triple-cofinal-arc diary section in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " with the live suite-count parentheticals refreshed ("
+      },
+      {
+        "k": "m",
+        "v": "923 \\to 928"
+      },
+      {
+        "k": "t",
+        "v": "), the endform article and the email draft refreshed with the 8.21-class promotion record and the triple wording, README/Zenodo "
+      },
+      {
+        "k": "m",
+        "v": "928"
+      },
+      {
+        "k": "t",
+        "v": ", the website PROMOTED card "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " DAG chips "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " honesty-banner range "
+      },
+      {
+        "k": "c",
+        "v": "v535"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v935"
+      },
+      {
+        "k": "t",
+        "v": "; one German research note appended to "
+      },
+      {
+        "k": "c",
+        "v": "experiments/next.txt"
+      },
+      {
+        "k": "t",
+        "v": " (CDXCVIII); FULL "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " ALL CHECKS PASSED at 928 modules; "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh release"
+      },
+      {
+        "k": "t",
+        "v": " green; "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests regenerated LAST. No omega closed, no marker moved beyond the five [E] rows, census cardinality 4 unchanged, the quartic law stays MEASURED, "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_\\infty"
+      },
+      {
+        "k": "t",
+        "v": " stays OPEN; rounds 176–180 stay experiments-side awaiting Bughunt VIII. NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-20",
     "dateLabel": "2026-08-20 · CXI",
     "heading": [
       {

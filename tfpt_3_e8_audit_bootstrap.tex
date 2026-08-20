@@ -10656,6 +10656,225 @@ asymmetry law demoted generic-cone) $+$ \mO\ (the window omegas
 --- untouched)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The jet-mass product-floor
+theorems (\texttt{PRIME.\allowbreak JETMASS.\allowbreak
+FLOOR.01}).}
+One module ($10/10$).  The round-171 family: the jet-mass floor
+(the terminal $\lambda$-uniform residue named in
+\veri{v929\_sigmafloor\_factorization.py}) receives its rigorous
+per-rung theorem.  Recomputed in-run: PF1 (the census product
+identity $N(y) == A_0 \prod_j (y - y_j)$ with the Vieta trace
+$\sum_j y_j == B_1 + y_t$ at \emph{coefficient} level, no
+root-finding --- Newton/Vieta resum the entire J-tail into root
+data), PF2 (\textbf{the product floor}: $F(y)/A_0 \ge
+(1 - c^*/z)^{(1 + \kappa)/c^*}$ for every real $z > c^*$ given
+H1 $+$ H2 --- \textbf{the exponent is the trace}; the round-140
+far-field law $1 - y_t/y$ is the $\kappa \to 0$ shadow of this
+exact bound, its measured $1.2$-percent tightness explained),
+PF3 (half-plane exclusion, source-pure: H1 is \emph{one} exact
+source evaluation per rung --- no cache, no zeros), the JMF
+assembly ($\delta \ge L^2\,\mathrm{WF}$; WF is the classical
+$(G - C)/2$ suffix, the same Landau/Gonek class as the round-169
+DC leg, constant priced in
+\veri{v934\_gonek\_pricing\_unconditional.py}; the rate limit
+$4\pi/q$ sympy-exact; any polynomial rate census-absorbable),
+and the modus tollens (the round-169 $\delta$-toy \emph{violates}
+the PF2 conclusion hence is not realizable under H1 $+$ H2; the
+2-mode witness kills the certificate pair while every identity
+holds).  Pinned: H1 certified at all 25 rungs ($c^* =
+1.10$--$1.15$ flat); H2 census complete-real nonnegative at all
+25 rungs incl.\ degree-116 at $h = 28$; the certified curve
+under the truth at every one of ${\sim}100$k true tail zeros
+(min margins $3.5\times10^{-5} \to 0.17$, all positive);
+$\delta_{\rm cert} = 0.1035/0.0603/0.0351$ with margin $\ge
+8.2\times10^{7}$; the B2/B3 block certificates run through the
+product floor --- the round-169 measured-lock ancestor is
+\emph{eliminated}.  Bughunt-VII corrections adopted: two vacuous
+exact-layer legs re-typed definitional (F3, recomputed honestly
+in the module); the composed per-block hypothesis is the
+\textbf{triple $\{$H1 $\wedge$ H2 $\wedge$ H3$\}$-cofinal}, one
+rung per dyadic block, all three at the same $h$ --- not H3
+alone (F1).  Not evidence for or against RH.
+Machine-checked: \veri{v931\_jetmass\_floor\_theorems.py}.
+\mE\ (PF1--PF3 $+$ the JMF assembly $+$ the modus tollens, exact
+algebra recomputed in-run) $+$ \mC\ (the H1/H2/pointwise/rate
+tables, typed per leg) $+$ \mO\ (the $\lambda$-uniform rate ---
+open, typed, reduced to TOPROOT)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The TOPROOT statement and the
+quartic certificate (\texttt{PRIME.\allowbreak
+TOPROOT.\allowbreak THETA.01}).}
+One module ($10/10$).  The round-172 family: the last
+$\lambda$-uniform edge pinned to \emph{one} named per-rung
+hypothesis.  Recomputed in-run: T1 (TOPROOT$(p, C)$ $==$ $y_t
+\le C h^p$ with the exact SEQ-cofinal quantifier --- exists
+$(C, p)$ s.t.\ every dyadic block has a rung with $y_t \le
+C h^p$; an all-$h$ reading is \emph{not} demanded --- and three
+machine-locked forms: theta-form $\iff$ TOPROOT(4), census form,
+rate form), \textbf{theorem TR-CAP} (no census root above
+$(1 + 2\rho)\,y_t$ given $|J_{m+1}| \le \rho^m$ --- proven, and
+typed \emph{circular for TOPROOT}: the cap is $y_t$-normalized;
+Fujiwara's sharpest term $==$ the trace $B_1 + y_t$ exactly),
+the Vieta pinch killed (every symmetric function carries
+$1/A_0$), the $A_0$-triangle route flagged as \textbf{the fourth
+loop route} (exponentially vacuous \emph{and} consuming
+$\{$TAUPOS, TLAWCAP$\}$; cycle machine-detected), \textbf{the
+rate dictionary} $a = p/2 - 1$ proven at $p = 3, 4, 5$, the
+admissibility recomputed from closed forms
+($\varepsilon_{\rm closed}(56) = 4.5338\times10^{-9}$, $a_{\max}
+= 4.1348$, $p_{\max} = 10.2695$: the measured $p_{\rm all} =
+4.18$ leaves six powers of $h$ of margin), and the witness in
+both directions ($\theta'' = 62.69 >$ bar: \textbf{H3 is
+refutable}; source price $8.1\times10^{-2} \to 10^{-17.6}$:
+TOPROOT is \emph{not} norm-continuous --- any proof must consume
+the arithmetic sign structure).  Pinned: \textbf{H3} ($y_t \le
+0.155\,T_z^4$, one source evaluation per rung, ancestors $==
+\{$SOURCE$\}$) certified at all 25 rungs $+$ the deep holdout
+$h = 30$ (degree-127 source) with margin $\ge 1.99$; $\rho ==
+|J_2|$ at every rung with cap $1.21$--$1.30$ vs certified $c^* =
+1.10/1.15$ (the certified constant stays sharper).  Bughunt-VII
+F1 adopted: the residue is the \textbf{triple $\{$H1 $\wedge$ H2
+$\wedge$ H3$\}$-cofinal}.  Not evidence for or against RH.
+Machine-checked: \veri{v932\_toproot\_theta\_statement.py}.
+\mE\ (T1 $+$ TR-CAP $+$ the dictionary $+$ the admissibility
+recompute $+$ the witness algebra, exact) $+$ \mC\ (the
+theta/rho/lock ladders, typed measured) $+$ \mO\ (the cofinal
+extension --- the open edge, typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The H3-cofinal adjudication
+(\texttt{PRIME.\allowbreak H3.\allowbreak COFINAL.01}).}
+One module ($10/10$).  The round-173 family: the three named
+mechanisms of the cofinal proof attack adjudicated with numbers.
+Recomputed in-run: the pigeonhole/defect-collapse theorems
+(cofinal(bar) $+$ defect-$D$ $\Rightarrow$ forall-$h$(bar $+
+D$); positive levels have nothing to cancel --- the averaging
+subsidy is \emph{empty}), the transport identities ($\Theta_{\rm
+FG} == \theta_y \times \mathrm{lock}$; H3 and the round-162
+window are equivalent on the two-sided lock manifold; the
+measured ceiling $0.1197 < 0.155$ consumes the
+\veri{v926\_fullgap\_growthlaw\_theorems.py} \emph{measured}
+quartic law --- typed conditional-on-measured, flagged, not
+delivered), the Davis--Kahan stability lemma, the manifold
+exclusion ($\mathrm{lock}'' == \mathrm{lock}/W$ exact, both
+directions), \emph{and all saturation analytics} (fit code
+ported verbatim: the five models --- every saturating model
+beats the power law by factor $\le 0.60$ in RSS and at the
+$h = 30$ holdout; $t_\infty$ band $[0.0766, 0.0977]$; the local
+exponent descent $4.2991 > 4.1203 > 4.0600 > 4.0236$ ---
+\textbf{the growth law converges to the exact quartic at depth},
+$p_{\rm loc} \to 4.024$; the quantifier gap $D = 0.004183$ ---
+the limsup form holds only \emph{mod} $D$ (Bughunt-VII F2); the
+block subsidy $0.7533/0.9233/0.9604 \to 1$).  Pinned: the DK
+radii $4.5\times10^{-25} \to 6.6\times10^{-6}$ strictly growing
+with crossover $h = 16$ --- \textbf{the manifold-exclusion
+verdict is scoped to the DK radius} (gated $h \le 13$, measured
+to $h = 20$; Bughunt-VII F4: the lock leg excludes only large
+dials); the 2-mode witness breaks $\{$ground-state certificate,
+lock window, BA3 bridge $\times 3.6\times10^{8}\}$; the 3-mode
+escalation costs $\times 10^{5}$ and still breaks the same three
+(escalation-stable); at measured residuals H3 is norm-stable.
+$\theta_\infty$ stays \emph{open} in the band under the bar
+(margin $1.586$; $1/(4\pi)$ inside the band,
+recorded-not-claimed).  Not evidence for or against RH.
+Machine-checked: \veri{v933\_h3\_cofinal\_adjudication.py}.
+\mE\ (the pigeonhole/transport/DK/manifold algebra $+$ all
+analytics recomputed in-run) $+$ \mC\ (the DK radii and witness
+tables, typed measured; the ceiling conditional-on-measured,
+flagged) $+$ \mO\ ($\theta_\infty$ --- open, typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The unconditional Gonek pricing
+(\texttt{PRIME.\allowbreak GONEK.\allowbreak PRICING.01}).}
+One module ($8/8$).  The round-174 family: the ``Gonek
+constants'' item of the endgame residue priced and \emph{leaving}
+the program residue.  Recomputed in-run: the exact classical
+statements with their conditionality ([L] Landau 1912, Math.\
+Ann.\ 71 --- $\sum_{0 < \gamma \le T} x^{\rho} = -(T/2\pi)
+\Lambda(x) + O(\log T)$ over \emph{all} nontrivial zeros,
+unconditional; [G] Gonek 1985/1993, Contemp.\ Math.\ 143 ---
+uniform with $|E| \le c_G\,x \log(2xT) \log\log(3x)$,
+unconditional; [R] Gonek 1984 --- RH-conditional $==$
+loop-if-consumed, machine-checked \emph{not an ancestor} of
+either leg, the would-be hidden cycle detected and flagged;
+externally re-verified in Bughunt VII), \textbf{the envelope
+closed form} (the $T_{\rm hi}$-dependence collapses to a single
+$-1/(2T_{\rm hi}^2)$ term with a finite ceiling ---
+census-depth-insensitive: a deeper census can never inflate the
+classical remainder), and the prefactor-insensitive absorption
+with \emph{symbolic} $c_G$ at $p = 2..5$ (the census schedule
+tolerates the classical error terms at any finite constant).
+Pinned: $\hat c \le 0.085981$ over the full $12 \times 6$ spike
+table on the 20M-zero cache (snr up to $26592.6$: the Gonek form
+over-covers $\ge 11\times$) --- typed
+\emph{constant-empirical-per-census} (no published numerically
+explicit constant exists); the DC leg replicates round 169 at
+all 25 rungs; the WF leg holds the exact perturbation bound
+hard; the controls refuse $\ge 100\times$ through the same
+instrument, with the dilation witness re-creating the true spike
+at $x' = 5^{64/65}$ to $1.4\times10^{-7}$.  The on-line rewrite
+stays per-census; the all-$k$ reading remains the flagged loop.
+Not evidence for or against RH.
+Machine-checked:
+\veri{v934\_gonek\_pricing\_unconditional.py}.
+\mE\ (the statements $+$ the envelope closed form $+$ the
+symbolic absorption $+$ the loop graphs, exact) $+$ \mC\ (the
+spike/DC/WF/control pricing tables, per census) $+$ \mO\ (the
+all-$k$ identification --- the flagged loop, untouched)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The mode-level Landau bridge and
+the conditioning wall (\texttt{PRIME.\allowbreak
+THETAINF.\allowbreak PIN.01}).}
+One module ($9/9$).  The round-175 family: the classical pin of
+$\theta_\infty$ does \emph{not} land, and the round proves
+exactly why --- delivering the program's \textbf{first linear
+per-mode classical identity}.  Recomputed in-run: the bridge
+closed forms ($\int_0^L \sin(\omega u)e^{igu}\,du ==
+\omega(1 - e^{2iAg})/(\omega^2 - g^2)$ at mode frequencies;
+$2\,\mathrm{Re} == 4\omega\sin^2(Ag)/(\omega^2 - g^2)$; the
+resonance $\gamma \to \omega_k$ removable exactly; the
+trivial-zero density $== 1/(t(t^2 - 1))$), the dictionary
+covariance (\textbf{a bijection in $\theta$} --- it transports
+every $\theta_\infty$ and pins none, proven), the
+Rayleigh--Schr\"odinger typing (second-moment class only inside
+the validity radius --- measured broken), the transport
+divergences (the Vinogradov--Korobov ceiling \emph{and} even the
+flagged RH-grant transport diverge at mode scale:
+cancellation-blindness, not conditionality alone; the new
+Montgomery-PC loop cycle detected, never consumed), and the
+interlacing refutation (the measured sign census refuses the
+one-signed premise at every rung; the trace ceiling is
+self-referential).  Pinned: \textbf{the bridge lands per census}
+--- residuals $1.42\times10^{-5} \to 5.37\times10^{-5}$ at the
+full 20M-zero census with a clean ${\sim}1/T$ tail law; the
+fluctuation carries $\ge 99.2$ percent of $\theta$;
+\textbf{the variational conditioning wall} (Bughunt-VII F7: a
+\emph{measured-law} extrapolation): the reconstruction fails at
+full census and $T_{\rm req} = 3.76\times10^{14} \to
+1.75\times10^{77}$ vs $T_{\rm PT} = 3.0\times10^{12}$ --- the
+$1/A_0$ circularity relocates into the variational conditioning;
+the second-moment route triply dead; the bridge is
+witness-data-invariant (exact) and separates the fake worlds
+$\times 16449.9/\times 103617.3$.  $\theta_\infty$ is re-typed
+\textbf{open-nonperturbative-variational} (deeper census
+improves the data ${\sim}1/T$ but provably never the limit).
+The residue after rounds 171--175 (Bughunt-VII F1/F2): the
+\textbf{triple $\{$H1 $\wedge$ H2 $\wedge$ H3$\}$-cofinal} (one
+rung per dyadic block, all three at the same $h$; the limsup
+form only mod the measured defect $D = 0.004183$) $+$
+$\{$census-forall-$k$ $==$ loop, flagged$\}$ $+$ $\{$L1,
+WPD$\}$ --- cardinality unchanged.  Not evidence for or against
+RH.
+Machine-checked: \veri{v935\_thetainf\_landau\_bridge.py}.
+\mE\ (the bridge closed forms $+$ covariance $+$ RS $+$ the
+divergences $+$ the interlacing algebra, exact) $+$ \mC\ (the
+residual/wall/control tables, per census; the $T_{\rm req}$ wall
+a measured-law extrapolation) $+$ \mO\ ($\theta_\infty$ ---
+open-nonperturbative-variational, typed)
+\par\smallskip
+
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}
 One probe ($21/21$ incl.\ the $3$ must-fire controls; verdict

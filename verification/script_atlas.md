@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`923` registered scripts · `1074` ledger claims · `10` clusters.
+`928` registered scripts · `1079` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (442 scripts)
+### `core` — Compiler core & the E₈ glue  (447 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -895,6 +895,16 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: PRIME.DEPTHBLOCK.TRANSFER.01 (v928: DT1/DT2 + the factorization target SIGMA-FLOOR), PRIME.BLOCKAVERAGE.SUBSTRATE.01 (v927: BA3 + the enclosures the block floors bridge through), round 131 Layer 1/2 + Landau pin + onsets (v919, cited), round 137 lock onsets (cited, 338/879 replicated), round 169 note CDLXXXIV (the frozen probe), round 162 quartic anchors (v926, cited) · cited: 3 e8 audit bootstrap
 - **v930_window_instrument_mechanism** [E] `PRIME.WINDOW.INSTRUMENT.MECHANISM.01` — die bewiesenen Positivitäts-Transport-Instrumentensätze (WI1–WI6), die Stieltjes-Momenten-Refutation der dyadischen Slot-Leiter (im Lauf aus den gepinnten Slots nachgerechnet) und 
   - deps: PRIME.SPECTRAL.BALANCE.RAZOR.01 (v923: GF1-GF5 the theta chases compose with), PRIME.MOMENT.LAURENT.ROOTLADDER.01 (v924: the L1/PHI dictionary WI4 consumes), PRIME.DEPTHBLOCK.TRANSFER.01 (v928: the entry law generalized + re-confirmed, PROP assembled), round 160 instrument blocks + G82 typing (cited), round 167 note CDLXXXI (the frozen probe), round 136 minimizer + round 162 ladder (v926, cited) · cited: 3 e8 audit bootstrap
+- **v931_jetmass_floor_theorems** [E/O] `PRIME.JETMASS.FLOOR.01` — der Jet-Masse-Floor (das in v929 benannte terminale λ-uniforme Residuum) erhält sein rigoroses Per-Sprossen-Theorem: F/A₀ ≥ (1 − c*/z)^{(1+κ)/c*} für alle z > c* aus der Zensus-Pro
+  - deps: PRIME.SIGMAFLOOR.FACTORIZATION.01 (v929: the jet-mass-floor naming + SF1-SF6, cited), PRIME.BLOCKAVERAGE.SUBSTRATE.01 (v927: BA3), PRIME.MOMENT.LAURENT.ROOTLADDER.01 (v924: the census/rootladder instrument), round 171 note CDLXXXVII (the frozen probe), PRIME.TOPROOT.THETA.01 (v932: the RATE leg downstream), PRIME.GONEK.PRICING.01 (v934: the WF pricing downstream), Bughunt VII round 176 note CDXCII (F3 applied here) · cited: 3 e8 audit bootstrap
+- **v932_toproot_theta_statement** [E/O/X] `PRIME.TOPROOT.THETA.01` — die letzte λ-uniforme Kante auf EINE benannte Per-Sprossen-Hypothese gepinnt: TOPROOT(p, C) == y_t ≤ C·h^p mit exaktem SEQ-KOFINAL-Quantor und drei maschinengelockten Formen; das e
+  - deps: PRIME.JETMASS.FLOOR.01 (v931: PF/H1/H2 + the rate leg this round certifies), PRIME.FULLGAP.GROWTHLAW.THEOREMS.01 (v926: the theta window, cited), round 172 note CDLXXXVIII (the frozen probe), PRIME.H3.COFINAL.01 (v933: the cofinal adjudication downstream), Bughunt VII round 176 note CDXCII (F1 applied here) · cited: 3 e8 audit bootstrap
+- **v933_h3_cofinal_adjudication** [E/C/O] `PRIME.H3.COFINAL.01` — die drei benannten Mechanismen mit Zahlen adjudiziert und die Zeugengrenze eine THEOREM-Grenze: die Sättigung ist REAL und gleich exakter Quartik-Konvergenz (p_loc → 4.024; θ_inf-B
+  - deps: PRIME.TOPROOT.THETA.01 (v932: the H3 statement + the cited record ladder), PRIME.BLOCKAVERAGE.SUBSTRATE.01 (v927: BA1-BA3, cited), PRIME.FULLGAP.GROWTHLAW.THEOREMS.01 (v926: the quartic law consumed ONLY as FLAGGED-MEASURED), round 173 note CDXC (the frozen probe), PRIME.THETAINF.PIN.01 (v935: the theta_inf attack downstream), Bughunt VII round 176 note CDXCII (F1 + F4 applied here) · cited: 3 e8 audit bootstrap
+- **v934_gonek_pricing_unconditional** [E/C] `PRIME.GONEK.PRICING.01` — der Posten '{Gonek-Konstanten, zitierbare klassische Arbeit}' BEPREIST und VERLÄSST das Programmresiduum: [L] Landau 1912 und [G] Gonek 1985/1993 beide UNBEDINGT identifiziert; die
+  - deps: PRIME.SIGMAFLOOR.FACTORIZATION.01 (v929: the SF3 DC-leg typing this row prices), PRIME.JETMASS.FLOOR.01 (v931: the WF leg this row prices), round 174 note CDLXXXIX (the frozen probe), PRIME.THETAINF.PIN.01 (v935: the bridge consuming this machinery downstream), Bughunt VII round 176 note CDXCII (the external literature re-verification + F1 applied here) · cited: 3 e8 audit bootstrap
+- **v935_thetainf_landau_bridge** [E/O] `PRIME.THETAINF.PIN.01` — der klassische Pin von θ_inf landet NICHT und die Runde beweist exakt warum, mit der ERSTEN LINEAREN PER-MODEN-KLASSISCHEN IDENTITÄT des Programms: der Primblock der Weltmatrix ist
+  - deps: PRIME.GONEK.PRICING.01 (v934: the unconditional Landau/Gonek machinery the bridge consumes), PRIME.H3.COFINAL.01 (v933: the theta_inf band + the DK instrument), PRIME.TOPROOT.THETA.01 (v932: the H3 statement + record ladders), round 175 note CDXCI (the frozen probe), Bughunt VII round 176 note CDXCII (F1 + F2 + F7 applied here) · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1917,11 +1927,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v919_secular_gw_pinning** — `PRIME.SECULAR.GW.PINNING.01`
-- **v920_loop_equivalence_theorems** — `PRIME.LOOP.EQUIVALENCE.THEOREMS.01`
-- **v921_counting_dominance_closures** — `PRIME.COUNTING.DOMINANCE.CLOSURES.01`
-- **v922_spacing_jet_sumrule_theorems** — `PRIME.SPACING.JETSUMRULES.THEOREMS.01`
-- **v923_spectral_balance_razor_theorems** — `PRIME.SPECTRAL.BALANCE.RAZOR.01`
 - **v924_moment_laurent_rootladder** — `PRIME.MOMENT.LAURENT.ROOTLADDER.01`
 - **v925_edge_cleanup_closures** — `PRIME.EDGE.CLEANUP.CLOSURES.01`
 - **v926_fullgap_growthlaw_theorems** — `PRIME.FULLGAP.GROWTHLAW.THEOREMS.01`
@@ -1929,4 +1934,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v928_depthblock_transfer_theorems** — `PRIME.DEPTHBLOCK.TRANSFER.01`
 - **v929_sigmafloor_factorization** — `PRIME.SIGMAFLOOR.FACTORIZATION.01`
 - **v930_window_instrument_mechanism** — `PRIME.WINDOW.INSTRUMENT.MECHANISM.01`
+- **v931_jetmass_floor_theorems** — `PRIME.JETMASS.FLOOR.01`
+- **v932_toproot_theta_statement** — `PRIME.TOPROOT.THETA.01`
+- **v933_h3_cofinal_adjudication** — `PRIME.H3.COFINAL.01`
+- **v934_gonek_pricing_unconditional** — `PRIME.GONEK.PRICING.01`
+- **v935_thetainf_landau_bridge** — `PRIME.THETAINF.PIN.01`
 
