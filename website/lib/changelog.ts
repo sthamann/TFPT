@@ -42,6 +42,713 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-20",
+    "dateLabel": "2026-08-20 · CXI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the externalization contracts — the two open non-RH kind-(A) external-math targets "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "ALPHA.QUILLEN.EXACT.01"
+      },
+      {
+        "k": "t",
+        "v": " packaged as short, self-contained EXTERNALIZATION CONTRACTS for outside specialist mathematicians (conformal nets/VOA/AQFT for the seam; determinant lines/"
+      },
+      {
+        "k": "m",
+        "v": "\\eta"
+      },
+      {
+        "k": "t",
+        "v": "-invariants/index theory for alpha), added as two new sections at the end of "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " (before “Certifiability and recommended order”), plus a one-sentence pointer in the head keybox; DOCUMENTATION ONLY — no module touched, no number changed, no status marker moved, no gate closed or narrowed, NO RH claim: (1) the "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " contract states the minimal theorem (the scaling limit of the gapped "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "-equivariant CAR collar exists in local-net topology; the index-4 simple-current extension functor commutes with the limit; the OS reconstruction is the holomorphic "
+      },
+      {
+        "k": "m",
+        "v": "(E_8)_1"
+      },
+      {
+        "k": "t",
+        "v": " lattice net) broken into the four review-named lemmata L1 (uniform energy/nuclearity bounds — honestly typed: NO uniform nuclearity estimate exists in the corpus), L2 (convergence of local algebras, the cited Osborne–Stottmeister scaling-limit theorem with the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "-equivariant structure retained), L3 (crossed product commutes with the limit; the finite index-4 Q-system is explicit, "
+      },
+      {
+        "k": "c",
+        "v": "v125"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v154"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v469"
+      },
+      {
+        "k": "t",
+        "v": ") and L4 (uniqueness of the holomorphic "
+      },
+      {
+        "k": "m",
+        "v": "c=8"
+      },
+      {
+        "k": "t",
+        "v": " reconstruction; "
+      },
+      {
+        "k": "m",
+        "v": "\\det K=1"
+      },
+      {
+        "k": "t",
+        "v": " vs the same-"
+      },
+      {
+        "k": "m",
+        "v": "c"
+      },
+      {
+        "k": "t",
+        "v": " rival "
+      },
+      {
+        "k": "m",
+        "v": "SO(16)_1"
+      },
+      {
+        "k": "t",
+        "v": "), with the complete typed hypothesis list (12 PROVEN-FINITE rows citing "
+      },
+      {
+        "k": "c",
+        "v": "v302"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v113"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v155"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v160"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v356"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v366"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v367"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v368"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v461"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v376"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v377"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v378"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v379"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v125"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v154"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v216"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v286"
+      },
+      {
+        "k": "t",
+        "v": ", 5 CITED-CLASSICAL rows, 1 OPEN target), the runnable finite models, the HONEST Lean axiom surface ("
+      },
+      {
+        "k": "c",
+        "v": "SeamScalingLimit.lean"
+      },
+      {
+        "k": "t",
+        "v": " kernel-proves only the arithmetic hypotheses by "
+      },
+      {
+        "k": "c",
+        "v": "decide"
+      },
+      {
+        "k": "t",
+        "v": "; the analytic content is named cited axioms over opaque "
+      },
+      {
+        "k": "c",
+        "v": "Prop"
+      },
+      {
+        "k": "t",
+        "v": "s; no "
+      },
+      {
+        "k": "c",
+        "v": "sorry"
+      },
+      {
+        "k": "t",
+        "v": "; explicitly flagged: L1–L4 have ZERO Lean content beyond the composition audit), five must-fail controls (MF-S1: "
+      },
+      {
+        "k": "m",
+        "v": "c=8"
+      },
+      {
+        "k": "t",
+        "v": " alone must NOT suffice — the red-team point; MF-S2: index-2 glue must yield "
+      },
+      {
+        "k": "m",
+        "v": "SO(16)_1"
+      },
+      {
+        "k": "t",
+        "v": "; MF-S3: the trivial "
+      },
+      {
+        "k": "m",
+        "v": "M=3"
+      },
+      {
+        "k": "t",
+        "v": " collar must give no chiral limit; MF-S4: non-order-4 clock breaks the marks; MF-S5: the "
+      },
+      {
+        "k": "c",
+        "v": "v286"
+      },
+      {
+        "k": "t",
+        "v": " import firewall) and four acceptance tests; (2) the "
+      },
+      {
+        "k": "c",
+        "v": "ALPHA.QUILLEN.EXACT.01"
+      },
+      {
+        "k": "t",
+        "v": " contract states the two-step theorem T1 (gap-stable continuum limit "
+      },
+      {
+        "k": "m",
+        "v": "c_1(\\det D_{\\mathrm{finite}})\\to c_1(\\det_\\zeta D_{\\mathrm{seam}})"
+      },
+      {
+        "k": "t",
+        "v": " under norm-resolvent convergence with the Fermi gap uniformly open over the twist torus — the Dai–Freed section has no zero; finite side computed, "
+      },
+      {
+        "k": "c",
+        "v": "v472"
+      },
+      {
+        "k": "t",
+        "v": ") and T2 ("
+      },
+      {
+        "k": "m",
+        "v": "\\delta_\\tau(\\log\\det_\\zeta\\Delta_{U(1)}+8b_1c_3^6\\log\\varphi_{\\mathrm{seam}})=0"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " Bismut–Freed curvature "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " inflow response with the exact corpus coefficients "
+      },
+      {
+        "k": "m",
+        "v": "k_0=|C|=1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "k_Y=5/3"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "b_1=41/10"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "c_3=1/(8\\pi)"
+      },
+      {
+        "k": "t",
+        "v": ", exponent "
+      },
+      {
+        "k": "m",
+        "v": "-5/4=-q(D_5)"
+      },
+      {
+        "k": "t",
+        "v": "), the two named open faces (the analytic diagonal-"
+      },
+      {
+        "k": "m",
+        "v": "\\zeta"
+      },
+      {
+        "k": "t",
+        "v": "/multiplicity face "
+      },
+      {
+        "k": "c",
+        "v": "v484"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v485"
+      },
+      {
+        "k": "t",
+        "v": " and the topological "
+      },
+      {
+        "k": "c",
+        "v": "EM1"
+      },
+      {
+        "k": "t",
+        "v": " lemma "
+      },
+      {
+        "k": "c",
+        "v": "v48"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v435"
+      },
+      {
+        "k": "t",
+        "v": "), the typed hypothesis list (10 PROVEN-FINITE rows citing "
+      },
+      {
+        "k": "c",
+        "v": "v3"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v48"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v341"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v382"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v434"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v470"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v435"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v342"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v367"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v472"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v484"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v485"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v391"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v433"
+      },
+      {
+        "k": "t",
+        "v": ", 5 CITED-CLASSICAL rows, 1 OPEN target), the runnable finite models, the HONEST Lean statement (there is NO Lean formalisation of this target — stated plainly), four must-fail controls (MF-A1: no experimental "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " anywhere in the construction; MF-A2: deck/carrier/Chern-level ablations must destroy the CODATA match; MF-A3: "
+      },
+      {
+        "k": "m",
+        "v": "M=3\\Rightarrow C=0"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "M=-1\\Rightarrow C=-1"
+      },
+      {
+        "k": "t",
+        "v": "; MF-A4: the "
+      },
+      {
+        "k": "m",
+        "v": "\\{0,3,6\\}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\pi"
+      },
+      {
+        "k": "t",
+        "v": "-power/metric-independence partition) and the review's three acceptance tests verbatim (no experimental "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " input; unique physical fixed point "
+      },
+      {
+        "k": "m",
+        "v": "137.0359992168"
+      },
+      {
+        "k": "t",
+        "v": "; ablations destroy the hit) plus one structural test; (3) the website paper mirror of "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "c",
+        "v": "papers.ts"
+      },
+      {
+        "k": "t",
+        "v": ") gains one section entry covering both contracts; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts.pdf"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "changelog.pdf"
+      },
+      {
+        "k": "t",
+        "v": " recompiled and mirrored via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh website"
+      },
+      {
+        "k": "t",
+        "v": "; maps and "
+      },
+      {
+        "k": "c",
+        "v": "changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh gen"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests regenerated LAST. Both targets stay [O]; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-19",
     "dateLabel": "2026-08-19 · CX",
     "heading": [

@@ -106,9 +106,9 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v483_pillowcase_exact_traces** [E/O] `HYP.PHI0.GEOM.01` — HYP.PHI0.GEOM.01: the GEOMETRIC side of the phi0 puncture target (HYP.PHI0.PUNCTURE.01/v408) is EXACT -- every twisted/orbifold heat trace of the flat tau = i pillowcase is a t-IND
   - deps: v408_phi0_puncture_heatkernel, v396_phi0_icosahedral, v106_review_validation, v342_em_ward_heatkernel, v37, v216, v396, v408 · cited: origin theory
 - **v484_seam_contact_unit** [E/C/O] `SEAM.CONTACT.UNIT.01` — SEAM.CONTACT.UNIT.01: the shared 'c3 per boundary insertion' rule of the two open analytic targets (ALPHA.QUILLEN.EXACT.01 c3-ladder {0,3,6}; HYP.PHI0.PUNCTURE.01 per-mark weight c
-  - deps: v382_alpha_quillen_exact, v408_phi0_puncture_heatkernel, v483_pillowcase_exact_traces, v342_em_ward_heatkernel, v239_kms_thermal_time, v60_lambda_metrology_branch, v3, v37 · cited: origin theory, 1 architecture e8
+  - deps: v382_alpha_quillen_exact, v408_phi0_puncture_heatkernel, v483_pillowcase_exact_traces, v342_em_ward_heatkernel, v239_kms_thermal_time, v60_lambda_metrology_branch, v3, v37 · cited: origin theory, 1 architecture e8, research contracts
 - **v485_contact_diagonal_closed** [E/C/O] `SEAM.CONTACT.UNIT.02` — SEAM.CONTACT.UNIT.02: the diagonal channel of the merged analytic target (v484) settled at the computable level -- the merged residual collapses onto the keystone. [E] diagonal zer
-  - deps: v484_seam_contact_unit, v382_alpha_quillen_exact, v408_phi0_puncture_heatkernel, v483_pillowcase_exact_traces, v342_em_ward_heatkernel, v239_kms_thermal_time, v3, v151 · cited: origin theory, 1 architecture e8
+  - deps: v484_seam_contact_unit, v382_alpha_quillen_exact, v408_phi0_puncture_heatkernel, v483_pillowcase_exact_traces, v342_em_ward_heatkernel, v239_kms_thermal_time, v3, v151 · cited: origin theory, 1 architecture e8, research contracts
 - **v486_transfer_full_rule** [E/O] `HYP.REWRITE.02` — HYP.REWRITE.02: the FULL physical transfer spectrum {1, (2/3)^6, (1/3)^6} now has ONE local recursive generator -- the lazy Z2-pair walk. [E] uniqueness: the symmetric 3-channel ru
   - deps: v327_hypergraph_rewrite, v324_hypergraph_fiber, v312_hypergraph_substrate, v238_modular_lindblad_dynamics, v54, v76, v221, v312 · cited: origin theory
 - **v487_transfer_clock_rungs** [E/O] `HYP.REWRITE.03` — HYP.REWRITE.03: the lazy split (1/2, 1/6) is FORCED by the resummed clock -- the v486 [O] 'split selection' closes onto v124 structure. [E] rung reading: the lazy rule's one-step s
@@ -900,23 +900,23 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
 
 - **v3_em_alpha** [E] `EM.FP.01` — α⁻¹ = 137.0359992168 unique root of F_U(1)=0; ablation
-  - deps: AX.P1.01, v13_open_gates · cited: introduction, origin theory, 1 architecture e8, 2 standard model
+  - deps: AX.P1.01, v13_open_gates · cited: introduction, origin theory, 1 architecture e8, 2 standard model, research contracts
 - **v48_em_ward** [E/C] `EM.WARD.01` — EM boundary Ward (Thm C): F_U(1) decomposition; 8b₁ = 164/5
-  - deps: v3_em_alpha, v3, v341, v342 · cited: 1 architecture e8
+  - deps: v3_em_alpha, v3, v341, v342 · cited: 1 architecture e8, research contracts
 - **v341_alpha_quillen** [E/C/O] `ALPHA.QUILLEN.01` — The alpha fixed point reformulated as the STATIONARITY of a U(1) determinant line, every ingredient identified as an index / heat-kernel coefficient / discriminant form -- NOT a fr
-  - deps: v48_em_ward, v3, v48, v159, v216, v1 · cited: 1 architecture e8
+  - deps: v48_em_ward, v3, v48, v159, v216, v1 · cited: 1 architecture e8, research contracts
 - **v342_em_ward_heatkernel** [E/C/O] `EM.WARD.02` — The heat-kernel sharpening of EM.WARD.01: DERIVES the ORIGIN and STRUCTURE of the F_{U(1)} determinant-line terms from textbook Seeley-DeWitt/Gilkey coefficients, advancing the EM-
   - deps: v48_em_ward, v48, v216, v3, v159 · cited: origin theory, 1 architecture e8
 - **v382_alpha_quillen_exact** [E/C/O] `ALPHA.QUILLEN.EXACT.01` — Names the Quillen determinant-line VARIATION delta_tau(log det_zeta Delta_U(1) + 8 b1 c3^6 log phi_seam)=0 as a tracked target (review Point 10), elevating EM.WARD.01's residual to
-  - deps: v48_em_ward, v286_seam_equivalence_contract, v341, v342, v3, v48, v216, v336 · cited: 1 architecture e8
+  - deps: v48_em_ward, v286_seam_equivalence_contract, v341, v342, v3, v48, v216, v336 · cited: 1 architecture e8, research contracts
 - **v391_alpha_quillen_progress** [E/O] `ALPHA.QUILLEN.PROGRESS.01` — ALPHA.QUILLEN.PROGRESS.01: an HONEST attempt at the external target ALPHA.QUILLEN.EXACT.01 (v382) -- it REDUCES the open step to a sharper named sub-target via a solvable model but
-  - deps: v382_alpha_quillen_exact, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v382 · cited: 1 architecture e8
+  - deps: v382_alpha_quillen_exact, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v382 · cited: 1 architecture e8, research contracts
 - **v433_alpha_quillen_heatkernel** [E/C/O] `ALPHA.QUILLEN.PROGRESS.02` — ALPHA.QUILLEN.PROGRESS.02: a SECOND honest step on the external target ALPHA.QUILLEN.EXACT.01 (v382) -- it GROUNDS and CONNECTS, it does NOT close it; ALPHA.QUILLEN.EXACT.01 stays 
-  - deps: v382_alpha_quillen_exact, v391_alpha_quillen_progress, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v342, v382 · cited: 1 architecture e8
+  - deps: v382_alpha_quillen_exact, v391_alpha_quillen_progress, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v342, v382 · cited: 1 architecture e8, research contracts
 - **v434_alpha_quillen_betafunction** [E/C/O] `ALPHA.QUILLEN.PROGRESS.03` — ALPHA.QUILLEN.PROGRESS.03: a THIRD honest step on ALPHA.QUILLEN.EXACT.01 (v382) -- it settles the three residuals named after v433 and shows they are NOT three independent problems
-  - deps: v382_alpha_quillen_exact, v391_alpha_quillen_progress, v433_alpha_quillen_heatkernel, v48_em_ward, v342_em_ward_heatkernel, v159, v216, v246 · cited: 1 architecture e8
+  - deps: v382_alpha_quillen_exact, v391_alpha_quillen_progress, v433_alpha_quillen_heatkernel, v48_em_ward, v342_em_ward_heatkernel, v159, v216, v246 · cited: 1 architecture e8, research contracts
 - **v435_alpha_quillen_chernlevel** [E/C/O] `ALPHA.QUILLEN.PROGRESS.04` — ALPHA.QUILLEN.PROGRESS.04: a FOURTH honest step on ALPHA.QUILLEN.EXACT.01 (v382) -- it attacks the SINGLE remaining [O] after v434 (residual (2), the cubic alpha^3 Chern level) and
-  - deps: v382_alpha_quillen_exact, v391_alpha_quillen_progress, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v48_em_ward, v342_em_ward_heatkernel, v48, v342 · cited: 1 architecture e8
+  - deps: v382_alpha_quillen_exact, v391_alpha_quillen_progress, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v48_em_ward, v342_em_ward_heatkernel, v48, v342 · cited: 1 architecture e8, research contracts
 
 ### `flavor` — Flavor matrix & operators  (23 scripts)
 _The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature._
@@ -1428,9 +1428,9 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v469_seam_crossedproduct_route** [E/C/O] `SEAM.EQUIV.CROSSEDPRODUCT.01` — SEAM.EQUIV.CROSSEDPRODUCT.01: the net-level crossed-product certification of the 128-spinor extension + the R1 -> R1' invariant reduction. [E] LR LOCALITY INTEGER: h_s(SO(16)_1) = 
   - deps: v286_seam_equivalence_contract, v458_seam_mmst_citation_audit, v459_seam_lattice_voa_route, v463_seam_c8_holomorphic_uniqueness, v464_seam_oneparticle_rigidity, FORM.SEAM.RESIDUAL.01, v125, v154 · cited: 1 architecture e8, 5 redteam, research contracts, safeguards
 - **v470_alpha_inflow_level** [E/C/O] `ALPHA.QUILLEN.INFLOW.01` — ALPHA.QUILLEN.INFLOW.01: the alpha^3 level = the COMPUTED bulk Chern invariant + the seam F-normalisation = the affine embedding index k_Y = 5/3. [E] target re-verified: alpha^-1 =
-  - deps: v382_alpha_quillen_exact, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v435_alpha_quillen_chernlevel, v48_em_ward, v469_seam_crossedproduct_route, v341, v367 · cited: 1 architecture e8
+  - deps: v382_alpha_quillen_exact, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v435_alpha_quillen_chernlevel, v48_em_ward, v469_seam_crossedproduct_route, v341, v367 · cited: 1 architecture e8, research contracts
 - **v472_quillen_detline_moduli** [E/C/O] `ALPHA.QUILLEN.DETLINE.01` — ALPHA.QUILLEN.DETLINE.01: the determinant line over the U(1)-twist moduli of the collar model carries curvature = the inflow level -- the finite Quillen/Dai-Freed shadow of the v47
-  - deps: v382_alpha_quillen_exact, v470_alpha_inflow_level, v48_em_ward, v367, v460, v461, v470, v471 · cited: 1 architecture e8
+  - deps: v382_alpha_quillen_exact, v470_alpha_inflow_level, v48_em_ward, v367, v460, v461, v470, v471 · cited: 1 architecture e8, research contracts
 - **v473_entropic_action_bridge** [E/C/O/X] `GRAV.ENTROPIC.ACTION.01` — GRAV.ENTROPIC.ACTION.01: the entropic-action bridge -- Bianconi's 'Gravity from entropy' (Phys. Rev. D 111, 066001 (2025); arXiv:2408.14391) quantified as an EXTERNAL CANDIDATE for
   - deps: v359_grav_nonlinear_einstein, v361_grav_backreaction, QG.AMB.01, v2, v36, v44, v58, v60 · cited: research contracts
 - **v474_entropic_hodge_carrier** [E/C/O/X] `GRAV.ENTROPIC.HODGE.01` — GRAV.ENTROPIC.HODGE.01: the OPERATOR level of the entropic-action bridge (work packages 1 + 4-algebra of v473). [E] CAR => Clifford: ten Gamma's on the carrier Fock space Lambda^* 
