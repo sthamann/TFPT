@@ -376,6 +376,42 @@ ward_* functions; no import of verification/.
 NO RH CLAIM.  EXPLORATION ONLY.
 """
 
+# =====================================================================
+# CORRECTION OF RECORD (Bughunt VII, note CDXCII, 2026-08-20)
+# ---------------------------------------------------------------------
+# Appended OUTSIDE the frozen spec text per the r131/r165
+# corrections-of-record convention: the module docstring above is the
+# historical record and is NOT edited; SPEC_SHA (= sha256 of the
+# docstring) stays 3044558e5fa52e01.  NO numeric change, NO verdict
+# flip, NO RH CLAIM.
+#
+# BH7-F1 [MAJOR, residue-prose compression]:
+#   ORIGINAL (this spec's POST-ROUND RESIDUE + note CDXCI, transported
+#   from r172): "The residue is UNCHANGED IN CARDINALITY: {H3-COFINAL
+#   == limsup theta_y <= 0.155, classical-evaluation face theta_inf
+#   OPEN} + {census-forall-k == LOOP, flagged, not consumed} +
+#   {L1, WPD}" -- H3 singled out as THE lambda-uniform residue.
+#   CORRECTED: the composed per-block hypothesis is the TRIPLE
+#   {H1 AND H2 AND H3}-cofinal, one rung per dyadic block, all three
+#   at the same h -- corrected wording: "{H1 ∧ H2 ∧ H3}-KOFINAL (eine
+#   Sprosse pro Block, alle drei am selben h)".  PF is proven only
+#   GIVEN H1 + H2 at the same rung (r171); H1/H2/H3 are all finite
+#   per-rung source checks of the same epistemic type, certified only
+#   h <= 26/13(24)/30.
+#
+# BH7-F2 [MINOR, limsup qualifier dropped]: the limsup form of
+#   H3-cofinal holds only mod the measured defect D = 0.004183
+#   (drawdown rungs (14, 19)) plus the measured monotone trend --
+#   note CDXCI's residue dropped note CDXC's "(mod gemessener Defekt
+#   D = 0.0042 ...)" qualifier; cite the limsup form only WITH the
+#   mod-D qualifier (the CDXC wording is exactly right).
+#
+# BH7-F7 [NOTE, "bewiesene Verschwendung"]: note CDXCI's lever (c)
+#   should read "gemessene Verschwendung" -- the T_req wall is a
+#   MEASURED-LAW extrapolation (measured ~1/T tail law + measured
+#   amp/gap ladders), not a proven one.
+# =====================================================================
+
 from __future__ import annotations
 
 import argparse

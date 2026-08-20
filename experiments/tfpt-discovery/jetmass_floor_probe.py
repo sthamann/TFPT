@@ -467,6 +467,31 @@ SIZE-SEPARATOR theta_w <= 1e-2 AND min MAIN theta / max theta_w
 deterministic re-run.
 """
 
+# =====================================================================
+# CORRECTION OF RECORD (Bughunt VII, note CDXCII, 2026-08-20)
+# ---------------------------------------------------------------------
+# Appended OUTSIDE the frozen spec text per the r131/r165
+# corrections-of-record convention: the module docstring above is the
+# historical record and is NOT edited; SPEC_SHA (= sha256 of the
+# docstring) stays 57de8b2a83677a9c.  NO numeric change, NO verdict
+# flip, NO RH CLAIM.
+#
+# BH7-F3 [MINOR, vacuous exact-layer legs -- BH6-F3 class]: the frozen
+#   gates are NOT edited; this block re-types two legs as DEFINITIONAL
+#   per the BH6-F3 convention.  (i) G11 (PF2), second okG binding:
+#   the sp.simplify(((y - al) ** 2 + be ** 2) - (y - al) ** 2
+#   - be ** 2) == 0 leg is an identically-zero E - E tautology inside
+#   the PROVEN-typed gate, presented as the complex-pair bound --
+#   re-typed DEFINITIONAL.  (ii) G12 (PF3), first okN binding
+#   "((t2s - t1s).is_positive is None) or True" is an always-True
+#   dead binding (immediately rebound to the trivial rational
+#   instance 9/10 < 1) -- re-typed DEFINITIONAL.  The THEOREMS PF2/
+#   PF3 stay true (be^2 >= 0 and the triangle corollary are
+#   elementary); no verdict flips; gate counts unchanged.  Timing was
+#   clean: this spec froze BEFORE bughunt6 landed (no adoption
+#   violation); the class recurred and is corrected here.
+# =====================================================================
+
 from __future__ import annotations
 
 import argparse

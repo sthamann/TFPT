@@ -430,6 +430,31 @@ increasing).  Both fixes verified in isolation before re-freeze;
 smoke2 at the fixed SHA must be clean.
 """
 
+# =====================================================================
+# CORRECTION OF RECORD (Bughunt VII, note CDXCII, 2026-08-20)
+# ---------------------------------------------------------------------
+# Appended OUTSIDE the frozen spec text per the r131/r165
+# corrections-of-record convention: the module docstring above is the
+# historical record and is NOT edited; SPEC_SHA (= sha256 of the
+# docstring) stays cf27df22aa5dffbf.  NO numeric change, NO verdict
+# flip, NO RH CLAIM.
+#
+# BH7-F1 [MAJOR, residue-prose compression]:
+#   ORIGINAL (this spec + note CDLXXXVIII): "THE FINAL RESIDUE
+#   (exact): {H3-COFINAL: ...}" / "der lambda-uniforme Rest ist EXAKT
+#   H3-KOFINAL" -- H3 singled out as THE lambda-uniform residue.
+#   CORRECTED: the composed per-block hypothesis is the TRIPLE
+#   {H1 AND H2 AND H3}-cofinal, one rung per dyadic block, all three
+#   at the same h -- corrected wording: "{H1 ∧ H2 ∧ H3}-KOFINAL (eine
+#   Sprosse pro Block, alle drei am selben h)".  PF is proven only
+#   GIVEN H1 + H2 at the same rung (r171 verbatim: "THEOREM
+#   CONDITIONAL EXACTLY ON {H1 + H2 per rung}"); H1/H2/H3 are all
+#   finite per-rung source checks of the same epistemic type,
+#   certified only h <= 26/13(24)/30.  The MACHINE layer (G61/G63
+#   ancestors) was always consistent; the compression is prose-level
+#   only.
+# =====================================================================
+
 from __future__ import annotations
 
 import argparse

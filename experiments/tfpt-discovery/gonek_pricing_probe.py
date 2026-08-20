@@ -294,6 +294,30 @@ ward_* functions; NO zeta-name use; no import of verification/.
 NO RH CLAIM.  EXPLORATION ONLY.
 """
 
+# =====================================================================
+# CORRECTION OF RECORD (Bughunt VII, note CDXCII, 2026-08-20)
+# ---------------------------------------------------------------------
+# Appended OUTSIDE the frozen spec text per the r131/r165
+# corrections-of-record convention: the module docstring above is the
+# historical record and is NOT edited; SPEC_SHA (= sha256 of the
+# docstring) stays 3050678b352eaa9a.  NO numeric change, NO verdict
+# flip, NO RH CLAIM.
+#
+# BH7-F1 [MAJOR, residue-prose compression]:
+#   ORIGINAL (this spec's POST-ROUND RESIDUE + note CDLXXXIX,
+#   transported from r172): "What remains: {H3-COFINAL (parallel
+#   lane)} + {census-forall-k == LOOP, flagged, not consumed} +
+#   {L1, WPD counting-class remnants}" -- H3 singled out as THE
+#   lambda-uniform residue.
+#   CORRECTED: the composed per-block hypothesis is the TRIPLE
+#   {H1 AND H2 AND H3}-cofinal, one rung per dyadic block, all three
+#   at the same h -- corrected wording: "{H1 ∧ H2 ∧ H3}-KOFINAL (eine
+#   Sprosse pro Block, alle drei am selben h)".  PF is proven only
+#   GIVEN H1 + H2 at the same rung (r171); H1/H2/H3 are all finite
+#   per-rung source checks of the same epistemic type, certified only
+#   h <= 26/13(24)/30.
+# =====================================================================
+
 from __future__ import annotations
 
 import argparse

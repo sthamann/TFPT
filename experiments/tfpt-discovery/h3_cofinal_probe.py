@@ -470,6 +470,42 @@ with coefficients (1, 2, 1) all positive.  Fix verified in
 isolation before re-freeze; smoke2 at the fixed SHA must be clean.
 """
 
+# =====================================================================
+# CORRECTION OF RECORD (Bughunt VII, note CDXCII, 2026-08-20)
+# ---------------------------------------------------------------------
+# Appended OUTSIDE the frozen spec text per the r131/r165
+# corrections-of-record convention: the module docstring above is the
+# historical record and is NOT edited; SPEC_SHA (= sha256 of the
+# docstring) stays 876dafc977d3d8fc.  NO numeric change, NO verdict
+# flip, NO RH CLAIM.
+#
+# BH7-F1 [MAJOR, residue-prose compression]:
+#   ORIGINAL (this spec + note CDXC, transported from r172): the
+#   residue carried as "{H3-COFINAL} + {census-all-k == LOOP} +
+#   {L1, WPD}" -- H3 singled out as THE lambda-uniform residue.
+#   CORRECTED: the composed per-block hypothesis is the TRIPLE
+#   {H1 AND H2 AND H3}-cofinal, one rung per dyadic block, all three
+#   at the same h -- corrected wording: "{H1 ∧ H2 ∧ H3}-KOFINAL (eine
+#   Sprosse pro Block, alle drei am selben h)".  PF is proven only
+#   GIVEN H1 + H2 at the same rung (r171); H1/H2/H3 are all finite
+#   per-rung source checks of the same epistemic type, certified only
+#   h <= 26/13(24)/30.
+#
+# BH7-F4 [MINOR, manifold-exclusion verdict lacks its rung scope]:
+#   ORIGINAL (C3 VERDICT, this spec + note CDXC): "every y_t-moving
+#   perturbation either leaves the ground state (G30, DK-quantified),
+#   exits the two-sided lock window (exact, both directions), breaks
+#   the BA3 bridge (measured x3.6e8), or leaves the world" --
+#   universally quantified over perturbations.
+#   CORRECTED: the verdict sentence is scoped to the DK radius --
+#   "innerhalb des DK-Radius (gegated h <= 13, gemessen bis h = 20)".
+#   The gate-bar crossover at h = 16 is disclosed in this spec's own
+#   G36; the minimal-dial analysis (the minimal H3-refuting inflation
+#   W = bar/theta_y ~ 2.0-2.5 keeps lock/W inside the lock window
+#   (1.0, 8.0) at 24 of 25 rungs) shows the lock leg excludes only
+#   large dials (the tested witnesses use W = 1000).
+# =====================================================================
+
 from __future__ import annotations
 
 import argparse
