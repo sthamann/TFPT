@@ -365,6 +365,50 @@ run2 must be identical modulo wall-clock tokens (lines carrying
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
+
+# =====================================================================
+# CORRECTION OF RECORD (Bughunt VIII, note DI, 2026-08-20)
+# ---------------------------------------------------------------------
+# Appended OUTSIDE the frozen spec text per the r131/r165
+# corrections-of-record convention: the module docstring above is the
+# historical record and is NOT edited; SPEC_SHA (= sha256 of the
+# docstring) stays e4cdb9a932093196.  NO numeric change, NO verdict
+# flip, NO RH CLAIM.
+#
+# BH8-F1 [MAJOR, class-convergence stated as object-identity]:
+#   ORIGINAL (this spec + note D): the terminal residue adjudication
+#   "SAME-WALL-NOT-NEW-OBJECT" (verdict enum FLOOR-FORM-SAME-WALL-AS-
+#   THETAINF-HPIN; note D: "seine Floor-Form landet auf der BEKANNTEN
+#   theta_inf/H-pin-Mauer statt eine neue zu eroeffnen") states a
+#   CLASS-level convergence as a formal-object identity.  The four
+#   wall statements (r175 theta_inf face, r178 H-pin Omega-a, r181
+#   deep-subspace debt, r182 floor quotient) are FOUR DISTINCT formal
+#   statements (different functionals, different quantifiers) sharing
+#   a machine-namable CLASS: the same source object (the wall argmin
+#   ray d -- the single nonlinear link), the A_0-quotient shape, the
+#   nonperturbative-variational typing, the adjacent A0-triangle
+#   loop; NO gate anywhere checks a pairwise identity, and r178
+#   adjudicates the closest pair EXPLICITLY as DISTINCT statements.
+#   CORRECTED wording (BH8): "SAME-CLASS-NOT-NEW-EDGE: dieselbe
+#   Variationsquotienten-KLASSE wie theta_inf (r175) und H-pin
+#   Omega-a (r178: DISTINKTE Statements) -- vier distinkte formale
+#   Statements ueber demselben Quell-Objekt (Wall-Argmin-Strahl d) in
+#   A0-Quotientenform; KEIN neuer Residuum-Edge, weil die Floor-Route
+#   optional und maschinell aus dem Delivered-Set ausgeschlossen ist
+#   (G44), NICHT weil das Objekt identisch waere."  The residue
+#   conclusion "no new edge" SURVIVES on the machine-checked G44
+#   exclusion ground (optional route, delivered-set-excluded), NOT
+#   via identity.
+#
+# BH8-F3 [MINOR, adjudication-as-vacuous-gate -- BH6-F3 class]: the
+#   frozen gates are NOT edited; G51-floor-form-same-wall is
+#   check(..., True, ...) -- a hardcoded always-PASS carrying this
+#   round's residue adjudication inside the 37/37 count -- re-typed
+#   DEFINITIONAL/ADJUDICATION per the BH6-F3 convention.  The honest
+#   adjudication content is the BH8-F1 wording above; gate counts
+#   unchanged, no verdict flips.
+# =====================================================================
+
 from __future__ import annotations
 
 import argparse
