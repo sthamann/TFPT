@@ -153,6 +153,30 @@ exhaustive -- no reruns.  A1: none at freeze (no record run
 existed; smoke1/smoke2 structural logs kept).
 """
 
+# =====================================================================
+# CORRECTION OF RECORD (Bughunt IX, note DXV, 2026-08-21)
+# ---------------------------------------------------------------------
+# Appended OUTSIDE the frozen spec text per the r131/r165
+# corrections-of-record convention: the module docstring above is the
+# historical record and is NOT edited; SPEC_SHA (= sha256 of the
+# docstring) stays 8639b3a78503a0f9.  NO numeric change, NO verdict
+# flip, NO RH CLAIM.
+#
+# BH9-F2 [MINOR, the "1.14" wiggle-figure provenance]: this spec's
+#   label "task-briefed full precision 1.14" mislabels an UNSOURCED
+#   brief figure -- 1.14 is derivable from NO record surface (the
+#   r187 record log prints the two ZB cells at 1 decimal, 15.3/14.2,
+#   difference 1.1, and its G24 FAIL line carries no numeric drop);
+#   the correct full-precision value is W_rec = 15.300999 - 14.235535
+#   = 1.065464 (reads 1.07; this round's own record, twice
+#   replicated).  Note DXI's explanation of the 1.14 as "die
+#   Differenz der 1-Dezimal-Prints" is arithmetically false (that
+#   difference is 1.1).  The violation itself is REAL (1.0655 >
+#   slack 1.0 -- by only 0.0655), the frozen window [1.00, 1.30]
+#   holds for the true value, and r187's PARTIAL verdict stands: NO
+#   verdict moves.
+# =====================================================================
+
 from __future__ import annotations
 
 import argparse

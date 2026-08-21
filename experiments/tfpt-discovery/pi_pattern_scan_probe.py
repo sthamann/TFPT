@@ -297,6 +297,30 @@ AMENDMENT BLOCK (disclosed at freeze; house protocol):
   reported.
 """
 
+# =====================================================================
+# CORRECTION OF RECORD (Bughunt IX, note DXV, 2026-08-21)
+# ---------------------------------------------------------------------
+# Appended OUTSIDE the frozen spec text per the r131/r165
+# corrections-of-record convention: the module docstring above is the
+# historical record and is NOT edited; SPEC_SHA (= sha256 of the
+# docstring) stays 00fc85173fe07470.  NO numeric change, NO verdict
+# flip, NO RH CLAIM.
+#
+# BH9-F3 [MINOR, smoke lineage under-disclosed]: lineage sentence of
+#   record: THREE smoke logs exist at the pre-freeze SPEC
+#   e556a9c7825e89ea (note DIV said "zwei Struktur-Smokes"; this spec
+#   disclosed no smoke lineage) -- smoke1 = an instrument CRASH
+#   (OverflowError in stream_values: the Liouville-control CF
+#   quotients a_j = 10^j overflow the float conversion; no GATES
+#   line), fixed PRE-FREEZE by the overflow-safe log-space branch
+#   that IS in the frozen code but was disclosed nowhere; smoke2 =
+#   4 pre-freeze FAILs (exactly {G10-port-mprime, G11-port-jet,
+#   G14-mangoldt-tailrides, G30-mangoldt-altjets}); smoke3 = clean
+#   34/34.  Under-disclosed at the time; NO record impact (record
+#   35/35 at the frozen SHA; the ONE disclosed calibration pass and
+#   its single FAIL are consistent as recorded).
+# =====================================================================
+
 from __future__ import annotations
 
 import argparse

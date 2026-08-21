@@ -333,6 +333,54 @@ identical modulo wall-clock tokens (lines carrying 'WALL').
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
+# =====================================================================
+# CORRECTION OF RECORD (Bughunt IX, note DXV, 2026-08-21)
+# ---------------------------------------------------------------------
+# Appended OUTSIDE the frozen spec text per the r131/r165
+# corrections-of-record convention: the module docstring above is the
+# historical record and is NOT edited; SPEC_SHA (= sha256 of the
+# docstring) stays 48637c8898a1da5a.  NO numeric change, NO verdict
+# flip, NO RH CLAIM.
+#
+# BH9-F1 [MAJOR, off-diagonal law stated as matrix identity]:
+#   ORIGINAL (this spec + note DVI): the taxonomy token
+#   WALL-IS-ONE-FUNCTION-LOEWNER-EXACT, the G4 prose "displacement
+#   rank EXACTLY 2 ... == ONE-FUNCTION LOEWNER MATRIX Raw[i,j] =
+#   (f_i - f_j)/(b_i - b_j)", and the sentence "R_h(z) is the scalar
+#   resolvent of an explicit one-function Loewner kernel" state the
+#   structure find at OBJECT level, in the same paragraph that cites
+#   the Loewner-1934 dictionary ("operator monotonicity ==
+#   Loewner-matrix PSD") -- which speaks about the CANONICAL matrix
+#   with diagonal f'(b_i).  The MACHINE content of this round is
+#   correctly scoped: the NOTATION paragraph says "one-function
+#   Loewner form Raw[i,j] = (f_i - f_j)/(b_i - b_j) off-diagonal",
+#   and G60 tests ONLY the commutator column reconstruction (the
+#   displacement equation annihilates the diagonal -- displacement
+#   rank 2 pins the OFF-diagonal alone); "==" between the two is a
+#   quantifier slip.  r189 then proved the wall is NOT the canonical
+#   object, and Bughunt IX re-verified it in fully own code: the
+#   canonical completion L_f is INDEFINITE at h = 4, 5
+#   (log10(|lambda_min|/||F||) = -1.355/-2.001) while the wall is PD,
+#   Delta anchors -8.72/+1.37 and -12.80/+1.43.  RETYPED token (K1,
+#   BH9 proposal verbatim):
+#   WALL-OFF-DIAGONAL-IS-ONE-FUNCTION-LOEWNER-EXACT with the rider
+#   "die Off-Diagonale der Roh-Wand ist exakt die dividierte-
+#   Differenzen-Form EINER Quellfunktion f (Verschiebungsrang 2
+#   fixiert NUR die Off-Diagonale); die VOLLE Wand ist M_h ~ L_f +
+#   diag(Delta) mit quellseitigem Diagonal-Shift Delta != 0 (r189:
+#   Delta_prime = 2a pc, Pol-Block voll kanonisch, L_f INDEFINIT an
+#   jeder Sprosse) -- die Wand ist NICHT die kanonische
+#   Loewner-Matrix des Loewner-1934-Woerterbuchs, und R_h(z) ist die
+#   Resolvente von L_f + diag(Delta), nicht des Loewner-Kerns
+#   allein."  The off-diagonal law and the displacement-rank-2 fact
+#   SURVIVE exactly (BH9 own devs <= 4e-62); this round's headline
+#   (the residue identity) is untouched; the r189 record already
+#   carries the corrected dictionary (spec: "NOT literally the
+#   canonical L_f"; note DX: "Die Wand ist NICHT die kanonische
+#   Loewner-Matrix ihres Potentials") and needs NOTHING.  NO verdict
+#   flips.
+# =====================================================================
+
 from __future__ import annotations
 
 import argparse
