@@ -43,6 +43,1337 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-21",
+    "dateLabel": "2026-08-21 · CXV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the mechanism-arc promotion — the seven durable certified theorem sets of discovery rounds 184–191 graduate from the experiments tree into the load-bearing verification suite (suite "
+      },
+      {
+        "k": "m",
+        "v": "934 \\to 941"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1085 \\to 1093"
+      },
+      {
+        "k": "t",
+        "v": "), after the ninth adversarial bughunt (round 193, note DXV, "
+      },
+      {
+        "k": "m",
+        "v": "44/44"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "9"
+      },
+      {
+        "k": "t",
+        "v": " findings, "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " MAJOR, "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " verdict flips, AND THE HEADLINE X5: every claimed-exact object of the arc reproduced in fully independent code with ZERO FAILED RECOMPUTES) covered the arc and its corrections of record (K1–K5, note DXVI) were applied as appended CORRECTION-OF-RECORD blocks and ADOPTED VERBATIM on every new surface (in particular K1 MAJOR: the round-186 structure token is written WALL-OFF-DIAGONAL-IS-ONE-FUNCTION-LOEWNER-EXACT everywhere — displacement rank 2 fixes ONLY the off-diagonal, the FULL wall is "
+      },
+      {
+        "k": "m",
+        "v": "M_h \\sim L_f + \\mathrm{diag}(\\Delta)"
+      },
+      {
+        "k": "t",
+        "v": " with source-side "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta \\ne 0"
+      },
+      {
+        "k": "t",
+        "v": ", NOT the canonical Loewner matrix of the Loewner-1934 dictionary, and "
+      },
+      {
+        "k": "m",
+        "v": "R_h(z)"
+      },
+      {
+        "k": "t",
+        "v": " is the resolvent of "
+      },
+      {
+        "k": "m",
+        "v": "L_f + \\mathrm{diag}(\\Delta)"
+      },
+      {
+        "k": "t",
+        "v": ", never the full-matrix claim; K2 MINOR: the ZB wiggle reads "
+      },
+      {
+        "k": "m",
+        "v": "1.07"
+      },
+      {
+        "k": "t",
+        "v": " in full precision ("
+      },
+      {
+        "k": "m",
+        "v": "1.065464"
+      },
+      {
+        "k": "t",
+        "v": ", twice replicated) — never the unsourced "
+      },
+      {
+        "k": "m",
+        "v": "1.14"
+      },
+      {
+        "k": "t",
+        "v": "; K3 MINOR: the round-184 smoke lineage disclosed; K4: the glossary rule — every “source-side” qualified as either (eigenvector-free, given "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": ") or (root-free, ray-consuming)); every source probe RE-RUN GREEN AS TYPED before the surface edits (logs kept as "
+      },
+      {
+        "k": "c",
+        "v": "*.promo_rerun.log"
+      },
+      {
+        "k": "t",
+        "v": "): MODULE ONE, "
+      },
+      {
+        "k": "c",
+        "v": "v942_pi_pattern_transfer_specificity.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ", PI-TRANSFER-SPECIFICITY; probe "
+      },
+      {
+        "k": "c",
+        "v": "pi_pattern_scan_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r184 note DIV, "
+      },
+      {
+        "k": "m",
+        "v": "35/35"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "00fc85173fe07470"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "191"
+      },
+      {
+        "k": "t",
+        "v": " s, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "212.2"
+      },
+      {
+        "k": "t",
+        "v": " s): THE DETECTOR-SPECIFICITY THEOREM — all five predefined pi-derived comb worlds land in the fake-world class (log10 tails "
+      },
+      {
+        "k": "m",
+        "v": "-10.0..-17.9"
+      },
+      {
+        "k": "t",
+        "v": ", both holdout halves, ALL 100 non-Mangoldt instances, ZERO anomalies) while the C-MANGOLDT positive control FIRES ON EVERY TRANSFERRED DETECTOR (spike "
+      },
+      {
+        "k": "m",
+        "v": "C = 131.04"
+      },
+      {
+        "k": "t",
+        "v": " vs null max "
+      },
+      {
+        "k": "m",
+        "v": "12.60"
+      },
+      {
+        "k": "t",
+        "v": "; the structured controls prove the detectors CAN fire; pi's classical CF laws replicate as measured expectations) — TRANSFER VALIDITY PROVEN, the load-bearing methodology of the whole arc; typed INSTRUMENT CHARACTERIZATION, NOT ARITHMETIC NOVELTY, no pi-numerology claim, the P-BBP PROVISIONAL flag travels; MODULE TWO, "
+      },
+      {
+        "k": "c",
+        "v": "v943_mangoldt_ablation_localization.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": ", MANGOLDT-ABLATION-LOCALIZED; probe "
+      },
+      {
+        "k": "c",
+        "v": "mangoldt_ablation_ladder_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r185 note DV, "
+      },
+      {
+        "k": "m",
+        "v": "26/27"
+      },
+      {
+        "k": "t",
+        "v": " with the single FAIL the disclosed control-side Beurling density band ("
+      },
+      {
+        "k": "m",
+        "v": "5.74"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "[0.2, 5.0]"
+      },
+      {
+        "k": "t",
+        "v": ") — BH9-adjudicated an honest Poisson fluctuation, density-correct, the W4 headline unweakened; SPEC "
+      },
+      {
+        "k": "c",
+        "v": "504dcac5b2eac650"
+      },
+      {
+        "k": "t",
+        "v": ", re-run green as typed at promotion "
+      },
+      {
+        "k": "m",
+        "v": "167.2"
+      },
+      {
+        "k": "t",
+        "v": " s, same single disclosed FAIL): THE ZERO-COUPLED SHARP LOCALIZATION — the additive property ladder W0 random "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " W5 true Mangoldt switches BOTH arithmetic signatures on ONLY at W5 and SHARPLY (S1 jump "
+      },
+      {
+        "k": "m",
+        "v": "12.07"
+      },
+      {
+        "k": "t",
+        "v": " dex, S2 jump "
+      },
+      {
+        "k": "m",
+        "v": "61\\times"
+      },
+      {
+        "k": "t",
+        "v": "); THE BEURLING HEADLINE ANSWER IS NO (full multiplicativity without Riemann-zero coupling produces NEITHER signature); necessity confirmed by every ablation, EVEN "
+      },
+      {
+        "k": "m",
+        "v": "\\pm 0.01"
+      },
+      {
+        "k": "t",
+        "v": " POSITION JITTER KILLS BOTH; MODULE THREE, "
+      },
+      {
+        "k": "c",
+        "v": "v944_ground_residue_observability.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": ", GROUND-RESIDUE-OBSERVABILITY; probe "
+      },
+      {
+        "k": "c",
+        "v": "ground_residue_obs_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r186 note DVI, "
+      },
+      {
+        "k": "m",
+        "v": "33/33"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "48637c8898a1da5a"
+      },
+      {
+        "k": "t",
+        "v": " verified invariant under the appended K1 correction block, record "
+      },
+      {
+        "k": "m",
+        "v": "782"
+      },
+      {
+        "k": "t",
+        "v": " s, amendment A1 disclosed, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "792.7"
+      },
+      {
+        "k": "t",
+        "v": " s): THE EXACT RESIDUE IDENTITY "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Res}_{z=\\tau} R_h(z) = A_0^2/\\|d\\|^2"
+      },
+      {
+        "k": "t",
+        "v": " gated at ALL 14 rungs to "
+      },
+      {
+        "k": "m",
+        "v": "\\le 7.8\\times10^{-45}"
+      },
+      {
+        "k": "t",
+        "v": ", the Feshbach scalar form with "
+      },
+      {
+        "k": "m",
+        "v": "w'(\\tau)"
+      },
+      {
+        "k": "t",
+        "v": " EIGENVECTOR-FREE GIVEN "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "alpha, m, B"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " source-linear, the CDLI adjugate tie disclosed as prior art), STRICT INTERLACING "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftrightarrow A_0 \\ne 0"
+      },
+      {
+        "k": "t",
+        "v": " both directions exact, GAP-IS-RESIDUE-IN-DISGUISE ("
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon \\le 2.55\\times10^{-6}"
+      },
+      {
+        "k": "t",
+        "v": ": not an independent handle), the honest descent EIGENVECTOR-DESCENDS-NOT-ELIMINATED ("
+      },
+      {
+        "k": "m",
+        "v": "11.2"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "90.7"
+      },
+      {
+        "k": "t",
+        "v": " orders), the raw-gap floor RELABELED-AND-STOPPED, the "
+      },
+      {
+        "k": "m",
+        "v": "\\{l_0, l_2\\}"
+      },
+      {
+        "k": "t",
+        "v": " witness detector, and the K1-corrected off-diagonal Loewner law; MODULE FOUR, "
+      },
+      {
+        "k": "c",
+        "v": "v945_zero_causal_stratification.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", ZERO-CAUSALITY-DEMONSTRATED-WITH-STRATIFICATION; ONE JOINT MODULE for probes "
+      },
+      {
+        "k": "c",
+        "v": "zero_causal_synth_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r187 note DVIII, "
+      },
+      {
+        "k": "m",
+        "v": "31/33"
+      },
+      {
+        "k": "t",
+        "v": " with the two FAILs the disclosed adjudication gates (the f-cell monotonicity violation and the r175-predicted S1 instrument death), SPEC "
+      },
+      {
+        "k": "c",
+        "v": "c20e87eec6d158b9"
+      },
+      {
+        "k": "t",
+        "v": ", re-run green as typed at promotion "
+      },
+      {
+        "k": "m",
+        "v": "819.0"
+      },
+      {
+        "k": "t",
+        "v": " s, and "
+      },
+      {
+        "k": "c",
+        "v": "zb_wiggle_strat_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r190 note DXI, "
+      },
+      {
+        "k": "m",
+        "v": "23/23"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "8639b3a78503a0f9"
+      },
+      {
+        "k": "t",
+        "v": " verified invariant under the appended K2 block, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "64.5"
+      },
+      {
+        "k": "t",
+        "v": " s — r190 upgrades r187 BY REFERENCE, house style): THE CAUSAL ZERO-COUPLING DEMONSTRATION — comb worlds with controlled zero spectra synthesized through the r175 bridge run backwards; Z0 VALIDITY "
+      },
+      {
+        "k": "m",
+        "v": "0.0006"
+      },
+      {
+        "k": "t",
+        "v": " on "
+      },
+      {
+        "k": "m",
+        "v": "C = 131.04"
+      },
+      {
+        "k": "t",
+        "v": "; the off-line dose surface monotone in "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": " everywhere (first response "
+      },
+      {
+        "k": "m",
+        "v": "(0.10, 10^{-2})"
+      },
+      {
+        "k": "t",
+        "v": ", first death "
+      },
+      {
+        "k": "m",
+        "v": "(0.05, 10^{-4})"
+      },
+      {
+        "k": "t",
+        "v": "); EXACT-ORDINATES-REQUIRED (Poisson AND GUE resamples both die); the stratification: the wiggle "
+      },
+      {
+        "k": "m",
+        "v": "1.07"
+      },
+      {
+        "k": "t",
+        "v": " deep inside every matched-dose selection spread ("
+      },
+      {
+        "k": "m",
+        "v": "5.09/3.07/3.98"
+      },
+      {
+        "k": "t",
+        "v": "), dose monotone in expectation, INV-FRAC "
+      },
+      {
+        "k": "m",
+        "v": "1.00"
+      },
+      {
+        "k": "t",
+        "v": " generic subset-overshoot, the per-zero leverage ladder ("
+      },
+      {
+        "k": "m",
+        "v": "\\gamma_2 = 21.02"
+      },
+      {
+        "k": "t",
+        "v": " carries the most, no first-zero dominance, strongly subadditive), depth parity not-artifact; the r185 interpretation upgrades to DEMONSTRATED MECHANISM on the S2 channel — still NO claim about WHERE the true zeros lie; MODULE FIVE, "
+      },
+      {
+        "k": "c",
+        "v": "v946_census_krein_pencil.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": ", CENSUS-KREIN-PENCIL-PARTIAL-LIFT; probe "
+      },
+      {
+        "k": "c",
+        "v": "census_lift_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r188 note DIX, "
+      },
+      {
+        "k": "m",
+        "v": "72/72"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "8ada6b97d56aca46"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "2066"
+      },
+      {
+        "k": "t",
+        "v": " s "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "2060"
+      },
+      {
+        "k": "t",
+        "v": " s re-run, log lineage disclosed in spec, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "2067.1"
+      },
+      {
+        "k": "t",
+        "v": " s): THE EXACT KREIN PENCIL — "
+      },
+      {
+        "k": "m",
+        "v": "N_h(y) = (-1)^{K-1}\\det(J)\\,A_0\\det(\\hat A - yJ)"
+      },
+      {
+        "k": "t",
+        "v": " source-side with "
+      },
+      {
+        "k": "m",
+        "v": "\\sum\\rho_k = -y_t"
+      },
+      {
+        "k": "t",
+        "v": " exactly (dyadic-exact E1 at all six rungs, integer-Bareiss E2 at "
+      },
+      {
+        "k": "m",
+        "v": "h \\le 13"
+      },
+      {
+        "k": "t",
+        "v": "); the residue-sign ladder "
+      },
+      {
+        "k": "m",
+        "v": "(1,5)/(7,3)/(6,14)/(27,14)/(45,34)/(43,73)"
+      },
+      {
+        "k": "t",
+        "v": " MIXED at every true rung; MIXEDNESS-TRANSFORM-INVARIANT (definite impossible in class); MIXEDNESS-IS-ARITHMETIC (atoms-vs-no-atoms, wrong orientation, NOT a sign source); H2 "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " KREIN STRONG DEFINITIZABILITY in operator form; the bracket certified via ENVJ without computing a single root; roots never consumed, tau-free; MODULE SIX, "
+      },
+      {
+        "k": "c",
+        "v": "v947_loewner_pick_dictionary.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ", LOEWNER-PICK-DICTIONARY-MISMATCH; probe "
+      },
+      {
+        "k": "c",
+        "v": "loewner_pick_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r189 note DX, "
+      },
+      {
+        "k": "m",
+        "v": "28/28"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "a547448468899af9"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "1046"
+      },
+      {
+        "k": "t",
+        "v": " s "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "1058"
+      },
+      {
+        "k": "t",
+        "v": " s re-run, three pre-freeze amendments disclosed, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "1082.9"
+      },
+      {
+        "k": "t",
+        "v": " s): THE EXACT DICTIONARY — the wall is a DIAGONALLY-SHIFTED one-function Loewner matrix "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Raw}_h = L_f + \\mathrm{diag}(\\Delta)"
+      },
+      {
+        "k": "t",
+        "v": ", with THE NEW EXACT COSINE-QUADRATURE DIAGONAL LAW "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Raw}[k,k] - f_{\\mathrm{prime}}'(b_k) = 2a\\,\\mathrm{pc}_k"
+      },
+      {
+        "k": "t",
+        "v": " (both quadratures of the same atoms in different slots; sympy per-atom, mp "
+      },
+      {
+        "k": "m",
+        "v": "\\le 6.0\\times10^{-61}"
+      },
+      {
+        "k": "t",
+        "v": ", BH9 own recompute "
+      },
+      {
+        "k": "m",
+        "v": "\\le 6.3\\times10^{-61}"
+      },
+      {
+        "k": "t",
+        "v": "); the pole leg a genuine Pick function with EXACT Herglotz point mass "
+      },
+      {
+        "k": "m",
+        "v": "2\\sinh^2(a/2)\\,\\delta_{-1/4}"
+      },
+      {
+        "k": "t",
+        "v": "; the Pick-class reading REFUTED with margins ("
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}(L_f) < 0"
+      },
+      {
+        "k": "t",
+        "v": " at all 14 rungs, misses wall positivity by "
+      },
+      {
+        "k": "m",
+        "v": "9.4"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "87.9"
+      },
+      {
+        "k": "t",
+        "v": " orders, refinement deepens); SMOOTH-PSD-AT-NODES via the exact commensurate-sampling mechanism "
+      },
+      {
+        "k": "m",
+        "v": "\\sin(2a\\,\\omega_k) == 0"
+      },
+      {
+        "k": "t",
+        "v": " (lattice geometry, not a prime fingerprint); tau-screens both flat; the r45 LOEWNER-DEAD distinction carried; and MODULE SEVEN, "
+      },
+      {
+        "k": "c",
+        "v": "v948_krein_sign_characteristic.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", KREIN-SIGN-CHARACTERISTIC-LAW; probe "
+      },
+      {
+        "k": "c",
+        "v": "krein_definitizer_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r191 note DXIII, "
+      },
+      {
+        "k": "m",
+        "v": "57/57"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "332c1f48f48a6d82"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "1950"
+      },
+      {
+        "k": "t",
+        "v": " s "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "1901"
+      },
+      {
+        "k": "t",
+        "v": " s re-run, no post-freeze amendments, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "1983.4"
+      },
+      {
+        "k": "t",
+        "v": " s): THE SIGN-CHARACTERISTIC LAW — the kernel vector explicit, "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon_i = -\\mathrm{sign}((F/A_0)'(y_i))"
+      },
+      {
+        "k": "t",
+        "v": ", THE r188 RESIDUE LADDER IS THE KREIN SIGN-CHARACTERISTIC MULTISET (two-route proven; in the module on the full 32-cell exact Sturm battery with no floats), THE PARITY SCAFFOLD (root-count parity per pole gap from residue signs alone — the new source-side coordinate, verified at all 81 gaps), THE W(y)-CONGRUENCE-CLASS KILL BY THEOREM (the sign characteristic is congruence-invariant: the mixed ladder kills the entire "
+      },
+      {
+        "k": "m",
+        "v": "W(y) > 0"
+      },
+      {
+        "k": "t",
+        "v": " class at once — the r188 upgrade path IMPOSSIBLE-IN-CLASS, remaining doors named honestly), the Langer degeneracy exhibited (Cayley–Hamilton; strong definitizability "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " H2 per rung), the realness-break witness detector (the Krein invariant sees the witness class where the raw ladder is blind), the strict definitizer ROOT-DEPENDENT (occupancy-minimality fails at "
+      },
+      {
+        "k": "m",
+        "v": "h = 8, 13"
+      },
+      {
+        "k": "t",
+        "v": " by exactly one interior doubled gap). Ledger rows "
+      },
+      {
+        "k": "c",
+        "v": "PI.PATTERN. SCAN.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.MANGOLDT. ABLATION.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.GROUND. RESIDUE. OBS.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.ZERO. CAUSAL. SYNTH.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.ZB. WIGGLE. STRAT.01"
+      },
+      {
+        "k": "t",
+        "v": " (both on "
+      },
+      {
+        "k": "c",
+        "v": "v945"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.CENSUS. SPECTRAL. LIFT.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.LOEWNER. PICK.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.KREIN. DEFINITIZER.01"
+      },
+      {
+        "k": "t",
+        "v": ", all [E] NOT-RH-EVIDENCE active; the mechanism-arc rows carry the NO-RH fences and the “instrument characterization, not arithmetic novelty” typing prominently; the arc's terminal residue written everywhere in the canonical note-DII/DXVI form: the TRIPLE "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "H1 "
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": " H2 "
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": " H3"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": "-cofinal (one rung per dyadic block, all three at the same "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "; the limsup form only mod "
+      },
+      {
+        "k": "m",
+        "v": "D = 0.0042"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "census-forall-"
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " LOOP, flagged"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "H-pin "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the one "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": "-uniform edge of the pair: L1 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " TAIL proven "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " H-pin open; WPD"
+      },
+      {
+        "k": "m",
+        "v": "(a < \\gamma_1^2)"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftarrow"
+      },
+      {
+        "k": "t",
+        "v": " H-pin; the WPD non-"
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": " legs: extension instantiated, TAILWPD world-front"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": "; surfaces: seven veri blocks in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": ", the new mechanism-arc diary section in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " with the live suite-count parentheticals refreshed ("
+      },
+      {
+        "k": "m",
+        "v": "934 \\to 941"
+      },
+      {
+        "k": "t",
+        "v": "; PDF recompiled), the endform article promotion paragraph "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " counts, the email draft promotion paragraph, the website PROMOTED card "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " DAG chips "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " honesty-banner range "
+      },
+      {
+        "k": "c",
+        "v": "v535"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v948"
+      },
+      {
+        "k": "t",
+        "v": ", README/Zenodo "
+      },
+      {
+        "k": "m",
+        "v": "941"
+      },
+      {
+        "k": "t",
+        "v": "; one German research note appended to "
+      },
+      {
+        "k": "c",
+        "v": "experiments/next.txt"
+      },
+      {
+        "k": "t",
+        "v": "; FULL "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " ALL CHECKS PASSED at 941 modules; "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh release"
+      },
+      {
+        "k": "t",
+        "v": " green; "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests regenerated LAST. Round 192 (the commensurability mechanism, note DXIV) STAYS experiments-side per precedent — it landed after the Bughunt-IX scope froze and waits for bughunt coverage; round 193 (Bughunt IX itself) stays as a process round. No omega closed, no marker moved beyond the eight [E] rows, census cardinality 4 unchanged, "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_\\infty"
+      },
+      {
+        "k": "t",
+        "v": " stays OPEN, the "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_h"
+      },
+      {
+        "k": "t",
+        "v": " limit stays OPEN; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-21",
     "dateLabel": "2026-08-21 · CXIV",
     "heading": [
       {

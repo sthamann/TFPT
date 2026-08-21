@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`934` registered scripts · `1085` ledger claims · `10` clusters.
+`941` registered scripts · `1093` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (453 scripts)
+### `core` — Compiler core & the E₈ glue  (460 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -917,6 +917,20 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: PRIME.CBJ.CONFLUENT.FRAME.01 (v939: step A, the selector, the gmin ladder, the SF2 margins this round scopes), PRIME.SIGMAFLOOR.FACTORIZATION.01 (v929: SF1/SF2/SF6), round 181 note CDXCIX (the frozen probe), PRIME.ALIGNMENT.LAW.01 (v941: the named missing ingredient downstream), Bughunt VIII round 183 note DI (A1 + OCS02 verified here) · cited: 3 e8 audit bootstrap, research contracts
 - **v941_alignment_law_factorization** [E/X] `PRIME.ALIGNMENT.LAW.01` — die schärfste unerklärte Regularität des Programms präzise vermessen, als TRIPEL eingefroren und im Mechanismus faktorisiert (nicht hergeleitet, ehrlich getypt): (F1) HALBPOTENZ-EI
   - deps: PRIME.CBJ.CONFLUENT.FRAME.01 (v939: step A, the Gram, the selector margins), PRIME.CBJ.SUBDOF.BLOCKFLOOR.01 (v940: the kill mass this law explains), PRIME.THETAINF.PIN.01 (v935: the bridge, cited, the theta_inf class), PRIME.MANIFOLD.INVARIANCE.01 (v936: the alignment-sharing gap replicated exactly), round 182 note D + the correction note DII (the frozen probe + the correction of record), Bughunt VIII round 183 note DI (F1 MAJOR applied here) · cited: 3 e8 audit bootstrap, research contracts
+- **v942_pi_pattern_transfer_specificity** [E] `PI.PATTERN.SCAN.01` — die Prime-Front-Instrumente strukturell unverändert auf pi-Daten transferiert, mit BEWIESENER Transfer-Validität und dem erwarteten ehrlichen Null: ALLE fünf pi-Welten (Ziffern-Com
+  - deps: PRIME.ALIGNMENT.LAW.01 (v941: the mass-location recipe + anchor strings), PRIME.GONEK.PRICING.01 (v934: the Landau spike-instrument class), round 184 note DIV (the frozen probe), Bughunt IX round 193 note DXV (F3/K3 applied here), PRIME.MANGOLDT.ABLATION.01 (v943: the causal question this round poses, downstream) · cited: 3 e8 audit bootstrap
+- **v943_mangoldt_ablation_localization** [E/X] `PRIME.MANGOLDT.ABLATION.01` — die additive Eigenschafts-Leiter W0 Zufall → W1 Cramer-Dichte → W2 +Log-Gewichte → W3 +Potenz-Grammatik → W4 +volle Beurling-Multiplikativität → W5 echtes Mangoldt: BEIDE arithmeti
+  - deps: PI.PATTERN.SCAN.01 (v942: the transferred instruments + the r184 anchor this round replicates), PRIME.ALIGNMENT.LAW.01 (v941: the alt-jet recipes), round 185 note DV (the frozen probe), Bughunt IX round 193 note DXV (the G07 adjudication applied here), PRIME.ZERO.CAUSAL.SYNTH.01 + PRIME.ZB.WIGGLE.STRAT.01 (v945: the causal demonstration downstream) · cited: 3 e8 audit bootstrap
+- **v944_ground_residue_observability** [E] `PRIME.GROUND.RESIDUE.OBS.01` — der H3/A₀-Floor-Leg in EIGENVEKTOR-FREIEN Koordinaten auf Identitätsniveau: Res_{z=τ} R_h(z) = A₀²/||d||², an ALLEN 14 Sprossen ≤ 7.8e-45 gegattet; w'(τ) berechnet sich eigenvektor
+  - deps: PRIME.ALIGNMENT.LAW.01 (v941: the ray instruments), PRIME.LOEWNER.PICK.01 (v947: the exact dictionary that fixed the diagonal, downstream), round 186 note DVI (the frozen probe), Bughunt IX round 193 note DXV (F1 MAJOR/K1 applied here, the residue identity independently recomputed <= 1.2e-45 in fully own code) · cited: 3 e8 audit bootstrap
+- **v945_zero_causal_stratification** [E] `PRIME.ZERO.CAUSAL.SYNTH.01, PRIME.ZB.WIGGLE.STRAT.01` — EIN gemeinsames Modul (r190 upgraded r187 PER REFERENZ, Haus-Stil): Comb-Welten mit KONTROLLIERTEN Nullstellen-Spektren, durch die r175-Brücke rückwärts synthetisiert, und die S2-S
+  - deps: PRIME.MANGOLDT.ABLATION.01 (v943: the r185 localization this round demonstrates causally), PRIME.THETAINF.PIN.01 (v935: the r175 bridge run backwards + the conditioning-wall prediction), PRIME.ZB.WIGGLE.STRAT.01 (v945: the r190 stratification upgrading this row BY REFERENCE), round 187 note DVIII (the frozen probe), Bughunt IX round 193 note DXV (the FAILs verified honest), PRIME.ZERO.CAUSAL.SYNTH.01 (v945: the r187 dose surface this round stratifies and upgrades BY REFERENCE, the r187 engine imported verbatim, identity-gated), round 190 note DXI (the frozen probe) · cited: 3 e8 audit bootstrap
+- **v946_census_krein_pencil** [E] `PRIME.CENSUS.SPECTRAL.LIFT.01` — das Zensus-Polynom IST die Spektraldeterminante eines quellseitigen selbstadjungierten Pencils, aber eines KREIN-(indefinite-Metrik)-Pencils an jeder echten Sprosse: N_h(y) = (−1)^
+  - deps: PRIME.MOMENT.LAURENT.ROOTLADDER.01 (v924: the moment-Laurent -1 reproduced source-side), PRIME.TOPROOT.THETA.01 (v932: the toproot instrument tables), PRIME.KREIN.DEFINITIZER.01 (v948: the sign characteristic of exactly this pencil, downstream), round 188 note DIX (the frozen probe), Bughunt IX round 193 note DXV (the ladders/transfer/Weyl form independently recomputed exact) · cited: 3 e8 audit bootstrap
+- **v947_loewner_pick_dictionary** [E/O/X] `PRIME.LOEWNER.PICK.01` — die Wand ist NICHT die kanonische Loewner-Matrix ihres Potentials, sondern eine DIAGONAL-VERSCHOBENE: Raw_h = L_f + diag(Δ) (M_h PSD <=> Raw_h PSD per exakter Sylvester-Kongruenz),
+  - deps: PRIME.GROUND.RESIDUE.OBS.01 (v944: the r186 off-diagonal law this round upgraded and diagonally completed -- the K1 rider cites THIS row's dictionary), round 189 note DX (the frozen probe), Bughunt IX round 193 note DXV (the cosine law independently recomputed <= 6.3e-61 + per-atom symbolic, X1: this record correct as written) · cited: 3 e8 audit bootstrap
+- **v948_krein_sign_characteristic** [E/X] `PRIME.KREIN.DEFINITIZER.01` — der r188/v946-Upgrade-Pfad DURCH SATZ GESCHLOSSEN, nicht durch Suche: die gemessene GEMISCHTE Leiter tötet die GESAMTE W(y)>0-Kongruenzklasse AUF EINMAL (die Vorzeichen-Charakteris
+  - deps: PRIME.CENSUS.SPECTRAL.LIFT.01 (v946: the exact pencil whose sign characteristic this row is, the upgrade path this row closes), round 191 note DXIII (the frozen probe), Bughunt IX round 193 note DXV (the two-route eps/count/flip/scaffold/W-lemma/CH all independently recomputed, zero failures) · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1939,16 +1953,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v930_window_instrument_mechanism** — `PRIME.WINDOW.INSTRUMENT.MECHANISM.01`
-- **v931_jetmass_floor_theorems** — `PRIME.JETMASS.FLOOR.01`
-- **v932_toproot_theta_statement** — `PRIME.TOPROOT.THETA.01`
-- **v933_h3_cofinal_adjudication** — `PRIME.H3.COFINAL.01`
-- **v934_gonek_pricing_unconditional** — `PRIME.GONEK.PRICING.01`
-- **v935_thetainf_landau_bridge** — `PRIME.THETAINF.PIN.01`
-- **v936_manifold_invariance_exclusion** — `PRIME.MANIFOLD.INVARIANCE.01`
 - **v937_l1wpd_closure_reduction** — `PRIME.L1WPD.CLOSURE.01`
 - **v938_dbn_heatflow_census** — `PRIME.DBN.HEATFLOW.01`
 - **v939_cbj_frame_adjudication** — `PRIME.CBJ.CONFLUENT.FRAME.01`
 - **v940_cbj_subdof_blockfloor** — `PRIME.CBJ.SUBDOF.BLOCKFLOOR.01`
 - **v941_alignment_law_factorization** — `PRIME.ALIGNMENT.LAW.01`
+- **v942_pi_pattern_transfer_specificity** — `PI.PATTERN.SCAN.01`
+- **v943_mangoldt_ablation_localization** — `PRIME.MANGOLDT.ABLATION.01`
+- **v944_ground_residue_observability** — `PRIME.GROUND.RESIDUE.OBS.01`
+- **v945_zero_causal_stratification** — `PRIME.ZERO.CAUSAL.SYNTH.01, PRIME.ZB.WIGGLE.STRAT.01`
+- **v946_census_krein_pencil** — `PRIME.CENSUS.SPECTRAL.LIFT.01`
+- **v947_loewner_pick_dictionary** — `PRIME.LOEWNER.PICK.01`
+- **v948_krein_sign_characteristic** — `PRIME.KREIN.DEFINITIZER.01`
 
