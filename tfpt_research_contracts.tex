@@ -112,7 +112,11 @@ physics, not missing dynamics (\texttt{RESIDUAL.CERTIFICATION.01}). The two kind
 targets, \texttt{SEAM.EQUIV.01} and \texttt{ALPHA.QUILLEN.EXACT.01}, are additionally packaged as
 self-contained \emph{externalization contracts} (statement, hypothesis list, runnable finite models,
 Lean axiom surface, must-fail controls, acceptance tests) in their own sections at the end of this
-document --- hand-off documents for outside specialists; both stay \mO, no marker moves.
+document --- hand-off documents for outside specialists; both stay \mO, no marker moves.  A third
+hand-off document in the same format, \texttt{PRIME.RESIDUE.EXTERNAL.01}, packages the
+prime-front's terminal \emph{open statements} for external specialists in analytic number theory
+--- it offers open problems only, asserts no progress toward the Riemann Hypothesis in either
+direction, and moves nothing.
 \smallskip\\
 \noindent\textbf{The Coxeter-clock facet symmetry, resolved as a structural lemma
 (\texttt{RES.COXETER.SYMMETRY.01}, \veri{v394\_coxeter\_atoms.py}/\veri{v409\_coxeter\_prime2\_lemma.py}).} The
@@ -11279,6 +11283,278 @@ one structural):
   marker move happens in \texttt{status\_ledger.csv} by the house process, never in this
   document.
 \end{itemize}
+
+% =====================================================================
+\section*{Externalization Contract --- \texttt{PRIME.RESIDUE.EXTERNAL.01} (the prime-front terminal residue, packaged for external specialists)}
+\addcontentsline{toc}{section}{Externalization Contract: PRIME.RESIDUE.EXTERNAL.01}
+% =====================================================================
+\noindent\emph{Typing.} The third hand-off document: the \emph{terminal open statements} of the
+prime-front programme (diary and status record: \texttt{tfpt\_prime\_front}), packaged
+self-containedly for outside specialists in analytic number theory --- large sieve, sampling and
+frame theory, de~Branges spaces, explicit-formula methods.  It \emph{documents}, it does not
+close: the contract identifier names this document, not a ledger row; every prime-front ledger
+row behind it (\texttt{PRIME.*}) is an \mE-typed \textsc{not-rh-evidence} identity, finite
+theorem or honest kill record, and none moves here.  \textbf{This contract offers open problems.
+It asserts no progress toward the Riemann Hypothesis in either direction; nothing below is
+evidence for or against it, and no submitted solution is solicited as such evidence.}
+Throughout, ``$\lambda$-uniform'' is house shorthand for \emph{uniform over the whole rung
+ladder} (the infinite quantifier), as opposed to per-rung, finite, or classical-per-census legs;
+``census'' always means the finite root set defined below, never a zero set of $\zeta$.
+
+\par\smallskip\noindent\textbf{(1) The finite objects, self-contained.}  Fix an integer rung
+$h \ge 4$ and set $a = \tfrac12\log h$, $K = \lceil 1.25\,h\log h\rceil$, modes
+$\omega_k = k\pi/a$ ($k = 0..K{-}1$), poles $b_k = \omega_k^2$, and the block height
+$T_z = 2\pi h$.  The \emph{source data} are the von~Mangoldt atoms
+$(u_q, w_q) = (\log q,\ \Lambda(q)/\sqrt q)$ over the prime powers $q \le h$ --- the only
+arithmetic input anywhere.  The \emph{wall matrix} $M_h = M_{\mathrm{pole}} + M_{\mathrm{arch}}
+- M_{\mathrm{prime}}$ is the $K\times K$ matrix of the Weil-explicit-formula quadratic form in
+the normalised even trigonometric mode basis $\{\cos(\omega_k u)\}$ on the window $[0, 2a]$:
+$M_{\mathrm{pole}}$ is the rank-one pole block, $M_{\mathrm{arch}}$ the archimedean
+($\Gamma$-term) block, and $M_{\mathrm{prime}}$ the \emph{only} atom-dependent block ---
+\emph{linear} in exactly two atom transforms per mode, $P_k = \sum_q w_q\sin(\omega_k u_q)$
+off-diagonal and $\tilde P_k = \sum_q w_q\,[(a - u_q/2)\cos(\omega_k u_q) - \sin(\omega_k u_q)/
+(2\omega_k)]$ on the diagonal (the \vref{v935} per-mode linearity; the exact assembly is frozen
+in the builder cited in (6) and rebuildable from the explicit formula for this window class).
+Let $\tau_h = \lambda_{\min}(M_h)$ and let $d$ (the \emph{wall argmin ray}) be its unit
+eigenvector; the \emph{source coefficients} $c_k$ are the de-normalised components of $d$.
+From these: $A_0 = \sum_k(-1)^k c_k$, $A_2 = \sum_{k\ge1}(-1)^k c_k b_k$,
+$y_t = |A_2/A_0|$, $B_1 = \sum_{k\ge1} b_k = (\pi/a)^2(K{-}1)K(2K{-}1)/6$,
+$\kappa = B_1/y_t$; the rational function
+\[
+  F(y) \;=\; c_0 + \sum_{k\ge1}(-1)^k c_k\,\frac{y}{y - b_k},
+\]
+whose numerator $N(y)$ (degree $K{-}1$, leading coefficient $A_0$) is the \emph{census
+polynomial}; its roots $y_j$ are \emph{the census}.  The moment--Laurent normal form is
+$(y/y_t)\,F(y)/A_0 = \Phi(z) = z - 1 + \sum_{m\ge1} J_{m+1} z^{-m}$ at $z = y/y_t$
+(\vref{v924}).  The \emph{jet mass} at rung $h$ is
+\[
+  \delta_h \;=\; \frac{\sum_\gamma \sin^2(a\gamma)\,F(\gamma^2)^2/\gamma^2}
+                      {A_0^2 \sum_\gamma \sin^2(a\gamma)/\gamma^2},
+\]
+the sum over verified ordinates $\gamma \in (T_z + 6,\ \gamma_{7000}]$ (caches in (6)); the
+step-A identity $\delta_h = |J_h|^2_{G_h}$ with the jet vector $J = d/A_0$ and $G_h$ the Gram
+of $\psi_k(\gamma) = \gamma^2/(\gamma^2 - b_k)$ under the weight $\sin^2(a\gamma)/\gamma^2$ is
+\emph{exact}, remainder $0$ (\vref{v939}).  The three per-rung hypotheses:
+\begin{itemize}
+\item \textbf{H1$(h; c^*)$:} no census root with $\operatorname{Re} y \ge c^* y_t$, with
+  $c^* \in [1.10, 1.15]$ (grid values, flat over all built rungs).  H1 is \emph{certified
+  source-pure} per rung ($h \le 26$): one exact evaluation of the monotone envelope,
+  $\mathrm{ENVJ}(c^* y_t) < |A_0|$ --- no cache, no zeros (\vref{v931}).
+\item \textbf{H2$(h)$:} the census is complete-real and nonnegative (all $K{-}1$ roots real,
+  $\ge 0$).  Landed at all 25 built rungs including the degree-116 census at $h = 28$; finite
+  classical per rung, hard $h \le 13$ (\vref{v931}).
+\item \textbf{H3$(h)$:} $y_t \le 0.155\,T_z^4$.  Source-pure certificate, certified $26/26$
+  with margin $\ge 1.99$, \emph{refutable} (an explicit inflation witness breaks it) and not
+  norm-continuous (\vref{v932}).
+\end{itemize}
+
+\par\smallskip\noindent\textbf{(2) The three minimal open statements.}  These are the
+programme's terminal residue in the canonical form (note DII of the discovery record), stated
+as clean problems about the finite family above.
+\begin{itemize}
+\item \textbf{(R1) The triple.}  \emph{Prove $\{$H1 $\wedge$ H2 $\wedge$ H3$\}$-cofinal: for
+  every sufficiently large $k$ there is a rung $h$ in the dyadic block $(2^k, 2^{k+1}]$ at
+  which H1, H2 and H3 hold simultaneously --- one rung per block, all three at the same $h$.}
+  Only this cofinal form is asked; the limsup form is available only modulo the measured
+  quantifier defect $D = 0.0042$ (block-average $+$ pigeonhole is proven exact yet
+  subsidy-empty, \vref{v933}).  Everything downstream of the triple is finite algebra or
+  classical-per-census: the product floor and its assembly are theorems conditional
+  \emph{exactly} on it (\vref{v931}).
+\item \textbf{(R2) The loop characterization.}  \emph{The census-forall-$k$ statement} ---
+  the same census schedule quantified over \emph{all} blocks at once --- \emph{is identified
+  as RH-equivalent-in-currency by four independent machine-detected proof-route cycles}:
+  census universalization $==$ the RH loop (\vref{v928}); the pinning-supply route $==$ the
+  same loop's costume (\vref{v929}); BANDPOS on the unbounded ladder $\iff$ RH (\vref{v930});
+  and the de~Bruijn--Newman backward-persistence leg $==$ the $[\Lambda \le 0]$ class
+  (\vref{v938}).  Stated honestly: within the corpus vocabulary this statement and RH price
+  each other; no proof of equivalence in the literature sense is claimed.  The external value
+  is either a genuinely \emph{new independent sign source} for it, or a \emph{proof that the
+  loop is essential} (that census-forall-$k$ is RH-equivalent), which would close the
+  programme's hardness question honestly.
+\item \textbf{(R3) The H-pin.}  \emph{The one $\lambda$-uniform edge of the counting pair
+  $\{$L1, WPD$\}$} (\vref{v937}): L1 $=$ TAIL is proven and the H-pin is open; the weak
+  positional dominance WPD$(a < \gamma_1^2)$ follows from the H-pin for every integer rung
+  $x \ge 3$.  The pin splits as $\Omega$-a $\oplus$ $\Omega$-b $\oplus$ H123M counting:
+  $\Omega$-a (EPS-LOCK) is the variational quotient $\bar\varepsilon \le
+  \mathrm{poly}(x)\,|A_0|\sqrt G$ --- numerator trial-priceable, denominator floor $==$ the
+  flagged $A_0$-triangle loop; $\Omega$-b (SPACING-REMAINDER) is the QSUBGAP kernel.  The
+  exact place the floor escapes linearity is machine-exhibited at \emph{two} maps
+  (\vref{v937}): the eigenvector map ($\lambda_{\min}$ is not additive ---
+  $\lambda_{\min}(A{+}B) = -\sqrt2 \ne \lambda_{\min}(A) + \lambda_{\min}(B) = -2$ on an exact
+  $2\times2$ instance) and the census-root map (not affine, $d^2y^*/dw_1^2 \ne 0$
+  symbolically); the bridge atoms are $c$-free while the pin floor $m_j =
+  4|A_0\sin(a\mu_j)|\,\mathrm{PR}_j$ is $c$-loaded --- the floor lives on the vector side of
+  the mode-level bridge, and the conditioning wall of \vref{v935} applies verbatim.
+\end{itemize}
+
+\par\smallskip\noindent\textbf{(3) What is proven and citable (complete typed hypothesis
+list).}  \textsc{proven-finite} $=$ machine-checked in the suite (module cited);
+\textsc{cited-classical} $=$ a published theorem, used as stated, never re-proved;
+\textsc{open} $=$ the targets themselves.
+\begin{center}\footnotesize
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}l>{\hsize=1.45\hsize\raggedright\arraybackslash}X>{\hsize=0.55\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Type} & \textbf{Hypothesis} & \textbf{Witness} \\
+\midrule
+\textsc{proven-finite} & Theorem PF: the product floor $F/A_0 \ge (1 - c^*/z)^{(1+\kappa)/c^*}$, exponent $=$ the trace, conditional \emph{exactly} on $\{$H1 $+$ H2 per rung$\}$; H1 source-pure (one envelope evaluation per rung); witness modus tollens & \vref{v931} \\
+\textsc{proven-finite} & the rate dictionary $a = p/2 - 1$ proven at $p = 3, 4, 5$; TR-CAP proven \emph{and} typed circular-for-TOPROOT; the H3 certificate ($26/26$, margin $\ge 1.99$, refutable) & \vref{v932} \\
+\textsc{proven-finite} & block-average $+$ pigeonhole exact yet subsidy-empty ($D = 0.004183$); the witness boundary a theorem boundary, DK-scoped & \vref{v933} \\
+\textsc{proven-finite} & the unconditional Landau/Gonek pricing: Landau 1912 $+$ Gonek 1985/1993 identified unconditional; Gonek 1984 machine-checked \emph{not an ancestor} (hidden loop flagged, never consumed); envelope closed form sympy-exact, census-depth-insensitive & \vref{v934} \\
+\textsc{proven-finite} & the mode-level Landau bridge: the first linear per-mode classical identity ($M_{\mathrm{prime}}$ linear in two atom transforms per mode); the rate dictionary a proven bijection (transports every $\theta_\infty$, pins none) & \vref{v935} \\
+\textsc{proven-finite} & the tau-free DK exclusion theorem: $\sin\theta \le (r_0/\tau)/(\mathrm{FG} - a)$ with $\tau$ cancelling, proven $h \le 13$ at the $10^{-25}$ bar $+$ the exact required-bar schedule $b^*(h)$; the BA3 scale-gauge theorem & \vref{v936} \\
+\textsc{proven-finite} & WPD's $\lambda$-uniform content $==$ the H-pin edge (AND-fire at the declared edges); the restatement licenses; the two linearity-escape exhibits & \vref{v937} \\
+\textsc{proven-finite} & the exact census semigroup: the de~Bruijn--Newman flow on the derived census polynomial is $e^{-tT}$, $T = 4y\,\partial^2 + 2\,\partial$, closed form, trace law at measured deviation $0.0$; the factor-4 normalisation lemma; the dictionary threefold-inequivalent & \vref{v938} \\
+\textsc{proven-finite} & step A exact: $\delta_h = |J_h|^2_{G_h}$ with remainder $0$, generic; the cluster normal form (basis-change determinant $=$ the spacing product); Montgomery--Vaughan carried at $3.15\pi$ with exact margin $1/21$ & \vref{v939} \\
+\textsc{proven-finite} & the sub-dof composition chain typed exactly (four exact legs; the floor \emph{value} is the measured leg); the complete unconditional lower-class pricing table & \vref{v940} \\
+\textsc{proven-finite} & the Gram is source-free (proven three ways); the ray-to-law map projective-linear and $A_0$-free ($s_i A_0$ linear in $d$); the one shared nonlinear link is the wall eigenmap & \vref{v941} \\
+\textsc{cited-classical} & Landau 1912 (the classical zero-counting/sum form over all nontrivial zeros, unconditional) & \vref{v934} \\
+\textsc{cited-classical} & Gonek 1985/1993 (unconditional exponential-sum bounds; the RH-conditional Gonek 1984 family is \emph{flagged}, never consumed) & \vref{v934} \\
+\textsc{cited-classical} & Montgomery--Vaughan 1974 (the generalized Hilbert inequality; killed at linkage $1$, carrying at $3.15\pi$) & \vref{v939} \\
+\textsc{cited-classical} & Ortega-Cerd\`a--Seip 2002 (Fourier frames, Ann.\ of Math.\ \textbf{155}, 789--806: the Carleson box condition is equivalent to the \emph{upper} inequality alone --- wrong direction for a floor) & \vref{v940} \\
+\textsc{cited-classical} & Nazarov--Tur\'an 1993 (explicit unconditional lower bound, exponential in the term count --- the classical mirror of the measured occupancy law) & \vref{v940} \\
+\textsc{cited-classical} & Rodgers--Tao 2020 ($\Lambda \ge 0$), consumed as a \emph{cited ceiling} only --- its proof consumes pair correlation, which is exactly the flagged loop class & \vref{v938} \\
+\textsc{cited-classical} & Polymath 15 2019 ($\Lambda \le 0.22$), consumed as a \emph{cited ceiling} only & \vref{v938} \\
+\textsc{open} & \textbf{R1--R3 above} --- the cofinal triple, the loop characterization, the H-pin & this contract \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\par\smallskip\noindent\textbf{(4) What is measured (honest).}  Measured legs are carried as
+measurements, never as theorems: the unscoped sub-block floor holds with margins $\ge 1.405$ at
+all built rungs and the source-only Bertrand-cofinal selector ($\hat h_k = 7/13/31/\ldots$)
+clears the SF2 demand with margins $2.14/3.05$ (\vref{v939}/\vref{v940}); the alignment law is
+a frozen measured \emph{triple} --- the half-power envelope ($\alpha$ inside the
+\emph{descriptive} band $(0.38, 0.54)$ at all 14 rungs, never a prediction), the quarter-depth
+wall lock ($\mu_m = 0.2372\,\log_{10} g_{\min}$, $R^2\,0.9916$) and the deep excess
+($5.64$--$7.58$ dex) (\vref{v941}); the classical-evaluation face $\theta_\infty$ sits in the
+measured band $[0.0766, 0.0977]$ and is typed \textsc{open-nonperturbative-variational} ---
+deeper census improves the data ${\sim}1/T$ but provably never the limit
+(\vref{v933}/\vref{v935}); and the full-space refuter ladder is \emph{always cited paired}: the
+measured first-order minimum sits $30$--$33$ orders above the $10^{-25}$ bar, while the
+\emph{proven} schedule is $b^*(h) = 23.8/21.7/15.7/4.4$ orders at $h = 4/5/8/13$ and \emph{none}
+at $h \ge 16$ (\vref{v936}).  The quartic growth law behind H3 stays \textsc{measured}
+(\vref{v926}); the quantifier defect $D = 0.004183$ is a measurement.
+
+\par\smallskip\noindent\textbf{(5) The kill atlas (so external solvers do not rebuild
+corpses).}  The campaign's obstruction record is machine-checked: an 11-node implication DAG
+with exactly one open edge and a candidate map complete over the corpus vocabulary --- 24
+candidate sign sources, $0$ pass (\texttt{tfpt\_prime\_front}, kill-atlas section; sandbox,
+typed editorial).  The named dead route classes, each with its one-line death mechanism:
+\begin{center}\footnotesize
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=0.62\hsize\raggedright\arraybackslash}X>{\hsize=1.08\hsize\raggedright\arraybackslash}X>{\hsize=0.30\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Route class} & \textbf{Death mechanism} & \textbf{Round / witness} \\
+\midrule
+pointwise symbol minorants & the decisive eigenvalue is a smooth-direction cancellation invisible to any pointwise symbol minorant & diary, wall-operator arc \\
+$\ell^1$ / absolute-value majorants & the target is a five-order cancellation of three ${\sim}200$-sized pieces; the $\ell^1$ majorant overshoots by $10^{3}$--$10^{6}$ & diary, bilinear arc (T170) \\
+phase-discarding additive source forms & the source-only additive (Weyl-split) route is vacuous by $10.9$--$54.6$ dex: the cancellation \emph{is} the arithmetic & r166, \vref{v927} \\
+Vieta pinch / power sums & $1/A_0$ appears in every symmetric function --- the resummation never decouples from the Connes scale & r172, \vref{v932} \\
+moment / trace caps & TR-CAP proven yet circular-for-TOPROOT; finite-$P$ moment models undershoot by $1.4$--$4.5$ dex (rate-blind trace-cap vacuity) & r162/172, \vref{v926}/\vref{v932} \\
+Riccati / half-gap induction, manifold transport & transport relabels, never reduces: frame legs exact, source legs non-transporting, the level is cheaper than the increment --- the infinite quantifier does not fall by induction & r177, \vref{v936} \\
+de~Bruijn--Newman pinch & theta-flow-inert ($\ge 4021\times$ the unconditional window); wall fragility $8$--$51$ orders below the window; the only closing leg is the flagged $[\Lambda \le 0]$ class & r179, \vref{v938} \\
+global CBJ frame inequality & the dof kill ($n = 474$ coefficients vs Landau time-bandwidth rank $128$), seam coupling $0.994$, occupancy collapse & r180, \vref{v939} \\
+sub-dof scoping & the jet mass leaves the well-conditioned cell at $+0.999$ dex per rung; the scoped margin dies by ${\sim}125\times$ at $\hat h(B3) = 13$ & r181, \vref{v940} \\
+Carleson embedding as a floor & wrong direction: the box condition is equivalent to the \emph{upper} inequality alone; every unconditional lower class misses for a named reason & r181, \vref{v940} \\
+naive floor-power composition & overshoots the honest composed floor by $3.41/10.14$ dex; the level needs a per-mode lower bound on the known variational-quotient wall & r182, \vref{v941} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\par\smallskip\noindent\textbf{(6) Available finite models (runnable).}  All models live in
+the repository and run standalone (Python 3, \texttt{mpmath}/\texttt{sympy}/\texttt{numpy};
+\texttt{python verification/run\_all.py} runs the whole suite):
+\begin{itemize}
+\item \veri{v931\_jetmass\_floor\_theorems.py} --- theorem PF, H1/H2, the assembled floor
+\item \veri{v932\_toproot\_theta\_statement.py} --- TOPROOT, the rate dictionary, H3
+\item \veri{v933\_h3\_cofinal\_adjudication.py} --- the cofinal adjudication, $D$, $\theta_\infty$
+\item \veri{v934\_gonek\_pricing\_unconditional.py} --- the unconditional classical pricing
+\item \veri{v935\_thetainf\_landau\_bridge.py} --- the mode-level Landau bridge
+\item \veri{v936\_manifold\_invariance\_exclusion.py} --- the DK exclusion, the refuter ladder
+\item \veri{v937\_l1wpd\_closure\_reduction.py} --- the H-pin split and linearity exhibits
+\item \veri{v938\_dbn\_heatflow\_census.py} --- the exact census semigroup
+\item \veri{v939\_cbj\_frame\_adjudication.py} --- step A, the Gram, the selector
+\item \veri{v940\_cbj\_subdof\_blockfloor.py} --- the sub-dof kill, the lower-class table
+\item \veri{v941\_alignment\_law\_factorization.py} --- the alignment-law factorization
+\end{itemize}
+The substrate modules \vref{v922}--\vref{v930} carry the spacing/jet sum rules, the razor
+enclosure, the moment--Laurent ladder and the block-average/transfer/sigma-floor algebra.  The
+frozen discovery probes (deterministic, SPEC-hashed, in
+\texttt{experiments/tfpt-discovery/}):
+\begin{itemize}
+\item \texttt{jetmass\_floor\_probe.py} (r171), \texttt{toproot\_theta\_probe.py} (r172)
+\item \texttt{h3\_cofinal\_probe.py} (r173), \texttt{gonek\_pricing\_probe.py} (r174)
+\item \texttt{thetainf\_pin\_probe.py} (r175), \texttt{manifold\_invariance\_probe.py} (r177)
+\item \texttt{l1wpd\_closure\_probe.py} (r178), \texttt{dbn\_heatflow\_probe.py} (r179)
+\item \texttt{cbj\_frame\_probe.py} (r180), \texttt{cbj\_subdof\_probe.py} (r181)
+\item \texttt{alignment\_law\_probe.py} (r182)
+\end{itemize}
+In the same directory: the frozen instrument
+builder \texttt{radius4\_an\_probe.py} (\texttt{build\_cell}; worlds
+\textsc{main}/\allowbreak\textsc{smooth}/\allowbreak\textsc{scrarith}/\allowbreak
+\textsc{epstein}) and the verified ordinate caches \texttt{verified\_zeros\_big.npy} and
+\texttt{verified\_zeros\_n7000.npy} (with \texttt{\_meta.json} sidecars; the big cache holds
+$2\times10^{7}$ verified ordinates and tops out at $T(2\times10^{7}) = 9\,499\,220.48$).
+The verified height horizon is cited as PT21
+($T_{\rm PT} = 3\,000\,175\,332\,800$) with HSW22 Cor.~1.2 as the envelope form.
+
+\par\smallskip\noindent\textbf{(7) Formalization surface (honest).}  The only prime-front
+Lean~4 content is exact finite algebra: the spacing product for generic finite $K$ over an
+arbitrary field, the jet sum rules, and the cofinal-wall composition/predefinition audits
+(\texttt{TfptCarrier/SpacingProduct.lean}, \texttt{JetSumRules.lean},
+\texttt{CofinalWeil.lean}, \texttt{CofinalEnvelope.lean}, \texttt{CofinalPredefinition.lean},
+\texttt{WallCofinalComposition.lean}, \texttt{WallCertifiedHead.lean}; \texttt{lake build}
+clean, no \texttt{sorry}).  \textbf{Nothing of R1--R3 is formalised}: H1/H2/H3, the census
+objects, $\delta_h$, the product floor and the pin have \emph{zero} Lean content --- no
+analysis, no zeros, no operator statements.  An external solver should treat the Lean layer as
+contributing only the finite spacing/jet algebra audit.
+
+\par\smallskip\noindent\textbf{(8) Must-fail controls.}  A submitted solution is accepted only
+if it respects the following (each already realised as a machine-checked negative control in
+the probes above):
+\begin{itemize}
+\item \textbf{MF-P1 (Epstein).}  Any proposed sign source or positivity argument must fail, or
+  demonstrably lose its constant, on the \textsc{epstein} world (the $x^2 + 5y^2$ lattice
+  atoms: an $L$-function class with off-line zeros).  An argument that goes through unchanged
+  there proves too much.
+\item \textbf{MF-P2 (Scramble).}  It must fail on \textsc{scrarith} (the golden-ratio
+  permutation of the atom weights on the same support): the law must consume the joint
+  sign-and-magnitude structure of the source, not its histogram.
+\item \textbf{MF-P3 (Smooth).}  It must fail on the atom-free \textsc{smooth} world: the
+  conclusion must be arithmetic, not archimedean bookkeeping.
+\item \textbf{MF-P4 (no-zero test).}  The proof must consume \emph{no} zero tables: machine
+  ancestry of the delivered chain must be zero-free (the G44-class no-zero gate).  The caches
+  of (6) are for \emph{verification} of finite claims, never inputs to a submitted proof.
+\item \textbf{MF-P5 (predefinition test).}  Clusters, weights and selectors must be predefined
+  and sealed \emph{before} any sign evaluation (the sealed-pre-ward discipline of r180); no
+  sign-mined selection.
+\item \textbf{MF-P6 (loop firewall).}  The proof must not consume the four machine-flagged
+  loop classes: census-forall-$k$ (R2 itself); the $A_0$-triangle; zero-verification-as-hypothesis
+  (including the RH-conditional Gonek 1984 family); and the RH-conditional second moments
+  (Montgomery pair correlation / Goldston--Montgomery).  Consuming any of them re-imports the
+  hypothesis.
+\end{itemize}
+
+\par\smallskip\noindent\textbf{(9) Acceptance tests.}  An external result counts against this
+contract exactly when it delivers one of:
+\begin{itemize}
+\item \textbf{(a) an explicit all-$h$, all-$a$ bound} --- a $\lambda$-uniform inequality (over
+  the whole rung ladder, uniform in the window parameter) that implies R1 or the H-pin edge of
+  R3 under the hypothesis list of (3), with any additional hypothesis flagged explicitly and
+  the must-fail controls of (8) verifiably respected;
+\item \textbf{(b) a genuinely new sign source} --- one that \emph{separates the worlds and
+  independently orients} (the frozen gate the 24 corpus candidates all fail): it must break on
+  Epstein/Scramble/Smooth while carrying an unconditional orientation on the true source; or
+\item \textbf{(c) a proof that one of R1--R3 is RH-equivalent} --- which would close the
+  programme's hardness question honestly and is recorded as exactly that, never as progress
+  toward RH.
+\end{itemize}
+Partial results that close a single leg (e.g.\ the $\Omega$-b kernel alone, or one dyadic
+block class) narrow the target and are recorded as such.  Any marker move happens in
+\texttt{status\_ledger.csv} by the house process, never in this document.  \textbf{No
+statement about the truth, provability or falsity of the Riemann Hypothesis is made here, and
+none is implied by the acceptance of a submission.}
 
 % =====================================================================
 \section*{Certifiability and recommended order}

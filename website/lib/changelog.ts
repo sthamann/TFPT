@@ -42,6 +42,793 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-21",
+    "dateLabel": "2026-08-21 · CXIV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the third externalization contract — the prime-front terminal residue packaged as a short, precise, self-contained EXTERNALIZATION CONTRACT "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.RESIDUE.EXTERNAL.01"
+      },
+      {
+        "k": "t",
+        "v": " for outside specialists in analytic number theory (large sieve, sampling/frame theory, de Branges spaces, explicit-formula methods), added as one new section in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " after the "
+      },
+      {
+        "k": "c",
+        "v": "ALPHA.QUILLEN.EXACT.01"
+      },
+      {
+        "k": "t",
+        "v": " contract (before “Certifiability and recommended order”), plus a one-sentence pointer in the head keybox; DOCUMENTATION ONLY — no module touched, no number changed, no status marker moved, no ledger row added or edited, no gate closed or narrowed, NO RH claim (the contract identifier names the document, not a ledger row; the section states explicitly that it offers OPEN PROBLEMS and asserts no progress toward the Riemann Hypothesis in either direction): (1) the SELF-CONTAINED FINITE OBJECTS — rung "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": ", modes "
+      },
+      {
+        "k": "m",
+        "v": "\\omega_k = k\\pi/a"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "a = \\tfrac12\\log h"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "K = \\lceil 1.25\\,h\\log h\\rceil"
+      },
+      {
+        "k": "t",
+        "v": ", the von Mangoldt atoms "
+      },
+      {
+        "k": "m",
+        "v": "(\\log q, \\Lambda(q)/\\sqrt q)"
+      },
+      {
+        "k": "t",
+        "v": " as the only arithmetic input, the wall matrix "
+      },
+      {
+        "k": "m",
+        "v": "M_h = M_{\\mathrm{pole}} + M_{\\mathrm{arch}} - M_{\\mathrm{prime}}"
+      },
+      {
+        "k": "t",
+        "v": " with the prime block linear in two atom transforms per mode ("
+      },
+      {
+        "k": "c",
+        "v": "v935"
+      },
+      {
+        "k": "t",
+        "v": "), the wall argmin ray "
+      },
+      {
+        "k": "m",
+        "v": "d"
+      },
+      {
+        "k": "t",
+        "v": ", the census polynomial "
+      },
+      {
+        "k": "m",
+        "v": "N(y)"
+      },
+      {
+        "k": "t",
+        "v": " (numerator of "
+      },
+      {
+        "k": "m",
+        "v": "F(y) = c_0 + \\sum(-1)^k c_k\\,y/(y - b_k)"
+      },
+      {
+        "k": "t",
+        "v": "), the moment–Laurent form "
+      },
+      {
+        "k": "m",
+        "v": "\\Phi(z)"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "c",
+        "v": "v924"
+      },
+      {
+        "k": "t",
+        "v": ") and the jet mass "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_h = |J_h|^2_{G_h}"
+      },
+      {
+        "k": "t",
+        "v": " exactly (step A, "
+      },
+      {
+        "k": "c",
+        "v": "v939"
+      },
+      {
+        "k": "t",
+        "v": "); (2) the THREE MINIMAL OPEN STATEMENTS in the canonical note-DII form — R1 THE TRIPLE ("
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "H1 "
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": " H2 "
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": " H3"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": "-cofinal, one rung per dyadic block, all three at the same "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "; H1: no census root with "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Re}\\,y \\ge c^* y_t"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "c^* = 1.10"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "1.15"
+      },
+      {
+        "k": "t",
+        "v": "; H2: census complete-real nonnegative; H3: "
+      },
+      {
+        "k": "m",
+        "v": "y_t \\le 0.155\\,T_z^4"
+      },
+      {
+        "k": "t",
+        "v": "; the limsup form only mod the measured defect "
+      },
+      {
+        "k": "m",
+        "v": "D = 0.0042"
+      },
+      {
+        "k": "t",
+        "v": "), R2 THE LOOP CHARACTERIZATION (census-forall-"
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": ", honestly stated as RH-equivalent-in-currency via the four independent machine-detected proof-route cycles "
+      },
+      {
+        "k": "c",
+        "v": "v928"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v929"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v930"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v938"
+      },
+      {
+        "k": "t",
+        "v": "; external value: a new independent sign source or a proof the loop is essential) and R3 THE H-PIN (the one "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": "-uniform edge of the pair "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "L1, WPD"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " with the "
+      },
+      {
+        "k": "m",
+        "v": "\\Omega"
+      },
+      {
+        "k": "t",
+        "v": "-a/"
+      },
+      {
+        "k": "m",
+        "v": "\\Omega"
+      },
+      {
+        "k": "t",
+        "v": "-b split and the two machine-exhibited linearity-escape maps — the eigenvector map and the census-root map, "
+      },
+      {
+        "k": "c",
+        "v": "v937"
+      },
+      {
+        "k": "t",
+        "v": "); (3) the COMPLETE TYPED HYPOTHESIS LIST — 11 PROVEN-FINITE rows citing "
+      },
+      {
+        "k": "c",
+        "v": "v931"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v932"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v933"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v934"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v935"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v936"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v937"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v938"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v939"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v940"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v941"
+      },
+      {
+        "k": "t",
+        "v": " (theorem PF with the exponent the trace; the rate dictionary "
+      },
+      {
+        "k": "m",
+        "v": "a = p/2 - 1"
+      },
+      {
+        "k": "t",
+        "v": "; the subsidy-empty pigeonhole; the unconditional Landau/Gonek pricing; the mode-level Landau bridge; the tau-free DK exclusion "
+      },
+      {
+        "k": "m",
+        "v": "h \\le 13"
+      },
+      {
+        "k": "t",
+        "v": " with the exact "
+      },
+      {
+        "k": "m",
+        "v": "b^*(h)"
+      },
+      {
+        "k": "t",
+        "v": " schedule; the WPD "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " H-pin consolidation; the exact census semigroup "
+      },
+      {
+        "k": "m",
+        "v": "e^{-tT}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "T = 4y\\,\\partial^2 + 2\\,\\partial"
+      },
+      {
+        "k": "t",
+        "v": "; step A exact; the sub-dof composition chain; the source-free Gram "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " projective linearity), 7 CITED-CLASSICAL rows (Landau 1912; Gonek 1985/1993 with Gonek 1984 flagged never consumed; Montgomery–Vaughan 1974; Ortega-Cerdà–Seip 2002; Nazarov–Turán 1993; Rodgers–Tao 2020 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Polymath 15 as cited ceilings), 1 OPEN row (R1–R3); (4) the HONEST MEASURED BLOCK — margins "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 1.405"
+      },
+      {
+        "k": "t",
+        "v": " with selector margins "
+      },
+      {
+        "k": "m",
+        "v": "2.14/3.05"
+      },
+      {
+        "k": "t",
+        "v": ", the frozen alignment triple (descriptive band "
+      },
+      {
+        "k": "m",
+        "v": "(0.38, 0.54)"
+      },
+      {
+        "k": "t",
+        "v": ", wall lock "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_m = 0.2372\\,\\log_{10} g_{\\min}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "R^2\\,0.9916"
+      },
+      {
+        "k": "t",
+        "v": ", deep excess "
+      },
+      {
+        "k": "m",
+        "v": "5.64"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "7.58"
+      },
+      {
+        "k": "t",
+        "v": " dex), "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_\\infty"
+      },
+      {
+        "k": "t",
+        "v": " in "
+      },
+      {
+        "k": "m",
+        "v": "[0.0766, 0.0977]"
+      },
+      {
+        "k": "t",
+        "v": " typed OPEN-NONPERTURBATIVE-VARIATIONAL, and the refuter ladder ALWAYS PAIRED per BH8-F7 (measured "
+      },
+      {
+        "k": "m",
+        "v": "30"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "33"
+      },
+      {
+        "k": "t",
+        "v": " orders with the proven "
+      },
+      {
+        "k": "m",
+        "v": "b^*(h)"
+      },
+      {
+        "k": "t",
+        "v": " schedule "
+      },
+      {
+        "k": "m",
+        "v": "23.8/21.7/15.7/4.4"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "h = 4/5/8/13"
+      },
+      {
+        "k": "t",
+        "v": ", none at "
+      },
+      {
+        "k": "m",
+        "v": "h \\ge 16"
+      },
+      {
+        "k": "t",
+        "v": "); (5) the KILL-ATLAS SUMMARY TABLE — eleven named dead route classes (pointwise symbol minorants, "
+      },
+      {
+        "k": "m",
+        "v": "\\ell^1"
+      },
+      {
+        "k": "t",
+        "v": " majorants, phase-discarding additive forms, Vieta pinch/power sums, moment/trace caps, Riccati/manifold transport, dBN pinch, global CBJ frame, sub-dof scoping, Carleson-as-floor, naive floor-power composition) each with its one-line death mechanism and round/witness; (6) the RUNNABLE FINITE MODELS — "
+      },
+      {
+        "k": "c",
+        "v": "v931"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v941"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the substrate "
+      },
+      {
+        "k": "c",
+        "v": "v922"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v930"
+      },
+      {
+        "k": "t",
+        "v": ", the eleven frozen SPEC-hashed discovery probes (r171–r182), the frozen builder "
+      },
+      {
+        "k": "c",
+        "v": "radius4_an_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " with the four control worlds, the "
+      },
+      {
+        "k": "m",
+        "v": "2\\times10^{7}"
+      },
+      {
+        "k": "t",
+        "v": " verified-ordinate cache and the PT21 horizon, with exact paths; (7) the HONEST FORMALIZATION SURFACE — the only prime-front Lean content is the finite spacing/jet algebra ("
+      },
+      {
+        "k": "c",
+        "v": "SpacingProduct.lean"
+      },
+      {
+        "k": "t",
+        "v": " and companions); NOTHING of R1–R3 is formalised, stated plainly; (8) MUST-FAIL CONTROLS MF-P1–MF-P6 (Epstein/Scramble/Smooth refusal, the no-zero ancestry test, the predefinition test, and the loop firewall over the four flagged classes census-forall-"
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "m",
+        "v": "A_0"
+      },
+      {
+        "k": "t",
+        "v": "-triangle / zero-verification-as-hypothesis / RH-conditional second moments); (9) ACCEPTANCE TESTS — an external result counts iff it delivers (a) an explicit all-"
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " all-"
+      },
+      {
+        "k": "m",
+        "v": "a"
+      },
+      {
+        "k": "t",
+        "v": " bound, (b) a genuinely new sign source that separates AND independently orients, or (c) a proof that one of R1–R3 is RH-equivalent (recorded as closing the hardness question honestly, never as progress toward RH); the website paper mirror of "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "c",
+        "v": "papers.ts"
+      },
+      {
+        "k": "t",
+        "v": ") gains one section entry; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts.pdf"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "changelog.pdf"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "introduction.pdf"
+      },
+      {
+        "k": "t",
+        "v": " recompiled and mirrored via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh website"
+      },
+      {
+        "k": "t",
+        "v": "; maps and "
+      },
+      {
+        "k": "c",
+        "v": "changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated via "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh gen"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests regenerated LAST. No omega closed, census cardinality 4 unchanged, "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_\\infty"
+      },
+      {
+        "k": "t",
+        "v": " stays OPEN, the "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_h"
+      },
+      {
+        "k": "t",
+        "v": " limit stays OPEN; NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-20",
     "dateLabel": "2026-08-20 · CXIII",
     "heading": [

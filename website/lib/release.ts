@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 4915650,
+    bytes: 4926069,
     sha256:
-      "2a662ab2fca6f5c181f248b0cf9803137b0f6e3051e90e996197bb855bf3d9ef",
+      "d3ea60d4a650f9ee229b7a22229eff688be0c433c3b1a4dbd58123b3f8cbf2c9",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -97,9 +97,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 2332635,
+    bytes: 2367535,
     sha256:
-      "11f99cef8da83ac37a82a71414ff07cc96136e74ed3156cf48805c4f5d07b5e0",
+      "e8b4c17efd98153c56a3b1ec240ffff1d4e98fe4e814aec7376114437425ac6b",
     changelog:
       "Research contracts for the remaining interfaces: v_geo (scale anchor, [O]), G_net (metric inclusion, [C] closed modulo cited theorems), F_transfer (downstream transport, typed runnable solvers [C]).",
   },
@@ -142,9 +142,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 2966256,
+    bytes: 2973600,
     sha256:
-      "810d8b6a820ccc231ef5f84f31d0c33ed73491aeb8ebe7b60c92e7fbe4b16fe4",
+      "49bceaddddfb009f2c6c651c6278f4890c8ec31c5d07963f7b55d03ea945d260",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },
