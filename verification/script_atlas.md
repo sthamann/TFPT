@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`928` registered scripts · `1079` ledger claims · `10` clusters.
+`934` registered scripts · `1085` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (447 scripts)
+### `core` — Compiler core & the E₈ glue  (453 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -905,6 +905,18 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: PRIME.SIGMAFLOOR.FACTORIZATION.01 (v929: the SF3 DC-leg typing this row prices), PRIME.JETMASS.FLOOR.01 (v931: the WF leg this row prices), round 174 note CDLXXXIX (the frozen probe), PRIME.THETAINF.PIN.01 (v935: the bridge consuming this machinery downstream), Bughunt VII round 176 note CDXCII (the external literature re-verification + F1 applied here) · cited: 3 e8 audit bootstrap
 - **v935_thetainf_landau_bridge** [E/O] `PRIME.THETAINF.PIN.01` — der klassische Pin von θ_inf landet NICHT und die Runde beweist exakt warum, mit der ERSTEN LINEAREN PER-MODEN-KLASSISCHEN IDENTITÄT des Programms: der Primblock der Weltmatrix ist
   - deps: PRIME.GONEK.PRICING.01 (v934: the unconditional Landau/Gonek machinery the bridge consumes), PRIME.H3.COFINAL.01 (v933: the theta_inf band + the DK instrument), PRIME.TOPROOT.THETA.01 (v932: the H3 statement + record ladders), round 175 note CDXCI (the frozen probe), Bughunt VII round 176 note CDXCII (F1 + F2 + F7 applied here) · cited: 3 e8 audit bootstrap
+- **v936_manifold_invariance_exclusion** [E/C] `PRIME.MANIFOLD.INVARIANCE.01` — der BH7-F4-Scope-Gap innerhalb des Instruments beseitigt: der Ausschluss ist (i) ein tau-freier RICHTUNGS-UNIVERSALSATZ für h ≤ 13 an der gefrorenen 1e-25-Bar (gemessen bis h = 20)
+  - deps: PRIME.H3.COFINAL.01 (v933: the DK instrument + BH7-F4 scoping this round removes), PRIME.TOPROOT.THETA.01 (v932: H3), PRIME.FULLGAP.GROWTHLAW.THEOREMS.01 (v926: the quartic cap consumed ONLY as FLAGGED-MEASURED), round 177 note CDXCV (the frozen probe), Bughunt VIII round 183 note DI (F7 applied here) · cited: 3 e8 audit bootstrap
+- **v937_l1wpd_closure_reduction** [E/O] `PRIME.L1WPD.CLOSURE.01` — WPDs λ-uniformer Gehalt IST die H-pin-Kante (AND-Fire an den deklarierten Kanten demonstriert): das Paar {L1, WPD} trägt EINE offene λ-uniforme Kante, nicht zwei; das dreiteilige B
+  - deps: PRIME.THETAINF.PIN.01 (v935: the bridge + the T_req wall, cited), PRIME.JETMASS.FLOOR.01 (v931: the jet currency adjudicated non-transferring), v925 edge cleanup closures (the all-x sharpening propagated here), round 178 note CDXCIV (the frozen probe), Bughunt VIII round 183 note DI (F2 numbering applied here) · cited: 3 e8 audit bootstrap
+- **v938_dbn_heatflow_census** [E/C/O] `PRIME.DBN.HEATFLOW.01` — der EINE große klassische Import (de-Bruijn–Newman-Wärmefluss; Rodgers–Tao 2020 Λ ≥ 0, Polymath15 2019 Λ ≤ 0.22, beide UNBEDINGT zitiert) frontal gegen die Zensus-Observablen: der 
+  - deps: PRIME.THETAINF.PIN.01 (v935: the bridge kernels FLOW-Z consumes), PRIME.GONEK.PRICING.01 (v934: the Landau/Gonek adjudication verbatim), PRIME.JETMASS.FLOOR.01 (v931: the census polynomial form), round 179 note CDXCVI (the frozen probe), Bughunt VIII round 183 note DI (factor-4 verified here) · cited: 3 e8 audit bootstrap
+- **v939_cbj_frame_adjudication** [E/X] `PRIME.CBJ.CONFLUENT.FRAME.01` — die extern vorgeschlagene Review-Primärroute (COFINAL-BLOCK-JET via konfluentem Jet-Frame) vollständig instrumentiert: Schritte A/B/D landen EXAKT bzw. quellrein — SCHRITT A (δ_h =
+  - deps: PRIME.SIGMAFLOOR.FACTORIZATION.01 (v929: SF1/SF2/SF6 wiring), PRIME.WINDOW.INSTRUMENT.MECHANISM.01 (v930: the entry atoms the selector upgrades), PRIME.MOMENT.LAURENT.ROOTLADDER.01 (v924: L1) + v922 (the spacing product re-derived), round 180 note CDXCVII (the frozen probe), PRIME.CBJ.SUBDOF.BLOCKFLOOR.01 (v940: the sub-dof scoping downstream), Bughunt VIII round 183 note DI (dof/MV/Bertrand verified here) · cited: 3 e8 audit bootstrap
+- **v940_cbj_subdof_blockfloor** [E/X] `PRIME.CBJ.SUBDOF.BLOCKFLOOR.01` — die blockweise SUB-DOF-GESCOPTE Floor-Aussage exakt gestellt, vollständig durchgetypt und am entscheidenden Messwert ehrlich GETÖTET: die Demand-Masse ist NICHT im wohlkonditionier
+  - deps: PRIME.CBJ.CONFLUENT.FRAME.01 (v939: step A, the selector, the gmin ladder, the SF2 margins this round scopes), PRIME.SIGMAFLOOR.FACTORIZATION.01 (v929: SF1/SF2/SF6), round 181 note CDXCIX (the frozen probe), PRIME.ALIGNMENT.LAW.01 (v941: the named missing ingredient downstream), Bughunt VIII round 183 note DI (A1 + OCS02 verified here) · cited: 3 e8 audit bootstrap
+- **v941_alignment_law_factorization** [E/X] `PRIME.ALIGNMENT.LAW.01` — die schärfste unerklärte Regularität des Programms präzise vermessen, als TRIPEL eingefroren und im Mechanismus faktorisiert (nicht hergeleitet, ehrlich getypt): (F1) HALBPOTENZ-EI
+  - deps: PRIME.CBJ.CONFLUENT.FRAME.01 (v939: step A, the Gram, the selector margins), PRIME.CBJ.SUBDOF.BLOCKFLOOR.01 (v940: the kill mass this law explains), PRIME.THETAINF.PIN.01 (v935: the bridge, cited, the theta_inf class), PRIME.MANIFOLD.INVARIANCE.01 (v936: the alignment-sharing gap replicated exactly), round 182 note D + the correction note DII (the frozen probe + the correction of record), Bughunt VIII round 183 note DI (F1 MAJOR applied here) · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1927,16 +1939,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v924_moment_laurent_rootladder** — `PRIME.MOMENT.LAURENT.ROOTLADDER.01`
-- **v925_edge_cleanup_closures** — `PRIME.EDGE.CLEANUP.CLOSURES.01`
-- **v926_fullgap_growthlaw_theorems** — `PRIME.FULLGAP.GROWTHLAW.THEOREMS.01`
-- **v927_blockaverage_substrate_theorems** — `PRIME.BLOCKAVERAGE.SUBSTRATE.01`
-- **v928_depthblock_transfer_theorems** — `PRIME.DEPTHBLOCK.TRANSFER.01`
-- **v929_sigmafloor_factorization** — `PRIME.SIGMAFLOOR.FACTORIZATION.01`
 - **v930_window_instrument_mechanism** — `PRIME.WINDOW.INSTRUMENT.MECHANISM.01`
 - **v931_jetmass_floor_theorems** — `PRIME.JETMASS.FLOOR.01`
 - **v932_toproot_theta_statement** — `PRIME.TOPROOT.THETA.01`
 - **v933_h3_cofinal_adjudication** — `PRIME.H3.COFINAL.01`
 - **v934_gonek_pricing_unconditional** — `PRIME.GONEK.PRICING.01`
 - **v935_thetainf_landau_bridge** — `PRIME.THETAINF.PIN.01`
+- **v936_manifold_invariance_exclusion** — `PRIME.MANIFOLD.INVARIANCE.01`
+- **v937_l1wpd_closure_reduction** — `PRIME.L1WPD.CLOSURE.01`
+- **v938_dbn_heatflow_census** — `PRIME.DBN.HEATFLOW.01`
+- **v939_cbj_frame_adjudication** — `PRIME.CBJ.CONFLUENT.FRAME.01`
+- **v940_cbj_subdof_blockfloor** — `PRIME.CBJ.SUBDOF.BLOCKFLOOR.01`
+- **v941_alignment_law_factorization** — `PRIME.ALIGNMENT.LAW.01`
 

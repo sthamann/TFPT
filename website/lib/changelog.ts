@@ -43,6 +43,1361 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-08-20",
+    "dateLabel": "2026-08-20 · CXIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the post-bughunt-arc promotion — the six durable certified theorem sets of discovery rounds 177–182 graduate from the experiments tree into the load-bearing verification suite (suite "
+      },
+      {
+        "k": "m",
+        "v": "928 \\to 934"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1079 \\to 1085"
+      },
+      {
+        "k": "t",
+        "v": "), after the eighth adversarial bughunt (round 183, note DI, "
+      },
+      {
+        "k": "m",
+        "v": "20/20"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "7"
+      },
+      {
+        "k": "t",
+        "v": " findings, "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " MAJOR, "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " verdict flips) covered the arc and its corrections of record (F1–F7, note DII) were applied as an appended CORRECTION-OF-RECORD block and ADOPTED VERBATIM on every new surface (in particular BH8-F1: the round-182 terminal adjudication is written SAME-CLASS-NOT-NEW-EDGE everywhere — a CLASS-level convergence, never an object identity — and BH8-F7: the round-177 refuter margin is always cited PAIRED, the proven "
+      },
+      {
+        "k": "m",
+        "v": "b^*(h)"
+      },
+      {
+        "k": "t",
+        "v": " schedule "
+      },
+      {
+        "k": "m",
+        "v": "23.8/21.7/15.7/4.4"
+      },
+      {
+        "k": "t",
+        "v": " orders above the "
+      },
+      {
+        "k": "m",
+        "v": "10^{-25}"
+      },
+      {
+        "k": "t",
+        "v": " bar at "
+      },
+      {
+        "k": "m",
+        "v": "h = 4/5/8/13"
+      },
+      {
+        "k": "t",
+        "v": " and none at "
+      },
+      {
+        "k": "m",
+        "v": "h \\ge 16"
+      },
+      {
+        "k": "t",
+        "v": " alongside the measured "
+      },
+      {
+        "k": "m",
+        "v": "30"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "33"
+      },
+      {
+        "k": "t",
+        "v": " orders; per BH8-F2 the canonical rounds are 177 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " manifold, 178 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " L1/WPD, 179 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " dBN, 180 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " CBJ frame, 181 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " CBJ sub-dof, 182 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " alignment); every source probe RE-RUN GREEN AS TYPED before the surface edits (logs kept as "
+      },
+      {
+        "k": "c",
+        "v": "*.promo_rerun.log"
+      },
+      {
+        "k": "t",
+        "v": "): MODULE ONE, "
+      },
+      {
+        "k": "c",
+        "v": "v936_manifold_invariance_exclusion.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", MANIFOLD-INVARIANCE-EXCLUSION; probe "
+      },
+      {
+        "k": "c",
+        "v": "manifold_invariance_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r177 note CDXCV, "
+      },
+      {
+        "k": "m",
+        "v": "39/39"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "af86ec3b097ae8c4"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "1354.1"
+      },
+      {
+        "k": "t",
+        "v": " s, three amendments "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " one smoke fix disclosed, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "1337.6"
+      },
+      {
+        "k": "t",
+        "v": " s): THE TAU-FREE DK EXCLUSION THEOREM — "
+      },
+      {
+        "k": "m",
+        "v": "\\sin\\theta \\le (r_0/\\tau)/(\\mathrm{FG} - a)"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": " CANCELLING in ratio form, direction-universal and witness-free, PROVEN "
+      },
+      {
+        "k": "m",
+        "v": "h \\le 13"
+      },
+      {
+        "k": "t",
+        "v": " at the frozen bar (measured to "
+      },
+      {
+        "k": "m",
+        "v": "h = 20"
+      },
+      {
+        "k": "t",
+        "v": ", the split kept) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the exact required-bar schedule "
+      },
+      {
+        "k": "m",
+        "v": "b^*(h)"
+      },
+      {
+        "k": "t",
+        "v": "; the measured full-space refuter price ladder "
+      },
+      {
+        "k": "m",
+        "v": "1.35\\times10^{5} \\to 6.73\\times10^{8}"
+      },
+      {
+        "k": "t",
+        "v": " strictly growing with the mechanism identified as ALIGNMENT-SHARING; the BA3 scale-gauge theorem (not a universal catcher); the induction route priced dead AS A REDUCTION (TRANSPORT-RELABELS-NOT-REDUCES "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " LEVEL-CHEAPER-THAN-INCREMENT); MODULE TWO, "
+      },
+      {
+        "k": "c",
+        "v": "v937_l1wpd_closure_reduction.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", L1WPD-CLOSURE-REDUCTION; probe "
+      },
+      {
+        "k": "c",
+        "v": "l1wpd_closure_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r178 note CDXCIV, "
+      },
+      {
+        "k": "m",
+        "v": "29/29"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "0e306146bebbd9be"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "228.9"
+      },
+      {
+        "k": "t",
+        "v": " s, no amendment, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "224.4"
+      },
+      {
+        "k": "t",
+        "v": " s): WPD's "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": "-uniform content "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " the H-pin edge (AND-fire demonstrated at the declared edges — the pair "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "L1, WPD"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " carries ONE open "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": "-uniform edge, not two); the three-part bridge-expressibility verdict (source data bridge-expressible per census; the floor escapes linearity at the eigenvector and root maps, exact exhibits; the SW pricing vacuous — no closure); the v925 all-"
+      },
+      {
+        "k": "m",
+        "v": "x"
+      },
+      {
+        "k": "t",
+        "v": " sharpening propagated with own replication ("
+      },
+      {
+        "k": "m",
+        "v": "x_0 = 121/112"
+      },
+      {
+        "k": "t",
+        "v": ", all 357 "
+      },
+      {
+        "k": "m",
+        "v": "D_{cs} > 0"
+      },
+      {
+        "k": "t",
+        "v": "); the r133-vs-r171 H1/H2/H3 name collision flagged; MODULE THREE, "
+      },
+      {
+        "k": "c",
+        "v": "v938_dbn_heatflow_census.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": ", DBN-HEATFLOW-CENSUS; probe "
+      },
+      {
+        "k": "c",
+        "v": "dbn_heatflow_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r179 note CDXCVI, "
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "67eaf86c7bfa7d84"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "672.4"
+      },
+      {
+        "k": "t",
+        "v": " s, one smoke fix disclosed, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "659.4"
+      },
+      {
+        "k": "t",
+        "v": " s): THE EXACT CENSUS SEMIGROUP — the de Bruijn–Newman flow transports onto the derived census polynomial as a closed-form FINITE sum "
+      },
+      {
+        "k": "m",
+        "v": "e^{-tT}"
+      },
+      {
+        "k": "t",
+        "v": " (no zeros, no ODE) with the exact trace law "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{trace}(N_t) == \\mathrm{trace} + 2d(2d-1)t"
+      },
+      {
+        "k": "t",
+        "v": " (measured deviation "
+      },
+      {
+        "k": "m",
+        "v": "0.0"
+      },
+      {
+        "k": "t",
+        "v": ") and the factor-4 normalization lemma (window "
+      },
+      {
+        "k": "m",
+        "v": "[0, 0.055]"
+      },
+      {
+        "k": "t",
+        "v": " exact, BH8-verified); the dictionary THREEFOLD-INEQUIVALENT (every pinch claim dictionary-dependent); the missing half of the generator "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " the RH-conditional PAIR class (flagged loop, not consumed); theta-flow-inert floors ("
+      },
+      {
+        "k": "m",
+        "v": "\\ge 4021\\times"
+      },
+      {
+        "k": "t",
+        "v": " the window); the "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_h"
+      },
+      {
+        "k": "t",
+        "v": " criticality ladder "
+      },
+      {
+        "k": "m",
+        "v": "2.39 \\to 0.216"
+      },
+      {
+        "k": "t",
+        "v": " strictly decreasing with THE LIMIT OPEN — honestly NOT an off-line-zero detector (Epstein slack larger); the witness preserved-not-expelled; MODULE FOUR, "
+      },
+      {
+        "k": "c",
+        "v": "v939_cbj_frame_adjudication.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", CBJ-FRAME-ADJUDICATION; probe "
+      },
+      {
+        "k": "c",
+        "v": "cbj_frame_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r180 note CDXCVII, "
+      },
+      {
+        "k": "m",
+        "v": "41/41"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "d7fbf2d956184674"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "1042.5"
+      },
+      {
+        "k": "t",
+        "v": " s, no amendment, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "1005.5"
+      },
+      {
+        "k": "t",
+        "v": " s): STEP-A EXACT — "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_h == |J_h|^2_{G_h}"
+      },
+      {
+        "k": "t",
+        "v": " with remainder "
+      },
+      {
+        "k": "m",
+        "v": "R == 0"
+      },
+      {
+        "k": "t",
+        "v": " proven generically (the single most promotable theorem of the arc, certified at 14 rungs, dev "
+      },
+      {
+        "k": "m",
+        "v": "\\le 1.9\\times10^{-46}"
+      },
+      {
+        "k": "t",
+        "v": "); the cluster normal form (the basis-change determinant "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " the spacing product); the Montgomery–Vaughan pricing (killed exactly at linkage 1, carrying at "
+      },
+      {
+        "k": "m",
+        "v": "3.15\\pi"
+      },
+      {
+        "k": "t",
+        "v": " with the exact rational margin "
+      },
+      {
+        "k": "m",
+        "v": "1/21"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the two-grid repair); the dof/seam/occupancy kill triple ("
+      },
+      {
+        "k": "m",
+        "v": "n = 474"
+      },
+      {
+        "k": "t",
+        "v": " vs rank "
+      },
+      {
+        "k": "m",
+        "v": "128"
+      },
+      {
+        "k": "t",
+        "v": ", dof "
+      },
+      {
+        "k": "m",
+        "v": "112.8"
+      },
+      {
+        "k": "t",
+        "v": "; seam "
+      },
+      {
+        "k": "m",
+        "v": "0.994"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "-0.7484"
+      },
+      {
+        "k": "t",
+        "v": " dex/atom): the GLOBAL review form dead, the per-cluster floor carrying k-uniformly at fixed "
+      },
+      {
+        "k": "m",
+        "v": "r"
+      },
+      {
+        "k": "t",
+        "v": "; the source-only selector ("
+      },
+      {
+        "k": "m",
+        "v": "\\hat h_k = 7/13/31/\\ldots/8191"
+      },
+      {
+        "k": "t",
+        "v": " recomputed in-run, Bertrand-cofinal) underperforms the block average yet clears the SF2 demand (margins "
+      },
+      {
+        "k": "m",
+        "v": "2.14/3.05"
+      },
+      {
+        "k": "t",
+        "v": ", all rungs "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 1.405"
+      },
+      {
+        "k": "t",
+        "v": "); the house Gram min-eig ladder "
+      },
+      {
+        "k": "m",
+        "v": "1.1\\times10^{-17} \\to 5.2\\times10^{-113}"
+      },
+      {
+        "k": "t",
+        "v": "; MODULE FIVE, "
+      },
+      {
+        "k": "c",
+        "v": "v940_cbj_subdof_blockfloor.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ", CBJ-SUBDOF-BLOCKFLOOR-KILL; probe "
+      },
+      {
+        "k": "c",
+        "v": "cbj_subdof_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r181 note CDXCIX, "
+      },
+      {
+        "k": "m",
+        "v": "37/37"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "2db82c76ce5f067c"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "867.9"
+      },
+      {
+        "k": "t",
+        "v": " s, one spec-text amendment disclosed (the sympy-exact Fejér constant "
+      },
+      {
+        "k": "m",
+        "v": "1/6"
+      },
+      {
+        "k": "t",
+        "v": ", BH8-verified), re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "772.1"
+      },
+      {
+        "k": "t",
+        "v": " s): the sub-dof-scoped floor statement posed exactly and honestly KILLED at the decisive measurement — the sub-dof mass fraction falls at "
+      },
+      {
+        "k": "m",
+        "v": "+0.999"
+      },
+      {
+        "k": "t",
+        "v": " dex/rung (recomputed) and saturates at zero, the scoped margin dies AT THE SELECTOR RUNGS ("
+      },
+      {
+        "k": "m",
+        "v": "8.02\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "\\hat h(B3) = 13"
+      },
+      {
+        "k": "t",
+        "v": ", dead by "
+      },
+      {
+        "k": "m",
+        "v": "{\\sim}125"
+      },
+      {
+        "k": "t",
+        "v": "); the unscoped r180 floor remains the measured carrier (killed is the PROOF ROUTE through the well-conditioned subspace); CARLESON PRICED FOR THE FIRST TIME — the unconditional embedding WRONG-DIRECTION for a floor (Ortega-Cerdà–Seip, Ann. of Math. 155 (2002), BH8-web-verified) and the complete lower-class table with Nazarov–Turán (exponential in the term count) as the classical mirror of the measured occupancy law; FRACTION-WORLD-SEPARATING (floor value world-insensitive, mass location world-separating); the fixed-"
+      },
+      {
+        "k": "m",
+        "v": "r"
+      },
+      {
+        "k": "t",
+        "v": " compactness sketch; MODULE SIX, "
+      },
+      {
+        "k": "c",
+        "v": "v941_alignment_law_factorization.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": ", ALIGNMENT-LAW-FACTORIZED; probe "
+      },
+      {
+        "k": "c",
+        "v": "alignment_law_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r182 note D, "
+      },
+      {
+        "k": "m",
+        "v": "37/37"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "e4cdb9a932093196"
+      },
+      {
+        "k": "t",
+        "v": " verified invariant under the appended correction block, record "
+      },
+      {
+        "k": "m",
+        "v": "775.6"
+      },
+      {
+        "k": "t",
+        "v": " s, five freeze retypings disclosed, re-run green at promotion "
+      },
+      {
+        "k": "m",
+        "v": "776.5"
+      },
+      {
+        "k": "t",
+        "v": " s): the sharpest unexplained regularity frozen as a MEASURED TRIPLE — the half-power envelope ("
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " inside the descriptive band "
+      },
+      {
+        "k": "m",
+        "v": "(0.38, 0.54)"
+      },
+      {
+        "k": "t",
+        "v": " at all 14 rungs, never a prediction per BH8-F4), the quarter-depth wall lock ("
+      },
+      {
+        "k": "m",
+        "v": "\\mu_m = 0.2372\\,\\log_{10} g_{\\min}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "R^2\\,0.9916"
+      },
+      {
+        "k": "t",
+        "v": ") and the deep excess ("
+      },
+      {
+        "k": "m",
+        "v": "5.64"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "7.58"
+      },
+      {
+        "k": "t",
+        "v": " dex "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " the r181 kill mass); GRAM-SOURCE-FREE proven three ways; the key adjudication: "
+      },
+      {
+        "k": "m",
+        "v": "s_i A_0"
+      },
+      {
+        "k": "t",
+        "v": " LINEAR in "
+      },
+      {
+        "k": "m",
+        "v": "d"
+      },
+      {
+        "k": "t",
+        "v": ", the location law PROJECTIVE and "
+      },
+      {
+        "k": "m",
+        "v": "A_0"
+      },
+      {
+        "k": "t",
+        "v": "-free — the r178 obstruction does NOT bite; the one shared nonlinear link is the wall eigenmap (the law exactly as bridge-expressible as "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": ", given "
+      },
+      {
+        "k": "m",
+        "v": "d"
+      },
+      {
+        "k": "t",
+        "v": "); ALT-JETS-BREAK-ALIGNMENT; WITNESS-BREAKS-ALIGNMENT; the terminal adjudication SAME-CLASS-NOT-NEW-EDGE (four distinct formal statements over the same source object, the wall argmin ray "
+      },
+      {
+        "k": "m",
+        "v": "d"
+      },
+      {
+        "k": "t",
+        "v": ", in "
+      },
+      {
+        "k": "m",
+        "v": "A_0"
+      },
+      {
+        "k": "t",
+        "v": "-quotient form; no new residue edge via the machine-checked G44 exclusion, not via identity). Ledger rows "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.MANIFOLD.INVARIANCE.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.L1WPD.CLOSURE.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.DBN.HEATFLOW.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.CBJ.CONFLUENT.FRAME.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.CBJ.SUBDOF.BLOCKFLOOR.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.ALIGNMENT.LAW.01"
+      },
+      {
+        "k": "t",
+        "v": ", all [E] NOT-RH-EVIDENCE active; the arc's terminal residue written everywhere in the canonical note-DII form: the TRIPLE "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "H1 "
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": " H2 "
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": " H3"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": "-cofinal (one rung per dyadic block, all three at the same "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "; the limsup form only mod "
+      },
+      {
+        "k": "m",
+        "v": "D = 0.0042"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "census-forall-"
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " LOOP, flagged"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "H-pin "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the one "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": "-uniform edge of the pair: L1 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " TAIL proven "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " H-pin open; WPD"
+      },
+      {
+        "k": "m",
+        "v": "(a < \\gamma_1^2)"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftarrow"
+      },
+      {
+        "k": "t",
+        "v": " H-pin; the WPD non-"
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": " legs: extension instantiated, TAILWPD world-front"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": "; surfaces: six veri blocks in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": ", the new post-bughunt-arc diary section in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " with the live suite-count parentheticals refreshed ("
+      },
+      {
+        "k": "m",
+        "v": "928 \\to 934"
+      },
+      {
+        "k": "t",
+        "v": ") and the superseded awaiting-bughunt prose rewritten, the endform article 8.22 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " counts "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " inventory, the email draft seventh-promotion paragraph, the website PROMOTED card "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " DAG chips "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " honesty-banner range "
+      },
+      {
+        "k": "c",
+        "v": "v535"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v941"
+      },
+      {
+        "k": "t",
+        "v": ", README/Zenodo "
+      },
+      {
+        "k": "m",
+        "v": "934"
+      },
+      {
+        "k": "t",
+        "v": "; one German research note appended to "
+      },
+      {
+        "k": "c",
+        "v": "experiments/next.txt"
+      },
+      {
+        "k": "t",
+        "v": " (DIII); FULL "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " ALL CHECKS PASSED at 934 modules; "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh release"
+      },
+      {
+        "k": "t",
+        "v": " green; "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests regenerated LAST. No omega closed, no marker moved beyond the six [E] rows, census cardinality 4 unchanged, "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_\\infty"
+      },
+      {
+        "k": "t",
+        "v": " stays OPEN, the "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_h"
+      },
+      {
+        "k": "t",
+        "v": " limit stays OPEN; the two bughunt rounds (176 and 183) stay experiments-side as process rounds per precedent. NO RH claim anywhere"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-20",
     "dateLabel": "2026-08-20 · CXII",
     "heading": [
       {
