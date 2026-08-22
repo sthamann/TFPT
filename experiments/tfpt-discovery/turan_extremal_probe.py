@@ -296,6 +296,37 @@ run2 must be identical modulo wall-clock tokens (lines carrying
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
+# =====================================================================
+# CORRECTION OF RECORD (Bughunt X, note DXXIII, 2026-08-22)
+# ---------------------------------------------------------------------
+# Appended OUTSIDE the frozen spec text per the r131/r165
+# corrections-of-record convention: the module docstring above is the
+# historical record and is NOT edited; SPEC_SHA (= sha256 of the
+# docstring) stays a6edc3f911e8f069.  NO numeric change, NO verdict
+# flip, NO RH CLAIM.
+#
+# BH10-F2 [MINOR, SUBCONE-SHARP attainment wording overstates]:
+#   ORIGINAL (this spec's CAL_SUBQ2 comment + note DXXI): "the
+#   lattice subcone ATTAINS the full-cone cap at the dominant lag to
+#   f64 precision" -- overstated as written: this round's OWN
+#   printed table shows a REAL deficit at irrational lags (h = 5,
+#   q = 2: M_sub 0.7067 vs M_KR 0.7071, deficit 4.1e-4 -- twelve
+#   orders above f64 resolution; h = 9: 0.8082 vs 0.8090).
+#   CORRECTED (KB, Bughunt X mp adjudication, SPEC 5551aa7b967230f1):
+#   EXACT attainment holds at RATIONAL lags only (h = 4, q = 2,
+#   u/L = 1/2 exactly: deficit -9.7e-122 at dps 120 -- an IDENTITY:
+#   the Fejer extremal sequence on the u-lattice lifts exactly into
+#   the K-mode cone); elsewhere NEAR-attainment of the denseness
+#   class (own log's 4.1e-4 deficit at h = 5, inside the frozen
+#   0.30 dex bar).  Corrected wording: "erreicht die Kappe EXAKT an
+#   rationalen Lags (u/L = f/e; Identitaet, mp < 1e-45) und bis auf
+#   < 5e-4 dex sonst" statt "auf f64-Praezision".  Fejer extremals
+#   lift exactly only at rational lags -- this answers note DXXI's
+#   named next step (b): the Fejer bump-trains are exactly
+#   representable in the K-mode lattice AT RATIONAL LAGS ONLY.  The
+#   enum SUBCONE-SHARP-AT-Q2 (bar 0.30 dex) and every verdict stand.
+# =====================================================================
+
 from __future__ import annotations
 
 import argparse

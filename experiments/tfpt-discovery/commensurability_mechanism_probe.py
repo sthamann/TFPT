@@ -366,6 +366,26 @@ tokens (lines carrying 'WALL').
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
+# =====================================================================
+# CORRECTION OF RECORD (Bughunt X, note DXXIII, 2026-08-22)
+# ---------------------------------------------------------------------
+# Appended OUTSIDE the frozen spec text per the r131/r165
+# corrections-of-record convention: the module docstring above is the
+# historical record and is NOT edited; SPEC_SHA (= sha256 of the
+# docstring) stays dbc14014899fb286.  NO numeric change, NO verdict
+# flip, NO RH CLAIM.
+#
+# BH10-F5 [NOTE, instrument cosmetics KE]: G11's symbolic leg is
+#   vacuous by construction (ok_form checks sin(pi*(y - y)) == 0
+#   with y DEFINED as 2*k*lq two lines above; ok_crit checks only
+#   the trivial direction) while the PASS text recites the full
+#   e | 2fk iff law -- the G11 detail text should read "symbolic
+#   skeleton only; the iff law is enforced by G20/G23"; the law's
+#   real machine content (G20 zero_ward, G23 exact census, O(1)
+#   MINDEF floor on all non-census pairs) reproduces EXACTLY in
+#   Bughunt X's own code (SPEC 5551aa7b967230f1).  NO verdict moves.
+# =====================================================================
+
 from __future__ import annotations
 
 import argparse

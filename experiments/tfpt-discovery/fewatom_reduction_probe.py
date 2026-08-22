@@ -288,6 +288,65 @@ tokens (lines carrying 'WALL').
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
+# =====================================================================
+# CORRECTION OF RECORD (Bughunt X, note DXXIII, 2026-08-22)
+# ---------------------------------------------------------------------
+# Appended OUTSIDE the frozen spec text per the r131/r165
+# corrections-of-record convention: the module docstring above is the
+# historical record and is NOT edited; SPEC_SHA (= sha256 of the
+# docstring) stays 35fb341bb281b04b.  NO numeric change, NO verdict
+# flip, NO RH CLAIM.
+#
+# BH10-F1 [MAJOR, the nonnegativity gate certifies strictly less than
+#   the headline states; THE HEADLINE STANDS AND IS NOW STRONGER]:
+#   ORIGINAL (this spec + note DXX; the continuum wording inherited
+#   by r198): F1 headline "A_{v_0} >= 0 on [0, L] ... min value
+#   POSITIVE at all 14 rungs" -- stated at CONTINUUM level with a
+#   positive minimum.  The MACHINE content was weaker in two
+#   independent ways: (i) the measurement is the N = 16K half-window
+#   GRID only, with no between-node check anywhere -- for a
+#   degree-(K-1) cosine polynomial with O(1) coefficient mass and
+#   edge values at 1e-5..1e-43 of the peak, grid nonnegativity does
+#   not imply continuum nonnegativity by any cited argument; (ii)
+#   the operative gate nonneg := amin >= -1e-30*amax is SIGN-BLIND
+#   at the three deepest rungs, where the record minima sit BELOW
+#   the zero-class bar (CAL_RMIN h = 15/16/20: -31.07/-33.63/-43.30
+#   dex): the frozen gate would ALSO pass on a negative minimum of
+#   e.g. -1e-31*amax, so "min value POSITIVE" there was print
+#   evidence, not gate certificate.  RETYPE (KA): the r197 gate
+#   class is GRID-MEASURED.  THE HEADLINE IS TRUE AND NOW CERTIFIED:
+#   Bughunt X (bughunt10_probe.py, SPEC 5551aa7b967230f1, own code,
+#   escalated dps) certified CONTINUUM nonnegativity by
+#   exact-rational Sturm chains at h = 4, 5 (exact Fractions of the
+#   computed direction: ZERO roots in (-1, 1], P(+-1) > 0) and at
+#   h = 13, 20 (coefficients rounded at 2^-200/2^-340 with the
+#   strict subtracted floor delta = 2^-190/2^-300 BEFORE root
+#   counting: A > 0 on ALL of [0, L], not just the grid), and
+#   re-verified jr_0 at h = 20 with dps 170 > record 144 (~127
+#   digits of sign headroom).  Scope rider (verbatim, for every
+#   surface carrying the r197/DXX/r198 nonnegativity headline): "an
+#   allen 14 Sprossen GITTER-zertifiziert (N = 16K) mit
+#   Nullklassen-Bar 1e-30 (an h = 15/16/20 liegt das Minimum
+#   UNTERHALB der Bar-Aufloesung des Gates -- der positive Wert
+#   dort ist Print-Evidenz, nicht Gate-Zertifikat); Kontinuums-
+#   Nichtnegativitaet auf [0, L] und der positive Minimumswert sind
+#   durch Bughunt X per exakter Sturm-Kette bei h = 4, 5, 13, 20
+#   ZERTIFIZIERT (eigene Rechnung, eskalierte dps)".  Future
+#   profile sign gates use a sign-resolving bar (e.g. refusal-rule-
+#   scaled) instead of the atom zero class.  The continuum
+#   certificate lives in BH10; NO verdict flips: P1/signMech stand,
+#   now stronger than the round left them.
+#
+# BH10-F3 [NOTE, precision rider KC]: the "edge minimum IS the jr_0
+#   ladder" identification is exact UN-NORMALIZED (grid min = A(0) =
+#   the jr_0 NUMERATOR exactly); the PRINTED RATIO differs by the
+#   r198 parity-misalignment factor (1 - amax/sum|v| = 0.4-0.65% at
+#   h = 4/5, i.e. 0.002-0.003 dex, invisible at print precision);
+#   the r197/r198 pair (A_{v_0} >= 0 + V0-PARITY-BROKEN) is
+#   CONSISTENT -- the two statements are logically independent and
+#   both measured TRUE.
+# =====================================================================
+
 from __future__ import annotations
 
 import argparse
