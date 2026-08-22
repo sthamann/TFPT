@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`941` registered scripts · `1093` ledger claims · `10` clusters.
+`947` registered scripts · `1099` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (460 scripts)
+### `core` — Compiler core & the E₈ glue  (466 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -931,6 +931,18 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: PRIME.GROUND.RESIDUE.OBS.01 (v944: the r186 off-diagonal law this round upgraded and diagonally completed -- the K1 rider cites THIS row's dictionary), round 189 note DX (the frozen probe), Bughunt IX round 193 note DXV (the cosine law independently recomputed <= 6.3e-61 + per-atom symbolic, X1: this record correct as written) · cited: 3 e8 audit bootstrap
 - **v948_krein_sign_characteristic** [E/X] `PRIME.KREIN.DEFINITIZER.01` — der r188/v946-Upgrade-Pfad DURCH SATZ GESCHLOSSEN, nicht durch Suche: die gemessene GEMISCHTE Leiter tötet die GESAMTE W(y)>0-Kongruenzklasse AUF EINMAL (die Vorzeichen-Charakteris
   - deps: PRIME.CENSUS.SPECTRAL.LIFT.01 (v946: the exact pencil whose sign characteristic this row is, the upgrade path this row closes), round 191 note DXIII (the frozen probe), Bughunt IX round 193 note DXV (the two-route eps/count/flip/scaffold/W-lemma/CH all independently recomputed, zero failures) · cited: 3 e8 audit bootstrap
+- **v949_commensurability_mechanism** [E/X] `PRIME.COMMENSURABILITY.MECHANISM.01` — die dünne geometrische Hoffnung 'Inkommensurabilität speist Wandpositivität' SAUBER GETÖTET an der Marge, mit exakter Mechanismus-Aussage für die kanonische Vervollständigung**. IM
+  - deps: PRIME.LOEWNER.PICK.01 (v947: the commensurate-sampling mechanism this round makes exact and quantifies), round 192 note DXIV (the frozen probe), Bughunt X round 199 note DXXIII (the e|2fk machine content reproduced in own code, the LMN/Matveev/KR/Siegel citations web-verified verbatim, KE the only finding, instrument cosmetics) · cited: 3 e8 audit bootstrap
+- **v950_zero_channel_capacity** [E] `PRIME.ZERO.CHANNEL.CAPACITY.01` — der r187/r190-(v945)-Write→Read-Bogen ALS KANAL charakterisiert, getypt EXPLORATORISCHE INSTRUMENT-CHARAKTERISIERUNG und als exakt das promoviert: KEIN Storage-Claim, KEINE arithme
+  - deps: PRIME.ZERO.CAUSAL.SYNTH.01 + PRIME.ZB.WIGGLE.STRAT.01 (v945: the engine imported verbatim + the noise model read as a channel), round 194 note DXVII (the frozen probe), Bughunt X round 199 note DXXIII (F6 the seed-reuse note with the null quantification, F7 the corollary typing -- both note-only, both adopted) · cited: 3 e8 audit bootstrap
+- **v951_cancellation_functional** [E] `PRIME.CANCELLATION.FUNCTIONAL.01` — die Wand ist ein GESCHLOSSENES TRUNKIERTES WEIL-EXPLIZIT-FORMEL-FUNKTIONAL der positiv-definiten Testfunktion g_x, Pro-Atom-Positivität BEWEISBAR UNMÖGLICH (Wiener-Khinchin), PLUS 
+  - deps: PRIME.LOEWNER.PICK.01 (v947: the two quadrature slots this round unifies into one ACF object), round 195 note DXVIII (the frozen probe), Bughunt X round 199 note DXXIII (X4: the ACF/pole/arch laws reproduced in fully own code <= 1e-61, c* exact, F4/KD the positive pin, note-only per note DXXIV) · cited: 3 e8 audit bootstrap
+- **v952_turan_extremal** [E/X] `PRIME.TURAN.EXTREMAL.01` — Turán/Boas-Kac/Fejér mit exakten Zitaten importiert und zum ersten Mal in 196 Runden gegen die Wand gepreist, ZWEISEITIG: die klassische Kappe erfasst den Drain fast exakt, und Keg
+  - deps: PRIME.CANCELLATION.FUNCTIONAL.01 (v951: the ACF kernel and PD class this round prices classically), round 196 note DXXI (the frozen probe), Bughunt X round 199 note DXXIII (the Fejer cap RE-PROVED independently by a single-node dual route, F2/KB the attainment correction, citations web-verified verbatim) · cited: 3 e8 audit bootstrap
+- **v953_fewatom_reduction** [E] `PRIME.FEWATOM.REDUCTION.01` — A_{v0} > 0 auf GANZ [0, L], keine Floats; die Bughunt-X-Zertifikationsklasse im Modul rekonstruiert; BH10 liefert h = 13, 20); DER EIN-ZEILEN-MECHANISMUS (A >= 0 ⟹ jedes ACF-Sample
+  - deps: PRIME.CANCELLATION.FUNCTIONAL.01 (v951: the ACF law and sign law this round mechanizes), round 197 note DXX (the frozen probe), Bughunt X round 199 note DXXIII (F1 MAJOR adjudicated THE HEADLINE IS TRUE with the stronger certification class -- the Sturm chains at h = 4, 5, 13, 20, F3/KC the un-normalized identification, X6 OBJECT-A the one new tractable target) · cited: 3 e8 audit bootstrap
+- **v954_nodeless_pf** [E/O/X] `PRIME.NODELESS.PF.01` — die r197/v953-Kandidatenroute für OBJEKT-A voll adjudiziert: TOT IN DER MODEN-BASIS, die Obstruktion EXAKT LOKALISIERT (der Rang-1-POSITIV-Kern des Pols ist die EINZIGE Kegel-Obstr
+  - deps: PRIME.FEWATOM.REDUCTION.01 (v953: the OBJECT-A target whose candidate route this round adjudicates) + PRIME.CANCELLATION.FUNCTIONAL.01 (v951: the ACF law behind the attractive-hopping structure), round 198 note DXXII (the frozen probe), Bughunt X round 199 note DXXIII (F3/KC the r197/r198 consistency, all exact claims reproduced in own code) · cited: 3 e8 audit bootstrap
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1953,16 +1965,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v937_l1wpd_closure_reduction** — `PRIME.L1WPD.CLOSURE.01`
-- **v938_dbn_heatflow_census** — `PRIME.DBN.HEATFLOW.01`
-- **v939_cbj_frame_adjudication** — `PRIME.CBJ.CONFLUENT.FRAME.01`
-- **v940_cbj_subdof_blockfloor** — `PRIME.CBJ.SUBDOF.BLOCKFLOOR.01`
-- **v941_alignment_law_factorization** — `PRIME.ALIGNMENT.LAW.01`
-- **v942_pi_pattern_transfer_specificity** — `PI.PATTERN.SCAN.01`
 - **v943_mangoldt_ablation_localization** — `PRIME.MANGOLDT.ABLATION.01`
 - **v944_ground_residue_observability** — `PRIME.GROUND.RESIDUE.OBS.01`
 - **v945_zero_causal_stratification** — `PRIME.ZERO.CAUSAL.SYNTH.01, PRIME.ZB.WIGGLE.STRAT.01`
 - **v946_census_krein_pencil** — `PRIME.CENSUS.SPECTRAL.LIFT.01`
 - **v947_loewner_pick_dictionary** — `PRIME.LOEWNER.PICK.01`
 - **v948_krein_sign_characteristic** — `PRIME.KREIN.DEFINITIZER.01`
+- **v949_commensurability_mechanism** — `PRIME.COMMENSURABILITY.MECHANISM.01`
+- **v950_zero_channel_capacity** — `PRIME.ZERO.CHANNEL.CAPACITY.01`
+- **v951_cancellation_functional** — `PRIME.CANCELLATION.FUNCTIONAL.01`
+- **v952_turan_extremal** — `PRIME.TURAN.EXTREMAL.01`
+- **v953_fewatom_reduction** — `PRIME.FEWATOM.REDUCTION.01`
+- **v954_nodeless_pf** — `PRIME.NODELESS.PF.01`
 

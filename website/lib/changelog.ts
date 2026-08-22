@@ -42,6 +42,1409 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-22",
+    "dateLabel": "2026-08-22 · CXVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(the Bughunt-X-arc promotion — the six durable certified theorem sets of discovery rounds 192 and 194–198 graduate from the experiments tree into the load-bearing verification suite (suite "
+      },
+      {
+        "k": "m",
+        "v": "941 \\to 947"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1093 \\to 1099"
+      },
+      {
+        "k": "t",
+        "v": "), after the tenth adversarial bughunt (round 199, note DXXIII, "
+      },
+      {
+        "k": "c",
+        "v": "bughunt10_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "30/30"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "5551aa7b967230f1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "11"
+      },
+      {
+        "k": "t",
+        "v": " findings, "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " MAJOR, "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " verdict flips, AND THE X4 HEADLINE: every exact claim of the arc reproduced in fully own code — the ACF/pole/arch laws to "
+      },
+      {
+        "k": "m",
+        "v": "\\le 10^{-61}"
+      },
+      {
+        "k": "t",
+        "v": ", the Fejér cap re-proved by an independent single-node dual route, the classical LMN/Matveev/Kolountzakis–Révesz/Siegel citations web-verified verbatim) covered the arc and its corrections of record (KA/KB/KC/KE applied as appended CORRECTION-OF-RECORD blocks, KD note-only per precedent, note DXXIV) were ADOPTED VERBATIM on every new surface (in particular KA MAJOR: the round-197 nonnegativity gate class is retyped GRID-MEASURED with the verbatim scope rider — the record gate was grid-only with a sign-blind bar at the three deepest rungs, THE HEADLINE IS TRUE AND NOW STRONGER via Bughunt X's exact-rational Sturm chains at "
+      },
+      {
+        "k": "m",
+        "v": "h = 4, 5, 13, 20"
+      },
+      {
+        "k": "t",
+        "v": "; KB MINOR: SUBCONE-SHARP-AT-Q2 reads “exact attainment at RATIONAL lags only, near-attainment elsewhere” — the “f64 precision” wording is retired; KC: the “edge minimum IS the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{jr}_0"
+      },
+      {
+        "k": "t",
+        "v": " ladder” identification is exact UN-NORMALIZED, the r197/r198 pair consistent; KE: the round-192 G11 symbolic leg was vacuous — the "
+      },
+      {
+        "k": "m",
+        "v": "e \\mid 2fk"
+      },
+      {
+        "k": "t",
+        "v": " law's machine content lives in the census gates; KD POSITIVE, note-only per precedent and recomputed in "
+      },
+      {
+        "k": "c",
+        "v": "v951"
+      },
+      {
+        "k": "t",
+        "v": ": the arch kernel IS the classical Weil archimedean kernel in the "
+      },
+      {
+        "k": "m",
+        "v": "L \\to \\infty"
+      },
+      {
+        "k": "t",
+        "v": " limit); every source probe RE-RUN GREEN AS TYPED before the surface edits (logs kept as "
+      },
+      {
+        "k": "c",
+        "v": "*.promo_rerun.log"
+      },
+      {
+        "k": "t",
+        "v": "): MODULE ONE, "
+      },
+      {
+        "k": "c",
+        "v": "v949_commensurability_mechanism.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": ", POSITIVITY-IRRELEVANT-EXACTNESS-KILL; probe "
+      },
+      {
+        "k": "c",
+        "v": "commensurability_mechanism_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r192 note DXIV, "
+      },
+      {
+        "k": "m",
+        "v": "28/28"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "dbc14014899fb286"
+      },
+      {
+        "k": "t",
+        "v": " verified invariant under the appended KE block, record "
+      },
+      {
+        "k": "m",
+        "v": "276"
+      },
+      {
+        "k": "t",
+        "v": " s, re-run green at promotion 317.0 s): THE EXACT NODE MECHANISM — the smooth world's whole "
+      },
+      {
+        "k": "m",
+        "v": "2a"
+      },
+      {
+        "k": "t",
+        "v": "-periodic oscillation collapses AT THE NODES to Möbius data (closed forms recomputed in-run), the structural-zero census is the "
+      },
+      {
+        "k": "m",
+        "v": "e \\mid 2fk"
+      },
+      {
+        "k": "t",
+        "v": " law in exact integers ("
+      },
+      {
+        "k": "m",
+        "v": "h = 4"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "12/18"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "h = 8"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "32/120"
+      },
+      {
+        "k": "t",
+        "v": "), and THE FIRST BAKER-CLASS PRICING IN THE PROGRAM'S HISTORY is recomputed from the published constants (Liouville gap "
+      },
+      {
+        "k": "m",
+        "v": "3.79"
+      },
+      {
+        "k": "t",
+        "v": " dex, LMN 1995 gap "
+      },
+      {
+        "k": "m",
+        "v": "7.099\\times10^3"
+      },
+      {
+        "k": "t",
+        "v": " dex, Matveev 2000 gap "
+      },
+      {
+        "k": "m",
+        "v": "1.682\\times10^9"
+      },
+      {
+        "k": "t",
+        "v": " dex at the "
+      },
+      {
+        "k": "m",
+        "v": "h = 4"
+      },
+      {
+        "k": "t",
+        "v": " minimizer; full ladders to "
+      },
+      {
+        "k": "m",
+        "v": "3.10\\times10^4"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "m",
+        "v": "1.18\\times10^{10}"
+      },
+      {
+        "k": "t",
+        "v": " dex: BAKER-TOO-WEAK); the dose is DIRECTION-BLIND (killed both ways at every dose rung "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " jitter, COMM-WALL-DEAD) and "
+      },
+      {
+        "k": "m",
+        "v": "L_f(t = 1)"
+      },
+      {
+        "k": "t",
+        "v": " is PSD at all four dose rungs WORLD-BLIND: the margin consumes position EXACTNESS, not incommensurability magnitude — the sought source functional must consume the exact positions wholesale; MODULE TWO, "
+      },
+      {
+        "k": "c",
+        "v": "v950_zero_channel_capacity.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": ", CHANNEL-CHARACTERIZED; probe "
+      },
+      {
+        "k": "c",
+        "v": "zero_channel_capacity_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r194 note DXVII, "
+      },
+      {
+        "k": "m",
+        "v": "28/28"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "fa49271201ba30fb"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "170"
+      },
+      {
+        "k": "t",
+        "v": " s, re-run green at promotion 209.6 s): THE SHANNON CHARACTERIZATION OF THE ZERO-COMB DICTIONARY — typed EXPLORATORY INSTRUMENT CHARACTERIZATION at discovery and promoted as exactly that (NO storage claim, NO arithmetic novelty): the capacity surface reaches error-free full ternary ("
+      },
+      {
+        "k": "m",
+        "v": "\\log_2 3"
+      },
+      {
+        "k": "t",
+        "v": ") from "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon = 0.01"
+      },
+      {
+        "k": "t",
+        "v": "; RESLIM LOW "
+      },
+      {
+        "k": "m",
+        "v": "= 0.001"
+      },
+      {
+        "k": "t",
+        "v": " / MID "
+      },
+      {
+        "k": "m",
+        "v": "= 0.003"
+      },
+      {
+        "k": "t",
+        "v": " WITH THE BUGHUNT-X F6 QUANTIFICATION ADOPTED ("
+      },
+      {
+        "k": "m",
+        "v": "P = 0.0032"
+      },
+      {
+        "k": "t",
+        "v": " under the 20000-trial null MC — marginal-but-nonnull single-reading, decisive with averaging "
+      },
+      {
+        "k": "m",
+        "v": "0.042 \\to 0.257 \\to 0.938"
+      },
+      {
+        "k": "t",
+        "v": "; the sqrt-"
+      },
+      {
+        "k": "m",
+        "v": "n"
+      },
+      {
+        "k": "t",
+        "v": " prediction held at "
+      },
+      {
+        "k": "m",
+        "v": "0.2325"
+      },
+      {
+        "k": "t",
+        "v": "); LINEARITY-SCALE "
+      },
+      {
+        "k": "m",
+        "v": "0.01"
+      },
+      {
+        "k": "t",
+        "v": "; parity-erasure recovery "
+      },
+      {
+        "k": "m",
+        "v": "1.000"
+      },
+      {
+        "k": "t",
+        "v": " WITH THE F7 COROLLARY TYPING (a corollary of the zero-SER cell, not independent evidence; the 108-case parity-code erasure theorem recomputed exactly in-run); P3 refuted honest (CHANNEL-GAIN-LOW"
+      },
+      {
+        "k": "m",
+        "v": ">"
+      },
+      {
+        "k": "t",
+        "v": "MID "
+      },
+      {
+        "k": "m",
+        "v": "0.508"
+      },
+      {
+        "k": "t",
+        "v": "); the round-107 verdict cited NOT upgraded; MODULE THREE, "
+      },
+      {
+        "k": "c",
+        "v": "v951_cancellation_functional.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", WALL-IS-WEIL-ACF-FORM-EXACT; probe "
+      },
+      {
+        "k": "c",
+        "v": "cancellation_functional_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r195 note DXVIII, "
+      },
+      {
+        "k": "m",
+        "v": "24/24"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "a50b85bb112513a1"
+      },
+      {
+        "k": "t",
+        "v": " verified UNTOUCHED by the Bughunt-X corrections, record "
+      },
+      {
+        "k": "m",
+        "v": "1036"
+      },
+      {
+        "k": "t",
+        "v": " s "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "1061"
+      },
+      {
+        "k": "t",
+        "v": " s re-run, four pre-freeze amendments disclosed incl. A3 the substantive float64-direction-noise reversal, re-run green at promotion 1102.8 s): THE ACF LAW ("
+      },
+      {
+        "k": "m",
+        "v": "x^T W(u)\\,x = -2\\int_0^{L-u} A_x A_x(\\cdot + u)\\,dt"
+      },
+      {
+        "k": "t",
+        "v": " — the v947 two quadrature slots are ONE OBJECT; verified at every atom of "
+      },
+      {
+        "k": "m",
+        "v": "h = 4, 5"
+      },
+      {
+        "k": "t",
+        "v": " on an own in-module wall build), THE POLE SQUARE ("
+      },
+      {
+        "k": "m",
+        "v": "8\\sinh^2(a/2)(\\int e^{-t/2} A_x)^2"
+      },
+      {
+        "k": "t",
+        "v": ", sympy generic), THE ARCH LAW ("
+      },
+      {
+        "k": "m",
+        "v": "c^* = (\\gamma + \\ln 2\\pi)/2"
+      },
+      {
+        "k": "t",
+        "v": " exactly, every mode of "
+      },
+      {
+        "k": "m",
+        "v": "h = 4, 5"
+      },
+      {
+        "k": "t",
+        "v": ") — THE WALL IS A CLOSED TRUNCATED WEIL FORM of the PD test function "
+      },
+      {
+        "k": "m",
+        "v": "g_x"
+      },
+      {
+        "k": "t",
+        "v": "; THE KD PIN RECOMPUTED IN-RUN (the arc's external handoff object): "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa + c^* \\to -\\tfrac12[\\mathrm{Re}\\,\\psi(1/4 + i\\omega/2) - \\ln\\pi]"
+      },
+      {
+        "k": "t",
+        "v": " in the "
+      },
+      {
+        "k": "m",
+        "v": "L \\to \\infty"
+      },
+      {
+        "k": "t",
+        "v": " limit (BH10: "
+      },
+      {
+        "k": "m",
+        "v": "6\\times10^{-18}"
+      },
+      {
+        "k": "t",
+        "v": "; finite-"
+      },
+      {
+        "k": "m",
+        "v": "L"
+      },
+      {
+        "k": "t",
+        "v": " corrections "
+      },
+      {
+        "k": "m",
+        "v": "O(e^{-L/2})"
+      },
+      {
+        "k": "t",
+        "v": " typed not-small); per-atom manifest positivity PROVABLY IMPOSSIBLE (Wiener–Khinchin); the pole alone carries positivity; the sign law "
+      },
+      {
+        "k": "m",
+        "v": "n_+ = 0"
+      },
+      {
+        "k": "t",
+        "v": " at all 14 rungs; priced honestly as an ALGEBRAIC RESTATEMENT (the relabeling barrier named, not crossed; WEIL-ALLTESTS "
+      },
+      {
+        "k": "m",
+        "v": "\\leftrightarrow"
+      },
+      {
+        "k": "t",
+        "v": " RH a flagged loop consumed by nothing); MODULE FOUR, "
+      },
+      {
+        "k": "c",
+        "v": "v952_turan_extremal.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ", TURAN-BUDGET-TAU-GAP; probe "
+      },
+      {
+        "k": "c",
+        "v": "turan_extremal_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r196 note DXXI, "
+      },
+      {
+        "k": "m",
+        "v": "23/23"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "a6edc3f911e8f069"
+      },
+      {
+        "k": "t",
+        "v": " verified invariant under the appended KB block, record "
+      },
+      {
+        "k": "m",
+        "v": "767"
+      },
+      {
+        "k": "t",
+        "v": " s "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "802"
+      },
+      {
+        "k": "t",
+        "v": " s re-run, re-run green at promotion 795.6 s): THE CLASSICAL PD-CONE THEORY PRICED for the first time in 196 rounds, TWO-SIDED — every cone bound NEGATIVE at every rung while the truth is "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": "-deep positive (CONE GEOMETRY CANNOT SEE POSITIVITY; gapdex "
+      },
+      {
+        "k": "m",
+        "v": "11.35 \\to 89.03"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "\\tau"
+      },
+      {
+        "k": "t",
+        "v": " ladder at slope "
+      },
+      {
+        "k": "m",
+        "v": "-1.007"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "R^2"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "1.000"
+      },
+      {
+        "k": "t",
+        "v": " — the relabeling barrier named AT THE CONE LEVEL) yet the classical Fejér cap describes the wall's drain capacity almost exactly (CONE-DRAIN-O1-CAPTURE "
+      },
+      {
+        "k": "m",
+        "v": "0.14"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "0.24"
+      },
+      {
+        "k": "t",
+        "v": " dex flat — the round's real news); the Fejér coefficient theorem machine-proved in-module at "
+      },
+      {
+        "k": "m",
+        "v": "n = 1, 2"
+      },
+      {
+        "k": "t",
+        "v": " (construction "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " single-node dual certificates); THE KB RATIONAL-LAG IDENTITY RECOMPUTED ("
+      },
+      {
+        "k": "m",
+        "v": "M_{\\rm sub}(L/2) == 1/2 == \\cos(\\pi/3)"
+      },
+      {
+        "k": "t",
+        "v": " identically — the Fejér extremal lifts exactly at rational lags ONLY); ARCH-LEG-SUBCONE-ONLY named; the TURAN-CONE-POSITIVITY loop flagged consumed by nothing; MODULE FIVE, "
+      },
+      {
+        "k": "c",
+        "v": "v953_fewatom_reduction.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", A-V0-NONNEGATIVE-STURM-CERTIFIED; probe "
+      },
+      {
+        "k": "c",
+        "v": "fewatom_reduction_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r197 note DXX, "
+      },
+      {
+        "k": "m",
+        "v": "25/25"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "35fb341bb281b04b"
+      },
+      {
+        "k": "t",
+        "v": " verified invariant under the appended KA/KC block, record "
+      },
+      {
+        "k": "m",
+        "v": "790"
+      },
+      {
+        "k": "t",
+        "v": " s "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "811"
+      },
+      {
+        "k": "t",
+        "v": " s re-run, re-run green at promotion 830.7 s): "
+      },
+      {
+        "k": "m",
+        "v": "A_{v_0} \\ge 0"
+      },
+      {
+        "k": "t",
+        "v": " AT ALL 14 RUNGS with THE KA SCOPE RIDER VERBATIM (the r197 gate class GRID-MEASURED; at "
+      },
+      {
+        "k": "m",
+        "v": "h = 15/16/20"
+      },
+      {
+        "k": "t",
+        "v": " the record minimum sits below the bar's resolution — print evidence, not gate certificate; THE HEADLINE IS TRUE AND NOW STRONGER) and THE STURM CONTINUUM CERTIFICATES RECOMPUTED IN-MODULE at "
+      },
+      {
+        "k": "m",
+        "v": "h = 4, 5"
+      },
+      {
+        "k": "t",
+        "v": " (exact dyadic Fractions "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " Chebyshev "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " INTEGER primitive-PRS Sturm chain: zero roots in "
+      },
+      {
+        "k": "m",
+        "v": "(-1, 1]"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "P(\\pm 1) > 0"
+      },
+      {
+        "k": "t",
+        "v": " — "
+      },
+      {
+        "k": "m",
+        "v": "A_{v_0} > 0"
+      },
+      {
+        "k": "t",
+        "v": " on ALL of "
+      },
+      {
+        "k": "m",
+        "v": "[0, L]"
+      },
+      {
+        "k": "t",
+        "v": ", no floats; Bughunt X extends to "
+      },
+      {
+        "k": "m",
+        "v": "h = 13, 20"
+      },
+      {
+        "k": "t",
+        "v": " — THE BUGHUNT'S MATHEMATICAL DELIVERABLE FOLDED INTO THE PROMOTION, the bughunt round itself experiments-side per process precedent); THE ONE-LINE MECHANISM ("
+      },
+      {
+        "k": "m",
+        "v": "A \\ge 0 \\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " every ACF sample "
+      },
+      {
+        "k": "m",
+        "v": "\\ge 0 \\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " every atom negative — the v951 sign law reduced); the horizon bounded ("
+      },
+      {
+        "k": "m",
+        "v": "Q_{99} \\in \\{2, 3\\}"
+      },
+      {
+        "k": "t",
+        "v": " incl. the holdout) WITH THE MANDATORY SCALE-RELATIVITY RIDER (the demand scale consumes every atom; NOT-A-COMPLEXITY-DROP-IN-H; any lossy tail bound certification-dead); the KC identification exact UN-NORMALIZED; OBJECT-A NAMED (the X6 targeting result): “prove "
+      },
+      {
+        "k": "m",
+        "v": "A_{v_0(h)} \\ge 0"
+      },
+      {
+        "k": "t",
+        "v": " for all "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "” is the ONE genuinely new tractable target — yields the sign law only, NO lever on wall positivity; and MODULE SIX, "
+      },
+      {
+        "k": "c",
+        "v": "v954_nodeless_pf.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": ", PF-MODE-BASIS-DEAD-POLE-IS-THE-OBSTRUCTION; probe "
+      },
+      {
+        "k": "c",
+        "v": "nodeless_pf_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " r198 note DXXII, "
+      },
+      {
+        "k": "m",
+        "v": "27/27"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "7499c39a026d0d0f"
+      },
+      {
+        "k": "t",
+        "v": ", record "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " deterministic re-run, amendment A1 disclosed, re-run green at promotion 817.1 s): THE PERRON–FROBENIUS ADJUDICATION — the r197 candidate route for Object-A DEAD IN THE MODE BASIS (off-diagonal censuses recomputed exactly at "
+      },
+      {
+        "k": "m",
+        "v": "h = 4, 5"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "(15, 6)/(38, 17)"
+      },
+      {
+        "k": "t",
+        "v": " mixed, checkerboard-mixed both parities; the trivial route killed both ways by the exact exhibit "
+      },
+      {
+        "k": "m",
+        "v": "v = e_1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "A(L/2) = -1"
+      },
+      {
+        "k": "t",
+        "v": "), the obstruction LOCALIZED (the cone tests recomputed at "
+      },
+      {
+        "k": "m",
+        "v": "h = 4"
+      },
+      {
+        "k": "t",
+        "v": ": the wall operator violates on "
+      },
+      {
+        "k": "m",
+        "v": "11..14"
+      },
+      {
+        "k": "t",
+        "v": " of 20 Fejér members, THE NO-POLE OPERATOR ON ZERO — removing the pole alone repairs cone invariance: the piece that carries the positivity is the piece that breaks the cone), and the SURVIVING Z-STRUCTURE pinned (KERNEL-SPLIT-POLE-POSITIVE-HOPPING-Z: pole kernel negfrac "
+      },
+      {
+        "k": "m",
+        "v": "0.000"
+      },
+      {
+        "k": "t",
+        "v": " exactly, the wall's kernel mixing ENTIRELY pole-vs-hopping); Object-A stays open, GENUINELY FUNCTION-SPACE; the X6 discipline: “pole-vs-hopping balance” is the CLASS NAME of Object-W, not a new attack object. Ledger rows "
+      },
+      {
+        "k": "c",
+        "v": "PRIME. COMMENSURABILITY. MECHANISM.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME. ZERO. CHANNEL. CAPACITY.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME. CANCELLATION. FUNCTIONAL.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME. TURAN. EXTREMAL.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME. FEWATOM. REDUCTION.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "PRIME. NODELESS. PF.01"
+      },
+      {
+        "k": "t",
+        "v": ", all [E] NOT-RH-EVIDENCE active; the channel row carries the “instrument characterization, no storage claim” typing prominently; the arc's terminal residue written everywhere in the canonical note-DII/DXVI/DXXIV form: the TRIPLE "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "H1 "
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": " H2 "
+      },
+      {
+        "k": "m",
+        "v": "\\wedge"
+      },
+      {
+        "k": "t",
+        "v": " H3"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": "-cofinal (one rung per dyadic block, all three at the same "
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": "; the limsup form only mod "
+      },
+      {
+        "k": "m",
+        "v": "D = 0.0042"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "census-forall-"
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "=="
+      },
+      {
+        "k": "t",
+        "v": " LOOP, flagged"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\{"
+      },
+      {
+        "k": "t",
+        "v": "H-pin "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the one "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": "-uniform edge of the pair: L1 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " TAIL proven "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " H-pin open; WPD"
+      },
+      {
+        "k": "m",
+        "v": "(a < \\gamma_1^2)"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftarrow"
+      },
+      {
+        "k": "t",
+        "v": " H-pin; the WPD non-"
+      },
+      {
+        "k": "m",
+        "v": "\\lambda"
+      },
+      {
+        "k": "t",
+        "v": " legs: extension instantiated, TAILWPD world-front"
+      },
+      {
+        "k": "m",
+        "v": "\\}"
+      },
+      {
+        "k": "t",
+        "v": "; surfaces: six veri blocks in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": ", the new Bughunt-X-arc diary section in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " with the live suite-count parentheticals refreshed ("
+      },
+      {
+        "k": "m",
+        "v": "941 \\to 947"
+      },
+      {
+        "k": "t",
+        "v": "; PDF recompiled), the endform article promotion section "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " counts, the email draft promotion paragraph, the website PROMOTED card "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " DAG chips "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " honesty-banner range "
+      },
+      {
+        "k": "c",
+        "v": "v535"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v954"
+      },
+      {
+        "k": "t",
+        "v": ", README/Zenodo "
+      },
+      {
+        "k": "m",
+        "v": "947"
+      },
+      {
+        "k": "t",
+        "v": "; one German research note appended to "
+      },
+      {
+        "k": "c",
+        "v": "experiments/next.txt"
+      },
+      {
+        "k": "t",
+        "v": "; FULL "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " ALL CHECKS PASSED at 947 modules; "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh release"
+      },
+      {
+        "k": "t",
+        "v": " green; "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " AUDIT OK; manifests regenerated LAST. Round 193 (Bughunt IX) and round 199 (Bughunt X) stay experiments-side as process rounds per precedent — round 199's Sturm-certificate deliverable is promoted INSIDE "
+      },
+      {
+        "k": "c",
+        "v": "v953"
+      },
+      {
+        "k": "t",
+        "v": "; the PRIME.RESIDUE.EXTERNAL.01 contract inventory deliberately NOT extended (the arc changes no residue statement). No omega closed, no marker moved beyond the six [E] rows, census cardinality 4 unchanged, "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_\\infty"
+      },
+      {
+        "k": "t",
+        "v": " stays OPEN, the "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_h"
+      },
+      {
+        "k": "t",
+        "v": " limit stays OPEN; NO RH claim anywhere)"
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-21",
     "dateLabel": "2026-08-21 · CXV",
     "heading": [
