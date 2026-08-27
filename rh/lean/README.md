@@ -1,0 +1,534 @@
+# rh/lean — the RH-program Lean 4 formalization pilot
+
+> **Claim boundary.** Research documentation. NOT evidence for or against
+> the Riemann Hypothesis in either direction. NO RH CLAIM. The `sorry`
+> declarations below are **honest markers**. Since the r305 reconstruction
+> round there are exactly **four**: the wave-6 canonical form
+> `lstar_subordination` (lemma L*, the base/wall hole), the terminal
+> statement `terminal_positive_main` (the border/fiber hole,
+> `RH/Closure.lean`), its pair-coordinate refinement `pair_margin_main`
+> (the same hole in r271 coordinates; the connecting r263 dictionary is
+> measured, not formalized), and the Jacobi inertia theorem
+> `crossing_budget` (a mathlib gap; certified exact-rationally in v962).
+> The former master-theorem `sorry` and the wave-5 fog-free form
+> `free_window_positivity` are PROVED as corollaries (r305,
+> `RH/Closure.lean`). Since the r310 source-interface round there is a
+> **fifth**: the opacity bridge
+> (`RH/Source.lean`; type DEFINITIONAL/TECHNICAL — forced by the r273
+> opacity of `MainWindow`, not arithmetic). Since the r310b refinement the
+> fifth carries the reviewer target form
+> `mainWindow_iff_builtFromPrimeSource` (the r310 form
+> `mainWindow_explicit_bridge` is PROVED from it — census unchanged, the
+> sorry moved into the sharper statement).
+>
+> **r320 (the R319 red-team repair).** The R319 audit found the r310b
+> statement TYPES of the source interface jointly INCONSISTENT (U1: the
+> bridge never bound `u`/`B` vs `terminal_positive_main`; U2: mesh-width
+> tolerance admitted total node collision vs `lstar_subordination`; U3:
+> `pair_margin_main` quantified `(Zloc, runs)` freely vs any main
+> window). All three were kernel-reproduced and repaired in r320:
+> retyped `RepresentsWindow`/`RepresentsSpec` (u/B-fidelity + separation
+> discipline), the opaque `SourceExact` guard for the free arch/border
+> spec channels (an r320 verification finding BEYOND the audit), the
+> canonical `(Zloc, runs)` extraction as a definition, the three old
+> types conserved and machine-refuted as permanent guards
+> (`RH/Counterexamples.lean`), and an explicit satisfiability witness.
+> The census is UNCHANGED at 5; `lstar_subordination`,
+> `terminal_positive_main` and `crossing_budget` are byte-identical.
+>
+> **r326 (the R325 elementwise extraction architecture).** The R325
+> extraction-repair fork (`extraction_order_probe.py`, sealed, primary
+> verdict `ELEMENTWISE_STABILIZATION_GO`) adjudicated the repair of the
+> missing Level-C layer (window-local positivity ⟹ Weil form): the
+> ELEMENTWISE quantifier set, no mesh-cofinal ladder, no transport, no
+> (H_cof). r326 implements it (`RH/Elementwise.lean`): the canonical
+> window predicate `CanonicalPrimeWindow`, the PROVED construction
+> theorem `sourceExact_buildPrimeWindow` (the wave-12 reviewer target —
+> `SourceExact` is ELIMINATED as a free assumption from the extraction
+> route), the native dense class `GridElement` built for real, the
+> comb-channel elementwise stabilization PROVED with the onset
+> predefined from the element, and the ladder-free extraction
+> `weil_nonneg_of_windowlocal` PROVED as a finite instantiation.
+> Census 5 → **8**: three NEW typed statements that were NOT
+> formalizable before this round (the wave-12 reservation "the Level-C
+> distance appears in no `sorry`" is thereby partially discharged — the
+> distance is now named): the arch/pole kernel-channel stabilizations
+> (classical, S2) and the source-exact completion (classical +
+> opacity-forced). The five pre-existing sorrys are byte-identical.
+>
+> **r332 (the augmented subordination L†, the reviewer unification).**
+> `RH/Augmented.lean` packages L* and the terminal statement as the
+> distributed and the rank-one part of ONE strict sampling inequality,
+> (L†): `0 < B_w` and `∫p²dν_w + |ℓ_w(p)|²/B_w < ∫p²dμ_w` for every
+> `p ≠ 0` below the half-filling cap (`ℓ_w(p) = u_wᵀc` the border
+> readout). The module is **sorry-free** ("closes without new
+> arithmetic"): L† ⟺ `A_{w,n} ≻ 0` through the cap
+> (`augmentedSubordination_iff_masterCap` — quadratic completion, test
+> vector `(c, −ℓ(p)/B)`), L† ⟺ L* ∧ Terminal
+> (`augmentedSubordination_iff_lstar_and_terminal` — the terminal
+> direction through the determinant extraction instead of the `H⁻¹u`
+> minimizer; the backward direction re-runs the wave-10 bricks so the
+> corollary is non-circular), the r305 reconstruction theorem
+> re-derived as a corollary (`reconstruction_via_augmented`; the
+> Closure original is byte-stable, NOT replaced), and the combined
+> target form on MAIN windows PROVED from the two existing holes
+> (`augmentedSubordination_main` — deliberately NOT a new `sorry`: L†
+> is the common target form of `lstar_subordination` +
+> `terminal_positive_main`, not a third hole). Census unchanged:
+> 8 → **8**, zero new; the two true holes are byte-identical.
+>
+> **Sorry typing table (r326 census, unchanged by r332, 8 total):**
+>
+> | `sorry` | File | Type |
+> |---|---|---|
+> | `lstar_subordination` | `RH/Window.lean` | arithmetically open (the base/wall hole, lemma L*); byte-identical since r305 |
+> | `terminal_positive_main` | `RH/Closure.lean` | arithmetically open (the border/fiber hole); byte-identical since r305 |
+> | `pair_margin_main` | `RH/PairBound.lean` | arithmetically open (same terminal hole, r271 pair coordinates); **r320 RETYPE**: stated for the canonical extraction `edgeLocal`/`bulkRuns` (definitions), no longer for free `(Zloc, runs)` — the old form was refutable (guard `old_pair_margin_forces_empty`) |
+> | `crossing_budget` | `RH/Inertia.lean` | classical/technical (mathlib gap: Jacobi minor-sign rule + inertia counting); byte-identical |
+> | `mainWindow_iff_builtFromPrimeSource` | `RH/Source.lean` | definitional/technical (opacity-forced); **r320 RETYPE**: RHS = `∃ s, SourceExact s ∧ RepresentsWindow w (buildPrimeWindow s) s.mesh` with the repaired predicate — the old form was jointly inconsistent with the holes (guards `old_bridge_terminal_inconsistent`, `old_bridge_lstar_inconsistent`); the pre-r320 "becomes `Iff.rfl`" promise is CORRECTED in the docstring |
+> | `arch_elementwise_stabilization` | `RH/Elementwise.lean` | **NEW r326** — classical (S2): the arch kernel read of the canonical windows stabilizes elementwise (R325 S1 measured exact: onset at the predicted `α*`, mesh constancy 1.5e-15); provable classical quadrature once the `arch_A` kernel transcription exists (the opaque reads are the named TODO) |
+> | `pole_elementwise_stabilization` | `RH/Elementwise.lean` | **NEW r326** — classical (S2): same for the v716 pole closed form (R325 S1: 2.0e-17) |
+> | `specFamily_sourceExact_completion` | `RH/Elementwise.lean` | **NEW r326** — classical + definitional/technical (opacity-forced): every canonical family member admits a source-exact completion (genuine arch/border/budget data on the same atom set); concluding the opaque `SourceExact` is unprovable by design. NOTE: the extraction route does NOT consume this sorry — that is the architecture's point |
+
+This is the pilot recommended by round r267 (after the external
+Alpöge–Furman adjudication, `arXiv:2608.13637`, itself Lean-4-formalized):
+layer the corpus by provability and actually prove the provable core.
+
+**r273 reviewer repair.** The pre-r273 pilot stated its three open
+problems as universally quantified theorems over pure bookkeeping
+structures — all three REFUTABLE by trivial models (the reviewer
+adjudication). The repair: (1) the three refutations are now permanent
+machine-checked guards (`RH/Counterexamples.lean`); (2) a concrete window
+structure `VonMangoldtWindow` with all derived objects as definitions
+(`RH/Window.lean`); (3) ONE master theorem `augmented_prefix_positive`
+(augmented-matrix positivity through the half-filling cap, conditioned on
+the honest opaque predicate `MainWindow`) replaces the two separate open
+edges — both former edges are PROVED from it by finite matrix algebra.
+
+## Build
+
+```bash
+cd rh/lean
+lake exe cache get   # fetch the mathlib olean cache (skips a 2-3 h build)
+lake build           # => "Build completed successfully"
+```
+
+- Toolchain: `leanprover/lean4:v4.29.1` (pinned in `lean-toolchain`; same as
+  the sibling project `experiments/lean4-carrier-rigidity`, so elan and the
+  local mathlib cache are shared). If elan is not installed:
+  `curl https://elan.lean-lang.org/elan-init.sh -sSf | sh`.
+- **mathlib is required** (pinned tag `v4.29.1` in `lakefile.toml`): core
+  Lean 4 has neither the algebra hierarchy (`Field`, `LinearOrder`,
+  `IsStrictOrderedRing`) nor `ring` / `field_simp` / `linarith`, and the
+  Inertia layer states matrix theorems against `Mathlib.LinearAlgebra.Matrix`.
+  The proved layer touches only the algebra/tactic core of mathlib.
+- Build status on this machine: **builds green** (`Build completed
+  successfully`, **8 `sorry` warnings** since r326 (5 since r310; r320:
+  still 5, two retyped, none added; r326: +3 NEW typed Level-C
+  statements in `RH/Elementwise.lean` — statements that were not
+  formalizable before, not a regression), all intentional:
+  the wave-6 canonical form `lstar_subordination` (lemma L*, v963 ---
+  the base/wall hole; L* ⇒ free-window positivity is PROVED) + the
+  terminal statement `terminal_positive_main` (`RH/Closure.lean`, the
+  border/fiber hole) + the retyped H5 `pair_margin_main` (the same
+  terminal hole in r271 pair coordinates) + the Jacobi inertia theorem
+  `crossing_budget` (T2, v962 --- a mathlib gap, see RH/Inertia.lean)
+  + the r310 opacity bridge, since r310b in the reviewer target form
+  `mainWindow_iff_builtFromPrimeSource`
+  (`RH/Source.lean` --- definitional/technical, opacity-forced;
+  `mainWindow_explicit_bridge` is proved from it)
+  + the three r326 Level-C statements (`RH/Elementwise.lean` --- the
+  arch/pole kernel-channel elementwise stabilizations, classical, and
+  the source-exact completion, classical + opacity-forced).
+  History: 7 before the r273 retype, 9 through wave 9, 4 since the r305
+  reconstruction (master + fog-free hole + 4 of 5 Inertia statements
+  PROVED), 5 since the r310 source interface (the increase is one NEW
+  statement that was not formalizable before, not a regression),
+  still 5 after the r310b refinement (the Source.lean sorry moved into
+  the target form; everything else added in r310b is PROVED),
+  8 since r326 (the three new statements make the previously
+  statement-less Level-C distance visible — the wave-12 reviewer
+  reservation, partially discharged).
+
+## Layering (r267 recommendation: order by provability)
+
+### `RH/Basic.lean` — definitions (no theorems beyond bookkeeping)
+
+Abstract chain data of one window over an arbitrary field `K`:
+`c/h/F/B`, derived `a_n = c_n^2 h_n`, `b_n = -(c_n F_n)^2`,
+`rho_n = F_n^2/h_n`, the coupled recursion `tau`/`tauAug`, `D = tauAug/tau`,
+partial spends `S`, regularity predicate. Proved bookkeeping:
+`tau_ne_zero` on regular windows.
+*Header provenance: r256–r259, `PRIME.PORT.RHP.COUPLEDTAU.TERMINAL.01` [E],
+`verification/v959_coupledtau_terminal_dictionary.py` S0,
+`coupledtau_probe.py` (SPEC_SHA `73d8247f6de36a2b`).*
+
+### `RH/Recursion.lean` — the PROVED core (zero `sorry`)
+
+| Theorem | Statement | Corpus anchor |
+|---|---|---|
+| `bilinear` | `tauAug_n tau_{n+1} − tauAug_{n+1} tau_n = (c_n F_n)^2 tau_n^2` (pure `ring`) | v959 S0.2 |
+| `drain` | coupled recursion ⇒ `D_{n+1} = D_n − rho_n` (division prerequisites explicit) | v959 S0.1 |
+| `telescope` | `D_N = B − S_N` by induction on the drain | v959 S0.3 / r258 |
+| `terminal_reduction` | `B = S_N + m` ⇒ `D_{N+1} = m − rho_N` | v959 S0.3 (r243 form) |
+| `terminal_equiv` | `0 < m − r ↔ r/m < 1` for `m > 0` | v959 S0.3 consequence gate |
+| `two_branch_cheap` / `_strict` | `\|Z\| ≤ U` and `U ≤ M` (resp. `<`) ⇒ `Z²/M² ≤ 1` (resp. `<`) | r263 cheap branch |
+| `exception_scalar_closes` | `Z² < m` ⇒ `Z²/m < 1` | r263/r264 S6 shape |
+
+### `RH/Inertia.lean` — the matrix-theorem layer (since r305: PROVED except `crossing_budget`)
+
+Proved since the start: `hankel_isHermitian`, `window_cap_arith`
+(`2n − 1 ≤ S ↔ n ≤ (S+1)/2`, the counting half of half-filling, by `omega`),
+and since wave 5 (v962 / r281, T1) `moment_counting_free_pivots`
+(`2n ≤ S − 1 ↔ n < (S+1)/2`: the free pivots are exactly
+`h_0 .. h_{N_w−1}` — half-filling is the end of the free moment space,
+"why half-filling" answered by counting) and `first_forced_pivot`
+(`h_{N_w}` is the first forced pivot), both by `omega`.
+
+**PROVED since r305** (the reviewer plan §6.1 cleanup — mathlib-backed,
+no axioms, no `native_decide`):
+
+| Statement | Content | Corpus anchor |
+|---|---|---|
+| `posDef_of_isEmpty`, `posDef_of_posSemidef_det_ne_zero`, `posDef_submatrix_of_injective`, `posDef_fromBlocks_border`, `posDef_succ_of_posDef_det_pos`, `posDef_of_leading_det_pos` | the general PosDef layer, incl. **Sylvester's criterion** built from scratch (mathlib has no minor-based criterion) | r305 |
+| `psd_base` | positive measure ⇒ Hankel PSD (`x^T H x = ∫ p_x² dμ ≥ 0`) | v958 S0 |
+| `positive_prefix_firewall` | `H_p ≻ 0 ↔ h_0..h_{p−1} > 0` (Sylvester chain, **both directions**) | v959 S0.5 |
+| `sylvester_pullback` | congruence `AᵀMA` with invertible `A` preserves PosDef | v956 r229 |
+| `half_filling_boundary` | positive h-prefix ⇒ `H_{N_w} ≻ 0` (reverse Sylvester at the cap) | v956 r228/r229 |
+
+`sorry` (ONE left, certified exact-rationally in the cited module):
+
+| Statement | Corpus anchor | Why open (honest) |
+|---|---|---|
+| `crossing_budget` — T2: `#(h_n < 0, n < S) = S_−` (Jacobi/Sylvester, world-blind) | v962 T2 / r279 (`oriented_theorem_probe.py`, SPEC `9107709b4f4a65d1`) | needs Jacobi's minor-sign rule AND Sylvester's law of inertia in matrix-congruence counting form; mathlib v4.29.1 has neither — a genuine formalization project, not wiring |
+
+### `RH/Window.lean` — the retyped window + the wave-5/6 forms of the hole (since r305: ONE `sorry`, `lstar_subordination`; the master theorem moved to `RH/Closure.lean` and is PROVED there)
+
+The concrete structure `VonMangoldtWindow` (exact rationals, like the
+corpus): fields `S` (atom count), `nodes` (positions), `combWeight` /
+`archWeight` (nonneg comb and archimedean parts, signed `weight` derived),
+`lo`/`hi`/`window_rule` (window rule), `u` (border vector), `B` (budget).
+Derived DEFINITIONS (not free fields): half-filling cap
+`cap = (S+1)/2`, moments `mom`, Hankel `H_n`, chain
+`h_k = det H_{k+1}/det H_k`, augmented matrix
+`A_{w,n} = [[H_n, u_n], [u_n^T, B]]`, Schur margin
+`D_n = det A_n/det H_n`, terminal cross-ratio `q`. An exact rational toy
+instance (S = 3, cap = 2) tests the definitions.
+
+| Theorem | Status | Content |
+|---|---|---|
+| `hankel_posDef_of_augmented`, `budget_pos_of_augmented` | proved | block/corner extraction from `A_n ≻ 0` |
+| `h_pos_of_posDef`, `D_pos_of_augmented`, `q_lt_one_of_pos` | proved | Sylvester step, Schur-margin step, terminal gate |
+| `D_eq_schur` | proved | `D_n = B − u^T H_n^{-1} u` (via mathlib `det_fromBlocks₁₁`) |
+| `master_implies_free_window` | proved | hypothesis form: master conclusion ⇒ free-window positivity (block extraction + Sylvester ratio) |
+| `main_window_reduction` | proved | **T4** (v962): on a nonvanishing chain, free-window positivity ⇔ "no crossing before the cap" |
+| `lstar_subordination` | **`sorry` = the base/wall hole (canonical form)** | `MainWindow w → ∀ p ≠ 0, deg p < cap → ∫p²dν < ∫p²dμ` (lemma L*, the r283 reduction / v963; ledger `PRIME.LSTAR.SUBORDINATION.01` [O]; standalone statement `rh/problem/lstar_problem.tex`) |
+| `hankel_quadform` | proved | the quadratic-form dictionary: `x ⬝ H_n x = ∫p_x²dμ − ∫p_x²dν` for the coefficient polynomial (finite algebra, wave 6) |
+| `lstar_implies_hankel_posDef`, `lstar_implies_free_window` | proved | hypothesis form: L* ⇒ every Hankel block through the cap PosDef ⇒ free-window positivity (the wave-6 direction tying the canonical form to the fog-free hole) |
+| `lstar_free_window_main` | proved from `lstar_subordination` | free-window positivity on MAIN windows modulo the single L* `sorry` |
+| `free_window_positivity` | **proved since r305** (corollary of L*) | `MainWindow w → ∀ n < cap, 0 < h_n` (the r279 b3 gap statement / v962 T4 reinstform; ledger `PRIME.PORT.RHP.FULLSOURCE.QUASIDEFINITENESS.01` [O]) — the open content moved entirely into `lstar_subordination` |
+
+**Wave-7 census (v964, rounds 286–289):** NO new statement — the hole
+stays `lstar_subordination`; its
+docstring now carries the wave-7 measured state (57/57 anchors positive,
+margin decay resolved harmless per r286, the diophantine route excluded
+per r289 `METRIC_ONLY` — the open front is the fraction-profile
+functional, r290 in flight).
+
+### `RH/Source.lean` — THE EXPLICIT SOURCE INTERFACE (r310, reviewer plan §6.3; refined r310b, reviewer plan §8; repaired r320, R319 audit U1/U2; one `sorry`: the opacity bridge in target form)
+
+**r320 repair (R319 audit).** `RepresentsSpec`/`RepresentsWindow` are
+RETYPED: besides the r310b node/comb/arch mesh clauses they now demand
+(4) exact u-fidelity and (5) exact B-fidelity (U1: the old predicate
+never bound `u`/`B`, so a `B = −1` window slipped through the bridge
+against `terminal_positive_main`; the spec carries the new transcribable
+field `budget_pos` — the r243 positivity half), and (6)/(7) the
+separation discipline: the tolerance stays below HALF the minimal
+spec-node gap and below every comb weight (U2: at mesh level 0 the
+tolerance is the full `log anchor`, which identified all nodes — the
+collided window killed `lstar_subordination` via `p = X − 1`; honest
+price, documented: mesh level 0 represents nothing, representation
+begins at sufficient refinement). The r320 verification additionally
+found the FREE spec fields `archWeight`/`border` carry the same disease
+one channel over (arbitrary arch mass vs L* at `p = 1`; arbitrary
+border vs the retyped pair margin) — no honest finite clause can close
+them before their transcriptions exist, so the bridge RHS now carries
+the **opaque `SourceExact` guard** (the r273 `MainWindow` convention
+applied to the spec side; its elimination = the named arch/border/fold
+transcription TODO). A witness section proves the retyped predicate
+satisfiable (anchor 2, atoms {2,3,4}, mesh level 4 — the first level
+satisfying the separation discipline, `2^7 < 3^5`), and a documentation
+block maps the mesh-vs-anchor cofinality seam (see below).
+
+The source boundary as a construction instead of an opaque marker —
+conservative route: `MainWindow` stays opaque and untouched; the explicit
+layer enters beside it. `PrimeWindowSpec` carries the arithmetic data
+(strictly increasing prime-power atoms `p^k`, anchor, mesh level,
+arch/border fields); node positions and comb weights are **derived**, not
+fields: `node j = Real.log (primePowers j)`,
+`combWeight j = Λ (primePowers j)` (mathlib
+`ArithmeticFunction.vonMangoldt`). `PrimeWindow` is the ℝ-valued mirror of
+`VonMangoldtWindow`; `buildPrimeWindow : PrimeWindowSpec → PrimeWindow`
+proves the window rule (`0 ≤ log p^k ≤ 2 log anchor`) from the source rule
+`p^k ≤ anchor²`; `MainWindowExplicit w := ∃ s, w = buildPrimeWindow s`.
+Python source of the construction (translated: the CONSTRUCTION, never a
+measured value): `verification/v563_paper2_readouts.py`
+(`von_mangoldt_table`, `U_ALL`/`MU_ALL`, `build_window`, `atom_lags_at`,
+`arch_lags`) → `port_integrable_kernel_probe.folded_measure` →
+`principal_bessel_probe.window_pack`/`smooth_comb` (border; r243 budget).
+
+**r310b refinement (reviewer plan §8).** The injectivity claim is
+restructured as an honest FOUR-STAGE SUPPORT CHAIN (the reviewer's
+warning: after mirroring/folding/tent-sampling deliberately equal
+geometric nodes arise, so raw injectivity of a folded map must not be
+stated): stage 1 `primePow_index_injective`, stage 2 `nodes_injective`
+(unfolded — exactly what `buildPrimeWindow` produces; FOLDING STATUS,
+honest: the build map contains NO hidden fold), stage 3 `foldedWindow`
+(the explicit quotient/aggregation: equal folded nodes merged, weights
+added — Python `folded_measure`/`np.add.at`; arbitrary fold map
+`φ : ℝ → ℝ`, the corpus `cos(2π j/L)` map is an instance whose exact
+transcription belongs to the classical arch/border TODO), stage 4
+`support_nodup` (AFTER the aggregation). On top: the four source
+theorems (table below, all proved) and the bridge in the reviewer
+target form. An APPROXIMATION WARNING block at
+`rational_window_approximates` records (reviewer verbatim) that the
+rational windows are certificate objects, not the definition — an
+approximation proof chain would need error ≪ the shrinking L* margin,
+which is not established; no statement uses approximation as a proof
+path.
+
+| Theorem | Status | Content |
+|---|---|---|
+| `primePow_index_injective` | proved (r310b) | **stage 1**: `p^k = q^ℓ` (primes, exponents ≥ 1) ⟹ `p = q ∧ k = ℓ` — unique factorization via `Nat.minFac`; the canonical `(p,k)` indexing is collision-free |
+| `node_strictMono`, `nodes_injective` | proved | **stage 2**: the real `log p^k` node positions are strictly increasing, hence pairwise distinct (log monotonicity + ordered prime powers — the r310 reviewer target proof); scope: the UNFOLDED chain |
+| `foldedWindow` (+ `foldedSupport`, `foldedNode`, `foldFiber`) | definition (r310b) | **stage 3**: the quotient/aggregation construction for the folded source — equal folded nodes merged (`Finset.image`), channel weights ADDED over each fiber (`np.add.at`), border/budget pass through |
+| `foldedWindow_mass` (+ `_comb_mass`, `_arch_mass`) | proved (r310b) | **stage-3 structure theorem**: exact mass conservation for every channel — the aggregation is a quotient, not a projection (`Finset.sum_fiberwise_of_maps_to`) |
+| `support_nodup` (+ `foldedWindow_nodes_strictMono`) | proved (r310b) | **stage 4**: AFTER the aggregation the merged support is duplicate-free (sorted strictly increasing); before it this is deliberately false in general |
+| `buildPrimeWindow_source_exact` | proved (r310b) | **source theorem 1**: the built window carries DEFINITIONALLY the `Λ`/`log` source data (`rfl` by derivation — the spec derives nodes/weights instead of carrying them as free fields) |
+| `buildPrimeWindow_weights_nonnegative` | proved (r310b) | **source theorem 2**: all weight channels nonnegative (comb via `vonMangoldt_nonneg`, strictly positive even; arch via the spec field), and both channels stay nonnegative under any fold |
+| `buildPrimeWindow_support_canonical` | proved (r310b) | **source theorem 3**: the full stage-1/2/3/4 chain — unfolded nodes pairwise distinct, folded support duplicate-free after aggregation for ANY fold map |
+| `buildPrimeWindow_refinement_compatible` | proved (r310b, `rfl` by design) | **source theorem 4**: the built family window is mesh-independent, also under any FIXED fold map; honest scope: the corpus fold map itself is mesh-dependent (`L = 2M−2`) — the mesh enters ONLY through the fold map, which is why folding is a separate stage |
+| `node_pos`, `combWeight_pos`, `node_le_two_alpha` | proved | node positivity, `Λ(p^k) > 0` (via `vonMangoldt_ne_zero_iff`), the real window rule |
+| `predefined_family` | proved (constructive) | **structure theorem 1**: the family atom set at anchor `a` is decided by arithmetic alone — `n` is an atom iff `IsPrimePow n ∧ n ≤ a²` (predefined, not result-dependent) |
+| `mesh_refinement_compatible` (+ `mesh_refinement_shrinks`) | proved (constructive) | **structure theorem 2**: refinement changes only the mesh level, never the atom data (`rfl`-level by design); the mesh width strictly shrinks along refinement |
+| `cofinal_prime_windows` | proved | **structure theorem 3**: for every `N` an anchor exists whose window carries ≥ `N` atoms (Euclid via `Nat.exists_infinite_primes`) |
+| `finite_forms_converge_to_weil` | proved (stabilization form) | **structure theorem 4**, comb channel: for test data vanishing above `b` the finite comb forms EQUAL the Weil prime-side tsum `Σ' Λ(n) f(log n)` for every anchor `≥ max(1,⌈exp b⌉)` — pointwise convergence realized as exact stabilization. Scope: prime side only; the archimedean-kernel transcription (`arch_A`) is the documented classical TODO, the spectral/zero side stays the open program content |
+| `rational_window_approximates` (+ `exists_rat_close`) | proved | the rational certificate layer: every real prime window admits rational node/weight data within every positive bound (density of ℚ); the frozen v962/v963 windows instantiate the mesh-level predicate `RepresentsSpec`. ⚠ Carries the r310b APPROXIMATION WARNING (see above) — certificate objects, not a proof path |
+| `RepresentsWindow` (+ `representsSpec_iff`) | definition + proved (r310b; **retyped r320**) | the window-level representation predicate: node/comb/arch within `δ`, u/B EXACT (clauses 4/5, U1 repair), separation discipline `2δ <` every node gap and `δ <` every comb weight (clauses 6/7, U2 repair); `RepresentsSpec w s ↔ RepresentsWindow w (buildPrimeWindow s) s.mesh` stays definitional (`Iff.rfl`) |
+| `SourceExact` | opaque predicate (r320) | the spec-side honesty guard: "arch/border/budget are the genuine Weil-kernel/v958/r243 data of this atom set" — deliberately opaque (r273 convention) because the free spec fields would otherwise re-import the U2/U3 disease through the arch and border channels (r320 verification finding); elimination = the arch/border/fold transcription TODO |
+| `mainWindow_iff_builtFromPrimeSource` | **`sorry` = the opacity bridge, reviewer target form (definitional/technical; retyped r320)** | `MainWindow w ↔ ∃ s, SourceExact s ∧ RepresentsWindow w (buildPrimeWindow s) s.mesh` — unprovable BY DESIGN while `MainWindow` is `opaque` (r273). DOCSTRING CORRECTION (r320): the old "becomes `Iff.rfl` under the invasive route" promise was wrong — with the OLD predicate the invasive route would have made the library inconsistent (U1–U3 guards); the honest statement: definitional only AFTER the `SourceExact` elimination (arch/border/fold transcriptions) |
+| `mainWindow_explicit_bridge` | proved (r310b, from the target form; carries the r320 retype) | `MainWindow w ↔ ∃ s, SourceExact s ∧ RepresentsSpec w s` — no own hole; the sorry lives in `mainWindow_iff_builtFromPrimeSource`; census unchanged at 5 |
+| `witnessSpec` / `witnessWindow` / `witness_represents` / `representsWindow_nonempty` / `mainWindowExplicit_nonempty` | definitions + proved (r320, repair 4) | the nonemptiness witness: anchor 2, atoms {2,3,4}, mesh level 4 (`log 2 / 5` — separation satisfiable via `2^7 < 3^5` and `3^5 < 2^8`), exact-rational certificate window (nodes `7/10, 11/10, 139/100`); proves the retyped predicate SATISFIABLE. Honest form statement: `∃ w, MainWindow w` is deliberately NOT provable (`MainWindow` and `SourceExact` are opaque — exactly what blocks the U1–U3 adversaries) |
+| mesh-vs-anchor cofinality seam | documentation block (r320, repair 5; **r326 UPDATE**) | `cofinal_prime_windows` = ANCHOR direction (atom count, Euclid) + `mesh_refinement_shrinks` (mesh → 0 at fixed anchor); hypothesis (H_cof) (carrier lane, `TfptCarrier/CofinalWeil.lean`, v849) needs PSD certificates along a pre-fixed MESH-REFINEMENT tower; no theorem of Source.lean feeds (H_cof), and none claims to. **r326**: (H_cof) is REPLACED as the target extraction route by the elementwise architecture (`RH/Elementwise.lean` — per-element predefined finite stabilization, no tower, no transport); the carrier-lane documentation stays historically correct, and the old seam-identification goal is superseded by the named Elementwise statements |
+
+### `RH/Elementwise.lean` — THE ELEMENTWISE EXTRACTION ARCHITECTURE (r326, the R325 repair set; three typed `sorry`s: arch/pole stabilization + the source-exact completion)
+
+The Level-C layer (window-local positivity ⟹ Weil form) as named
+statements, per the R325 fork adjudication
+(`extraction_order_probe.py`, sealed, primary
+`ELEMENTWISE_STABILIZATION_GO`): no mesh-cofinal ladder, no transport,
+no (H_cof) — per test element the finite forms stabilize at a
+PREDEFINED anchor onset and the element's OWN native mesh, and the
+extraction is one finite instantiation per element. Honest scope: the
+comb channel is transcribed and PROVED (corpus gauge `2Λ(n)/√n`, exact
+atom sum; the tent-assembled mesh read equals it on the native class —
+R325 S1.3, measured, mesh-grid transcription = the fold TODO); the
+arch/pole channels enter through OPAQUE reads (`archRead`/`poleRead`,
+`weilArchSide`/`weilPoleSide` — the r273/r320 opacity convention
+extended to the two kernel reads; their elimination = the classical
+kernel transcriptions), so their stabilizations are typed sorrys, not
+invisible gaps. Sign convention: `fullRead = arch − comb + pole` (the
+corpus total `c = car + cat + cp`, atom channel = MINUS the comb sum).
+`SourceExact` is eliminated as a free assumption from the extraction
+route: the route consumes only the CONSTRUCTION (`specFamily`), for
+which the transcribable source-exactness is PROVED.
+
+| Theorem | Status | Content |
+|---|---|---|
+| `CanonicalPrimeWindow` (+ `canonicalPrimeWindow_build`, `canonicalPrimeWindow_isExplicit`) | definition + proved | **(i)** the canonical family as a window predicate: `∃ a m ha, w = buildPrimeWindow (specFamily a m ha)`; every family member is canonical; canonical ⟹ explicitly-main |
+| `SourceExactSpec` | definition | the TRANSCRIBABLE source-exactness as a real definition (contrast the opaque `SourceExact`): node/comb derivation clauses (definitional by the r310 interface — recorded), ATOM-SET COMPLETENESS (the genuine content), budget positivity; arch/border deliberately NOT bound (their transcriptions do not exist — r320 finding) |
+| `sourceExact_buildPrimeWindow` | **proved** | **(i), the wave-12 reviewer target** ("exactly one construction theorem"): every canonical family member satisfies `SourceExactSpec` — clauses by `rfl` + `predefined_family` + the spec field; built windows PROVABLY carry their source |
+| `specFamily_sourceExact_completion` | **`sorry` (classical + opacity-forced)** | the bridge to the opaque guard: every family member admits a source-exact COMPLETION (same atoms/anchor/mesh, genuine arch/border/budget data filled in — `arch_A`, v958 column, r243 identity); unprovable by design while `SourceExact` is opaque; **not consumed by the extraction route** |
+| `GridElement` (+ `D0`, `acf`, `toFun`, `supportBound`, `elementAnchor`) | definitions | **(ii)** the native dense class built for real (the v749 "Weil form of step functions" class): step values on the dyadic grid `D0 = 2^{−meshExp}`, DERIVED autocorrelation `a_d = D0·Σᵢ xᵢxᵢ₊d`, DERIVED even piecewise-linear interpolant, support `steps·D0`, onset `a₀(f) = max(1, ⌈exp(supportBound)⌉)` predefined from the support alone |
+| `acf_eq_zero`, `acf_zero_nonneg`, `toFun_even`, `toFun_eq_zero` | proved | class structure: autocorrelation vanishes beyond the support, is nonnegative at lag 0; the test function is even and has PROVED compact support (from the construction, not assumed) |
+| `combMass`, `combRead`, `weilCombSide` (+ `combMass_nonneg`, `combMass_eq_gauge`) | definitions + proved | the corpus-gauge comb channel: masses `2Λ(n)/√n` (MU_ALL), the exact atom sum over `windowAtoms a`, the Weil prime side as tsum; the gauge relation to the window's `Λ` channel proved |
+| `comb_elementwise_stabilization` | **proved** | **(ii), comb channel**: for EVERY grid element and EVERY anchor `a ≥ elementAnchor f` the finite comb read EQUALS the Weil prime side — onset predefined from the element, NO mesh quantifier (the read is mesh-free, the built window mesh-independent); the elementwise form of `finite_forms_converge_to_weil` in the corpus gauge |
+| `combRead_eq_window_channel`, `comb_window_elementwise_stabilization` | proved | the honesty ties: the corpus-gauge read IS the built window's comb channel (orderIso reindex, `rfl` per atom); the Λ-gauge window form stabilizes with the same explicit onset |
+| `archRead`, `poleRead`, `weilArchSide`, `weilPoleSide` | opaque constants | the two kernel channels (exact Weil arch kernel `arch_A` / v716 pole closed form) as named opaque reads — the classical TODO made visible; elimination = the kernel transcriptions |
+| `arch_elementwise_stabilization`, `pole_elementwise_stabilization` | **`sorry` × 2 (classical, S2)** | the kernel channels stabilize elementwise at native-or-finer mesh (R325 S1: measured exact, 1.5e-15 / 2.0e-17 mesh constancy); provable classical quadrature once the kernels are transcribed |
+| `fullRead`, `weilForm`, `elementwise_finite_stabilization` | definitions + **proved** (from the three channels) | **(ii), full form**: `∃ a₀, ∀ a ≥ a₀, ∀ m ≥ f.meshExp: fullRead a m f = weilForm f` — comb unconditional, arch/pole through their typed sorrys; `a₀`, `m_f` elementwise-predefined |
+| `WindowLocalPositive`, `weil_nonneg_of_windowlocal` | definition + **proved** | **(iii), the extraction WITHOUT the ladder**: window-local positivity of the canonical family (typed honestly on the PLAIN full form, with the `f.meshExp ≤ m` grid-compatibility guard) ⟹ `0 ≤ weilForm f` for every grid element — ONE finite instantiation per element (Euclid anchor + the element's native mesh); replaces the (H_cof) route |
+| `BorderedCompressionBridge`, `weil_nonneg_of_bordered` | named Prop + proved | the compression bridge (bordered tower form ⟹ plain form — the corpus certificates live on the BORDERED form; the documented S2 rest) as a NAMED statement, parametrized over the bordered read (no new opaque, no truth commitment); the composed extraction is proved from (iii) |
+
+### `RH/Closure.lean` — THE RECONSTRUCTION THEOREM (r305, reviewer plan §3; one `sorry`: the terminal statement)
+
+| Theorem | Status | Content |
+|---|---|---|
+| `LStar`, `TerminalPositive` | definitions | the two window predicates: L* verbatim (`lstar_subordination` statement), and the r258/r260 terminal statement `0 < B ∧ q_N < 1` (faithful to TERMINAL_Q_LAW + the v959 budget telescope; `B > 0` is the measured r243 budget normalization `B = S_{N−2} + 5/7`) |
+| `terminal_margin_pos_of_terminal` | proved | terminal ⇒ `D_cap = B(1 − q) > 0` (ordered-field algebra, cf. `terminal_equiv`) |
+| `A_eq_submatrix_A_cap` | proved | `A_n` is a principal submatrix of `A_cap` (border column included) |
+| `lstar_terminal_implies_master` | **proved** | **the reconstruction theorem**: `LStar w → TerminalPositive w → ∀ n ≤ cap, A_{w,n} ≻ 0` (L* ⇒ `H_cap ≻ 0`; terminal ⇒ `D_cap > 0`; `det A_cap = D_cap·det H_cap > 0`; Schur bordering ⇒ `A_cap ≻ 0`; principal-submatrix restriction ⇒ all `A_n ≻ 0` — the matrix form of the backward Riccati drain `D_n = D_N + Σρ_k ≥ D_N`) |
+| `terminal_positive_main` | **`sorry` = the border/fiber hole** | `MainWindow w → TerminalPositive w` — the second true hole; its pair-coordinate refinement is `pair_margin_main` (`RH/PairBound.lean`); the r263 dictionary `Z²/m = q_N` connecting the two is measured (42/42), not formalized |
+| `augmented_prefix_positive` | **proved since r305** (corollary, statement verbatim r273) | THE MASTER THEOREM: `MainWindow w → ∀ n ≤ cap, A_{w,n} ≻ 0` — no longer an independent arithmetic input; = reconstruction ∘ (`lstar_subordination`, `terminal_positive_main`) |
+| `prefix_chain_positive_main`, `terminal_margin_positive_main`, `terminal_crossratio_main` | proved from master (moved verbatim from `RH/Window.lean`) | former edges B and A (`PRIME.PORT.FULLSOURCE.PREFIX_RESUMMATION.01` [O], `PRIME.PORT.COUPLEDTAU.TERMINAL_CROSSRATIO.01` [O]) |
+
+**The two true holes after r305** (what the reviewer's §3 predicted):
+`lstar_subordination` (base/wall) and `terminal_positive_main`
+(border/fiber; = `pair_margin_main` in pair coordinates). Everything
+else conditioned on `MainWindow` is finite matrix algebra over them.
+
+### `RH/Augmented.lean` — THE AUGMENTED SUBORDINATION L† (r332, the reviewer unification; **zero `sorry`**)
+
+The bird's-eye packaging: L* and the terminal statement are the
+distributed and the rank-one part of ONE strict sampling inequality.
+With `ℓ_w(p) = u_wᵀc` the border readout (`borderFunctional`, the v958
+border column against the coefficient vector through the cap),
+
+`(L†): 0 < B_w ∧ ∀ p ≠ 0, deg p < N_w: ∫p²dν_w + |ℓ_w(p)|²/B_w < ∫p²dμ_w`
+
+(`AugmentedSubordination`). Geometric reading (documentation only):
+`‖T_w‖ < 1` for the observation operator
+`T_w p = ((√ν_j·p(x_j))_j, ℓ_w(p)/√B)` on the μ-Hilbert space. All
+connections are finite algebra and close sorry-free:
+
+| Theorem | Status | Content |
+|---|---|---|
+| `coeffPoly_zero`, `coeffPoly_coeffs`, `muSq_zero`, `nuSq_zero` | proved | coefficient-vector bookkeeping: `coeffPoly` inverts coefficient extraction below the cap (mathlib `as_sum_range_C_mul_X_pow'`) |
+| `A_isHermitian`, `A_quadform` | proved | the augmented quadratic form split: `(x,t)ᵀ A_n (x,t) = xᵀH_n x + 2t(u·x) + Bt²` |
+| `borderFunctional` (+ `borderFunctional_coeffPoly`) | definition + proved | the border readout `ℓ_w(p) = u_wᵀc` |
+| `augmentedSubordination_iff_masterCap` | **proved** | **L† ⟺ `A_{w,n} ≻ 0` for all `n ≤ cap`** — ⟸ by quadratic completion at the test vector `(c, −ℓ(p)/B)`; ⟹ by the split `(μ−ν)(p²) − ℓ²/B + B(t+ℓ/B)²` with the `x = 0` budget-corner case; smaller degrees as principal submatrices |
+| `augmentedSubordination_implies_lstar` | proved | without the border term, L† is L* (drop the nonnegative border square) |
+| `augmentedSubordination_implies_terminal` | proved | with L*, the border term is the Schur condition: `B > 0` via the budget corner, `q < 1` via `D_cap = det A_cap/det H_cap > 0` — the `uᵀH⁻¹u < B` route in determinant coordinates, no explicit `H⁻¹u` minimizer needed |
+| `augmentedSubordination_iff_lstar_and_terminal` | **proved** | **L† ⟺ L* ∧ Terminal** — backward direction re-runs the wave-10 reconstruction bricks (NOT `lstar_terminal_implies_master`), keeping the corollary below non-circular |
+| `reconstruction_via_augmented` | proved | the r305 reconstruction theorem re-derived as `iff_masterCap.mp ∘ iff_lstar_and_terminal.mpr` — the Closure original is byte-stable, NOT replaced |
+| `augmentedSubordination_main` | **proved from the two holes** | **the combined target form**: `MainWindow w → AugmentedSubordination w`, proved from `lstar_subordination` + `terminal_positive_main` — deliberately NOT a new `sorry` (census unchanged at 8); a direct proof of L† would close BOTH holes |
+| `augmented_prefix_positive_via_ldagger` | proved | the master theorem through the L† route on MAIN windows (record) |
+
+Axiom census: every sorry-free theorem of the file depends only on
+`propext/Classical.choice/Quot.sound`; `augmentedSubordination_main`
+additionally on `sorryAx` — exactly the two existing holes, by design.
+
+### `RH/Open.lean` — ladder bookkeeping + kill lists (r273: no `sorry` anymore)
+
+The pre-r273 universal statements `terminal_crossratio_cofinal` and
+`prefix_resummation_positivity` are REMOVED — both are refutable over the
+bare bookkeeping (see `RH/Counterexamples.lean`). The file keeps the
+`WindowLadder` structure, the terminal cross-ratio `q`, the full measured
+**kill lists** (r257–r265 no-gos) and pointers to the truth-capable
+replacements in `RH/Window.lean`.
+
+### `RH/Counterexamples.lean` — the r273 reviewer guards (proved, no `sorry`)
+
+| Theorem | Refutes (pre-r273 form) | Model |
+|---|---|---|
+| `pair_margin_not_universal` | `pair_margin_cofinal` | `M = 1, Z = Zloc = 2, runs = []` — split holds with equality, margin would need `2 < 1` |
+| `terminal_crossratio_not_universal` | `terminal_crossratio_cofinal` | `h = c = 1, F = 2, m = 1` ⇒ `q_N = 4` on every rung |
+| `prefix_resummation_not_universal` | `prefix_resummation_positivity` | `MainSource := True`, `h_0 = −1` ⇒ `tau_1 = −1` |
+| `upper_pinning_not_universal` (wave 5, v962 N1) | world-blind `C = 0` upper pinning (`minC ≤ N_w` for every signed measure) | the EXACT one-negative instance `onenegToy` (4 atoms `0..3`, weights `1,1,1,−1/1000`): Hankel minors computed from the atoms (`onenegToy_minors`, incl. the negative `det H_4 = −1962/13625`), first crossing at `3 = N_w + 1` — a genuine moment computation, not a bookkeeping model |
+| `o1_pinning_escape` (proved) | any fixed `C` for the one-negative family | offset `(S−1) − N_w = (S−3)/2` is unbounded in `S` |
+| `old_bridge_terminal_inconsistent` (r320, U1) | the pre-r320 bridge type (`OldRepresentsWindow`, conserved verbatim: nodes/comb/arch only) jointly with the `terminal_positive_main` type | the EMPTY spec is old-represented by the `B = −1` window (`guardWindow0` — the old predicate never reads `u`/`B`); the terminal type then demands `0 < −1`; quantified over an ARBITRARY predicate `P` (r273 G3 style) |
+| `old_bridge_lstar_inconsistent` (r320, U2) | the pre-r320 bridge type jointly with the `lstar_subordination` type | the {2,3,4} spec at MESH LEVEL 0 (tolerance `log 2`) is old-represented by the TOTAL NODE COLLISION window (`guardWindow3`, all nodes = 1; exact d9 log-2 bounds); `p = X − 1` (degree `1 < cap = 2`) vanishes on the window, both integrals are 0, the strict subordination demands `0 < 0` |
+| `old_pair_margin_forces_empty` (r320, U3) | the pre-r320 `pair_margin_main` type (free `(Zloc, runs)`, bound only by the split inequality) | for EVERY predicate `P` satisfying the old margin type, `P` is EMPTY: `Zloc = \|F\| + 1`, `runs = []` satisfies the split trivially and the margin demands `\|F\| + 1 < √(5/7) < 1` — the r273 disease one level up |
+
+These are **permanent guards**: any future "proof from bookkeeping" of the
+old universal forms now contradicts a proved theorem of this library, any
+O(1) upper-pinning claim must consume the comb structure (v962 N1), and
+any attempt to restore the pre-r320 source-interface types contradicts
+the three r320 guards (all sorry-free, axiom census
+`propext/Classical.choice/Quot.sound` only).
+
+### `RH/PairBound.lean` — the PROVED finite pair algebra (r271, one `sorry`)
+
+The r269/r271 fixed drive bound c2PAIR as abstract list algebra over a
+linearly ordered field (probe `universal_pair_theorem_probe.py`,
+SPEC_SHA `66f61c8a436af90e`):
+
+| Theorem | Statement | Corpus anchor |
+|---|---|---|
+| `blockSums_sum` | one blocking pass preserves the sum (exact pair decomposition) | r271 Leg A (i) |
+| `abs_sum_le_pairBound` | `\|sum l\| ≤ pairBound l` — the c2PAIR validity theorem | r271 Leg A (iii) |
+| `pairBound_le_absSum` | the pairing never exceeds the abs triangle | r269 G40 ward |
+| `abs_sum_le_pairBound_level2` / `pairBound_level2_le` | the b2LEVEL2 refinement: valid and never worse | r271 Leg B |
+| `pair_exact` | `\|sg·M₁ − sg·M₂\| = \|M₁ − M₂\|` for `sg = ±1` (alternation identity) | r271 Leg A (ii) |
+| `boundary_triple_le` | the b1RAND boundary group never worse than pair + tail | r271 Leg B |
+| `pair_certifies` / `pair_closes_cofinally` | margin ⇒ `Z²/M² < 1` (via `two_branch_cheap_strict`) | r263/r271 |
+
+**r320: the canonical extraction as a definition (U3 repair).** New
+layer `signRuns` (maximal same-sign run aggregation, r271 G21) with the
+proved regrouping `signRuns_sum`, `terminalDrive` (`Z_w = F_{cap−1}`,
+r263 dictionary), `bulkRuns` (sign runs of the pre-terminal border
+column `u_0..u_{cap−2}`) and `edgeLocal` (the EXACT complement
+`Z − Σ runs`), with the split inequality a PROVED property of the
+canonical extraction (`canonical_split` — H1+H2 by construction).
+Honest modeling scope (documented): the probe-side F = 0.20 mesh-cell
+extraction lives below the window interface; the identification of the
+Lean extraction with it is measured (r271, warded G20/G23), not
+formalized — part of the border transcription TODO (`SourceExact`).
+
+`sorry` (the open problem, NOT a to-do): `pair_margin_main` — the H5
+margin law, since r273 typed on `VonMangoldtWindow` + `MainWindow` (the
+pre-r273 universal form `pair_margin_cofinal` is refuted by
+`pair_margin_not_universal`), since r320 stated for the CANONICAL
+extraction `|edgeLocal w| + pairBound (bulkRuns w) < sqrt(5/7)` (the
+r273 form with free `(Zloc, runs)` is refuted by
+`old_pair_margin_forces_empty` — U3); the conditional closure
+`pair_closes_main` is proved modulo it via `canonical_split` (measured
+42 rungs only: 5/7 exceptions under c2PAIR; b2LEVEL2 leaves kz39 at
+0.002 dec, kz15 at 0.06 dec; lemma list L1–L5 in the r271 probe).
+
+## TODO (second stage)
+
+- ~~Prove the Inertia layer against mathlib (`Matrix.PosDef` API).~~
+  DONE r305 except `crossing_budget` (Jacobi inertia — needs Jacobi's
+  minor-sign rule + Sylvester's law of inertia in matrix-counting form,
+  both absent from mathlib v4.29.1; a standalone formalization project).
+- Formalize the r263 dictionary `Z²/m = q_N` connecting
+  `terminal_positive_main` (`RH/Closure.lean`) with `pair_margin_main`
+  (`RH/PairBound.lean`), so the terminal hole is ONE Lean statement.
+- ~~Formalize the extraction of the r271 pair data (`Zloc`, `runs`) from
+  `VonMangoldtWindow` (currently a hypothesis of `pair_margin_main`).~~
+  DONE r320 as the canonical definition `edgeLocal`/`bulkRuns` with the
+  proved `canonical_split` (U3 repair). REMAINING: identify the Lean
+  extraction with the probe-side F = 0.20 mesh-cell extraction
+  (measured r271, not formalized — border transcription TODO).
+- r320 OPEN (named): eliminate `SourceExact` (`RH/Source.lean`) — the
+  arch-kernel (`arch_A`), border-column (v958) and fold-map
+  transcriptions; then the bridge becomes definitional under the
+  invasive route. Also named open: the mesh-vs-anchor cofinality seam
+  (identify the `specFamily` refinement tower with the v749 canonical
+  tower and transport window positivity into the (H_cof) shape — see
+  the seam block in `RH/Source.lean`).
+  **r326 update on both**: `SourceExact` is eliminated as a free
+  assumption FROM THE EXTRACTION ROUTE (`RH/Elementwise.lean`:
+  `CanonicalPrimeWindow` + the proved `sourceExact_buildPrimeWindow`;
+  the opaque predicate itself stays, related by the typed completion
+  sorry) — the transcriptions above remain the named TODO (they now
+  additionally discharge the two kernel-channel sorrys and the opaque
+  reads `archRead`/`poleRead`/`weilArchSide`/`weilPoleSide`); the seam
+  identification is SUPERSEDED as a goal by the elementwise
+  architecture (no (H_cof) tower is consumed anywhere; the seam block
+  carries the r326 update).
+- r326 OPEN (named, `RH/Elementwise.lean`): (a) the two kernel
+  transcriptions (arch `arch_A` GL-48 tent integrals, v716 pole closed
+  form) — turns the two classical sorrys into provable quadrature
+  statements; (b) the bordered-form transcription + the compression
+  bridge `BorderedCompressionBridge` as a theorem (the odd-compression
+  step; needs the border/fold data — part of the `SourceExact`
+  elimination); (c) the window-local positivity premise
+  `WindowLocalPositive` itself is Level B — the two true holes,
+  untouched by this round.
+- Give `MainWindow` its arithmetic content (the von-Mangoldt comb
+  instantiation) only if/when a promotion wave needs it.
+  **Partially addressed r310** (`RH/Source.lean`): the explicit content
+  is constructed (`PrimeWindowSpec`/`buildPrimeWindow`/
+  `MainWindowExplicit`); **refined r310b**: four-stage support chain
+  with the explicit folding aggregation `foldedWindow` + the four
+  source theorems, bridge in the reviewer target form. What remains is
+  the invasive step — replace the opaque `MainWindow` by
+  `fun w => ∃ s, RepresentsWindow w (buildPrimeWindow s) s.mesh` and
+  re-check all dependents (then `mainWindow_iff_builtFromPrimeSource`
+  becomes `Iff.rfl`), plus the border/budget fidelity (v958 column,
+  r243 budget), the exact archimedean transcription (Weil kernel
+  `arch_A` — classical analysis) and the corpus fold-map transcription
+  (fold fidelity of the certificates).
+- Keep SPEC SHAs in headers in sync with `rh/INVENTORY.json` on every wave.
