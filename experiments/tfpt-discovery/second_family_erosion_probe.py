@@ -349,6 +349,122 @@ extended lever, not at the extrapolated crossing m ~ 5000; a
 certified cross-family law fixes a LAW CANDIDATE with frozen
 census constants -- it proves NO cofinal law; r243-r352 stand.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze docstring edit; freeze SPEC_SHA 2c0e1c150b5721a8,
+pre-freeze commit ac4fbe28; protocol: smoke pass 1 = 45/45
+(1.2 s, run pre-commit, disclosed in the commit message);
+calibration pass 1 = FIRST full evaluation = 45/45, wall
+614.4 s, NO amendment -- no bar, band, rule or verdict rule
+moved at any point; record run1/run2 after this insertion,
+identical up to the runtime line):
+MAIN VERDICT: SECOND_FAMILY_BUILT(8/8 admitted, 0 queue
+failures) + FAB_LAW_BREAKS_ON_B([(kz117, 17.78), (kz124,
+18.07)]) + FLOOR_KILLS([(kz124, 0.63), (kz129, 0.95)]) +
+GREL_LOWER_BOUND_CANDIDATE(0.187, 63.4) + BZ_POOL_EXHAUSTED(2)
++ NEW_DEPTH_RECORD(m 812) + NEW_FAB_RECORD(kz124, 18.07).
+THE HEADLINE FINDINGS:
+(1) THE SECOND FAMILY EXISTS AND ADMITS CLEANLY: all 8 sealed
+frame-B candidates pass POSITIVE_PREFIX + chain-completeness
+(BZ kz69/kz80 + BD kz133/129/124/117/107/101, N_w 1792..3972,
+0 queue failures, mult <= 2 + non-degenerate 8/8) -- the r329
+frame-A admission boundary (nf 2125..2468) does NOT bind the
+half-resolution frame; every admitted row is SMALL-gap and
+SPIKE class; the family reaches m = 812 (kz133, log10 2.91,
+the deepest row of the lane) vs the frame-A max 660.
+(2) THE FAB CEILING IS A PER-FAMILY CENSUS, NOT A CROSS-FAMILY
+LAW: kz124 posts FAB 18.07 and kz117 17.78 -- BOTH above the
+frozen C_FAB = 14.93 (up to +21 percent); the combined
+SMALL-gap trend rc_small = +0.569 also crosses the +0.5 growth
+bar for the first time.  The sealed letter is
+FAB_LAW_BREAKS_ON_B: the r351 growth law survives every
+frame-A cohort but NOT the change of window aspect -- m q_max
+<= C log m keeps its FORM (the frame-B rows obey it at C' =
+18.07), but the frozen constant is family-indexed; the
+convention-free coordinate stays the right object, its
+uniformity claim shrinks to per-family.
+(3) THE PREREGISTERED KILL FIRED -- AND EARLIER THAN THE
+EXTRAPOLATION PREDICTED: kz124 (m 757) RSV 0.63 and kz129 (m
+787) RSV 0.95 breach RSV_KILL = 1.00; kz133 (m 812) sits at
+1.00 (bar miss).  FLOOR_KILLS: the sliding spike coverage GSQ
+F^2 >= rho_2 is FINITE -- it dies at m ~ 760 on the second
+family, NOT at the extrapolated m ~ 5000 (log10 3.4 combined
+crossing vs 3.7 at r351; e_RSV_comb -0.889, rc_comb -0.706 --
+the erosion ACCELERATES cross-family); the three-arm cover of
+r346/r349 is hereby bounded to the measured frame-A range and
+the cofinal reading needs a FOURTH mechanism (or the sliding
+constant is family-indexed too -- both typed honestly).  The
+kill rows are again the largest-FAB rows: the reserve dies
+exactly where the law coordinate peaks, now on both families.
+(4) THE K2 GAP FORMULA IS THE CROSS-FAMILY SURVIVOR: C_K2X =
+11.87 (the EXT5 rows do NOT lift the 83-row constant) holds
+0/8 on frame-B (max FAB grel 5.95) -- the Klein-gap product is
+the ONLY frozen constant of the lane that carries across the
+aspect change; g_min = 0.187 (kz69) gives the implied ceiling
+C_K2X/g_min = 63.4 <= 4 x 18.07 = 72.3:
+GREL_LOWER_BOUND_CANDIDATE fires (non-vacuous by 12 percent --
+census, the first measured gap floor spanning both families).
+The r329 counting constants hold 8/8 (min reserves NSC 1.61 /
+NG 2.79) -- the O(log m) counting side survives its FOURTH
+fresh cohort and FIRST cross-family test: still the most
+robust asset of the lane.
+(5) THE SYNTHESIS MOVES THE CEILINGS AND m_0* BACKWARDS
+(honest): C_FAB' = 18.07 (kz124), C_M2ENV' = 44.18 -> the
+class-free polylog m_0* = 10^20.5 (vs 10^18.9 at r351: +1.6
+decades WORSE -- growing census ceilings push the uniform
+horizon out); two-family columns: min family RSV 1.07 (A) vs
+0.63 (B), med RSV 4.89 vs 1.45, med D 1.74 vs 1.58, med pk
+0.077 vs 0.092, count maxima 2.03/2.64 (A) vs 1.26/0.94 (B).
+THE FIVE r351 HOLES: (1) freeze-census CONFIRMED (the
+ceilings move out-of-family); (2) the floor: KILLED (the
+strongest honest negative of the lane since r329); (3) the
+source formula: ADVANCED (K2X cross-family + measured gap
+floor; K3/K4 untested here, disclosed); (4) finite closure:
+extended to m = 812; (5) the second world: STILL OPEN
+(frame-B is a second CONSTRUCTION, not a second arithmetic).
+(6) WORLDS: w9B FAB 1.53 / w13B (twin) 1.64, RSV 6.6/6.3 --
+the twin protocol carries to frame B unchanged (census); the
+frame-B SCRAMBLE control at kz80 (seed 1) breaks AT ADMISSION
+(nf = 3 vs the true kz80's clean 1792-deep chain) -- the dead
+control is dead in the new build, immediately.
+FRAME-B FAMILY TABLE (strat kz z N_w m grel | F_ins FAB pk D
+| RSV): BD kz124 z 569 N 3617 m 757 grel 0.329 | 6.79 18.07
+0.1582 1.84 | 0.63; BD kz117 z 521 N 3266 m 657 0.329 | 7.54
+17.78 0.1756 1.10 | 1.22; BD kz133 z 617 N 3972 m 812 0.337 |
+5.07 14.33 0.1182 1.38 | 1.00; BD kz129 z 599 N 3838 m 787
+0.337 | 3.79 10.43 0.0884 2.07 | 0.95; BD kz107 z 461 N 2835
+m 557 0.318 | 4.09 8.39 0.0952 1.93 | 1.69; BZ kz69 z 256 N
+2846 m 578 0.187 | 3.28 6.94 0.0764 1.57 | 2.43; BZ kz80 z
+311 N 1792 m 346 0.408 | 3.56 4.91 0.0830 1.58 | 5.24; BD
+kz101 z 431 N 2622 m 512 0.340 | 2.14 4.09 0.0498 1.35 |
+5.32.  Frame-B branch census: 8 cheap / 0 exception.
+ANCHORS bit-near: r314 identity 4.5e-17 ladder / 7.5e-17
+frame-B; r306 C_2 1.069 (0/57); r316 n 65 + quartet + C_small
+@ kz18; dictionary 7.8e-16; r321 F_A top-3 2.47/2.39/2.38;
+THE r349 FAMILY + EXT4 RECORDS EXACT; THE r324 DIRECT RECORD
+(C_INF 1.7481, violators {53, 61, 67, 76, 83}, e_G +0.158);
+THE r329 COUNTING RECORD (C_NSC 2.0258, C_NG 2.6351, EXT3
+reserves 1.58/1.82); THE r351 GROWTH RECORD (C_FAB 14.93 @
+kz111 over 89 rows, EXT5 FAB max 9.71 @ kz135, kz79 F_ins
+6.69, rc_small +0.243) + THE r351 FLOOR RECORD (28 fam rows,
+min RSV 1.07 @ kz75, e_RSV -0.649, rc_fam -0.600, EXT5 spikes
+in [2.22, 3.38], C_M2ENV 26.01, m_0* 10^18.9, C_K2(83) 11.87,
+rc_gap -0.623, count reserves 1.59/2.77) -- ALL within tol.
+SEAL: NORM 9.0e-16, interpolation 0.0, FAB identity 2.0e-16,
+pileup chain 0.0, group chain 0.0, decomposition 1.0e-15,
+r316 chain 1.0e-15, frame-B NU = 4 reproduction 0.0 EXACT +
+pool reproduction 70/70 EXACT, contribution ward frame-B
+1.4e-12 (a-priori bar 1e-3 -- generous by 9 decades, said
+honestly), purity clean (0 id + 0 literal hits on the six
+module-own builders), toys exact (BZ (4, 1, 2) / BD (3, 2,
+1), e1 8 vs 2, e2 (2, 3) vs (1, 2), e3 0.5 vs 1.00, e4 3/8 vs
+3/4 break 2, trees 4/4 + 5/5).  Must-fails: e1
+protocol-CAUGHT twice (AST rho@811 + toy) / e2
+protocol-CAUGHT twice / e3 protocol-CAUGHT twice / e4 CAUGHT
+exact (break == 2) + m5a/m5b FLAGGED.  Runtime 614.4 s
+calibration / record run1/run2 identical up to WALL / 1.2 s
+smoke.  AMENDMENTS AFTER FREEZE: NONE except this
+record-table insertion.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
