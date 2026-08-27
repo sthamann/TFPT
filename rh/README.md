@@ -4130,7 +4130,12 @@ off the wall; λ_min(R) − ½ ∈ [−0.500, −0.083] vs MAIN positive),
 twin dual-pointwise 7.8e−4 nats; the EXT6 f64 sign truth is
 disclosed (the dual margin route cannot certify the ~4e−10 deepest
 signs).  Experiments-side, NO ledger row, NO L\* claim, NO RH
-CLAIM.
+CLAIM.  **R356 dual-hole addendum (memo, additive):** the frozen
+memo `rh/problem/lstar_problem.tex` §frozen now closes with the
+round-356 addendum — L\* ⟺ R > ½·I (exact equivalent form via
+Borodin's particle–hole duality), the anti-correlation is by
+design (duality algebra), the reserve localization as census —
+the lane is finally at the memo.
 
 ## Folder guide
 

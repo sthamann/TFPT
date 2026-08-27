@@ -746,7 +746,8 @@ functions (Thm~2.7 and Remark~2.8 there) --- noteworthy here
 because the closed-form weight dictionary of
 \S\ref{sec:frozen-chain} is the digamma $\psi=(\log\Gamma)'$.
 Status of this placement: the decorrelation and the rescaled
-positions are \emph{measured}; the saturation-regime adjacency
+positions are \emph{measured} and independently re-gated
+(round 356); the saturation-regime adjacency
 is a \emph{hypothesis} (an internal round in progress probes the
 duality/regime side), and no asymptotic statement is claimed.
 
@@ -774,6 +775,127 @@ related finite tool through which the cancellation of
 fields, not assignments: the paragraph names the schools whose
 standard toolkits contain the objects of this document, and it
 claims nothing on their behalf.
+
+\subsection{Addendum: the particle--hole reparametrization
+(round 356)}\label{sec:frozen-dualhole}
+
+This closing addendum was added late on August 27, 2026.  After the
+freeze, one further sealed internal round (record round r356, sealed
+and hash-pinned under the same conventions as
+\S\ref{sec:frozen-status}) re-read the frozen object through the
+particle--hole duality of orthogonal polynomials on a finite set
+(A.~Borodin, \emph{Duality of orthogonal polynomials on a finite
+set}, J.~Statist.\ Phys.\ 109 (2002), 1109--1120).  It adds no claim
+and changes nothing in the frozen status; it sharpens the one-object
+question in three ways.
+
+\subsubsection*{An exactly equivalent form:
+\texorpdfstring{$R>\tfrac12 I$}{R > (1/2) I}}
+
+Lift the pair to the \emph{positive} measure $\eta=\mu+\nu$ with
+weights $u_{j}=|\widetilde w_{j}|$ on the union support $X$.  Two
+structural facts of the construction make Borodin's duality apply
+verbatim, and both were checked bitwise on all $85$ instances:
+$X$ is the \emph{full} folded cosine grid (no fold atom is ever
+culled, so $S=L/2$), and the critical degree satisfies exactly
+Borodin's complementary rank condition $S=2N-1$ --- the
+half-filling law $N=\lceil S/2\rceil$ \emph{is} the rank condition,
+with no off-by-one, across the whole family.  Let
+$P_{X}(x)=\prod_{x'\in X}(x-x')$ be the monic node polynomial of
+$X$.  Borodin's dual (reciprocal) weight
+$u^{\vee}_{j}=1/\bigl(u_{j}\,P_{X}'(x_{j})^{2}\bigr)$ is, exactly
+on this grid,
+\[
+u^{\vee}_{j}\;\propto\;\frac{\kappa_{j}\,(1-x_{j})}
+{|f(\theta_{j})|}
+\]
+(three independent evaluation routes agree: the grid closed form
+against the symbol form at $4.4\cdot10^{-16}$ relative, against the
+numeric node-polynomial route at $\le 5.0\cdot10^{-9}$).  Note the
+reciprocity: the original weight carries $+\log|f|$, the dual
+weight $-\log|f|$.  Let $\Pi_{N-1}^{u^{\vee}}$ be the rank-$(N-1)$
+projection kernel of the orthonormal polynomials of $u^{\vee}$ on
+$X$, and let $R$ be its restriction to $Y=\operatorname{supp}\nu$
+(dressed by $\sqrt{u^{\vee}}$, as $\E_{n}$ is by $\sqrt{v}$).
+Then, as finite-matrix identities (theorem grade; the inputs remain
+the measured window scalars): the $L$-ensemble transformation
+$Q=\E_{N}(I+\E_{N})^{-1}$ ($Q$ the $Y$-restriction of the rank-$N$
+projection kernel of $\eta$; verified exactly in rational
+arithmetic on a small model, in double precision
+$\le 7.6\cdot10^{-12}$ on all $85$ instances) combined with
+Borodin's complementation
+$\Pi_{N}^{u}=D\,(I-\Pi_{N-1}^{u^{\vee}})\,D$ at half filling
+($D$ the diagonal sign matrix of $P_{X}'$) gives
+$\E_{N}=D\,(R^{-1}-I)\,D$ on $Y$, hence
+\[
+\eqref{eq:lstar}
+\iff
+\lambda_{\max}(\E_{N})<1
+\iff
+R\;>\;\tfrac12\,I ,
+\]
+with the exact spectral map
+$\mathrm{margin}=2-1/\lambda_{\min}(R)$ (verified to
+$9.9\cdot10^{-10}$ absolute across the family), and the pair block
+of \S\ref{sec:frozen-chain} is exactly the $(1,2)$ principal
+$2\times2$ minor of $2I-R^{-1}$:
+$c=\varepsilon_{1}\varepsilon_{2}(R^{-1})_{12}$,
+$p=2-(R^{-1})_{11}$, $q=2-(R^{-1})_{22}$ (signs
+$\varepsilon_{k}=\pm1$ from $D$; verified to $4.5\cdot10^{-7}$
+relative on the deepest instances).  Live census: $\lambda_{\min}
+(R)-\tfrac12$ ranges from $+4.2\cdot10^{-5}$ (the running instance)
+down to $+5.9\cdot10^{-11}$ (deepest tranche) --- all positive, no
+counterexample, the census of \S\ref{sec:frozen-census} restated in
+hole coordinates; the structurally destroyed inputs of
+\S\ref{sec:numerics}, item~4, violate $R>\tfrac12 I$
+\emph{structurally}, with $\lambda_{\min}(R)-\tfrac12\in
+[-0.500,-0.083]$.  Honest limit: at the deepest instances the
+double-precision resolution of the dual route ($\sim5\cdot10^{-10}$)
+exceeds the margins ($\sim4\cdot10^{-10}$), so the hole coordinate
+is exact algebra but not a sharper certification instrument.
+
+\subsubsection*{The anti-correlation is by design}
+
+The $+\log|f|$~/~$-\log|f|$ reciprocity above makes the dual weight
+block the exact negative of the dictionary-weight block $W$ of
+\S\ref{sec:frozen-object} up to a family-constant hard-edge
+geometry factor; gated live on the fine-structure operator across
+the family, the correlation of the two weight blocks is
+$-0.999998$ (sealed bar $-0.99$).  The anti-correlated two-block
+interference of \S\ref{sec:frozen-object} --- named there as part
+of the puzzle --- is therefore \emph{duality algebra}, not an
+independent phenomenon.  This narrows the frozen question honestly:
+it is no longer ``why do the pair-geometry and weight wanders
+couple with opposite sign'' (they do so by algebra), but only ``why
+is the difference of the by-design-coupled blocks five hundred
+times smaller than either block''.
+
+\subsubsection*{The cancellation is locally encoded (census)}
+
+Let $R_{\mathrm{pair}}$ be the $2\times2$ restriction of $R$ to the
+two binding atoms.  Its inverse $(R_{\mathrm{pair}})^{-1}$ ---
+consuming $R_{11},R_{12},R_{22}$ only: no readback of $p,q,c$ and
+no global inversion --- predicts the log reserve
+$-\log(1-r)=-\log(c^{2}/pq)$ pointwise along the family:
+fine-structure correlation $+0.9982$ (leave-out residual $0.068$)
+on the $57$ calibration instances, and $+0.9828$ (leave-out
+$0.165$) \emph{pure-test} on the $28$ deep instances never used in
+the fit; the pointwise log ratio has median $-0.51$ nats.  The
+$\sim500\times$ cancellation of \S\ref{sec:frozen-object} therefore
+lives in the \emph{local dual two-point data} at the two atoms.
+This is a census-grade localization, not a mechanism.  Equally
+honest: the duality itself does \emph{not} compress the problem ---
+no single dual block passes the sealed carrier clauses of the
+record (the round's main verdict is ``reparametrization only''),
+so the hole coordinate localizes the object but does not reduce
+it.  Independently, the same round re-gated the class exclusion of
+\S\ref{sec:frozen-placement}: the rescaled pair positions are
+family-constant against $\pi^{2}f^{2}/4$ on all $85$ instances
+(maximum deviation $0.33/N$), and the decorrelation exponent
+$1.4222$ of the earlier record is reproduced exactly --- the
+AC/Bessel-class exclusion stands re-gated.  Nothing in this
+addendum claims the inequality; the problem remains open exactly as
+stated in \S\ref{sec:frozen-status}.
 
 \section{Verification script, contact, citation}\label{sec:script}
 
