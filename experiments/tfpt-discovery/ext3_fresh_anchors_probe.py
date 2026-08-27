@@ -306,6 +306,132 @@ construction couples gap to depth): the round buys INDEPENDENCE OF
 THE ANCHOR CHOICE, not a second world; the e_tot numbers on 12
 anchors are census-grade (two dyadic halves of 6); r243-r328 stand.
 
+RECORD TABLES (inserted AFTER the record run -- the only post-freeze
+edit, which IS the protocol; TWO-COMMIT PROTOCOL EXECUTED: the
+sealed spec above was committed as "experiments: r329 pre-freeze"
+(604b8aaf) BEFORE the first full evaluation, this insertion is
+committed as "experiments: r329 record"; smoke pass 1 = 32/32
+(0.5 s), NO amendment; calibration pass 1 = FIRST full evaluation =
+33/33, wall 214.5 s, NO amendment -- no bar, band, rule or verdict
+rule moved at any point; record run1/run2 byte-identical up to WALL
+(222.6 / 216.2 s) and identical to the calibration pass):
+MAIN VERDICT: EXT3_VIOLATIONS(r306 C = 1.069: kz42/kz51/kz62/kz54
+ALL gap-class SMALL; r321 b = 1.3056: kz58 SMALL / kz130 MED /
+kz128 MED / kz96 SMALL) + EXPONENT_SHIFTED + SMALL_GAP_DIFFERENT(
+rho2 med x10.29; F_A med x3.21) -- honest reach-calibration, the
+audit's suspicion CONFIRMED quantitatively.
+ANCHORS (all five frozen-rule reproductions bit-near): r306 C_2
+1.069 (0/57), r316 n = 65 + rho quartet 1.0493/1.0536/0.4821/
+0.7791 + C_small 1.0694 @ kz18, r321 b = 1.3056 (0/39, named 4/4),
+r324 C_NSC = 2.0258 (0/39), r327 C_NG = 2.6351 (0/39, named 4/4);
+branch rule 35 cheap + the named 7; r314 identity wards
+4.5e-17/4.7e-16/4.1e-16 ladder, 1.0e-16/7.6e-16/7.2e-16 EXT3.
+SELECTION (sealed rule executed verbatim): USED ledger 80 kz (70
+frame-A + 35 r286-rule ranks, union 80); lifted pool 124, FRESH 44,
+disjointness 0 EXACT; stratum B (small-gap mid-zone, z in [16,
+317], grel asc) = kz42/51/62/54/56/58 (z 127/167/227/179/191/197,
+grel 0.282..0.528, N_w 1721..2475); stratum A (depth, h desc) =
+kz130/128/127/125/123/96 (z 601..397, N_w 2577..2389, grel
+0.62..1.02); four A-queue candidates SKIPPED for POSITIVE_PREFIX
+failure (kz157 nf 2468, kz180 nf 2385, kz154 nf 2410, kz286 nf
+2125 -- the first POSITIVE_PREFIX failures ever seen on this
+construction, themselves a small-gap-depth census datum); mult <= 2
+on 12/12; ALL 12 anchors deeper than every prior window (N_w
+1721..2577 > 1650).  GAP STATISTICS (module convention W = 5):
+65-ladder grel min/med/max 0.40/1.32/3.56 vs EXT3-B med 0.46 /
+EXT3-A med 1.01 -- the ladder's large-gap selection is real on the
+source grid (audit C1 quantified).
+THE EXT3 TABLE (stratum kz z N m grel class | qmax F_A F_ins rho2
+b F_A^2 | marks a=r321/b=r306/c=NSC/d=NG, reserves):
+  B kz42  z 127 N 2472 m 494 grel 0.282 SMALL | 0.0568 3.21 2.44
+    rho2 2.2426 bF2 13.4904 | .*.. rsv 6.0/0.5/2.5/5.4
+  B kz51  z 167 N 1721 m 335 grel 0.408 SMALL | 0.1291 5.42 5.54
+    rho2 7.6196 bF2 38.3331 | .*.. rsv 5.0/0.1/2.4/5.1
+  B kz62  z 227 N 2475 m 505 grel 0.458 SMALL | 0.0555 3.30 2.38
+    rho2 2.3240 bF2 14.2577 | .*.. rsv 6.1/0.5/2.5/5.5
+  B kz54  z 179 N 1868 m 362 grel 0.467 SMALL | 0.0910 3.82 3.91
+    rho2 3.1986 bF2 19.0337 | .*.. rsv 6.0/0.3/3.0/5.2
+  B kz56  z 191 N 2018 m 397 grel 0.474 SMALL | 0.0266 0.82 1.14
+    rho2 0.2498 bF2  0.8746 | .... rsv 3.5/4.3/1.7/2.6
+  B kz58  z 197 N 2093 m 409 grel 0.528 SMALL | 0.0142 0.33 0.61
+    rho2 0.1522 bF2  0.1450 | *... rsv 1.0/7.0/1.7/3.2
+  A kz130 z 601 N 2577 m 505 grel 1.020 MED   | 0.0160 0.39 0.68
+    rho2 0.2125 bF2  0.2011 | *... rsv 0.9/5.0/1.6/1.8
+  A kz128 z 593 N 2538 m 553 grel 1.018 MED   | 0.0115 0.27 0.50
+    rho2 0.1348 bF2  0.0960 | *... rsv 0.7/7.9/2.6/3.3
+  A kz127 z 587 N 2508 m 543 grel 1.017 MED   | 0.0177 0.43 0.76
+    rho2 0.1631 bF2  0.2464 | .... rsv 1.5/6.6/2.1/5.5
+  A kz125 z 571 N 2430 m 510 grel 1.007 MED   | 0.0407 1.84 1.75
+    rho2 0.6322 bF2  4.4039 | .... rsv 7.0/1.7/4.2/8.2
+  A kz123 z 563 N 2391 m 497 grel 0.975 MED   | 0.0445 1.32 1.91
+    rho2 1.0568 bF2  2.2864 | .... rsv 2.2/1.0/2.1/5.5
+  A kz96  z 397 N 2389 m 462 grel 0.623 SMALL | 0.0136 0.32 0.59
+    rho2 0.1436 bF2  0.1337 | *... rsv 0.9/7.4/2.1/4.0
+FROZEN-TEST BALANCE: (a) r321 sliding 8/12 hold -- ALL FOUR
+violations are QUIET anchors (F_A 0.27..0.39, excess 1.05x/1.40x/
+1.06x/1.07x): b F_A^2 decays quadratically below the ladder's own
+F_A floor (r321 min 0.58; the fresh cohort reaches 0.27) -- the
+sliding bound fails on the QUIET side, never on the spike side;
+DISCLOSED SECONDARY CENSUS: under the r321 insertion-rule
+coordinate (F_ins vs the pure-65 columns) all four quiet violators
+are INSIDE (b F_ins^2 = 0.49/0.60/0.33/0.45 vs rho2 0.15/0.21/
+0.13/0.14) -- the (a)-violation is CONVENTION-SENSITIVE (extended-
+ladder F_A vs insertion rule), said honestly; (b) r306 base
+8/12 hold -- ALL FOUR violations are the sharpest SMALL-GAP
+mid-zone anchors (kz51 rho2 7.6196 = 7.1x C, kz54 3.0x, kz62 2.2x,
+kz42 2.1x): the first-5-frozen uniform constant is a LARGE-GAP
+artifact and does NOT extend to the small-gap family -- while the
+r321 SLIDING bound covers exactly these four with reserves 5.0-6.1
+(the coordinate absorbs what kills the flat constant, on anchors
+neither it nor its constant ever saw); (c) r324 C_NSC HOLDS 12/12
+(min reserve 1.6); (d) r327 C_NG HOLDS 12/12 (min reserve 1.8) --
+BOTH O(log m) counting constants generalize choice-robustly.
+ETOT (census): e(G/log m) = -0.771, e(m M_2) = -0.889, e_tot =
+-1.660 vs the r324 record +0.172 -> EXPONENT_SHIFTED; honest
+reading: the 12-anchor set mixes two strata (the m-sorted lower
+half is dominated by high-rho2 small-gap anchors), so the halves
+slope reads the COHORT COMPOSITION, not a depth trend -- census-
+grade by seal, no trend statement.
+GAP CONTRAST (cohort med rho2 / med F_A / spike rate / med G/logm
+/ med mM2): B small-gap 2.2833/3.26/0.67/4.51/5.10; A depth
+0.1878/0.41/0.17/1.41/2.13; LADDER_DEEP (n=23) 0.2219/1.02/0.17/
+1.20/2.07 -> SMALL_GAP_DIFFERENT(rho2 med x10.29; F_A med x3.21):
+the small-gap family is a genuinely different anatomy -- spike
+rate 0.67 vs 0.17, and the A-stratum (median-gap, deep) looks like
+the ladder's own deep segment (0.19 vs 0.22) -- the difference is
+the GAP CLASS, not the depth.
+MUSTFAIL LEDGER: e1 collision CAUGHT (1 vs 0 EXACT on 44 fresh);
+e2 AST rho@631 + toy 1.0 != 1.3056; e3 AST rho@642 + toy 0.25 !=
+0.85; e4 AST cm@653 with 0 hits on the five real builders; m5a
+t_term@661 / m5b g_branch@668 FLAGGED; purity 0 id + 0 literal
+hits; frame reproduction 70/70 EXACT; construction ward 0
+deviations on 12/12.
+READING (typed, no upgrade): the audit-A2 sequence-bias suspicion
+is CONFIRMED in the honest direction -- (1) the r306 uniform
+constant does NOT survive fresh small-gap anchors (up to 7.1x);
+its 0/57 record is a statement about the large-gap construction
+family, now said with numbers; (2) the r321 sliding form is the
+round's structural WINNER on the spike side: all four r306-killers
+sit inside b F_A^2 with reserves >= 5 at the FROZEN constant --
+the coordinate genuinely carries independent evidence beyond its
+calibration set; its quiet-side misses are small (<= 1.40x),
+convention-sensitive, and name the successor question (a floor
+term for F_A below the ladder's sampled range -- r330 material,
+NOT a recalibration of this round); (3) the two counting
+constants C_NSC/C_NG hold 12/12 -- the O(log m) counting side of
+the lane is the most choice-robust asset measured so far; (4)
+SMALL_GAP_DIFFERENT answers audit C1: the generalization class of
+every mid-ladder constant since r306 is the LARGE-GAP family, and
+the small-gap anatomy (rho2 x10, F_A x3.2, spike rate x4) is now
+a measured object, not a blind spot.  Honest negatives: 12
+anchors are a small census; the e_tot column is composition-
+dominated; the four POSITIVE_PREFIX failures show the sealed
+construction itself starts failing half-filling at small-gap
+depth (nf 2125..2468) -- the reachable fresh pool is finite; no
+second world was touched (audit repair 4 stays open).  Runtime
+214.5 s cal / 222.6 + 216.2 s record / 0.5 s smoke.  AMENDMENTS
+AFTER FREEZE: NONE except this record-table insertion.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
