@@ -122,6 +122,11 @@ EOF
 run_audit() {
   echo "== Sync audit =="
   python3 "$ROOT/verification/audit_sync.py" || exit 1
+  echo "== RH workspace =="
+  # rh/ gate (wave 4): the RH suite in --fast mode (INVENTORY SHA drift
+  # detector + sealed probe smoke list + lake build if present) must end
+  # "RH SUITE: ALL CHECKS PASSED"; full v9xx module runs stay in run_all.py.
+  python3 "$ROOT/rh/verification/run_rh.py" --fast || exit 1
 }
 
 run_zenodo() {  # $1 = optional "publish"

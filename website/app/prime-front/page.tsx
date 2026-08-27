@@ -49,7 +49,7 @@ const DIARY_RUN_COUNT = PRIME_FRONT_UPDATES.length + PRIME_FRONT_ARCHIVE_COUNT;
 
 export const metadata: Metadata = {
   title: "The Prime Front — Research Diary",
-  description: `A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v954 inside a ${SCRIPT_TOTAL}-script suite. No claim of progress toward the Riemann Hypothesis.`,
+  description: `A plain-language research diary of TFPT's prime / zeta line. The story in short: primes → the classical explicit formula → a window matrix built from primes inside the theory's E8 bookkeeping → proved identical to Suzuki's Weil operator (the W1 theorem, v643, machine-verified after a same-day erratum) → one open positivity statement (W3) where everything RH-hard still sits. Also: the uniform constant C = 1, the Lorentz congruence, E8 as a literal error-correcting code, and the G31 reflection group. Machine-verified modules v535–v970 inside a ${SCRIPT_TOTAL}-script suite. No claim of progress toward the Riemann Hypothesis.`,
   keywords: [
     "TFPT prime front",
     "E8 census",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "The Prime Front — TFPT research diary",
     description:
-      "Primes, the E8 census, and the load-bearing modules v535–v954: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
+      "Primes, the E8 census, and the load-bearing modules v535–v970: Hecke from geometry, the phase-2 certified map, C = 1 exception-free, the Lorentz congruence, the E8 code dictionary, and the Suzuki W1 identification theorem-closed (after a same-day convention erratum). Honest fence: closing W1 does not move W3. No claim of progress toward the Riemann Hypothesis.",
     url: `${SITE_URL}/prime-front`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Prime Front — TFPT",
     description:
-      "Research diary of the prime / zeta line. Machine-verified v535–v954: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
+      "Research diary of the prime / zeta line. Machine-verified v535–v970: the induction sprint, the phase-2 map, C = 1, the Lorentz bridge, the E8 code, and the Suzuki W1 theorem (erratum-corrected one-scalar dictionary) — with the RH-hard step W3 explicitly open. Not RH evidence.",
   },
 };
 
@@ -2916,7 +2916,7 @@ function KillAtlasSection() {
           RH. Everything in this chapter is sandbox: four frozen probes in
           the experiments tree, no promotion, no marker moves — v913 was
           the newest promoted module at the freeze; the suite stood at 906
-          (947 today, after the v914/v915 promotion of chapters 37–39, the v916/v917 Epstein detection-arc promotion of 2026-08-16, the v918–v921 prime-front theorem-arc promotion of 2026-08-18, the v922–v925 spectral-balance/edge arc and v926–v930 endgame-arc promotions of 2026-08-19, the v931–v935 triple-cofinal-arc and v936–v941 post-bughunt-arc promotions of 2026-08-20, the v942–v948 mechanism-arc promotion of 2026-08-21, and the v949–v954 Bughunt-X-arc promotion of 2026-08-22).
+          (954 today, after the v914/v915 promotion of chapters 37–39, the v916/v917 Epstein detection-arc promotion of 2026-08-16, the v918–v921 prime-front theorem-arc promotion of 2026-08-18, the v922–v925 spectral-balance/edge arc and v926–v930 endgame-arc promotions of 2026-08-19, the v931–v935 triple-cofinal-arc and v936–v941 post-bughunt-arc promotions of 2026-08-20, the v942–v948 mechanism-arc promotion of 2026-08-21, the v949–v954 Bughunt-X-arc promotion of 2026-08-22, the v955/v956 integrable-dictionary-arc promotion of 2026-08-24, the v958 bordered-dictionary-arc and v959 coupled-tau-terminal-arc promotions of 2026-08-24/25, and the v960/v961 wave-4 surface-closure/orientation promotions of 2026-08-25).
         </p>
 
         <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-300">
@@ -3265,7 +3265,7 @@ function SvpinKreinSection() {
           problem to countably many safe scalars, and the construction of
           the one carrier the corpus did not have. Everything in this
           chapter is sandbox: two frozen probes in the experiments tree,
-          no promotion, no marker moves — the suite stood at 906 at the freeze (947 today). No RH
+          no promotion, no marker moves — the suite stood at 906 at the freeze (954 today). No RH
           claim in any direction.
         </p>
 
@@ -3412,7 +3412,7 @@ function CohomSpecSection() {
           geometric programs — Deninger&apos;s conjectural cohomology for
           Spec ℤ and the Connes–Consani scaling site. Everything in this
           chapter is sandbox: four frozen probes in the experiments tree,
-          no promotion, no marker moves — the suite stood at 906 at the freeze (947 today). No RH
+          no promotion, no marker moves — the suite stood at 906 at the freeze (954 today). No RH
           claim in any direction.
         </p>
 
@@ -3566,7 +3566,7 @@ function ThreeLemmaFormsSection() {
           (the N ≤ 3 floors and all cited-bound wards recomputed at every
           suite run, the cap-10¹³ N = 4 intervals pinned from the
           run-of-record with the split disclosed, and the chapter-39 reach
-          cap typed in verbatim); the suite stands at 947 (after the later v916/v917 Epstein detection-arc, v918–v921 theorem-arc, v922–v925 spectral-balance/edge arc, v926–v930 endgame-arc, v931–v935 triple-cofinal-arc, v936–v941 post-bughunt-arc, v942–v948 mechanism-arc and v949–v954 Bughunt-X-arc promotions). Everything else
+          cap typed in verbatim); the suite stands at 954 (after the later v916/v917 Epstein detection-arc, v918–v921 theorem-arc, v922–v925 spectral-balance/edge arc, v926–v930 endgame-arc, v931–v935 triple-cofinal-arc, v936–v941 post-bughunt-arc, v942–v948 mechanism-arc, v949–v954 Bughunt-X-arc, v955/v956 integrable-dictionary-arc, v958/v959 bordered- and coupled-tau-arc, and v960/v961 wave-4 promotions). Everything else
           in this chapter remains sandbox. No RH claim in any direction.
         </p>
 
@@ -3771,7 +3771,7 @@ function RoadmapSection() {
           (extended by round 106, chapter 39) has since been promoted as
           v914_pascal_region_theorem.py, and the certified Euler–Pick
           floors it consumes as Stage-0/1b acceptance values as
-          v915_eulerpick_certified_floors.py; the suite stands at 947. The
+          v915_eulerpick_certified_floors.py; the suite stands at 952. The
           roadmap itself remains sandbox.
         </p>
 
@@ -4130,8 +4130,8 @@ function UnpricedResolventSection() {
           (arXiv:2511.22755) is, mode for mode, an object this diary had
           already built and frozen as its round-89 record. Everything here
           is sandbox: two frozen probes, no promotion, no marker moves —
-          the suite stood at 906 at these rounds&apos; freeze (947 today,
-          after the v914/v915 and later promotions through v954). No RH claim in
+          the suite stood at 906 at these rounds&apos; freeze (954 today,
+          after the v914/v915 and later promotions through v961). No RH claim in
           any direction.
         </p>
 
@@ -4433,7 +4433,7 @@ function BigPictureSection() {
                 href="/verification"
                 className="font-mono text-emerald-300 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-200"
               >
-                v535–v954 (this front)
+                v535–v970 (this front)
               </Link>{" "}
               are machine-verified and cited in the papers. Sandbox probes never
               move a status marker.
@@ -4466,7 +4466,7 @@ function BigPictureSection() {
               tone="amber"
             />
             <BigPictureStat
-              term="v535–v954"
+              term="v535–v970"
               desc={`machine-verified modules of this front, inside the ${SCRIPT_TOTAL}-script suite (all green)`}
               tone="emerald"
             />

@@ -760,9 +760,9 @@ export const predictions: Prediction[] = [
     },
     experiment: {
       summary:
-        "experiments/cmb-inflation-scalaron evaluates r = 12/N⋆² against BICEP/Keck and forecasts CMB-S4.",
+        "experiments/cmb-inflation-scalaron evaluates r = 12/N⋆² against BICEP/Keck and forecasts CMB-S4; the closure-invariant module eliminates N⋆ entirely (A_s·r = c₃⁷/(2π²), r = 3(1−n_s)², C_inf = 6π²A_s(1−n_s)²/c₃⁷ = 1).",
       result:
-        "r = 0.0045 (below BK18 < 0.036); at CMB-S4 σ_r ≈ 5×10⁻⁴ this is a ~9σ detection target — the clean future discriminator.",
+        "r = 0.0045 (below BK18 < 0.036); at CMB-S4 σ_r ≈ 5×10⁻⁴ this is a ~9σ detection target — the clean future discriminator. N⋆-free: r(A_s) = 0.00381 ± 0.00005 and C_inf = 0.970 ± 0.233 (−0.13σ, Planck legs; covariance unmodelled) — a robust future bound r < 0.0037 kills this normalisation.",
       finding: "data_limited",
       repoPath: "experiments/cmb-inflation-scalaron",
     },
@@ -1114,7 +1114,7 @@ export const predictions: Prediction[] = [
     },
     experiment: {
       summary:
-        "experiments/cmb-birefringence-seed tests one φ₀ → β AND Ω_b (seed line Ω_b/β_rad = 4π−1) plus the shared-seed extension φ₀ → β+Ω_b+θ₁₃+Cabibbo.",
+        "experiments/cmb-birefringence-seed tests one φ₀ → β AND Ω_b (seed line Ω_b/β_rad = 4π−1) plus the shared-seed extension φ₀ → β+Ω_b+θ₁₃+Cabibbo, and freezes the full rotation fingerprint (TB/TE = tan2β = 0.00846278, 2EB/(EE−BB) = tan4β = 0.01692677, frequency exponent 0, anisotropy/cross nulls — 5 published legs consistent, the sharp morphology legs await PR4/NPIPE per-frequency spectra).",
       result:
         "β consistent at 0.37σ (ACT DR6); shared-seed χ²/dof = 1.23 (covariance unmodelled, so no combined significance is claimed).",
       finding: "consistent",

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`947` registered scripts · `1099` ledger claims · `10` clusters.
+`975` registered scripts · `1161` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (466 scripts)
+### `core` — Compiler core & the E₈ glue  (490 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -799,12 +799,12 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v876_carleson_polygon_wave, v866_source_contractor_formula, v866, v869, v879, v881_carleson_port_geometry, v876, v879_envelope_partition_closure · cited: 3 e8 audit bootstrap, research contracts
 - **v882_port_source_mellin** [E/C/O] `PRIME.SQRT.UNIFORM.01, PRIME.PORT.MELLIN.01, PRIME.PORT.ATOMS.01, PRIME.CASE.SUMRULE.01` — unter r = √(n/X) uniformisiert das gewichtete Primmaß zu Lebesgue dr (Kolmogorov 0.0005 bei X = 1e7); die Randmasse der letzten Log-Einheit = 1−e^{−1/2} = 0.393469 (gemessen 0.3936
   - deps: v882-internal, v882_port_source_mellin, v881_carleson_port_geometry, v563 · cited: 3 e8 audit bootstrap, research contracts
-- **v883_tau_chain_parametrix** [E/O] `PRIME.PORT.TAU.01, PRIME.PORT.LATTICE.PARAMETRIX.01, PRIME.PORT.LEADING.SIGN.01` — die Schur-Determinanten-Identitäten σ_h = det(I−E)/det(B) und det(I−E) = det(I−R)·det(I−D_P) maschinen-exakt (4.8e-13): sign(τ_h) = sign(σ_h) = die Wand mit τ_h := det(I−D_P); die 
-  - deps: v881_carleson_port_geometry, v563, v882_port_source_mellin, v882, v883_tau_chain_parametrix · cited: 3 e8 audit bootstrap, research contracts
+- **v883_tau_chain_parametrix** [E/O] `PRIME.PORT.LATTICE.PARAMETRIX.01, PRIME.PORT.LEADING.SIGN.01` — die Schur-Determinanten-Identitäten σ_h = det(I−E)/det(B) und det(I−E) = det(I−R)·det(I−D_P) maschinen-exakt (4.8e-13): sign(τ_h) = sign(σ_h) = die Wand mit τ_h := det(I−D_P); die 
+  - deps: v882_port_source_mellin, v881_carleson_port_geometry, v563, v882, v883_tau_chain_parametrix.py;v955_tau_iiks_toda_dictionary · cited: 3 e8 audit bootstrap, research contracts
 - **v884_certified_head_positivity** [E/O] `PRIME.PORT.CERTIFIED.HEAD.01, PRIME.PORT.TAIL.01` — σ_h > 0 BEWIESEN auf kz 9 (h=184), 12 (151), 13 (168): unabhängiger mpmath-Nachbau der Fenster-Lags (dps 60/100, konservatives Fehlermodell eps_c = 10× dps-Disagreement, Cross-Ward
   - deps: v866_source_contractor_formula, v563, v866, v883_tau_chain_parametrix, v884_certified_head_positivity · cited: 3 e8 audit bootstrap, research contracts
 - **v885_ladder_flow_anatomy** [E] `PRIME.PORT.ISOFLOW.01, PRIME.PORT.LADDER.TRANSFER.01, PRIME.PORT.PRIMELADDER.01, PRIME.PORT.LAX2.01` — der gauge-fixierte IIKS-Generator-Fluss schließt in GRAD 2 (Residuen-Mediane 0.244/0.248 mit {Y²f, Y²g}; Grad 1 fällt bei 0.498/0.457) — isomonodromie-kompatible Lax-Struktur, ehrl
-  - deps: v881_carleson_port_geometry, v883_tau_chain_parametrix, v563, v885_ladder_flow_anatomy, v877 · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v881_carleson_port_geometry, v883_tau_chain_parametrix.py;v955_tau_iiks_toda_dictionary, v563, v885_ladder_flow_anatomy, v883_tau_chain_parametrix, v877 · cited: 3 e8 audit bootstrap, research contracts
 - **v886_register_gapcode_null** [E] `PRIME.DIVISOR210.GAPCODE.01` — und der Code ist DAS SIEB, keine TFPT-Signatur (24/24 unter Spec v2)** — die Registerbits {2,3,5,7} sind exakt die ersten vier Paritätschecks des Siebs (Coderate 48/210, 16 Syndrom
   - deps: v868_divisor210_audits, v868, v882 · cited: 3 e8 audit bootstrap, research contracts
 - **v887_certified_ladder_complete** [E] `PRIME.PORT.CERTIFIED.LADDER.01` — σ_h > 0 ist jetzt auf ALLEN 42 erreichbaren Sprossen BEWIESEN: dieses Modul schließt die letzten zwei Sprossen h = 859/878 (validated-precision mpmath-Cholesky dps 120/200 mit Präz
@@ -814,7 +814,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v889_route_decisions** [E/C/X] `PRIME.PORT.DIAGSEP.01, PRIME.CASE.ZONESPLIT.01, PRIME.CASE.PNTGAMMA.01, PRIME.CASE.SIGNEDHOMOTOPY.01` — die Wand stirbt zu 100% durch Off-Diagonal-Kohärenz (Diagonalprofil am Kill-Punkt eingefroren; Trennung > 10 tief, ehrlich DIAG-INTERMEDIATE typisiert); θ* = 0.700 eingefroren (Auß
   - deps: v881_carleson_port_geometry, v563, v881, v882_port_source_mellin, v883_tau_chain_parametrix, v882, v889_route_decisions · cited: 3 e8 audit bootstrap, research contracts
 - **v890_total_positivity_flow** [E/O] `PRIME.PORT.HIROTA.01, PRIME.PORT.TAU.MOEBIUS.01` — FLAGGEN-POSITIVITÄT (Sylvester; Typisierung per Runde-51-Review korrigiert — klassische Totalpositivität aller Minoren ist NICHT behauptet): alle 12 FÜHRENDEN Haupt-Minoren von I −
-  - deps: v883_tau_chain_parametrix, v881_carleson_port_geometry, v563, v883, v890_total_positivity_flow · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v883_tau_chain_parametrix.py;v955_tau_iiks_toda_dictionary, v881_carleson_port_geometry, v563, v883, v890_total_positivity_flow · cited: 3 e8 audit bootstrap, research contracts
 - **v891_moebius_firewall_kills** [E/X] `PRIME.PORT.MOEBIUS.KILLS.01` — fit- und gauge-freie Kreuzverhältnisse: CR-DEAD (gepoolter Median 0.128; das 0.0015-Residuum war von der Pro-Sprossen-Normalisierung erzeugt), Anker fragil, Cocycle gebrochen; sour
   - deps: v881_carleson_port_geometry, v563, v881 · cited: 3 e8 audit bootstrap, research contracts
 - **v892_closure_architecture** [E/C/O/X] `PRIME.PORT.RELCONG.01, PRIME.PORT.PIVOTFACTOR.01, PRIME.PORT.EULER.ROUCHE.01, PRIME.PORT.DEEPCORE.SCHUR.01` — die exakte hermitesche Kongruenz A₊ = A^{1/2}(I+H)A^{1/2} (6.5e-14) mit NICHT-ZERFALLENDER Vererbungsmarge η (min 0.0050, Slope +0.108 vs τ −2.74; ρ war irreführend — nicht-normal;
@@ -943,6 +943,54 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: PRIME.CANCELLATION.FUNCTIONAL.01 (v951: the ACF law and sign law this round mechanizes), round 197 note DXX (the frozen probe), Bughunt X round 199 note DXXIII (F1 MAJOR adjudicated THE HEADLINE IS TRUE with the stronger certification class -- the Sturm chains at h = 4, 5, 13, 20, F3/KC the un-normalized identification, X6 OBJECT-A the one new tractable target) · cited: 3 e8 audit bootstrap
 - **v954_nodeless_pf** [E/O/X] `PRIME.NODELESS.PF.01` — die r197/v953-Kandidatenroute für OBJEKT-A voll adjudiziert: TOT IN DER MODEN-BASIS, die Obstruktion EXAKT LOKALISIERT (der Rang-1-POSITIV-Kern des Pols ist die EINZIGE Kegel-Obstr
   - deps: PRIME.FEWATOM.REDUCTION.01 (v953: the OBJECT-A target whose candidate route this round adjudicates) + PRIME.CANCELLATION.FUNCTIONAL.01 (v951: the ACF law behind the attractive-hopping structure), round 198 note DXXII (the frozen probe), Bughunt X round 199 note DXXIII (F3/KC the r197/r198 consistency, all exact claims reproduced in own code) · cited: 3 e8 audit bootstrap
+- **v955_tau_iiks_toda_dictionary** [E/O] `PRIME.PORT.TAU.FINITE.IIKS.01, PRIME.PORT.TAU.NOPOLE.COFINAL.01` — (1) TAU_IIKS_EXACT: die Wanddeterminante IST die exakte IIKS-Fredholm-Tau-Funktion — Sylvester als VOLLE charakteristische Identität det(I−sQ_state) = det(I−sE_node) auf dem ganzen
+  - deps: PRIME.PORT.TAU.01 (the executed umbrella), v881_carleson_port_geometry, v881 (port geometry + integrable class), v883 (the determinant chain), rounds 224-226 notes DL/DLI/DLII, v955_tau_iiks_toda_dictionary, v883_tau_chain_parametrix.py;v955_tau_iiks_toda_dictionary · cited: 3 e8 audit bootstrap, research contracts
+- **v956_signedmoment_halffilling_duality** [E/O] `PRIME.FREEMOMENT.JFRACTION.01, PRIME.JACOBI.DUAL.REVERSAL.01, PRIME.FREEMOMENT.POSITIVEPREFIX.01` — (1) HALF_FILLING_BOUNDARY: N_w = ceil(#supp(μ̃)/2) EXAKT auf allen fünf Fenstern — die Fensterkappe IST die Halbfüllung des Union-Supports; hinter der Kappe stirbt die Wand SOFORT 
+  - deps: PRIME.PORT.TAU.FINITE.IIKS.01 (the r226 dictionary these rounds extend), v881 (the testing law), v955, rounds 228-230 notes DLIV/DLV/DLVI, PRIME.FREEMOMENT.JFRACTION.01 (the complement duality and four-path dictionary), rounds 230-231 notes DLVI/DLVII, v956_signedmoment_halffilling_duality, v955_tau_iiks_toda_dictionary · cited: 3 e8 audit bootstrap, research contracts
+- **v958_bordered_tau_readout_dictionary** [E] `PRIME.PORT.RHP.BORDERED.READOUT.01` — (1) das exakte Wörterbuch des gebordeten Endobjekts (gebordete PSD = Wand + Budget): die Uvarov-Border-Spalte trägt F_n als z^{-1}-Koeffizienten OHNE Orthogonalitäts-Cancellation; 
+  - deps: PRIME.PORT.TAU.FINITE.IIKS.01 (the IIKS/Toda dictionary the bordered object extends), PRIME.FREEMOMENT.JFRACTION.01 (the half-filling/free-moment coordinates), v955, v956, rounds 244-253 notes DLXXIII-DLXXXIII · cited: research contracts
+- **v959_coupledtau_terminal_dictionary** [E/O] `PRIME.PORT.RHP.COUPLEDTAU.TERMINAL.01` — (1) die Positive-Prefix-Firewall + der exakte 2x2-Kausalzensus (r256): MAIN pmax = 184 = N mit null negativen Moden (der EINZIGE positive Prefix), Kontrollen 21/25/27 alle INDEFINI
+  - deps: PRIME.PORT.RHP.BORDERED.READOUT.01 (the certified bordered formulation these rounds consume), PRIME.FREEMOMENT.POSITIVEPREFIX.01 (the frozen micro-falsifier), v958, rounds 256-259 notes DLXXXVII-DXC · cited: research contracts
+- **v960_terminal_surface_closure** [E/O] `PRIME.PORT.COUPLEDTAU.SURFACE_CLOSURE.01` — DER MEILENSTEIN: der 42-Rungen-Oberflächen-Zensus q_N < 1 ist als ENDLICHER FAKT ZERTIFIZIERT auf ALLEN 42 Rungen — 41 mechanismus-zertifiziert target-blind (35 Cheap-Rungen via r2
+  - deps: PRIME.PORT.RHP.COUPLEDTAU.TERMINAL.01 (the certified telescope and coordinate these rounds consume), PRIME.PORT.COUPLEDTAU.TERMINAL_CROSSRATIO.01 (the contract whose surface this closes), PRIME.PORT.RHP.FULLSOURCE.BASEFIBER.01 (the campaign parent), v959, rounds 260-275 notes DXCII-DCIX · cited: research contracts
+- **v961_midpoint_orientation_dictionary** [E/O] `PRIME.PORT.RHP.MIDPOINT.ORIENTATION_DICTIONARY.01, PRIME.PORT.WALL.METRIC_FIREWALL.01` — (1) das Wronskian-Wörterbuch (r274, GO): Basis-Casoratian = h_n mit c' = 1 (alle Grade, 42 Rungen, Vorzeichen exakt); die rechte Lösung DREIFACH konstruiert mit exakter Koinzidenz 
+  - deps: PRIME.PORT.RHP.COUPLEDTAU.TERMINAL.01 + PRIME.PORT.COUPLEDTAU.SURFACE_CLOSURE.01 (the coupled coordinate and the certified surface), PRIME.PORT.FULLSOURCE.PREFIX_RESUMMATION.01 (the base edge this orients), PRIME.JACOBI.DUAL.REVERSAL.01 + PRIME.FREEMOMENT.JFRACTION.01 (the v956 dual/midpoint geometry), v959, v960, rounds 274-278 notes DCVII-DCXI, PRIME.PORT.RHP.MIDPOINT.ORIENTATION_DICTIONARY.01 (the certified measurements and gradients), PRIME.FREEMOMENT.POSITIVEPREFIX.01 (the wall in free-moment coordinates) · cited: research contracts
+- **v962_halffilling_pinning_theory** [E/O] `PRIME.WALL.HALFFILLING_PINNING_THEORY.01` — (T1) der MOMENT-ZÄHLSATZ (r281): Pivot h_n konsumiert m_0..m_{2n}, die S freien Momente sind m_0..m_{S−1}, also sind die FREIEN Pivots exakt h_0..h_{N_w−1} und h_{N_w} ist der erst
+  - deps: PRIME.PORT.RHP.MIDPOINT.ORIENTED_THEOREM.01 (the contract rounds 279-281 ran on), PRIME.PORT.RHP.MIDPOINT.ORIENTATION_DICTIONARY.01 (the certified dictionary + Maslov census), PRIME.FREEMOMENT.POSITIVEPREFIX.01 + PRIME.PORT.SIGNEDMOMENT.HOLEDUAL.01 (the v956 half-filling frame), PRIME.PORT.RHP.FULLSOURCE.BASEFIBER.01 (the campaign parent), v961, rounds 279-281 notes DCXII/DCXIV/DCXV · cited: research contracts
+- **v963_lstar_reduction_dictionary** [E/O] `PRIME.LSTAR.REDUCTION_DICTIONARY.01` — die freie Fensterfrage in ihrer kanonischen Form (30/30 + 26/26 + 30/30 + 33/33, vier Probes byte-exakt eingebettet in ihrer versiegelten Smoke-Stufe, plus die modul-eigene Exaktse
+  - deps: PRIME.PORT.REPRESENTATION.CONTEST.01 (round 282 consumed), PRIME.PORT.RHP.FULLSOURCE.QUASIDEFINITENESS.01 (round 283 consumed), PRIME.WALL.HALFFILLING_PINNING_THEORY.01 (the T4 frame the reduction lands in), PRIME.PORT.RHP.FULLSOURCE.BASEFIBER.01 (the campaign parent), PRIME.LSTAR.SUBORDINATION.01 (the successor contract), v962, rounds 282-285 notes DCXVI/DCXVII/DCXIX/DCXXI, rh/problem/lstar_problem.tex (standalone document, external reference) · cited: research contracts
+- **v964_lstar_coherence_census** [E/O] `PRIME.LSTAR.COHERENCE_CENSUS.01, PRIME.PORT.L2.VDC_LEMMA.01` — die Margin-Skalierung geklärt, der exakte van-der-Corput-Satz für L2, die Trägerkarte der destruktiven Kohärenz und das METRIC_ONLY-Urteil (29/29 + 25/25 + 31/31 + 42/42, vier Prob
+  - deps: PRIME.LSTAR.SUBORDINATION.01 (the open contract whose state these rounds measure), PRIME.LSTAR.REDUCTION_DICTIONARY.01 (the canonical form consumed), PRIME.PORT.COUPLEDTAU.TERMINAL_CROSSRATIO.01 (the H5/L2 front served by the vdC candidate), PRIME.PORT.L2.VDC_LEMMA.01 (the successor contract registered by this census), PRIME.PORT.WALL.METRIC_FIREWALL.01 (the metric reading, sharpened: the firewall reads the fraction profile), PRIME.PORT.COUPLEDTAU.SURFACE_CLOSURE.01 (kz15 exact-finite), v963, rounds 286-289 notes DCXXIV/DCXXII/DCXXV/DCXXVI · cited: research contracts
+- **v965_lstar_curvature_arc** [E/O/X] `PRIME.LSTAR.CURVATURE_ARC.01` — die vermessene Geometrie der funktionierenden Menge im Profil-Raum, eingefroren zusammen mit den ehrlichen Negativen der Funktional-Suche (32/32 + 30/30 + 36/36 + 43/43 + 42/42 + 4
+  - deps: PRIME.LSTAR.COHERENCE_CENSUS.01 (the wave-7 predecessor: METRIC_ONLY posed the profile-functional question), PRIME.LSTAR.SUBORDINATION.01 (the open center the arc measures), PRIME.LSTAR.CLOSED_FUNCTIONAL.01 (the successor open contract), PRIME.PORT.WALL.BUDGET_LOCALIZATION.01 (the r280 ridge origin), PRIME.PORT.WALL.METRIC_STABILITY.01 (the r278 gradient channel), v963, v964, v965 · cited: research contracts
+- **v966_l2_reduction_chain** [-] `(no ledger claim)` — die Lane-Schließung r296 und die Vier-Runden-Kette, die das δ′ > 0.21-Ziel der generischen Hälfte auf EINE Ungleichung reduziert (39/39 + 27/27 + 28/28 + 32/32 + 31/31, fünf Probes
+  - cited: research contracts
+- **v967_l2_cascade_closure** [E/X] `PRIME.L2.CASCADE_CLOSURE.01` — die Welle-9-Restziele zu Ende exekutiert, das Reviewer-Regress-Audit, das die Reduktions-Kaskade retypisiert, und die Kurzreichweiten-Gesetz-Runde, deren versiegelter Stopp-Fall fe
+  - deps: PRIME.L2.REDUCTION_CHAIN.01 (the wave-9 chain this closure retypes), PRIME.L2.NEFF_TARGET.01 (the contract retyped to the stop state), PRIME.PORT.L2.VDC_LEMMA.01 (the parent contract, now documented stopped on the global-profile route), PRIME.PORT.COUPLEDTAU.TERMINAL_CROSSRATIO.01 (the H5/L2 parent front), PRIME.PORT.COUPLEDTAU.SURFACE_CLOSURE.01 (kz15 exact-finite), v964, v966, rounds 301-304 notes DCXL-DCXLIV · cited: research contracts
+- **v968_architecture_adjudication** [E/O] `PRIME.SOURCE.RANKONE.UPDATE.IDENTITY.01, PRIME.SOURCE.TENSOR.MECHANISM.01` — PD-Target im Spann mit erzwungenem negativem Generatorgewicht, strikt außerhalb des Kegels, ⟨Y,Q⟩ = −2 exakt: die Vorzeichenwand in Miniatur —, die zehn versiegelten Verdikt-Bars a
+  - deps: PRIME.LSTAR.ARCHITECTURE_ADJUDICATION.01 (the wave-11 adjudication registering the split), PRIME.SOURCE.TENSOR.MECHANISM.01 (the open mechanism successor), PRIME.PORT.RHP.BORDERED.READOUT.01 (the r244 border route the identities cross-check against), round 309 note DCLI, PRIME.SOURCE.RANKONE.UPDATE.IDENTITY.01 (the banked identity base), PRIME.LSTAR.ARCHITECTURE_ADJUDICATION.01 (the adjudication registering this contract), PRIME.L2.RENYI3.PROVENANCE.01 (the sibling fiber contract sharing the near-critical family), rounds 309/313/316 notes DCLI/DCLIII/DCLVII · cited: research contracts
+- **v969_forks_and_redteam** [-] `(no ledger claim)` — das Extraktionsketten-Red-Team, die Brücken-Reparatur und die zwei Forks, eingefroren (vier Probes byte-exakt eingebettet in ihrer versiegelten Smoke-Stufe: 38/38 + 25/25 + 39/39 +
+  - cited: research contracts
+- **v970_extraction_and_composition** [E/O] `PRIME.EXTRACTION.ELEMENTWISE.01, PRIME.L2.RENYI3.MEASURED_COMPOSITION.01` — vier Probes byte-exakt eingebettet in ihrer versiegelten Smoke-Stufe (36/36 + 36/36 + 18/18 + 34/34 volle Rekorde; r324 importiert das eingebettete r324-pre, r327 das eingebettete 
+  - deps: PRIME.REDTEAM.EXTRACTION_AUDIT.01 (the wave-12 audit whose repair set this row implements), PRIME.LSTAR.SUBORDINATION.01 (the open window-local center the premise quantifies over), rh/lean/RH/Elementwise.lean (the r326 implementation), rh/lean/RH/Source.lean (the opaque guard and the seam documentation), rounds 325/326 notes DCLXIX/DCLXXI, PRIME.L2.RENYI3.SLIDING_BOUND.01 (the parent theorem candidate whose provenance question this composition answers in the QMAX x M_2 decomposition), PRIME.L2.RENYI3.PROVENANCE.01 (the grandparent contract), PRIME.PORT.L2.VDC_LEMMA.01 (the vdC theorem the chain composes into) · cited: research contracts
+- **v972_seam_interaction_front** [E/X] `SEAM.INT.ODDSPLIT.01, SEAM.INT.OSAVOID.01, SEAM.STATE.RPMIXING.01` — (1) Die hinreichende Jaffe–Pedrocchi-Bedingung für Majorana-Reflexionspositivität (arXiv:1406.1384; Wei–Li–Xiang arXiv:1601.01994) wird auf dem v529-FK-Toy ENTSCHEIDBAR gemacht: di
+  - deps: v529_seam_interacting_toy_fk, v519_woit_theta_rp_free, v529, v903, v972_seam_interaction_front, v903_seam_rp_exclusion, v898_kms_schur_mixing, v898 · cited: introduction, 3 e8 audit bootstrap, 5 redteam, research contracts
+- **v973_seam_route_narrowing** [E] `SEAM.EQUIV.SKELETON.01` — drei Probes byte-exakt eingebettet (19/19 + 20/20 + 19/19; SPEC e6f392cbcd0d3ae1 / 0875f39fe1d0fa0f / 451bd470b98a9d6d), plus die modul-eigene Exaktsektion S0** — (1) MMST-ABDECKUN
+  - deps: v286_seam_equivalence_contract, v366_mmst_seam_collar, v492_celestial_z4_orbifold, v519_woit_theta_rp_free · cited: research contracts
+- **v974_alpha_faces_computed** [E/C/O] `ALPHA.QUILLEN.FACES.01` — drei Probes byte-exakt eingebettet, sha256-gepinnt und wörtlich ausgeführt (21/21 MATCH_MODULO_LOCAL_FACTOR + 20/20 PUMP_QUANTIZED_MATCHES_CHERN + 18/18 CHAIN_SHADOW_OK) plus die m
+  - deps: v382_alpha_quillen_exact, v484_seam_contact_unit, v485_contact_diagonal_closed, v48_em_ward, v470_alpha_inflow_level, v972_seam_interaction_front · cited: origin theory, 1 architecture e8, research contracts, safeguards
+- **v975_dimension_selector_4d** [C/O] `DIMENSION.SELECTOR.4D.01` — 16/16 sympy-exakt. Unter dem benannten TFPT-kompatiblen Axiomensatz A1 (d > 2: propagierende lokale Eichfelder), A2 (dimensionslose Yang-Mills-Kopplung), A3 (reelle selbstduale/ant
+  - deps: DIMENSION.UPLIFT.FIREWALL.01, SEAM.BULK4D.RECON.01, QFT4D.OS.RECON.01, CHIRAL4D.NOMIRROR.01 · cited: research contracts
+- **v978_terminal_density_martingale** [E] `PRIME.TERMINAL.DENSITY_MARTINGALE.01` — die Dichte pro verbleibendem Nachkommen X(v) = d(v)/d(root) ist ein nichtnegatives Martingal ALLEIN aus Massenerhaltung (symbolisch am generischen Knoten + bit-exakt in Fractions a
+  - deps: PRIME.L2.RENYI3.MEASURED_COMPOSITION.01 (the r324 end state the layer reformulates), v968_architecture_adjudication.py;v969_forks_and_redteam.py;v970_extraction_and_composition, PRIME.L2.COVER_GROWTH_K2.01 (the census-side successor), v978 · cited: research contracts
+- **v979_cover_growth_k2** [E/O/X] `PRIME.L2.COVER_GROWTH_K2.01` — EXAKT: die FAB-Identität F_A·B == m·q_max/log m (Konstruktionsalgebra, Gauge-Mutant gefangen); die r321-Konzentrationsklammer q_max·ΦH1 ≤ ρ₂ ≤ ΦH1; die datenfreie K1-FORMEL R_ALG =
+  - deps: PRIME.L2.RENYI3.SLIDING_BOUND.01 (the third arm, retyped finite by r353), v970_extraction_and_composition, PRIME.TERMINAL.DENSITY_MARTINGALE.01 (the exact substrate), PRIME.WORLD.DIRICHLET_MATCHED_FRAME.01 (K2's third test), v979 · cited: research contracts
+- **v980_lstar_margin_chain** [E] `PRIME.LSTAR.MARGIN_CHAIN.01` — EXAKT: die EIN-ZEILEN-IDENTITÄT m2′(p′+q′−m2′) == p′q′−c′² (Vieta, symbolisch); der ZWEI-LEVEL-SATZ p′₂ = m(g21·a₂²+b₂²)/Δt² usw. (exakte Inversion == Formeln == 121/250, 79/250, 7
+  - deps: PRIME.LSTAR.SUBORDINATION.01 (the open center the chain measures), v965_lstar_curvature_arc, v965_lstar_curvature_arc.py;v966_l2_reduction_chain.py;v968_architecture_adjudication, PRIME.LSTAR.DUAL_HOLE.01 (the successor reparametrization), v980 · cited: research contracts
+- **v981_lstar_borodin_duality** [E] `PRIME.LSTAR.DUAL_HOLE.01` — die exakte Äquivalenz L* ⟺ R > ½·I bei Half-Filling** — EXAKT (keine Proben-Importe): die Borodin-Komplementation Π_N^u + G·Π_{N−1}^{u∨}·G⁻¹ == I bit-exakt am 5-Atom-Rationalmodell
+  - deps: PRIME.LSTAR.MARGIN_CHAIN.01 (the chain the duality reparametrizes), PRIME.LSTAR.SUBORDINATION.01 (the open center, unchanged), v981 · cited: research contracts
+- **v982_dirichlet_matched_frame** [E] `PRIME.WORLD.DIRICHLET_MATCHED_FRAME.01` — EXAKT (keine Proben-Importe): die GRH-treue χ-Arch-Seite ABGELEITET, symbolisch aus Λ(s,χ) = (q/π)^{(s+a)/2}Γ((s+a)/2)L(s,χ): F_A^χ(ξ) == −log(π/q) + Re ψ((1+2a)/4 + iξ/2) für a = 
+  - deps: PRIME.LSTAR.MARGIN_CHAIN.01 (the legislation the frame tests), PRIME.L2.COVER_GROWTH_K2.01 (K2's third test), PRIME.LSTAR.DUAL_HOLE.01 (the binding-regime reading), v982 · cited: research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1094,7 +1142,7 @@ _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmologic
 - **v494_cosmo_running_mu_record** [E/C/X] `COSMO.RUNNING.01, COSMO.MUDIST.01` — α_s/β_s running + μ-distortion promoted to the suite: [E] LO identities α_s=−2/N★²=−r/6, β_s=−4/N★³ (sympy exact) + exact slow roll α_s(51.4)=−7.09×10⁻⁴, β_s=−2.70×10⁻⁵ (band −8.0…
   - deps: v7_gravity_cosmo, v86_nstar_reheating, v22_open_gates_audit · cited: 1 architecture e8, 2 standard model
 
-### `horizon` — Horizon code & Origin Theory (self-consistency)  (21 scripts)
+### `horizon` — Horizon code & Origin Theory (self-consistency)  (22 scripts)
 _The seam as the universal horizon code, the order-30 Coxeter cycle, and the gapped unique attractor that makes parameter-freeness a theorem._
 
 - **v6_bootstrap** [E] `BOOT.01` — reverse glue μ²−5μ+4=0; g_car=5 three ways; 8 = rank E₈ = φ(30)
@@ -1139,6 +1187,8 @@ _The seam as the universal horizon code, the order-30 Coxeter cycle, and the gap
   - deps: v152_norm_is_anchor, v151_bfk_split, v150_replica_eh_model, v58_seam_horizon_chain, v90_conical_defect_chain, v56, v73, v90 · cited: origin theory
 - **v531_coxeter_tensor_stage_a** [E/C/O/X] `COX.STAGEA.TENSOR.01` — Stage A tensor clock: T30 = Comp(Φ5)⊗Comp(Φ6), order 30, χ=Φ30; Ramanujan traces c30(k)=c5(k)c6(k); atom readout (2,4,8)
   - deps: v223_coxeter_totative_clock, v315_coxeter_coupling, v223, v418, v55 · cited: 1 architecture e8
+- **v957_ccc_crossover_kinematics** [E/C/O/X] `CCC.SEAM.KINEMATICS.01, CCC.SEAM.CROSSOVER.01` — (1) Penroses reziproke Eichung Ω·τ(Ω) = −1 ist das Element τ = ρ²σ des bewiesenen μ4-Stabilisators D4 (τ kehrt die Clock um = Z2-Sheet-Parität; der Crossover-Kreis trägt alle vier 
+  - deps: QGEO.CONF.01 (the seam premise), v221 (transport), v492 (deck/clock, A_3 ALE), v519/v521/v522 (Theta, side-blindness, GSO wrap), v526 (KMS normalisation), v529/v534 (straddle law + selector, cited), VGEO.TORSOR.01 (unit calibration untouched), rounds DL-DLV · cited: origin theory, research contracts
 
 ### `uwall` — Open gate (U_wall) — the flavor wall  (12 scripts)
 _The parabolic wall-selection contract: the quark ratios are closed; only the absolute amplitude scale stays open._
@@ -1168,7 +1218,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (199 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (202 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -1569,6 +1619,12 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v84_frozen_registry, v632_ftransfer_pgl2, PRIME.WEIL.OPERATOR.01, v100_numerology_null_mc, v84, v100 · cited: 3 e8 audit bootstrap
 - **v664_look_elsewhere** [E/X] `META.LOOKELSEWHERE.01` — das Bingo-Budget der getypten [C]-Koinzidenzen, quantifiziert — **N = 42 STRUKTUR-SLOTS, K = 19 TREFFER, 6 KILLS ALS 0-TREFFER-TRIALS IM BUDGET; GLOBAL p = 5.08e−3 IM KONSERVATIVST
   - deps: v649_discipline_audit, v624_external_lattice_audit, v626_e8_code, v638_code_semantics, v629_root_incidence, v634_st31_structure, v100, v624 · cited: 3 e8 audit bootstrap
+- **v971_markov_embedding_generator** [E/O] `DYN.MARKOV.EMBED.01` — sympy-exakter Spektral-Log mit exp(Q) = T, Zeilensummen symbolisch exakt 0, Off-Diagonalen exakt {ln(9/8), 2 ln 3, 2 ln 3} = {0.117783, 2.197225, 2.197225} > 0, Diagonalen −ln(81/8
+  - deps: v221 (kernel), v957 (T = e^{-H_mod}), CONTRACT.F.01 (axiom 3 positivity), v723/v724/v777 (external clocks) · cited: research contracts
+- **v976_seam_lift_birkhoff** [E/C/O] `TRANSFER.HIDDEN.CIRCULATION.01` — B = (1/2)I + (1/18)P12 + (2/9)P13 + (2/9)P23 bit-exakt (B^6 = v221-Kernel), Kern der Zerlegungsabbildung 1-dim (I + C123 + C132 = P12 + P13 + P23 = J), vollstaendige Familie w_t mi
+  - deps: DYN.UNITARY.DILATION.01, v971_markov_embedding_generator, v221_seam_qecc, v221_seam_qecc, v652_orbifold_arf · cited: origin theory, research contracts
+- **v977_transfer_unistochastic_wilson** [E/C/O] `TRANSFER.COHERENT.WILSON.01` — exakter SU(3)-Lift mit dem Wilson-Code 5-12-13, der Center-Bruecke und einem klassisch unsichtbaren Orientierungsbit** — Winkel von B erzwungen (sin^2 th13 = 2/9, sin^2 th12 = 1/14
+  - deps: v976_seam_lift_birkhoff, DYN.UNITARY.DILATION.01, v530_center_quotient_compiler, v738_hecke_mod_ramified, v270_pmns_jarlskog_assembly · cited: origin theory, 2 standard model, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (184 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1959,22 +2015,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `v563`×210, `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `AX.P2.01`×19, `v76`×19, `v56`×19, `v492`×19, `QG.AMB.01`×18, `v367`×18
+**Most-depended-on claims** (the load-bearing roots): `v563`×210, `SEAM.EQUIV.01`×91, `v336`×37, `QGEO.SYM.01`×34, `v216`×28, `CELEST.SEAM.01`×25, `v752`×25, `v755`×25, `v738`×21, `AX.P2.01`×19, `QG.AMB.01`×19, `v76`×19, `v56`×19, `v492`×19, `v367`×18
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v943_mangoldt_ablation_localization** — `PRIME.MANGOLDT.ABLATION.01`
-- **v944_ground_residue_observability** — `PRIME.GROUND.RESIDUE.OBS.01`
-- **v945_zero_causal_stratification** — `PRIME.ZERO.CAUSAL.SYNTH.01, PRIME.ZB.WIGGLE.STRAT.01`
-- **v946_census_krein_pencil** — `PRIME.CENSUS.SPECTRAL.LIFT.01`
-- **v947_loewner_pick_dictionary** — `PRIME.LOEWNER.PICK.01`
-- **v948_krein_sign_characteristic** — `PRIME.KREIN.DEFINITIZER.01`
-- **v949_commensurability_mechanism** — `PRIME.COMMENSURABILITY.MECHANISM.01`
-- **v950_zero_channel_capacity** — `PRIME.ZERO.CHANNEL.CAPACITY.01`
-- **v951_cancellation_functional** — `PRIME.CANCELLATION.FUNCTIONAL.01`
-- **v952_turan_extremal** — `PRIME.TURAN.EXTREMAL.01`
-- **v953_fewatom_reduction** — `PRIME.FEWATOM.REDUCTION.01`
-- **v954_nodeless_pf** — `PRIME.NODELESS.PF.01`
+- **v971_markov_embedding_generator** — `DYN.MARKOV.EMBED.01`
+- **v972_seam_interaction_front** — `SEAM.INT.ODDSPLIT.01, SEAM.INT.OSAVOID.01, SEAM.STATE.RPMIXING.01`
+- **v973_seam_route_narrowing** — `SEAM.EQUIV.SKELETON.01`
+- **v974_alpha_faces_computed** — `ALPHA.QUILLEN.FACES.01`
+- **v975_dimension_selector_4d** — `DIMENSION.SELECTOR.4D.01`
+- **v976_seam_lift_birkhoff** — `TRANSFER.HIDDEN.CIRCULATION.01`
+- **v977_transfer_unistochastic_wilson** — `TRANSFER.COHERENT.WILSON.01`
+- **v978_terminal_density_martingale** — `PRIME.TERMINAL.DENSITY_MARTINGALE.01`
+- **v979_cover_growth_k2** — `PRIME.L2.COVER_GROWTH_K2.01`
+- **v980_lstar_margin_chain** — `PRIME.LSTAR.MARGIN_CHAIN.01`
+- **v981_lstar_borodin_duality** — `PRIME.LSTAR.DUAL_HOLE.01`
+- **v982_dirichlet_matched_frame** — `PRIME.WORLD.DIRICHLET_MATCHED_FRAME.01`
 

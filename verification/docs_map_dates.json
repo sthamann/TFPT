@@ -12,8 +12,8 @@
   "date": "2026-07-22"
  },
  "introduction::subsection::Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \\texorpdfstring{(\\mE)}{}::1": {
-  "hash": "71a7e93746ce",
-  "date": "2026-07-24"
+  "hash": "f129f76d8eb0",
+  "date": "2026-08-27"
  },
  "introduction::subsection::The companion documents::1": {
   "hash": "cb43f67f0b4b",
@@ -164,8 +164,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::subsection::The EM closure: $\\ainv$ as an explicit fixed point (made explicit here)::1": {
-  "hash": "bf3b80a2ff6f",
-  "date": "2026-07-14"
+  "hash": "747a56c95cf8",
+  "date": "2026-08-27"
  },
  "tfpt_1_architecture_e8::subsection::The decuple bridge (new, exact headline)::1": {
   "hash": "604a14549a07",
@@ -348,8 +348,8 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::section::The Sheet Diamond and the Winding Line: masses and transport from one surface::1": {
-  "hash": "eb4edf0d08cc",
-  "date": "2026-08-08"
+  "hash": "830e006e62ed",
+  "date": "2026-08-27"
  },
  "tfpt_2_standard_model::subsection::Closing the audit gates: is $M{=}41$, $K$, $Q$ derived or imported?::1": {
   "hash": "784125cbc405",
@@ -392,8 +392,8 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::subsection::(4) Constructive QFT closure of the admissible physical sector \\mE/\\mC::1": {
-  "hash": "28a91283e41b",
-  "date": "2026-07-22"
+  "hash": "ee8587b4c553",
+  "date": "2026-08-27"
  },
  "tfpt_2_standard_model::subsection::(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \\mE/\\mO::1": {
   "hash": "c0a53aa411be",
@@ -504,8 +504,8 @@
   "date": "2026-06-25"
  },
  "tfpt_3_e8_audit_bootstrap::front::(front matter)::1": {
-  "hash": "c45a6617a51b",
-  "date": "2026-07-30"
+  "hash": "15bc8e128ef8",
+  "date": "2026-08-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::The compiler core (where this note sits)::1": {
   "hash": "8e3d9559b8f4",
@@ -524,8 +524,8 @@
   "date": "2026-06-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Group-theoretic audits (optional)::1": {
-  "hash": "44e842fa95de",
-  "date": "2026-08-22"
+  "hash": "fa34385c18d0",
+  "date": "2026-08-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Further audit lemmas (machine-verified this round)::1": {
   "hash": "f779e820e593",
@@ -572,8 +572,8 @@
   "date": "2026-07-23"
  },
  "tfpt_3_e8_audit_bootstrap::section::The celestial and twistor continuum route::1": {
-  "hash": "ef9a68297a90",
-  "date": "2026-07-30"
+  "hash": "c4f23ee2702b",
+  "date": "2026-08-27"
  },
  "tfpt_3_e8_audit_bootstrap::section::Honest status: bootstrap, not creation from nothing::1": {
   "hash": "8a9d20e27d27",
@@ -664,12 +664,12 @@
   "date": "2026-06-12"
  },
  "tfpt_5_redteam::section::Target F --- the perturbative 4D-QFT $+$ scale round (v269--v275)::1": {
-  "hash": "0be253919300",
-  "date": "2026-07-14"
+  "hash": "5c6c6856846c",
+  "date": "2026-08-27"
  },
  "tfpt_5_redteam::section::Target G --- the alignment bit and the interacting seam (the first shot that lands)::1": {
-  "hash": "defe981b9767",
-  "date": "2026-07-24"
+  "hash": "8d50fc51344c",
+  "date": "2026-08-27"
  },
  "tfpt_5_redteam::section::Outcome::1": {
   "hash": "de8d1edb1371",
@@ -716,48 +716,108 @@
   "date": "2026-06-25"
  },
  "tfpt_research_contracts::front::(front matter)::1": {
-  "hash": "736a10519ce3",
-  "date": "2026-08-21"
+  "hash": "65d2ad23e56c",
+  "date": "2026-08-27"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "064808a422db",
-  "date": "2026-08-08"
+  "hash": "7cd71430df2a",
+  "date": "2026-08-27"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "4cc055aa2111",
-  "date": "2026-08-13"
+  "hash": "d81c97ae5877",
+  "date": "2026-08-27"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {
   "hash": "62902eaaa0d2",
   "date": "2026-07-24"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{WOIT.OS.TWISTOR.01} (the Osterwalder--Schrader twistor bridge)::1": {
-  "hash": "847a2fa6ae17",
-  "date": "2026-08-01"
+  "hash": "0f10c7b415c4",
+  "date": "2026-08-27"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{CCC.SEAM.CROSSOVER.01} (the conformal-cyclic crossover on the seam geometry)::1": {
+  "hash": "0f78eca254ee",
+  "date": "2026-08-27"
+ },
+ "tfpt_research_contracts::section::Firewall Contract --- \\texttt{DIMENSION.UPLIFT.FIREWALL.01} (no $1{+}1$D theorem closes a $3{+}1$D claim)::1": {
+  "hash": "d3c29b2a9283",
+  "date": "2026-08-21"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.BULK4D.RECON.01} (from seam data to a 4D local quantum theory)::1": {
+  "hash": "18594dd238f7",
+  "date": "2026-08-21"
+ },
+ "tfpt_research_contracts::section::Research Contracts --- \\texttt{DYN.MARKOV.EMBED.01} / \\texttt{DYN.UNITARY.DILATION.01} (the three meanings of ``dynamics'')::1": {
+  "hash": "26856a757302",
+  "date": "2026-08-27"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{QFT4D.OS.RECON.01} (the genuine 4D Euclidean lattice package)::1": {
+  "hash": "3dc580a293f3",
+  "date": "2026-08-21"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{CHIRAL4D.NOMIRROR.01} (the chiral 4D lattice matter theorem)::1": {
+  "hash": "04b3cf3ed4e0",
+  "date": "2026-08-21"
+ },
+ "tfpt_research_contracts::section::Firewall Contract --- \\texttt{GRAV.NONCIRCULAR.01} (the Bisognano--Wichmann direction discipline)::1": {
+  "hash": "f330002d2689",
+  "date": "2026-08-21"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{OBS.TRANSDUCTION.01} (the transduction principle: eigenvalue, projection, coupling)::1": {
+  "hash": "a3c19806e303",
+  "date": "2026-08-27"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{PRED.JOINTLIKELIHOOD.01} (from hit-counting to overdetermined relations)::1": {
+  "hash": "596a9c7bfed8",
+  "date": "2026-08-21"
+ },
+ "tfpt_research_contracts::section::Research Programme --- the TFPT4D master route (one 4D transfer object instead of twenty formulas)::1": {
+  "hash": "09994d4f5fbe",
+  "date": "2026-08-27"
+ },
+ "tfpt_research_contracts::section::Verified Selector --- \\texttt{DIMENSION.SELECTOR.4D.01} (why $d=4$, conditionally)::1": {
+  "hash": "1dfc612d50f8",
+  "date": "2026-08-21"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.SIMPLECURRENT.GENERATOR.01} (one generator instead of 128 currents)::1": {
+  "hash": "d389ac431425",
+  "date": "2026-08-27"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{TFPT4D.LATTICE.ACTION.01} (the explicit finite 4D lattice action and its seven finite gates)::1": {
+  "hash": "7a2d56b2942a",
+  "date": "2026-08-21"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.DETLINE.UNIFICATION.01} (the determinant-line unification hypothesis)::1": {
+  "hash": "1494f0eb620f",
+  "date": "2026-08-27"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{FTRANSFER.GENERATING.01} (four transfer bridges from one generating functional)::1": {
+  "hash": "4c9fc8b45ed9",
+  "date": "2026-08-21"
  },
  "tfpt_research_contracts::section::Externalization Contract --- \\texttt{SEAM.EQUIV.01} (the seam scaling-limit theorem, packaged for external specialists)::1": {
-  "hash": "2d8320ec34a0",
-  "date": "2026-08-20"
+  "hash": "22aed642d592",
+  "date": "2026-08-27"
  },
  "tfpt_research_contracts::section::Externalization Contract --- \\texttt{ALPHA.QUILLEN.EXACT.01} (the determinant-line variation theorem, packaged for external specialists)::1": {
-  "hash": "12aa0939931c",
-  "date": "2026-08-20"
+  "hash": "30ea70bef5fa",
+  "date": "2026-08-27"
  },
  "tfpt_research_contracts::section::Externalization Contract --- \\texttt{PRIME.RESIDUE.EXTERNAL.01} (the prime-front terminal residue, packaged for external specialists)::1": {
   "hash": "a5f0da8d7c4a",
   "date": "2026-08-21"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
-  "hash": "19eea8a277b0",
-  "date": "2026-08-06"
+  "hash": "3a11d6ada125",
+  "date": "2026-08-27"
  },
  "origin_theory::front::(front matter)::1": {
   "hash": "1806669dfa1e",
   "date": "2026-06-24"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "4fffeb7b7506",
-  "date": "2026-07-24"
+  "hash": "e35a0127735d",
+  "date": "2026-08-27"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {
   "hash": "5d4220f72d42",
@@ -768,16 +828,16 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::The unique attractor: a gapped transport selects ONE fixed point::1": {
-  "hash": "33ed86187ee7",
-  "date": "2026-07-22"
+  "hash": "1e912a776770",
+  "date": "2026-08-27"
  },
  "origin_theory::section::One $\\ainv$ for electromagnetism, the cosmic horizon and $\\Lambda$::1": {
   "hash": "915ef1e6f23a",
   "date": "2026-06-12"
  },
  "origin_theory::section::Interpretation \\mC: the self-reproducing cosmic cycle::1": {
-  "hash": "67d0212e3e3d",
-  "date": "2026-06-12"
+  "hash": "02b8da97d605",
+  "date": "2026-08-24"
  },
  "origin_theory::section::Falsifiers::1": {
   "hash": "be1078773bd0",
@@ -788,8 +848,8 @@
   "date": "2026-07-02"
  },
  "origin_theory::section::Consequences, and the whole story \\mC::1": {
-  "hash": "d4c934798cd6",
-  "date": "2026-06-23"
+  "hash": "65a77da5cb6c",
+  "date": "2026-08-24"
  },
  "origin_theory::section::A closure program (next phase) \\mO::1": {
   "hash": "a25346c2cec8",
@@ -820,8 +880,8 @@
   "date": "2026-06-27"
  },
  "tfpt_safeguards::section::Layer 3 --- the over-determination map (multiply vs.\\ compress)::1": {
-  "hash": "df7b654d61cf",
-  "date": "2026-07-03"
+  "hash": "c55b7e70503f",
+  "date": "2026-08-27"
  },
  "tfpt_safeguards::section::Layer 4 --- the firewall and the No-Unit theorem::1": {
   "hash": "491326327cb7",
