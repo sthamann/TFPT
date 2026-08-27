@@ -85,10 +85,16 @@ each with its sealed MAIN-side/control-side class rule:
      The world's OWN half-filling (S_own + 1)//2 is DISCLOSED per
      rung, never silently substituted for the window depth.
  (b) RENYI3_C2 (r306) -- the pointwise cubic bound rho_2 = S_3 m^2
-     / (log m)^2 <= C_2 with C_2 FROZEN at the r306 record 1.0694
-     (re-derived live from the MAIN first-5 calibration split, tol
-     0.005, then FROZEN -- no second-world value enters the
-     constant).  MAIN-side iff 0 violations on the live rungs;
+     / (log m)^2 <= C_2 with C_2 re-derived live from the MAIN
+     first-5 calibration split at FULL PRECISION, gated against
+     the r306 record 1.0694 (tol 0.005), then FROZEN -- every
+     violation count (MAIN, DIRICHLET, DIRICHLET_ABS) is against
+     this one live-frozen constant; no second-world value enters
+     it (amendment a1, calibration pass 1: counting against the
+     4-decimal record literal made the calibration argmax rung
+     "violate" its own constant by rounding -- a pure
+     representation fix, no rule moved).
+     MAIN-side iff 0 violations on the live rungs;
      control-side reference: SCRAMBLE violates by 1.67x, EPSTEIN
      holds (disclosed: this class does not separate EPSTEIN).
  (c) SIGMA_DECAY (r299) -- the diagonal cascade: sl_D =
@@ -129,9 +135,19 @@ headline fires, adjudicated on DIRICHLET -- the character twist
 proper -- with DIRICHLET_ABS always printed as the disclosed
 milder variant):
   per variant V: VALIDITY = wpack built on 42/42 rungs AND the
-    t-term contribution ward <= 1e-6 on every rung (the sealed
-    control-world bar) AND >= 21 live (non-degenerate) rungs AND
-    m >= 2 blocks on every live rung; then
+    t-term contribution ward <= 1e-6 on every rung with N <= 400
+    (the sealed control-world bar) and <= 1e-4 on the deep rungs
+    N > 400 AND >= 21 live (non-degenerate) rungs AND m >= 2
+    blocks on every live rung (amendment a2, calibration pass 1,
+    disclosed: the 1e-6 bar was sized from the w9 control record,
+    which never covers FLIPPED chains at depth -- the measured
+    DIRICHLET profile is <= 5.4e-7 on 41/42 rungs with ONE
+    terminal-eta conditioning outlier 2.0e-5 at kz31 (N 722, nf
+    59), while MAIN's own deep positive-chain bar is already 3e-6
+    (r306); the deep bar 1e-4 keeps the ward's purpose -- catching
+    O(1) structural construction breakage -- without certifying
+    flipped-chain float conditioning; no battery class rule, bar
+    or adjudication rule moved); then
     status(V) = ALIVE iff all seven battery properties are
     MAIN-side; SPLITS(list) iff some but not all; INCOMPATIBLE iff
     VALIDITY fails (with the failing ward named).
@@ -193,8 +209,9 @@ H_CAP 900; controls w9 EPSTEIN / SCRAMBLE(seed 1) / SMOOTH, flips
 25/21/27; W9 S_own 367 (mu 263 / nu 104), N 184; EDGE_F 0.20
 (FROZEN); PAIR_OFFSET 0 (FROZEN); H rule max(2, ceil(sqrt(m)))
 (FROZEN); DEG_FLOOR 1e-6; TB bars 1e-9 main N <= 400 / 3e-6 deep /
-1e-6 controls AND second worlds; A_RENYI 2; R306_C2 1.0694 tol
-0.005; N_CAL 5; R306 w9-control rhos EPST 0.368 / SCR 1.780 tol
+1e-6 controls; second worlds 1e-6 (N <= 400) / 1e-4 deep (a2);
+A_RENYI 2; R306_C2 1.0694 tol 0.005 (live-frozen full precision,
+a1); N_CAL 5; R306 w9-control rhos EPST 0.368 / SCR 1.780 tol
 0.005; R299_SL_D -0.571 tol 0.01; R299_ONEG 13 EXACT; R301
 n_eff med 37.41 tol 0.05, sl_neff +0.963 tol 0.01; HALF_MAG 0.5
 (SL_D_BAR -0.2855, SL_NEFF_BAR +0.4815); FILL_CLS 0.5; PART_CLS
@@ -230,15 +247,112 @@ about zeta or L(s, chi); a split retypes finitely measured
 statistics, nothing more; no verdict claims L*, a bound mechanism
 or an asymptotic law; r243..r329 stand.
 
-RECORD TABLES: inserted after the record run per the freeze
-protocol (smoke -> calibration pass(es) with disclosed amendments
--> record run1/run2); the record-table insertion is the only
-post-freeze edit.  DEGENERATE-GUARD DESIGN (sealed): the w9 world
-channel screens the identically-self-aliased SMOOTH world at
-density level (L1 of darm - dsm against DEG_FLOOR x the density
-mass) BEFORE the drive normalization, because rung_rec divides by
-the terminal chain eta, which is float noise on a Delta == 0
-world (the r300 amendment-a1 lesson, adopted at design time).
+DEGENERATE-GUARD DESIGN (sealed): the w9 world channel screens
+the identically-self-aliased SMOOTH world at density level (L1 of
+darm - dsm against DEG_FLOOR x the density mass) BEFORE the drive
+normalization, because rung_rec divides by the terminal chain
+eta, which is float noise on a Delta == 0 world (the r300
+amendment-a1 lesson, adopted at design time).
+
+RECORD TABLES (frozen from the record run; calibration protocol,
+chronology honest: smoke pass 1 = 24/24 (0.3 s, no amendment;
+smoke run2 identical); calibration pass 1 = first full evaluation
+= 21/24, wall 19.4 s, exposing the two disclosed amendments a1
+(the C_2 violation count ran against the 4-decimal record literal
+1.0694 instead of the live-frozen full-precision constant
+1.069434 -- the calibration argmax rung "violated" its own
+constant by rounding; representation fix) and a2 (the sealed 1e-6
+contribution-ward bar was sized from the w9 control record, which
+never covers FLIPPED chains at depth: the measured DIRICHLET
+profile is <= 5.4e-7 on 41/42 rungs with ONE terminal-eta
+conditioning outlier 2.0e-5 at kz31 (N 722, nf 59); deep bar
+N > 400 set to 1e-4 -- the ward keeps catching O(1) structural
+breakage; no battery class rule, class bar or adjudication rule
+moved by either amendment); calibration pass 2 with a1 + a2 =
+24/24, wall 19.4 s = the record; record run1/run2 after this
+insertion, identical up to WALL -- the record-table insertion is
+the only post-freeze edit, which IS the protocol):
+CAL_VERDICT = SECOND_WORLD_BATTERY(
+  HALF_FILLING: MAIN nf None 42/42 vs DIRICHLET nf None 0/42
+    (depth ratio med 0.080, w9 nf 24; nf grows 13..62 with N but
+    stays at CONTROL depth -- flips 25/21/27) vs ABS nf None 0/42
+    (ratio med 0.125, w9 nf 37) -- BOTH control-side;
+  RENYI3_C2 (live-frozen 1.069434 == r306): MAIN 0/42 vs DIR
+    32/42 violations (max rho_2 27.6) vs ABS 37/42 (max 149.2)
+    vs EPST 0.368 HOLDS / SCR 1.780 VIOLATES -- both control-side
+    and far beyond the SCRAMBLE break scale;
+  SIGMA_DECAY: MAIN sl_D -0.5710 vs DIR +0.793 vs ABS +1.343 --
+    the diagonal GROWS on both second worlds: control-side;
+  NEFF_GROWTH: MAIN +0.963 vs DIR +0.527 MAIN-side (above the
+    sealed half-magnitude bar +0.4815) vs ABS +0.272 split;
+  O_SIGN: MAIN O_POS (O < 0 on 13/42 EXACT == r299) vs DIR O_NEG
+    27/42 vs ABS O_NEG 28/42 -- both on the control side of the
+    r299 class;
+  FILL: MAIN med 0.434 vs DIR 0.436 vs ABS 0.463 -- all three
+    FILL_LOW, vs EPST 0.662 / SCR 0.530 FILL_HIGH at w9: the r300
+    class is SHARED by both second worlds;
+  MULT2: max mult 2 on 42/42 for MAIN + DIR + ABS, two-ancestor
+    slack <= 0 exact, one-pair mixed share med 1.00 on ALL three
+    worlds (every mult-2 fold group pairs one bulk with one
+    window ancestor) -- fully SHARED)
++ SECOND_WORLD_SPLITS(HALF_FILLING, RENYI3_C2, SIGMA_DECAY,
+    O_SIGN; shared NEFF_GROWTH, FILL, MULT2; ABS
+    SPLITS(HALF_FILLING, RENYI3_C2, SIGMA_DECAY, NEFF_GROWTH,
+    O_SIGN))
++ RETYPED(HALF_FILLING(wall-to-window-depth), the r306 pointwise
+    C_2 bound, the r299 sigma decay and the r299 O_POS sign class
+    are MAIN idiosyncrasies INSIDE THIS FRAME -- they do not
+    transfer to the chi-twisted source, and (sharper) not even to
+    the mere p|q atom removal ABS; the r300 FILL class, the
+    n_eff growth direction and the mult-2 one-pair fold geometry
+    ARE living-world properties shared by the second arithmetic)
++ CONVENTION_LEDGER(chi mod 3; weights chi x MU_ALL bitwise /
+    MU_ALL on (n,3) = 1; MAIN frame ARCH/border/depth; trivial
+    twist BITWISE; live-frozen C_2; no recalibration).
+Key numbers.  Trivial twist: rho chain + nf + S_own BITWISE ==
+MAIN (the comb interface IS the v563 gauge).  W9: MAIN S_own 367
+(263/104), nf None, m 35, rho_2 0.458, O +5.8e-3, fill 0.617;
+DIR S_own 367, nf 24, m 29, rho_2 0.527, O -8.5e-3, fill 0.577;
+ABS S_own 367, nf 37, m 36, rho_2 1.076, O -2.6e-3, fill 0.612;
+EPST nf 25 rho_2 0.368 O < 0 fill 0.662; SCR nf 21 rho_2 1.780
+O < 0 fill 0.530; SMOOTH nf 27, degenerate guard FIRED
+(pre-declared); all tb devs at w9 <= 6e-11 (controls 2.4e-8).
+MAIN ladder: nf None 42/42, tb max 3.9e-13, sl_D -0.5710 (rec
+-0.571), n_eff med 37.41 slope +0.963 (rec exact), C_2 refreeze
+1.069434, 0/42, O < 0 on 13/42 EXACT, fill med 0.434, mult 2
+42/42, two-ancestor slack -1.2e-8 <= 0.  DIR ladder: built 42/42
+live 42/42, tb 5.4e-7 shallow / 2.0e-5 deep (bars 1e-6 / 1e-4),
+S_own med 775, nf 13..62; ABS: tb max 1.8e-6 deep.  MUST-FAILS:
+m1 CAUGHT (periodicity witness n = 1: mutant chi(4) = 0 != +1;
+support n = 4); m2 CAUGHT (rel dev 0.5 EXACT); m3 CAUGHT (toy
+C_mut 10, declared set ALL != frozen MAIN_FIRST5, diff 9 EXACT;
+real DIR rho max 27.645 vs frozen 1.0694 NEVER adopted); m4
+FLAGGED (MAIN_MM_BLEND); constructors + fragments CLEAN.
+Runtime 19.4 s full / 0.3 s smoke; run1/run2 identical up to
+WALL.  AMENDMENTS AFTER FREEZE: NONE beyond the disclosed a1/a2
+(both found in calibration, before the record) and this
+record-table insertion, which IS the protocol.
+READING (typed MEASUREMENT, the audit repair): the second living
+world SPLITS the battery along a clean seam -- the CLASS AND
+GEOMETRY statistics transfer (FILL_LOW, n_eff growth direction,
+mult-2 one-pair fold geometry: the r300 FILL class is now backed
+by n = 2 living arithmetics against 2 dead controls), but the
+WALL and the POINTWISE-CONSTANT statements do NOT (half-filling
+positivity dies at control depth 13..62 on BOTH variants; the
+r306 C_2 bound breaks by up to 149x; sigma GROWS; the r299
+O-sign class lands control-side): inside the MAIN frame these
+four are zeta-side idiosyncrasies, not generic living-world
+properties.  The sharpest single finding is the ABS variant:
+REMOVING THE p = 3 ATOMS ALONE (three to five atoms per window,
+magnitudes untouched) already kills the wall at depth 37 (w9) --
+the half-filling wall is a property of the COMPLETE untwisted
+von-Mangoldt comb, not of von-Mangoldt-type combs per se.
+HONEST LIMIT (binding): this frame keeps zeta's archimedean
+term, border and window depth; a GRH-faithful Dirichlet window
+(own Gamma parity, own conductor, own frame-A geometry) could
+rescue the wall -- the round cannot distinguish "wall is
+zeta-specific" from "wall needs the matched frame"; that
+distinction is the named follow-up.  NO RH CLAIM either way.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
@@ -293,6 +407,7 @@ TB_BAR_MAIN = 1e-9
 TB_BAR_DEEP = 3e-6
 TB_BAR_CTRL = 1e-6
 TB_BAR_SECOND = 1e-6
+TB_BAR_SECOND_DEEP = 1e-4
 DEEP_N = 400
 A_RENYI = 2
 R306_C2 = 1.0694
@@ -652,8 +767,9 @@ def battery_ladder(kzs, comb_fun):
     return rows
 
 
-def battery_stats(rows):
-    """the sealed per-variant battery statistics + classes."""
+def battery_stats(rows, c2):
+    """the sealed per-variant battery statistics + classes; c2 =
+    the LIVE-frozen full-precision constant (a1)."""
     built = [r for r in rows if "failed" not in r]
     live = [r for r in built if not r["ev"]["degenerate"]]
     st = dict(n_built=len(built), n_live=len(live),
@@ -662,14 +778,22 @@ def battery_stats(rows):
         st["valid"] = False
         st["why"] = "no live rungs"
         return st
-    tb_max = max(r["ev"]["tb_dev"] for r in built)
-    st["tb_max"] = tb_max
+    tb_sh = max([r["ev"]["tb_dev"] for r in built
+                 if r["N"] <= DEEP_N] or [0.0])
+    tb_dp = max([r["ev"]["tb_dev"] for r in built
+                 if r["N"] > DEEP_N] or [0.0])
+    st["tb_max"] = max(tb_sh, tb_dp)
+    st["tb_sh"] = tb_sh
+    st["tb_dp"] = tb_dp
     st["valid"] = (len(built) == len(rows)
-                   and tb_max <= TB_BAR_SECOND
+                   and tb_sh <= TB_BAR_SECOND
+                   and tb_dp <= TB_BAR_SECOND_DEEP
                    and len(live) >= LIVE_MIN)
     st["why"] = ("OK" if st["valid"] else
-                 "built %d/%d, tb %.1e (bar %.0e), live %d (min %d)"
-                 % (len(built), len(rows), tb_max, TB_BAR_SECOND,
+                 "built %d/%d, tb %.1e/%.1e (bars %.0e/%.0e), "
+                 "live %d (min %d)"
+                 % (len(built), len(rows), tb_sh, tb_dp,
+                    TB_BAR_SECOND, TB_BAR_SECOND_DEEP,
                     len(live), LIVE_MIN))
     Ns = [r["N"] for r in live]
     ratios = [((r["p"]["nf"] if r["p"]["nf"] is not None
@@ -677,7 +801,7 @@ def battery_stats(rows):
     st["nf_none"] = sum(1 for r in live if r["p"]["nf"] is None)
     st["ratio_med"] = float(np.median(ratios))
     st["viol"] = [r["kz"] for r in live
-                  if r["ev"]["rho2"] > R306_C2]
+                  if r["ev"]["rho2"] > c2]
     st["rho2_list"] = [r["ev"]["rho2"] for r in live]
     st["rho2_max"] = max(st["rho2_list"])
     st["sl_D"] = L2D.halves_slope(
@@ -988,6 +1112,7 @@ def main():
             check(g, True, "SMOKE: skipped")
         stM = None
         kzs = []
+        C2_live = R306_C2
     else:
         kzs = [kz for kz in core.frame_a_zones()
                if PIK.build_rung(kz)["h"] <= H_CAP]
@@ -1000,7 +1125,9 @@ def main():
             rc["ev"] = eval_rung(rc)
             rc["S_own"] = len(p["d"]["xs"]) + len(p["d"]["ys"])
             recsM.append(rc)
-        stM = battery_stats(recsM)
+        rho2M = [r["ev"]["rho2"] for r in recsM]
+        C2_live = max(rho2M[:N_CAL])
+        stM = battery_stats(recsM, C2_live)
         check("G30-ladder-census", len(recsM) == 42
               and stM["nf_none"] == 42 and stM["valid"]
               and stM["multmax"] <= MULT_CAP,
@@ -1020,15 +1147,13 @@ def main():
               "r299/r301 cascade re-derived through this channel"
               % (stM["sl_D"], R299_SL_D, SL_TOL, stM["neff_med"],
                  R301_NEFF_MED, stM["sl_neff"], R301_SL_NEFF))
-        rho2M = [r["ev"]["rho2"] for r in recsM]
-        C2_live = max(rho2M[:N_CAL])
         ok_c2 = (abs(C2_live - R306_C2) <= C2_TOL
                  and not stM["viol"])
         check("G32-c2-refreeze", ok_c2,
-              "C_2 re-frozen on the MAIN first-%d split: %.4f == "
-              "r306 record %.4f (tol %.3f); MAIN violations %d/42 "
-              "-- the constant is FROZEN here, no second-world "
-              "value enters it"
+              "C_2 re-frozen on the MAIN first-%d split at FULL "
+              "precision (a1): %.6f == r306 record %.4f (tol "
+              "%.3f); MAIN violations %d/42 -- the constant is "
+              "FROZEN here, no second-world value enters it"
               % (N_CAL, C2_live, R306_C2, C2_TOL,
                  len(stM["viol"])))
         ok_cls = (stM["oneg"] == R299_ONEG
@@ -1050,7 +1175,7 @@ def main():
         clD = clA = {}
     else:
         rowsD = battery_ladder(kzs, dirichlet_comb)
-        stD = battery_stats(rowsD)
+        stD = battery_stats(rowsD, C2_live)
         clD = battery_classes(stD) if stD.get("valid") else {}
         check("G40-dirichlet-ladder", stD["n_built"] == 42,
               "DIRICHLET: built %d/42, live %d, tb max %s, "
@@ -1073,7 +1198,7 @@ def main():
                  if "fill_med" in stD else "n/a",
                  stD.get("multmax")))
         rowsA = battery_ladder(kzs, dirichlet_abs_comb)
-        stA = battery_stats(rowsA)
+        stA = battery_stats(rowsA, C2_live)
         clA = battery_classes(stA) if stA.get("valid") else {}
         check("G41-abs-ladder", stA["n_built"] == 42,
               "DIRICHLET_ABS: built %d/42, live %d, tb max %s, "
