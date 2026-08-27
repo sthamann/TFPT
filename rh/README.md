@@ -2996,6 +2996,51 @@ machinery, the local-edge indefiniteness of every world, and the
 sign-opposite edge coordinate.  Experiments-side, NO ledger row,
 NO RH CLAIM.
 
+**The two-atom extremal solved as its own problem (r342, the Ü1
+main find of the r338 door-2 full revision).**
+`pair_extremal_probe.py` (38/38, SPEC_SHA `b09f8ccdcfdedc16`
+final with record, freeze `4ca125c7906149bf`, two-commit
+protocol: pre-freeze `bdc0b439`, record `5c80e561`) solved the
+r284 two-atom extremal as its own problem: at the binding point
+L\* is EXACTLY the determinant condition `c² < (1−d₁)(1−d₂)`
+with `d_k = v_k K_N(y_k, y_k) = E_kk`, `c = √(v₁v₂) K_N(y₁, y₂)
+= E_12` at the shallow-edge pair (folds 2/4, below log 2 — the
+pair on 69/69 windows incl. the 12 r329 EXT3 fresh anchors as
+pure test rows, pair mass 0.9352…0.9994).  **Verdict
+`PAIR_LAW_FOUND` + `PAIR_WORLD_COMPLETE`** — (i) the component
+laws are halves-stable on the 57 (p −0.754 / q −0.645 / c
+−0.697 vs the disclosed r338 priors −0.71/−0.66) and extend to
+the EXT3 pure test (11/12 per column); (ii) the pair WEIGHTS
+are closed-form source objects: the digamma dictionary
+`F_A(ξ) = −log π + Re ψ(1/4 + iξ/2)` for the archimedean layer
+plus the EXACT two-cell tent closed form of the prime layer
+predict v at median rel dev < 1e-4 over all 69 rungs; (iii) the
+α composition closes bookkeeping-exactly (α_pair 3.341 vs
+α_full 3.332 vs composed 3.333; 42-only 3.059 == r286 3.06)
+with the OPEN analytic remainder ρ_r = 2.624 — the cancellation
+exponent of the determinant reserve `r_det = 1 − c²/pq`, the
+concretized specialist question; (iv) the sealed world census
+closes Ü2: the union `{PR ≥ 3} ∪ {κ_int ≥ 1}` is the first
+measured world-complete criterion of the L\* lane — with the
+honest structure that the PR clause alone FAILS (the dead
+worlds are also concentrated at their own N_w, PR 1.80…2.92)
+while the κ_int clause alone is world-complete: EPST 1794 /
+SCR 8.51e6 (== r334) / **SMOOTH 2.193 / HL2 1964 (first
+evaluation)** ≥ 1, live MAIN/TWIN 0.999567 < 1.  **The R343
+material, measured:** the exact Schur dressing makes L\*
+equivalent to `{λ_rest < 1}` AND `{dressed pair determinant}`;
+the rest margin decays parallel to the full margin (slope
+−3.28, offset ~20×) while the DRESSED pair reserve `r'_det` is
+FLAT (slope +0.018, w9 value 0.303) — the O(1) certificate
+candidate a full L\* theorem needs.  Honest negatives: `r_det`
+is halves-curved (−0.767); kz56 breaks the R2 band
+(`EXT3_FAMILY_BREAK`, the 12–40 % 2×2-uniformity does not
+extend unmodified to the small-gap family); the kernel side
+(why `v_k K_N → 1` with deficit ~N^−0.7 at the hard edge; r285
+sub-classical 0.38 confirmed as the deep-rung late-window
+growth) stays without closed form.  Experiments-side, NO ledger
+row, NO L\* claim, NO RH CLAIM.
+
 **Lane status after wave 13.**  **The terminal: the MEASURED
 composition is the end state of the route** (r324
 `PILEUP_GROWS_SUBCRITICAL` +0.172 < 0.224 record / 0.188
@@ -3042,7 +3087,18 @@ transport, no norm bound — and the interval-Hall reduction is
 refuted on exact small models (`CUT_REDUCTION_FAIL`), with the
 structural finding that the shallow-edge prefix of every world,
 MAIN included, is locally indefinite: the wall is a global
-rescue, not a local edge property; the L\* contract still [O]).  **Lean: 8 sorries, all typed** (the
+rescue, not a local edge property; r342 then solved the r338
+two-atom extremal as its own problem — `PAIR_LAW_FOUND`: the
+three binding-point scalars (d₁, d₂, c) carry stable laws incl.
+the EXT3 pure test, their weights are closed-form source
+objects (digamma dictionary + exact tent closed form), the α ≈
+3.3 decay is their bookkeeping-exact composition with the open
+remainder ρ_r = 2.624, and the union {PR ≥ 3} ∪ {κ_int ≥ 1} is
+the first measured world-complete criterion (κ_int alone
+suffices; SMOOTH 2.193 / HL2 1964 first evaluated); the Schur
+dressing names the R343 coupling-control coordinates (rest
+margin ∥ full margin, dressed reserve FLAT ~0.3); the L\*
+contract still [O]).  **Lean: 8 sorries, all typed** (the
 five window-local legacy sorries byte-identical — the two true
 WINDOW-LOCAL holes `lstar_subordination` +
 `terminal_positive_main` unchanged — plus the three named Level-C
