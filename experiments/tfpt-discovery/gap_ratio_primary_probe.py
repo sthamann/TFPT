@@ -337,6 +337,160 @@ weight dictionary predicts WEIGHTS, not the kernel (r342 negative
 #4 stands); no verdict claims L*, a bound mechanism, a derived
 5/7, or RH progress in any direction.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze edit, which IS the protocol; TWO-COMMIT PROTOCOL
+EXECUTED: the sealed spec above was committed as "r345 pre-freeze"
+(4a1362a0, SPEC_SHA freeze 7d61df830ed54cf2) BEFORE the first full
+evaluation; chronology honest: smoke pass 1 = 35/35 (0.2 s) at the
+sealed rules, NO amendment; smoke pass 2 byte-identical; pre-freeze
+commit 4a1362a0; calibration pass 1 = FIRST full evaluation =
+35/35 (61.5 s), NO amendment; record run1 = 35/35 (62.0 s), run2 =
+35/35 (61.6 s), byte-identical up to WALL and identical to the
+calibration pass):
+MAIN VERDICT = GAP_RATIO_PRIMARY_CERTIFIED -- the first
+certificate-grade letter on the O(1) coordinate of the L* lane:
+CURV_FLAT passes ALL THREE sealed clauses on BOTH candidates
+(r'_det: CH1 band 0 out / 0 hard of 75, max |dev| 0.313 decades;
+CH2 slope_75 +0.028 with CI [-0.739, +0.825] over 2015 separated
+pairs containing 0; CH3 cohort medians 0.296/0.245/0.210/0.314/
+0.304 NOT monotone, drift 0.012 dec -- g21: CH1 band 0 out / 0
+hard, max |dev| 0.380 decades; CH2 slope_75 +0.031 with CI
+[-0.971, +0.985] containing 0; CH3 cohort medians 7.85/10.09/
+11.76/9.02/8.66 NOT monotone, drift 0.043 dec), the two-level
+identity is exact-grade on 75/75 (max formula dev 4.0e-15, bar
+1e-9), median top-2 dev 0.0634 <= 0.15, and the sealed kill does
+NOT fire -- WHILE THE OLD r343 CLAUSE FAILS BOTH CANDIDATES ON
+ITS CURVATURE BAR (rdetp slope +0.018 / curv -0.426, g21 slope
++0.049 / curv +0.601, both reproduced bit-near at the anchor
+tolerances; EXT3 12/12 and EXT4 6/6 in band under BOTH protocols):
+the r343 soft-decay letter is re-adjudicated as a PROTOCOL
+artifact, said with both protocols printed side by side -- the
+halves-curvature bar reads the ~x2 scatter of a flat O(1) column
+as decay, the scatter-honest CI reads it as flat.  The letter
+stays what it is: a sealed CENSUS certificate on 75 finite
+windows, never an asymptotic theorem, no L* progress claim.
++ CANCELLATION_LAW_FOUND(delta 2.668 -- ADDITIVE TAG under the
+certificate, the sealed clauses all hold: slope of log|c'/c| =
+-2.668 on the 57 with halves curvature -0.189 <= 0.35, EXT3 pure
+test 10/12 in the 0.5-decade band (n_low 0 -- both misses HIGH
+side), EXT4 6/6 (n_low 0), delta 2.668 >= 0.5: THE STRUCTURE
+STATEMENT 'the rest space mirrors the pair cross-term up to
+O(N_w^-2.7)' is now a sealed measured law; bookkeeping census
+slope(c') - slope(c) = -3.401 + 0.697 = -2.703 vs the direct
+-2.668 -- the mirror law is the c'-vs-c bookkeeping to 0.035;
+|c'/c| spans 2.70e-2 (w9) .. 1.79e-5)
++ FLATNESS_DOUBLE_LEDGER(OLD r343 clause: rdetp FAIL (curv), g21
+FAIL (curv) -- NEW protocol: both PASS with ZERO band outliers of
+75; the four disclosed priors reproduce exactly: slopes +0.018/
++0.049, curvatures -0.426/+0.601)
++ TWO_LEVEL_LEDGER(max formula dev 4.0e-15 over 75 rows (bar
+1e-9); angle medians t1 -0.4744 / t2 +1.1162 -- the top-2 pair
+geometry is ladder-stable (w9: -0.5667/+1.0415, |t2-t1| 1.61);
+g21 spans 3.426..19.705 over the 75; w2 pair mass median 0.5520
+-- THE SECOND EIGENVECTOR LIVES DOMINANTLY ON THE PAIR TOO;
+(1-lambda_2)/(1-lambda_rest) median 0.4224 -- lambda_2 is NOT the
+rest-block top anywhere; independent resolvent-spectrum route
+devs 1.2e-12..1.6e-08 on the six sample rungs (bar 1e-6,
+anti-circular); w9 lambda_2 source: w2 pair mass 0.6043 vs w2
+peel-pair mass 0.3852 (folds (6,8)) -- the lambda_2 carrier is
+the pair's second angle FIRST, the peel pair second; peel-fold
+weight dictionary dev 7.0e-3 (bar 0.10): the weight side stays
+closed-form, the kernel side census-grade)
++ KILL_CENSUS(the sealed union of the two 6-row deciles = 11
+distinct rows kz22/28/29/37/40/44/49/59/60/64/67 (kz44 argmin
+rest-pair mass 0.6917, kz59 argmin pair mass 0.9352 -- the named
+suspects carry their record minima exactly); ADJUDICATION: median
+two-level dev 0.1432 <= 0.30 (the weak rungs DOUBLE the ladder
+median 0.0634 -- honest, printed per row; single worst kz28 at
+0.4192), K_res > 3 on 0/11 (kill at 3), g21 band violations 0/11
+(worst dev 0.339 dec at kz22, inside the 0.5 band) => THE KILL
+DOES NOT FIRE: the top-2 reading survives its weakest rungs --
+and KILL_ABSORBED_BY_K3 (median top-3 dev 0.0163 <= 0.15, max
+0.0307: the K <= 3 shadow is ~9x tighter exactly where K = 2
+weakens -- the Top-K generalization absorbs the strain)
++ CANCELLATION_LEDGER(delta fit above; order/mode profile medians
+on the 57: rho_0 0.839 (the DIRECT overlap u1.u2 is the mirror's
+bulk at depth; w9 0.579 rising through rho_32 0.985 to 0.965 at
+K = 128 on w9), M90 30 modes, top-1 mode share 0.275 --
+multi-mode in MODES yet order-0-dominated in PATHS: the resolvent
+enhancement 1/(1-delta_m) reshuffles mode weight, not path order;
+WORLD COLUMN: rho_32 = 0.9225 on BOTH live worlds (the finite-
+order mirror is bounded and near 1 exactly where lambda_rest < 1)
+while all four dead worlds DIVERGE at K = 32 (SMOOTH +7.9e6, EPST
+-1.7e109, HL2 -4.7e113, SCR -6.5e195 -- lambda_rest >= 1 makes
+the path series explode): the mirroring EXISTS only in the live
+worlds, the finite-order column separates by divergence -- a
+census, no bar was sealed for it)
++ WORLD_LEDGER(lambda_rest separation re-gated 4/4 dead >= 1
+(EPST 2191.37 / SCR 1.058e6 / SMOOTH 2.211 / HL2 2775.56) vs
+live 0.996338 < 1; kappa_int == records at 5 percent (EPST
+1793.99 / SCR 8.509e6 / SMOOTH 2.193 / HL2 1964.35, live
+0.999567); g21 census: live 7.5175/7.5174 vs dead 0.103 (EPST) /
+0.0012 (SCR) / 0.802 (SMOOTH) / 0.0109 (HL2) -- the s1 sign
+conjecture is REFUTED honestly: dead worlds have BOTH lambda_1,
+lambda_2 > 1, so g21 stays positive-small (< 0.81) -- the
+separation is g21 < 1 on dead 4/4 vs > 7.5 on live 2/2, a
+MAGNITUDE census, no sealed bar; w2 pair mass live 0.604 vs dead
+0.000..0.524)
++ TWIN_LEDGER(g21 dev 8.9e-6, angle devs <= 5.7e-6, r'_det dev
+9.1e-6, c'/c dev 2.3e-6, lambda_rest dev 3.5e-8, bar 1e-3;
+dose-zero identity BITWISE)
++ MUSTFAIL_LEDGER(m1 AST-FLAGGED spread_true + toy 0.42 != 0.50;
+m2 AST-FLAGGED rdetp_col_true (the circular inversion route) +
+the real column anti-circular by the resolvent-route ward (w9
+dev 1.2e-12); m3 wrong-angle formula breaks by 9.1e-01 >= 0.1 at
+w9 and 5.8e-01 on the toy; m4 AST-FLAGGED dev_col_true + toy
+fraction 0.05 != the sealed 0.10; m5 order-0-only mirror breaks
+Delta c by 4.1e-01 >= 0.1 at w9; constructor scopes + fragment
+audit CLEAN).
+Key numbers.  W9: r'_det 0.302916, g21 7.517452 == the resolvent-
+spectrum route (dev 1.2e-12); two-level formula 0.288348 ==
+topk_shadow(2) exactly (dev 5.8e-16); angles (-0.5667, +1.0415);
+mirror residual c'/c 2.7047e-2; finite-order mirror rho_(0,1,2,4,
+8,32,128) = 0.579/0.692/0.744/0.800/0.849/0.923/0.965; M90 27,
+top-1 mode share 0.190.  LADDER: 75 rows, every f64 margin
+positive, identity ladder green 75/75 (det 1e-12 / Schur 1e-6 /
+resolvent route 1e-6 / spectral 1e-9 / two-level 1e-9 / mode-
+profile recovery 1e-8); cohort anchors bit-near (median g21
+8.206, median top-2 dev 0.0634, median rest-pair mass 0.9902,
+kz56 (0.1605, 16.03), span kz98 0.1383 / kz57 0.5361, argmin
+kz44/kz59); K_res median 2, max 3 over all 75.  RESTATEMENT does
+NOT fire: median fixed-angle inversion dev 0.1009 > 0.05 at the
+ladder-median angles (-0.4744, +1.1162) -- the angle column
+carries real window-dependence, g21 is NOT r'_det plus a constant
+angle.  HONEST NEGATIVES: (1) the certificate is a sealed census
+statement on 75 finite windows -- no asymptotic claim, no L*
+claim, and the r343 letter was CORRECT under its own seal: the
+re-adjudication changes the PROTOCOL, not the data (both old-
+clause failures reproduce bit-near); (2) the kill set doubles the
+two-level deviation (median 0.1432 vs 0.0634) and kz28 alone
+reaches 0.4192 -- the K = 2 truncation IS strained at weak
+concentration, it survives the sealed median bar and K <= 3
+absorbs it; (3) the s1 world-sign conjecture for g21 was wrong
+(dead worlds have lambda_2 > 1 too) -- the honest column is the
+magnitude census; (4) the delta-fit EXT3 band holds 10/12 with
+both misses HIGH side (the law extends conservatively, but not
+12/12); (5) the four-rung scoping suggestion for delta (-3.4..
+-4.9 naive two-point) was steeper than the sealed 57-fit (-2.67)
+-- the fit is the record, the scoping was sizing; (6) rho_32
+median 0.985 on the 57 but only 0.923 at w9: the finite-order
+mirror deepens with N_w -- census, no law sealed.  R346 SKETCH
+(candidates, not commitments): (i) the source anatomy of g21 ~ 8
+(why is 1 - lambda_2 pinned at ~0.42 x the rest margin
+ladder-wide? the w2 angle dictionary -- the pair's second angle
+carries lambda_2, so a two-atom 2x2 with the SIGNED angle
+difference should predict g21 from (d1, d2, c) + the peel data);
+(ii) the mirror world clause promoted to a sealed discriminator
+(|rho_K - 1| bar with a convergence-radius reading, second-world
+Dirichlet test); (iii) the delta ~ alpha question sharpened: is
+slope(c'/c) = -2.67 vs margin -3.33 a real gap or a curvature
+artifact of the c' column (curv -0.189) -- the bookkeeping
+c'^2 = (1 - r'_det) p' q' with m2' == margin puts a proof-grade
+identity one line away on the instrumented family.  Runtime 62.0
+/ 61.6 s record, 61.5 s calibration, 0.2 s smoke; deterministic,
+run1/run2 byte-identical up to WALL.  AMENDMENTS AFTER FREEZE:
+NONE except this record-table insertion.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
