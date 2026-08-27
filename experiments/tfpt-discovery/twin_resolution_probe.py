@@ -276,6 +276,97 @@ be sealed immediately and handed to the coordinator; no verdict
 claims L*, a bound mechanism, an asymptotic law, or RH progress
 in any direction.
 
+RECORD TABLES (frozen from the record run; calibration protocol,
+chronology honest: smoke pass 1 = 24/24 (0.5 s) on the sealed
+spec; calibration pass 1 = first full evaluation = 21/24, wall
+479.3 s, exposing the three gate/ward artifacts behind the
+disclosed amendments a1-a3 above (du rounding ties, in-budget
+node landings at coarse tol, f64-noise ward floor -- every
+physics number of pass 1 is IDENTICAL to the record below);
+calibration pass 2 = 24/24, wall 467.7 s; the pre-freeze commit
+holds the amended spec WITHOUT records; record run1 = 24/24,
+wall 453.7 s; run2 identical up to WALL (462.8 s); the
+record-table insertion is the only post-freeze edit, which IS
+the protocol):
+CAL_VERDICT = METRIC_ONLY_CONFIRMED_AT_RESOLUTION(margins
+1.675e-4 .. 1.806e-8 over 11 anchors; every tight anchor
+twin-stable at t* = 1e-6; every admissible counter-test keeps
+the wall) + RESOLUTION_TABLE + PRECISION_SWEEP + COUNTER_TEST +
+DENOMINATOR_LEDGER + DETECTOR_LEDGER.
+THE RESOLUTION TABLE (r289 twin at 1e-8; per anchor: margin
+[tier], |Delta_m| (source), ratio, class):
+  kz9  /z16   +1.675e-4 [F]  2.26e-9 (f64)   1.35e-5  RESOLVES
+  kz18 /z37   +3.058e-5 [F]  2.78e-10 (f64)  9.10e-6  RESOLVES
+  kz24 /z59   +2.094e-6 [M]  1.66e-10 (mp30) 7.91e-5  RESOLVES
+  kz30 /z79   +1.003e-6 [M]  9.59e-11 (mp30) 9.56e-5  RESOLVES
+  kz38 /z109  +8.845e-7 [X]  6.86e-11 (mp30) 7.76e-5  RESOLVES
+  kz48 /z151  +6.245e-7 [X]  3.68e-11 (mp30) 5.88e-5  RESOLVES
+  kz59 /z199  +6.309e-7 [X]  4.72e-13 (mp30) 7.48e-7  RESOLVES
+  kz82 /z317  +1.722e-7 [X]  1.77e-11 (mp30) 1.03e-4  RESOLVES
+  kz64 /z233  +1.417e-7 [X]  2.81e-11 (mp30) 1.98e-4  RESOLVES
+  kz98 /z409  +1.949e-8 [X]  7.13e-12 (mp30) 3.66e-4  RESOLVES
+  kz119/z529  +1.806e-8 [X]  3.45e-12 (mp30) 1.91e-4  RESOLVES
+11/11 RESOLVE, 0 BLIND, 0 MARGINAL; worst ratio 3.66e-4 (kz98):
+the audit's feared blindness at the r289 precision does NOT
+occur -- the twin footprint lands >= 3.4 orders below EVERY
+margin, including the 1.8e-8 class; minC preserved on all 11;
+offsets vs r286 records exact (+0/+2/+1/+1 on the sweep
+anchors).  THE PRECISION SWEEP (ratio |Delta_m|/margin; sig =
+minC kept):
+  kz9:   1e-3 BLIND (minC 170 != 184, ratio 1.28) / 1e-6
+         2.03e-3 R / 1e-8 1.35e-5 R / 1e-10 4.42e-8 R
+  kz64:  1e-3 BLIND (minC 223 != 861, ratio 4.78e4) / 1e-6
+         1.73e-4 R / 1e-8 1.98e-4 R / 1e-10 1.78e-6 R
+  kz98:  1e-3 BLIND (minC 200 != 998, ratio 1.17e5) / 1e-6
+         9.87e-2 R / 1e-8 3.66e-4 R / 1e-10 < floor R
+  kz119: 1e-3 BLIND (minC 224 != 1120, ratio 8.63e5) / 1e-6
+         1.60e-2 R / 1e-8 1.91e-4 R / 1e-10 < floor R
+t* = 1e-6 on ALL FOUR sweep anchors (decision stages dps-45
+re-verified, values identical to dps-30 at print precision);
+the twin-resolution threshold of the tight anchors sits between
+1e-3 and 1e-6 of the local gap; kz98 at 1e-6 is the closest
+call (ratio 9.87e-2 just under RES_BAR 0.1, dps-45 confirmed).
+THE COUNTER-TEST (golden detune, gap-preserving, eps = t* =
+1e-6): w9 CT1 (all 70 atoms): 28 -> 0 exact resonances, KEEPS
+minC 184, Delta -3.99e-8; w9 CT2 (exactly the 8 on-node 2-power
+atoms): 28 -> 0, KEEPS, Delta +8.26e-8 -- destroying the ENTIRE
+exact 2-power resonance arithmetic costs 5e-4 of the margin;
+kz119 CT1 (24574 atoms): KEEPS minC 1120, Delta +4.70e-11
+(mp30, ratio 2.6e-3); kz119 CT2 (2 on-node atoms): KEEPS,
+Delta +1.71e-12 -- the genuinely diophantine direction cannot
+crack the wall at any resolving dose, on the wall anchor OR the
+tightest anchor.  DENOMINATOR LEDGER: q med climbs 19 (1e-3) ->
+5408 (1e-8) -> 71894 (1e-10) on w9 and 313 -> 98461 -> 981809
+on kz119 (the audit's denominator ladder is the measured dual
+of the tolerance ladder); q max on constructible atoms <=
+3.9e8 <= QMAX_GUARD 1e12 << 2^53; f64 floor censuses 0
+everywhere at 1e-3/1e-6 and 0..3230 at 1e-8, 4834/14606/23725
+at 1e-10 (kz64/98/119) -- the sub-1e-10 twin regime is not
+constructible in f64, disclosed; in-budget node landings/cell
+hops only at 1e-3 (1-2 atoms per anchor, censused).
+DETECTORS: mp discipline clean (41-stage ledger, every
+sub-1e-5 margin carries dps-30, decision stages dps-45, no
+MP_TIER_BREAK); m1 collision mutant CAUGHT (4 collisions,
+66/70 unique); m2 metric perturber REJECTED (gap change 6.2e-2
+> 1e-4); m3 no-mp entry FLAGGED + real ledger clean; m4
+target-readback twin FLAGGED; constructors + fragment audit
+CLEAN.  READING (typed MEASUREMENT, handed to the coordinator):
+the audit-C2 concern is RESOLVED IN THE BENIGN DIRECTION -- the
+r289 twin was never blind at the tight anchors (its footprint
+at 1e-8 is 3.4+ orders below the 1.8e-8 margins because the
+margin responds to the rationalization far more weakly than
+1:1 in gap units), the METRIC_ONLY switch now carries a
+measured resolution certificate over margins 1.7e-4 .. 1.8e-8
+plus a genuine-diophantine counter-test at the tightest anchor;
+what remains open honestly: (i) twin precision below the f64
+floor (~1e-10 gap at the deep anchors), (ii) near-resonance
+(vs exact-resonance) structure, (iii) anchors beyond the
+tested 11, (iv) the counter-test destroys designed relations
+at eps-scale -- sub-eps diophantine effects are not probed.
+Runtime 453.7 s full / 0.5 s smoke; run1/run2 identical up to
+WALL.  AMENDMENTS AFTER FREEZE: NONE (records inserted per
+protocol; no bar, band, class rule or verdict rule moved).
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
