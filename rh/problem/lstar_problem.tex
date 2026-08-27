@@ -662,6 +662,119 @@ the construction.  This section, like the rest of the document,
 claims nothing: not the inequality, and nothing about the Riemann
 hypothesis.
 
+\subsection{Placement in the literature, and addressees}
+\label{sec:frozen-placement}
+
+This closing subsection (added on the evening of August 27, 2026)
+translates the frozen object into the standard language of the
+communities whose toolkits contain it.  It adds no new measurement
+and no claim; the classification below is census plus one clearly
+marked hypothesis.
+
+\subsubsection*{Dictionary: the multi-point Uvarov transform}
+
+The signed measure $\mu-\nu$ is, verbatim, a multi-point
+(generalized) \emph{Uvarov transform} of the positive measure
+$\mu$: the transform subtracts the point masses $v_{k}$ at the
+nodes $y_{k}$.  Quasi-definiteness of such transforms is a
+classical subject.  Kwon et al.\ (\emph{Quasi-definiteness of
+generalized Uvarov transforms of moment functionals}, J.~Appl.\
+Math.\ 1 (2001)) characterize quasi-definiteness of the
+transformed functional by the nonvanishing of determinants
+$\det D_{n}\neq0$ built from the Christoffel--Darboux kernel
+values $K_{n}(y_{k},y_{l})$ at the mass points;
+Akta\c{s}--Area--P\'erez (Comput.\ Appl.\ Math.\ 41 (2022),
+Thm~4) state the same criterion in matrix form: the transform is
+quasi-definite at degree $n$ iff $I+\Lambda K_{n}$ is
+nonsingular, with $\Lambda$ the diagonal matrix of the added
+masses and $K_{n}$ the kernel matrix at the mass points.  With
+$\Lambda=-\operatorname{diag}(v_{k})$ the matrix $I+\Lambda
+K_{n}$ is similar to $I-\E_{n}$ of \S\ref{sec:equiv}(b)
+(conjugate by $\operatorname{diag}(\sqrt{v_{k}})$).  The objects
+of this document are therefore exactly the standard ones:
+$\E_{N}$ is the multi-point Uvarov kernel matrix of the
+modification at the $\nu$ atoms; the free-window
+quasi-definiteness of \S\ref{sec:equiv}(a) is the standard
+quasi-definiteness question for this transform, asked
+simultaneously at all degrees $n\le N$; and the pair reserve
+$r=1-c^{2}/(pq)$ of \S\ref{sec:frozen-chain} is a normalization
+of the $2\times2$ Uvarov determinant at the two binding atoms.
+What is \emph{not} standard: the masses and nodes here are
+prime-generated rather than free parameters; the inequality asks
+the definite (spectral, $\lambda_{\max}<1$) refinement of
+quasi-definiteness, uniformly through the moment-free window;
+and the frozen content is the measured \emph{rate} at which the
+$2\times2$ determinant closes ($\rho_{r}=2.624$).
+
+\subsubsection*{Universality class: the discrete hard edge
+(census, one marked hypothesis)}
+
+Measured: the weight-free kernel correlation at the pair,
+$\rho_{K}=K_{N}(y_{1},y_{2})^{2}/\bigl(K_{N}(y_{1},y_{1})\,
+K_{N}(y_{2},y_{2})\bigr)$, \emph{decays} along the family with
+fitted exponent $1.42$ (record round r352; exactly twice the
+fitted exponent $0.711$ of
+$\kappa=K_{12}/\sqrt{K_{11}K_{22}}$, the fit homogeneity
+exact).  The two atoms sit at hard-edge-rescaled positions
+\[
+a_{j}=2N^{2}\bigl(1-y_{j}\bigr),
+\qquad
+a_{j}\;\longrightarrow\;\frac{\pi^{2}j^{2}}{4}
+\quad(j\in\{2,4\}\ \text{fixed},\ N\to\infty),
+\]
+asymptotically family-constant by the grid recipe
+($y_{j}=\cos(2\pi j/L)$, $L=4N-2$); on the running instance
+$a_{2}=9.92$ and $a_{4}=39.69$, against the limits
+$\pi^{2}=9.87$ and $4\pi^{2}=39.48$.  If $\mu$ belonged to the
+absolutely-continuous hard-edge universality class (Lubinsky,
+Int.\ Math.\ Res.\ Papers, 2008), the $2N^{2}$-rescaled kernel
+would converge to the Bessel kernel, and $\rho_{K}$ at these
+fixed rescaled positions would tend to a \emph{positive
+constant}.  It decays instead: the family is measurably outside
+the AC hard-edge class --- consistent with the construction,
+since $\mu$ is purely atomic and the AC hypotheses do not apply.
+The edge lives in the \emph{discrete} class.  Within that class
+the natural regime is the saturation regime of
+Baik--Kriecherbauer--McLaughlin--Miller (\emph{Discrete
+Orthogonal Polynomials: Asymptotics and Applications}, Ann.\ of
+Math.\ Studies 164, Princeton, 2007): the kernel is built from
+the orthonormal polynomials of the discrete measure $\mu$ used
+at degree $N\approx0.70\,S_{+}$ (on the running instance
+$184/263=0.6996$), and in that theory the edge parametrix
+adjacent to a saturated band is built out of Euler Gamma
+functions (Thm~2.7 and Remark~2.8 there) --- noteworthy here
+because the closed-form weight dictionary of
+\S\ref{sec:frozen-chain} is the digamma $\psi=(\log\Gamma)'$.
+Status of this placement: the decorrelation and the rescaled
+positions are \emph{measured}; the saturation-regime adjacency
+is a \emph{hypothesis} (an internal round in progress probes the
+duality/regime side), and no asymptotic statement is claimed.
+
+\subsubsection*{Who might recognize this}
+
+Four communities own pieces of this object.  The discrete
+orthogonal-polynomial asymptotics school (the
+Baik--Kriecherbauer--McLaughlin--Miller line): Riemann--Hilbert
+asymptotics of discrete orthogonal polynomials, hard edges next
+to saturated bands --- question (q2) and the class placement
+above live there.  The Christoffel-function and universality
+community (the Lubinsky--Levin--Totik line): growth of
+$K_{n}(y,y)$ at edge atoms of purely discrete measures --- (q2)
+is a Christoffel-function question, and the measured
+decorrelation is a universality-class datum.  The
+Uvarov/spectral-transformation circle (the Marcell\'an school):
+$\E_{N}$ and the pair determinant are their standard objects
+(dictionary above); (q1) and (q3) are statements about
+multi-point Uvarov determinants and their dressed $2\times2$
+blocks.  The Weil-positivity environment (the Connes--Consani
+line): truncated and finite-rank forms of Weil positivity; the
+finite Guinand--Weil dictionary of arXiv:2607.02828 (2026) is a
+related finite tool through which the cancellation of
+\S\ref{sec:frozen-object} could be re-expressed.  These are
+fields, not assignments: the paragraph names the schools whose
+standard toolkits contain the objects of this document, and it
+claims nothing on their behalf.
+
 \section{Verification script, contact, citation}\label{sec:script}
 
 The companion script \texttt{verify\_lstar\_instance.py} (same

@@ -4014,7 +4014,13 @@ honest frame (census on 85 finite windows up to N_w 7942, all
 margins positive, pool exhausted at 10^3.90).  Documentation move
 only: no probe, no marker, the L\* contract
 `PRIME.LSTAR.SUBORDINATION.01` stays [O], the history above is not
-rewritten.  NO L\* CLAIM, NO RH CLAIM.
+rewritten.  Memo sharpened with literature placement (Aug 27
+evening, additive): the closing subsection "Placement in the
+literature, and addressees" adds the multi-point Uvarov-transform
+dictionary, the discrete-hard-edge / saturation-regime
+classification (decorrelation and rescaled positions measured,
+saturation adjacency marked as hypothesis) and the four addressee
+communities — no new claims.  NO L\* CLAIM, NO RH CLAIM.
 
 ## Folder guide
 
