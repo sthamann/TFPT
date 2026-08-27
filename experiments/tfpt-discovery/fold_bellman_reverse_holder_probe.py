@@ -374,7 +374,124 @@ of the banked C_2 is a disclosed pre-spec input, not a finding
 of this round; r243-r340 stand.
 
 RECORD TABLES (inserted AFTER the record run -- the only
-amendment after freeze):
+amendment after freeze; freeze SPEC_SHA f0d2c744c46942bc,
+pre-freeze commit 86f523e8; protocol: smoke pass 1 = 38/38
+(0.7 s, run pre-commit, disclosed in the commit message), NO
+amendment; calibration pass 1 = first full evaluation, 38/38,
+wall 170.0 s, NO amendment; record run1/run2 after this
+insertion, identical up to the runtime line):
+MAIN VERDICT: PATHWEIGHT_ALSO_SUPERCRITICAL(per the sealed
+tree: NO arm certifies on its own freeze -- heavy arm C_H =
+1.7305/0.3875/0.0868 at a = 1/2/3 with viol 11/11/9 of 51 and
+NAMED 0/4 (the worst violators are the EXT3 DEEP ANCHORS kz51
+7.61x / kz54 3.17x / kz62 2.31x / kz42 2.22x at a = 2, then
+kz67/kz123 -- the r337/r339 deep-anchor margin recurs INSIDE
+the heavy arm); Form 1 C_B = 0.4867/0.1113/0.0259 with viol
+2/1/1 -- the SINGLE persistent test violator is the named
+spike kz55 (W_B 2.888, 0.157 vs C_B(2) 0.111, 1.41x), named
+3/4, midband 6/6; Form 2 (prefactor 1) certified combos NONE
+of 6 (best (A, C0) = (3, 1.0): 23 composed violations on 17
+of 77 rungs, max ratio 1.237 -- the disclosed a-priori
+mid-tree risk is real); direct good census C_g viol 2 (kz24,
+kz26)).  The letter is the sealed 'otherwise' branch and the
+NAME overstates the negative in one respect, said honestly:
+the measured path-weighted exponents are NOT supercritical
+(e(W_B) = -0.214, e(E3h) = +0.313 vs CRIT 0.224 where r339
+e(W_F) was +0.956; e(E3g) = -173.3 is a DEGENERATE statistic
+-- E3g == 0 on good-tree-empty rungs poisons the dyadic
+slope, disclosed); what fails is the FREEZE-POINTWISE
+certification, each arm by a different, structured violator
+family.
+THE THREE STRUCTURAL FINDINGS OF THE ROUND: (1) THE r339
+THESIS IS CONFIRMED QUANTITATIVELY -- path weighting deflates
+the worst case by 21x at the median: E_P[prod Gamma] med
+12.53 vs W_F med 265.54; per-path log prod Gamma q50 med 2.09
+/ q90 med 3.27 / MAX med 4.20 vs log W_F med 5.58 (deflation
+med 0.80); the per-level PATH-WEIGHTED profile E[Gamma(V_k)]
+stays in 1.05..1.80 where the Gamma_max med profile climbs
+1.05 -> 3.99; the near-ceiling nodes (Gamma > 3) carry path
+mass pm3 med 0.161 and only c3s med 0.173 of E3 -- the
+near-leaf degenerate pairs ARE defused by path weighting.
+(2) THE STOP AT R* = 3/2 IS TOO EARLY ON THE PATH-MASS SCALE
+-- the heavy arm inherits ESSENTIALLY EVERYTHING: hsh med
+0.872 (77/77 rungs heavy), msh med 0.833, E3h share of E3 med
+0.944 (max 1.000; w9 and kz61/73/130 have an EMPTY good
+tree), modal stop level 1 (the mid-band stops its whole leaf
+mass at the FIRST fold level: kz73 cnt 196/196 at tau = 1,
+kz61 227/227), NOT the last level -- the r339 'mid-band
+inflates at the last level' anatomy describes Gamma_max
+position, not path mass; the two-arm split is also strongly
+threshold-UNSTABLE: R_ALT = 7/4 moves hsh med 0.872 -> 0.266
+and the E3h share 0.944 -> 0.386 (W_B med 1.489 -> 3.796,
+C_B'(2) envelope 0.7485, psi display viol 244) -- R* is a
+genuine tuning surface, not a canonical constant, and the
+mass-balance question for R342+ is WHERE between 3/2 and 7/4
+the two arms equilibrate.  (3) THE GOOD ARM IS ONE RUNG FROM
+CERTIFYING: W_B (the integrated eps-chain, exact envelope
+E3g <= W_B, warded 0.0) certifies everywhere except kz55 at
+a = 2/3 (eps sums: sum eps_k med 0.42 max 2.49 vs loglog m
+med 1.63 -- consistent with the reviewer A loglog m + C
+reading at census grade); the EXT3 deep anchors are C_B-CLEAN
+(0 EXT3 violations in Form 1 at a >= 2) -- the deep-anchor
+problem lives ENTIRELY in the heavy arm.
+CENSUS: E3 med 6.22; E3h med 5.86; W_B med 1.489 max 2.888
+(at kz55); sum eps med 0.42; tau med (of per-rung medians)
+1.0; levels K 5..10; heavy hand-off E3h <= (m q_max)^2 msh
+reserve med 4.8x min 2.1x; E_P[prod Gamma] med 12.53 (the
+untilted census OVERSHOOTS E3 med 6.22 -- the tilt matters in
+both directions); concentration med IQR(log prod Gamma) 2.17.
+FORM 2 TABLE (strict/composed viol, max composed ratio):
+(1,1) 1467/499 1.565; (1,2) 3203/990 1.686; (2,1) 204/75
+1.384; (2,2) 624/218 1.465; (3,1) 50/23 1.237; (3,2) 115/44
+1.297 -- monotone in A, C0 = 1 dominates C0 = 2 (the sealed
+display combo (3, 1.0) was the right a-priori pick; its
+per-rung max composed ratio med is 1.000, i.e. HALF the rungs
+are already per-node clean).
+NAMED ANATOMY (kz, m, K, hsh, msh, E3h/E3, tau_med, W_B,
+psi(3,1)): kz53 119/7/0.882/0.833/0.98/1/1.503/1.055; kz83
+248/8/0.927/0.907/0.99/1/1.266/1.088; kz67 129/8/0.992/
+0.991/1.00/2/1.164/1.000 (the whole rung stops at level 2 --
+the r324 single-heavy-scale event as an early heavy fold);
+kz55 73/7/0.877/0.860/0.96/2/2.888/1.098 (the Form-1
+violator); MID-BAND: all six stop at tau = 1 with hsh
+0.820..1.000 -- the mid-band IS the heavy arm in path mass.
+WORLDS: w9 hsh 1.000 (good tree EMPTY, W_B = 1); twin w13
+hsh 0.857, E3h share 0.961, W_B 1.236 (protocol-identical);
+EPSTEIN E3h share 0.427 (the only world where the good arm
+carries the majority); SCRAMBLE W_B 1.214 sits INSIDE the
+ladder range (med 1.489) and E3h share 0.997 -- the
+PATH-WEIGHTED budget is ALSO world-blind (honest negative,
+the r339 Gamma_max blindness recurs); the dictionary value
+E3 = 20.59 stays the only sharp separator.
+COMPOSITION (typed ENVELOPE ONLY -- no certifying letter, NO
+theorem candidate this round): with the a = 3 envelopes
+[heavy 1.3091 + good 0.0650] (log m)^3 the polylog solve
+gives m_0* = 10^24.0 vs the r324 MEASURED route 10^59.6 and
+the r306 census reading 10^13.5 (C_2 = 1.069, A = 2) -- the
+envelope numbers show the POTENTIAL of the polylog form, but
+the honest state of the route REMAINS the r324 measured
+composition (m_0* 10^59.6, +0.172) until an arm certifies.
+ANCHORS bit-near: r314 identity 4.5e-17; r306 C_2 1.069
+(0/57); r316 n 65 + rho quartet 1.0493/1.0536/0.4821/0.7791
++ C_small 1.0694@kz18; r324-pre C_M2 2.2557 + the seven m2
+violators EXACT; r339 record W_F med 265.54 / W_G med 13.69 /
+hsh med 0.872 / Gmax 4.303 / e(W_F) +0.956 / e(m2M3) +0.112
+ALL reproduced through the imported FDD builders; r324 chain
+e_G +0.158 / e_M2 +0.014 / e_tot +0.172 reproduced from the
+dictionary columns.
+SEAL: tilted tower worst 8.6e-16, weight norm 4.4e-16,
+stopped partition 2.4e-16, B-chain closure 0.0, envelope viol
+0.0, Phi-Gamma identity 8.0e-16, heavy hand-off viol 0.0,
+martingale wards 2.2e-16/4.4e-16/1.2e-15, Jensen 0.0,
+FRACTIONS BIT-EQUALITY on w9 + w13: tilt == E3, partition,
+envelope, B-chain and Phi-Gamma all symbolic dev == 0 (76
+martingale nodes + the full path replica), r327 grounding
+3.4e-16 / 0.0 / 0.0, contribution ward within bars, purity
+clean, toys exact (7/18, 6/125, 20/9, 261/125, 31/16, 3/16
+all EXACT); must-fails e1 CAUGHT exact (break 7/18, float
+1.833 == 11/6) / e2 protocol-CAUGHT twice (AST rho + toy pick
+3 != 1) / e3 AST-CAUGHT (S3) / e4 CAUGHT exact (break 6/125,
+float 2.040 == 51/25) + m5a/m5b FLAGGED.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
