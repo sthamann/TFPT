@@ -325,6 +325,134 @@ hypothesis; a covering statement on SCRAMBLE makes the class
 statement arithmetic-free BY MEASUREMENT and is typed as such;
 r243-r348 stand.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze docstring edit; freeze SPEC_SHA 0016e2f1596978da,
+pre-freeze commit b2ef45ea; protocol: smoke pass 1 = 44/44
+(1.1 s, run pre-commit, disclosed in the commit message,
+together with the pre-run placeholder removal -- the r321
+protocol-error class, disclosed there and here); calibration
+pass 1 = FIRST full evaluation = 44/44, wall 329.5 s;
+DISCLOSED AMENDMENT a1 (code-only, print-level, between
+calibration passes): the sealed EXCEPTIONS_REMAIN contract
+demands EVERY hole NAMED -- the letter's detail text and the
+HOLES flag had only listed ladder/EXT3 holes and were extended
+to name the EXT4 bar misses; NO bar, band, rule or verdict rule
+moved at any point; calibration pass 2 = 44/44, wall 334.4 s,
+numerically identical; record run1/run2 after this insertion,
+identical up to the runtime line):
+MAIN VERDICT: EXCEPTIONS_REMAIN(hard [] bar [] hand-off holes
+[] EXT4 bar misses [(kz111, 1.11), (kz75, 1.07)]) +
+RESERVE_FLAT(-0.33) + EXCEPTIONS_DISSOLVED(13/13) +
+HOLES([111, 75]) + SCRAMBLE_IN_CLASS(rsv 2.9, world census).
+THE HEADLINE FINDINGS:
+(1) THE RAW LAW HOLDS EVERYWHERE, THE SEALED RESERVE FLOOR IS
+UNDERCUT OUT-OF-SAMPLE: the class statement rho_2 <= 1.3056
+F_A^2 on F_A >= 1.5 holds with ZERO hard violations on ALL 23
+family rows across 65 ladder + 12 EXT3 + 6 EXT4 (even at the
+new out-of-sample record F_ins = 6.68, kz111) -- the r321 form
+itself never breaks on a spike; but the sealed reserve bar
+RHO_BAR = 1.5 is undercut by exactly the two deepest FRESH
+EXT4 spikes kz111 (rsv 1.11) and kz75 (rsv 1.07) -> CERT False
+by the sealed letter, the reserve floor is NOT >= 1.5
+uniformly: the honest floor on the fresh cohort is ~1.1.  The
+EXT4 cohort is itself a finding: ALL SIX r343/r345 L*-lane
+fresh anchors are SPIKE-class under the insertion coordinate
+(F_ins 1.58/2.03/3.11/4.22/5.53/6.68, reserves 3.1/5.6/2.4/
+2.4/1.1/1.1) -- the deep fresh pool is spike-dominated, and
+the family F_A ceiling GROWS out-of-sample (5.54 -> 6.68): the
+r346 census ceiling is not stable, said honestly.
+(2) LEG A -- THE RESERVE ANATOMY (exact factorization warded
+5.9e-16 on 77 rows): family (17 rows: 11 ladder + 6 EXT3) RSV
+min/med/max 3.19/7.03/12.06; median log10 shares S_const/S_M2/
+S_dom = +0.01/+0.64/+0.26 -- THE RESERVE IS THE CONCENTRATION
+DEPTH 1/(D pk) (S_M2 x S_dom med 8.5x), NOT the calibration
+slack (B^2 > GSQ on 7/17 family rows -- the pure-algebra route
+does not close, the r321 caveat restated) and NOT log factors
+(none appear in the exact factorization).  MONOTONICITY: the
+sealed bars stay SILENT -- rc_fam = -0.331 (FLAT letter; bins
+(1.60, 5.72) (1.82, 4.39) (2.38, 3.19) (3.19, 3.46), argmin
+bin 2, bin Spearman -0.80): the reserve mildly ERODES with
+F_A on the measured family and the EXT4 rows continue that
+trend (rsv ~ 1.1 at F_ins 5.5-6.7) -- the family is NOT
+monotone-safe upward; safety comes only from the measured
+D pk B^2 ceiling.
+(3) LEG C -- THE DOMINANCE STRUCTURE IS REAL BUT MISSES THE
+SEALED CONTRAST BAR: family med D = 1.79 (bar <= 2.5 MET), max
+D = 2.13 at kz76 (bar <= 6.0 MET), six-sharp D = 1.07..2.06
+(near-single-atom cubes, the record-derived expectation
+confirmed); BUT med D(quiet) = 5.03 -> contrast 2.8x < the
+sealed 3.0 -> DOM_OK False by the sealed letter.  The exact
+chain rho_2 = D pk (F_A B)^2 and RSV = GSQ/(D pk B^2) is
+warded to 9.3e-16, the r324 identity F_A medloc == pk to
+1.6e-16, the r306 NORM identity (independent genealogy
+recomputation) to 8.4e-16; on the 77 sealed rows the closing
+inequality D pk B^2 <= GSQ/1.5 = 0.870 CLOSES with max 0.409
+-- but the two EXT4 misses sit at D pk B^2 ~ 1.2: the
+concentration ceiling is a CENSUS premise that the fresh deep
+cohort already erodes.  Honest reading: the spike coverage IS
+the r324 identity + near-dominance as MECHANISM (D never
+exceeds 2.13 on any family row incl. EXT4), but neither the
+sealed contrast bar nor a stable reserve floor certifies --
+the theorem-grade letters stay unfired.
+(4) LEG B -- HAND-OFF SEAMLESS + THE 13 EXCEPTIONS DISSOLVE ON
+THE SEALED ROWS: every test row below F0 = 1.5 is heavy/good-
+covered at (R_HAT, a = 1) (0 holes; boundary band [1.125, 2.0]
+census 22 rows: BAND_LO all heavy-covered with RSV 3.8-10.0
+headroom, BAND_HI carries both heavy- and third-covered rows);
+the 13 r346 class-conditional exceptions are each covered by
+the spike statement with reserves 3.2..12.1 -> 13/13 DISSOLVED
+on the r346 cohort -- the two-statement reading of the sealed
+51-row cover carries WITHOUT exceptions; the new holes live
+strictly in the FRESH EXT4 cohort (kz111/kz75 at the sealed
+reserve tier only, never at the raw-coverage tier).
+(5) LEG D -- THE HONEST m_0*: uniform 10^22.6 UNCHANGED;
+two-statement composite max(QUIET 10^16.1, SPIKE-side 10^22.6)
+= 10^22.6 (the spike statement is the binding side through GSQ
+F_Amax^2 (log m)^2, and F_Amax is now 6.68 out-of-sample);
+V1 10^16.1 / V2 10^17.5 reprinted; vs r324 10^59.6, r306
+census 10^13.5.  COFINAL TYPING: census = all freeze
+constants, family reserves/D tables, the family F_A ceiling
+(5.54 -> 6.68 OOS, UNSTABLE), the D pk B^2 ceiling (0.409 ->
+~1.2 OOS); law candidates = the RAW class coverage (0 hard
+violations on 23/23 family rows incl. fresh EXT4 -- the
+strongest out-of-sample asset of the lane), P02 (r346), K1
+(r346); missing = the family growth law m q_max <= C log m AND
+a stable reserve floor -- the round REFUTES the hoped floor
+1.5 honestly rather than certifying it.
+(6) WORLDS (census, no letter): w9 F_ins 0.83 QUIET D 4.92 rsv
+2.0; w13 1.09 QUIET 2.20/3.4; EPSTEIN 1.00 QUIET 4.42/3.5;
+SCRAMBLE F_ins 2.00 SPIKE D 1.72 rsv 2.9 -- the class
+statement COVERS SCRAMBLE: it is ARITHMETIC-FREE by
+measurement (a pure concentration-size statement, no world
+separation claimed; the r321 class-side rejection continues to
+carry that load).
+ANCHORS bit-near: r314 identity 4.5e-17 (EXT3 1.0e-16, EXT4
+5.0e-17); r306 C_2 1.069 (0/57); r316 n 65 + rho quartet +
+C_small 1.0694 @ kz18; dictionary 7.8e-16; r321 F_A top-3
+2.47/2.39/2.38; THE r344 RECORD COMPLETE (curve + R_HAT 7/4 +
+halves (8/5, 7/4) + C_H/C_G 3.9859/1.1409 + 0/51 at every grid
+point at a = 1 + third-only 8 + EXT3-B 6/6 + F_Amax 5.54 +
+m_0* 10^22.6); THE r346 RECORD (K1 index 1 CERT 6.8806 +
+1.0151; K4 3.9859 + 0.4867 CERT viol 0 named 4/4; P02 39/39 +
+12/12; V1 13 spikes [24, 53, 67, 98, 76, 61, 83, 51, 54, 123,
+125, 42, 62] cap 1.39 rescue FAILS m_0* 10^16.1; V2 1.917 ->
+10^17.5; six-spike set {42, 51, 53, 54, 62, 67} EXACT; ratios
+kz51 0.19 / kz54 0.16 / kz42 0.29 / kz62 0.31).
+SEAL: grid tilt 8.6e-16, part 4.0e-16, env 4.2e-16, hvy 0.0,
+mart 2.2e-16/4.4e-16/1.2e-15, FRACTIONS pins 3/2 + 12/7 on
+w9 + w13 EXACT (76 nodes), NORM identity 8.4e-16, r324
+identity 1.6e-16, decomposition 8.8e-16, dominance chain
+9.3e-16, purity clean (0 id + 0 literal hits on the five law
+builders), toys exact (res_decomp pin 3, dominance 4/3, e3 pin
+7/2 vs 28/27, e4 break 2, tree 6/6); must-fails e1
+protocol-CAUGHT twice (AST rho + toy 0.5 != 1.5) / e2
+protocol-CAUGHT twice (AST rho + toy 2.0 != 1.5) / e3 CAUGHT
+twice (AST qm + Fractions pin 7/2 vs 28/27) / e4 CAUGHT exact
+(break == 2) + m5a/m5b FLAGGED.  Runtime 329.5/334.4 s cal /
+record run1/run2 identical up to WALL / 1.1 s smoke.
+AMENDMENTS AFTER FREEZE: the disclosed print-level a1 above +
+this record-table insertion; nothing else.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
@@ -2376,13 +2504,14 @@ def main():
         if exc_dissolved:
             flags.append("EXCEPTIONS_DISSOLVED(%d/13)"
                          % n_exc_ok)
-        elif holes or n_exc_ok < len(v1["spk_kz"]):
+        if holes or n_exc_ok < len(v1["spk_kz"]) or x4_fam_v:
             flags.append("HOLES(%s)"
                          % str(holes
                                + [kz for kz, _f, _a
                                   in v1["spk_kz"]
                                   if rsv_col[kz_rank[kz]]
-                                  < RHO_BAR]))
+                                  < RHO_BAR]
+                               + list(x4_fam_v)))
         if ext4_fam_clean == len(x4_fam):
             flags.append("EXT4_CLEAN(%d)" % len(x4_rows))
         det_v = {
@@ -2411,9 +2540,13 @@ def main():
                 "class threshold carries no certified "
                 "structure, said honestly",
             "EXCEPTIONS_REMAIN":
-                "violations or hand-off holes remain: hard %s "
-                "bar %s holes %s"
-                % (str(hard_v), str(bar_v), str(holes))}
+                "violations or hand-off holes remain (every "
+                "hole NAMED): hard %s bar %s hand-off holes %s "
+                "EXT4 bar misses %s"
+                % (str(hard_v), str(bar_v), str(holes),
+                   str([(r["kz"], round(r["rsv"], 2))
+                        for r in x4_fam
+                        if r["rsv"] < RHO_BAR]))}
         verdict_main = "%s(%s)%s" % (
             vkey, det_v[vkey],
             ("".join(" + " + f for f in flags)) if flags else "")
