@@ -393,6 +393,115 @@ coverage form bounds E3 by the SUM of the arm budgets on the
 covered set, disclosed above -- no sharper constant is claimed;
 r243-r343 stand.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze docstring edit; freeze SPEC_SHA bf16912825178c44,
+pre-freeze commit d875647c; protocol: smoke pass 1 = 41/41
+(0.8 s, run pre-commit, disclosed in the commit message);
+calibration pass 1 = first full evaluation, 38/41 -- the three
+FAILs were GATE-READING bugs of this probe's anchor gates, NOT
+machinery: (a1, disclosed amendment, code-only, no sealed
+surface touched) the r341 narrative 'E3h med 5.86' is the
+DERIVED display med(E3) x med(share) = 6.22 x 0.944, not a raw
+column median (ladder med 5.59 / full med 5.70) -- G37 now
+gates the two raw anchors E3 med 6.22 + share med 0.944 and the
+derived product; the r341 record number 'kz51 7.61x' is the
+COLUMN VALUE E3h/(log m)^2, not the ratio over C_H(2) (which is
+19.6x) -- G38 now gates the column value; plus one print
+argument-order slip on the envelope pair (gate condition was
+already correct); calibration pass 3 = 41/41, wall 164.8 s;
+record run1/run2 after this insertion, identical up to the
+runtime line):
+MAIN VERDICT: TWO_SCALE_PARTIAL(the min-coverage CERTIFIES at
+R_HAT = 7/4 at a = 1 -- 0 violations on the 51 test rows, named
+4/4, midband 6/6 -- but the sealed stop rule is NOT CANONICAL:
+the dyadic halves pick 8/5 vs 7/4, halves-stable DENIED; R*
+remains a tuning surface in the exponent language, said
+honestly).  THE HEADLINE FINDINGS:
+(1) THE MASS-BALANCE CURVE IS MEASURED (the four interior grid
+points are new): hsh med [0.872, 0.603, 0.371, 0.291, 0.266,
+0.000], E3h share med [0.944, 0.771, 0.491, 0.447, 0.386,
+0.000], W_B med [1.489, 2.410, 3.206, 3.659, 3.796, 6.096],
+empty-good counts [23, 11, 7, 7, 7, 2], empty-heavy [0, 0, 0,
+0, 0, 71] over the grid (3/2, 8/5, 5/3, 12/7, 7/4, 2); at R = 2
+the algebraic pair limit fires as derived (NO pair ever heavy,
+71/77 rungs lose the heavy arm entirely, e_H degenerate,
+eligibility guard fired as designed).  THE ARM EXPONENTS CROSS
+EXACTLY ONCE: e_H = [+0.313, +0.377, +0.358, +0.373, +0.149,
+deg], e_G = [-0.214, -0.075, +0.153, +0.159, +0.225, +0.464],
+sign(e_H - e_G) = [+, +, +, +, -, -] -- the equilibration point
+sits in the gap (12/7, 7/4); the sealed argmin-max formula
+picks R_HAT = 7/4 (interior, eligible) but the halves pick 8/5
+vs 7/4 -- the crossing is real, its LOCATION is not yet
+halves-stable on this ladder.
+(2) THE THREE-ARM MIN-COVERAGE CERTIFIES EVERYWHERE: 0
+violations on the 51 test rows at EVERY grid point already at
+a = 1 (at R_HAT: C_H(1) = 3.9859 hand-off scale, C_G(1) =
+1.1409 eps-chain scale, third arm = banked r321 1.3056 F_A^2;
+freeze table per (R, a) in the gate log; at R = 2 the heavy
+freeze is empty, C_H = 0, and the good + third arms carry
+alone).  The r341 component-AND form at R_HAT still fails
+(viol 13/10/10 at a = 1/2/3) -- the complementarity
+(disjunctive) form is what certifies, exactly the r337
+directive.  THE THIRD ARM IS LOAD-BEARING: 8 of 51 test rows at
+(R_HAT, a = 1) are covered ONLY by the r321 sliding bound --
+including the entire EXT3-B deep-anchor family 6/6 (kz51
+F_A(ins) 5.54 ratio 0.19 = reserve 5.3x, kz54 3.91/0.16, kz42
+2.44/0.29, kz62 2.38/0.31, kz56 1.14/0.15, kz58 0.61/0.31) --
+the r329 out-of-sample reading (reserves 5.0-6.1) reproduces
+under the r321 insertion convention at the frozen banked
+constant.
+(3) THE PARTITION IS NOT hsh-IDENTIFIABLE (honest negative):
+the sealed rule (hsh >= 1/2 -> heavy arm) predicts the actual
+minimal covering arm on only 7/51 covered test rows; 20 rows
+are covered ONLY by the non-predicted arm -- the covering-arm
+partition is posthoc relative to the hsh coordinate; a
+source-side predictor of the partition remains open.
+(4) kz55 ANATOMY: the eps-argmax sits at level 1 (of K = 7) --
+the EARLY-level class (same class as the r339 kz53 level-2
+anomaly), NOT a leaf effect; rebalancing does NOT absorb it
+(at R_HAT its good tree grows: W_B 2.888 -> 8.459, still above
+the good freeze) -- but the THIRD arm covers kz55 comfortably
+(F_A 1.63, ratio 0.14): the single r341 Form-1 violator is a
+sliding-bound row, not an eps-chain row.
+(5) THE HONEST COMPOSITION: E[X_inf^3] <= [3.9859 + 1.1409]
+(log m)^1 + 1.3056 x 5.54^2 (log m)^2 pointwise on the covered
+set (theorem-candidate form, third-arm term included since the
+minimal cover uses it) => m_0* = 10^22.6 -- BEATS the r324
+measured route 10^59.6 and the r341 envelope typing 10^24.0
+(now WITH a certifying cover, which r341 did not have), still
+above the r306 census reading 10^13.5.  A_tot = 2 via the
+third-arm term; F_Amax = 5.54 is the kz51 insertion value --
+the uniform constant inherits the deep-anchor spike,
+disclosed.
+WORLDS (census): the BALANCE CURVE separates where the r341
+single-point budget was world-blind -- ladder hsh med falls
+0.872 -> 0.266 across the grid while SCRAMBLE stays heavy-flat
+(0.867, 0.867, 0.867, 0.733, 0.667, 0.000; E3h share 0.997 ->
+0.993 at 7/4); twin w13 collapses fast (share 0.961 -> 0.042);
+EPSTEIN is good-dominated from the start (share 0.427 ->
+0.243); w9 all-heavy until the pair limit.
+ANCHORS bit-near: r314 identity 4.5e-17; r306 C_2 1.069
+(0/57); r316 n 65 + rho quartet + C_small 1.0694@kz18;
+r324-pre C_M2 2.2557 + the seven m2 violators EXACT; r339
+record W_F med 265.54 / W_G med 13.69 / hsh med 0.872 / Gmax
+4.303 / e(W_F) +0.956 / e(m2M3) +0.112; r324 chain e_tot
++0.172; r341 record COMPLETE (W_B med 1.489 / kz55 2.888 / E3
+med 6.22 / share 0.944 / reserve 4.8x-2.1x / ALT hsh 0.266 /
+ALT share 0.386 / ALT W_B 3.796 / C_H(2) 0.3875 v11 / kz51
+excess 7.61 / C_B(2) 0.1113 v1 / kz55 1.41x / e(W_B) -0.214 /
+e(E3h) +0.313 / envelopes 1.3091 + 0.0650 / m_0* 10^24.0 /
+r306 census solve 10^13.5); r321 F_A top-3 2.47/2.39/2.38
+through EFP.local_ratio on the module-own q_max column.
+SEAL: grid tilt 8.6e-16, partition 4.0e-16, envelope viol
+4.2e-16, heavy hand-off viol 0.0 across ALL SIX grid points,
+martingale wards 2.2e-16, FRACTIONS BIT-EQUALITY at the two
+sealed pins 3/2 + 12/7 on w9 + w13 EXACT, grounding 3.4e-16,
+purity clean, toys exact (grid pins 43/32 | 31/16, hand-off
+49/32 slack 3/16, e4 break 49/32); must-fails e1
+protocol-CAUGHT twice (AST rho + toy pick 4 != 0) / e2
+protocol-CAUGHT twice (AST rho + toy flip ('G','H')) / e3
+AST-CAUGHT (S3) / e4 CAUGHT exact (49/32) + m5a/m5b FLAGGED.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
@@ -533,6 +642,8 @@ R341_WB_MED = 1.489
 R341_WB_MED_TOL = 0.005
 R341_WB_KZ55 = 2.888
 R341_WB_KZ55_TOL = 0.005
+R341_E3_MED = 6.22
+R341_E3_MED_TOL = 0.02
 R341_E3H_MED = 5.86
 R341_E3H_MED_TOL = 0.02
 R341_HSHARE_MED = 0.944
@@ -1556,11 +1667,15 @@ def main():
                       for i in range(n_full)]
         kz_rank = {rc["kz"]: i for i, rc in enumerate(srt_full)}
         wb55 = wb_star[kz_rank[55]]
+        e3h_med_lad = float(np.median(e3h_star[:n344]))
+        e3_med = float(np.median(e3_col))
+        e3h_derived = e3_med * float(np.median(hshare_star))
         check("G37-r341-record-anchors",
               abs(float(np.median(wb_star)) - R341_WB_MED)
               <= R341_WB_MED_TOL
               and abs(wb55 - R341_WB_KZ55) <= R341_WB_KZ55_TOL
-              and abs(float(np.median(e3h_star)) - R341_E3H_MED)
+              and abs(e3_med - R341_E3_MED) <= R341_E3_MED_TOL
+              and abs(e3h_derived - R341_E3H_MED)
               <= R341_E3H_MED_TOL
               and abs(float(np.median(hshare_star))
                       - R341_HSHARE_MED) <= R341_HSHARE_MED_TOL
@@ -1580,15 +1695,21 @@ def main():
               <= R341_ALT_WB_MED_TOL,
               "the r341 RECORD reproduced through the imported "
               "FBR builders, BOTH banked columns: R* = 3/2 (W_B "
-              "med %.3f rec %.3f, kz55 %.3f rec %.3f, E3h med "
-              "%.2f rec %.2f, E3h share med %.3f rec %.3f, hsh "
-              "med %.3f, hand-off reserve med %.1f min %.1f rec "
-              "%.1f/%.1f) and R_ALT = 7/4 (hsh med %.3f rec "
+              "med %.3f rec %.3f, kz55 %.3f rec %.3f, E3 med "
+              "%.2f rec %.2f, E3h derived med(E3) x med(share) "
+              "%.2f rec %.2f -- the r341 narrative 'E3h med' is "
+              "this derived display, not a raw column median "
+              "(ladder med %.2f / full med %.2f), reading fixed "
+              "as amendment a1, E3h share med %.3f rec %.3f, "
+              "hsh med %.3f, hand-off reserve med %.1f min %.1f "
+              "rec %.1f/%.1f) and R_ALT = 7/4 (hsh med %.3f rec "
               "%.3f, share med %.3f rec %.3f, W_B med %.3f rec "
               "%.3f)"
               % (float(np.median(wb_star)), R341_WB_MED, wb55,
-                 R341_WB_KZ55, float(np.median(e3h_star)),
-                 R341_E3H_MED, float(np.median(hshare_star)),
+                 R341_WB_KZ55, e3_med, R341_E3_MED, e3h_derived,
+                 R341_E3H_MED, e3h_med_lad,
+                 float(np.median(e3h_star)),
+                 float(np.median(hshare_star)),
                  R341_HSHARE_MED, float(np.median(hsh_star)),
                  float(np.median([v for v in hres_star
                                   if v < INF_SENT])),
@@ -1606,7 +1727,7 @@ def main():
                    for i in range(n_full)]
         CH2 = max(ch2_col[i] for i in ca_i)
         vH2 = [i for i in te_x if ch2_col[i] > CH2]
-        r51 = ch2_col[kz_rank[51]] / CH2
+        r51 = ch2_col[kz_rank[51]]
         cb2_col = [wb_star[i] / lg_full[i] ** 2
                    for i in range(n_full)]
         CB2 = max(cb2_col[i] for i in ca_i)
@@ -1655,16 +1776,19 @@ def main():
               "the r341 freezes + exponents + envelope "
               "composition reproduced through the same code "
               "path: C_H(2) %.4f (rec %.4f) viol %d (rec %d) "
-              "kz51 %.2fx (rec %.2f); C_B(2) %.4f (rec %.4f) "
-              "viol %d (rec %d) kz55 %.2fx (rec %.2f); e(W_B) "
-              "%+.3f (rec %+.3f), e(E3h) %+.3f (rec %+.3f); "
-              "a=3 envelopes heavy %.4f + good %.4f (rec %.4f + "
-              "%.4f) -> m_0* 10^%.1f (rec 10^%.1f); r306 census "
-              "solve 10^%.1f (rec 10^%.1f)"
+              "kz51 excess %.2f (rec %.2f; the r341 record "
+              "number is the COLUMN VALUE E3h/(log m)^2, "
+              "reading fixed as amendment a1) ratio-over-"
+              "constant %.1fx; C_B(2) %.4f (rec %.4f) viol %d "
+              "(rec %d) kz55 %.2fx (rec %.2f); e(W_B) %+.3f "
+              "(rec %+.3f), e(E3h) %+.3f (rec %+.3f); a=3 "
+              "envelopes heavy %.4f (rec %.4f) + good %.4f "
+              "(rec %.4f) -> m_0* 10^%.1f (rec 10^%.1f); r306 "
+              "census solve 10^%.1f (rec 10^%.1f)"
               % (CH2, R341_CH2, len(vH2), R341_CH2_VIOL, r51,
-                 R341_KZ51_RATIO, CB2, R341_CB2, len(vB2),
-                 R341_CB2_VIOL, r55, R341_KZ55_RATIO, e_wb,
-                 R341_E_WB, e_e3h, R341_E_E3H, env_h3,
+                 R341_KZ51_RATIO, r51 / CH2, CB2, R341_CB2,
+                 len(vB2), R341_CB2_VIOL, r55, R341_KZ55_RATIO,
+                 e_wb, R341_E_WB, e_e3h, R341_E_E3H, env_h3,
                  R341_ENV_H3, env_g3, R341_ENV_G3, m0_env,
                  R341_M0_ENV_L10, m0_306, R306_M0_L10))
         # r321 F_A coordinate (third arm), ladder + insertion
