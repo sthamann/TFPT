@@ -3537,6 +3537,124 @@ unresolved); the named rests are g_K12 and ρ_r (the r338 q1
 backward-CS question in its sharpest form).  Experiments-side,
 NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**The family growth law (r351, the named r349 successor:
+m·q_max ≤ C·log m as a law, and the stable reserve floor).**
+`qmax_growth_law_probe.py` (43/43, SPEC_SHA `67102e4cb2aa17e6`
+final with record, freeze `d556c758701c3a60`, two-commit
+protocol: pre-freeze `8131ab53`, record `080d3711`; NO amendment
+after freeze; the pre-spec scoping disclosed: selection
+enumeration + two wpack timings only, no bound value computed)
+adjudicated the r349-named growth law on the CONVENTION-FREE
+coordinate `FAB = m·q_max/log m == F_A·B` (the exact r324
+identity: FAB does not depend on the F_A convention).  **Verdict
+`GROWTH_LAW_CERTIFIED` + `FLOOR_ERODES(10^3.7)` +
+`INZONE_POOL_EXHAUSTED` + `EXT5_CLEAN(6)`:** the frozen ceiling
+C_FAB = max FAB over the 83 sealed rows = **14.93 at kz111**
+(EXT4 — the by-hand expectation ~7.44 from kz51 was low by 2×:
+the EXT4 FAB column had never been computed); the FRESH EXT5
+TRANCHE (the r343 selection rule verbatim on the extended used
+ledger: used 98, fresh 17, B5 kz79/81/65 in-zone small-gap + A5
+kz103/135/106 deepest, N_w 1771..2812, POSITIVE_PREFIX 6/6 —
+and the **in-zone fresh pool is EXHAUSTED after this tranche**)
+tests it with **ZERO violations** (fresh max 9.71 at kz135, 35 %
+below the ceiling; rc_small +0.243 < +0.5): `m·q_max ≤
+14.93·log m` holds on every measured row of every cohort (89
+rows) and on all four instrumented worlds (SCRAMBLE FAB 2.09 —
+arithmetic-free by measurement) — **the first uniform growth
+statement of the lane that survives a fresh tranche**.  The F_A
+census ceiling ticks up AGAIN (kz79 F_ins 6.69 > 6.68) while
+the FAB ceiling stands: the law coordinate is measurably more
+stable out-of-sample than the rank-local F_A.  **The source
+derivation stays open** (src_ok False, typed honestly): the K3
+pileup cap breaks on fresh (kz65 pil 184.6 > frozen 178.0) and
+is vacuous, K4 group cap holds but vacuous, the K2 Klein-gap
+formula `FAB·grel ≤ 11.87` holds 0/6 with Spearman(grel, FAB |
+family) = −0.623 — the gap geometry genuinely sets the q_max
+scale, census-grade; the FRESH COUNT TEST (first EXT4/EXT5
+measurement ever) holds 12/12 at the r329 frozen constants (min
+reserves 1.59/2.77) — the O(log m) counting side choice-robust
+on a THIRD consecutive fresh cohort.  **The floor holds at 1.05
+but erodes:** cert2 True on all 28 family rows (min RSV 1.07,
+kz75; the five EXT5 family rows at RSV 2.22..3.38 — no new
+hole) but e_RSV = −0.649 and rc_fam351 = −0.600 (vs the r349
+prior −0.331): the census extrapolation crosses RSV = 1 at
+log₁₀ m ~ 3.7 — the r349 floor question is answered
+NEGATIVELY, no stable floor > 1 certified; anatomy: the floor
+rows are the largest-FAB deepest-pk spikes — the reserve dies
+exactly where the law coordinate peaks.  **The composition
+moves the honest uniform m₀\* by ~4 decades:** the class-free
+polylog route `ρ₂ ≤ C_FAB·C_M2ENV/log m` (14.93 × 26.01)
+solves **m₀\* = 10^18.9 UNIFORM** — no spike/quiet split — vs
+10^22.6 (r349 record) / 10^23.5 (the moved census-F ceiling) /
+10^16.1–10^17.5 (class-conditional, non-uniform) / 10^13.5
+(r306 census).  Cofinal typing: C_FAB/C_M2ENV are freeze-census
+constants (the ladder-to-m₀\* step stays the extrapolation
+hypothesis), the eroding floor is the open spike-arm need, the
+source formula is the open mechanism, and the next fresh teeth
+need a NEW construction family.  Experiments-side, NO ledger
+row, NO RH CLAIM.
+
+**The ρ_r source anatomy (r352, the named r350 follow-up: the
+last census member of the closed L\* exponent chain, and the
+g_K12 second-instrument lane).**  `rhor_source_anatomy_probe.py`
+(33/33, SPEC_SHA `dc6bbd2cdfde8bbf` final with record, freeze
+`ad7a56682b4ecfd7`, two-commit protocol: pre-freeze `88aae425`,
+record `eb794e3a`; ONE disclosed print-only amendment a1 — the
+EXT5 in/low band ledger field, the r349 every-hole-named
+precedent, no bar or rule moved) put ρ_r = 2.624 — the
+cancellation exponent of the bare reserve `r_det = 1 − c²/pq`,
+the single non-dictionary non-theorem non-candidate block of the
+r350 chain — under sealed decomposition through the WEIGHT-FREE
+kernel correlation `ρ_K = K12²/(K11·K22) = c²/(d1·d2)` (the
+weights cancel exactly), with the exact identities `c² == ρ_K
+d1 d2`, `r_det == 1 − ρ_K d1 d2/(pq)` and the additive split
+verified at machine precision on all 81 rows and in exact
+Fractions on the r342 hand toy.  **Verdict `RHOR_REDUCED`
+(one-object grade) + `RHOK_LAW_FOUND` + `DECOR_REFUTED` +
+`GK12_EXPLAINED` + `CANDIDATES_UNRESOLVED`:** the leading laws
+CANCEL (|s_csq − s_pq| = 0.0004 — ρ_r is a SECOND-ORDER object,
+not composable from the candidate laws), and at the sealed
+common leading law A_LEAD = 17/12 the deficit fine structure
+`log(pq) + A_LEAD·lnN` and the kernel fine structure `log(c²) +
+A_LEAD·lnN` are **ONE SHARED WANDER** (corr 0.999998; each
+wanders 0.8787 nats, their difference is 0.0017 nats — 500×
+smaller) whose difference IS the log reserve pointwise: **ρ_r is
+exactly the decay of the shared-wander difference — the two
+named r350 rests are ONE object** (|s_LR − s_rdet| = 0.0002; LR
+curv −0.767 == rdet curv: no clean power law in the weight-free
+normalization either — a reduction AND identification, NOT a
+source derivation of 2.624).  The round's naming hypothesis is
+refuted cleanly: `1 − ρ_K` saturates to 1 (slope +0.0006) — the
+kernel DEcorrelates; the carrier is the saturation of c²/pq.
+The κ law re-gates CLEAN (a_κ 0.7111, hits [2/3, 3/4] mutually
+unresolvable) and ρ_K inherits a_ρK = 2a_κ = 1.4222 exactly.
+**g_K12 is EXPLAINED:** the one dirty r350 column factorizes
+pointwise as `K12 == c/√(v1·v2)` (recon 5.5e-4) — the CLEAN c
+law over the closed-form dictionary weights; the CD-recursion
+SECOND INSTRUMENT reproduces the Gram route on all 81 rows (max
+7.4e-10 incl. N_w 5690) with an identical refit law (1.5e-11):
+the dirtiness is a STRUCTURE effect, not a route effect; REL2
+honest-negative (`K12/(K11 K22)^{1/4}` fails the r345 flat
+protocol loudly, 1.21 dec — the r350 slope hit 0.035 was an
+after-fit artifact).  **EXT5:** the r343 selection rule at the
+raised h cap (3400, 6000] yields kz 69/107/101/99/115/89 with
+N_w 4237..5690 — **the deepest L\* windows ever measured (1.8×
+the EXT4 record), margins ALL POSITIVE** (1.5e-9..4.0e-9); the
+bare laws p/q/c/κ extend in-band while margin/reserve/K12 sit
+uniformly HIGH side of the 57-fit: the deep decay FLATTENS out
+of sample (the opposite side from the r342 EXT3 steepening —
+census, the running-exponent question named for r353).  **No
+candidate ambiguity resolves** (required depths log₁₀ N\* =
+29.5 / 8.3 / 4.7 for a_p / a_q / δ₀ — the ladder-depth
+arithmetic is the deliverable; the closer-count leans, incl.
+0.62 OVER 2/3 for a_q, are census, never identifications).  The
+balance re-gates at dev 0.001 and **the specialist package is
+FINAL: ONE object** (the r338-q1 backward-CS fine structure =
+the shared wander φ, rms 0.88 nats — the single unexplained
+function of the L\* margin legislation), all exponents measured,
+all identities exact.  Experiments-side, NO ledger row, NO L\*
+claim, NO RH CLAIM.
+
 **Lane status after wave 13.**  **The terminal: the MEASURED
 composition is the end state of the route** (r324
 `PILEUP_GROWS_SUBCRITICAL` +0.172 < 0.224 record / 0.188
@@ -3612,7 +3730,21 @@ misses its sealed bar (2.8× < 3.0) — the reserve IS the
 concentration depth 1/(D·pk), the family F_A ceiling grows
 out-of-sample (5.54 → 6.68), the uniform m₀\* stays 10^22.6;
 the named rests are the stable reserve floor at the honest
-~1.1 scale and the family growth law m·q_max ≤ C·log m).  **The extraction:
+~1.1 scale and the family growth law m·q_max ≤ C·log m; r351
+then certified exactly that law on the convention-free
+coordinate FAB = m·q_max/log m == F_A·B —
+`GROWTH_LAW_CERTIFIED`: the frozen ceiling C_FAB = 14.93
+(kz111) survives a fresh EXT5 tranche with zero violations
+(the first uniform growth statement of the lane to survive
+fresh rows; the in-zone fresh pool is now exhausted), the F_A
+ceiling ticks up again (6.69) while the FAB ceiling stands,
+and the class-free polylog composition moves the honest
+uniform m₀\* to 10^18.9 — but `FLOOR_ERODES(10^3.7)`: the
+reserve floor holds at 1.05 (min 1.07) yet erodes with depth
+(e_RSV −0.649), so the r349 floor question closes NEGATIVELY;
+the named rests are the source formula for the FAB ceiling
+(K3/K4 vacuous, the Klein-gap census formula FAB·grel ≤ 11.87
+as the lead) and the eroding spike-arm reserve).  **The extraction:
 the architecture stands** (r325 `ELEMENTWISE_STABILIZATION_GO` +
 r326 `RH/Elementwise.lean`: `sourceExact_buildPrimeWindow` PROVED,
 the comb stabilization elementwise PROVED,
