@@ -132,6 +132,7 @@ PROBES = [
     ("r337", "fold_martingale_probe.py"),
     ("r339", "fold_density_dictionary_probe.py"),
     ("r340", "cauchybinet_hall_probe.py"),
+    ("r341", "fold_bellman_reverse_holder_probe.py"),
     ("r342", "pair_extremal_probe.py"),
 ]
 

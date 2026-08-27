@@ -3041,6 +3041,54 @@ sub-classical 0.38 confirmed as the deep-rung late-window
 growth) stays without closed form.  Experiments-side, NO ledger
 row, NO L\* claim, NO RH CLAIM.
 
+**The path-weighted Bellman / Reverse-Hölder round (r341, the
+terminal main round after the r339 dictionary — the two-arm
+theorem candidate with path-probability weights instead of
+per-level maxima).**  `fold_bellman_reverse_holder_probe.py`
+(38/38, SPEC_SHA `7a9cf6b3fe24d0d7` final with record, freeze
+`f0d2c744c46942bc`, two-commit protocol: pre-freeze `86f523e8`,
+record `70d01ef8`) executed the r339 build instruction and the
+r337 two-constant directive on the sealed r270 pairing tree.
+**The exact path layer stands at theorem grade**: the
+cubic-tilted tower `E[X_∞³] == E_Q[Π_k Γ(V_k)]` with steps
+`p̃_c = p_c R_c³/Γ(v)` (the naive untilted form is FALSE — toy
+break 7/18 EXACT, must-fail e1), the Φ–Γ identity
+`Σ_c Φ(c)/Φ(v) == Γ(v)` with `Φ = A³/n²`, the stopped leaf
+partition at τ = first heavy level with the exact hand-off
+`E3h ≤ (m·q_max)²·msh` (the r335 q_max currency entering the
+cubic layer exactly), and the good ε-chain envelope
+`E3g ≤ W_B = Π(1+ε_k)` — all Fractions BIT-EQUAL on w9 + w13 +
+three sealed toys.  **Verdict `PATHWEIGHT_ALSO_SUPERCRITICAL`
+(per the sealed tree — the honest letter-reading: what fails is
+the freeze-pointwise certification, NOT the growth: e(W_B) =
+−0.214 and e(E3h) = +0.313 where r339 e(W_F) was +0.956)** —
+the heavy arm fails its own freeze with NAMED 0/4 and the EXT3
+deep anchors as worst violators (kz51 7.61×), Form 1 (the
+integrated ε-chain) misses by the SINGLE violator kz55 (1.41×
+at a = 2; EXT3 clean), Form 2 (Ψ-weight Bellman, prefactor 1)
+certifies nowhere (best combo (A, C0) = (3, 1.0): 23 composed
+node violations — the disclosed mid-tree risk is real).  **The
+findings**: (1) the r339 thesis is CONFIRMED QUANTITATIVELY —
+path weighting deflates the worst case 21× at the median
+(E_P[ΠΓ] med 12.53 vs W_F med 265.54; path-weighted per-level
+profile 1.05…1.80 vs Γ_max 1.05 → 3.99; near-ceiling nodes
+carry pm3 med 0.161 of path mass); (2) **the stop at R* = 3/2
+is too early on the path-mass scale** — the heavy arm inherits
+med 94.4 % of the cubic mass with modal stop level 1 (the
+mid-band stops its whole leaf mass at the FIRST fold level),
+and the split is threshold-unstable (R_ALT = 7/4 moves the E3h
+share to 0.386): R* is a tuning surface, not a canonical
+constant — where between 3/2 and 7/4 the arms equilibrate is
+the named open question; (3) the good arm is ONE RUNG from
+certifying (kz55 only).  Worlds: the path-weighted budget is
+also world-blind (honest negative; the dictionary stays the
+only sharp separator).  Composition typed ENVELOPE ONLY (the
+a = 3 envelopes would give the polylog m₀\* = 10^24.0 vs r324
+10^59.6 and the r306 census reading 10^13.5) — **the honest
+state of the route remains the r324 measured composition until
+an arm certifies**.  Experiments-side, NO ledger row, NO RH
+CLAIM.
+
 **Lane status after wave 13.**  **The terminal: the MEASURED
 composition is the end state of the route** (r324
 `PILEUP_GROWS_SUBCRITICAL` +0.172 < 0.224 record / 0.188
@@ -3061,7 +3109,17 @@ martingale + moment dictionary: the exact layer is theorem-grade
 and the target reads `E[X_∞³] ≤ C(log m)^A`, but the worst-case
 Γ budget is supercritical — `LOCAL_INFLATION_SUPERCRITICAL` —
 so the named R341 form is Bellman with path-probability
-weights, not per-level maxima).  **The extraction:
+weights, not per-level maxima; r341 then executed exactly that
+form — the exact path layer (tilted tower, stopped
+decomposition, ε-chain envelope, Φ–Γ identity, heavy hand-off)
+is theorem-grade and path weighting deflates the worst case
+21×, but `PATHWEIGHT_ALSO_SUPERCRITICAL` per the sealed tree:
+no arm certifies on its own freeze — the R* = 3/2 stop sends
+94 % of the cubic mass to the heavy arm (threshold-unstable vs
+7/4), the good ε-chain misses by the single violator kz55, and
+the Ψ-Bellman with prefactor 1 is denied mid-tree; the named
+material is the R* mass balance and the kz55/deep-anchor freeze
+structure).  **The extraction:
 the architecture stands** (r325 `ELEMENTWISE_STABILIZATION_GO` +
 r326 `RH/Elementwise.lean`: `sourceExact_buildPrimeWindow` PROVED,
 the comb stabilization elementwise PROVED,
