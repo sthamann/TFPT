@@ -1387,6 +1387,16 @@
       "bytes": 107212
     },
     {
+      "path": "experiments/tfpt-discovery/dirichlet_matched_frame_probe.py",
+      "role": "sealed_probe",
+      "round": "r357",
+      "ledger_ids": [],
+      "status": "GRH-faithful matched Dirichlet frame round (round 357, the reviewer rank-2 fork after the r355 substance condition -- the missing second arithmetic demanded by both lanes since r338-U5; contract PRIME.WORLD.DIRICHLET_MATCHED_FRAME.01, experiments-side, NO ledger row): 33/33 sealed; SPEC_SHA 4bf1a94b03c7d227 final with record, freeze 4be4777fd6ec5bdf, two-commit protocol: pre-freeze 1381f6ea / record a953ab29; ONE disclosed calibration amendment a1 (the r330-a1 representation lesson exactly: the r329 counting constants ARE the frame-A ladder maxima kz16/kz36, re-frozen live at full precision, anchor-gated at 5e-4; no adjudication rule moved).  THE FRAME DERIVATION (Leg 0, sealed): for chi mod q odd (a = 1) the completed Lambda(s, chi) = (q/pi)^((s+a)/2) Gamma((s+a)/2) L(s, chi) gives the matched arch density F_A^chi(xi) = -log(pi/q) + Re psi((1+2a)/4 + i xi/2); in lag space this is EXACTLY the document arch_A body with kernel e^{-w/2} -> e^{-(1/2+a)w} and constant -(gamma+log pi) -> -(gamma+log(pi/q)) (Gauss digamma integral gated 0.0 at a = 1; trivial frame a = 0, q = 1 reproduces zeta's arch/prime/build/terminal layers BITWISE; matched border companion = smooth comb through the SAME chi arch; chi mod 3 comb == the r330 DSW comb bitwise).  MAIN VERDICT SECOND_ARITHMETIC_LIVES + MECHANISMS_TRANSFER(TWO_ATOM, DET_COND, DICT) + K2_CENSUS + DICTIONARY_TRANSFERS + PHI_CENSUS + R330_READJUDICATION + CHI4_LEDGER(ALIVE) + CONTROL_LEDGER + CONVENTION_LEDGER: (1) THE WALL LIVES ON THE MATCHED FRAME -- THE r330 DEATH WAS A FRAME ARTIFACT: chi mod 3 holds the E-Gram wall on 42/42 windows (margins 8.10e-6..3.34e-3 ALL positive, minC None to the window depth) AND the terminal half-filling wall (nf None 42/42 -- the SAME comb that died at nf 24 through the unmatched frame, baseline-gated); chi mod 4 identical (42/42 + 42/42): living-world evidence n = 1 -> 3 arithmetics on 126 windows; (2) the verbatim r330 battery re-adjudication (identical class rules, identical live-frozen C_2 = 1.069434): ALL FOUR r330 splits RETYPED_FRAME_ARTIFACT -- HALF_FILLING CTRL->MAIN, RENYI3_C2 CTRL(32/42, max 27.6x)->MAIN(0/42), SIGMA_DECAY SPLIT(+0.793)->MAIN(-0.578), O_SIGN CTRL->MAIN(O<0 on 20/42); battery 7/7 MAIN-side, status ALIVE for both characters; (3) PINNING FINE STRUCTURE (fresh coordinate): MAIN pins at minC_ext == N_w+1 exactly; the chi worlds are NEAR-pinned (offsets 0..9, chi3 med 1.5, exactly pinned 8/42) -- the exact half-filling pinning is so far zeta's sharpest signature, census; (4) K2 SPLITS: the frozen C_2 = 11.87 holds 0/126 (MAIN max FABg 6.95 / chi3 4.73 / chi4 5.16 -- the Klein-gap product is ARITHMETIC-ROBUST census, now 2 families + 3 aspects + 3 arithmetics) BUT the r329 counting constants BREAK on the second arithmetic (chi3 kz33 nscl +19 pct / kz14 ngl +28 pct, chi4 1 violation) -- the O(log m) counting side is ZETA-CALIBRATED census, sealed letter K2_CENSUS; (5) DICTIONARY_TRANSFERS: v_pred with the chi offset predicts the second arithmetic's nu weights at median 4e-4 / max 3.3e-3 over 42 rungs, density dictionary <= 7.5e-3 at the sample pair folds -- the r342 weight dictionary is explicit-formula-generic; (6) PHI DOES NOT TRANSFER (the honest negative): co-wander corr 0.9817 / rmsr 0.3187 = 3x suppression vs MAIN 439x on the identical instrument (clauses 0.99/0.2) -- the chi pair sits FAR from the binding point (r_det med 0.247 vs MAIN 1e-2..1e-6, PR med 1.26, two delocalized rungs): the 500x suppression is the signature of NEAR-CANCELLATION, which only zeta's world exhibits at these depths -- information about the BINDING REGIME, not the frame; (7) CONTROLS: rational twin of the chi comb carries (devs <= 7.9e-6); matched-frame SCRAMBLE breaks (E-margin -2.6e+2, minC 38/184, nf 37) -- the matched frame does NOT rescue a scrambled comb.  Must-fails: m1 conductor dropped -> density shift == log 3 EXACT (3.8e-15); m2 wrong parity -> 0.24 >= 0.2 loud; m3 permuted character table CAUGHT at the named witnesses; m4 MAIN-arch dictionary -> 4.43 >= 0.5 loud; m5 C_2 recalibration protocol-CAUGHT twice (AST fabg_true + toy 3.0 != 1.0); m6 MAIN blend AST-FLAGGED.  Deterministic run1/run2 byte-identical up to WALL (20.1 s).  READING: wall, battery, two-atom mechanisms, determinant condition, weight dictionary and the K2 gap product are EXPLICIT-FORMULA-GENERIC; zeta-graded remain the exact pinning, the near-saturated reserve, the 500x phi suppression and the counting constants -- the L* margin legislation is a statement about how CLOSE zeta sits to the wall; the chi worlds obey the same law far from it.  NO RH CLAIM, NO GRH CLAIM in either direction",
+      "pin": true,
+      "sha256": "39c269fbc32b78b9b9185d6cdcc86a1665c9b6f0d073fa796a3380b743202736",
+      "bytes": 88907
+    },
+    {
       "path": "rh/problem/lstar_problem.tex",
       "role": "problem_statement",
       "round": "r283 companion",
@@ -1595,8 +1605,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "5cc18448cf0b900fe6901447672ce916bcde9c3f014f96365c9c5ec91d40e9d4",
-      "bytes": 5184914
+      "sha256": "adea058c9c28d1b4ffeca4afa891df0910c385fa31e4f41d7b48b8c2e8fe3712",
+      "bytes": 5186572
     }
   ]
 }

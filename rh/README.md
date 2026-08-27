@@ -4137,6 +4137,51 @@ Borodin's particle–hole duality), the anti-correlation is by
 design (duality algebra), the reserve localization as census —
 the lane is finally at the memo.
 
+**The GRH-faithful matched Dirichlet frame (r357, the reviewer
+rank-2 fork — the missing second arithmetic, r338-Ü5 executed).**
+`dirichlet_matched_frame_probe.py` (33/33, SPEC_SHA
+`4bf1a94b03c7d227` final with record, freeze `4be4777fd6ec5bdf`,
+two-commit protocol: pre-freeze `1381f6ea`, record `a953ab29`; one
+disclosed calibration amendment a1 — the r330-a1 representation
+lesson on the r329 counting literals, no adjudication rule moved)
+built the matched Dirichlet window: from Λ(s,χ) =
+(q/π)^((s+a)/2) Γ((s+a)/2) L(s,χ) the arch density F_A^χ(ξ) =
+−log(π/q) + Re ψ((1+2a)/4 + iξ/2) — in lag space EXACTLY the
+document arch body with kernel e^(−w/2) → e^(−(1/2+a)w) and
+constant −(γ+log π) → −(γ+log(π/q)); trivial frame (a = 0, q = 1)
+reproduces zeta's layers BITWISE; matched border companion; χ mod
+3 primary (the r330 comb bitwise), χ mod 4 census.  **Verdict
+`SECOND_ARITHMETIC_LIVES` + `MECHANISMS_TRANSFER(TWO_ATOM,
+DET_COND, DICT)` + `K2_CENSUS` + `DICTIONARY_TRANSFERS` +
+`PHI_CENSUS`:** (1) **the r330 death was a FRAME ARTIFACT** — on
+the matched frame the χ mod 3 world holds the E-Gram wall on
+42/42 windows (margins 8.1e−6..3.3e−3 all positive, minC None)
+AND the terminal half-filling wall (nf None 42/42 — the same comb
+that died at nf 24 unmatched, baseline-gated); χ mod 4 identical:
+the living-world evidence moves from n = 1 to n = 3 arithmetics
+on 126 windows; (2) the **verbatim r330 battery re-adjudication**
+retypes ALL FOUR r330 splits as frame artifacts (HALF_FILLING,
+RENYI3_C2 32/42→0/42, SIGMA_DECAY +0.79→−0.578, O_SIGN — battery
+7/7 MAIN-side, both characters ALIVE); (3) **pinning fine
+structure** (fresh coordinate): MAIN pins at minC_ext == N_w+1
+exactly, the χ worlds are near-pinned (offsets 0..9, med 1.5) —
+the exact pinning is so far zeta's sharpest signature; (4) **K2
+splits**: the frozen C₂ = 11.87 holds 0/126 (the Klein-gap
+product is arithmetic-robust census — 2 families + 3 aspects + 3
+arithmetics) but the r329 counting constants BREAK on the second
+arithmetic (up to +28 pct) — the O(log m) counting side is
+zeta-calibrated census; (5) **the r342 weight dictionary
+transfers** with the χ offset (median 4e−4 over 42 rungs); (6)
+**φ does NOT transfer** (honest negative): co-wander suppression
+3× vs MAIN 439× on the identical instrument — the χ pair sits far
+from the binding point (r_det med 0.247): the 500× suppression is
+the signature of near-cancellation, which only zeta exhibits at
+these depths — information about the binding regime, not the
+frame; (7) controls: rational χ twin carries (7.9e−6),
+matched-frame scramble breaks.  Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM, NO GRH CLAIM (GRH motivates the
+candidate, used nowhere).
+
 ## Folder guide
 
 ```

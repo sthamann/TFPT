@@ -148,6 +148,7 @@ PROBES = [
     ("r354", "phi_wander_anatomy_probe.py"),
     ("r355", "k2_source_formula_probe.py"),
     ("r356", "borodin_dual_hole_probe.py"),
+    ("r357", "dirichlet_matched_frame_probe.py"),
 ]
 
 MODULES = [
