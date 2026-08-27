@@ -366,7 +366,15 @@ the renormalised diagonal vanishes \emph{exactly} at the KMS seam circumference
 determinant resums closed-form ($\det(I-uC)=(1-4u)(1+2u)^2$, $u=\varepsilon c_3\ln2$; BFK route,
 \vref{v151}), and the $48$/$41$ multiplicities are \emph{one} state set under two response weights (flat
 vs $Y^2$/Ginsparg). The merged target's remaining \mO\ is the abstract-seam $\zeta$-det identification
---- a face of \texttt{SEAM.EQUIV.01} alone.
+--- a face of \texttt{SEAM.EQUIV.01} alone. \mE\ That face is meanwhile \emph{executed} on the zeta side
+(\veri{v974\_alpha\_faces\_computed.py}): the BFK Mayer--Vietoris formula runs on the seam circle cut at
+the four $\mu_4$ marks (gluing constant exactly $2^{-N}$, $\det\nolimits'_\zeta(\Delta_{S^1})=\ell^2$,
+jump matrix $=$ the inverse mark Green matrix), and at $\ell=2\pi=1/(4c_3)$ it reproduces the \vref{v485}
+diagonal/scale channel exactly --- but against the \vref{v484} mark matrix there is \emph{no} global
+proportionality: the two kernels sit in \emph{swapped} $\mu_4$ channels (gauge zero mode vs.\ sign rep),
+channel-wise exactly matched (same $\mu_4$ Fourier eigenbasis, $|\mathrm{spec}|$ multisets $\{0,2,2,4\}$,
+doublet ratio $4/\ln2$ with $c_3$ cancelling). The remaining \mO\ is thereby \emph{sharpened}, not
+closed: the channel-swap question plus the abstract-seam identification.
 
 \par\smallskip\noindent\textbf{Static vs.\ dynamic rates: a number-field split}
 (\veri{v314\_rate\_translation.py}). The discrete kernel and the dynamic recovery sit in \emph{different number
@@ -765,6 +773,21 @@ a free ratio $r\neq(2/3)^6$ breaks it. ``Finite recoverability code'' is the \mE
 (Page/Petz) reading --- the same $(2/3)^6$ that recovers horizon information across the seam --- is \mC,
 gated on the Seam--Horizon theorem (\S\ref{sec:crosslinks}).
 
+\noindent\textbf{What the classical transport does \emph{not} determine \mE\
+(\veri{v976\_seam\_lift\_birkhoff.py}, \veri{v977\_transfer\_unistochastic\_wilson.py}).}  The single-step
+root $B$ (with $B^6=T$) is \emph{unistochastic}: $B_{ij}=|U_{ij}|^2$ for an exact $U\in SU(3)$, unique up
+to rephasing and complex conjugation.  The same classical matrix therefore carries at least three
+inequivalent quantum readings --- the deployed Kraus dilation $K_{ij}=\sqrt{T_{ij}}|i\rangle\langle j|$,
+which is provably \emph{entanglement breaking} (measure-and-prepare: the microstate record lives entirely
+in the environment, quantum capacity $0$); the one-parameter Birkhoff family of random-permutation
+quantizations, whose hidden circulation coordinate $t\in[0,1/18]$ is invisible to every population
+measurement but is read off in one step by the triangle loop-current observable ($\Psi_t(A)=6t\,A$
+exactly); and the fully reversible lift $U$, whose classically invisible datum is the orientation bit
+$\operatorname{sgn}J=\pm$ of the exact Jarlskog invariant $J=\pm1/27$.  The recoverability-code reading
+above is untouched; what is added is the honest boundary: populations alone cannot decide whether the seam
+is a classical relaxation channel or the measurement shadow of a coherent system --- that selection is the
+open dilation contract (\texttt{DYN.UNITARY.DILATION.01}, the research-contracts document).
+
 \begin{keybox}[If the seam is a horizon: four completion routes, and where they converge \mE/\mC/\mO\ (\veri{v343\_four\_routes\_analysis.py})]
 Taking the black-hole-birth reading seriously changes the \emph{nature} of the two structural residuals, and
 suggests four completion routes. \emph{Honest finding}: none closes everything or is provable alone --- they
@@ -996,8 +1019,13 @@ horizon entropy is the carrier Clifford dimension times $\pi^{\text{glue}}$ time
 \section{Interpretation \mC: the self-reproducing cosmic cycle}\label{sec:cycle}
 % =====================================================================
 \par\smallskip\noindent\textbf{This entire section is a physical interpretation \mC\ --- not derived.}
-What follows is \emph{not} machine-checkable and \emph{not} a consequence of the axioms. It is offered
-because it supplies a physical \emph{selection mechanism} for the structural fixed point of
+The cyclic \emph{reading} is \emph{not} a consequence of the axioms.  Its \emph{kinematics}, however, are
+now machine-checked \mE\ (\veri{v957\_ccc\_crossover\_kinematics.py}, \texttt{CCC.SEAM.KINEMATICS.01}:
+the reciprocal gauge inside $D_4$, the lens crossover $S^3/\Z_4$ over the seam sphere, the
+conformal-factor rigidity, the reduced-channel entropy reset); what stays interpretation is the
+\emph{physical identification} of that structure with cosmic self-reproduction, and what stays open is
+the crossover \emph{dynamics} (\texttt{CCC.SEAM.CROSSOVER.01}, research contract).  The reading is
+offered because it supplies a physical \emph{selection mechanism} for the structural fixed point of
 \S\ref{sec:attractor}, and because every ingredient it uses is one of the exact facts above.
 \par\smallskip
 
@@ -1041,8 +1069,16 @@ Page recovery rate $(2/3)^6$ is the \emph{same} boundary transport that builds t
 gapped transport projects onto the rank-$1$ leading eigenspace --- the bulk microstate entropy is
 contracted away and only the low-entropy boundary law is passed on (\S\ref{sec:attractor}). The reset
 \emph{is} the spectral gap.
-\item[\textnormal{Penrose CCC.}] The $\Lambda$-dominated far future is asymptotically de Sitter, hence
-conformally flat --- the conformal-rescaling condition for a CCC-type bounce.
+\item[\textnormal{Penrose CCC.}] Positive $\Lambda$ makes the far future asymptotically de Sitter,
+which supplies a \emph{spacelike conformal future} --- the stage for a CCC-type bounce.  (Sharpened:
+asymptotic de Sitter does \emph{not} by itself give conformal flatness --- Schwarzschild--de Sitter has
+$C^2=48M^2/r^6\neq0$ at every finite $r$, machine-checked in \veri{v957\_ccc\_crossover\_kinematics.py};
+the CCC smoothness/Weyl conditions are additional crossover data, not a consequence of the asymptotics.)
+The crossover \emph{kinematics} --- Penrose's reciprocal gauge $\hat\Omega\check\Omega=-1$ as the
+$D_4$ element $z\mapsto-1/z$, the lens crossover $S^3/\Z_4$ over the seam sphere, the conformal-factor
+rigidity and the reduced-channel entropy reset --- are certified \mE\ in
+\veri{v957\_ccc\_crossover\_kinematics.py} (\texttt{CCC.SEAM.KINEMATICS.01}); the dynamical crossover is
+the research contract \texttt{CCC.SEAM.CROSSOVER.01}, and this cyclic reading itself stays \mC.
 \item[\textnormal{CPT / Möbius.}] The $\Z_2$ sheet parity is the orientation flip of a two-sided
 (thermofield-double) horizon, compatible with CPT-symmetric bounce cosmologies.
 \item[\textnormal{Selection.}] The realized constants are the unique attractor of the cycle map; the
@@ -1455,7 +1491,7 @@ self-consistency, made precise as Perron--Frobenius on the boundary operator.
 
 \noindent\emph{References for the reframed standard results:} Jacobson, \textit{Thermodynamics of Spacetime}
 (1995); Hod (1998) and Motl (2003) for the asymptotic Schwarzschild quasinormal $\ln3$; Page (1993) for the
-recovery curve; Penrose (CCC) for the conformal far-future bounce.
+recovery curve; Penrose (CCC) for the conformal far-future bounce (kinematics certified in \veri{v957\_ccc\_crossover\_kinematics.py}; asymptotic de Sitter alone does not give conformal flatness --- the Weyl data are additional crossover conditions).
 
 % =====================================================================
 \section{A closure program (next phase) \mO}\label{sec:program}

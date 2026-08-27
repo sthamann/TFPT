@@ -129,7 +129,9 @@ $\Theta_{\mathrm{phys}}$ carrier), the thermal seam
 (\vref{v528}) and the first firing interacting kill test under its typed fence (\vref{v529}) ---
 whose straddle filter, since run as a \emph{selector}, keeps exactly \emph{one} member alive:
 reflection positivity dynamically selects the alignment bit $\delta=\pi/2$ with positive coupling
-(\vref{v534}, toy level).
+(\vref{v534}, toy level); the straddle law is since refined to the \emph{odd-split law} (a
+straddled cut kills RP iff its quartet split is odd; the quartet-avoiding cut family OS-viable
+at $g=1$ --- \vref{v972}, toy level, fence inherited).
 \texttt{SEAM.EQUIV.01} and \texttt{WOIT.OS.TWISTOR.01} stay \mO; no marker moves.
 \end{keybox}
 
@@ -8960,7 +8962,12 @@ Machine-checked: \veri{v883\_tau\_chain\_parametrix.py}.
 \mE\ (the determinant and variational identities --- exact) $+$
 (\textsc{measured}) (the parametrix and zone censuses, the
 $\kappa/\rho$ readout) $+$ \mO\ (the symbolic IIKS tau theorem
---- the demand)
+--- the demand; since executed at the finite-identity level,
+\texttt{PRIME.PORT.TAU.FINITE.IIKS.01} [E] via
+\veri{v955\_tau\_iiks\_toda\_dictionary.py}, with the sign
+question refined to \texttt{PRIME.PORT.TAU.NOPOLE.COFINAL.01}
+[O]; the umbrella stays [O] for the fully symbolic
+arbitrary-$h$ statement)
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The certified head
@@ -9023,7 +9030,11 @@ Machine-checked: \veri{v885\_ladder\_flow\_anatomy.py}.
 \mE\ (the integrated tau-transfer identity, the per-atom
 linearity and endpoint wards --- exact) $+$ (\textsc{measured})
 (the flow closure, the ladder and insertion censuses) $+$ \mO\
-(the conditioned flow coordinate --- the named open object)
+(the conditioned flow coordinate --- the named open object;
+since adjudicated \textsc{lax1-h-exact} in round 225: the true
+minimal degree in the closing direction is one, and the closing
+direction is $h$, not $s$ ---
+\veri{v955\_tau\_iiks\_toda\_dictionary.py})
 \par\smallskip
 
 \par\smallskip\noindent\textbf{The gapcode disenchantment
@@ -9535,6 +9546,12 @@ negatives: `$t = 1/8$ is a compiler value' is a decoration
 (\textsc{pin-absent}; allowed set unbounded); `$N_{\rm fam} = 3$
 as minimal mediation rank' is refuted (rank $1$ suffices;
 deployed rank exactly $2$; purity $=$ dimension bookkeeping).
+The RP-vs-mixing exclusivity is since typed \emph{ray- and
+reflection-relative}: on the full $33$-dimensional covariant
+mixing census $\theta_{ab\mathsf T}$ kills exactly one
+coordinate while $\theta_S$ leaves a $17$-dimensional neutral
+subspace with strict witnesses
+(\veri{v972\_seam\_interaction\_front.py}, toy level).
 No marker move, no RH claim.
 Machine-checked: \veri{v903\_seam\_rp\_exclusion.py}.
 \mE\ (the $\pm|a_J|$, Schur, Pfaffian and Sturm identities ---
@@ -11684,6 +11701,96 @@ typed measured) $+$ \mO\ (Object-A --- open, function-space,
 typed)
 \par\smallskip
 
+\par\smallskip\noindent\textbf{The finite integrable dictionary
+(\texttt{PRIME.\allowbreak PORT.\allowbreak TAU.\allowbreak
+FINITE.\allowbreak IIKS.01}).}
+One module from three frozen probes (rounds 224--226, $18/18 +
+15/15 + 17/17$ first pass, embedded byte-exact).  \textbf{The tau
+identification executed} (\textsc{tau-iiks-exact}): the wall
+determinant is the exact IIKS Fredholm tau function at the
+finite-identity level --- Sylvester as a full characteristic
+identity on the whole $s$-grid, the $s$-dressed Schur family
+$\det(I - sE) = \det(I - sR)\det(I - s\,D_P(s))$ exact (the
+fixed-kernel alias named and blocked), the confluent diagonal
+($\le 3.2\times10^{-13}$), the IIKS dressing identity
+($\le 7.9\times10^{-13}$) with the dressed port generators
+source-explicit in closed form, the Fredholm/JMU variational
+identity in two independent times, the relative tau transfer
+exact over $-212.84/-195.50$ log-unit collapses.  \textbf{The Lax
+degree adjudicated} (\textsc{lax1-h-exact}): the $h$-step exactly
+rank one, the degree-1 source-chain connection blind-predictive
+($3.4\times10^{-16}$ / $3.2\times10^{-11}$), zero curvature
+identically world-blind; the $s$-time has no fixed degree and
+across rungs no common carrier --- typed.  \textbf{The Toda
+dictionary} (\textsc{hirota-toda-exact} $+$
+\textsc{wall-equivalent}): $\tau_{w,n} = D_n(\mu - \nu)/D_n(\mu)$,
+$r_n = h_n(\mu - \nu)/h_n(\mu)$, the Hirota coefficient
+source-pure from a scaled signed Stieltjes recursion; its
+positivity $\iff$ quasi-definiteness of the signed defect
+measure $\mu - \nu$ $\iff$ the wall (the explicit
+\textsc{signed-toda} $X - Y$ structure); MAIN carries all $184$
+$r_n > 0$, the controls flip at $n = 25/21/27$.  The claim
+splitting of note DLI carried: the sign question stands alone as
+\texttt{PRIME.PORT.TAU.NOPOLE.COFINAL.01} [O]; the
+\texttt{v883} umbrella \texttt{PRIME.PORT.TAU.01} stays [O] for
+the fully symbolic arbitrary-$h$ statement.  Not evidence for or
+against RH.
+Machine-checked: \veri{v955\_tau\_iiks\_toda\_dictionary.py}.
+\mE\ (the Sylvester/Schur/confluence/dressing/Fredholm/transfer
+identities, the rank-1 step and degree-1 connection, the Toda
+dictionary --- exact on the true builders, world-blind) $+$ \mC\
+(the sign/flip ladders and blind predictions, per record) $+$
+\mO\ (the tau sign $\tau_h(1) > 0$ cofinal --- open, typed)
+\par\smallskip
+
+\par\smallskip\noindent\textbf{The half-filling geometry
+(\texttt{PRIME.\allowbreak FREEMOMENT.\allowbreak JFRACTION.01}
+$+$ \texttt{PRIME.\allowbreak JACOBI.\allowbreak DUAL.\allowbreak
+REVERSAL.01}).}
+One module from four frozen probes (rounds 228--231, $14/14 +
+17/17 + 17/17 + 13/13$ first pass, embedded byte-exact).
+\textbf{The half-filling law}: $N_w = \lceil
+\#\mathrm{supp}(\tilde\mu)/2 \rceil$ exact on all five windows
+--- the window cap is the half-filling of the union support, and
+past the cap the wall dies immediately (first $r$-flip at $N_w +
+0/2/2/3/1$, $O(1)$ offsets): $\mu - \nu$ is quasi-definite
+exactly up to half-filling --- \emph{the wall is maximal}; the
+complement identity and $h$-duality exact at dps 80.  \textbf{The
+free moment window law}: both signature predictions refuted; the
+largest Hankel window inside the $S$ free moments is $n = (S+1)/2
+= N_w$ --- MAIN exhausts the \emph{entire} free moment window
+while the controls die at $11$--$15\%$ of it; the inertia theorem
+exact in all parts; at window degree the wall family is the same
+evaluation contractor with $\lambda_{\max}(Q_{N_w}) < 1$
+(\textsc{same-contractor-exact} --- the \texttt{v881} testing law
+closes the circle).  \textbf{The four-path dictionary}: moment
+prefix $=$ Jacobi chain $=$ Euclidean chain $=$ value chain
+(exact in rationals; the offsets are forced-coupling survival
+counts; Epstein's first wrong Euclidean pivot exactly at its flip
+$n = 25$).  \textbf{The reversal and the connection theorem}: the
+dual signed measure carries the mirrored Jacobi chain
+($\alpha^{\#}_m = \alpha_{S-1-m}$, $\beta^{\#}_m = \beta_{S-m}$)
+but is not a builder transformation
+(\textsc{no-source-reversal}); the dual FIK problem is an
+explicit $L$-gauge transform of the original, $Y^{\#}_{N-1+l} =
+J\,Y_{N-1-l+1}\,W$ with $W = \mathrm{antidiag}(1/L, L)$, built
+from the node polynomial alone (exact in rationals; real w9 at
+$9.1\times10^{-94}$, dps 100); the gauge is $h$-free, so the
+wall's orientation sits exclusively in the $h$-chain it does not
+see (\textsc{signed-stokes-wall-equivalent}); the micro falsifier
+frozen (predict $0/2/2/3/1$ and $25/21/27$ blind).  The claim
+splitting of note DLVII carried: the wall itself stands alone as
+\texttt{PRIME.FREEMOMENT.POSITIVEPREFIX.01} [O].  Not evidence
+for or against RH.
+Machine-checked: \veri{v956\_signedmoment\_halffilling\_duality.py}.
+\mE\ (the half-filling law, the complement/h-duality, the inertia
+theorem, the four-path dictionary, the chain reversal and the
+$L$-gauge connection --- exact in rationals and mp) $+$ \mC\ (the
+census, offset, contractor and world ladders, per record) $+$
+\mO\ ($\beta_n > 0$ through the free window --- the wall itself,
+open, typed)
+\par\smallskip
+
 \par\smallskip\noindent\textbf{The Reed--Muller identification
 (\texttt{PRIME.PACKET.RM14.01}).}
 One probe ($21/21$ incl.\ the $3$ must-fire controls; verdict
@@ -12377,7 +12484,8 @@ milestones M1--M3, the measure decision (Step 21) and the constructive $w_m$ der
 \texttt{CELEST.SEAM.01}, plus the RP-blindness decision on the alignment bit (Step 22) with its
 twist-state completion (Step 26) with its twist-class definition (Step 29)
 and the interacting FK-toy scoreboard extension (Step 30) with the straddle-cone
-selection law (Step 31), the thermal-seam
+selection law (Step 31, since refined to the odd-split law --- the refinement note after
+Step 31), the thermal-seam
 third leg of $c_3$ (Step 27) with the silver-eigenvalue demystification (Step 28), and the
 $\alpha$, $\beta_1$, $\beta_2$ and $\beta_3$ stages of the OS twistor bridge
 \texttt{WOIT.OS.TWISTOR.01} (Steps 20, 23, 25 and 32), whose
@@ -13220,7 +13328,8 @@ ground state for every $g>0$ --- inertia ladder $(37,0,0)\to(33,4,0)\to(31,6,0)\
 carries the same ladder; the mechanism is interference (neither crossing nor half-local
 terms alone break); the STRADDLE LAW holds on all $24$ entries --- RP fails exactly on
 quartet-straddled cuts and stays PD on quartet-avoiding ones (the $24$ entries cover
-\emph{asymmetric} straddles only --- refined in Step 31). Mandatory fence: one toy,
+\emph{asymmetric} straddles only --- refined in Step 31, since typed as the \emph{odd-split
+law} in the refinement note below). Mandatory fence: one toy,
 one interaction class, \mC\ flat-band parent --- this \emph{narrows} the Woit route
 (every $\mathcal A_{\mathrm{hol}}$ must protect RP against exactly this mechanism; the
 straddle law is a concrete hurdle for $\beta_3/\gamma$), it does \emph{not} close it;
@@ -13262,6 +13371,28 @@ one toy, one interaction class, \mC\ flat-band parent, $\deg\le2$ OS bases --- t
 \emph{evidence for} the bit's dynamical origin, not a derivation; \texttt{WOIT.OS.TWISTOR.01}
 stays \mO. No marker moves.
 \veri{v534\_seam\_straddle\_cone.py}
+
+\par\smallskip\noindent\textbf{Steps 30/31 refined --- the odd-split law: the mechanism made
+decidable, and the Kill-Test-2 counterweight narrowed \mE/\mC.} The seam interaction front of
+2026-08-27 upgrades the straddle law to a decidable criterion. \emph{(i) The odd-split law:}
+the Jaffe--Pedrocchi sufficient condition for Majorana reflection positivity
+(Jaffe--Pedrocchi \texttt{arXiv:1406.1384}; Wei--Li--Xiang \texttt{arXiv:1601.01994}), made
+decidable on the toy, predicted RP survival on \emph{center}-straddled cuts ($2{+}2$ mirror
+split; the $m=4$ model on the clock axes $7/15$) and direct measurement confirmed it
+($(37,0,0)$ at $g=0.5/1/2$): a straddled cut kills RP iff its quartet split is \emph{odd}
+($1{+}3$). The JP-certified vs measured RP confusion matrix over all $35$ cells is perfect
+($23/12/0/0$); the $\mu_4$-covariant quartic interaction space (dimension $464$) contains
+\emph{no} direction JP-certifiable on all cuts --- the threat stays generic. \emph{(ii) OS
+viability on the avoiding family:} the quartet-avoiding cut family of the clock-invariant
+$m=4$ member generates the \emph{full} even seam algebra (rank $15$, dimension $32768$) and
+carries a \emph{positive} OS/GNS inner product at $g=1$ (minimum $+4.4338\times10^{-5}$, GNS
+$37/37$, spectrum deforming continuously from $g=0$) while the straddled control genuinely
+fails ($-6.936\times10^{-2}$); the $\mu_4$ clock maps the avoiding pair $\{3,11\}$ onto itself
+exactly. Reading: the Kill-Test-2 counterweight is \emph{narrowed} --- the toy exhibits an
+OS-viable cut geometry selected by its own clock --- \emph{not} removed. All toy-level \mE;
+fence inherited (one toy, one interaction class, \mC\ flat-band parent);
+\texttt{WOIT.OS.TWISTOR.01} stays \mO. No marker moves.
+\veri{v972\_seam\_interaction\_front.py}
 
 \par\smallskip\noindent\textbf{Step 32 --- the $\mathbb{PT}\leftrightarrow\mathbb{PT}^*$
 duality typed: the OS cut and the $(2,2)$ signature are forced, and the kill branch is empty

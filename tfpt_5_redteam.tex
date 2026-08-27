@@ -235,7 +235,9 @@ Seeley--DeWitt \emph{truncation} of the seam KMS form factor: the entire factor 
 only pole at $p^2{=}0$ (\vref{v304}), the spin-2 sector is ghost-free via the Barnes--Rivers decomposition
 (\vref{v370}), and the nearest truncation-zero modulus runs to infinity (\vref{v380}), so \emph{perturbative}
 graviton unitarity is established and the ghost is exactly the truncation. The matter$+$gauge $S_{\mathrm{pert}}$ is
-unitary outright, and now closes \emph{to all orders} as a typed Epstein--Glaser/BRST contract
+unitary outright, and now closes \emph{to all orders} as a typed Epstein--Glaser/BRST contract --- read strictly
+as a \emph{local perturbative construction under the stated EG/BRST hypotheses}; no confinement, mass gap,
+asymptotic charged states or full S-matrix follows (\texttt{QFT4D.OS.RECON.01} in \texttt{tfpt\_research\_contracts})
 (\vref{v381}, \texttt{QFT4D.EG.ALLORDER.01}): dimension-4 power-counting $\Rightarrow$ a finite counterterm space,
 BRST nilpotency $s^2{=}0$ for $su(3){\times}su(2)$ (Jacobi), and the seam gap $\Rightarrow$ the adiabatic limit,
 with the imported all-order $T_n$ existence (causal factorisation) and Slavnov--Taylor identity; the
@@ -340,7 +342,7 @@ $(37,0,0)\to(33,4,0)\to(31,6,0)\to(29,8,0)$, Gibbs state at $\beta=2$ the same l
 \emph{interference} (neither crossing nor half-local terms alone break) --- and the failure
 pattern is a law, not noise: on all $24$ tested entries \textbf{RP fails exactly on
 quartet-straddled cuts and stays positive definite on quartet-avoiding ones} (the
-\emph{straddle law}). This is the honest reading of ``first live ammunition'': every previous
+\emph{straddle law}; since refined to the \emph{odd-split law} --- below). This is the honest reading of ``first live ammunition'': every previous
 red-team round ended in survives/narrowed; here an interacting mechanism actually breaks a
 load-bearing structure --- at toy level, under the mandatory fence (one toy, one interaction
 class, \mC\ flat-band parent). The same law is the first \emph{hard selection principle} for the
@@ -361,6 +363,25 @@ nonperturbative). The filter is not merely a threat: it is a working selection p
 unique survivor is the alignment bit --- the same member that carries the twist-class order
 parameter $O=\tfrac12$. Same fence (one toy, one interaction class, \mC\ flat-band parent).
 \veri{v534\_seam\_straddle\_cone.py}
+
+\smallskip\noindent\emph{The law typed, the counterweight narrowed (v972).} The refinement is now a
+\emph{decidable criterion}: the Jaffe--Pedrocchi sufficient condition for Majorana reflection
+positivity (\texttt{arXiv:1406.1384}; Wei--Li--Xiang \texttt{arXiv:1601.01994}), made decidable on
+the toy, predicted RP survival on \emph{center}-straddled cuts ($2{+}2$ mirror split; the $m=4$
+model on the clock axes $7/15$) and direct measurement confirmed it ($(37,0,0)$ at $g=0.5/1/2$) ---
+a straddled cut kills RP iff its quartet split is \emph{odd} ($1{+}3$): the straddle law refines to
+the \emph{odd-split law}. The JP-certified vs measured RP confusion matrix over all $35$ cells is
+perfect ($23/12/0/0$), and the $\mu_4$-covariant quartic interaction space (dimension $464$)
+contains \emph{no} direction JP-certifiable on all cuts --- the threat stays generic. On the
+counterweight side, the quartet-avoiding cut family of the clock-invariant $m=4$ member generates
+the \emph{full} even seam algebra (rank $15$, dimension $32768$) and carries a \emph{positive}
+OS/GNS inner product at $g=1$ (minimum $+4.4\times10^{-5}$, GNS $37/37$, spectrum deforming
+continuously from $g=0$) while the straddled control genuinely fails ($-6.9\times10^{-2}$); the
+$\mu_4$ clock maps the avoiding pair $\{3,11\}$ onto itself exactly. Reading: the Kill-Test-2
+counterweight is \emph{narrowed} --- the toy exhibits an OS-viable cut geometry selected by its own
+clock --- \emph{not} removed. All toy-level \mE; same fence (one toy, one interaction class, \mC\
+flat-band parent); \texttt{WOIT.OS.TWISTOR.01} stays \mO.
+\veri{v972\_seam\_interaction\_front.py}
 \end{gapbox}
 
 \noindent\textbf{Verdict.} \textsc{Survives (narrowed)} for the bit claim: ten side-blind kills
@@ -372,7 +393,10 @@ the nonsplit $\Z_8$ tower and the OS quotient surviving $g>0$ constructively), w
 interacting straddle threat is the named residual risk of the whole Woit route ---
 \texttt{WOIT.OS.TWISTOR.01} stays \mO, and any future $\mathcal A_{\mathrm{hol}}$ that cannot
 pass the straddle filter is dead on arrival --- while the filter's own execution (\vref{v534})
-shows a passing class \emph{exists} and is unique: the $\delta=\pi/2$ member. Residual: the
+shows a passing class \emph{exists} and is unique: the $\delta=\pi/2$ member, and the odd-split
+round (\vref{v972}) both types the mechanism (Jaffe--Pedrocchi positivity, decidable per cut) and
+exhibits an OS-viable avoiding-cut geometry selected by the toy's own clock --- the Kill-Test-2
+counterweight narrowed, not removed. Residual: the
 $\beta_3/\gamma$ stages under the straddle constraint; the bit's derivation (if any) must come
 from outside the exhausted side-blind classes --- the RP-selection route (demand reflection
 positivity, obtain the bit) is now the named candidate, toy-fenced.

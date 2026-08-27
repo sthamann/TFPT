@@ -112,9 +112,11 @@ gravity, the all-orders perturbative leg, the `SEAM.EQUIV.01` status) is in
 
 ## How to falsify TFPT
 
-The predictions are frozen **before** the data ([`predictions_frozen.json`](verification/predictions_frozen.json),
-2026-06-09) and locked to their formulas on every run. A confirmed measurement outside a window
-kills the claim:
+The predictions are frozen ([`predictions_frozen.json`](verification/predictions_frozen.json),
+2026-06-09) and locked to their formulas on every run — the freeze protects **future**
+measurements; for historically known observables the honest statistics caveat is in
+[`docs/FALSIFICATION.md`](docs/FALSIFICATION.md) (contract `PRED.JOINTLIKELIHOOD.01`). A
+confirmed measurement outside a window kills the claim:
 
 | Observable | TFPT frozen value | Decided by |
 |---|---|---|
@@ -122,7 +124,8 @@ kills the claim:
 | Cosmic birefringence | `β ≈ 0.2424°` | CMB polarimetry |
 | Reactor angle | `sin²θ₁₃ = 0.02311` *(now ~2.0σ tension)* | JUNO |
 
-All kill tests, the null model (200,000 look-alikes score ≤ 5/13; TFPT 13/13), and the live
+All kill tests, the null model (200,000 look-alikes score ≤ 5/13; TFPT 13/13 — under its
+declared null model; see the statistics caveat there), and the live
 scorecard: [`docs/FALSIFICATION.md`](docs/FALSIFICATION.md) ·
 [fixpoint-theory.com/falsification](https://www.fixpoint-theory.com/falsification).
 
@@ -153,9 +156,11 @@ just an archive.
 ├── README.md              # you are here
 ├── docs/                  # THEORY · CLAIMS · OPEN_PROBLEMS · FALSIFICATION
 │                          # VERIFICATION · FOR_PHYSICISTS · FOR_MATHEMATICIANS
-├── verification/          # 947 machine-checked modules, run_all.py, the status ledger,
+├── verification/          # 975 machine-checked modules, run_all.py, the status ledger,
 │                          # the Wolfram second path, the red-team layer
 ├── experiments/           # research explorations + the Lean 4 proofs (not claims until promoted)
+├── rh/                    # the consolidated RH-program workspace (inventory, Lean pilot, paper,
+│                          # run_rh.py suite — gated by build.sh audit; no RH claim)
 ├── website/               # the public mirror (fixpoint-theory.com), kept byte-identical by the audit
 ├── *.tex                  # the 9 active theory documents (see docs/THEORY.md)
 └── build.sh               # the build + sync pipeline (notes · gen · website · audit · release)

@@ -23,14 +23,26 @@ extension, `(D₅)₁⊗(A₃)₁ ⋊ ⟨(1,1)⟩ ≅ (E₈)₁` (index 4, c = 8
 
 ## Deep dive — parameter-free gravity, the all-orders perturbative leg, and `SEAM.EQUIV.01`
 
-**Gravity is parameter-free.** The classical metric-sector field equation is no longer only an `R+R²`
-readout. The entanglement first law `δS = δ⟨K⟩` (Jacobson; Faulkner et al.), run with TFPT's atoms,
-gives the **full covariant** Einstein equation `G_ab + Λ g_ab = c₃⁻¹ T_ab` with **both** coefficients
-fixed — `c₃⁻¹ = 8π` (no free dimensionless Newton dial; the thermodynamic origin `2π/η` *coincides*
-with the geometric one `|Z₂|·2π·χ` via `|μ₄| = |Z₂|·χ(S²) = 4`, so `c₃` is triply over-determined —
-anchor, geometry, thermodynamics, `v358`/`v359`) and `Λ` from `α` (`ρ_Λ = (3/4π²)e^{−2α⁻¹}`, `v60`);
-the Einstein tensor (not Ricci) is forced by Lovelock, so matter conservation is an output (`v359`).
-The residual here is only the equation-of-state interpretive fork and the one unit `v_geo`. An
+**Gravity: a *conditional* entanglement-thermodynamic route, with the 8π coefficient multiply
+matched.** What is actually established (honest typing, 2026-08-27 review round): (a) multiple
+*consistent* `8π` coefficient matches — the thermodynamic origin `2π/η` coincides with the
+geometric one `|Z₂|·2π·χ` via `|μ₄| = |Z₂|·χ(S²) = 4`, so `c₃` is triply over-determined
+(anchor, geometry, thermodynamics, `v358`/`v359`); (b) a **conditional** local
+entanglement-thermodynamic GR route — the entanglement-equilibrium derivation (Jacobson 2015,
+arXiv:1505.04753) yields the *semiclassical* Einstein equation under its specific assumptions
+(small geodesic balls, locally maximally symmetric vacuum, first-order variation, conformal
+matter; the nonconformal case needs an extra conjecture, cf. Casini–Galante–Myers
+arXiv:1601.00528), and with TFPT's atoms both coefficients come out fixed — `c₃⁻¹ = 8π` and `Λ`
+from `α` (`ρ_Λ = (3/4π²)e^{−2α⁻¹}`, `v60`), with the Einstein tensor forced by Lovelock so
+matter conservation is an output (`v359`); (c) an `R+R²` effective structure. **What does NOT
+follow from this route** (explicitly, per `GRAV.NONCIRCULAR.01` and `QFT4D.OS.RECON.01` in
+`tfpt_research_contracts`): a quantized dynamical metric, the nonperturbative state/path-integral
+structure, black-hole unitarity, global solutions/boundary conditions — and the *existence of
+the 4D QFT whose entanglement is being varied*, which the derivation assumes (the CHM ball
+modular Hamiltonian and the Bisognano–Wichmann boost enter as **inputs**; the chain is
+conditional on the 4D package and must never be cited as evidence *for* it). The residual is
+therefore *not* only the equation-of-state fork and the unit `v_geo` — those are the residuals
+*within* the conditional route; the route's own hypotheses are the larger open item. An
 **external candidate** for the missing action level — Bianconi's entropic action, *Gravity from
 entropy*, PRD 111, 066001 (2025) — is quantified in `v473`: her free constant is pinned exactly
 (`β′_B = c₃/6 = 1/(48π)`), her emergent `Λ` reproduces the `v60` branch with the exact target
@@ -60,10 +72,17 @@ near-miss explicitly declined); both legs stay `[O]`. The global measure (`QG.AM
 **`[C]` redundancy** (`v369`): a certification object rather than missing dynamics, conditional on
 `SEAM.EQUIV.01` and Bisognano–Wichmann.
 
-**The perturbative 4D leg closes to all orders.** The matter+gauge `S_pert` is a typed
-Epstein–Glaser/BRST contract (`v381`, `QFT4D.EG.ALLORDER.01`): dimension-4 power-counting ⇒ a finite
-counterterm space, BRST nilpotency `s²=0` for the carrier `su(3)×su(2)`, and the seam gap ⇒ the
-adiabatic limit, with all-order `T_n` existence and the Slavnov–Taylor identity imported (the
+**The perturbative 4D leg: a local perturbative construction under the EG/BRST hypotheses**
+(not "full 4D physics" — the binding phrasing rule of `QFT4D.OS.RECON.01`). The matter+gauge
+`S_pert` is a typed Epstein–Glaser/BRST contract (`v381`, `QFT4D.EG.ALLORDER.01`): dimension-4
+power-counting ⇒ a finite counterterm space, BRST nilpotency `s²=0` for the carrier
+`su(3)×su(2)`, and the seam gap ⇒ the adiabatic limit, with all-order `T_n` existence and the
+Slavnov–Taylor identity imported. The massless-sector weak adiabatic limit is the cited Duch
+theorem (arXiv:1801.10147), whose hypotheses must still be verified for the concrete TFPT model
+— a seam-transfer gap does not substitute for the IR structure of massless photons/gluons; and
+even full EG/BRST success yields none of: confinement/hadron spectrum, the Yang–Mills mass gap,
+asymptotic charged states in QED, the nonperturbative Higgs vacuum, a controlled full S-matrix
+(the
 `R²/Weyl²` Stelle ghost is fenced out as the resummed entire form factor, `v304`/`v370`/`v380`). The
 EM-Ward functional origin — *why exactly that* `F_U(1)` — is named as the tracked target
 `ALPHA.QUILLEN.EXACT.01` (`v382`), a face of `SEAM.EQUIV.01`; the `α⁻¹` value itself stays `[E]`. Four
@@ -81,9 +100,37 @@ on the abstract seam (= the `SEAM.EQUIV.01` face), so `ALPHA.QUILLEN.EXACT.01` s
 **One principle behind "parameter-free", and the shape of what's left.** A bird's-eye synthesis
 shows every TFPT sector is the *same* object — a gapped operator with a unique attractor (the physics)
 and a spectral gap (the reason there is no free dial); so "parameter-freeness is a theorem" is **one**
-spectral-gap statement, theory-wide, not a list of coincidences (`v383`). The residual matrix is now
-**certification, not construction** (`v384`): every open item is an external math proof, theorem-forbidden
-(the unit), or external physics — **zero** open internal mechanisms.
+spectral-gap statement, theory-wide, not a list of coincidences (`v383`). Precision (2026-08-27, per
+`DYN.MARKOV.EMBED.01`): the shared shape is a universal *contraction class* — shared gap and
+multiplier — not one physical clock (`v723`/`v724`/`v777`). The `v384` residual-matrix statement
+("every open item is an external math proof, theorem-forbidden, or external physics") applies to the
+*compiler-internal* residual matrix as scoped in `v384` — it does **not** mean the physics
+construction is done. The contract scope fence in `tfpt_research_contracts` (ledger wins) honestly
+lists as open: the interacting reflection positivity, mirror decoupling, the internal `SU(2)` as a
+genuine gauge action, both helicities, local 4D matter fields, EWSB, confinement — now registered as
+the named contracts `SEAM.BULK4D.RECON.01`, `QFT4D.OS.RECON.01`, `CHIRAL4D.NOMIRROR.01`,
+`DYN.UNITARY.DILATION.01` under the top-level rule `DIMENSION.UPLIFT.FIREWALL.01` (no 1+1D theorem
+closes a 3+1D claim).
+
+**The TFPT4D master route (2026-08-27, master-route wave).** The 4D contracts above are now
+organized into **one constructive route** (the "master route" programme section in
+`tfpt_research_contracts`): the working hypothesis is that TFPT is not missing twenty independent
+formulas but *one* growth principle — the unique local, reflection-positive, approximately
+quantum-Markovian 4D completion of the seam algebra, anomaly-free, with exactly one relevant
+dimensionful direction (= the `v_geo` calibration torsor, `ANCHOR.VGEO.02`). New rows: the
+**conditional 4D dimension selector** `DIMENSION.SELECTOR.4D.01` `[C]` (machine-checked, `v975`:
+`d = 4` unique + minimal + overdetermined under {`d > 2`, dimensionless YM coupling, real SD/ASD
+2-form split, Weyl chirality}; `μ₄` enters nowhere — axiom provenance from the compiler is the
+registered open half); the **seam-gap compression** `SEAM.SIMPLECURRENT.GENERATOR.01` `[O]` (one
+simple-current generator instead of 128 current controls); the **explicit finite 4D lattice
+action** `TFPT4D.LATTICE.ACTION.01` `[O]` (Wilson + Ginsparg–Wilson + one relevant `Φ` sector +
+seam/topological module, seven machine-checkable finite gates T1–T7); the **determinant-line
+unification hypothesis** `SEAM.DETLINE.UNIFICATION.01` `[O]` (`Res_seam det D₄D ≅ det D_seam`
+with connection — would unify seam extension, anomaly freedom, generation index and CP
+orientation); and the **generating-functional contract** `FTRANSFER.GENERATING.01` `[O]` (all four
+`F_transfer` bridges from one `W[J] = log Z[J]`; the `FR.TRANSFER.01` guard stays binding).
+Everything constructive stays `[O]` with registered kill criteria; RH and `PRIME.*` remain
+separate programmes (a green RH probe is neither necessary nor sufficient for the 4D physics).
 
 **`SEAM.EQUIV.01` is closed modulo a cited theorem.** The explicit lattice model (`v367`/`v368`) and
 the S3 closure stack pin the target at every computable level — central charge `c=8` (`v376`), the
@@ -117,11 +164,13 @@ continuum-existence theorems we do not re-prove. `QGEO.SYM.01` is its **corollar
   (`v219`) — all equal `#(mark-1) = |H₁| = 1`, true only for `E8`. In abelian Chern–Simons language it is
   the single integer step `holomorphic ⟺ det K = 1`; the extension tower `D₅⊕A₃ (16) → D₈ (4) → E₈ (1)`
   is anyon condensation, i.e. the Kitaev `E8` quantum-Hall state.
-- **Gravity is parameter-free** (`v358`/`v359`): the entanglement first law gives the **full covariant**
-  Einstein equation `G_ab + Λ g_ab = c₃⁻¹ T_ab` with **both** coefficients fixed, and the **thermodynamic**
-  origin of `c₃` **coincides** with the **geometric** one via `|μ₄| = |Z₂|·χ(S²) = 4`. So `c₃` is
-  **triply over-determined** (anchor, geometry, thermodynamics). The only residual is the equation-of-state
-  interpretive fork and the one unit `v_geo`.
+- **Gravity** (`v358`/`v359`, historical wording — see the conditional typing in the deep dive above
+  and `GRAV.NONCIRCULAR.01`): the entanglement first law, *under the Jacobson entanglement-equilibrium
+  hypotheses*, gives the covariant Einstein equation `G_ab + Λ g_ab = c₃⁻¹ T_ab` with **both**
+  coefficients fixed, and the **thermodynamic** origin of `c₃` **coincides** with the **geometric**
+  one via `|μ₄| = |Z₂|·χ(S²) = 4`. So `c₃` is **triply over-determined** (anchor, geometry,
+  thermodynamics). Within the conditional route the residual is the equation-of-state interpretive
+  fork and the one unit `v_geo`; the route's own 4D-QFT hypotheses are the larger open item.
 - **The central theorem**: `1/(8π)` from the seam-determinant replica — structure closed, the
   Fursaev–Solodukhin factor machine-derived (`v90`), the mechanism exhibited at the gapped-model level
   (`v150`), the Calderón transfer answered (`v151`), the `q(A₃)` normalisation identified as the one

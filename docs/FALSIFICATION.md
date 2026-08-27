@@ -34,16 +34,27 @@ the three ~2σ mixing tensions as one `−φ₀` third-generation pattern) and `
 (`v468`, the splitting ratio `= |J_PMNS|` at −0.19σ). The record is unchanged; JUNO / Belle II
 decide.
 
-## Not numerology — the null model
+## The null model — what it shows, and what it does not
 
 <p align="center">
   <img src="../assets/readme/05_nullmodel.png" alt="Frozen predictions vs a null model of 200,000 random look-alikes" width="820"><br>
-  <sub><em>13 predictions were frozen <b>before</b> the data; 200,000 random look-alikes score at most 5/13, while TFPT hits 13/13 — a look-elsewhere-corrected chance below 1 in 10³⁰.</em></sub>
+  <sub><em>13 predictions were frozen 2026-06-09 and locked to their formulas; 200,000 random look-alikes score at most 5/13, while TFPT hits 13/13 under the declared null model.</em></sub>
 </p>
 
 The Monte-Carlo null model (`v100_numerology_null_mc.py`) quantifies the retrospective
-look-elsewhere burden; the frozen registry (`v84`) prevents future look-elsewhere drift. Together
-they answer the "you just fit numbers" objection with a number.
+look-elsewhere burden **under its declared null model**; the frozen registry (`v84`) prevents
+**future** look-elsewhere drift. Honest scope (contract `PRED.JOINTLIKELIHOOD.01` in
+`tfpt_research_contracts`, registered 2026-08-27): most of the 13 observables were historically
+known when the formulas were found, so the freeze protects *future* measurements — it does not
+retroactively turn known data into blind predictions. And the 13 hits descend from the same few
+atoms (`φ₀`, `c₃`, `g_car`, `μ₄`), so they are statistically correlated — not 13 independent
+successes. The "below 1 in 10³⁰" number is therefore a statement about the declared null of
+random look-alike formulas, not a calibrated posterior for the theory. The evidence-grade
+statement requires a joint likelihood with the atom-induced covariance matrix, the effective
+number of degrees of freedom, a prespecified null space and formula grammar, and a genuine
+holdout of future data — that construction is the open contract `PRED.JOINTLIKELIHOOD.01`.
+What stands unchanged: the freeze, the per-observable kill tests above, and the fact that a
+confirmed measurement outside a stated window falsifies the corresponding claim.
 
 ## What a successful attack looks like
 

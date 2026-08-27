@@ -3992,6 +3992,39 @@ $48=\Omega_{\mathrm{adm}}$, and $Y^2$/loop/GUT-weighted give the alpha budget $4
 finite/computable piece of the merged target is proven; the single remaining \mO\ is the identification of
 the abstract seam $\zeta$-det with this glued mark determinant --- \emph{exactly} the \vref{v382} typing
 (a face of \texttt{SEAM.EQUIV.01}), now substantiated computationally rather than asserted.
+\emph{A ninth step executes both named faces of the target at the computable level
+(\veri{v974\_alpha\_faces\_computed.py}), typing what remains.} \mE\ \emph{The diagonal-zeta face is
+executed:} the BFK Mayer--Vietoris determinant formula (\vref{v151}) now \emph{runs} on the seam circle
+cut at the four $\mu_4$ marks --- gluing constant exactly $2^{-N}$ (symbolic, $N=1,\dots,4$, general
+interval lengths), massless reassembly $\det\nolimits'_\zeta(\Delta_{S^1})=\ell^2$, jump matrix $=$ the
+\emph{inverse} mark Green matrix $R(m)=(G_m|_{\mathrm{marks}})^{-1}$; at the KMS scale
+$\ell=2\pi=1/(4\cthree)$ this gives $R_0=16\cthree\,\mathrm{circ}(2,-1,0,-1)$,
+$\det\nolimits'R_0=2^{16}\cthree^3$ and glued product $(2\pi)^2$ --- the \vref{v485} diagonal/scale
+channel reproduced \emph{exactly} via the KMS unit. Against the \vref{v484} mark matrix
+($-4\cthree\ln2\cdot\mathrm{circ}(0,1,2,1)$) there is \emph{no} global proportionality --- the two
+kernels sit in \emph{swapped} $\mu_4$ channels (gauge zero mode vs.\ sign rep) --- but the
+correspondence is channel-wise exact (same $\mu_4$ Fourier eigenbasis, $|\mathrm{spec}|$ multisets
+$\{0,2,2,4\}$, doublet ratio $4/\ln2$ with $\cthree$ cancelling,
+$\operatorname{Tr}B^k=4^k+2\cdot2^k$ mirroring $\operatorname{Tr}C^k=4^k+2(-2)^k$), so this face's
+residual \emph{sharpens} to the channel-swap question. \mE\ \emph{The EM1/topological face carries a
+computed pump witness:} on the \vref{v367} collar, pumped charge $=$ edge spectral flow $=$ Streda
+count $=$ Chern $=1$ per flux quantum (hybrid-Wannier winding residual $0$, Streda
+$\Delta N=C\,n_\phi$ exact integers, the conjugation mutant flips all four readings simultaneously,
+$M{=}3$ controls all zero) --- so the cited TKNN/Callan--Harvey step ``boundary level $=$ bulk
+response'' of the fifth step now has a computed lattice witness; \mC\ the identification of the
+complex-copy $U(1)$ with the physical Majorana collar stays where it was, with the $16$-copy
+bookkeeping ($c_-{=}8$, $k_Y{=}5/3$, $(1/k_Y)\tfrac{41}6=\tfrac{41}{10}=b_1$) re-derived exactly.
+\mE\ \emph{The finite Quillen identity is two-sided:} over the $U(1)$-twist torus the FHS/Berry
+curvature integral of the determinant line \emph{and} the metric-side integral (Gaussian overlap norm,
+Poincar\'e--Lelong divisor evaluation) both equal $+1$, the difference an exact form
+($3\times10^{-16}$), transition-function winding $=$ Chern. \mC\ Typed conditional: \emph{if} the seam
+state is quasi-free (measured, not forced in the strong form --- \texttt{SEAM.STATE.RPMIXING.01}),
+\emph{then} Quillen's identity applies literally to the seam determinant line. \mE\ The computed
+witnesses are carried in the ledger as \texttt{ALPHA.QUILLEN.FACES.01}; the remaining open content of
+\texttt{ALPHA.QUILLEN.EXACT.01} is thereby typed as exactly $\{$rigidity premise$\}$ $+$
+$\{$channel-swap question$\}$ $+$ $\{$continuum Bismut--Freed identification$\}$ --- the target stays
+\mO, and $\ainv$ stays \mE\ regardless (re-anchored: Quillen split residual $10^{-58}$ at $50$ digits,
+$8b_1=\tfrac{164}5$ exact).
 \par\smallskip
 
 \noindent The full ablation --- which inputs are load-bearing and which only set the last digit --- is in
