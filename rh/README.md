@@ -2859,6 +2859,50 @@ reviewer's own rule reads: the parity-section lane does NOT stay
 open as an L\* proof arm; the exact T+H coordinate (C1) is
 banked.  Experiments-side, NO ledger row, NO RH CLAIM.
 
+**The fold-martingale second route (r337, the reviewer's
+pre-named terminal route after the exhaustion of the packing
+language).**  `fold_martingale_probe.py` (37/37, SPEC_SHA
+`617a83a6b3105acb` final with record, freeze `5460c2fa54983956`,
+two-commit protocol: pre-freeze `30ac0cb5`, record `d0d272e3`)
+read the signed fold-group masses of the argmax block as an
+adapted process along the SEALED dyadic source-scale filtration
+(adjudicated a-priori before the freeze: parameter-free /
+theorem-adjacent / canonical coarse-to-fine; a protocol mutant
+proves the audit bites), with three exact wards live — the
+telescope `X_K == x_{j*}`, Cauchy–Schwarz `zr ≤ √n_act`, and the
+identity `q_max = zr·κ·√V/L1`.  **Verdict
+`MARTINGALE_STRUCTURE_ONLY`** — the structure is there: the
+Z-maximal certification carries at the Azuma form `zr ≤
+C_Z(1)·√(log m)` with C_Z(1) = 0.7364 and **0 test violations of
+51 (incl. all 12 EXT3), named 4/4** — but the derived maximal
+arm `A_z = C_Z·√(log m)·κ·√V/L1` fails pointwise at every a
+(viol 18/13/11), so no new m₀\*.  Three structural findings:
+(1) the certification is tight but nearly structureless — c\*
+med 0.949 (ONE increment dominates the quadratic variation: the
+r324 single-heavy-scale finding recurs in signed form), zr med
+1.1012 essentially flat, contraction median exactly 0.500;
+(2) **the r335 mid-band blocker dissolves** under the martingale
+arm — head-to-head at a = 1: kz73 B^D_1 54.40 → B^C_1 0.399,
+kz76 53.59 → 0.483, kz61 48.91 → 0.755, kz95 41.96 → 0.352,
+kz98 41.68 → 0.400, kz109 40.90 → 0.299 vs C_C(1) 0.5293
+(coverage 5/6, improvement 70×–180×; pointwise q_max ≤ A_z on
+77/77 rungs); (3) the violation margin **migrates to the deep
+anchors and the spikes** — A_z undercuts the mass arm everywhere
+(letters A 77 / M 0), the freeze collapses 33.06 → 0.5293, and
+the new a = 1 violators are EXT3 kz51/62/54/123/125 (up to
+3.95×) plus named kz53/kz67/kz83 (≤ 2×): the r335 mass-arm spike
+coverage is lost inside the min (a two-constant certification,
+each arm against its own freeze, was not this round's sealed
+contract — named residual direction only).  Measured route
+growth e(B^C_1) = +0.059 vs the r324 chain's +0.172 (3× flatter,
+but the pointwise certification fails).  Worlds: SCRAMBLE zr
+1.1159 / contr 0.500 vs ladder med 1.1012 / 0.500 —
+DISTINGUISHED by a 1.3 % zr margin only (honest negative: the zr
+statistic is essentially world-blind in magnitude; the
+arithmetic content lives in the calibrated constants).  The r324
+MEASURED composition stays the honest end state.
+Experiments-side, NO ledger row, NO RH CLAIM.
+
 **Lane status after wave 13.**  **The terminal: the MEASURED
 composition is the end state of the route** (r324
 `PILEUP_GROWS_SUBCRITICAL` +0.172 < 0.224 record / 0.188
