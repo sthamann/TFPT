@@ -253,12 +253,128 @@ consistency statement about the instrumented families, not a
 discriminator theorem.  No verdict claims L*, a bound mechanism,
 a derived 5/7, or RH progress in any direction.
 
-RECORD TABLES: inserted ONLY at the record freeze (two-commit
-protocol: the pre-freeze commit carries this spec + machinery
-WITHOUT record tables; the post-record commit adds the measured
-tables verbatim).  No placeholder numbers are written before the
-first run (the r316/r317/r321 prefill error class, avoided per
-the r324-pre protocol disclosure).
+RECORD TABLES (frozen from the record run; two-commit protocol,
+chronology honest: smoke pass 1 = CRASH at G20 (a machinery slip
+-- V.lam_max_at returns (lam, B), the tuple was compared as a
+scalar; fixed, no rule touched); smoke pass 2 = 26/26 with ONE
+counted certificate failure, identified as the INFEASIBLE
+(+,-,-) sign branch of the toy triple (affine p cannot satisfy
+p(1/4) >= 1, p(-1/4) <= -1, p(2/5) <= -1; the dual runs
+unbounded) -- the sealed SIGN-BRANCH DISCARD rule (weak-duality
+ceiling from the always-feasible all-plus branch) was added to
+the spec BEFORE the freeze; smoke pass 3 = 26/26, 0 failures,
+0.2 s; PRE-FREEZE COMMIT 67833ecf (spec + machinery, no record
+tables).  Calibration pass 1 = first full evaluation = CRASH in
+the SCR interval census + G40/G41/G50 FAIL: the solver stopping
+criterion was normalized by the GRAM SCALE (max |G| ~ 1e13 on
+SCR => immediate termination with lam = 0 => 452 zero
+capacities; on w9 11 early-terminated solves with feasibility
+9e-4 < 1 - 1e-7).  DISCLOSED CALIBRATION AMENDMENT a1 (r270/r286
+precedent, machinery-side, no bar, band, family or adjudication
+rule moved): the stop rule is now ABSOLUTE at the constraint
+scale 1 (0.5 x FEAS_TOL with a 64-eps backward-error floor
+|G| lam + 1, superseding the CAP_KKT gram-scale rule), the
+equality start carries 2 iterative-refinement steps, and the
+KKT certificate tolerances are backward-error scaled (128 eps x
+(|G| lam + 1) floors on stationarity/feasibility/gap) -- the
+certificate stays sharp (the m5 mutant breaks by 1.0e-2 >=
+1e-3).  Calibration pass 2 = 26/26, wall 123.6 s, 138723
+capacity solves, 0 certificate failures.  The post-freeze record
+runs are numerically identical to calibration pass 2; run1 =
+26/26 (122.4 s), run2 = 26/26 (125.1 s), byte-identical up to
+WALL):
+CAL_VERDICT = ALLSET_NEEDED(min instance ratio kappa_int/
+kappa_all = 0.7013 at I4 < 0.99: I1/I2/I3 are interval-carried
+(ratio 1.0000, argmax masks 4/3/3 all intervals) but the I4
+supremum is the OUTERMOST SYMMETRIC PAIR {-13/16, +13/16} (mask
+33, NON-interval, two components, won on a sign-alternating
+branch): kappa_all = 2.446305 vs kappa_int = 1.715709 -- genuine
+multi-component sets carry the all-set clause once the geometry
+offers a separated symmetric pair; sign census: Cap_abs < Cap_+
+strictly on 3/7, 4/15, 20/31, 44/63 subsets -- the |p| freedom
+is REAL and grows with S_-)
++ K3_CENSUS(w9: kappa_int 0.999567 at the SHALLOW-EDGE PAIR
+(start 102, len 2 = folds 2/4, y 0.99941/0.99985, Cap
+8.387e-6) -- the r284 two-atom extremal band, NOT the singleton
+(best single atom = diag max 0.97001); kappa_lev 0.999567 (the
+P1 top level set IS the same pair); C_lev,w 1.0646 (max at
+P138), product 1.0642 vs lambda 0.99983248, excess +0.0643;
+ladder sample kz18 (z 37, S_- 84, N_w 142): 0.999524 /
+0.998778 / 0.9582 (P141) / product 0.9577, excess -0.0423;
+kz60 (z 211, 247, 388): 0.999974 / 0.998333 / 0.9026 (P387) /
+0.9026, excess -0.0974; kz52 (z 169, 551, 878): 0.999991 /
+0.999707 / 1.0198 (P877) / 1.0198, excess +0.0198 (strip UPPER
+bounds there); the interval-capacity margin 1 - kappa_int
+shrinks along the ladder (4.8e-4 / 4.3e-4 / 2.6e-5 / 9e-6 at
+N_w 142/184/388/878) -- the same shallow-edge pair carries it
+on every rung; split-ratio census R_split med 0.978 / max
+1.097 (T92, 30 components) -- component splitting is nearly
+FREE on the measured superlevel sets; n_runs <= deg + 1 on all
+sealed family members; w9 C_lev rows: P1 0.383, P2 0.349, P3
+0.330, P46 0.431, P92 0.623, P138 1.065, P183 1.003, T2..T183
+0.24..0.30, R1..R3 0.246/0.451/0.677)
++ WORLD_SEEN(EPST: kappa_int 1793.99 at a pair (116, 2),
+kappa_lev 1170.30, C_lev 87.30, product 1.57e5, lambda 2191.39;
+SCR: kappa_int 8.51e6 at the singleton (93, 1), C_lev 4.23e4,
+product 3.60e11, lambda 1.36e7 -- BOTH dead worlds reach >= 1
+on the interval clause ALONE (kappa > 1 directly certifies
+lambda > 1 by the exact theorem); live worlds all < 1; minC ==
+flips 25/21)
++ CAPACITY_CONTENT(the restatement rule does NOT fire, on two
+clauses: (a) FALSE -- kappa_all/lambda = 0.9671 / 0.9435 /
+0.8504 / 0.9640 on I1..I4, min 0.8504 < 0.90: at these sizes
+the all-set supremum is close to but NOT uniformly the lambda
+shadow (the sign-enumerated cone loses up to 15 percent);
+(b) FALSE -- the carrier clause fired ALLSET_NEEDED; and K2
+does NOT carry (C_max_live 1.0646 <= 8.0 but product >= 1 on
+MAIN and kz52; the reserve rule 1 - product >= 10 x margin
+fails on every live world).  THE NAMED GAP, honest: the
+GATE-SIDE EIGEN TIGHTNESS is the structural ceiling -- the
+extremal direction's own chain gives kappa_lev(eig) 0.999567 x
+C_lev(eig) 1.0089 = 1.00850632 >= lambda - 1e-9 -- so NO
+(K1, K2) pair valid for all polynomials can put the product
+below lambda_max: the K3 route can never yield more margin than
+the spectral margin itself, and on the measured families it
+does not even reach 1 with the needed sign (product 0.90..1.06
+straddles 1 across the live rungs, family-relative); the fork's
+honest content is (i) the interval clause as a world
+DISCRIMINATOR (dead worlds shout kappa >> 1 through intervals
+alone) and (ii) the interval-capacity margin as a NEW source-
+pure near-wall coordinate (1 - kappa_int = 2.6x the spectral
+margin on w9, same shallow-edge locus, shrinking along the
+ladder) -- not a new bound mechanism)
++ TWIN_LEDGER(rational twin at tol 1e-8: kappa_int dev 3.1e-9,
+kappa_lev dev 3.1e-9, C_lev dev 5.5e-9 (bar 1e-3), twin lambda
+0.99983248 == MAIN; dose-zero identity TR.build_world ==
+V.build_measures BITWISE).
+Key numbers.  W9: 5460 intervals + 15 family polynomials, KKT
+certificates green on all; point-capacity identity v_k /
+Cap({y_k}) == diag(E_184)_k vs the independent r283-FS route to
+9.7e-16, diag max 0.97001 == r284 record; theorem gate max
+kappa - lambda = -2.7e-4 (every measured set strictly below
+lambda on every live world); records lambda_max(E_184) =
+0.99983248, margin 1.6752e-4, lambda at 185 = 1.00003660 all
+reproduced.  EXACT WARDS: I1..I4 argmax subsets (all-set +
+interval) re-certified in EXACT Fractions (full sign x
+active-set enumeration on the rational WD kernel), devs <=
+6.8e-16; toy hand values 24/11, 3, 8, 24/11 (active-set DROP
+with slack 64/55), 75/49 all exact; JF9 singleton capacities ==
+1/K_5(y, y) rational to 6.5e-16; level hand toy 57/4000 exact.
+MP WARD (dps 40, fixed active set): top-3 w9 interval
+capacities rel devs 2.8e-14 / 4.4e-15 / 5.1e-15 (bar 1e-8),
+feasibility + lam >= 0 confirmed in mp; 0 knife-edge kappas
+(|kappa - 1| <= 1e-4) on the w9 census.  MUST-FAILS: m1
+eigenvector-capacity mutant AST-FLAGGED (w1_true/eigh); m2
+wrong-measure layer sum breaks by 4.3e+04 >= 0.1 while the true
+identity holds to 4.9e-16; m3 census mutant CAUGHT (14 != 15
+masks); m4 kappa-by-sight mutant AST-FLAGGED (REC_LAM); m5 KKT
+mutant breaks by 1.0e-2 >= 1e-3; scopes + fragment audit CLEAN.
+Totals: 138723 capacity solves, 0 certificate failures, wall
+122.4 / 125.1 s (bar 1800).  AMENDMENTS AFTER FREEZE: the
+disclosed calibration amendment a1 (solver numerics, above) and
+the record-table insertion -- nothing else; no bar, band,
+family, instance or adjudication rule moved at any point after
+the freeze.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
@@ -470,13 +586,16 @@ def cap_nnls(G, idx, ceil=None):
     idx = list(idx)
     m = len(idx)
     GE = G[np.ix_(idx, idx)]
-    scale = float(np.max(np.abs(GE))) + 1.0e-300
+    eps = float(np.finfo(float).eps)
     lam = None
     try:
         le = np.linalg.solve(GE, np.ones(m))
+        for _ref in range(2):        # iterative refinement
+            le = le + np.linalg.solve(GE, 1.0 - GE @ le)
         if np.all(le >= -EQ_TOL * max(1.0, float(np.max(np.abs(le))))):
             r = GE @ le - 1.0
-            if float(np.max(np.abs(r))) <= 1.0e-8:
+            rmag = np.abs(GE) @ np.abs(le) + 1.0
+            if float(np.max(np.abs(r) / rmag)) <= 64.0 * eps:
                 lam = np.maximum(le, 0.0)
     except np.linalg.LinAlgError:
         lam = None
@@ -491,12 +610,13 @@ def cap_nnls(G, idx, ceil=None):
                 if dval > ceil:
                     return math.inf, lam, [], True
             w = 1.0 - GE @ lam
+            rmag = np.abs(GE) @ lam + 1.0
+            stop = np.maximum(0.5 * FEAS_TOL, 64.0 * eps * rmag)
             w_free = w.copy()
             if P:
                 w_free[P] = -np.inf
-            j = int(np.argmax(w_free))
-            if w_free[j] <= CAP_KKT * scale * max(1.0,
-                                                  float(np.sum(lam))):
+            j = int(np.argmax(w_free - stop))
+            if w_free[j] <= stop[j]:
                 break
             P.append(j)
             for _inner in range(it_cap):
@@ -528,11 +648,14 @@ def cap_nnls(G, idx, ceil=None):
         dval = 2.0 * cap - float(lam @ gl)
         if dval > ceil:
             return math.inf, lam, [], True
-    stat = max([abs(gl[t] - 1.0) for t in act] or [0.0])
-    feas = float(np.min(gl)) if m else 1.0
+    rmag = np.abs(GE) @ lam + 1.0
+    tolv = np.maximum(FEAS_TOL, 128.0 * eps * rmag)
+    stat = max([abs(gl[t] - 1.0) / tolv[t] for t in act] or [0.0])
+    feas_ok = bool(np.all(gl >= 1.0 - tolv))
     gap = abs(cap - float(lam @ gl))
-    cert = (stat <= 1.0e-6 and feas >= 1.0 - FEAS_TOL
-            and gap <= GAP_TOL * max(cap, 1.0e-300))
+    gap_ok = gap <= max(GAP_TOL * max(cap, 1.0e-300),
+                        128.0 * eps * float(rmag @ lam + 1.0))
+    cert = (stat <= 10.0 and feas_ok and gap_ok)
     if not cert:
         N_CERT_FAIL[0] += 1
     return cap, lam, [idx[t] for t in act], cert
