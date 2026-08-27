@@ -3837,7 +3837,24 @@ a_(p+q), dev 0.019; the deficit candidates a_p = 3/4 and a_q =
 2/3 are sealed hits with printed ambiguity, never an
 identification); the named rests are the cross-kernel growth
 g_K12 = +0.902 (the one dirty census column) and ρ_r = 2.624;
-the L\* contract still [O]).  **Lean: 8 sorries, all typed** (the
+r352 then decomposed exactly that last census member —
+`RHOR_REDUCED` (one-object grade): through the weight-free
+kernel correlation ρ_K = c²/(d1·d2) the leading laws cancel
+exactly-near (BK3 image, 0.0004) and the deficit and kernel fine
+structures are ONE SHARED WANDER (corr 0.999998, 0.88 nats each
+vs 0.0017 nats difference) whose difference IS the log reserve:
+ρ_r is the decay of the shared-wander difference — **the two
+named r350 rests are ONE object** (a reduction and
+identification, not a derivation; LR curv −0.767 stays); g_K12
+is EXPLAINED (K12 == c/√(v1v2) pointwise, the CD second
+instrument identical on 81 rows, REL2 honest-negative), the
+naive decorrelation carrier is refuted (1 − ρ_K saturates), the
+EXT5 tranche holds L\* at the deepest windows ever (N_w 5690,
+margins positive, the deep decay FLATTENS out of sample), no
+candidate ambiguity resolves (required depths 10^4.7..10^29.5
+printed) — the specialist package is FINAL: one object (the
+r338-q1 shared wander φ), all exponents measured, all identities
+exact; the L\* contract still [O]).  **Lean: 8 sorries, all typed** (the
 five window-local legacy sorries byte-identical — the two true
 WINDOW-LOCAL holes `lstar_subordination` +
 `terminal_positive_main` unchanged — plus the three named Level-C
