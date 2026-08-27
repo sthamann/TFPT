@@ -401,10 +401,81 @@ pre-spec inputs; the subcritical delta stays r333-adjudicated
 r243-r336 stand.
 
 RECORD TABLES (inserted AFTER the record run -- the only
-amendment after freeze; freeze SPEC_SHA to be recorded at
-freeze time; protocol: smoke passes, calibration pass = first
-full evaluation, record run1/run2 after the table insertion,
-identical up to the runtime line): PENDING.
+amendment after freeze; freeze SPEC_SHA 5460c2fa54983956,
+pre-freeze commit 30ac0cb5; protocol: smoke pass 1 = 33/37 --
+the probe's OWN scope audit caught the combined-arm letter 'Z'
+(a withheld truth-side identifier); disclosed pre-freeze fix:
+letter renamed 'Z' -> 'A' (no bar, band, family or rule moved);
+smoke pass 2 = 37/37 (1.0 s), NO further amendment; calibration
+pass 1 = first full evaluation, 37/37, wall 166.8 s, NO
+amendment; record run1/run2 after this insertion, identical up
+to the runtime line):
+MAIN VERDICT: MARTINGALE_STRUCTURE_ONLY(structure AZUMA(b = 1)
+but the bound is too weak: combined-arm minimal a = None, viol
+18/13/11 at a = 0/1/2, mid-band 5/6, m_0* NONE) -- the
+structure IS there and the mid-band blocker IS dissolved, but
+the arm fails at the NEW margin: the EXT3 deep anchors + the
+spikes.
+THE THREE STRUCTURAL FINDINGS OF THE ROUND: (1) THE Z-MAXIMAL
+CERTIFICATION CARRIES AT THE AZUMA FORM -- zr <= C_Z(1)
+sqrt(log m) with C_Z(1) = 0.7364, 0 test violations of 51
+(incl. all 12 EXT3), named 4/4; even b = 0 (bounded zr) misses
+by only 2 violations (C_Z(0) 1.5501, zr max 1.677 at kz56/EXT3);
+zr ladder med 1.1012, min 0.6035 -- the normalized ratio is
+ESSENTIALLY FLAT because c* med 0.949: ONE increment dominates
+the quadratic variation (the r324 single-heavy-scale finding
+recurs in signed form), so |X_K| ~ sqrt(V) ~ |D_max| and the
+certification is tight but nearly structureless.  (2) THE
+MID-BAND BLOCKER DISSOLVES UNDER THE MARTINGALE ARM -- head-to-
+head at a = 1 (same rungs, same normalization): kz73 B^D_1
+54.40 -> B^C_1 0.399 / kz76 53.59 -> 0.483 / kz61 48.91 ->
+0.755 / kz95 41.96 -> 0.352 / kz98 41.68 -> 0.400 / kz109
+40.90 -> 0.299 vs C_C(1) 0.5293 -- coverage 5/6 (only kz61 at
+1.43x), improvement factor 70x-180x over the r335 dichotomy;
+the pointwise coverage q_max <= A_z holds on 77/77 rungs.  (3)
+THE VIOLATION MARGIN MIGRATES TO THE DEEP ANCHORS AND THE
+SPIKES -- the combined arm A_c = min(M_b, A_z) picks the Azuma
+arm EVERYWHERE (letters A 77 / M 0: A_z undercuts the mass arm
+on every rung), so the freeze constant collapses from 33.06 to
+0.5293 and the a = 1 violators are now (kz51 2.09 / kz62 2.03 /
+kz54 1.72 / kz123 1.72 / kz125 1.04 EXT3; kz53 1.05 / kz67
+0.845 / kz83 0.721 named) -- the r335 mass-arm spike coverage
+is LOST inside the min (its 1.6x-12.6x reserves lived on the
+33.06 scale); a two-constant certification (each arm against
+its own freeze) is NOT this round's sealed contract and is
+named as the residual direction only.
+CERT: e(B^Z_1) = e(B^C_1) = +0.059 (vs the r324 route's +0.172
+-- the measured martingale-route growth is 3x flatter but the
+pointwise cert fails); delta = e(hgn) = -0.004 halves
++0.148/+0.674 STRADDLE (exact r333/r335 continuity); EXT3
+cohort e(m A_c) = +0.204 (census-grade, r329 caveat).
+FILTRATION CENSUS: n_act med 3 max 6, single-scale 0;
+contraction med 0.500 (supermartingale surrogate PRESENT at
+exactly the threshold); reversion med 0.500; c* med 0.949 max
+1.000.
+WORLDS: twin w13 identical protocol (zr 0.704, contr 1.0, all
+exact wards live); EPSTEIN zr 1.027 contr 0.0 (the construction
+operates); SCRAMBLE zr 1.1159 / contr 0.500 vs ladder med
+1.1012 / 0.500 -- the sealed blind rule reads DISTINGUISHED by
+a 1.3-percent zr margin ONLY (honest negative: the zr statistic
+is essentially world-blind in magnitude; the arithmetic content
+of the round lives in the CALIBRATED constants, not in the
+existence of the structure).
+ANCHORS bit-near: r314 identity 4.5e-17; r306 C_2 1.069 (0/57);
+r316 n 65 + rho quartet + C_small 1.0694@kz18; r333 RECORD
+boundary 44/65 EXACT + named inner quartet (0, 0, 2, 0) EXACT +
+band 0.2819/3.5473; r335 RECORD arms O 15 / M 62 EXACT + named
+B^D_1 quartet 12.51/20.47/2.62/11.86 all M + C_D(1) 33.0599
+viol 11 EXACT + the a = 2 violator set == the mid-band six
+EXACT + edge band 0.3162/3.1630 + delta -0.004; r324 CHAIN
+e(G/log m) +0.158 + e(m M_2) +0.014 = e_tot +0.172 EXACT + C_M2
+2.2557 + the seven m2 violators EXACT + m_0* solve 10^59.6.
+SEAL: partition 3.4e-16, ledger == genealogy == GMC 0.0,
+telescope X_K == x_{j*} 3.2e-16, CS ward 0.0, identity ward
+5.7e-16, kappa min 3.1726, purity clean, toys exact; must-fails
+e1 CAUGHT twice (AST rho + toy 3.0 != 1.0) / e2 AST-CAUGHT
+(trs) / e3 protocol-CAUGHT twice (AST rho + toy order (2, 1, 0)
+!= (0, 1, 2)) / e4 LOUD (break 1 EXACT) + m5a/m5b FLAGGED.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
