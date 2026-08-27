@@ -243,11 +243,104 @@ a size measurement, no block is constructed; no verdict claims
 L*, a bound mechanism, a derived 5/7, or RH progress in any
 direction.
 
-RECORD TABLES: to be frozen from the record run (two-commit
-protocol: the PRE-FREEZE commit carries the spec + machinery
-WITHOUT record tables; the record commit inserts the measured
-tables verbatim, chronology honest -- smoke passes, calibration
-pass, any disclosed calibration amendment, then run1/run2).
+RECORD TABLES (frozen from the record run; two-commit protocol,
+chronology honest: smoke pass 1 = 25/25 (0.2 s) -- it exposed
+that the original scan cap N_w + 8 truncates the w9 PRIMARY
+predictor to None (the Fejer floor is still positive at N_w + 8),
+whereupon the DISCLOSED PRE-FREEZE RANGE EXTENSION above (cap ->
+2 N_w + 8) was made BEFORE the freeze and BEFORE any full
+evaluation; smoke pass 2 = 25/25 (0.2 s; w9 n_pred = 216);
+PRE-FREEZE COMMIT d38b43c1 (spec + machinery, no record tables).
+Calibration pass 1 = first full evaluation = 25/25, wall 5.0 s,
+NO amendment (no gate red, no rule moved).  The post-freeze
+record runs are numerically identical: run1 = 25/25 (5.0 s),
+run2 = 25/25 (5.0 s), byte-identical up to WALL):
+CAL_VERDICT = PARITY_FINITESECTION_CARRIER(w9: f_366 attains
+-5.072 on the sealed grid (127 negative zones, total measure
+0.2766 pi) while the 184-section is PD through the r283-gated
+crossing 185 == minC + 1; f64 min eig M_184 = +5.7e-8 > 0 >
+-1.2e-8 = min eig M_185, signs clean, negative inertia at 185
+exactly 1; twin identical)
++ NEGATIVE_WINDOW_STEP_OVER(clause ii on MAIN and TWIN: the
+Fejer floor at N_w is POSITIVE on all 183 active modes (K_P3 =
++2.164e-3, min at mode k = 1; twin dev 2.1e-10) while clause i
+FAILS (K_P2 = 34 of 183 Dirichlet mode readings sit inside
+negative zones -- Gibbs dips of the partial sum; the Fejer mean
+removes them: the reviewer's variant (ii) is the carrying
+clause, exactly as the T151 template read the mean rather than
+the pointwise symbol)
++ PARITY_WORLD_BLIND(kill test 2 FAILS under the sealed r281
+rule -- all four statistics blind: K_P1 MAIN 0.2766 inside dead
+0.039..0.385; K_P2 MAIN 34 vs dead 0..85; K_P3 MAIN +2.2e-3,
+dist to the nearest dead value 1.1e-4 << spread 1.207; K_P4 all
+five worlds 0.0 except SMOOTH 0.226; the SIGN structure that
+looked separating (MAIN/TWIN Fejer floor positive, EPST/SCR/HL2
+negative -1.205/-0.804/-0.655) is broken by SMOOTH: a DEAD
+world (crossing 28) with POSITIVE Fejer floor +2.05e-3 and zero
+Dirichlet block -- SMOOTH's death is not a local-negative-mass
+event, so no local symbol statistic of this family can be
+world-complete)
++ PREDICTOR_ORDERING(PRIMARY Fejer: 42/42 rungs IN band (max
+rung dev 0.224 octaves; w9 n_pred 216 vs crossing 185),
+controls 1/4 in band (EPST 80 vs 26 dev 1.62, SCR 37 vs 22 dev
+0.75 IN, SMOOTH None vs 28 = break, HL2 98 vs 26 dev 1.91),
+LAW not awarded; spearman +0.999 over the 45 finite predictions
+>= 0.75 => ORDERING with the r284 honesty clause: the ordering
+rides the trivial N_w scaling of the ladder -- the
+mechanism-relevant discriminant, the four controls, breaks the
+band on 3 of 4; SECONDARY Dirichlet fires early everywhere (w9
+at 24, SCR at 6 -- the Gibbs column, printed, not adjudicated)
++ SCHUR_LEDGER(the 42-rung census at n = N_w: Fejer block size
+0 on 42/42 rungs and the Fejer floor POSITIVE on 42/42 (min
++4.44e-4 at kz64) -- the C3 shape 'small fixed block + source-
+pure positive rest floor' holds with the EMPTY block on every
+live rung; Dirichlet blocks med 116 / max 302 (pure Gibbs, not
+a usable block); dead controls: Fejer blocks 34/29/0/11 of 183
+(EPST/SCR/SMOOTH/HL2), their rest floors after removing the
+negative modes are positive again (1.3e-3/2.1e-3/2.1e-3/
+3.3e-5) -- the dead sickness IS the block, not the floor).
+Key numbers.  W9: hull [-1, 0.99996] mapped; theta_1 = pi/184 =
+1.7074e-2; the two smallest-theta nu atoms are folds 2/4 == r284
+record, at mapped theta 1.4827e-2 / 3.3154e-2 -- the fold-2 nu
+atom sits 13 percent BELOW the first active parity frequency
+and inside the first negative zone [4.3131e-3, 1.2891e-2]
+(which itself sits below theta_1: the w9 zero-adjacent zone IS
+stepped over geometrically, the further 126 zones are Gibbs-
+striped across the window and touch the grid, whence clause i
+fails while clause ii carries); w9 Fejer floor profile
++2.39e-2 / +3.52e-3 / +2.02e-3 / +2.16e-3 / +1.99e-3 /
++2.10e-3 / +2.12e-3 at n = 20/120/183/184/185/186/190 -- the
+floor does NOT dip at the crossing: the L* flip at 185 is NOT a
+local-mass event at Fejer resolution, the flip lives in the
+sharper two-atom extremal of r284 (the honest central negative
+of the round, stated as content); the PRIMARY predictor fires
+at 216 = crossing + 31 (the Fejer width pi/n must shrink ~17
+percent past the wall before a mode reading flips).  EXACT
+LEG: toy identity value 113856919/26790750 bit-equal (c_0 =
+143/60, c_1 = 1/30); dilatation M == S V_+^T T_7 V_+ S and odd
+== 2(c_{|k-l|} - c_{k+l}) elementwise exact; zone edges vs
+closed forms <= 4.4e-16; FFT cross-routes 1.1e-14 toy /
+7.9e-14 w9 (bars 1e-13 / 1e-11); f64 identity 2.2e-15 on w9
+(8-member family), ladder sample kz18/kz60/kz52 = 5.9e-15 /
+1.4e-15 / 3.3e-15 (bar 1e-12).  R334 COMPARISON COLUMN (record
+1 - kappa_int vs the measured Fejer floor, both source-pure
+near-wall coordinates): kz18 4.8e-4 vs +2.08e-3, kz9 4.3e-4 vs
++2.16e-3, kz60 2.6e-5 vs +8.19e-4, kz52 9.0e-6 vs +4.48e-4 --
+both fall along the ladder but the Fejer floor falls ~5x where
+1 - kappa_int falls ~50x: the parity floor is a SECOND, softer
+near-wall coordinate, not the same number in disguise.
+PREDICTOR CENSUS (sample): kz18 153 vs 144, kz9 216 vs 185,
+kz60 412 vs 389, kz52 918 vs 879 -- offset +9..+39, ratio band
+<= 0.224 octaves on all 42 rungs.  MUST-FAILS: m1 odd-parity
+exact difference 222371533/53581500 != 0 CAUGHT; m3 unmapped-
+moment exact difference 1602051079/979776000 != 0 CAUGHT; m2
+FLAGGED (REC_LAM@586); m4 FLAGGED (cross_true@601);
+constructor scopes + fragment audit CLEAN.  Runtime 5.0 / 5.0 s
+(bar 1800); deterministic, run1/run2 byte-identical up to WALL.
+AMENDMENTS AFTER FREEZE: NONE (the one disclosed pre-freeze
+range extension is documented above; no bar, band, grid,
+statistic, family or adjudication rule moved at any point after
+the freeze).
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """

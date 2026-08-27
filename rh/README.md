@@ -2818,6 +2818,47 @@ at the edge — the reviewer's martingale second route (named only,
 not executed); the r324 MEASURED composition stays the honest end
 state.  Experiments-side, NO ledger row, NO RH CLAIM.
 
+**The Chebyshev T+H parity section (r336, reviewer rank 3 — the
+last pre-authorized L\* arm).**  `lstar_parity_section_probe.py`
+(25/25, SPEC_SHA `9e4bf4f129405a64` final with record, two-commit
+protocol: pre-freeze `d38b43c1`) put the parity-section language to
+its three kill tests.  The exact coordinate stands: with the signed
+cosine moments `c_r = Σ(μ_j − ν_j)cos(rθ_j)` on the affinely
+mapped hull, `∫p²d(μ−ν) = Σ a_k a_l (c_{|k−l|} + c_{k+l})/2`
+EXACTLY (bit-equal in Fractions on the rational toy; 2.2e-15 on
+w9; ≤ 5.9e-15 on the ladder sample) — **the L\* matrix is a finite
+Toeplitz+Hankel parity section**, congruent by the exact rational
+congruence `M = S·V₊ᵀT_M(c)·V₊·S` to the EVEN parity compression
+of the full symmetric Toeplitz section (the mirror of the
+v549/v550 odd-sector step-over machinery); section flip at f64
+signs clean (+5.7e-8 at 184 / −1.2e-8 at 185, negative inertia
+exactly 1).  **Verdict `PARITY_FINITESECTION_CARRIER` +
+`NEGATIVE_WINDOW_STEP_OVER(ii)` + `PARITY_WORLD_BLIND` +
+`PREDICTOR_ORDERING`** — kill test 1 CARRIES (the symbol attains
+−5.07 in 127 negative zones, total measure 0.2766 π, while the
+184-section is PD: the positivity is a genuine finite-section
+effect, and the Fejér mean is positive on all 183 active parity
+modes of MAIN and TWIN while 34 Dirichlet readings sit in Gibbs
+zones — clause (ii) steps over, exactly the T151 template); kill
+test 2 FAILS (all four sealed statistics world-blind under the
+r281 rule; the near-separation — Fejér floor positive on
+MAIN/TWIN, negative on EPST/SCR/HL2 — is broken by SMOOTH, a dead
+world with positive Fejér floor: its death is not a
+local-negative-mass event); kill test 3 PARTIAL (the blind
+Fejér predictor lands in the 1-octave band on 42/42 rungs, max
+dev 0.224, spearman +0.999, but only 1/4 controls — no law).
+The honest central negative: the w9 Fejér floor does NOT dip at
+the crossing (+2.16e-3 at 184, +1.99e-3 at 185) — the L\* flip is
+not a local-mass event at Fejér resolution; it lives in the
+sharper two-atom extremal of r284.  Banked: the Fejér floor as a
+SECOND source-pure near-wall coordinate (positive with empty
+Schur block on 42/42 rungs, min +4.44e-4; falls ~5× along the
+ladder where 1 − κ_int falls ~50× — not the same number in
+disguise).  With kill test 2 failed and kill test 3 partial, the
+reviewer's own rule reads: the parity-section lane does NOT stay
+open as an L\* proof arm; the exact T+H coordinate (C1) is
+banked.  Experiments-side, NO ledger row, NO RH CLAIM.
+
 **Lane status after wave 13.**  **The terminal: the MEASURED
 composition is the end state of the route** (r324
 `PILEUP_GROWS_SUBCRITICAL` +0.172 < 0.224 record / 0.188
@@ -2846,7 +2887,12 @@ capacity language and measured its ceiling: `ALLSET_NEEDED` +
 `CAPACITY_CONTENT` — the route cannot out-margin the spectrum,
 its honest yields are the interval world-discriminator and the
 new near-wall coordinate 1 − κ_int; the L\* contract itself
-stays [O], nothing moved).  **Lean: 8 sorries, all typed** (the
+stays [O], nothing moved; r336 then executed the last
+pre-authorized arm, the Chebyshev T+H parity section: the exact
+parity-section coordinate is certified and banked, but kill test
+2 fails — `PARITY_WORLD_BLIND` — and the blind predictor is
+ordering-grade only, so the parity lane does not stay open as a
+proof arm either; the L\* contract still [O]).  **Lean: 8 sorries, all typed** (the
 five window-local legacy sorries byte-identical — the two true
 WINDOW-LOCAL holes `lstar_subordination` +
 `terminal_positive_main` unchanged — plus the three named Level-C
