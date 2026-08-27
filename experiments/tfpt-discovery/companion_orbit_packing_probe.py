@@ -333,6 +333,71 @@ target-adjacent transfer factor, disclosed as the honest gap of
 the composed chain; the r327 record numbers are disclosed
 pre-spec inputs; r243-r332 stand.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+amendment after freeze; freeze SPEC_SHA 5567af41c0d4bc82;
+protocol: smoke pass 1 = 34/34 (0.5 s), NO amendment;
+calibration pass 1 = first full evaluation, 34/34, wall 36.9 s,
+NO amendment; record run1/run2 after this insertion, identical
+up to the runtime line):
+MAIN VERDICT: ORBIT_TOO_SHORT(T1 fails at all a in (0, 1, 2);
+composed bound fails at all a; exponent halves straddle
++0.148/+0.674, delta -0.004 < 0.112 UNDECIDED by the sealed
+stability rule) -- the r324 MEASURED composition (m_0* 10^59.6)
+stays the honest state of the route.  THE STRUCTURAL FINDING OF
+THE ROUND: THE BOUNDARY CASE IS THE RULE, NOT THE EXCEPTION --
+on 44/65 rungs the dominant beta/omega pair sits in the outer
+BOUNDARY_F = 0.10 margin of the masked support (edge distance
+d* med 0.072, min 0.002), so the inner-interval orbit is EMPTY
+at three of the four named spikes (kz53/kz83/kz55: |O| = 0;
+kz67: |O| = 2) while the ONE-SIDED census shows same-key
+companions DO exist on the edge side (kz53: 1, kz83: 1, kz55:
+1, up to 25 at kz37) -- the reviewer's inner/boundary split is
+real but inverted in frequency: the spike coincidence is an
+EDGE phenomenon, and any viable packing theorem must be stated
+one-sidedly at the edge, not on the inner interval.
+T2/T3 AT THEOREM GRADE (the round's positive): the BAND
+DISCIPLINE CERTIFIES EXACTLY -- rmin worst 0.2819 > 1/4 and
+cband worst 3.5473 < 4 on every live orbit (69 worlds; the
+Fractions extremes toy shows sharpness near 1/4: the measured
+0.2819 sits 11 percent above the algebraic floor); the OVERLAP
+ward is partition-exact (max membership 1 <= 2, the factor-2
+reserve unused); the composed chain q_max <= A1*/L <= ng hga/L
+<= Q_b = ng kappa/(|O| rmin) has worst slack violation 0.0
+(exact algebra live).
+CERT (mid-ladder freeze, 39 test rungs): T1 min-cal c_0 =
+0.0238/0.1055/0.4674 at a = 0/1/2 with 18/17/15 violations,
+named 0/4 -> minimal a None; composed max-cal C_Q =
+233.66/54.46/12.69 at a = 0/1/2 with 19/14/10 violations,
+named 0/4 -> minimal a None (worst violators kz53/kz70/kz83 at
+the |O| = 0 sentinel, then kz76 44.8 / kz38 37.5 / kz100
+25.3); |O| med 5 min 0 max 52, |O|/m med 0.051; kappa med ~3.4
+min 3.1836 max 6.7 (the L-cancellation transfer is a stable
+factor ~3-4, NOT the blocker); delta = e(hgn) = -0.004 (halves
++0.148/+0.674 STRADDLE -- the deep half RISES here, measured
+honestly against the r327 falling hgn/log m).
+SPIKE HARDNESS TEST: all four named rungs are SMALL_ORBIT +
+HEAVY_BAND simultaneously (hgn 14.89/13.43/10.30/15.17 vs med
+3.70 AND |O| 0/0/2/0 vs med 5, all at s* = 0, three of four in
+case B) -- BOTH mechanisms fire together at the spikes: the
+heavy pair is a bin-0 edge coincidence with (almost) no
+same-key inner companion.
+WORLDS: twin w13 runs the identical sealed construction (|O|
+3, rmin 0.443, case B -- same protocol, all exact wards live);
+EPSTEIN: 10 occupied bands vs w9 13, live orbit |O| 7 (the
+band structure differs but the construction operates); SCRAMBLE
+|O| = 0 (case B) -- THE ORBIT CONSTRUCTION DECAYS ON SCRAMBLE
+as predicted while w9 holds |O| = 6.
+ANCHORS bit-near: r314 identity 4.5e-17; r306 C_2 1.069
+(0/57); r316 n 65 + rho quartet + C_small 1.0694@kz18; r327
+C_NG 2.6351 (0 viol, named 4/4) + nwin histogram (0, 65, 0)
+EXACT + kz53 bshare 0.888 + gap med 0.807 + align med 1.000 +
+thirds (21, 29, 15) EXACT.
+SEAL: partition 3.4e-16, ledger == genealogy == GMC 0.0,
+overlap 1, chain 0.0, purity clean, toys exact; must-fails e1
+AST-CAUGHT (trs) / e2 CAUGHT twice (AST rho + toy width 2 !=
+0) / e3 LOUD (break 1 EXACT, 3 > 2 REFUSED) / e4 CAUGHT (toy
+set mismatch, wrong-parity pick) + m5a/m5b FLAGGED.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
