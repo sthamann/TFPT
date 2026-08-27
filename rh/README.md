@@ -3423,6 +3423,62 @@ state of the route remains the r324 measured composition until
 an arm certifies**.  Experiments-side, NO ledger row, NO RH
 CLAIM.
 
+**The third-arm spike law (r349, the named r346 residue: the
+sliding coverage of the F_A ≥ 1.5 family as a law).**
+`thirdarm_spike_law_probe.py` (44/44, SPEC_SHA
+`9b593e63762ee698` final with record, freeze
+`0016e2f1596978da`, two-commit protocol: pre-freeze `b2ef45ea`,
+record `609346e6`; one DISCLOSED print-level amendment a1
+between calibration passes — the sealed "every hole NAMED"
+requirement extended to the EXT4 misses, no bar/rule moved; a
+pre-run placeholder-removal disclosed, r321 protocol-error
+class) re-executed the ENTIRE r344/r346 scaffold anchor-gated
+bit-near (cover 0/51, P02 39/39 + 12/12, K1/K4 constants, V1/V2
+class record, six-spike set + ratios) and adjudicated the spike
+coverage with sealed machinery.  **The exact spine (warded
+≤ 9.3e-16):** the sliding reserve FACTORIZES EXACTLY —
+`RSV = GSQ·F_A²/ρ₂ = (GSQ/B²)·(pk/M2q)·(pk·M2q/Σq³)`, and via
+the r324 identity `pk = F_A·B·log m/m` the dominance form reads
+`ρ₂ = D·pk·(F_A·B)²` with `D = Σq³/pk³`.  **Verdict
+`EXCEPTIONS_REMAIN + RESERVE_FLAT(−0.33) +
+EXCEPTIONS_DISSOLVED(13/13) + HOLES([111, 75])` — the honest
+split:** (i) **the RAW class law holds everywhere** — `ρ₂ ≤
+1.3056·F_A²` on F_A ≥ 1.5 with ZERO hard violations on all 23
+family rows across 65 ladder + 12 EXT3 + **6 fresh EXT4 anchors
+(the r343/r345 L\*-lane list, first entry into the cubic lane —
+ALL SIX are spike-class under the insertion coordinate, F_ins
+1.58…6.68)**, including the new out-of-sample record F_ins =
+6.68 (kz111); the 13 r346 class-conditional exceptions DISSOLVE
+13/13 (reserves 3.2…12.1) and the hand-off is SEAMLESS (every
+test row below 1.5 heavy/good-covered, 0 holes; boundary band
+census 22 rows); (ii) **the sealed reserve floor 1.5 is
+undercut out-of-sample** — the two deepest fresh EXT4 spikes
+kz111/kz75 land at reserve 1.11/1.07: the honest family floor
+is ~1.1, not ≥ 1.5, and the family F_A ceiling GROWS
+out-of-sample (5.54 → 6.68) — the r346 census ceiling is not
+stable; (iii) **the reserve anatomy**: the reserve is the
+CONCENTRATION DEPTH `1/(D·pk)` (median log₁₀ shares
++0.01/+0.64/+0.26 — not the calibration slack: B² > GSQ on 7/17
+family rows, the r321 pure-algebra caveat restated; no log
+factors appear), and it is FLAT-to-eroding in F_A (rc −0.331,
+neither sealed monotonicity bar fires) — upward safety comes
+only from the measured `D·pk·B²` ceiling (0.409 ≤ 0.870 on the
+77 sealed rows, ~1.2 on the EXT4 misses); (iv) **the dominance
+structure is real but misses the sealed contrast bar** — family
+med D = 1.79, max 2.13, the six sharp spikes D 1.07…2.06
+(near-single-atom cubes), quiet med 5.03 → contrast 2.8× < 3.0:
+`THIRDARM_LAW_DERIVED` stays unfired by the sealed letter; the
+mechanism reading (r324 identity + near-dominance) stands as
+census; (v) worlds: SCRAMBLE is spike-class and COVERED (rsv
+2.9) — the class statement is ARITHMETIC-FREE by measurement, a
+pure concentration-size statement, no world separation claimed.
+m₀\*: uniform 10^22.6 UNCHANGED, two-statement composite
+10^22.6 (spike side binding), V1 10^16.1 / V2 10^17.5
+reprinted.  Must-fails: e1 reserve-bar-posthoc + e2 f0-posthoc
+protocol-CAUGHT twice each, e3 dominance-circular CAUGHT twice
+(Fractions pin 7/2 vs 28/27), e4 wrong-log-power CAUGHT exact
+(break == 2).  Experiments-side, NO ledger row, NO RH CLAIM.
+
 **Lane status after wave 13.**  **The terminal: the MEASURED
 composition is the end state of the route** (r324
 `PILEUP_GROWS_SUBCRITICAL` +0.172 < 0.224 record / 0.188
@@ -3483,7 +3539,22 @@ negative), so the uniform m₀\* stays 10^22.6 and the
 class-conditional QUIET reading 10^16.1 carries a named 13-row
 exception family; the named rest is the spike-free uniform
 constant — or the derivation of the spike family's third-arm
-coverage as a law).  **The extraction:
+coverage as a law; r349 then adjudicated exactly that
+derivation — the sliding reserve factorizes exactly as
+`(GSQ/B²)·(pk/M2q)·(pk·M2q/Σq³)` and the spike coverage reads
+`ρ₂ = D·pk·(F_A·B)²` through the r324 identity: the RAW class
+law `ρ₂ ≤ 1.3056·F_A²` on F_A ≥ 1.5 holds with zero hard
+violations on all 23 family rows including six fresh EXT4
+anchors (all spike-class, new F_ins record 6.68), the 13 r346
+exceptions dissolve 13/13 and the hand-off is seamless — but
+`EXCEPTIONS_REMAIN` by the sealed letter: the reserve floor
+1.5 is undercut out-of-sample (kz111/kz75 at 1.11/1.07), the
+reserve is flat-to-eroding in F_A, and the dominance contrast
+misses its sealed bar (2.8× < 3.0) — the reserve IS the
+concentration depth 1/(D·pk), the family F_A ceiling grows
+out-of-sample (5.54 → 6.68), the uniform m₀\* stays 10^22.6;
+the named rests are the stable reserve floor at the honest
+~1.1 scale and the family growth law m·q_max ≤ C·log m).  **The extraction:
 the architecture stands** (r325 `ELEMENTWISE_STABILIZATION_GO` +
 r326 `RH/Elementwise.lean`: `sourceExact_buildPrimeWindow` PROVED,
 the comb stabilization elementwise PROVED,
