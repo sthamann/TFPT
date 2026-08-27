@@ -388,11 +388,197 @@ L*, a bound mechanism, a derived 5/7, or RH progress in any
 direction.
 
 RECORD TABLES (inserted AFTER the record run -- the only
-post-freeze edit besides any DISCLOSED calibration amendments,
-which IS the protocol; the two-commit protocol commits this
-sealed spec as "r352 pre-freeze" BEFORE the first full
-evaluation; the record chronology, verdict and key numbers are
-appended here after the record run and nowhere else).
+post-freeze edit besides the ONE disclosed print-only amendment,
+which IS the protocol; TWO-COMMIT PROTOCOL EXECUTED: the sealed
+spec above was committed as "r352 pre-freeze" (88aae425, SPEC_SHA
+freeze ad7a56682b4ecfd7) BEFORE the first full evaluation;
+chronology honest: smoke pass 1 = 33/33 (0.2 s) at the sealed
+rules, pass 2 byte-identical; pre-freeze commit 88aae425;
+calibration pass 1 = FIRST full evaluation = 33/33 (94.2 s), NO
+gate amendment; ONE disclosed PRINT-ONLY amendment a1 (r349
+"every hole named" precedent): the EXT5_LEDGER prints in/low
+band counts per column so every EXT5 out-row is NAMED by side --
+no bar, band, family, candidate list or verdict rule moved, the
+docstring and hence the freeze SPEC_SHA unchanged by a1; smoke
+re-pass 33/33; record run1 = 33/33 (89.5 s), run2 = 33/33
+(83.7 s), byte-identical up to WALL and identical to calibration
+pass 1 except the a1 ledger field):
+MAIN VERDICT = RHOR_REDUCED (ONE-OBJECT GRADE) -- THE TWO NAMED
+RESTS ARE ONE OBJECT: the identities (i)-(iii) hold on all 81
+rows at machine precision (max 2.1e-16 / 2.2e-16 abs / 2.2e-16),
+the leading laws CANCEL (|s_csq - s_pq| = 0.0004 with s_csq
+-1.3950 == 2 s_c exactly and s_pq -1.3953 -- the BK3 image:
+rho_r is a SECOND-ORDER object, NOT composable from the leading
+candidate laws), and the one-object clauses fire LOUDLY: at the
+sealed common leading law A_LEAD = 17/12 the deficit fine
+structure phi_D = log(pq) + A_LEAD ln N and the kernel fine
+structure phi_K = log(c^2) + A_LEAD ln N satisfy corr = 0.999998
+(clause 0.99) and rms(phi_D - phi_K)/rms(phi) = 0.0019 (clause
+0.2): each column wanders 0.8787 nats, their difference is
+0.0017 nats -- 500x SMALLER: THE DEFICIT REST AND THE KERNEL
+REST ARE ONE SHARED WANDER, and rho_r is EXACTLY the decay of
+their difference (phi_D - phi_K == LR == -log(c^2/pq) pointwise;
+the LR law refits rho_r at |s_LR - s_rdet| = 0.0002 with LR curv
+-0.767 == rdet curv: NO clean power law appears in the
+weight-free normalization either -- the exponent 2.624 stays
+curved-measured; a reduction and identification, NOT a source
+derivation)
++ RHOK_LAW_FOUND(a_kap = 0.7111 re-gates CLEAN (curv +0.328,
+EXT3 11/12 low 0, EXT4 5/6 low 0) and hits [2/3, 3/4] at 0.05 --
+BOTH inside, mutually unresolvable, printed; the weight-free
+kernel correlation rho_K = kappa^2 inherits a_rhoK = 2 a_kap =
+1.4222 exactly (homogeneity gate 6.7e-16), candidate image
+[4/3, 3/2] both hit at the doubled bar 0.1; doubled curvature
++0.656 > 0.35 disclosed -- the LAW lives on the kappa
+normalization)
++ DECOR_REFUTED(slope(1 - rho_K) = +0.00061: the kernel
+DECORRELATES (rho_K -> 0, 1 - rho_K -> 1; decay exponent
+-0.0006, nowhere near rho_r and below DECOR_MIN 0.3) -- the
+round's naming hypothesis is REFUTED CLEANLY, the r348
+CARRIES_DELTA motif: the carrier of rho_r is not the kernel
+decorrelation, it is the SATURATION of c^2/pq = the shared-
+wander difference above)
++ GK12_EXPLAINED(e1 pointwise dictionary reconstruction max
+|K12 sqrt(vp1 vp2)/c - 1| = 5.52e-4 <= 1e-2; e2 the c column
+CLEAN (curv +0.308, EXT3 11/12, EXT4 low 0); e3 kappa CLEAN
+(above) -- the ONE dirty column factorizes pointwise as K12 ==
+[c, the CLEAN law] / sqrt[v1 v2, closed-form dictionary]; the
+curvature bookkeeping curv(K12) +0.500 vs curv(c) - (curv(vp1)
++ curv(vp2))/2 = +0.826 (dev 0.327) is printed as CENSUS -- the
+after-fit curvature sum carries the r347-C1 Theil-Sen
+non-additivity on the strongly curved weight columns, the
+POINTWISE factorization is the exact statement; SECOND
+INSTRUMENT: the CD-recursion route reproduces the Gram route on
+ALL 81 rows (r350 sample max 1.2e-10, all N_w <= 3200 max
+2.4e-10, EXT5 max 7.4e-10 incl. N_w 5690 -- every graded bar
+met) and the CD-refit K12 law is IDENTICAL (|s_K12cd - s_K12| =
+1.5e-11): the r350 dirtiness (curv +0.500, EXT3 5/12) is a
+STRUCTURE effect, not a measurement/route effect; REL2
+honest-negative as expected: the flat column Q = K12/(K11
+K22)^(1/4) FAILS the r345 protocol LOUDLY (CH1 21 out / 8 hard,
+max dev 1.21 dec, slope +0.5359 CI [-1.14, +2.30], monotone-ish
+cohort drift 0.796 dec: Q medians rise core ~10 -> EXT5 ~60) --
+the r350 REL2 slope hit 0.035 was an after-fit coincidence on a
+wildly scattering column, REL2 stays census)
++ CANDIDATES_UNRESOLVED(the honest deliverable -- the sealed
+separation instrument on the deep cohort (EXT3 + EXT4 + EXT5 =
+24 rows for p/q, EXT3 + EXT4 = 18 for y0): a_p (3/4 vs 2 x
+0.38): closer-count 23/24 LEANS to 3/4 but the line gap at the
+deep median is 0.0071 dec vs 2 x MAD 0.268 => UNRESOLVED,
+required depth log10 N* = 29.5; a_q (2/3 vs 1 - 0.38):
+closer-count 23/24 LEANS to 0.62 (the complement candidate!)
+but gap 0.0329 vs 0.263 => UNRESOLVED, required log10 N* = 8.3;
+delta_0 (0.38 vs 2/5): closer 12/18 leans 2/5, gap 0.0137 vs
+0.0402 => UNRESOLVED, required log10 N* = 4.7 (the NEAREST
+resolvable ambiguity -- one more x40 depth tranche could
+separate delta_0); the closer-count leans are CENSUS, never
+identifications -- the sealed gap clause refuses all three, and
+the EXT5 tranche (1.8x record depth, 0.26 decades of lever)
+cannot buy the ~3.3 decades a_q needs: the ladder-depth
+arithmetic is the deliverable, typed for the specialists)
++ EXT5_LEDGER(selection gate PASSES: used ledger 98, fresh 9,
+kz (69, 107, 101, 99, 115, 89) == the s2 queue, N_w == h on
+6/6, z^2 <= 400000; THE DEEPEST L*-WINDOWS EVER MEASURED: N_w
+4237..5690 = 1.8x the EXT4 record 3181; margins ALL POSITIVE
+1.47e-9 .. 4.03e-9 -- THE L* CONDITION HOLDS 1.8x DEEPER THAN
+EVERY PRIOR RECORD, out of sample, no contingency fired
+(exclusions none, CD finite 6/6, block far under the 600 s
+budget); bands from the 57-fit (in/low of 6): p 5/0, q 6/0, c
+6/0, kap 6/0 -- THE BARE LAWS EXTEND -- vs K12 0/0, margin 0/0,
+rdet 1/0, LR 1/0, rhoK 1/0: every out-row is HIGH side -- the
+margin/reserve/cross-kernel columns sit ABOVE the 57-fit
+extrapolation at EXT5 depth (the deep decay FLATTENS out of
+sample: MORE margin than the naive power law predicts -- the
+opposite side from the r342 EXT3 steepening reading, census,
+the two-parameter running-exponent question named for r353))
++ BALANCE_LEDGER(alpha == a_p + a_q + rho_r - a_(p+q) = 0.754 +
+0.645 + 2.624 - 0.690 = 3.333 vs alpha_meas 3.332 (dev 0.001);
+candidate image 3/4 + 2/3 + rho_r - a_(p+q) = 3.352 (dev
+0.019); THE CHAIN FULLY TYPED: weights WOERTERBUCH (r350),
+deficits CANDIDATE-LAW (a_p [3/4, 2 x 0.38], a_q [2/3, 1 -
+0.38], unresolved with required depths above), pinning
+SATZ-grade (r350, not re-run), rho_r = THE ONE SECOND-ORDER
+OBJECT == the shared-wander difference (this round) -- the
+specialist package is FINAL: ONE object (the r338-q1
+backward-CS fine structure), all exponents measured (a_p 0.754,
+a_q 0.645, a_c 0.697, a_kap 0.711, g_K11 +1.786, g_K22 +1.683,
+g_K12 +0.902, rho_r 2.624, delta_0 0.401, alpha 3.332), all
+identities exact)
++ WORLD_LEDGER(the rho_K world column (census, no bar): live
+MAIN/TWIN 0.00111 vs dead EPST 0.0107 / SCR ~1 / SMOOTH 0.00425
+/ HL2 0.59 / DIR ~1 / ABS 0.51 -- live sits BELOW every dead
+value, but the narrowest factor is only 3.8x (SMOOTH): a size
+census, NOT a criterion; the SATURATION coordinate leaves [0,1]
+on the dead side (EPST s = -0.021: pq < 0, a bare deficit flips
+sign; SCR/DIR s ~ 1 from above) while the BARE r_det prints
+POSITIVE on all six dead worlds at their own N_w -- the bare
+pair reserve does NOT carry the live/dead separation, what
+separates stays lambda_rest (re-gated 4/4 dead >= 1 vs live 2/2
+< 1) and kappa_int == records at 5 percent (EPST 1793.99 / SCR
+8.509e6 / SMOOTH 2.193 / HL2 1964.35, live 0.999567) -- honest:
+the r342 'dead pair blocks cross 1' typing lives in the
+DIAGONAL crossing (d >= 1 on EPST-type worlds), not in an
+r_det sign flip)
++ TWIN_LEDGER(kap dev 1.4e-8, rhoK 2.7e-8, LR 1.5e-5, Q 1.3e-8
+(bar 1e-3); dose-zero identity BITWISE)
++ MUSTFAIL_LEDGER(m1 wrong normalization breaks (ii) by 7.6e+04
+rel at w9 + 2/69 == 0.0290 exactly on the Fractions toy; m2
+AST-FLAGGED slope_col_true + toy 0.5833 in NO sealed list; m3
+AST-FLAGGED resid_spread_true + toy 0.252 != sealed 2.0; m4
+AST-FLAGGED gram_k12_true + CD-without-prefactor breaks by
+1.2e+00 >= 0.1 at w9; m5 wrong REL2 power breaks the planted
+flat toy by 0.850 == (g1 + g2)/4 exactly; constructor scopes +
+fragment audit CLEAN).
+Key numbers.  W9: rho_K 1.111385e-3 == kappa^2 (weights cancel),
+1 - rho_K 0.998889, s 0.988439, LR 1.1629e-2 (== r_det 1.1561e-2
+at 0.6 percent), Q 16.0225, K12 sqrt(vp1 vp2)/c 1.000552, CD dev
+1.6e-13 -- all == the s1 scoping bit-near; the r347/r348/r350
+anchor rows reproduced verbatim (bridge 1.0029, g21 7.5175,
+K_res 2, rho_0 0.5787, y0 0.4213, rho_hi 0.3943, kernel row
+bit-near).  LADDER: 81 rows (42 + 15 + 12 EXT3 + 6 EXT4 + 6
+EXT5), every f64 margin positive; FIT ANCHORS margin -3.332 / c
+-0.697 / p -0.754 / q -0.645 / rdet -2.624 / kap -0.711 / K11
++1.786 / K22 +1.683 / K12 +0.902 / y0 -0.401 / rhi -0.393 all ==
+the disclosed priors at tol 0.02; curvatures margin -0.347 / c
++0.308 / rdet -0.767 / K12 +0.500 at tol 0.03; homogeneity
+gates |s_rhoK - 2 s_kap| = 6.7e-16, |s_csq - 2 s_c| = 0.0
+(Theil-Sen is exactly homogeneous -- instrument gates); cohort
+medians rho_0 0.8392 / bridge 1.0058 == r348/r343.  HONEST
+NEGATIVES: (1) RHOR_REDUCED is a REDUCTION AND IDENTIFICATION,
+not a derivation: rho_r = 2.624 stays a measured, halves-curved
+exponent (LR curv -0.767) -- the round proves WHERE it lives
+(the difference of ONE shared fine-structure wander), not WHY it
+has this value; (2) the round's naming hypothesis is refuted:
+1 - rho_K saturates to 1 (slope +0.0006) -- the kernel
+DEcorrelates, the carrier is the saturation of c^2/pq; (3) REL2
+fails the flat protocol loudly (max dev 1.21 dec, drift 0.796)
+-- the r350 slope hit 0.035 was an after-fit artifact of a
+scattering column; (4) NO candidate ambiguity resolves (required
+depths 10^4.7 / 10^8.3 / 10^29.5) and the closer-count leans
+(3/4 for a_p, but 0.62 OVER 2/3 for a_q, 2/5 over 0.38 for
+delta_0) are census leans on 18-24 rows, never identifications;
+(5) the kap curvature +0.328 sits 0.02 under the 0.35 bar -- the
+kappa law is CLEAN by a thin margin, said so; (6) the world
+rho_K census separates by size with a thin 3.8x floor (SMOOTH)
+and the bare r_det sign does NOT separate -- no new world
+criterion claimed; (7) EXT5 carries the REDUCED bundle only (no
+resolvent/pinning extension beyond N_w 3200, budget honesty);
+the r350 det-shadow weak-rung caveat and the r348 WEAK_FAMILY
+caveat stand (not re-run).  R353 SKETCH (candidates, not
+commitments): (i) THE SHARED WANDER as its own lane: phi (rms
+0.88 nats, the single unexplained function of the L* margin
+legislation after this round) -- its cohort/atom structure and
+whether the digamma/tent dictionary predicts phi itself; (ii)
+the EXT5 HIGH-side flattening of the margin/reserve columns: a
+sealed two-parameter running-exponent model vs the pure power on
+the 81-row ladder (also the delta_0 separation at log10 N* =
+4.7, the nearest resolvable ambiguity); (iii) the GRH-faithful
+Dirichlet frame (U5) stays the named separate follow-up.
+Runtime 89.5 / 83.7 s record, 94.2 s calibration, 0.2 s smoke;
+deterministic, run1/run2 byte-identical up to WALL.  AMENDMENTS
+AFTER FREEZE: the one disclosed print-only amendment a1 (the
+EXT5 in/low ledger field, above) and this record-table insertion
+-- nothing else.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
@@ -1977,18 +2163,26 @@ def main():
              "-- the ladder-depth arithmetic is the deliverable)"
              % str({nm: round(vS[nm]["req_log10"], 1)
                     for nm in vS})),
+            # print-only amendment a1 (disclosed): every EXT5
+            # out-row NAMED by side -- in/low of 6 (the r349
+            # "every hole named" duty; no bar or rule moved)
             "EXT5_LEDGER(kz %s, N_w %s, margins %s, exclusions "
-            "%s; bands (in/6): p %d, q %d, c %d, kap %d, K12 %d, "
-            "margin %d, rdet %d, LR %d, rhoK %d)"
+            "%s; bands (in/low of 6): p %d/%d, q %d/%d, c %d/%d, "
+            "kap %d/%d, K12 %d/%d, margin %d/%d, rdet %d/%d, LR "
+            "%d/%d, rhoK %d/%d -- out-rows NOT low are HIGH side)"
             % (str(tuple(ext5_kzs)),
                str([RT[k]["Nw"] for k in ext5_kzs]),
                str(["%.2e" % RT[k]["margin"] for k in ext5_kzs]),
                str(ext5_excl) if ext5_excl else "none",
-               laws["p"]["e5_in"], laws["q"]["e5_in"],
-               laws["c"]["e5_in"], laws["kap"]["e5_in"],
-               laws["K12"]["e5_in"], laws["margin"]["e5_in"],
-               laws["rdet"]["e5_in"], laws["LR"]["e5_in"],
-               laws["rhoK"]["e5_in"]),
+               laws["p"]["e5_in"], laws["p"]["e5_low"],
+               laws["q"]["e5_in"], laws["q"]["e5_low"],
+               laws["c"]["e5_in"], laws["c"]["e5_low"],
+               laws["kap"]["e5_in"], laws["kap"]["e5_low"],
+               laws["K12"]["e5_in"], laws["K12"]["e5_low"],
+               laws["margin"]["e5_in"], laws["margin"]["e5_low"],
+               laws["rdet"]["e5_in"], laws["rdet"]["e5_low"],
+               laws["LR"]["e5_in"], laws["LR"]["e5_low"],
+               laws["rhoK"]["e5_in"], laws["rhoK"]["e5_low"]),
             "BALANCE_LEDGER(alpha %.3f == comp %.3f (dev %.3f); "
             "candidate image %.3f (dev %.3f); chain typed "
             "woerterbuch/candidate/satz/second-order)"
