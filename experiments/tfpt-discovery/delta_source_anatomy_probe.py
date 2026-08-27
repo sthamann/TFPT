@@ -371,6 +371,175 @@ r342 negative #4); the mirror world clause is a measured
 discriminator on eight instrumented worlds; no verdict claims L*,
 a bound mechanism, a derived 5/7, or RH progress in any direction.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze edit, which IS the protocol; TWO-COMMIT PROTOCOL
+EXECUTED: the sealed spec above was committed as "r348 pre-freeze"
+(0d0849e6, SPEC_SHA freeze b43a635184c44d3c) BEFORE the first full
+evaluation; chronology honest: smoke pass 1 = 34/34 (0.2 s) at the
+sealed rules, NO amendment; smoke pass 2 byte-identical;
+pre-freeze commit 0d0849e6; calibration pass 1 = FIRST full
+evaluation = 34/34 (63.0 s), NO amendment; record run1 = 34/34
+(63.6 s), run2 = 34/34 (63.5 s), byte-identical up to WALL and
+identical to the calibration pass):
+MAIN VERDICT = RATE_EQUALITY_THEOREM -- THE COMMON DRESSING RATE
+IS THE MARGIN RATE: the theorem-grade skeleton (T1 the two-level
+dressed-scalar identity, EXACT in Fractions on the rank-2 model
+(p' 121/250, q' 79/250, c' 72/250; cross-tie r'_2 = 4375/9559 ==
+the r345 formula at 2.2e-16) and through the FULL Schur chain on
+the block-spectral 4x4 at 1.7e-16; T2 the rate toys: flat
+geometry forces delta_x = alpha - a_x EXACTLY (Theil-Sen dev 0 at
+1e-9, dressed-slope spread 4.4e-16) -- the naive delta_p ==
+delta_q == delta holds IFF a_p == a_q == a_c and breaks by
+EXACTLY the bare spread otherwise; the tau = 0.4 angle drift
+separates the dressed slopes by 0.453: flat geometry is
+load-bearing) carries LIVE as certified census on all four sealed
+clauses: E1 CURV_FLAT passes on ALL THREE margin-pinning ratios
+(p'/m slope -0.056 CI [-0.90, +0.74], 0 out / 0 hard of 75, max
+0.323 dec; q'/m slope +0.016 CI [-0.89, +0.92], 0/0, max 0.365;
+|c'|/m slope -0.025 CI [-1.03, +0.97], 0/0, max 0.400 -- every
+dressed scalar is pinned to the margin scale across the whole
+arbitrated ladder), E2 the two-level truncation census holds
+(median max-shadow 0.0879 <= 0.20 on the 57), E3 sign agreement
+75/75, E4 the fitted image of the theorem holds (delta_x -
+(alpha - a_x): p +0.031 / q -0.023 / c +0.033, max 0.033 <= 0.1)
+-- THE R347 UNIVERSALITY CENSUS IS UPGRADED TO ITS EXACT FORM:
+the common rate is alpha, the delta_x differ by exactly the
+bare-rate spread (naive |delta_p - delta| 0.059 / |delta_q -
+delta| 0.003 vs bare |a_p - a_c| 0.056 / |a_q - a_c| 0.053), and
+delta LOSES ITS INDEPENDENT-LAW STATUS: delta == alpha - a_c
+through the two-level skeleton plus the certified pinning flats
++ ORDER0_LAW(delta_0 = 0.401 -- the ORDER-0 MISS y0 = 1 - rho_0
+carries its own sealed slow law (curv +0.094, EXT3 12/12 low 0,
+EXT4 6/6 low 0, delta_0 0.401 >= 0.3), and CARRIES_DELTA does NOT
+fire: |delta_0 - delta| = |0.401 - 2.668| = 2.267 > 0.5 -- THE
+R347-SKETCH HYPOTHESIS IS REFUTED CLEANLY: u1.u2/c alone does not
+carry the N^-2.67 law; the delta law is an INTER-ORDER
+NEAR-CANCELLATION: y0 (slope -0.401) and rho_hi (slope -0.393,
+curv +0.080, EXT3 12/12, EXT4 6/6) are twin slow laws whose
+difference is the c'/c column, pinned to the margin scale by the
+resolvent -- the same two-slow-scalars motif as the pair margin
+itself, one level down; cancellation depth |c'/c|/y0 median
+1.48e-3: the higher orders cancel 99.85 percent of the order-0
+miss at the median)
++ DICT_T0_GO(median 0.0177 <= 0.10 over the six sample rungs
+(kz18 0.0560, kz9 0.1949, kz52 0.0183, kz119 0.0171, kz42 0.0024,
+kz130 0.0059) -- the WEIGHT side of the order-0 overlap products
+IS dictionary-explicit (r342 digamma/tent v_pred inside the
+measured kernel rows), w9 the honest worst at 0.195, depth-
+improving; the kernel side stays census-grade, r342 negative #4
+never upgraded)
++ WEAK_FAMILY_STRAINED(median max-shadow 0.3772 > 0.35 on
+kz28/kz44/kz59 -- the honest Leg D negative: the two-level SCALAR
+shadows break at weak concentration (kz28 sh 0.7459/0.8231/
+0.9082 with K_res 3, mass2 0.9942; kz44 0.1142/0.1211/0.1303,
+K_res 3, mass2 0.6917; kz59 0.2580/0.3268/0.3772, K_res 3, pmass
+0.9352), signs still agree 3/3 -- K = 2 is a MEDIAN instrument on
+the scalars, not a per-row one; the ladder-wide clauses survive
+via the median (0.0879) with the worst arbitrated row kz23 at
+4.06 (N_w 149, K_res 3: the truncation fails locally there while
+the sign and the pinning ratios stay in band -- printed, typed))
++ MIRROR_WORLD_CLAUSE_SEALED(live 2/2: MAIN/TWIN lambda_rest
+0.996338 < 1, rho_32 0.9225, |rho_32 - 1| = 0.078 <= 0.5; dead
+4/4 diverge; DIRICHLET typed DEAD-side: DIR lambda_rest 3.97e37
+series NONFINITE, ABS 2.28e5 series -3.85e176 -- the r347 typing
+reproduced bit-near; NEW rho_0 WORLD COLUMN (census, no bar):
+live 0.5787/0.5787 vs dead EPST -220 / SCR -1.06e6 / SMOOTH
++1.76 / HL2 -3.05e3, DIR -3.975e37 / ABS -1.425e5 -- the ORDER-0
+quota alone separates live (0.58, positive, below 1) from dead
+by SIZE OR SIGN on 5 of 6 std worlds; SMOOTH sits at +1.76, same
+sign wrong size -- magnitude census, honest)
++ DECOMP_LEDGER(alpha 3.332, a_c 0.697, delta 2.668, delta_0
+0.401; C4 re-gate |3.332 - 3.366| = 0.033 <= 0.1; theorem-image
+residuals p +0.031 / q -0.023 / c +0.033; BLOCK TYPING: order-0
+split + two-level identity THEOREM-GRADE (Fractions exact, f64
+split max 5.8e-14, bookkeeping max 3.6e-8 on 75/75),
+margin-pinning flats + shadow median + sign CERTIFIED CENSUS (0
+band violations), alpha and a_c FIT-CENSUS laws (weight side
+closed-form: DICT_T0_GO here, v_pred 9.0e-4 r342) -- THE
+IRREDUCIBLE MEASURED REST OF THE L* MARGIN LAW IS THE PAIR
+{alpha, a_c}: delta is reduced to alpha - a_c, and the typed
+specialist question shifts from 'why does the rest space mirror
+at rate 2.67' to 'why alpha = 3.33 and a_c = 0.70 from the
+source')
++ ORDER0_LEDGER(split identity max 5.8e-14 of 75 (bar 1e-9);
+c'/c == y0 - rho_hi max 3.6e-8 (bar 1e-6); y0 fit slope -0.401 /
+curv +0.094 / EXT3 12/12 / EXT4 6/6; rho_hi -0.393 / +0.080 /
+12/12 / 6/6; depth census median 1.48e-3)
++ MODE_CENSUS_LEDGER(medians on the 57: top-1 share 0.2746, M90
+30, T0 arch-rim ATOM share 0.8158, top-mode arch mass 0.2061,
+top-mode peel-pair mass 0.0142 -- the mirror carriers are
+DELOCALIZED rest modes; in ATOM terms the order-0 overlap is 82
+percent arch-rim, in MODE terms no single carrier: the r345
+multi-modality restated with named coordinates)
++ WEAK_LEDGER(kz28 rho_0 0.8426 sh 0.7459/0.8231/0.9082 Kres 3
+mass2 0.9942 pmass 0.9800; kz44 0.8290, 0.1142/0.1211/0.1303, 3,
+0.6917, 0.9916; kz59 0.8201, 0.2580/0.3268/0.3772, 3, 0.9883,
+0.9352)
++ WORLD_LEDGER(lambda_rest separation re-gated 4/4 dead >= 1 vs
+live 0.996338 < 1; kappa_int == records at 5 percent (EPST
+1793.99 / SCR 8.509e6 / SMOOTH 2.193 / HL2 1964.35, live
+0.999567); 8 instrumented worlds, the rho_0 column new)
++ TWIN_LEDGER(rho_0 dev 9.9e-9, y0 dev 1.4e-8, T0 dev 2.0e-8,
+shadow devs <= 9.6e-7, margin-ratio devs <= 1.2e-5 (bar 1e-3);
+dose-zero identity BITWISE)
++ MUSTFAIL_LEDGER(m1 wrong resolvent weight breaks the split by
+3.2e-01 >= 0.1 at w9 + 2.8e-02 >= 1e-6 on the hand toy; m2
+AST-FLAGGED share_col_true + toy quantile 0.50 != the sealed
+0.9; m3 AST-FLAGGED DELTA_REC; m4 AST-FLAGGED DELTA_REC + the
+sealed toy exponent 2.610 differs from the record readback 2.668
+by 0.058 >= 0.01 (construction-CAUGHT); m5 wrong coupling sign
+breaks c'_2 by 1.7e-01 >= 0.1 at w9 and 3.3e-01 (exact 1/3) on
+the rational toy; constructor scopes + fragment audit CLEAN).
+Key numbers.  W9: rho_0 0.5787, y0 0.4213, rho_hi 0.3943, c'/c
+2.7047e-2 == y0 - rho_hi (dev 1.0e-13); shadows sh_p/q/c 0.0537/
+0.0577/0.0667 (sign +); ratios p'/m 5.0506, q'/m 7.7025, |c'|/m
+5.2075; top-1 0.1899, M90 27, t0arch 0.8474, dict_t0 0.1949 ==
+the s1 scoping bit-near; the r347 closure row reproduced (bridge
+1.0029, g21 7.5175, K_res 2, rho_32 0.9225).  LADDER: 75 rows,
+every f64 margin positive; cohort medians rho_0 0.8392 (r345
+0.839), M90 30 (== r345), top-1 0.2746 (== r345 0.275), bridge
+1.0058 (== r343); FIT ANCHORS margin -3.332 / c -0.697 / p
+-0.754 / q -0.645 / cpc -2.668 / cp -3.401 / p' -3.422 / q'
+-3.359 / fp -2.609 / fq -2.665 all == the disclosed priors at
+tol 0.02; curvatures cpc -0.189 / margin -0.347 / c +0.308 at
+tol 0.03.  HONEST NEGATIVES: (1) the order-0 hypothesis of the
+r347 sketch is REFUTED: delta_0 = 0.401 is not delta = 2.668
+(gap 2.267) -- the direct overlap does not carry the
+cancellation law; what carries it is the RESOLVENT PINNING of c'
+to the margin scale, and the order-0 miss is one of two twin
+slow laws whose difference is delta; (2) WEAK_FAMILY_STRAINED
+fires: the two-level scalar shadows break at weak concentration
+(kz28 up to 0.91; worst arbitrated row kz23 at 4.06) -- the
+truncation census is a median statement (0.0879), K = 2 is NOT a
+per-row instrument on the scalars, said with numbers; (3) the
+RATE_EQUALITY certificate is a sealed census on 75 finite
+windows, never an asymptotic theorem -- its theorem-grade half
+lives on the small models where top-2 dominance and flat
+geometry are exact hypotheses; live they are measured
+certificates; (4) alpha and a_c remain UNDERIVED from the
+source: the round reduces delta to alpha - a_c, it does not
+close the lane (DELTA_SOURCE_DERIVED cannot fire,
+ALPHA_SOURCE_CLOSED_FORM sealed False); (5) the rho_0 world
+column separates by size-or-sign on only 5 of 6 std dead worlds
+(SMOOTH +1.76 has the live sign at the wrong size) -- census, no
+bar was sealed for it; (6) the w9 dictionary deviation 0.195 is
+the honest sample worst (shallow window) -- the GO clause is a
+median statement over the sealed sample, not a per-rung bound.
+R349 SKETCH (candidates, not commitments): (i) the ALPHA source
+anatomy -- with delta == alpha - a_c and the weight side
+closed-form, the margin exponent is the LAST unexplained rate of
+the lane: the r338 specialist package (q1 backward-CS, q2
+sub-classical Christoffel growth 0.38, q3 resolution paradox) is
+now one exponent thinner; (ii) the y0 slow law delta_0 ~ 0.4 as
+its own object: does it tie to the bare rates (a_p + a_q - a_c ~
+0.7? the coupling-row geometry?) or to the g21 gap -- a
+shared-curvature ward between y0 and the margin column would tie
+order zero to the spectrum; (iii) the GRH-faithful Dirichlet
+frame (U5) stays the named separate follow-up.  Runtime 63.6 /
+63.5 s record, 63.0 s calibration, 0.2 s smoke; deterministic,
+run1/run2 byte-identical up to WALL.  AMENDMENTS AFTER FREEZE:
+NONE except this record-table insertion.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
