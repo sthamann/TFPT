@@ -3994,6 +3994,28 @@ separation is UNDECIDABLE inside the document frame (pool
 exhausted at 10^3.90 vs required 10^5.4) — the L\* contract
 stays [O]; the mincut is unchanged.  NO RH CLAIM.
 
+**Lane status update (L\* freeze, 2026-08-27, additive).**  **L\*:
+FROZEN as specialist problem (reviewer decision, Aug 27): one object
+— the φ co-wander cancellation; see
+`rh/problem/lstar_problem.tex` §frozen** ("The frozen state
+(August 2026): one object").  The reviewer adjudication: the lane is
+compressed to the point where additional internal numerics adds
+little — the memo carries exactly the one object (the deficit and
+kernel fine structures at the common leading law `A_LEAD = 17/12`
+are one shared wander of ~0.88 nats each, corr 0.999998, whose
+difference of ~0.0017 nats — factor ~500 — IS pointwise the log
+reserve, with ρ_r = 2.624 its decay) and the question why the two
+blocks (pair geometry, corr +0.887 at 2.4× amplitude, against the
+anti-correlated dictionary-weight wander −0.72) cancel so precisely,
+plus the three specialist questions (q1 backward-CS = the
+cancellation ratio; q2 sub-classical Christoffel growth, candidates
+unresolvable below 10^5.4+; q3 the resolution paradox) and the
+honest frame (census on 85 finite windows up to N_w 7942, all
+margins positive, pool exhausted at 10^3.90).  Documentation move
+only: no probe, no marker, the L\* contract
+`PRIME.LSTAR.SUBORDINATION.01` stays [O], the history above is not
+rewritten.  NO L\* CLAIM, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -4115,6 +4137,18 @@ since wave 6 registered in canonical form as its own ledger contract
 **`PRIME.LSTAR.SUBORDINATION.01`** (established as the canonical
 reduction by `v963_lstar_reduction_dictionary.py` [E]).
 NO RH CLAIM.
+
+Since 2026-08-27 the document additionally carries the freeze memo
+as its final content section, "The frozen state (August 2026): one
+object" (§frozen): the fully typed chain
+(dictionary weights / candidate deficits / theorem-grade pinning /
+computability closure), the one object (the φ co-wander and its
+500× cancellation, ρ_r = 2.624 as the decay of the difference), the
+three specialist questions in final form, and the honest census
+frame (85 windows to N_w 7942, all margins positive, pool
+exhausted).  The lane is FROZEN as a specialist problem (reviewer
+decision; see the lane status update above); the sections of the
+original problem statement are unchanged.
 
 ## The RH suite
 
