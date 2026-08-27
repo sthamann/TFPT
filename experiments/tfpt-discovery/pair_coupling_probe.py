@@ -330,6 +330,165 @@ the peeling tag is an induction CANDIDATE, not an induction; no
 verdict claims L*, a bound mechanism, a derived 5/7, or RH
 progress in any direction.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze edit, which IS the protocol; TWO-COMMIT PROTOCOL
+EXECUTED: the sealed spec above was committed as "r343 pre-freeze"
+(e652071f) BEFORE the first full evaluation; chronology honest:
+smoke pass 1 = 35/38 with TWO machinery findings, both fixed
+BEFORE the freeze commit: (f1) the exact-Fraction ward demanded
+minors POSITIVITY, but JF9 is not a lambda_rest < 1 instance
+(measured lambda_rest 1.6656) -- the gate now demands SIGN
+AGREEMENT of the rational minors criterion with the f64 route,
+the stronger and correct ward; (f2) the w9 d/c anchor bar 1e-5
+sat below the 6-decimal print precision of the r342 record (c
+dev 1.52e-5 pure rounding) -- bar sized to 2e-5; two gate TEXTS
+were made census-neutral (the arch-rim share and the cascade
+concentration are reported, not asserted); NO adjudication rule
+touched at any point.  Smoke pass 2 = 38/38 (0.6 s); pre-freeze
+commit e652071f; calibration pass 1 = FIRST full evaluation =
+38/38 (141.1 s), NO amendment; record run1 = 38/38 (147.4 s),
+run2 = 38/38 (141.6 s), byte-identical up to WALL and identical
+to the calibration pass):
+MAIN VERDICT = DRESSED_RESERVE_DECAYS(soft: FLAT_57 (slope
++0.018, curv -0.426 > bar 0.35)) -- read PRECISELY: every HARD
+kill clause MISSES (slope +0.018 is dead flat; EXT3 blind rows
+12/12 inside the 0.5-decade band with n_low 0; EXT4 fresh rows
+6/6 in band with n_low 0; no row within two decades of the 0.01
+floor -- r'_det spans 0.1383 (kz98) .. 0.5361 (kz57), both
+MID-ladder), but the sealed FLAT clause fails on the halves
+CURVATURE of the 57-column: the flat O(1) column carries ~x2
+scatter in both directions and its half-ladder Theil-Sen slopes
+differ by 0.43 (a bar inherited from the r342 decay-law
+convention, sealed before sight, applied honestly).  The O(1)
+candidate is NOT refuted on any family -- and NOT certified
+flat under the sealed clause: the letter of record is the soft
+decay, the census content stands typed below.
++ ANATOMY(medians on the 57: Delta d_1/p = 1.000, Delta c/c =
+-1.000 (to 3 decimals: at depth the dressing eats the ENTIRE
+bare reserve and coupling -- w9 still resolves 0.9718 / -0.9730),
+rho' = 0.846, m2'/margin = 1.0058, g21 = 8.21 (fit slope +0.049,
+curv +0.601 -- flat in slope, curved like r'_det itself); w9
+exact decomposition: Delta d1 = 2.9140e-2 = 0.9718 p, Delta c =
+-3.1380e-2 = -0.9730 c, dev vs direct Schur 9.8e-15; top-1/top-3
+rest-mode shares of Delta d1 = 0.192/0.335 (multi-mode
+absorption); the dressed pair margin IS the full margin: m2'/
+margin in [1.0003, 1.031] on every scoped row -- the dressed
+2x2 is a near-exact lambda_max carrier; coupling-row arch-rim
+share 0.8461 at w9 (census); the rest-pair weights are
+dictionary-predicted to 7.0e-3 at w9 (bar 0.10) -- the weight
+side of the dressing is closed-form, the kernel side stays
+census-grade)
++ BOUND_LEDGER(n_pos(K = 0/1/3/8/32) = 0/0/0/0/0 of 75 rows;
+min r'_lb(32) = -inf; sign autopsy r'_R2 on the sample: kz9
+-3.7e3 / kz18 -1.2e5 / kz52 -2.3e8 / kz119 -9.7e9 / kz42
+-2.2e10 / kz130 -2.4e11 -- the theorem-grade R2-R4 chain NEVER
+certifies a single row: the triangle step |c| + |Delta c|
+overshoots the cancelled |c'| by 73x already at w9 and the
+overshoot grows with depth; THE TYPED SPECIALIST QUESTION: an
+O(1) lower bound on r'_det must control the SIGNED cancellation
+Delta c ~ -c -- equivalently (top-2 reading, gated) the gap
+ratio g21 and the top-2 eigenvector 2x2 geometry at the pair;
+no census certificate is promoted, the O1 clause cannot fire
+(KERNEL_CLOSED_FORM sealed FALSE, bound clause False))
++ LAMBDA_REST_LEDGER(slope of 1 - lambda_rest on the 57 =
+-3.276 == the r342 prior -3.276 bit-near (curv +0.395), offset
+(1-lambda_rest)/margin median 21.0x, range 8.8..54.2 over all
+75 rows -- the second Schur clause carries margin-parallel with
+O(20x) headroom; WORLD SEPARATION: lambda_rest ALONE separates
+4/4 dead worlds (EPST 2191 / SCR 1.058e6 / SMOOTH 2.211 / HL2
+2776 all >= 1; live MAIN/TWIN 0.996338 < 1) -- on the
+instrumented worlds the REST clause is already the
+discriminator: the dressed-pair clause never has to fire on a
+dead world, and the Schur equivalence gate holds 6/6 exactly)
++ PEELING_STRUCTURE_FOUND(median rest-pair mass on the 57 =
+0.9902 >= 0.90 (min 0.6917 at kz44 -- honest, printed), min
+r''_det on the 57 = 0.2296 >= 0.05; EXT3/EXT4 medians: mass
+0.9793 / 0.9901, r''_det 0.60 / 0.66; the w9 level-k cascade
+(k = 1..6): folds (2,4) -> (6,8) -> (10,12) -> (14,15) ->
+(17,19) -> (21,23), top-vec pair mass 0.997 -> 0.981 -> 0.897
+-> 0.0003 -> 0.006 -> 0.687, reserve 0.303 -> 0.550 -> 0.931 ->
+0.915 -> 0.997 -> 0.999, lambda_rest_k 0.99634 -> 0.97330 ->
+0.96166 -> 0.96152 -> 0.96111 -> 0.93174 -- the reserve stays
+positive and lambda_rest_k falls monotonically at every peel;
+the shallow-pair CONCENTRATION persists to level 3 and BREAKS
+at level 4 (mass 3e-4): the peeling recursion is real at the
+adjudicated level-2 depth across the whole ladder, and its
+deeper levels are an honest census, not a clean induction)
++ TOP2_SPECTRAL_OBJECT(median |r'_2/r'_det - 1| = 0.0634 <=
+0.15 on the 57; K_res median 2, max 3 over all 75 rows --
+r'_det is numerically a TOP-2 spectral object: lambda_max,
+lambda_2 and their eigenvector 2x2 at the pair carry it to ~6
+percent; the flat O(1) content of the dressed reserve IS the
+flat gap ratio g21 (median 8.2; kz56 = 16.0) plus bounded
+top-2 geometry -- the concretized successor coordinate)
++ EXT4_CENSUS(B4 kz72/75/66 (z 269/281/241, N_w 3022/3181/2656,
+small-gap in-zone, grel 0.364/0.402/0.441): margins 1.03e-8/
+1.13e-8/1.55e-8, r'_det 0.3270/0.3679/0.2985, bare R2 0.255/
+0.536/0.984 -- the small-gap family strains the bare-R2 band
+AGAIN (kz66 at 0.98; the r329/r342 lesson) while the DRESSED
+reserve stays flat; A4 kz113/111/108 (z 499/487/463, N_w 3113/
+3027/2855, deepest fresh): margins 4.34e-9/3.00e-9/4.33e-9,
+r'_det 0.3101/0.2444/0.2368 -- the deepest windows ever
+measured in the L* lane, all margins positive, dressed reserve
+still O(1); used ledger 92, domain-capped fresh 23, grid
+identity 18/18)
++ TWIN_LEDGER(dressed scalars dev <= 2.3e-6, r'_det dev 9.1e-6,
+lambda_rest dev 3.5e-8 (bar 1e-3); dose-zero identity BITWISE)
++ MUSTFAIL_LEDGER(m1 wrong-block mass 0.0000 < 0.5 vs sealed
+pair 0.9970; m2 AST-FLAGGED REC_LAM; m3 AST-FLAGGED + toy 0.42
+!= sealed 0.15; m4 double-dress breaks the logdet identity by
+3.61 log-units >= 1.0; m5 E-correlation 0.9989 vs 0.3029, dev
+2.3 >= 0.1; constructor scopes + fragment audit CLEAN).
+Key numbers.  W9: r'_det = 0.302916 == the resolvent-correlation
+1 - M12^2/(M11 M22) (independent full-inverse route dev 8.9e-14,
+bar 1e-6); spectral-expansion identity dev 9.8e-15; rho =
+0.994203 -> rho' = 0.834915; g21 = 7.517; shadows r'_K = -0.000
+/ 0.2883 / 0.2994 / 0.3015 / 0.3027 (K = 1/2/3/5/10); bare
+shadow ratio 0.0341, RESTATEMENT median dev 0.9997 (does NOT
+fire: the dressing is real content, not a lambda_max read-off);
+rest-top PR 1.78, mass 0.9807 at folds (6, 8).  EXT3 BLIND ROWS
+(first sight of the dressed column on the r329 anchors): r'_det
+0.1605 (kz56) .. 0.4893 (kz128), all 12 inside the band -- THE
+KLEIN-GAP BREAKER kz56 BREAKS THE BARE R2 BAND (1.836) BUT NOT
+THE DRESSED FLATNESS (0.1605, g21 16.0): the dressing absorbs
+exactly the family effect that breaks the bare 2x2 uniformity.
+IDENTITY LADDER on all 75 rows: det 1e-12 / Schur logdet 1e-6 /
+resolvent route 1e-6 / spectral expansion 1e-9 all green;
+concentration blind clause 57/57.  MP WARDS (r342 route): d/c
+devs 4.3e-14..8.7e-11, m2 devs 1.4e-10 (w9)..1.9e-4 (kz130);
+staffel dps 30/45 dev 0.0.  FRACTION WARDS: JF9 dev 1.6e-14,
+I2 dev 0.0 (bar 1e-10); minors criterion == f64 sign on both
+(JF9 False at lambda_rest 1.6656, I2 True at 0.5382).  WORLDS:
+kappa_int EPST 1793.99 / SCR 8.509e6 / SMOOTH 2.193 / HL2
+1964.35 == r334/r342 records at 5 percent, MAIN/TWIN 0.999567.
+HONEST NEGATIVES: (1) the sealed FLAT clause failed on the
+halves-curvature bar -- the letter of record is
+DRESSED_RESERVE_DECAYS(soft) even though no hard kill fired and
+no family broke the band: the flatness reading survives only as
+census, and a curvature-aware flatness test is R344 protocol
+material (defined BEFORE the next record, not retrofitted
+here); (2) the R2-R4 certificate chain is measured DEAD on all
+75 rows -- Leg C closes with a typed question, not a bound; (3)
+the EXT4 rows are disclosed-seen (s3), only the EXT3 rows carry
+blind weight -- and they carried it 12/12; (4) the cascade
+concentration breaks at level 4 on w9 -- the peeling recursion
+is a level-2 statement, not an induction; (5) kz44 rest-pair
+mass 0.6917 is the honest minimum behind the 0.9902 median.
+R344 SKETCH (PRIME.LSTAR.GAP_RATIO.01 candidate): the top-2
+reduction is now gated -- promote the gap ratio g21 and the
+top-2 eigenvector 2x2 at the pair to primary coordinates: (i)
+their source anatomy (why is 1-lambda_2 ~ 8 x (1-lambda_1)
+ladder-wide, and why does kz56 sit at 16 with the reserve
+unmoved?), (ii) a curvature-honest flatness protocol for O(1)
+columns (scatter-aware, sealed a priori), (iii) the peeling
+spectrum: the level-k lambda_rest_k cascade vs the E-spectrum
+(the cascade IS the spectrum read through Schur -- w9 numbers
+above), (iv) the honest kill: does g21 break on rungs where the
+pair concentration weakens (kz44/kz59-type)?  Runtime 147.4 /
+141.6 s record, 141.1 s calibration, 0.6 s smoke;
+deterministic, run1/run2 byte-identical up to WALL.  AMENDMENTS
+AFTER FREEZE: NONE except this record-table insertion.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
