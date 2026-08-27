@@ -284,8 +284,130 @@ finite statistics; GRH only motivates the candidate (under GRH
 the zero structure of L(s, chi) is analogous), it is USED
 nowhere; r243..r356 stand.
 
-RECORD TABLES: inserted AFTER the record run -- the only
-post-freeze docstring edit, which IS the protocol.
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze docstring edit, which IS the protocol; freeze
+SPEC_SHA 4be4777fd6ec5bdf, pre-freeze commit 1381f6ea;
+chronology honest: smoke pass 1 = 33/33 (0.8 s, run pre-commit,
+byte-identical twice, disclosed in the commit message);
+calibration pass 1 = FIRST full evaluation = 31/33 (23.6 s) with
+ONE finding: the r329 counting constants ARE the frame-A ladder
+maxima (kz16 nscl 2.02581735 / kz36 ngl 2.63511735) and counting
+against the 4-decimal record literals made the calibration rungs
+"violate" their own constants by 1.7e-5 -- the r330-a1 lesson
+exactly.  DISCLOSED CALIBRATION AMENDMENT a1 (representation fix,
+r330-a1 class; NO adjudication bar, class rule, letter or verdict
+rule moved): the counting constants are re-frozen LIVE at full
+precision on the MAIN ladder, anchor-gated against the r329
+literals at 5e-4, and every chi violation count runs against the
+live-frozen constants.  Smoke re-pass 33/33; calibration pass 2 =
+33/33 (20.1 s); record run1/run2 after this insertion,
+byte-identical up to the WALL line):
+MAIN VERDICT: SECOND_ARITHMETIC_LIVES(E-wall 42/42 margins
+positive; r330 HALF_FILLING class MAIN-side: nf None 42/42)
++ MECHANISMS_TRANSFER(TWO_ATOM, DET_COND, DICT)
++ K2_CENSUS + DICTIONARY_TRANSFERS + PHI_CENSUS
++ R330_READJUDICATION + CHI4_LEDGER(ALIVE) + CONTROL_LEDGER
+(twin 7.9e-6; scramble BREAKS) + CONVENTION_LEDGER.
+THE HEADLINE FINDINGS:
+(1) THE WALL LIVES ON THE MATCHED FRAME -- THE r330 DEATH WAS A
+FRAME ARTIFACT: with the derived chi arch side (conductor
+log(q/pi) + parity psi(3/4 + i xi/2) + matched border) the chi
+mod 3 world holds the E-Gram wall on 42/42 windows (margins
+8.10e-06 (kz43) .. 3.34e-03 (kz18), ALL positive; minC None
+42/42 to the window depth) AND the terminal half-filling wall
+(nf None 42/42 -- the SAME comb that died at nf 24 through the
+unmatched frame, reproduced as the baseline gate).  chi mod 4:
+the same (margins 42/42 positive, min 1.10e-05; nf None 42/42).
+The living-world evidence moves from n = 1 to n = 3 arithmetics
+on 126 windows.
+(2) THE r330 RE-ADJUDICATION (verbatim battery, identical class
+rules, identical live-frozen C_2 = 1.069434): ALL FOUR r330
+splits are RETYPED_FRAME_ARTIFACT -- HALF_FILLING CTRL ->
+MAIN(ALIVE_TO_DEPTH); RENYI3_C2 CTRL(32/42 violations, max
+27.6x) -> MAIN(0/42); SIGMA_DECAY SPLIT(+0.793) -> MAIN(sl_D
+-0.578 vs MAIN -0.571); O_SIGN CTRL(27/42) -> MAIN(O_POS,
+O<0 on 20/42); NEFF_GROWTH (+0.947), FILL (med 0.442), MULT2
+(<= 2) stay MAIN-side: the matched battery is 7/7 MAIN-side,
+status(chi3) = ALIVE, status(chi4) = ALIVE.  CONFIRMED
+zeta idiosyncrasies: NONE at battery level.
+(3) THE PINNING FINE STRUCTURE (fresh coordinate): MAIN pins at
+minC_ext == N_w + 1 exactly (w9 == 185).  The chi worlds are
+NEAR-pinned: crossing offsets minC_ext - (N_w+1) = 0..9 (chi3
+med 1.5, pinned-exactly on 8/42; chi4 med 2.0) -- the wall
+extends slightly PAST half-filling on most chi rungs; the EXACT
+pinning is (so far) zeta's sharpest signature, typed census.
+(4) K2 SPLITS INTO PRODUCT vs COUNTING (the honest Leg-C
+verdict): the FROZEN C_2 = 11.87 holds with ZERO violations on
+all 126 live rows (MAIN max FABg 6.95 / chi3 4.73 at kz32 /
+chi4 5.16 -- 60/56 pct headroom: the Klein-gap product is
+ARITHMETIC-ROBUST census across 2 families + 3 aspects + now 3
+arithmetics), BUT the r329 counting constants BREAK on the
+second arithmetic: chi3 2 violations (kz33 nscl 2.41 = +19 pct;
+kz14 ngl 3.38 = +28 pct), chi4 1 violation -- the O(log m)
+counting side, the lane's most wall-robust asset (6 zeta
+cohorts), is ZETA-CALIBRATED census, not arithmetic-universal:
+K2_CENSUS, sealed letter, said honestly.  FAB identity 1.8e-16,
+K2 chain one-sided 0.0 on all worlds; dominance census chi3
+hgn med 3.18, bshare med 0.38, maj med 0.44.
+(5) THE DICTIONARY TRANSFERS (the r342 wall-side universality
+win): v_pred with the chi offset predicts the second
+arithmetic's nu weights at median rel dev 4e-4, max 3.3e-3 over
+42 rungs (V_BAR 0.10); density dictionary at the sample pair
+folds kz9/18/52/82 devs 7.5e-3 / 1.2e-3 / 3e-5 / 1.3e-4 (bar
+0.02) -- the explicit-formula weight dictionary is
+explicit-formula-generic, not zeta bookkeeping.
+(6) PHI DOES NOT TRANSFER (the honest negative of the round):
+the co-wander corr is 0.9817 (clause 0.99) with rmsr 0.3187
+(clause 0.2) on 42/42 usable chi3 rows -- the suppression is 3x
+vs MAIN 439x on the identical instrument (chi4: 0.9690/0.2867 =
+3.5x); PHI_CENSUS.  READING: the chi pair sits FAR from the
+binding point (r_det med 0.247 vs MAIN's near-saturated
+1e-2..1e-6; c med ~1e-3; pair mass med 0.9913 but PR med 1.26
+with two delocalized rungs kz40/kz55 pmass 0.009/0.003) -- the
+500x phi suppression is the signature of NEAR-CANCELLATION,
+which only zeta's world exhibits at these depths: universal in
+KIND (strong co-wander corr 0.98) but NOT at the sealed
+clauses; the r354-named ABS universality test is answered
+NEGATIVE in the right world, and that is information about the
+BINDING REGIME, not about the frame.
+(7) CONTROLS: the rational twin of the chi comb carries
+(margin/pair devs <= 7.9e-6, bar 1e-3); the matched-frame
+SCRAMBLE (seed 1, signed chi weights kept) BREAKS (E-margin
+-2.63e+02, minC 38/184, terminal nf 37) -- the matched frame
+does NOT rescue a scrambled comb: the wall needs the
+arithmetic, the second lab brings its own dead control.
+KEY NUMBERS.  w9 matched chi3: S 367 (S+ 279 / S- 88), margin
+8.818e-4, minC_ext 187 (pin offset 2), pair folds (2, 4) ==
+MAIN shallow edge, d1 0.998961, d2 0.993774, c 3.38e-4, r_det
+0.9823, pmass 0.9980; w9 matched chi4: S 367 (293/74), margin
+3.130e-4.  MAIN anchors through the verbatim channel: nf None
+42/42, C_2 refreeze 1.069434, sl_D -0.5710, n_eff 37.41/+0.963,
+O<0 13/42 EXACT, fill 0.434; E-ladder margins 42/42 positive
+(min 1.42e-7), w9 pinned at 185; FS gate corr 0.999998 rmsr
+0.0023 (r352 ref 0.999998/0.0019).  Counting live-freeze (a1):
+C_NSC 2.025817 (kz16), C_NG 2.635117 (kz36).  Must-fails: m1
+conductor shift == log 3 EXACT (dev 3.8e-15); m2 parity dev
+0.24 >= 0.2 (true 7.5e-3); m3 periodicity witness n = 1 +
+support n = 4 CAUGHT; m4 MAIN-arch dictionary dev 4.43 >= 0.5
+(true 2.1e-3); m5 AST-FLAGGED fabg_true + toy 3.0 != 1.0
+protocol-CAUGHT; m6 MAIN_MM_BLEND AST-FLAGGED; digamma
+identities a=0 3.7e-13 / a=1 0.0; frame reproductions BITWISE
+(document + terminal).  Runtime 20.1 s calibration pass 2 /
+record run1/run2 byte-identical up to WALL / 0.8 s smoke.
+AMENDMENTS AFTER FREEZE: the disclosed a1 (calibration,
+representation fix) and this record-table insertion -- nothing
+else.
+READING (typed MEASUREMENT): the reviewer fork is answered on
+the substance side -- the wall, the battery, the two-atom
+mechanisms, the determinant condition, the weight dictionary
+and the K2 gap product are EXPLICIT-FORMULA-GENERIC (they
+transfer to the matched second arithmetic on all 126 windows);
+what stays zeta-graded is the BINDING REGIME: the exact
+half-filling pinning, the near-saturated determinant reserve,
+the 500x phi suppression and the r329 counting constants.  The
+L* margin legislation is a statement about how CLOSE zeta's
+world sits to the wall -- the chi worlds obey the same law far
+from it.  NO RH CLAIM, NO GRH CLAIM.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
@@ -1544,18 +1666,32 @@ def main():
             rc["evk"] = eval_k2(rc)
         kM, fabidM, k2chM = k2_rows(recsM, grels)
         violM = [r for r in kM if r["fabg"] > C2_K2_FROZEN + K2_EPS]
-        cntM = [r for r in kM if r["nscl"] > EFA.FROZEN_CNSC
-                or r["ngl"] > EFA.FROZEN_CNG]
-        check("G50-main-k2-anchor", (not violM) and (not cntM)
+        # amendment a1 (disclosed, calibration pass 1; the r330-a1
+        # lesson exactly): the r329 counting constants ARE the
+        # frame-A ladder maxima (kz16 nscl 2.02581735 / kz36 ngl
+        # 2.63511735) -- counting against the 4-decimal record
+        # literals makes the calibration rungs "violate" their own
+        # constants by 1.7e-5.  The constants are re-frozen LIVE at
+        # full precision on the MAIN ladder, anchor-gated against
+        # the r329 literals (the r330 C_2 convention verbatim);
+        # every chi violation count runs against the live-frozen
+        # constants.  No adjudication rule moved.
+        CNSC_live = max(r["nscl"] for r in kM)
+        CNG_live = max(r["ngl"] for r in kM)
+        ok_cnt_anchor = (abs(CNSC_live - EFA.FROZEN_CNSC) <= 5e-4
+                         and abs(CNG_live - EFA.FROZEN_CNG)
+                         <= 5e-4)
+        check("G50-main-k2-anchor", (not violM) and ok_cnt_anchor
               and fabidM <= 1e-12 and k2chM <= K2_CHAIN_BAR,
               "MAIN anchor through THIS channel: FAB identity "
               "%.1e, K2 chain one-sided %.1e; FABg <= frozen "
-              "%.2f on %d/%d (max %.2f); counting 0 violations "
-              "(max nscl %.2f / ngl %.2f vs frozen %.4f / %.4f)"
+              "%.2f on %d/%d (max %.2f); counting constants "
+              "re-frozen LIVE at full precision (a1): C_NSC "
+              "%.6f / C_NG %.6f == r329 records %.4f / %.4f "
+              "(tol 5e-4) -- the chi counts run against these"
               % (fabidM, k2chM, C2_K2_FROZEN, len(kM) - len(violM),
                  len(kM), max(r["fabg"] for r in kM),
-                 max(r["nscl"] for r in kM),
-                 max(r["ngl"] for r in kM), EFA.FROZEN_CNSC,
+                 CNSC_live, CNG_live, EFA.FROZEN_CNSC,
                  EFA.FROZEN_CNG))
         for rc in rowsD:
             if "failed" not in rc:
@@ -1563,8 +1699,8 @@ def main():
         k3, fabid3, k2ch3 = k2_rows(
             [rc for rc in rowsD if "failed" not in rc], grels)
         viol3 = [r for r in k3 if r["fabg"] > C2_K2_FROZEN + K2_EPS]
-        cnt3 = [r for r in k3 if r["nscl"] > EFA.FROZEN_CNSC
-                or r["ngl"] > EFA.FROZEN_CNG]
+        cnt3 = [r for r in k3 if r["nscl"] > CNSC_live
+                or r["ngl"] > CNG_live]
         fabg3 = [r["fabg"] for r in k3]
         info("CHI3 K2 table (kz m q_max FAB grel FABg nscl ngl):")
         for r in k3:
@@ -1595,8 +1731,8 @@ def main():
         k4, fabid4, k2ch4 = k2_rows(
             [rc for rc in rows4T if "failed" not in rc], grels)
         viol4 = [r for r in k4 if r["fabg"] > C2_K2_FROZEN + K2_EPS]
-        cnt4 = [r for r in k4 if r["nscl"] > EFA.FROZEN_CNSC
-                or r["ngl"] > EFA.FROZEN_CNG]
+        cnt4 = [r for r in k4 if r["nscl"] > CNSC_live
+                or r["ngl"] > CNG_live]
         check("G52-chi4-k2", fabid4 <= 1e-12
               and k2ch4 <= K2_CHAIN_BAR,
               "CHI4 K2: %d live rows, violations %s (max FABg "
@@ -1609,7 +1745,7 @@ def main():
                  else float("nan"), str(len(cnt4)), fabid4,
                  k2ch4))
         k2_ok = ((not violM) and (not viol3) and (not viol4)
-                 and (not cntM) and (not cnt3) and (not cnt4)
+                 and ok_cnt_anchor and (not cnt3) and (not cnt4)
                  and len(k3) >= K2_MIN_ROWS)
         mut5 = mutant_c2_recalibrate([3.0 * 1.0, 2.0 * 0.5])
         check("G53-m5-recalibration", bool(sc_m5)
