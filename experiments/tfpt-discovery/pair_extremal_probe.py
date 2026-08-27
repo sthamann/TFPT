@@ -297,6 +297,136 @@ is a measured discriminator on six instrumented worlds, not a
 theorem; no verdict claims L*, a bound mechanism, a derived 5/7,
 or RH progress in any direction.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze edit, which IS the protocol; TWO-COMMIT PROTOCOL
+EXECUTED: the sealed spec above was committed as "r342
+pre-freeze" (bdc0b439) BEFORE the first full evaluation;
+chronology honest: smoke pass 1 = 38/38 (0.4 s) at the sealed
+rules; calibration pass 1 = FIRST full evaluation = 35/38 with
+TWO numerics findings: (f1) the determinant-identity residual
+was normalized by the CANCELLED difference pq - c^2 (~1e-9 on
+deep rungs), so machine-precision noise (measured |lhs - rhs|
+<= 8.0e-19 = <= 5.8e-15 of the natural scale pq + c^2) read as
+a gate failure on 17 deep rungs; (f2) the mp m2 ward bar for
+kz52 (N_w 878) was one notch too tight (measured f64-vs-mp
+4.8e-6 on a 2.6e-7-sized m2).  DISCLOSED CALIBRATION AMENDMENTS
+(r270/r286/r334 precedent, machinery-side normalizations only;
+NO adjudication bar, band, threshold, family or verdict rule
+moved): (a1) the det residual is measured against pq + c^2
+(backward-error honest), bar 1e-12; (a2) the m2 mp bar scales
+with DEPTH (1e-6 for N_w <= 400 / 1e-5 to 1500 / 1e-3 beyond,
+the s3 sizing logic).  Calibration pass 2 = 38/38 (216.7 s);
+the post-freeze record runs are numerically identical: run1 =
+38/38 (214.6 s), run2 = 38/38 (212.3 s), byte-identical up to
+WALL):
+CAL_VERDICT = PAIR_LAW_FOUND(L1 the p/q/c laws are halves-
+stable on the 57 (curvatures +0.305/+0.299/+0.308, bar 0.35) +
+L2 the EXT3 pure test extends (11/11/11 of 12 in the 0.5-decade
+band) + L3 the source dictionary carries (median v_pred rel dev
+< 1e-4, max 9e-4 at kz9; digamma dictionary devs 1e-5..2.4e-3,
+bar 0.02) + L4 the alpha composition closes (alpha_pair 3.341
+vs alpha_full 3.332, diff 0.008; composed 3.333, diff 0.007;
+42-only 3.059 == r286 3.06); kernel side law-grade, not
+closed-form)
++ PAIR_WORLD_COMPLETE(union {PR >= 3.0} u {kappa_int >= 1}:
+dead 4/4, live spared on both -- with the HONEST STRUCTURE: the
+PR clause ALONE fails (at their OWN N_w the dead worlds are
+also concentrated: EPST 2.54 / SCR 2.08 / SMOOTH 1.80 / HL2
+2.92 < 3.0; the r338 'PR 5-10 diffuse' numbers live at the
+CROSSING degrees, reproduced here as 7.02/9.72/4.97/8.29 ==
+r284) while the KAPPA_INT CLAUSE ALONE IS WORLD-COMPLETE:
+EPST 1794 / SCR 8.509e6 (== r334 records at 5 percent) /
+SMOOTH 2.193 / HL2 1964 (FIRST evaluation on SMOOTH + HL2 --
+the U2 gap closed) all >= 1, live MAIN/TWIN 0.999567 < 1)
++ LADDER_TABLE(69 rows printed in S3; pair == folds (2, 4) on
+69/69; pair mass 0.9352..0.9994 (min at kz59), PR 1.61..1.94 on
+the 57; r_det = 1 - c^2/pq spans 1.156e-2 (w9) .. 4.99e-6
+(kz95) on the 57 and reaches 1.60e-6 at kz127; R2 cohort
+medians core42 0.205 / ext15 0.188 / ext3B 0.437 / ext3A 0.557
+-- the 2x2 reproduction is family-graded, not uniform: the
+r338 core band (0.12, 0.40) holds in the median on the 57 but
+the fresh deep family sits at 0.44..0.56)
++ ALPHA_KILL(slopes vs log N_w on the 57 (halves curvature |
+prior): p -0.754 (+0.305 | -0.71), q -0.645 (+0.299), c -0.697
+(+0.308 | -0.66), r_det -2.624 (-0.767, CURVED -- the honest
+caveat), m2 -3.341 (-0.492), margin -3.332 (-0.347 | -3.13
+/tmp; 42-only 3.059 == r286 3.06 -- the 57-family fit steepens
+with the deep extension, consistent with the r286 curvature
+finding); the composition alpha_pair = a_p + a_q + rho_r -
+a_(p+q) closes to 0.007; THE OPEN ANALYTIC REMAINDER is rho_r
+= 2.624: the cancellation exponent of the determinant reserve
+has NO source derivation yet -- the concretized specialist
+question)
++ GAP_CENSUS(the R343 material, measured: rest margin
+1 - lambda_rest decays at slope -3.276 (parallel to the full
+margin, w9 offset 21.9x) while the DRESSED pair reserve r'_det
+is FLAT (slope +0.018, w9 value 0.303) -- the Schur-dressed
+determinant condition does NOT degrade with depth: the entire
+decay lives in the bare pair, and a full L* theorem needs
+exactly (i) the rest-block bound and (ii) an O(1) dressed
+reserve, both now measured coordinates)
++ EXT3_CENSUS(EXT3_FAMILY_BREAK([56]): kz56 has R2 = 1.836 >
+1.5 (m2 5.80e-8 vs margin 2.05e-8) -- the same anchor that was
+the r329 quiet outlier; kz58 R2 = 1.100 is the runner-up; the
+2x2 block still reproduces the margin ORDER on both, but the
+r338 uniformity reading does not extend to the small-gap
+family unmodified -- the r329 lesson, measured again)
++ TWIN_LEDGER(pair scalars dev <= 1.0e-8, bar 1e-3; dose-zero
+identity BITWISE)
++ MUSTFAIL_LEDGER(m1 undressed-c breaks by 2.4e+05 >= 0.1; m2
+AST-FLAGGED REC_LAM; m3 AST-FLAGGED + toy 2.50 != 3.13; m4
+AST-FLAGGED + toy 3.45 != 3.0; m5 wrong-pair mass 0.0000 <
+0.5 vs sealed pair 0.9970; constructor scopes + fragment audit
+CLEAN).
+Key numbers.  W9: pair folds (2, 4), d1 = 0.970014 (== r284
+diag max), d2 = 0.964904, c = 0.032252, r_det = 1.1561e-2, m2
+= 1.8749e-4 vs margin 1.6752e-4 (R2 0.119); Schur: lambda_rest
+0.996338 (rest margin 3.66e-3 = 21.9x margin), dressed (d1',
+d2', c') = (0.999154, 0.998710, 0.000872), r'_det = 0.3029;
+layer shares at folds 2/4 (d_A, d_P, first-atom tent term):
+(-1.796, -8.279, -0.692) / (-1.016, -1.714, +0.004) -- the
+fold-2 nu weight is 2/3 prime-comb tail (of which the n = 2
+tent term is 8 percent) + 1/3 archimedean, both in closed
+form; v_pred max rel dev 9e-4.  MP WARDS: d/c devs 4.3e-14 ..
+8.7e-11 (bars 1e-9/1e-8), m2 devs 1.4e-10 (w9) .. 1.9e-4
+(kz130, bar 1e-3); w9 staffel dps 30/45 dev 0.0.  KERNEL
+GROWTH (halves log-slopes early/late at the binding atom):
+kz18 (0.829, 0.476), kz9 (0.660, 0.608), kz52 (0.885, 0.378),
+kz119 (1.007, 0.339), kz42 (0.911, 0.388), kz130 (1.015,
+0.336) -- the LATE-window slope converges to ~0.34..0.39 on
+the deep rungs: the r285 sub-classical 0.38 is the deep-rung
+late-window growth, now a six-rung census.  EXT3 margins (f64,
+first L*-lane evaluation of the r329 anchors): all positive,
+min 4.20e-9 (kz127); the r286 42-only power law predicts
+~5e-8 at N_w 2577 vs measured 4.9e-9 -- the deep family
+steepens, honest out-of-sample census.  HONEST NEGATIVES: (1)
+PR alone is NOT world-complete -- concentration per se does
+not separate (SCR even has pair mass 0.922 at its own N_w);
+what separates is whether the pair block crosses 1, i.e. the
+capacity clause; (2) r_det is halves-CURVED (-0.767): the
+cancellation exponent 2.624 is a fit over a curved family, not
+a clean power; (3) kz56 breaks the R2 band; (4) the kernel
+side (why v_k K_N -> 1 with deficit ~N^-0.7 at the hard edge)
+remains without closed form -- with (2) it forms the
+specialist package: (q1) backward-CS for nu-dressed CD kernels
+at hard-edge atoms (why c tracks sqrt(pq) to 1e-2..1e-6), (q2)
+the sub-classical Christoffel growth 0.38 at shallow-edge
+atoms, (q3) the resolution paradox (degree N_w resolves the
+pair yet the dressed reserve stays O(1)).  R343 SKETCH
+(PRIME.LSTAR.PAIR_COUPLING.01): promote the measured Schur
+coordinates to a contract -- (i) rest-block condition
+lambda_rest < 1 with its own margin law (slope -3.28, offset
+~20x), (ii) the dressed pair reserve r'_det (FLAT ~0.3) as the
+O(1) certificate candidate, (iii) the coupling column C
+(2 x (S_- - 2)) and its (I - D)^{-1} dressing as the object a
+bound must control; kill = an analytic O(1) lower bound on
+r'_det or its refutation on a fresh family.  Runtime 214.6 /
+212.3 s record, 0.4 s smoke; deterministic, run1/run2
+byte-identical up to WALL.  AMENDMENTS AFTER FREEZE: the two
+disclosed calibration amendments a1/a2 (numerics
+normalizations, above) and this record-table insertion --
+nothing else.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
@@ -369,7 +499,7 @@ V_BAR = 0.10
 DIGAMMA_BAR = 0.02
 PRIME_CF_BAR = 1.0e-10
 LAYER_BAR = 1.0e-12
-DET_ID_BAR = 1.0e-10
+DET_ID_BAR = 1.0e-12   # amendment a1: residual / (pq + c^2)
 INTERLACE_TOL = 1.0e-9
 SCHUR_BAR = 1.0e-6
 ALPHA_TOL = 0.5
@@ -660,8 +790,11 @@ def build_rung(kz):
     w1 = W[:, -1]
     pmass = float(w1[i1] ** 2 + w1[i2] ** 2)
     pr = float(1.0 / np.sum(w1 ** 4))
+    # amendment a1 (disclosed): the identity residual is measured
+    # against the NATURAL input scale pq + c^2 (backward-error
+    # honest), not against the cancelled difference pq - c^2
     det_dev = abs((1.0 - lam2) * (1.0 - lam2m) - (p * q - c * c)) \
-        / max(abs(p * q - c * c), 1e-300)
+        / max(p * q + c * c, 1e-300)
     Ad, lam_rest, (s_r, ld_r), (s_f, ld_f) = schur_dress(E, i1, i2)
     d1p, d2p, cp = float(Ad[0, 0]), float(Ad[1, 1]), \
         float(0.5 * (Ad[0, 1] + Ad[1, 0]))
@@ -1183,12 +1316,14 @@ def main():
                         abs(R["d2"] - d2m) / abs(d2m))
             dev_c = abs(R["c"] - cm) / abs(cm)
             dev_m2 = abs(R["m2"] - m2m) / max(abs(m2m), 1e-300)
-            if kz in EXT3_KZ_B + EXT3_KZ_A:
-                bar_dc, bar_m2 = MP_DC_EXT3, MP_M2_EXT3
-            elif kz in EXT15_KZ:
-                bar_dc, bar_m2 = MP_DC_CORE, MP_M2_EXT
-            else:
-                bar_dc, bar_m2 = MP_DC_CORE, MP_M2_CORE
+            # amendment a2 (disclosed): the m2 ward bar scales
+            # with DEPTH (the s3 sizing logic), not cohort --
+            # 1e-6 for N_w <= 400, 1e-5 to 1500, 1e-3 beyond
+            bar_dc = MP_DC_EXT3 if kz in EXT3_KZ_B + EXT3_KZ_A \
+                else MP_DC_CORE
+            Nw_ = R["Nw"]
+            bar_m2 = MP_M2_CORE if Nw_ <= 400 else (
+                MP_M2_EXT if Nw_ <= 1500 else MP_M2_EXT3)
             ok_mp = ok_mp and dev_d <= bar_dc \
                 and dev_c <= bar_dc and dev_m2 <= bar_m2
             if kz == 9:
