@@ -3041,6 +3041,61 @@ sub-classical 0.38 confirmed as the deep-rung late-window
 growth) stays without closed form.  Experiments-side, NO ledger
 row, NO L\* claim, NO RH CLAIM.
 
+**The dressed pair reserve under fire (r343, the r342 O(1)
+certificate candidate: analytic lower bound or refutation).**
+`pair_coupling_probe.py` (38/38, SPEC_SHA `9ffc2705f326d625`
+final with record, freeze `a24718fcb8c72f85`, two-commit
+protocol: pre-freeze `e652071f`, record `95fcdcae`) put the
+r342 Schur coordinates under fire.  **The exact spine:** the
+resolvent-correlation identity `r'_det = 1 − M₁₂²/(M₁₁M₂₂)`
+with M = the pair block of `(I−E)^{-1}` (gated per rung against
+the independent full-inverse route + EXACT-Fractions wards on
+the r334 rational instances, incl. the exact leading-minors
+criterion for `λ_rest < 1`), and the exact spectral
+decomposition of the dressing over the rest eigenmodes — the
+contract's formula `r'_det = f(bare scalars, coupling vectors)`
+measured per rung.  **Verdict `DRESSED_RESERVE_DECAYS(soft:
+curvature clause)` — read precisely:** every HARD kill clause
+misses (slope +0.018 dead flat; the 12 EXT3 rows — genuinely
+BLIND, their dressed columns were never printed in r342 —
+12/12 in the 0.5-decade band, incl. kz56 whose dressed reserve
+0.1605 is flat while its bare R2 breaks the band: the dressing
+absorbs exactly the Klein-gap family effect; 6 fresh EXT4
+windows at N_w 2656…3181 — the deepest L\*-lane windows ever
+measured, sealed source-pure selection under the family domain
+cap z² ≤ 400000 — 6/6 in band, margins positive), but the
+sealed FLAT clause fails on the halves-curvature bar (−0.426 >
+0.35, a bar inherited from the decay-law convention applied to
+a flat O(1) column with ~×2 scatter — sealed before sight,
+applied honestly): the candidate is neither refuted on any
+family nor certified flat.  **The structural findings:** (i)
+the dressing eats bare reserve and coupling in near-exact
+proportion (Δd₁/p and Δc/c → 1.000/−1.000; ρ' pinned ~0.846;
+`m2'/margin` 1.0003…1.031 — the dressed 2×2 is a near-exact
+λ_max carrier); (ii) **the bound autopsy closes Leg C
+honestly**: the theorem-grade triangle/Cauchy–Schwarz/operator
+chain certifies ZERO of 75 rows — the dressing works by the
+SIGNED cancellation Δc ≈ −c (overshoot 73× at w9, to 2.4e11 at
+depth): an O(1) bound must control the signed cancellation —
+the concretized specialist question; (iii) `r'_det` is a gated
+**TOP-2 spectral object** (median top-2 dev 0.063, K_res ≤ 3
+on 75/75): its flat content IS the flat gap ratio
+`g21 = (1−λ₂)/(1−λ₁)` (median 8.2; kz56 at 16.0 with the
+reserve unmoved) — the R344 coordinate; (iv) `λ_rest` alone
+separates the six instrumented worlds (dead ≥ 1, live 0.9963;
+Schur equivalence 6/6 exact; slope −3.276 == r342 bit-near,
+offset ~21×); (v) **`PEELING_STRUCTURE_FOUND`**: the rest block
+is again a shallow-edge two-atom extremal (median rest-pair
+mass 0.9902; level-2 reserve ≥ 0.23 on the 57), the w9 cascade
+peels (2,4)→(6,8)→(10,12) with monotone margins — concentration
+breaks at level 4: a level-2 recursion statement, not an
+induction; (vi) RESTATEMENT does not fire (median shadow dev
+1.0): the dressing is real content.  Honest negatives: the
+sealed flatness protocol needs a curvature-aware successor for
+O(1) columns (R344 protocol material, not retrofitted); the
+EXT4 rows are disclosed-seen, only EXT3 carried blind weight.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 **The path-weighted Bellman / Reverse-Hölder round (r341, the
 terminal main round after the r339 dictionary — the two-arm
 theorem candidate with path-probability weights instead of
@@ -3155,7 +3210,18 @@ remainder ρ_r = 2.624, and the union {PR ≥ 3} ∪ {κ_int ≥ 1} is
 the first measured world-complete criterion (κ_int alone
 suffices; SMOOTH 2.193 / HL2 1964 first evaluated); the Schur
 dressing names the R343 coupling-control coordinates (rest
-margin ∥ full margin, dressed reserve FLAT ~0.3); the L\*
+margin ∥ full margin, dressed reserve FLAT ~0.3); r343 then put
+the dressed reserve under fire — no family refutes it (EXT3
+blind 12/12 in band incl. the kz56 breaker, six fresh EXT4
+windows to N_w 3181 in band), but the sealed flatness clause
+fails on the halves-curvature bar, so the letter of record is
+`DRESSED_RESERVE_DECAYS(soft)`; the triangle/operator bound
+chain is measured DEAD on all 75 rows (the dressing is a signed
+cancellation Δc ≈ −c — the typed specialist question), `r'_det`
+is gated a TOP-2 spectral object (its flat content = the flat
+gap ratio g21 ~ 8), λ_rest alone separates the six worlds, and
+the rest block peels as a two-atom extremal again
+(`PEELING_STRUCTURE_FOUND`, level-2 grade); the L\*
 contract still [O]).  **Lean: 8 sorries, all typed** (the
 five window-local legacy sorries byte-identical — the two true
 WINDOW-LOCAL holes `lstar_subordination` +
