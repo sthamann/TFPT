@@ -2903,6 +2903,99 @@ arithmetic content lives in the calibrated constants).  The r324
 MEASURED composition stays the honest end state.
 Experiments-side, NO ledger row, NO RH CLAIM.
 
+**The density martingale and the moment dictionary (r339, the
+reviewer's reformulation of the terminal — transport of mass
+density through the fold genealogy instead of a maximum).**
+`fold_density_dictionary_probe.py` (36/36, SPEC_SHA
+`822d6bff564d88ba` final with record, freeze `a845041cdf866543`,
+two-commit protocol: pre-freeze `907ebfd1`, record `7863495f`;
+INDEPENDENT of r337 by the reviewer's verdict-reading rule — r337
+tested the RAW signed process, the density per remaining
+descendant is a martingale by algebra) built the canonical fold
+genealogy over the m final atoms `a_i = |PΔ_i|` (Leg 0 sealed
+BEFORE the freeze: the iterated r270 adjacent pairing —
+parameter-free, construction-canonical, position-contiguous;
+balanced bisection as sensitivity; a protocol mutant proves the
+audit bites).  **The exact layer stands at theorem grade**:
+`X_k = d(V_k)/d(root)` is a nonnegative martingale from mass
+conservation alone (Fractions BIT-EQUAL on w9+w13, 76 nodes;
+per-node identity 2.2e-16 on 81 live worlds; cubic recursion and
+envelope exact; Jensen drift ≤ 0 exact), and the moment
+dictionary `E[X_∞²] == m·M₂`, `E[X_∞³] == m²·M₃` is exact
+against the r324 chain — the terminal target **is**
+`E[X_∞³] ≤ C(log m)^A`, and the banked r306 C₂ = 1.069 (0/57,
+re-gated) already certifies A = 2 on the 57-rung set.  **Verdict
+`LOCAL_INFLATION_SUPERCRITICAL`** — neither Γ budget certifies:
+the full worst-case budget `W_F = Π_k max_v Γ(v)` violates
+44/43/40 of 51 at a = 1/2/3 (C_F 39.91/8.98/2.02), the good
+tree (heavy jumps max R_c > 3/2 removed) violates 33/20/11;
+e(W_F) = +0.956 DECIDED supercritical.  **The gap is the
+finding**: the true expectation e(m²M₃) = +0.112 grows 8×
+slower than the worst-case budget — Γ_max is dominated by
+near-leaf degenerate pairs (per-level med profile 1.05 → 3.99
+against the balanced-pair ceiling 4; the deep half carries med
+0.712 of log W_F) where hardly any path mass sits: the concrete
+R341 instruction is that the Bellman argument must weight Γ by
+path probability, not take per-level maxima.  The Γ_max census
+is world-blind (SCRAMBLE 51.76 below ladder med 223.86 — honest
+negative) but the dictionary itself separates (SCRAMBLE m²M₃
+20.59 vs ladder med 6.22); the worst W_F violators are the EXT3
+deep anchors (kz42 at 18.29×) — the r337 deep-anchor margin
+recurs; the drift is strictly ≤ 0 but NOT period-4 (r4c 0.957
+vs bar 0.5 — the clause-5 coboundary subtraction does not
+apply).  kz53 is the one spike with its Γ argmax mid-tree
+(level 2, 4.303 — the r324 single-heavy-scale event as an early
+heavy fold); every mid-band rung inflates at the last fold
+level.  The r324 MEASURED composition stays the honest end
+state.  Experiments-side, NO ledger row, NO RH CLAIM.
+
+**The weighted Cauchy–Binet transport (r340, the new L\* base
+architecture after the capping of capacity and parity: transport
+instead of norm bound).**  `cauchybinet_hall_probe.py` (26/26,
+SPEC_SHA `86587b4895e95689` final with record, freeze
+`82c4d1839386a853`, two-commit protocol: pre-freeze `3736af89`,
+record in the same change) re-read L\* through the exact signed
+Cauchy–Binet split `D_n = det H_n(μ̃) = Σ_E W − Σ_O W` with
+`W(I) = (Π|w_i|)·Δ(x_I)²` (Sylvester dictionary gated: `D_n > 0
+∀ n ≤ N_w` IS L\*), built the sealed canonical fold-exchange
+graph (companions = nearest free μ atoms per side, step cap 2;
+exact edge ratio `W(J)/W(I) = (|w_x|/|w_y|)·Π((x−z)/(y−z))²`
+bit-equal on 192 small-model edges, w9 log ward 2.3e-14), and
+measured the transport by exact integer max-flow plus FULL
+`2^|O|−1` Hall-cut enumeration on exact small models.  **Verdict
+`CUT_REDUCTION_FAIL` + `SOURCE_EXCHANGE_INSUFFICIENT` +
+`TRANSPORT_WORLD_BLIND` + `NEW_COORDINATE`** — the round's
+central structural hypothesis (minimal weighted Hall cuts =
+Gale-order interval ideals, which would have re-read 1 − κ_int
+as a dual Hall slack) is **refuted at the smallest exact scale**:
+5 of 9 fully enumerated loci carry NON-ideal argmin cuts
+(antichain sections and mid-order singletons pinned to the
+shallow negative atoms; the principal-ideal family misses the
+exact minimum by 1.17×–10.2×, growing toward half-filling).
+Coverage itself is exact almost everywhere (TOY 2/2, F1 3/3,
+F2 4/4 with strict reserve `D_n > 0`), but on the PD instance I2
+the elementary edge set fails exactly at half-filling depth
+`n = N = 5` (deficiency 0.023).  The extremal test fails
+honestly: the W9EDGE binding cut carries only 3.86e-3 of its
+W-mass on configurations containing both r284 extremal atoms
+(folds 2/4) — the extremal pair is a spectral object, not the
+Hall-cut carrier.  **The structural finding: the shallow-edge
+prefix of EVERY world, MAIN included, is locally indefinite from
+n = 2 on its own configuration space** (W9EDGE D signs
++,−,−,−,+,+ at a resolved −9.7e-3 relative deficit; controls
+break at n = 1) — the full-window positivity is a GLOBAL rescue,
+not a local edge property, the flow-side mirror of r336
+`PARITY_WORLD_BLIND`; the ladder edge Hall slack is NEGATIVE on
+42/42 rungs (−0.13…−0.18) against uniformly positive margins — a
+new sign-opposite near-edge coordinate, not a restatement.  m4
+documents the r282 Kasteleyn boundary exactly (the sign gauge
+shifts `D_2` by exactly `2Σ_O = 1/3`).  Twin: identical cut form
+at 4.8e-8.  No R341 GO: the interval-Hall route to a quotable
+theorem does not open; banked are the exact Cauchy–Binet/Hall
+machinery, the local-edge indefiniteness of every world, and the
+sign-opposite edge coordinate.  Experiments-side, NO ledger row,
+NO RH CLAIM.
+
 **Lane status after wave 13.**  **The terminal: the MEASURED
 composition is the end state of the route** (r324
 `PILEUP_GROWS_SUBCRITICAL` +0.172 < 0.224 record / 0.188
@@ -2916,7 +3009,14 @@ r327 anatomy SOURCE: the heaviest group is exactly ONE β/ω fold
 pair on all 65 rungs, kz53 = one bulk/window coincidence at
 88.8 %; **the named direction is the coincidence geometry** —
 WHERE can the single heavy coincidence sit, a source-geometry
-question, not group count or multiplicity).  **The extraction:
+question, not group count or multiplicity; r337 probed the
+reviewer's martingale second route — structure present, arm too
+weak; r339 then re-formulated the terminal as the density
+martingale + moment dictionary: the exact layer is theorem-grade
+and the target reads `E[X_∞³] ≤ C(log m)^A`, but the worst-case
+Γ budget is supercritical — `LOCAL_INFLATION_SUPERCRITICAL` —
+so the named R341 form is Bellman with path-probability
+weights, not per-level maxima).  **The extraction:
 the architecture stands** (r325 `ELEMENTWISE_STABILIZATION_GO` +
 r326 `RH/Elementwise.lean`: `sourceExact_buildPrimeWindow` PROVED,
 the comb stabilization elementwise PROVED,
@@ -2936,7 +3036,13 @@ pre-authorized arm, the Chebyshev T+H parity section: the exact
 parity-section coordinate is certified and banked, but kill test
 2 fails — `PARITY_WORLD_BLIND` — and the blind predictor is
 ordering-grade only, so the parity lane does not stay open as a
-proof arm either; the L\* contract still [O]).  **Lean: 8 sorries, all typed** (the
+proof arm either; r340 then probed the reviewer's post-cap
+transport architecture — the weighted Cauchy–Binet/Hall
+transport, no norm bound — and the interval-Hall reduction is
+refuted on exact small models (`CUT_REDUCTION_FAIL`), with the
+structural finding that the shallow-edge prefix of every world,
+MAIN included, is locally indefinite: the wall is a global
+rescue, not a local edge property; the L\* contract still [O]).  **Lean: 8 sorries, all typed** (the
 five window-local legacy sorries byte-identical — the two true
 WINDOW-LOCAL holes `lstar_subordination` +
 `terminal_positive_main` unchanged — plus the three named Level-C
