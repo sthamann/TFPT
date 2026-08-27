@@ -32,13 +32,19 @@ SOURCE-COMPUTABLE from the three-term recursion coefficients (a_n,
 b_n) of the mu-chain via the CD endpoint / confluent formulas
 (gated against the Gram route on the sealed sample); (ii) the exact
 slope BOOKKEEPING: from the pointwise identities c = sqrt(v1 v2)
-K12, d_k = v_k K_kk, c^2 = (1 - r_det) p q the fitted-slope
-bookkeeping a_c == (a_v1 + a_v2)/2 + a_K12 (BK1), s_K11 == -s_v1 +
-s_d1 (BK2, the Christoffel saturation v K -> 1), a_c == (a_p +
-a_q)/2 + (backward-CS correction) (BK3), each at the fit-
-non-additivity bar; the WEIGHT slopes replaced by the r342
-digamma/tent dictionary slopes (a_v == a_vpred at 0.02: the weight
-side of the kernel bookkeeping is dictionary-grade); (iii) sealed
+K12, d_k = v_k K_kk, c^2 = (1 - r_det) p q the bookkeeping BK1
+(CALIBRATION AMENDMENT a1, disclosed in the record chronology:
+measured at the POINTWISE dictionary-reconstruction scale max_k
+|c/(sqrt(vpred1 vpred2) K12) - 1| <= RECON_BAR 1e-2 -- the
+source-side content 'c is reconstructed from dictionary weights x
+recursion-computable kernel'; the after-fit slope sum |s_c -
+(1/2(s_v1 + s_v2) + s_K12)| is printed as CENSUS, the r347-C1
+non-additivity artifact class on strongly curved weight columns),
+s_K11 == -s_v1 + s_d1 (BK2, the Christoffel saturation v K -> 1,
+bar 0.1), a_c == (a_p + a_q)/2 + (backward-CS correction) (BK3,
+bar 0.1); the WEIGHT slopes replaced by the r342 digamma/tent
+dictionary slopes (a_v == a_vpred at 0.02: the weight side of the
+kernel bookkeeping is dictionary-grade); (iii) sealed
 CANDIDATE adjudication for the kernel exponents: per target column
 (a_p, a_q as the Christoffel-deficit laws; g_K12, a_kappa as the
 cross-kernel laws) a FROZEN candidate list (simple rationals, the
@@ -50,11 +56,14 @@ the relation candidates REL1 (perfect correlation s_K12 == (s_K11 +
 s_K22)/2, the null expected to FAIL by the r_det -> 0 law) and REL2
 (square-root decorrelation s_K12 == (s_K11 + s_K22)/4, sized by the
 disclosed two-point scoping ratio 0.52).  (Leg B) ROUTE A, THE
-DIRECT ALPHA BALANCE: alpha_bal = -(1/2 (s_vpred1 + s_vpred2) +
-s_K12 + s_cpc) -- the margin exponent recomposed from DICTIONARY
-weight slopes + the KERNEL cross slope + the PINNING cancellation
-slope (anti-circular: no margin column enters), gated against
-alpha_meas at 0.1; plus the r342 composition re-gate alpha == a_p +
+DIRECT ALPHA BALANCE (CALIBRATION AMENDMENT a2, disclosed:
+COMPOSE-THEN-FIT -- alpha_bal = -TS-slope of the pointwise
+composed source column sqrt(vpred1 vpred2) |K12| (|c'|/|c|), the
+same three typed blocks DICTIONARY weights + KERNEL cross value +
+PINNING cancellation composed per rung BEFORE the fit; exact on
+exact powers and free of the after-fit Theil-Sen non-additivity,
+which is printed as census; anti-circular: no margin column
+enters), gated against alpha_meas at 0.1; plus the r342 composition re-gate alpha == a_p +
 a_q + rho_r - a_(p+q) at 0.1 and its CANDIDATE image (first-hit
 candidates for a_p, a_q with the measured rho_r as the single
 census member).  (Leg C) ROUTE B, THE PINNING THEOREM CANDIDATE:
@@ -207,7 +216,8 @@ record constants -- gates and m2/m5 only); P_BIND 0.38; EXT3_KZ_B
 (113, 111, 108); EXT4_NW (2656, 3181) (r343 sealed selections
 AS-IS); CD_KZ (18, 9, 52, 119, 42, 130) (= the r342 sample);
 CD_BAR 1e-6; SPLIT_BAR 1e-9; CPC_ID_BAR 1e-6; ID_BAR 1e-8;
-RDEF_BAR 1e-12; BOOK_BAR 0.1; DICT_SLOPE_BAR 0.02; CAND_BAR 0.05;
+RDEF_BAR 1e-12; BOOK_BAR 0.1; RECON_BAR 1e-2 (amendment a1);
+DICT_SLOPE_BAR 0.02; CAND_BAR 0.05;
 BAL_BAR 0.1; COMP_BAR 0.1; BRIDGE_DEV_BAR 0.10; DSHADOW_MED_BAR
 0.35; DEC_CURV_BAR 0.35; DEC_EXT3_MIN 10; DEC_EXT4_LOW 1;
 DELTA0_MIN 0.3; TWINLAW_BAR 0.05; CAND_P (3/4, 0.76, 0.62, 1.0);
@@ -317,6 +327,169 @@ measured discriminator on eight instrumented worlds; no verdict
 claims L*, a bound mechanism, a derived 5/7, or RH progress in
 any direction.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze edit besides the two DISCLOSED calibration
+amendments, which IS the protocol; TWO-COMMIT PROTOCOL EXECUTED:
+the sealed spec above was committed as "r350 pre-freeze"
+(e3f53e1a, SPEC_SHA freeze f7d622d8e975b265) BEFORE the first
+full evaluation; chronology honest: smoke pass 1 = 33/33 (0.2 s)
+at the sealed rules, pass 2 byte-identical; pre-freeze commit
+e3f53e1a; calibration pass 1 = FIRST full evaluation = 30/33
+(66.9 s) with TWO instrument findings: (f1) the sealed BK1
+after-fit slope sum |s_c - (1/2(s_v1 + s_v2) + s_K12)| measured
+0.1373 > 0.1 and (f2) the route-A after-fit balance measured
+0.170 > 0.1 -- BOTH are the r347-C1 Theil-Sen non-additivity
+artifact class, now on the STRONGLY curved weight columns (v1
+fitted -1.791 vs two-point -1.18; the pointwise identities hold
+at 1e-16 and the r342 a1 precedent applies: the identity is
+true, the measurement scale was wrong).  DISCLOSED CALIBRATION
+AMENDMENTS (r342-a1 class, measurement-scale normalizations
+only; NO adjudication bar, band, family, candidate list or
+verdict rule moved; the after-fit sums stay printed as CENSUS):
+(a1) BK1 is measured at the POINTWISE dictionary-reconstruction
+scale max_k |c/(sqrt(vp1 vp2) K12) - 1| <= RECON_BAR 1e-2 (the
+source-side content); (a2) the route-A balance is measured
+COMPOSE-THEN-FIT (the same three typed blocks composed per rung
+before the ONE fit -- exact on exact powers, free of the
+artifact).  Smoke re-pass 33/33; calibration pass 2 = 33/33
+(62.9 s, amended SPEC_SHA 6814e776b1939d8e); record run1 =
+33/33 (62.0 s), run2 = 33/33 (61.8 s), byte-identical up to
+WALL and identical to calibration pass 2):
+MAIN VERDICT = ALPHA_SOURCE_CLOSED (CANDIDATE-LAW GRADE) -- the
+exponent chain of the L* margin closes source-side with ONE
+census member: alpha == cand_a_p + cand_a_q + rho_r - a_(p+q) =
+3/4 + 2/3 + 2.624 - 0.690 = 3.352 vs alpha_meas 3.332 (dev
+0.019 <= 0.1); THE BLOCKS TYPED: the WEIGHTS are WOERTERBUCH
+(the r342 digamma/tent dictionary carries the across-ladder
+weight LAWS, not only the values: |s_v - s_vpred| = 0.0000 /
+0.0000 at slopes -1.791 / -1.683), the DEFICIT LAWS are
+CANDIDATE-LAW (a_p 0.7539 hits [3/4, 2 x 0.38] with clauses
+CLEAN (curv +0.305, EXT3 11/12 low 0, EXT4 5/6 low 0); a_q
+0.6446 hits [2/3, 1 - 0.38] CLEAN (curv +0.299, EXT3 11/12,
+EXT4 6/6); a_kappa 0.7111 hits [2/3, 3/4] CLEAN -- every
+ambiguity printed: the 57-window ladder cannot separate the
+candidate families, a hit is NOT an identification), the
+PINNING is THEOREM-grade (below), rho_r = 2.624 is THE single
+census member (halves-curved -0.767 since r342, honest);
+ROUTE A closes independently at the same grade: alpha_bal
+(compose-then-fit, a2) = -slope(sqrt(vp1 vp2)[DICT] x
+|K12|[KERNEL] x c'/c[PINNING]) = 3.401 vs 3.332 (dev 0.068 <=
+0.1; the after-fit sum 3.503 / non-additivity 0.170 printed as
+census); the r342 composition re-gates at dev 0.001
++ PINNING_THEOREM -- THE NEAR-CANCELLATION IS ALGEBRAIC
+SELF-CONSISTENCY: on the top-2 truncated resolvent block the
+identities (i) m2'_2 == margin EXACTLY (both dressed deficits
+are (1 - lambda_1), (1 - lambda_2): the bridge is IDENTICALLY 1
+in the truncation), (ii) p'q' - c'^2 == margin^2 g21/Dt^2 and
+(iii) c' == margin x G hold EXACT IN FRACTIONS on both sealed
+models (A: 121/250, 79/250, 72/250 with det id 7/100; B:
+457/845, 219/845, 24/169 with det id 3/25 and m2' == 1/5 ==
+margin) -- hence Delta c == -c + margin x G: the r348 twin
+near-cancellation is FORCED by the resolvent equation; LIVE
+certified census: bridge max |m2'/margin - 1| = 0.0605 <= 0.10
+(slope +0.0001), det-shadow median 0.0731 <= 0.35 (max 0.80,
+truncation-limited, the r348 weak-rung caveat stands),
+CURV_FLAT re-gates 3/3 (p'/m -0.056 CI [-0.90, +0.74] 0 out;
+q'/m +0.016 0/75; |c'|/m -0.025 0/75); PINNED COROLLARY:
+slope(y0 - rho_hi) == slope(c'/c) == -(alpha - a_c) (residual
+0.033) -- the inter-order near-cancellation of Leg D is pinned
+algebraically
++ DELTA0_CANDIDATE(delta_0 = 0.401 re-gates bit-near (curv
++0.094, EXT3 12/12 low 0, EXT4 6/6 low 0); candidate hits
+[0.38, 2/5] -- BOTH sealed candidates hit at bar 0.05 and are
+closer than the bar to each other: the r285 kernel exponent
+0.38 and the rational 2/5 are NOT separated by this ladder,
+said so; twin ward |s_y0 - s_rhi| = 0.0087 <= 0.05)
++ BOOKKEEPING_LEDGER(BK1 (a1) pointwise dictionary
+reconstruction max 5.52e-04 (bar 1e-2); after-fit slope sum
+0.1373 CENSUS; BK2 Christoffel saturation |s_K11 + s_v1 - s_d1|
+= 0.0184 / |s_K22 + s_v2 - s_d2| = 0.0155 <= 0.1 -- THE
+DIAGONAL KERNEL GROWTHS ARE THE RECIPROCAL WEIGHT LAWS (v K ->
+1); BK3 backward-CS 0.0016 <= 0.1 with s_cc +0.0004: c^2 tracks
+pq with the vanishing reserve -- a_c == (a_p + a_q)/2 to 0.002)
++ KERNEL_LEDGER(THE NEW SLOPES (this round's numbers, 57-fit):
+s_v1 -1.791 / s_v2 -1.683 (dictionary-grade), g_K11 +1.786 /
+g_K22 +1.683 (== reciprocal weights via BK2), g_K12 +0.902
+(census: curv +0.500, EXT3 5/12 -- the ONE dirty column),
+a_kappa 0.711 (CLEAN, hits [2/3, 3/4]); CD ward max 1.2e-10 on
+(18, 9, 52, 119, 42, 130) (bar 1e-6): K_N at the pair atoms IS
+source-computable from the mu-chain recursion; REL1 (perfect
+correlation) FAILS by 0.832 as expected -- the cross-kernel
+does NOT track the diagonal geometric mean; REL2 (sqrt
+decorrelation, factor 1/4) HITS at dev 0.0352 but the K12
+clauses are dirty -- census, not law)
++ WORLD_LEDGER(lambda_rest separation re-gated 4/4 dead >= 1 vs
+live 2/2 < 1; kappa_int == records at 5 percent (EPST 1793.99 /
+SCR 8.509e6 / SMOOTH 2.193 / HL2 1964.35, live 0.999567); THE
+Y0 COLUMN (census, no bar): live +0.4213/+0.4213 vs dead EPST
++221 / SCR +1.06e6 / SMOOTH -0.758 / HL2 +3.05e3, DIR +3.98e37
+/ ABS +1.43e5 -- y0 separates live from dead BY SIZE OR SIGN on
+6/6 std worlds (the r348 rho_0 column separated only 5/6:
+SMOOTH flips sign in the y0 coordinate -- by-catch, census);
+THE TWIN-PAIR TYPING: on every dead world the rho_hi series
+diverges -- the r348 twin slow laws are a live-world structure)
++ TWIN_LEDGER(kernel devs K11 7.5e-10, K22 2.8e-09, K12
+1.2e-08, kappa 1.4e-08, bar 1e-3; dose-zero identity BITWISE)
++ MUSTFAIL_LEDGER(m1 CD without b_{N-1} breaks by 1.2e+00 >=
+0.1 at w9 + 4.0e+00 on the toy; m2 AST-FLAGGED ALPHA_REC, toy
+0.664; m3 AST-FLAGGED slope_col_true + toy 0.5833 in NO sealed
+list; m4 double-counted weight share breaks by 1.100 ==
+|s_v1 + s_v2|/2 EXACTLY; m5 AST-FLAGGED DELTA_REC + planted
+3.332 differs from the sealed toy 3.25 by construction;
+constructor scopes + fragment audit CLEAN).
+Key numbers.  W9: v1 4.023172e-6, v2 4.360131e-6 (v_pred
+4.023992e-6 / 4.364056e-6), K11 2.411068e5, K22 2.213016e5,
+K12 7.700682e3, kappa 3.333744e-2, CD ward 1.6e-13, det shadow
+0.0574, order-0 split 4.6e-15, c'/c bookkeeping 1.0e-13 -- all
+== the s1 scoping bit-near; the r347/r348 anchor rows
+reproduced (bridge 1.0029, g21 7.5175, K_res 2, rho_0 0.5787,
+y0 0.4213, rho_hi 0.3943, pinning ratios 5.0506/7.7025/5.2075).
+LADDER: 75 rows, every f64 margin positive; FIT ANCHORS margin
+-3.332 / c -0.697 / p -0.754 / q -0.645 / cpc -2.668 / y0
+-0.401 / rhi -0.393 all == the disclosed priors at tol 0.02;
+curvatures margin -0.347 / c +0.308 / cpc -0.189 / y0 +0.094 /
+rhi +0.080 at tol 0.03; cohort medians rho_0 0.8392 / bridge
+1.0058 == r348/r343.  HONEST NEGATIVES: (1) ALPHA_SOURCE_CLOSED
+is CANDIDATE-LAW grade, never an asymptotic derivation: a_p =
+3/4 (dev 0.004) and a_q = 2/3 (dev 0.022) are sealed-list hits
+on 57 finite windows with the ambiguity UNRESOLVED (3/4 vs 2 x
+0.38 at distance 0.01; 2/3 vs 1 - 0.38 at 0.047 -- both inside
+the bar); the asymptotic why stays open; (2) g_K12 = +0.902 is
+the honest kernel-side rest: no sealed candidate hits and its
+clauses are dirty (curv +0.500, EXT3 5/12) -- the CROSS-kernel
+growth law resists where the diagonal growths reduce to the
+dictionary; REL2 (g_K12 == (g_K11 + g_K22)/4) hits at 0.035
+but stays census for the same reason; (3) rho_r = 2.624
+remains the single census member of the composition (halves-
+curved -0.767 since r342 -- the r338 q1 backward-CS specialist
+question in its sharpest form: WHY does the dressed reserve
+cancel at this rate); (4) the two calibration amendments are
+disclosed above -- the after-fit slope sums (0.137 / 0.170)
+are REAL instrument numbers, printed as census: Theil-Sen
+slopes are not additive over the strongly curved weight
+columns, the r347-C1 artifact restated louder; (5) the
+det-shadow max 0.80 (weak rungs) restates the r348
+WEAK_FAMILY_STRAINED caveat: K = 2 truncation is a median
+instrument, not a per-row one; (6) delta_0's two candidates
+(0.38, 2/5) are mutually unresolvable at this depth -- the
+y0 law is measured, its source stays open.  R351 SKETCH
+(candidates, not commitments): (i) the g_K12 lane -- the ONE
+dirty column: a deeper ladder or a second-kind instrument for
+the cross-kernel growth at discrete arch-rim atoms (the honest
+kernel rest after this round), plus the candidate-family
+separation for a_p/a_q (3/4-vs-0.76 needs |slope| bars ~0.005:
+out of reach on 57 windows, typed for the specialists); (ii)
+the rho_r source anatomy -- the last census member of the
+closed chain (the r338 q1 question, now THE single non-
+dictionary, non-theorem, non-candidate block); (iii) the
+GRH-faithful Dirichlet frame (U5) stays the named separate
+follow-up.  Runtime 62.0 / 61.8 s record, 62.9 s calibration
+pass 2, 66.9 s calibration pass 1, 0.2 s smoke; deterministic,
+run1/run2 byte-identical up to WALL.  AMENDMENTS AFTER FREEZE:
+the two disclosed calibration amendments a1/a2 (measurement-
+scale normalizations, above) and this record-table insertion
+-- nothing else.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
@@ -405,6 +578,7 @@ CPC_ID_BAR = 1.0e-6
 ID_BAR = 1.0e-8
 RDEF_BAR = 1.0e-12
 BOOK_BAR = 0.1
+RECON_BAR = 1.0e-2   # amendment a1: pointwise dict reconstruction
 DICT_SLOPE_BAR = 0.02
 CAND_BAR = 0.05
 BAL_BAR = 0.1
@@ -589,12 +763,20 @@ def det_shadow(margin, g21, a1, a2, b1, b2, ppr, qpr, cpr):
     return abs(lhs / rhs - 1.0)
 
 
-def slope_balance(s_vp1, s_vp2, s_k12, s_cpc):
-    """ROUTE A, the direct alpha balance: alpha_bal = -(1/2(s_vp1 +
-    s_vp2) + s_K12 + s_cpc) -- dictionary weight slopes + kernel
-    cross slope + pinning cancellation slope; consumes fitted
-    slopes only (anti-circular: no margin column enters)."""
-    return -(0.5 * (s_vp1 + s_vp2) + s_k12 + s_cpc)
+def slope_balance(vp1_col, vp2_col, k12_col, cpc_col, lnN):
+    """ROUTE A, the direct alpha balance (amendment a2, disclosed:
+    COMPOSE-THEN-FIT): alpha_bal = -TS-slope of the pointwise
+    composed source column sqrt(vp1 vp2) |K12| cpc -- dictionary
+    weights + kernel cross value + pinning cancellation composed
+    per rung BEFORE the fit (exact on exact powers, free of the
+    after-fit non-additivity); consumes measured columns only
+    (anti-circular: no margin column enters)."""
+    col = (np.sqrt(np.asarray(vp1_col, float)
+                   * np.asarray(vp2_col, float))
+           * np.abs(np.asarray(k12_col, float))
+           * np.asarray(cpc_col, float))
+    return -float(LM.ts_fit(np.asarray(lnN, float),
+                            np.log(col))[1])
 
 
 def cand_hits(target, cands, bar):
@@ -626,11 +808,17 @@ def mutant_cand_posthoc(slope_col_true):
     return round(abs(s) * 12.0) / 12.0
 
 
-def mutant_balance_doublecount(s_v1, s_v2, s_k12, s_cpc):
+def mutant_balance_doublecount(vp1_col, vp2_col, k12_col, cpc_col,
+                               lnN):
     """m4 MUST-FAIL: the balance with the DOUBLE-COUNTED weight
-    share (s_v1 + s_v2 instead of the half) -- must break the exact
-    toy balance by |s_v1 + s_v2|/2."""
-    return -((s_v1 + s_v2) + s_k12 + s_cpc)
+    share (v1 v2 instead of sqrt(v1 v2) in the composed column) --
+    must break the exact toy balance by |s_v1 + s_v2|/2."""
+    col = (np.asarray(vp1_col, float)
+           * np.asarray(vp2_col, float)
+           * np.abs(np.asarray(k12_col, float))
+           * np.asarray(cpc_col, float))
+    return -float(LM.ts_fit(np.asarray(lnN, float),
+                            np.log(col))[1])
 
 
 def mutant_pin_plant():
@@ -857,20 +1045,16 @@ def main():
     v2_t = 4e-6 * (Nt / TOY_N0) ** TOY_SV2
     K12_t = 8e3 * (Nt / TOY_N0) ** TOY_SK12
     cpc_t = 3e-2 * (Nt / TOY_N0) ** TOY_SCPC
-    sl_t = {}
-    for nm, col in (("v1", v1_t), ("v2", v2_t), ("K12", K12_t),
-                    ("cpc", cpc_t)):
-        sl_t[nm] = float(LM.ts_fit(lnNt, np.log(col))[1])
-    a_bal_t = slope_balance(sl_t["v1"], sl_t["v2"], sl_t["K12"],
-                            sl_t["cpc"])
+    a_bal_t = slope_balance(v1_t, v2_t, K12_t, cpc_t, lnNt)
     a_plant = -(0.5 * (TOY_SV1 + TOY_SV2) + TOY_SK12 + TOY_SCPC)
     check("G12-toy-balance-family", abs(a_bal_t - a_plant)
           <= 1e-9,
           "THE BALANCE TOY (planted s_v1 %.1f, s_v2 %.1f, s_K12 "
-          "%+.2f, s_cpc %.1f): alpha_bal = %.9f == the planted "
-          "alpha %.2f at 1e-9 -- the balance constructor recovers "
-          "the margin exponent from dictionary + kernel + pinning "
-          "slopes exactly on exact powers"
+          "%+.2f, s_cpc %.1f): alpha_bal (compose-then-fit, "
+          "amendment a2) = %.9f == the planted alpha %.2f at 1e-9 "
+          "-- the balance constructor recovers the margin "
+          "exponent from dictionary + kernel + pinning blocks "
+          "exactly on exact powers"
           % (TOY_SV1, TOY_SV2, TOY_SK12, TOY_SCPC, a_bal_t,
              a_plant))
     # (T4) instruments re-gate
@@ -1251,11 +1435,16 @@ def main():
                  laws["K11"]["slope"], laws["K22"]["slope"],
                  laws["K12"]["slope"], laws["kap"]["slope"],
                  laws["d1c"]["slope"], laws["d2c"]["slope"]))
-        # bookkeeping
-        bk1 = abs(laws["c"]["slope"]
-                  - (0.5 * (laws["v1c"]["slope"]
-                            + laws["v2c"]["slope"])
-                     + laws["K12"]["slope"]))
+        # bookkeeping (BK1 = amendment a1: pointwise dictionary
+        # reconstruction; the after-fit slope sum stays as census)
+        recon_max = max(
+            abs(math.sqrt((RT[k]["v1"] * RT[k]["v2"])
+                          / (KT[k]["vp1"] * KT[k]["vp2"])) - 1.0)
+            for k in fit_kz)
+        nadd1 = abs(laws["c"]["slope"]
+                    - (0.5 * (laws["v1c"]["slope"]
+                              + laws["v2c"]["slope"])
+                       + laws["K12"]["slope"]))
         bk2a = abs(laws["K11"]["slope"] + laws["v1c"]["slope"]
                    - laws["d1c"]["slope"])
         bk2b = abs(laws["K22"]["slope"] + laws["v2c"]["slope"]
@@ -1264,23 +1453,28 @@ def main():
                   - (0.5 * (laws["p"]["slope"]
                             + laws["q"]["slope"])
                      + 0.5 * laws["cc"]["slope"]))
-        ok_book = max(bk1, bk2a, bk2b, bk3) <= BOOK_BAR
-        book_txt = ("BK1 |s_c - (1/2(s_v1 + s_v2) + s_K12)| = "
-                    "%.4f; BK2 Christoffel saturation |s_K11 + "
-                    "s_v1 - s_d1| = %.4f / |s_K22 + s_v2 - s_d2| "
-                    "= %.4f; BK3 backward-CS |s_c - (1/2(s_p + "
-                    "s_q) + 1/2 s_cc)| = %.4f (bar %.1f; s_cc "
-                    "%.4f = the 1 - r_det column: c^2 tracks pq "
-                    "with the vanishing reserve)"
-                    % (bk1, bk2a, bk2b, bk3, BOOK_BAR,
-                       laws["cc"]["slope"]))
+        ok_book = (recon_max <= RECON_BAR
+                   and max(bk2a, bk2b, bk3) <= BOOK_BAR)
+        book_txt = ("BK1 (a1) pointwise dictionary reconstruction "
+                    "max_k |c/(sqrt(vp1 vp2) K12) - 1| = %.2e "
+                    "(bar %.0e); after-fit slope sum |s_c - "
+                    "(1/2(s_v1 + s_v2) + s_K12)| = %.4f CENSUS "
+                    "(the r347-C1 Theil-Sen non-additivity on the "
+                    "strongly curved weight columns, disclosed); "
+                    "BK2 Christoffel saturation |s_K11 + s_v1 - "
+                    "s_d1| = %.4f / |s_K22 + s_v2 - s_d2| = %.4f; "
+                    "BK3 backward-CS |s_c - (1/2(s_p + s_q) + 1/2 "
+                    "s_cc)| = %.4f (bar %.1f; s_cc %.4f = the "
+                    "1 - r_det column: c^2 tracks pq with the "
+                    "vanishing reserve)"
+                    % (recon_max, RECON_BAR, nadd1, bk2a, bk2b,
+                       bk3, BOOK_BAR, laws["cc"]["slope"]))
         check("G51-bookkeeping", ok_book,
-              "THE SLOPE BOOKKEEPING (exact pointwise identities, "
-              "fitted at the non-additivity bar): %s -- a_c "
-              "DECOMPOSES exactly into weights + kernel, and the "
-              "diagonal kernel growths ARE the reciprocal weight "
-              "laws (v K -> 1): the ONLY non-dictionary block of "
-              "a_c is s_K12" % book_txt)
+              "THE SLOPE BOOKKEEPING (exact pointwise identities): "
+              "%s -- a_c DECOMPOSES exactly into weights + kernel, "
+              "and the diagonal kernel growths ARE the reciprocal "
+              "weight laws (v K -> 1): the ONLY non-dictionary "
+              "block of a_c is the K12 column" % book_txt)
         # dictionary slopes
         dv1 = abs(laws["v1c"]["slope"] - laws["vp1"]["slope"])
         dv2 = abs(laws["v2c"]["slope"] - laws["vp2"]["slope"])
@@ -1346,12 +1540,17 @@ def main():
         check("G53-candidates", True,
               "THE SEALED CANDIDATE ADJUDICATION (bar %.2f): %s"
               % (CAND_BAR, cand_txt))
-        # balance + composition
+        # balance + composition (amendment a2: compose-then-fit)
         alpha_meas = -laws["margin"]["slope"]
-        alpha_bal = slope_balance(laws["vp1"]["slope"],
-                                  laws["vp2"]["slope"],
-                                  laws["K12"]["slope"],
-                                  laws["cpc"]["slope"])
+        alpha_bal = slope_balance(
+            [KT[k]["vp1"] for k in fit_kz],
+            [KT[k]["vp2"] for k in fit_kz],
+            [KT[k]["K12"] for k in fit_kz],
+            [CT[k]["cpc"] for k in fit_kz], lnN57)
+        alpha_bal_sum = -(0.5 * (laws["vp1"]["slope"]
+                                 + laws["vp2"]["slope"])
+                          + laws["K12"]["slope"]
+                          + laws["cpc"]["slope"])
         dev_bal = abs(alpha_bal - alpha_meas)
         rho_r = -laws["rdetc"]["slope"]
         alpha_comp = (-laws["p"]["slope"]) + (-laws["q"]["slope"]) \
@@ -1365,15 +1564,20 @@ def main():
             dev_cand = abs(alpha_cand - alpha_meas)
         else:
             cand_p0 = cand_q0 = alpha_cand = dev_cand = None
-        bal_txt = ("ROUTE A alpha_bal = -(1/2(%.3f + %.3f)[DICT] "
-                   "+ %+.3f[KERNEL census] + %.3f[PINNING image]) "
-                   "= %.3f vs alpha_meas %.3f (dev %.3f, bar "
-                   "%.1f); r342 composition a_p + a_q + rho_r - "
-                   "a_(p+q) = %.3f + %.3f + %.3f - %.3f = %.3f "
-                   "(dev %.3f, bar %.1f)%s"
-                   % (laws["vp1"]["slope"], laws["vp2"]["slope"],
+        bal_txt = ("ROUTE A (a2, compose-then-fit) alpha_bal = "
+                   "-slope(sqrt(vp1 vp2)[DICT] x |K12|[KERNEL "
+                   "census] x c'/c[PINNING image]) = %.3f vs "
+                   "alpha_meas %.3f (dev %.3f, bar %.1f); the "
+                   "after-fit sum -(1/2(%.3f + %.3f) + %+.3f + "
+                   "%.3f) = %.3f CENSUS (non-additivity %.3f, "
+                   "disclosed); r342 composition a_p + a_q + "
+                   "rho_r - a_(p+q) = %.3f + %.3f + %.3f - %.3f "
+                   "= %.3f (dev %.3f, bar %.1f)%s"
+                   % (alpha_bal, alpha_meas, dev_bal, BAL_BAR,
+                      laws["vp1"]["slope"], laws["vp2"]["slope"],
                       laws["K12"]["slope"], laws["cpc"]["slope"],
-                      alpha_bal, alpha_meas, dev_bal, BAL_BAR,
+                      alpha_bal_sum,
+                      abs(alpha_bal_sum - alpha_meas),
                       -laws["p"]["slope"], -laws["q"]["slope"],
                       rho_r, -laws["ppq"]["slope"], alpha_comp,
                       dev_comp, COMP_BAR,
@@ -1644,8 +1848,8 @@ def main():
           "protocol-CAUGHT (the lists are frozen module constants "
           "under the two-commit protocol)"
           % (hits_m3[0] if hits_m3 else "MISS", mut3))
-    mut4 = mutant_balance_doublecount(TOY_SV1, TOY_SV2, TOY_SK12,
-                                      TOY_SCPC)
+    mut4 = mutant_balance_doublecount(v1_t, v2_t, K12_t, cpc_t,
+                                      lnNt)
     dev_m4 = abs(mut4 - a_plant)
     check("G83-m4-double-count", dev_m4 >= M4_MIN
           and abs(dev_m4 - 0.5 * abs(TOY_SV1 + TOY_SV2))
