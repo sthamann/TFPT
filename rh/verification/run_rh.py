@@ -137,6 +137,7 @@ PROBES = [
     ("r343", "pair_coupling_probe.py"),
     ("r344", "fold_two_scale_balance_probe.py"),
     ("r345", "gap_ratio_primary_probe.py"),
+    ("r346", "fold_cover_canonization_probe.py"),
     ("r347", "delta_alpha_closure_probe.py"),
 ]
 

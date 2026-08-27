@@ -3211,6 +3211,61 @@ typed R346 question via `c'² = (1−r'_det)·p'q'` with
 `m2' == margin`).  Experiments-side, NO ledger row, NO L\*
 claim, NO RH CLAIM.
 
+**The cover canonization (r346, the named r344 follow-up: the
+three residues of the r344 cover — canonical stop criterion,
+source-side partition predictor, F_Amax defusal).**
+`fold_cover_canonization_probe.py` (45/45, SPEC_SHA
+`95559d5de07b304e` final with record, freeze
+`306dba57867f2170`, two-commit protocol: pre-freeze `9fcc081b`,
+record `bfe70fcf`; NO amendments — calibration pass 1 = first
+full evaluation = 45/45) re-executed the ENTIRE r344 scaffold
+through the same code path (balance curve, R̂ = 7/4 with halves
+(8/5, 7/4), freezes 3.9859/1.1409, 0/51 at every grid point,
+third-only 8, partition 7/51, F_Amax 5.54, m₀\* 10^22.6 — ALL
+anchor-gated bit-near) and adjudicated the residues with sealed
+machinery.  **Verdict `COVER_CANONIZED + PREDICTOR_FOUND(P02)`:**
+(i) **the stop rule canonizes via the intrinsic pair-ceiling
+formula, not via the exponent crossing** — K1
+(`R_ALG = 4^(1/3) = 1.5874 →` grid 8/5, index 1, interior,
+DATA-FREE: the same derived algebra that makes R = 2 the pair
+limit) CERTIFIES at a = 1, landing exactly on the grid point one
+r344 dyadic half picked; K4, the R-FREE ENVELOPE (per-rung
+HB-min over grid indices 0–4 positive-guarded, W_B-min over all
+six), ALSO certifies at a = 1 with `C_H_ENV 3.9859 + C_G_ENV
+0.4867` — the good envelope drops to the W_B(3/2) freeze and
+the threshold disappears by construction; K2
+(first-equilibrated) and K3 (pooled interpolated crossing,
+R_CROSS 1.7407) both pick 7/4 and are formally halves-stable
+**but only via the no-crossing fallback** — neither dyadic half
+shows a sign change at all (the halves e_G columns collapse to
+−0.3…−1.4): the crossing LOCATION stays halves-invisible, the
+exponent language stays soft, said honestly; (ii) **residue 2
+CLOSED at the sealed bars — the partition is
+source-predictable**: the sealed one-feature rule P02
+(`F_A ≥ 1.5 →` third arm, else heavy; the r329 SPIKE_FA record
+threshold) predicts a COVERING arm on **51/51** test rows (core
+39/39, out-of-sample EXT3 12/12, non-degenerate; sealed 12-rule
+threshold family, thresholds a-priori), exact-priority-label
+46/51 vs the r344 hsh baseline 7/51 — the cover's working
+partition is spike-vs-rest in the F_A coordinate, not
+heavy-vs-good in hsh; (iii) **residue 3 stays OPEN (honest
+negative): F_Amax is not uniformly defusable** — the six sharp
+spikes kz53/kz67/kz51/kz54/kz42/kz62 are third-arm-only at
+EVERY a ∈ (1, 2, 3); the uniform rescue fails for both the
+class split (1.5) and the P90 cap (1.917), `FAMAX_DEFUSED`
+stays silent and the honest uniform m₀\* stays **10^22.6**; the
+class-conditional QUIET statement (cap 1.39) solves to 10^16.1
+with the 13-row spike family as NAMED pointwise-certified
+exceptions — a two-statement census, not a uniform bound; the
+floor form (0.58) adds and loses nothing on-sample, the r329
+below-range question stays open; (iv) worlds census: SCRAMBLE
+is the only control the class rule flags SPIKE (F_A(ins) 2.00,
+P02 says T) — w9/w13/EPSTEIN all QUIET/heavy.  Must-fails: e1
+pred-from-coverage and e2 clsrule-posthoc and e4
+crossing-posthoc protocol-CAUGHT twice each, e3 envelope
+double-count CAUGHT exact (break 147/32 in Fractions).
+Experiments-side, NO ledger row, NO RH CLAIM.
+
 **The delta–alpha closure (r347, the named r345 follow-up: the
 one-line identity — the margin exponent from the cancellation
 law).**  `delta_alpha_closure_probe.py` (34/34, SPEC_SHA
@@ -3360,7 +3415,24 @@ argmin-max stop rule is not halves-stable (8/5 vs 7/4), the
 partition is not hsh-identifiable, and the third arm is
 load-bearing for the deep anchors (kz51 F_Amax 5.54 enters the
 uniform constant); the named rests are the canonical stop
-criterion and a source-side partition predictor).  **The extraction:
+criterion and a source-side partition predictor; r346 then
+canonized the cover — `COVER_CANONIZED + PREDICTOR_FOUND(P02)`:
+the stop rule is carried by the DATA-FREE intrinsic pair-ceiling
+formula `R_ALG = 4^(1/3) → 8/5` (certifies at a = 1) and by the
+R-free envelope (certifies at a = 1, C_G_ENV drops to 0.4867 —
+the threshold disappears by construction), while the exponent
+crossing stays halves-invisible (K2/K3 stable only via the
+no-crossing fallback, disclosed); the partition residue is
+CLOSED — the one-feature rule P02 (F_A ≥ 1.5 → third arm, else
+heavy) predicts a covering arm on 51/51 rows with EXT3 12/12
+out-of-sample: the working partition is spike-vs-rest in F_A,
+not heavy-vs-good in hsh; F_Amax is NOT uniformly defusable
+(the six sharp spikes are third-arm-only at every a — honest
+negative), so the uniform m₀\* stays 10^22.6 and the
+class-conditional QUIET reading 10^16.1 carries a named 13-row
+exception family; the named rest is the spike-free uniform
+constant — or the derivation of the spike family's third-arm
+coverage as a law).  **The extraction:
 the architecture stands** (r325 `ELEMENTWISE_STABILIZATION_GO` +
 r326 `RH/Elementwise.lean`: `sourceExact_buildPrimeWindow` PROVED,
 the comb stabilization elementwise PROVED,
