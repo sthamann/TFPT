@@ -1373,10 +1373,10 @@
       "ledger_ids": [
         "PRIME.PORT.RHP.FULLSOURCE.QUASIDEFINITENESS.01"
       ],
-      "status": "the missing lemma L* as a fully standalone open problem for external mathematicians (no project vocabulary): mu/nu defined from first principles (von Mangoldt comb, tent sampling, archimedean lag function, circulant spectral density, folding), the S = 367 instance tabulated, Hankel / CD-kernel / sampling equivalents, neutral numerical record (42/42 hold; margins 1.68e-4 down to 1.42e-7, shrinking with S), moment-counting meaning of the degree bound (S+1)/2; the 2026-08-25 update paragraph (57/57 instances positive, flattening power law, the rational-twin fact: the problem is NOT diophantine, the metric threshold 1e-3..3e-3 gap); since 2026-08-27 the freeze memo section 'The frozen state (August 2026): one object' (reviewer decision: the L* lane FROZEN as specialist problem): the fully typed chain (dictionary weights / candidate deficits / theorem-grade pinning / computability closure), the one object (phi_D = log(pq) + (17/12) ln N and phi_K = log(c^2) + (17/12) ln N are one shared wander, corr 0.999998, 0.88 nats each vs 0.0017 nats difference -- factor ~500 -- whose difference IS pointwise the log reserve with rho_r = 2.624 its decay; two-block interference: pair geometry +0.887 at 2.4x amplitude against the anti-correlated weight wander -0.72), the three specialist questions in final form (q1 backward-CS = the cancellation ratio, q2 sub-classical Christoffel growth with candidates unresolvable below 10^5.4+, q3 the resolution paradox), and the honest census frame (85 windows to N_w 7942, all margins positive, pool exhausted at 10^3.90); explicitly NO claim -- L* stays [O]",
+      "status": "the missing lemma L* as a fully standalone open problem for external mathematicians (no project vocabulary): mu/nu defined from first principles (von Mangoldt comb, tent sampling, archimedean lag function, circulant spectral density, folding), the S = 367 instance tabulated, Hankel / CD-kernel / sampling equivalents, neutral numerical record (42/42 hold; margins 1.68e-4 down to 1.42e-7, shrinking with S), moment-counting meaning of the degree bound (S+1)/2; the 2026-08-25 update paragraph (57/57 instances positive, flattening power law, the rational-twin fact: the problem is NOT diophantine, the metric threshold 1e-3..3e-3 gap); since 2026-08-27 the freeze memo section 'The frozen state (August 2026): one object' (reviewer decision: the L* lane FROZEN as specialist problem): the fully typed chain (dictionary weights / candidate deficits / theorem-grade pinning / computability closure), the one object (phi_D = log(pq) + (17/12) ln N and phi_K = log(c^2) + (17/12) ln N are one shared wander, corr 0.999998, 0.88 nats each vs 0.0017 nats difference -- factor ~500 -- whose difference IS pointwise the log reserve with rho_r = 2.624 its decay; two-block interference: pair geometry +0.887 at 2.4x amplitude against the anti-correlated weight wander -0.72), the three specialist questions in final form (q1 backward-CS = the cancellation ratio, q2 sub-classical Christoffel growth with candidates unresolvable below 10^5.4+, q3 the resolution paradox), and the honest census frame (85 windows to N_w 7942, all margins positive, pool exhausted at 10^3.90); since 2026-08-27 (evening) additionally the closing subsection 'Placement in the literature, and addressees': the multi-point Uvarov-transform dictionary (Kwon et al. 2001 / Aktas-Area-Perez 2022: I + Lambda K_n similar to I - E_n), the discrete-hard-edge / BKMM-saturation-regime placement (rho_K ~ N^-1.42 measured excludes the AC/Lubinsky class at family-constant rescaled positions a_j = 2N^2(1-y_j); saturation adjacency marked as hypothesis) and the four addressee communities; explicitly NO claim -- L* stays [O]",
       "pin": true,
-      "sha256": "d5334451a932c5a2d94b5f57801bd702d91a6d4ca4566912a4b4060f2432a45d",
-      "bytes": 32519
+      "sha256": "c7d5c00a5b094f99a31fa9eb084ce82a2c14dab03d238822acd59460e36616a2",
+      "bytes": 38394
     },
     {
       "path": "rh/problem/verify_lstar_instance.py",
@@ -1397,8 +1397,8 @@
       "ledger_ids": [],
       "status": "compiled PDF of lstar_problem.tex (recompiled artefact, registered unpinned)",
       "pin": false,
-      "sha256": "cf2e17223426eb1a35e63f0d0cdbe43bf78efba58cd5c3ae07df6a6434e8d714",
-      "bytes": 322513
+      "sha256": "88dbe5ddf0a7e2e5469d14fb6e90afa20ad01b666c540a78b2dd751e25138f77",
+      "bytes": 333013
     },
     {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
@@ -1555,8 +1555,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "616b567db4c6e9bf91706910c42ccab00be128deddf627b5230fa85bfc142d17",
-      "bytes": 3340810
+      "sha256": "d14fe911fbb021e3bca2a360dc59123ac3afb2ef5ccc3b007c4065d7d2cc14d7",
+      "bytes": 3396641
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -1565,8 +1565,8 @@
       "ledger_ids": [],
       "status": "living document -- the program prose of the prime front",
       "pin": false,
-      "sha256": "a09c2b08ca905c6627d33374b0ab83a411f9b2a665d15efd551022e1a77be064",
-      "bytes": 1692031
+      "sha256": "6bf165cff1f87a0c0edeb1fd2019a4d686b1cdda01d449014e453620beb6961a",
+      "bytes": 1692693
     },
     {
       "path": "experiments/next.txt",
@@ -1575,8 +1575,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "16616a4f6e08b12080894aac413525dcf940ff9b282a625e320c689af3e29c56",
-      "bytes": 5019691
+      "sha256": "b60331ea9ed2a26f2307528189a8041481f4833782cd27d23e3c96b0c5695915",
+      "bytes": 5174408
     }
   ]
 }

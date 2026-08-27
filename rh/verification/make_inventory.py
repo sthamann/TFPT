@@ -1451,7 +1451,15 @@ ENTRIES = [
      "growth with candidates unresolvable below 10^5.4+, q3 the "
      "resolution paradox), and the honest census frame (85 windows "
      "to N_w 7942, all margins positive, pool exhausted at "
-     "10^3.90); explicitly NO claim -- L* stays [O]", True),
+     "10^3.90); since 2026-08-27 (evening) additionally the closing "
+     "subsection 'Placement in the literature, and addressees': the "
+     "multi-point Uvarov-transform dictionary (Kwon et al. 2001 / "
+     "Aktas-Area-Perez 2022: I + Lambda K_n similar to I - E_n), "
+     "the discrete-hard-edge / BKMM-saturation-regime placement "
+     "(rho_K ~ N^-1.42 measured excludes the AC/Lubinsky class at "
+     "family-constant rescaled positions a_j = 2N^2(1-y_j); "
+     "saturation adjacency marked as hypothesis) and the four "
+     "addressee communities; explicitly NO claim -- L* stays [O]", True),
     ("rh/problem/verify_lstar_instance.py", "problem_check",
      "r283 companion",
      ["PRIME.PORT.RHP.FULLSOURCE.QUASIDEFINITENESS.01"],
