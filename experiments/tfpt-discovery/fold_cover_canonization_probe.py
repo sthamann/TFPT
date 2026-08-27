@@ -407,8 +407,105 @@ reading with a named exception family, never a uniform bound --
 said out loud; r243-r345 stand.
 
 RECORD TABLES (inserted AFTER the record run -- the only
-post-freeze docstring edit; freeze SPEC_SHA recorded in the
-pre-freeze commit):
+post-freeze docstring edit; freeze SPEC_SHA 306dba57867f2170,
+pre-freeze commit 9fcc081b; protocol: smoke pass 1 = 45/45
+(1.1 s, run pre-commit, disclosed in the commit message);
+calibration pass 1 = FIRST full evaluation = 45/45, wall
+177.8 s, NO amendment -- no bar, band, rule or verdict rule
+moved at any point; record run1/run2 after this insertion,
+identical up to the runtime line):
+MAIN VERDICT: COVER_CANONIZED(stop rule canonized by K1 at grid
+index 1 with 0/51 + named 4/4 kept, AND the predictor holds:
+P02 core 1.000 / OOS 1.000) + PREDICTOR_FOUND(P02).  FAMAX NOT
+defused (flag silent) -- the honest headline m_0* stays 10^22.6.
+THE HEADLINE FINDINGS:
+(1) LEG A -- THE STOP RULE CANONIZES VIA THE INTRINSIC CEILING,
+NOT VIA THE EXPONENT CROSSING: K1 (R_ALG = 4^(1/3) = 1.5874 ->
+grid 8/5, index 1, interior, data-free) CERTIFIES at a = 1 --
+the pair-ceiling formula lands exactly on the grid point that
+one of the r344 dyadic halves picked.  K2/K3 both pick 7/4
+(K3 pooled R_CROSS 1.7407, matching the record-derived
+expectation) and are formally halves-stable -- BUT ONLY VIA THE
+NO-CROSSING FALLBACK: NEITHER dyadic half shows a sign change
+at all (the halves e_G columns collapse to -0.3..-1.4, e_H
+stays positive; both halves return the last eligible index 4 by
+fallback, flagged (nc) in the gate log).  Said honestly: the
+crossing LOCATION is still not halves-visible on this ladder --
+the exponent language stays soft; the canonization is carried
+by the data-free K1 formula and by K4 (the R-free envelope
+certifies at a = 1 with C_H_ENV 3.9859 + C_G_ENV 0.4867 -- the
+good envelope drops to the W_B(3/2) freeze, the threshold
+disappears by construction).  The THRESHOLD_NOT_CANONICAL flag
+stays silent by the sealed letter (K2/K3 halves-stable via
+fallback), the fallback anatomy is disclosed here.
+(2) LEG B -- THE PARTITION IS SOURCE-PREDICTABLE (residue 2
+CLOSED at the sealed bars): the sealed rule P02 (F_A >= 1.5 ->
+THIRD ARM, else HEAVY -- one feature, the r329 SPIKE_FA
+threshold) predicts a COVERING arm on 51/51 test rows (core
+39/39, OUT-OF-SAMPLE EXT3 12/12, non-degenerate); the
+exact-priority-label census gives 46/51 vs the r344 hsh
+baseline 7/51.  The r344 posthoc-partition reading dissolves:
+the cover's working partition is spike-vs-rest in the F_A
+coordinate, not heavy-vs-good in the hsh coordinate.  Runner-up
+census: P04 (F_A >= 2.0) 50/51, P07 (depth > 1650) 48/51, P05
+(grel < 0.85) 47/51, P08 (early eps-level) 46/51.
+(3) LEG C -- F_Amax IS NOT UNIFORMLY DEFUSABLE (residue 3 stays
+OPEN, honest negative): the six sharp spike rows kz53/kz67/
+kz51/kz54/kz42/kz62 are covered ONLY by the third arm at EVERY
+a in (1, 2, 3) -- the uniform rescue fails for V1 (split 1.5)
+and V2 (P90 = 1.917), so FAMAX_DEFUSED stays silent and the
+uniform composition keeps F_Amax = 5.54: m_0* = 10^22.6
+unchanged.  The CLASS-CONDITIONAL reading (census, disclosed as
+a two-statement form): the QUIET-class statement with cap 1.39
+solves to m_0* = 10^16.1 (V2 cap 1.91: 10^17.5) with the
+13-row spike family as NAMED pointwise-certified exceptions --
+2/3 of the log-distance from 10^22.6 toward the r306 census
+10^13.5, but NOT a uniform bound, said honestly.  V3 floor
+census: only kz33/kz128 sit below the 0.58 floor (both
+non-test under the insertion convention), the floor adds and
+loses nothing on this sample -- the below-range validity
+question stays open.
+(4) LEG D -- THE HONEST COMPOSITION TABLE: r344 baseline
+(7/4, a = 1) m_0* 10^22.6; K1 headline (8/5, a = 1, C_H 6.8806
++ C_G 1.0151 + third term 1.3056 x 5.54^2) m_0* 10^22.6 (the
+third-arm term dominates the solve -- the stop-point choice is
+nearly free in m_0*); K4 envelope constants 3.9859 + 0.4867;
+V1 class-conditional 10^16.1 / V2 10^17.5 (exception-set
+readings); vs r324 10^59.6, r341 envelope 10^24.0, r306 census
+10^13.5.  COFINAL TYPING: census = all freeze constants +
+coverage counts + accuracies; law candidates = the K1 ceiling
+formula (derived algebra, certifies), the banked r321 sliding
+form (again out-of-sample-clean), the P02 predictor
+(OOS-confirmed); missing = any bound beyond the measured rungs
+(extrapolation hypothesis disclosed) and a spike-free uniform
+constant.
+(5) WORLDS (census, no letter): w9 hsh(7/4) 1.000 F_A(ins)
+0.83 -> P02 says H, class QUIET; twin w13 0.229 / 1.09 -> H,
+QUIET; EPSTEIN 0.182 / 1.00 -> H, QUIET; SCRAMBLE 0.667 / 2.00
+-> P02 says T, class SPIKE -- the scrambled world is the only
+control the class rule flags as spike-family; the predictor is
+a ladder-cohort statement, the world rows are census only.
+ANCHORS bit-near: r314 identity 4.5e-17; r306 C_2 1.069
+(0/57); r316 n 65 + rho quartet + C_small 1.0694@kz18;
+r324-pre C_M2 2.2557 + the seven m2 violators EXACT; r339
+record complete; r324 chain e_tot +0.172; r341 record COMPLETE
+(both banked columns + freezes + exponents + envelope 10^24.0);
+r321 F_A top-3 2.47/2.39/2.38; THE r344 RECORD COMPLETE (curve
++ R_HAT 7/4 + halves (8/5, 7/4) + C_H/C_G 3.9859/1.1409 + 0/51
+at every grid point at a = 1 + third-only 8 with EXT3-B 6/6 +
+partition 7/51 + nonpred 20 + F_Amax 5.54 + kz55 eps-argmax 1
++ W_B@7/4 8.459 + m_0* 10^22.6).
+SEAL: grid tilt 8.6e-16, partition 4.0e-16, envelope viol
+4.2e-16, heavy hand-off viol 0.0, martingale wards 2.2e-16 /
+4.4e-16 / 1.2e-15, r316 chain 6.5e-16, FRACTIONS BIT-EQUALITY
+at the two sealed pins 3/2 + 12/7 on w9 + w13 EXACT (76
+martingale nodes), grounding 3.4e-16,
+purity clean, toys exact (envelope pin 49/32, e3 double-count
+break 147/32 EXACT); must-fails e1 protocol-CAUGHT twice (AST
+rho + toy ('T', 'G')) / e2 protocol-CAUGHT twice (AST rho +
+toy ('SPIKE', 'SPIKE')) / e3 CAUGHT exact (147/32) / e4
+protocol-CAUGHT twice (AST rho + toy pick 4 != 2) + m5a/m5b
+FLAGGED.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
