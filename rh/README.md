@@ -3149,6 +3149,68 @@ budget was world-blind (SCRAMBLE stays heavy-flat, twin
 collapses, EPSTEIN good-dominated).  Experiments-side, NO
 ledger row, NO RH CLAIM.
 
+**The gap ratio as primary coordinate (r345, the named r343
+follow-up: the curvature-honest flatness protocol, the two-level
+formula, the honest kill, the signed cancellation as object).**
+`gap_ratio_primary_probe.py` (35/35, SPEC_SHA
+`1f99235a1d870e42` final with record, freeze
+`7d61df830ed54cf2`, two-commit protocol: pre-freeze `4a1362a0`,
+record `4e5e1270`; NO amendments after freeze) promoted
+`g21 = (1−λ₂)/(1−λ₁)` and the top-2 eigenvector geometry at the
+pair to primary coordinates.  **The exact spine:** the TWO-LEVEL
+FORMULA `r'_2 = g21·(t₂−t₁)²/((g21+t₁²)(g21+t₂²))` with the pair
+angles `t_k = w₂(i_k)/w₁(i_k)` — an exact algebraic identity for
+the top-2-truncated resolvent reserve, gated on 75/75 rows (max
+dev 4.0e-15) with an independent resolvent-spectrum route for
+g21 (anti-circular, devs ≤ 1.6e-8).  **Verdict
+`GAP_RATIO_PRIMARY_CERTIFIED` — the first certificate-grade
+letter on the O(1) coordinate:** the curvature-honest protocol
+(sealed a priori, the explicit r343 mandate: median band on all
+75 rows + Theil-Sen slope with a separation-restricted
+pairwise-slope quantile CI containing 0 + no monotone cohort
+drift) passes ALL clauses on BOTH candidates (`r'_det` and
+`g21`, zero band outliers each) **while the old r343 clause
+fails both candidates on its halves-curvature bar, reproduced
+bit-near** (curv −0.426/+0.601): the r343 soft-decay letter is
+re-adjudicated as a PROTOCOL artifact — the halves-curvature bar
+reads the ~×2 scatter of a flat O(1) column as decay, the
+scatter-honest CI reads it as flat; both protocols printed side
+by side.  **The honest kill does not fire:** on the sealed
+concentration-weak census (the two 6-row deciles, incl. kz44
+rest-pair mass 0.6917 and kz59 pair mass 0.9352 at their record
+minima) the median two-level dev is 0.1432 ≤ 0.30 (the weak
+rungs DOUBLE the ladder median 0.0634; single worst kz28
+0.4192 — honest), K_res ≤ 3 on 11/11, and `KILL_ABSORBED_BY_K3`
+(median top-3 dev 0.0163: the K ≤ 3 shadow is ~9× tighter
+exactly where K = 2 weakens).  **`CANCELLATION_LAW_FOUND`
+(δ = 2.668, additive tag) — the r343 bound-autopsy question
+answered as a measured structure statement:** the mirror
+residual `c'/c = |1 + Δc/c|` decays as `N_w^−2.67` on the 57
+(halves-stable, EXT3 10/12 in band with both misses HIGH side,
+EXT4 6/6) — 'the rest space mirrors the pair cross-term up to
+O(N_w^−2.7)'; the anatomy: the DIRECT overlap `u₁·u₂` carries
+the mirror's bulk (order-0 share median 0.839) while the mode
+profile is multi-mode (M90 ~30) — order-0-dominated in PATHS,
+multi-mode in MODES; the finite-order mirror ρ₃₂ = 0.9225 on
+both live worlds but DIVERGES on all four dead worlds
+(λ_rest ≥ 1 explodes the path series): the mirroring exists only
+where the rest clause holds.  **Further findings:** the second
+eigenvector lives dominantly on the PAIR too (w2 pair mass
+median 0.552; λ₂ is NOT the rest-block top anywhere); the angle
+column is ladder-stable (t₁ ~ −0.47, t₂ ~ +1.12) yet
+RESTATEMENT does not fire (fixed-angle inversion dev 0.1009 >
+0.05 — g21 is not `r'_det` plus a constant angle); the world g21
+census separates by magnitude (dead < 1 on 4/4, live > 7.5 —
+the s1 sign conjecture honestly refuted: dead worlds have
+λ₂ > 1 too).  Honest negatives: a sealed census certificate on
+75 finite windows, never an asymptotic theorem — and r343's
+letter was correct under its own seal (the re-adjudication
+changes the protocol, not the data); δ = 2.67 sits below the
+margin exponent 3.33 (real gap or c'-column curvature — the
+typed R346 question via `c'² = (1−r'_det)·p'q'` with
+`m2' == margin`).  Experiments-side, NO ledger row, NO L\*
+claim, NO RH CLAIM.
+
 **The path-weighted Bellman / Reverse-Hölder round (r341, the
 terminal main round after the r339 dictionary — the two-arm
 theorem candidate with path-probability weights instead of
@@ -3287,8 +3349,19 @@ cancellation Δc ≈ −c — the typed specialist question), `r'_det`
 is gated a TOP-2 spectral object (its flat content = the flat
 gap ratio g21 ~ 8), λ_rest alone separates the six worlds, and
 the rest block peels as a two-atom extremal again
-(`PEELING_STRUCTURE_FOUND`, level-2 grade); the L\*
-contract still [O]).  **Lean: 8 sorries, all typed** (the
+(`PEELING_STRUCTURE_FOUND`, level-2 grade); r345 then promoted
+g21 + the top-2 geometry to primary coordinates —
+`GAP_RATIO_PRIMARY_CERTIFIED` under the a-priori-sealed
+curvature-honest flatness protocol (both candidates pass with
+zero band outliers on 75 rows while the old halves-curvature
+clause fails both bit-near: the r343 soft decay was a protocol
+artifact), the exact two-level formula `r'_2 = g21(t₂−t₁)²/
+((g21+t₁²)(g21+t₂²))` gated 75/75, the concentration-weak kill
+survives (kz44/kz59, absorbed by K ≤ 3), and the signed
+cancellation is now a measured law — `CANCELLATION_LAW_FOUND`:
+`c'/c ~ N_w^−2.67`, the rest space mirrors the pair cross-term,
+with the finite-order mirror bounded exactly on the live worlds
+and divergent on all dead ones; the L\* contract still [O]).  **Lean: 8 sorries, all typed** (the
 five window-local legacy sorries byte-identical — the two true
 WINDOW-LOCAL holes `lstar_subordination` +
 `terminal_positive_main` unchanged — plus the three named Level-C
