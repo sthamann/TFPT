@@ -301,6 +301,153 @@ a measured discriminator on eight instrumented worlds; no verdict
 claims L*, a bound mechanism, a derived 5/7, or RH progress in
 any direction.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze edit, which IS the protocol; TWO-COMMIT PROTOCOL
+EXECUTED: the sealed spec above was committed as "r347 pre-freeze"
+(95f7f944, SPEC_SHA freeze 99100cea2358fe56) BEFORE the first
+full evaluation; chronology honest: smoke pass 1 = 32/34 with ONE
+machinery finding, fixed BEFORE the freeze commit: the w9 anchor
+constant for the aspect (p'+q')/c' carried an arithmetic slip
+(3.4494 written where the s1 scoping value is 2.4490) -- constant
+and spec text corrected, no adjudication rule touched; smoke pass
+2 = 34/34 (0.2 s), byte-identical on re-run; pre-freeze commit
+95f7f944; calibration pass 1 = FIRST full evaluation = 34/34
+(47.6 s), NO amendment; record run1 = 34/34 (49.9 s), run2 =
+34/34 (50.2 s), byte-identical up to WALL and identical to the
+calibration pass):
+MAIN VERDICT = ALPHA_CLOSED -- the margin exponent FOLLOWS from
+the cancellation law: all four sealed closures hit inside the 0.1
+bar (C1 identity route |alpha 3.332 - alpha_id 3.382| = 0.050;
+C2 margin bridge |{-3.332} - {-3.334}| = 0.001; C3 cancellation
+bookkeeping |slope(c') -3.401 - (slope(c) + slope(c'/c)) -3.366|
+= 0.035; C4 THE ONE LINE |alpha 3.332 - (a_c 0.697 + delta 2.668)
+= 3.366| = 0.033), the bridge clause holds on all 75 rows (max
+|m2'/margin - 1| = 0.0605 <= 0.10, ratio slope +0.0001 -- the
+dressed second determinant IS the margin, now protocol-graded
+ladder-wide), CURV_FLAT(r'_det) re-gates 0 out/0 hard of 75
+(slope +0.028, CI [-0.739, +0.825] containing 0, drift 0.012),
+both AUX aspect bands hold 0 out/0 hard (p'/q' max dev 0.231 dec
+around med 0.5586, s/c' max dev 0.101 dec around med 2.4690 --
+the flat-aspect step that turns the identity into the one line),
+the delta-law re-gates (delta 2.668, curv -0.189, EXT3 10/12 low
+0, EXT4 6/6 low 0) and the c-law re-gates (curv +0.308, EXT3
+11/12) -- THE BUILDING BLOCKS TYPED: the identity m2'(p'+q'-m2')
+= p'q' - c'^2 = p'q' r'_det is THEOREM-GRADE (exact Fractions on
+the toy, f64 max residual 3.3e-09 on 75/75 at the backward-error
+scale, definitional ward 1.8e-16); the bridge, the r'_det
+flatness and the aspect bands are CERTIFIED CENSUS (sealed
+protocols, 0 violations); a_c = 0.697 and delta = 2.668 are
+FIT-CENSUS laws with sealed honesty meters (the weight side of
+the bare scalars stays closed-form: digamma 2.4e-3, v_pred
+9.0e-4 on the six sample rungs) -- the open analytic remainder
+of the L* margin law is REDUCED from rho_r = 2.624 (r342) to the
+single cancellation exponent delta: one measured law instead of
+three, connected by exact algebra and certified flats
++ DRESSED_FACTOR_CENSUS(the GO clause does NOT fire (both factor
+columns fail the flat protocol loudly: all-75 protocol slopes
+-2.478/-2.478 with CI [-3.958, -1.201] / [-4.066, -1.172]
+excluding 0 -- the dressed diagonals do NOT inherit the bare
+dictionary slopes unchanged) and the residual-law clause does
+NOT fire either: p'/p passes every decay clause (delta_p 2.609,
+curv -0.129, EXT3 11/12 low 0, EXT4 6/6 low 0) but q'/q is
+halves-CURVED (delta_q 2.665, curv -0.508 > 0.35, EXT3 12/12,
+EXT4 6/6) -- the factor laws are typed as CENSUS: p'/p ~
+N^-2.609, q'/q ~ N^-2.665 with the UNIVERSALITY CENSUS
+|delta_p - delta| = 0.059, |delta_q - delta| = 0.003 -- the
+dressing eats p, q and c at a COMMON rate to within 0.06, but
+the q-column's curvature keeps the common-rate statement
+census-grade, honestly NOT a sealed law)
++ MIRROR_WORLD_CLAUSE_SEALED(live 2/2: MAIN/TWIN lambda_rest
+0.996338 < 1 with rho_32 = 0.9225/0.9225, |rho_32 - 1| = 0.078
+<= 0.5; dead 4/4: lambda_rest >= 1 and the finite-order mirror
+EXPLODES (SMOOTH +7.87e6, EPST -1.71e109, HL2 -4.70e113, SCR
+-6.5e198); DIRICHLET TYPED DEAD-SIDE: DIR lambda 5.70e37 /
+lambda_rest 3.97e37 (series NONFINITE), ABS lambda 2.28e5 /
+lambda_rest 2.28e5 (series explodes -3.85e176) -- the r330
+half-filling split RESTATES structurally in the E-Gram frame:
+the chi-twist and even the bare p=3 atom removal destroy the
+rest-block contraction entirely, the mirror never gets to exist;
+the first second-arithmetic test of the cancellation returns
+DEAD-side, typed, not forced)
++ IDENTITY_LEDGER(Fractions toy EXACT (det(I-A') == p'q' - c'^2
+as rationals); per-rung residuals max 3.3e-09 of 75 (bar 1e-8,
+the depth conditioning as scoped); definitional ward max 1.8e-16
+(bar 1e-12); the wrong-normalization mutant breaks by 1.7e-01 at
+w9 and 1.1e+00 on the toy)
++ EXPONENT_LEDGER(sealed 57-fits (slope | curv | EXT3 in/low |
+EXT4 in/low): p' -3.422 | +0.022 | 6/12, 0 | 3/6, 0; q' -3.359 |
+-0.241 | 6/12, 0 | 3/6, 0; c' -3.401 | -0.140 | 6/12, 0 | 3/6,
+0; m2' -3.334 | -0.368 | 9/12, 0 | 3/6, 0; s' -3.381 | -0.124 |
+6/12, 0 | 3/6, 0; bridge -0.001 | -0.007 | 12/12 | 6/6; p'/q'
+-0.068 | +0.160 | 12/12 | 6/6; p'/p -2.609 | -0.129 | 11/12 |
+6/6; q'/q -2.665 | -0.508 | 12/12 | 6/6; anchors margin -3.332 |
+-0.347, c -0.697 | +0.308, p -0.754, q -0.645, rdetp +0.018,
+|c'/c| -2.668 | -0.189, |c'| -3.401 all == the disclosed priors
+at tol 0.02/0.03; the dressed-decay EXT3/EXT4 misses are ALL
+high side (n_low 0 everywhere: the deep family decays SLOWER
+than the 57-fit -- the r286 curvature restated as census);
+closure residuals C1 0.050 / C2 0.001 / C3 0.035 / C4 0.033, all
+<= 0.1; symmetry census 2 s_c' - s_p' - s_q' = -0.020 ~ 0)
++ WORLD_LEDGER(lambda_rest separation re-gated 4/4 dead >= 1 vs
+live 0.996338 < 1; kappa_int == records at 5 percent (EPST
+1793.99 / SCR 8.509e6 / SMOOTH 2.193 / HL2 1964.35, live
+0.999567); 8 instrumented worlds -- the Dirichlet pair enters
+the L* lane for the first time)
++ TWIN_LEDGER(dressed scalars dev <= 2.3e-6, m2' dev 1.4e-5,
+r'_det dev 9.1e-6, lambda_rest dev 3.5e-8 (bar 1e-3); dose-zero
+identity BITWISE)
++ MUSTFAIL_LEDGER(m1 wrong normalization breaks 1.7e-01 >= 0.1
+at w9 + 1.1e+00 on the toy; m2 AST-FLAGGED resid_true + toy 0.06
+!= the sealed 0.10; m3 AST-FLAGGED margin_col_true (the real
+alpha_id constructor consumes fitted dressed slopes only,
+scope-audited CLEAN); m4 AST-FLAGGED REC_LAM; m5 AST-FLAGGED
+rho_col_true + toy 5e5 != the sealed 0.5; constructor scopes +
+fragment audit CLEAN).
+Key numbers.  W9: p' 8.4606e-4, q' 1.2903e-3, c' 8.7234e-4, m2'
+1.6800e-4, m2'(p'+q'-m2') = 3.306823e-7 == p'q' - c'^2 (residual
+1.5e-14), m2'/margin 1.0029, r'_det 0.302916, c'/c 2.7047e-2,
+p'/p 2.8215e-2, q'/q 3.6765e-2, p'/q' 0.6557, (p'+q')/c' 2.4490,
+g21 7.5175, K_res 2, rho_32 0.9225 -- the r347 coordinates start
+exactly where r342/r343/r345 left them; cohort medians
+m2'/margin 1.0058 and rho' 0.8459 == the r343 records; kz56
+r'_det 0.1605, span kz98 0.1383 / kz57 0.5361 == r345.
+HONEST NEGATIVES: (1) the closure does NOT derive delta from the
+source -- alpha is reduced to a_c + delta, and delta stays a
+measured law: the open analytic question is now ONE exponent
+instead of three, and the typed specialist question is why the
+rest space mirrors the pair cross-term AND (census) the diagonal
+deficits near a common rate N^-2.6..2.7; (2) the dressed decay
+columns extend to EXT3/EXT4 only 6/12 + 3/6 in band (ALL misses
+high side, n_low 0) -- the closure holds ON the 57-fit family
+and its deep extension carries the known r286 curvature, said
+with numbers, never certified; (3) the residual-law tag for the
+dressed dictionaries does NOT fire (q'/q halves curvature -0.508
+> 0.35): Leg C closes as census, not as law -- the universality
+reading (0.059/0.003) is a two-decimal coincidence measurement
+on 57 windows; (4) the bridge max deviation 0.0605 (ladder-wide)
+is twice the r343 scoped span [1.0003, 1.031] -- the deep EXT
+rows stretch the bridge, still 40 percent below the sealed bar;
+(5) the identity-route alpha_id 3.382 differs from alpha 3.332
+by 0.050 -- Theil-Sen slopes are not exactly additive across
+curved columns; the exact identity holds per row at 3.3e-9, the
+0.050 is pure fit-instrument non-additivity, disclosed; (6) the
+Dirichlet mirror test is a DEAD-side typing, not a living-world
+confirmation -- inside the MAIN frame no second living
+arithmetic exists yet (the r330 honest limit restated; a
+GRH-faithful Dirichlet frame stays the named follow-up).  R348
+SKETCH (candidates, not commitments): (i) the delta source
+anatomy -- the r345 mode profile says the mirror is order-0-
+dominated (rho_0 median 0.839): does u1.u2/c alone already carry
+the N^-2.67 law (a Gram-row correlation statement,
+dictionary-reachable)?; (ii) the common-rate question delta_p ==
+delta_q == delta as an exact statement of the resolvent block
+(theorem candidate: the dressed block deficit is rank-one-
+dominated); (iii) the GRH-faithful Dirichlet frame for the
+sealed mirror discriminator.  Runtime 49.9 / 50.2 s record, 47.6
+s calibration, 0.2 s smoke; deterministic, run1/run2
+byte-identical up to WALL.  AMENDMENTS AFTER FREEZE: NONE except
+this record-table insertion.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
