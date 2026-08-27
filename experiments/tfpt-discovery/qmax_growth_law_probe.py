@@ -367,6 +367,119 @@ second world), and the in-zone pool exhaustion means future
 rounds cannot repeat this test in-zone -- all said out loud;
 r243-r350 stand.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze docstring edit; freeze SPEC_SHA d556c758701c3a60,
+pre-freeze commit 8131ab53; protocol: smoke pass 1 = 43/43
+(0.7 s, run pre-commit, disclosed in the commit message);
+calibration pass 1 = FIRST full evaluation = 43/43, wall
+397.6 s, NO amendment -- no bar, band, rule or verdict rule
+moved at any point; record run1/run2 after this insertion,
+identical up to the runtime line):
+MAIN VERDICT: GROWTH_LAW_CERTIFIED(0 fresh violations at the
+frozen C_FAB 14.93) + FLOOR_ERODES(10^3.7) +
+INZONE_POOL_EXHAUSTED + EXT5_CLEAN(6) +
+SCRAMBLE_FAB(2.09 <= C_FAB, world census).
+THE HEADLINE FINDINGS:
+(1) THE GROWTH LAW HOLDS AT A FROZEN CEILING -- AND THE CEILING
+SITS AT kz111, NOT kz51: C_FAB = max FAB over the 83 sealed
+rows = 14.93 at kz111 (EXT4; kz75 13.64, then a gap to kz51
+7.44) -- the record-derived expectation ~7.44 was LOW by 2x
+because the EXT4 FAB values had never been computed.  The
+FRESH TEST: all six EXT5 windows admitted (B5 kz79/kz81/kz65,
+A5 kz103/kz135/kz106; N_w 1771..2812; POSITIVE_PREFIX 6/6, no
+queue failures), FAB 2.04..9.71, ZERO violations -- m q_max <=
+14.93 log m holds on every measured row of every cohort (89
+rows) and on all four instrumented worlds; fresh max 9.71
+(kz135, MED gap) stays 35 percent below the ceiling; rc_small
+= +0.243 < +0.5 (n = 15 speaks): NO growth clause fires.  The
+sealed letter is GROWTH_LAW_CERTIFIED -- census-frozen, the
+first uniform growth statement of the lane that SURVIVES a
+fresh tranche.
+(2) THE F-CEILING TICKS UP AGAIN, THE FAB-CEILING STANDS: kz79
+(EXT5) posts F_ins 6.69 (> the r349 record 6.68) -- the r346/
+r349 F_A census ceiling is confirmed UNSTABLE a second time
+(uniform solve at the new ceiling: 10^23.5) -- while its FAB
+is only 9.00: the convention-free law coordinate is visibly
+MORE STABLE out-of-sample than the rank-local F_A coordinate;
+the depth-bin envelope (1.96 / 2.80 / 9.00 / 14.93) rises by
+cohort COMPOSITION (small-gap selection), not within-class
+(rc_small +0.24), typed census by seal.
+(3) LEG B -- THE SOURCE DERIVATION STAYS OPEN (typed honestly):
+K2 (Klein-gap) holds 0/6 fresh at FAB grel <= 11.87 and
+Spearman(grel, FAB | family) = -0.623 -- the gap geometry
+genuinely sets the q_max scale (structural formula, census:
+grel has no measured lower bound); K3 (pileup cap) BREAKS on
+fresh (kz65 pil 184.64 > frozen 177.97) and is VACUOUS (implied
+360.5 >> 4 x 14.93); K4 (group cap) holds 0/6 but is VACUOUS
+(469.6) -> src_ok False, GROWTH_LAW_DERIVED unfired: the law
+certifies as a DIRECT frozen-ceiling statement, its mechanism
+is NOT yet a formula.  THE FRESH COUNT TEST (first EXT4/EXT5
+measurement ever): nsc_rel/lg <= 2.0258 AND ngj/lg <= 2.6351
+hold 12/12 (min reserves 1.59/2.77) -- the O(log m) counting
+side is choice-robust on a THIRD consecutive fresh cohort,
+still the most robust asset of the lane.
+(4) LEG C -- THE FLOOR HOLDS AT 1.05 BUT ERODES: cert2 True (28
+family rows incl. 5 fresh EXT5 family rows, min RSV 1.07 at
+kz75; the EXT5 spikes come in at RSV 2.22..3.38 -- NO new
+floor hole); but e_RSV = -0.649 (halves-slope vs m, fit-free)
+and rc_fam351 = -0.600 (vs the r349 ladder+EXT3 prior -0.331):
+the reserve erodes with depth on the extended family, and the
+census extrapolation crosses RSV = 1 at log10 m ~ 3.7 -- IF
+the trend were a law the sliding spike coverage would die at
+m ~ 5000: FLOOR_ERODES is the honest letter, the r349 floor
+question is answered NEGATIVELY (no stable floor > 1
+certified; the anatomy restates: the floor rows kz111/kz75 are
+the largest-FAB deepest-pk spikes, med pk 0.142 vs 0.069, med
+FAB 13.6 vs 3.6 comfortable -- the reserve dies exactly where
+the law coordinate peaks, RSV ~ GSQ/(D pk B^2) with
+D pk B^2 ~ 1.2).
+(5) LEG D -- THE COMPOSITION MOVES THE HONEST UNIFORM m_0* BY
+~4 DECADES: the class-free polylog route rho_2 <= C_FAB
+C_M2ENV/log m (14.93 x 26.01, envelope incl. fresh) solves
+m_0* = 10^18.9 -- UNIFORM, no spike/quiet split, vs 10^22.6
+(r349 record uniform) / 10^23.5 (the moved census-F ceiling) /
+10^16.1-10^17.5 (class-conditional, non-uniform) / 10^13.5
+(r306 census) / 10^59.6 (r324 subcritical route); the
+growth-slack route stays NONE (e_tot +0.772
+composition-dominated, census by seal).  COFINAL TYPING at the
+certified reading: (i) C_FAB/C_M2ENV are freeze-census over 89
+rows, the ladder-to-m_0* step stays the extrapolation
+hypothesis; (ii) the floor letter is FLOOR_ERODES (the spike
+coverage arm still needs it); (iii) src_ok False (the
+mechanism formula is the open kernel); (iv) finite closure
+carries to m = 660; (v) no second world, and the in-zone
+fresh pool is EXHAUSTED -- the next teeth need a new
+construction family.
+(6) WORLDS (census, no letter): w9 FAB 0.97 QUIET / w13 1.27
+QUIET / EPST 0.84 QUIET / SCRAMBLE 2.09 SPIKE, all <= C_FAB --
+the growth law is ARITHMETIC-FREE by measurement (a pure size
+statement; no world separation claimed).
+ANCHORS bit-near: r314 identity 4.5e-17 (EXT5 <= 1e-12 bar
+met); r306 C_2 1.069 (0/57); r316 n 65 + quartet + C_small @
+kz18; dictionary 7.8e-16; r321 F_A top-3 2.47/2.39/2.38; THE
+r349 FAMILY RECORD EXACT (17 rows, RSV 3.19/7.03/12.06,
+rc_fam -0.331, D 1.79/2.13/5.03, D pk B^2 0.409, shares
++0.01/+0.64/+0.26); THE r349 EXT4 RECORD EXACT (six SPIKE,
+F_ins (1.58, 2.03, 3.11, 4.22, 5.53, 6.68), holes 1.11/1.07);
+THE r324 DIRECT RECORD through the FAB column (C_INF 1.7481,
+violators {53, 61, 67, 76, 83} EXACT, e_G +0.158); THE r329
+COUNTING RECORD (C_NSC 2.0258 0/39, C_NG 2.6351 0/39, EXT3
+count reserves 1.58/1.82).
+SEAL: NORM 9.0e-16, interpolation 0.0, FAB identity 2.0e-16,
+pileup chain 0.0, group chain 0.0, decomposition 1.0e-15,
+dominance chain <= 1e-15, r316 chain green, r324 ladder
+identity green, purity clean (0 id + 0 literal hits on the six
+law builders), toys exact (FAB pin 3/4 + identity 3/2, e1 pin
+1/2 vs 3/4, e2 pin (2, 3) vs (1, 2), e3 break 2, e4 0.5 vs
+1.05, trees 6/6 + 4/4); must-fails e1 CAUGHT twice (AST qm +
+Fractions) / e2 protocol-CAUGHT twice (AST rho + toy) / e3
+CAUGHT exact (break == 2) / e4 protocol-CAUGHT twice (AST rho
++ toy) + m5a/m5b FLAGGED.  EXT5 branch census: kz81 (and EXT4
+kz108) on the exception branch -- census, no letter.  Runtime
+397.6 s calibration / record run1/run2 identical up to WALL /
+0.7 s smoke.  AMENDMENTS AFTER FREEZE: NONE except this
+record-table insertion.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
