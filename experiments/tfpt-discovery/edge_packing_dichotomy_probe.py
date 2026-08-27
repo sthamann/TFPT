@@ -359,6 +359,69 @@ record numbers are disclosed pre-spec inputs; the subcritical
 delta stays r333-adjudicated (UNDECIDED) -- this round prints it
 as census continuity only; r243-r334 stand.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+amendment after freeze; freeze SPEC_SHA a1f4c0dd97edcbf4,
+pre-freeze commit ec0fd5d5; protocol: smoke pass 1 = 36/36
+(0.6 s), NO amendment; calibration pass 1 = first full
+evaluation, 36/36, wall 159.9 s, NO amendment; record run1/run2
+after this insertion, identical up to the runtime line):
+MAIN VERDICT: EDGE_ORBIT_ALSO_SHORT(no clause certifies: T1-edge
+c_0 = 0.0595/0.2637/1.1686 at a = 0/1/2 with 43/40/38 of 51 test
+violations, named 0/4; orbit arm C_O 166.1/36.5/8.0 named 1/0/0;
+mass arm C_M 141.8/33.1/7.7 viol 17/15/11 NAMED 4/4 at every a;
+dichotomy C_D 141.84/33.06/7.71 viol 14/11/6, named 4/4, worst
+violators kz73 10.31 / kz76 10.04 / kz61 9.02 / kz98 7.92 /
+kz109 7.80 / kz95 7.77 at a = 2) -- the packing language is
+exhausted at the edge; the reviewer's martingale second route is
+next (NAMED ONLY, not executed); the r324 MEASURED composition
+(m_0* 10^59.6, +0.172) stays the honest state of the route.
+THE TWO STRUCTURAL FINDINGS OF THE ROUND: (1) THE SPIKES FLIP TO
+COVERED -- the MASS arm covers all four named rungs at EVERY a
+(kz53 B^D_1 12.51 / kz83 20.47 / kz67 2.62 / kz55 11.86 vs C_D(1)
+33.06, reserves 1.6x-12.6x; all four typed arm M): the r333
+spike blocker is resolved POINTWISE AT THE NAMED RUNGS by the
+edge-mass clause -- what now violates is the mid-band family
+(kz73/76/61/60 + deep kz95/98/109) where the margin share is
+large (sf 0.18-0.28) and BOTH arms sit at 6-10.  (2) THE INWARD
+WINDOW MISSES THE EDGE COMPANIONS: at the named spikes |O_e| = 1
+(g* alone; inner-empty rungs 6, gained 0) -- the r333 one-sided
+same-key companions sit OUTWARD of g* (between the support edge
+and ps), not inward: T1 in this one-sided form fails HARDER than
+the two-sided T1 (viol 43/51 at a = 0), and the spike coverage
+comes ENTIRELY from the mass arm, not from companions.
+EDGE TABLE (65 + 12 EXT3 rows): |O_e| med 4 min 1 max 38 (vs
+|O_in| 5/0/52 -- the |O| = 0 sentinel is eliminated but the edge
+orbit is SMALLER in median); rmin_e med 0.711 worst 0.3162 > 1/4
+and cband_e med 1.573 worst 3.1630 < 4 (T2 THEOREM GRADE on 81
+live worlds); overlap membership 1 <= 2 (T3); both arms EXACT
+live (worst slack violation 0.0 each); kappa med 3.840 min
+3.1726; arm census O 15 / M 62 of 77 (the mass arm is the rule);
+n_marg med 23 max 231; S_marg/L1 med 0.176 max 0.312; Q_dich med
+2.611 max 8.34 at kz60.
+CERT: delta = e(hgn) = -0.004, halves +0.148/+0.674 STRADDLE
+(UNDECIDED -- exact r333 continuity); e(B^D_1) = +0.517; EXT3
+cohort e(m Q_dich) = -3.313 (census-grade, mixed strata, r329
+caveat); EXT3 12/12 admitted (N_w 1721..2577 exact), all 12 land
+in the test set with the deep stratum BELOW the dichotomy
+constants (no EXT3 rung among the worst violators at a = 1).
+WORLDS: twin w13 identical protocol (|O_e| 2, arm M, all exact
+wards live); EPSTEIN |O_e| 6, arm M (the construction operates);
+SCRAMBLE |O_e| = 2 vs inner 0 -- the ONE-SIDED orbit does NOT
+decay on SCRAMBLE the way the two-sided did (honest negative:
+the inward window with support-radius reach is permissive enough
+to catch same-key groups even in scrambled worlds).
+ANCHORS bit-near: r314 identity 4.5e-17; r306 C_2 1.069 (0/57);
+r316 n 65 + rho quartet 1.0493/1.0536/0.4821/0.7791 + C_small
+1.0694@kz18; r333 RECORD: boundary 44/65 EXACT, |O_in| 5/0/52
+EXACT, named inner quartet (0, 0, 2, 0) EXACT, named hgn
+14.89/13.43/10.30/15.17, d* med 0.072, inner band worst
+0.2819/3.5473 bit-near EXACT.
+SEAL: partition 3.4e-16, ledger == genealogy == GMC 0.0, chain/
+arm wards 0.0, contribution ward 2.1e-13/2.2e-12 (ladder/EXT3),
+purity clean, toys exact; must-fails e1 CAUGHT twice (AST rho +
+toy 1.0 != 0.5) / e2 LOUD (sum 4 != 3, break 1 EXACT) / e3
+AST-CAUGHT (trs) / e4 AST-CAUGHT (S3) + m5a/m5b FLAGGED.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
