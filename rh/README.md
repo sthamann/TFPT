@@ -3771,6 +3771,68 @@ amplitude; DIR degenerate; SMOOTH/SCR below the usable minimum)
 ratio — the sharpest remaining form of the r338-q1 question.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**The K2 source formula: q_max from a lower gap bound (r355,
+the reviewer fork after r353 — terminal lane, K2/Klein-gap
+geometry only).**  `k2_source_formula_probe.py` (47/47,
+SPEC_SHA `1f14bd938ba78cc4` final with record, freeze
+`b0dd5a93a9d5b790`, two-commit protocol: pre-freeze `94f0683a`,
+record `397a1032`; NO amendment after freeze; scoping
+disclosed: NU = 3 pool enumeration — 16 fresh, in-zone EMPTY at
+every aspect — + two admission timings, no bound value
+computed) attacked the r353 cross-family survivor from both
+ends.  **Verdict `K2_LAW_CERTIFIED_NU_FREE` +
+`K2_SOURCE_CHAIN_OPEN` + `GMIN_LAW(e_g −0.252, mono 0.80)` +
+`INZONE_EXHAUSTED_ALL_NU(0)` + `K2_TEST_MAX(kz103, NU3,
+10.62)` + `GMIN_IMPLIED(NONE, e_impl +0.29)` +
+`NU_RATIO_CENSUS(0.19)`:** (1) **K2 survives its SECOND
+independence test — the window aspect:** the frozen C₂ = 11.87
+(max FAB·grel over the 89 sealed r351 rows) holds with ZERO
+violations on all 25 test rows — the 8-row frame-B regate,
+12/12 admitted NU-test rebuilds of the sealed six zones
+kz 111/75/51/65/79/103 at NU ∈ {2, 3}, and the 5/5 fresh
+NU = 3 field kz 99/115/89/86/132 (N_w 2961..3805, 0 queue
+failures); the closest call is kz103 at NU 3 (FAB·grel 10.62,
+11 % below the ceiling).  The census contrast that makes this
+meaningful: the bare FAB coordinate is aspect-WILD — kz99
+posts FAB 19.38 at NU 3 (a NEW lane record above the r353
+18.07) and kz103 jumps 3.69 → 12.98, while the median
+FAB(NU2)/FAB(NU4) ratio is 0.19 — yet the K2 product absorbs
+all of it: **the gap product is the aspect-stable coordinate
+of the lane; the FAB ceiling is C(NU, family) census.**  (2)
+**The source chain closes EXACTLY but its census caps are
+vacuous:** FAB·grel ≤ (ngj/log m)·(hgn·grel) holds one-sided
+exact on all 118 live worlds (r327 group chain), and the mesh
+identity h − NU·u ∈ (0, 1.5] (u = α/gap, the NU-free depth
+coordinate) is EXACT on every pool zone at all three aspects —
+WHERE grel enters is now construction algebra (the Klein gap
+sets the mesh depth); but the newly frozen caps C_H = max
+hgn·grel = 141.71 and C_P = max pil·grel = 141.53 (both kz111)
+imply ceilings 373.4 / 286.7 ≫ the a-priori bar 47.5 — the
+r351 K3/K4 vacuity repeats at the grel-sharpened caps
+(`K2_SOURCE_CHAIN_OPEN`; the chain loses too much at the
+heavy-group step, bshare med 0.41 off-family).  The r329
+counting constants hold on all 17 NU rows (reserves 1.35/1.81)
+— FIFTH fresh cohort, FIRST aspect test.  (3) **The lower gap
+bound is a slow measured law — but supercritical as a ceiling
+route:** the g_min(u) curve over the 130 admissible zones (6
+dyadic bins, minima 0.482 → 0.187, mono 0.80) falls at
+halves-slope −0.252 (`GMIN_LAW`, census — the depth-gap
+coupling partly builds this in, disclosed); the implied
+exponent e_impl = −e_g/e_um = +0.286 > CRIT_EXP 0.224, so the
+growing K2 ceiling C₂/g_min(m) yields NO m₀\* (supercritical);
+the flat-floor route at the global pool floor 0.187 gives
+C_FAB^K2 = 63.4 and m₀\* = 10^23.5 — 3 decades worse than the
+r353 direct census 10^20.5.  Cofinal typing: SATZ links =
+r324 identity + r327 group chain + mesh identity + dictionary;
+CENSUS rest = C₂ (2 families + 3 aspects), C_NG, C_H/C_P
+(vacuous), and g_min — **the whole spike mechanism now reduces
+to the census-to-law promotion of [gap floor] × [counting] ×
+[heavy-group mass], with the diophantine gap floor the named
+rest** (no Baker bounds attempted — the r289/r331 lesson).
+Worlds: w9B FABg 0.74 / twin 1.35 / EPSTEIN 0.41; frame-B
+SCRAMBLE breaks at admission (nf 3, r353 reproduced).
+Experiments-side, NO ledger row, NO RH CLAIM.
+
 **Lane status after wave 13.**  **The terminal: the MEASURED
 composition is the end state of the route** (r324
 `PILEUP_GROWS_SUBCRITICAL` +0.172 < 0.224 record / 0.188
