@@ -3655,6 +3655,122 @@ function of the L\* margin legislation), all exponents measured,
 all identities exact.  Experiments-side, NO ledger row, NO L\*
 claim, NO RH CLAIM.
 
+**The second construction family + the preregistered erosion
+kill (r353, the named r351 follow-up: frame-B, the
+half-resolution tent frame).**
+`second_family_erosion_probe.py` (45/45, SPEC_SHA
+`bd89e3316c332ded` final with record, freeze
+`2c0e1c150b5721a8`, two-commit protocol: pre-freeze `ac4fbe28`,
+record `b5e7f892`; NO amendment after freeze; the pre-spec
+scoping disclosed: pool enumeration at NU ∈ {2, 6, 8} + two
+wpack timings + the NU = 4 reproduction check only, no bound
+value computed) freed the ONE construction parameter every
+round r238–r351 had held fixed — the window aspect `NU` in the
+mesh `D = 0.5·gap/NU` — and built **frame-B (NU_B = 2)** on the
+canonical von-Mangoldt comb (no smoothing; tent assembly,
+archimedean lags, chain machinery verbatim; the NU = 4
+reproduction ward is EXACT: bit-identical wpack on w9, pool ==
+`frame_a_zones` 70/70).  The sealed selection (used ledger 104,
+fresh 24 at h_B ≤ 4000, strata BZ in-zone grel-asc kz69/kz80 —
+the in-zone frame-B pool has EXACTLY 2 members — + BD deepest
+kz133/129/124/117/107/101) admitted **8/8 with zero queue
+failures** (POSITIVE_PREFIX + chain-complete, N_w 1792..3972 —
+the r329 frame-A admission boundary nf 2125..2468 does NOT bind
+the half-resolution frame); every admitted row is SMALL-gap and
+SPIKE, and the family sets the lane depth record **m = 812
+(log₁₀ 2.91)** vs the frame-A max 660 — the crossing target
+3.7 is NOT reached (lever extension, disclosed up front).
+**Verdict `SECOND_FAMILY_BUILT` + `FAB_LAW_BREAKS_ON_B(kz117
+17.78, kz124 18.07)` + `FLOOR_KILLS(kz124 RSV 0.63, kz129
+0.95)` + `GREL_LOWER_BOUND_CANDIDATE(0.187, 63.4)` +
+`BZ_POOL_EXHAUSTED(2)` + `NEW_DEPTH_RECORD(812)` +
+`NEW_FAB_RECORD(kz124, 18.07)`:** (1) **the r351 FAB ceiling is
+a per-family census, not a cross-family law** — kz124 posts FAB
+18.07 and kz117 17.78, both above the frozen C_FAB = 14.93 (up
+to +21 %), and the combined SMALL-gap trend rc_small = +0.569
+crosses the +0.5 growth bar for the first time; the law keeps
+its FORM on frame-B (C' = 18.07) but the frozen constant is
+family-indexed.  (2) **The preregistered kill FIRED — earlier
+than the extrapolation predicted:** kz124 (m 757) RSV 0.63 and
+kz129 (m 787) RSV 0.95 breach RSV_KILL = 1.00 (kz133 at 1.00,
+bar miss) — the sliding spike coverage `GSQ·F² ≥ ρ₂` is FINITE:
+it dies at m ~ 760 on the second family, not at the
+extrapolated m ~ 5000 (combined 36-row fit e_RSV −0.889,
+rc −0.706, crossing log₁₀ m ~ 3.4 — the erosion ACCELERATES
+cross-family); the r346/r349 three-arm cover is hereby bounded
+to the measured frame-A range and the cofinal reading needs a
+FOURTH mechanism (or a family-indexed sliding constant — both
+typed).  The kill rows are again the largest-FAB rows: the
+reserve dies exactly where the law coordinate peaks, now on
+both families.  (3) **The K2 Klein-gap product is the
+cross-family survivor:** `FAB·grel ≤ 11.87` holds 0/8 on
+frame-B (max 5.95) — the only frozen constant of the lane that
+carries across the aspect change; g_min = 0.187 gives the first
+non-vacuous implied ceiling 63.4 ≤ 4×18.07
+(`GREL_LOWER_BOUND_CANDIDATE`, census).  The r329 counting
+constants hold 8/8 (reserves 1.61/2.79) — the O(log m) counting
+side survives its FOURTH fresh cohort and FIRST cross-family
+test.  (4) The synthesis moves the ceilings and m₀\* backwards
+honestly: C_FAB' = 18.07, C_M2ENV' = 44.18 → the class-free
+polylog m₀\* = 10^20.5 (+1.6 decades vs r351).  Worlds: w9B
+1.53 / w13B (twin) 1.64 — the twin protocol carries to frame B;
+the frame-B SCRAMBLE control breaks AT ADMISSION (nf = 3).
+Honest negatives: frame-B is a second CONSTRUCTION on the same
+source comb, not a second arithmetic world; the depth gain is
+0.09 decades; kz69/kz101/kz107 anchor zones were touched by the
+parallel r352 L\*-lane EXT5 (margins only, a different window
+construction — anchor-zone overlap disclosed, no law column was
+shared).  Experiments-side, NO ledger row, NO RH CLAIM.
+
+**The φ-wander anatomy (r354, the named r352 follow-up: the
+single unexplained function as its own lane, plus the
+running-exponent model of the EXT5 high-side flattening).**
+`phi_wander_anatomy_probe.py` (33/33, SPEC_SHA
+`f9db84da7f0f6f6e` final with record, freeze
+`c37ac54e9cbe41e9`, two-commit protocol: pre-freeze `8b1361e9`,
+record `4be9d3a6`; TWO disclosed calibration amendments a1/a2 —
+measurement-scale/robustness class, no adjudication rule moved)
+put the shared wander φ under sealed anatomy.  **Main verdict
+`PHI_DICTIONARY_GO` — the φ lane is SOURCE-SIDE CLOSED at
+computability grade:** the pointwise composition `c_pred =
+√(v_pred1·v_pred2)·K12cd` (closed-form digamma/tent weights ×
+the recursion-computable cross kernel, no measured kernel
+column consumed) reconstructs c on all 85 rows at max 5.52e-4
+and predicts the kernel fine structure at corr 1.0000000 / rms
+ratio 0.0004 — honesty: a computability closure, NOT a closed
+form and NOT a derivation of the wander.  **The atom
+decomposition ends in a TWO-BLOCK INTERFERENCE reading**
+(`PHI_CARRIER_CENSUS`): the pair-geometry composite P2/PG
+carries the SHAPE (corr 0.887) at 2.4× amplitude while the
+dictionary weight block is ANTI-correlated (−0.72) — φ is the
+cancellation of a large pair-geometry wander against the weight
+wander; no single block passes the sealed carrier clauses.  φ
+is NOT a function of N alone (N-adjacency ratio 0.911; grel/lnz
+do not carry) — the wander is pair-local.  **The
+running-exponent model does NOT collapse the cohorts**
+(`RUNNING_CENSUS`): the 0.88-nat wander defeats the 0.5-dec
+band on margin/reserve/K12 regardless of the 1/lnN term;
+s_inf(margin) = 1.65 vs 3.33 stays a FLATTER census (the
+wall-friendly direction, not a law).  **EXT6:** the r343 rule
+above h 6000 finds the pool EXHAUSTED at h 7942 — exactly 4
+fresh windows (kz 133/129/124/117, N_w 6532..7942 = **the
+deepest L\* windows ever measured, 1.4× the EXT5 record,
+margins ALL POSITIVE** 1.13e-10..1.70e-9); the high-side
+flattening CONTINUES AND SPREADS (now the bare p/κ laws sit
+high too).  **δ₀ is UNDECIDABLE inside the document frame:**
+the extended 28-row separation (y0 via the exact reduced route
+`y0 = 1 + (u1·u2)/c`, warded 6.6e-14) moves the required depth
+to 10^5.4 (pure) / 10^5.7 (running) while the pool ends at
+10^3.90 — typed for the specialists; the a_q closer-count lean
+to 0.62 over 2/3 is CONFIRMED (27/28, census).  First world
+test of the fine structure: the φ coupling is NOT
+live-exclusive where measurable (ABS corr 0.9988 at 3×
+amplitude; DIR degenerate; SMOOTH/SCR below the usable minimum)
+— only amplitudes separate, census; twin pointwise devs ≤
+1.9e-7 nats.  The named rest is the two-block cancellation
+ratio — the sharpest remaining form of the r338-q1 question.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 **Lane status after wave 13.**  **The terminal: the MEASURED
 composition is the end state of the route** (r324
 `PILEUP_GROWS_SUBCRITICAL` +0.172 < 0.224 record / 0.188
@@ -3862,6 +3978,21 @@ statements; census 5 → 8, the wave-12 census reservation partially
 discharged).  The window-local positivity premise is proved
 NOWHERE.  The mincut (base 4 / refined 5) is unchanged.  NO RH
 CLAIM.
+
+**Lane status update (r354, additive).**  The L\* fine-structure
+rest is now typed one level deeper: the shared wander φ is
+POINTWISE PREDICTED by dictionary weights × the
+recursion-computable cross kernel (`PHI_DICTIONARY_GO`,
+computability grade — not a closed form), its anatomy is a
+two-block interference (pair geometry vs weights), and it is
+pair-local (not N-alone, not gap-class/prime-size carried); the
+EXT5 high-side flattening survives a sealed two-parameter
+running-exponent adjudication only as census (the wander defeats
+the band), continues on the fresh EXT6 tranche (deepest windows
+ever, N_w 7942, margins positive), and the δ₀ candidate
+separation is UNDECIDABLE inside the document frame (pool
+exhausted at 10^3.90 vs required 10^5.4) — the L\* contract
+stays [O]; the mincut is unchanged.  NO RH CLAIM.
 
 ## Folder guide
 
