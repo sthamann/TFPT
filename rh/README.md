@@ -3211,6 +3211,64 @@ typed R346 question via `c'² = (1−r'_det)·p'q'` with
 `m2' == margin`).  Experiments-side, NO ledger row, NO L\*
 claim, NO RH CLAIM.
 
+**The delta–alpha closure (r347, the named r345 follow-up: the
+one-line identity — the margin exponent from the cancellation
+law).**  `delta_alpha_closure_probe.py` (34/34, SPEC_SHA
+`bd1aa7f393da057f` final with record, freeze
+`99100cea2358fe56`, two-commit protocol: pre-freeze `95f7f944`,
+record `8e489331`; NO amendments after freeze; one pre-freeze
+machinery finding disclosed — an arithmetic slip in the w9
+aspect anchor constant, corrected before the freeze commit)
+put the exact 2×2 determinant identity of the dressed block in
+charge of the exponent bookkeeping.  **The exact spine:** the
+ONE-LINE IDENTITY `m2'·(p'+q'−m2') = p'q' − c'² = p'q'·r'_det`
+(both eigenvalue deficits of the dressed 2×2 are the roots of
+`t² − (p'+q')t + (p'q'−c'²)`) — exact Fractions on the hand toy,
+f64 max residual 3.3e-9 on 75/75 rows at the backward-error
+scale.  **Verdict `ALPHA_CLOSED` — the margin exponent FOLLOWS
+from the cancellation law:** all four sealed closures hit inside
+the 0.1 bar — C1 identity route |α 3.332 − α_id 3.382| = 0.050,
+C2 margin bridge 0.001, C3 cancellation bookkeeping
+|slope(c') − (slope(c) + slope(c'/c))| = 0.035, and **C4 THE ONE
+LINE |α 3.332 − (a_c 0.697 + δ 2.668) = 3.366| = 0.033**; the
+bridge clause `m2' == margin` is protocol-graded on all 75 rows
+(max |m2'/margin − 1| = 0.0605 ≤ 0.10, ratio slope +0.0001);
+`CURV_FLAT(r'_det)` re-gates under the r345 protocol verbatim (0
+band outliers), both AUX aspect bands hold 0 out (p'/q' max
+0.231 dec, (p'+q')/c' max 0.101 dec — the flat-aspect step that
+turns the identity into the one line); the δ-law and c-law
+re-gate on their sealed meters.  **Building blocks typed:** the
+identity is THEOREM-GRADE; the bridge and the flatness
+certificates are CERTIFIED CENSUS (0 violations); `a_c` and `δ`
+are FIT-CENSUS laws — **the open analytic remainder of the L\*
+margin law is reduced from ρ_r = 2.624 (r342) to the single
+cancellation exponent δ**: one measured law instead of three,
+connected by exact algebra and certified flats.
+**`DRESSED_FACTOR_CENSUS` (Leg C, honest):** the dressed
+diagonals do NOT inherit the bare dictionary slopes unchanged
+(the GO clause fails loudly: p'/p, q'/q decay ~N^−2.6) and the
+residual-law tag does not fire either (q'/q halves-curved
+−0.508 > 0.35) — the factor laws stay census with the
+universality census |δ_p − δ| = 0.059, |δ_q − δ| = 0.003: the
+dressing eats p, q and c near a COMMON rate, census-grade, not
+a sealed law.  **`MIRROR_WORLD_CLAUSE_SEALED` (Leg D):** mirror
+exists iff λ_rest < 1, live iff |ρ₃₂ − 1| ≤ 0.5 — live 2/2
+(ρ₃₂ 0.9225), dead 4/4 diverge, and **the r330 Dirichlet second
+worlds enter the L\* lane for the first time, typed DEAD-side**
+(DIR λ_rest 3.97e37, series NONFINITE; ABS 2.28e5, series
+−3.85e176): the r330 half-filling split restates structurally
+in the E-Gram frame — the χ-twist and even the bare p = 3 atom
+removal destroy the rest-block contraction; typed, not forced.
+Honest negatives: δ is NOT derived from the source (the typed
+specialist question is now ONE exponent); the dressed decay
+columns extend to EXT3/EXT4 only high-side (n_low 0 — the r286
+deep-family curvature restated); α_id − α = 0.050 is pure
+Theil-Sen non-additivity across curved columns (the identity
+holds per row at 3.3e-9); no second living arithmetic exists
+inside the MAIN frame (the GRH-faithful Dirichlet frame stays
+the named follow-up).  Experiments-side, NO ledger row, NO L\*
+claim, NO RH CLAIM.
+
 **The path-weighted Bellman / Reverse-Hölder round (r341, the
 terminal main round after the r339 dictionary — the two-arm
 theorem candidate with path-probability weights instead of
@@ -3361,7 +3419,17 @@ survives (kz44/kz59, absorbed by K ≤ 3), and the signed
 cancellation is now a measured law — `CANCELLATION_LAW_FOUND`:
 `c'/c ~ N_w^−2.67`, the rest space mirrors the pair cross-term,
 with the finite-order mirror bounded exactly on the live worlds
-and divergent on all dead ones; the L\* contract still [O]).  **Lean: 8 sorries, all typed** (the
+and divergent on all dead ones; r347 then closed the exponent
+accounting — `ALPHA_CLOSED`: through the exact one-line identity
+`m2'(p'+q'−m2') = p'q'·r'_det` with the protocol-graded bridge
+`m2' == margin` and the certified flats, the margin exponent
+REDUCES to the one line `α = a_c + δ` (3.332 vs 0.697 + 2.668,
+residual 0.033 ≤ 0.1) — the open analytic remainder of the
+margin law shrinks from three exponents to the single
+cancellation exponent δ, itself still a measured law; the
+Dirichlet second worlds enter the lane for the first time and
+type DEAD-side under the sealed mirror clause; the L\* contract
+still [O]).  **Lean: 8 sorries, all typed** (the
 five window-local legacy sorries byte-identical — the two true
 WINDOW-LOCAL holes `lstar_subordination` +
 `terminal_positive_main` unchanged — plus the three named Level-C
