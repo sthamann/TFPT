@@ -337,6 +337,142 @@ AC_CLASS_EXCLUDED is a universality-class STATEMENT FOR THE MEMO,
 never a wall mechanism; no verdict claims L*, a bound mechanism,
 a derived 5/7, or RH progress in any direction.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze edit; TWO-COMMIT PROTOCOL EXECUTED: the sealed spec
+above was committed as "r356 pre-freeze" (58bb09bb, SPEC_SHA
+freeze 5d277d576df75d3a) BEFORE the first full evaluation;
+chronology honest: smoke pass 1 = 34/34 (0.6 s) at the sealed
+rules, pass 2 byte-identical; pre-freeze commit 58bb09bb;
+calibration pass 1 = FIRST full evaluation = 34/34 (115.0 s)
+with ZERO amendments -- no bar, band, block, clause or typing
+rule moved after the freeze; record run1 = 34/34 (117.1 s),
+run2 = 34/34 (114.9 s), byte-identical up to WALL and identical
+to the calibration pass):
+MAIN VERDICT = DUALITY_REPARAM_ONLY -- THE DUALITY IS EXACT BUT
+DOES NOT COMPRESS THE ONE-OBJECT PROBLEM: no dual block passes
+the sealed carrier clauses (DW corr +0.6865 / share 1.638 /
+leave-out 1.198; DK corr -0.0880 / 1.657; GC corr -0.4379 /
+share 0.049 / leave-out 1.021) and the compression clause does
+NOT fire (best dual leave-out 1.021 (GC) > 0.5 x best r354
+leave-out 0.966 (B2, in-run)); the near-tautological sum block
+DW + DK == log c^2 - GC sits at corr +0.9991 / leave-out 0.049
+(EXCLUDED from the sealed list by design, census): in the dual
+coordinate the wander is LOCAL two-point (reciprocal weight x
+dual kernel) with a small, flat global-conditioning remainder --
+a REPARAMETRIZATION, not a reduction; the L* lane is FINAL at
+the specialist memo
++ ALGEBRA_LEDGER(the round's permanent gain, theorem-grade
+skeleton, every gate green: (i) Q = E(I+E)^{-1} EXACT (Fractions
+difference 0; f64 1.6e-13 at w9, <= 7.6e-12 on all 85 rows);
+(ii) the Borodin complementation Pi_N^u = D(I - Pi_{N-1}^{u_vee})
+D at half filling S = 2N-1 -- the SUPPORT GATE HOLDS BITWISE ON
+ALL 85 REAL WINDOWS (the union support IS the full cosine grid;
+the r228 half-filling law IS Borodin's rank condition, exact,
+no off-by-one, whole family); Fractions 0 with the rational
+conjugator G = diag(1/(u_j P')); full-X 3.7e-13 at w9;
+Y-restriction <= 5.4e-10 deep; (iii) THE SPECTRAL MAP margin ==
+2 - 1/lambda_min(R) (abs devs <= 9.9e-10) -- L* IS R > I/2,
+measured live: lambda_min(R) - 1/2 = +4.2e-5 (w9) .. +5.9e-11
+(EXT6); (iv) the pair identities c == eps1 eps2 (R^{-1})_{12},
+p/q == 2 - (R^{-1})_{kk} (rel <= 4.5e-7 deep): the r342 pair
+block IS the (1,2) principal minor of 2I - R^{-1}; (v) the
+reciprocal weight EXACT on the real windows: route A == B <=
+5.0e-9, route B == C at 4.4e-16 -- u_vee == c_j (1-x)/|f| incl.
+the endpoint halving)
++ ANTI_DESIGN_GATED(corr(psi57 DW, psi57 W) = -0.999998 <= -0.99:
+the r354 anti-correlation of the dictionary-weight block against
+the pair-geometry block IS duality algebra -- the +log|f| /
+-log|f| reciprocity, exactly as the idea-search predicted;
+census corr(psi57 DK, psi57 PG) = -0.567)
++ RESERVE_LOCALIZED(the round's positive finding, census-grade:
+the LOCAL dual two-point block (R_pair)^{-1} predicts the log
+reserve WITHOUT p/q/c readback and WITHOUT the global inversion
+-- corr(psi57 LR_loc, psi57 LR) = +0.9982, leave-out 0.068 on
+the 57 AND EXT PURETEST corr +0.9828, leave-out 0.165 on the 28
+deep rows; pointwise log(LR_loc/LR) median -0.511, max 0.627
+nats: the 500x cancellation is CARRIED by the local dual 2x2
+data; the sealed reserve clause FIRES, the carrier+compression
+does not -- localization in the dual pair, no compression of
+the wander itself; the GO verdict correctly stays off)
++ AC_CLASS_EXCLUDED(the co-deliverable for the memo: rescaled
+pair positions a = 2N^2(1-y) family-constant against pi^2 f^2/4
+on ALL 85 rows (max dev 0.33 x 1/N_w, fold census [(2, 4)]
+uniform), and the measured decorrelation a_rhoK = 1.4222 ==
+the r352 record EXACTLY where the Lubinsky-type AC/Bessel class
+demands rho_K -> const at fixed microscopic arguments: the
+window-kernel universality class is NOT the AC class --
+census-grade class exclusion, typed for the memo addressees;
+deep census EXT5+EXT6 rhoK in/low 1/0, out-rows HIGH side)
++ DEMARCATION_LEDGER(r228 contrast machine-checked: the old
+duality lived on the SIGNED measure (Hankel complement, dual
+reference weights 1/(w L'^2)) and died on zero weights
+(R_DUAL_OBSTRUCTED, mu == 0 on nu nodes); the positive lift
+eta = mu + nu has u >= 6.11e-12 > 0 on every union node and the
+dual weight finite everywhere (max u_vee 1.61e+5) -- the
+obstruction is structurally ABSENT; NOT_A_HOLE_EDGE's
+half-filling law is CONSUMED as the rank condition; the
+DUAL_WALL_EQUIVALENT death pattern materialized exactly as the
+enum anticipated: as DUALITY_REPARAM_ONLY, typed not hidden)
++ DUAL_MARGIN_LEDGER(EXT6 sign census: margins (3.85e-10,
+1.13e-10, 1.70e-09, 1.10e-09) vs margin_dual (-1.65e-10,
++2.36e-10, +7.07e-10, +7.78e-10) -- kz133 flips sign INSIDE the
+disclosed ~5e-10 f64 resolution: the dual route cannot certify
+the deepest L* signs, said loudly; every shallower row matches
+at the graded bars)
++ WORLD_LEDGER(MAIN mini corr 0.994351 / rmsr 0.1211 GATE
+passed; the dead worlds LOSE: reserve-usable 0/6 on ALL FOUR
+dead worlds -- the LR cone is EMPTY off the wall (pq <= 0 or
+c^2 >= pq on every usable row); carrier NOT_MEASURABLE on
+SMOOTH/SCR (4/6 usable), DIR best DK corr +0.899 lo 0.993 (no
+hit), ABS best DW corr +0.746 lo 0.960 (no hit);
+lambda_min(R) - 1/2 census: MAIN +4e-5 .. +6e-11 vs dead
+-0.083 .. -0.500 -- R > I/2 fails structurally on every dead
+world (the L* condition restated in hole coordinates, census);
+EPST/HL2 NOT_LADDERED; WORLD_BLIND not typeable: the carrier
+clause never fired)
++ TWIN_LEDGER(dose-zero BITWISE 6/6; max dual dev over |dDW|,
+|dDK|, |dGC|, |dlog LR_loc| = 7.8e-4 nats, bar 1e-3 -- passes
+with 1.3x headroom only, disclosed)
++ MUSTFAIL_LEDGER(m1 P'-unsquared 8.06e-2 + Fractions-exact
+break; m2 rank-N 6.12e-3 + Fractions-exact break; m3 mu-only
+nodes 125.0 nats; m4 mass permutation 2333 rel; m5 R_12-local
+1.394 (incl. sign flip) vs true 9.2e-12; m6/m6b AST-FLAGGED;
+constructor scopes + fragment audit CLEAN).
+Key numbers.  W9: dual row DW -19.5844 / DK +10.8508 / GC
++1.8653 summing to ln c^2 = -6.8683 at 1.8e-11; lambda_min(R)
+0.500041882; LR_loc 7.884e-3 vs LR 1.163e-2; the r354 four-block
+row reproduced bit-near.  LADDER: 85 rows, every f64 margin
+positive, no exclusions, EXT6 dual block far under the 900 s
+contingency (total wall 115 s); GC column 1.87 (w9) -> 1.47 ..
+1.49 (EXT5/EXT6) -- the global conditioning is SMALL and
+SATURATES: the dual coordinate localizes the wander in the
+two-point data; FIT anchors == the r352/r354 records EXACTLY
+(margin -3.332, c -0.697, p -0.754, q -0.645, rdet -2.624, kap
+-0.711); FS anchors corr 0.999998 / rmsD 0.8787 / rmsr 0.0019
+reproduced EXACTLY.  HONEST NEGATIVES: (1) the MAIN verdict is
+the honest null -- the duality is a coordinate change and the
+sealed compression bar correctly refused the near-tautological
+sum block; the lane goes to the memo as the contract ordered;
+(2) RESERVE_LOCALIZED is census-grade localization, NOT a
+mechanism: LR_loc consumes the dual pair block whose values are
+measured window scalars; (3) at EXT6 depth the dual margin route
+loses the sign inside f64 (kz133) -- the spectral map is exact
+algebra but not a deeper certification instrument; (4) the twin
+bar passes with only 1.3x headroom; (5) the dead-world reserve
+channel is vacuous (the LR cone is empty off the wall), so the
+world separation rests on the carrier channel and the structural
+lambda_min(R) census; (6) AC_CLASS_EXCLUDED is a class statement
+for the memo, never a wall mechanism.  R357 SKETCH (candidates,
+not commitments; EDGE_REGIME was conditional on substance): the
+substance delivered is (i) the reserve localization in the dual
+pair (R_pair)^{-1} and (ii) the discrete-hard-edge class
+exclusion -- both feed the memo (Uvarov language, BKMM
+saturation addressees); no internal round is scheduled from
+here.  Runtime 117.1 / 114.9 s record, 115.0 s calibration,
+0.6 s smoke; deterministic, run1/run2 byte-identical up to WALL.
+AMENDMENTS AFTER FREEZE: none -- this record-table insertion is
+the only post-freeze edit.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
