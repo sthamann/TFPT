@@ -3324,6 +3324,57 @@ inside the MAIN frame (the GRH-faithful Dirichlet frame stays
 the named follow-up).  Experiments-side, NO ledger row, NO L\*
 claim, NO RH CLAIM.
 
+**The delta source anatomy (r348, the named r347 follow-up: the
+order-0 mirror as an object + the resolvent rate-equality theorem
+candidate).**  `delta_source_anatomy_probe.py` (34/34, SPEC_SHA
+`307814e9ef67e8a1` final with record, freeze `b43a635184c44d3c`,
+two-commit protocol: pre-freeze `0d0849e6`, record `665ea4f6`; NO
+amendment — calibration pass 1 = first full evaluation = 34/34)
+put the one remaining measured exponent δ = 2.668 under source
+anatomy.  **Two exact spines:** (i) the ORDER-0 SPLIT
+`Δc = u₁·u₂ + Σ_m α_m β_m δ_m/(1−δ_m)` (direct path + resolvent
+enhancement; Fractions exact, f64 max 5.8e-14 on 75/75, with the
+bookkeeping identity `c'/c == (1−ρ₀) − ρ_hi` at 3.6e-8); (ii) the
+TWO-LEVEL DRESSED-SCALAR IDENTITY `p'₂ = m(g21·a₂²+b₂²)/Δt²`,
+`q'₂ = m(g21·a₁²+b₁²)/Δt²`, `c'₂ = m(g21·a₁a₂+b₁b₂)/Δt²`
+(Fractions exact on the rank-2 model — 121/250, 79/250, 72/250 —
+and through the full Schur chain; cross-tie r'₂ = 4375/9559 == the
+r345 formula).  **Verdict `RATE_EQUALITY_THEOREM` — the common
+dressing rate IS the margin rate:** under top-2 dominance with
+flat geometry every dressed scalar is margin × an O(1) geometry
+factor, hence `δ_x = α − a_x` exactly (rate toys: the naive
+`δ_p == δ_q == δ` holds IFF `a_p == a_q == a_c` and breaks by
+exactly the bare spread; a τ = 0.4 angle drift separates the
+dressed slopes by 0.453 — flat geometry is load-bearing); LIVE
+certified census: E1 `CURV_FLAT` (r345 protocol verbatim) passes
+on ALL THREE margin-pinning ratios `p'/m`, `q'/m`, `|c'|/m`
+(slopes −0.056/+0.016/−0.025, 0 out/0 hard of 75 each), E2
+two-level truncation median 0.0879 ≤ 0.20, E3 sign 75/75, E4
+theorem image max |δ_x − (α − a_x)| = 0.033 ≤ 0.1 — **the r347
+universality census is upgraded to its exact form and δ == α −
+a_c loses its independent-law status; the irreducible measured
+rest of the L\* margin law is the pair {α, a_c}.**
+**`ORDER0_LAW` with `CARRIES_DELTA` REFUTED:** the order-0 miss
+`y₀ = 1 − ρ₀` carries its own slow law (δ₀ = 0.401, EXT3 12/12,
+EXT4 6/6) but |δ₀ − δ| = 2.267 — the r347-sketch hypothesis dies
+cleanly: u₁·u₂/c does NOT carry the N^−2.67 law; the δ law is an
+INTER-ORDER NEAR-CANCELLATION (y₀ and ρ_hi are twin slow laws
+whose difference is the c'/c column, pinned to the margin scale
+by the resolvent; depth census |c'/c|/y₀ median 1.48e-3).
+**`DICT_T0_GO`** (median 0.0177 ≤ 0.10 over the six sample rungs,
+w9 honest worst 0.195): the weight side of the order-0 overlap
+products is dictionary-explicit; the kernel side stays
+census-grade (r342 negative #4).  **Honest negatives:**
+`WEAK_FAMILY_STRAINED` fires (kz28 scalar shadows up to 0.91,
+median 0.377 > 0.35; worst arbitrated row kz23 at 4.06 — K = 2 is
+a median instrument on the scalars, not per-row); the certificate
+is a sealed census on 75 finite windows; α and a_c stay UNDERIVED
+from the source (`DELTA_SOURCE_DERIVED` cannot fire).  The mirror
+world clause reproduces bit-near with the NEW ρ₀ world column
+(live 0.5787 vs dead −220 … −1.06e6; SMOOTH +1.76 same sign wrong
+size — census).  Experiments-side, NO ledger row, NO L\* claim,
+NO RH CLAIM.
+
 **The path-weighted Bellman / Reverse-Hölder round (r341, the
 terminal main round after the r339 dictionary — the two-arm
 theorem candidate with path-probability weights instead of
@@ -3500,7 +3551,18 @@ residual 0.033 ≤ 0.1) — the open analytic remainder of the
 margin law shrinks from three exponents to the single
 cancellation exponent δ, itself still a measured law; the
 Dirichlet second worlds enter the lane for the first time and
-type DEAD-side under the sealed mirror clause; the L\* contract
+type DEAD-side under the sealed mirror clause; r348 then put δ
+itself under source anatomy — `RATE_EQUALITY_THEOREM`: under
+top-2 dominance with flat geometry every dressed scalar is
+margin × an O(1) geometry factor (two-level identity, Fractions
+exact), so `δ_x = α − a_x` exactly — the margin-pinning ratios
+p'/m, q'/m, |c'|/m are certified flat on 75/75 rows and δ == α −
+a_c loses its independent-law status: the irreducible measured
+rest of the margin law is the pair {α, a_c}; the order-0
+hypothesis is refuted honestly (δ₀ = 0.401 ≠ δ: the cancellation
+law is an inter-order near-cancellation of twin slow laws, not
+an order-0 property), and the weight side of the order-0 overlap
+is dictionary-explicit (`DICT_T0_GO`); the L\* contract
 still [O]).  **Lean: 8 sorries, all typed** (the
 five window-local legacy sorries byte-identical — the two true
 WINDOW-LOCAL holes `lstar_subordination` +
