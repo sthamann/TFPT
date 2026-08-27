@@ -329,6 +329,135 @@ field tests the out-of-zone deep regime only (said out loud); a
 certified K2 law fixes a LAW CANDIDATE with frozen census
 constants -- it proves NO cofinal law; r243-r354 stand.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze docstring edit; freeze SPEC_SHA b0dd5a93a9d5b790,
+pre-freeze commit 94f0683a; protocol: smoke pass 1 = 47/47
+(0.8 s, run pre-commit, disclosed in the commit message);
+calibration pass 1 = FIRST full evaluation = 47/47, wall
+816.8 s, NO amendment -- no bar, band, rule or verdict rule
+moved at any point; record run1/run2 after this insertion,
+identical up to the runtime line):
+MAIN VERDICT: K2_LAW_CERTIFIED_NU_FREE(0 violations at the
+frozen C_2 = 11.87 on 8 frame-B + 12 NU-test + 5 fresh rows)
++ K2_SOURCE_CHAIN_OPEN(caps vacuous: C_NG C_H 373.4 / C_NSC
+C_P 286.7 vs bar 4 x 11.87 = 47.5) + GMIN_LAW(e_g -0.252,
+mono 0.80) + INZONE_EXHAUSTED_ALL_NU(0) + K2_TEST_MAX(kz103,
+NU3, 10.62) + GMIN_IMPLIED(NONE, e_impl +0.29) +
+NU_RATIO_CENSUS(med 0.19).
+THE HEADLINE FINDINGS:
+(1) K2 SURVIVES ITS SECOND INDEPENDENCE TEST -- THE ASPECT
+CHANGE: the frozen C_2 = 11.87 holds with ZERO violations on
+all 25 test rows (the 8-row frame-B regate + 12/12 admitted
+NU-test rebuilds at NU 2/3 + the 5/5 fresh NU = 3 field kz99/
+115/89/86/132, N_w 2961..3805, 0 queue failures, 0 post-eval
+drops); the NU test is COMPLETE (12/12 vs bars 9/4/2), so the
+sealed letter K2_LAW_CERTIFIED_NU_FREE fires: the Klein-gap
+product is stable across BOTH construction families AND all
+three window aspects ever built.  The closest call is kz103
+at NU 3: FABg 10.62 = 11 pct below the ceiling (census, said
+out loud).
+(2) THE CENSUS CONTRAST THAT MAKES (1) MEANINGFUL: the FAB
+coordinate itself is aspect-WILD -- kz99 (NU3, fresh) posts
+FAB 19.38, a NEW lane record above the r353 18.07, and kz103
+jumps 3.69 (NU4) -> 12.98 (NU3) while kz111 collapses 14.93
+(NU4) -> 1.00 (NU2); the median FAB(NU2)/FAB(NU4) ratio on
+the test zones is 0.19.  The K2 product ABSORBS this: max
+FABg over every row of the round stays 11.87 (kz111, NU4).
+The reviewer hope is now measured content: the gap product is
+the aspect-stable coordinate of the lane, the bare FAB
+ceiling is C(NU, family) census.
+(3) THE SOURCE CHAIN CLOSES EXACTLY -- ITS CENSUS CAPS ARE
+VACUOUS (typed honestly): FAB grel <= (ngj/lg) x (hgn grel)
+holds one-sided EXACT on all 118 live worlds (K2 chain ward
+0.0e+00) and the mesh identity h - NU u in (0, 1.5] is EXACT
+on (114, 115, 112) pool zones at NU (2, 3, 4) -- WHERE grel
+enters is now satz-grade construction algebra (the Klein gap
+sets the mesh, u = alpha/gap is the NU-free depth
+coordinate).  BUT the frozen caps C_H = max hgn grel = 141.71
+and C_P = max pil grel = 141.53 (both at kz111) give implied
+ceilings 373.4 / 286.7 >> the a-priori bar 47.5 (they DO hold
+0-violation on all 25 test rows -- but vacuously):
+K2_SOURCE_CHAIN_OPEN -- the r351 K3/K4 vacuity repeats at the
+grel-sharpened caps; the chain loses too much at the
+heavy-group step (bshare med 0.59 family / 0.41 all: the
+heavy group is NOT the whole block off-family).  The counting
+side holds AGAIN: nsc_rel/lg <= 2.0258 and ngj/lg <= 2.6351
+on all 17 NU rows (min reserves 1.35/1.81) -- FIFTH fresh
+cohort, FIRST aspect test: still the most robust asset.
+(4) THE g_min(u) CURVE IS A SLOW LAW -- BUT SUPERCRITICAL AS
+A CEILING ROUTE: 6 dyadic bins over the 130 admissible zones
+(u 32..2035), bin minima 0.482 / 0.396 / 0.500 / 0.408 /
+0.282 / 0.187, mono frac 0.80 >= 0.75, halves-slope e_g =
+-0.252 -> GMIN_LAW: the measured gap floor falls like
+roughly u^(-1/4), NOT erratically -- the first structured
+statement about the lower gap bound (census; the depth-gap
+coupling h = NU u partly builds this in, disclosed).  The
+implied arithmetic: e_um = +0.883 (m tracks u on the 114
+admitted rows), e_impl = -e_g/e_um = +0.286 > CRIT_EXP 0.224
+-- IF the census slope were a law the K2 ceiling C_2/g_min(m)
+would grow SUPERCRITICALLY: the growing-law m_0* is NONE; the
+flat-floor route at the global pool floor 0.187 (kz69) gives
+C_FAB^K2 = 63.4 and m_0* = 10^23.5 -- 3 decades WORSE than
+the r353 direct census 10^20.5.  The K2 detour needs a
+genuinely diophantine floor (or a subcritical g_min law),
+not the measured envelope.
+(5) THE COFINAL TYPING: SATZ links = r324 identity, r327
+group chain, mesh identity, dictionary q_max; CENSUS links =
+C_NG (5 cohorts), C_H/C_P (vacuous), C_2 (frozen, 0 viol
+over 2 families + 3 aspects), g_min (GMIN_LAW census) -- the
+whole spike mechanism now reduces to the census-to-law
+promotion of [gap floor] x [counting] x [heavy-group mass],
+with the gap floor as the named diophantine rest.
+(6) WORLDS (census, no letter): w9B FABg 0.74 / w13B twin
+1.35 / EPSTEIN 0.41 -- far below every ceiling; the frame-B
+SCRAMBLE control at kz80 (seed 1) BREAKS AT ADMISSION (nf 3,
+the r353 record reproduced).
+THE NU TABLE (kz grel | FAB @ NU2/NU3/NU4 | FABg @
+NU2/NU3/NU4): kz111 0.795 | 1.00/2.89/14.93 |
+0.80/2.30/11.87; kz75 0.402 | 2.41/3.29/12.35 |
+0.97/1.32/4.96; kz51 0.408 | 1.16/1.07/7.44 |
+0.47/0.43/3.04; kz65 0.444 | 0.97/2.08/5.48 |
+0.43/0.92/2.43; kz79 0.809 | 3.06/1.14/9.00 |
+2.48/0.92/7.29; kz103 0.818 | 0.90/12.98/3.69 |
+0.74/10.62/3.02.  THE FRESH NU3 FIELD (kz z N_w m grel |
+FAB FABg): kz99 421 3805 779 0.325 | 19.38 6.30; kz115 509
+3183 675 0.505 | 6.89 3.48; kz89 359 3178 625 0.353 | 8.57
+3.02; kz86 347 3054 630 0.352 | 4.54 1.60; kz132 613 2961
+597 0.668 | 5.45 3.64.
+ANCHORS bit-near: r314 identity 4.5e-17 ladder / 7.5e-17
+frame-B / 1.7e-16 NU rows; r306 C_2 1.069 (0/57); r316 n 65
++ quartet + C_small @ kz18; dictionary 7.8e-16; r321 F_A
+top-3 2.47/2.39/2.38; THE r349 FAMILY + EXT4 RECORDS EXACT;
+THE r324 DIRECT RECORD (C_INF 1.7481, violators {53, 61, 67,
+76, 83}, e_G +0.158); THE r329 COUNTING RECORD (C_NSC 2.0258
+/ C_NG 2.6351, EXT3 reserves 1.58/1.82); THE r351 GROWTH +
+FLOOR RECORDS (C_FAB 14.93 @ kz111, EXT5 max 9.71 @ kz135,
+kz79 F_ins 6.69, rc_small +0.243, 28 fam rows, min RSV 1.07
+@ kz75, e_RSV -0.649, rc_fam -0.600, C_M2ENV 26.01, m_0*
+10^18.9, C_K2(83) 11.87, rc_gap -0.623, reserves 1.59/2.77);
+THE r353 FRAME-B RECORD (8/8 re-admitted, 0 queue failures,
+FAB/grel table within tol, C_K2X 11.87, frame-B K2 max 5.95,
+g_min 0.187 -> implied 63.4, C_M2ENV' 44.18, m_0* 10^20.5,
+reserves 1.61/2.79) -- ALL within tol.
+SEAL: NORM 9.0e-16, interpolation 0.0, FAB identity 2.0e-16,
+pileup/group chains 0.0, K2 chain 0.0e+00, decomposition
+1.0e-15, r316 chain 1.0e-15, mesh identity EXACT (114, 115,
+112) zones + toy dev 1.0, NU = 4 reproduction 0.0 EXACT +
+pool 70/70, NU freshness strict on 12 admitted test rows,
+contribution ward NU rows 1.6e-12 (a-priori bar 1e-3),
+purity clean (0 id + 0 literal hits on the five module-own
+builders), toys exact (K2 chain pin 1/2 == 1/2 + slack 1/2,
+mesh 1.0 <= 1.5, gmin LAW/ERRATIC/FLAT with slope pin
+-0.4407, trees 5/5 + 2/2 + 3/3, e1 (4.0, 1.0) vs (2.0,
+1.0), e2 3.0 vs 1.0, e3 (1.0, 2.0) vs (0.9, 1.8), e4 3/8 vs
+3/4 break 2).  Must-fails: e1 protocol-CAUGHT twice (AST
+rho@777 + toy) / e2 protocol-CAUGHT twice / e3
+protocol-CAUGHT twice + the live freshness ward / e4 CAUGHT
+exact (break == 2) + m5a/m5b FLAGGED.  Runtime 816.8 s
+calibration / record run1/run2 identical up to WALL / 0.8 s
+smoke.  AMENDMENTS AFTER FREEZE: NONE except this
+record-table insertion.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
