@@ -4969,6 +4969,54 @@ unclaimed. NO RH CLAIM.
       layer ships NO change (r326 already merged and green, census
       5 → 8); the audit rounds r328A/B/C read-only, reports with
       the coordinator; no measurement round in flight at this cut.
+- [x] **Wave 14**: rounds r334–r357 (the terminal/L2/L* consolidation,
+      reviewer-authorized after the double substance condition r355 +
+      r357) frozen as FIVE modules —
+      `v978_terminal_density_martingale.py` (the density martingale
+      from mass conservation alone, the moment dictionary, the tilted
+      tower, the exact hand-off and the pair ceiling;
+      `PRIME.TERMINAL.DENSITY_MARTINGALE.01` [E]; the r324 MEASURED
+      composition stays the terminal end state),
+      `v979_cover_growth_k2.py` (the first certifying three-arm cover,
+      the P02 predictor, the growth ceiling C_FAB = 14.93 and the K2
+      two-family law — ALL Frame-A-typed census per the binding r353
+      restriction: the sliding coverage is FINITE; K2 the sole
+      cross-family survivor; `PRIME.L2.COVER_GROWTH_K2.01` [E]),
+      `v980_lstar_margin_chain.py` (the one-line identity, the
+      two-level theorem, the pinning theorem, the rate-equality
+      theorem and the rho_K identities; the chain complete and typed;
+      `PRIME.LSTAR.MARGIN_CHAIN.01` [E]),
+      `v981_lstar_borodin_duality.py` (the Borodin complementation at
+      half filling with rational conjugator: L* ⟺ R > ½·I, the
+      reciprocal dual weight, the r354 anti-correlation retyped as
+      duality algebra BY DESIGN; honest verdict DUALITY_REPARAM_ONLY;
+      `PRIME.LSTAR.DUAL_HOLE.01` [E]) and
+      `v982_dirichlet_matched_frame.py` (the derived matched Dirichlet
+      frame: SECOND_ARITHMETIC_LIVES on 126 windows, the r330 death a
+      frame artifact, K2 0/126;
+      `PRIME.WORLD.DIRICHLET_MATCHED_FRAME.01` [E], census, kein
+      Satz).  Unlike waves 8–13 the modules embed no probes: each
+      re-derives its exact layer FROM SCRATCH (sympy + Fractions) and
+      re-runs the sealed verdicts on the frozen record aggregates
+      with tipping mutants (the 18 discovery probes stay sealed
+      experiments-side, pinned and re-verified by this suite).
+      LANE STATUS after the wave: terminal — reformulated as a
+      martingale-moment statement, the MEASURED composition the end
+      state; L2 — cover/growth/K2 consolidated Frame-A-typed, the K2
+      gap geometry the NU-free coordinate; L* — FROZEN as a
+      specialist problem (rh/problem/lstar_problem.tex) with the
+      equivalent form L* ⟺ R > ½·I and the one-object question
+      halved (the ~500x smallness of by-design-coupled blocks,
+      localized in local dual two-point data); the second arithmetic
+      lives (n = 3 on 126 windows).  `INVENTORY.json` (guard
+      generator, 138 → 143), `run_rh.py` MODULES → v955–v982 and the
+      ledger/paper/website surfaces extended in the same change; the
+      Lean layer ships NO change (documented: the duality is a
+      REPARAMETRIZATION of the existing hole `lstar_subordination` —
+      no new target form; the two true window-local holes unchanged);
+      `PRIME.LSTAR.SUBORDINATION.01` and
+      `PRIME.L2.RENYI3.SLIDING_BOUND.01` stay [O] with wave-14 notes.
+      No RH claim, no GRH claim, no L* claim.
 - [x] **The Level-C construction theorem** (wave-12 reviewer target,
       load-bearing): the target architecture `CanonicalPrimeWindow`
       plus exactly one construction theorem

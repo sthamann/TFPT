@@ -5,15 +5,17 @@
 Runs, in order:
   (1) INTEGRITY  -- SHA-256 of every pinned rh/INVENTORY.json entry
                     (pinned drift = FAIL; unpinned living documents = INFO),
-  (2) PROBES     -- the sealed campaign probes r250-r356 from
+  (2) PROBES     -- the sealed campaign probes r250-r357 from
                     experiments/tfpt-discovery/ in --smoke mode,
-  (3) MODULES    -- the fifteen RH verification modules v955/v956/v958/
+  (3) MODULES    -- the twenty RH verification modules v955/v956/v958/
                     v959/v960/v961/v962/v963/v964/v965/v966/v967/v968/
-                    v969/v970, executed BY PATH from verification/ (never
+                    v969/v970 plus the wave-14 set v978/v979/v980/v981/
+                    v982, executed BY PATH from verification/ (never
                     copied; v959 ~3.5 min, v968 ~50 s, the rest seconds:
-                    wave-4/5/6/7/8/9/10/11/12/13 modules embed their
-                    probes in the sealed --smoke stage) -- skipped under
-                    --fast,
+                    wave-4..13 modules embed their probes in the sealed
+                    --smoke stage; the wave-14 modules re-derive their
+                    exact layers from scratch and gate frozen record
+                    aggregates) -- skipped under --fast,
   (4) LEAN       -- `lake build` in rh/lean/ if a Lean toolchain is present.
 
 Output is house-style: [PASS]/[FAIL] per item, final line
@@ -167,6 +169,11 @@ MODULES = [
     "v968_architecture_adjudication.py",
     "v969_forks_and_redteam.py",
     "v970_extraction_and_composition.py",
+    "v978_terminal_density_martingale.py",
+    "v979_cover_growth_k2.py",
+    "v980_lstar_margin_chain.py",
+    "v981_lstar_borodin_duality.py",
+    "v982_dirichlet_matched_frame.py",
 ]
 
 PROBE_TIMEOUT = 900        # s per probe (smoke runs are seconds)

@@ -606,6 +606,111 @@ ENTRIES = [
      "r328A/B/C adversarial audits read-only, reports with the "
      "coordinator; no measurement round in flight at this cut",
      True),
+    (f"{VER}/v978_terminal_density_martingale.py", "verification_module",
+     "r339+r341 (wave 14)",
+     ["PRIME.TERMINAL.DENSITY_MARTINGALE.01",
+      "PRIME.L2.RENYI3.MEASURED_COMPOSITION.01"],
+     "[E] the terminal density-martingale layer, re-derived from "
+     "scratch (sympy symbolic + pure Fractions, no probe imports): "
+     "the density per remaining descendant is a martingale from mass "
+     "conservation alone; the moment dictionary E[X^2] == m M_2, "
+     "E[X^3] == m^2 M_3, max X == m q_max (the terminal target IS a "
+     "martingale moment; the banked r306 C_2 = 1.0694 certifies the "
+     "A = 2 polylog form on the 57-rung set); the tilted tower "
+     "E[X^3] == E_Q[prod Gamma] with steps p~ = p R^3/Gamma (the "
+     "untilted reading breaks by an exact Fraction); the Phi-Gamma "
+     "telescope; the exact hand-off E3h <= (m q_max)^2 msh; the "
+     "algebraic pair ceiling Gamma <= 4 via 4R - R^3 = R(2-R)(2+R); "
+     "the sealed r339/r341 verdicts re-run as exact decision logic "
+     "on the frozen record aggregates with tipping mutants "
+     "(LOCAL_INFLATION_SUPERCRITICAL: the target grows 8x slower "
+     "than the worst-case budget; PATHWEIGHT_ALSO_SUPERCRITICAL "
+     "letter-honest: 21x deflation, R* = 3/2 a tuning surface); "
+     "no inequality promoted -- the r324 MEASURED composition "
+     "stays the terminal end state; NO RH claim", True),
+    (f"{VER}/v979_cover_growth_k2.py", "verification_module",
+     "r344/r346/r351/r353/r355 (wave 14)",
+     ["PRIME.L2.COVER_GROWTH_K2.01",
+      "PRIME.L2.RENYI3.SLIDING_BOUND.01"],
+     "[E] the three-arm cover, the growth law and the K2 two-family "
+     "law, Frame-A-typed: the FAB identity F_A B == m q_max/log m "
+     "exact; the data-free K1 formula R_ALG = 4^(1/3) -> grid 8/5 "
+     "interior via exact cube midpoint comparisons; the r355 mesh "
+     "identity h - NU u in (0, 3/2] exact; the sealed r344/r346/"
+     "r351/r353/r355 verdicts re-run on the frozen aggregates with "
+     "tipping mutants (the first certifying three-arm cover 0/51 at "
+     "m_0* 10^22.6; the P02 predictor 51/51; the growth ceiling "
+     "C_FAB = 14.93 with the fresh tranche 0/6 and polylog m_0* "
+     "10^18.9; THE BINDING r353 FRAME-A RESTRICTION: frame B breaks "
+     "the ceiling +21 pct and kills the reserve floor at m ~ 760 -- "
+     "the sliding coverage is FINITE; K2 <= 11.87 the sole "
+     "cross-family survivor, NU-free over three aspects, source "
+     "chain exactly closed with vacuous caps); the honest m_0* "
+     "ledger all Frame-A census; NO cofinal claim, NO RH claim",
+     True),
+    (f"{VER}/v980_lstar_margin_chain.py", "verification_module",
+     "r345/r347/r348/r350/r352/r354 (wave 14)",
+     ["PRIME.LSTAR.MARGIN_CHAIN.01",
+      "PRIME.LSTAR.SUBORDINATION.01"],
+     "[E] the closed L* margin-law chain: the one-line identity "
+     "m2'(p'+q'-m2') == p'q'-c'^2 (Vieta, symbolic); the two-level "
+     "dressed-scalar theorem (121/250, 79/250, 72/250 by hand; "
+     "cross-tie r'_2 = 4375/9559 == the r345 formula; Lagrange "
+     "identity symbolic); the pinning theorem (orthonormal top-2 "
+     "geometry => the dressed charpoly factors as (t-m)(t-m g21): "
+     "m2' == margin identically, both sealed models); the "
+     "rate-equality theorem in exact ratio form; the rho_K "
+     "identities (toy 1/8, 23/24); the sealed r345/r347/r348/r350/"
+     "r352/r354 verdicts re-run on the frozen aggregates with "
+     "tipping mutants (GAP_RATIO_PRIMARY_CERTIFIED with the r343 "
+     "soft decay re-adjudicated as a protocol artifact; ALPHA_CLOSED "
+     "alpha = a_c + delta residual 0.033; RATE_EQUALITY_THEOREM "
+     "live; ALPHA_SOURCE_CLOSED at candidate grade; RHOR_REDUCED "
+     "one object at 500x; PHI_DICTIONARY_GO computability; "
+     "DELTA0_UNRESOLVED pool exhausted 10^3.90); the lane FROZEN as "
+     "a specialist problem at rh/problem/lstar_problem.tex; "
+     "SUBORDINATION stays [O]; NO L* claim, NO RH claim", True),
+    (f"{VER}/v981_lstar_borodin_duality.py", "verification_module",
+     "r356 (wave 14)",
+     ["PRIME.LSTAR.DUAL_HOLE.01",
+      "PRIME.LSTAR.SUBORDINATION.01"],
+     "[E] the Borodin particle-hole duality: the complementation "
+     "Pi_N^u + G Pi_{N-1}^{u_vee} G^{-1} == I bit-exact at half "
+     "filling S = 2N-1 with the reciprocal dual weight u_vee = "
+     "1/(u P'^2) and a RATIONAL conjugator (no square roots; the "
+     "dropped-P'^2 and rank-N mutants break exactly); the "
+     "L-ensemble roundtrip; the spectral map charpoly(E) == "
+     "charpoly(R^{-1} - I) symbolic => L* <=> R > (1/2) I and "
+     "margin == 2 - 1/lam_min(R) (both directions realized); the "
+     "pair identities p/q == 2 - (R^{-1})_kk; the half-filling "
+     "lemma (the r228 law IS Borodin's rank condition); the "
+     "cosine-lattice closed forms => u_vee PROPTO c_j(1-x_j)/|f|: "
+     "the r354 anti-correlation of the two phi blocks is DUALITY "
+     "ALGEBRA BY DESIGN; the sealed r356 verdict re-run on the "
+     "frozen aggregates (support 85/85 bitwise, honest verdict "
+     "DUALITY_REPARAM_ONLY -- the lane goes final to the memo; "
+     "RESERVE_LOCALIZED and AC_CLASS_EXCLUDED banked census-side); "
+     "SUBORDINATION stays [O]; NO L* claim, NO RH claim", True),
+    (f"{VER}/v982_dirichlet_matched_frame.py", "verification_module",
+     "r357 (wave 14)",
+     ["PRIME.WORLD.DIRICHLET_MATCHED_FRAME.01",
+      "PRIME.L2.COVER_GROWTH_K2.01"],
+     "[E] the matched Dirichlet frame and the second arithmetic: "
+     "the GRH-faithful chi-arch side DERIVED symbolically from "
+     "Lambda(s, chi) -- F_A^chi(xi) == -log(pi/q) + Re psi((1+2a)/4 "
+     "+ i xi/2) for a = 0/1 (parity and conductor from the "
+     "functional equation alone); the trivial reduction a = 0, "
+     "q = 1 IS the zeta dictionary; the conductor shift == log 3 "
+     "exact; the parity kernel e^{-w/2} -> e^{-(3/2)w} at 30 "
+     "digits; the sealed r357 verdict re-run on the frozen "
+     "126-window aggregates with tipping mutants "
+     "(SECOND_ARITHMETIC_LIVES: the r330 death was a frame "
+     "artifact, the wall holds on n = 3 arithmetics; the verbatim "
+     "r330 battery retypes all four splits; mechanisms transfer "
+     "while the zeta-graded signatures do not; K2 0/126 -- the "
+     "third independent test; the matched scramble breaks: the "
+     "wall needs the arithmetic); kein Satz, NO RH claim, NO GRH "
+     "claim", True),
     # -- read-only deployed core consumed by every probe --
     (f"{VER}/v563_paper2_readouts.py", "readonly_core",
      "phase2",
