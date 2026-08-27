@@ -4084,6 +4084,54 @@ classification (decorrelation and rescaled positions measured,
 saturation adjacency marked as hypothesis) and the four addressee
 communities — no new claims.  NO L\* CLAIM, NO RH CLAIM.
 
+**The Borodin dual-hole round (r356, the ONE approved internal L\*
+round after the idea search — then the lane is final at the memo).**
+`borodin_dual_hole_probe.py` (34/34, SPEC_SHA `36141c0ae9ed8f35`
+final with record, freeze `5d277d576df75d3a`, two-commit protocol:
+pre-freeze `58bb09bb`, record `5d351e90`; ZERO amendments after the
+freeze — calibration pass 1 = first full evaluation = 34/34)
+executed Sol's Borodin particle-hole contract plus Fable's AC-class
+falsifier.  **Verdict `DUALITY_REPARAM_ONLY` + `AC_CLASS_EXCLUDED`
++ `ANTI_DESIGN_GATED` + `RESERVE_LOCALIZED`:** (1) **the exact
+algebra holds on the whole 85-row ladder** — lift to η = μ + ν,
+Q = E(I+E)⁻¹ (Fractions exact, f64 ≤ 7.6e−12), Borodin
+complementation at half filling S = 2N−1 (the support gate holds
+BITWISE on 85/85: the union support IS the full folded cosine grid,
+and the r228 half-filling law IS Borodin's rank condition), the
+spectral map margin == 2 − 1/λ_min(R) — **L\* IS R > ½·I, measured
+live** down to λ_min − ½ = +6e−11 at EXT6 — and the pair identities
+c == ε₁ε₂(R⁻¹)₁₂, p == 2 − (R⁻¹)₁₁: the r342 pair block is exactly
+the (1,2) principal minor of 2I − R⁻¹; the reciprocal weight
+u∨ == c_j(1−x)/|f| is exact including the endpoint halving; (2)
+**the r354 anti-correlation is duality algebra by design** —
+corr(ψ₅₇ DW, ψ₅₇ W) = −0.999998 gated (+log|f| vs −log|f|); (3)
+**no compression:** no dual block (DW/DK/GC) passes the sealed
+carrier clauses and the compression clause against the in-run r354
+four-block base does not fire (the near-tautological sum block
+DW+DK = log c² − GC was excluded by design) — the duality is a
+reparametrization; **the L\* lane is FINAL at the specialist
+memo;** (4) **census-grade positive finding `RESERVE_LOCALIZED`:**
+the LOCAL dual 2×2 block (R_pair)⁻¹ predicts the log reserve
+without p/q/c readback and without global inversion (corr(ψ₅₇)
++0.9982 / leave-out 0.068 on the 57; EXT puretest +0.9828 / 0.165
+on the 28 deep rows) — the 500× cancellation is carried by the
+local dual two-point data; (5) **`AC_CLASS_EXCLUDED` for the
+memo:** rescaled pair positions family-constant against π²f²/4
+(folds (2,4) uniform, 85/85) while a_ρK = 1.4222 == the r352
+record where the Lubinsky-type AC/Bessel class demands
+ρ_K → const — the window-kernel universality class is NOT the AC
+class; (6) **demarcation vs r227/r228 machine-checked:** the old
+signed-Hankel duality died on zero weights (`R_DUAL_OBSTRUCTED`);
+the positive lift removes the obstruction structurally, and the
+`DUAL_WALL_EQUIVALENT` risk materialized exactly as the enum
+anticipated — typed, not hidden.  Worlds: MAIN mini gate passes,
+all four ladderable dead worlds LOSE (the reserve cone is empty
+off the wall; λ_min(R) − ½ ∈ [−0.500, −0.083] vs MAIN positive),
+twin dual-pointwise 7.8e−4 nats; the EXT6 f64 sign truth is
+disclosed (the dual margin route cannot certify the ~4e−10 deepest
+signs).  Experiments-side, NO ledger row, NO L\* claim, NO RH
+CLAIM.
+
 ## Folder guide
 
 ```
