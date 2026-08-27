@@ -3479,6 +3479,64 @@ protocol-CAUGHT twice each, e3 dominance-circular CAUGHT twice
 (Fractions pin 7/2 vs 28/27), e4 wrong-log-power CAUGHT exact
 (break == 2).  Experiments-side, NO ledger row, NO RH CLAIM.
 
+**The alpha source anatomy (r350, the named r348 follow-up: the
+kernel side of the L\* margin legislation as an object).**
+`alpha_source_anatomy_probe.py` (33/33, SPEC_SHA
+`c3998c87777c975c` final with record, freeze
+`f7d622d8e975b265`, two-commit protocol: pre-freeze `e3f53e1a`,
+record `24f8ca0d`; TWO DISCLOSED calibration amendments a1/a2 of
+the r342-a1 class — the BK1 and route-A after-fit slope sums
+measured 0.137/0.170 of pure Theil-Sen non-additivity on the
+strongly curved weight columns while the pointwise identities
+hold at 1e-16; re-measured at the pointwise dictionary-
+reconstruction scale and compose-then-fit, the after-fit sums
+kept as census, no adjudication bar/candidate/verdict rule
+moved) put the kernel side of {α, a_c} under sealed anatomy.
+**Three exact spines:** (i) the KERNEL COLUMNS `K11 = d1/v1`,
+`K22 = d2/v2`, `K12 = c/√(v1 v2)` with the INDEPENDENT
+Christoffel–Darboux ward — K_N at the pair atoms recomputed from
+the μ-chain recursion coefficients via the CD endpoint/confluent
+formulas, == the Gram route at max 1.2e-10: **K_N is
+source-computable; the open question is its LAW, not its
+value**; (ii) the PINNING IDENTITIES exact in Fractions on two
+rank-2 models — `m2'₂ == margin` IDENTICALLY (the bridge is 1 in
+the top-2 truncation), `p'q' − c'² == margin²·g21/Δt²` (dets
+7/100 and 3/25), `c' == margin × G` — **the r348 twin
+near-cancellation is the algebraic self-consistency of the
+resolvent equation**, with the pinned corollary `slope(y0 −
+ρ_hi) == −(α − a_c)` (residual 0.033); (iii) the slope
+BOOKKEEPING (BK2 Christoffel saturation 0.018/0.016: **the
+diagonal kernel growths ARE the reciprocal weight laws**; BK3
+backward-CS 0.0016: a_c == (a_p + a_q)/2 to 0.002).  **Verdict
+`ALPHA_SOURCE_CLOSED` AT CANDIDATE-LAW GRADE + `PINNING_THEOREM`
++ `DELTA0_CANDIDATE`:** the exponent chain closes source-side
+with ONE census member — `α == 3/4[cand a_p] + 2/3[cand a_q] +
+ρ_r 2.624[census] − a_(p+q) 0.690 = 3.352` vs 3.332 (dev 0.019);
+route A independently at 3.401 (dev 0.068); blocks typed:
+weights WÖRTERBUCH (the r342 digamma/tent dictionary carries the
+across-ladder weight LAWS, |s_v − s_vpred| = 0.0000 at slopes
+−1.791/−1.683), deficits CANDIDATE-LAW (a_p 0.7539 hits [3/4,
+2×0.38] clauses clean; a_q 0.6446 hits [2/3, 1−0.38]; a_κ 0.7111
+hits [2/3, 3/4] — **every ambiguity printed: a sealed hit on 57
+windows is NOT an identification**), pinning THEOREM (bridge max
+0.0605, det-shadow median 0.0731, CURV_FLAT 3/3), ρ_r CENSUS.
+**The kernel steckbrief (new numbers):** s_v1 −1.791 / s_v2
+−1.683 (dictionary-grade), g_K11 +1.786 / g_K22 +1.683 (==
+reciprocal weights), **g_K12 +0.902 the ONE dirty census column**
+(no candidate hits, curv +0.500, EXT3 5/12 — the cross-kernel
+growth at discrete arch-rim atoms is the honest kernel rest;
+REL2 `g_K12 == (g_K11+g_K22)/4` hits at 0.035 but stays census),
+a_κ 0.711.  By-catch: **the y0 world column separates live from
+dead by size or sign on 6/6 std worlds** (the r348 ρ₀ column
+managed 5/6 — SMOOTH flips sign in the y0 coordinate); on every
+dead world the ρ_hi series diverges — the twin slow laws are a
+live-world structure.  δ₀ = 0.401 re-gates with hits [0.38, 2/5]
+mutually unresolvable.  Honest negatives: candidate-law grade is
+never an asymptotic derivation (3/4 vs 2×0.38 at distance 0.01,
+unresolved); the named rests are g_K12 and ρ_r (the r338 q1
+backward-CS question in its sharpest form).  Experiments-side,
+NO ledger row, NO L\* claim, NO RH CLAIM.
+
 **Lane status after wave 13.**  **The terminal: the MEASURED
 composition is the end state of the route** (r324
 `PILEUP_GROWS_SUBCRITICAL` +0.172 < 0.224 record / 0.188
@@ -3633,8 +3691,21 @@ rest of the margin law is the pair {α, a_c}; the order-0
 hypothesis is refuted honestly (δ₀ = 0.401 ≠ δ: the cancellation
 law is an inter-order near-cancellation of twin slow laws, not
 an order-0 property), and the weight side of the order-0 overlap
-is dictionary-explicit (`DICT_T0_GO`); the L\* contract
-still [O]).  **Lean: 8 sorries, all typed** (the
+is dictionary-explicit (`DICT_T0_GO`); r350 then put the kernel
+side itself under sealed anatomy — `ALPHA_SOURCE_CLOSED` at
+candidate-law grade + `PINNING_THEOREM`: K_N at the pair atoms
+is source-computable from the μ-chain recursion (CD ward
+1.2e-10), the diagonal kernel growths reduce to the reciprocal
+dictionary weight laws (Christoffel saturation), the pinning is
+algebraic (`m2'₂ == margin` identically and `p'q' − c'² ==
+margin²·g21/Δt²` exact in Fractions — the near-cancellation is
+resolvent self-consistency), and the exponent chain composes
+source-side with ONE census member (α == 3/4 + 2/3 + ρ_r −
+a_(p+q), dev 0.019; the deficit candidates a_p = 3/4 and a_q =
+2/3 are sealed hits with printed ambiguity, never an
+identification); the named rests are the cross-kernel growth
+g_K12 = +0.902 (the one dirty census column) and ρ_r = 2.624;
+the L\* contract still [O]).  **Lean: 8 sorries, all typed** (the
 five window-local legacy sorries byte-identical — the two true
 WINDOW-LOCAL holes `lstar_subordination` +
 `terminal_positive_main` unchanged — plus the three named Level-C
