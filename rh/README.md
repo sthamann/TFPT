@@ -2778,6 +2778,46 @@ which certifies λ > 1 exactly; MAIN/TWIN < 1 everywhere,
 twin-stable to 5.5e-9).  Experiments-side, NO ledger row, NO RH
 CLAIM.
 
+**The one-sided edge packing (r335, the edge form after the r333
+structural finding).**  `edge_packing_dichotomy_probe.py` (36/36,
+SPEC_SHA `950c9b9ee96298e0` final with record, freeze
+`a1f4c0dd97edcbf4`, two-commit protocol: pre-freeze `ec0fd5d5`,
+record `3fa88d02`) tested whether the one-sided edge-companion
+construction carries: for every dominant β/ω pair a ONE-SIDED
+orbit O_e (same key, window from ps toward the interior, reach =
+the masked support radius W/2, parameter-free a-priori) plus the
+margin mass census, combined into the exact dichotomy
+`q_max ≤ min(Q_e, M_b)` with `Q_e = ng·κ/(|O_e|·rmin_e)` and
+`M_b = ng·κ·S_marg/L1` — EITHER many companions OR small edge
+mass; EXT3 = the 12 r329 record anchors adopted as pure test rows
+(committed `8cbd95f9`).  **Verdict `EDGE_ORBIT_ALSO_SHORT`** — no
+clause certifies (T1-edge viol 43/40/38 of 51 at a = 0/1/2, named
+0/4; dichotomy C_D 141.84/33.06/7.71 viol 14/11/6) — but with two
+structural findings: (1) **the spikes flip to COVERED** — the MASS
+arm covers all four named rungs at every a (kz53 B^D_1 12.51 /
+kz83 20.47 / kz67 2.62 / kz55 11.86 vs C_D(1) 33.06, reserves
+1.6×–12.6×): the r333 spike blocker is resolved pointwise at the
+named rungs by the edge-mass clause; what violates now is the
+mid-band family (kz73/76/61 + deep kz95/98/109, margin share
+0.18–0.28, both arms 6–10); (2) **the inward window misses the
+edge companions** — at the spikes |O_e| = 1 (g\* alone; 6
+inner-empty rungs gained 0): the r333 one-sided same-key
+companions sit OUTWARD of g\* (between the support edge and ps),
+so T1 in the inward one-sided form fails harder than the
+two-sided T1 and the spike coverage comes entirely from the mass
+arm.  T2/T3 stay theorem grade on the edge orbit (rmin_e worst
+0.3162 > 1/4, cband_e worst 3.1630 < 4 on 81 live worlds;
+membership 1 ≤ 2); both arms and the arm partition are exact live
+(arm census O 15 / M 62 of 77 — the mass arm is the rule); δ =
+e(hgn) = −0.004 with halves +0.148/+0.674 straddling (exact r333
+continuity).  Worlds: twin identical protocol; EPSTEIN operates;
+SCRAMBLE |O_e| = 2 vs inner 0 — the one-sided orbit does NOT
+decay on SCRAMBLE (honest negative: the support-radius reach is
+permissive).  Named successor: the packing language is exhausted
+at the edge — the reviewer's martingale second route (named only,
+not executed); the r324 MEASURED composition stays the honest end
+state.  Experiments-side, NO ledger row, NO RH CLAIM.
+
 **Lane status after wave 13.**  **The terminal: the MEASURED
 composition is the end state of the route** (r324
 `PILEUP_GROWS_SUBCRITICAL` +0.172 < 0.224 record / 0.188
