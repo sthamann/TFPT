@@ -3096,6 +3096,59 @@ O(1) columns (R344 protocol material, not retrofitted); the
 EXT4 rows are disclosed-seen, only EXT3 carried blind weight.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**The R\* mass balance and the two-scale freeze (r344, the named
+r341 follow-up: each arm on its own sealed freeze).**
+`fold_two_scale_balance_probe.py` (41/41, SPEC_SHA
+`06375c3ade846178` final with record, freeze
+`bf16912825178c44`, two-commit protocol: pre-freeze `d875647c`,
+record `dfb8d1c1`; amendment a1 disclosed — two anchor-GATE
+reading fixes only, no sealed surface touched) ran the stop
+threshold R over the sealed grid (3/2, 8/5, 5/3, 12/7, 7/4, 2)
+on the r341 exact path layer (imported verbatim; every exact
+ward live at all six grid points, Fractions bit-equal at the
+two sealed pins).  **Verdict `TWO_SCALE_PARTIAL`: the
+three-arm min-coverage CERTIFIES at R̂ = 7/4 at a = 1 — 0
+violations on the 51 test rows, named 4/4, midband 6/6 — but
+the sealed choice formula (argmin max(e_H, e_G)) is not
+halves-stable (the dyadic halves pick 8/5 vs 7/4): R\* remains
+a tuning surface in the exponent language, said honestly.**
+The findings: (i) **the mass-balance curve is measured** (four
+interior grid points new): hsh med 0.872 → 0.266 → 0.000
+across the grid, E3h share med 0.944 → 0.386 → 0.000, W_B med
+1.489 → 3.796 → 6.096; at R = 2 the algebraic pair limit fires
+as derived (no pair is ever heavy, 71/77 rungs lose the heavy
+arm, the sealed eligibility guard fires); **the arm exponents
+cross exactly once**, in the gap (12/7, 7/4) — the
+equilibration point is real, its location not yet
+halves-stable; (ii) **the disjunctive (complementarity)
+coverage certifies at EVERY grid point already at a = 1**
+(C_H on the hand-off column `(m·q_max)²·msh`, C_G on the
+ε-chain column W_B, third arm = the banked r321 sliding bound
+`1.3056·F_A²` at the frozen constant), while the r341
+component-AND form still fails (13/10/10) — the r337 directive
+is exactly what certifies; **the third arm is load-bearing**:
+8 of 51 test rows are covered only by the r321 bound,
+including the entire EXT3-B deep-anchor family 6/6 (kz51
+F_A(ins) 5.54, reserve 5.3× — the r329 out-of-sample reading
+reproduces under the insertion convention); (iii) **the
+partition is NOT hsh-identifiable** (honest negative: the
+sealed rule predicts the covering arm on 7/51 covered rows —
+the partition is posthoc relative to hsh, a source-side
+predictor remains open); (iv) kz55 is an EARLY-level ε-chain
+anomaly (argmax level 1, the r339 kz53 class), NOT absorbed by
+rebalancing (W_B 2.888 → 8.459) but covered comfortably by the
+third arm (ratio 0.14): the single r341 Form-1 violator is a
+sliding-bound row; (v) **the honest composition with a
+certifying cover**: `E[X_∞³] ≤ [3.9859 + 1.1409](log m) +
+1.3056·5.54²·(log m)²` on the covered set ⟹ m₀\* = 10^22.6 —
+beats the r324 route 10^59.6 and the r341 envelope typing
+10^24.0 (which had no cover), still above the r306 census
+10^13.5; F_Amax = 5.54 is the kz51 insertion value, disclosed.
+Worlds: the balance CURVE separates where the r341 point
+budget was world-blind (SCRAMBLE stays heavy-flat, twin
+collapses, EPSTEIN good-dominated).  Experiments-side, NO
+ledger row, NO RH CLAIM.
+
 **The path-weighted Bellman / Reverse-Hölder round (r341, the
 terminal main round after the r339 dictionary — the two-arm
 theorem candidate with path-probability weights instead of
@@ -3174,7 +3227,20 @@ no arm certifies on its own freeze — the R* = 3/2 stop sends
 7/4), the good ε-chain misses by the single violator kz55, and
 the Ψ-Bellman with prefactor 1 is denied mid-tree; the named
 material is the R* mass balance and the kz55/deep-anchor freeze
-structure).  **The extraction:
+structure; r344 then measured exactly that balance — the
+mass-balance curve over the sealed grid (3/2 … 2) with the
+arm-exponent crossing located in (12/7, 7/4), and the r337
+complementarity form executed with the path-weighted machinery:
+the three-arm min-coverage (hand-off freeze + ε-chain freeze +
+the banked r321 sliding bound as third arm) certifies with 0
+violations on the 51 test rows at EVERY grid point at a = 1,
+composing to m₀\* = 10^22.6 < 10^59.6 — the first certifying
+cover of the lane — but `TWO_SCALE_PARTIAL`: the sealed
+argmin-max stop rule is not halves-stable (8/5 vs 7/4), the
+partition is not hsh-identifiable, and the third arm is
+load-bearing for the deep anchors (kz51 F_Amax 5.54 enters the
+uniform constant); the named rests are the canonical stop
+criterion and a source-side partition predictor).  **The extraction:
 the architecture stands** (r325 `ELEMENTWISE_STABILIZATION_GO` +
 r326 `RH/Elementwise.lean`: `sourceExact_buildPrimeWindow` PROVED,
 the comb stabilization elementwise PROVED,
