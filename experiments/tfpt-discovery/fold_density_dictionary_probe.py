@@ -340,6 +340,94 @@ TARGET for R341 (Bellman), it proves NO cofinal law; the r306
 dictionary reading of the banked C_2 is a disclosed pre-spec
 input, not a finding of this round; r243-r338 stand.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+amendment after freeze; freeze SPEC_SHA a845041cdf866543,
+pre-freeze commit 907ebfd1; protocol: smoke pass 1 = 36/36
+(0.7 s), NO amendment; calibration pass 1 = first full
+evaluation, 36/36, wall 170.4 s, NO amendment; record run1/run2
+after this insertion, identical up to the runtime line):
+MAIN VERDICT: LOCAL_INFLATION_SUPERCRITICAL(NEITHER budget
+certifies: full W_F viol 44/43/40 of 51 at a = 1/2/3 (C_F
+39.9133/8.9841/2.0222, named 1/4, midband 1/6), good tree W_G
+viol 33/20/11 (C_G 2.8325/0.6393/0.1443, named 3/4 at a >= 2,
+midband 6/6 at a = 3); e(W_F) = +0.956 DECIDED supercritical,
+halves +1.700/+1.756) -- the WORST-CASE per-level product
+language is capped too, said honestly.  THE EXACT LAYER STANDS
+AT THEOREM GRADE: the density martingale is exact on 81 live
+worlds (per-node identity 2.2e-16, unit mean 4.4e-16, cubic
+recursion 1.2e-15, envelope viol 0.0, Jensen 0.0; FRACTIONS
+BIT-EQUALITY on w9 + w13: 76 nodes, symbolic dev == 0) and the
+moment dictionary is exact against the r324 chain (d2 4.9e-16 /
+d3 7.8e-16 / ymx 2.5e-16) -- the terminal target IS
+E[X_inf^3] <= C (log m)^A, and the banked r306 C_2 = 1.069
+(0/57, re-gated here) already certifies it at A = 2 on the
+57-rung set.
+THE THREE STRUCTURAL FINDINGS OF THE ROUND: (1) THE GAP IS THE
+FINDING -- the true expectation e(m^2 M_3) = +0.112 grows 8x
+slower than the worst-case budget e(W_F) = +0.956: Gamma_max is
+dominated by NEAR-LEAF DEGENERATE PAIRS (the per-level
+Gamma_max med profile rises monotonically toward the leaves,
+1.05 -> 3.99, pressing against the algebraic ceiling 4 of a
+balanced pair; the deep half of the levels carries med 0.712 of
+log W_F) where hardly any PATH MASS sits -- the R341 Bellman
+argument must weight Gamma by path probability, not take
+per-level maxima (this is the concrete, measured reason the
+naive Reverse-Holder budget fails).  (2) NO SHARP WORLD OR
+FAMILY SEPARATION in the Gamma anatomy: named spikes W_F med
+324.33 vs mid-band med 404.57 vs ladder med 265.54 (hsh named
+0.877..0.992, midband 0.820..1.000); SCRAMBLE W_F 51.76 sits
+BELOW the ladder median 223.86 and does NOT break the local
+structure (honest negative: the per-level Gamma_max statistic
+is world-blind in this reading); the worst W_F violators are
+the EXT3 deep anchors kz42 (18.29x at a = 3, W_F 4364.9) +
+kz51/62/123/54/125 -- the deep-anchor margin of r337 recurs in
+the density language.  (3) THE DRIFT IS PRESENT BUT NOT
+PERIOD-4: the pooled predictable log-drift profile is strictly
+<= 0 (sum -1.1392; Jensen-exact) and monotone-deepening toward
+the leaves, but the period-4 coboundary clause does NOT fire
+(r4 0.934 / r4c 0.957 vs R4_BAR 0.5; per-rung r4 med 0.784 on
+the 42 rungs with K >= 8) -- the r336/r337 period-4 component
+does not reappear as the density drift; clause 5 subtraction is
+therefore NOT applied (nothing to subtract exactly).
+CENSUS: W_F min/med/max 16.17/265.54/4364.90 (max at EXT3
+kz42); W_G med 13.69 max 39.14; alt-tree W_F med 487.03 (the
+sensitivity choice is WORSE -- the sealed pairing tree is the
+sharper canonical form); Gamma_max med 3.93 max 4.303 (the only
+level value above 4 sits at an uneven 3-leaf node, ceiling 9);
+hsh med 0.872 max 1.000, heavy rungs 77/77; levels K 5..10;
+R_ALT 1.75 envelopes {a1 111.49, a2 17.911, a3 2.878}; EXT3
+cohort e(W_F) = +0.392 (census-grade, r329 caveat); BRIDGE
+envelope (NOT composed): the a = 3 envelope 18.2922 would give
+m_0* 10^30.4 vs the r324 route 10^59.6 -- typed envelope only,
+preparation for R341.
+NAMED ANATOMY (kz, m, K, W_F, W_G, hsh, k*, Gk*): kz53 119/7/
+515.67/14.11/0.882/2/4.303 (the ONE mid-tree spike Gk* at
+level 2 -- the r324 single-heavy-scale event visible as an
+early heavy fold); kz83 248/8/416.10/26.55/0.927/7/3.974; kz67
+129/8/232.57/13.63/0.992/7/3.874; kz55 73/7/47.75/7.93/0.877/
+6/2.971; MID-BAND: kz73 208.64/hsh 1.000, kz76 659.57/0.846,
+kz61 505.14/1.000, kz95 265.54/0.820, kz98 393.51/0.829, kz109
+415.63/0.863 -- at every mid-band rung k* = K - 1 (the
+inflation sits at the LAST fold level).
+WORLDS: w9 m 35 W_F 82.46 W_G 8.56 hsh 1.000; twin w13 m 35
+W_F 53.34 W_G 5.05 hsh 0.857; EPSTEIN m 22 W_F 19.71; SCRAMBLE
+m 30 W_F 51.76 hsh 0.867 dm3 20.59 (the SCRAMBLE dictionary
+value dm3 = m^2 M_3 = 20.59 is 3.3x the ladder med 6.22 -- the
+DICTIONARY separates the worlds where the Gamma_max census
+does not); SMOOTH degenerate-skipped (pre-declared).
+ANCHORS bit-near: r314 identity 4.5e-17; r306 C_2 1.069
+(0/57); r316 n 65 + rho quartet 1.0493/1.0536/0.4821/0.7791 +
+C_small 1.0694@kz18; r324-pre C_M2 2.2557 + the seven m2
+violators {28, 53, 61, 67, 76, 83, 109} EXACT.
+SEAL: contribution ward 2.1e-13/2.2e-12 (ladder/EXT3), r327
+grounding partition 3.4e-16 / L1 recomposition 0.0 /
+two-ancestor 0.0, ledger == genealogy 0.0, uneven nodes 262
+(the e1 mutant surface), zero-mass leaves 0, purity clean,
+toys exact; must-fails e1 CAUGHT exact (break 1/10, float
+0.100) / e2 CAUGHT exact (break 5/3) / e3 AST-CAUGHT (S3) /
+e4 protocol-CAUGHT twice (AST rho + toy offset 1 != 0) +
+m5a/m5b FLAGGED.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
