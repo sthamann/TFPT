@@ -395,10 +395,195 @@ world clause is a measured census on the instrumented worlds; no
 verdict claims L*, a bound mechanism, a derived 5/7, or RH
 progress in any direction.
 
-RECORD TABLES: to be inserted AFTER the record run -- the only
-permitted post-freeze edit under the two-commit protocol (r329
-convention; any calibration amendment will be disclosed here
-with its class and precedent).  The sealed spec ends here.
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze edit besides the TWO disclosed calibration
+amendments, which IS the protocol; TWO-COMMIT PROTOCOL EXECUTED:
+the sealed spec above was committed as "r354 pre-freeze"
+(8b1361e9, SPEC_SHA freeze c37ac54e9cbe41e9) BEFORE the first
+full evaluation; chronology honest: smoke pass 1 = 33/33 (0.9 s)
+at the sealed rules, pass 2 byte-identical; pre-freeze commit
+8b1361e9; calibration pass 1 = FIRST full evaluation = 31/33
+(125.8 s) with TWO instrument findings: (f1) the reduced-builder
+ward compared eigenvalues at the MARGIN ratio scale, where
+machine epsilon on lambda ~ 1 blows up to 2.3e-8 rel on the
+tiny-margin row kz130, and (f2) the SCR world overflows the pq
+product to inf on one deep mini-ladder row, poisoning the
+census corr with nan.  DISCLOSED CALIBRATION AMENDMENTS
+(r342-a1 / r349 class, measurement-scale/robustness
+normalizations only; NO adjudication bar, band, family, block,
+feature, candidate list or verdict rule moved): (a1) the
+reduced-builder ward measures the eigenvalue difference at the
+NATURAL lambda scale (abs 1e-12; pair/weight scalars stay rel
+1e-12) -- backward-error honest; (a2) a usable world row
+additionally requires FINITE log columns (census channel, no
+sealed bar exists there).  Smoke re-pass 33/33; calibration
+pass 2 = 33/33 (132.0 s); record run1 = 33/33 (128.6 s), run2 =
+33/33 (129.6 s), byte-identical up to WALL and identical to
+calibration pass 2):
+MAIN VERDICT = PHI_DICTIONARY_GO -- THE PHI LANE IS SOURCE-SIDE
+CLOSED AT COMPUTABILITY GRADE: (d1) the pointwise dictionary
+composition c_pred = sqrt(vp1 vp2) K12cd reconstructs the
+measured c on ALL 85 rows at max |c_pred/c - 1| = 5.52e-4 (bar
+1e-2; the max sits at w9, the shallowest window -- the deep rows
+reconstruct at 1e-6 .. 1e-8); (d2) the phi prediction phi_pred =
+log(c_pred^2) + A_LEAD ln N matches the kernel fine structure at
+corr = 1.0000000 (clause 0.999) and rms(phi_pred - phi_K)/
+rms(phi_K) = 0.0004 (clause 0.02; phi rms 1.0489 nats on the
+85): the single unexplained function of the L* margin
+legislation is POINTWISE PREDICTED by closed-form digamma/tent
+weights times the recursion-computable cross kernel -- honesty:
+a computability closure, NOT a closed form and NOT a derivation
+of the wander
++ PHI_CARRIER_CENSUS(the honest table -- NO single block passes
+both sealed clauses (corr >= 0.9 AND leave-out <= 0.5): W
+(weights) corr -0.722 / leave-out 2.464 / share 1.654, B2
+(recursion tail) corr +0.404 / 0.975 / 0.069, P2 (CD
+polynomial) corr +0.887 / 1.618 / share 2.427, GM (pair gap)
+corr -0.345 / 1.001 / share 0.002, PG (pair-geometry composite)
+corr +0.887 / 1.617 / share 2.426; Theil-Sen non-additivity
+leftover -0.221 census; THE READING: the P2/PG block carries
+the SHAPE of the wander (corr 0.887, the only positive-strong
+block) but at 2.4x the amplitude -- the weight block W is
+ANTI-correlated (corr -0.72) and cancels the excess: phi is a
+CANCELLATION of a large pair-geometry wander against the
+dictionary weight wander, no single-block carrier at the sealed
+bars -- localized as a two-block interference, not reduced)
++ PHI_NFUNC_CENSUS(phi is NOT a function of N alone: the
+N-adjacency census finds rms(dphi)/(sqrt2 rms(phi)) = 0.911
+over 74 lnN-adjacent pairs (dlnN <= 0.10) -- same-depth windows
+disagree at the full wander scale; the two-feature instrument:
+grel ratio 0.808 (slope -0.678), lnz ratio 0.912 (bar 0.5) --
+NEITHER the gap class NOR the prime-power size carries the
+wander; the phi fine structure is pair-local, not
+window-arithmetic)
++ RUNNING_CENSUS(the running-exponent model does NOT collapse
+the cohorts at the sealed bars -- the honest table (all-row
+fit, band 0.5 dec): margin s_inf 1.650 b +8.01 viol 18/85 (hi 5
+lo 13; pure viol 20), rdet s_inf 1.565 b +4.43 viol 6/85 (pure
+7), K12 s_inf -1.929 b +2.13 viol 25/85 (pure 26) -- all b*
+grid-interior, but the 0.88-nat wander (0.38 dec) defeats the
+0.5-dec band on the scattered columns regardless of the model:
+the WANDER is the binding failure, not the running term;
+FLATTER census: s_inf(margin) 1.65 vs s_pure(57) 3.33 --
+FLATTER by 1.68, the wall-friendly direction, census-grade
+only; candidate images vs s_inf(margin): rational 3.352 (dev
+1.70), 0.38-variant 3.315 (dev 1.66) -- both FAR: the running
+s_inf is NOT the candidate composition; 57-fit extrapolation
+census: deep rows sit HIGH of the 57-running extrapolation too
+(margin 18/0 hi/lo, rdet 5/0, K12 22/0) -- the flattening
+exceeds even the 1/lnN form out of sample; AUX: LR s_inf 1.564
+b +4.44, rhoK -0.627 b +10.40, p -1.230 b +11.61 viol 0, q
+-1.348 b +11.92 viol 0, y0r -0.309 b +4.58 viol 0 -- the CLEAN
+bare columns DO collapse under the running form (0 violations)
+but their pure power also holds: the running term is only
+NEEDED where the wander lives)
++ DELTA0_UNRESOLVED(the sealed r352 instrument on the EXTENDED
+deep set (EXT3 + EXT4 + EXT5 + EXT6 = 28 rows, y0 via the exact
+y0r route): a_p (3/4 vs 0.76): closer 27/28 LEANS to 3/4, gap
+0.0076 dec vs 2 x MAD 0.288 => UNRESOLVED, required log10 N* =
+31.5; a_q (2/3 vs 0.62): closer 27/28 LEANS to 0.62 (the
+complement candidate -- the r352 lean CONFIRMED on 28 rows),
+gap 0.0352 vs 0.268 => UNRESOLVED, required 8.5; delta_0 (0.38
+vs 2/5): closer 22/28 leans 2/5, gap 0.0151 vs 0.0536 =>
+UNRESOLVED, required 5.4 (the r352 value 4.7 GROWS: the
+extended deep set raises the residual MAD -- deeper does not
+mean cleaner); THE RUNNING RE-ARITHMETIC moves every depth
+FARTHER (a_p 102.1, a_q 16.8, d0 5.7): the deep MAD about the
+running extrapolation is LARGER; THE POOL TRUTH: the document
+frame is EXHAUSTED at 10^3.90 -- delta_0 CANNOT be decided
+inside this frame, that is the deliverable, typed for the
+specialists)
++ EXT6_LEDGER(selection gate PASSES: used ledger 104, fresh 4
+== the s2 queue (133, 129, 124, 117), N_w == h on 4/4, z (617,
+599, 569, 521) all z^2 <= 400000, grid identity holds; THE
+DEEPEST L*-WINDOWS EVER MEASURED: N_w 6532..7942 = 1.4x the
+EXT5 record 5690; MARGINS ALL POSITIVE 1.13e-10 .. 1.70e-9 --
+THE L* CONDITION HOLDS 1.4x DEEPER THAN EVERY PRIOR RECORD, out
+of sample, no contingency fired (exclusions none, CD finite
+4/4, block far under the 600 s budget); bands from the 57-fit
+(in/low of 4): p 2/0, q 4/0, c 4/0, kap 2/0, K12 0/0, margin
+1/0, rdet 0/0, LR 0/0, rhoK 0/0 -- every out-row is HIGH side:
+THE FLATTENING CONTINUES AND SPREADS at EXT6 depth (at EXT5 the
+bare p/kap laws were still 5-6/6 in-band, at EXT6 they sit 2/4
+with the out-rows high -- the whole column family bends flat
+out of sample, census)
++ WORLD_LEDGER(the first world test of the fine structure: MAIN
+mini-ladder (6 rows, slope-free psi) corr(psi(pq), psi(c^2)) =
+0.999994, rmsr 0.0046 -- the shared wander reproduces on the
+mini-instrument (GATE); dead worlds (census): ABS 5/6 usable
+(one row pq < 0), corr 0.99884, rmsr 0.053, rms 2.69 nats --
+the magnitude comb SHARES the phi coupling at 3x the MAIN
+amplitude (its pair blocks cross 1: p, q < 0 with pq > 0,
+typed); DIR 6/6 usable, corr 1.00000, rmsr 0.000, rms 67 nats
+-- degenerate census: the character world's pq and c^2 columns
+are the SAME 67-nat swing (backward-CS saturated, the
+correlation is trivial there); SMOOTH 4/6 and SCR 4/6 usable ->
+NOT_MEASURABLE at the sealed minimum 5 (SCR additionally
+overflows one row, amendment a2); EPST / HL2 NOT_LADDERED
+(kz9-specific constructions); honest reading: the phi COUPLING
+is not live-exclusive where measurable -- what is live-specific
+is the AMPLITUDE (0.88 nats vs 2.7/67) and the 500x difference
+suppression, census, no new world criterion claimed)
++ TWIN_LEDGER(dose-zero identity BITWISE on 6/6 windows; twin
+phi devs max |dlog pq| = 1.9e-7, max |dlog c^2| = 2.4e-8 nats
+(bar 1e-3) -- the fine structure is twin-stable pointwise)
++ MUSTFAIL_LEDGER(m1 AST-FLAGGED slope_col_true + toy 0.5833 !=
+A_LEAD 1.4167; m2 AST-FLAGGED c_col_true + composition without
+b_{N-1} breaks by 1.195 >= 0.1 at w9; m3 AST-FLAGGED
+ext5_resid_true; m4 AST-FLAGGED phi_col_true + the self-feature
+fake fit disclosed on the toy (ratio 1e-16); m5 flipped running
+term breaks the planted toy by 4.07 dec >= 0.5; constructor
+scopes + fragment audit CLEAN).
+Key numbers.  W9: blocks (-24.7664, -1.5711, +4.0100, +15.4593)
+== the s1 anchors bit-near, summing to ln c^2 = -6.8683 at
+3.3e-13; b_{N-1} 0.455868; cpd 5.519e-4; y0r dev 8.9e-16; CD
+1.6e-13; the r347..r352 anchor rows reproduced verbatim.
+LADDER: 85 rows (42 + 15 + 12 EXT3 + 6 EXT4 + 6 EXT5 + 4 EXT6),
+every f64 margin positive; FIT/CURV ANCHORS all == the r352
+record at tol 0.02/0.03 (margin -3.332, c -0.697, p -0.754, q
+-0.645, rdet -2.624, kap -0.711, K12 +0.902, y0r -0.401); FS9
+anchors corr 0.999998 / rmsD 0.8787 / rmsr 0.0019 / lr_dev
+0.0002 reproduced EXACTLY; EXT5 band counts == the r352 record
+9/9 columns; identity wards: block factorization max 4.8e-10
+(mid) / 2.3e-9 (deep, incl. N_w 7942), CD deep max 1.1e-9, y0r
+ward max 6.6e-14 on the 75, reduced-builder ward 1.1e-16
+(amendment-a1 scale); cohort medians rho_0 0.8392 / bridge
+1.0058 == r348/r343; balance re-gate dev 0.001.  HONEST
+NEGATIVES: (1) PHI_DICTIONARY_GO is COMPUTABILITY, not
+analyticity: K12cd needs the mu-chain of the window -- the
+wander is PREDICTED (dictionary x recursion) but not DERIVED;
+(2) NO single-block carrier: the sealed decomposition ends in a
+TWO-BLOCK INTERFERENCE reading (P2/PG shape-carrier at 2.4x
+amplitude, W anti-correlated) -- localization, not reduction;
+(3) the running-exponent model FAILS to collapse the cohorts
+(the wander defeats the 0.5-dec band); the FLATTER reading
+(s_inf 1.65 vs 3.33) is census-grade and its candidate images
+are FAR -- no running law is claimed; (4) the depth
+re-arithmetic moves every separation FARTHER (d0 4.7 -> 5.4
+pure / 5.7 running) and the pool is exhausted at 10^3.90:
+delta_0 is UNDECIDABLE inside this frame; (5) the world census
+is PARTIAL (two worlds below the usable minimum, two not
+ladderable) and where measurable the phi coupling is NOT
+live-exclusive -- only amplitudes separate, census; (6) grel /
+lnz do NOT carry the wander (ratios 0.81 / 0.91) and phi is NOT
+N-alone (adjacency ratio 0.911): the cohort question closes
+NEGATIVE -- the wander is pair-local; (7) the r352 EXT5 y0 rows
+enter the delta_0 arbitration for the first time via y0r --
+they were sealed-blind for y0 in r352 and measured here, said
+so.  R356 SKETCH (candidates, not commitments): (i) the
+two-block interference as its own lane: WHY do the
+pair-geometry block (P2) and the dictionary weight block (W)
+cancel to 0.88 nats -- is the cancellation ratio a law (the
+sharpest remaining form of the r338-q1 question); (ii) the ABS
+world phi coupling (corr 0.9988 at 3x amplitude): which comb
+property carries the backward-CS correlation -- a universality
+probe; (iii) the GRH-faithful Dirichlet frame (U5) stays the
+named separate follow-up.  Runtime 128.6 / 129.6 s record,
+132.0 s calibration pass 2, 125.8 s calibration pass 1, 0.9 s
+smoke; deterministic, run1/run2 byte-identical up to WALL.
+AMENDMENTS AFTER FREEZE: the two disclosed calibration
+amendments a1/a2 (measurement-scale/robustness normalizations,
+above) and this record-table insertion -- nothing else.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
@@ -1407,8 +1592,13 @@ def main():
         kz75 = core_kzs + ext_kzs + ext3_kzs + ext4_kzs
         kz57 = core_kzs + ext_kzs
         # rung_reduced ward vs the full builder on kz130
+        # (calibration amendment a1, disclosed, r342-a1 backward-
+        # error class: the eigenvalue difference is measured at
+        # the NATURAL lambda scale abs 1e-12 -- the tiny margin
+        # blows machine epsilon up to 1e-8 REL on deep rows; the
+        # pair/weight scalars stay rel 1e-12)
         Rw = rung_reduced_cols(130)
-        ward_red = max(abs(Rw["margin"] / RT[130]["margin"] - 1.0),
+        ward_red = max(abs(Rw["lam"] - (1.0 - RT[130]["margin"])),
                        abs(Rw["p"] / RT[130]["p"] - 1.0),
                        abs(Rw["q"] / RT[130]["q"] - 1.0),
                        abs(Rw["c"] / RT[130]["c"] - 1.0),
@@ -1446,7 +1636,8 @@ def main():
               "full-bundle rows max %.1e (bar %.0e) -- the "
               "delta_0 column is exactly carried by the reduced "
               "route; the reduced-plus builder == PX.build_rung "
-              "at %.1e on kz130"
+              "at %.1e on kz130 (lambda abs / pair-weight rel, "
+              "amendment a1)"
               % (len(all_kz), max_blk, CD_MID_NW,
                  BLK_ID_FACTOR * CD_BAR_MID, max_blk_deep,
                  BLK_ID_FACTOR * CD_BAR_DEEP, cd_sample_max,
@@ -1568,10 +1759,16 @@ def main():
                     # structural build failure: typed, honest
                     rows.append((0, float("nan"), float("nan"),
                                  float("nan")))
+            # calibration amendment a2, disclosed (robustness
+            # normalization on a census channel, no sealed bar
+            # moved): a usable row additionally requires FINITE
+            # log columns -- the SCR world overflows the pq
+            # product to inf on one deep row
             usable = [(n, p, q, c) for (n, p, q, c) in rows
                       if np.isfinite(p) and np.isfinite(q)
                       and np.isfinite(c) and p * q > 0
-                      and c * c > 0]
+                      and c * c > 0 and np.isfinite(p * q)
+                      and np.isfinite(c * c)]
             if len(usable) >= WORLD_MIN_ROWS:
                 lnn = np.log([float(r[0]) for r in usable])
                 lpq = np.array([math.log(r[1] * r[2])
