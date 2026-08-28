@@ -4871,6 +4871,36 @@ Mincut unchanged (base 4 / refined 5).  Coexistence: r374, r375,
 r376 and r377 are parallel lemma-first lanes; this round is
 additive.
 
+**The $V_3'$-lemma, reduced (r379, LEMMA.V3PRIME.01, lemma-first).**
+No sealed discovery probe: `/tmp` proof verification plus
+`rh/problem/v3prime_proof.tex` (+ PDF + `verify_v3prime.py`,
+17/17, `V3PRIME LEMMA VERIFIED`).  **Ausgang REDUZIERT.**
+SATZ: smooth-border nodes are the cosine grid $x=\cos(2\pi k/L)$
+with $L=4h-2$ ($M=2h$, $L=2M-2$); at the $+x$ $20\%$ mask
+consecutive bulk nodes are equidistant in $\arccos$
+($\Delta\theta$-ratio $1$ on all $181$ windows).  Equal weights
+on the occupied cosine nodes reproduce Chebyshev coefficients
+($\gamma_1=\tfrac12$, $\lvert\gamma_k-\tfrac14\rvert<10^{-5}$
+for $k\ge 2$).  The Fejér factor is Jacobi-$(0,1)$ with
+$\lvert\gamma_n-\tfrac14\rvert=1/(4(2n+1)^2)$.  Two-period
+profiles about $\pi/2$ with amplitude $a\le 0.85$ lie in
+$\mathcal{A}_{15}$; a slow-then-fast *block* with the same
+extremes need not.  A coherent last-$12$ $\gamma$-scale of
+$1.5$ stays in $\mathcal{A}_{15}$; scale $2.0$ leaves it
+(actual $v_2$-violator at scale $6.5$--$8$).  Reduced to the
+coefficient box $G_\varepsilon$: last twelve
+$\lvert\gamma_k-\tfrac14\rvert\le\tfrac1{16}$ and
+$\lvert\log(\gamma_{k+1}/\gamma_k)\rvert\le\tfrac25$.  On the
+$181$-window surface $G_\varepsilon$ holds (max last-$3$
+$0.0375$, max last-$12$ $0.0519$, max jump $0.337$) and $V_3'$
+holds ($0$ remainder-violators).  Klein-gap and $\chi$ are not
+exceptions.  Chain
+$T_2'\Leftarrow\cdots\Leftarrow V_2\Leftarrow V_3'\Leftarrow G_\varepsilon$.
+Remaining lemmas: (R)(L)(Z)(T1)($G_\varepsilon$)(Dict)(Head).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence: r374--r378
+and r376/r380 (Lean) are parallel lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -4996,6 +5026,9 @@ rh/
 │   │                     M3≤φ(m) ∧ (R)(L)(Z) ⇒ |Z|<M; H5 is
 │   │                     a sister route; α* 0.888/0.908 are
 │   │                     slope-proxies.  No RH claim
+│   ├── v3prime_proof.tex(+pdf) — r379: V3' reduced to G_ε
+│   │                     (cosine-grid mesh SATZ; last-12
+│   │                     |γ-1/4|≤1/16).  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5011,9 +5044,12 @@ rh/
 │   ├── verify_postcap_steps.py — machine check of
 │   │                     postcap_pivots.tex (16/16,
 │   │                     POSTCAP STEPS VERIFIED)
-│   └── verify_compose_lemma.py — machine check of
+│   ├── verify_compose_lemma.py — machine check of
 │                         compose_lemma.tex (15/15,
 │                         COMPOSE LEMMA VERIFIED)
+│   └── verify_v3prime.py — machine check of
+│                         v3prime_proof.tex (17/17,
+│                         V3PRIME LEMMA VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5224,6 +5260,24 @@ Log-complete $m_0$ is $10^{25.81}$/$10^{32.85}$ (r361 dropped
 $2\log\log m$).  Companion script `verify_compose_lemma.py`,
 15/15 gates, `COMPOSE LEMMA VERIFIED`.  Finite identities plus
 named remainders.  NO L\* claim.  NO RH CLAIM.
+
+A ninth standalone note, `rh/problem/v3prime_proof.pdf` (August 28,
+2026), is the lemma-first attack on $V_3'$ (round 379, no sealed
+discovery probe).  The mask mesh is the cosine grid $x=\cos(2\pi k/L)$
+with $L=4h-2$; consecutive bulk nodes at the $+x$ mask are
+equidistant in $\arccos$ ($181/181$).  Equal weights on the
+occupied cosine nodes are Chebyshev; the Fejér factor is
+Jacobi-$(0,1)$ with an $O(1/n^2)$ closed form.  Two-period
+profiles about $\pi/2$ with amplitude $a\le 0.85$ lie in
+$\mathcal{A}_{15}$; a coherent last-$12$ $\gamma$-scale of $1.5$
+stays in $\mathcal{A}_{15}$ and a scale of $2.0$ leaves it.
+**REDUZIERT** to $G_\varepsilon$: last twelve
+$\lvert\gamma_k-\tfrac14\rvert\le\tfrac1{16}$ and consecutive
+log-ratio $\le\tfrac25$.  On $181$ windows $G_\varepsilon$ and
+$V_3'$ both hold ($0$ remainder-violators).  Companion script
+`verify_v3prime.py`, 17/17 gates, `V3PRIME LEMMA VERIFIED`.
+Finite identities plus a named remainder.  NO L\* claim.  NO RH
+CLAIM.
 
 ## The RH suite
 
@@ -5603,6 +5657,15 @@ integrity + probes (`run_rh.py --fast --skip-lean`) after
 appending the problem-document rows to the inventory.
 r374/r375/r376/r377 are parallel lemma-first lanes and are not
 dropped.
+**r379 coexistence.** Round 379 (`v3prime_proof.tex`) is additive
+on the MED-CAP/$V_2$/$V_3'$ lane after r365/r374 (lemma-first
+$V_3'$: cosine-grid mesh, Chebyshev source formula, reduction
+to $G_\varepsilon$).  It does not touch `experiments/next.txt`,
+does not seal a discovery probe, and does not touch `rh/lean/`
+(r376/r380).  Suite surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the problem-
+document rows to the inventory.  r374--r378 are parallel
+lemma-first lanes and are not dropped.
 **r380 coexistence.** Round 380 (`RH/PivotCoordinate.lean`) is additive
 on the Lean kernel: it formalizes the DCCXXXVII finite-algebra lemmas
 and does not touch `rh/problem/` (r377/r378/r379) or

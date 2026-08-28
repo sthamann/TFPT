@@ -1945,6 +1945,44 @@ ENTRIES = [
      [],
      "compiled PDF of compose_lemma.tex (recompiled artefact, "
      "registered unpinned)", False),
+    ("rh/problem/v3prime_proof.tex", "problem_statement",
+     "r379 companion",
+     [],
+     "lemma-first attack on V3' (round 379): neither proved nor "
+     "refuted in the construction.  Proved: cosine-grid mesh "
+     "x=cos(2 pi k/L) with L=4h-2 (M=2h, L=2M-2); at the +x 20pct "
+     "mask consecutive bulk nodes are equidistant in arccos "
+     "(Delta-theta ratio 1 on 181 windows); equal weights on the "
+     "occupied cosine nodes reproduce Chebyshev coefficients "
+     "(g1=1/2, |gk-1/4|<1e-5 for k>=2); Fejer factor is Jacobi-(0,1) "
+     "with |gn-1/4|=1/(4(2n+1)^2); two-period profiles about pi/2 "
+     "with amplitude a<=0.85 lie in A_15 (a blocked rearrangement "
+     "of the same extremes need not); coherent last-12 gamma scale "
+     "1.5 stays in A_15, scale 2.0 leaves it (actual v2-violator at "
+     "6.5-8).  Reduced to the coefficient box G_eps: last twelve "
+     "|gk-1/4|<=1/16 and |log(g_{k+1}/gk)|<=2/5.  On the 181-window "
+     "surface G_eps holds (max last-3 0.0375, last-12 0.0519, jump "
+     "0.337) and V3' holds (0 remainder-violators).  Klein-gap and "
+     "chi are not exceptions.  Chain T2' <= ... <= V2 <= V3' <= "
+     "G_eps.  Finite identities plus a named reduction; NO RH claim",
+     True),
+    ("rh/problem/verify_v3prime.py", "problem_check",
+     "r379 companion",
+     [],
+     "machine check of every numbered lemma in v3prime_proof.tex: "
+     "L=4h-2 integer identity, Jacobi-(0,1) over Q, monic Chebyshev "
+     "quarters, WKB band at x=3/5 eps=1/16, two-period A15 a<=0.85, "
+     "constant pi/2, contrast block regression, interleave-vs-block; "
+     "construction pins (Delta-theta ratio 1, G_eps, Path A 0 "
+     "eta-violators, +x mask, equal-weight Chebyshev, coherent ray "
+     "1.5 in / 2.0 out / 8 v2-viol, kz46 ratio 5.85 in A15, kz16 "
+     "eta-111 regular).  17/17 gates, "
+     "final line V3PRIME LEMMA VERIFIED", True),
+    ("rh/problem/v3prime_proof.pdf", "problem_statement",
+     "r379 companion",
+     [],
+     "compiled PDF of v3prime_proof.tex (recompiled artefact, "
+     "registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",

@@ -1726,6 +1726,36 @@
       "bytes": 254772
     },
     {
+      "path": "rh/problem/v3prime_proof.tex",
+      "role": "problem_statement",
+      "round": "r379 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on V3' (round 379): neither proved nor refuted in the construction.  Proved: cosine-grid mesh x=cos(2 pi k/L) with L=4h-2 (M=2h, L=2M-2); at the +x 20pct mask consecutive bulk nodes are equidistant in arccos (Delta-theta ratio 1 on 181 windows); equal weights on the occupied cosine nodes reproduce Chebyshev coefficients (g1=1/2, |gk-1/4|<1e-5 for k>=2); Fejer factor is Jacobi-(0,1) with |gn-1/4|=1/(4(2n+1)^2); two-period profiles about pi/2 with amplitude a<=0.85 lie in A_15 (a blocked rearrangement of the same extremes need not); coherent last-12 gamma scale 1.5 stays in A_15, scale 2.0 leaves it (actual v2-violator at 6.5-8).  Reduced to the coefficient box G_eps: last twelve |gk-1/4|<=1/16 and |log(g_{k+1}/gk)|<=2/5.  On the 181-window surface G_eps holds (max last-3 0.0375, last-12 0.0519, jump 0.337) and V3' holds (0 remainder-violators).  Klein-gap and chi are not exceptions.  Chain T2' <= ... <= V2 <= V3' <= G_eps.  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "d14c04861d514dac86cffe127d2074508bd109cc60fa82e63d4381b0e13b3038",
+      "bytes": 14552
+    },
+    {
+      "path": "rh/problem/verify_v3prime.py",
+      "role": "problem_check",
+      "round": "r379 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in v3prime_proof.tex: L=4h-2 integer identity, Jacobi-(0,1) over Q, monic Chebyshev quarters, WKB band at x=3/5 eps=1/16, two-period A15 a<=0.85, constant pi/2, contrast block regression, interleave-vs-block; construction pins (Delta-theta ratio 1, G_eps, Path A 0 eta-violators, +x mask, equal-weight Chebyshev, coherent ray 1.5 in / 2.0 out / 8 v2-viol, kz46 ratio 5.85 in A15, kz16 eta-111 regular).  17/17 gates, final line V3PRIME LEMMA VERIFIED",
+      "pin": true,
+      "sha256": "b2671b2c5397a935e8cb662a4f28a7ff4e9f4a1c4fff9b29347a8a71530cb103",
+      "bytes": 19310
+    },
+    {
+      "path": "rh/problem/v3prime_proof.pdf",
+      "role": "problem_statement",
+      "round": "r379 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of v3prime_proof.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "1de56bdf4410d2c50bfa8854f2ec910564b881a2afdd92504ba50e7f6c576a6d",
+      "bytes": 245558
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -1880,8 +1910,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "b1e6bce1de5251e56db9df416520fb776d68702803c77ae0e22e032c906934ad",
-      "bytes": 3438835
+      "sha256": "7e014b04e3107d94c3f72f04c1e422999b9617c6f4eddee87f924809562e63d9",
+      "bytes": 3438816
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -1900,8 +1930,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "5a867e90c8b0da5eca6829c988bb24c8945ca7771b225c8246fb533a8b52051d",
-      "bytes": 5324237
+      "sha256": "08817f124e0f1bf81adc2aa5711b0b33bd96c0a5af42a4a2b1fda8eb450db61b",
+      "bytes": 5331558
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
