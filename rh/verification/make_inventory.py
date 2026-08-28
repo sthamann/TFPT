@@ -1661,6 +1661,38 @@ ENTRIES = [
      [],
      "compiled PDF of rdagger_saturation.tex (recompiled artefact, "
      "registered unpinned)", False),
+    ("rh/problem/medcap_lemma.tex", "problem_statement",
+     "r361 companion",
+     [],
+     "proof attempt for the r361 MED-CAP lemma med_i <= (8/3) sep_i "
+     "(reviewer priority 1): SEP-SATZ proved as cut geometry "
+     "(d_i = empty_i + (n_i+n_{i+1})/2); tiling (empty==0, hull-solid) "
+     "implies gap_i = sep_i identically, so MED-CAP reduces to an "
+     "order-statistic bound on the block-length sequence n_i; the "
+     "tiled composition n=(1,2,8^10) violates with ratio 16/3 (C2) "
+     "-- MED-CAP is NOT interval geometry; the saturating prefix "
+     "(1,2,6,5,4,4) at chi4 kz53 realises med=4, sep=3/2, ratio 8/3 "
+     "exact (edge window: third-smallest of five neighbour-gaps); "
+     "tiling census 134 windows / 15428 atoms, 0 empty, 0 hull holes, "
+     "0 MED-CAP violations; remainder X_n = the n-sequence forbids a "
+     "C2 jump at small-sep loci (sign-run pairing of an arbitrary "
+     "+/- colouring does NOT forbid C2).  Finite identities plus a "
+     "named combinatorial remainder; NO RH claim", True),
+    ("rh/problem/verify_medcap_steps.py", "problem_check",
+     "r361 companion",
+     [],
+     "machine check of every numbered lemma in medcap_lemma.tex: "
+     "standalone Fractions geometry (window convention, SEP identity, "
+     "tiling => gap=sep, C2 16/3, short C2 ratio 4, saturating prefix "
+     "8/3, random tiled violators, ledger toy) plus construction "
+     "cross-check (chi4 kz53 prefix (1,2,6,5,4,4) two atoms g=3/8; "
+     "four w9 worlds tiled and MED-CAP clean).  11/11 gates, final "
+     "line MEDCAP STEPS VERIFIED", True),
+    ("rh/problem/medcap_lemma.pdf", "problem_statement",
+     "r361 companion",
+     [],
+     "compiled PDF of medcap_lemma.tex (recompiled artefact, "
+     "registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",

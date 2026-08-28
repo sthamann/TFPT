@@ -4375,6 +4375,18 @@ epistemics: theorem-grade = the pointwise chain closes on the
 surface with a saturated, scramble-robust cap; the paper lemma
 MED-CAP (why the 5-window median of block gaps never exceeds
 (8/3)(n_i+n_j)/2) is the one remaining formal step.
+A 2026-08-28 proof attempt (`rh/problem/medcap_lemma.tex`)
+**reduces** that step and names the obstruction: SEP-SATZ is cut
+geometry; tiling (empty≡0, hull-solid — census 134 windows /
+15 428 atoms, 0 exceptions) forces gap_i = sep_i, so MED-CAP is
+an order-statistic bound on the length sequence n_i; the tiled
+composition n=(1,2,8^{10}) violates with ratio 16/3, so the
+lemma is **not** interval geometry.  The saturating prefix
+(1,2,6,5,4,4) at χ4 kz53 is the edge window (third-smallest of
+five neighbour-gaps = 4 = (8/3)·(3/2)).  Remainder X_n: the
+source n-sequence forbids a C2 jump at small-sep loci (sign-run
+pairing of an arbitrary ± colouring does not).  11/11 machine
+gates, `MEDCAP STEPS VERIFIED`.  NO RH CLAIM.
 Experiments-side, NO ledger row, NO RH CLAIM.
 
 **The augmented Borodin–Uvarov duality — L† as ONE dual object
@@ -4519,8 +4531,14 @@ rh/
 │   │                     duality formulae, critical 3×3, saturation
 │   │                     edge, exponent, relative error form, one
 │   │                     open RHP/BKMM question).  No RH claim
-│   └── verify_lstar_instance.py — machine check that the standalone
-│                         definition IS the campaign object
+│   ├── medcap_lemma.tex(+pdf) — proof attempt for the r361
+│   │                     MED-CAP inequality med_i ≤ (8/3) sep_i
+│   │                     (SEP-SATZ proved; tiling reduction;
+│   │                     C2 obstruction named).  No RH claim
+│   ├── verify_lstar_instance.py — machine check that the standalone
+│   │                     L* definition IS the campaign object
+│   └── verify_medcap_steps.py — machine check of every numbered
+│                         lemma in medcap_lemma.tex (11/11)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -4589,6 +4607,24 @@ give `L†` and hence window-local master positivity (Lean chain
 `augmentedSubordination_iff_lstar_and_terminal` +
 `lstar_terminal_implies_master`, axiom-audited).  L\* and L†
 stay **[O]**.  NO RH CLAIM.
+
+A third standalone note, `rh/problem/medcap_lemma.pdf` (August 28,
+2026), is a proof attempt for the r361 median-cap inequality
+`med_i ≤ (8/3)·sep_i` on the block packing of the folded measure
+(reviewer priority 1, no further discovery round).  SEP-SATZ is
+proved as cut geometry.  Tiling (no unoccupied integer between or
+inside blocks) forces `gap_i = sep_i` and reduces MED-CAP to an
+order-statistic bound on the length sequence `n_i`.  Tiling is a
+census identity on 134 windows / 15 428 atoms (0 exceptions).
+The tiled composition `n = (1,2,8^{10})` violates with ratio
+`16/3`, so the inequality is **not** a theorem of interval
+geometry; the remainder `X_n` is that the source length sequence
+forbids a C2 jump at small-separation loci.  The constant `8/3`
+is saturated by the edge prefix `(1,2,6,5,4,4)` at χ4 kz53
+(third-smallest of five neighbour-gaps).  Companion script
+`verify_medcap_steps.py`, 11/11 gates, `MEDCAP STEPS VERIFIED`.
+Finite identities plus a named combinatorial remainder.  NO RH
+CLAIM.
 
 ## The RH suite
 
