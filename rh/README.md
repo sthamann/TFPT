@@ -5308,6 +5308,39 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r394 are parallel lemma-first / Lean lanes; this round is additive.
 
+**Isolation of the fold mask, refuted (r396, LEMMA.ISOLATION.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/isolation_lemma_probe.py` (29/29
+full, 22/22 smoke, SPEC_SHA `eb6dca0e0d28d1d3`) plus
+`rh/problem/isolation_lemma.tex` (+ PDF +
+`verify_isolation_lemma.py`, 10/10, `ISOLATION LEMMA VERIFIED`).
+**Ausgang REFUTED.**  SATZ: folded consecutive small integers
+are not adjacent on the fold circle (PNT-free); wrapping
+$\{2,3,4\}$ is isolated; pair counts on named windows are
+machine identities; Dirichlet envelope at separation $2$ is
+still $\gg 1$.
+REFUTED: $P(N)/n_\nu\to 0$ or $P\le$ a fixed constant
+(FRAME-A $2$ pairs; core-$42$ in $[0,16]$, $3/42$ zero-pair;
+EXT $kz=97$ has $22$, density $O(0.03)$ stable);
+pairs are small-$n$ log collisions (an atom $n\approx 211$
+near the cap lands on a pair bin);
+isolated + thin tail implies the $\Delta^2\log\tau$ box
+($h=40$ wrapping $\{2,3,4\}$ $3/12$ IN; the r395 $8/8$ at
+$h=80$ is $n_{\mathrm{ref}}=60$ truncation and dies at natural
+depth $2/8$; denser isolated $\{2,2,3\}$ $0/8$; fat tail
+helps);
+isolated implies $\lambda_{\max}<1$ ($1010$ has $1.405$);
+isolation plus the Dirichlet hull closes Gershgorin
+($\mathrm{gersh}=1.768$).
+Pair count does not drive the source jump (core $42/42$ IN,
+$\mathrm{corr}=-0.38$).
+Remaining: the r395 $2$--$3$ histogram with a sparse tail ---
+pair density $\sim 2\%$ is a shadow of that shape, not a
+closing lemma.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r395 are parallel lemma-first / Lean lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5499,6 +5532,11 @@ rh/
 │   │                     REFUTED; occupation is a 2-3
 │   │                     histogram with a sparse tail.
 │   │                     No RH claim
+│   ├── isolation_lemma.tex(+pdf) — r396: pair census
+│   │                     SATZ (folded small integers);
+│   │                     Isolation lemma REFUTED; pair
+│   │                     density is a shadow of the 2-3
+│   │                     histogram.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5559,9 +5597,12 @@ rh/
 │   ├── verify_sign_schur.py — machine check of
 │                         sign_schur.tex (14/14,
 │                         SIGN SCHUR VERIFIED)
-│   └── verify_three_gap_mask.py — machine check of
+│   ├── verify_three_gap_mask.py — machine check of
 │                         three_gap_mask.tex (11/11,
 │                         THREE GAP MASK VERIFIED)
+│   └── verify_isolation_lemma.py — machine check of
+│                         isolation_lemma.tex (10/10,
+│                         ISOLATION LEMMA VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5918,7 +5959,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r395 from
+2. **Sealed probes** — the campaign probes r250–r396 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6456,6 +6497,17 @@ implication for $F_\varepsilon$).  It does not touch
 (r376/r380/r384).  Suite surface of this round: integrity +
 probes (`run_rh.py --fast --skip-lean`) after appending the
 probe and problem-document rows to the inventory.  r374--r394
+are parallel lemma-first / Lean lanes and are not dropped.
+**r396 coexistence.** Round 396 (`isolation_lemma.tex` +
+`isolation_lemma_probe.py`) is additive on the occupation-
+regularity rest after r395 (lemma-first isolation / pair
+density of the fold mask: folded-small-integer SATZ; Isolation
+lemma REFUTED as a smallness SATZ of $P$ and as a closing
+implication for $F_\varepsilon$ and Assist).  It does not touch
+`experiments/next.txt` and does not touch `rh/lean/`
+(r376/r380/r384).  Suite surface of this round: integrity +
+probes (`run_rh.py --fast --skip-lean`) after appending the
+probe and problem-document rows to the inventory.  r374--r395
 are parallel lemma-first / Lean lanes and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface

@@ -2186,6 +2186,36 @@
       "bytes": 232919
     },
     {
+      "path": "rh/problem/isolation_lemma.tex",
+      "role": "problem_statement",
+      "round": "r396 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on isolation / pair density of the fold nu-mask after r395 (round 396): folded small integers not adjacent SATZ; packing O(n_atom) not smallness.  REFUTED: P/n_nu -> 0 or P constant; isolated => box; isolated => lambda<1; isolation + hull => Gershgorin<1.  Finite identities plus a named refutation; NO RH claim",
+      "pin": true,
+      "sha256": "6b585b331d2c37f073294728ac7e376614f31289243a235cee78b71cb298c54a",
+      "bytes": 9163
+    },
+    {
+      "path": "rh/problem/verify_isolation_lemma.py",
+      "role": "problem_check",
+      "round": "r396 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in isolation_lemma.tex: standalone (w9 two pairs, folded small integers, packing, wrap234 isolated, hull >>1) plus construction pins (h=40 not uniform IN, pair-rich OUT, 1010 lambda>1 and Gershgorin open, two-period/scramble, injection and fattail).  10/10 gates, final line ISOLATION LEMMA VERIFIED",
+      "pin": true,
+      "sha256": "1862417e90e252a4b145e4b8523003a869201216cb376079bbcc3b90839f6087",
+      "bytes": 5715
+    },
+    {
+      "path": "rh/problem/isolation_lemma.pdf",
+      "role": "problem_statement",
+      "round": "r396 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of isolation_lemma.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "a877ad337676cb9c71f262aebe59ca2da56f96310900915ac975970ef1253b03",
+      "bytes": 212117
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2360,8 +2390,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "ffc43106448ec3d442b6b804ab3f682f96642aad6a4227853d32e6e29fdb6ab3",
-      "bytes": 5371167
+      "sha256": "d18dcb55b767e5adccb515df0cdd34eac8178c47cf5922a6eb65916a639f0509",
+      "bytes": 5373436
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2642,6 +2672,16 @@
       "pin": true,
       "sha256": "7fb3c718323dd9631ee3402643125d9f73fcc313f8e70ce19dbe06f2e337ea2a",
       "bytes": 26755
+    },
+    {
+      "path": "experiments/tfpt-discovery/isolation_lemma_probe.py",
+      "role": "sealed_probe",
+      "round": "r396",
+      "ledger_ids": [],
+      "status": "Isolation of the fold mask (round 396, LEMMA.ISOLATION.01, lemma-first; experiments-side, NO ledger row): 29/29 full / 22/22 smoke; SPEC_SHA eb6dca0e0d28d1d3; pair census w9/core-42/chi/EXT-kz97, PNT-free folded-small-integer non-adjacency, atom-fold packing, wrap(2,3,4) nref-60 vs nref-h discriminator, pair injection, fat-tail, Assist/Gershgorin, scramble/two-period/pair-counter/denser-isolated kills first measured in /tmp (r396_cal.py, r396_cal2.py) then sealed (disclosed calibration).  Builder fallback: core-42 + EXT kz97 + chi sample (MAIN-85 and EXT S>5000 skipped).  AUSGANG REFUTED.  SATZ: folded consecutive n=2..64 are not adjacent on L=734 (PNT-free, log monotone); wrap(2,3,4) is isolated; pair counts on named windows are machine identities; Dirichlet envelope at sep 2 is still >>1 (12.59 on S=79).  REFUTED: P(N)/n_nu -> 0 or P <= constant (w9=2, core [0,16] med 4 zero 3/42, kz97=22, dens O(0.03) stable); pairs are small-n log collisions (atom n~211 near the cap lands on a pair bin); isolated + thin tail => d2 log tau box (h=40 wrap234 3/12 IN; h=80 nref=60 8/8 is a truncation, nref=80 2/8; denser wrap223 0/8; fat tail HELPS 6/8); isolated => lambda<1 (1010 lam=1.405); isolation + hull => Gershgorin<1 (gersh=1.768 gA=6.10); singleton 1x1 chain is a SATZ of the box (the isolated class does not sit in the box at natural depth).  KILL: wrap(1,2,3) dens=0.222 j=2.327 OUT; randF1 dens=0.417 j=7.032 OUT; two-period lam22=1.0288>1; scramble dens=0.431; pair-counter mutant gap-2=44 vs gap-1=2; inject k=1 already 0/8 IN.  Core 42/42 IN at JUMP with corr(pairs,j)=-0.38 (pair count does not drive the source jump).  Remaining: the r395 2-3 histogram with a sparse tail -- pair density ~2% is a SHADOW of that shape, not a closing lemma.  Companion rh/problem/isolation_lemma.tex + verify_isolation_lemma.py 10/10 ISOLATION LEMMA VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "692ba5807d3608e235e3bd1011b67dea78990e809da7b7344ec6f516463d2aa4",
+      "bytes": 21572
     }
   ]
 }
