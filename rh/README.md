@@ -4937,6 +4937,37 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence: r374--r380
 are parallel lanes; this round is additive.
 
+**The pivot-band entry lemma, reduced (r382, LEMMA.PIVOT_ENTRY.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/pivot_entry_lemma_probe.py` (17/17
+full, 10/10 smoke, SPEC_SHA `b7f53a93daf790bc`) plus
+`rh/problem/pivot_entry_lemma.tex` (+ PDF +
+`verify_pivot_entry.py`, 14/14, `PIVOT ENTRY STEPS VERIFIED`).
+**Ausgang REDUZIERT.**  SATZ: RKHS sum bound; pair-energy
+identity; Christoffel comparison $h_k(w)\ge(1-\lambda_{\max}(E_{k+1}))h_k(\mu)$;
+five-atom $2$-versus-$1$ interlacing ($h_0,h_1,h_2>0$,
+$h_3=-144/7$); three-atom flank ratio $1/3$ with
+$h_0=4$, $h_1=6$, $h_2=-3$; equal two-period $H_1=0$; clustered
+run-of-three $H_3<0$ before half-filling.  The source ingredient
+that protects the free window is the *flank*: every negative run
+on the ordered cosine support has length at most $2$ (MAIN
+$85/85$) and $\nu$-mass at most two-thirds of the flanking
+$\mu$-mass (core $42/42$, MAIN $78/85$; seven EXT-heavy windows
+remain under the weaker $c<1$).  Dead $\chi$ satisfy both;
+scramble drops at both (max-run $5$, $r_{\max}=2.71$,
+first-neg $21<\lfloor 2\cdot 184/5\rfloor=73$,
+$\lambda_{\max}(E_{22})>1$).  Two-period amplitude $2/3$ first
+goes negative at $\sim N/2$ (the binding adversary against
+raising $\kappa$ to $1$); amplitude $1$ kills at $h_0$.  Reduced
+entry $n_0=\lfloor 2N/5\rfloor$ under (F2$_{2/3}$), which docks
+to r380 `adaptive_band_from_entry` as the named Prop
+`FlankEntryPrefix` (no Lean edit this round; R384 formalizes).
+What remains for $n_0=N-1$ is the $L^2$ Christoffel tail on the
+flank blocks (r285 coherence).  Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.  Mincut unchanged (base 4 / refined
+5).  Coexistence: r374--r381 and r376/r380 (Lean) are parallel
+lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5344,6 +5375,23 @@ Companion script `verify_g_eps.py`, 13/13 gates,
 Finite identities plus a named reduction.  NO L\* claim.  NO RH
 CLAIM.
 
+An eleventh standalone note, `rh/problem/pivot_entry_lemma.pdf`
+(August 28, 2026), is the lemma-first attack on the entry of the
+pivot band (round 382, sealed census probe
+`pivot_entry_lemma_probe.py`).  Rank-one inertia transport
+(r380) reduces the cap to a source-defined $n_0$ with at most
+one sign change in $h_0,\ldots,h_{n_0}$.  The three-term
+recurrence alone does not forbid a second prefix return.  The
+source ingredient is the flank condition (max $\nu$-run $\le 2$,
+$\nu$-mass $\le (2/3)$ flanking $\mu$-mass).  **REDUZIERT** to
+$n_0=\lfloor 2N/5\rfloor$ under that condition.  Two-period
+amplitude $2/3$ is the binding adversary against $n_0=N-1$;
+scramble named-breaks at run length and flank ratio.  Companion
+script `verify_pivot_entry.py`, 14/14 gates,
+`PIVOT ENTRY STEPS VERIFIED`.  Discovery probe 17/17, SPEC_SHA
+`b7f53a93daf790bc`.  Finite identities plus a named reduction.
+NO L\* claim.  NO RH CLAIM.
+
 ## The RH suite
 
 ```bash
@@ -5356,7 +5404,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r381 from
+2. **Sealed probes** — the campaign probes r250–r382 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -5744,6 +5792,16 @@ touch `experiments/next.txt` and does not touch `rh/lean/`
 (`run_rh.py --fast --skip-lean`) after appending the probe and
 problem-document rows to the inventory.  r374--r380 are parallel
 lemma-first / Lean lanes and are not dropped.
+**r382 coexistence.** Round 382 (`pivot_entry_lemma.tex` +
+`pivot_entry_lemma_probe.py`) is additive on the L* / pivot-band
+lane after r377/r380 (lemma-first entry: $(2/3)$-flank, reduced
+$n_0=\lfloor 2N/5\rfloor$).  It does not touch
+`experiments/next.txt` and does not touch `rh/lean/` (R384
+formalizes `FlankEntryPrefix`).  Suite surface of this round:
+integrity + probes (`run_rh.py --fast --skip-lean`) after
+appending the probe and problem-document rows to the inventory.
+r374--r381 are parallel lemma-first / Lean lanes and are not
+dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in

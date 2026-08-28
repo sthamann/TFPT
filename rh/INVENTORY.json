@@ -1786,6 +1786,36 @@
       "bytes": 250857
     },
     {
+      "path": "rh/problem/pivot_entry_lemma.tex",
+      "role": "problem_statement",
+      "round": "r382 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on the pivot-band entry (round 382): RKHS sum, pair energy, Christoffel comparison SATZ; 5-atom interlacing and 3-atom flank toys SATZ; equal two-period and clustered run-of-3 named kills.  Reduced to n0=floor(2N/5) under (F1)+(F2_{2/3}) (max nu-run <= 2 and nu-mass <= 2/3 flanking mu-mass).  MAIN F1 85/85, F2 85/85, F2_23 78/85; scramble named-breaks; two-period c=2/3 is the binding half-filling adversary.  Named remainder for n0=N-1: L2 CD tail on flank blocks.  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "acb9594e3d98365f7464b65572bb015ac74640e1202b4671841d99bd9c8e8177",
+      "bytes": 18294
+    },
+    {
+      "path": "rh/problem/verify_pivot_entry.py",
+      "role": "problem_check",
+      "round": "r382 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in pivot_entry_lemma.tex: standalone Fractions (energy identity, 5-atom interlacing, equal two-period H1=0, clustered H3<0, 3-atom flank, RKHS one-atom, Christoffel comparison, beta2 sign) plus construction pins (w9 flank entry n0=73, scramble kill first=21, dead chi3-15, two-period S=81 table, clustered S=21, lambda wall).  14/14 gates, final line PIVOT ENTRY STEPS VERIFIED",
+      "pin": true,
+      "sha256": "af711d7169d99661fd26d4b63d62b6333976cd79b3b48f5eefc0d892ff30d893",
+      "bytes": 11440
+    },
+    {
+      "path": "rh/problem/pivot_entry_lemma.pdf",
+      "role": "problem_statement",
+      "round": "r382 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of pivot_entry_lemma.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "e5d8ab3ccd0cc4cf4dcb9a2867d3783f3787a06954f2a56294078fd29d61241c",
+      "bytes": 267894
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2112,6 +2142,16 @@
       "pin": true,
       "sha256": "35c92067949656e530c25b7deb6224afbf197bd79b19c58152e0cff172d336bc",
       "bytes": 16657
+    },
+    {
+      "path": "experiments/tfpt-discovery/pivot_entry_lemma_probe.py",
+      "role": "sealed_probe",
+      "round": "r382",
+      "ledger_ids": [],
+      "status": "Pivot-band entry lemma (round 382, LEMMA.PIVOT_ENTRY.01, lemma-first; experiments-side, NO ledger row): 17/17 full / 10/10 smoke; SPEC_SHA b7f53a93daf790bc; identities and flank tallies first measured in /tmp then sealed (disclosed calibration).  AUSGANG REDUZIERT to n0=floor(2N/5) under the (2/3)-flank condition.  SATZ: RKHS sum bound; pair-energy identity; Christoffel comparison h_k(w) >= (1-lam) h_k(mu); 5-atom 2-vs-1 interlacing (h0,h1,h2>0, h3=-144/7); 3-atom flank ratio 1/3 with h0=4,h1=6,h2=-3; equal two-period H1=0; clustered run-of-3 H3<0 before half-filling.  CENSUS: MAIN F1 (max_len<=2) 85/85, F2 (rmax<1) 85/85, F2_23 (rmax<=2/3) 78/85 (EXT-heavy 69,96,97,99,107,117,129); core-42 nh67=0 max d50=0.0402; dead chi 6/6 satisfy F1+F2_23.  KILL: scramble max_len=5 rmax=2.71 first_neg=21 < n0=73 and lam(E_22)>1; two-period c=1 first_neg=0; clustered run-6 first_neg=2.  Two-period c=2/3 first_neg ~ N/2 (S=81: 20 vs n0=16) is the binding adversary against raising kappa to 1.  Named remainder for n0=N-1: L2 CD-kernel tail on flank blocks (r285 coherence).  Companion rh/problem/pivot_entry_lemma.tex + verify_pivot_entry.py 14/14 PIVOT ENTRY STEPS VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "6ba65b134c947539126043e65bf962c5c77ea1dec5382e6b0f7f93666ab8f74b",
+      "bytes": 18293
     }
   ]
 }
