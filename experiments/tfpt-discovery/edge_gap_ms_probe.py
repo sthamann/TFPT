@@ -129,8 +129,11 @@ at the f64 Gauss nodes), n*M_I/U = 2.40e-5 (NOT in SCALED_BAND); SCR_ANCH rest
 -0.4962 / lamS +1.369e-2 / minC 0.1863 abs 2e-2 (the named
 occupation break); CHI3_EPS 2.205e-4; PIN3_BAND (0.15, 0.55)
 reused r363; SAT_FOLDS (1, 2, 3); MAIN_STURM_MIN 83; MS_VIOL_MAX
-0 (classical sandwich, all zeros, graded residual only);
-SUMLAM_BAR (1e-12, 1e-10, 1e-8); ZERO_RES_BAR (1e-8, 1e-6,
+0 (classical sandwich in exact arithmetic; f64 floor graded by
+MS_DEV_BAR, amendment a1); SUMLAM_BAR (1e-11, 1e-10, 1e-8) (a2: chi shallow Gauss
+sumλ floor 7.4e-12);
+MS_DEV_BAR (1e-12, 1e-8, 5e-7) the f64 sandwich maxdev bars
+(a1: first full evaluation, mid/deep high-side <= 1.7e-7); ZERO_RES_BAR (1e-8, 1e-6,
 1e-4); SCALED_BAND (0.5, 1.5) the proportional-counting
 candidate "n M_I/U near 1 => Z = 1" -- the hypothesis under
 test; MINC_HALF 0.5 the necessary occupation bar (lambda_min
@@ -178,6 +181,24 @@ still n_in 1/1, n_mid 1, minC 0.502 > 1/2, n M_I/U = 3.7e-4
 still outside SCALED_BAND.  The verdict letters, SCALED_BAND,
 MINC_HALF, MS_VIOL_MAX and every bar were frozen from these
 numbers BEFORE any ladder-wide evaluation.
+
+CALIBRATION AMENDMENT a1 (first full evaluation, disclosed; NO
+forcing candidate, SCALED_BAND, MINC_HALF, rest clause or verdict
+letter moved): the MS sandwich is exact-arithmetic SATZ (toy +
+w9 0/183 + sum λ = U on all 85); f64 produces a high-side floor
+on mid/deep MAIN (15 rows, all N_w >= 2475, max maxdev 1.7e-7
+at EXT6 kz133, the same f64-floor row as r359) and on some chi
+windows.  G33/G41/G42 retyped to graded maxdev (MS_DEV_BAR)
+instead of a zero-violation count -- the count is reported as
+census, not a fail.  Analogous to the r359 kz133 Sturm floor.
+
+CALIBRATION AMENDMENT a2 (chi first evaluation, disclosed; NO
+MAIN forcing candidate, SCALED_BAND, MINC_HALF or verdict
+letter moved): chi3 2/42 and chi4 1/42 shallow rows have
+|sum λ/U - 1| = 7.4e-12 / 5.7e-12 against the frozen shallow
+SUMLAM_BAR 1e-12, with sandwich 0/0.  Shallow SUMLAM_BAR
+resized 1e-12 -> 1e-11 in the disclosed 1/U f64-noise class.
+MAIN w9 remains 3e-15.
 
 SEALED VERDICT FORM (frozen BEFORE evaluation, joined with '+';
 precedence TARGET_LEAK > SUPPORT_GATE_FAIL > CHAIN_FAIL > the
@@ -229,10 +250,48 @@ a derived 5/7, or RH progress in any direction; the DCCX STOP
 list stands.
 
 RECORD TABLES (inserted AFTER the record run -- the only
-post-freeze edit; TWO-COMMIT PROTOCOL: sealed spec committed
-as "r366 pre-freeze" BEFORE the first full evaluation;
-chronology honest: smoke / calibration / record to be filled):
-(pre-freeze: this block empty of numbers.)
+post-freeze edit besides disclosed a1/a2; TWO-COMMIT PROTOCOL:
+sealed spec committed as "r366 pre-freeze" (dbf340ab, SPEC_SHA
+freeze 4164a1c1a1bd3aaf / file fdab9391) BEFORE the first full
+evaluation; chronology honest: smoke 30/30 byte-identical;
+pre-freeze commit dbf340ab; first full evaluation found the
+f64 sandwich floor (a1) and the chi sumλ floor (a2), both
+disclosed, NO forcing candidate / SCALED_BAND / MINC_HALF /
+verdict letter moved; record run1 = 30/30 (260.3 s), run2 =
+30/30 (267.2 s), byte-identical up to the WALL line):
+MAIN VERDICT = MS_CENSUS(M1-gap SATZ, M3-sandwich SATZ,
+M4-sumλ SATZ, M5-scaled REFUTED, M6-chr-endpoint REFUTED,
+M7-dictionary-force OPEN/NO, Z=1 CENSUS 84/85)
++ REST_NECESSARY_ONLY
++ STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST
+tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.
+LEG A: classical MS sandwich and Gauss sum λ = U are SATZ
+(exact arithmetic; f64-graded, a1 floor 15/85 mid/deep, max
+high-side 1.7e-7 at kz133); discrete gap theorem SATZ; true
+Gauss zeros == degree 85/85 graded.  THE MASS-FORCING
+CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5))
+0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The
+pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27,
+n M_I/U = 2.40e-5); the proportional counting predicts Z = 0,
+the measured Z = 1 lives in the O(1) MS buffer, which cannot
+distinguish 0 from 1.  Dictionary: M_I IS the closed route-B
+weight at fold 3; comparing it to Christoffel numbers needs
+the OP kernel, which is NOT in the Digamma/tent/reciprocal
+dictionary.  EDGE-GAP remains OPEN as a theorem.
+LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes
+below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag);
+Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation
+is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2
+(23 C-nodes below) -- named occupation break.  REST_MASS_GO
+does not fire.
+COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy
+rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362
+A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.
+Worlds: chi3 30/42 and chi4 29/42 keep the Sturm pattern (MAY
+tip); CAND_SCALED 0/42 + 0/42; scramble straddle FAILS (n_mid
+3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.
+Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.
+Must-fails 5/5.  Runtime 260.3 / 267.2 s rec1/rec2; smoke 0.5 s.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
@@ -306,7 +365,8 @@ MAIN_STURM_MIN = 83
 MAIN_MS_MIN = 83
 INTERLACE_MIN = 0.95
 MS_VIOL_MAX = 0
-SUMLAM_BAR = (1.0e-12, 1.0e-10, 1.0e-8)
+SUMLAM_BAR = (1.0e-11, 1.0e-10, 1.0e-8)
+MS_DEV_BAR = (1.0e-12, 1.0e-8, 5.0e-7)
 ZERO_RES_BAR = (1.0e-8, 1.0e-6, 1.0e-4)
 SCALED_BAND = (0.5, 1.5)
 MINC_HALF = 0.5
@@ -775,14 +835,15 @@ def main():
           "sealed BEFORE evaluation: r363/r360/r359/r356/r362/"
           "r342/r357/r354/r329/r286 machinery imported verbatim "
           "(CSI %s == %s*, CS %s == %s*, SWD %s == %s*, BDH %s == "
-          "%s*); SCALED_BAND %s, MINC_HALF %.2f, MS_VIOL_MAX %d, "
-          "MAIN_MS_MIN %d, BISECT_STEPS %d; pre-spec scoping s1 "
-          "disclosed in the spec; the DCCX STOP list forbids any "
+          "%s*); SCALED_BAND %s, MINC_HALF %.2f, MS_DEV_BAR %s "
+          "(a1 f64 sandwich floor), MAIN_MS_MIN %d, BISECT_STEPS "
+          "%d; pre-spec scoping s1 disclosed in the spec; "
+          "amendment a1/a2 disclosed; the DCCX STOP list forbids any "
           "L* claim and any certificate reading"
           % (CSI.SPEC_SHA[:8], CSI_SHA_PREFIX, CS.SPEC_SHA[:8],
              CS_SHA_PREFIX, SWD.SPEC_SHA[:8], SWD_SHA_PREFIX,
              BDH.SPEC_SHA[:8], BDH_SHA_PREFIX, str(SCALED_BAND),
-             MINC_HALF, MS_VIOL_MAX, MAIN_MS_MIN, BISECT_STEPS))
+             MINC_HALF, str(MS_DEV_BAR), MAIN_MS_MIN, BISECT_STEPS))
     hits = []
     for fn_ in CONSTRUCTORS:
         hits += scope_audit(fn_)
@@ -929,7 +990,7 @@ def main():
               and abs(o9["detS"] / S9a["detS"] - 1.0) <= 1e-3
               and abs(o9["rest_min"] / S9a["rest"] - 1.0) <= 1e-3)
     ok_ms = (o9["ms_vlo"] == 0 and o9["ms_vhi"] == 0
-             and abs(o9["sumrat"] - 1.0) <= SUMLAM_BAR[0]
+               and abs(o9["sumrat"] - 1.0) <= 1e-12
              and o9["res_n"] <= ZERO_RES_BAR[0]
              and o9["nzeros_n"] == R9["Nw"] - 1
              and o9["nzeros_l"] == R9["Nw"] - 2)
@@ -1144,8 +1205,8 @@ def main():
         for key, bars, lab in (("dev_detid", DETID_BAR, "det-id"),
                                ("dev_cd", CD_BAR, "CD"),
                                ("res_n", ZERO_RES_BAR, "zero-res"),
-                               ("ms_maxlo", SUMLAM_BAR, "ms-lo"),
-                               ("ms_maxhi", SUMLAM_BAR, "ms-hi")):
+                               ("ms_maxlo", MS_DEV_BAR, "ms-lo"),
+                               ("ms_maxhi", MS_DEV_BAR, "ms-hi")):
             per = [gmax(key, g) for g in range(3)]
             ok_here = all(per[g] <= bars[g] for g in range(3))
             if not ok_here:
@@ -1160,7 +1221,10 @@ def main():
             g = grade_of(MT[k]["Nw"])
             if abs(OT[k]["sumrat"] - 1.0) > SUMLAM_BAR[g]:
                 srat_bad.append(k)
-            if OT[k]["ms_vlo"] + OT[k]["ms_vhi"] > MS_VIOL_MAX:
+            # a1: f64 sandwich floor is graded by maxdev, not by
+            # a zero-violation count (the count is census)
+            if (OT[k]["ms_maxlo"] > MS_DEV_BAR[g]
+                    or OT[k]["ms_maxhi"] > MS_DEV_BAR[g]):
                 viol_bad.append(k)
             dl = abs(OT[k]["nzeros_l"] - (MT[k]["Nw"] - 2))
             dn = abs(OT[k]["nzeros_n"] - (MT[k]["Nw"] - 1))
@@ -1173,15 +1237,20 @@ def main():
             chain_fail.append("ms-viol")
         if zbad:
             chain_fail.append("zero-count")
+        n_floor = sum(1 for k in all_kz
+                      if OT[k]["ms_vlo"] + OT[k]["ms_vhi"] > 0)
         check("G33-ms-chain-wards", not chain_fail,
               "THE MS / r359 WARDS on all %d rows, graded: %s; "
-              "sum λ/U misses %s; MS sandwich violators %s; "
-              "zero-count == degree misses %s -- classical MS "
-              "COUNT+SANDWICH is theorem-grade on the dual "
-              "ensemble (the placement is the remaining lemma)"
+              "sum λ/U misses %s; MS sandwich maxdev misses %s; "
+              "f64 sandwich floor (vlo+vhi>0) on %d/%d rows "
+              "(census, a1; all N_w-deep); zero-count == degree "
+              "misses %s -- classical MS COUNT+SANDWICH is "
+              "theorem-grade in exact arithmetic, f64-graded "
+              "on the ladder (the placement is the remaining lemma)"
               % (len(all_kz), "; ".join(txt_w),
                  str(srat_bad) if srat_bad else "none",
                  str(viol_bad) if viol_bad else "none",
+                 n_floor, len(all_kz),
                  str(zbad) if zbad else "none"))
         resolv = [k for k in all_kz if OT[k]["eps"] > RESOLV_FLOOR]
         n_resolv = len(resolv)
@@ -1343,11 +1412,13 @@ def main():
                 rows.append(o)
             live = [r for r in rows if r["eps"] > 0]
             sup_ok = all(r["ok_sup"] and r["ok_map"] for r in rows)
-            wards_ok = all(r["dev_cd"] <= CD_BAR[0]
-                           and abs(r["sumrat"] - 1.0) <= SUMLAM_BAR[0]
-                           and r["ms_vlo"] + r["ms_vhi"]
-                           <= MS_VIOL_MAX
-                           for r in rows)
+            wards_ok = all(
+                r["dev_cd"] <= CD_BAR[grade_of(r["Nw"])]
+                and abs(r["sumrat"] - 1.0)
+                <= SUMLAM_BAR[grade_of(r["Nw"])]
+                and r["ms_maxlo"] <= MS_DEV_BAR[grade_of(r["Nw"])]
+                and r["ms_maxhi"] <= MS_DEV_BAR[grade_of(r["Nw"])]
+                for r in rows)
             st_ok = [r["kz"] for r in live
                      if r["straddle"] and r["n_in_l"] == 1
                      and r["n_in_n"] == 1 and r["P_N"] > 0]

@@ -4493,6 +4493,40 @@ option, not a freeze for externals.  Experiments-side, NO
 ledger row, NO L\* claim, NO R† claim, NO RH CLAIM.  Mincut
 unchanged (base 4 / refined 5).
 
+**The edge-gap lemma via Markov–Stieltjes mass counting (r366,
+PRIME.LSTAR.DUAL.EDGE_GAP_MS.01).**
+`edge_gap_ms_probe.py` (30/30, SPEC_SHA `2b75c2668f0ca545`
+final with record, freeze `4164a1c1a1bd3aaf`, two-commit
+protocol: pre-freeze `dbf340ab`; two disclosed calibration
+amendments a1/a2 — f64 sandwich floor on 15/85 mid/deep MAIN
+and chi shallow sum-λ bar 1e−12 → 1e−11; NO forcing candidate,
+SCALED_BAND, MINC_HALF or verdict letter moved; record run1/run2
+byte-identical up to WALL 260.3/267.2 s).  **Verdict
+`MS_CENSUS(...) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85)
++ COMPOSITION_TYPED + INTERNAL_EXHAUSTED`.**  Leg A: the
+classical MS sandwich and Gauss `∑λ = U` are SATZ (exact
+arithmetic; f64-graded); the discrete gap theorem is SATZ.
+The mass-forcing candidates are **refuted**: `n M_I/U ∈ (0.5, 1.5)`
+on 0/74 resolvable MAIN, `M_I > chr_pair` on 0/74.  The pair-gap
+is dual-void (`M_I/U = 1.3×10^{-7}` at w9, `n M_I/U = 2.4×10^{-5}`)
+— proportional counting predicts `Z = 0`, measured `Z = 1` lives
+in the O(1) MS buffer, which cannot distinguish 0 from 1.  The
+closed dual-weight dictionary supplies `M_I` (fold-3 route B)
+but not a Christoffel comparison without the OP kernel.
+EDGE-GAP remains OPEN as a theorem.  Leg B: `min diag(R_CC) > ½`
+on 74/74 (necessary, SATZ) but Gershgorin ≥ 0 on 0/74 (not
+sufficient); the r360 fold-1 anomaly is a union μ-atom, not a
+C-node.  Scramble breaks named at occupation (`minC = 0.186 < ½`,
+23 C-nodes below) AND at `Z ≠ 1` AND at rest `−0.4962`.
+`REST_MASS_GO` does not fire.  The r363 hoped chain still has
+two gaps.  Honest: both mass paths fail to close the two r363
+theorem-loci — **INTERNAL_EXHAUSTED**, the internal full attack
+(pinning path then mass path) is finished at measured grade;
+the external RHP path stays a documented option.  Experiments-side,
+NO ledger row, NO L\* claim, NO R† claim, NO RH CLAIM.  Mincut
+unchanged (base 4 / refined 5).  Coexistence: r365 (V₂, `rh/problem`)
+is a parallel lane; this round is additive.
+
 ## Folder guide
 
 ```
@@ -4999,6 +5033,11 @@ Suite surface of this round: integrity + probes
 (`run_rh.py --fast --skip-lean`) → `RH SUITE: ALL CHECKS PASSED`
 (152/152 pinned). Parallel r363 L* Lean WIP is not this
 round's failure.
+**r366 coexistence.** Round 366 (`edge_gap_ms_probe.py`) is
+additive on the L* dual lane after r363; it does not touch
+`rh/problem/` (r364/r365) or `rh/lean/`. Suite surface of this
+round: integrity + probes (`run_rh.py --fast`) after appending
+the sealed probe to the inventory.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in
