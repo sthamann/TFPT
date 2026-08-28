@@ -4389,7 +4389,11 @@ pairing of an arbitrary ± colouring does not).  11/11 machine
 gates, `MEDCAP STEPS VERIFIED`.  Round 364 (`xn_invariant.tex`)
 proves the pairing half of that remainder and names $V_2$ (local
 $v_2$-spacing at the $x$-mask); on the 134-window surface $X_n$
-holds (unique $(1,2)$ = the equality case).  NO RH CLAIM.
+holds (unique $(1,2)$ = the equality case).  Round 365
+(`v2_regularity.tex`) anatomizes $V_2$ and fires the hydra ward
+`REGRESS_DETECTED`: $V_2$ is the final named lemma of the chain;
+the $3/8$ floor is a theorem of the construction *modulo* $V_2$.
+NO RH CLAIM.
 Experiments-side, NO ledger row, NO RH CLAIM.
 
 **The augmented Borodin–Uvarov duality — L† as ONE dual object
@@ -4586,12 +4590,16 @@ rh/
 │   ├── xn_invariant.tex(+pdf) — r364: pairing theorem for X_n
 │   │                     (n=1 only odd tail; unique sep=3/2 is
 │   │                     edge (1,2); remainder V2 named).  No RH claim
+│   ├── v2_regularity.tex(+pdf) — r365: V2 anatomy + hydra freeze
+│   │                     (REGRESS_DETECTED; T2' modulo V2).  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
 │   │                     lemma in medcap_lemma.tex (11/11)
-│   └── verify_xn_steps.py — machine check of xn_invariant.tex
-│                         (12/12, XN STEPS VERIFIED)
+│   ├── verify_xn_steps.py — machine check of xn_invariant.tex
+│   │                     (12/12, XN STEPS VERIFIED)
+│   └── verify_v2_steps.py — machine check of v2_regularity.tex
+│                         (12/12, V2 STEPS VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -4698,6 +4706,29 @@ hence MED-CAP holds, hence the pointwise floor $g_i\ge 3/8$ holds,
 hence $T_2'$ trivialises; $C_K$ is unchanged.  Companion script
 `verify_xn_steps.py`, 12/12 gates, `XN STEPS VERIFIED`.  Finite
 identities plus a named analytic remainder.  NO RH CLAIM.
+
+A fifth standalone note, `rh/problem/v2_regularity.pdf` (August 28,
+2026), is the proof attempt for that remainder $V_2$ (round 365,
+no sealed discovery probe, hydra ward binding).  Anatomy: $v_2$ is
+the degree-$(N-2)$ arithmetic-comb chain polynomial on the
+smooth-border nodes (Jacobi from the source, not mesh-only); $w$
+is the arm sign of the explicit smooth fold.  Proved: product
+flip-XOR; $(1,1,1)$ yields the $\theta$-prefix $(1,2)$ iff the run
+count is odd.  Refuted: a $2$-regular factor does **not** imply
+$V_2$ (11/8000 random products still violate).  Chebyshev after
+the $x$-mask never ends $(1,1,1)$; Chebyshev times a Nyquist burst
+of $w$ never violates $V_2$ (425 windows).  On the 134-window
+surface $V_2$ holds (0 violators); two colouring triples, both
+regular, only one odd ($\chi_4$ kz53, $w$-driven saturator);
+$\chi_3$ kz16 is a $v_2$-triple with even run count ($n_0=2$, not
+small-sep).  The Jacobi-Chebyshev / Freud reductions are not
+strictly more elementary (they are statements about the chain
+itself).  Verdict `REGRESS_DETECTED`: the escape
+$T_2'\Leftarrow\cdots\Leftarrow V_2$ freezes at $V_2$; the
+pointwise floor $g_i\ge 3/8$ is a theorem of the construction
+**modulo** $V_2$.  T1 / $C_K$ unchanged.  Companion script
+`verify_v2_steps.py`, 12/12 gates, `V2 STEPS VERIFIED`.  Finite
+identities plus a named freeze.  NO RH CLAIM.
 
 ## The RH suite
 
@@ -4960,6 +4991,14 @@ transcription. A parallel Lean worker may hold a red `lake build`
 from WIP on that file; r364 does not treat a red Lean gate as its
 own failure. The suite surface of this round is integrity +
 probes (`run_rh.py --fast --skip-lean`).
+**r365 coexistence.** Round 365 (`v2_regularity.tex`) does not
+touch `rh/lean/`. Independently `lake build` completed
+successfully (2632 jobs; historical `sorry` warnings on the
+r362 DualResolvent / Source census, none introduced here).
+Suite surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) → `RH SUITE: ALL CHECKS PASSED`
+(152/152 pinned). Parallel r363 L* Lean WIP is not this
+round's failure.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in

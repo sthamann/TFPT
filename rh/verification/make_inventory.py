@@ -1730,6 +1730,40 @@ ENTRIES = [
      [],
      "compiled PDF of xn_invariant.tex (recompiled artefact, "
      "registered unpinned)", False),
+    ("rh/problem/v2_regularity.tex", "problem_statement",
+     "r365 companion",
+     [],
+     "proof attempt for the r364 remainder V2 (run-length regularity "
+     "of the bordered-chain polynomial v2 at the 20pct x-mask): v2 is "
+     "the degree-(N-2) arithmetic OP evaluated on smooth-border nodes "
+     "(source Jacobi, not mesh-only); w is the explicit smooth-fold arm "
+     "sign.  Flip-XOR of the product is proved; the tempting 2-regular "
+     "reduction is FALSE (11/8000 random products with a 2-regular "
+     "factor still violate V2); Chebyshev x-mask never ends (1,1,1); "
+     "Chebyshev x Nyquist-burst never violates; (1,1,1) yields prefix "
+     "(1,2) iff the run-count is odd.  On the 134-window surface V2 "
+     "holds (0 violators); two colouring triples, both regular, only "
+     "one odd (chi4 kz53, w-driven saturator).  Hydra ward "
+     "REGRESS_DETECTED: V2 is the final named lemma of the MED-CAP "
+     "chain; T2' holds modulo V2; T1 unchanged.  Finite identities "
+     "plus a named freeze; NO RH claim", True),
+    ("rh/problem/verify_v2_steps.py", "problem_check",
+     "r365 companion",
+     [],
+     "machine check of every numbered lemma in v2_regularity.tex: "
+     "standalone product XOR, 2-regular reduction refuted, Chebyshev "
+     "x-mask 0 (1,1,1), Chebyshev x Nyquist-burst 0 V2-viol, random "
+     "products do violate, plateau violator (3^8,1,1,1) pairs to "
+     "n=(1,2,6^4) and fails MED-CAP, spike (2^8,3,3,1,1,1) holds V2 "
+     "and third=4, (1,1,1) gives (1,2) iff odd; construction pins "
+     "(four w9 single-arm no triple; chi4 kz53 w-driven regular "
+     "(1,2,6,5,4,4); chi3 kz16 v2-triple even n0=2; sign identity).  "
+     "12/12 gates, final line V2 STEPS VERIFIED", True),
+    ("rh/problem/v2_regularity.pdf", "problem_statement",
+     "r365 companion",
+     [],
+     "compiled PDF of v2_regularity.tex (recompiled artefact, "
+     "registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",

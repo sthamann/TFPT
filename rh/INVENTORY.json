@@ -1576,6 +1576,36 @@
       "bytes": 251878
     },
     {
+      "path": "rh/problem/v2_regularity.tex",
+      "role": "problem_statement",
+      "round": "r365 companion",
+      "ledger_ids": [],
+      "status": "proof attempt for the r364 remainder V2 (run-length regularity of the bordered-chain polynomial v2 at the 20pct x-mask): v2 is the degree-(N-2) arithmetic OP evaluated on smooth-border nodes (source Jacobi, not mesh-only); w is the explicit smooth-fold arm sign.  Flip-XOR of the product is proved; the tempting 2-regular reduction is FALSE (11/8000 random products with a 2-regular factor still violate V2); Chebyshev x-mask never ends (1,1,1); Chebyshev x Nyquist-burst never violates; (1,1,1) yields prefix (1,2) iff the run-count is odd.  On the 134-window surface V2 holds (0 violators); two colouring triples, both regular, only one odd (chi4 kz53, w-driven saturator).  Hydra ward REGRESS_DETECTED: V2 is the final named lemma of the MED-CAP chain; T2' holds modulo V2; T1 unchanged.  Finite identities plus a named freeze; NO RH claim",
+      "pin": true,
+      "sha256": "c38330936680f27f6dfddc2c80a0e34b27c22c25bd68552e9310cf21dc5a6b64",
+      "bytes": 16714
+    },
+    {
+      "path": "rh/problem/verify_v2_steps.py",
+      "role": "problem_check",
+      "round": "r365 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in v2_regularity.tex: standalone product XOR, 2-regular reduction refuted, Chebyshev x-mask 0 (1,1,1), Chebyshev x Nyquist-burst 0 V2-viol, random products do violate, plateau violator (3^8,1,1,1) pairs to n=(1,2,6^4) and fails MED-CAP, spike (2^8,3,3,1,1,1) holds V2 and third=4, (1,1,1) gives (1,2) iff odd; construction pins (four w9 single-arm no triple; chi4 kz53 w-driven regular (1,2,6,5,4,4); chi3 kz16 v2-triple even n0=2; sign identity).  12/12 gates, final line V2 STEPS VERIFIED",
+      "pin": true,
+      "sha256": "db38eaeaaad6217fcff5480fd5c06638dacce78271902778e7a7681bfd198e3a",
+      "bytes": 15367
+    },
+    {
+      "path": "rh/problem/v2_regularity.pdf",
+      "role": "problem_statement",
+      "round": "r365 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of v2_regularity.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "0d730c402ef975e84bfb7f66f8528e6822cdcc59434622b047fd5b04c0bfa984",
+      "bytes": 236460
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -1750,8 +1780,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "95bff2eb3508951764c93aaf408c7cdfb96aa0ea3a0433453566fae7ff779aea",
-      "bytes": 5233607
+      "sha256": "c5c7476edc80db94ac4b86691357039e9dde9d8a041531ea17898650124cce8f",
+      "bytes": 5251550
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
