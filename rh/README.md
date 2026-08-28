@@ -4527,6 +4527,39 @@ NO ledger row, NO L\* claim, NO R† claim, NO RH CLAIM.  Mincut
 unchanged (base 4 / refined 5).  Coexistence: r365 (V₂, `rh/problem`)
 is a parallel lane; this round is additive.
 
+**The Haynsworth two-rank inertia cut (r367,
+PRIME.LSTAR.DUAL.FINAL_TWO_RANK_INERTIA.01).**
+`final_two_rank_inertia_probe.py` (34/34, SPEC_SHA `e0d79840fd7c9446`
+final with record, freeze `471879d1858e4c57`, two-commit
+protocol: pre-freeze `c9ecbadd`; one disclosed calibration
+amendment a1 — G33/G34 retyped CENSUS after the first full
+evaluation found P1 vacuous on 29/74; 0-violation stays in the
+GO letter; NO bar, P1/P2 definition, scramble named-break,
+Haynsworth SATZ or restatement threshold moved; record run1/run2
+byte-identical up to WALL 236.0/228.9 s).  **Verdict
+`PREMISE_FAILS(P1_VACUOUS 29/74, OVERLOAD 0/74) + THREE_RANK_Y_CENSUS
++ A5_LIFT_LEDGER + SOURCE_LEDGER(NOT restatement)`.**  Leg A:
+Haynsworth is a finite-matrix SATZ (Fractions LDL toy exact;
+live implication P1∧P2 ⇒ M≻0 on 74/74).  K₂ is built only from
+the two CD columns and A₀⁻¹ (AST).  The Sol pilot reproduces
+bit-near at w9, σ(K₂)=(−2.7938, 1.8036).  Lean form
+`haynsworth_two_rank` is in the spec, not proved here.  Leg B:
+P1 exact-one 45/74, vacuous 29/74 (A₀ already PD at rank N−3),
+overload 0/74; P2 holds on the same 45; the remaining negative
+direction on P1-true rows is rest-hosted 42/45 (the r359
+pair-Schur is already positive at rank N−3).  Scramble breaks
+named at P1 (nneg=21), P2 survives.  χ MAY tip (chi3 21/42,
+chi4 19/42).  The Sol 4/4 sample was terminal-rank biased.
+Leg C: −det K₂ is SRC_FLAT (slope +0.543), restatement corr
+−0.0064 — not a margin rewrite.  `TWO_RANK_INERTIA_GO` does not
+fire.  Leg D: A5 lift 4/4; three-rank Y-block mixed/PD 4/4;
+one-shot full R† from A₀† off (the border is not a CD column);
+`THREE_RANK_LDAGGER_GO` stays off.  Must-fails 5/5.
+Experiments-side, NO ledger row, NO L\* claim, NO R† claim,
+NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
+Coexistence: r365 (V₂), r366 (edge-gap MS) and r368 (L²-T1
+pre-freeze) are parallel lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5038,6 +5071,12 @@ additive on the L* dual lane after r363; it does not touch
 `rh/problem/` (r364/r365) or `rh/lean/`. Suite surface of this
 round: integrity + probes (`run_rh.py --fast`) after appending
 the sealed probe to the inventory.
+**r367 coexistence.** Round 367 (`final_two_rank_inertia_probe.py`)
+is additive on the L* dual lane after r363/r366; it does not
+touch `rh/problem/` (r364/r365) or `rh/lean/`. Suite surface of
+this round: integrity + probes (`run_rh.py --fast`) after
+appending the sealed probe to the inventory. r368 (L²-T1) is
+a parallel pre-freeze lane and is not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in

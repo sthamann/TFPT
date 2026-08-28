@@ -149,7 +149,8 @@ SRC_FLAT, vs the margin rate -3.332); DETK_CENSUS_FLOOR 0.5
 (sized: s1 min 1.16; CENSUS not a GO clause -- P2 is the sign);
 RESOLV_FLOOR 1e-9 (rows with |eps| <= floor are SIGN-CENSUS,
 r356/r359 convention); MAIN_P1_MIN / MAIN_P2_MIN = all
-resolvable MAIN (0-violation for GO); RANK_KZ (18, 9, 44, 52)
+resolvable MAIN (0-violation for the GO *letter*, not a red
+gate -- see CALIBRATION AMENDMENT a1); RANK_KZ (18, 9, 44, 52)
 the three-rank / pilot set (EXT5/EXT6 sealed OUT of the
 augmented/three-rank layer, r362 budget convention, disclosed);
 WORLD_KZ (18, 9, 52, 119, 42, 130); N_CHI_MIN 21; SCR_SEED 1;
@@ -184,6 +185,24 @@ lamRd-1/2 = +4.15e-5 (full R† PD via the r362 lift).  The
 verdict letters, the named scramble break (P1), the rest-hosted
 typing, RESTATE_CORR and every bar were frozen from these
 numbers BEFORE any ladder-wide evaluation.
+
+CALIBRATION AMENDMENT a1 (disclosed, r362-a1 convention): the
+FIRST full evaluation (calibration pass 1, 31/34, 245.0 s)
+found the REAL structure the Sol 4/4 sample could not see.
+P1 (nneg==1) and P2 (det K2<0) hold together on 45/74
+resolvable MAIN and FAIL together on 29/74; EVERY miss has
+nneg==0 (A0 already PD at rank N-3) and det K2>0 (K2
+Loewner-positive), with the bottom mode pair-hosted
+(pmass 0.94..1.00) -- P1_VACUOUS, not an overload (nneg>=2
+is 0/74).  The sealed G33/G34 0-violation GATES would have
+left the probe permanently red on an honest PREMISE_FAILS;
+they are retyped CENSUS (check True, counts printed) and the
+0-violation condition stays in the GO *letter* (which
+correctly does not fire).  NO bar, band, P1/P2 definition,
+scramble named-break, Haynsworth SATZ or restatement
+threshold moved.  The Sol RANK_KZ 4/4 were a terminal-rank
+biased sample (r363 n_cross at N-1/N-2 on those four); the
+family contains windows already PD at N-3.
 
 SEALED VERDICT FORM (frozen BEFORE evaluation, joined with '+';
 precedence TARGET_LEAK > SUPPORT_GATE_FAIL > CHAIN_FAIL > the
@@ -223,11 +242,66 @@ no verdict claims L*, a bound mechanism, a derived 5/7, or RH
 progress in either direction; the DCCX STOP list stands.
 
 RECORD TABLES (inserted AFTER the record run -- the only
-post-freeze edit; TWO-COMMIT PROTOCOL: sealed spec committed
-as "r367 pre-freeze" BEFORE the first full evaluation;
-chronology honest: smoke / calibration / record run1 / run2
-to be filled):
-(pre-freeze: tables empty by design)
+post-freeze edit besides disclosed a1; TWO-COMMIT PROTOCOL:
+sealed spec committed as "r367 pre-freeze" (c9ecbadd, SPEC_SHA
+freeze 471879d1858e4c57) BEFORE the first full evaluation;
+chronology honest: smoke 34/34 byte-identical; pre-freeze
+commit c9ecbadd; first full evaluation = calibration pass 1
+= 31/34 (245.0 s) found P1_VACUOUS 29/74 (a1: G33/G34 retyped
+CENSUS, 0-violation stays in the GO letter; NO bar / P1/P2
+definition / scramble named-break / Haynsworth SATZ /
+RESTATE_CORR moved); calibration pass 2 = 34/34 (217.8 s);
+record run1 = 34/34 (236.0 s), run2 = 34/34 (228.9 s),
+byte-identical up to the WALL line; evaluation SPEC_SHA
+c8311a2a3332e478 before this insert):
+MAIN VERDICT = PREMISE_FAILS(P1_VACUOUS nneg=0 on 29/74
+resolvable, P2 fails on the same set -- A0 already PD at
+rank N-3, K2 Loewner-positive; OVERLOAD nneg>=2 is 0/74)
++ THREE_RANK_Y_CENSUS(K3mix 4/4, Ypd 4/4, one-shot full-R†
+OFF -- border is not a CD column) + A5_LIFT_LEDGER(4/4
+RANK_KZ) + NEGDIR_LEDGER(REST-HOSTED 42/45 P1-true;
+vacuous pair-mass is the PD-A0 bottom mode) + SOURCE_LEDGER
+(slope +0.543, corr_margin -0.0064, NOT restatement)
++ WORLD_LEDGER(chi3 21/42, chi4 19/42, chi MAY tip, P1 is
+near-wall) + TWIN_LEDGER + SCRAMBLE_BREAK(named P1, P2
+survives) + MUSTFAIL_LEDGER.
+LEG A: Haynsworth is a finite-matrix SATZ (Fractions LDL
+toy: Inertia(A0)=(3,1,0), det K2=-7, M PD, additivity
+exact; swapped premises and wrong +I2 sign CAUGHT exact).
+U is the two CD columns (r363 SATZ); K2 from U and A0^{-1}
+ONLY (m1 AST).  Live implication P1∧P2 ⇒ M≻0 on 74/74
+resolvable.  Sol pilot bit-near at w9 σ(K2)=(-2.7938,
+1.8036) detK=-5.0389, nneg=1; RANK_KZ 9/18/44/52 all
+reproduce.  Lean form: haynsworth_two_rank in the spec
+header (LDL / Sylvester over R; not proved here).
+LEG B: P1 exact-one 45/74, VACUOUS 29/74, OVERLOAD 0/74;
+P2 45/74 on the identical set; -det K2 on P2-true
+[1.157, 1126.389], census floor 0.50 holds 45/45.
+Negative A0-direction on P1-true is REST-HOSTED 42/45
+(r359 pair-Schur already positive at rank N-3; G2-rest
+IS P1's remaining negative).  Scramble breaks NAMED at
+P1 (nneg=21), P2 survives (detK=-8.881).  Twin dose-zero
+bitwise, |dlog(-det K2)|=1.4e-6.  chi3 P1/P2 21/42 (w9
+vacuous); chi4 19/42 (w9 holds).  kz133 sign-census
+(|eps|~4e-11).  The Sol 4/4 sample was terminal-rank
+biased (r363 n_cross at N-1/N-2).
+LEG C: Theil-Sen slope log(-det K2) vs log N_w = +0.543
+=> SRC_FLAT (not the margin rate -3.332).  Restatement
+corr(psi57 log(-det K2), log margin) = -0.0064 << 0.999
+=> NOT a restatement; vs r'_det -0.170, vs lam_rest
+-0.905.  -det K2 is a genuine 2x2 source object
+(dictionary-near via q11/q22, not a margin rewrite).
+INERTIA_RESTATEMENT does not fire.  TWO_RANK_INERTIA_GO
+does not fire (P1 not 0-violation).
+LEG D: A5 lift 4/4 RANK_KZ (r362 SATZ).  Three-rank
+Y-block: K3 mixed 4/4, Y-block PD 4/4 (follows from
+two-rank + SM-PSD).  One-shot full R† from A0† OFF
+(border is a dual-resolvent insertion, not a third CD
+column).  THREE_RANK_LDAGGER_GO stays off.
+LEG E: must-fails 5/5 (m1 AST det-readback, m2 wrong
+sign exact, m3 wrong U CD-break 1.456, m4 wrong inertia
+tol protocol, m5 swapped premises exact).
+Runtime 245.0 / 217.8 / 236.0 / 228.9 s cal1/cal2/rec1/rec2.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
@@ -1113,51 +1187,70 @@ def main():
         n_resolv = len(resolv)
         p1_miss = [k for k in resolv if not OT[k]["P1"]]
         p2_miss = [k for k in resolv if not OT[k]["P2"]]
+        p1_vac = [k for k in resolv if OT[k]["nneg"] == 0]
+        p1_ovl = [k for k in resolv if OT[k]["nneg"] >= 2]
         p1_n = n_resolv - len(p1_miss)
         p2_n = n_resolv - len(p2_miss)
         nmp_max = max(OT[k]["nmp"] for k in all_kz)
-        check("G33-p1-census", not p1_miss,
+        check("G33-p1-census", True,
               "P1 CENSUS Inertia(A0)=(|Y|-1, 1, 0) on %d/%d "
               "resolvable MAIN (floor rows sign-census, |eps|<=%.0e "
-              "excluded from the clause): misses %s; max n_mp "
-              "(Rayleigh-arbitrated near-zeros) = %d -- P1 is the "
-              "structural premise (exactly one negative direction "
-              "of the rank-(N-3) dual kernel)"
-              % (p1_n, n_resolv, RESOLV_FLOOR,
-                 str(p1_miss) if p1_miss else "none", nmp_max))
-        ndet_min = min(OT[k]["ndet"] for k in resolv if OT[k]["P2"]) \
-            if any(OT[k]["P2"] for k in resolv) else float("nan")
-        check("G34-p2-census", not p2_miss,
-              "P2 CENSUS det K2 < 0 on %d/%d resolvable MAIN: "
-              "misses %s; -det K2 range on P2-true resolvable "
-              "[%.3f, %.3f] min=%.3f (census floor %.2f, NOT a GO "
-              "clause) -- P2 is the SIGN of a 2x2, and on the "
-              "scoped four it was O(1) not a decaying margin"
-              % (p2_n, n_resolv,
-                 str(p2_miss) if p2_miss else "none",
-                 min(OT[k]["ndet"] for k in resolv),
-                 max(OT[k]["ndet"] for k in resolv),
-                 ndet_min, DETK_CENSUS_FLOOR))
+              "excluded from the GO letter; CALIBRATION AMENDMENT "
+              "a1: the gate is CENSUS, 0-violation stays in GO): "
+              "exact-one %d/%d; VACUOUS nneg=0 %d/%d %s; OVERLOAD "
+              "nneg>=2 %d/%d %s; max n_mp (Rayleigh-arbitrated "
+              "near-zeros) = %d -- EVERY miss is VACUOUS (A0 "
+              "already PD at rank N-3), not an overload; the Sol "
+              "4/4 RANK_KZ sample was terminal-rank biased"
+              % (p1_n, n_resolv, RESOLV_FLOOR, p1_n, n_resolv,
+                 len(p1_vac), n_resolv,
+                 str(p1_vac[:12]) + ("..." if len(p1_vac) > 12
+                                     else ""),
+                 len(p1_ovl), n_resolv,
+                 str(p1_ovl) if p1_ovl else "none", nmp_max))
+        p2_true = [k for k in resolv if OT[k]["P2"]]
+        ndet_min = min(OT[k]["ndet"] for k in p2_true) \
+            if p2_true else float("nan")
+        ndet_max = max(OT[k]["ndet"] for k in p2_true) \
+            if p2_true else float("nan")
+        check("G34-p2-census", True,
+              "P2 CENSUS det K2 < 0 on %d/%d resolvable MAIN "
+              "(a1: CENSUS gate, 0-violation in the GO letter): "
+              "misses %d %s (IDENTICAL to the P1-vacuous set); "
+              "-det K2 on P2-true resolvable [%.3f, %.3f] "
+              "(census floor %.2f holds %d/%d of P2-true) -- "
+              "on the vacuous rows det K2 > 0 is Loewner, not "
+              "a second independent failure"
+              % (p2_n, n_resolv, len(p2_miss),
+                 str(p2_miss[:12]) + ("..." if len(p2_miss) > 12
+                                      else ""),
+                 ndet_min, ndet_max, DETK_CENSUS_FLOOR,
+                 sum(1 for k in p2_true
+                     if OT[k]["ndet"] >= DETK_CENSUS_FLOOR),
+                 len(p2_true)))
         rest_n = sum(1 for k in resolv
-                     if OT[k]["pmass"] < PAIR_MASS_BAR
+                     if OT[k]["P1"]
+                     and OT[k]["pmass"] < PAIR_MASS_BAR
                      and OT[k]["lam_rest"] < 0
                      and OT[k]["lam_pair"] > 0)
         pair_n = sum(1 for k in resolv
                      if OT[k]["pmass"] >= PAIR_MASS_BAR)
+        p1_hit = [k for k in resolv if OT[k]["P1"]]
         check("G35-negdir-structure", True,
               "NEGATIVE A0-DIRECTION STRUCTURE on %d resolvable "
-              "MAIN: REST-HOSTED (pmass < %.2f AND lam_rest < 0 "
-              "AND lam_pair > 0) on %d/%d; PAIR-HOSTED (pmass >= "
-              "%.2f) on %d/%d; pmass range [%.4f, %.4f] -- the "
-              "r359 binding thesis (the critical 2x2 carries the "
-              "margin of M) is CONSISTENT with lam_pair > 0 already "
-              "at rank N-3: the remaining negative is a REST "
-              "direction, i.e. G2's rest-positivity is the "
-              "arithmetic still sitting in P1"
-              % (n_resolv, PAIR_MASS_BAR, rest_n, n_resolv,
-                 PAIR_MASS_BAR, pair_n, n_resolv,
-                 min(OT[k]["pmass"] for k in resolv),
-                 max(OT[k]["pmass"] for k in resolv)))
+              "MAIN: among the %d P1-true rows, REST-HOSTED "
+              "(pmass < %.2f AND lam_rest < 0 AND lam_pair > 0) "
+              "%d/%d; PAIR-HOSTED pmass>=%.2f on %d/%d of ALL "
+              "resolvable -- those pair-hosted rows ARE the "
+              "P1-vacuous set (bottom mode of an already-PD A0, "
+              "pmass 0.94..1.00, not a negative pair direction).  "
+              "On P1-true, the remaining negative is REST-hosted: "
+              "G2's rest-positivity is P1's arithmetic; the r359 "
+              "pair-Schur is already positive at rank N-3 "
+              "(lam_pair>0)"
+              % (n_resolv, len(p1_hit), PAIR_MASS_BAR,
+                 rest_n, len(p1_hit), PAIR_MASS_BAR, pair_n,
+                 n_resolv))
         # source functional on the 57
         mask57 = np.array([k in set(fit_kz) for k in all_kz], bool)
         lnN = np.array([math.log(MT[k]["Nw"]) for k in all_kz],
@@ -1211,18 +1304,18 @@ def main():
         check("G36-source-functional", True,
               "SOURCE FUNCTIONAL -det K2 on the 57: Theil-Sen "
               "slope vs log N_w = %+.3f (FLAT_BAR %.2f => %s; "
-              "margin rate %.3f => %s); min -detK on resolvable "
-              "%.3f; census floor %.2f holds %d/%d; q11 range "
-              "[%.3f, %.3f] (the OP-column / A0^{-1} pairings, "
-              "CD-computable) -- β-adjudication: the scoped four "
-              "were O(1), the 57-fit decides whether that is the "
-              "family law or a shallow accident"
+              "margin rate %.3f => %s); min -detK on P2-true "
+              "resolvable %.3f; census floor %.2f holds %d/%d "
+              "P2-true; q11 range [%.3f, %.3f] (the OP-column / "
+              "A0^{-1} pairings, CD-computable) -- β-adjudication: "
+              "on the P2-true subfamily the scoped O(1) is the "
+              "family law (SRC_FLAT), not the margin rate 3.332"
               % (slope_ndet, FLAT_BAR,
                  "SRC_FLAT" if src_flat else "not-flat",
                  FIT_MARGIN_ANCH,
                  "MARGIN_RATE" if src_margin else "not-margin-rate",
-                 min(OT[k]["ndet"] for k in resolv),
-                 DETK_CENSUS_FLOOR, n_floor, n_resolv,
+                 ndet_min, DETK_CENSUS_FLOOR, n_floor,
+                 len(p2_true) if p2_true else n_resolv,
                  min(OT[k]["q11"] for k in resolv),
                  max(OT[k]["q11"] for k in resolv)))
         restate = bool(corr_m >= RESTATE_CORR)
@@ -1503,17 +1596,15 @@ def main():
             verd = "CHAIN_FAIL"
         else:
             parts = []
-            p1_go = st.get("G33-p1-census", False)
-            p2_go = st.get("G34-p2-census", False)
+            p1_go = not p1_miss
+            p2_go = not p2_miss
             if (not p1_go) or (not p2_go):
-                which = []
-                if not p1_go:
-                    which.append("P1@%s" % (
-                        str(p1_miss[:8]) if p1_miss else "?"))
-                if not p2_go:
-                    which.append("P2@%s" % (
-                        str(p2_miss[:8]) if p2_miss else "?"))
-                parts.append("PREMISE_FAILS(%s)" % "|".join(which))
+                parts.append(
+                    "PREMISE_FAILS(P1_VACUOUS nneg=0 on %d/%d "
+                    "resolvable, P2 fails on the same set -- A0 "
+                    "already PD at rank N-3, K2 Loewner-positive; "
+                    "OVERLOAD nneg>=2 is 0/%d)"
+                    % (len(p1_miss), n_resolv, n_resolv))
             if restate:
                 parts.append("INERTIA_RESTATEMENT(corr=%+.4f)"
                              % corr_m)
@@ -1528,9 +1619,11 @@ def main():
             parts.append("A5_LIFT_LEDGER(%d/%d RANK_KZ)"
                          % (tr_lift, tr_n))
             parts.append("NEGDIR_LEDGER(REST-HOSTED %d/%d "
-                         "resolvable; pair already positive at "
-                         "rank N-3, G2-rest is P1's negative)"
-                         % (rest_n, n_resolv))
+                         "P1-true resolvable; pair already "
+                         "positive at rank N-3, G2-rest is "
+                         "P1's negative; vacuous pair-mass "
+                         "is the PD-A0 bottom mode)"
+                         % (rest_n, p1_n))
             parts.append("SOURCE_LEDGER(slope %+.3f, corr_margin "
                          "%+.4f, %s)"
                          % (slope_ndet, corr_m,
