@@ -9,7 +9,10 @@
 > **eight**); **r373** proves that bridge and the Haynsworth two-rank /
 > mixed inertia theorems, census **seven**; **r376** proves the pole
 > stabilization and demotes the source-exact completion to a named
-> Prop, census **five**. The graph is reduced to the
+> Prop, census **five**; **r380** kernel-anchors the five DCCXXXVII
+> pivot-coordinate lemmas (`RH/PivotCoordinate.lean`) with **zero new
+> `sorry`** (proved faces + named Props for Borodin/DPP remainder).
+> The graph is reduced to the
 > **two true arithmetic gaps**:
 > `lstar_canonical` (lemma L*, the base/wall hole)
 > and `terminal_q_canonical` (the terminal cross-ratio, the
@@ -30,7 +33,7 @@
 > (`RH/Haynsworth.lean`, sorry-free); the former master-theorem `sorry`, the wave-5 fog-free
 > form `free_window_positivity` and the pair closure
 > `pair_closes_main` are PROVED as corollaries. Historical narrative
-> (r305 four / r310 five / r326 eight / C1 seven / r376 five) in the blocks below.
+> (r305 four / r310 five / r326 eight / C1 seven / r376 five / r380 five) in the blocks below.
 >
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
@@ -119,7 +122,7 @@
 > now **sorry-free**. (4) **the axiom audit** — `RH/Audit.lean` runs
 > `#print axioms` on the whole chain at every build; results below.
 >
-> **Sorry typing table (C1 census 7, r362 DualResolvent → 8, r373 → 7, r376 → 5):**
+> **Sorry typing table (C1 census 7, r362 DualResolvent → 8, r373 → 7, r376 → 5, r380 unchanged at 5):**
 >
 > | `sorry` | File | Type |
 > |---|---|---|
@@ -130,6 +133,8 @@
 > | `arch_elementwise_stabilization` | `RH/Elementwise.lean` | classical (S2), r326; r373: kernel `weilArchKernel` is transcribed (`Complex.digamma`); remaining hole is tent-read = pairing. r376 mathlib census (v4.29.1): not a finite-sum identity; Gauss integral / `Real.digamma` / ψ-monotonicity / Mellin inversion identifying `arch_A` with `weilArchKernel` are absent (explicit TODO on mathlib `Digamma.lean`). Titchmarsh Ch. X, Weil 1952 |
 >
 > Retired as sorries by r376: `pole_elementwise_stabilization` → **PROVED** (native-mesh second-difference of `polePotential`, comb-parallel; `#print axioms` has no `sorryAx`; remaining named identity `PoleDyadicIndependence`, not a hole); `specFamily_sourceExact_completion` → named Prop `SourceExactOfFamilyCompletion` (C1 `PairMarginLaw` convention: the opaque `SourceExact` filling is unprovable by design; transcribable half is the already-proved `sourceExact_buildPrimeWindow`; residual opacity is C1's `canonicalCompletion`).
+>
+> r380 named Props (not sorrys, census unchanged): `ComplementaryDualHankelInertia`, `DPPIdentity`, `SignedBorodinComplement`, `K2EqHankelRatio`, `P1EqCapInertia`, `P2EqPostcapAlternation` (`RH/PivotCoordinate.lean`; Borodin OP / discrete OPE remainder, same class as `CauchyInterlace`).
 >
 > Retired as sorries by C1: `lstar_subordination` → `lstar_canonical`
 > (retype), `terminal_positive_main` → `terminal_q_canonical` (retype,
@@ -171,6 +176,12 @@
 > 'RH.polePotential_eq_cosh' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.weilArchKernel_even' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.mainWindow_iff_builtFromPrimeSource' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+> 'RH.rankOne_inertia_antitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.adaptive_band_from_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.sigNeg_full_hankel_eq_sigNeg_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.postcap_pivot_ratio_eq_h_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.indNeg_hankel_eq_neg_pivot_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.p1_p2_iff_cap_posDef' depends on axioms: [propext, Classical.choice, Quot.sound]
 > ```
 >
 > Reading (the `sorryAx` granularity is resolved by the proof terms —
@@ -182,7 +193,8 @@
 > r362 DualResolvent finite algebra (A2/A3/A4/A5/A7-min) is sorry-free;
 > **r373: the window↔matrix bridge has no `sorryAx`**, Haynsworth has
 > no `sorryAx`, the transcribed pole/arch closed forms have no
-> `sorryAx`.  **r376: pole stabilization has no `sorryAx`.**  Direct R† path: the two canonical holes (not consumed
+> `sorryAx`.  **r376: pole stabilization has no `sorryAx`.**  **r380: the
+> proved pivot-coordinate faces have no `sorryAx`.**  Direct R† path: the two canonical holes (not consumed)
 > by DualResolvent itself), arch (extraction only), named Prop
 > `BorderedCompressionBridge`, density montage (unformalized).
 > The reviewer target "the final theorem consumes only the two
@@ -246,6 +258,9 @@ lake build           # => "Build completed successfully"
   r373** (bridge PROVED; Haynsworth PROVED; arch/pole kernels named),
   **5 since r376** (pole stabilization PROVED; source-exact completion
   demoted to `SourceExactOfFamilyCompletion`; arch remains classical).
+  **r380 census unchanged at 5** (`RH/PivotCoordinate.lean` is
+  sorry-free: proved rank-1 inertia / adaptive band / Jacobi synthesis
+  plus named Props for the Borodin/DPP remainder).
 
 ## Layering (r267 recommendation: order by provability)
 
@@ -311,6 +326,28 @@ on any window.  NO RH CLAIM.
 | `haynsworth_mixed` | **proved** | r369 J-form: `In [[A,U],[Uᵀ,−J⁻¹]] = In(A)+In(−Φ) = In(−J⁻¹)+In(A+UJUᵀ)` for invertible Hermitian `J` |
 
 Axiom census (`RH/Audit.lean` section (f)): `[propext, Classical.choice, Quot.sound]` only.
+
+### `RH/PivotCoordinate.lean` — THE R380 PIVOT-COORDINATE LEMMAS (DCCXXXVII; zero `sorry`)
+
+Finite real algebra on the existing `SignedAtoms` / `VonMangoldtWindow`
+Hankel objects (no parallel types).  Does **not** assert Haynsworth
+premises (P1)/(P2) on any window.  Census unchanged at 5.  NO RH CLAIM.
+
+| Item | Exit | Content |
+|---|---|---|
+| `rankOne_inertia_antitone` | **proved** | `ind₋(A+vvᵀ) ≤ ind₋(A)` and `ind₋(A) ≤ ind₋(A+vvᵀ)+1` (`sigNeg` subspace argument; mathlib has no Weyl/Courant–Fischer; `CauchyInterlace` is not consumed) |
+| `adaptive_band_from_entry` | **proved** | entry `ind₋(A_{n₀}) ≤ 1` along `A_{n+1}=A_n+v_n v_nᵀ` implies the bound for all later rungs |
+| `sigNeg_full_hankel_eq_sigNeg_weights`, `hankel_eq_vand_rect` | **proved** | Vandermonde Gram and full-size `In H_S = In diag(w)` (nodes injective) |
+| `ComplementaryDualHankelInertia` | named Prop | lemma-3 remainder: trailing Schur of `H_S` as dual Hankel `H_{S-k}(σa)` (discrete CD / Borodin OP; mathlib v4.29.1 has Vandermonde + Haynsworth, not the dual OP basis) |
+| `signed_dual_hankel_complement_inertia` | hypothesis form | applies the named Prop |
+| `postcap_pivot_ratio_eq_h_form` | **proved** | consecutive Hankel dets telescope to `1/(h_N h_{N+1} a.h_{N-3} a.h_{N-2})` |
+| `DPPIdentity`, `SignedBorodinComplement`, `K2EqHankelRatio` | named Props | lemma-4 remainder: `det(I−2R_r)=H_r(σa)/H_r(a)`, signed Borodin complement, and `det K₂` as the Hankel ratio (OP construction of R is the DualResolvent-documented gap) |
+| `detK2_eq_postcap_pivot_ratio` | hypothesis form | applies `K2EqHankelRatio` |
+| `indNeg_hankel_eq_neg_pivot_count` | **proved** | Jacobi: `ind₋ H_p = #{h_i < 0 : i < p}` (existing `exists_congruent_diagonal`) |
+| `p1_p2_iff_cap_posDef` | **proved** (Hankel / Jacobi face) | `{ind₋ H_{N+2} ≤ 1 ∧ h_N h_{N+1} < 0} ↔ {positive prefix ∧ one post-cap defect} ↔ {H_N ≻ 0 ∧ post-cap}` |
+| `P1EqCapInertia`, `P2EqPostcapAlternation` | named Props | identification of that dictionary with Haynsworth (P1)/(P2) |
+
+Axiom census (`RH/Audit.lean` section (i)): `[propext, Classical.choice, Quot.sound]` only — no `sorryAx`.
 
 ### `RH/Window.lean` — the retyped window structure + the finite-algebra machinery (since C1: zero `sorry` — the L* hole moved to `RH/Canonical.lean` as `lstar_canonical`)
 
@@ -641,8 +678,9 @@ way, sp(N, eps) = +0.67, r272).
 
 Runs `#print axioms` on the sorry-free layer (expected: the three
 standard axioms, NO `sorryAx`), the two canonical holes, the master
-chain and the Level-C extraction; the C1 record is quoted verbatim in
-the claim-boundary block above and in the file itself.
+chain, the Level-C extraction, and the r380 pivot-coordinate faces
+(section (i)); the C1 record is quoted verbatim in the claim-boundary
+block above and in the file itself.
 
 ## TODO (second stage)
 
@@ -711,3 +749,11 @@ the claim-boundary block above and in the file itself.
   `arch_A` — classical analysis) and the corpus fold-map transcription
   (fold fidelity of the certificates).
 - Keep SPEC SHAs in headers in sync with `rh/INVENTORY.json` on every wave.
+- r380 OPEN (named, `RH/PivotCoordinate.lean`, not census holes):
+  `ComplementaryDualHankelInertia`, `DPPIdentity`,
+  `SignedBorodinComplement`, `K2EqHankelRatio`, `P1EqCapInertia`,
+  `P2EqPostcapAlternation` — discrete CD / Borodin OP construction of
+  the dual ensemble and of R (same class as DualResolvent's
+  `CauchyInterlace`; mathlib v4.29.1 has no CD kernel / discrete OPE).
+  The rank-1 inertia, adaptive band, Vandermonde Gram, h-ratio
+  telescope, and Jacobi synthesis are PROVED.

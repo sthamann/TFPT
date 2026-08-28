@@ -31,6 +31,7 @@ import RH.Canonical
 import RH.DualResolvent
 import RH.Haynsworth
 import RH.Elementwise
+import RH.PivotCoordinate
 
 namespace RH
 
@@ -137,5 +138,21 @@ U1–U3 guards still refer to it).  Expected: `[propext, sorryAx,
 Classical.choice, Quot.sound]`. -/
 
 #print axioms mainWindow_iff_builtFromPrimeSource
+
+/-! ## (i) The r380 pivot-coordinate layer (DCCXXXVII finite algebra)
+Expected AND MEASURED: `[propext, Classical.choice, Quot.sound]` --
+NO `sorryAx` on the proved faces.  Named Props
+(`ComplementaryDualHankelInertia`, `DPPIdentity`,
+`SignedBorodinComplement`, `K2EqHankelRatio`, `P1EqCapInertia`,
+`P2EqPostcapAlternation`) are hypotheses, not holes.  Census
+unchanged at 5.  Does not assert (P1)/(P2) on any window.
+NO RH CLAIM. -/
+
+#print axioms rankOne_inertia_antitone
+#print axioms adaptive_band_from_entry
+#print axioms sigNeg_full_hankel_eq_sigNeg_weights
+#print axioms postcap_pivot_ratio_eq_h_form
+#print axioms indNeg_hankel_eq_neg_pivot_count
+#print axioms p1_p2_iff_cap_posDef
 
 end RH

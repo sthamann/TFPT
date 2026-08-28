@@ -13,5 +13,6 @@ import RH.Counterexamples
 import RH.Elementwise
 import RH.Augmented
 import RH.DualResolvent
+import RH.PivotCoordinate
 import RH.Canonical
 import RH.Audit
