@@ -1774,6 +1774,81 @@ ENTRIES = [
      [],
      "compiled PDF of v2_regularity.tex (recompiled artefact, "
      "registered unpinned)", False),
+    ("rh/problem/v2_lemma_v3.tex", "problem_statement",
+     "r374 companion",
+     [],
+     "lemma-first attack on the r365 remainder V2 (round 374): "
+     "neither proved nor refuted in the construction.  Proved: "
+     "exact two-point Wronskian step formula for the scaled pair "
+     "(v_{N-2}, v_{N-3}) (Lagrange identity over Q; f64 residual "
+     "1.0e-15 on the pins); at the +x 20pct mask sign(x) is "
+     "constant so the colouring is sign(w) sign(v2); finite "
+     "contrast dichotomy on rigid Pruefer steps (constant steps "
+     "never violate; a slow-then-fast block s<=0.9, f>=2.2 does).  "
+     "Refuted as abstract Jacobi-positivity: an 8x scale of the "
+     "last 12 gamma on chi3 w9 is a v2-violator (scale 6 is not).  "
+     "Weight-cluster (gap-then-spike up to 64x) never violates and "
+     "breaks L* positivity.  Reduced to the strictly smaller "
+     "finite profile lemma V3': the last 14 Pruefer steps at the "
+     "mask lie in A_15 (V2-regular for every incoming remainder "
+     "eta).  Path A on the six pins (0 eta-violators; every "
+     "(1,1,1) is mixed prev4 of chi3-kz16 type).  Chain "
+     "T2' <= 3/8 <= MED-CAP <= X_n <= V2 <= V3'.  Finite "
+     "identities plus a named reduction; NO RH claim", True),
+    ("rh/problem/verify_v2_lemma.py", "problem_check",
+     "r374 companion",
+     [],
+     "machine check of every numbered lemma in v2_lemma_v3.tex: "
+     "Lagrange identity over Q, combinatorial violator vs spike, "
+     "constant-step 0 violators, slow-fast contrast dichotomy "
+     "(347/1001 vs 0), Archimedes r=3 dwell bound, Chebyshev "
+     "x-mask 0 (1,1,1), Chebyshev theta-compress 19 (1,1,1) and "
+     "0 V2-viol; construction pins (Wronskian residual 1.0e-15, "
+     "Path A 0 eta-violators on six pins, kz16 triple regular "
+     "and every eta-111 regular, source gamma bounds, 8x last-12 "
+     "gamma violator / scale 6 not, +x mask x>0, r372 dictionary, "
+     "colouring V2 and kz53 w-driven regular).  15/15 gates, "
+     "final line V2 LEMMA V3 VERIFIED", True),
+    ("rh/problem/v2_lemma_v3.pdf", "problem_statement",
+     "r374 companion",
+     [],
+     "compiled PDF of v2_lemma_v3.tex (recompiled artefact, "
+     "registered unpinned)", False),
+    ("rh/problem/p2_lemma_proof.tex", "problem_statement",
+     "r375 companion",
+     [],
+     "proof attempt for LEMMA.P2.01 (round 375, lemma-first): "
+     "on nneg-1, K2 = (I+R+) - ww^T/lam_minus with w = U^T psi_minus, "
+     "det K2 = det(I+R+) (1 - gamma/lam_minus) SATZ (Fractions 4-node "
+     "toy det K2 = -7 exact; six scalars alpha,beta,lam,ruu,rvv,ruv); "
+     "sign of det K2 is carried by the dressed overlap gamma - lam; "
+     "det(I+R+) = 1+tr R++det R+ >= 1 is a sum of positive Gram terms; "
+     "P1 does not imply P2 (tiny-overlap adversary det K2 > 0); the "
+     "delta-term of N is load-bearing (kz46 Cauchy-sufficient fails, "
+     "P2 holds); P2 is NOT the r359 bind ratio (fold-pair Schur already "
+     "PD at rank N-3 on 45/45, rest-hosted 42/45).  REDUCED to the "
+     "dressed-overlap inequality gamma > (1+eps) lam_minus, which "
+     "implies -det K2 >= eps via det(I+R+)>=1 and does not consume "
+     "lam_min(S_N).  Named remainder: source expansion of U^T psi_minus "
+     "via dual CD weights and the Borodin dual mode of R_{N-3}-I/2.  "
+     "Finite identities plus a named remainder; NO L* claim, NO RH claim",
+     True),
+    ("rh/problem/verify_p2_steps.py", "problem_check",
+     "r375 companion",
+     [],
+     "machine check of every numbered lemma in p2_lemma_proof.tex: "
+     "standalone Fractions factorization (identity 12, six-scalar Q, "
+     "det K2 = det(I+R+)(1-gamma/lam), sign carrier, det(I+R+)>=1, "
+     "tiny-overlap adversary) plus construction pins (w9 rest-hosted "
+     "factorization; kz18 well-conditioned min excess 0.2746; kz46 "
+     "delta-term necessary; chi3-w9 vacuous PD / chi4-w9 nneg-1; "
+     "scramble named P1 nneg=21; RANK_KZ all gamma>lam).  12/12 gates, "
+     "final line P2 STEPS VERIFIED", True),
+    ("rh/problem/p2_lemma_proof.pdf", "problem_statement",
+     "r375 companion",
+     [],
+     "compiled PDF of p2_lemma_proof.tex (recompiled artefact, "
+     "registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",

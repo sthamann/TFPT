@@ -1606,6 +1606,36 @@
       "bytes": 236460
     },
     {
+      "path": "rh/problem/p2_lemma_proof.tex",
+      "role": "problem_statement",
+      "round": "r375 companion",
+      "ledger_ids": [],
+      "status": "proof attempt for LEMMA.P2.01 (round 375, lemma-first): on nneg-1, K2 = (I+R+) - ww^T/lam_minus with w = U^T psi_minus, det K2 = det(I+R+) (1 - gamma/lam_minus) SATZ (Fractions 4-node toy det K2 = -7 exact; six scalars alpha,beta,lam,ruu,rvv,ruv); sign of det K2 is carried by the dressed overlap gamma - lam; det(I+R+) = 1+tr R++det R+ >= 1 is a sum of positive Gram terms; P1 does not imply P2 (tiny-overlap adversary det K2 > 0); the delta-term of N is load-bearing (kz46 Cauchy-sufficient fails, P2 holds); P2 is NOT the r359 bind ratio (fold-pair Schur already PD at rank N-3 on 45/45, rest-hosted 42/45).  REDUCED to the dressed-overlap inequality gamma > (1+eps) lam_minus, which implies -det K2 >= eps via det(I+R+)>=1 and does not consume lam_min(S_N).  Named remainder: source expansion of U^T psi_minus via dual CD weights and the Borodin dual mode of R_{N-3}-I/2.  Finite identities plus a named remainder; NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "fff046653253ec551f3aae4fe1fb332c4aa2e189107e26400c9524c21bb92aaa",
+      "bytes": 14147
+    },
+    {
+      "path": "rh/problem/verify_p2_steps.py",
+      "role": "problem_check",
+      "round": "r375 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in p2_lemma_proof.tex: standalone Fractions factorization (identity 12, six-scalar Q, det K2 = det(I+R+)(1-gamma/lam), sign carrier, det(I+R+)>=1, tiny-overlap adversary) plus construction pins (w9 rest-hosted factorization; kz18 well-conditioned min excess 0.2746; kz46 delta-term necessary; chi3-w9 vacuous PD / chi4-w9 nneg-1; scramble named P1 nneg=21; RANK_KZ all gamma>lam).  12/12 gates, final line P2 STEPS VERIFIED",
+      "pin": true,
+      "sha256": "49e48b0dc20d52143ebcaa4d5ab25e5e5d4ac9af4a5abe761cf45e7e82cb92ce",
+      "bytes": 11811
+    },
+    {
+      "path": "rh/problem/p2_lemma_proof.pdf",
+      "role": "problem_statement",
+      "round": "r375 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of p2_lemma_proof.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "c7a536c52bba0146ca1ffad018e82f57d0d68e1da1a2b570085393d918bd0ebe",
+      "bytes": 230383
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -1780,8 +1810,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "37fd535e6142f0dc9f3787e32a42000e99ae16e4b5d0e2cb93fe77cfe682438e",
-      "bytes": 5299055
+      "sha256": "bf00018c4a46ee1ae427bb97e1b8397c15bebe7a836a477aa027efaeb02594f0",
+      "bytes": 5308460
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",

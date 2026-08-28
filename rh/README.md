@@ -4750,6 +4750,68 @@ Coexistence: r369 (mixed Haynsworth), r370 (matrix Weyl),
 r371 (compound-CD) and r373 (Lean) are parallel lanes;
 this round is additive.
 
+**The $V_2$-lemma, reduced (r374, LEMMA.V2.01, lemma-first).**
+No sealed discovery probe: `/tmp` proof verification plus
+`rh/problem/v2_lemma_v3.tex` (+ PDF + `verify_v2_lemma.py`,
+15/15, `V2 LEMMA V3 VERIFIED`).  **Ausgang REDUZIERT.**  The
+r372 Prüfer-to-run dictionary is used as a theorem.  SATZ: the
+discrete phase step of the scaled pair $(v_{N-2},v_{N-3})$ is
+the two-point Wronskian (Lagrange identity over $\mathbb{Q}$;
+f64 residual $1.0\cdot 10^{-15}$ on the pins); at the $+x$
+$20\%$ mask $\mathrm{sign}(x)$ is constant, so the colouring is
+$\mathrm{sign}(w)\,\mathrm{sign}(v_2)$.  Finite contrast
+dichotomy: constant rigid steps never realise a $V_2$-violator;
+a slow-then-fast block $s\le 0.9$, $f\ge 2.2$ does ($347/1001$).
+$V_2$ is not a theorem of abstract Jacobi-positive chains (an
+$8\times$ scale of the last twelve $\gamma$ on $\chi_3$ $w=9$
+is a $v_2$-violator; scale $6$ is not).  A gap-then-spike
+weight adversary on FRAME-A $w=9$, even at $64\times$, never
+produces the pattern and always breaks Jacobi positivity.
+Reduced to the strictly smaller finite profile lemma $V_3'$:
+the last fourteen Prüfer steps at the mask lie in
+$\mathcal{A}_{15}$ ($V_2$-regular for every incoming remainder
+$\eta\in[0,\pi)$).  Path A on the six pins ($0$ $\eta$-violators;
+every $(1,1,1)$ is mixed $\mathrm{prev4}$ of the $\chi_3$
+index-$16$ type).  Chain
+$T_2'\Leftarrow 3/8\Leftarrow\mathrm{MED\text{-}CAP}\Leftarrow X_n\Leftarrow V_2\Leftarrow V_3'$.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence: r375 and
+r376 are parallel lemma-first lanes; this round is additive.
+
+**The P2 lemma — source expansion and factorization (r375,
+LEMMA.P2.01, lemma-first).**  No sealed discovery probe:
+`/tmp` proof verification plus `rh/problem/p2_lemma_proof.tex`
+(+ PDF + `verify_p2_steps.py`, 12/12, `P2 STEPS VERIFIED`).
+**Ausgang REDUZIERT.**  SATZ (Fractions 4-node toy, det K₂ = −7
+exact): on nneg-1, $K_2=(I+R_+)-ww^T/\lambda_-$ with
+$w=U^T\psi_-$ and
+$\det K_2=\det(I+R_+)(1-\gamma/\lambda_-)$; equivalently
+$-\det K_2=\det(I+R_+)(\gamma/\lambda_--1)=(N-\lambda_-\det(I+R_+))/\lambda_-$
+with $N=\|w\|^2+\langle\delta,A_+^{-1}\delta\rangle$ a sum of
+positive structures.  The sign of det K₂ is carried by the
+single scalar $\gamma-\lambda_-$.  $\det(I+R_+)\ge 1$ is SATZ.
+P1 does not imply P2 (tiny-overlap adversary).  The $\delta$-term
+is load-bearing (kz46: Cauchy-sufficient fails, P2 holds,
+$\delta$-share $0.723$).  P2 is **not** the r359 bind ratio
+(fold-pair Schur already PD at rank $N-3$ on $45/45$, rest-hosted
+$42/45$; bind consumes the terminal margin).  A raw overlap
+floor $\|w\|^2\ge\kappa_0$ is false (pair-span min $6\cdot10^{-4}$
+on the branch, matching the r371 $\wedge^2$-share).  Live on the
+45 resolvable nneg-1 windows: $\gamma>\lambda_-$ $45/45$,
+excess $\gamma/\lambda_--1\in[0.275,3.295]$ (min at kz18, well-
+conditioned), $\det(I+R_+)\ge 3.307$, $-\det K_2\in[1.157,1126.389]$;
+$\chi_3$ $21/21$ and $\chi_4$ $19/19$ sign-stable on their
+nneg-1 rows; scramble named-breaks at P1 (nneg $=21$).  Shadow
+corr(excess, $\log|\mathrm{eps}|$)$=+0.046$ (not a margin
+rewrite).  Reduced target (P2⁻): $\gamma>(1+\varepsilon)\lambda_-$,
+which implies $-\det K_2\ge\varepsilon$ and does not consume
+$\lambda_{\min}(S_N)$.  Named remainder: source expansion of
+$U^T\psi_-$ via dual CD weights and the Borodin dual mode of
+$R_{N-3}-\tfrac12 I$.  Experiments-side, NO ledger row, NO L\*
+claim, NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
+Coexistence: r374 and r376 are parallel lemma-first lanes;
+this round is additive.
+
 ## Folder guide
 
 ```
@@ -4854,14 +4916,24 @@ rh/
 │   │                     edge (1,2); remainder V2 named).  No RH claim
 │   ├── v2_regularity.tex(+pdf) — r365: V2 anatomy + hydra freeze
 │   │                     (REGRESS_DETECTED; T2' modulo V2).  No RH claim
+│   ├── v2_lemma_v3.tex(+pdf) — r374: V2 reduced to V3'
+│   │                     (Wronskian step + contrast; T2' modulo
+│   │                     V3').  No RH claim
+│   ├── p2_lemma_proof.tex(+pdf) — r375: P2 source expansion
+│   │                     (factorization SATZ; reduced to the
+│   │                     dressed overlap γ > (1+ε)λ₋).  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
 │   │                     lemma in medcap_lemma.tex (11/11)
 │   ├── verify_xn_steps.py — machine check of xn_invariant.tex
 │   │                     (12/12, XN STEPS VERIFIED)
-│   └── verify_v2_steps.py — machine check of v2_regularity.tex
-│                         (12/12, V2 STEPS VERIFIED)
+│   ├── verify_v2_steps.py — machine check of v2_regularity.tex
+│   │                     (12/12, V2 STEPS VERIFIED)
+│   ├── verify_v2_lemma.py — machine check of v2_lemma_v3.tex
+│   │                     (15/15, V2 LEMMA V3 VERIFIED)
+│   └── verify_p2_steps.py — machine check of p2_lemma_proof.tex
+│                         (12/12, P2 STEPS VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5003,6 +5075,43 @@ pointwise floor $g_i\ge 3/8$ is a theorem of the construction
 **modulo** $V_2$.  T1 / $C_K$ unchanged.  Companion script
 `verify_v2_steps.py`, 12/12 gates, `V2 STEPS VERIFIED`.  Finite
 identities plus a named freeze.  NO RH CLAIM.
+
+Round 374 (`v2_lemma_v3.pdf`) reopens that freeze under the
+lemma-first charter (exactly one named lemma; exit proved /
+refuted / reduced).  **REDUZIERT** to $V_3'$: the last fourteen
+Prüfer steps of $v_2$ at the $+x$ mask lie in the finite region
+$\mathcal{A}_{15}$ of speed profiles that are $V_2$-regular for
+every incoming remainder.  Proved: Wronskian step formula
+(Lagrange over $\mathbb{Q}$; residual $1.0\cdot 10^{-15}$);
+$x$ constant at the $+x$ mask; contrast dichotomy (constant
+steps never violate; slow-then-fast $s\le 0.9$, $f\ge 2.2$
+does).  An $8\times$ last-$12$ $\gamma$-scale on $\chi_3$ $w=9$
+is a $v_2$-violator, so $V_2$ is not abstract Jacobi-positivity.
+Path A on the six pins ($0$ remainder-violators).  Companion
+script `verify_v2_lemma.py`, 15/15 gates,
+`V2 LEMMA V3 VERIFIED`.  The chain is now
+$T_2'\Leftarrow\cdots\Leftarrow V_2\Leftarrow V_3'$.  Finite
+identities plus a named reduction.  NO RH CLAIM.
+
+A sixth standalone note, `rh/problem/p2_lemma_proof.pdf` (August 28,
+2026), is the lemma-first attack on (P2) (round 375, no sealed
+discovery probe).  On a real Hermitian nneg-1 matrix the Schur
+block $K_2=I+U^T A_0^{-1}U$ factors as
+$K_2=(I+R_+)-ww^T/\lambda_-$ with $w=U^T\psi_-$ and
+$\det K_2=\det(I+R_+)(1-\gamma/\lambda_-)$ (Fractions toy
+$\det K_2=-7$ exact).  The prefactor $\det(I+R_+)\ge 1$ is a sum
+of positive Gram terms; the sign is carried by the dressed
+overlap $\gamma-\lambda_-$.  P1 does not imply P2 (tiny-overlap
+adversary).  The $\delta$-energy of the CD-wedge in the rest form
+is load-bearing (kz46).  P2 is not the r359 bind ratio (fold-pair
+Schur already PD at rank $N-3$, $45/45$).  **REDUZIERT** to the
+dressed-overlap inequality $\gamma>(1+\varepsilon)\lambda_-$,
+which implies $-\det K_2\ge\varepsilon$ and does not consume
+$\lambda_{\min}(S_N)$.  Named remainder: source expansion of
+$U^T\psi_-$ via dual CD weights and the Borodin dual mode of
+$R_{N-3}-\tfrac12 I$.  Companion script `verify_p2_steps.py`,
+12/12 gates, `P2 STEPS VERIFIED`.  Finite identities plus a named
+remainder.  NO L\* claim.  NO RH CLAIM.
 
 ## The RH suite
 
@@ -5325,6 +5434,23 @@ is additive on the Terminal/source-Jacobi lane after r365/r368
 (`run_rh.py --fast`) after appending the sealed probe to the
 inventory. r369/r370/r371/r373 are parallel lanes and are not
 dropped.
+**r374 coexistence.** Round 374 (`v2_lemma_v3.tex`) is additive
+on the MED-CAP/$V_2$ lane after r364/r365/r372 (lemma-first
+$V_2$: Wronskian step, contrast, reduction to $V_3'$).  It does
+not touch `experiments/next.txt`, does not seal a discovery
+probe, and does not touch `rh/lean/`.  Suite surface of this
+round: integrity + probes (`run_rh.py --fast`) after appending
+the problem-document rows to the inventory.  r375/r376 are
+parallel lemma-first lanes and are not dropped.
+**r375 coexistence.** Round 375 (`p2_lemma_proof.tex`) is additive
+on the dual two-rank lane after r367/r371 (lemma-first P2:
+source expansion of $-\det K_2$).  It does not touch
+`experiments/next.txt`, does not seal a discovery probe, and
+does not touch `rh/lean/` (a parallel Elementwise worker is not
+this round's failure).  Suite surface of this round: integrity +
+probes (`run_rh.py --fast --skip-lean`) after appending the
+problem-document rows to the inventory.  r374/r376 are parallel
+lemma-first lanes and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in
