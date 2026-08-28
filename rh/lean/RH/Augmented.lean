@@ -41,10 +41,11 @@ byte-stable, NOT touched) is now a corollary of the two equivalences --
 `reconstruction_via_augmented` below re-derives its exact statement as
 `iff_masterCap.mp ∘ iff_lstar_and_terminal.mpr`, with no reference to
 the original.  L† is thereby the COMMON TARGET FORM of the two true
-holes, not a third hole: `augmentedSubordination_main` states
-`AugmentedSubordination w` for MAIN windows as a PROVED equivalence to
-the two existing sorrys (`lstar_subordination` + `terminal_positive_
-main`), never as a new `sorry`.
+holes, not a third hole: `augmentedSubordination_main` (since C1 in
+RH/Canonical.lean, on the canonical final domain) states
+`AugmentedSubordination w` as a PROVED consequence of the two existing
+holes (`lstar_canonical` + `terminal_canonical`), never as a new
+`sorry`.
 
 GEOMETRIC READING (documentation only, not formalized): L† says
 `‖T_w‖ < 1` for the observation operator
@@ -366,29 +367,17 @@ theorem reconstruction_via_augmented (w : VonMangoldtWindow)
     ((augmentedSubordination_iff_lstar_and_terminal w).mpr
       ⟨hL, hTerminal⟩)
 
-/-! ## L† on MAIN windows: the combined target form, NOT a new hole -/
+/-! ## L† on the final domain: the combined target form -- C1 MOVE
 
-/-- **THE COMBINED TARGET FORM** (r332): on a MAIN window the
-augmented subordination holds -- PROVED from the two existing true
-holes (`lstar_subordination`, RH/Window.lean + `terminal_positive_
-main`, RH/Closure.lean) through the equivalence above.  This is
-deliberately NOT a new `sorry`: L† is the common target form of the
-two holes (census unchanged at 8), and any future closure of the two
-holes closes L† by this theorem -- conversely
-`augmentedSubordination_implies_lstar` / `_implies_terminal` show a
-direct proof of L† would close BOTH.  NO RH CLAIM. -/
-theorem augmentedSubordination_main (w : VonMangoldtWindow)
-    (hw : MainWindow w) : AugmentedSubordination w :=
-  (augmentedSubordination_iff_lstar_and_terminal w).mpr
-    ⟨fun p hp hdeg => lstar_subordination w hw p hp hdeg,
-      terminal_positive_main w hw⟩
-
-/-- the master theorem re-derived through L† on MAIN windows (the
-augmented route to `augmented_prefix_positive`, stated for the
-record). -/
-theorem augmented_prefix_positive_via_ldagger (w : VonMangoldtWindow)
-    (hw : MainWindow w) : ∀ n ≤ w.cap, (w.A n).PosDef :=
-  (augmentedSubordination_iff_masterCap w).mp
-    (augmentedSubordination_main w hw)
+`augmentedSubordination_main` (the combined target form -- L† holds,
+PROVED from the two true holes through the equivalence above,
+deliberately NOT a new `sorry`) and `augmented_prefix_positive_via_
+ldagger` (the master theorem through the L† route) moved to
+RH/Canonical.lean with the C1 domain retype: they are now conditioned
+on the constructive `CanonicalWindow` predicate and consume the
+canonical holes `lstar_canonical` + `terminal_canonical` -- statements
+verbatim modulo the domain, proofs verbatim through the two
+equivalences of this file.  This file stays sorry-free and
+`MainWindow`-free. -/
 
 end RH

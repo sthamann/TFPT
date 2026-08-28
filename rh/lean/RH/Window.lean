@@ -195,7 +195,18 @@ level-2 pairing beyond 5/7 exception rungs (r270-r272).
 
 Because `MainWindow` is opaque, no theorem conditioned on it can be
 refuted by a toy model (truth-capability restored), and none can be
-proved without supplying the arithmetic -- exactly the honest state. -/
+proved without supplying the arithmetic -- exactly the honest state.
+
+C1 STATUS NOTE (the reviewer final-domain contract): since block C1
+the LOAD-BEARING chain (the two true holes, the master theorem and
+all its corollaries) no longer runs over this predicate -- it runs
+over the constructive `CanonicalWindow` predicate of
+RH/Canonical.lean (the completed canonical prime-window family; only
+the kernel-channel VALUES stay opaque there, as the named constant
+`canonicalCompletion`).  `MainWindow` remains as the r273 historical
+interface: it is consumed only by the opacity bridge
+`mainWindow_iff_builtFromPrimeSource` (RH/Source.lean) and documented
+by the permanent guards. -/
 opaque MainWindow : VonMangoldtWindow → Prop
 
 /-! ## The master theorem (the new north star)
@@ -345,9 +356,9 @@ spent, and that statement is `free_window_positivity` below. -/
 /-! **THE FOG-FREE CENTRAL HOLE** (wave 5; the r279 b3 gap statement =
 the v962 T4 reinstform; ledger
 `PRIME.PORT.RHP.FULLSOURCE.QUASIDEFINITENESS.01` [O]): the statement
-`free_window_positivity` now lives BELOW the L* section (r305 move),
-because since wave 10 it is PROVED from `lstar_subordination` -- it is
-a corollary of L*, not an independent `sorry` anymore.  The v962
+`free_window_positivity` is PROVED as a corollary of L* since wave 10
+(r305) -- since C1 it lives in RH/Canonical.lean on the final domain
+(`CanonicalWindow`), proved from `lstar_canonical`.  The v962
 reduction chain (T1 counting + T2 budget + T4 equivalence) and the
 refutation set N1-N4 are unchanged. -/
 
@@ -400,9 +411,11 @@ The direction L* => free-window positivity is PROVED below
 subordination makes every Hankel block through the cap positive
 definite (the quadratic form of the signed defect measure evaluated at
 the coefficient polynomial), hence every Sylvester ratio `h_k` is
-positive -- pure finite algebra, no `sorry`.  The statement itself
-(`lstar_subordination`) is the open center in canonical form and
-carries the honest `sorry`.  NO RH CLAIM. -/
+positive -- pure finite algebra, no `sorry`.  The statement itself is
+the open center in canonical form and carries the honest `sorry` --
+since C1 as `lstar_canonical` in RH/Canonical.lean (the final-domain
+retype: quantified over the canonical construction, no longer over the
+opaque `MainWindow`).  NO RH CLAIM. -/
 
 namespace VonMangoldtWindow
 
@@ -519,36 +532,17 @@ end VonMangoldtWindow
 
 open VonMangoldtWindow
 
-/-- **THE CANONICAL FORM OF THE OPEN CENTER: lemma L*** (wave 6; the
-r283 reduction, v963; ledger `PRIME.LSTAR.SUBORDINATION.01` [O]).
-
-On a MAIN window the archimedean/smooth channel `nu` is strictly
-`mu`-subordinate on the free polynomial window: for every real
-polynomial `p != 0` with `deg p < cap`,
-`int p^2 dnu < int p^2 dmu` -- equivalently (v963 A2 chain, certified
-exact-rationally) `lambda_max(E_cap) < 1` for the nu-dressed
-mu-Christoffel-Darboux kernel.
-
-By `lstar_implies_free_window` below (PROVED, finite algebra) this
-statement implies the fog-free hole `free_window_positivity`; by the
-v963 frame congruence the two are equivalent for nondegenerate
-windows -- L* is the SAME hole in two-measure coordinates, and it is
-where the arithmetic must enter (per r282 no classical representation
-language carries it; per r283 the RHP language carries exactly this
-one invariant).  Measured support (wave-7 state, v964): 57/57 rungs
-hold (42 plus the 15 extension anchors, N_w up to 1218), the margin
-decay 1.68e-4 -> 1.806e-8 resolved HARMLESS (r286: flattening power
-law, O(1) offset survives, no counterexample); the diophantine route
-is excluded (r289 METRIC_ONLY: the rational twin keeps the full
-signature identical) -- the open front is the fraction-profile
-functional (r290 in flight, not consumed).  The standalone problem
-statement (no project vocabulary) is rh/problem/lstar_problem.tex.
-NO RH CLAIM. -/
-theorem lstar_subordination (w : VonMangoldtWindow)
-    (hw : MainWindow w) :
-    ∀ p : Polynomial ℝ, p ≠ 0 → p.natDegree < w.cap →
-      w.nuSq p < w.muSq p := by
-  sorry
+/-! **THE CANONICAL FORM OF THE OPEN CENTER: lemma L*** -- C1 MOVE
+(the reviewer final-domain contract): the open statement formerly
+carried here as `lstar_subordination : MainWindow w → ...` is RETYPED
+onto the canonical construction and now lives in RH/Canonical.lean as
+`lstar_canonical : CanonicalWindow w → LStar w` (same mathematical
+content -- the wave-6 / r283 / v963 subordination, ledger
+`PRIME.LSTAR.SUBORDINATION.01` [O], standalone statement
+rh/problem/lstar_problem.tex -- with the quantifier domain now the
+actual completed prime-window construction instead of the fully
+opaque `MainWindow` marker; retype justification at the statement).
+The finite-algebra machinery below is hypothesis-form and unchanged. -/
 
 /-- L* makes every Hankel block through the cap positive definite --
 hypothesis form, PROVED (finite algebra via the quadratic-form
@@ -594,27 +588,13 @@ theorem lstar_implies_free_window (w : VonMangoldtWindow)
     rw [VonMangoldtWindow.h, hdet0, div_one]
     exact this
 
-/-- the composed corollary on MAIN windows: modulo the single L*
-`sorry`, free-window positivity holds -- the wave-6 restatement of
-`free_window_positivity` through the canonical form. -/
-theorem lstar_free_window_main (w : VonMangoldtWindow)
-    (hw : MainWindow w) : ∀ n < w.cap, 0 < w.h n :=
-  lstar_implies_free_window w (lstar_subordination w hw)
-
-/-- **the fog-free central hole, now a corollary of L*** (wave 5
-statement, ledger `PRIME.PORT.RHP.FULLSOURCE.QUASIDEFINITENESS.01` [O];
-PROVED since wave 10 / r305): on a MAIN window the whole pivot chain
-through the half-filling cap is positive -- the signed prime moment
-form is quasi-definite up to the maximally free order (equivalently
-`minC >= N_w`).  The open content moved ENTIRELY into
-`lstar_subordination` (the same hole in two-measure coordinates, per
-the v963 frame congruence); this theorem is the wave-6 finite-algebra
-direction applied to it.  Measured support unchanged: 42/42 rungs at
-offsets +0..+5; the v962 refutation set N1-N4 closes the cheap exits.
-NO RH CLAIM. -/
-theorem free_window_positivity (w : VonMangoldtWindow)
-    (hw : MainWindow w) : ∀ n < w.cap, 0 < w.h n :=
-  lstar_free_window_main w hw
+/-! the composed corollaries on the final domain --
+`lstar_free_window_main` and `free_window_positivity` (the wave-5
+fog-free statement, ledger
+`PRIME.PORT.RHP.FULLSOURCE.QUASIDEFINITENESS.01` [O]) MOVED to
+RH/Canonical.lean with the C1 domain retype (`CanonicalWindow` in
+place of the opaque `MainWindow`); proofs verbatim through
+`lstar_implies_free_window` above. -/
 
 /-! ## Toy instance: an exact rational miniature window
 (S = 3 atoms, cap = 2) -- the definitions are TESTED against it below

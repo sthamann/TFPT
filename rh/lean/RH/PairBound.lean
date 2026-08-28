@@ -35,11 +35,14 @@ Proved below (no `sorry`):
                            worse than pair + majorized tail.
 
 The chain-specific hypothesis H5 (the certification margin
-|Z_local| + eps < sqrt(5/7)) stays a documented `sorry` at the bottom --
-it is the entry door of the cofinal step (r271 lemma list L1-L5),
-measured 42/42 rungs only as 5/7 on the exception branch (c2PAIR;
-b2LEVEL2 leaves kz39 at 0.002 dec and kz15 at 0.06 dec).  The `sorry` is
-NOT a to-do of a known proof.
+|Z_local| + eps < sqrt(5/7)) is since C1 a NAMED Prop
+(`PairMarginLaw`, bottom of this file -- no truth commitment): it is
+the entry door of the cofinal CERTIFICATE ROUTE (r271 lemma list
+L1-L5), measured on the exception branch only as 5/7 (c2PAIR; b2LEVEL2
+leaves kz39 at 0.002 dec and kz15 at 0.06 dec) -- asserting it as a
+`sorry` overclaimed, so C1 retired the duplicate: the terminal hole is
+`terminal_q_canonical` (RH/Canonical.lean) and the pair closure is a
+PROVED corollary there through the named r263 dictionary.
 r273 RETYPE: the former universal form `pair_margin_cofinal` (quantified
 over the bare `PairSplitFamily`) is REFUTABLE -- the machine-checked
 guard is `Counterexamples.pair_margin_not_universal` (model M = 1,
@@ -56,8 +59,9 @@ machine-refuted in `Counterexamples.old_pair_margin_forces_empty`.
 Since r320 the extraction is a DEFINITION (`signRuns`/`terminalDrive`/
 `bulkRuns`/`edgeLocal`, with the split a PROVED property,
 `canonical_split`) and the margin law is stated for the canonical
-extraction only.  The `sorry` census of this file is unchanged: ONE
-(`pair_margin_main` -- the same open hole, now non-contradictory).
+extraction only.  C1: the margin law is demoted from a `sorry` to the
+named Prop `PairMarginLaw` -- the `sorry` census of this file is ZERO
+(see the C1 demotion block below for the honest reason).
 
 Claim boundary: research documentation.  NOT evidence for or against the
 Riemann Hypothesis in either direction.  NO RH CLAIM.
@@ -292,55 +296,53 @@ theorem canonical_split (w : VonMangoldtWindow) :
         rw [← hdec]
     _ ≤ |edgeLocal w| + |(bulkRuns w).sum| := abs_add_le _ _
 
-/-- **H5, THE OPEN MARGIN LAW, retyped again** (r273 -> r320; the entry
-door of the cofinal step).
+/-- **H5, THE PAIR MARGIN LAW, retyped once more -- C1 DEMOTION to a
+named Prop** (r273 -> r320 -> C1; no truth commitment).
 
 Contract: PRIME.PORT.COUPLEDTAU.UNIVERSAL_PAIR_THEOREM.01 (r271,
 experiments only -- no ledger row, no claim).
 
-r273 RETYPE: the pre-r273 form `pair_margin_cofinal` quantified over the
-bare `PairSplitFamily` and is FALSE as a universal
-(`Counterexamples.pair_margin_not_universal` -- H1-H4 carry no
-arithmetic from which H5 could follow).
+HISTORY.  r273: the pre-r273 form `pair_margin_cofinal` quantified over
+the bare `PairSplitFamily` and is FALSE as a universal
+(`Counterexamples.pair_margin_not_universal`).  r320 (the R319 audit
+U3): the r273 form still quantified `(Zloc, runs)` freely -- refutable
+against any main window (guard
+`Counterexamples.old_pair_margin_forces_empty`); repaired by the
+canonical extraction (`edgeLocal`/`bulkRuns` definitions, the split a
+proved property).
 
-r320 RETYPE (the R319 audit U3): the r273 form still quantified
-`(Zloc, runs)` FREELY, bound only by the split hypothesis -- refutable
-against any main window (guard:
-`Counterexamples.old_pair_margin_forces_empty`).  The margin law is now
-stated for the CANONICAL extraction (`edgeLocal w`, `bulkRuns w` --
-definitions from the window data; the split is the proved
-`canonical_split`): `w` a `VonMangoldtWindow`, `hw : MainWindow w` the
-honest opaque source predicate (RH/Window.lean), the terminal drive
-readout `Z = F_{cap-1}` from the window's border data (r263 dictionary
-`Z_w = r_{N-1}`, `Z^2/m = q_N`), the budget `M` with `M^2 = 5/7` (the
-r243 floor import L5).
+C1 DEMOTION (the reviewer final-domain contract, goal 2 -- the pair
+duplicate retired).  The r320 form `pair_margin_main` still asserted
+the margin law as a `sorry` on all main windows.  That OVERCLAIMED:
+the fixed pair form is measured to MISS on kz39 (0.002 dec) and kz15
+(0.06 dec) under the b2LEVEL2 refinement (0.01/0.18 dec under plain
+c2PAIR) -- the margin law is a CERTIFICATE ROUTE (35 cheap rungs +
+both mains via the triangle, 5/7 exception rungs via the pair form),
+not a faithful statement of the terminal hole.  Since C1 the hole
+itself is `terminal_q_canonical` (RH/Canonical.lean, ONE statement),
+the r263 dictionary `Z² = (5/7)·q_N` is the ONE named lemma
+`pair_terminal_dictionary` there, and the pair CLOSURE
+`pair_closes_main` is a PROVED corollary of the hole through it.
+The margin law survives here as a NAMED Prop (the
+`BorderedCompressionBridge` convention: statable, consumable, never
+asserted), with the certificate direction proved below.  What a proof
+of the law would still need is the r271 lemma list L1-L5 (L2 pair-sum
+decay measured trending the wrong way, sp(N, eps) = +0.67, r272).
+NO RH CLAIM. -/
+def PairMarginLaw (w : VonMangoldtWindow) : Prop :=
+  ∀ M : ℝ, 0 < M → M ^ 2 = 5 / 7 →
+    |edgeLocal w| + pairBound (bulkRuns w) < M
 
-Measured (42-rung ladder, r269/r271): the margin holds on 35 cheap
-rungs + both mains via the r263 triangle certificate and on 5 of the 7
-exception rungs via the fixed pair form (kz20/22/36/38/52); kz39 misses
-by 0.002 dec and kz15 by 0.06 dec under the b2LEVEL2 refinement (0.01 /
-0.18 dec under plain c2PAIR).  What a proof must supply is the r271
-lemma list: L1 edge uniformity, L2 pair-sum decay (measured trend
-currently sp(N, eps) = +0.67 -- the WRONG way for a naive decay; r272:
-the L2 lemma needs a non-adjacent/global mechanism with delta' > 0.21 of
-the available truth decay 0.45), L3 boundary vanishing, L4 run-structure
-stability, L5 the 5/7 floor import.  The `sorry` IS the open problem --
-NOT a to-do of a known proof.  NO RH CLAIM. -/
-theorem pair_margin_main (w : VonMangoldtWindow) (hw : MainWindow w)
-    {M : ℝ} (hM : 0 < M) (hM2 : M ^ 2 = 5 / 7) :
-    |edgeLocal w| + pairBound (bulkRuns w) < M := by
-  sorry
-
-/-- the conditional closure, retyped with the canonical extraction: IF
-the open margin law holds on a MAIN window, the terminal readout
-closes, `Z^2/M^2 < 1` -- PROVED modulo `pair_margin_main` via the
-proved `canonical_split` (the shape the r271 round certifies
-finitely). -/
-theorem pair_closes_main (w : VonMangoldtWindow) (hw : MainWindow w)
-    {M : ℝ} (hM : 0 < M) (hM2 : M ^ 2 = 5 / 7) :
+/-- the conditional closure through the certificate route (PROVED; the
+shape the r271 round certifies finitely): IF the named margin law holds
+on a window, the terminal readout closes, `Z²/M² < 1` -- via the proved
+`canonical_split`.  The unconditional closure on canonical windows is
+`pair_closes_main` (RH/Canonical.lean), a corollary of the terminal
+hole through the named r263 dictionary. -/
+theorem pair_closes_of_marginLaw (w : VonMangoldtWindow)
+    (h : PairMarginLaw w) {M : ℝ} (hM : 0 < M) (hM2 : M ^ 2 = 5 / 7) :
     terminalDrive w ^ 2 / M ^ 2 < 1 :=
-  pair_certifies (bulkRuns w) hM (canonical_split w)
-    (pair_margin_main w hw hM hM2)
+  pair_certifies (bulkRuns w) hM (canonical_split w) (h M hM hM2)
 
 end PairBound
 

@@ -41,19 +41,24 @@ The reconstruction chain (`lstar_terminal_implies_master`, PROVED):
      principal-submatrix restriction used here is the same finite
      algebra in matrix coordinates -- no extra input is consumed.
 
-CONSEQUENCES (all PROVED below, formerly conditioned on the master
-`sorry`):
-  * `augmented_prefix_positive` -- the master theorem, now a corollary
-    of `lstar_subordination` + `terminal_positive_main`;
+CONSEQUENCES (all PROVED, formerly conditioned on the master `sorry`):
+  * `augmented_prefix_positive` -- the master theorem, a corollary of
+    the two true holes;
   * `prefix_chain_positive_main` (former edge B), `terminal_margin_
-    positive_main`, `terminal_crossratio_main` (former edge A) -- moved
-    here verbatim from RH/Window.lean, same proofs.
+    positive_main`, `terminal_crossratio_main` (former edge A).
+C1 MOVE (the reviewer final-domain contract): the two true holes and
+the master corollaries now live in RH/Canonical.lean, retyped onto the
+canonical construction (`CanonicalWindow` in place of the opaque
+`MainWindow`; the budget half of the terminal statement is PROVED
+there, the open conjunct is `terminal_q_canonical`).  This file keeps
+the two predicates (`LStar`, `TerminalPositive`) and the sorry-free
+reconstruction theorem they feed.
 
-THE TWO TRUE HOLES after this file: `lstar_subordination`
-(RH/Window.lean) and the terminal statement -- `terminal_positive_main`
-below, whose pair-coordinate form is `pair_margin_main`
-(RH/PairBound.lean); the r263 dictionary `Z^2/m = q_N` connecting the
-two coordinates is measured (42/42 rungs), not yet formalized.
+THE TWO TRUE HOLES after C1: `lstar_canonical` and
+`terminal_q_canonical` (both RH/Canonical.lean); the r263 dictionary
+`Z^2/m = q_N` connecting the terminal statement to the pair
+coordinates is formalized there as the ONE named lemma
+`pair_terminal_dictionary` (measured 42/42, transcription-blocked).
 
 Claim boundary: research documentation.  NOT evidence for or against
 the Riemann Hypothesis in either direction.  NO RH CLAIM.
@@ -158,82 +163,23 @@ theorem lstar_terminal_implies_master (w : VonMangoldtWindow)
   exact posDef_submatrix_of_injective hAcap
     ((Fin.castLE_injective hn).sumMap Function.injective_id)
 
-/-! ## The terminal hole (the second true hole, named) -/
+/-! ## The terminal hole and the master corollaries -- C1 MOVE
 
-/-- **THE TERMINAL STATEMENT ON MAIN WINDOWS** (the second true hole;
-ledger `PRIME.PORT.COUPLEDTAU.TERMINAL_CROSSRATIO.01` [O]).
-
-On a MAIN window the budget normalization is positive and the terminal
-cross-ratio satisfies `q_N < 1`.  This `sorry` is the border/fiber half
-of the former master `sorry` -- what remains of it after the
-reconstruction theorem: the base/wall half moved entirely into
-`lstar_subordination` (RH/Window.lean).
-
-Its pair-coordinate refinement is `pair_margin_main`
-(RH/PairBound.lean, the r271 H5 margin law): the r263 dictionary
-`Z_w = r_{N-1}`, `Z^2/m = q_N` identifies the two statements on the
-measured windows (42/42 rungs), but that extraction is measured, NOT
-yet formalized -- so both carry their own honest `sorry` and are
-documented as ONE hole in two coordinates.  Measured support: 42/42
-rungs (N = 142..878), min margin 0.0139, trend FLAT (r258); r270 exact
-interval enclosure at kz15.  The `sorry` IS the open problem -- NOT a
-to-do of a known proof.  NO RH CLAIM. -/
-theorem terminal_positive_main (w : VonMangoldtWindow)
-    (hw : MainWindow w) : TerminalPositive w := by
-  sorry
-
-/-! ## The master theorem and its corollaries -- now all PROVED modulo
-the two true holes (`lstar_subordination`, `terminal_positive_main`). -/
-
-/-- **THE MASTER THEOREM** (r273 target form) -- since wave 10 / r305 a
-COROLLARY of the two true holes via the reconstruction theorem: it no
-longer carries its own `sorry` and is NOT a third arithmetic input.
-For a MAIN window `w`, every augmented matrix
-`A_{w,n} = [[H_n, u_n], [u_n^T, B]]` up to the half-filling cap is
-positive definite.  (Statement verbatim the pre-r305 RH/Window.lean
-master; see that file's history and the docstrings above for the full
-derivation chain.)  NO RH CLAIM. -/
-theorem augmented_prefix_positive (w : VonMangoldtWindow)
-    (hw : MainWindow w) :
-    ∀ n ≤ w.cap, (w.A n).PosDef :=
-  lstar_terminal_implies_master w
-    (fun p hp hdeg => lstar_subordination w hw p hp hdeg)
-    (terminal_positive_main w hw)
-
-/-- **former edge B, retyped** (was `prefix_resummation_positivity`;
-ledger `PRIME.PORT.FULLSOURCE.PREFIX_RESUMMATION.01` [O]): on a MAIN
-window the whole prefix chain through the half-filling cap is positive
--- the wall DERIVED from the master positivity, not assumed.  PROVED
-from `augmented_prefix_positive` by block extraction + the Sylvester
-ratio (the open content lives entirely in the two true holes). -/
-theorem prefix_chain_positive_main (w : VonMangoldtWindow)
-    (hw : MainWindow w) :
-    ∀ k, k + 1 ≤ w.cap → 0 < w.h k := by
-  intro k hk
-  have h1 := w.hankel_posDef_of_augmented
-    (augmented_prefix_positive w hw k (le_trans (Nat.le_succ k) hk))
-  have h2 := w.hankel_posDef_of_augmented
-    (augmented_prefix_positive w hw (k + 1) hk)
-  exact w.h_pos_of_posDef h1 h2
-
-/-- the terminal Schur margin is positive on a MAIN window.  PROVED
-from the master theorem (Schur step). -/
-theorem terminal_margin_positive_main (w : VonMangoldtWindow)
-    (hw : MainWindow w) : 0 < w.D w.cap := by
-  have hA := augmented_prefix_positive w hw w.cap le_rfl
-  exact w.D_pos_of_augmented hA (w.hankel_posDef_of_augmented hA)
-
-/-- **former edge A, retyped** (was `terminal_crossratio_cofinal`;
-ledger `PRIME.PORT.COUPLEDTAU.TERMINAL_CROSSRATIO.01` [O]): the terminal
-cross-ratio inequality `q < 1` on a MAIN window.  PROVED from the master
-theorem (corner extraction + Schur step + the terminal gate); since
-wave 10 the content is carried by `terminal_positive_main` (of which
-this is the second conjunct) -- kept as a theorem so downstream
-references survive the r305 move verbatim. -/
-theorem terminal_crossratio_main (w : VonMangoldtWindow)
-    (hw : MainWindow w) : w.q < 1 := by
-  have hA := augmented_prefix_positive w hw w.cap le_rfl
-  exact w.q_lt_one_of_pos (w.budget_pos_of_augmented hA)
-    (terminal_margin_positive_main w hw)
+The second true hole formerly carried here as `terminal_positive_main
+: MainWindow w → TerminalPositive w` is RETYPED onto the canonical
+construction (RH/Canonical.lean): the budget half `0 < B` is PROVED
+there (`canonical_budget_pos` -- B-fidelity + the named completion's
+`budget_pos`), and the genuinely open conjunct is the sharpened hole
+`terminal_q_canonical : CanonicalWindow w → w.q < 1`;
+`terminal_canonical` re-assembles the verbatim `TerminalPositive`
+conclusion.  The master theorem `augmented_prefix_positive` and its
+corollaries (`prefix_chain_positive_main`,
+`terminal_margin_positive_main`, `terminal_crossratio_main`) moved
+with it, statements verbatim modulo the `MainWindow → CanonicalWindow`
+domain retype, proofs verbatim through `lstar_terminal_implies_master`
+above.  The r263 pair-coordinate connection is formalized there as the
+ONE named dictionary lemma `pair_terminal_dictionary`; the former
+duplicate sorry `pair_margin_main` is retired (see
+RH/PairBound.lean). -/
 
 end RH
