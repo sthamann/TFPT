@@ -4514,6 +4514,11 @@ rh/
 │   ├── lstar_problem.tex(+pdf) — the missing lemma L* as a fully
 │   │                     standalone problem statement for external
 │   │                     mathematicians (no project vocabulary)
+│   ├── rdagger_saturation.tex(+pdf) — specialist dossier on the
+│   │                     bordered dual resolvent R† (definition,
+│   │                     duality formulae, critical 3×3, saturation
+│   │                     edge, exponent, relative error form, one
+│   │                     open RHP/BKMM question).  No RH claim
 │   └── verify_lstar_instance.py — machine check that the standalone
 │                         definition IS the campaign object
 └── verification/
@@ -4568,6 +4573,22 @@ frame (85 windows to N_w 7942, all margins positive, pool
 exhausted).  The lane is FROZEN as a specialist problem (reviewer
 decision; see the lane status update above); the sections of the
 original problem statement are unchanged.
+
+A second standalone note, `rh/problem/rdagger_saturation.pdf`
+(August 28, 2026), states the R360+R362 complex as a 7-page
+specialist dossier: definition of the bordered dual resolvent
+`R† = [[R⁻¹, Dv], [(Dv)ᵀ, 1+γ]]⁻¹`, the exact duality package
+`(A1)–(A7)`, the critical 3×3 Schur block, the census that the
+binding pair straddles the saturation-block edge `3|4`, the
+observed exponent `α = 3.332`, the relative/projective error-
+operator form, and **one open question** — which asymptotic
+RHP/BKMM theorem (BKMM 2007 Thm 2.7 / Rem 2.8) guarantees that
+the critical bordered resolvent block stays above `½`.  Finite
+census, no asymptotics, no claim.  A proof of `R† ≻ ½I` would
+give `L†` and hence window-local master positivity (Lean chain
+`augmentedSubordination_iff_lstar_and_terminal` +
+`lstar_terminal_implies_master`, axiom-audited).  L\* and L†
+stay **[O]**.  NO RH CLAIM.
 
 ## The RH suite
 

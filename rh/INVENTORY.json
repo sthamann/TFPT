@@ -1,6 +1,6 @@
 {
   "workspace": "rh/",
-  "generated": "2026-08-27",
+  "generated": "2026-08-28",
   "claim_boundary": "Research documentation.  NOT evidence for or against the Riemann Hypothesis in either direction.  NO RH CLAIM.  Mincut base 4 / refined 5.  The status ledger wins on any disagreement.",
   "note": "rh/ references these files, it never copies them.  pin=true entries are frozen: a SHA-256 mismatch is a FAIL in rh/verification/run_rh.py.  pin=false entries are living documents: drift is reported as INFO.",
   "entries": [
@@ -1496,6 +1496,26 @@
       "bytes": 347026
     },
     {
+      "path": "rh/problem/rdagger_saturation.tex",
+      "role": "problem_statement",
+      "round": "r360+r362 companion",
+      "ledger_ids": [],
+      "status": "specialist dossier on the bordered dual resolvent R-dagger (reviewer priority 4): definition of R-dagger as the rank-1 bordered dual hole kernel [[R^{-1}, Dv],[(Dv)^T, 1+gamma]]^{-1}; exact duality package (A1)-(A7) (spectral map margin-dagger == 2 - 1/lambda_min(R-dagger); L-dagger <=> R-dagger > (1/2) I; Sherman-Morrison Y-block; q-dagger frame-invariant == r266 crit1; terminal dictionary 1-q-dagger == (5/7)(1-q_N)/B_w; border Schur == (1-q-dagger)/(2(1+q-dagger)) globally and in the local 3x3; interlacing); the critical 3x3 Schur block (bind-dagger med 1.0056, share-dagger 0.699 vs share 0.697); the pair (2,4) straddles the saturation-block edge 3|4 (occupation duality o_eta + o_dual == 1 exact; obstacle solver void {1,2,3}); observed exponent alpha = 3.332 (distance 0.002) carried by the diagonal resolvent data; t_geo margin-locked [0.222, 0.287]; relative error-operator form (M_0 constant matrix refuted, kappa_S wander 4.88; rest clause theorem at c = 1, MAIN c >= 8.8, chi minima 1.0); ONE open question (Problem): which asymptotic RHP/BKMM theorem (BKMM 2007 Thm 2.7/Rem 2.8; AC/Lubinsky class excluded) guarantees the critical bordered resolvent block stays above 1/2.  Finite census, no asymptotics, no claim; a proof of R-dagger > (1/2) I would give L-dagger hence window-local master positivity (Lean chain augmentedSubordination_iff_lstar_and_terminal + lstar_terminal_implies_master audited).  Explicitly NO RH claim -- L* and L-dagger stay [O]",
+      "pin": true,
+      "sha256": "45695bd15cba2a17c9db7993973364733e5ce4baf90a032c5519aa579ab7f5e6",
+      "bytes": 25399
+    },
+    {
+      "path": "rh/problem/rdagger_saturation.pdf",
+      "role": "problem_statement",
+      "round": "r360+r362 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of rdagger_saturation.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "9b7f1d2670aae3762d1b7a01497dadc2fc1b00716c41919f7fddd9e754214a5e",
+      "bytes": 309684
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -1694,14 +1714,14 @@
       "bytes": 89581
     },
     {
-        "path": "experiments/tfpt-discovery/critical_saturation_probe.py",
-        "role": "sealed_probe",
-        "round": "r360",
-        "ledger_ids": [],
-        "status": "The critical saturation scaffold (round 360, reviewer contract L2 PRIME.LSTAR.DUAL.CRITICAL_SATURATION.01, triggered by the r359 ASYMPTOTICS_REQUIRED handoff; experiments-side, NO ledger row): 34/34 sealed; SPEC_SHA ea24936c46407f48 final with record, freeze 75f8ee55436ab173, two-commit protocol pre-freeze 8a835dc8 / record 130a0889; ZERO amendments after freeze (calibration pass 1 = first full evaluation = 34/34, 153.7 s); scoping s1/s2 disclosed in the spec.  THE EXACT OBJECTS: the occupation duality o_eta + o_dual == 1 on every union node (diagonal of the r356 Borodin complementation, Fractions-exact on the toy, <= 2.2e-11 live) with the exact trace ward sum o_dual == N_w - 1; the sealed zero-temperature obstacle solver (FISTA 3000 iters, water-filling projection, KKT gates) for the BKMM constrained equilibrium with field -log u_vee.  MAIN VERDICT SATURATION_EDGE_CONFIRMED + GAMMA_PARAMETRIX_CENSUS + M0_PARTIAL(3.332) + REST_RELATIVE_CENSUS: (1) the QP dual-void block == folds {1,2,3} with clean KKT on 4/4 sealed instances (kz 9/44/56/130) -- by the exact complement the PRIMAL SATURATED block -- and THE CRITICAL PAIR (2,4) STRADDLES ITS EDGE 3|4; the exact-occupation fold-1 anomaly census 85/85 (dev1 in [-0.333, -0.253], pair folds flat); the chi contrast is a DIFFERENT partition (fold-1 anomaly 0/42 + 0/42, both chi QPs occupy fold 1) -- the reviewer's step-B object, census grade; (2) t_geo = eps sqrt((A^-1)_11 (A^-1)_22) is margin-locked (slope -0.009 on the 57, range [0.2216, 0.2865] med 0.2536 on all 74 resolvable rows + chi w9 in band); the resolvent diagonals carry the margin exponent (+3.365/+3.292 vs 3.332), not the 0.38/1.79 weight families; (3) alpha = 3.332 hit at 0.002 (fresh lamS slope -3.334; s_infty 1.65 rejected at 1.684), bind med 1.0058 == r359, but kappa_S wanders 4.88x > 1.5: THE FULL M_0 COLLAPSE IS REFUTED -- the L1 target needs a relative/projective form; (4) the relative rest clause is THEOREM at c = 1 (Cauchy interlacing + Schur eigenvalue inequality, toy exact + live 74/74) and MAIN census at c >= 8.8, but the chi ladders dip to the interlacing line (mins 1.0 on 3 + 8 rows): RELATIVE_REST_CERTIFIED correctly did NOT fire -- the c > 1 margin is NOT world-uniform; (5) wander cancellation measured: corr(psi57 log detS, -psi57 log(a11 a22)) = +0.9835, share-term rms ratio 0.204.  Worlds: twin dose-zero bitwise (occupation devs 3.8e-8); scramble breaks at the named R_CC clause (-0.4962) with no saturation edge.  Must-fails: m1 unconstrained equilibrium 92.7x cap, m2/m3/m4 AST (withheld margin/detS/a11 columns), m5 weight shuffle 0.798, m6 wrong rank 1.17e-2 + Fractions-exact.  Reviewer-step typing (the handoff deliverable): (A) theorem (r356); (B) saturation edge confirmed census-grade, asymptotic equilibrium theorem OPEN; (C) parametrix census, Gamma derivation OPEN; (D) adjugate theorem + measured cancellation + M_0 partial; (E) rigorous error OPEN.  Deterministic, run1/run2 byte-identical (172.2/157.0 s).  NO L* CLAIM, NO RH CLAIM in either direction; mincut unchanged.",
-        "pin": true,
-        "sha256": "700d4bc0a5deb6ac105507e7aedcac584c49569a588799beb6da29a91c0508f1",
-        "bytes": 94236
+      "path": "experiments/tfpt-discovery/critical_saturation_probe.py",
+      "role": "sealed_probe",
+      "round": "r360",
+      "ledger_ids": [],
+      "status": "The critical saturation scaffold (round 360, reviewer contract L2 PRIME.LSTAR.DUAL.CRITICAL_SATURATION.01, triggered by the r359 ASYMPTOTICS_REQUIRED handoff; experiments-side, NO ledger row): 34/34 sealed; SPEC_SHA ea24936c46407f48 final with record, freeze 75f8ee55436ab173, two-commit protocol pre-freeze 8a835dc8 / record 130a0889; ZERO amendments after freeze (calibration pass 1 = first full evaluation = 34/34, 153.7 s); scoping s1/s2 disclosed in the spec.  THE EXACT OBJECTS: the occupation duality o_eta + o_dual == 1 on every union node (diagonal of the r356 Borodin complementation, Fractions-exact on the toy, <= 2.2e-11 live) with the exact trace ward sum o_dual == N_w - 1; the sealed zero-temperature obstacle solver (FISTA 3000 iters, water-filling projection, KKT gates) for the BKMM constrained equilibrium with field -log u_vee.  MAIN VERDICT SATURATION_EDGE_CONFIRMED + GAMMA_PARAMETRIX_CENSUS + M0_PARTIAL(3.332) + REST_RELATIVE_CENSUS: (1) the QP dual-void block == folds {1,2,3} with clean KKT on 4/4 sealed instances (kz 9/44/56/130) -- by the exact complement the PRIMAL SATURATED block -- and THE CRITICAL PAIR (2,4) STRADDLES ITS EDGE 3|4; the exact-occupation fold-1 anomaly census 85/85 (dev1 in [-0.333, -0.253], pair folds flat); the chi contrast is a DIFFERENT partition (fold-1 anomaly 0/42 + 0/42, both chi QPs occupy fold 1) -- the reviewer's step-B object, census grade; (2) t_geo = eps sqrt((A^-1)_11 (A^-1)_22) is margin-locked (slope -0.009 on the 57, range [0.2216, 0.2865] med 0.2536 on all 74 resolvable rows + chi w9 in band); the resolvent diagonals carry the margin exponent (+3.365/+3.292 vs 3.332), not the 0.38/1.79 weight families; (3) alpha = 3.332 hit at 0.002 (fresh lamS slope -3.334; s_infty 1.65 rejected at 1.684), bind med 1.0058 == r359, but kappa_S wanders 4.88x > 1.5: THE FULL M_0 COLLAPSE IS REFUTED -- the L1 target needs a relative/projective form; (4) the relative rest clause is THEOREM at c = 1 (Cauchy interlacing + Schur eigenvalue inequality, toy exact + live 74/74) and MAIN census at c >= 8.8, but the chi ladders dip to the interlacing line (mins 1.0 on 3 + 8 rows): RELATIVE_REST_CERTIFIED correctly did NOT fire -- the c > 1 margin is NOT world-uniform; (5) wander cancellation measured: corr(psi57 log detS, -psi57 log(a11 a22)) = +0.9835, share-term rms ratio 0.204.  Worlds: twin dose-zero bitwise (occupation devs 3.8e-8); scramble breaks at the named R_CC clause (-0.4962) with no saturation edge.  Must-fails: m1 unconstrained equilibrium 92.7x cap, m2/m3/m4 AST (withheld margin/detS/a11 columns), m5 weight shuffle 0.798, m6 wrong rank 1.17e-2 + Fractions-exact.  Reviewer-step typing (the handoff deliverable): (A) theorem (r356); (B) saturation edge confirmed census-grade, asymptotic equilibrium theorem OPEN; (C) parametrix census, Gamma derivation OPEN; (D) adjugate theorem + measured cancellation + M_0 partial; (E) rigorous error OPEN.  Deterministic, run1/run2 byte-identical (172.2/157.0 s).  NO L* CLAIM, NO RH CLAIM in either direction; mincut unchanged.",
+      "pin": true,
+      "sha256": "700d4bc0a5deb6ac105507e7aedcac584c49569a588799beb6da29a91c0508f1",
+      "bytes": 94236
     },
     {
       "path": "experiments/tfpt-discovery/mean_sieve_floor_probe.py",

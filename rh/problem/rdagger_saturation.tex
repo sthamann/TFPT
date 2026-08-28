@@ -1,0 +1,589 @@
+% rdagger_saturation.tex -- specialist dossier on the critical
+% bordered dual resolvent R^dagger.  Self-contained for a reader in
+% discrete orthogonal polynomials / Riemann--Hilbert asymptotics.
+% Builds with pdflatex.  Companion problem: lstar_problem.tex.
+% NO RH CLAIM.  Research documentation, not a theorem.
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=2.6cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+
+\newtheorem{problem}{Problem}
+\newtheorem{definition}{Definition}
+\newtheorem{prop}{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\E}{\mathsf{E}}
+\newcommand{\Rd}{R^{\dagger}}
+\newcommand{\Ld}{L^{\dagger}}
+\newcommand{\Ls}{L^{*}}
+\newcommand{\half}{\tfrac12}
+\newcommand{\dd}{\,\mathrm{d}}
+% Grade marks: exact / theorem-grade / census / hypothesis.
+\newcommand{\gr}[1]{\textnormal{\small[#1]}}
+
+\title{\bfseries The saturated dual resolvent\\[2mm]
+\large A specialist dossier on the critical bordered block
+$\boldsymbol{R^{\dagger}}$}
+\author{Stefan Hamann}
+\date{August 28, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}\noindent
+On a family of explicit finite discrete measures, a particle--hole
+duality identifies a two-measure subordination inequality with the
+spectral condition $R\succ\half I$ on a dual hole kernel.  A rank-one
+border of that kernel produces a single object $\Rd$ whose positivity
+$\Rd\succ\half I$ is equivalent to the original inequality
+\emph{and} a terminal budget condition, and whose critical
+three-by-three Schur block carries both.  A constrained equilibrium
+problem on the same dual weight places the binding pair of nodes
+astride a saturated hard-edge block.  All identities below are finite
+linear algebra; all numerical values are a frozen census on a finite
+family.  No asymptotic theorem is proved.  The one open question is
+stated as Problem~\ref{prob:rhp}.  This document is a problem
+statement for specialists, not a claim, and nothing in it is evidence
+for or against the Riemann hypothesis.
+\end{abstract}
+
+\medskip\noindent
+\textbf{Status and grades.}\enspace
+Every assertion is marked
+\textsc{exact} (finite identity, including rational arithmetic),
+\textsc{theorem-grade} (finite-matrix theorem on measured inputs),
+\textsc{census} (measured on a frozen finite family; no
+extrapolation), or
+\textsc{hypothesis} (unproved analytic statement).
+The construction of the underlying measures $(\mu,\nu)$ is given in
+full in the companion note~\cite{lstar-note}; the present dossier
+does not repeat it.  Uvarov-transform language, the discrete-hard-edge
+placement, and the Lubinsky-class exclusion are recorded there
+(\S{}frozen-placement, \S{}frozen-dualhole) and are cited, not
+duplicated.  Machine records: sealed probes
+\texttt{borodin\_dual\_hole\_probe.py} (round 356),
+\texttt{schur\_wronskian\_dual\_probe.py} (359),
+\texttt{critical\_saturation\_probe.py} (360),
+\texttt{augmented\_borodin\_duality\_probe.py} (362).
+
+\section{Setup}\label{sec:setup}
+
+Fix a prime power $z$ (the window anchor).  A triangular (``tent'')
+test function of half-width $\Delta$, determined by $z$ and a fixed
+oversampling parameter, samples the von Mangoldt comb and an
+archimedean kernel, producing an even trigonometric polynomial
+$f$ --- the symbol of a circulant.  Folding the symbol onto $[-1,1]$
+by $x_{j}=\cos\theta_{j}$ yields a signed discrete measure on the
+cosine grid, split by sign into two positive measures $\mu$ and
+$\nu$ with disjoint supports in $[-1,1)$ and $S$ atoms in total
+\cite[construction]{lstar-note}.  Write $N=\lceil S/2\rceil$ and
+$Y=\operatorname{supp}\nu$.  Across the whole family the grid is
+unculled, so $S=2N-1$ \gr{exact}: half-filling is Borodin's
+complementary rank condition, not an extra hypothesis.
+
+The running instance is $z=16$: $S=367$, $N=184$, $|Y|=104$.  The
+binding pair of $\nu$-atoms sits at grid (fold) indices $(2,4)$,
+the two rightmost odd nodes of the cosine lattice.  The inequality
+under study, denoted $\Ls$, asks
+\[
+\int p^{2}\dd\nu \;<\; \int p^{2}\dd\mu
+\qquad\text{for every real polynomial }p\neq 0\text{ with }
+\deg p<N.
+\]
+Equivalently, the $\nu$-sampling matrix $\E_{N}$ in the
+$\mu$-orthonormal frame satisfies $\lambda_{\max}(\E_{N})<1$.  An
+augmented form $\Ld$ adjoins a rank-one border (a budget-normalized
+smooth test functional) and asks $\lambda_{\max}(\E_{N}+bb^{T}/B)<1$.
+Both statements are open for the unbounded family.  On every tested
+window the inequalities hold, with spectral margins decaying as a
+power of $N$; structurally destroyed comparison inputs fail already
+at a small fraction of the critical degree \cite{lstar-note}.  No
+statement here claims either inequality.
+
+\section{Definition of \texorpdfstring{$\boldsymbol{R^{\dagger}}$}{R-dagger}}
+\label{sec:def}
+
+Lift $(\mu,\nu)$ to the positive measure $\eta=\mu+\nu$ with weights
+$u_{j}=|\widetilde w_{j}|$ on the union $X=\operatorname{supp}\eta$.
+Let $P_{X}$ be the monic node polynomial of $X$.  Borodin's reciprocal
+weight \cite{Borodin2002} is
+$u^{\vee}_{j}=1\bigl/(u_{j}\,P_{X}'(x_{j})^{2}\bigr)$.  On this
+cosine grid the dual weight has the closed form
+\begin{equation}\label{eq:uvee}
+u^{\vee}_{j}\;\propto\;
+\frac{c_{j}\,(1-x_{j})}{|f(\theta_{j})|}\,,
+\end{equation}
+where $c_{j}$ is the folding weight ($c_{j}=\tfrac12$ at the left
+endpoint, else $1$): the original weight carries $+\log|f|$, the dual
+weight $-\log|f|$ \gr{exact, three evaluation routes}.  Let
+$\Pi_{N-1}^{u^{\vee}}$ be the rank-$(N-1)$ Christoffel--Darboux
+projection kernel of $u^{\vee}$ on $X$, dressed by
+$\sqrt{u^{\vee}}$, and let $R$ be its restriction to $Y$.
+
+Let $b$ be the border functional in the $\mu$-orthonormal frame,
+$B>0$ the budget, $\beta=b/\sqrt{B}$, and $v$ the node-side image of
+the border under the $\mu$-Christoffel--Darboux kernel
+($v_{j}=\sqrt{\nu_{j}/B}\int K_{\mu}(y_{j},t)\,\dd\sigma(t)$).  Write
+$\gamma=\beta^{T}\beta$ and $\widetilde v=Dv$, with $D$ the diagonal
+sign matrix of $P_{X}'$.
+
+\begin{definition}[Bordered dual resolvent]\label{def:rdagger}
+The \emph{augmented dual kernel} is the $(|Y|+1)\times(|Y|+1)$ matrix
+\begin{equation}\label{eq:rdagger}
+\Rd
+\;=\;
+\begin{pmatrix}
+R^{-1} & \widetilde v \\
+\widetilde v^{T} & 1+\gamma
+\end{pmatrix}^{-1}.
+\end{equation}
+The extra coordinate is the border; the leading principal block is a
+rank-one Sherman--Morrison deformation of $R$
+(Proposition~\ref{prop:A}\,(A4) below).
+\end{definition}
+
+Route~(i) --- adjoining a virtual atom and taking the
+$(S+1)$-point Borodin kernel --- is available on a single-atom toy
+border (half-filling shifts $S=2N-1\mapsto S^{\dagger}=2N$, dual rank
+$N-1\mapsto N$) and agrees with \eqref{eq:rdagger} up to sign
+conjugation \gr{exact, rational arithmetic}.  On the real windows the
+border is a signed smooth-comb measure with $S$ atoms, every one of
+which collides with a grid node, and is not a point evaluation
+(representability spread $56.8$ on the running instance).  The
+bordered-resolvent form is therefore the general object.
+
+\section{Exact duality formulae}\label{sec:duality}
+
+Write $\operatorname{margin}=1-\lambda_{\max}(\E_{N})$ and
+$\operatorname{margin}^{\dagger}=1-\lambda_{\max}(\E_{N}+bb^{T}/B)$.
+
+\begin{prop}[Particle--hole dictionary \cite{Borodin2002}]\label{prop:borodin}
+At half-filling $S=2N-1$,
+\[
+\Ls
+\;\iff\;
+\lambda_{\max}(\E_{N})<1
+\;\iff\;
+R\;\succ\;\half I\,,
+\]
+with the spectral map
+$\operatorname{margin}=2-1/\lambda_{\min}(R)$
+\gr{theorem-grade; absolute deviation $\le 9.9\cdot10^{-10}$ on
+$85$ windows}.  The $L$-ensemble transformation
+$Q=\E_{N}(I+\E_{N})^{-1}$ is exact
+\gr{rational arithmetic on a $5$-atom model; double precision
+$\le 7.6\cdot10^{-12}$ on $85$ windows}, and combined with Borodin's
+complementation $\Pi_{N}^{u}=D\,(I-\Pi_{N-1}^{u^{\vee}})\,D$ yields
+$\E_{N}=D(R^{-1}-I)D$ on $Y$.
+\end{prop}
+
+Live census: $\lambda_{\min}(R)-\half$ ranges from $+4.2\cdot10^{-5}$
+(running instance: $\lambda_{\min}(R)=0.500041882$) down to
+$+5.9\cdot10^{-11}$ on the deepest tranche --- all positive, no
+counterexample.  Comparison inputs with destroyed source structure
+violate $R\succ\half I$ structurally
+($\lambda_{\min}(R)-\half\in[-0.500,-0.083]$).  Honest limit: at the
+deepest instances the double-precision resolution of the dual route
+($\sim5\cdot10^{-10}$) exceeds the margins, so the hole coordinate is
+exact algebra, not a sharper certification instrument.
+
+The pair identities $c=\varepsilon_{1}\varepsilon_{2}(R^{-1})_{12}$,
+$p=2-(R^{-1})_{11}$, $q=2-(R^{-1})_{22}$ identify the two-point
+Uvarov block of the companion note with the $(1,2)$ principal minor
+of $2I-R^{-1}$ \gr{theorem-grade}.  The absolutely continuous
+hard-edge class is excluded at census grade: the rescaled pair
+positions $a_{j}=2N^{2}(1-y_{j})$ are family-constant against
+$\pi^{2}j^{2}/4$ on all $85$ windows (maximum deviation
+$0.33/N$), while the kernel correlation $\rho_{K}$ decays with
+fitted exponent $1.4222$, contrary to Lubinsky's Bessel limit at
+fixed microscopic arguments \cite{Lubinsky2008},
+\cite[\S{}frozen-placement]{lstar-note}.
+
+\begin{prop}[Augmented dictionary]\label{prop:A}
+Let
+$Z=\bigl(\begin{smallmatrix}R^{-1}&\widetilde v\\
+\widetilde v^{T}&1+\gamma\end{smallmatrix}\bigr)$,
+so $\Rd=Z^{-1}$, and write $M^{\dagger}=\Rd-\half I$.  The following
+are finite-matrix identities \gr{theorem-grade; rational arithmetic
+on toys, graded double precision on $75$ windows of the prime-generated
+family plus two character-twisted families of $42$ windows each}.
+\begin{enumerate}
+\item[\textup{(A1)}]
+The augmented node Gram $G^{\dagger}$ is the sign-conjugate of
+$(\Rd)^{-1}-I$: the particle--hole complementation extends by one
+row.
+\item[\textup{(A2)}]
+$\operatorname{margin}^{\dagger}=2-1/\lambda_{\min}(\Rd)$
+(deviation $\le 1.1\cdot10^{-11}$ shallow,
+$\le 5.5\cdot10^{-10}$ at the deepest computed row).
+\item[\textup{(A3)}]
+$\Ld\;\iff\;\Rd\succ\half I$, two-sided.  Both truth directions
+occur on real windows: six character-twisted rungs with terminal
+ratio $q_{N}>1$ have $\lambda_{\min}(\Rd)-\half<0$ (e.g.\ $-9.8\cdot
+10^{-5}$), exactly as the identity demands.
+\item[\textup{(A4)}]
+Sherman--Morrison on the $Y$-block:
+$\Rd_{YY}=R+(R\widetilde v)(R\widetilde v)^{T}/
+(1+\gamma-\widetilde v^{T}R\widetilde v)$,
+and $\Rd_{bb}=1/(1+\gamma-\widetilde v^{T}R\widetilde v)$
+(deviation $\le 1.2\cdot10^{-14}$ on every computed row, including
+the deepest).  The border is a rank-one insertion at dual-resolvent
+level.
+\item[\textup{(A5)}]
+$\Rd\succ\half I$ if and only if $R\succ\half I$ and $q^{\dagger}<1$,
+where $q^{\dagger}=\gamma+v^{T}(I-\E_{N})^{-1}v$ is frame-invariant
+(equals the squared dual border norm $u^{T}H^{-1}u/B$) and coincides
+with the standing terminal coordinate.  The dictionary
+$1-q^{\dagger}=(5/7)(1-q_{N})/B$ holds to relative
+$6.7\cdot10^{-6}$.
+\item[\textup{(A6)}]
+The Schur complement of $M^{\dagger}$ onto the border coordinate
+equals $(1-q^{\dagger})/\bigl(2(1+q^{\dagger})\bigr)$ globally, and
+equals the same value inside the local $3\times3$ block of
+Proposition~\ref{prop:block} (quotient $\le 1.0\cdot10^{-11}$).
+\item[\textup{(A7)}]
+Cauchy interlacing:
+$\lambda_{k}(\Rd)\le\lambda_{k}(R)\le\lambda_{k+1}(\Rd)$.
+The border can only lower the bottom of the dual spectrum
+($\operatorname{margin}^{\dagger}\le\operatorname{margin}$).
+On the running instance,
+$0.500041459\le 0.500041882$.
+\end{enumerate}
+\end{prop}
+
+A formal reconstruction, independent of the dual coordinate, is
+already machine-checked in Lean: $\Ld\iff\Ls\wedge\mathrm{Terminal}$
+and $\Ls\wedge\mathrm{Terminal}\Rightarrow$ positivity of every
+bordered window matrix through the cap
+(\texttt{RH/Augmented.lean},
+\texttt{augmentedSubordination\_iff\_lstar\_and\_terminal};
+\texttt{RH/Closure.lean},
+\texttt{lstar\_terminal\_implies\_master};
+axiom audit in \texttt{RH/Audit.lean}, consuming only the two named
+canonical holes).  What is \emph{not} formalized, and not proved
+analytically, is $\Rd\succ\half I$ for the unbounded family.  That
+is Problem~\ref{prob:rhp}.
+
+\section{The critical three-by-three block}\label{sec:block}
+
+Partition $Y=\{y_{1},y_{2}\}\cup C$, with $\{y_{1},y_{2}\}$ the
+binding pair (folds $2,4$) and $C$ the rest of $Y$.  Write
+$M=R-\half I$ and $S_{N}$ for the $2\times2$ Schur complement of $M$
+onto the pair.  Then \gr{exact}
+\[
+M\succ0
+\;\iff\;
+M_{CC}\succ0
+\;\text{ and }\;
+S_{N}\succ0\,,
+\]
+and $S_{N}$ is a ratio of Sylvester-bordered minors of $\det M$
+(the rest block sits inside the border; a pair-only truncation is
+false by $4.07$ nats on the running instance and exactly on the
+rational toy).  The off-diagonal of the dual resolvent
+$A^{-1}=(I-2R)^{-1}$ is the Casoratian of the two consecutive dual
+orthonormal polynomials, resolvent-dressed (discrete IIKS identity)
+\gr{theorem-grade}.  The diagonal entries $(A^{-1})_{kk}$ are
+\emph{not} Casoratian data: their cross share
+$(A^{-1})_{12}^{2}/\bigl((A^{-1})_{11}(A^{-1})_{22}\bigr)$ has
+median $0.702$ on $85$ windows (range $0.46$--$0.84$).  No standalone
+explicit prefactor turns the Casoratian into $\det S_{N}$ at the
+sealed bars.
+
+\begin{prop}[Binding]\label{prop:block}
+On the $74$ resolvable windows of the family
+($\lambda_{\min}(R)-\half>10^{-9}$),
+\[
+\operatorname{bind}
+\;=\;
+\frac{\lambda_{\min}(S_{N})}{\lambda_{\min}(R)-\half}
+\in[1.0003,\,1.0605]\,,
+\quad\text{median }1.0058
+\]
+\gr{census}.  After the rank-one border, the $3\times3$ Schur block
+$S^{\dagger}_{3}$ of $M^{\dagger}$ on (pair, border) satisfies
+\[
+\operatorname{bind}^{\dagger}
+\;=\;
+\frac{\lambda_{\min}(S^{\dagger}_{3})}{\lambda_{\min}(\Rd)-\half}
+\in[1.0003,\,1.0608]\,,
+\quad\text{median }1.0056
+\]
+\gr{census}.  The in-block border Schur equals the global border
+Schur of \textup{(A6)}.  The rank-one deformation does not move the
+pair structure: on the running instance the cross share of $\Rd$ is
+$0.6990$ against $0.6973$ for $R$; ladder medians $0.708$ against
+$0.702$.
+\end{prop}
+
+On the running instance the three eigenvalues of $S^{\dagger}_{3}$ are
+$(4.16\cdot10^{-5},\,4.90\cdot10^{-4},\,1.76\cdot10^{-2})$: the bottom
+mode is the $\Ls$ pair channel, the top mode is the terminal border
+channel.  The critical eigenvector's border mass is
+$2.5\cdot10^{-5}$ there, and $5.8\cdot10^{-4}$ at the
+near-terminal window where
+$\operatorname{margin}^{\dagger}/\operatorname{margin}=0.8716$.
+The giant operator behaves, at the critical point, like this
+$3\times3$ block.
+
+\section{The pair straddles the saturation edge}\label{sec:edge}
+
+Two independent finite objects describe the dual ensemble's occupation
+of the cosine grid.
+
+\paragraph{Exact occupation.}
+Let $o_{\eta}(x_{j})$ (resp.\ $o_{\mathrm{dual}}(x_{j})$) be the
+diagonal of the rank-$N$ $\eta$-projection (resp.\ the rank-$(N-1)$
+dual-hole projection).  Borodin complementation on the diagonal gives
+\begin{equation}\label{eq:occ}
+o_{\eta}(x_{j})+o_{\mathrm{dual}}(x_{j})\;=\;1
+\end{equation}
+at every union node, with trace ward
+$\sum_{j}o_{\mathrm{dual}}(x_{j})=N-1$
+\gr{exact; rational arithmetic on the toy, $\le 2.2\cdot10^{-11}$
+live}.  This is the finite counterpart of an equilibrium density
+versus its upper constraint, with no solver and no asymptotics.  On
+the prime-generated family, fold~$1$ (the rightmost node) is the
+unique occupation anomaly: $o_{\mathrm{dual}}(x_{1})$ lies
+$0.25$--$0.33$ below the bulk median on all $85$ windows, while the
+pair folds $2$ and $4$ are flat (deviation $\le 0.10$).
+
+\paragraph{Obstacle problem.}
+Minimize the discrete energy
+\[
+E(m)
+=\sum_{j\neq k}m_{j}m_{k}\log\frac{1}{|x_{j}-x_{k}|}
++\sum_{j}m_{j}\bigl(-\log u^{\vee}_{j}\bigr)
+\]
+over $0\le m_{j}\le 1$, $\sum m_{j}=N-1$.  The box constraint
+\emph{is} the Baik--Kriecherbauer--McLaughlin--Miller upper constraint
+\cite{BKMM2007}; dropping it piles mass $\ge 92$ times the cap onto
+single nodes.  A deterministic projected first-order solver
+(FISTA plus exact box-simplex water-filling, sealed iteration
+counts, KKT partition gates) produces, on four sealed instances
+including the running instance, a dual-void block equal to folds
+$\{1,2,3\}$ \gr{census}.  By \eqref{eq:occ} this is the primal
+saturated block at the right hard edge.
+
+\begin{prop}[Straddle, census]\label{prop:straddle}
+The binding pair $(2,4)$ straddles the saturation-block edge $3\mid 4$:
+fold $2$ lies inside the saturated zone, fold $4$ outside.
+Auxiliary character-twisted families on the same grid have a
+\emph{different} partition --- they occupy fold $1$, with no fold-$1$
+occupation anomaly on $0/42+0/42$ windows --- and a sign-scrambled
+comparison input is disordered at the edge while failing
+$R_{CC}\succ\half I$ ($\lambda_{\min}(R_{CC})-\half=-0.4962$) with
+the pair block itself still positive.  The identity chain is
+world-blind algebra; the partition, and the positivity, are not.
+\end{prop}
+
+The asymptotic equilibrium-measure theorem (BKMM band and saturation
+limit shape for the field $-\log u^{\vee}$) is not proved
+\gr{hypothesis, open}.  The finite partition is a measurement about
+this family.
+
+\section{The observed exponent}\label{sec:alpha}
+
+On the $57$ calibration windows a Theil--Sen fit of
+$\log\lambda_{\min}(S_{N})$ has slope $-3.334$, hitting the standing
+margin exponent $3.332$ at distance $0.002$ and rejecting an
+alternative reading $1.65$ at distance $1.684$ \gr{census}.  The
+diagonal dual-resolvent entries carry the same exponent
+($\lvert(A^{-1})_{11}\rvert$ slope $+3.365$,
+$\lvert(A^{-1})_{22}\rvert$ $+3.292$,
+$\lvert(A^{-1})_{12}\rvert$ $+3.316$).  Weight-side Christoffel
+exponents ($1.79$ and $0.38$ families) miss by a wide margin: they
+do not carry the resolvent diagonals.
+
+A dimensionless combination
+$t_{\mathrm{geo}}
+=(\lambda_{\min}(R)-\half)\,
+\sqrt{(A^{-1})_{11}(A^{-1})_{22}}$
+is margin-locked: slope $-0.009$ on the $57$, range
+$[0.222,\,0.287]$ on all $74$ resolvable windows \gr{census}.  Exact
+algebra identifies $t_{\mathrm{geo}}$ with a function of
+$\det(S_{N}/\varepsilon)$ and the cross share; family-constancy is a
+local-parametrix-class census, not a Gamma-function derivation.
+The Gamma parametrix of \cite[Thm~2.7, Rem~2.8]{BKMM2007} adjacent
+to a saturated band remains the natural analytic candidate
+\gr{hypothesis, open}.
+
+An adjugate identity
+$\det S_{N}\cdot 4\bigl[(A^{-1})_{11}(A^{-1})_{22}-(A^{-1})_{12}^{2}\bigr]
+=1$
+\gr{exact} implies that the wander of $\log\det S_{N}$ \emph{is}
+the wander of $-\log\bigl((A^{-1})_{11}(A^{-1})_{22}\bigr)$
+(fine-structure correlation $+0.9835$), with the cross-share term
+five times subleading.  The leading common wander lives in the
+diagonal resolvent data and cancels algebraically in the minor.
+
+\section{Relative error-operator form}\label{sec:error}
+
+Two constant-matrix targets fail the census and force a relative
+statement.
+
+\paragraph{Rest block.}
+Cauchy interlacing on the principal submatrix $R_{CC}$, and the
+Schur-complement eigenvalue inequality, give
+\begin{equation}\label{eq:rest}
+\lambda_{\min}(R_{CC})-\half
+\;\ge\;
+c\,\bigl(\lambda_{\min}(R)-\half\bigr)
+\qquad\text{with }c=1
+\end{equation}
+as a finite theorem, gated in both directions on the rational toy
+and on $74+84$ resolvable windows \gr{theorem-grade}.  On the
+prime-generated family the measured ratio lies in $[8.8,\,54.2]$
+(median $20.3$).  On the character-twisted families the ratio
+reaches the interlacing line: minima $1.0$ on $11$ of $84$ windows.
+Any analytic rest-block clause is a theorem only at $c=1$; a
+comfortable factor $8.8$ does not transfer.
+
+\paragraph{Leading coefficient.}
+The schematic
+$S_{N}=N^{-\alpha}(M_{0}+O(N^{-\varepsilon}))$
+with $M_{0}$ a constant positive matrix is too rigid.  The condition
+number $\kappa_{S}=\lambda_{\max}(S_{N})/\lambda_{\min}(S_{N})$
+ranges in $[6.3,\,30.5]$ (median $13.9$), a range ratio $4.88>1.5$:
+the margin direction collapses ($\operatorname{bind}$ median
+$1.0058$) but the second eigenvalue wanders by an $O(1)$ factor
+\gr{census}.  The honest form is projective: one controls
+$S_{N}/\lambda_{\min}(S_{N})$ in a bounded set of positive-definite
+matrices, or equivalently the error operator
+$E=P_{\mathrm{true}}P_{\mathrm{model}}^{-1}-I$
+of a local Riemann--Hilbert parametrix in a \emph{relative} operator
+norm on the critical block, not as an additive constant remainder.
+
+No bound on $E$ is proved \gr{open}.  Equation~\eqref{eq:rest} at
+$c=1$ is the only theorem-grade error control presently available,
+and it is finite interlacing, not an asymptotic remainder.
+
+\section{Problem statement}\label{sec:problem}
+
+\begin{problem}[Critical positivity of the bordered dual resolvent]
+\label{prob:rhp}
+Let $(\mu,\nu)$ run over the admissible family of
+\cite{lstar-note}, with dual kernel $R$ and bordered dual resolvent
+$\Rd$ as in Definition~\ref{def:rdagger}.  Which theorem in the
+Riemann--Hilbert analysis of discrete orthogonal polynomials ---
+in particular, which statement in the saturation regime of
+Baik--Kriecherbauer--McLaughlin--Miller
+\emph{\cite[Thm~2.7, Remark~2.8]{BKMM2007}} --- guarantees
+\begin{equation}\label{eq:target}
+\Rd\;\succ\;\half I
+\end{equation}
+uniformly for the unbounded family?  Equivalently, given
+Proposition~\ref{prop:block}, which local parametrix at a hard edge
+adjacent to a saturated band guarantees that the critical
+$3\times3$ Schur block of $\Rd-\half I$ (binding pair plus border)
+stays positive-definite?
+\end{problem}
+
+The finite input to such a theorem is assembled above: reciprocal
+weight \eqref{eq:uvee}; occupation duality \eqref{eq:occ}; a
+census-grade saturated block $\{1,2,3\}$ with the binding pair
+astride the edge $3\mid 4$; observed rate $N^{-3.332}$ carried by
+the diagonal resolvent data; local-parametrix datum
+$t_{\mathrm{geo}}$ margin-locked in $[0.222,\,0.287]$; error
+control in relative/projective form, with rest-block theorem only
+at $c=1$.  The AC/Bessel class is the wrong class
+\cite{Lubinsky2008}.  A Gamma-class derivation at saturation
+adjacency is the standing analytic candidate and is open.
+
+\section{What a proof would give, and what it would not}\label{sec:status}
+
+A proof of \eqref{eq:target} for the unbounded family would give,
+in order:
+$\Rd\succ\half I$
+$\Rightarrow$ $\Ld$
+by Proposition~\ref{prop:A}(A3) \gr{theorem-grade finite algebra};
+$\Ld$ $\Rightarrow$ $\Ls\wedge\mathrm{Terminal}$
+and
+$\Ls\wedge\mathrm{Terminal}$ $\Rightarrow$
+positivity of every bordered window matrix through the cap
+\gr{Lean, sorry-free on the reconstruction layer, axiom audit
+\texttt{RH/Audit.lean}}.  That is window-local master positivity.
+It is not an asymptotic law, not a bound on the Riemann $\xi$-function,
+and not a statement about the Riemann hypothesis in either direction.
+
+What is on the table now is a finite census (at most $85$ windows
+for the hole kernel, $75$ plus one deep row for the border, four
+sealed obstacle instances for the partition) together with exact
+finite-matrix identities.  No Riemann--Hilbert steepest-descent
+analysis has been carried out.  The equilibrium-measure limit, the
+Gamma parametrix, and the error operator $E$ are open.  Comparison
+inputs show that the identities survive source destruction while
+positivity and the saturated partition do not --- so an existence
+proof for \eqref{eq:target} must consume the construction, not
+merely the dual algebra.
+
+Table~\ref{tab:w9} records the running instance.  Every number is a
+sealed probe record.  Numbers not in those records are omitted.
+
+\begin{table}[ht]
+\centering
+\caption{Running instance $z=16$ ($S=367$, $N=184$, pair folds
+$(2,4)$).  Dual quantities: round 356/359.  Occupation and
+obstacle: round 360.  Bordered quantities: round 362.}
+\label{tab:w9}
+\begin{tabular}{lr}
+\toprule
+quantity & value \\
+\midrule
+$\lambda_{\min}(R)$ & $0.500041882$ \\
+$\lambda_{\min}(\Rd)$ & $0.500041459$ \\
+$\operatorname{margin}$ / $\operatorname{margin}^{\dagger}$ &
+  $1.6752\cdot10^{-4}$ / $1.6582\cdot10^{-4}$ \\
+$\operatorname{bind}$ / $\operatorname{bind}^{\dagger}$ &
+  $1.0029$ / $1.0028$ \\
+cross share / share$^{\dagger}$ & $0.6973$ / $0.6990$ \\
+$t_{\mathrm{geo}}$ & $0.2646$ \\
+$o_{\mathrm{dual}}$ at folds $1,2,4$ & $0.1497$, $0.5118$, $0.5137$ \\
+QP dual-void block (KKT gap) & $\{1,2,3\}$ ($+0.092$) \\
+$q^{\dagger}$ / border Schur & $0.933044$ / $1.7319\cdot10^{-2}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\medskip\noindent
+\textbf{Claim boundary.}\enspace
+Research documentation.  Not a proof of $\Ls$, of $\Ld$, or of
+$\Rd\succ\half I$ for the unbounded family.  Not evidence for or
+against the Riemann hypothesis in either direction.
+
+\begin{thebibliography}{9}
+
+\bibitem{Borodin2002}
+A.~Borodin,
+\emph{Duality of orthogonal polynomials on a finite set},
+J.~Statist.\ Phys.\ \textbf{109} (2002), 1109--1120.
+
+\bibitem{BKMM2007}
+J.~Baik, T.~Kriecherbauer, K.~T.-R.~McLaughlin and P.~D.~Miller,
+\emph{Discrete Orthogonal Polynomials: Asymptotics and Applications},
+Ann.\ of Math.\ Studies \textbf{164}, Princeton Univ.\ Press, 2007.
+Theorem~2.7 and Remark~2.8.
+
+\bibitem{Lubinsky2008}
+D.~S.~Lubinsky,
+\emph{A new approach to universality at the edge of the spectrum},
+Int.\ Math.\ Res.\ Papers (2008).
+
+\bibitem{lstar-note}
+S.~Hamann,
+\emph{A strict polynomial subordination inequality for two explicit
+prime-generated discrete measures (open problem)},
+TFPT research repository, \texttt{rh/problem/lstar\_problem.tex},
+August 2026.
+
+\end{thebibliography}
+
+\end{document}
