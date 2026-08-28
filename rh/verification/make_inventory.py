@@ -177,6 +177,8 @@ _R361_STATUS = "The mean sieve on the folded log-p^k phases, adjudicated floor-f
 
 _R362_STATUS = "The augmented Borodin-Uvarov duality -- L-dagger as ONE dual object (round 362, the reviewer moonshot PRIME.LDAGGER.AUGMENTED_DUALITY.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 7d810a9ab7db5c67 final with record, freeze 83b97cd57563e737, two-commit protocol pre-freeze 62ca2bfa / record b8adbf01; three disclosed calibration amendments a1/a2/a3 (chi equivalence retyped two-sided after the FIRST full evaluation found TERMINAL-DEAD chi rungs -- a finding, not a failure; chi border-Schur bar re-sized in the near-cancellation class; twin bar re-sized in the disclosed deepest-rung 1/margin twin-dose class; NO MAIN clause, bar or route moved, every MAIN gate passed at first evaluation).  MAIN VERDICT AUGMENTED_DUALITY_EXACT(route ii) + BORDER_IN_LOCAL_BLOCK: with beta = b/sqrt(B_w) the mu-orthonormal border ray (b_i = int phat_i dsigma, the smooth-comb border measure; B_w = S_{N-2} + 5/7 the r241/r243 budget), v = B_m beta its node-side CD image, gamma = beta.beta and D the r356 sign matrix, the bordered dual resolvent R-dagger := [[R^-1, Dv], [(Dv)^T, 1+gamma]]^-1 satisfies EXACTLY (Fractions toys + graded bars on 75 MAIN + 42 chi3 + 42 chi4 rows + kz133 deep): (A1) G-dagger = D-dagger (R-dagger^-1 - I) D-dagger -- the r356 Borodin complementation extends to the augmented node Gram; (A2) margin-dagger = 2 - 1/lambda_min(R-dagger) (spectral map, similarity-exact); (A3) L-dagger <=> R-dagger > I/2; (A4) the Y-block of R-dagger is a Sherman-Morrison rank-1 deformation of R (the border = a rank-1 Schlesinger/Uvarov insertion at the DUAL RESOLVENT level -- the v958 reading transported to the dual side); (A5) L-dagger <=> L* AND Terminal in dual coordinates with the frame-invariant q-dagger = gamma + v^T (I-E)^-1 v == u^T H^-1 u / B_w == the r266 crit1 coordinate, and the terminal dictionary 1 - q-dagger == (5/7)(1 - q_N)/B_w; (A6) the border-Schur closed form: Schur of R-dagger - I/2 onto the border coordinate == (1-q-dagger)/(2(1+q-dagger)) exactly, and by the Schur quotient the SAME value is carried inside the local 3x3 block (pair + border) -- the border fiber sits in the SAME local object, the moonshot clause made exact; (A7) interlacing lambda_k(R-dagger) <= lambda_k(R) <= lambda_{k+1}(R-dagger).  Measured: bind-dagger in [1.0003, 1.0608] med 1.0056 on the 74 resolvable MAIN rows (the augmented 3x3 block carries the full L-dagger margin AND the terminal fiber); the equivalence census exact and TWO-SIDED including six TERMINAL-DEAD chi rungs (chi3 [15,19,23,33,39], chi4 [20], q_N up to 1.33: lambda_min(R-dagger) - 1/2 goes negative EXACTLY as the theorem demands -- both truth directions live on real windows); kz15 compression mdag/margin = 0.8716 (the two lanes couple spectrally where the terminal channel is tight); share-dagger == the r359 cross share (0.6990 vs 0.6973 at w9, ladder med 0.708 vs 0.702) -- the rank-1 deformation does NOT move the critical resolvent structure at the pair: the r360 saturation lane can consume R-dagger verbatim, ONE critical saturation theorem for the bordered dual resolvent would close BOTH lanes.  Route adjudication honest: route (i) (literal virtual node) DEAD on real windows twice (representability spread 56.8; every border atom collides bitwise with a union grid node), surviving as the exact toy bridge (single-atom border: (S+1)-node Uvarov complementation Fractions-exact at the SHIFTED rank N, S-dagger = 2N -- the half-filling arithmetic moves by exactly one; the literal (S+1)-point dual kernel == route (ii) up to sign conjugation); RANK_SHIFT_MISMATCH correctly off.  Scramble breaks named two prongs (border cone EMPTY at chain flip n = 37 + algebra world-blind at fallback budget with the named R-block clause -0.4963); twin dose-zero bitwise, aug devs 1.2e-3 <= 2.5e-3.  Must-fails 6/6 (m1 budget factor exact 8.382399, m2 rank shift Fractions-exact, m3 AST margin-readback, m4 SM sign 4.9e-3, m5 collision ward, m6 wrong frame 0.769).  Honest: the equivalence is a REPRESENTATION -- L-dagger stays exactly as open as L* AND Terminal, no margin was created; EXT5 + 3 EXT6 rows sealed out of the augmented layer (budget, disclosed; kz133 deep census inside the f64 floor).  Deterministic, record run1/run2 byte-identical up to WALL (507.5/485.0 s).  NO L* claim, NO terminal claim, NO RH claim in either direction"
 
+_R363_STATUS = "The internal full attack on R-dagger > I/2 -- two sharp internal angles, shared machinery, proof-first (round 363, PRIME.LSTAR.DUAL.INTERNAL_ATTACK.01; experiments-side, NO ledger row): 32/32 sealed; SPEC_SHA 09786c2e7b71c9a4 final with record, freeze fd7613339dfc18a0, two-commit protocol pre-freeze de7c55ec / record 4ee4543c; ZERO amendments after freeze (calibration pass 1 = first full evaluation = 32/32, 149.6 s; record run1/run2 byte-identical up to WALL 133.4/140.6 s).  MAIN VERDICT BOTH_PARTIAL(PINNING_REFUTED+EDGE_GAP_LEMMA_NAMED + TERMINAL_RANK_DEAD + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_LIMIT).  ANGLE A: BKMM Thm 2.3 node-pinning REFUTED at census grade on 74 resolvable MAIN rows (sat Hurwitz max 0.462 vs bar 0.15; bulk median 0.257; sat LARGER than bulk, not smaller; pin3 in (0.15, 0.55) on 74/74 -- Gauss-like pair-gap placement, O(1) not exponential, ratios do not shrink in N).  Canonical Sturm census 84/85 (miss kz133 = f64 floor, the r359 row); interpolated-zero interlacing 85/85; zero-count == degree 0-miss graded.  The remaining lemma is EDGE-GAP: why a zero of each consecutive dual OP occupies the unique pair-gap (y2, y1) -- classical Sturm/Markov gives interlacing and the count, not the placement.  The r360 zone {1,2,3} is DUAL-VOID (primal-sat), so dual-OP pinning if it applied would live in the BULK.  ANGLE B: exact CD update R_{n+1}=R_n+vv^T (Fractions rank-1 + trace 1 on the toy; w9 residual 3.3e-17); n_cross/N_w = 183/184, 140/142, 435/436, 877/878 on RANK_KZ -- TERMINAL-RANK (gap 1-2), so Loewner cannot start from a certified small-n head (r282 Toda warning, measured); window-ladder LC_EDGE2 36/71 violations, LC_UVEE 32/71 -- INDUCTION_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The hoped chain Sturm => det S_N > 0 => [c=1] R > I/2 has TWO measured gaps: Sturm does not give det S_N without P_N, W_N signs; c=1 does not give rest>0 (scramble: lamS +1.37e-2, rest -0.4962 -- the live counterexample).  Worlds: chi3 30/42 and chi4 29/42 keep the Sturm pattern (MAY tip -- consistent, not proof-load); chi w9 pin3 1.039/1.038 OUTSIDE the MAIN band; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2).  Twin dose-zero bitwise, |dlog| 6.9e-4, |dpin3| 6.0e-10.  Must-fails 5/5 (m1 Toda AST, m2 circular pinning AST, m3 bar-by-sight AST, m4 wrong OP indices, m5 c=1 misquote).  Anchors w9: pin3 0.293/0.310, sat_max 0.310, bulk 0.267, n_cross 183, lamRd 0.500041459, q-dagger 0.933044.  Honest: both internal angles need genuine new analysis (edge-gap placement as SATZ; rest positivity as SATZ; an induction with a loss term that actually holds) -- INTERNAL_LIMIT measured, the external RHP/BKMM path remains open as a documented option, not a freeze.  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
+
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
 # sync with rh/INVENTORY.json: every rh-sync/promotion wave that
 # touches the inventory MUST extend this list in the same change
@@ -1693,6 +1695,41 @@ ENTRIES = [
      [],
      "compiled PDF of medcap_lemma.tex (recompiled artefact, "
      "registered unpinned)", False),
+    ("rh/problem/xn_invariant.tex", "problem_statement",
+     "r364 companion",
+     [],
+     "proof attempt for the r361 remainder X_n (the length-sequence "
+     "invariant of the folded sign field): pairing of positive run "
+     "lengths proves n=1 only as the odd tail at theta-min, forbids "
+     "prefixes (2,1) and (1,1), and isolates the unique possible "
+     "sep=3/2 locus as the edge pair (1,2); pairing does NOT forbid "
+     "C2 (random paired runs still violate; Chebyshev colourings do "
+     "not produce (1,2)).  On the 134-window surface n=1 occurs 32 "
+     "times (always index 0), (1,2) occurs once (chi4 kz53, "
+     "saturating prefix (1,2,6,5,4,4), nearest n>=7 at index 7).  "
+     "Named remainder V2: local run-length regularity of the "
+     "bordered-chain polynomial v2 at the 20pct x-mask (no 6-plateau "
+     "after three singleton runs).  Minimal grid-consistent violator "
+     "named.  Finite identities plus a named analytic remainder; "
+     "NO RH claim", True),
+    ("rh/problem/verify_xn_steps.py", "problem_check",
+     "r364 companion",
+     [],
+     "machine check of every numbered lemma in xn_invariant.tex: "
+     "standalone pairing combinatorics (n=1 only odd tail, no (2,1) "
+     "or (1,1), small-sep only edge (1,2), C2 16/3 still violates, "
+     "short C2 third=6, saturating and single-spike n=7 with return "
+     "to 4 both third=4, random paired violators, Chebyshev x-mask "
+     "0 C2) plus construction cross-check (sign(ct)=sign(w x v2); "
+     "n_i equals paired smooth-grid runs; n=1 at index 0 and four "
+     "w9 worlds have no (1,2); chi4 kz53 prefix "
+     "(1,2,6,5,4,4,4,8) third=4 ratio 8/3, nearest n>=7 at 7).  "
+     "12/12 gates, final line XN STEPS VERIFIED", True),
+    ("rh/problem/xn_invariant.pdf", "problem_statement",
+     "r364 companion",
+     [],
+     "compiled PDF of xn_invariant.tex (recompiled artefact, "
+     "registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -1783,6 +1820,11 @@ ENTRIES = [
      "r362",
      [],
      _R362_STATUS,
+     True),
+    (f"{EXP}/canonical_sturm_induction_probe.py", "sealed_probe",
+     "r363",
+     [],
+     _R363_STATUS,
      True),
 ]
 

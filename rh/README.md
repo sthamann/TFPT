@@ -4386,7 +4386,10 @@ lemma is **not** interval geometry.  The saturating prefix
 five neighbour-gaps = 4 = (8/3)·(3/2)).  Remainder X_n: the
 source n-sequence forbids a C2 jump at small-sep loci (sign-run
 pairing of an arbitrary ± colouring does not).  11/11 machine
-gates, `MEDCAP STEPS VERIFIED`.  NO RH CLAIM.
+gates, `MEDCAP STEPS VERIFIED`.  Round 364 (`xn_invariant.tex`)
+proves the pairing half of that remainder and names $V_2$ (local
+$v_2$-spacing at the $x$-mask); on the 134-window surface $X_n$
+holds (unique $(1,2)$ = the equality case).  NO RH CLAIM.
 Experiments-side, NO ledger row, NO RH CLAIM.
 
 **The augmented Borodin–Uvarov duality — L† as ONE dual object
@@ -4446,6 +4449,45 @@ matched scramble breaks named, two prongs (border cone EMPTY at
 chain flip n = 37; algebra world-blind at fallback budget with
 the named R-block clause −0.4963).  Experiments-side, NO ledger
 row, NO L\* claim, NO terminal claim, NO RH CLAIM.
+
+**The internal full attack on R† ≻ ½I — two sharp internal
+angles (r363, PRIME.LSTAR.DUAL.INTERNAL_ATTACK.01).**
+`canonical_sturm_induction_probe.py` (32/32, SPEC_SHA
+`09786c2e7b71c9a4` final with record, freeze `fd7613339dfc18a0`,
+two-commit protocol: pre-freeze `de7c55ec`, record `4ee4543c`;
+ZERO amendments after freeze; calibration = first full evaluation
+= 32/32, 149.6 s; record run1/run2 byte-identical up to WALL
+133.4/140.6 s).  **Verdict `BOTH_PARTIAL(PINNING_REFUTED+
+EDGE_GAP_LEMMA_NAMED + TERMINAL_RANK_DEAD +
+STURM_CANONICAL_CENSUS(84/85 MAIN) + COMPOSITION_TYPED +
+INTERNAL_LIMIT)`.**  Angle A: the BKMM Thm 2.3 node-pinning
+reading is **refuted** at census grade on 74 resolvable MAIN rows
+(sat Hurwitz max 0.462 vs bar 0.15; bulk median 0.257; sat is
+*larger* than bulk; pin3 in (0.15, 0.55) on 74/74 — Gauss-like
+pair-gap placement, O(1), not shrinking in N).  Canonical Sturm
+census 84/85 (miss kz133 = the r359 f64 floor); interpolated-zero
+interlacing 85/85.  The remaining named lemma is **EDGE-GAP**
+(why a zero of each consecutive dual OP occupies the unique
+pair-gap (y₂, y₁) — Sturm/Markov gives interlacing and the count,
+not the placement).  The r360 zone {1,2,3} is dual-void
+(primal-sat), so dual-OP pinning if it applied would live in the
+bulk.  Angle B: the CD update R_{n+1}=R_n+vvᵀ is exact
+(Fractions rank-1; w9 residual 3.3e−17); n_cross sits at
+terminal rank (183/184, 140/142, 435/436, 877/878) — Loewner
+cannot start from a certified small-n head; window-ladder
+LC_EDGE2 36/71 and LC_UVEE 32/71 violations, so INDUCTION_GO
+does not fire.  Composition: Schur split and Cauchy rest≥eps
+are SATZ; det S_N>0 and rest>0 are census; the hoped chain
+Sturm ⇒ det S_N > 0 ⇒ [c=1] R ≻ ½I has two measured gaps
+(Sturm does not give det S_N without P_N, W_N signs; c=1 does
+not give rest>0 — scramble is the live counterexample, lamS
++1.37e−2 and rest −0.4962).  χ worlds MAY tip (30/42, 29/42);
+scramble MUST tip (straddle fails).  Must-fails 5/5.  Honest:
+both internal angles need genuine new analysis — INTERNAL_LIMIT
+measured; the external RHP/BKMM path remains a documented
+option, not a freeze for externals.  Experiments-side, NO
+ledger row, NO L\* claim, NO R† claim, NO RH CLAIM.  Mincut
+unchanged (base 4 / refined 5).
 
 ## Folder guide
 
@@ -4541,10 +4583,15 @@ rh/
 │   │                     MED-CAP inequality med_i ≤ (8/3) sep_i
 │   │                     (SEP-SATZ proved; tiling reduction;
 │   │                     C2 obstruction named).  No RH claim
+│   ├── xn_invariant.tex(+pdf) — r364: pairing theorem for X_n
+│   │                     (n=1 only odd tail; unique sep=3/2 is
+│   │                     edge (1,2); remainder V2 named).  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
-│   └── verify_medcap_steps.py — machine check of every numbered
-│                         lemma in medcap_lemma.tex (11/11)
+│   ├── verify_medcap_steps.py — machine check of every numbered
+│   │                     lemma in medcap_lemma.tex (11/11)
+│   └── verify_xn_steps.py — machine check of xn_invariant.tex
+│                         (12/12, XN STEPS VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -4631,6 +4678,26 @@ is saturated by the edge prefix `(1,2,6,5,4,4)` at χ4 kz53
 `verify_medcap_steps.py`, 11/11 gates, `MEDCAP STEPS VERIFIED`.
 Finite identities plus a named combinatorial remainder.  NO RH
 CLAIM.
+
+A fourth standalone note, `rh/problem/xn_invariant.pdf` (August 28,
+2026), is the proof attempt for that remainder $X_n$ (round 364,
+no sealed discovery probe).  Pairing of positive run lengths
+proves: $n=1$ occurs only as the odd tail at $\theta$-min;
+prefixes $(2,1)$ and $(1,1)$ are impossible; the unique possible
+$\mathrm{sep}=\tfrac32$ locus is the edge pair $(1,2)$.  Pairing
+does **not** forbid $C_2$ (random paired runs still violate; a
+Chebyshev colouring after the $x$-mask never produces $(1,2)$).
+On the 134-window surface $n=1$ occurs 32 times (always index 0)
+and $(1,2)$ occurs **once**: $\chi_4$ kz53, saturating prefix
+`(1,2,6,5,4,4)`, nearest $n\ge 7$ at index 7 (outside the
+radius-5 window).  Named remainder $V_2$: local run-length
+regularity of the bordered-chain polynomial $v_2$ at the 20%
+$x$-mask (no 6-plateau after three singleton runs).  The minimal
+grid-consistent violator is named.  On the surface, $X_n$ holds,
+hence MED-CAP holds, hence the pointwise floor $g_i\ge 3/8$ holds,
+hence $T_2'$ trivialises; $C_K$ is unchanged.  Companion script
+`verify_xn_steps.py`, 12/12 gates, `XN STEPS VERIFIED`.  Finite
+identities plus a named analytic remainder.  NO RH CLAIM.
 
 ## The RH suite
 
@@ -4887,6 +4954,12 @@ sorry-free; `#print axioms` = `propext/Classical.choice/Quot.sound`
 only). Census **8** by the ONE named transcription
 `augmentedSubordination_iff_dualResolvent` (window L† ↔ the node-Gram
 cone; same class as `pair_terminal_dictionary`).  NO RH CLAIM.
+**r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
+touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
+transcription. A parallel Lean worker may hold a red `lake build`
+from WIP on that file; r364 does not treat a red Lean gate as its
+own failure. The suite surface of this round is integrity +
+probes (`run_rh.py --fast --skip-lean`).
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in

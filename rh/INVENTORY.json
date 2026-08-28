@@ -1546,6 +1546,36 @@
       "bytes": 246032
     },
     {
+      "path": "rh/problem/xn_invariant.tex",
+      "role": "problem_statement",
+      "round": "r364 companion",
+      "ledger_ids": [],
+      "status": "proof attempt for the r361 remainder X_n (the length-sequence invariant of the folded sign field): pairing of positive run lengths proves n=1 only as the odd tail at theta-min, forbids prefixes (2,1) and (1,1), and isolates the unique possible sep=3/2 locus as the edge pair (1,2); pairing does NOT forbid C2 (random paired runs still violate; Chebyshev colourings do not produce (1,2)).  On the 134-window surface n=1 occurs 32 times (always index 0), (1,2) occurs once (chi4 kz53, saturating prefix (1,2,6,5,4,4), nearest n>=7 at index 7).  Named remainder V2: local run-length regularity of the bordered-chain polynomial v2 at the 20pct x-mask (no 6-plateau after three singleton runs).  Minimal grid-consistent violator named.  Finite identities plus a named analytic remainder; NO RH claim",
+      "pin": true,
+      "sha256": "867f5482fdd94535c7206b0887169794b4829f9f04f536e468d6b563f652f34e",
+      "bytes": 18538
+    },
+    {
+      "path": "rh/problem/verify_xn_steps.py",
+      "role": "problem_check",
+      "round": "r364 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in xn_invariant.tex: standalone pairing combinatorics (n=1 only odd tail, no (2,1) or (1,1), small-sep only edge (1,2), C2 16/3 still violates, short C2 third=6, saturating and single-spike n=7 with return to 4 both third=4, random paired violators, Chebyshev x-mask 0 C2) plus construction cross-check (sign(ct)=sign(w x v2); n_i equals paired smooth-grid runs; n=1 at index 0 and four w9 worlds have no (1,2); chi4 kz53 prefix (1,2,6,5,4,4,4,8) third=4 ratio 8/3, nearest n>=7 at 7).  12/12 gates, final line XN STEPS VERIFIED",
+      "pin": true,
+      "sha256": "cb04a56b0bd184771cbc9117d9317506b92aee29a973f5e3d18176bc3a986243",
+      "bytes": 13347
+    },
+    {
+      "path": "rh/problem/xn_invariant.pdf",
+      "role": "problem_statement",
+      "round": "r364 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of xn_invariant.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "d6aa404acc14cf7329a8516dc4e1361e06ecee6f8866bc1a22e1bb38cb8c84af",
+      "bytes": 251878
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -1720,8 +1750,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "9ef4d902fd1c56ee4179be0fca21ad7f098bda835bffe327b49387e4953c31c2",
-      "bytes": 5224519
+      "sha256": "95bff2eb3508951764c93aaf408c7cdfb96aa0ea3a0433453566fae7ff779aea",
+      "bytes": 5233607
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -1772,6 +1802,16 @@
       "pin": true,
       "sha256": "9cc8c317e932303ee6b6d6b00c3e2842f021593cbc520400f5a622bbf92c0fff",
       "bytes": 99576
+    },
+    {
+      "path": "experiments/tfpt-discovery/canonical_sturm_induction_probe.py",
+      "role": "sealed_probe",
+      "round": "r363",
+      "ledger_ids": [],
+      "status": "The internal full attack on R-dagger > I/2 -- two sharp internal angles, shared machinery, proof-first (round 363, PRIME.LSTAR.DUAL.INTERNAL_ATTACK.01; experiments-side, NO ledger row): 32/32 sealed; SPEC_SHA 09786c2e7b71c9a4 final with record, freeze fd7613339dfc18a0, two-commit protocol pre-freeze de7c55ec / record 4ee4543c; ZERO amendments after freeze (calibration pass 1 = first full evaluation = 32/32, 149.6 s; record run1/run2 byte-identical up to WALL 133.4/140.6 s).  MAIN VERDICT BOTH_PARTIAL(PINNING_REFUTED+EDGE_GAP_LEMMA_NAMED + TERMINAL_RANK_DEAD + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_LIMIT).  ANGLE A: BKMM Thm 2.3 node-pinning REFUTED at census grade on 74 resolvable MAIN rows (sat Hurwitz max 0.462 vs bar 0.15; bulk median 0.257; sat LARGER than bulk, not smaller; pin3 in (0.15, 0.55) on 74/74 -- Gauss-like pair-gap placement, O(1) not exponential, ratios do not shrink in N).  Canonical Sturm census 84/85 (miss kz133 = f64 floor, the r359 row); interpolated-zero interlacing 85/85; zero-count == degree 0-miss graded.  The remaining lemma is EDGE-GAP: why a zero of each consecutive dual OP occupies the unique pair-gap (y2, y1) -- classical Sturm/Markov gives interlacing and the count, not the placement.  The r360 zone {1,2,3} is DUAL-VOID (primal-sat), so dual-OP pinning if it applied would live in the BULK.  ANGLE B: exact CD update R_{n+1}=R_n+vv^T (Fractions rank-1 + trace 1 on the toy; w9 residual 3.3e-17); n_cross/N_w = 183/184, 140/142, 435/436, 877/878 on RANK_KZ -- TERMINAL-RANK (gap 1-2), so Loewner cannot start from a certified small-n head (r282 Toda warning, measured); window-ladder LC_EDGE2 36/71 violations, LC_UVEE 32/71 -- INDUCTION_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The hoped chain Sturm => det S_N > 0 => [c=1] R > I/2 has TWO measured gaps: Sturm does not give det S_N without P_N, W_N signs; c=1 does not give rest>0 (scramble: lamS +1.37e-2, rest -0.4962 -- the live counterexample).  Worlds: chi3 30/42 and chi4 29/42 keep the Sturm pattern (MAY tip -- consistent, not proof-load); chi w9 pin3 1.039/1.038 OUTSIDE the MAIN band; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2).  Twin dose-zero bitwise, |dlog| 6.9e-4, |dpin3| 6.0e-10.  Must-fails 5/5 (m1 Toda AST, m2 circular pinning AST, m3 bar-by-sight AST, m4 wrong OP indices, m5 c=1 misquote).  Anchors w9: pin3 0.293/0.310, sat_max 0.310, bulk 0.267, n_cross 183, lamRd 0.500041459, q-dagger 0.933044.  Honest: both internal angles need genuine new analysis (edge-gap placement as SATZ; rest positivity as SATZ; an induction with a loss term that actually holds) -- INTERNAL_LIMIT measured, the external RHP/BKMM path remains open as a documented option, not a freeze.  NO L* claim, NO R-dagger claim, NO RH claim in either direction",
+      "pin": true,
+      "sha256": "04b899d2c3974baab4fb56afacee3707b01379c6b8c80e5fc3e973f1eb335ffb",
+      "bytes": 70621
     }
   ]
 }
