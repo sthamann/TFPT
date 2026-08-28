@@ -4632,6 +4632,49 @@ Coexistence: r371 (compound-CD), r372 (source-Prüfer) and
 r373 (Lean transcription) are parallel lanes; this round is
 additive.
 
+**The matrix-valued Weyl phase index (r370, reviewer sequence
+step 2 after the r369 stop, PRIME.LDAGGER.MATRIX_WEYL_INDEX.01).**
+`matrix_weyl_index_probe.py` (31/31, SPEC_SHA `b12b5fc38301767b`
+final with record, freeze `f6e1a704fcaf838b`, two-commit
+protocol: pre-freeze `e44af3cd`, record this change; ONE
+disclosed instrument amendment a1 — cal1 killed on EXT6
+Nw~8000; census Ξ := nneg Φ(0), EXT6 dropped from the Weyl
+ladder; NO bar/kill-test/verdict letter moved; record
+run1/run2 byte-identical up to WALL 707.9/704.3 s).
+**Verdict `NO_JACOBI_LINEARIZATION + PHASE_RESTATEMENT +
+PHI_MONOTONE_SATZ + PHASE_CENSUS`.**  `CANONICAL_PHASE_CARRIER`
+does **not** fire (the 70% resource trigger stays off).
+(1) **Φ_N(z) and Φ′ ⪰ 0 are SATZ.**  Block resolvent
+(A₀-eigh + pad); Fractions det-lemma exact (`2293/150` at
+z=−2, consumes the target char poly); live min eig Φ′ =
+8.949e−09 on 18/18 admissible grid nodes.  w9 Φ(0) σ =
+(−2.8132, −0.06648, 1.8039); large pair tracks r367 K₂;
+mixed residual 1.9e−15.
+(2) **The 3×3 Wronskian dictionary fails at a named place.**
+Dual p and dual-measure Cauchy q satisfy the three-term
+recurrence (2×2 Casoratian drift 3.1e−12, source-pure).
+Border Cauchy r_n residual 3.615e−02 — not a homogeneous
+dual solution, so there is no 3×3 Jacobi Casoratian of
+(p, q, r).  r359 IIKS does not z-lift to A₀ (rel 1.003).
+C_N > 0 is not constructed.
+(3) **Phase census.**  Ξ := nneg Φ(0).  MAIN 81 rows
+(a1: EXT6 dropped) resolvable 74/74 PD, Ξ==nnegΦ, balance
+(bar 74+); twin |dΞ|=0; χ3-w9 vacuous positive; six
+terminal-dead χ classified negative (χ3 5/5, χ4 1/1) via
+want_pd/ctrl/q_N (Ξ follows nnegΦ and is 0 on kz23/33/20,
+1 on kz15/19/39 — not a magic Ξ value); scramble named
+nnegA₀=21 and nf=37.  Phase turns at A's poles, not at
+named Y-nodes.  Shadow corr(Ξ, log|margin|) = +0.201.
+(4) **Anti-restatement.**  Haynsworth auto-recognizes a
+source-free PD target; the Wronskian dictionary is
+undefined there.  Real-line Ξ **is** nneg Φ(0), so the
+index is Haynsworth inertia in other coordinates.
+Must-fails 4/4.  Experiments-side, NO ledger row, NO L\*
+claim, NO R† claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).  Coexistence: r371 (compound-CD),
+r372 (source-Prüfer) and r373 (Lean) are parallel lanes;
+this round is additive.
+
 **The exterior-square kill test of the canonical CD two-form
 (r371, reviewer solution 3, PRIME.LSTAR.DUAL.COMPOUND_CD.01).**
 `compound_cd_wedge_probe.py` (30/30, SPEC_SHA `3b5b3c887d515ffd`
@@ -4671,8 +4714,8 @@ nneg=21, P2 survives, wterm = −3.022 measured.  Must-fails
 algebra; the overload theorem stays census.  Experiments-side,
 NO ledger row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
 (base 4 / refined 5).  Coexistence: r369 (mixed Haynsworth),
-r372 (source-Prüfer) and r373 (Lean) are parallel lanes;
-this round is additive.
+r370 (matrix Weyl), r372 (source-Prüfer) and r373 (Lean) are
+parallel lanes; this round is additive.
 
 **The source-Jacobi Prüfer one-defect test (r372, reviewer
 solution 2 / Terminal, PRIME.TERMINAL.SOURCE_PRUFER_ONE_DEFECT.01).**
@@ -4703,8 +4746,9 @@ one-turning phase regularity.  Scrambles P1_ADMISSION ×3
 Cofinal rest unchanged: V₂ as a lemma + a family-uniform
 T1 theorem.  Experiments-side, NO ledger row, NO L\* claim,
 NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
-Coexistence: r369 (mixed Haynsworth), r371 (compound-CD)
-and r373 (Lean) are parallel lanes; this round is additive.
+Coexistence: r369 (mixed Haynsworth), r370 (matrix Weyl),
+r371 (compound-CD) and r373 (Lean) are parallel lanes;
+this round is additive.
 
 ## Folder guide
 
@@ -5241,21 +5285,28 @@ step 1); it does not touch `rh/problem/` or `rh/lean/` (the
 `haynsworth_mixed` Lean statement lives in the probe spec;
 proof is R373). Suite surface of this round: integrity +
 probes (`run_rh.py --fast`) after appending the sealed probe
-to the inventory. r371/r372/r373 are parallel lanes and are
+to the inventory. r370/r371/r372/r373 are parallel lanes and are
 not dropped.
+**r370 coexistence.** Round 370 (`matrix_weyl_index_probe.py`) is
+additive on the L† dual lane after r369 (reviewer sequence
+step 2, the matrix Weyl phase index); it does not touch
+`rh/problem/` or `rh/lean/`. Suite surface of this round:
+integrity + probes (`run_rh.py --fast`) after appending the
+sealed probe to the inventory. r371/r372/r373 are parallel
+lanes and are not dropped.
 **r371 coexistence.** Round 371 (`compound_cd_wedge_probe.py`) is
 additive on the L* dual lane after r367 (reviewer solution 3,
 the canonical two-form); it does not touch `rh/problem/` or
 `rh/lean/`. Suite surface of this round: integrity + probes
 (`run_rh.py --fast`) after appending the sealed probe to the
-inventory. r369/r372/r373 are parallel lanes and are not
+inventory. r369/r370/r372/r373 are parallel lanes and are not
 dropped.
 **r372 coexistence.** Round 372 (`source_prufer_one_defect_probe.py`)
 is additive on the Terminal/source-Jacobi lane after r365/r368
 (reviewer solution 2); it does not touch `rh/problem/` or
 `rh/lean/`. Suite surface of this round: integrity + probes
 (`run_rh.py --fast`) after appending the sealed probe to the
-inventory. r369/r371/r373 are parallel lanes and are not
+inventory. r369/r370/r371/r373 are parallel lanes and are not
 dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface

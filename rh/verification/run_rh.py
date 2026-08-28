@@ -161,6 +161,7 @@ PROBES = [
     ("r367", "final_two_rank_inertia_probe.py"),
     ("r368", "weighted_l2_t1_probe.py"),
     ("r369", "mixed_haynsworth_probe.py"),
+    ("r370", "matrix_weyl_index_probe.py"),
     ("r371", "compound_cd_wedge_probe.py"),
     ("r372", "source_prufer_one_defect_probe.py"),
 ]

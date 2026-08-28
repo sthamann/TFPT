@@ -161,18 +161,34 @@ SEALED CONSTANTS: MAIN_KZ 9; REC (S 367, S_- 104, N_w 184);
 REC_MARGIN 1.6752e-4 rel 0.01; MIX_BAR 1e-10; DEN_REL 1e-3;
 PHI_REL_LARGE 2e-2; PHI_REL_SMALL 5e-2; K2_TRACK_REL 2e-2;
 MDL_BAR 1e-8; MONO_FLOOR -1e-10 (f64 PSD floor); XI is an
-exact integer; PQ_DRIFT 1e-8; BORDER_LOUD 1e-8 (scoped
-0.036); IIKS_Z_FAIL 0.05 (scoped >= 0.23); POLE_PAD 1e-3;
-Z_GRID the sealed tuple below (NOT a function of sigma(A));
-Z_TEST 2.5 (outside [-1,1], for recurrence wards);
-DEAD_CHI3 (15, 19, 23, 33, 39); DEAD_CHI4 (20,);
-WORLD_KZ (18, 9, 52, 119, 42, 130); SCR_SEED 1; SCR_NF 37;
+exact integer EQUAL TO nneg Phi(0) (real-line endpoint;
+the sealed Z_GRID is the monotonicity + pole-anatomy
+instrument, not the world-classification letter -- a1);
+PQ_DRIFT 1e-8; BORDER_LOUD 1e-8 (scoped 0.036); IIKS_Z_FAIL
+0.05 (scoped >= 0.23); POLE_PAD 1e-3; Z_GRID the sealed
+tuple below (NOT a function of sigma(A)); Z_TEST 2.5
+(outside [-1,1], for recurrence wards); DEAD_CHI3
+(15, 19, 23, 33, 39); DEAD_CHI4 (20,); WORLD_KZ
+(18, 9, 52, 119, 42, 130); SCR_SEED 1; SCR_NF 37;
 SCR_NNEGA0 21; TWIN_BAR 1e-3 (dlog detPhi); RESTATE_CORR
 0.999; RESOLV_FLOOR 1e-9; N_CHI_MIN 21; TOY_TOL 1e-12;
 INERTIA_FLOOR / MP_ZERO verbatim r367; runtime <= 1800 s;
 smoke = toys + firewall + scopes + mutants + w9 Weyl block
 + chi3-w9 + one dead (chi3-15) + chi4-20 + scramble;
 ladder / twin / chi-ladders / shadow-corr skipped.
+CALIBRATION AMENDMENT a1 (after the FIRST full evaluation
+was killed on EXT6 Nw~8000 mixed+eigh, ~16 min in, 81/85
+MAIN rows already printed ALL want_pd/ctrl/bal True,
+mixed residual <= 1.5e-14): (i) the census index Xi is
+nneg Phi(0) -- the real-line (1/pi)Delta arg, which IS
+the endpoint inertia; grid-Xi undercounted on rows whose
+A-poles sit within POLE_PAD of a grid node (disclosed,
+w9 grid-Xi still matches); (ii) EXT6 (4 rows, Nw
+6500-7900) dropped from the Weyl ladder -- 42+15+12+6+6
+= 81 rows still clears the 74+ bar; G30 still verifies
+the sealed EXT6 selection without evaluating those
+matrices.  NO bar, kill-test, scramble named-break,
+dictionary named-break or verdict letter moved.
 
 SEALED VERDICT FORM (frozen BEFORE evaluation, joined with
 '+'; precedence TARGET_LEAK > CHAIN_FAIL > the adjudicated
@@ -221,7 +237,79 @@ progress in either direction; the DCCX STOP list stands;
 r243..r369 stand; Mincut unchanged.
 
 RECORD TABLES (inserted AFTER the record run -- the only
-post-freeze edit; TWO-COMMIT PROTOCOL):
+post-freeze edit; TWO-COMMIT PROTOCOL EXECUTED: smoke 31/31
+x2 byte-identical; sealed spec committed as "r370 pre-freeze"
+(e44af3cd, SPEC_SHA freeze f6e1a704fcaf838b) BEFORE the first
+complete full evaluation; ONE disclosed instrument amendment
+a1 after cal1 was killed on EXT6 Nw~8000 mixed+eigh (~16 min
+in, 81/85 rows already all PD/ctrl/bal): census Xi := nneg
+Phi(0) (grid-Xi is anatomy-only), EXT6 dropped from the Weyl
+ladder (G30 still verifies the sealed selection); NO bar,
+kill-test, scramble named-break, dictionary named-break or
+verdict letter moved; cal2 = FIRST complete full evaluation
+= 31/31 (716.4 s); record run1 = 31/31 (707.9 s), run2 =
+31/31 (704.3 s), byte-identical up to WALL; evaluation
+SPEC_SHA before this insert 7ff391c0a289f1a2):
+MAIN VERDICT = NO_JACOBI_LINEARIZATION(named: the border
+Cauchy r_n is not a homogeneous dual solution, residual
+3.615e-02 at w9 / 0.354 toy; A0 is a dense CD Gram on Y
+not a node-Jacobi; r359 IIKS does not z-lift to A0, rel
+1.003) + PHASE_RESTATEMENT(real-line Xi = nneg Phi(0);
+Haynsworth already equates the positivity control with
+M^dagger PD -- the Wronskian route that would replace
+hBal by an oriented Casoratian count does not close; the
+2x2 (p, q) Casoratian exists and is source-pure but does
+not factor det Phi) + PHI_MONOTONE_SATZ + PHASE_CENSUS +
+MUSTFAIL_LEDGER.
+CANONICAL_PHASE_CARRIER does NOT fire (the 70-pct resource
+trigger stays off).  WORLD_BLIND does not fire.  TARGET_LEAK
+does not fire.
+LEG A: Phi_N(z) = J^{-1} + U^T (A-z)^{-1} U is the block
+resolvent (A0-eigh + pad).  Fractions matrix-det lemma at
+z=-2: det Phi = 2293/150 exact (consumes the TARGET char
+poly -- SATZ skeleton, not the source dictionary).  Phi'
+⪰ 0 exact on the toy (In = (3,0,0)); live min eig Phi'
+= 8.949e-09 on 18/18 admissible Z_GRID nodes (2 skipped
+near poles, pad 1e-3).  w9 Phi(0) sigma = (-2.8132,
+-0.06648, 1.8039) det 0.3374; LARGE pair TRACKS r367 K2;
+mixed residual 1.9e-15; den = 1.601114.
+LEG B: the 3x3 dictionary FAILS at a named place.  Dual
+p and dual-measure Cauchy q satisfy the three-term
+recurrence (p-rec 0, q-rec 1.2e-14, 2x2 Casoratian drift
+3.1e-12, W source-pure).  Border Cauchy r_n residual
+3.615e-02 -- NOT a homogeneous dual solution, so there is
+no 3x3 Jacobi Casoratian of (p, q, r).  Node-basis IIKS
+for (A0)^{-1} with the two CD columns rel 1.003 (r359
+does not z-lift).  C_N > 0 is therefore not constructed.
+LEG C: census index Xi := nneg Phi(0).  MAIN 81 rows
+(a1: EXT6 dropped; G30 EXT5 (69,107,101,99,115,89) EXT6
+(133,129,124,117) verified): resolvable 74/74 want_pd,
+Xi==nnegPhi, ctrl iff PD, balance (bar 74+); printed 81/81
+PD/ctrl/bal, Xi dichotomy 49 (Xi=2) / 32 (Xi=1).  Twin
+WORLD_KZ |dXi|=0, |dlog det Phi|=3.8e-06 nats.  chi3-w9
+VACUOUS POSITIVE (nnegA0=0, nnegPhi=1, q_N=0.247).  Six
+terminal-dead classified NEGATIVE (chi3 5/5, chi4 1/1,
+chi3/chi4 built 42/42): q_N (1.277, 1.057, 1.207, 1.296,
+1.040; 1.330), want_pd False, ctrl False; Xi follows
+nnegPhi and is 0 on kz23/33/20, 1 on kz15/19/39 -- the
+negative letter is PD/ctrl/q_N, not a magic Xi value.
+Scramble seed 1 named-breaks at nnegA0=21 AND border nf=37
+(ok_mix False -- mixed algebra not reached).  Oriented
+anatomy at w9: 2 nneg-jumps, each interval contains a pole
+of A (pad -1/2 and A0's negative); phase turns at A's
+poles, not at named Y-nodes.  Shadow corr(Xi, log|margin|)
+= +0.2013.
+LEG D: kill-test 7 two layers -- a source-free PD target
+M = I_5 + U U^T is AUTO-RECOGNIZED by Haynsworth (restatement
+of M PD); the Wronskian dictionary is UNDEFINED there, so
+the source-specific index SATZ does not fire.
+LEG E: must-fails 4/4 (kernel-Green AST, wrong Green
+residual 14100 vs (A0)^{-1}, z-grid-by-sight AST, lamRd /
+margin / detM readbacks AST).
+Runtime 707.9 / 704.3 s rec1/rec2; smoke 0.4 s; cal2 716.4 s.
+AMENDMENTS AFTER FREEZE: a1 only, disclosed above.
+
+NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
 from __future__ import annotations
@@ -692,23 +780,22 @@ def phase_index(ev, QTU, den, z_grid=None):
 
 def weyl_rung(xu, wu, yn, vn, Nw, S, L, i1, i2,
               xp, wp, bxs, bws, bys, bvs, Bm=None,
-              with_dict=False):
+              with_dict=False, with_phase=False):
     """THE r370 BLOCK of one window: the r369 mixed form
-    (verbatim construction), then Phi(z) via the A0-
-    eigendecomposition + pad, the sealed phase index, and
-    optionally the source-pure (p, q, r) dictionary wards.
-    Consumes measure arrays, pair indices and the border
-    window only."""
+    (verbatim construction).  The census index Xi is
+    nneg Phi(0) -- the real-line phase index (a1).  The
+    A0-eigendecomposition + sealed grid (Phi', pole
+    anatomy, dictionary) run only when with_phase /
+    with_dict (w9).  Consumes measure arrays, pair
+    indices and the border window only."""
     o = MH.mixed_rung(xu, wu, yn, vn, Nw, S, L, i1, i2,
                       xp, wp, bxs, bws, bys, bvs, Bm=Bm)
-    ck = FTI.cut_rung(xu, wu, yn, vn, Nw, S, L, i1, i2,
-                      keep=True)
-    out = dict(ok_sup=o.get("ok_sup", ck["ok_sup"]),
+    out = dict(ok_sup=o.get("ok_sup", False),
                ok_border=o.get("ok_border", False),
                ok_mix=o.get("ok_mix", False),
                nf=o.get("nf", -1),
-               nnegA0=ck["nneg"], P1=ck["P1"], P2=ck["P2"],
-               Nw=Nw, Sm=ck["Sm"],
+               nnegA0=o.get("nnegA0"), P1=o.get("P1"),
+               P2=o.get("P2"), Nw=Nw, Sm=o.get("Sm"),
                den=o.get("den", float("nan")),
                dev_mix=o.get("dev_mix", float("nan")),
                nnegA=o.get("nnegA"), nnegPhi=o.get("nnegPhi"),
@@ -721,9 +808,15 @@ def weyl_rung(xu, wu, yn, vn, Nw, S, L, i1, i2,
                lamRd=o.get("lamRd", float("nan")),
                qN=o.get("qN", float("nan")),
                sig=o.get("sig"),
-               Xi=None, min_prime=float("nan"))
-    if not o.get("ok_mix"):
+               Xi=o.get("nnegPhi"), min_prime=float("nan"))
+    if not o.get("ok_mix") or not (with_phase or with_dict):
         return out
+    ck = FTI.cut_rung(xu, wu, yn, vn, Nw, S, L, i1, i2,
+                      keep=True)
+    out["nnegA0"] = ck["nneg"]
+    out["P1"] = ck["P1"]
+    out["P2"] = ck["P2"]
+    out["Sm"] = ck["Sm"]
     A0 = ck["A0"]
     Ucd = ck["U"]
     Sm = ck["Sm"]
@@ -753,15 +846,18 @@ def weyl_rung(xu, wu, yn, vn, Nw, S, L, i1, i2,
     ev, Q = np.linalg.eigh(0.5 * (A0 + A0.T))
     U_Y = np.column_stack([Ucd, s])
     QTU = Q.T @ U_Y
-    ph = phase_index(ev, QTU, den)
-    out.update(Xi=ph["Xi"], min_prime=ph["min_prime"],
-               n_mono=ph["n_mono"], n_grid=ph["n_grid"],
-               n_skip=ph["n_skip"], n_poles_neg=ph["n_poles_neg"],
-               n_jumps=len(ph["jumps"]),
-               jumps_named=all(len(j[4]) >= 1 for j in ph["jumps"])
-               if ph["jumps"] else True,
-               ph_ok=ph["ok"], nneg_L=ph["nneg_L"],
-               nneg_R=ph["nneg_R"])
+    if with_phase:
+        ph = phase_index(ev, QTU, den)
+        out.update(Xi_grid=ph["Xi"], min_prime=ph["min_prime"],
+                   n_mono=ph["n_mono"], n_grid=ph["n_grid"],
+                   n_skip=ph["n_skip"], n_poles_neg=ph["n_poles_neg"],
+                   n_jumps=len(ph["jumps"]),
+                   jumps_named=all(len(j[4]) >= 1
+                                   for j in ph["jumps"])
+                   if ph["jumps"] else True,
+                   ph_ok=ph["ok"], nneg_L=ph["nneg_L"],
+                   nneg_R=ph["nneg_R"])
+    out["Xi"] = o.get("nnegPhi")
     # matrix-det lemma at two sealed test points (real, off
     # the sealed pad and away from 0 for a nontrivial check)
     A = np.zeros((Sm + 1, Sm + 1))
@@ -865,7 +961,7 @@ def chi_weyl_row(kz, q, lpq, with_dict=False):
     return o
 
 
-def main_weyl_row(kz, with_dict=False):
+def main_weyl_row(kz, with_dict=False, with_phase=False):
     """one MAIN window through weyl_rung; consumes the
     window index only as a selector of measure arrays."""
     Rr = PX.build_rung(kz)
@@ -876,7 +972,7 @@ def main_weyl_row(kz, with_dict=False):
                   Rr["Nw"], Rr["S"], mz["L"], Rr["i1"], Rr["i2"],
                   mz["xp"], mz["wp"], dsm["xs"], dsm["ws"],
                   dsm["ys"], dsm["vs"], Bm=Rr["B"],
-                  with_dict=with_dict)
+                  with_dict=with_dict, with_phase=with_phase)
     o["kz"] = kz
     o["margin"] = Rr["margin"]
     o["Nw"] = Rr["Nw"]
@@ -932,6 +1028,7 @@ def slim(o):
             "lamRd", "qN", "sig", "Xi", "min_prime", "n_mono",
             "n_grid", "n_skip", "n_poles_neg", "n_jumps",
             "jumps_named", "ph_ok", "nneg_L", "nneg_R",
+            "Xi_grid",
             "mdl_rel", "kz", "margin", "res_p", "res_q",
             "res_r", "W0", "Wdrift", "iiks_z_rel",
             "ratio_spread"}
@@ -1066,7 +1163,8 @@ def main():
 
     # ---------------- S2 w9
     section("S2  W9 -- PHI(z) + MONOTONICITY + PHASE + DICTIONARY")
-    o9, R9 = main_weyl_row(MAIN_KZ, with_dict=True)
+    o9, R9 = main_weyl_row(MAIN_KZ, with_dict=True,
+                          with_phase=True)
     check("G20-w9-records",
           R9["S"] == REC_S and R9["Sm"] == REC_SM
           and R9["Nw"] == REC_NW
@@ -1114,16 +1212,17 @@ def main():
              o9["n_grid"], o9["n_skip"], POLE_PAD))
     check("G24-w9-phase-index",
           o9["Xi"] == A9["Xi"] and o9["nneg_R"] == A9["nnegPhi"]
-          and o9["nneg_L"] == 0 and o9["n_poles_neg"] == 2,
+          and o9["nneg_L"] == 0 and o9["n_poles_neg"] == 2
+          and o9.get("Xi_grid") == A9["Xi"],
           "Xi_N at w9 = %d == nneg Phi(0) = %d (nneg at -infty "
-          "= %d); A has %d negative poles (the -1/2 pad AND "
-          "A0's one negative).  REAL-LINE HONESTY: for "
-          "real-symmetric Phi, (1/pi) Delta arg det IS "
-          "nneg(Phi) -- the phase index computed from the "
-          "A-resolvent is In(Phi(0)), which Haynsworth "
-          "already uses"
+          "= %d); grid-Xi = %s (matches at w9); A has %d "
+          "negative poles (the -1/2 pad AND A0's one "
+          "negative).  REAL-LINE HONESTY: for real-symmetric "
+          "Phi, (1/pi) Delta arg det IS nneg(Phi) -- the "
+          "phase index computed from the A-resolvent is "
+          "In(Phi(0)), which Haynsworth already uses"
           % (o9["Xi"], o9["nneg_R"], o9["nneg_L"],
-             o9["n_poles_neg"]))
+             str(o9.get("Xi_grid")), o9["n_poles_neg"]))
     ok_dict = (o9["res_p"] <= 1e-10 and o9["res_q"] <= 1e-8
                and o9["res_r"] >= BORDER_LOUD
                and o9["Wdrift"] <= PQ_DRIFT
@@ -1218,7 +1317,7 @@ def main():
         all_kz = (core_kzs + ext_kzs
                   + list(FTI.EXT3_KZ_B + FTI.EXT3_KZ_A)
                   + list(FTI.EXT4_KZ_B + FTI.EXT4_KZ_A)
-                  + list(ext5_sel) + list(ext6_sel))
+                  + list(ext5_sel))
         OT = {MAIN_KZ: slim(o9)}
         print("    %-5s %-5s | %-8s %-4s %-4s %-4s | %-5s %-5s %-5s"
               % ("kz", "N_w", "dev_mix", "nA", "nP", "Xi",
@@ -1229,26 +1328,9 @@ def main():
                 o = OT[kz]
                 nw = o["Nw"]
             else:
-                if kz in set(ext6_sel):
-                    Rr = PWA.rung_reduced_cols(kz)
-                    mz = Rr["mz"]
-                    alk = float(V.window_shape(kz)[0])
-                    dsm = HS.window_data(kz, comb=PB.smooth_comb(alk))
-                    o = weyl_rung(mz["xu"], mz["wu"], mz["yn"],
-                                  mz["vn"], Rr["Nw"], Rr["S"],
-                                  mz["L"], Rr["i1"], Rr["i2"],
-                                  mz["xp"], mz["wp"], dsm["xs"],
-                                  dsm["ws"], dsm["ys"], dsm["vs"],
-                                  Bm=Rr.get("B"))
-                    o["kz"] = kz
-                    o["margin"] = Rr["margin"]
-                    o["Nw"] = Rr["Nw"]
-                    nw = Rr["Nw"]
-                    del Rr, mz, dsm
-                else:
-                    o, Rr = main_weyl_row(kz)
-                    nw = Rr["Nw"]
-                    del Rr
+                o, Rr = main_weyl_row(kz)
+                nw = Rr["Nw"]
+                del Rr
                 OT[kz] = slim(o)
             print("    %-5d %-5d | %.2e %4s %4s %4s | %5s %5s %5s"
                   % (kz, nw, o.get("dev_mix", float("nan")),
@@ -1258,7 +1340,7 @@ def main():
                   flush=True)
         mix_ok = all(OT[k].get("ok_mix")
                      and OT[k].get("dev_mix", 1.0) <= MIX_BAR
-                     for k in all_kz if OT[k].get("ok_mix"))
+                     for k in all_kz)
         resolv = [k for k in all_kz
                   if OT[k].get("ok_mix")
                   and abs(OT[k].get("lamRd", 0.5) - 0.5) > RESOLV_FLOOR]
@@ -1271,14 +1353,16 @@ def main():
         n_bal = sum(1 for k in resolv if OT[k].get("bal"))
         check("G31-main-census",
               mix_ok and n_resolv >= 70
+              and len(all_kz) == 81 and len(set(all_kz)) == 81
               and n_main_pd == n_resolv
               and n_xi == n_resolv
               and n_ctrl == n_resolv and n_bal == n_resolv,
-              "MAIN CENSUS %d rows (resolvable %d, bar 74+): "
-              "mixed residual ok; want_pd %d/%d; Xi == nnegPhi "
-              "%d/%d; ctrl iff PD %d/%d; balance %d/%d -- MAIN "
-              "is classified POSITIVE by the same index that "
-              "will be asked to kill the six dead chi"
+              "MAIN CENSUS %d rows (a1: EXT6 dropped; "
+              "resolvable %d, bar 74+): mixed residual ok; "
+              "want_pd %d/%d; Xi == nnegPhi %d/%d; ctrl iff PD "
+              "%d/%d; balance %d/%d -- MAIN is classified "
+              "POSITIVE by the same index that will be asked "
+              "to kill the six dead chi"
               % (len(all_kz), n_resolv, n_main_pd, n_resolv,
                  n_xi, n_resolv, n_ctrl, n_resolv, n_bal,
                  n_resolv))

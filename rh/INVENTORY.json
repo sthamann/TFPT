@@ -1780,8 +1780,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "33fe156b803fec53c42dc15be0bc28932aef4fc1f77d6ce3677225143bd237af",
-      "bytes": 5293915
+      "sha256": "5048a0e33182ba844b4e75b28a77d14ed63d5fbbe27ab179ffe4d86cb1d8b735",
+      "bytes": 5296356
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -1882,6 +1882,16 @@
       "pin": true,
       "sha256": "9f70bad0e5ba537aa96787abb4a43d151a3ebc1051ace6d90029aac8489fbcc5",
       "bytes": 50277
+    },
+    {
+      "path": "experiments/tfpt-discovery/matrix_weyl_index_probe.py",
+      "role": "sealed_probe",
+      "round": "r370",
+      "ledger_ids": [],
+      "status": "The matrix-valued Weyl phase index -- reviewer sequence step 2 after the r369 stop, the main test of the new central architecture (round 370, PRIME.LDAGGER.MATRIX_WEYL_INDEX.01; experiments-side, NO ledger row): 31/31 sealed; SPEC_SHA b12b5fc38301767b final with record, freeze f6e1a704fcaf838b, two-commit protocol pre-freeze e44af3cd / record (this change); ONE disclosed instrument amendment a1 (cal1 killed on EXT6 Nw~8000 mixed+eigh, ~16 min in, 81/85 already PD; census Xi := nneg Phi(0), EXT6 dropped from the Weyl ladder, G30 still verifies the sealed selection; NO bar, kill-test, scramble named-break, dictionary named-break or verdict letter moved; cal2 = first complete full evaluation 31/31, 716.4 s; record run1/run2 byte-identical up to WALL 707.9/704.3 s).  MAIN VERDICT NO_JACOBI_LINEARIZATION(named: border Cauchy r_n is not a homogeneous dual solution, residual 3.615e-02 at w9 / 0.354 toy; A0 is a dense CD Gram on Y not a node-Jacobi; r359 IIKS does not z-lift to A0, rel 1.003) + PHASE_RESTATEMENT(real-line Xi = nneg Phi(0); Haynsworth already equates positivity control with M-dagger PD -- the Wronskian route that would replace hBal by an oriented Casoratian count does not close; the 2x2 (p, q) Casoratian exists and is source-pure but does not factor det Phi) + PHI_MONOTONE_SATZ + PHASE_CENSUS + MUSTFAIL_LEDGER.  CANONICAL_PHASE_CARRIER does NOT fire (70-pct resource trigger stays off).  LEG A: Phi_N(z) = J^{-1}+U^T(A-z)^{-1}U is the block resolvent (A0-eigh + pad); Fractions matrix-det lemma at z=-2 det Phi = 2293/150 exact (TARGET char poly -- SATZ skeleton, not the source dictionary); Phi' succeq 0 exact on the toy; live min eig Phi' = 8.949e-09 on 18/18 admissible Z_GRID nodes (2 skipped near poles); w9 Phi(0) sigma = (-2.8132, -0.06648, 1.8039) det 0.3374, LARGE pair TRACKS r367 K2; mixed residual 1.9e-15; den = 1.601114.  LEG B: the 3x3 dictionary FAILS at a named place -- dual p and dual-measure Cauchy q satisfy the three-term recurrence (p-rec 0, q-rec 1.2e-14, 2x2 Casoratian drift 3.1e-12); border r_n residual 3.615e-02 NOT a homogeneous dual solution, so there is no 3x3 Jacobi Casoratian of (p, q, r); node-basis IIKS for (A0)^{-1} with the two CD columns rel 1.003; C_N > 0 is therefore not constructed.  LEG C: census Xi := nneg Phi(0); MAIN 81 rows (a1 EXT6 dropped) resolvable 74/74 want_pd, Xi==nnegPhi, ctrl iff PD, balance (bar 74+); printed 81/81 PD, Xi dichotomy 49 (Xi=2) / 32 (Xi=1); twin WORLD_KZ |dXi|=0, |dlog det Phi|=3.8e-06 nats; chi3-w9 VACUOUS POSITIVE (nnegA0=0, nnegPhi=1, q_N=0.247); six terminal-dead classified NEGATIVE (chi3 5/5, chi4 1/1, built 42/42) via want_pd False / ctrl False / q_N>1 -- Xi follows nnegPhi and is 0 on kz23/33/20, 1 on kz15/19/39 (not a magic Xi value); scramble seed 1 named-breaks at nnegA0=21 AND border nf=37 (ok_mix False); oriented anatomy at w9: 2 nneg-jumps, each interval contains a pole of A (pad -1/2 and A0's negative) -- phase turns at A's poles, not at named Y-nodes; shadow corr(Xi, log|margin|)=+0.2013.  LEG D: kill-test 7 two layers -- a source-free PD target M=I_5+UU^T is AUTO-RECOGNIZED by Haynsworth (restatement of M PD); the Wronskian dictionary is UNDEFINED there, so the source-specific index SATZ does not fire.  LEG E: must-fails 4/4 (kernel-Green AST, wrong Green residual 14100 vs (A0)^{-1}, z-grid-by-sight AST, lamRd/margin/detM readbacks AST).  NO L* claim, NO R-dagger claim, NO RH claim in either direction",
+      "pin": true,
+      "sha256": "1e6f047c7cc08ded0c4dd0b6c779c9598f58dd175edaadadcfb5ccb24d68a2b6",
+      "bytes": 73185
     },
     {
       "path": "experiments/tfpt-discovery/compound_cd_wedge_probe.py",
