@@ -301,6 +301,107 @@ bars -- it proves NO cofinal law; the in-the-mean sieve (D)
 stays OPEN mathematics by contract; g_i is a construction-local
 coordinate, said out loud; r243..r357 stand.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze docstring edit; freeze SPEC_SHA 8831b1410849f1b4,
+pre-freeze commit 9141d3e7; protocol: smoke pass 1 = 20/20
+(0.6 s, run twice pre-commit, byte-identical up to the WALL
+line, disclosed in the commit message); calibration pass 1 =
+FIRST full evaluation = 20/20, wall 711.3 s, NO amendment -- no
+bar, band, rule or verdict rule moved at any point; record
+run1/run2 after this insertion, byte-identical up to WALL):
+MAIN VERDICT: QUADRATIC_LAW_PARTIAL(T1@[FRAME_A, FRAME_B, CHI3,
+CHI4]) + SIEVE_CORE_OPEN + T1(C_K 2.45/4.91/1.52/1.62, viol
+27/84 + 6/6 + 14/37 + 12/37, global product ceiling 23.70) +
+PACK(0 violations, min g 0.375) + SMALLBALL(1033 bands, 0
+violations; align med 0.24..0.28 below the 0.5 floor) +
+COMPOSITION(m_0* 10^23.5 census) + SCRAMBLE(P1_ADMISSION x3) +
+TWIN(1.0e-07) + MUSTFAIL_LEDGER.
+THE HEADLINE FINDINGS:
+(1) THE CORE HOLDS -- T2' IS A 0-VIOLATION CENSUS THEOREM ON
+ALL FOUR ARITHMETIC/FAMILY WORLDS: the quadratic packing law
+S_r <= 2^{-2r}(1+r)^2 holds POINTWISE on every one of the 181
+admitted rows (89 frame A + 8 frame B + 42 chi3 + 42 chi4) at
+every dyadic level r = 1..12, with enormous headroom: the
+whole small-gap mass of the lane lives at r = 1 (g in (1/4,
+1/2]: max S_1 = 0.0170 frame A / 0.0052 frame B / 0.0238 chi3
+/ 0.0439 chi4, carried by 12 + 4 + 1 + 3 rows) and S_r = 0
+IDENTICALLY for r >= 2 on ALL 181 rows -- the minimal
+normalized local gap of the entire round is 0.375: gaps below
+ONE QUARTER of the local median DO NOT OCCUR, in either
+construction family or any of the three arithmetics.  "Very
+tight coincidences may exist, but not with mass" is a measured
+fact -- and stronger: below g = 3/8 they do not exist AT ALL
+on the admitted surface.  The dyadic summation T2' => T2 is
+exact (warded one-sided 0.0): T2val max 1.29/1.33/1.14/1.13
+per family, C_G_cens = 0.100 at A = 2.
+(2) T1 IS DEPTH-GRADED CENSUS, NOT A FIRST-K LAW (the honest
+partial): the r306 first-K freeze fails the localization on
+ALL FOUR families -- frame A C_K(cal-5) = 2.45 vs test max
+15.93 at kz111 (27/84 above), frame B 4.91 vs 23.70 at kz117
+(6/6 -- every deep row exceeds its two shallow anchors), chi3
+1.52 vs 3.91 at kz32 (14/37), chi4 1.62 vs 3.09 (12/37).  The
+LOCAL product (m q_i/log m) g_i grows with depth exactly like
+the K2 product FAB grel does (the max rows ARE the K2 spike
+rows kz111/kz117/kz32) -- the localization is the right
+coordinate but inherits the K2 growth: a first-shallow-rows
+freeze is the wrong constant rule at every localization level
+(the r324/r351 lesson, now measured locally).  T2' needed NO
+calibration at all -- the PACKING FORM with a-priori bars is
+the family-robust statement of the lane.
+(3) THE SMALL-BALL BAND STRUCTURE (D) CARRIES AS CENSUS: 1033
+dyadic source bands (>= 5 members) across the 181 rows, 0
+band-level violations of SB_r <= 2^{-2r}(1+r)^2; the stress
+spikes kz51 (min g 0.533) and kz111 (min g 0.571) have NO
+sub-half gap at all -- the spike atoms are NOT tight-gap
+atoms, the r = 1 mass sits on other, non-spike rows.  Band
+alignment |x_i|/A1_i med 0.27/0.24/0.28/0.26 per family:
+BELOW the 0.5 floor -- within-band comparability holds in
+MASS form, NOT in signed-survival form (typed honestly; the
+sieve target (D) is the mass form, which is what carries).
+(4) THE COMPOSITION IS PURE POLYLOG BUT CENSUS-EXPENSIVE: with
+the measured global product ceiling C_K = 23.70 (census, NOT a
+frozen law -- the per-family freezes top out at 4.91) and
+C_G_cens = 0.100, M_3 <= C_K^2 C_G (log m)^4/m^2 gives m_0* =
+10^23.5 vs r351 10^18.9 / r353 10^20.5 / r306 census 10^13.5:
+the Carleson detour does not yet beat the direct census
+because C_K enters SQUARED where FAB enters once -- the
+winning form needs a T1 constant RULE (family-uniform), which
+is the second named open item.  All exact wards close: M3
+composition 0.0 one-sided, N2 >= N3 181/181, T2 summation 0.0,
+quantization 9.1e-13 (bar 1e-6), multiplicity <= 2 on 181/181
+(0 drops), FAB identity 2.0e-16, K2 chain 0.0, FDD dictionary
+2.5e-16, contribution wards green on all four families.
+(5) THE PROOF-SKETCH TYPING AFTER THIS ROUND: SATZ = fold
+multiplicity <= 2 (A), mesh identity + theta-grid quantization
+(B), dyadic summation T2' => T2, N2 >= N3, the M3 composition
+algebra; DICTIONARY = FDD q_i, band MASS comparability;
+CERTIFIED CENSUS = T2' at the sealed (1.0, 2.0) bars (0/181 x
+12), the small-ball band form (0/1033), the min-g floor 0.375;
+OPEN (the named specialist questions) = (i) the in-the-mean
+sieve (D) as a theorem: for the folded log p^k phases prove
+sum_{i in B, g_i <= t} a_i <= C t^2 (log m)^B sum_B a_i per
+dyadic source band (small-ball / large sieve on average, NO
+pointwise Baker bounds), and (ii) the family-uniform T1
+constant rule.  SCRAMBLES: all three matched channels break at
+P1 = POSITIVE_PREFIX ADMISSION (frame-A w9 nf 21, frame-B kz80
+nf 3, chi3 w9 nf 37 -- the r353/r355/r357 records reproduced):
+the packing's binding source precondition is the ADMISSION of
+the arithmetic comb itself, named precisely.  TWIN devs 1.0e-7.
+ANCHORS bit-near: C_K2X 11.87 at kz111 (89 rows); frame-B 8/8
+re-admitted, FAB/grel table within tol, K2 max 5.95; chi3
+42/42 max FABg 4.73 at kz32; chi4 42/42 max 5.16; MAIN-42 max
+6.95.  Must-fails: e1 protocol-CAUGHT twice (AST rho@663 +
+pin (2.0, 4.0) vs (2.0, 0.5)) / e2 CAUGHT exact (the global-
+min mutant breaks the sealed bar at S_2 1.00 > 0.5625 where
+the true column passes at 0.33 -- the r355 supercriticality
+reproduced as a mutant) / e3 protocol-CAUGHT twice (AST + pin
+11.87 vs 1.0) / e4 protocol-CAUGHT twice (pin 9.216 vs 1.0) /
+e5 CAUGHT exact (rejects the valid mesh dev 1.0) + m6a/m6b
+FLAGGED (t_term@703 / g_branch@710).  Runtime 711.3 s
+calibration / record run1/run2 byte-identical up to WALL /
+0.6 s smoke.  AMENDMENTS AFTER FREEZE: NONE except this
+record-table insertion.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
