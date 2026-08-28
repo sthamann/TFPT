@@ -1760,8 +1760,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "d7ffa4c1973e0497b432a92ebe86832ee38d2115aa4e5edcd9e4411feab8a64f",
-      "bytes": 3426419
+      "sha256": "f816d02c331bee41a45fa52ef439395bdb5194dadd9e705167b79d90d9177257",
+      "bytes": 3432690
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -1780,8 +1780,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "154e878f060c382600c622a17ef80f2fb84b53d27d5396e1f783ff385d5fda77",
-      "bytes": 5276527
+      "sha256": "46f4f09b329f7e68ba3a9c571b7d8132e8d66cb91d2897b3a412e0dbcdd91e72",
+      "bytes": 5287123
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -1882,6 +1882,16 @@
       "pin": true,
       "sha256": "9f70bad0e5ba537aa96787abb4a43d151a3ebc1051ace6d90029aac8489fbcc5",
       "bytes": 50277
+    },
+    {
+      "path": "experiments/tfpt-discovery/compound_cd_wedge_probe.py",
+      "role": "sealed_probe",
+      "round": "r371",
+      "ledger_ids": [],
+      "status": "The exterior-square kill test of the canonical CD two-form -- reviewer solution 3, ONE run (round 371, PRIME.LSTAR.DUAL.COMPOUND_CD.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 3b5b3c887d515ffd final with record, freeze 85b31ee99180bf64 / file SHA c7860a863ef19983, two-commit protocol pre-freeze ac7c0b0b / record 13af4c78; ONE disclosed instrument amendment a1 (G35 second raw 1e-8 floor disagreed with r367 Rayleigh inertia on 10/45 P1 near-zeros -- product formula nneg(wedge2)=nneg*npos from the SAME inertia now the constructor; SHARE_BAR, sign definition, MAJ construction, scramble named-break, identity bars and GO letters NOT moved; first full evaluation 28/30 266.4 s; record run1/run2 byte-identical up to WALL 283.3/239.3 s).  MAIN VERDICT SIGNATURE_PARTIAL(wterm<0 45/45, share>=0.50 27/45) + CAPTURE_HOLDS_CENSUS(nneg-1 45/45 via identity (12) == P2) + OVERLOAD_CENSUS_ONLY(cert_lt2 0/45, scramble MAJ>2) + AND2_LEDGER + WORLD_LEDGER + TWIN_LEDGER + SCRAMBLE_BREAK + MUSTFAIL_LEDGER.  LEG A: identities SATZ -- (12) Fractions toy det K2=-7=1+q11+q22+wterm exact (wterm=-4); f64 graded 74/74 maxerr 5.7e-10, live 1e-10 on 72/74 (kz37/kz95 at 5.7e-10/5.0e-10 sit in mid grade 1e-9); (13) Fractions CD-telescope exact, live dressing 74/74 maxerr 9.1e-17, c_N=1/b_{N-3} in (1.92, 2.06) all positive; wrong wedge2 convention lambda_i+lambda_j CAUGHT exact.  LEG B (the kill test): the canonical wedge SIGN is STABLE on the nneg-1 branch (wterm<0 45/45, range [-637.7, -1.32], 0 flips) -- NOT the r318 coin-flip of original-matrix minors; capture (14) holds 45/45 by algebra (not independent arithmetic); the wedge2-subspace share is NOT stable (majority 27/45, min 0.001, med 0.601, max 0.905 -- the Sol 4/4 sample 0.67..0.78 was terminal-rank biased); COMPOUND_SIGNATURE_STABLE does not fire; nneg(wedge2 A0)=|Y|-1 on 45/45 (product formula, a1); r367 dichotomy reproduced P1 45 / vacuous 29 / overload 0 on 74 resolvable.  LEG C: Gershgorin-Stieltjes MAJ=n_hit on the branch [67, 1425] >> 2, isolation 0/45, cert_lt2 0/45 -- the construction does NOT certify ind_-<2; occupation diagonal of A0 is n_diagneg=0 on the whole nneg-1 branch (min diag>0, the remaining negative is off-diagonal); scramble MAJ=49>2 (vacuity test holds) and n_diagneg=24; OVERLOAD_MAJORANT_GO stays off; nneg<=1 remains the r367 census.  LEG D: twin |d wterm|=6.2e-5 bitwise dose-zero; chi3 21/42 nneg-1 all wterm<0 (w9 PD world-separating); chi4 19/42 nneg-1 all wterm<0; scramble named P1 nneg=21, P2 survives, wterm=-3.022 measured.  Must-fails 5/5.  Honesty: the canonical two-form has a STABLE SOURCE SIGN and an UNSTABLE wedge2-subspace share; capture is algebra; the overload theorem stays census.  NO L* claim, NO RH claim in either direction",
+      "pin": true,
+      "sha256": "43ab32934bdb9544cf5daaa976eb93d9cff6744f797e667821f53c53fe29bcc9",
+      "bytes": 61951
     }
   ]
 }

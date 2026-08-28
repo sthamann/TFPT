@@ -4632,6 +4632,48 @@ Coexistence: r371 (compound-CD), r372 (source-Prüfer) and
 r373 (Lean transcription) are parallel lanes; this round is
 additive.
 
+**The exterior-square kill test of the canonical CD two-form
+(r371, reviewer solution 3, PRIME.LSTAR.DUAL.COMPOUND_CD.01).**
+`compound_cd_wedge_probe.py` (30/30, SPEC_SHA `3b5b3c887d515ffd`
+final with record, freeze `85b31ee99180bf64`, two-commit
+protocol: pre-freeze `ac7c0b0b`, record `13af4c78`; ONE
+disclosed instrument amendment a1 — G35's second raw 1e-8
+floor disagreed with the r367 Rayleigh inertia on 10/45 P1
+near-zeros; the product formula is now the constructor;
+SHARE_BAR, sign definition, MAJ construction and GO letters
+NOT moved; record run1/run2 byte-identical up to WALL
+283.3/239.3 s).  **Verdict `SIGNATURE_PARTIAL(wterm<0 45/45,
+share≥0.50 27/45) + CAPTURE_HOLDS_CENSUS + OVERLOAD_CENSUS_ONLY`.**
+Leg A: identities (12)(13) are finite-matrix SATZ (Fractions
+toy det K₂ = −7 exact; CD-telescope exact; f64 (12) graded
+74/74, live 1e-10 on 72/74; (13) live 74/74, c_N = 1/b_{N-3}
+∈ (1.92, 2.06) all positive).  Leg B (the kill test): the
+canonical wedge **sign is stable** on the nneg-1 branch
+(wterm<0 45/45, range [−637.7, −1.32], 0 flips) — not the
+r318 coin-flip of original-matrix minors; capture (14) holds
+45/45 by algebra (≡ P2 via (12), not independent arithmetic);
+the ∧²-subspace share is **not** stable (majority 27/45, min
+0.001, med 0.601, max 0.905 — the Sol 4/4 sample was
+terminal-rank biased).  `COMPOUND_SIGNATURE_STABLE` does not
+fire.  ∧² inertia nneg(∧²A₀)=|Y|−1 on 45/45 (product formula).
+r367 dichotomy reproduced (P1 45 / vacuous 29 / overload 0
+on 74).  Leg C: Gershgorin-Stieltjes MAJ = n_hit ∈ [67, 1425]
+on the branch, isolation 0/45, cert_lt2 0/45 — the
+construction does not certify ind₋ < 2; occupation diagonal
+of A₀ is n_diagneg = 0 on the whole branch (min diag > 0);
+scramble MAJ = 49 > 2 (vacuity test holds).
+`OVERLOAD_MAJORANT_GO` stays off; nneg ≤ 1 remains the r367
+census.  Leg D: twin |d wterm| = 6.2e-5; χ3 21/42 and χ4
+19/42 nneg-1 all sign-stable (χ MAY tip); scramble named P1
+nneg=21, P2 survives, wterm = −3.022 measured.  Must-fails
+5/5.  Honesty: the canonical two-form has a stable source
+**sign** and an unstable ∧²-subspace share; capture is
+algebra; the overload theorem stays census.  Experiments-side,
+NO ledger row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).  Coexistence: r369 (mixed Haynsworth),
+r372 (source-Prüfer) and r373 (Lean) are parallel lanes;
+this round is additive.
+
 ## Folder guide
 
 ```
@@ -5163,6 +5205,13 @@ proof is R373). Suite surface of this round: integrity +
 probes (`run_rh.py --fast`) after appending the sealed probe
 to the inventory. r371/r372/r373 are parallel lanes and are
 not dropped.
+**r371 coexistence.** Round 371 (`compound_cd_wedge_probe.py`) is
+additive on the L* dual lane after r367 (reviewer solution 3,
+the canonical two-form); it does not touch `rh/problem/` or
+`rh/lean/`. Suite surface of this round: integrity + probes
+(`run_rh.py --fast`) after appending the sealed probe to the
+inventory. r369/r372/r373 are parallel lanes and are not
+dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in
