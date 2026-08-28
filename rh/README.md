@@ -5200,6 +5200,33 @@ not $(R)(L)$.  Experiments-side, NO ledger row, NO L\* claim,
 NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r390 are parallel lemma-first / Lean lanes; this round is additive.
 
+**The deletion transform, reduced (r392, LEMMA.DELETION_TRANSFORM.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/deletion_transform_probe.py` (22/22
+full, 19/19 smoke, SPEC_SHA `e4d6ced026e12433`) plus
+`rh/problem/deletion_transform.tex` (+ PDF +
+`verify_deletion_transform.py`, 14/14, `DELETION TRANSFORM VERIFIED`).
+**Ausgang REDUZIERT.**  SATZ: Uvarov
+$\gamma_n(\mu)=\gamma_n(\sigma)\,\tau_{n+1}\tau_{n-1}/\tau_n^2$
+with $\tau_n=\det(I-K_n[\Xi]W)$, $\tau_0=1$; block = iterated
+over $\mathbb{Q}$; Bernstein--Szegő specialises to
+$(1/4)\cdot\tau$-ratio up to the r390 residual $1.85\cdot10^{-6}$.
+FRAME-A $w=9$ identity $8.993\cdot10^{-15}$ against occupied Fejér.
+Assist Uvarov($\mu+\nu$) $\lambda=0.999830$, assist $0.0399$,
+cancel $0.9970$; $\mathrm{d}\Delta_{12}=0.04946$ (r388).
+Occupied-Fejér kernel does *not* carry Assist ($\lambda=10.12$).
+AP deletion ($\rho_{\mathrm{AP}}=1$) stays at $\gamma=1/4$ ---
+not a kill of $F_\varepsilon$; clustered run of $3$ kills;
+scramble seed $3$ jump $0.4438$ OUT; kz~$55$ jump $0.3942$
+(margin $0.0058$) is census, not a corollary of $\rho_{\mathrm{AP}}<1/5$.
+Cancellation of Assist sits in the *signs* of $K^\mu[\Xi]$, not
+the positive $\tau$-quotients.  Remaining: $\Delta^2\log\tau$
+under $F_1$ ($F_\varepsilon$ rest) and Sign-Schur of $K^\mu[\Xi]$
+(Assist rest).  $V_3'$ allows relaxing JUMP (not moved).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r391 are parallel lemma-first / Lean lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5375,6 +5402,10 @@ rh/
 │   │                     (R)(L) reduced to the white-block
 │   │                     class; block-Gershgorin refuted.
 │   │                     No RH claim
+│   ├── deletion_transform.tex(+pdf) — r392: Uvarov
+│   │                     deletion algebra SATZ; F_eps not
+│   │                     from rho_AP; Assist is Sign-Schur.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5423,9 +5454,12 @@ rh/
 │   ├── verify_g_eps_mu.py — machine check of
 │                         g_eps_mu.tex (13/13,
 │                         G_EPS_MU LEMMA VERIFIED)
-│   └── verify_construction_rl.py — machine check of
+│   ├── verify_construction_rl.py — machine check of
 │                         construction_rl.tex (17/17,
 │                         CONSTRUCTION PURE RL VERIFIED)
+│   └── verify_deletion_transform.py — machine check of
+│                         deletion_transform.tex (14/14,
+│                         DELETION TRANSFORM VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5782,7 +5816,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r391 from
+2. **Sealed probes** — the campaign probes r250–r392 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6277,6 +6311,17 @@ does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
 this round: integrity + probes (`run_rh.py --fast --skip-lean`)
 after appending the probe and problem-document rows to the
 inventory.  r374--r390 are parallel lemma-first / Lean lanes
+and are not dropped.
+**r392 coexistence.** Round 392 (`deletion_transform.tex` +
+`deletion_transform_probe.py`) is additive on the $G_\varepsilon$ /
+cancellation lane after r389/r390 (lemma-first deletion algebra:
+Uvarov $\gamma$-ratio SATZ; $F_\varepsilon$ not from $\rho_{\mathrm{AP}}<1/5$;
+Assist/d$\Delta$ are Uvarov readouts; cancellation is Sign-Schur).
+It does not touch `experiments/next.txt` and
+does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
+this round: integrity + probes (`run_rh.py --fast --skip-lean`)
+after appending the probe and problem-document rows to the
+inventory.  r374--r391 are parallel lemma-first / Lean lanes
 and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface

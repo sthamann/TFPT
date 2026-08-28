@@ -2066,6 +2066,36 @@
       "bytes": 211322
     },
     {
+      "path": "rh/problem/deletion_transform.tex",
+      "role": "problem_statement",
+      "round": "r392 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on the deletion algebra of occupied Fejer after r389/r390 (round 392): Uvarov gamma-ratio SATZ; Bernstein-Szego specialisation SATZ; w9 identity 9e-15.  F_eps from rho_AP<1/5 REFUTED as a closing deduction (AP deletion stays IN; clustered run>=3 kills; kz55 jump 0.3942 is census).  Assist/dDelta are exact Uvarov readouts; cancellation sits in signs of K^mu[Xi].  Reduced to d2 log tau under F1, and Sign-Schur.  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "52418cfca841dd35f302b2ab089c2c68829e5f4d0dfc52b475782034abfd199d",
+      "bytes": 12300
+    },
+    {
+      "path": "rh/problem/verify_deletion_transform.py",
+      "role": "problem_check",
+      "round": "r392 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in deletion_transform.tex: standalone Fractions (one-point and block Uvarov, S=5/7/9, Chebyshev-U, jump, tau_0=1) plus construction pins (w9 identity, Assist, dDelta, Fejer-not-Assist, AP in / clustered out, scramble seed=3).  14/14 gates, final line DELETION TRANSFORM VERIFIED",
+      "pin": true,
+      "sha256": "bc154790f53c25e5f9ee1ca1d3e24a41c5caec51f7d742c5a2f0405c51125da1",
+      "bytes": 8160
+    },
+    {
+      "path": "rh/problem/deletion_transform.pdf",
+      "role": "problem_statement",
+      "round": "r392 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of deletion_transform.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "c555e50e464630a3857b7f7456edea5c1b1a1b55deed4ff7ed2eafd9fb910e84",
+      "bytes": 243655
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2240,8 +2270,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "bbcf5b39c0c5567153e480897d8764570db4d035725959f951fd72891c1bf9f6",
-      "bytes": 5362178
+      "sha256": "f14bbf3c958830b522a1bfd2a10028885bc96eab373c299dac70c035b05897f5",
+      "bytes": 5364268
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2482,6 +2512,16 @@
       "pin": true,
       "sha256": "847d5ff9209316a2384136a76441120822925ff284ebefef3542d5c5f4fc821b",
       "bytes": 23536
+    },
+    {
+      "path": "experiments/tfpt-discovery/deletion_transform_probe.py",
+      "role": "sealed_probe",
+      "round": "r392",
+      "ledger_ids": [],
+      "status": "Deletion transform (round 392, LEMMA.DELETION_TRANSFORM.01, lemma-first; experiments-side, NO ledger row): 22/22 full / 19/19 smoke; SPEC_SHA e4d6ced026e12433; Uvarov gamma-ratio over Q, S=5/7/9 deletions, w9 formula identity, Assist/dDelta readouts, AP vs clustered vs scramble, and the core-42 census first measured in /tmp (r392_cal.py .. r392_cal5.py) then sealed (disclosed calibration).  Builder fallback: core-42 only.  AUSGANG REDUZIERT.  SATZ: gamma_n(mu)=gamma_n(sigma)*tau_{n+1} tau_{n-1}/tau_n^2 with tau_n=det(I-K_n[Xi] W), tau_0=1 (Hankel det lemma); block = iterated over Q (5-atom 5/48,8/75,5/81 and 8/45,4/15); Bernstein-Szego specialises to (1/4)*tau-ratio up to the r390 residual 1.85e-6.  w9 formula vs occupied-Fejer maxerr=8.993e-15.  Assist Uvarov(mu+nu) lam=0.999830 assist=0.0399 canc=0.9970 (r387 reproduced); dDelta12=0.04946 Dmax=0.3347 (r388 reproduced).  Occupied-Fejer kernel does NOT carry Assist (lam=10.12).  NOT proved: F_eps from rho_AP<1/5 -- AP every-2 stays at gamma=1/4; clustered run=3 kills (j=0.462); scramble seed=3 jump=0.4438 OUT; kz55 jump 0.3942 margin 0.0058 is census.  Cancellation of Assist sits in the SIGNS of K^mu[Xi], not the positive tau-quotients of gamma.  Remaining: bound d2 log tau under F1-bounded nu-runs (F_eps rest); Sign-Schur of K^mu[Xi] (Assist rest).  V3' allows relaxing JUMP (A_15 fails at scale 2.0) -- not moved.  Companion rh/problem/deletion_transform.tex + verify_deletion_transform.py 14/14 DELETION TRANSFORM VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "e3abb32e20d7660d27fb35a71c3e76760034d4c37276a7d6edccb8d32dee9c8c",
+      "bytes": 24809
     }
   ]
 }
