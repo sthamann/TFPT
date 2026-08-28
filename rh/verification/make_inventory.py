@@ -1644,36 +1644,32 @@ ENTRIES = [
      "compiled PDF of lstar_problem.tex (recompiled artefact, "
      "registered unpinned)", False),
     ("rh/problem/rdagger_saturation.tex", "problem_statement",
-     "r360+r362 companion",
+     "r360+r362 companion, updated r367-r373",
      [],
      "specialist dossier on the bordered dual resolvent R-dagger "
-     "(reviewer priority 4): definition of R-dagger as the rank-1 "
-     "bordered dual hole kernel [[R^{-1}, Dv],[(Dv)^T, 1+gamma]]^{-1}; "
-     "exact duality package (A1)-(A7) (spectral map margin-dagger == "
-     "2 - 1/lambda_min(R-dagger); L-dagger <=> R-dagger > (1/2) I; "
-     "Sherman-Morrison Y-block; q-dagger frame-invariant == r266 "
-     "crit1; terminal dictionary 1-q-dagger == (5/7)(1-q_N)/B_w; "
-     "border Schur == (1-q-dagger)/(2(1+q-dagger)) globally and in "
-     "the local 3x3; interlacing); the critical 3x3 Schur block "
-     "(bind-dagger med 1.0056, share-dagger 0.699 vs share 0.697); "
-     "the pair (2,4) straddles the saturation-block edge 3|4 "
-     "(occupation duality o_eta + o_dual == 1 exact; obstacle "
-     "solver void {1,2,3}); observed exponent alpha = 3.332 "
-     "(distance 0.002) carried by the diagonal resolvent data; "
-     "t_geo margin-locked [0.222, 0.287]; relative error-operator "
-     "form (M_0 constant matrix refuted, kappa_S wander 4.88; rest "
-     "clause theorem at c = 1, MAIN c >= 8.8, chi minima 1.0); "
-     "ONE open question (Problem): which asymptotic RHP/BKMM "
-     "theorem (BKMM 2007 Thm 2.7/Rem 2.8; AC/Lubinsky class "
-     "excluded) guarantees the critical bordered resolvent block "
-     "stays above 1/2.  Finite census, no asymptotics, no claim; "
-     "a proof of R-dagger > (1/2) I would give L-dagger hence "
-     "window-local master positivity (Lean chain "
-     "augmentedSubordination_iff_lstar_and_terminal + "
-     "lstar_terminal_implies_master audited).  Explicitly NO RH "
-     "claim -- L* and L-dagger stay [O]", True),
+     "(reviewer priority 4; updated after r367-r373): definition of "
+     "R-dagger as the rank-1 bordered dual hole kernel [[R^{-1}, Dv],"
+     "[(Dv)^T, 1+gamma]]^{-1}; exact duality package (A1)-(A7); "
+     "critical 3x3 Schur block; pair (2,4) straddles saturation-block "
+     "edge 3|4; observed exponent alpha = 3.332; relative "
+     "error-operator form.  PRIMARY question after the two-rank "
+     "inertia cut is the MINIMAL form (P1) ind_-(R_{N-3}-1/2 I) <= 1 "
+     "(census: overload 0/74, dichotomy 45 nneg-1 / 29 already-PD) "
+     "and (P2) det K2 <= -c0 < 0 on the nneg-1 branch "
+     "(-det K2 in [1.157, 1126.389], floor 0.50, corr -0.0064); "
+     "Haynsworth (haynsworth_two_rank, haynsworth_mixed) and the "
+     "R-dagger layer Lean sorry-free (census 7); mixed 3x3 form "
+     "M-dagger = blkdiag(A0,-1/2)+U J U^T with J=diag(1,1,1/den); "
+     "wedge-sign census, Phi-monotonicity, Pruefer dictionary; "
+     "named dead ends (no 3x3 Jacobi Casoratian residual 3.615e-2, "
+     "phase restatement, r366 O(1) mass buffer, r363 edge pinning). "
+     "The older RHP/BKMM saturation question (BKMM 2007 Thm 2.7/"
+     "Rem 2.8) is retained as the stronger variant.  Finite census, "
+     "no asymptotics, no claim; a proof of (P1)+(P2) lands via the "
+     "kernel-checked chain at window-local master positivity.  "
+     "Explicitly NO RH claim -- L* and L-dagger stay [O]", True),
     ("rh/problem/rdagger_saturation.pdf", "problem_statement",
-     "r360+r362 companion",
+     "r360+r362 companion, updated r367-r373",
      [],
      "compiled PDF of rdagger_saturation.tex (recompiled artefact, "
      "registered unpinned)", False),

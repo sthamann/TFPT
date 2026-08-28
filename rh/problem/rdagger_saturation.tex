@@ -15,6 +15,7 @@
 \newtheorem{problem}{Problem}
 \newtheorem{definition}{Definition}
 \newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
 \theoremstyle{remark}
 \newtheorem{remark}{Remark}
 
@@ -26,7 +27,8 @@
 \newcommand{\Ls}{L^{*}}
 \newcommand{\half}{\tfrac12}
 \newcommand{\dd}{\,\mathrm{d}}
-% Grade marks: exact / theorem-grade / census / hypothesis.
+% Grade marks: exact / theorem-grade / lean-verified / census /
+% hypothesis / refuted.
 \newcommand{\gr}[1]{\textnormal{\small[#1]}}
 
 \title{\bfseries The saturated dual resolvent\\[2mm]
@@ -49,10 +51,15 @@ three-by-three Schur block carries both.  A constrained equilibrium
 problem on the same dual weight places the binding pair of nodes
 astride a saturated hard-edge block.  All identities below are finite
 linear algebra; all numerical values are a frozen census on a finite
-family.  No asymptotic theorem is proved.  The one open question is
-stated as Problem~\ref{prob:rhp}.  This document is a problem
-statement for specialists, not a claim, and nothing in it is evidence
-for or against the Riemann hypothesis.
+family.  No asymptotic theorem is proved.  After the two-rank inertia
+cut and the matrix-Weyl sequence (rounds 367--373) the one open
+question is the \emph{minimal inertia form}
+Problem~\ref{prob:minimal}: an integer mode count and the sign of an
+$O(1)$ $2\times2$ source, not a margin asymptotic.  The older
+saturation/RHP question is retained as the stronger variant
+Problem~\ref{prob:rhp}.  This document is a problem statement for
+specialists, not a claim, and nothing in it is evidence for or
+against the Riemann hypothesis.
 \end{abstract}
 
 \medskip\noindent
@@ -60,19 +67,20 @@ for or against the Riemann hypothesis.
 Every assertion is marked
 \textsc{exact} (finite identity, including rational arithmetic),
 \textsc{theorem-grade} (finite-matrix theorem on measured inputs),
+\textsc{lean-verified} (sorry-free in \texttt{rh/lean/}, kernel-checked),
 \textsc{census} (measured on a frozen finite family; no
-extrapolation), or
-\textsc{hypothesis} (unproved analytic statement).
+extrapolation),
+\textsc{hypothesis} (unproved analytic statement), or
+\textsc{refuted} (named internal route closed by a sealed probe).
 The construction of the underlying measures $(\mu,\nu)$ is given in
 full in the companion note~\cite{lstar-note}; the present dossier
 does not repeat it.  Uvarov-transform language, the discrete-hard-edge
 placement, and the Lubinsky-class exclusion are recorded there
 (\S{}frozen-placement, \S{}frozen-dualhole) and are cited, not
-duplicated.  Machine records: sealed probes
-\texttt{borodin\_dual\_hole\_probe.py} (round 356),
-\texttt{schur\_wronskian\_dual\_probe.py} (359),
-\texttt{critical\_saturation\_probe.py} (360),
-\texttt{augmented\_borodin\_duality\_probe.py} (362).
+duplicated.  Machine records: sealed probes of rounds
+356, 359, 360, 362, 363, 366, 367 and 369--372 (repository
+\texttt{experiments/tfpt-discovery/}); Lean transcription round 373
+(\texttt{RH/Haynsworth.lean}, \texttt{RH/DualResolvent.lean}).
 
 \section{Setup}\label{sec:setup}
 
@@ -263,14 +271,17 @@ A formal reconstruction, independent of the dual coordinate, is
 already machine-checked in Lean: $\Ld\iff\Ls\wedge\mathrm{Terminal}$
 and $\Ls\wedge\mathrm{Terminal}\Rightarrow$ positivity of every
 bordered window matrix through the cap
-(\texttt{RH/Augmented.lean},
-\texttt{augmentedSubordination\_iff\_lstar\_and\_terminal};
-\texttt{RH/Closure.lean},
-\texttt{lstar\_terminal\_implies\_master};
+(\texttt{RH/Augmented.lean}, \texttt{RH/Closure.lean};
 axiom audit in \texttt{RH/Audit.lean}, consuming only the two named
-canonical holes).  What is \emph{not} formalized, and not proved
-analytically, is $\Rd\succ\half I$ for the unbounded family.  That
-is Problem~\ref{prob:rhp}.
+canonical holes).  The dual-resolvent dictionary itself is
+sorry-free since round 373: $\Ld\iff\Rd\succ\half I$ under the
+$\mu$-ONB whitening (\texttt{RH/DualResolvent.lean})
+\gr{lean-verified}.  Haynsworth additivity on the two-rank and mixed
+$J$-forms is likewise sorry-free
+(\texttt{RH/Haynsworth.lean}; Section~\ref{sec:minimal}).
+What is \emph{not} formalized, and not proved analytically, is the
+pair of census premises (P1)--(P2) of Problem~\ref{prob:minimal} for
+the unbounded family --- and, a fortiori, $\Rd\succ\half I$ itself.
 
 \section{The critical three-by-three block}\label{sec:block}
 
@@ -464,66 +475,275 @@ norm on the critical block, not as an additive constant remainder.
 
 No bound on $E$ is proved \gr{open}.  Equation~\eqref{eq:rest} at
 $c=1$ is the only theorem-grade error control presently available,
-and it is finite interlacing, not an asymptotic remainder.
+and it is finite interlacing, not an asymptotic remainder.  After
+rounds 367--373 this relative form is the \emph{stronger} target:
+the primary question no longer needs a remainder that tracks
+$N^{-\alpha}$ (Section~\ref{sec:minimal}).
+
+\section{The minimal inertia form (rounds 367--373)}
+\label{sec:minimal}
+
+The schematic $S_{N}=N^{-\alpha}(M_{0}+O(N^{-\varepsilon}))$ of
+Section~\ref{sec:error} is a margin asymptotic.  The two-rank
+inertia cut replaces it by two coarser statements on the rest block
+$A_{0}=R_{N-3}-\half I$ and the $2\times2$ Schur matrix
+$K_{2}=I+U^{T}A_{0}^{-1}U$, with $U$ the last two dual
+Christoffel--Darboux columns.
+
+\paragraph{Analytic discount.}
+Write $\operatorname{ind}_{-}(A)$ for the number of strictly
+negative eigenvalues of a real Hermitian matrix $A$.  It is enough
+to prove, uniformly on the admissible family,
+\begin{align}
+\operatorname{ind}_{-}(A_{0})
+&\;\le\;1
+\tag{P1}\\
+\det K_{2}
+&\;\le\;-c_{0}<0
+\quad\text{on the branch }\operatorname{ind}_{-}(A_{0})=1.
+\tag{P2}
+\end{align}
+(P1) is an integer mode count.  (P2) is the sign of an $O(1)$
+$2\times2$ source.  An asymptotic argument need only beat a
+\emph{fixed} signature reserve, not the shrinking
+$N^{-3.33}$ spectral margin of Section~\ref{sec:alpha}.
+
+Census on the $74$ resolvable windows
+($\lambda_{\min}(R)-\half>10^{-9}$) \gr{census, round 367}:
+overload $\operatorname{ind}_{-}(A_{0})\ge2$ is $0/74$; the
+dichotomy is $45$ exact-one (nneg-$1$) against $29$ already
+positive-definite at rank $N-3$ (P1 vacuous).  On the nneg-$1$
+branch, $-\det K_{2}\in[1.157,\,1126.389]$, census floor $0.50$
+holds $45/45$, Theil--Sen slope of $\log(-\det K_{2})$ against
+$\log N_{w}$ is $+0.543$ (flat against the margin rate $-3.332$),
+and the restatement correlation against $\log\operatorname{margin}$
+on the $57$ calibration windows is $-0.0064$.  The implication
+$\mathrm{(P1)}\wedge\mathrm{(P2)}\Rightarrow R\succ\half I$ holds on
+all $74$ resolvable rows; it is sufficient, not necessary (the
+vacuous-$29$ already have $A_{0}\succ0$).
+
+\begin{thm}[Two-rank Haynsworth]
+\label{thm:haynsworth}
+Let $A_{0}$ be real Hermitian and invertible with
+$\operatorname{ind}_{-}(A_{0})=1$, and let
+$K_{2}=I_{2}+U^{T}A_{0}^{-1}U$.  If $\det K_{2}<0$, then
+$A_{0}+UU^{T}\succ0$
+\gr{lean-verified, \texttt{RH/Haynsworth.lean}, sorry-free}.
+\end{thm}
+
+Finite real algebra only; the census premises (P1)--(P2) on windows
+are \emph{not} asserted.  The Lean statement is
+\texttt{haynsworth\_two\_rank}.  On the hole kernel,
+$A_{0}+UU^{T}=R-\half I$, so Theorem~\ref{thm:haynsworth} converts
+(P1)--(P2) into $R\succ\half I$.  The R$^{\dagger}$ dictionary of
+Proposition~\ref{prop:A}(A3),(A5) then lifts to $\Ld$ once the
+terminal Schur $q^{\dagger}<1$ is available; both directions of
+$\Ld\iff\Rd\succ\half I$ are sorry-free in
+\texttt{RH/DualResolvent.lean}.
+
+\paragraph{Mixed $3\times3$ form.}
+The border is not a third unaugmented CD column.  At dual-resolvent
+level the Sherman--Morrison insertion of Proposition~\ref{prop:A}(A4)
+does supply a third column with an explicit signature.  Write
+$s=R\widetilde v$, $\mathrm{den}=1+\gamma-\widetilde v^{T}R\widetilde v$,
+and
+\[
+U_{\mathrm{mix}}
+=
+\begin{pmatrix}
+u_{N-3}&u_{N-2}&s\\
+0&0&-1
+\end{pmatrix},\qquad
+J=\operatorname{diag}\bigl(1,1,1/\mathrm{den}\bigr).
+\]
+Then \gr{theorem-grade, round 369; Fractions residual exactly $0$
+with $\mathrm{den}=23/30$; live residual $\le1.04\cdot10^{-14}$}
+\begin{equation}\label{eq:mixed}
+M^{\dagger}
+\;=\;
+\operatorname{blkdiag}(A_{0},-\half)
+\;+\;
+U_{\mathrm{mix}}\,J\,U_{\mathrm{mix}}^{T}.
+\end{equation}
+The generalized Haynsworth identity for invertible Hermitian $J$,
+\[
+\operatorname{In}
+\begin{pmatrix}A&U\\U^{T}&-J^{-1}\end{pmatrix}
+=
+\operatorname{In}(A)+\operatorname{In}(-\Phi)
+=
+\operatorname{In}(-J^{-1})+\operatorname{In}(A+UJU^{T}),
+\]
+with $\Phi=J^{-1}+U^{T}A^{-1}U$, is sorry-free
+(\texttt{haynsworth\_mixed}) \gr{lean-verified}.  The two-rank
+theorem is the case $J=I_{2}$.
+
+\paragraph{Census building blocks.}
+Three further finite objects are available to a specialist proof of
+(P1)--(P2).  All three are typed \textsc{census} or
+\textsc{theorem-grade} as marked; none is an extrapolation.
+\begin{itemize}
+\item
+Wedge-sign stability \gr{census, round 371}: the canonical CD
+two-form satisfies
+$\langle\omega,\wedge^{2}A_{0}^{-1}\omega\rangle<0$ on $45/45$ of
+the nneg-$1$ branch (range $[-637.7,\,-1.32]$, zero flips).  The
+second compound matrix therefore has source structure.  The
+capture identity that would turn this into (P2) is algebraically
+identical to (P2) via the exact expansion of $\det K_{2}$; it is
+not independent arithmetic.  The $\wedge^{2}$-subspace share is
+\emph{not} stable (majority $\ge0.50$ only on $27/45$).
+\item
+$\Phi$-monotonicity \gr{theorem-grade, round 370}: the
+matrix-valued Weyl function
+$\Phi_{N}(z)=J^{-1}+U^{T}(A-zI)^{-1}U$ is a block resolvent
+(Fractions determinant lemma exact at $z=-2$), and
+$\Phi'\succeq0$ (live minimum eigenvalue $8.949\cdot10^{-9}$ on
+$18/18$ admissible grid nodes).  The phase census is two-sided:
+MAIN $74/74$ resolvable rows are classified positive-definite with
+exact signature balance; the six terminal-dead character-twisted
+rungs ($q_{N}>1$) are classified negative ($\chi_{3}$ $5/5$,
+$\chi_{4}$ $1/1$).
+\item
+Pr\"ufer dictionary \gr{theorem-grade, round 372}: on the terminal
+surface, the $\lfloor\theta/\pi\rfloor$-runs of the chain Pr\"ufer
+phase coincide with the sign-runs of $v_{2}$ on $181/181$ windows,
+with the XOR identity $\operatorname{sign}(c_{t})=\operatorname{sign}(w\cdot x\cdot v_{2})$
+on the same $181$.  The dictionary is a theorem; the one-defect
+extraction that would have closed the terminal half from a single
+turning is \gr{refuted}.
+\end{itemize}
+
+\paragraph{Documented dead ends.}
+Four internal routes are closed, each at a named place.
+\begin{itemize}
+\item
+No $3\times3$ Jacobi Casoratian \gr{refuted, round 370}: dual $p$
+and dual-measure Cauchy $q$ satisfy the three-term recurrence; the
+border Cauchy sequence $r_{n}$ is not a homogeneous dual solution
+(residual $3.615\cdot10^{-2}$ on the running instance).  There is
+no $(p,q,r)$ Casoratian, so a matrix-Weyl index that would replace
+Haynsworth by an oriented winding does not linearize.
+\item
+Phase restatement \gr{refuted, round 370}: the real-line census
+index $\Xi=\operatorname{nneg}\Phi(0)$ \emph{is} Haynsworth inertia
+in other coordinates.  The phase language does not replace the
+inertia cut.
+\item
+$O(1)$ buffer of mass counting \gr{refuted, round 366}: proportional
+Markov--Stieltjes counting in the pair gap predicts occupation
+$Z=0$ ($nM_{I}/U=2.40\cdot10^{-5}$ on the running instance);
+measured $Z=1$ lives in the $O(1)$ sandwich buffer, which cannot
+separate $0$ from $1$ ($0/74$ scaled-band candidates).
+\item
+Edge pinning \gr{refuted, round 363}: dual OP zeros are not
+exponentially node-pinned in the saturated block $\{1,2,3\}$
+(Hurwitz maximum $0.462$ against bar $0.15$).  The zone is
+dual-void / primal-saturated; a BKMM pinning argument at the
+right hard edge does not apply.
+\end{itemize}
+
+\paragraph{Lean landing pad.}
+Sorry census: seven (two true arithmetic holes
+\texttt{lstar\_canonical}, \texttt{terminal\_q\_canonical}, plus
+the named dictionary, the opacity bridge, and three Level-C
+classical statements).  The entire R$^{\dagger}$ layer ---
+Haynsworth, the dual-resolvent dictionary (A2)--(A5), (A7-min),
+and the window bridge --- consumes no \texttt{sorryAx}.  A proof
+of (P1) and (P2) for all canonical windows beyond the certified
+head lands, via the kernel-checked chain, at window-local master
+positivity.  That is a landing pad, not a theorem of the family.
 
 \section{Problem statement}\label{sec:problem}
 
-\begin{problem}[Critical positivity of the bordered dual resolvent]
-\label{prob:rhp}
+\begin{problem}[Minimal inertia of the rest block]
+\label{prob:minimal}
 Let $(\mu,\nu)$ run over the admissible family of
-\cite{lstar-note}, with dual kernel $R$ and bordered dual resolvent
-$\Rd$ as in Definition~\ref{def:rdagger}.  Which theorem in the
-Riemann--Hilbert analysis of discrete orthogonal polynomials ---
-in particular, which statement in the saturation regime of
+\cite{lstar-note}, with dual kernel $R$ as in
+Section~\ref{sec:def}, rest block $A_{0}=R_{N-3}-\half I$, and
+$K_{2}=I+U^{T}A_{0}^{-1}U$ the two-rank Schur matrix of
+Section~\ref{sec:minimal}.  Prove \textup{(P1)} and \textup{(P2)}
+uniformly for the unbounded family: at most one negative inertia
+direction in $A_{0}$, and $\det K_{2}\le -c_{0}<0$ on the
+nneg-$1$ branch.  Which theorem in the Riemann--Hilbert analysis
+of discrete orthogonal polynomials --- in particular, which
+statement in the saturation regime of
 Baik--Kriecherbauer--McLaughlin--Miller
-\emph{\cite[Thm~2.7, Remark~2.8]{BKMM2007}} --- guarantees
+\emph{\cite[Thm~2.7, Remark~2.8]{BKMM2007}} --- supplies these two
+coarser facts?  The target is an integer mode count and the sign
+of an $O(1)$ minor, not a rate.
+\end{problem}
+
+By Theorem~\ref{thm:haynsworth} a proof of
+Problem~\ref{prob:minimal} gives $R\succ\half I$.  The R$^{\dagger}$
+layer then lifts to $\Ld$ once the terminal Schur is in hand
+(Proposition~\ref{prop:A}(A3),(A5), Lean-verified).  The mixed
+identity \eqref{eq:mixed} is the bordered analogue: the same
+Haynsworth additivity, with $J=\operatorname{diag}(1,1,1/\mathrm{den})$,
+applies to $M^{\dagger}$.
+
+\begin{problem}[Stronger saturation form]
+\label{prob:rhp}
+In the notation of Definition~\ref{def:rdagger}, which local
+parametrix at a hard edge adjacent to a saturated band guarantees
 \begin{equation}\label{eq:target}
 \Rd\;\succ\;\half I
 \end{equation}
-uniformly for the unbounded family?  Equivalently, given
-Proposition~\ref{prop:block}, which local parametrix at a hard edge
-adjacent to a saturated band guarantees that the critical
-$3\times3$ Schur block of $\Rd-\half I$ (binding pair plus border)
-stays positive-definite?
+uniformly, equivalently that the critical $3\times3$ Schur block
+of $\Rd-\half I$ (binding pair plus border) stays
+positive-definite?  This is the pre-367 target: a margin
+asymptotic $S_{N}=N^{-\alpha}(M_{0}+\cdots)$ with relative error
+control.  It implies Problem~\ref{prob:minimal} and is strictly
+stronger.
 \end{problem}
 
-The finite input to such a theorem is assembled above: reciprocal
+The finite input to either theorem is assembled above: reciprocal
 weight \eqref{eq:uvee}; occupation duality \eqref{eq:occ}; a
 census-grade saturated block $\{1,2,3\}$ with the binding pair
-astride the edge $3\mid 4$; observed rate $N^{-3.332}$ carried by
-the diagonal resolvent data; local-parametrix datum
-$t_{\mathrm{geo}}$ margin-locked in $[0.222,\,0.287]$; error
+astride the edge $3\mid4$; the dichotomy
+$\operatorname{ind}_{-}(A_{0})\le1$ on $74/74$ with (P2) on the
+$45$-row nneg-$1$ branch; mixed form \eqref{eq:mixed}; observed
+rate $N^{-3.332}$ (now optional); local-parametrix datum
+$t_{\mathrm{geo}}$ margin-locked in $[0.222,0.287]$; error
 control in relative/projective form, with rest-block theorem only
 at $c=1$.  The AC/Bessel class is the wrong class
 \cite{Lubinsky2008}.  A Gamma-class derivation at saturation
-adjacency is the standing analytic candidate and is open.
+adjacency remains a candidate for the \emph{stronger} form and is
+open.  The cheaper target is (P1)--(P2).
 
 \section{What a proof would give, and what it would not}\label{sec:status}
 
-A proof of \eqref{eq:target} for the unbounded family would give,
-in order:
-$\Rd\succ\half I$
-$\Rightarrow$ $\Ld$
-by Proposition~\ref{prop:A}(A3) \gr{theorem-grade finite algebra};
-$\Ld$ $\Rightarrow$ $\Ls\wedge\mathrm{Terminal}$
+A proof of Problem~\ref{prob:minimal} for the unbounded family
+would give, in order:
+$R\succ\half I$
+by Theorem~\ref{thm:haynsworth} \gr{lean-verified finite algebra};
+then $\Rd\succ\half I$ once $q^{\dagger}<1$, equivalently $\Ld$,
+by Proposition~\ref{prop:A}(A3),(A5)
+\gr{theorem-grade and lean-verified};
+$\Ld\;\Rightarrow\;\Ls\wedge\mathrm{Terminal}$
 and
-$\Ls\wedge\mathrm{Terminal}$ $\Rightarrow$
+$\Ls\wedge\mathrm{Terminal}\;\Rightarrow$
 positivity of every bordered window matrix through the cap
 \gr{Lean, sorry-free on the reconstruction layer, axiom audit
 \texttt{RH/Audit.lean}}.  That is window-local master positivity.
-It is not an asymptotic law, not a bound on the Riemann $\xi$-function,
-and not a statement about the Riemann hypothesis in either direction.
+A proof of the stronger form \eqref{eq:target} would give the same
+chain without a separate terminal input.  Neither is an asymptotic
+law, a bound on the Riemann $\xi$-function, or a statement about
+the Riemann hypothesis in either direction.
 
 What is on the table now is a finite census (at most $85$ windows
 for the hole kernel, $75$ plus one deep row for the border, four
-sealed obstacle instances for the partition) together with exact
-finite-matrix identities.  No Riemann--Hilbert steepest-descent
-analysis has been carried out.  The equilibrium-measure limit, the
-Gamma parametrix, and the error operator $E$ are open.  Comparison
-inputs show that the identities survive source destruction while
-positivity and the saturated partition do not --- so an existence
-proof for \eqref{eq:target} must consume the construction, not
-merely the dual algebra.
+sealed obstacle instances for the partition, $74$ resolvable rows
+for the two-rank dichotomy, $181$ windows for the Pr\"ufer
+dictionary) together with exact finite-matrix identities and a
+sorry-free R$^{\dagger}$ Lean layer.  No Riemann--Hilbert
+steepest-descent analysis has been carried out.  The
+equilibrium-measure limit, the Gamma parametrix, and the error
+operator $E$ are open, and they are no longer the cheapest target.
+Comparison inputs show that the identities survive source
+destruction while positivity and the saturated partition do not
+--- so an existence proof for (P1)--(P2) must consume the
+construction, not merely the dual algebra.
 
 Table~\ref{tab:w9} records the running instance.  Every number is a
 sealed probe record.  Numbers not in those records are omitted.
@@ -532,7 +752,8 @@ sealed probe record.  Numbers not in those records are omitted.
 \centering
 \caption{Running instance $z=16$ ($S=367$, $N=184$, pair folds
 $(2,4)$).  Dual quantities: round 356/359.  Occupation and
-obstacle: round 360.  Bordered quantities: round 362.}
+obstacle: round 360.  Bordered quantities: round 362.
+Two-rank inertia: round 367.}
 \label{tab:w9}
 \begin{tabular}{lr}
 \toprule
@@ -549,15 +770,19 @@ $t_{\mathrm{geo}}$ & $0.2646$ \\
 $o_{\mathrm{dual}}$ at folds $1,2,4$ & $0.1497$, $0.5118$, $0.5137$ \\
 QP dual-void block (KKT gap) & $\{1,2,3\}$ ($+0.092$) \\
 $q^{\dagger}$ / border Schur & $0.933044$ / $1.7319\cdot10^{-2}$ \\
+$\operatorname{ind}_{-}(A_{0})$ / $\det K_{2}$ &
+  $1$ / $-5.0389$ \\
+$-\det K_{2}$ (nneg-$1$ family) & $[1.157,\,1126.389]$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \medskip\noindent
 \textbf{Claim boundary.}\enspace
-Research documentation.  Not a proof of $\Ls$, of $\Ld$, or of
-$\Rd\succ\half I$ for the unbounded family.  Not evidence for or
-against the Riemann hypothesis in either direction.
+Research documentation.  Not a proof of $\Ls$, of $\Ld$, of
+\textup{(P1)}--\textup{(P2)}, or of $\Rd\succ\half I$ for the
+unbounded family.  Not evidence for or against the Riemann
+hypothesis in either direction.
 
 \begin{thebibliography}{9}
 

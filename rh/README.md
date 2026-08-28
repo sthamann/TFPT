@@ -4819,12 +4819,14 @@ rh/
 │       │                    fixed form c2PAIR (block decomposition, pair
 │       │                    triangle, level-2 refinement); the H5 margin
 │       │                    law retyped as pair_margin_main (sorry, r273)
-│       ├── DualResolvent.lean — r362 (reviewer priority 2): finite-matrix
-│       │                    L† ⟺ R† ≻ ½I.  PROVED: R ≻ ½I iff I−E ≻ 0
-│       │                    (A2), R† ≻ ½I iff I−G† ≻ 0 (A3), Sherman–
-│       │                    Morrison Y-block (A4), q† < 1 Schur (A5),
-│       │                    cone restriction (A7-min).  ONE named sorry:
-│       │                    the window↔matrix transcription.  NO RH CLAIM
+│       ├── DualResolvent.lean — r362/r373: finite-matrix L† ⟺ R† ≻ ½I.
+│       │                    PROVED sorry-free since r373: A2/A3/A4/A5/
+│       │                    A7-min plus the μ-ONB window bridge
+│       │                    (RepresentsLEnsemble).  NO RH CLAIM
+│       ├── Haynsworth.lean  — r373: two-rank cut (haynsworth_two_rank)
+│       │                    and mixed J-form (haynsworth_mixed),
+│       │                    sorry-free.  Does not assert census
+│       │                    premises P1/P2 on windows.  NO RH CLAIM
 │       └── Counterexamples.lean — r273 reviewer guards: machine-checked
 │                            refutations of the three pre-r273 universal
 │                            forms (proved, no sorry)
@@ -4838,8 +4840,11 @@ rh/
 │   ├── rdagger_saturation.tex(+pdf) — specialist dossier on the
 │   │                     bordered dual resolvent R† (definition,
 │   │                     duality formulae, critical 3×3, saturation
-│   │                     edge, exponent, relative error form, one
-│   │                     open RHP/BKMM question).  No RH claim
+│   │                     edge, exponent, relative error form; since
+│   │                     r367–r373 the PRIMARY question is the
+│   │                     minimal inertia form (P1)+(P2), the older
+│   │                     RHP/BKMM saturation question is the
+│   │                     stronger variant).  No RH claim
 │   ├── medcap_lemma.tex(+pdf) — proof attempt for the r361
 │   │                     MED-CAP inequality med_i ≤ (8/3) sep_i
 │   │                     (SEP-SATZ proved; tiling reduction;
@@ -4911,20 +4916,32 @@ decision; see the lane status update above); the sections of the
 original problem statement are unchanged.
 
 A second standalone note, `rh/problem/rdagger_saturation.pdf`
-(August 28, 2026), states the R360+R362 complex as a 7-page
-specialist dossier: definition of the bordered dual resolvent
+(August 28, 2026; updated the same day after r367–r373), is a
+9-page specialist dossier.  The R360+R362 complex remains:
+definition of the bordered dual resolvent
 `R† = [[R⁻¹, Dv], [(Dv)ᵀ, 1+γ]]⁻¹`, the exact duality package
 `(A1)–(A7)`, the critical 3×3 Schur block, the census that the
 binding pair straddles the saturation-block edge `3|4`, the
 observed exponent `α = 3.332`, the relative/projective error-
-operator form, and **one open question** — which asymptotic
-RHP/BKMM theorem (BKMM 2007 Thm 2.7 / Rem 2.8) guarantees that
-the critical bordered resolvent block stays above `½`.  Finite
-census, no asymptotics, no claim.  A proof of `R† ≻ ½I` would
-give `L†` and hence window-local master positivity (Lean chain
-`augmentedSubordination_iff_lstar_and_terminal` +
-`lstar_terminal_implies_master`, axiom-audited).  L\* and L†
-stay **[O]**.  NO RH CLAIM.
+operator form.  After the two-rank inertia cut and the
+matrix-Weyl sequence the **primary question is strictly weaker
+and sharper**: (P1) `ind₋(R_{N-3} − ½I) ≤ 1` (integer mode
+count; census 0 overload on 74/74, dichotomy 45 nneg-1 / 29
+already-PD) and (P2) `det K₂ ≤ −c₀ < 0` on the nneg-1 branch
+(sign of an O(1) source; `−det K₂ ∈ [1.157, 1126.389]`, floor
+0.50, margin-uncorrelated corr `−0.0064`).  Haynsworth
+(`haynsworth_two_rank`, `haynsworth_mixed`) and the R† layer
+are Lean sorry-free (census 7); a proof of (P1)+(P2) for all
+canonical windows beyond the certified head lands, via the
+kernel-checked chain, at window-local master positivity — a
+landing pad, not a theorem of the family.  The
+older RHP/BKMM saturation question (BKMM 2007 Thm 2.7 / Rem 2.8)
+is retained as the **stronger variant**.  Mixed 3×3 form,
+wedge-sign census, Φ-monotonicity, Prüfer dictionary, and the
+named dead ends (no 3×3 Jacobi Casoratian, phase restatement,
+r366 O(1) mass-count buffer, r363 edge pinning) are recorded.
+Finite census, no asymptotics, no claim.  L\* and L† stay
+**[O]**.  NO RH CLAIM.
 
 A third standalone note, `rh/problem/medcap_lemma.pdf` (August 28,
 2026), is a proof attempt for the r361 median-cap inequality
