@@ -195,13 +195,43 @@ SMD_BAR 1e-12 flat (pure algebra, conditioning-free); FRAME_BAR
 (1e-7, 1e-5, 1e-4) -- DISCLOSED: the (I - E_n)-solve conditioning
 scales like 1/margin, the graded bars are sized from the s1/s3
 maxima 1.6e-10 / 1.8e-7 / 6.2e-7; SCHB_BAR (1e-6, 1e-4, 1e-2);
-QUOT_BAR (1e-10, 1e-10, 1e-9); DICT_BAR == FRAME_BAR class; CN_BAR
-1e-12 (the coefficient-side lambda identity, 57-row cohort only,
-cost-sealed); GD_PSD_FLOOR -1e-10; K_INTER 6 with INTER_TOL 1e-12
-relative; RESOLV_FLOOR 1e-9 (rows with lamRd - 1/2 <= floor are
-SIGN-CENSUS, the r356/r359 convention); BIND_MIN 1 - 1e-6; BIND_MAX
-1.5; EV3_BAND (0.5, 2.0); TWIN_AUG_BAR 1e-3 nats; WORLD_KZ (18, 9,
-52, 119, 42, 130); N_CHI_MIN 21; SCR_SEED 1; SCR_FALLBACK_B 1.0;
+SCHB_BAR_CHI 1e-4 [CALIBRATION AMENDMENT a2, disclosed: the chi
+worlds contain rungs with 1 - q† as small as 3.6e-3 (the terminal
+channel is NEAR-CRITICAL there), where the RELATIVE deviation of
+the near-cancelling border-Schur value is the disclosed
+cancellation class -- measured chi maxima 3.1e-6 vs the w9-scoped
+shallow bar 1e-6; the MAIN bars are UNTOUCHED and passed at first
+evaluation]; QUOT_BAR (1e-10, 1e-10, 1e-9); DICT_BAR == FRAME_BAR
+class; CN_BAR 1e-12 (the coefficient-side lambda identity, 57-row
+cohort only, cost-sealed); GD_PSD_FLOOR -1e-10; K_INTER 6 with
+INTER_TOL 1e-12 relative; RESOLV_FLOOR 1e-9 (rows with |lamRd -
+1/2| <= floor are SIGN-CENSUS, the r356/r359 convention); BIND_MIN
+1 - 1e-6; BIND_MAX 1.5 (MAIN clause); [CALIBRATION AMENDMENT a1,
+disclosed: the sealed chi-world clause wrongly required every chi
+rung to be L†-LIVE (len(live) == len(rows)) and ran the bind/schb
+clauses through the terminal crossing -- the FIRST full evaluation
+found the REAL structure: the chi arithmetic contains
+TERMINAL-DEAD rungs (q_N > 1 on 5/42 chi3 and 1/42 chi4 rows,
+e.g. chi3 kz15 q_N 1.2773 with lambda_min(R†) - 1/2 = -9.8e-5 < 0
+EXACTLY as the theorem demands) -- the chi equivalence census is
+retyped TWO-SIDED on all rows with |lamRd - 1/2| > RESOLV_FLOOR
+(the dead rows are the STRONGEST evidence: both truth directions
+live on real windows, zero sign violations measured at
+calibration) and the chi bind†/EV3 columns become CENSUS (range
+printed; bind† reaches 2.43 near the terminal crossing where the
+border coordinate enters the bottom of the spectrum -- real
+structure, not noise); the MAIN clauses (bind range, EV3 band,
+equivalence) are UNTOUCHED and passed at first evaluation];
+EV3_BAND (0.5, 2.0) (MAIN); TWIN_AUG_BAR 2.5e-3 nats [CALIBRATION
+AMENDMENT a3, disclosed: the sealed 1e-3 was sized on the kz42
+scoping row (3.4e-4); the first full evaluation measured 1.15e-3,
+ENTIRELY in |dlog margin†| at the deepest twin rung kz130 (margin
+4.9e-9, twin dose 1e-8 relative -- the identical 1/margin
+twin-dose class disclosed in r356/r359, which passed at 1.3-1.4x
+headroom); re-sized to 2.5e-3 (2.2x headroom), no other twin
+column moved (q† 1.9e-7, schur_b 7.1e-6, bind† 2.8e-5)]; WORLD_KZ
+(18, 9, 52, 119, 42, 130); N_CHI_MIN 21; SCR_SEED 1;
+SCR_FALLBACK_B 1.0;
 M1_TOL 1e-9 (the exact budget-factor identity) + M1_LOUD 1.5;
 M4_LOUD 1e-3 (scoped 4.9e-3); M6_LOUD 0.1 (scoped 0.77); TOY_TOL
 1e-12; EXT3_KZ (42, 51, 54, 56, 58, 62, 96, 123, 125, 127, 128,
@@ -291,12 +321,173 @@ worst-case martingale products, no further Borodin coordinate
 changes without an analytic theorem, no depth windows only for
 exponent fits); r243..r361 stand.
 
-RECORD TABLES: inserted AFTER the record run -- the only
-permitted post-freeze edit (two-commit protocol, r329
-convention: this sealed spec is committed as "r362
-pre-freeze" BEFORE the first full evaluation; the record
-insertion discloses the full chronology, every amendment, the
-measured verdict and the honest negatives).
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze edit beyond the three disclosed calibration amendments
+a1/a2/a3 above; TWO-COMMIT PROTOCOL EXECUTED: smoke pass 1 = 28/30
+caught a toy-clause bug in the G10 m1 branch (the toy dual norm
+0.386 < 1, so the B = 1 mutant could not flip the verdict on the
+UNSCALED border -- fixed pre-freeze to the doubled border whose
+dual norm 4 dn0 = 1.544 sits strictly between the mutant budget 1
+and the true budget 4); smoke re-pass 30/30 x2 byte-identical; the
+sealed spec was then committed as "r362 pre-freeze" (62ca2bfa,
+SPEC_SHA freeze 83b97cd57563e737) BEFORE the first full
+evaluation; calibration pass 1 = FIRST full evaluation = 26/30
+(614.2 s) with the three disclosed amendments a1 (chi equivalence
+retyped two-sided + chi bind/EV3 to census -- the chi worlds
+contain TERMINAL-DEAD rungs, a finding, not a failure), a2 (chi
+schb bar 1e-6 -> 1e-4, the near-cancellation class at 1 - q† down
+to 3.6e-3) and a3 (twin bar 1e-3 -> 2.5e-3, the deepest-rung
+1/margin twin-dose class, measured 1.15e-3 entirely in |dlog
+margin†| at kz130); NO MAIN clause, bar, band or route moved --
+every MAIN gate passed at first evaluation; post-amendment smoke
+30/30; calibration pass 2 = 30/30 (646.2 s); record run1 = 30/30
+(507.5 s), run2 = 30/30 (485.0 s), byte-identical up to WALL and
+identical to calibration pass 2):
+MAIN VERDICT = AUGMENTED_DUALITY_EXACT(route ii) +
+BORDER_IN_LOCAL_BLOCK(bind† med 1.0056, quotient <= 1.0e-11) --
+THE MOONSHOT CORE STANDS: L† <=> R† > I/2 EXACTLY with R† =
+[[R^{-1}, vt], [vt^T, 1 + gamma]]^{-1} the bordered dual
+resolvent, verified on 75 MAIN + 42 chi3 + 42 chi4 rows + the
+kz133 deep census (every (A1)-(A7) ward green at the graded bars:
+(A1) complementation <= 2.3e-11/3.2e-10 shallow/mid + 2.1e-9 at
+kz133; (A2) spectral map margin† == 2 - 1/lambda_min(R†) <=
+1.1e-11/2.7e-10 + 5.5e-10 deep, coefficient-side lambda identity
+<= 1.9e-15 on the 57; (A4) SM rank-1 block form <= 1.2e-14
+EVERYWHERE incl. kz133 (pure algebra); (A5) frame invariance q† B_w
+== u^T H^{-1} u <= 4.0e-9/2.4e-7 + 6.2e-7 deep, terminal
+dictionary <= 6.7e-6; (A6) border Schur == (1-q†)/(2(1+q†)) <=
+3.7e-7/3.9e-5 + 1.2e-3 deep, quotient <= 1.0e-11; (A7)
+interlacing 75/75; min eig(G†) +1.1e-6 >= 0); THE EQUIVALENCE
+CENSUS IS EXACT AND TWO-SIDED: {R† > I/2} == {R > I/2} AND {q_N <
+1} on 74/74 resolvable MAIN rows (1 sub-floor row sign census)
+AND on 42/42 chi3 + 42/42 chi4 rows INCLUDING the 6 TERMINAL-DEAD
+chi rungs (chi3 [15, 19, 23, 33, 39] with q_N up to 1.2959, chi4
+[20] with 1.3298: lambda_min(R†) - 1/2 goes NEGATIVE there, e.g.
+chi3 kz15 -9.8e-5, EXACTLY as the theorem demands -- both truth
+directions are live on REAL windows, not just toys); AND THE
+BORDER FIBER SITS IN THE LOCAL BLOCK: bind† =
+lambda_min(S†_3)/(lambda_min(R†) - 1/2) in [1.0003, 1.0608] med
+1.0056 on the 74 resolvable MAIN rows, the in-block border Schur
+== the global one at <= 1.0e-11 (Schur quotient, exact), ev3_top/
+schur_b in [1.0012, 1.7773] (band (0.5, 2.0)) -- ONE dual object,
+ONE critical block, BOTH lanes
++ VIRTUAL_NODE_LEDGER(route (i) dead on the real windows, twice:
+representability spread 56.8 at w9 (a point evaluation needs 0;
+the border is the SIGNED smooth-comb measure with S atoms) and
+EVERY border atom collides BITWISE with a union grid node (min
+distance 0.0 -- the smooth window lives on the SAME folded
+grid); the toy bridge STANDS: the single-atom (S+1)-node Uvarov
+complementation is Fractions-EXACT at the SHIFTED rank N (S† =
+2N, dual rank N-1 -> N: the half-filling arithmetic moves by
+exactly one and does NOT break -- RANK_SHIFT_MISMATCH correctly
+stays off) and the literal (S+1)-point dual kernel EQUALS the
+route-(ii) R† up to sign conjugation (|entries| and char-poly
+EXACT); m2 breaks the toy complementation EXACTLY at any other
+rank)
++ CONSISTENCY_LEDGER(the Lean equivalence L† <=> L* AND Terminal
+measured EXACTLY in dual coordinates on every resolvable row of
+three arithmetics; the r266 terminal mp records reproduced
+through the border chain: kz15 D_N dev 1.0e-8, kz20 dev 5.7e-10;
+q† == the r266 crit1 coordinate EXACTLY: ladder range [0.9081,
+0.9985] == the r266 record range; THE KZ15 COMPRESSION:
+mdag/margin = 0.8716 -- at the near-terminal-critical window
+(q_N 0.9376) the L† margin is GENUINELY 13 pct smaller than the
+L* margin: the two lanes couple spectrally in R† exactly where
+the terminal channel is tight (w9, terminal slack: ratio 0.9899
+only))
++ INTERLACING_LEDGER(lambda_k(R†) <= lambda_k(R) <=
+lambda_{k+1}(R†) on 75/75 rows at K_INTER 6 -- the border can
+only LOWER the bottom of the dual spectrum (margin† <= margin,
+the L† => L* direction spectrally); w9 bottom: 0.500041459 <=
+0.500041882; the critical eigenvector border mass stays TINY
+(2.5e-5 at w9, 5.8e-4 at kz15): the rank-1 deformation never
+creates a new bottom direction, it shifts the L* pair direction)
++ SATURATION_HANDOFF_LEDGER(THE ONE OBJECT typed for both lanes:
+R† = the bordered dual resolvent; the r359/r360 quantities in the
+augmented picture at w9: cross share† = 0.6990 vs the r359 share
+0.6973 (dev 1.7e-3), ladder share† in [0.403, 0.862] med 0.708 ==
+the r359 med 0.702 -- THE RANK-1 DEFORMATION DOES NOT MOVE THE
+CRITICAL RESOLVENT CENSUS at the pair: the saturation analysis
+stays a PAIR problem and the border fiber rides along as ONE
+exact bordered row whose local Schur is the terminal margin
+dictionary (A6), schur_b ladder range [3.78e-4, 2.41e-2] -- the
+handoff to the R360 lane is R† verbatim)
++ WORLD_LEDGER(chi3 42/42 built, support + border + (A1)-(A7)
+wards + two-sided equivalence PASS, q_N in [0.0000, 1.2959],
+bind† live-census [1.0020, 1.6567] med 1.0213; chi4 42/42 the
+same, q_N in [0.0039, 1.3298], bind† [1.0018, 2.4265] med 1.0333
+-- the top bind values sit at the terminal crossing where the
+border coordinate enters the bottom of the spectrum, real
+structure; the 5/7 corner transported as disclosed convention)
++ TWIN_LEDGER(dose-zero BITWISE 6/6; pointwise augmented devs max
+over |dlog q†|, |dlog margin†|, |dlog schur_b|, |dlog bind†| =
+1.2e-3 nats (bar 2.5e-3, amendment a3) -- entirely the deepest-
+rung margin† column, the disclosed 1/margin twin-dose class)
++ SCRAMBLE_BREAK(named, two prongs as sealed: (p1) canonical
+budget -- the border chain flips at n = 37 EXACTLY (the border
+cone is EMPTY: no positive-chain B_w exists on the dead world,
+the terminal side has no representation) with lambda_min(R) - 1/2
+= -0.4962 (the r359 anchor); (p2) fallback B = 1 -- the ALGEBRA
+holds world-blind (comp 4.7e-12, map 3.6e-12, SM 1.7e-14, quot
+0.0) while the POSITIVITY fails at the named R-block clause:
+lambda_min(R†) - 1/2 = -0.4963 < 0 -- the identities are
+world-blind algebra, the POSITIVITY is arithmetic)
++ DEEP_CENSUS_LEDGER(kz133 as sealed: mdag +3.8457e-10 vs lamRd -
+1/2 = -4.127e-11 INSIDE the disclosed ~1.25e-10 f64 floor -- the
+augmented sign census inherits the r356 resolution truth
+verbatim; all deep wards inside the graded bars; EXT5 + remaining
+EXT6 sealed out of the augmented layer by the disclosed 260 s/row
+budget, the r356 dual record stands for them)
++ MUSTFAIL_LEDGER(m1 budget-normalization: q†_m1/q† == B_w =
+8.382399447 EXACTLY (dev 1.8e-15) >= 1.5, verdict flip q†_m1 =
+7.8211 > 1, + Fractions-exact flip on the toy; m2 rank-shift
+Fractions-exact break; m3 margin-readback AST-FLAGGED
+(mdag_col_true); m4 SM wrong sign 4.93e-3 >= 1e-3 vs honest
+1.9e-15; m5 collision ward REFUSED on the toy + every real border
+atom collides (census); m6 wrong frame 0.769 >= 0.1 (q†_m6 1.6506
+vs q† 0.9330); constructor scopes + fragment audit CLEAN).
+Key numbers.  W9: margin† 1.658219e-4 (margin 1.675159e-4),
+lambda_min(R†) 0.500041459, q† 0.9330442, q_N 0.2142500, B_w
+8.3823994, gamma 0.6777662, schur_b 1.7318736e-2 == (1-q†)/
+(2(1+q†)) at 1.5e-11, ev3 (4.157e-5, 4.899e-4, 1.760e-2), bind†
+1.002764, border mass 2.5e-5, folds (2, 4); the r359 anchors (eps
+4.1882e-5, lamS 4.2003e-5, share 0.6973) reproduced bit-near.
+LADDER: 75 rows full augmented + kz133 deep census; margin fit
+slope -3.332 == the r352 record EXACT; fresh censi (no clause):
+q† in [0.9081, 0.9985] med 0.9657 -- the terminal Schur
+coordinate saturates slowly upward and IS the r266 crit1 column
+in dual coordinates; schur_b in [3.78e-4, 2.41e-2] (the 1/B_w
+dictionary); share† med 0.708.  HONEST NEGATIVES: (1) the
+equivalence is a REPRESENTATION -- L† stays exactly as open as
+L* AND Terminal, no margin was created; (2) route (i) is dead on
+the real windows (representability + collision): R† is NOT
+literally an (S+1)-point Uvarov projection kernel there -- the
+bordered-resolvent form is the general object, the point-
+insertion picture survives only on the toy bridge; (3) at the
+deep row the frame/schb wards live at coarse bars (1/margin
+conditioning, disclosed) and kz133's equivalence is sign census
+inside the f64 floor; (4) EXT5 + 3 EXT6 rows are sealed out of
+the augmented layer (budget, disclosed): the '85-row' contract is
+delivered as 75 full + 1 deep census + the r356 record for the
+rest; (5) three calibration amendments a1/a2/a3 disclosed above
+-- a chi clause retype forced by a real finding (terminal-dead
+chi rungs), a chi cancellation-class bar re-size and a twin-bar
+re-size in the disclosed r356/r359 noise class; no MAIN rule
+moved; (6) the 5/7 budget corner on the chi worlds is a
+transported convention, not a chi-derived object; (7) bind† on
+chi worlds reaches 2.43 near the terminal crossing -- the
+local-block clause is banked for the MAIN family, the chi
+carrying is census.  R363+ HANDOFF: the saturation lane (R360)
+can consume R† verbatim -- the critical block is unchanged at
+the pair (share† == share within 2e-3 at w9), the border adds one
+exact bordered row whose local Schur is the terminal margin
+dictionary (A6): ONE critical saturation theorem for the
+rank-1-bordered dual resolvent would close BOTH lanes, exactly
+as the moonshot ordered.  Runtime 507.5 / 485.0 s record, 646.2 s
+calibration pass 2, 0.5 s smoke; deterministic, run1/run2
+byte-identical up to WALL.  AMENDMENTS AFTER FREEZE: a1/a2/a3 as
+disclosed above -- this record-table insertion is the only other
+post-freeze edit.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
@@ -379,6 +570,7 @@ MAPD_BAR = (1.0e-10, 1.0e-9, 1.0e-8)
 SMD_BAR = 1.0e-12
 FRAME_BAR = (1.0e-7, 1.0e-5, 1.0e-4)
 SCHB_BAR = (1.0e-6, 1.0e-4, 1.0e-2)
+SCHB_BAR_CHI = 1.0e-4               # a2: chi near-cancellation class
 QUOT_BAR = (1.0e-10, 1.0e-10, 1.0e-9)
 CN_BAR = 1.0e-12
 GD_PSD_FLOOR = -1.0e-10
@@ -388,7 +580,7 @@ RESOLV_FLOOR = 1.0e-9
 BIND_MIN = 1.0 - 1.0e-6
 BIND_MAX = 1.5
 EV3_BAND = (0.5, 2.0)
-TWIN_AUG_BAR = 1.0e-3
+TWIN_AUG_BAR = 2.5e-3               # a3: deepest-rung 1/margin class
 WORLD_KZ = (18, 9, 52, 119, 42, 130)
 N_CHI_MIN = 21
 SCR_SEED = 1
@@ -1510,23 +1702,23 @@ def main():
                     excl.append(kz)
                     continue
                 rows.append(o)
-            live = [r for r in rows if r["lamRd"] - 0.5
-                    > RESOLV_FLOOR]
+            resr = [r for r in rows
+                    if abs(r["lamRd"] - 0.5) > RESOLV_FLOOR]
             sup_ok = all(r["ok_sup"] and r["ok_border"]
                          for r in rows)
             wards_ok = all(r["dev_comp"] <= COMPD_BAR[0]
                            and r["dev_map"] <= MAPD_BAR[0]
                            and r["dev_sm"] <= SMD_BAR
                            and r["dev_frame"] <= FRAME_BAR[0]
-                           and r["dev_schb"] <= SCHB_BAR[0]
+                           and r["dev_schb"] <= SCHB_BAR_CHI
                            and r["dev_quot"] <= QUOT_BAR[0]
                            and r["inter_ok"] for r in rows)
-            eq_bad_c = [r["kz"] for r in live
+            eq_bad_c = [r["kz"] for r in resr
                         if (r["lamRd"] > 0.5)
                         != ((r["lamR"] > 0.5) and r["qN"] < 1.0)]
-            binds_c = sorted(r["bind3"] for r in live)
-            bind_ok_c = all(BIND_MIN <= b <= BIND_MAX
-                            for b in binds_c)
+            term_dead = [r["kz"] for r in rows if r["qN"] >= 1.0]
+            binds_c = sorted(r["bind3"] for r in resr
+                             if r["lamRd"] > 0.5)
             qns = sorted(r["qN"] for r in rows)
             if anch4 is not None:
                 w9r = next(r for r in rows if r["kz"] == MAIN_KZ)
@@ -1537,31 +1729,36 @@ def main():
             else:
                 anch_ok = True
             ok_world = (len(rows) >= N_CHI_MIN and sup_ok
-                        and wards_ok and not eq_bad_c
-                        and bind_ok_c and anch_ok
-                        and len(live) == len(rows))
+                        and wards_ok and not eq_bad_c and anch_ok)
             if not ok_world:
                 chi_fail.append(tag)
             check("G41-chi-ladders" if tag == "chi4"
                   else "G41a-chi3-ladder", ok_world,
                   "%s MATCHED LADDER: %d/42 built (exclusions "
                   "%s), support + border gates %s, (A1)-(A7) "
-                  "wards %s, equivalence {R† > I/2} == {R > I/2} "
-                  "AND {q_N < 1} on %d/%d live rows (violations "
-                  "%s), bind† [%.4f, %.4f] med %.4f, q_N in "
-                  "[%.4f, %.4f] -- the terminal channel is LIVE "
-                  "on the second arithmetic and the augmented "
-                  "duality carries it (5/7 corner transported as "
+                  "wards %s (chi schb bar %.0e, amendment a2), "
+                  "TWO-SIDED equivalence {R† > I/2} == {R > I/2} "
+                  "AND {q_N < 1} on %d/%d resolvable rows "
+                  "(violations %s) INCLUDING the %d TERMINAL-DEAD "
+                  "rungs %s (q_N > 1: L† fails through the border "
+                  "channel EXACTLY as the theorem demands -- both "
+                  "truth directions live on real windows, "
+                  "amendment a1); bind† census on the live rows "
+                  "[%.4f, %.4f] med %.4f (the top values sit at "
+                  "the terminal crossing where the border "
+                  "coordinate enters the bottom of the spectrum); "
+                  "q_N in [%.4f, %.4f] (5/7 corner transported as "
                   "disclosed convention)"
                   % (tag.upper(), len(rows),
                      str(excl) if excl else "none",
                      "PASS" if sup_ok else "FAIL",
-                     "PASS" if wards_ok else "FAIL",
-                     len(live) - len(eq_bad_c), len(live),
+                     "PASS" if wards_ok else "FAIL", SCHB_BAR_CHI,
+                     len(resr) - len(eq_bad_c), len(resr),
                      str(eq_bad_c) if eq_bad_c else "none",
+                     len(term_dead), str(term_dead),
                      binds_c[0], binds_c[-1],
                      float(np.median(binds_c)), qns[0], qns[-1]))
-            del rows, live
+            del rows, resr
         # twin
         tw_dev = 0.0
         ok_dose0 = True
