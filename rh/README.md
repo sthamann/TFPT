@@ -4968,6 +4968,41 @@ NO L\* claim, NO RH CLAIM.  Mincut unchanged (base 4 / refined
 5).  Coexistence: r374--r381 and r376/r380 (Lean) are parallel
 lanes; this round is additive.
 
+**The compose premises $(R)$, $(L)$, $(Z)$ (r383,
+LEMMA.COMPOSE.PREMISES.01, lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/compose_premises_probe.py` (20/20
+full, 12/12 smoke, SPEC_SHA `146b0b45ad872d7e`) plus
+`rh/problem/compose_premises.tex` (+ PDF +
+`verify_compose_premises.py`, 16/16, `COMPOSE PREMISES VERIFIED`).
+Three letters, one shared Fejér/vdC window.  SATZ: Fejér identity
+and bilinear Cauchy--Schwarz; the $r298$ split; $Z=Z_{\mathrm{loc}}+t_{\mathrm{bulk}}$
+(Lean `canonical_split`; not $\sum P_\Delta$); the $L^2$ identity
+$M_3=(({\log m})^2/m^2)\,T_2\,E_\pi(F^2)$; $\Lambda(n)\le\log n$;
+$\mathrm{pref}\le\sqrt{m}+1$; T1-floor algebra under $g_i\ge 3/8$.
+**(R) REDUZIERT** to the census $R_0=4$ (sup $2.916788$ at FRAME-A
+kz$37$; mutant $R_0/2=2$ fails $17/181$ and the DC toy).  Fold
+pairing as a live SATZ is REFUTED (pair-residual median $0.512$);
+MAIN-empty is a census (median $0.0086$), not a pairing theorem.
+The trivial envelope $H_{\max}=29$ is too coarse.  **(L) REDUZIERT**
+to $\Lambda=3$ (max $2.126$ at FRAME-B kz$124$).  The von~Mangoldt
+triangle (slope $+0.307$ on FRAME-A) does not prove $\gamma<1/4$;
+the measured $L_1$ slope $+0.202$ on the $42$ is not a theorem.
+The T1-combo does **not** carry as a theorem ($E_\pi=52.276$ at
+kz$111$, $75.691$ at kz$117$; identity SATZ, $T_2\le 1.329<(8/3)^2$).
+**(Z) REDUZIERT** on FRAME-A ($Z_0=4/5$, $89/89$, max $0.755675$
+at kz$16$) and FRAME-B $8/8$ and the $42$-rung ladder $42/42$;
+**REFUTED** family-uniform on $\chi$ (six windows:
+$\chi_3\{15,19,23,33,39\}$, $\chi_4\{20\}$; $175/181$ have
+$\lvert Z_{\mathrm{loc}}\rvert<M$).  Finite-head Chebyshev is
+REFUTED ($n_{\mathrm{edge}}$ $167$--$4689$).  Scramble seed $1$
+named-breaks $(L)$ on the T1/$M_3$ polylog without breaking $R_0$
+or $\Lambda$.  Remaining: a cofinal $R_0$, a proved $\gamma<1/4$
+or a family-uniform $E_\pi$ bound, a cofinal $Z_0$ off $\chi$, T1
+as a $C_K$-cap, Dict, Head.  Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.  Mincut unchanged (base 4 / refined
+5).  Coexistence: r374--r382 and r376/r380/r384 (Lean) are parallel
+lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5109,6 +5144,10 @@ rh/
 │   │                     pivot band reduced to n₀=⌊2N/5⌋
 │   │                     under (2/3)-flank; L² remainder
 │   │                     named for n₀=N−1.  No RH claim
+│   ├── compose_premises.tex(+pdf) — r383: COMPOSE⁻ inputs
+│   │                     (R)(L)(Z).  Fejér/r298/L² SATZ;
+│   │                     (R)(L) census-reduced; (Z) reduced
+│   │                     on FRAME-A, refuted on χ.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5133,9 +5172,12 @@ rh/
 │   ├── verify_g_eps.py — machine check of
 │                         g_eps_lemma.tex (13/13,
 │                         G_EPS LEMMA VERIFIED)
-│   └── verify_pivot_entry.py — machine check of
+│   ├── verify_pivot_entry.py — machine check of
 │                         pivot_entry_lemma.tex (14/14,
 │                         PIVOT ENTRY STEPS VERIFIED)
+│   └── verify_compose_premises.py — machine check of
+│                         compose_premises.tex (16/16,
+│                         COMPOSE PREMISES VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5397,6 +5439,23 @@ script `verify_pivot_entry.py`, 14/14 gates,
 `b7f53a93daf790bc`.  Finite identities plus a named reduction.
 NO L\* claim.  NO RH CLAIM.
 
+A twelfth standalone note, `rh/problem/compose_premises.pdf`
+(August 28, 2026), is the lemma-first attack on the three
+COMPOSE$^-$ input premises $(R)$, $(L)$, $(Z)$ (round 383, sealed
+census probe `compose_premises_probe.py`).  The r378 implication
+is a theorem of those three inequalities plus $M_3\le\phi(m)$.
+Fejér, $r298$, $Z=Z_{\mathrm{loc}}+t_{\mathrm{bulk}}$, the $L^2$
+identity, $\Lambda\le\log$, and the $H$-rule are SATZ.  Fold
+pairing is REFUTED as a description of the live $P_\omega$.
+**(R) REDUZIERT** ($R_0=4$).  **(L) REDUZIERT** ($\Lambda=3$);
+the T1-combo does not close as a theorem ($E_\pi$ spikes).
+**(Z) REDUZIERT** on FRAME-A ($Z_0=4/5$) and **REFUTED**
+family-uniform on $\chi$ (six windows).  Companion script
+`verify_compose_premises.py`, 16/16 gates,
+`COMPOSE PREMISES VERIFIED`.  Discovery probe 20/20, SPEC_SHA
+`146b0b45ad872d7e`.  Finite identities plus named reductions.
+NO L\* claim.  NO RH CLAIM.
+
 ## The RH suite
 
 ```bash
@@ -5409,7 +5468,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r382 from
+2. **Sealed probes** — the campaign probes r250–r383 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -5817,11 +5876,32 @@ integrity + probes (`run_rh.py --fast --skip-lean`) after
 appending the probe and problem-document rows to the inventory.
 r374--r381 are parallel lemma-first / Lean lanes and are not
 dropped.
+**r383 coexistence.** Round 383 (`compose_premises.tex` +
+`compose_premises_probe.py`) is additive on the terminal
+Fejér/vdC compose lane after r378 (lemma-first $(R)(L)(Z)$:
+census $R_0=4$, $\Lambda=3$, $Z_0=4/5$ on FRAME-A; T1-combo
+does not carry as a theorem; $\chi$ refutes family-uniform
+$(Z)$).  It does not touch `experiments/next.txt` and does
+not touch `rh/lean/` (r376/r380/r384).  Suite surface of this
+round: integrity + probes (`run_rh.py --fast --skip-lean`)
+after appending the probe and problem-document rows to the
+inventory.  r374--r382 are parallel lemma-first / Lean lanes
+and are not dropped.
 **r384 coexistence.** Round 384 (`RH/FlankEntry.lean`) is additive
 on the Lean kernel after r380/r382: it docks `FlankEntryPrefix` to
 the pivot layer and does not touch `rh/problem/` (r382/r383) or
 `experiments/next.txt`.  Census stays 5.  Ausgang
 benannt-ZERLEGT.  NO RH CLAIM.
+**r385 coexistence.** Round 385 (`christoffel_quiet.tex` +
+`christoffel_quiet_probe.py`) is additive on the common
+Christoffel-quietness core of r381 ($G_\varepsilon$) and r382
+(pivot entry): Chebyshev sampling SATZ at trivial Weyl,
+reduction to $(\Delta,C)$.  It does not touch
+`experiments/next.txt` and does not touch `rh/lean/`
+(r376/r380/r384).  Suite surface of this round: integrity +
+probes (`run_rh.py --fast --skip-lean`) after appending the
+probe and problem-document rows to the inventory.  r374--r384
+are parallel lemma-first / Lean lanes and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in

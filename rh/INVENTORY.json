@@ -1816,6 +1816,36 @@
       "bytes": 267894
     },
     {
+      "path": "rh/problem/compose_premises.tex",
+      "role": "problem_statement",
+      "round": "r383 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on the three COMPOSE- input premises (R)(L)(Z) (round 383): Fejer identity, r298 split, Z=Zloc+t_bulk, L2 identity, Lambda<=log, H-rule and phi SATZ.  Fold pairing as a live SATZ REFUTED (pair_w med 0.512).  (R) REDUCED to census R0=4 (sup 2.917 at kz37; mutant R0/2=2 fails).  (L) REDUCED to Lambda=3 (max 2.126); triangle gamma REFUTED; T1-combo E_pi REFUTED as a theorem (kz111 E_pi=52.276).  (Z) REDUCED on FRAME-A (Z0=4/5, 89/89) and REFUTED family-uniform on chi (6 windows).  Finite identities plus named reductions; NO RH claim",
+      "pin": true,
+      "sha256": "70038fc33162603886b91ad850234da1c3ee6caad3c65097249047d0aaebd0b0",
+      "bytes": 12028
+    },
+    {
+      "path": "rh/problem/verify_compose_premises.py",
+      "role": "problem_check",
+      "round": "r383 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in compose_premises.tex: toys (period-2, DC mutant, CS, L2 identity, gamma=1/4 algebra, Lambda<=log), H-rule and phi, construction pins (w9, scramble M3-kill of (L), kz37 R-star, kz16 Z-star, kz111 E_pi spike).  16/16 gates, final line COMPOSE PREMISES VERIFIED",
+      "pin": true,
+      "sha256": "c8fc2618faf749731e18867adab5346fe3e16cb6fd563f4b9d641f21623a2493",
+      "bytes": 3631
+    },
+    {
+      "path": "rh/problem/compose_premises.pdf",
+      "role": "problem_statement",
+      "round": "r383 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of compose_premises.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "24e68fbce199374f07ce70a15337f8856791a57c137b238adec8029020b43bf3",
+      "bytes": 229712
+    },
+    {
       "path": "rh/lean/RH/FlankEntry.lean",
       "role": "lean_module",
       "round": "r384",
@@ -2162,6 +2192,16 @@
       "pin": true,
       "sha256": "6ba65b134c947539126043e65bf962c5c77ea1dec5382e6b0f7f93666ab8f74b",
       "bytes": 18293
+    },
+    {
+      "path": "experiments/tfpt-discovery/compose_premises_probe.py",
+      "role": "sealed_probe",
+      "round": "r383",
+      "ledger_ids": [],
+      "status": "Compose premises (R)(L)(Z) (round 383, LEMMA.COMPOSE.PREMISES.01, lemma-first; experiments-side, NO ledger row): 20/20 full / 12/12 smoke; SPEC_SHA 146b0b45ad872d7e; constants first measured in /tmp then sealed (disclosed calibration, WALL 622.3 s).  SATZ: Fejer identity + bilinear CS; r298 split S_F=B(omega,omega)+B(Delta,omega+beta); Z=Zloc+t_bulk (Lean canonical_split; NOT sum Pd); L2 identity M3=((log m)^2/m^2) T2 E_pi(F^2); Lambda(n)<=log n by trial division; pref<=sqrt(m)+1; T1-floor algebra under g_i>=3/8.  (R) REDUCED: R0=4 on 181/181 (sup 2.916788 at FRAME-A kz37; mutant R0/2=2 fails 17/181 and DC toy R=3.6875); cofinal ratio open; trivial envelope H_max=29 too coarse.  Fold pairing as a live SATZ REFUTED (pair_w med 0.512); MAIN empty is CENSUS (med MAIN/S_F=0.0086), not a pairing theorem.  (L) REDUCED: Lambda=3 on 181/181 (max 2.126195 at FRAME-B kz124); von Mangoldt triangle slope +0.307 on A does NOT prove gamma<1/4; measured L1 slope +0.202 on the 42 is not a theorem.  T1-combo does NOT carry as a theorem (kz111 E_pi=52.276, kz117 E_pi=75.691; identity SATZ, T2<=1.329<(8/3)^2).  (Z) REDUCED on FRAME-A (Z0=4/5, 89/89, max 0.755675 at kz16) and FRAME-B 8/8 and the 42-rung ladder 42/42; REFUTED family-uniform on chi (CHI3 {15,19,23,33,39}, CHI4 {20}; 175/181 |Zloc|<M).  Finite-head Chebyshev REFUTED (n_edge 167..4689).  KILL: scramble seed=1 named-breaks (L) on the T1/M3 polylog (M3=2.288e-2 > r306 1.374e-2) without breaking R0 or Lambda; gamma=1/4 fails T1-vs-phi algebra.  Companion rh/problem/compose_premises.tex + verify_compose_premises.py 16/16 COMPOSE PREMISES VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "d10dbc7ea73486e361d6d61c56d0541d0a88a6800676b0bdcc747fdfbe7f046d",
+      "bytes": 23546
     }
   ]
 }

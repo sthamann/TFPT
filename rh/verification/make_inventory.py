@@ -261,6 +261,38 @@ _R382_STATUS = (
     "14/14 PIVOT ENTRY STEPS VERIFIED.  NO L* claim, NO RH claim"
 )
 
+_R383_STATUS = (
+    "Compose premises (R)(L)(Z) (round 383, LEMMA.COMPOSE.PREMISES.01, "
+    "lemma-first; experiments-side, NO ledger row): 20/20 full / "
+    "12/12 smoke; SPEC_SHA 146b0b45ad872d7e; constants first "
+    "measured in /tmp then sealed (disclosed calibration, WALL "
+    "622.3 s).  SATZ: Fejer identity + bilinear CS; r298 split "
+    "S_F=B(omega,omega)+B(Delta,omega+beta); Z=Zloc+t_bulk "
+    "(Lean canonical_split; NOT sum Pd); L2 identity "
+    "M3=((log m)^2/m^2) T2 E_pi(F^2); Lambda(n)<=log n by trial "
+    "division; pref<=sqrt(m)+1; T1-floor algebra under g_i>=3/8.  "
+    "(R) REDUCED: R0=4 on 181/181 (sup 2.916788 at FRAME-A kz37; "
+    "mutant R0/2=2 fails 17/181 and DC toy R=3.6875); cofinal "
+    "ratio open; trivial envelope H_max=29 too coarse.  Fold "
+    "pairing as a live SATZ REFUTED (pair_w med 0.512); MAIN "
+    "empty is CENSUS (med MAIN/S_F=0.0086), not a pairing "
+    "theorem.  (L) REDUCED: Lambda=3 on 181/181 (max 2.126195 "
+    "at FRAME-B kz124); von Mangoldt triangle slope +0.307 on "
+    "A does NOT prove gamma<1/4; measured L1 slope +0.202 on "
+    "the 42 is not a theorem.  T1-combo does NOT carry as a "
+    "theorem (kz111 E_pi=52.276, kz117 E_pi=75.691; identity "
+    "SATZ, T2<=1.329<(8/3)^2).  (Z) REDUCED on FRAME-A "
+    "(Z0=4/5, 89/89, max 0.755675 at kz16) and FRAME-B 8/8 "
+    "and the 42-rung ladder 42/42; REFUTED family-uniform on "
+    "chi (CHI3 {15,19,23,33,39}, CHI4 {20}; 175/181 |Zloc|<M).  "
+    "Finite-head Chebyshev REFUTED (n_edge 167..4689).  KILL: "
+    "scramble seed=1 named-breaks (L) on the T1/M3 polylog "
+    "(M3=2.288e-2 > r306 1.374e-2) without breaking R0 or "
+    "Lambda; gamma=1/4 fails T1-vs-phi algebra.  Companion "
+    "rh/problem/compose_premises.tex + verify_compose_premises.py "
+    "16/16 COMPOSE PREMISES VERIFIED.  NO L* claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -2088,6 +2120,35 @@ ENTRIES = [
      [],
      "compiled PDF of pivot_entry_lemma.tex (recompiled "
      "artefact, registered unpinned)", False),
+    ("rh/problem/compose_premises.tex", "problem_statement",
+     "r383 companion",
+     [],
+     "lemma-first attack on the three COMPOSE- input premises "
+     "(R)(L)(Z) (round 383): Fejer identity, r298 split, "
+     "Z=Zloc+t_bulk, L2 identity, Lambda<=log, H-rule and phi "
+     "SATZ.  Fold pairing as a live SATZ REFUTED (pair_w med "
+     "0.512).  (R) REDUCED to census R0=4 (sup 2.917 at kz37; "
+     "mutant R0/2=2 fails).  (L) REDUCED to Lambda=3 (max "
+     "2.126); triangle gamma REFUTED; T1-combo E_pi REFUTED "
+     "as a theorem (kz111 E_pi=52.276).  (Z) REDUCED on "
+     "FRAME-A (Z0=4/5, 89/89) and REFUTED family-uniform on "
+     "chi (6 windows).  Finite identities plus named "
+     "reductions; NO RH claim",
+     True),
+    ("rh/problem/verify_compose_premises.py", "problem_check",
+     "r383 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "compose_premises.tex: toys (period-2, DC mutant, CS, "
+     "L2 identity, gamma=1/4 algebra, Lambda<=log), H-rule "
+     "and phi, construction pins (w9, scramble M3-kill of "
+     "(L), kz37 R-star, kz16 Z-star, kz111 E_pi spike).  "
+     "16/16 gates, final line COMPOSE PREMISES VERIFIED", True),
+    ("rh/problem/compose_premises.pdf", "problem_statement",
+     "r383 companion",
+     [],
+     "compiled PDF of compose_premises.tex (recompiled "
+     "artefact, registered unpinned)", False),
     ("rh/lean/RH/FlankEntry.lean", "lean_module",
      "r384",
      [],
@@ -2244,6 +2305,11 @@ ENTRIES = [
      "r382",
      [],
      _R382_STATUS,
+     True),
+    (f"{EXP}/compose_premises_probe.py", "sealed_probe",
+     "r383",
+     [],
+     _R383_STATUS,
      True),
 ]
 
