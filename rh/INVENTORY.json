@@ -1780,8 +1780,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "5b86cb00b9780590d0df04f259ef030857f24fc6c885865e5e37db5257b51715",
-      "bytes": 5253166
+      "sha256": "eab623537685c3ed117517a7ac196a4ff0cc36c08ecded124b8e534561d4de2c",
+      "bytes": 5262289
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -1862,6 +1862,16 @@
       "pin": true,
       "sha256": "f81433e6efc1a238fb103c92b79207d32b7d56582cb3d4e739c9a8228b7e4784",
       "bytes": 76574
+    },
+    {
+      "path": "experiments/tfpt-discovery/weighted_l2_t1_probe.py",
+      "role": "sealed_probe",
+      "round": "r368",
+      "ledger_ids": [],
+      "status": "The weighted L2-T1 -- the exact identity instead of the broken supremum (round 368, Sol rank 2, G4, PRIME.L2.T1_WEIGHTED_L2.01; experiments-side, NO ledger row): 20/20 sealed; SPEC_SHA 6d6da15ec8dd0cd7 final with record, freeze 4a89ec1051877c09, two-commit protocol pre-freeze e1521f94 / record b5a9a00f; ZERO amendments after freeze (calibration pass 1 = first full evaluation = 20/20, 708.8 s; record run1/run2 byte-identical up to WALL 674.0/631.4 s).  MAIN VERDICT WEIGHTED_L2_CENSUS+SPIKES_DOMINATE_PI -- the identity is SATZ, G4 is NOT replaced.  LEG A: M_3 == ((log m)^2/m^2) T_2 E_pi(F^2) with pi_i = (q_i/g_i^2)/T_2 closes EXACT (Fractions toy M_3 = 5/32; f64 worst rel 5.5e-16 on all 181 rows, bar 1e-12); T_2 E_pi == (m^2/(log m)^2) M_3 is TAUTOLOGICAL at the same 5.5e-16 -- T_2 is FACTORIZED, not absorbed.  LEG B: a-priori bars (C_F, B) = (1.0, 2.0) fail on 3/181, exactly the K2-spike rows (FRAME_A kz111 E_pi 52.276 vs bar 41.258; FRAME_B kz117 58.424 vs 42.09; FRAME_B kz124 75.691 vs 43.948); chi3/chi4 CLEAN (max 1.144/0.649, 0/42+0/42); C_F_cens = 1.722.  Depth slope POWER (tercile MAX-ratio of C_obs 16.414 vs bar 4.0; shallow max E_pi 1.165 vs deep 75.691).  Leave-family-out FAILS on FRAME_B (C_fit 1.267, viol 2/8 at kz117/kz124) and CARRIES on A/chi3/chi4 -- family-uniformity answered DIRECTLY and negatively.  Spike anatomy MIXED: kz111 IS pi-light (share 0.337, g_i* 1.333) -- the Sol thesis holds there; kz117 DOMINATES (share 0.909, max F 23.70) -- the weighted mean IS the spike, the retyping is useless on that row; named bit fires.  LEG C: m_0* = 10^29.8 (C_G 0.100 x C_F_cens 1.722, A+B=4) WORSE than r358 Carleson 10^23.5 and r361 floor 10^16.1/10^10.0; floor-T2 10^19.7.  Cofinal rest unchanged: MED-CAP as a lemma (V2) + a family-uniform T1/E_pi THEOREM.  LEG D: scrambles P1_ADMISSION x3 (nf 21/3/37) with measurable E_pi on partial builds 2.440/11.807/3.620; twin 1.6e-07; must-fails e1 exact (25/64 != 5/32), e2/e3/e4 protocol-CAUGHT twice, m6a/m6b FLAGGED.  Anchors bit-near (r358 T1 2.45/4.91/1.52/1.62 vs 15.93/23.70/3.91/3.09, C_G 0.100, min g 0.375, stress 0.533/0.571).  NO RH claim in either direction",
+      "pin": true,
+      "sha256": "b45333852dc8b678765257b5c681d3f566bf89c375c5edda09b99d246cdb9859",
+      "bytes": 67720
     }
   ]
 }

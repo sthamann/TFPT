@@ -4557,8 +4557,39 @@ one-shot full R† from A₀† off (the border is not a CD column);
 `THREE_RANK_LDAGGER_GO` stays off.  Must-fails 5/5.
 Experiments-side, NO ledger row, NO L\* claim, NO R† claim,
 NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
-Coexistence: r365 (V₂), r366 (edge-gap MS) and r368 (L²-T1
-pre-freeze) are parallel lanes; this round is additive.
+Coexistence: r365 (V₂), r366 (edge-gap MS) and r368 (weighted
+L²-T1, now sealed) are parallel lanes; this round is additive.
+
+**The weighted L²-T1 — the exact identity instead of the broken
+supremum (r368, Sol rank 2 / G4, PRIME.L2.T1_WEIGHTED_L2.01).**
+`weighted_l2_t1_probe.py` (20/20, SPEC_SHA `6d6da15ec8dd0cd7`
+final with record, freeze `4a89ec1051877c09`, two-commit
+protocol: pre-freeze `e1521f94`, record `b5a9a00f`, ZERO
+amendments after freeze; calibration = first full evaluation =
+20/20, 708.8 s; record run1/run2 byte-identical up to WALL
+674.0/631.4 s).  **Verdict `WEIGHTED_L2_CENSUS+SPIKES_DOMINATE_PI`.**
+The identity is SATZ, G4 is **not** replaced.  (1) **M₃ =
+((log m)²/m²)·T₂·E_π(F²) closes exactly** on all 181 rows
+(worst rel 5.5e−16, Fractions toy M₃ = 5/32); T₂·E_π =
+(m²/(log m)²)·M₃ is tautological — T₂ is factorized, not
+absorbed.  (2) **A-priori bars (C_F, B) = (1.0, 2.0) fail on
+3/181**, exactly the K2-spike rows (kz111 E_π 52.276 vs bar
+41.258; kz117 58.424 vs 42.09; kz124 75.691 vs 43.948); χ3/χ4
+are clean (max 1.144/0.649); C_F_cens = 1.722.  Depth slope is
+POWER (tercile C_obs ratio 16.414 vs bar 4.0).  (3)
+**Leave-family-out fails on frame B** (C_fit 1.267, viol 2/8 at
+kz117/kz124) and carries on A/χ3/χ4 — family-uniformity
+answered directly and negatively.  (4) **Spike anatomy mixed**:
+kz111 is π-light (share 0.337) — the Sol thesis holds there;
+kz117 dominates (share 0.909, max F 23.70) — the weighted mean
+*is* the spike, the retyping is useless on that row.  (5)
+**Composition does not pay**: m₀\* = 10^29.8 vs r358 Carleson
+10^23.5 and r361 floor 10^16.1 / 10^10.0; floor-T2 still
+10^19.7.  Cofinal rest unchanged: MED-CAP as a lemma (V₂) + a
+family-uniform T1/E_π theorem.  Scrambles P1 admission ×3 (nf
+21/3/37) with measurable E_π on partial builds; twin 1.6e−07.
+Must-fails 4/4 + m6a/m6b.  Experiments-side, NO ledger row,
+NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
 
 ## Folder guide
 
@@ -5075,8 +5106,14 @@ the sealed probe to the inventory.
 is additive on the L* dual lane after r363/r366; it does not
 touch `rh/problem/` (r364/r365) or `rh/lean/`. Suite surface of
 this round: integrity + probes (`run_rh.py --fast`) after
-appending the sealed probe to the inventory. r368 (L²-T1) is
-a parallel pre-freeze lane and is not dropped.
+appending the sealed probe to the inventory. r368 (weighted
+L²-T1) is a parallel sealed lane and is not dropped.
+**r368 coexistence.** Round 368 (`weighted_l2_t1_probe.py`) is
+additive on the L2 terminal lane after r358/r361; it does not
+touch `rh/problem/` (r364/r365) or `rh/lean/`. Suite surface of
+this round: integrity + probes (`run_rh.py --fast`) after
+appending the sealed probe to the inventory. r365–r367 are
+parallel lanes and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in
