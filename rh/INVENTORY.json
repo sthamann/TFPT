@@ -2096,6 +2096,66 @@
       "bytes": 243655
     },
     {
+      "path": "rh/problem/tau_field.tex",
+      "role": "problem_statement",
+      "round": "r393 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on d2 log tau under F1 after r392 (round 393): 1x1/2x2 tau SATZ; cluster decomp SATZ; rank-1 locality SATZ (d2 = Delta log rho).  F1 necessary (run-3 3x3 kills) and not sufficient (random F1 half-fill leaves JUMP').  Coupling ~31% load-bearing; L1 triangle does not close.  JUMP'=0.45 legal V3' air, still census.  Reduced to L*-occupation regularity.  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "4e008c71ffffa7128942b7217427ad9c97a29930f5b460685a46348737d0a126",
+      "bytes": 10520
+    },
+    {
+      "path": "rh/problem/verify_tau_field.py",
+      "role": "problem_check",
+      "round": "r393 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in tau_field.tex: standalone Fractions (1x1 SM, 2x2, kappa, tau_0=1, JUMP air) plus construction pins (w9 F1 split, rank-1, decomp, coupling, AP in / run-3 out, scramble F1-break, coupling mutant).  13/13 gates, final line TAU FIELD VERIFIED",
+      "pin": true,
+      "sha256": "9bc99052dd0216679bcf132bbde78ae05f6495a4d540ffbc2680c5abfbbc37bb",
+      "bytes": 7542
+    },
+    {
+      "path": "rh/problem/tau_field.pdf",
+      "role": "problem_statement",
+      "round": "r393 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of tau_field.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "26e5966e097a85d1c6543ee3a24f1d3e5e75a8a5579c5cf5df80eac4ec0bd850",
+      "bytes": 244155
+    },
+    {
+      "path": "rh/problem/sign_schur.tex",
+      "role": "problem_statement",
+      "round": "r394 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on the sign binding of the Uvarov image K^mu[Xi] after r392 (round 394): Dirichlet zonal signs and envelope SATZ; 2x2 Z-matrix bound FALSE.  Checkerboard / rank-1 conjugability REFUTED (mass-weighted agree 1/2).  Mass-weighted Chebyshev inheritance is census 81-89%, not a SATZ.  No source-defined k*>2N/5.  Reduced to the Weyl energy of the mu-OP Gram (r389 rest).  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "674962cfc867a3df8b73102f3d3a920195e8ffffc202d3eb5e4f891ac2af3980",
+      "bytes": 10816
+    },
+    {
+      "path": "rh/problem/verify_sign_schur.py",
+      "role": "problem_check",
+      "round": "r394 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in sign_schur.tex: standalone (Dirichlet sign/envelope, Chebyshev-CD, 2x2 Z-matrix, bookkeeping, checkerboard rank-1, mesh step) plus construction pins (w9 Assist, Cheb/CB mass-agree, |E| mutant, two-period in-phase and too-late anti-CB, scramble envelope).  14/14 gates, final line SIGN SCHUR VERIFIED",
+      "pin": true,
+      "sha256": "91c6749ff884104f29dde950e650a144c21c95de8d73db284a9751047cc7a803",
+      "bytes": 5959
+    },
+    {
+      "path": "rh/problem/sign_schur.pdf",
+      "role": "problem_statement",
+      "round": "r394 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of sign_schur.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "903ec2be6967e607a9063b1f72252ad21ac8a6967bcd597fcd940b20113fe4ef",
+      "bytes": 234153
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2270,8 +2330,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "f14bbf3c958830b522a1bfd2a10028885bc96eab373c299dac70c035b05897f5",
-      "bytes": 5364268
+      "sha256": "3941948108b450bb853cba72e7b9c8878e0e716ecdee31367b48c1158d37e8fe",
+      "bytes": 5366733
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2522,6 +2582,26 @@
       "pin": true,
       "sha256": "e3abb32e20d7660d27fb35a71c3e76760034d4c37276a7d6edccb8d32dee9c8c",
       "bytes": 24809
+    },
+    {
+      "path": "experiments/tfpt-discovery/tau_field_probe.py",
+      "role": "sealed_probe",
+      "round": "r393",
+      "ledger_ids": [],
+      "status": "Tau field under F1 (round 393, LEMMA.TAU_FIELD.01, lemma-first; experiments-side, NO ledger row): 26/26 full / 20/20 smoke; SPEC_SHA c3f6b3b94caa78d0; 1x1/2x2 tau over Q, cluster decomp identity, rank-1 locality, w9 F1 census (102 clusters), coupling share, AP / run-3 / center-pair / scramble F1, random-F1 counterexample, and the core-42 census first measured in /tmp (r393_cal.py .. r393_cal7.py) then sealed (disclosed calibration).  Builder fallback: core-42 only.  AUSGANG REDUZIERT.  SATZ: F1 splits Xi into singletons and pairs; tau_cluster is 1x1 SM / 2x2 det; d2 log tau = sum_c d2 log tau_c + d2 log kappa (w9 maxerr 0); rho_n = tau_{n+1}/tau_n = 1-(W pi)^T (I-KW)^{-1} pi so d2 = Delta log rho (volume does not enter linearly).  w9 last-12 |d2|=0.1553 |e^{d2}-1|=0.1438 coupling 0.049 (~31%, load-bearing); L1(clusters)=0.436 > log(5/4)=0.223 (triangle FAILS).  F1 is NECESSARY (run-3 j=0.4619 OUT at 2/5 and JUMP'=0.45) and NOT SUFFICIENT (random F1 half-fill h=80 j=1.179 OUT; isolated center pair j=0.4183 OUT at 2/5 IN at 0.45).  Scramble seed=3 is an F1/cluster break (max_len=6, j=0.4438).  Core-42 0/42 OUT at 2/5, maxj=0.3942 (kz55) is census even after legal JUMP'=0.45 (V3' A_15 air; A_15 first fails at scale 2.0).  Remaining: L*-occupation regularity (the gap between F1-legal cosine masks and folded half-filling), sibling to Sign-Schur.  Companion rh/problem/tau_field.tex + verify_tau_field.py 13/13 TAU FIELD VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "4845104d2549c5e97f7d9b4651b44653e2d32c8e50d4faf7d3346e944fbcd4dc",
+      "bytes": 27147
+    },
+    {
+      "path": "experiments/tfpt-discovery/sign_schur_probe.py",
+      "role": "sealed_probe",
+      "round": "r394",
+      "ledger_ids": [],
+      "status": "Sign-Schur of the Uvarov image (round 394, LEMMA.SIGN_SCHUR.01, lemma-first; experiments-side, NO ledger row): 24/24 full / 19/19 smoke; SPEC_SHA f77a50fee61dd4c5; Dirichlet sign and envelope identities, 2x2 Z-matrix counterexample, w9 Chebyshev/checkerboard mass-agreements, |E| mutant, two-period in-phase and too-late anti-checkerboard, scramble seed=1 envelope, and the core-42 census first measured in /tmp (r394_cal.py, r394_cal2.py, r394_cal3.py) then sealed (disclosed calibration).  Builder fallback: core-42 only (1.1 s).  AUSGANG REDUZIERT.  SATZ: Chebyshev-CD signs on the cosine grid are Dirichlet-zonal; |D_n(a)| <= min(2n+1, 1/|sin(a/2)|); [[1,-c],[-c,1]] has lambda=1+c > maxdiag so the hoped M-matrix bound is FALSE even with perfect conjugacy.  REFUTED: checkerboard / rank-1 conjugability as the Assist mechanism (w9 CB ww=0.504; core-42 CB ww in [0.429, 0.512]).  CENSUS: mass-weighted Chebyshev-sign inheritance w9 ww=0.810 (pair-count uw=0.721); last-12 ww in [0.801, 0.829]; core-42 ww in [0.810, 0.894]; 42/42 lam<1.  NOT proved: source-defined conjugacy => lambda_max<1 to any k*>2N/5 (oracle bound_pos=1.90>1 at the wall; entry k=73 NN neg_share=0.039 constructive).  KILL: two-period k=22 NN 40/0 in-phase lam=1.0288>1; k=40 -CB agree=1 too late (maxd=1.317); scramble seed=1 Cheb ww=0.788 HOLDS, lam=9.17e6 (envelope/occupation); mutant |E| lam=1.683>1 (gA=13.32 sign-blind).  Remaining: Dirichlet/Abel (Weyl) energy of the mu-OP Gram (r389 rest) -- Sign-Schur as a bipartition is the wrong language.  Companion rh/problem/sign_schur.tex + verify_sign_schur.py 14/14 SIGN SCHUR VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "57193c78bfe6372e1be33e3eca0077283088678ce55aac20564d65e6607f257d",
+      "bytes": 20179
     }
   ]
 }

@@ -5227,6 +5227,55 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r391 are parallel lemma-first / Lean lanes; this round is additive.
 
+**The $\tau$-field under $F_1$, reduced (r393, LEMMA.TAU_FIELD.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/tau_field_probe.py` (26/26
+full, 20/20 smoke, SPEC_SHA `c3f6b3b94caa78d0`) plus
+`rh/problem/tau_field.tex` (+ PDF +
+`verify_tau_field.py`, 13/13, `TAU FIELD VERIFIED`).
+**Ausgang REDUZIERT.**  SATZ: $F_1$ splits $\Xi$ into singletons
+and pairs; $\tau_{\mathrm{cluster}}$ is $1\times1$ Sherman--Morrison /
+$2\times2$ det; $\Delta^2\log\tau=\sum_c\Delta^2\log\tau^{(c)}+\Delta^2\log\kappa$;
+rank-one locality $\rho_n=\tau_{n+1}/\tau_n=1-(W\pi_n)^\top(I-K_n W)^{-1}\pi_n$
+so $\Delta^2=\Delta\log\rho$ (volume does not enter linearly).
+FRAME-A $w=9$: 102 clusters, last-12 $\lvert\Delta^2\rvert=0.1553$,
+coupling $0.049$ ($\sim 31\%$, load-bearing);
+$L^1=0.436>\log\tfrac54$ (triangle fails).
+$F_1$ is necessary (run-$3$ jump $0.4619$ OUT at $2/5$ and at
+$\mathrm{JUMP}'=0.45$) and not sufficient (random $F_1$ half-fill
+jump $1.179$ OUT; isolated centre pair $0.4183$ OUT at $2/5$,
+IN at $0.45$).  Scramble seed $3$ is an $F_1$/cluster break.
+Core-$42$ $0/42$ OUT at $2/5$, kz~$55$ jump $0.3942$ remains
+census even after legal $\mathrm{JUMP}'=0.45$ ($V_3'$ $A_{15}$ air).
+Remaining: $L^*$-occupation regularity, sibling to Sign-Schur.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r392 are parallel lemma-first / Lean lanes; this round is additive.
+
+**Sign-Schur, reduced (r394, LEMMA.SIGN_SCHUR.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/sign_schur_probe.py` (24/24
+full, 19/19 smoke, SPEC_SHA `f77a50fee61dd4c5`) plus
+`rh/problem/sign_schur.tex` (+ PDF +
+`verify_sign_schur.py`, 14/14, `SIGN SCHUR VERIFIED`).
+**Ausgang REDUZIERT.**  SATZ: Chebyshev-CD signs on the cosine
+grid are Dirichlet-zonal; Dirichlet envelope
+$\lvert D_n(\alpha)\rvert\le\min(2n+1,1/\lvert\sin(\alpha/2)\rvert)$;
+the $2\times2$ Z-matrix bound is false ($\lambda=1+c>\mathrm{maxdiag}$).
+Checkerboard / rank-1 conjugability REFUTED (FRAME-A mass-weighted
+agree $0.504$; core-$42$ in $[0.429,0.512]$).
+Mass-weighted Chebyshev inheritance is census ($0.810$ on FRAME-A;
+$[0.810,0.894]$ on core-$42$), not a SATZ.
+No source-defined $k^*>2N/5$ (oracle remainder bound $1.90>1$;
+entry nearest neighbours constructive).
+Two-period lag-$1$ is in-phase ($\lambda=1.0288$ at $k=22$);
+scramble holds the mass-map and dies on the envelope;
+$\lvert E\rvert$ mutant $\lambda=1.683>1$.
+Remaining: Dirichlet/Abel (Weyl) energy of the $\mu$-OP Gram
+(r389 rest).  Experiments-side, NO ledger row, NO L\* claim,
+NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r393 are parallel lemma-first / Lean lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5406,6 +5455,13 @@ rh/
 │   │                     deletion algebra SATZ; F_eps not
 │   │                     from rho_AP; Assist is Sign-Schur.
 │   │                     No RH claim
+│   ├── tau_field.tex(+pdf) — r393: d2 log tau under F1;
+│   │                     cluster/rank-1 SATZ; F1 not sufficient.
+│   │                     No RH claim
+│   ├── sign_schur.tex(+pdf) — r394: Dirichlet zones SATZ;
+│   │                     checkerboard/M-matrix REFUTED;
+│   │                     Assist rest is Weyl energy.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5457,9 +5513,15 @@ rh/
 │   ├── verify_construction_rl.py — machine check of
 │                         construction_rl.tex (17/17,
 │                         CONSTRUCTION PURE RL VERIFIED)
-│   └── verify_deletion_transform.py — machine check of
+│   ├── verify_deletion_transform.py — machine check of
 │                         deletion_transform.tex (14/14,
 │                         DELETION TRANSFORM VERIFIED)
+│   ├── verify_tau_field.py — machine check of
+│                         tau_field.tex (13/13,
+│                         TAU FIELD VERIFIED)
+│   └── verify_sign_schur.py — machine check of
+│                         sign_schur.tex (14/14,
+│                         SIGN SCHUR VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5816,7 +5878,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r392 from
+2. **Sealed probes** — the campaign probes r250–r394 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6322,6 +6384,27 @@ does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
 this round: integrity + probes (`run_rh.py --fast --skip-lean`)
 after appending the probe and problem-document rows to the
 inventory.  r374--r391 are parallel lemma-first / Lean lanes
+and are not dropped.
+**r393 coexistence.** Round 393 (`tau_field.tex` +
+`tau_field_probe.py`) is additive on the $F_\varepsilon$ rest after r392
+(lemma-first $\tau$-field under $F_1$: cluster/$1\times1$/$2\times2$
+SATZ; rank-one locality SATZ; $F_1$ necessary not sufficient;
+$\mathrm{JUMP}'=0.45$ legal, still census).  It does not touch
+`experiments/next.txt` and does not touch `rh/lean/`
+(r376/r380/r384).  Suite surface of this round: integrity +
+probes (`run_rh.py --fast --skip-lean`) after appending the
+probe and problem-document rows to the inventory.  r374--r392
+are parallel lemma-first / Lean lanes and are not dropped.
+**r394 coexistence.** Round 394 (`sign_schur.tex` +
+`sign_schur_probe.py`) is additive on the Assist / Sign-Schur
+rest after r392 (lemma-first sign map of $K^\mu[\Xi]$:
+Dirichlet-zonal Chebyshev-CD SATZ; checkerboard / M-matrix
+REFUTED; mass-weighted Chebyshev inheritance census 81--89\%;
+no $k^*>2N/5$).  It does not touch `experiments/next.txt` and
+does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
+this round: integrity + probes (`run_rh.py --fast --skip-lean`)
+after appending the probe and problem-document rows to the
+inventory.  r374--r393 are parallel lemma-first / Lean lanes
 and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
