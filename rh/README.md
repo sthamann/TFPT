@@ -5146,6 +5146,36 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r388 are parallel lemma-first / Lean lanes; this round is additive.
 
+**The $G_\varepsilon^\mu$-lemma, reduced (r390, LEMMA.G_EPS_MU.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/g_eps_mu_probe.py` (24/24
+full, 18/18 smoke, SPEC_SHA `c2c9c3f2d1eacd5e`) plus
+`rh/problem/g_eps_mu.tex` (+ PDF +
+`verify_g_eps_mu.py`, 13/13, `G_EPS_MU LEMMA VERIFIED`).
+**Ausgang REDUZIERT.**  SATZ: Jacobi-$(0,1)$
+$\gamma=n(n+1)/(2n+1)^2$; Chebyshev-$U$ quarters
+$\gamma_k=\tfrac14$; monic $\gamma$ homogeneous; full cosine-grid
+Fejér is Bernstein--Szegő discrete
+($\max_{k\ge2}\lvert\gamma-1/4\rvert=1.836\cdot10^{-6}$ on
+$w=9$, union $=S_++S_-$).
+Occupied-Fejér already lies in $\lvert\gamma-1/4\rvert$
+($w=9$ $0.03596$; core-$42$ max $0.04892$) --- the r381 $0.071$
+was *signed* Fejér.
+Jump of occupied-Fejér is razor-thin (max $0.3942$ vs $\tfrac25$,
+margin $0.0058$); $d_{\mathrm{arm}}$ pulls in on $40/42$ and
+supplies jump headroom ($\mu$ max $0.03304$, jump $0.2469$).
+Ratio bound $\kappa=4200.6$ is true and useless.
+Not construction-pure: permutation of the same weights on the
+same nodes kills $17/20$ (seed $3$: $0.07445/0.459$).
+Scramble-seed $\mu$ kills (occupation moves); two-period weight
+$a=0.95$ stays in.  No $m_4$ (smallest core $n=140$ already in).
+Remaining: $F_\varepsilon$ (Fejér-on-occupied = node deletion
+from Bernstein--Szegő) and $W_\varepsilon$ (r342 digamma/tent
+multiplier vs scramble-of-weights).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r389 are parallel lemma-first / Lean lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5313,6 +5343,10 @@ rh/
 │   │                     cancellation reduced; Parseval SATZ;
 │   │                     FO^T closes at QM; assist/Z_loc remain.
 │   │                     No RH claim
+│   ├── g_eps_mu.tex(+pdf) — r390: G_ε^μ reduced to
+│   │                     F_ε ∧ W_ε; occupied-Fejér already
+│   │                     in |γ−1/4|; not construction-pure.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5355,9 +5389,12 @@ rh/
 │   ├── verify_delta_deformation.py — machine check of
 │                         delta_deformation.tex (13/13,
 │                         DELTA DEFORMATION VERIFIED)
-│   └── verify_weyl_energy.py — machine check of
+│   ├── verify_weyl_energy.py — machine check of
 │                         weyl_energy.tex (14/14,
 │                         WEYL ENERGY VERIFIED)
+│   └── verify_g_eps_mu.py — machine check of
+│                         g_eps_mu.tex (13/13,
+│                         G_EPS_MU LEMMA VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5714,7 +5751,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r389 from
+2. **Sealed probes** — the campaign probes r250–r390 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6187,6 +6224,17 @@ does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
 this round: integrity + probes (`run_rh.py --fast --skip-lean`)
 after appending the probe and problem-document rows to the
 inventory.  r374--r388 are parallel lemma-first / Lean lanes
+and are not dropped.
+**r390 coexistence.** Round 390 (`g_eps_mu.tex` +
+`g_eps_mu_probe.py`) is additive on the $G_\varepsilon$ lane
+after r381/r388 (lemma-first $G_\varepsilon^\mu$: occupied-Fejér
+already in $\lvert\gamma-1/4\rvert$; permutation kill, not
+construction-pure; remainder $F_\varepsilon\wedge W_\varepsilon$).
+It does not touch `experiments/next.txt` and
+does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
+this round: integrity + probes (`run_rh.py --fast --skip-lean`)
+after appending the probe and problem-document rows to the
+inventory.  r374--r389 are parallel lemma-first / Lean lanes
 and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface

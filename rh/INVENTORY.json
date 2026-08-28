@@ -2006,6 +2006,36 @@
       "bytes": 224703
     },
     {
+      "path": "rh/problem/g_eps_mu.tex",
+      "role": "problem_statement",
+      "round": "r390 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on G_eps^mu after r381/r388 (round 390): Jacobi-(0,1) and Chebyshev-U SATZ; full-grid Fejer Bernstein-Szego SATZ.  Occupied-Fejer already in |g-1/4|; signed-Fejer 0.071 is C_eps.  Ratio bound kappa=4200 useless.  Permutation kill: NOT construction-pure.  Reduced to F_eps (Fejer-on-occupied) ^ W_eps (digamma/tent multiplier).  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "144e69254f70effd1f26202f10fc07e6d08376bee424a37854cfbbb9dab1c2a3",
+      "bytes": 12162
+    },
+    {
+      "path": "rh/problem/verify_g_eps_mu.py",
+      "role": "problem_check",
+      "round": "r390 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in g_eps_mu.tex: standalone Fractions (Jacobi-(0,1), Chebyshev-U, homogeneity, jump, small full-grid, ratio-bound toy) plus construction pins (w9 mu/Fejer-occ/signed-Fejer, full-grid residual, kappa, perm kill, scramble-seed mu, two-period weight).  13/13 gates, final line G_EPS_MU LEMMA VERIFIED",
+      "pin": true,
+      "sha256": "9afb2c293ebec11c91026800b7f1957d529c05479a692ce85863f8f16b455d85",
+      "bytes": 5929
+    },
+    {
+      "path": "rh/problem/g_eps_mu.pdf",
+      "role": "problem_statement",
+      "round": "r390 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of g_eps_mu.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "3653f42e06def4a7f62f08bd0a1024a58820131d5a19ac355032da41f13e93cb",
+      "bytes": 239252
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2180,8 +2210,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "9567070ec151aa1636af03859abfc839b84db30cc3e5048bfeae34c5cb1be8d0",
-      "bytes": 5338081
+      "sha256": "ef69349c1f4f58b4bcc24a28c0ae7e29019f5b0b428d69f70503a6ede2be6d11",
+      "bytes": 5359970
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2402,6 +2432,16 @@
       "pin": true,
       "sha256": "78b3ab0f338e832172500811324cbfa7ff493e9a472b2e5b561c52900d0fd89c",
       "bytes": 25556
+    },
+    {
+      "path": "experiments/tfpt-discovery/g_eps_mu_probe.py",
+      "role": "sealed_probe",
+      "round": "r390",
+      "ledger_ids": [],
+      "status": "G_eps^mu, the sibling lemma of the positive mu-chain (round 390, LEMMA.G_EPS_MU.01, lemma-first; experiments-side, NO ledger row): 24/24 full / 18/18 smoke; SPEC_SHA c2c9c3f2d1eacd5e; Jacobi-(0,1), Chebyshev-U quarters, w9 mu/Fejer-occupied/signed-Fejer last-12, full-grid Bernstein-Szego residual, kappa, perm 20 seeds, two-period weight, and the core-42 census first measured in /tmp (r390_cal.py, r390_cal2.py, r390_cal3.py) then sealed (disclosed calibration).  Builder fallback: core-42 only (MAIN-85 aborted >2 min on EXT).  AUSGANG REDUZIERT.  SATZ: Jacobi-(0,1) g=n(n+1)/(2n+1)^2 over Q; Chebyshev-U p2=x^2-1/4 so gamma_k=1/4; monic gamma homogeneous; full-grid Fejer is Bernstein-Szego discrete (max|g-1/4|_{k>=2}=1.836e-6 at w9, union=S++S-).  Occupied-Fejer ALREADY IN |g-1/4| (w9 0.03596; core-42 max 0.04892) -- the r381 0.071 was SIGNED Fejer.  Jump of occupied-Fejer is razor-thin (max 0.3942 vs 2/5, margin 0.0058).  d_arm pulls IN on 40/42 and is load-bearing for JUMP headroom (mu maxd=0.03304 maxj=0.2469).  Ratio bound kappa=4200.6 is true-and-useless.  NOT construction-pure: perm of the same weights on the same nodes kills 17/20 (seed 3: 0.07445/0.4590).  scramble_seed=1 mu-only OUT (occupation moves).  Two-period weight a=0.95 stays IN.  No m4 (smallest core n=140 IN).  Remaining: F_eps (Fejer-on-occupied = node deletion from Bernstein-Szego) AND W_eps (r342 digamma/tent multiplier vs scramble-of-weights).  Companion rh/problem/g_eps_mu.tex + verify_g_eps_mu.py 13/13 G_EPS_MU LEMMA VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "f515cf901dfcea34de915903c9c6137599a85ff08e39f983bfcd504c90d30fac",
+      "bytes": 18223
     }
   ]
 }

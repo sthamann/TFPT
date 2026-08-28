@@ -46,7 +46,7 @@ LEAN_DIR = os.path.join(REPO, "rh", "lean")
 VENV_PY = os.path.join(REPO, "experiments", "tfpt-discovery", ".venv",
                        "bin", "python")
 
-# the sealed campaign probe list r250-r389 (order = round order); every
+# the sealed campaign probe list r250-r390 (order = round order); every
 # entry supports --smoke.  This list is frozen with the wave; extend it in
 # the same change that extends INVENTORY.json.
 PROBES = [
@@ -173,6 +173,7 @@ PROBES = [
     ("r387", "coherence_assist_probe.py"),
     ("r388", "delta_deformation_probe.py"),
     ("r389", "weyl_energy_probe.py"),
+    ("r390", "g_eps_mu_probe.py"),
 ]
 
 MODULES = [
@@ -288,7 +289,7 @@ def check_integrity(suite):
 
 
 def check_probes(suite):
-    section("(2) PROBES -- sealed campaign r250-r389, --smoke mode")
+    section("(2) PROBES -- sealed campaign r250-r390, --smoke mode")
     py = python_bin()
     cwd = os.path.join(REPO, "experiments", "tfpt-discovery")
     for rnd, probe in PROBES:
