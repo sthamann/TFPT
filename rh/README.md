@@ -4182,6 +4182,60 @@ matched-frame scramble breaks.  Experiments-side, NO ledger row,
 NO L\* claim, NO RH CLAIM, NO GRH CLAIM (GRH motivates the
 candidate, used nowhere).
 
+**The exact critical Schur block in the positive dual space
+(r359, reviewer contract L1 — the favourable pre-attempt before
+the RHP project).**  `schur_wronskian_dual_probe.py` (33/33,
+SPEC_SHA `d00fdc96a3667a52` final with record, freeze
+`f42fa664e6970863`, two-commit protocol: pre-freeze `ad74f3e0`,
+record `b96f819d`; two disclosed calibration amendments a1/a2 — a
+bar re-size inside the disclosed 1/eps noise class and a
+census-label representation split, no adjudication rule moved)
+built the exact Schur split of the r356 dual condition L\* ⟺
+R > ½·I at the critical fold pair (2, 4): with M = R − ½I,
+{M ≻ 0} ⟺ {M_CC ≻ 0} ∧ {S_N ≻ 0} plus the exact identity chain —
+Sylvester bordered minors ((S_N)_kl·det M_CC == det M_{C+k,C+l},
+the reserve as a ratio of bordered minors with the rest block
+inside the border), the CD/Casoratian structure of R in the two
+consecutive dual orthonormal polynomials, and the discrete IIKS
+commutator identity: **the off-diagonal of the dual resolvent
+(I − 2R)⁻¹ IS the Casoratian of resolvent-dressed consecutive
+dual OPs** — all Fractions-exact on a rational model and graded
+green on 85 MAIN + 42 χ3 + 42 χ4 rows.  **Verdict
+`ASYMPTOTICS_REQUIRED` + `STURM_CENSUS`:** (1) **the binding
+thesis is the round's sharpest measurement** — bind =
+λ_min(S_N)/(λ_min(R)−½) ∈ [1.0003, 1.0605] med 1.0058 on the 74
+resolvable rows: the critical 2×2 Schur block CARRIES the full
+L\* margin (det S_N tracks margin², slope −6.742 vs −6.665); (2)
+**no standalone explicit P_N exists** at the sealed bars: the
+Christoffel-class candidate misses by ~14 orders, the diagonal-
+parametrix form misses by exactly the measured cross share (med
+0.702 — the off-diagonal Casoratian term carries 46..84 % of the
+resolvent minor and cannot be dropped); P_N is NOT a margin
+readout (restatement census corr +0.9924 < 0.999): the named
+next step is L2/CRITICAL_SATURATION with the precise object —
+the diagonal dual-resolvent pair data (A⁻¹)_kk — and the cross
+share as handoff; (3) **the Sturm sign pattern is
+near-wall-graded, not universal**: 84/85 MAIN rows sit in one
+pattern (pair straddles one zero of each consecutive dual OP,
+interlaced; ρ = p_{N−1}/p_{N−2} monotone; dressing
+sign-preserving; P_N > 0; the single deviation kz133 is the
+disclosed r356 f64 sign-resolution row), but far from saturation
+P_N < 0 on 12/42 (χ3) and 13/42 (χ4) rows — a globally positive
+standalone P_N is excluded at census grade, the universal Sturm
+carrier is refuted, the near-wall pattern is banked with the
+named theorem type (discrete Sturm interlacing /
+Markov–Stieltjes); (4) **the rest clause (the reviewer's L2
+clause) is measured**: λ_min(R_CC)−½ positive on every live row
+but DECAYING PARALLEL (slope −3.276 vs margin −3.332, rest/eps
+med 20.3) — the L2 rest-block clause must be phrased relatively;
+(5) **the matched scramble breaks at the named precondition**:
+R_CC ≻ ½I fails (−0.4962) while every algebraic ward passes and
+the pair Schur block alone stays positive (+1.37e−2) — the
+identity chain is world-blind algebra, the positivity is
+arithmetic, and pair-only reasoning would misclassify the dead
+world (the m3 lesson measured on a world).  Experiments-side,
+NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
