@@ -1784,15 +1784,16 @@ ENTRIES = [
      "1.0e-15 on the pins); at the +x 20pct mask sign(x) is "
      "constant so the colouring is sign(w) sign(v2); finite "
      "contrast dichotomy on rigid Pruefer steps (constant steps "
-     "never violate; a slow-then-fast block s<=0.9, f>=2.2 does).  "
+     "never violate; slow-then-fast (0.4^21, 2.8^3) does, "
+     "(1.0^21, 2.0^3) does not).  "
      "Refuted as abstract Jacobi-positivity: an 8x scale of the "
      "last 12 gamma on chi3 w9 is a v2-violator (scale 6 is not).  "
-     "Weight-cluster (gap-then-spike up to 64x) never violates and "
-     "breaks L* positivity.  Reduced to the strictly smaller "
+     "Weight-cluster (gap-then-spike at 8x and 64x) never violates and "
+     "breaks Jacobi positivity.  Reduced to the strictly smaller "
      "finite profile lemma V3': the last 14 Pruefer steps at the "
      "mask lie in A_15 (V2-regular for every incoming remainder "
      "eta).  Path A on the six pins (0 eta-violators; every "
-     "(1,1,1) is mixed prev4 of chi3-kz16 type).  Chain "
+     "(1,1,1) is V2-regular).  Chain "
      "T2' <= 3/8 <= MED-CAP <= X_n <= V2 <= V3'.  Finite "
      "identities plus a named reduction; NO RH claim", True),
     ("rh/problem/verify_v2_lemma.py", "problem_check",
@@ -1807,7 +1808,8 @@ ENTRIES = [
      "Path A 0 eta-violators on six pins, kz16 triple regular "
      "and every eta-111 regular, source gamma bounds, 8x last-12 "
      "gamma violator / scale 6 not, +x mask x>0, r372 dictionary, "
-     "colouring V2 and kz53 w-driven regular).  15/15 gates, "
+     "colouring V2 and kz53 w-driven regular, weight-cluster "
+     "boost 8 and 64).  16/16 gates, "
      "final line V2 LEMMA V3 VERIFIED", True),
     ("rh/problem/v2_lemma_v3.pdf", "problem_statement",
      "r374 companion",

@@ -1606,6 +1606,36 @@
       "bytes": 236460
     },
     {
+      "path": "rh/problem/v2_lemma_v3.tex",
+      "role": "problem_statement",
+      "round": "r374 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on the r365 remainder V2 (round 374): neither proved nor refuted in the construction.  Proved: exact two-point Wronskian step formula for the scaled pair (v_{N-2}, v_{N-3}) (Lagrange identity over Q; f64 residual 1.0e-15 on the pins); at the +x 20pct mask sign(x) is constant so the colouring is sign(w) sign(v2); finite contrast dichotomy on rigid Pruefer steps (constant steps never violate; slow-then-fast (0.4^21, 2.8^3) does, (1.0^21, 2.0^3) does not).  Refuted as abstract Jacobi-positivity: an 8x scale of the last 12 gamma on chi3 w9 is a v2-violator (scale 6 is not).  Weight-cluster (gap-then-spike at 8x and 64x) never violates and breaks Jacobi positivity.  Reduced to the strictly smaller finite profile lemma V3': the last 14 Pruefer steps at the mask lie in A_15 (V2-regular for every incoming remainder eta).  Path A on the six pins (0 eta-violators; every (1,1,1) is V2-regular).  Chain T2' <= 3/8 <= MED-CAP <= X_n <= V2 <= V3'.  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "84b944c73ec33a685639c1608da6446f38196ad9d4431da9f25caaca6ac6fabb",
+      "bytes": 17646
+    },
+    {
+      "path": "rh/problem/verify_v2_lemma.py",
+      "role": "problem_check",
+      "round": "r374 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in v2_lemma_v3.tex: Lagrange identity over Q, combinatorial violator vs spike, constant-step 0 violators, slow-fast contrast dichotomy (347/1001 vs 0), Archimedes r=3 dwell bound, Chebyshev x-mask 0 (1,1,1), Chebyshev theta-compress 19 (1,1,1) and 0 V2-viol; construction pins (Wronskian residual 1.0e-15, Path A 0 eta-violators on six pins, kz16 triple regular and every eta-111 regular, source gamma bounds, 8x last-12 gamma violator / scale 6 not, +x mask x>0, r372 dictionary, colouring V2 and kz53 w-driven regular, weight-cluster boost 8 and 64).  16/16 gates, final line V2 LEMMA V3 VERIFIED",
+      "pin": true,
+      "sha256": "00c0f9d838923e9f29d6f92c1e7f2a5babbd4b833ba06f1a9f471eb0980d692c",
+      "bytes": 20760
+    },
+    {
+      "path": "rh/problem/v2_lemma_v3.pdf",
+      "role": "problem_statement",
+      "round": "r374 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of v2_lemma_v3.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "7108e146a9f8038f45fedca8c4f07db64d6026c8969507ecc8caf92d14e03d2d",
+      "bytes": 249008
+    },
+    {
       "path": "rh/problem/p2_lemma_proof.tex",
       "role": "problem_statement",
       "round": "r375 companion",
@@ -1790,8 +1820,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "f816d02c331bee41a45fa52ef439395bdb5194dadd9e705167b79d90d9177257",
-      "bytes": 3432690
+      "sha256": "b1e6bce1de5251e56db9df416520fb776d68702803c77ae0e22e032c906934ad",
+      "bytes": 3438835
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -1810,8 +1840,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "bf00018c4a46ee1ae427bb97e1b8397c15bebe7a836a477aa027efaeb02594f0",
-      "bytes": 5308460
+      "sha256": "9a082578c7c3563d6fe5f94ba1779d972320d1d0e2c9fb5e58e5dd4bf3eb4c45",
+      "bytes": 5317901
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",

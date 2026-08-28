@@ -3927,10 +3927,10 @@ the architecture stands** (r325 `ELEMENTWISE_STABILIZATION_GO` +
 r326 `RH/Elementwise.lean`: `sourceExact_buildPrimeWindow` PROVED,
 the comb stabilization elementwise PROVED,
 `weil_nonneg_of_windowlocal` PROVED — extraction without the
-ladder, H_cof replaced as the target route; **3 typed Level-C
-rests**: the arch/pole kernel transcription (classical), the
-bordered compression bridge (a named Prop), the source completion
-(definitional)).  **L\*: reopened as the capacity fork** (the r323 fork was cleanly
+ladder, H_cof replaced as the target route; r376: pole
+stabilization PROVED, completion a named Prop; **1 typed Level-C
+rest**: the arch kernel transcription (classical; Gauss/Mellin
+absent from mathlib v4.29.1)).  **L\*: reopened as the capacity fork** (the r323 fork was cleanly
 aborted at the end of its design phase, before any write access —
 nothing counted as a round; r334 reopened the lane under the
 capacity language and measured its ceiling: `ALLSET_NEEDED` +
@@ -4753,7 +4753,7 @@ this round is additive.
 **The $V_2$-lemma, reduced (r374, LEMMA.V2.01, lemma-first).**
 No sealed discovery probe: `/tmp` proof verification plus
 `rh/problem/v2_lemma_v3.tex` (+ PDF + `verify_v2_lemma.py`,
-15/15, `V2 LEMMA V3 VERIFIED`).  **Ausgang REDUZIERT.**  The
+16/16, `V2 LEMMA V3 VERIFIED`).  **Ausgang REDUZIERT.**  The
 r372 Prüfer-to-run dictionary is used as a theorem.  SATZ: the
 discrete phase step of the scaled pair $(v_{N-2},v_{N-3})$ is
 the two-point Wronskian (Lagrange identity over $\mathbb{Q}$;
@@ -4761,18 +4761,19 @@ f64 residual $1.0\cdot 10^{-15}$ on the pins); at the $+x$
 $20\%$ mask $\mathrm{sign}(x)$ is constant, so the colouring is
 $\mathrm{sign}(w)\,\mathrm{sign}(v_2)$.  Finite contrast
 dichotomy: constant rigid steps never realise a $V_2$-violator;
-a slow-then-fast block $s\le 0.9$, $f\ge 2.2$ does ($347/1001$).
+a slow-then-fast block $(0.4^{21},2.8^{3})$ does ($347/1001$),
+while $(1.0^{21},2.0^{3})$ does not.
 $V_2$ is not a theorem of abstract Jacobi-positive chains (an
 $8\times$ scale of the last twelve $\gamma$ on $\chi_3$ $w=9$
 is a $v_2$-violator; scale $6$ is not).  A gap-then-spike
-weight adversary on FRAME-A $w=9$, even at $64\times$, never
-produces the pattern and always breaks Jacobi positivity.
+weight adversary on FRAME-A $w=9$ at $8\times$ and $64\times$
+never produces a $V_2$-violator and always breaks Jacobi
+positivity.
 Reduced to the strictly smaller finite profile lemma $V_3'$:
 the last fourteen Prüfer steps at the mask lie in
 $\mathcal{A}_{15}$ ($V_2$-regular for every incoming remainder
 $\eta\in[0,\pi)$).  Path A on the six pins ($0$ $\eta$-violators;
-every $(1,1,1)$ is mixed $\mathrm{prev4}$ of the $\chi_3$
-index-$16$ type).  Chain
+every $(1,1,1)$ is $V_2$-regular).  Chain
 $T_2'\Leftarrow 3/8\Leftarrow\mathrm{MED\text{-}CAP}\Leftarrow X_n\Leftarrow V_2\Leftarrow V_3'$.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence: r375 and
@@ -4865,7 +4866,9 @@ rh/
 │       │                    ONE documented sorry: the opacity bridge,
 │       │                    since r310b in reviewer target form
 │       │                    mainWindow_iff_builtFromPrimeSource
-│       │                    (mainWindow_explicit_bridge proved from it)
+│       │                    (mainWindow_explicit_bridge proved from it;
+│       │                    r376: Alt-Last since C1, not a load-bearing
+│       │                    hole — CanonicalWindow replaced MainWindow)
 │       ├── Closure.lean   — r305 RECONSTRUCTION: LStar + TerminalPositive
 │       │                    predicates, lstar_terminal_implies_master
 │       │                    (PROVED: L* + terminal q<1 ⇒ master
@@ -4931,7 +4934,7 @@ rh/
 │   ├── verify_v2_steps.py — machine check of v2_regularity.tex
 │   │                     (12/12, V2 STEPS VERIFIED)
 │   ├── verify_v2_lemma.py — machine check of v2_lemma_v3.tex
-│   │                     (15/15, V2 LEMMA V3 VERIFIED)
+│   │                     (16/16, V2 LEMMA V3 VERIFIED)
 │   └── verify_p2_steps.py — machine check of p2_lemma_proof.tex
 │                         (12/12, P2 STEPS VERIFIED)
 └── verification/
@@ -5084,11 +5087,12 @@ $\mathcal{A}_{15}$ of speed profiles that are $V_2$-regular for
 every incoming remainder.  Proved: Wronskian step formula
 (Lagrange over $\mathbb{Q}$; residual $1.0\cdot 10^{-15}$);
 $x$ constant at the $+x$ mask; contrast dichotomy (constant
-steps never violate; slow-then-fast $s\le 0.9$, $f\ge 2.2$
-does).  An $8\times$ last-$12$ $\gamma$-scale on $\chi_3$ $w=9$
-is a $v_2$-violator, so $V_2$ is not abstract Jacobi-positivity.
-Path A on the six pins ($0$ remainder-violators).  Companion
-script `verify_v2_lemma.py`, 15/15 gates,
+steps never violate; slow-then-fast $(0.4^{21},2.8^{3})$ does,
+$(1.0^{21},2.0^{3})$ does not).  An $8\times$ last-$12$
+$\gamma$-scale on $\chi_3$ $w=9$ is a $v_2$-violator, so $V_2$
+is not abstract Jacobi-positivity.  Path A on the six pins
+($0$ remainder-violators).  Companion script
+`verify_v2_lemma.py`, 16/16 gates,
 `V2 LEMMA V3 VERIFIED`.  The chain is now
 $T_2'\Leftarrow\cdots\Leftarrow V_2\Leftarrow V_3'$.  Finite
 identities plus a named reduction.  NO RH CLAIM.
@@ -5374,6 +5378,19 @@ mixed J-form, sorry-free) and the DualResolvent bridge
 sorry-free). Census **8 → 7**. Arch/pole kernels named
 (`weilArchKernel`, `polePotential`); the two stabilization sorrys
 remain (tent-read = pairing).  NO RH CLAIM.
+**r376 extraction-close round.** `RH/Elementwise.lean`: pole-channel
+stabilization **PROVED** (native-mesh second-difference of
+`polePotential`, comb-parallel; `#print axioms` has no `sorryAx`;
+named remainder `PoleDyadicIndependence`). Source-exact completion
+demoted from `sorry` to named Prop `SourceExactOfFamilyCompletion`
+(opaque `SourceExact` filling unprovable by design; residual opacity
+is C1 `canonicalCompletion` — lag-kernels are not per-atom
+arch/border/budget). Arch stabilization remains the ONE classical
+sorry (mathlib v4.29.1: no Gauss integral / `Real.digamma` /
+ψ-monotonicity / Mellin identifying `arch_A` with `weilArchKernel`).
+`mainWindow_iff_builtFromPrimeSource` documented as Alt-Last (outside
+the load-bearing chain since C1; not deleted). Census **7 → 5**.
+NO RH CLAIM.
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
@@ -5690,9 +5707,10 @@ completeness + budget positivity; arch/border deliberately not bound)
 is provably satisfied by every canonical family member, so
 `SourceExact` is **eliminated as a free assumption from the
 extraction route** (the opaque guard itself stays untouched in
-`RH/Source.lean`; the relation is the new typed completion sorry —
-every family member admits a source-exact completion, genuine
-arch/border/budget data on the same atom set). **(ii)** the native
+`RH/Source.lean`; r376: the relation is the named Prop
+`SourceExactOfFamilyCompletion`, not a `sorry` — every family
+member's transcribable half is proved, the opaque filling remains
+unprovable by design). **(ii)** the native
 dense class `GridElement` is BUILT (dyadic step-function
 autocorrelations, the v749 class: derived autocorrelation, derived
 even piecewise-linear interpolant, PROVED compact support), and the
@@ -5700,10 +5718,11 @@ elementwise finite stabilization is PROVED for the comb channel in
 the corpus gauge `2Λ(n)/√n` with the anchor onset PREDEFINED from
 the element's support alone (`elementAnchor f = max(1,
 ⌈exp(steps·D0)⌉)`) and NO mesh quantifier — the elementwise form of
-`finite_forms_converge_to_weil`; the arch/pole kernel channels enter
-as OPAQUE reads (the classical TODO made visible) with their
-stabilizations as typed sorrys (classical, S2 — R325 S1 measured
-them exact), and the full-form statement
+`finite_forms_converge_to_weil`; the pole kernel channel is
+transcribed and PROVED (r376: native-mesh second-difference of
+`polePotential`); the arch channel enters as an OPAQUE read with
+its stabilization as a typed sorry (classical, S2 — Gauss/Mellin
+absent from mathlib v4.29.1), and the full-form statement
 `elementwise_finite_stabilization` is proved from the three
 channels. **(iii)** the extraction WITHOUT the ladder is PROVED:
 `weil_nonneg_of_windowlocal` — window-local positivity of the
@@ -5723,6 +5742,12 @@ formalizable before this round — the wave-12 reviewer reservation
 discharged; the five pre-existing sorrys are byte-identical, and the
 window-local premise (Level B, the two true holes) is untouched and
 unclaimed. NO RH CLAIM.
+
+**Since the r376 extraction-close round.** Pole-channel stabilization
+PROVED (`pole_elementwise_stabilization`, native-mesh second-difference
+of `polePotential`; `#print axioms` has no `sorryAx`). Source-exact
+completion demoted to named Prop `SourceExactOfFamilyCompletion`.
+Arch remains the ONE classical sorry. Census 7 → **5**. NO RH CLAIM.
 
 ## Canonical sources (never duplicated here)
 
@@ -5918,9 +5943,10 @@ unclaimed. NO RH CLAIM.
       `weil_nonneg_of_windowlocal` PROVED; census 5 → 8 with the
       three new typed Level-C sorrys (arch/pole kernel stabilization
       — classical; the source-exact completion — opacity-forced).
-      REMAINING open there: the two kernel transcriptions, the
-      bordered compression bridge as a theorem, and the Level-B
-      window-local premise itself.
+      **r376:** pole PROVED, completion demoted to named Prop;
+      remaining open there: the arch kernel transcription
+      (Gauss/Mellin mathlib gap), the bordered compression bridge as
+      a theorem, and the Level-B window-local premise itself.
 - [x] **C1 — the Lean final-domain block** (reviewer contract
       RH.LEAN.FINAL_DOMAIN_AND_EXTRACTION.01: "reduce the Lean graph
       to the two true mathematical gaps"; formalization only, no
