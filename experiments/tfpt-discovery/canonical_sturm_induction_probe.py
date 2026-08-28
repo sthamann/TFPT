@@ -215,8 +215,45 @@ list stands.
 
 RECORD TABLES (inserted AFTER the record run -- the only
 post-freeze edit; TWO-COMMIT PROTOCOL: sealed spec committed
-as "r363 pre-freeze" BEFORE the first full evaluation):
-(empty -- post-freeze insert)
+as "r363 pre-freeze" (de7c55ec, SPEC_SHA freeze fd7613339dfc18a0)
+BEFORE the first full evaluation; chronology honest: smoke
+32/32 byte-identical; pre-freeze commit de7c55ec; calibration
+pass 1 = FIRST full evaluation = 32/32 (149.6 s) with ZERO
+amendments -- no bar, band, clause, candidate or verdict rule
+moved after the freeze; record run1 = 32/32 (133.4 s), run2 =
+32/32 (140.6 s), byte-identical up to the WALL line and
+identical to calibration):
+MAIN VERDICT = BOTH_PARTIAL(PINNING_REFUTED+EDGE_GAP_LEMMA_NAMED
++ TERMINAL_RANK_DEAD + STURM_CANONICAL_CENSUS(84/85 MAIN, chi
+MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_LIMIT).
+ANGLE A: BKMM Thm 2.3 node-pinning REFUTED at census grade on
+74 resolvable MAIN rows (sat Hurwitz max 0.462 vs bar 0.15;
+bulk median 0.257; sat is LARGER than bulk, not smaller; pin3
+in (0.15, 0.55) on 74/74 -- Gauss-like pair-gap placement, not
+exponential pinning; ratios do not shrink in N).  Canonical
+Sturm census 84/85 (miss kz133 = f64 floor, the r359 row);
+interpolated-zero interlacing 85/85; zero-count == degree
+0-miss graded.  The remaining lemma is EDGE-GAP: why a zero of
+each consecutive dual OP occupies the unique pair-gap (y2,y1)
+-- classical Sturm/Markov gives interlacing and the count, not
+the placement.  The r360 zone {1,2,3} is DUAL-VOID (primal-sat),
+so dual-OP pinning if it applied would live in the BULK.
+ANGLE B: n_cross/N_w = 183/184, 140/142, 435/436, 877/878 on
+RANK_KZ -- TERMINAL-RANK (gap 1-2); CD update residual 3.3e-17
+at w9 (Fractions rank-1 on the toy).  Window-ladder LC_EDGE2
+36/71 violations, LC_UVEE 32/71 -- INDUCTION_GO does not fire.
+COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy
+rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7
+gated at w9.  The hoped chain "Sturm => det S_N > 0 => [c=1]
+R > 1/2 I" has TWO gaps, both measured: Sturm does not give
+det S_N without P_N, W_N signs; c=1 does not give rest>0
+(scramble: lamS +1.37e-2, rest -0.4962).  Worlds: chi3 30/42
+and chi4 29/42 keep the Sturm pattern (MAY tip); chi w9 pin3
+1.039/1.038 OUTSIDE the MAIN band (world-separating for fold-3
+pinning); scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2)
+AND is the live c=1-misquote counterexample.  Twin dose-zero
+bitwise, |dlog| 6.9e-4, |dpin3| 6.0e-10.  Must-fails 5/5.
+Runtime 149.6 / 133.4 / 140.6 s calib/rec1/rec2; smoke 0.3 s.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
