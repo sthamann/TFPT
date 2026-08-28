@@ -1886,6 +1886,36 @@
       "bytes": 252423
     },
     {
+      "path": "rh/problem/compose_premises2.tex",
+      "role": "problem_statement",
+      "round": "r386 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on living-ladder (Z') and cofinal R0 (round 386): death triangle SATZ; Fejer CS SATZ; w9 dictionary gated.  (Z') REDUCED to Z0'=21/25 on the living 175 (sup 0.833870 at CHI4 kz46; r383 4/5 fails).  Death channel |Z_loc|>=M iff q_N>1 CENSUS 181/181.  Finite-head Chebyshev and uniform-cancel*triangle REFUTED.  (R) REDUCED: MAIN/D<=3/10 census; CS+FAB does not prove O(polylog); named remainder B(omega+beta,omega+beta)<=K D.  Finite identities plus named reductions; NO RH claim",
+      "pin": true,
+      "sha256": "b17036d2e741244401d9ae4b058cf4bf825ca6f797846ce8e61c25e740c2da20",
+      "bytes": 6591
+    },
+    {
+      "path": "rh/problem/verify_compose_premises2.py",
+      "role": "problem_check",
+      "round": "r386 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in compose_premises2.tex: toys (DC C_MAIN-kill, period-2, CS, death triangle, Z0' vs M), H-rule extras, construction pins (w9 dict, scramble non-break, kz37 grams, living CHI4-46, dead CHI3-15, 4/5 mutant).  16/16 gates, final line COMPOSE PREMISES2 VERIFIED",
+      "pin": true,
+      "sha256": "946998f863ea7ff1b8381a2560b11579546a8b5fcac208a9bd87cd4388dcfb0b",
+      "bytes": 2991
+    },
+    {
+      "path": "rh/problem/compose_premises2.pdf",
+      "role": "problem_statement",
+      "round": "r386 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of compose_premises2.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "c52c5f326f060d2f41c9d3dd5a83fd2259a224d270d6c3d066fb48facf3afa6b",
+      "bytes": 212681
+    },
+    {
       "path": "rh/problem/coherence_assist.tex",
       "role": "problem_statement",
       "round": "r387 companion",
@@ -1914,6 +1944,36 @@
       "pin": false,
       "sha256": "3737a95b3e12a4d8229063c00b07865f8c03844a8d37556e02cf2194d23e820b",
       "bytes": 233380
+    },
+    {
+      "path": "rh/problem/delta_deformation.tex",
+      "role": "problem_statement",
+      "round": "r388 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on the Delta-deformation closing of C_eps after r381/r385 (round 388): FO-split and homogeneity SATZ; Fejer-pure two-period SATZ.  Osc-Geronimus as a closing bound REFUTED (C*=0.0056 majorant 0.191>1/32; scramble smaller osc, dDelta 1e6).  R2 on the mu-reference NOT dominated (|quad|/|lin|=0.861 at n=40, 0.640 at full; |R2|/|FO|=4.19).  Reduced to the r381 triple G_eps^mu ^ C_eps ^ R2.  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "f421727e7dcd2c0f9f91ba63a80ea45e9fb640f086d472db6e9896da2b67f6a8",
+      "bytes": 13675
+    },
+    {
+      "path": "rh/problem/verify_delta_deformation.py",
+      "role": "problem_check",
+      "round": "r388 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in delta_deformation.tex: standalone Fractions/trig (gamma homogeneous, one-Rayleigh, Fejer-pure S=21, Neumann bar, Chebyshev-Gauss, split toy) plus construction pins (w9 Delta/FO/eps, split residual, R2 mu and Fejer n=40, C x 2 mutant, scramble kill, two-period control).  13/13 gates, final line DELTA DEFORMATION VERIFIED",
+      "pin": true,
+      "sha256": "77b9cb0166f0aa76b8363aa425d7b87837dbf43c5b2de5624b1839dcfeb929a9",
+      "bytes": 5879
+    },
+    {
+      "path": "rh/problem/delta_deformation.pdf",
+      "role": "problem_statement",
+      "round": "r388 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of delta_deformation.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "ada7f139d07dcd657cd8d9a93ec46dfe54c30209b0fa54a18493756d8b4f6cbf",
+      "bytes": 240981
     },
     {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
@@ -2090,8 +2150,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "893d177d78c373ca997620e118a83700be9724963365ff1a4525df13ea75e580",
-      "bytes": 5351918
+      "sha256": "5f2b992e4a530888184dd6b0a8cfca87a3518d8a4dfb82eac9f84d9243f1514a",
+      "bytes": 5353949
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2274,6 +2334,16 @@
       "bytes": 18025
     },
     {
+      "path": "experiments/tfpt-discovery/compose_premises2_probe.py",
+      "role": "sealed_probe",
+      "round": "r386",
+      "ledger_ids": [],
+      "status": "Living-ladder (Z') and cofinal R0 (round 386, LEMMA.COMPOSE.PREMISES2.01, lemma-first; experiments-side, NO ledger row): 20/20 full / 12/12 smoke; SPEC_SHA 82d07e568591c9fd; constants first measured in /tmp (tfpt_r386_cal.py, WALL 628.2 s) then sealed (disclosed calibration).  TWO LETTERS.  (Z') REDUCED: Z0'=21/25=0.84 on the living ladder 175/175 (FRAME-A 89 + FRAME-B 8 + chi with q_N<1); living sup |Z_loc|=0.833870 at CHI4 kz46 (exceeds r383 Z0=4/5; mutant 4/5 FAILS).  Death channel |Z_loc|>=M iff |Z|>=M iff q_N>1 is a biconditional CENSUS 181/181; the six dead chi are exactly CHI3 {15,19,23,33,39} and CHI4 {20} (terminal-dead sprouts, q_N in [1.040,1.330]).  SATZ: death triangle; Fejer CS; w9 dictionary q_N=rho_{N-1}/(5/7)=(7/5)Z^2.  Finite-head Chebyshev REFUTED (n_edge 167..4689; triangle 2.86..14.51 grows).  Uniform-cancel * triangle REFUTED (cancel_max*tri_max=4.08>M); cancellation is essential (med 0.055) not a SATZ.  (R) REDUCED: R0=4 census (sup 2.916788 at kz37); MAIN/D <= 3/10 on 181/181 (max 0.129976, slope -1.16 CENSUS); CS SATZ 181/181 tight at kz37; CS+FAB does NOT prove O(polylog) (FAB_max 18.07>14.93, FAB controls Pd not Pw).  Named remainder B(omega+beta,omega+beta)<=K D (R-star Bsum/D=2.975<4).  KILL: DC toy MAIN/D=3.6875 breaks field-independent C_MAIN; mutant Z0=4/5 fails living CHI4-46; scramble does NOT break (Z') or R0.  Companion rh/problem/compose_premises2.tex + verify_compose_premises2.py 16/16 COMPOSE PREMISES2 VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "c080d73b23c733f836dc263252a43ac0eb6f2ab20d835f7efb88c1d230199cd2",
+      "bytes": 16296
+    },
+    {
       "path": "experiments/tfpt-discovery/coherence_assist_probe.py",
       "role": "sealed_probe",
       "round": "r387",
@@ -2282,6 +2352,16 @@
       "pin": true,
       "sha256": "99c544504b1bf0d52f82a4df2d20d4de4ac071ad357c11531f6b361932b085a9",
       "bytes": 19625
+    },
+    {
+      "path": "experiments/tfpt-discovery/delta_deformation_probe.py",
+      "role": "sealed_probe",
+      "round": "r388",
+      "ledger_ids": [],
+      "status": "Delta-deformation (round 388, LEMMA.DELTA_DEFORMATION.01, lemma-first; experiments-side, NO ledger row): 19/19 full / 12/12 smoke; SPEC_SHA 5613d035ac6bc11d; identities, w9 Delta/FO/eps, R2 mu-path and Fejer-path midpoint ratios, scramble osc vs dDelta, two-period eps=0, and core-42 / MAIN-85 / chi3-42 tallies first measured in /tmp (r388_cal.py, r388_cal2.py) then sealed (disclosed calibration).  AUSGANG REDUZIERT.  SATZ: FO=gamma (dQ^T + dDelta); monic gamma homogeneous in total mass; Fejer-pure two-period eps=0 implies FO=0.  Osc-Geronimus |dDelta|<=C osc(eps on nu) holds on MAIN with C*=0.0056 and does NOT close C_eps (majorant g(dQT+C* osc) reaches 0.191>1/32, closes 5/42; C x 2 already overshoots on w9 maj=0.0327).  Consecutive Q is uncorrelated with ||eps||_inf (corr=0.025) and with osc_nu (corr=-0.287).  R2 on the mu-reference is NOT dominated: n=40 |quad|/|lin|=0.8615 (Fejer-path 1.0127 reproduced); full n=182 ratio 0.6403; |R2|/|FO| last-12=4.19; small-N n=40 ratios in [0.559,1.126] all > 1/4.  CENSUS: 11 small-N last-12 |FO| MAIN 0.01182 and chi3 0.01541 both <1/32 (181-pack skipped).  KILL: scramble seed=1 osc_nu=3.54 < MAIN 8.76 but dDelta=2.16e6 (C_emp=6.1e5).  Two-period S=81 c=2/3 is the control (eps=0, FO=0).  Remaining: C_eps as cancelled last-12 pairing (not an eps-size bound); R2 of the finite mu->mu-nu step; G_eps^mu as the Jacobi box of Fejer x d_arm (r342 dictionary v_pred<1e-4 is the right language for the sibling).  Companion rh/problem/delta_deformation.tex + verify_delta_deformation.py 13/13 DELTA DEFORMATION VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "df00d91eea7f8fe2d1f35e5a078c3ab92817da51587bd813dc9be0f4a5071722",
+      "bytes": 21291
     }
   ]
 }

@@ -327,6 +327,37 @@ _R385_STATUS = (
     "NO L* claim, NO RH claim"
 )
 
+_R386_STATUS = (
+    "Living-ladder (Z') and cofinal R0 (round 386, "
+    "LEMMA.COMPOSE.PREMISES2.01, lemma-first; experiments-side, "
+    "NO ledger row): 20/20 full / 12/12 smoke; SPEC_SHA "
+    "82d07e568591c9fd; constants first measured in /tmp "
+    "(tfpt_r386_cal.py, WALL 628.2 s) then sealed (disclosed "
+    "calibration).  TWO LETTERS.  (Z') REDUCED: Z0'=21/25=0.84 "
+    "on the living ladder 175/175 (FRAME-A 89 + FRAME-B 8 + "
+    "chi with q_N<1); living sup |Z_loc|=0.833870 at CHI4 kz46 "
+    "(exceeds r383 Z0=4/5; mutant 4/5 FAILS).  Death channel "
+    "|Z_loc|>=M iff |Z|>=M iff q_N>1 is a biconditional CENSUS "
+    "181/181; the six dead chi are exactly CHI3 {15,19,23,33,39} "
+    "and CHI4 {20} (terminal-dead sprouts, q_N in [1.040,1.330]).  "
+    "SATZ: death triangle; Fejer CS; w9 dictionary "
+    "q_N=rho_{N-1}/(5/7)=(7/5)Z^2.  Finite-head Chebyshev "
+    "REFUTED (n_edge 167..4689; triangle 2.86..14.51 grows).  "
+    "Uniform-cancel * triangle REFUTED (cancel_max*tri_max="
+    "4.08>M); cancellation is essential (med 0.055) not a SATZ.  "
+    "(R) REDUCED: R0=4 census (sup 2.916788 at kz37); MAIN/D <= "
+    "3/10 on 181/181 (max 0.129976, slope -1.16 CENSUS); CS SATZ "
+    "181/181 tight at kz37; CS+FAB does NOT prove O(polylog) "
+    "(FAB_max 18.07>14.93, FAB controls Pd not Pw).  Named "
+    "remainder B(omega+beta,omega+beta)<=K D (R-star Bsum/D="
+    "2.975<4).  KILL: DC toy MAIN/D=3.6875 breaks field-"
+    "independent C_MAIN; mutant Z0=4/5 fails living CHI4-46; "
+    "scramble does NOT break (Z') or R0.  Companion "
+    "rh/problem/compose_premises2.tex + "
+    "verify_compose_premises2.py 16/16 COMPOSE PREMISES2 "
+    "VERIFIED.  NO L* claim, NO RH claim"
+)
+
 
 _R387_STATUS = (
     "Coherence assist (round 387, LEMMA.COHERENCE_ASSIST.01, "
@@ -362,6 +393,39 @@ _R387_STATUS = (
     "rh/problem/coherence_assist.tex + "
     "verify_coherence_assist.py 13/13 COHERENCE ASSIST VERIFIED.  "
     "NO L* claim, NO RH claim"
+)
+
+_R388_STATUS = (
+    "Delta-deformation (round 388, LEMMA.DELTA_DEFORMATION.01, "
+    "lemma-first; experiments-side, NO ledger row): 19/19 full / "
+    "12/12 smoke; SPEC_SHA 5613d035ac6bc11d; identities, w9 "
+    "Delta/FO/eps, R2 mu-path and Fejer-path midpoint ratios, "
+    "scramble osc vs dDelta, two-period eps=0, and core-42 / "
+    "MAIN-85 / chi3-42 tallies first measured in /tmp "
+    "(r388_cal.py, r388_cal2.py) then sealed (disclosed "
+    "calibration).  AUSGANG REDUZIERT.  SATZ: FO=gamma "
+    "(dQ^T + dDelta); monic gamma homogeneous in total mass; "
+    "Fejer-pure two-period eps=0 implies FO=0.  Osc-Geronimus "
+    "|dDelta|<=C osc(eps on nu) holds on MAIN with C*=0.0056 "
+    "and does NOT close C_eps (majorant g(dQT+C* osc) reaches "
+    "0.191>1/32, closes 5/42; C x 2 already overshoots on w9 "
+    "maj=0.0327).  Consecutive Q is uncorrelated with "
+    "||eps||_inf (corr=0.025) and with osc_nu (corr=-0.287).  "
+    "R2 on the mu-reference is NOT dominated: n=40 "
+    "|quad|/|lin|=0.8615 (Fejer-path 1.0127 reproduced); full "
+    "n=182 ratio 0.6403; |R2|/|FO| last-12=4.19; small-N n=40 "
+    "ratios in [0.559,1.126] all > 1/4.  CENSUS: 11 small-N "
+    "last-12 |FO| MAIN 0.01182 and chi3 0.01541 both <1/32 "
+    "(181-pack skipped).  KILL: scramble seed=1 osc_nu=3.54 "
+    "< MAIN 8.76 but dDelta=2.16e6 (C_emp=6.1e5).  Two-period "
+    "S=81 c=2/3 is the control (eps=0, FO=0).  Remaining: "
+    "C_eps as cancelled last-12 pairing (not an eps-size "
+    "bound); R2 of the finite mu->mu-nu step; G_eps^mu as the "
+    "Jacobi box of Fejer x d_arm (r342 dictionary v_pred<1e-4 "
+    "is the right language for the sibling).  Companion "
+    "rh/problem/delta_deformation.tex + "
+    "verify_delta_deformation.py 13/13 DELTA DEFORMATION "
+    "VERIFIED.  NO L* claim, NO RH claim"
 )
 
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
@@ -2261,6 +2325,34 @@ ENTRIES = [
      [],
      "compiled PDF of christoffel_quiet.tex (recompiled "
      "artefact, registered unpinned)", False),
+    ("rh/problem/compose_premises2.tex", "problem_statement",
+     "r386 companion",
+     [],
+     "lemma-first attack on living-ladder (Z') and cofinal R0 "
+     "(round 386): death triangle SATZ; Fejer CS SATZ; w9 "
+     "dictionary gated.  (Z') REDUCED to Z0'=21/25 on the "
+     "living 175 (sup 0.833870 at CHI4 kz46; r383 4/5 fails).  "
+     "Death channel |Z_loc|>=M iff q_N>1 CENSUS 181/181.  "
+     "Finite-head Chebyshev and uniform-cancel*triangle "
+     "REFUTED.  (R) REDUCED: MAIN/D<=3/10 census; CS+FAB does "
+     "not prove O(polylog); named remainder "
+     "B(omega+beta,omega+beta)<=K D.  Finite identities plus "
+     "named reductions; NO RH claim",
+     True),
+    ("rh/problem/verify_compose_premises2.py", "problem_check",
+     "r386 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "compose_premises2.tex: toys (DC C_MAIN-kill, period-2, "
+     "CS, death triangle, Z0' vs M), H-rule extras, "
+     "construction pins (w9 dict, scramble non-break, kz37 "
+     "grams, living CHI4-46, dead CHI3-15, 4/5 mutant).  "
+     "16/16 gates, final line COMPOSE PREMISES2 VERIFIED", True),
+    ("rh/problem/compose_premises2.pdf", "problem_statement",
+     "r386 companion",
+     [],
+     "compiled PDF of compose_premises2.tex (recompiled "
+     "artefact, registered unpinned)", False),
     ("rh/problem/coherence_assist.tex", "problem_statement",
      "r387 companion",
      [],
@@ -2288,6 +2380,35 @@ ENTRIES = [
      "r387 companion",
      [],
      "compiled PDF of coherence_assist.tex (recompiled "
+     "artefact, registered unpinned)", False),
+    ("rh/problem/delta_deformation.tex", "problem_statement",
+     "r388 companion",
+     [],
+     "lemma-first attack on the Delta-deformation closing of "
+     "C_eps after r381/r385 (round 388): FO-split and "
+     "homogeneity SATZ; Fejer-pure two-period SATZ.  "
+     "Osc-Geronimus as a closing bound REFUTED (C*=0.0056 "
+     "majorant 0.191>1/32; scramble smaller osc, dDelta 1e6).  "
+     "R2 on the mu-reference NOT dominated (|quad|/|lin|=0.861 "
+     "at n=40, 0.640 at full; |R2|/|FO|=4.19).  Reduced to the "
+     "r381 triple G_eps^mu ^ C_eps ^ R2.  Finite identities "
+     "plus a named reduction; NO RH claim",
+     True),
+    ("rh/problem/verify_delta_deformation.py", "problem_check",
+     "r388 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "delta_deformation.tex: standalone Fractions/trig "
+     "(gamma homogeneous, one-Rayleigh, Fejer-pure S=21, "
+     "Neumann bar, Chebyshev-Gauss, split toy) plus "
+     "construction pins (w9 Delta/FO/eps, split residual, "
+     "R2 mu and Fejer n=40, C x 2 mutant, scramble kill, "
+     "two-period control).  13/13 gates, final line "
+     "DELTA DEFORMATION VERIFIED", True),
+    ("rh/problem/delta_deformation.pdf", "problem_statement",
+     "r388 companion",
+     [],
+     "compiled PDF of delta_deformation.tex (recompiled "
      "artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
@@ -2445,12 +2566,23 @@ ENTRIES = [
      [],
      _R385_STATUS,
      True),
+    (f"{EXP}/compose_premises2_probe.py", "sealed_probe",
+     "r386",
+     [],
+     _R386_STATUS,
+     True),
     (f"{EXP}/coherence_assist_probe.py", "sealed_probe",
      "r387",
      [],
      _R387_STATUS,
      True),
+    (f"{EXP}/delta_deformation_probe.py", "sealed_probe",
+     "r388",
+     [],
+     _R388_STATUS,
+     True),
 ]
+
 
 
 def sha256(path):

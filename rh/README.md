@@ -5037,6 +5037,29 @@ NO ledger row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
 (base 4 / refined 5).  Coexistence: r374--r384 are parallel
 lemma-first / Lean lanes; this round is additive.
 
+
+**Living-ladder $(Z')$ and cofinal $R_0$ (r386,
+LEMMA.COMPOSE.PREMISES2.01, lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/compose_premises2_probe.py` (20/20
+full, 12/12 smoke, SPEC_SHA `82d07e568591c9fd`) plus
+`rh/problem/compose_premises2.tex` (+ PDF +
+`verify_compose_premises2.py`, 16/16, `COMPOSE PREMISES2 VERIFIED`).
+Two letters.  **$(Z')$ REDUZIERT** to $Z_0'=21/25$ on the living
+ladder $175/175$ (sup $0.833870$ at $\chi_4$ kz$46$, which
+exceeds r383's $4/5$).  Death channel
+$\lvert Z_{\mathrm{loc}}\rvert\ge M\iff q_N>1$ is a
+biconditional census $181/181$; the six dead $\chi$ windows are
+exactly the terminal-dead sprouts.  Finite-head Chebyshev and
+uniform-cancel$\times$triangle are REFUTED.  **$(R)$ REDUZIERT:**
+$R_0=4$ census; $B(\omega,\omega)/D\le 3/10$ census (falling);
+CS SATZ; CS$+$FAB does not prove $O(\mathrm{polylog})$.  Named
+remainder $B(\omega+\beta,\omega+\beta)\le K D$.  DC toy
+kills a field-independent $C_{\mathrm{MAIN}}$; mutant $4/5$
+fails on living $\chi_4$--$46$; scramble does not break $(Z')$
+or $R_0$.  Experiments-side, NO ledger row, NO L\* claim, NO RH
+CLAIM.  Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r385 are parallel lanes; this round is additive.
+
 **Coherence assist, reduced (r387, LEMMA.COHERENCE_ASSIST.01,
 lemma-first).**  Sealed census probe
 `experiments/tfpt-discovery/coherence_assist_probe.py` (20/20
@@ -5061,8 +5084,37 @@ Scramble holds $\rho_{\mathrm{AP}}$ and dies on the product
 (true assist; unsigned/Gershgorin closed as too crude).
 $n_0=\lfloor 2N/5\rfloor$ is not improved; $n_0=N-1$ stays open.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
-Mincut unchanged (base 4 / refined 5).  Coexistence: r374--r385
+Mincut unchanged (base 4 / refined 5).  Coexistence: r374--r386
 are parallel lemma-first / Lean lanes; this round is additive.
+
+**The $\Delta$-deformation, reduced (r388, LEMMA.DELTA_DEFORMATION.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/delta_deformation_probe.py` (19/19
+full, 12/12 smoke, SPEC_SHA `5613d035ac6bc11d`) plus
+`rh/problem/delta_deformation.tex` (+ PDF +
+`verify_delta_deformation.py`, 13/13, `DELTA DEFORMATION VERIFIED`).
+**Ausgang REDUZIERT.**  SATZ: $\mathrm{FO}_k=\gamma_k(\mathrm{d}Q^T+\mathrm{d}\Delta)$;
+monic $\gamma$ homogeneous in total mass; Fejér-pure two-period
+has $\varepsilon=0$ and $\mathrm{FO}=0$.  Osc-Geronimus
+$\lvert\mathrm{d}\Delta\rvert\le C\cdot\mathrm{osc}(\varepsilon$ on $\nu)$
+holds on MAIN with $C_*=0.0056$ and does **not** close $C_\varepsilon$
+(majorant $0.191>1/32$, closes $5/42$; $C\times 2$ already overshoots
+on $w=9$).  Consecutive $Q$ is uncorrelated with
+$\lVert\varepsilon\rVert_\infty$ ($\rho=0.025$) and with range-oscillation
+($\rho=-0.287$).  $R_2$ on the $\mu$-reference is **not** dominated:
+$n=40$ ratio $0.8615$ (Fejér-path $1.0127$ reproduced); full $n=182$
+ratio $0.6403$; $\lvert R_2\rvert/\lvert\mathrm{FO}\rvert=4.19$;
+small-$N$ ratios in $[0.559,1.126]$, all $>1/4$.  Eleven small-$N$
+last-twelve $\lvert\mathrm{FO}\rvert\le 0.01182$ (MAIN) and
+$0.01541$ ($\chi_3$), both $<1/32$.  Scramble seed $1$:
+$\mathrm{osc}_\nu=3.54<8.76$ but $\lvert\mathrm{d}\Delta\rvert=2.16\cdot10^6$.
+Remaining: $C_\varepsilon$ as cancelled last-twelve pairing (not an
+$\varepsilon$-size bound); $R_2$ of the finite $\mu\to\mu-\nu$ step;
+$G_\varepsilon^\mu$ as the Jacobi box of Fejér$\times d_{\mathrm{arm}}$
+(r342 dictionary $v_{\mathrm{pred}}<10^{-4}$ is the right language
+for the sibling).  Experiments-side, NO ledger row, NO L\* claim,
+NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r387 are parallel lemma-first / Lean lanes; this round is additive.
 
 ## Folder guide
 
@@ -5214,10 +5266,18 @@ rh/
 │   │                     Chebyshev sampling SATZ at trivial
 │   │                     Weyl; Q<1 is not the floor plate.
 │   │                     No RH claim
+│   ├── compose_premises2.tex(+pdf) — r386: living (Z')
+│   │                     Z₀'=21/25; death channel census;
+│   │                     cofinal R₀ reduced to B(ω+β,ω+β)≤KD.
+│   │                     No RH claim
 │   ├── coherence_assist.tex(+pdf) — r387: coherence
 │   │                     assist reduced to signed μ-CD
 │   │                     off-diagonal; Gershgorin too crude;
 │   │                     two-period is a global AP.
+│   │                     No RH claim
+│   ├── delta_deformation.tex(+pdf) — r388: Δ-deformation
+│   │                     reduced; osc-Geronimus does not
+│   │                     close C_ε; R2 on μ-ref not dominated.
 │   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
@@ -5252,9 +5312,15 @@ rh/
 │   ├── verify_christoffel_quiet.py — machine check of
 │                         christoffel_quiet.tex (13/13,
 │                         CHRISTOFFEL QUIET VERIFIED)
-│   └── verify_coherence_assist.py — machine check of
+│   ├── verify_compose_premises2.py — machine check of
+│                         compose_premises2.tex (16/16,
+│                         COMPOSE PREMISES2 VERIFIED)
+│   ├── verify_coherence_assist.py — machine check of
 │                         coherence_assist.tex (13/13,
 │                         COHERENCE ASSIST VERIFIED)
+│   └── verify_delta_deformation.py — machine check of
+│                         delta_deformation.tex (13/13,
+│                         DELTA DEFORMATION VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5549,7 +5615,22 @@ not PNT, not subconvex, not RH-equivalent.  Companion script
 `03bde46ec27d98ff`.  Finite identities plus a named reduction.
 NO L\* claim.  NO RH CLAIM.
 
-A fourteenth standalone note, `rh/problem/coherence_assist.pdf`
+
+A fourteenth standalone note, `rh/problem/compose_premises2.pdf`
+(August 28, 2026), is the lemma-first attack on living-ladder
+$(Z')$ and cofinal $R_0$ (round 386, sealed census probe
+`compose_premises2_probe.py`).  The six r383 $\chi$-violators
+are the terminal-dead $q_N>1$ sprouts.  **$(Z')$ REDUZIERT**
+($Z_0'=21/25$ on $175$ living windows).  Death channel
+biconditional CENSUS $181/181$.  Finite-head Chebyshev REFUTED;
+uniform cancellation times triangle REFUTED.  **$(R)$ REDUZIERT**
+to the Gram remainder $B(\omega+\beta,\omega+\beta)\le K D$.
+Companion script `verify_compose_premises2.py`, 16/16 gates,
+`COMPOSE PREMISES2 VERIFIED`.  Discovery probe 20/20, SPEC_SHA
+`82d07e568591c9fd`.  Finite identities plus named reductions.
+NO L\* claim.  NO RH CLAIM.
+
+A fifteenth standalone note, `rh/problem/coherence_assist.pdf`
 (August 28, 2026), is the lemma-first attack on the coherence
 assist (round 387, sealed census probe
 `coherence_assist_probe.py`).  Chebyshev--Dirichlet CD,
@@ -5566,6 +5647,24 @@ and dies on the diagonal.  Companion script
 `6005359e0bafadb2`.  Finite identities plus a named reduction.
 NO L\* claim.  NO RH CLAIM.
 
+A sixteenth standalone note, `rh/problem/delta_deformation.pdf`
+(August 28, 2026), is the lemma-first attack on the
+$\Delta$-deformation closing of $C_\varepsilon$ (round 388,
+sealed census probe `delta_deformation_probe.py`).
+The split $\mathrm{FO}=\gamma(\mathrm{d}Q^T+\mathrm{d}\Delta)$
+and Fejér-pure $\varepsilon=0\Rightarrow\mathrm{FO}=0$ are SATZ.
+Osc-Geronimus does not close $C_\varepsilon$ ($C_*=0.0056$,
+majorant $0.191$).  $R_2$ on the $\mu$-reference is not dominated
+(ratio $0.861$ at degree $40$, $0.640$ at full depth,
+$\lvert R_2\rvert/\lvert\mathrm{FO}\rvert=4.19$).  **REDUZIERT**
+to the r381 triple $G_\varepsilon^\mu\wedge C_\varepsilon\wedge R_2$.
+Scramble keeps a smaller $\mathrm{osc}(\varepsilon)$ and explodes
+$\mathrm{d}\Delta$.  Companion script
+`verify_delta_deformation.py`, 13/13 gates,
+`DELTA DEFORMATION VERIFIED`.  Discovery probe 19/19, SPEC_SHA
+`5613d035ac6bc11d`.  Finite identities plus a named reduction.
+NO L\* claim.  NO RH CLAIM.
+
 ## The RH suite
 
 ```bash
@@ -5578,7 +5677,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r387 from
+2. **Sealed probes** — the campaign probes r250–r388 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6012,6 +6111,15 @@ reduction to $(\Delta,C)$.  It does not touch
 probes (`run_rh.py --fast --skip-lean`) after appending the
 probe and problem-document rows to the inventory.  r374--r384
 are parallel lemma-first / Lean lanes and are not dropped.
+**r386 coexistence.** Round 386 (`compose_premises2.tex` +
+`compose_premises2_probe.py`) is additive on the terminal
+Fejér/vdC compose lane after r383 (living-ladder $(Z')$ and
+cofinal $R_0$).  It does not touch `experiments/next.txt` and
+does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
+this round: integrity + probes (`run_rh.py --fast --skip-lean`)
+after appending the probe and problem-document rows to the
+inventory.  r374--r385 are parallel lemma-first / Lean lanes
+and are not dropped.
 **r387 coexistence.** Round 387 (`coherence_assist.tex` +
 `coherence_assist_probe.py`) is additive on the L* / pivot-band
 lane after r385 (lemma-first assist: Chebyshev--Dirichlet SATZ,
@@ -6020,7 +6128,17 @@ off-diagonal).  It does not touch `experiments/next.txt` and
 does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
 this round: integrity + probes (`run_rh.py --fast --skip-lean`)
 after appending the probe and problem-document rows to the
-inventory.  r374--r385 are parallel lemma-first / Lean lanes
+inventory.  r374--r386 are parallel lemma-first / Lean lanes
+and are not dropped.
+**r388 coexistence.** Round 388 (`delta_deformation.tex` +
+`delta_deformation_probe.py`) is additive on the MED-CAP/$V_2$/$V_3'$/
+$G_\varepsilon$ lane after r381/r385 (lemma-first $\Delta$-deformation:
+osc-Geronimus does not close $C_\varepsilon$; $R_2$ on the $\mu$-reference
+is not dominated).  It does not touch `experiments/next.txt` and
+does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
+this round: integrity + probes (`run_rh.py --fast --skip-lean`)
+after appending the probe and problem-document rows to the
+inventory.  r374--r387 are parallel lemma-first / Lean lanes
 and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
