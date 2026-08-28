@@ -3,9 +3,11 @@
 > **Claim boundary.** Research documentation. NOT evidence for or against
 > the Riemann Hypothesis in either direction. NO RH CLAIM. The `sorry`
 > declarations below are **honest markers**. Since block C1 (the
-> reviewer final-domain contract — see the C1 block below) there are
-> exactly **seven**, and the graph is reduced to the **two true
-> arithmetic gaps**: `lstar_canonical` (lemma L*, the base/wall hole)
+> reviewer final-domain contract — see the C1 block below) there were
+> exactly **seven**; **r362 DualResolvent** adds the ONE named
+> transcription `augmentedSubordination_iff_dualResolvent`, census
+> **eight**. The graph is reduced to the **two true arithmetic gaps**:
+> `lstar_canonical` (lemma L*, the base/wall hole)
 > and `terminal_q_canonical` (the terminal cross-ratio, the
 > border/fiber hole), both `RH/Canonical.lean`, both quantified over
 > the CANONICAL prime-window construction (no opaque `MainWindow`, no
@@ -13,13 +15,14 @@
 > dictionary import `pair_terminal_dictionary` (measured exact,
 > transcription-blocked), the r310/r320 opacity bridge
 > (`RH/Source.lean`, definitional/technical — outside the load-bearing
-> chain since C1) and the three r326 Level-C classical statements
-> (`RH/Elementwise.lean`). The Jacobi inertia theorem
+> chain since C1), the three r326 Level-C classical statements
+> (`RH/Elementwise.lean`), and the r362 window↔matrix dictionary
+> (`RH/DualResolvent.lean`). The Jacobi inertia theorem
 > `crossing_budget` is PROVED since C1 (`RH/Inertia.lean`,
 > sorry-free); the former master-theorem `sorry`, the wave-5 fog-free
 > form `free_window_positivity` and the pair closure
 > `pair_closes_main` are PROVED as corollaries. Historical narrative
-> (r305 four / r310 five / r326 eight) in the blocks below.
+> (r305 four / r310 five / r326 eight / C1 seven) in the blocks below.
 >
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
@@ -108,7 +111,7 @@
 > now **sorry-free**. (4) **the axiom audit** — `RH/Audit.lean` runs
 > `#print axioms` on the whole chain at every build; results below.
 >
-> **Sorry typing table (C1 census, 7 total):**
+> **Sorry typing table (C1 census 7, r362 DualResolvent → 8 total):**
 >
 > | `sorry` | File | Type |
 > |---|---|---|
@@ -119,6 +122,7 @@
 > | `arch_elementwise_stabilization` | `RH/Elementwise.lean` | classical (S2), r326; provable classical quadrature once the `arch_A` kernel transcription exists |
 > | `pole_elementwise_stabilization` | `RH/Elementwise.lean` | classical (S2), r326; same for the v716 pole closed form |
 > | `specFamily_sourceExact_completion` | `RH/Elementwise.lean` | classical + definitional/technical (opacity-forced), r326; not consumed by the extraction route |
+> | `augmentedSubordination_iff_dualResolvent` | `RH/DualResolvent.lean` | **r362, reviewer priority 2** — MEASURED DICTIONARY / transcription-blocked (same class as `pair_terminal_dictionary`): the finite-algebra identity `I−G† ≻ 0 ↔ R† ≻ ½I` is PROVED (`posDef_one_sub_borderedGram_iff_augDualResolvent`); this sorry is ONLY the identification of window L† with the node-Gram cone.  Census 7 → 8.  NO RH CLAIM |
 >
 > Retired as sorries by C1: `lstar_subordination` → `lstar_canonical`
 > (retype), `terminal_positive_main` → `terminal_q_canonical` (retype,
@@ -141,13 +145,22 @@
 > 'RH.free_window_positivity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 > 'RH.pair_closes_main' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 > 'RH.weil_nonneg_of_windowlocal' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+> 'RH.posDef_one_sub_iff_dualResolvent_gt_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.posDef_one_sub_borderedGram_iff_augDualResolvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.posDef_one_sub_borderedGram_iff_qDagger' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.augDualResolvent_fromBlocks' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.augDualResolvent_gt_smul_implies_dualResolvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.augmentedSubordination_iff_dualResolvent' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 > ```
 >
 > Reading (the `sorryAx` granularity is resolved by the proof terms —
 > see the note in `RH/Audit.lean`): the sorry-free layer carries the
 > three standard axioms ONLY; the master chain consumes exactly the two
 > canonical holes; the pair closure additionally the named dictionary;
-> the Level-C extraction exactly the two classical kernel sorries.
+> the Level-C extraction exactly the two classical kernel sorries;
+> r362 DualResolvent finite algebra (A2/A3/A4/A5/A7-min) is sorry-free;
+> the ONE new `sorryAx` is the named window↔matrix transcription
+> `augmentedSubordination_iff_dualResolvent`.
 > The reviewer target "the final theorem consumes only the two
 > arithmetic window theorems plus clearly named classical results" is
 > thereby machine-checked at the granularity Lean offers.
@@ -185,14 +198,16 @@ lake build           # => "Build completed successfully"
   Inertia layer states matrix theorems against `Mathlib.LinearAlgebra.Matrix`.
   The proved layer touches only the algebra/tactic core of mathlib.
 - Build status on this machine: **builds green** (`Build completed
-  successfully`, **7 `sorry` warnings** since C1 (8 since r326, 5 since
-  r310), all intentional and typed — see the C1 sorry table above:
+  successfully`, **8 `sorry` warnings** since r362 DualResolvent (7
+  since C1, 8 since r326, 5 since r310), all intentional and typed —
+  see the sorry table above:
   the two canonical arithmetic holes `lstar_canonical` +
   `terminal_q_canonical` and the named r263 dictionary
   `pair_terminal_dictionary` (`RH/Canonical.lean`), the r310/r320
   opacity bridge `mainWindow_iff_builtFromPrimeSource`
-  (`RH/Source.lean`), and the three r326 Level-C statements
-  (`RH/Elementwise.lean`).
+  (`RH/Source.lean`), the three r326 Level-C statements
+  (`RH/Elementwise.lean`), and the r362 window↔matrix dictionary
+  `augmentedSubordination_iff_dualResolvent` (`RH/DualResolvent.lean`).
   History: 7 before the r273 retype, 9 through wave 9, 4 since the r305
   reconstruction (master + fog-free hole + 4 of 5 Inertia statements
   PROVED), 5 since the r310 source interface, still 5 after r310b,
@@ -200,7 +215,8 @@ lake build           # => "Build completed successfully"
   statement-less Level-C distance visible), **7 since C1** (the two
   holes retyped onto the canonical domain, the pair duplicate replaced
   by the ONE dictionary lemma, `crossing_budget` PROVED —
-  `RH/Inertia.lean` is now sorry-free).
+  `RH/Inertia.lean` is now sorry-free), **8 since r362** (DualResolvent
+  matrix duality proved; one named transcription sorry).
 
 ## Layering (r267 recommendation: order by provability)
 
@@ -455,6 +471,33 @@ connections are finite algebra and close sorry-free:
 Axiom census: every theorem of this file (now sorry-free in its
 entirety) depends only on `propext/Classical.choice/Quot.sound` —
 machine-checked in `RH/Audit.lean`.
+
+### `RH/DualResolvent.lean` — THE R362 DUALITY L† ⟺ R† ≻ ½I (reviewer priority 2; one named `sorry`)
+
+Finite-matrix formalization of the r362 dual-resolvent identity.
+**Not new RH mathematics** — the spectral equivalence belongs in the
+kernel graph because it is the new central architecture.  Formulation
+(kernel-friendly, D = I gauge): `R := (I+E)⁻¹`, `G† := [[E,v],[vᵀ,γ]]`,
+`Z := I+G†`, `R† := Z⁻¹`.  The Borodin OP-construction of R stays
+outside; Cauchy interlacing is the named Prop `CauchyInterlace` (mathlib
+v4.29.1 has no interlacing lemma), never a `sorry`.
+
+| Theorem | Status | Content |
+|---|---|---|
+| `dualResolvent`, `lEnsemble`, `borderedGram`, `dualZ`, `augDualResolvent`, `qDagger`, `shermanDenom` | definitions | L-ensemble dual resolvent and the rank-1 border |
+| `posDef_nonsingInv_sub_smul_iff` | **proved** | spectral comparison: `S ≻ 0`, `c > 0` ⇒ (`S⁻¹ ≻ c I` ⟺ `c⁻¹ I ≻ S`) |
+| `posDef_one_sub_iff_dualResolvent_gt_half` | **proved** | **(r356-A / A2)** `I−E ≻ 0` ⟺ `R ≻ ½I`, given `I+E ≻ 0` |
+| `posDef_one_sub_borderedGram_iff_augDualResolvent` | **proved** | **(A3)** `I−G† ≻ 0` ⟺ `R† ≻ ½I`, given `Z ≻ 0` |
+| `augDualResolvent_fromBlocks` | **proved** | **(A4)** block inverse of `Z`; Y-block is Sherman–Morrison (`invOf_fromBlocks₁₁_eq`) |
+| `posDef_one_sub_borderedGram_iff_qDagger` | **proved** | **(A5)** `I−G† ≻ 0` ⟺ `q† < 1`, given `I−E ≻ 0` |
+| `augDualResolvent_gt_smul_implies_dualResolvent` | **proved** | **(A7-min)** `R† ≻ αI` ⟹ `R ≻ αI` (principal restriction of `Z`) |
+| `CauchyInterlace` | named Prop, not asserted | classical interlacing; cone consequence is A7-min |
+| `RepresentsLEnsemble` | opaque | node-side L-ensemble / CD transcription of a window |
+| `augmentedSubordination_iff_dualResolvent` | **`sorry`** (census 7 → 8) | window L† ↔ `R† ≻ ½I` under the opaque transcription; the matrix identity is the proved A3 |
+
+Axiom census (`RH/Audit.lean` section (e)): A2/A3/A4/A5/A7-min depend
+only on `propext/Classical.choice/Quot.sound`; the bridge carries
+`sorryAx`.  NO RH CLAIM.
 
 ### `RH/Open.lean` — ladder bookkeeping + kill lists (r273: no `sorry` anymore)
 

@@ -27,6 +27,7 @@ Claim boundary: research documentation.  NOT evidence for or against
 the Riemann Hypothesis in either direction.  NO RH CLAIM.
 -/
 import RH.Canonical
+import RH.DualResolvent
 
 namespace RH
 
@@ -79,5 +80,25 @@ RH/Elementwise.lean; the comb channel is unconditional), never the
 two arithmetic holes and never `SourceExact`/`MainWindow`. -/
 
 #print axioms weil_nonneg_of_windowlocal
+
+/-! ## (e) The r362 dual-resolvent layer (reviewer priority 2)
+Sorry-free finite algebra, expected AND MEASURED:
+`[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`:
+  * `RH.posDef_one_sub_iff_dualResolvent_gt_half` (r356-A / A2)
+  * `RH.posDef_one_sub_borderedGram_iff_augDualResolvent` (A3)
+  * `RH.posDef_one_sub_borderedGram_iff_qDagger` (A5)
+  * `RH.augDualResolvent_fromBlocks` (A4 Sherman–Morrison)
+  * `RH.augDualResolvent_gt_smul_implies_dualResolvent` (A7-min)
+The ONE named transcription sorry, expected AND MEASURED:
+`[propext, sorryAx, Classical.choice, Quot.sound]`:
+  * `RH.augmentedSubordination_iff_dualResolvent` -- census 7 → 8,
+    type MEASURED DICTIONARY / transcription-blocked.  NO RH CLAIM. -/
+
+#print axioms posDef_one_sub_iff_dualResolvent_gt_half
+#print axioms posDef_one_sub_borderedGram_iff_augDualResolvent
+#print axioms posDef_one_sub_borderedGram_iff_qDagger
+#print axioms augDualResolvent_fromBlocks
+#print axioms augDualResolvent_gt_smul_implies_dualResolvent
+#print axioms augmentedSubordination_iff_dualResolvent
 
 end RH

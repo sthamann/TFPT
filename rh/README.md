@@ -4516,6 +4516,12 @@ rh/
 │       │                    fixed form c2PAIR (block decomposition, pair
 │       │                    triangle, level-2 refinement); the H5 margin
 │       │                    law retyped as pair_margin_main (sorry, r273)
+│       ├── DualResolvent.lean — r362 (reviewer priority 2): finite-matrix
+│       │                    L† ⟺ R† ≻ ½I.  PROVED: R ≻ ½I iff I−E ≻ 0
+│       │                    (A2), R† ≻ ½I iff I−G† ≻ 0 (A3), Sherman–
+│       │                    Morrison Y-block (A4), q† < 1 Schur (A5),
+│       │                    cone restriction (A7-min).  ONE named sorry:
+│       │                    the window↔matrix transcription.  NO RH CLAIM
 │       └── Counterexamples.lean — r273 reviewer guards: machine-checked
 │                            refutations of the three pre-r273 universal
 │                            forms (proved, no sorry)
@@ -4874,7 +4880,14 @@ parallel r326 Lean round in flight, not a change of this sync).
 ## Lean status
 
 See `rh/lean/README.md` for the authoritative list. Summary: the Lean 4
-project builds green (since the r305 Lean reconstruction round
+project builds green. **r362 DualResolvent** (reviewer priority 2,
+`RH/DualResolvent.lean`) puts the finite-matrix identity
+`I−G† ≻ 0 ⟺ R† ≻ ½I` in the kernel graph (A2/A3/A4/A5/A7-min
+sorry-free; `#print axioms` = `propext/Classical.choice/Quot.sound`
+only). Census **8** by the ONE named transcription
+`augmentedSubordination_iff_dualResolvent` (window L† ↔ the node-Gram
+cone; same class as `pair_terminal_dictionary`).  NO RH CLAIM.
+Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in
 `RH/Source.lean`, since the r310b refinement in the reviewer target
@@ -5380,7 +5393,12 @@ unclaimed. NO RH CLAIM.
       `crossing_budget`, `canonical_budget_pos`) carries
       `[propext, Classical.choice, Quot.sound]` ONLY; the master
       chain consumes exactly the two canonical holes; the Level-C
-      extraction exactly the two classical kernel sorries.  The two
+      extraction exactly the two classical kernel sorries.  **r362
+      DualResolvent** (reviewer priority 2): the finite-matrix identity
+      `L† ⟺ R† ≻ ½I` is kernel-checked as `I−G† ≻ 0 ⟺ R† ≻ ½I`
+      (`RH/DualResolvent.lean`, sorry-free A2/A3/A4/A5/A7-min); census
+      7 → 8 by the named window↔matrix transcription
+      `augmentedSubordination_iff_dualResolvent`.  The two
       window-local gaps themselves stay OPEN
       (`PRIME.LSTAR.SUBORDINATION.01`,
       `PRIME.PORT.COUPLEDTAU.TERMINAL_CROSSRATIO.01` — both [O],
