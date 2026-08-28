@@ -2,24 +2,24 @@
 
 > **Claim boundary.** Research documentation. NOT evidence for or against
 > the Riemann Hypothesis in either direction. NO RH CLAIM. The `sorry`
-> declarations below are **honest markers**. Since the r305 reconstruction
-> round there are exactly **four**: the wave-6 canonical form
-> `lstar_subordination` (lemma L*, the base/wall hole), the terminal
-> statement `terminal_positive_main` (the border/fiber hole,
-> `RH/Closure.lean`), its pair-coordinate refinement `pair_margin_main`
-> (the same hole in r271 coordinates; the connecting r263 dictionary is
-> measured, not formalized), and the Jacobi inertia theorem
-> `crossing_budget` (a mathlib gap; certified exact-rationally in v962).
-> The former master-theorem `sorry` and the wave-5 fog-free form
-> `free_window_positivity` are PROVED as corollaries (r305,
-> `RH/Closure.lean`). Since the r310 source-interface round there is a
-> **fifth**: the opacity bridge
-> (`RH/Source.lean`; type DEFINITIONAL/TECHNICAL — forced by the r273
-> opacity of `MainWindow`, not arithmetic). Since the r310b refinement the
-> fifth carries the reviewer target form
-> `mainWindow_iff_builtFromPrimeSource` (the r310 form
-> `mainWindow_explicit_bridge` is PROVED from it — census unchanged, the
-> sorry moved into the sharper statement).
+> declarations below are **honest markers**. Since block C1 (the
+> reviewer final-domain contract — see the C1 block below) there are
+> exactly **seven**, and the graph is reduced to the **two true
+> arithmetic gaps**: `lstar_canonical` (lemma L*, the base/wall hole)
+> and `terminal_q_canonical` (the terminal cross-ratio, the
+> border/fiber hole), both `RH/Canonical.lean`, both quantified over
+> the CANONICAL prime-window construction (no opaque `MainWindow`, no
+> free `SourceExact` in the final chain); plus the ONE named r263
+> dictionary import `pair_terminal_dictionary` (measured exact,
+> transcription-blocked), the r310/r320 opacity bridge
+> (`RH/Source.lean`, definitional/technical — outside the load-bearing
+> chain since C1) and the three r326 Level-C classical statements
+> (`RH/Elementwise.lean`). The Jacobi inertia theorem
+> `crossing_budget` is PROVED since C1 (`RH/Inertia.lean`,
+> sorry-free); the former master-theorem `sorry`, the wave-5 fog-free
+> form `free_window_positivity` and the pair closure
+> `pair_closes_main` are PROVED as corollaries. Historical narrative
+> (r305 four / r310 five / r326 eight) in the blocks below.
 >
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
@@ -77,18 +77,80 @@
 > `terminal_positive_main`, not a third hole). Census unchanged:
 > 8 → **8**, zero new; the two true holes are byte-identical.
 >
-> **Sorry typing table (r326 census, unchanged by r332, 8 total):**
+> **C1 (the reviewer final-domain block: "reduce the Lean graph to the
+> two true mathematical gaps").** Four moves, census 8 → **7**:
+> (1) **the final-domain retype** — the two true holes are RETYPED off
+> the opaque `MainWindow` onto the canonical construction
+> (`RH/Canonical.lean`): `CanonicalWindow w := ∃ a m ha,
+> RepresentsWindow w (canonicalWindow a m ha) mesh`, where
+> `canonicalWindow` is the predefined family completed by the ONE named
+> opaque constant `canonicalCompletion` (the r326 opacity convention
+> extended from the kernel reads to the window-level arch/border/budget
+> data — the residual opacity is exactly the classical transcription
+> TODO). The holes are now `lstar_canonical` and `terminal_q_canonical`
+> — the budget half `0 < B` of the old terminal statement is PROVED
+> (`canonical_budget_pos`), so the terminal sorry carries only the
+> genuinely open `q_N < 1`. The master theorem and all corollaries
+> moved with them (statements verbatim modulo the domain); no free
+> `SourceExact` and no `MainWindow` bridge appears in the final chain.
+> (2) **the pair duplicate retired** — the r263 dictionary
+> `Z² = (5/7)·q_N` is the ONE named lemma `pair_terminal_dictionary`
+> (typed MEASURED/transcription-blocked), the pair closure
+> `pair_closes_main` is a PROVED corollary of the terminal hole, and
+> the margin law `pair_margin_main` is DEMOTED to the named Prop
+> `PairBound.PairMarginLaw` (honest: the fixed pair form is measured
+> to MISS on kz39/kz15 — asserting it as a sorry overclaimed).
+> (3) **`crossing_budget` PROVED** — the r305 "mathlib carries neither"
+> assessment was half stale: mathlib v4.29.1 has Sylvester's law of
+> inertia (`QuadraticForm.sigNeg_of_equiv_weightedSumSquares`); the
+> pivot/minor dictionary (Jacobi's rule as an LDL congruence +
+> Vandermonde factorization) is built in `RH/Inertia.lean`, which is
+> now **sorry-free**. (4) **the axiom audit** — `RH/Audit.lean` runs
+> `#print axioms` on the whole chain at every build; results below.
+>
+> **Sorry typing table (C1 census, 7 total):**
 >
 > | `sorry` | File | Type |
 > |---|---|---|
-> | `lstar_subordination` | `RH/Window.lean` | arithmetically open (the base/wall hole, lemma L*); byte-identical since r305 |
-> | `terminal_positive_main` | `RH/Closure.lean` | arithmetically open (the border/fiber hole); byte-identical since r305 |
-> | `pair_margin_main` | `RH/PairBound.lean` | arithmetically open (same terminal hole, r271 pair coordinates); **r320 RETYPE**: stated for the canonical extraction `edgeLocal`/`bulkRuns` (definitions), no longer for free `(Zloc, runs)` — the old form was refutable (guard `old_pair_margin_forces_empty`) |
-> | `crossing_budget` | `RH/Inertia.lean` | classical/technical (mathlib gap: Jacobi minor-sign rule + inertia counting); byte-identical |
-> | `mainWindow_iff_builtFromPrimeSource` | `RH/Source.lean` | definitional/technical (opacity-forced); **r320 RETYPE**: RHS = `∃ s, SourceExact s ∧ RepresentsWindow w (buildPrimeWindow s) s.mesh` with the repaired predicate — the old form was jointly inconsistent with the holes (guards `old_bridge_terminal_inconsistent`, `old_bridge_lstar_inconsistent`); the pre-r320 "becomes `Iff.rfl`" promise is CORRECTED in the docstring |
-> | `arch_elementwise_stabilization` | `RH/Elementwise.lean` | **NEW r326** — classical (S2): the arch kernel read of the canonical windows stabilizes elementwise (R325 S1 measured exact: onset at the predicted `α*`, mesh constancy 1.5e-15); provable classical quadrature once the `arch_A` kernel transcription exists (the opaque reads are the named TODO) |
-> | `pole_elementwise_stabilization` | `RH/Elementwise.lean` | **NEW r326** — classical (S2): same for the v716 pole closed form (R325 S1: 2.0e-17) |
-> | `specFamily_sourceExact_completion` | `RH/Elementwise.lean` | **NEW r326** — classical + definitional/technical (opacity-forced): every canonical family member admits a source-exact completion (genuine arch/border/budget data on the same atom set); concluding the opaque `SourceExact` is unprovable by design. NOTE: the extraction route does NOT consume this sorry — that is the architecture's point |
+> | `lstar_canonical` | `RH/Canonical.lean` | arithmetically open (the base/wall hole, lemma L*); **C1 RETYPE** of `lstar_subordination` (r305–r332, `RH/Window.lean`): quantifier domain now the canonical construction (`CanonicalWindow`), content verbatim (v963 subordination, ledger `PRIME.LSTAR.SUBORDINATION.01` [O]) |
+> | `terminal_q_canonical` | `RH/Canonical.lean` | arithmetically open (the border/fiber hole); **C1 RETYPE + SHARPENING** of `terminal_positive_main` (r305–r332, `RH/Closure.lean`): domain canonical, budget half `0 < B` PROVED (`canonical_budget_pos`), the sorry carries only `q_N < 1` |
+> | `pair_terminal_dictionary` | `RH/Canonical.lean` | **C1, replaces the `pair_margin_main` sorry** — the r263 dictionary `Z² = (5/7)·q_N` as ONE named lemma; type MEASURED DICTIONARY (42/42 exact) / transcription-blocked (the border orthopoly transform); consumed only by the pair closure corollary, never by the master chain |
+> | `mainWindow_iff_builtFromPrimeSource` | `RH/Source.lean` | definitional/technical (opacity-forced, r320 form); byte-identical — since C1 outside the load-bearing chain (`MainWindow` is historical interface only) |
+> | `arch_elementwise_stabilization` | `RH/Elementwise.lean` | classical (S2), r326; provable classical quadrature once the `arch_A` kernel transcription exists |
+> | `pole_elementwise_stabilization` | `RH/Elementwise.lean` | classical (S2), r326; same for the v716 pole closed form |
+> | `specFamily_sourceExact_completion` | `RH/Elementwise.lean` | classical + definitional/technical (opacity-forced), r326; not consumed by the extraction route |
+>
+> Retired as sorries by C1: `lstar_subordination` → `lstar_canonical`
+> (retype), `terminal_positive_main` → `terminal_q_canonical` (retype,
+> sharpened), `pair_margin_main` → named Prop `PairMarginLaw` + the
+> dictionary lemma (duplicate retired), `crossing_budget` → PROVED.
+>
+> **The C1 axiom audit (`RH/Audit.lean`, verbatim build output):**
+>
+> ```
+> 'RH.lstar_terminal_implies_master' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.augmentedSubordination_iff_lstar_and_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.crossing_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.canonical_budget_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.lstar_canonical' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+> 'RH.terminal_q_canonical' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+> 'RH.augmented_prefix_positive' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+> 'RH.augmentedSubordination_main' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+> 'RH.terminal_crossratio_main' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+> 'RH.prefix_chain_positive_main' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+> 'RH.free_window_positivity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+> 'RH.pair_closes_main' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+> 'RH.weil_nonneg_of_windowlocal' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+> ```
+>
+> Reading (the `sorryAx` granularity is resolved by the proof terms —
+> see the note in `RH/Audit.lean`): the sorry-free layer carries the
+> three standard axioms ONLY; the master chain consumes exactly the two
+> canonical holes; the pair closure additionally the named dictionary;
+> the Level-C extraction exactly the two classical kernel sorries.
+> The reviewer target "the final theorem consumes only the two
+> arithmetic window theorems plus clearly named classical results" is
+> thereby machine-checked at the granularity Lean offers.
 
 This is the pilot recommended by round r267 (after the external
 Alpöge–Furman adjudication, `arXiv:2608.13637`, itself Lean-4-formalized):
@@ -123,32 +185,22 @@ lake build           # => "Build completed successfully"
   Inertia layer states matrix theorems against `Mathlib.LinearAlgebra.Matrix`.
   The proved layer touches only the algebra/tactic core of mathlib.
 - Build status on this machine: **builds green** (`Build completed
-  successfully`, **8 `sorry` warnings** since r326 (5 since r310; r320:
-  still 5, two retyped, none added; r326: +3 NEW typed Level-C
-  statements in `RH/Elementwise.lean` — statements that were not
-  formalizable before, not a regression), all intentional:
-  the wave-6 canonical form `lstar_subordination` (lemma L*, v963 ---
-  the base/wall hole; L* ⇒ free-window positivity is PROVED) + the
-  terminal statement `terminal_positive_main` (`RH/Closure.lean`, the
-  border/fiber hole) + the retyped H5 `pair_margin_main` (the same
-  terminal hole in r271 pair coordinates) + the Jacobi inertia theorem
-  `crossing_budget` (T2, v962 --- a mathlib gap, see RH/Inertia.lean)
-  + the r310 opacity bridge, since r310b in the reviewer target form
-  `mainWindow_iff_builtFromPrimeSource`
-  (`RH/Source.lean` --- definitional/technical, opacity-forced;
-  `mainWindow_explicit_bridge` is proved from it)
-  + the three r326 Level-C statements (`RH/Elementwise.lean` --- the
-  arch/pole kernel-channel elementwise stabilizations, classical, and
-  the source-exact completion, classical + opacity-forced).
+  successfully`, **7 `sorry` warnings** since C1 (8 since r326, 5 since
+  r310), all intentional and typed — see the C1 sorry table above:
+  the two canonical arithmetic holes `lstar_canonical` +
+  `terminal_q_canonical` and the named r263 dictionary
+  `pair_terminal_dictionary` (`RH/Canonical.lean`), the r310/r320
+  opacity bridge `mainWindow_iff_builtFromPrimeSource`
+  (`RH/Source.lean`), and the three r326 Level-C statements
+  (`RH/Elementwise.lean`).
   History: 7 before the r273 retype, 9 through wave 9, 4 since the r305
   reconstruction (master + fog-free hole + 4 of 5 Inertia statements
-  PROVED), 5 since the r310 source interface (the increase is one NEW
-  statement that was not formalizable before, not a regression),
-  still 5 after the r310b refinement (the Source.lean sorry moved into
-  the target form; everything else added in r310b is PROVED),
+  PROVED), 5 since the r310 source interface, still 5 after r310b,
   8 since r326 (the three new statements make the previously
-  statement-less Level-C distance visible — the wave-12 reviewer
-  reservation, partially discharged).
+  statement-less Level-C distance visible), **7 since C1** (the two
+  holes retyped onto the canonical domain, the pair duplicate replaced
+  by the ONE dictionary lemma, `crossing_budget` PROVED —
+  `RH/Inertia.lean` is now sorry-free).
 
 ## Layering (r267 recommendation: order by provability)
 
@@ -175,7 +227,7 @@ partial spends `S`, regularity predicate. Proved bookkeeping:
 | `two_branch_cheap` / `_strict` | `\|Z\| ≤ U` and `U ≤ M` (resp. `<`) ⇒ `Z²/M² ≤ 1` (resp. `<`) | r263 cheap branch |
 | `exception_scalar_closes` | `Z² < m` ⇒ `Z²/m < 1` | r263/r264 S6 shape |
 
-### `RH/Inertia.lean` — the matrix-theorem layer (since r305: PROVED except `crossing_budget`)
+### `RH/Inertia.lean` — the matrix-theorem layer (since C1: fully PROVED, zero `sorry`)
 
 Proved since the start: `hankel_isHermitian`, `window_cap_arith`
 (`2n − 1 ≤ S ↔ n ≤ (S+1)/2`, the counting half of half-filling, by `omega`),
@@ -196,13 +248,13 @@ no axioms, no `native_decide`):
 | `sylvester_pullback` | congruence `AᵀMA` with invertible `A` preserves PosDef | v956 r229 |
 | `half_filling_boundary` | positive h-prefix ⇒ `H_{N_w} ≻ 0` (reverse Sylvester at the cap) | v956 r228/r229 |
 
-`sorry` (ONE left, certified exact-rationally in the cited module):
+**PROVED since C1** (formerly the ONE remaining `sorry` of this file):
 
-| Statement | Corpus anchor | Why open (honest) |
+| Statement | Content | Corpus anchor |
 |---|---|---|
-| `crossing_budget` — T2: `#(h_n < 0, n < S) = S_−` (Jacobi/Sylvester, world-blind) | v962 T2 / r279 (`oriented_theorem_probe.py`, SPEC `9107709b4f4a65d1`) | needs Jacobi's minor-sign rule AND Sylvester's law of inertia in matrix-congruence counting form; mathlib v4.29.1 has neither — a genuine formalization project, not wiring |
+| `crossing_budget` — T2: `#(h_n < 0, n < S) = S_−` (Jacobi/Sylvester, world-blind) | **PROVED**: the r305 "mathlib carries neither" assessment was half stale — mathlib v4.29.1 has Sylvester's law of inertia at the quadratic-form level (`QuadraticForm.sigNeg_of_equiv_weightedSumSquares`); the pivot/minor dictionary is built in the `JacobiInertia` section: `exists_congruent_diagonal` (Jacobi's rule as an LDL-type congruence, Schur block-elimination induction), `hankel_eq_vand_conj` (`H_S = Vᵀ(diag w)V`, definitional — no Vandermonde determinant formula), `equivalent_toQuadraticMap'_congruence` (matrix congruence ⟹ equivalent forms); both counts equal the inertia invariant `sigNeg` | v962 T2 / r279 (`oriented_theorem_probe.py`, SPEC `9107709b4f4a65d1`) — the exact-rational certificate stands beside the proof |
 
-### `RH/Window.lean` — the retyped window + the wave-5/6 forms of the hole (since r305: ONE `sorry`, `lstar_subordination`; the master theorem moved to `RH/Closure.lean` and is PROVED there)
+### `RH/Window.lean` — the retyped window structure + the finite-algebra machinery (since C1: zero `sorry` — the L* hole moved to `RH/Canonical.lean` as `lstar_canonical`)
 
 The concrete structure `VonMangoldtWindow` (exact rationals, like the
 corpus): fields `S` (atom count), `nodes` (positions), `combWeight` /
@@ -222,11 +274,10 @@ instance (S = 3, cap = 2) tests the definitions.
 | `D_eq_schur` | proved | `D_n = B − u^T H_n^{-1} u` (via mathlib `det_fromBlocks₁₁`) |
 | `master_implies_free_window` | proved | hypothesis form: master conclusion ⇒ free-window positivity (block extraction + Sylvester ratio) |
 | `main_window_reduction` | proved | **T4** (v962): on a nonvanishing chain, free-window positivity ⇔ "no crossing before the cap" |
-| `lstar_subordination` | **`sorry` = the base/wall hole (canonical form)** | `MainWindow w → ∀ p ≠ 0, deg p < cap → ∫p²dν < ∫p²dμ` (lemma L*, the r283 reduction / v963; ledger `PRIME.LSTAR.SUBORDINATION.01` [O]; standalone statement `rh/problem/lstar_problem.tex`) |
+| the L* hole | **C1 MOVE** | the open statement (lemma L*, the r283 reduction / v963; ledger `PRIME.LSTAR.SUBORDINATION.01` [O]; standalone statement `rh/problem/lstar_problem.tex`) lives since C1 in `RH/Canonical.lean` as `lstar_canonical : CanonicalWindow w → LStar w` |
 | `hankel_quadform` | proved | the quadratic-form dictionary: `x ⬝ H_n x = ∫p_x²dμ − ∫p_x²dν` for the coefficient polynomial (finite algebra, wave 6) |
 | `lstar_implies_hankel_posDef`, `lstar_implies_free_window` | proved | hypothesis form: L* ⇒ every Hankel block through the cap PosDef ⇒ free-window positivity (the wave-6 direction tying the canonical form to the fog-free hole) |
-| `lstar_free_window_main` | proved from `lstar_subordination` | free-window positivity on MAIN windows modulo the single L* `sorry` |
-| `free_window_positivity` | **proved since r305** (corollary of L*) | `MainWindow w → ∀ n < cap, 0 < h_n` (the r279 b3 gap statement / v962 T4 reinstform; ledger `PRIME.PORT.RHP.FULLSOURCE.QUASIDEFINITENESS.01` [O]) — the open content moved entirely into `lstar_subordination` |
+| `lstar_free_window_main`, `free_window_positivity` | **C1 MOVE** (proved corollaries) | moved to `RH/Canonical.lean` with the domain retype (`CanonicalWindow`), proofs verbatim through `lstar_implies_free_window` |
 
 **Wave-7 census (v964, rounds 286–289):** NO new statement — the hole
 stays `lstar_subordination`; its
@@ -360,22 +411,20 @@ which the transcribable source-exactness is PROVED.
 | `WindowLocalPositive`, `weil_nonneg_of_windowlocal` | definition + **proved** | **(iii), the extraction WITHOUT the ladder**: window-local positivity of the canonical family (typed honestly on the PLAIN full form, with the `f.meshExp ≤ m` grid-compatibility guard) ⟹ `0 ≤ weilForm f` for every grid element — ONE finite instantiation per element (Euclid anchor + the element's native mesh); replaces the (H_cof) route |
 | `BorderedCompressionBridge`, `weil_nonneg_of_bordered` | named Prop + proved | the compression bridge (bordered tower form ⟹ plain form — the corpus certificates live on the BORDERED form; the documented S2 rest) as a NAMED statement, parametrized over the bordered read (no new opaque, no truth commitment); the composed extraction is proved from (iii) |
 
-### `RH/Closure.lean` — THE RECONSTRUCTION THEOREM (r305, reviewer plan §3; one `sorry`: the terminal statement)
+### `RH/Closure.lean` — THE RECONSTRUCTION THEOREM (r305, reviewer plan §3; since C1: zero `sorry` — the terminal hole moved to `RH/Canonical.lean`)
 
 | Theorem | Status | Content |
 |---|---|---|
-| `LStar`, `TerminalPositive` | definitions | the two window predicates: L* verbatim (`lstar_subordination` statement), and the r258/r260 terminal statement `0 < B ∧ q_N < 1` (faithful to TERMINAL_Q_LAW + the v959 budget telescope; `B > 0` is the measured r243 budget normalization `B = S_{N−2} + 5/7`) |
+| `LStar`, `TerminalPositive` | definitions | the two window predicates: L* verbatim, and the r258/r260 terminal statement `0 < B ∧ q_N < 1` (faithful to TERMINAL_Q_LAW + the v959 budget telescope) |
 | `terminal_margin_pos_of_terminal` | proved | terminal ⇒ `D_cap = B(1 − q) > 0` (ordered-field algebra, cf. `terminal_equiv`) |
 | `A_eq_submatrix_A_cap` | proved | `A_n` is a principal submatrix of `A_cap` (border column included) |
 | `lstar_terminal_implies_master` | **proved** | **the reconstruction theorem**: `LStar w → TerminalPositive w → ∀ n ≤ cap, A_{w,n} ≻ 0` (L* ⇒ `H_cap ≻ 0`; terminal ⇒ `D_cap > 0`; `det A_cap = D_cap·det H_cap > 0`; Schur bordering ⇒ `A_cap ≻ 0`; principal-submatrix restriction ⇒ all `A_n ≻ 0` — the matrix form of the backward Riccati drain `D_n = D_N + Σρ_k ≥ D_N`) |
-| `terminal_positive_main` | **`sorry` = the border/fiber hole** | `MainWindow w → TerminalPositive w` — the second true hole; its pair-coordinate refinement is `pair_margin_main` (`RH/PairBound.lean`); the r263 dictionary `Z²/m = q_N` connecting the two is measured (42/42), not formalized |
-| `augmented_prefix_positive` | **proved since r305** (corollary, statement verbatim r273) | THE MASTER THEOREM: `MainWindow w → ∀ n ≤ cap, A_{w,n} ≻ 0` — no longer an independent arithmetic input; = reconstruction ∘ (`lstar_subordination`, `terminal_positive_main`) |
-| `prefix_chain_positive_main`, `terminal_margin_positive_main`, `terminal_crossratio_main` | proved from master (moved verbatim from `RH/Window.lean`) | former edges B and A (`PRIME.PORT.FULLSOURCE.PREFIX_RESUMMATION.01` [O], `PRIME.PORT.COUPLEDTAU.TERMINAL_CROSSRATIO.01` [O]) |
+| the terminal hole + the master corollaries | **C1 MOVE** | `terminal_positive_main` is retyped/sharpened to `terminal_q_canonical` (`RH/Canonical.lean`; budget half PROVED there); `augmented_prefix_positive`, `prefix_chain_positive_main`, `terminal_margin_positive_main`, `terminal_crossratio_main` moved with it, statements verbatim modulo the `MainWindow → CanonicalWindow` domain retype |
 
-**The two true holes after r305** (what the reviewer's §3 predicted):
-`lstar_subordination` (base/wall) and `terminal_positive_main`
-(border/fiber; = `pair_margin_main` in pair coordinates). Everything
-else conditioned on `MainWindow` is finite matrix algebra over them.
+**The two true holes after C1**: `lstar_canonical` (base/wall) and
+`terminal_q_canonical` (border/fiber), both `RH/Canonical.lean` on the
+canonical final domain. Everything else is finite matrix algebra over
+them.
 
 ### `RH/Augmented.lean` — THE AUGMENTED SUBORDINATION L† (r332, the reviewer unification; **zero `sorry`**)
 
@@ -401,12 +450,11 @@ connections are finite algebra and close sorry-free:
 | `augmentedSubordination_implies_terminal` | proved | with L*, the border term is the Schur condition: `B > 0` via the budget corner, `q < 1` via `D_cap = det A_cap/det H_cap > 0` — the `uᵀH⁻¹u < B` route in determinant coordinates, no explicit `H⁻¹u` minimizer needed |
 | `augmentedSubordination_iff_lstar_and_terminal` | **proved** | **L† ⟺ L* ∧ Terminal** — backward direction re-runs the wave-10 reconstruction bricks (NOT `lstar_terminal_implies_master`), keeping the corollary below non-circular |
 | `reconstruction_via_augmented` | proved | the r305 reconstruction theorem re-derived as `iff_masterCap.mp ∘ iff_lstar_and_terminal.mpr` — the Closure original is byte-stable, NOT replaced |
-| `augmentedSubordination_main` | **proved from the two holes** | **the combined target form**: `MainWindow w → AugmentedSubordination w`, proved from `lstar_subordination` + `terminal_positive_main` — deliberately NOT a new `sorry` (census unchanged at 8); a direct proof of L† would close BOTH holes |
-| `augmented_prefix_positive_via_ldagger` | proved | the master theorem through the L† route on MAIN windows (record) |
+| `augmentedSubordination_main`, `augmented_prefix_positive_via_ldagger` | **C1 MOVE** (proved from the two holes) | the combined target form and the L†-route master moved to `RH/Canonical.lean` with the domain retype (`CanonicalWindow`, consuming `lstar_canonical` + `terminal_canonical`) — deliberately NOT sorries; a direct proof of L† would close BOTH holes |
 
-Axiom census: every sorry-free theorem of the file depends only on
-`propext/Classical.choice/Quot.sound`; `augmentedSubordination_main`
-additionally on `sorryAx` — exactly the two existing holes, by design.
+Axiom census: every theorem of this file (now sorry-free in its
+entirety) depends only on `propext/Classical.choice/Quot.sound` —
+machine-checked in `RH/Audit.lean`.
 
 ### `RH/Open.lean` — ladder bookkeeping + kill lists (r273: no `sorry` anymore)
 
@@ -437,7 +485,7 @@ any attempt to restore the pre-r320 source-interface types contradicts
 the three r320 guards (all sorry-free, axiom census
 `propext/Classical.choice/Quot.sound` only).
 
-### `RH/PairBound.lean` — the PROVED finite pair algebra (r271, one `sorry`)
+### `RH/PairBound.lean` — the PROVED finite pair algebra (r271; since C1: zero `sorry`)
 
 The r269/r271 fixed drive bound c2PAIR as abstract list algebra over a
 linearly ordered field (probe `universal_pair_theorem_probe.py`,
@@ -465,26 +513,64 @@ extraction lives below the window interface; the identification of the
 Lean extraction with it is measured (r271, warded G20/G23), not
 formalized — part of the border transcription TODO (`SourceExact`).
 
-`sorry` (the open problem, NOT a to-do): `pair_margin_main` — the H5
-margin law, since r273 typed on `VonMangoldtWindow` + `MainWindow` (the
-pre-r273 universal form `pair_margin_cofinal` is refuted by
-`pair_margin_not_universal`), since r320 stated for the CANONICAL
-extraction `|edgeLocal w| + pairBound (bulkRuns w) < sqrt(5/7)` (the
-r273 form with free `(Zloc, runs)` is refuted by
-`old_pair_margin_forces_empty` — U3); the conditional closure
-`pair_closes_main` is proved modulo it via `canonical_split` (measured
-42 rungs only: 5/7 exceptions under c2PAIR; b2LEVEL2 leaves kz39 at
-0.002 dec, kz15 at 0.06 dec; lemma list L1–L5 in the r271 probe).
+**C1: the margin law demoted to a named Prop (the pair duplicate
+retired).** The H5 margin law — r273-typed on `MainWindow`, r320-typed
+on the canonical extraction — was carried as a `sorry` although the
+fixed pair form is measured to MISS on kz39 (0.002 dec) and kz15
+(0.06 dec) under b2LEVEL2: asserting it overclaimed (the law is a
+CERTIFICATE ROUTE — 35 cheap rungs + both mains via the triangle,
+5/7 exception rungs via the pair form — not a faithful statement of
+the terminal hole). Since C1 it is the named Prop `PairMarginLaw` (the
+`BorderedCompressionBridge` convention: statable, consumable, never
+asserted) with the certificate direction PROVED
+(`pair_closes_of_marginLaw`, via `canonical_split`). The terminal hole
+itself is `terminal_q_canonical` and the unconditional pair closure
+`pair_closes_main` is a PROVED corollary through the ONE named r263
+dictionary lemma `pair_terminal_dictionary` (both
+`RH/Canonical.lean`). What a proof of the law would still need is the
+r271 lemma list L1–L5 (L2 pair-sum decay measured trending the wrong
+way, sp(N, eps) = +0.67, r272).
+
+### `RH/Canonical.lean` — THE CANONICAL FINAL DOMAIN (C1; the two true holes + the named dictionary)
+
+| Item | Status | Content |
+|---|---|---|
+| `CanonicalCompletion`, `canonicalCompletion` | structure + **opaque constant** | the named completion data of the canonical window at anchor `a` (arch weights, v958 border column, r243 budget — signs carried by the type, VALUES opaque = the classical transcription TODO; the r326 opacity convention extended from the kernel reads) |
+| `canonicalSpec`, `canonicalWindow` | definitions | the predefined family spec (`specFamily`, r310 — atoms/nodes/comb provable) with the named completion filled in, and its built real window |
+| `canonicalSpec_arith`, `canonicalWindow_nodes/_combWeight`, `sourceExact_canonicalSpec`, `canonicalWindow_isExplicit`, `canonicalWindow_B_pos` | proved | the canonical spec shares the arithmetic layer with the family bitwise (`rfl`); it is source-exact in the transcribable r326 sense; the window is explicitly-main with positive budget |
+| `CanonicalWindow` | definition | **the final quantifier domain**: `∃ a m ha, RepresentsWindow w (canonicalWindow a m ha) mesh` — the r320 predicate binds the certificate to the completed construction (u/B EXACT, separation discipline); no free `SourceExact`, no opaque window predicate; nonemptiness deliberately unprovable while the completion is opaque |
+| `canonical_budget_pos` | **proved** | `0 < B` on canonical windows (B-fidelity + the completion's `budget_pos`) — the budget half of the old terminal sorry is now finite bookkeeping |
+| `lstar_canonical` | **`sorry` — the base/wall hole** | L* on canonical windows (C1 retype of `lstar_subordination`; content verbatim v963; measured support through EXT6, N_w up to 7942, r354) |
+| `terminal_q_canonical` | **`sorry` — the border/fiber hole, sharpened** | `q_N < 1` on canonical windows (C1 retype of `terminal_positive_main` minus the proved budget half); `terminal_canonical : TerminalPositive w` is a proved corollary |
+| `augmented_prefix_positive`, `prefix_chain_positive_main`, `terminal_margin_positive_main`, `terminal_crossratio_main`, `lstar_free_window_main`, `free_window_positivity`, `augmentedSubordination_main`, `augmented_prefix_positive_via_ldagger` | proved from the two holes | the master theorem and every corollary, statements verbatim modulo the `MainWindow → CanonicalWindow` retype, proofs verbatim through the r305/r332 machinery |
+| `pair_terminal_dictionary` | **`sorry` — the ONE named dictionary** | `Z² = (5/7)·q_N` on canonical windows (r263, measured exact 42/42); type MEASURED DICTIONARY / transcription-blocked (the border orthopoly transform); consumed ONLY by the pair closure |
+| `pair_closes_main` | **proved** | the pair closure `Z²/M² < 1` (`M² = 5/7`) as a corollary of `terminal_q_canonical` through the dictionary — formerly conditioned on the retired `pair_margin_main` sorry |
+
+### `RH/Audit.lean` — THE FINAL AXIOM AUDIT (C1; `#print axioms` at every build)
+
+Runs `#print axioms` on the sorry-free layer (expected: the three
+standard axioms, NO `sorryAx`), the two canonical holes, the master
+chain and the Level-C extraction; the C1 record is quoted verbatim in
+the claim-boundary block above and in the file itself.
 
 ## TODO (second stage)
 
 - ~~Prove the Inertia layer against mathlib (`Matrix.PosDef` API).~~
-  DONE r305 except `crossing_budget` (Jacobi inertia — needs Jacobi's
-  minor-sign rule + Sylvester's law of inertia in matrix-counting form,
-  both absent from mathlib v4.29.1; a standalone formalization project).
-- Formalize the r263 dictionary `Z²/m = q_N` connecting
-  `terminal_positive_main` (`RH/Closure.lean`) with `pair_margin_main`
-  (`RH/PairBound.lean`), so the terminal hole is ONE Lean statement.
+  DONE r305 except `crossing_budget`; ~~`crossing_budget`~~ DONE C1
+  (Jacobi's rule as an LDL congruence + mathlib's Sylvester law —
+  `RH/Inertia.lean` is sorry-free).
+- ~~Formalize the r263 dictionary `Z²/m = q_N` connecting the terminal
+  hole with the pair coordinates, so the terminal hole is ONE Lean
+  statement.~~ DONE C1 as the ONE named (typed, transcription-blocked)
+  lemma `pair_terminal_dictionary` (`RH/Canonical.lean`); the pair
+  closure is a proved corollary, the margin law a named Prop.
+  REMAINING (named): prove the dictionary itself once the border
+  orthopoly transform (v958 column) is transcribed.
+- C1 OPEN (named): eliminate the opaque `canonicalCompletion`
+  (`RH/Canonical.lean`) — the same arch/border/budget transcription
+  TODO that eliminates `SourceExact` and the opaque kernel reads; then
+  `CanonicalWindow` becomes fully constructive and the dictionary
+  lemma becomes provable window algebra.
 - ~~Formalize the extraction of the r271 pair data (`Zloc`, `runs`) from
   `VonMangoldtWindow` (currently a hypothesis of `pair_margin_main`).~~
   DONE r320 as the canonical definition `edgeLocal`/`bulkRuns` with the
