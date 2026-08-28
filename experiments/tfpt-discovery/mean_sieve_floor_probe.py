@@ -340,6 +340,93 @@ mean sieve as open mathematics stays open unless the floor
 verdict removes it below 3/8; g_i is a construction-local
 coordinate, said out loud; r243..r359 stand.
 
+RECORD TABLES (inserted AFTER the record run -- the only
+post-freeze docstring edit; freeze SPEC_SHA 0dafa3b962e337b3,
+pre-freeze commit 7f17e3cf; protocol: smoke pass = 21/21 (0.6 s,
+run twice pre-commit, byte-identical up to the WALL line,
+disclosed in the commit message); calibration pass 1 = FIRST
+full evaluation = 21/21, wall 655.6 s, NO amendment -- no bar,
+cap, grid, rule or verdict rule moved at any point; record
+run1/run2 after this insertion, byte-identical up to WALL):
+MAIN VERDICT: FLOOR_THEOREM + VALSET(min g 3/8 EXACT, 5
+sub-half atoms) + SEP_SATZ(0/32547 pairs) + MED_CAP(0/32728
+atoms, worst ratio 1.000 -- SATURATED at the floor atom) +
+SIEVE_CENSUS_HOLDS(rows 0, band cells 0, dyadic 0) +
+SIEVE_PARTIAL(MV spacing = SEP-SATZ; missing = MED-CAP
+regularity) + DIRECT_CHAIN(m_0* 10^16.1 census / 10^10.0
+rule-conditional) + SCR_FLOOR_HOLDS + SCRAMBLE(P1_ADMISSION x3,
+all grid-quantized, all floors >= 3/8) + TWIN(1.0e-07) +
+MUSTFAIL_LEDGER.
+THE HEADLINE FINDINGS:
+(1) THE 3/8 FLOOR IS A THEOREM-GRADE CHAIN ON THE SURFACE, AND
+THE CAP IS EXACTLY SATURATED: min g over all 181 rows is EXACTLY
+the mesh rational 3/8 (Fractions bit) at CHI4 kz53 (two atoms:
+gap = 3/2 grid units, window median = 4, n_i in {1, 2}, sep =
+3/2) -- and the two-step chain g_i >= sep_i/med_i >= 3/8 closes
+POINTWISE on ALL 32728 atoms: SEP-SATZ side d_i >= (n_i +
+n_{i+1})/2 has 0/32547 violations (EXACT Fractions;
+preconditions live: integrality 9.1e-13, integer collisions 0,
+contiguity clean), and MED-CAP med_i <= (8/3) sep_i has 0/32728
+violations with worst ratio EXACTLY 1.000 AT the floor atom
+(med = 4 == (8/3)(3/2)): the constant 8/3 is TIGHT -- the floor
+atom saturates the cap, and the algebraic floor min sep_i/med_i
+equals 3/8 exactly.  The r358 floor is NOT accidental and NOT
+merely empirical: below 3/8 there is nothing BECAUSE the local
+median never exceeds 8/3 times the separation bound.  T2'
+TRIVIALIZES modulo MED-CAP: S_r == 0 for r >= 2 is FORCED.
+(2) THE SCRAMBLE CONTRAST IS MEASURABLE AND THE FLOOR SURVIVES
+ARITHMETIC DESTRUCTION: all three matched channels break at P1
+= POSITIVE_PREFIX admission as sealed (nf 21/3/37 -- the
+r353..r358 records reproduced), but their partial builds carry
+full gap columns: min g 0.778 (frame-A w9) / 0.421 (frame-B
+kz80) / 0.750 (chi3 w9), ALL >= 3/8 -- and ALL THREE scrambled
+worlds are STILL grid-quantized (qdev 5.7e-14 / 4.5e-13 /
+5.7e-14): the theta-grid quantization and the floor are
+CONSTRUCTION algebra (the fold machinery), not arithmetic of
+the log p^k comb -- the FLOOR_THEOREM criterion fires.
+DISCLOSED EPISTEMICS: theorem-grade = the pointwise chain
+closes on the surface with the cap saturated and
+scramble-robust; the paper lemma MED-CAP (why the 5-window
+median of block gaps never exceeds (8/3)(n_i+n_j)/2) is the one
+remaining formal step, now with a sharp, tight constant.
+(3) THE VALUE SET IS SMALL-DENOMINATOR MESH-RATIONAL: all 181
+rows are all-rational; only 5 sub-half atoms exist in the whole
+round -- CHI4 kz53 3/8 (x2, q 3.6e-3/1.0e-2), CHI3 kz20 5/12
+(q 2.4e-2), FRAME_A kz25/kz55 5/11 (q 1.4e-2/3.8e-3); frame-B
+minimum 1/2; w9 value sets printed exactly in the smoke stage
+(7/6/7/7 distinct values, denominators up to 15).
+(4) THE SIEVE CENSUS HOLDS EVERYWHERE ON THE CONTINUOUS GRID:
+0 violations on 181 rows x 16 t AND 1033 bands x 16 t (16528
+band cells; r358 dyadic continuity 0/12396); the per-family
+MEAN small-ball mass has headroom max_t mean S(t)/bar(t) =
+0.0014 -- the in-the-mean form is satisfied with three decades
+of headroom; the steckbrief reduces BOTH open sieve parts to
+MED-CAP (the MV large-sieve spacing input IS SEP-SATZ).
+(5) THE DIRECT CHAIN PAYS 7.4 DECADES: with the floor, M_3 <=
+(8/3)^2 C_K^2 (log m)^2/m^2 (C_G and two log powers DROP):
+m_0* = 10^16.1 at the measured census ceiling C_K = 23.70 (vs
+the r358 Carleson 10^23.5) and 10^10.0 IF the family-uniform
+T1 rule existed at the freeze max 4.91 -- BELOW the r306 census
+10^13.5; C_K still enters squared: the T1 constant rule is now
+THE single remaining quantitative rest of the terminal lane.
+ANCHORS bit-near: rows 89/8/42/42; min g 0.3750; S_1 maxima
+0.0170/0.0052/0.0238/0.0439; T1 freezes 2.45/4.91/1.52/1.62
+with test maxima 15.93/23.70/3.91/3.09; ceiling 23.70; C_K2X
+11.87 at kz111; stress kz51/kz111 min g 0.533/0.571; bands
+1033/1033.  Exact wards: quantization 9.1e-13 (bar 1e-6),
+collisions 0, exact/float cross 4.9e-13 (bar 1e-9), float
+ledger re-derivation bitwise 181/181, sum q 4.4e-16, chain
+algebra 0.0/0.0 one-sided, bar identity 0.0, twin 1.0e-07.
+Must-fails: f1 CAUGHT exact (pin 18/17, dev 0.0588) / f2
+protocol-CAUGHT twice (AST rho@699 + pin 0.4 vs 3/8) / f3
+protocol-CAUGHT twice (AST rho@706 + pin 1.024 vs 1.0) / f4
+protocol-CAUGHT twice (AST rho@716 + pin (0,0,1) vs (0,0,3)) /
+f5 CAUGHT exact (4/5 entries differ) + m6a/m6b FLAGGED
+(t_term@731 / g_branch@738).  Runtime 655.6 s calibration /
+record run1/run2 byte-identical up to WALL / 0.6 s smoke.
+AMENDMENTS AFTER FREEZE: NONE except this record-table
+insertion.
+
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
 
