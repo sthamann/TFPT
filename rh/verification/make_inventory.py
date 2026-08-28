@@ -191,6 +191,28 @@ _R371_STATUS = "The exterior-square kill test of the canonical CD two-form -- re
 
 _R372_STATUS = "The source-Jacobi Pruefer one-defect test -- V2 and T1 jointly, the spike extracted not averaged (round 372, reviewer solution 2 / Terminal, PRIME.TERMINAL.SOURCE_PRUFER_ONE_DEFECT.01; experiments-side, NO ledger row): 27/27 sealed; SPEC_SHA 778403f6c5f898e9 final with record, freeze ad13a2abd3dca0f2 / file SHA d998f309ddb44900e2e76e5390663ee1b7eb146b3d59452133394efb4ce1a99f, two-commit protocol pre-freeze 279c0f92 / record (this change); ONE disclosed instrument amendment a1 (twin_rational arity copied from the r368 channel -- first full evaluation crashed at G91 before any adjudication; NO bar, letter, turning rule, C_STAR, C_REST, uniqueness definition or verdict tree moved; cal2 = first complete full evaluation 27/27, 616.4 s; record run1/run2 byte-identical up to WALL 747.9/644.3 s).  MAIN VERDICT SPIKE_NOT_UNIQUE.  LEG A: the Pruefer-to-run dictionary is SATZ -- floor(theta/pi) runs of the chain-accumulated Jacobi Pruefer phase equal the sign-runs of v2 on ALL 181 live rows (89+8+42+42); XOR identity sign(ct)=sign(w x v2) 181/181; Fractions toy (2,2,2,2) exact; N2>=N3 181/181; interior chain progress min 2.062 (circular mutant is 0 -- not a restatement of the sign field); Jacobi positivity gam_next>0 through deg N-2 on 181/181 (L* certified on this surface).  LEG B: the one-defect thesis is REFUTED at census grade -- NOT_UNIQUE 181/181, MAIN unique 0/97, max n_turn 310 (w9 already 12/6/9/7); the sealed slope-outlier rule (SLOPE_RATIO 2.0, SLOPE_MIN 0.50, MERGE_GAP 4) sees the zero-crossing jumps of a step-like discrete Pruefer phase, not a unique turning block; SPIKE_NOT_UNIQUE is the letter, the bar was not moved after sight.  Spike coincidence FAILS on kz111/117/124: canonical i*=0 (left edge) vs argmax-q 168/140/111; q* of that diagnostic group 4.3e-3 / 5.1e-3 / 4.9e-4, not the r368 mass spikes -- THE SAME RULE does not carry the three named rows.  LEG C: two-part bound after dominant-cluster extraction does NOT replace T1 -- rest-T1 F_i a-priori (1.0, 2.0) has 0/181 violations only because (log m)^2 is large on deep rows while F_rest still equals the global max 23.704 (the spike was not extracted); rest-M3 violates 24/181 (max 94.893 vs C_REST 1.0); q*-score of the wrong group is vacuously below C_STAR.  V2 holds 181/181 with 0 phase-pattern violators, but V2-from-phase is NO: uniqueness failed, so the regularity that would exclude (...,r,r,1,1,1) is not the one-turning theorem; bulk monotone at MONO_FRAC 0.90 only 23/181 (min frac 0.854).  LEG D: composition does not pay -- m0* = 10^24.9 (measured C*_obs 0.898 + C_rest_obs 94.893, A=2) WORSE than r361 floor 10^16.1 / 10^10.0; cofinal rest unchanged: V2 as a lemma + a family-uniform T1 theorem; the one-defect extraction is not that theorem.  LEG E: scrambles P1_ADMISSION x3 (nf 21/3/37, n_turn 7/40/3); twin 1.8e-08; must-fails e1-e5 + m6a/m6b.  Cofinal typing: dictionary + XOR + V2-combinatorics are SATZ (modulo L* positivity for the phase to be well-defined); uniqueness, coincidence, rest-T1, q*, m0* are CENSUS.  NO L* claim, NO RH claim in either direction"
 
+_R377_STATUS = (
+    "Post-cap pivots of the signed source -- P2 as alternation, "
+    "P1 as a single prefix defect (round 377, LEMMA.POSTCAP_PIVOTS.01; "
+    "lemma-first, experiments-side census, NO ledger row): 18/18 full / "
+    "9/9 smoke; SPEC_SHA b7167c3756c9b7a6; census first measured in /tmp "
+    "then sealed as frozen tallies (disclosed calibration, not a "
+    "two-commit pre-blind freeze).  GOAL A (P2-POSTCAP h_N h_{N+1}<0 on "
+    "every canonical window) REFUTED: 35/85 MAIN LATE/NONE, explicit kz12 "
+    "first_neg=N+2 detK=+12.4632 nnegA=0 Mpd.  Dictionary SATZ (Fractions "
+    "toy detK=-196/35719 both routes; live (detK<0)==(sN*sNp1<0) on pins).  "
+    "nneg-1 branch alternation CENSUS 50/50 MAIN (PINNED_N 19 + PINNED_Np1 "
+    "31).  Aliasing P_X and T_{S+k}=(-1)^j T_k SATZ; sign of h_N h_{N+1} "
+    "still an H_N^{-1} readback (kill).  GOAL B (ind_- H_{N+2}<=1) CENSUS "
+    "85/85 MAIN + 84/84 chi, scramble named-break first=21 nneg=37; Sturm "
+    "uniqueness not proved.  Frozen MAIN classes PINNED_N 19 / PINNED_Np1 "
+    "31 / LATE 23 / NONE 12 / DOUBLE 0 / EARLY 0 / MULTI 0; P2 50/85; "
+    "P1 85/85; free 85/85.  CHI3 P2 21/42; CHI4 P2 19/42.  NONE hunt "
+    "offsets {4,5,8}.  Dead chi still P1.  Companion "
+    "rh/problem/postcap_pivots.tex + verify_postcap_steps.py 16/16 "
+    "POSTCAP STEPS VERIFIED.  NO L* claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -1851,6 +1873,78 @@ ENTRIES = [
      [],
      "compiled PDF of p2_lemma_proof.tex (recompiled artefact, "
      "registered unpinned)", False),
+    ("rh/problem/postcap_pivots.tex", "problem_statement",
+     "r377 companion",
+     [],
+     "lemma-first attack on P2-POSTCAP and P1-SINGLE-DEFECT in "
+     "source pivot coordinates (round 377): dictionary SATZ "
+     "(det K2 = H_N(w) H_{N-3}(a)/(H_{N+2}(w) H_{N-1}(a)) = "
+     "-196/35719 on the five-atom toy; P2 iff h_N h_{N+1}<0; "
+     "P1 iff ind_- H_{N+2}<=1 weak).  Node polynomial and "
+     "Chebyshev aliasing SATZ.  Goal A as a universal law "
+     "REFUTED (kz12 LATE, 35/85 MAIN).  nneg-1 alternation "
+     "CENSUS 50/50.  Aliasing does not yield the sign without "
+     "H_N^{-1}.  Goal B CENSUS 85/85 MAIN + 84/84 chi, scramble "
+     "breaks.  Finite identities plus a named census; NO RH claim",
+     True),
+    ("rh/problem/verify_postcap_steps.py", "problem_check",
+     "r377 companion",
+     [],
+     "machine check of every numbered lemma in postcap_pivots.tex: "
+     "Fractions dictionary and complement, inertia complement, "
+     "nonzero adversary, Stieltjes=Hankel, P_X nodes, Chebyshev "
+     "and moment aliasing, low-mode no-defect; construction pins "
+     "(w9 PINNED_N, kz12 LATE counterexample, kz15 PINNED_Np1, "
+     "chi3-w9 vacuous, scramble EARLY, live dictionary, dead "
+     "chi3-15 still P1).  16/16 gates, "
+     "final line POSTCAP STEPS VERIFIED", True),
+    ("rh/problem/postcap_pivots.pdf", "problem_statement",
+     "r377 companion",
+     [],
+     "compiled PDF of postcap_pivots.tex (recompiled artefact, "
+     "registered unpinned)", False),
+    ("rh/problem/compose_lemma.tex", "problem_statement",
+     "r378 companion",
+     [],
+     "lemma-first attack on LEMMA.COMPOSE.01 (round 378): the "
+     "slope chain M3 -> N3 -> N2 -> Fejer energy -> van der Corput "
+     "-> H5 -> q_N<1 is rewritten as a pointwise inequality chain "
+     "with explicit constants.  vdC at H=max(2,ceil sqrt m) is "
+     "SATZ (v964-S0); pref <= sqrt(m)+1 SATZ; participation and "
+     "Renyi SATZ; kernel envelope SATZ; T1-floor algebra SATZ "
+     "conditional on 8/3 and C_K.  REDUCED to COMPOSE-: if "
+     "S_F<=R0 D, L1<=Lambda, |Z_loc|<=Z0<M, M3<=phi(m) then "
+     "|Z|<M (and q_N<1 given the r263 dictionary).  phi(m) = "
+     "(M-Z0)^4 / (pref^2 R0^2 Lambda^4) with pref<=sqrt(m)+1, "
+     "M=sqrt(5/7).  Pointwise H5-need with bounded L1,R0 is "
+     "beta=1/2; the 0.888/0.908 convention is a slope-proxy for "
+     "1/2+2 gamma.  H5/PairMarginLaw is a sister sufficient "
+     "condition, not an extra vdC-route premise.  Log-complete "
+     "m0: 10^25.81 (C_K=4.91) / 10^32.85 (C_K=23.70); r361 "
+     "published 10^10.0/10^16.1 drop 2 log log m (ratios "
+     "0.4517/0.5351 < 1).  Remaining lemmas: (R)(L)(Z)(T1)(V3') "
+     "(Dict)(Head).  Finite identities plus named remainders; "
+     "NO RH claim",
+     True),
+    ("rh/problem/verify_compose_lemma.py", "problem_check",
+     "r378 companion",
+     [],
+     "machine check of every numbered lemma in compose_lemma.tex: "
+     "standalone Fractions (Fejer identity, vdC covering+CS, "
+     "H-rule pref, participation, Renyi, interpolation, kernel "
+     "envelope, sigma* arithmetic, T1-floor algebra, log-complete "
+     "m0, two-branch dictionary) plus construction pins (four w9 "
+     "worlds; chi4 kz53 floor 3/8; 42-rung FRAME-A certificate "
+     "qZ<1 42/42, F2-split 42/42, cheap triangle 35/42, exceptions "
+     "(15,20,22,36,38,39,52), vdC-F2 38/42, H5-sister 21/42, min "
+     "q-margin 0.0195; T1 implication 181/181 on 89 A + 8 B + "
+     "42 chi3 + 42 chi4).  15/15 gates, "
+     "final line COMPOSE LEMMA VERIFIED", True),
+    ("rh/problem/compose_lemma.pdf", "problem_statement",
+     "r378 companion",
+     [],
+     "compiled PDF of compose_lemma.tex (recompiled artefact, "
+     "registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -1981,6 +2075,11 @@ ENTRIES = [
      "r372",
      [],
      _R372_STATUS,
+     True),
+    (f"{EXP}/postcap_pivots_probe.py", "sealed_probe",
+     "r377",
+     [],
+     _R377_STATUS,
      True),
 ]
 

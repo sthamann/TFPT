@@ -1666,6 +1666,36 @@
       "bytes": 230383
     },
     {
+      "path": "rh/problem/postcap_pivots.tex",
+      "role": "problem_statement",
+      "round": "r377 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on P2-POSTCAP and P1-SINGLE-DEFECT in source pivot coordinates (round 377): dictionary SATZ (det K2 = H_N(w) H_{N-3}(a)/(H_{N+2}(w) H_{N-1}(a)) = -196/35719 on the five-atom toy; P2 iff h_N h_{N+1}<0; P1 iff ind_- H_{N+2}<=1 weak).  Node polynomial and Chebyshev aliasing SATZ.  Goal A as a universal law REFUTED (kz12 LATE, 35/85 MAIN).  nneg-1 alternation CENSUS 50/50.  Aliasing does not yield the sign without H_N^{-1}.  Goal B CENSUS 85/85 MAIN + 84/84 chi, scramble breaks.  Finite identities plus a named census; NO RH claim",
+      "pin": true,
+      "sha256": "eea929aceddb1edc96ec480ee7cd0606b0aca065539a52fefbd1f62f1c0d7f17",
+      "bytes": 12817
+    },
+    {
+      "path": "rh/problem/verify_postcap_steps.py",
+      "role": "problem_check",
+      "round": "r377 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in postcap_pivots.tex: Fractions dictionary and complement, inertia complement, nonzero adversary, Stieltjes=Hankel, P_X nodes, Chebyshev and moment aliasing, low-mode no-defect; construction pins (w9 PINNED_N, kz12 LATE counterexample, kz15 PINNED_Np1, chi3-w9 vacuous, scramble EARLY, live dictionary, dead chi3-15 still P1).  16/16 gates, final line POSTCAP STEPS VERIFIED",
+      "pin": true,
+      "sha256": "2952643a27a2176d2ab05d3f8e1d494a7d4797abb7c3c8d8ba0127af931af833",
+      "bytes": 15492
+    },
+    {
+      "path": "rh/problem/postcap_pivots.pdf",
+      "role": "problem_statement",
+      "round": "r377 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of postcap_pivots.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "5bb769f3f8b79daa230fdbc0858ed89f942484eef4c887fef1a4c8b59188fed4",
+      "bytes": 214094
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -1840,8 +1870,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "9a082578c7c3563d6fe5f94ba1779d972320d1d0e2c9fb5e58e5dd4bf3eb4c45",
-      "bytes": 5317901
+      "sha256": "5a867e90c8b0da5eca6829c988bb24c8945ca7771b225c8246fb533a8b52051d",
+      "bytes": 5324237
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -1972,6 +2002,16 @@
       "pin": true,
       "sha256": "d998f309ddb44900e2e76e5390663ee1b7eb146b3d59452133394efb4ce1a99f",
       "bytes": 69104
+    },
+    {
+      "path": "experiments/tfpt-discovery/postcap_pivots_probe.py",
+      "role": "sealed_probe",
+      "round": "r377",
+      "ledger_ids": [],
+      "status": "Post-cap pivots of the signed source -- P2 as alternation, P1 as a single prefix defect (round 377, LEMMA.POSTCAP_PIVOTS.01; lemma-first, experiments-side census, NO ledger row): 18/18 full / 9/9 smoke; SPEC_SHA b7167c3756c9b7a6; census first measured in /tmp then sealed as frozen tallies (disclosed calibration, not a two-commit pre-blind freeze).  GOAL A (P2-POSTCAP h_N h_{N+1}<0 on every canonical window) REFUTED: 35/85 MAIN LATE/NONE, explicit kz12 first_neg=N+2 detK=+12.4632 nnegA=0 Mpd.  Dictionary SATZ (Fractions toy detK=-196/35719 both routes; live (detK<0)==(sN*sNp1<0) on pins).  nneg-1 branch alternation CENSUS 50/50 MAIN (PINNED_N 19 + PINNED_Np1 31).  Aliasing P_X and T_{S+k}=(-1)^j T_k SATZ; sign of h_N h_{N+1} still an H_N^{-1} readback (kill).  GOAL B (ind_- H_{N+2}<=1) CENSUS 85/85 MAIN + 84/84 chi, scramble named-break first=21 nneg=37; Sturm uniqueness not proved.  Frozen MAIN classes PINNED_N 19 / PINNED_Np1 31 / LATE 23 / NONE 12 / DOUBLE 0 / EARLY 0 / MULTI 0; P2 50/85; P1 85/85; free 85/85.  CHI3 P2 21/42; CHI4 P2 19/42.  NONE hunt offsets {4,5,8}.  Dead chi still P1.  Companion rh/problem/postcap_pivots.tex + verify_postcap_steps.py 16/16 POSTCAP STEPS VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "33808f310b700545dc8ab692840118ee0f0b9285a15764234d1bd16dcb8d0261",
+      "bytes": 18131
     }
   ]
 }

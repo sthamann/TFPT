@@ -5,7 +5,7 @@
 Runs, in order:
   (1) INTEGRITY  -- SHA-256 of every pinned rh/INVENTORY.json entry
                     (pinned drift = FAIL; unpinned living documents = INFO),
-  (2) PROBES     -- the sealed campaign probes r250-r372 from
+  (2) PROBES     -- the sealed campaign probes r250-r377 from
                     experiments/tfpt-discovery/ in --smoke mode,
   (3) MODULES    -- the twenty RH verification modules v955/v956/v958/
                     v959/v960/v961/v962/v963/v964/v965/v966/v967/v968/
@@ -164,6 +164,7 @@ PROBES = [
     ("r370", "matrix_weyl_index_probe.py"),
     ("r371", "compound_cd_wedge_probe.py"),
     ("r372", "source_prufer_one_defect_probe.py"),
+    ("r377", "postcap_pivots_probe.py"),
 ]
 
 MODULES = [
@@ -279,7 +280,7 @@ def check_integrity(suite):
 
 
 def check_probes(suite):
-    section("(2) PROBES -- sealed campaign r250-r372, --smoke mode")
+    section("(2) PROBES -- sealed campaign r250-r377, --smoke mode")
     py = python_bin()
     cwd = os.path.join(REPO, "experiments", "tfpt-discovery")
     for rnd, probe in PROBES:

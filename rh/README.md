@@ -4813,6 +4813,64 @@ claim, NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
 Coexistence: r374 and r376 are parallel lemma-first lanes;
 this round is additive.
 
+**The post-cap pivot lemmas (r377, LEMMA.POSTCAP_PIVOTS.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/postcap_pivots_probe.py` (18/18
+full, 9/9 smoke, SPEC_SHA `b7167c3756c9b7a6`) plus
+`rh/problem/postcap_pivots.tex` (+ PDF +
+`verify_postcap_steps.py`, 16/16, `POSTCAP STEPS VERIFIED`).
+**Ziel A (P2-POSTCAP) WIDERLEGT** as the universal statement
+$h_N h_{N+1}<0$ on every canonical window: $35/85$ MAIN
+LATE/NONE, explicit $kz=12$ (first defect at $N+2$,
+$\det K_2=+12.4632$, $A_0\succ 0$).  Dictionary SATZ
+(Fractions toy $\det K_2=-196/35719$ both routes; live
+$(\det K_2<0)\Leftrightarrow(h_N h_{N+1}<0)$).  On the
+nneg-$1$ branch the unique prefix defect sits in
+$\{h_N,h_{N+1}\}$ and alternates, $50/50$ MAIN (PINNED-$N$
+$19$, PINNED-$N{+}1$ $31$).  Node polynomial and Chebyshev
+aliasing SATZ; the sign of the product remains an
+$H_N^{-1}$ readback (kill).  **Ziel B (P1-SINGLE-DEFECT)
+CENSUS** $\mathrm{ind}_- H_{N+2}\le 1$ on $85/85$ MAIN and
+$84/84$ $\chi$; scramble named-breaks (first $=21$,
+$n_{\mathrm{neg}}=37$).  Free window $h_0,\ldots,h_{N-1}>0$
+on $85/85$ MAIN; $\chi$ defects wander through offsets
+$0..3$ (NONE hunt $4..8$).  Dead $\chi$ still satisfy B.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence: r374,
+r375, r376 and the parallel compose lane are not dropped;
+this round is additive.
+
+**The compose lemma, reduced (r378, LEMMA.COMPOSE.01,
+lemma-first).**  No sealed discovery probe: `/tmp` proof
+verification plus `rh/problem/compose_lemma.tex` (+ PDF +
+`verify_compose_lemma.py`, 15/15, `COMPOSE LEMMA VERIFIED`).
+**Ausgang REDUZIERT.**  SATZ: van der Corput
+$\lvert\sum P\rvert^2\le\mathrm{pref}\,S_F$ at
+$H=\max(2,\lceil\sqrt{m}\rceil)$ (v964-S0); $\mathrm{pref}\le\sqrt{m}+1$;
+participation $D N_2=L_1^2$; Rényi $N_2\ge N_3$; kernel envelope;
+T1-floor algebra conditional on $8/3$ and $C_K$.  The slope
+targets $\sigma\le-0.516$, $N_2$-need $0.908$, atom-need $0.888$
+are conventions, not pointwise theorems; they are slope-proxies
+for $\beta=1/2+2\gamma$ with measured $\gamma\approx 0.196$.
+Pointwise H5-need with bounded $L_1,R_0$ is $\beta=1/2$.
+H5/`PairMarginLaw` is a *sister* sufficient condition, not an
+extra vdC-route premise.  Reduced implication COMPOSE⁻: if
+$S_F\le R_0 D$, $L_1\le\Lambda$, $\lvert Z_{\mathrm{loc}}\rvert\le Z_0<M$
+and $M_3\le\phi(m)=(M-Z_0)^4/(\mathrm{pref}^2 R_0^2\Lambda^4)$
+then $\lvert Z\rvert<M$ (and $q_N<1$ given the r263 dictionary).
+Log-complete $m_0$: $10^{25.81}$ ($C_K=4.91$) / $10^{32.85}$
+($C_K=23.70$); r361 published $10^{10.0}$/$10^{16.1}$ drop
+$2\log\log m$ (ratios $0.4517$/$0.5351<1$).  42-rung FRAME-A
+certificate: $q_Z<1$ $42/42$, F2-split $42/42$, cheap triangle
+$35/42$, exceptions $\{15,20,22,36,38,39,52\}$, vdC-F2 $38/42$,
+H5-sister $21/42$, min $q$-margin $0.0195$.  T1 implication
+$181/181$ on $89$ A $+8$ B $+42$ $\chi_3$ $+42$ $\chi_4$.
+Remaining lemmas: (R)(L)(Z)(T1)(V₃')(Dict)(Head).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence: r374, r375,
+r376 and r377 are parallel lemma-first lanes; this round is
+additive.
+
 ## Folder guide
 
 ```
@@ -4925,6 +4983,10 @@ rh/
 │   ├── p2_lemma_proof.tex(+pdf) — r375: P2 source expansion
 │   │                     (factorization SATZ; reduced to the
 │   │                     dressed overlap γ > (1+ε)λ₋).  No RH claim
+│   ├── postcap_pivots.tex(+pdf) — r377: P2-POSTCAP + P1-SINGLE-DEFECT
+│   │                     in source pivot coordinates (universal
+│   │                     post-cap alternation REFUTED; prefix
+│   │                     inertia CENSUS).  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -4935,8 +4997,11 @@ rh/
 │   │                     (12/12, V2 STEPS VERIFIED)
 │   ├── verify_v2_lemma.py — machine check of v2_lemma_v3.tex
 │   │                     (16/16, V2 LEMMA V3 VERIFIED)
-│   └── verify_p2_steps.py — machine check of p2_lemma_proof.tex
-│                         (12/12, P2 STEPS VERIFIED)
+│   ├── verify_p2_steps.py — machine check of p2_lemma_proof.tex
+│   │                     (12/12, P2 STEPS VERIFIED)
+│   └── verify_postcap_steps.py — machine check of
+│                         postcap_pivots.tex (16/16,
+│                         POSTCAP STEPS VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5117,6 +5182,22 @@ $R_{N-3}-\tfrac12 I$.  Companion script `verify_p2_steps.py`,
 12/12 gates, `P2 STEPS VERIFIED`.  Finite identities plus a named
 remainder.  NO L\* claim.  NO RH CLAIM.
 
+A seventh standalone note, `rh/problem/postcap_pivots.pdf` (August 28,
+2026), is the lemma-first attack on the Fable source-pivot
+coordinate (round 377, sealed census probe
+`postcap_pivots_probe.py`).  The Hankel dictionary
+$\det K_2=H_N(w)H_{N-3}(a)/(H_{N+2}(w)H_{N-1}(a))$ is SATZ
+(Fractions toy $-196/35719$).  Universal post-cap alternation
+$h_N h_{N+1}<0$ is **WIDERLEGT** ($kz=12$ and $34$ further
+LATE/NONE MAIN rows).  On the nneg-$1$ branch the product is
+negative $50/50$.  Node polynomial and Chebyshev aliasing are
+theorems; they do not evaluate the sign without $H_N^{-1}$.
+$\mathrm{ind}_- H_{N+2}\le 1$ is a construction census
+($85/85$ MAIN, $84/84$ $\chi$, scramble breaks).  Companion
+script `verify_postcap_steps.py`, 16/16 gates,
+`POSTCAP STEPS VERIFIED`.  Finite identities plus a named
+census.  NO L\* claim.  NO RH CLAIM.
+
 ## The RH suite
 
 ```bash
@@ -5129,7 +5210,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r327 from
+2. **Sealed probes** — the campaign probes r250–r377 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -5468,6 +5549,15 @@ this round's failure).  Suite surface of this round: integrity +
 probes (`run_rh.py --fast --skip-lean`) after appending the
 problem-document rows to the inventory.  r374/r376 are parallel
 lemma-first lanes and are not dropped.
+**r377 coexistence.** Round 377 (`postcap_pivots.tex` +
+`postcap_pivots_probe.py`) is additive on the dual two-rank /
+source-pivot lane after r367/r375 (lemma-first P2-POSTCAP and
+P1-SINGLE-DEFECT in Jacobi-norm coordinates).  It does not
+touch `experiments/next.txt` and does not touch `rh/lean/`.
+Suite surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the problem-
+document rows and the sealed census probe to the inventory.
+r374/r375/r376 and the parallel compose lane are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in
