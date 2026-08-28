@@ -1856,6 +1856,36 @@
       "bytes": 26073
     },
     {
+      "path": "rh/problem/christoffel_quiet.tex",
+      "role": "problem_statement",
+      "round": "r385 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on the common Christoffel-quietness core of G_eps and L* (round 385): T_k^2, TV, Chebyshev-Gauss and FO=gamma dQ SATZ; Chebyshev sampling of nu SATZ at trivial Weyl (Q^T<=2 alpha).  Geometric deduction to mu-OP Q_k from 3/8-floor + Koksma REFUTED as a closing bound (w9 last-12 Q=0.389 vs alpha=0.061; k D*=33.4).  Q<1 is not the floor plate (two-period c=2/3: Q==0.683 and lambda_max(E_22)>1).  Reduced to the pair (Delta, C).  Weyl scale trivial, not PNT/subconvex/RH-equivalent.  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "971662db2380994c6bb1bb36e438cb576240525633c350e677035ae2f18db44e",
+      "bytes": 13518
+    },
+    {
+      "path": "rh/problem/verify_christoffel_quiet.py",
+      "role": "problem_check",
+      "round": "r385 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in christoffel_quiet.tex: standalone Fractions/trig (T_k^2, TV=4k, trivial Weyl, Chebyshev-Gauss Q==1, one-Rayleigh h0(1-Q0)=2, two-period Q span 0) plus construction pins (w9 alpha/Q12/FO/D*, FO identity, Koksma failure, Weyl scale, scramble k_Q>=1, two-period lambda wall, EXT kz69 at depth 200).  13/13 gates, final line CHRISTOFFEL QUIET VERIFIED",
+      "pin": true,
+      "sha256": "794aa1b185c94d80afb6221a2379cef549056c407ccbbdfbabdfb6a50af81daa",
+      "bytes": 8468
+    },
+    {
+      "path": "rh/problem/christoffel_quiet.pdf",
+      "role": "problem_statement",
+      "round": "r385 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of christoffel_quiet.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "0c5c5eba7c877944300feb849c688b83ad825d547fd41d27b47192ee45c97055",
+      "bytes": 252423
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2030,8 +2060,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "9bda13fcafaeed45874f69b5218dbe7cd8e2e649b9424b3420268747fbbba561",
-      "bytes": 5346029
+      "sha256": "e3ed45c6b3980665493e13cd1976b807e1574ead9c95065d528d53bb00b1d04f",
+      "bytes": 5349511
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2202,6 +2232,16 @@
       "pin": true,
       "sha256": "d10dbc7ea73486e361d6d61c56d0541d0a88a6800676b0bdcc747fdfbe7f046d",
       "bytes": 23546
+    },
+    {
+      "path": "experiments/tfpt-discovery/christoffel_quiet_probe.py",
+      "role": "sealed_probe",
+      "round": "r385",
+      "ledger_ids": [],
+      "status": "Christoffel quietness (round 385, LEMMA.CHRISTOFFEL_QUIET.01, lemma-first; experiments-side, NO ledger row): 19/19 full / 13/13 smoke; SPEC_SHA 03bde46ec27d98ff; identities, discrepancy, Q-profiles, FO=gamma dQ, scramble k_Q>=1, two-period lambda vs Q, and core-42 / MAIN-85 / chi3-42 tallies first measured in /tmp (r385_cal.py, r385_cal2.py, r385_cal3.py) then sealed (disclosed calibration).  AUSGANG REDUZIERT.  SATZ: T_k^2=(1+T_{2k})/2; TV(cos 2k theta)=4k; Chebyshev-Gauss Q_k==1 on the equal-weight cosine grid; FO_k[-nu]=gamma_k (Q_k-Q_{k-1}); one-Rayleigh h_k(1-Q_k).  Chebyshev sampling of nu stays at mass ratio alpha under the TRIVIAL Weyl bound (|S_m|<=mass(nu) already gives Q^T<=2 alpha ~0.12<1).  The deduction 'therefore mu-OP Q_k<=qbar from 3/8-floor + Koksma' is false: w9 last-12 Q=0.389 vs alpha=0.061, deformation 0.335, k D*=33.4 does not close; |Q-alpha|/(k D*)=0.0089=o(k D*) but the error still grows.  Weyl |S_{2k}|/mass in (0.04,0.33) -- TRIVIAL, not PNT, not subconvex, not RH-equivalent (the Chebyshev-Weyl route never reaches a zeta-quality demand).  CENSUS: core-42 Qmax in [0.164,0.483]<1 (n_fail=0); 11 small-N last-12 |FO| max=0.01182<1/32; MAIN-85 D* in [0.105,0.212]; chi3-42 D* in [0.125,0.248] (181-pack builder skipped as too expensive, disclosed).  KILL: scramble seed=1 Q crosses 1 at k=70 (last-12 4.8e6); two-period c=2/3 Q==0.683<1 AND lambda_max(E_22)>1 -- Q<1 is NOT the floor plate; c=1 kills at h_0 (Q0=1.025).  EXT-heavy 7 at depth 200 Qmax in [0.127,0.221]<0.25 (leisheit holds; r_max up to 0.879 is a flank-mass fact).  Remaining: Fejer/d_arm deformation Delta_k=Q_k-Q_k^T (live C_eps term) and coherence assist (r382 L2 remainder).  Companion rh/problem/christoffel_quiet.tex + verify_christoffel_quiet.py 13/13 CHRISTOFFEL QUIET VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "e068eb7999493e40bf0576bf42981a50b4b42cf5625b11932caf22aed0b3c311",
+      "bytes": 18025
     }
   ]
 }

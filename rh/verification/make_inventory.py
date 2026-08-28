@@ -293,6 +293,40 @@ _R383_STATUS = (
     "16/16 COMPOSE PREMISES VERIFIED.  NO L* claim, NO RH claim"
 )
 
+_R385_STATUS = (
+    "Christoffel quietness (round 385, LEMMA.CHRISTOFFEL_QUIET.01, "
+    "lemma-first; experiments-side, NO ledger row): 19/19 full / "
+    "13/13 smoke; SPEC_SHA 03bde46ec27d98ff; identities, discrepancy, "
+    "Q-profiles, FO=gamma dQ, scramble k_Q>=1, two-period lambda vs Q, "
+    "and core-42 / MAIN-85 / chi3-42 tallies first measured in /tmp "
+    "(r385_cal.py, r385_cal2.py, r385_cal3.py) then sealed (disclosed "
+    "calibration).  AUSGANG REDUZIERT.  SATZ: T_k^2=(1+T_{2k})/2; "
+    "TV(cos 2k theta)=4k; Chebyshev-Gauss Q_k==1 on the equal-weight "
+    "cosine grid; FO_k[-nu]=gamma_k (Q_k-Q_{k-1}); one-Rayleigh "
+    "h_k(1-Q_k).  Chebyshev sampling of nu stays at mass ratio alpha "
+    "under the TRIVIAL Weyl bound (|S_m|<=mass(nu) already gives "
+    "Q^T<=2 alpha ~0.12<1).  The deduction 'therefore mu-OP Q_k<=qbar "
+    "from 3/8-floor + Koksma' is false: w9 last-12 Q=0.389 vs "
+    "alpha=0.061, deformation 0.335, k D*=33.4 does not close; "
+    "|Q-alpha|/(k D*)=0.0089=o(k D*) but the error still grows.  "
+    "Weyl |S_{2k}|/mass in (0.04,0.33) -- TRIVIAL, not PNT, not "
+    "subconvex, not RH-equivalent (the Chebyshev-Weyl route never "
+    "reaches a zeta-quality demand).  CENSUS: core-42 Qmax in "
+    "[0.164,0.483]<1 (n_fail=0); 11 small-N last-12 |FO| max="
+    "0.01182<1/32; MAIN-85 D* in [0.105,0.212]; chi3-42 D* in "
+    "[0.125,0.248] (181-pack builder skipped as too expensive, "
+    "disclosed).  KILL: scramble seed=1 Q crosses 1 at k=70 "
+    "(last-12 4.8e6); two-period c=2/3 Q==0.683<1 AND "
+    "lambda_max(E_22)>1 -- Q<1 is NOT the floor plate; c=1 kills "
+    "at h_0 (Q0=1.025).  EXT-heavy 7 at depth 200 Qmax in "
+    "[0.127,0.221]<0.25 (leisheit holds; r_max up to 0.879 is a "
+    "flank-mass fact).  Remaining: Fejer/d_arm deformation "
+    "Delta_k=Q_k-Q_k^T (live C_eps term) and coherence assist "
+    "(r382 L2 remainder).  Companion rh/problem/christoffel_quiet.tex "
+    "+ verify_christoffel_quiet.py 13/13 CHRISTOFFEL QUIET VERIFIED.  "
+    "NO L* claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -2160,6 +2194,36 @@ ENTRIES = [
      "FlankEntryPrefix + adaptive_band_from_entry PROVED.  "
      "Zero sorry; census stays 5.  NO RH claim",
      True),
+    ("rh/problem/christoffel_quiet.tex", "problem_statement",
+     "r385 companion",
+     [],
+     "lemma-first attack on the common Christoffel-quietness "
+     "core of G_eps and L* (round 385): T_k^2, TV, Chebyshev-Gauss "
+     "and FO=gamma dQ SATZ; Chebyshev sampling of nu SATZ at "
+     "trivial Weyl (Q^T<=2 alpha).  Geometric deduction to mu-OP "
+     "Q_k from 3/8-floor + Koksma REFUTED as a closing bound "
+     "(w9 last-12 Q=0.389 vs alpha=0.061; k D*=33.4).  Q<1 is "
+     "not the floor plate (two-period c=2/3: Q==0.683 and "
+     "lambda_max(E_22)>1).  Reduced to the pair (Delta, C).  "
+     "Weyl scale trivial, not PNT/subconvex/RH-equivalent.  "
+     "Finite identities plus a named reduction; NO RH claim",
+     True),
+    ("rh/problem/verify_christoffel_quiet.py", "problem_check",
+     "r385 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "christoffel_quiet.tex: standalone Fractions/trig (T_k^2, "
+     "TV=4k, trivial Weyl, Chebyshev-Gauss Q==1, one-Rayleigh "
+     "h0(1-Q0)=2, two-period Q span 0) plus construction pins "
+     "(w9 alpha/Q12/FO/D*, FO identity, Koksma failure, Weyl "
+     "scale, scramble k_Q>=1, two-period lambda wall, EXT kz69 "
+     "at depth 200).  13/13 gates, final line "
+     "CHRISTOFFEL QUIET VERIFIED", True),
+    ("rh/problem/christoffel_quiet.pdf", "problem_statement",
+     "r385 companion",
+     [],
+     "compiled PDF of christoffel_quiet.tex (recompiled "
+     "artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -2310,6 +2374,11 @@ ENTRIES = [
      "r383",
      [],
      _R383_STATUS,
+     True),
+    (f"{EXP}/christoffel_quiet_probe.py", "sealed_probe",
+     "r385",
+     [],
+     _R385_STATUS,
      True),
 ]
 

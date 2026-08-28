@@ -5003,6 +5003,40 @@ NO L\* claim, NO RH CLAIM.  Mincut unchanged (base 4 / refined
 5).  Coexistence: r374--r382 and r376/r380/r384 (Lean) are parallel
 lanes; this round is additive.
 
+**Christoffel quietness, reduced (r385, LEMMA.CHRISTOFFEL_QUIET.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/christoffel_quiet_probe.py` (19/19
+full, 13/13 smoke, SPEC_SHA `03bde46ec27d98ff`) plus
+`rh/problem/christoffel_quiet.tex` (+ PDF +
+`verify_christoffel_quiet.py`, 13/13, `CHRISTOFFEL QUIET VERIFIED`).
+**Ausgang REDUZIERT.**  SATZ: $T_k^2=(1+T_{2k})/2$;
+$\mathrm{TV}(\cos 2k\theta)=4k$; Chebyshev--Gauss $Q_k\equiv 1$
+on the equal-weight cosine grid; $\mathrm{FO}_k[-\nu]=\gamma_k(Q_k-Q_{k-1})$
+(FRAME-A $w=9$ residual $2\cdot10^{-17}$); one-Rayleigh
+$h_k(1-Q_k)$.  Chebyshev sampling of $\nu$ stays at the mass
+ratio $\alpha$ under the *trivial* Weyl bound
+($\lvert S_m\rvert\le\mathrm{mass}(\nu)$ already gives
+$Q^T\le 2\alpha\sim 0.12<1$).  The deduction ``therefore $\mu$-OP
+$Q_k\le\bar q$ from the $3/8$-floor + Koksma'' is false:
+$w=9$ last-twelve $Q=0.389$ versus $\alpha=0.061$, deformation
+$0.335$, $kD^*=33.4$ does not close;
+$\lvert Q-\alpha\rvert/(kD^*)=0.0089=o(kD^*)$ but the error
+still grows.  Weyl $\lvert S_{2k}\rvert/\mathrm{mass}$ sits in
+$(0.04,0.33)$ --- **trivial, not PNT, not subconvex, not
+RH-equivalent** (the Chebyshev--Weyl route never reaches a
+zeta-quality demand).  Core-$42$ $Q_{\max}\in[0.164,0.483]<1$;
+eleven small-$N$ last-twelve $\lvert\mathrm{FO}\rvert\le 0.01182<\tfrac1{32}$;
+MAIN-$85$ $D^*\in[0.105,0.212]$.  Scramble seed $1$ crosses
+$Q=1$ at $k=70$ (last-twelve $4.8\cdot10^6$).  Two-period
+$c=2/3$ has $Q\equiv 0.683<1$ and still $\lambda_{\max}(E_{22})>1$
+--- $Q<1$ is not the floor plate.  EXT-heavy seven stay quiet
+at depth $200$ ($Q_{\max}\le 0.221$).  Remaining: the Fejér$/d_{\mathrm{arm}}$
+deformation $\Delta_k=Q_k-Q_k^T$ (live $C_\varepsilon$ term) and
+the coherence assist (r382 $L^2$ remainder).  Experiments-side,
+NO ledger row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).  Coexistence: r374--r384 are parallel
+lemma-first / Lean lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5148,6 +5182,11 @@ rh/
 │   │                     (R)(L)(Z).  Fejér/r298/L² SATZ;
 │   │                     (R)(L) census-reduced; (Z) reduced
 │   │                     on FRAME-A, refuted on χ.  No RH claim
+│   ├── christoffel_quiet.tex(+pdf) — r385: Christoffel
+│   │                     quietness reduced to (Δ, C);
+│   │                     Chebyshev sampling SATZ at trivial
+│   │                     Weyl; Q<1 is not the floor plate.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5175,9 +5214,12 @@ rh/
 │   ├── verify_pivot_entry.py — machine check of
 │                         pivot_entry_lemma.tex (14/14,
 │                         PIVOT ENTRY STEPS VERIFIED)
-│   └── verify_compose_premises.py — machine check of
+│   ├── verify_compose_premises.py — machine check of
 │                         compose_premises.tex (16/16,
 │                         COMPOSE PREMISES VERIFIED)
+│   └── verify_christoffel_quiet.py — machine check of
+│                         christoffel_quiet.tex (13/13,
+│                         CHRISTOFFEL QUIET VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5456,6 +5498,22 @@ family-uniform on $\chi$ (six windows).  Companion script
 `146b0b45ad872d7e`.  Finite identities plus named reductions.
 NO L\* claim.  NO RH CLAIM.
 
+A thirteenth standalone note, `rh/problem/christoffel_quiet.pdf`
+(August 28, 2026), is the lemma-first attack on the common
+Christoffel-quietness core of $G_\varepsilon$ and $L^*$ (round
+385, sealed census probe `christoffel_quiet_probe.py`).
+Chebyshev sampling of $\nu$ is SATZ at *trivial* Weyl
+($Q^T\le 2\alpha$).  The deduction to $\mu$-OP $Q_k$ from the
+$3/8$-floor + Koksma is false ($w=9$ last-twelve $Q=0.389$ vs
+$\alpha=0.061$).  $Q<1$ is not the floor plate (two-period
+$c=2/3$: $Q\equiv 0.683$ and $\lambda_{\max}(E_{22})>1$).
+**REDUZIERT** to the pair $(\Delta,C)$.  Weyl scale trivial,
+not PNT, not subconvex, not RH-equivalent.  Companion script
+`verify_christoffel_quiet.py`, 13/13 gates,
+`CHRISTOFFEL QUIET VERIFIED`.  Discovery probe 19/19, SPEC_SHA
+`03bde46ec27d98ff`.  Finite identities plus a named reduction.
+NO L\* claim.  NO RH CLAIM.
+
 ## The RH suite
 
 ```bash
@@ -5468,7 +5526,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r383 from
+2. **Sealed probes** — the campaign probes r250–r385 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
