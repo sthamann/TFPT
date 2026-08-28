@@ -4288,6 +4288,56 @@ arithmetic, and pair-only reasoning would misclassify the dead
 world (the m3 lesson measured on a world).  Experiments-side,
 NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**The critical saturation scaffold (r360, reviewer contract L2 —
+the RHP scaffold at the critical pair, triggered by the r359
+`ASYMPTOTICS_REQUIRED`).**  `critical_saturation_probe.py` (34/34,
+SPEC_SHA `ea24936c46407f48` final with record, freeze
+`75f8ee55436ab173`, two-commit protocol: pre-freeze `8a835dc8`,
+record `130a0889`, ZERO amendments after freeze) built and
+measured the scaffold for the reviewer's steps (B)–(D): the exact
+**occupation duality** o_η + o_dual == 1 on every union node (the
+diagonal of the r356 Borodin complementation, Fractions-exact,
+≤ 2.2e−11 live, trace exact) and a sealed zero-temperature
+**obstacle-problem solver** (BKMM constrained equilibrium with
+field −log u∨, FISTA + water-filling, KKT gates).  **Verdict
+`SATURATION_EDGE_CONFIRMED` + `GAMMA_PARAMETRIX_CENSUS` +
+`M0_PARTIAL(3.332)` + `REST_RELATIVE_CENSUS`:** (1) **the
+saturation thesis is confirmed at census grade** — the QP
+dual-void block is EXACTLY folds {1, 2, 3} with clean KKT on 4/4
+sealed instances (by the exact complement the PRIMAL saturated
+block), so **the critical pair (2, 4) straddles the
+saturation-block edge 3|4**; the exact-occupation fold-1 anomaly
+census holds 85/85 (dev −0.333..−0.253, pair folds flat), and the
+χ contrast is a DIFFERENT partition (0/42 + 0/42 anomalies, both
+χ QPs occupy fold 1; the scramble is disordered) — the reviewer's
+step-B object, world-separating; (2) **the parametrix datum is
+margin-locked**: t_geo = eps·√((A⁻¹)₁₁(A⁻¹)₂₂) has slope −0.009
+on the 57 and range [0.222, 0.287] on all 74 resolvable rows +
+χ w9 in band; the resolvent diagonals carry the margin exponent
+(+3.365/+3.292 vs 3.332), NOT the 0.38/1.79 weight families —
+the Gamma-class DERIVATION stays open (step C); (3) **α is
+settled, M₀ is not a constant matrix**: the fresh λ_min(S_N)
+slope −3.334 hits the sealed margin candidate 3.332 at 0.002 and
+rejects the s_∞ = 1.65 reading at 1.684; bind med 1.0058 == r359
+(the margin direction collapses) but κ_S = λ_max/λ_min wanders
+4.88× > 1.5 — **the full M₀ collapse is honestly refuted**: the
+reviewer's L1 form needs a relative/projective formulation; (4)
+**the relative rest clause is a theorem at c = 1 only** — Cauchy
+interlacing + the Schur-complement eigenvalue inequality hold
+exactly (toy + 74/74 live), MAIN carries c ≥ 8.8, but the χ
+ladders dip to the interlacing line (rest/eps mins 1.0 on 3 + 8
+of 84 rows): `RELATIVE_REST_CERTIFIED` correctly did NOT fire —
+the c > 1 margin is NOT world-uniform; (5) **the wander
+cancellation is measured**: corr(ψ57 log det S_N, −ψ57 log(a₁₁
+a₂₂)) = +0.9835 with the cross-share term ~5× subleading — the
+leading common wander cancels algebraically inside the adjugate
+minor.  Reviewer-step typing (the specialist handoff): (A)
+theorem (r356); (B) saturation edge confirmed census-grade, the
+asymptotic equilibrium-measure theorem OPEN; (C) parametrix
+census, Gamma derivation OPEN; (D) adjugate theorem + measured
+cancellation + M₀ partial; (E) rigorous error OPEN.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```

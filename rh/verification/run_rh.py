@@ -153,6 +153,7 @@ PROBES = [
     ("r357", "dirichlet_matched_frame_probe.py"),
     ("r358", "local_gap_carleson_probe.py"),
     ("r359", "schur_wronskian_dual_probe.py"),
+    ("r360", "critical_saturation_probe.py"),
 ]
 
 MODULES = [
