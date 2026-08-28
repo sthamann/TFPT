@@ -32,6 +32,7 @@ import RH.DualResolvent
 import RH.Haynsworth
 import RH.Elementwise
 import RH.PivotCoordinate
+import RH.FlankEntry
 
 namespace RH
 
@@ -154,5 +155,27 @@ NO RH CLAIM. -/
 #print axioms postcap_pivot_ratio_eq_h_form
 #print axioms indNeg_hankel_eq_neg_pivot_count
 #print axioms p1_p2_iff_cap_posDef
+
+/-! ## (j) The r384 flank-entry layer
+Expected AND MEASURED: `[propext, Classical.choice, Quot.sound]` --
+NO `sorryAx` on the proved faces.  Named Props (`FlankEntryPrefix`,
+`ChristoffelPivotBound`) are hypotheses, not holes.  Census
+unchanged at 5.  Does not assert (P1)/(P2) or L* on any window.
+NO RH CLAIM. -/
+
+#print axioms pair_energy_identity
+#print axioms h_zero
+#print axioms h_one
+#print axioms h0_pos_of_mass
+#print axioms h1_pos_of_pairEnergy
+#print axioms three_atom_mass_pos
+#print axioms threeAtom_flank_pivots
+#print axioms clusterRun3_H3
+#print axioms fiveAtom_energy
+#print axioms christoffel_bound_k0
+#print axioms christoffel_bound_k1
+#print axioms threeAtom_christoffel_k1
+#print axioms indNeg_entry_of_flank
+#print axioms adaptive_band_from_flank_entry
 
 end RH

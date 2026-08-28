@@ -2088,6 +2088,17 @@ ENTRIES = [
      [],
      "compiled PDF of pivot_entry_lemma.tex (recompiled "
      "artefact, registered unpinned)", False),
+    ("rh/lean/RH/FlankEntry.lean", "lean_module",
+     "r384",
+     [],
+     "r384 kernel-anchor of the r382 entry lemma: F1/F2c and "
+     "named Prop FlankEntryPrefix on existing SignedAtoms; "
+     "pair-energy identity, h0/h1, 3-atom flank and clustered "
+     "H3=-28500 toys PROVED over Q; Christoffel k=0,1 PROVED; "
+     "named Prop ChristoffelPivotBound for general k; bridge "
+     "FlankEntryPrefix + adaptive_band_from_entry PROVED.  "
+     "Zero sorry; census stays 5.  NO RH claim",
+     True),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",

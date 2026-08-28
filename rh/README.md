@@ -5052,6 +5052,11 @@ rh/
 │       │                    dual-Hankel complement and det K₂ named-
 │       │                    decomposed; Jacobi synthesis proved).
 │       │                    Zero sorry; census stays 5.  NO RH CLAIM
+│       ├── FlankEntry.lean — r384: R382 entry lemma kernel-anchor
+│       │                    (pair energy, ℚ toys, h₀/h₁, Christoffel
+│       │                    k=0,1 PROVED; FlankEntryPrefix and
+│       │                    ChristoffelPivotBound named).  Zero sorry;
+│       │                    census stays 5.  NO RH CLAIM
 │       └── Counterexamples.lean — r273 reviewer guards: machine-checked
 │                            refutations of the three pre-r273 universal
 │                            forms (proved, no sorry)
@@ -5674,6 +5679,16 @@ plus DPP/Borodin named Props; Jacobi synthesis `p1_p2_iff_cap_posDef`
 **PROVED** on the Hankel face). Zero new `sorry`; census **stays 5**.
 Does not assert (P1)/(P2) on any window.  Coexists with r377/r378/r379
 in `rh/problem/`.  NO RH CLAIM.
+**r384 flank-entry round.** `RH/FlankEntry.lean`: kernel-anchor of
+the r382 entry lemma against the r380 pivot layer. Pair-energy
+identity, $h_0$/$h_1$ from mass and energy, the 3-atom flank
+($h=(4,6,-3)$) and clustered run-of-3 ($H_3=-28500$) toys, Christoffel
+$k=0,1$, and the composition `FlankEntryPrefix` $+$
+`adaptive_band_from_entry` **PROVED**. Named Props `FlankEntryPrefix`
+(inductive core through $\lfloor 2N/5\rfloor$) and
+`ChristoffelPivotBound` (general-$k$ CD remainder). Ausgang
+**benannt-ZERLEGT**. Zero new `sorry`; census **stays 5**.
+Does not assert L* or (P1)/(P2).  NO RH CLAIM.
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
@@ -5802,6 +5817,11 @@ integrity + probes (`run_rh.py --fast --skip-lean`) after
 appending the probe and problem-document rows to the inventory.
 r374--r381 are parallel lemma-first / Lean lanes and are not
 dropped.
+**r384 coexistence.** Round 384 (`RH/FlankEntry.lean`) is additive
+on the Lean kernel after r380/r382: it docks `FlankEntryPrefix` to
+the pivot layer and does not touch `rh/problem/` (r382/r383) or
+`experiments/next.txt`.  Census stays 5.  Ausgang
+benannt-ZERLEGT.  NO RH CLAIM.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in

@@ -1816,6 +1816,16 @@
       "bytes": 267894
     },
     {
+      "path": "rh/lean/RH/FlankEntry.lean",
+      "role": "lean_module",
+      "round": "r384",
+      "ledger_ids": [],
+      "status": "r384 kernel-anchor of the r382 entry lemma: F1/F2c and named Prop FlankEntryPrefix on existing SignedAtoms; pair-energy identity, h0/h1, 3-atom flank and clustered H3=-28500 toys PROVED over Q; Christoffel k=0,1 PROVED; named Prop ChristoffelPivotBound for general k; bridge FlankEntryPrefix + adaptive_band_from_entry PROVED.  Zero sorry; census stays 5.  NO RH claim",
+      "pin": true,
+      "sha256": "9d4d71c7ad8d39a3444a39d5a9c35002cba443d2a87e0929b9abee471ddfe9c6",
+      "bytes": 26073
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -1990,8 +2000,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "9567070ec151aa1636af03859abfc839b84db30cc3e5048bfeae34c5cb1be8d0",
-      "bytes": 5338081
+      "sha256": "9bda13fcafaeed45874f69b5218dbe7cd8e2e649b9424b3420268747fbbba561",
+      "bytes": 5346029
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",

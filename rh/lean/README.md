@@ -11,7 +11,10 @@
 > stabilization and demotes the source-exact completion to a named
 > Prop, census **five**; **r380** kernel-anchors the five DCCXXXVII
 > pivot-coordinate lemmas (`RH/PivotCoordinate.lean`) with **zero new
-> `sorry`** (proved faces + named Props for Borodin/DPP remainder).
+> `sorry`** (proved faces + named Props for Borodin/DPP remainder);
+> **r384** kernel-anchors the r382 entry lemma (`RH/FlankEntry.lean`)
+> with **zero new `sorry`** (proved finite algebra + named Props
+> `FlankEntryPrefix` / `ChristoffelPivotBound`).
 > The graph is reduced to the
 > **two true arithmetic gaps**:
 > `lstar_canonical` (lemma L*, the base/wall hole)
@@ -33,7 +36,7 @@
 > (`RH/Haynsworth.lean`, sorry-free); the former master-theorem `sorry`, the wave-5 fog-free
 > form `free_window_positivity` and the pair closure
 > `pair_closes_main` are PROVED as corollaries. Historical narrative
-> (r305 four / r310 five / r326 eight / C1 seven / r376 five / r380 five) in the blocks below.
+> (r305 four / r310 five / r326 eight / C1 seven / r376 five / r380 five / r384 five) in the blocks below.
 >
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
@@ -122,7 +125,7 @@
 > now **sorry-free**. (4) **the axiom audit** — `RH/Audit.lean` runs
 > `#print axioms` on the whole chain at every build; results below.
 >
-> **Sorry typing table (C1 census 7, r362 DualResolvent → 8, r373 → 7, r376 → 5, r380 unchanged at 5):**
+> **Sorry typing table (C1 census 7, r362 DualResolvent → 8, r373 → 7, r376 → 5, r380/r384 unchanged at 5):**
 >
 > | `sorry` | File | Type |
 > |---|---|---|
@@ -135,6 +138,8 @@
 > Retired as sorries by r376: `pole_elementwise_stabilization` → **PROVED** (native-mesh second-difference of `polePotential`, comb-parallel; `#print axioms` has no `sorryAx`; remaining named identity `PoleDyadicIndependence`, not a hole); `specFamily_sourceExact_completion` → named Prop `SourceExactOfFamilyCompletion` (C1 `PairMarginLaw` convention: the opaque `SourceExact` filling is unprovable by design; transcribable half is the already-proved `sourceExact_buildPrimeWindow`; residual opacity is C1's `canonicalCompletion`).
 >
 > r380 named Props (not sorrys, census unchanged): `ComplementaryDualHankelInertia`, `DPPIdentity`, `SignedBorodinComplement`, `K2EqHankelRatio`, `P1EqCapInertia`, `P2EqPostcapAlternation` (`RH/PivotCoordinate.lean`; Borodin OP / discrete OPE remainder, same class as `CauchyInterlace`).
+>
+> r384 named Props (not sorrys, census unchanged): `FlankEntryPrefix`, `ChristoffelPivotBound` (`RH/FlankEntry.lean`; discrete OP / CD remainder of the r382 inductive core, same class as `ComplementaryDualHankelInertia`).
 >
 > Retired as sorries by C1: `lstar_subordination` → `lstar_canonical`
 > (retype), `terminal_positive_main` → `terminal_q_canonical` (retype,
@@ -182,6 +187,20 @@
 > 'RH.postcap_pivot_ratio_eq_h_form' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.indNeg_hankel_eq_neg_pivot_count' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.p1_p2_iff_cap_posDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.pair_energy_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.h_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.h_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.h0_pos_of_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.h1_pos_of_pairEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.three_atom_mass_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.threeAtom_flank_pivots' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.clusterRun3_H3' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.fiveAtom_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.christoffel_bound_k0' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.christoffel_bound_k1' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.threeAtom_christoffel_k1' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.indNeg_entry_of_flank' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.adaptive_band_from_flank_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
 > ```
 >
 > Reading (the `sorryAx` granularity is resolved by the proof terms —
@@ -194,7 +213,8 @@
 > **r373: the window↔matrix bridge has no `sorryAx`**, Haynsworth has
 > no `sorryAx`, the transcribed pole/arch closed forms have no
 > `sorryAx`.  **r376: pole stabilization has no `sorryAx`.**  **r380: the
-> proved pivot-coordinate faces have no `sorryAx`.**  Direct R† path: the two canonical holes (not consumed)
+> proved pivot-coordinate faces have no `sorryAx`.**  **r384: the proved
+> flank-entry faces have no `sorryAx`.**  Direct R† path: the two canonical holes (not consumed)
 > by DualResolvent itself), arch (extraction only), named Prop
 > `BorderedCompressionBridge`, density montage (unformalized).
 > The reviewer target "the final theorem consumes only the two
@@ -261,6 +281,11 @@ lake build           # => "Build completed successfully"
   **r380 census unchanged at 5** (`RH/PivotCoordinate.lean` is
   sorry-free: proved rank-1 inertia / adaptive band / Jacobi synthesis
   plus named Props for the Borodin/DPP remainder).
+  **r384 census unchanged at 5** (`RH/FlankEntry.lean` is sorry-free:
+  pair energy, h₀/h₁, ℚ toys, Christoffel k=0,1, and the
+  `adaptive_band_from_entry` bridge proved; named Props
+  `FlankEntryPrefix` and `ChristoffelPivotBound` for the inductive
+  remainder).
 
 ## Layering (r267 recommendation: order by provability)
 
@@ -348,6 +373,29 @@ premises (P1)/(P2) on any window.  Census unchanged at 5.  NO RH CLAIM.
 | `P1EqCapInertia`, `P2EqPostcapAlternation` | named Props | identification of that dictionary with Haynsworth (P1)/(P2) |
 
 Axiom census (`RH/Audit.lean` section (i)): `[propext, Classical.choice, Quot.sound]` only — no `sorryAx`.
+
+### `RH/FlankEntry.lean` — THE R384 FLANK-ENTRY PREFIX (r382 docking; zero `sorry`)
+
+Finite real algebra on the existing `SignedAtoms` carrier (no parallel
+Hankel types).  Does **not** assert L* or Haynsworth (P1)/(P2) on any
+window.  Census unchanged at 5.  NO RH CLAIM.
+
+| Item | Exit | Content |
+|---|---|---|
+| `FlankRunBound`, `FlankRatioBound`, `FlankTwoThird` | definitions | (F1) no three consecutive negative weights; (F2c) ν-mass of a maximal negative run ≤ c times flanking μ-mass; (F2_{2/3}) with ordered support |
+| `FlankEntryPrefix` | named Prop | `FlankTwoThird m → ∀ i ≤ ⌊2N/5⌋, 0 < h_i` (r382 inductive core; discrete OP / CD remainder) |
+| `pair_energy_identity` | **proved** | `m₀ m₂ − m₁² = ½ ∑∑ wᵢ wⱼ (xᵢ−xⱼ)²` |
+| `h_zero`, `h_one`, `h0_pos_of_mass`, `h1_pos_of_pairEnergy` | **proved** | `h₀ = m₀`; `h₁ =` pair-energy `/ m₀`; positivity from mass and energy |
+| `three_atom_mass_pos`, `three_atom_equal_flank_pairEnergy_pos` | **proved** | local 3-atom mass/energy positivity under `c < 1` |
+| `threeAtom_flank_pivots` | **proved** (ℚ) | nodes `{0,1,2}`, weights `{3,−2,3}`: `h = (4, 6, −3)` |
+| `clusterRun3_H3` | **proved** (ℚ) | weights `{2,2,−1,−1,−1,2,2}`: `H₃ = −28500` |
+| `fiveAtom_energy`, `fiveAtom_h0_h1` | **proved** (ℚ) | 2-versus-1 interlacing: energy `56`, `h₀=4`, `h₁=14` |
+| `ChristoffelPivotBound` | named Prop | `h_k(w) ≥ (1−λ) h_k(μ)` under a Rayleigh bound on the ν/μ Hankels (general k; CD kernel) |
+| `christoffel_bound_k0`, `christoffel_bound_k1` | **proved** | special cases k = 0 (mass split) and k = 1 (completing the square, `λ ≤ 1`) |
+| `threeAtom_christoffel_k1` | **proved** (ℚ) | `6 ≥ (1−1/3)·6` |
+| `indNeg_entry_of_flank`, `adaptive_band_from_flank_entry` | **proved** | `FlankEntryPrefix` ⇒ `ind₋ H_{n₀+1} = 0`; composition with `adaptive_band_from_entry` |
+
+Axiom census (`RH/Audit.lean` section (j)): `[propext, Classical.choice, Quot.sound]` only — no `sorryAx`.
 
 ### `RH/Window.lean` — the retyped window structure + the finite-algebra machinery (since C1: zero `sorry` — the L* hole moved to `RH/Canonical.lean` as `lstar_canonical`)
 
@@ -678,8 +726,9 @@ way, sp(N, eps) = +0.67, r272).
 
 Runs `#print axioms` on the sorry-free layer (expected: the three
 standard axioms, NO `sorryAx`), the two canonical holes, the master
-chain, the Level-C extraction, and the r380 pivot-coordinate faces
-(section (i)); the C1 record is quoted verbatim in the claim-boundary
+chain, the Level-C extraction, the r380 pivot-coordinate faces
+(section (i)), and the r384 flank-entry faces (section (j)); the C1
+record is quoted verbatim in the claim-boundary
 block above and in the file itself.
 
 ## TODO (second stage)
@@ -757,3 +806,11 @@ block above and in the file itself.
   `CauchyInterlace`; mathlib v4.29.1 has no CD kernel / discrete OPE).
   The rank-1 inertia, adaptive band, Vandermonde Gram, h-ratio
   telescope, and Jacobi synthesis are PROVED.
+- r384 OPEN (named, `RH/FlankEntry.lean`, not census holes):
+  `FlankEntryPrefix` (the r382 inductive core: (F1)+(F2_{2/3}) ⇒
+  positive pivots through `⌊2N/5⌋`) and `ChristoffelPivotBound`
+  (general-k comparison `h_k(w) ≥ (1−λ) h_k(μ)` via the CD kernel;
+  mathlib v4.29.1 has Hankel dets and completing-the-square for
+  k ≤ 1, not the μ-orthonormal CD basis).  Pair energy, h₀/h₁,
+  the ℚ toys, Christoffel k=0,1, and the adaptive-band bridge
+  are PROVED.
