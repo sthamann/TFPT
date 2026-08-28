@@ -155,6 +155,7 @@ PROBES = [
     ("r359", "schur_wronskian_dual_probe.py"),
     ("r360", "critical_saturation_probe.py"),
     ("r361", "mean_sieve_floor_probe.py"),
+    ("r362", "augmented_borodin_duality_probe.py"),
 ]
 
 MODULES = [

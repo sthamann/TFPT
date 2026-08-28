@@ -4377,6 +4377,64 @@ MED-CAP (why the 5-window median of block gaps never exceeds
 (8/3)(n_i+n_j)/2) is the one remaining formal step.
 Experiments-side, NO ledger row, NO RH CLAIM.
 
+**The augmented Borodin–Uvarov duality — L† as ONE dual object
+(r362, the reviewer moonshot PRIME.LDAGGER.AUGMENTED_DUALITY.01).**
+`augmented_borodin_duality_probe.py` (30/30, SPEC_SHA
+`7d810a9ab7db5c67` final with record, freeze `83b97cd57563e737`,
+two-commit protocol: pre-freeze `62ca2bfa`, record `b8adbf01`;
+three disclosed calibration amendments a1/a2/a3 — a chi clause
+retype forced by a real finding, a chi cancellation-class bar and
+a twin-bar re-size in the disclosed r356/r359 noise class; no
+MAIN rule moved, every MAIN gate passed at first evaluation).
+**Verdict `AUGMENTED_DUALITY_EXACT(route ii)` +
+`BORDER_IN_LOCAL_BLOCK`** — the moonshot core stands: with β =
+b/√B_w the μ-orthonormal border ray, v = B_m β its node-side CD
+image, γ = βᵀβ and D the r356 sign matrix, the bordered dual
+resolvent **R† := [[R^{-1}, Dv], [(Dv)ᵀ, 1+γ]]^{-1}** satisfies
+EXACTLY (Fractions on rational toys, graded green on 75 MAIN +
+42 χ3 + 42 χ4 rows + the kz133 deep census): (A1) G† = D†(R†^{-1}
+− I)D† — the r356 complementation extends to the augmented node
+Gram; (A2) the spectral map margin† = 2 − 1/λ_min(R†); (A3)
+**L† ⟺ R† ≻ ½I**; (A4) the Y-block of R† is a Sherman–Morrison
+rank-1 deformation of R — the border is a rank-1
+Schlesinger/Uvarov insertion at the DUAL RESOLVENT level; (A5)
+L† ⟺ L* ∧ Terminal in dual coordinates (q† := γ + vᵀ(I−E)^{-1}v
+== uᵀH^{-1}u/B_w frame-invariant == the r266 crit1 coordinate;
+1 − q† == (5/7)(1−q_N)/B_w); (A6) **the border-Schur closed
+form**: the Schur complement of R† − ½I onto the border
+coordinate equals (1−q†)/(2(1+q†)) exactly, and by the Schur
+quotient the SAME value is carried inside the local 3×3 block
+(pair + border) — the border fiber is not appended after the
+fact, it sits in the same local object; (A7) interlacing
+λ_k(R†) ≤ λ_k(R) ≤ λ_{k+1}(R†).  Measured: bind† =
+λ_min(S†₃)/(λ_min(R†)−½) ∈ [1.0003, 1.0608] med 1.0056 — the
+augmented 3×3 block carries the full L† margin AND the terminal
+fiber; the equivalence census is exact and TWO-SIDED including
+six TERMINAL-DEAD χ rungs (q_N up to 1.33, λ_min(R†) − ½ goes
+negative there exactly as the theorem demands — both truth
+directions live on real windows); the kz15 compression
+mdag/margin = 0.8716 shows the two lanes couple spectrally where
+the terminal channel is tight; share† == the r359 cross share
+(0.6990 vs 0.6973 at w9) — the rank-1 deformation does NOT move
+the critical resolvent structure at the pair, so the r360
+saturation lane can consume R† verbatim: ONE critical saturation
+theorem for the bordered dual resolvent would close BOTH lanes.
+Route adjudication honest: route (i), the literal virtual node,
+is DEAD on the real windows twice (the border is not a point
+evaluation — representability spread 56.8 at w9 — and every
+border atom collides bitwise with a union grid node); it
+survives as the exact toy bridge (single-atom border: the
+(S+1)-node Uvarov complementation holds Fractions-exact at the
+SHIFTED rank N, S† = 2N — the half-filling arithmetic moves by
+exactly one — and the literal (S+1)-point dual kernel equals
+route (ii) up to sign conjugation).  Must-fails 6/6 (m1 budget
+factor exact 8.3824, m2 rank shift Fractions-exact, m3 AST, m4
+SM sign 4.9e−3, m5 collision ward, m6 wrong frame 0.769).  The
+matched scramble breaks named, two prongs (border cone EMPTY at
+chain flip n = 37; algebra world-blind at fallback budget with
+the named R-block clause −0.4963).  Experiments-side, NO ledger
+row, NO L\* claim, NO terminal claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
