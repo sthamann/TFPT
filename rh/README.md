@@ -5037,6 +5037,33 @@ NO ledger row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
 (base 4 / refined 5).  Coexistence: r374--r384 are parallel
 lemma-first / Lean lanes; this round is additive.
 
+**Coherence assist, reduced (r387, LEMMA.COHERENCE_ASSIST.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/coherence_assist_probe.py` (20/20
+full, 14/14 smoke, SPEC_SHA `6005359e0bafadb2`) plus
+`rh/problem/coherence_assist.tex` (+ PDF +
+`verify_coherence_assist.py`, 13/13, `COHERENCE ASSIST VERIFIED`).
+**Ausgang REDUZIERT.**  SATZ: Chebyshev-$T$ CD kernel
+$=[D_{k-1}(\theta-\phi)+D_{k-1}(\theta+\phi)]/(2\pi)$;
+bookkeeping $\lambda_{\max}=\mathrm{maxdiag}\cdot(1+\mathrm{assist})$
+exact; Gershgorin/Schur majorant; cosine mesh $\Delta=\pi/S$;
+two-period $=$ global AP ($\rho_{\mathrm{AP}}=1$).  The deduction
+``therefore $\mathrm{assist}\le(1-Q)/Q$ from the $3/8$-floor +
+Gershgorin'' is false: $w=9$ $k_{\mathrm{Gershgorin}}=21\ll n_0=73\ll N-1=183$
+($k^*/N=0.109$); core-$42$ $k_{\mathrm{G}}/N\le 0.114<2/5$;
+$d_{\min}/d_{\mathrm{med}}=1/3<3/8$.  Wall $w=9$: $\mathrm{maxdiag}=0.9614$,
+$\mathrm{assist}=0.0399$ (r285 range; r385 mixed $Q_k$ with
+$\mathrm{maxdiag}(E)$).  Named property $\rho_{\mathrm{AP}}<1/5$
+kills the two-period (Dirichlet max-row $0.858$ vs source $0.291$
+at $k=22$) and holds on EXT-heavy seven ($\rho_{\mathrm{AP}}\le 0.033$).
+Scramble holds $\rho_{\mathrm{AP}}$ and dies on the product
+($k_\lambda=22$).  Remaining: the *signed* $\mu$-CD off-diagonal
+(true assist; unsigned/Gershgorin closed as too crude).
+$n_0=\lfloor 2N/5\rfloor$ is not improved; $n_0=N-1$ stays open.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence: r374--r385
+are parallel lemma-first / Lean lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5187,6 +5214,11 @@ rh/
 │   │                     Chebyshev sampling SATZ at trivial
 │   │                     Weyl; Q<1 is not the floor plate.
 │   │                     No RH claim
+│   ├── coherence_assist.tex(+pdf) — r387: coherence
+│   │                     assist reduced to signed μ-CD
+│   │                     off-diagonal; Gershgorin too crude;
+│   │                     two-period is a global AP.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5217,9 +5249,12 @@ rh/
 │   ├── verify_compose_premises.py — machine check of
 │                         compose_premises.tex (16/16,
 │                         COMPOSE PREMISES VERIFIED)
-│   └── verify_christoffel_quiet.py — machine check of
+│   ├── verify_christoffel_quiet.py — machine check of
 │                         christoffel_quiet.tex (13/13,
 │                         CHRISTOFFEL QUIET VERIFIED)
+│   └── verify_coherence_assist.py — machine check of
+│                         coherence_assist.tex (13/13,
+│                         COHERENCE ASSIST VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5514,6 +5549,23 @@ not PNT, not subconvex, not RH-equivalent.  Companion script
 `03bde46ec27d98ff`.  Finite identities plus a named reduction.
 NO L\* claim.  NO RH CLAIM.
 
+A fourteenth standalone note, `rh/problem/coherence_assist.pdf`
+(August 28, 2026), is the lemma-first attack on the coherence
+assist (round 387, sealed census probe
+`coherence_assist_probe.py`).  Chebyshev--Dirichlet CD,
+bookkeeping, Gershgorin, and the cosine mesh are SATZ.  The
+two-period is a global arithmetic progression of $\nu$-angles
+($\rho_{\mathrm{AP}}=1$).  Gershgorin plus the $3/8$-floor does
+not close $\lambda_{\max}<1$ ($k^*_{\mathrm{G}}\sim 0.11\,N
+<\lfloor 2N/5\rfloor$).  **REDUZIERT** to the signed $\mu$-CD
+off-diagonal.  Named property $\rho_{\mathrm{AP}}<1/5$ kills
+the two-period and holds on EXT-heavy seven; scramble holds it
+and dies on the diagonal.  Companion script
+`verify_coherence_assist.py`, 13/13 gates,
+`COHERENCE ASSIST VERIFIED`.  Discovery probe 20/20, SPEC_SHA
+`6005359e0bafadb2`.  Finite identities plus a named reduction.
+NO L\* claim.  NO RH CLAIM.
+
 ## The RH suite
 
 ```bash
@@ -5526,7 +5578,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r385 from
+2. **Sealed probes** — the campaign probes r250–r387 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -5960,6 +6012,16 @@ reduction to $(\Delta,C)$.  It does not touch
 probes (`run_rh.py --fast --skip-lean`) after appending the
 probe and problem-document rows to the inventory.  r374--r384
 are parallel lemma-first / Lean lanes and are not dropped.
+**r387 coexistence.** Round 387 (`coherence_assist.tex` +
+`coherence_assist_probe.py`) is additive on the L* / pivot-band
+lane after r385 (lemma-first assist: Chebyshev--Dirichlet SATZ,
+Gershgorin too crude, remainder the signed $\mu$-CD
+off-diagonal).  It does not touch `experiments/next.txt` and
+does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
+this round: integrity + probes (`run_rh.py --fast --skip-lean`)
+after appending the probe and problem-document rows to the
+inventory.  r374--r385 are parallel lemma-first / Lean lanes
+and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in

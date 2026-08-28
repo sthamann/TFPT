@@ -327,6 +327,43 @@ _R385_STATUS = (
     "NO L* claim, NO RH claim"
 )
 
+
+_R387_STATUS = (
+    "Coherence assist (round 387, LEMMA.COHERENCE_ASSIST.01, "
+    "lemma-first; experiments-side, NO ledger row): 20/20 full / "
+    "14/14 smoke; SPEC_SHA 6005359e0bafadb2; identities, w9 walk, "
+    "two-period/scramble/cluster, core-42 AP-fraction and k_gersh, "
+    "EXT-heavy angle stats and Dirichlet max-rows first measured "
+    "in /tmp (r387_cal.py, r387_cal2.py) then sealed (disclosed "
+    "calibration).  AUSGANG REDUZIERT.  SATZ: Chebyshev-T CD = "
+    "[D_{k-1}(th-ph)+D_{k-1}(th+ph)]/(2pi); bookkeeping lambda = "
+    "maxdiag*(1+assist) exact (2x2 equality lam=3 assist=1/2); "
+    "Gershgorin/Schur majorant; cosine mesh Delta=pi/S; F1 "
+    "run-of-2 => dmin = 1 mesh; two-period = global AP "
+    "(rho_AP=1).  The deduction 'therefore assist <= (1-Q)/Q from "
+    "3/8-separation + Gershgorin' is false: w9 k_gersh=21 << "
+    "n0=73 << N-1=183 (k*/N=0.109); core-42 k_gersh in [8,32] "
+    "all < n0, k_g/N max=0.114 < 2/5; dmin/dmed = 1/3 < 3/8 "
+    "(3/8-floor does not upgrade nu-angle gaps).  Wall w9 k=183: "
+    "lam=0.999830 maxdiag=0.9614 assist=0.0399 (r285 range; r385 "
+    "'assist 1.54' mixed Q_k~0.39 with maxdiag(E)); Gershgorin "
+    "assist 13.32, cancellation 0.997.  Named property rho_AP = "
+    "L_AP/n_nu < 1/5 kills the two-period (rho_AP=1, Dirichlet "
+    "max-row k=22 = 0.858 vs source 0.291) and HOLDS on EXT-heavy "
+    "7 (rho_AP <= 0.033, lam_80 < 1, sharpest 0.9965 at kz97); "
+    "core-42 rho_AP in [0.034, 0.168], cv > 1/2; mutant bar "
+    "0.03 FAILS.  KILL: two-period c=2/3 Q==0.683 AND lam22>1; "
+    "c=1 lam1=1.025; clustered run-3 k_lam=15 < n0=16 rho_AP=1; "
+    "run-2 k_lam=21 > n0 (F1 allows); scramble seed=1 rho_AP=0.064 "
+    "HOLDS, dies on product (k_lam=22, k_maxd=50).  Remaining: "
+    "SIGNED mu-CD off-diagonal (true assist; unsigned/Gershgorin "
+    "closed as too crude).  n0=floor(2N/5) NOT improved; "
+    "n0=N-1 open with that remainder.  Companion "
+    "rh/problem/coherence_assist.tex + "
+    "verify_coherence_assist.py 13/13 COHERENCE ASSIST VERIFIED.  "
+    "NO L* claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -2224,6 +2261,34 @@ ENTRIES = [
      [],
      "compiled PDF of christoffel_quiet.tex (recompiled "
      "artefact, registered unpinned)", False),
+    ("rh/problem/coherence_assist.tex", "problem_statement",
+     "r387 companion",
+     [],
+     "lemma-first attack on the coherence-assist remainder of L* "
+     "after r385 (round 387): Chebyshev-Dirichlet CD, bookkeeping "
+     "and Gershgorin SATZ; cosine mesh SATZ; two-period = global "
+     "AP SATZ.  Geometric deduction to assist <= (1-Q)/Q from "
+     "3/8-separation + Gershgorin REFUTED as a closing bound "
+     "(w9 k_gersh=21 << n0=73; k_g/N <= 0.114 on core-42).  "
+     "Named property rho_AP < 1/5 kills the two-period and holds "
+     "on EXT-heavy 7.  Reduced to the signed mu-CD off-diagonal.  "
+     "Finite identities plus a named reduction; NO RH claim",
+     True),
+    ("rh/problem/verify_coherence_assist.py", "problem_check",
+     "r387 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "coherence_assist.tex: standalone (Chebyshev-Dirichlet CD, "
+     "2x2 bookkeeping/Gershgorin, two-period AP, mesh, "
+     "1/3<3/8) plus construction pins (w9 k_gersh/wall/AP, "
+     "Dirichlet max-row, two-period lambda, scramble, c=1, "
+     "clustered run-3).  13/13 gates, final line "
+     "COHERENCE ASSIST VERIFIED", True),
+    ("rh/problem/coherence_assist.pdf", "problem_statement",
+     "r387 companion",
+     [],
+     "compiled PDF of coherence_assist.tex (recompiled "
+     "artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -2379,6 +2444,11 @@ ENTRIES = [
      "r385",
      [],
      _R385_STATUS,
+     True),
+    (f"{EXP}/coherence_assist_probe.py", "sealed_probe",
+     "r387",
+     [],
+     _R387_STATUS,
      True),
 ]
 

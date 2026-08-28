@@ -1886,6 +1886,36 @@
       "bytes": 252423
     },
     {
+      "path": "rh/problem/coherence_assist.tex",
+      "role": "problem_statement",
+      "round": "r387 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on the coherence-assist remainder of L* after r385 (round 387): Chebyshev-Dirichlet CD, bookkeeping and Gershgorin SATZ; cosine mesh SATZ; two-period = global AP SATZ.  Geometric deduction to assist <= (1-Q)/Q from 3/8-separation + Gershgorin REFUTED as a closing bound (w9 k_gersh=21 << n0=73; k_g/N <= 0.114 on core-42).  Named property rho_AP < 1/5 kills the two-period and holds on EXT-heavy 7.  Reduced to the signed mu-CD off-diagonal.  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "4d74fc3fbf063373e13c40c5925d54b8ae4e2fd84ab5951d28f9b4e99fbdc126",
+      "bytes": 13169
+    },
+    {
+      "path": "rh/problem/verify_coherence_assist.py",
+      "role": "problem_check",
+      "round": "r387 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in coherence_assist.tex: standalone (Chebyshev-Dirichlet CD, 2x2 bookkeeping/Gershgorin, two-period AP, mesh, 1/3<3/8) plus construction pins (w9 k_gersh/wall/AP, Dirichlet max-row, two-period lambda, scramble, c=1, clustered run-3).  13/13 gates, final line COHERENCE ASSIST VERIFIED",
+      "pin": true,
+      "sha256": "84dccb11743999f340d5a7e9a48ea58ad0753455e19960cc17592f2eab028daf",
+      "bytes": 6476
+    },
+    {
+      "path": "rh/problem/coherence_assist.pdf",
+      "role": "problem_statement",
+      "round": "r387 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of coherence_assist.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "3737a95b3e12a4d8229063c00b07865f8c03844a8d37556e02cf2194d23e820b",
+      "bytes": 233380
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2060,8 +2090,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "e3ed45c6b3980665493e13cd1976b807e1574ead9c95065d528d53bb00b1d04f",
-      "bytes": 5349511
+      "sha256": "893d177d78c373ca997620e118a83700be9724963365ff1a4525df13ea75e580",
+      "bytes": 5351918
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2242,6 +2272,16 @@
       "pin": true,
       "sha256": "e068eb7999493e40bf0576bf42981a50b4b42cf5625b11932caf22aed0b3c311",
       "bytes": 18025
+    },
+    {
+      "path": "experiments/tfpt-discovery/coherence_assist_probe.py",
+      "role": "sealed_probe",
+      "round": "r387",
+      "ledger_ids": [],
+      "status": "Coherence assist (round 387, LEMMA.COHERENCE_ASSIST.01, lemma-first; experiments-side, NO ledger row): 20/20 full / 14/14 smoke; SPEC_SHA 6005359e0bafadb2; identities, w9 walk, two-period/scramble/cluster, core-42 AP-fraction and k_gersh, EXT-heavy angle stats and Dirichlet max-rows first measured in /tmp (r387_cal.py, r387_cal2.py) then sealed (disclosed calibration).  AUSGANG REDUZIERT.  SATZ: Chebyshev-T CD = [D_{k-1}(th-ph)+D_{k-1}(th+ph)]/(2pi); bookkeeping lambda = maxdiag*(1+assist) exact (2x2 equality lam=3 assist=1/2); Gershgorin/Schur majorant; cosine mesh Delta=pi/S; F1 run-of-2 => dmin = 1 mesh; two-period = global AP (rho_AP=1).  The deduction 'therefore assist <= (1-Q)/Q from 3/8-separation + Gershgorin' is false: w9 k_gersh=21 << n0=73 << N-1=183 (k*/N=0.109); core-42 k_gersh in [8,32] all < n0, k_g/N max=0.114 < 2/5; dmin/dmed = 1/3 < 3/8 (3/8-floor does not upgrade nu-angle gaps).  Wall w9 k=183: lam=0.999830 maxdiag=0.9614 assist=0.0399 (r285 range; r385 'assist 1.54' mixed Q_k~0.39 with maxdiag(E)); Gershgorin assist 13.32, cancellation 0.997.  Named property rho_AP = L_AP/n_nu < 1/5 kills the two-period (rho_AP=1, Dirichlet max-row k=22 = 0.858 vs source 0.291) and HOLDS on EXT-heavy 7 (rho_AP <= 0.033, lam_80 < 1, sharpest 0.9965 at kz97); core-42 rho_AP in [0.034, 0.168], cv > 1/2; mutant bar 0.03 FAILS.  KILL: two-period c=2/3 Q==0.683 AND lam22>1; c=1 lam1=1.025; clustered run-3 k_lam=15 < n0=16 rho_AP=1; run-2 k_lam=21 > n0 (F1 allows); scramble seed=1 rho_AP=0.064 HOLDS, dies on product (k_lam=22, k_maxd=50).  Remaining: SIGNED mu-CD off-diagonal (true assist; unsigned/Gershgorin closed as too crude).  n0=floor(2N/5) NOT improved; n0=N-1 open with that remainder.  Companion rh/problem/coherence_assist.tex + verify_coherence_assist.py 13/13 COHERENCE ASSIST VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "99c544504b1bf0d52f82a4df2d20d4de4ac071ad357c11531f6b361932b085a9",
+      "bytes": 19625
     }
   ]
 }
