@@ -11,5 +11,6 @@ import RH.PairBound
 import RH.Counterexamples
 import RH.Elementwise
 import RH.Augmented
+import RH.DualResolvent
 import RH.Canonical
 import RH.Audit
