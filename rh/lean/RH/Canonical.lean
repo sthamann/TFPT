@@ -35,10 +35,11 @@ arch/border/budget data of the canonical window at anchor `a`".  Its
 elimination = the same classical transcription TODO as always; until
 then every statement consuming it is honestly typed, never provable,
 and the intended semantics is documented at the constant.  (Relation
-to `specFamily_sourceExact_completion`, RH/Elementwise.lean: that
-typed sorry ASSERTS a completion exists; this constant NAMES the
-intended one, so the final statements can quantify over the completed
-construction without an existential import.)
+to `SourceExactOfFamilyCompletion`, RH/Elementwise.lean: that named
+Prop (r376; formerly a `sorry`) ASSERTS a completion exists; this
+constant NAMES the intended one, so the final statements can
+quantify over the completed construction without an existential
+import.)
 
 THE FINAL DOMAIN.  `canonicalSpec a m ha` = the family spec with the
 named completion filled in; `canonicalWindow a m ha` = its built real

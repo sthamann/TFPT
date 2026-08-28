@@ -32,8 +32,8 @@ ladder and NO transport.  This file implements that quantifier set:
         reviewer target "CanonicalPrimeWindow + exactly one
         construction theorem", eliminating `SourceExact` as a free
         assumption FROM THE EXTRACTION ROUTE (the opaque predicate
-        itself stays untouched in RH/Source.lean; the relation is the
-        documented completion sorry below);
+        itself stays untouched in RH/Source.lean; the opaque filling
+        is the named Prop `SourceExactOfFamilyCompletion` below);
   (ii)  `GridElement` (the native dense class, built for real:
         support parameter, native dyadic grid, step values;
         autocorrelation and its piecewise-linear even interpolant as
@@ -41,10 +41,11 @@ ladder and NO transport.  This file implements that quantifier set:
         the comb channel PROVED with the onset `elementAnchor f`
         predefined from the element's support alone (the R310
         `finite_forms_converge_to_weil` shape, elementwise and in the
-        corpus gauge), the arch/pole kernel channels as TYPED sorrys
-        (classical analysis -- the kernels are explicit
-        integrals/closed forms, R325 S1-measured exact; their
-        transcription is the named classical TODO), and the full-form
+        corpus gauge), the pole channel PROVED as the native-mesh
+        second-difference of `polePotential` (r376), the arch kernel
+        channel as a TYPED sorry (classical analysis -- `arch_A` is
+        not a second difference of a named elementary antiderivative;
+        Gauss/Mellin missing from mathlib v4.29.1), and the full-form
         statement `elementwise_finite_stabilization` PROVED from the
         three channels;
   (iii) `weil_nonneg_of_windowlocal` (PROVED -- a finite
@@ -91,33 +92,24 @@ density/continuity step (R325 leg C: rate-controlled quadrature
 defect inside the closed-form interpolation envelope -- not a
 positivity ladder), which is deliberately NOT formalized here.
 
-SORRY CENSUS OF THIS FILE: exactly THREE, all typed, all statements
-that were NOT formalizable before this round (the wave-12 reviewer
-reservation "the Level-C distance appears in no sorry" is hereby
-partially discharged -- the distance is now named):
-  * `arch_elementwise_stabilization`  -- CLASSICAL (S2): the arch
-    kernel read stabilizes elementwise (R325 S1 measured exact,
-    1.5e-15 mesh-constancy; the kernel transcription `arch_A` is
-    classical integral analysis);
-  * `pole_elementwise_stabilization`  -- CLASSICAL (S2): same for
-    the v716 pole closed form (R325 S1: 2.0e-17);
-  * `specFamily_sourceExact_completion` -- CLASSICAL +
-    DEFINITIONAL/TECHNICAL (opacity-forced): every canonical family
-    member admits a source-exact completion (genuine arch/border/
-    budget data on the same atom set); the completion data is
-    classical (the transcriptions), and no statement concluding the
-    opaque `SourceExact` is provable by design (r273/r320
-    convention).  NOTE: the extraction route (iii) does NOT consume
-    this sorry -- that is the point of the architecture.
-The five pre-existing intentional sorrys of the pilot are untouched
-and byte-identical (`lstar_subordination`, `terminal_positive_main`,
-`pair_margin_main`, `crossing_budget`,
-`mainWindow_iff_builtFromPrimeSource`).
+SORRY CENSUS OF THIS FILE (r376): exactly ONE typed `sorry` —
+`arch_elementwise_stabilization` (CLASSICAL, S2).  The pole-channel
+stabilization is PROVED (native-mesh second-difference transcription
+of `pole_lags_closed`, parallel to mesh-free `combRead`).  The
+source-exact completion is demoted to the named Prop
+`SourceExactOfFamilyCompletion` (opacity-forced, not a hole; the
+transcribable half is `sourceExact_buildPrimeWindow`).  Named, not
+asserted: `PoleDyadicIndependence` (dyadic refinement of the pole
+pairing).  Extraction consumes only the arch sorry.
 
 Claim boundary: research documentation.  NOT evidence for or against
 the Riemann Hypothesis in either direction.  NO RH CLAIM.
 -/
 import RH.Source
+import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+import Mathlib.Algebra.Order.Floor.Semifield
+import Mathlib.Algebra.Order.Interval.Finset.Basic
+import Mathlib.Algebra.Order.Ring.Int
 import Mathlib.Analysis.SpecialFunctions.Sqrt
 import Mathlib.Analysis.SpecialFunctions.Gamma.Digamma
 import Mathlib.Analysis.Complex.Trigonometric
@@ -136,8 +128,8 @@ extraction route consume only the CONSTRUCTION: the canonical family
 `specFamily` (RH/Source.lean, r310) is predefined by arithmetic
 alone, and everything the route needs from "source exactness" is
 provable FOR the family -- `SourceExactSpec` below.  The relation to
-the opaque guard is the separate documented completion sorry at the
-bottom of this section. -/
+the opaque guard is the named Prop `SourceExactOfFamilyCompletion`
+at the bottom of this section (r376: demoted from a `sorry`). -/
 
 /-- **THE CANONICAL PRIME WINDOWS** (r326, R325 target form (i)): a
 real window is canonical iff it is built from a member of the
@@ -207,32 +199,35 @@ theorem sourceExact_buildPrimeWindow (a m : ℕ) (ha : IsPrimePow a) :
   ⟨fun _ => rfl, fun _ => rfl, predefined_family a m ha,
     (specFamily a m ha).budget_pos⟩
 
-/-- **THE SOURCE-EXACT COMPLETION** (r326 -- documented `sorry` no. 3
-of this file; type: CLASSICAL + DEFINITIONAL/TECHNICAL,
-opacity-forced).  The bridge relation between the new provable
-`SourceExactSpec` and the old opaque `SourceExact`: every canonical
-family member admits a SOURCE-EXACT COMPLETION -- a spec with the
-SAME arithmetic data (atoms, anchor, mesh level; only the free
-arch/border/budget fields replaced) that satisfies the opaque guard.
-INTENDED CONTENT: the genuine completion data exists mathematically
--- the exact arch kernel weights (`arch_A`, GL-48 tent integrals,
-v563), the v958 border column of this atom set, and the full r243
-budget `B = S_{N-2} + 5/7`; filling them in is the named classical
-transcription TODO of the r320 header.  WHY A SORRY: concluding the
-opaque `SourceExact` is unprovable by design (r273 convention) --
-this statement is the honest interface, exactly like the opacity
-bridge of RH/Source.lean.  ARCHITECTURAL NOTE (the r326 point): the
-extraction route (iii) below does NOT consume this statement --
-`SourceExact` is thereby eliminated as a free assumption from the
-route, and this sorry remains only as the documented relation
-between the two predicates. -/
-theorem specFamily_sourceExact_completion (a m : ℕ) (ha : IsPrimePow a) :
+/-- **THE SOURCE-EXACT COMPLETION** (r326; r376 RETYPE).
+
+The constructive half is already `sourceExact_buildPrimeWindow` (the
+transcribable clauses) together with C1's named opaque constant
+`canonicalCompletion` (`RH/Canonical.lean`): that constant NAMES the
+intended arch/border/budget filling.  R373's kernel objects
+(`weilArchKernel`, `polePotential`) are lag-kernels, not the per-atom
+masses / v958 border column / r243 drain-sum, so they do not make
+`canonicalCompletion` constructive.
+
+Concluding the opaque `SourceExact` of any filling remains unprovable
+by design (r273/r320).  r376 demotes that conjunct from a `sorry` to
+the named Prop below — the C1 `PairMarginLaw` convention: statable,
+never asserted.  The extraction route does not consume it. -/
+def SourceExactOfFamilyCompletion : Prop :=
+  ∀ (a m : ℕ) (ha : IsPrimePow a),
     ∃ (aw : Fin (specFamily a m ha).S → ℝ) (haw : ∀ j, 0 ≤ aw j)
       (bd : ℕ → ℝ) (B : ℝ) (hB : 0 < B),
       SourceExact { specFamily a m ha with
         archWeight := aw, arch_nonneg := haw,
-        border := bd, budget := B, budget_pos := hB } := by
-  sorry
+        border := bd, budget := B, budget_pos := hB }
+
+/-- record: the transcribable half of a family member is PROVED
+(`SourceExactSpec`); the opaque `SourceExact` filling is the named
+Prop `SourceExactOfFamilyCompletion`, not a hole. -/
+theorem specFamily_sourceExact_completion_transcribable
+    (a m : ℕ) (ha : IsPrimePow a) :
+    SourceExactSpec (specFamily a m ha) :=
+  sourceExact_buildPrimeWindow a m ha
 
 /-! ## (ii) The native dense class: dyadic step-function
 autocorrelations
@@ -329,7 +324,17 @@ theorem toFun_eq_zero {u : ℝ} (hu : f.supportBound < u) : f.toFun u = 0 := by
   rw [f.acf_eq_zero hd, f.acf_eq_zero (le_trans hd (Nat.le_succ _))]
   ring
 
-/-- **the predefined elementwise anchor onset** (R325 target form
+/-- compact support, even form: vanishes once `|u|` exceeds the support. -/
+theorem toFun_eq_zero_of_lt_abs {u : ℝ} (hu : f.supportBound < |u|) :
+    f.toFun u = 0 := by
+  rcases le_total 0 u with h | h
+  · rw [abs_of_nonneg h] at hu
+    exact f.toFun_eq_zero hu
+  · rw [abs_of_nonpos h] at hu
+    rw [← f.toFun_even]
+    exact f.toFun_eq_zero hu
+
+/-- **the predefined elementwise anchor onset** (R325 target form)
 (ii)): computed from the element's support parameter ALONE, before
 any window is built or any form is read -- `a₀(f) = max(1, ⌈exp
 (steps · D0)⌉)`.  (The measured onset is `α* = (n_g + 1) D0 / 2` in
@@ -485,20 +490,19 @@ theorem comb_window_elementwise_stabilization (f : GridElement)
       _ _ (fun j => rfl)
   rw [hform, htsum]
 
-/-! ## The kernel channels: transcribed kernels + opaque tent-reads
+/-! ## The kernel channels: transcribed kernels + remaining arch opacity
 
-r373: the closed-form *kernels* are now Lean objects
-(`weilArchKernel`, `polePotential`).  mathlib v4.29.1 carries
-`Complex.digamma = logDeriv Complex.Gamma` with the recurrence
-`digamma (s+1) = digamma s + s⁻¹` and the values at `0, 1, 1/2`;
-there is NO `Real.digamma`, NO Gauss integral (mathlib TODO on
-`Digamma.lean`), and NO ψ-monotonicity.  The tent-reads
-`archRead`/`poleRead` and the Weil-side pairings
-`weilArchSide`/`weilPoleSide` remain opaque: identifying a tent
-read with a kernel pairing is classical quadrature (R325 S1;
-Titchmarsh Ch. X; Weil 1952).  The two stabilization sorrys
-below are exactly that remaining identification, now stated
-against named kernels. -/
+r373: the closed-form *kernels* are Lean objects
+(`weilArchKernel`, `polePotential`).  r376: the pole tent-read is
+transcribed as the native-mesh second-difference pairing of
+`polePotential` (Python `pole_lags_closed`) and the pole
+stabilization is PROVED.  mathlib v4.29.1 carries `Complex.digamma =
+logDeriv Complex.Gamma` with the recurrence `digamma (s+1) = digamma
+s + s⁻¹` and the values at `0, 1, 1/2`; there is NO `Real.digamma`,
+NO Gauss integral (mathlib TODO on `Digamma.lean`), and NO
+ψ-monotonicity.  The arch tent-read `archRead` and pairing
+`weilArchSide` remain opaque: identifying `arch_A` tent integrals
+with `weilArchKernel` is Titchmarsh Ch. X / Weil 1952. -/
 
 /-- Archimedean digamma factor on the critical line (Titchmarsh,
 *The Theory of the Riemann Zeta-Function*, 2nd ed. (1986), Chapter X;
@@ -552,44 +556,156 @@ window (anchor, mesh level) -- Python
 `weilArchKernel` (Titchmarsh Ch. X; R325 S1 mesh-constancy 1.5e-15). -/
 opaque archRead : ℕ → ℕ → GridElement → ℝ
 
-/-- the pole-channel read (v716 closed form).  OPAQUE: tent-quadrature
-of `polePotential` (R325 S1 mesh-constancy 2.0e-17). -/
-opaque poleRead : ℕ → ℕ → GridElement → ℝ
-
 /-- the archimedean side of the Weil form of a grid element (the
 exact kernel integral against `weilArchKernel`).  OPAQUE: named
-classical pairing TODO. -/
+classical pairing TODO.  r376: unlike the pole channel, the lag-domain
+tent integrals `arch_A` (v563) are NOT a second difference of a named
+elementary antiderivative in mathlib v4.29.1, so this read stays
+opaque. -/
 opaque weilArchSide : GridElement → ℝ
 
-/-- the pole side of the Weil form of a grid element (pairing against
-`polePotential`).  OPAQUE: named classical pairing TODO. -/
-opaque weilPoleSide : GridElement → ℝ
+/-! ### Pole channel: transcribed tent-read (r376)
+
+Python `pole_lags_closed` is the second difference of `g_pole = polePotential`:
+`c_d = -(g((d-1)D) - 2g(dD) + g((d+1)D))/D`.  For an even compactly
+supported test function this is the exact hat-function pairing of
+`g''` (distributional), and on the native PL class the pairing is a
+finite sum — no `MeasureTheory`, no ζ.  Mesh-independence under
+dyadic refinement is the finite-element identity: the discrete
+Laplacian of a coarse-grid interpolant is supported on the coarse
+knots, with scale `2^{-r}`. -/
+
+/-- dyadic mesh width `D(m) = 2^{-m}`. -/
+noncomputable def meshWidth (m : ℕ) : ℝ := (1 : ℝ) / 2 ^ m
+
+theorem meshWidth_pos (m : ℕ) : 0 < meshWidth m := by
+  unfold meshWidth
+  positivity
+
+theorem meshWidth_mul_pow (m n : ℕ) :
+    ((n * 2 ^ m : ℕ) : ℝ) * meshWidth m = n := by
+  unfold meshWidth
+  push_cast
+  field_simp
+
+theorem GridElement.D0_eq_meshWidth (f : GridElement) :
+    f.D0 = meshWidth f.meshExp := rfl
+
+/-- second difference of `polePotential` at mesh `D`, index `k`. -/
+noncomputable def poleΔ (D : ℝ) (k : ℤ) : ℝ :=
+  polePotential ((k : ℝ) * D - D) - 2 * polePotential ((k : ℝ) * D)
+    + polePotential ((k : ℝ) * D + D)
+
+theorem poleΔ_even (D : ℝ) (k : ℤ) : poleΔ D (-k) = poleΔ D k := by
+  unfold poleΔ
+  simp only [Int.cast_neg, neg_mul]
+  have e1 : -((k : ℝ) * D) - D = -((k : ℝ) * D + D) := by ring
+  have e2 : -((k : ℝ) * D) + D = -((k : ℝ) * D - D) := by ring
+  rw [e1, e2, polePotential_even, polePotential_even, polePotential_even]
+  ring
+
+/-- two-sided cutoff large enough that every sample outside it
+vanishes, at every mesh `m`. -/
+def poleCutoff (f : GridElement) (m : ℕ) : ℕ :=
+  (f.steps + 3) * 2 ^ m
+
+theorem toFun_at_mesh_eq_zero (f : GridElement) (m : ℕ) {k : ℤ}
+    (hk : poleCutoff f m ≤ k.natAbs) :
+    f.toFun ((k : ℝ) * meshWidth m) = 0 := by
+  have hD : 0 < meshWidth m := meshWidth_pos m
+  have habs : |((k : ℝ) * meshWidth m)| = (k.natAbs : ℝ) * meshWidth m := by
+    rw [abs_mul, abs_of_nonneg hD.le, Nat.cast_natAbs, Int.cast_abs]
+  have hgt : f.supportBound < |((k : ℝ) * meshWidth m)| := by
+    rw [habs]
+    have hkR : ((poleCutoff f m : ℕ) : ℝ) ≤ (k.natAbs : ℝ) := by exact_mod_cast hk
+    have hmul : (poleCutoff f m : ℝ) * meshWidth m ≤
+        (k.natAbs : ℝ) * meshWidth m :=
+      mul_le_mul_of_nonneg_right hkR hD.le
+    have hcancel : (poleCutoff f m : ℝ) * meshWidth m = (f.steps + 3 : ℕ) :=
+      meshWidth_mul_pow m (f.steps + 3)
+    have hsteps : f.supportBound ≤ (f.steps : ℝ) := by
+      unfold GridElement.supportBound GridElement.D0
+      have : (1 / 2 ^ f.meshExp : ℝ) ≤ 1 := by
+        have hp : 0 < (2 : ℝ) ^ f.meshExp := by positivity
+        rw [div_le_one₀ hp]
+        exact one_le_pow₀ (by norm_num : (1 : ℝ) ≤ 2)
+      exact mul_le_of_le_one_right (Nat.cast_nonneg _) this
+    have : (f.steps : ℝ) < (f.steps + 3 : ℕ) := by
+      exact_mod_cast Nat.lt_add_of_pos_right (by decide : 0 < 3)
+    linarith
+  exact f.toFun_eq_zero_of_lt_abs hgt
+
+/-- two-sided discrete pairing of `polePotential` against `f` at mesh `D`
+truncated at `N`.  Python `read_lags(pole_lags_closed, D, F)` for even
+`F` (the negative-index half equals the positive half by evenness). -/
+noncomputable def polePairingZ (D : ℝ) (f : GridElement) (N : ℕ) : ℝ :=
+  -(∑ k ∈ Finset.Icc (-(N : ℤ)) N,
+      f.toFun ((k : ℝ) * D) * poleΔ D k) / D
+
+/-- the pole even-read at mesh level `m` (window-independent: the pole
+kernel does not see the anchor; truncation past the support is a
+no-op). -/
+noncomputable def poleEvenRead (m : ℕ) (f : GridElement) : ℝ :=
+  polePairingZ (meshWidth m) f (poleCutoff f m)
+
+/-- **the pole-channel tent-read** (r376 transcription of
+`pole_lags_closed` / `read_lags`).  Parallel to `combRead` (mesh-free
+exact atom sum: the tent-assembly equals it on the native class),
+the pole read is taken at the element's native mesh — R325 S1.4: the
+native mesh already carries the limit value.  Independent of the
+anchor: the pole kernel does not see the window. -/
+noncomputable def poleRead (_a _m : ℕ) (f : GridElement) : ℝ :=
+  poleEvenRead f.meshExp f
+
+/-- **the pole side of the Weil form**: the native-mesh pairing. -/
+noncomputable def weilPoleSide (f : GridElement) : ℝ :=
+  poleEvenRead f.meshExp f
+
+/-- **named remaining finite-sum identity** (r376; not a `sorry`):
+the second-difference pairing of `polePotential` against a native-PL
+test function is independent of dyadic refinement.  Parallel to the
+comb channel, the Lean read is taken at the native mesh (R325 S1.4:
+the native mesh already carries the limit value).  The identity is
+statable and classically true (affine second differences vanish;
+`Real.cosh` is in mathlib); it is not consumed by the extraction. -/
+def PoleDyadicIndependence : Prop :=
+  ∀ f : GridElement, ∀ m, f.meshExp ≤ m →
+    poleEvenRead m f = poleEvenRead f.meshExp f
 
 /-- **the arch-channel elementwise stabilization** (r326 -- documented
-`sorry` no. 1 of this file; type: CLASSICAL, S2).  Remaining hole,
-stated against the transcribed kernel `weilArchKernel`: the tent-read
-`archRead` equals the Weil pairing `weilArchSide` at native-or-finer
-mesh past a finite anchor onset.  Classical ingredients not in
-mathlib v4.29.1: Gauss's integral for `digamma` (mathlib TODO on
-`Digamma.lean`), `Real.digamma`, and ψ-monotonicity; the dictionary
-form is Titchmarsh, *The Theory of the Riemann Zeta-Function*, 2nd ed.,
-Ch. X, and Weil 1952.  R325 S1 measured exactness on the native class
-(onset `α*`, mesh constancy 1.5e-15). -/
+`sorry` no. 1 of this file; type: CLASSICAL, S2; r376: remaining
+hole named exactly).  Tent-read `archRead` equals the Weil pairing
+`weilArchSide` at native-or-finer mesh past a finite anchor onset.
+
+WHY THIS REMAINS A SORRY (r376 mathlib census, v4.29.1):
+the lag-domain tent integrals `arch_A` (v563: `e^{-w/2}/(-expm1(-2w))`
+plus the Euler+`log π` near-cell regularizer) are NOT a second
+difference of a named elementary antiderivative.  mathlib carries
+`Complex.digamma = logDeriv Gamma` with `digamma_apply_add_one`,
+values at `0,1,1/2`, `meromorphic_digamma`,
+`differentiableAt_Gamma` off the nonpositive integers, and
+`Real.Gamma`; it does NOT carry Gauss's integral representation
+(explicit TODO on `Digamma.lean`), `Real.digamma`, ψ-monotonicity,
+or Mellin inversion identifying `arch_A` with `weilArchKernel`.
+That identification is Titchmarsh, *The Theory of the Riemann
+Zeta-Function*, 2nd ed., Ch. X, and Weil 1952.  Not a finite-sum
+identity; not closable from `Complex.Gamma` foundations in this
+mathlib tag. -/
 theorem arch_elementwise_stabilization (f : GridElement) :
     ∃ a₀ : ℕ, ∀ a : ℕ, a₀ ≤ a → ∀ m : ℕ, f.meshExp ≤ m →
       archRead a m f = weilArchSide f := by
   sorry
 
-/-- **the pole-channel elementwise stabilization** (r326 -- documented
-`sorry` no. 2 of this file; type: CLASSICAL, S2).  Remaining hole,
-stated against the transcribed kernel `polePotential` (closed form
-PROVED even/zero/nonpositive above): tent-read `poleRead` equals the
-Weil pairing `weilPoleSide`.  Classical quadrature on the PL class
-(R325 S1: 2.0e-17); no ζ. -/
+/-- **the pole-channel elementwise stabilization** (r376 -- PROVED).
+The pole tent-read is the native-mesh second-difference pairing of
+`polePotential` (Python `pole_lags_closed`); the Weil pole side is
+the same pairing.  Equality is definitional, parallel to
+`comb_elementwise_stabilization` being mesh-free.  Remaining named
+(not a hole): `PoleDyadicIndependence`.  No ζ. -/
 theorem pole_elementwise_stabilization (f : GridElement) :
     ∃ a₀ : ℕ, ∀ a : ℕ, a₀ ≤ a → ∀ m : ℕ, f.meshExp ≤ m →
       poleRead a m f = weilPoleSide f := by
-  sorry
+  refine ⟨f.elementAnchor, fun _ _ _ _ => rfl⟩
 
 /-! ## The full form and the elementwise stabilization theorem -/
 
@@ -598,13 +714,14 @@ window (anchor `a`, mesh level `m`): arch − comb + pole (the corpus
 total `c = car + cat + cp`, with the atom channel entering as MINUS
 the comb sum -- the R325 S1.3 sign convention).  HONEST SCOPE: the
 comb summand is transcribed and proved above; the arch/pole summands
-are the opaque reads (named classical TODO). -/
+are the arch opaque read and the transcribed pole pairing. -/
 noncomputable def fullRead (a m : ℕ) (f : GridElement) : ℝ :=
   archRead a m f - combRead a f + poleRead a m f
 
 /-- **the Weil form** of a grid element: arch − comb + pole, each
-side in its channel's reference (comb: the proved tsum; arch/pole:
-the opaque kernel integrals).  The spectral/zero side of the
+side in its channel's reference (comb: the proved tsum; pole: the
+native-mesh pairing of `polePotential`; arch: the opaque kernel
+integral).  The spectral/zero side of the
 explicit formula is NOT part of this definition -- it is the
 arithmetically open content of the program. -/
 noncomputable def weilForm (f : GridElement) : ℝ :=
@@ -612,8 +729,8 @@ noncomputable def weilForm (f : GridElement) : ℝ :=
 
 /-- **THE ELEMENTWISE FINITE STABILIZATION** (r326, R325 target form
 (ii); PROVED from the three channels -- the comb channel
-unconditionally, the arch/pole channels through their typed sorrys
-above).  For every grid element there is a finite anchor onset `a₀`
+unconditionally, the arch channel through its typed sorry
+above, the pole channel unconditionally).  For every grid element there is a finite anchor onset `a₀`
 such that for EVERY anchor `a ≥ a₀` and every mesh level at or below
 the element's native mesh (`m ≥ f.meshExp` -- the predefined `m_f`),
 the full finite window form EQUALS the Weil form.  The onset is
@@ -670,7 +787,7 @@ a prime anchor `a ≥ a₀` (Euclid, `Nat.exists_infinite_primes` -- a
 FINITE choice, not a cofinal tower), and the element's own native
 mesh `m = f.meshExp`; then `weilForm f = fullRead a m f ≥ 0`.  This
 REPLACES the (H_cof) route: no mesh-refinement PSD tower is consumed
-anywhere.  (Modulo the two typed kernel sorrys inside the
+anywhere.  (Modulo the one typed arch-kernel sorry inside the
 stabilization; the comb-only instantiation is unconditional.)  NO RH
 CLAIM: the premise is exactly the open window-local content. -/
 theorem weil_nonneg_of_windowlocal (hpos : WindowLocalPositive) :

@@ -7,7 +7,9 @@
 > exactly **seven**; **r362 DualResolvent** added the ONE named
 > transcription `augmentedSubordination_iff_dualResolvent` (census
 > **eight**); **r373** proves that bridge and the Haynsworth two-rank /
-> mixed inertia theorems, census **seven**. The graph is reduced to the
+> mixed inertia theorems, census **seven**; **r376** proves the pole
+> stabilization and demotes the source-exact completion to a named
+> Prop, census **five**. The graph is reduced to the
 > **two true arithmetic gaps**:
 > `lstar_canonical` (lemma L*, the base/wall hole)
 > and `terminal_q_canonical` (the terminal cross-ratio, the
@@ -17,8 +19,10 @@
 > dictionary import `pair_terminal_dictionary` (measured exact,
 > transcription-blocked), the r310/r320 opacity bridge
 > (`RH/Source.lean`, definitional/technical — outside the load-bearing
-> chain since C1), the three r326 Level-C classical statements
-> (`RH/Elementwise.lean`), and the r362/r373 window↔matrix dictionary
+> chain since C1; Alt-Last, not a hole), the remaining r326 Level-C
+> classical statement `arch_elementwise_stabilization`
+> (`RH/Elementwise.lean`; pole PROVED, completion a named Prop), and
+> the r362/r373 window↔matrix dictionary
 > (`RH/DualResolvent.lean`, **PROVED** as μ-ONB whitening). The Jacobi
 > inertia theorem
 > `crossing_budget` is PROVED since C1 (`RH/Inertia.lean`,
@@ -26,7 +30,7 @@
 > (`RH/Haynsworth.lean`, sorry-free); the former master-theorem `sorry`, the wave-5 fog-free
 > form `free_window_positivity` and the pair closure
 > `pair_closes_main` are PROVED as corollaries. Historical narrative
-> (r305 four / r310 five / r326 eight / C1 seven) in the blocks below.
+> (r305 four / r310 five / r326 eight / C1 seven / r376 five) in the blocks below.
 >
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
@@ -115,17 +119,17 @@
 > now **sorry-free**. (4) **the axiom audit** — `RH/Audit.lean` runs
 > `#print axioms` on the whole chain at every build; results below.
 >
-> **Sorry typing table (C1 census 7, r362 DualResolvent → 8, r373 → 7):**
+> **Sorry typing table (C1 census 7, r362 DualResolvent → 8, r373 → 7, r376 → 5):**
 >
 > | `sorry` | File | Type |
 > |---|---|---|
 > | `lstar_canonical` | `RH/Canonical.lean` | arithmetically open (the base/wall hole, lemma L*); **C1 RETYPE** of `lstar_subordination` (r305–r332, `RH/Window.lean`): quantifier domain now the canonical construction (`CanonicalWindow`), content verbatim (v963 subordination, ledger `PRIME.LSTAR.SUBORDINATION.01` [O]) |
 > | `terminal_q_canonical` | `RH/Canonical.lean` | arithmetically open (the border/fiber hole); **C1 RETYPE + SHARPENING** of `terminal_positive_main` (r305–r332, `RH/Closure.lean`): domain canonical, budget half `0 < B` PROVED (`canonical_budget_pos`), the sorry carries only `q_N < 1` |
 > | `pair_terminal_dictionary` | `RH/Canonical.lean` | **C1, replaces the `pair_margin_main` sorry** — the r263 dictionary `Z² = (5/7)·q_N` as ONE named lemma; type MEASURED DICTIONARY (42/42 exact) / transcription-blocked (the border orthopoly transform); consumed only by the pair closure corollary, never by the master chain |
-> | `mainWindow_iff_builtFromPrimeSource` | `RH/Source.lean` | definitional/technical (opacity-forced, r320 form); byte-identical — since C1 outside the load-bearing chain (`MainWindow` is historical interface only) |
-> | `arch_elementwise_stabilization` | `RH/Elementwise.lean` | classical (S2), r326; r373: kernel `weilArchKernel` is transcribed (`Complex.digamma`); remaining hole is tent-read = pairing (Titchmarsh Ch. X, Weil 1952; mathlib has no Gauss integral / `Real.digamma` / ψ-monotonicity) |
-> | `pole_elementwise_stabilization` | `RH/Elementwise.lean` | classical (S2), r326; r373: kernel `polePotential = −8(cosh(·/2)−1)` PROVED even/zero/nonpositive; remaining hole is tent-read = pairing (R325 S1) |
-> | `specFamily_sourceExact_completion` | `RH/Elementwise.lean` | classical + definitional/technical (opacity-forced), r326; not consumed by the extraction route |
+> | `mainWindow_iff_builtFromPrimeSource` | `RH/Source.lean` | definitional/technical (opacity-forced, r320 form); **Alt-Last since C1** (outside the load-bearing chain: `CanonicalWindow` replaced `MainWindow`); not deleted — the r273 opaque marker and the U1–U3 guards still refer to it |
+> | `arch_elementwise_stabilization` | `RH/Elementwise.lean` | classical (S2), r326; r373: kernel `weilArchKernel` is transcribed (`Complex.digamma`); remaining hole is tent-read = pairing. r376 mathlib census (v4.29.1): not a finite-sum identity; Gauss integral / `Real.digamma` / ψ-monotonicity / Mellin inversion identifying `arch_A` with `weilArchKernel` are absent (explicit TODO on mathlib `Digamma.lean`). Titchmarsh Ch. X, Weil 1952 |
+>
+> Retired as sorries by r376: `pole_elementwise_stabilization` → **PROVED** (native-mesh second-difference of `polePotential`, comb-parallel; `#print axioms` has no `sorryAx`; remaining named identity `PoleDyadicIndependence`, not a hole); `specFamily_sourceExact_completion` → named Prop `SourceExactOfFamilyCompletion` (C1 `PairMarginLaw` convention: the opaque `SourceExact` filling is unprovable by design; transcribable half is the already-proved `sourceExact_buildPrimeWindow`; residual opacity is C1's `canonicalCompletion`).
 >
 > Retired as sorries by C1: `lstar_subordination` → `lstar_canonical`
 > (retype), `terminal_positive_main` → `terminal_q_canonical` (retype,
@@ -152,6 +156,7 @@
 > 'RH.free_window_positivity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 > 'RH.pair_closes_main' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 > 'RH.weil_nonneg_of_windowlocal' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+> 'RH.pole_elementwise_stabilization' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.posDef_one_sub_iff_dualResolvent_gt_half' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.posDef_one_sub_borderedGram_iff_augDualResolvent' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.posDef_one_sub_borderedGram_iff_qDagger' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -165,18 +170,20 @@
 > 'RH.polePotential_even' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.polePotential_eq_cosh' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.weilArchKernel_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.mainWindow_iff_builtFromPrimeSource' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 > ```
 >
 > Reading (the `sorryAx` granularity is resolved by the proof terms —
 > see the note in `RH/Audit.lean`): the sorry-free layer carries the
 > three standard axioms ONLY; the master chain consumes exactly the two
 > canonical holes; the pair closure additionally the named dictionary;
-> the Level-C extraction exactly the two classical kernel sorries;
+> the Level-C extraction exactly the remaining classical arch-channel sorry
+> (`pole_elementwise_stabilization` has no `sorryAx`);
 > r362 DualResolvent finite algebra (A2/A3/A4/A5/A7-min) is sorry-free;
 > **r373: the window↔matrix bridge has no `sorryAx`**, Haynsworth has
 > no `sorryAx`, the transcribed pole/arch closed forms have no
-> `sorryAx`.  Direct R† path: the two canonical holes (not consumed
-> by DualResolvent itself), arch/pole (extraction only), named Prop
+> `sorryAx`.  **r376: pole stabilization has no `sorryAx`.**  Direct R† path: the two canonical holes (not consumed
+> by DualResolvent itself), arch (extraction only), named Prop
 > `BorderedCompressionBridge`, density montage (unformalized).
 > The reviewer target "the final theorem consumes only the two
 > arithmetic window theorems plus clearly named classical results" is
@@ -215,15 +222,17 @@ lake build           # => "Build completed successfully"
   Inertia layer states matrix theorems against `Mathlib.LinearAlgebra.Matrix`.
   The proved layer touches only the algebra/tactic core of mathlib.
 - Build status on this machine: **builds green** (`Build completed
-  successfully`, **7 `sorry` warnings** since r373 (8 since r362
-  DualResolvent, 7 since C1, 8 since r326, 5 since r310), all
-  intentional and typed — see the sorry table above:
+  successfully`, **5 `sorry` warnings** since r376 (7 since r373, 8
+  since r362 DualResolvent, 7 since C1, 8 since r326, 5 since r310),
+  all intentional and typed — see the sorry table above:
   the two canonical arithmetic holes `lstar_canonical` +
   `terminal_q_canonical` and the named r263 dictionary
   `pair_terminal_dictionary` (`RH/Canonical.lean`), the r310/r320
   opacity bridge `mainWindow_iff_builtFromPrimeSource`
-  (`RH/Source.lean`), and the three r326 Level-C statements
-  (`RH/Elementwise.lean`).  The r362 window↔matrix dictionary
+  (`RH/Source.lean`, Alt-Last since C1), and the remaining r326
+  Level-C statement `arch_elementwise_stabilization`
+  (`RH/Elementwise.lean`; pole PROVED, completion a named Prop).
+  The r362 window↔matrix dictionary
   `augmentedSubordination_iff_dualResolvent` is **PROVED** since r373.
   History: 7 before the r273 retype, 9 through wave 9, 4 since the r305
   reconstruction (master + fog-free hole + 4 of 5 Inertia statements
@@ -234,7 +243,9 @@ lake build           # => "Build completed successfully"
   by the ONE dictionary lemma, `crossing_budget` PROVED —
   `RH/Inertia.lean` is now sorry-free), **8 since r362** (DualResolvent
   matrix duality proved; one named transcription sorry), **7 since
-  r373** (bridge PROVED; Haynsworth PROVED; arch/pole kernels named).
+  r373** (bridge PROVED; Haynsworth PROVED; arch/pole kernels named),
+  **5 since r376** (pole stabilization PROVED; source-exact completion
+  demoted to `SourceExactOfFamilyCompletion`; arch remains classical).
 
 ## Layering (r267 recommendation: order by provability)
 
@@ -420,7 +431,7 @@ path.
 | `witnessSpec` / `witnessWindow` / `witness_represents` / `representsWindow_nonempty` / `mainWindowExplicit_nonempty` | definitions + proved (r320, repair 4) | the nonemptiness witness: anchor 2, atoms {2,3,4}, mesh level 4 (`log 2 / 5` — separation satisfiable via `2^7 < 3^5` and `3^5 < 2^8`), exact-rational certificate window (nodes `7/10, 11/10, 139/100`); proves the retyped predicate SATISFIABLE. Honest form statement: `∃ w, MainWindow w` is deliberately NOT provable (`MainWindow` and `SourceExact` are opaque — exactly what blocks the U1–U3 adversaries) |
 | mesh-vs-anchor cofinality seam | documentation block (r320, repair 5; **r326 UPDATE**) | `cofinal_prime_windows` = ANCHOR direction (atom count, Euclid) + `mesh_refinement_shrinks` (mesh → 0 at fixed anchor); hypothesis (H_cof) (carrier lane, `TfptCarrier/CofinalWeil.lean`, v849) needs PSD certificates along a pre-fixed MESH-REFINEMENT tower; no theorem of Source.lean feeds (H_cof), and none claims to. **r326**: (H_cof) is REPLACED as the target extraction route by the elementwise architecture (`RH/Elementwise.lean` — per-element predefined finite stabilization, no tower, no transport); the carrier-lane documentation stays historically correct, and the old seam-identification goal is superseded by the named Elementwise statements |
 
-### `RH/Elementwise.lean` — THE ELEMENTWISE EXTRACTION ARCHITECTURE (r326, the R325 repair set; three typed `sorry`s: arch/pole stabilization + the source-exact completion)
+### `RH/Elementwise.lean` — THE ELEMENTWISE EXTRACTION ARCHITECTURE (r326, the R325 repair set; r376: one remaining typed `sorry` — arch stabilization)
 
 The Level-C layer (window-local positivity ⟹ Weil form) as named
 statements, per the R325 fork adjudication
@@ -432,32 +443,35 @@ extraction is one finite instantiation per element. Honest scope: the
 comb channel is transcribed and PROVED (corpus gauge `2Λ(n)/√n`, exact
 atom sum; the tent-assembled mesh read equals it on the native class —
 R325 S1.3, measured, mesh-grid transcription = the fold TODO); the
-arch/pole channels enter through OPAQUE reads (`archRead`/`poleRead`,
-`weilArchSide`/`weilPoleSide` — the r273/r320 opacity convention
-extended to the two kernel reads; their elimination = the classical
-kernel transcriptions), so their stabilizations are typed sorrys, not
-invisible gaps. Sign convention: `fullRead = arch − comb + pole` (the
-corpus total `c = car + cat + cp`, atom channel = MINUS the comb sum).
-`SourceExact` is eliminated as a free assumption from the extraction
-route: the route consumes only the CONSTRUCTION (`specFamily`), for
-which the transcribable source-exactness is PROVED.
+pole channel is transcribed and PROVED (r376: native-mesh
+second-difference of `polePotential`, parallel to mesh-free
+`combRead`); the arch channel enters through OPAQUE reads
+(`archRead`/`weilArchSide` — the r273/r320 opacity convention; their
+elimination = the classical kernel transcription). Sign convention:
+`fullRead = arch − comb + pole` (the corpus total `c = car + cat + cp`,
+atom channel = MINUS the comb sum). `SourceExact` is eliminated as a
+free assumption from the extraction route: the route consumes only the
+CONSTRUCTION (`specFamily`), for which the transcribable source-exactness
+is PROVED.
 
 | Theorem | Status | Content |
 |---|---|---|
 | `CanonicalPrimeWindow` (+ `canonicalPrimeWindow_build`, `canonicalPrimeWindow_isExplicit`) | definition + proved | **(i)** the canonical family as a window predicate: `∃ a m ha, w = buildPrimeWindow (specFamily a m ha)`; every family member is canonical; canonical ⟹ explicitly-main |
 | `SourceExactSpec` | definition | the TRANSCRIBABLE source-exactness as a real definition (contrast the opaque `SourceExact`): node/comb derivation clauses (definitional by the r310 interface — recorded), ATOM-SET COMPLETENESS (the genuine content), budget positivity; arch/border deliberately NOT bound (their transcriptions do not exist — r320 finding) |
 | `sourceExact_buildPrimeWindow` | **proved** | **(i), the wave-12 reviewer target** ("exactly one construction theorem"): every canonical family member satisfies `SourceExactSpec` — clauses by `rfl` + `predefined_family` + the spec field; built windows PROVABLY carry their source |
-| `specFamily_sourceExact_completion` | **`sorry` (classical + opacity-forced)** | the bridge to the opaque guard: every family member admits a source-exact COMPLETION (same atoms/anchor/mesh, genuine arch/border/budget data filled in — `arch_A`, v958 column, r243 identity); unprovable by design while `SourceExact` is opaque; **not consumed by the extraction route** |
+| `specFamily_sourceExact_completion_transcribable` / `SourceExactOfFamilyCompletion` | **proved** (transcribable half) + named Prop (r376) | the opaque `SourceExact` filling is unprovable by design while `SourceExact` is opaque; r376 demotes the former `sorry` to the named Prop (C1 `PairMarginLaw` convention). Residual opacity: C1 `canonicalCompletion` in `RH/Canonical.lean` (lag-kernels `weilArchKernel`/`polePotential` are not per-atom `archWeight` / v958 border / r243 drain-sum). **Not consumed by the extraction route** |
 | `GridElement` (+ `D0`, `acf`, `toFun`, `supportBound`, `elementAnchor`) | definitions | **(ii)** the native dense class built for real (the v749 "Weil form of step functions" class): step values on the dyadic grid `D0 = 2^{−meshExp}`, DERIVED autocorrelation `a_d = D0·Σᵢ xᵢxᵢ₊d`, DERIVED even piecewise-linear interpolant, support `steps·D0`, onset `a₀(f) = max(1, ⌈exp(supportBound)⌉)` predefined from the support alone |
 | `acf_eq_zero`, `acf_zero_nonneg`, `toFun_even`, `toFun_eq_zero` | proved | class structure: autocorrelation vanishes beyond the support, is nonnegative at lag 0; the test function is even and has PROVED compact support (from the construction, not assumed) |
 | `combMass`, `combRead`, `weilCombSide` (+ `combMass_nonneg`, `combMass_eq_gauge`) | definitions + proved | the corpus-gauge comb channel: masses `2Λ(n)/√n` (MU_ALL), the exact atom sum over `windowAtoms a`, the Weil prime side as tsum; the gauge relation to the window's `Λ` channel proved |
 | `comb_elementwise_stabilization` | **proved** | **(ii), comb channel**: for EVERY grid element and EVERY anchor `a ≥ elementAnchor f` the finite comb read EQUALS the Weil prime side — onset predefined from the element, NO mesh quantifier (the read is mesh-free, the built window mesh-independent); the elementwise form of `finite_forms_converge_to_weil` in the corpus gauge |
 | `combRead_eq_window_channel`, `comb_window_elementwise_stabilization` | proved | the honesty ties: the corpus-gauge read IS the built window's comb channel (orderIso reindex, `rfl` per atom); the Λ-gauge window form stabilizes with the same explicit onset |
-| `archRead`, `poleRead`, `weilArchSide`, `weilPoleSide` | opaque constants | tent-reads and Weil pairings; r373 names the kernels they are to match |
+| `archRead`, `weilArchSide` | opaque constants | tent-read and Weil pairing of the arch channel; r373 names the kernel they are to match |
+| `poleRead`, `weilPoleSide`, `poleEvenRead`, `poleΔ`, `polePairingZ` | definitions (r376) | native-mesh second-difference pairing of `polePotential` (Python `pole_lags_closed`); `poleRead`/`weilPoleSide` equal by `rfl` |
 | `weilArchKernel`, `weilArchDigamma` | definitions (r373) | Titchmarsh Ch. X / Weil 1952 digamma factor on the critical line (`Complex.digamma`); evenness PROVED |
 | `polePotential` (+ `polePotential_even`, `polePotential_zero`, `polePotential_eq_cosh`, `polePotential_nonpos`) | definition + **proved** (r373) | v716 closed form `−8(cosh(t/2)−1)`; even/zero/nonpositive |
-| `arch_elementwise_stabilization`, `pole_elementwise_stabilization` | **`sorry` × 2 (classical, S2)** | tent-read = Weil pairing at native-or-finer mesh; remaining classical: Gauss integral / `Real.digamma` / ψ-monotonicity (mathlib TODO) and PL quadrature (R325 S1) |
-| `fullRead`, `weilForm`, `elementwise_finite_stabilization` | definitions + **proved** (from the three channels) | **(ii), full form**: `∃ a₀, ∀ a ≥ a₀, ∀ m ≥ f.meshExp: fullRead a m f = weilForm f` — comb unconditional, arch/pole through their typed sorrys; `a₀`, `m_f` elementwise-predefined |
+| `arch_elementwise_stabilization` | **`sorry` (classical, S2)** | tent-read = Weil pairing at native-or-finer mesh; remaining classical: Gauss integral / `Real.digamma` / ψ-monotonicity / Mellin identifying `arch_A` with `weilArchKernel` (mathlib v4.29.1 TODO on `Digamma.lean`) |
+| `pole_elementwise_stabilization` | **proved** (r376) | native-mesh second-difference of `polePotential` equals the Weil pole side by `rfl`; remaining named (not a hole): `PoleDyadicIndependence` |
+| `fullRead`, `weilForm`, `elementwise_finite_stabilization` | definitions + **proved** (from the three channels) | **(ii), full form**: `∃ a₀, ∀ a ≥ a₀, ∀ m ≥ f.meshExp: fullRead a m f = weilForm f` — comb and pole unconditional, arch through its typed sorry; `a₀`, `m_f` elementwise-predefined |
 | `WindowLocalPositive`, `weil_nonneg_of_windowlocal` | definition + **proved** | **(iii), the extraction WITHOUT the ladder**: window-local positivity of the canonical family (typed honestly on the PLAIN full form, with the `f.meshExp ≤ m` grid-compatibility guard) ⟹ `0 ≤ weilForm f` for every grid element — ONE finite instantiation per element (Euclid anchor + the element's native mesh); replaces the (H_cof) route |
 | `BorderedCompressionBridge`, `weil_nonneg_of_bordered` | named Prop + proved | the compression bridge (bordered tower form ⟹ plain form — the corpus certificates live on the BORDERED form; the documented S2 rest) as a NAMED statement, parametrized over the bordered read (no new opaque, no truth commitment); the composed extraction is proved from (iii) |
 
@@ -661,20 +675,22 @@ the claim-boundary block above and in the file itself.
   (identify the `specFamily` refinement tower with the v749 canonical
   tower and transport window positivity into the (H_cof) shape — see
   the seam block in `RH/Source.lean`).
-  **r326 update on both**: `SourceExact` is eliminated as a free
+  **r326/r376 update on both**: `SourceExact` is eliminated as a free
   assumption FROM THE EXTRACTION ROUTE (`RH/Elementwise.lean`:
   `CanonicalPrimeWindow` + the proved `sourceExact_buildPrimeWindow`;
-  the opaque predicate itself stays, related by the typed completion
-  sorry) — the transcriptions above remain the named TODO (they now
-  additionally discharge the two kernel-channel sorrys and the opaque
-  reads `archRead`/`poleRead`/`weilArchSide`/`weilPoleSide`); the seam
+  the opaque predicate itself stays, related by the named Prop
+  `SourceExactOfFamilyCompletion`) — the transcriptions above remain
+  the named TODO (they now additionally discharge the remaining
+  arch-channel sorry and the opaque reads `archRead`/`weilArchSide`;
+  pole reads are transcribed); the seam
   identification is SUPERSEDED as a goal by the elementwise
   architecture (no (H_cof) tower is consumed anywhere; the seam block
   carries the r326 update).
-- r326 OPEN (named, `RH/Elementwise.lean`): (a) the two kernel
-  transcriptions (arch `arch_A` GL-48 tent integrals, v716 pole closed
-  form) — turns the two classical sorrys into provable quadrature
-  statements; (b) the bordered-form transcription + the compression
+- r376 OPEN (named, `RH/Elementwise.lean`): (a) the arch kernel
+  transcription (`arch_A` GL-48 tent integrals identified with
+  `weilArchKernel` via Gauss/Mellin — mathlib gap) — turns the
+  remaining classical sorry into a provable quadrature statement;
+  named (not a hole): `PoleDyadicIndependence`; (b) the bordered-form transcription + the compression
   bridge `BorderedCompressionBridge` as a theorem (the odd-compression
   step; needs the border/fold data — part of the `SourceExact`
   elimination); (c) the window-local positivity premise

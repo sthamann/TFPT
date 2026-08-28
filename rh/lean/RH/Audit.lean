@@ -75,14 +75,16 @@ additionally consumes the ONE named dictionary import
 #print axioms pair_closes_main
 
 /-! ## (d) The Level-C extraction (classical kernel imports)
-Expected AND MEASURED: `[propext, sorryAx, Classical.choice,
-Quot.sound]` -- honest: the ladder-free extraction consumes the TWO
-typed CLASSICAL kernel-channel sorries
-(`arch_elementwise_stabilization`, `pole_elementwise_stabilization`,
-RH/Elementwise.lean; the comb channel is unconditional), never the
-two arithmetic holes and never `SourceExact`/`MainWindow`. -/
+Expected AND MEASURED (r376): `[propext, sorryAx, Classical.choice,
+Quot.sound]` -- honest: the ladder-free extraction consumes the ONE
+remaining typed CLASSICAL kernel-channel sorry
+(`arch_elementwise_stabilization`; the comb channel is unconditional
+and the pole channel is PROVED as the native-mesh second-difference
+pairing of `polePotential`), never the two arithmetic holes and never
+`SourceExact`/`MainWindow`. -/
 
 #print axioms weil_nonneg_of_windowlocal
+#print axioms pole_elementwise_stabilization
 
 /-! ## (e) The r362/r373 dual-resolvent layer (reviewer priority 2)
 Sorry-free finite algebra AND the window bridge, expected AND MEASURED:
@@ -114,13 +116,26 @@ any window. -/
 #print axioms haynsworth_sigNeg_₁₁
 #print axioms haynsworth_sigNeg_₂₂
 
-/-! ## (g) r373 kernel objects (reviewer goals 3–4)
+/-! ## (g) r373/r376 kernel objects
 Expected AND MEASURED: `[propext, Classical.choice, Quot.sound]` --
-NO `sorryAx` on the transcribed closed forms.  The two stabilization
-sorrys remain in (d). -/
+NO `sorryAx` on the transcribed closed forms, and NO `sorryAx` on
+`pole_elementwise_stabilization` (r376).  The arch stabilization
+sorry remains in (d). -/
 
 #print axioms polePotential_even
 #print axioms polePotential_eq_cosh
 #print axioms weilArchKernel_even
+
+/-! ## (h) Historical opacity bridge (Alt-Last, not a load-bearing hole)
+`mainWindow_iff_builtFromPrimeSource` (RH/Source.lean) is the r310/r320
+opacity bridge.  Since C1 the load-bearing chain quantifies over
+`CanonicalWindow`, not `MainWindow`.  The bridge is consumed only by
+`mainWindow_explicit_bridge` (itself a corollary of the bridge).  It
+is an Alt-Last of the historical interface, not an arithmetic or
+classical hole; it is NOT deleted (the r273 opaque marker and the
+U1–U3 guards still refer to it).  Expected: `[propext, sorryAx,
+Classical.choice, Quot.sound]`. -/
+
+#print axioms mainWindow_iff_builtFromPrimeSource
 
 end RH

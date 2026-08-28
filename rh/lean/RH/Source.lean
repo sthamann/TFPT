@@ -734,9 +734,9 @@ the seam between them was nowhere documented in rh/ before r320:
     lane documentation above stays historically correct, and (H_cof)
     remains a correct statement of the OLD route; the open seam
     identification above is SUPERSEDED as a goal by the named
-    statements of RH/Elementwise.lean (the two kernel-channel
-    stabilization sorrys + the source-exact completion).  NO RH
-    CLAIM. -/
+    statements of RH/Elementwise.lean (r376: remaining arch-channel
+    stabilization sorry; pole PROVED; completion demoted to the
+    named Prop SourceExactOfFamilyCompletion).  NO RH CLAIM. -/
 
 /-! ## (c) Convergence to the Weil form (structure theorem 4) -/
 
