@@ -268,10 +268,143 @@ DERIVATION stays open (the specialist step C); no verdict claims L*, a
 bound mechanism, a derived 5/7, or RH progress in any direction; the
 DCCX STOP list stands.
 
-RECORD TABLES: inserted AFTER the record run only (two-commit
-protocol, r329 convention; the pre-freeze spec ends here -- no
-placeholder numbers before the first full evaluation, the r346
-lesson).
+RECORD TABLES (inserted AFTER the record run -- the only post-freeze
+edit; no placeholder numbers existed before the first full evaluation,
+the r346 lesson; TWO-COMMIT PROTOCOL EXECUTED: the sealed spec was
+committed as "r360 pre-freeze" (8a835dc8, SPEC_SHA freeze
+75f8ee55436ab173) BEFORE the first full evaluation; chronology honest:
+smoke pass 1/2 = 34/34 byte-identical at the sealed rules (one
+pre-freeze toy-node fix: the G11 saturation toy moved to asymmetric
+nodes after the symmetric linspace stalled on a tie-saddle -- before
+the freeze commit, disclosed); pre-freeze commit 8a835dc8; calibration
+pass 1 = FIRST full evaluation = 34/34 (153.7 s) with ZERO amendments
+-- no bar, band, clause, candidate or verdict rule moved after the
+freeze; record run1 = 34/34 (172.2 s), run2 = 34/34 (157.0 s),
+byte-identical up to the WALL line and identical to calibration):
+MAIN VERDICT = SATURATION_EDGE_CONFIRMED(the sealed QP dual-void
+block == folds {1, 2, 3} with clean KKT on 4/4 sealed instances
+(#band [0, 2, 0, 0], gaps [+0.092, +2.718, +0.445, +0.420]) -- by the
+exact complement O1 the PRIMAL SATURATED block -- and THE CRITICAL
+PAIR (2, 4) STRADDLES ITS EDGE 3|4 (fold 2 inside the saturated zone,
+fold 4 outside); the exact-occupation fold-1 anomaly census 85/85 on
+MAIN (dev1 in [-0.333, -0.253], pair folds flat <= 0.10, misses
+none); the chi contrast is a DIFFERENT PARTITION: chi3/chi4 dev1
++0.0348/+0.0261 flat, fold-1 anomaly 0/42 + 0/42 ladder-wide, AND
+both chi QPs OCCUPY fold 1 (void folds (2,3,7,8) / (2,3,4)) --
+world-separating, exactly the reviewer's step-B object)
++ GAMMA_PARAMETRIX_CENSUS(t_geo = eps sqrt(a11 a22) family-constant:
+slope -0.009 on the 57 (|.| <= 0.10), range [0.2216, 0.2865] med
+0.2536 on all 74 resolvable rows inside (0.10, 0.45), chi w9
+0.1987/0.2875 in band -- the dimensionless diagonal-resolvent datum
+is margin-locked across worlds and depths; the exponent censi: the
+DIAGONALS CARRY THE MARGIN EXPONENT (|a11| +3.365, |a22| +3.292,
+|a12| +3.316 vs margin 3.332; the 1.786/1.683 Christoffel family
+misses by ~1.6, the 0.38 family by more -- the r350 weight laws do
+NOT carry the resolvent diagonals))
++ M0_PARTIAL(alpha = 3.332: the fresh lamS slope -3.334 hits the
+margin candidate at 0.002 and REJECTS s_infty 1.65 at 1.684; bind
+[1.0003, 1.0605] med 1.0058 == r359 EXACT -- the margin direction
+collapses; kappa_S = lammax/lammin in [6.3, 30.5] med 13.9, range
+ratio 4.88 > 1.5 -- THE FULL M_0 COLLAPSE IS HONESTLY REFUTED AT THE
+SEALED RATIO: M_0 exists only up to the O(1) second-eigenvalue
+wander, the reviewer's L1 form needs a relative/projective
+formulation exactly as the rest clause does; split-half curvature
+shallow -3.417 / deep -3.784, the disclosed r342-class curvature)
++ REST_RELATIVE_CENSUS(the round's sharpest honest negative: the
+THEOREM side c = 1 holds (Cauchy interlacing + Schur-complement
+eigenvalue inequality, toy exact both directions + live 74/74
+resolvable + chi 84/84) and MAIN carries C_REL = 2.0 with rest/eps
+in [8.8, 54.2] med 20.3 violations none -- BUT the chi ladders dip
+to the interlacing line: chi3 [1.0, 16.4] med 7.4 violations [31,
+40, 55], chi4 [1.0, 13.4] med 5.3 violations [14, 16, 23, 25, 28,
+40, 53, 59] -- the interlacing inequality is NEARLY TIGHT on 11/84
+chi rows: the c > 1 margin is MAIN-measured, NOT world-uniform, and
+the L2 relative clause survives as theorem only at c = 1;
+RELATIVE_REST_CERTIFIED correctly did NOT fire)
++ WANDER_CANCEL_LEDGER(O6: corr(psi57 log detS, -psi57 log(a11 a22))
+= +0.9835 >= 0.90 -- the det S_N wander IS the diagonal-resolvent
+wander; rms(psi57 log(1 - share)) / rms(psi57 log detS) = 0.204 --
+the cross-share term is ~5x subleading: the leading common wander
+cancels algebraically inside the adjugate minor, measured)
++ PARTITION_LEDGER(QP crystallized on all 7 instances; the m1
+unconstrained catch max m = 92.7 (w9) -- the obstacle constraint is
+load-bearing; scramble QP void folds (2, 4, 5, 6), fold 1 occupied)
++ OCCUPATION_LEDGER(complement ward 3.7e-13 .. 2.2e-11 graded on the
+7 instances; trace ward 5.6e-12/1.1e-11/1.4e-10 graded ladder-wide
+85/85; od1 anchors hit (w9 0.1497, kz44 0.2135, kz56 0.2244, kz130
+0.2523); the anomaly-decay census slope(ln(1/2 - od1)) = -0.088 on
+the 57 -- the saturation edge fades at a slow census rate far from
+any measured closing, typed for the specialist)
++ WORLD_LEDGER(chi3 42/42 + chi4 42/42 through the identical dual +
+Schur + occupation pipeline, chain + occupation wards green at the
+r359 graded bars, eps all positive, fold-1 anomaly 0/42 + 0/42 --
+the saturation edge is MAIN-specific, the second arithmetic has
+none)
++ TWIN_LEDGER(dose-zero BITWISE 6/6; Schur devs max 6.9e-4 nats bar
+1e-3 -- the r359 1.4x-headroom truth reproduced; occupation devs max
+3.8e-8, bar 1e-3)
++ SCRAMBLE_BREAK(named: eps -0.4962, rest -0.4962 (anchors), pair
+block +1.3688e-2 stays positive -- the r359 lesson reproduced; the
+algebra is world-blind (det-id 2.7e-16, CD 5.3e-15, occupation trace
+5.7e-14); od1 0.6061 dev1 +0.1320 disordered under the zone bar --
+the dead world has NO saturation edge either)
++ MUSTFAIL_LEDGER(m1 unconstrained 92.7 >= 10; m2/m3/m4 AST-FLAGGED
+(withheld margin/detS/a11 columns); m5 shuffle 0.798 >= 0.3; m6
+wrong rank 1.17e-2 >= 1e-3 + Fractions-exact; scopes CLEAN).
+Key numbers.  W9: od1 0.1497 (o_eta(fold 1) 0.8503), odf2 0.5118,
+odf4 0.5137, dev1 -0.3311, t_geo 0.2646, kappa_S 11.7, QP gap
++0.092, complement 3.7e-13, trace 5.7e-14.  LADDER: margin slope
+-3.332 == r352 EXACT, detS -6.742 == r359 EXACT, rest -3.276 == r359
+EXACT; fresh censi lamS -3.334, t_geo -0.009, |a11| +3.365, |a22|
++3.292, |a12| +3.316, ln(1/2 - od1) -0.088; zone census 85/85; E1-E5
+wards green at the r359 graded bars (det-id 2.1e-13/1.8e-12/5.4e-12,
+CD <= 3.8e-14, IIKS <= 4.3e-3, coupling <= 6.9e-8, res-minor <=
+5.4e-8).
+REVIEWER-STEP TYPING (the specialist handoff deliverable):
+(A) the reciprocal dual weight in closed form = THEOREM (r356,
+standing, re-consumed verbatim);
+(B) the constrained equilibrium partition = THIS ROUND: the exact
+occupation field (theorem-grade object) + the sealed obstacle solver
+(zero-temperature variational model) agree on the partition shape;
+the SATURATION-EDGE thesis is CONFIRMED at census grade (4/4 QP
+straddle + 85/85 occupation + total chi contrast); the ASYMPTOTIC
+equilibrium-measure theorem (BKMM band/saturation limit shape with
+the field -log u_vee) stays OPEN -- the specialist step;
+(C) the local parametrix = CENSUS: t_geo is margin-locked (slope
+-0.009, spread 29 pct) and the resolvent diagonals carry the margin
+exponent 3.332 (not the 0.38/1.79 weight families) -- the
+Gamma-class DERIVATION (BKMM Thm 2.7 at saturation adjacency) stays
+OPEN; the Casoratian term must be carried (r359 cross share, its
+wander 5x subleading to the diagonal wander);
+(D) the reserve from the local minor = the adjugate identity is
+THEOREM (r359, re-gated); the wander cancellation is MEASURED (corr
++0.9835); the first non-vanishing coefficient (M_0) is PARTIAL: the
+margin direction collapses (bind med 1.0058), kappa_S wanders 4.88x
+-- alpha = 3.332 is settled at 0.002, the matrix limit is NOT a
+constant matrix;
+(E) the rigorous error = OPEN (nothing in this round bounds it); the
+RELATIVE REST CLAUSE = THEOREM at c = 1 (interlacing, Lean-able
+finite statement) + MAIN census at c >= 8.8 -- but NOT world-uniform
+at c = 2 (chi mins 1.0): any L2 draft must state it per-world or at
+c = 1.
+HONEST NEGATIVES: (1) RELATIVE_REST_CERTIFIED did not fire -- the
+chi ladders sit at the interlacing line on 11/84 rows (rest/eps =
+1.0): the reviewer's relative clause is provable only at c = 1, the
+comfortable MAIN margin (8.8x) does not transfer to the second
+arithmetic; (2) the full M_0 collapse is refuted at the sealed ratio
+(kappa_S 4.88x) -- the L1 target as stated (fixed positive M_0) is
+too rigid for this family; (3) the saturation-edge statement is a
+finite-family census plus a zero-temperature variational model -- no
+BKMM asymptotic theorem is claimed, and the fold-1 anomaly decays at
+a slow census rate (-0.088) whose limit this family cannot decide;
+(4) t_geo has a 29 pct spread -- margin-locked at wander level, not
+a constant; (5) EXT5/EXT6 floor rows stay sign census (r359
+convention, 11 rows); (6) the split-half lamS curvature (-3.417 /
+-3.784) is the disclosed r342-class curvature -- the alpha hit is a
+57-row Theil-Sen statement, not an asymptotic derivation; (7) one
+pre-freeze toy-node fix disclosed above; ZERO post-freeze
+amendments.  Runtime 172.2 / 157.0 s record, 153.7 s calibration,
+2.1 s smoke; deterministic, run1/run2 byte-identical up to WALL.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
