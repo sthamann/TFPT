@@ -213,6 +213,54 @@ _R377_STATUS = (
     "POSTCAP STEPS VERIFIED.  NO L* claim, NO RH claim"
 )
 
+_R381_STATUS = (
+    "G_eps lemma from the source (round 381, LEMMA.G_EPS.01, "
+    "lemma-first; experiments-side, NO ledger row): 17/17 full / "
+    "14/14 smoke; SPEC_SHA 60ce9bc28fc7f171; identities first "
+    "measured in /tmp then sealed (disclosed calibration).  "
+    "AUSGANG REDUZIERT to the pair (C_eps, R2).  SATZ: first-order "
+    "Jacobi d gamma_k / d w_j = (p_k(x_j)^2 - gamma_k p_{k-1}(x_j)^2) "
+    "/ h_{k-1} (Fractions toy |CD-FO|/|FO|=2.092e-4 at eps=1/200; "
+    "FRAME-A w9 FO vs FD rel 5.446e-4).  Jacobi-(0,1) and cosine-grid "
+    "mesh remain r379 SATZ.  L^inf of Fejer-stripped d_arm is O(1) "
+    "(w9 ||eps_mu||_inf=5.166) -- crude FO majorant ~3 >> 1/16; "
+    "cancellation is essential.  Jump half is NOT implied by the box "
+    "(log(5/3)=0.5108 > 2/5).  Lambda(n)<=log n PNT-free (trial "
+    "division n=2..120).  Second-order midpoint remainder along "
+    "Fejer-ref -> actual at n=40: |quad|/|lin|_last12=1.013 "
+    "(NOT dominated).  FRAME-A w9 G_eps holds (signed last-12 "
+    "0.03417 jump 0.2493); mu-only last-12 0.02605 jump 0.1224; "
+    "mass_nu/mu=0.0611.  SCRAMBLE seed=1 named-breaks last-12 "
+    "|g-1/4|=6.841 (lag |c_q| is NOT the separator).  Slow-then-fast "
+    "block is a STEP obstruction, not an FO-formula fail.  Companion "
+    "rh/problem/g_eps_lemma.tex + verify_g_eps.py 13/13 "
+    "G_EPS LEMMA VERIFIED.  NO L* claim, NO RH claim"
+)
+
+_R382_STATUS = (
+    "Pivot-band entry lemma (round 382, LEMMA.PIVOT_ENTRY.01, "
+    "lemma-first; experiments-side, NO ledger row): 17/17 full / "
+    "10/10 smoke; SPEC_SHA b7f53a93daf790bc; identities and flank "
+    "tallies first measured in /tmp then sealed (disclosed "
+    "calibration).  AUSGANG REDUZIERT to n0=floor(2N/5) under "
+    "the (2/3)-flank condition.  SATZ: RKHS sum bound; pair-energy "
+    "identity; Christoffel comparison h_k(w) >= (1-lam) h_k(mu); "
+    "5-atom 2-vs-1 interlacing (h0,h1,h2>0, h3=-144/7); 3-atom "
+    "flank ratio 1/3 with h0=4,h1=6,h2=-3; equal two-period H1=0; "
+    "clustered run-of-3 H3<0 before half-filling.  CENSUS: MAIN "
+    "F1 (max_len<=2) 85/85, F2 (rmax<1) 85/85, F2_23 (rmax<=2/3) "
+    "78/85 (EXT-heavy 69,96,97,99,107,117,129); core-42 nh67=0 "
+    "max d50=0.0402; dead chi 6/6 satisfy F1+F2_23.  KILL: "
+    "scramble max_len=5 rmax=2.71 first_neg=21 < n0=73 and "
+    "lam(E_22)>1; two-period c=1 first_neg=0; clustered run-6 "
+    "first_neg=2.  Two-period c=2/3 first_neg ~ N/2 (S=81: 20 "
+    "vs n0=16) is the binding adversary against raising kappa "
+    "to 1.  Named remainder for n0=N-1: L2 CD-kernel tail on "
+    "flank blocks (r285 coherence).  Companion "
+    "rh/problem/pivot_entry_lemma.tex + verify_pivot_entry.py "
+    "14/14 PIVOT ENTRY STEPS VERIFIED.  NO L* claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -1983,6 +2031,63 @@ ENTRIES = [
      [],
      "compiled PDF of v3prime_proof.tex (recompiled artefact, "
      "registered unpinned)", False),
+    ("rh/problem/g_eps_lemma.tex", "problem_statement",
+     "r381 companion",
+     [],
+     "lemma-first attack on G_eps (round 381): first-order Jacobi "
+     "perturbation SATZ; L^inf of d_arm too crude for the 1/16 box; "
+     "jump not implied by the box (log(5/3)>2/5); second-order "
+     "remainder not dominated.  Reduced to the pair (C_eps, R2): "
+     "the explicit FO pairing against reference OP squares, and "
+     "the Taylor remainder of the finite mu -> mu-nu (or "
+     "Fejer-ref -> actual) step.  Scramble named-breaks last-12.  "
+     "Finite identities plus a named reduction; NO RH claim",
+     True),
+    ("rh/problem/verify_g_eps.py", "problem_check",
+     "r381 companion",
+     [],
+     "machine check of every numbered lemma in g_eps_lemma.tex: "
+     "FO formula over Q, quadratic remainder Theta(eps^2), "
+     "Jacobi-(0,1) over Q, jump comparison, Lambda(n)<=log n, "
+     "Chebyshev quarters; construction pins (FO vs FD, G_eps and "
+     "mu-only on FRAME-A w9, R2 midpoint ratio, scramble kill, "
+     "L^inf crude, two-period vs block).  13/13 gates, "
+     "final line G_EPS LEMMA VERIFIED", True),
+    ("rh/problem/g_eps_lemma.pdf", "problem_statement",
+     "r381 companion",
+     [],
+     "compiled PDF of g_eps_lemma.tex (recompiled artefact, "
+     "registered unpinned)", False),
+    ("rh/problem/pivot_entry_lemma.tex", "problem_statement",
+     "r382 companion",
+     [],
+     "lemma-first attack on the pivot-band entry (round 382): "
+     "RKHS sum, pair energy, Christoffel comparison SATZ; "
+     "5-atom interlacing and 3-atom flank toys SATZ; equal "
+     "two-period and clustered run-of-3 named kills.  Reduced "
+     "to n0=floor(2N/5) under (F1)+(F2_{2/3}) (max nu-run <= 2 "
+     "and nu-mass <= 2/3 flanking mu-mass).  MAIN F1 85/85, "
+     "F2 85/85, F2_23 78/85; scramble named-breaks; two-period "
+     "c=2/3 is the binding half-filling adversary.  Named "
+     "remainder for n0=N-1: L2 CD tail on flank blocks.  "
+     "Finite identities plus a named reduction; NO RH claim",
+     True),
+    ("rh/problem/verify_pivot_entry.py", "problem_check",
+     "r382 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "pivot_entry_lemma.tex: standalone Fractions (energy "
+     "identity, 5-atom interlacing, equal two-period H1=0, "
+     "clustered H3<0, 3-atom flank, RKHS one-atom, Christoffel "
+     "comparison, beta2 sign) plus construction pins (w9 "
+     "flank entry n0=73, scramble kill first=21, dead chi3-15, "
+     "two-period S=81 table, clustered S=21, lambda wall).  "
+     "14/14 gates, final line PIVOT ENTRY STEPS VERIFIED", True),
+    ("rh/problem/pivot_entry_lemma.pdf", "problem_statement",
+     "r382 companion",
+     [],
+     "compiled PDF of pivot_entry_lemma.tex (recompiled "
+     "artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -2118,6 +2223,16 @@ ENTRIES = [
      "r377",
      [],
      _R377_STATUS,
+     True),
+    (f"{EXP}/g_eps_lemma_probe.py", "sealed_probe",
+     "r381",
+     [],
+     _R381_STATUS,
+     True),
+    (f"{EXP}/pivot_entry_lemma_probe.py", "sealed_probe",
+     "r382",
+     [],
+     _R382_STATUS,
      True),
 ]
 

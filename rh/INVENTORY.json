@@ -1756,6 +1756,36 @@
       "bytes": 245558
     },
     {
+      "path": "rh/problem/g_eps_lemma.tex",
+      "role": "problem_statement",
+      "round": "r381 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on G_eps (round 381): first-order Jacobi perturbation SATZ; L^inf of d_arm too crude for the 1/16 box; jump not implied by the box (log(5/3)>2/5); second-order remainder not dominated.  Reduced to the pair (C_eps, R2): the explicit FO pairing against reference OP squares, and the Taylor remainder of the finite mu -> mu-nu (or Fejer-ref -> actual) step.  Scramble named-breaks last-12.  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "023f6dbde69e9bef98791d048db9b197549a67d881b262e35a3671cb61cc68cc",
+      "bytes": 14403
+    },
+    {
+      "path": "rh/problem/verify_g_eps.py",
+      "role": "problem_check",
+      "round": "r381 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in g_eps_lemma.tex: FO formula over Q, quadratic remainder Theta(eps^2), Jacobi-(0,1) over Q, jump comparison, Lambda(n)<=log n, Chebyshev quarters; construction pins (FO vs FD, G_eps and mu-only on FRAME-A w9, R2 midpoint ratio, scramble kill, L^inf crude, two-period vs block).  13/13 gates, final line G_EPS LEMMA VERIFIED",
+      "pin": true,
+      "sha256": "7657bf00cae4913b1be5a1d7aa9fe7f93ce1eb3c3775bdc46ee6bbc6ae46d81b",
+      "bytes": 11022
+    },
+    {
+      "path": "rh/problem/g_eps_lemma.pdf",
+      "role": "problem_statement",
+      "round": "r381 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of g_eps_lemma.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "c5de388725084a8f38cb2d6b12e7f63e9123587df5e890b33e5390d53bab0377",
+      "bytes": 250857
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -1910,8 +1940,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "7e014b04e3107d94c3f72f04c1e422999b9617c6f4eddee87f924809562e63d9",
-      "bytes": 3438816
+      "sha256": "6b879a73ac2dba16a4f97ceaba47c36bb93c22debd04e5539a0abba2a10765f8",
+      "bytes": 3439058
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -1930,8 +1960,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "08817f124e0f1bf81adc2aa5711b0b33bd96c0a5af42a4a2b1fda8eb450db61b",
-      "bytes": 5331558
+      "sha256": "9567070ec151aa1636af03859abfc839b84db30cc3e5048bfeae34c5cb1be8d0",
+      "bytes": 5338081
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2072,6 +2102,16 @@
       "pin": true,
       "sha256": "33808f310b700545dc8ab692840118ee0f0b9285a15764234d1bd16dcb8d0261",
       "bytes": 18131
+    },
+    {
+      "path": "experiments/tfpt-discovery/g_eps_lemma_probe.py",
+      "role": "sealed_probe",
+      "round": "r381",
+      "ledger_ids": [],
+      "status": "G_eps lemma from the source (round 381, LEMMA.G_EPS.01, lemma-first; experiments-side, NO ledger row): 17/17 full / 14/14 smoke; SPEC_SHA 60ce9bc28fc7f171; identities first measured in /tmp then sealed (disclosed calibration).  AUSGANG REDUZIERT to the pair (C_eps, R2).  SATZ: first-order Jacobi d gamma_k / d w_j = (p_k(x_j)^2 - gamma_k p_{k-1}(x_j)^2) / h_{k-1} (Fractions toy |CD-FO|/|FO|=2.092e-4 at eps=1/200; FRAME-A w9 FO vs FD rel 5.446e-4).  Jacobi-(0,1) and cosine-grid mesh remain r379 SATZ.  L^inf of Fejer-stripped d_arm is O(1) (w9 ||eps_mu||_inf=5.166) -- crude FO majorant ~3 >> 1/16; cancellation is essential.  Jump half is NOT implied by the box (log(5/3)=0.5108 > 2/5).  Lambda(n)<=log n PNT-free (trial division n=2..120).  Second-order midpoint remainder along Fejer-ref -> actual at n=40: |quad|/|lin|_last12=1.013 (NOT dominated).  FRAME-A w9 G_eps holds (signed last-12 0.03417 jump 0.2493); mu-only last-12 0.02605 jump 0.1224; mass_nu/mu=0.0611.  SCRAMBLE seed=1 named-breaks last-12 |g-1/4|=6.841 (lag |c_q| is NOT the separator).  Slow-then-fast block is a STEP obstruction, not an FO-formula fail.  Companion rh/problem/g_eps_lemma.tex + verify_g_eps.py 13/13 G_EPS LEMMA VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "35c92067949656e530c25b7deb6224afbf197bd79b19c58152e0cff172d336bc",
+      "bytes": 16657
     }
   ]
 }

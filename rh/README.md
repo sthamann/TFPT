@@ -4901,6 +4901,42 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence: r374--r378
 and r376/r380 (Lean) are parallel lanes; this round is additive.
 
+**The $G_\varepsilon$-lemma, reduced (r381, LEMMA.G_EPS.01, lemma-first).**
+`experiments/tfpt-discovery/g_eps_lemma_probe.py` (17/17 full,
+14/14 smoke, SPEC_SHA `60ce9bc28fc7f171`) plus
+`rh/problem/g_eps_lemma.tex` (+ PDF + `verify_g_eps.py`,
+13/13, `G_EPS LEMMA VERIFIED`).  **Ausgang REDUZIERT.**
+SATZ: the first-order formula
+$\partial\gamma_k/\partial w_j=(p_k(x_j)^2-\gamma_k p_{k-1}(x_j)^2)/h_{k-1}$
+(Fractions toy $\lvert\mathrm{CD}-\mathrm{FO}\rvert/\lvert\mathrm{FO}\rvert=2.092\cdot10^{-4}$
+at $\varepsilon=1/200$; FRAME-A $w=9$ FO vs FD rel $5.446\cdot10^{-4}$).
+Jacobi-$(0,1)$ and the cosine-grid mesh remain r379 SATZ.
+$L^\infty$ of the Fejér-stripped $d_{\mathrm{arm}}$ is $O(1)$
+($w=9$ $\lVert\varepsilon_\mu\rVert_\infty=5.166$) — the crude FO
+majorant $\sim 3\gg 1/16$; cancellation is essential.
+The jump half is not implied by the box ($\log(5/3)=0.5108>2/5$).
+$\Lambda(n)\le\log n$ is PNT-free (trial division $n=2..120$).
+The second-order midpoint remainder along Fejér-ref $\to$ actual
+at degree $40$ has $\lvert\mathrm{quad}\rvert/\lvert\mathrm{lin}\rvert=1.013$
+on the last twelve (not dominated).
+FRAME-A $w=9$: signed last-$12$ $0.03417$, jump $0.2493$;
+$\mu$-only last-$12$ $0.02605$, jump $0.1224$;
+$\mathrm{mass}(\nu)/\mathrm{mass}(\mu)=0.0611$.
+Scramble seed $1$ named-breaks last-$12$ $\lvert\gamma-1/4\rvert=6.841$
+(lag $\lvert c_q\rvert$ is not the separator).
+The slow-then-fast block is a step obstruction, not an FO-formula
+fail.  Reduced to the pair $(C_\varepsilon,R_2)$: the explicit FO
+pairing against reference OP squares, and the Taylor remainder
+of the finite $\mu\to\mu-\nu$ (or Fejér-ref $\to$ actual) step.
+Chain
+$T_2'\Leftarrow\cdots\Leftarrow V_3'\Leftarrow G_\varepsilon\Leftarrow
+G_\varepsilon^\mu\wedge C_\varepsilon\wedge R_2$.
+Remaining lemmas: (R)(L)(Z)(T1)($C_\varepsilon$,$R_2$)(Dict)(Head)
+($G_\varepsilon^\mu$ is the positive-measure sibling).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence: r374--r380
+are parallel lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5029,6 +5065,14 @@ rh/
 │   ├── v3prime_proof.tex(+pdf) — r379: V3' reduced to G_ε
 │   │                     (cosine-grid mesh SATZ; last-12
 │   │                     |γ-1/4|≤1/16).  No RH claim
+│   ├── g_eps_lemma.tex(+pdf) — r381: G_ε reduced to
+│   │                     (C_ε, R₂); FO formula SATZ;
+│   │                     L^∞ too crude; R₂ not dominated.
+│   │                     No RH claim
+│   ├── pivot_entry_lemma.tex(+pdf) — r382: entry of the
+│   │                     pivot band reduced to n₀=⌊2N/5⌋
+│   │                     under (2/3)-flank; L² remainder
+│   │                     named for n₀=N−1.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5047,9 +5091,15 @@ rh/
 │   ├── verify_compose_lemma.py — machine check of
 │                         compose_lemma.tex (15/15,
 │                         COMPOSE LEMMA VERIFIED)
-│   └── verify_v3prime.py — machine check of
+│   ├── verify_v3prime.py — machine check of
 │                         v3prime_proof.tex (17/17,
 │                         V3PRIME LEMMA VERIFIED)
+│   ├── verify_g_eps.py — machine check of
+│                         g_eps_lemma.tex (13/13,
+│                         G_EPS LEMMA VERIFIED)
+│   └── verify_pivot_entry.py — machine check of
+│                         pivot_entry_lemma.tex (14/14,
+│                         PIVOT ENTRY STEPS VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5279,6 +5329,21 @@ $V_3'$ both hold ($0$ remainder-violators).  Companion script
 Finite identities plus a named remainder.  NO L\* claim.  NO RH
 CLAIM.
 
+A tenth standalone note, `rh/problem/g_eps_lemma.pdf` (August 28,
+2026), is the lemma-first attack on $G_\varepsilon$ (round 381).
+The first-order Jacobi formula
+$\partial\gamma_k/\partial w_j=(p_k(x_j)^2-\gamma_k p_{k-1}(x_j)^2)/h_{k-1}$
+is SATZ (Fractions + FO vs FD).  An $L^\infty$ bound on
+$d_{\mathrm{arm}}$ does not yield the $1/16$ box; the jump half
+is independent of the box; the second-order remainder is not
+dominated.  **REDUZIERT** to $(C_\varepsilon,R_2)$.  Scramble
+seed $1$ named-breaks last-$12$ ($\lvert\gamma-1/4\rvert=6.841$).
+Companion script `verify_g_eps.py`, 13/13 gates,
+`G_EPS LEMMA VERIFIED`.  Discovery probe
+`g_eps_lemma_probe.py`, 17/17, SPEC_SHA `60ce9bc28fc7f171`.
+Finite identities plus a named reduction.  NO L\* claim.  NO RH
+CLAIM.
+
 ## The RH suite
 
 ```bash
@@ -5291,7 +5356,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r377 from
+2. **Sealed probes** — the campaign probes r250–r381 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -5670,6 +5735,15 @@ lemma-first lanes and are not dropped.
 on the Lean kernel: it formalizes the DCCXXXVII finite-algebra lemmas
 and does not touch `rh/problem/` (r377/r378/r379) or
 `experiments/next.txt`.  Census stays 5.  NO RH CLAIM.
+**r381 coexistence.** Round 381 (`g_eps_lemma.tex` +
+`g_eps_lemma_probe.py`) is additive on the MED-CAP/$V_2$/$V_3'$/
+$G_\varepsilon$ lane after r379 (lemma-first $G_\varepsilon$: FO
+formula SATZ, reduction to $(C_\varepsilon,R_2)$).  It does not
+touch `experiments/next.txt` and does not touch `rh/lean/`
+(r376/r380).  Suite surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the probe and
+problem-document rows to the inventory.  r374--r380 are parallel
+lemma-first / Lean lanes and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in
