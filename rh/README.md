@@ -4182,6 +4182,58 @@ matched-frame scramble breaks.  Experiments-side, NO ledger row,
 NO L\* claim, NO RH CLAIM, NO GRH CLAIM (GRH motivates the
 candidate, used nowhere).
 
+**The weighted small-gap Carleson packing (r358, reviewer
+contract T1 — the theorem-first replacement of the global
+minimal-gap composition).**  `local_gap_carleson_probe.py`
+(20/20, SPEC_SHA `fb2d499fd984cef3` final with record, freeze
+`8831b1410849f1b4`, two-commit protocol: pre-freeze `9141d3e7`,
+record `f0f034a2`; NO amendment after freeze) built the sealed
+local gap coordinate — block centers of the r314 fold groups on
+the θ grid LL = 4N−2 (positions + block ids only), one-sided min
+gaps in grid units, `EFA.grel_col` normalization verbatim (the
+zone-grel convention one level down), q_i = |x_i|/L (the r339
+FDD leaf convention); the mesh identity h − NU·u ∈ (0, 3/2]
+re-warded exact — the coincidence is mesh-parametrized, fit-free.
+**Verdict `QUADRATIC_LAW_PARTIAL(T1@all four)` +
+`SIEVE_CORE_OPEN`** on 181 rows (89 frame A + 8 frame B + 42 χ3 +
+42 χ4; anchors bit-near: C_K2X 11.87 at kz111, the r353 frame-B
+table, the r357 χ maxima): (1) **the core holds — T2′ is a
+0-violation census theorem on all four arithmetic/family
+worlds**: the quadratic packing law Σ_{g_i ≤ 2^−r} q_i ≤
+2^{−2r}(1+r)² holds pointwise on all 181 rows at every dyadic
+level r = 1..12 with A-PRIORI bars (no calibration); the whole
+small-gap mass lives at r = 1 (max S₁ 0.017/0.005/0.024/0.044
+per family), S_r = 0 identically for r ≥ 2, and the minimal
+normalized local gap of the entire round is **0.375** — gaps
+below one quarter of the local median DO NOT OCCUR in either
+construction family or any of the three arithmetics: "very tight
+coincidences may exist, but not with mass" is measured, and
+stronger — below g = 3/8 they do not exist at all; T2 census
+C_G = 0.100 at A = 2 (dyadic summation T2′ ⇒ T2 warded exact);
+(2) **T1 is depth-graded census, not a first-K law** (the honest
+partial): the r306 first-K freeze fails the localization on ALL
+FOUR families (frame A C_K 2.45 vs 15.93 at kz111; frame B 4.91
+vs 23.70 at kz117, 6/6; χ3 1.52 vs 3.91; χ4 1.62 vs 3.09) — the
+local product grows with depth exactly like the K2 product (the
+max rows ARE the K2 spikes): the localization is the right
+coordinate, a shallow-rows freeze is the wrong constant rule at
+every level; the packing FORM is the family-robust statement;
+(3) the small-ball band structure (D) carries as census (1033
+bands, 0 violations; the stress spikes kz51/kz111 have NO
+sub-half gap — spike atoms are not tight-gap atoms; band
+comparability holds in MASS form, not signed-survival form);
+(4) the composition is pure polylog but census-expensive: m₀* =
+10^23.5 vs r351 10^18.9 / r353 10^20.5 (C_K enters squared) —
+the two NAMED open items: the in-the-mean small-ball sieve on
+the folded log p^k phases (per dyadic source band, no pointwise
+Baker bounds) and a family-uniform T1 constant rule; (5) all
+three matched scrambles break at the named precondition P1 =
+POSITIVE_PREFIX admission (nf 21/3/37 — the r353/r355/r357
+records); twin 1.0e−7; must-fails e1–e5 + m6a/m6b caught (e2 =
+the r355 global-min error reproduced as a mutant, breaking the
+sealed bar where the true column passes).  Experiments-side, NO
+ledger row, NO RH CLAIM.
+
 **The exact critical Schur block in the positive dual space
 (r359, reviewer contract L1 — the favourable pre-attempt before
 the RHP project).**  `schur_wronskian_dual_probe.py` (33/33,

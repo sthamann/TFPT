@@ -151,6 +151,7 @@ PROBES = [
     ("r355", "k2_source_formula_probe.py"),
     ("r356", "borodin_dual_hole_probe.py"),
     ("r357", "dirichlet_matched_frame_probe.py"),
+    ("r358", "local_gap_carleson_probe.py"),
     ("r359", "schur_wronskian_dual_probe.py"),
 ]
 
