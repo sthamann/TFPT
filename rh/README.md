@@ -5034,5 +5034,46 @@ unclaimed. NO RH CLAIM.
       REMAINING open there: the two kernel transcriptions, the
       bordered compression bridge as a theorem, and the Level-B
       window-local premise itself.
+- [x] **C1 — the Lean final-domain block** (reviewer contract
+      RH.LEAN.FINAL_DOMAIN_AND_EXTRACTION.01: "reduce the Lean graph
+      to the two true mathematical gaps"; formalization only, no
+      probe, no ledger row, NO RH claim). **DONE** (`rh/lean/`, four
+      moves, census 8 → 7, suite + lake green): (1) the two true
+      holes RETYPED off the opaque `MainWindow` onto the canonical
+      construction — `RH/Canonical.lean`: `CanonicalWindow w :=
+      ∃ a m ha, RepresentsWindow w (canonicalWindow a m ha) mesh`
+      with the predefined family completed by the ONE named opaque
+      constant `canonicalCompletion` (arch/border/budget — the r326
+      opacity convention extended; residual opacity = exactly the
+      classical transcription TODO); the holes are now
+      `lstar_canonical` and `terminal_q_canonical` (the budget half
+      `0 < B` of the old terminal statement is PROVED,
+      `canonical_budget_pos`); the master theorem + all corollaries
+      moved with them, statements verbatim modulo the domain — no
+      free `SourceExact`, no `MainWindow` bridge in the final chain;
+      (2) the pair duplicate RETIRED: the r263 dictionary
+      `Z² = (5/7)·q_N` typed as the ONE named lemma
+      `pair_terminal_dictionary` (measured 42/42,
+      transcription-blocked), `pair_closes_main` now a PROVED
+      corollary of the terminal hole, the margin law demoted to the
+      named Prop `PairBound.PairMarginLaw` (honest: measured misses
+      kz39/kz15 — asserting it overclaimed); (3) `crossing_budget`
+      PROVED — the r305 "mathlib carries neither" assessment was half
+      stale (mathlib v4.29.1 has Sylvester's law of inertia,
+      `QuadraticForm.sigNeg_of_equiv_weightedSumSquares`); the
+      pivot/minor dictionary (Jacobi's rule as an LDL congruence +
+      the Vandermonde factorization) is built in `RH/Inertia.lean`,
+      now sorry-free; (4) the axiom audit `RH/Audit.lean`
+      (`#print axioms` at every build, record verbatim in
+      `rh/lean/README.md`): the sorry-free layer
+      (`lstar_terminal_implies_master`, the L† equivalence,
+      `crossing_budget`, `canonical_budget_pos`) carries
+      `[propext, Classical.choice, Quot.sound]` ONLY; the master
+      chain consumes exactly the two canonical holes; the Level-C
+      extraction exactly the two classical kernel sorries.  The two
+      window-local gaps themselves stay OPEN
+      (`PRIME.LSTAR.SUBORDINATION.01`,
+      `PRIME.PORT.COUPLEDTAU.TERMINAL_CROSSRATIO.01` — both [O],
+      untouched).  No RH claim.
 - [ ] Wire the paper PDF into the docset once the pipeline integration
       fully lands.
