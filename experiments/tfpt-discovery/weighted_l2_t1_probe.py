@@ -200,8 +200,92 @@ construction-local coordinate, said out loud; r243..r364
 stand.
 
 RECORD TABLES (inserted AFTER the record run -- the only
-post-freeze docstring edit):
-(pending the sealed record run)
+post-freeze docstring edit; freeze SPEC_SHA 4a89ec1051877c09,
+pre-freeze commit e1521f94; protocol: smoke pass = 20/20
+(0.8 s, run twice pre-commit, byte-identical up to the WALL
+line, disclosed in the commit message); calibration pass 1 =
+FIRST full evaluation = 20/20, wall 708.8 s, NO amendment --
+no bar, share, slope, LFO rule or verdict rule moved at any
+point; record run1/run2 after this insertion, byte-identical
+up to WALL):
+MAIN VERDICT: WEIGHTED_L2_CENSUS+SPIKES_DOMINATE_PI +
+IDENTITY(worst rel 5.5e-16) + E_PI(C_F_cens 1.722, viol
+3/181, max 75.691) + SLOPE(POWER ratio 16.414) + LFO(FAILS)
++ SPIKES(DOMINATE) + COMPOSITION(m_0* 10^29.8 / floor-T2
+10^19.7 vs 10^16.1/10^10.0) + SCRAMBLE(P1_ADMISSION x3,
+E_pi measurable 2.440/11.807/3.620) + TWIN(1.6e-07) +
+MUSTFAIL_LEDGER.
+THE HEADLINE FINDINGS:
+(1) THE IDENTITY IS SATZ: M_3 == ((log m)^2/m^2) T_2
+E_π(F^2) closes on ALL 181 live rows (89 frame A + 8 frame
+B + 42 chi3 + 42 chi4) at worst relative 5.5e-16 (bar
+1e-12), Fractions-exact on the sealed toy (M_3 = 5/32);
+the absorption T_2 E_π == sum (q_i/g_i^2) F_i^2 ==
+(m^2/(log m)^2) M_3 is TAUTOLOGICAL at the same 5.5e-16 --
+T_2 is FACTORIZED, not absorbed: bounding the product
+restates M_3.  All exact wards close (quantization 9.1e-13,
+FDD 2.5e-16, FAB 2.0e-16, N2 >= N3 181/181, E_π <= max F^2
+one-sided 0.0).
+(2) THE A-PRIORI E_π BARS FAIL ON THE K2-SPIKE ROWS, AND
+ONLY THERE: at the sealed (C_F, B) = (1.0, 2.0) T2' grade,
+3/181 violations -- FRAME_A kz111 E_π 52.276 vs bar 41.258,
+FRAME_B kz117 58.424 vs 42.09, FRAME_B kz124 75.691 vs
+43.948 (the global max).  Chi3/chi4 are CLEAN (max E_π
+1.144 / 0.649, C_obs 0.086 / 0.056, 0/42 + 0/42).  Frame A
+otherwise 0/88.  C_F_cens = 1.722 (measured max
+E_π/(log m)^2).  The GO grade does not fire; the census
+constant is named.
+(3) THE DEPTH SLOPE IS POWER, NOT POLYLOG: tercile
+MAX-ratio of C_obs (NO fit) 16.414 vs bar 4.0 -- shallow
+n=60 max E_π 1.165 C_obs 0.105, deep n=60 max E_π 75.691
+C_obs 1.722.  Census max E_π/(log m)^k : k=0 75.691 / k=1
+11.417 / k=2 1.722 / k=4 0.039.  E_π grows with depth
+like the T1 product it rewrites -- the weighted mean
+inherits the K2 growth.
+(4) LEAVE-FAMILY-OUT FAILS ON FRAME B, CARRIES ELSEWHERE:
+holding out A/chi3/chi4, C_fit = 1.722, 0 violations;
+holding out FRAME_B, C_fit = 1.267 (from A+chi), viol 2/8
+at kz117 and kz124 -- family-uniformity FAILS because
+frame B's two deepest T1/K2 rows sit above every other
+family's C_obs.  The Sol family-uniformity question is
+answered DIRECTLY and negatively.
+(5) SPIKE ANATOMY -- THE SOL THESIS IS MIXED, AND THE
+NAMED BIT FIRES: kz111 (the frame-A K2 max, min g 0.571,
+max F 15.93) IS π-light (share 0.337, ratio E/max F^2
+0.206, g_i* 1.333 not a tight gap) -- HERE the retyping
+does what it promised.  kz117 (the frame-B T1/K2 max, min
+g 0.500, max F 23.70) DOMINATES (share 0.909, π_i* 9.45e-2,
+q_i* 1.76e-1, g_i* 1.333) -- the weighted mean IS the
+spike, the retyping is useless on that row.  kz51
+(printed, not the named bit) share 0.938 DOMINATES at
+smaller F.  Named-spike DOMINATES bit YES (kz117) -- G4
+is NOT replaced.  Global max E_π is FRAME_B kz124, not
+kz117.
+(6) THE COMPOSITION DOES NOT PAY: with C_G_cens = 0.100
+and C_F_cens = 1.722, M_3 <= C_G C_F (log m)^{6}/m^2
+gives m_0* = 10^29.8 -- WORSE than the r358 Carleson
+10^23.5 (two extra log powers, and C_F_cens is not small
+enough to beat C_K^2) and far worse than the r361 floor
+chain 10^16.1 / 10^10.0.  Floor-T2 (T2 <= (8/3)^2 = 7.111
+constant) still 10^19.7.  C_K no longer enters squared
+only IF E_π were O(1) polylog family-uniform -- it is
+not.  Cofinal rest unchanged: MED-CAP as a lemma (V2) +
+a family-uniform T1/E_π THEOREM; the identity is the
+exact bookkeeping, not a bound.
+(7) SCRAMBLES AND TWIN: all three matched channels break
+at P1 = POSITIVE_PREFIX ADMISSION (nf 21/3/37 -- the
+r353..r361 records reproduced); partial builds STILL
+carry gap columns and a measurable E_π (2.440 / 11.807 /
+3.620), all grid-quantized.  Twin E_π+maxprod+T2val
+1.6e-07.  Must-fails: e1 CAUGHT exact (25/64 != 5/32) /
+e2 protocol-CAUGHT twice (AST rho@512 + pin 2.25 != 1.0)
+/ e3 protocol-CAUGHT twice (AST rho@520 + pin cube-root
+replica != (1, 1/4, 1/4)) / e4 protocol-CAUGHT twice
+(AST rho@528 + pin 2.50 != 0.50) + m6a/m6b FLAGGED
+(t_term@539 / g_branch@546).  Runtime 708.8 s
+calibration / record run1/run2 byte-identical up to WALL
+/ 0.8 s smoke.  AMENDMENTS AFTER FREEZE: NONE except this
+record-table insertion.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
