@@ -148,6 +148,19 @@ TOY_TOL 1e-12; EXT selections verbatim r356/r367; runtime
 blocks (records, identities, wedge, majorant); ladder, EXT,
 twin, chi, scramble skipped.
 
+CALIBRATION AMENDMENT a1 (disclosed, first full evaluation
+28/30 at 266.4 s, SPEC_SHA 85b31ee99180bf64): G35 used a
+SECOND raw 1e-8 floor for nneg(∧² A0) that disagreed with the
+r367 Rayleigh-arbitrated inertia on 10/45 P1 rows (deep
+near-zeros).  The SATZ is the product formula nneg(∧²) =
+nneg(A0)*npos(A0) from the SAME inertia -- tautological on
+P1 and now the constructor.  SHARE_BAR, sign definition,
+MAJ construction, scramble named-break, identity bars and
+the GO letters are NOT moved.  The SHARE finding of the
+first evaluation stands: majority 27/45, min 0.001 (the Sol
+4/4 sample was terminal-rank biased, same lesson as r367 a1
+on P1_VACUOUS).  EIN RUN on the science: no bar nachbessern.
+
 PRE-SPEC SCOPING (disclosed -- ONE sizing pass on kz9/18/44/52
 + chi3/chi4 w9 + scramble w9, /tmp, deleted; no bar, band,
 clause or verdict rule tuned after any evaluation except as
@@ -205,12 +218,66 @@ DCCX STOP list stands.  EIN RUN -- the verdict is accepted
 as it falls.
 
 RECORD TABLES (inserted AFTER the record run -- the only
-post-freeze edit; TWO-COMMIT PROTOCOL: sealed spec committed
-as "r371 pre-freeze" BEFORE the first full evaluation;
-chronology honest: smoke N/N byte-identical; pre-freeze
-commit PENDING; first full evaluation = the record run, no
-calibration amendment; record run1/run2 PENDING):
-RECORD_PENDING
+post-freeze edit besides disclosed a1; TWO-COMMIT PROTOCOL:
+sealed spec committed as "r371 pre-freeze" (ac7c0b0b, SPEC_SHA
+freeze 85b31ee99180bf64, file SHA c7860a863ef19983) BEFORE
+the first full evaluation; chronology honest: smoke 30/30
+byte-identical; pre-freeze commit ac7c0b0b; first full
+evaluation = 28/30 (266.4 s) found a1 (G35 second raw floor
+vs Rayleigh inertia, 10/45 P1 near-zeros -- INSTRUMENT, not
+a bar move) plus the SHARE finding 27/45; a1 product formula;
+record run1 = 30/30 (283.3 s), run2 = 30/30 (239.3 s),
+byte-identical up to the WALL line; evaluation SPEC_SHA
+179cd387155299dc before this insert):
+MAIN VERDICT = SIGNATURE_PARTIAL(wterm<0 45/45, share>=0.50
+27/45) + CAPTURE_HOLDS_CENSUS(nneg-1 45/45 via (12) ≡ P2)
++ OVERLOAD_CENSUS_ONLY(cert_lt2 0/45, scramble MAJ>2)
++ AND2_LEDGER(nneg(∧² A0)=|Y|-1 on 45/45 of the branch, share
+min/med/max 0.001/0.601/0.905) + WORLD_LEDGER(chi3 nneg-1
+21/42 all sign-stable, chi4 19/42 all sign-stable, chi MAY
+tip, terminal-dead eps<=0 is 0/42 on the unaugmented A0)
++ TWIN_LEDGER + SCRAMBLE_BREAK(named P1 nneg=21, MAJ=49>2,
+wterm=-3.022 measured) + MUSTFAIL_LEDGER.
+LEG A: identities are finite-matrix SATZ.  (12) Fractions
+toy det K2 = -7 = 1+q11+q22+wterm exact (wterm=-4);
+f64 graded 74/74 (maxerr 5.7e-10), live 1e-10 on 72/74
+(the two misses kz37/kz95 at 5.7e-10/5.0e-10 sit in the
+mid grade 1e-9).  (13) Fractions CD-telescope exact;
+live dressing 74/74 at 1e-10 (maxerr 9.1e-17), c_N =
+1/b_{N-3} in (1.92, 2.06) all positive.  RANK_KZ
+wterm/share anchors PASS.  Wrong ∧² convention λ_i+λ_j
+CAUGHT exact (nneg_sum=0 != nneg_prod=3).
+LEG B: the kill test.  Wedge SIGN is STABLE on the nneg-1
+branch (wterm<0 45/45, range [-637.7, -1.32], 0 flips) --
+NOT the r318 coin-flip.  Capture (14) holds 45/45 by
+identity (12) ≡ P2 (not independent arithmetic).  The
+∧²-subspace share is NOT stable: majority (>=0.50) only
+27/45, min 0.001 (kz37/kz95/kz129-class deep rows), max
+0.905; the Sol 4/4 sample (0.67..0.78) was terminal-rank
+biased.  COMPOUND_SIGNATURE_STABLE does not fire.
+nneg(∧² A0)=|Y|-1 on 45/45 (product formula from the r367
+inertia, a1).  r367 dichotomy reproduced P1 45 / vacuous 29
+/ overload 0 on 74 resolvable.
+LEG C: Gershgorin-Stieltjes MAJ = n_hit on the branch
+[67, 1425] ≫ 2, isolation 0/45, cert_lt2 0/45 -- the
+construction does NOT certify ind_- < 2.  Occupation
+diagonal of A0: n_diagneg = 0 on the whole nneg-1 branch
+(min diag > 0, the remaining negative is off-diagonal).
+Scramble MAJ=49>2 (vacuity test holds, construction not
+empty) and n_diagneg=24.  OVERLOAD_MAJORANT_GO stays off;
+nneg≤1 remains the r367 census (overload 0/74).
+LEG D: twin dose-zero bitwise, |d wterm|=6.2e-5.  chi3
+21/42 nneg-1 all wterm<0 (w9 PD, wterm>0, share=0 --
+world-separating); chi4 19/42 nneg-1 all wterm<0 (w9
+share 0.535).  Scramble named P1 nneg=21, P2 survives,
+wterm=-3.022 measured.  Must-fails 5/5 (m1 AST detK
+readback, m2 wrong ∧² convention exact, m3 bars-after-
+sight AST, m4 majorant-from-eigs AST, m5 c_N sign ratio
+3.2e14).
+Honesty: the canonical two-form has a STABLE SOURCE SIGN
+and an UNSTABLE ∧²-subspace share; capture is algebra;
+the overload theorem stays census.  No L* claim, no RH
+claim.
 """
 
 import argparse
@@ -521,6 +588,13 @@ def compound_rung(xu, wu, yn, vn, Nw, S, L, i1, i2, keep=False):
     ws = wedge_share(U[:, 0], U[:, 1], A0)
     gs = overload_majorant(A0)
     g = FTRI.grade_of(Nw)
+    # ∧² inertia from the SAME Rayleigh-arbitrated (npos, nneg,
+    # nzer) as r367 P1 -- a second raw 1e-8 floor disagrees on
+    # deep near-zeros (a1, first evaluation 35/45).  Product
+    # formula: nneg(∧²) = nneg * npos.
+    nneg2 = int(o["nneg"] * o["npos"])
+    npos2 = int(o["npos"] * (o["npos"] - 1) // 2
+                + o["nneg"] * (o["nneg"] - 1) // 2)
     out = dict(ok_sup=o["ok_sup"], ok_map=o["ok_map"], Sm=o["Sm"],
                Nw=Nw, nneg=o["nneg"], npos=o["npos"], nzer=o["nzer"],
                detK=o["detK"], P1=o["P1"], P2=o["P2"], Mpd=o["Mpd"],
@@ -530,7 +604,7 @@ def compound_rung(xu, wu, yn, vn, Nw, S, L, i1, i2, keep=False):
                id12_err=id12["err"], cN=id13["cN"],
                id13_err=id13["err"], id13_rel=id13["rel"],
                bN=id13["bN"], share=ws["share"], n2=ws["n2"],
-               nneg2=ws["nneg2"], npos2=ws["npos2"],
+               nneg2=nneg2, npos2=npos2,
                n_hit=gs["n_hit"], n_diagneg=gs["n_diagneg"],
                mind=gs["mind"], iso=gs["iso"],
                cert_lt2=gs["cert_lt2"], maj=gs["maj"],
