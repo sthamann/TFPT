@@ -428,6 +428,40 @@ _R388_STATUS = (
     "VERIFIED.  NO L* claim, NO RH claim"
 )
 
+
+_R389_STATUS = (
+    "Weyl energy of cancellation (round 389, LEMMA.WEYL_ENERGY.01, "
+    "lemma-first; experiments-side, NO ledger row): 27/27 full / "
+    "19/19 smoke; SPEC_SHA c93fdc413980bf4a; identities, w9 "
+    "energy/Parseval/spectrum/FO, scramble and two-period spectra, "
+    "core-42 / EXT-heavy / chi3-42 tallies first measured in /tmp "
+    "(tfpt_r389_cal.py, WALL 2.1 s) then sealed (disclosed "
+    "calibration).  AUSGANG REDUZIERT.  SATZ: Chebyshev energy "
+    "Phi=(1/pi)C0^2+(2/pi)Sigma_{m<k} C_m^2; off=Phi-diag with "
+    "explicit v^2 Weyl diagonal; Q^T=(C0+C_{2k})_nu/(C0+C_{2k})_mu; "
+    "pi_k^2 Weyl via Chebyshev coeffs; finite-grid Parseval "
+    "Sigma_{q<2S} |S_q|^2 = 2S Sigma v^2 ratio=1 (S=21 and w9).  "
+    "MAIN/chi at quadratic-mean (core-42 mean/qm in [0.661,1.018]; "
+    "|C|/mass max <0.41 trivial Weyl, not PNT; HHI <0.12).  "
+    "Two-period S=81 is a comb (|C_S|/mass=1, HHI=0.727) -- "
+    "rho_AP=1 iff spectral concentration on a progression.  "
+    "FO^T last-12=0.00496 and small-N max 0.01650 both <1/32: the "
+    "Chebyshev piece of C_eps CLOSES at quadratic-mean; dDelta is "
+    "the live remainder.  Assist is NOT the Chebyshev all-ones "
+    "energy (1^T E^T 1 / n_nu=0.114 vs lam=0.99983; wall v otimes v "
+    "off negative).  Z_loc Chebyshev proxy cancel=0.47 != r386 "
+    "median 0.055.  von Mangoldt mean/qm=0.718 > equal 0.403 "
+    "(weights do NOT buy cosine cancellation).  KILL: mutant c_q=1 "
+    "rel=0.108; missing diag |Phi-off|/|off|=2.78; scramble holds "
+    "QM (mean/qm=0.947, HHI=0.007) and diverges at m=380,354,30 "
+    "(dies on the mu-OP remainder, not nu-Weyl).  Remaining: "
+    "Weyl energy of the mu-OP Chebyshev-coefficient Gram -- of "
+    "phi* (assist), of consecutive alpha_k (dDelta / C_eps), of "
+    "the edge-masked drive (Z_loc).  Companion "
+    "rh/problem/weyl_energy.tex + verify_weyl_energy.py 14/14 "
+    "WEYL ENERGY VERIFIED.  NO L* claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -2410,6 +2444,33 @@ ENTRIES = [
      [],
      "compiled PDF of delta_deformation.tex (recompiled "
      "artefact, registered unpinned)", False),
+    ("rh/problem/weyl_energy.tex", "problem_statement",
+     "r389 companion",
+     [],
+     "lemma-first attack on the Weyl energy of cancellation "
+     "after four majorant routes died (round 389): Chebyshev "
+     "energy, off=Phi-diag, Q^T as C_{2k} ratio, pi_k^2 Weyl "
+     "and finite-grid Parseval SATZ.  MAIN/chi at quadratic-mean; "
+     "two-period is a spectral comb (rho_AP=1).  FO^T closes "
+     "C_eps at QM; assist is not the Chebyshev all-ones energy; "
+     "Z_loc is not the Chebyshev x T_k^2 proxy.  Reduced to the "
+     "mu-OP Chebyshev-coefficient Gram.  Finite identities plus "
+     "a named reduction; NO RH claim",
+     True),
+    ("rh/problem/verify_weyl_energy.py", "problem_check",
+     "r389 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "weyl_energy.tex: standalone Fractions/trig/Parseval "
+     "(energy, off=Phi-diag, mutants, Q^T, S=21 Parseval) plus "
+     "construction pins (w9 energy/Parseval/QM/FO, wall assist, "
+     "two-period comb, scramble QM).  14/14 gates, final line "
+     "WEYL ENERGY VERIFIED", True),
+    ("rh/problem/weyl_energy.pdf", "problem_statement",
+     "r389 companion",
+     [],
+     "compiled PDF of weyl_energy.tex (recompiled "
+     "artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -2580,6 +2641,11 @@ ENTRIES = [
      "r388",
      [],
      _R388_STATUS,
+     True),
+    (f"{EXP}/weyl_energy_probe.py", "sealed_probe",
+     "r389",
+     [],
+     _R389_STATUS,
      True),
 ]
 

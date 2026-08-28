@@ -1976,6 +1976,36 @@
       "bytes": 240981
     },
     {
+      "path": "rh/problem/weyl_energy.tex",
+      "role": "problem_statement",
+      "round": "r389 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on the Weyl energy of cancellation after four majorant routes died (round 389): Chebyshev energy, off=Phi-diag, Q^T as C_{2k} ratio, pi_k^2 Weyl and finite-grid Parseval SATZ.  MAIN/chi at quadratic-mean; two-period is a spectral comb (rho_AP=1).  FO^T closes C_eps at QM; assist is not the Chebyshev all-ones energy; Z_loc is not the Chebyshev x T_k^2 proxy.  Reduced to the mu-OP Chebyshev-coefficient Gram.  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "e01ea4eebb3ce21112ae5bb5325082f0448e56cd8635ef19f6829f9cf5f257b1",
+      "bytes": 12499
+    },
+    {
+      "path": "rh/problem/verify_weyl_energy.py",
+      "role": "problem_check",
+      "round": "r389 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in weyl_energy.tex: standalone Fractions/trig/Parseval (energy, off=Phi-diag, mutants, Q^T, S=21 Parseval) plus construction pins (w9 energy/Parseval/QM/FO, wall assist, two-period comb, scramble QM).  14/14 gates, final line WEYL ENERGY VERIFIED",
+      "pin": true,
+      "sha256": "12261d39425ea2c240db2d3bb2cad96c3264d6d32772d92b0cbd6342ca4a2cc1",
+      "bytes": 7552
+    },
+    {
+      "path": "rh/problem/weyl_energy.pdf",
+      "role": "problem_statement",
+      "round": "r389 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of weyl_energy.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "c180e4cd3adc1c804c7a40348b3797a052289a596579d46d95c327f89f3cd109",
+      "bytes": 224703
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2150,8 +2180,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "5f2b992e4a530888184dd6b0a8cfca87a3518d8a4dfb82eac9f84d9243f1514a",
-      "bytes": 5353949
+      "sha256": "9567070ec151aa1636af03859abfc839b84db30cc3e5048bfeae34c5cb1be8d0",
+      "bytes": 5338081
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2362,6 +2392,16 @@
       "pin": true,
       "sha256": "df00d91eea7f8fe2d1f35e5a078c3ab92817da51587bd813dc9be0f4a5071722",
       "bytes": 21291
+    },
+    {
+      "path": "experiments/tfpt-discovery/weyl_energy_probe.py",
+      "role": "sealed_probe",
+      "round": "r389",
+      "ledger_ids": [],
+      "status": "Weyl energy of cancellation (round 389, LEMMA.WEYL_ENERGY.01, lemma-first; experiments-side, NO ledger row): 27/27 full / 19/19 smoke; SPEC_SHA c93fdc413980bf4a; identities, w9 energy/Parseval/spectrum/FO, scramble and two-period spectra, core-42 / EXT-heavy / chi3-42 tallies first measured in /tmp (tfpt_r389_cal.py, WALL 2.1 s) then sealed (disclosed calibration).  AUSGANG REDUZIERT.  SATZ: Chebyshev energy Phi=(1/pi)C0^2+(2/pi)Sigma_{m<k} C_m^2; off=Phi-diag with explicit v^2 Weyl diagonal; Q^T=(C0+C_{2k})_nu/(C0+C_{2k})_mu; pi_k^2 Weyl via Chebyshev coeffs; finite-grid Parseval Sigma_{q<2S} |S_q|^2 = 2S Sigma v^2 ratio=1 (S=21 and w9).  MAIN/chi at quadratic-mean (core-42 mean/qm in [0.661,1.018]; |C|/mass max <0.41 trivial Weyl, not PNT; HHI <0.12).  Two-period S=81 is a comb (|C_S|/mass=1, HHI=0.727) -- rho_AP=1 iff spectral concentration on a progression.  FO^T last-12=0.00496 and small-N max 0.01650 both <1/32: the Chebyshev piece of C_eps CLOSES at quadratic-mean; dDelta is the live remainder.  Assist is NOT the Chebyshev all-ones energy (1^T E^T 1 / n_nu=0.114 vs lam=0.99983; wall v otimes v off negative).  Z_loc Chebyshev proxy cancel=0.47 != r386 median 0.055.  von Mangoldt mean/qm=0.718 > equal 0.403 (weights do NOT buy cosine cancellation).  KILL: mutant c_q=1 rel=0.108; missing diag |Phi-off|/|off|=2.78; scramble holds QM (mean/qm=0.947, HHI=0.007) and diverges at m=380,354,30 (dies on the mu-OP remainder, not nu-Weyl).  Remaining: Weyl energy of the mu-OP Chebyshev-coefficient Gram -- of phi* (assist), of consecutive alpha_k (dDelta / C_eps), of the edge-masked drive (Z_loc).  Companion rh/problem/weyl_energy.tex + verify_weyl_energy.py 14/14 WEYL ENERGY VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "78b3ab0f338e832172500811324cbfa7ff493e9a472b2e5b561c52900d0fd89c",
+      "bytes": 25556
     }
   ]
 }

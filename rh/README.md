@@ -5116,6 +5116,36 @@ for the sibling).  Experiments-side, NO ledger row, NO L\* claim,
 NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r387 are parallel lemma-first / Lean lanes; this round is additive.
 
+**The Weyl energy of cancellation, reduced (r389, LEMMA.WEYL_ENERGY.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/weyl_energy_probe.py` (27/27
+full, 19/19 smoke, SPEC_SHA `c93fdc413980bf4a`) plus
+`rh/problem/weyl_energy.tex` (+ PDF +
+`verify_weyl_energy.py`, 14/14, `WEYL ENERGY VERIFIED`).
+**Ausgang REDUZIERT.**  SATZ: Chebyshev energy
+$\Phi=(1/\pi)C_0^2+(2/\pi)\sum_{m<k}C_m^2$; off $=\Phi-$diag;
+$Q^T=(C_0+C_{2k})_\nu/(C_0+C_{2k})_\mu$; $\pi_k^2$ Weyl;
+finite-grid Parseval $\sum_{q<2S}\lvert S_q\rvert^2=2S\sum v^2$
+(ratio $1$ on $S=21$ and $w=9$).  MAIN/$\chi$ at quadratic-mean
+(core-$42$ $\mathrm{mean}/\mathrm{qm}\in[0.661,1.018]$,
+$\lvert C\rvert/\mathrm{mass}$ max $<0.41$, HHI $<0.12$).
+Two-period $S=81$ is a comb ($\lvert C_S\rvert/\mathrm{mass}=1$,
+HHI $=0.727$) --- $\rho_{\mathrm{AP}}=1$ iff spectral concentration
+on a progression.  $\mathrm{FO}^T$ last-twelve $0.00496$ and
+small-$N$ max $0.01650$ both $<1/32$: the Chebyshev piece of
+$C_\varepsilon$ closes at quadratic-mean; $d\Delta$ is the live
+remainder.  Assist is not the Chebyshev all-ones energy
+($1^TE^T1/n_\nu=0.114$ vs $\lambda=0.99983$).  $Z_{\mathrm{loc}}$
+Chebyshev proxy cancel $0.47\neq$ r386 median $0.055$.
+Von Mangoldt $\mathrm{mean}/\mathrm{qm}=0.718>$ equal $0.403$.
+Scramble holds QM and diverges at $m=380,354,30$.  Remaining:
+Weyl energy of the $\mu$-OP Chebyshev-coefficient Gram --- of
+$\phi^*$ (assist), of consecutive $\alpha_k$ ($d\Delta$/$C_\varepsilon$),
+of the edge-masked drive ($Z_{\mathrm{loc}}$).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r388 are parallel lemma-first / Lean lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5279,6 +5309,10 @@ rh/
 │   │                     reduced; osc-Geronimus does not
 │   │                     close C_ε; R2 on μ-ref not dominated.
 │   │                     No RH claim
+│   ├── weyl_energy.tex(+pdf) — r389: Weyl energy of
+│   │                     cancellation reduced; Parseval SATZ;
+│   │                     FO^T closes at QM; assist/Z_loc remain.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5318,9 +5352,12 @@ rh/
 │   ├── verify_coherence_assist.py — machine check of
 │                         coherence_assist.tex (13/13,
 │                         COHERENCE ASSIST VERIFIED)
-│   └── verify_delta_deformation.py — machine check of
+│   ├── verify_delta_deformation.py — machine check of
 │                         delta_deformation.tex (13/13,
 │                         DELTA DEFORMATION VERIFIED)
+│   └── verify_weyl_energy.py — machine check of
+│                         weyl_energy.tex (14/14,
+│                         WEYL ENERGY VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5677,7 +5714,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r388 from
+2. **Sealed probes** — the campaign probes r250–r389 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6139,6 +6176,17 @@ does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
 this round: integrity + probes (`run_rh.py --fast --skip-lean`)
 after appending the probe and problem-document rows to the
 inventory.  r374--r387 are parallel lemma-first / Lean lanes
+and are not dropped.
+**r389 coexistence.** Round 389 (`weyl_energy.tex` +
+`weyl_energy_probe.py`) is additive on the cancellation lane
+after r381/r385/r387/r388 (lemma-first Weyl energy: Parseval SATZ,
+FO^T closes $C_\varepsilon$ at quadratic-mean; assist and
+$Z_{\mathrm{loc}}$ remain as $\mu$-OP Chebyshev-coefficient
+Weyl).  It does not touch `experiments/next.txt` and
+does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
+this round: integrity + probes (`run_rh.py --fast --skip-lean`)
+after appending the probe and problem-document rows to the
+inventory.  r374--r388 are parallel lemma-first / Lean lanes
 and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
