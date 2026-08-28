@@ -197,9 +197,69 @@ direction; the DCCX STOP list stands; r243..r368 stand;
 Mincut unchanged.
 
 RECORD TABLES (inserted AFTER the record run -- the only
-post-freeze edit; TWO-COMMIT PROTOCOL: sealed spec committed
-as "r369 pre-freeze" BEFORE the first full evaluation):
-(pending record run)
+post-freeze edit; TWO-COMMIT PROTOCOL EXECUTED: smoke 20/20
+x2 byte-identical; sealed spec committed as "r369 pre-freeze"
+(6ae366a2, SPEC_SHA freeze 5a4a20db973700ba) BEFORE the first
+full evaluation; calibration pass 1 = FIRST full evaluation =
+20/20 (29.2 s) ZERO amendments -- every gate passed at first
+evaluation, no bar/band/clause/J-form moved; record run1 =
+20/20 (29.2 s), run2 = 20/20 (28.9 s), byte-identical up to
+WALL; evaluation SPEC_SHA before this insert 5a4a20db973700ba):
+MAIN VERDICT = MIXED_UPDATE_EXACT(J = diag(1,1,1/den) from SM,
+residual <= 1e-10 on w9 + 10-row + chi3-w9 + kz15; Fractions
+exact; signature twin exact) + HAYNSWORTH_MIXED_SATZ(both
+readings, indefinite-J toy, Lean form haynsworth_mixed in
+the spec -- proof is R373) + PHI_LEDGER(w9 sigma (-2.813,
+-0.0665, 1.804); balance 10/10 sample; dichotomy P1-true 8
+vacuous 2; chi3-w9 vacuous class nnegPhi=1) + JSIG_CENSUS(
+sign(den)=+1 on 10/10 live sample rows -- empirical J_sig =
+I_3; the mixed-signature branch is G12 synthetic den<0, not
+MAIN) + MUSTFAIL_LEDGER.
+LEG A: the mixed form is a finite-matrix SATZ.  Derivation:
+R^dagger = blkdiag(R, 0) + (1/den)[s;-1][s;-1]^T (r362 A4)
+and R = R_{N-3} + u1 u1^T + u2 u2^T (r363), so M^dagger =
+blkdiag(A0,-1/2) + U J U^T with U the two CD columns plus
+the SM vector (s,-1) and J = diag(1,1,1/den) EXPLICIT, not
+fitted.  Fractions toy residual EXACT 0 (den = 23/30).
+Live residual <= 1.04e-14 on the 10-row sample (bar 1e-10);
+w9 1.9e-15, kz15 1.9e-15, chi3-w9 1.3e-15.  Signature twin
+(J_sig = diag(1,1,sign(den)), column 3 scaled) identical
+residual.  THE r367 WARNING IS RESOLVED AS A FORM: the
+border is not a third unaugmented CD column, but on the
+R^dagger level Sherman-Morrison DOES supply a third column
+with explicit J.  NO_LOWRANK_BOUNDARY_FORM does not fire.
+LEG B: generalized Haynsworth is a SATZ for arbitrary
+invertible symmetric J.  Fractions 4-node toy with
+INDEFINITE J = diag(1,1,-1): In(H)=(4,3,0) == In(A)+In(-Phi)
+== In(-J^{-1})+In(M) EXACT.  Lean form haynsworth_mixed in
+the spec header (LDL / Sylvester over R; not proved here;
+R373).  The r367 haynsworth_two_rank is the special case
+J = I_2.
+LEG C: Phi_N(0) = J^{-1} + U^T A^{-1} U live.  w9 sigma =
+(-2.8132, -0.06648, 1.8039) det 0.3374; the two LARGE
+eigenvalues TRACK r367 K2 (-2.7938, 1.8036), the small
+extra negative IS the border direction.  Signature balance
+In(A)+In(-Phi)==In(-J^{-1})+In(M^dagger) on 10/10 sample
+AND chi3-w9; positivity control (balance iff M PD) 10/10.
+DICHOTOMY: P1-true 8/10 have In(A) nneg=2 (A0's one
+negative PLUS the -1/2 pad) and In(Phi) nneg=2 (K2-pair +
+border); VACUOUS nnegA0=0 on kz42 and kz130 (2/10) have
+In(A) nneg=1 (pad only) -- the r367 P1_VACUOUS class in
+the 3x3 picture is one fewer A-negative; chi3-w9 additionally
+drops to In(Phi) nneg=1.  OVERLOAD nnegA0>=2 is 0/10.
+den in [1.460, 1.646] on the sample, all positive.
+LEG D: must-fails 4/4 (m1 J=I_3 fitted-scale residual 0.375
++ AST J_fit_col_true; m2 wrong sign 1.249 + Fractions
+exact; m3 two-rank Y-only 2.467e-3 + Fractions exact, the
+OTHER r367 balance; m4 AST lamRd_col_true).
+JSIG HONEST: empirical J_sig = I_3 on every live sample
+row (den>0, R^dagger_bb = 1/den > 0).  The mixed
+SIGNATURE of J is the FORM (SM decides the sign) plus the
+synthetic den<0 branch (G12, den = -17.326), not a Lorentz
+J on MAIN.  The mixed-NESS of the update on the family is
+A indefinite + Phi mixed.
+Runtime 29.2 / 28.9 s rec1/rec2; smoke 0.2 s.
+AMENDMENTS AFTER FREEZE: none.
 
 NO RH CLAIM IN EITHER DIRECTION.  NOT evidence for or against RH.
 """
