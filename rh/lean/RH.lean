@@ -3,6 +3,7 @@
 import RH.Basic
 import RH.Recursion
 import RH.Inertia
+import RH.Haynsworth
 import RH.Window
 import RH.Source
 import RH.Closure

@@ -119,6 +119,8 @@ the Riemann Hypothesis in either direction.  NO RH CLAIM.
 -/
 import RH.Source
 import Mathlib.Analysis.SpecialFunctions.Sqrt
+import Mathlib.Analysis.SpecialFunctions.Gamma.Digamma
+import Mathlib.Analysis.Complex.Trigonometric
 
 namespace RH
 
@@ -483,57 +485,107 @@ theorem comb_window_elementwise_stabilization (f : GridElement)
       _ _ (fun j => rfl)
   rw [hform, htsum]
 
-/-! ## The kernel channels: the named classical TODO as opaque reads
+/-! ## The kernel channels: transcribed kernels + opaque tent-reads
 
-The arch channel (the exact Weil archimedean kernel `arch_A` against
-the mesh tents -- GL-48 integrals, Python `core.arch_lags`) and the
-pole channel (the v716 closed form, `stage2.pole_lags_closed`) are
-CLASSICAL ANALYSIS whose Lean transcription does not exist yet (the
-documented TODO since r310).  The r326 decision: make them visible
-as OPAQUE constants (the r273/r320 opacity convention, extended from
-predicates to the two kernel reads), so that the elementwise
-statements about them are TYPED sorrys in the census instead of
-invisible gaps -- exactly the wave-12 reservation.  Eliminating the
-four opaque constants below = transcribing the two kernels; then the
-two sorrys become provable statements of classical quadrature (R325
-leg C measured the mechanism: interpolation-envelope-controlled
-defect, one-signed per channel, D² decay). -/
+r373: the closed-form *kernels* are now Lean objects
+(`weilArchKernel`, `polePotential`).  mathlib v4.29.1 carries
+`Complex.digamma = logDeriv Complex.Gamma` with the recurrence
+`digamma (s+1) = digamma s + s⁻¹` and the values at `0, 1, 1/2`;
+there is NO `Real.digamma`, NO Gauss integral (mathlib TODO on
+`Digamma.lean`), and NO ψ-monotonicity.  The tent-reads
+`archRead`/`poleRead` and the Weil-side pairings
+`weilArchSide`/`weilPoleSide` remain opaque: identifying a tent
+read with a kernel pairing is classical quadrature (R325 S1;
+Titchmarsh Ch. X; Weil 1952).  The two stabilization sorrys
+below are exactly that remaining identification, now stated
+against named kernels. -/
+
+/-- Archimedean digamma factor on the critical line (Titchmarsh,
+*The Theory of the Riemann Zeta-Function*, 2nd ed. (1986), Chapter X;
+Weil, *Sur les «formules explicites» de la théorie des nombres
+premiers*, Comm. Math. Helv. 26 (1952)). -/
+noncomputable def weilArchDigamma (t : ℝ) : ℂ :=
+  Complex.digamma ((1 / 4 : ℂ) + Complex.I * t / (2 * Real.pi))
+
+/-- Even combination of the archimedean digamma factor.  Dictionary
+kernel; not yet paired against mesh tents. -/
+noncomputable def weilArchKernel (t : ℝ) : ℝ :=
+  (weilArchDigamma t + weilArchDigamma (-t)).re
+
+theorem weilArchKernel_even (t : ℝ) :
+    weilArchKernel (-t) = weilArchKernel t := by
+  simp [weilArchKernel, add_comm]
+
+/-- v716 closed form of the polar contribution as a function of lag:
+`Π(t) = −8 (cosh(|t|/2) − 1)` (Python `stage2.pole_lags_closed`;
+elementary hyperbolic identity, no ζ). -/
+noncomputable def polePotential (t : ℝ) : ℝ :=
+  -8 * (Real.cosh (|t| / 2) - 1)
+
+theorem polePotential_zero : polePotential 0 = 0 := by
+  simp [polePotential, Real.cosh_zero]
+
+theorem polePotential_even (t : ℝ) : polePotential (-t) = polePotential t := by
+  simp [polePotential, abs_neg]
+
+theorem polePotential_eq_cosh (t : ℝ) :
+    polePotential t = -8 * (Real.cosh (t / 2) - 1) := by
+  simp [polePotential]
+  have : Real.cosh (|t| / 2) = Real.cosh (t / 2) := by
+    rcases le_total 0 t with h | h
+    · rw [abs_of_nonneg h]
+    · rw [abs_of_nonpos h, neg_div, Real.cosh_neg]
+  rw [this]
+
+theorem polePotential_nonpos (t : ℝ) : polePotential t ≤ 0 := by
+  rw [polePotential_eq_cosh]
+  have hc : 0 < Real.cosh (t / 2) := Real.cosh_pos _
+  have hsq : 1 ≤ Real.cosh (t / 2) ^ 2 := by
+    rw [Real.cosh_sq]
+    nlinarith [sq_nonneg (Real.sinh (t / 2))]
+  have : 1 ≤ Real.cosh (t / 2) := by nlinarith
+  nlinarith
 
 /-- the archimedean kernel read of a grid element at the canonical
 window (anchor, mesh level) -- Python
-`read_lags(arch_lags(M, D), D, F)`.  OPAQUE: the exact kernel is the
-named classical TODO. -/
+`read_lags(arch_lags(M, D), D, F)`.  OPAQUE: tent-quadrature of
+`weilArchKernel` (Titchmarsh Ch. X; R325 S1 mesh-constancy 1.5e-15). -/
 opaque archRead : ℕ → ℕ → GridElement → ℝ
 
-/-- the pole-channel read (v716 closed form).  OPAQUE: named
-classical TODO. -/
+/-- the pole-channel read (v716 closed form).  OPAQUE: tent-quadrature
+of `polePotential` (R325 S1 mesh-constancy 2.0e-17). -/
 opaque poleRead : ℕ → ℕ → GridElement → ℝ
 
 /-- the archimedean side of the Weil form of a grid element (the
-exact kernel integral).  OPAQUE: named classical TODO. -/
+exact kernel integral against `weilArchKernel`).  OPAQUE: named
+classical pairing TODO. -/
 opaque weilArchSide : GridElement → ℝ
 
-/-- the pole side of the Weil form of a grid element.  OPAQUE: named
-classical TODO. -/
+/-- the pole side of the Weil form of a grid element (pairing against
+`polePotential`).  OPAQUE: named classical pairing TODO. -/
 opaque weilPoleSide : GridElement → ℝ
 
 /-- **the arch-channel elementwise stabilization** (r326 -- documented
-`sorry` no. 1 of this file; type: CLASSICAL, S2).  The archimedean
-read of the canonical windows stabilizes finitely in the anchor
-direction and is constant at native-or-finer mesh -- R325 S1
-measured this EXACTLY on the sealed native class (onset at the
-predicted `α*`, mesh constancy 1.5e-15); the proof is classical
-kernel quadrature on the piecewise-linear class (the tent reads
-reproduce the kernel integral exactly on native elements) and
-requires the `arch_A` transcription first. -/
+`sorry` no. 1 of this file; type: CLASSICAL, S2).  Remaining hole,
+stated against the transcribed kernel `weilArchKernel`: the tent-read
+`archRead` equals the Weil pairing `weilArchSide` at native-or-finer
+mesh past a finite anchor onset.  Classical ingredients not in
+mathlib v4.29.1: Gauss's integral for `digamma` (mathlib TODO on
+`Digamma.lean`), `Real.digamma`, and ψ-monotonicity; the dictionary
+form is Titchmarsh, *The Theory of the Riemann Zeta-Function*, 2nd ed.,
+Ch. X, and Weil 1952.  R325 S1 measured exactness on the native class
+(onset `α*`, mesh constancy 1.5e-15). -/
 theorem arch_elementwise_stabilization (f : GridElement) :
     ∃ a₀ : ℕ, ∀ a : ℕ, a₀ ≤ a → ∀ m : ℕ, f.meshExp ≤ m →
       archRead a m f = weilArchSide f := by
   sorry
 
 /-- **the pole-channel elementwise stabilization** (r326 -- documented
-`sorry` no. 2 of this file; type: CLASSICAL, S2).  Same statement for
-the v716 pole closed form (R325 S1: mesh constancy 2.0e-17). -/
+`sorry` no. 2 of this file; type: CLASSICAL, S2).  Remaining hole,
+stated against the transcribed kernel `polePotential` (closed form
+PROVED even/zero/nonpositive above): tent-read `poleRead` equals the
+Weil pairing `weilPoleSide`.  Classical quadrature on the PL class
+(R325 S1: 2.0e-17); no ζ. -/
 theorem pole_elementwise_stabilization (f : GridElement) :
     ∃ a₀ : ℕ, ∀ a : ℕ, a₀ ≤ a → ∀ m : ℕ, f.meshExp ≤ m →
       poleRead a m f = weilPoleSide f := by

@@ -5166,6 +5166,12 @@ sorry-free; `#print axioms` = `propext/Classical.choice/Quot.sound`
 only). Census **8** by the ONE named transcription
 `augmentedSubordination_iff_dualResolvent` (window L† ↔ the node-Gram
 cone; same class as `pair_terminal_dictionary`).  NO RH CLAIM.
+**r373 transcription round.** `RH/Haynsworth.lean` (two-rank J=I₂ and
+mixed J-form, sorry-free) and the DualResolvent bridge
+`augmentedSubordination_iff_dualResolvent` (μ-ONB Gram whitening,
+sorry-free). Census **8 → 7**. Arch/pole kernels named
+(`weilArchKernel`, `polePotential`); the two stabilization sorrys
+remain (tent-read = pairing).  NO RH CLAIM.
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
@@ -5723,7 +5729,9 @@ unclaimed. NO RH CLAIM.
       `L† ⟺ R† ≻ ½I` is kernel-checked as `I−G† ≻ 0 ⟺ R† ≻ ½I`
       (`RH/DualResolvent.lean`, sorry-free A2/A3/A4/A5/A7-min); census
       7 → 8 by the named window↔matrix transcription
-      `augmentedSubordination_iff_dualResolvent`.  The two
+      `augmentedSubordination_iff_dualResolvent`.  **r373:** that
+      bridge is PROVED (μ-ONB whitening); Haynsworth two-rank/mixed
+      PROVED; census 8 → 7.  The two
       window-local gaps themselves stay OPEN
       (`PRIME.LSTAR.SUBORDINATION.01`,
       `PRIME.PORT.COUPLEDTAU.TERMINAL_CROSSRATIO.01` — both [O],

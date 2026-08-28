@@ -120,6 +120,60 @@ entries are exact-rational casts). -/
 def hankel (n : ℕ) : Matrix (Fin n) (Fin n) ℝ :=
   fun i k => ((w.mom ((i : ℕ) + (k : ℕ)) : ℚ) : ℝ)
 
+/-- comb-channel moments `Σ_j μ_j x_j^n` (the μ-Gram generating function). -/
+def combMom (n : ℕ) : ℚ := ∑ j, w.combWeight j * w.nodes j ^ n
+
+/-- arch-channel moments `Σ_j ν_j x_j^n` (the ν-Gram generating function). -/
+def archMom (n : ℕ) : ℚ := ∑ j, w.archWeight j * w.nodes j ^ n
+
+/-- μ-Hankel (comb Gram in the monomial basis). -/
+def combHankel (n : ℕ) : Matrix (Fin n) (Fin n) ℝ :=
+  fun i k => ((w.combMom ((i : ℕ) + (k : ℕ)) : ℚ) : ℝ)
+
+/-- ν-Hankel (arch Gram in the monomial basis). -/
+def archHankel (n : ℕ) : Matrix (Fin n) (Fin n) ℝ :=
+  fun i k => ((w.archMom ((i : ℕ) + (k : ℕ)) : ℚ) : ℝ)
+
+/-- node-evaluation matrix: row `j` (node), column `i` (power `x_j^i`).
+The finite evaluation map `ℝ[x]_{<n} → ℝ^S`. -/
+def nodeVand (n : ℕ) : Matrix (Fin w.S) (Fin n) ℝ :=
+  fun j i => ((w.nodes j : ℚ) : ℝ) ^ (i : ℕ)
+
+theorem mom_eq_comb_sub_arch (n : ℕ) :
+    w.mom n = w.combMom n - w.archMom n := by
+  simp [mom, combMom, archMom, weight, sub_mul, Finset.sum_sub_distrib]
+
+theorem hankel_eq_comb_sub_arch (n : ℕ) :
+    w.hankel n = w.combHankel n - w.archHankel n := by
+  ext i k
+  simp [hankel, combHankel, archHankel, mom_eq_comb_sub_arch]
+
+theorem combHankel_eq_vand (n : ℕ) :
+    w.combHankel n =
+      (w.nodeVand n)ᵀ * diagonal (fun j => ((w.combWeight j : ℚ) : ℝ)) *
+        w.nodeVand n := by
+  ext i k
+  rw [Matrix.mul_apply]
+  simp only [Matrix.mul_diagonal, Matrix.transpose_apply, nodeVand, combHankel,
+    combMom]
+  push_cast
+  refine Finset.sum_congr rfl fun j _ => ?_
+  rw [pow_add]
+  ring
+
+theorem archHankel_eq_vand (n : ℕ) :
+    w.archHankel n =
+      (w.nodeVand n)ᵀ * diagonal (fun j => ((w.archWeight j : ℚ) : ℝ)) *
+        w.nodeVand n := by
+  ext i k
+  rw [Matrix.mul_apply]
+  simp only [Matrix.mul_diagonal, Matrix.transpose_apply, nodeVand, archHankel,
+    archMom]
+  push_cast
+  refine Finset.sum_congr rfl fun j _ => ?_
+  rw [pow_add]
+  ring
+
 /-- the border Cauchy readout `F_k` (corpus: the border column expressed
 in the monic orthogonal-polynomial basis of the window; the structure
 carries it as the border vector `u`). -/

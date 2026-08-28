@@ -11,7 +11,8 @@ holes (`lstar_canonical`, `terminal_q_canonical` -- both entering as
 each individually typed at its statement), and the three standard
 mathlib axioms `propext`, `Classical.choice`, `Quot.sound`.  The
 sorry-free layer (the reconstruction theorem, the L† equivalences,
-`crossing_budget`) must show the three standard axioms ONLY -- in
+`crossing_budget`, the r373 Haynsworth theorems, the r373 dual-resolvent
+bridge) must show the three standard axioms ONLY -- in
 particular NO `sorryAx`: machine-checkable freedom from hidden holes.
 
 NOTE on `#print axioms` granularity: Lean reports `sorryAx` once,
@@ -28,6 +29,8 @@ the Riemann Hypothesis in either direction.  NO RH CLAIM.
 -/
 import RH.Canonical
 import RH.DualResolvent
+import RH.Haynsworth
+import RH.Elementwise
 
 namespace RH
 
@@ -81,18 +84,18 @@ two arithmetic holes and never `SourceExact`/`MainWindow`. -/
 
 #print axioms weil_nonneg_of_windowlocal
 
-/-! ## (e) The r362 dual-resolvent layer (reviewer priority 2)
-Sorry-free finite algebra, expected AND MEASURED:
+/-! ## (e) The r362/r373 dual-resolvent layer (reviewer priority 2)
+Sorry-free finite algebra AND the window bridge, expected AND MEASURED:
 `[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`:
   * `RH.posDef_one_sub_iff_dualResolvent_gt_half` (r356-A / A2)
   * `RH.posDef_one_sub_borderedGram_iff_augDualResolvent` (A3)
   * `RH.posDef_one_sub_borderedGram_iff_qDagger` (A5)
   * `RH.augDualResolvent_fromBlocks` (A4 Sherman–Morrison)
   * `RH.augDualResolvent_gt_smul_implies_dualResolvent` (A7-min)
-The ONE named transcription sorry, expected AND MEASURED:
-`[propext, sorryAx, Classical.choice, Quot.sound]`:
-  * `RH.augmentedSubordination_iff_dualResolvent` -- census 7 → 8,
-    type MEASURED DICTIONARY / transcription-blocked.  NO RH CLAIM. -/
+  * `RH.augmentedSubordination_iff_dualResolvent` -- r373: the μ-ONB
+    Gram transcription `RepresentsLEnsemble` is a real Prop (whitening
+    equations, R319); the iff is congruence of `A_cap` onto `I − G†`
+    then A3.  Census 8 → 7.  NO RH CLAIM. -/
 
 #print axioms posDef_one_sub_iff_dualResolvent_gt_half
 #print axioms posDef_one_sub_borderedGram_iff_augDualResolvent
@@ -100,5 +103,24 @@ The ONE named transcription sorry, expected AND MEASURED:
 #print axioms augDualResolvent_fromBlocks
 #print axioms augDualResolvent_gt_smul_implies_dualResolvent
 #print axioms augmentedSubordination_iff_dualResolvent
+
+/-! ## (f) The r373 Haynsworth layer (reviewer goal 1)
+Expected AND MEASURED: `[propext, Classical.choice, Quot.sound]` --
+NO `sorryAx`.  Finite real algebra; does not assert r367 P1/P2 on
+any window. -/
+
+#print axioms haynsworth_two_rank
+#print axioms haynsworth_mixed
+#print axioms haynsworth_sigNeg_₁₁
+#print axioms haynsworth_sigNeg_₂₂
+
+/-! ## (g) r373 kernel objects (reviewer goals 3–4)
+Expected AND MEASURED: `[propext, Classical.choice, Quot.sound]` --
+NO `sorryAx` on the transcribed closed forms.  The two stabilization
+sorrys remain in (d). -/
+
+#print axioms polePotential_even
+#print axioms polePotential_eq_cosh
+#print axioms weilArchKernel_even
 
 end RH

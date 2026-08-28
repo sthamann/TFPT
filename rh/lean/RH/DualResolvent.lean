@@ -22,14 +22,18 @@ PROVED (sorry-free):
                 (mathlib `invOf_fromBlocks₁₁_eq` specialized)
   (A5)          I − G† ≻ 0 ⟺ q† < 1, given I−E ≻ 0
   (A7-min)      R† ≻ αI ⟹ R ≻ αI
+  (r373 bridge) L† ⟺ R† ≻ ½I under the μ-ONB whitening
+                `RepresentsLEnsemble`
 
 NAMED, NOT ASSERTED: `CauchyInterlace` (classical A7; mathlib v4.29.1
 has no min-max / interlacing lemma).
 
-ONE NEW SORRY (census 7 → 8):
-  `augmentedSubordination_iff_dualResolvent` -- transcription of the
-  window L† form onto the node-Gram cone.  Matrix identity proved;
-  the OP/CD/L-ensemble change of basis is the named dictionary.
+r373: `RepresentsLEnsemble` is the μ-ONB Gram transcription (not an
+opaque marker): `E = Qᵀ ν Q` in a frame with `Qᵀ μ Q = I`,
+`v = −Qᵀ u / √B`, `γ = 0`, size `n = cap`.  The bridge
+`augmentedSubordination_iff_dualResolvent` is PROVED as finite
+algebra (congruence of `A_cap` onto `I − G†`, then A3).  R319: the
+Prop is the whitening equations, not the cone-iff itself.
 
 Claim boundary: research documentation.  NO RH CLAIM.
 -/
@@ -41,6 +45,7 @@ import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
 import Mathlib.LinearAlgebra.Matrix.PosDef
 import Mathlib.LinearAlgebra.Matrix.SchurComplement
 import Mathlib.Data.Real.StarOrdered
+import Mathlib.Analysis.SpecialFunctions.Pow.Real
 
 namespace RH
 
@@ -456,33 +461,202 @@ def CauchyInterlace : Prop :=
     hP.eigenvalues₀ (Fin.cast (Fintype.card_fin p).symm k) ≥
       hA.eigenvalues₀ (Fin.cast (Fintype.card_fin (p + 1)).symm k.succ)
 
-/-! ## The window bridge -- the ONE named sorry of this file -/
+/-! ## Congruence invariance of PosDef (both directions) -/
 
-/-- Opaque: `(E, v, γ)` is the node-side L-ensemble / CD transcription
-of the window `w` (r356 `dual_rung` + r362 `aug_rung`).  Elimination =
-the OP / CD / L-ensemble transcription. -/
-opaque RepresentsLEnsemble (w : VonMangoldtWindow) (n : ℕ)
-    (E : Matrix (Fin n) (Fin n) ℝ) (v : Fin n → ℝ) (γ : ℝ) : Prop
+lemma posDef_congruence_iff (S P : Matrix n n ℝ) (hP : IsUnit P.det) :
+    S.PosDef ↔ (Pᵀ * S * P).PosDef := by
+  have hinj : Function.Injective P.mulVec :=
+    P.mulVec_injective_iff_isUnit.mpr ((isUnit_iff_isUnit_det P).mpr hP)
+  constructor
+  · intro hS
+    have hpd := hS.conjTranspose_mul_mul_same hinj
+    rwa [conjTranspose_eq_transpose_of_trivial] at hpd
+  · intro hPAP
+    haveI : Invertible P := P.invertibleOfIsUnitDet hP
+    haveI : Invertible P⁻¹ := Invertible.copy (invertibleInvOf (a := P)) P⁻¹
+      (by rw [invOf_eq_nonsing_inv])
+    have hinj' : Function.Injective P⁻¹.mulVec :=
+      P⁻¹.mulVec_injective_iff_isUnit.mpr
+        ((isUnit_iff_isUnit_det _).mpr (isUnit_det_of_invertible P⁻¹))
+    have hPP : P * P⁻¹ = 1 := Matrix.mul_nonsing_inv P hP
+    have hrew : (P⁻¹)ᵀ * (Pᵀ * S * P) * P⁻¹ = S := by
+      calc (P⁻¹)ᵀ * (Pᵀ * S * P) * P⁻¹
+          = ((P⁻¹)ᵀ * Pᵀ) * S * (P * P⁻¹) := by simp [mul_assoc]
+        _ = (P * P⁻¹)ᵀ * S * (P * P⁻¹) := by rw [transpose_mul]
+        _ = (1 : Matrix n n ℝ)ᵀ * S * 1 := by rw [hPP]
+        _ = S := by simp
+    rw [← hrew]
+    have hpd := hPAP.conjTranspose_mul_mul_same hinj'
+    rwa [conjTranspose_eq_transpose_of_trivial] at hpd
 
-/-- **THE r362 BRIDGE** (ONE named `sorry`, transcription-blocked):
-on a window whose node Gram is the transcribed `(E, v, γ)`, L† is
-the dual-resolvent cone `R† ≻ ½I`.
+/-! ## The window bridge -- μ-ONB Gram transcription (r373, PROVED) -/
+
+/-- `(E, v, γ)` is the node-side L-ensemble / CD transcription of the
+window `w` in a μ-orthonormal monomial frame of size `n = cap`
+(r356 `dual_rung` + r362 `aug_rung` + r373 transcription round).
+
+R319: this is the whitening *equations*, not the cone-iff.  `Q` is a
+μ-ONB change of basis (`Qᵀ (combHankel n) Q = I`); `E` is the ν-Gram
+in that frame; the border is D=I gauged by `1/√B`; `γ = 0`. -/
+def RepresentsLEnsemble (w : VonMangoldtWindow) (n : ℕ)
+    (E : Matrix (Fin n) (Fin n) ℝ) (v : Fin n → ℝ) (γ : ℝ) : Prop :=
+  n = w.cap ∧
+    0 < ((w.B : ℚ) : ℝ) ∧
+    ∃ Q : Matrix (Fin n) (Fin n) ℝ, IsUnit Q.det ∧
+      Qᵀ * w.combHankel n * Q = 1 ∧
+      E = Qᵀ * w.archHankel n * Q ∧
+      v = -((1 / Real.sqrt ((w.B : ℚ) : ℝ)) • (Qᵀ *ᵥ w.borderVec n)) ∧
+      γ = 0
+
+lemma transpose_borderCorner (γ : ℝ) :
+    (borderCorner γ)ᵀ = borderCorner γ := by
+  ext ⟨⟩ ⟨⟩; rfl
+
+lemma A_eq_bordered (w : VonMangoldtWindow) (p : ℕ) :
+    w.A p = fromBlocks (w.hankel p)
+      (borderCol (n := Fin p) (w.borderVec p))
+      (borderRow (n := Fin p) (w.borderVec p))
+      (borderCorner ((w.B : ℚ) : ℝ)) :=
+  rfl
+
+lemma mul_borderCol {p : ℕ} (M : Matrix (Fin p) (Fin p) ℝ) (x : Fin p → ℝ) :
+    M * borderCol (n := Fin p) x = borderCol (n := Fin p) (M *ᵥ x) := by
+  ext i ⟨⟩
+  simp [borderCol, mulVec, Matrix.mul_apply, dotProduct]
+
+lemma borderCol_mul_corner {p : ℕ} (x : Fin p → ℝ) (σ : ℝ) :
+    borderCol (n := Fin p) x * borderCorner σ =
+      borderCol (n := Fin p) (σ • x) := by
+  ext i ⟨⟩
+  simp [borderCol, borderCorner, Matrix.mul_apply, smul_eq_mul, mul_comm]
+
+lemma muWhiteningBlock_transpose {p : ℕ}
+    (Q : Matrix (Fin p) (Fin p) ℝ) (σ : ℝ) :
+    (fromBlocks Q (0 : Matrix (Fin p) Unit ℝ) (0 : Matrix Unit (Fin p) ℝ)
+      (borderCorner σ))ᵀ =
+      fromBlocks Qᵀ (0 : Matrix (Fin p) Unit ℝ) (0 : Matrix Unit (Fin p) ℝ)
+        (borderCorner σ) := by
+  rw [fromBlocks_transpose, transpose_zero, transpose_zero,
+    transpose_borderCorner]
+
+lemma muWhiteningBlock_det {p : ℕ}
+    (Q : Matrix (Fin p) (Fin p) ℝ) (σ : ℝ) :
+    (fromBlocks Q (0 : Matrix (Fin p) Unit ℝ) (0 : Matrix Unit (Fin p) ℝ)
+      (borderCorner σ)).det = Q.det * σ := by
+  rw [det_fromBlocks_zero₂₁]
+  simp [borderCorner, Matrix.det_unique]
+
+/-- The μ-ONB block `S = diag(Q, σ)` conjugates `A_n` onto `I − G†`. -/
+lemma muWhitening_congruence {p : ℕ}
+    (w : VonMangoldtWindow) (Q : Matrix (Fin p) (Fin p) ℝ) (σ : ℝ)
+    (hQ : Qᵀ * w.combHankel p * Q = 1)
+    (hσB : σ * σ * ((w.B : ℚ) : ℝ) = 1) :
+    let E := Qᵀ * w.archHankel p * Q
+    let vv : Fin p → ℝ := -(σ • (Qᵀ *ᵥ w.borderVec p))
+    let S := fromBlocks Q (0 : Matrix (Fin p) Unit ℝ)
+      (0 : Matrix Unit (Fin p) ℝ) (borderCorner σ)
+    Sᵀ * w.A p * S =
+      (1 : Matrix (Fin p ⊕ Unit) (Fin p ⊕ Unit) ℝ) -
+        borderedGram (n := Fin p) E vv 0 := by
+  intro E vv S
+  have hH : Qᵀ * w.hankel p * Q = (1 : Matrix (Fin p) (Fin p) ℝ) - E := by
+    simp only [E]
+    rw [w.hankel_eq_comb_sub_arch, Matrix.mul_sub, Matrix.sub_mul, hQ]
+  have hcol :
+      Qᵀ * borderCol (n := Fin p) (w.borderVec p) * borderCorner σ =
+        borderCol (n := Fin p) (-vv) := by
+    rw [mul_borderCol, borderCol_mul_corner]
+    simp [vv]
+  have hrow :
+      borderCorner σ * borderRow (n := Fin p) (w.borderVec p) * Q =
+        borderRow (n := Fin p) (-vv) := by
+    ext ⟨⟩ j
+    simp [borderRow, borderCorner, vv, Matrix.mul_apply, mulVec, smul_eq_mul,
+      dotProduct, mul_left_comm, mul_comm, Finset.mul_sum]
+  have hcorner :
+      borderCorner σ * borderCorner ((w.B : ℚ) : ℝ) * borderCorner σ =
+        (1 : Matrix Unit Unit ℝ) := by
+    ext ⟨⟩ ⟨⟩
+    simp [borderCorner, Matrix.mul_apply, Matrix.one_apply]
+    linarith
+  have hSTAS :
+      Sᵀ * w.A p * S =
+        fromBlocks (Qᵀ * w.hankel p * Q)
+          (Qᵀ * borderCol (n := Fin p) (w.borderVec p) * borderCorner σ)
+          (borderCorner σ * borderRow (n := Fin p) (w.borderVec p) * Q)
+          (borderCorner σ * borderCorner ((w.B : ℚ) : ℝ) * borderCorner σ) := by
+    rw [muWhiteningBlock_transpose, A_eq_bordered]
+    simp only [S]
+    rw [fromBlocks_multiply]
+    simp [fromBlocks_multiply]
+  have h1 : (1 : Matrix Unit Unit ℝ) = borderCorner (1 - (0 : ℝ)) := by
+    ext ⟨⟩ ⟨⟩
+    simp [borderCorner, Matrix.one_apply]
+  have hnegv :
+      borderCol (n := Fin p) (-vv) = borderCol (n := Fin p) (fun i => -vv i) ∧
+      borderRow (n := Fin p) (-vv) = borderRow (n := Fin p) (fun i => -vv i) := by
+    constructor <;> (ext x y; simp [borderCol, borderRow, Pi.neg_apply])
+  rw [hSTAS, hH, hcol, hrow, hcorner, one_sub_borderedGram_fromBlocks, h1,
+    hnegv.1, hnegv.2]
+
+lemma augmentedSubordination_iff_A_cap (w : VonMangoldtWindow) :
+    AugmentedSubordination w ↔ (w.A w.cap).PosDef := by
+  rw [augmentedSubordination_iff_masterCap]
+  constructor
+  · intro h; exact h w.cap le_rfl
+  · intro hAcap p hp
+    rw [A_eq_submatrix_A_cap w hp]
+    exact posDef_submatrix_of_injective hAcap
+      ((Fin.castLE_injective hp).sumMap Function.injective_id)
+
+/-- **THE r362/r373 BRIDGE** (PROVED): on a window whose node Gram is
+the transcribed `(E, v, γ)`, L† is the dual-resolvent cone `R† ≻ ½I`.
 
 The finite-algebra identity `I − G† ≻ 0 ↔ R† ≻ ½I` is
 `posDef_one_sub_borderedGram_iff_augDualResolvent` (PROVED).  L† ↔
-`A_cap ≻ 0` is `augmentedSubordination_iff_masterCap` (PROVED).
-This sorry is ONLY the identification of the window's L† quadratic
-form with `I − G†` in the mu-orthonormal frame.  Type: MEASURED
-DICTIONARY / transcription-blocked, same class as
-`pair_terminal_dictionary`.  Census 7 → 8.  NO RH CLAIM. -/
+`A_cap ≻ 0` is `augmentedSubordination_iff_masterCap` (PROVED).  The
+identification of the window's L† quadratic form with `I − G†` in the
+μ-orthonormal frame is the `RepresentsLEnsemble` whitening (the
+evaluation-Gram / Vandermonde factorization is
+`combHankel_eq_vand` / `archHankel_eq_vand` in `RH/Window.lean`).
+NO RH CLAIM. -/
 theorem augmentedSubordination_iff_dualResolvent
     (w : VonMangoldtWindow) (n : ℕ)
     (E : Matrix (Fin n) (Fin n) ℝ) (v : Fin n → ℝ) (γ : ℝ)
-    (_hrep : RepresentsLEnsemble w n E v γ)
+    (hrep : RepresentsLEnsemble w n E v γ)
     (hZ : (dualZ E v γ).PosDef) :
     AugmentedSubordination w ↔
       (augDualResolvent E v γ
         - (1 / 2 : ℝ) • (1 : Matrix (Fin n ⊕ Unit) (Fin n ⊕ Unit) ℝ)).PosDef := by
-  sorry
+  rcases hrep with ⟨hncap, hB, Q, hQunit, hQμ, hE, hv, hγ⟩
+  subst hncap
+  subst hγ
+  subst hE
+  subst hv
+  set σ : ℝ := 1 / Real.sqrt ((w.B : ℚ) : ℝ)
+  have hσpos : 0 < σ := by
+    unfold σ
+    positivity
+  have hσB : σ * σ * ((w.B : ℚ) : ℝ) = 1 := by
+    unfold σ
+    have hne : Real.sqrt ((w.B : ℚ) : ℝ) ≠ 0 :=
+      (Real.sqrt_pos.mpr hB).ne'
+    field_simp [hne]
+    exact (Real.sq_sqrt hB.le).symm
+  set S := fromBlocks Q (0 : Matrix (Fin w.cap) Unit ℝ)
+    (0 : Matrix Unit (Fin w.cap) ℝ) (borderCorner σ)
+  have hcong := muWhitening_congruence (p := w.cap) w Q σ hQμ hσB
+  have hSunit : IsUnit S.det := by
+    rw [muWhiteningBlock_det]
+    exact hQunit.mul (isUnit_iff_ne_zero.mpr hσpos.ne')
+  have hAiff :
+      (w.A w.cap).PosDef ↔
+        ((1 : Matrix (Fin w.cap ⊕ Unit) (Fin w.cap ⊕ Unit) ℝ) -
+          borderedGram (n := Fin w.cap) (Qᵀ * w.archHankel w.cap * Q)
+            (-(σ • (Qᵀ *ᵥ w.borderVec w.cap))) 0).PosDef := by
+    rw [posDef_congruence_iff (n := Fin w.cap ⊕ Unit) (w.A w.cap) S hSunit]
+    rw [hcong]
+  rw [augmentedSubordination_iff_A_cap, hAiff,
+    posDef_one_sub_borderedGram_iff_augDualResolvent (n := Fin w.cap) hZ]
 
 end RH
