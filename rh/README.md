@@ -5176,6 +5176,30 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r389 are parallel lemma-first / Lean lanes; this round is additive.
 
+**Construction-pure $(R)$ and $(L)$ (r391, LEMMA.CONSTRUCTION_PURE.RL.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/construction_pure_rl_probe.py` (23/23
+full, 15/15 smoke, SPEC_SHA `6699da51c8546495`) plus
+`rh/problem/construction_rl.tex` (+ PDF +
+`verify_construction_rl.py`, 17/17, `CONSTRUCTION PURE RL VERIFIED`).
+Two letters.  **$(R)$ REDUZIERT** to the white-block class with
+census $K=4$ (CORE-42 max $B_\Sigma/D=2.8196$ at kz$19$;
+$\chi_3$-42 max $2.746$; $R$-star kz$37$ $2.975<4$).
+Independent weight-rand at frozen fold geometry HOLDS;
+positive alignment $P_\omega\approx P_\beta$ BREAKS ($a=0.3$
+already $>4$, $a\to 1$ unbounded).  Superblock Gershgorin is
+REFUTED as a SATZ (fully-DD only $4/42$).  Geometry kill is
+DC/sign-flatten, not merged folds.  **$(L)$ REDUZIERT:**
+CORE-42 $L_1$ slope $+0.202<1/4$; CS counting is SATZ but
+tautological with $n_{\mathrm{eff}}\sim m$; DC $L_1=m$ kills
+field-independent $\gamma<1/4$; the von Mangoldt triangle still
+does not close.  COMPOSE$^-$ still needs $(Z')$, $M_3\le\phi$,
+Dict, and the two census envelopes.  r389 Weyl energy owns the
+signed objects (assist, $C_\varepsilon$, $Z_{\mathrm{loc}}$),
+not $(R)(L)$.  Experiments-side, NO ledger row, NO L\* claim,
+NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r390 are parallel lemma-first / Lean lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5347,6 +5371,10 @@ rh/
 │   │                     F_ε ∧ W_ε; occupied-Fejér already
 │   │                     in |γ−1/4|; not construction-pure.
 │   │                     No RH claim
+│   ├── construction_rl.tex(+pdf) — r391: construction-pure
+│   │                     (R)(L) reduced to the white-block
+│   │                     class; block-Gershgorin refuted.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5392,9 +5420,12 @@ rh/
 │   ├── verify_weyl_energy.py — machine check of
 │                         weyl_energy.tex (14/14,
 │                         WEYL ENERGY VERIFIED)
-│   └── verify_g_eps_mu.py — machine check of
+│   ├── verify_g_eps_mu.py — machine check of
 │                         g_eps_mu.tex (13/13,
 │                         G_EPS_MU LEMMA VERIFIED)
+│   └── verify_construction_rl.py — machine check of
+│                         construction_rl.tex (17/17,
+│                         CONSTRUCTION PURE RL VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5751,7 +5782,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r390 from
+2. **Sealed probes** — the campaign probes r250–r391 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6235,6 +6266,17 @@ does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
 this round: integrity + probes (`run_rh.py --fast --skip-lean`)
 after appending the probe and problem-document rows to the
 inventory.  r374--r389 are parallel lemma-first / Lean lanes
+and are not dropped.
+**r391 coexistence.** Round 391 (`construction_rl.tex` +
+`construction_pure_rl_probe.py`) is additive on the COMPOSE$^-$
+energy-premise lane after r383/r386 (lemma-first construction-pure
+$(R)$ and $(L)$: white-block class, block-Gershgorin REFUTED,
+DC/align kill, CS counting tautological with $n_{\mathrm{eff}}\sim m$).
+It does not touch `experiments/next.txt` and
+does not touch `rh/lean/` (r376/r380/r384).  Suite surface of
+this round: integrity + probes (`run_rh.py --fast --skip-lean`)
+after appending the probe and problem-document rows to the
+inventory.  r374--r390 are parallel lemma-first / Lean lanes
 and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface

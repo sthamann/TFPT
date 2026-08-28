@@ -2036,6 +2036,36 @@
       "bytes": 239252
     },
     {
+      "path": "rh/problem/construction_rl.tex",
+      "role": "problem_statement",
+      "round": "r391 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on construction-pure (R) and (L) (round 391): Euclidean split and eta identity SATZ; CS counting L1^2 <= m D SATZ; Fejer Gram SATZ.  Block-Gershgorin REFUTED.  (R) reduced to the white-block class with census K=4; (L) reduced to slope +0.202 construction-class.  Finite identities plus named reductions; NO RH claim",
+      "pin": true,
+      "sha256": "7c6ed7c51acb9c3c24b15a282a66e12fc80bbb6b8b54c0da059e1957f3c970cb",
+      "bytes": 8623
+    },
+    {
+      "path": "rh/problem/verify_construction_rl.py",
+      "role": "problem_check",
+      "round": "r391 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in construction_rl.tex: standalone Fractions (CS counting, eta split, K vs K/2) plus construction pins (w9 white-block, scramble non-break, kz37, weight-rand, DC/align/merge mutants).  17/17 gates, final line CONSTRUCTION PURE RL VERIFIED",
+      "pin": true,
+      "sha256": "6c5a174b768a42e620173dd81ae974ce6770299a4890b762ba10f8e5539a58e1",
+      "bytes": 3045
+    },
+    {
+      "path": "rh/problem/construction_rl.pdf",
+      "role": "problem_statement",
+      "round": "r391 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of construction_rl.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "d31f10316b0c5e23a03cf562ecb0c9610d6ea201ce23ca6ea4563c53b1c79143",
+      "bytes": 211322
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2210,8 +2240,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "ef69349c1f4f58b4bcc24a28c0ae7e29019f5b0b428d69f70503a6ede2be6d11",
-      "bytes": 5359970
+      "sha256": "bbcf5b39c0c5567153e480897d8764570db4d035725959f951fd72891c1bf9f6",
+      "bytes": 5362178
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2442,6 +2472,16 @@
       "pin": true,
       "sha256": "f515cf901dfcea34de915903c9c6137599a85ff08e39f983bfcd504c90d30fac",
       "bytes": 18223
+    },
+    {
+      "path": "experiments/tfpt-discovery/construction_pure_rl_probe.py",
+      "role": "sealed_probe",
+      "round": "r391",
+      "ledger_ids": [],
+      "status": "Construction-pure (R) and (L) (round 391, LEMMA.CONSTRUCTION_PURE.RL.01, lemma-first; experiments-side, NO ledger row): 23/23 full / 15/15 smoke; SPEC_SHA 6699da51c8546495; toys, w9/kz37/scramble pins, weight-rand and geometry mutants, CORE-42 + CHI3-42 census first measured in /tmp (tfpt_r391_cal.py, tfpt_r391_cal2.py, tfpt_r391_cal3.py) then sealed (disclosed calibration).  Builder fallback: CORE-42 + CHI3-42 (181-pack and FRAME-B 8 exceeded 2 min, skipped).  TWO LETTERS.  SATZ: Euclidean split ||Sigma||^2+||Delta||^2 = 2(||Pb||^2+||Pw||^2) and nrmS/D=(1+eta)/(1-eta); CS counting L1^2 <= m D; Fejer Gram; DC Rayleigh 3.6875; atom Gershgorin of K is lambda<=H (too coarse).  (R) REDUCED: K=4 construction-class (CORE-42 max Bsum/D=2.8196 at kz19, 0/42 >4, 9/42 >2 so K/2 FAILS; CHI3-42 max 2.746 at kz67; R-star kz37 2.975<4); independent weight-rand at frozen geometry HOLDS (permute/gauss/rademacher/expon/dirichlet max 2.44 on w9); positive alignment Pw=a Pb with a=0.3 BREAKS and a->+1 is unbounded -- no field-independent K.  Superblock Gershgorin REFUTED as SATZ (fully-DD only 4/42, min dd_frac=0.667).  Geometry kill is DC-flatten / sign-kill (w9 5.67 / 6.13), NOT merged folds (merge_pairs 1.21).  White-block class: nrmS/D med=0.999, cos med=-0.0006, ray max=3.099.  (L) REDUCED: CORE-42 L1 slope +0.2017 <1/4 (matches r383 +0.202); CHI3 +0.182; CS-gamma 0.214 <1/4 is the D-decay translation (tautological with n_eff~m / r301 n_act==m); triangle +0.307 still does not close; DC L1=m is the geometry kill of field-independent gamma<1/4.  (C) COMPOSE- still needs (Z') + M3<=phi + Dict + the two census envelopes; r389 Weyl energy owns the SIGNED objects (assist, C_eps, Z_loc), not (R)(L).  Scramble does NOT break (R) or (L).  Companion rh/problem/construction_rl.tex + verify_construction_rl.py 17/17 CONSTRUCTION PURE RL VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "847d5ff9209316a2384136a76441120822925ff284ebefef3542d5c5f4fc821b",
+      "bytes": 23536
     }
   ]
 }
