@@ -1702,6 +1702,16 @@
         "pin": true,
         "sha256": "700d4bc0a5deb6ac105507e7aedcac584c49569a588799beb6da29a91c0508f1",
         "bytes": 94236
+    },
+    {
+      "path": "experiments/tfpt-discovery/mean_sieve_floor_probe.py",
+      "role": "sealed_probe",
+      "round": "r361",
+      "ledger_ids": [],
+      "status": "The mean sieve on the folded log-p^k phases, adjudicated floor-first (round 361, PRIME.L2.MEAN_SIEVE.01, the named theorem rest of the terminal lane after r358; experiments-side, NO ledger row): 21/21 sealed; SPEC_SHA 1bec71757eb909d7 final with record, freeze 0dafa3b962e337b3, two-commit protocol pre-freeze 7f17e3cf / record 2d7d0376; ZERO amendments after freeze (calibration pass 1 = first full evaluation = 21/21, 655.6 s).  MAIN VERDICT FLOOR_THEOREM -- the r358 0.375 floor IS construction algebra: the exact Fractions ledger (integer theta-grid positions, exact block centers/gaps/window medians) reproduces the r358 float ledger bitwise on all 181 rows (89 frame A + 8 frame B + 42 chi3 + 42 chi4; collisions 0, rounding 9.1e-13); SEP-SATZ (the algebraic half, derived a priori: adjacent block centers of n_i/n_j distinct grid integers on disjoint contiguous supports separate by >= (n_i+n_j)/2) holds EXACT with 0/32547 violations; MED-CAP med_i <= (8/3) sep_i (the named missing half) holds 0/32728 with worst ratio EXACTLY 1.000 saturated AT the floor atom (chi4 kz53: gap 3/2, med 4 == (8/3)(3/2)) -- the pointwise chain g_i >= sep_i/med_i >= 3/8 closes on every atom, the constant 8/3 is tight, and min g over the round is EXACTLY the mesh rational 3/8 (only 5 sub-half atoms exist: 3/8 x2, 5/12, 5/11 x2; frame-B min 1/2); the SCRAMBLE floor contrast is measurable and SURVIVES arithmetic destruction (all three matched channels break at P1 admission nf 21/3/37 as sealed, but their partial builds carry gap floors 0.778/0.421/0.750, all >= 3/8, and all three scrambled worlds are STILL grid-quantized qdev <= 4.5e-13 -- the quantization and the floor are fold-machinery construction, not log p^k arithmetic).  T2' trivializes modulo MED-CAP (S_r == 0 for r >= 2 forced).  The continuous-t sieve census (t = j/32, bar t^2(1+log2(1/t))^2 == r358 pack_bar at dyadic t, warded exact) holds 0-violation on 181 rows x 16 t AND 1033 bands x 16 t with mean headroom 0.0014; steckbrief: the MV large-sieve spacing input IS SEP-SATZ, both open sieve parts reduce to MED-CAP as the single remaining lemma.  The direct composition M_3 <= (8/3)^2 C_K^2 (log m)^2/m^2 (C_G and two log powers drop) gives m_0* = 10^16.1 at the measured census ceiling C_K = 23.70 (vs r358 Carleson 10^23.5, 7.4 decades) and 10^10.0 rule-conditional at the per-family freeze 4.91 -- below the r306 census 10^13.5 IF the family-uniform T1 constant rule existed: that rule is now THE single remaining quantitative rest.  Disclosed epistemics: theorem-grade = the pointwise chain closes on the surface with a saturated, scramble-robust cap; the paper lemma MED-CAP is the one remaining formal step.  Anchors bit-near (r358 record full set); twin 1.0e-7; must-fails f1-f5 + m6a/m6b CAUGHT/FLAGGED.  Deterministic, record run1/run2 byte-identical up to WALL (761.3/774.2 s).  NO RH claim in either direction",
+      "pin": true,
+      "sha256": "fea59e33041685f49059617c7bd8eaa8e2686e323899189b4cbbe0f021c3f652",
+      "bytes": 84136
     }
   ]
 }

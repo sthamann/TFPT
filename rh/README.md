@@ -4338,6 +4338,45 @@ census, Gamma derivation OPEN; (D) adjugate theorem + measured
 cancellation + M₀ partial; (E) rigorous error OPEN.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**The mean sieve on the folded log-p^k phases, floor-first (r361,
+PRIME.L2.MEAN_SIEVE.01 — the named theorem rest of the terminal
+lane after r358).**  `mean_sieve_floor_probe.py` (21/21, SPEC_SHA
+`1bec71757eb909d7` final with record, freeze `0dafa3b962e337b3`,
+two-commit protocol: pre-freeze `7f17e3cf`, record `2d7d0376`,
+ZERO amendments after freeze) adjudicated the central new
+question BEFORE the sieve: is the r358 0.375 floor derivable from
+the construction algebra?  **Verdict `FLOOR_THEOREM`** — it is:
+(1) **the two-step chain closes pointwise on all 32 728 atoms of
+the 181-row surface**: SEP-SATZ (exact Fractions, derived a
+priori — adjacent block centers of n_i/n_j distinct theta-grid
+integers on disjoint contiguous supports separate by ≥
+(n_i+n_j)/2 grid units) holds 0/32 547, and MED-CAP med_i ≤
+(8/3)·sep_i holds 0/32 728 with worst ratio **exactly 1.000
+saturated at the floor atom** (χ4 kz53: gap 3/2, med 4 =
+(8/3)(3/2)) — the constant 8/3 is tight, min g over the round is
+**exactly the mesh rational 3/8**, and only 5 sub-half atoms
+exist (3/8 ×2, 5/12, 5/11 ×2); (2) **the floor survives
+arithmetic destruction**: all three matched scrambles break at P1
+admission as sealed (nf 21/3/37) yet their partial builds carry
+gap floors 0.778/0.421/0.750 — all ≥ 3/8 — and remain
+grid-quantized (qdev ≤ 4.5e−13): quantization and floor are
+fold-machinery CONSTRUCTION, not log p^k arithmetic; (3) **T2′
+trivializes modulo MED-CAP** (S_r ≡ 0 for r ≥ 2 forced) and the
+continuous-t sieve census (t = j/32) holds 0-violation on 181
+rows × 16 t and 1033 bands × 16 t (mean headroom 0.0014); the
+steckbrief reduces both open sieve parts to MED-CAP — the MV
+large-sieve spacing input IS SEP-SATZ; (4) **the direct chain
+pays 7.4 decades**: M₃ ≤ (8/3)²C_K²(log m)²/m² (C_G and two log
+powers drop) gives m₀\* = 10^16.1 at the measured census ceiling
+C_K = 23.70 and 10^10.0 rule-conditional at the per-family freeze
+4.91 — the family-uniform T1 constant rule is now THE single
+remaining quantitative rest of the terminal lane.  Disclosed
+epistemics: theorem-grade = the pointwise chain closes on the
+surface with a saturated, scramble-robust cap; the paper lemma
+MED-CAP (why the 5-window median of block gaps never exceeds
+(8/3)(n_i+n_j)/2) is the one remaining formal step.
+Experiments-side, NO ledger row, NO RH CLAIM.
+
 ## Folder guide
 
 ```

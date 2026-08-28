@@ -154,6 +154,7 @@ PROBES = [
     ("r358", "local_gap_carleson_probe.py"),
     ("r359", "schur_wronskian_dual_probe.py"),
     ("r360", "critical_saturation_probe.py"),
+    ("r361", "mean_sieve_floor_probe.py"),
 ]
 
 MODULES = [
