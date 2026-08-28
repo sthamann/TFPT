@@ -5276,6 +5276,38 @@ Remaining: Dirichlet/Abel (Weyl) energy of the $\mu$-OP Gram
 NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r393 are parallel lemma-first / Lean lanes; this round is additive.
 
+**Three-gap of the fold mask, refuted (r395, LEMMA.THREE_GAP_MASK.01,
+lemma-first).**  Sealed census probe
+`experiments/tfpt-discovery/three_gap_mask_probe.py` (29/29
+full, 21/21 smoke, SPEC_SHA `4f246d22f6f0abe2`) plus
+`rh/problem/three_gap_mask.tex` (+ PDF +
+`verify_three_gap_mask.py`, 11/11, `THREE GAP MASK VERIFIED`).
+**Ausgang REFUTED.**  SATZ: Steinhaus three-gap of $\{k\alpha\}$
+on $\mathbb{Z}/q$ (309/309 Farey+Fibonacci, exact) with
+$a+b=c$ when three gaps occur; PNT-free integer-log local
+three-gap for $n\ge 512$, $M\le 64$ (small $n_0\le 64$ is a
+census, $n_{\mathrm{uniq}}$ 8--19).
+REFUTED: the $\nu$-mask of a canonical window is globally or
+blockwise three-gap (FRAME-A $n_{\mathrm{uniq}}=12$; core-$42$
+in $[8,18]$, $0/42\le 5$; EXT grows, $kz=97$ has 13);
+$n_{\mathrm{uniq}}\le 3$ plus $F_1$ plus $\rho_{\mathrm{AP}}<1/5$
+implies the $\Delta^2\log\tau$ box (wrapping $(1,2,3)$ jump $2.33$
+OUT; mechanical $\varphi$ $d=0.1016$ OUT on the box;
+wrapping $(2,3,4)$ isolated-singles $8/8$ IN at $h=80$ is a
+different class).  The $3/8$-floor and MED-CAP $8/3$ are not
+shadows of the cosine-grid gap spectrum ($d_{\min}/d_{\mathrm{med}}=1/3<3/8$,
+$d_{\max}/d_{\min}=23>8/3$).
+Two-period $\lambda_{22}=1.0288>1$; random $F_1$ jump $1.179$;
+scramble seed $3$ sliding-12 three-gap fraction $0$; Assist at
+$n_0$ splits random $F_1$ ($\lambda=2.01$) from sparse three-gap
+($\lambda=0.997$) but does not identify the source
+($2$--$3$-dominated histogram plus sparse tail).
+Remaining: that histogram, strictly smaller than three-gap,
+still the occupation object of both $F_\varepsilon$ and Assist.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r394 are parallel lemma-first / Lean lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5462,6 +5494,11 @@ rh/
 │   │                     checkerboard/M-matrix REFUTED;
 │   │                     Assist rest is Weyl energy.
 │   │                     No RH claim
+│   ├── three_gap_mask.tex(+pdf) — r395: Steinhaus +
+│   │                     log-local SATZ; Drei-Gap-Maske
+│   │                     REFUTED; occupation is a 2-3
+│   │                     histogram with a sparse tail.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5519,9 +5556,12 @@ rh/
 │   ├── verify_tau_field.py — machine check of
 │                         tau_field.tex (13/13,
 │                         TAU FIELD VERIFIED)
-│   └── verify_sign_schur.py — machine check of
+│   ├── verify_sign_schur.py — machine check of
 │                         sign_schur.tex (14/14,
 │                         SIGN SCHUR VERIFIED)
+│   └── verify_three_gap_mask.py — machine check of
+│                         three_gap_mask.tex (11/11,
+│                         THREE GAP MASK VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5878,7 +5918,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r394 from
+2. **Sealed probes** — the campaign probes r250–r395 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6406,6 +6446,17 @@ this round: integrity + probes (`run_rh.py --fast --skip-lean`)
 after appending the probe and problem-document rows to the
 inventory.  r374--r393 are parallel lemma-first / Lean lanes
 and are not dropped.
+**r395 coexistence.** Round 395 (`three_gap_mask.tex` +
+`three_gap_mask_probe.py`) is additive on the occupation-
+regularity rest after r393/r394 (lemma-first three-gap of the
+fold mask: Steinhaus SATZ; log-local SATZ; Drei-Gap-Maske
+REFUTED as a property of the $\nu$-mask and as a closing
+implication for $F_\varepsilon$).  It does not touch
+`experiments/next.txt` and does not touch `rh/lean/`
+(r376/r380/r384).  Suite surface of this round: integrity +
+probes (`run_rh.py --fast --skip-lean`) after appending the
+probe and problem-document rows to the inventory.  r374--r394
+are parallel lemma-first / Lean lanes and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in

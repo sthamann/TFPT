@@ -2156,6 +2156,36 @@
       "bytes": 234153
     },
     {
+      "path": "rh/problem/three_gap_mask.tex",
+      "role": "problem_statement",
+      "round": "r395 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on the three-gap structure of the fold nu-mask after r393/r394 (round 395): Steinhaus on Z/q SATZ; PNT-free integer-log local 3-gap SATZ for n>=512.  REFUTED: the nu-mask is globally/blockwise 3-gap; nuniq<=3 implies the d2 log tau box.  3/8-floor and MED-CAP 8/3 are not mask-spectrum shadows.  Finite identities plus a named refutation; NO RH claim",
+      "pin": true,
+      "sha256": "2b3f1875385d4b632809966f6a5ec654465b106cf11999d09f1f9185f1817d0a",
+      "bytes": 10001
+    },
+    {
+      "path": "rh/problem/verify_three_gap_mask.py",
+      "role": "problem_check",
+      "round": "r395 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in three_gap_mask.tex: standalone (Steinhaus Z/q, additive a+b=c, thinning, log-local, small-n census, 3/8 and 8/3 shadows) plus construction pins (w9 nuniq=12, slide partial, discriminator, scramble, Assist split).  11/11 gates, final line THREE GAP MASK VERIFIED",
+      "pin": true,
+      "sha256": "3b231d014c7fea5fa796bfd20931898e63d582e5a67f20b5918cc3af683a0741",
+      "bytes": 5524
+    },
+    {
+      "path": "rh/problem/three_gap_mask.pdf",
+      "role": "problem_statement",
+      "round": "r395 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of three_gap_mask.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "a9cb558a233585ea861452124173779e9a6e265bb88a000846b48bdbf4ac4a4a",
+      "bytes": 232919
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2330,8 +2360,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "3941948108b450bb853cba72e7b9c8878e0e716ecdee31367b48c1158d37e8fe",
-      "bytes": 5366733
+      "sha256": "ffc43106448ec3d442b6b804ab3f682f96642aad6a4227853d32e6e29fdb6ab3",
+      "bytes": 5371167
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2602,6 +2632,16 @@
       "pin": true,
       "sha256": "57193c78bfe6372e1be33e3eca0077283088678ce55aac20564d65e6607f257d",
       "bytes": 20179
+    },
+    {
+      "path": "experiments/tfpt-discovery/three_gap_mask_probe.py",
+      "role": "sealed_probe",
+      "round": "r395",
+      "ledger_ids": [],
+      "status": "Three-gap of the fold mask (round 395, LEMMA.THREE_GAP_MASK.01, lemma-first; experiments-side, NO ledger row): 29/29 full / 21/21 smoke; SPEC_SHA 4f246d22f6f0abe2; Steinhaus on Z/q (309/309 Farey+Fibonacci), additive a+b=c, thinning kill, PNT-free integer-log local 3-gap n0>=512, small-n drift census, w9/core-42/chi/EXT-kz97 gap spectra, wrapping 3-gap vs {n alpha} vs random-F1 discriminator, Assist lambda split, scramble/two-period/dyadic-cut kills first measured in /tmp (r395_cal.py .. r395_cal4.py) then sealed (disclosed calibration).  Builder fallback: core-42 + EXT kz97 + chi sample (MAIN-85 and EXT S>5000 skipped).  AUSGANG REFUTED.  SATZ: Steinhaus nuniq<=3 on Z/q; integer-log local 3-gap for n>=512 M<=64 (PNT-free, f'' of log); small n0<=64 is a census (nuniq 8..19).  REFUTED: the nu-mask is globally or blockwise 3-gap (w9 nuniq=12, core-42 in [8,18] 0/42 <=5, EXT nuniq grows to 13 at kz97 / 25 at kz69); nuniq<=3 + F1 + rho_AP<1/5 implies the d2 log tau box (wrap(1,2,3) j=2.33 OUT; mechanical phi d=0.1016 OUT on the box; wrap(2,3,4) isolated-singles 8/8 IN at h=80 is a different class).  3/8-floor and MED-CAP 8/3 are NOT shadows of the cosine-grid gap spectrum (dmin/dmed=1/3<3/8, dmax/dmin=23>8/3).  KILL: two-period lam22=1.0288>1 (rho_AP=1); random F1 j=1.179 (many gaps); scramble seed=3 slide12<=3 = 0; dyadic-cut shift moves block nuniq.  Assist at n0: randF1 lam=2.01, wrap234 lam=0.997, 1010 lam=1.405 -- separates sparse 3-gap from random F1, does not identify the source (2-3-dominated histogram + sparse tail).  Remaining: that histogram, strictly smaller than three-gap, still the occupation object of both F_eps and Assist.  Companion rh/problem/three_gap_mask.tex + verify_three_gap_mask.py 11/11 THREE GAP MASK VERIFIED.  NO L* claim, NO RH claim",
+      "pin": true,
+      "sha256": "7fb3c718323dd9631ee3402643125d9f73fcc313f8e70ce19dbe06f2e337ea2a",
+      "bytes": 26755
     }
   ]
 }
