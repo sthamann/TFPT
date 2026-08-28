@@ -1696,6 +1696,36 @@
       "bytes": 214094
     },
     {
+      "path": "rh/problem/compose_lemma.tex",
+      "role": "problem_statement",
+      "round": "r378 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on LEMMA.COMPOSE.01 (round 378): the slope chain M3 -> N3 -> N2 -> Fejer energy -> van der Corput -> H5 -> q_N<1 is rewritten as a pointwise inequality chain with explicit constants.  vdC at H=max(2,ceil sqrt m) is SATZ (v964-S0); pref <= sqrt(m)+1 SATZ; participation and Renyi SATZ; kernel envelope SATZ; T1-floor algebra SATZ conditional on 8/3 and C_K.  REDUCED to COMPOSE-: if S_F<=R0 D, L1<=Lambda, |Z_loc|<=Z0<M, M3<=phi(m) then |Z|<M (and q_N<1 given the r263 dictionary).  phi(m) = (M-Z0)^4 / (pref^2 R0^2 Lambda^4) with pref<=sqrt(m)+1, M=sqrt(5/7).  Pointwise H5-need with bounded L1,R0 is beta=1/2; the 0.888/0.908 convention is a slope-proxy for 1/2+2 gamma.  H5/PairMarginLaw is a sister sufficient condition, not an extra vdC-route premise.  Log-complete m0: 10^25.81 (C_K=4.91) / 10^32.85 (C_K=23.70); r361 published 10^10.0/10^16.1 drop 2 log log m (ratios 0.4517/0.5351 < 1).  Remaining lemmas: (R)(L)(Z)(T1)(V3') (Dict)(Head).  Finite identities plus named remainders; NO RH claim",
+      "pin": true,
+      "sha256": "f3a5c3bef710724a770d9afc2e4c23128edb56c103ce9c74f64c668a0b6ef48b",
+      "bytes": 17462
+    },
+    {
+      "path": "rh/problem/verify_compose_lemma.py",
+      "role": "problem_check",
+      "round": "r378 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in compose_lemma.tex: standalone Fractions (Fejer identity, vdC covering+CS, H-rule pref, participation, Renyi, interpolation, kernel envelope, sigma* arithmetic, T1-floor algebra, log-complete m0, two-branch dictionary) plus construction pins (four w9 worlds; chi4 kz53 floor 3/8; 42-rung FRAME-A certificate qZ<1 42/42, F2-split 42/42, cheap triangle 35/42, exceptions (15,20,22,36,38,39,52), vdC-F2 38/42, H5-sister 21/42, min q-margin 0.0195; T1 implication 181/181 on 89 A + 8 B + 42 chi3 + 42 chi4).  15/15 gates, final line COMPOSE LEMMA VERIFIED",
+      "pin": true,
+      "sha256": "2bd29322e1990a5f3c415bbc481ca45981b1186c1621ee93db1d45ac5cde9484",
+      "bytes": 26355
+    },
+    {
+      "path": "rh/problem/compose_lemma.pdf",
+      "role": "problem_statement",
+      "round": "r378 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of compose_lemma.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "b848358cce647c1abe77358f28dc7dcc3c9948a513f783d7a35accf88ce448b8",
+      "bytes": 254772
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",

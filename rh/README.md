@@ -4950,6 +4950,11 @@ rh/
 │       │                    and mixed J-form (haynsworth_mixed),
 │       │                    sorry-free.  Does not assert census
 │       │                    premises P1/P2 on windows.  NO RH CLAIM
+│       ├── PivotCoordinate.lean — r380: five DCCXXXVII lemmas
+│       │                    (rank-1 inertia + adaptive band proved;
+│       │                    dual-Hankel complement and det K₂ named-
+│       │                    decomposed; Jacobi synthesis proved).
+│       │                    Zero sorry; census stays 5.  NO RH CLAIM
 │       └── Counterexamples.lean — r273 reviewer guards: machine-checked
 │                            refutations of the three pre-r273 universal
 │                            forms (proved, no sorry)
@@ -4987,6 +4992,10 @@ rh/
 │   │                     in source pivot coordinates (universal
 │   │                     post-cap alternation REFUTED; prefix
 │   │                     inertia CENSUS).  No RH claim
+│   ├── compose_lemma.tex(+pdf) — r378: COMPOSE reduced to
+│   │                     M3≤φ(m) ∧ (R)(L)(Z) ⇒ |Z|<M; H5 is
+│   │                     a sister route; α* 0.888/0.908 are
+│   │                     slope-proxies.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -4999,9 +5008,12 @@ rh/
 │   │                     (16/16, V2 LEMMA V3 VERIFIED)
 │   ├── verify_p2_steps.py — machine check of p2_lemma_proof.tex
 │   │                     (12/12, P2 STEPS VERIFIED)
-│   └── verify_postcap_steps.py — machine check of
-│                         postcap_pivots.tex (16/16,
-│                         POSTCAP STEPS VERIFIED)
+│   ├── verify_postcap_steps.py — machine check of
+│   │                     postcap_pivots.tex (16/16,
+│   │                     POSTCAP STEPS VERIFIED)
+│   └── verify_compose_lemma.py — machine check of
+│                         compose_lemma.tex (15/15,
+│                         COMPOSE LEMMA VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5197,6 +5209,21 @@ $\mathrm{ind}_- H_{N+2}\le 1$ is a construction census
 script `verify_postcap_steps.py`, 16/16 gates,
 `POSTCAP STEPS VERIFIED`.  Finite identities plus a named
 census.  NO L\* claim.  NO RH CLAIM.
+
+An eighth standalone note, `rh/problem/compose_lemma.pdf` (August 28,
+2026), is the lemma-first attack on the terminal composition
+COMPOSE (round 378, no sealed discovery probe).  Van der Corput
+at $H=\max(2,\lceil\sqrt{m}\rceil)$ is SATZ; the $H$-rule,
+participation, Rényi, and kernel envelope are SATZ; T1-floor
+algebra is SATZ conditional on $8/3$ and $C_K$.  The slope
+chain $\sigma\le-0.516$, $N_2$-need $0.908$, atom-need $0.888$
+is a convention, not a pointwise theorem.  **REDUZIERT** to
+COMPOSE⁻: $M_3\le\phi(m)$ together with frozen $R_0$, $\Lambda$,
+$Z_0<M$ implies $\lvert Z\rvert<M$.  H5 is a sister route.
+Log-complete $m_0$ is $10^{25.81}$/$10^{32.85}$ (r361 dropped
+$2\log\log m$).  Companion script `verify_compose_lemma.py`,
+15/15 gates, `COMPOSE LEMMA VERIFIED`.  Finite identities plus
+named remainders.  NO L\* claim.  NO RH CLAIM.
 
 ## The RH suite
 
@@ -5472,6 +5499,14 @@ sorry (mathlib v4.29.1: no Gauss integral / `Real.digamma` /
 `mainWindow_iff_builtFromPrimeSource` documented as Alt-Last (outside
 the load-bearing chain since C1; not deleted). Census **7 → 5**.
 NO RH CLAIM.
+**r380 pivot-coordinate round.** `RH/PivotCoordinate.lean`: the five
+DCCXXXVII finite-algebra lemmas in source pivot coordinates (rank-1
+inertia and adaptive band **PROVED**; complementary dual-Hankel inertia
+and `det K₂` ratio **named-decomposed** against Vandermonde/Haynsworth
+plus DPP/Borodin named Props; Jacobi synthesis `p1_p2_iff_cap_posDef`
+**PROVED** on the Hankel face). Zero new `sorry`; census **stays 5**.
+Does not assert (P1)/(P2) on any window.  Coexists with r377/r378/r379
+in `rh/problem/`.  NO RH CLAIM.
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
@@ -5558,6 +5593,20 @@ Suite surface of this round: integrity + probes
 (`run_rh.py --fast --skip-lean`) after appending the problem-
 document rows and the sealed census probe to the inventory.
 r374/r375/r376 and the parallel compose lane are not dropped.
+**r378 coexistence.** Round 378 (`compose_lemma.tex`) is additive
+on the terminal Fejér/vdC→H5→$q_N$ lane after r297–r306/r324
+(lemma-first COMPOSE: pointwise chain with explicit constants,
+reduction to (R)(L)(Z)(T1)).  It does not touch
+`experiments/next.txt`, does not seal a discovery probe, and
+does not touch `rh/lean/`.  Suite surface of this round:
+integrity + probes (`run_rh.py --fast --skip-lean`) after
+appending the problem-document rows to the inventory.
+r374/r375/r376/r377 are parallel lemma-first lanes and are not
+dropped.
+**r380 coexistence.** Round 380 (`RH/PivotCoordinate.lean`) is additive
+on the Lean kernel: it formalizes the DCCXXXVII finite-algebra lemmas
+and does not touch `rh/problem/` (r377/r378/r379) or
+`experiments/next.txt`.  Census stays 5.  NO RH CLAIM.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in
