@@ -4591,6 +4591,47 @@ family-uniform T1/E_π theorem.  Scrambles P1 admission ×3 (nf
 Must-fails 4/4 + m6a/m6b.  Experiments-side, NO ledger row,
 NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
 
+**The mixed low-rank form of M† plus generalized Haynsworth
+(r369, reviewer sequence step 1, PRIME.LDAGGER.MIXED_HAYNSWORTH.01).**
+`mixed_haynsworth_probe.py` (20/20, SPEC_SHA `138d09978ff79556`
+final with record, freeze `5a4a20db973700ba`, two-commit
+protocol: pre-freeze `6ae366a2`, record `6072921f`; ZERO
+amendments after freeze; calibration = first full evaluation =
+20/20, 29.2 s; record run1/run2 byte-identical up to WALL
+29.2/28.9 s).  **Verdict `MIXED_UPDATE_EXACT + HAYNSWORTH_MIXED_SATZ
++ PHI_LEDGER + JSIG_CENSUS`.**  Algebra only; existing records
+are the anchors (10-row sample, no 85-row ladder).  (1) **The
+mixed form is a finite-matrix SATZ.**  From r362 A4 and r363,
+`M† = blkdiag(A₀, −½) + U J Uᵀ` with `U` the two last dual CD
+columns plus the Sherman–Morrison vector `(s, −1)` and
+`J = diag(1, 1, 1/den)` **derived**, not fitted.  Fractions toy
+residual exact 0 (`den = 23/30`); live residual ≤ 1.04e−14
+(bar 1e−10) on w9 + the 10-row sample + χ3-w9 + kz15.  The
+r367 warning is resolved as a *form*: the border is not a third
+unaugmented CD column, but on the R† level Sherman–Morrison
+does supply a third column with explicit `J`.
+`NO_LOWRANK_BOUNDARY_FORM` does not fire.  (2) **Generalized
+Haynsworth is a SATZ** for arbitrary invertible symmetric `J`
+(Fractions 4-node toy with indefinite `J = diag(1,1,−1)`:
+`In(H) = In(A)+In(−Φ) = In(−J⁻¹)+In(M)` exact).  Lean form
+`haynsworth_mixed` is in the spec, not proved here (R373).
+(3) **`Φ_N(0)` live.**  w9 σ = (−2.813, −0.0665, 1.804); the
+two large eigenvalues track r367 K₂, the small extra negative
+is the border direction.  Signature balance 10/10.  Dichotomy:
+P1-true 8/10 (`In(A)` nneg=2, `In(Φ)` nneg=2); vacuous kz42/
+kz130 2/10 (`In(A)` nneg=1, pad only) — the r367 P1-vacuous
+class in the 3×3 picture; χ3-w9 additionally `In(Φ)` nneg=1.
+(4) **Honest J-signature.**  Empirical `J_sig = I₃` on 10/10
+live rows (`den ∈ [1.460, 1.646]`, all positive).  The mixed
+*signature* of `J` is the form plus the synthetic `den<0`
+branch, not a Lorentz `J` on MAIN; the mixed-*ness* of the
+update on the family is `A` indefinite + `Φ` mixed.  Must-fails
+4/4.  Experiments-side, NO ledger row, NO L\* claim, NO R†
+claim, NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
+Coexistence: r371 (compound-CD), r372 (source-Prüfer) and
+r373 (Lean transcription) are parallel lanes; this round is
+additive.
+
 ## Folder guide
 
 ```
@@ -5114,6 +5155,14 @@ touch `rh/problem/` (r364/r365) or `rh/lean/`. Suite surface of
 this round: integrity + probes (`run_rh.py --fast`) after
 appending the sealed probe to the inventory. r365–r367 are
 parallel lanes and are not dropped.
+**r369 coexistence.** Round 369 (`mixed_haynsworth_probe.py`) is
+additive on the L† dual lane after r362/r367 (reviewer sequence
+step 1); it does not touch `rh/problem/` or `rh/lean/` (the
+`haynsworth_mixed` Lean statement lives in the probe spec;
+proof is R373). Suite surface of this round: integrity +
+probes (`run_rh.py --fast`) after appending the sealed probe
+to the inventory. r371/r372/r373 are parallel lanes and are
+not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in

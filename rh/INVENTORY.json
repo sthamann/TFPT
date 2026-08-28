@@ -1760,8 +1760,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "95b12c16ce3c0596ce4a1005ec942356c93deb2e39030e5fdd78606373bbb96d",
-      "bytes": 3420643
+      "sha256": "d7ffa4c1973e0497b432a92ebe86832ee38d2115aa4e5edcd9e4411feab8a64f",
+      "bytes": 3426419
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -1780,8 +1780,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "eab623537685c3ed117517a7ac196a4ff0cc36c08ecded124b8e534561d4de2c",
-      "bytes": 5262289
+      "sha256": "154e878f060c382600c622a17ef80f2fb84b53d27d5396e1f783ff385d5fda77",
+      "bytes": 5276527
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -1872,6 +1872,16 @@
       "pin": true,
       "sha256": "b45333852dc8b678765257b5c681d3f566bf89c375c5edda09b99d246cdb9859",
       "bytes": 67720
+    },
+    {
+      "path": "experiments/tfpt-discovery/mixed_haynsworth_probe.py",
+      "role": "sealed_probe",
+      "round": "r369",
+      "ledger_ids": [],
+      "status": "The mixed low-rank form of M-dagger plus generalized Haynsworth -- reviewer sequence step 1, algebra only (round 369, PRIME.LDAGGER.MIXED_HAYNSWORTH.01; experiments-side, NO ledger row): 20/20 sealed; SPEC_SHA 138d09978ff79556 final with record, freeze 5a4a20db973700ba, two-commit protocol pre-freeze 6ae366a2 / record 6072921f; ZERO amendments after freeze (calibration pass 1 = first full evaluation = 20/20, 29.2 s; record run1/run2 byte-identical up to WALL 29.2/28.9 s).  MAIN VERDICT MIXED_UPDATE_EXACT + HAYNSWORTH_MIXED_SATZ + PHI_LEDGER + JSIG_CENSUS + MUSTFAIL_LEDGER.  THE DERIVATION (explicit, not fitted): R-dagger = blkdiag(R, 0) + (1/den)[s;-1][s;-1]^T (r362 A4) and R = R_{N-3} + u1 u1^T + u2 u2^T (r363), so M-dagger = blkdiag(A0, -1/2) + U J U^T with U the two last dual CD columns plus the SM vector (s,-1) and J = diag(1, 1, 1/den) from the Sherman-Morrison denominator.  Signature twin J_sig = diag(1, 1, sign(den)) after scaling column 3.  THE r367 WARNING IS RESOLVED AS A FORM: the border is not a third unaugmented CD column, but on the R-dagger level Sherman-Morrison DOES supply a third column with explicit J; NO_LOWRANK_BOUNDARY_FORM does not fire.  LEG A: Fractions toy residual EXACT 0 (den = 23/30); live residual <= 1.04e-14 on the 10-row algebra sample (9, 15, 18, 20, 42, 44, 52, 56, 119, 130; bar 1e-10) + w9 1.9e-15 + kz15 1.9e-15 (near-terminal, q_N 0.9376) + chi3-w9 1.3e-15.  LEG B: generalized Haynsworth SATZ for arbitrary invertible symmetric J -- Fractions 4-node toy with INDEFINITE J = diag(1,1,-1): In(H)=(4,3,0) == In(A)+In(-Phi) == In(-J^{-1})+In(M) EXACT; Lean form haynsworth_mixed in the spec (not proved here; R373); r367 haynsworth_two_rank is the J = I_2 special case.  LEG C: Phi_N(0) = J^{-1} + U^T A^{-1} U; w9 sigma = (-2.8132, -0.06648, 1.8039) det 0.3374 -- the two LARGE eigenvalues TRACK r367 K2 (-2.7938, 1.8036), the small extra negative IS the border direction; signature balance In(A)+In(-Phi)==In(-J^{-1})+In(M-dagger) on 10/10 + chi3-w9; dichotomy P1-true 8/10 In(A) nneg=2 (A0 + pad) and In(Phi) nneg=2, VACUOUS kz42/kz130 2/10 In(A) nneg=1 (pad only) -- the r367 P1_VACUOUS class in the 3x3 picture; chi3-w9 additionally In(Phi) nneg=1; OVERLOAD 0/10.  LEG D: must-fails 4/4 (m1 J=I_3 fitted-scale residual 0.375 + AST, m2 wrong sign 1.249 + Fractions exact, m3 two-rank Y-only 2.467e-3 + the OTHER r367 balance, m4 AST lamRd readback).  JSIG HONEST: empirical J_sig = I_3 on 10/10 live sample rows (den in [1.460, 1.646], all positive); the mixed SIGNATURE of J is the FORM plus the synthetic den<0 branch (G12, den = -17.326), not a Lorentz J on MAIN; the mixed-NESS of the update on the family is A indefinite + Phi mixed.  Algebra sample only (no 85-row ladder; existing records are the anchors).  NO L* claim, NO R-dagger claim, NO RH claim in either direction",
+      "pin": true,
+      "sha256": "9f70bad0e5ba537aa96787abb4a43d151a3ebc1051ace6d90029aac8489fbcc5",
+      "bytes": 50277
     }
   ]
 }
