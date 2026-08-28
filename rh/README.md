@@ -4674,6 +4674,38 @@ NO ledger row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
 r372 (source-Prüfer) and r373 (Lean) are parallel lanes;
 this round is additive.
 
+**The source-Jacobi Prüfer one-defect test (r372, reviewer
+solution 2 / Terminal, PRIME.TERMINAL.SOURCE_PRUFER_ONE_DEFECT.01).**
+`source_prufer_one_defect_probe.py` (27/27, SPEC_SHA
+`778403f6c5f898e9` final with record, freeze `ad13a2abd3dca0f2`,
+two-commit protocol: pre-freeze `279c0f92`, record this
+change; ONE disclosed instrument amendment a1 —
+`twin_rational` arity copied from the r368 channel after
+cal1 crashed at G91; NO bar, letter, turning rule or
+verdict tree moved; record run1/run2 byte-identical up to
+WALL 747.9/644.3 s).  **Verdict `SPIKE_NOT_UNIQUE`.** The
+Prüfer-to-run dictionary is SATZ (181/181, XOR 181/181,
+Fractions toy exact, interior chain progress min 2.062).
+The one-defect thesis is refuted at census grade:
+NOT_UNIQUE 181/181, MAIN unique 0/97, max n_turn 310
+(w9 already 12/6/9/7).  Spike coincidence fails on
+kz111/117/124 (canonical i*=0 vs argmax-q 168/140/111;
+q* 4.3e-3 / 5.1e-3 / 4.9e-4, not the r368 mass spikes —
+the same rule does not carry the three named rows).
+Two-part bound after dominant-cluster extraction does not
+replace T1: rest-T1 viol 0/181 only because (log m)² is
+large while F_rest still equals the global max 23.704;
+rest-M3 viol 24/181 (max 94.893 vs C_REST 1.0); m₀* =
+10^{24.9} vs r361 10^{16.1}/10^{10.0}.  V₂ holds 181/181
+combinatorially (0 phase-pattern violators) but not from
+one-turning phase regularity.  Scrambles P1_ADMISSION ×3
+(n_turn 7/40/3); twin 1.8e-08; must-fails e1–e5 + m6a/m6b.
+Cofinal rest unchanged: V₂ as a lemma + a family-uniform
+T1 theorem.  Experiments-side, NO ledger row, NO L\* claim,
+NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
+Coexistence: r369 (mixed Haynsworth), r371 (compound-CD)
+and r373 (Lean) are parallel lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5217,6 +5249,13 @@ the canonical two-form); it does not touch `rh/problem/` or
 `rh/lean/`. Suite surface of this round: integrity + probes
 (`run_rh.py --fast`) after appending the sealed probe to the
 inventory. r369/r372/r373 are parallel lanes and are not
+dropped.
+**r372 coexistence.** Round 372 (`source_prufer_one_defect_probe.py`)
+is additive on the Terminal/source-Jacobi lane after r365/r368
+(reviewer solution 2); it does not touch `rh/problem/` or
+`rh/lean/`. Suite surface of this round: integrity + probes
+(`run_rh.py --fast`) after appending the sealed probe to the
+inventory. r369/r371/r373 are parallel lanes and are not
 dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface

@@ -205,8 +205,64 @@ out loud; L* is a hypothesis (certified on measured MAIN
 windows); r243..r368 stand.
 
 RECORD TABLES (inserted AFTER the record run -- the only
-post-freeze docstring edit):
-(none yet -- spec freeze)
+post-freeze docstring edit; freeze SPEC_SHA ad13a2abd3dca0f2
+post-a1 / original pre-freeze commit 279c0f92 had 12b18eec;
+protocol: smoke pass = 27/27 (1.2 s, run twice pre-record,
+byte-identical up to WALL); calibration amendment a1 =
+twin_rational arity copied from the r368 channel -- first
+full evaluation crashed at G91 before any adjudication;
+NO bar, letter, turning rule, C_STAR, C_REST, uniqueness
+definition or verdict tree moved; cal2 = first complete
+full evaluation = 27/27, wall 616.4 s; record run1/run2
+after this insertion, byte-identical up to WALL):
+MAIN VERDICT: SPIKE_NOT_UNIQUE + DICT(181/181) +
+TURN(unique MAIN 0/97, kinds NOT_UNIQUE 181/181, max
+n_turn 310) + COINC(NO on kz111/117/124) + REST_T1(viol
+0/181, max F_rest 23.704) + QSTAR(viol 0/181, max 0.898)
++ REST_M3(viol 24/181, max 94.893) + V2(181/181, pattern
+0, phase NO) + COMPOSITION(m0* 10^24.9 vs 10^16.1/10^10.0)
++ SCRAMBLE(P1_ADMISSION x3, n_turn 7/40/3) + TWIN(1.8e-08)
++ MUSTFAIL_LEDGER.
+THE HEADLINE FINDINGS:
+(1) THE PRUEFER-TO-RUN DICTIONARY IS SATZ: floor(theta/pi)
+runs of the chain-accumulated Jacobi Pruefer phase equal
+the sign-runs of v2 on ALL 181 live rows (89+8+42+42);
+XOR identity sign(ct)=sign(w x v2) 181/181; Fractions toy
+(2,2,2,2) exact; N2 >= N3 181/181; interior chain progress
+min 2.062 (circular mutant is 0 -- not a restatement of
+the sign field).  Jacobi positivity gam_next > 0 through
+deg N-2 on 181/181 (L* certified on this surface).
+(2) THE ONE-DEFECT THESIS IS REFUTED AT CENSUS GRADE:
+NOT_UNIQUE on 181/181, MAIN unique 0/97, max n_turn 310
+(w9 already 12/6/9/7).  The sealed slope-outlier rule
+(SLOPE_RATIO 2.0, SLOPE_MIN 0.50, MERGE_GAP 4) sees the
+zero-crossing jumps of a step-like discrete Pruefer phase,
+not a unique turning block.  SPIKE_NOT_UNIQUE is the
+letter; the bar was not moved after sight.
+(3) SPIKE COINCIDENCE FAILS ON kz111/117/124: the
+dominant slope cluster maps to i*=0 (left edge) vs
+argmax-q 168/140/111; q* of that diagnostic group is
+4.3e-3 / 5.1e-3 / 4.9e-4, not the r368 mass spikes.
+The same rule does NOT carry the three named rows.
+(4) TWO-PART BOUND AFTER DOMINANT-CLUSTER EXTRACTION
+DOES NOT REPLACE T1: rest-T1 F_i a-priori (1.0, 2.0)
+has 0/181 violations only because (log m)^2 is large
+on deep rows while F_rest still equals the global max
+23.704 (the spike was not extracted); rest-M3 violates
+24/181 (max 94.893 vs C_REST 1.0).  q*-score of the
+wrong group is vacuously below C_STAR.
+(5) V2 HOLDS 181/181 WITH 0 PHASE-PATTERN VIOLATORS,
+but V2-from-phase is NO: uniqueness failed, so the
+regularity that would exclude (...,r,r,1,1,1) is not
+the one-turning theorem.  Bulk monotone at MONO_FRAC
+0.90 only 23/181 (min frac 0.854).
+(6) COMPOSITION DOES NOT PAY: m0* = 10^24.9 (measured
+C*_obs 0.898 + C_rest_obs 94.893, A=2) WORSE than r361
+floor 10^16.1 / 10^10.0.  Cofinal rest unchanged: V2
+as a lemma + a family-uniform T1 theorem; the
+one-defect extraction is not that theorem.
+Scrambles P1_ADMISSION x3 (nf 21/3/37, n_turn 7/40/3);
+twin 1.8e-08; must-fails e1-e5 + m6a/m6b.
 """
 from __future__ import annotations
 
@@ -1515,12 +1571,15 @@ def main():
               "calm scramble would be a named miss"
               % scr_txt)
 
-        # twin: chi3 rational twin at w9
-        u3, w3c, _nn, _ch = DMF.chi_window_comb(9, Q_CHI3)
-        pT = DMF.chi_wpack(9, 1.0, LPQ3, (u3, w3c))
-        ut, wt = AKD.twin_rational(u3, TWIN_TOL)
+        # twin: chi3 rational twin at w9 (r289/r368 channel)
+        u3s, w3s, _nn, _ch = DMF.chi_window_comb(9, Q_CHI3)
+        gaps3 = MF.local_gaps(u3s)
+        _a, _M, _L, _Nw, D9 = V.window_shape(9)
+        u3t, w3t, _d, _du = AKD.twin_rational(u3s, w3s, gaps3,
+                                              D9, TWIN_TOL)
+        pT = DMF.chi_wpack(9, 1.0, LPQ3, (u3s, w3s))
         try:
-            pTt = DMF.chi_wpack(9, 1.0, LPQ3, (ut, w3c))
+            pTt = DMF.chi_wpack(9, 1.0, LPQ3, (u3t, w3t))
         except Exception:                    # noqa: BLE001
             pTt = pT
         rcT = DSW.rung_rec(pT)

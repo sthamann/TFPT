@@ -1780,8 +1780,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "46f4f09b329f7e68ba3a9c571b7d8132e8d66cb91d2897b3a412e0dbcdd91e72",
-      "bytes": 5287123
+      "sha256": "33fe156b803fec53c42dc15be0bc28932aef4fc1f77d6ce3677225143bd237af",
+      "bytes": 5293915
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -1892,6 +1892,16 @@
       "pin": true,
       "sha256": "43ab32934bdb9544cf5daaa976eb93d9cff6744f797e667821f53c53fe29bcc9",
       "bytes": 61951
+    },
+    {
+      "path": "experiments/tfpt-discovery/source_prufer_one_defect_probe.py",
+      "role": "sealed_probe",
+      "round": "r372",
+      "ledger_ids": [],
+      "status": "The source-Jacobi Pruefer one-defect test -- V2 and T1 jointly, the spike extracted not averaged (round 372, reviewer solution 2 / Terminal, PRIME.TERMINAL.SOURCE_PRUFER_ONE_DEFECT.01; experiments-side, NO ledger row): 27/27 sealed; SPEC_SHA 778403f6c5f898e9 final with record, freeze ad13a2abd3dca0f2 / file SHA d998f309ddb44900e2e76e5390663ee1b7eb146b3d59452133394efb4ce1a99f, two-commit protocol pre-freeze 279c0f92 / record (this change); ONE disclosed instrument amendment a1 (twin_rational arity copied from the r368 channel -- first full evaluation crashed at G91 before any adjudication; NO bar, letter, turning rule, C_STAR, C_REST, uniqueness definition or verdict tree moved; cal2 = first complete full evaluation 27/27, 616.4 s; record run1/run2 byte-identical up to WALL 747.9/644.3 s).  MAIN VERDICT SPIKE_NOT_UNIQUE.  LEG A: the Pruefer-to-run dictionary is SATZ -- floor(theta/pi) runs of the chain-accumulated Jacobi Pruefer phase equal the sign-runs of v2 on ALL 181 live rows (89+8+42+42); XOR identity sign(ct)=sign(w x v2) 181/181; Fractions toy (2,2,2,2) exact; N2>=N3 181/181; interior chain progress min 2.062 (circular mutant is 0 -- not a restatement of the sign field); Jacobi positivity gam_next>0 through deg N-2 on 181/181 (L* certified on this surface).  LEG B: the one-defect thesis is REFUTED at census grade -- NOT_UNIQUE 181/181, MAIN unique 0/97, max n_turn 310 (w9 already 12/6/9/7); the sealed slope-outlier rule (SLOPE_RATIO 2.0, SLOPE_MIN 0.50, MERGE_GAP 4) sees the zero-crossing jumps of a step-like discrete Pruefer phase, not a unique turning block; SPIKE_NOT_UNIQUE is the letter, the bar was not moved after sight.  Spike coincidence FAILS on kz111/117/124: canonical i*=0 (left edge) vs argmax-q 168/140/111; q* of that diagnostic group 4.3e-3 / 5.1e-3 / 4.9e-4, not the r368 mass spikes -- THE SAME RULE does not carry the three named rows.  LEG C: two-part bound after dominant-cluster extraction does NOT replace T1 -- rest-T1 F_i a-priori (1.0, 2.0) has 0/181 violations only because (log m)^2 is large on deep rows while F_rest still equals the global max 23.704 (the spike was not extracted); rest-M3 violates 24/181 (max 94.893 vs C_REST 1.0); q*-score of the wrong group is vacuously below C_STAR.  V2 holds 181/181 with 0 phase-pattern violators, but V2-from-phase is NO: uniqueness failed, so the regularity that would exclude (...,r,r,1,1,1) is not the one-turning theorem; bulk monotone at MONO_FRAC 0.90 only 23/181 (min frac 0.854).  LEG D: composition does not pay -- m0* = 10^24.9 (measured C*_obs 0.898 + C_rest_obs 94.893, A=2) WORSE than r361 floor 10^16.1 / 10^10.0; cofinal rest unchanged: V2 as a lemma + a family-uniform T1 theorem; the one-defect extraction is not that theorem.  LEG E: scrambles P1_ADMISSION x3 (nf 21/3/37, n_turn 7/40/3); twin 1.8e-08; must-fails e1-e5 + m6a/m6b.  Cofinal typing: dictionary + XOR + V2-combinatorics are SATZ (modulo L* positivity for the phase to be well-defined); uniqueness, coincidence, rest-T1, q*, m0* are CENSUS.  NO L* claim, NO RH claim in either direction",
+      "pin": true,
+      "sha256": "d998f309ddb44900e2e76e5390663ee1b7eb146b3d59452133394efb4ce1a99f",
+      "bytes": 69104
     }
   ]
 }
