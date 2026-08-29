@@ -3026,6 +3026,36 @@
       "bytes": 291503
     },
     {
+      "path": "rh/problem/zloc_head.tex",
+      "role": "problem_statement",
+      "round": "r429 companion",
+      "ledger_ids": [],
+      "status": "lemma-first selected |Z_loc|<=1/2 head bound (round 429): identity SATZ; unsigned/Chebyshev/Abel REFUTED on selected; bound remains a finite census, no k0.  FORMULA_SATZ / TRIANGLE_REFUTED / BOUND_CENSUS / NO_K0.  NO RH claim",
+      "pin": true,
+      "sha256": "46cc5ad102a609840cf0b3d7f865daf10bd61965d739aba71d437f11dd39ec62",
+      "bytes": 6933
+    },
+    {
+      "path": "rh/problem/verify_zloc_head.py",
+      "role": "problem_check",
+      "round": "r429 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in zloc_head.tex: standalone (dictionary over Q, split, 1/2<M) plus construction pins (w9 formula, triangle/scramble/dead-15, kz=16 + k=3,4,5 half).  6/6 gates, final line ZLOC HEAD VERIFIED",
+      "pin": true,
+      "sha256": "d277b6d7da95afd254b366a1aa5f71fcf970da725d9816d3820112484ed0dc44",
+      "bytes": 3426
+    },
+    {
+      "path": "rh/problem/zloc_head.pdf",
+      "role": "problem_statement",
+      "round": "r429 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of zloc_head.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "cafe08177e6fd146445e4de64a2665f761d7c64b2ded1c9d9ba690c6eb9b2fe7",
+      "bytes": 211540
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3200,8 +3230,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "4a40baa54b05e101825f6060dc8b30c18c23a6cf39182b9875828d05c42bcf5c",
-      "bytes": 5458712
+      "sha256": "c61684ef7d53bf045536330ab4ecbd086097572ca68589684f1b1e2edc6d1e17",
+      "bytes": 5463539
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3752,6 +3782,16 @@
       "pin": true,
       "sha256": "34857f322f2ef8eeee6be4dc5cfb70c7feaf8c74eb8786247eb1b868bfdaa9ec",
       "bytes": 20156
+    },
+    {
+      "path": "experiments/tfpt-discovery/zloc_head_probe.py",
+      "role": "sealed_probe",
+      "round": "r429",
+      "ledger_ids": [],
+      "status": "selected |Z_loc| head bound (round 429, PRIME.TERMINAL.ZLOC_HEAD_BOUND.01, reviewer: terminal lane after r428; experiments-side, NO ledger row): 24/24 full / 18/18 smoke; SPEC_SHA cb57a725042119da; Z_loc = t_loc + chain identity SATZ (canonical_split, pins 0.486846 / 0.157211 / 0.227187); unsigned triangle / Chebyshev / left-right Abel REFUTED on selected (tri 2.24..19.24, two-point slope +0.72, no k0); |Z_loc|<=1/2 remains a finite census (k=3 tight, scramble 0.524); hoped L1<=3/5 FAILS at k=9 (0.628), 2/3 works; R<=1.396<3/2 census.  First measured in /tmp (r429_cal.py) then sealed (disclosed).  No k=8 rebuild.  Full wall 4.2 s.  AUSGANG FORMULA_SATZ / TRIANGLE_REFUTED / BOUND_CENSUS / NO_K0.  Companion rh/problem/zloc_head.tex + verify_zloc_head.py 6/6 ZLOC HEAD VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "4cbc24866c8ba04834e904b0973e72c2ba54784664606d38eda82be8696012f8",
+      "bytes": 16143
     }
   ]
 }

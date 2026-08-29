@@ -6102,6 +6102,34 @@ NO L\* claim, NO RH CLAIM.  Mincut unchanged
 Coexistence: r374--r427 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+
+**$|Z_{\mathrm{loc}}|$ head bound (r429,
+PRIME.TERMINAL.ZLOC\_HEAD\_BOUND.01).**  Sealed
+probe
+`experiments/tfpt-discovery/zloc_head_probe.py`
+(24/24 full, 18/18 smoke, SPEC\_SHA `cb57a725042119da`)
+plus `rh/problem/zloc_head.tex` (+ PDF +
+`verify_zloc_head.py`, 6/6, `ZLOC HEAD VERIFIED`).
+**Ausgang FORMULA\_SATZ / TRIANGLE\_REFUTED / BOUND\_CENSUS / NO\_K0.**
+The identity $Z_{\mathrm{loc}}=t_{\mathrm{loc}}+\mathrm{chain}$
+is SATZ (Lean `canonical_split`; pins $0.486846/0.157211/0.227187$).
+The support is the geometric $F=1/5$ hull-edge on $[-1,1]$,
+not a finite von~Mangoldt head ($n_{\mathrm{edge}}$ $85$--$1691$).
+Unsigned triangle / Chebyshev / left--right Abel are REFUTED
+on selected (tri $2.24$--$19.24$, two-point slope $+0.72$;
+no explicit $k_0$).
+$|Z_{\mathrm{loc}}|\le 1/2$ remains a finite census
+($k=3$ tight, scramble $0.524$).
+Hoped $L_1\le 3/5$ FAILS at $k=9$ ($0.628$); $2/3$ works.
+$R\le 1.396<3/2$ is census.
+Honest terminal balance: identity + COMPOSE$^-$ SATZ;
+$|Z_{\mathrm{loc}}|$, $R$, $L_1$ census; $k=8$ pin; $k\to\infty$ open.
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.
+Coexistence: r374--r428 are parallel lemma-first / Lean
+lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -6532,6 +6560,9 @@ rh/
 │   └── verify_qn_reopened.py — machine check of
 │                         qn_reopened.tex (6/6,
 │                         QN REOPENED VERIFIED)
+│   └── verify_zloc_head.py — machine check of
+│                         zloc_head.tex (6/6,
+│                         ZLOC HEAD VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6888,7 +6919,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r428 from
+2. **Sealed probes** — the campaign probes r250–r429 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
