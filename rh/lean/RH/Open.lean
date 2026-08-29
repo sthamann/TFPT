@@ -209,6 +209,16 @@ so `n_eff` growth is not pole-creep.
 `limsup Σ < 2-den_∞` is a census, not a new
 `sorry`.  Mincut unchanged.
 NO RH CLAIM.
+
+## r423 census (den limit)
+
+`den = 1 + γ - v_t·s` is exact.
+`γ < 1` on the named census (not a chain
+theorem); `‖b‖²` is not a subsum of `S`.
+`den_∞` is not constructed.
+`den < 2` with gap `≥ 0.348` is a census,
+not a new `sorry`.  Mincut unchanged.
+NO RH CLAIM.
 -/
 
 end RH

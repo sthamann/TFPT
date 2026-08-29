@@ -5951,6 +5951,30 @@ NO L\* claim, NO RH CLAIM.  Mincut unchanged
 Coexistence: r374--r421 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**$\mathrm{den}$ limit (r423,
+PRIME.RDAGGER.DEN_LIMIT.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/den_limit_probe.py`
+(16/16 full, 13/13 smoke, SPEC_SHA `156933164983782f`) plus
+`rh/problem/den_limit.tex` (+ PDF +
+`verify_den_limit.py`, 7/7, `DEN LIMIT VERIFIED`).
+**Ausgang FORMULA_EXACT / GAMMA_LT1_CENSUS / LIMIT_OPEN / SUBSUM_REFUTED.**
+SATZ: $\mathrm{den}=1+\gamma-v_t\cdot s$.
+Hierarchy (i) (constructed $\mathrm{den}_\infty$)
+is not reached.
+$\gamma<1$ on $42/42$+EXT+dead (max $0.724$) is a
+census, not a chain theorem;
+$\|b\|^{2}$ is not a subsum of $S$.
+Census $\mathrm{den}\le 1.652$, gap $\ge 0.348$.
+$v_t\cdot s>0$ on the same set.
+Dead $\chi$ keep $\mathrm{den}<2$.
+Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).
+Coexistence: r374--r422 are parallel lemma-first / Lean
+lanes; this round is additive.
+
+
 
 
 
@@ -6362,6 +6386,9 @@ rh/
 │   └── verify_sigma_limit.py — machine check of
 │                         sigma_limit.tex (7/7,
 │                         SIGMA LIMIT VERIFIED)
+│   └── verify_den_limit.py — machine check of
+│                         den_limit.tex (7/7,
+│                         DEN LIMIT VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
