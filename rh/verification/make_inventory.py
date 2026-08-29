@@ -1269,6 +1269,44 @@ _R417_STATUS = (
     "VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim"
 )
 
+_R418_STATUS = (
+    "Border-border sign (round 418, "
+    "PRIME.RDAGGER.PHI_BB_SIGN.01, reviewer DCCLXXXIV "
+    "after r417 reduced cofinal sch<0 to phibb<0 plus "
+    "|tau_un|->0; phibb is the asymptotic edge-sign "
+    "carrier and was never attacked; experiments-side, "
+    "NO ledger row): 30/30 full / 19/19 smoke; SPEC_SHA "
+    "6ef3a327d623c955; Q-split + C-resolvent, w9 pins, "
+    "core-42 P1/VAC mechanisms, pole-share, defect-mutant, "
+    "EXT-6 + selected 2^k + chi live/dead, scramble/"
+    "two-period/drop-border/false-c_J/r377 first "
+    "measured in /tmp (r418_cal.py) then sealed "
+    "(disclosed calibration).  Builder fallback NOT "
+    "taken: full wall 40.4 s (bar 120 s).  AUSGANG "
+    "SPLIT_EXACT / UNIFORM_REFUTED / POLE_NOT_DOMINANT.  "
+    "SATZ over Q: phibb = c_J + s^T A0^{-1} s with "
+    "c_J = den-2 and A0^{-1} = 2(C+I)(C-I)^{-1}; P1 "
+    "toy phibb=-3, VAC toy -1, pole-save toy noD flips "
+    "+4.  w9 phibb=-0.08562, c_J=-0.39889, Sigma="
+    "0.31326, D=-0.01465, R_+=0.32792, noD=-0.07097 "
+    "(flagship NOT pole-saved); C-res 1e-12; false c_J "
+    "+1.914.  CORE-42: P1 28/28 phibb<0; VAC 8/14 "
+    "phibb<0 and 6/14 overflow at kz 12,13,16,19,39,49 "
+    "-- uniform phibb<0 REFUTED.  c_J in [-0.540,"
+    "-0.348] all <0; Sigma>0 on VAC.  Defect-saves "
+    "3/28 (kz 21,29,36); |D|/|phibb| med 0.076 -- "
+    "pole-dominance REFUTED on living P1.  TWO "
+    "MECHANISMS: P1 c_J+R_+ already <0 on 25/28; VAC "
+    "phibb<0 iff c_J<-Sigma.  TREND slope -0.09 flat "
+    "O(0.05).  EXT-6 all phibb<0; selected k=4,5,6,7,9 "
+    "phibb<0 (census, no k0).  Dead chi: phibb is NOT "
+    "the sole life/death carrier (dead P1 keep phibb<0, "
+    "chi3-15 D=-1.22 pole ON DEATH; dead VAC phibb>0).  "
+    "Companion rh/problem/phi_bb_sign.tex + "
+    "verify_phi_bb.py 10/10 PHI BB SIGN VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -3885,6 +3923,30 @@ ENTRIES = [
      [],
      "compiled PDF of source_sch_sign.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/phi_bb_sign.tex", "problem_statement",
+     "r418 companion",
+     [],
+     "lemma-first border-border sign after DCCLXXXIV "
+     "(round 418): phibb = c_J + Sigma SATZ; uniform "
+     "phibb<0 REFUTED on the named census; pole-"
+     "dominance REFUTED on living P1.  SPLIT_EXACT / "
+     "UNIFORM_REFUTED / POLE_NOT_DOMINANT.  Finite "
+     "identities plus a named refutation; NO RH claim",
+     True),
+    ("rh/problem/verify_phi_bb.py", "problem_check",
+     "r418 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "phi_bb_sign.tex: standalone (Q-split, C-"
+     "resolvent, pole-save mutant, drop-border) plus "
+     "construction pins (w9 identity+no-flip, dead "
+     "chi, scramble/two-period, MAIN-42 + EXT-119).  "
+     "10/10 gates, final line PHI BB SIGN VERIFIED", True),
+    ("rh/problem/phi_bb_sign.pdf", "problem_statement",
+     "r418 companion",
+     [],
+     "compiled PDF of phi_bb_sign.tex "
+     "(recompiled artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -4175,6 +4237,11 @@ ENTRIES = [
      "r417",
      [],
      _R417_STATUS,
+     True),
+    (f"{EXP}/phi_bb_sign_probe.py", "sealed_probe",
+     "r418",
+     [],
+     _R418_STATUS,
      True),
 ]
 

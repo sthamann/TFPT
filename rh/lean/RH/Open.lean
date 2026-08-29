@@ -148,6 +148,18 @@ on the selected sequence is not proved and is not a new
 `sorry` here -- it remains a named open of the selected
 mincut `selected_augDualResolvent_gt_half`.
 NO RH CLAIM.
+
+## r418 census (phi_bb sign)
+
+The border-border entry has the closed split
+`φ_bb = (den-2) + sᵀ A₀⁻¹ s` and the r407 form
+`A₀⁻¹ = 2(C+I)(C-I)⁻¹`.  Uniform `φ_bb < 0` on the
+named living census is refuted (6/14 vacuous core
+windows overflow).  Pole-dominance on living P1 is
+refuted (3/28).  Two named mechanisms; selected
+`a_k = 2^k` remains a negative census, not a new
+`sorry`.  Mincut unchanged.
+NO RH CLAIM.
 -/
 
 end RH

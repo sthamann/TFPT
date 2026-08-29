@@ -2716,6 +2716,36 @@
       "bytes": 206600
     },
     {
+      "path": "rh/problem/phi_bb_sign.tex",
+      "role": "problem_statement",
+      "round": "r418 companion",
+      "ledger_ids": [],
+      "status": "lemma-first border-border sign after DCCLXXXIV (round 418): phibb = c_J + Sigma SATZ; uniform phibb<0 REFUTED on the named census; pole-dominance REFUTED on living P1.  SPLIT_EXACT / UNIFORM_REFUTED / POLE_NOT_DOMINANT.  Finite identities plus a named refutation; NO RH claim",
+      "pin": true,
+      "sha256": "e0745a35595a21e27b596eaa209b794d21823271e9f3c1a8fa6403687f13f20d",
+      "bytes": 7830
+    },
+    {
+      "path": "rh/problem/verify_phi_bb.py",
+      "role": "problem_check",
+      "round": "r418 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in phi_bb_sign.tex: standalone (Q-split, C-resolvent, pole-save mutant, drop-border) plus construction pins (w9 identity+no-flip, dead chi, scramble/two-period, MAIN-42 + EXT-119).  10/10 gates, final line PHI BB SIGN VERIFIED",
+      "pin": true,
+      "sha256": "432e64fe166ee4e79d3f0af87c1e6d7c925af1b64b212dbb6ad148e54ee2f0d7",
+      "bytes": 5841
+    },
+    {
+      "path": "rh/problem/phi_bb_sign.pdf",
+      "role": "problem_statement",
+      "round": "r418 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of phi_bb_sign.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "cdd76cc1fdeddd9cbb7be24ef851f0730c7f3fe11810e8452300c16d92164bcc",
+      "bytes": 208432
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2890,8 +2920,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "7e31d33c70c76719f9b76e4eac9c0d67bbdab3d8b7da2e789600554dea82a040",
-      "bytes": 5437371
+      "sha256": "452aaacef6eab2e6cbc5c6d7d020cb996f7366bd0ff42d7c46af0ffb9ebde899",
+      "bytes": 5439780
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3342,6 +3372,16 @@
       "pin": true,
       "sha256": "2a56f30f5e674dd0b4a22e63223e4bc0cf91e6175d661a5b8a454f5ad3063da0",
       "bytes": 27254
+    },
+    {
+      "path": "experiments/tfpt-discovery/phi_bb_sign_probe.py",
+      "role": "sealed_probe",
+      "round": "r418",
+      "ledger_ids": [],
+      "status": "Border-border sign (round 418, PRIME.RDAGGER.PHI_BB_SIGN.01, reviewer DCCLXXXIV after r417 reduced cofinal sch<0 to phibb<0 plus |tau_un|->0; phibb is the asymptotic edge-sign carrier and was never attacked; experiments-side, NO ledger row): 30/30 full / 19/19 smoke; SPEC_SHA 6ef3a327d623c955; Q-split + C-resolvent, w9 pins, core-42 P1/VAC mechanisms, pole-share, defect-mutant, EXT-6 + selected 2^k + chi live/dead, scramble/two-period/drop-border/false-c_J/r377 first measured in /tmp (r418_cal.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 40.4 s (bar 120 s).  AUSGANG SPLIT_EXACT / UNIFORM_REFUTED / POLE_NOT_DOMINANT.  SATZ over Q: phibb = c_J + s^T A0^{-1} s with c_J = den-2 and A0^{-1} = 2(C+I)(C-I)^{-1}; P1 toy phibb=-3, VAC toy -1, pole-save toy noD flips +4.  w9 phibb=-0.08562, c_J=-0.39889, Sigma=0.31326, D=-0.01465, R_+=0.32792, noD=-0.07097 (flagship NOT pole-saved); C-res 1e-12; false c_J +1.914.  CORE-42: P1 28/28 phibb<0; VAC 8/14 phibb<0 and 6/14 overflow at kz 12,13,16,19,39,49 -- uniform phibb<0 REFUTED.  c_J in [-0.540,-0.348] all <0; Sigma>0 on VAC.  Defect-saves 3/28 (kz 21,29,36); |D|/|phibb| med 0.076 -- pole-dominance REFUTED on living P1.  TWO MECHANISMS: P1 c_J+R_+ already <0 on 25/28; VAC phibb<0 iff c_J<-Sigma.  TREND slope -0.09 flat O(0.05).  EXT-6 all phibb<0; selected k=4,5,6,7,9 phibb<0 (census, no k0).  Dead chi: phibb is NOT the sole life/death carrier (dead P1 keep phibb<0, chi3-15 D=-1.22 pole ON DEATH; dead VAC phibb>0).  Companion rh/problem/phi_bb_sign.tex + verify_phi_bb.py 10/10 PHI BB SIGN VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "62c31f99ea13a559e9094b06d13a2400f8f62e7e8a1947ca5886d3e8dac7ae9f",
+      "bytes": 25447
     }
   ]
 }

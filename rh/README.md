@@ -5823,6 +5823,35 @@ NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
 Coexistence: r374--r416 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**Border-border sign (r418,
+PRIME.RDAGGER.PHI_BB_SIGN.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/phi_bb_sign_probe.py`
+(30/30 full, 19/19 smoke, SPEC_SHA `6ef3a327d623c955`) plus
+`rh/problem/phi_bb_sign.tex` (+ PDF +
+`verify_phi_bb.py`, 10/10, `PHI BB SIGN VERIFIED`).
+**Ausgang SPLIT_EXACT / UNIFORM_REFUTED / POLE_NOT_DOMINANT.**
+SATZ: $\varphi_{bb}=c_J+s^{T}A_0^{-1}s$ with $c_J=\mathrm{den}-2$
+and $A_0^{-1}=2(C+I)(C-I)^{-1}$ (r407 $C$-resolvent of the
+Sherman--Morrison border).  Uniform $\varphi_{bb}<0$ on the
+named living census is **refuted** (vacuous $6/14$ overflow
+at $k_z\in\{12,13,16,19,39,49\}$).  Pole-dominance on
+living P1 is **refuted** ($3/28$ defect-saves;
+median $|D|/|\varphi_{bb}|=0.076$).  Two mechanisms: on P1
+$c_J+R_{+}$ is already negative on $25/28$; on the vacuous
+chart $\Sigma>0$ and $\varphi_{bb}<0$ iff $c_J<-\Sigma$.
+Selected $a_k=2^k$ at $k=4,5,6,7,9$ stay negative (census,
+no $k_0$).  EXT six rows all $\varphi_{bb}<0$.
+$\varphi_{bb}$ is **not** the sole life/death carrier:
+dead P1 keep $\varphi_{bb}<0$ (death is the $\tau$-terms);
+dead vacuous have $\varphi_{bb}>0$; $\chi_3$-15 is
+pole-dominated *and* dead.  Experiments-side, NO ledger
+row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).
+Coexistence: r374--r417 are parallel lemma-first / Lean
+lanes; this round is additive.
+
+
 
 ## Folder guide
 
@@ -6214,6 +6243,9 @@ rh/
 │   └── verify_source_sch.py — machine check of
 │                         source_sch_sign.tex (10/10,
 │                         SOURCE SCH SIGN VERIFIED)
+│   └── verify_phi_bb.py — machine check of
+│                         phi_bb_sign.tex (10/10,
+│                         PHI BB SIGN VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
