@@ -2776,6 +2776,36 @@
       "bytes": 215095
     },
     {
+      "path": "rh/problem/cj_sigma.tex",
+      "role": "problem_statement",
+      "round": "r420 companion",
+      "ledger_ids": [],
+      "status": "lemma-first c_J vs Sigma after DCCLXXXVI (round 420): den formula SATZ; naive Sigma bound LOOSE; reserve SHRINKS.  DEN_EXACT / BOUND_LOOSE / RESERVE_SHRINKS / COFINAL_OPEN.  Finite identities plus a named refutation of the O(1) gap; NO RH claim",
+      "pin": true,
+      "sha256": "1386ea2b688dddd01914536e174f60d4f8dc1bb19c9d201ba3ddfcaeea2b845c",
+      "bytes": 5600
+    },
+    {
+      "path": "rh/problem/verify_cj_sigma.py",
+      "role": "problem_check",
+      "round": "r420 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in cj_sigma.tex: standalone (den over Q, drop-border) plus construction pins (w9 den, kz26 bound, kz12 overflow, dead VAC, CORE den<2 + selected shrink).  8/8 gates, final line CJ SIGMA VERIFIED",
+      "pin": true,
+      "sha256": "ae8737cb7d39baa4df16cf29eff42418be94b7292ba117aa18c611b47c20c7a2",
+      "bytes": 4725
+    },
+    {
+      "path": "rh/problem/cj_sigma.pdf",
+      "role": "problem_statement",
+      "round": "r420 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of cj_sigma.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "f628dcb884d57d77b54804e9cc7774aefec671b5c147edefa7d55ead53e2948e",
+      "bytes": 215163
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2950,8 +2980,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "a3f1d9ce8dcbc88c93f8d03f2a91afa903bb18bd4e6726a02ea10649b0af86e9",
-      "bytes": 5441659
+      "sha256": "20e3e17adc4eb07e6c8f39c64cd6b70cd53e56f90eee258c5c205ad689a12551",
+      "bytes": 5443760
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3422,6 +3452,16 @@
       "pin": true,
       "sha256": "cb4df1454ea54703b509460a24b71be607fd5146bc355350ffb66433be377eca",
       "bytes": 22014
+    },
+    {
+      "path": "experiments/tfpt-discovery/cj_sigma_probe.py",
+      "role": "sealed_probe",
+      "round": "r420",
+      "ledger_ids": [],
+      "status": "c_J vs Sigma threshold (round 420, PRIME.RDAGGER.CJ_SIGMA_THRESHOLD.01, reviewer DCCLXXXVI: cofinal VAC c_J<-Sigma as the r419 reduction of sch<0; experiments-side, NO ledger row): 20/20 full / 15/15 smoke; SPEC_SHA 46409e2f11820dd6; den identity, occupation, naive Sigma bound, reserve trend, selected k=4..9, EXT, dead VAC, P1 one-balance, scramble/drop-2 first measured in /tmp (r420_cal.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 37.0 s (bar 120 s).  AUSGANG DEN_EXACT / BOUND_LOOSE / RESERVE_SHRINKS / COFINAL_OPEN.  SATZ: den=1+||bvec||^2/B_w - vt·s with B_w=S_{N-2}+5/7; w9 den=1.60111 gam=0.6778 Bw=8.382.  ALL 42 den in [1.460,1.652]<2, gap-to-2 [0.348,0.540] O(1) FLAT.  Sigma O(0.40) on moderate C-modes (lam_w 3.2..4.6); razor share <=3e-7; naive occupied-max bound 200..24000 x Sigma (LOOSE).  ||s||^2~0.06 FLAT.  Reserve OKV [0.011,0.068], OVF <0, EXT VAC [0.029,0.037]; selected k=4..9 all R>0 but SHRINKS 0.105->0.038 (hoped O(1) gap REFUTED).  ONE BALANCE: phibb=c_J+Sigma on both charts; P1 R_+/|Sigma| med 1.009.  The 6 remain a named finite class.  Companion rh/problem/cj_sigma.tex + verify_cj_sigma.py 8/8 CJ SIGMA VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "90216f06191aa136cd766e7c3249729a4cf17a17d8e6eede3439f6f4d5adc2d5",
+      "bytes": 18253
     }
   ]
 }

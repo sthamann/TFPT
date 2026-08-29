@@ -174,6 +174,18 @@ one so a cofinal τ-floor fails.  Cofinal VAC
 VAC (EXT/selected census).  No new `sorry`.
 Mincut unchanged.
 NO RH CLAIM.
+
+## r420 census (c_J vs Sigma)
+
+`den = 1 + ||b||²/B_w - v_t·s` is exact
+(`B_w = S_{N-2}+5/7`).  `den<2` has an O(1) budget
+gap, but the balance reserve `-φ_bb` is O(0.03) and
+shrinks along `a_k=2^k`.  The naive occupied-max
+`Σ`-bound is loose (200–24000×).  Cofinal
+`c_J < -Σ` on large-N VAC is a census, not a new
+`sorry`.  The whole edge is one `c_J`-vs-self-energy
+balance.  Mincut unchanged.
+NO RH CLAIM.
 -/
 
 end RH

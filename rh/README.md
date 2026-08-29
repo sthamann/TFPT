@@ -5878,6 +5878,30 @@ Mincut unchanged (base 4 / refined 5).
 Coexistence: r374--r418 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**$c_J$ vs $\Sigma$ (r420,
+PRIME.RDAGGER.CJ_SIGMA_THRESHOLD.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/cj_sigma_probe.py`
+(20/20 full, 15/15 smoke, SPEC_SHA `46409e2f11820dd6`) plus
+`rh/problem/cj_sigma.tex` (+ PDF +
+`verify_cj_sigma.py`, 8/8, `CJ SIGMA VERIFIED`).
+**Ausgang DEN_EXACT / BOUND_LOOSE / RESERVE_SHRINKS / COFINAL_OPEN.**
+SATZ: $\mathrm{den}=1+\|b\|^{2}/B_w-v_t\cdot s$ with
+$B_w=S_{N-2}+5/7$.  All 42 windows have $\mathrm{den}<2$
+with $O(1)$ gap $[0.348,0.540]$ (flat).  $s$ sits on
+moderate $C$-modes ($\lambda_w\sim 3$--$5$); the naive
+occupied-max $\Sigma$-bound is $200$--$24000\times$ (loose).
+The balance reserve $-\varphi_{bb}$ is $O(0.03)$ and
+**shrinks** along selected $k=4..9$ ($0.105\to 0.038$).
+The hoped $O(1)$ gap is refuted.  Both charts share one
+$c_J$-vs-self-energy balance.  The overflow six remain a
+named finite class.  Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).
+Coexistence: r374--r419 are parallel lemma-first / Lean
+lanes; this round is additive.
+
+
 
 
 
@@ -6277,6 +6301,9 @@ rh/
 │   └── verify_vacuous_overflow.py — machine check of
 │                         vacuous_overflow.tex (8/8,
 │                         VACUOUS OVERFLOW VERIFIED)
+│   └── verify_cj_sigma.py — machine check of
+│                         cj_sigma.tex (8/8,
+│                         CJ SIGMA VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
