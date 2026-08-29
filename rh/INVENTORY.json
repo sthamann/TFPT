@@ -2686,6 +2686,36 @@
       "bytes": 195338
     },
     {
+      "path": "rh/problem/source_sch_sign.tex",
+      "role": "problem_statement",
+      "round": "r417 companion",
+      "ledger_ids": [],
+      "status": "lemma-first source Schur sign after DCCLXXXIII (round 417): Woodbury and Sylvester-chart formulae SATZ; tau->0 census; rate not source-derived.  CHART_SCH_EXACT / LIMIT_CENSUS / RATE_OPEN.  Finite identities plus a named census; NO RH claim",
+      "pin": true,
+      "sha256": "e831422ef1a86ecd17004f0adf421cf8fbd8c48e4b2e6215115dc79848ff979b",
+      "bytes": 7840
+    },
+    {
+      "path": "rh/problem/verify_source_sch.py",
+      "role": "problem_check",
+      "round": "r417 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in source_sch_sign.tex: standalone (Woodbury/chart over Q, sign-map grids, drop-border) plus construction pins (w9 identity+pivot, dead chi, scramble/two-period, MAIN-42 + EXT-119).  10/10 gates, final line SOURCE SCH SIGN VERIFIED",
+      "pin": true,
+      "sha256": "b6b81b5902955fb57998c1f6e1095836bd0c930e38b2387a79d36580d9a69b4d",
+      "bytes": 5460
+    },
+    {
+      "path": "rh/problem/source_sch_sign.pdf",
+      "role": "problem_statement",
+      "round": "r417 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of source_sch_sign.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "9375c1856dad8c74ce755fdbd986e95e9228aff6f006a61c77153c96323ab8df",
+      "bytes": 206600
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2840,8 +2870,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "27d9326680e5a35bad6f0b863aeaa17c6a36c46fdff1c8888dc9d860fd9aea45",
-      "bytes": 3448295
+      "sha256": "7f7b7c7327a786dbb2ead4aaae7fb8b658656108a528b04d0cba3a8d8036af8c",
+      "bytes": 3456438
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -2860,8 +2890,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "c20ec5d4f99111d3ce8147aa86e96d996f7e07321652a0a1bb78c23cdda53618",
-      "bytes": 5433232
+      "sha256": "7e31d33c70c76719f9b76e4eac9c0d67bbdab3d8b7da2e789600554dea82a040",
+      "bytes": 5437371
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3302,6 +3332,16 @@
       "pin": true,
       "sha256": "30bc00be70bc86f5241a58fda42d3c8ef22196bba8d34e35b0374a2b3314d817",
       "bytes": 22738
+    },
+    {
+      "path": "experiments/tfpt-discovery/source_sch_sign_probe.py",
+      "role": "sealed_probe",
+      "round": "r417",
+      "ledger_ids": [],
+      "status": "Source Schur sign (round 417, PRIME.RDAGGER.SOURCE_SCH_SIGN.01, reviewer DCCLXXXIII last non-dead internal lever: sch<0 from the source via the r401 Sylvester chart, never previously attacked source-pure; experiments-side, NO ledger row): 31/31 full / 19/19 smoke; SPEC_SHA f2905f2a10fddc51; Woodbury + chart formulae over Q, w9 residuals, sign-map grids, core-42 + EXT-6 + selected 2^k trend, dead-chi geometry, pivot cross, scramble/two-period/drop-border/false-chart first measured in /tmp (r417_cal.py, r417_cal2.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 41.2 s (bar 120 s).  AUSGANG CHART_SCH_EXACT / LIMIT_CENSUS / RATE_OPEN.  SATZ over Q: sch = den-2 + s^T(A0+Ucd Ucd^T)^{-1}s (Woodbury) equals P1 sch=phibb+a_un^2-b_un^2 and VAC sch=phibb-(a_un^2+b_un^2); P1 toy -2/3, VAC toy -7/6.  Normalized tau cannot see the sign (d3 quotients it).  VAC phibb<0: whole disk sch<0; P1 hyperbola, large |a_un| is the danger.  w9 sch=-0.06696, Q=0.33193, dist=0.241, false-chart 2 a_un^2=0.03797.  CORE-42 42/42 sch<0; Q in [0.283,0.502] den in [1.460,1.652] -- sch is the O(0.04) difference of two O(1) terms, not the r375 K2-excess; vac detK>0 so sch is not the r377 product.  TREND: |t| slope -0.41 falling; |sch| slope +0.09 FLAT; EXT-119 N=1119 |t|=0.075; selected k=5,9 sch<0.  tau_inf=0 census; sch(tau_inf) not a function of normalized tau.  RATE_OPEN: |t|~N^{-0.47} not derived from Uvarov/fold (PNT-free form, no k0).  Dead chi 6/6 sch>0, dist med 0.011 vs live 0.180, 3/5 disk-escape; dead P1 keeps detK<0.  Companion rh/problem/source_sch_sign.tex + verify_source_sch.py 10/10 SOURCE SCH SIGN VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "2a56f30f5e674dd0b4a22e63223e4bc0cf91e6175d661a5b8a454f5ad3063da0",
+      "bytes": 27254
     }
   ]
 }

@@ -1230,6 +1230,45 @@ _R416_STATUS = (
     "VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim"
 )
 
+_R417_STATUS = (
+    "Source Schur sign (round 417, "
+    "PRIME.RDAGGER.SOURCE_SCH_SIGN.01, reviewer DCCLXXXIII "
+    "last non-dead internal lever: sch<0 from the source "
+    "via the r401 Sylvester chart, never previously "
+    "attacked source-pure; experiments-side, NO ledger "
+    "row): 31/31 full / 19/19 smoke; SPEC_SHA "
+    "f2905f2a10fddc51; Woodbury + chart formulae over Q, "
+    "w9 residuals, sign-map grids, core-42 + EXT-6 + "
+    "selected 2^k trend, dead-chi geometry, pivot cross, "
+    "scramble/two-period/drop-border/false-chart first "
+    "measured in /tmp (r417_cal.py, r417_cal2.py) then "
+    "sealed (disclosed calibration).  Builder fallback "
+    "NOT taken: full wall 41.2 s (bar 120 s).  AUSGANG "
+    "CHART_SCH_EXACT / LIMIT_CENSUS / RATE_OPEN.  SATZ "
+    "over Q: sch = den-2 + s^T(A0+Ucd Ucd^T)^{-1}s "
+    "(Woodbury) equals P1 sch=phibb+a_un^2-b_un^2 and "
+    "VAC sch=phibb-(a_un^2+b_un^2); P1 toy -2/3, VAC "
+    "toy -7/6.  Normalized tau cannot see the sign (d3 "
+    "quotients it).  VAC phibb<0: whole disk sch<0; P1 "
+    "hyperbola, large |a_un| is the danger.  w9 sch="
+    "-0.06696, Q=0.33193, dist=0.241, false-chart "
+    "2 a_un^2=0.03797.  CORE-42 42/42 sch<0; Q in "
+    "[0.283,0.502] den in [1.460,1.652] -- sch is the "
+    "O(0.04) difference of two O(1) terms, not the r375 "
+    "K2-excess; vac detK>0 so sch is not the r377 "
+    "product.  TREND: |t| slope -0.41 falling; |sch| "
+    "slope +0.09 FLAT; EXT-119 N=1119 |t|=0.075; "
+    "selected k=5,9 sch<0.  tau_inf=0 census; "
+    "sch(tau_inf) not a function of normalized tau.  "
+    "RATE_OPEN: |t|~N^{-0.47} not derived from Uvarov/"
+    "fold (PNT-free form, no k0).  Dead chi 6/6 sch>0, "
+    "dist med 0.011 vs live 0.180, 3/5 disk-escape; "
+    "dead P1 keeps detK<0.  Companion "
+    "rh/problem/source_sch_sign.tex + "
+    "verify_source_sch.py 10/10 SOURCE SCH SIGN "
+    "VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -3823,6 +3862,29 @@ ENTRIES = [
      [],
      "compiled PDF of debranges_index.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/source_sch_sign.tex", "problem_statement",
+     "r417 companion",
+     [],
+     "lemma-first source Schur sign after DCCLXXXIII "
+     "(round 417): Woodbury and Sylvester-chart formulae "
+     "SATZ; tau->0 census; rate not source-derived.  "
+     "CHART_SCH_EXACT / LIMIT_CENSUS / RATE_OPEN.  "
+     "Finite identities plus a named census; NO RH claim",
+     True),
+    ("rh/problem/verify_source_sch.py", "problem_check",
+     "r417 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "source_sch_sign.tex: standalone (Woodbury/chart "
+     "over Q, sign-map grids, drop-border) plus "
+     "construction pins (w9 identity+pivot, dead chi, "
+     "scramble/two-period, MAIN-42 + EXT-119).  10/10 "
+     "gates, final line SOURCE SCH SIGN VERIFIED", True),
+    ("rh/problem/source_sch_sign.pdf", "problem_statement",
+     "r417 companion",
+     [],
+     "compiled PDF of source_sch_sign.tex "
+     "(recompiled artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -4108,6 +4170,11 @@ ENTRIES = [
      "r416",
      [],
      _R416_STATUS,
+     True),
+    (f"{EXP}/source_sch_sign_probe.py", "sealed_probe",
+     "r417",
+     [],
+     _R417_STATUS,
      True),
 ]
 

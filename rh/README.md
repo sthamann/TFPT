@@ -5789,6 +5789,40 @@ NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
 Coexistence: r374--r415 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**Source Schur sign (r417,
+PRIME.RDAGGER.SOURCE_SCH_SIGN.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/source_sch_sign_probe.py`
+(31/31 full, 19/19 smoke, SPEC_SHA `f2905f2a10fddc51`) plus
+`rh/problem/source_sch_sign.tex` (+ PDF +
+`verify_source_sch.py`, 10/10, `SOURCE SCH SIGN VERIFIED`).
+**Ausgang CHART_SCH_EXACT / LIMIT_CENSUS / RATE_OPEN.**
+SATZ: $\mathrm{sch}=\mathrm{den}-2+s^{T}(A_0+U_{\mathrm{CD}}U_{\mathrm{CD}}^{T})^{-1}s$
+(Woodbury) equals the unnormalized Sylvester chart
+($\mathrm{sch}=\varphi_{bb}+\tilde a^{2}-\tilde b^{2}$ on P1,
+$\mathrm{sch}=\varphi_{bb}-(\tilde a^{2}+\tilde b^{2})$ vacuous);
+rational toys $-2/3$ and $-7/6$.  Normalized $\tau=(a,b)$
+cannot see the sign ($d_3$ quotients it out).  Vacuous chart
+with $\varphi_{bb}<0$: the whole disk has $\mathrm{sch}<0$.
+P1: hyperbola, large $|\tilde a|$ is the danger axis.
+MAIN $42/42$ $\mathrm{sch}<0$; $Q\in[0.283,0.502]$ and
+$\mathrm{den}\in[1.460,1.652]$ are $O(1)$, $\mathrm{sch}$ is
+their $O(0.04)$ difference (not the r375 $K_2$-excess).
+$|\tau|$ falls (slope $-0.41$); $|\mathrm{sch}|$ is flat
+(slope $+0.09$).  EXT $k_z=119$, $N=1119$, $|\tau|=0.075$.
+Selected $a_k=2^k$ at $k=5,9$ stay negative.  Dead $\chi$
+$6/6$ have $\mathrm{sch}>0$, sit on/across the curve
+(median distance $0.011$ vs live $0.180$), and $3/5$ escape
+the living disk $R=3.2$, while dead P1 keeps $\det K_2<0$
+--- $\mathrm{sch}$ is not the r377 product.  The observed
+rate $|\tau|\sim N^{-0.47}$ is **not** derived from Uvarov
+quotients or fold telescopy (`RATE_OPEN`; PNT-free in form,
+no $k_0$).  Cofinal $\mathrm{sch}<0$ is not proved.
+Experiments-side, NO ledger row, NO L\* claim,
+NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
+Coexistence: r374--r416 are parallel lemma-first / Lean
+lanes; this round is additive.
+
 
 ## Folder guide
 
@@ -6171,9 +6205,15 @@ rh/
 │   ├── verify_hole_top_mode.py — machine check of
 │                         hole_top_mode.tex (9/9,
 │                         HOLE TOP MODE VERIFIED)
-│   └── verify_top_mode_edge.py — machine check of
+│   ├── verify_top_mode_edge.py — machine check of
 │                         top_mode_edge.tex (9/9,
 │                         TOP MODE EDGE VERIFIED)
+│   ├── verify_debranges_index.py — machine check of
+│                         debranges_index.tex (9/9,
+│                         DEBRANGES INDEX VERIFIED)
+│   └── verify_source_sch.py — machine check of
+│                         source_sch_sign.tex (10/10,
+│                         SOURCE SCH SIGN VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)

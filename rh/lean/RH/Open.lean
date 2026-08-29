@@ -136,6 +136,17 @@ deleted.  The load-bearing open kernel is the named Prop
 of the selected sequence `a_k = 2^k`, `m_k = k·2^{⌊√k⌋}−1`.
 New named Props (not sorrys): `SelectedMasterImpliesPlainReads`,
 `ExactArchAgreesWithArchRead`.  Sorry census unchanged at 5.
+
+## r417 census (source Schur sign)
+
+The edge scalar `sch < 0` now has two closed formulae
+(Woodbury `sch = den-2 + sᵀ(A₀+Ucd Ucdᵀ)⁻¹s` and the
+unnormalized Sylvester chart).  Normalized `τ → 0` is a
+census, not a theorem; the rate is `RATE_OPEN` (Uvarov / fold
+identities do not force the observed slope).  Cofinal `sch < 0`
+on the selected sequence is not proved and is not a new
+`sorry` here -- it remains a named open of the selected
+mincut `selected_augDualResolvent_gt_half`.
 NO RH CLAIM.
 -/
 
