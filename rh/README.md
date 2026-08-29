@@ -5708,6 +5708,57 @@ NO RH CLAIM.  Mincut unchanged:
 Coexistence: r374--r411 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**Hole top mode (r413,
+PRIME.RDAGGER.HOLE_TOP_MODE.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/hole_top_mode_probe.py`
+(23/23 full, 19/19 smoke, SPEC_SHA `9b0e69fefd5ff609`) plus
+`rh/problem/hole_top_mode.tex` (+ PDF +
+`verify_hole_top_mode.py`, 9/9, `HOLE TOP MODE VERIFIED`).
+**Ausgang TOP_MODE_REFUTED.**
+SATZ: Lagrange identity $\sum p(y_i)/P_Y'(y_i)=0$ for
+$\deg p\le q-2$; $\pi_{q-1}^Y(y_i)=c/(\omega_i P_Y'(y_i))$
+in three bases over $\mathbb{Q}$; $v_{\mathrm{top}}$ is
+source-pure from $Y$, $u^\vee$, $P_Y'$ (no eig/SVD/target).
+The primary test $Q(I-\mathfrak{T}_0^*\mathfrak{T}_0)Q\succeq 0$
+**fails on flagship MAIN** ($\lambda_{\min}=-0.0476$, leftover
+$\sigma=1.024$ on $w9$; $\mathrm{corr}(v_{\mathrm{top}},C\text{-ev}_0)=0.6766$,
+better than the r410 Fourier face and still not the excess).
+QD already fails for $p\equiv 1$ (mass ratio $1.357$).
+Core-$42$ P1 hold $4/28$; living $\chi$ P1 $1/37$;
+dead $\chi$ $4/6$ (architecture ``dead must hold'' fails).
+Reviewer order: one clean MAIN violation closes the route.
+P1 remains $\iff\lambda_2(C)\ge 1$; the RHS is not this
+vector.  Experiments-side, NO ledger row, NO L\* claim,
+NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
+Coexistence: r374--r412 are parallel lemma-first / Lean
+lanes; this round is additive.
+
+**Top-mode edge (r415,
+PRIME.RDAGGER.TOP_MODE_EDGE.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/top_mode_edge_probe.py`
+(26/26 full, 22/22 smoke, SPEC_SHA `0911860fd986649d`) plus
+`rh/problem/top_mode_edge.tex` (+ PDF +
+`verify_top_mode_edge.py`, 9/9, `TOP MODE EDGE VERIFIED`).
+**Ausgang CHART_IDENTITY_EXACT / TOP_MODE_NOT_DEFECT.**
+SATZ: Euler tail and disk Parseval (r405, kept);
+$-\mathrm{sch}=\beta-\alpha$ over $\mathbb{Q}$ with
+$\alpha=(\eta-1)/\kappa$, $\beta=r^T K_W^{-1}r/\kappa$
+(r405/r406 rewrite; residual $\le 2\cdot 10^{-17}$ on
+the census).  $v_{\mathrm{top}}$ is **not** the bulk
+defect ($\cos=0.6766$ at $k_z=9$, $0.058$ at $k_z=18$).
+Euler-on-$v_{\mathrm{top}}$ is $|\langle 1,v_{\mathrm{top}}\rangle|^2$,
+not $\alpha_T$.  Living $\beta>\alpha$ / dead $\beta<\alpha$
+is exactly $\mathrm{sch}<0$ / $\mathrm{sch}>0$ (r401), for
+$v_{\mathrm{top}}$ and for the constant.  $H=A_0+vv^T$
+PD on only $18/42$ MAIN.  Parallel r413 independently
+**REFUTED** HTM; this round shows the edge rewrite does
+not become a top-mode-specific positivity.  Experiments-side,
+NO ledger row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).  Coexistence: r374--r413 are parallel
+lemma-first / Lean lanes; this round is additive.
+
 
 ## Folder guide
 
@@ -5978,6 +6029,13 @@ rh/
 │   ├── threshold_identity.tex(+pdf) — r411: energy
 │   │                     split SATZ; exact PD
 │   │                     saturation REFUTED.  No RH claim
+│   ├── hole_top_mode.tex(+pdf) — r413: hole top
+│   │                     OP formula SATZ; HTM primary
+│   │                     test REFUTED on MAIN; QD
+│   │                     REFUTED.  No RH claim
+│   ├── top_mode_edge.tex(+pdf) — r415: chart identity
+│   │                     -sch=beta-alpha SATZ; v_top
+│   │                     is not the bulk defect.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -6077,9 +6135,15 @@ rh/
 │   ├── verify_hole_nyquist.py — machine check of
 │                         hole_nyquist.tex (9/9,
 │                         HOLE NYQUIST VERIFIED)
-│   └── verify_threshold_identity.py — machine check of
+│   ├── verify_threshold_identity.py — machine check of
 │                         threshold_identity.tex (9/9,
 │                         THRESHOLD IDENTITY VERIFIED)
+│   ├── verify_hole_top_mode.py — machine check of
+│                         hole_top_mode.tex (9/9,
+│                         HOLE TOP MODE VERIFIED)
+│   └── verify_top_mode_edge.py — machine check of
+│                         top_mode_edge.tex (9/9,
+│                         TOP MODE EDGE VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6436,7 +6500,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r411 from
+2. **Sealed probes** — the campaign probes r250–r415 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7169,6 +7233,36 @@ tabulated.  Named remainder
 `experiments/next.txt`.  Suite surface of this round:
 integrity + probes + Lean (`run_rh.py --fast`).
 r374--r411 are parallel lemma-first / Lean lanes and are
+not dropped.
+
+**r413 coexistence.** Round 413 (`hole_top_mode.tex` +
+`hole_top_mode_probe.py`) is additive on the R-dagger
+north star after DCCLXXIX and r412 (the hole-top-mode
+primary test).  SATZ: Lagrange / top hole OP over
+$\mathbb{Q}$; $v_{\mathrm{top}}$ source-pure.
+HTM on MAIN **REFUTED**; QD **REFUTED**; dead-$\chi$-hold
+**REFUTED**.  It does not touch `experiments/next.txt`
+and does not touch `rh/lean/` (r376/r380/r384/r397/r406/r412).
+Suite surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the
+probe and problem-document rows to the inventory.
+r374--r412 are parallel lemma-first / Lean lanes and are
+not dropped.
+
+**r415 coexistence.** Round 415 (`top_mode_edge.tex` +
+`top_mode_edge_probe.py`) is additive on the R-dagger
+north star after DCCLXXIX, parallel to r413 (the edge
+half of the hole-top-mode architecture).  SATZ: Euler
+tail / disk Parseval kept; $-\mathrm{sch}=\beta-\alpha$
+as the r405/r406 chart rewrite.  $v_{\mathrm{top}}$ is
+**not** the bulk defect; Euler-on-$v_{\mathrm{top}}$ is
+constant content; living/dead is r401 $\mathrm{sch}$.
+It does not touch `experiments/next.txt` and does not
+touch `rh/lean/` (r376/r380/r384/r397/r406/r412).
+Suite surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the
+probe and problem-document rows to the inventory.
+r374--r413 are parallel lemma-first / Lean lanes and are
 not dropped.
 
 **r401 coexistence.** Round 401 (`edge_signature.tex` +

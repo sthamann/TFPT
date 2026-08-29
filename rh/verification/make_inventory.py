@@ -1124,6 +1124,74 @@ _R411_STATUS = (
     "VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim"
 )
 
+_R413_STATUS = (
+    "Hole top mode (round 413, "
+    "PRIME.RDAGGER.HOLE_TOP_MODE.01, reviewer primary test "
+    "after DCCLXXIX: is the defect the top OP of the hole "
+    "measure, and is T0 contractive on that complement?; "
+    "experiments-side, NO ledger row): 23/23 full / 19/19 "
+    "smoke; SPEC_SHA 9b0e69fefd5ff609; formula, corr, "
+    "projected lambda_min, leftover sigma, mass ratio, "
+    "permute/scramble, mutants, core-42 / chi / EXT first "
+    "measured in /tmp (r413_cal.py, r413_cal2.py, "
+    "r413_cal3.py) then sealed (disclosed calibration).  "
+    "Builder fallback NOT taken: full wall 23.2 s (bar 120 s).  "
+    "AUSGANG TOP_MODE_REFUTED.  SATZ over Q: Lagrange "
+    "identity on deg <= q-2, three bases; "
+    "pi_{q-1}(y_i)=c/(omega_i P_Y'(y_i)); v_top from Y, "
+    "u^vee, P_Y' only (constructor audit: no eig/SVD/"
+    "target).  w9 corr(v_top, C-ev0)=0.6766 > Fourier 0.278 "
+    "(better than R410 0.386, not the excess).  PRIMARY "
+    "FAILS on flagship MAIN: lambda_min(proj)=-0.04763, "
+    "n_over=1, leftover sigma=1.02354 (||T||=1.08014).  "
+    "QD fails for p==1 (mass_X/Y=1.35713); min-norm saves "
+    "constants (||T v_1||=0.359) and does not save HTM.  "
+    "core-42: P1 hold 4/28, PD 14/14 trivial.  chi live-P1 "
+    "1/37, live-PD 41/41, dead 4/6 (architecture 'dead "
+    "must hold' FAILS).  EXT P1 119/35/109/69 all break.  "
+    "KILLS: PERM n_over=20; SCR n_over=20; unsigned P' and "
+    "random leave sigma~||T||.  Companion "
+    "rh/problem/hole_top_mode.tex + "
+    "verify_hole_top_mode.py 9/9 HOLE TOP MODE VERIFIED.  "
+    "Reviewer order: one clean MAIN violation closes the "
+    "route.  NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
+_R415_STATUS = (
+    "Top-mode edge (round 415, "
+    "PRIME.RDAGGER.TOP_MODE_EDGE.01, reviewer DCCLXXIX "
+    "parallel to r413: -sch=beta-alpha as the edge of the "
+    "barycentric hole-top mode v_i ~ 1/(sqrt(u^vee) P_Y'); "
+    "experiments-side, NO ledger row): 26/26 full / 22/22 "
+    "smoke; SPEC_SHA 0911860fd986649d; v_top vs T0-SV, Euler "
+    "projection, Woodbury eta/r/Delta vs sch, H=A0+vv^T "
+    "inertia, closed-kappa mismatch, geo-span, ones control, "
+    "MAIN-18 cosine, core-42 + chi3/chi4 sign census first "
+    "measured in /tmp (r415_cal.py, r415_cal2.py, "
+    "r415_cal3.py, r415_cal4.py) then sealed (disclosed "
+    "calibration).  Builder fallback NOT taken: full wall "
+    "19.6 s (bar 120 s).  AUSGANG CHART_IDENTITY_EXACT / "
+    "TOP_MODE_NOT_DEFECT.  SATZ over Q: Euler tail; disk "
+    "Parseval; alpha=(eta-1)/kappa, beta=r^T K^{-1}r/kappa, "
+    "beta-alpha=-sch (eta=13/12, Delta=7/36, sch=21/8, "
+    "kappa=-2/27, alpha=-9/8, beta=-15/4).  w9: "
+    "cos(v_top,v_SV)=0.6766 != 1; alpha_T=-0.07302 "
+    "(contractive) vs true SV +0.16670; Euler energy="
+    "|<1,v_top>|^2=0.01192 != |alpha_T|; geo-relres=0.74; "
+    "Woodbury Delta=4.830e-3 kappa_emp=0.07214 nnegH=1; "
+    "ones control reproduces r405 (Delta=2.110e-3, "
+    "c2=0.99789, kappa=0.03151); closed kappa formula "
+    "mismatches.  MAIN-18 cos(v_top,vneg)=0.058.  CENSUS: "
+    "MAIN 42/42 beta>alpha (=sch<0); living chi 78 "
+    "beta>alpha; dead chi 6 beta<alpha; identity residual "
+    "2e-17; H PD only 18/42.  KILL: wrong omega cos=0.38; "
+    "fake P' cos=0.17; PERM nneg=20 SCR=21; K2 mixed on "
+    "live AND dead (border omitted).  Companion "
+    "rh/problem/top_mode_edge.tex + "
+    "verify_top_mode_edge.py 9/9 TOP MODE EDGE VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -3646,6 +3714,53 @@ ENTRIES = [
      [],
      "compiled PDF of threshold_identity.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/hole_top_mode.tex", "problem_statement",
+     "r413 companion",
+     [],
+     "lemma-first hole top mode after DCCLXXIX (round 413): "
+     "Lagrange/OP formula SATZ over Q; v_top source-pure; "
+     "HTM primary test REFUTED on MAIN; QD REFUTED for "
+     "p==1; dead-chi-hold REFUTED.  TOP_MODE_REFUTED.  "
+     "Finite identities plus a named refutation; NO RH claim",
+     True),
+    ("rh/problem/verify_hole_top_mode.py", "problem_check",
+     "r413 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "hole_top_mode.tex: standalone (Lagrange, GS formula, "
+     "constructor audit, toy HTM) plus construction pins "
+     "(w9 corr/primary fail, leftover+QD mass, "
+     "permute/scramble/unsigned P', chi, core-42 P1).  "
+     "9/9 gates, final line HOLE TOP MODE VERIFIED", True),
+    ("rh/problem/hole_top_mode.pdf", "problem_statement",
+     "r413 companion",
+     [],
+     "compiled PDF of hole_top_mode.tex "
+     "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/top_mode_edge.tex", "problem_statement",
+     "r415 companion",
+     [],
+     "lemma-first top-mode edge after DCCLXXIX (round 415): "
+     "Woodbury-Schur -sch=beta-alpha SATZ; v_top is not the "
+     "T0/A0 defect; Euler on v_top is constant content.  "
+     "CHART_IDENTITY_EXACT / TOP_MODE_NOT_DEFECT.  Finite "
+     "identities plus named refutations; NO RH claim",
+     True),
+    ("rh/problem/verify_top_mode_edge.py", "problem_check",
+     "r415 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "top_mode_edge.tex: standalone (Euler tail, disk "
+     "Parseval, alpha/beta over Q) plus construction pins "
+     "(w9 Euler vs alpha_T, v_top vs SV, chart identity + "
+     "ones=r405, chi sign, permute/scramble/omega, MAIN-18 "
+     "/ K2 mixed).  9/9 gates, final line TOP MODE EDGE "
+     "VERIFIED", True),
+    ("rh/problem/top_mode_edge.pdf", "problem_statement",
+     "r415 companion",
+     [],
+     "compiled PDF of top_mode_edge.tex "
+     "(recompiled artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -3916,6 +4031,16 @@ ENTRIES = [
      "r411",
      [],
      _R411_STATUS,
+     True),
+    (f"{EXP}/hole_top_mode_probe.py", "sealed_probe",
+     "r413",
+     [],
+     _R413_STATUS,
+     True),
+    (f"{EXP}/top_mode_edge_probe.py", "sealed_probe",
+     "r415",
+     [],
+     _R415_STATUS,
      True),
 ]
 

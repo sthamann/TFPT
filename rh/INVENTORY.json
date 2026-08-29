@@ -1512,8 +1512,8 @@
       "ledger_ids": [],
       "status": "compiled PDF of rdagger_saturation.tex (recompiled artefact, registered unpinned)",
       "pin": false,
-      "sha256": "55ab8aa7554e193eaa432aa222acc502edf27f0e4b860322912f5c64abb9ab67",
-      "bytes": 337986
+      "sha256": "dee6eec405b2ae73bcd269b6a4b9eda48aab2e427d7dfe70be35cdd149cb5c9f",
+      "bytes": 365376
     },
     {
       "path": "rh/problem/medcap_lemma.tex",
@@ -2596,6 +2596,66 @@
       "bytes": 243545
     },
     {
+      "path": "rh/problem/hole_top_mode.tex",
+      "role": "problem_statement",
+      "round": "r413 companion",
+      "ledger_ids": [],
+      "status": "lemma-first hole top mode after DCCLXXIX (round 413): Lagrange/OP formula SATZ over Q; v_top source-pure; HTM primary test REFUTED on MAIN; QD REFUTED for p==1; dead-chi-hold REFUTED.  TOP_MODE_REFUTED.  Finite identities plus a named refutation; NO RH claim",
+      "pin": true,
+      "sha256": "6b868fc65c955f5f66b9a206ea9b6593816439343c83780813f4e328b2878ae5",
+      "bytes": 5684
+    },
+    {
+      "path": "rh/problem/verify_hole_top_mode.py",
+      "role": "problem_check",
+      "round": "r413 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in hole_top_mode.tex: standalone (Lagrange, GS formula, constructor audit, toy HTM) plus construction pins (w9 corr/primary fail, leftover+QD mass, permute/scramble/unsigned P', chi, core-42 P1).  9/9 gates, final line HOLE TOP MODE VERIFIED",
+      "pin": true,
+      "sha256": "1235b75806e5cfa2436d302e800d72b50b8c7f62dfea08c2b7553d8f2bbb37c0",
+      "bytes": 5411
+    },
+    {
+      "path": "rh/problem/hole_top_mode.pdf",
+      "role": "problem_statement",
+      "round": "r413 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of hole_top_mode.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "02c4667bc1a4f1d8e767c757e55d00d7aa222baa3e43af477e40c6f2b7937e17",
+      "bytes": 225784
+    },
+    {
+      "path": "rh/problem/top_mode_edge.tex",
+      "role": "problem_statement",
+      "round": "r415 companion",
+      "ledger_ids": [],
+      "status": "lemma-first top-mode edge after DCCLXXIX (round 415): Woodbury-Schur -sch=beta-alpha SATZ; v_top is not the T0/A0 defect; Euler on v_top is constant content.  CHART_IDENTITY_EXACT / TOP_MODE_NOT_DEFECT.  Finite identities plus named refutations; NO RH claim",
+      "pin": true,
+      "sha256": "88acdf79e9986c1f6cf3113961df8114354c472293e06c5e5e6e681bf640c563",
+      "bytes": 8492
+    },
+    {
+      "path": "rh/problem/verify_top_mode_edge.py",
+      "role": "problem_check",
+      "round": "r415 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in top_mode_edge.tex: standalone (Euler tail, disk Parseval, alpha/beta over Q) plus construction pins (w9 Euler vs alpha_T, v_top vs SV, chart identity + ones=r405, chi sign, permute/scramble/omega, MAIN-18 / K2 mixed).  9/9 gates, final line TOP MODE EDGE VERIFIED",
+      "pin": true,
+      "sha256": "c5291a9854a21d11e5652cff8c69713292fb9e50ddb35125657578079f9e616d",
+      "bytes": 4954
+    },
+    {
+      "path": "rh/problem/top_mode_edge.pdf",
+      "role": "problem_statement",
+      "round": "r415 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of top_mode_edge.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "514eb2a8db51ec12611dd33fa0ff3459851e27a8dea524e72ae77f122359c36a",
+      "bytes": 223478
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2770,8 +2830,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "dcfdf0dfe8f2d3ed3d31e7a793a4a63f5abeef1acfcca342a6526a994c2fc812",
-      "bytes": 5420143
+      "sha256": "5e636be2b8f5f4f7cb08f6d4deacd597164f598adad39a773e3694491faeb22f",
+      "bytes": 5428454
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3182,6 +3242,26 @@
       "pin": true,
       "sha256": "cee34c5b399e3d17696caaa6006f18fd749b679af8a2285feaf0aec537d3279e",
       "bytes": 16542
+    },
+    {
+      "path": "experiments/tfpt-discovery/hole_top_mode_probe.py",
+      "role": "sealed_probe",
+      "round": "r413",
+      "ledger_ids": [],
+      "status": "Hole top mode (round 413, PRIME.RDAGGER.HOLE_TOP_MODE.01, reviewer primary test after DCCLXXIX: is the defect the top OP of the hole measure, and is T0 contractive on that complement?; experiments-side, NO ledger row): 23/23 full / 19/19 smoke; SPEC_SHA 9b0e69fefd5ff609; formula, corr, projected lambda_min, leftover sigma, mass ratio, permute/scramble, mutants, core-42 / chi / EXT first measured in /tmp (r413_cal.py, r413_cal2.py, r413_cal3.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 23.2 s (bar 120 s).  AUSGANG TOP_MODE_REFUTED.  SATZ over Q: Lagrange identity on deg <= q-2, three bases; pi_{q-1}(y_i)=c/(omega_i P_Y'(y_i)); v_top from Y, u^vee, P_Y' only (constructor audit: no eig/SVD/target).  w9 corr(v_top, C-ev0)=0.6766 > Fourier 0.278 (better than R410 0.386, not the excess).  PRIMARY FAILS on flagship MAIN: lambda_min(proj)=-0.04763, n_over=1, leftover sigma=1.02354 (||T||=1.08014).  QD fails for p==1 (mass_X/Y=1.35713); min-norm saves constants (||T v_1||=0.359) and does not save HTM.  core-42: P1 hold 4/28, PD 14/14 trivial.  chi live-P1 1/37, live-PD 41/41, dead 4/6 (architecture 'dead must hold' FAILS).  EXT P1 119/35/109/69 all break.  KILLS: PERM n_over=20; SCR n_over=20; unsigned P' and random leave sigma~||T||.  Companion rh/problem/hole_top_mode.tex + verify_hole_top_mode.py 9/9 HOLE TOP MODE VERIFIED.  Reviewer order: one clean MAIN violation closes the route.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "ab9f9b7c177ba513b25f55e714c93b8264b2ba1b7331c33f9cbc8ef4f70a2de5",
+      "bytes": 19941
+    },
+    {
+      "path": "experiments/tfpt-discovery/top_mode_edge_probe.py",
+      "role": "sealed_probe",
+      "round": "r415",
+      "ledger_ids": [],
+      "status": "Top-mode edge (round 415, PRIME.RDAGGER.TOP_MODE_EDGE.01, reviewer DCCLXXIX parallel to r413: -sch=beta-alpha as the edge of the barycentric hole-top mode v_i ~ 1/(sqrt(u^vee) P_Y'); experiments-side, NO ledger row): 26/26 full / 22/22 smoke; SPEC_SHA 0911860fd986649d; v_top vs T0-SV, Euler projection, Woodbury eta/r/Delta vs sch, H=A0+vv^T inertia, closed-kappa mismatch, geo-span, ones control, MAIN-18 cosine, core-42 + chi3/chi4 sign census first measured in /tmp (r415_cal.py, r415_cal2.py, r415_cal3.py, r415_cal4.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 19.6 s (bar 120 s).  AUSGANG CHART_IDENTITY_EXACT / TOP_MODE_NOT_DEFECT.  SATZ over Q: Euler tail; disk Parseval; alpha=(eta-1)/kappa, beta=r^T K^{-1}r/kappa, beta-alpha=-sch (eta=13/12, Delta=7/36, sch=21/8, kappa=-2/27, alpha=-9/8, beta=-15/4).  w9: cos(v_top,v_SV)=0.6766 != 1; alpha_T=-0.07302 (contractive) vs true SV +0.16670; Euler energy=|<1,v_top>|^2=0.01192 != |alpha_T|; geo-relres=0.74; Woodbury Delta=4.830e-3 kappa_emp=0.07214 nnegH=1; ones control reproduces r405 (Delta=2.110e-3, c2=0.99789, kappa=0.03151); closed kappa formula mismatches.  MAIN-18 cos(v_top,vneg)=0.058.  CENSUS: MAIN 42/42 beta>alpha (=sch<0); living chi 78 beta>alpha; dead chi 6 beta<alpha; identity residual 2e-17; H PD only 18/42.  KILL: wrong omega cos=0.38; fake P' cos=0.17; PERM nneg=20 SCR=21; K2 mixed on live AND dead (border omitted).  Companion rh/problem/top_mode_edge.tex + verify_top_mode_edge.py 9/9 TOP MODE EDGE VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "b4946743ad9cda1a172e9d9dcf28de31c97253ec6365c9caebdb84872491fc8b",
+      "bytes": 24009
     }
   ]
 }
