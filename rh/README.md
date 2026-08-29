@@ -5465,6 +5465,28 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r399 are parallel lemma-first / Lean lanes; this round is additive.
 
+
+**P1 construction class, refuted (r403,
+PRIME.LDAGGER.P1_CONSTRUCTION.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/p1_construction_probe.py` (25/25
+full, 21/21 smoke, SPEC_SHA `ba6817f54dc2b654`) plus
+`rh/problem/p1_construction.tex` (+ PDF +
+`verify_p1_construction.py`, 11/11, `P1 CONSTRUCTION VERIFIED`).
+**Ausgang P1_CONSTRUCTION_REFUTED.**  SATZ: rank-1 interlacing;
+PSD need not finish a lift; $R(cw)=R(w)$.
+Fixed-mask weight-rand kills P1 (permute $\mathrm{ind}_{-}\in[20,22]$
+on FRAME-A; rademacher-flatten $2$; mild $10^{-4}$ already tips).
+The invariant is the von Mangoldt assignment, not the sign mask.
+$48=49-1$ is a MAIN tautology; $B|_{\mathrm{neg}}$ is a Gram on
+MAIN only (omit returns $49$, only-Gram leaves $13$).
+Dead $\chi$ keep P1 on their true weights and leave under
+the same permutation.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r401 are parallel lemma-first / Lean lanes; this round is additive.
+
+
 ## Folder guide
 
 ```
@@ -5686,6 +5708,10 @@ rh/
 │   │                     edge signature; reconstruction SATZ;
 │   │                     model lemma SATZ; compact K census;
 │   │                     dead chi sch>0.  No RH claim
+│   ├── p1_construction.tex(+pdf) — r403: P1 construction
+│   │                     class; interlacing/PSD/scale SATZ;
+│   │                     CLASS REFUTED (weight-rand on the
+│   │                     frozen mask).  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5761,9 +5787,12 @@ rh/
 │   ├── verify_bulk_one_defect.py — machine check of
 │                         bulk_one_defect.tex (12/12,
 │                         BULK ONE DEFECT VERIFIED)
-│   └── verify_edge_signature.py — machine check of
+│   ├── verify_edge_signature.py — machine check of
 │                         edge_signature.tex (13/13,
 │                         EDGE SIGNATURE VERIFIED)
+│   └── verify_p1_construction.py — machine check of
+│                         p1_construction.tex (11/11,
+│                         P1 CONSTRUCTION VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6120,7 +6149,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r401 from
+2. **Sealed probes** — the campaign probes r250–r403 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6701,6 +6730,20 @@ It does not touch `experiments/next.txt` and does not touch
 surface of this round: integrity + probes
 (`run_rh.py --fast --skip-lean`) after appending the probe and
 problem-document rows to the inventory.  r374--r398 are
+parallel lemma-first / Lean lanes and are not dropped.
+
+
+**r403 coexistence.** Round 403 (`p1_construction.tex` +
+`p1_construction_probe.py`) is additive on the R-dagger
+north star after DCCLXVII and r400 (P1 as a construction
+class of the fold mask: interlacing SATZ; incomplete PSD
+lift SATZ; scale SATZ; CLASS REFUTED -- the invariant is
+the von Mangoldt assignment, not the mask).
+It does not touch `experiments/next.txt` and does not touch
+`rh/lean/` (r376/r380/r384/r397).  Suite
+surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the probe and
+problem-document rows to the inventory.  r374--r401 are
 parallel lemma-first / Lean lanes and are not dropped.
 
 **r401 coexistence.** Round 401 (`edge_signature.tex` +

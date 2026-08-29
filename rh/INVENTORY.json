@@ -2346,6 +2346,36 @@
       "bytes": 219740
     },
     {
+      "path": "rh/problem/p1_construction.tex",
+      "role": "problem_statement",
+      "round": "r403 companion",
+      "ledger_ids": [],
+      "status": "lemma-first P1 construction class after DCCLXVII and r400 (round 403): interlacing SATZ; incomplete PSD lift SATZ; scale invariance SATZ.  P1_CONSTRUCTION_REFUTED (fixed-mask weight-rand kills P1; invariant is the von Mangoldt assignment, not the fold mask).  Finite identities plus a named census; NO RH claim",
+      "pin": true,
+      "sha256": "6e1fd1209cc40e5fd9efd4533b217d3d40634e8fd454dec5663fd2a0f190b0cd",
+      "bytes": 7751
+    },
+    {
+      "path": "rh/problem/verify_p1_construction.py",
+      "role": "problem_check",
+      "round": "r403 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in p1_construction.tex: standalone (rank-1 interlacing, PSD-incomplete, threshold 1/2) plus construction pins (w9 Gram/omit/scale, permute, rademacher, mild 1e-4, scramble, two-period, dead chi weights vs perm).  11/11 gates, final line P1 CONSTRUCTION VERIFIED",
+      "pin": true,
+      "sha256": "5cb27d083384632951ddc6f60390a850ac006deadbb25bc0634294a2e86a13c6",
+      "bytes": 5802
+    },
+    {
+      "path": "rh/problem/p1_construction.pdf",
+      "role": "problem_statement",
+      "round": "r403 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of p1_construction.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "b6048bd03f9d3f4a2353cc9a7aaae34b0134f03e9c29171a0a1aa3987b688972",
+      "bytes": 193327
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2520,8 +2550,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "cb2e0ae5aaebec1eb42b1167ce7b216ac74439466695a54637ca7eea2d2daf54",
-      "bytes": 5389132
+      "sha256": "b95c62fd0bbab6b69039614e692ecb9a7d2d4f97b470dd37af7f949eea3c43f6",
+      "bytes": 5391523
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2852,6 +2882,16 @@
       "pin": true,
       "sha256": "fdd84155a16828dfee8348e4934f8fc65d81532fc122edc3854445f278d293c3",
       "bytes": 31351
+    },
+    {
+      "path": "experiments/tfpt-discovery/p1_construction_probe.py",
+      "role": "sealed_probe",
+      "round": "r403",
+      "ledger_ids": [],
+      "status": "P1 construction class (round 403, PRIME.LDAGGER.P1_CONSTRUCTION.01, lemma-first after DCCLXVII and r400: is lam2(R_{N-3})>=1/2 a theorem of the fold mask with arbitrary sign-conforming weights?; experiments-side, NO ledger row): 25/25 full / 21/21 smoke; SPEC_SHA ba6817f54dc2b654; class nneg tables, mild-noise break, Gram rest, omit/only-Gram, scale residual, sample killed, chi-perm first measured in /tmp (r403_cal.py, r403_cal2.py, r403_cal3.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 0.7 s (bar 120 s).  AUSGANG P1_CONSTRUCTION_REFUTED.  SATZ: rank-1 interlacing (diag(-1,-1)+e0 e0^T kills one); PSD+ND need not lift (diag(-1,-1)+0.1 I still nneg=2); R(c w)=R(w) (||R-R(7w)||_F=3.0e-13).  REFUTED as a construction class: fixed-mask permute nneg in {20,21,21,22}; gauss {18..24}; expon {11..15}; dirichlet {11..18}; rademacher-flatten nneg=2; mild 1e-4 already 1/6 nneg>1.  mu*3 nneg=0, nu*3 nneg=65 (relative scale is load-bearing).  Separating invariant is the weight-to-position assignment, not the sign mask.  48=49-1 is MAIN tautology (nneg_ref=49,48,54,124,141 on the sample; perm leaves tens of negatives).  n_half(R^ref) grows 13,27,38,62,65 -- not a single exact 1/2 mode.  Gram candidate CENSUS on MAIN: B|_neg PSD rest=0 49/49, omit-Gram nneg=49, only-Gram nneg=13 (cross terms finish the lift); permute/scramble rest=0.14/0.15 -- Gram is MAIN-weight, not class.  KILL: scramble nneg=21; two-period nneg=4 killed=0; signflip nneg~90; dead chi3-15 nneg=1 on true weights, perm nneg=20.  Sample {9,22,33,78,82} MAIN nneg=1, perm 24/30/44/96/102; EXT kz82 n=341.  Companion rh/problem/p1_construction.tex + verify_p1_construction.py 11/11 P1 CONSTRUCTION VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "4ae0440f5f4eb8d6f088a1d46122e7724a9c2fc372e52644a4f99b369fd542cb",
+      "bytes": 20392
     }
   ]
 }
