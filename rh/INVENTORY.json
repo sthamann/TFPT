@@ -2926,6 +2926,36 @@
       "bytes": 196770
     },
     {
+      "path": "rh/problem/cross_chain_gamma.tex",
+      "role": "problem_statement",
+      "round": "r425 companion",
+      "ledger_ids": [],
+      "status": "lemma-first cross-chain gamma after DCCXCI (round 425): ||b||^2 <= S SATZ; posted ||b||^2 < B_w via q_N<1; dead q_N>1; cofinal OPEN.  B2_LE_S_SATZ / QN_BRIDGES_BW / DEAD_NEEDS_SLACK / COFINAL_OPEN.  NO RH claim",
+      "pin": true,
+      "sha256": "560f6695f59e8b89ce242dc54cec693956c0525616ec254834844dddcd2b3e79",
+      "bytes": 6447
+    },
+    {
+      "path": "rh/problem/verify_cross_chain.py",
+      "role": "problem_check",
+      "round": "r425 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in cross_chain_gamma.tex: standalone (kernel over Q, ray, q_N bridge) plus construction pins (w9 b2<=S, ||G||_op=1, k=5/dead/unnorm).  6/6 gates, final line CROSS CHAIN VERIFIED",
+      "pin": true,
+      "sha256": "354fa6833a520c9f7188bdd342a607fed4b3f9207af46813774c742deab5adaf",
+      "bytes": 3144
+    },
+    {
+      "path": "rh/problem/cross_chain_gamma.pdf",
+      "role": "problem_statement",
+      "round": "r425 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of cross_chain_gamma.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "65a08bb7f089a4330611b7662cb7a60b38e3b0bec4a21a4ed2b36401ec376c98",
+      "bytes": 215471
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3100,8 +3130,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "b02f08dee3197a436c719e1faeb90d2bbd82aa68d03c35811712dde30eafa5f5",
-      "bytes": 5452225
+      "sha256": "0d712ca694c9b3ac51209b01b037d848c6b733dd351d3ed3a8dd341ba3cbe758",
+      "bytes": 5454305
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3622,6 +3652,16 @@
       "pin": true,
       "sha256": "033a96c11f28e25561b15648225959c9acb79cbc9c346673f4bd42ac16da3320",
       "bytes": 16988
+    },
+    {
+      "path": "experiments/tfpt-discovery/cross_chain_gamma_probe.py",
+      "role": "sealed_probe",
+      "round": "r425",
+      "ledger_ids": [],
+      "status": "cross-chain gamma (round 425, PRIME.RDAGGER.CROSS_CHAIN_GAMMA.01, reviewer DCCXCI: ||b||^2 < B_w as a cross-chain theorem; experiments-side, NO ledger row): 17/17 full / 14/14 smoke; SPEC_SHA 458ee51d6db76776; kernel Loewner, ||G||_op, q_N vs B_w, dead q_N>1, unnorm, core-42 first measured in /tmp (r425_cal.py, r425_cal2.py, r425_cal3.py) then sealed (disclosed).  Builder fallback TAKEN for k=8 (r421 pin gamma=0.6386).  Full wall 30.9 s (bar 120 s).  AUSGANG B2_LE_S_SATZ / QN_BRIDGES_BW / DEAD_NEEDS_SLACK / COFINAL_OPEN.  SATZ: ||b||^2 <= S (K_mu ≼ K_{mu-nu} on P_<N).  Posted ||b||^2 < B_w REDUZIERT to q_N<1.  On the v960 42-rung q_N<1 census it composes to gamma<1.  Dead q_N=1.21,1.33>1 (S>B_w; slack still saves gamma).  ||G||_op^2=1.  Companion rh/problem/cross_chain_gamma.tex + verify_cross_chain.py 6/6 CROSS CHAIN VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "f2ff77c46a76f2a63fe83f625787b1900c91dfed02e3b9393e0855715e66cbab",
+      "bytes": 15384
     }
   ]
 }

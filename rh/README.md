@@ -6000,6 +6000,26 @@ Coexistence: r374--r423 are parallel lemma-first / Lean
 lanes; this round is additive.
 
 
+**Cross-chain $\gamma$ (r425,
+PRIME.RDAGGER.CROSS_CHAIN_GAMMA.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/cross_chain_gamma_probe.py`
+(17/17 full, 14/14 smoke, SPEC_SHA `458ee51d6db76776`) plus
+`rh/problem/cross_chain_gamma.tex` (+ PDF +
+`verify_cross_chain.py`, 6/6, `CROSS CHAIN VERIFIED`).
+**Ausgang B2_LE_S_SATZ / QN_BRIDGES_BW / DEAD_NEEDS_SLACK / COFINAL_OPEN.**
+SATZ: $\|b\|^{2}\le S$ ($K_\mu\preccurlyeq K_{\mu-\nu}$ on $P_{<N}$).
+Posted $\|b\|^{2}<B_w$ reduces to $q_N<1$.
+On the 42-rung $q_N<1$ census this composes to $\gamma<1$.
+Dead $\chi$ have $q_N>1$ (need kernel slack).
+Cofinal $q_N$ remains open.
+Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).
+Coexistence: r374--r424 are parallel lemma-first / Lean
+lanes; this round is additive.
+
+
 
 
 
@@ -6417,6 +6437,9 @@ rh/
 │   └── verify_gamma_chain.py — machine check of
 │                         gamma_chain.tex (7/7,
 │                         GAMMA CHAIN VERIFIED)
+│   └── verify_cross_chain.py — machine check of
+│                         cross_chain_gamma.tex (6/6,
+│                         CROSS CHAIN VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6773,7 +6796,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r424 from
+2. **Sealed probes** — the campaign probes r250–r425 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,

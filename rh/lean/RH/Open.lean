@@ -230,6 +230,16 @@ Termwise `w_k = b_k²/ρ_k` is not uniform
 (max `γ = 0.724`); `γ < 1` is not a new
 `sorry`.  Mincut unchanged.
 NO RH CLAIM.
+
+## r425 census (cross-chain gamma)
+
+`‖b‖² ≤ S` is the kernel Loewner
+`K_μ ≼ K_{μ-ν}` on `P_<N` (SATZ).
+`‖b‖² < B_w` is that SATZ plus `q_N < 1`.
+On the 42-rung `q_N < 1` census it composes
+to `γ < 1`; cofinal `q_N` is not a new
+`sorry`.  Mincut unchanged.
+NO RH CLAIM.
 -/
 
 end RH
