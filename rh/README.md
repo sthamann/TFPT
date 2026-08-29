@@ -5929,6 +5929,29 @@ NO L\* claim, NO RH CLAIM.  Mincut unchanged
 Coexistence: r374--r420 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**$\Sigma$ limit (r422,
+PRIME.RDAGGER.SIGMA_LIMIT.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/sigma_limit_probe.py`
+(16/16 full, 12/12 smoke, SPEC_SHA `d81fc5fcb4e87711`) plus
+`rh/problem/sigma_limit.tex` (+ PDF +
+`verify_sigma_limit.py`, 7/7, `SIGMA LIMIT VERIFIED`).
+**Ausgang STIELTJES_EXACT / DENSITY_REFUTED / NEAR1_STABLE / LIMITS_OPEN.**
+SATZ: $\Sigma=2\|s\|^{2}+4s^{T}(C-I)^{-1}s$.
+A one-pole / Cauchy closed occupancy density is
+refuted (relative error $0.73$ / $0.95$).
+Near-$1$ mass stays $O(0.01)$: $n_{\mathrm{eff}}$
+growth is bulk broadening, not pole-creep.
+KS distances fall $0.14\to 0.04$.
+EXT vacuous $\Sigma\le 0.469$.
+$\mathrm{den}_\infty$ and $\Sigma_\infty$ are not
+constructed.  Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).
+Coexistence: r374--r421 are parallel lemma-first / Lean
+lanes; this round is additive.
+
+
 
 
 
@@ -6336,6 +6359,9 @@ rh/
 │   └── verify_reserve_limit.py — machine check of
 │                         reserve_limit.tex (8/8,
 │                         RESERVE LIMIT VERIFIED)
+│   └── verify_sigma_limit.py — machine check of
+│                         sigma_limit.tex (7/7,
+│                         SIGMA LIMIT VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)

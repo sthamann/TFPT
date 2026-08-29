@@ -2836,6 +2836,36 @@
       "bytes": 208658
     },
     {
+      "path": "rh/problem/sigma_limit.tex",
+      "role": "problem_statement",
+      "round": "r422 companion",
+      "ledger_ids": [],
+      "status": "lemma-first Sigma limit after DCCLXXXVIII (round 422): Stieltjes SATZ; closed occ density REFUTED; near-1 STABLE; limits OPEN.  STIELTJES_EXACT / DENSITY_REFUTED / NEAR1_STABLE / LIMITS_OPEN.  Finite identity plus a named census; NO RH claim",
+      "pin": true,
+      "sha256": "756bb9c5a934ebebaaabed08ef6a73adccd8306a694020e67c6cd5359eaddb80",
+      "bytes": 6716
+    },
+    {
+      "path": "rh/problem/verify_sigma_limit.py",
+      "role": "problem_check",
+      "round": "r422 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in sigma_limit.tex: standalone (Stieltjes over Q, g=1 mutant, drop-border) plus construction pins (w9 identity, kz26 near-1, kz12 overflow, dead razor).  7/7 gates, final line SIGMA LIMIT VERIFIED",
+      "pin": true,
+      "sha256": "9c2ba22f17851c59b1cdb244415ea88eb4caf32823214a49a8713acbf6fa79cf",
+      "bytes": 4102
+    },
+    {
+      "path": "rh/problem/sigma_limit.pdf",
+      "role": "problem_statement",
+      "round": "r422 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of sigma_limit.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "ea433442a085d60e6fa59deb31136c1a02d491a8eabd27320ed0190c592ddb13",
+      "bytes": 212398
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3010,8 +3040,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "8850aedd7ef8ccac72a05c42f14c20f17690fb81a0972104857038edc6103911",
-      "bytes": 5445900
+      "sha256": "c922a46a4aaceb476e5515995f57ad449c48822fa9819352b152bd7cab240d5a",
+      "bytes": 5448183
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3502,6 +3532,16 @@
       "pin": true,
       "sha256": "f841faae17e02d9319ee5ab4cf6da24c12db02bf6d05833293ac79415e841c05",
       "bytes": 19546
+    },
+    {
+      "path": "experiments/tfpt-discovery/sigma_limit_probe.py",
+      "role": "sealed_probe",
+      "round": "r422",
+      "ledger_ids": [],
+      "status": "Sigma limit (round 422, PRIME.RDAGGER.SIGMA_LIMIT.01, reviewer DCCLXXXVIII: limsup Sigma < 2-den_inf on selected a_k=2^k, source-pure; experiments-side, NO ledger row): 16/16 full / 12/12 smoke; SPEC_SHA d81fc5fcb4e87711; occ spectra, Stieltjes identity, near-1 masses, KS, 1-pole/Cauchy density attempt, overflow, dead chi, EXT first measured in /tmp (r422_cal.py) then sealed (disclosed).  Builder fallback TAKEN for k=8 occ (r421 pin, 226 s).  Full wall 31.9 s (bar 120 s).  AUSGANG STIELTJES_EXACT / DENSITY_REFUTED / NEAR1_STABLE / LIMITS_OPEN.  SATZ: Sigma=2||s||^2+4 s^T(C-I)^{-1}s = 2 sum occ g.  REFUTED: 1-pole / Cauchy closed occ density (rel 0.73 / 0.95); n_eff growth as pole-creep.  REDUZIERT: near-1 mass O(0.01) stable; KS falls 0.14->0.04; EXT Sigma<=0.469; den_inf and Sigma_inf NOT constructed.  Companion rh/problem/sigma_limit.tex + verify_sigma_limit.py 7/7 SIGMA LIMIT VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "9cd5b315237601dbe10535eba104e1fa001999fdde8ffd2510bc2fa8f635475b",
+      "bytes": 18121
     }
   ]
 }

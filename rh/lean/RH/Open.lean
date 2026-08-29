@@ -198,6 +198,17 @@ Three saturation scales, not one exponent.
 Cofinal `R_∞ > 0` is a census, not a new
 `sorry`.  Mincut unchanged.
 NO RH CLAIM.
+
+## r422 census (Sigma limit)
+
+`Σ = 2||s||² + 4 sᵀ(C-I)⁻¹s` is the r407
+Stieltjes form.  A closed occupancy density
+is refuted.  Near-`λ=1` mass stays `O(0.01)`
+so `n_eff` growth is not pole-creep.
+`den_∞` and `Σ_∞` are not constructed;
+`limsup Σ < 2-den_∞` is a census, not a new
+`sorry`.  Mincut unchanged.
+NO RH CLAIM.
 -/
 
 end RH
