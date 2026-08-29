@@ -5685,6 +5685,29 @@ NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
 Coexistence: r374--r410 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**Graph-resolvent consolidation (r412,
+PRIME.LDAGGER.GRAPH_RESOLVENT_LEAN.01).**  Sorry-free finite
+algebra in `RH/GraphResolvent.lean`: for $C\succ0$,
+$R=C(I+C)^{-1}$ is well-defined, $0\prec R\prec I$,
+$R-\tfrac12 I=\tfrac12(I+C)^{-1}(C-I)$, and
+$\mathrm{ind}_{-}(R-\tfrac12 I)=\mathrm{ind}_{-}(C-I)=\mathrm{ind}_{-}(I-C^{-1})$.
+Energy split: $\mathfrak{T}^*\mathfrak{T}=C^{-1}$ implies
+Euclidean contraction iff $C\succeq I$, and at most one
+singular value $>1$ iff $\mathrm{ind}_{-}(C-I)\le1$.
+Zero-defect composition $C\succ I$ plus $q^\dagger<1$ lifts
+to $R^\dagger\succ\tfrac12 I$.  Named Prop
+`GraphResolventIsLEnsembleInv` (CD identification $E=C^{-1}$
+on `RepresentsLEnsemble`; same class as `P1EqCapInertia`).
+`#print axioms` = `[propext, Classical.choice, Quot.sound]`
+on every named theorem in the file; zero `sorry`; census
+**stays 5**.  Dossier `rdagger_saturation.tex` records P1 in
+the four equivalent coordinates and the seventeen closed
+languages (DCCXLVI--DCCLXXVIII).  NO ledger row, NO L\* claim,
+NO RH CLAIM.  Mincut unchanged:
+`selected_augDualResolvent_gt_half` (base 4 / refined 5).
+Coexistence: r374--r411 are parallel lemma-first / Lean
+lanes; this round is additive.
+
 
 ## Folder guide
 
@@ -5792,6 +5815,12 @@ rh/
 │       │                    cMin_normSq PROVED; Woodbury built).
 │       │                    Independent of R404/R405.  Zero sorry;
 │       │                    census stays 5.  NO RH CLAIM
+│       ├── GraphResolvent.lean — r412: graph-resolvent dictionary
+│       │                    (R=C(I+C)^{-1}, Möbius inertia,
+│       │                    energy-split contraction, zero-defect
+│       │                    R† lift PROVED; named Prop
+│       │                    GraphResolventIsLEnsembleInv).
+│       │                    Zero sorry; census stays 5.  NO RH CLAIM
 │       └── Counterexamples.lean — r273 reviewer guards: machine-checked
 │                            refutations of the three pre-r273 universal
 │                            forms (proved, no sorry)
@@ -5807,9 +5836,12 @@ rh/
 │   │                     duality formulae, critical 3×3, saturation
 │   │                     edge, exponent, relative error form; since
 │   │                     r367–r373 the PRIMARY question is the
-│   │                     minimal inertia form (P1)+(P2), the older
-│   │                     RHP/BKMM saturation question is the
-│   │                     stronger variant).  No RH claim
+│   │                     minimal inertia form (P1)+(P2); r412
+│   │                     records the graph-resolvent coordinates
+│   │                     of (P1) and the seventeen closed
+│   │                     languages.  The older RHP/BKMM saturation
+│   │                     question is the stronger variant).
+│   │                     No RH claim
 │   ├── medcap_lemma.tex(+pdf) — proof attempt for the r361
 │   │                     MED-CAP inequality med_i ≤ (8/3) sep_i
 │   │                     (SEP-SATZ proved; tiling reduction;
@@ -6699,6 +6731,13 @@ min-norm Gram identity **PROVED** (`#print axioms` =
 `propext/Classical.choice/Quot.sound` only).  Woodbury is
 home-built (mathlib has Schur, not Woodbury).  Zero new
 `sorry`; census **stays 5**.  NO RH CLAIM.
+**r412 graph-resolvent Lean round.** `RH/GraphResolvent.lean`:
+r407/r409/r411 dictionaries as sorry-free finite matrix
+algebra (spectral bridge, Möbius inertia, energy-split
+contraction, zero-defect $R^\dagger$ lift **PROVED**).  Named
+Prop `GraphResolventIsLEnsembleInv`.  `#print axioms` =
+`propext/Classical.choice/Quot.sound` only.  Zero new
+`sorry`; census **stays 5**.  NO RH CLAIM.
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
@@ -7118,6 +7157,19 @@ integrity + probes (`run_rh.py --fast --skip-lean`) after
 appending the probe and problem-document rows to the
 inventory.  r374--r410 are parallel lemma-first / Lean
 lanes and are not dropped.
+
+**r412 coexistence.** Round 412 (`RH/GraphResolvent.lean` +
+dossier section in `rdagger_saturation.tex`) is additive on
+the R-dagger north star after r407/r409/r411: the three
+core dictionaries as sorry-free finite algebra, P1 in four
+equivalent coordinates, seventeen closed languages
+tabulated.  Named remainder
+`GraphResolventIsLEnsembleInv`.  Mincut unchanged
+(`selected_augDualResolvent_gt_half`).  It does not touch
+`experiments/next.txt`.  Suite surface of this round:
+integrity + probes + Lean (`run_rh.py --fast`).
+r374--r411 are parallel lemma-first / Lean lanes and are
+not dropped.
 
 **r401 coexistence.** Round 401 (`edge_signature.tex` +
 `edge_signature_probe.py`) is additive on the R-dagger

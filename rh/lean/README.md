@@ -24,6 +24,11 @@
 > (`RH/OneDefect.lean`) with **zero new `sorry`** (finite real
 > matrix algebra; independent of source-side R404/R405). Census
 > stays **five**.
+> **r412** kernel-anchors the r407/r409/r411 graph-resolvent
+> dictionaries (`RH/GraphResolvent.lean`) with **zero new `sorry`**
+> (spectral bridge, Möbius inertia, energy-split contraction,
+> zero-defect R† lift proved; named Prop
+> `GraphResolventIsLEnsembleInv`). Census stays **five**.
 > The graph is reduced to the
 > **two true arithmetic gaps** (now the alternative route):
 > `lstar_canonical` (lemma L*, the base/wall hole)
@@ -43,7 +48,7 @@
 > (`RH/Haynsworth.lean`, sorry-free); the former master-theorem `sorry`, the wave-5 fog-free
 > form `free_window_positivity` and the pair closure
 > `pair_closes_main` are PROVED as corollaries. Historical narrative
-> (r305 four / r310 five / r326 eight / C1 seven / r376 five / r380 five / r384 five / r397 five / r406 five) in the blocks below.
+> (r305 four / r310 five / r326 eight / C1 seven / r376 five / r380 five / r384 five / r397 five / r406 five / r412 five) in the blocks below.
 >
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
@@ -152,6 +157,8 @@
 >
 > r406 proved theorems (not sorrys, census unchanged at 5): `indNeg_sub_rankOne_le_one`, `posDef_sub_rankOne_iff`, `woodbury_inv`, `oneDefect_update_posDef_iff`, `posDef_of_contractive_lift`, `cMin_normSq`, `posDef_gram_sub_rankOne_iff` (`RH/OneDefect.lean`; finite matrix algebra, independent of R404/R405).
 >
+> r412 proved theorems (not sorrys, census unchanged at 5): `graphResolvent_eq_dualResolvent_inv`, `graphResolvent_sub_half_eq`, `indNeg_graphResolvent_sub_half`, `indNeg_mobius`, `energy_split_contractive`, `energy_split_at_most_one`, `p1_coord_graphResolvent`, `augDualResolvent_gt_half_of_C_gt_one` (`RH/GraphResolvent.lean`; finite matrix algebra).  Named Prop `GraphResolventIsLEnsembleInv` (CD identification $E=C^{-1}$ on `RepresentsLEnsemble`; same class as `P1EqCapInertia`).
+>
 > Retired as sorries by C1: `lstar_subordination` → `lstar_canonical`
 > (retype), `terminal_positive_main` → `terminal_q_canonical` (retype,
 > sharpened), `pair_margin_main` → named Prop `PairMarginLaw` + the
@@ -220,6 +227,23 @@
 > 'RH.posDef_of_contractive_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.cMin_normSq' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.posDef_gram_sub_rankOne_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.graphResolvent_eq_one_sub_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.graphResolvent_eq_dualResolvent_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.graphResolvent_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.graphResolvent_posDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.graphResolvent_sub_half_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.indNeg_one_add_inv_congruence' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.indNeg_inv_congruence' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.indNeg_graphResolvent_sub_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.indNeg_mobius' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.posDef_one_sub_inv_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.posSemidef_one_sub_inv_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.graphResolvent_gt_half_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.contractive_iff_gram_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.energy_split_contractive' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.energy_split_at_most_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.p1_coord_graphResolvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.augDualResolvent_gt_half_of_C_gt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
 > ```
 >
 > Reading (the `sorryAx` granularity is resolved by the proof terms —
@@ -234,7 +258,8 @@
 > `sorryAx`.  **r376: pole stabilization has no `sorryAx`.**  **r380: the
 > proved pivot-coordinate faces have no `sorryAx`.**  **r384: the proved
 > flank-entry faces have no `sorryAx`.**  **r406: the one-defect
-> theorems have no `sorryAx`.**  Direct R† path: the two canonical holes (not consumed)
+> theorems have no `sorryAx`.**  **r412: the graph-resolvent
+> identities have no `sorryAx`.**  Direct R† path: the two canonical holes (not consumed)
 > by DualResolvent itself), arch (extraction only), named Prop
 > `BorderedCompressionBridge`, density montage (unformalized).
 > The reviewer target "the final theorem consumes only the two
@@ -312,6 +337,10 @@ lake build           # => "Build completed successfully"
   **r406 census unchanged at 5** (`RH/OneDefect.lean` is
   sorry-free: SATZ A/B/C, Woodbury, and the min-norm Gram
   identity proved; independent of R404/R405).
+  **r412 census unchanged at 5** (`RH/GraphResolvent.lean` is
+  sorry-free: spectral dictionary, Möbius inertia, energy-split
+  contraction, and the zero-defect R† lift proved; named Prop
+  `GraphResolventIsLEnsembleInv`).
 
 ## Layering (r267 recommendation: order by provability)
 
@@ -779,6 +808,28 @@ Zero `sorry` in this file.  Census stays 5.
 
 Zero `sorry` in this file.  Independent of R404/R405.  Census stays 5.
 
+### `RH/GraphResolvent.lean` — GRAPH-RESOLVENT DICTIONARY (r412)
+
+| Item | Status | Content |
+|---|---|---|
+| `graphResolvent` | **def** | alias of `lEnsemble`: $R=C(I+C)^{-1}$ |
+| `graphResolvent_eq_one_sub_inv` | **proved** | $R=I-(I+C)^{-1}$ |
+| `graphResolvent_eq_dualResolvent_inv` | **proved** | $C(I+C)^{-1}=(I+C^{-1})^{-1}$ |
+| `graphResolvent_lt_one` / `graphResolvent_posDef` | **proved** | $0\prec R\prec I$ |
+| `graphResolvent_sub_half_eq` | **proved** | $R-\tfrac12 I=\tfrac12(I+C)^{-1}(C-I)$ |
+| `indNeg_one_add_inv_congruence` / `indNeg_inv_congruence` | **proved** | Sylvester sandwiches |
+| `indNeg_graphResolvent_sub_half` | **proved** (a) | $\mathrm{ind}_{-}(R-\tfrac12 I)=\mathrm{ind}_{-}(C-I)$ |
+| `indNeg_mobius` | **proved** (b) | $\mathrm{ind}_{-}(C-I)=\mathrm{ind}_{-}(I-C^{-1})$ |
+| `posDef_one_sub_inv_iff` / `posSemidef_one_sub_inv_iff` | **proved** | Möbius PosDef / Loewner faces |
+| `graphResolvent_gt_half_iff` | **proved** | $R\succ\tfrac12 I\iff C\succ I$ |
+| `contractive_iff_gram_le_one` | **proved** | Euclidean contraction $\iff I-\mathfrak{T}^T\mathfrak{T}\succeq0$ |
+| `energy_split_contractive` | **proved** (c) | $\mathfrak{T}^T\mathfrak{T}=C^{-1}\Rightarrow$ contraction $\iff C\succeq I$ |
+| `energy_split_at_most_one` / `p1_coord_graphResolvent` | **proved** (c) | at most one excess singular value $\iff\mathrm{ind}_{-}(C-I)\le1$ |
+| `augDualResolvent_gt_half_of_C_gt_one` | **proved** (d, zero-defect) | $C\succ I$ and $q^\dagger<1$ $\Rightarrow R^\dagger\succ\tfrac12 I$ |
+| `GraphResolventIsLEnsembleInv` | named Prop | CD identification $E=C^{-1}$ on `RepresentsLEnsemble` |
+
+Zero `sorry` in this file.  Does not assert (P1) on any window.  Census stays 5.
+
 ### `RH/Audit.lean` — THE FINAL AXIOM AUDIT (C1; `#print axioms` at every build)
 
 Runs `#print axioms` on the sorry-free layer (expected: the three
@@ -790,6 +841,8 @@ faces (section (j)), the r397 selected-domain identities
 `weil_nonneg_of_selected_windows` the existing arch `sorryAx`),
 and the r406 one-defect finite algebra (section (l): all
 eight theorems NO `sorryAx`);
+and the r412 graph-resolvent finite algebra (section (m): all
+audited theorems NO `sorryAx`);
 the C1 record is quoted verbatim in the claim-boundary
 block above and in the file itself.
 

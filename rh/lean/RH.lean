@@ -18,4 +18,5 @@ import RH.FlankEntry
 import RH.Canonical
 import RH.Selected
 import RH.OneDefect
+import RH.GraphResolvent
 import RH.Audit

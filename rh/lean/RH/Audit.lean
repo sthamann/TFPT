@@ -35,6 +35,7 @@ import RH.PivotCoordinate
 import RH.FlankEntry
 import RH.Selected
 import RH.OneDefect
+import RH.GraphResolvent
 
 namespace RH
 
@@ -220,5 +221,30 @@ Independent of the source-side R404/R405 probes.  Census of
 #print axioms posDef_of_contractive_lift
 #print axioms cMin_normSq
 #print axioms posDef_gram_sub_rankOne_iff
+
+/-! ## (m) The r412 graph-resolvent finite algebra
+Expected AND MEASURED: `[propext, Classical.choice, Quot.sound]` --
+NO `sorryAx`.  Pure finite real matrix algebra (spectral dictionary
+of `R = C(I+C)⁻¹`, Möbius inertia, energy-split contraction).
+Named Prop `GraphResolventIsLEnsembleInv` is a hypothesis, not a
+hole.  Census of `sorry` declarations unchanged at 5.  NO RH CLAIM. -/
+
+#print axioms graphResolvent_eq_one_sub_inv
+#print axioms graphResolvent_eq_dualResolvent_inv
+#print axioms graphResolvent_lt_one
+#print axioms graphResolvent_posDef
+#print axioms graphResolvent_sub_half_eq
+#print axioms indNeg_one_add_inv_congruence
+#print axioms indNeg_inv_congruence
+#print axioms indNeg_graphResolvent_sub_half
+#print axioms indNeg_mobius
+#print axioms posDef_one_sub_inv_iff
+#print axioms posSemidef_one_sub_inv_iff
+#print axioms graphResolvent_gt_half_iff
+#print axioms contractive_iff_gram_le_one
+#print axioms energy_split_contractive
+#print axioms energy_split_at_most_one
+#print axioms p1_coord_graphResolvent
+#print axioms augDualResolvent_gt_half_of_C_gt_one
 
 end RH

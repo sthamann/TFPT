@@ -27,6 +27,7 @@
 \newcommand{\Ls}{L^{*}}
 \newcommand{\half}{\tfrac12}
 \newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\Tfrak}{\mathfrak{T}}
 % Grade marks: exact / theorem-grade / lean-verified / census /
 % hypothesis / refuted.
 \newcommand{\gr}[1]{\textnormal{\small[#1]}}
@@ -35,7 +36,7 @@
 \large A specialist dossier on the critical bordered block
 $\boldsymbol{R^{\dagger}}$}
 \author{Stefan Hamann}
-\date{August 28, 2026}
+\date{August 29, 2026}
 
 \begin{document}
 \maketitle
@@ -80,7 +81,9 @@ placement, and the Lubinsky-class exclusion are recorded there
 duplicated.  Machine records: sealed probes of rounds
 356, 359, 360, 362, 363, 366, 367 and 369--372 (repository
 \texttt{experiments/tfpt-discovery/}); Lean transcription round 373
-(\texttt{RH/Haynsworth.lean}, \texttt{RH/DualResolvent.lean}).
+(\texttt{RH/Haynsworth.lean}, \texttt{RH/DualResolvent.lean});
+graph-resolvent consolidation round 412
+(\texttt{RH/GraphResolvent.lean}).
 
 \section{Setup}\label{sec:setup}
 
@@ -644,15 +647,21 @@ right hard edge does not apply.
 \end{itemize}
 
 \paragraph{Lean landing pad.}
-Sorry census: seven (two true arithmetic holes
-\texttt{lstar\_canonical}, \texttt{terminal\_q\_canonical}, plus
-the named dictionary, the opacity bridge, and three Level-C
-classical statements).  The entire R$^{\dagger}$ layer ---
-Haynsworth, the dual-resolvent dictionary (A2)--(A5), (A7-min),
-and the window bridge --- consumes no \texttt{sorryAx}.  A proof
-of (P1) and (P2) for all canonical windows beyond the certified
-head lands, via the kernel-checked chain, at window-local master
-positivity.  That is a landing pad, not a theorem of the family.
+Sorry census: five (two arithmetic holes
+\texttt{lstar\_canonical}, \texttt{terminal\_q\_canonical}, now
+the alternative route; the named dictionary
+\texttt{pair\_terminal\_dictionary}; the opacity bridge
+\texttt{mainWindow\_iff\_builtFromPrimeSource}; the remaining
+Level-C arch statement
+\texttt{arch\_elementwise\_stabilization}).
+The entire R$^{\dagger}$ layer --- Haynsworth, the dual-resolvent
+dictionary (A2)--(A5), (A7-min), the window bridge, the one-defect
+absorption, and the r412 graph-resolvent identities --- consumes
+no \texttt{sorryAx}.  A proof of (P1) and (P2) for all selected
+windows beyond the certified head lands, via the kernel-checked
+chain, at window-local master positivity.  That is a landing pad,
+not a theorem of the family.  The live mincut is the named Prop
+\texttt{selected\_augDualResolvent\_gt\_half}.
 
 \section{Problem statement}\label{sec:problem}
 
@@ -710,6 +719,171 @@ at $c=1$.  The AC/Bessel class is the wrong class
 \cite{Lubinsky2008}.  A Gamma-class derivation at saturation
 adjacency remains a candidate for the \emph{stronger} form and is
 open.  The cheaper target is (P1)--(P2).
+
+\section{The graph-resolvent form (rounds 407--412)}\label{sec:graph}
+
+Rounds 407, 409 and 411 produced three equivalent finite-algebra
+dictionaries for the rest-block count (P1).  Round 412 records them
+as sorry-free matrix identities in
+\texttt{rh/lean/RH/GraphResolvent.lean}.  Nothing below asserts (P1)
+or $\Rd\succ\half I$ on the family; the mincut remains the named
+Prop \texttt{selected\_augDualResolvent\_gt\_half}.  This is a
+coordinate consolidation, not a claim.
+
+\paragraph{Dictionary.}
+Let $C\succ0$ be a real positive-definite Gram (on the campaign,
+the $\mu$-only dual CD Gram on the hole set $Y$).  The
+\emph{graph resolvent} is
+\begin{equation}\label{eq:graphR}
+R \;=\; C(I+C)^{-1}
+ \;=\; (I+C^{-1})^{-1}
+ \;=\; I-(I+C)^{-1}.
+\end{equation}
+The first form is the r407 intertwiner; the second is the
+r356 dual resolvent of the L-ensemble kernel $E=C^{-1}$
+(r409 graph identity).  Well-definedness, $0\prec R\prec I$, and
+the spectral law $\operatorname{eig}(R)=\lambda/(1+\lambda)$ are
+finite algebra \gr{lean-verified}.  The half-shift identity
+\begin{equation}\label{eq:halfshift}
+R-\half I
+ \;=\;
+ \half\,(I+C)^{-1}(C-I)
+\end{equation}
+is an equality of matrices.  Because $(I+C)^{-1}\succ0$, Sylvester
+gives
+\begin{equation}\label{eq:inertr}
+\operatorname{ind}_{-}(R-\half I)
+ \;=\;
+ \operatorname{ind}_{-}(C-I).
+\end{equation}
+The factorization $I-C^{-1}=C^{-1}(C-I)$ is \emph{not} a
+congruence.  The true sandwich is $C^{-1}(C-I)C^{-1}$, equivalently
+the simultaneous eigenbasis, and yields the M\"obius law
+\begin{equation}\label{eq:mobius}
+\operatorname{ind}_{-}(C-I)
+ \;=\;
+ \operatorname{ind}_{-}(I-C^{-1}).
+\end{equation}
+If a rectangular factor satisfies $\Tfrak^{*}\Tfrak=C^{-1}$
+(r409: the min-norm Birkhoff extension $\Tfrak_{0}$), the
+energy split is
+\begin{equation}\label{eq:esplit}
+\|\Tfrak\|
+ \;=\;
+ 1\big/\sqrt{\lambda_{\min}(C)},
+\qquad
+\|\Tfrak\|\le 1
+ \;\iff\;
+ C\succeq I,
+\end{equation}
+and ``at most one singular value $>1$'' is
+$\operatorname{ind}_{-}(I-\Tfrak^{*}\Tfrak)\le1$, which is
+\eqref{eq:inertr}--\eqref{eq:mobius} \gr{lean-verified}.
+
+\paragraph{Four coordinates for (P1).}
+The integer count (P1) is the same statement in four languages:
+\begin{align}
+\operatorname{ind}_{-}(R-\half I)&\;\le\;1,
+\tag{inertia}\\
+\lambda_{2}(C)&\;\ge\;1,
+\tag{sampling}\\
+\text{$\Tfrak_{0}$ has at most one singular value $>1$},
+\tag{contraction}\\
+C\succeq I
+ \text{ except in at most one direction}.
+\tag{energy split}
+\end{align}
+The zero-defect face $C\succ I$ together with the A5 Schur
+$q^{\dagger}<1$ lifts to $\Rd\succ\half I$
+\gr{lean-verified, \texttt{augDualResolvent\_gt\_half\_of\_C\_gt\_one}}.
+The one-defect lift at the same depth is blocked by A7-min
+(a one-defect of $R$ cannot be absorbed into $\Rd$ at the same
+size).  Identifying the campaign Gram $C$ with $E^{-1}$ on a
+$\mu$-ONB transcription is the named Prop
+\texttt{GraphResolventIsLEnsembleInv}, the same class as
+\texttt{P1EqCapInertia}; it is not a \texttt{sorry}.
+
+\paragraph{Running-instance margins.}
+On the frozen window $z=16$ ($S=367$, $N=184$, $|Y|=104$)
+\gr{census, rounds 407--411}:
+$C_{\min}=0.85712$,
+$\lambda_{2}(C)=1.00018$,
+$r_{\min}(R)=0.46153=C_{\min}/(1+C_{\min})$,
+$\|\Tfrak_{0}\|=1.08014=1/\sqrt{C_{\min}}$.
+Exact identity saturation $\|\Tfrak_{0}\|=1$ on already-PD
+windows is \gr{refuted, round 411}:
+$C_{\min}-1=+4.57\cdot10^{-8}$ at $k_{z}=42$,
+$+4.9\cdot10^{-9}$ at $k_{z}=130$,
+core-$42$ PD in $[+1.33\cdot10^{-7},+7.54\cdot10^{-5}]$.
+These numbers certify the dictionary; they do not prove (P1)
+off the certified head.
+
+\paragraph{Closed internal languages.}
+Table~\ref{tab:seventeen} lists seventeen named routes to (P1)
+closed between DCCXLVI and DCCLXXVIII.  Each line is a sealed
+probe record, not an extrapolation.  Two further r409 closures
+(literal $\Theta=C^{T}\Phi_{N}C$; unfitted Krein) sit in the same
+bin and are omitted from the count only because they attack the
+graph factor, not (P1) itself.
+
+\begin{table}[ht]
+\centering
+\caption{Seventeen closed languages for (P1), DCCXLVI--DCCLXXVIII.
+Verdicts are probe-local.  No family theorem is claimed.}
+\label{tab:seventeen}
+{\small
+\begin{tabular}{@{}llp{5.6cm}@{}}
+\toprule
+Language & Round & Verdict \\
+\midrule
+$L^{\infty}/d_{\mathrm{arm}}$ majorant
+  & r381, DCCXLVI & too coarse \\
+Fold-parity pairing as SATZ
+  & r383, DCCXLIX & residual $0.512$ \\
+Finite-head Chebyshev / family-uniform $Z$
+  & r383/r386, DCCL--DCCLI & $\chi$ mutants \\
+Gershgorin/Schur assist
+  & r387, DCCLII & $k^{*}\sim0.11\,N$ \\
+OSC-Geronimus / Neumann $R_{2}$
+  & r388, DCCLIII & $|\mathrm{quad}|/|\mathrm{lin}|\sim0.86$ \\
+Checkerboard / $M$-matrix
+  & r394, DCCLIX & agree $0.504$ \\
+Three-gap mask
+  & r395, DCCLX & $n_{\mathrm{uniq}}\in[8,18]$ \\
+Isolation of the fold mask
+  & r396, DCCLXI & pair count does not $\to0$ \\
+Source Weyl energy decay
+  & r399, DCCLXV & $E^{\mathrm{bulk}}$ grows \\
+Bulk FORM\_T / FORM\_P
+  & r400, DCCLXVII & rank-$1$ / phase predictor \\
+(P1) as construction class
+  & r403, DCCLXVIII & \textsc{refuted} \\
+Moments / Euler source Gram
+  & r404, DCCLXXI & residual $209$ \\
+Ones-mode / lift overflow
+  & r404--r405, DCCLXXI--II & $\cos0.007$; dead $\chi$ keep $\|c\|<1$ \\
+$\nu$-rank one / Loewner sandwich
+  & r407, DCCLXXIII & $N_{\nu}=104$ \\
+Nyquist density $\half$ / $\mathrm{diag}\,C\approx1$
+  & r408, DCCLXXV & density $0.283$ \\
+Testpoly / Fourier / Bernstein / SEQ
+  & r410, DCCLXXVII & factor $90$; off-fraction $0.968$ \\
+Identity saturation $\|\Tfrak_{0}\|=1$
+  & r411, DCCLXXVIII & $C_{\min}-1=+4.57\cdot10^{-8}$ \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\paragraph{Lean layer.}
+\texttt{RH/GraphResolvent.lean} is sorry-free.  The axiom audit
+(\texttt{RH/Audit.lean}, section (m)) prints
+\texttt{[propext, Classical.choice, Quot.sound]} on the identities
+\eqref{eq:graphR}--\eqref{eq:esplit}, on the four-coordinate
+bridge, and on the zero-defect composition with $\Rd$.
+The pilot \texttt{sorry} census stays five.  The live remainder is
+still the CD identification plus the depth gap $N-3$ versus the
+cap, i.e.\ the named mincut
+\texttt{selected\_augDualResolvent\_gt\_half}.
 
 \section{What a proof would give, and what it would not}\label{sec:status}
 
