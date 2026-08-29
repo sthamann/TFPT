@@ -1096,6 +1096,34 @@ _R410_STATUS = (
     "NO L* claim, NO R-dagger claim, NO RH claim"
 )
 
+_R411_STATUS = (
+    "Threshold identity / energy split (round 411, "
+    "PRIME.LDAGGER.THRESHOLD_IDENTITY.01, follow-up of r409 "
+    "after DCCLXXVI/DCCLXXVII: ||T0||=1/sqrt(lam_min(C)) is "
+    "the dual energy split on the quotient; exact ||T0||=1 "
+    "on PD REFUTED; experiments-side, NO ledger row): 20/20 "
+    "full / 17/17 smoke; SPEC_SHA 090cbc12b41cb27d; "
+    "dictionary residuals, Cmin-1 table, Fourier-vs-SV, Q "
+    "projection, sequential Cmin, permute/1010 first "
+    "measured in /tmp (r411_cal.py, r411_cal2.py, "
+    "r411_cal3.py) then sealed (disclosed calibration).  "
+    "Builder fallback NOT taken: full wall 23.4 s (bar 120 s).  "
+    "AUSGANG ENERGY_SPLIT_EXACT / SATURATION_REFUTED.  SATZ "
+    "over Q: T*T=C^{-1}; P_Y is kernel; proj-id 1.3e-15; "
+    "uvee=1/u and d0-1 break.  FORMULA ||T||=1/sqrt(Cmin) "
+    "w9 1.080138437324 to 1e-14, ||TT-Cinv||=6.6e-14.  "
+    "Excess = C-ev0 = top SV (corr 1); Fourier face "
+    "||T vF||=0.656 < 1.080 (R410).  PD: kz42 Cmin-1="
+    "+4.565e-8, kz130 +4.90e-9, core-42 PD 14/14 in "
+    "[1.33e-7, 7.54e-5] -- none exact 0.  k=36/37 is "
+    "lam_min crossing (Klast=6.94, not a Christoffel hole).  "
+    "KILL: PERM nC=20 Kmin=0.148; SCR nC=21 ||T||=16.66; "
+    "1010 ||T||=165; chi9 <1 / chi15 >1.  Companion "
+    "rh/problem/threshold_identity.tex + "
+    "verify_threshold_identity.py 9/9 THRESHOLD IDENTITY "
+    "VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -3594,6 +3622,30 @@ ENTRIES = [
      [],
      "compiled PDF of hole_nyquist.tex (recompiled "
      "artefact, registered unpinned)", False),
+    ("rh/problem/threshold_identity.tex", "problem_statement",
+     "r411 companion",
+     [],
+     "lemma-first threshold identity / energy split after "
+     "r409 (round 411): ||T0||=1/sqrt(lam_min(C)) SATZ; "
+     "energy split on K0^perp SATZ; exact ||T0||=1 on PD "
+     "REFUTED; k=37 as Christoffel hole REFUTED.  "
+     "ENERGY_SPLIT_EXACT / SATURATION_REFUTED.  Finite "
+     "identities plus a named refutation; NO RH claim",
+     True),
+    ("rh/problem/verify_threshold_identity.py", "problem_check",
+     "r411 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "threshold_identity.tex: standalone (T*T=Cinv, kernel, "
+     "projection, two mutants) plus construction pins (w9 "
+     "dictionary/Fourier miss, kz42 gap, k=36/37, "
+     "permute/scramble/1010, chi).  9/9 gates, "
+     "final line THRESHOLD IDENTITY VERIFIED", True),
+    ("rh/problem/threshold_identity.pdf", "problem_statement",
+     "r411 companion",
+     [],
+     "compiled PDF of threshold_identity.tex "
+     "(recompiled artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -3859,6 +3911,11 @@ ENTRIES = [
      "r410",
      [],
      _R410_STATUS,
+     True),
+    (f"{EXP}/threshold_identity_probe.py", "sealed_probe",
+     "r411",
+     [],
+     _R411_STATUS,
      True),
 ]
 

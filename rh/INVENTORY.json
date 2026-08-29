@@ -2566,6 +2566,36 @@
       "bytes": 205906
     },
     {
+      "path": "rh/problem/threshold_identity.tex",
+      "role": "problem_statement",
+      "round": "r411 companion",
+      "ledger_ids": [],
+      "status": "lemma-first threshold identity / energy split after r409 (round 411): ||T0||=1/sqrt(lam_min(C)) SATZ; energy split on K0^perp SATZ; exact ||T0||=1 on PD REFUTED; k=37 as Christoffel hole REFUTED.  ENERGY_SPLIT_EXACT / SATURATION_REFUTED.  Finite identities plus a named refutation; NO RH claim",
+      "pin": true,
+      "sha256": "839e59ef85e3bd4506a20c3b4782fd9bc2deaf749ba76056e640d10bfbb62c69",
+      "bytes": 7312
+    },
+    {
+      "path": "rh/problem/verify_threshold_identity.py",
+      "role": "problem_check",
+      "round": "r411 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in threshold_identity.tex: standalone (T*T=Cinv, kernel, projection, two mutants) plus construction pins (w9 dictionary/Fourier miss, kz42 gap, k=36/37, permute/scramble/1010, chi).  9/9 gates, final line THRESHOLD IDENTITY VERIFIED",
+      "pin": true,
+      "sha256": "533a814ecabf1f8711660bca34c93b22bad2106913bbbd39303a7269d6dab9d8",
+      "bytes": 4814
+    },
+    {
+      "path": "rh/problem/threshold_identity.pdf",
+      "role": "problem_statement",
+      "round": "r411 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of threshold_identity.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "dd073c056d9c85878478b2a269cc46174ba5d955b3bfad949e611ced5b0d43cf",
+      "bytes": 243545
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2740,8 +2770,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "59585a02814b06614b808d11ffde555c4ebf49cabe70af32c632f81d82b694a9",
-      "bytes": 5417506
+      "sha256": "dcfdf0dfe8f2d3ed3d31e7a793a4a63f5abeef1acfcca342a6526a994c2fc812",
+      "bytes": 5420143
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3142,6 +3172,16 @@
       "pin": true,
       "sha256": "17dabf777a3b179878b47da07653b2bc2f17c370257c7c0f398a67b563592824",
       "bytes": 16918
+    },
+    {
+      "path": "experiments/tfpt-discovery/threshold_identity_probe.py",
+      "role": "sealed_probe",
+      "round": "r411",
+      "ledger_ids": [],
+      "status": "Threshold identity / energy split (round 411, PRIME.LDAGGER.THRESHOLD_IDENTITY.01, follow-up of r409 after DCCLXXVI/DCCLXXVII: ||T0||=1/sqrt(lam_min(C)) is the dual energy split on the quotient; exact ||T0||=1 on PD REFUTED; experiments-side, NO ledger row): 20/20 full / 17/17 smoke; SPEC_SHA 090cbc12b41cb27d; dictionary residuals, Cmin-1 table, Fourier-vs-SV, Q projection, sequential Cmin, permute/1010 first measured in /tmp (r411_cal.py, r411_cal2.py, r411_cal3.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 23.4 s (bar 120 s).  AUSGANG ENERGY_SPLIT_EXACT / SATURATION_REFUTED.  SATZ over Q: T*T=C^{-1}; P_Y is kernel; proj-id 1.3e-15; uvee=1/u and d0-1 break.  FORMULA ||T||=1/sqrt(Cmin) w9 1.080138437324 to 1e-14, ||TT-Cinv||=6.6e-14.  Excess = C-ev0 = top SV (corr 1); Fourier face ||T vF||=0.656 < 1.080 (R410).  PD: kz42 Cmin-1=+4.565e-8, kz130 +4.90e-9, core-42 PD 14/14 in [1.33e-7, 7.54e-5] -- none exact 0.  k=36/37 is lam_min crossing (Klast=6.94, not a Christoffel hole).  KILL: PERM nC=20 Kmin=0.148; SCR nC=21 ||T||=16.66; 1010 ||T||=165; chi9 <1 / chi15 >1.  Companion rh/problem/threshold_identity.tex + verify_threshold_identity.py 9/9 THRESHOLD IDENTITY VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "cee34c5b399e3d17696caaa6006f18fd749b679af8a2285feaf0aec537d3279e",
+      "bytes": 16542
     }
   ]
 }

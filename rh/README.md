@@ -5659,6 +5659,32 @@ row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
 (base 4 / refined 5).  Coexistence: r374--r409 are
 parallel lemma-first / Lean lanes; this round is additive.
 
+**Threshold identity / energy split (r411,
+PRIME.LDAGGER.THRESHOLD_IDENTITY.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/threshold_identity_probe.py`
+(20/20 full, 17/17 smoke, SPEC_SHA `090cbc12b41cb27d`) plus
+`rh/problem/threshold_identity.tex` (+ PDF +
+`verify_threshold_identity.py`, 9/9, `THRESHOLD IDENTITY VERIFIED`).
+**Ausgang ENERGY_SPLIT_EXACT / SATURATION_REFUTED.**
+SATZ: $\mathfrak{T}_0^*\mathfrak{T}_0=C^{-1}$, so
+$\|\mathfrak{T}_0\|=1/\sqrt{\lambda_{\min}(C)}$;
+on the quotient $\mathcal{P}_{<d_0}/\mathcal{K}_0$ this
+*is* the dual energy split
+($\|q\|_X\le\|q\|_Y$ for every min-norm interpolant).
+Exact $\|\mathfrak{T}_0\|=1$ on PD windows is
+**REFUTED** ($C_{\min}-1=+4.57\cdot 10^{-8}$ at $k_z=42$,
+core-42 PD in $[1.33\cdot 10^{-7},7.54\cdot 10^{-5}]$).
+The excess direction is $C$'s lowest eigenvector, not the
+Fourier hole-Nyquist face ($\|T v_F\|=0.656<1.080$).
+$k=37$ is $\lambda_{\min}(C)$ crossing $1$, not a
+Christoffel-weight hole ($K_{\mathrm{last}}=6.94$).
+P1 is one excess direction on the quotient (r407 in energy
+language).  Experiments-side, NO ledger row, NO L\* claim,
+NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
+Coexistence: r374--r410 are parallel lemma-first / Lean
+lanes; this round is additive.
+
 
 ## Folder guide
 
@@ -5917,6 +5943,9 @@ rh/
 │   │                     Fourier/Bernstein REFUTED;
 │   │                     dmin CENSUS; seq birth REDUCED.
 │   │                     No RH claim
+│   ├── threshold_identity.tex(+pdf) — r411: energy
+│   │                     split SATZ; exact PD
+│   │                     saturation REFUTED.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -6013,9 +6042,12 @@ rh/
 │   ├── verify_borodin_birkhoff.py — machine check of
 │                         borodin_birkhoff_intertwiner.tex
 │                         (11/11, BORODIN BIRKHOFF VERIFIED)
-│   └── verify_hole_nyquist.py — machine check of
+│   ├── verify_hole_nyquist.py — machine check of
 │                         hole_nyquist.tex (9/9,
 │                         HOLE NYQUIST VERIFIED)
+│   └── verify_threshold_identity.py — machine check of
+│                         threshold_identity.tex (9/9,
+│                         THRESHOLD IDENTITY VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6372,7 +6404,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r410 from
+2. **Sealed probes** — the campaign probes r250–r411 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7009,7 +7041,7 @@ $c_{\min}$ **PROVED**).  It does not wait on R404/R405,
 does not touch `experiments/next.txt`, and does not add a
 sealed probe.  Suite surface of this round: integrity +
 probes + Lean (`run_rh.py --fast`) after appending the
-Lean-module row to the inventory.  r374--r405/r407/r408/r409 are parallel
+Lean-module row to the inventory.  r374--r405/r407/r408/r409/r410/r411 are parallel
 lemma-first / probe lanes and are not dropped.
 
 **r407 coexistence.** Round 407 (`dual_intertwiner.tex` +
@@ -7071,6 +7103,20 @@ and does not touch `rh/lean/`
 integrity + probes (`run_rh.py --fast --skip-lean`) after
 appending the probe and problem-document rows to the
 inventory.  r374--r409 are parallel lemma-first / Lean
+lanes and are not dropped.
+
+**r411 coexistence.** Round 411 (`threshold_identity.tex` +
+`threshold_identity_probe.py`) is additive on the R-dagger
+north star after DCCLXXVI/DCCLXXVII and r409 (the energy-split
+dictionary of $\|\mathfrak{T}_0\|$).
+SATZ $\mathfrak{T}_0^*\mathfrak{T}_0=C^{-1}$;
+exact PD saturation **REFUTED**; $k=37$ as a named
+Christoffel hole **REFUTED**.  It does not touch
+`experiments/next.txt` and does not touch `rh/lean/`
+(r376/r380/r384/r397/r406).  Suite surface of this round:
+integrity + probes (`run_rh.py --fast --skip-lean`) after
+appending the probe and problem-document rows to the
+inventory.  r374--r410 are parallel lemma-first / Lean
 lanes and are not dropped.
 
 **r401 coexistence.** Round 401 (`edge_signature.tex` +
