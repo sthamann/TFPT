@@ -1,6 +1,6 @@
 {
   "workspace": "rh/",
-  "generated": "2026-08-28",
+  "generated": "2026-08-29",
   "claim_boundary": "Research documentation.  NOT evidence for or against the Riemann Hypothesis in either direction.  NO RH CLAIM.  Mincut base 4 / refined 5.  The status ledger wins on any disagreement.",
   "note": "rh/ references these files, it never copies them.  pin=true entries are frozen: a SHA-256 mismatch is a FAIL in rh/verification/run_rh.py.  pin=false entries are living documents: drift is reported as INFO.",
   "entries": [
@@ -2216,6 +2216,36 @@
       "bytes": 212117
     },
     {
+      "path": "rh/problem/high_moment_inertia.tex",
+      "role": "problem_statement",
+      "round": "r398 companion",
+      "ledger_ids": [],
+      "status": "lemma-first kill-test of P1 via a fixed even cycle-moment of R_{N-3} after DCCLXII (round 398): pointwise bound SATZ; cycle-sum SATZ on a toy.  KILL_FAIL: no d in {2,3,4,6,8} gives 2^{2d} tr((I-R)^{2d}) < 2 with growing reserve.  Cause is a cluster of eigenvalues at 1/2.  Finite identities plus a named kill-test; NO RH claim",
+      "pin": true,
+      "sha256": "2ee9bcc15e1e64a1fd2f7604ed3822686ffc80935c69f6a2466f0513aa1dbe16",
+      "bytes": 9052
+    },
+    {
+      "path": "rh/problem/verify_high_moment.py",
+      "role": "problem_check",
+      "round": "r398 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in high_moment_inertia.tex: standalone (Fractions bound, nopref, odd mutant, 2x2 cycle-sum, frozen d-set, 3x3 walk-sum) plus construction pins (w9 contraction/FTI, moments, scramble nneg=21, two-period, dead chi, living chi3 nneg=0).  12/12 gates, final line HIGH MOMENT VERIFIED",
+      "pin": true,
+      "sha256": "83eba7dd53a6cc20cdb857cd5ec273cfa23056869e3021c360fcfcbebabb3fc4",
+      "bytes": 5686
+    },
+    {
+      "path": "rh/problem/high_moment_inertia.pdf",
+      "role": "problem_statement",
+      "round": "r398 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of high_moment_inertia.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "ae98f03601dd61dcb13390e8461aacd2b9a36e93bcf6b74bb4e1536f0c38d86f",
+      "bytes": 236832
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2390,8 +2420,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "d18dcb55b767e5adccb515df0cdd34eac8178c47cf5922a6eb65916a639f0509",
-      "bytes": 5373436
+      "sha256": "83f9b8cb03519c06586e100213164aee021b0f6c28ed1f248a7ebe76ca97ac78",
+      "bytes": 5379646
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2682,6 +2712,16 @@
       "pin": true,
       "sha256": "692ba5807d3608e235e3bd1011b67dea78990e809da7b7344ec6f516463d2aa4",
       "bytes": 21572
+    },
+    {
+      "path": "experiments/tfpt-discovery/high_moment_inertia_probe.py",
+      "role": "sealed_probe",
+      "round": "r398",
+      "ledger_ids": [],
+      "status": "High-moment inertia kill-test of P1 (round 398, PRIME.LDAGGER.HIGH_MOMENT_INERTIA.01, reviewer-preregistered before the source-Weyl campaign; experiments-side, NO ledger row): 30/30 full / 21/21 smoke; SPEC_SHA bb1dcf6ab66a6156; moments, near-1/2 counts, scramble nneg=21, two-period, Twin, living/dead chi first measured in /tmp (r398_cal.py, r398_cal2.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full census wall 5.6 s (bar 120 s) on core-42 + MAIN-85 sample + chi3/chi4-42 + Twin.  AUSGANG KILL_FAIL.  SATZ: pointwise 1_{r<1/2} <= [2(1-r)]^{2d} (Fractions r=2/5 d=2: 1296/625); cycle-sum tr(A^k) = closed walks (2x2 tr(A^2)=35/72 exact; 3x3 k=4 walk-sum dev 6.9e-18); 0 ⪯ R_{N-3} ⪯ I on the named census; traces via even powers agree with spectral sums (w9 |M-M_ev|=3.6e-14).  REFUTED as a route: a FIXED d in {2,3,4,6,8} with 2^{2d} tr((I-R_{N-3})^{2d}) < 2 and growing reserve.  FRAME-A w9: nneg=1 rmin=0.46153 M_d=(33.48, 26.79, 22.75, 18.23, 16.03) ALL >= 2; near-1/2 counts (5, 24, 37) for delta=0.01/0.05/0.1; 36 eigs in [1/2, 3/5]; FTI residual 0.  Core-42: 42/42 contractions, nneg in {0,1}, M2 in [33.22, 224.5], Nmin=142 M2=34.86 -> Nmax=878 M2=224.5 (reserve SHRINKS).  MAIN-85 sample continues the growth (kz119 M2=287.9; EXT kz69 N=5690 M2=1079).  Twin kz 9/18/52 |d M2| <= 2e-5, nneg identical.  Living chi3 37/37 M2 in [28.03, 183.4]; living chi4 41/41 M2 in [26.90, 178.7]; all >= 2.  Dead chi3 5/5 M2 in [35.98, 63.55]; dead chi4-20 M2=33.75 -- control holds, test NOT a world separator (living also >= 2).  need_d: NONE on nneg=1 (w9 min at d=11 still 15.06 then diverges; kz18 min M5=28.66 then M30=1.5e5); on nneg=0 bulk-only d~512..1024 growing with 1/gap (forbidden).  KILL: scramble nneg=21 M2=148 M8=2.65e5 explodes; two-period S=21 nneg=4 rmin=0 M2=52; nopref mutant 81/625 < 1; odd power on R=diag(2/5,2) sum < 0.  Cycle-sum is NOT the R399 target.  Companion rh/problem/high_moment_inertia.tex + verify_high_moment.py 12/12 HIGH MOMENT VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "85abe6b2d9cc986bf6c74493d226f48778020540947194c6ea1240997886ac24",
+      "bytes": 24712
     }
   ]
 }

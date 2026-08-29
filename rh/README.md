@@ -5341,6 +5341,31 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r395 are parallel lemma-first / Lean lanes; this round is additive.
 
+**High-moment inertia, killed (r398,
+PRIME.LDAGGER.HIGH_MOMENT_INERTIA.01, reviewer-preregistered
+kill-test of P1).**  Sealed census probe
+`experiments/tfpt-discovery/high_moment_inertia_probe.py` (30/30
+full, 21/21 smoke, SPEC_SHA `bb1dcf6ab66a6156`) plus
+`rh/problem/high_moment_inertia.tex` (+ PDF +
+`verify_high_moment.py`, 12/12, `HIGH MOMENT VERIFIED`).
+**Ausgang KILL_FAIL.**  SATZ: $1_{\{r<1/2\}}\le[2(1-r)]^{2d}$
+(Fractions $1296/625$); cycle-sum $\mathrm{tr}(A^k)$ equals
+closed walks ($2\times2$ $\mathrm{tr}(A^2)=35/72$);
+$0\preceq R_{N-3}\preceq I$ on the named census.
+REFUTED as a route: a fixed $d\in\{2,3,4,6,8\}$ with
+$2^{2d}\mathrm{tr}((I-R_{N-3})^{2d})<2$ and growing reserve.
+FRAME-A $M_d=(33.48,26.79,22.75,18.23,16.03)$, all $\ge 2$,
+$36$ eigenvalues in $[\tfrac12,3/5]$; core-$42$ $M_2$ grows
+$34.9\to 224.5$ as $N=142\to 878$.
+On $n_{-}=1$ no $d$ (even $>8$) yields $<2$ (minimum $15.06$
+at $d=11$ on FRAME-A, then diverges).
+Scramble $\mathrm{ind}_{-}=21$, $M_2=148$; two-period $M_2=52$;
+dead $\chi$ $\ge 2$ but living $\chi$ also $\ge 2$ (not a
+separator).  Cycle-sum is not the R399 target.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r396 are parallel lemma-first / Lean lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5537,6 +5562,9 @@ rh/
 │   │                     Isolation lemma REFUTED; pair
 │   │                     density is a shadow of the 2-3
 │   │                     histogram.  No RH claim
+│   ├── high_moment_inertia.tex(+pdf) — r398: high-moment
+│   │                     kill-test of P1; KILL_FAIL
+│   │                     (cluster at 1/2).  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5600,9 +5628,12 @@ rh/
 │   ├── verify_three_gap_mask.py — machine check of
 │                         three_gap_mask.tex (11/11,
 │                         THREE GAP MASK VERIFIED)
-│   └── verify_isolation_lemma.py — machine check of
+│   ├── verify_isolation_lemma.py — machine check of
 │                         isolation_lemma.tex (10/10,
 │                         ISOLATION LEMMA VERIFIED)
+│   └── verify_high_moment.py — machine check of
+│                         high_moment_inertia.tex (12/12,
+│                         HIGH MOMENT VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -5959,7 +5990,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r396 from
+2. **Sealed probes** — the campaign probes r250–r398 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6509,6 +6540,17 @@ implication for $F_\varepsilon$ and Assist).  It does not touch
 probes (`run_rh.py --fast --skip-lean`) after appending the
 probe and problem-document rows to the inventory.  r374--r395
 are parallel lemma-first / Lean lanes and are not dropped.
+**r398 coexistence.** Round 398 (`high_moment_inertia.tex` +
+`high_moment_inertia_probe.py`) is additive on the R-dagger
+north star after DCCLXII (reviewer-preregistered high-moment
+kill-test of P1: even-moment majorant SATZ; cycle-sum SATZ;
+KILL_FAIL as a sufficient test of ind_-(R_{N-3}-I/2)<=1).
+It does not touch `experiments/next.txt` and does not touch
+`rh/lean/` (r376/r380/r384; r397 may run in parallel).  Suite
+surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the probe and
+problem-document rows to the inventory.  r374--r396 are
+parallel lemma-first / Lean lanes and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface
 round **5** — the fifth is the documented opacity bridge in
