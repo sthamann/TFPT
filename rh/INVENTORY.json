@@ -2506,6 +2506,36 @@
       "bytes": 179913
     },
     {
+      "path": "rh/problem/borodin_birkhoff_intertwiner.tex",
+      "role": "problem_statement",
+      "round": "r409 companion",
+      "ledger_ids": [],
+      "status": "lemma-first Borodin-Birkhoff intertwiner after r407 (round 409): source-pure min-norm CLS graph identity SATZ; Phi_N literal Theta=C^T Phi C REFUTED; Krein unfitted REFUTED; SEQ n_neg^inn<=1 CENSUS.  ONE_DEFECT_TRANSPORT_CENSUS.  Finite identities plus named refutations and a named census; NO RH claim",
+      "pin": true,
+      "sha256": "c755e4e576aa1474506c9a144ededb0f7ad16cce1feb1426db465160256a37b1",
+      "bytes": 12904
+    },
+    {
+      "path": "rh/problem/verify_borodin_birkhoff.py",
+      "role": "problem_check",
+      "round": "r409 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in borodin_birkhoff_intertwiner.tex: standalone (three bases, graph=CD, Woodbury, two mutants) plus construction pins (w9 graph/inertia/SEQ, Pi_K=0 and Euler-direct, scramble/permute/jitter, Phi/Krein miss, T^dagger vs r362, dead chi).  11/11 gates, final line BORODIN BIRKHOFF VERIFIED",
+      "pin": true,
+      "sha256": "57d693519673183b31cf4f7da54d227114501c7b37ab55c8505813d8286a20e1",
+      "bytes": 7843
+    },
+    {
+      "path": "rh/problem/borodin_birkhoff_intertwiner.pdf",
+      "role": "problem_statement",
+      "round": "r409 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of borodin_birkhoff_intertwiner.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "9d83b6b330e87c74f1954f4dc2a916fbcf3b5e8c01fea17147d335580ba0d997",
+      "bytes": 271823
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2680,8 +2710,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "960d923ac05b061656fccd54f1746bf59e7edf494a288763bf83ab3a5da470d9",
-      "bytes": 5411785
+      "sha256": "75a7266a1ffec997b9db65e0d6a94d7aa4da42da55d8d72f44b3bbbcad1b9f0d",
+      "bytes": 5414305
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3062,6 +3092,16 @@
       "pin": true,
       "sha256": "c32a59ca942e41348b82afe10b15b5e8f5246e6dc347d6e897062a85f67af6e6",
       "bytes": 18728
+    },
+    {
+      "path": "experiments/tfpt-discovery/borodin_birkhoff_intertwiner_probe.py",
+      "role": "sealed_probe",
+      "round": "r409",
+      "ledger_ids": [],
+      "status": "Borodin-Birkhoff intertwiner (round 409, PRIME.RDAGGER.BORODIN_BIRKHOFF_INTERTWINER.01, reviewer 'R407', our R409 because R407/R408 are taken; follow-up of r407 after DCCLXXIV: source-pure min-norm Birkhoff extension as graph of the r356 dual resolvent; experiments-side, NO ledger row): 37/37 full / 31/31 smoke; SPEC_SHA baee9fc568d8e4ee; graph identity, Q three-basis, SEQ innovations, T-dagger assembly, Phi mismatch, Krein miss, dead-chi flip first measured in /tmp (r409_cal.py, r409_cal2.py, r409_cal3.py, r409_cal4.py, r409_cal5.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 110.4 s (bar 120 s).  AUSGANG ONE_DEFECT_TRANSPORT_CENSUS.  SATZ over Q: three bases identical S0; ker dim = d0-|Y|; W^{1/2}(W+S0)^{-1}W^{1/2} = Hankel CD = C(I+C)^{-1}; Woodbury Theta=22/29.  FORMULA T0 = Chebyshev CLS of min-norm interpolant Y->X in P_<d0, d0=Nw-3 (Jacobi-free; no R/A0/eig/Cholesky).  w9: ||Rg-R||=2.16e-14, ||T0||=1.08014, nneg(I-TT)=nA0=nD0=1, SEQ nneg=1 at index 36 val=-0.5117.  LEG C REFUTED as literal: Theta_terminal = C^T Phi_N C, Schur(ZI) ev vs Phi ev rel 0.96 (Phi is the Woodbury template).  LEG D REFUTED: unfitted Krein align 3e-4 rel 3.37; positive Gram excluded.  CENSUS: core-42 SEQ nneg<=1 on 42/42 (24/18); SEQ = ind_-(A0) only 32/42 (10 undercounts, all 0!=1).  KILL: Pi_K=0 rest 28.5; Euler-on-Y vs A0 rel 282; u^vee=1/u breaks Q; d0+/-1 breaks Q; virtual-star spread 56.8; permute nneg=20 rest 3.3e-12; scramble nneg=21 SEQ 12; jitter nneg 1->20.  LEG F dictionary: T^dagger*T^dagger = (R^dagger)^{-1}-I rest 7.4e-14 (uses r362 Gram, not a new R-dagger theorem); six terminal-dead chi all ||T^dagger||>1.  Companion rh/problem/borodin_birkhoff_intertwiner.tex + verify_borodin_birkhoff.py 11/11 BORODIN BIRKHOFF VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "dd97dd51eb1469d3ec806ca0290d4685708952fd9e7407d66b1075650e535b50",
+      "bytes": 35311
     }
   ]
 }

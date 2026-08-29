@@ -1030,6 +1030,44 @@ _R408_STATUS = (
     "claim, NO R-dagger claim, NO RH claim"
 )
 
+_R409_STATUS = (
+    "Borodin-Birkhoff intertwiner (round 409, "
+    "PRIME.RDAGGER.BORODIN_BIRKHOFF_INTERTWINER.01, reviewer "
+    "'R407', our R409 because R407/R408 are taken; follow-up of "
+    "r407 after DCCLXXIV: source-pure min-norm Birkhoff "
+    "extension as graph of the r356 dual resolvent; "
+    "experiments-side, NO ledger row): 37/37 full / 31/31 smoke; "
+    "SPEC_SHA baee9fc568d8e4ee; graph identity, Q three-basis, "
+    "SEQ innovations, T-dagger assembly, Phi mismatch, Krein "
+    "miss, dead-chi flip first measured in /tmp (r409_cal.py, "
+    "r409_cal2.py, r409_cal3.py, r409_cal4.py, r409_cal5.py) "
+    "then sealed (disclosed calibration).  Builder fallback NOT "
+    "taken: full wall 110.4 s (bar 120 s).  AUSGANG "
+    "ONE_DEFECT_TRANSPORT_CENSUS.  SATZ over Q: three bases "
+    "identical S0; ker dim = d0-|Y|; "
+    "W^{1/2}(W+S0)^{-1}W^{1/2} = Hankel CD = C(I+C)^{-1}; "
+    "Woodbury Theta=22/29.  FORMULA T0 = Chebyshev CLS of "
+    "min-norm interpolant Y->X in P_<d0, d0=Nw-3 (Jacobi-free; "
+    "no R/A0/eig/Cholesky).  w9: ||Rg-R||=2.16e-14, "
+    "||T0||=1.08014, nneg(I-TT)=nA0=nD0=1, SEQ nneg=1 at "
+    "index 36 val=-0.5117.  LEG C REFUTED as literal: "
+    "Theta_terminal = C^T Phi_N C, Schur(ZI) ev vs Phi ev "
+    "rel 0.96 (Phi is the Woodbury template).  LEG D REFUTED: "
+    "unfitted Krein align 3e-4 rel 3.37; positive Gram "
+    "excluded.  CENSUS: core-42 SEQ nneg<=1 on 42/42 (24/18); "
+    "SEQ = ind_-(A0) only 32/42 (10 undercounts, all 0!=1).  "
+    "KILL: Pi_K=0 rest 28.5; Euler-on-Y vs A0 rel 282; "
+    "u^vee=1/u breaks Q; d0+/-1 breaks Q; virtual-star "
+    "spread 56.8; permute nneg=20 rest 3.3e-12; scramble "
+    "nneg=21 SEQ 12; jitter nneg 1->20.  LEG F dictionary: "
+    "T^dagger*T^dagger = (R^dagger)^{-1}-I rest 7.4e-14 "
+    "(uses r362 Gram, not a new R-dagger theorem); six "
+    "terminal-dead chi all ||T^dagger||>1.  Companion "
+    "rh/problem/borodin_birkhoff_intertwiner.tex + "
+    "verify_borodin_birkhoff.py 11/11 BORODIN BIRKHOFF "
+    "VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -3478,6 +3516,31 @@ ENTRIES = [
      [],
      "compiled PDF of c_threshold.tex (recompiled "
      "artefact, registered unpinned)", False),
+    ("rh/problem/borodin_birkhoff_intertwiner.tex", "problem_statement",
+     "r409 companion",
+     [],
+     "lemma-first Borodin-Birkhoff intertwiner after r407 "
+     "(round 409): source-pure min-norm CLS graph identity "
+     "SATZ; Phi_N literal Theta=C^T Phi C REFUTED; Krein "
+     "unfitted REFUTED; SEQ n_neg^inn<=1 CENSUS.  "
+     "ONE_DEFECT_TRANSPORT_CENSUS.  Finite identities plus "
+     "named refutations and a named census; NO RH claim",
+     True),
+    ("rh/problem/verify_borodin_birkhoff.py", "problem_check",
+     "r409 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "borodin_birkhoff_intertwiner.tex: standalone (three "
+     "bases, graph=CD, Woodbury, two mutants) plus "
+     "construction pins (w9 graph/inertia/SEQ, Pi_K=0 and "
+     "Euler-direct, scramble/permute/jitter, Phi/Krein miss, "
+     "T^dagger vs r362, dead chi).  11/11 gates, "
+     "final line BORODIN BIRKHOFF VERIFIED", True),
+    ("rh/problem/borodin_birkhoff_intertwiner.pdf", "problem_statement",
+     "r409 companion",
+     [],
+     "compiled PDF of borodin_birkhoff_intertwiner.tex "
+     "(recompiled artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -3733,6 +3796,11 @@ ENTRIES = [
      "r408",
      [],
      _R408_STATUS,
+     True),
+    (f"{EXP}/borodin_birkhoff_intertwiner_probe.py", "sealed_probe",
+     "r409",
+     [],
+     _R409_STATUS,
      True),
 ]
 

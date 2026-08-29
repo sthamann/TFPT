@@ -5605,6 +5605,34 @@ NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
 Coexistence: r374--r407 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**Borodin--Birkhoff intertwiner (r409,
+PRIME.RDAGGER.BORODIN_BIRKHOFF_INTERTWINER.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/borodin_birkhoff_intertwiner_probe.py`
+(37/37 full, 31/31 smoke, SPEC_SHA `baee9fc568d8e4ee`) plus
+`rh/problem/borodin_birkhoff_intertwiner.tex` (+ PDF +
+`verify_borodin_birkhoff.py`, 11/11, `BORODIN BIRKHOFF VERIFIED`).
+**Ausgang ONE_DEFECT_TRANSPORT_CENSUS.**
+SATZ: Chebyshev CLS of the min-norm interpolant $Y\to X$
+in $\mathcal{P}_{<d_0}$, $d_0=N_w-3$, is Jacobi-free and
+satisfies $R=(I+\mathfrak{T}_0^*\mathfrak{T}_0)^{-1}$
+(FRAME-A residual $2.16\cdot 10^{-14}$ against the r407
+chain builder); three bases identical over $\mathbb{Q}$;
+$\mathrm{ind}_-(I-\mathfrak{T}^*\mathfrak{T})=\mathrm{ind}_-A_0$.
+Literal $\Theta_{\mathrm{terminal}}=C^T\Phi_N C$
+**REFUTED** (Haynsworth $\Phi_N$ is the Woodbury template,
+not the pair-plus-border Schur).  Unfitted Krein transport
+**REFUTED**.  Sequential Uvarov $n_{\mathrm{neg}}^{\mathrm{inn}}\le 1$
+on core-$42$ is a census ($42/42$), not a theorem, and
+equals $\mathrm{ind}_-A_0$ only on $32/42$.
+$\mathfrak{T}^\dagger$ equals the r362 graph factor
+(dictionary, not a new $R^\dagger$ theorem); six
+terminal-dead $\chi$ windows all flip ($\|\mathfrak{T}^\dagger\|>1$).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).
+Coexistence: r374--r408 are parallel lemma-first / Lean
+lanes; this round is additive.
+
 
 ## Folder guide
 
@@ -5854,6 +5882,10 @@ rh/
 │   ├── c_threshold.tex(+pdf) — r408: C-threshold /
 │   │                     sampling; Nyquist-at-1/2 REFUTED;
 │   │                     source nC<=1 CENSUS.  No RH claim
+│   ├── borodin_birkhoff_intertwiner.tex(+pdf) — r409:
+│   │                     source-pure Birkhoff CLS graph
+│   │                     identity SATZ; Phi literal REFUTED;
+│   │                     SEQ n_neg<=1 CENSUS.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5944,9 +5976,12 @@ rh/
 │   ├── verify_dual_intertwiner.py — machine check of
 │                         dual_intertwiner.tex (12/12,
 │                         DUAL INTERTWINER VERIFIED)
-│   └── verify_c_threshold.py — machine check of
+│   ├── verify_c_threshold.py — machine check of
 │                         c_threshold.tex (9/9,
 │                         C THRESHOLD VERIFIED)
+│   └── verify_borodin_birkhoff.py — machine check of
+│                         borodin_birkhoff_intertwiner.tex
+│                         (11/11, BORODIN BIRKHOFF VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6303,7 +6338,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r408 from
+2. **Sealed probes** — the campaign probes r250–r409 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6940,7 +6975,7 @@ $c_{\min}$ **PROVED**).  It does not wait on R404/R405,
 does not touch `experiments/next.txt`, and does not add a
 sealed probe.  Suite surface of this round: integrity +
 probes + Lean (`run_rh.py --fast`) after appending the
-Lean-module row to the inventory.  r374--r405/r407/r408 are parallel
+Lean-module row to the inventory.  r374--r405/r407/r408/r409 are parallel
 lemma-first / probe lanes and are not dropped.
 
 **r407 coexistence.** Round 407 (`dual_intertwiner.tex` +
@@ -6970,6 +7005,22 @@ $nC\le 1$ is a census.  It does not touch
 integrity + probes (`run_rh.py --fast --skip-lean`) after
 appending the probe and problem-document rows to the
 inventory.  r374--r407 are parallel lemma-first / Lean
+lanes and are not dropped.
+
+**r409 coexistence.** Round 409 (`borodin_birkhoff_intertwiner.tex` +
+`borodin_birkhoff_intertwiner_probe.py`) is additive on the
+R-dagger north star after DCCLXXIV and r407 (the source-pure
+min-norm Birkhoff extension as graph of the dual resolvent).
+SATZ $R=(I+\mathfrak{T}_0^*\mathfrak{T}_0)^{-1}$;
+$\Phi_N$ literal identification **REFUTED**; unfitted Krein
+**REFUTED**; sequential $n_{\mathrm{neg}}^{\mathrm{inn}}\le 1$
+is a census.  $\mathfrak{T}^\dagger$ is the r362 graph
+factor (dictionary).  It does not touch
+`experiments/next.txt` and does not touch `rh/lean/`
+(r376/r380/r384/r397/r406).  Suite surface of this round:
+integrity + probes (`run_rh.py --fast --skip-lean`) after
+appending the probe and problem-document rows to the
+inventory.  r374--r408 are parallel lemma-first / Lean
 lanes and are not dropped.
 
 **r401 coexistence.** Round 401 (`edge_signature.tex` +
