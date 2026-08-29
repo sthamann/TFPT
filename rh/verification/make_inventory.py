@@ -1068,6 +1068,34 @@ _R409_STATUS = (
     "VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim"
 )
 
+_R410_STATUS = (
+    "Hole-Nyquist defect (round 410, "
+    "PRIME.LDAGGER.HOLE_NYQUIST_DEFECT.01, follow-up of "
+    "r407/r408/r409 after DCCLXXV/DCCLXXVI: d_i>=1 via test "
+    "poly + why off-diagonal mass hits only the hole-Nyquist "
+    "mode; experiments-side, NO ledger row): 21/21 full / "
+    "20/20 smoke; SPEC_SHA 1ec4122ecc019cd6; Y-Lagrange "
+    "bounds, Chebyshev-CD, Fourier off-fraction, sequential "
+    "birth, Bernstein/T0, permute K-split first measured in "
+    "/tmp (r410_cal.py, r410_cal2.py, r410_cal3.py, "
+    "r410_cal4.py) then sealed (disclosed calibration).  "
+    "Builder fallback NOT taken: full wall 3.6 s (bar 120 s).  "
+    "AUSGANG N TESTPOLY_REFUTED / DMIN_CENSUS; AUSGANG S "
+    "FOURIER_REFUTED / BERNSTEIN_REFUTED / SEQ_REDUCED.  "
+    "SATZ over Q: RK K=1/h0; degree obstruction 1/2>1/3; "
+    "C_ii=ud K; Rayleigh.  w9 Y-Lagrange deg=103<181 "
+    "bmax=0.071 #b>=1=0/104 min(d/b)=94; cheb-CD m=n "
+    "#b>=1=81/104 bmin=4.9e-4.  Fourier off_frac=0.968 "
+    "band8=0.177.  Theta-prefix: k=32 nC=0 Cmin=1.00014; "
+    "k=37 nC=1 Cmin=0.99991; k=104 nC=1 C2=1.00018.  "
+    "||T0 v_Nyq||=0.656 < ||T0||=1.080.  PERM dmin=0.1479 "
+    "is K-collapse (K=0.148, same Y); SCR dmin=0.367.  "
+    "core-42 dmin in [1.097,1.656], nC>1 nowhere.  "
+    "Companion rh/problem/hole_nyquist.tex + "
+    "verify_hole_nyquist.py 9/9 HOLE NYQUIST VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -3541,6 +3569,31 @@ ENTRIES = [
      [],
      "compiled PDF of borodin_birkhoff_intertwiner.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/hole_nyquist.tex", "problem_statement",
+     "r410 companion",
+     [],
+     "lemma-first hole-Nyquist defect after r407/r408/r409 "
+     "(round 410): RK/degree/C_ii/Rayleigh SATZ; Y-Lagrange "
+     "test-poly REFUTED; Fourier-block REFUTED; Bernstein "
+     "REFUTED; d_i>=1 CENSUS; sequential birth REDUCED.  "
+     "TESTPOLY_REFUTED / DMIN_CENSUS + FOURIER_REFUTED / "
+     "BERNSTEIN_REFUTED / SEQ_REDUCED.  Finite identities "
+     "plus named refutations; NO RH claim",
+     True),
+    ("rh/problem/verify_hole_nyquist.py", "problem_check",
+     "r410 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "hole_nyquist.tex: standalone (RK, degree, C_ii, "
+     "Rayleigh) plus construction pins (Y-Lagrange, "
+     "cheb-CD/dmin, scramble/permute K-collapse, "
+     "Fourier/sequential, chi/1010/kz55).  9/9 gates, "
+     "final line HOLE NYQUIST VERIFIED", True),
+    ("rh/problem/hole_nyquist.pdf", "problem_statement",
+     "r410 companion",
+     [],
+     "compiled PDF of hole_nyquist.tex (recompiled "
+     "artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -3801,6 +3854,11 @@ ENTRIES = [
      "r409",
      [],
      _R409_STATUS,
+     True),
+    (f"{EXP}/hole_nyquist_probe.py", "sealed_probe",
+     "r410",
+     [],
+     _R410_STATUS,
      True),
 ]
 

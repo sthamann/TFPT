@@ -2536,6 +2536,36 @@
       "bytes": 271823
     },
     {
+      "path": "rh/problem/hole_nyquist.tex",
+      "role": "problem_statement",
+      "round": "r410 companion",
+      "ledger_ids": [],
+      "status": "lemma-first hole-Nyquist defect after r407/r408/r409 (round 410): RK/degree/C_ii/Rayleigh SATZ; Y-Lagrange test-poly REFUTED; Fourier-block REFUTED; Bernstein REFUTED; d_i>=1 CENSUS; sequential birth REDUCED.  TESTPOLY_REFUTED / DMIN_CENSUS + FOURIER_REFUTED / BERNSTEIN_REFUTED / SEQ_REDUCED.  Finite identities plus named refutations; NO RH claim",
+      "pin": true,
+      "sha256": "286b45d6a51bd8ba32a6e72f35e9f33ddbf79dc74beff64bd6aa65d692745335",
+      "bytes": 5659
+    },
+    {
+      "path": "rh/problem/verify_hole_nyquist.py",
+      "role": "problem_check",
+      "round": "r410 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in hole_nyquist.tex: standalone (RK, degree, C_ii, Rayleigh) plus construction pins (Y-Lagrange, cheb-CD/dmin, scramble/permute K-collapse, Fourier/sequential, chi/1010/kz55).  9/9 gates, final line HOLE NYQUIST VERIFIED",
+      "pin": true,
+      "sha256": "0fcf3be2b41835ac84b78488816a02e6e41f4c8e1de50b2ba9e7cba3a5fe2bde",
+      "bytes": 5026
+    },
+    {
+      "path": "rh/problem/hole_nyquist.pdf",
+      "role": "problem_statement",
+      "round": "r410 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of hole_nyquist.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "bf7a77c213a89a8351ecd8f0d2ce1251c40d01a6cf40333e7aedecee0c6774f4",
+      "bytes": 205906
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2710,8 +2740,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "75a7266a1ffec997b9db65e0d6a94d7aa4da42da55d8d72f44b3bbbcad1b9f0d",
-      "bytes": 5414305
+      "sha256": "59585a02814b06614b808d11ffde555c4ebf49cabe70af32c632f81d82b694a9",
+      "bytes": 5417506
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3102,6 +3132,16 @@
       "pin": true,
       "sha256": "dd97dd51eb1469d3ec806ca0290d4685708952fd9e7407d66b1075650e535b50",
       "bytes": 35311
+    },
+    {
+      "path": "experiments/tfpt-discovery/hole_nyquist_probe.py",
+      "role": "sealed_probe",
+      "round": "r410",
+      "ledger_ids": [],
+      "status": "Hole-Nyquist defect (round 410, PRIME.LDAGGER.HOLE_NYQUIST_DEFECT.01, follow-up of r407/r408/r409 after DCCLXXV/DCCLXXVI: d_i>=1 via test poly + why off-diagonal mass hits only the hole-Nyquist mode; experiments-side, NO ledger row): 21/21 full / 20/20 smoke; SPEC_SHA 1ec4122ecc019cd6; Y-Lagrange bounds, Chebyshev-CD, Fourier off-fraction, sequential birth, Bernstein/T0, permute K-split first measured in /tmp (r410_cal.py, r410_cal2.py, r410_cal3.py, r410_cal4.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 3.6 s (bar 120 s).  AUSGANG N TESTPOLY_REFUTED / DMIN_CENSUS; AUSGANG S FOURIER_REFUTED / BERNSTEIN_REFUTED / SEQ_REDUCED.  SATZ over Q: RK K=1/h0; degree obstruction 1/2>1/3; C_ii=ud K; Rayleigh.  w9 Y-Lagrange deg=103<181 bmax=0.071 #b>=1=0/104 min(d/b)=94; cheb-CD m=n #b>=1=81/104 bmin=4.9e-4.  Fourier off_frac=0.968 band8=0.177.  Theta-prefix: k=32 nC=0 Cmin=1.00014; k=37 nC=1 Cmin=0.99991; k=104 nC=1 C2=1.00018.  ||T0 v_Nyq||=0.656 < ||T0||=1.080.  PERM dmin=0.1479 is K-collapse (K=0.148, same Y); SCR dmin=0.367.  core-42 dmin in [1.097,1.656], nC>1 nowhere.  Companion rh/problem/hole_nyquist.tex + verify_hole_nyquist.py 9/9 HOLE NYQUIST VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "17dabf777a3b179878b47da07653b2bc2f17c370257c7c0f398a67b563592824",
+      "bytes": 16918
     }
   ]
 }

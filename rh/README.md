@@ -5633,6 +5633,32 @@ Mincut unchanged (base 4 / refined 5).
 Coexistence: r374--r408 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**Hole-Nyquist defect (r410,
+PRIME.LDAGGER.HOLE_NYQUIST_DEFECT.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/hole_nyquist_probe.py` (21/21
+full, 20/20 smoke, SPEC_SHA `1ec4122ecc019cd6`) plus
+`rh/problem/hole_nyquist.tex` (+ PDF +
+`verify_hole_nyquist.py`, 9/9, `HOLE NYQUIST VERIFIED`).
+**Ausgang N TESTPOLY_REFUTED / DMIN_CENSUS; Ausgang S
+FOURIER_REFUTED / BERNSTEIN_REFUTED / SEQ_REDUCED.**
+SATZ: reproducing-kernel bound for $p\in\mathcal{P}_n$;
+degree obstruction; $C_{ii}=u^\vee K$; Rayleigh.
+The $Y$-Lagrange test poly (deg $103<181$) does
+\emph{not} prove $d_i\ge 1$ ($b_{\max}=0.071$, $0/104$).
+Chebyshev-CD at full depth clears $81/104$.
+$d_{\min}\ge 1$ remains a source census (core-$42$,
+$[1.097,1.656]$).  Permute drops $d_{\min}$ by a
+Christoffel collapse ($K=0.148$, same $Y$).
+Hole-DFT of $C$ is not banded (off-fraction $0.968$).
+$\|T_0 v_{\mathrm{Nyq}}\|=0.656<\|T_0\|=1.080$.
+Theta-prefix hole-adding: $n_C$ jumps $0\to 1$ at $k=37$
+and stays $1$.  P1 remains $\iff\lambda_2(C)\ge 1$;
+neither half proves the RHS.  Experiments-side, NO ledger
+row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).  Coexistence: r374--r409 are
+parallel lemma-first / Lean lanes; this round is additive.
+
 
 ## Folder guide
 
@@ -5886,6 +5912,11 @@ rh/
 │   │                     source-pure Birkhoff CLS graph
 │   │                     identity SATZ; Phi literal REFUTED;
 │   │                     SEQ n_neg<=1 CENSUS.  No RH claim
+│   ├── hole_nyquist.tex(+pdf) — r410: hole-Nyquist
+│   │                     defect; test-poly REFUTED;
+│   │                     Fourier/Bernstein REFUTED;
+│   │                     dmin CENSUS; seq birth REDUCED.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5979,9 +6010,12 @@ rh/
 │   ├── verify_c_threshold.py — machine check of
 │                         c_threshold.tex (9/9,
 │                         C THRESHOLD VERIFIED)
-│   └── verify_borodin_birkhoff.py — machine check of
+│   ├── verify_borodin_birkhoff.py — machine check of
 │                         borodin_birkhoff_intertwiner.tex
 │                         (11/11, BORODIN BIRKHOFF VERIFIED)
+│   └── verify_hole_nyquist.py — machine check of
+│                         hole_nyquist.tex (9/9,
+│                         HOLE NYQUIST VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6338,7 +6372,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r409 from
+2. **Sealed probes** — the campaign probes r250–r410 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7021,6 +7055,22 @@ factor (dictionary).  It does not touch
 integrity + probes (`run_rh.py --fast --skip-lean`) after
 appending the probe and problem-document rows to the
 inventory.  r374--r408 are parallel lemma-first / Lean
+lanes and are not dropped.
+
+**r410 coexistence.** Round 410 (`hole_nyquist.tex` +
+`hole_nyquist_probe.py`) is additive on the R-dagger
+north star after r407/r408/r409 (the hole-Nyquist
+defect: $d_i\ge 1$ by a test polynomial, and why
+off-diagonal mass hits only one mode).  SATZ RK / degree
+/ $C_{ii}$ / Rayleigh; $Y$-Lagrange **REFUTED** as a
+proof of $d_i\ge 1$; Fourier-block **REFUTED**;
+Bernstein **REFUTED**; sequential birth is a named
+reduction.  It does not touch `experiments/next.txt`
+and does not touch `rh/lean/`
+(r376/r380/r384/r397/r406).  Suite surface of this round:
+integrity + probes (`run_rh.py --fast --skip-lean`) after
+appending the probe and problem-document rows to the
+inventory.  r374--r409 are parallel lemma-first / Lean
 lanes and are not dropped.
 
 **r401 coexistence.** Round 401 (`edge_signature.tex` +
