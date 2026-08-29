@@ -1866,6 +1866,16 @@
       "bytes": 22320
     },
     {
+      "path": "rh/lean/RH/OneDefect.lean",
+      "role": "lean_module",
+      "round": "r406",
+      "ledger_ids": [],
+      "status": "r406 general one-defect absorption as finite matrix algebra: indNeg_sub_rankOne_le_one (H PosDef => ind_-(H-ell ell^T)<=1), posDef_sub_rankOne_iff (rank-1 Schur), woodbury_inv, oneDefect_update_posDef_iff (H-ell ell^T+U J U^T PosDef iff 0<Delta), posDef_of_contractive_lift, cMin_normSq / posDef_gram_sub_rankOne_iff PROVED.  Independent of source-side R404/R405.  Zero sorry; census stays 5.  NO RH claim",
+      "pin": true,
+      "sha256": "b98e014dba828c52f6dab9ca1016147631e459d93c7f99b660cfa0dee55b614e",
+      "bytes": 23227
+    },
+    {
       "path": "rh/problem/christoffel_quiet.tex",
       "role": "problem_statement",
       "round": "r385 companion",
@@ -2550,8 +2560,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "b95c62fd0bbab6b69039614e692ecb9a7d2d4f97b470dd37af7f949eea3c43f6",
-      "bytes": 5391523
+      "sha256": "ff816116fca72e31f97694faf8bc9cec5ca2bbaf3c5c48f902716e28413b3a91",
+      "bytes": 5397298
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",

@@ -17,4 +17,5 @@ import RH.PivotCoordinate
 import RH.FlankEntry
 import RH.Canonical
 import RH.Selected
+import RH.OneDefect
 import RH.Audit

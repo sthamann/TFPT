@@ -5486,6 +5486,24 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r401 are parallel lemma-first / Lean lanes; this round is additive.
 
+**One-defect finite algebra (r406, PRIME.LDAGGER.ONE_DEFECT_LEAN.01,
+Lean-only, independent of source-side R404/R405).**
+`RH/OneDefect.lean`: three general finite-matrix theorems
+**PROVED** sorry-free, plus the min-norm Gram identity.
+SATZ A: $H\succ 0\Rightarrow\mathrm{ind}_-(H-\ell\ell^T)\le 1$
+(corollary of `rankOne_inertia_antitone`).
+SATZ B: $H\succ 0$, $J\succ 0\Rightarrow
+(H-\ell\ell^T+UJU^T)\succ 0$ iff $0<\Delta=1-\ell^TH^{-1}\ell
++r^TK^{-1}r$ (rank-1 Schur + Woodbury; mathlib v4.29.1 has
+Schur / Weinstein--Aronszajn / `det_add_mul` / `mul_inv_rev`,
+not a named Woodbury).
+SATZ C: $V^T$ injective, $\ell=Vc$, $\|c\|^2<1\Rightarrow
+(VV^T-\ell\ell^T)\succ 0$ (Cauchy--Schwarz).
+Fourth: $\|c_{\min}\|^2=\ell^T(VV^T)^{-1}\ell$ and the Gram-side
+$\Delta$.  Zero new `sorry`; census **stays 5**.  NO RH CLAIM.
+Coexistence: does not wait on R404/R405; this round does not
+touch `experiments/next.txt`.
+
 
 ## Folder guide
 
@@ -5586,6 +5604,13 @@ rh/
 │       │                    named mincut
 │       │                    selected_augDualResolvent_gt_half).
 │       │                    Zero sorry; census stays 5.  NO RH CLAIM
+│       ├── OneDefect.lean — r406: general one-defect absorption
+│       │                    (indNeg_sub_rankOne_le_one,
+│       │                    oneDefect_update_posDef_iff,
+│       │                    posDef_of_contractive_lift,
+│       │                    cMin_normSq PROVED; Woodbury built).
+│       │                    Independent of R404/R405.  Zero sorry;
+│       │                    census stays 5.  NO RH CLAIM
 │       └── Counterexamples.lean — r273 reviewer guards: machine-checked
 │                            refutations of the three pre-r273 universal
 │                            forms (proved, no sorry)
@@ -6437,6 +6462,13 @@ the existing arch sorry).  Named mincut
 `selected_augDualResolvent_gt_half`.  C1 holes degraded to
 conjectures / alternative route, not deleted.  Zero new `sorry`;
 census **stays 5**.  NO RH CLAIM.
+**r406 one-defect Lean round.** `RH/OneDefect.lean`: general
+rank-one absorption as finite matrix algebra (reviewer R406,
+independent of source-side R404/R405).  SATZ A/B/C and the
+min-norm Gram identity **PROVED** (`#print axioms` =
+`propext/Classical.choice/Quot.sound` only).  Woodbury is
+home-built (mathlib has Schur, not Woodbury).  Zero new
+`sorry`; census **stays 5**.  NO RH CLAIM.
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
@@ -6745,6 +6777,16 @@ surface of this round: integrity + probes
 (`run_rh.py --fast --skip-lean`) after appending the probe and
 problem-document rows to the inventory.  r374--r401 are
 parallel lemma-first / Lean lanes and are not dropped.
+
+**r406 coexistence.** Round 406 (`RH/OneDefect.lean`) is
+additive on the Lean lane after r397 (general one-defect
+absorption as finite matrix algebra: SATZ A/B/C and
+$c_{\min}$ **PROVED**).  It does not wait on R404/R405,
+does not touch `experiments/next.txt`, and does not add a
+sealed probe.  Suite surface of this round: integrity +
+probes + Lean (`run_rh.py --fast`) after appending the
+Lean-module row to the inventory.  r374--r403 are parallel
+lemma-first / probe lanes and are not dropped.
 
 **r401 coexistence.** Round 401 (`edge_signature.tex` +
 `edge_signature_probe.py`) is additive on the R-dagger

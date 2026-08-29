@@ -2762,6 +2762,18 @@ ENTRIES = [
      "terminal_q_canonical degraded to alternative route.  "
      "Zero sorry in this file; census stays 5.  NO RH claim",
      True),
+    ("rh/lean/RH/OneDefect.lean", "lean_module",
+     "r406",
+     [],
+     "r406 general one-defect absorption as finite matrix algebra: "
+     "indNeg_sub_rankOne_le_one (H PosDef => ind_-(H-ell ell^T)<=1), "
+     "posDef_sub_rankOne_iff (rank-1 Schur), woodbury_inv, "
+     "oneDefect_update_posDef_iff (H-ell ell^T+U J U^T PosDef iff "
+     "0<Delta), posDef_of_contractive_lift, cMin_normSq / "
+     "posDef_gram_sub_rankOne_iff PROVED.  Independent of "
+     "source-side R404/R405.  Zero sorry; census stays 5.  "
+     "NO RH claim",
+     True),
     ("rh/problem/christoffel_quiet.tex", "problem_statement",
      "r385 companion",
      [],

@@ -20,6 +20,10 @@
 > `lstar_canonical` / `terminal_q_canonical` are DEGRADED to the
 > alternative (rational-certificate) route; the new mincut is the
 > named Prop `selected_augDualResolvent_gt_half`. Census stays **five**.
+> **r406** proves the general one-defect absorption theorems
+> (`RH/OneDefect.lean`) with **zero new `sorry`** (finite real
+> matrix algebra; independent of source-side R404/R405). Census
+> stays **five**.
 > The graph is reduced to the
 > **two true arithmetic gaps** (now the alternative route):
 > `lstar_canonical` (lemma L*, the base/wall hole)
@@ -39,7 +43,7 @@
 > (`RH/Haynsworth.lean`, sorry-free); the former master-theorem `sorry`, the wave-5 fog-free
 > form `free_window_positivity` and the pair closure
 > `pair_closes_main` are PROVED as corollaries. Historical narrative
-> (r305 four / r310 five / r326 eight / C1 seven / r376 five / r380 five / r384 five / r397 five) in the blocks below.
+> (r305 four / r310 five / r326 eight / C1 seven / r376 five / r380 five / r384 five / r397 five / r406 five) in the blocks below.
 >
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
@@ -146,6 +150,8 @@
 >
 > r397 named Props (not sorrys, census unchanged at 5): `selected_augDualResolvent_gt_half` (THE NEW MINCUT: `∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef`), `SelectedMasterImpliesPlainReads` (L†/master of the real windows ⇒ plain `fullRead` along the sequence), `ExactArchAgreesWithArchRead` (folded Exact arch vs opaque `archRead`).  Sequence identities (`selectedDelta_eq`, `a_k → ∞`, `Δ_k → 0`, `m_k → ∞`) and `weil_nonneg_of_selected_windows` are theorems; the latter consumes the existing arch sorry.  `lstar_canonical` / `terminal_q_canonical` kept as typed `sorry`s, degraded to the alternative route.
 >
+> r406 proved theorems (not sorrys, census unchanged at 5): `indNeg_sub_rankOne_le_one`, `posDef_sub_rankOne_iff`, `woodbury_inv`, `oneDefect_update_posDef_iff`, `posDef_of_contractive_lift`, `cMin_normSq`, `posDef_gram_sub_rankOne_iff` (`RH/OneDefect.lean`; finite matrix algebra, independent of R404/R405).
+>
 > Retired as sorries by C1: `lstar_subordination` → `lstar_canonical`
 > (retype), `terminal_positive_main` → `terminal_q_canonical` (retype,
 > sharpened), `pair_margin_main` → named Prop `PairMarginLaw` + the
@@ -206,6 +212,14 @@
 > 'RH.threeAtom_christoffel_k1' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.indNeg_entry_of_flank' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.adaptive_band_from_flank_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.indNeg_eq_zero_of_posDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.indNeg_sub_rankOne_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.posDef_sub_rankOne_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.woodbury_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.oneDefect_update_posDef_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.posDef_of_contractive_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.cMin_normSq' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.posDef_gram_sub_rankOne_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 > ```
 >
 > Reading (the `sorryAx` granularity is resolved by the proof terms —
@@ -219,7 +233,8 @@
 > no `sorryAx`, the transcribed pole/arch closed forms have no
 > `sorryAx`.  **r376: pole stabilization has no `sorryAx`.**  **r380: the
 > proved pivot-coordinate faces have no `sorryAx`.**  **r384: the proved
-> flank-entry faces have no `sorryAx`.**  Direct R† path: the two canonical holes (not consumed)
+> flank-entry faces have no `sorryAx`.**  **r406: the one-defect
+> theorems have no `sorryAx`.**  Direct R† path: the two canonical holes (not consumed)
 > by DualResolvent itself), arch (extraction only), named Prop
 > `BorderedCompressionBridge`, density montage (unformalized).
 > The reviewer target "the final theorem consumes only the two
@@ -291,6 +306,12 @@ lake build           # => "Build completed successfully"
   `adaptive_band_from_entry` bridge proved; named Props
   `FlankEntryPrefix` and `ChristoffelPivotBound` for the inductive
   remainder).
+  **r397 census unchanged at 5** (`RH/Selected.lean` is
+  sorry-free: exact real domain + selected sequence identities
+  proved; named mincut `selected_augDualResolvent_gt_half`).
+  **r406 census unchanged at 5** (`RH/OneDefect.lean` is
+  sorry-free: SATZ A/B/C, Woodbury, and the min-norm Gram
+  identity proved; independent of R404/R405).
 
 ## Layering (r267 recommendation: order by provability)
 
@@ -743,15 +764,32 @@ way, sp(N, eps) = +0.67, r272).
 
 Zero `sorry` in this file.  Census stays 5.
 
+### `RH/OneDefect.lean` — GENERAL ONE-DEFECT ABSORPTION (r406)
+
+| Item | Status | Content |
+|---|---|---|
+| `indNeg_eq_zero_of_posDef` | **proved** | `H ≻ 0 ⇒ ind₋ H = 0` |
+| `indNeg_sub_rankOne_le_one` | **proved** (SATZ A) | `H ≻ 0 ⇒ ind₋(H − ℓℓᵀ) ≤ 1` (corollary of `rankOne_inertia_antitone`) |
+| `posDef_sub_rankOne_iff` | **proved** | `H ≻ 0 ⇒ (H − ℓℓᵀ ≻ 0 ↔ ℓᵀ H⁻¹ ℓ < 1)` (rank-1 Schur) |
+| `woodbury_inv` | **proved** | `(H + U J Uᵀ)⁻¹ = H⁻¹ − H⁻¹ U K⁻¹ Uᵀ H⁻¹`, `K = J⁻¹ + Uᵀ H⁻¹ U` (home-built; mathlib has Schur / WA / `det_add_mul`, not Woodbury) |
+| `oneDefect_update_posDef_iff` | **proved** (SATZ B) | `H ≻ 0`, `J ≻ 0 ⇒ (H − ℓℓᵀ + U J Uᵀ ≻ 0 ↔ 0 < Δ)` |
+| `posDef_of_contractive_lift` | **proved** (SATZ C) | `Vᵀ` injective, `ℓ = V c`, `‖c‖² < 1 ⇒ (V Vᵀ − ℓℓᵀ) ≻ 0` |
+| `cMin` / `cMin_normSq` | **proved** | `‖c_min‖² = ℓᵀ (V Vᵀ)⁻¹ ℓ` |
+| `posDef_gram_sub_rankOne_iff` | **proved** | Gram-side Δ: `(V Vᵀ − ℓℓᵀ) ≻ 0 ↔ 0 < 1 − ‖c_min‖²` |
+
+Zero `sorry` in this file.  Independent of R404/R405.  Census stays 5.
+
 ### `RH/Audit.lean` — THE FINAL AXIOM AUDIT (C1; `#print axioms` at every build)
 
 Runs `#print axioms` on the sorry-free layer (expected: the three
 standard axioms, NO `sorryAx`), the two canonical holes (now the
 alternative route), the master chain, the Level-C extraction, the
 r380 pivot-coordinate faces (section (i)), the r384 flank-entry
-faces (section (j)), and the r397 selected-domain identities
+faces (section (j)), the r397 selected-domain identities
 (section (k): sequence theorems NO `sorryAx`;
-`weil_nonneg_of_selected_windows` the existing arch `sorryAx`);
+`weil_nonneg_of_selected_windows` the existing arch `sorryAx`),
+and the r406 one-defect finite algebra (section (l): all
+eight theorems NO `sorryAx`);
 the C1 record is quoted verbatim in the claim-boundary
 block above and in the file itself.
 

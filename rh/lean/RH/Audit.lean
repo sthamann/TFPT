@@ -34,6 +34,7 @@ import RH.Elementwise
 import RH.PivotCoordinate
 import RH.FlankEntry
 import RH.Selected
+import RH.OneDefect
 
 namespace RH
 
@@ -203,5 +204,21 @@ route.  NO RH CLAIM. -/
 #print axioms ExactFold_B
 #print axioms weil_nonneg_of_selected_windows
 #print axioms weil_nonneg_of_selected_master
+
+/-! ## (l) The r406 one-defect finite algebra
+Expected AND MEASURED: `[propext, Classical.choice, Quot.sound]` --
+NO `sorryAx`.  Pure finite real matrix algebra (Schur rank-1
+criterion, Woodbury identity, Cauchy--Schwarz Gram lift).
+Independent of the source-side R404/R405 probes.  Census of
+`sorry` declarations unchanged at 5.  NO RH CLAIM. -/
+
+#print axioms indNeg_eq_zero_of_posDef
+#print axioms indNeg_sub_rankOne_le_one
+#print axioms posDef_sub_rankOne_iff
+#print axioms woodbury_inv
+#print axioms oneDefect_update_posDef_iff
+#print axioms posDef_of_contractive_lift
+#print axioms cMin_normSq
+#print axioms posDef_gram_sub_rankOne_iff
 
 end RH
