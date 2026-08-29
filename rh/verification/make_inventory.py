@@ -2985,6 +2985,10 @@ ENTRIES = [
      "Rem 2.8) is retained as the stronger variant.  Finite census, "
      "no asymptotics, no claim; a proof of (P1)+(P2) lands via the "
      "kernel-checked chain at window-local master positivity.  "
+     "r426 adds the edge-balance chain (eight identities, "
+     "P1/VAC/tot separators, floor R_inf~0.030, two open "
+     "limits q_N<1 and Sigma_inf; Lean RH/EdgeBalance.lean "
+     "sorry-free, census stays 5).  "
      "Explicitly NO RH claim -- L* and L-dagger stay [O]", True),
     ("rh/problem/rdagger_saturation.pdf", "problem_statement",
      "r360+r362 companion, updated r367-r373",
@@ -3402,6 +3406,18 @@ ENTRIES = [
      "posDef_gram_sub_rankOne_iff PROVED.  Independent of "
      "source-side R404/R405.  Zero sorry; census stays 5.  "
      "NO RH claim",
+     True),
+    ("rh/lean/RH/EdgeBalance.lean", "lean_module",
+     "r426",
+     [],
+     "r426 edge-balance chain as finite algebra: Woodbury-sch "
+     "corollary of oneDefectDelta (sch=(den-1)-Delta at J=I; "
+     "den=1 iff one-defect PosDef), 3x3 chart trichotomy "
+     "(sch=phi-(eps_a a^2+eps_b b^2)), vacuous tau^2-separator "
+     "(sch<0 iff tau^2>phi), den=1+gamma-v_t.s with "
+     "den<2 iff gamma<1+v_t.s, gamma-bridge ||b||^2<=S<B_w.  "
+     "Named Props BorderIsMuParseval / BorderLoewnerLeS / "
+     "QNLtOne.  Zero sorry; census stays 5.  NO RH claim",
      True),
     ("rh/problem/christoffel_quiet.tex", "problem_statement",
      "r385 companion",

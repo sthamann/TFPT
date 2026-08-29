@@ -19,4 +19,5 @@ import RH.Canonical
 import RH.Selected
 import RH.OneDefect
 import RH.GraphResolvent
+import RH.EdgeBalance
 import RH.Audit

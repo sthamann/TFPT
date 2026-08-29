@@ -83,7 +83,9 @@ duplicated.  Machine records: sealed probes of rounds
 \texttt{experiments/tfpt-discovery/}); Lean transcription round 373
 (\texttt{RH/Haynsworth.lean}, \texttt{RH/DualResolvent.lean});
 graph-resolvent consolidation round 412
-(\texttt{RH/GraphResolvent.lean}).
+(\texttt{RH/GraphResolvent.lean});
+edge-balance consolidation round 426
+(\texttt{RH/EdgeBalance.lean}).
 
 \section{Setup}\label{sec:setup}
 
@@ -884,6 +886,207 @@ The pilot \texttt{sorry} census stays five.  The live remainder is
 still the CD identification plus the depth gap $N-3$ versus the
 cap, i.e.\ the named mincut
 \texttt{selected\_augDualResolvent\_gt\_half}.
+
+\section{The edge balance chain (rounds 417--425)}\label{sec:edgebal}
+
+Rounds 417--424 produced eight finite identities for the edge Schur
+scalar $\mathrm{sch}<0$; round 425 reduced the last chain step
+$\gamma<1$ to the already-named terminal ratio $q_N<1$.  Round 426
+records the abstract halves in
+\texttt{rh/lean/RH/EdgeBalance.lean}.  Nothing below asserts
+$\mathrm{sch}<0$ cofinally, nor $\Rd\succ\half I$, on the unbounded
+family.  This is a coordinate consolidation, not a claim.
+
+\paragraph{Eight identities.}
+Write $A_0=R_{N-3}-\half I$ on the hole nodes, $U_{\mathrm{CD}}$ the
+last two dual Christoffel--Darboux columns, $s$ the Sherman--Morrison
+border, and $\mathrm{den}>0$ the border scale.  The mixed
+$3\times 3$ is
+\[
+\Phi
+=\begin{pmatrix} K_2 & c_0\\ c_0^T & \varphi_{bb}\end{pmatrix},
+\quad
+K_2=I+U_{\mathrm{CD}}^TA_0^{-1}U_{\mathrm{CD}},
+\quad
+\varphi_{bb}=\mathrm{den}-2+s^TA_0^{-1}s,
+\]
+and $\mathrm{sch}$ is the Schur complement of $K_2$ in $\Phi$.
+After the $2\times 2$ Sylvester map of $K_2$, write
+$(\tilde a,\tilde b)^T=D_2^Tc_0$ for the \emph{unnormalized}
+couplings and $\tau^2=\tilde a^2+\tilde b^2$.
+
+\begin{enumerate}
+\item \textbf{Woodbury and the unnormalized chart}
+\gr{exact, lean-verified}.
+\[
+\mathrm{sch}
+=\mathrm{den}-2+s^T(A_0+U_{\mathrm{CD}}U_{\mathrm{CD}}^T)^{-1}s
+=\varphi_{bb}-c_0^TK_2^{-1}c_0.
+\]
+The first form is the r406 discriminant $\Delta$ at $J=I$:
+$\mathrm{sch}=(\mathrm{den}-1)-\Delta$.  At $\mathrm{den}=1$ one
+has $\mathrm{sch}<0$ if and only if the one-defect update is
+positive definite.  The chart of $J_2=\operatorname{diag}(\varepsilon_a,\varepsilon_b)$
+with $\varepsilon\in\{\pm1\}$ is the $3\times 3$ Schur
+$\mathrm{sch}=\varphi_{bb}-(\varepsilon_a\tilde a^2+\varepsilon_b\tilde b^2)$,
+because $J_2^{-1}=J_2$:
+\begin{align*}
+\text{P1 }(\varepsilon=(-1,+1))&\colon
+  \mathrm{sch}=\varphi_{bb}+\tilde a^2-\tilde b^2,\\
+\text{vacuous }(\varepsilon=(+1,+1))&\colon
+  \mathrm{sch}=\varphi_{bb}-(\tilde a^2+\tilde b^2),\\
+\text{tot }(\varepsilon=(-1,-1))&\colon
+  \mathrm{sch}=\varphi_{bb}+\tilde a^2+\tilde b^2.
+\end{align*}
+Rational toys: $\mathrm{sch}=-2/3$ (P1) and $-7/6$ (vacuous).
+
+\item \textbf{One balance}
+\gr{exact, lean-verified}.
+On both charts $\varphi_{bb}=c_J+\Sigma$ with
+$c_J=\mathrm{den}-2$ and $\Sigma=s^TA_0^{-1}s$.
+Flagship $z=16$: $-0.0856=-0.3989+0.3133$.
+
+\item \textbf{Vacuous $\tau^2$-separator}
+\gr{exact, lean-verified}.
+On the vacuous chart,
+$\mathrm{sch}<0\iff\tau^2>\varphi_{bb}$.  In particular
+$\varphi_{bb}<0$ forces $\mathrm{sch}<0$ for every coupling.
+On the $\varphi_{bb}>0$ class this is the exact life/death cut
+(live overflow iff $\tau^2>\varphi_{bb}$; dead vacuous
+$\chi_3$-$23/33$, $\chi_4$-$20$ iff $\tau^2<\varphi_{bb}$).
+
+\item \textbf{Branch $\tau$-dynamics}
+\gr{census}.
+Vacuous $|\tau|$ slope $-1.24$ (vanishes); P1 slope $+0.05$
+(flat).  The r417 decay was vacuous-driven.  Six core overflow
+windows live now by $\tau^2>\varphi_{bb}$ (margins
+$0.0015$--$0.046$) and do not cross $\varphi_{bb}=0$
+(slope $-0.003$); they are finite exceptions.
+
+\item \textbf{Stieltjes form of $\Sigma$}
+\gr{exact}.
+Via the r407 dictionary $A_0^{-1}=2(C+I)(C-I)^{-1}$,
+\[
+\Sigma
+=2\|s\|^2+4\,s^T(C-I)^{-1}s
+=2\sum_i\mathrm{occ}_i\,g(\lambda_i),
+\]
+the Stieltjes transform of the occupation measure at $z=1$.
+Near-$1$ mass stays $O(0.01)$: $n_{\mathrm{eff}}$ growth is bulk
+broadening, not pole-creep.  No elementary closed occupancy
+density (one-pole relative error $0.73$; Cauchy two-moment
+$0.95$).
+
+\item \textbf{den formula}
+\gr{exact, lean-verified}.
+\[
+\mathrm{den}
+=1+\gamma-v_t\cdot s,
+\qquad
+\gamma=\|b\|^2/B_w,
+\qquad
+B_w=S_{N-2}+\tfrac57,
+\]
+and $\mathrm{den}<2\iff\gamma<1+v_t\cdot s$.  If $\gamma<1$ and
+$v_t\cdot s\ge 0$ then $\mathrm{den}<2$ even at vanishing
+correction.  Census: $\mathrm{den}\in[1.460,1.652]$ on all $42$
+(gap to $2$ at least $0.348$); $v_t\cdot s\in[0.061,0.096]$.
+
+\item \textbf{$b$-Parseval}
+\gr{exact; identification named in Lean}.
+$b_k=\langle\sigma,\hat\pi_k^\mu\rangle$ with $\sigma$ the signed
+border measure, so $\|b\|^2$ is the $\mu$-side Parseval budget
+(w9 residual $4\cdot10^{-14}$; $\mathbb{Q}$-toy
+$b=(3/5,4/5)$, $\|b\|^2=1<16/9$).  Termwise
+$w_k=b_k^2/\rho_k$ is not uniform ($\sim 43\%$ of terms $>1$).
+
+\item \textbf{Floor and three saturation scales}
+\gr{census}.
+Selected $a_k=2^k$ prefers $R=-\varphi_{bb}=R_\infty+c\,k^{-\alpha}$
+with $R_\infty\approx +0.030$ against decay-to-$0$
+($\Delta\mathrm{AIC}\,6.9$) and against $c/\log k$ (killed,
+$\Delta\mathrm{AIC}\,18.4$).  EXT-vacuous sits independently in
+$[0.0285,0.0373]$.  Three scales, not one exponent: budget gap
+$2-\mathrm{den}\sim O(0.5)$ flat; razor
+$C_{\min}-1\sim 10^{-7}$ with
+$\|\mathfrak{T}_0\|-1=-(C_{\min}-1)/2$ exactly (ratio $1.0000$);
+edge reserve $R$ of order $0.03$.
+\end{enumerate}
+
+\paragraph{Branch map.}
+Exact separators, not a fitted partition:
+\begin{center}
+\small
+\begin{tabular}{@{}p{3.2cm}p{3.6cm}p{6.2cm}@{}}
+\toprule
+branch & chart / $K_2$ & live criterion \\
+\midrule
+P1 ($28/42$ core) &
+  $J_2=\operatorname{diag}(-1,+1)$ &
+  $\mathrm{sch}=\varphi_{bb}+\tilde a^2-\tilde b^2<0$
+  (hyperbola; danger axis large $|\tilde a|$) \\
+vacuous ($14/42$) &
+  $J_2=I_2$ &
+  $\varphi_{bb}<0$, or $\tau^2>\varphi_{bb}$ on the
+  $\varphi_{bb}>0$ overflow class \\
+tot / dead $\chi$ &
+  $J_2=-I$ or $\mathrm{sch}>0$ &
+  vacuous death: $\varphi_{bb}>0$ and $\tau^2<\varphi_{bb}$;
+  P1 death: $\tau$-terms, $\varphi_{bb}<0$ retained \\
+\bottomrule
+\end{tabular}
+\end{center}
+Round 425: $\|b\|^2\le S$ is the kernel Loewner
+$K_\mu\preccurlyeq K_{\mu-\nu}$ on $P_{<N}$ \gr{exact};
+$\|b\|^2<B_w$ is that identity plus $q_N<1$.  On the $42$-rung
+$q_N<1$ census this composes to $\gamma<1$.  Dead $\chi$ have
+$q_N>1$ and need kernel slack; they keep $\gamma<1$ nonetheless.
+
+\paragraph{Two open limit questions.}
+The identities above are finite.  What remains, for the unbounded
+selected sequence $a_k=2^k$, are two existence statements.  They
+are the cheapest remaining targets; neither is a Riemann--Hilbert
+steepest-descent, and neither is a statement about the Riemann
+hypothesis.
+
+\begin{problem}[cofinal $q_N<1$]\label{prob:qn}
+On the selected sequence, prove $q_N<1$ (equivalently
+$S<B_w=S_{N-2}+\tfrac57$) for all large $k$.  Together with the
+Loewner identity $\|b\|^2\le S$ this yields $\gamma<1$, hence
+$\mathrm{den}<2$ by the formula of item 6, even at
+$v_t\cdot s=0$.  The $42$-rung census is already certified
+(v960); cofinality is the named mincut
+\texttt{selected\_augDualResolvent\_gt\_half}.
+\end{problem}
+
+\begin{problem}[constructed $\Sigma_\infty$]\label{prob:siginf}
+Construct $\mathrm{den}_\infty<2$ and $\Sigma_\infty$ with
+\[
+\limsup_k\Sigma_k
+\;<\;
+2-\mathrm{den}_\infty
+\;=\;
+|c_{J,\infty}|,
+\]
+equivalently a strictly positive floor $R_\infty>0$ for
+$R=-\varphi_{bb}$.  The occupation Stieltjes form is exact; a
+closed occupancy density is refuted; near-$1$ mass is stable
+$O(0.01)$.  The census prefers $R_\infty\approx 0.030$
+(two independent lines: selected AIC, EXT-vacuous band).
+No $k_0$ is proved.  Depth $k=10$ border-fails computationally.
+\end{problem}
+
+\paragraph{Lean layer.}
+\texttt{RH/EdgeBalance.lean} is sorry-free.  The axiom audit
+(\texttt{RH/Audit.lean}, section (n)) prints
+\texttt{[propext, Classical.choice, Quot.sound]} on the Woodbury-sch
+corollary, the chart trichotomy, the $\tau^2$-separator, the den
+formula and the $\gamma$-bridge
+$\|b\|^2\le S<B_w\Rightarrow\gamma<1\Rightarrow\mathrm{den}<2$.
+Named Props \texttt{BorderIsMuParseval}, \texttt{BorderLoewnerLeS},
+\texttt{QNLtOne} are hypotheses, not holes: they name the
+window transcription of items 7--8 and Problem~\ref{prob:qn}.
+The pilot \texttt{sorry} census stays five.
 
 \section{What a proof would give, and what it would not}\label{sec:status}
 

@@ -36,6 +36,7 @@ import RH.FlankEntry
 import RH.Selected
 import RH.OneDefect
 import RH.GraphResolvent
+import RH.EdgeBalance
 
 namespace RH
 
@@ -246,5 +247,30 @@ hole.  Census of `sorry` declarations unchanged at 5.  NO RH CLAIM. -/
 #print axioms energy_split_at_most_one
 #print axioms p1_coord_graphResolvent
 #print axioms augDualResolvent_gt_half_of_C_gt_one
+
+/-! ## (n) The r426 edge-balance finite algebra
+Expected AND MEASURED: `[propext, Classical.choice, Quot.sound]` --
+NO `sorryAx`.  Pure finite real algebra (Woodbury-sch corollary of
+OneDefect, 3×3 chart trichotomy, vacuous τ²-separator, den formula).
+Named Props `BorderIsMuParseval`, `BorderLoewnerLeS`, `QNLtOne` are
+hypotheses, not holes.  Census of `sorry` declarations unchanged
+at 5.  NO RH CLAIM. -/
+
+#print axioms phiBB_eq_cJ_add_selfEnergy
+#print axioms schWoodbury_eq_oneDefectDelta
+#print axioms schWoodbury_one_neg_iff_update
+#print axioms schWoodbury_eq_phiBB_sub
+#print axioms schChart_eq_eps
+#print axioms schChart_p1
+#print axioms schChart_vacuous
+#print axioms schChart_tot
+#print axioms vacuous_sch_neg_iff
+#print axioms vacuous_live_of_phi_neg
+#print axioms den_lt_two_iff
+#print axioms den_lt_two_of_gamma_lt_one
+#print axioms gamma_lt_one_of_le_S_lt_Bw
+#print axioms den_lt_two_of_le_S_lt_Bw
+#print axioms parseval_normSq
+#print axioms gamma_lt_one_of_named
 
 end RH

@@ -29,6 +29,12 @@
 > (spectral bridge, Möbius inertia, energy-split contraction,
 > zero-defect R† lift proved; named Prop
 > `GraphResolventIsLEnsembleInv`). Census stays **five**.
+> **r426** kernel-anchors the r417–r425 edge-balance chain
+> (`RH/EdgeBalance.lean`) with **zero new `sorry`**
+> (Woodbury-sch corollary of OneDefect, 3×3 chart trichotomy,
+> vacuous τ²-separator, den formula and γ-bridge proved; named
+> Props `BorderIsMuParseval` / `BorderLoewnerLeS` / `QNLtOne`).
+> Census stays **five**.
 > The graph is reduced to the
 > **two true arithmetic gaps** (now the alternative route):
 > `lstar_canonical` (lemma L*, the base/wall hole)
@@ -48,7 +54,7 @@
 > (`RH/Haynsworth.lean`, sorry-free); the former master-theorem `sorry`, the wave-5 fog-free
 > form `free_window_positivity` and the pair closure
 > `pair_closes_main` are PROVED as corollaries. Historical narrative
-> (r305 four / r310 five / r326 eight / C1 seven / r376 five / r380 five / r384 five / r397 five / r406 five / r412 five) in the blocks below.
+> (r305 four / r310 five / r326 eight / C1 seven / r376 five / r380 five / r384 five / r397 five / r406 five / r412 five / r426 five) in the blocks below.
 >
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
@@ -159,6 +165,8 @@
 >
 > r412 proved theorems (not sorrys, census unchanged at 5): `graphResolvent_eq_dualResolvent_inv`, `graphResolvent_sub_half_eq`, `indNeg_graphResolvent_sub_half`, `indNeg_mobius`, `energy_split_contractive`, `energy_split_at_most_one`, `p1_coord_graphResolvent`, `augDualResolvent_gt_half_of_C_gt_one` (`RH/GraphResolvent.lean`; finite matrix algebra).  Named Prop `GraphResolventIsLEnsembleInv` (CD identification $E=C^{-1}$ on `RepresentsLEnsemble`; same class as `P1EqCapInertia`).
 >
+> r426 proved theorems (not sorrys, census unchanged at 5): `schWoodbury_eq_oneDefectDelta`, `schWoodbury_one_neg_iff_update`, `schWoodbury_eq_phiBB_sub`, `phiBB_eq_cJ_add_selfEnergy`, `schChart_eq_eps`, `vacuous_sch_neg_iff`, `den_lt_two_iff`, `gamma_lt_one_of_le_S_lt_Bw`, `parseval_normSq` (`RH/EdgeBalance.lean`; finite algebra).  Named Props `BorderIsMuParseval`, `BorderLoewnerLeS`, `QNLtOne` (r424/r425 source identifications; same class as `P1EqCapInertia`).
+>
 > Retired as sorries by C1: `lstar_subordination` → `lstar_canonical`
 > (retype), `terminal_positive_main` → `terminal_q_canonical` (retype,
 > sharpened), `pair_margin_main` → named Prop `PairMarginLaw` + the
@@ -244,6 +252,22 @@
 > 'RH.energy_split_at_most_one' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.p1_coord_graphResolvent' depends on axioms: [propext, Classical.choice, Quot.sound]
 > 'RH.augDualResolvent_gt_half_of_C_gt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.phiBB_eq_cJ_add_selfEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.schWoodbury_eq_oneDefectDelta' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.schWoodbury_one_neg_iff_update' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.schWoodbury_eq_phiBB_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.schChart_eq_eps' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.schChart_p1' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.schChart_vacuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.schChart_tot' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.vacuous_sch_neg_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.vacuous_live_of_phi_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.den_lt_two_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.den_lt_two_of_gamma_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.gamma_lt_one_of_le_S_lt_Bw' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.den_lt_two_of_le_S_lt_Bw' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.parseval_normSq' depends on axioms: [propext, Classical.choice, Quot.sound]
+> 'RH.gamma_lt_one_of_named' depends on axioms: [propext, Classical.choice, Quot.sound]
 > ```
 >
 > Reading (the `sorryAx` granularity is resolved by the proof terms —
@@ -259,6 +283,7 @@
 > proved pivot-coordinate faces have no `sorryAx`.**  **r384: the proved
 > flank-entry faces have no `sorryAx`.**  **r406: the one-defect
 > theorems have no `sorryAx`.**  **r412: the graph-resolvent
+> identities have no `sorryAx`.**  **r426: the edge-balance
 > identities have no `sorryAx`.**  Direct R† path: the two canonical holes (not consumed)
 > by DualResolvent itself), arch (extraction only), named Prop
 > `BorderedCompressionBridge`, density montage (unformalized).
@@ -341,6 +366,10 @@ lake build           # => "Build completed successfully"
   sorry-free: spectral dictionary, Möbius inertia, energy-split
   contraction, and the zero-defect R† lift proved; named Prop
   `GraphResolventIsLEnsembleInv`).
+  **r426 census unchanged at 5** (`RH/EdgeBalance.lean` is
+  sorry-free: Woodbury-sch, chart trichotomy, τ²-separator,
+  den formula, and the γ-bridge proved; named Props
+  `BorderIsMuParseval` / `BorderLoewnerLeS` / `QNLtOne`).
 
 ## Layering (r267 recommendation: order by provability)
 
@@ -830,6 +859,31 @@ Zero `sorry` in this file.  Independent of R404/R405.  Census stays 5.
 
 Zero `sorry` in this file.  Does not assert (P1) on any window.  Census stays 5.
 
+### `RH/EdgeBalance.lean` — EDGE-BALANCE CHAIN (r426)
+
+| Item | Status | Content |
+|---|---|---|
+| `schWoodbury` / `phiBB` | **def** | `sch = den−2+sᵀ(H+UUᵀ)⁻¹s`, `φ_bb = den−2+sᵀH⁻¹s` |
+| `phiBB_eq_cJ_add_selfEnergy` | **proved** | `φ_bb = c_J + Σ` |
+| `schWoodbury_eq_oneDefectDelta` | **proved** (a) | `sch = (den−1) − Δ` at `J = I` |
+| `schWoodbury_one_neg_iff_update` | **proved** (a) | at `den=1`, `sch<0` iff one-defect PosDef |
+| `schWoodbury_eq_phiBB_sub` | **proved** (a) | `sch = φ_bb − rᵀK⁻¹r` |
+| `schChart` / `chartEps` | **def** | three `{±1}`-signatures of the 3×3 chart |
+| `schChart_eq_eps` | **proved** (b) | `sch = φ − (ε_a ã² + ε_b b̃²)` |
+| `schChart_p1` / `_vacuous` / `_tot` | **proved** (b) | P1 / vacuous / tot specializations |
+| `vacuous_sch_neg_iff` | **proved** (c) | vacuous `sch<0 ↔ τ² > φ` |
+| `vacuous_live_of_phi_neg` | **proved** (c) | `φ<0` ⇒ whole disk live |
+| `denOf` / `gammaOf` | **def** | `den = 1+γ−v_t·s`, `γ = ‖b‖²/B_w` |
+| `den_lt_two_iff` | **proved** (d) | `den<2 ↔ γ < 1 + v_t·s` |
+| `den_lt_two_of_gamma_lt_one` | **proved** (d) | `γ<1` and `v_t·s≥0` ⇒ `den<2` |
+| `gamma_lt_one_of_le_S_lt_Bw` | **proved** (d) | `‖b‖² ≤ S < B_w` ⇒ `γ<1` |
+| `parseval_normSq` | **proved** | coefficient identity ⇒ `‖b‖² = ∑ ⟨σ,π̂_k⟩²` |
+| `BorderIsMuParseval` | named Prop | r424 `b_k = ⟨σ, π̂_k^μ⟩` |
+| `BorderLoewnerLeS` | named Prop | r425 `‖b‖² ≤ S` (kernel Loewner) |
+| `QNLtOne` | named Prop | r425 remainder `S < B_w` (`q_N<1`) |
+
+Zero `sorry` in this file.  Does not assert (P1) or cofinal `q_N<1` on any window.  Census stays 5.
+
 ### `RH/Audit.lean` — THE FINAL AXIOM AUDIT (C1; `#print axioms` at every build)
 
 Runs `#print axioms` on the sorry-free layer (expected: the three
@@ -842,6 +896,8 @@ faces (section (j)), the r397 selected-domain identities
 and the r406 one-defect finite algebra (section (l): all
 eight theorems NO `sorryAx`);
 and the r412 graph-resolvent finite algebra (section (m): all
+audited theorems NO `sorryAx`);
+and the r426 edge-balance finite algebra (section (n): all
 audited theorems NO `sorryAx`);
 the C1 record is quoted verbatim in the claim-boundary
 block above and in the file itself.

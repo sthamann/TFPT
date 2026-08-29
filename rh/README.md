@@ -6019,12 +6019,26 @@ NO L\* claim, NO RH CLAIM.  Mincut unchanged
 Coexistence: r374--r424 are parallel lemma-first / Lean
 lanes; this round is additive.
 
-
-
-
-
-
-
+**Edge-balance consolidation (r426,
+PRIME.RDAGGER.EDGE_BALANCE_LEAN.01).**  Dossier section
+"The edge balance chain" in `rh/problem/rdagger_saturation.tex`
+(+ PDF) plus `rh/lean/RH/EdgeBalance.lean` (zero `sorry`).
+Records the r417–r424 eight identities and the r425 reduction
+as finite algebra: Woodbury-sch is the r406 discriminant at
+$J=I$; the unnormalized chart is the $3\times 3$ Schur of a
+$\{\pm1\}$-signature; vacuous $\mathrm{sch}<0\iff\tau^2>\varphi_{bb}$;
+$\mathrm{den}=1+\gamma-v_t\cdot s$ with
+$\mathrm{den}<2\iff\gamma<1+v_t\cdot s$;
+$\|b\|^2\le S<B_w\Rightarrow\gamma<1$.  Named Props
+`BorderIsMuParseval`, `BorderLoewnerLeS`, `QNLtOne`.
+`#print axioms` = `propext/Classical.choice/Quot.sound` only.
+Census stays **five**.  Floor $R_\infty\approx 0.030$ remains a
+census (two lines).  Two open limits: cofinal $q_N<1$
+(Problem, reduced $\gamma<1$; r425
+`B2_LE_S_SATZ / QN_BRIDGES_BW / COFINAL_OPEN`) and constructed
+$\Sigma_\infty$ with $\Sigma_\infty<2-\mathrm{den}_\infty$.
+NO ledger row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).
 
 ## Folder guide
 
@@ -6138,6 +6152,13 @@ rh/
 │       │                    R† lift PROVED; named Prop
 │       │                    GraphResolventIsLEnsembleInv).
 │       │                    Zero sorry; census stays 5.  NO RH CLAIM
+│       ├── EdgeBalance.lean — r426: edge-balance chain
+│       │                    (Woodbury-sch corollary of OneDefect,
+│       │                    3×3 chart trichotomy, τ²-separator,
+│       │                    den formula + γ-bridge PROVED; named
+│       │                    Props BorderIsMuParseval /
+│       │                    BorderLoewnerLeS / QNLtOne).
+│       │                    Zero sorry; census stays 5.  NO RH CLAIM
 │       └── Counterexamples.lean — r273 reviewer guards: machine-checked
 │                            refutations of the three pre-r273 universal
 │                            forms (proved, no sorry)
@@ -6156,8 +6177,11 @@ rh/
 │   │                     minimal inertia form (P1)+(P2); r412
 │   │                     records the graph-resolvent coordinates
 │   │                     of (P1) and the seventeen closed
-│   │                     languages.  The older RHP/BKMM saturation
-│   │                     question is the stronger variant).
+│   │                     languages; r426 records the edge-balance
+│   │                     chain (eight identities, branch map,
+│   │                     floor, two open limits).  The older
+│   │                     RHP/BKMM saturation question is the
+│   │                     stronger variant).
 │   │                     No RH claim
 │   ├── medcap_lemma.tex(+pdf) — proof attempt for the r361
 │   │                     MED-CAP inequality med_i ≤ (8/3) sep_i
@@ -7098,6 +7122,14 @@ contraction, zero-defect $R^\dagger$ lift **PROVED**).  Named
 Prop `GraphResolventIsLEnsembleInv`.  `#print axioms` =
 `propext/Classical.choice/Quot.sound` only.  Zero new
 `sorry`; census **stays 5**.  NO RH CLAIM.
+**r426 edge-balance Lean round.** `RH/EdgeBalance.lean`:
+r417–r425 identities as sorry-free finite algebra
+(Woodbury-sch corollary of OneDefect, chart trichotomy,
+$\tau^2$-separator, den formula, $\gamma$-bridge
+$\|b\|^2\le S<B_w\Rightarrow\gamma<1$).  Named Props
+`BorderIsMuParseval` / `BorderLoewnerLeS` / `QNLtOne`.
+`#print axioms` = `propext/Classical.choice/Quot.sound` only.
+Zero new `sorry`; census **stays 5**.  NO RH CLAIM.
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

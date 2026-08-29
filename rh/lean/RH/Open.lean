@@ -240,6 +240,18 @@ On the 42-rung `q_N < 1` census it composes
 to `γ < 1`; cofinal `q_N` is not a new
 `sorry`.  Mincut unchanged.
 NO RH CLAIM.
+
+## r426 census (edge-balance consolidation)
+
+The r417–r424 identities are sorry-free finite
+algebra in `RH/EdgeBalance.lean`: Woodbury-sch
+is the r406 discriminant at `J = I`; the chart
+trichotomy is the 3×3 Schur of a `{±1}`-signature;
+vacuous `sch < 0 ↔ τ² > φ`; `den < 2 ↔ γ < 1 + v_t·s`.
+Named Props `BorderIsMuParseval`, `BorderLoewnerLeS`,
+`QNLtOne` (r425 remainder: cofinal `q_N < 1`).
+Census unchanged at 5.  Mincut unchanged.
+NO RH CLAIM.
 -/
 
 end RH
