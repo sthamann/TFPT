@@ -880,6 +880,90 @@ _R403_STATUS = (
     "NO L* claim, NO R-dagger claim, NO RH claim"
 )
 
+_R404_STATUS = (
+    "Source one-defect Gram (round 404, "
+    "PRIME.LDAGGER.SOURCE_ONE_DEFECT_GRAM.01, reviewer DCCLXIX "
+    "after r403: is Q^T A0 Q = F F^T - ell ell^T source-explicit "
+    "from Lambda(p^r), log(p^r), Fold, Tent, Digamma, explicit "
+    "BS modes, one null mode?; experiments-side, NO ledger row): "
+    "21/21 full / 19/19 smoke; SPEC_SHA c0260053d759bd14; "
+    "Loewner nsum, Euler alignment, analytic principal angles, "
+    "defect seat, mutant residuals first measured in /tmp "
+    "(r404_cal.py, r404_cal2.py, r404_cal3.py) then sealed "
+    "(disclosed calibration).  Builder fallback NOT taken: "
+    "full wall 0.2 s (bar 120 s).  AUSGANG CHOLESKY_TAUTOLOGY / "
+    "SOURCE_GRAM_NOT_EXACT -- class 3 not reached, stop rule "
+    "fires.  SATZ: Chebyshev T2 T1=(T3+T1)/2 over Q; Cauchy "
+    "kernel telescopes over Q; Loewner "
+    "(psi(z)-conj psi(w))/(z-conj w)=nsum 1/((m+z)(m+conj w)) "
+    "to 4.6e-41 at dps 40; folded weights linear in lags "
+    "(||w-(wP+wA)||=3.5e-16); Q^T A0 Q already PD on FRAME-A "
+    "(nneg=0, lam_min=5.227e-3) so the one defect of A0 is NOT "
+    "in the ref-negative compression.  LEG 0: no Chebyshev-U "
+    "k-subset of size 49 recovers Vn (maxang 90 deg; greedy "
+    "needs all 104 modes) -- numerical projector of A_ref "
+    "remains the control (class 2 coordinates).  LEG 2: Euler "
+    "Gram vs M residual 209, alignment 0.767 -- correlation, "
+    "not identity; tent/fold is linear at the weight layer, "
+    "not at the CD Gram.  LEG 3: Loewner identity holds on "
+    "the function; Cauchy-Gram vs A0 residual 207, alignment "
+    "with M 0.098 -- the arch block of A0 is not this Loewner "
+    "matrix.  LEG 4: only-Gram nneg=13; ||B_cross||/||B||=0.617 "
+    "rank 104; stacked Euler/tent YY-blocks do not equal B.  "
+    "LEG 5: |cos|(v-,1)=0.007; |cos|(v-,Vn)=0.762 mixed with "
+    "the complement; |cos|(Q^T 1, vQ)=0.069 -- ones-mode is "
+    "not the null mode.  CLASS 1 control: Cholesky of M rest "
+    "2.3e-16 on MAIN; permute nneg_M=6 (M not PD) -- tautology "
+    "of MAIN-PD, not a source law.  Mutants stay O(1) "
+    "(Lambda-perm 314, jitter 209, logn-amp 249, digamma-3/4 "
+    "38) -- nothing explodes from residual 0.  Companion "
+    "rh/problem/one_defect_gram.tex + "
+    "verify_one_defect_gram.py 11/11 ONE DEFECT GRAM VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
+_R405_STATUS = (
+    "Edge contractive lift (round 405, "
+    "PRIME.LDAGGER.EDGE_CONTRACTIVE_LIFT.01, reviewer DCCLXIX "
+    "secs. 8 and 12, 35 pct lane after r401/r404: can the missing "
+    "Euler null mode be written ell=V c from geometric recurrences "
+    "with 1-||c||^2 a manifest positive source sum equal to "
+    "kappa(a,b)(-sch) in the r401 Sylvester chart?; "
+    "experiments-side, NO ledger row): 30/30 full / 25/25 smoke; "
+    "SPEC_SHA b91e6629ee86ce23; Euler-tail residuals, Woodbury "
+    "Delta, kappa_closed over Q, disk Parseval, tail-vs-border "
+    "relres, ones-split (Delta, c2, kappa) on w9 / core-42 / "
+    "chi3 first measured in /tmp (r405_cal.py, r405_cal2.py) "
+    "then sealed (disclosed calibration).  Builder fallback NOT "
+    "taken: full wall 12.1 s (bar 120 s).  AUSGANG "
+    "EDGE_LIFT_PARTIAL.  SATZ: Euler tail 1-z^{K+1}=(1-z)Sum z^r "
+    "over Q (z=1/3 K=5 lhs=728/729); disk Parseval "
+    "(1-q)Sum q^r=1-q^{K+1} (q=1/2 K=6 ||c||^2=127/128 reserve "
+    "1/128); Woodbury Delta=kappa_closed(-sch) with "
+    "kappa_closed=-(1-eta) det K2/det K_W over Q (eta=13/12, "
+    "Delta=7/36, sch=21/8, kappa=-2/27); 2-pt Cauchy Gram "
+    "det=1/72>0.  CENSUS: geometric reconstruction of the "
+    "constant on Y residual 8e-16 (explicit nu_p, no optimiser); "
+    "ones-split Woodbury w9 Delta=2.110e-3 c2=0.99789 "
+    "kappa=0.0315 sch=-0.06696; core-42 Delta>0 42/42 "
+    "kappa>0 42/42 0<c2<1 42/42 Delta in [6.7e-6, 2.11e-3].  "
+    "Worlds: living chi3 37/37 kappa>0 c2<1; dead chi3 5/5 "
+    "sch>0 kappa<0 AND c2<1 -- overflow ||c||>1 REFUTED; death "
+    "remains sch>0 (r401).  REFUTED: SM-border = aggregated "
+    "z^{K+1} (relres 0.996 corr 0.07); geometric disk sum "
+    "O(1e-1) vs Woodbury Delta O(1e-5..1e-3) not the same "
+    "scalar; kappa is not a function of (a,b) alone.  OPEN: "
+    "source c for the mixed A0 defect (r404 class-3 stop; "
+    "|cos|(v-,1)=0.007; v_- vs geometric V relres=0.81).  "
+    "KILL: omit tail residual 0.049; wrong-sign J residual "
+    "867/115; scramble nneg=21; weight-perm nneg=23 ((G) "
+    "breaks before the lift); node jitter does NOT break the "
+    "Euler-tail identity (identity in z).  Companion "
+    "rh/problem/edge_contractive_lift.tex + "
+    "verify_edge_lift.py 12/12 EDGE LIFT VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -3224,6 +3308,59 @@ ENTRIES = [
      [],
      "compiled PDF of p1_construction.tex (recompiled "
      "artefact, registered unpinned)", False),
+    ("rh/problem/one_defect_gram.tex", "problem_statement",
+     "r404 companion",
+     [],
+     "lemma-first source one-defect Gram after DCCLXIX and r403 "
+     "(round 404): Chebyshev addition SATZ; Cauchy kernel SATZ; "
+     "Loewner identity SATZ; fold-linear SATZ; Q^T A0 Q PD SATZ.  "
+     "CHOLESKY_TAUTOLOGY / SOURCE_GRAM_NOT_EXACT (class 3 not "
+     "reached; Euler/Digamma/Uvarov residuals O(1); analytic "
+     "Fourier subset does not recover Vn; ones-mode is not the "
+     "null mode).  Finite identities plus a named class audit; "
+     "NO RH claim",
+     True),
+    ("rh/problem/verify_one_defect_gram.py", "problem_check",
+     "r404 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "one_defect_gram.tex: standalone (Chebyshev addition, "
+     "Cauchy kernel, Loewner psi-nsum, lag-linearity) plus "
+     "construction pins (w9 PD compression, Fourier subset, "
+     "Euler/Loewner residuals, only-Gram/cross, Cholesky "
+     "tautology vs permute, ones-mode, Lambda-perm mutant).  "
+     "11/11 gates, final line ONE DEFECT GRAM VERIFIED", True),
+    ("rh/problem/one_defect_gram.pdf", "problem_statement",
+     "r404 companion",
+     [],
+     "compiled PDF of one_defect_gram.tex (recompiled "
+     "artefact, registered unpinned)", False),
+    ("rh/problem/edge_contractive_lift.tex", "problem_statement",
+     "r405 companion",
+     [],
+     "lemma-first edge contractive lift after DCCLXIX secs. 8 "
+     "and 12 (round 405): Euler tail SATZ; disk Parseval SATZ; "
+     "Woodbury-Schur kappa_closed SATZ; Cauchy Gram SATZ.  "
+     "EDGE_LIFT_PARTIAL (ones-lift residual 0; border=tail "
+     "REFUTED; dead overflow REFUTED; kappa not a function of "
+     "(a,b) alone; A0-defect c OPEN).  Finite identities plus "
+     "a named census; NO RH claim",
+     True),
+    ("rh/problem/verify_edge_lift.py", "problem_check",
+     "r405 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "edge_contractive_lift.tex: standalone (Euler tail, "
+     "omit-tail, disk Parseval, Woodbury kappa_closed, Cauchy "
+     "Gram, wrong-sign J) plus construction pins (w9 geometric "
+     "ones residual, ones-split Delta/c2/kappa, border vs tail, "
+     "dead/live chi3, scramble/permute).  12/12 gates, "
+     "final line EDGE LIFT VERIFIED", True),
+    ("rh/problem/edge_contractive_lift.pdf", "problem_statement",
+     "r405 companion",
+     [],
+     "compiled PDF of edge_contractive_lift.tex (recompiled "
+     "artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -3459,6 +3596,16 @@ ENTRIES = [
      "r403",
      [],
      _R403_STATUS,
+     True),
+    (f"{EXP}/one_defect_gram_probe.py", "sealed_probe",
+     "r404",
+     [],
+     _R404_STATUS,
+     True),
+    (f"{EXP}/edge_contractive_lift_probe.py", "sealed_probe",
+     "r405",
+     [],
+     _R405_STATUS,
      True),
 ]
 

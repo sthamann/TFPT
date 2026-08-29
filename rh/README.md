@@ -5486,6 +5486,49 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r401 are parallel lemma-first / Lean lanes; this round is additive.
 
+**Source one-defect Gram, class 3 not reached (r404,
+PRIME.LDAGGER.SOURCE_ONE_DEFECT_GRAM.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/one_defect_gram_probe.py` (21/21
+full, 19/19 smoke, SPEC_SHA `c0260053d759bd14`) plus
+`rh/problem/one_defect_gram.tex` (+ PDF +
+`verify_one_defect_gram.py`, 11/11, `ONE DEFECT GRAM VERIFIED`).
+**Ausgang CHOLESKY_TAUTOLOGY / SOURCE_GRAM_NOT_EXACT.**
+SATZ: Chebyshev addition; Cauchy kernel; Loewner identity
+($4.6\cdot 10^{-41}$); fold linear in lags; $Q^T A_0 Q$ already
+PD on FRAME-A ($\lambda_{\min}=5.227\cdot 10^{-3}$).
+Euler Gram vs $M$ residual $209$ (align $0.767$); Loewner Gram
+vs $A_0$ residual $207$ (align $0.098$); no Fourier $k$-subset
+recovers $V_n$ (maxang $90^\circ$, greedy $104/49$); ones-mode
+cosine $0.007$; only-Gram still $13$.
+Cholesky of $M$ is exact on MAIN and dies under permute
+($\mathrm{ind}_- M=6$).  Mutants stay $O(1)$.  Stop rule fires.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r403/r405/r406 are parallel lemma-first / Lean lanes; this round is additive.
+
+**Edge contractive lift, partial (r405,
+PRIME.LDAGGER.EDGE_CONTRACTIVE_LIFT.01, reviewer 8/12).**  Sealed
+census probe
+`experiments/tfpt-discovery/edge_contractive_lift_probe.py` (30/30
+full, 25/25 smoke, SPEC_SHA `b91e6629ee86ce23`) plus
+`rh/problem/edge_contractive_lift.tex` (+ PDF +
+`verify_edge_lift.py`, 12/12, `EDGE LIFT VERIFIED`).
+**Ausgang EDGE_LIFT_PARTIAL.**  SATZ: Euler tail; disk Parseval;
+Woodbury $\Delta=\kappa_{\mathrm{closed}}(-\mathrm{sch})$ over
+$\mathbb{Q}$; Cauchy Gram $\det=1/72$.
+Census: geometric lift of the constant on $Y$ residual $8\cdot 10^{-16}$
+(no optimiser); ones-split $\Delta>0$, $\kappa>0$, $\|c\|<1$ on
+core-$42$; living $\chi_3$ $37/37$ the same.
+Dead $\chi_3$ $5/5$ keep $\|c\|<1$ and die at $\mathrm{sch}>0$
+(overflow $\|c\|>1$ REFUTED).  Border $\neq$ aggregated
+$z^{K+1}$ (relres $0.996$).  Geometric sum and Woodbury $\Delta$
+differ on scale; $\kappa$ is not a function of $(a,b)$ alone.
+The $A_0$-defect lift stays open (r404 class 3; cosine $0.007$).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r403 are parallel lemma-first / Lean lanes; this round is additive.
+
 **One-defect finite algebra (r406, PRIME.LDAGGER.ONE_DEFECT_LEAN.01,
 Lean-only, independent of source-side R404/R405).**
 `RH/OneDefect.lean`: three general finite-matrix theorems
@@ -5737,6 +5780,15 @@ rh/
 │   │                     class; interlacing/PSD/scale SATZ;
 │   │                     CLASS REFUTED (weight-rand on the
 │   │                     frozen mask).  No RH claim
+│   ├── one_defect_gram.tex(+pdf) — r404: source one-defect
+│   │                     Gram; Loewner/addition/fold SATZ;
+│   │                     class 3 not reached (Cholesky
+│   │                     tautology).  No RH claim
+│   ├── edge_contractive_lift.tex(+pdf) — r405: edge
+│   │                     contractive lift; Euler/disk/
+│   │                     Woodbury SATZ; EDGE_LIFT_PARTIAL
+│   │                     (border=tail REFUTED; dead overflow
+│   │                     REFUTED).  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5815,9 +5867,15 @@ rh/
 │   ├── verify_edge_signature.py — machine check of
 │                         edge_signature.tex (13/13,
 │                         EDGE SIGNATURE VERIFIED)
-│   └── verify_p1_construction.py — machine check of
+│   ├── verify_p1_construction.py — machine check of
 │                         p1_construction.tex (11/11,
 │                         P1 CONSTRUCTION VERIFIED)
+│   ├── verify_one_defect_gram.py — machine check of
+│                         one_defect_gram.tex (11/11,
+│                         ONE DEFECT GRAM VERIFIED)
+│   └── verify_edge_lift.py — machine check of
+│                         edge_contractive_lift.tex (12/12,
+│                         EDGE LIFT VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6174,7 +6232,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r403 from
+2. **Sealed probes** — the campaign probes r250–r405 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6765,6 +6823,19 @@ problem-document rows to the inventory.  r374--r398 are
 parallel lemma-first / Lean lanes and are not dropped.
 
 
+**r404 coexistence.** Round 404 (`one_defect_gram.tex` +
+`one_defect_gram_probe.py`) is additive on the R-dagger
+north star after DCCLXIX and r403 (source one-defect Gram:
+Loewner/addition/fold SATZ; $Q^T A_0 Q$ PD SATZ; class 3
+not reached -- CHOLESKY_TAUTOLOGY / SOURCE_GRAM_NOT_EXACT;
+stop rule fires).
+It does not touch `experiments/next.txt` and does not touch
+`rh/lean/` (r376/r380/r384/r397/r406).  Suite
+surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the probe and
+problem-document rows to the inventory.  r374--r403/r405/r406
+are parallel lemma-first / Lean lanes and are not dropped.
+
 **r403 coexistence.** Round 403 (`p1_construction.tex` +
 `p1_construction_probe.py`) is additive on the R-dagger
 north star after DCCLXVII and r400 (P1 as a construction
@@ -6778,6 +6849,19 @@ surface of this round: integrity + probes
 problem-document rows to the inventory.  r374--r401 are
 parallel lemma-first / Lean lanes and are not dropped.
 
+**r405 coexistence.** Round 405 (`edge_contractive_lift.tex` +
+`edge_contractive_lift_probe.py`) is additive on the R-dagger
+north star after DCCLXIX secs. 8/12 and r401 (edge half of
+the one-defect factorisation: Euler/disk/Woodbury SATZ;
+ones-lift residual 0; EDGE_LIFT_PARTIAL -- border=tail
+REFUTED, dead overflow REFUTED, A0-defect c OPEN).
+It does not touch `experiments/next.txt` and does not touch
+`rh/lean/` (r376/r380/r384/r397/r406).  Suite
+surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the probe and
+problem-document rows to the inventory.  r374--r403 are
+parallel lemma-first / Lean lanes and are not dropped.
+
 **r406 coexistence.** Round 406 (`RH/OneDefect.lean`) is
 additive on the Lean lane after r397 (general one-defect
 absorption as finite matrix algebra: SATZ A/B/C and
@@ -6785,7 +6869,7 @@ $c_{\min}$ **PROVED**).  It does not wait on R404/R405,
 does not touch `experiments/next.txt`, and does not add a
 sealed probe.  Suite surface of this round: integrity +
 probes + Lean (`run_rh.py --fast`) after appending the
-Lean-module row to the inventory.  r374--r403 are parallel
+Lean-module row to the inventory.  r374--r405 are parallel
 lemma-first / probe lanes and are not dropped.
 
 **r401 coexistence.** Round 401 (`edge_signature.tex` +
