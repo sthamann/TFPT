@@ -49,6 +49,8 @@ VENV_PY = os.path.join(REPO, "experiments", "tfpt-discovery", ".venv",
 # the sealed campaign probe list r250-r398 (order = round order); every
 # entry supports --smoke.  This list is frozen with the wave; extend it in
 # the same change that extends INVENTORY.json.
+# Lean-only rounds (no sealed probe): r305, r310, r310b, r320, C1,
+# r362, r373, r376, r380, r384, r397.
 PROBES = [
     ("r250", "centered_basefiber_probe.py"),
     ("r251a", "corner_provenance_probe.py"),

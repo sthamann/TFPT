@@ -5341,6 +5341,24 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r395 are parallel lemma-first / Lean lanes; this round is additive.
 
+**Exact selected domain (r397, PRIME.RH.EXACT_SELECTED_DOMAIN.01,
+Lean-only, reviewer quantifier correction).**  `RH/Selected.lean`:
+`RealCanonicalWindow` (ℝ-fields, extends `PrimeWindow`) plus the
+total construction $W^{\mathbb R}(a,m)=$
+`ExactFold`(`ExactPrimeSource`, `ExactArch`, `ExactBorder`,
+`ExactBudget`).  Selected sequence $a_k=2^k$,
+$r_k=\lfloor\sqrt{k}\rfloor$, $m_k=k\cdot 2^{r_k}-1$ with
+$\Delta_k=2^{-r_k}\cdot\log 2$, $a_k\to\infty$, $\Delta_k\to 0$
+**PROVED**.  Reduction `weil_nonneg_of_selected_windows` (plain
+`fullRead` along the sequence; onset/mesh coverage by cofinality;
+consumes the existing arch-channel `sorry`).  C1 holes
+`lstar_canonical` / `terminal_q_canonical` **degraded** to the
+alternative (rational-certificate) route.  New Lean mincut: named
+Prop `selected_augDualResolvent_gt_half`.  Zero new `sorry`;
+census **stays 5**.  NO RH CLAIM.  Coexistence: r398 is the
+parallel numeric kill-test; this round does not touch
+`experiments/next.txt`.
+
 **High-moment inertia, killed (r398,
 PRIME.LDAGGER.HIGH_MOMENT_INERTIA.01, reviewer-preregistered
 kill-test of P1).**  Sealed census probe
@@ -5455,6 +5473,16 @@ rh/
 │       │                    k=0,1 PROVED; FlankEntryPrefix and
 │       │                    ChristoffelPivotBound named).  Zero sorry;
 │       │                    census stays 5.  NO RH CLAIM
+│       ├── Selected.lean  — r397: exact real domain + minimal
+│       │                    quantifier (RealCanonicalWindow,
+│       │                    ExactFold/ExactPrimeSource/ExactArch/
+│       │                    ExactBorder/ExactBudget total;
+│       │                    a_k=2^k, m_k=k·2^{⌊√k⌋}−1 with
+│       │                    Δ_k=2^{−r_k}·log 2, a_k→∞, Δ_k→0
+│       │                    PROVED; weil_nonneg_of_selected_windows;
+│       │                    named mincut
+│       │                    selected_augDualResolvent_gt_half).
+│       │                    Zero sorry; census stays 5.  NO RH CLAIM
 │       └── Counterexamples.lean — r273 reviewer guards: machine-checked
 │                            refutations of the three pre-r273 universal
 │                            forms (proved, no sorry)
@@ -6270,6 +6298,14 @@ $k=0,1$, and the composition `FlankEntryPrefix` $+$
 `ChristoffelPivotBound` (general-$k$ CD remainder). Ausgang
 **benannt-ZERLEGT**. Zero new `sorry`; census **stays 5**.
 Does not assert L* or (P1)/(P2).  NO RH CLAIM.
+**r397 exact-selected-domain round.** `RH/Selected.lean`:
+exact real domain and the one cofinal sequence (reviewer
+Problems A/B on `CanonicalWindow`).  Sequence identities and
+`weil_nonneg_of_selected_windows` **PROVED** (the latter consumes
+the existing arch sorry).  Named mincut
+`selected_augDualResolvent_gt_half`.  C1 holes degraded to
+conjectures / alternative route, not deleted.  Zero new `sorry`;
+census **stays 5**.  NO RH CLAIM.
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
@@ -6546,10 +6582,10 @@ north star after DCCLXII (reviewer-preregistered high-moment
 kill-test of P1: even-moment majorant SATZ; cycle-sum SATZ;
 KILL_FAIL as a sufficient test of ind_-(R_{N-3}-I/2)<=1).
 It does not touch `experiments/next.txt` and does not touch
-`rh/lean/` (r376/r380/r384; r397 may run in parallel).  Suite
+`rh/lean/` (r376/r380/r384/r397).  Suite
 surface of this round: integrity + probes
 (`run_rh.py --fast --skip-lean`) after appending the probe and
-problem-document rows to the inventory.  r374--r396 are
+problem-document rows to the inventory.  r374--r397 are
 parallel lemma-first / Lean lanes and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface

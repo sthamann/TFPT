@@ -14,14 +14,17 @@
 > `sorry`** (proved faces + named Props for Borodin/DPP remainder);
 > **r384** kernel-anchors the r382 entry lemma (`RH/FlankEntry.lean`)
 > with **zero new `sorry`** (proved finite algebra + named Props
-> `FlankEntryPrefix` / `ChristoffelPivotBound`).
+> `FlankEntryPrefix` / `ChristoffelPivotBound`);
+> **r397** constructs the exact real domain and the selected
+> sequence (`RH/Selected.lean`) with **zero new `sorry`**:
+> `lstar_canonical` / `terminal_q_canonical` are DEGRADED to the
+> alternative (rational-certificate) route; the new mincut is the
+> named Prop `selected_augDualResolvent_gt_half`. Census stays **five**.
 > The graph is reduced to the
-> **two true arithmetic gaps**:
+> **two true arithmetic gaps** (now the alternative route):
 > `lstar_canonical` (lemma L*, the base/wall hole)
 > and `terminal_q_canonical` (the terminal cross-ratio, the
-> border/fiber hole), both `RH/Canonical.lean`, both quantified over
-> the CANONICAL prime-window construction (no opaque `MainWindow`, no
-> free `SourceExact` in the final chain); plus the ONE named r263
+> border/fiber hole), both `RH/Canonical.lean`; plus the ONE named r263
 > dictionary import `pair_terminal_dictionary` (measured exact,
 > transcription-blocked), the r310/r320 opacity bridge
 > (`RH/Source.lean`, definitional/technical — outside the load-bearing
@@ -36,7 +39,7 @@
 > (`RH/Haynsworth.lean`, sorry-free); the former master-theorem `sorry`, the wave-5 fog-free
 > form `free_window_positivity` and the pair closure
 > `pair_closes_main` are PROVED as corollaries. Historical narrative
-> (r305 four / r310 five / r326 eight / C1 seven / r376 five / r380 five / r384 five) in the blocks below.
+> (r305 four / r310 five / r326 eight / C1 seven / r376 five / r380 five / r384 five / r397 five) in the blocks below.
 >
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
@@ -129,8 +132,8 @@
 >
 > | `sorry` | File | Type |
 > |---|---|---|
-> | `lstar_canonical` | `RH/Canonical.lean` | arithmetically open (the base/wall hole, lemma L*); **C1 RETYPE** of `lstar_subordination` (r305–r332, `RH/Window.lean`): quantifier domain now the canonical construction (`CanonicalWindow`), content verbatim (v963 subordination, ledger `PRIME.LSTAR.SUBORDINATION.01` [O]) |
-> | `terminal_q_canonical` | `RH/Canonical.lean` | arithmetically open (the border/fiber hole); **C1 RETYPE + SHARPENING** of `terminal_positive_main` (r305–r332, `RH/Closure.lean`): domain canonical, budget half `0 < B` PROVED (`canonical_budget_pos`), the sorry carries only `q_N < 1` |
+> | `lstar_canonical` | `RH/Canonical.lean` | arithmetically open (the base/wall hole, lemma L*); **C1 RETYPE** of `lstar_subordination`; **r397 DEGRADED** to conjecture / alternative route (domain `CanonicalWindow` may be empty; not the mincut) |
+> | `terminal_q_canonical` | `RH/Canonical.lean` | arithmetically open (the border/fiber hole); **C1 RETYPE + SHARPENING**; **r397 DEGRADED** to conjecture / alternative route (same domain defect; not the mincut) |
 > | `pair_terminal_dictionary` | `RH/Canonical.lean` | **C1, replaces the `pair_margin_main` sorry** — the r263 dictionary `Z² = (5/7)·q_N` as ONE named lemma; type MEASURED DICTIONARY (42/42 exact) / transcription-blocked (the border orthopoly transform); consumed only by the pair closure corollary, never by the master chain |
 > | `mainWindow_iff_builtFromPrimeSource` | `RH/Source.lean` | definitional/technical (opacity-forced, r320 form); **Alt-Last since C1** (outside the load-bearing chain: `CanonicalWindow` replaced `MainWindow`); not deleted — the r273 opaque marker and the U1–U3 guards still refer to it |
 > | `arch_elementwise_stabilization` | `RH/Elementwise.lean` | classical (S2), r326; r373: kernel `weilArchKernel` is transcribed (`Complex.digamma`); remaining hole is tent-read = pairing. r376 mathlib census (v4.29.1): not a finite-sum identity; Gauss integral / `Real.digamma` / ψ-monotonicity / Mellin inversion identifying `arch_A` with `weilArchKernel` are absent (explicit TODO on mathlib `Digamma.lean`). Titchmarsh Ch. X, Weil 1952 |
@@ -140,6 +143,8 @@
 > r380 named Props (not sorrys, census unchanged): `ComplementaryDualHankelInertia`, `DPPIdentity`, `SignedBorodinComplement`, `K2EqHankelRatio`, `P1EqCapInertia`, `P2EqPostcapAlternation` (`RH/PivotCoordinate.lean`; Borodin OP / discrete OPE remainder, same class as `CauchyInterlace`).
 >
 > r384 named Props (not sorrys, census unchanged): `FlankEntryPrefix`, `ChristoffelPivotBound` (`RH/FlankEntry.lean`; discrete OP / CD remainder of the r382 inductive core, same class as `ComplementaryDualHankelInertia`).
+>
+> r397 named Props (not sorrys, census unchanged at 5): `selected_augDualResolvent_gt_half` (THE NEW MINCUT: `∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef`), `SelectedMasterImpliesPlainReads` (L†/master of the real windows ⇒ plain `fullRead` along the sequence), `ExactArchAgreesWithArchRead` (folded Exact arch vs opaque `archRead`).  Sequence identities (`selectedDelta_eq`, `a_k → ∞`, `Δ_k → 0`, `m_k → ∞`) and `weil_nonneg_of_selected_windows` are theorems; the latter consumes the existing arch sorry.  `lstar_canonical` / `terminal_q_canonical` kept as typed `sorry`s, degraded to the alternative route.
 >
 > Retired as sorries by C1: `lstar_subordination` → `lstar_canonical`
 > (retype), `terminal_positive_main` → `terminal_q_canonical` (retype,
@@ -722,13 +727,32 @@ way, sp(N, eps) = +0.67, r272).
 | `pair_terminal_dictionary` | **`sorry` — the ONE named dictionary** | `Z² = (5/7)·q_N` on canonical windows (r263, measured exact 42/42); type MEASURED DICTIONARY / transcription-blocked (the border orthopoly transform); consumed ONLY by the pair closure |
 | `pair_closes_main` | **proved** | the pair closure `Z²/M² < 1` (`M² = 5/7`) as a corollary of `terminal_q_canonical` through the dictionary — formerly conditioned on the retired `pair_margin_main` sorry |
 
+### `RH/Selected.lean` — EXACT REAL DOMAIN AND THE MINIMAL QUANTIFIER (r397)
+
+| Item | Status | Content |
+|---|---|---|
+| `RealCanonicalWindow` | structure | ℝ-fields, extends `PrimeWindow` plus `budget_pos`.  Not a parallel world: `toPrimeWindow` is definitional |
+| `ExactPrimeSource`, `ExactArch`, `ExactBorder`, `ExactBudget`, `ExactFold`, `realCanonicalWindow` | definitions | `W^ℝ(a,m)` constructed totally; no emptiness question |
+| `RepresentsRealCanonical` | definition | `RepresentsWindow` as a certificate over a `RealCanonicalWindow` |
+| `selectedAnchor` / `selectedRoot` / `selectedMesh` / `selectedDelta` | definitions | `a_k = 2^k`, `r_k = ⌊√k⌋`, `m_k = k·2^{r_k}−1`, `Δ_k = log(a_k)/(m_k+1)` |
+| `selectedDelta_eq`, `selectedAnchor_tendsto`, `selectedRoot_tendsto`, `selectedMesh_tendsto`, `selectedDelta_tendsto_zero`, `selected_covers` | **proved** (no `sorryAx`) | `Δ_k = 2^{−r_k}·log 2`; cofinality in anchor and mesh |
+| `weil_nonneg_of_selected_windows` | **proved** (consumes the existing arch sorry) | `SelectedWindowLocalPositive → ∀ f, 0 ≤ weilForm f`.  Honest hypotheses: plain `fullRead` along the sequence, per-element onset and mesh coverage (proved by cofinality), existing `elementwise_finite_stabilization` |
+| `SelectedMasterImpliesPlainReads` | named Prop | L†/master of `W^ℝ_k` ⇒ plain reads (not asserted) |
+| `selected_augDualResolvent_gt_half` | **named Prop — THE NEW MINCUT** | `∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef`.  Never a `sorry` |
+| `ExactArchAgreesWithArchRead` | named Prop | folded Exact arch vs `archRead` (classical) |
+
+Zero `sorry` in this file.  Census stays 5.
+
 ### `RH/Audit.lean` — THE FINAL AXIOM AUDIT (C1; `#print axioms` at every build)
 
 Runs `#print axioms` on the sorry-free layer (expected: the three
-standard axioms, NO `sorryAx`), the two canonical holes, the master
-chain, the Level-C extraction, the r380 pivot-coordinate faces
-(section (i)), and the r384 flank-entry faces (section (j)); the C1
-record is quoted verbatim in the claim-boundary
+standard axioms, NO `sorryAx`), the two canonical holes (now the
+alternative route), the master chain, the Level-C extraction, the
+r380 pivot-coordinate faces (section (i)), the r384 flank-entry
+faces (section (j)), and the r397 selected-domain identities
+(section (k): sequence theorems NO `sorryAx`;
+`weil_nonneg_of_selected_windows` the existing arch `sorryAx`);
+the C1 record is quoted verbatim in the claim-boundary
 block above and in the file itself.
 
 ## TODO (second stage)

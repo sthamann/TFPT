@@ -123,6 +123,20 @@ and `h_0 = -1` give `tau_1 = -1`).  The truth-capable form is
 the master positivity, not assumed); the missing DEFINITION of the main
 source is exactly the opaque predicate `MainWindow` (r261: the object IS
 the coherent sum; cancellation is ~5.7 decades deep at n = 6 already).
+
+## r397 census (exact selected domain)
+
+The C1 holes `lstar_canonical` / `terminal_q_canonical` are DEGRADED
+to the alternative (rational-certificate) route: `CanonicalWindow`
+may be empty after exact real transcription, and mesh-tolerance is
+uncoupled from the L* margin.  They are kept as typed `sorry`s, not
+deleted.  The load-bearing open kernel is the named Prop
+`selected_augDualResolvent_gt_half` (`RH/Selected.lean`):
+`∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef` on the constructed real windows
+of the selected sequence `a_k = 2^k`, `m_k = k·2^{⌊√k⌋}−1`.
+New named Props (not sorrys): `SelectedMasterImpliesPlainReads`,
+`ExactArchAgreesWithArchRead`.  Sorry census unchanged at 5.
+NO RH CLAIM.
 -/
 
 end RH

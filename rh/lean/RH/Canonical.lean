@@ -59,10 +59,15 @@ U1-U3 adversaries are blocked structurally: budget = the named
 positive completion budget (U1), separation discipline unchanged (U2),
 border = the named completion column, not a free field (U3).
 
-THE TWO TRUE HOLES, canonical form (the C1 retype -- the r305/r320
+THE TWO C1 HOLES, canonical form (the C1 retype -- the r305/r320
 statements are RETYPED onto this domain, not duplicated; the old
 `MainWindow`-conditioned forms are REMOVED from RH/Window.lean and
-RH/Closure.lean in the same change):
+RH/Closure.lean in the same change).  r397 DEGRADES both to the
+alternative (rational-certificate) route: they stay as typed
+`sorry`s so the finite-algebra corollaries still typecheck, but
+they are NOT the mincut (domain may be empty; mesh-tolerance is
+uncoupled from the L* margin).  The load-bearing open kernel is
+`selected_augDualResolvent_gt_half` in RH/Selected.lean.
   * `lstar_canonical`     -- lemma L* on canonical windows (base/wall),
   * `terminal_q_canonical` -- the terminal cross-ratio `q < 1` on
     canonical windows (border/fiber).  NOTE the sharpening: the budget
@@ -195,24 +200,22 @@ theorem canonicalWindow_B_pos (a m : ℕ) (ha : IsPrimePow a) :
 
 /-! ## The final domain: the canonical certificate predicate -/
 
-/-- **THE CANONICAL WINDOW PREDICATE** (C1 -- the final quantifier
-domain of the two true holes): the rational certificate window `w`
-mesh-represents the genuinely completed canonical construction at some
-anchor and mesh level.  `RepresentsWindow` is the repaired r320
-predicate (node/comb/arch within one mesh, u/B EXACT, separation
-discipline), so:
-  * the arithmetic channels of `w` are pinned to the actual
-    von-Mangoldt source within mesh, collision-free (U2 repair);
-  * the border and budget of `w` ARE the named completion data
-    verbatim (U1/U3 repair) -- in particular `0 < B` is PROVABLE
-    (`canonical_budget_pos` below);
-  * only the completion VALUES stay opaque -- the residual opacity is
-    exactly the named classical transcription TODO, no longer a fully
-    opaque window predicate and no free `SourceExact` existential.
-NONEMPTINESS is deliberately unprovable while the completion is opaque
-(no rational window can be proved u/B-faithful to opaque reals) --
-the same honest state as `MainWindow`/`SourceExact`, now localized in
-ONE named constant.  NO RH CLAIM. -/
+/-- **THE CANONICAL WINDOW PREDICATE** (C1 -- the rational-certificate
+layer; r397: NOT the quantifier domain).  A rational certificate
+window `w` mesh-represents the completed canonical construction at
+some anchor and mesh level.  `RepresentsWindow` is the r320
+certificate (node/comb/arch within one mesh, u/B EXACT, separation
+discipline).
+
+r397 DOMAIN CORRECTION: this predicate is a CERTIFICATE over the
+real construction, not the domain of the open statements.  Two
+defects as a domain: (A) possible emptiness after exact real
+transcription (u/B exact against generically irrational completion
+data -- nonemptiness unprovable while the completion is opaque);
+(B) mesh-width error uncoupled from the shrinking L* margin.
+The actual domain is `RealCanonicalWindow` / `W^ℝ(a,m)` in
+RH/Selected.lean, constructed totally.  The C1 holes below are
+kept as the alternative (rational-certificate) route.  NO RH CLAIM. -/
 def CanonicalWindow (w : VonMangoldtWindow) : Prop :=
   ∃ (a m : ℕ) (ha : IsPrimePow a),
     RepresentsWindow w (canonicalWindow a m ha) (canonicalSpec a m ha).mesh
@@ -229,56 +232,31 @@ theorem canonical_budget_pos (w : VonMangoldtWindow)
   rw [hB]
   exact (canonicalCompletion a).budget_pos
 
-/-! ## The two true holes, canonical form (the C1 retype)
+/-! ## ALTERNATIVE ROUTE (r397 degradation): the C1 rational-certificate
+holes, kept as conjectures
 
-RETYPE JUSTIFICATION (the R319 discipline: no silent seam shift).
-The r305/r320 forms were `MainWindow w → LStar w` and
-`MainWindow w → TerminalPositive w` with `MainWindow` fully opaque --
-statements about an unknowable marker whose intended content was
-documented prose.  The canonical forms below quantify over the ACTUAL
-construction: atoms/nodes/comb are the genuine prime data (provable,
-`sourceExact_canonicalSpec`), the certificate binding is the repaired
-r320 predicate, and the remaining opacity is the three named kernel
-values of `canonicalCompletion` -- i.e. the intended content of the
-old marker, made syntactic except for the classical transcriptions.
-The mathematical claim is therefore PRESERVED AND SHARPENED: what the
-old sorries asserted "for whatever MAIN means", the new sorries assert
-for the named construction that MAIN always meant.  The old forms are
-removed in the same change (census: retype, not growth). -/
+r397: `lstar_canonical` and `terminal_q_canonical` are NOT the mincut.
+They quantify over `CanonicalWindow`, which may be empty (Problem A)
+and whose mesh-tolerance is too coarse (Problem B).  They remain as
+typed `sorry`s so the existing finite-algebra corollaries still
+typecheck; they are the alternative (rational-certificate) route.
+The load-bearing open kernel is `selected_augDualResolvent_gt_half`
+in RH/Selected.lean. -/
 
-/-- **THE CANONICAL FORM OF THE OPEN CENTER: lemma L*** (C1 retype of
-`lstar_subordination`, wave 6 / r283 / v963; ledger
-`PRIME.LSTAR.SUBORDINATION.01` [O]; standalone statement
-rh/problem/lstar_problem.tex).
-
-On a canonical window the archimedean/smooth channel `nu` is strictly
-`mu`-subordinate on the free polynomial window: for every real
-polynomial `p ≠ 0` with `deg p < cap`, `∫p²dν < ∫p²dμ` --
-equivalently (v963 A2 chain, certified exact-rationally)
-`lambda_max(E_cap) < 1` for the nu-dressed mu-Christoffel-Darboux
-kernel.  Measured support (wave-7/wave-14 state): 42/42 ladder rungs
-plus every extension anchor ever measured (EXT3/EXT4/EXT5/EXT6, down
-to margin 1.13e-10 at N_w = 7942, r354) -- all strictly positive; the
-margin decay is resolved HARMLESS (r286); the diophantine route is
-excluded (r289 METRIC_ONLY, re-confirmed at resolution r331).  The
-`sorry` IS the open problem -- NOT a to-do of a known proof.  NO RH
-CLAIM. -/
+/-- **CONJECTURE / ALTERNATIVE ROUTE** (C1 retype of
+`lstar_subordination`; r397: degraded, not the mincut).
+Lemma L* on rational certificate windows.  The `sorry` is kept;
+the domain `CanonicalWindow` is the certificate layer, not the
+real construction.  NO RH CLAIM. -/
 theorem lstar_canonical (w : VonMangoldtWindow)
     (hw : CanonicalWindow w) : LStar w := by
   sorry
 
-/-- **THE TERMINAL CROSS-RATIO ON CANONICAL WINDOWS** (C1 retype of
-`terminal_positive_main`, r305; ledger
-`PRIME.PORT.COUPLEDTAU.TERMINAL_CROSSRATIO.01` [O]) -- the second true
-hole, border/fiber half of the former master sorry, SHARPENED to its
-genuinely open conjunct: the budget normalization `0 < B` is proved
-canonically (`canonical_budget_pos`), so the open content is exactly
-`q_N < 1`.  Measured support: 42/42 rungs (N = 142..878), min margin
-0.0139, trend FLAT (r258); r270 exact interval enclosure at kz15;
-57/57 with the r286 extension (min 1 - q_N = 0.019).  Its
-pair-coordinate image is now a COROLLARY (`pair_closes_main` below,
-via the named r263 dictionary), not a second hole.  The `sorry` IS
-the open problem.  NO RH CLAIM. -/
+/-- **CONJECTURE / ALTERNATIVE ROUTE** (C1 retype of
+`terminal_positive_main`; r397: degraded, not the mincut).
+The terminal cross-ratio `q_N < 1` on rational certificate windows.
+Budget positivity remains proved (`canonical_budget_pos`).  NO RH
+CLAIM. -/
 theorem terminal_q_canonical (w : VonMangoldtWindow)
     (hw : CanonicalWindow w) : w.q < 1 := by
   sorry

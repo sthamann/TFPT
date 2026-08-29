@@ -908,7 +908,10 @@ every comb weight of `v`).  `RepresentsSpec w s` is definitionally
 (`representsSpec_iff`) -- the spec-level predicate was already the
 built-window predicate in disguise; this form makes the reviewer's
 target semantics ("built from a prime source") syntactically explicit.
-CERTIFICATE BOOKKEEPING ONLY (see `rational_window_approximates`). -/
+CERTIFICATE BOOKKEEPING ONLY (see `rational_window_approximates`).
+r397: this is a CERTIFICATE over a `RealCanonicalWindow` (via
+`W.toPrimeWindow`), not a domain predicate.  The domain is the
+constructed real window (`RH/Selected.lean`). -/
 def RepresentsWindow (w : VonMangoldtWindow) (v : PrimeWindow)
     (δ : ℝ) : Prop :=
   ∃ hS : w.S = v.S,

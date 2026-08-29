@@ -3334,9 +3334,25 @@ Level-C statements: \texttt{arch\_elementwise\_stabilization} $+$
 transcription) and \texttt{specFamily\_sourceExact\_completion}
 (classical $+$ definitional, opacity-forced; \emph{not} consumed by
 the extraction route)\\
+\texttt{RH/Selected.lean} & \textbf{exact selected domain} (r397);
+0 \texttt{sorry} &
+\texttt{RealCanonicalWindow} (real fields; total
+$W^{\mathbb R}(a,m)$); sequence $a_k=2^k$,
+$m_k=k\cdot 2^{\lfloor\sqrt k\rfloor}-1$ with
+$\Delta_k=2^{-r_k}\log 2$, $a_k\to\infty$, $\Delta_k\to 0$
+\textbf{proved}; reduction
+\texttt{weil\_nonneg\_of\_selected\_windows} (plain
+\texttt{fullRead} along the sequence; consumes the existing
+arch \texttt{sorry}); named mincut
+\texttt{selected\_augDualResolvent\_gt\_half}.  NO RH CLAIM\\
 \bottomrule
 \end{tabular}
 \end{center}
+
+\noindent r397: \texttt{lstar\_canonical}/\texttt{terminal\_q\_canonical}
+are degraded to the alternative (rational-certificate) route; the
+named open kernel is \texttt{selected\_augDualResolvent\_gt\_half}.
+Sorry census stays five.  NO RH CLAIM.
 
 \noindent The \texttt{sorry} declarations (\textbf{eight in total}
 since the r326 Level-C round: five window-local since the

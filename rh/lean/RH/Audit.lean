@@ -33,6 +33,7 @@ import RH.Haynsworth
 import RH.Elementwise
 import RH.PivotCoordinate
 import RH.FlankEntry
+import RH.Selected
 
 namespace RH
 
@@ -177,5 +178,30 @@ NO RH CLAIM. -/
 #print axioms threeAtom_christoffel_k1
 #print axioms indNeg_entry_of_flank
 #print axioms adaptive_band_from_flank_entry
+
+/-! ## (k) The r397 exact selected domain
+Expected AND MEASURED: the sequence identities and cofinality
+theorems are sorry-free
+(`[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`).
+`weil_nonneg_of_selected_windows` consumes the existing classical
+arch-channel sorry through `elementwise_finite_stabilization`, so
+`[propext, sorryAx, Classical.choice, Quot.sound]` -- the same
+`sorryAx` as `weil_nonneg_of_windowlocal`, no new hole.
+Named Props (`selected_augDualResolvent_gt_half`,
+`SelectedMasterImpliesPlainReads`, `ExactArchAgreesWithArchRead`)
+are hypotheses, not holes.  Census of `sorry` declarations
+unchanged at 5; the two C1 holes are degraded to the alternative
+route.  NO RH CLAIM. -/
+
+#print axioms selectedDelta_eq
+#print axioms selectedAnchor_tendsto
+#print axioms selectedRoot_tendsto
+#print axioms selectedMesh_tendsto
+#print axioms selectedDelta_tendsto_zero
+#print axioms selected_covers
+#print axioms realCanonicalWindow_B_pos
+#print axioms ExactFold_B
+#print axioms weil_nonneg_of_selected_windows
+#print axioms weil_nonneg_of_selected_master
 
 end RH

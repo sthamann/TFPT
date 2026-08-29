@@ -2601,6 +2601,21 @@ ENTRIES = [
      "FlankEntryPrefix + adaptive_band_from_entry PROVED.  "
      "Zero sorry; census stays 5.  NO RH claim",
      True),
+    ("rh/lean/RH/Selected.lean", "lean_module",
+     "r397",
+     [],
+     "r397 exact selected domain: RealCanonicalWindow (R-fields, "
+     "extends PrimeWindow) plus total construction W^R(a,m) = "
+     "ExactFold(ExactPrimeSource, ExactArch, ExactBorder, "
+     "ExactBudget); selected sequence a_k=2^k, "
+     "m_k=k*2^floor(sqrt(k))-1 with Delta_k=2^{-r_k}*log 2, "
+     "a_k->inf, Delta_k->0 PROVED; reduction "
+     "weil_nonneg_of_selected_windows (plain fullRead along the "
+     "sequence; consumes existing arch sorry); named mincut "
+     "selected_augDualResolvent_gt_half.  lstar_canonical / "
+     "terminal_q_canonical degraded to alternative route.  "
+     "Zero sorry in this file; census stays 5.  NO RH claim",
+     True),
     ("rh/problem/christoffel_quiet.tex", "problem_statement",
      "r385 companion",
      [],

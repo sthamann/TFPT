@@ -1856,6 +1856,16 @@
       "bytes": 26073
     },
     {
+      "path": "rh/lean/RH/Selected.lean",
+      "role": "lean_module",
+      "round": "r397",
+      "ledger_ids": [],
+      "status": "r397 exact selected domain: RealCanonicalWindow (R-fields, extends PrimeWindow) plus total construction W^R(a,m) = ExactFold(ExactPrimeSource, ExactArch, ExactBorder, ExactBudget); selected sequence a_k=2^k, m_k=k*2^floor(sqrt(k))-1 with Delta_k=2^{-r_k}*log 2, a_k->inf, Delta_k->0 PROVED; reduction weil_nonneg_of_selected_windows (plain fullRead along the sequence; consumes existing arch sorry); named mincut selected_augDualResolvent_gt_half.  lstar_canonical / terminal_q_canonical degraded to alternative route.  Zero sorry in this file; census stays 5.  NO RH claim",
+      "pin": true,
+      "sha256": "a0b4a806bf45e6f2ae6013db9e52a4e600253bb866e4e58a3c126f75be2165d4",
+      "bytes": 22320
+    },
+    {
       "path": "rh/problem/christoffel_quiet.tex",
       "role": "problem_statement",
       "round": "r385 companion",
@@ -2420,8 +2430,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "83f9b8cb03519c06586e100213164aee021b0f6c28ed1f248a7ebe76ca97ac78",
-      "bytes": 5379646
+      "sha256": "0a827e846fa8254821678107de3ce8d4615a5da1d7da41fd020cb2c20cdee5a7",
+      "bytes": 5381908
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",

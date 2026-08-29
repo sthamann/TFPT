@@ -16,4 +16,5 @@ import RH.DualResolvent
 import RH.PivotCoordinate
 import RH.FlankEntry
 import RH.Canonical
+import RH.Selected
 import RH.Audit
