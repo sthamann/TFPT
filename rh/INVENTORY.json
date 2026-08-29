@@ -2446,6 +2446,36 @@
       "bytes": 227841
     },
     {
+      "path": "rh/problem/dual_intertwiner.tex",
+      "role": "problem_statement",
+      "round": "r407 companion",
+      "ledger_ids": [],
+      "status": "lemma-first dual intertwiner after DCCLXXI/DCCLXXII and r404/r405 (round 407): Hankel/Woodbury/FL SATZ; R=C(I+C)^{-1} SATZ; Euler moment SOURCE_GRAM_EXACT on the moment layer.  INTERTWINER_EXACT / NU_RANK_NOT_ONE (P1 REDUZIERT to lam_2(C)>=1; nu-rank = N_nu; sandwich wrong direction; Euler source G is not the G that R inverts).  Finite identities plus a named reduction; NO RH claim",
+      "pin": true,
+      "sha256": "c7f54947d5cbffee2aafa866f2751005dc786d167dc831c2761b9906fa42675b",
+      "bytes": 9034
+    },
+    {
+      "path": "rh/problem/verify_dual_intertwiner.py",
+      "role": "problem_check",
+      "round": "r407 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in dual_intertwiner.tex: standalone (Hankel linearity, Euler split, Woodbury, R=C(I+C)^{-1}, inverse antitone, FL dictionary) plus construction pins (w9 formula/FL/C, Euler moment vs dual G, nu-rank/sandwich, scramble/permute/dead chi, kz9+kz55).  12/12 gates, final line DUAL INTERTWINER VERIFIED",
+      "pin": true,
+      "sha256": "e5f66edb7b04241e8a758ca98435abef1ac896040d568f330ac2bf10a4e2b593",
+      "bytes": 6505
+    },
+    {
+      "path": "rh/problem/dual_intertwiner.pdf",
+      "role": "problem_statement",
+      "round": "r407 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of dual_intertwiner.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "d5ac6b5d48cc9840aa32beca33aa079810d14da3c3657dac2d094d59b0daf60d",
+      "bytes": 239627
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2600,8 +2630,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "6b879a73ac2dba16a4f97ceaba47c36bb93c22debd04e5539a0abba2a10765f8",
-      "bytes": 3439058
+      "sha256": "3a5cc9a6ca3b3d9e6de50a6a189caeb577676dd6a58d693aace125480da86f18",
+      "bytes": 3448263
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -2620,8 +2650,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "f39c62b4a8341c431d58dcfce7818f99f9fa7d74e7055fc0db77925f10899344",
-      "bytes": 5398891
+      "sha256": "d5564c8b63140f85ad1614b8e0c8cc4023cb9a113cfdd3b6b63c65475c2e4c57",
+      "bytes": 5404095
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2982,6 +3012,16 @@
       "pin": true,
       "sha256": "d79952acaf344c6f85de85f686ace8b2a2b9c4273ef387aaef4bbd3dddf5fbd9",
       "bytes": 26205
+    },
+    {
+      "path": "experiments/tfpt-discovery/dual_intertwiner_probe.py",
+      "role": "sealed_probe",
+      "round": "r407",
+      "ledger_ids": [],
+      "status": "Dual intertwiner (round 407, PRIME.LDAGGER.DUAL_INTERTWINER.01, shared remainder of r404/r405 after DCCLXXI/DCCLXXII: transport the Euler/Digamma Gram through the dual resolvent; experiments-side, NO ledger row): 29/29 full / 26/26 smoke; SPEC_SHA 2ee74c59b57ed1c6; formula residuals, C-spectrum, nu-rank, sandwich direction, Euler moment Gram, kill table first measured in /tmp (r407_cal.py, r407_cal2.py, r407_cal3.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 2.4 s (bar 120 s).  AUSGANG INTERTWINER_EXACT / NU_RANK_NOT_ONE -- P1 REDUZIERT to lam_2(C)>=1.  SATZ over Q: Hankel G(mu-nu)=G(mu)-G(nu); Euler split; Woodbury eta=5/6 det=11; R=C(I+C)^{-1}=I-(I+C)^{-1}; inverse Loewner-antitone; FL dictionary nneg(R-I/2)={lam(C)<1}.  FORMULA: R = A G^{-1} A^T = C(I+C)^{-1} with C the mu-only dual CD Gram on Y (chain-stable Cholesky of G_+); w9 ||C(I+C)^{-1}-R||=1.84e-14, FL 1.46e-13, Cmin=0.85712, lam2(C)=1.00018, Cmin/(1+Cmin)=0.46153=rmin.  SIGNED: dual consumes |wu|; signed u gives n_neg_ud=|Y|=104.  LEG B: source Hankel linear 9.2e-16; Euler prime-pos G=FF^T rest 1.55e-16 (SOURCE_GRAM_EXACT on the moment layer); dual G vs source G rel 141 -- not the G that R inverts.  LEG C REFUTED as rank-1: rank G_nu=104=N_nu, rank(R-C)=104 reff=1.18; dual CD tail rank-2 (r363) does not isolate the A0 defect.  LEG D: C-R = C(I+C)^{-1}C ⪰ 0 (wrong direction for R⪰I/2).  CENSUS: core-42 nneg=C#<1 on 42/42 (P1 28 / vacuous 14); live chi3 37/37; dead chi3 5/5 FULFILL the transport (death is sch>0).  KILL: scramble 21=21; permute 20=20; depth n+1 rel 0.031 rank-1; Lambda-perm of prime-pos weights source-G rel 0.54; node-jitter of G(nu) rel 0.014.  Companion rh/problem/dual_intertwiner.tex + verify_dual_intertwiner.py 12/12 DUAL INTERTWINER VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "017e970839f462482ced1f969fb3b66b5adcbf680a0590d0e3bd2e62939af754",
+      "bytes": 23972
     }
   ]
 }

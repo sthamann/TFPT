@@ -5547,6 +5547,34 @@ $\Delta$.  Zero new `sorry`; census **stays 5**.  NO RH CLAIM.
 Coexistence: does not wait on R404/R405; this round does not
 touch `experiments/next.txt`.
 
+**Dual intertwiner, P1 reduced to $\lambda_2(C)\ge 1$ (r407,
+PRIME.LDAGGER.DUAL_INTERTWINER.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/dual_intertwiner_probe.py` (29/29
+full, 26/26 smoke, SPEC_SHA `2ee74c59b57ed1c6`) plus
+`rh/problem/dual_intertwiner.tex` (+ PDF +
+`verify_dual_intertwiner.py`, 12/12, `DUAL INTERTWINER VERIFIED`).
+**Ausgang INTERTWINER_EXACT / NU_RANK_NOT_ONE.**
+SATZ: $R=C(I+C)^{-1}$ with $C$ the $\mu$-only dual CD Gram
+on $Y$ (chain-stable Cholesky of $G_+$); fractional-linear
+dictionary $\mathrm{eig}(R)=\lambda(C)/(1+\lambda(C))$, hence
+$\mathrm{ind}_-(A_0)=\#\{\lambda(C)<1\}$ and P1
+$\iff\lambda_2(C)\ge 1$; Hankel linearity; Woodbury;
+inverse antitone; Euler moment $G=FF^T$ residual
+$1.55\cdot 10^{-16}$ (SOURCE_GRAM_EXACT on the moment layer).
+FRAME-A: $\|C(I+C)^{-1}-R\|=1.84\cdot 10^{-14}$,
+$C_{\min}=0.85712$, $\lambda_2(C)=1.00018$,
+$r_{\min}=0.46153$.  $\nu$-rank after compression is
+$N_\nu=104$, not one.  Loewner sandwich of the inverse
+upper-bounds $R$ (wrong direction for $R\succeq I/2$).
+Euler source Gram is not the $G$ that $R$ inverts (rel $141$).
+Core-$42$: $\mathrm{nneg}=C\#<1$ on $42/42$ (P1 $28$ /
+vacuous $14$).  Dead $\chi_3$ $5/5$ fulfill the transport.
+Scramble $21=21$; permute $20=20$.  Signed dual consumes $|u|$.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r406 are parallel lemma-first / Lean lanes; this round is additive.
+
 
 ## Folder guide
 
@@ -5789,6 +5817,10 @@ rh/
 │   │                     Woodbury SATZ; EDGE_LIFT_PARTIAL
 │   │                     (border=tail REFUTED; dead overflow
 │   │                     REFUTED).  No RH claim
+│   ├── dual_intertwiner.tex(+pdf) — r407: dual
+│   │                     intertwiner $R=C(I+C)^{-1}$; FL
+│   │                     dictionary SATZ; P1 $\iff\lambda_2(C)\ge 1$;
+│   │                     $\nu$-rank not one.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5873,9 +5905,12 @@ rh/
 │   ├── verify_one_defect_gram.py — machine check of
 │                         one_defect_gram.tex (11/11,
 │                         ONE DEFECT GRAM VERIFIED)
-│   └── verify_edge_lift.py — machine check of
+│   ├── verify_edge_lift.py — machine check of
 │                         edge_contractive_lift.tex (12/12,
 │                         EDGE LIFT VERIFIED)
+│   └── verify_dual_intertwiner.py — machine check of
+│                         dual_intertwiner.tex (12/12,
+│                         DUAL INTERTWINER VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6232,7 +6267,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r405 from
+2. **Sealed probes** — the campaign probes r250–r407 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6869,8 +6904,22 @@ $c_{\min}$ **PROVED**).  It does not wait on R404/R405,
 does not touch `experiments/next.txt`, and does not add a
 sealed probe.  Suite surface of this round: integrity +
 probes + Lean (`run_rh.py --fast`) after appending the
-Lean-module row to the inventory.  r374--r405 are parallel
+Lean-module row to the inventory.  r374--r405/r407 are parallel
 lemma-first / probe lanes and are not dropped.
+
+**r407 coexistence.** Round 407 (`dual_intertwiner.tex` +
+`dual_intertwiner_probe.py`) is additive on the R-dagger
+north star after DCCLXXI/DCCLXXII and r404/r405 (the shared
+remainder: transport the Euler/Digamma Gram through the
+dual resolvent).  SATZ $R=C(I+C)^{-1}$; P1 reduced to
+$\lambda_2(C)\ge 1$; $\nu$-rank not one; Euler source Gram
+is not the $G$ that $R$ inverts.  It does not touch
+`experiments/next.txt` and does not touch `rh/lean/`
+(r376/r380/r384/r397/r406).  Suite surface of this round:
+integrity + probes (`run_rh.py --fast --skip-lean`) after
+appending the probe and problem-document rows to the
+inventory.  r374--r406 are parallel lemma-first / Lean
+lanes and are not dropped.
 
 **r401 coexistence.** Round 401 (`edge_signature.tex` +
 `edge_signature_probe.py`) is additive on the R-dagger
