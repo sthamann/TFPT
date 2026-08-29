@@ -2966,6 +2966,66 @@
       "bytes": 215471
     },
     {
+      "path": "rh/problem/campaign_audit.tex",
+      "role": "problem_statement",
+      "round": "r427 companion",
+      "ledger_ids": [],
+      "status": "adversarial campaign audit of R397-R426 (round 427): independent re-computation of seven load-bearing targets.  0 BUG / 2 SUSPECT / 5 CLEAN.  No round verdict flips.  NO RH claim",
+      "pin": true,
+      "sha256": "371d62946edac608b1d51c7ca65d148d99496aa71d27fa6e2850ab37d69d878e",
+      "bytes": 9772
+    },
+    {
+      "path": "rh/problem/verify_campaign_audit.py",
+      "role": "problem_check",
+      "round": "r427 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in campaign_audit.tex: standalone (FL dictionary, Hankel linear, Loewner PD, indefinite block over Q) plus construction pins (w9 intertwiner, QD 1.357, KKT ||T0||, floor vs k/N, live chi3-9).  9/9 gates, final line CAMPAIGN AUDIT NOTE VERIFIED",
+      "pin": true,
+      "sha256": "aac263ec8eeb72e2df66c05a4b38b197efe503b253c5167d4a8d36a58a0d7884",
+      "bytes": 4963
+    },
+    {
+      "path": "rh/problem/campaign_audit.pdf",
+      "role": "problem_statement",
+      "round": "r427 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of campaign_audit.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "bb38df36310e9624734d19ea9a30492b2d8cd8d1aca499f6956a84e0d190cb3b",
+      "bytes": 237029
+    },
+    {
+      "path": "rh/problem/qn_reopened.tex",
+      "role": "problem_statement",
+      "round": "r428 companion",
+      "ledger_ids": [],
+      "status": "lemma-first reopen of cofinal q_N<1 on the selected sequence a_k=2^k (round 428): selected margin 0.617 vs 42er 0.0195; razor-overlap VAC-only; |Z_loc| wins; Nyquist face REFUTED on VAC.  SELECTED_MARGIN_GO / OVERLAP_VAC_ONLY / ZLOC_WINS / COFINAL_OPEN.  NO RH claim",
+      "pin": true,
+      "sha256": "30a638edda9f181dc11046ba4ad1e135928af4734851934c7dd6ac1bdb606fb4",
+      "bytes": 10760
+    },
+    {
+      "path": "rh/problem/verify_qn_reopened.py",
+      "role": "problem_check",
+      "round": "r428 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in qn_reopened.tex: standalone (dictionary over Q, Z0_sel=1/2, orthogonality) plus construction pins (pp-map, w9 four coords, VAC overlap / Nyquist / dead-15 / kz=16).  6/6 gates, final line QN REOPENED VERIFIED",
+      "pin": true,
+      "sha256": "71bf9c9a6375503b42d46bbd1e07e29fc0995fd7c31dd6f9a0a904248b6c50d7",
+      "bytes": 3803
+    },
+    {
+      "path": "rh/problem/qn_reopened.pdf",
+      "role": "problem_statement",
+      "round": "r428 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of qn_reopened.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "08ece549e1d0245938a1ce5fa18b3763aae96d149ea334c08e2c78274a391ff7",
+      "bytes": 291503
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3140,8 +3200,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "f35ff5046bc0dbb28e4dfa8f0e5941fa60bd664e13386baf314129cffd1898e5",
-      "bytes": 5456617
+      "sha256": "4a40baa54b05e101825f6060dc8b30c18c23a6cf39182b9875828d05c42bcf5c",
+      "bytes": 5458712
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3672,6 +3732,26 @@
       "pin": true,
       "sha256": "f2ff77c46a76f2a63fe83f625787b1900c91dfed02e3b9393e0855715e66cbab",
       "bytes": 15384
+    },
+    {
+      "path": "experiments/tfpt-discovery/campaign_audit_probe.py",
+      "role": "sealed_probe",
+      "round": "r427",
+      "ledger_ids": [],
+      "status": "campaign audit R397-R426 (round 427, PRIME.RDAGGER.CAMPAIGN_AUDIT.01, reviewer DCCXCIV: adversarial re-verification of load-bearing campaign numbers; experiments-side, NO ledger row): 52/52 full / 44/44 smoke; SPEC_SHA b317327d451ab0c6; independent r367 A0+I/2 vs dense Chebyshev-Hankel C, full-carrier dual, KKT ||T0||, truncated PD Grams, AIC re-fit, four death coordinates, grep code-class hunt.  Two-run smoke byte-identical.  AUSGANG 0 BUG / 2 SUSPECT / 5 CLEAN.  CLEAN: intertwiner R=C(I+C)^{-1} on kz9/17/12 (w9 formula 3.38e-12, dictionary ind_-=#{lam C<1}); QD mass 1.357130 from one full-carrier dual (subset-P' would give 1.525); KKT ||T0||_w9=1.080138437324, kappa(C)=2.086e3 so kz42 pin 4.57e-8 is 56x eigvalsh noise, r409 1.00000 is display rounding; kernel Loewner on PD truncated Grams n=16 (indefinite Q-toy blocks the hypothesis); 6/6 dead qN>1 <=> |Z|_term>=sqrt(5/7) <=> sch>0, live chi3-9 does not fire.  SUSPECT: floor vs k M1 R_inf=+0.02983 but vs N winner M3 (k=8 N=5690 > k=9 N=1433; k=8 point is a builder pin); disclosed k=8 pin circularity r421->r425 and float64 eigvalsh razors.  No round verdict of R397-R426 changes.  Companion rh/problem/campaign_audit.tex + verify_campaign_audit.py 9/9 CAMPAIGN AUDIT NOTE VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "f8399f5d4b3d82955a856ac37c289519c764b3b1f29030bc6ebb11c403fb86c6",
+      "bytes": 47641
+    },
+    {
+      "path": "experiments/tfpt-discovery/qn_reopened_probe.py",
+      "role": "sealed_probe",
+      "round": "r428",
+      "ledger_ids": [],
+      "status": "q_N reopened on the selected sequence (round 428, PRIME.TERMINAL.QN_REOPENED.01, reviewer: terminal lane with the new coordinate arsenal; experiments-side, NO ledger row): 23/23 full / 19/19 smoke; SPEC_SHA fc2c617a6bd34c6c; four-coordinate census, COMPOSE envelopes, razor-overlap vs Nyquist, P1/VAC split, dead chi, scramble, false-anchor kz=16 first measured in /tmp (r428_cal.py, r428_cal2.py) then sealed (disclosed).  Builder fallback TAKEN for k=8 (r421 pin, N=5690).  Full wall 12.1 s (bar 120 s).  AUSGANG SELECTED_MARGIN_GO / OVERLAP_VAC_ONLY / ZLOC_WINS / COFINAL_OPEN.  Selected q_N in [0.00070, 0.3828], min-margin 0.617 vs 42er 0.0195 at kz=16.  COMPOSE R<=1.40 <<4, L1<=0.63<<3, |Z_loc|<=0.487<1/2.  REFUTED: razor-overlap as a global fourth death coordinate (P1 living share up to 3.6e-2 overlaps dead; VAC 4-order split survives; kz=16 near-dead has share 5.4e-9).  Nyquist face of C_min REFUTED on VAC (cos -0.007 vs P1 -0.386).  Winner |Z_loc|; sublemma |Z_loc|<=1/2 on MAIN selected (k=3 tight; scramble breaks it).  Companion rh/problem/qn_reopened.tex + verify_qn_reopened.py 6/6 QN REOPENED VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "34857f322f2ef8eeee6be4dc5cfb70c7feaf8c74eb8786247eb1b868bfdaa9ec",
+      "bytes": 20156
     }
   ]
 }

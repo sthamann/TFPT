@@ -1509,6 +1509,83 @@ _R425_STATUS = (
     "NO RH claim"
 )
 
+
+_R427_STATUS = (
+    "campaign audit R397-R426 (round 427, "
+    "PRIME.RDAGGER.CAMPAIGN_AUDIT.01, reviewer "
+    "DCCXCIV: adversarial re-verification of "
+    "load-bearing campaign numbers; "
+    "experiments-side, NO ledger row): 52/52 "
+    "full / 44/44 smoke; SPEC_SHA "
+    "b317327d451ab0c6; independent r367 "
+    "A0+I/2 vs dense Chebyshev-Hankel C, "
+    "full-carrier dual, KKT ||T0||, truncated "
+    "PD Grams, AIC re-fit, four death "
+    "coordinates, grep code-class hunt.  "
+    "Two-run smoke byte-identical.  AUSGANG "
+    "0 BUG / 2 SUSPECT / 5 CLEAN.  CLEAN: "
+    "intertwiner R=C(I+C)^{-1} on kz9/17/12 "
+    "(w9 formula 3.38e-12, dictionary "
+    "ind_-=#{lam C<1}); QD mass 1.357130 "
+    "from one full-carrier dual (subset-P' "
+    "would give 1.525); KKT ||T0||_w9="
+    "1.080138437324, kappa(C)=2.086e3 so "
+    "kz42 pin 4.57e-8 is 56x eigvalsh noise, "
+    "r409 1.00000 is display rounding; "
+    "kernel Loewner on PD truncated Grams "
+    "n=16 (indefinite Q-toy blocks the "
+    "hypothesis); 6/6 dead qN>1 <=> "
+    "|Z|_term>=sqrt(5/7) <=> sch>0, live "
+    "chi3-9 does not fire.  SUSPECT: floor "
+    "vs k M1 R_inf=+0.02983 but vs N winner "
+    "M3 (k=8 N=5690 > k=9 N=1433; k=8 point "
+    "is a builder pin); disclosed k=8 pin "
+    "circularity r421->r425 and float64 "
+    "eigvalsh razors.  No round verdict of "
+    "R397-R426 changes.  Companion "
+    "rh/problem/campaign_audit.tex + "
+    "verify_campaign_audit.py 9/9 CAMPAIGN "
+    "AUDIT NOTE VERIFIED.  NO L* claim, NO "
+    "R-dagger claim, NO RH claim"
+)
+
+
+_R428_STATUS = (
+    "q_N reopened on the selected sequence "
+    "(round 428, PRIME.TERMINAL.QN_REOPENED.01, "
+    "reviewer: terminal lane with the new "
+    "coordinate arsenal; experiments-side, NO "
+    "ledger row): 23/23 full / 19/19 smoke; "
+    "SPEC_SHA fc2c617a6bd34c6c; four-coordinate "
+    "census, COMPOSE envelopes, razor-overlap "
+    "vs Nyquist, P1/VAC split, dead chi, "
+    "scramble, false-anchor kz=16 first "
+    "measured in /tmp (r428_cal.py, "
+    "r428_cal2.py) then sealed (disclosed).  "
+    "Builder fallback TAKEN for k=8 (r421 pin, "
+    "N=5690).  Full wall 12.1 s (bar 120 s).  "
+    "AUSGANG SELECTED_MARGIN_GO / "
+    "OVERLAP_VAC_ONLY / ZLOC_WINS / "
+    "COFINAL_OPEN.  Selected q_N in "
+    "[0.00070, 0.3828], min-margin 0.617 vs "
+    "42er 0.0195 at kz=16.  COMPOSE R<=1.40 "
+    "<<4, L1<=0.63<<3, |Z_loc|<=0.487<1/2.  "
+    "REFUTED: razor-overlap as a global fourth "
+    "death coordinate (P1 living share up to "
+    "3.6e-2 overlaps dead; VAC 4-order split "
+    "survives; kz=16 near-dead has share "
+    "5.4e-9).  Nyquist face of C_min REFUTED "
+    "on VAC (cos -0.007 vs P1 -0.386).  "
+    "Winner |Z_loc|; sublemma |Z_loc|<=1/2 on "
+    "MAIN selected (k=3 tight; scramble "
+    "breaks it).  Companion "
+    "rh/problem/qn_reopened.tex + "
+    "verify_qn_reopened.py 6/6 QN REOPENED "
+    "VERIFIED.  NO L* claim, NO R-dagger "
+    "claim, NO RH claim"
+)
+
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -4333,6 +4410,57 @@ ENTRIES = [
      [],
      "compiled PDF of cross_chain_gamma.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/campaign_audit.tex", "problem_statement",
+     "r427 companion",
+     [],
+     "adversarial campaign audit of R397-R426 "
+     "(round 427): independent re-computation "
+     "of seven load-bearing targets.  0 BUG / "
+     "2 SUSPECT / 5 CLEAN.  No round verdict "
+     "flips.  NO RH claim",
+     True),
+    ("rh/problem/verify_campaign_audit.py", "problem_check",
+     "r427 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "campaign_audit.tex: standalone (FL "
+     "dictionary, Hankel linear, Loewner PD, "
+     "indefinite block over Q) plus "
+     "construction pins (w9 intertwiner, QD "
+     "1.357, KKT ||T0||, floor vs k/N, live "
+     "chi3-9).  9/9 gates, final line CAMPAIGN "
+     "AUDIT NOTE VERIFIED", True),
+    ("rh/problem/campaign_audit.pdf", "problem_statement",
+     "r427 companion",
+     [],
+     "compiled PDF of campaign_audit.tex "
+     "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/qn_reopened.tex", "problem_statement",
+     "r428 companion",
+     [],
+     "lemma-first reopen of cofinal q_N<1 on the "
+     "selected sequence a_k=2^k (round 428): "
+     "selected margin 0.617 vs 42er 0.0195; "
+     "razor-overlap VAC-only; |Z_loc| wins; "
+     "Nyquist face REFUTED on VAC.  "
+     "SELECTED_MARGIN_GO / OVERLAP_VAC_ONLY / "
+     "ZLOC_WINS / COFINAL_OPEN.  NO RH claim",
+     True),
+    ("rh/problem/verify_qn_reopened.py", "problem_check",
+     "r428 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "qn_reopened.tex: standalone (dictionary "
+     "over Q, Z0_sel=1/2, orthogonality) plus "
+     "construction pins (pp-map, w9 four "
+     "coords, VAC overlap / Nyquist / dead-15 "
+     "/ kz=16).  6/6 gates, final line QN "
+     "REOPENED VERIFIED", True),
+    ("rh/problem/qn_reopened.pdf", "problem_statement",
+     "r428 companion",
+     [],
+     "compiled PDF of qn_reopened.tex "
+     "(recompiled artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -4663,6 +4791,16 @@ ENTRIES = [
      "r425",
      [],
      _R425_STATUS,
+     True),
+    (f"{EXP}/campaign_audit_probe.py", "sealed_probe",
+     "r427",
+     [],
+     _R427_STATUS,
+     True),
+    (f"{EXP}/qn_reopened_probe.py", "sealed_probe",
+     "r428",
+     [],
+     _R428_STATUS,
      True),
 ]
 

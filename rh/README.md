@@ -6040,6 +6040,68 @@ $\Sigma_\infty$ with $\Sigma_\infty<2-\mathrm{den}_\infty$.
 NO ledger row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
 (base 4 / refined 5).
 
+
+**Campaign audit (r427,
+PRIME.RDAGGER.CAMPAIGN\_AUDIT.01).**  Adversarial
+re-verification of R397--R426 on independent
+code paths.  Sealed probe
+`experiments/tfpt-discovery/campaign_audit_probe.py`
+(52/52 full, 44/44 smoke, SPEC\_SHA `b317327d451ab0c6`)
+plus `rh/problem/campaign_audit.tex` (+ PDF +
+`verify_campaign_audit.py`, 9/9, `CAMPAIGN AUDIT NOTE VERIFIED`).
+**Ausgang 0 BUG / 2 SUSPECT / 5 CLEAN.**
+CLEAN: intertwiner $R=C(I+C)^{-1}$ on $k_z=9,17,12$
+(w9 formula $3.38\cdot10^{-12}$);
+QD mass $1.357130$ from one full-carrier dual;
+$\|\mathfrak{T}_0\|_{\mathrm{w9}}=1.080138437324$
+($\kappa(C)=2.086\cdot10^3$, r409 $1.00000$ is
+display rounding of a $2\cdot10^{-8}$ dip);
+kernel Loewner on PD truncated Grams;
+$6/6$ dead $q_N>1\Leftrightarrow\mathrm{sch}>0$.
+SUSPECT: floor $R_\infty\approx0.030$ vs $k$ conceals
+the $N=5690$ vs $1433$ inversion (vs $N$ the winner
+is M3); disclosed $k=8$ pin reuse r421$\to$r425;
+float64 \texttt{eigvalsh} razors at $56\times$ noise.
+No round verdict of R397--R426 changes.
+Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).
+Coexistence: r374--r426 are parallel lemma-first / Lean
+lanes; this round is additive.
+
+
+**$q_N$ reopened (r428,
+PRIME.TERMINAL.QN\_REOPENED.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/qn_reopened_probe.py`
+(23/23 full, 19/19 smoke, SPEC\_SHA `fc2c617a6bd34c6c`) plus
+`rh/problem/qn_reopened.tex` (+ PDF +
+`verify_qn_reopened.py`, 6/6, `QN REOPENED VERIFIED`).
+**Ausgang SELECTED\_MARGIN\_GO / OVERLAP\_VAC\_ONLY / ZLOC\_WINS / COFINAL\_OPEN.**
+On the selected sequence $a_k=2^k$ ($k=3,4,5,6,7,9$;
+$k=8$ builder-pinned) $q_N$ stays in $[0.00070,0.3828]$
+with minimum margin $0.617$ against the $42$-rung
+minimum $0.0195$ at $\mathrm{kz}=16$.
+COMPOSE envelopes are comfortable
+($R\le 1.40\ll 4$, $L_1\le 0.63\ll 3$,
+$\lvert Z_{\mathrm{loc}}\rvert\le 0.487<\tfrac12$).
+Razor-overlap is **not** a global fourth death
+coordinate (P1 living share up to $3.6\cdot 10^{-2}$
+overlaps dead $\chi$; the r422 four-order split is
+vacuous-only; $\mathrm{kz}=16$ near-death has share
+$5.4\cdot 10^{-9}$).
+The $C_{\min}$ Nyquist face is REFUTED on VAC
+($\cos=-0.007$ vs P1 $-0.386$).
+Winner coordinate $\lvert Z_{\mathrm{loc}}\rvert$;
+sharpest sublemma $\lvert Z_{\mathrm{loc}}(W_k)\rvert\le\tfrac12$
+on MAIN selected ($k=3$ tight; scramble breaks it).
+Cofinal $q_N<1$ remains open.
+Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).
+Coexistence: r374--r427 are parallel lemma-first / Lean
+lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -6464,6 +6526,12 @@ rh/
 │   └── verify_cross_chain.py — machine check of
 │                         cross_chain_gamma.tex (6/6,
 │                         CROSS CHAIN VERIFIED)
+│   └── verify_campaign_audit.py — machine check of
+│                         campaign_audit.tex (9/9,
+│                         CAMPAIGN AUDIT NOTE VERIFIED)
+│   └── verify_qn_reopened.py — machine check of
+│                         qn_reopened.tex (6/6,
+│                         QN REOPENED VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6820,7 +6888,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r425 from
+2. **Sealed probes** — the campaign probes r250–r428 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
