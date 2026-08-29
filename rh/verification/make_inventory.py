@@ -734,6 +734,75 @@ _R398_STATUS = (
     "NO L* claim, NO R-dagger claim, NO RH claim"
 )
 
+_R399_STATUS = (
+    "Source-pure Weyl energy of the centered mass difference "
+    "(round 399, PRIME.SOURCE.WEYL_ENERGY.THEOREM.01, reviewer "
+    "5.2/5.3 after DCCLXII and the r398 KILL_FAIL; "
+    "experiments-side, NO ledger row): 29/29 full / 22/22 smoke; "
+    "SPEC_SHA c5a74fda2d455a52; identities, w9/kz18/kz52 "
+    "Dirichlet, CD energies, selected a_k=2^k, core-42 slopes, "
+    "assist correlation, scramble / two-period / chi, MVT ratios "
+    "first measured in /tmp (r399_cal.py, r399_cal2.py) then "
+    "sealed (disclosed calibration).  Builder fallback NOT taken: "
+    "full census wall 1.5 s (bar 120 s).  AUSGANG REFUTED (decay "
+    "E^bulk -> 0 at the CD-transfer norm).  SATZ: tent interpolant "
+    "dP[j] = -Sum Lambda(n) n^{-1/2} K_j(log n) (w9 maxdev "
+    "2.5e-13, kz18 2.0e-13, kz52 3.9e-12); Fejer Laplacian "
+    "IFFT(Fejer odot dP) = Delta cP_ext / L (Q-exact 6-cycle, "
+    "w9 8.7e-19); C_0=C_1=0; cap outside CD band so E^bulk = E; "
+    "transfer omega from r389 Chebyshev-CD at depth N_w-3.  "
+    "REFUTED as decay: core-42 E in [1.178, 5.983] slope "
+    "dlogE/dlog N_w = +0.542; mean C^2/qm in [0.427, 0.848] "
+    "(quadratic-mean); selected a_k=2^k k=3..9 E = 0.033..0.869 "
+    "not monotone to 0.  Honesty gate: Montgomery-Vaughan MVT "
+    "crude/E = 3139 (w9) .. 4.2e5 (N_w=878); the needed "
+    "sub-QM exponent is RH-near, hence circular as a route to "
+    "R^dagger > 1/2 I, and is contradicted by the census.  "
+    "Bridge corr(E/N_w, assist)=0.18 (named norm, not a closing "
+    "majorant).  KILL: scramble E=3.39 > 1.2 x MAIN (centered d "
+    "SEES log-n cancellation; r389 nu-QM did not); two-period "
+    "HHI=0.629 comb at m=S; mutant omega=1 is a scale; drop-edge "
+    "vacuous (already zero); dead chi3-15 E=1.69 and living "
+    "chi3-9 E=1.47 both O(1).  Prime-power lag ratio 0.23, "
+    "series absolutely convergent.  Companion "
+    "rh/problem/source_weyl_energy.tex + verify_source_weyl.py "
+    "11/11 SOURCE WEYL VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
+
+_R401_STATUS = (
+    "Augmented 3x3 edge signature (round 401, "
+    "PRIME.LDAGGER.EDGE_SIGNATURE.01, reviewer 5.5 after DCCLXII, "
+    "parallel to r399; experiments-side, NO ledger row): 33/33 full / "
+    "23/23 smoke; SPEC_SHA 395673f2b0b1cee5; mixed 3x3, shift, sch "
+    "sign, (a,b), r375 pair, isotropic E, scramble nf, two-period "
+    "nnegA0, Twin, chi live/dead first measured in /tmp (r401_cal.py, "
+    "r401_cal2.py, r401_cal3.py) then sealed (disclosed calibration).  "
+    "Builder fallback NOT taken: full wall 41.7 s (bar 120 s) on "
+    "core-42 + chi3/4-42 + EXT-6 (kz69 N=5690 mixed-invert dropped, "
+    "disclosed; compactness already at N=3022).  AUSGANG "
+    "EDGE_SIGNATURE_MODEL.  SATZ: mixed form (Fractions den=23/30); "
+    "Haynsworth additivity; reconstruction D^T Phi D = Phi_edge(a,b) "
+    "identically (||E||=2.22e-15 at w9, max 4.4e-14 on P1); model "
+    "lemma ind_-(Phi_edge)=2 on the P1 chart and =1 on the vacuous "
+    "chart (Haynsworth on the explicit 3x3; det=+/-1); 64-pt disk "
+    "R=3.2 nneg=2 gmin=0.082.  CENSUS: shift ind_-(Phi)=1+ind_-(A0) "
+    "42/42 MAIN (28 P1 Phi=2, 14 vac Phi=1), living chi3 37/37, "
+    "living chi4 41/41, EXT-6, Twin |d tau|~1e-7; J>0 den in "
+    "[1.46, 1.63]; tau=(a,b) |tau| max 3.144 on P1, EXT smaller "
+    "(0.075 at N=1119); r375 (xi,eta) compact trend-free but "
+    "Spearman(|tau|, xi)=0.12 -- not the 3x3 moduli; isotropic "
+    "reconstruction ||E||/g=80.7 at w9 (candidate i KILL as model); "
+    "QMAX Spearman 0.26 (candidate ii KILL).  TWO-SIDED: dead chi3 "
+    "5/5 sch>0 shift FAILS; dead chi4-20 Phi=0 sch=+0.023.  KILL: "
+    "scramble nnegA0=21 border nf=37; two-period nnegA0=4; drop-border "
+    "shift by 0; wrong-sign J residual 867/115.  Cofinal K NOT proved.  "
+    "Companion rh/problem/edge_signature.tex + "
+    "verify_edge_signature.py 13/13 EDGE SIGNATURE VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -2966,6 +3035,56 @@ ENTRIES = [
      [],
      "compiled PDF of high_moment_inertia.tex (recompiled "
      "artefact, registered unpinned)", False),
+    ("rh/problem/source_weyl_energy.tex", "problem_statement",
+     "r399 companion",
+     [],
+     "lemma-first attack on the source-pure Weyl energy of the "
+     "centered mass difference after DCCLXII 5.2/5.3 (round 399): "
+     "Dirichlet interpolant SATZ; Fejer Laplacian SATZ; CD-transfer "
+     "norm named.  REFUTED: E^bulk -> 0; sits at quadratic-mean and "
+     "grows.  Honesty gate: unconditional MVT fails, a closing bound "
+     "would be RH-near (circular).  Finite identities plus a named "
+     "refutation; NO RH claim",
+     True),
+    ("rh/problem/verify_source_weyl.py", "problem_check",
+     "r399 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "source_weyl_energy.tex: standalone (Fractions stencil, "
+     "Laplacian convolution, energy-path firewall) plus construction "
+     "pins (w9 representation/Laplacian/C0=C1=0/E-pin, kz18/kz52 "
+     "Dirichlet, scramble, two-period, dead/living chi, selected "
+     "k=4<k=6, MVT ratio).  11/11 gates, final line SOURCE WEYL "
+     "VERIFIED", True),
+    ("rh/problem/source_weyl_energy.pdf", "problem_statement",
+     "r399 companion",
+     [],
+     "compiled PDF of source_weyl_energy.tex (recompiled "
+     "artefact, registered unpinned)", False),
+    ("rh/problem/edge_signature.tex", "problem_statement",
+     "r401 companion",
+     [],
+     "lemma-first 3x3 edge signature after DCCLXII 5.5 (round 401): "
+     "reconstruction SATZ; model lemma SATZ on both charts.  "
+     "CENSUS: living worlds land in compact K with g*>0; dead chi "
+     "leave by sch>0.  Cofinal K not proved.  Finite identities plus "
+     "a named census; NO RH claim",
+     True),
+    ("rh/problem/verify_edge_signature.py", "problem_check",
+     "r401 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "edge_signature.tex: standalone (Fractions mixed form, "
+     "mixed Haynsworth, both charts at the origin, det=1, "
+     "drop-border, 64-pt disk) plus construction pins (w9 shift "
+     "and reconstruction, dead chi3-15, scramble nneg=21, "
+     "two-period, living chi3-9).  13/13 gates, "
+     "final line EDGE SIGNATURE VERIFIED", True),
+    ("rh/problem/edge_signature.pdf", "problem_statement",
+     "r401 companion",
+     [],
+     "compiled PDF of edge_signature.tex (recompiled "
+     "artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -3181,6 +3300,16 @@ ENTRIES = [
      "r398",
      [],
      _R398_STATUS,
+     True),
+    (f"{EXP}/source_weyl_energy_probe.py", "sealed_probe",
+     "r399",
+     [],
+     _R399_STATUS,
+     True),
+    (f"{EXP}/edge_signature_probe.py", "sealed_probe",
+     "r401",
+     [],
+     _R401_STATUS,
      True),
 ]
 

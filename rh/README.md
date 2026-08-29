@@ -5384,6 +5384,58 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r396 are parallel lemma-first / Lean lanes; this round is additive.
 
+**Source Weyl energy, refuted as a decay (r399,
+PRIME.SOURCE.WEYL_ENERGY.THEOREM.01, reviewer 5.2/5.3).**  Sealed
+census probe
+`experiments/tfpt-discovery/source_weyl_energy_probe.py` (29/29
+full, 22/22 smoke, SPEC_SHA `c5a74fda2d455a52`) plus
+`rh/problem/source_weyl_energy.tex` (+ PDF +
+`verify_source_weyl.py`, 11/11, `SOURCE WEYL VERIFIED`).
+**Ausgang REFUTED** (decay $E^{\mathrm{bulk}}\to 0$ at the
+CD-transfer norm).  SATZ: tent interpolant
+$d^P_j=-\sum\Lambda(n)n^{-1/2}K_j(\log n)$ (machine
+precision on $w=9$, $kz=18$, $kz=52$); Fej\'er Laplacian
+$\mathrm{IFFT}(\mathrm{Fej}\odot d^P)=\Delta c^P_{\mathrm{ext}}/L$;
+$C_0=C_1=0$; cap outside the CD band so $E^{\mathrm{bulk}}=E$;
+transfer $\omega$ from r389 Chebyshev-CD at depth $N_w-3$.
+Core-$42$ $E\in[1.178,5.983]$, slope $+0.542$ (grows);
+$\mathrm{mean}\,C_m^2/\mathrm{qm}\in[0.427,0.848]$
+(quadratic-mean).  Selected $a_k=2^k$, $k=3{\ldots}9$:
+$E=0.033{\ldots}0.869$, not monotone to $0$.
+Honesty gate: Montgomery--Vaughan MVT is $3\cdot 10^3$--$4\cdot 10^5$
+short; a sub-QM bound would be RH-near (circular as a route to
+$R^\dagger\succ\tfrac12 I$) and is contradicted by the census.
+Scramble $E=3.39>1.2\times$ MAIN (centered $d$ sees $\log n$
+cancellation); two-period HHI $0.629$; dead $\chi$ also $O(1)$.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r398 are parallel lemma-first / Lean lanes; this round is additive.
+
+
+**Augmented edge signature (r401,
+PRIME.LDAGGER.EDGE_SIGNATURE.01, reviewer 5.5).**  Sealed
+census probe
+`experiments/tfpt-discovery/edge_signature_probe.py` (33/33
+full, 23/23 smoke, SPEC_SHA `395673f2b0b1cee5`) plus
+`rh/problem/edge_signature.tex` (+ PDF +
+`verify_edge_signature.py`, 13/13, `EDGE SIGNATURE VERIFIED`).
+**Ausgang EDGE_SIGNATURE_MODEL.**  SATZ: mixed form; Haynsworth
+balance; reconstruction $D^{T}\Phi D=\Phi_{\mathrm{edge}}(a,b)$
+identically ($\|E\|=2.22\cdot 10^{-15}$ at FRAME-A); model
+lemma $\mathrm{ind}_{-}(\Phi_{\mathrm{edge}})=1+\mathrm{ind}_{-}(A_{\mathrm{edge}})$
+on both charts ($\det=\pm 1$).
+Census: shift on core-$42$ (28 P1 / 14 vacuous), living
+$\chi_{3}$ $37/37$, living $\chi_{4}$ $41/41$; $\tau=(a,b)$
+in a disk of radius $3.2$ with $g^{*}\ge 0.08$, stable in $N$;
+r375 pair compact but not the $3\times 3$ moduli (isotropic
+$\|E\|/g=80.7$).
+Dead $\chi$ violate the shift at $\mathrm{sch}>0$ (two-sided).
+Scramble $\mathrm{ind}_{-}=21$; two-period $4$.
+Cofinal $K$ is not proved.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r399 are parallel lemma-first / Lean lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -5593,6 +5645,14 @@ rh/
 │   ├── high_moment_inertia.tex(+pdf) — r398: high-moment
 │   │                     kill-test of P1; KILL_FAIL
 │   │                     (cluster at 1/2).  No RH claim
+│   ├── source_weyl_energy.tex(+pdf) — r399: source-pure
+│   │                     Weyl energy; representation SATZ;
+│   │                     decay REFUTED (QM, grows);
+│   │                     bound circular if forced.  No RH claim
+│   ├── edge_signature.tex(+pdf) — r401: augmented 3x3
+│   │                     edge signature; reconstruction SATZ;
+│   │                     model lemma SATZ; compact K census;
+│   │                     dead chi sch>0.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5659,9 +5719,15 @@ rh/
 │   ├── verify_isolation_lemma.py — machine check of
 │                         isolation_lemma.tex (10/10,
 │                         ISOLATION LEMMA VERIFIED)
-│   └── verify_high_moment.py — machine check of
+│   ├── verify_high_moment.py — machine check of
 │                         high_moment_inertia.tex (12/12,
 │                         HIGH MOMENT VERIFIED)
+│   ├── verify_source_weyl.py — machine check of
+│                         source_weyl_energy.tex (11/11,
+│                         SOURCE WEYL VERIFIED)
+│   └── verify_edge_signature.py — machine check of
+│                         edge_signature.tex (13/13,
+│                         EDGE SIGNATURE VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6018,7 +6084,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r398 from
+2. **Sealed probes** — the campaign probes r250–r401 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6586,6 +6652,31 @@ It does not touch `experiments/next.txt` and does not touch
 surface of this round: integrity + probes
 (`run_rh.py --fast --skip-lean`) after appending the probe and
 problem-document rows to the inventory.  r374--r397 are
+parallel lemma-first / Lean lanes and are not dropped.
+**r399 coexistence.** Round 399 (`source_weyl_energy.tex` +
+`source_weyl_energy_probe.py`) is additive on the R-dagger
+north star after DCCLXII 5.2/5.3 (source-pure Weyl energy of
+the centered mass difference: Dirichlet representation SATZ;
+Fejer Laplacian SATZ; CD-transfer norm named; decay
+$E^{\mathrm{bulk}}\to 0$ REFUTED at quadratic-mean; honesty
+gate ZIRKULAER for any RH-near large-sieve closing).
+It does not touch `experiments/next.txt` and does not touch
+`rh/lean/` (r376/r380/r384/r397).  Suite
+surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the probe and
+problem-document rows to the inventory.  r374--r398 are
+parallel lemma-first / Lean lanes and are not dropped.
+
+**r401 coexistence.** Round 401 (`edge_signature.tex` +
+`edge_signature_probe.py`) is additive on the R-dagger
+north star after DCCLXII 5.5 (augmented 3x3 edge signature:
+reconstruction SATZ; model lemma SATZ; living census in a
+compact $K$ with $g^{*}>0$; dead $\chi$ leave by $\mathrm{sch}>0$).
+It does not touch `experiments/next.txt` and does not touch
+`rh/lean/` (r376/r380/r384/r397).  Suite
+surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the probe and
+problem-document rows to the inventory.  r374--r399 are
 parallel lemma-first / Lean lanes and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface

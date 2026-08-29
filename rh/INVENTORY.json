@@ -2256,6 +2256,66 @@
       "bytes": 236832
     },
     {
+      "path": "rh/problem/source_weyl_energy.tex",
+      "role": "problem_statement",
+      "round": "r399 companion",
+      "ledger_ids": [],
+      "status": "lemma-first attack on the source-pure Weyl energy of the centered mass difference after DCCLXII 5.2/5.3 (round 399): Dirichlet interpolant SATZ; Fejer Laplacian SATZ; CD-transfer norm named.  REFUTED: E^bulk -> 0; sits at quadratic-mean and grows.  Honesty gate: unconditional MVT fails, a closing bound would be RH-near (circular).  Finite identities plus a named refutation; NO RH claim",
+      "pin": true,
+      "sha256": "bff3fcf9988545a3e86711a26f809abd42e76be5f85e2a2d0157020431329639",
+      "bytes": 15728
+    },
+    {
+      "path": "rh/problem/verify_source_weyl.py",
+      "role": "problem_check",
+      "round": "r399 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in source_weyl_energy.tex: standalone (Fractions stencil, Laplacian convolution, energy-path firewall) plus construction pins (w9 representation/Laplacian/C0=C1=0/E-pin, kz18/kz52 Dirichlet, scramble, two-period, dead/living chi, selected k=4<k=6, MVT ratio).  11/11 gates, final line SOURCE WEYL VERIFIED",
+      "pin": true,
+      "sha256": "7f2b7dfcec9c9f61ba0cc5e427ed6d83033e43641f76d5972c4600ae760c66d0",
+      "bytes": 4576
+    },
+    {
+      "path": "rh/problem/source_weyl_energy.pdf",
+      "role": "problem_statement",
+      "round": "r399 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of source_weyl_energy.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "96b1b7fd5683004bd38bd98adc9de4e66429b9c6143ebc7e13a5b304999f6500",
+      "bytes": 267453
+    },
+    {
+      "path": "rh/problem/edge_signature.tex",
+      "role": "problem_statement",
+      "round": "r401 companion",
+      "ledger_ids": [],
+      "status": "lemma-first 3x3 edge signature after DCCLXII 5.5 (round 401): reconstruction SATZ; model lemma SATZ on both charts.  CENSUS: living worlds land in compact K with g*>0; dead chi leave by sch>0.  Cofinal K not proved.  Finite identities plus a named census; NO RH claim",
+      "pin": true,
+      "sha256": "10c1577010cbac866c777c0d443ad60f63110d81806932667347de74ca0881bd",
+      "bytes": 9359
+    },
+    {
+      "path": "rh/problem/verify_edge_signature.py",
+      "role": "problem_check",
+      "round": "r401 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in edge_signature.tex: standalone (Fractions mixed form, mixed Haynsworth, both charts at the origin, det=1, drop-border, 64-pt disk) plus construction pins (w9 shift and reconstruction, dead chi3-15, scramble nneg=21, two-period, living chi3-9).  13/13 gates, final line EDGE SIGNATURE VERIFIED",
+      "pin": true,
+      "sha256": "1be946f589c6f2969d59a95218f4dc4e8e2117dc1cd500fb690fad065015dbcd",
+      "bytes": 5957
+    },
+    {
+      "path": "rh/problem/edge_signature.pdf",
+      "role": "problem_statement",
+      "round": "r401 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of edge_signature.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "a9a76de24302c3575d1dcdb37eb1f15ae85a355468ee91dd89295f60aef64d25",
+      "bytes": 219740
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2430,8 +2490,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "0a827e846fa8254821678107de3ce8d4615a5da1d7da41fd020cb2c20cdee5a7",
-      "bytes": 5381908
+      "sha256": "c0edd296e3394c66a5b2bc6a4422ea82b28c45b8d4ddcbd23968cab383d00892",
+      "bytes": 5384032
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -2732,6 +2792,26 @@
       "pin": true,
       "sha256": "85abe6b2d9cc986bf6c74493d226f48778020540947194c6ea1240997886ac24",
       "bytes": 24712
+    },
+    {
+      "path": "experiments/tfpt-discovery/source_weyl_energy_probe.py",
+      "role": "sealed_probe",
+      "round": "r399",
+      "ledger_ids": [],
+      "status": "Source-pure Weyl energy of the centered mass difference (round 399, PRIME.SOURCE.WEYL_ENERGY.THEOREM.01, reviewer 5.2/5.3 after DCCLXII and the r398 KILL_FAIL; experiments-side, NO ledger row): 29/29 full / 22/22 smoke; SPEC_SHA c5a74fda2d455a52; identities, w9/kz18/kz52 Dirichlet, CD energies, selected a_k=2^k, core-42 slopes, assist correlation, scramble / two-period / chi, MVT ratios first measured in /tmp (r399_cal.py, r399_cal2.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full census wall 1.5 s (bar 120 s).  AUSGANG REFUTED (decay E^bulk -> 0 at the CD-transfer norm).  SATZ: tent interpolant dP[j] = -Sum Lambda(n) n^{-1/2} K_j(log n) (w9 maxdev 2.5e-13, kz18 2.0e-13, kz52 3.9e-12); Fejer Laplacian IFFT(Fejer odot dP) = Delta cP_ext / L (Q-exact 6-cycle, w9 8.7e-19); C_0=C_1=0; cap outside CD band so E^bulk = E; transfer omega from r389 Chebyshev-CD at depth N_w-3.  REFUTED as decay: core-42 E in [1.178, 5.983] slope dlogE/dlog N_w = +0.542; mean C^2/qm in [0.427, 0.848] (quadratic-mean); selected a_k=2^k k=3..9 E = 0.033..0.869 not monotone to 0.  Honesty gate: Montgomery-Vaughan MVT crude/E = 3139 (w9) .. 4.2e5 (N_w=878); the needed sub-QM exponent is RH-near, hence circular as a route to R^dagger > 1/2 I, and is contradicted by the census.  Bridge corr(E/N_w, assist)=0.18 (named norm, not a closing majorant).  KILL: scramble E=3.39 > 1.2 x MAIN (centered d SEES log-n cancellation; r389 nu-QM did not); two-period HHI=0.629 comb at m=S; mutant omega=1 is a scale; drop-edge vacuous (already zero); dead chi3-15 E=1.69 and living chi3-9 E=1.47 both O(1).  Prime-power lag ratio 0.23, series absolutely convergent.  Companion rh/problem/source_weyl_energy.tex + verify_source_weyl.py 11/11 SOURCE WEYL VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "ff6ac32a5a76aff274ec706b9707a24519026548ac758ea60e020460fd5aa75f",
+      "bytes": 27374
+    },
+    {
+      "path": "experiments/tfpt-discovery/edge_signature_probe.py",
+      "role": "sealed_probe",
+      "round": "r401",
+      "ledger_ids": [],
+      "status": "Augmented 3x3 edge signature (round 401, PRIME.LDAGGER.EDGE_SIGNATURE.01, reviewer 5.5 after DCCLXII, parallel to r399; experiments-side, NO ledger row): 33/33 full / 23/23 smoke; SPEC_SHA 395673f2b0b1cee5; mixed 3x3, shift, sch sign, (a,b), r375 pair, isotropic E, scramble nf, two-period nnegA0, Twin, chi live/dead first measured in /tmp (r401_cal.py, r401_cal2.py, r401_cal3.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 41.7 s (bar 120 s) on core-42 + chi3/4-42 + EXT-6 (kz69 N=5690 mixed-invert dropped, disclosed; compactness already at N=3022).  AUSGANG EDGE_SIGNATURE_MODEL.  SATZ: mixed form (Fractions den=23/30); Haynsworth additivity; reconstruction D^T Phi D = Phi_edge(a,b) identically (||E||=2.22e-15 at w9, max 4.4e-14 on P1); model lemma ind_-(Phi_edge)=2 on the P1 chart and =1 on the vacuous chart (Haynsworth on the explicit 3x3; det=+/-1); 64-pt disk R=3.2 nneg=2 gmin=0.082.  CENSUS: shift ind_-(Phi)=1+ind_-(A0) 42/42 MAIN (28 P1 Phi=2, 14 vac Phi=1), living chi3 37/37, living chi4 41/41, EXT-6, Twin |d tau|~1e-7; J>0 den in [1.46, 1.63]; tau=(a,b) |tau| max 3.144 on P1, EXT smaller (0.075 at N=1119); r375 (xi,eta) compact trend-free but Spearman(|tau|, xi)=0.12 -- not the 3x3 moduli; isotropic reconstruction ||E||/g=80.7 at w9 (candidate i KILL as model); QMAX Spearman 0.26 (candidate ii KILL).  TWO-SIDED: dead chi3 5/5 sch>0 shift FAILS; dead chi4-20 Phi=0 sch=+0.023.  KILL: scramble nnegA0=21 border nf=37; two-period nnegA0=4; drop-border shift by 0; wrong-sign J residual 867/115.  Cofinal K NOT proved.  Companion rh/problem/edge_signature.tex + verify_edge_signature.py 13/13 EDGE SIGNATURE VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "fdd84155a16828dfee8348e4934f8fc65d81532fc122edc3854445f278d293c3",
+      "bytes": 31351
     }
   ]
 }
