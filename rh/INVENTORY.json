@@ -2746,6 +2746,36 @@
       "bytes": 208432
     },
     {
+      "path": "rh/problem/vacuous_overflow.tex",
+      "role": "problem_statement",
+      "round": "r419 companion",
+      "ledger_ids": [],
+      "status": "lemma-first vacuous overflow after DCCLXXXV (round 419): H3 REFUTED, razor-pole REFUTED, the six live by tau at finite N; cofinal VAC sch<0 OPEN.  H3_REFUTED / RAZOR_POLE_REFUTED / TAU_SAVE_FINITE / COFINAL_OPEN.  Finite identities plus named refutations; NO RH claim",
+      "pin": true,
+      "sha256": "36683eacdf4ee689a50ddef8befe81ed73930cb75b079cae9a15ec8c77b89d43",
+      "bytes": 6859
+    },
+    {
+      "path": "rh/problem/verify_vacuous_overflow.py",
+      "role": "problem_check",
+      "round": "r419 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in vacuous_overflow.tex: standalone (VAC chart, drop-tau, drop-border) plus construction pins (kz12 overflow, kz26+razor, dead VAC, scramble/two-period, CORE + EXT).  8/8 gates, final line VACUOUS OVERFLOW VERIFIED",
+      "pin": true,
+      "sha256": "00de3375949905d0ee67052ee5f85a4de08483bb70fa80f2d0d290491791ae64",
+      "bytes": 5547
+    },
+    {
+      "path": "rh/problem/vacuous_overflow.pdf",
+      "role": "problem_statement",
+      "round": "r419 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of vacuous_overflow.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "60526653a9766c514c1ad0ab1e165c658e9a55cfb887289b8bad39670d2f6e45",
+      "bytes": 215095
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2920,8 +2950,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "452aaacef6eab2e6cbc5c6d7d020cb996f7366bd0ff42d7c46af0ffb9ebde899",
-      "bytes": 5439780
+      "sha256": "a3f1d9ce8dcbc88c93f8d03f2a91afa903bb18bd4e6726a02ea10649b0af86e9",
+      "bytes": 5441659
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3382,6 +3412,16 @@
       "pin": true,
       "sha256": "62c31f99ea13a559e9094b06d13a2400f8f62e7e8a1947ca5886d3e8dac7ae9f",
       "bytes": 25447
+    },
+    {
+      "path": "experiments/tfpt-discovery/vacuous_overflow_probe.py",
+      "role": "sealed_probe",
+      "round": "r419",
+      "ledger_ids": [],
+      "status": "Vacuous overflow (round 419, PRIME.RDAGGER.VACUOUS_OVERFLOW.01, reviewer DCCLXXXV: the r417/r418 tension -- tau_un->0 so sch->phibb vs 6/14 VAC phibb>0 still live; experiments-side, NO ledger row): 24/24 full / 16/16 smoke; SPEC_SHA 4809213ddff8cddd; H1/H2/H3 + C_min + razor overlap + dead-VAC separator + scramble/two-period/drop-tau first measured in /tmp (r419_cal.py, r419_cal2.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 78.9 s (bar 120 s).  AUSGANG H3_REFUTED / RAZOR_POLE_REFUTED / TAU_SAVE_FINITE / COFINAL_OPEN.  H1: the 6 stay phibb>0 on N[151,540], signed slope -0.003 (FLAT, no cross); N-ranges overlap healthy VAC; EXT/selected VAC phibb<0 (census, not a law on the 6).  H2: r417 |t| fall is VAC-driven (slope -1.24) not P1 (+0.05 FLAT); the 6 live NOW by tau2>phibb; a cofinal tau floor fails.  H3 REFUTED: VAC terciles 3/14 -> 7/14, EXT 3/6.  RAZOR-POLE REFUTED: all 14 VAC at Cmin-1 in [1.3e-7,7.5e-5], healthy CLOSER; s-overlap ~1e-10, razor share <=0.022.  r377 prod=+1 on every VAC.  LIFE: live OVF tau2>phibb; dead VAC tau2<phibb.  Companion rh/problem/vacuous_overflow.tex + verify_vacuous_overflow.py 8/8 VACUOUS OVERFLOW VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "cb4df1454ea54703b509460a24b71be607fd5146bc355350ffb66433be377eca",
+      "bytes": 22014
     }
   ]
 }

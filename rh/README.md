@@ -5851,6 +5851,34 @@ row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
 Coexistence: r374--r417 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**Vacuous overflow (r419,
+PRIME.RDAGGER.VACUOUS_OVERFLOW.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/vacuous_overflow_probe.py`
+(24/24 full, 16/16 smoke, SPEC_SHA `4809213ddff8cddd`) plus
+`rh/problem/vacuous_overflow.tex` (+ PDF +
+`verify_vacuous_overflow.py`, 8/8, `VACUOUS OVERFLOW VERIFIED`).
+**Ausgang H3_REFUTED / RAZOR_POLE_REFUTED / TAU_SAVE_FINITE / COFINAL_OPEN.**
+The r417/r418 tension: $|\tau_{\mathrm{un}}|\to 0$ would make
+$\varphi_{bb}$ the asymptotic sign carrier, but six vacuous
+windows have $\varphi_{bb}>0$ and still live.
+$H3$ (vacuous family empties) is **refuted** (terciles
+$3/14\to 7/14$, EXT $3/6$).  The razor-pole account
+($(C-I)^{-1}$ explosion) is **refuted** (all 14 VAC sit
+at $C_{\min}-1\sim 10^{-7}$, healthy closer; $s$ overlap
+$\sim 10^{-10}$).  $H2$ saves the six *now*
+($\tau^{2}>\varphi_{bb}$) but vacuous $\tau$ is the vanishing
+one, so a cofinal floor fails; the r417 $|\tau|$ fall is
+vacuous-driven (slope $-1.24$), P1 is flat.  $H1$ is a
+large-$N$ census (EXT/selected VAC $\varphi_{bb}<0$), not a
+trend on the six (signed slope $-0.003$, $N$-ranges overlap).
+Life of the overflow class vs dead VAC: $\tau^{2}\gtrless\varphi_{bb}$.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).
+Coexistence: r374--r418 are parallel lemma-first / Lean
+lanes; this round is additive.
+
+
 
 
 ## Folder guide
@@ -6246,6 +6274,9 @@ rh/
 │   └── verify_phi_bb.py — machine check of
 │                         phi_bb_sign.tex (10/10,
 │                         PHI BB SIGN VERIFIED)
+│   └── verify_vacuous_overflow.py — machine check of
+│                         vacuous_overflow.tex (8/8,
+│                         VACUOUS OVERFLOW VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)

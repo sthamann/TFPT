@@ -160,6 +160,20 @@ refuted (3/28).  Two named mechanisms; selected
 `a_k = 2^k` remains a negative census, not a new
 `sorry`.  Mincut unchanged.
 NO RH CLAIM.
+
+## r419 census (vacuous overflow)
+
+The r417/r418 tension is resolved as a named
+reduction, not a theorem: H3 (vacuous family
+empties) is refuted (VAC grows 3/14 → 7/14);
+the razor-pole account of overflow is refuted
+(s ⊥ C_min-mode); the six live by τ²>φ_bb at
+finite N, but vacuous τ_un is the vanishing
+one so a cofinal τ-floor fails.  Cofinal VAC
+`sch < 0` reduces to `φ_bb < 0` on large-N
+VAC (EXT/selected census).  No new `sorry`.
+Mincut unchanged.
+NO RH CLAIM.
 -/
 
 end RH
