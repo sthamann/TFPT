@@ -5759,6 +5759,36 @@ NO ledger row, NO L\* claim, NO RH CLAIM.  Mincut unchanged
 (base 4 / refined 5).  Coexistence: r374--r413 are parallel
 lemma-first / Lean lanes; this round is additive.
 
+**De Branges continuation index (r416,
+PRIME.RDAGGER.DEBRANGES_CONTINUATION.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/debranges_index_probe.py`
+(25/25 full, 20/20 smoke, SPEC_SHA `68a6ee35a0dd9b29`) plus
+`rh/problem/debranges_index.tex` (+ PDF +
+`verify_debranges_index.py`, 9/9, `DEBRANGES INDEX VERIFIED`).
+**Ausgang PHASE_DOMINANCE_REFUTED / HB_CENSUS.**
+SATZ: Wronskian of the monic 3-atom $X$ pair is
+$-\gamma_1$ independent of $z$; Hermite--Biehler interlacing
+of $(p_n,q_n)$ on MAIN $42/42$ and $\chi$ $84/84$.
+Degree balance at $k_z=9$: $n_X=d_0=181<|X|-1$,
+$n_Y=q-1=103$.  Both Stieltjes transforms are Herglotz,
+while $\mathrm{ind}_{-}(I-\mathfrak{T}_0^*\mathfrak{T}_0)=1$.
+The candidate lemma (contractive $H(E_Y)\hookrightarrow H(E_X)$
+up to one mode / $\kappa(\Theta)\le 1$ / phase dominance
+with deficit $<2\pi$) **fails on flagship MAIN**:
+combinatorial R\"ucklauf $\mathrm{yy}_A=3\not\le 1$,
+same-degree $\mathrm{yy}_S=24$, uncorrelated with the
+T0-index ($\mathrm{corr}=-0.17$).  Permute keeps
+$\mathrm{yy}_A=4$ at $\mathrm{ind}_{-}=20$ (world-separator
+silent).  Dead $\chi$ has *fewer* R\"uckl\"aufe, not a
+bulk-phase overflow.  The fold-partition counting argument
+is closed.  The Potapov index of $\mathfrak{T}_0$ remains
+the r409 dictionary $\mathrm{ind}_{-}(I-\mathfrak{T}^*\mathfrak{T})$.
+Experiments-side, NO ledger row, NO L\* claim,
+NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
+Coexistence: r374--r415 are parallel lemma-first / Lean
+lanes; this round is additive.
+
 
 ## Folder guide
 

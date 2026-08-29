@@ -2656,6 +2656,36 @@
       "bytes": 223478
     },
     {
+      "path": "rh/problem/debranges_index.tex",
+      "role": "problem_statement",
+      "round": "r416 companion",
+      "ledger_ids": [],
+      "status": "lemma-first de Branges / Potapov index after DCCLXXIX path B (round 416): HB interlacing SATZ; Wronskian over Q; phase dominance with kappa<=1 REFUTED on MAIN (yyA=3).  PHASE_DOMINANCE_REFUTED / HB_CENSUS.  Finite identities plus a named refutation; NO RH claim",
+      "pin": true,
+      "sha256": "10cbeeaad8cb5074014cdfa3285fd79d4a0360546059f89b8ea462b77db8acaf",
+      "bytes": 7037
+    },
+    {
+      "path": "rh/problem/verify_debranges_index.py",
+      "role": "problem_check",
+      "round": "r416 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in debranges_index.tex: standalone (Wronskian, disc, constructor audit, toy HB) plus construction pins (w9 balance/HB/Herglotz, yyA=3 primary fail, permute/scramble, MAIN-42 + chi).  9/9 gates, final line DEBRANGES INDEX VERIFIED",
+      "pin": true,
+      "sha256": "6f0f24e8107b4fdc5c529f1c5c796ceef090cfb7a3c69d7d87a83b9bc1e9b41d",
+      "bytes": 5035
+    },
+    {
+      "path": "rh/problem/debranges_index.pdf",
+      "role": "problem_statement",
+      "round": "r416 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of debranges_index.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "9446861c04e24fcc459c9782d3c7de5c73def291956d7f612eacfe17c80f1eea",
+      "bytes": 195338
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2830,8 +2860,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "5e636be2b8f5f4f7cb08f6d4deacd597164f598adad39a773e3694491faeb22f",
-      "bytes": 5428454
+      "sha256": "c20ec5d4f99111d3ce8147aa86e96d996f7e07321652a0a1bb78c23cdda53618",
+      "bytes": 5433232
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3262,6 +3292,16 @@
       "pin": true,
       "sha256": "b4946743ad9cda1a172e9d9dcf28de31c97253ec6365c9caebdb84872491fc8b",
       "bytes": 24009
+    },
+    {
+      "path": "experiments/tfpt-discovery/debranges_index_probe.py",
+      "role": "sealed_probe",
+      "round": "r416",
+      "ledger_ids": [],
+      "status": "De Branges continuation index (round 416, PRIME.RDAGGER.DEBRANGES_CONTINUATION.01, reviewer DCCLXXIX path B after HTM closed: is P1 a Hermite-Biehler / Potapov index theorem on the two finite OP systems -- kappa(Theta)<=1, equivalently Pruefer phase dominance with one winding?; experiments-side, NO ledger row): 25/25 full / 20/20 smoke; SPEC_SHA 68a6ee35a0dd9b29; Wronskian over Q, degree balance, HB interlacing, yyA/yyS, Herglotz of both Stieltjes transforms, nneg(T0) mismatch, permute/scramble, B=A mutant, MAIN-42 + chi 78+6 first measured in /tmp (r416_cal.py, r416_cal2.py, r416_cal3.py, r416_cal4.py, r416_cal5.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 10.5 s (bar 120 s).  AUSGANG PHASE_DOMINANCE_REFUTED / HB_CENSUS.  SATZ over Q: monic 3-atom X, W(p2,q2)=-gamma_1 independent of z (gamma_1=252000/3463321); disc(p2)=17761/19600>0 so q2-zero interlaces.  SATZ: HB interlacing of (p_n,q_n) on MAIN 42/42, chi 84/84, toy, permute, scramble.  w9 balance |X|=263 |Y|=104 d0=181 n_X=181 n_Y=103; both Herglotz; nneg(I-TT)=1 ||T||=1.08014.  PRIMARY FAILS: combinatorial Ruecklauf yyA=3 not <=1; yyS=24; nnegT != yyA; loc vs T0-SV spans [0.059,1] on MAIN.  MAIN-42 yyA min/med/max 0/4/15; P1 yyA<=1 only 3/28; PD yyA==0 only 3/14; corr(yyA,nneg)=-0.17.  chi live med 7 max 26; dead med 2 max 4 (death is fewer, not more).  KILLS: PERM yyA=4 nneg=20 (world-separator silent on the phase counter); SCR yyA=16 != 21; B=A breaks interlacing by degree; full-measure Uvarov path index 0 cannot see the truncated interpolant.  Counting argument via the fold partition is closed.  Companion rh/problem/debranges_index.tex + verify_debranges_index.py 9/9 DEBRANGES INDEX VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "30bc00be70bc86f5241a58fda42d3c8ef22196bba8d34e35b0374a2b3314d817",
+      "bytes": 22738
     }
   ]
 }
