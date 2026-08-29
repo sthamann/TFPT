@@ -771,6 +771,48 @@ _R399_STATUS = (
 )
 
 
+_R400_STATUS = (
+    "Bulk one-defect threshold/phase form of the frame "
+    "inequality (round 400, PRIME.LDAGGER.BULK_ONE_DEFECT.01, "
+    "reviewer 5.4 after the r399 circularity verdict and in "
+    "parallel with r401; experiments-side, NO ledger row): "
+    "27/27 full / 22/22 smoke; SPEC_SHA 91a4afa27f249fbb; "
+    "reference inertia, lift rank, cluster r_eff, vneg-dcent "
+    "cosine, phase table, scramble punch-through, dead/living "
+    "chi nneg, core-42 lam2-gap first measured in /tmp "
+    "(r400_cal.py, r400_cal2.py, r400_cal3.py) then sealed "
+    "(disclosed calibration).  Builder fallback NOT taken: "
+    "full census wall 5.5 s (bar 120 s) on core-42 + "
+    "chi3/chi4-42 + Twin.  AUSGANG FORM_T REFUTED (rank-1) / "
+    "FORM_P REFUTED.  SATZ: frame implication A+C ell ell^T "
+    "succeq c I => ind_- <= 1 (Fractions A=diag(-1,2) C=2); "
+    "rank-r interlacing (diag(-1,-1)+e0 e0^T kills one, never "
+    "two); Weyl nneg(A+B)<=nneg(A)+nneg(B).  REFUTED as rank-1: "
+    "the r390 Bernstein-Szego dual on Y has nneg_ref=49; MAIN "
+    "kills 48 (need rank>=48 by interlacing); lift on the "
+    "reference-negative space r_eff=9.55 lead=0.105 numerical "
+    "rank=49; whole-B spectral-free r_eff=14.91.  Occupied-I "
+    "(tiny nu floor) is DEGENERATE (depth N-3>|Y| saturates "
+    "R^ref=I, disclosed, not the r390 object).  Source ell = "
+    "dcent on Y is orthogonal to v_neg (cosine 0.0075); frame "
+    "fails for every C in the scan; pair mass 0.151 rest-hosted "
+    "(r367).  Core-42 42/42 nneg in {0,1} (28 P1 + 14 vacuous), "
+    "gap2=lam2-1/2 in [4.3e-8, 2.0e-4] (razor, not MVT-scale).  "
+    "FORM_P: consecutive C_m signs do NOT track ind_- (MAIN "
+    "rho1=-0.341 nneg=1 vs scramble -0.363 nneg=21; E 1.81 vs "
+    "3.39 factor <2).  Gate: sub-band MVT is unconditional but "
+    "does not see P1 (dcent orthogonal to v_neg; low-band energy "
+    "already ~0).  KILL: scramble nneg=21 killed only 14 of 35, "
+    "rmin=0.0036 punches through 1/2; two-period nneg=4 killed=0; "
+    "threshold x2 (lam2>=1) FALSE; omit-ell hypothesis fails.  "
+    "Dead chi3 5/5 and chi4-20 nneg in {0,1}; living chi3 37/37 "
+    "and chi4 41/41 nneg<=1 -- P1 is NOT world-separating; dead "
+    "chi die at sch>0 (r401), not at the bulk.  Twin-9 nneg/ncl "
+    "bit-identical.  Companion rh/problem/bulk_one_defect.tex + "
+    "verify_bulk_one_defect.py 12/12 BULK ONE DEFECT VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
 _R401_STATUS = (
     "Augmented 3x3 edge signature (round 401, "
     "PRIME.LDAGGER.EDGE_SIGNATURE.01, reviewer 5.5 after DCCLXII, "
@@ -3061,6 +3103,32 @@ ENTRIES = [
      [],
      "compiled PDF of source_weyl_energy.tex (recompiled "
      "artefact, registered unpinned)", False),
+    ("rh/problem/bulk_one_defect.tex", "problem_statement",
+     "r400 companion",
+     [],
+     "lemma-first threshold/phase form of the frame inequality "
+     "after DCCLXII 5.4 and the r399 circularity verdict "
+     "(round 400): frame implication SATZ; rank-r interlacing "
+     "SATZ; Weyl SATZ.  FORM_T REFUTED as rank-1 (BS dual on Y "
+     "has 49 negatives; MAIN kills 48).  FORM_P REFUTED (C_m "
+     "phases do not track ind_-).  Dead chi satisfy P1 (death "
+     "is edge).  Finite identities plus a named census; NO RH claim",
+     True),
+    ("rh/problem/verify_bulk_one_defect.py", "problem_check",
+     "r400 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "bulk_one_defect.tex: standalone (Fractions frame, "
+     "omit-ell, rank-1 interlacing, Weyl, threshold x2) plus "
+     "construction pins (w9 lift rank/orthogonality/source-frame "
+     "failure, scramble nneg=21, two-period, dead/living chi, "
+     "phase-blindness).  12/12 gates, final line "
+     "BULK ONE DEFECT VERIFIED", True),
+    ("rh/problem/bulk_one_defect.pdf", "problem_statement",
+     "r400 companion",
+     [],
+     "compiled PDF of bulk_one_defect.tex (recompiled "
+     "artefact, registered unpinned)", False),
     ("rh/problem/edge_signature.tex", "problem_statement",
      "r401 companion",
      [],
@@ -3305,6 +3373,11 @@ ENTRIES = [
      "r399",
      [],
      _R399_STATUS,
+     True),
+    (f"{EXP}/bulk_one_defect_probe.py", "sealed_probe",
+     "r400",
+     [],
+     _R400_STATUS,
      True),
     (f"{EXP}/edge_signature_probe.py", "sealed_probe",
      "r401",

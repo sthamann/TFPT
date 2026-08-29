@@ -5412,6 +5412,35 @@ Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r398 are parallel lemma-first / Lean lanes; this round is additive.
 
 
+
+**Bulk one-defect, refuted as rank-one (r400,
+PRIME.LDAGGER.BULK_ONE_DEFECT.01, reviewer 5.4).**  Sealed
+census probe
+`experiments/tfpt-discovery/bulk_one_defect_probe.py` (27/27
+full, 22/22 smoke, SPEC_SHA `91a4afa27f249fbb`) plus
+`rh/problem/bulk_one_defect.tex` (+ PDF +
+`verify_bulk_one_defect.py`, 12/12, `BULK ONE DEFECT VERIFIED`).
+**Ausgang FORM_T REFUTED / FORM_P REFUTED.**  SATZ: frame
+implication $A+C\ell\otimes\ell\succeq c I\Rightarrow\mathrm{ind}_{-}\le 1$;
+rank-$r$ interlacing; Weyl.
+The Bernstein--Szegő dual on $Y$ has $\mathrm{ind}_{-}=49$;
+MAIN kills $48$ (rank at least $48$, measured $r_{\mathrm{eff}}=9.55$,
+leading share $0.105$, numerical rank $49$).
+Source $\ell=$ centred difference on $Y$ is orthogonal to
+$v_{-}$ (cosine $0.0075$); no source-defined edge functional.
+Core-$42$ $\mathrm{ind}_{-}\in\{0,1\}$ on $42/42$ ($28$ P1 + $14$ vacuous),
+$\lambda_2(R)-\tfrac12$ in $[4.3\cdot 10^{-8},2.0\cdot 10^{-4}]$.
+$C_m$ consecutive-sign correlation does not track $\mathrm{ind}_{-}$
+(MAIN $\rho_1=-0.341$ vs scramble $-0.363$, inertias $1$ vs $21$).
+Dead $\chi$ satisfy P1 (death is $\mathrm{sch}>0$, r401).
+Scramble $\mathrm{ind}_{-}=21$ kills only $14$ of $35$; two-period
+kills $0$.  Honesty gate: sub-band MVT is unconditional but
+does not see P1 ($d$ orthogonal to $v_{-}$).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).  Coexistence:
+r374--r399 are parallel lemma-first / Lean lanes; this round is additive.
+
+
 **Augmented edge signature (r401,
 PRIME.LDAGGER.EDGE_SIGNATURE.01, reviewer 5.5).**  Sealed
 census probe
@@ -5649,6 +5678,10 @@ rh/
 │   │                     Weyl energy; representation SATZ;
 │   │                     decay REFUTED (QM, grows);
 │   │                     bound circular if forced.  No RH claim
+│   ├── bulk_one_defect.tex(+pdf) — r400: threshold/phase
+│   │                     frame inequality; FORM_T REFUTED
+│   │                     (rank-1); FORM_P REFUTED (phases);
+│   │                     dead chi P1 holds.  No RH claim
 │   ├── edge_signature.tex(+pdf) — r401: augmented 3x3
 │   │                     edge signature; reconstruction SATZ;
 │   │                     model lemma SATZ; compact K census;
@@ -5725,6 +5758,9 @@ rh/
 │   ├── verify_source_weyl.py — machine check of
 │                         source_weyl_energy.tex (11/11,
 │                         SOURCE WEYL VERIFIED)
+│   ├── verify_bulk_one_defect.py — machine check of
+│                         bulk_one_defect.tex (12/12,
+│                         BULK ONE DEFECT VERIFIED)
 │   └── verify_edge_signature.py — machine check of
 │                         edge_signature.tex (13/13,
 │                         EDGE SIGNATURE VERIFIED)
@@ -6677,6 +6713,21 @@ It does not touch `experiments/next.txt` and does not touch
 surface of this round: integrity + probes
 (`run_rh.py --fast --skip-lean`) after appending the probe and
 problem-document rows to the inventory.  r374--r399 are
+parallel lemma-first / Lean lanes and are not dropped.
+
+**r400 coexistence.** Round 400 (`bulk_one_defect.tex` +
+`bulk_one_defect_probe.py`) is additive on the R-dagger
+north star after DCCLXII 5.4 and the r399 circularity
+verdict (threshold/phase form of the frame inequality:
+frame implication SATZ; rank-$r$ interlacing SATZ; Weyl SATZ;
+FORM_T REFUTED as a rank-1 defect; FORM_P REFUTED as a
+$C_m$-phase predictor of $\mathrm{ind}_{-}$; dead $\chi$
+satisfy P1 and die at $\mathrm{sch}>0$).
+It does not touch `experiments/next.txt` and does not touch
+`rh/lean/` (r376/r380/r384/r397).  Suite
+surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the probe and
+problem-document rows to the inventory.  r374--r399/r401 are
 parallel lemma-first / Lean lanes and are not dropped.
 Historical: since the r305 Lean reconstruction round
 **4 intentional `sorry`s**, down from 9; since the r310 source-interface

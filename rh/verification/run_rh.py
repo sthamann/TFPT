@@ -184,6 +184,7 @@ PROBES = [
     ("r396", "isolation_lemma_probe.py"),
     ("r398", "high_moment_inertia_probe.py"),
     ("r399", "source_weyl_energy_probe.py"),
+    ("r400", "bulk_one_defect_probe.py"),
     ("r401", "edge_signature_probe.py"),
 ]
 
