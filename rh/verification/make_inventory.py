@@ -1002,6 +1002,34 @@ _R407_STATUS = (
     "VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim"
 )
 
+_R408_STATUS = (
+    "C-threshold / sampling (round 408, "
+    "PRIME.LDAGGER.C_THRESHOLD.01, follow-up of r407 after "
+    "DCCLXXIII: at most one lam(C)<1 as Nyquist-at-density-1/2; "
+    "experiments-side, NO ledger row): 26/26 full / 22/22 smoke; "
+    "SPEC_SHA cb03729fa76c98bd; C anatomy, 1010 spectra, thinning, "
+    "densify, worlds, core dmin/kpeak first measured in /tmp "
+    "(r408_cal.py, r408_cal2.py, r408_cal3.py) then sealed "
+    "(disclosed calibration).  Builder fallback NOT taken: full "
+    "wall 2.7 s (bar 120 s).  AUSGANG NYQUIST_REFUTED / "
+    "AT_MOST_ONE_CENSUS.  SATZ over Q: 2x2 coherence det(C-I)=-2; "
+    "Rayleigh lam_min<=dmin; rank B 3x2 => det C=0; Cauchy "
+    "principal of a diagonal.  FORMULA C=BB^T = dressed mu-dual "
+    "CD kernel on Y.  w9: dens=0.283 not 1/2, n=181>|Y|=104, "
+    "Cmin=0.85712 C2=1.00018 nC=1, dmin=1.656 dmean=33.1 "
+    "(diag not ~1), kpeak=52=|Y|/2 ones=0.007 end=0.529 F1=2.  "
+    "LEG B REFUTED: 2PER S=20 dens=1/2 nC=3 Cmin=0 (zeros); "
+    "S=21 c=2/3 nC=4.  LEG C: SCR nC=21 dmin=0.367 F1=15 "
+    "(sparser than source); PERM nC=20 dmin=0.148 same Y; "
+    "CHI9 nC=0; CHI15 nC=1 (dictionary holds).  LEG D: thin 0.30 "
+    "nC=0 Cmin=1.016; flip+10 nC=8; frozen Cauchy 0.857->0.929; "
+    "depth n+1 Cmin=0.99996.  CENSUS core-42 nC in {0,1} "
+    "(14/28), dmin in [1.097,1.656], nC=1 => kfrac>=0.85, "
+    "nC=0 => endmass=1.  Companion rh/problem/c_threshold.tex + "
+    "verify_c_threshold.py 9/9 C THRESHOLD VERIFIED.  NO L* "
+    "claim, NO R-dagger claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -3426,6 +3454,30 @@ ENTRIES = [
      [],
      "compiled PDF of dual_intertwiner.tex (recompiled "
      "artefact, registered unpinned)", False),
+    ("rh/problem/c_threshold.tex", "problem_statement",
+     "r408 companion",
+     [],
+     "lemma-first C-threshold / sampling after r407 "
+     "(round 408): 2x2 coherence / Rayleigh / rank / Cauchy "
+     "SATZ; Nyquist-at-density-1/2 REFUTED; source nC<=1 "
+     "CENSUS.  NYQUIST_REFUTED / AT_MOST_ONE_CENSUS.  "
+     "Finite identities plus a named refutation and a named "
+     "census; NO RH claim",
+     True),
+    ("rh/problem/verify_c_threshold.py", "problem_check",
+     "r408 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "c_threshold.tex: standalone (2x2 coherence, Rayleigh, "
+     "rank deficiency, Cauchy) plus construction pins (w9 "
+     "anatomy, C=BB^T and 1010 zeros, scramble/permute, "
+     "thin/densify/Cauchy, chi + kz55).  9/9 gates, "
+     "final line C THRESHOLD VERIFIED", True),
+    ("rh/problem/c_threshold.pdf", "problem_statement",
+     "r408 companion",
+     [],
+     "compiled PDF of c_threshold.tex (recompiled "
+     "artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -3676,6 +3728,11 @@ ENTRIES = [
      "r407",
      [],
      _R407_STATUS,
+     True),
+    (f"{EXP}/c_threshold_probe.py", "sealed_probe",
+     "r408",
+     [],
+     _R408_STATUS,
      True),
 ]
 

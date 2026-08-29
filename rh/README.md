@@ -5575,6 +5575,36 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Mincut unchanged (base 4 / refined 5).  Coexistence:
 r374--r406 are parallel lemma-first / Lean lanes; this round is additive.
 
+**$C$-threshold, Nyquist-at-$\tfrac12$ refuted (r408,
+PRIME.LDAGGER.C_THRESHOLD.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/c_threshold_probe.py` (26/26
+full, 22/22 smoke, SPEC_SHA `cb03729fa76c98bd`) plus
+`rh/problem/c_threshold.tex` (+ PDF +
+`verify_c_threshold.py`, 9/9, `C THRESHOLD VERIFIED`).
+**Ausgang NYQUIST_REFUTED / AT_MOST_ONE_CENSUS.**
+SATZ: $C=BB^T$ (dressed $\mu$-dual CD kernel on $Y$);
+$2\times 2$ coherence $\det(C-I)<0$; Rayleigh
+$\lambda_{\min}\le d_{\min}$; rank deficiency when
+$|Y|>n$; Cauchy interlacing of principal submatrices.
+FRAME-A: density $0.283$ not $\tfrac12$, $n=181>|Y|=104$,
+$C_{\min}=0.85712$, $\lambda_2=1.00018$, $d_{\min}=1.656$
+(diag not $\sim 1$), exception mode hole-Nyquist
+$k_{\mathrm{peak}}=52$ not the ones-mode.
+Periodic $1010$ at density $\tfrac12$ has a kernel
+($nC=3$ or $4$, $\lambda_{\min}=0$) --- not
+$\lambda_2=1$ exact.
+Thinning $Y$ raises $C_{\min}$; densifying destroys.
+Scramble $21$ / permute $20$ break $d_{\min}>1$.
+Core-$42$: $nC\in\{0,1\}$ (census $14/28$), $d_{\min}>1$,
+one-defect windows are hole-Nyquist.
+Dead $\chi_3$ fulfill the threshold dictionary.
+P1 remains $\iff\lambda_2(C)\ge 1$ (r407); the RHS is
+not proved.  Experiments-side, NO ledger row, NO L\* claim,
+NO RH CLAIM.  Mincut unchanged (base 4 / refined 5).
+Coexistence: r374--r407 are parallel lemma-first / Lean
+lanes; this round is additive.
+
 
 ## Folder guide
 
@@ -5821,6 +5851,9 @@ rh/
 │   │                     intertwiner $R=C(I+C)^{-1}$; FL
 │   │                     dictionary SATZ; P1 $\iff\lambda_2(C)\ge 1$;
 │   │                     $\nu$-rank not one.  No RH claim
+│   ├── c_threshold.tex(+pdf) — r408: C-threshold /
+│   │                     sampling; Nyquist-at-1/2 REFUTED;
+│   │                     source nC<=1 CENSUS.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -5908,9 +5941,12 @@ rh/
 │   ├── verify_edge_lift.py — machine check of
 │                         edge_contractive_lift.tex (12/12,
 │                         EDGE LIFT VERIFIED)
-│   └── verify_dual_intertwiner.py — machine check of
+│   ├── verify_dual_intertwiner.py — machine check of
 │                         dual_intertwiner.tex (12/12,
 │                         DUAL INTERTWINER VERIFIED)
+│   └── verify_c_threshold.py — machine check of
+│                         c_threshold.tex (9/9,
+│                         C THRESHOLD VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6267,7 +6303,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r407 from
+2. **Sealed probes** — the campaign probes r250–r408 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -6904,7 +6940,7 @@ $c_{\min}$ **PROVED**).  It does not wait on R404/R405,
 does not touch `experiments/next.txt`, and does not add a
 sealed probe.  Suite surface of this round: integrity +
 probes + Lean (`run_rh.py --fast`) after appending the
-Lean-module row to the inventory.  r374--r405/r407 are parallel
+Lean-module row to the inventory.  r374--r405/r407/r408 are parallel
 lemma-first / probe lanes and are not dropped.
 
 **r407 coexistence.** Round 407 (`dual_intertwiner.tex` +
@@ -6919,6 +6955,21 @@ is not the $G$ that $R$ inverts.  It does not touch
 integrity + probes (`run_rh.py --fast --skip-lean`) after
 appending the probe and problem-document rows to the
 inventory.  r374--r406 are parallel lemma-first / Lean
+lanes and are not dropped.
+
+**r408 coexistence.** Round 408 (`c_threshold.tex` +
+`c_threshold_probe.py`) is additive on the R-dagger
+north star after r407 (the C-threshold / sampling
+candidate: at most one $\lambda(C)<1$ because
+half-filling is Nyquist-critical).  SATZ $C=BB^T$,
+$2\times 2$ coherence, Rayleigh, rank, Cauchy;
+Nyquist-at-density-$\tfrac12$ **REFUTED**; source
+$nC\le 1$ is a census.  It does not touch
+`experiments/next.txt` and does not touch `rh/lean/`
+(r376/r380/r384/r397/r406).  Suite surface of this round:
+integrity + probes (`run_rh.py --fast --skip-lean`) after
+appending the probe and problem-document rows to the
+inventory.  r374--r407 are parallel lemma-first / Lean
 lanes and are not dropped.
 
 **r401 coexistence.** Round 401 (`edge_signature.tex` +

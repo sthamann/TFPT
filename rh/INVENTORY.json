@@ -2476,6 +2476,36 @@
       "bytes": 239627
     },
     {
+      "path": "rh/problem/c_threshold.tex",
+      "role": "problem_statement",
+      "round": "r408 companion",
+      "ledger_ids": [],
+      "status": "lemma-first C-threshold / sampling after r407 (round 408): 2x2 coherence / Rayleigh / rank / Cauchy SATZ; Nyquist-at-density-1/2 REFUTED; source nC<=1 CENSUS.  NYQUIST_REFUTED / AT_MOST_ONE_CENSUS.  Finite identities plus a named refutation and a named census; NO RH claim",
+      "pin": true,
+      "sha256": "e858dbe6000d9f5d6f47eb2d34dae58f0d6f78ddfda2b6ef092b0a1de96b0769",
+      "bytes": 7091
+    },
+    {
+      "path": "rh/problem/verify_c_threshold.py",
+      "role": "problem_check",
+      "round": "r408 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in c_threshold.tex: standalone (2x2 coherence, Rayleigh, rank deficiency, Cauchy) plus construction pins (w9 anatomy, C=BB^T and 1010 zeros, scramble/permute, thin/densify/Cauchy, chi + kz55).  9/9 gates, final line C THRESHOLD VERIFIED",
+      "pin": true,
+      "sha256": "788d96aa2a57a9d1c60f05d1761bcd7401126ed99f36f381c77f60b023c3e48c",
+      "bytes": 6120
+    },
+    {
+      "path": "rh/problem/c_threshold.pdf",
+      "role": "problem_statement",
+      "round": "r408 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of c_threshold.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "46b2be5a9dd65a3c0a05dd3b71a552d6001ad918356e3d4fe0492474a8ca03e1",
+      "bytes": 179913
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2630,8 +2660,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "3a5cc9a6ca3b3d9e6de50a6a189caeb577676dd6a58d693aace125480da86f18",
-      "bytes": 3448263
+      "sha256": "27d9326680e5a35bad6f0b863aeaa17c6a36c46fdff1c8888dc9d860fd9aea45",
+      "bytes": 3448295
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -2650,8 +2680,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "d5564c8b63140f85ad1614b8e0c8cc4023cb9a113cfdd3b6b63c65475c2e4c57",
-      "bytes": 5404095
+      "sha256": "960d923ac05b061656fccd54f1746bf59e7edf494a288763bf83ab3a5da470d9",
+      "bytes": 5411785
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3022,6 +3052,16 @@
       "pin": true,
       "sha256": "017e970839f462482ced1f969fb3b66b5adcbf680a0590d0e3bd2e62939af754",
       "bytes": 23972
+    },
+    {
+      "path": "experiments/tfpt-discovery/c_threshold_probe.py",
+      "role": "sealed_probe",
+      "round": "r408",
+      "ledger_ids": [],
+      "status": "C-threshold / sampling (round 408, PRIME.LDAGGER.C_THRESHOLD.01, follow-up of r407 after DCCLXXIII: at most one lam(C)<1 as Nyquist-at-density-1/2; experiments-side, NO ledger row): 26/26 full / 22/22 smoke; SPEC_SHA cb03729fa76c98bd; C anatomy, 1010 spectra, thinning, densify, worlds, core dmin/kpeak first measured in /tmp (r408_cal.py, r408_cal2.py, r408_cal3.py) then sealed (disclosed calibration).  Builder fallback NOT taken: full wall 2.7 s (bar 120 s).  AUSGANG NYQUIST_REFUTED / AT_MOST_ONE_CENSUS.  SATZ over Q: 2x2 coherence det(C-I)=-2; Rayleigh lam_min<=dmin; rank B 3x2 => det C=0; Cauchy principal of a diagonal.  FORMULA C=BB^T = dressed mu-dual CD kernel on Y.  w9: dens=0.283 not 1/2, n=181>|Y|=104, Cmin=0.85712 C2=1.00018 nC=1, dmin=1.656 dmean=33.1 (diag not ~1), kpeak=52=|Y|/2 ones=0.007 end=0.529 F1=2.  LEG B REFUTED: 2PER S=20 dens=1/2 nC=3 Cmin=0 (zeros); S=21 c=2/3 nC=4.  LEG C: SCR nC=21 dmin=0.367 F1=15 (sparser than source); PERM nC=20 dmin=0.148 same Y; CHI9 nC=0; CHI15 nC=1 (dictionary holds).  LEG D: thin 0.30 nC=0 Cmin=1.016; flip+10 nC=8; frozen Cauchy 0.857->0.929; depth n+1 Cmin=0.99996.  CENSUS core-42 nC in {0,1} (14/28), dmin in [1.097,1.656], nC=1 => kfrac>=0.85, nC=0 => endmass=1.  Companion rh/problem/c_threshold.tex + verify_c_threshold.py 9/9 C THRESHOLD VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "c32a59ca942e41348b82afe10b15b5e8f5246e6dc347d6e897062a85f67af6e6",
+      "bytes": 18728
     }
   ]
 }
