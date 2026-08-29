@@ -219,6 +219,17 @@ theorem); `‖b‖²` is not a subsum of `S`.
 `den < 2` with gap `≥ 0.348` is a census,
 not a new `sorry`.  Mincut unchanged.
 NO RH CLAIM.
+
+## r424 census (gamma chain)
+
+`b_k = ⟨σ, π̂_k^μ⟩` and `‖b‖²` equals the
+μ-side Parseval budget (SATZ).
+Termwise `w_k = b_k²/ρ_k` is not uniform
+(`~43%` of terms `>1`).
+`‖b‖² ≤ 0.80 S` and `γ < 1` are a census
+(max `γ = 0.724`); `γ < 1` is not a new
+`sorry`.  Mincut unchanged.
+NO RH CLAIM.
 -/
 
 end RH

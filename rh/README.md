@@ -5975,6 +5975,31 @@ Coexistence: r374--r422 are parallel lemma-first / Lean
 lanes; this round is additive.
 
 
+**$\gamma$ chain (r424,
+PRIME.RDAGGER.GAMMA_CHAIN.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/gamma_chain_probe.py`
+(18/18 full, 15/15 smoke, SPEC_SHA `0c85977b0a25576e`) plus
+`rh/problem/gamma_chain.tex` (+ PDF +
+`verify_gamma_chain.py`, 7/7, `GAMMA CHAIN VERIFIED`).
+**Ausgang BESSEL_EXACT / W_TERM_REFUTED / SHARP_CENSUS / GAMMA_OPEN.**
+SATZ: $b_k=\langle\sigma,\hat\pi_k^\mu\rangle$,
+$\|b\|^{2}$ equals the $\mu$-side Parseval budget.
+Termwise $w_k=b_k^{2}/\rho_k$ is not uniform
+($\sim 43\%$ of terms $>1$).
+Census $\|b\|^{2}\le 0.80\,S$ (so the $5/7$
+buffer is not needed) and $\gamma\le 0.724$
+on $42/42$+EXT+dead.
+Dead $\chi$ keep $\gamma<1$; scramble
+border-fails; unnorm $b$ gives $\gamma=2.51>1$.
+$\gamma<1$ as a theorem is OPEN (cross-chain).
+Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).
+Coexistence: r374--r423 are parallel lemma-first / Lean
+lanes; this round is additive.
+
+
 
 
 
@@ -6389,6 +6414,9 @@ rh/
 │   └── verify_den_limit.py — machine check of
 │                         den_limit.tex (7/7,
 │                         DEN LIMIT VERIFIED)
+│   └── verify_gamma_chain.py — machine check of
+│                         gamma_chain.tex (7/7,
+│                         GAMMA CHAIN VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6745,7 +6773,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r415 from
+2. **Sealed probes** — the campaign probes r250–r424 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
