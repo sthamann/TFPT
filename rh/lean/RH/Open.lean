@@ -186,6 +186,18 @@ shrinks along `a_k=2^k`.  The naive occupied-max
 `sorry`.  The whole edge is one `c_J`-vs-self-energy
 balance.  Mincut unchanged.
 NO RH CLAIM.
+
+## r421 census (reserve limit)
+
+Selected $a_k=2^k$ prefers a floor
+`R_∞ ≈ 0.030` for `R = -φ_bb` (AIC vs `k`);
+`R ~ c/log k` is killed.  `k=10` border-fails.
+The T0–C_min linearisation is the r411
+dictionary (ratio 1.0000 on vacuous).
+Three saturation scales, not one exponent.
+Cofinal `R_∞ > 0` is a census, not a new
+`sorry`.  Mincut unchanged.
+NO RH CLAIM.
 -/
 
 end RH

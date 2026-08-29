@@ -2806,6 +2806,36 @@
       "bytes": 215163
     },
     {
+      "path": "rh/problem/reserve_limit.tex",
+      "role": "problem_statement",
+      "round": "r421 companion",
+      "ledger_ids": [],
+      "status": "lemma-first reserve limit after DCCLXXXVII (round 421): M1 floor preferred; M3 log model KILLED; k=10 border-fails.  FLOOR_PREFERRED / LOG_KILLED / K10_BORDER_FAIL / COFINAL_OPEN.  Finite identities plus a named AIC census; NO RH claim",
+      "pin": true,
+      "sha256": "e955846a22f8e2d38a2d310399b2c33d3fd49ab606df57f4a3761836629aca89",
+      "bytes": 7699
+    },
+    {
+      "path": "rh/problem/verify_reserve_limit.py",
+      "role": "problem_check",
+      "round": "r421 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in reserve_limit.tex: standalone (R over Q, T0 lin, drop-border) plus construction pins (w9 R, kz26 dictionary, kz12 overflow, AIC M1, dead VAC).  8/8 gates, final line RESERVE LIMIT VERIFIED",
+      "pin": true,
+      "sha256": "2e2e9fed9b4eabb750d1712ca7adf5f703113a067f593e6988e76e6f304b6aea",
+      "bytes": 4135
+    },
+    {
+      "path": "rh/problem/reserve_limit.pdf",
+      "role": "problem_statement",
+      "round": "r421 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of reserve_limit.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "f307cd3fe96057977bd095d50761a8de8f4e7d2820c381672eec216ed3c1dca7",
+      "bytes": 208658
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -2980,8 +3010,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "20e3e17adc4eb07e6c8f39c64cd6b70cd53e56f90eee258c5c205ad689a12551",
-      "bytes": 5443760
+      "sha256": "8850aedd7ef8ccac72a05c42f14c20f17690fb81a0972104857038edc6103911",
+      "bytes": 5445900
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3462,6 +3492,16 @@
       "pin": true,
       "sha256": "90216f06191aa136cd766e7c3249729a4cf17a17d8e6eede3439f6f4d5adc2d5",
       "bytes": 18253
+    },
+    {
+      "path": "experiments/tfpt-discovery/reserve_limit_probe.py",
+      "role": "sealed_probe",
+      "round": "r421",
+      "ledger_ids": [],
+      "status": "reserve limit (round 421, PRIME.RDAGGER.RESERVE_LIMIT.01, reviewer DCCLXXXVII: does R=-phibb go to 0 or to R_inf>0 on selected a_k=2^k; experiments-side, NO ledger row): 22/22 full / 16/16 smoke; SPEC_SHA 234a1113450c476f; selected k=4..9, EXT, T0-Cgap dictionary, Sigma channels, AIC M1/M2/M3, dead/overflow/scramble first measured in /tmp (r421_cal.py, r421_cal_deep.py) then sealed (disclosed calibration).  Builder fallback TAKEN for k=8 only: /tmp wall 226 s N=5690, R=0.04763 PINNED not re-gated live.  Full wall 39.3 s (bar 120 s).  k=10 kz197 N=4071 border_fail (29.5 s); k=11 N=12508 skipped.  AUSGANG FLOOR_PREFERRED / LOG_KILLED / K10_BORDER_FAIL / COFINAL_OPEN.  SATZ: R=-phibb; T0-1=-(C_min-1)/2 on VAC (ratio 1.0000).  REFUTED: M3 R~c/log k (DeltaAIC 18.4).  REDUZIERT: M1 wins vs k with R_inf=+0.0298 (vs a_k +0.034); M2 loses DeltaAIC 6.9; EXT VAC sit in [0.0285,0.0373].  den FLAT [1.48,1.65]; Sigma channel = n_eff broadens (18->146), s2 flat O(0.06), lam_w mild.  Three saturation scales, NOT one exponent (budget O(0.5) / razor 1e-6 / edge-balance O(0.04)).  Companion rh/problem/reserve_limit.tex + verify_reserve_limit.py 8/8 RESERVE LIMIT VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "f841faae17e02d9319ee5ab4cf6da24c12db02bf6d05833293ac79415e841c05",
+      "bytes": 19546
     }
   ]
 }

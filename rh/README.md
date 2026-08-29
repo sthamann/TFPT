@@ -5901,6 +5901,35 @@ NO L\* claim, NO RH CLAIM.  Mincut unchanged
 Coexistence: r374--r419 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**Reserve limit (r421,
+PRIME.RDAGGER.RESERVE_LIMIT.01).**  Sealed
+census probe
+`experiments/tfpt-discovery/reserve_limit_probe.py`
+(22/22 full, 16/16 smoke, SPEC_SHA `234a1113450c476f`) plus
+`rh/problem/reserve_limit.tex` (+ PDF +
+`verify_reserve_limit.py`, 8/8, `RESERVE LIMIT VERIFIED`).
+**Ausgang FLOOR_PREFERRED / LOG_KILLED / K10_BORDER_FAIL / COFINAL_OPEN.**
+SATZ: $R=-\varphi_{bb}$; $\|T_0\|-1=-(C_{\min}-1)/2$
+on vacuous windows (ratio $1.0000$).
+The log model $R\sim c/\log k$ is killed
+($\Delta$AIC $18.4$).
+Five selected points prefer a floor
+$R_\infty\approx 0.030$ versus $k$ (AIC);
+$R\to 0$ loses by $\Delta$AIC $6.9$.
+EXT vacuous $R$ sits in $[0.029,0.037]$.
+$k=8$ pinned (builder, $N=5690$);
+$k=10$ border-fails; $k=11$ skipped.
+$\mathrm{den}$ is flat; $\Sigma$ moves because
+occupation broadens, not because $\|s\|^{2}$ grows.
+Three saturation scales (budget / razor /
+edge-balance), not one exponent.
+Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).
+Coexistence: r374--r420 are parallel lemma-first / Lean
+lanes; this round is additive.
+
+
 
 
 
@@ -6304,6 +6333,9 @@ rh/
 │   └── verify_cj_sigma.py — machine check of
 │                         cj_sigma.tex (8/8,
 │                         CJ SIGMA VERIFIED)
+│   └── verify_reserve_limit.py — machine check of
+│                         reserve_limit.tex (8/8,
+│                         RESERVE LIMIT VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
