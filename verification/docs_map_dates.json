@@ -16,8 +16,8 @@
   "date": "2026-08-27"
  },
  "introduction::subsection::The companion documents::1": {
-  "hash": "cb43f67f0b4b",
-  "date": "2026-06-14"
+  "hash": "f5ae4dcb0423",
+  "date": "2026-08-30"
  },
  "introduction::section::The architecture at a glance::1": {
   "hash": "c457aefc1cb7",
@@ -28,12 +28,12 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The compact status formula: three honest layers::1": {
-  "hash": "2d4a24585ce5",
-  "date": "2026-07-22"
+  "hash": "6314a2168351",
+  "date": "2026-08-30"
  },
  "introduction::subsection::The hard reduction: the live residual as typed interfaces::1": {
-  "hash": "cc9dd996cd0b",
-  "date": "2026-07-23"
+  "hash": "f717e26a30b1",
+  "date": "2026-08-30"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
   "hash": "d7ace62c85ab",
@@ -60,12 +60,12 @@
   "date": "2026-06-12"
  },
  "introduction::section::What this means for the theory-of-everything question::1": {
-  "hash": "42711c7b80a6",
-  "date": "2026-07-22"
+  "hash": "d773e60ceab0",
+  "date": "2026-08-30"
  },
  "introduction::subsection::The closure ledger: what is done, and what genuinely remains::1": {
-  "hash": "108c638d38e3",
-  "date": "2026-07-22"
+  "hash": "e1b7ccda5c02",
+  "date": "2026-08-30"
  },
  "introduction::section::TFPT in the light of algorithmic physics: Zuse--Schmidhuber--Wolfram::1": {
   "hash": "ba6ca0b2afb6",
@@ -164,8 +164,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::subsection::The EM closure: $\\ainv$ as an explicit fixed point (made explicit here)::1": {
-  "hash": "747a56c95cf8",
-  "date": "2026-08-27"
+  "hash": "c95fa17c91bc",
+  "date": "2026-08-28"
  },
  "tfpt_1_architecture_e8::subsection::The decuple bridge (new, exact headline)::1": {
   "hash": "604a14549a07",
@@ -364,8 +364,8 @@
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "d64e13a62527",
-  "date": "2026-08-03"
+  "hash": "8f44af13f922",
+  "date": "2026-08-29"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
   "hash": "f76d4592f628",
@@ -383,9 +383,9 @@
   "hash": "ab9fd38ab334",
   "date": "2026-06-12"
  },
- "tfpt_2_standard_model::subsection::(2) Gravity --- the local field equation is parameter-free; the $R^2$ inflation layer up to one truncation \\mE/\\mC::1": {
-  "hash": "58038e03429f",
-  "date": "2026-06-22"
+ "tfpt_2_standard_model::subsection::(2) Gravity --- the classical covariant field equation carries no free dimensionless Newton coupling under the named QFT/entanglement premises \\mC; the $R^2$ inflation layer up to one truncation \\mE/\\mC::1": {
+  "hash": "c0ae74a5468c",
+  "date": "2026-08-28"
  },
  "tfpt_2_standard_model::subsection::(3) Strong CP --- decoupled from the mass-gap problem \\mE/\\mC::1": {
   "hash": "9e8863919ffb",
@@ -404,8 +404,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Conclusion::1": {
-  "hash": "2073ff72903b",
-  "date": "2026-07-22"
+  "hash": "4039fecc9969",
+  "date": "2026-08-30"
  },
  "tfpt_2_standard_model::section::The setup: parabolic data on the family curve::1": {
   "hash": "da2a8b23c886",
@@ -580,8 +580,8 @@
   "date": "2026-07-22"
  },
  "tfpt_3_e8_audit_bootstrap::section::The honest open-items list::1": {
-  "hash": "954950bd8ee0",
-  "date": "2026-06-24"
+  "hash": "9e3b34436c30",
+  "date": "2026-08-30"
  },
  "tfpt_3_e8_audit_bootstrap::section::The $E_8$-slice scan: results (honest hit / miss)::1": {
   "hash": "9bb6cf827ee4",
@@ -600,8 +600,8 @@
   "date": "2026-08-06"
  },
  "tfpt_4_frontier::section::Baryon asymmetry $\\eta_B$ --- a downstream readout from the closed $\\Omega_b h^2$::1": {
-  "hash": "9496ae6a9fea",
-  "date": "2026-06-17"
+  "hash": "33e08202513e",
+  "date": "2026-08-29"
  },
  "tfpt_4_frontier::section::Proton/electron ratio $m_p/m_e$ --- a cross-sector ratio::1": {
   "hash": "5dde4c1784cd",
@@ -624,12 +624,12 @@
   "date": "2026-08-04"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "6931512e5c9c",
-  "date": "2026-07-23"
+  "hash": "b9759059aaad",
+  "date": "2026-08-30"
  },
  "tfpt_4_frontier::section::Summary::1": {
-  "hash": "621974b7098b",
-  "date": "2026-08-04"
+  "hash": "e3aaf64f6d07",
+  "date": "2026-08-30"
  },
  "tfpt_4_frontier::section::Appendix: computational verification::1": {
   "hash": "435494367e01",
@@ -716,16 +716,16 @@
   "date": "2026-06-25"
  },
  "tfpt_research_contracts::front::(front matter)::1": {
-  "hash": "65d2ad23e56c",
-  "date": "2026-08-27"
+  "hash": "ea6027b34b99",
+  "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "7cd71430df2a",
-  "date": "2026-08-27"
+  "hash": "1f83e83f3c15",
+  "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "d81c97ae5877",
-  "date": "2026-08-27"
+  "hash": "13d30538ba6f",
+  "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {
   "hash": "62902eaaa0d2",
@@ -748,60 +748,100 @@
   "date": "2026-08-21"
  },
  "tfpt_research_contracts::section::Research Contracts --- \\texttt{DYN.MARKOV.EMBED.01} / \\texttt{DYN.UNITARY.DILATION.01} (the three meanings of ``dynamics'')::1": {
-  "hash": "26856a757302",
-  "date": "2026-08-27"
+  "hash": "b78b8c8604e4",
+  "date": "2026-08-29"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{QFT4D.OS.RECON.01} (the genuine 4D Euclidean lattice package)::1": {
-  "hash": "3dc580a293f3",
-  "date": "2026-08-21"
+  "hash": "abe7d72a3260",
+  "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CHIRAL4D.NOMIRROR.01} (the chiral 4D lattice matter theorem)::1": {
-  "hash": "04b3cf3ed4e0",
-  "date": "2026-08-21"
+  "hash": "d11d21a73198",
+  "date": "2026-08-29"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{CHIRAL4D.MIRROR.DET16.01} (DET16 rank-one projector, finite cluster)::1": {
+  "hash": "2c39fcbf51f7",
+  "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Firewall Contract --- \\texttt{GRAV.NONCIRCULAR.01} (the Bisognano--Wichmann direction discipline)::1": {
   "hash": "f330002d2689",
   "date": "2026-08-21"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{OBS.TRANSDUCTION.01} (the transduction principle: eigenvalue, projection, coupling)::1": {
-  "hash": "a3c19806e303",
-  "date": "2026-08-27"
+  "hash": "866499c0c075",
+  "date": "2026-08-28"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{PRED.JOINTLIKELIHOOD.01} (from hit-counting to overdetermined relations)::1": {
-  "hash": "596a9c7bfed8",
-  "date": "2026-08-21"
+  "hash": "855c71f8d6e8",
+  "date": "2026-08-28"
  },
  "tfpt_research_contracts::section::Research Programme --- the TFPT4D master route (one 4D transfer object instead of twenty formulas)::1": {
-  "hash": "09994d4f5fbe",
-  "date": "2026-08-27"
+  "hash": "7c3fbca558e9",
+  "date": "2026-08-28"
  },
  "tfpt_research_contracts::section::Verified Selector --- \\texttt{DIMENSION.SELECTOR.4D.01} (why $d=4$, conditionally)::1": {
   "hash": "1dfc612d50f8",
   "date": "2026-08-21"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.SIMPLECURRENT.GENERATOR.01} (one generator instead of 128 currents)::1": {
-  "hash": "d389ac431425",
-  "date": "2026-08-27"
+  "hash": "b38595b3044b",
+  "date": "2026-08-29"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{TFPT4D.LATTICE.ACTION.01} (the explicit finite 4D lattice action and its seven finite gates)::1": {
-  "hash": "7a2d56b2942a",
-  "date": "2026-08-21"
+  "hash": "2306d7dd89b9",
+  "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.DETLINE.UNIFICATION.01} (the determinant-line unification hypothesis)::1": {
-  "hash": "1494f0eb620f",
-  "date": "2026-08-27"
+  "hash": "88390ff4969e",
+  "date": "2026-08-28"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{FTRANSFER.GENERATING.01} (four transfer bridges from one generating functional)::1": {
-  "hash": "4c9fc8b45ed9",
-  "date": "2026-08-21"
+  "hash": "b4ca77d23d0c",
+  "date": "2026-08-28"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{GAUGE.DETLINE.FIXPOINT.01} (all three gauge couplings from one zeta-det functional)::1": {
+  "hash": "0a36115d27f8",
+  "date": "2026-08-30"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{GRAV.SPIN2.EMERGENCE.01} (massless transversal spin-2 from the same spectral determinant)::1": {
+  "hash": "0aebf1e0bf62",
+  "date": "2026-08-30"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{FTRANSFER.SK.RHO0.01} (Schwinger--Keldysh completion: cosmological transfers need $(S,\\rho_0)$)::1": {
+  "hash": "294aa6ef04ff",
+  "date": "2026-08-30"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.MMST.TYPEIII.CHARGED.01} (one scaling-limit theorem)::1": {
+  "hash": "b2889cf4fe36",
+  "date": "2026-08-30"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{TFPT.TOE.COMPLETE.01} (the named AND of eight completeness gates)::1": {
+  "hash": "adff2b5c3732",
+  "date": "2026-08-30"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{FLAV.NUSCALE.06} (pentagon-class misalignment candidate)::1": {
+  "hash": "d08015c7ace7",
+  "date": "2026-08-29"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{FLAV.NU.TEXTURE.MECHANISM.01} (both structural nulls as binding constraints)::1": {
+  "hash": "72ec4cc2a6ca",
+  "date": "2026-08-30"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.MILNOR.LOCALRING.01} (canonical identification of the seam collar with the reduced Milnor algebra)::1": {
+  "hash": "431f75bfa458",
+  "date": "2026-08-30"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{GRAV.WEINBERG.WITTEN.01} (Weinberg--Witten firewall before any spin-2 marker move)::1": {
+  "hash": "bf648abfdd8b",
+  "date": "2026-08-28"
  },
  "tfpt_research_contracts::section::Externalization Contract --- \\texttt{SEAM.EQUIV.01} (the seam scaling-limit theorem, packaged for external specialists)::1": {
-  "hash": "22aed642d592",
-  "date": "2026-08-27"
+  "hash": "061b075f187c",
+  "date": "2026-08-28"
  },
  "tfpt_research_contracts::section::Externalization Contract --- \\texttt{ALPHA.QUILLEN.EXACT.01} (the determinant-line variation theorem, packaged for external specialists)::1": {
-  "hash": "30ea70bef5fa",
-  "date": "2026-08-27"
+  "hash": "8e155f6490e9",
+  "date": "2026-08-29"
  },
  "tfpt_research_contracts::section::Externalization Contract --- \\texttt{PRIME.RESIDUE.EXTERNAL.01} (the prime-front terminal residue, packaged for external specialists)::1": {
   "hash": "a5f0da8d7c4a",
@@ -816,8 +856,8 @@
   "date": "2026-06-24"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "e35a0127735d",
-  "date": "2026-08-27"
+  "hash": "1c7f572e7e45",
+  "date": "2026-08-28"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {
   "hash": "5d4220f72d42",
@@ -828,8 +868,8 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::The unique attractor: a gapped transport selects ONE fixed point::1": {
-  "hash": "1e912a776770",
-  "date": "2026-08-27"
+  "hash": "60db7d748403",
+  "date": "2026-08-28"
  },
  "origin_theory::section::One $\\ainv$ for electromagnetism, the cosmic horizon and $\\Lambda$::1": {
   "hash": "915ef1e6f23a",
@@ -880,8 +920,8 @@
   "date": "2026-06-27"
  },
  "tfpt_safeguards::section::Layer 3 --- the over-determination map (multiply vs.\\ compress)::1": {
-  "hash": "c55b7e70503f",
-  "date": "2026-08-27"
+  "hash": "3085ab328da9",
+  "date": "2026-08-28"
  },
  "tfpt_safeguards::section::Layer 4 --- the firewall and the No-Unit theorem::1": {
   "hash": "491326327cb7",
