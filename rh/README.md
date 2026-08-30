@@ -6601,6 +6601,19 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450
 are parallel and not dropped.
 
+**Plateau theorem (r452,
+PRIME.RDAGGER.PLATEAU\_THEOREM.01).**
+Sealed probe
+`experiments/tfpt-discovery/plateau_theorem_probe.py`
+(smoke 25/25, SPEC\_SHA `63758d55e84acb27`)
+plus `rh/problem/plateau_theorem.tex` (+ PDF +
+`verify_plateau_theorem.py`, 6/6, `PLATEAU THEOREM VERIFIED`).
+**Ausgang PLATEAU\_IDENTITY\_PROVED / QSTAR\_UNDECIDED.**
+Grade-0 SATZ $q_*=M_\partial/(M_\partial+5/7)$ on every window with $M_\partial=\tilde\mu_0-\tilde\nu_0$ (kz$\ge 69$, residual $<5\cdot10^{-5}$).  A(ii) value law refuted by the sister pair.  Constancy is $\rho_n=0$.  Whether $M_\partial$ is unbounded stays open.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -6969,6 +6982,10 @@ rh/
 │   │                     RES_MISMATCH; PREFIX_Q_PLATEAU;
 │   │                     n_stab is a sufficient cut.
 │   │                     No RH claim
+│   ├── plateau_theorem.tex(+pdf) — r452: PLATEAU_IDENTITY_PROVED;
+│   │                     QSTAR_UNDECIDED;
+│   │                     q_* = M_d/(M_d+5/7).
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7170,6 +7187,9 @@ rh/
 │   └── verify_nstab_transition.py — machine check of
 │                         nstab_transition.tex (6/6,
 │                         NSTAB TRANSITION VERIFIED)
+│   └── verify_plateau_theorem.py — machine check of
+│                         plateau_theorem.tex (6/6,
+│                         PLATEAU THEOREM VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7527,7 +7547,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r451 from
+2. **Sealed probes** — the campaign probes r250–r452 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7995,6 +8015,14 @@ Suite surface: integrity + probes + Lean
 is additive on the r449/r450 n_stab census
 (TRANSITION_SMOOTH: no universal cliff at
 n_stab; RES_MISMATCH; PREFIX_Q_PLATEAU).
+It does not touch `experiments/next.txt`.  The Lean
+landing site is unchanged; this round does not add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r452 coexistence.** Round 452 (`plateau_theorem_probe.py`)
+is additive on the r451 plateau census
+(PLATEAU_IDENTITY_PROVED: q_* = M_d/(M_d+5/7)
+on M_d = mu_0-nu_0; QSTAR_UNDECIDED).
 It does not touch `experiments/next.txt`.  The Lean
 landing site is unchanged; this round does not add Lean.
 Suite surface: integrity + probes

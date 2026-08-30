@@ -3626,6 +3626,36 @@
       "bytes": 209993
     },
     {
+      "path": "rh/problem/plateau_theorem.tex",
+      "role": "problem_statement",
+      "round": "r452 companion",
+      "ledger_ids": [],
+      "status": "lemma-first plateau identity (round 452): PLATEAU_IDENTITY_PROVED; QSTAR_UNDECIDED; q_* = M_d/(M_d+5/7) on M_d = mu_0-nu_0.  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "8a4b2d91c4ec3c82ff1bb73109fdee910a8e2e34de32398a569e3b8e5d3fb3c5",
+      "bytes": 8504
+    },
+    {
+      "path": "rh/problem/verify_plateau_theorem.py",
+      "role": "problem_check",
+      "round": "r452 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in plateau_theorem.tex: standalone (PLATEAU_IDENTITY_PROVED, QSTAR_UNDECIDED, sister A(ii) REFUTED) plus construction pins (kz17 grade-0, rho cliff, scramble).  6/6 gates, final line PLATEAU THEOREM VERIFIED",
+      "pin": true,
+      "sha256": "04f69fb9ea0612d3ef606baa7a8f6f2aee26ffce70c6a8b12649ee1bb51e5052",
+      "bytes": 3946
+    },
+    {
+      "path": "rh/problem/plateau_theorem.pdf",
+      "role": "problem_statement",
+      "round": "r452 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of plateau_theorem.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "0402fc9bd3181cbc2587af4eb7657b6b22c6e220708f7544a9b29a3501a28a1b",
+      "bytes": 221146
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3800,8 +3830,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "42191f095dea2daf43e38cf27738a72788379fd87d195772c840aa76ca786eb6",
-      "bytes": 5527414
+      "sha256": "30339c14389bda4a5cdbe1fbae6ee490521eaa1616cb8a0c9ee10c3bb283fbeb",
+      "bytes": 5529445
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4552,6 +4582,16 @@
       "pin": true,
       "sha256": "2d2cf905a86995f931e8dc7fbdf6376fe77cbe8ea8676ff3f25fa86d81294b04",
       "bytes": 19564
+    },
+    {
+      "path": "experiments/tfpt-discovery/plateau_theorem_probe.py",
+      "role": "sealed_probe",
+      "round": "r452",
+      "ledger_ids": [],
+      "status": "plateau theorem (round 452, PRIME.RDAGGER.PLATEAU_THEOREM.01; experiments-side, NO ledger row): lemma-first SATZ attack on the r451 Schur plateau (names the plateau, not a kink).  VERDICT PLATEAU_IDENTITY_PROVED / QSTAR_UNDECIDED.  Grade-0 evaluation of the exact pack: b0 = M_d/sqrt(mu_0), C00 = nu_0/mu_0, B_w = M_d+5/7 on rho-tail 0, hence q_* = M_d/(M_d+5/7) whenever M_d = mu_0-nu_0 (every kz>=69, residual <5e-5).  A(i) chain-zero REFUTED (|Cb|/|b|~0.09).  A(ii) value law REFUTED (sister 136/137: m>=2 rel 1.88e-9, same n_stab=175, q* differs by 0.029; value is M_d 4.817 vs 6.436).  Constancy <=> rho_n=0 (CLIFF is the first rho!=0; 137 continues).  q* trend is M_d growing; whether M_d is unbounded stays open (AIC M2 vs a, sister kills an a-law).  Cofinality of n_stab REDUCED to degreewise fold-moment convergence (rel_m2 ~ 2.06e-4 a^{-1.90}).  SCRAMBLE kills latch and plateau.  First measured in /tmp then sealed.  Companion rh/problem/plateau_theorem.tex + verify_plateau_theorem.py PLATEAU THEOREM VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "5b96c0f30dcb6ad5564a23b4cc31d3ed78e14aa1e2f8286fd3aad55188cf1898",
+      "bytes": 15680
     }
   ]
 }
