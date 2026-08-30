@@ -6640,6 +6640,19 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453
 are parallel and not dropped.
 
+**ARCH chain (r455,
+PRIME.RDAGGER.ARCH\_CHAIN\_THEOREM.01).**
+Sealed probe
+`experiments/tfpt-discovery/arch_chain_probe.py`
+(smoke 20/20, SPEC\_SHA `8f353fbb11d03d43`)
+plus `rh/problem/arch_chain.tex` (+ PDF +
+`verify_arch_chain.py`, 6/6, `ARCH CHAIN VERIFIED`).
+**Ausgang L3\_PROVED / L1\_PNT\_SUFFICIENT / CHAIN\_MAPPED.**
+[L1] elementary (3-lag + $\Lambda(n)=0$ for $n<2$); not RH-circular.  [L3] $h>0$ classical, $\rho_n=0$ on $1..J_B-1$, $J_B=\mathtt{BG\_DU}/\Delta$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -7020,6 +7033,10 @@ rh/
 │   │                     LIMITCHAIN_ALIVE_200;
 │   │                     CHAIN_DOCUMENTED.
 │   │                     No RH claim
+│   ├── arch_chain.tex(+pdf) — r455: L3_PROVED;
+│   │                     L1_PNT_SUFFICIENT;
+│   │                     CHAIN_MAPPED.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7230,6 +7247,9 @@ rh/
 │   └── verify_limit_object.py — machine check of
 │                         limit_object.tex (6/6,
 │                         LIMIT OBJECT VERIFIED)
+│   └── verify_arch_chain.py — machine check of
+│                         arch_chain.tex (6/6,
+│                         ARCH CHAIN VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7587,7 +7607,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r454 from
+2. **Sealed probes** — the campaign probes r250–r455 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -8079,6 +8099,14 @@ Suite surface: integrity + probes
 is additive on the r453 cofinal collapse
 (LIMIT_CLASSICAL: m_inf = m_ARCH for j>=2;
 LIMITCHAIN_ALIVE_200; CHAIN_DOCUMENTED).
+It does not touch `experiments/next.txt`.  The Lean
+landing site is unchanged; this round does not add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r455 coexistence.** Round 455 (`arch_chain_probe.py`)
+is additive on the r454 limit object
+(L3_PROVED eventual per n; L1_PNT_SUFFICIENT,
+actual strength elementary; CHAIN_MAPPED).
 It does not touch `experiments/next.txt`.  The Lean
 landing site is unchanged; this round does not add Lean.
 Suite surface: integrity + probes

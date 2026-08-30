@@ -3716,6 +3716,36 @@
       "bytes": 221496
     },
     {
+      "path": "rh/problem/arch_chain.tex",
+      "role": "problem_statement",
+      "round": "r455 companion",
+      "ledger_ids": [],
+      "status": "lemma-first ARCH fold and conditional chain (round 455): L3_PROVED; L1_PNT_SUFFICIENT; CHAIN_MAPPED.  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "61ccf414bdead3bbc435a198be236a6a7dd770536d44d7d67a55b096b6bd4ddd",
+      "bytes": 9124
+    },
+    {
+      "path": "rh/problem/verify_arch_chain.py",
+      "role": "problem_check",
+      "round": "r455 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in arch_chain.tex: standalone (L3_PROVED, L1_PNT_SUFFICIENT, CHAIN_MAPPED, 3-lag identity, sympy rho) plus construction pins (n_stab=p0-1, MAIN-ARCH kernel, J_B).  6/6 gates, final line ARCH CHAIN VERIFIED",
+      "pin": true,
+      "sha256": "aab248e7789eeb10a48fbe39de9eb9f82d404fa217f9d7d79f339c6ec2b29d29",
+      "bytes": 3412
+    },
+    {
+      "path": "rh/problem/arch_chain.pdf",
+      "role": "problem_statement",
+      "round": "r455 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of arch_chain.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "81e2e5f73f6938ae205f7296ab6fd992f936ff04f77ef4645e4e00014dc4b9c6",
+      "bytes": 204616
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3890,8 +3920,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "6b451b8522a36fc450828cca08c8bea5c119a4188d8317e4feea22691981053d",
-      "bytes": 5533388
+      "sha256": "aefe1c142a7d5d0934e29089047d493697ff1815224cd02ea3ae213b9fbc7a89",
+      "bytes": 5535384
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4672,6 +4702,16 @@
       "pin": true,
       "sha256": "7f64e8a4b8ae385f403bc3eab1384fc2f562b9a4eed7760c15c1257f053265dc",
       "bytes": 13577
+    },
+    {
+      "path": "experiments/tfpt-discovery/arch_chain_probe.py",
+      "role": "sealed_probe",
+      "round": "r455",
+      "ledger_ids": [],
+      "status": "arch chain theorem (round 455, PRIME.RDAGGER.ARCH_CHAIN_THEOREM.01; experiments-side, NO ledger row): lemma-first, the ARCH fold is the 3-lag identity m_j = -1/2 c_{j-1}+c_j-1/2 c_{j+1}, not a named Jacobi family.  VERDICT L3_PROVED / L1_PNT_SUFFICIENT / CHAIN_MAPPED.  [L1] is elementary: c^P_i=0 for (i+1)Delta < log 2, so MAIN=ARCH through J_P-2; n_stab=J_P-1 on {17,116,136,197,230,500}.  PNT is surplus (PNT-ARCH >> MAIN-ARCH).  NOT RH_CIRCULAR.  [L3] h>0 classical on the mu-chain; rho_n=0 on 1..J_B-1 with J_B=BG_DU/Delta (smooth_comb starts at 0.01); rho_0=M_d is the exception.  Eventual per fixed n.  First measured in /tmp then sealed.  Companion rh/problem/arch_chain.tex + verify_arch_chain.py ARCH CHAIN VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "4088f92b6bb2b9bbef9654647c2a1d179811c0ca78f4c2f61fb3361b33962f28",
+      "bytes": 12738
     }
   ]
 }
