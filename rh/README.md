@@ -6575,6 +6575,19 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448
 are parallel and not dropped.
 
+**Prefix mincut (r450,
+PRIME.RDAGGER.PREFIX\_MINCUT.01).**
+Sealed probe
+`experiments/tfpt-discovery/prefix_mincut_probe.py`
+(smoke 18/18, SPEC\_SHA `a105804e98ccf8d1`)
+plus `rh/problem/prefix_mincut.tex` (+ PDF +
+`verify_prefix_mincut.py`, 7/7, `PREFIX MINCUT VERIFIED`).
+**Ausgang M2\_UNDECIDED / PREFIX\_OBJECT\_SPLIT / NSTAB\_GROWS / CHI\_PREFIX\_LIVES / LEAN\_IDENT\_RFL.**
+The $n_{\mathrm{stab}}$-compression of $R^{\dagger}$ is the frequently-cone (`Iff.rfl`).  Living full-window $\delta$ and $n_{\mathrm{stab}}$-$\delta$ are not close.  Object-pure prefix chart prefers M2; slice floor $+0.02741$ stands on its own chart.  $n_{\mathrm{stab}}\sim a^{1.27}$.  $\chi$ prefix lives (full $\chi$ stays edge-dead).  Lean census stays 5.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -6935,6 +6948,10 @@ rh/
 │   ├── flip_vs_stab.tex(+pdf) — r449: TAIL_ONLY;
 │   │                     flips past n_stab; prefix
 │   │                     R^dagger lives.  No RH claim
+│   ├── prefix_mincut.tex(+pdf) — r450: M2_UNDECIDED;
+│   │                     n_stab-compression named;
+│   │                     living split; chi prefix
+│   │                     lives.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7487,7 +7504,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r449 from
+2. **Sealed probes** — the campaign probes r250–r450 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7943,6 +7960,14 @@ It does not touch `experiments/next.txt`.  The Lean
 landing site is unchanged; this round does not add Lean.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
+**r450 coexistence.** Round 450 (`prefix_mincut_probe.py`)
+is additive on the r449 n_stab census
+(M2_UNDECIDED: n_stab-delta chart prefers M2;
+living full vs prefix split; chi prefix lives).
+It does not touch `experiments/next.txt`.  Lean
+names the prefix mincut by Iff.rfl; census stays 5.
+Suite surface: integrity + probes + Lean
+(`run_rh.py --fast`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

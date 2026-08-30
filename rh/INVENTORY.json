@@ -3566,6 +3566,36 @@
       "bytes": 217076
     },
     {
+      "path": "rh/problem/prefix_mincut.tex",
+      "role": "problem_statement",
+      "round": "r450 companion",
+      "ledger_ids": [],
+      "status": "lemma-first prefix mincut (round 450): M2_UNDECIDED; n_stab-compression of R^dagger is the frequently-cone; living full vs prefix split; chi prefix lives.  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "fee1af06b43482d6725338c8ee5979abbccc7df1c5f73d5d64b7aa93aa9861c6",
+      "bytes": 7502
+    },
+    {
+      "path": "rh/problem/verify_prefix_mincut.py",
+      "role": "problem_check",
+      "round": "r450 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in prefix_mincut.tex: standalone (M2_UNDECIDED, slice M1, pure M2, n_stab grows) plus construction pins (kz17 split, chi split).  7/7 gates, final line PREFIX MINCUT VERIFIED",
+      "pin": true,
+      "sha256": "7c05acf89e87919f20fb1d794f235d9ab8fc2e1cc68da0666f41f521bc9c8ffc",
+      "bytes": 3347
+    },
+    {
+      "path": "rh/problem/prefix_mincut.pdf",
+      "role": "problem_statement",
+      "round": "r450 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of prefix_mincut.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "c30409be1192259f4c22cb5d3bcdf965fa7623f7f15e7e585ad03aaeaabadf70",
+      "bytes": 230576
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3720,8 +3750,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "b9b671e008585d865bd27c98cd743319c1142bbe85c170af40266a7d6b89ebce",
-      "bytes": 3463308
+      "sha256": "65ed5441187724b2c0893f9f74bb867acb60c80a20acd64d1f08ffea1ee3c5aa",
+      "bytes": 3463640
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -3740,8 +3770,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "ff5da8848536c25b3b662a009de1e37e3c4962639318c6788f07446e0b8ecf73",
-      "bytes": 5521371
+      "sha256": "d7f395aa2dade5c2cad2f2cfe40ace00b29cca8c831f715240106185ed013ebf",
+      "bytes": 5525333
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4481,6 +4511,16 @@
       "pin": true,
       "sha256": "1a5dcda0369b5104701ba97c9fb21cc90767208b350bfa43746c6033c40492af",
       "bytes": 11816
+    },
+    {
+      "path": "experiments/tfpt-discovery/prefix_mincut_probe.py",
+      "role": "sealed_probe",
+      "round": "r450",
+      "ledger_ids": [],
+      "status": "prefix mincut (round 450, PRIME.RDAGGER.PREFIX_MINCUT.01; experiments-side, NO ledger row): lemma-first, three questions -- n_stab-compression delta (not prefix-80), n_stab scaling, Lean name.  VERDICT M2_UNDECIDED / PREFIX_OBJECT_SPLIT / NSTAB_GROWS / CHI_PREFIX_LIVES / LEAN_IDENT_RFL.  Object: r362/r369 pack at n_stab, B_w = cumsum(rho)[nstar-2]+5/7.  Living full vs n_stab-delta NOT close (rel 0.97-3.62).  Deep n_stab-delta 136:0.12908 137:0.09989 170:0.10591 197:0.11214 230:0.12674 500:0.09287 (N=17847).  Slice-only M1 +0.02741 stands; mixed and object-pure n_stab charts prefer M2 (no decided positive floor).  n_stab ~ 0.0417 a^1.273, n_stab/N falls 0.021-0.11.  CHI3-15 full q=1.023 dead; prefix n=40 q=0.863 living (death in last 3 grades).  Lean: frequently_selected_prefix_augDualResolvent_ge_half Iff.rfl-identical to the mincut; census stays 5.  First measured in /tmp then sealed.  Companion rh/problem/prefix_mincut.tex + verify_prefix_mincut.py PREFIX MINCUT VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "9d9e7210ec830c5a2705ee88507d02cf20abe0c9ba696687d4bcf901a4db632b",
+      "bytes": 15349
     }
   ]
 }

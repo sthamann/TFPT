@@ -344,6 +344,22 @@ The mean bound is circular: regular off-diagonal
 cancellation against a window-dependent OP kernel
 (second circularity verdict after r399).  Census
 unchanged at 5.  NO RH CLAIM.
+
+## r450 census (prefix mincut)
+
+Definitional sharpening, no new sorry:
+`frequently_selected_prefix_augDualResolvent_ge_half`
+is `frequently_selected_augDualResolvent_ge_half`
+(`frequently_prefix_mincut_ident` is `Iff.rfl`).
+The named frequently-cone is the stabilized-prefix
+compression of `R†` (chain depth `n_stab`,
+r362/r369 border), not the ABD tail.  Python
+n_stab-δ is a different chart from full-window δ
+(living windows disagree at relative gap ~1–3.6);
+χ edge-death is a last-three-grades full-window
+fact (prefix-χ lives).  Floor on the prefix chart
+is M2 / undecided.  Census unchanged at 5.
+NO RH CLAIM.
 -/
 
 end RH

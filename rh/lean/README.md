@@ -1007,6 +1007,14 @@ is machine-checked in `flip_vs_stab_probe.py` /
 census stays 5.  The existing mincut already
 consumes the stabilized `fullRead` prefix.
 
+**r450 prefix mincut (definitional sharpening).**
+`frequently_selected_prefix_augDualResolvent_ge_half`
+is the existing frequently-cone (`Iff.rfl`); the
+named mincut is the $n_{\mathrm{stab}}$-compression
+of $R^{\dagger}$, not the ABD tail.  No new `sorry`;
+census stays 5.  Machine-checked in
+`prefix_mincut_probe.py` / `prefix_mincut.tex`.
+
 **r434 mincut-path graph** (what `rh_of_frequently_selected` /
 `rh_of_frequently_selected_of_A_cap` actually consume).  `#print axioms`
 on the extraction shows `sorryAx` only through

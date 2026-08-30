@@ -287,7 +287,9 @@ consume the existing classical arch-channel sorry through
 The spectral Loewner faces and the arithmetic lemmas are
 `[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`.
 Named Props (`frequently_selected_augDualResolvent_ge_half`,
+`frequently_selected_prefix_augDualResolvent_ge_half`,
 `SelectedSemidefImpliesPlainReads`) are hypotheses, not holes.
+The r450 prefix name is `Iff.rfl`-identical to the mincut.
 Census of `sorry` declarations unchanged at 5.  The r397 Prop
 `selected_augDualResolvent_gt_half` is the stronger alternative.
 NO RH CLAIM. -/

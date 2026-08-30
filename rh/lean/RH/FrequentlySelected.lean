@@ -292,6 +292,28 @@ theorem frequently_selected_of_eventually_gt_half
   h.frequently.mono fun _ ⟨hk, hcone⟩ =>
     ⟨hk, selectedWindowConeSemidef_of_posDef hk hcone⟩
 
+/-! ## r450: the mincut object IS the stabilized prefix
+
+The Python ABD chain may sign-flip past `n_stab` (r449 TAIL_ONLY).
+Extraction never consumes that tail: `fullRead` is required only
+for `meshExp f ≤ selectedMesh k` after onset.  The named mincut
+above is therefore already the prefix compression
+`R†(W_k |_{n ≤ n_stab})` -- the r362/r369 border-augmented
+resolvent cut at the stabilized depth, not at `N_w`.  The next
+two declarations are a definitional sharpening (no new `sorry`).
+The ABD tail is not part of the frequently-quantifier. -/
+
+/-- r450 name of the mincut: `R†` of the stabilized-prefix
+compression (chain depth `n_stab`, border-augmented as in
+r362/r369).  Definitionally the existing frequently-cone. -/
+def frequently_selected_prefix_augDualResolvent_ge_half : Prop :=
+  frequently_selected_augDualResolvent_ge_half
+
+/-- Identification: prefix-mincut ↔ existing mincut (`Iff.rfl`). -/
+theorem frequently_prefix_mincut_ident :
+    frequently_selected_prefix_augDualResolvent_ge_half ↔
+    frequently_selected_augDualResolvent_ge_half := Iff.rfl
+
 /-! ## FREQ plain reads -- the extraction the architecture actually
 needs (onset + mesh + one nonnegative `fullRead`). -/
 
