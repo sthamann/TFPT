@@ -210,6 +210,7 @@ PROBES = [
     ("r428", "qn_reopened_probe.py"),
     ("r429", "zloc_head_probe.py"),
     ("r431", "source_potapov_probe.py"),
+    ("r431-audit", "r431_audit_probe.py"),
     ("r433", "edge_redheffer_probe.py"),
 ]
 
@@ -326,7 +327,7 @@ def check_integrity(suite):
 
 
 def check_probes(suite):
-    section("(2) PROBES -- sealed campaign r250-r433, --smoke mode")
+    section("(2) PROBES -- sealed campaign r250-r433 + r431-audit, --smoke mode")
     py = python_bin()
     cwd = os.path.join(REPO, "experiments", "tfpt-discovery")
     for rnd, probe in PROBES:

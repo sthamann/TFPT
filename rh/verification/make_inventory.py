@@ -1633,6 +1633,45 @@ _R431_STATUS = (
 )
 
 
+
+_R431_AUDIT_STATUS = (
+    "adversarial focus-audit of R431 "
+    "SOURCE_FACTOR_NOT_FOUND "
+    "(round 431-AUDIT, reviewer DCCXCVII Q1-Q3; "
+    "experiments-side, NO ledger row): 22/22 full / "
+    "21/21 smoke; SPEC_SHA 72f5484cc290b740; "
+    "independent constructors (no import of "
+    "source_potapov_probe).  Q1 CONFIRMED: "
+    "Blaschke-Potapov factors with source "
+    "alpha=x+i|w| and u=(2,x) do not commute "
+    "(||[B0,B1]||=5.561e-2) and are J-unitary on R; "
+    "the Homma Redheffer star equals the chain "
+    "product (6.0e-17) and on unipotents is the "
+    "mass sum (residual 0); J-kernel Pick of the "
+    "positive-mass product is PD (nneg=0, "
+    "lam_min=4.679e-3).  Closure lemma: any finite "
+    "J-product of source-pure positive-mass factors "
+    "stays in S_0 (Krein-Langer kappa additive, "
+    "cannot increase).  Inverse-Blaschke of the Arch "
+    "atom has J-kernel nneg=2, rel vs D0=0.777 -- "
+    "not the interpolant residual.  Q2 CONFIRMED: "
+    "m_X(7/3)=-7471/22950 EXACT; D0 inertia (1,1,0) "
+    "D11=-1744/2025; P_X (2,0,0); w9 "
+    "lam_min(P_X)=8.67731 ind_-(I-TT)=1; "
+    "source-order Uvarov 0/104 min=3.248e-7 vs "
+    "r409 index 36; lag-local 18/19/15.  Q3 "
+    "CONFIRMED: Cauchy-pi = Lagrange on the five-atom "
+    "toy AND a second 6-node Q-window (D0 inertia "
+    "(1,2,0), P_X (3,0,0)).  Full wall 0.2 s.  "
+    "AUSGANG CONFIRMED (NOT_FOUND stands, including "
+    "the non-commutative check).  Companion "
+    "rh/problem/r431_audit.tex + "
+    "verify_r431_audit.py 7/7 R431 AUDIT NOTE "
+    "VERIFIED.  NO L* claim, NO R-dagger claim, "
+    "NO RH claim"
+)
+
+
 _R433_STATUS = (
     "edge as Redheffer / Schur step "
     "(round 433, PRIME.RDAGGER.EDGE_REDHEFFER_COMPLETION.01, "
@@ -4598,6 +4637,30 @@ ENTRIES = [
      [],
      "compiled PDF of source_potapov.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/r431_audit.tex", "problem_statement",
+     "r431-AUDIT companion",
+     [],
+     "adversarial focus-audit of R431 "
+     "SOURCE_FACTOR_NOT_FOUND: positive-mass "
+     "J-products stay in S_0 (non-commuting "
+     "Blaschke-Potapov + Redheffer star); R431 "
+     "numbers reproduced; Cauchy-pi on a second "
+     "Q-window.  CONFIRMED.  NO RH claim",
+     True),
+    ("rh/problem/verify_r431_audit.py", "problem_check",
+     "r431-AUDIT companion",
+     [],
+     "machine check of every numbered lemma in "
+     "r431_audit.tex: standalone (Cauchy sum, "
+     "Cauchy-pi, BP non-commute, Redheffer star, "
+     "second window) plus construction pins "
+     "(w9 P_X / I-TT, Uvarov orders).  7/7 gates, "
+     "final line R431 AUDIT NOTE VERIFIED", True),
+    ("rh/problem/r431_audit.pdf", "problem_statement",
+     "r431-AUDIT companion",
+     [],
+     "compiled PDF of r431_audit.tex "
+     "(recompiled artefact, registered unpinned)", False),
     ("rh/problem/edge_redheffer.tex", "problem_statement",
      "r433 companion",
      [],
@@ -4972,6 +5035,11 @@ ENTRIES = [
      "r431",
      [],
      _R431_STATUS,
+     True),
+    (f"{EXP}/r431_audit_probe.py", "sealed_probe",
+     "r431-AUDIT",
+     [],
+     _R431_AUDIT_STATUS,
      True),
     (f"{EXP}/edge_redheffer_probe.py", "sealed_probe",
      "r433",

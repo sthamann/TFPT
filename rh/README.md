@@ -6210,6 +6210,30 @@ NO L\* claim, NO RH CLAIM.
 Coexistence: r374--r430 and r433 are parallel lemma-first
 / Lean / edge-Redheffer lanes; this round is additive.
 
+**Source Potapov audit (r431-AUDIT).**  Adversarial
+re-check of `SOURCE_FACTOR_NOT_FOUND` on independent
+constructors (no import of `source_potapov_probe`).
+Sealed probe `experiments/tfpt-discovery/r431_audit_probe.py`
+(22/22 full, 21/21 smoke, SPEC\_SHA `72f5484cc290b740`)
+plus `rh/problem/r431_audit.tex` (+ PDF +
+`verify_r431_audit.py`, 7/7, `R431 AUDIT NOTE VERIFIED`).
+**Ausgang CONFIRMED.**  Positive-mass $J$-products stay
+in $\mathcal{S}_0$ under multiplication and under the
+Homma Redheffer star (non-commuting Blaschke--Potapov
+$J$-kernel Pick $\mathrm{ind}_-=0$; unipotent star is
+the mass sum).  R431 pins reproduce
+($m_X(7/3)=-7471/22950$, $D_{11}=-1744/2025$,
+$\lambda_{\min}(P_X)=8.67731$, source-order Uvarov
+$0/104$ min $3.248\cdot 10^{-7}$, lag-local $18/19/15$).
+Cauchy--$\pi$ holds on a second six-node $\mathbb{Q}$-window
+(negatives live in $W_Y-S_0$, never in $P_X$).
+No second discovery round.  Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.  Mincut unchanged
+(base 4 / refined 5).
+Coexistence: r374--r433 are parallel lemma-first / Lean
+/ edge-Redheffer lanes; this round is additive.
+
+
 **Edge as Redheffer step (r433,
 PRIME.RDAGGER.EDGE\_REDHEFFER\_COMPLETION.01).**  Sealed
 probe
@@ -6553,6 +6577,10 @@ rh/
 │   │                     factor; Redheffer = Cauchy SATZ;
 │   │                     Pick ≅ I-T*T REFUTED.
 │   │                     SOURCE_FACTOR_NOT_FOUND.  No RH claim
+│   ├── r431_audit.tex(+pdf) — r431-AUDIT: non-commuting
+│   │                     Blaschke–Potapov + Redheffer star
+│   │                     still S_0; numbers reproduced.
+│   │                     CONFIRMED.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7387,6 +7415,14 @@ additive on the reviewer Potapov discovery lane after
 DCCXCVII; it does not touch `rh/lean/`. Suite surface of
 this round: integrity + probes (`run_rh.py --fast --skip-lean`).
 Ausgang `SOURCE_FACTOR_NOT_FOUND`.  NO RH CLAIM.
+**r431-AUDIT coexistence.** Round 431-AUDIT
+(`r431_audit.tex`) is an adversarial re-check of that
+verdict (non-commuting $J$-factors, independent numbers,
+second Cauchy--$\pi$ window).  It does not touch
+`experiments/next.txt` and does not touch `rh/lean/`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+Ausgang `CONFIRMED`.  NO RH CLAIM.
 **r433 coexistence.** Round 433 (`edge_redheffer_probe.py`)
 is additive on the $R^{\dagger}$ Potapov lane after r362/r369
 and r429 (reviewer DCCXCVII Teil D: the border as an
