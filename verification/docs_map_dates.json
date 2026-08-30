@@ -32,7 +32,7 @@
   "date": "2026-08-30"
  },
  "introduction::subsection::The hard reduction: the live residual as typed interfaces::1": {
-  "hash": "f717e26a30b1",
+  "hash": "83ca03e7569e",
   "date": "2026-08-30"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
@@ -624,7 +624,7 @@
   "date": "2026-08-04"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "b9759059aaad",
+  "hash": "271d805d2df0",
   "date": "2026-08-30"
  },
  "tfpt_4_frontier::section::Summary::1": {
@@ -752,7 +752,7 @@
   "date": "2026-08-29"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{QFT4D.OS.RECON.01} (the genuine 4D Euclidean lattice package)::1": {
-  "hash": "abe7d72a3260",
+  "hash": "7158ff8c8143",
   "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CHIRAL4D.NOMIRROR.01} (the chiral 4D lattice matter theorem)::1": {
@@ -788,12 +788,12 @@
   "date": "2026-08-29"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{TFPT4D.LATTICE.ACTION.01} (the explicit finite 4D lattice action and its seven finite gates)::1": {
-  "hash": "2306d7dd89b9",
+  "hash": "f6c7f6c22c90",
   "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.DETLINE.UNIFICATION.01} (the determinant-line unification hypothesis)::1": {
-  "hash": "88390ff4969e",
-  "date": "2026-08-28"
+  "hash": "37e7a1e504d0",
+  "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{FTRANSFER.GENERATING.01} (four transfer bridges from one generating functional)::1": {
   "hash": "b4ca77d23d0c",
@@ -816,7 +816,7 @@
   "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{TFPT.TOE.COMPLETE.01} (the named AND of eight completeness gates)::1": {
-  "hash": "adff2b5c3732",
+  "hash": "d13f456a3b13",
   "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{FLAV.NUSCALE.06} (pentagon-class misalignment candidate)::1": {
@@ -828,7 +828,7 @@
   "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.MILNOR.LOCALRING.01} (canonical identification of the seam collar with the reduced Milnor algebra)::1": {
-  "hash": "431f75bfa458",
+  "hash": "63156e2279ff",
   "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{GRAV.WEINBERG.WITTEN.01} (Weinberg--Witten firewall before any spin-2 marker move)::1": {
@@ -840,8 +840,8 @@
   "date": "2026-08-28"
  },
  "tfpt_research_contracts::section::Externalization Contract --- \\texttt{ALPHA.QUILLEN.EXACT.01} (the determinant-line variation theorem, packaged for external specialists)::1": {
-  "hash": "8e155f6490e9",
-  "date": "2026-08-29"
+  "hash": "65e08c56c3e8",
+  "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Externalization Contract --- \\texttt{PRIME.RESIDUE.EXTERNAL.01} (the prime-front terminal residue, packaged for external specialists)::1": {
   "hash": "a5f0da8d7c4a",

@@ -42,6 +42,7037 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-30",
+    "dateLabel": "2026-08-30 · CXLVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(late-evening harvest — thermodynamic-dynamics theorem "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " detline/W-bridge refinements graduate as "
+      },
+      {
+        "k": "c",
+        "v": "v1013"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v1014"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "1005 \\to 1007"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1173"
+      },
+      {
+        "k": "t",
+        "v": " no new rows, existing contract rows updated, NO status-marker upgrades; Python-only / Wolfram mirror deferred as for v974–v1012, engine still "
+      },
+      {
+        "k": "c",
+        "v": "DEFERRED_NO_ENGINE"
+      },
+      {
+        "k": "t",
+        "v": "). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1013_ thermodynamic_ dynamics.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": "): the mandatory-dynamics leg of "
+      },
+      {
+        "k": "c",
+        "v": "QFT4D.LATTICE.FUNDAMENTAL.01"
+      },
+      {
+        "k": "t",
+        "v": " is CLOSED at Hamiltonian-class level. Cited "
+      },
+      {
+        "k": "c",
+        "v": "articles/ 2026-08-30/ tfpt_ thermodynamic_ dynamics_ en.tex"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": ".pdf"
+      },
+      {
+        "k": "t",
+        "v": ": uniform Lieb–Robinson bound "
+      },
+      {
+        "k": "m",
+        "v": "J=12/5"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "R=2"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "z=4"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa=16043/450"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "v_{\\mathrm{LR}}=32086e/225\\sim387.64"
+      },
+      {
+        "k": "t",
+        "v": "; norm-convergent "
+      },
+      {
+        "k": "m",
+        "v": "\\tau_t"
+      },
+      {
+        "k": "t",
+        "v": "; gauge-invariant quasilocal "
+      },
+      {
+        "k": "m",
+        "v": "\\mathcal A^G"
+      },
+      {
+        "k": "t",
+        "v": " (Gauss caveat resolved on the invariant subalgebra); existence of ground and "
+      },
+      {
+        "k": "m",
+        "v": "\\beta"
+      },
+      {
+        "k": "t",
+        "v": "-KMS states. Numeric twin: measured "
+      },
+      {
+        "k": "m",
+        "v": "v=2.0\\ll"
+      },
+      {
+        "k": "t",
+        "v": " proved bound; analytic finite-volume bound dominates nested differences at buffers "
+      },
+      {
+        "k": "m",
+        "v": "8/16/32"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "1/r"
+      },
+      {
+        "k": "t",
+        "v": " mutant ratio "
+      },
+      {
+        "k": "m",
+        "v": "4.84"
+      },
+      {
+        "k": "t",
+        "v": "; Gauss-positive control commutes, violating embedding has commutator norm "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": ". Remaining: phase uniqueness, limit gap, IR universality. Decision typing UNCHANGED. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1014_ bridge_ refinements.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "17/17"
+      },
+      {
+        "k": "t",
+        "v": "): finite detline restriction isomorphism VERIFIED ("
+      },
+      {
+        "k": "m",
+        "v": "c_{\\mathrm{phase}}"
+      },
+      {
+        "k": "t",
+        "v": " constancy "
+      },
+      {
+        "k": "m",
+        "v": "3.7{\\times}10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": ", conjugation covariance exact, "
+      },
+      {
+        "k": "m",
+        "v": "C=W_{\\mathrm{bulk}}=W_{\\mathrm{seam}}=+1"
+      },
+      {
+        "k": "t",
+        "v": " / mirror "
+      },
+      {
+        "k": "m",
+        "v": "-1"
+      },
+      {
+        "k": "t",
+        "v": "); orientation fixes only the conjugate branch ("
+      },
+      {
+        "k": "m",
+        "v": "2\\to1"
+      },
+      {
+        "k": "t",
+        "v": "); the residual constant "
+      },
+      {
+        "k": "m",
+        "v": "U(1)"
+      },
+      {
+        "k": "t",
+        "v": " is the "
+      },
+      {
+        "k": "m",
+        "v": "A_0"
+      },
+      {
+        "k": "t",
+        "v": " reference normalization — recorded on "
+      },
+      {
+        "k": "c",
+        "v": "ALPHA.QUILLEN.EXACT.01"
+      },
+      {
+        "k": "t",
+        "v": ". W-bridge: P-anch DERIVED ("
+      },
+      {
+        "k": "m",
+        "v": "e_1=R^{-1}(1,1,2)^T"
+      },
+      {
+        "k": "t",
+        "v": " via the winding lock); P-dem PARTIAL (the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z_4"
+      },
+      {
+        "k": "t",
+        "v": " average annihilates the nontrivial character space); missing object "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the character-blind determinant-response map — the same MMST/Quillen externalized leg as TEL-B/ALG-EXH/P1. "
+      },
+      {
+        "k": "c",
+        "v": "AX.P2.01"
+      },
+      {
+        "k": "t",
+        "v": " stays an axiom. Convergence: every remaining axiom-core and continuum gap now runs through ONE externalized theorem. Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " executed-update paragraphs; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " introduction late-evening note; website "
+      },
+      {
+        "k": "c",
+        "v": "papers.ts"
+      },
+      {
+        "k": "t",
+        "v": " / VerificationDag."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-30",
+    "dateLabel": "2026-08-30 · CXLVII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(evening TOE-gate wave — four executed witnesses graduate as "
+      },
+      {
+        "k": "c",
+        "v": "v1012"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "1004 \\to 1005"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1173"
+      },
+      {
+        "k": "t",
+        "v": " no new rows, existing contract rows updated, NO status-marker upgrades; Python-only / Wolfram mirror deferred as for v974–v1011). "
+      },
+      {
+        "k": "c",
+        "v": "v1012_ toe_ gate_ witnesses.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "40/40"
+      },
+      {
+        "k": "t",
+        "v": "): T5 IR universality on the physical QWZ edge — "
+      },
+      {
+        "k": "m",
+        "v": "c\\to1"
+      },
+      {
+        "k": "t",
+        "v": " (limit "
+      },
+      {
+        "k": "m",
+        "v": "0.99993"
+      },
+      {
+        "k": "t",
+        "v": "), clustering dichotomy "
+      },
+      {
+        "k": "m",
+        "v": "\\xi{\\cdot}\\mathrm{gap}\\approx1.089"
+      },
+      {
+        "k": "t",
+        "v": " vs power-law exponent "
+      },
+      {
+        "k": "m",
+        "v": "2.034"
+      },
+      {
+        "k": "t",
+        "v": ", Lieb–Robinson cone "
+      },
+      {
+        "k": "m",
+        "v": "v_{\\mathrm{LR}}=5/3\\ge c"
+      },
+      {
+        "k": "t",
+        "v": " with leakage "
+      },
+      {
+        "k": "m",
+        "v": "0.015"
+      },
+      {
+        "k": "t",
+        "v": ", cubic curvature "
+      },
+      {
+        "k": "m",
+        "v": "\\to1/6"
+      },
+      {
+        "k": "t",
+        "v": " with volume; TYPED SPLIT: gauge holonomy "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " seam clock are not propagating modes, so the common-"
+      },
+      {
+        "k": "m",
+        "v": "c"
+      },
+      {
+        "k": "t",
+        "v": " test needs dynamical gauge excitations. T8 "
+      },
+      {
+        "k": "m",
+        "v": "\\rho_0"
+      },
+      {
+        "k": "t",
+        "v": " eight-candidate table ALL unique; hard sectors kill the SK response ("
+      },
+      {
+        "k": "m",
+        "v": "\\sim10^{-31}"
+      },
+      {
+        "k": "t",
+        "v": "); every response-alive set is exactly "
+      },
+      {
+        "k": "m",
+        "v": "\\rho_{\\mathrm{KMS}}"
+      },
+      {
+        "k": "t",
+        "v": " even without "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " — entropic-proximity selection is VACUOUS at finite level; verdict "
+      },
+      {
+        "k": "c",
+        "v": "NO_SET_WORKS"
+      },
+      {
+        "k": "t",
+        "v": " with the double diagnosis; binding requirement "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " a non-entropic principle (Euclidean-cap / orientation-branch). T6 "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa"
+      },
+      {
+        "k": "t",
+        "v": " six-fold NULL: six pre-declared D4-odd candidates, all parity-checked, all NULL (five at "
+      },
+      {
+        "k": "m",
+        "v": "10^{-14}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "K_4=3.55{\\times}10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " is "
+      },
+      {
+        "k": "m",
+        "v": "18.8{\\times}"
+      },
+      {
+        "k": "t",
+        "v": " too large); the "
+      },
+      {
+        "k": "m",
+        "v": "1.885{\\times}10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " cancellation requires the true "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "D functional — third and final scaffold-level nu-mechanism bound this week. T7 interacting TT: conserved interaction-complete lattice stress "
+      },
+      {
+        "k": "m",
+        "v": "\\sim10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": ", TT spectral positivity exact, sum rules "
+      },
+      {
+        "k": "m",
+        "v": "\\sim10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": ", dominant positive-"
+      },
+      {
+        "k": "m",
+        "v": "Z"
+      },
+      {
+        "k": "t",
+        "v": " pole persists under "
+      },
+      {
+        "k": "m",
+        "v": "\\phi^4"
+      },
+      {
+        "k": "t",
+        "v": " (gapped); "
+      },
+      {
+        "k": "m",
+        "v": "Z"
+      },
+      {
+        "k": "t",
+        "v": " trend "
+      },
+      {
+        "k": "m",
+        "v": "k_1"
+      },
+      {
+        "k": "t",
+        "v": " suppressed "
+      },
+      {
+        "k": "m",
+        "v": "0.958"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "m",
+        "v": "k_2"
+      },
+      {
+        "k": "t",
+        "v": " enhanced "
+      },
+      {
+        "k": "m",
+        "v": "1.033"
+      },
+      {
+        "k": "t",
+        "v": "; free analytic match. Missing: TFPT content, "
+      },
+      {
+        "k": "m",
+        "v": "k\\to0"
+      },
+      {
+        "k": "t",
+        "v": " volume scaling, Ward identities. Ledger notes only on "
+      },
+      {
+        "k": "c",
+        "v": "TFPT.TOE.COMPLETE.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "FTRANSFER.SK.RHO0.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "FLAV.NU.TEXTURE.MECHANISM.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "GRAV.SPIN2.EMERGENCE.01"
+      },
+      {
+        "k": "t",
+        "v": " (all stay "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "). Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " executed-update paragraphs; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " introduction evening-wave note; website "
+      },
+      {
+        "k": "c",
+        "v": "papers.ts"
+      },
+      {
+        "k": "t",
+        "v": " / VerificationDag."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-30",
+    "dateLabel": "2026-08-30 · CXLVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(afternoon harvest — simplicity campaign "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "3{+}1"
+      },
+      {
+        "k": "t",
+        "v": "D ladder graduate as "
+      },
+      {
+        "k": "c",
+        "v": "v1010"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v1011"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "1002 \\to 1004"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1173"
+      },
+      {
+        "k": "t",
+        "v": " no new rows, existing contract rows updated, NO status-marker upgrades; Python-only / Wolfram mirror deferred as for v974–v1009). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1010_ simplicity_ bridge_ census.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "42/42"
+      },
+      {
+        "k": "t",
+        "v": "): derivation matrix over four frozen seeds, unique remainder min "
+      },
+      {
+        "k": "m",
+        "v": "S_4=2"
+      },
+      {
+        "k": "t",
+        "v": "; anchor "
+      },
+      {
+        "k": "m",
+        "v": "(1,1,2)"
+      },
+      {
+        "k": "t",
+        "v": " is not among the three declared Milnor maps; "
+      },
+      {
+        "k": "m",
+        "v": "\\varphi_0"
+      },
+      {
+        "k": "t",
+        "v": " four novel candidates NULL. Bridge "
+      },
+      {
+        "k": "m",
+        "v": "Q"
+      },
+      {
+        "k": "t",
+        "v": " CANONICAL — the bit-selector ladder forces "
+      },
+      {
+        "k": "m",
+        "v": "c=2"
+      },
+      {
+        "k": "t",
+        "v": " and family "
+      },
+      {
+        "k": "m",
+        "v": "n=3"
+      },
+      {
+        "k": "t",
+        "v": " forces "
+      },
+      {
+        "k": "m",
+        "v": "Q"
+      },
+      {
+        "k": "t",
+        "v": " column sums "
+      },
+      {
+        "k": "m",
+        "v": "(9,5,1)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "'s carrier-looking "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " is inherited from "
+      },
+      {
+        "k": "m",
+        "v": "R"
+      },
+      {
+        "k": "t",
+        "v": " column "
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": ", not inserted (the v1005 circularity flag is corrected as forced provenance). Bridge "
+      },
+      {
+        "k": "m",
+        "v": "W"
+      },
+      {
+        "k": "t",
+        "v": " CHOICE-but-conditionally-unique: spectrum "
+      },
+      {
+        "k": "m",
+        "v": "\\{5/2,1,1\\}"
+      },
+      {
+        "k": "t",
+        "v": " alone has "
+      },
+      {
+        "k": "m",
+        "v": "1078"
+      },
+      {
+        "k": "t",
+        "v": " solutions; democratic-image "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " carrier-anchor kernel leave exactly the corpus shift (count "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": "); remaining obligation "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " seam-geometric derivation of those two directional premises. Milnor strong all-structure bridge NONEXISTENT at "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb F_2"
+      },
+      {
+        "k": "t",
+        "v": " (clock "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": ", CP rank "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": ") and at every upstairs home ("
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z/4"
+      },
+      {
+        "k": "t",
+        "v": ", Gaussian "
+      },
+      {
+        "k": "m",
+        "v": "k=2,3"
+      },
+      {
+        "k": "t",
+        "v": ", affine); only the coarse "
+      },
+      {
+        "k": "m",
+        "v": "D"
+      },
+      {
+        "k": "t",
+        "v": "-module"
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": "pairing bridge exists (witness constructed; "
+      },
+      {
+        "k": "m",
+        "v": "\\lvert\\mathrm{Aut}(X)\\rvert=36864"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\lvert\\mathrm{Aut}(Y)\\rvert=8"
+      },
+      {
+        "k": "t",
+        "v": "). Ring-internal identities of v1004 (rank clock, socle CP, self-clock) unaffected. "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.MILNOR.LOCALRING.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "(canonical status SHARPENED); "
+      },
+      {
+        "k": "c",
+        "v": "AX.P2.01"
+      },
+      {
+        "k": "t",
+        "v": " stays an axiom (pencil rehabilitated, W premises remain). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1011_ 3p1d_ ladder_ battery.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "32/32"
+      },
+      {
+        "k": "t",
+        "v": "): B6–B9 compressed — minimal "
+      },
+      {
+        "k": "m",
+        "v": "3{+}1"
+      },
+      {
+        "k": "t",
+        "v": "D viable (exact Gauss "
+      },
+      {
+        "k": "m",
+        "v": "32768"
+      },
+      {
+        "k": "t",
+        "v": ", confinement "
+      },
+      {
+        "k": "m",
+        "v": "W(A{=}1,g{=}2)\\approx0.063"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "W(A{=}1,g{=}0.8)\\approx0.995"
+      },
+      {
+        "k": "t",
+        "v": ", exact in-face isotropy, "
+      },
+      {
+        "k": "m",
+        "v": "g_\\star\\approx1.915"
+      },
+      {
+        "k": "t",
+        "v": "); exact tree-fixing "
+      },
+      {
+        "k": "m",
+        "v": "524288\\to4096"
+      },
+      {
+        "k": "t",
+        "v": " with tree-independence "
+      },
+      {
+        "k": "m",
+        "v": "\\sim10^{-14}"
+      },
+      {
+        "k": "t",
+        "v": "; DET survives coupling; back-reaction; periodicity restores holonomy "
+      },
+      {
+        "k": "m",
+        "v": "K"
+      },
+      {
+        "k": "t",
+        "v": "; charged channels "
+      },
+      {
+        "k": "m",
+        "v": "\\sim2.014{\\times}"
+      },
+      {
+        "k": "t",
+        "v": " at weak "
+      },
+      {
+        "k": "m",
+        "v": "g"
+      },
+      {
+        "k": "t",
+        "v": "; charge-"
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " control matches B8 to "
+      },
+      {
+        "k": "m",
+        "v": "10^{-10}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "K"
+      },
+      {
+        "k": "t",
+        "v": " collapses above "
+      },
+      {
+        "k": "m",
+        "v": "g\\sim1.6"
+      },
+      {
+        "k": "t",
+        "v": ". BINDING: the matching point of the coupling functional must sit in the deconfined/weak regime. "
+      },
+      {
+        "k": "c",
+        "v": "QFT4D.LATTICE.FUNDAMENTAL.01"
+      },
+      {
+        "k": "t",
+        "v": " Decision typing UNCHANGED (Kronecker limitation removed); "
+      },
+      {
+        "k": "c",
+        "v": "GAUGE.DETLINE.FIXPOINT.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "with the matching-scale constraint recorded. Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " executed-update paragraphs (MILNOR sharpening, P2 rehabilitation, QFT4D ladder, DETLINE matching-scale); "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " introduction afternoon note; website "
+      },
+      {
+        "k": "c",
+        "v": "papers.ts"
+      },
+      {
+        "k": "t",
+        "v": " / VerificationDag."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-30",
+    "dateLabel": "2026-08-30 · CXLV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(review wave 7 — four exploration strands graduate as "
+      },
+      {
+        "k": "c",
+        "v": "v1006"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v1009"
+      },
+      {
+        "k": "t",
+        "v": ": the MMST lemma battery, the DET16 stability battery, the "
+      },
+      {
+        "k": "m",
+        "v": "2{+}1"
+      },
+      {
+        "k": "t",
+        "v": "D master-object assembly scaffold, and the "
+      },
+      {
+        "k": "m",
+        "v": "\\rho_0"
+      },
+      {
+        "k": "t",
+        "v": " constrained minimizer; suite "
+      },
+      {
+        "k": "m",
+        "v": "998 \\to 1002"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1173"
+      },
+      {
+        "k": "t",
+        "v": " no new rows, existing contract rows updated, NO status-marker upgrades; Python-only / Wolfram mirror deferred as for v974–v1005). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1006_ mmst_ lemma_ battery.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "68/68"
+      },
+      {
+        "k": "t",
+        "v": "): five lemmas in-house on "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.MMST.TYPEIII.CHARGED.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "— L3 crossed-product; UGF "
+      },
+      {
+        "k": "m",
+        "v": "K_G=\\pi^2/4"
+      },
+      {
+        "k": "t",
+        "v": " (measured plateau "
+      },
+      {
+        "k": "m",
+        "v": "\\sim1.023"
+      },
+      {
+        "k": "t",
+        "v": ", max measured "
+      },
+      {
+        "k": "m",
+        "v": "K"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "1.029399"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "N=16"
+      },
+      {
+        "k": "t",
+        "v": "); TEL-a "
+      },
+      {
+        "k": "m",
+        "v": "N^{-2}"
+      },
+      {
+        "k": "t",
+        "v": " with exact isometries ("
+      },
+      {
+        "k": "m",
+        "v": "A_{\\mathrm{TEL}}=5120(1+\\pi/2)"
+      },
+      {
+        "k": "t",
+        "v": ", measured envelope "
+      },
+      {
+        "k": "m",
+        "v": "3.420384<8"
+      },
+      {
+        "k": "t",
+        "v": "); integer D5+A3 pairings; "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z_4"
+      },
+      {
+        "k": "t",
+        "v": " outerness in the limit "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " finite-inner correction. Residual boxed: TEL-B-EXTERNAL (Hankel "
+      },
+      {
+        "k": "m",
+        "v": "C_R"
+      },
+      {
+        "k": "t",
+        "v": "; HS remainder sourced from the paper max "
+      },
+      {
+        "k": "m",
+        "v": "2.105079358"
+      },
+      {
+        "k": "t",
+        "v": " / fit "
+      },
+      {
+        "k": "m",
+        "v": "2.107565497"
+      },
+      {
+        "k": "t",
+        "v": " / v998 bound "
+      },
+      {
+        "k": "m",
+        "v": "2.11"
+      },
+      {
+        "k": "t",
+        "v": ", not recomputed) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " ALG-EXH (two Buchholz–Verch estimates). Display stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". Cited "
+      },
+      {
+        "k": "c",
+        "v": "articles/2026-08-30/mmst_charged_scaling_limit_en.tex"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "21"
+      },
+      {
+        "k": "t",
+        "v": " pp) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "externalization_mmst_handoff_v2_en.html"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1007_ det16_ stability_ battery.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "67/67"
+      },
+      {
+        "k": "t",
+        "v": "): T1/T2 proved (v1002); T3 Michalakis–Zwolak cited-verified (LTQO, "
+      },
+      {
+        "k": "m",
+        "v": "t_*>0"
+      },
+      {
+        "k": "t",
+        "v": ", gap "
+      },
+      {
+        "k": "m",
+        "v": "\\ge1/2"
+      },
+      {
+        "k": "t",
+        "v": "). Counting line "
+      },
+      {
+        "k": "m",
+        "v": "n=2,3"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "n=2"
+      },
+      {
+        "k": "t",
+        "v": " closing scan through "
+      },
+      {
+        "k": "m",
+        "v": "t=4"
+      },
+      {
+        "k": "t",
+        "v": "; dynamical "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z_2/\\mathbb Z_4"
+      },
+      {
+        "k": "t",
+        "v": " uniquely gapped (full-probe min "
+      },
+      {
+        "k": "m",
+        "v": "0.728854416"
+      },
+      {
+        "k": "t",
+        "v": " pinned; compressed suite). SW "
+      },
+      {
+        "k": "m",
+        "v": "1-\\alpha t^2+O(t^4)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "c_{\\mathrm{geo}}/L"
+      },
+      {
+        "k": "t",
+        "v": " bounded. "
+      },
+      {
+        "k": "m",
+        "v": "1/192"
+      },
+      {
+        "k": "t",
+        "v": " boxed (ordinary hopping not block-diagonal); BDL boxed (no volume-uniform gap remainder). "
+      },
+      {
+        "k": "c",
+        "v": "CHIRAL4D.MIRROR.DET16.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "CHIRAL4D.NOMIRROR.01"
+      },
+      {
+        "k": "t",
+        "v": " unmoved. Cited "
+      },
+      {
+        "k": "c",
+        "v": "articles/2026-08-30/det16_mirror_gap_theorem_en.tex"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(3)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1008_ master_ assembly_ scaffold.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "22/22"
+      },
+      {
+        "k": "t",
+        "v": "): "
+      },
+      {
+        "k": "m",
+        "v": "2{+}1"
+      },
+      {
+        "k": "t",
+        "v": "D master-object scaffold-coherent — combinatorial "
+      },
+      {
+        "k": "m",
+        "v": "K=0"
+      },
+      {
+        "k": "t",
+        "v": "; frozen-link "
+      },
+      {
+        "k": "m",
+        "v": "q^2\\sim4"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "K(q=0)=0"
+      },
+      {
+        "k": "t",
+        "v": "; unique-contractive "
+      },
+      {
+        "k": "m",
+        "v": "\\lvert R'\\rvert<1"
+      },
+      {
+        "k": "t",
+        "v": "; QWZ wall slope "
+      },
+      {
+        "k": "m",
+        "v": "\\approx-0.9989"
+      },
+      {
+        "k": "t",
+        "v": ", DET gap "
+      },
+      {
+        "k": "m",
+        "v": "\\ge1.5"
+      },
+      {
+        "k": "t",
+        "v": " through "
+      },
+      {
+        "k": "m",
+        "v": "t=0.6"
+      },
+      {
+        "k": "t",
+        "v": "; assembly "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z_6"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "(1,2,3,0)"
+      },
+      {
+        "k": "t",
+        "v": ", clock "
+      },
+      {
+        "k": "m",
+        "v": "[0,1,1,2]"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "m",
+        "v": "L=3"
+      },
+      {
+        "k": "t",
+        "v": " spaces "
+      },
+      {
+        "k": "m",
+        "v": "262144"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "m",
+        "v": "129024"
+      },
+      {
+        "k": "t",
+        "v": " out of suite. Decision "
+      },
+      {
+        "k": "c",
+        "v": "QFT4D.LATTICE.FUNDAMENTAL.01"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "GAUGE.DETLINE.FIXPOINT.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "unmoved. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(4)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1009_ rho0_ minimizer.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": "): finite uniqueness of the KMS compression (Klein); Hessian strictly positive; centre dim "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": "; identity "
+      },
+      {
+        "k": "m",
+        "v": "\\sim8{\\times}10^{-17}"
+      },
+      {
+        "k": "t",
+        "v": ". TYPED: "
+      },
+      {
+        "k": "c",
+        "v": "V1000_CONSEQUENCE_MISMATCH"
+      },
+      {
+        "k": "t",
+        "v": " (compression kills the SK response vs frozen contrast "
+      },
+      {
+        "k": "m",
+        "v": "3.550{\\times}10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "CENTER_FLATNESS_PREMISE_FALSE"
+      },
+      {
+        "k": "t",
+        "v": ". Canonical formula needs a weaker admissible set. "
+      },
+      {
+        "k": "c",
+        "v": "FTRANSFER.SK.RHO0.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " executed-update paragraphs; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " wave-7 paragraph; introduction status card; website "
+      },
+      {
+        "k": "c",
+        "v": "papers.ts"
+      },
+      {
+        "k": "t",
+        "v": " / VerificationDag."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-30",
+    "dateLabel": "2026-08-30 · CXLIV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(review wave 6 — two exploration probes graduate as "
+      },
+      {
+        "k": "c",
+        "v": "v1004"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v1005"
+      },
+      {
+        "k": "t",
+        "v": " plus two registrations and display corrections: the Milnor–Frobenius–Gray finite algebra, the circularity-flagged relative pencil, the local-ring identification contract, the Weinberg–Witten spin-2 firewall, and honest rest/SM/gravity wording; suite "
+      },
+      {
+        "k": "m",
+        "v": "996 \\to 998"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1171 \\to 1173"
+      },
+      {
+        "k": "t",
+        "v": ": two new rows, existing contract rows updated, NO status-marker upgrades; Python-only / Wolfram mirror deferred as for v974–v1003). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1004_ milnor_ frobenius_ gray.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "40/40"
+      },
+      {
+        "k": "t",
+        "v": "): CLASSICAL (cite, no claim) — Milnor algebra of "
+      },
+      {
+        "k": "m",
+        "v": "x^2+y^3+z^5\\cong\\mathbb Q[y,z]/(y^2,z^4)"
+      },
+      {
+        "k": "t",
+        "v": " dimension "
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": ", spectral numbers "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " exponents "
+      },
+      {
+        "k": "m",
+        "v": "\\{1,7,11,13,17,19,23,29\\}"
+      },
+      {
+        "k": "t",
+        "v": ". NEW-IN-CORPUS EXACT "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "-finite: rank clock "
+      },
+      {
+        "k": "m",
+        "v": "(2-a)(4-b)"
+      },
+      {
+        "k": "t",
+        "v": " table-sum "
+      },
+      {
+        "k": "m",
+        "v": "30=h(E_8)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "S=pqr\\cdot\\mu/8"
+      },
+      {
+        "k": "t",
+        "v": "; self-clock iff "
+      },
+      {
+        "k": "m",
+        "v": "\\mu=8"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "(2,3,5)"
+      },
+      {
+        "k": "t",
+        "v": " unique among ordered spherical triples; Galois–Gray "
+      },
+      {
+        "k": "m",
+        "v": "11/7/-1"
+      },
+      {
+        "k": "t",
+        "v": " (binary Gray order "
+      },
+      {
+        "k": "m",
+        "v": "0\\to1\\to3\\to2"
+      },
+      {
+        "k": "t",
+        "v": "); CP "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " socle/Frobenius; integral dual-number bridge "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z[y,z]/(y^2,z^4)\\otimes\\mathbb F_2"
+      },
+      {
+        "k": "t",
+        "v": " free rank "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " over "
+      },
+      {
+        "k": "m",
+        "v": "D=\\mathbb F_2[\\varepsilon]/(\\varepsilon^2)"
+      },
+      {
+        "k": "t",
+        "v": ", basis-dependent. INTERPRETIVE "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "PG(3,2)=AG(3,2)\\sqcup PG(2,2)"
+      },
+      {
+        "k": "t",
+        "v": ". Mutants: "
+      },
+      {
+        "k": "m",
+        "v": "(2,3,7)"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "S=63\\neq42"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "A_8"
+      },
+      {
+        "k": "t",
+        "v": " self-clock survives but exponents fail; wrong socle rank "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": ". NEW ledger row "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.MILNOR.LOCALRING.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ": required canonical geometric/mechanical identification of the raw seam collar / "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " transition bus with "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb F_2[y,z]/(y^2,z^4)"
+      },
+      {
+        "k": "t",
+        "v": " preserving dual-number action, Frobenius pairing, Gray torsor, deck action and CP (rank clock and socle-CP as outputs); kill "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " second inequivalent identification or "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "-equivariance failure; currently "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "because Milnor algebra "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " exponents are classical and the corpus map is unproven. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1005_ relative_ pencil_ bridges.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "43/43"
+      },
+      {
+        "k": "t",
+        "v": "): EXACT "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "-finite Hankel "
+      },
+      {
+        "k": "m",
+        "v": "p_n p_{n+2}-p_{n+1}^2=2^{n+1}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Jacobi spec "
+      },
+      {
+        "k": "m",
+        "v": "\\{1,2\\}"
+      },
+      {
+        "k": "t",
+        "v": " diag "
+      },
+      {
+        "k": "m",
+        "v": "(4/3,5/3)"
+      },
+      {
+        "k": "t",
+        "v": " (v106/v119) and winding spec "
+      },
+      {
+        "k": "m",
+        "v": "\\{5/2,1,1\\}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " fixed plane (v4). EXACT BUT CIRCULARITY-FLAGGED "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": ": unique "
+      },
+      {
+        "k": "m",
+        "v": "t=2"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda=7/3"
+      },
+      {
+        "k": "t",
+        "v": ", factorisation "
+      },
+      {
+        "k": "m",
+        "v": "(3\\lambda-7)(\\lambda^2-2\\lambda+2)"
+      },
+      {
+        "k": "t",
+        "v": ", CM "
+      },
+      {
+        "k": "m",
+        "v": "J_0^2=-I"
+      },
+      {
+        "k": "t",
+        "v": ", dual number mod "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": ", index "
+      },
+      {
+        "k": "m",
+        "v": "25=g_{\\mathrm{car}}^2"
+      },
+      {
+        "k": "t",
+        "v": " SNF "
+      },
+      {
+        "k": "m",
+        "v": "(1,1,25)"
+      },
+      {
+        "k": "t",
+        "v": " — BUT carrier "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " already sits in the column sums of "
+      },
+      {
+        "k": "m",
+        "v": "Q_2"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": ": NOT a P2 selector until "
+      },
+      {
+        "k": "m",
+        "v": "Q"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": " are derived from seam geometry independently; "
+      },
+      {
+        "k": "c",
+        "v": "AX.P2.01"
+      },
+      {
+        "k": "t",
+        "v": " typing UNCHANGED. INTERPRETIVE "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": ": Klein-four SNF "
+      },
+      {
+        "k": "m",
+        "v": "(2,2)"
+      },
+      {
+        "k": "t",
+        "v": " only after "
+      },
+      {
+        "k": "m",
+        "v": "D=2d"
+      },
+      {
+        "k": "t",
+        "v": " (side-blind nulls v521, not a theorem). Mutants: "
+      },
+      {
+        "k": "m",
+        "v": "t=0"
+      },
+      {
+        "k": "t",
+        "v": " fails; perturbed "
+      },
+      {
+        "k": "m",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": " breaks factorisation; "
+      },
+      {
+        "k": "m",
+        "v": "2+3^n"
+      },
+      {
+        "k": "t",
+        "v": " breaks Hankel. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(3) registrations (no marker moves)."
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " NEW "
+      },
+      {
+        "k": "c",
+        "v": "GRAV.WEINBERG.WITTEN.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ": binding firewall BEFORE any spin-2 marker move — the microscopic Hamiltonian family must NOT possess a fundamental Lorentz-covariant local conserved "
+      },
+      {
+        "k": "m",
+        "v": "T_{\\mu\\nu}"
+      },
+      {
+        "k": "t",
+        "v": "; Lorentz, diffeomorphism Ward identities and the spin-2 mode must emerge in the SAME IR limit; acceptance "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " positive TT density, two helicities, massless pole, emergent diff Ward, universal soft coupling, named evaded Weinberg–Witten premise; kill "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " microscopic covariant local "
+      },
+      {
+        "k": "m",
+        "v": "T_{\\mu\\nu}"
+      },
+      {
+        "k": "t",
+        "v": " together with a massless composite spin-2 claim; child of T7, cross-link "
+      },
+      {
+        "k": "c",
+        "v": "GRAV.SPIN2.EMERGENCE.01"
+      },
+      {
+        "k": "t",
+        "v": " (not back). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(4) display corrections (honest wording, no claim changes)."
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " Status-at-a-glance: compiler rest "
+      },
+      {
+        "k": "m",
+        "v": "v_{\\mathrm{geo}}\\oplus G_{\\mathrm{net}}\\oplus F_{\\mathrm{transfer}}"
+      },
+      {
+        "k": "t",
+        "v": " now sits NEXT TO the strict-physical-TOE rest (ten-component "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Rest}_{\\mathrm{TOE}}"
+      },
+      {
+        "k": "t",
+        "v": " / eight "
+      },
+      {
+        "k": "c",
+        "v": "TFPT.TOE.COMPLETE.01"
+      },
+      {
+        "k": "t",
+        "v": " gates, one line). SM completeness retyped: the discrete Standard-Model "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "structure"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " (charges, families, flavor operators) is derived under the axioms; "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "D existence, chiral measure, mirror gap, couplings and neutrino dynamics are open. Gravity display: “parameter-free” headlines replaced by “the classical covariant field equation carries no free dimensionless Newton coupling under the named QFT/entanglement premises "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "”. Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " (new sections MILNOR.LOCALRING, WEINBERG.WITTEN; SPIN2 firewall note; T7 child; v358/v359 keybox titles); "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " wave-6 paragraph; introduction status card "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " SM/gravity lines; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_2"
+      },
+      {
+        "k": "t",
+        "v": " gravity heading "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " conclusion; website StatusMatrix / WhatTfptClaims / ClaimStack / GravityEmergence / OpenGates / VerificationDag."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-29",
+    "dateLabel": "2026-08-29 · CXLIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(review wave 5 — two exploration probes graduate as "
+      },
+      {
+        "k": "c",
+        "v": "v1002"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v1003"
+      },
+      {
+        "k": "t",
+        "v": " plus three registrations: the DET16 finite-cluster hit, the two neutrino-texture structural nulls, the master scaling-limit theorem "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.MMST.TYPEIII.CHARGED.01"
+      },
+      {
+        "k": "t",
+        "v": ", the gauge-stiffness step-scaling divergence, and the holomorphic-KMS document; suite "
+      },
+      {
+        "k": "m",
+        "v": "994 \\to 996"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1168 \\to 1171"
+      },
+      {
+        "k": "t",
+        "v": ": three new rows, existing contract rows updated, NO status-marker upgrades; Python-only / Wolfram mirror deferred as for v974–v1001). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1002_ spin10_ mirror_ projector.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "39/39"
+      },
+      {
+        "k": "t",
+        "v": "): DET16 rank-one projector on the full "
+      },
+      {
+        "k": "m",
+        "v": "2^{16}"
+      },
+      {
+        "k": "t",
+        "v": " cluster — "
+      },
+      {
+        "k": "m",
+        "v": "\\Omega^\\dagger\\Omega=P_{16}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\Omega\\Omega^\\dagger=P_0"
+      },
+      {
+        "k": "t",
+        "v": ", defect "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "P_\\phi"
+      },
+      {
+        "k": "t",
+        "v": " hermitian idempotent "
+      },
+      {
+        "k": "m",
+        "v": "2.8{\\times}10^{-18}"
+      },
+      {
+        "k": "t",
+        "v": ", rank "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "h_{\\mathrm{mir}}"
+      },
+      {
+        "k": "t",
+        "v": " spectrum "
+      },
+      {
+        "k": "m",
+        "v": "\\{0^1,1^{65535}\\}"
+      },
+      {
+        "k": "t",
+        "v": ", gap exactly "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": "; all "
+      },
+      {
+        "k": "m",
+        "v": "45"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\mathfrak{so}(10)"
+      },
+      {
+        "k": "t",
+        "v": " Fock commutators "
+      },
+      {
+        "k": "m",
+        "v": "=0"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\det\\rho_{16}=1"
+      },
+      {
+        "k": "t",
+        "v": "); parity commutator "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\lvert0\\rangle"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "\\lvert F\\rangle"
+      },
+      {
+        "k": "t",
+        "v": " singlets. Hopping stability on the "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "-mode analogue: gap "
+      },
+      {
+        "k": "m",
+        "v": "0.90"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " clusters) / "
+      },
+      {
+        "k": "m",
+        "v": "0.86"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": " clusters) at "
+      },
+      {
+        "k": "m",
+        "v": "t=0.2"
+      },
+      {
+        "k": "t",
+        "v": "; spectators untouched. NEW ledger row "
+      },
+      {
+        "k": "c",
+        "v": "CHIRAL4D.MIRROR.DET16.01"
+      },
+      {
+        "k": "t",
+        "v": " Candidate "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "(exact finite-cluster gapping; open: dynamical gauge fields, domain-wall geometry, "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "D volume theorem). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2) the Casimir kill, permanent."
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " Number-preserving Casimir projector uniqueness fails at every cluster size: one "
+      },
+      {
+        "k": "m",
+        "v": "16=\\{N{=}0{:}1,\\,N{=}16{:}1\\}"
+      },
+      {
+        "k": "t",
+        "v": " (none at "
+      },
+      {
+        "k": "m",
+        "v": "N{=}8"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "m",
+        "v": "k{=}2"
+      },
+      {
+        "k": "t",
+        "v": " half-filling multiplicity "
+      },
+      {
+        "k": "m",
+        "v": "27"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "k{=}3{:}1463"
+      },
+      {
+        "k": "t",
+        "v": " (exact Weyl alternation, "
+      },
+      {
+        "k": "m",
+        "v": "|W(D_5)|{=}1920"
+      },
+      {
+        "k": "t",
+        "v": "). Ledger note on "
+      },
+      {
+        "k": "c",
+        "v": "CHIRAL4D.NOMIRROR.01"
+      },
+      {
+        "k": "t",
+        "v": ": number-preserving Casimir projector route excluded; display stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(3)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1003_ nu_ structural_ nulls.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "24/24"
+      },
+      {
+        "k": "t",
+        "v": "): charged-sector data "
+      },
+      {
+        "k": "m",
+        "v": "h=(1,1,1)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "d=(64,60,64)"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "; Schur-texture NULL — all "
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": " preregistered "
+      },
+      {
+        "k": "m",
+        "v": "(K,B)"
+      },
+      {
+        "k": "t",
+        "v": " fail, D4 reflection forces "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_1=\\lambda_3"
+      },
+      {
+        "k": "t",
+        "v": ", hierarchy "
+      },
+      {
+        "k": "m",
+        "v": "(\\varepsilon,2\\varepsilon,3)"
+      },
+      {
+        "k": "t",
+        "v": " structurally unreachable from D4-even seam data, required "
+      },
+      {
+        "k": "m",
+        "v": "K\\sim[3536.998,1768.499,1/3]"
+      },
+      {
+        "k": "t",
+        "v": " matches none of "
+      },
+      {
+        "k": "m",
+        "v": "9"
+      },
+      {
+        "k": "t",
+        "v": " comparators; orientation-doubling structure theorem — "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{sgn}\\,J"
+      },
+      {
+        "k": "t",
+        "v": " odd sector generically lifts the degeneracy (exact rational witness); scale NULL — "
+      },
+      {
+        "k": "m",
+        "v": "12/12"
+      },
+      {
+        "k": "t",
+        "v": " fail, required cancellation "
+      },
+      {
+        "k": "m",
+        "v": "1-\\lvert c/a\\rvert=1.885{\\times}10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " not supplied, "
+      },
+      {
+        "k": "m",
+        "v": "\\eta"
+      },
+      {
+        "k": "t",
+        "v": "-branches isospectral. NEW ledger row "
+      },
+      {
+        "k": "c",
+        "v": "FLAV.NU.TEXTURE.MECHANISM.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ": both nulls are binding constraints (mechanism must be D4-odd AND supply a "
+      },
+      {
+        "k": "m",
+        "v": "\\sim2{\\times}10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " even-odd cancellation; pure seam data excluded "
+      },
+      {
+        "k": "s",
+        "v": "X"
+      },
+      {
+        "k": "t",
+        "v": "-typed). "
+      },
+      {
+        "k": "c",
+        "v": "FLAV.NUSCALE.05"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": ".06"
+      },
+      {
+        "k": "t",
+        "v": " notes only; candidates unmoved. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(4) registrations (no marker moves)."
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " NEW "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.MMST.TYPEIII.CHARGED.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ": ONE scaling-limit theorem "
+      },
+      {
+        "k": "m",
+        "v": "\\Psi_{\\lambda,N}\\to\\Psi_\\lambda"
+      },
+      {
+        "k": "t",
+        "v": " strongly on the finite-energy core "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " crossed-product continuity, from which "
+      },
+      {
+        "k": "m",
+        "v": "B\\cong(E_8)_1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\mu=1"
+      },
+      {
+        "k": "t",
+        "v": ", type III"
+      },
+      {
+        "k": "m",
+        "v": "_1"
+      },
+      {
+        "k": "t",
+        "v": ", unique rotational KMS, unique CE, deck equidistribution and modular invariance follow as corollaries; children "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.SIMPLECURRENT.GENERATOR.01"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.STATE.RPMIXING.01"
+      },
+      {
+        "k": "t",
+        "v": " continuum, "
+      },
+      {
+        "k": "c",
+        "v": "ALPHA.QUILLEN.EXACT.01"
+      },
+      {
+        "k": "t",
+        "v": " rigidity, "
+      },
+      {
+        "k": "c",
+        "v": "AX.P1.01"
+      },
+      {
+        "k": "t",
+        "v": " reading (listed on the parent, not back). Cited document "
+      },
+      {
+        "k": "c",
+        "v": "articles/2026-08-29/holomorphic_kms_extension_en.tex"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "13"
+      },
+      {
+        "k": "t",
+        "v": " pp): unconditional rotational-KMS uniqueness via KLM "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Longo–Tanimoto GIVEN the identification; P1 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " theorem-conditional on seam identification "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\beta_{\\mathrm{angle}}=2\\pi"
+      },
+      {
+        "k": "t",
+        "v": "; axiom typing UNCHANGED. "
+      },
+      {
+        "k": "c",
+        "v": "GAUGE.DETLINE.FIXPOINT.01"
+      },
+      {
+        "k": "t",
+        "v": ": mechanism executed at fixed volume (unique fixed point, contraction "
+      },
+      {
+        "k": "m",
+        "v": "-0.632"
+      },
+      {
+        "k": "t",
+        "v": ", exact "
+      },
+      {
+        "k": "m",
+        "v": "q^2"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "SU(2)"
+      },
+      {
+        "k": "t",
+        "v": " Dynkin ratio "
+      },
+      {
+        "k": "m",
+        "v": "4.0"
+      },
+      {
+        "k": "t",
+        "v": ") BUT the preregistered thermodynamic step-scaling "
+      },
+      {
+        "k": "m",
+        "v": "L=2{..}8"
+      },
+      {
+        "k": "t",
+        "v": " is DIVERGENT ("
+      },
+      {
+        "k": "m",
+        "v": "g_\\star"
+      },
+      {
+        "k": "t",
+        "v": " oscillates "
+      },
+      {
+        "k": "m",
+        "v": "0.65{..}1.69"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\lvert R'\\rvert>1"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "L=4,5,8"
+      },
+      {
+        "k": "t",
+        "v": "); typed hurdle: the "
+      },
+      {
+        "k": "m",
+        "v": "1{+}1"
+      },
+      {
+        "k": "t",
+        "v": "D toy has no plaquette self-interaction, the real contract needs "
+      },
+      {
+        "k": "m",
+        "v": "\\ge2{+}1"
+      },
+      {
+        "k": "t",
+        "v": "D; display stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "m",
+        "v": "v_{\\mathrm{geo}}"
+      },
+      {
+        "k": "t",
+        "v": " boundary note: unit choice closed; dimensionless hierarchies "
+      },
+      {
+        "k": "m",
+        "v": "(M_{\\mathrm{Pl}}/v_{\\mathrm{EW}},\\,M_R/M_{\\mathrm{scal}},\\,\\Lambda_{\\mathrm{QCD}}/v_{\\mathrm{EW}},\\,T_{\\mathrm{reh}}/M_{\\mathrm{scal}})"
+      },
+      {
+        "k": "t",
+        "v": " remain predictive obligations. Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " (new sections MIRROR.DET16, TYPEIII.CHARGED, NU.TEXTURE.MECHANISM; DETLINE stiffness update; NOMIRROR Casimir kill); "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " wave-5 paragraph; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_2"
+      },
+      {
+        "k": "t",
+        "v": " (texture-mechanism note); introduction status card "
+      },
+      {
+        "k": "m",
+        "v": "v_{\\mathrm{geo}}"
+      },
+      {
+        "k": "t",
+        "v": " hierarchy sentence."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-29",
+    "dateLabel": "2026-08-29 · CXLII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(review wave 4 — four exploration probes graduate as "
+      },
+      {
+        "k": "c",
+        "v": "v998"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v1001"
+      },
+      {
+        "k": "t",
+        "v": " plus the lattice-fundamental quasilocal-family amendment, the "
+      },
+      {
+        "k": "m",
+        "v": "v_{\\mathrm{geo}}"
+      },
+      {
+        "k": "t",
+        "v": " closed-metrology retype, the "
+      },
+      {
+        "k": "c",
+        "v": "ALPHA.QUILLEN"
+      },
+      {
+        "k": "t",
+        "v": " relative-determinant note, and the master contract "
+      },
+      {
+        "k": "c",
+        "v": "TFPT.TOE.COMPLETE.01"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "990 \\to 994"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1166 \\to 1168"
+      },
+      {
+        "k": "t",
+        "v": ": two new rows, existing contract rows updated, NO status-marker upgrades; Python-only / Wolfram mirror deferred as for v974–v997). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v998_ seam_ modular_ closure.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": "): two-edge HS remainder bounded by "
+      },
+      {
+        "k": "m",
+        "v": "2.11"
+      },
+      {
+        "k": "t",
+        "v": " on the frozen plateau "
+      },
+      {
+        "k": "m",
+        "v": "N_x\\in(16,24,32,48,64,96)"
+      },
+      {
+        "k": "t",
+        "v": "; lattice character "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_{E_8}/\\eta^8"
+      },
+      {
+        "k": "t",
+        "v": " EXACT four orders "
+      },
+      {
+        "k": "m",
+        "v": "[1,0,248,0,4124,0,34752]"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\Theta_{E_8}(\\tau)=E_4(\\tau)"
+      },
+      {
+        "k": "t",
+        "v": " as Eisenstein series, "
+      },
+      {
+        "k": "m",
+        "v": "q"
+      },
+      {
+        "k": "t",
+        "v": "-expansion match to "
+      },
+      {
+        "k": "m",
+        "v": "\\ge8"
+      },
+      {
+        "k": "t",
+        "v": " orders exact (Jacobi identity; the reviewer's C7 sharpening); "
+      },
+      {
+        "k": "m",
+        "v": "j^{1/3}"
+      },
+      {
+        "k": "t",
+        "v": " numeric transform at "
+      },
+      {
+        "k": "m",
+        "v": "60"
+      },
+      {
+        "k": "t",
+        "v": " digits with "
+      },
+      {
+        "k": "m",
+        "v": "S"
+      },
+      {
+        "k": "t",
+        "v": "-weight bookkeeping. Ledger notes on "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.MMST.01"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.SIMPLECURRENT.GENERATOR.01"
+      },
+      {
+        "k": "t",
+        "v": ": C7 arithmetic shadow now exact; net-level C7 stays cited/open. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v999_ weak_ collision_ hp.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": "): the continuous-time dilation leg — generator extraction Richardson "
+      },
+      {
+        "k": "m",
+        "v": "1.098\\times10^{-10}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\operatorname{diag}L_{\\mathrm{GKSL}}=Q=\\log B"
+      },
+      {
+        "k": "t",
+        "v": " symbolic; "
+      },
+      {
+        "k": "m",
+        "v": "e^{Q}=B"
+      },
+      {
+        "k": "t",
+        "v": " exact; GNS splitting defect "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": "; locality "
+      },
+      {
+        "k": "m",
+        "v": "1.355\\times10^{-20}"
+      },
+      {
+        "k": "t",
+        "v": "; strong-collision singularity contrast rank "
+      },
+      {
+        "k": "m",
+        "v": "9/81"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "c",
+        "v": "DYN.UNITARY.DILATION.01"
+      },
+      {
+        "k": "t",
+        "v": ": the finite ladder is now COMPLETE (discrete/kernel/field-free/interacting-classical/quantum-coupled/continuous-time); open "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the thermodynamic field limit only; contract stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(3)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1000_ spin2_ sk_ witnesses.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": "): lattice graviton — positivity exact, "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " TT helicities at all "
+      },
+      {
+        "k": "m",
+        "v": "5852"
+      },
+      {
+        "k": "t",
+        "v": " momenta ("
+      },
+      {
+        "k": "m",
+        "v": "N=6..12"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "m",
+        "v": "\\omega=k-k^3/24"
+      },
+      {
+        "k": "t",
+        "v": " exact; SK — KMS/FDT "
+      },
+      {
+        "k": "m",
+        "v": "\\sim10^{-17}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\rho_0"
+      },
+      {
+        "k": "t",
+        "v": "-dependence contrast "
+      },
+      {
+        "k": "m",
+        "v": "3.550\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " vs static "
+      },
+      {
+        "k": "m",
+        "v": "10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": ", saddle "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": "-fold degenerate with "
+      },
+      {
+        "k": "m",
+        "v": "3\\pi/5"
+      },
+      {
+        "k": "t",
+        "v": " unique in the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " lift "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "c",
+        "v": "GRAV.SPIN2.EMERGENCE.01"
+      },
+      {
+        "k": "t",
+        "v": " quadratic Hamiltonian half executed; "
+      },
+      {
+        "k": "c",
+        "v": "FTRANSFER.SK.RHO0.01"
+      },
+      {
+        "k": "t",
+        "v": " mechanism executed; both contracts stay "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(4)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1001_ nu_ pentagon_ chain.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "14/14"
+      },
+      {
+        "k": "t",
+        "v": "): "
+      },
+      {
+        "k": "m",
+        "v": "U_e=I"
+      },
+      {
+        "k": "t",
+        "v": " inventory theorem; misalignment "
+      },
+      {
+        "k": "m",
+        "v": "U=U_{v9}R_{13}(\\theta,\\phi)"
+      },
+      {
+        "k": "t",
+        "v": "; pentagon double hit "
+      },
+      {
+        "k": "m",
+        "v": "\\phi=288^\\circ=4(2\\pi/5)"
+      },
+      {
+        "k": "t",
+        "v": " frozen, all three measured angles "
+      },
+      {
+        "k": "m",
+        "v": "\\le0.56\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " (honest max pull "
+      },
+      {
+        "k": "m",
+        "v": "0.557"
+      },
+      {
+        "k": "t",
+        "v": ") at "
+      },
+      {
+        "k": "m",
+        "v": "\\theta=2\\pi/35"
+      },
+      {
+        "k": "t",
+        "v": ", unique LEE survivor "
+      },
+      {
+        "k": "m",
+        "v": "2.7\\%"
+      },
+      {
+        "k": "t",
+        "v": "; v3 chain SHA-16 "
+      },
+      {
+        "k": "c",
+        "v": "a4c28732fa687620"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\Sigma=0.0599"
+      },
+      {
+        "k": "t",
+        "v": " eV, "
+      },
+      {
+        "k": "m",
+        "v": "m_\\beta=9.0"
+      },
+      {
+        "k": "t",
+        "v": " meV, "
+      },
+      {
+        "k": "m",
+        "v": "m_{\\beta\\beta}\\in[1.5,3.8]"
+      },
+      {
+        "k": "t",
+        "v": " meV, "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_{\\mathrm{CP}}=287.66^\\circ"
+      },
+      {
+        "k": "t",
+        "v": "; v270–"
+      },
+      {
+        "k": "m",
+        "v": "\\theta_{23}"
+      },
+      {
+        "k": "t",
+        "v": " tension "
+      },
+      {
+        "k": "m",
+        "v": "1.85\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " TYPED; census null "
+      },
+      {
+        "k": "m",
+        "v": "0/1607"
+      },
+      {
+        "k": "t",
+        "v": ". NEW ledger row "
+      },
+      {
+        "k": "c",
+        "v": "FLAV.NUSCALE.06"
+      },
+      {
+        "k": "t",
+        "v": " Candidate "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "(pentagon-class misalignment; mechanism "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "Q_+"
+      },
+      {
+        "k": "t",
+        "v": "-to-flavor operator "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "; kills DESI/DUNE "
+      },
+      {
+        "k": "m",
+        "v": "287.7"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "240"
+      },
+      {
+        "k": "t",
+        "v": "/JUNO). NO seesaw closure; "
+      },
+      {
+        "k": "c",
+        "v": "FLAV.NUSCALE.05"
+      },
+      {
+        "k": "t",
+        "v": " unmoved. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(5) Amendments (typed; no marker moves)."
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "QFT4D.LATTICE.FUNDAMENTAL.01"
+      },
+      {
+        "k": "t",
+        "v": ": a single finite box is not a world — the fundamental object is the quasilocal consistent family "
+      },
+      {
+        "k": "m",
+        "v": "\\{H_\\Lambda\\}"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\tau_t=\\lim e^{itH_\\Lambda}A e^{-itH_\\Lambda}"
+      },
+      {
+        "k": "t",
+        "v": "; continuum ("
+      },
+      {
+        "k": "m",
+        "v": "a\\to0"
+      },
+      {
+        "k": "t",
+        "v": ") optional, thermodynamic limit and controlled IR universality mandatory (dated 2026-08-29). "
+      },
+      {
+        "k": "c",
+        "v": "ANCHOR.VGEO.01"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": ".02"
+      },
+      {
+        "k": "t",
+        "v": ": display retyped from open-physics/primitive phrasing to CLOSED METROLOGY STRUCTURE ("
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{R}_+"
+      },
+      {
+        "k": "t",
+        "v": " unit torsor; one dimensionful calibration necessary by dimensional analysis — No-Unit "
+      },
+      {
+        "k": "c",
+        "v": "v153"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v725"
+      },
+      {
+        "k": "t",
+        "v": "); display stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ", no physical "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "c",
+        "v": "ALPHA.QUILLEN.EXACT.01"
+      },
+      {
+        "k": "t",
+        "v": ": the correct object is the relative determinant "
+      },
+      {
+        "k": "m",
+        "v": "Q(A)=\\log[\\det'\\Delta_A/\\det'\\Delta_{A_0}]+8\\,b_1\\,c_3^6\\log\\varphi(A)"
+      },
+      {
+        "k": "t",
+        "v": "; BFK "
+      },
+      {
+        "k": "m",
+        "v": "2^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " is "
+      },
+      {
+        "k": "m",
+        "v": "A/\\tau/\\alpha"
+      },
+      {
+        "k": "t",
+        "v": "-independent at fixed cut number so "
+      },
+      {
+        "k": "m",
+        "v": "\\delta\\log 2^{-4}=0"
+      },
+      {
+        "k": "t",
+        "v": " — no physical compensation (consistent with "
+      },
+      {
+        "k": "c",
+        "v": "COMPENSATION_INTERNAL"
+      },
+      {
+        "k": "t",
+        "v": "). NEW master contract "
+      },
+      {
+        "k": "c",
+        "v": "TFPT.TOE.COMPLETE.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ": eight gates T1–T8 with the binding separation "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{TOE}_{\\mathrm{Complete}}:=\\mathrm{AND}(\\mathrm{T1}{..}\\mathrm{T8})"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{TOE}_{\\mathrm{Validated}}:=\\mathrm{Complete}"
+      },
+      {
+        "k": "t",
+        "v": " AND independent holdouts; every existing "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "D/dilation/detline/SK/flavor/gravity contract is a child of one gate. Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " (executed-update paragraphs at MMST/SIMPLECURRENT, DILATION, GRAV.SPIN2, SK.RHO0; new sections TOE.COMPLETE and NUSCALE.06; lattice-fundamental amendment; ALPHA relative-det note); "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " introduction status card / "
+      },
+      {
+        "k": "m",
+        "v": "v_{\\mathrm{geo}}"
+      },
+      {
+        "k": "t",
+        "v": " row; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_2"
+      },
+      {
+        "k": "t",
+        "v": " (NUSCALE.06 candidate paragraph)."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-28",
+    "dateLabel": "2026-08-28 · CXLI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(the completeness wave — four exploration probes graduate as "
+      },
+      {
+        "k": "c",
+        "v": "v994"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v997"
+      },
+      {
+        "k": "t",
+        "v": " (suite "
+      },
+      {
+        "k": "m",
+        "v": "986 \\to 990"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1166 \\to 1166"
+      },
+      {
+        "k": "t",
+        "v": ": eight contract rows updated, NO status-marker upgrades; Python-only / Wolfram mirror deferred as for v974–v993). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v994_ mmst_ criteria_ battery.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": "): "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "7"
+      },
+      {
+        "k": "t",
+        "v": " MMST identification criteria executed "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "-measured — measured "
+      },
+      {
+        "k": "m",
+        "v": "c=8.005"
+      },
+      {
+        "k": "t",
+        "v": " (16 Majorana copies), conformal edge spectrum "
+      },
+      {
+        "k": "m",
+        "v": "[0.506,1.516,2.523,3.524]"
+      },
+      {
+        "k": "t",
+        "v": ", current normalisation "
+      },
+      {
+        "k": "m",
+        "v": "k=1.000000000000"
+      },
+      {
+        "k": "t",
+        "v": ", sector collapse "
+      },
+      {
+        "k": "m",
+        "v": "\\det D_8=4\\to\\det E_8=1"
+      },
+      {
+        "k": "t",
+        "v": ", and the flagship: "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "/GSO-projected lattice character sums reproduce the "
+      },
+      {
+        "k": "m",
+        "v": "(E_8)_1"
+      },
+      {
+        "k": "t",
+        "v": " vacuum character "
+      },
+      {
+        "k": "m",
+        "v": "[1,0,248,0,4124,0,34752]"
+      },
+      {
+        "k": "t",
+        "v": " three orders deep; C6 is now "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "written out"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " in "
+      },
+      {
+        "k": "c",
+        "v": "articles/2026-08-28/psi_lambda_convergence_theorem_en.tex"
+      },
+      {
+        "k": "t",
+        "v": " (analytic log coefficient "
+      },
+      {
+        "k": "m",
+        "v": "2/\\pi^2=0.20264"
+      },
+      {
+        "k": "t",
+        "v": " vs measured "
+      },
+      {
+        "k": "m",
+        "v": "0.203"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "0.18\\%"
+      },
+      {
+        "k": "t",
+        "v": "); C7 modular invariance stays cited/open. Ledger notes on "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.MMST.01"
+      },
+      {
+        "k": "t",
+        "v": " (stays "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": ") and "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.SIMPLECURRENT.GENERATOR.01"
+      },
+      {
+        "k": "t",
+        "v": " (stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "; open rest "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " C7 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " net G2/G3/G4). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v995_ kms_ subnet_ rigidity.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "10/10"
+      },
+      {
+        "k": "t",
+        "v": "): all "
+      },
+      {
+        "k": "m",
+        "v": "33"
+      },
+      {
+        "k": "t",
+        "v": " v972 mixing directions killed by KMS alone on finite "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{CAR}_8=M_{256}"
+      },
+      {
+        "k": "t",
+        "v": "; covariance provably redundant; unique "
+      },
+      {
+        "k": "m",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "-invariant crossed-product extension "
+      },
+      {
+        "k": "m",
+        "v": "196608\\to 0"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.STATE.RPMIXING.01"
+      },
+      {
+        "k": "t",
+        "v": " finite KMS rigidity "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "; type-III/continuum stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(3)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v996_ gauge_ grammar_ kill.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "17/17"
+      },
+      {
+        "k": "t",
+        "v": "): H0 structural kill — negative "
+      },
+      {
+        "k": "m",
+        "v": "b_2/b_3"
+      },
+      {
+        "k": "t",
+        "v": " flip the stationary-root signs ("
+      },
+      {
+        "k": "m",
+        "v": "SU(2)"
+      },
+      {
+        "k": "t",
+        "v": " inverse "
+      },
+      {
+        "k": "m",
+        "v": "-151.2"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "SU(3)"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "-115.9"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "m",
+        "v": "64"
+      },
+      {
+        "k": "t",
+        "v": " conventions "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " hits; "
+      },
+      {
+        "k": "m",
+        "v": "U(1)"
+      },
+      {
+        "k": "t",
+        "v": " control "
+      },
+      {
+        "k": "m",
+        "v": "137.0359992168"
+      },
+      {
+        "k": "t",
+        "v": " survives all mutants; detline curvature "
+      },
+      {
+        "k": "m",
+        "v": "\\to 2\\pi"
+      },
+      {
+        "k": "t",
+        "v": " exponentially with rate "
+      },
+      {
+        "k": "m",
+        "v": "0.6936\\sim\\ln 2"
+      },
+      {
+        "k": "t",
+        "v": " (numerical Bismut–Freed shadow). "
+      },
+      {
+        "k": "c",
+        "v": "GAUGE.DETLINE.FIXPOINT.01"
+      },
+      {
+        "k": "t",
+        "v": " naive grammar excluded "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "; genuinely nonabelian structure required — typed; "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha_s(M_Z)"
+      },
+      {
+        "k": "t",
+        "v": " remains an external input; contract stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(4)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v997_ spin2_ smg_ witnesses.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "24/24"
+      },
+      {
+        "k": "t",
+        "v": "): Barnes–Rivers quadratic decomposition — "
+      },
+      {
+        "k": "m",
+        "v": "R{+}R^2"
+      },
+      {
+        "k": "t",
+        "v": " clean (one massless TT pole, two helicities, scalaron at "
+      },
+      {
+        "k": "m",
+        "v": "M_{\\mathrm{scal}}"
+      },
+      {
+        "k": "t",
+        "v": " exact); the local "
+      },
+      {
+        "k": "m",
+        "v": "a_4"
+      },
+      {
+        "k": "t",
+        "v": " Weyl"
+      },
+      {
+        "k": "m",
+        "v": "^2"
+      },
+      {
+        "k": "t",
+        "v": " truncation necessarily carries an opposite-residue spin-2 ghost — typed; FK SMG toy: "
+      },
+      {
+        "k": "m",
+        "v": "N=8"
+      },
+      {
+        "k": "t",
+        "v": " unique "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Spin}(7)"
+      },
+      {
+        "k": "t",
+        "v": "-singlet ground state, Schmidt rank "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": ", volume-independent gap "
+      },
+      {
+        "k": "m",
+        "v": "14"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "L=1,2,3"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "N=4"
+      },
+      {
+        "k": "t",
+        "v": " contrast "
+      },
+      {
+        "k": "m",
+        "v": "2^L"
+      },
+      {
+        "k": "t",
+        "v": "-degenerate; physical chiral edge keeps "
+      },
+      {
+        "k": "m",
+        "v": "\\pi/L"
+      },
+      {
+        "k": "t",
+        "v": " exactly. "
+      },
+      {
+        "k": "c",
+        "v": "GRAV.SPIN2.EMERGENCE.01"
+      },
+      {
+        "k": "t",
+        "v": " quadratic witnesses "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ", content pinned on the untruncated form factor; "
+      },
+      {
+        "k": "c",
+        "v": "CHIRAL4D.NOMIRROR.01"
+      },
+      {
+        "k": "t",
+        "v": " SMG toy-proved "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "D "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Spin}(10)"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "; both contracts stay "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". Canonical note (not a module) on "
+      },
+      {
+        "k": "c",
+        "v": "FLAV.NUSCALE.05"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "c",
+        "v": "NU_TEXTURE_CENSUS_NULL"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "0/1607+0/200"
+      },
+      {
+        "k": "t",
+        "v": " — frozen "
+      },
+      {
+        "k": "m",
+        "v": "3\\times 3"
+      },
+      {
+        "k": "t",
+        "v": " inventory provably insufficient; mechanism "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "sharpened. Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " (executed-update paragraphs at MMST/SIMPLECURRENT, RPMIXING, GAUGE.DETLINE.FIXPOINT.01, GRAV.SPIN2.EMERGENCE.01, CHIRAL4D.NOMIRROR.01, ALPHA.QUILLEN rigidity/ln-2 notes); "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_2"
+      },
+      {
+        "k": "t",
+        "v": " (census-null note); "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " introduction card addendum. Exploration record: "
+      },
+      {
+        "k": "c",
+        "v": "articles/2026-08-28/big_picture_simplicity_first_en.md"
+      },
+      {
+        "k": "t",
+        "v": "."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-28",
+    "dateLabel": "2026-08-28 · CXL",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(review wave 3 — the third external bird's-eye review adjudicated and integrated: ONE new module "
+      },
+      {
+        "k": "c",
+        "v": "v993"
+      },
+      {
+        "k": "t",
+        "v": " plus THREE new "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "contracts plus a v986 motivation retype plus the dual-rest formula; suite "
+      },
+      {
+        "k": "m",
+        "v": "985 \\to 986"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1163 \\to 1166"
+      },
+      {
+        "k": "t",
+        "v": "; NO status-marker upgrades; Python-only / Wolfram mirror deferred as for v974–v992). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v993_ minimal_ defect_ selector.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "29/29"
+      },
+      {
+        "k": "t",
+        "v": "): the FULL rank-8 ADE census (SNF of Cartan) with cyclic "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z_4"
+      },
+      {
+        "k": "t",
+        "v": " glue on BOTH factors selects "
+      },
+      {
+        "k": "m",
+        "v": "(D_5,A_3)"
+      },
+      {
+        "k": "t",
+        "v": " uniquely ("
+      },
+      {
+        "k": "m",
+        "v": "D_3\\cong A_3"
+      },
+      {
+        "k": "t",
+        "v": " aliases collapsed) — the "
+      },
+      {
+        "k": "m",
+        "v": "D{+}A"
+      },
+      {
+        "k": "t",
+        "v": " architecture of v624 is an OUTPUT of (rank 8 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " cyclic "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z_4"
+      },
+      {
+        "k": "t",
+        "v": "), not an INPUT; kill tests "
+      },
+      {
+        "k": "m",
+        "v": "D_4{\\oplus}D_4"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "m",
+        "v": "A_7{\\oplus}A_1"
+      },
+      {
+        "k": "t",
+        "v": " (product 16, fail cyclicity) and the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z_3"
+      },
+      {
+        "k": "t",
+        "v": " control "
+      },
+      {
+        "k": "m",
+        "v": "E_6{\\oplus}A_2"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "[\\lambda]^2=[v]"
+      },
+      {
+        "k": "t",
+        "v": " exact (lattice shadow of "
+      },
+      {
+        "k": "m",
+        "v": "U^2=(-1)^F"
+      },
+      {
+        "k": "t",
+        "v": "); the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " average is the UNIQUE trace-preserving finite conditional expectation (uniqueness needs the module property; kernel dim "
+      },
+      {
+        "k": "m",
+        "v": "36/720"
+      },
+      {
+        "k": "t",
+        "v": " without it). Ledger notes on "
+      },
+      {
+        "k": "c",
+        "v": "AX.P1.01"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "AX.P2.01"
+      },
+      {
+        "k": "t",
+        "v": ": axiom typing UNCHANGED; the equidistribution identification stays the open "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "of v813; cited-not-proved remain "
+      },
+      {
+        "k": "m",
+        "v": "c_-=8"
+      },
+      {
+        "k": "t",
+        "v": " and holomorphic uniqueness of "
+      },
+      {
+        "k": "m",
+        "v": "(E_8)_1"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.SIMPLECURRENT.GENERATOR.01"
+      },
+      {
+        "k": "t",
+        "v": " canonical status grows the "
+      },
+      {
+        "k": "m",
+        "v": "[\\lambda]^2=[v]"
+      },
+      {
+        "k": "t",
+        "v": " parity-shadow line. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " Three new research contracts, all "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ", no scripts: "
+      },
+      {
+        "k": "c",
+        "v": "GAUGE.DETLINE.FIXPOINT.01"
+      },
+      {
+        "k": "t",
+        "v": " (all three gauge couplings as unique stationary points of one nonabelian zeta-det/inflow functional; generalizes "
+      },
+      {
+        "k": "c",
+        "v": "ALPHA.QUILLEN.EXACT.01"
+      },
+      {
+        "k": "t",
+        "v": "; honest: "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha_s(M_Z)"
+      },
+      {
+        "k": "t",
+        "v": " is currently an external input); "
+      },
+      {
+        "k": "c",
+        "v": "GRAV.SPIN2.EMERGENCE.01"
+      },
+      {
+        "k": "t",
+        "v": " (massless transversal spin-2 pole from the same spectral determinant; Einstein equation stays downstream/conditional; "
+      },
+      {
+        "k": "c",
+        "v": "GRAV.NONCIRCULAR.01"
+      },
+      {
+        "k": "t",
+        "v": " binding); "
+      },
+      {
+        "k": "c",
+        "v": "FTRANSFER.SK.RHO0.01"
+      },
+      {
+        "k": "t",
+        "v": " (cosmological transfers need "
+      },
+      {
+        "k": "m",
+        "v": "(S,\\rho_0)"
+      },
+      {
+        "k": "t",
+        "v": ", not "
+      },
+      {
+        "k": "m",
+        "v": "W[J]"
+      },
+      {
+        "k": "t",
+        "v": " alone; typed candidate "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_i=3\\pi/5"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " orientation picks "
+      },
+      {
+        "k": "m",
+        "v": "k=0"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "FTRANSFER.GENERATING.01"
+      },
+      {
+        "k": "t",
+        "v": " covers equilibrium only). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(3)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v986"
+      },
+      {
+        "k": "t",
+        "v": " docstring retype: the "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Tr}\\,I=3"
+      },
+      {
+        "k": "t",
+        "v": " motivation is loose ("
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Spec}(I)=\\{1,1,1\\}"
+      },
+      {
+        "k": "t",
+        "v": "); the operator reading is the "
+      },
+      {
+        "k": "m",
+        "v": "Q_+"
+      },
+      {
+        "k": "t",
+        "v": " eigenvalue route "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Spec}\\{1,2,3\\}"
+      },
+      {
+        "k": "t",
+        "v": "; texture "
+      },
+      {
+        "k": "t",
+        "v": "data-constrains-texture"
+      },
+      {
+        "k": "t",
+        "v": "; check logic and pass/fail UNCHANGED. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(4)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " Dual rest: introduction status card (and the research-contracts keybox, with a brief frontier mirror) now carries "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Rest}=v_{\\mathrm{geo}}\\oplus G_{\\mathrm{net}}\\oplus F_{\\mathrm{transfer}}"
+      },
+      {
+        "k": "t",
+        "v": " (compiler) beside "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Rest}_{\\mathrm{TOE}}"
+      },
+      {
+        "k": "t",
+        "v": " (strict-physical-TOE accounting of the 2026-08-27/28 contract wave); nothing in the second formula is claimed closed. Exploration not promoted: the wave-3 Quillen zero-mode Gram identity is a reformulation ("
+      },
+      {
+        "k": "m",
+        "v": "|\\det\\mathrm{DFT}_4|=16"
+      },
+      {
+        "k": "t",
+        "v": "), not a Quillen-metric object."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-28",
+    "dateLabel": "2026-08-28 · CXXXIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the promote round — six exploration probes graduate as "
+      },
+      {
+        "k": "c",
+        "v": "v987"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v992"
+      },
+      {
+        "k": "t",
+        "v": " (suite "
+      },
+      {
+        "k": "m",
+        "v": "979 \\to 985"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1162 \\to 1163"
+      },
+      {
+        "k": "t",
+        "v": ": one new DECISION row "
+      },
+      {
+        "k": "c",
+        "v": "QFT4D.LATTICE.FUNDAMENTAL.01"
+      },
+      {
+        "k": "t",
+        "v": "; eight contract rows updated, NO status-marker upgrades; Python-only / Wolfram mirror deferred as for v974–v986). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(Decision)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "QFT4D.LATTICE.FUNDAMENTAL.01"
+      },
+      {
+        "k": "t",
+        "v": ": TFPT's "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "physical"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " completeness criterion is the finite, local, unitary lattice quantum theory (Hamiltonian route: Gauss-law Hilbert space, hermitian local "
+      },
+      {
+        "k": "m",
+        "v": "H"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "T=e^{-aH}"
+      },
+      {
+        "k": "t",
+        "v": " positive by construction, Lieb–Robinson cone); the exact continuum Osterwalder–Schrader limit ("
+      },
+      {
+        "k": "c",
+        "v": "QFT4D.OS.RECON.01"
+      },
+      {
+        "k": "t",
+        "v": ") is retyped as "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "mathematical reinforcement"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ", no longer the physical bottleneck; Poincaré invariance is an IR fixed-point property. Status: Decision (registered route/typing; no "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "claim, no marker move; "
+      },
+      {
+        "k": "c",
+        "v": "QFT4D.OS.RECON.01"
+      },
+      {
+        "k": "t",
+        "v": " unchanged as the math programme). Anchors: Euclidean T2 kill of the overlap shortcut (exact; "
+      },
+      {
+        "k": "m",
+        "v": "N_t"
+      },
+      {
+        "k": "t",
+        "v": "-exact: violation absent at "
+      },
+      {
+        "k": "m",
+        "v": "N_t=2"
+      },
+      {
+        "k": "t",
+        "v": ", appears at "
+      },
+      {
+        "k": "m",
+        "v": "N_t=4"
+      },
+      {
+        "k": "t",
+        "v": " det-only "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}\\approx-0.249"
+      },
+      {
+        "k": "t",
+        "v": "; Wilson control PSD everywhere) and the Hamiltonian route clearing T2 by construction ("
+      },
+      {
+        "k": "c",
+        "v": "v989"
+      },
+      {
+        "k": "t",
+        "v": "). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v987_ os_ dilation_ package.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "21/21"
+      },
+      {
+        "k": "t",
+        "v": "): kernel OS continuation exact ("
+      },
+      {
+        "k": "m",
+        "v": "B=P_1+\\tfrac23 P_2+\\tfrac13 P_3>0"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "H=-\\log B"
+      },
+      {
+        "k": "t",
+        "v": " PSD with gap "
+      },
+      {
+        "k": "m",
+        "v": "\\log\\tfrac32"
+      },
+      {
+        "k": "t",
+        "v": ", Wick anchor "
+      },
+      {
+        "k": "m",
+        "v": "U(-in)=B^n"
+      },
+      {
+        "k": "t",
+        "v": " for "
+      },
+      {
+        "k": "m",
+        "v": "n=1..6"
+      },
+      {
+        "k": "t",
+        "v": "; v971 negative kernel has no real half-step); size-uniform free band; interacting congruence family; quantum SWAP "
+      },
+      {
+        "k": "m",
+        "v": "d(\\theta)\\sim\\theta^{1.99}"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "c",
+        "v": "DYN.UNITARY.DILATION.01"
+      },
+      {
+        "k": "t",
+        "v": " executed legs grow; continuous field-level OS "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " branch selection stay "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v988_ psi_ lambda_ reduction.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": "): S3 crossed-product/tower exchange exact; S1/S2 quantitative skeleton measured (window HS bounded, global "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{HS}^2"
+      },
+      {
+        "k": "t",
+        "v": " logarithmic in the topological phase); remaining lemma reduced to cited quasi-free theorems "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the MMST identification — reduction, "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "not"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " closure. "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.SIMPLECURRENT.GENERATOR.01"
+      },
+      {
+        "k": "t",
+        "v": " honest new typing: lattice shadow "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "(v983) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " quantitative skeleton "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "-measured "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " reduction-to-cited-class "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "conditional. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(3)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v989_ lattice_ gate_ battery.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "22/22"
+      },
+      {
+        "k": "t",
+        "v": "): T4 exact SM anomaly bookkeeping; T5/T6 overlap index/GW circle; Euclidean T2 kill "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Hamiltonian T2 clearance "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " chiral Gauss census (single-exponent Gauss iff "
+      },
+      {
+        "k": "m",
+        "v": "q_L=q_R"
+      },
+      {
+        "k": "t",
+        "v": "). "
+      },
+      {
+        "k": "c",
+        "v": "TFPT4D.LATTICE.ACTION.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "CHIRAL4D.NOMIRROR.01"
+      },
+      {
+        "k": "t",
+        "v": " executed harness "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " named kill; contracts stay "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(4)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v990_ wj_ transduction_ mechanism.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "13/13"
+      },
+      {
+        "k": "t",
+        "v": "): "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z_6"
+      },
+      {
+        "k": "t",
+        "v": " content shadow "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "W[J]"
+      },
+      {
+        "k": "t",
+        "v": " identities "
+      },
+      {
+        "k": "m",
+        "v": "\\partial W/\\partial J=\\langle O\\rangle"
+      },
+      {
+        "k": "t",
+        "v": ", Hessian "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " Kubo, mixed "
+      },
+      {
+        "k": "m",
+        "v": "\\partial^2 W/\\partial J\\,\\partial\\theta"
+      },
+      {
+        "k": "t",
+        "v": " seam-coupled "
+      },
+      {
+        "k": "m",
+        "v": "\\approx-9.3\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": ", decoupled control exactly "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "c",
+        "v": "FTRANSFER.GENERATING.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "OBS.TRANSDUCTION.01"
+      },
+      {
+        "k": "t",
+        "v": " mechanism executed at finite level; contracts stay "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(5)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v991_ detline_ bulk_ edge.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": "): bulk twist-torus curvature "
+      },
+      {
+        "k": "m",
+        "v": "2\\pi\\cdot(+1)"
+      },
+      {
+        "k": "t",
+        "v": " equals seam holonomy winding "
+      },
+      {
+        "k": "m",
+        "v": "+1"
+      },
+      {
+        "k": "t",
+        "v": " (diff "
+      },
+      {
+        "k": "m",
+        "v": "5.6\\times10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "m",
+        "v": "M=3"
+      },
+      {
+        "k": "t",
+        "v": " control zero both sides. "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.DETLINE.UNIFICATION.01"
+      },
+      {
+        "k": "t",
+        "v": " finite shadow "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "; continuum Bismut–Freed stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(6)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v992_ joint_ likelihood_ v1.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "24/24"
+      },
+      {
+        "k": "t",
+        "v": "): "
+      },
+      {
+        "k": "m",
+        "v": "\\chi^2=11.80/\\mathrm{dof}\\,9"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "p=0.225"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "m",
+        "v": "\\nu_{\\mathrm{eff}}=1"
+      },
+      {
+        "k": "t",
+        "v": ", TFPT at "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": "th percentile of "
+      },
+      {
+        "k": "m",
+        "v": "200"
+      },
+      {
+        "k": "t",
+        "v": " scrambled decoders, LOO stable, holdouts declared. "
+      },
+      {
+        "k": "c",
+        "v": "PRED.JOINTLIKELIHOOD.01"
+      },
+      {
+        "k": "t",
+        "v": " v1 executed (numerical, ledger type [N]); promotion conditions typed; contract stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". Paper surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " (executed-update paragraphs at each of the six contracts plus the decision at "
+      },
+      {
+        "k": "c",
+        "v": "QFT4D.OS.RECON.01"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "TFPT4D.LATTICE.ACTION.01"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " (shorter decision mirror at the "
+      },
+      {
+        "k": "c",
+        "v": "CONTRACT.QFT4D"
+      },
+      {
+        "k": "t",
+        "v": " spine). Exploration note (not promoted): "
+      },
+      {
+        "k": "c",
+        "v": "experiments/nu-scalaron-falsification/"
+      },
+      {
+        "k": "t",
+        "v": " leptogenesis discriminator (decuple route "
+      },
+      {
+        "k": "m",
+        "v": "\\times1.06"
+      },
+      {
+        "k": "t",
+        "v": " in band, scenario route "
+      },
+      {
+        "k": "m",
+        "v": "\\times0.09"
+      },
+      {
+        "k": "t",
+        "v": " killed)."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-08-28",
+    "dateLabel": "2026-08-28 · CXXXVIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the master-object wave, part 2 — the second external bird's-eye review (“one 4D lattice "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " one seam simple current "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " one unitary dilation "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " one determinant line "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " one "
+      },
+      {
+        "k": "m",
+        "v": "W[J]"
+      },
+      {
+        "k": "t",
+        "v": "”) adjudicated: its four machine-checkable candidate results verified and integrated as FOUR new modules (suite "
+      },
+      {
+        "k": "m",
+        "v": "975 \\to 979"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1161 \\to 1162"
+      },
+      {
+        "k": "t",
+        "v": ": one new row "
+      },
+      {
+        "k": "c",
+        "v": "FLAV.NUSCALE.05"
+      },
+      {
+        "k": "t",
+        "v": "; three contract rows updated, NO status-marker moves). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v983_ simple_ current_ generator.py"
+      },
+      {
+        "k": "t",
+        "v": ": the "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.SIMPLECURRENT.GENERATOR.01"
+      },
+      {
+        "k": "t",
+        "v": " generator is "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "identified"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " — the glue vector "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda = (\\omega_s, \\omega_f)"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\|\\lambda\\|^2 = 2"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "h_\\lambda = 1"
+      },
+      {
+        "k": "t",
+        "v": ", order 4 in the discriminant group "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z_4 \\times \\mathbb Z_4"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "D_5 \\oplus A_3"
+      },
+      {
+        "k": "t",
+        "v": "; isotropic glue "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " even unimodular rank-8 overlattice ("
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": "); coset root census "
+      },
+      {
+        "k": "m",
+        "v": "[52, 64, 60, 64]"
+      },
+      {
+        "k": "t",
+        "v": " — the odd fusion powers of the ONE class carry the full "
+      },
+      {
+        "k": "m",
+        "v": "128"
+      },
+      {
+        "k": "t",
+        "v": " spinor sector; kill tests (vector-class / mismatched glue) fire; holomorphy shadow "
+      },
+      {
+        "k": "m",
+        "v": "\\det 1"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "\\det D_8 = 4"
+      },
+      {
+        "k": "t",
+        "v": " at the lattice level; the analytic half (G1–G4) stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v984_ markov_ qca_ dilation.py"
+      },
+      {
+        "k": "t",
+        "v": ": the DISCRETE leg of "
+      },
+      {
+        "k": "c",
+        "v": "DYN.UNITARY.DILATION.01"
+      },
+      {
+        "k": "t",
+        "v": " realized constructively — the collision step "
+      },
+      {
+        "k": "m",
+        "v": "V = C(U_B \\otimes I)"
+      },
+      {
+        "k": "t",
+        "v": " is exactly unitary, the Stinespring identity "
+      },
+      {
+        "k": "m",
+        "v": "\\Phi(\\rho) = \\sum_j P_j U_B \\rho U_B^\\dagger P_j"
+      },
+      {
+        "k": "t",
+        "v": " holds symbolically, "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{diag}\\,\\Phi(\\mathrm{diag}\\,p) = Bp"
+      },
+      {
+        "k": "t",
+        "v": " and six fresh ancillas give "
+      },
+      {
+        "k": "m",
+        "v": "B^6 = T"
+      },
+      {
+        "k": "t",
+        "v": " exactly (radius-1 collision band); must-fail fires ("
+      },
+      {
+        "k": "m",
+        "v": "|U_B^2|^2 \\ne B^2"
+      },
+      {
+        "k": "t",
+        "v": "); typed remark AGAINST the review text: a reused mod-3 adder ancilla still reproduces the populations exactly; the continuous Hamiltonian/OS legs stay "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(3)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v985_ quillen_ channel_ swap.py"
+      },
+      {
+        "k": "t",
+        "v": ": the v974 CHANNEL-SWAP face of "
+      },
+      {
+        "k": "c",
+        "v": "ALPHA.QUILLEN.EXACT.01"
+      },
+      {
+        "k": "t",
+        "v": " resolved at the finite level by "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": "-character grading — the deck swap "
+      },
+      {
+        "k": "m",
+        "v": "r \\to r{+}2"
+      },
+      {
+        "k": "t",
+        "v": " maps the jump spectrum "
+      },
+      {
+        "k": "m",
+        "v": "[0,2,4,2]"
+      },
+      {
+        "k": "t",
+        "v": " onto the mark pattern "
+      },
+      {
+        "k": "m",
+        "v": "|[4,-2,0,-2]|"
+      },
+      {
+        "k": "t",
+        "v": " exactly (odd swap fails), the graded "
+      },
+      {
+        "k": "m",
+        "v": "\\det'"
+      },
+      {
+        "k": "t",
+        "v": " difference is "
+      },
+      {
+        "k": "m",
+        "v": "c_3"
+      },
+      {
+        "k": "t",
+        "v": "-free "
+      },
+      {
+        "k": "m",
+        "v": "= \\log(\\ln 2/4)"
+      },
+      {
+        "k": "t",
+        "v": ", the channelwise unit ratio is uniform "
+      },
+      {
+        "k": "m",
+        "v": "4/\\ln 2"
+      },
+      {
+        "k": "t",
+        "v": "; continuum Bismut–Freed, KMS rigidity and the "
+      },
+      {
+        "k": "m",
+        "v": "2^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " compensation stay "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(4)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v986_ nu_ scalaron_ rung.py"
+      },
+      {
+        "k": "t",
+        "v": ": the SCALARON-TRACE RUNG "
+      },
+      {
+        "k": "m",
+        "v": "M_R = N_{\\mathrm{fam}} M_{\\mathrm{scal}} = 3 c_3^{7/2} \\bar M_{\\mathrm{Pl}} = 9.18 \\times 10^{13}"
+      },
+      {
+        "k": "t",
+        "v": " GeV — a structured point INSIDE the v481 window, "
+      },
+      {
+        "k": "m",
+        "v": "-1.8\\%"
+      },
+      {
+        "k": "t",
+        "v": " from the 1-loop requirement (the review claimed "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "1%; the honest value is 1.8), "
+      },
+      {
+        "k": "m",
+        "v": "\\sim 20\\times"
+      },
+      {
+        "k": "t",
+        "v": " sharper than the declined integer rung; exact ladder position "
+      },
+      {
+        "k": "m",
+        "v": "3\\sqrt{c_3} = 0.598"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "0.26\\%"
+      },
+      {
+        "k": "t",
+        "v": " from the closed "
+      },
+      {
+        "k": "m",
+        "v": "3/5"
+      },
+      {
+        "k": "t",
+        "v": " Clebsch door — adjacency TYPED, not consumed (v488 killed the Clebsch mechanism; the generation-blind scalaron trace is a different class, itself "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "); kill test "
+      },
+      {
+        "k": "m",
+        "v": "\\Sigma m_\\nu = 0.059"
+      },
+      {
+        "k": "t",
+        "v": " eV; new row "
+      },
+      {
+        "k": "c",
+        "v": "FLAV.NUSCALE.05"
+      },
+      {
+        "k": "t",
+        "v": " [C]/[N], no seesaw closure. The remaining review content is typed, not consumed: the axion line ("
+      },
+      {
+        "k": "m",
+        "v": "f_a = M_{\\mathrm{scal}}/128"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_i = 3\\pi/5"
+      },
+      {
+        "k": "t",
+        "v": ") and the Riemann–Roch carrier ARE the existing v185/v211/v189; the 4D action, chiral measure, OS package, bulk dictionary, determinant-line unification, "
+      },
+      {
+        "k": "m",
+        "v": "W[J]"
+      },
+      {
+        "k": "t",
+        "v": ", transduction matrix and joint likelihood stay open contracts exactly as registered on 2026-08-27. Paper surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " (three executed-update paragraphs), "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_2_standard_model"
+      },
+      {
+        "k": "t",
+        "v": " (scalaron-trace rung paragraph)."
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-27",
     "dateLabel": "2026-08-27 · CXXXVII",
     "heading": [

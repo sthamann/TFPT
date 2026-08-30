@@ -76,14 +76,14 @@ export const DISCIPLINE: DisciplineStats =
     "killRows": 468
   },
   "suite": {
-    "modules": 1005,
-    "checkSites": 16076,
-    "mustfailOccurrences": 9103,
-    "mustfailModules": 533,
+    "modules": 1007,
+    "checkSites": 16105,
+    "mustfailOccurrences": 9110,
+    "mustfailModules": 535,
     "eMarks": 4576,
     "cMarks": 1560,
     "seededModules": 203,
-    "sympyModules": 523
+    "sympyModules": 524
   },
   "contracts": {
     "ledgerRows": 166,
