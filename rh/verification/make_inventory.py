@@ -1707,6 +1707,132 @@ _R433_STATUS = (
 )
 
 
+_R435_STATUS = (
+    "P1 as an overload bound "
+    "(round 435, PRIME.RDAGGER.P1_OVERLOAD.01, "
+    "reviewer DCCCII first half of two-case inertia, "
+    "source-pure, no margin; experiments-side, "
+    "NO ledger row): 23/23 full / 20/20 smoke; SPEC_SHA "
+    "d032621d5417873f; nested mu-CD C(n)=B[:,:n]B[:,:n].T "
+    "is rank-1 Loewner SATZ (nC antitone, drop <= 1; "
+    "dictionary nC(N_w-3)=n_-(A0)).  w9 nC 104 -> 43(|Y|) "
+    "-> 1(181), hit1=178 last six (2,2,1,1,1,1).  "
+    "GK / Cauchy-pi universal n_-<=1 REFUTED: Q 2x2 toy "
+    "inertia (1,1,0) det=-3740/243; 3x3 nneg 2,1,0; "
+    "mass-imbalanced 2x2 ND inertia (0,2,0) "
+    "det=113/2880000.  PERM nC(|Y|)=54 nCend=20 never "
+    "hits 1; JITTER 19; SCRAMBLE 21; 2PER nmax<|Y| "
+    "nCend=4.  Core-42 42/42 nCend in {0,1} (28 P1 / "
+    "14 VAC); living chi3 37/37 + chi4 41/41 and dead "
+    "chi3 5/5 + chi4-20 all nCend in {0,1}.  False depth "
+    "N_w-1 lifts MAIN to nC=0.  First measured in /tmp "
+    "(r435_cal.py, r435_cal2.py, r435_cal3.py) then "
+    "sealed (disclosed).  Full wall 13.6 s.  Builder "
+    "fallback NOT taken.  AUSGANG DEPTH_CHAIN_EXACT / "
+    "GK_UNIVERSAL_REFUTED / SAVE_RATE_CENSUS.  Companion "
+    "rh/problem/p1_overload.tex + "
+    "verify_p1_overload.py 8/8 P1 OVERLOAD VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
+
+_R436_STATUS = (
+    "P2 determinant as reverse-CS / rank-1 "
+    "(round 436, PRIME.RDAGGER.P2_DETERMINANT.01, "
+    "reviewer Hauptlane second half; experiments-side, "
+    "NO ledger row): 26/26 full / 19/19 smoke; SPEC_SHA "
+    "d596aecc4dff3ef1; SATZ det K2 = det(K2_+)-Q with "
+    "Q = p^T adj(K2_+) p = ||p||^2 + p^T adj(R_+) p "
+    "(Q-toy det=-7 = 2-9); C_min = psi_- (r407 cosine=1); "
+    "nneg-1 45/74 detK<0, -det in [1.157, 1126.389]; "
+    "Rayleigh excess min 0.2746 at kz18; "
+    "coarse ||p||^2 > lmax(K2_+) sufficient SATZ 44/45 "
+    "KILLED at kz46 (same window as r375 Cauchy); "
+    "anatomy MIXED Ta=25 Td=4 Tx=16; "
+    "alternation 45/45 iff detK<0 (r377 dictionary); "
+    "vacuous 29/74 no pole detK>0 (14/42 core); "
+    "dead chi CHI3-15 nneg-1 detK=-122.91 (P2 stays; "
+    "sch is NOT this product, r417); "
+    "drop-psi w9 det(K2_+)=5.958>0; wrong J=-I det=+0.941; "
+    "scramble nneg=21 hypothesis empty.  "
+    "Remainder: p^T K2_+^{-1} p > 1 (CD--C_min coupling).  "
+    "First measured in /tmp (r436_cal.py, r436_cal2.py) "
+    "then sealed (disclosed).  Full wall 42.3 s.  "
+    "Builder fallback NOT taken.  AUSGANG REDUZIERT / "
+    "IDENTITY_EXACT / ANATOMY_MIXED / COARSE_KILLED_AT_KZ46 / "
+    "ALTERNATION_EXPLAINED.  Companion "
+    "rh/problem/p2_determinant.tex + "
+    "verify_p2_determinant.py 8/8 P2 DETERMINANT VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
+
+_R438_STATUS = (
+    "evolutionary certificate search "
+    "(round 438, PRIME.SEARCH.EVOLUTIONARY_CERTIFICATE.01, "
+    "reviewer search lane after DCCCII; experiments-side, "
+    "NO ledger row): 29/29 full / 29/29 smoke; SPEC_SHA "
+    "d6c1624b82717fba; hard train/holdout split "
+    "(fitness = MAIN {9,18,20} only; chi3/chi4 + EXT-35 + "
+    "Selected k>=7 NEVER in any fitness loop).  "
+    "Track A grammar GP (seed 43801, pop 24 gen 10): "
+    "best min-cos 0.1010 expr INVPY; four canonical "
+    "psi candidates 0.007-0.71 on w9, uniform vtop "
+    "0.058 at kz18; source NNLS for lam2-1 and q^dagger "
+    "relres >> 1.  Track B: source NNLS onto -det K2 "
+    "relres 13.2; r375 identity live on w9 "
+    "(fact=-5.038869, gamma/lam=1.846) but uses psi_-; "
+    "B2 family P=t0 I+t1 diag(u), v=v_top remainder "
+    "lmin=-0.261 not PSD.  Track C canonical cut dn=0: "
+    "nC<=1 on 11/11 CORE, closest C2-1=2.245e-7 at "
+    "kz52; holdout 7/7 nC in {0,1}; weight-scale GA "
+    "nC=1.  Truncation dn=-2 inflates nC=2 on "
+    "{5,18,22,38,52} -- r395 class, NOT a falsifier.  "
+    "Q toys residual 0 (ONES-Y, r375 det=-7, B2 Rest=0).  "
+    "PERM nC=21 SCR nC=21; illegal CHI3 a=0 nC=3.  "
+    "First measured in /tmp (r438_cal.py, r438_cal2.py, "
+    "r438_cal3.py) then sealed (disclosed).  Full wall "
+    "1.7 s.  Builder fallback NOT taken.  AUSGANG "
+    "A:NOT_FOUND / B:NOT_FOUND / C:NOT_FOUND.  Companion "
+    "rh/problem/evolutionary_certificate.tex + "
+    "verify_evolutionary_cert.py 10/10 EVOLUTIONARY CERT "
+    "VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
+
+_R440_STATUS = (
+    "mean tau index "
+    "(round 440, PRIME.RDAGGER.MEAN_TAU_INDEX.01, "
+    "reviewer DCCCIV fallback lane; experiments-side, "
+    "NO ledger row): 28/28 full / 28/28 smoke; SPEC_SHA "
+    "3807189a56e259da; T1 kappa^dagger = "
+    "ind_-(R^dagger-1/2 I) = #{s in (0,1): tau^dagger(s)=0} "
+    "SATZ (Q 2x2 kappa=1 exact; r409 5-atom C pin kappa=0; "
+    "w9 three-way 0 at 2e-14).  T2 integrand Jacobi SATZ "
+    "(FD rel 4.8e-8); Q winding 1.000; window contour "
+    "is the COLLAR BOSS (r=0.40 winds 0, r=0.499 "
+    "fractional -1.77; gap_right 3.0e-3 -> 1.9e-8 on "
+    "selected k=3..9).  Source: CD residual 2e-12; "
+    "cyclic TT* / Dirichlet diagonal / slogdet at 1.4e-14.  "
+    "MI2 linearity 4e-15; Lean landing site "
+    "exists_index_zero_of_block_mean_lt_one (r430).  "
+    "Census: selected 6/6 kappa=0, core-42 42/42 kappa=0 "
+    "mean=0<1 (NO kappa>=1 trend); dead chi 6/6 kappa=1; "
+    "live CHI3-9 kappa=0.  Kills: trG 50.9 vs 53.0 both "
+    ">>1; M2 32.96 vs 39.01 both >>2 (r398); tau(0.5)>0 "
+    "on living AND dead (s is a counting variable); "
+    "scramble nneg=21.  k=8 not rebuilt.  First measured "
+    "in /tmp (r440_cal.py, r440_cal2.py) then sealed "
+    "(disclosed).  Full wall 9.3 s.  Builder fallback "
+    "NOT taken.  AUSGANG IDENTITIES_EXACT / "
+    "COLLAR_BOSS_QUANTIFIED / BLOCK_MEAN_CENSUS / "
+    "UNCONDITIONAL_OPEN.  Companion "
+    "rh/problem/mean_tau_index.tex + "
+    "verify_mean_tau.py 8/8 MEAN TAU INDEX VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -4685,6 +4811,106 @@ ENTRIES = [
      [],
      "compiled PDF of edge_redheffer.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/p1_overload.tex", "problem_statement",
+     "r435 companion",
+     [],
+     "lemma-first P1 overload bound (round 435): "
+     "n_-(A0)<=1 is a crossing budget of the nested "
+     "mu-CD chain on Y; Cauchy-pi / GK universal cap "
+     "REFUTED over Q; selected save-rate CENSUS.  "
+     "DEPTH_CHAIN_EXACT / GK_UNIVERSAL_REFUTED / "
+     "SAVE_RATE_CENSUS.  NO RH claim",
+     True),
+    ("rh/problem/verify_p1_overload.py", "problem_check",
+     "r435 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "p1_overload.tex: standalone (2x2 toy det, "
+     "depth lift, 3x3 GK fail, 2x2 ND witness, "
+     "constructor audit) plus construction pins "
+     "(w9 nC curve, permute/scramble/two-period, "
+     "false depth N_w-1).  8/8 gates, final line "
+     "P1 OVERLOAD VERIFIED", True),
+    ("rh/problem/p1_overload.pdf", "problem_statement",
+     "r435 companion",
+     [],
+     "compiled PDF of p1_overload.tex "
+     "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/p2_determinant.tex", "problem_statement",
+     "r436 companion",
+     [],
+     "lemma-first reverse-CS / rank-1 decomposition of "
+     "det K2 on the nneg-1 branch (round 436): identity "
+     "SATZ, coarse lmax bound killed at kz46, anatomy "
+     "MIXED, remainder p^T K2_+^{-1} p > 1.  "
+     "REDUZIERT / IDENTITY_EXACT / ANATOMY_MIXED / "
+     "COARSE_KILLED_AT_KZ46 / ALTERNATION_EXPLAINED.  "
+     "NO RH claim",
+     True),
+    ("rh/problem/verify_p2_determinant.py", "problem_check",
+     "r436 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "p2_determinant.tex: standalone (reverse-CS over Q, "
+     "J-plus-R split, drop-psi toy, tiny-overlap adversary) "
+     "plus construction pins (w9 identity + C_min, "
+     "kz18 floor / kz46 coarse kill, kz12 vacuous + "
+     "CHI3-15 nneg-1, scramble / wrong J).  "
+     "8/8 gates, final line P2 DETERMINANT VERIFIED", True),
+    ("rh/problem/p2_determinant.pdf", "problem_statement",
+     "r436 companion",
+     [],
+     "compiled PDF of p2_determinant.tex "
+     "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/evolutionary_certificate.tex", "problem_statement",
+     "r438 companion",
+     [],
+     "evolutionary certificate search (round 438): "
+     "grammar GP / SOS-LP / adversarial grid with a hard "
+     "train/holdout split.  A:NOT_FOUND / B:NOT_FOUND / "
+     "C:NOT_FOUND.  Truncation nC=2 is r395, not a "
+     "two-case falsifier.  Finite identities plus named "
+     "search negatives; NO RH claim",
+     True),
+    ("rh/problem/verify_evolutionary_cert.py", "problem_check",
+     "r438 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "evolutionary_certificate.tex: standalone Q toys "
+     "(ONES-Y, r375, B2 split, nneg=2 detector) plus "
+     "construction pins (w9 C/cosines, INVPY uniform, "
+     "train MAIN-only, permute/scramble, illegal a=0, "
+     "selected k=7 nC=0).  10/10 gates, final line "
+     "EVOLUTIONARY CERT VERIFIED", True),
+    ("rh/problem/evolutionary_certificate.pdf", "problem_statement",
+     "r438 companion",
+     [],
+     "compiled PDF of evolutionary_certificate.tex "
+     "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/mean_tau_index.tex", "problem_statement",
+     "r440 companion",
+     [],
+     "lemma-first mean tau-winding (round 440): T1/T2/MI2 "
+     "SATZ, collar anatomy of the s=1 cluster, source "
+     "Dirichlet integrand, selected+core mean 0<1, dead "
+     "chi kappa=1.  IDENTITIES_EXACT / "
+     "COLLAR_BOSS_QUANTIFIED / BLOCK_MEAN_CENSUS / "
+     "UNCONDITIONAL_OPEN.  NO RH claim",
+     True),
+    ("rh/problem/verify_mean_tau.py", "problem_check",
+     "r440 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "mean_tau_index.tex: standalone (Q T1 kappa=1, "
+     "T2 winding, r409 toy kappa=0, MI2 linearity) plus "
+     "construction pins (w9 three-way + collar, CD/cyclic "
+     "source form, dead/live chi + soft mutants).  "
+     "8/8 gates, final line MEAN TAU INDEX VERIFIED", True),
+    ("rh/problem/mean_tau_index.pdf", "problem_statement",
+     "r440 companion",
+     [],
+     "compiled PDF of mean_tau_index.tex "
+     "(recompiled artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -5045,6 +5271,26 @@ ENTRIES = [
      "r433",
      [],
      _R433_STATUS,
+     True),
+    (f"{EXP}/p1_overload_probe.py", "sealed_probe",
+     "r435",
+     [],
+     _R435_STATUS,
+     True),
+    (f"{EXP}/p2_determinant_probe.py", "sealed_probe",
+     "r436",
+     [],
+     _R436_STATUS,
+     True),
+    (f"{EXP}/evolutionary_certificate_probe.py", "sealed_probe",
+     "r438",
+     [],
+     _R438_STATUS,
+     True),
+    (f"{EXP}/mean_tau_index_probe.py", "sealed_probe",
+     "r440",
+     [],
+     _R440_STATUS,
      True),
 ]
 

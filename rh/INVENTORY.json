@@ -3146,6 +3146,96 @@
       "bytes": 230094
     },
     {
+      "path": "rh/problem/p1_overload.tex",
+      "role": "problem_statement",
+      "round": "r435 companion",
+      "ledger_ids": [],
+      "status": "lemma-first P1 overload bound (round 435): n_-(A0)<=1 is a crossing budget of the nested mu-CD chain on Y; Cauchy-pi / GK universal cap REFUTED over Q; selected save-rate CENSUS.  DEPTH_CHAIN_EXACT / GK_UNIVERSAL_REFUTED / SAVE_RATE_CENSUS.  NO RH claim",
+      "pin": true,
+      "sha256": "a6c84ae6a28ad52b62faeee06d7cd73ab2cbb6a6ab2f748794ddfd40c1bafdb7",
+      "bytes": 7237
+    },
+    {
+      "path": "rh/problem/verify_p1_overload.py",
+      "role": "problem_check",
+      "round": "r435 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in p1_overload.tex: standalone (2x2 toy det, depth lift, 3x3 GK fail, 2x2 ND witness, constructor audit) plus construction pins (w9 nC curve, permute/scramble/two-period, false depth N_w-1).  8/8 gates, final line P1 OVERLOAD VERIFIED",
+      "pin": true,
+      "sha256": "81c1c795b7fd08652a24edc184714985b876caf426a357459f39458ca34ef8ff",
+      "bytes": 4750
+    },
+    {
+      "path": "rh/problem/p1_overload.pdf",
+      "role": "problem_statement",
+      "round": "r435 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of p1_overload.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "5d8173e6ef07b2addca9e63c9c88eddbf7dd2362a5bf201ff07e661c76583abd",
+      "bytes": 216258
+    },
+    {
+      "path": "rh/problem/p2_determinant.tex",
+      "role": "problem_statement",
+      "round": "r436 companion",
+      "ledger_ids": [],
+      "status": "lemma-first reverse-CS / rank-1 decomposition of det K2 on the nneg-1 branch (round 436): identity SATZ, coarse lmax bound killed at kz46, anatomy MIXED, remainder p^T K2_+^{-1} p > 1.  REDUZIERT / IDENTITY_EXACT / ANATOMY_MIXED / COARSE_KILLED_AT_KZ46 / ALTERNATION_EXPLAINED.  NO RH claim",
+      "pin": true,
+      "sha256": "f87a4310793a7a0434dfd45b1431af1cd3ecc638d39be8e6b7041386f0cceca9",
+      "bytes": 12807
+    },
+    {
+      "path": "rh/problem/verify_p2_determinant.py",
+      "role": "problem_check",
+      "round": "r436 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in p2_determinant.tex: standalone (reverse-CS over Q, J-plus-R split, drop-psi toy, tiny-overlap adversary) plus construction pins (w9 identity + C_min, kz18 floor / kz46 coarse kill, kz12 vacuous + CHI3-15 nneg-1, scramble / wrong J).  8/8 gates, final line P2 DETERMINANT VERIFIED",
+      "pin": true,
+      "sha256": "e5d3ffe42da5bf2647d0aa659221bb098e325e3ec2170148fbfad75827602073",
+      "bytes": 4602
+    },
+    {
+      "path": "rh/problem/p2_determinant.pdf",
+      "role": "problem_statement",
+      "round": "r436 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of p2_determinant.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "79581c02d9138af67f727371a25c0218266a3eba7c3fba086937ae920272e9ed",
+      "bytes": 248527
+    },
+    {
+      "path": "rh/problem/evolutionary_certificate.tex",
+      "role": "problem_statement",
+      "round": "r438 companion",
+      "ledger_ids": [],
+      "status": "evolutionary certificate search (round 438): grammar GP / SOS-LP / adversarial grid with a hard train/holdout split.  A:NOT_FOUND / B:NOT_FOUND / C:NOT_FOUND.  Truncation nC=2 is r395, not a two-case falsifier.  Finite identities plus named search negatives; NO RH claim",
+      "pin": true,
+      "sha256": "9f2f76abce5747f4d1bc66ea44aadc637dae835e13436557f9c739a1650f7b06",
+      "bytes": 7676
+    },
+    {
+      "path": "rh/problem/verify_evolutionary_cert.py",
+      "role": "problem_check",
+      "round": "r438 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in evolutionary_certificate.tex: standalone Q toys (ONES-Y, r375, B2 split, nneg=2 detector) plus construction pins (w9 C/cosines, INVPY uniform, train MAIN-only, permute/scramble, illegal a=0, selected k=7 nC=0).  10/10 gates, final line EVOLUTIONARY CERT VERIFIED",
+      "pin": true,
+      "sha256": "3a174871f0045f0211f7360dc467cb3b1dc8c9ca3d4306820a1396a71352c08f",
+      "bytes": 4524
+    },
+    {
+      "path": "rh/problem/evolutionary_certificate.pdf",
+      "role": "problem_statement",
+      "round": "r438 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of evolutionary_certificate.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "092ef922612d4343abdf5ea0711c1bcb5df362e1cfabd20ef1f39299a9f3e5ea",
+      "bytes": 220997
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3320,8 +3410,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "1a6aac2045c12cfb2f4d3140291410bd40ac19294209455158a8972982fa972e",
-      "bytes": 5476851
+      "sha256": "b511c327a046e85e3180989608ff3258e7e778764aa647653b9256936ecc2a7e",
+      "bytes": 5488504
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3912,6 +4002,36 @@
       "pin": true,
       "sha256": "7b262907d736eaf629243347f17749ab91cefbb1b1b883e4a0e447109585cf29",
       "bytes": 26756
+    },
+    {
+      "path": "experiments/tfpt-discovery/p1_overload_probe.py",
+      "role": "sealed_probe",
+      "round": "r435",
+      "ledger_ids": [],
+      "status": "P1 as an overload bound (round 435, PRIME.RDAGGER.P1_OVERLOAD.01, reviewer DCCCII first half of two-case inertia, source-pure, no margin; experiments-side, NO ledger row): 23/23 full / 20/20 smoke; SPEC_SHA d032621d5417873f; nested mu-CD C(n)=B[:,:n]B[:,:n].T is rank-1 Loewner SATZ (nC antitone, drop <= 1; dictionary nC(N_w-3)=n_-(A0)).  w9 nC 104 -> 43(|Y|) -> 1(181), hit1=178 last six (2,2,1,1,1,1).  GK / Cauchy-pi universal n_-<=1 REFUTED: Q 2x2 toy inertia (1,1,0) det=-3740/243; 3x3 nneg 2,1,0; mass-imbalanced 2x2 ND inertia (0,2,0) det=113/2880000.  PERM nC(|Y|)=54 nCend=20 never hits 1; JITTER 19; SCRAMBLE 21; 2PER nmax<|Y| nCend=4.  Core-42 42/42 nCend in {0,1} (28 P1 / 14 VAC); living chi3 37/37 + chi4 41/41 and dead chi3 5/5 + chi4-20 all nCend in {0,1}.  False depth N_w-1 lifts MAIN to nC=0.  First measured in /tmp (r435_cal.py, r435_cal2.py, r435_cal3.py) then sealed (disclosed).  Full wall 13.6 s.  Builder fallback NOT taken.  AUSGANG DEPTH_CHAIN_EXACT / GK_UNIVERSAL_REFUTED / SAVE_RATE_CENSUS.  Companion rh/problem/p1_overload.tex + verify_p1_overload.py 8/8 P1 OVERLOAD VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "f64cf3d60c49796f139aa0546fc5d97f1543cc902fd6648359d5268576dc1f45",
+      "bytes": 19488
+    },
+    {
+      "path": "experiments/tfpt-discovery/p2_determinant_probe.py",
+      "role": "sealed_probe",
+      "round": "r436",
+      "ledger_ids": [],
+      "status": "P2 determinant as reverse-CS / rank-1 (round 436, PRIME.RDAGGER.P2_DETERMINANT.01, reviewer Hauptlane second half; experiments-side, NO ledger row): 26/26 full / 19/19 smoke; SPEC_SHA d596aecc4dff3ef1; SATZ det K2 = det(K2_+)-Q with Q = p^T adj(K2_+) p = ||p||^2 + p^T adj(R_+) p (Q-toy det=-7 = 2-9); C_min = psi_- (r407 cosine=1); nneg-1 45/74 detK<0, -det in [1.157, 1126.389]; Rayleigh excess min 0.2746 at kz18; coarse ||p||^2 > lmax(K2_+) sufficient SATZ 44/45 KILLED at kz46 (same window as r375 Cauchy); anatomy MIXED Ta=25 Td=4 Tx=16; alternation 45/45 iff detK<0 (r377 dictionary); vacuous 29/74 no pole detK>0 (14/42 core); dead chi CHI3-15 nneg-1 detK=-122.91 (P2 stays; sch is NOT this product, r417); drop-psi w9 det(K2_+)=5.958>0; wrong J=-I det=+0.941; scramble nneg=21 hypothesis empty.  Remainder: p^T K2_+^{-1} p > 1 (CD--C_min coupling).  First measured in /tmp (r436_cal.py, r436_cal2.py) then sealed (disclosed).  Full wall 42.3 s.  Builder fallback NOT taken.  AUSGANG REDUZIERT / IDENTITY_EXACT / ANATOMY_MIXED / COARSE_KILLED_AT_KZ46 / ALTERNATION_EXPLAINED.  Companion rh/problem/p2_determinant.tex + verify_p2_determinant.py 8/8 P2 DETERMINANT VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "765e51e365722ee68bd39e2a68ef437ff2e40949130456df7b8a3b087ea9033a",
+      "bytes": 25997
+    },
+    {
+      "path": "experiments/tfpt-discovery/evolutionary_certificate_probe.py",
+      "role": "sealed_probe",
+      "round": "r438",
+      "ledger_ids": [],
+      "status": "evolutionary certificate search (round 438, PRIME.SEARCH.EVOLUTIONARY_CERTIFICATE.01, reviewer search lane after DCCCII; experiments-side, NO ledger row): 29/29 full / 29/29 smoke; SPEC_SHA d6c1624b82717fba; hard train/holdout split (fitness = MAIN {9,18,20} only; chi3/chi4 + EXT-35 + Selected k>=7 NEVER in any fitness loop).  Track A grammar GP (seed 43801, pop 24 gen 10): best min-cos 0.1010 expr INVPY; four canonical psi candidates 0.007-0.71 on w9, uniform vtop 0.058 at kz18; source NNLS for lam2-1 and q^dagger relres >> 1.  Track B: source NNLS onto -det K2 relres 13.2; r375 identity live on w9 (fact=-5.038869, gamma/lam=1.846) but uses psi_-; B2 family P=t0 I+t1 diag(u), v=v_top remainder lmin=-0.261 not PSD.  Track C canonical cut dn=0: nC<=1 on 11/11 CORE, closest C2-1=2.245e-7 at kz52; holdout 7/7 nC in {0,1}; weight-scale GA nC=1.  Truncation dn=-2 inflates nC=2 on {5,18,22,38,52} -- r395 class, NOT a falsifier.  Q toys residual 0 (ONES-Y, r375 det=-7, B2 Rest=0).  PERM nC=21 SCR nC=21; illegal CHI3 a=0 nC=3.  First measured in /tmp (r438_cal.py, r438_cal2.py, r438_cal3.py) then sealed (disclosed).  Full wall 1.7 s.  Builder fallback NOT taken.  AUSGANG A:NOT_FOUND / B:NOT_FOUND / C:NOT_FOUND.  Companion rh/problem/evolutionary_certificate.tex + verify_evolutionary_cert.py 10/10 EVOLUTIONARY CERT VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "acc18fe19241445c264d6f1e612fed9d6bfcd7591c93a3da739aa0e97f6e8625",
+      "bytes": 34378
     }
   ]
 }

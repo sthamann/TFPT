@@ -6294,6 +6294,61 @@ NO L\* claim, NO RH CLAIM.
 Coexistence: r374--r430 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**P1 as an overload bound (r435,
+PRIME.RDAGGER.P1\_OVERLOAD.01).**  Sealed probe
+`experiments/tfpt-discovery/p1_overload_probe.py`
+(23/23 full, 20/20 smoke, SPEC\_SHA `d032621d5417873f`)
+plus `rh/problem/p1_overload.tex` (+ PDF +
+`verify_p1_overload.py`, 8/8, `P1 OVERLOAD VERIFIED`).
+**Ausgang DEPTH\_CHAIN\_EXACT / GK\_UNIVERSAL\_REFUTED / SAVE\_RATE\_CENSUS.**
+$n_{-}(A_0)\le 1$ is a crossing budget on the selected
+sequence (29 vacuous windows are case 1 of the two-case
+inertia theorem).  Dictionary $n_{-}(A_0)=n_{\mathrm{C}}(N_w-3)$.
+Gantmacher--Krein / Cauchy--$\pi$ universal $n_{-}\le 1$
+REFUTED over $\mathbb{Q}$.  Core-42 ends in $\{0,1\}$
+($28$ P1 / $14$ VAC).  No Lean this round.
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r436 / r438 are parallel and not dropped.
+
+**P2 determinant as reverse-CS (r436,
+PRIME.RDAGGER.P2\_DETERMINANT.01).**  Sealed probe
+`experiments/tfpt-discovery/p2_determinant_probe.py`
+(26/26 full, 19/19 smoke, SPEC\_SHA `d596aecc4dff3ef1`)
+plus `rh/problem/p2_determinant.tex` (+ PDF +
+`verify_p2_determinant.py`, 8/8, `P2 DETERMINANT VERIFIED`).
+**Ausgang REDUZIERT / IDENTITY\_EXACT / ANATOMY\_MIXED / COARSE\_KILLED\_AT\_KZ46 / ALTERNATION\_EXPLAINED.**
+On the $n_{-}=1$ branch, $\det K_{2}=\det(K_{2,+})-Q$ with
+$Q=p^{T}\operatorname{adj}(K_{2,+})p=\|p\|^{2}+p^{T}\operatorname{adj}(R_{+})p$
+($\mathbb{Q}$-toy $\det=-7=2-9$).
+$C_{\min}=\psi_{-}$ (r407).  Drop-$\psi_{-}$ kills P2;
+vacuous $n_{-}=0$ has no pole ($14/42$ core, $\det K_{2}>0$).
+Direction-free coarse bound $\|p\|^{2}>\lambda_{\max}(K_{2,+})$
+is sufficient SATZ, $44/45$, killed at kz\,46 (same window
+as the r375 Cauchy test).  Anatomy mixed ($T_a$ $25$,
+$T_d$ $4$, $T_x$ $16$).  Alternation
+$\det K_{2}<0\iff h_{N}h_{N+1}<0$ (r377; $\mathrm{sch}$ is
+a different coordinate, r417).  Remainder:
+$p^{T}K_{2,+}^{-1}p>1$ (CD--$C_{\min}$ coupling).
+No Lean this round.  Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r438 are parallel and not dropped.
+
+**Evolutionary certificate search (r438,
+PRIME.SEARCH.EVOLUTIONARY\_CERTIFICATE.01).**  Sealed probe
+`experiments/tfpt-discovery/evolutionary_certificate_probe.py`
+(29/29 full, 29/29 smoke, SPEC\_SHA `d6c1624b82717fba`)
+plus `rh/problem/evolutionary_certificate.tex` (+ PDF +
+`verify_evolutionary_cert.py`, 10/10, `EVOLUTIONARY CERT VERIFIED`).
+**Ausgang A:NOT\_FOUND / B:NOT\_FOUND / C:NOT\_FOUND.**
+Hard train/holdout split.  Tracks A/B/C do not yield a
+source-pure certificate for the $C$-defect / P2 identity /
+canonical-cut $n_{\mathrm{C}}\le 1$ beyond the already named
+r375/$\psi_{-}$ identity.  No Lean this round.
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -6605,6 +6660,14 @@ rh/
 │   │                     Blaschke–Potapov + Redheffer star
 │   │                     still S_0; numbers reproduced.
 │   │                     CONFIRMED.  No RH claim
+│   ├── p1_overload.tex(+pdf) — r435: n_-(A0)<=1 is a
+│   │                     crossing budget.  No RH claim
+│   ├── p2_determinant.tex(+pdf) — r436: reverse-CS
+│   │                     identity SATZ; coarse lmax
+│   │                     killed at kz46.  No RH claim
+│   ├── evolutionary_certificate.tex(+pdf) — r438:
+│   │                     GP/NNLS/cut search NOT_FOUND.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -6758,6 +6821,15 @@ rh/
 │   └── verify_edge_redheffer.py — machine check of
 │                         edge_redheffer.tex (8/8,
 │                         EDGE REDHEFFER VERIFIED)
+│   └── verify_p1_overload.py — machine check of
+│                         p1_overload.tex (8/8,
+│                         P1 OVERLOAD VERIFIED)
+│   └── verify_p2_determinant.py — machine check of
+│                         p2_determinant.tex (8/8,
+│                         P2 DETERMINANT VERIFIED)
+│   └── verify_evolutionary_cert.py — machine check of
+│                         evolutionary_certificate.tex (10/10,
+│                         EVOLUTIONARY CERT VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7115,7 +7187,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r433 from
+2. **Sealed probes** — the campaign probes r250–r438 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7468,6 +7540,23 @@ surface of this round: integrity + probes
 sealed probe and the problem-document rows to the
 inventory.  r430 is the parallel Lean quantifier lane
 and is not dropped.
+**r435 coexistence.** Round 435 (`p1_overload_probe.py`)
+is additive on the $R^{\dagger}$ P1 lane after r400/r407.
+It does not touch `experiments/next.txt` or `rh/lean/`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r436 coexistence.** Round 436 (`p2_determinant_probe.py`)
+is additive on the $R^{\dagger}$ P2 lane after r367/r369/r375/r377
+(reviewer Hauptlane second half: exact reverse-CS
+$2\times 2$ analysis of $\det K_{2}$).  It does not touch
+`experiments/next.txt` or `rh/lean/`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r438 coexistence.** Round 438 (`evolutionary_certificate_probe.py`)
+is additive on the search lane (A/B/C NOT_FOUND).
+It does not touch `experiments/next.txt` or `rh/lean/`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
