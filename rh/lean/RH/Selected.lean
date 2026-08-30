@@ -51,11 +51,14 @@ the rationals.
     `BorderedCompressionBridge` plus the real-window moment
     algebra, not formalized as a theorem in this round because L†
     is still typed on the rational `VonMangoldtWindow`).
-  * THE NEW MINCUT is the named Prop
-    `selected_augDualResolvent_gt_half`
-    (`∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef`).  The C1 holes
-    `lstar_canonical` / `terminal_q_canonical` are DEGRADED to
-    conjectures / alternative route (kept, not deleted).
+  * THE r397 STRICT TAIL (kept as the stronger alternative):
+    named Prop `selected_augDualResolvent_gt_half`
+    (`∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef`).  r430 degrades this to
+    the stronger alt-form: the load-bearing mincut is
+    `frequently_selected_augDualResolvent_ge_half` in
+    RH/FrequentlySelected.lean (`∃ᶠ k, R† ⪰ ½I`).  The C1 holes
+    `lstar_canonical` / `terminal_q_canonical` remain DEGRADED
+    to conjectures / alternative route (kept, not deleted).
 
 SORRY CENSUS OF THIS FILE: ZERO.  New openness is named Props only.
 The extraction theorem consumes the existing classical sorry
@@ -499,15 +502,16 @@ theorem weil_nonneg_of_selected_master
     ∀ f : GridElement, 0 ≤ weilForm f :=
   weil_nonneg_of_selected_windows (hbridge hmaster)
 
-/-! ## The new mincut: R† ≻ ½I on the selected real windows
+/-! ## The r397 strict tail (stronger alternative since r430)
 
 Named Prop, never a `sorry`, never asserted.  The dual-resolvent
 object is the r362/r373 `augDualResolvent` of a μ-ONB
 transcription of `W^ℝ_k` (`RepresentsLEnsembleReal`).  The
 finite-algebra identity `L† ⟺ R† ≻ ½I` remains
 `augmentedSubordination_iff_dualResolvent` on the rational
-certificate side; this Prop is the real-domain, selected-sequence
-form the reviewer set as the north star. -/
+certificate side.  r430: this is the stronger (`∀ᶠ`, `PosDef`)
+alternative; the load-bearing mincut is
+`frequently_selected_augDualResolvent_ge_half`. -/
 
 /-- R† ≻ ½I for a μ-ONB transcription of one selected real
 window. -/
@@ -520,11 +524,13 @@ def selectedWindowCone (k : ℕ) (hk : 0 < k) : Prop :=
       - (1 / 2 : ℝ) •
         (1 : Matrix (Fin W.cap ⊕ Unit) (Fin W.cap ⊕ Unit) ℝ)).PosDef
 
-/-- **THE NEW MINCUT** (r397): eventually the selected real
-windows satisfy `R†(W^ℝ_k) ≻ ½ I`.  Named open kernel.  The C1
-holes `lstar_canonical` / `terminal_q_canonical` are the
-alternative (rational-certificate) route and are degraded to
-conjectures in RH/Canonical.lean.  NO RH CLAIM. -/
+/-- **STRONGER ALTERNATIVE** (r397; r430 degradation): eventually
+the selected real windows satisfy `R†(W^ℝ_k) ≻ ½ I`.  Kept; not
+the mincut.  The load-bearing open kernel is
+`frequently_selected_augDualResolvent_ge_half`
+(`RH/FrequentlySelected.lean`).  The C1 holes
+`lstar_canonical` / `terminal_q_canonical` remain the
+rational-certificate route.  NO RH CLAIM. -/
 def selected_augDualResolvent_gt_half : Prop :=
   ∀ᶠ k in atTop, ∃ hk : 0 < k, selectedWindowCone k hk
 

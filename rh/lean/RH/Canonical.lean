@@ -67,7 +67,9 @@ alternative (rational-certificate) route: they stay as typed
 `sorry`s so the finite-algebra corollaries still typecheck, but
 they are NOT the mincut (domain may be empty; mesh-tolerance is
 uncoupled from the L* margin).  The load-bearing open kernel is
-`selected_augDualResolvent_gt_half` in RH/Selected.lean.
+`frequently_selected_augDualResolvent_ge_half` in
+RH/FrequentlySelected.lean (r430); `selected_augDualResolvent_gt_half`
+is the stronger alternative.
   * `lstar_canonical`     -- lemma L* on canonical windows (base/wall),
   * `terminal_q_canonical` -- the terminal cross-ratio `q < 1` on
     canonical windows (border/fiber).  NOTE the sharpening: the budget
@@ -240,8 +242,11 @@ They quantify over `CanonicalWindow`, which may be empty (Problem A)
 and whose mesh-tolerance is too coarse (Problem B).  They remain as
 typed `sorry`s so the existing finite-algebra corollaries still
 typecheck; they are the alternative (rational-certificate) route.
-The load-bearing open kernel is `selected_augDualResolvent_gt_half`
-in RH/Selected.lean. -/
+The load-bearing open kernel is
+`frequently_selected_augDualResolvent_ge_half` in
+RH/FrequentlySelected.lean (r430);
+`selected_augDualResolvent_gt_half` is the stronger
+(`∀ᶠ`, `PosDef`) alternative. -/
 
 /-- **CONJECTURE / ALTERNATIVE ROUTE** (C1 retype of
 `lstar_subordination`; r397: degraded, not the mincut).

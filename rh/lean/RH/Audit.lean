@@ -37,6 +37,7 @@ import RH.Selected
 import RH.OneDefect
 import RH.GraphResolvent
 import RH.EdgeBalance
+import RH.FrequentlySelected
 
 namespace RH
 
@@ -242,6 +243,7 @@ hole.  Census of `sorry` declarations unchanged at 5.  NO RH CLAIM. -/
 #print axioms posDef_one_sub_inv_iff
 #print axioms posSemidef_one_sub_inv_iff
 #print axioms graphResolvent_gt_half_iff
+#print axioms graphResolvent_ge_half_iff
 #print axioms contractive_iff_gram_le_one
 #print axioms energy_split_contractive
 #print axioms energy_split_at_most_one
@@ -272,5 +274,37 @@ at 5.  NO RH CLAIM. -/
 #print axioms den_lt_two_of_le_S_lt_Bw
 #print axioms parseval_normSq
 #print axioms gamma_lt_one_of_named
+
+/-! ## (o) The r430 semidefinite / frequently-selected layer
+Expected AND MEASURED: the Loewner identities and the FREQ
+extraction (plain) plus density / mean-value arithmetic are
+sorry-free except that `weil_nonneg_of_frequently_plain` /
+`weil_nonneg_of_frequently_selected` / `rh_of_frequently_selected`
+consume the existing classical arch-channel sorry through
+`elementwise_finite_stabilization`, so those three carry
+`[propext, sorryAx, Classical.choice, Quot.sound]` -- the same
+`sorryAx` as `weil_nonneg_of_windowlocal`, no new hole.
+The spectral Loewner faces and the arithmetic lemmas are
+`[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`.
+Named Props (`frequently_selected_augDualResolvent_ge_half`,
+`SelectedSemidefImpliesPlainReads`) are hypotheses, not holes.
+Census of `sorry` declarations unchanged at 5.  The r397 Prop
+`selected_augDualResolvent_gt_half` is the stronger alternative.
+NO RH CLAIM. -/
+
+#print axioms posSemidef_nonsingInv_sub_smul_iff
+#print axioms posSemidef_one_sub_iff_dualResolvent_ge_half
+#print axioms Rdagger_ge_half_iff_augmented_posSemidef
+#print axioms graphResolvent_ge_half_iff
+#print axioms selectedWindowConeSemidef_of_posDef
+#print axioms frequently_selected_iff_forall_exists
+#print axioms frequently_selected_of_eventually_gt_half
+#print axioms weil_nonneg_of_frequently_plain
+#print axioms frequently_plain_of_frequently_selected
+#print axioms weil_nonneg_of_frequently_selected
+#print axioms rh_of_frequently_selected
+#print axioms frequently_of_pos_lower_density
+#print axioms frequently_selected_of_pos_lower_density
+#print axioms exists_index_zero_of_block_mean_lt_one
 
 end RH

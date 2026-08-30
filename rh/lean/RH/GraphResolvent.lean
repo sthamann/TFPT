@@ -478,6 +478,16 @@ theorem graphResolvent_gt_half_iff {C : Matrix n n ℝ} (hC : C.PosDef) :
   rw [← posDef_one_sub_iff_dualResolvent_gt_half hS]
   exact posDef_one_sub_inv_iff hC
 
+/-- Loewner face of (a)+(b) (r430): `R ⪰ ½I` iff `C ⪰ I`. -/
+theorem graphResolvent_ge_half_iff {C : Matrix n n ℝ} (hC : C.PosDef) :
+    (graphResolvent C - (1 / 2 : ℝ) • (1 : Matrix n n ℝ)).PosSemidef ↔
+      (C - 1).PosSemidef := by
+  have hS : (1 + C⁻¹).PosDef :=
+    posDef_one_add_of_posSemidef hC.inv.posSemidef
+  rw [graphResolvent_eq_dualResolvent_inv hC]
+  rw [← posSemidef_one_sub_iff_dualResolvent_ge_half hS]
+  exact posSemidef_one_sub_inv_iff hC
+
 /-! ## Energy split -/
 
 variable {m : Type*} [Fintype m] [DecidableEq m]
@@ -569,8 +579,8 @@ as `CauchyInterlace` / `P1EqCapInertia`).  Once `E = C⁻¹`, the
 identity `graphResolvent C = dualResolvent E` is the theorem
 `graphResolvent_eq_dualResolvent_inv`.  The one-defect lift of
 `indNeg(C−I) ≤ 1` plus a strictly positive r406 discriminant of
-the *cap* border to the r397 mincut
-`selected_augDualResolvent_gt_half` consumes this identification
+the *cap* border to the r430 mincut
+`frequently_selected_augDualResolvent_ge_half` consumes this identification
 and the depth gap `N-3` vs cap. -/
 def GraphResolventIsLEnsembleInv : Prop :=
   ∀ (w : VonMangoldtWindow) (n : ℕ)

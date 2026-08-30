@@ -131,11 +131,13 @@ to the alternative (rational-certificate) route: `CanonicalWindow`
 may be empty after exact real transcription, and mesh-tolerance is
 uncoupled from the L* margin.  They are kept as typed `sorry`s, not
 deleted.  The load-bearing open kernel is the named Prop
-`selected_augDualResolvent_gt_half` (`RH/Selected.lean`):
-`∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef` on the constructed real windows
-of the selected sequence `a_k = 2^k`, `m_k = k·2^{⌊√k⌋}−1`.
-New named Props (not sorrys): `SelectedMasterImpliesPlainReads`,
-`ExactArchAgreesWithArchRead`.  Sorry census unchanged at 5.
+`frequently_selected_augDualResolvent_ge_half`
+(`RH/FrequentlySelected.lean`, r430):
+`∃ᶠ k, (R†(W^ℝ_k) − ½·1).PosSemidef`.  The r397 Prop
+`selected_augDualResolvent_gt_half` (`∀ᶠ`, `PosDef`) is the
+stronger alternative, kept.  New named Props (not sorrys):
+`SelectedMasterImpliesPlainReads`, `ExactArchAgreesWithArchRead`,
+`SelectedSemidefImpliesPlainReads`.  Sorry census unchanged at 5.
 
 ## r417 census (source Schur sign)
 
@@ -146,7 +148,7 @@ census, not a theorem; the rate is `RATE_OPEN` (Uvarov / fold
 identities do not force the observed slope).  Cofinal `sch < 0`
 on the selected sequence is not proved and is not a new
 `sorry` here -- it remains a named open of the selected
-mincut `selected_augDualResolvent_gt_half`.
+mincut `frequently_selected_augDualResolvent_ge_half`.
 NO RH CLAIM.
 
 ## r418 census (phi_bb sign)
@@ -251,6 +253,20 @@ vacuous `sch < 0 ↔ τ² > φ`; `den < 2 ↔ γ < 1 + v_t·s`.
 Named Props `BorderIsMuParseval`, `BorderLoewnerLeS`,
 `QNLtOne` (r425 remainder: cofinal `q_N < 1`).
 Census unchanged at 5.  Mincut unchanged.
+NO RH CLAIM.
+
+## r430 census (semidefinite frequently selected)
+
+Two quantifier wins, sorry-free except the existing
+arch-channel sorry consumed by the FREQ extraction:
+(1) `Rdagger_ge_half_iff_augmented_posSemidef` (A3 Loewner
+face); (2) `weil_nonneg_of_frequently_selected` /
+`rh_of_frequently_selected` (FREQ of `R† ⪰ ½I` plus the
+named bridge `SelectedSemidefImpliesPlainReads`).
+New mincut `frequently_selected_augDualResolvent_ge_half`;
+`selected_augDualResolvent_gt_half` degraded to the
+stronger alternative.  Density corollary and mean-value
+trick proved.  Census unchanged at 5.
 NO RH CLAIM.
 -/
 

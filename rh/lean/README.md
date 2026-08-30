@@ -18,8 +18,9 @@
 > **r397** constructs the exact real domain and the selected
 > sequence (`RH/Selected.lean`) with **zero new `sorry`**:
 > `lstar_canonical` / `terminal_q_canonical` are DEGRADED to the
-> alternative (rational-certificate) route; the new mincut is the
-> named Prop `selected_augDualResolvent_gt_half`. Census stays **five**.
+> alternative (rational-certificate) route; the r397 named Prop
+> `selected_augDualResolvent_gt_half` is the stronger (`∀ᶠ`, `PosDef`)
+> alternative. Census stays **five**.
 > **r406** proves the general one-defect absorption theorems
 > (`RH/OneDefect.lean`) with **zero new `sorry`** (finite real
 > matrix algebra; independent of source-side R404/R405). Census
@@ -35,6 +36,14 @@
 > vacuous τ²-separator, den formula and γ-bridge proved; named
 > Props `BorderIsMuParseval` / `BorderLoewnerLeS` / `QNLtOne`).
 > Census stays **five**.
+> **r430** kernel-anchors the reviewer quantifier correction
+> (`RH/FrequentlySelected.lean`) with **zero new `sorry`**:
+> Loewner face `Rdagger_ge_half_iff_augmented_posSemidef`,
+> FREQ extraction `weil_nonneg_of_frequently_selected` /
+> `rh_of_frequently_selected` (arch sorry consumed, not new),
+> density corollary and mean-value trick proved; the new mincut
+> is `frequently_selected_augDualResolvent_ge_half`. Census
+> stays **five**.
 > The graph is reduced to the
 > **two true arithmetic gaps** (now the alternative route):
 > `lstar_canonical` (lemma L*, the base/wall hole)
@@ -159,7 +168,7 @@
 >
 > r384 named Props (not sorrys, census unchanged): `FlankEntryPrefix`, `ChristoffelPivotBound` (`RH/FlankEntry.lean`; discrete OP / CD remainder of the r382 inductive core, same class as `ComplementaryDualHankelInertia`).
 >
-> r397 named Props (not sorrys, census unchanged at 5): `selected_augDualResolvent_gt_half` (THE NEW MINCUT: `∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef`), `SelectedMasterImpliesPlainReads` (L†/master of the real windows ⇒ plain `fullRead` along the sequence), `ExactArchAgreesWithArchRead` (folded Exact arch vs opaque `archRead`).  Sequence identities (`selectedDelta_eq`, `a_k → ∞`, `Δ_k → 0`, `m_k → ∞`) and `weil_nonneg_of_selected_windows` are theorems; the latter consumes the existing arch sorry.  `lstar_canonical` / `terminal_q_canonical` kept as typed `sorry`s, degraded to the alternative route.
+> r397 named Props (not sorrys, census unchanged at 5): `selected_augDualResolvent_gt_half` (r397 strict tail, r430 **degraded** to the stronger alternative: `∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef`), `SelectedMasterImpliesPlainReads` (L†/master of the real windows ⇒ plain `fullRead` along the sequence), `ExactArchAgreesWithArchRead` (folded Exact arch vs opaque `archRead`).  Sequence identities (`selectedDelta_eq`, `a_k → ∞`, `Δ_k → 0`, `m_k → ∞`) and `weil_nonneg_of_selected_windows` are theorems; the latter consumes the existing arch sorry.  `lstar_canonical` / `terminal_q_canonical` kept as typed `sorry`s, degraded to the alternative route.
 >
 > r406 proved theorems (not sorrys, census unchanged at 5): `indNeg_sub_rankOne_le_one`, `posDef_sub_rankOne_iff`, `woodbury_inv`, `oneDefect_update_posDef_iff`, `posDef_of_contractive_lift`, `cMin_normSq`, `posDef_gram_sub_rankOne_iff` (`RH/OneDefect.lean`; finite matrix algebra, independent of R404/R405).
 >
@@ -358,7 +367,8 @@ lake build           # => "Build completed successfully"
   remainder).
   **r397 census unchanged at 5** (`RH/Selected.lean` is
   sorry-free: exact real domain + selected sequence identities
-  proved; named mincut `selected_augDualResolvent_gt_half`).
+  proved; named mincut was `selected_augDualResolvent_gt_half`,
+  r430-degraded to the stronger alternative).
   **r406 census unchanged at 5** (`RH/OneDefect.lean` is
   sorry-free: SATZ A/B/C, Woodbury, and the min-norm Gram
   identity proved; independent of R404/R405).
@@ -370,6 +380,10 @@ lake build           # => "Build completed successfully"
   sorry-free: Woodbury-sch, chart trichotomy, τ²-separator,
   den formula, and the γ-bridge proved; named Props
   `BorderIsMuParseval` / `BorderLoewnerLeS` / `QNLtOne`).
+  **r430 census unchanged at 5** (`RH/FrequentlySelected.lean` is
+  sorry-free: Loewner A3, FREQ extraction, density corollary,
+  mean-value trick; named mincut
+  `frequently_selected_augDualResolvent_ge_half`).
 
 ## Layering (r267 recommendation: order by provability)
 
@@ -703,8 +717,11 @@ v4.29.1 has no interlacing lemma), never a `sorry`.
 |---|---|---|
 | `dualResolvent`, `lEnsemble`, `borderedGram`, `dualZ`, `augDualResolvent`, `qDagger`, `shermanDenom` | definitions | L-ensemble dual resolvent and the rank-1 border |
 | `posDef_nonsingInv_sub_smul_iff` | **proved** | spectral comparison: `S ≻ 0`, `c > 0` ⇒ (`S⁻¹ ≻ c I` ⟺ `c⁻¹ I ≻ S`) |
+| `posSemidef_nonsingInv_sub_smul_iff` | **proved** (r430) | Loewner face: `S⁻¹ ⪰ c I` ⟺ `c⁻¹ I ⪰ S` |
 | `posDef_one_sub_iff_dualResolvent_gt_half` | **proved** | **(r356-A / A2)** `I−E ≻ 0` ⟺ `R ≻ ½I`, given `I+E ≻ 0` |
+| `posSemidef_one_sub_iff_dualResolvent_ge_half` | **proved** (r430) | A2 Loewner: `I−E ⪰ 0` ⟺ `R ⪰ ½I` |
 | `posDef_one_sub_borderedGram_iff_augDualResolvent` | **proved** | **(A3)** `I−G† ≻ 0` ⟺ `R† ≻ ½I`, given `Z ≻ 0` |
+| `Rdagger_ge_half_iff_augmented_posSemidef` | **proved** (r430) | A3 Loewner: `I−G† ⪰ 0` ⟺ `R† ⪰ ½I` |
 | `augDualResolvent_fromBlocks` | **proved** | **(A4)** block inverse of `Z`; Y-block is Sherman–Morrison (`invOf_fromBlocks₁₁_eq`) |
 | `posDef_one_sub_borderedGram_iff_qDagger` | **proved** | **(A5)** `I−G† ≻ 0` ⟺ `q† < 1`, given `I−E ≻ 0` |
 | `augDualResolvent_gt_smul_implies_dualResolvent` | **proved** | **(A7-min)** `R† ≻ αI` ⟹ `R ≻ αI` (principal restriction of `Z`) |
@@ -817,7 +834,7 @@ way, sp(N, eps) = +0.67, r272).
 | `selectedDelta_eq`, `selectedAnchor_tendsto`, `selectedRoot_tendsto`, `selectedMesh_tendsto`, `selectedDelta_tendsto_zero`, `selected_covers` | **proved** (no `sorryAx`) | `Δ_k = 2^{−r_k}·log 2`; cofinality in anchor and mesh |
 | `weil_nonneg_of_selected_windows` | **proved** (consumes the existing arch sorry) | `SelectedWindowLocalPositive → ∀ f, 0 ≤ weilForm f`.  Honest hypotheses: plain `fullRead` along the sequence, per-element onset and mesh coverage (proved by cofinality), existing `elementwise_finite_stabilization` |
 | `SelectedMasterImpliesPlainReads` | named Prop | L†/master of `W^ℝ_k` ⇒ plain reads (not asserted) |
-| `selected_augDualResolvent_gt_half` | **named Prop — THE NEW MINCUT** | `∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef`.  Never a `sorry` |
+| `selected_augDualResolvent_gt_half` | named Prop — **stronger alternative** (r430) | `∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef`.  Kept; not the mincut |
 | `ExactArchAgreesWithArchRead` | named Prop | folded Exact arch vs `archRead` (classical) |
 
 Zero `sorry` in this file.  Census stays 5.
@@ -851,6 +868,7 @@ Zero `sorry` in this file.  Independent of R404/R405.  Census stays 5.
 | `indNeg_mobius` | **proved** (b) | $\mathrm{ind}_{-}(C-I)=\mathrm{ind}_{-}(I-C^{-1})$ |
 | `posDef_one_sub_inv_iff` / `posSemidef_one_sub_inv_iff` | **proved** | Möbius PosDef / Loewner faces |
 | `graphResolvent_gt_half_iff` | **proved** | $R\succ\tfrac12 I\iff C\succ I$ |
+| `graphResolvent_ge_half_iff` | **proved** (r430) | $R\succeq\tfrac12 I\iff C\succeq I$ |
 | `contractive_iff_gram_le_one` | **proved** | Euclidean contraction $\iff I-\mathfrak{T}^T\mathfrak{T}\succeq0$ |
 | `energy_split_contractive` | **proved** (c) | $\mathfrak{T}^T\mathfrak{T}=C^{-1}\Rightarrow$ contraction $\iff C\succeq I$ |
 | `energy_split_at_most_one` / `p1_coord_graphResolvent` | **proved** (c) | at most one excess singular value $\iff\mathrm{ind}_{-}(C-I)\le1$ |
@@ -884,6 +902,28 @@ Zero `sorry` in this file.  Does not assert (P1) on any window.  Census stays 5.
 
 Zero `sorry` in this file.  Does not assert (P1) or cofinal `q_N<1` on any window.  Census stays 5.
 
+### `RH/FrequentlySelected.lean` — SEMIDEFINITE + FREQUENTLY SELECTED (r430)
+
+Two quantifier wins against the existing extraction.  Zero `sorry`.
+The FREQ theorems consume the existing arch-channel sorry; the
+Loewner identities and the density / mean-value lemmas do not.
+
+| Item | Status | Content |
+|---|---|---|
+| `Rdagger_ge_half_iff_augmented_posSemidef` | **proved** (in DualResolvent) | `R† ⪰ ½I` ⟺ augmented form PSD, given `Z ≻ 0`.  `#print axioms` = `[propext, Classical.choice, Quot.sound]` |
+| `graphResolvent_ge_half_iff` | **proved** (in GraphResolvent) | `R ⪰ ½I` ⟺ `C ⪰ I` |
+| `selectedWindowConeSemidef` | definition | PSD face of `selectedWindowCone` |
+| `frequently_selected_augDualResolvent_ge_half` | **named Prop — THE NEW MINCUT** | `∃ᶠ k, (R†(W^ℝ_k) − ½·1).PosSemidef`.  Never a `sorry` |
+| `SelectedSemidefImpliesPlainReads` | named Prop | `R† ⪰ ½I` on window k ⇒ plain `fullRead` (not asserted) |
+| `weil_nonneg_of_frequently_plain` | **proved** (consumes the existing arch sorry) | FREQ of plain `fullRead` ⇒ `∀ f, 0 ≤ weilForm f`.  Coverage eventual, positivity frequent |
+| `weil_nonneg_of_frequently_selected` | **proved** (named bridge + arch sorry) | `∀ K ∃ k ≥ K, R_k† ⪰ ½I` ⇒ Weil ≥ 0 |
+| `rh_of_frequently_selected` | **proved** (composition) | named mincut + named bridge ⇒ the existing interface `∀ f, 0 ≤ weilForm f` |
+| `frequently_selected_of_eventually_gt_half` | **proved** | r397 strict tail ⇒ r430 mincut |
+| `frequently_of_pos_lower_density` | **proved** | density `≥ ε > 0` eventually ⇒ frequently |
+| `exists_index_zero_of_block_mean_lt_one` | **proved** | `κ : ℕ → ℕ`, block mean `< 1` ⇒ a zero in the block |
+
+Zero `sorry` in this file.  Census stays 5.
+
 ### `RH/Audit.lean` — THE FINAL AXIOM AUDIT (C1; `#print axioms` at every build)
 
 Runs `#print axioms` on the sorry-free layer (expected: the three
@@ -899,6 +939,9 @@ and the r412 graph-resolvent finite algebra (section (m): all
 audited theorems NO `sorryAx`);
 and the r426 edge-balance finite algebra (section (n): all
 audited theorems NO `sorryAx`);
+and the r430 semidefinite / frequently-selected layer
+(section (o): Loewner faces, density, mean-value NO `sorryAx`;
+FREQ extraction the existing arch `sorryAx`);
 the C1 record is quoted verbatim in the claim-boundary
 block above and in the file itself.
 

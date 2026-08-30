@@ -17,7 +17,10 @@ r362 `augmented_borodin_duality_probe.py`.
 
 PROVED (sorry-free):
   (r356-A / A2) I − E ≻ 0 ⟺ R ≻ ½I, given I+E ≻ 0
+  (r430 Loewner) I − E ⪰ 0 ⟺ R ⪰ ½I, given I+E ≻ 0
   (A3)          I − G† ≻ 0 ⟺ R† ≻ ½I, given I+G† ≻ 0
+  (r430 A3-PSD) I − G† ⪰ 0 ⟺ R† ⪰ ½I, given I+G† ≻ 0
+                (`Rdagger_ge_half_iff_augmented_posSemidef`)
   (A4)          Y-block of R† is the Sherman–Morrison rank-1 update
                 (mathlib `invOf_fromBlocks₁₁_eq` specialized)
   (A5)          I − G† ≻ 0 ⟺ q† < 1, given I−E ≻ 0
@@ -230,6 +233,71 @@ theorem posDef_nonsingInv_sub_smul_iff {S : Matrix n n ℝ}
   · intro h i
     exact sub_pos.mpr ((lt_inv_comm₀ hc (hlam i)).mpr (sub_pos.mp (h i)))
 
+/-- **the spectral comparison, Loewner face** (r430): for `S ≻ 0`
+and `c > 0`, `S⁻¹ ⪰ c I` ⟺ `c⁻¹ I ⪰ S`.  Same eigenbasis as
+`posDef_nonsingInv_sub_smul_iff`; eigenvalues compared by `≤`. -/
+theorem posSemidef_nonsingInv_sub_smul_iff {S : Matrix n n ℝ}
+    (hS : S.PosDef) {c : ℝ} (hc : 0 < c) :
+    (S⁻¹ - c • (1 : Matrix n n ℝ)).PosSemidef ↔
+      (c⁻¹ • (1 : Matrix n n ℝ) - S).PosSemidef := by
+  classical
+  set U := hS.isHermitian.eigenvectorUnitary
+  set lam := hS.isHermitian.eigenvalues
+  have hform := isHermitian_eq_conj_diagonal hS.isHermitian
+  have hlam : ∀ i, 0 < lam i := hS.eigenvalues_pos
+  have hDdet : IsUnit (diagonal lam).det := by
+    rw [det_diagonal, IsUnit.prod_univ_iff]
+    intro i
+    exact (hlam i).ne'.isUnit
+  have hSform : S = (U : Matrix n n ℝ) * diagonal lam * star (U : Matrix n n ℝ) := hform
+  have hSinv :
+      S⁻¹ = (U : Matrix n n ℝ) * (diagonal lam)⁻¹ * star (U : Matrix n n ℝ) := by
+    rw [hSform, inv_conj_unitary U (diagonal lam) hDdet]
+  have hDinv := inv_diagonal_pos (n := n) hlam
+  have hUunit : IsUnit (U : Matrix n n ℝ) := isUnit_coe
+  have hL :
+      S⁻¹ - c • (1 : Matrix n n ℝ) =
+        (U : Matrix n n ℝ) *
+          (diagonal (fun i => (lam i)⁻¹ - c)) *
+          star (U : Matrix n n ℝ) := by
+    have hcI : c • (1 : Matrix n n ℝ) =
+        (U : Matrix n n ℝ) * (c • 1) * star (U : Matrix n n ℝ) :=
+      (conj_unitary_smul_one U c).symm
+    rw [hSinv, hDinv, hcI]
+    simp only [Matrix.mul_assoc]
+    rw [← Matrix.mul_sub, ← Matrix.sub_mul]
+    congr 2
+    simpa using (diagonal_sub_smul_one (fun i => (lam i)⁻¹) c)
+  have hR :
+      c⁻¹ • (1 : Matrix n n ℝ) - S =
+        (U : Matrix n n ℝ) *
+          (diagonal (fun i => c⁻¹ - lam i)) *
+          star (U : Matrix n n ℝ) := by
+    have hcI : c⁻¹ • (1 : Matrix n n ℝ) =
+        (U : Matrix n n ℝ) * (c⁻¹ • 1) * star (U : Matrix n n ℝ) :=
+      (conj_unitary_smul_one U c⁻¹).symm
+    rw [hSform, hcI]
+    simp only [Matrix.mul_assoc]
+    rw [← Matrix.mul_sub, ← Matrix.sub_mul]
+    congr 2
+    ext i j
+    by_cases hij : i = j
+    · subst hij
+      simp [diagonal, Matrix.one_apply, Matrix.smul_apply]
+    · simp [diagonal, Matrix.one_apply, Matrix.smul_apply, hij]
+  have hLiff : (S⁻¹ - c • (1 : Matrix n n ℝ)).PosSemidef ↔
+      ∀ i, 0 ≤ (lam i)⁻¹ - c := by
+    rw [hL, hUunit.posSemidef_star_right_conjugate_iff, posSemidef_diagonal_iff]
+  have hRiff : (c⁻¹ • (1 : Matrix n n ℝ) - S).PosSemidef ↔
+      ∀ i, 0 ≤ c⁻¹ - lam i := by
+    rw [hR, hUunit.posSemidef_star_right_conjugate_iff, posSemidef_diagonal_iff]
+  rw [hLiff, hRiff]
+  constructor
+  · intro h i
+    exact sub_nonneg.mpr ((le_inv_comm₀ hc (hlam i)).mp (sub_nonneg.mp (h i)))
+  · intro h i
+    exact sub_nonneg.mpr ((le_inv_comm₀ hc (hlam i)).mpr (sub_nonneg.mp (h i)))
+
 lemma one_sub_eq_two_sub_one_add (E : Matrix n n ℝ) :
     (1 : Matrix n n ℝ) - E = (2 : ℝ) • 1 - (1 + E) := by
   simp [two_smul, sub_eq_add_neg, add_assoc, add_left_comm, add_comm]
@@ -285,6 +353,33 @@ theorem posDef_one_sub_borderedGram_iff_augDualResolvent
     simpa [dualZ] using hZ
   simpa [dualZ, augDualResolvent] using
     posDef_one_sub_iff_dualResolvent_gt_half (E := borderedGram E v γ) hS'
+
+/-- **r356-A Loewner face** (r430; PROVED): `I − E ⪰ 0` ⟺ `R ⪰ ½I`,
+given `I+E ≻ 0`.  Inverse still needs `Z ≻ 0`; the cone on `R−½I`
+is semidefinite. -/
+theorem posSemidef_one_sub_iff_dualResolvent_ge_half {E : Matrix n n ℝ}
+    (hS : (1 + E).PosDef) :
+    ((1 : Matrix n n ℝ) - E).PosSemidef ↔
+      (dualResolvent E - (1 / 2 : ℝ) • (1 : Matrix n n ℝ)).PosSemidef := by
+  have hc : (0 : ℝ) < 1 / 2 := by norm_num
+  have hinv : (1 / 2 : ℝ)⁻¹ = (2 : ℝ) := by norm_num
+  have hcmp := posSemidef_nonsingInv_sub_smul_iff (S := 1 + E) hS hc
+  unfold dualResolvent
+  rw [hcmp, hinv, ← one_sub_eq_two_sub_one_add]
+
+/-- **(A3) Loewner face** (r430; PROVED): `I − G† ⪰ 0` ⟺ `R† ⪰ ½I`,
+given `Z ≻ 0`.  Elementwise extraction needs this cone, not the
+strict window margin.  NO RH CLAIM. -/
+theorem Rdagger_ge_half_iff_augmented_posSemidef
+    {E : Matrix n n ℝ} {v : n → ℝ} {γ : ℝ}
+    (hZ : (dualZ E v γ).PosDef) :
+    ((1 : Matrix (n ⊕ Unit) (n ⊕ Unit) ℝ) - borderedGram E v γ).PosSemidef ↔
+      (augDualResolvent E v γ
+        - (1 / 2 : ℝ) • (1 : Matrix (n ⊕ Unit) (n ⊕ Unit) ℝ)).PosSemidef := by
+  have hS' : ((1 : Matrix (n ⊕ Unit) (n ⊕ Unit) ℝ) + borderedGram E v γ).PosDef := by
+    simpa [dualZ] using hZ
+  simpa [dualZ, augDualResolvent] using
+    posSemidef_one_sub_iff_dualResolvent_ge_half (E := borderedGram E v γ) hS'
 
 noncomputable def shermanDenom (E : Matrix n n ℝ) (v : n → ℝ) (γ : ℝ) : ℝ :=
   1 + γ - v ⬝ᵥ (dualResolvent E *ᵥ v)

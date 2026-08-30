@@ -20,4 +20,5 @@ import RH.Selected
 import RH.OneDefect
 import RH.GraphResolvent
 import RH.EdgeBalance
+import RH.FrequentlySelected
 import RH.Audit
