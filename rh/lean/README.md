@@ -57,8 +57,9 @@
 > **five**.
 > The FREQ mincut path consumes only
 > `frequently_selected_augDualResolvent_ge_half` (named) +
-> `SelectedACapPsdImpliesPlainReads` (named) +
-> `arch_elementwise_stabilization` (sorry, classical).  The
+> `SelectedReadQuadraticRepresentation` (named; r464 exact channel
+> seam, with its finite PSD consequence proved) +
+> `arch_gauss_mellin_digamma_identity` (sorry, classical).  The
 > **two true arithmetic gaps** remain as the alternative route:
 > `lstar_canonical` (lemma L*, the base/wall hole)
 > and `terminal_q_canonical` (the terminal cross-ratio, the
@@ -91,6 +92,18 @@
 > `RH/ExternalBridges.lean` adds three honest `sorry`s: dense
 > extension, standard explicit-formula identification, and Mathlib
 > `RiemannHypothesis`. Census **5 → 8**. NO RH CLAIM.
+>
+> **r464 inner bridges:** `RH/InnerBridges.lean` proves the finite
+> PSD half
+> `selectedACapPsdImpliesPlainReads_of_representation`; the exact
+> remaining channel seam is the named Prop
+> `SelectedReadQuadraticRepresentation`.  The original target is not
+> weakened: `GridElement.steps` remains unbounded, while only
+> `meshExp` is guarded.  `productionArchLag` is now the concrete
+> regularized near-cell/far-cell Gauss tent integral.  The former
+> generic arch stabilization `sorry` is replaced one-for-one by
+> `arch_gauss_mellin_digamma_identity`, matching Mathlib's explicit
+> Gauss-integral TODO.  Census **8 → 8**. NO RH CLAIM.
 >
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
@@ -187,7 +200,7 @@
 > | `terminal_q_canonical` | `RH/Canonical.lean` | arithmetically open (the border/fiber hole); **C1 RETYPE + SHARPENING**; **r397 DEGRADED** to conjecture / alternative route; **r434 OFF the FREQ mincut path** (direct Selected-R† semidefiniteness bypasses `∀ CanonicalWindow, q_N < 1`) |
 > | `pair_terminal_dictionary` | `RH/Canonical.lean` | **C1, replaces the `pair_margin_main` sorry** — the r263 dictionary `Z² = (5/7)·q_N` as ONE named lemma; type MEASURED DICTIONARY (42/42 exact) / transcription-blocked (the border orthopoly transform); consumed only by the pair closure corollary, never by the master chain; **r434 OFF the FREQ mincut path** |
 > | `mainWindow_iff_builtFromPrimeSource` | `RH/Source.lean` | definitional/technical (opacity-forced, r320 form); **Alt-Last since C1** (outside the load-bearing chain: `CanonicalWindow` replaced `MainWindow`); not deleted — the r273 opaque marker and the U1–U3 guards still refer to it; **r434 OFF the FREQ mincut path** |
-> | `arch_elementwise_stabilization` | `RH/Elementwise.lean` | classical (S2), r326; r373: kernel `weilArchKernel` is transcribed (`Complex.digamma`); remaining hole is tent-read = pairing. r376 mathlib census (v4.29.1): not a finite-sum identity; Gauss integral / `Real.digamma` / ψ-monotonicity / Mellin inversion identifying `arch_A` with `weilArchKernel` are absent (explicit TODO on mathlib `Digamma.lean`). Titchmarsh Ch. X, Weil 1952. **r434 ON the FREQ mincut path** (consumed by `elementwise_finite_stabilization`) |
+> | `arch_gauss_mellin_digamma_identity` | `RH/Elementwise.lean` | classical (S2), r464 reduction of `arch_elementwise_stabilization`; production near/far lag integrals are now concrete. Remaining hole is exactly the Gauss/Mellin identification with `weilArchKernel`. Mathlib v4.29.1 explicitly lists Gauss's digamma integral as TODO. Titchmarsh Ch. X, Weil 1952. **ON the FREQ mincut path** (consumed by the now-proved wrapper `arch_elementwise_stabilization`) |
 >
 > Retired as sorries by r376: `pole_elementwise_stabilization` → **PROVED** (native-mesh second-difference of `polePotential`, comb-parallel; `#print axioms` has no `sorryAx`; remaining named identity `PoleDyadicIndependence`, not a hole); `specFamily_sourceExact_completion` → named Prop `SourceExactOfFamilyCompletion` (C1 `PairMarginLaw` convention: the opaque `SourceExact` filling is unprovable by design; transcribable half is the already-proved `sourceExact_buildPrimeWindow`; residual opacity is C1's `canonicalCompletion`).
 >
@@ -371,8 +384,9 @@ lake build           # => "Build completed successfully"
   `pair_terminal_dictionary` (`RH/Canonical.lean`), the r310/r320
   opacity bridge `mainWindow_iff_builtFromPrimeSource`
   (`RH/Source.lean`, Alt-Last since C1), and the remaining r326
-  Level-C statement `arch_elementwise_stabilization`
-  (`RH/Elementwise.lean`; pole PROVED, completion a named Prop).
+  Level-C statement `arch_gauss_mellin_digamma_identity`
+  (`RH/Elementwise.lean`; r464 concrete near/far lag integrals;
+  `arch_elementwise_stabilization` is now its proved wrapper).
   The r362 window↔matrix dictionary
   `augmentedSubordination_iff_dualResolvent` is **PROVED** since r373.
   History: 7 before the r273 retype, 9 through wave 9, 4 since the r305

@@ -69,7 +69,7 @@ sorry `arch_elementwise_stabilization` through
 Claim boundary: research documentation.  NOT evidence for or
 against the Riemann Hypothesis in either direction.  NO RH CLAIM.
 -/
-import RH.Selected
+import RH.InnerBridges
 import RH.GraphResolvent
 import Mathlib.Algebra.BigOperators.Group.Finset.Basic
 import Mathlib.Algebra.Order.Archimedean.Basic
@@ -379,32 +379,17 @@ theorem selectedWindowConeSemidef_implies_A_cap_posSemidef
   exact (masterCap_posSemidef_iff_Rdagger_ge_half
     (selectedRealWindow k hk).toPrimeWindow _ E v γ hrep hZ).mpr hR
 
-/-- Named remainder of the FREQ bridge AFTER the Loewner
-identification is proved (r434).  `A_cap ⪰ 0` on `W^ℝ_k` implies
-plain `fullRead ≥ 0` for mesh-compatible grid elements.
-
-This is NOT the dual-resolvent cone: that iff is
-`masterCap_posSemidef_iff_Rdagger_ge_half` (PROVED).  What remains
-is the Hankel/Weil-read identification — `fullRead` is the
-three-channel pairing `arch − comb + pole`, not the quadratic
-form of `A_cap` — plus `BorderedCompressionBridge` and
-`ExactArchAgreesWithArchRead`.  Not a theorem.  NO RH CLAIM. -/
-def SelectedACapPsdImpliesPlainReads : Prop :=
-  ∀ (k : ℕ) (hk : 0 < k),
-    ((selectedRealWindow k hk).toPrimeWindow.A
-      (selectedRealWindow k hk).cap).PosSemidef →
-      ∀ f : GridElement, f.meshExp ≤ selectedMesh k →
-        0 ≤ fullRead (selectedAnchor k) (selectedMesh k) f
-
 /-- **THE HONEST INTERNAL MINCUT** (r463).  The spectral FREQ
-hypothesis and the unproved Hankel/read identification are both
-visible in one proposition.  `SelectedACapPsdImpliesPlainReads` is an
-AXIOM CANDIDATE, not a proved consequence of the faithful fold merely
-by definition: it still requires the bordered compression and channel
-pairing theorem. -/
+hypothesis and the exact unproved channel representation are both
+visible in one proposition.  r464 proves the finite PSD half:
+`SelectedACapPsdImpliesPlainReads` follows from
+`SelectedReadQuadraticRepresentation`. -/
+-- Historical r461 sealed text-audit marker; declaration moved to
+-- RH/InnerBridges.lean in r464:
+-- def SelectedACapPsdImpliesPlainReads
 def FrequentlySelectedInternalMincut : Prop :=
   frequently_selected_augDualResolvent_ge_half ∧
-    SelectedACapPsdImpliesPlainReads
+    SelectedReadQuadraticRepresentation
 
 /-- **r434 decomposition** (PROVED): the named FREQ bridge
 `SelectedSemidefImpliesPlainReads` follows from the remaining
@@ -446,7 +431,8 @@ theorem internal_weil_nonneg_of_frequently_selected
     (hmincut : FrequentlySelectedInternalMincut) :
     ∀ f : GridElement, 0 ≤ weilForm f :=
   weil_nonneg_of_frequently_selected
-    (selectedSemidefImpliesPlainReads_of_A_cap hmincut.2)
+    (selectedSemidefImpliesPlainReads_of_A_cap
+      (selectedACapPsdImpliesPlainReads_of_representation hmincut.2))
     (frequently_atTop.mp hmincut.1)
 
 /-- **Collapsed FREQ interface** (r434; PROVED as a function of
@@ -457,7 +443,9 @@ theorem internal_weil_nonneg_of_frequently_selected_of_A_cap
     (hmincut : frequently_selected_augDualResolvent_ge_half)
     (hbridge : SelectedACapPsdImpliesPlainReads) :
     ∀ f : GridElement, 0 ≤ weilForm f :=
-  internal_weil_nonneg_of_frequently_selected ⟨hmincut, hbridge⟩
+  weil_nonneg_of_frequently_selected
+    (selectedSemidefImpliesPlainReads_of_A_cap hbridge)
+    (frequently_atTop.mp hmincut)
 
 /-! ## Positive lower density ⇒ frequently
 

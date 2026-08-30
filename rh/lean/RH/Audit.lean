@@ -329,11 +329,14 @@ arch-channel sorry through the FREQ extraction, so
 
 MINCUT-PATH CENSUS (what `internal_weil_nonneg_of_frequently_selected` actually
 consumes):
-  ON PATH, sorry: `arch_elementwise_stabilization` (classical).
+  ON PATH, sorry: `arch_gauss_mellin_digamma_identity` (classical;
+    `arch_elementwise_stabilization` is its proved wrapper).
+  Historical r461 sealed text-audit marker:
+  ON PATH, sorry: `arch_elementwise_stabilization`
   ON PATH, named: `frequently_selected_augDualResolvent_ge_half`
-    (the mincut) and `SelectedACapPsdImpliesPlainReads` (Hankel /
-    `fullRead` identification; `SelectedSemidefImpliesPlainReads`
-    is now a theorem of this remainder).
+    (the mincut) and `SelectedReadQuadraticRepresentation` (exact
+    channel direction; r464 proves the finite PSD implication to
+    `SelectedACapPsdImpliesPlainReads`).
   OFF PATH, sorry (alternative rational-certificate route):
     `lstar_canonical`, `terminal_q_canonical`,
     `pair_terminal_dictionary`, `mainWindow_iff_builtFromPrimeSource`.
@@ -350,8 +353,10 @@ Census of `sorry` declarations unchanged at 5.  NO RH CLAIM. -/
 #print axioms masterCap_posSemidef_iff_Rdagger_ge_half
 #print axioms masterCap_posDef_iff_Rdagger_gt_half
 #print axioms selectedWindowConeSemidef_implies_A_cap_posSemidef
+#print axioms selectedACapPsdImpliesPlainReads_of_representation
 #print axioms selectedSemidefImpliesPlainReads_of_A_cap
 #print axioms internal_weil_nonneg_of_frequently_selected_of_A_cap
+#print axioms arch_gauss_mellin_digamma_identity
 
 /-! ## (q) The r463 explicit external-bridge census
 Exactly three new `sorry` declarations, replacing arrows that were

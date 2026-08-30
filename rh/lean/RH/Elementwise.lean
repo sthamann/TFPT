@@ -113,6 +113,7 @@ import Mathlib.Algebra.Order.Ring.Int
 import Mathlib.Analysis.SpecialFunctions.Sqrt
 import Mathlib.Analysis.SpecialFunctions.Gamma.Digamma
 import Mathlib.Analysis.Complex.Trigonometric
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 
 namespace RH
 
@@ -555,11 +556,53 @@ theorem polePotential_nonpos (t : ℝ) : polePotential t ≤ 0 := by
 noncomputable def productionArchDelta (a m : ℕ) : ℝ :=
   Real.log a / (m + 1 : ℝ)
 
-/-- The exact archimedean lag value intended by Python
-`arch_lags(M, Delta)[i]`.  This is the remaining Gauss/Mellin value
-interface; unlike the old `archRead`, it exposes each coefficient
-consumed by the production builder. -/
-opaque productionArchLag : ℕ → ℕ → ℕ → ℝ
+/-- The triangular kernel `t_Delta(x)`. -/
+noncomputable def archTent (Δ x : ℝ) : ℝ :=
+  max 0 (1 - |x| / Δ)
+
+/-- The symmetrized near-cell tent
+`S(w) = (t_Delta(s-w) + t_Delta(s+w))/2`. -/
+noncomputable def archNearSymTent (Δ s w : ℝ) : ℝ :=
+  (archTent Δ (s - w) + archTent Δ (s + w)) / 2
+
+/-- Regularized integrand of the production near cell. -/
+noncomputable def productionArchNearIntegrand (Δ s w : ℝ) : ℝ :=
+  (archTent Δ s * Real.exp (-2 * w) -
+      archNearSymTent Δ s w * Real.exp (-w / 2)) /
+    (1 - Real.exp (-2 * w))
+
+/-- The regularized near-cell value used by Python `arch_A_near`.
+The quotient's removable value at `w=0` is irrelevant to the
+interval integral. -/
+noncomputable def productionArchLagNear (Δ s : ℝ) : ℝ :=
+  let t := archTent Δ s
+  let endpoint := s + Δ
+  let integralValue :=
+    intervalIntegral (productionArchNearIntegrand Δ s)
+      0 endpoint MeasureTheory.volume
+  (-(Real.eulerMascheroniConstant + Real.log Real.pi) * t +
+    2 * integralValue -
+    t * Real.log (1 - Real.exp (-2 * endpoint)))
+
+/-- Integrand of an ordinary production far cell. -/
+noncomputable def productionArchFarIntegrand (Δ s w : ℝ) : ℝ :=
+  archTent Δ (s - w) * Real.exp (-w / 2) /
+    (1 - Real.exp (-2 * w))
+
+/-- The ordinary tent integral used by Python `arch_A_far`. -/
+noncomputable def productionArchLagFar (Δ s : ℝ) : ℝ :=
+  -intervalIntegral (productionArchFarIntegrand Δ s)
+    (s - Δ) (s + Δ) MeasureTheory.volume
+
+/-- **Productive transcription of Python `arch_lags`.**
+For `i=0` the Euler/log-pi regularized near cell is used; every
+`i≥1` is the ordinary far-cell tent integral at `s=i Delta`.
+There is no longer an opaque arch-lag coefficient interface. -/
+noncomputable def productionArchLag (a m i : ℕ) : ℝ :=
+  let Δ := productionArchDelta a m
+  let s := i * Δ
+  if i = 0 then productionArchLagNear Δ s
+  else productionArchLagFar Δ s
 
 /-- **Concrete arch read.**  This is Python `read_lags` literally:
 `c₀ F(0) + 2 Σ_{i=1}^{M-1} cᵢ F(i Delta)`, with `M=m+1`.
@@ -686,29 +729,31 @@ def PoleDyadicIndependence : Prop :=
   ∀ f : GridElement, ∀ m, f.meshExp ≤ m →
     poleEvenRead m f = poleEvenRead f.meshExp f
 
-/-- **the arch-channel elementwise stabilization** (r326 -- documented
-`sorry` no. 1 of this file; type: CLASSICAL, S2; r376: remaining
-hole named exactly).  Tent-read `archRead` equals the Weil pairing
-`weilArchSide` at native-or-finer mesh past a finite anchor onset.
+/-- **The one analytical remainder (r464).**
+The now-concrete Gauss tent integrals, assembled by the literal
+finite `archRead`, equal the critical-line digamma kernel pairing.
+Mathlib v4.29.1 explicitly lists Gauss's integral representation of
+digamma as TODO; it supplies the functional equation and special
+values but not the integral theorem or the required Mellin
+identification. -/
+def ArchGaussMellinDigammaIdentity : Prop :=
+  ∀ f : GridElement,
+    ∃ a₀ : ℕ, ∀ a : ℕ, a₀ ≤ a → ∀ m : ℕ, f.meshExp ≤ m →
+      archRead a m f = weilArchSide f
 
-WHY THIS REMAINS A SORRY (r376 mathlib census, v4.29.1):
-the lag-domain tent integrals `arch_A` (v563: `e^{-w/2}/(-expm1(-2w))`
-plus the Euler+`log π` near-cell regularizer) are NOT a second
-difference of a named elementary antiderivative.  mathlib carries
-`Complex.digamma = logDeriv Gamma` with `digamma_apply_add_one`,
-values at `0,1,1/2`, `meromorphic_digamma`,
-`differentiableAt_Gamma` off the nonpositive integers, and
-`Real.Gamma`; it does NOT carry Gauss's integral representation
-(explicit TODO on `Digamma.lean`), `Real.digamma`, ψ-monotonicity,
-or Mellin inversion identifying `arch_A` with `weilArchKernel`.
-That identification is Titchmarsh, *The Theory of the Riemann
-Zeta-Function*, 2nd ed., Ch. X, and Weil 1952.  Not a finite-sum
-identity; not closable from `Complex.Gamma` foundations in this
-mathlib tag. -/
+/-- The named classical Gauss/Mellin/digamma seam.  This replaces the
+former opaque-lag stabilization sorry one-for-one; the coefficient
+construction itself is now fully transcribed. -/
+theorem arch_gauss_mellin_digamma_identity :
+    ArchGaussMellinDigammaIdentity := by
+  sorry
+
+/-- **the arch-channel elementwise stabilization** is now a direct
+application of the single named analytical identity. -/
 theorem arch_elementwise_stabilization (f : GridElement) :
     ∃ a₀ : ℕ, ∀ a : ℕ, a₀ ≤ a → ∀ m : ℕ, f.meshExp ≤ m →
-      archRead a m f = weilArchSide f := by
-  sorry
+      archRead a m f = weilArchSide f :=
+  arch_gauss_mellin_digamma_identity f
 
 /-- **the pole-channel elementwise stabilization** (r376 -- PROVED).
 The pole tent-read is the native-mesh second-difference pairing of

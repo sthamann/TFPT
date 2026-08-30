@@ -317,6 +317,23 @@ Three previously absent external arrows are explicit `sorry`s in
 identification, and the Weil criterion to mathlib
 `RiemannHypothesis`. Census 5 -> 8. NO RH CLAIM.
 
+## r464 census (inner bridges)
+
+FINITE PSD HALF CLOSED: `RH/InnerBridges.lean` proves
+`selectedACapPsdImpliesPlainReads_of_representation`.
+The exact remaining channel seam is the named, unasserted Prop
+`SelectedReadQuadraticRepresentation`; it retains the original
+unbounded `GridElement.steps` quantifier (the old premise bounded
+only `meshExp`).  `FrequentlySelectedInternalMincut` now exposes
+this narrower remainder directly.
+
+ARCH LAGS TRANSCRIBED: `productionArchLag` is no longer opaque.
+Its near and far Gauss tent integrals are concrete.  The one
+Elementwise `sorry` is now the named
+`arch_gauss_mellin_digamma_identity`; Mathlib v4.29.1 explicitly
+lists Gauss's digamma integral representation as TODO.  Census
+unchanged at 8.  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

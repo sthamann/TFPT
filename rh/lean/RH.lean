@@ -18,6 +18,7 @@ import RH.PivotCoordinate
 import RH.FlankEntry
 import RH.Canonical
 import RH.Selected
+import RH.InnerBridges
 import RH.OneDefect
 import RH.GraphResolvent
 import RH.EdgeBalance
