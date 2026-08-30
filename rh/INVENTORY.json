@@ -4070,8 +4070,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "4f3ffbe77d56df7291aca710b90804d3c49538faebac1a6cdedb42d33bfa3267",
-      "bytes": 5543932
+      "sha256": "6a83c3ed1e560f9a5086b5bf630d7d3df54ced2f6aed6a570859101f5d489118",
+      "bytes": 5545991
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4912,6 +4912,16 @@
       "pin": true,
       "sha256": "4af33d3b401a23f202f13aa2fd3863341255dc48d208a1cae6d0f5c286565003",
       "bytes": 17368
+    },
+    {
+      "path": "experiments/tfpt-discovery/narrowband_weil_probe.py",
+      "role": "sealed_probe",
+      "round": "r461",
+      "ledger_ids": [],
+      "status": "narrow-band Weil consistency probe (round 461, PRIME.RDAGGER.NARROWBAND_WEIL.01; experiments-side, NO ledger row): VERDICT FORK_SHARPENED.  GridElement is an even dyadic piecewise-linear autocorrelation; the formal endpoint is forall GridElement, weilForm>=0, not RH.  The spectral/zero side and density/continuity completion are absent; the path consumes arch_elementwise_stabilization sorryAx and the named SelectedACapPsdImpliesPlainReads bridge.  In the r459 builder U_k=N_k Delta_k=k log(2)/2 and L_k=U_k/2; k=5..12 gives U=1.732868..4.158883, beyond both the classical U<log(2) prime-blind range and the recent arXiv:2608.24827 U<=1.6 certificate from k=5 onward.  Conditional depth counts are 1,3,5,7,18,22,26,30; race remains 0.606566..0.757783.  Completed mincut translation: cofinal compact-window Weil positivity, equivalent to the full Weil criterion after the missing dictionary.  First measured in /tmp then sealed.  Companion rh/problem/narrowband_weil.tex + verify_narrowband_weil.py NARROWBAND WEIL VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "29a03834b3689b9e63a852e96ad8a66d5308bfcb47bce3303098423ef475201d",
+      "bytes": 10786
     }
   ]
 }

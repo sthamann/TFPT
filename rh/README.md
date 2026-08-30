@@ -6726,6 +6726,28 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456 / r457 / r458 / r459
 are parallel and not dropped.
 
+**Narrow-band Weil audit (r461,
+PRIME.RDAGGER.NARROWBAND\_WEIL.01).**
+Sealed probe
+`experiments/tfpt-discovery/narrowband_weil_probe.py`
+(smoke/full 21/21, SPEC\_SHA `5bf44fd807bb5a0c`)
+plus `rh/problem/narrowband_weil.tex` (+ PDF +
+`verify_narrowband_weil.py`, 9/9, `NARROWBAND WEIL VERIFIED`).
+**Ausgang FORK\_SHARPENED.**
+The Lean endpoint is GridElement Weil-form positivity, not RH:
+the spectral/zero side and density completion are absent, while the
+path consumes the arch stabilization `sorryAx` and a named
+$A_{\rm cap}$-to-`fullRead` bridge.  In the r459 builder
+$U_k=N_k\Delta_k=k\log2/2=1.732868..4.158883$ for $k=5..12$,
+so every measured window lies beyond both the classical
+$U<\log2$ range and the recent $U\le1.6$ certificate.
+The completed mincut would be cofinal compact-window Weil positivity,
+hence the full Weil criterion after the missing dictionary.
+No Lean edit this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456 / r457 / r458 / r459 / r460
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -7126,6 +7148,10 @@ rh/
 │   ├── race_proof.tex(+pdf) — r460: PARTIAL;
 │   │                     spectral reduction proved; norm route
 │   │                     refuted; spectral-overlap gap open.
+│   │                     No RH claim
+│   ├── narrowband_weil.tex(+pdf) — r461: FORK_SHARPENED;
+│   │                     Lean endpoint mapped to cofinal
+│   │                     compact-window Weil positivity.
 │   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
@@ -7703,7 +7729,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r460 from
+2. **Sealed probes** — the campaign probes r250–r461 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
