@@ -44,8 +44,22 @@
 > density corollary and mean-value trick proved; the new mincut
 > is `frequently_selected_augDualResolvent_ge_half`. Census
 > stays **five**.
-> The graph is reduced to the
-> **two true arithmetic gaps** (now the alternative route):
+> **r434** audits the mincut path (`PRIME.RH.QUANTIFIER_MINCUT_AUDIT.01`):
+> `lstar_canonical` / `terminal_q_canonical` /
+> `pair_terminal_dictionary` / `mainWindow_iff_builtFromPrimeSource`
+> are OFF the FREQ RH-path (kept as the alternative
+> rational-certificate route).  The L† ⟺ R† identification on
+> the real window is PROVED
+> (`masterCap_posSemidef_iff_Rdagger_ge_half`);
+> `SelectedSemidefImpliesPlainReads` is a theorem of the thinner
+> remainder `SelectedACapPsdImpliesPlainReads` (Hankel/`fullRead`,
+> not the dual-resolvent cone).  Zero new `sorry`; census stays
+> **five**.
+> The FREQ mincut path consumes only
+> `frequently_selected_augDualResolvent_ge_half` (named) +
+> `SelectedACapPsdImpliesPlainReads` (named) +
+> `arch_elementwise_stabilization` (sorry, classical).  The
+> **two true arithmetic gaps** remain as the alternative route:
 > `lstar_canonical` (lemma L*, the base/wall hole)
 > and `terminal_q_canonical` (the terminal cross-ratio, the
 > border/fiber hole), both `RH/Canonical.lean`; plus the ONE named r263
@@ -156,11 +170,11 @@
 >
 > | `sorry` | File | Type |
 > |---|---|---|
-> | `lstar_canonical` | `RH/Canonical.lean` | arithmetically open (the base/wall hole, lemma L*); **C1 RETYPE** of `lstar_subordination`; **r397 DEGRADED** to conjecture / alternative route (domain `CanonicalWindow` may be empty; not the mincut) |
-> | `terminal_q_canonical` | `RH/Canonical.lean` | arithmetically open (the border/fiber hole); **C1 RETYPE + SHARPENING**; **r397 DEGRADED** to conjecture / alternative route (same domain defect; not the mincut) |
-> | `pair_terminal_dictionary` | `RH/Canonical.lean` | **C1, replaces the `pair_margin_main` sorry** — the r263 dictionary `Z² = (5/7)·q_N` as ONE named lemma; type MEASURED DICTIONARY (42/42 exact) / transcription-blocked (the border orthopoly transform); consumed only by the pair closure corollary, never by the master chain |
-> | `mainWindow_iff_builtFromPrimeSource` | `RH/Source.lean` | definitional/technical (opacity-forced, r320 form); **Alt-Last since C1** (outside the load-bearing chain: `CanonicalWindow` replaced `MainWindow`); not deleted — the r273 opaque marker and the U1–U3 guards still refer to it |
-> | `arch_elementwise_stabilization` | `RH/Elementwise.lean` | classical (S2), r326; r373: kernel `weilArchKernel` is transcribed (`Complex.digamma`); remaining hole is tent-read = pairing. r376 mathlib census (v4.29.1): not a finite-sum identity; Gauss integral / `Real.digamma` / ψ-monotonicity / Mellin inversion identifying `arch_A` with `weilArchKernel` are absent (explicit TODO on mathlib `Digamma.lean`). Titchmarsh Ch. X, Weil 1952 |
+> | `lstar_canonical` | `RH/Canonical.lean` | arithmetically open (the base/wall hole, lemma L*); **C1 RETYPE** of `lstar_subordination`; **r397 DEGRADED** to conjecture / alternative route; **r434 OFF the FREQ mincut path** |
+> | `terminal_q_canonical` | `RH/Canonical.lean` | arithmetically open (the border/fiber hole); **C1 RETYPE + SHARPENING**; **r397 DEGRADED** to conjecture / alternative route; **r434 OFF the FREQ mincut path** (direct Selected-R† semidefiniteness bypasses `∀ CanonicalWindow, q_N < 1`) |
+> | `pair_terminal_dictionary` | `RH/Canonical.lean` | **C1, replaces the `pair_margin_main` sorry** — the r263 dictionary `Z² = (5/7)·q_N` as ONE named lemma; type MEASURED DICTIONARY (42/42 exact) / transcription-blocked (the border orthopoly transform); consumed only by the pair closure corollary, never by the master chain; **r434 OFF the FREQ mincut path** |
+> | `mainWindow_iff_builtFromPrimeSource` | `RH/Source.lean` | definitional/technical (opacity-forced, r320 form); **Alt-Last since C1** (outside the load-bearing chain: `CanonicalWindow` replaced `MainWindow`); not deleted — the r273 opaque marker and the U1–U3 guards still refer to it; **r434 OFF the FREQ mincut path** |
+> | `arch_elementwise_stabilization` | `RH/Elementwise.lean` | classical (S2), r326; r373: kernel `weilArchKernel` is transcribed (`Complex.digamma`); remaining hole is tent-read = pairing. r376 mathlib census (v4.29.1): not a finite-sum identity; Gauss integral / `Real.digamma` / ψ-monotonicity / Mellin inversion identifying `arch_A` with `weilArchKernel` are absent (explicit TODO on mathlib `Digamma.lean`). Titchmarsh Ch. X, Weil 1952. **r434 ON the FREQ mincut path** (consumed by `elementwise_finite_stabilization`) |
 >
 > Retired as sorries by r376: `pole_elementwise_stabilization` → **PROVED** (native-mesh second-difference of `polePotential`, comb-parallel; `#print axioms` has no `sorryAx`; remaining named identity `PoleDyadicIndependence`, not a hole); `specFamily_sourceExact_completion` → named Prop `SourceExactOfFamilyCompletion` (C1 `PairMarginLaw` convention: the opaque `SourceExact` filling is unprovable by design; transcribable half is the already-proved `sourceExact_buildPrimeWindow`; residual opacity is C1's `canonicalCompletion`).
 >
@@ -175,6 +189,8 @@
 > r412 proved theorems (not sorrys, census unchanged at 5): `graphResolvent_eq_dualResolvent_inv`, `graphResolvent_sub_half_eq`, `indNeg_graphResolvent_sub_half`, `indNeg_mobius`, `energy_split_contractive`, `energy_split_at_most_one`, `p1_coord_graphResolvent`, `augDualResolvent_gt_half_of_C_gt_one` (`RH/GraphResolvent.lean`; finite matrix algebra).  Named Prop `GraphResolventIsLEnsembleInv` (CD identification $E=C^{-1}$ on `RepresentsLEnsemble`; same class as `P1EqCapInertia`).
 >
 > r426 proved theorems (not sorrys, census unchanged at 5): `schWoodbury_eq_oneDefectDelta`, `schWoodbury_one_neg_iff_update`, `schWoodbury_eq_phiBB_sub`, `phiBB_eq_cJ_add_selfEnergy`, `schChart_eq_eps`, `vacuous_sch_neg_iff`, `den_lt_two_iff`, `gamma_lt_one_of_le_S_lt_Bw`, `parseval_normSq` (`RH/EdgeBalance.lean`; finite algebra).  Named Props `BorderIsMuParseval`, `BorderLoewnerLeS`, `QNLtOne` (r424/r425 source identifications; same class as `P1EqCapInertia`).
+>
+> r434 proved theorems (not sorrys, census unchanged at 5): `masterCap_posSemidef_iff_Rdagger_ge_half`, `masterCap_posDef_iff_Rdagger_gt_half`, `selectedWindowConeSemidef_implies_A_cap_posSemidef`, `selectedSemidefImpliesPlainReads_of_A_cap`, `rh_of_frequently_selected_of_A_cap` (`RH/FrequentlySelected.lean`; real-window Loewner).  Named Prop `SelectedACapPsdImpliesPlainReads` (Hankel/`fullRead` remainder after the Loewner identification).  `SelectedSemidefImpliesPlainReads` is now a theorem of that remainder.
 >
 > Retired as sorries by C1: `lstar_subordination` → `lstar_canonical`
 > (retype), `terminal_positive_main` → `terminal_q_canonical` (retype,
@@ -833,9 +849,9 @@ way, sp(N, eps) = +0.67, r272).
 | `selectedAnchor` / `selectedRoot` / `selectedMesh` / `selectedDelta` | definitions | `a_k = 2^k`, `r_k = ⌊√k⌋`, `m_k = k·2^{r_k}−1`, `Δ_k = log(a_k)/(m_k+1)` |
 | `selectedDelta_eq`, `selectedAnchor_tendsto`, `selectedRoot_tendsto`, `selectedMesh_tendsto`, `selectedDelta_tendsto_zero`, `selected_covers` | **proved** (no `sorryAx`) | `Δ_k = 2^{−r_k}·log 2`; cofinality in anchor and mesh |
 | `weil_nonneg_of_selected_windows` | **proved** (consumes the existing arch sorry) | `SelectedWindowLocalPositive → ∀ f, 0 ≤ weilForm f`.  Honest hypotheses: plain `fullRead` along the sequence, per-element onset and mesh coverage (proved by cofinality), existing `elementwise_finite_stabilization` |
-| `SelectedMasterImpliesPlainReads` | named Prop | L†/master of `W^ℝ_k` ⇒ plain reads (not asserted) |
+| `SelectedMasterImpliesPlainReads` | named Prop | L†/master of `W^ℝ_k` ⇒ plain reads (not asserted).  **r434 OFF the FREQ mincut path** (eventual-strict master route) |
 | `selected_augDualResolvent_gt_half` | named Prop — **stronger alternative** (r430) | `∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef`.  Kept; not the mincut |
-| `ExactArchAgreesWithArchRead` | named Prop | folded Exact arch vs `archRead` (classical) |
+| `ExactArchAgreesWithArchRead` | named Prop | folded Exact arch vs `archRead` (classical).  **r434 OFF the FREQ theorems**; would be consumed by any *proof* of the remaining read-identification |
 
 Zero `sorry` in this file.  Census stays 5.
 
@@ -912,9 +928,15 @@ Loewner identities and the density / mean-value lemmas do not.
 |---|---|---|
 | `Rdagger_ge_half_iff_augmented_posSemidef` | **proved** (in DualResolvent) | `R† ⪰ ½I` ⟺ augmented form PSD, given `Z ≻ 0`.  `#print axioms` = `[propext, Classical.choice, Quot.sound]` |
 | `graphResolvent_ge_half_iff` | **proved** (in GraphResolvent) | `R ⪰ ½I` ⟺ `C ⪰ I` |
+| `masterCap_posSemidef_iff_Rdagger_ge_half` | **proved** (r434) | real-window Loewner: `A_cap ⪰ 0` ⟺ `R† ⪰ ½I` under `RepresentsLEnsembleReal`.  `#print axioms` = `[propext, Classical.choice, Quot.sound]` |
+| `masterCap_posDef_iff_Rdagger_gt_half` | **proved** (r434) | strict face: `A_cap ≻ 0` ⟺ `R† ≻ ½I` on `PrimeWindow` |
 | `selectedWindowConeSemidef` | definition | PSD face of `selectedWindowCone` |
 | `frequently_selected_augDualResolvent_ge_half` | **named Prop — THE NEW MINCUT** | `∃ᶠ k, (R†(W^ℝ_k) − ½·1).PosSemidef`.  Never a `sorry` |
-| `SelectedSemidefImpliesPlainReads` | named Prop | `R† ⪰ ½I` on window k ⇒ plain `fullRead` (not asserted) |
+| `SelectedSemidefImpliesPlainReads` | named Prop; **r434 theorem of the thinner remainder** | `R† ⪰ ½I` on window k ⇒ plain `fullRead`.  Follows from `SelectedACapPsdImpliesPlainReads` via the proved Loewner identification |
+| `SelectedACapPsdImpliesPlainReads` | named Prop (r434 remainder) | `A_cap ⪰ 0` ⇒ plain `fullRead`.  Hankel/Weil-read identification (`BorderedCompressionBridge` + channel reads); NOT the dual-resolvent cone |
+| `selectedWindowConeSemidef_implies_A_cap_posSemidef` | **proved** (r434) | FREQ cone ⇒ `A_cap ⪰ 0` |
+| `selectedSemidefImpliesPlainReads_of_A_cap` | **proved** (r434) | thinner remainder ⇒ the r430 named bridge |
+| `rh_of_frequently_selected_of_A_cap` | **proved** (r434 collapsed interface) | named mincut + `SelectedACapPsdImpliesPlainReads` ⇒ `∀ f, 0 ≤ weilForm f` |
 | `weil_nonneg_of_frequently_plain` | **proved** (consumes the existing arch sorry) | FREQ of plain `fullRead` ⇒ `∀ f, 0 ≤ weilForm f`.  Coverage eventual, positivity frequent |
 | `weil_nonneg_of_frequently_selected` | **proved** (named bridge + arch sorry) | `∀ K ∃ k ≥ K, R_k† ⪰ ½I` ⇒ Weil ≥ 0 |
 | `rh_of_frequently_selected` | **proved** (composition) | named mincut + named bridge ⇒ the existing interface `∀ f, 0 ≤ weilForm f` |
@@ -923,6 +945,32 @@ Loewner identities and the density / mean-value lemmas do not.
 | `exists_index_zero_of_block_mean_lt_one` | **proved** | `κ : ℕ → ℕ`, block mean `< 1` ⇒ a zero in the block |
 
 Zero `sorry` in this file.  Census stays 5.
+
+**r434 mincut-path graph** (what `rh_of_frequently_selected` /
+`rh_of_frequently_selected_of_A_cap` actually consume).  `#print axioms`
+on the extraction shows `sorryAx` only through
+`arch_elementwise_stabilization`; the two C1 holes do not appear.
+
+| Satz | konsumiert | Status |
+|---|---|---|
+| `rh_of_frequently_selected_of_A_cap` | mincut + `SelectedACapPsdImpliesPlainReads` + arch sorry | **proved** as a function of those |
+| `frequently_selected_augDualResolvent_ge_half` | — | **named mincut** (`∃ᶠ`, `PosSemidef`) |
+| `SelectedACapPsdImpliesPlainReads` | — | **named remainder** (Hankel/`fullRead`) |
+| `SelectedSemidefImpliesPlainReads` | Loewner + `SelectedACapPsdImpliesPlainReads` | **proved** from the remainder (`selectedSemidefImpliesPlainReads_of_A_cap`) |
+| `masterCap_posSemidef_iff_Rdagger_ge_half` | `RepresentsLEnsembleReal` | **proved** (real-window L† ⟺ R† PSD) |
+| `arch_elementwise_stabilization` | — | **sorry**, ON PATH (classical) |
+| `lstar_canonical` | — | sorry, **OFF PATH** (alt route `L† ⟺ L* ∧ Terminal` on all `CanonicalWindow`s) |
+| `terminal_q_canonical` | — | sorry, **OFF PATH** (alt route; global `q_N < 1` bypassed) |
+| `pair_terminal_dictionary` | — | sorry, **OFF PATH** (pair-closure only) |
+| `mainWindow_iff_builtFromPrimeSource` | — | sorry, **OFF PATH** (historical Alt-Last) |
+| `SelectedMasterImpliesPlainReads` | — | named, **OFF PATH** (eventual-strict master route) |
+| `GraphResolventIsLEnsembleInv` | — | named, **OFF PATH** (graph-resolvent face, not consumed by FREQ) |
+
+BYPASS VERDICT: yes — Selected-R† semidefiniteness bypasses
+`terminal_q_canonical` / `lstar_canonical`.  The remaining named
+extraction remainder is `A_cap ⪰ 0` ⇒ `fullRead ≥ 0`, which does
+**not** follow from L† ⟺ R† (`fullRead` is the three-channel Weil
+pairing, not the quadratic form of `A_cap`).
 
 ### `RH/Audit.lean` — THE FINAL AXIOM AUDIT (C1; `#print axioms` at every build)
 
@@ -942,6 +990,9 @@ audited theorems NO `sorryAx`);
 and the r430 semidefinite / frequently-selected layer
 (section (o): Loewner faces, density, mean-value NO `sorryAx`;
 FREQ extraction the existing arch `sorryAx`);
+and the r434 quantifier-mincut audit (section (p): real-window
+Loewner NO `sorryAx`; collapsed FREQ interface the existing
+arch `sorryAx`);
 the C1 record is quoted verbatim in the claim-boundary
 block above and in the file itself.
 

@@ -242,6 +242,12 @@ They quantify over `CanonicalWindow`, which may be empty (Problem A)
 and whose mesh-tolerance is too coarse (Problem B).  They remain as
 typed `sorry`s so the existing finite-algebra corollaries still
 typecheck; they are the alternative (rational-certificate) route.
+r434 PATH AUDIT: they are OFF the FREQ RH-path
+(`rh_of_frequently_selected` does not apply either hole; the
+mincut is `frequently_selected_augDualResolvent_ge_half` plus
+the named read-identification remainder).  Direct Selected-R†
+semidefiniteness bypasses the old global terminal quantor
+`∀ CanonicalWindow, q_N < 1`.  Kept, not deleted.
 The load-bearing open kernel is
 `frequently_selected_augDualResolvent_ge_half` in
 RH/FrequentlySelected.lean (r430);

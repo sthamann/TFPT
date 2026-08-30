@@ -307,4 +307,44 @@ NO RH CLAIM. -/
 #print axioms frequently_selected_of_pos_lower_density
 #print axioms exists_index_zero_of_block_mean_lt_one
 
+/-! ## (p) The r434 quantifier-mincut audit
+Expected AND MEASURED: the real-window Loewner identification
+(`masterCap_posSemidef_iff_Rdagger_ge_half`,
+`masterCap_posDef_iff_Rdagger_gt_half`,
+`selectedWindowConeSemidef_implies_A_cap_posSemidef`,
+`posSemidef_congruence_iff`) is sorry-free
+(`[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`).
+`selectedSemidefImpliesPlainReads_of_A_cap` is the same
+(a function of the named remainder, no hole).
+`rh_of_frequently_selected_of_A_cap` consumes the existing
+arch-channel sorry through the FREQ extraction, so
+`[propext, sorryAx, Classical.choice, Quot.sound]` -- the same
+`sorryAx` as `weil_nonneg_of_windowlocal`, no new hole.
+
+MINCUT-PATH CENSUS (what `rh_of_frequently_selected` actually
+consumes):
+  ON PATH, sorry: `arch_elementwise_stabilization` (classical).
+  ON PATH, named: `frequently_selected_augDualResolvent_ge_half`
+    (the mincut) and `SelectedACapPsdImpliesPlainReads` (Hankel /
+    `fullRead` identification; `SelectedSemidefImpliesPlainReads`
+    is now a theorem of this remainder).
+  OFF PATH, sorry (alternative rational-certificate route):
+    `lstar_canonical`, `terminal_q_canonical`,
+    `pair_terminal_dictionary`, `mainWindow_iff_builtFromPrimeSource`.
+  OFF PATH, named: `SelectedMasterImpliesPlainReads`,
+    `GraphResolventIsLEnsembleInv`, `ExactArchAgreesWithArchRead`
+    (the last would be consumed by any *proof* of the remaining
+    read-identification, not by the FREQ theorems).
+Census of `sorry` declarations unchanged at 5.  NO RH CLAIM. -/
+
+#print axioms posSemidef_congruence_iff
+#print axioms PrimeWindow.hankel_eq_comb_sub_arch
+#print axioms PrimeWindow.A_eq_bordered
+#print axioms muWhitening_congruence_real
+#print axioms masterCap_posSemidef_iff_Rdagger_ge_half
+#print axioms masterCap_posDef_iff_Rdagger_gt_half
+#print axioms selectedWindowConeSemidef_implies_A_cap_posSemidef
+#print axioms selectedSemidefImpliesPlainReads_of_A_cap
+#print axioms rh_of_frequently_selected_of_A_cap
+
 end RH

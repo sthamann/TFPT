@@ -268,6 +268,38 @@ New mincut `frequently_selected_augDualResolvent_ge_half`;
 stronger alternative.  Density corollary and mean-value
 trick proved.  Census unchanged at 5.
 NO RH CLAIM.
+
+## r434 census (quantifier mincut audit)
+
+THE BYPASS HOLDS: `terminal_q_canonical` and
+`lstar_canonical` are NOT consumed by the FREQ RH-path
+(`rh_of_frequently_selected` / `_of_A_cap`).  They remain
+typed `sorry`s as the alternative rational-certificate
+route `L† ⟺ L* ∧ Terminal` on all `CanonicalWindow`s
+(r397 degradation, now path-audited).  Also OFF PATH:
+`pair_terminal_dictionary` (pair-closure corollary only),
+`mainWindow_iff_builtFromPrimeSource` (historical Alt-Last
+since C1).
+
+MINCUT PATH (what Weil-nonnegativity actually consumes):
+
+  * named mincut `frequently_selected_augDualResolvent_ge_half`
+  * named remainder `SelectedACapPsdImpliesPlainReads`
+    (`A_cap ⪰ 0` ⇒ plain `fullRead`; Hankel/Weil-read
+    identification -- NOT the dual-resolvent cone)
+  * sorry `arch_elementwise_stabilization` (classical
+    kernel channel, already on the extraction)
+
+PROVED ON THE PATH (r434): the L† ⟺ R† identification
+on the real window
+(`masterCap_posSemidef_iff_Rdagger_ge_half`,
+`selectedWindowConeSemidef_implies_A_cap_posSemidef`);
+`SelectedSemidefImpliesPlainReads` is a theorem of the
+thinner remainder (`selectedSemidefImpliesPlainReads_of_A_cap`).
+It was NOT provable from L† ⟺ R† alone: `fullRead` is the
+three-channel Weil pairing, not the quadratic form of
+`A_cap`.  Census unchanged at 5 (no sorry closed).
+NO RH CLAIM.
 -/
 
 end RH

@@ -6178,6 +6178,26 @@ New Lean mincut: named Prop
 r431/r433 are the parallel discovery lanes; this round does
 not touch `experiments/next.txt`.
 
+**Quantifier mincut audit (r434,
+PRIME.RH.QUANTIFIER_MINCUT_AUDIT.01, Lean-only, reviewer
+DCCCII terminal-bypass question).**  Direct Selected-R†
+semidefiniteness **bypasses** the old global terminal quantor:
+`terminal_q_canonical` / `lstar_canonical` are OFF the FREQ
+RH-path (kept, not deleted; alternative
+`L† ⟺ L* ∧ Terminal` on all `CanonicalWindow`s).  Also OFF
+PATH: `pair_terminal_dictionary`,
+`mainWindow_iff_builtFromPrimeSource`.  ON PATH: named mincut
+`frequently_selected_augDualResolvent_ge_half`, named remainder
+`SelectedACapPsdImpliesPlainReads` (`A_cap ⪰ 0` ⇒ `fullRead`),
+and the existing classical sorry
+`arch_elementwise_stabilization`.  The L† ⟺ R† identification
+on the real window is **PROVED**
+(`masterCap_posSemidef_iff_Rdagger_ge_half`);
+`SelectedSemidefImpliesPlainReads` is **not** a corollary of
+that iff alone (`fullRead` is the three-channel Weil pairing)
+but **is** a theorem of the thinner remainder.  Zero new
+`sorry`; census **stays 5**.  NO RH CLAIM.
+
 **Source Potapov factor (r431,
 PRIME.RDAGGER.SOURCE\_POTAPOV\_FACTOR.01, reviewer
 discovery 1 of 2).**  Sealed probe
@@ -6374,12 +6394,16 @@ rh/
 │       │                    selected_augDualResolvent_gt_half is the
 │       │                    stronger alternative since r430).
 │       │                    Zero sorry; census stays 5.  NO RH CLAIM
-│       ├── FrequentlySelected.lean — r430: semidefinite + FREQ
+│       ├── FrequentlySelected.lean — r430/r434: semidefinite + FREQ
 │       │                    (Rdagger_ge_half_iff_augmented_posSemidef;
 │       │                    weil_nonneg_of_frequently_selected;
 │       │                    rh_of_frequently_selected; density and
 │       │                    mean-value PROVED; named mincut
-│       │                    frequently_selected_augDualResolvent_ge_half).
+│       │                    frequently_selected_augDualResolvent_ge_half;
+│       │                    r434: real-window Loewner PROVED,
+│       │                    SelectedSemidefImpliesPlainReads theorem
+│       │                    of SelectedACapPsdImpliesPlainReads;
+│       │                    terminal_q_canonical OFF PATH).
 │       │                    Zero sorry; census stays 5.  NO RH CLAIM
 │       ├── OneDefect.lean — r406: general one-defect absorption
 │       │                    (indNeg_sub_rankOne_le_one,
@@ -7410,6 +7434,16 @@ Prop `selected_augDualResolvent_gt_half` degraded to the
 stronger alternative.  Density corollary and mean-value
 trick **PROVED**.  Zero new `sorry`; census **stays 5**.
 NO RH CLAIM.
+**r434 quantifier-mincut audit.**
+`RH/FrequentlySelected.lean` / `RH/Selected.lean` /
+`RH/Open.lean`: the FREQ RH-path does **not** consume
+`lstar_canonical` or `terminal_q_canonical` (kept as the
+alternative rational-certificate route).  Real-window Loewner
+`A_cap ⪰ 0` ⟺ `R† ⪰ ½I` **PROVED**;
+`SelectedSemidefImpliesPlainReads` is a theorem of the thinner
+remainder `SelectedACapPsdImpliesPlainReads` (Hankel/`fullRead`,
+not the dual-resolvent cone).  Zero new `sorry`; census
+**stays 5**.  NO RH CLAIM.
 **r431 coexistence.** Round 431 (`source_potapov.tex`) is
 additive on the reviewer Potapov discovery lane after
 DCCXCVII; it does not touch `rh/lean/`. Suite surface of

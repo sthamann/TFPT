@@ -34,10 +34,14 @@ HONEST HYPOTHESES of `weil_nonneg_of_frequently_selected`:
     `∃ᶠ k in atTop` via `frequently_atTop`;
   * the named Prop `SelectedSemidefImpliesPlainReads`
     (R† ⪰ ½I on window k ⇒ plain `fullRead ≥ 0` for
-    mesh-compatible grid elements -- the PSD face of
-    `SelectedMasterImpliesPlainReads`; not a theorem here,
-    same reason: the bordered read is still typed on the
-    rational `VonMangoldtWindow`);
+    mesh-compatible grid elements).  r434 DECOMPOSITION:
+    the L† ⟺ R† (PSD) step is PROVED
+    (`masterCap_posSemidef_iff_Rdagger_ge_half` on
+    `PrimeWindow`); the Prop follows from the thinner
+    remainder `SelectedACapPsdImpliesPlainReads`
+    (`A_cap ⪰ 0` ⇒ `fullRead ≥ 0` -- Hankel/Weil-read
+    identification, NOT the dual-resolvent cone).  The
+    rational `VonMangoldtWindow` typing is not the obstruction;
   * onset + mesh coverage PROVED (`selected_covers`);
   * arch-channel stabilization CONSUMED, not re-asserted
     (`elementwise_finite_stabilization`).
@@ -75,6 +79,176 @@ namespace RH
 
 open Filter Matrix Finset
 open scoped Topology BigOperators
+
+/-! ## Real-window Loewner (r434)
+
+The r373 identification `A_cap ≻ 0` ⟺ `R† ≻ ½I` was typed on
+the rational `VonMangoldtWindow`.  The FREQ mincut lives on
+`PrimeWindow` / `RepresentsLEnsembleReal`.  The PSD face
+`A_cap ⪰ 0` ⟺ `R† ⪰ ½I` is finite algebra on that real
+window -- it is NOT a named remainder and does not consume
+`lstar_canonical` / `terminal_q_canonical`.  What remains of
+the FREQ bridge after this identification is
+`A_cap ⪰ 0` ⇒ `fullRead ≥ 0` (Hankel/Weil-read). -/
+
+namespace PrimeWindow
+
+variable (w : PrimeWindow)
+
+theorem mom_eq_comb_sub_arch (n : ℕ) :
+    w.mom n = w.combMom n - w.archMom n := by
+  simp [mom, combMom, archMom, weight, sub_mul, Finset.sum_sub_distrib]
+
+theorem hankel_eq_comb_sub_arch (n : ℕ) :
+    w.hankel n = w.combHankel n - w.archHankel n := by
+  ext i k
+  simp [hankel, combHankel, archHankel, mom_eq_comb_sub_arch]
+
+lemma A_eq_bordered (p : ℕ) :
+    w.A p = fromBlocks (w.hankel p)
+      (borderCol (n := Fin p) (w.borderVec p))
+      (borderRow (n := Fin p) (w.borderVec p))
+      (borderCorner w.B) :=
+  rfl
+
+end PrimeWindow
+
+/-- The μ-ONB block `S = diag(Q, σ)` conjugates the REAL-window
+`A_n` onto `I − G†` (r434; the r373 `muWhitening_congruence`
+docked to `PrimeWindow`, no ℚ casts). -/
+lemma muWhitening_congruence_real {p : ℕ}
+    (w : PrimeWindow) (Q : Matrix (Fin p) (Fin p) ℝ) (σ : ℝ)
+    (hQ : Qᵀ * w.combHankel p * Q = 1)
+    (hσB : σ * σ * w.B = 1) :
+    let E := Qᵀ * w.archHankel p * Q
+    let vv : Fin p → ℝ := -(σ • (Qᵀ *ᵥ w.borderVec p))
+    let S := fromBlocks Q (0 : Matrix (Fin p) Unit ℝ)
+      (0 : Matrix Unit (Fin p) ℝ) (borderCorner σ)
+    Sᵀ * w.A p * S =
+      (1 : Matrix (Fin p ⊕ Unit) (Fin p ⊕ Unit) ℝ) -
+        borderedGram (n := Fin p) E vv 0 := by
+  intro E vv S
+  have hH : Qᵀ * w.hankel p * Q = (1 : Matrix (Fin p) (Fin p) ℝ) - E := by
+    simp only [E]
+    rw [w.hankel_eq_comb_sub_arch, Matrix.mul_sub, Matrix.sub_mul, hQ]
+  have hcol :
+      Qᵀ * borderCol (n := Fin p) (w.borderVec p) * borderCorner σ =
+        borderCol (n := Fin p) (-vv) := by
+    rw [mul_borderCol, borderCol_mul_corner]
+    simp [vv]
+  have hrow :
+      borderCorner σ * borderRow (n := Fin p) (w.borderVec p) * Q =
+        borderRow (n := Fin p) (-vv) := by
+    ext ⟨⟩ j
+    simp [borderRow, borderCorner, vv, Matrix.mul_apply, mulVec, smul_eq_mul,
+      dotProduct, mul_left_comm, mul_comm, Finset.mul_sum]
+  have hcorner :
+      borderCorner σ * borderCorner w.B * borderCorner σ =
+        (1 : Matrix Unit Unit ℝ) := by
+    ext ⟨⟩ ⟨⟩
+    simp [borderCorner, Matrix.mul_apply, Matrix.one_apply]
+    linarith
+  have hSTAS :
+      Sᵀ * w.A p * S =
+        fromBlocks (Qᵀ * w.hankel p * Q)
+          (Qᵀ * borderCol (n := Fin p) (w.borderVec p) * borderCorner σ)
+          (borderCorner σ * borderRow (n := Fin p) (w.borderVec p) * Q)
+          (borderCorner σ * borderCorner w.B * borderCorner σ) := by
+    rw [muWhiteningBlock_transpose, w.A_eq_bordered]
+    simp only [S]
+    rw [fromBlocks_multiply]
+    simp [fromBlocks_multiply]
+  have h1 : (1 : Matrix Unit Unit ℝ) = borderCorner (1 - (0 : ℝ)) := by
+    ext ⟨⟩ ⟨⟩
+    simp [borderCorner, Matrix.one_apply]
+  have hnegv :
+      borderCol (n := Fin p) (-vv) = borderCol (n := Fin p) (fun i => -vv i) ∧
+      borderRow (n := Fin p) (-vv) = borderRow (n := Fin p) (fun i => -vv i) := by
+    constructor <;> (ext x y; simp [borderCol, borderRow, Pi.neg_apply])
+  rw [hSTAS, hH, hcol, hrow, hcorner, one_sub_borderedGram_fromBlocks, h1,
+    hnegv.1, hnegv.2]
+
+/-- **THE r434 REAL-WINDOW LOEWNER BRIDGE** (PROVED): on a real
+window whose node Gram is the transcribed `(E, v, γ)`,
+`A_cap ⪰ 0` ⟺ `R† ⪰ ½I`.  PSD face of the r373
+`augmentedSubordination_iff_dualResolvent`, docked to
+`PrimeWindow`.  Does NOT identify `A_cap` with `fullRead`.
+NO RH CLAIM. -/
+theorem masterCap_posSemidef_iff_Rdagger_ge_half
+    (w : PrimeWindow) (n : ℕ)
+    (E : Matrix (Fin n) (Fin n) ℝ) (v : Fin n → ℝ) (γ : ℝ)
+    (hrep : RepresentsLEnsembleReal w n E v γ)
+    (hZ : (dualZ E v γ).PosDef) :
+    (w.A w.cap).PosSemidef ↔
+      (augDualResolvent E v γ
+        - (1 / 2 : ℝ) • (1 : Matrix (Fin n ⊕ Unit) (Fin n ⊕ Unit) ℝ)).PosSemidef := by
+  rcases hrep with ⟨hncap, hB, Q, hQunit, hQμ, hE, hv, hγ⟩
+  subst hncap
+  subst hγ
+  subst hE
+  subst hv
+  set σ : ℝ := 1 / Real.sqrt w.B
+  have hσpos : 0 < σ := by
+    unfold σ
+    positivity
+  have hσB : σ * σ * w.B = 1 := by
+    unfold σ
+    have hne : Real.sqrt w.B ≠ 0 := (Real.sqrt_pos.mpr hB).ne'
+    field_simp [hne]
+    exact (Real.sq_sqrt hB.le).symm
+  set S := fromBlocks Q (0 : Matrix (Fin w.cap) Unit ℝ)
+    (0 : Matrix Unit (Fin w.cap) ℝ) (borderCorner σ)
+  have hcong := muWhitening_congruence_real (p := w.cap) w Q σ hQμ hσB
+  have hSunit : IsUnit S.det := by
+    rw [muWhiteningBlock_det]
+    exact hQunit.mul (isUnit_iff_ne_zero.mpr hσpos.ne')
+  have hAiff :
+      (w.A w.cap).PosSemidef ↔
+        ((1 : Matrix (Fin w.cap ⊕ Unit) (Fin w.cap ⊕ Unit) ℝ) -
+          borderedGram (n := Fin w.cap) (Qᵀ * w.archHankel w.cap * Q)
+            (-(σ • (Qᵀ *ᵥ w.borderVec w.cap))) 0).PosSemidef := by
+    rw [posSemidef_congruence_iff (n := Fin w.cap ⊕ Unit) (w.A w.cap) S hSunit]
+    rw [hcong]
+  rw [hAiff, Rdagger_ge_half_iff_augmented_posSemidef (n := Fin w.cap) hZ]
+
+/-- Strict face of the same real-window bridge: `A_cap ≻ 0` ⟺
+`R† ≻ ½I`.  r373 identity, docked to `PrimeWindow`.  NO RH CLAIM. -/
+theorem masterCap_posDef_iff_Rdagger_gt_half
+    (w : PrimeWindow) (n : ℕ)
+    (E : Matrix (Fin n) (Fin n) ℝ) (v : Fin n → ℝ) (γ : ℝ)
+    (hrep : RepresentsLEnsembleReal w n E v γ)
+    (hZ : (dualZ E v γ).PosDef) :
+    (w.A w.cap).PosDef ↔
+      (augDualResolvent E v γ
+        - (1 / 2 : ℝ) • (1 : Matrix (Fin n ⊕ Unit) (Fin n ⊕ Unit) ℝ)).PosDef := by
+  rcases hrep with ⟨hncap, hB, Q, hQunit, hQμ, hE, hv, hγ⟩
+  subst hncap
+  subst hγ
+  subst hE
+  subst hv
+  set σ : ℝ := 1 / Real.sqrt w.B
+  have hσpos : 0 < σ := by
+    unfold σ
+    positivity
+  have hσB : σ * σ * w.B = 1 := by
+    unfold σ
+    have hne : Real.sqrt w.B ≠ 0 := (Real.sqrt_pos.mpr hB).ne'
+    field_simp [hne]
+    exact (Real.sq_sqrt hB.le).symm
+  set S := fromBlocks Q (0 : Matrix (Fin w.cap) Unit ℝ)
+    (0 : Matrix Unit (Fin w.cap) ℝ) (borderCorner σ)
+  have hcong := muWhitening_congruence_real (p := w.cap) w Q σ hQμ hσB
+  have hSunit : IsUnit S.det := by
+    rw [muWhiteningBlock_det]
+    exact hQunit.mul (isUnit_iff_ne_zero.mpr hσpos.ne')
+  have hAiff :
+      (w.A w.cap).PosDef ↔
+        ((1 : Matrix (Fin w.cap ⊕ Unit) (Fin w.cap ⊕ Unit) ℝ) -
+          borderedGram (n := Fin w.cap) (Qᵀ * w.archHankel w.cap * Q)
+            (-(σ • (Qᵀ *ᵥ w.borderVec w.cap))) 0).PosDef := by
+    rw [posDef_congruence_iff (n := Fin w.cap ⊕ Unit) (w.A w.cap) S hSunit]
+    rw [hcong]
+  rw [hAiff, posDef_one_sub_borderedGram_iff_augDualResolvent (n := Fin w.cap) hZ]
 
 /-! ## Semidefinite selected-window cone
 
@@ -152,19 +326,59 @@ theorem weil_nonneg_of_frequently_plain
   have heq := hstab (selectedAnchor k) ha (selectedMesh k) hm
   rwa [heq] at hrd
 
-/-- Named (never asserted): a semidefinite selected-window cone
-`R† ⪰ ½I` implies the plain `fullRead` of every mesh-compatible
-grid element at that window.  PSD face of
-`SelectedMasterImpliesPlainReads`: the Loewner identity
-`Rdagger_ge_half_iff_augmented_posSemidef` gives a nonnegative
-augmented form, and the existing `BorderedCompressionBridge`
-takes bordered → plain.  Not a theorem in this round: L† is
-still typed on the rational `VonMangoldtWindow`. -/
+/-- Named (never asserted as an axiom): a semidefinite selected-window
+cone `R† ⪰ ½I` implies the plain `fullRead` of every
+mesh-compatible grid element at that window.  r434: the L† ⟺ R†
+(PSD) identification is PROVED on the real window; this Prop is
+a theorem of `SelectedACapPsdImpliesPlainReads`
+(`selectedSemidefImpliesPlainReads_of_A_cap`).  The remaining
+named content is Hankel/`fullRead`, not the dual-resolvent cone. -/
 def SelectedSemidefImpliesPlainReads : Prop :=
   ∀ (k : ℕ) (hk : 0 < k),
     selectedWindowConeSemidef k hk →
       ∀ f : GridElement, f.meshExp ≤ selectedMesh k →
         0 ≤ fullRead (selectedAnchor k) (selectedMesh k) f
+
+/-- r434: `R† ⪰ ½I` on a selected real window implies `A_cap ⪰ 0`
+of that window.  PROVED from the real-window Loewner bridge
+`masterCap_posSemidef_iff_Rdagger_ge_half`; this is the L† ⟺ R†
+piece of `SelectedSemidefImpliesPlainReads`.  NO RH CLAIM. -/
+theorem selectedWindowConeSemidef_implies_A_cap_posSemidef
+    {k : ℕ} (hk : 0 < k) (h : selectedWindowConeSemidef k hk) :
+    ((selectedRealWindow k hk).toPrimeWindow.A
+      (selectedRealWindow k hk).cap).PosSemidef := by
+  obtain ⟨E, v, γ, hrep, hZ, hR⟩ := h
+  exact (masterCap_posSemidef_iff_Rdagger_ge_half
+    (selectedRealWindow k hk).toPrimeWindow _ E v γ hrep hZ).mpr hR
+
+/-- Named remainder of the FREQ bridge AFTER the Loewner
+identification is proved (r434).  `A_cap ⪰ 0` on `W^ℝ_k` implies
+plain `fullRead ≥ 0` for mesh-compatible grid elements.
+
+This is NOT the dual-resolvent cone: that iff is
+`masterCap_posSemidef_iff_Rdagger_ge_half` (PROVED).  What remains
+is the Hankel/Weil-read identification — `fullRead` is the
+three-channel pairing `arch − comb + pole`, not the quadratic
+form of `A_cap` — plus `BorderedCompressionBridge` and
+`ExactArchAgreesWithArchRead`.  Not a theorem.  NO RH CLAIM. -/
+def SelectedACapPsdImpliesPlainReads : Prop :=
+  ∀ (k : ℕ) (hk : 0 < k),
+    ((selectedRealWindow k hk).toPrimeWindow.A
+      (selectedRealWindow k hk).cap).PosSemidef →
+      ∀ f : GridElement, f.meshExp ≤ selectedMesh k →
+        0 ≤ fullRead (selectedAnchor k) (selectedMesh k) f
+
+/-- **r434 decomposition** (PROVED): the named FREQ bridge
+`SelectedSemidefImpliesPlainReads` follows from the remaining
+read-identification remainder, because the L† ⟺ R† (PSD) step
+is the real-window Loewner theorem.  The RH-path named
+extraction remainder therefore shrinks to
+`SelectedACapPsdImpliesPlainReads`.  NO RH CLAIM. -/
+theorem selectedSemidefImpliesPlainReads_of_A_cap
+    (h : SelectedACapPsdImpliesPlainReads) :
+    SelectedSemidefImpliesPlainReads :=
+  fun k hk hcone =>
+    h k hk (selectedWindowConeSemidef_implies_A_cap_posSemidef hk hcone)
 
 theorem frequently_plain_of_frequently_selected
     (hbridge : SelectedSemidefImpliesPlainReads)
@@ -194,6 +408,17 @@ theorem rh_of_frequently_selected
     (hbridge : SelectedSemidefImpliesPlainReads) :
     ∀ f : GridElement, 0 ≤ weilForm f :=
   weil_nonneg_of_frequently_selected hbridge (frequently_atTop.mp hmincut)
+
+/-- **Collapsed FREQ interface** (r434; PROVED as a function of
+the thinner remainder).  Named mincut + `A_cap ⪰ 0` ⇒ plain
+reads ⇒ Weil ≥ 0.  The dual-resolvent identification is no
+longer a hypothesis.  NO RH CLAIM. -/
+theorem rh_of_frequently_selected_of_A_cap
+    (hmincut : frequently_selected_augDualResolvent_ge_half)
+    (hbridge : SelectedACapPsdImpliesPlainReads) :
+    ∀ f : GridElement, 0 ≤ weilForm f :=
+  rh_of_frequently_selected hmincut
+    (selectedSemidefImpliesPlainReads_of_A_cap hbridge)
 
 /-! ## Positive lower density ⇒ frequently
 

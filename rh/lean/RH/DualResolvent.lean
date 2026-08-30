@@ -27,6 +27,10 @@ PROVED (sorry-free):
   (A7-min)      R† ≻ αI ⟹ R ≻ αI
   (r373 bridge) L† ⟺ R† ≻ ½I under the μ-ONB whitening
                 `RepresentsLEnsemble`
+  (r434 Loewner) PosSemidef congruence both directions
+                (`posSemidef_congruence_iff`); the real-window
+                dock lives in RH/FrequentlySelected.lean
+                (`masterCap_posSemidef_iff_Rdagger_ge_half`)
 
 NAMED, NOT ASSERTED: `CauchyInterlace` (classical A7; mathlib v4.29.1
 has no min-max / interlacing lemma).
@@ -582,6 +586,30 @@ lemma posDef_congruence_iff (S P : Matrix n n ℝ) (hP : IsUnit P.det) :
         _ = S := by simp
     rw [← hrew]
     have hpd := hPAP.conjTranspose_mul_mul_same hinj'
+    rwa [conjTranspose_eq_transpose_of_trivial] at hpd
+
+/-- Congruence invariance of `PosSemidef` (both directions).
+Injectivity is not required for the forward map; invertibility
+of `P` gives the converse.  r434: the real-window Loewner face. -/
+lemma posSemidef_congruence_iff (S P : Matrix n n ℝ) (hP : IsUnit P.det) :
+    S.PosSemidef ↔ (Pᵀ * S * P).PosSemidef := by
+  constructor
+  · intro hS
+    have hpd := hS.conjTranspose_mul_mul_same P
+    rwa [conjTranspose_eq_transpose_of_trivial] at hpd
+  · intro hPAP
+    haveI : Invertible P := P.invertibleOfIsUnitDet hP
+    haveI : Invertible P⁻¹ := Invertible.copy (invertibleInvOf (a := P)) P⁻¹
+      (by rw [invOf_eq_nonsing_inv])
+    have hPP : P * P⁻¹ = 1 := Matrix.mul_nonsing_inv P hP
+    have hrew : (P⁻¹)ᵀ * (Pᵀ * S * P) * P⁻¹ = S := by
+      calc (P⁻¹)ᵀ * (Pᵀ * S * P) * P⁻¹
+          = ((P⁻¹)ᵀ * Pᵀ) * S * (P * P⁻¹) := by simp [mul_assoc]
+        _ = (P * P⁻¹)ᵀ * S * (P * P⁻¹) := by rw [transpose_mul]
+        _ = (1 : Matrix n n ℝ)ᵀ * S * 1 := by rw [hPP]
+        _ = S := by simp
+    rw [← hrew]
+    have hpd := hPAP.conjTranspose_mul_mul_same P⁻¹
     rwa [conjTranspose_eq_transpose_of_trivial] at hpd
 
 /-! ## The window bridge -- μ-ONB Gram transcription (r373, PROVED) -/
