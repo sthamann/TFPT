@@ -953,6 +953,13 @@ landing site above is the only Lean object this round
 consumes.  The unconditional block-mean bound is open
 (Reviewer-R439).  No new `sorry`; census stays 5.
 
+**r442 unconditional block mean (no new Lean).**  The
+dictionary `κ† = 1{q† > 1}` is machine-checked in
+`block_mean_probe.py` / `block_mean.tex`.  The landing
+site above is the only Lean object this round consumes.
+The frequency bound is open.  No new `sorry`; census
+stays 5.
+
 **r434 mincut-path graph** (what `rh_of_frequently_selected` /
 `rh_of_frequently_selected_of_A_cap` actually consume).  `#print axioms`
 on the extraction shows `sorryAx` only through

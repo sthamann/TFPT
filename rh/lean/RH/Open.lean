@@ -314,6 +314,15 @@ cost).  Selected + core-42 have `κ† = 0` (block mean `0 < 1`);
 dead χ have `κ† = 1`.  Unconditional block-mean bound
 open (Reviewer-R439).  Census unchanged at 5.
 NO RH CLAIM.
+
+## r442 census (unconditional block mean)
+
+One lemma, no new sorry: `κ† = 1{q† > 1}` (r433 last
+pivot), so the block mean is the frequency of `q† > 1`.
+Unsigned Chebyshev/Mertens majorants exceed 1.
+Selected + core-42 stay pointwise living on the census
+(`q† < 1`); the mean bound is open.  Census unchanged
+at 5.  NO RH CLAIM.
 -/
 
 end RH
