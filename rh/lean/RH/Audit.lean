@@ -289,7 +289,9 @@ The spectral Loewner faces and the arithmetic lemmas are
 Named Props (`frequently_selected_augDualResolvent_ge_half`,
 `frequently_selected_prefix_augDualResolvent_ge_half`,
 `SelectedSemidefImpliesPlainReads`) are hypotheses, not holes.
-The r450 prefix name is `Iff.rfl`-identical to the mincut.
+The r450 prefix name is `Iff.rfl`-identical to the mincut
+as a *Lean name* (r456: withdrawn as an `n_stab`
+compression / RH-path reduction).
 Census of `sorry` declarations unchanged at 5.  The r397 Prop
 `selected_augDualResolvent_gt_half` is the stronger alternative.
 NO RH CLAIM. -/

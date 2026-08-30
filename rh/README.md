@@ -6653,6 +6653,19 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454
 are parallel and not dropped.
 
+**Prefix vacuity (r456,
+PRIME.RDAGGER.VACUITY\_REDTEAM.01).**
+Sealed probe
+`experiments/tfpt-discovery/vacuity_redteam_probe.py`
+(smoke 26/26, full 31/31, SPEC\_SHA `bbb203039bf73e98`)
+plus `rh/problem/vacuity_redteam.tex` (+ PDF +
+`verify_vacuity_redteam.py`, 6/6, `VACUITY REDTEAM VERIFIED`).
+**Ausgang VACUOUS\_CONFIRMED.**
+The r450 `Iff.rfl` is a naming of the full-cap cone, not an $n_{\mathrm{stab}}$-truncation.  Worlds test (MAIN vs ARCH-only, identical fold): prefix $q^{\dagger}$ is prime-blind (kz$69$ $n_{\mathrm{stab}}$ $\Delta q=3.33\cdot10^{-16}$); arithmetic onset at $J_P$ and in `combRead`.  r449--r455 retyped as anatomy of the prime-blind zone.  No Lean sorry.  Census stays 5.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -7037,6 +7050,9 @@ rh/
 │   │                     L1_PNT_SUFFICIENT;
 │   │                     CHAIN_MAPPED.
 │   │                     No RH claim
+│   ├── vacuity_redteam.tex(+pdf) — r456: VACUOUS_CONFIRMED;
+│   │                     prefix prime-blind; Iff.rfl naming.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7250,6 +7266,9 @@ rh/
 │   └── verify_arch_chain.py — machine check of
 │                         arch_chain.tex (6/6,
 │                         ARCH CHAIN VERIFIED)
+│   └── verify_vacuity_redteam.py — machine check of
+│                         vacuity_redteam.tex (6/6,
+│                         VACUITY REDTEAM VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7607,7 +7626,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r455 from
+2. **Sealed probes** — the campaign probes r250–r456 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -8109,6 +8128,15 @@ is additive on the r454 limit object
 actual strength elementary; CHAIN_MAPPED).
 It does not touch `experiments/next.txt`.  The Lean
 landing site is unchanged; this round does not add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r456 coexistence.** Round 456 (`vacuity_redteam_probe.py`)
+is a red-team of the r450–r455 prefix-mincut
+(VACUOUS_CONFIRMED: Python prefix is prime-blind;
+`Iff.rfl` is a naming of the full-cap cone).
+It does not touch `experiments/next.txt`.  Lean census
+comments retract the compression reading of `Iff.rfl`;
+no new `sorry`.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not

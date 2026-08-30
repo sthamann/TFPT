@@ -3746,6 +3746,36 @@
       "bytes": 204616
     },
     {
+      "path": "rh/problem/vacuity_redteam.tex",
+      "role": "problem_statement",
+      "round": "r456 companion",
+      "ledger_ids": [],
+      "status": "prefix vacuity red-team (round 456): VACUOUS_CONFIRMED.  Iff.rfl is a naming; Python prefix is prime-blind; arithmetic at J_P and combRead.  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "16d8eb5b3bd94e8e825c9fee5dbccf023d8a26265f30ab5218aeb67c076a9130",
+      "bytes": 8137
+    },
+    {
+      "path": "rh/problem/verify_vacuity_redteam.py",
+      "role": "problem_check",
+      "round": "r456 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in vacuity_redteam.tex: standalone (VACUOUS_CONFIRMED, comb pin, Iff.rfl naming) plus construction pins (kz17 prefix/J_P, kz69 n_stab/n_f).  6/6 gates, final line VACUITY REDTEAM VERIFIED",
+      "pin": true,
+      "sha256": "583414bb830e71881cae2ec25ea500dba0c2b82a93217654e825eb1e4861ebee",
+      "bytes": 3258
+    },
+    {
+      "path": "rh/problem/vacuity_redteam.pdf",
+      "role": "problem_statement",
+      "round": "r456 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of vacuity_redteam.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "e17182306e9f5d333b82c17f1880a64e079e7a6d1ee4eec9d19c36bcbfb06ce7",
+      "bytes": 229640
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3920,8 +3950,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "aefe1c142a7d5d0934e29089047d493697ff1815224cd02ea3ae213b9fbc7a89",
-      "bytes": 5535384
+      "sha256": "4fb7351d0df4d947c9dba6feac07933f86bcfe5a2e5ad41baf92f8216236308a",
+      "bytes": 5537355
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4712,6 +4742,16 @@
       "pin": true,
       "sha256": "4088f92b6bb2b9bbef9654647c2a1d179811c0ca78f4c2f61fb3361b33962f28",
       "bytes": 12738
+    },
+    {
+      "path": "experiments/tfpt-discovery/vacuity_redteam_probe.py",
+      "role": "sealed_probe",
+      "round": "r456",
+      "ledger_ids": [],
+      "status": "prefix vacuity red-team (round 456, PRIME.RDAGGER.VACUITY_REDTEAM.01; experiments-side, NO ledger row): adversarial worlds test of the r450-r455 prefix-mincut.  VERDICT VACUOUS_CONFIRMED.  Lean consumption is the full-cap cone (selectedWindowConeSemidef at W.cap, combHankel) plus fullRead = arch-comb+pole; the meshExp guard is a mesh filter on f, not n_stab.  r450 Iff.rfl is a naming, not a truncation.  MAIN vs ARCH-only, identical fold: prefix q^dagger world-blind (kz69 n_stab dq=3.33e-16; kz17 n=8 dq=2.22e-16); arithmetic onset at J_P (kz17 dq=0.05166; kz69 n_f dq=0.005698).  combRead tent U=2 is 1.7458508391553806 (n=2,3,4,5,7); U=0.5 is 0.  M_d is arch mass.  r455 eventually-per-n covers the blind zone, not U_f/Delta.  Honest object = R^dagger at depth ~U_f/Delta, or full cap for forall f.  TAIL_ONLY vs U=2 stands; vs forall f it fails.  r449-r455 retyped as prime-blind anatomy (r303 dictionary).  First measured in /tmp then sealed.  Companion rh/problem/vacuity_redteam.tex + verify_vacuity_redteam.py VACUITY REDTEAM VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "92932c8a8ffb5432bdfb4431219e41f0d8f53b45e60a53f9eb861c28a0266d76",
+      "bytes": 15716
     }
   ]
 }

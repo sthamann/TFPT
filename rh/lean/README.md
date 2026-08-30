@@ -1009,11 +1009,18 @@ consumes the stabilized `fullRead` prefix.
 
 **r450 prefix mincut (definitional sharpening).**
 `frequently_selected_prefix_augDualResolvent_ge_half`
-is the existing frequently-cone (`Iff.rfl`); the
-named mincut is the $n_{\mathrm{stab}}$-compression
-of $R^{\dagger}$, not the ABD tail.  No new `sorry`;
-census stays 5.  Machine-checked in
+is the existing frequently-cone (`Iff.rfl`).  No new
+`sorry`; census stays 5.  Machine-checked in
 `prefix_mincut_probe.py` / `prefix_mincut.tex`.
+
+**r456 prefix vacuity (red-team).**
+The r450 `Iff.rfl` is a *naming* of the full-cap cone,
+not an `n_stab`-truncation.  Worlds test: Python prefix
+MAIN = ARCH to machine precision (prime-blind);
+arithmetic lives at grades `≥ J_P` and in `combRead`.
+Mincut unchanged.  Census stays 5.  Machine-checked in
+`vacuity_redteam_probe.py` / `vacuity_redteam.tex`.
+Ausgang `VACUOUS_CONFIRMED`.  NO RH CLAIM.
 
 **r434 mincut-path graph** (what `rh_of_frequently_selected` /
 `rh_of_frequently_selected_of_A_cap` actually consume).  `#print axioms`

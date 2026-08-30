@@ -292,24 +292,30 @@ theorem frequently_selected_of_eventually_gt_half
   h.frequently.mono fun _ ⟨hk, hcone⟩ =>
     ⟨hk, selectedWindowConeSemidef_of_posDef hk hcone⟩
 
-/-! ## r450: the mincut object IS the stabilized prefix
+/-! ## r450 name / r456 retraction
 
-The Python ABD chain may sign-flip past `n_stab` (r449 TAIL_ONLY).
-Extraction never consumes that tail: `fullRead` is required only
-for `meshExp f ≤ selectedMesh k` after onset.  The named mincut
-above is therefore already the prefix compression
-`R†(W_k |_{n ≤ n_stab})` -- the r362/r369 border-augmented
-resolvent cut at the stabilized depth, not at `N_w`.  The next
-two declarations are a definitional sharpening (no new `sorry`).
-The ABD tail is not part of the frequently-quantifier. -/
+r450 added an alias of the frequently-cone and identified it
+with the Python `n_stab`-compression by `Iff.rfl`.  r456
+(vacuity red-team) retracts that as a *compression theorem*:
+the Lean cone is still `selectedWindowConeSemidef` at `W.cap`
+(full `combHankel`), and `weil_nonneg_of_frequently_selected`
+consumes `fullRead = archRead - combRead + poleRead`.  The
+guard `meshExp f ≤ selectedMesh k` is a mesh-resolution filter
+on `f`, not a grade cut of `R†` at `n_stab`.  The Python
+prefix is a different object (MAIN = ARCH to machine precision
+inside the prime-blind zone).  The declarations below stay
+definitional because the *Lean names* were equal -- that
+equality is the leak, not a theorem about `n_stab`.  No new
+`sorry`. -/
 
-/-- r450 name of the mincut: `R†` of the stabilized-prefix
-compression (chain depth `n_stab`, border-augmented as in
-r362/r369).  Definitionally the existing frequently-cone. -/
+/-- r450 name, r456: this is a *naming* of the existing
+frequently-cone, not the Python `n_stab`-compression. -/
 def frequently_selected_prefix_augDualResolvent_ge_half : Prop :=
   frequently_selected_augDualResolvent_ge_half
 
-/-- Identification: prefix-mincut ↔ existing mincut (`Iff.rfl`). -/
+/-- r456: `Iff.rfl` of two Lean names.  NOT a proof that the
+Python prefix cone equals the mincut.  WITHDRAWN as a
+reduction.  NO RH CLAIM. -/
 theorem frequently_prefix_mincut_ident :
     frequently_selected_prefix_augDualResolvent_ge_half ↔
     frequently_selected_augDualResolvent_ge_half := Iff.rfl

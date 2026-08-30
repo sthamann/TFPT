@@ -351,15 +351,25 @@ Definitional sharpening, no new sorry:
 `frequently_selected_prefix_augDualResolvent_ge_half`
 is `frequently_selected_augDualResolvent_ge_half`
 (`frequently_prefix_mincut_ident` is `Iff.rfl`).
-The named frequently-cone is the stabilized-prefix
-compression of `R†` (chain depth `n_stab`,
-r362/r369 border), not the ABD tail.  Python
-n_stab-δ is a different chart from full-window δ
-(living windows disagree at relative gap ~1–3.6);
-χ edge-death is a last-three-grades full-window
-fact (prefix-χ lives).  Floor on the prefix chart
-is M2 / undecided.  Census unchanged at 5.
+Python n_stab-δ is a different chart from full-window δ
+(living windows disagree at relative gap ~1–3.6).
+Census unchanged at 5.
 NO RH CLAIM.
+
+## r456 census (prefix vacuity red-team)
+
+`Iff.rfl` is a naming of the full-cap cone, not an
+`n_stab`-truncation.  The Python prefix is prime-blind
+(MAIN = ARCH to machine precision for `n < J_P`;
+`m_0` and `M_∂` are arch mass).  Arithmetic sits at
+grades `≥ J_P` and in `combRead` of any `f` with
+support past `log 2`.  r455 eventually-per-fixed-`n`
+covers the blind zone, not depth `~ U_f/Δ`.
+Mincut unchanged: still
+`frequently_selected_augDualResolvent_ge_half` at
+`W.cap`.  r449–r455 retyped as anatomy of the
+prime-blind zone (r303 dictionary).  Census
+unchanged at 5.  NO RH CLAIM.
 -/
 
 end RH
