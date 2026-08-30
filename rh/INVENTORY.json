@@ -3506,6 +3506,36 @@
       "bytes": 186391
     },
     {
+      "path": "rh/problem/exact_band.tex",
+      "role": "problem_statement",
+      "round": "r448 companion",
+      "ledger_ids": [],
+      "status": "lemma-first exact living band (round 448): NOT_COFINAL; 2^k commensurability refuted; kz197 is a zeta-chain death; next-odd family fails at k=10.  NO RH claim",
+      "pin": true,
+      "sha256": "f5c360b92ebaec81a877d154da2fce2571c1a87729a16c7273527b761a4c6e38",
+      "bytes": 6249
+    },
+    {
+      "path": "rh/problem/verify_exact_band.py",
+      "role": "problem_check",
+      "round": "r448 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in exact_band.tex: standalone (NOT_COFINAL pins, kz197 coords, slice floor) plus construction pins (kz136 live, kz230 float, next-odd wall, dead chi).  7/7 gates, final line EXACT BAND VERIFIED",
+      "pin": true,
+      "sha256": "35ad6d9b63a01a60f454abeb03f6f6163fb3117f3b6cf73f5eade54655b56fe0",
+      "bytes": 4230
+    },
+    {
+      "path": "rh/problem/exact_band.pdf",
+      "role": "problem_statement",
+      "round": "r448 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of exact_band.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "ed2556ab5b22fa3fbf4a04863771503e87d3d3cc8294f0576cbd8969f8d5ff3c",
+      "bytes": 199398
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3680,8 +3710,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "badcf4cddf744af1f7f0b9bc8bee65b7e37e5b50c9026045d56991a76424be12",
-      "bytes": 5516607
+      "sha256": "a00febde8d540b652fb385b824871351b60f1c6a80ea6c7ac1a8923fcdfabb5e",
+      "bytes": 5518747
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4392,6 +4422,16 @@
       "pin": true,
       "sha256": "a01ebf203c5f946d611d4ffb71ecf00fbd75c0ece7f32e14e69f1aad2586eca7",
       "bytes": 27044
+    },
+    {
+      "path": "experiments/tfpt-discovery/exact_band_probe.py",
+      "role": "sealed_probe",
+      "round": "r448",
+      "ledger_ids": [],
+      "status": "exact living band (round 448, PRIME.INFRA.EXACT_LIVING_BAND.01; experiments-side, NO ledger row): lemma-first, exactly one question -- does the EXACT band live cofinally, and is kz197 a 2^k resonance?  VERDICT NOT_COFINAL / COMMENSURABILITY_REFUTED / NEXT_ODD_FAILS / ZETA_CHAIN_DEATH / LAST_LIVE_136_EXACT.  Float mesh: kz136 lives; every sampled kz>=137 is float-dead.  Exact kz230 (generic a=1259) dies at n=1818 = float, dps 50=70 bit-identical -- 2^k anchors are not special.  Exact kz170 dies at n=5515 = float.  Exact kz137 dies at n=8283 (n/N=0.998), not float 7511 (location-lie).  kz197 is an in-chain zeta death (q_N=-1.682, |Z_loc|=0.033 living-small, |Z|=1.132, n/N=0.931), not a dead-chi pole overshoot.  Predefined next-odd-after-2^k lives k<=9, dies k=10; 3*2^{k-1} dies at k=9; 3^k dies at k=6.  r445 slice floor stands.  First measured in /tmp then sealed.  Companion rh/problem/exact_band.tex + verify_exact_band.py EXACT BAND VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "a71c7553e7079a968332c5780f3098cf2fa4c9d2115eca471e0d354e31cd25c3",
+      "bytes": 15073
     }
   ]
 }

@@ -6543,6 +6543,23 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446
 are parallel and not dropped.
 
+**Exact living band (r448,
+PRIME.INFRA.EXACT\_LIVING\_BAND.01).**
+Sealed probe
+`experiments/tfpt-discovery/exact_band_probe.py`
+(smoke 21/21, SPEC\_SHA `d5278823e99ecea3`)
+plus `rh/problem/exact_band.tex` (+ PDF +
+`verify_exact_band.py`, 7/7, `EXACT BAND VERIFIED`).
+**Ausgang NOT\_COFINAL / COMMENSURABILITY\_REFUTED / NEXT\_ODD\_FAILS / ZETA\_CHAIN\_DEATH / LAST\_LIVE\_136\_EXACT.**
+Float mesh ends at $k_z136$.  Exact $k_z230$ (generic) dies at the same $n=1818$ as float (dps 50=70).  $2^k$ commensurability is refuted.
+$k_z197$ is an in-chain $\zeta$-death ($n/N=0.931$), not a dead-$\chi$ pole overshoot.
+$k_z137$ dies at $n=8283$ (float was $7511$: location-lie).  Next-odd-after-$2^k$ dies at $k=10$.  r445 slice floor stands.
+No Lean this round.
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -6896,6 +6913,10 @@ rh/
 │   │                     atoms ulp-close; this 2^k
 │   │                     family does not feed frequently.
 │   │                     No RH claim
+│   ├── exact_band.tex(+pdf) — r448: NOT_COFINAL;
+│   │                     2^k commensurability refuted;
+│   │                     kz197 zeta-chain death;
+│   │                     next-odd fails.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7085,6 +7106,9 @@ rh/
 │   └── verify_exact_atom.py — machine check of
 │                         exact_atom.tex (7/7,
 │                         EXACT ATOM VERIFIED)
+│   └── verify_exact_band.py — machine check of
+│                         exact_band.tex (7/7,
+│                         EXACT BAND VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7442,7 +7466,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r447 from
+2. **Sealed probes** — the campaign probes r250–r448 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7880,6 +7904,14 @@ is additive on the r446 exact-vs-float atom fork
 It does not touch `experiments/next.txt`.  The Lean
 landing site `exists_index_zero_of_block_mean_lt_one`
 is already proved (r430); this round does not add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r448 coexistence.** Round 448 (`exact_band_probe.py`)
+is additive on the r447 exact-atom builder
+(NOT_COFINAL: the exact band ends at kz136;
+2^k commensurability refuted; next-odd fails).
+It does not touch `experiments/next.txt`.  The Lean
+landing site is unchanged; this round does not add Lean.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not

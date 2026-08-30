@@ -992,6 +992,13 @@ machine-checked in `exact_atom_probe.py` /
 `exact_atom.tex`.  Infra only; no new `sorry`; census
 stays 5.
 
+**r448 exact living band (no new Lean).**  The
+NOT_COFINAL / COMMENSURABILITY_REFUTED census
+(exact deaths at kz170/197/230/137; next-odd
+family fails) is machine-checked in
+`exact_band_probe.py` / `exact_band.tex`.
+Infra only; no new `sorry`; census stays 5.
+
 **r434 mincut-path graph** (what `rh_of_frequently_selected` /
 `rh_of_frequently_selected_of_A_cap` actually consume).  `#print axioms`
 on the extraction shows `sorryAx` only through
